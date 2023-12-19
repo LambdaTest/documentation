@@ -143,9 +143,6 @@ Although, our [Selenium Grid](https://www.lambdatest.com/selenium-automation/) s
           <a className="lt_primary" href="/docs/python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid/">Python</a>
         </li>
         <li>
-          <a className="lt_primary" href="/docs/python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid/">Python</a>
-        </li>
-        <li>
           <a href="/docs/pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid/">Pytest</a>
         </li>
         <li>

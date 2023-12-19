@@ -191,7 +191,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
     "app" : "lt://APP_ID",
     "testSuite": "lt://TestSuite_ID",
     "device" :  ["Galaxy S21 5G-12"],
-    "queueTimeout": 10800,
+    "queueTimeout": 360,
     "IdleTimeout": 150,
     "deviceLog": true,
     "network": false,
@@ -262,7 +262,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/bu
     "app" : "app_id",
     "testSuite": "testsuite_id",
     "device" :  ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
-    "queueTimeout": 10800,
+    "queueTimeout": 360,
     "IdleTimeout": 150,
     "deviceLog": true,
     "build" : "Proverbial-Espresso"

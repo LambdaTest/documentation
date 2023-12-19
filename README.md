@@ -1,83 +1,73 @@
-# lambdatest-docs
+# LambdaTest Documentation
 
-Supporting Docs
+Welcome to LambdaTest's documentation repository! Help us enhance our documentation by contributing—whether it's fixing a typo or adding new topics. We appreciate all contributions.
 
-### Steps to clone
+---
 
-***
+## Installation
 
-**Install node.js on your computer**
+### Dependencies
 
-  * Go to Download | Node.js  > download and install node.js as per your system configuration (suggested node version 16.14.0)
+1. **Node.js Installation**
+   - Download [NodeJS](https://nodejs.org/en/download/) based on your system configuration (recommended node version: 16.14.0)
+   - Verify the Node.js version by opening Command Prompt/Terminal and running `node -v`
 
-  * Once installed verify the node.js version - Open Command Prompt/Terminal and run command node -v
+2. **Git Installation**
+   - Download Git [here](https://git-scm.com/downloads)
 
-**Install Git on your computer**
+3. **Recommended Code Editor**
+   - [VS Code](https://code.visualstudio.com/download)
 
-  * Git - Downloads 
+### Cloning the Repository
 
-**Install VS Code (Recommended Code Editor)**
+1. **Fork the Repository**
+   - Go to [LambdaTest/lambdatest-docs](https://github.com/LambdaTest/lambdatest-docs)
+   - Click "Fork" at the top-right corner and complete the forking process as guided
 
-  * https://code.visualstudio.com/download 
+2. **Clone the Repository to Your Computer**
 
-**Fork the repo**
-
-  * Go to https://github.com/LambdaTest/lambdatest-docs
-
-  * Click on Fork button at top right corner and complete the forking process as guided
-
-  * Clone the repo on your computer
-
-  * Go to Terminal and run the following command (change the path as per your preference)
-  
-  * Note: Replace **YOURGITHUBUSERNAME** to your actual GitHub username below
-
-
-### Windows
-
+**Windows**
 
   * mkdir C:\LambdaTest
   * cd C:\LambdaTest
-  * git clone -b prod https://github.com/YOURGITHUBUSERNAME/lambdatest-docs.git docs
+  * git clone -b staging https://github.com/YOURGITHUBUSERNAME/lambdatest-docs.git docs
   * cd docs
   * npm install
 
-### MacOS
 
+**MacOS**
 
   * mkdir ~/LambdaTest
   * cd ~/LambdaTest
-  * git clone -b prod https://github.com/YOURGITHUBUSERNAME/lambdatest-docs.git docs
+  * git clone -b staging https://github.com/YOURGITHUBUSERNAME/lambdatest-docs.git docs
   * cd docs
   * npm install
- 
 
-### Set upstream for the repo
-  * Step 1 - Run command 'git remote add upstream git@github.com:LambdaTest/lambdatest-docs.git'
-  * Step 2 - Run command 'git remote -v'
-you will see website repo in origin and your fork in upstream
+### Setting Upstream and Creating Pull Requests
 
-**How to keep updating the forked repo**
+**Set Upstream for the Repository**
 
-Run command 'git pull upstream prod'
+1. Run `git remote add upstream git@github.com:LambdaTest/lambdatest-docs.git`
+2. Run `git remote -v` to verify
 
-**How to run project on the local**
+**Raising Pull Requests from Fork to Upstream**
 
-Run command 'npm start' (if this command not working then run **npm i react-scripts@latest** )
+1. Commit your changes using Git Desktop or VS Code
+2. Visit [LambdaTest/lambdatest-docs](https://github.com/LambdaTest/lambdatest-docs)
+3. Open the "Pull request" tab
+4. Click "New Pull request"
+5. Select the following from the dropdown menus:
+   - Base repository: `LambdaTest/lambdatest-docs`
+   - Base: `staging`
+   - Head Repository: Your forked repository
+   - Compare: Your branch
+6. Click "Create pull request" and copy the page URL
 
+## Update the Forked Repository
 
-**How to raise PR from fork to upstream**
-  * Step 1 - Commit your code using git desktop or VS Code
-  * Step 2 - Open https://github.com/LambdaTest/lambdatest-docs
-  * Step 3 - Open 'Pull request' tab
-  * Step 4 - Click on 'New Pull request' button
-  * Step 5 - Select following from drop down menu
-    - Select base repository - 'LambdaTest/lambdatest-docs'
-    - Base - 'Prod'
-    - Head Repository - 'Your forked repository'
-    - Compare - 'Your branch'
-  * Click on 'Create pull request', copy the current page URL
+Run `git pull upstream staging` to keep your forked repository updated.
 
-**How to check the status of deployment on Github**
-  * Open https://github.com/LambdaTest/lambdatest-docs/  in browser
-  * Click on action tab for checking status of your merged PR
+## Run the Project Locally
+
+Run `npm start`. If the command doesn't work, try `npm i react-scripts@latest` followed by `npm start`. This will redirect to [http://localhost:3000/support/docs/](http://localhost:3000/support/docs/).
+

@@ -70,6 +70,7 @@ slug: hyperexecute-general-faqs/
 
   Tests are triggered on HyperExecute using [HyperExecute CLI](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/) using a YAML file to configure the executing settings including target OS, concurrency and other CI level information. This YAML file can be generated easily using a web based YAML generator that supports multiple [languages and frameworks](https://www.lambdatest.com/support/docs/hyperexecute-supported-languages-and-frameworks/). As a user you need to focus on writing tests and running the CLI with YAML, everything else is taken care of by the orchestration platform.
 
+
 ***
 
 #### 6. **Why is HyperExecute faster than other end to end testing platforms?**
@@ -154,7 +155,7 @@ slug: hyperexecute-general-faqs/
 
 ***
 
->If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
+>If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

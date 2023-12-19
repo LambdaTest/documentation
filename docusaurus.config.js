@@ -16,7 +16,7 @@ module.exports = {
       defer: true,
     },
     {
-      src: 'https://www.lambdatest.com/resources/js/lambda_gtm.js',
+      src: 'https://staging.lambdatestinternal.com/resources/js/lambda_gtm.js',
       defer: true,
     },
     // {
@@ -39,12 +39,12 @@ module.exports = {
       indexName: 'lambdatest',
       appId: 'LTX5ENOXAD',
       // Optional: see doc section bellow
+      // contextualSearch: true,
       contextualSearch: false,
       // Optional: Algolia search parameters
       searchParameters: {},
       //... other Algolia params
     },
-    
     navbar: {
       title: null,
       hideOnScroll: true,
@@ -65,7 +65,7 @@ module.exports = {
         {
           type: 'html',
           position: 'right',
-          value: '<a id="signbtn" href="https://accounts.lambdatest.com/register" class="getstart_btn">Get Started Free</a>',
+          value: '<a role="button" tabindex="0" id="signbtn" href="https://stage-accounts.lambdatestinternal.com/register" class="getstart_btn">Get Started Free</a>',
         },
         {
           to: 'docs/',

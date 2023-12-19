@@ -84,10 +84,24 @@ $ npm install -g @angular/cli
 ### Setting up Your Authentication
 
 **Step 3:** Set LambdaTest username and access key in environment variables. It can be obtained from [LambdaTest Automation Dashboard](https://automation.lambdatest.com/).
- * For Linux/macOS:
- `export LT_USERNAME="YOUR_USERNAME" export LT_ACCESS_KEY="YOUR ACCESS KEY"`
- * For Windows:
- `set LT_USERNAME="YOUR_USERNAME" set LT_ACCESS_KEY="YOUR ACCESS KEY"`
+   * For **Linux/macOS**:
+
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`export LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
+export LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+</CodeBlock>
+</div>
+
+  * For **Windows**:
+
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`$env:LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
+$env:LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+</CodeBlock>
+</div>
+
 
 ### Setting up the Test Environment
 

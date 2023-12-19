@@ -17,6 +17,8 @@ url: https://www.lambdatest.com/support/docs/jasmine-with-karma-running-jasmine-
 site_name: LambdaTest
 slug: jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/
 ---
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -86,17 +88,24 @@ In order to perform your karma tests with LambdaTest, you would need the below t
 
 Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
-* **For Linux/Mac:**
-```
-$ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME> 
-$ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
-```
+  * For **Linux/macOS**:
 
-* **For Windows:**
-```
-$ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
-$ set LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
-```
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`export LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
+export LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+</CodeBlock>
+</div>
+
+  * For **Windows**:
+
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`$env:LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
+$env:LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+</CodeBlock>
+</div>
+
 
 ## Setting Up The Environment For Jasmine Testing Using Selenium
 * * *

@@ -56,32 +56,32 @@ Automated Screenshot testing will help you capture screenshots in bulk through d
 
 **Step 1:**  Click Screenshot in the Visual UI Testing menu.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-1.webp').default} alt="Image" width="1920" height="918" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-1.webp').default} alt="Image" width="1346" height="626" className="doc_img"/>
 
 **Step 2:** Enter your URL & select the browser-version and OS combinations on which you want to generate a screenshot. Click on the capture, and you will be taken to the result page, where you can view your screenshots. You can also select mobile devices by clicking on the mobile icon on the top left.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-2.webp').default} alt="Image" width="1905" height="924" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-2.webp').default} alt="Image" width="1352" height="629" className="doc_img"/>
 
 ## How To Download Screenshots?
 ***
 **Step 1:** If you want to download particular screenshots, you will find a download icon near every screenshot generated. Just click on it to download.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-3.webp').default} alt="Image" width="1893" height="912" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-3.webp').default} alt="Image" width="1352" height="629" className="doc_img"/>
 
 **Step 2:**  If you want to download all the screenshots, you will find the Download all (zip) option at the top center. Click on it to download all the screenshots in zip format.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-4.webp').default} alt="Image" width="1893" height="912" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-4.webp').default} alt="Image" width="1352" height="629" className="doc_img"/>
 
 ## How To View Recent Screenshot Testing Sessions?
 ***
 
 **Step 1:** Click the ‘Screenshot’ submenu under the Visual UI Testing menu in the menu box. On the screenshot page, you will find the recent view button on the page. Click that button.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-5.webp').default} alt="Image" width="1918" height="910" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-5.webp').default} alt="Image" width="1343" height="624" className="doc_img"/>
 
 **Step 2:** On the recent session page, you can select the desired recent session from the sessions listed.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-6.webp').default} alt="Image" width="1920" height="923" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-6.webp').default} alt="Image" width="1350" height="619" className="doc_img"/>
 
 ## How To Change Preference For Screenshot Testing Sessions?
 ***
@@ -89,7 +89,7 @@ Automated Screenshot testing will help you capture screenshots in bulk through d
 
 **Step 2:** Click on the gear icon on the right side of the screenshot page. After clicking on it, a pop-up will appear on the screen. Click the given options to change the desired screenshot settings and then finally click Apply.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-7.webp').default} alt="Image" width="1915" height="922" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-7.webp').default} alt="Image" width="1346" height="619" className="doc_img"/>
 
 - OSX resolution: Choose the various resolution for your OS X machine.
 
@@ -109,46 +109,46 @@ Automated Screenshot testing will help you capture screenshots in bulk through d
 ***
 **Step 1:** Select the Screenshot from the Visual UI Testing from the menu bar. Select the browsers you want to perform the tests on and enter your website name. Click on the schedule button on the right side of the screenshot page.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-8.webp').default} alt="Image" width="1914" height="924" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-8.webp').default} alt="Image" width="1339" height="622" className="doc_img"/>
 
 **Step 2:** Once you click on the schedule button, a pop-up will appear on the screen.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-9.webp').default} alt="Image" width="1914" height="927" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-9.webp').default} alt="Image" width="1346" height="628" className="doc_img"/>
 
 **Step 3:** Enter the desired time, frequency, and the day you want to schedule your screenshot for. After this, click on the schedule button, and your screenshots would be scheduled!
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-10.webp').default} alt="Image" width="1914" height="927" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-10.webp').default} alt="Image" width="1343" height="624" className="doc_img"/>
 
 ## How To Share The Screenshots With Your Team?
 ***
 **Step 1:** Select the Screenshot from the Visual UI Testing from the menu bar. After that, click on the recent sessions button.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-11.webp').default} alt="Image" width="1920" height="930" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-11.webp').default} alt="Image" width="1350" height="619" className="doc_img"/>
 
 **Step 2:** On the recent session page  - select the recent session you want to share.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-12.webp').default} alt="Image" width="1920" height="926" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-12.webp').default} alt="Image" width="1346" height="628" className="doc_img"/>
 
 **Step 3:**  On the next screen, you can see the screenshots on all the devices. Here click on the share screenshots button.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-13.webp').default} alt="Image" width="1920" height="925" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-13.webp').default} alt="Image" width="1329" height="609" className="doc_img"/>
 
 **Step 4:** A pop-up will appear, where you can enter the email-ids you want to share the screenshots with, along with any note you might want to add. You can even set the expiry time for the screenshots.
 
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-14.webp').default} alt="Image" width="1918" height="925" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-14.webp').default} alt="Image" width="1329" height="609" className="doc_img"/>
 
 ## How To Use Basic Authentication For Password Protected Websites
 ***
 If the website you want to take screenshots on requires basic authentication, you can click on the basic authentication button and enter your login details. After that, click on ‘Save,’ the basic authentication would be enabled, and you can take screenshots easily.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-15.webp').default} alt="Image" width="1920" height="912" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-15.webp').default} alt="Image" width="1355" height="620" className="doc_img"/>
 
 ## How To Save Your Browser Combinations
 ***
 You can save your favorite mobile and desktop browsers as a list to use them again. You can create up to three different lists for different browser combinations. Just chose your favorite browsers and click on the star icon.
 
-<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-16.webp').default} alt="Image" width="1920" height="918" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/automated_screenshot_testing/automated-screenshot-testing-16.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
 
 In case you want to take a screenshot of a page behind the login, you can refer to this support doc on [Taking Screenshots of Pages Behind Login](/docs/taking-screenshots-of-pages-behind-login/).
 
