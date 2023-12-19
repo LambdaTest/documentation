@@ -2,7 +2,7 @@
 id: playwright-cucumberjs
 title: Running Playwright Tests With Cucumber.js
 hide_title: true
-sidebar_label: Integrate With Cucumber.js 
+sidebar_label: Cucumber.js 
 description: Learn how to perform Playwright testing using Cucumber.js across 40+ browser versions on the LambdaTest platform.
 keywords:
  -  playwright testing with Playwright test runner
@@ -52,7 +52,7 @@ LambdaTest enables you to run Playwright tests with Cucumber.js test runner on a
 ***
 
 >Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
-<a href="https://github.com/LambdaTest/playwright-sample/" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img" width="50" height="50" /> View on GitHub</a>
+<a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-cucumber-js" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
 
 1. Clone the LambdaTest-Playwright repository on your system.
 

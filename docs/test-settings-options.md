@@ -55,14 +55,15 @@ You can specify the following `capability` in the following format:
 
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
-
   /*  ....Your Selenium capabilities go here */
 
-  "smartUI.project": "<Your Project Name>" // Your Smart UI project name
+  "smartUI.project": "<Your Project Name>", // Your Smart UI project name
+  "smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name
+  "smartUI.baseline": true / false, // Enable if you want to update to a new baseline build
   "smartUI.options": {
     // highlight-next-line
-    "largeImageThreshold": 100 // The image threshold for comparison the min of 100 and max of 1200
-  }
+    largeImageThreshold: 100, // The image threshold for comparison the min of 100 and max of 1200
+  },
 };
 ```
 
@@ -72,7 +73,9 @@ let capabilities = {
 
 ```json title="Add the following in your /project/lambdatest-config.json"
 "smart_ui": {
-      "project": "<Your Project Name>" // Add your Smart UI Project Name here
+      "project": "<Your Project Name>", // Add your Smart UI Project Name here
+      "build": "<Your_Build_Name>", // Please add your build name of choice here
+      "baseline": true / false,// Enable if you want to update to a new baseline build
       "options": {
         // highlight-next-line
         "largeImageThreshold": 100 // The image threshold for comparison the min of 100 and max of 1200
@@ -104,14 +107,15 @@ You can specify the following `capability` in the following format:
 
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
-
   /*  ....Your Selenium capabilities go here */
 
-  "smartUI.project": "<Your Project Name>" // Your Smart UI project name
+  "smartUI.project": "<Your Project Name>", // Your Smart UI project name
+  "smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name
+  "smartUI.baseline": true / false, // Enable if you want to update to a new baseline build
   "smartUI.options": {
     // highlight-next-line
-    "errorType": "movement" // To set the error identifier
-  }
+    errorType: "movement", // To set the error identifier
+  },
 };
 ```
 
@@ -121,7 +125,9 @@ let capabilities = {
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
-      "project": "<Your Project Name>" // Add your Smart UI Project Name here
+      "project": "<Your Project Name>", // Add your Smart UI Project Name here
+      "build": "<Your_Build_Name>", // Please add your build name of choice here
+      "baseline": true / false,// Enable if you want to update to a new baseline build
       "options": {
         // highlight-next-line
         "errorType": "movement" // To set the error identifier
@@ -156,14 +162,15 @@ You can specify the following `capability` in the following format:
 
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
-
   /*  ....Your Selenium capabilities go here */
 
-  "smartUI.project": "<Your Project Name>" // Your Smart UI project name
+  "smartUI.project": "<Your Project Name>", // Your Smart UI project name
+  "smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name
+  "smartUI.baseline": true / false, // Enable if you want to update to a new baseline build
   "smartUI.options": {
     // highlight-next-line
-    "ignore": "antialiasing" // To set the ignore identifier
-  }
+    ignore: "antialiasing", // To set the ignore identifier
+  },
 };
 ```
 
@@ -173,7 +180,9 @@ let capabilities = {
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
-      "project": "<Your Project Name>" // Add your Smart UI Project Name here
+      "project": "<Your Project Name>", // Add your Smart UI Project Name here
+      "build": "<Your_Build_Name>", // Please add your build name of choice here
+      "baseline": true / false,// Enable if you want to update to a new baseline build
       "options": {
         // highlight-next-line
         "ignore": "antialiasing" // To set the ignore identifier
@@ -201,14 +210,15 @@ You can specify the following `capability` in the following format:
 
 ```js title="Make changes in your  your test configuration file"
 let capabilities = {
-
   /*  ....Your Selenium capabilities go here */
 
-  "smartUI.project": "<Your Project Name>" // Your Smart UI project name
+  "smartUI.project": "<Your Project Name>", // Your Smart UI project name
+  "smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name
+  "smartUI.baseline": true / false, // Enable if you want to update to a new baseline build
   "smartUI.options": {
     // highlight-next-line
-    "transparency": 0.3 // minimum = 0 and maximum = 1 supports upto one decimal such as 0.1 to 0.9
-  }
+    transparency: 0.3, // minimum = 0 and maximum = 1 supports upto one decimal such as 0.1 to 0.9
+  },
 };
 ```
 
@@ -218,7 +228,9 @@ let capabilities = {
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui": {
-      "project": "<Your Project Name>" // Add your Smart UI Project Name here
+      "project": "<Your Project Name>", // Add your Smart UI Project Name here
+      "build": "<Your_Build_Name>", // Please add your build name of choice here
+      "baseline": true / false,// Enable if you want to update to a new baseline build
       "options": {
         // highlight-next-line
         "transparency": 0.3 // minimum = 0 and maximum = 1 supports upto one decimal such as 0.1 to 0.9
@@ -247,28 +259,28 @@ You can specify the following `capability` in the following format:
 ```js title="Make changes in your  your test configuration file"
 // Bounding box sample settings
 const box1 = {
-left: 100,
-top: 500,
-right: 800,
-bottom: 300
+  left: 100,
+  top: 500,
+  right: 800,
+  bottom: 300,
 };
 
 const box2 = {
-left: 800,
-top: 50,
-right: 20,
-bottom: 700
+  left: 800,
+  top: 50,
+  right: 20,
+  bottom: 700,
 };
 
 let capabilities = {
-
   /*  ....Your Selenium capabilities go here */
 
-  "smartUI.project": "<Your Project Name>" // Your Smart UI project name
+  "smartUI.project": "<Your Project Name>", // Your Smart UI project name
+  "smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name
+  "smartUI.baseline": true / false, // Enable if you want to update to a new baseline build
   // highlight-next-line
-  "boundingBoxes" : [box1, box2] // Your bounding box configuration
+  boundingBoxes: [box1, box2], // Your bounding box configuration
 };
-
 ```
 
 </TabItem>
@@ -277,7 +289,9 @@ let capabilities = {
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui":{
-   "project":"<Your Project Name>",
+   "project": "<Your Project Name>", // Add your Smart UI Project Name here
+    "build": "<Your_Build_Name>", // Please add your build name of choice here
+    "baseline": true / false,// Enable if you want to update to a new baseline build
    "boundingBoxes":[
       {
          "left":100,
@@ -318,28 +332,28 @@ You can specify the following `capability` in the following format:
 ```js title="Make changes in your  your test configuration file"
 // Bounding box sample settings
 const box1 = {
-left: 100,
-top: 500,
-right: 800,
-bottom: 300
+  left: 100,
+  top: 500,
+  right: 800,
+  bottom: 300,
 };
 
 const box2 = {
-left: 800,
-top: 50,
-right: 20,
-bottom: 700
+  left: 800,
+  top: 50,
+  right: 20,
+  bottom: 700,
 };
 
 let capabilities = {
-
   /*  ....Your Selenium capabilities go here */
 
-  "smartUI.project": "<Your Project Name>" // Your Smart UI project name
+  "smartUI.project": "<Your Project Name>", // Your Smart UI project name
+  "smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name
+  "smartUI.baseline": true / false, // Enable if you want to update to a new baseline build
   // highlight-next-line
-  "ignoredBoxes" : [box1, box2] // Your bounding box configuration
+  ignoredBoxes: [box1, box2], // Your bounding box configuration
 };
-
 ```
 
 </TabItem>
@@ -348,7 +362,9 @@ let capabilities = {
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui":{
-   "project":"<Your Project Name>",
+   "project": "<Your Project Name>", // Add your Smart UI Project Name here
+    "build": "<Your_Build_Name>", // Please add your build name of choice here
+    "baseline": true / false,// Enable if you want to update to a new baseline build
    "ignoredBoxes":[
       {
          "left":100,
@@ -390,18 +406,18 @@ const color = {
   r: 242,
   g: 201,
   b: 76,
-  a: 1
+  a: 1,
 };
 
 let capabilities = {
-
   /*  ....Your Selenium capabilities go here */
 
-  "smartUI.project": "<Your Project Name>" // Your Smart UI project name
+  "smartUI.project": "<Your Project Name>", // Your Smart UI project name
+  "smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name
+  "smartUI.baseline": true / false, // Enable if you want to update to a new baseline build
   // highlight-next-line
-  "ignoreAreasColoredWith" : color // Your bounding box configuration
+  ignoreAreasColoredWith: color, // Your bounding box configuration
 };
-
 ```
 
 </TabItem>
@@ -410,7 +426,9 @@ let capabilities = {
 
 ```json title="Make changes in your /project/lambdatest-config.json"
 "smart_ui":{
-   "project":"<Your Project Name>",
+   "project": "<Your Project Name>", // Add your Smart UI Project Name here
+    "build": "<Your_Build_Name>", // Please add your build name of choice here
+    "baseline": true / false,// Enable if you want to update to a new baseline build
    "ignoreAreasColoredWith": {
       "r": 242,
       "g": 201,

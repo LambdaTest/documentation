@@ -25,7 +25,12 @@ slug: tas-how-to-guides-bb-token/
 > **NOTE:** TAS needs read access to `Account`, `Workspace membership`, `Projects`, `Repositories` and `Pull requests` in order to function properly.
 
 <p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2IcoXmxsRrw?si=JjvTbB3JyORocvgD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div className="ytframe"> 
+<div className="youtube" data-embed="2IcoXmxsRrw">
+    <div className="play-button"></div>
+</div>
+</div>
+
 </p>
 
 <br/>

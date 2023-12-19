@@ -31,7 +31,7 @@ slug: appium-app-performance-analytics/
           "@type": "ListItem",
           "position": 3,
           "name": "App Automation: Regular Expression",
-          "item": "https://www.lambdatest.com/support/docs/appium-app-performance-analytics/"
+          "item": "https://www.lambdatest.com/support/docs/regular-expression/"
         }]
       })
     }}
@@ -148,7 +148,7 @@ A sample output of this test will look like:
 ***
 
 > Got any questions?<br/>
-> Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@lambdatest.com](https://support.lambdatest.com/).
+> Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@lambdatest.com](https://support.lambdatest.com/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -169,3 +169,4 @@ A sample output of this test will look like:
     </li>
   </ul>
 </nav>
+

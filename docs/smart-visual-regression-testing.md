@@ -3,7 +3,7 @@ id: smart-visual-regression-testing
 title: Smart Visual Regression Testing Using LambdaTest
 hide_title: true
 sidebar_label: Visual Regression Testing
-description: Experience Visual Regression Testing at its finest with SmartUI by LambdaTest. Automate UI changes tracking for precision, collaboration, and scalability on the cloud. Optimize your testing journey now!
+description: Elevate Visual Regression Testing with SmartUI by LambdaTest. Automate UI Change Tracking for Precision, Collaboration, and Scalability in the Cloud. Optimize Your Testing Journey Today
 keywords:
   - smart visual testing in lambdatest
   - visual  ui testing,image to image comparison
@@ -50,7 +50,7 @@ slug: smart-visual-regression-testing/
 Welcome to SmartUI, an innovative tool by LambdaTest that integrates the robustness of cloud-based platforms with the accuracy of Visual Regression Testing (VRT). SmartUI revolutionizes your digital experience by automating the process of identifying and tracking visual changes in the user interface (UI) over time. As technology progresses and your UI continues to evolve, SmartUI is designed to provide precision, collaboration, and scalability. 
 
 <div className="ytframe"> 
-<div className="youtube" data-embed="R00u2k8Yxpc" data-loading-attribute="eager">
+<div className="youtube" data-embed="R00u2k8Yxpc">
     <div className="play-button"></div>
 </div>
 </div>

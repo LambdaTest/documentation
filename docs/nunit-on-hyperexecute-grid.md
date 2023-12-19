@@ -57,7 +57,7 @@ HyperExecute lets you run E2E (end-to-end) Selenium tests at the fastest possibl
 
 End-to-end encryption of the data (including the source code) ensures that the *data* is secure whether it is rest or in transit. YAML-based workflow helps in realizing the benefits of optimal test execution and orchestration. Along with the unique features offered by HyperExecute, you also get access to a host of LambdaTest cloud features like detailed logs, Smart CI features, network insights, video recording, access to a range of browsers & platforms on the cloud, amongst others.
 
-> HyperExecute has several state of the art features to help you optmize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute) to take a look at all the tools that HyperExecute offers. 
+> HyperExecute has several state of the art features to help you optmize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute/) to take a look at all the tools that HyperExecute offers. 
 
 >HyperExecute is compliant with leading security standards - SOC2, GDPR, and CCPA. Refer to [HyperExecute Getting Started Guide](/docs/getting-started-with-hyperexecute) for more information about features offered by HyperExecute.
 
@@ -457,7 +457,7 @@ Steps (or commands) that need to run after the test execution are listed in the 
 
 ```yaml
 post:
-  - cat yaml/nunit_hyperexecute_matrix_sample.yaml
+  - cat yaml/nunit_hyperexecute_matrix_sample.yaml
 ```
 
 ### Retries
@@ -515,7 +515,7 @@ The snapshot below shows how to navigate to the respective *testID* for viewing 
 <img loading="lazy" src={require('../assets/images/hyperexecute/nunit/nunit_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 >
-For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
 Happy testing!
 
 <nav aria-label="breadcrumbs">

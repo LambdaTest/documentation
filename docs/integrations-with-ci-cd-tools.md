@@ -113,10 +113,6 @@ LambdaTest offers integrations with numerous CI/CD tools to help you fast-track 
 <a href="https://www.lambdatest.com/support/docs/bitrise-integration/">Bitrise CI Integration With LambdaTest</a>
 </div>
 
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/buildkite-integration-with-lambdatest/">Buildkite Integration With LambdaTest</a>
-</div>
-
 >If your favourite CI/CD tools is not in the above mentioned, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have it ready shortly for you.
 
 <nav aria-label="breadcrumbs">

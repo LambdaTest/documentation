@@ -74,7 +74,7 @@ email:
 
 Follow the below mentioned steps to recieve your Artifacts via email:
 
-**Step 1:** You need to mention the `email` flag along with the `to` tag under the `uploadArtifacts` flag in the YAML file configuration.
+**Step 1:** You need to mention the `email` flag along with the `to` tag under the `uploadArtifacts` flag in the YAML file configuration.
 
 > **NOTE:** You can also add a separate email ID for each report generated, as mentioned below in the YAML code.
 

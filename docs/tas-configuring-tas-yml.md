@@ -63,13 +63,10 @@ This section contains the glob patterns for the test cases that you want to exec
 ```yml
 postMerge:
   pattern: 
-    # This is a sample glob pattern for all the tests inside the "unit" folder ending with .js extension.
-    - test/unit/**/*.js
-    # This is a sample glob pattern for all the tests inside the "unit", "node" and "development" folder ending with .js extension.
-    - test/{unit,node,development}/**/*.js
-  # env: (optional) in case you need to set any env variables
-    # NODE_ENV: development
-    # AWS_KEY: ${{ secrets.AWS_KEY }} # More details in Managing Secrets section
+    - test/unit/**/*.js # This is a sample glob pattern for all the tests inside the unit folder ending with .js extention.
+  #env:  in case you need to set any env variables
+    #NODE_ENV: development
+    #AWS_KEY: ${{ secrets.AWS_KEY }} # More details in Managing Secrets section
 ```
 
 | Sub-Parameters | Required  | Type      | Description   |
@@ -106,14 +103,11 @@ This section contains the glob patterns for the test cases that you want to exec
 **Example**
 ```yml
 preMerge:
-  pattern:
-    # This is a sample glob pattern for all the tests inside the "unit" folder ending with .js extension.
-    - test/unit/**/*.js
-    # This is a sample glob pattern for all the tests inside the "unit", "node" and "development" folder ending with .js extension.
-    - test/{unit,node,development}/**/*.js
-  # env: (optional) in case you need to set any env variables
-    # NODE_ENV: development
-    # AWS_KEY: ${{ secrets.AWS_KEY }} # More details in Managing Secrets section
+  pattern: 
+    - test/unit/**/*.js # This is a sample glob pattern for all the tests inside the unit folder ending with .js extention.
+  #env:  in case you need to set any env variables
+    #NODE_ENV: development
+    #AWS_KEY: ${{ secrets.AWS_KEY }} # More details in Managing Secrets section
 ```
 
 | Sub-Parameters | Required  | Type      | Description   |
@@ -333,5 +327,5 @@ Once you have prepared the configuration file, place this file correctly inside 
 3. Commit and Push the changes to your master branch. 
 
 <p align="center">
-<img loading="lazy" src={require('../assets/images/tas/getting-started/yml-addition-in-repo.gif').default} alt="Import Repository" width="1340" height="617" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/tas/getting-started/yml_placing.gif').default} alt="Import Repository" width="1340" height="617" className="doc_img"/>
 </p>

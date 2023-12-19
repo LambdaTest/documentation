@@ -334,7 +334,35 @@ module.exports = {
           collapsed: true,
           label: "Playwright Testing ",
           items: [
-            "playwright-testing-guide"
+            "playwright-testing-guide",
+            {
+              type: "category",
+              collapsed: true,
+              label: "Languages and Frameworks",
+              items: [
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Java",
+                  link: {
+                    type: "doc",
+                    id: "java-with-playwright",
+                  },
+                  items: ["junit-with-playwright"],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "JavaScript",
+                  link: {
+                    type: "doc",
+                    id: "javascript-with-playwright",
+                  },
+                  items: ["jest-with-playwright", "playwright-cucumberjs"],
+                },
+                "typescript-with-playwright",
+                "python-with-playwright",
+                "csharp-with-playwright",
               ],
             },
             {
@@ -356,8 +384,9 @@ module.exports = {
             "playwright-caps",
             "local-testing-playwright",
             "playwright-playwrighttest",
-            "playwright-cucumberjs",
-            "playwright-cicd"
+            "playwright-cicd",
+          ],
+        },
       ]
     ],
 
@@ -382,6 +411,7 @@ module.exports = {
             "local-testing-puppeteer",
             "puppeteer-mocha",
             "puppeteer-jest",
+            "puppeteer-codecept",
             "puppeteer-cicd",
           ],
         },
@@ -651,168 +681,169 @@ module.exports = {
           label: "App Automation (Emu/Sim)",
           items: [
             "app-automation-app-sim",
-
+        
           ],
         },
-
+    
       ]
     ],
 
     AppiumTestingSidebar: [
-      {
-        type: 'link',
-        label: '<- Back',
-        href: '/docs/',
-        customProps: {
-        className: 'back-to-main-menu'
-        },
-      },
-      [
-        {
-          type: "category",
-          collapsed: true,
-          label: "Appium Testing",
-          link: {
-            type: "doc",
-            id: "getting-started-with-appium-testing",
-          },
-          items: [
             {
-              type: "category",
-              collapsed: true,
-              label: "Languages and Frameworks",
-              link: {
-                type: "doc",
-                id: "appium-languages-and-frameworks",
+              type: 'link',
+              label: '<- Back',
+              href: '/docs/',
+              customProps: {
+              className: 'back-to-main-menu'
               },
-              items: [
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Java",
-                  link: {
-                    type: "doc",
-                    id: "appium-java",
-                  },
-                  items: [
-                    "appium-java-junit",
-                    "appium-java-jbehave",
-                    "appium-java-cucumber",
-                    "appium-java-testng",
-                  ],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "JavaScript",
-                  link: {
-                    type: "doc",
-                    id: "appium-nodejs",
-                  },
-                  items: ["appium-nodejs-webdriverio", "appium-nodejs-mocha"],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Python",
-                  link: {
-                    type: "doc",
-                    id: "appium-python",
-                  },
-                  items: [
-                    "appium-python-behave",
-                    "appium-python-robot",
-                    "appium-python-gauge",
-                    "appium-python-pytest",
-                  ],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Ruby",
-                  link: {
-                    type: "doc",
-                    id: "appium-ruby",
-                  },
-                  items: ["appium-ruby-cucumber", "appium-ruby-rspec"],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "PHP",
-                  link: {
-                    type: "doc",
-                    id: "appium-php",
-                  },
-                  items: ["appium-php-behat"],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "C#",
-                  link: {
-                    type: "doc",
-                    id: "appium-csharp",
-                  },
-                  items: ["appium-csharp-nunit"],
-                },
-                "appium-kotlin",
-              ],
             },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Setup",
-              items: [
-                "desired-capabilities-in-appium",
-                "supported-appium-versions",
-                "list-of-supported-locales",
-                "app-testing-apis",
-                "appium-lambdatest-hooks",
-                "appium-install-uninstall-lambdatest-hooks",
-                "appium-uploading-retrieving-files",
-                "appium-firebase-app-upload",
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Features",
-              items: [
-                "camera-image-injection",
-                "biometric-authentication",
-                "reg-expression",
-                "appium-app-performance",
-                "appium-ios-app-settings",
-                "adb-commands-support",
-                "login-google-android",
-                "disable-screenshot-block",
-                "basic-authentication-for-web-automation",
-
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Smart TV Automation",
-              items: ["appium-appletv", "appium-firetv", "appium-rokutv"],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Integrations",
-              items: ["appium-inspector"],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Local Testing",
-              items: ["testing-apps-locally"],
-            },
-            "migrate-appium-tests-from-browserstack-and-saucelabs",
-          ],
-        },
-      ]
+            [
+              {
+                type: "category",
+                collapsed: true,
+                label: "Appium Testing",
+                link: {
+                  type: "doc",
+                  id: "getting-started-with-appium-testing",
+                },
+                items: [
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Languages and Frameworks",
+                    link: {
+                      type: "doc",
+                      id: "appium-languages-and-frameworks",
+                    },
+                    items: [
+                      {
+                        type: "category",
+                        collapsed: true,
+                        label: "Java",
+                        link: {
+                          type: "doc",
+                          id: "appium-java",
+                        },
+                        items: [
+                          "appium-java-junit",
+                          "appium-java-jbehave",
+                          "appium-java-cucumber",
+                          "appium-java-testng",
+                        ],
+                      },
+                      {
+                        type: "category",
+                        collapsed: true,
+                        label: "JavaScript",
+                        link: {
+                          type: "doc",
+                          id: "appium-nodejs",
+                        },
+                        items: ["appium-nodejs-webdriverio", "appium-nodejs-mocha"],
+                      },
+                      {
+                        type: "category",
+                        collapsed: true,
+                        label: "Python",
+                        link: {
+                          type: "doc",
+                          id: "appium-python",
+                        },
+                        items: [
+                          "appium-python-behave",
+                          "appium-python-robot",
+                          "appium-python-gauge",
+                          "appium-python-pytest",
+                        ],
+                      },
+                      {
+                        type: "category",
+                        collapsed: true,
+                        label: "Ruby",
+                        link: {
+                          type: "doc",
+                          id: "appium-ruby",
+                        },
+                        items: ["appium-ruby-cucumber", "appium-ruby-rspec"],
+                      },
+                      {
+                        type: "category",
+                        collapsed: true,
+                        label: "PHP",
+                        link: {
+                          type: "doc",
+                          id: "appium-php",
+                        },
+                        items: ["appium-php-behat"],
+                      },
+                      {
+                        type: "category",
+                        collapsed: true,
+                        label: "C#",
+                        link: {
+                          type: "doc",
+                          id: "appium-csharp",
+                        },
+                        items: ["appium-csharp-nunit"],
+                      },
+                      "appium-kotlin",
+                    ],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Setup",
+                    items: [
+                      "desired-capabilities-in-appium",
+                      "supported-appium-versions",
+                      "list-of-supported-locales",
+                      "app-testing-apis",
+                      "appium-lambdatest-hooks",
+                      "appium-install-uninstall-lambdatest-hooks",
+                      "appium-uploading-retrieving-files",
+                      "appium-firebase-app-upload",
+                    ],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Features",
+                    items: [
+                      "camera-image-injection",
+                      "biometric-authentication",
+                      "reg-expression",
+                      "appium-app-performance",
+                      "appium-ios-app-settings",
+                      "adb-commands-support",
+                      "login-google-android",
+                      "disable-screenshot-block",
+                      "basic-authentication-for-web-automation",
+      
+                    ],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Smart TV Automation",
+                    items: ["appium-appletv", "appium-firetv", "appium-rokutv"],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Integrations",
+                    items: ["appium-inspector"],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Local Testing",
+                    items: ["testing-apps-locally"],
+                  },
+                  "migrate-appium-tests-from-browserstack-and-saucelabs",
+                  
+                ],
+              },
+            ]
     ],
 
     EspressoTestingSidebar: [
@@ -833,18 +864,20 @@ module.exports = {
             "getting-started-with-espresso-testing",
             "debug-espresso-tests",
             {
+     
               type: "category",
               collapsed: true,
               label: "Speedup Espresso Tests",
               items: [
+                
                 {
                   type: "doc",
                   label: "Sharding for Espresso",
                   id: "sharding-espresso",
                 },
-                "speedup-espresso"
+                "speedup-espresso",
               ]
-
+        
             },
             "getting-started-with-flutter-dart-android-automation",
             "espresso-junit-report",
@@ -854,19 +887,19 @@ module.exports = {
     ],
 
     XCUITestingSidebar: [
-      {
-        type: 'link',
-        label: '<- Back',
-        href: '/docs/',
-        customProps: {
-        className: 'back-to-main-menu'
-        },
-      },
-      [
-        {
-          type: "category",
-          collapsed: true,
-          label: "XCUI Testing",
+          {
+            type: 'link',
+            label: '<- Back',
+            href: '/docs/',
+            customProps: {
+            className: 'back-to-main-menu'
+            },
+          },
+          [
+            {
+              type: "category",
+              collapsed: true,
+              label: "XCUI Testing",
               items: [
                 "getting-started-with-xcui-testing",
                 "ios-ipa-files-xcui",
@@ -881,9 +914,9 @@ module.exports = {
                 },
                 "xcui-xml-report",
               ],
-        },
-      ]
-],
+            },
+          ]
+    ],
 
     HyperExecuteSidebar: [
       {
@@ -1277,6 +1310,7 @@ module.exports = {
               },
             ],
           },
+
           {
             type: "category",
             collapsed: true,
@@ -1549,7 +1583,6 @@ module.exports = {
                   "cypress-mochaawesome-report",
                 ]
               },
-
               {
                 type: "category",
                 collapsed: true,
@@ -1675,9 +1708,27 @@ module.exports = {
           id: "smartui-cli",
         },
         {
-          type: "doc",
-          label: "Setup with Selenium",
-          id: "selenium-visual-regression",
+          type: "category",
+          collapsed: false,
+          label: "Selenium",
+          items: [
+            // "smartui-selenium-js-sdk",
+            // "selenium-visual-regression"
+            {
+              type: "category",
+              label: "SDK",
+              collapsed:true,
+              // id: "smart-visual-regression-testing",
+              items: [
+                {
+                  type: "doc",
+                  label: "Javascript SDK",
+                  id: "smartui-selenium-js-sdk",
+                }
+              ]
+            },
+                "selenium-visual-regression"
+          ],
         },
         {
           type: "doc",
@@ -1868,6 +1919,7 @@ module.exports = {
           type: "category",
           label: "How to Guides",
           items: [
+            "tas-how-to-guides-badge",
             "tas-how-to-guides-gh-token",
             "tas-how-to-guides-gl-token",
             "tas-how-to-guides-bb-token",
@@ -1883,6 +1935,7 @@ module.exports = {
           label: "Learn about TAS",
           items: [
             "tas-learn-about-tas-how-tas-works",
+            "tas-learn-about-tas-architecture",
             "tas-learn-about-tas-features-and-languages",
           ],
         },
@@ -2173,7 +2226,7 @@ module.exports = {
                 "zapier-integration-with-lambdatest",
                 "axosoft-integration",
 
-
+                
               ],
             },
             {
@@ -2411,6 +2464,7 @@ module.exports = {
           id: "group-and-filter-your-test-builds-using-build-tags",
         },
       ]
+
     ],
 
     AccountManagementSidebar: [

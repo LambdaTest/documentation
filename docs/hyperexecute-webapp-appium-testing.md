@@ -2,7 +2,7 @@
 id: hyperexecute-webapp-appium-testing
 title: Appium Testing On HyperExecute - WebApp
 sidebar_label: HyperExecute Appium Testing for WebApp
-description: Now you can run your automation scripts using Selenium with Behave on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Easy HyperExecute WebApp Appium testing on LambdaTest. Run Selenium scripts flawlessly across 3000+ actual desktop browsers and operating systems.
 keywords:
   - appium
   - java

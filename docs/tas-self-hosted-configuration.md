@@ -34,7 +34,7 @@ This specify secret key will be provided to you after loggin in and selecting th
 **Example** 
 ```json
 "Lambdatest": {
-  "SecretKey": "add-your-secret-key-here"
+  "SecretKey": "SecretKeyForLambdaTest"
 }
 ```
 
@@ -63,7 +63,7 @@ To create a new token you can use the following steps.
 **Example** 
 ```json
 "Git": {
-  "Token": "add-your-git-token-here",
+  "Token": "GitToken",
   "TokenType": "bearer"
 }
 ```
@@ -78,7 +78,7 @@ This parameter would already contain the correct values inside your downloaded *
 **Example** 
 ```json
 "ContainerRegistry": {
-  "PullPolicy": "always",
+  "ImagePull": "always",
   "Mode": "public",
   "Username": "registryUsername",
   "Password": "registryPassword"
@@ -87,7 +87,7 @@ This parameter would already contain the correct values inside your downloaded *
 
 | Key | Type | Usage |
 | --- | ---- | ----- |
-| `ContainerRegistry.PullPolicy` | `string` | Defines when to pull images: `always`, `never` (keep never if image is present in local system) |
+| `ContainerRegistry.ImagePull` | `string` | Defines when to pull images: `always`, `never` (keep never if image is present in local system) |
 | `ContainerRegistry.Mode` | `string` | Image is private or public: `public`, `private` |
 | `ContainerRegistry.Username` | `string` | Registry username if the image is private |
 | `ContainerRegistry.Password` | `string` | Registry password if the image is private |
@@ -104,8 +104,8 @@ Your repositories might need some secrets while compiling or during test executi
 **Example** 
 ```json
 "RepoSecrets": {
-  "synapse":{
-    "SAMPLE_SECRET_KEY": "sample_secret_value"
+  "repository1":{
+    "AWS_REGION": "us-east-1",
   }
 }
 ```
@@ -154,19 +154,19 @@ Here is a sample configuration file for TAS setup on self hosted environment.
     "Consolelevel": "error"
   },
   "Lambdatest": {
-    "SecretKey": "add-your-secret-key-here"
+    "SecretKey": "dummysecretkey"
   },
   "Git": {
-    "Token": "add-your-git-token-here",
+    "Token": "dummytoken",
     "TokenType": "bearer"
   },
   "ContainerRegistry": {
-    "PullPolicy": "always",
+    "ImagePull": "always",
     "Mode": "public"
   },
   "RepoSecrets": {
     "synapse":{
-      "SAMPLE_SECRET_KEY": "sample_secret_value"
+      "AWS_REGION": "us-east-1",
     }
   }
 }

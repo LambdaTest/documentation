@@ -12,12 +12,11 @@ export default function DocPaginator(props) {
       }
     }
   }, [])
-  
   return (
     <>
     {showFeedback && <HelpFulArticle />}
     <div className="social_button">
-        <button onClick={() => window.openLTChatWidget()}  className="chat_btn"><img loading="lazy" src="/support/img/Chat.svg" alt="" role="presentation" title='Chat with Us' className='' width="16" height="16"/>Chat with Us</button>
+        <button onClick={() => window.openLTChatWidget()}  className="chat_btn"><img loading="lazy" src="/support/img/Chat.svg" alt=" " role="presentation" title='Chat with Us' className='' width="16" height="16"/>Chat with Us</button>
         <a role="button" tabindex="0" href="https://community.lambdatest.com/" target="_blank"  className="btnlink">Ask the Community</a>
         {/* <a href="https://accounts.lambdatest.com/register" target="_blank"  className="btnlink">Start Free Testing</a> */}
     </div>

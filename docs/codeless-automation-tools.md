@@ -104,7 +104,7 @@ LambdaTest offers integration with codeless automation tools to help you expand 
 <a href="https://www.lambdatest.com/support/docs/algoqa-integration/">algoQA Integration With LambdaTest</a>
 </div>
 
-If your favorite Codeless automation tool is not in the above-mentioned, just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}> **shout**</span> and we will have it ready shortly for you.
+If your favorite Codeless automation tool is not in the above-mentioned, just give us a <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}> **shout**</span> and we will have it ready shortly for you.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

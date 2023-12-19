@@ -10,16 +10,9 @@ export default function HelpFulArticle() {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
-        if(getLTUserID()){
-            var raw = JSON.stringify({
-                "url": window.location.href,
-                "userId": getLTUserID()
-            });
-        }else{
-            var raw = JSON.stringify({
-                "url": window.location.href,
-            });
-        }
+        var raw = JSON.stringify({
+            "url": window.location.href,
+        });
 
         var requestOptions = {
             method: 'POST',
@@ -82,22 +75,12 @@ export default function HelpFulArticle() {
 
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        if(getLTUserID()){
-            var raw = JSON.stringify({
-                feedback: feedBackString,
-                url: window.location.href,
-                utm: utmJsonTemp,
-                userId: getLTUserID()
-            });
-        }else{
-            var raw = JSON.stringify({
-                feedback: feedBackString,
-                url: window.location.href,
-                utm: utmJsonTemp
-            });
-            
-        }
-       
+
+        var raw = JSON.stringify({
+            feedback: feedBackString,
+            url: window.location.href,
+            utm: utmJsonTemp
+        });
 
         var requestOptions = {
             method: 'POST',

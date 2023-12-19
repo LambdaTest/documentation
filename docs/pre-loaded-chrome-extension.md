@@ -127,7 +127,7 @@ Alternatively, you can install/re-install, delete or add more Chrome extensions.
 <img loading="lazy" src={require('../assets/images/preloaded-chrome/addmore-ex.webp').default} alt="Image" width="1347" height="616"  className="doc_img img_center"/><br/>
 
 >
-If you have any questions or need further information about Pre-Loaded Chrome Extension, please feel free to reach us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or email us at [support@lambdatest.com](mailto:support@lambdatest.com). <br />
+If you have any questions or need further information about Pre-Loaded Chrome Extension, please feel free to reach us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Support**</span> or email us at [support@lambdatest.com](mailto:support@lambdatest.com). <br />
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -148,5 +148,6 @@ If you have any questions or need further information about Pre-Loaded Chrome Ex
     </li>
   </ul>
 </nav>
+
 
 
