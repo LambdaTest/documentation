@@ -1,0 +1,43 @@
+
+name: Pull Request Checks
+
+on:
+    pull_request:
+      branches:
+        - main
+    merge_group:
+
+jobs:
+    build-and-deploy:
+      runs-on: ubuntu-20.04
+      env:
+          CI: true
+          NODE_ENV: stage
+      steps:
+        - uses: actions/checkout@v4
+        - name: Set up Node.js
+          uses: actions/setup-node@v3
+          with:
+            node-version: '16.14.0'
+            cache: 'npm'
+        - name: Docusaurus Webpack cache
+          uses: actions/cache@v3
+          with:
+            path: node_modules/.cache
+            key: ${{ runner.os }}-webpack-cache
+        - name: Install dependencies
+          run: npm install
+        - name: Build the Docusaurus site
+          env:
+            NODE_OPTIONS: "--max-old-space-size=8192"
+          run: npm run build
+    spellcheck:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v4
+      - uses: codespell-project/actions-codespell@master
+        name: Check spelling
+        with:
+          skip: "*.svg,*.js,*.map,*.css,*.scss"
+          ignore_words_list: "aks,atleast,cros,ddress,fiel,ist,nd,ot,pullrequest,ser,shttp,wast,fo,seldomly,delt,cruzer,plack,secur,te,testng,TestNG,FLE,Nome,softwares"
+          path: docs
