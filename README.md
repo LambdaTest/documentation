@@ -1,83 +1,37 @@
-# lambdatest-docs
+# LambdaTest Documentation
 
-Supporting Docs
+Welcome to LambdaTest's documentation repository! Help us enhance our documentation by contributing—whether it's fixing a typo or adding new topics. We appreciate all contributions.
 
-### Steps to clone
-
-***
-
-**Install node.js on your computer**
-
-  * Go to Download | Node.js  > download and install node.js as per your system configuration (suggested node version 16.14.0)
-
-  * Once installed verify the node.js version - Open Command Prompt/Terminal and run command node -v
-
-**Install Git on your computer**
-
-  * Git - Downloads 
-
-**Install VS Code (Recommended Code Editor)**
-
-  * https://code.visualstudio.com/download 
-
-**Fork the repo**
-
-  * Go to https://github.com/LambdaTest/lambdatest-docs
-
-  * Click on Fork button at top right corner and complete the forking process as guided
-
-  * Clone the repo on your computer
-
-  * Go to Terminal and run the following command (change the path as per your preference)
-  
-  * Note: Replace **YOURGITHUBUSERNAME** to your actual GitHub username below
+---
 
 
-### Windows
+## Contributing Content
 
+We recommend forking the repo, creating all content changes in branches, and submitting pull requests. We will work with you to get this content reviewed, tested, and merged for publishing.
 
-  * mkdir C:\LambdaTest
-  * cd C:\LambdaTest
-  * git clone -b prod https://github.com/YOURGITHUBUSERNAME/lambdatest-docs.git docs
-  * cd docs
-  * npm install
+## Building Locally
 
-### MacOS
+Docusaurus requires the following to build on locals:
 
+* [NodeJS](https://nodejs.org/en/download/) versionrecommended node version: 16.14.0)
+* Verify the Node.js version by opening Command Prompt/Terminal and running node -v
+* Download Git [here](https://git-scm.com/downloads)
+* [VS Code Editor](https://code.visualstudio.com/download)
 
-  * mkdir ~/LambdaTest
-  * cd ~/LambdaTest
-  * git clone -b prod https://github.com/YOURGITHUBUSERNAME/lambdatest-docs.git docs
-  * cd docs
-  * npm install
- 
+To build on your local:
 
-### Set upstream for the repo
-  * Step 1 - Run command 'git remote add upstream git@github.com:LambdaTest/lambdatest-docs.git'
-  * Step 2 - Run command 'git remote -v'
-you will see website repo in origin and your fork in upstream
+1. Clone the repo using Git or tools like GitHub Desktop.
+2. In a terminal, change to the cloned repo folder. Run the install command: `npm install`.
+3. To serve and review your content, use one of the following:
+   * Use start, hot reloads as you make changes: `npm start`. 
+4. To build locally and test your links, run `npm run build`. Any issues with broken links and images are listed according to file. Locate and update those issues, then run `npm serve` and start again to verify.
 
-**How to keep updating the forked repo**
+Note- If the command doesn't work, try `npm i react-scripts@latest` followed by `npm start`.
 
-Run command 'git pull upstream prod'
+The static files are generated in the build folder and run on your local machine at: http://localhost:3000/. To stop the build or served site, hit Ctrl + C to interrupt. You can enter new commands in terminal, rebuild, and restart.
 
-**How to run project on the local**
+LambdaTest Documents was created using [Docusaurus 2](https://docusaurus.io/) with React
 
-Run command 'npm start' (if this command not working then run **npm i react-scripts@latest** )
+## Publishing Content
 
-
-**How to raise PR from fork to upstream**
-  * Step 1 - Commit your code using git desktop or VS Code
-  * Step 2 - Open https://github.com/LambdaTest/lambdatest-docs
-  * Step 3 - Open 'Pull request' tab
-  * Step 4 - Click on 'New Pull request' button
-  * Step 5 - Select following from drop down menu
-    - Select base repository - 'LambdaTest/lambdatest-docs'
-    - Base - 'Prod'
-    - Head Repository - 'Your forked repository'
-    - Compare - 'Your branch'
-  * Click on 'Create pull request', copy the current page URL
-
-**How to check the status of deployment on Github**
-  * Open https://github.com/LambdaTest/lambdatest-docs/  in browser
-  * Click on action tab for checking status of your merged PR
+As pull requests are merged to the `main` branch by the LambdaTest Documentation team, the content builds and deploys to a staging site. This allows you to review and test your content thoroughly on a server, rather than a local build, prior to merging your code to production.
