@@ -1,4 +1,4 @@
-# LambdaTest Documentation
+# [LambdaTest Documentation](https://lambdatest.com/support/docs/)
 
 Welcome to LambdaTest's documentation repository! Help us enhance our documentation by contributing—whether it's fixing a typo or adding new topics. We appreciate all contributions.
 
@@ -30,8 +30,8 @@ Note- If the command doesn't work, try `npm i react-scripts@latest` followed by 
 
 The static files are generated in the build folder and run on your local machine at: http://localhost:3000/. To stop the build or served site, hit Ctrl + C to interrupt. You can enter new commands in terminal, rebuild, and restart.
 
-LambdaTest Documents was created using [Docusaurus 2](https://docusaurus.io/) with React
+[LambdaTest Documentation](https://lambdatest.com/support/docs/) was created using [Docusaurus 2](https://docusaurus.io/) with React
 
 ## Publishing Content
 
-As pull requests are merged to the `main` branch by the LambdaTest Documentation team, the content builds and deploys to a staging site. This allows you to review and test your content thoroughly on a server, rather than a local build, prior to merging your code to production.
+As pull requests are merged to the `main` branch by the [LambdaTest Documentation](https://lambdatest.com/support/docs/) team, the content builds and deploys to a staging site. This allows you to review and test your content thoroughly on a server, rather than a local build, prior to merging your code to production.
