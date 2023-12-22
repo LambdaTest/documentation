@@ -4,70 +4,34 @@ Welcome to LambdaTest's documentation repository! Help us enhance our documentat
 
 ---
 
-## Installation
 
-### Dependencies
+## Contributing Content
 
-1. **Node.js Installation**
-   - Download [NodeJS](https://nodejs.org/en/download/) based on your system configuration (recommended node version: 16.14.0)
-   - Verify the Node.js version by opening Command Prompt/Terminal and running `node -v`
+We recommend forking the repo, creating all content changes in branches, and submitting pull requests. We will work with you to get this content reviewed, tested, and merged for publishing.
 
-2. **Git Installation**
-   - Download Git [here](https://git-scm.com/downloads)
+## Building Locally
 
-3. **Recommended Code Editor**
-   - [VS Code](https://code.visualstudio.com/download)
+Docusaurus requires the following to build on locals:
 
-### Cloning the Repository
+* [NodeJS](https://nodejs.org/en/download/) versionrecommended node version: 16.14.0)
+* Verify the Node.js version by opening Command Prompt/Terminal and running node -v
+* Download Git [here](https://git-scm.com/downloads)
+* [VS Code Editor](https://code.visualstudio.com/download)
 
-1. **Fork the Repository**
-   - Go to [LambdaTest/lambdatest-docs](https://github.com/LambdaTest/lambdatest-docs)
-   - Click "Fork" at the top-right corner and complete the forking process as guided
+To build on your local:
 
-2. **Clone the Repository to Your Computer**
+1. Clone the repo using Git or tools like GitHub Desktop.
+2. In a terminal, change to the cloned repo folder. Run the install command: `npm install`.
+3. To serve and review your content, use one of the following:
+   * Use start, hot reloads as you make changes: `npm start`. 
+4. To build locally and test your links, run `npm run build`. Any issues with broken links and images are listed according to file. Locate and update those issues, then run `npm serve` and start again to verify.
 
-**Windows**
+Note- If the command doesn't work, try `npm i react-scripts@latest` followed by `npm start`.
 
-  * mkdir C:\LambdaTest
-  * cd C:\LambdaTest
-  * git clone -b staging https://github.com/YOURGITHUBUSERNAME/lambdatest-docs.git docs
-  * cd docs
-  * npm install
+The static files are generated in the build folder and run on your local machine at: http://localhost:3000/. To stop the build or served site, hit Ctrl + C to interrupt. You can enter new commands in terminal, rebuild, and restart.
 
+LambdaTest Documents was created using [Docusaurus 2](https://docusaurus.io/) with React
 
-**MacOS**
+## Publishing Content
 
-  * mkdir ~/LambdaTest
-  * cd ~/LambdaTest
-  * git clone -b staging https://github.com/YOURGITHUBUSERNAME/lambdatest-docs.git docs
-  * cd docs
-  * npm install
-
-### Setting Upstream and Creating Pull Requests
-
-**Set Upstream for the Repository**
-
-1. Run `git remote add upstream git@github.com:LambdaTest/lambdatest-docs.git`
-2. Run `git remote -v` to verify
-
-**Raising Pull Requests from Fork to Upstream**
-
-1. Commit your changes using Git Desktop or VS Code
-2. Visit [LambdaTest/lambdatest-docs](https://github.com/LambdaTest/lambdatest-docs)
-3. Open the "Pull request" tab
-4. Click "New Pull request"
-5. Select the following from the dropdown menus:
-   - Base repository: `LambdaTest/lambdatest-docs`
-   - Base: `staging`
-   - Head Repository: Your forked repository
-   - Compare: Your branch
-6. Click "Create pull request" and copy the page URL
-
-## Update the Forked Repository
-
-Run `git pull upstream staging` to keep your forked repository updated.
-
-## Run the Project Locally
-
-Run `npm start`. If the command doesn't work, try `npm i react-scripts@latest` followed by `npm start`. This will redirect to [http://localhost:3000/support/docs/](http://localhost:3000/support/docs/).
-
+As pull requests are merged to the `main` branch by the LambdaTest Documentation team, the content builds and deploys to a staging site. This allows you to review and test your content thoroughly on a server, rather than a local build, prior to merging your code to production.
