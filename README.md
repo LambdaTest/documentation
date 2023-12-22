@@ -13,7 +13,7 @@ We recommend forking the repo, creating all content changes in branches, and sub
 
 Docusaurus requires the following to build on locals:
 
-* [NodeJS](https://nodejs.org/en/download/) versionrecommended node version: 16.14.0)
+* [NodeJS](https://nodejs.org/en/download/) version recommended: 16.14.0)
 * Verify the Node.js version by opening Command Prompt/Terminal and running node -v
 * Download Git [here](https://git-scm.com/downloads)
 * [VS Code Editor](https://code.visualstudio.com/download)
