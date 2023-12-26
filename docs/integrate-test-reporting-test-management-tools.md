@@ -42,6 +42,9 @@ slug: integrate-test-reporting-test-management-tools/
 ***
 LambdaTest offers integration with test reporting and test management tools, allowing you to conveniently manage your test execution reports, as you perform cross browser testing using LambdaTest. Using the integration with your favourite test reporting and test management tools, you can view and analyze the results of your automated browser testing on 3000+ real browsers and operating systems, executed over LambdaTest.
 
+| [PractiTest Integration With LambdaTest](/docs/practitest-integration/) |
+|:--------------------------------------------------------------------------------------------:|
+
 | [Test Rail Integration With LambdaTest](/docs/testrail-integration-with-lambdatest-selenium-grid/) |
 |:--------------------------------------------------------------------------------------------:|
 
