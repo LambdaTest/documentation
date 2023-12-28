@@ -15,6 +15,7 @@ site_name: LambdaTest
 slug: tosca-integration-with-hyperexecute-using-dex/
 ---
 
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -41,7 +42,7 @@ slug: tosca-integration-with-hyperexecute-using-dex/
 
 # Tosca Integration using DEX
 
-This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute using DEX.
+This documentation provides a detailed guide to seamlessly integrating Tosca with HyperExecute using DEX.
 
 ## Pre-requisites:
 

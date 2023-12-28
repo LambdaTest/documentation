@@ -178,7 +178,10 @@ Out of the box, HyperExecute supports multiple languages and testing frameworks 
           <a href="/docs/playwright-vanillajs-on-hyperexecute/">VanillaJs</a>
         </li>
         <li>
-          <a href="/docs/codecept-on-hyperexecute/">CodeceptJs</a>
+          <a href="/docs/playwright-codeceptjs-on-hyperexecute/">CodeceptJs</a>
+        </li>
+        <li>
+          <a href="/docs/playwright-jest-on-hyperexecute/">Jest</a>
         </li>
       </ul>
     </div>
@@ -195,6 +198,46 @@ Out of the box, HyperExecute supports multiple languages and testing frameworks 
       <ul className="lt_framework_list">
         <li>
           <a href="/docs/playwright-dotnet-on-hyperexecute/">.Net</a>
+        </li>
+      </ul>
+    </div>
+     <div className="lt_col lt_framework_wrapper">
+      <ul className="lt_framework_list">
+        <li>
+        </li>
+        <li>     
+        </li>
+      </ul>
+    </div>
+     <div className="lt_col lt_framework_wrapper">
+      <ul className="lt_framework_list">
+        <li>
+        </li>
+        <li>     
+        </li>
+      </ul>
+    </div>
+     <div className="lt_col lt_framework_wrapper">
+      <ul className="lt_framework_list">
+        <li>
+        </li>
+        <li>     
+        </li>
+      </ul>
+    </div>
+     <div className="lt_col lt_framework_wrapper">
+      <ul className="lt_framework_list">
+        <li>
+        </li>
+        <li>     
+        </li>
+      </ul>
+    </div>
+     <div className="lt_col lt_framework_wrapper">
+      <ul className="lt_framework_list">
+        <li>
+        </li>
+        <li>     
         </li>
       </ul>
     </div>

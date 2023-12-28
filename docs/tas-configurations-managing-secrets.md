@@ -22,11 +22,11 @@ You can add environment variables in TAS to securely use sensitive information s
 ***
 ### Adding secrets for the first time - TAS CLOUD
 - While configuring .tas.yml
-- Click on the `Manage secrets` option located at the bottom
-- You can add secrets in this section and use them while configuring the `.tas.yml` (steps mentioned below.)
+- Scroll down to "Managing Secrets" section
+- You can add secrets in this section and use them while configuring the .tas.yml (steps mentioned below.)
 
 <p align="center">
-  <img loading="lazy" src={require('../assets/images/tas/getting-started/yml-secrets.gif').default} alt="Import Repository" width="1340" height="617" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/tas/getting-started/yml_secrets.gif').default} alt="Import Repository" width="1340" height="617" className="doc_img"/>
 </p>
 
 <br/>

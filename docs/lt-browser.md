@@ -79,25 +79,27 @@ slug: lt-browser/
 LT Browser allows you to ensure your website's responsiveness over a variety of major devices and view ports. You can open a website in the [LT Browser](https://www.lambdatest.com/lt-browser) and perform live testing across 50+ pre-installed device viewports.
 
 <div className="ytframe"> 
-<div className="youtube" data-embed="RH95O9mOGoc" data-loading-attribute="eager">
+<div className="youtube" data-embed="RH95O9mOGoc">
     <div className="play-button"></div>
 </div>
 </div>
 
+>
+We are going to release a new version of LT Browser with loaded features. Please stay tuned.
 
-To get started, you need to download the executable file from here.
+<!-- To get started, you need to download the executable file from here. -->
 
-<div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.exe" onClick={() => window.sendAnalytics('Download LT Browser 2.0')}>Download LT Browser For Windows</a>
+<!-- <div className="download_btn mb-10">
+<a href="https://downloads.lambdatest.com/lt-browser/LTBrowser.exe" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser For Windows</a>
 </div>   
 
 <div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.dmg" onClick={() => window.sendAnalytics('Download LT Browser 2.0')}>Download LT Browser For macOS</a>
+<a href="https://downloads.lambdatest.com/lt-browser/LTBrowser.dmg" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser For macOS</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.deb" onClick={() => window.sendAnalytics('Download LT Browser 2.0')}>Download LT Browser For Linux</a>
-</div>
+<a href="https://downloads.lambdatest.com/lt-browser/LTBrowser.AppImage" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser For Linux</a>
+</div> -->
 
 **Note:** After you are done with the installation, you will need to login to the LT Browser through your LambdaTest login credentials.
 

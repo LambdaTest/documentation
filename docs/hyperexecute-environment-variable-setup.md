@@ -84,22 +84,22 @@ Before the tests are run, please set the environment variables LT_USERNAME & LT_
 For macOS:
 
 ```bash
-export LT_USERNAME=LT_USERNAME
-export LT_ACCESS_KEY=LT_ACCESS_KEY
+export LT_USERNAME=YOUR_LT_USERNAME
+export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 ```
 
 For Linux:
 
 ```bash
-export LT_USERNAME=LT_USERNAME
-export LT_ACCESS_KEY=LT_ACCESS_KEY
+export LT_USERNAME=YOUR_LT_USERNAME
+export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 ```
 
 For Windows:
 
 ```bash
-set LT_USERNAME=LT_USERNAME
-set LT_ACCESS_KEY=LT_ACCESS_KEY
+set LT_USERNAME=YOUR_LT_USERNAME
+set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 ```
 
 

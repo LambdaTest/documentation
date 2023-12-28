@@ -2,7 +2,7 @@
 id: playwright-playwrighttest
 title: Running Playwright Tests With Playwright Test Runner
 hide_title: true
-sidebar_label: Integrate With Playwright Test Runner
+sidebar_label: Integrate With Playwright Test
 description: Learn how to perform Playwright testing using Playwright test runner across 40+ browser versions on the LambdaTest platform.
 keywords:
  -  playwright testing with Playwright test runner
@@ -228,3 +228,5 @@ test.describe('Browse LambdaTest in different search engines', () => {
     </li>
   </ul>
 </nav>
+
+

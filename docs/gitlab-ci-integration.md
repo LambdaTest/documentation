@@ -177,7 +177,7 @@ image: node:7.10
 before_script:
   - |
     cd /builds/qarachit/protractor-selenium-sample-gitlab
-    wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip
+    wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip
     #Extracting tunnel binary
     sudo apt-get install unzip
     unzip LT_Linux.zip

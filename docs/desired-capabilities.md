@@ -826,7 +826,7 @@ For example:
 | Ruby |capabilities[“lambdaMaskCommands”] = [“setValues”, “setCookies”, “getCookies”]|
 
 >Got any questions?<br/>
-Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at support@lambdatest.com.
+Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at support@lambdatest.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

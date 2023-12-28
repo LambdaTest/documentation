@@ -186,7 +186,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
     "testSuite": "lt://TestSuite_ID",
     "device" :  ["iPhone 11-14"],
     "video" : true,
-    "queueTimeout": 10800,
+    "queueTimeout": 360,
     "idleTimeout": 150,
     "devicelog": true,
     "network": false,
@@ -242,7 +242,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
     "app" : "lt://APP_ID",
     "testSuite": "lt://TestSuite_ID",
     "device" :  ["iPhone 11-14","iPhone 12 Pro-15","iPhone X-13"],
-    "queueTimeout": 10800,
+    "queueTimeout": 360,
     "IdleTimeout": 150,
     "deviceLog": true,
     "build" : "Proverbial-XCUITest"

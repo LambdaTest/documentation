@@ -860,6 +860,24 @@ Indicates whether to enable a tunnel for accessing your applications which are  
 tunnel: true
 ```
 
+If you want to use tunnel for connecting HyperExecute with your organization (that is working with a maven project), you can add one of the following parameters in the `preDirectives` field depending on the tech stack that your organization is using:
+
+- For Maven Projects:
+
+`-DproxyHost=${LT_PROXY_HOST}`
+
+`-DproxyPort=${LT_PROXY_PORT}`
+
+- For Nodejs Projects:
+
+`npm config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT} npm config set https-proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}`
+
+```bash
+preDirectives:
+  commands:
+  - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install -DproxyHost=${LT_PROXY_HOST} -DproxyPort=${LT_PROXY_PORT}
+```
+
 ***
 ## `tunnelOpts`
 The options to use when running the [tunnel](/support/docs/deep-dive-into-hyperexecute-yaml/#tunnel).

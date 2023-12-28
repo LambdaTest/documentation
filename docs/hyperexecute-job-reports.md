@@ -8,6 +8,7 @@ keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
   - LambdaTest Hyperexecute documentation
+
 url: https://www.lambdatest.com/support/docs/hyperexecute-job-reports/
 site_name: LambdaTest
 slug: hyperexecute-job-reports/
@@ -47,23 +48,21 @@ HyperExecute supports a wide variety of test reports, including:
 
 - **Extent Reports:** Extent Reports is a popular reporting framework for Java, TestNG, and Selenium tests. It provides a comprehensive set of features for reporting test results, including detailed test case summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
 
-- **Extent Native:** Extent Native is a newer reporting framework from the Extent Reports team. It provides a native reporting experience for Java, TestNG, and Selenium tests. Extent Native reports are interactive and responsive, and they can be viewed on any device. They also include features such as drill-down analysis, custom filters, and real-time updates.
+- **Extent Native Reports:** Extent Native is a newer reporting framework from the Extent Reports team. It provides a native reporting experience for Java, TestNG, and Selenium tests. Extent Native reports are interactive and responsive, and they can be viewed on any device. They also include features such as drill-down analysis, custom filters, and real-time updates.
 
-- **Allure:** Allure is a cross-platform reporting framework that can be used with a variety of testing frameworks and languages. It provides a rich reporting experience with features such as interactive and responsive reports, drill-down analysis, custom filters, real-time updates, and integration with CI/CD tools.
+- **Allure Reports:** Allure is a cross-platform reporting framework that can be used with a variety of testing frameworks and languages. It provides a rich reporting experience with features such as interactive and responsive reports, drill-down analysis, custom filters, real-time updates, and integration with CI/CD tools.
 
 - **Cucumber Reports:** Cucumber Reports is a reporting framework for Cucumber tests. It provides a detailed overview of the test execution, including test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
 
 - **Playwright HTML:** Playwright HTML is a reporting framework for Playwright tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
 
-- **Cypress Reports:** Cypress Reports is a reporting framework for Cypress tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
+<!-- - **Cypress Reports:** Cypress Reports is a reporting framework for Cypress tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results. -->
 
-- **Specflow:** Specflow is a testing framework for BDD (Behavior Driven Development). It can be used with a variety of programming languages, including C#, Java, and Ruby. Specflow reports provide a detailed overview of the test execution, including feature summaries, scenario summaries, step summaries, screenshots and videos of test execution, and execution logs.
+- **SpecFlow Reports:** Specflow is a testing framework for BDD (Behavior Driven Development). It can be used with a variety of programming languages, including C#, Java, and Ruby. Specflow reports provide a detailed overview of the test execution, including feature summaries, scenario summaries, step summaries, screenshots and videos of test execution, and execution logs.
 
-- **Mochaawesome report:** Mochaawesome report is a reporting framework for Mocha tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, and execution logs.
+- **Cypress Mochawesome Reports:** Mochawesome report is a reporting framework for Mocha tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, and execution logs.
 
-- **Junit Report:** Junit Report is a reporting framework for Junit tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, and execution logs.
-
-- **Specflow Custom:** Specflow Custom reports are custom reports that can be generated using the Specflow reporting API. You can use the Specflow reporting API to generate reports in any format you want, such as HTML, PDF, or XML.
+<!-- - **JUnit Reports:** Junit Report is a reporting framework for Junit tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, and execution logs. -->
 
 ## Benefits of Using HyperExecute Reports
 
@@ -89,8 +88,8 @@ To use HyperExecute reports, simply follow these steps:
 
 **Step 4:** Analyze the test results and identify any areas where improvement is needed. -->
 
-Tips for Using HyperExecute Reports Effectively
+<!-- Tips for Using HyperExecute Reports Effectively
 
 :::tip
 Different HyperExecute reports provide different information. Choose the report that is most relevant to your needs. For example, if you want to quickly identify which tests failed, you would use the Summary Report
-:::
+::: -->

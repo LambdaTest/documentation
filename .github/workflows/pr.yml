@@ -4,7 +4,7 @@ name: Pull Request Checks
 on:
     pull_request:
       branches:
-        - main
+        - stage
     merge_group:
 
 jobs:
@@ -12,9 +12,9 @@ jobs:
       runs-on: ubuntu-20.04
       env:
           CI: true
-          NODE_ENV: prod
+          NODE_ENV: stage
       steps:
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@v4 
         - name: Set up Node.js
           uses: actions/setup-node@v3
           with:

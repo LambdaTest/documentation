@@ -59,8 +59,8 @@
 
     const isStage = () => {
       if (
-        window.location.origin.indexOf("staging") >= 0 || 
-        window.location.origin.indexOf("dev") >= 0 
+        window.location.origin.indexOf("staging") >= 0 ||
+        window.location.origin.indexOf("dev") >= 0
       ) {
         return true;
       } else {
@@ -72,102 +72,102 @@
 
       var token = getCookie(isStage() ? 'stageAccessToken' : 'accessToken');
       var apiURl = isStage() ? "https://stage-accounts.lambdatestinternal.com/api/user" : "https://accounts.lambdatest.com/api/user";
-      fetch(apiURl,{
+      fetch(apiURl, {
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json",
           "Authorization": `Bearer ${token}`
         }
-    }).then(response => response.json())
-      .then((result) => {
-        console.log(`in fetch ${from}`)
-        if(result.username) {
-          document.getElementById("signbtn").href="https://billing.lambdatest.com/billing/plans"
-          document.getElementById("signbtn").innerHTML="Upgrade"
-          window.lt_web_doc.username = result.username;
-          window.lt_web_doc.apiToken = result.apiToken;
-          const lambda__doc__username = document.querySelectorAll(".lambdatest__username");
-          if(lambda__doc__username && lambda__doc__username.length > 0) {
-            for (var i = 0; i < lambda__doc__username.length; i++) {
-              let username = lambda__doc__username[i];
-              username.innerHTML = result.username
+      }).then(response => response.json())
+        .then((result) => {
+          console.log(`in fetch ${from}`)
+          if (result.username) {
+            document.getElementById("signbtn").href = "https://stage-billing.lambdatestinternal.com/billing/plans"
+            document.getElementById("signbtn").innerHTML = "Upgrade"
+            window.lt_web_doc.username = result.username;
+            window.lt_web_doc.apiToken = result.apiToken;
+            const lambda__doc__username = document.querySelectorAll(".lambdatest__username");
+            if (lambda__doc__username && lambda__doc__username.length > 0) {
+              for (var i = 0; i < lambda__doc__username.length; i++) {
+                let username = lambda__doc__username[i];
+                username.innerHTML = result.username
+              }
             }
-          }
-          const lambda__doc__accessKey = document.querySelectorAll(".lambdatest__accessKey");
-          if(lambda__doc__accessKey && lambda__doc__accessKey.length > 0) {
-            for (var i = 0; i < lambda__doc__accessKey.length; i++) {
-              let accessKey = lambda__doc__accessKey[i];
-              accessKey.innerHTML = result.apiToken
+            const lambda__doc__accessKey = document.querySelectorAll(".lambdatest__accessKey");
+            if (lambda__doc__accessKey && lambda__doc__accessKey.length > 0) {
+              for (var i = 0; i < lambda__doc__accessKey.length; i++) {
+                let accessKey = lambda__doc__accessKey[i];
+                accessKey.innerHTML = result.apiToken
+              }
             }
-          }
-          const lambda__doc__codeblock = document.querySelectorAll(".lambdatest__codeblock code");
-          if(lambda__doc__codeblock && lambda__doc__codeblock.length > 0) {
-            for (var i = 0; i < lambda__doc__codeblock.length; i++) {
-              let codeblock = lambda__doc__codeblock[i];
-              codeblock.innerHTML = codeblock.innerHTML.replace("YOUR_LAMBDATEST_USERNAME", result.username)
-              codeblock.innerHTML = codeblock.innerHTML.replace("YOUR_LAMBDATEST_ACCESS_KEY", result.apiToken)
+            const lambda__doc__codeblock = document.querySelectorAll(".lambdatest__codeblock code");
+            if (lambda__doc__codeblock && lambda__doc__codeblock.length > 0) {
+              for (var i = 0; i < lambda__doc__codeblock.length; i++) {
+                let codeblock = lambda__doc__codeblock[i];
+                codeblock.innerHTML = codeblock.innerHTML.replace("YOUR_LAMBDATEST_USERNAME", result.username)
+                codeblock.innerHTML = codeblock.innerHTML.replace("YOUR_LAMBDATEST_ACCESS_KEY", result.apiToken)
+              }
             }
+          } else {
+            window.lt_web_doc.username = "YOUR_LAMBDATEST_USERNAME"
+            window.lt_web_doc.apiToken = "YOUR_LAMBDATEST_ACCESS_KEY"
           }
-        } else {
-          window.lt_web_doc.username = "YOUR_LAMBDATEST_USERNAME"
-          window.lt_web_doc.apiToken = "YOUR_LAMBDATEST_ACCESS_KEY"
-        }
 
         }).catch(err => {
           console.log(err)
           window.lt_web_doc.username = "YOUR_LAMBDATEST_USERNAME"
           window.lt_web_doc.apiToken = "YOUR_LAMBDATEST_ACCESS_KEY"
-        }) 
+        })
     }
-    
+
     window.addEventListener('DOMContentLoaded', (event) => {
       getUsernameToken('dom');
-  });
+    });
 
-  function selectText(htmlelement) {
-    var node = htmlelement;
-    if (document.body.createTextRange) {
+    function selectText(htmlelement) {
+      var node = htmlelement;
+      if (document.body.createTextRange) {
         const range = document.body.createTextRange();
         range.moveToElementText(node);
         range.select();
-    } else if (window.getSelection) {
+      } else if (window.getSelection) {
         const selection = window.getSelection();
         const range = document.createRange();
         range.selectNodeContents(node);
         selection.removeAllRanges();
         selection.addRange(range);
-    } else {
+      } else {
         console.log("Could not select text in node: Unsupported browser.");
-    }
-    document.execCommand('copy')
-}
-
-function sendAmplitudeEvents(eventName,data){
-  if (window.amplitude) {
-    window.amplitude.getInstance().logEvent(eventName, {
-      ...data,
-    });
-  }
- }
-  window.addEventListener('click', function (event) {
-    if(event.target.matches(".menu__link")){
-      let params = window.location.href.split('/');
-      let pageName = params[params.length-2];
-      if(pageName.includes('hyperexecute')){
-        sendAmplitudeEvents('HYP: page changed - docs',{
-          pageName,
-        })
       }
+      document.execCommand('copy')
     }
-    if (event.target.matches(".clean-btn")) {
-      let target = event.target || event.srcElement;
-      let codeblock = target.closest('.lambdatest__codeblock');
-      selectText(codeblock)
-    }
-  });
-    
-    window.sendAnalytics = async(eventName) => {
- 
+
+    function sendAmplitudeEvents(eventName,data){
+      if (window.amplitude) {
+        window.amplitude.getInstance().logEvent(eventName, {
+          ...data,
+        });
+      }
+     }
+    window.addEventListener('click', function (event) {
+      if(event.target.matches(".menu__link")){
+        let params = window.location.href.split('/');
+        let pageName = params[params.length-2];
+        if(pageName.includes('hyperexecute')){
+          sendAmplitudeEvents('HYP: page changed - docs',{
+            pageName,
+          })
+        }
+      }
+      if (event.target.matches(".clean-btn")) {
+        let target = event.target || event.srcElement;
+        let codeblock = target.closest('.lambdatest__codeblock');
+        selectText(codeblock)
+      }
+    });
+
+    window.sendAnalytics = async (eventName) => {
+
       let URL = "https://backend.lambdatest.com/api/analytics/event";
       let payload = {
         event: eventName,
@@ -210,29 +210,29 @@ function sendAmplitudeEvents(eventName,data){
       }
 
       handleUTMCookie();
-      (function(history){
+      (function (history) {
         var pushState = history.pushState;
-        history.pushState = function(state) {
-          setTimeout( function() {  
+        history.pushState = function (state) {
+          setTimeout(function () {
             if (typeof document !== "undefined") {
-            var youtube = document.querySelectorAll( ".youtube" );
-            for (var i = 0; i < youtube.length; i++) {
-            var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg";
-            var image = new Image();
-            image.src = source;
-            image.alt = "Youtube Thumbnail";
-            image.addEventListener( "load", function() {
-            youtube[ i ].appendChild( image );
-            }( i ) );
-            youtube[i].addEventListener( "click", function() {
-            var iframe = document.createElement( "iframe" );
-            iframe.setAttribute( "frameborder", "0" );
-            iframe.setAttribute( "allowfullscreen", "" );
-            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
-            this.innerHTML = "";
-            this.appendChild( iframe );
-            });  
-            };
+              var youtube = document.querySelectorAll(".youtube");
+              for (var i = 0; i < youtube.length; i++) {
+                var source = "https://img.youtube.com/vi/" + youtube[i].dataset.embed + "/sddefault.jpg";
+                var image = new Image();
+                image.src = source;
+                image.alt = "Youtube Thumbnail";
+                image.addEventListener("load", function () {
+                  youtube[i].appendChild(image);
+                }(i));
+                youtube[i].addEventListener("click", function () {
+                  var iframe = document.createElement("iframe");
+                  iframe.setAttribute("frameborder", "0");
+                  iframe.setAttribute("allowfullscreen", "");
+                  iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.dataset.embed + "?rel=0&showinfo=0&autoplay=1");
+                  this.innerHTML = "";
+                  this.appendChild(iframe);
+                });
+              };
             }
           }, 500);
           getUsernameToken('history');
@@ -280,14 +280,14 @@ function sendAmplitudeEvents(eventName,data){
         const elements = document.getElementsByTagName(tagName);
         for (let i = 0; i < elements.length; i++) {
           const element = elements[i];
-          if(!element?.parentElement?.className?.includes("clean-btn")){
+          if (!element?.parentElement?.className?.includes("clean-btn")) {
             if (!element.hasAttribute('role')) {
               element.setAttribute('role', 'presentation');
             }
             if (!element.hasAttribute('aria-hidden')) {
               element.setAttribute('aria-hidden', 'true');
             }
-          }else{
+          } else {
             element.setAttribute('role', 'img');
             element.setAttribute('aria-label', 'Document Theme Switch mode button');
           }
@@ -314,7 +314,7 @@ function youtubeIframe() {
     var loading = youtube[i].getAttribute("data-loading-attribute")
     var image = new Image();
     image.src = source;
-    image.alt="Youtube Image";
+    image.alt = "Youtube Image";
     image.loading = loading ? loading : "";
     image.addEventListener("load", function () {
       youtube[i].appendChild(image);
@@ -329,5 +329,24 @@ function youtubeIframe() {
     });
   };
 }
+
+
+(function () {
+  if (typeof window !== "undefined") {
+    document.addEventListener('DOMContentLoaded', function () {
+      const algoliaSearchBar = document.querySelector('.DocSearch-Button');
+      if (algoliaSearchBar) {
+        algoliaSearchBar.style.display = 'none';
+      }
+    });
+    window.addEventListener('load', function () {
+      const algoliaSearchBar = document.querySelector('.DocSearch-Button');
+      if (algoliaSearchBar) {
+        algoliaSearchBar.style.display = 'block';
+      }
+    });
+  }
+})
+
 
 

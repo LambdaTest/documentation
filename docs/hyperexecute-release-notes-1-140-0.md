@@ -9,7 +9,7 @@ keywords:
   - LambdaTest Hyperexecute help
   - LambdaTest Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-1-140.0/
+url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-1-140-0/
 site_name: LambdaTest
 slug: hyperexecute-release-notes-1-140-0/
 ---

@@ -43,7 +43,6 @@ slug: hyperexecute-vs-traditional-test-grids/
 ></script>
 
 # HyperExecute v/s Traditional Test Grids
-Traditional automation testing solutions are slow since the triggered test scenarios are first sent to the Hub, which in turn are scheduled to run on the best-suited Node. This results in unnecessary lag as a number of components are involved in the entire process. Over & above, multiple network hops with the network separated components results in increased test flakiness, a factor that can be a huge hindrance to time-to-market.
 
 ## Traditional Tests Grids
 Traditional tests refers to the conventional approach of executing software tests using a hub and node infrastructure. In this method, test scenarios are sent to a central hub, which then schedules and distributes them across multiple nodes (machines or virtual environments) for execution. The test scenarios are typically executed sequentially on the nodes, one after the other.
@@ -85,3 +84,4 @@ As seen above, tests are securely run on dedicated machines on the Azure cloud. 
 - <b>Fine-Grained Concurrency Control:</b> Hyperscale of HyperExecute allows users to have fine grain control over test execution concurrency using YAML files.
 
 > For more details, please refer to our guide on [Key Features of HyperExecute](https://www.lambdatest.com/support/docs/key-features-of-hyperexecute/)
+

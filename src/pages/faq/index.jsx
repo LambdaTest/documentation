@@ -629,7 +629,7 @@ export default function index() {
               <p>Accessing hardware sensors for biometric authentication is currently not supported on real devices.</p>
             </details>
 
-            
+
             <details>
               <summary>How do I access camera for capturing the images?
               </summary>
@@ -916,7 +916,7 @@ export default function index() {
               </p>
             </details>
 
-          
+
 
             <details>
               <summary>How long does it take to take to add support for new device?
@@ -944,13 +944,13 @@ export default function index() {
             <details>
               <summary>How I can handle the location pop-up on iOS devices?
               </summary>
-              <p>In order to handle the location pop-up, you can use below capability in the script and the location will be auto handle in the test.<br/>
-              
-              <code>caps.setCapability("autoAcceptAlerts", true);</code> <br/><br/>
-              
-              Please note that <code>autoAcceptAlerts: true</code> won't work on iOS devices with iOS 14. This is a <a href="https://github.com/appium/appium/issues/14741">known issue</a> and already raised on Appium.<br/><br/>
+              <p>In order to handle the location pop-up, you can use below capability in the script and the location will be auto handle in the test.<br />
 
-  <b>Note</b>: For iOS 13 and above, pop-ups can have more than two buttons. When there are more than two buttons on popups, autoDismissAlerts and autoAcceptAlerts behavior is flipped. For such popups, use autoAcceptAlerts to automatically dismiss all popups and autoDismissAlerts to automatically accept all popups.
+                <code>caps.setCapability("autoAcceptAlerts", true);</code> <br /><br />
+
+                Please note that <code>autoAcceptAlerts: true</code> won't work on iOS devices with iOS 14. This is a <a href="https://github.com/appium/appium/issues/14741">known issue</a> and already raised on Appium.<br /><br />
+
+                <b>Note</b>: For iOS 13 and above, pop-ups can have more than two buttons. When there are more than two buttons on popups, autoDismissAlerts and autoAcceptAlerts behavior is flipped. For such popups, use autoAcceptAlerts to automatically dismiss all popups and autoDismissAlerts to automatically accept all popups.
               </p>
             </details>
 

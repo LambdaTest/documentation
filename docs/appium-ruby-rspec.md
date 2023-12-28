@@ -249,10 +249,8 @@ app_caps:
 
 You can update your custom capabilities in test scripts `lambdatest.rb`. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as:
 
-<Tabs className="docs__val">
-<TabItem value="capabilities" label="lambdatest.rb" default>
 
-```ruby
+```ruby title="lambdatest.rb"
     caps={ 
   
       "LT:Options" => {
@@ -268,10 +266,6 @@ You can update your custom capabilities in test scripts `lambdatest.rb`. In this
     "w3c" => true
     },
 ```
-
-</TabItem>
-
-</Tabs>
 
 :::info Note
 

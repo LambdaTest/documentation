@@ -17,6 +17,7 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-github-app-integration/
 site_name: LambdaTest
 slug: smartui-git-branching-strategy/
+
 ---
 
 import Tabs from '@theme/Tabs';
@@ -62,6 +63,7 @@ This is the guide to understand our Git Branching with SmartUI projects which ca
 
 :::caution Warning
 This feature is currently supported for only [**StoryBook**](/support/docs/smart-ui-storybook/) projects on the SmartUI platform. Please contact support@lambdatest.com for further information or requests.
+
 :::
 
 The following steps will guide you in running your Git branching Visual Regression test on LambdaTest SmartUI platform:

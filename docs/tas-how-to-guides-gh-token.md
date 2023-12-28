@@ -25,5 +25,10 @@ slug: tas-how-to-guides-gh-token/
 > **NOTE:** TAS needs repo permissions in order to function properly.
 
 <p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/caLOYL_rB5s?si=DYRep5eRYiBB0gNq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div className="ytframe"> 
+<div className="youtube" data-embed="caLOYL_rB5s">
+    <div className="play-button"></div>
+</div>
+</div>
+
 </p>

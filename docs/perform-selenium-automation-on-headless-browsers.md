@@ -58,7 +58,7 @@ For Headless browser testing on LambdaTest, you need to enable the desired capab
 * * *
 Visit the [Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator). Under the **Browser Specific Capabilties**, you can find a toggle button to enable **Headless** browsing. Just switch the button to true.
 
-<img loading="eager" src={require('../assets/images/headless-browser-testing/selenium-desired-capabilities-generator.webp').default} alt="Image"  className="doc_img" width="604" height="270"/>
+<img loading="lazy" src={require('../assets/images/headless-browser-testing/selenium-desired-capabilities-generator.webp').default} alt="Image"  className="doc_img" width="604" height="270"/>
 
 ### Enable Headless Browser Testing Via Code
 * * *

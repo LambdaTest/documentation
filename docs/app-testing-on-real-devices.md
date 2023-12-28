@@ -1,6 +1,6 @@
 ---
 id: mobile-app-testing-on-real-devices
-title: App Testing On Real Devices
+title: App Testing On Real Devices 
 hide_title: true
 sidebar_label: App Testing On Real Devices
 description: This documentation will help you perform app testing of your native mobile apps on LambdaTest real device cloud. With LambdaTest mobile testing cloud, you can test your mobile applications on wide range of real Android and iOS devices.
@@ -48,7 +48,7 @@ This documentation will help you getting started with mobile app testing on real
 
 
 <div className="ytframe"> 
-<div className="youtube" data-embed="k3Bl0aqpzoA" data-loading-attribute="eager">
+<div className="youtube" data-embed="k3Bl0aqpzoA">
     <div className="play-button"></div>
 </div>
 </div>

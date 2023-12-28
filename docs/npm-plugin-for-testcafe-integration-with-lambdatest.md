@@ -59,18 +59,25 @@ LambdaTest, a cloud-based, cross browser testing platform, is out with an npm pl
 
 * Make sure you have your [TestCafe Credentials][1].
 
-   * For Linux/Mac:  
+     * For **Linux/macOS**:
 
-        ``` js
-        $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
-        $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
-        ```
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`export LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
+export LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+</CodeBlock>
+</div>
 
-    * For Windows: 
-        ``` js
-        $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
-        $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
-        ```
+  * For **Windows**:
+
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`$env:LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
+$env:LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+</CodeBlock>
+</div>
+
+      
 
 
 
