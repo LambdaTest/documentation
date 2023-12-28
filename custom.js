@@ -151,9 +151,13 @@ function sendAmplitudeEvents(eventName,data){
  }
   window.addEventListener('click', function (event) {
     if(event.target.matches(".menu__link")){
-      sendAmplitudeEvents('HYP: page changed - docs',{
-        pageName: event.target.textContent,
-      })
+      let params = window.location.href.split('/');
+      let pageName = params[params.length-2];
+      if(pageName.includes('hyperexecute')){
+        sendAmplitudeEvents('HYP: page changed - docs',{
+          pageName,
+        })
+      }
     }
     if (event.target.matches(".clean-btn")) {
       let target = event.target || event.srcElement;
