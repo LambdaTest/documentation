@@ -49,7 +49,7 @@ LambdaTest's integration with PractiTest will further help to log bugs to your p
 
 * * *
 
-Step 1: Login to your LambdaTest account. Make sure you have admin or User level Acess. From the left navigation bar select 'Integration'. Here you can find all the 3rd party tools you can integrate with the LambdaTest account. Under the Project Management category select '[PractiTest'](https://www.practitest.com/).
+Step 1: Login to your LambdaTest account. Make sure you have admin or User level Access. From the left navigation bar select 'Integration'. Here you can find all the 3rd party tools you can integrate with the LambdaTest account. Under the Project Management category select '[PractiTest'](https://www.practitest.com/).
 
 <img loading="lazy" src={require('../assets/images/practitest-integration/1.webp').default} alt="PractiTest Integration" width="1224" height="662" className="doc_img"/>
 

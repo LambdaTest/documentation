@@ -3,7 +3,7 @@ id: hyperexecute-cli-run-tests-on-hyperexecute-grid
 title: HyperExecute CLI - Run test on HyperExecute Grid
 hide_title: true
 sidebar_label: HyperExecute CLI - Run test on HyperExecute Grid
-description: Expalins about HyperExecute CLI
+description: Explains about HyperExecute CLI
 keywords:
   - lambdatest automation
   - lambdatest hyperexecute
@@ -83,7 +83,7 @@ The various flags that are supported are listed below.
 | [-k, --key](#-k---key) | string | LambdaTest Access Key. |
 | [--concurrency](#--concurrency) | Numerical | Indicates the number of concurrent sessions on HyperExecute. | 
 | [--config](#--config) | string | Custom location for hyperexecute.yaml. |
-| [--no-track](#--no-track) | NA | Stops updating the progress of the uplodaed jobs. |
+| [--no-track](#--no-track) | NA | Stops updating the progress of the uploadaed jobs. |
 | [--download-artifacts](#--download-artifacts) | NA | Whether artifacts have to be downloaded or not. |
 | [--preserve-payload](#--preserve-payload) | string | Preserves the job payload after its successful completion. |
 | [analyze](#analyze) | NA | Shows the project description of the user. |
@@ -129,7 +129,7 @@ This flag allows you to define the number of concurrent sessions running on Hype
 
 This flag allows you to enter a custom location where you can download the HyperExecute YAML file. To learn more about the HyperExecute YAML, visit [this page](/support/docs/deep-dive-into-hyperexecute-yaml/).  
 ```bash
---config "/home/usera/work/yaml/"  
+--config "/home/users/work/yaml/"  
 ```
 ***
 ### `--no-track`
@@ -145,7 +145,7 @@ This flag allows you to download all the test related results that are generated
   - **--download-artifacts-path**: In case you want the artifacts to be downloaded to a specific directory, please provide the exact path followed by the flag as shown in the example below.
 
 ```bash
---download-artifacts-path "/home/usera/work/yaml/artifacts/"
+--download-artifacts-path "/home/users/work/yaml/artifacts/"
 ```
 ***
 ### `--preserve-payload`
@@ -170,7 +170,7 @@ hyperexecute analyze
 The `targetDirectory` option in the HyperExecute CLI specifies the directory where the output of the executed command will be stored. If this option is not specified, the output will be stored in the current working directory.
 
 ```bash
---target-directory "/home/usera/work/yaml/scripts/"
+--target-directory "/home/s/work/yaml/scripts/"
 ```
 ***
 
@@ -188,7 +188,7 @@ It can also be useful if a user wants to run tests in a monorepo for multiple se
 ### `-z, --use-zip`
 This flag allows you to indicate the path of the zip file that needs to be uploaded for your tests to run. 
 ```bash
---use-zip "/home/usera/work/yaml/zip/"
+--use-zip "/home/users/work/yaml/zip/"
 ```
 ***
 

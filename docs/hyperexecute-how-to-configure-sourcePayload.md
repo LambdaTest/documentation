@@ -129,26 +129,26 @@ sourcePayload:
 
     
 2. Click on your profile on the top right-hand side corner of your page to access your **Settings**.
-  <img loading="lazy" src={require('../assets/images/hyperexecute-git/1.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/git/1.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
 
 
 3. Go to the bottom of the **Settings** page and click on **Developer settings**.
-  <img loading="lazy" src={require('../assets/images/hyperexecute-git/2.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/git/2.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
 
 
 4. Click on **Tokens (classic)** to generate your own Personal Access Token.
-  <img loading="lazy" src={require('../assets/images/hyperexecute-git/3a.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/git/3a.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
 
 
 5. Click on **Generate new token** and select the **classic** or **fine-grained** version as per your choice.
-  <img loading="lazy" src={require('../assets/images/hyperexecute-git/4a.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/git/4a.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
 
 
 6. Proceed to configuring the PAT and click on **Generate token** to create your Personal Access Token.  
 
   > **Note**: While configuring your PAT, ensure that the access is given for all keys under `repo`. Moreover, you will also have to give all the accesses for `read` keys.
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute-git/5.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/git/5.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
 
 
 </details>
@@ -167,7 +167,7 @@ sourcePayload:
 
 </details>
 
-<details><summary>Generate Projet Access Token on GitLab</summary>
+<details><summary>Generate Project Access Token on GitLab</summary>
 
 1. Navigate to the project for which you want to create a token.
 2. Select **Settings** from the top menu. Choose **Access Tokens** from the left sidebar.

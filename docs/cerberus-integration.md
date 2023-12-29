@@ -55,7 +55,7 @@ Inside your Cerberus Testing tool, you need to set up LambdaTest as your Test Ex
 
 1.  Click on 'Create' a new Robot <img loading="lazy" src={require('../assets/images/uploads/cerbeus.webp').default} alt="Creating Cerberus Robot" width="1281" height="583" className="doc_img"/>
 2.  Enter the Robot name as per your choice, such as "LambdaTestChrome85Win". Also choose the platform, browser, browser version and screen size of your choice. <img loading="lazy" src={require('../assets/images/uploads/cerbeus-1.webp').default} alt="New Robot Configurstion in Cerberus App" width="1281" height="578" className="doc_img"/>
-3.  You can also add optional desired capabilities of your choice, in the Capabilities tab. To know more about Desired Capabilties, you can refer to our [Selenium Autiomation Capabilities guide](/docs/selenium-automation-capabilities/) on our [Capabilties Generator](https://www.lambdatest.com/capabilities-generator/).
+3.  You can also add optional desired capabilities of your choice, in the Capabilities tab. To know more about Desired Capabilities, you can refer to our [Selenium Autiomation Capabilities guide](/docs/selenium-automation-capabilities/) on our [Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 4.  Then switch to Executors tab, and click on "Add Executor". <img loading="lazy" src={require('../assets/images/uploads/cerbeus-2.webp').default} alt="Add Automation Test Executor" width="1281" height="582" className="doc_img"/>
 5.  In this Add Executor window, you need to pass following values to their corresponding options, as stated below:
 
@@ -68,7 +68,7 @@ Inside your Cerberus Testing tool, you need to set up LambdaTest as your Test Ex
 
     <img loading="lazy" src={require('../assets/images/uploads/cerbeus-3.webp').default} alt="Setting Up Executor Wizard" width="1281" height="578" className="doc_img"/>
 
-    > To get your LambdaTest username and access key, please refer our [Capabilties Generator](https://www.lambdatest.com/capabilities-generator/).
+    > To get your LambdaTest username and access key, please refer our [Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
 Once you are done, just click on the Create button and the LambdaTest Robot executor will be created successfully, and will look something like this: <img loading="lazy" src={require('../assets/images/uploads/cerbeus-4.webp').default} alt="Setting LambdaTest Robot Executor" width="1281" height="578" className="doc_img"/>
 

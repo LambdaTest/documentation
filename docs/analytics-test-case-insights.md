@@ -97,12 +97,12 @@ Once, you have completed the configuration and start executing your tests on the
 ### Test Case Health Snapshot
 You can analyze the health of your test cases by using the `Test Case Health Snapshot` widget. The widget will display the total number of test cases  success, failed. The widget will be displayed in card view and you can also view the details of the test cases by clicking on the `View Details` button.
 
-<img loading="lazy" src={require('../assets/images/analytics/test-case-health-snapshot.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-case-snapshot-hye.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
 ### Test Case Group View
 You can analyze the test cases by their group by using the `Test Case Group View` widget. The widget will display the total number of test cases in each group. The widget will be displayed in card view and you can also view the details of the test cases by clicking on the `View Details` button.
 
-<img loading="lazy" src={require('../assets/images/analytics/test-cases-view.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-case-group.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
 ## Test Case Use Cases
 The user can use the `Test Case Insights` module to analyze the test case level insights of their test automation execution on LambdaTest. The user can use the module to analyze the following use cases:

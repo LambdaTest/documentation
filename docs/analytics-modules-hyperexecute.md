@@ -55,7 +55,7 @@ There following are **widgets** supported in the HyperExecute module:
 
 ## Job Trends
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/job-trends-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Job Trends` widget allows the user to analyze the trends of the `Jobs` executed on the platform categorized into Failed, Aborted, Lambda Error, Timeout, and Completed which can easily be filtered with the legends added at the top of the graph.
 :::tip Use case
@@ -108,7 +108,7 @@ This visualization enables users to quickly identify trends and patterns in the 
 
 ## Job Summary
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-7.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/job-summary-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Job Summary` widget enables the user to track the total Jobs being run on the platform grouped by their status including Completed, Partially Completed, Failed, Aborted, etc. 
 
@@ -121,7 +121,7 @@ He wants to get a total of the Jobs being executed on the platform for a specifi
 
 ## Stage Summary
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-8.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/stage-summary-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Stage Summary` widget enables the user to track the total Stages being run on the platform grouped by their status including Completed, Skipped, Failed, Aborted, etc. 
 
@@ -133,7 +133,7 @@ He wants to get a total of the Stages being executed on the platform for a speci
 
 ## Stage Trends
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-5.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/stage-trends-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Stage Trends` widget allows the user to analyze the trends of the `Stage` for each `Job` executed on the platform categorized into Completed, Failed, Lambda Error, and Cancelled which can be filtered by a specific date and time.
 
@@ -147,7 +147,7 @@ He can identify if any particular Stage for the Job is failing and get the infor
 
 ## Task Summary
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-9.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/task-summary-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Task Summary` widget enables the user to track the total Tasks being run on the platform grouped by their status including Completed, Skipped, Failed, Aborted, etc. 
 
@@ -159,7 +159,7 @@ He wants to get a total of the Tasks being executed on the platform for a specif
 
 ## Task Trends
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-6.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/task-trends-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Task Trends` widget allows the user to analyze the trends of the `Task` for each `Job` executed on the platform categorized into Completed, Failed, Aborted, Lambda Error, and Cancelled, which can be filtered by a specific date and time.
 

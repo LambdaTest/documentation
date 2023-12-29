@@ -94,7 +94,7 @@ Well, other than the fact that you can now establish a connection through your c
 
 ---
 
-Earlier, for every version update in out LambdaTest Tunnel, you were compelled to download the latest binary from our platform and over write it over the outdated version in your computer. Well, now this new binary will take care of that. Everytime you execute this binary, it will check for the **latest** version available and will update itself **automatically**, in case it gets outdated.
+Earlier, for every version update in out LambdaTest Tunnel, you were compelled to download the latest binary from our platform and over write it over the outdated version in your computer. Well, now this new binary will take care of that. every timeyou execute this binary, it will check for the **latest** version available and will update itself **automatically**, in case it gets outdated.
 
 ### Default Port 443
 
@@ -106,7 +106,7 @@ Now, by default, everything will run over the **port 443** to ensure a secure we
 
 ---
 
-With this new LambdaTest Tunnel binary, you can declare your LambdaTest authentication credentials in a **YAML** file configuration and keep it in the same directory as the **LT binary file**. That way, you won’t have to pass the environment variables in the cmd everytime you wish to configure the LambdaTest Tunnel. Once you specify these variables in the `.lt.yaml file`, you will just have to execute the binary file through cmd **LT.exe** and the YAML file will automatically configure a secure LambdaTest Tunnel connection by auto detecting the variables specified in the YAML file.
+With this new LambdaTest Tunnel binary, you can declare your LambdaTest authentication credentials in a **YAML** file configuration and keep it in the same directory as the **LT binary file**. That way, you won’t have to pass the environment variables in the cmd every timeyou wish to configure the LambdaTest Tunnel. Once you specify these variables in the `.lt.yaml file`, you will just have to execute the binary file through cmd **LT.exe** and the YAML file will automatically configure a secure LambdaTest Tunnel connection by auto detecting the variables specified in the YAML file.
 
 <img loading="lazy" src={require('../assets/images/lambda-tunnel-for-corporate-firewalls/lt-yaml-file.webp').default} alt="Advanced LambdaTest Tunnel" width="978" height="239" className="doc_img"/>
 
@@ -193,7 +193,7 @@ With the latest tunnel binary release we have introduced the capability to provi
 LT  --user <username> --key <accessKey> –allowHosts google.com,apple.com,amazon.com
 ```
 
-**Explaination:**
+**Explanation:**
 When this flag is used only requests for provided domains will be routed via tunnel and resolved from the user's network. Requests for domains other than mentioned will be resolved from Lambdatest’s network.
 
 ## Tunnel Arguments

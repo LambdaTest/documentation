@@ -136,12 +136,12 @@ Match the iOS version of your app and test runner **iOS Deployment Target**. If 
 To match the version in your Xcode Project.
 
 1. Go to the Project that you wish to build.
-2. Go to the **Build Settings**, set the **iOS Deployment Target** to the iOS verion of your app. This will align the app and test runner to the same iOS version.
+2. Go to the **Build Settings**, set the **iOS Deployment Target** to the iOS version of your app. This will align the app and test runner to the same iOS version.
 
 To match the version in your Xcode Target.
 
 1. Choose the Target of your Project.
-2. Go to the **Build Settings**, set the **iOS Deployment Target** to the iOS verion you want to use in your test.
+2. Go to the **Build Settings**, set the **iOS Deployment Target** to the iOS version you want to use in your test.
 
 :::caution Warning
 This process will overwrite the **Build settings** at the Project Level to the given iOS version. While using this method, take note that the Targets can be out of sync with each other and the project settings, which will cause the tests to break. You would need to re-build the Project if you change the iOS version for one target output in order to keep all your targets in sync.

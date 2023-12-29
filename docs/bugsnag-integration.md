@@ -64,7 +64,7 @@ The Bugsnag Auth token gives you access to information about your organization, 
 ### Getting the Bugsnag Token
 ***
 
-1. Sign in to your Bugsnag account. Cick on the Profile avatar and then **My account settings**. 
+1. Sign in to your Bugsnag account. Click on the Profile avatar and then **My account settings**. 
 
 <img loading="lazy" src={require('../assets/images/bugsnag-integration/account-settings.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 

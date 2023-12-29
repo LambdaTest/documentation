@@ -1,5 +1,5 @@
 ---
-id: getting-started
+id: getting-started-with-selenium-testing
 title: Selenium Automation Testing Using LambdaTest
 sidebar_label: Selenium Testing
 description: Guide to getting started with LambdaTest online Selenium automation grid. Run Selenium scripts on an online Selenium automation grid of 3000+ browsers. Run test on Java, Javascript, and 7 other programming language.
@@ -14,9 +14,9 @@ keywords:
   - selenium getting started
   - lambdatest getting started
 image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/
+url: https://www.lambdatest.com/support/docs/getting-started-with-selenium-testing/
 site_name: LambdaTest
-slug: getting-started-with-lambdatest-automation/
+slug: getting-started-with-selenium-testing/
 ---
 
 <script type="application/ld+json"
