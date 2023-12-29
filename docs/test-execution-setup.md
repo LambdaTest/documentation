@@ -58,7 +58,7 @@ To perform Playwright testing on LambdaTest, you need to define the `browserName
 | -------- | -----| ------------ | --------------|
 | browserName   |  Chrome, Microsoft Edge<br/> <br/>**Playwright Bundled Browsers**: pw-chromium, pw-webkit, and pw-firefox |   Specify the browser to test on    |  `const capability = {"browserName": "pw-webkit"}`|
 | browserVersion  |  Chrome 83 & above, Edge 83 & above | Specify the browser version to test on |  `const capability = {"browserVersion": "latest"}`|
-| platform  |  **Windows**: 11, 10, 8, 8.1, 7 <br/><br/> **macOS**: Monterey, Big Sur, Cataline, Mojave |    Specify the platform name    | `const capability = { "LT:Options": {"platform": "Windows 10",}}` |
+| platform  |  **Windows**: 11, 10, 8, 8.1, 7 <br/><br/> **macOS**: Monterey, Big Sur, Catalina, Mojave |    Specify the platform name    | `const capability = { "LT:Options": {"platform": "Windows 10",}}` |
 
 ### Playwright Supported Browsers
 ---

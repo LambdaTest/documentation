@@ -217,7 +217,7 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 
 ### View SmartUI Results
 
-You can see the Smart UI dashboard to view the results. This will help you identify the mis-matches from the existing `Baseline` build and do the required visual testing.
+You can see the Smart UI dashboard to view the results. This will help you identify the mismatches from the existing `Baseline` build and do the required visual testing.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui_ss_cli.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

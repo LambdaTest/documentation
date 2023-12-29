@@ -1,7 +1,7 @@
 ---
 id: smartui-selenium-js-sdk
 title: Integrate SmartUI SDK with Selenium Tests
-sidebar_label: Integrate with Javascript
+sidebar_label: Javascript
 description: In this documentation, learn how intergrate your Selenium automated tests with LambdaTest's SmartUI.
 keywords:
   - Visual Regression
@@ -51,20 +51,20 @@ import NewTag from '../src/component/newTag';
 
 Elevate your Selenium automated tests with SmartUI SDK integration. By seamlessly integrating SmartUI into your testing suite, you can effortlessly identify visual differences in your web application and streamline your visual testing workflow.
 
-## Pre-requisites for running SmartUI CLI
+## Pre-requisites for running tests through SmartUI SDK
 
 - Basic understanding of Command Line Interface and Selenium is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
 The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Selenium SDK integration.
 
-## Create a SmartUI Web-Project
+## Create a SmartUI Project
 
 The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
 
 1. Go to [Projects page](https://smartui.lambdatest.com/)
 2. Click on the `new project` button
-3. Select the platform as <b>Web</b> for executing your `SDK` tests.
+3. Select the platform as <b>CLI</b> for executing your `SDK` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
@@ -75,17 +75,11 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 ### **Step 1:** Create/Update your test
 
 **Using Github Sample**
-- You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI`.
+- You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `SmartUI_SDK.js` file.
 
 ```bash
 git clone https://github.com/LambdaTest/smartui-node-sample
 ```
-
-:::info
-Currently, the selenium SDK is only supported with `Selenium-JavaScript` tests, the support for other languages and frameworks will be available soon.
-:::
-  
-
 ### **Step 2**: Install the Dependencies
 
 Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
@@ -175,13 +169,13 @@ import { smartuiSnapshot } from '@lambdatest/selenium-driver';
         .build();
 
     try {
-        await driver.get('https://www.github.com'); //enter your desired URL here
+        await driver.get('<Required URL>'); //enter your desired URL here
         await smartuiSnapshot(driver, '<Screenshot_Name>');
         // Please specify your driver and the screenshot name in this function
         // driver - selenium driver instance (required)
         // Screenshot_Name - Name of the screenshot ; unique to each screenshot (required)
-        await driver.get('https://www.pinterest.com/pin/112801165652823604/')
-        await smartuiSnapshot(driver, 'NYC');
+        await driver.get('https://www.example.com');
+        await smartuiSnapshot(driver, '<Screenshot Name>');
     } finally {
         await driver.quit();
     }
@@ -218,7 +212,7 @@ If you are using the Continuous Integration (CI) pipeline for your application a
 
 You have successfully integrated SmartUI SDK with your Selenium tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
 
-You can see the Smart UI dashboard to view the results. This will help you identify the mis-matches from the existing `Baseline` build and do the required visual testing.
+You can see the Smart UI dashboard to view the results. This will help you identify the mismatches from the existing `Baseline` build and do the required visual testing.
 
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui_ss_cli.png').default} alt="cmd" width="768" height="373" className="doc_img"/>

@@ -49,7 +49,7 @@ To quote an example, consider you want to run the test on an iPhone. It doesn’
 |-----------------|-------------|------------|
 | `.*` | The characters `.*` are used to include all the devices that match the string passed.<br/><br/>**In the example given**:<br/>You’ll be allocated any device from the Inventory that’s an iPhone or a Pixel device respectively.<br/><br/>See detailed examples for using this RegEx here:<br/>a) **For iPhone**: https://regex101.com/r/4BOgRs/1<br/>b) **For Pixel**: https://regex101.com/r/7dovT2/1    | `"iPhone.*"` <br/>`"Pixel.*"` |
 | `,` | This character `,` is used to include more combinations of different devices.<br/><br/>**In the example given**:<br/>1. We have added  2 regex characters `.*` and `,` to show that using both in combination, we’ll fetch any device from the Inventory that contains the string Pixel, Nexus, Galaxy.<br/>2. You’ll be allocated any available Pixel or Nexus or Galaxy device.| `"Pixel.*,Nexus.*,Galaxy.*"` |
-| `[]` | The `[]` is used to include special characters like `+` in the search. Not using the `[]` will prevent the special characters from being included in the search.<br/><br/>**In the example given**:<br/>1. You’ll be allocated any Galaxy Note 10+.<br/>2. Incase you send `"Galaxy Note 10+"` then, you’ll get Galaxy Note 10.| `"Galaxy Note 10[+]"` |
+| `[]` | The `[]` is used to include special characters like `+` in the search. Not using the `[]` will prevent the special characters from being included in the search.<br/><br/>**In the example given**:<br/>1. You’ll be allocated any Galaxy Note 10+.<br/>2. in case you send `"Galaxy Note 10+"` then, you’ll get Galaxy Note 10.| `"Galaxy Note 10[+]"` |
 | `[]` | The `[]` is used to include a range of devices in the combination mentioned using a **single character only**.<br/><br/>**In the example given**:<br/>Fetching any device available from Pixel 3, Pixel 3a, Pixel 4, Pixel 5, Pixel 6, Pixel 6 Pro, etc.<br/><br/>See detailed examples for using this RegEx here:<br/>https://regex101.com/r/H4IvpF/1 | `“Pixel [3456]"` |
 | `$` | The `$` character indicates the end of a string. <br/><br/>**In the example given**:<br/>1. Allocating only Pixel 6 device & will neglect the Pixel 6 Pro devices.<br/>2. Allocating only the Pixel 3 device while neglecting Pixel 3a, Pixel 3 XL etc.<br/><br/>See detailed examples for using this RegEx here:<br/>a) **For Pixel 6**: https://regex101.com/r/8qYuq6/1<br/>b) **For Pixel 6 & 3**: https://regex101.com/r/9p7sqe/1 | `“Pixel 6$"` <br/> `"Pixel [36]$"` |
 | `^` | The `^` is used to negate a character from the search.  <br/><br/>**In the example given**:<br/>The first part of this regex .* includes all the OnePlus devices, whereas the second part `[^8]` neglects OnePlus 8, OnePlus 8 Pro devices as it contains the character `8`, which is negated.<br/><br/>See detailed examples for using this RegEx here:<br/>https://regex101.com/r/sIciqS/1| `“OnePlus.[^8].*"` |
@@ -77,7 +77,7 @@ Passing `deviceName` using REGEX:<br/>
 :::
 
 :::caution
-REGEX is currently possible on the `deviceName` as of now and *not* on the ``platformVerison``. <br/>
+REGEX is currently possible on the `deviceName` as of now and *not* on the ``platformversion``. <br/>
 :::
 
 -----

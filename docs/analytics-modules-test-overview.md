@@ -42,7 +42,7 @@ The **Test Overview** module enables the users to get an overview of the tests r
 
 ## Test Case Health Snapshot
 
-<img loading="lazy" src={require('../assets/images/analytics/test-overview-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/health-snapshot-automation.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Test Health Snapshot` widget allows the user to easily analyze the **flakiness / inconsistency** of the tests executed on the platform. 
 
@@ -81,7 +81,7 @@ He can identify if any builds are inconsistent and get the information about the
 
 ## Test Summary
 
-<img loading="lazy" src={require('../assets/images/analytics/test-overview-2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/flakiness-summary-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Test Summary` widget enables the user to track the total tests which have run on the platform grouped by their status and also includes information about the errors like Test case errors, Idle timeouts, Queue timeouts, and Lambda errors.
 
@@ -101,7 +101,7 @@ The following are the different use cases to annalyze your tests with **Test Sum
 
 ## Test Browser
 
-<img loading="lazy" src={require('../assets/images/analytics/test-overview-3.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-browser-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Test Browser` widget displays the overall distribution of the tests on various browsers on the platform.
 
@@ -121,11 +121,11 @@ He can identify if any test cases are failing for a particular browser and get t
 
 ## Test OS
 
-<img loading="lazy" src={require('../assets/images/analytics/test-overview-5.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-os-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Test OS` widget displays the overall distribution of the tests on various Operating Systems.
 
-<img loading="lazy" src={require('../assets/images/analytics/test-overview-6.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-os-chart.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 You can **drill-down** more on clicking on the **Operating Systems** name and get the list by the **top 10 Operating System versions** by ranking order of the total number of tests executed by the browser versions. 
 
@@ -139,7 +139,7 @@ He can identify if any test cases are failing for a particular Operating System 
 
 ## Test Trends
 
-<img loading="lazy" src={require('../assets/images/analytics/test-overview-7.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-trends.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Test Trends` widget makes it very straightforward for the user to analyze the trends of the tests executed on the platforms over a period of time. 
 
@@ -152,7 +152,7 @@ John is a QA Manager, and wants to see the trends of the increase or decrease in
 The following are the different use cases to annalyze your tests with **Test Trends**: 
 
 - Analyze the performance your of the tests which are run on the platform. 
-- Filter by any test capablity and track the performance of the tests. 
+- Filter by any test capability and track the performance of the tests. 
 - Track trends of individual capability applied for the tests for the executed on the Lambdatest platform. 
 
 ## Test Device Coverage
@@ -175,7 +175,7 @@ He can identify if any test cases are failing for a particular device and get th
 
 ## Test Status Ratio
 
-<img loading="lazy" src={require('../assets/images/analytics/test-overview-10.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-ratio-status-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Test Status Ratio` widget seamlessly provides information about the quality of the user's current test cases on the basis of the status marked on the platform. The information can be filtered by clicking on the relevant legends at the bottom of the graph.
 
@@ -187,7 +187,7 @@ John wants to understand the distribution of the status of the executed tests on
 
 The following are the different use cases to annalyze your tests with **Test Status Ratio**: 
 - Review the Passed/Failed or other status distribution of the tests run on the platform. 
-- Check you distribution for all your SMOKE/Regression tests by filtering by Porject Name, Build Name or test names. 
+- Check you distribution for all your SMOKE/Regression tests by filtering by Project Name, Build Name or test names. 
 - Track only required status by editing the widget in the settings. 
 
 <nav aria-label="breadcrumbs">

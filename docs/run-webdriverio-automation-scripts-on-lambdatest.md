@@ -77,7 +77,7 @@ Before getting started with Automated Scripts using WebDriverIO Selenium on Lamb
 ```bash
 git clone https://github.com/LambdaTest/webdriverio-selenium.git
 ```
-**Step 2:** Install all the required dependcies for the project.
+**Step 2:** Install all the required dependencies for the project.
 ```bash
 npm i webdriverio
 npm i selenium-webdriver
@@ -106,7 +106,7 @@ describe('Lambdatest Demo Test', function() {
 ### Configuration of Your Test Capabilities
 You can use **[LambdaTest Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)** to select and pass those browser environment specifications.
 
-**Step 4:** Go to your `conf/single.conf.js` file where you can set your test capabilites.
+**Step 4:** Go to your `conf/single.conf.js` file where you can set your test capabilities.
 ```
 //single.conf.js
 user= process.env.LT_USERNAME || "<your username>",
@@ -251,7 +251,7 @@ for (var i in config.capabilities) {
 ```bash
 npm run single
 ```
-### Incase of Parallel Testing 
+### in case of Parallel Testing 
 You can go to `conf/parallel.conf.js` file in the repo to configure your parallel test cases: 
 ```
 exports.config = {

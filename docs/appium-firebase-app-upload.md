@@ -100,7 +100,7 @@ After you have uploaded your application to your Firebase account, you can use t
 
 <img loading="lazy" src={require('../assets/images/app-automation/mail1.png').default} alt="Image"  className="doc_img doc_img_dimension" width="1234" height="564"/>
 
-3. Post accepting the invite recieved you will be taken to Firebase console on the real device where you can see your app with a **download link**.
+3. Post accepting the invite received you will be taken to Firebase console on the real device where you can see your app with a **download link**.
 4. Download the app and **Allow installation of unknown apps** to install the app on the selected real device.
 5. Finally you have your application running on a LambdaTest real device. Continue testing the features of your app.
 

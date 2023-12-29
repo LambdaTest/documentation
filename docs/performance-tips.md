@@ -1,13 +1,13 @@
 ---
 id: performance-tips
-title: How To Maximize Test Execution Performance on Automation Paltform | LambdaTest
+title: How To Maximize Test Execution Performance on Automation Platform | LambdaTest
 hide_title: true
 sidebar_label: Performance Tips
 description: This page will help you tom maximize test execution in a minimum time period.
 keywords:
   - performance tips
   - virtual browser online
-  - maximise performace
+  - maximise Performance
   - cross browser testing app
   - developer tools
   - sequential tests
@@ -64,7 +64,7 @@ traceroute hub.lambdatest.com
       <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/docs/getting-started-with-lambdatest-automation/">Support</a>
+      <a className="breadcrumbs__link" href="/docs/getting-started-with-selenium-testing/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Maximizing Test Execution Performance</span>

@@ -35,7 +35,7 @@ slug: analytics-overview/
 ></script>
 ---
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-overview-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/analytics-dashboard-update.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ## What is Analytics?
 

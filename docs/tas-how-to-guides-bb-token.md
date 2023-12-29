@@ -20,7 +20,7 @@ slug: tas-how-to-guides-bb-token/
 - Enter **App password label**.
 - **Set the permissions** for the app password. Add read access to `Account`, `Workspace membership`, `Projects`, `Repositories` and `Pull requests`.
 - Click on **Create**.
-- **Copy and save** your app pasword securely.
+- **Copy and save** your app password securely.
 
 > **NOTE:** TAS needs read access to `Account`, `Workspace membership`, `Projects`, `Repositories` and `Pull requests` in order to function properly.
 
@@ -37,6 +37,6 @@ slug: tas-how-to-guides-bb-token/
 
 - **Go to the terminal** and run the following command and **copy the access token**.
 ```bash
-echo -n "<bitbucket username>:<genrated app password>" | base64
+echo -n "<bitbucket username>:<generated app password>" | base64
 ```
 > **NOTE:** Set TokenType to `Basic` in syanpse config file.

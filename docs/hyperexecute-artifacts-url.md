@@ -45,7 +45,7 @@ HyperExecute now allows you to access your _Artifacts_ directly from the HyperEx
 
 ## Navigating Artifacts
 
-To view or download your Artifacts, click the **Artifcats** button.
+To view or download your Artifacts, click the **Artifacts** button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/0.png').default} alt="Image"  className="doc_img"/>
 

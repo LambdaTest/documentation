@@ -78,7 +78,7 @@ Otherwise just click on **Trigger test** to run your first job.
 
 ## 2. Using Local System
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/onboarding.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/onboarding.png').default} alt="Image"  className="doc_img"/>
 
 To run your Test Scripts on HyperExecute from you Local system, you'll need the following:
 - [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file which contains all the necessary instructions.
@@ -112,7 +112,7 @@ We will be taking care of everything one by one, just follow the steps given bel
 6. In order to run your tests, copy the command from screen and run in your terminal: 
   <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/9.png').default} alt="Image"  className="doc_img"/>
 
-7. The generic command required to initiate test execution is given below. You will need to insert the [Username, Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) and name of your YAML file in place of the `<your_username>`, `<your_acess_key>`  and `<your_yaml_file_name>` before running this command. (Skip if you already used the command from Step 6. )
+7. The generic command required to initiate test execution is given below. You will need to insert the [Username, Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) and name of your YAML file in place of the `<your_username>`, `<your_access_key>`  and `<your_yaml_file_name>` before running this command. (Skip if you already used the command from Step 6. )
 
     ```bash
     ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>"
