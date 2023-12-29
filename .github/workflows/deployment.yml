@@ -42,7 +42,7 @@ jobs:
           node-version: 16.14.x
           
       - run: npm -v && node -v
-      - run: npm install && npm ci && npm run build
+      - run: npm install --legacy-peer-deps && npm run build
         env:
           CI: false
 
