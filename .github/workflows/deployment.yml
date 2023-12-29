@@ -36,10 +36,10 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_DOCS_STAGING }}
           aws-region: us-east-1
           
-      - name: Use Node.js 16.14.x
+      - name: Use Node.js 20.10.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.14.x
+          node-version: 20.10.x
           
       - run: npm -v && node -v
       - run: npm install --legacy-peer-deps && npm run build
