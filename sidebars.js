@@ -1,7 +1,7 @@
 module.exports = {
-  apiSidebar: ['support-start', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'getting-started-with-hyperexecute', 'real-time-testing', 'smart-visual-regression-testing', 'analytics-overview', 'test-intelligence-overview', 'tas-overview', 'capability-map', 'visual-ui-testing', 'lt-browser', 'record-and-replay', 'testing-locally-hosted-pages', 'bug-tracking-tools', 'test-management', 'account-management', 'single-sign-on','scim'],
+  apiSidebar: ['support-start', 'getting-started-with-automation', 'getting-started-with-real-devices', 'getting-started-with-hyperexecute', 'getting-started-with-smart-ui', 'real-time-testing', 'analytics-overview', 'test-intelligence-overview', 'tas-overview', 'capability-map', 'lt-browser', 'record-and-replay', 'testing-locally-hosted-pages', 'bug-tracking-tools', 'test-management', 'account-management', 'single-sign-on','scim'],
 
-    SeleniumTestingSidebar: [
+    AutomationSidebar: [
       {
         type: 'link',
         label: '<- Back',
@@ -13,11 +13,126 @@ module.exports = {
       [
         {
           type: "category",
+          collapsed: false,
+          label: "Automation Testing",
+          link: {
+            type: "doc",
+            id: "getting-started-with-automation",
+          },
+          
+          items: [
+            {
+              type: "doc",
+              id: "getting-started-with-selenium-testing",
+            },
+            {
+              type: "doc",
+              id: "getting-started-with-cypress-testing",
+            },
+            {
+              type: "doc",
+              id: "playwright-testing-guide",
+            },
+            {
+              type: "doc",
+              id: "puppeteer-testing-guide",
+            },
+            {
+              type: "doc",
+              id: "k6-browser-testing",
+            },
+          ]
+        },
+      ]
+    ],
+
+    RealDeviceSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: false,
+          label: "Real Devices",
+          link: {
+            type: "doc",
+            id: "getting-started-with-real-devices",
+          },
+          
+          items: [
+            {
+              type: "doc",
+              id: "getting-started-with-appium-testing",
+            },
+            {
+              type: "doc",
+              id: "getting-started-with-espresso-testing",
+            },
+            {
+              type: "doc",
+              id: "getting-started-with-xcui-testing",
+            },
+          ]
+        },
+      ]
+    ],
+
+    SmartUISidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: false,
+          label: "Smart UI Testing",
+          link: {
+            type: "doc",
+            id: "getting-started-with-smart-ui",
+          },
+          
+          items: [
+            {
+              type: "doc",
+              id: "smart-visual-regression-testing",
+            },
+            {
+              type: "doc",
+              id: "visual-ui-testing",
+            },
+          ]
+        },
+      ]
+    ],
+
+    SeleniumTestingSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/getting-started-with-automation/',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
           collapsed: true,
           label: "Selenium Testing",
           link: {
             type: "doc",
-            id: "getting-started",
+            id: "getting-started-with-selenium-testing",
           },
     
           items: [
@@ -220,7 +335,7 @@ module.exports = {
       {
         type: 'link',
         label: '<- Back',
-        href: '/docs/',
+        href: '/docs/getting-started-with-automation/',
         customProps: {
         className: 'back-to-main-menu'
         },
@@ -323,7 +438,7 @@ module.exports = {
       {
         type: 'link',
         label: '<- Back',
-        href: '/docs/',
+        href: '/docs/getting-started-with-automation/',
         customProps: {
         className: 'back-to-main-menu'
         },
@@ -394,7 +509,7 @@ module.exports = {
       {
         type: 'link',
         label: '<- Back',
-        href: '/docs/',
+        href: '/docs/getting-started-with-automation/',
         customProps: {
         className: 'back-to-main-menu'
         },
@@ -423,7 +538,7 @@ module.exports = {
       {
         type: 'link',
         label: '<- Back',
-        href: '/docs/',
+        href: '/docs/getting-started-with-automation/',
         customProps: {
         className: 'back-to-main-menu'
         },
@@ -437,262 +552,11 @@ module.exports = {
       ]
     ],
 
-    // AppAutomationSidebar: [
-    //   {
-    //     type: 'link',
-    //     label: '<- Back',
-    //     href: '/docs/',
-    //     customProps: {
-    //     className: 'back-to-main-menu'
-    //     },
-    //   },
-
-    //   [
-    //     {
-    //       AppiumTestingSidebar: [
-    //         {
-    //           type: 'link',
-    //           label: '<- Back',
-    //           href: '/docs/',
-    //           customProps: {
-    //           className: 'back-to-main-menu'
-    //           },
-    //         },
-    //         [
-    //           {
-    //             type: "category",
-    //             collapsed: true,
-    //             label: "Appium Testing",
-    //             link: {
-    //               type: "doc",
-    //               id: "getting-started-with-appium-testing",
-    //             },
-    //             items: [
-    //               {
-    //                 type: "category",
-    //                 collapsed: true,
-    //                 label: "Languages and Frameworks",
-    //                 link: {
-    //                   type: "doc",
-    //                   id: "appium-languages-and-frameworks",
-    //                 },
-    //                 items: [
-    //                   {
-    //                     type: "category",
-    //                     collapsed: true,
-    //                     label: "Java",
-    //                     link: {
-    //                       type: "doc",
-    //                       id: "appium-java",
-    //                     },
-    //                     items: [
-    //                       "appium-java-junit",
-    //                       "appium-java-jbehave",
-    //                       "appium-java-cucumber",
-    //                       "appium-java-testng",
-    //                     ],
-    //                   },
-    //                   {
-    //                     type: "category",
-    //                     collapsed: true,
-    //                     label: "JavaScript",
-    //                     link: {
-    //                       type: "doc",
-    //                       id: "appium-nodejs",
-    //                     },
-    //                     items: ["appium-nodejs-webdriverio", "appium-nodejs-mocha"],
-    //                   },
-    //                   {
-    //                     type: "category",
-    //                     collapsed: true,
-    //                     label: "Python",
-    //                     link: {
-    //                       type: "doc",
-    //                       id: "appium-python",
-    //                     },
-    //                     items: [
-    //                       "appium-python-behave",
-    //                       "appium-python-robot",
-    //                       "appium-python-gauge",
-    //                       "appium-python-pytest",
-    //                     ],
-    //                   },
-    //                   {
-    //                     type: "category",
-    //                     collapsed: true,
-    //                     label: "Ruby",
-    //                     link: {
-    //                       type: "doc",
-    //                       id: "appium-ruby",
-    //                     },
-    //                     items: ["appium-ruby-cucumber", "appium-ruby-rspec"],
-    //                   },
-    //                   {
-    //                     type: "category",
-    //                     collapsed: true,
-    //                     label: "PHP",
-    //                     link: {
-    //                       type: "doc",
-    //                       id: "appium-php",
-    //                     },
-    //                     items: ["appium-php-behat"],
-    //                   },
-    //                   {
-    //                     type: "category",
-    //                     collapsed: true,
-    //                     label: "C#",
-    //                     link: {
-    //                       type: "doc",
-    //                       id: "appium-csharp",
-    //                     },
-    //                     items: ["appium-csharp-nunit"],
-    //                   },
-    //                   "appium-kotlin",
-    //                 ],
-    //               },
-    //               {
-    //                 type: "category",
-    //                 collapsed: true,
-    //                 label: "Setup",
-    //                 items: [
-    //                   "desired-capabilities-in-appium",
-    //                   "list-of-supported-locales",
-    //                   "app-testing-apis",
-    //                   "appium-lambdatest-hooks",
-    //                   "appium-install-uninstall-lambdatest-hooks",
-    //                   "appium-uploading-retrieving-files",
-    //                   "appium-firebase-app-upload",
-    //                 ],
-    //               },
-    //               {
-    //                 type: "category",
-    //                 collapsed: true,
-    //                 label: "Features",
-    //                 items: [
-    //                   "camera-image-injection",
-    //                   "biometric-authentication",
-    //                   "reg-expression",
-    //                   "appium-app-performance",
-    //                   "appium-ios-app-settings",
-    //                   "adb-commands-support",
-    //                   "login-google-android",
-    //                   "disable-screenshot-block",
-    //                   "basic-authentication-for-web-automation",
-      
-    //                 ],
-    //               },
-    //               {
-    //                 type: "category",
-    //                 collapsed: true,
-    //                 label: "Smart TV Automation",
-    //                 items: ["appium-appletv", "appium-firetv", "appium-rokutv"],
-    //               },
-    //               {
-    //                 type: "category",
-    //                 collapsed: true,
-    //                 label: "Integrations",
-    //                 items: ["appium-inspector"],
-    //               },
-    //               {
-    //                 type: "category",
-    //                 collapsed: true,
-    //                 label: "Local Testing",
-    //                 items: ["testing-apps-locally"],
-    //               },
-    //               "migrate-appium-tests-from-browserstack-and-saucelabs",
-    //             ],
-    //           },
-    //         ]
-    //       ],
-
-    //       EspressoTestingSidebar: [
-    //       {
-    //         type: 'link',
-    //         label: '<- Back',
-    //         href: '/docs/',
-    //         customProps: {
-    //         className: 'back-to-main-menu'
-    //         },
-    //       },
-    //       [
-    //         {
-    //           type: "category",
-    //           collapsed: true,
-    //           label: "Espresso Testing",
-    //           items: [
-    //             "getting-started-with-espresso-testing",
-    //             "debug-espresso-tests",
-    //             "speedup-espresso",
-    //             "getting-started-with-flutter-dart-android-automation",
-    //           ],
-    //         },
-    //       ]
-    //       ],
-
-    //       XCUITestingSidebar: [
-    //       {
-    //         type: 'link',
-    //         label: '<- Back',
-    //         href: '/docs/',
-    //         customProps: {
-    //         className: 'back-to-main-menu'
-    //         },
-    //       },
-    //       [
-    //         {
-    //           type: "category",
-    //           collapsed: true,
-    //           label: "XCUI Testing",
-    //           items: [
-    //             "getting-started-with-xcui-testing",
-    //             "ios-ipa-files-xcui",
-    //             {
-    //               type: "category",
-    //               collapsed: true,
-    //               label: "Speedup XCUI",
-    //               items: [
-    //                 "filters-xcui",
-    //                 "sharding-xcui"
-    //               ],
-    //             },
-    //             ,
-    //           ],
-    //         },
-    //       ]
-    //       ],
-    //     }
-
-    //   ]
-    // ],
-
-    AppAutomationSidebar: [
-      {
-        type: 'link',
-        label: '<- Back',
-        href: '/docs/',
-        customProps: {
-        className: 'back-to-main-menu'
-        },
-      },
-      [
-        {
-          type: "category",
-          collapsed: true,
-          label: "App Automation (Emu/Sim)",
-          items: [
-            "app-automation-app-sim",
-        
-          ],
-        },
-    
-      ]
-    ],
-
     AppiumTestingSidebar: [
             {
               type: 'link',
               label: '<- Back',
-              href: '/docs/',
+              href: '/docs/getting-started-with-real-devices',
               customProps: {
               className: 'back-to-main-menu'
               },
@@ -812,6 +676,7 @@ module.exports = {
                       "camera-image-injection",
                       "biometric-authentication",
                       "reg-expression",
+                      "app-auto-network-throttling",
                       "appium-app-performance",
                       "appium-ios-app-settings",
                       "adb-commands-support",
@@ -850,7 +715,7 @@ module.exports = {
       {
         type: 'link',
         label: '<- Back',
-        href: '/docs/',
+        href: '/docs/getting-started-with-real-devices',
         customProps: {
         className: 'back-to-main-menu'
         },
@@ -890,7 +755,7 @@ module.exports = {
           {
             type: 'link',
             label: '<- Back',
-            href: '/docs/',
+            href: '/docs/getting-started-with-real-devices',
             customProps: {
             className: 'back-to-main-menu'
             },
@@ -1269,6 +1134,19 @@ module.exports = {
                     label: "Accelq",
                     id: "hyperexecute-accelq-integration",
                   },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Azure Test Plan",
+                    link: {
+                      type: "doc",
+                      id: "azure-test-plan-integration-with-hyperexecute",
+                    },
+                    items: [
+                      "tosca-integration-with-hyperexecute-using-commander",
+                      "tosca-integration-with-hyperexecute-using-dex",
+                    ]
+                  },
                 ],
               },
               {
@@ -1550,9 +1428,20 @@ module.exports = {
               id: "hyperexecute-browser-list-api",
               },
               {
-                type: "doc",
+                type: "category",
+                collapsed: true,
                 label: "HyperExecute Widgets",
-                id: "hyperexecute-widgets"
+                link: {
+                  type: "doc",
+                  id: "hyperexecute-widgets",
+                },
+                items: [
+                  "hyperexecute-job-widgets",
+                  "hyperexecute-stage-widgets",
+                  "hyperexecute-task-widgets",
+                  "hyperexecute-test-widgets",
+                  "hyperexecute-resource-widgets"
+                ]
               },
               {
                 type: "category",
@@ -1687,7 +1576,7 @@ module.exports = {
       ]
     ],
 
-    SmartUITestingSidebar: [
+    VisualRegressionTestingSidebar: [
       {
         type: 'link',
         label: '<- Back',
@@ -1722,8 +1611,18 @@ module.exports = {
               items: [
                 {
                   type: "doc",
-                  label: "Javascript SDK",
+                  label: "Javascript",
                   id: "smartui-selenium-js-sdk",
+                },
+                {
+                  type: "doc",
+                  label: "Java",
+                  id: "smartui-selenium-java-sdk"
+                },
+                {
+                  type: "doc",
+                  label: "Python",
+                  id: "smartui-selenium-python-sdk"
                 }
               ]
             },
