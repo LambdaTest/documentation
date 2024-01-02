@@ -3,7 +3,7 @@ id: real-time-testing
 title: Real Time Browser Testing
 hide_title: true
 sidebar_label: Real Time Browser Testing
-description: If you want to perform real time cross browser testing for your website on LambdaTest(having wide range of Android and iOS web browsers and their versions), this support document will help.
+description: If you want to perform real time cross browser testing for your website on LambdaTest(having wide range of Androind and iOS web browsers and their versions), this support document will help.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature
@@ -289,7 +289,7 @@ In case you wish to perform cross browser testing with multiple geolocations for
 
 <img loading="lazy" src={require('../assets/images/real-time-browser-testing/session-end.webp').default} alt="end session" width="1338" height="652" className="doc_img"/>
 
-**Step 2:** As you click on the power button, you will receive a confirmatory pop-up for terminating the session. If you are sure about exiting the current session then click on the button highlighted in red that says “Yes, End Session”.
+**Step 2:** As you click on the power button, you will recieve a confirmatory pop-up for terminating the session. If you are sure about exiting the current session then click on the button highlighted in red that says “Yes, End Session”.
 
 <img loading="lazy" src={require('../assets/images/real-time-browser-testing/session-end-1.webp').default} alt="end session" width="1338" height="652" className="doc_img"/>
 

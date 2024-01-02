@@ -2,7 +2,7 @@
 id: playwright-html-report
 title: Consolidated Playwright HTML Report on HyperExecute
 hide_title: true
-sidebar_label: Playwright HTML Report
+sidebar_label: Test Reports on HyperExecute
 description: Learn how to generate html test report for playwright framework testing on lambdatest and download the reports from the dashboard
 keywords:
  -  playwright testing with Playwright test runner
@@ -84,15 +84,17 @@ By default, an HTML report is opened automatically if some of the tests failed. 
 **Step 1:** Update your Playwright Configuration File by adding the below code
 
 #### playwright.config.js File
-
-```javascript
+```
 import { devices } from '@playwright/test';
 
-const config = { 
-  timeout: 5 * 60 * 1000, // Maximum time one test can run for
-  testDir: './tests',
-  testMatch: /.*\.spec\.js/,
-  reporter: [['html', { open: 'never' }]],
+const config = {
+ 
+    timeout: 5 * 60 * 1000, // Maximum time one test can run for
+    testDir: './tests',
+    testMatch: /.*\.spec\.js/,
+    
+    reporter: [['html', { open: 'never' }]],
+
 };
 ```
 
@@ -104,7 +106,7 @@ By default, the report is written into the **playwright-report folder** in the c
 
 **Step 2:** Now configure the report parameters in the **HyperExecute YAML** file.
 
-```bash
+```
 report: true
 partialReports:
   frameworkName: playwright
@@ -112,6 +114,6 @@ partialReports:
   type: html
 ```
 
-**Step 3:** Now execute your job by triggering the HyperExecute CLI. You can  visit the HyperExecute dashboard to download the report after job completion.
+**Step 3:** Now Execute your job by triggering the HyperExecute CLI. You can  visit the HyperExecute dashboard to download the report after job completion.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/html-report.webp').default} alt="Image" className="doc_img"/> 

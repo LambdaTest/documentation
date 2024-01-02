@@ -99,7 +99,7 @@ In a few seconds, after you execute the command, a tunnel connection will be est
 ***
 **Step 1**:  Make sure you turn on XAMPP or any other web hosting tool to provide you an Apache test environment. If you are using XAMPP, Press the **‘Start’**  button for **Apache**  under **‘Actions’**. If you also want to test the back-end functionality for your website then Press the **‘Start’**  button for **‘MySQL’**  as well.
 
-<img loading="lazy" src={require('../assets/images/local-testing-windows/local-windows-5.webp').default} alt="Xampp Control Panel" width="970" height="313" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/local-testing-windows/local-windows-5.webp').default} alt="Xampp Control Pannel" width="970" height="313" className="doc_img"/>
 
 **Step 2**:  Navigate to **‘Real Time Testing’**  menu. Enter the localhost URL you want to test in the text field provided and Select the tunnel via which you want to run the test.
 
@@ -168,11 +168,11 @@ In this way, you can run any HTML, PHP, Python or similar web files present in a
 A secure tunnel connection is maintained unless you explicitly disconnect it. You can disconnect the tunnel in following ways:
 
 **Option 1:**  You can kill the process by using **‘Ctrl+C’**  in Windows command prompt.
-You will receive the below highlighted message **‘Tunnel stopped successfully’**  indicating the termination on Tunnel Connection.
+You will recieve the below highlighted message **‘Tunnel stopped successfully’**  indicating the termination on Tunnel Connection.
 
 <img loading="lazy" src={require('../assets/images/local-testing-windows/local-windows-17.webp').default} alt="Stopping tunnel" width="977" height="292" className="doc_img"/>
 
-**Option 2:**  You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button That's says **“Tunnel active”**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an **‘x’**  button. Press the **‘x’**  button to terminate the LambdaTest tunnel.
+**Option 2:**  You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button thats says **“Tunnel active”**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an **‘x’**  button. Press the **‘x’**  button to terminate the LambdaTest tunnel.
 
 <img loading="lazy" src={require('../assets/images/local-testing-windows/local-windows-18.webp').default} alt="disconnecting LambdaTest tunnel" width="1349" height="622" className="doc_img"/>
 

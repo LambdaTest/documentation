@@ -1,8 +1,8 @@
 ---
 id: hyperexecute-email-reports
-title: Receive Job Reports and Artifacts via Email 
+title: Receive the Job Reports as an Email 
 hide_title: true
-sidebar_label: Receive Job Reports and Artifacts via Email
+sidebar_label: Receive the Job Reports as an Email 
 description: Streamline testing with HyperExecute Email Reports! Learn how to effortlessly automate test runs and receive detailed reports. Boost efficiency today.
 keywords:
   - LambdaTest Hyperexecute
@@ -37,84 +37,26 @@ slug: hyperexecute-email-reports/
     }}
 ></script>
 
-# Receive Job Reports and Artifacts via Email
+# Receive the Job Report as an Email 
 
-Downloading Job Reports and Artifacts manually from the HyperExecute UI can be a time-consuming and repetitive task. To address this pain point, HyperExecute now provides the convenience of receiving Job Reports and Artifacts directly to your specified email addresses. This eliminates the need for manual downloads, allowing you to access critical job information instantly and effortlessly. Embrace the efficiency of automated delivery and spend less time navigating the UI and more time focusing on your development tasks.
+HyperExecute now offers you the option of receiving your job reports on the email IDs that you want. This will shorten the process of going on the HyperExecute UI and downloading your job report, and help you access your reports directly. 
 
-## YAML Configuration
+## How to receive your Job Report as an Email?
 
-To receive the Artifacts and Reports via mail, you will have to add the `email` flag with a `to` tag to select the email IDs where the report or artifacts should be sent. The example added below shows you how to add your email IDs:
+### Prerequisites
 
-```bash
-email:
-  to: 
-    - <your_email_id@example.com>
-    - <another_email_id@example.com>
-```
+-   The `report` flag is set to `true` in the HyperExecute YAML.
 
-You can also use the `currentUser` and `org` tag to send the reports to the email ID of your choice.
+-   The `location`, `type` and `frameworkName` fields in the `partialReports` flag are configured correctly.
+    
+-   Your job should not time out or be aborted.
+    
 
-- **currentUser**: This tag will allow you to send the report to the email ID associated with your LambdaTest account.
+### YAML Configuration
 
-```bash
-email:
-  to: 
-    - currentUser
-```
+To receive the reports on your email IDs, you need to configure the `partialReports` flag in the HyperExecute YAML.
 
-- **org**: This tag will allow you to send the report to all the email IDs associated with your organization on LambdaTest.
-
-```bash
-email:
-  to:
-    - org 
-```
-
-## How to receive your Artifacts via Email?
-
-Follow the below mentioned steps to receive your Artifacts via email:
-
-**Step 1:** You need to mention the `email` flag along with the `to` tag under the `uploadArtifacts` flag in the YAML file configuration.
-
-> **NOTE:** You can also add a separate email ID for each report generated, as mentioned below in the YAML code.
-
-```bash
-uploadArtifacts:
-  - name: Reports 1
-    path:
-      - ProtractorTestReport.html
-      - xmlresults.xml
-    email:
-      to: 
-        - <your_email_id@example.com>
-        - <another_email_id@example.com>
-        
-  - name: Reports 2
-    path:
-      - ProtractorTestReport.html
-      - xmlresults.xml
-    email:
-      to: 
-        - currentUser
-        
-  - name: Reports 3
-    path:
-      - ProtractorTestReport.html
-      - xmlresults.xml
-    email:
-      to: 
-        - org
-```
-
-## How to receive your Job Report via Email?
-
-Follow the below mentioned steps to receive your Job Reports via email:
-
-**Step 1:** Set the `report` flag to `true` in the HyperExecute YAML.
-
-**Step 2:** Make sure to check the `location`, `type` and `frameworkName` fields in the `partialReports` flag are configured correctly.
-
-**Step 3:** Add the `email` flag with `to` tag in the YAML file configuration:
+-   Add the `email` flag with a `to` tag to select the email IDs where the report should be sent. The example added below shows you how to add your email IDs.
 
 ```bash
 report: true
@@ -127,8 +69,25 @@ partialReports:
       - <your_email_id@example.com>
       - <another_email_id@example.com>
 ```
+You can also use the `currentUser` and `org` tag to send the reports to the email ID of your choice.
 
-## Correct format of entering the Email IDs
+-   **currentUser**: This tag will allow you to send the report to the email ID associated with your LambdaTest account.
+
+```bash
+  email:
+    to: 
+      - currentUser
+```
+
+-   **org**: This tag will allow you to send the report to all the email IDs associated with your organization on LambdaTest.
+
+```bash
+  email:
+    to:
+      - org 
+```
+
+### Correct format of entering the Email IDs
 
 The Email IDs that you enter must be valid. You can enter your email IDs in the formats mentioned below.
 

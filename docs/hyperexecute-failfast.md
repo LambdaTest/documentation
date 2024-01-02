@@ -44,7 +44,7 @@ HyperExecute's FailFast feature lets you to optimize your testing regimen by aut
 
 > You can use this feature with both the HyperExecute YAML and the HyperExecute CLI.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/failfast/failfast.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/failfast.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 ### `maxNumberOfTests` Flag
 

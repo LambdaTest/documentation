@@ -94,7 +94,7 @@ public class LTCapability {
     capabilities1.addProperty("browserVersion", "latest");
     ltOptions1.addProperty("platform", "Windows 10");
     ltOptions1.addProperty("name", "Playwright Test");
-    ltOptions1.addProperty("build", "Playwright Testing using Junit");
+    ltOptions1.addProperty("build", "Playwrite Testing using Junit");
     ltOptions1.addProperty("user", user);
     ltOptions1.addProperty("accessKey", accessKey);
     capabilities1.add("LT:Options", ltOptions1);
@@ -106,7 +106,7 @@ public class LTCapability {
     capabilities2.addProperty("browserVersion", "latest");
     ltOptions2.addProperty("platform", "Windows 10");
     ltOptions2.addProperty("name", "Playwright Test");
-    ltOptions2.addProperty("build", "Playwright Testing using Junit");
+    ltOptions2.addProperty("build", "Playwrite Testing using Junit");
     ltOptions2.addProperty("user", user);
     ltOptions2.addProperty("accessKey", accessKey);
     capabilities2.add("LT:Options", ltOptions2);

@@ -94,10 +94,10 @@ To check the background service logs, follow the below mentioned steps:
 **Step 1:** After executing your job, go to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute/jobs) to check the status of the job.
 
 **Step 2:** Click on the **Background Service** button.
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/background-service/Step2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/background-service/Step2.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 **Step 3:** Click on the desired **background service** you have triggered to check its logs.
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/background-service/Step3.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/background-service/Step3.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ## Sample YAML File
 ***
@@ -148,27 +148,3 @@ cypressOps:
 
 jobLabel: [cypress-v9, hybrid]
 ```
-
-## Frequently Asked Questions
-
-<details><summary>Is the service intended to operate within the same Virtual Machine or externally?</summary>
-Yes, the service will run within the same Virtual Machine.
-</details>
-
-<details><summary>What is the service's commencement and cessation schedule?</summary>
-
-It initiates the execution of all background commands concurrently with the pre-stage and continues until the completion of post-run command execution.
-</details>
-
-<details><summary>Will the Database, for example, run on a single VM and be accessible for testing on other VMs?</summary> No, the background service can only be accessed from within the same VM.
-</details>
-
-<details><summary>Will the identical set of background services be initiated within every VM?</summary>
-
-Yes, if the same set of background services, such as **`npm run server`**, are establishing HTTP servers on the same port, it is likely that one of the commands will encounter a binding issue and fail.
-</details>
-
-
-<!-- <details><summary>Will the identical set of background services be initiated within every VM?</summary>
-
-Yes, if the same set of background services, such as npm run server, are establishing HTTP servers on the same port, it is likely that one of the commands will encounter a binding issue and fail.</details> -->

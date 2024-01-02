@@ -66,7 +66,7 @@ HyperExecute is a smart test orchestration platform to run end-to-end Puppeteer 
 
 The overall experience helps teams test code and fix issues at a much faster pace. HyperExecute is configured using a YAML file. Instead of moving the Hub close to you, HyperExecute brings the test scripts close to the Hub! This guide will cover the basics of getting started with Puppeteer-Codecept testing on the Lambdatest HyperExecute grid.
 
-> HyperExecute has several state of the art features to help you optimize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute/) to take a look at all the tools that HyperExecute offers. 
+> HyperExecute has several state of the art features to help you optmize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute/) to take a look at all the tools that HyperExecute offers. 
 
 >HyperExecute is compliant with leading security standards - SOC2, GDPR, and CCPA. Refer to [HyperExecute Getting Started Guide](/docs/getting-started-with-hyperexecute) for more information about features offered by HyperExecute.
 
@@ -77,7 +77,7 @@ The overall experience helps teams test code and fix issues at a much faster pac
 
 Follow the below steps to run Gitpod button:
 1. Click the **Open in Gitpod** button (You will be redirected to Login/Signup page).
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_popup.png').default} alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/gitpod_popup.png').default} alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
 2. Login with Lambdatest credentials. You will be redirected to HyperExecute dashboard with pop-up confirming to **'Proceed'** to Gitpod editor in the new tab and current tab will show hyperexecute dashboard.
 
 [<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Puppeteer&framework=Puppeteer-CodeceptJs)

@@ -38,7 +38,7 @@ slug: integrate-lambdatest-extension-with-azure-pipelines/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Azure Pipeline",
+          "name": "Azure Pipleline",
           "item": "https://www.lambdatest.com/support/docs/integrate-lambdatest-extension-with-azure-pipelines/"
         }]
       })
@@ -49,11 +49,11 @@ slug: integrate-lambdatest-extension-with-azure-pipelines/
 
 * * *
 
-Azure Pipelines, by Microsoft, is a feature of Azure DevOps. It helps to automatically build, test, and deploy your projects, with Continuous Integration or CI, upon various production environments. So your Selenium automation test scripts can run successfully on Azure Pipeline. However, sometimes running your scripts can be a bit tedious. This is where the LambdaTest plugin can be used in the Azure Pipeline to ease the workflow and automate the tests. LambdaTest allows you to perform live interactive and automated cross-browser testing on 3000+ real browsers and operating systems online.
+Azure Pipelines, by Microsoft, is a feature of Azure DevOps. It helps to automatically build, test, and deploy your projects, with Continous Integration or CI, upon various production environments. So your Selenium automation test scripts can run successfully on Azure Pipeline. However, sometimes running your scripts can be a bit tedious. This is where the LambdaTest plugin can be used in the Azure Pipeline to ease the workflow and automate the tests. LambdaTest allows you to perform live interactive and automated cross-browser testing on 3000+ real browsers and operating systems online.
 
 
 <div className="download_btn mb-10">
-<a href="https://marketplace.visualstudio.com/items?itemName=Lambdatest.lambda-azure-pipeline-extension">Check LambdaTest Extension On Azure DevOps Marketplace</a>
+<a href="https://marketplace.visualstudio.com/items?itemName=Lambdatest.lambda-azure-pipeline-extention">Check LambdaTest Extension On Azure DevOps Marketplace</a>
 </div>
 
 
@@ -227,7 +227,7 @@ Once you activate it, a LambdaTest Tunnel Options box will appear, which require
 
 The LambdaTest Tunnel has been successfully configured now. You can test your locally hosted pages and privately hosted pages at the LambdaTest Platform using LambdaTest Tunnel.
 
-### Stopping The LambdaTest Tunnel Using LambaTest Extension
+### Stoping The LambdaTest Tunnel Using LambaTest Extension
 
 To stop the LambdaTest Tunnel, you need to add the _LambdaTest Stop Tunnel_ task in your job. Once this task is executed, the LambdaTest Tunnel will stop successfully.
 
@@ -237,7 +237,7 @@ You must keep this task at the end of your all tests, to let your tests execute 
 
 * * *
 
-> That was all you need to know for integrating LambdaTest Extension with Azure Pipelines. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing! :)
+> That was all you need to know for integrating LambdaTest Extenstion with Azure Pipelines. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing! :)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

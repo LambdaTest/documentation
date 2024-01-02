@@ -142,6 +142,7 @@ module.exports = defineConfig({
 });
 ```
 
+
 **Step 3:** Go to the following file: *cypress/support/e2e.js*. Add the below-mentioned code.
 
 ```java
@@ -156,11 +157,7 @@ installLogsCollector()
 - for **cypress >= 10** use "cypress-terminal-report": "^5.3.2"
 
 - Make sure to set this key **"detailed_command_logs"** to **'true'** in  **run_settings** in *lambdatest-config.json* like below:
-
 - You can download the logs as usual by passing **"downloads": "./cypress/results"** 
-
-> For comprehensive details on downloading reports, please refer to the following [resource](https://www.lambdatest.com/support/docs/download-artefacts-cypress/).
-
 ```bash
 "run_settings": {
     "reporter_config_file":"base_reporter_config.json",

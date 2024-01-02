@@ -98,7 +98,7 @@ cd ROOT_FOLDER
 
 - Click on **Create Project** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/1.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/1.png').default} alt="Image"  className="doc_img"/>
 
 - Enter the required details for your project:
 
@@ -108,18 +108,18 @@ cd ROOT_FOLDER
     - You can choose whether to provide access to this project to everyone or not.
     - Click on **Save** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/2.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/2.png').default} alt="Image"  className="doc_img"/>
 
 - Now click on **Create Plan** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/3.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/3.png').default} alt="Image"  className="doc_img"/>
 
 - Select your required **Project**.
 - Enter a **Plan Name**
 - Enter your **Project Key** (it should be same as the one you entered in the above step).
 - Click on **Create** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/4.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/4.png').default} alt="Image"  className="doc_img"/>
 
 ### Step 4: Configure the Source Code
 
@@ -129,30 +129,30 @@ cd ROOT_FOLDER
 - Select the **Authentication Type** of your choice. We are selecting "Username and Password"
 - Enter the **Username** and **Password**.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/5.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/5.png').default} alt="Image"  className="doc_img"/>
 
 - Enter the desired **Branch** name.
 - Click on **Test Connection** button to check whether the connection is successfully established or not.
 - Define who can access to this repository.
 - Click on **Save and Continue** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/6.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/6.png').default} alt="Image"  className="doc_img"/>
 
 ### Step 5: Configure Job
 
 - Select the **environment** where do you want to execute this job. For the demo purpose, we are using **Agent Environment**.
 - Click on **Add Task** button
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/7.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/7.png').default} alt="Image"  className="doc_img"/>
 
 - Select the **Script** option from the provided Task Types.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/8.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/8.png').default} alt="Image"  className="doc_img"/>
 
 - Enter your Task Description.
 - Select the **Interpreter** as **Shell**.
 - Choose the **Script Location** as **Inline**.
-- Add the following code in the **Script Body**
+- Add the followiing code in the **Script Body**
 
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
@@ -160,34 +160,34 @@ chmod +x hyperexecute
 ./hyperexecute --user <username>--key <key> --config <file>
 ```
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/9.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/9.png').default} alt="Image"  className="doc_img"/>
 
 - Add the Task and click on **Create** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/10.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/10.png').default} alt="Image"  className="doc_img"/>
 
 - Configure the pipeline as per your need in the **Trigger** tab or leave it to *Default*
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/11.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/11.png').default} alt="Image"  className="doc_img"/>
 
 - Click on **Actions** -> **Enable Plan** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/12.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/12.png').default} alt="Image"  className="doc_img"/>
 
 - Click on **Run** -> **Run plan** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/13.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/13.png').default} alt="Image"  className="doc_img"/>
 
 - Test will get triggered and start executing. You can check the activity status of your Job here.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/14.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/14.png').default} alt="Image"  className="doc_img"/>
 
 ### Step 6: Check the Output
 
 - Logs of the Job Build
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/15.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/15.png').default} alt="Image"  className="doc_img"/>
 
 - Result on HyperExecute Dashboard
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bamboo/16.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/bamboo/16.png').default} alt="Image"  className="doc_img"/>

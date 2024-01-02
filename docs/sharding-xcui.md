@@ -49,7 +49,7 @@ import TabItem from '@theme/TabItem';
 ></script>
 
 
-Generally the XCUI tests are run in sequence which is a time taking process. This document explains how you can speed up this process by splitting the tests into **shards**. We can divide the various tests into shards which can run parallelly and save time while running various XCUI tests. 
+Generally the XCUI tests are run in sequence which is a time taking process. This document explains how you can speed up this process by splitting the tests into **shards**. We can divide the various tests into shards which can run parallely and save time while running various XCUI tests. 
 
 This document will cover how to execute **XCUI Tests** on real devices with **HyperExecute**. HyperExecute is a smart test orchestration platform to run end-to-end tests at the fastest speed possible. HyperExecute is configured using a YAML file.
 
@@ -236,12 +236,12 @@ If you are using the `deviceSelectorStrategy: any`, then in that case all the me
 
 ```bash
 chmod u+x <cliFileNAme>
-./<cliFileNAme> --u <userName> --k <accessKey> --verbose -i <yamlFileName>.yaml
+./<cliFileNAme> -u <userName> -k <accessKey> --verbose -i <yamlFileName>.yaml
 ```
 
 You can refer to this example and screenshot below:
 ```
-./hyperexecute --u my_user_name --k xyx123abc --verbose -i hyperexecute.yaml
+./hyperexecute -u my_user_name -k xyx123abc --verbose -i hyperexecute.yaml
 ```
 <img loading="lazy" src={require('../assets/images/app-automation/example-folder.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

@@ -50,7 +50,7 @@ This is the guide to setup your Github Repos with SmartUI projects and run your 
 ### Pre-requisites for running Smart UI
 
 - An account with Github with valid permission to install new applications to your repositories.
-- Basic understanding of Continuous Integration tools (CI) is required.
+- Basic understanding of Continuos Integration tools (CI) is required.
 - Should have setup the SmartUI suite, else please read [this](/docs/selenium-visual-regression/)
 
 The following steps will guide you in running your first Visual Regression test on LambdaTest SmartUI platform using GitHub App-
@@ -148,13 +148,13 @@ Go to `.github/workflows/<your_ci_file>.yml`
 
 :::info Note
 
-We also support other Continuous Integrations (CI) tools to execute the similar process as well. 
+We also support other Continuos Integrations (CI) tools to execute the similar process as well. 
 
 :::
 
 ### **Step 5**: Execute your test suite with CI
 
-After the setup is completed, you can now execute your test suite with the Continuous Integration (CI) pipeline with any tool of your choice. 
+After the setup is completed, you can now execute your test suite with the Continuos Integration (CI) pipeline with any tool of your choice. 
 
 :::tip GitHub Actions - Example
 

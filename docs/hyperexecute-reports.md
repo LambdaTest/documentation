@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-reports
-title: HyperExecute Job Reports
+title: Detailed Test Reports and Logs
 hide_title: true
-sidebar_label: HyperExecute Job Reports
-description: Effortlessly explore HyperExecute Reports! Gain a deeper understanding of your test outcomes with the comprehensive insights and analytics offered by LambdaTest.
+sidebar_label: Detailed Test Reports and Logs
+description: Navigate through HyperExecute Reports with ease! Understand your test results better with detailed insights and analytics provided by LambdaTest.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -37,20 +37,11 @@ slug: hyperexecute-reports/
     }}
 ></script>
 
-# Reports
+# Detailed Test Reports and Logs
 
-Reports provide summarized job information, including status counts and links to tests. You can generate and download detailed reports at the end of job execution that helps you analyze the outcome of your tests based on your framework. 
+One of the key features that HyperExecute provides is our comprehensive Job Reports. It is a detailed report that helps you analyze the outcome of your tests based on your framework. 
 
-## Steps to Generate Reports
-
-Follow the below mentioned steps to generate the Reports for your desired framework:
-
-**Step 1:** Go to the HyperExecute YAML file
-
-**Step 2:** Add the below mentioned parameters in the YAML file to generate the Reports
-
-- You must set the `report` flag to **true**.
-
+- To generate a report for your Job, you must set the `report` flag to **true** in the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml).
 - You will have to specify the **location**, **type** and **framework** associated with your report in the `partialReports` field to generate it. 
 
 ```bash
@@ -62,33 +53,27 @@ partialReports:
 ```
 > **Note**: If you do not specify a framework but you do mention the type of the report, then a report of the default framework is created.
 
-**Step 3:** Now trigger your job and go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
-
-**Step 4:** Click on the **Open** button of the **Reports**.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/report3.png').default} alt="Image"  className="doc_img"/>
-
-Here is the sample report generated.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/report4.png').default} alt="Image"  className="doc_img"/>
-
 :::info
-Refer to the detailed documentation on [Job Reports](/support/docs/hyperexecute-job-reports/)
+- For **_html_** reports, the default framework is **SpecFlow**.
+- For **_json_** reports, the default framework is **Cucumber**. 
 :::
 
+To know more about how to download or access your job reports, go through the pages mentioned below.
 
-## Download the Generated Reports
-
-**Step 1:** Go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) portal and click on your Job.
-
-**Step 2:** Click on the **Reports** button in the upper right corner.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/report1.png').default} alt="Image"  className="doc_img"/>
-
-**Step 3:** Click on the **Download** button to download your Job Reports.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/report2.png').default} alt="Image"  className="doc_img"/>
-
+<div className="support_main">
+  <a href="/support/docs/hyperexecute-reports-download/">
+    <div className="support_inners mb-5">
+      <h3>Download Job Report via HyperExecute GUI</h3>
+      <p>HyperExecute allows you to Download your Job Reports directly from the platform.</p>
+    </div>
+  </a>
+  <a href = "/support/docs/hyperexecute-email-reports/">
+    <div className="support_inners">
+      <h3>Receive the Job Report via Email</h3>
+      <p>HyperExecute provides you a feature to recieve your Job Reports via the Email.</p>
+    </div>
+  </a>
+</div>
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

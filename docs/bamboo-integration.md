@@ -46,7 +46,7 @@ LambdaTest provides an integration with Bamboo, using which you can perform cros
 
 - A Bamboo Server installed.
 - A GIT repository.
-- wget & unzip utility.
+- wget & unzip utiltity.
 
   ```
   $ sudo apt-get install unzip

@@ -556,7 +556,7 @@ Every test run on the HyperExecute Grid has a unique *jobId* associated with it.
 
 The snapshot below shows how to navigate to the respective *testID* for viewing the Selenium logs:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/appium/hyperexecute-appium.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/hyperexecute-appium.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ## Conclusion
 By following the instructions in this documentation, you can seamlessly execute the Appium tests on HyperExecute, leveraging its secure cloud infrastructure, advanced features, and optimized test execution workflow.

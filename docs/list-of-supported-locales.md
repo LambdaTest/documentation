@@ -2,7 +2,7 @@
 id: list-of-supported-locales
 title: List of Supported Locales
 hide_title: true
-sidebar_label: Supported Locales And Languages
+sidebar_label: List of Supported Locales And Languages
 description: Checkout the list of all supported locales
 keywords:
   - Supported locales
@@ -38,7 +38,7 @@ slug: list-of-supported-locales/
     }}
 ></script>
 
-# Supported Locales And Languages
+# List Of Supported Locales And Languages
 ***
 Use the given below list of supported locale and language codes for app testing.
 ## Android locales and language codes

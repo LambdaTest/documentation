@@ -140,10 +140,8 @@ In addition to all of the core features that LambdaTest cloud provides to your t
     <h3>Test Muting</h3>
     <p>Mute scenarios that have been continuously failing for a pre-defined number of times, ignore expected failures, achieve better runtimes and faster feedback on the executed Jobs.</p>
   </div>
-  </a>  
-</div>
+  </a>
 
-<!-- 
   <div className="support_inners">
     <h3>Dependency Caching</h3>
     <p>HyperExecute caches all environments and framework-level dependencies to minimise the time it takes for configuration and installation steps.</p>
@@ -151,9 +149,12 @@ In addition to all of the core features that LambdaTest cloud provides to your t
   <div className="support_inners">
     <h3>Customizable Test Environments</h3>
     <p>Customize your test execution environment completely and add the dependencies to your runners using pre-scripts and post-scripts.</p>
-  </div> -->
+  </div>
   
-
+  
+  
+  
+</div>
 
 ## Availability
 

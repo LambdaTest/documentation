@@ -103,7 +103,7 @@ Altering Approvers will impact email notifications, which will be sent to the la
 Adjusting the Pixel Threshold in Comparison Settings will only affect new builds/screenshots captured after the update.
 :::
 
-- **Custom Mismatch Options:** Configure custom mismatch options to fine-tune the comparison process.
+- **Custom Mis-match Options:** Configure custom mismatch options to fine-tune the comparison process.
 
 - **Error Highlight Color:** Select a color for highlighting differences in images.
 

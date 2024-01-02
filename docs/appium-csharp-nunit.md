@@ -192,7 +192,7 @@ namespace NUnitSelenium
     [Parallelizable(ParallelScope.Fixtures)]
     public class NUnitSeleniumSample
     {
-        //--------------------We can initialize username and access Key with hub url to authenticate our test script-------------------------------------
+        //--------------------We can intialize username and access Key with hub url to authenticate our test script-------------------------------------
         public static string LT_USERNAME = Environment.GetEnvironmentVariable("LT_USERNAME") ==null ? "your username" : Environment.GetEnvironmentVariable("LT_USERNAME");
         public static string LT_ACCESS_KEY = Environment.GetEnvironmentVariable("LT_ACCESS_KEY") == null ? "your accessKey" : Environment.GetEnvironmentVariable("LT_ACCESS_KEY");
         public static bool tunnel = Boolean.Parse(Environment.GetEnvironmentVariable("LT_TUNNEL")== null ? "false" : Environment.GetEnvironmentVariable("LT_TUNNEL"));       
@@ -242,7 +242,7 @@ namespace NUnitSelenium
                  driver = new AndroidDriver<AndroidElement> (new Uri(seleniumUri), capabilities, TimeSpan.FromSeconds(600));
             
            // Console.Out.WriteLine(driver);
-            Console.Out.WriteLine("On Which Device/Platform test is running:"+deviceName+" "+platformVersion+" "+platformName);
+            Console.Out.WriteLine("On Which Device/Paltform test is running:"+deviceName+" "+platformVersion+" "+platformName);
             
         }
 
@@ -432,7 +432,7 @@ AppiumOptions capabilities = new AppiumOptions();
 
 ### 6. Execute your test case
 
-Run the following command in the directory where your project has been saved to execute your build and run the tests parallelly.
+Run the following command in the directory where your project has been saved to execute your build and run the tests parallely.
 ```bash
 nmake all
 ```

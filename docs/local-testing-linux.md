@@ -65,7 +65,7 @@ This zip file contains the tunnel binary which will help in establishing a secur
 
 **Step 2**:  Extract the downloaded zip file. Go to the terminal and route your pointer to the same directory where you extracted the zip file.
 
-<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-2.webp').default} alt="Extracting downloaded binary file" width="1524" height="158" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-2.webp').default} alt="Extacting downloaded binary file" width="1524" height="158" className="doc_img"/>
 
 **Step 3**:  Paste the copied string to execute the downloaded binary file. The command will look like:
 ```
@@ -87,7 +87,7 @@ In a few seconds, after you execute the command, a tunnel connection will be est
 ***
 **Step 1**:  Make sure you turn on XAMPP or any other web hosting tool to provide you an Apache test environment. If you are using XAMPP, Press the **‘Start’**  button for **‘Apache’**  under **‘Actions’**. If you also want to test the back-end functionality for your website then Press the **‘Start’**  button for **‘MySQL’**  as well.
 
-<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-4.webp').default} alt="Xampp Control Panel" width="664" height="416" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-4.webp').default} alt="Xampp Control Pannel" width="664" height="416" className="doc_img"/>
 
 **Step 2**:  Navigate to **‘Real Time Testing’**  menu. Enter the localhost URL you want to test in the text field provided and Select the tunnel via which you want to run the test.
 

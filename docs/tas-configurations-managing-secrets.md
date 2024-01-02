@@ -50,7 +50,7 @@ You can add environment variables in TAS to securely use sensitive information s
 ## Using the secrets
 ***
 - You can use the secrets added in TAS portal inside your `.tas.yml` using `${secret_name}` parameter
-- The following sample file demonstrates how we can refer secrets inside `.tas.yml`.
+- The following sample file demonstates how we can refer secrets inside `.tas.yml`.
 
 ```yml title=".tas.yml"
 framework: mocha

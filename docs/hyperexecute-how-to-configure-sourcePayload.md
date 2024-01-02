@@ -120,7 +120,7 @@ sourcePayload:
 
 ### Generating a Personal Access Token
 
-<details><summary>Generate Personal Access Token on GitHub</summary>
+<details><summary>Generate personal access token on Github</summary>
    You can generate a **PAT** on **GitHub** by following the steps below.
 
 ***
@@ -129,56 +129,46 @@ sourcePayload:
 
     
 2. Click on your profile on the top right-hand side corner of your page to access your **Settings**.
-  <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/git/1.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute-git/1.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
 
 
 3. Go to the bottom of the **Settings** page and click on **Developer settings**.
-  <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/git/2.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute-git/2.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
 
 
 4. Click on **Tokens (classic)** to generate your own Personal Access Token.
-  <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/git/3a.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute-git/3a.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
 
 
 5. Click on **Generate new token** and select the **classic** or **fine-grained** version as per your choice.
-  <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/git/4a.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute-git/4a.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
 
 
 6. Proceed to configuring the PAT and click on **Generate token** to create your Personal Access Token.  
 
   > **Note**: While configuring your PAT, ensure that the access is given for all keys under `repo`. Moreover, you will also have to give all the accesses for `read` keys.
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/git/5.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute-git/5.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'800px', height:'auto'}}/>
 
 
 </details>
 
-<details><summary>Generate Personal Access Token on GitLab</summary>
+<details><summary>Generate personal access token on Gitlab</summary>
 
 1. Navigate to [GitLab Settings](https://gitlab.com/-/profile/personal_access_tokens).
 2. Enter **Token name** and add **Expiration date**.
-3. **Select the scopes** for the token. Add `read_repository` access to the scope.
-4. Click on **Create Personal Access Token**.
+3. **Select the scopes** for the token. Add `api`, `read_api`, `read_user`, `read_repository` access to the scope.
+4. Click on **Create personal access token**.
 5. **Copy and Save** your token securely.
 
 <p align="center">
 <img loading="lazy" src={require('../assets/images/tas/how-to-guides/gl-token.gif').default} alt="generating gitlab token" width="1340" height="617" className="doc_img"/>
 </p>
 
-</details>
-
-<details><summary>Generate Project Access Token on GitLab</summary>
-
-1. Navigate to the project for which you want to create a token.
-2. Select **Settings** from the top menu. Choose **Access Tokens** from the left sidebar.
-3. Click on **Add new token**. Enter a name for the token.
-4. Select the scopes for the token.
-5. Select the role for the token, which determines the level of access it has.
-6. Click on **Create project access token**.
 
 </details>
 
-<details><summary>Generate Repository Access Token on Bitbucket</summary>
+<details><summary>Generate repository access token on Bitbucket</summary>
 
 We need to follow the 2 steps mentioned below:
 1. Need to create the access token for bitbucket repo
@@ -192,23 +182,23 @@ https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-to
 
 - Add the token in Job trigger API payload
 
-</details>
-
 In order for HyperExecute to be able to fetch tests from **bitbucket**, **bitbucket-server**, or **github**, the token has to be added in the Job Trigger API. Example given below: 
 
 ```bash
 ---
 sourcePayload:
   platform: git
-  link: https://bitbucket.org/<username>/junit-selenium-hyperexecute-sample.git,
+  link: https://bitbucket.org/vikrantclouderrunner/junit-selenium-hyperexecute-sample.git,
   ref: main
   accessToken: ${{ .secrets.BITBUCKET_SERVER_REPO_CLONE_SECRET_KEY }}
   verifySSL: false
   gitProvider: bitbucket
 ```
 
-> Note: Please make sure yo enter your username while adding the repository URL.
+> Note: Please make sure not to include username while adding the bitbucket repository URL here.
 
+
+</details>
 
 ***
 

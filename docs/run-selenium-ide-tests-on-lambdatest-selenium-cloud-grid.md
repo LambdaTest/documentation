@@ -131,7 +131,7 @@ selenium-side-runner --max-workers <num of="" parallel="" processes="">--server 
         
     For this article, we have set the number of parallel processes as '4'
 
-5.  Now we have all the components of the SIDE Runner command to execute the tests. So we will **run the Selenium IDE tests on LambdaTest Selenium Cloud Grid.** Navigate to the directory where the .SIDE file is located (here it is located at "_LambdaTest-IDE.side_") and execute the below command in the terminal, after replacing the GRID URL:
+5.  Now we have all the components of the SIDE Runner command to execute the tests. So we will **run the Selenium IDE tests on LambdaTest Selenium Cloud Grid.** Navigate to the directory where the .SIDE file is located (here it is located at "_LambdaTest-IDE.side_") and excecute the below command in the terminal, after replacing the GRID URL:
 
 ```javascript
 selenium-side-runner -w 4 "LambdaTest-IDE.side" --server https://user-name:acces-key@hub.lambdatest.com/wd/hub -c "browserName='chrome' version='72.0' platform='Windows 10'"

@@ -59,7 +59,7 @@ php -r "unlink('composer-setup.php');"
 ```
 - If you are using XAMPP or MAMP, you may have to open up PHP shell by pressing the button shown in picture below:
 
-<img loading="lazy" src={require('../assets/images/guide-to-php/guide-to-php-1.webp').default} alt="Xampp control Panelto start selenium php tests" width="682" height="440" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/guide-to-php/guide-to-php-1.webp').default} alt="Xampp control pannelto start selenium php tests" width="682" height="440" className="doc_img"/>
 
 Once you have composer installed, you can leverage Composer to download and install Selenium dependencies. For that, first create a composer.json file in your directory and add the following JSON code:
 
@@ -193,7 +193,7 @@ To setup your own environment for the test you can leverage our Capability Gener
       <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/docs/getting-started-with-selenium-testing/">Support</a>
+      <a className="breadcrumbs__link" href="/docs/getting-started-with-lambdatest-automation/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Guide To Run PHP Tests on Selenium Grid</span>

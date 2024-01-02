@@ -65,7 +65,7 @@ You can use the inheritance feature by entering the following flag in your YAML 
 ```
 -   Insert the path of the YAML files you want to inherit in place of the placeholder value `<baseConfiguration.yaml>`. The path of the YAML file that you want to inherit is relative to the main YAML file. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/7.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/construct-url/7.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 ***
 

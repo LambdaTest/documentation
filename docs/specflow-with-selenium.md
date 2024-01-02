@@ -94,7 +94,7 @@ Make sure you have your LambdaTest credentials with you to run test automation s
 
 ## Run Your First Test
 ***
-### Configuration of Your Test capabilities
+### Configuration of Your Test Capabilites
 
 **Step 3:** n the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with LambdaTest Selenium grid capabilities via capabilities object. The capabilities object in the above code are defined as:
 ```csharp 

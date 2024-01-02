@@ -90,7 +90,7 @@ LambdaTest provides the capabilities class needed to run your App Automation lev
 | KEY                  | VALUES                                                                                                                                                                   | CAPABILITY DESCRIPTION                                                                                                                                                                                                                                                                                                                                                               |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | build                | TYPE: STRING <br/> DEFAULT: Untitled <br/> `build=iOS Small Run`                                                                                                         | You can group your tests like a job containing multiple tests.                                                                                                                                                                                                                                                                                                                |
-| name                 | TYPE: STRING <br/> DEFAULT: TestID of the Test. in case the Name is not passed. <br/> `name=iphone 6 Small Run`                                                           | Name of your test.                                                                                                                                                                                                                                                                                                                                                            |
+| name                 | TYPE: STRING <br/> DEFAULT: TestID of the Test. Incase the Name is not passed. <br/> `name=iphone 6 Small Run`                                                           | Name of your test.                                                                                                                                                                                                                                                                                                                                                            |
 | project              | TYPE: STRING <br/> DEFAULT: Will remain blank in case 'project' is not passed in capability. <br/> `project=Small Run`                                                                               | You can group your builds like a project containing multiple jobs. |
 | queueTimeout         | TYPE: Integer <br/> DEFAULT: 600 <br/> `queueTimeout=300`                                                                                                                 | This capability can be used to modify the Queue timeout value within a range. queueTimeout Range : 300-900.                                                                                                                                                                                                                                                                   |
 | idleTimeout          | TYPE: Integer <br/> DEFAULT: 120 <br/> `idleTimeout=120`                                                                                                                  | This capability can be used to modify the timeout value.   |
@@ -182,20 +182,31 @@ curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sess
 | clearPackageData               | TYPE: BOOLEAN <br/> DEFAULT: True <br/>`clearPackageData=TRUE` <br/> OR <br/> `clearPackageData=FALSE`                                                                                                          | This capability will clear the data that the application might have stored on the device before the app gets installed. <br/> Useful when we are running the same test case on the same device.      |
 
 
-## Simulate GPS Location on Emulators and Simulators
----
-
-| KEY                  | VALUES                                                                                                                                                                   | CAPABILITY DESCRIPTION                                                                                                                                                                                                                                                                                                                                                               |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-location   | TYPE: HashMap <br/> <br/> Python example: <br/> `location: {"lat": "28.6235192", "long": "77.3662948"}` <br/> <br/> For examples in other languages, please head over to [Capability Generator](https://www.lambdatest.com/capabilities-generator/)  | Used to change the GPS Geolocation of the device to the location provided. <br/> If this capability is not passed, the device will auto update the Geo Location based on the physical location of the device. <br/> It needs to be passed in a HashMap structure with `lat` & `long` being passed separately.  |
-
-
-
 </div>
+
+
 
 
 
 > Got any questions?<br/>
 > Please reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at [support@lambdatest.com](https://support.lambdatest.com/).
 
-
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+       Desired Capabilities In Appium
+      </span>
+    </li>
+  </ul>
+</nav>

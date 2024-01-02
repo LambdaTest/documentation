@@ -25,10 +25,5 @@ slug: tas-how-to-guides-gh-token/
 > **NOTE:** TAS needs repo permissions in order to function properly.
 
 <p align="center">
-<div className="ytframe"> 
-<div className="youtube" data-embed="caLOYL_rB5s">
-    <div className="play-button"></div>
-</div>
-</div>
-
+<img loading="lazy" src={require('../assets/images/tas/how-to-guides/gh-token.gif').default} alt="Forking the repo and making account" width="1340" height="617" className="doc_img"/>
 </p>

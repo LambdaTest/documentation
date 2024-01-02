@@ -240,9 +240,6 @@ The following capabilities are supported:
 9. **build:** Set the name of the Espresso test build. Example: `My Espresso Build`.
 10. **geoLocation:** Set the geolocation country code if you want to enable the same in your test. Example - `FR`.
 11. **tunnel, tunnelName:** Set tunnel as `true` and provide the tunnelName such as `NewTunnel` as needed if you are running a tunnel.
-12. **disableAnimation:** Set this to `true` if you want to disable animations for espresso tests. **Default:** `false`
-13. **clearPackageData:** Set this to `true` if you want to clear the app data after each test has completed running. **Default**: `false`
-14. **singleRunnerInvocation:** Set this to `true` if you want to execute test cases together with a `single test runner invocation`.This can help significantly speed up the test execution time. By default, each test case is invoked separately. **Default:** `false`
 
 :::caution Important
 Only one of **GeoLocation** or **Tunnel** must be used in single execute command.

@@ -123,7 +123,7 @@ Before getting started with the setup, you would need access to the following:
   ***
 
 4. Click on Sync to sync the Builds with LambdaTest.
-> **Note:** Only the Builds synced will appear on LambdaTest. in case you missed something, Click on 'Configure' to select other Builds later.
+> **Note:** Only the Builds synced will appear on LambdaTest. Incase you missed something, Click on 'Configure' to select other Builds later.
 
   <img loading="lazy" src={require('../assets/images/app-center-integration/app-center08.webp').default} alt="cmd" className="doc_img"/>
 

@@ -20,6 +20,8 @@ site_name: LambdaTest
 slug: private-dependencies-cypress/
 ---
 
+---
+
 This article guides you on how to execute your **Cypress** tests including the **private dependencies** on **LambdaTest platform**.
 Earlier if your project includes any private dependency, the tests will error out with the **LambdaError** on our platform but now we have built the support for handling the private dependencies.
 
@@ -86,8 +88,6 @@ You can either add private dependency in the `package.json` file or in the `lamb
   > All the keys present in **dep_tokens** will be replaced in the `.npmrc` file and if the key is not present in the environment variable, it will throw an error.
 
 After doing this setup, run your tests on the **LambdaTest platform** and now the test will execute perfectly with the **private dependencies**.
-
-> To download private dependencies over tunnel follow this [documentation](https://www.lambdatest.com/support/docs/npm-via-tunnel/).
 
 ---
 

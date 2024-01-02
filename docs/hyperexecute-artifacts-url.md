@@ -45,21 +45,21 @@ HyperExecute now allows you to access your _Artifacts_ directly from the HyperEx
 
 ## Navigating Artifacts
 
-To view or download your Artifacts, click the **Artifacts** button.
+To view or download your Artifacts, click the **Artifcats** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/0.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/construct-url/0.png').default} alt="Image"  className="doc_img"/>
 
 ### For a Single file
 
 If you only have one file as an _Artifact_, then a preview of the file will be opened on your browser. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/1.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/construct-url/1.png').default} alt="Image"  className="doc_img"/>
 
 ### For Multiple files
 
 If you have multiple files as an _Artifact_, then you will get an option to download all the files directly.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/4.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/construct-url/2.png').default} alt="Image"  className="doc_img"/>
 
 ## Managing Test Artifacts URL
 
@@ -81,7 +81,7 @@ For example, if you want to access the _Artifacts_ for a job with _Job ID_: `2d8
 
 `https://hyperexecute.lambdatest.com/artifact/view/`**2d835a95-e7ea-4ea7-83e8-608c2f71d95c**`?artifactName=`**ExecutionSnapshots**
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/3.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/construct-url/3.png').default} alt="Image"  className="doc_img"/>
 
 ***
 
@@ -95,7 +95,7 @@ You can also use this feature to cycle through the files in your _Artifacts_.
 
 `https://hyperexecute.lambdatest.com/artifact/view/2d835a95-e7ea-4ea7-83e8-608c2f71d95c?artifactName=ExecutionSnapshots&`**filter=target/site/*.html**
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/4.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/construct-url/4.png').default} alt="Image"  className="doc_img"/>
 
 ***
 
@@ -105,7 +105,7 @@ You can also use this feature to cycle through the files in your _Artifacts_.
 
 `https://hyperexecute.lambdatest.com/artifact/view/2d835a95-e7ea-4ea7-83e8-608c2f71d95c?artifactName=ExecutionSnapshots&filter=target/site/*.html&`**view=flat**
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/5.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/construct-url/5.png').default} alt="Image"  className="doc_img"/>
 
 ***
 
@@ -115,7 +115,7 @@ You can also use this feature to cycle through the files in your _Artifacts_.
 
 `https://hyperexecute.lambdatest.com/artifact/view/2d835a95-e7ea-4ea7-83e8-608c2f71d95c?artifactName=ExecutionSnapshots&`**taskId=2731df9f-bc9f-4fbc-85c4-fe675aeffeb7**
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/6.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/construct-url/6.png').default} alt="Image"  className="doc_img"/>
 
 ***
 

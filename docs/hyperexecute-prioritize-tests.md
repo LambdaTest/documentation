@@ -53,11 +53,10 @@ The `jobLabel` YAML key is used to add tags or labels to jobs. In addition to pr
 You can prioritize your jobs by assigning the job labels **low**, **medium** or **high** to your jobs. The jobs with the priority **high** will be executed first, followed by **medium** priority jobs with **low** priority jobs at the end.
 
 ```bash
-jobLabel: ['high', 'medium', 'low']
+  jobLabel: ['high', 'medium', 'low']
 ```
-
 ***
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/job-prioritization/prioritize.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/he-features/prioritize.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 :::note
 - By default, all of your jobs are assigned **medium** priority. 
@@ -65,14 +64,10 @@ jobLabel: ['high', 'medium', 'low']
 - You can use the priority keys along with your regular job labels too. 
 :::
 
-As you can see below, we have executed three jobs; one job is designated as **high** priority, while the remaining two hold **lower** priority labels. HyperExecute is configured to adhere to this prioritization framework during execution. As a result, the high-priority job takes precedence and is processed first, followed sequentially by the medium-priority job and subsequently the low-priority job, even though the higher-priority job is executed later. This prioritized execution sequence ensures efficient task management aligned with the specified priority levels.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/job-prioritization/job-priority.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
-
 ## Visualizing Priority Levels
 As you can see in the diagram below, when you implement prioritization in your jobs, the high-priority jobs step to the forefront, the medium-priority jobs follow suit, and the low-priority tests gracefully bring up the rear.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/job-prioritization/job_prioritize.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/job_prioritize.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 >If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
 

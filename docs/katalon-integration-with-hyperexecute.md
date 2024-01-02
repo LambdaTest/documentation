@@ -66,13 +66,13 @@ It also comes with a built-in interface for codeless automation testing and vali
 
    a. Generate a command for Console mode through the Katalon UI. Click on the **Command Builder** button on the top of the screen. 
 
-   <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/katalon/katalon1.png').default} alt="Image"  className="doc_img"/>
+   <img loading="lazy" src={require('../assets/images/he-katalon/katalon1.png').default} alt="Image"  className="doc_img"/>
 
    b. Select the test suite that you want to use and click on **Generate Command**.
 
    c. Click on the **Copy to Clipboard** button to copy the command.
 
-   <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/katalon/katalon2.png').default} alt="Image"  className="doc_img"/>
+   <img loading="lazy" src={require('../assets/images/he-katalon/katalon2.png').default} alt="Image"  className="doc_img"/>
 
 2. Clear the contents of the .gitignore file in the root directory of your Katalon project. 
 

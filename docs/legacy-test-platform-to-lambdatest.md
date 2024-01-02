@@ -76,6 +76,28 @@ Here's why you should shift from legacy test execution platform to LambdaTest.
 The major difference between a local Selenium grid and cloud-based Selenium grid like LambdaTest is the point of execution. In case of the local Selenium grid, tests are run on the machine that contains
 the browser drivers (i.e. ChromeDriver, FirefoxDriver, etc). For running tests on the LambdaTest grid, you only need a valid account on the LambdaTest platform.
 
+### How to Create an Account on LambdaTest
+
+1. Visit the [LambdaTest official website](https://accounts.lambdatest.com/register) and click on **Get Started Free**.
+
+<img loading="lazy" className="doc_img" src={require('../assets/images/legacy_platform_to_lambdatest/getstarted.png').default} alt="Image" width="1024" height="667" />
+
+2. Enter the details required in the registration form and click on **SIGN UP**.
+
+<img loading="lazy" className="doc_img" src={require('../assets/images/legacy_platform_to_lambdatest/signup.png').default} alt="Image" width="1024" height="667" />
+
+3. Enter the OTP sent to the email address used for account registration.
+
+<img loading="lazy" className="doc_img img_center" src={require('../assets/images/legacy_platform_to_lambdatest/otps.png').default} alt="Image" width="450" height="358" />
+
+4. Make a note of the LambdaTest Username and Access Key since the combination will be used for accessing the LambdaTest grid. To get those credentials, go to **Settings > Account Settings > Password & Security** in your LambdaTest Dashboard.
+
+<img loading="lazy" className="doc_img" src={require('../assets/images/legacy_platform_to_lambdatest/auth.png').default} alt="Image" width="1024" height="667" />
+
+5. You can monitor the status of the tests run on LambdaTest grid by navigating to the Automation Dashboard.
+
+### Migrate Tests From Local Selenium Grid to LambdaTest Grid
+
 LambdaTest grid offers scalability and reliability – two integral factors that
 cannot be achieved with a local Selenium grid.
 
@@ -87,8 +109,9 @@ Tests running on local Selenium grid can be ported to run on the LambdaTest grid
 
 Before running the tests, you need to generate the desired browser capabilities using the [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
+### Migrating Java Tests to LambdaTest Grid
 
-For demonstration, we use TestNG framework to run the tests. However, LambdaTest Automation support a wide range of programming languages and testing frameworks. To get started, please visit our guide [LambdaTest Supported Languages and Frameworks](https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/). 
+Here is the sample implementation that uses the TestNG framework for automated browser testing.
 
 *  **Local Selenium Grid (e.g. Chrome)**
 
