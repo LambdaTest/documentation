@@ -108,7 +108,7 @@ We will be taking care of everything one by one, just follow the steps given bel
 6. In order to run your tests, copy the command from screen and run in your terminal: 
     <img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/machine6.png').default} alt="Image"  className="doc_img"/>
 
-7. The generic command required to initiate test execution is given below. You will need to insert the [Username, Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) and name of your YAML file in place of the `<your_username>`, `<your_acess_key>`  and `<your_yaml_file_name>` before running this command. (Skip if you already used the command from Step 6. )
+7. The generic command required to initiate test execution is given below. You will need to insert the [Username, Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) and name of your YAML file in place of the `<your_username>`, `<your_access_key>`  and `<your_yaml_file_name>` before running this command. (Skip if you already used the command from Step 6. )
 
     ```bash
     ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>"

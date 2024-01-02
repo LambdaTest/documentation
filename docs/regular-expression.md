@@ -77,7 +77,7 @@ Passing `deviceName` using REGEX:<br/>
 :::
 
 :::caution
-REGEX is currently possible on the `deviceName` as of now and *not* on the ``platformVerison``. <br/>
+REGEX is currently possible on the `deviceName` as of now and *not* on the ``platformversion``. <br/>
 :::
 
 -----

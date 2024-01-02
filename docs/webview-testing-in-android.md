@@ -100,19 +100,19 @@ LambdaTest now allows you to perform your WebView Testing using its online cloud
 
 **Step 3:** Once the webpage loads and you find a bug, select the **Mark as bug** option from the left toolbar. <img loading="lazy" src={require('../assets/images/uploads/10-1.webp').default} alt="mark as bug" width="350" height="389" className="doc_img"/>
 
-**Step 4:** A window will appear on your screen with several options to highlight the bug and mark it. <img loading="lazy" src={require('../assets/images/uploads/11-1.webp').default} alt="bug appereance" width="1699" height="745" className="doc_img"/>
+**Step 4:** A window will appear on your screen with several options to highlight the bug and mark it. <img loading="lazy" src={require('../assets/images/uploads/11-1.webp').default} alt="bug appearance" width="1699" height="745" className="doc_img"/>
 
 **Step 5:** Scroll the are of the screen where you have found a bug. Highlight it using designs, texts, colors, etc from the options available on the left toolbar. Once you have completed the highlight, you can click on the **Mark as bug** button on the bottom right of the window. <img loading="lazy" src={require('../assets/images/uploads/12-1.webp').default} alt="mark as bug" width="1675" height="746" className="doc_img"/>
 
 **Step 6:** A dialog box will appear on the screen asking you to fill required details about the bug, such as:
 
 *   **Assignee:** Assign the person to whom you want to transfer the responsibility of the bug.
-*   **Issue Type:** Selct the type of the issue, whether it is a bug or a task.
+*   **Issue Type:** Select the type of the issue, whether it is a bug or a task.
 *   **Priority:** Set the priority of the bug, from Lowest to Highest, as per your convenience.
 *   **Summary:** Set the summary of the bug as per your choice. It will help the assignee to know about the bug in one read.
 *   **Description:** This is an optional section, in which you can describe the bug in detail and include other relevant information, as per your choice.
 
-For this demo purpose, we have set the required details as shown in the image below. Once you have filled the details, press **Create Issue** at the bottom to create the issue. <img loading="lazy" src={require('../assets/images/uploads/13-1.webp').default} alt="create isue" width="690" height="782" className="doc_img"/>
+For this demo purpose, we have set the required details as shown in the image below. Once you have filled the details, press **Create Issue** at the bottom to create the issue. <img loading="lazy" src={require('../assets/images/uploads/13-1.webp').default} alt="create issue" width="690" height="782" className="doc_img"/>
 
 These steps will mark the bug successfully. You can a message appearing on your top right screen showing you that the bug has been marked successfully. <img loading="lazy" src={require('../assets/images/uploads/14-1.webp').default} alt="bug mark" width="500" height="103" className="doc_img"/>
 

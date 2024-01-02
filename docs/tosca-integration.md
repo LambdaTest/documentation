@@ -186,7 +186,7 @@ With this enabled log when you execute the test case, you can see logs in Lambda
 
 ## Geolocation Testing in Tosca with LambdaTest
 
-Test the performance of your web-app through different geographic locations by settig LamdaTest Capability "geoLocation". Set this Capability in Tosca as "WebDriver_geoLocation"with Value of "IN"as shows below
+Test the performance of your web-app through different geographic locations by setting LamdaTest Capability "geoLocation". Set this Capability in Tosca as "WebDriver_geoLocation"with Value of "IN"as shows below
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_27.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 

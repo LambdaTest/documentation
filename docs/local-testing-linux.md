@@ -65,7 +65,7 @@ This zip file contains the tunnel binary which will help in establishing a secur
 
 **Step 2**:  Extract the downloaded zip file. Go to the terminal and route your pointer to the same directory where you extracted the zip file.
 
-<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-2.webp').default} alt="Extacting downloaded binary file" width="1524" height="158" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-2.webp').default} alt="Extracting downloaded binary file" width="1524" height="158" className="doc_img"/>
 
 **Step 3**:  Paste the copied string to execute the downloaded binary file. The command will look like:
 ```

@@ -463,7 +463,7 @@ Dependency caching is enabled in the YAML file to ensure that the package depend
 cacheKey: '{{ checksum "packages.txt" }}'
 ```
 
-Set the array of files & directories to be cached. Separate folders are created for downloading global-packages, http-cache, and plugins-cache. Pleas refer to [Configuring NuGet CLI environment variables](https://docs.microsoft.com/en-us/nuget/reference/cli-reference/cli-ref-environment-variables) to know more about overriding settings in NuGet.Config files.
+Set the array of files & directories to be cached. Separate folders are created for downloading global-packages, http-cache, and plugins-cache. Please refer to [Configuring NuGet CLI environment variables](https://docs.microsoft.com/en-us/nuget/reference/cli-reference/cli-ref-environment-variables) to know more about overriding settings in NuGet.Config files.
 
 
 ```yaml

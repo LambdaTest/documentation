@@ -103,7 +103,7 @@ Also, you can see a **green tick** in front of Rocket.Chat under Communication c
 
 **Step 5:** Complete the **Bug/Task/Issue Form** that appears upon clicking the **"Mark as Bug"** button, as per your requirement:
 >* Select the **Issue type** as Bug/Task/Issue. Here, we have selected it as Bug.
-* Set the **Priority** of the bug as per convinience.
+* Set the **Priority** of the bug as per convenience.
 * You can assign the bug to a member of your team by populating the field '**Assignee**'.
 * Write the '**Summary**' of the bug that would be sent to the assigned member.
 * You also get to post an optional **description** to help with the bug.
