@@ -73,7 +73,7 @@ The LambdaTest Rocket.Chat Integration allows you to share or push a bug to your
 
 <img loading="lazy" src={require('../assets/images/rocketchat-integration-with-lambdatest/insert-webhook.webp').default} alt="Enter your webhook URL"  width="1367" height="620" className="doc_img"/>
 
-**Step 6:** Once you press on Install, Rocket.Chat will be integrated with LambdaTest on the same webhook URL, and an alert-box will appear on the top right corner of the screen stating that the integration is successfull.  
+**Step 6:** Once you press on Install, Rocket.Chat will be integrated with LambdaTest on the same webhook URL, and an alert-box will appear on the top right corner of the screen stating that the integration is successful.  
 <img loading="lazy" src={require('../assets/images/rocketchat-integration-with-lambdatest/rocketchat-confirmation-popup.webp').default} alt="Rocket.Chat will be integrated with LambdaTest" width="402" height="117" className="doc_img"/>
 
 **Step 7:** Voila! Go to Integrations tab again and you will see a Rocket.Chat under "My Integrations".  
