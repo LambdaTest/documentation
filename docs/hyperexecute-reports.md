@@ -70,7 +70,7 @@ To know more about how to download or access your job reports, go through the pa
   <a href = "/support/docs/hyperexecute-email-reports/">
     <div className="support_inners">
       <h3>Receive the Job Report via Email</h3>
-      <p>HyperExecute provides you a feature to recieve your Job Reports via the Email.</p>
+      <p>HyperExecute provides you a feature to receive your Job Reports via the Email.</p>
     </div>
   </a>
 </div>

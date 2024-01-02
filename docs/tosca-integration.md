@@ -169,7 +169,7 @@ Monitor and analyze your test result on the [LambdaTest Automation Dashboard](ht
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_25.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
 ## How To Use LambdaTest  Custom Capabilities in Tosca
-There are few custom capabilites  like network logs,console logs in LambdaTest platfrom to enable Logs on execution.
+There are few custom capabilities  like network logs,console logs in LambdaTest platform to enable Logs on execution.
 
 To use a WebDriver capability,
 

@@ -2,7 +2,7 @@
 id: smartui-selenium-python-sdk
 title: Integrate SmartUI SDK with Selenium Tests
 sidebar_label: Python
-description: In this documentation, learn how intergrate your Selenium automated tests with LambdaTest's SmartUI.
+description: In this documentation, learn how integrate your Selenium automated tests with LambdaTest's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -211,7 +211,7 @@ If you are using the Continuous Integration (CI) pipeline for your application a
 
 You have successfully integrated SmartUI SDK with your Selenium tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
 
-You can see the Smart UI dashboard to view the results. This will help you identify the mis-matches from the existing `Baseline` build and do the required visual testing.
+You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui_ss_cli.png').default} alt="cmd" width="768" height="373" className="doc_img"/>

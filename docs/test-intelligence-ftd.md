@@ -134,9 +134,9 @@ Go to the `Test Intelligence` section in `Org Product Preferences` under `Organi
 <img loading="lazy" src={require('../assets/images/test-intelligence/custom_ftd2.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 - **Grouping Mechanism:**
-  The grouping mechanism provides you with the ability to determine the criteria for categorizing tests for flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" />. By default, tests are grouped based on your testing environment specified in the [capabilties](https://www.lambdatest.com/capabilities-generator/), which include parameters such as test name, browser, operating system (OS), and resolution.
+  The grouping mechanism provides you with the ability to determine the criteria for categorizing tests for flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" />. By default, tests are grouped based on your testing environment specified in the [Capabilities](https://www.lambdatest.com/capabilities-generator/), which include parameters such as test name, browser, operating system (OS), and resolution.
 
-  :::note Test Capabilties
+  :::note Test Capabilities
     For instance, if you execute a test suite for the login functionality of your application, the test group name could be designated as `Login` in the capabilities of your test.
     ```
     const capability = {

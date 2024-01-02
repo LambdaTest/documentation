@@ -69,7 +69,7 @@ To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 
 - For the demo purposes, we will be using the GitHub repository to create the project. Thus, select **From a repository URL** section.
 - Enter the **Repository URL** from which you want to set up the project.
-- Enter the **Username** and **Password** of your GitHub. (It is required incase the access to the repo needed authentication).
+- Enter the **Username** and **Password** of your GitHub. (It is required In case the access to the repo needed authentication).
 -  Click on **Proceed** button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/teamcity/Step2.webp').default} alt="Image"  className="doc_img"/>

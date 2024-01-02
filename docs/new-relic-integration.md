@@ -53,7 +53,7 @@ LambdaTest and New Relic enable you to view LambdaTest results in a custom New R
 ## Integrating New Relic with LambdaTest
 ***
 
-**Step 1:** Visit the LambdaTest Dashbaord. Go to the **Settings** page.
+**Step 1:** Visit the LambdaTest dashboard. Go to the **Settings** page.
 
 **Step 2:** Click on the **Integrations** tab. Select **New Relic** from the **Analytics** section.
 

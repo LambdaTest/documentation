@@ -54,7 +54,7 @@ HyperExecute lets you run E2E (end-to-end) Selenium tests at the fastest possibl
 
 End-to-end encryption of the data (including the source code) ensures that the *data* is secure whether it is rest or in transit. YAML-based workflow helps in realizing the benefits of optimal test execution and orchestration. Along with the unique features offered by HyperExecute, you also get access to a host of LambdaTest cloud features like detailed logs, Smart CI features, network insights, video recording, access to a range of browsers & platforms on the cloud, amongst others.
 
-> HyperExecute has several state of the art features to help you optmize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute/) to take a look at all the tools that HyperExecute offers. 
+> HyperExecute has several state of the art features to help you optimize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute/) to take a look at all the tools that HyperExecute offers. 
 
 >HyperExecute is compliant with leading security standards - SOC2, GDPR, and CCPA. Refer to [HyperExecute Getting Started Guide](/docs/getting-started-with-hyperexecute) for more information about features offered by HyperExecute.
 
@@ -118,7 +118,7 @@ set LT_USERNAME=LT_USERNAME
 set LT_ACCESS_KEY=LT_ACCESS_KEY
 ```
 
-The project requirements (or prerequisites) must be installed as a part of the *pre* step in HyperExecute. This step remains the same irrespective of whether you are using global or virtual installatation of Python packages. Here are the *pre* steps as mentioned in the sample [Matrix](https://github.com/LambdaTest/robot-selenium-hyperexecute-sample/blob/master/yaml/win/robot_hyperexecute_matrix_sample.yaml) and [Auto-Split](https://github.com/LambdaTest/robot-selenium-hyperexecute-sample/blob/master/yaml/win/robot_hyperexecute_autosplit_sample.yaml) YAML files.
+The project requirements (or prerequisites) must be installed as a part of the *pre* step in HyperExecute. This step remains the same irrespective of whether you are using global or virtual installation of Python packages. Here are the *pre* steps as mentioned in the sample [Matrix](https://github.com/LambdaTest/robot-selenium-hyperexecute-sample/blob/master/yaml/win/robot_hyperexecute_matrix_sample.yaml) and [Auto-Split](https://github.com/LambdaTest/robot-selenium-hyperexecute-sample/blob/master/yaml/win/robot_hyperexecute_autosplit_sample.yaml) YAML files.
 
 In the sample project, dependency management and packaging is done using the *poetry* tool.  The dependencies available in *pyproject.toml* can be installed by triggering *poetry install* command in the *pre* step of the YAML file. As mentioned in the [official robot documentation](https://robotframework.org/Selenium2Library/Selenium2Library.html), Selenium2Library has been renamed to SeleniumLibrary since version 3.0. Hence, *robotframework-seleniumlibrary* is used instead of *robotframework-selenium2library*.
 

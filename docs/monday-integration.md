@@ -74,7 +74,7 @@ The LambdaTest + monday.com integration helps you in filing issues to your proje
 <img loading="lazy" src={require('../assets/images/uploads/monday1.webp').default} alt="monday integration" width="1352" height="611" className="doc_img"/>
 
 >
-**Note:** If you already have your LambdaTest account integrated with some other project management tool then you would recieve a message asking you to uninstall your current integration. Clicking on **'OK'** would automatically uninstall your current integration to establish a new one with monday.com.
+**Note:** If you already have your LambdaTest account integrated with some other project management tool then you would receive a message asking you to uninstall your current integration. Clicking on **'OK'** would automatically uninstall your current integration to establish a new one with monday.com.
 
 <img loading="lazy" src={require('../assets/images/uploads/image-1.webp').default} alt="monday integration" width="2879" height="1427" className="doc_img"/>
 

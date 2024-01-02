@@ -139,7 +139,7 @@ The following are the use cases for the template:
 
 ### All Trends Report
 
-The All Trends Report template is designed to enable QA Managers and testers to monitor and analyze trends in test performance, error statistics, and resource usage regulary. This template provides valuable insights to drive continuous improvement in the testing process.
+The All Trends Report template is designed to enable QA Managers and testers to monitor and analyze trends in test performance, error statistics, and resource usage regularly. This template provides valuable insights to drive continuous improvement in the testing process.
 
 This template features widgets that display test summaries, test case health snapshots, test distribution across browsers and operating systems, test trends, error statistics, and concurrency trends. These widgets work together to provide a holistic view of the testing process, allowing QA managers and testers to identify patterns and trends easily.
 

@@ -187,7 +187,7 @@ John wants to understand the distribution of the status of the executed tests on
 
 The following are the different use cases to annalyze your tests with **Test Status Ratio**: 
 - Review the Passed/Failed or other status distribution of the tests run on the platform. 
-- Check you distribution for all your SMOKE/Regression tests by filtering by Porject Name, Build Name or test names. 
+- Check you distribution for all your SMOKE/Regression tests by filtering by Project Name, Build Name or test names. 
 - Track only required status by editing the widget in the settings. 
 
 <nav aria-label="breadcrumbs">

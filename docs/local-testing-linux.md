@@ -87,7 +87,7 @@ In a few seconds, after you execute the command, a tunnel connection will be est
 ***
 **Step 1**:  Make sure you turn on XAMPP or any other web hosting tool to provide you an Apache test environment. If you are using XAMPP, Press the **‘Start’**  button for **‘Apache’**  under **‘Actions’**. If you also want to test the back-end functionality for your website then Press the **‘Start’**  button for **‘MySQL’**  as well.
 
-<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-4.webp').default} alt="Xampp Control Pannel" width="664" height="416" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-4.webp').default} alt="Xampp Control Panel" width="664" height="416" className="doc_img"/>
 
 **Step 2**:  Navigate to **‘Real Time Testing’**  menu. Enter the localhost URL you want to test in the text field provided and Select the tunnel via which you want to run the test.
 

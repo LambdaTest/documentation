@@ -47,7 +47,7 @@ You can setup scheduled workflows on HyperExecute platform to enable scheduled t
 **Step 1:** Go to the **Workflows** section. Click on the **Add Workflow** to create and schedule workflows for your test project on HyperExecute.
 <img loading="lazy" src={require('../assets/images/hyperexecute/workflows/hyp-workflow-start.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
-**Step 2:** Provide all the necesary details in order to setup the workflow:
+**Step 2:** Provide all the necessary details in order to setup the workflow:
 
 - In the **Workflow Name** field, provide the name of your workflow.
 - Provide the path of your repository in the **Repo URL** field from which you want to setup the workflow.

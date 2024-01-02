@@ -57,7 +57,7 @@ HyperExecute lets you run E2E (end-to-end) Selenium tests at the fastest possibl
 
 End-to-end encryption of the data (including the source code) ensures that the *data* is secure whether it is rest or in transit. YAML-based workflow helps in realizing the benefits of optimal test execution and orchestration. Along with the unique features offered by HyperExecute, you also get access to a host of LambdaTest cloud features like detailed logs, Smart CI features, network insights, video recording, access to a range of browsers & platforms on the cloud, amongst others.
 
-> HyperExecute has several state of the art features to help you optmize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute/) to take a look at all the tools that HyperExecute offers. 
+> HyperExecute has several state of the art features to help you optimize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute/) to take a look at all the tools that HyperExecute offers. 
 
 >HyperExecute is compliant with leading security standards - SOC2, GDPR, and CCPA. Refer to [HyperExecute Getting Started Guide](/docs/getting-started-with-hyperexecute) for more information about features offered by HyperExecute.
 
@@ -123,7 +123,7 @@ set LT_ACCESS_KEY=LT_ACCESS_KEY
 
 For PyTest, the *project dependencies* must be available for installation either in *requirements.txt* (global) or *pyproject.toml* (venv).
 
-The project requirements (or pre-requisites) must be installed as a part of the *pre* step in HyperExecute. This step remains the same irrespective of whether you are using global or virtual installatation of Python packages.
+The project requirements (or pre-requisites) must be installed as a part of the *pre* step in HyperExecute. This step remains the same irrespective of whether you are using global or virtual installation of Python packages.
 
 Here are the *pre* steps as mentioned in the sample [Matrix](https://github.com/LambdaTest/pytest-selenium-hyperexecute-sample/blob/master/yaml/win/pytest_hyperexecute_matrix_sample.yaml) and [Auto-Split](https://github.com/LambdaTest/pytest-selenium-hyperexecute-sample/blob/master/yaml/win/pytest_hyperexecute_autosplit_sample.yaml) YAML files.
 

@@ -149,7 +149,7 @@ Shown below is the response to the above cURL request.
 ## Deleting your Application
 ***
 
-To delete your uploded apps, run the below cURL command. 
+To delete your uploaded apps, run the below cURL command. 
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">

@@ -138,9 +138,9 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 ### **Step 5:** Configure your test with Appium Desired Capabilities
 
-:::tip Explore more capabilites
+:::tip Explore more capabilities
 
-To view and generate more capabilites for your appium application test suite, please see the capability generator here: https://www.lambdatest.com/capabilities-generator/
+To view and generate more capabilities for your appium application test suite, please see the capability generator here: https://www.lambdatest.com/capabilities-generator/
 
 :::
 
@@ -155,8 +155,8 @@ let capabilities = {
   app: "APP_URL", // Set your uploaded App URL for testing (Mandatory)
   //highlight-next-line
   visual: true, // Configure your Capture screenshot  for appium test (Mandatory)
-  name: "testing app session ", // Name of the test for appium (Recommeded)
-  build: "Real Device App Build", // Name of the build for appium (Recommeded)
+  name: "testing app session ", // Name of the test for appium (Recommended)
+  build: "Real Device App Build", // Name of the build for appium (Recommended)
   //highlight-start
   "smartUI.project": "<Your Project Name>", // Replace the name of project with the new project name (Mandatory)
   "smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name (Optional)
