@@ -77,7 +77,7 @@ This document will show you how to integrate GoCD with HyperExecute to greatly s
 
 #### Part 1: Material
 
-- Select the **Matrial Type**. For the demo purposes, we will be using the Git.
+- Select the **Material Type**. For the demo purposes, we will be using the Git.
 
 - Enter the **Repository URL** from which you want to set up the project.
 

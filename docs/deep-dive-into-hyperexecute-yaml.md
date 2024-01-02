@@ -866,14 +866,14 @@ In the JSON file, we have a data object and not an array of objects, hence you c
 
 #### 2. Using via env variables
 
-You can use the env variables to access the defined paramters as:
+You can use the env variables to access the defined parameters as:
 
 ```
 STATIC_DATA_1_<ParameterName>
 ```
 > **NOTE:-** In the above syntax, **1** represents the file passed in the yaml file and not the data object within the file.
 
-For instance, to access data from **file1.json**, the syantax would be:
+For instance, to access data from **file1.json**, the syntax would be:
 ```
 STATIC_DATA_1_Username
 ```
@@ -1052,7 +1052,7 @@ background:
   - mysql-server
 ```
 
-To learn more about it, refer to the [Bakground Service](https://www.lambdatest.com/support/docs/hyperexecute-background-services/) page.
+To learn more about it, refer to the [Background Service](https://www.lambdatest.com/support/docs/hyperexecute-background-services/) page.
 
 ***
 

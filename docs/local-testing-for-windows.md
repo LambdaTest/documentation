@@ -94,7 +94,7 @@ In a few seconds, after you execute the command, an SSH connection will be estab
 * * *
 >**Note:** If you were already running a test session through tunnel then you will have to terminate the existing SSH connection in cmd before you re-establish it for a new directory.
 
-**Step 1:** If want to test the local folders and files stored in your system, pass an additional argument ‘dir’ with the directory/folder name in double quotes as you run the command on Windows cmd to establish a SSH connecton with LambdaTest Tunnel.
+**Step 1:** If want to test the local folders and files stored in your system, pass an additional argument ‘dir’ with the directory/folder name in double quotes as you run the command on Windows cmd to establish a SSH connection with LambdaTest Tunnel.
 
 **Sample format:**
 

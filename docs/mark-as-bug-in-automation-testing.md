@@ -84,7 +84,7 @@ As you click on the **bug** icon, an integration specific form would open up. Fi
 
 All the fields you populate, will be directly reflected in your respective project based upon the integration you have configured with your LambdaTest account. In above case, the changes would be reflect on the respective JIRA instance.
 
-Similary, you can find the mark as bug button in **EXCEPTION** and **COMMAND** logs.
+Similarly, you can find the mark as bug button in **EXCEPTION** and **COMMAND** logs.
 * Exception logs 
 
 <img loading="lazy" src={require('../assets/images/mark-as-bug-in-automation-testing/4.webp').default} alt="automation" width="1361" height="627" className="doc_img"/>

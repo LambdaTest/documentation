@@ -145,14 +145,14 @@ let capabilities = {
 
 ### Ignore - P2P False Positives
 
-When the screenshot is captured and it is then compressed to a file format such as `.png,.jpg,.jpeg,etc..` then there is high chance of pixelation enhancement will be made to the screenshot to enhance the quality of the image. This could be mis-leading to a visual appereance on the browser for the comparison with the current **Baseline** version. We provide you with options to mitigate this risk of flakiness in your comparison output.
+When the screenshot is captured and it is then compressed to a file format such as `.png,.jpg,.jpeg,etc..` then there is high chance of pixelation enhancement will be made to the screenshot to enhance the quality of the image. This could be mis-leading to a visual appearance on the browser for the comparison with the current **Baseline** version. We provide you with options to mitigate this risk of flakiness in your comparison output.
 
 The following are the supported options for the pixel comparison feature:
 
 - `antialiasing` - ignores the smoothing of edges in digital images, click [here](https://sisu.ut.ee/imageprocessing/book/4) to know more.
-- `alhpa` - ignores the alpha of the pixel color and makes into solid color without any opacity, click [here](https://sites.uci.edu/iap2015/2015/01/14/the-alpha-attribute-of-a-picture/#:~:text=In%20digital%20images%2C%20each%20pixel,of%200%20means%20totally%20transparent.) to know more.
+- `alpha` - ignores the alpha of the pixel color and makes into solid color without any opacity, click [here](https://sites.uci.edu/iap2015/2015/01/14/the-alpha-attribute-of-a-picture/#:~:text=In%20digital%20images%2C%20each%20pixel,of%200%20means%20totally%20transparent.) to know more.
 - `colors` - added corrected lightness to the screenshot by ignoring the default pixel color value.
-- `nothing` - ignores none of the false positve options from the comparison.
+- `nothing` - ignores none of the false positive options from the comparison.
 
 You can specify the following `capability` in the following format:
 
@@ -200,7 +200,7 @@ let capabilities = {
 
 ### Transparency
 
-An advanced configuration to set the comparsion view image to be displayed as a `opquae` or `transperant` for easy identification for the approver.
+An advanced configuration to set the comparison view image to be displayed as a `opquae` or `transparent` for easy identification for the approver.
 
 You can specify the following `capability` in the following format:
 
@@ -246,7 +246,7 @@ let capabilities = {
 
 ### Bounding Boxes - Compare only specific area
 
-The bounding boxes are the areas created on the screenshot which needs to be compared with the basline ignoring other areas from the screenshot.
+The bounding boxes are the areas created on the screenshot which needs to be compared with the baseline ignoring other areas from the screenshot.
 
 This specific case is used to compare only a specific area of the screenshot from the **baseline**.
 
@@ -319,7 +319,7 @@ let capabilities = {
 
 ### Ignore Boxes - Ignore only specific area
 
-The ignored boxes are the areas created on the screenshot which needs to be ignored with the basline comparing the other areas from the screenshot.
+The ignored boxes are the areas created on the screenshot which needs to be ignored with the baseline comparing the other areas from the screenshot.
 
 This specific case is used to ignore only a specific area of the screenshot from the **baseline**.
 
@@ -390,7 +390,7 @@ let capabilities = {
 
 ---
 
-### Ignore Areas Colored - Removes the colored content from the comparsion
+### Ignore Areas Colored - Removes the colored content from the comparison
 
 You can exclude the pixels that match the specified color on a **baseline** image from the comparison view. This feature will ignore that specific regions with the color pixels and shows the comparison view.
 

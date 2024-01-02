@@ -297,7 +297,7 @@ Upon clicking on the Screenshot icon, you will receive a prompt message stating 
 
 <img loading="lazy" src={require('../assets/images/lt-browser-chromium/capture_fps.png').default} alt="view screen"  className="doc_img" width="1366" height="722"/><br/><br/>
 
-3. Once the screenshots are captured, it will guide you to the page where you can download your full-page screenshots into the LT Brower 2.0 by pressing the 'Save' button or you can download your screenshots into your local machine by clicking on the 'Arrow' button. 
+3. Once the screenshots are captured, it will guide you to the page where you can download your full-page screenshots into the LT Browser 2.0 by pressing the 'Save' button or you can download your screenshots into your local machine by clicking on the 'Arrow' button. 
 
 <img loading="lazy" src={require('../assets/images/lt-browser-chromium/save_fps.png').default} alt="view screen"  className="doc_img" width="1366" height="722"/><br/><br/>
 
