@@ -441,12 +441,12 @@ Follow the below steps to run Cypress Tests on HyperExecute using Gitpod:
 
 **Step 2:** Login with Lambdatest credentials. You will be redirected to HyperExecute dashboard with pop-up confirming to **'Proceed'** to Gitpod editor in the new tab and current tab will show hyperexecute dashboard.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_popup.png').default} alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/gitpod_popup.png').default} alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
 
 **Step 3:** You will need to login into your Gitpod account, or create a new one. <br/>
   (If you are creating a new account, choose your preferred editor. We recommend VS Code)
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod2.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/gitpod2.png').default} alt="Image"  className="doc_img"/>
 
 **Step 4:** As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
 

@@ -71,7 +71,7 @@ To fetch the JUnit report for a `non-shard` build, you can use the following cUR
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`curl --location "https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<build_id>/report/" 
+{`curl --location "https://mobile-api.lambdatest.com/mobile-automation/api/v1/espresso/builds/<build_id>/report/" 
 --header 'Authorization: Basic <Base64 Authentication>'`}
 </CodeBlock>
 </div>
@@ -82,7 +82,7 @@ To fetch the JUnit report for a `single shard` in a shard build,use:
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?shard=<shard_id>' 
+{`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/espresso/jobs/<job_id>/report/?shard=<shard_id>' 
 --header 'Authorization: Basic <Base64 Authentication>'`}
 </CodeBlock>
 </div>
@@ -93,7 +93,7 @@ To fetch the JUnit reports for `all shards` in a shard build, use:
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/' 
+{`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/espresso/jobs/<job_id>/report/' 
 --header 'Authorization: Basic <Base64 Authentication>'`}
 </CodeBlock>
 </div>

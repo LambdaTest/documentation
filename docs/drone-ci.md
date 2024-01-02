@@ -80,7 +80,7 @@ For this article, we have cloned and used this [Github repository](https://githu
 
 ## Activating A Github Repository For CI/CD
 
-To activate and integrate your Github repository with Drone CI on LambdaTest, you need to first setup your VPN port and activate it, since Drone is not publicly accessible. Once the VPN is activated, here is the stepwise illustration of how to activate your git repo for CI/CD:
+To activate and integrate your Github repository with Drone CI on LambdaTest, you need to first setup your VPN port and activate it, since Drone is not publically accessible. Once the VPN is activated, here is the stepwise illustration of how to activate your git repo for CI/CD:
 
 **Step 1:** Enter URL `https://drone.lambdatest.io/` on any browser.
 

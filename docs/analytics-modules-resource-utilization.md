@@ -48,7 +48,7 @@ There is **1 widget** under the Resource Utilization module
 
 ## Concurrency Trends
 
-<img loading="lazy" src={require('../assets/images/analytics/concurrency-trends-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/resource-utilization-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Concurrency Trends` widget allows the user to know the tests which are kept in the queue and the tests that are put in a running state. The information can be filtered by clicking on the relevant legends at the bottom of the graph.
 

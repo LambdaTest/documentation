@@ -29,7 +29,7 @@ All the configuration parameters are explained in detail below.
 ***
 
 ### LambdaTest Secret Key
-This specify secret key will be provided to you after login and select the TAS Self-Hosted mode. It is required to link your self hosted environment with the TAS server. <br/>
+This specify secret key will be provided to you after loggin in and selecting the TAS Self-Hosted mode. It is required to link your self hosted environment with the TAS server. <br/>
 
 **Example** 
 ```json

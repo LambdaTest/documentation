@@ -1,9 +1,9 @@
 ---
 id: cypress-mochaawesome-report
-title: Consolidated Mochawesome Report for Cypress on HyperExecute
+title: Consolidated Mochaawesome Report for Cypress on HyperExecute
 hide_title: true
-sidebar_label: Cypress Mochawesome Report
-description: Discover how to create MochaAwesome test reports for Cypress framework testing on LambdaTest and how to download these reports from the dashboard
+sidebar_label: Test Reports on HyperExecute
+description: Learn how to generate mochaawesome test report for cypress framework testing on lambdatest and download the reports from the dashboard
 keywords:
     - cypress testing
     - cypress automation testing
@@ -40,9 +40,16 @@ slug: cypress-mochaawesome-report/
     }}
 ></script>
 
-# Consolidated Mochawesome Report for Cypress Framework on HyperExecute 
+# Consolidated Mochaawesome Report for Cypress Framework on HyperExecute 
 * * *
-Cypress is an open-source, end-to-end testing framework made especially for contemporary web applications. It enables programmers to create and run tests that mimic user interactions right inside a web browser.
+Cypress is an open-source, end-to-end testing framework made especially for contemporary web applications. It enables programmers to create and run tests that mimic user interactions right inside a web browser. Contrary to conventional testing frameworks, Cypress runs directly in the browser and uses the same run loop as the application being tested. Traditional Selenium-like WebDriver is not required because of this architecture, which offers real-time access to application state.
+
+LambdaTest allows you to run Playwright tests across 40+ real browsers and operating system combinations. This guide will help you on how to generate a Mochaawesome Report for Cypress testing on the LambdaTest platform.
+
+## Reporters
+***
+
+Reporters are components or tools that generate human-readable output to display the results of test executions. They play a crucial role in providing developers, testers, and other stakeholders with valuable insights into the outcomes of automated tests. Reporters take the raw test execution data and format it into a structured and readable presentation.
 
 ### Built-in Reporters
 There several pre-defined or built-in reporters and since Cypress is built on top of Mocha, that means any reporter built for Mocha can be used with Cypress as well. Each reporter may present the test results in a different way, suitable for specific needs or preferences. These built-in reporters offer different levels of detail and visualization options, helping developers to understand the test results and identify any potential issues more effectively.
@@ -62,7 +69,7 @@ Apart from the built-in reporters, Cypress Test also allows developers to create
 
 You can load custom Mocha reporters through a relative or absolute path which can be specified in your **Cypress Configuration file** or via the **CLI**.
 
-## Mochawesome Report on HyperExecute
+## Mochaawesome Report on HyperExecute
 ***
 
 Mochawesome reporter is a custom reporter that generates a standalone HTML report which helps to help visualize the test runs. It has simple, clean, and modern design. The report has filters to display only the desired tests and renders stack trace for failed tests. The Mochawesome report is one of the most important reports in Cypress.
@@ -72,8 +79,7 @@ Mochawesome reporter is a custom reporter that generates a standalone HTML repor
 **Step 1:** Update your Cypress Configuration File by adding the below code
 
 #### Cypress Config File
-
-```bash
+```
 "reporter": "cypress-multi-reporters",
   "reporterOptions": {
     "reporterEnabled": [
@@ -98,7 +104,7 @@ The path to report is set to **``"reportDir": "cypress/results"``** and it shoul
 
 **Step 2:** Now configure the report parameters in the **HyperExecute YAML** file.
 
-```bash
+```
 report: true
 partialReports:
   frameworkName: cypress
@@ -108,4 +114,4 @@ partialReports:
 
 **Step 3:** Now Execute your job by triggering the HyperExecute CLI. You can  visit the HyperExecute dashboard to download the report after job completion.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/mochawesome-report.png').default} alt="Image" className="doc_img"/> 
+<img loading="lazy" src={require('../assets/images/hyperexecute/html-report.webp').default} alt="Image" className="doc_img"/> 

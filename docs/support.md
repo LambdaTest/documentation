@@ -63,7 +63,7 @@ slug: /
 
 
 <div className="support_main">  
-  <a href="/docs/getting-started-with-selenium-testing/">
+  <a href="/docs/getting-started-with-lambdatest-automation/">
     <div className="support_inners">
       <h3>Selenium Testing</h3>
       <p>Learn how to start Selenium Automation Testing across multitude of desktop and mobile browsers.</p>

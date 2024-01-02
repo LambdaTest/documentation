@@ -147,7 +147,7 @@ Click on the **'Testing'** Widget Column and you will find all the data that you
 
 LambdaTest automatically includes test environment details and related screenshots in the card as attachments.
 
-<img loading="lazy" src={require('../assets/images/favro-integration/Screenshot-232.webp').default} alt="Screenshot Testing ID" width="1366" height="588" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/favro-integration/Screenshot-232.webp').default} alt="Sreenshot Testing ID" width="1366" height="588" className="doc_img"/>
 
 You can add your team members by navigating to **'Members'** on the top-left.
 

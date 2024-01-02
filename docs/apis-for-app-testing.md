@@ -149,7 +149,7 @@ Shown below is the response to the above cURL request.
 ## Deleting your Application
 ***
 
-To delete your uploaded apps, run the below cURL command. 
+To delete your uploded apps, run the below cURL command. 
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -175,30 +175,27 @@ Shown below is the response to the above cURL request.
 ## Processing check for your Application
 ***
 
-To unlock features such as network logs, image injection, and screenshotunblock feature for your application, app needs to undergo a processing phase. This processing takes a few minutes after the application is uploaded. You can verify if the processing is complete before running your automation script using the following API.
+In order to use network logs for application, we process the app to ensure capture of network calls. The processing of application takes a few minutes after the application is uploaded. You can verify if the processing is complete before running your automation script using the following API. 
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl' \
 --header 'Authorization: Basic c2hhbnRhbnV3OkFPOEh3NHJtV2hxUlJZSVl3OEk1elMzajhCS0c2ZHl3SVBZeXNNSDJPakdtbFVheXZC' \
---header 'Content-Type: application/json' \y
---data-raw '{
-    "appId": "APP10160161171698993659206876",
-    "imageInjectionEnabled": true,
-    "screenshotUnblockEnabled": true
-}'`}
+--header 'Content-Type: application/json' \
+--data-raw '{"appId":"APP12345678901234567890"}'`}
 </CodeBlock>
 </div>
 
-The payload allows you to check the processing status for specific features. If the **patched_url** is empty, the processing is still in progress. To check if the processing for image injection or screenshot unblock is complete, pass either **imageInjectionEnabled** or **screenshotUnblockEnabled** as `true` based on the feature you are testing.
+If the response of the above cURL provides the **"patched_url"** of the application, the processing for network logs is complete. Else in case the patched_url is empty, the processing is still in process. Below is a sample response where the processing is not yet complete.
+Similarly, **"imageinjection_ready"** as true will let you know if the processing for image injection feature is complete. 
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`{
     "data": {
-        "imageinjection_ready": false, //current processing status
+        "imageinjection_ready": false,
         "patched_url": "",
-        "screenshotunblock_ready": false, //current processing status
+        "screenshotunblock_ready": false,
         "status": "success"
     },
     "status": "success"

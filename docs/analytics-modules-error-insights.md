@@ -48,7 +48,7 @@ There is **1 widget** under the Error Insights module
 
 ## Error Stats
 
-<img loading="lazy" src={require('../assets/images/analytics/error-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/error-insights-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The `Error Stats` widget allows the user to easily analyze the tests categorized by their Status on the LambdaTest platform including Test Case Errors, Idle Timeout, Queue Timeout, and Lambda Error. The user can even filter the graph by clicking on the relevant legends at the bottom of the graph.
 

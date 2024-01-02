@@ -25,11 +25,5 @@ slug: tas-how-to-guides-gl-token/
 > **NOTE:** TAS needs `api`, `read_api`, `read_user`, `read_repository` permissions in order to function properly.
 
 <p align="center">
-<div className="ytframe"> 
-<div className="youtube" data-embed="A-SwlWav6VM">
-    <div className="play-button"></div>
-</div>
-</div>
-
-
+<img loading="lazy" src={require('../assets/images/tas/how-to-guides/gl-token.gif').default} alt="generating gitlab token" width="1340" height="617" className="doc_img"/>
 </p>

@@ -51,8 +51,6 @@ slug: userback-integration/
 
 Userback is a platform that makes it easy for website and app teams to gather user feedback. It helps streamline the feedback process, allowing teams to collect and manage visual feedback from users directly on their websites or applications. This feedback can be in the form of screenshots, annotations, and comments, making it easier for teams to understand user suggestions or issues. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FuUuqsTrT2Y?si=TnFGpZk_YwGd1Vb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 LambdaTest's integration with Userback offers a smooth solution to track, log, and manage bugs found during [cross-browser testing](https://www.lambdatest.com/). By integrating both platforms, developers can easily report bugs from LambdaTest directly to their Userback instance. This eliminates the need for manual tasks and issue management, making the process much more efficient and hassle-free.
 
 ## Integrating Userback With LambdaTest

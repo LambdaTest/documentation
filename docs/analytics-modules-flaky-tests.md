@@ -43,7 +43,7 @@ The best way to analyze your flaky tests is to use Test Intelligence. Test Intel
 ## Flakiness Trends
 The Flakiness Trends widget allows the QA teams to analyze the trends of the flaky tests executed on the platform categorized into Passed, Failed, and Flaky which can easily be filtered with the legends added at the top of the graph.
 
-<img loading="lazy" src={require('../assets/images/analytics/flakiness-trends-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/atx-flakiness-trends.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The graph shows the time series of the flaky tests executed on the platform. The QA teams can easily filter the graph with the legends added at the top of the graph. The QA teams can also hover over the graph to get the exact count of the flaky tests executed on the platform.
 
@@ -59,7 +59,7 @@ Analyze the flaky tests severity summary which is broadly categorized to High, M
 - `Medium` - If the flake rate is between `50%` to `75%` in compared to the previous test runs.
 - `Low` - If the flake rate is less than `50%` in compared to the previous test runs.
 
-<img loading="lazy" src={require('../assets/images/analytics/flakiness-summary.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/atx-ftd-severity.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 :::note FLAKY RATE
 The flake rate is calculated on the basis of the total number of flaky tests executed on the platform in compared to the previous test runs.
@@ -74,7 +74,7 @@ The following are the use cases of the Flakiness Severity Summary widget:
 ## Flakiness Tests - Test Group View
 The Flakiness Tests - Test Group View widget allows the QA teams to analyze the flaky tests on the basis of the test groups. The QA teams can easily analyze the flaky tests on the basis of the test groups and get insights on the flaky tests that are causing the test runs to fail.
 
-<img loading="lazy" src={require('../assets/images/analytics/test-cases-view-stats.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/atx-ftd-tests-group-view.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The following are the use cases of the Flakiness Tests - Test Group View widget:
 - The QA teams can easily analyze the flaky tests on the basis of the test groups.

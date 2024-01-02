@@ -52,7 +52,7 @@ concurrency: 10
 This is a **required** parameter in case you are using [autosplit](/support/docs/hyperexecute-auto-split-strategy/). However if you are using [matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) the number of concurrent threads is automatically defined by the possible permutations and combinations of parameters give.
 
 The platform automatically analyzes your usage and test cases and will guide you to increase the concurrency to obtain substantial time savings. You can find this information on the left side banner. <br/>
-  <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/Hyperexecute-concurrency-banner.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/Hyperexecute-concurrency-banner.png').default} alt="Image"  className="doc_img"/>
 
 You can also see the overall concurrency trends using our analytics widgets. [Learn more](/support/docs/analytics-modules-resource-utilization/#concurrency-trends)
  

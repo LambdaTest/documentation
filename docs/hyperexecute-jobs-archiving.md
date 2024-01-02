@@ -43,18 +43,18 @@ HyperExecute's job archiving feature lets you seamlessly organize your workspace
 
 ## Archive the Jobs
 
-In order to archive any job, just click on the ellipsis (three dots) that you see on the right side on job list page, it would provide you a small dropdown to be able to archive that job.
+In order to archive any job, just click on the elipsis (three dots) that you see on the right side on job list page, it would provide you a small dropdown to be able to archive that job.
 
 > Archived jobs are not deleted, they are just removed from the default view on this page.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/job-archiving/hyp-archive-job.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/hyp-archive-job.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 ## View the Archived Jobs
 
 In order to view the archived jobs, you can simply go to filters and select view archived jobs. All the jobs that you archive, will be available here.
 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/job-archiving/hyp-view-archive-job.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/hyp-view-archive-job.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 
 <nav aria-label="breadcrumbs">

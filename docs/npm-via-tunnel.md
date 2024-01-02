@@ -47,7 +47,7 @@ slug: npm-via-tunnel/
 
 ## What is `npm_via_tunnel`?
 
-`npm_via_tunnel` is a flag that you can use to enable downloading npm dependencies through a tunnel. This can be useful if you need to install npm packages from a private registry or if you are working in a restricted environment where you cannot access the public npm registry directly.
+`npm_via_tunnel` is a flag that you can use to tell npm to route all of its traffic through a tunnel. This can be useful if you need to install npm packages from a private registry or if you are working in a restricted environment where you cannot access the public npm registry directly.
 
 ## Why use `npm_via_tunnel`?
 
@@ -69,15 +69,29 @@ To use `npm_via_tunnel`, simply add the following line to your run settings:
 
 Once you have enabled this flag, npm will automatically route all of its traffic through the tunnel.
 
+Example
+
+The following example shows how to use npm_via_tunnel to install a private npm package from a private registry:
+
+```bash
+npm install --save-dev private-package@latest \
+  --registry https://private-registry.example.com/npm \
+  --npm_via_tunnel true
+```
+
+In this example, the --registry option specifies the URL of the private registry, and the --npm_via_tunnel flag enables tunneling.
+
 ## For first-time users:
 
 If you are using `npm_via_tunnel` for the first time, here are a few things you should keep in mind:
 
 - You will need to have a tunnel already configured and running. There are a number of different ways to create a tunnel, so you will need to choose the method that is best for your environment.
 
-- Once you have followed these steps, npm will automatically route all of its traffic through the tunnel and you will be able to install npm packages from the specified registry.
+- You will need to specify the URL of the npm registry that you want to access. This can be done using the --registry option.
 
-> To download private dependencies follow this [documentation](https://www.lambdatest.com/support/docs/private-dependencies-cypress/).
+- You will need to enable `npm_via_tunnel` by setting the `npm_via_tunnel` flag to true. This can be done in your run settings or by passing the --npm_via_tunnel flag to the npm command.
+
+- Once you have followed these steps, npm will automatically route all of its traffic through the tunnel and you will be able to install npm packages from the specified registry.
 
 ## Troubleshooting
 
@@ -88,6 +102,8 @@ If you are having problems with npm_via_tunnel, you can try the following troubl
 - Verify that the npm registry is accessible from within the tunnel.
 
 - Try disabling any proxy servers or firewalls that may be interfering with the tunnel connection.
+
+- If you are still having problems, you can try increasing the verbosity of the npm output by passing --verbose flag. This will provide you with more detailed information about the npm install process, which can help you to identify and resolve any issues.
 
 ## Conclusion
 

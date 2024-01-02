@@ -195,7 +195,7 @@ class LTAutomate(unittest.TestCase):
         
         # username: Username can be found at automation dashboard
         username="user_name"  
-        # accessToken:  AccessToken can be generated from automation dashboard or profile section
+        # accessToken:  AccessToken can be genarated from automation dashboard or profile section
         accessToken="access_Key"
 
         # gridUrl: gridUrl can be found at automation dashboard
@@ -219,7 +219,7 @@ class LTAutomate(unittest.TestCase):
         # URL: https://{username}:{accessToken}@mobile-hub.lambdatest.com/wd/hub
         url = "https://"+username+":"+accessToken+"@"+gridUrl
         
-        print("Initiating remote driver on platform: "+desired_cap["platform"]+" browser: "+desired_cap["browserName"]+" version: "+desired_cap["version"])
+        print("Initiating remote driver on platfrom: "+desired_cap["platform"]+" browser: "+desired_cap["browserName"]+" version: "+desired_cap["version"])
         self.driver = webdriver.Remote(
             desired_capabilities=desired_cap,
             command_executor= url
@@ -229,7 +229,7 @@ class LTAutomate(unittest.TestCase):
     def test_download(self):
        
         driver = self.driver
-        print("Driver initiated successfully.  Navigate url")
+        print("Driver initiated sucessfully.  Navigate url")
         driver.get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_a_download")
 
         time.sleep(5)

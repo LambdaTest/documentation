@@ -3,7 +3,7 @@ id: hyperexecute-smart-ui-testing-using-selenium
 title: Smart UI Testing Using HyperExecute
 hide_title: true
 sidebar_label: Using Selenium
-description: Accelerate bug identification with HyperExecute's intelligent UI testing via Selenium. Conduct Visual UI Regression Testing for flawless application deployment.
+description: Enhance bug detection with LambdaTest Smart Visual UI Regression Testing! Easily identify visual deviations and regression bugs in new builds for flawless application delivery.
 keywords:
   - smart ui testing in lambdatest
   - smart ui testing in hyperexecute
@@ -155,11 +155,11 @@ $ node test.js
 
 Once the test is executed, you can check the results at [LambdaTest SmartUI](https://beta-smartui.lambdatest.com/). Make all the desired changes, re-run your tests and then re-visit the Dashboard and check your **Baseline Screenshot** as well as **Comparable Screenshot**
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/selenium/smart-ui-3.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/smart-ui-3.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 Here you can see the difference.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/selenium/smart-ui-4.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/smart-ui-4.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ## Additional Details
 

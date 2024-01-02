@@ -116,7 +116,7 @@ Click on it and select the Tag by which you want to filter the tests on your das
 
 You can even filter the tests by selecting multiple custom tags at once, from the filter toolbar, as shown in the image below:
 
-<img loading="lazy" src={require('../assets/images/uploads/custom-tags-13.webp').default} alt="custom automation tags" width="1024" height="429" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/uploads/custom-tags-13.webp').default} alt="custome automation tags" width="1024" height="429" className="doc_img"/>
 
 * * *
 

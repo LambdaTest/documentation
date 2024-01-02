@@ -99,13 +99,13 @@ If you are getting started with Bitrise CI, please refer to our documentation on
 
 4. Provide the list of device and operating system version on which you wish to run your tests.
 
-<img loading="lazy" src={require('../assets/images/bitrise-espresso/load.webp').default} alt="Image" width="2870" height="1242"  className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/bitrise-espresso/lod.webp').default} alt="Image" width="2870" height="1242"  className="doc_img img_center"/>
 
 Other options: 
 
 | Key | Value | Capability Description 
 | -------- | -----| ------------ | 
-| Device List   |  TYPE: STRING<br/> DEFAULT: Untitled<br/> `"Galaxy S10-9", "OnePlus 6T-10"`|  Add the devices here on which the test will be executed.<br/> Devices are comma separated.   | 
+| Device List   |  TYPE: STRING<br/> DEFAULT: Untitled<br/> `"Galaxy S10-9", "OnePlus 6T-10"`|  Add the devices here on which the test will be executed.<br/> Devices are comma seperated.   | 
 |Build Name  |   TYPE: STRING<br/> DEFAULT: Untitled<br/> `Android Small Run` |  You can group your tests like a job containing multiple tests. | 
 | Queue Timeout |  TYPE: STRING<br/> DEFAULT: 600<br/> `300` | Enter the time in seconds after which you want your build to timeout from queue.  | 
 | Idle Timeout |  TYPE: STRING<br/> DEFAULT: 120<br/> `120` | Enter the time in seconds for maximum running time on a test in the build. | 

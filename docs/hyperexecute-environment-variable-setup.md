@@ -63,18 +63,18 @@ LambdaTest Authentication Credentials consists of two fields:
 
 **Step 2**: Click on the key icon from the top-right corner of your screen and copy the Access Key and Username.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/env-variable/Hyperexecute-dashboard.png').default} alt="Image" width="1919" height="878" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/Hyperexecute-dashboard.png').default} alt="Image" width="1919" height="878" className="doc_img"/>
 
 ### Fetching Authentication Credential from your LambdaTest Profile
 ***
 
 **Step 1**: Visit your LambdaTest Profile by clicking on the user icon on the top-right followed by clicking on Profile.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/env-variable/Hyperexecute-profile-snap.png').default} alt="Image" width="1363" height="544" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/Hyperexecute-profile-snap.png').default} alt="Image" width="1363" height="544" className="doc_img"/>
 
 **Step 2**: You will find your Username & Access Key.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/env-variable/environment-variables-3.webp').default} alt="Image" width="521" height="268" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/environment-variables/environment-variables-3.webp').default} alt="Image" width="521" height="268" className="doc_img"/>
 
 ## Configuring Environment Variables On Mac OSX/Linux Systems/Windows
 ***

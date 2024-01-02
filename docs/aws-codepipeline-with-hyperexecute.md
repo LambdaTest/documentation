@@ -58,16 +58,16 @@ To integrate AWS CodePipeline with HyperExecute, follow the below mentioned step
 - Enter the Pipeline Name.
 - Under Service role, select **New service role.** Click Next.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/aws/STEP1.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/aws-code-pipeline/STEP1.webp').default} alt="Image"  className="doc_img"/>
 
 ### Step 2: Add a Source Provider
 
 - In the **Source Provider**, select the **GitHub (Version 2)** option.
-- Connect your GitHub account.
+- Conect your GitHub account.
 - Select the desired Repository.
 - Select the specified branch name, for which you want to establish the pipeline.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/aws/STEP2.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/aws-code-pipeline/STEP2.webp').default} alt="Image"  className="doc_img"/>
 
 ### Step 3: Select the Build Provider
 
@@ -75,7 +75,7 @@ To integrate AWS CodePipeline with HyperExecute, follow the below mentioned step
 - Click on **Create a Project** button.
 - For the demo we are selecting OS as Amazon Linux 2, Runtime as standard, Image - amazonlinux2-x86_64_standard:4.0, and Runtime Environment as Linux.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/aws/STEP3.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/aws-code-pipeline/STEP3.webp').default} alt="Image"  className="doc_img"/>
 
 ### Step 4: Create a `buildspec.yml` file
 
@@ -99,7 +99,7 @@ phases:
 
 - You can “**Skip deploy stage”** and finally click **“Create Pipeline”** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/aws/STEP4.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/aws-code-pipeline/STEP4.webp').default} alt="Image"  className="doc_img"/>
 
 ### Save the pipeline.
 
@@ -107,4 +107,4 @@ Once the pipeline is created, it will start automatically. The first time the pi
 
 **Output**
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/aws/STEP5.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/aws-code-pipeline/STEP5.webp').default} alt="Image"  className="doc_img"/>

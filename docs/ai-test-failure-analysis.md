@@ -41,7 +41,7 @@ slug: ai-powered-test-failure-analysis/
 
 The AI-powered Root Cause Analysis (RCA) and Error Detection for HyperExecute testing help you quickly identify various error categories and offer a comprehensive overview of their underlying causes. It analyses your test logs and identifies the root cause of failures, so you can take corrective action quickly and efficiently.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/rca/rca_image.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-failure-analysis/rca_image.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 ## Why Test Failure Analysis?
 
@@ -59,11 +59,11 @@ HyperExecute's AI-powered Test Failure Analysis seamlessly addresses these chall
 
 To use the AI-powered Test Failure Analysis feature, simply click on the Failure Analysis (Beta) tab of your failed Job. Click on the **Generate RCA** Button. This usually takes around 20-30 seconds to generate the RCA.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/rca/rca.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-failure-analysis/rca.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 After categorizing errors, we offer a structured approach to address each failure type. You can efficiently get to the precise corrective measures or **Remedies** recommended alng with **Additional suggestions** for the particular error. This targeted approach expedites the issue resolution process, eliminating unnecessary steps and optimizing efficiency.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/rca/rca_2.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-failure-analysis/rca_2.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 ---
 

@@ -62,7 +62,7 @@ Follow these steps to create a new project in CircleCI:
 
 - Find your project and click the blue **Set Up Project** button next to it.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/circle-ci/circle-ci-new.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/main/circle-ci-new.png').default} alt="Create New Project" width="" height=""/>
 
 If you cannot see your project, check that you have selected the correct organization in the top left-hand corner of CircleCI.
  
@@ -134,23 +134,23 @@ CircleCI then uses the specified config.yml file to run your pipeline. You can s
 
 To make changes to your pipeline, either edit the .circleci/config.yml file in your repo, or click the ellipsis next your project in the Dashboard and choose **Configuration File**.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/circle-ci/circle-config.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/main/circle-config.png').default} alt="Create New Project" width="" height=""/>
 
 
 ### 4. Run Your Job
 - Once your changes are made and your configuration is valid, you may commit and re-run the pipeline by clicking the **Save and Run** button. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/circle-ci/circle-ci-run.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/main/circle-ci-run.png').default} alt="Create New Project" width="" height=""/>
 
 - A modal will pop up, and you will see the option to commit on the branch you are working from, or you can choose to create a new branch for the commit.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/circle-ci/circle-commit.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/main/circle-commit.png').default} alt="Create New Project" width="" height=""/>
 <p></p>
 
 
 
 **Below is an example of a Hyperexecute job that was triggered through the above pipeline:**
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/circle-ci/successful_gitlab.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/main/successful_gitlab.png').default} alt="Create New Project" width="" height=""/>
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

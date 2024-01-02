@@ -54,31 +54,31 @@ HyperExecute is a smart test orchestration platform to run end-to-end tests at t
 
 ## 1\. Triggering a job on Hyperexecute  
 In order to trigger a job on hyperexecute, it requires the [HyperExecute CLI](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and a set of instructions inside the [HyperExecute Yaml](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/) file. When you trigger the CLI command, it connects with the Hyperexecute APIs which then distributes the tests across different machines/nodes for parallel execution as shown in the diagram below:
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd1.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/he-real-devices/rd1.png').default} alt="Image"  className="doc_img"/>
 
 
 ## 2\. Real Devices Test Execution on Hyperexecute
 In case of Real devices test execution the test scripts from the machines run the actual tests on connected real devices as shown in the diagram below:
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd2.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/he-real-devices/rd2.png').default} alt="Image"  className="doc_img"/>
 
 ## 3\. Triggering through local machine
 When you are triggering your test cases from the local machine the flow of data is as shown in the diagram below:
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd3.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/he-real-devices/rd3.png').default} alt="Image"  className="doc_img"/>
 
 ## 4\. Triggering through Jenkins
 In order to execute a job on Hyperexecute via Jenkins, you would need to perform 2 simple steps :  
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd4.png').default} alt="Image"  className="doc_img"/>   
+<img loading="lazy" src={require('../assets/images/he-real-devices/rd4.png').default} alt="Image"  className="doc_img"/>   
 
 
 You can read more about it [here](https://www.lambdatest.com/support/docs/hyperexecute-integration-with-ci-cd-tools/).  When you want the job to be initiated from the Jenkins Pipeline, it would look as shown in the diagram below: 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd5.png').default} alt="Image"  className="doc_img"/>  
+<img loading="lazy" src={require('../assets/images/he-real-devices/rd5.png').default} alt="Image"  className="doc_img"/>  
 
 ## 5\. How to Trigger Real Device tests on Hyperexecute ?
 All of the above 4 parts were under the assumption that you have set up and executed your test scripts on the Standard [Real Device Automation](https://www.lambdatest.com/support/docs/appium-python-pytest/) offering, hence we had left the APP ID part out, just to make sure you get a hold of the basic flow first. There are multiple ways for you to experience Hyperexecute. However, we have listed down a few ways which are divided into two parts - **Manual and Advanced Usage.**
 
 There are two ways that you can upload your Application:
 
-1. **Generate your appId:** When you are running your test scripts directly on [Real Device Automation](https://www.lambdatest.com/support/docs/appium-python-pytest/), you need to upload the APK/IPA first, which can be done using a simple [cURL command](https://www.lambdatest.com/support/docs/appium-python-pytest/#1-upload-your-application). This can be further done in two ways as explained in the [official documentation](https://www.lambdatest.com/support/docs/appium-python-pytest/#1-upload-your-application). When running your test scripts via HyperExecute, you can use the **_Upload Via URL_** so that the same could be easily replicated every timeyour APK is updated at the URL you have provided in the cURL command. As a response of this cURL command you will get the APP ID of the format as mentioned below **_“lt://APP123456789123456789”_** 
+1. **Generate your appId:** When you are running your test scripts directly on [Real Device Automation](https://www.lambdatest.com/support/docs/appium-python-pytest/), you need to upload the APK/IPA first, which can be done using a simple [cURL command](https://www.lambdatest.com/support/docs/appium-python-pytest/#1-upload-your-application). This can be further done in two ways as explained in the [official documentation](https://www.lambdatest.com/support/docs/appium-python-pytest/#1-upload-your-application). When running your test scripts via HyperExecute, you can use the **_Upload Via URL_** so that the same could be easily replicated everytime your APK is updated at the URL you have provided in the cURL command. As a response of this cURL command you will get the APP ID of the format as mentioned below **_“lt://APP123456789123456789”_** 
 
 
 2. **Provide a custom appId:** Alternatively you can provide any name of your choice as the appId. All you need to do is **_Upload Via URL and provide the parameter “custom_id” in the cURL command._** Here’s a link to the [official documentation](https://www.lambdatest.com/support/docs/app-testing-apis/#uploading-your-application).

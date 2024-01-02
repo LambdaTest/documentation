@@ -63,15 +63,15 @@ You can also create a **Demo Dashboard** on choosing this option you can explore
 
 Now, you select any widget you want to be added to the dashboard from the available list. You can filter by product and by category.
 
-<img loading="lazy" src={require('../assets/images/analytics/custom-dashboard.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/create-dashboard-widgets.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 Add **Dashboard Name** of your choice, according to the **report** which needs to be created. Then, click on the `Create New Dashboard` button and you're done!
 
-<img loading="lazy" src={require('../assets/images/analytics/custom-dashboard-name.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/create-dashboard-add-name.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 Your dashboard is ready to start **Analyzing** the data of all your tests which are executed using the Lambdatest Cloud platform.
 
-<img loading="lazy" src={require('../assets/images/analytics/analyzing-error-status.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/create-dashboard-final-view.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 :::tip
 

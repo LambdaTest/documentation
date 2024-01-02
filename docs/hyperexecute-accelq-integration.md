@@ -79,19 +79,19 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 ### Where to Find the Parameters?
 
 #### AccelQ - URL, User-ID, API key, Tenant Code
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/accelq/accelq-1.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/accelq-integration/accelq-1.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
 
 #### How to create a Job ID?
 
 **Step 1:** Create an LT profile with with the below configuration and save it
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/accelq/accelq-2.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/accelq-integration/accelq-2.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
 
 **Step 2:** Create a [CI job](https://support.accelq.com/hc/en-us/articles/360016077871-How-do-I-create-a-job-that-I-can-invoke-from-CI-tool#:~:text=Step%201%3A%20On%20the%20ACCELQ,Click%20on%20%22Create%20Job%22) with the same profile and agent which has LambdaTest configured with it.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/accelq/accelq-3.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/accelq-integration/accelq-3.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
 
 **Step 3:** Copy the Job ID
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/accelq/accelq-4.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/accelq-integration/accelq-4.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ### Agent.properties file
 Agent.property file is a type of file that gets generated when you configures the agents from the Accelq to the LambdaTest.

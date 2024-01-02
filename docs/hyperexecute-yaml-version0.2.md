@@ -42,7 +42,7 @@ slug: hyperexecute-yaml-version0.2/
 
 Hyperexecute YAML Version 0.2. This version introduces several new features and improvements compared to Version 0.1. This documentation will guide you through the changes and help you understand when to use Version 0.2 instead of Version 0.1.
 
-> **Note:** Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **wdio/mocha**, and **wdio/jasmine** framework.
+> Note: Currently we only support ***maven/testng*** framework.
 
 ## Version 0.2 vs. Version 0.1
 
@@ -93,6 +93,8 @@ The framework field supports the following parameters
 ### `name`
 Specifies the testing framework used in your repository.
 
+> **Note:** Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **wdio/mocha**, and **wdio/jasmine** framework.
+
 ```bash
 framework:
   name: "maven/testng"
@@ -134,14 +136,12 @@ framework:
 ```
 
 ### `discoveryType`
-Specifies the level at which user wants to discover the tests. Supported values are "method" and "class". The default is "method".
+Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".
 
 ```bash
 framework:
   name: maven/testng
-  #highlight-next-line
   discoveryType: method
-  # instead of method you can also use xmltest or class as a discovery type
   flags:
     - "-Dplatname=win"
 ```

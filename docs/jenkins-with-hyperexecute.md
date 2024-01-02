@@ -53,25 +53,25 @@ To integrate HyperExecute with your Jenkins project, follow the steps listed bel
 
 1. Log Into your Jenkins account. You will be directed to your Jenkins dashboard. 
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j1.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src={require('../assets/images/jenkins-he/j1.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
 
 
 2. Select the project you want to integrate with HyperExecute. Or else, click on **+ New Item** on the left panel to create a new project. 
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j2.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src={require('../assets/images/jenkins-he/j2.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
 
 3. After opening your project, click on **Configure**.
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j3.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src={require('../assets/images/jenkins-he/j3.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
 
 4. Click on **Build Steps**. 
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j4.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src={require('../assets/images/jenkins-he/j4.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
 
 
 5. Add a new build step and select **Execute Shell** if you are running your tests on MacOS. Alternatively, select **Execute Windows** batch command if you want to run your test on Windows. 
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j5.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src={require('../assets/images/jenkins-he/j5.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
 
 6. Copy and paste the following code snippet in the **Command** section of your Build Step. Click on **Save** to add your Build Step. 
 
@@ -91,23 +91,23 @@ To integrate HyperExecute with your Jenkins project, follow the steps listed bel
 
     **Note**: Replace the placeholder values in the code with your username and access key for HyperExecute.
 
-    <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j6.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
+    <img loading="lazy" src={require('../assets/images/jenkins-he/j6.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
 
 7. Build your Jenkins project by clicking on **Build Now** and wait for a few minutes.
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j7.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src={require('../assets/images/jenkins-he/j7.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
 
   After your build is successful, go to the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to monitor the progress of your tests.
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j8.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src={require('../assets/images/jenkins-he/j8.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
 
   The **HyperExecute Dashboard**: 
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j9.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src={require('../assets/images/jenkins-he/j9.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
 
   Click on the job to find out more details about your tests. 
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j10.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
+  <img loading="lazy" src={require('../assets/images/jenkins-he/j10.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
 
 * * *
 You have successfully integrated your Jenkins project with HyperExecute. 

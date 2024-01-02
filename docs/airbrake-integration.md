@@ -51,11 +51,6 @@ slug: airbrake-integration/
 
 Airbrake is a software tool and service designed to assist developers in tracking and monitoring errors within web and mobile applications. Its primary purpose is promptly identifying and diagnosing software errors and exceptions, enabling developers to react swiftly and effectively.
 
-<div class="blog__ytframe">
-<div class="blog__youtube" data-embed="_amxJrEiMyA">
-    <div class="blog__play-button"></div>
-</div>
-</div>
 
 LambdaTest's integration with Airbrake provides a seamless solution for tracking and managing bugs and issues encountered during [cross-browser testing](https://www.lambdatest.com). With this integration, developers can effortlessly log bugs directly from the LambdaTest platform to their Airbrake instance, eliminating the need for manual maintenance of tasks and issues.
 

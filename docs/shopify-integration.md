@@ -140,7 +140,7 @@ For any generated screenshot, you can also [view](/docs/automated-screenshot-tes
 
 <img loading="lazy" src={require('../assets/images/uploads/shopify-10.webp').default} alt="Lambdatest test settings" width="1281" height="721" className="doc_img"/>
 
-> That's it! Now you can generate screenshots of your store for your favorite Mobile and Desktop browsers using LambdaTest Shopify Plugin. If you come across any issue or doubt, feel free to reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Or you can even mail us at [support@lambdatest.com](mailto:support@lambdatest.com) Happy Testing!!
+> Thats it! Now you can generate screenshots of your store for your favorite Mobile and Desktop browsers using LambdaTest Shopify Plugin. If you come across any issue or doubt, feel free to reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Or you can even mail us at [support@lambdatest.com](mailto:support@lambdatest.com) Happy Testing!!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -79,7 +79,6 @@ This document will help you understand all the modifiers/arguments used with Lam
 |            | --pacfile        |  Path of a PAC file.  | String  |
 | -s           | --shared-tunnel | Sharing Tunnel Among Team Members                                                                                                                   | N/A     |
 |              | --sshConnType   | Specify type of ssh connection (over_22, over_443, over_ws).To use –sshConnType, specify ––mode ssh flag first.                                     | String  |
-| N/A | --maxSSHConnections | Increase the SSH Connection from Tunnel Client to Tunnel Server. Maximum allow is 30 | N/A |
 | -n           | --tunnelName    | Specifies the custom LambdaTest Tunnel name to be used.                                                                                             | String  |
 | -u           | --user          | LambdaTest Username.                                                                                                                                | String  |
 | -v           | --verbose       | Should Every Proxy Request Be Logged To Stdout                                                                                                      | N/A     |

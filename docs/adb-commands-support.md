@@ -100,16 +100,6 @@ The command is used to auto rotate the screen of the device while running an app
 params = {"command":"autorotate", "enableAutoRotate", true}
 result = driver.execute_script("lambda-adb",params)
 ```
-### ADB Shell Command
-
-- **adb shell dumpsys**
-
-This command is used to obtain detailed information about installed packages on device. When you run this command, it provides a list of information for each package installed on the device. The output includes various details about each package.The following is a Python sample using the adb command:
-
-```bash
-params = {"command": "shell", "text": "dumpsys package <package_info>"}
-result = driver.execute_script("lambda-adb",params)
-```
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

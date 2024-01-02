@@ -68,7 +68,7 @@ LambdaTest Wrike integration helps you in creating issues in Wrike directly from
 
 **Step 5:** Review the privacy policy and click on "Accept". <img loading="lazy" src={require('../assets/images/uploads/accept-privacy-policy.webp').default} alt="privacy policy"  className="doc_img" width="775" height="804"/>  
 
-**Step 6:** Once you press on "Accept", Wrike will be integrated with LambdaTest on the same account, and an alert-box will appear on the top right corner of the screen stating that the integration is successful. <img loading="lazy" src={require('../assets/images/uploads/wrike-integration-successful-from-top.webp').default} alt="successful"  className="doc_img" width="445" height="165"/>
+**Step 6:** Once you press on "Accept", Wrike will be integrated with LambdaTest on the same account, and an alert-box will appear on the top right corner of the screen stating that the integration is successfull. <img loading="lazy" src={require('../assets/images/uploads/wrike-integration-successful-from-top.webp').default} alt="successful"  className="doc_img" width="445" height="165"/>
 
 **Step 7:** Congrats! Wrike has been successfully integrated. Go to Integrations tab again and you will see Wrike under the "My Integrations" tab. <img loading="lazy" src={require('../assets/images/uploads/successful-wrike-integration-top.webp').default} alt="my integration"  className="doc_img" width="1186" height="852"/>
 

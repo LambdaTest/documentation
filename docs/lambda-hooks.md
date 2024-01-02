@@ -55,7 +55,7 @@ Lambda Hooks  | Descriptions
 *lambda-file-list*  |  List down the file in download directory.<br />`print driver.execute_script("lambda-file-list={match string with filename}");` <br />`ie:print driver.execute_script("lambda-file-list=sample");Response: List of files in downloads dir starting with sample`
 *lambda-name*  |  For changing the Test Name.<br />`((JavascriptExecutor) driver).executeScript("lambda-name=TestName");` <br /> <br />`((JavascriptExecutor) driver).executeScript("lambda-name=" + "name from hooks");` |
 *lambda-action*  |  Used to mark a test as passed/failed. Moreover, it allows the option to include a failure reason, which will be visible on the LambdaTest Automation Dashboard inside the session view.<br />`Map<String, String> action = new HashMap();action.put("status", "failed"); action.put("reason", "tmp reason"); driver.executeScript("lambda-action", action);` <br /> <br />`((JavascriptExecutor) driver).executeScript("lambda-action=" + "Lambda Error");`
-*lambda-exception* | Captures the error occurred while performing testing and displays it as an exception message. <br /> `((JavascriptExecutor) driver).executeScript("lambda-exceptions", exceptionCapture);` |
+*lambda-exception* | Captures the error occured while performing testing and displays it as an exception message. <br /> `((JavascriptExecutor) driver).executeScript("lambda-exceptions", exceptionCapture);` |
 
 > **Note**: These hooks will only work if you're connected to your [LambdaTest Hub URL](/support/docs/hyperexecute-general-faqs/#17-how-can-i-access-my-lambdatest-hub-url). If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment` 
 

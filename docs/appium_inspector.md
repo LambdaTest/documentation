@@ -61,7 +61,7 @@ By the end of this topic, you will be able to:
 
 :::tip
 
-Please download the latest version of Appium Inspector - :link: [Official Appium Inspector](https://github.com/appium/appium-inspector/releases).
+Please download the latest verison of Appium Inspector - :link: [Official Appium Inspector](https://github.com/appium/appium-inspector/releases).
 
 :::
 

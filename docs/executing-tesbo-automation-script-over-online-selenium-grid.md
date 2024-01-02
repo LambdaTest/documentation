@@ -142,7 +142,7 @@ Verify: @Page_Heading text is equal to ignore case 'ajax form submit with Loadin
 Step: Enter 'Tesbo' in @Name_Text_Box_Field
 Step: Enter 'Tesbo is the hybrid test framework that is built upon the keyword-driven.' in @Comment_Text_Box_Field
 Step: Click on @Submit_Button
-Verify: @Confirmation_message text is equal to 'Form submitted Successfully!'
+Verify: @Confirmation_message text is equal to 'Form submited Successfully!'
 End
 
 Test: Verify JQuery List Box functionality

@@ -42,7 +42,7 @@ slug: hyperexecute-reports-download/
 You can access your job reports directly from the UI by clicking on the Report button on the top right-hand side of your [tasks page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-tasks-page). Your report will be downloaded automatically.
 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/job-reports.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/he-features/job-reports.png').default} alt="Image"  className="doc_img"/>
 
 ***
 
