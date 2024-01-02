@@ -38,4 +38,4 @@ jobs:
       - uses: codespell-project/actions-codespell@master
         name: Check spelling
         with:
-          ignore_words_list: aks,atleast,cros,ddress,fiel,ist,nd,ot,pullrequest,ser,shttp,wast,fo,seldomly,delt,cruzer,plack,secur,te,testng,TestNG,FLE,Nome,softwares
+          ignore_words_list: aks,atleast,cros,ddress,fiel,ist,nd,ot,pullrequest,ser,shttp,wast,fo,seldomly,delt,cruzer,plack,secur,te,testng,TestNG,FLE,fle,,Nome,softwares
