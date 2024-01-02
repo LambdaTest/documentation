@@ -130,7 +130,7 @@ smartui config:create-web smartui-web.json
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
 
-```json title="/smartui-cli-project/smartui-web.json"
+```json title="/smartui-sdk-project/smartui-web.json"
 {
   "web": {
     "browsers": [
@@ -153,10 +153,16 @@ Once, the configuration file will be created, you will be seeing the default con
         360,
         640
       ]
-    ]      
+    ],
+    "waitForPageRender": 50000 // Optional (should only be used in case of websites which take more than 30s to load)
   }
 }
 ```
+
+:::info 
+If one or more `URLs` in your script require a relatively higher amount of time to load, you may use the `waitForPageRender` key in the config file to make sure the screenshots are rendered correctly. Avoid using the same in case your websites render in less than 30 seconds.
+:::
+
 ### **Step 5:** Adding SmartUI function to take screenshot
 
 - You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
