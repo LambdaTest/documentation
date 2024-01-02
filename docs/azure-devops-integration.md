@@ -67,7 +67,7 @@ We recently added support for custom fields to our integration. From now on, all
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/Screenshot-282.webp').default} alt="azure-devops-integration" width="1345" height="622" className="doc_img"/>
 
-> **Note:** For **Self-Hosted** Azure DevOps instance, you need to whiltelisted IP address of your privately hosted projects. To get your IP whitelisted, please contact our customer support. 
+> **Note:** For **Self-Hosted** Azure DevOps instance, you need to whitelisted IP address of your privately hosted projects. To get your IP whitelisted, please contact our customer support. 
 
 <img loading="lazy" src={require('../assets/images/azure-devops-integration/azure-devops-integration-3.webp').default} alt="azure-devops-integration" width="1891" height="705" className="doc_img"/>
 

@@ -113,7 +113,7 @@ export default function index() {
               <p>The moment you close the session, LambdaTest automatically sanitize the whole virtual machine. What that means is that we delete all historical data, downloads, installed extensions, saved passwords, etc. We reset the browsers to factory settings. This automatically logs you out of all pages and auto deletes all data that you may have saved. You would still have access to screenshots and issues you may have generated during the session.</p>
             </details>
             <details>
-              <summary>Would i have to reset and re-configure browser settings everytime I create a new session?
+              <summary>Would i have to reset and re-configure browser settings every time I create a new session?
               </summary>
               <p>Yes! Every time you close a session we would reset all settings. We are working on a way to help you change and save a set of customized default browser settings. If your need is critical and changing browser settings in each new session takes a lot of your time, send us a message from here. We will try to find a solution for you.</p>
             </details>
@@ -138,7 +138,7 @@ export default function index() {
             <details>
               <summary>How do I report the issue to my team? How can I check the issues created by my organization and team? And can I still report a bug if I am the only one in team?
               </summary>
-              <p>By going to the <a href="https://issues.lambdatest.com/">Issue tracker</a>, you can add your teammates as watchers for the particular issue and you can also assign them the issue by marking them as 'assignee'. Incase the team-mate is not added yet, you will also find an option in the tracker to invite them.</p>
+              <p>By going to the <a href="https://issues.lambdatest.com/">Issue tracker</a>, you can add your teammates as watchers for the particular issue and you can also assign them the issue by marking them as 'assignee'. In case the team-mate is not added yet, you will also find an option in the tracker to invite them.</p>
             </details>
           </TabItem>
           <TabItem value="developer">
@@ -590,7 +590,7 @@ export default function index() {
             <details>
               <summary>How does the concurrency for Realtime Native App testing works?
               </summary>
-              <p>You need not opt for a seperate App Testing Plan, as parallelism (or concurrency) for app testing is synced with Realtime Browser testing. To run native mobile app tests parallely (or concurrently) with Realtime Browser testing, you need to ‘at least’ be on a two (or more) parallel session plan.</p>
+              <p>You need not opt for a seperate App Testing Plan, as parallelism (or concurrency) for app testing is synced with Realtime Browser testing. To run native mobile app tests parallelly (or concurrently) with Realtime Browser testing, you need to ‘at least’ be on a two (or more) parallel session plan.</p>
             </details>
           </TabItem>
 

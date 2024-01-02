@@ -57,7 +57,7 @@ HyperExecute lets you run E2E (end-to-end) Selenium tests at the fastest possibl
 
 End-to-end encryption of the data (including the source code) ensures that the *data* is secure whether it is rest or in transit. YAML-based workflow helps in realizing the benefits of optimal test execution and orchestration. Along with the unique features offered by HyperExecute, you also get access to a host of LambdaTest cloud features like detailed logs, Smart CI features, network insights, video recording, access to a range of browsers & platforms on the cloud, amongst others.
 
-> HyperExecute has several state of the art features to help you optmize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute/) to take a look at all the tools that HyperExecute offers. 
+> HyperExecute has several state of the art features to help you optimize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute/) to take a look at all the tools that HyperExecute offers. 
 
 >HyperExecute is compliant with leading security standards - SOC2, GDPR, and CCPA. Refer to [HyperExecute Getting Started Guide](/docs/getting-started-with-hyperexecute) for more information about features offered by HyperExecute.
 
@@ -271,7 +271,7 @@ testSuites:
 
 ### Test Execution using Matrix Multiplexing
 
-The CLI option *--config* is used for providing the custom HyperExecute YAML file (i.e. *yaml/nunit_hyperexcecute_matrix_sample.yaml*). Run the following command on the terminal to trigger the tests in C# files on the HyperExecute Grid. The *--download-artifacts* option is used to inform HyperExecute to download the artifacts for the job.
+The CLI option *--config* is used for providing the custom HyperExecute YAML file (i.e. *yaml/nunit_hyperexecute_matrix_sample.yaml*). Run the following command on the terminal to trigger the tests in C# files on the HyperExecute Grid. The *--download-artifacts* option is used to inform HyperExecute to download the artifacts for the job.
 
 Shown below is *HyperExecute CLI* command that has to be triggered from the root folder of the project:
 
@@ -433,7 +433,7 @@ Here are some of the advanced features (i.e. dependency caching, retries, post, 
 
 Dependency caching is enabled in the YAML file to ensure that the package dependencies are not downloaded in subsequent runs.
 
-Set the array of files & directories to be cached. Separate folders are created for downloading global-packages, http-cache, and plugins-cache. Pleas refer to [Configuring NuGet CLI environment variables](https://docs.microsoft.com/en-us/nuget/reference/cli-reference/cli-ref-environment-variables) to know more about overriding settings in NuGet.Config files.
+Set the array of files & directories to be cached. Separate folders are created for downloading global-packages, http-cache, and plugins-cache. Please refer to [Configuring NuGet CLI environment variables](https://docs.microsoft.com/en-us/nuget/reference/cli-reference/cli-ref-environment-variables) to know more about overriding settings in NuGet.Config files.
 
 
 ```yaml

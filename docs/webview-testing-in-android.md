@@ -120,7 +120,7 @@ To know more about the bug marking in LambdaTest, you can refer to [this article
 
 You can even integrate 3rd party apps in your account from our vast [list of integrations](https://www.lambdatest.com/integrations) to send the bug directly on your desired workspace. You can also track your issues using our [Issue Tracker](https://issues.lambdatest.com/) directly, and much more.
 
->Thats all to get started for performing WebView Testing in Android on LambdaTest. We are constantly adding more features and integrations to increase your productivity through our testing environment. If you still have any doubts or questions, please don't hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at **[support@lambdatest.com](mailto:support@lambdatest.com)**.
+>That's all to get started for performing WebView Testing in Android on LambdaTest. We are constantly adding more features and integrations to increase your productivity through our testing environment. If you still have any doubts or questions, please don't hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at **[support@lambdatest.com](mailto:support@lambdatest.com)**.
 >
 >Happy testing!
 

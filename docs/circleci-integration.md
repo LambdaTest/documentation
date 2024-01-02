@@ -46,7 +46,7 @@ LambdaTest now integrates with CircleCI to boost your go-to-market delivery. Per
 
 ## Prerequisites
 ***
-To perform your karma tests with LambdaTest, you would need the followings things to be already set up:
+To perform your karma tests with LambdaTest, you would need the following things to be already set up:
 
 * Global Dependencies
    - A Git or GitHub repository

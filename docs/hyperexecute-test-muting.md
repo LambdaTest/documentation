@@ -81,6 +81,6 @@ To enable the Test Muting, follow the below mentioned steps:
 
 - Customize your **Notification Settings** to mute specific tests and reduce distractions during test execution.
 
-- You can also choose if you would like to recieve updates on your mail id and click on **Save** button.
+- You can also choose if you would like to receive updates on your mail id and click on **Save** button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/test-muting/3.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>

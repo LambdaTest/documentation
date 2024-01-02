@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 ## Our Pixel to Pixel (P2P) Comparison Options
 
-We offer mutilple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites.
+We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites.
 
 Here are the following common test setting options -
 
