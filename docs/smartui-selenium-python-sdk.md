@@ -125,7 +125,7 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
-smartui config:create-web smartui-web.json
+smartui config:create smartui-web.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
@@ -154,13 +154,19 @@ Once, the configuration file will be created, you will be seeing the default con
         640
       ]
     ],
-    "waitForPageRender": 50000 // Optional (should only be used in case of websites which take more than 30s to load)
+    "waitForPageRender": 50000, // Optional (Should only be used in case of websites which take more than 30s to load)
+    "waitForTimeout": 1000 //Optional (Should only be used in case lazy-loading/async components are present )
+
   }
 }
 ```
 
-:::info 
-If one or more `URLs` in your script require a relatively higher amount of time to load, you may use the `waitForPageRender` key in the config file to make sure the screenshots are rendered correctly. Avoid using the same in case your websites render in less than 30 seconds.
+:::info Optional Keys in SmartUI configuration
+
+**waitForPageRender** - If one or more `URLs` in your script require a relatively higher amount of time to load, you may use the `waitForPageRender` key in the config file to make sure the screenshots are rendered correctly. Avoid using the same in case your websites render in less than 30 seconds as it might increase the execution time of your tests.
+
+
+**waitForTimeout** - If you are using any `async` components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.
 :::
 
 ### **Step 5:** Adding SmartUI function to take screenshot
@@ -190,22 +196,10 @@ Execute `visual regression tests` on SmartUI using the following commands
 ```bash
 smartui exec python <Test fIle name>.py
 ```
-<!-- 
-CLI Process Snippet:
-```bash
-#<Placeholder>
-``` -->
 
-<!-- ### Setup with Continuous Integration (CI)
-
-If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI Selenium (JS) SDK` execution then the following are the steps needs to be added to your `.yaml` file:
-
-
-```yaml
-#<Placeholder for .yaml>
-
-```
- -->
+:::note 
+You may use the `smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
+:::
 
 ##  View SmartUI Results
 
