@@ -70,6 +70,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [testSuiteStep](/support/docs/deep-dive-into-hyperexecute-yaml/#testsuitestep) | Integer | It is used to timeout individual [`scenario`](/support/docs/hyperexecute-concepts/#3-stages) stages in a task. Each scenario in each task should get completed before this time. |
 | [retryOnFailure](/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure) | Boolean | If set to true, then it will retry tests based on `maxRetries` key as defined below. <br /> Default value is `false`. |
 | [maxRetries](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) | Integer | The maximum number of times your scenarios can be retried. <br /> If `retryOnFailure` is true then Default value will be 2. Value Range 1 to 5.|
+| [retryOptions](/support/docs/deep-dive-into-hyperexecute-yaml/#retryoptions) | Array | Retries the test case if found specific errors in the logs. |
 | [testDiscovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) | Map | This key is used to locate or discover relevant tests via class names, filters, file names, etc. |
 | [preDirectives](/support/docs/deep-dive-into-hyperexecute-yaml/#predirectives) | Map | Similar to pre with option to retry and specify shell. |
 | [post](/support/docs/deep-dive-into-hyperexecute-yaml/#post) | List of Strings | The actions that are performed after test execution. |
