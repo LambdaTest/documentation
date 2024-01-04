@@ -152,7 +152,7 @@ Once, the configuration file will be created, you will be seeing the default con
       "edge",
       // Add more browser configuration here
     ],
-    "resolutions": [
+    "viewports": [
       [
         1920,
         1080
