@@ -40,20 +40,6 @@ slug: tas-faq-and-troubleshooting/
 # Troubleshooting
 ***
 
-## Update Synapse Docker Image
-- Stop the docker container using the command given below.
-```
-docker-compose down
-```
-
-- Pull the latest Synapse image and start docker-compose using the command given below.
-```
-docker-compose pull
-docker-compose up -d
-```
-
-> **NOTE**: If docker-compose commands are not working, please make sure you are in the same directory as `docker-compose.yml` file. Use `ls` command to check if `docker-compose.yml` file is present in the current directory or not.
-
 ## Getting TAS Error in my jobs.
 If your jobs are running into TAS Error in case of a self hosted environment, there are two possible reasons for the same:
 1. It is possible that your synapse isn't up and running. 
@@ -76,12 +62,22 @@ If you are still facing an issue, try **restarting** the synapse or **view the l
     docker-compose up -d   
   ```
 
-- **Viewing logs of docker container**
+- **Viewing agent container (synapse) logs**
 
   If you want to check logs from the docker container (synapse) you can use the following command.
   ```bash
     docker logs synapse -f
   ```
+
+- **Viewing job container logs**
+
+  If your synapse is connected and still your jobs are failing you can checkout job logs by navigating into logs directory mounted in docker-compose file (by default it's same directory as your docker-compose). You can navigate to specific job logs by navigating into `logs/synapse/<job-id>`.
+  > **NOTE**: You can modify logs directory by updating docker-compose volume mounts.
+  ```
+  volumes:
+    - "./logs/synapse:/var/log/synapse"
+  ```
+
 <br />
 
 ### Synapse is connected but still facing TAS error.

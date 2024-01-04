@@ -2,7 +2,7 @@
 id: hyperexecute-webapp-appium-testing
 title: Appium Testing On HyperExecute - WebApp
 sidebar_label: HyperExecute Appium Testing for WebApp
-description: Easy HyperExecute WebApp Appium testing on LambdaTest. Run Selenium scripts flawlessly across 3000+ actual desktop browsers and operating systems.
+description: Now you can run your automation scripts using Selenium with Behave on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - appium
   - java
@@ -426,7 +426,7 @@ Every test run on the HyperExecute Grid has a unique *jobId* associated with it.
 
 The snapshot below shows how to navigate to the respective *testID* for viewing the Selenium logs:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/hyperexecute-webapp-appium.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/appium/hyperexecute-webapp-appium.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ## Conclusion
 By following the instructions in this documentation, you can seamlessly execute the Appium tests on HyperExecute for WebApps, leveraging its secure cloud infrastructure, advanced features, and optimized test execution workflow.

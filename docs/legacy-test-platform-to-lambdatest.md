@@ -54,7 +54,7 @@ In this guide,  we will look at how to migrate from legacy test execution platfo
 ## Why LambdaTest?
 ---
 
-Developers and testers require a robust test execution platform that is reliable, secure, scalable, fast, and affordable. On the other hand, enterprises seek innovation that orchestrates tests and bring in much-needed intelligence to provide faster developer feedback and quicker time-to-market. This is exactly where LambdaTest steps in to help you in meeting test orchestration and execution needs.
+Developers and testers require a robust test execution platform that is reliable, secure, scalable, fast, and affordable. On the other hand, enterprises seek innovation that orchestrates tests and bring in much-needed intelligence to provide faster developer feedback and quicker time-to-market. This is exactly where LambdaTest steps in to help you in meeting these requirements.
 
 *LambdaTest is an AI-based test orchestration and execution platform that allows you to perform manual and automated tests at scale on over 3000+ real browsers, devices, and operating systems combinations.*
 
@@ -74,29 +74,7 @@ Here's why you should shift from legacy test execution platform to LambdaTest.
 ---
 
 The major difference between a local Selenium grid and cloud-based Selenium grid like LambdaTest is the point of execution. In case of the local Selenium grid, tests are run on the machine that contains
-the browser drivers (i.e. ChromeDriver, FirefoxDriver, etc). For running tests on the LambdaTest grid, you only need a valid account on the LambdaTest platform.
-
-### How to Create an Account on LambdaTest
-
-1. Visit the [LambdaTest official website](https://accounts.lambdatest.com/register) and click on **Get Started Free**.
-
-<img loading="lazy" className="doc_img" src={require('../assets/images/legacy_platform_to_lambdatest/getstarted.png').default} alt="Image" width="1024" height="667" />
-
-2. Enter the details required in the registration form and click on **SIGN UP**.
-
-<img loading="lazy" className="doc_img" src={require('../assets/images/legacy_platform_to_lambdatest/signup.png').default} alt="Image" width="1024" height="667" />
-
-3. Enter the OTP sent to the email address used for account registration.
-
-<img loading="lazy" className="doc_img img_center" src={require('../assets/images/legacy_platform_to_lambdatest/otps.png').default} alt="Image" width="450" height="358" />
-
-4. Make a note of the LambdaTest Username and Access Key since the combination will be used for accessing the LambdaTest grid. To get those credentials, go to **Settings > Account Settings > Password & Security** in your LambdaTest Dashboard.
-
-<img loading="lazy" className="doc_img" src={require('../assets/images/legacy_platform_to_lambdatest/auth.png').default} alt="Image" width="1024" height="667" />
-
-5. You can monitor the status of the tests run on LambdaTest grid by navigating to the Automation Dashboard.
-
-### Migrate Tests From Local Selenium Grid to LambdaTest Grid
+the browser drivers (i.e. ChromeDriver, FirefoxDriver, etc.). For running tests on the LambdaTest grid, you only need a valid account on the LambdaTest platform.
 
 LambdaTest grid offers scalability and reliability – two integral factors that
 cannot be achieved with a local Selenium grid.
@@ -109,9 +87,8 @@ Tests running on local Selenium grid can be ported to run on the LambdaTest grid
 
 Before running the tests, you need to generate the desired browser capabilities using the [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
-### Migrating Java Tests to LambdaTest Grid
 
-Here is the sample implementation that uses the TestNG framework for automated browser testing.
+For demonstration, we use TestNG framework to run the tests. However, LambdaTest Automation support a wide range of programming languages and testing frameworks. To get started, please visit our guide [LambdaTest Supported Languages and Frameworks](https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/). 
 
 *  **Local Selenium Grid (e.g. Chrome)**
 
@@ -165,21 +142,21 @@ Migrating your existing tests running on BrowserStack to LambdaTest can be done 
 
 #### Authentication
 
-Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on LambdaTest Selenium grid, you need to have a valid Username and Access Key to perform tests on our grid. In case you do not have an account on LambdaTest, visit the [LambdaTest signup page](https://accounts.lambdatest.com/register) and create a new account.
+Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on LambdaTest Selenium grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on LambdaTest, visit the [LambdaTest signup page](https://accounts.lambdatest.com/register) and create a new account.
 
 The following are the changes in the parameters:
 
 * Username 
 * Access Key
 
-To get your LambdaTest Username and Access Key, go to **Settings > Account Settings > Password & Security** in your LambdaTest Dashboard.
+To get your LambdaTest Username and Access Key, go to **Settings > Account Settings > Password & Security**. in your LambdaTest Dashboard.
 
 <img loading="lazy" className="doc_img" src={require('../assets/images/legacy_platform_to_lambdatest/auth.png').default} alt="Image" width="1024" height="667" />
 
 When migrating from BrowserStack to LambdaTest, you need to make the following changes in the existing code:
 
-* Username
-* Access Key
+* UserName
+* AccessKey
 * Hub URL
 * Desired Capabilities
 
@@ -187,8 +164,8 @@ Here is a side-by-side comparison of each of the fields that we have highlighted
 
 | Property | BrowserStack | LambdaTest |
 |---|---| ---|
-| Username (Type: String) | UserName to access Selenium grid on BrowserStack | UserName to access Selenium grid on LambdaTest |
-| Access Key (Type: String) | AccessKey to access Selenium grid on BrowserStack | AccessKey to access Selenium grid on LambdaTest |
+| UserName (Type: String) | UserName to access Selenium grid on BrowserStack | UserName to access Selenium grid on LambdaTest |
+| AccessKey (Type: String) | AccessKey to access Selenium grid on BrowserStack | AccessKey to access Selenium grid on LambdaTest |
 | Selenium Hub URL (Type: String) | @hub-cloud.browserstack.com/wd/hub | @hub.lambdatest.com/wd/hub |
 
 For a Java-based implementation, here are the changes in the script as far as the authentication stage is concerned:
@@ -413,21 +390,21 @@ Migrating your existing tests running on Sauce Labs Cloud to LambdaTest Selenium
 
 #### Authentication
 
-Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on LambdaTest Selenium grid, you need to have a valid Username and Access Key to perform tests on our grid. In case you do not have an account on LambdaTest, visit the [LambdaTest signup page](https://accounts.lambdatest.com/register) and create a new account.
+Firstly, you need to change the authentication in your configuration settings of your test suite. For running tests on LambdaTest Selenium grid, you need to have a valid user_name and access_key to perform tests on our Grid. In case you do not have an account on LambdaTest, visit the [LambdaTest signup page](https://accounts.lambdatest.com/register) and create a new account.
 
 The following are the changes in the parameters:
 
 * Username 
 * Access Key
 
-To get your LambdaTest Username and Access Key, go to **Settings > Account Settings > Password & Security** in your LambdaTest Dashboard.
+To get your LambdaTest Username and Access Key, go to **Settings > Account Settings > Password & Security**. in your LambdaTest Dashboard.
 
 <img loading="lazy" className="doc_img" src={require('../assets/images/legacy_platform_to_lambdatest/auth.png').default} alt="Image" width="1024" height="667" /> 
 
 When migrating from Sauce Labs to LambdaTest, you need to make the following changes in the existing code:
 
-* Username
-* Access Key
+* UserName
+* AccessKey
 * Hub URL
 * Desired Capabilities
 
@@ -435,8 +412,8 @@ Here is a side-by-side comparison of each of the fields that we have highlighted
 
 | Property | Sauce Labs | LambdaTest |
 |---|---| ---|
-| Username (Type: String) | UserName to access Selenium grid on Sauce Labs | UserName to access Selenium grid on LambdaTest |
-| Access Key (Type: String) | AccessKey to access Selenium grid on Sauce Labs | AccessKey to access Selenium grid on LambdaTest |
+| UserName (Type: String) | UserName to access Selenium grid on Sauce Labs | UserName to access Selenium grid on LambdaTest |
+| AccessKey (Type: String) | AccessKey to access Selenium grid on Sauce Labs | AccessKey to access Selenium grid on LambdaTest |
 | Selenium Hub URL (Type: String) | @ondemand.us-west-1.saucelabs.com:443/wd/hub | @hub.lambdatest.com/wd/hub |
 
 For a Java-based implementation, here are the changes in the script as far as the authentication stage is concerned:

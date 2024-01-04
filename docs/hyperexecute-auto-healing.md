@@ -76,13 +76,11 @@ const capability = {
 
 **Step 3:** Now visit the HyperExecute Dashboard to check your triggered test. Click on the **View Test Detail** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/AHStep3.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/auto-heal/AHStep3.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 **Step 4:** Click on the **band-aid** icon as shown below to check what part of your test case is healed.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/AHStep4.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
-
-<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/AHStep5.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/> -->
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/auto-heal/AHStep4.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 ## How Auto Healing Works
 

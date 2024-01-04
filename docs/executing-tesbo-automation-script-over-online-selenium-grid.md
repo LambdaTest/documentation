@@ -348,7 +348,7 @@ Here is the new config.json to run parallel testing with Tesbo & LambdaTest.
 ```
 
 <div className="ytframe"> 
-<div className="youtube" data-embed="Jhzs9rlgL0w">
+<div className="youtube" data-embed="Jhzs9rlgL0w" data-loading-attribute="eager">
     <div className="play-button"></div>
 </div>
 </div>

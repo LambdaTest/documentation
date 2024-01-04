@@ -59,7 +59,7 @@ To integrate GitLab Pipeline with HyperExecute, follow the below steps:
 
 To create a new project and connect your external repository to GitLab CI/CD, click the **Run CI/CD for external repository** tab on the bottom right. 
  
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/create_gitlab_project.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/gitlab/create_gitlab_project.png').default} alt="Create New Project" width="" height=""/>
 
 ### 3. Connect Your External Repository:
 
@@ -67,17 +67,17 @@ On GitLab, you can either connect your external repository from [GitHub](https:/
 
 To connect your external repository by URL, fill in the required information in the form below and click the **Create Project** button at the bottom of the page.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/connect_gitlab_by_url.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/gitlab/connect_gitlab_by_url.png').default} alt="Create New Project" width="" height=""/>
 
 
 ### 4. Configure the Pipeline
 - To configure the new pipeline that you just created, click the **Configure Pipeline** button in the center of the page.
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/configure_gitlab.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/gitlab/configure_gitlab.png').default} alt="Create New Project" width="" height=""/>
 
 <p></p>
 
 - Click on the **+Set up CI/CD** button as shown below.
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/set_up_cicd_gitlab.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/gitlab/set_up_cicd_gitlab.png').default} alt="Create New Project" width="" height=""/>
 <p></p>
 
 - Create a new `.gitlab-ci.yml` file at the root of the repository.
@@ -121,12 +121,12 @@ deploy-job:      # This job runs in the deploy stage.
 ### 5. Run Your Job
 - To commit your changes and run your job, click the **Commit Changes** button.
 <p></p>
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/new_yaml_file.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/gitlab/new_yaml_file.png').default} alt="Create New Project" width="" height=""/>
 
 <p></p>
 
 **Below is an example of a Hyperexecute job that was triggered through the above pipeline:**
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/successful_gitlab.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/gitlab/successful_gitlab.png').default} alt="Create New Project" width="" height=""/>
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

@@ -56,27 +56,27 @@ This document will show you how to integrate Bitbucket Pipelines with HyperExecu
 
 ### 1. Log into your [Bitbucket](https://www.atlassian.com/software/bitbucket/bundle) cloud account.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/bitbucket-login.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/bitbucket-login.png').default} alt="Create New Project" width="" height=""/>
 
 ### 2. Select a Repository
 - If you do not have a repository set up yet, select **Repositories** then select **Create your own repository** as shown below.
  
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/bitbucket-repo.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/bitbucket-repo.png').default} alt="Create New Project" width="" height=""/>
 
 - Fill in the required information, then select **Create repository**.
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/create-bit-repo.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/create-bit-repo.png').default} alt="Create New Project" width="" height=""/>
 
 ### 3. Create Your Pipeline
 
 - In your repository, go to the sidebar on the left and select **Pipelines**
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/bitbucket-pipeline.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/bitbucket-pipeline.png').default} alt="Create New Project" width="" height=""/>
 
 <p></p>
 
 - Click **Create your first pipeline** to scroll down to the template section.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/bitbucket-pipeline2.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/bitbucket-pipeline2.png').default} alt="Create New Project" width="" height=""/>
 <p></p>
 
 - Select **Starter pipeline**
@@ -85,32 +85,32 @@ This document will show you how to integrate Bitbucket Pipelines with HyperExecu
 - In the sidebar, go into your repository settings.
 - In the **Pipelines** section, select **Deployments**
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/bitbucket-deployment.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/bitbucket-deployment.png').default} alt="Create New Project" width="" height=""/>
 
 - Click on any environment to:
   - Change its name
   - Set environment-specific deployment variables.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/bitbucket-yml.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/bitbucket-yml.png').default} alt="Create New Project" width="" height=""/>
 
 - You can define custom variables that you can use in the YAML file. To add a variable, fill in the name, the value, check whether you want to encrypt it by clicking the secured box, and click **Add**.
 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/bit-add-var.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/bit-add-var.png').default} alt="Create New Project" width="" height=""/>
 
 
 ### 5. Run Your Job
 After configuring your environment variables, select **Commit file** at the bottom of your screen to commit  and run your test job.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/bit-commit-var.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/bit-commit-var.png').default} alt="Create New Project" width="" height=""/>
 
 - You will be redirected to the screen below 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/bitbucket-successful.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/bitbucket-successful.png').default} alt="Create New Project" width="" height=""/>
 
 
 **Below is an example of a Hyperexecute job that was triggered through the above pipeline:**
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/successful_gitlab.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/successful_gitlab.png').default} alt="Create New Project" width="" height=""/>
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

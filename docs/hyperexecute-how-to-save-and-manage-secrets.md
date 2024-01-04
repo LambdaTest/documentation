@@ -54,16 +54,16 @@ This page explains how you can Manage your Secrets using HyperExecute Secret Vau
 Steps to Add the Secrets via HyperExecute Dashboard:
 
 **Step 1:** Go to the Secrets Section
-<img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/3.png').default} alt="Image"  
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/3.png').default} alt="Image"  
 className="doc_img"/>
 
 **Step 2:** Click on the **+Add** button to create a New Secret.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/4.png').default} alt="Image"  style={{width: '600px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/4.png').default} alt="Image"  style={{width: '600px',}} className="doc_img"/>
 
 **Step 3:** Enter a descriptive Key Name and your Secret in the **Value**. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/5.png').default} alt="Image"  style={{width: '600px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/5.png').default} alt="Image"  style={{width: '600px',}} className="doc_img"/>
 
 **Step 4:** Click on **Add New Secret** and your secret will be stored safely.
 
@@ -73,20 +73,19 @@ className="doc_img"/>
 
 **Step 2:** Click on “Secrets“ tab in the top right corner of the screen.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/3.png').default} alt="Image"  
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/3.png').default} alt="Image"  
 className="doc_img"/>
-
 
 **Step 3:** Click on Edit Button of the secret you want to update.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/39.png').default} alt="Image"  
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/39.png').default} alt="Image"  
 className="doc_img"/>
 
 **Step 4:** Enter updated value of the secret.
 
 **Step 5:** Click on Edit Secret Value to complete the editing.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/40.png').default} alt="Image"  
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/40.png').default} alt="Image"  
 className="doc_img"/>
 
 ## Delete the Secrets
@@ -95,14 +94,13 @@ className="doc_img"/>
 
 **Step 2:** Click on “Secrets“ tab in the top right corner of the screen.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/3.png').default} alt="Image"  
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/3.png').default} alt="Image"  
 className="doc_img"/>
 
 **Step 3:** Click on Delete Button of the secret you want to delete.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/39.png').default} alt="Image"  
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/39.png').default} alt="Image"  
 className="doc_img"/>
-
 
 The secret will be deleted.
 

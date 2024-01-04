@@ -49,10 +49,7 @@ slug: wordpress-plugin/
 
 
 ## How To Install & Use LambdaTest WordPress Plugin?
-
 * * *
-
-[<button type="button">DOWNLOAD THE ZIP FILE FOR LAMBDATEST PLUGIN</button>](https://s3.amazonaws.com/general-tools/lambdatest-screenshot-plugin.zip)
 
 **Step 1:** Login to your WordPress account.
 

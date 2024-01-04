@@ -3,7 +3,7 @@ id: semaphore-integration-with-hyperexecute
 title: Semaphore CI Integration With HyperExecute
 hide_title: true
 sidebar_label: Semaphore
-description: Boost market delivery with LambdaTest's HyperExecute integration with Semaphore CI and automate tests on a cloud grid with 3000+ real browsers seamlessly.
+description: Semaphore CI/CD, a cloud-based platform, now seamlessly integrates with LambdaTest HyperExecute for enhanced testing performance.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools
@@ -55,18 +55,18 @@ To integrate Semaphore Pipeline with HyperExecute, follow the below steps:
 
 **Step 2:** Click on **Choose Repository** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/semaphore/1.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/1.png').default} alt="Image"  className="doc_img"/>
 
 **Step 3:** Select the desired repository and click on **Next** button.
-<img loading="lazy" src={require('../assets/images/hyperexecute/semaphore/2.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/2.png').default} alt="Image"  className="doc_img"/>
 
 **Step 4:** Click on **Continue to workflow setup** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/semaphore/3.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/3.png').default} alt="Image"  className="doc_img"/>
 
 **Step 5:** Select the  **Customize** button for custom setting in the workflow.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/semaphore/4.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/4.png').default} alt="Image"  className="doc_img"/>
 
 **Step 6:** In the #Job1 add the below mentioned script. Make sure to replace the `username` and `key` with your LambdaTest [UserName and Access Key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
@@ -78,12 +78,12 @@ chmod +x hyperexecute
 
 Click on **Run the workflow** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/semaphore/5.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/5.png').default} alt="Image"  className="doc_img"/>
 
 - Logs of the Pipeline executed.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/semaphore/6.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/6.png').default} alt="Image"  className="doc_img"/>
 
 - Output in the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) Dashboard
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/semaphore/7.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/7.png').default} alt="Image"  className="doc_img"/>

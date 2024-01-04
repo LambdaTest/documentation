@@ -42,26 +42,40 @@ slug: new-relic-integration/
 
 New Relic is a comprehensive observability platform that helps you monitor, troubleshoot, and optimize your software systems. It collects data from all your applications, infrastructure, and logs and provides insights into how your system is performing and where potential problems lie.
 
-LambdaTest and New Relic enable you to view LambdaTest results in a custom New Relic Dashboard and gain deeper insight into your automation scripts to ship quality products at light speed.
+LambdaTest and New Relic enable you to view LambdaTest results in a custom New Relic dashboard and gain deeper insight into your automation scripts to ship quality products at light speed.
 
 ## Pre-requisites
 ***
 
 - A LambdaTest account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
-- A New Relic account.
+- A New Relic account, If you don't have an account, [sign up for free](https://newrelic.com/signup)
 
 ## Integrating New Relic with LambdaTest
 ***
 
-**Step 1:** Visit the LambdaTest dashboard. Go to the **Settings** page.
+**Step 1:** Visit the New Relic UI. Click on [**Add Data**](https://one.newrelic.com/marketplace) button on the left navigation.
 
-**Step 2:** Click on the **Integrations** tab. Select **New Relic** from the **Analytics** section.
+**Step 2:** Search **LambdaTest**, select the tile, and click on:
+  1. **See installation docs** if you have not configured your LambdaTest account.
+  2. **Skip this step** if you have already instrumented LambdaTest (from Step 3 to Step 5).
+
+You can copy the Licence key details from the side bar which will be required in the **Step 5**.
+
+This will automatically deploy a pre-built dashboard for you in New Relic. Click on **See your data** button to check the LambdaTest Dashboards.
+
+<img loading="lazy" src={require('../assets/images/new-relic/6.png').default} alt="Gitpod popup" width="1215" height="625" className="doc_img img_center"/><br/>
+
+**Step 3:** Visit the LambdaTest Dashboard. Go to the **Settings** page.
+
+**Step 4:** Click on the **Integrations** tab. Select **New Relic** from the **Analytics** section.
 
 <img loading="lazy" src={require('../assets/images/new-relic/1.png').default} alt="Gitpod popup" width="1215" height="625" className="doc_img img_center"/><br/>
 
-**Step 3:** Now enter the **License Key/API Key** and select your **Region**
+**Step 5:** Now enter the **License Key/API Key** and select your **Region**
 
-- In order to get the New Relic **License/API** Key, go to your **New Relic** account > **Profile** > **API Keys**.
+- In order to get the New Relic **License/API** Key, refer to the New Relic UI from Step 2.
+
+Alternatively, you can go to your **New Relic** account > **Profile** > [**API Keys**](https://one.newrelic.com/api-keys).
 
 > You can either use the existing API keys or you can create a new one.
 

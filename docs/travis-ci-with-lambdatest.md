@@ -182,7 +182,7 @@ script:
   # Fetching latest code from  git
   - git pull origin master
   # Downloading tunnel binary
-  - wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip
+  - wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip
   # Extracting tunnel binary
   - sudo apt-get install unzip
   - unzip LT_Linux.zip

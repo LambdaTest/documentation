@@ -59,7 +59,7 @@ php -r "unlink('composer-setup.php');"
 ```
 - If you are using XAMPP or MAMP, you may have to open up PHP shell by pressing the button shown in picture below:
 
-<img loading="lazy" src={require('../assets/images/guide-to-php/guide-to-php-1.webp').default} alt="Xampp control panel to start selenium php tests" width="682" height="440" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/guide-to-php/guide-to-php-1.webp').default} alt="Xampp control pannelto start selenium php tests" width="682" height="440" className="doc_img"/>
 
 Once you have composer installed, you can leverage Composer to download and install Selenium dependencies. For that, first create a composer.json file in your directory and add the following JSON code:
 

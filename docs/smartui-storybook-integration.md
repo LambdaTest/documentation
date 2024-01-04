@@ -302,7 +302,7 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 
 ### **Step 6:** View SmartUI Results
 
-You can now see the Smart UI dashboard to view the results. Can also identify the Mismatches from the existing `Baseline` build.
+You can now see the Smart UI dashboard to view the results. Can also identify the mis-matches from the existing `Baseline` build.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-storybook-results.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

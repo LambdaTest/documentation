@@ -190,7 +190,6 @@ module.exports = {
                     "environment-variables",
                     "Selenium-Grid-Configuration",
                     "supported-browsers-and-operating-systems-for-the-web-interface",
-                    "desktop-tiers",
                     "change-individual-test-details",
                     "queuing",
                     "lambda-hooks",
@@ -335,35 +334,7 @@ module.exports = {
           collapsed: true,
           label: "Playwright Testing ",
           items: [
-            "playwright-testing-guide",
-            {
-              type: "category",
-              collapsed: true,
-              label: "Languages and Frameworks",
-              items: [
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Java",
-                  link: {
-                    type: "doc",
-                    id: "java-with-playwright",
-                  },
-                  items: ["junit-with-playwright"],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "JavaScript",
-                  link: {
-                    type: "doc",
-                    id: "javascript-with-playwright",
-                  },
-                  items: ["jest-with-playwright", "playwright-cucumberjs"],
-                },
-                "typescript-with-playwright",
-                "python-with-playwright",
-                "csharp-with-playwright",
+            "playwright-testing-guide"
               ],
             },
             {
@@ -385,9 +356,8 @@ module.exports = {
             "playwright-caps",
             "local-testing-playwright",
             "playwright-playwrighttest",
-            "playwright-cicd",
-          ],
-        },
+            "playwright-cucumberjs",
+            "playwright-cicd"
       ]
     ],
 
@@ -412,7 +382,6 @@ module.exports = {
             "local-testing-puppeteer",
             "puppeteer-mocha",
             "puppeteer-jest",
-            "puppeteer-codecept",
             "puppeteer-cicd",
           ],
         },
@@ -682,168 +651,169 @@ module.exports = {
           label: "App Automation (Emu/Sim)",
           items: [
             "app-automation-app-sim",
-        
+
           ],
         },
-    
+
       ]
     ],
 
     AppiumTestingSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: true,
+          label: "Appium Testing",
+          link: {
+            type: "doc",
+            id: "getting-started-with-appium-testing",
+          },
+          items: [
             {
-              type: 'link',
-              label: '<- Back',
-              href: '/docs/',
-              customProps: {
-              className: 'back-to-main-menu'
+              type: "category",
+              collapsed: true,
+              label: "Languages and Frameworks",
+              link: {
+                type: "doc",
+                id: "appium-languages-and-frameworks",
               },
-            },
-            [
-              {
-                type: "category",
-                collapsed: true,
-                label: "Appium Testing",
-                link: {
-                  type: "doc",
-                  id: "getting-started-with-appium-testing",
+              items: [
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Java",
+                  link: {
+                    type: "doc",
+                    id: "appium-java",
+                  },
+                  items: [
+                    "appium-java-junit",
+                    "appium-java-jbehave",
+                    "appium-java-cucumber",
+                    "appium-java-testng",
+                  ],
                 },
-                items: [
-                  {
-                    type: "category",
-                    collapsed: true,
-                    label: "Languages and Frameworks",
-                    link: {
-                      type: "doc",
-                      id: "appium-languages-and-frameworks",
-                    },
-                    items: [
-                      {
-                        type: "category",
-                        collapsed: true,
-                        label: "Java",
-                        link: {
-                          type: "doc",
-                          id: "appium-java",
-                        },
-                        items: [
-                          "appium-java-junit",
-                          "appium-java-jbehave",
-                          "appium-java-cucumber",
-                          "appium-java-testng",
-                        ],
-                      },
-                      {
-                        type: "category",
-                        collapsed: true,
-                        label: "JavaScript",
-                        link: {
-                          type: "doc",
-                          id: "appium-nodejs",
-                        },
-                        items: ["appium-nodejs-webdriverio", "appium-nodejs-mocha"],
-                      },
-                      {
-                        type: "category",
-                        collapsed: true,
-                        label: "Python",
-                        link: {
-                          type: "doc",
-                          id: "appium-python",
-                        },
-                        items: [
-                          "appium-python-behave",
-                          "appium-python-robot",
-                          "appium-python-gauge",
-                          "appium-python-pytest",
-                        ],
-                      },
-                      {
-                        type: "category",
-                        collapsed: true,
-                        label: "Ruby",
-                        link: {
-                          type: "doc",
-                          id: "appium-ruby",
-                        },
-                        items: ["appium-ruby-cucumber", "appium-ruby-rspec"],
-                      },
-                      {
-                        type: "category",
-                        collapsed: true,
-                        label: "PHP",
-                        link: {
-                          type: "doc",
-                          id: "appium-php",
-                        },
-                        items: ["appium-php-behat"],
-                      },
-                      {
-                        type: "category",
-                        collapsed: true,
-                        label: "C#",
-                        link: {
-                          type: "doc",
-                          id: "appium-csharp",
-                        },
-                        items: ["appium-csharp-nunit"],
-                      },
-                      "appium-kotlin",
-                    ],
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "JavaScript",
+                  link: {
+                    type: "doc",
+                    id: "appium-nodejs",
                   },
-                  {
-                    type: "category",
-                    collapsed: true,
-                    label: "Setup",
-                    items: [
-                      "desired-capabilities-in-appium",
-                      "list-of-supported-locales",
-                      "app-testing-apis",
-                      "appium-lambdatest-hooks",
-                      "appium-install-uninstall-lambdatest-hooks",
-                      "appium-uploading-retrieving-files",
-                      "appium-firebase-app-upload",
-                    ],
+                  items: ["appium-nodejs-webdriverio", "appium-nodejs-mocha"],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Python",
+                  link: {
+                    type: "doc",
+                    id: "appium-python",
                   },
-                  {
-                    type: "category",
-                    collapsed: true,
-                    label: "Features",
-                    items: [
-                      "camera-image-injection",
-                      "biometric-authentication",
-                      "reg-expression",
-                      "appium-app-performance",
-                      "appium-ios-app-settings",
-                      "adb-commands-support",
-                      "login-google-android",
-                      "disable-screenshot-block",
-                      "basic-authentication-for-web-automation",
-      
-                    ],
+                  items: [
+                    "appium-python-behave",
+                    "appium-python-robot",
+                    "appium-python-gauge",
+                    "appium-python-pytest",
+                  ],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Ruby",
+                  link: {
+                    type: "doc",
+                    id: "appium-ruby",
                   },
-                  {
-                    type: "category",
-                    collapsed: true,
-                    label: "Smart TV Automation",
-                    items: ["appium-appletv", "appium-firetv", "appium-rokutv"],
+                  items: ["appium-ruby-cucumber", "appium-ruby-rspec"],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "PHP",
+                  link: {
+                    type: "doc",
+                    id: "appium-php",
                   },
-                  {
-                    type: "category",
-                    collapsed: true,
-                    label: "Integrations",
-                    items: ["appium-inspector"],
+                  items: ["appium-php-behat"],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "C#",
+                  link: {
+                    type: "doc",
+                    id: "appium-csharp",
                   },
-                  {
-                    type: "category",
-                    collapsed: true,
-                    label: "Local Testing",
-                    items: ["testing-apps-locally"],
-                  },
-                  "migrate-appium-tests-from-browserstack-and-saucelabs",
-                  
-                ],
-              },
-            ]
+                  items: ["appium-csharp-nunit"],
+                },
+                "appium-kotlin",
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Setup",
+              items: [
+                "desired-capabilities-in-appium",
+                "supported-appium-versions",
+                "list-of-supported-locales",
+                "app-testing-apis",
+                "appium-lambdatest-hooks",
+                "appium-install-uninstall-lambdatest-hooks",
+                "appium-uploading-retrieving-files",
+                "appium-firebase-app-upload",
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Features",
+              items: [
+                "camera-image-injection",
+                "biometric-authentication",
+                "reg-expression",
+                "app-auto-network-throttling",
+                "appium-app-performance",
+                "appium-ios-app-settings",
+                "adb-commands-support",
+                "login-google-android",
+                "disable-screenshot-block",
+                "basic-authentication-for-web-automation",
+
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Smart TV Automation",
+              items: ["appium-appletv", "appium-firetv", "appium-rokutv"],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Integrations",
+              items: ["appium-inspector"],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Local Testing",
+              items: ["testing-apps-locally"],
+            },
+            "migrate-appium-tests-from-browserstack-and-saucelabs",
+          ],
+        },
+      ]
     ],
 
     EspressoTestingSidebar: [
@@ -864,20 +834,18 @@ module.exports = {
             "getting-started-with-espresso-testing",
             "debug-espresso-tests",
             {
-     
               type: "category",
               collapsed: true,
               label: "Speedup Espresso Tests",
               items: [
-                
                 {
                   type: "doc",
                   label: "Sharding for Espresso",
                   id: "sharding-espresso",
                 },
-                "speedup-espresso",
+                "speedup-espresso"
               ]
-        
+
             },
             "getting-started-with-flutter-dart-android-automation",
             "espresso-junit-report",
@@ -887,19 +855,19 @@ module.exports = {
     ],
 
     XCUITestingSidebar: [
-          {
-            type: 'link',
-            label: '<- Back',
-            href: '/docs/',
-            customProps: {
-            className: 'back-to-main-menu'
-            },
-          },
-          [
-            {
-              type: "category",
-              collapsed: true,
-              label: "XCUI Testing",
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: true,
+          label: "XCUI Testing",
               items: [
                 "getting-started-with-xcui-testing",
                 "ios-ipa-files-xcui",
@@ -912,11 +880,11 @@ module.exports = {
                     "filters-xcui",
                   ],
                 },
-                ,
+                "xcui-xml-report",
               ],
-            },
-          ]
-    ],
+        },
+      ]
+],
 
     HyperExecuteSidebar: [
       {
@@ -955,9 +923,14 @@ module.exports = {
           label: "HyperExecute YAML",
           link: {
             type: "doc",
-            id: "deep-dive-into-hyperexecute-yaml",
+            id: "hyperexecute-yaml-parameters",
           },
           items: [
+            {
+              type: "doc",
+              label: "Deep Dive into HyperExecute YAML",
+              id: "deep-dive-into-hyperexecute-yaml",
+            },
             {
               type: "doc",
               label: "HyperExecute Yaml Version 0.2",
@@ -1035,11 +1008,6 @@ module.exports = {
             },
           ],
         },
-        // {
-        //     type: "doc",
-        //     label: "Run your first Hyperexecute test",
-        //     id: "hyperexecute-sample-test",
-        //   },
           {
             type: "doc",
             label: "HyperExecute vs Traditional Grids",
@@ -1083,16 +1051,22 @@ module.exports = {
               {
                 type: "category",
                 collapsed: true,
-                label: "Detailed Test Reports and Logs",
-                link: {
-                  type: "doc",
-                  id: "hyperexecute-reports",
-                },
+                label: "Job Artifacts and Reports",
                 items: [
                   {
                     type: "doc",
-                    label: "Download via UI or HyperExecute YAML ",
-                    id: "hyperexecute-reports-download",
+                    label: "HyperExecute Job Artifacts ",
+                    id: "hyperexecute-artifacts",
+                  },
+                  {
+                    type: "doc",
+                    label: "HyperExecute Job Reports ",
+                    id: "hyperexecute-reports",
+                  },
+                  {
+                    type: "doc",
+                    label: "Test Artifact Management",
+                    id: "hyperexecute-artifacts-url",
                   },
                   {
                     type: "doc",
@@ -1110,11 +1084,6 @@ module.exports = {
                 type: "doc",
                 label: "Jobs Prioritization",
                 id: "hyperexecute-prioritize-tests",
-              },
-              {
-                type: "doc",
-                label: "Test Artifact Management",
-                id: "hyperexecute-artifacts-url",
               },
               {
                 type: "doc",
@@ -1241,9 +1210,17 @@ module.exports = {
                 },
                 items: [
                   {
-                    type: "doc",
+                    type: "category",
+                    collapsed: true,
                     label: "Tosca",
-                    id: "tosca-integration-hyperexecute",
+                    link: {
+                      type: "doc",
+                      id: "tosca-integration-hyperexecute",
+                    },
+                    items: [
+                      "tosca-integration-with-hyperexecute-using-commander",
+                      "tosca-integration-with-hyperexecute-using-dex",
+                    ]
                   },
                   {
                     type: "doc",
@@ -1409,11 +1386,6 @@ module.exports = {
                     label: "C#",
                     items: ["playwright-dotnet-on-hyperexecute"],
                   },
-                  {
-                    type: "doc",
-                    label: "Consolidated Playwright HTML Report",
-                    id: "playwright-html-report"
-                  }
                 ],
               },
               {
@@ -1423,7 +1395,6 @@ module.exports = {
                 items: [
                   "cypressv9-on-hyperexecute",
                   "cypressv10-on-hyperexecute",
-                  "cypress-mochaawesome-report"
                 ],
               },
               {
@@ -1547,8 +1518,37 @@ module.exports = {
               },
               {
                 type: "doc",
-                label: "How to Debug your Failed Job",
-                id: "hyperexecute-how-to-debug-job",
+                label: "HyperExecute Widgets",
+                id: "hyperexecute-widgets"
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Debugging Guide",
+                items: [
+                  "hyperexecute-how-to-debug-job",
+                  "hyperexecute-cli-error",
+                  "hyperexecute-pre-steps-error",
+                  "hyperexecute-scenario-steps-error",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "HyperExecute Job Reports",
+                link: {
+                  type: "doc",
+                  id: "hyperexecute-job-reports",
+                },
+                items: [
+                  "extent-report",
+                  "native-extent-report",
+                  "allure-reports",
+                  "cucumber-report",
+                  "playwright-html-report",
+                  "specflow-report",
+                  "cypress-mochaawesome-report",
+                ]
               },
 
               {
@@ -1559,8 +1559,68 @@ module.exports = {
                   "saucelabs-to-hyperexecute-migrate",
                 ],
               },
-
             ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Release Notes",
+            link: {
+              type: "doc",
+              id: "hyperexecute-release-notes",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "Release Notes 2.1.1",
+                id: "hyperexecute-release-notes-2-1-1",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 2.1.0",
+                id: "hyperexecute-release-notes-2-1-0",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 1.139.0",
+                id: "hyperexecute-release-notes-1-139-0",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 1.138.0",
+                id: "hyperexecute-release-notes-1-138-0",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 1.137.0",
+                id: "hyperexecute-release-notes-1-137-0",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 1.136.0",
+                id: "hyperexecute-release-notes-1-136-0",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 1.135.0",
+                id: "hyperexecute-release-notes-1-135-0",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 1.134.0",
+                id: "hyperexecute-release-notes-1-134-0",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 1.133.0",
+                id: "hyperexecute-release-notes-1-133-0",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 1.131.0",
+                id: "hyperexecute-release-notes-1-131-0",
+              },
+            ]
           },
       ],  
     ],
@@ -2142,7 +2202,7 @@ module.exports = {
                 "zapier-integration-with-lambdatest",
                 "axosoft-integration",
 
-                
+
               ],
             },
             {
@@ -2258,6 +2318,7 @@ module.exports = {
                 "tricentis-tosca-integration",
                 "ghost-inspector-integration",
                 "accelq-integration",
+                "algoshack-integration",
               ],
             },
     
@@ -2319,6 +2380,7 @@ module.exports = {
                 "xcode-plugin-lambdamax",
                 "android-studio-plugin-lambdroid",
                 "docker-tunnel-extension",
+                "gradle-integration-with-lambdatest"
               ],
             },
             "zalenium-integration-with-lambdatest",
@@ -2330,7 +2392,6 @@ module.exports = {
             "siesta-integration",
             "testcomplete-integration",
             "testrigor-integration",
-            "algoshack-integration",
             "localstack-integration-with-lambdatest",
             "genrocket-integration",
           ],
@@ -2379,7 +2440,6 @@ module.exports = {
           id: "group-and-filter-your-test-builds-using-build-tags",
         },
       ]
-
     ],
 
     AccountManagementSidebar: [

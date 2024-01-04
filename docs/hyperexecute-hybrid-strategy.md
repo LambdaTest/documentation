@@ -50,7 +50,7 @@ For Matrix jobs involving numerous combinations, execution time might be longer.
 - **Time-Saving Potential of Hybrid Approach :**
 The Hybrid Strategy is a time-saving solution for matrix-intensive jobs. By harnessing parallelism, you can expedite testing without compromising coverage.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/hyp_hybrid.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/hybrid/hyp_hybrid.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 Based on the above instructions passed as parameters in your [YAML](#sample-yaml-file) file, HyperExecute will now generate Virtual Machines.
 - 1 VM for Win + Chrome
@@ -99,7 +99,7 @@ macParallelism: 3
     
 ```bash
 matrix:
-  os: [macos, win, linux] 
+  os: [mac, win, linux] 
   var: [1,2,3] 
 runson: ${matrix.os}
 ```

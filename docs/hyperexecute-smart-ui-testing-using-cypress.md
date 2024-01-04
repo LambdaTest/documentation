@@ -3,7 +3,7 @@ id: hyperexecute-smart-ui-testing-using-cypress
 title: Smart UI Testing Using HyperExecute
 hide_title: true
 sidebar_label: Using Cypress
-description: Enhance bug detection with LambdaTest Smart Visual UI Regression Testing! Easily identify visual deviations and regression bugs in new builds for flawless application delivery.
+description: Boost bug detection speed using HyperExecute smart UI testing with Cypress. Perform Visual UI Regression Testing for perfect app delivery.
 keywords:
   - smart ui testing in lambdatest
   - smart ui testing in hyperexecute
@@ -148,8 +148,8 @@ To execute the project run the below command in your terminal at the root folder
 
 - Click on the **Smart UI Tests** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/cyp-hyp-smartui/1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/cypress/1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 - Click on **Compare** button to compare the changes made.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/cyp-hyp-smartui/2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/cypress/2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>

@@ -205,7 +205,7 @@ public class AndroidApp {
             //Changes color to pink
             color.click();
             Thread.sleep(1000);
-            //Back to original color
+            //Back to orginal color
             color.click();
 
             MobileElement text = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/Text");

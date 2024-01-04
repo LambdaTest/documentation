@@ -63,7 +63,7 @@ To integrate Azure DevOps Pipeline with HyperExecute, follow the below steps:
 ### 2. Create a New Project
  Go to the top-right corner of your Azure Devops profile page and click the **+ New Project** button.
 
-<img loading="lazy" src={require('../assets/images/azure-he/1.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/azure/1.png').default} alt="Create New Project" width="" height=""/>
 
 Follow the prompts to successfully create a new project.
 
@@ -71,7 +71,7 @@ Follow the prompts to successfully create a new project.
 
 Next, you need to create a new pipeline. To create a new pipeline, click the **Pipelines** button from the left panel or from the main page.
 
-<img loading="lazy" src={require('../assets/images/azure-he/2.png').default} alt="Create New Pipeline" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/azure/2.png').default} alt="Create New Pipeline" width="" height=""/>
 
 ### 4. Configure the Azure Pipeline YAML to Execute Hyperexecute CLI Binary:
 
@@ -101,13 +101,13 @@ Here, the **main** branch is selected as the test repository to commit the Azure
 - **Steps:** In the **steps** section, declare the flow of the pipeline execution. 
 - **Script:** In the **script** section, state the command that you would like to execute in the following steps: 
     - Download a fresh version of the HyperExecute CLI binary
-    - Execute the Hyperexecute CLI binary. (The Hyperexecute CLI binary contains LambdaTest username, access key and path   of the Yaml created for Hyperexecute. You can find more information on this [here.](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/))
+    - Execute the Hyperexecute CLI binary. (The Hyperexecute CLI binary contains LambdaTest username, access key and path   of the Yaml created for Hyperexecute. You can find more information on this [here.](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid))
 
 > **Note**: Ensure that your username and access key for your LambdaTest account is visible in the script. 
 
 ***
 
-<img loading="lazy" src={require('../assets/images/azure-he/3.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/azure/3.png').default} alt="Create New Project" width="" height=""/>
 
 ***
 
@@ -118,12 +118,12 @@ To run the new pipeline that you just created, click the **Run** or **Save and R
 <p></p>
 
 **An example of how a test that is run on the Azure DevOps pipeline gets executed:**
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/azure_execution.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/azure/azure_execution.png').default} alt="Create New Project" width="" height=""/>
 
 <p></p>
 
 **An example of a Hyperexecute job that was triggered through the above pipeline:**
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/azure_execution2.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/azure/azure_execution2.png').default} alt="Create New Project" width="" height=""/>
 
 
 >

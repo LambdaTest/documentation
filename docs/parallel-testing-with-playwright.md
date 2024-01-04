@@ -186,4 +186,3 @@ On clicking the session name of the respective test, you can view the details of
     </li>
   </ul>
 </nav>
-

@@ -43,7 +43,7 @@ HyperExecute's Matrix Multiplexing Strategy allows you to execute test cases acr
 
 By utilizing the Matrix Multiplexing Strategy, you can parallelize your testing process and achieve faster results. HyperExecute generates permutations and combinations using key-value pairs, launching virtual machines for each combination and running tests in parallel.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/hyp_matrix.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/matrix/hyp_matrix.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 ## Configuration and Execution
 ***
@@ -113,19 +113,22 @@ Let’s take a case where the test scenarios are implemented in Java. Files File
 Assuming that you created a matrix but there is one specific combination that you don't want the system to consider. This can happen for instance if you have a combination of Safari and Windows which won't be a valid combination, in such cases you can exclude such a combination using the `exclude` option as shown below.
 ``` yaml
 #runson defines the OS of your test execution node.
-runson: win
+runson: ${matrix.os}
 
 matrix:
   # Browser version(s) separated by Comma
   version: ["latest"]
+  # OS name sepataed by Coma
+  os: [win, mac, linux]
   # Browser name separated by Comma
   browser: ["Chrome", "Firefox", "brave"]
   # Test Files separated by Comma
   files: ["@File1","@File2"]
 exclude:
-# this would exclude the combination of brave browsers and File2
+# this would exclude the combination of brave browser, linux OS and File2
     browser: ["brave"]
     files: ["@File2"]
+    os: [linux]
 ```
 
 <nav aria-label="breadcrumbs">

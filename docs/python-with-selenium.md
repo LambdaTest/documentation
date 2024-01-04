@@ -65,7 +65,7 @@ By the end of this topic, you will be able to:
 Before you can start performing **Python** automation testing with **Selenium**, you would need to:
 
 * Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
-* Make sure **pip** is installed in your system. You can install **pip** from [here](https://pip.pypa.io/en/stable/installation/).
+* Make sure **pip** is installed in your system. You can install **pip** from [https://pip.pypa.io/en/stable/installation/](https://pip.pypa.io/en/stable/installation/).
 * Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/). Latest versions of **Selenium Client** and **WebDriver** are ideal for running your automation script on LambdaTest Selenium cloud grid.
 
 ### Installing Selenium Dependencies and Tutorial Repo

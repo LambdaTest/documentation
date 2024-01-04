@@ -305,6 +305,24 @@ public class MavenParallel implements IExecutionListener{
 	}
 }
 ```
+## Enable Parallel Testing With Maven Tunnel using Serentiy BDD
+* * *
+In order to trigger parallel test execution with Maven Tunnel using Serenity BDD, you will need to specify the dependency of `lambdatest-tunnel-binary` with the exclusion of TestNG dependency in `MavenParallel.xml` file.
+
+```js
+<dependency>
+   <groupId>com.github.lambdatest</groupId>
+   <artifactId>lambdatest-tunnel-binary</artifactId>
+   <version>2.0.0</version>
+   <exclusions>
+      <exclusion>
+         <groupId>org.testng</groupId>
+         <artifactId>testng</artifactId>
+      </exclusion>
+   </exclusions>
+</dependency>
+```
+
 
 ## Optional Arguments For LambdaTest Tunnel
 * * *

@@ -98,10 +98,6 @@ A new widget can easily be added to a dashboard by clicking on the `Add Widget` 
 
 One can select the widgets they want to add from the variety of widgets available and click on the `Update Dashboard` button to update the dashboard with the new widgets.
 
-### How long is the Analytics Dashboard share link valid for?
-
-The Analytics Dashboard share link expires after **7 days** from creation. 
-
 ### What LambdaTest products does Analytics support?
 
 Analytics is currently supported by 3 LambdaTest products

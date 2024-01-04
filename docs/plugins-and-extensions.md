@@ -52,15 +52,7 @@ slug: plugins-and-extensions/
 LambdaTest offers you plugins with various third-party application to help you perform cross browser testing on 3000+ real browsers with pace and convenience. Here are all the plugins and extensions available to integrate LambdaTest and perform testing in a jiffy.
 
 <div className="download_btn mb-10">
-<a href="/docs/wordpress-plugin/">WordPress Plugin</a>
-</div>
-
-<div className="download_btn mb-10">
 <a href="/docs/chrome-extension/">Chrome Extension</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/docs/npm-plugin-for-testcafe-integration-with-lambdatest/">npm Plugin For TestCafe</a>
 </div>
 
 <div className="download_btn mb-10">
@@ -68,19 +60,48 @@ LambdaTest offers you plugins with various third-party application to help you p
 </div>
 
 <div className="download_btn mb-10">
-<a href="/docs/integrate-lambdatest-extension-with-azure-pipelines/">Azure Pipeline Extension</a>
+<a href="/docs/wordpress-plugin/">WordPress Plugin</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="/docs/shopify-integration/">Shopify Plugin</a>
+<a href="/docs/npm-plugin-for-testcafe-integration-with-lambdatest/">npm Plugin For TestCafe</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/docs/fastlane-with-lambdatest/">fastlane Plugin</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/docs/integrate-lambdatest-extension-with-azure-pipelines/">Azure Pipeline Extension</a>
 </div>
 
 <div className="download_btn mb-10">
 <a href="/docs/teamcity-plugin/">TeamCity Plugin</a>
 </div>
 
+
 <div className="download_btn mb-10">
-<a href="/docs/microsoft-teams-app/">Microsoft Teams App Plugin</a>
+<a href="/docs/shopify-integration/">Shopify Plugin</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/docs/vs-code-extension/">LambdaTest VS Code Extension</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/docs/xcode-plugin-lambdatest/">LambdaMax XCode Plugin</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/docs/android-studio-plugin-lambdroid/">LambDroid Espresso Plugin</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/docs/docker-tunnel-extension/">LambdaTest Docker Tunnel Extension</a>
+</div>
+
+<div className="download_btn mb-10">
+<a href="/docs/gradle-integration-with-lambdatest/">Gradle Plugin</a>
 </div>
 
 **Got something to recommend?**  

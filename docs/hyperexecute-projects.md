@@ -36,33 +36,32 @@ slug: hyperexecute-projects/
       })
     }}
 ></script>
-# Hyperexecute Projects
-
+# HyperExecute Projects
 Hyperexecute allows you to setup custom projects on the GUI itself, giving the flexibility and agility for test execution.
 
 ## Steps to setup the Project
 
 **Step 1:** Go to the **Projects** section. Click on the **Setup new Project** to create your projects on HyperExecute.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/projects/hyp-projects-view.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/hyp-projects-view.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 **Step 2:** You need to provide a **Project Name** and select what type of **Tool** are you using to run test cases, test suites in your project. Click on **Continue** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/projects/hyp-projects-create.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/hyp-projects-create.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 **Step 3 :** You need to provide the basic details as per the **Tools** you have selected in the Step 2.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/projects/hyp-projects-setup.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/hyp-projects-setup.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 **Step 4 :** Once the initial one time setup is done, HyperExecute will list down your test cases, test suites, execution lists, based on your type of tool/framework on the GUI. 
 
 In order to execute the tests, you can just select whatever tests you want to run and hit the "Run" button on your screen.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/projects/hyp-projects-suite-view.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/hyp-projects-suite-view.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 **Step 5 :** You can provide the number of concurrent sessions you want to execute your test cases just in time. HyperExecute will intelligently split your tests across the given concurrency and run your tests at the fastest speed possible.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/projects/hyp-projects-run.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/hyp-projects-run.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 
 <nav aria-label="breadcrumbs">

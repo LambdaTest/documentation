@@ -207,10 +207,10 @@ chmod u+x ./hyperexecute
 ```
 
 - Now, go to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and click on your executed Job.
-<img loading="lazy" src={require('../assets/images/app-automation/espresso-he.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/espresso/espresso-he.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 - Click on the **View Test** button to check the logs in the App Automation Dashboard. 
-<img loading="lazy" src={require('../assets/images/app-automation/espress-he-app.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/espresso/espress-he-app.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 
 ## Additional Details

@@ -3,7 +3,7 @@ id: hyperexecute-auto-split-strategy
 title: Auto-Test Splitting Strategy
 hide_title: true
 sidebar_label: Auto Split Strategy
-description: Master HyperExecute Auto-Split Strategy with LambdaTest Support. Streamline Your Test Automation Efforts for Ultimate Efficiency.
+description: Explore HyperExecute Auto Split Strategy | Optimize Testing Efficiency - Discover how HyperExecute revolutionizes testing with auto split strategy for enhanced efficiency.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -47,10 +47,10 @@ The Smart **Auto Split Strategy** enables you to distribute tests across multipl
 - Maximization of concurrency for faster results.
 
 #### Without HyperExecute Auto Split
-<img loading="lazy" src={require('../assets/images/hyperexecute/WO_HYP_Autosplit.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/autosplit/WO_HYP_Autosplit.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 #### With HyperExecute Auto Split
-<img loading="lazy" src={require('../assets/images/hyperexecute/W_HYP_Autosplit.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/autosplit/W_HYP_Autosplit.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 > HyperExecute provides flexibility to distribute tests at file level, scenario level, module level, and practically anything, provided you have a way to list down all the possible values of the entity that has to be distributed.
 
@@ -109,7 +109,7 @@ concurrency: 7
 
 The Test Execution Tasks [1..7] run in parallel whereas tests within each Task, run in a serial manner. Considering the above test scenario, this is how the tests would be executed on HyperExecute:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/hyperexecute_4.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/autosplit/autosplit_explain.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 * Test Executor - 1: 4 tests (running in a sequence)
 * Test Executor - 2: 4 tests (running in a sequence)

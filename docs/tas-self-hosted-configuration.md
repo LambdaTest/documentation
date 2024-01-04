@@ -29,12 +29,12 @@ All the configuration parameters are explained in detail below.
 ***
 
 ### LambdaTest Secret Key
-This specify secret key will be provided to you after logging in and selecting the TAS Self-Hosted mode. It is required to link your self hosted environment with the TAS server. <br/>
+This specify secret key will be provided to you after login in and selecting the TAS Self-Hosted mode. It is required to link your self hosted environment with the TAS server. <br/>
 
 **Example** 
 ```json
 "Lambdatest": {
-  "SecretKey": "SecretKeyForLambdaTest"
+  "SecretKey": "add-your-secret-key-here"
 }
 ```
 
@@ -63,7 +63,7 @@ To create a new token you can use the following steps.
 **Example** 
 ```json
 "Git": {
-  "Token": "GitToken",
+  "Token": "add-your-git-token-here",
   "TokenType": "bearer"
 }
 ```
@@ -78,7 +78,7 @@ This parameter would already contain the correct values inside your downloaded *
 **Example** 
 ```json
 "ContainerRegistry": {
-  "ImagePull": "always",
+  "PullPolicy": "always",
   "Mode": "public",
   "Username": "registryUsername",
   "Password": "registryPassword"
@@ -87,7 +87,7 @@ This parameter would already contain the correct values inside your downloaded *
 
 | Key | Type | Usage |
 | --- | ---- | ----- |
-| `ContainerRegistry.ImagePull` | `string` | Defines when to pull images: `always`, `never` (keep never if image is present in local system) |
+| `ContainerRegistry.PullPolicy` | `string` | Defines when to pull images: `always`, `never` (keep never if image is present in local system) |
 | `ContainerRegistry.Mode` | `string` | Image is private or public: `public`, `private` |
 | `ContainerRegistry.Username` | `string` | Registry username if the image is private |
 | `ContainerRegistry.Password` | `string` | Registry password if the image is private |
@@ -104,8 +104,8 @@ Your repositories might need some secrets while compiling or during test executi
 **Example** 
 ```json
 "RepoSecrets": {
-  "repository1":{
-    "AWS_REGION": "us-east-1",
+  "synapse":{
+    "SAMPLE_SECRET_KEY": "sample_secret_value"
   }
 }
 ```
@@ -154,19 +154,19 @@ Here is a sample configuration file for TAS setup on self hosted environment.
     "Consolelevel": "error"
   },
   "Lambdatest": {
-    "SecretKey": "dummysecretkey"
+    "SecretKey": "add-your-secret-key-here"
   },
   "Git": {
-    "Token": "dummytoken",
+    "Token": "add-your-git-token-here",
     "TokenType": "bearer"
   },
   "ContainerRegistry": {
-    "ImagePull": "always",
+    "PullPolicy": "always",
     "Mode": "public"
   },
   "RepoSecrets": {
     "synapse":{
-      "AWS_REGION": "us-east-1",
+      "SAMPLE_SECRET_KEY": "sample_secret_value"
     }
   }
 }

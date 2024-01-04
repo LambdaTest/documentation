@@ -159,6 +159,26 @@ To debug the discovery of the snooper, configure the following command as per th
 
 > **Note:** .hyperexecute and snooper binary are created only after first execution of the yaml file.
 
+#### How to effectively utilize tags incorporating various custom parameters for enhanced functionality?
+
+- Snooper discovery can be customized where you can use set of tags that you want to discover the tests.
+
+```bash
+specificTags: ["@tag1","@tag2"]
+```
+
+- Discovery can also be customized by passing logical query in the snooper using `query` tag:
+
+```bash
+query: ["((@tag1 or @tag2) and not @tag3)"]
+```  
+
+- You can also skip the tests that have some specific tags using `ignoredTags`:
+
+```bash
+ignoredTags : ["@tag3","@tag2"]
+```
+
 ## Sample YAML File
 ***
 Here is a sample HyperExecute file with cucumber 7 and above to discover all the feature files without any tags.

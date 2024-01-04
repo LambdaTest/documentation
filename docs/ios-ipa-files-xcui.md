@@ -48,9 +48,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 ---
 
-Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. LambdaTest lets you perform automated app testing of your iOS apps using XCUITest across 3000+ real devices and OS combinations.
-
-The resigning of application is done to embed our provisioning profile into the uploaded .ipa file. This allows our apps to install and launch on cloud device.
+Creating and testing iOS applications is a multi-step process that involves a series of precise actions to ensure your app functions as intended. This document guides you through the essential steps required to prepare your app for distribution and to create test packages using **Xcode**, which will be used for XCUI testing.
 
 ## Objectives
 
@@ -58,37 +56,24 @@ The resigning of application is done to embed our provisioning profile into the 
 
 By the end of this topic, you will be able to:
 
-1. Create .ipa files for testing
-2. Create an XCUITest Package
-3. Create .app files for XCUITest testing
+1. Create .ipa app for testing
+2. Create an XCUITest package (with .ipa extension)
+3. Aligning iOS Deployment Target for XCUITest Testing.
+
 ---
 ## 1. Create .ipa files for testing
 
-In Xcode, there are two common methods to create **.ipa** files for iOS app distribution. The first method involves creating an **.app** bundle and then converting it into an **.ipa** file, while the second method directly creates the .ipa file.
+In Xcode, there are two common methods to create **.ipa** files for iOS app distribution. The first method directly creates the .ipa file, while the second method involves creating an .app bundle and then converting it into an .ipa file.
+### Method 1: Create .ipa app 
 
-### Method 1: Create .ipa Files from .app Bundle
-
-1. Open your app project in Xcode.
-2. For your Product's device target, select either **Generic iOS Device** or **Any iOS Device (arm64).**
-3. Go to the **Product** menu and select **Clean** to ensure a clean build.
-4. Again, go to the **Product** menu and select **Build.**
-5. The **.app file** is generated in your Xcode project's **Products Directory**.
-
-1. Create an empty directory named `Payload`.
-2. Move the .app file to the `Payload` directory.
-3. Create an archive (.zip file) by compressing the `Payload` directory.
-4. Rename this archive and append `.ipa` at the end. This creates an **.ipa file**.
-
-### Method 2: Directly Create .ipa Files
-
-You can directly create .ipa files using various export methods (Ad Hoc, Enterprise, or Development) for distribution. The App Store type is not included in this method.
+You can directly create .ipa files using various export methods (**Ad Hoc, Enterprise,** or **Development**) for distribution. The App Store type is not included in this method.
 
 1. Open your project in Xcode.
-2. Choose "Generic iOS Device" or "Any iOS Device (arm64)" for the project's device target.
+2. Choose **Generic iOS Device** or **Any iOS Device (arm64).** for the project's device target.
 3. Go to the **Product** menu and select **Clean** to ensure a clean build.
 4. Again, go to the **Product** menu and select **Archive.** Your app will be listed under the **Archives** after the process is completed.
 5. Choose your app from the list and click **Distribute App.**
-6. Select an export method (Ad Hoc, Enterprise, or Development).
+6. Select an export method (**Ad Hoc, Enterprise, Development**).
 7. Configure the Distribution options as follows:
    - **App Thinning:** None
    - Unselect the option **Rebuild from Bitcode.**
@@ -97,8 +82,27 @@ You can directly create .ipa files using various export methods (Ad Hoc, Enterpr
 8. Choose your Distribution Certificate and Provisioning Profile (Automatic or Manual). This will create the **.ipa** file.
 9. Once the export is complete, you will be prompted to specify the location where you want to save the **.ipa** file. Choose the desired location for saving the generated .ipa file.
 10. You can use the generated .ipa file for testing on the **LambdaTest** Platform.
+### Method 2: Create .ipa app from .app bundles
 
-## 2. Create an XCUITest Package
+1. Open your app project in Xcode.
+2. For your Product's device target, select either **Generic iOS Device** or **Any iOS Device (arm64).**
+3. Go to the **Product** menu and select **Clean** to ensure a clean build.
+4. Again, go to the **Product** menu and select **Build.**
+5. The **.app file** is generated in your Xcode project's **Products Directory**.
+
+6. After generating the **.app** bundle, proceed with building an **.ipa** file:
+
+   6.1. Firstly, create an empty directory with the name `Payload`.
+
+   6.2. Move the .app file to the `Payload` directory.
+
+   6.3. Make an archive (.zip file) by compressing the `Payload` directory.
+
+   6.4. Rename this archive and append `.ipa` at the end. This creates an **.ipa file**.
+
+
+
+## 2. Create an XCUITest Package (.ipa)
 
 1. Open your application project in Xcode.
 
@@ -117,7 +121,7 @@ Now, for creating an **.ipa** from the **.app** bundle, follow these additional 
 
    6.1. Firstly, create an empty directory with the name `Payload`.
 
-   6.2. Move the .app file to the `Payload` directory.
+   6.2. Move the .app files to the `Payload` directory.
 
    6.3. Make an archive (.zip file) by compressing the `Payload` directory.
 

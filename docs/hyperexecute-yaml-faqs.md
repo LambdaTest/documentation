@@ -107,6 +107,7 @@ concurrency: 2
 autosplit: true
 tunnelOpts:
   global: true
+
 preDirectives:
   commands:
   - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install 
@@ -146,11 +147,11 @@ You can set up your Gradle project with HyperExecute by configuring the runtime 
 
 ```bash
 runtime:
-      language: java
-      version: 17
-	  addons:
-	    - name: "gradle"
-	      version: "7.0"
+  language: java
+  version: 17
+  addons:
+    - name: "gradle"
+	  version: "7.0"
 ```
 ***
 
@@ -176,9 +177,7 @@ testRunnerCommand: mvn test `-DselectedTests="$test" `-Dmaven.repo.local=./.m2 d
 ```
 In this example, **browser** and **version** are the two choice parameters from Jenkins, as shown in the image below. You can call them in the YAML file as ${browser} and ${version} in the testRunnerCommand or testDiscovery command.
 
-<img loading="lazy" src={require('../assets/images/he-yaml/hyperexecute-yaml-faqs.png').default} alt="Image" style={{width: '1000px',}} className="doc_img"/>
-
-***
+<img loading="lazy" src={require('../assets/images/hyperexecute/faq/hyperexecute-yaml-faqs.png').default} alt="Image" style={{width: '1000px',}} className="doc_img"/>
 
 ```bash
 testDiscovery: 
@@ -196,10 +195,10 @@ testRunnerCommand: mvn test `-DselectedTests="$test" `-Dmaven.repo.local=./.m2 d
 You can solve this problem by using HyperExecute's inheritance feature. This feature allows you to inherit the configurations of a base YAML file and saves you the time of configuring the YAML file multiple times. 
 
 ```bash
-  base:
-    yamls:
-      - ./<baseConfiguration1.yaml>
-      - ./<baseConfiguration2.yaml>
+base:
+  yamls:
+    - ./<baseConfiguration1.yaml>
+    - ./<baseConfiguration2.yaml>
 ```
 
 To learn more about how to use this feature, go through [this page](/support/docs/hyperexecute-inherit-config/).
@@ -212,11 +211,11 @@ To learn more about how to use this feature, go through [this page](/support/doc
 You can use the `sourcePayload` parameter for the same. Your test scripts are directly sourced from your Git provider with the help of secure access tokens and only your HyperExecute YAML file is encrypted and uploaded through the HyperExecute CLI. To learn more about how this feature works, go through [this page](/support/docs/hyperexecute-how-to-configure-sourcePayload/).
 
 ```bash
-  sourcePayload:
-    platform: git
-    link: https://--------
-    ref: master
-    accessToken: <your_personal_access_token>
+sourcePayload:
+  platform: git
+  link: https://--------
+  ref: master
+  accessToken: <your_personal_access_token>
 ```
 
 ***
@@ -227,26 +226,35 @@ You can use HyperExecute’s video recording feature even while running non-hub 
 
 `captureScreenRecordingForScenarios: true`
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-faqs/yaml-10.png').default} alt="Image"  className="doc_img"/>
-
-***
-
-
+<img loading="lazy" src={require('../assets/images/hyperexecute/faq/yaml-10.png').default} alt="Image"  className="doc_img"/>
 
 You can access the recorded video on the Tasks page by clicking on the **Watch Video** button on the right-hand side of your test. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-faqs/yaml-video.png').default} alt="Image"  className="doc_img"/>
-
-***
-
+<img loading="lazy" src={require('../assets/images/hyperexecute/faq/yaml-video.png').default} alt="Image"  className="doc_img"/>
 
 You can use this feature if you want to trigger a command and want to record it. This will also be useful when you want to record any applications that were triggered on your desktop during the test execution process. 
 
 ***
 
+#### 12. How to check if there is any private dependency in testng YAML?
+
+We can detect any private dependency in testng YAML using `analyze` flag in CLI.
+
+***
+
+#### 13. How to handle Maven SSL Cert Error while executing the test?
+
+Pass this maven arguments which require to handle mvn ssl cert errors
+
+```bash
+-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
+```
+
+***
+
 For more information on the HyperExecute YAML file, visit this [page](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
->If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
+>If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

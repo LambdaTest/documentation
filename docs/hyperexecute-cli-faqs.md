@@ -50,7 +50,7 @@ slug: hyperexecute-cli-faqs/
 
 #### 2. **I am not able to open HyperExecute on MacOS because the developer is not verified. What do I do?**
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute-faqs/he-faq-1.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/faq/he-faq-1.png').default} alt="Image"  className="doc_img"/>
 
   The binary for Mac is unsigned. You might get a permission denied warning while executing HyperExecute on macOS and linux machines. To allow permissions you can use the following command: `chmod u+x ./hyperexecute`.
   Thus, you might see a security popup on whether to allow the execution of the tool or not. You can allow it from your **System Preferences** → **Security & Privacy** → **General** tab.
@@ -65,11 +65,7 @@ slug: hyperexecute-cli-faqs/
 
   If you want more help with debugging your issues, you can always contact [support@lambdatest.com](mailto:support@lambdatest.com) and provide them with this file along with your Job ID. 
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute-faqs/cli-log.png').default} alt="Image"  className="doc_img"/>
-  
-  
-
-  
+  <img loading="lazy" src={require('../assets/images/hyperexecute/faq/cli-log.png').default} alt="Image"  className="doc_img"/>
 
 ***
 

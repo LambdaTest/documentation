@@ -233,7 +233,7 @@ Run the below command in your downloaded CLI to trigger your test scripts in the
 
 Here is the output in the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute/jobs).
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/sl_hyp_migration/1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/sl_hyp_migration/1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ## Troubleshooting
 

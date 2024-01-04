@@ -47,8 +47,23 @@ The LambdaTest and Notion integration allows you to perform one-click bug loggin
 ## Integrating Notion With LambdaTest Account
 ***
 
-*If you already have a LambdaTest integration with any third-party tool then you will be asked to uninstall the existing LambdaTest integration.*
+### For existing users: Re-Sync your Integration
 
+If you are already an existing user and have integrated Notion with LambdaTest earlier, then you have to re-sync the integration to update the changes.
+
+Follow the below-mentioned method to re-sync the changes:
+
+**Step 1:** Go to the Integrations page.
+
+**Step 2:** Click on the **Resync** button to re-sync the changes made.
+
+<img loading="lazy" src={require('../assets/images/notion-integration/resync-notion.png').default} alt="Image" width="1353" height="622"  className="doc_img"/>
+
+***
+
+### For new users: Install the Integration
+
+> If you already have a LambdaTest integration with any third-party tool then you will be asked to uninstall the existing LambdaTest integration.
 
 1. Login to your LambdaTest account. To install integrations, ensure you have admin or user level access.
 
@@ -83,7 +98,7 @@ The Notion will be successfully integrated with your LambdaTest account. You'll 
 
 <img loading="lazy" src={require('../assets/images/notion-integration/board.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
-3. Give a relevant title to your Kanban board.
+3. Give a relevant title and add your desired properties in the board.
 
 <img loading="lazy" src={require('../assets/images/notion-integration/kanban.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
