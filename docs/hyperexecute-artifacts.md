@@ -105,7 +105,7 @@ uploadArtefacts:
       - allure-results/
 ```
 
-As shown in the above code, the artifacts folder generated will be named as **chrome-latest-1** and **firefox-latest-2**
+As shown in the above code, the artifacts folder generated will be named **chrome-latest-1** and **firefox-latest-2**
 
 :::
 
