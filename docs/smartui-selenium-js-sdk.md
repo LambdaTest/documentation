@@ -49,7 +49,9 @@ import NewTag from '../src/component/newTag';
     }}
 ></script>
 
-Elevate your Selenium automated tests with SmartUI SDK integration. By seamlessly integrating SmartUI into your testing suite, you can effortlessly identify visual differences in your web application and streamline your visual testing workflow.
+Welcome to the world of simplified visual testing with the SmartUI SDK. 
+
+Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
 
 ## Pre-requisites for running tests through SmartUI SDK
 
@@ -137,7 +139,7 @@ Once, the configuration file will be created, you will be seeing the default con
       "edge",
       // Add more browser configuration here
     ],
-    "resolutions": [
+    "viewports": [
       [
         1920,
         1080
