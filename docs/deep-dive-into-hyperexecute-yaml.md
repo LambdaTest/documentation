@@ -239,6 +239,29 @@ maxRetries: 2
 
 ***
 
+## `retryOptions`
+
+Regular Expressions provides more granular control over when test retries are triggered. You can achieve this through **`retryOptions`** flag.
+
+- You can specify precise error patterns using regular expressions to determine which errors should initiate retries.
+- It works seamlessly with Cypress, CDP, and Selenium framework tests.
+- It is supported in both YAML 0.1 and 0.2
+
+### Configuration:
+
+- Set `retryOnFailure: true` to activate the retry feature.
+- Indicate the maximum number of retry attempts with `maxRetries: <number>`.
+- Within the `retryOptions` section, create an `errorRegexps` array to list the regular expressions that represent the errors you want to trigger retries.
+
+```bash
+retryOnFailure: true
+maxRetries: 3
+retryOptions:
+  errorRegexps: ["org.openqa.selenium.NoSuchElementException"]
+```
+
+***
+
 ## `testDiscovery`
 The testDiscovery key is used to locate or discover relevant tests via class names, filters, file names, etc. 
 ```bash
