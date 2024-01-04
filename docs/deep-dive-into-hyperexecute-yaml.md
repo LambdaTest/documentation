@@ -122,6 +122,23 @@ runtime:
       version : "7.0"
 ```
 
+- You can also provide **multiple languages** and their **specified versions** that you want installed on your machine.
+
+```bash
+runtime:
+  - language: java
+    version: '17'
+    addons:
+      - name: gauge
+        version: '1.5.6'
+      - name: gradle
+        version: '7.6'
+  - language: python
+    version: '3.10'
+  - language: node
+    version: '16'
+```
+
 ***
 ## `jobLabel`
 The `jobLabel` YAML key is used to add tags or labels to jobs. This allows you to search your jobs using the labels or tags assigned to them. 
@@ -971,9 +988,7 @@ Setting **autosplit** to true will distribute the `scenarios` among the concurre
 
 If you want to distribute you **m** commands on **n** VMs automatically and you don’t need to bother much about which all commands are grouped together on a single VM, you can use the **autosplit** feature for this purpose.
 
-
 For instance, you have a parallelism of 10 and you want to run 50 commands in total. Using autosplit, the system will distribute these 50 commands on 10 Vms in the most efficient manner possible. Each VM(`task`) will receive some commands to run out of these 50 commands.
-
 
 > Note: In `static mode`, these commands will be distributed among VMs smartly(AI) using history data, such that each VM(`task`) gets to run for almost the same amount of time. This is to reduce the total `job` time.
 
