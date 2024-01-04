@@ -94,17 +94,17 @@ Before getting started with the setup, you would have to follow these steps:
 ---
 
 - Once you install **Charles**, you would have to navigate to **"Install Charles Root Certificate"** under **Help** section.
-  <img loading="lazy" src={require('../assets/images/charles/charles8.webp').default} alt="cmd" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/charles/charles8.webp').default} alt="cmd" className="doc_img" width="2880" height="1800" />
 
   ***
 
 - On clicking, you need to grant the access to install the certificate to your system. Then you will be able to view the certificate in **Mac's Keychain Access** as shown
-  <img loading="lazy" src={require('../assets/images/charles/charles10.webp').default} alt="cmd" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/charles/charles10.webp').default} alt="cmd" className="doc_img" width="1778" height="1100"/>
 
   ***
 
 - Now you need to open the installed certificate and select **"Always Trust"** option under the **Trust** section. This gives permission to the Charles Proxy to access the network resources from the system. Here you would have to grant the access again to save the modified settings.
-  <img loading="lazy" src={require('../assets/images/charles/charles9.webp').default} alt="cmd" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/charles/charles9.webp').default} alt="cmd" className="doc_img" width="1834" height="1120"/>
 
 ## Getting the Port Number
 
@@ -112,7 +112,7 @@ Before getting started with the setup, you would have to follow these steps:
 
 Now, navigate to the **Proxy Settings** on Charles to view the **Port Number** used by the Charles Proxy in your system.
 
-<img loading="lazy" src={require('../assets/images/charles/charles1.webp').default} alt="cmd" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/charles/charles1.webp').default} alt="cmd" className="doc_img" width="1398" height="600"/>
 
 ---
 
@@ -130,7 +130,7 @@ Now you need to setup and configure the LambdaTest Tunnel through which you will
 
 To configure the tunnel, you need to download the **LambdaTest's Tunnel Binary File** following the steps mentioned in the pre-requisites before. You can find the shell command in the [LambdaTest Dashboard](https://accounts.lambdatest.com/dashboard) to setup a basic tunnel.
 
-<img loading="lazy" src={require('../assets/images/charles/charles2.webp').default} alt="cmd" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/charles/charles2.webp').default} alt="cmd" className="doc_img" width="806" height="544"/>
 
 ---
 
@@ -146,7 +146,7 @@ But here we need to add the Charles proxy server through which we want to route 
 
 You need to run the above command from the terminal in the directory where you have extracted the **LT binary file** as shown. Make sure that **Charles Proxy Session** is up and running before you can start the tunnel. Now once the tunnel is setup, you will be able to see **"You can start testing now"** in the terminal as shown.
 
-<img loading="lazy" src={require('../assets/images/charles/charles3.webp').default} alt="cmd" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/charles/charles3.webp').default} alt="cmd" className="doc_img" width="1400" height="613"/>
 
 ### Through Underpass
 
@@ -180,7 +180,7 @@ Now there are 2 ways of enabling **SSL proxying** without which we will not be a
 ### Method 1: Adding domains
 
 - Navigate to **SSL Proxying Settings** under **Proxy** section.
-  <img loading="lazy" src={require('../assets/images/charles/charles4.webp').default} alt="cmd" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/charles/charles4.webp').default} alt="cmd" className="doc_img" width="1992" height="800"/>
 
   ***
 
@@ -216,7 +216,7 @@ That's it, now all the Network logs will start to show up and we can interact wi
 
 ## Mocking data 
 
-Charles Proxy offers the ability to mock the data that is being passed to and from.
+Charles Proxy offers the ability to mock the data that is being passed to and for.
 Let's look at one such example.
 
 The clean data looks something like this:

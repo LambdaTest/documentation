@@ -235,7 +235,7 @@ byte[] fileBase64 = driver.PullFile("@com.lambdatest.proverbial:documents/sample
 
 </Tabs>
 
-<!-- Akshay -->
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

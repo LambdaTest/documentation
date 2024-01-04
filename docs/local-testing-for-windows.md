@@ -152,7 +152,7 @@ You will receive the below highlighted messages indicating the termination on SS
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-15.webp').default} alt="Image"  className="doc_img"/>
 
-**Option 2:** You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button That's says **“Tunnel active”**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'x'. Hit the 'x' to terminate the SSH tunnel.
+**Option 2:** You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button that's says **“Tunnel active”**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'x'. Hit the 'x' to terminate the SSH tunnel.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-16.webp').default} alt="Image"  className="doc_img"/>
 

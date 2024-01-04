@@ -74,7 +74,18 @@ LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 
 <img loading="lazy" src={require('../assets/images/buildkite-integration/username-accesskey.png').default} alt="Add username and accesskey" width="1365" height="650" className="doc_img"/>
 
-**Step 4:** Add steps for execution
+**Step 4:** Add steps to add lambdatest-buildkite plugin
+
+To add a plugin to a `command` step, use the `plugins` attribute. The `plugins` attribute accepts an array, so you can add multiple plugins to the same step.
+
+```
+steps:
+  - command: 'yarn && yarn LT test'
+    plugins:
+      - lambdatest/lambdatest~
+```
+
+**Step 5:** Add steps for execution
 
 The commands to run for test execution are to be mentioned as steps here. For example, the steps can be prerequisite package installs,  executing the testing code etc.
 
@@ -88,13 +99,13 @@ You can add additional steps by clicking on the `Add` button. Once all the steps
 
 <img loading="lazy" src={require('../assets/images/buildkite-integration/add-steps.png').default} alt="Add steps" width="1365" height="650" className="doc_img"/>
 
-**Step 5:** Adding an agent
+**Step 6:** Adding an agent
 
 The next step is adding an agent. In this example, a local MacOS agent is used. If you have a custom agent already setup, this step is skipped.
 
 <img loading="lazy" src={require('../assets/images/buildkite-integration/agent.png').default} alt="Add agent" width="1365" height="650" className="doc_img"/>
 
-**Step 6:** Create and run a build
+**Step 7:** Create and run a build
 
 After the pipeline is created, we can create a build. To create a build, click the `New Build` button. In the popup, add the name of the build and the branch to build. Click `Create Build.`
 

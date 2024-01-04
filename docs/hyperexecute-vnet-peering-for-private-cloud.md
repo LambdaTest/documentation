@@ -51,19 +51,19 @@ You can enable Vnet peering and Vnet linking in your account by following the pr
 
 - Navigate to the search bar in your Azure account and search for **Deploy Custom Template**. Select the option which matches the searched name.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-vnet-peering-for-private-cloud/1.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/vnet-peering/1.png').default} alt="Image"  className="doc_img"/>
 
 ***
 
 - You will be able to see **Custom Deployment** page.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-vnet-peering-for-private-cloud/2.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/vnet-peering/2.png').default} alt="Image"  className="doc_img"/>
 
 ***
 
 - Click on **Build your own template in the editor** to go to the **Edit template** section.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-vnet-peering-for-private-cloud/3.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/vnet-peering/3.png').default} alt="Image"  className="doc_img"/>
 
 ***
 
@@ -202,7 +202,7 @@ You can enable Vnet peering and Vnet linking in your account by following the pr
   }
 
 ```
-<img loading="lazy" src={require('../assets/images/hyperexecute-vnet-peering-for-private-cloud/4.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/vnet-peering/4.png').default} alt="Image"  className="doc_img"/>
 
 ***
 
@@ -229,17 +229,17 @@ You can enable Vnet peering and Vnet linking in your account by following the pr
         
     -   **Redis Private Dns Zone Name :** Private DNS zone name for the Redis Virtual Network Link. Please do not change this unless and until it is required.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-vnet-peering-for-private-cloud/5.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/vnet-peering/5.png').default} alt="Image"  className="doc_img"/>
 
 ***
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-vnet-peering-for-private-cloud/6.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/vnet-peering/6.png').default} alt="Image"  className="doc_img"/>
 
 ***
 
 - Click on the **Review + create** button present at the bottom of the page to navigate to the page shown below.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-vnet-peering-for-private-cloud/7.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/vnet-peering/7.png').default} alt="Image"  className="doc_img"/>
 
 ***
 

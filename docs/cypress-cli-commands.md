@@ -86,7 +86,7 @@ Given below are the additional flags available with the `run` command.
 | **--envs, --environment** ( For Cypress 10)      | Set environment variables to configure before your test runs |String |
 | **--tun, --tunnel**                | Configure LambdaTest tunnel                            |String |
 | **--tname, --tunnel_name**         | Set the name of LambdaTest tunnel name                 |String |
-| **--brs, --browsers**              | Test will be run on the specified browsers<br/> in the format: `platform:browser:version` <br /><br /> e.g. **`--brs="MacOS Catalina:chrome:latest"`** |String |
+| **--brs, --browsers**              | Test will be run on the specified browsers<br/> in the format: `platform:browser:version` <br /><br /> e.g. **`--brs="MacOS Catalina:chrome:latest"`**  <br /><br /> **`--brs="MacOS Catalina:chrome:112.0,MacOS mojave:firefox:111.0"`** |String |
 | **--bi, --build-identifier**       | Build identifier or build counter                      |String |
 | **--if, --ignore_files**          | Files to ignore in the zip project                      |String |
 | **--sync, --sync-mode**           | Wait on terminal to get the status of the tests          |String |
@@ -169,5 +169,4 @@ Given below are the additional arguments available with the `build-stop` command
     </li>
   </ul>
 </nav>
-
 

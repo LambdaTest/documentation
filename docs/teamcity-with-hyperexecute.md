@@ -63,16 +63,16 @@ To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 - Now type **http://localhost:8111/** in your browser to open the TeamCity GUI.
 - Click on Create Project button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/teamcity/Step1.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step1.webp').default} alt="Image"  className="doc_img"/>
 
 ### Step 2: Create the Project
 
 - For the demo purposes, we will be using the GitHub repository to create the project. Thus, select **From a repository URL** section.
 - Enter the **Repository URL** from which you want to set up the project.
-- Enter the **Username** and **Password** of your GitHub. (It is required In case the access to the repo needed authentication).
+- Enter the **Username** and **Password** of your GitHub. (It is required in case the access to the repo needed authentication).
 -  Click on **Proceed** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/teamcity/Step2.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step2.webp').default} alt="Image"  className="doc_img"/>
 
 ### Step 3: Connect your Version Control System.
 
@@ -83,17 +83,17 @@ To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 - If you want that besides your default branch, TeamCity should monitor other branches too, define it in the **Branch specification** section.
 - Click on **Proceed** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/teamcity/Step3.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step3.webp').default} alt="Image"  className="doc_img"/>
 
 ### Step 4: Start the build process
 
 - Configure your build setup either **automatically** (fetched by your VCS) or **manually**. For the demo purpose, we will configure the build process manually.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/teamcity/Step4.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step4.webp').default} alt="Image"  className="doc_img"/>
 
 - Select the **Command Line** for the build setup
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/teamcity/Step5.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step5.webp').default} alt="Image"  className="doc_img"/>
 
 - Enter the **Step name** (optional).
 - Select the **Custom Script** in the **Run** field.
@@ -110,14 +110,14 @@ chmod +x hyperexecute
   - **Linux** -> linux <br />
   - **Windows**-> windows
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/teamcity/Step6.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step6.webp').default} alt="Image"  className="doc_img"/>
 
 ### Step 5: Build process is complete
 
 - Now your build process is completed. This will take a couple of minutes to completely execute all the stages.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/teamcity/Step7.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step7.webp').default} alt="Image"  className="doc_img"/>
 
 - After the build is successful, go to your LambdaTest Dashboard and check the output of the triggered Job.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/teamcity/Step8.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step8.webp').default} alt="Image"  className="doc_img"/>

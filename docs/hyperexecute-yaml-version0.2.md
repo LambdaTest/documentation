@@ -136,12 +136,14 @@ framework:
 ```
 
 ### `discoveryType`
-Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".
+Specifies the level at which user wants to discover the tests. Supported values are "method" and "class". The default is "method".
 
 ```bash
 framework:
   name: maven/testng
+  #highlight-next-line
   discoveryType: method
+  # instead of method you can also use xmltest or class as a discovery type
   flags:
     - "-Dplatname=win"
 ```

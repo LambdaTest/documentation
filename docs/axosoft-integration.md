@@ -51,8 +51,13 @@ slug: axosoft-integration/
 
 Axosoft is a versatile project management tool designed for Agile teams and organizations seeking to streamline their project planning, tracking, and collaboration. With features for Agile methodologies, collaborative workspaces, roadblock identification, risk management, sprint planning, and goal setting, it empowers teams to work efficiently, eliminate obstacles, and achieve project success across various industries and project management styles.
 
+<div className="ytframe"> 
+<div className="youtube" data-embed="0mkUc57rXtc">
+    <div className="play-button"></div>
+</div>
+</div>
 
-Axosoft Integration with LambdaTest streamlines the software development team's project management and testing processes. With a simple one-click integration, you can seamlessly create and manage issues during cross [browser testing](https://www.lambdatest.com/online-browser-testing). This integration enables you to push annotated issues to specific projects, assign them to team members, set priorities, and attach relevant screenshots during test sessions. The created issues are automatically reflected in your Axosoft workspace, complete with test session details and annotated screenshots, facilitating efficient issue tracking and resolution within your project management environment.
+Axosoft Integration with LambdaTest streamlines the software development team's project management and testing processes. With a simple one-click integration, you can seamlessly create and manage issues during [cross browser testing](https://www.lambdatest.com/online-browser-testing). This integration enables you to push annotated issues to specific projects, assign them to team members, set priorities, and attach relevant screenshots during test sessions. The created issues are automatically reflected in your Axosoft workspace, complete with test session details and annotated screenshots, facilitating efficient issue tracking and resolution within your project management environment.
 
 Axosoft Integration with LambdaTest, like all of the integrations to 3rd party applications, is available for freemium and premium plans.
 

@@ -150,10 +150,11 @@ Shown below is the file path for uploading on both desktop and mobile operating 
 
 |Operating System  | Default Download Path |
 |------------- | --------------------------|
-| Windows  | C:\Users\ltuser\Downloads |
-| macOS | /home/ltuser/Downloads |
+| Linux | /home/ltuser/Downloads |
+| Windows | C:\\Users\ltuser\Downloads |
+| macOS | /Users/ltuser/Downloads |
 | Android | /storage/emulated/0/Android/data/com.android.chrome/files/Download/ |
-| iOS  |/Users/ltuser/Downloads/ios/media |
+| iOS | /Users/ltuser/Downloads/ios/media |
 
 For example, let's say you want to upload a file on a web page via test script, then the sample Java code for this operation (on Windows and macOS) will be:
 

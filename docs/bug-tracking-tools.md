@@ -48,6 +48,8 @@ import TabItem from '@theme/TabItem';
 
 # Integrate with LambdaTest to report and track bugs
 
+---
+
 <div className="download_btn mb-10">
 <a href="https://www.lambdatest.com/support/docs/jira-integration/">Jira Integration With LambdaTest</a>
 </div>
@@ -112,29 +114,9 @@ import TabItem from '@theme/TabItem';
 <a href="https://www.lambdatest.com/support/docs/bugsnag-integration/">Bugsnag Integration With LambdaTest</a>
 </div>
 
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/devrev-integration/">DevRev Integration With LambdaTest</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/fogbugz-integration/">FogBugz Integration With LambdaTest</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/airbrake-integration/">Airbrake Integration With LambdaTest</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/userback-integration/">Userback Integration With LambdaTest</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/zenkit-integration/">Zenkit Integration With LambdaTest</a>
-</div>
-
 :::info Note
 
-If your favourite Bug Tracking tool is not in the list above mentioned, you can just give us a <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**shout**</span> and we will have it ready shortly for you.
+If your favourite Bug Tracking tool is not in the list above mentioned, you can just give us a <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**shout**</span> and we will have it ready shortly for you.
 
 :::
 

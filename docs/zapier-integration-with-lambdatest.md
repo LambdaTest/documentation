@@ -9,7 +9,7 @@ keywords:
   - cross browser testing
   - zapier dashboard
   - automation on zapier 
-url: https://www.lambdatest.com/support/docs/zapier-integration-with-lambdatest/
+url: https://www.lambdatest.com/support/docs/zapier-integration-with-lambdatest
 site_name: LambdaTest
 slug: zapier-integration-with-lambdatest/
 ---

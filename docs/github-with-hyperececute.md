@@ -106,7 +106,7 @@ For triggering tests using HyperExecute CLI, you have to download the HyperExecu
 
 HyperExecute CLI provides different command-line flags that let you customize the HyperExecute experience. Once you download the HyperExecute CLI in your machine, run the command *hyperexecute.exe --help* on the terminal to explore the different flags.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/hyperexecute_3.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cli/cli-help.png').default} alt="Image"  className="doc_img"/>
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

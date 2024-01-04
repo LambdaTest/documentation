@@ -43,6 +43,12 @@ slug: pivotal-tracker-integration/
 
 Pivotal Tracker offers a project management platform on cloud. Designed for Agile teams, the tracker helps you organize your release cycle through an intuitive dashboard where everyone can monitor who is working on what, along with their upcoming tasks! Also, a shared backlog is there to help the team prioritize tasks which require more attention. Tracker automatically calculates your team's velocity by analyzing the past iterations, to help you calculate ETAs on your future sprints.
 
+<div className="ytframe"> 
+<div className="youtube" data-embed="auUaheszuvs">
+    <div className="play-button"></div>
+</div>
+</div>
+
 LambdaTest integration with Pivotal Tracker will help you instantly log UI bugs from LambdaTest to your projects on the Pivotal Tracker. That way, you can report any cross browser compatibility issues with your team as soon as you encounter them while cross browser testing with LambdaTest.
 
 ## How To Integrate Pivotal Tracker With Your LambdaTest Account?

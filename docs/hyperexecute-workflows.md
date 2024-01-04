@@ -36,7 +36,7 @@ slug: hyperexecute-workflows/
       })
     }}
 ></script>
-# Hyperexecute Workflows
+# HyperExecute Workflows
 
 > This is currently under the **Beta** version.
 
@@ -45,7 +45,7 @@ You can setup scheduled workflows on HyperExecute platform to enable scheduled t
 ## Steps to setup the Workflow
 
 **Step 1:** Go to the **Workflows** section. Click on the **Add Workflow** to create and schedule workflows for your test project on HyperExecute.
-<img loading="lazy" src={require('../assets/images/hyperexecute/workflows/hyp-workflow-start.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/smart-workflow/hyp-workflow-start.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 **Step 2:** Provide all the necessary details in order to setup the workflow:
 
@@ -57,15 +57,15 @@ You can setup scheduled workflows on HyperExecute platform to enable scheduled t
 
 Click on **Continue** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/workflows/hyp-workflow-add.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/smart-workflow/hyp-workflow-add.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 **Step 3:** Now provide the details of time slots during which you want your tests to be executed. Click on **Create Workflow** button
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/workflows/hyp-workflow-time.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/smart-workflow/hyp-workflow-time.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 The HyperExecute platform will make sure that the jobs are initiated on the scheduled time.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/workflows/hyp-workflow-added.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/smart-workflow/hyp-workflow-added.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 
 

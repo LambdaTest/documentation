@@ -1,6 +1,6 @@
 ---
 id: test-intelligence-overview
-title: Unleashing the Potential of Test Intelligence - A New Era of QA Testing
+title: AI-powered Test Intelligence For Advance Test Analysis
 sidebar_label: Test Intelligence
 description: Test Intelligence is an AI-powered analytics module that helps you to identify the flaky tests in your test suite. It provides you with the list of tests that are flaky and the reason behind the flakiness of the test.
 keywords:
@@ -39,7 +39,7 @@ import NewTag from '../src/component/newTag';
 
 ## Introduction to Test Intelligence
 
-We are thrilled to introduce a revolutionary platform that will transform the way you approach QA testing. With advanced AI algorithms and powerful analysis capabilities, Test Intelligence empowers you to enhance the quality and efficiency of your testing processes.
+With advanced AI algorithms and powerful analysis capabilities, Test Intelligence empowers you to enhance the quality and efficiency of your testing processes.
 
 Join the wait list today and be the first to experience the power of Test Intelligence. We will notify you as soon as the platform is ready for use.
 
@@ -51,10 +51,6 @@ type="button"
 > 
 Click here to Join Waitlist 
 </a>
-
-## Why Test Intelligence? 
-
-In today's fast-paced digital landscape, traditional testing methods no longer suffice. That's where <img loading="lazy" src="https://www.lambdatest.com/resources/images/testLogo.svg" alt="cmd" style={{width:"2%"}} className="doc_img"/> Test Intelligence comes in. Our platform offers a range of cutting-edge features designed to address the challenges faced by QA teams and unlock their full potential.
 
 ## Features of Test Intelligence
 

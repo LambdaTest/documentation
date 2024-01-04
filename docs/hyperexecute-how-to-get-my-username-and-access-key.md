@@ -43,21 +43,15 @@ slug: hyperexecute-how-to-get-my-username-and-access-key/
 This page explains where you can find your LT Username and Access Key. 
 ***
 
-
 1. Go to the right side Profile dropdown and select `Account Settings`.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-knowledgebase/hyperexecute-how-to-get-my-username-and-access-key-cta.png').default} width="50%" />
-
-
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/username-key/hyperexecute-how-to-get-my-username-and-access-key-cta.png').default} width="50%" />
 
 2. Under Account Settings, go to `Password & Security`
-  <img loading="lazy" src={require('../assets/images/hyperexecute-knowledgebase/hyperexecute-how-to-get-my-username-and-access-key.png').default} width="100%" />
 
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/username-key/hyperexecute-how-to-get-my-username-and-access-key.png').default} width="100%" />
 
 3. You will find your LT Username and Access Key here, this would be required in order to trigger a Job using the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
-
-
-
 
 >If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
 

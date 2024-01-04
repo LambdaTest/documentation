@@ -102,8 +102,8 @@ export LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`$env:LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
-$env:LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+{`set LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
+set LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </CodeBlock>
 </div>
 

@@ -67,6 +67,25 @@ You can also download the logs by clicking on **Download Instrumentation logs**.
 
 <img loading="lazy" src={require('../assets/images/debug-espresso-test/1.png').default} alt="Image" width="1347" Height="610" className="doc_img"/>
 
+#### Retrieving Consolidated Instrumentation Logs
+In-depth insights into your test runs are crucial for effective debugging and optimization. When a more thorough understanding is needed, consolidated instrumentation logs play a pivotal role. Below, you'll find specific curl commands tailored to different scenarios.
+
+#### Non-Sharded Builds
+
+To access consolidated instrumentation logs for a non-sharded build:
+
+```bash
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESSKEY" \
+--location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<YOUR_BUILD_ID>/logs/instrumentation'
+```
+Replace `<YOUR_BUILD_ID>` with your actual build ID.
+#### Sharded Builds
+For sharded builds, use the following curl command:
+```bash
+curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESSKEY" \
+--location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<YOUR_JOB_ID>/logs/instrumentation'
+```
+Replace `<YOUR_JOB_ID>` with your actual job ID.
 
 ### Device Logs
 
@@ -80,7 +99,7 @@ Device Logs are disabled by default & can be enabled by passing the `deviceLog` 
 
 KEY|VALUE|DESCRIPTION
 --|--|--
-| deviceLog            | TYPE: BOOLEAN <br/> DEFAULT: True <br/> `deviceLog = true`<br/> OR `deviceLog = true` | Enable Device logs |
+| deviceLog            | TYPE: BOOLEAN <br/> DEFAULT: False <br/> `deviceLog = false`<br/> OR `deviceLog = true` | Enable Device logs |
 
 ### Network Logs `Will Be Available Soon`
 
@@ -90,7 +109,7 @@ They’re disabled by default & can be enabled using the capability mentioned be
 
 KEY|VALUE|DESCRIPTION
 --|--|--
-| network            | TYPE: BOOLEAN <br/> DEFAULT: FALSE <br/> `network = TRUE`<br/> OR `deviceLog = FALSE` | Enable Device logs |
+| network            | TYPE: BOOLEAN <br/> DEFAULT: FALSE <br/> `network = TRUE`<br/> OR `network = FALSE` | Enable network logs |
 
 ### Video Recording
 
@@ -105,7 +124,7 @@ The video capability is enabled by default as mentioned below.
 
 KEY|VALUE|DESCRIPTION
 --|--|--
-| network            | TYPE: BOOLEAN <br/> DEFAULT: TRUE <br/> `video= TRUE`<br/> OR `video = FALSE` | Video recording of the complete screen |
+| video            | TYPE: BOOLEAN <br/> DEFAULT: TRUE <br/> `video= TRUE`<br/> OR `video = FALSE` | Video recording of the complete screen |
 
 Refer to our [Espresso testing documentation](https://www.lambdatest.com/support/docs/getting-started-with-espresso-testing/#capabilities-supported) for more capabilities.
 

@@ -133,6 +133,75 @@ ltOptions.put("w3c", true);
 browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
+## Setting Browser Options
+---
+
+Selenium lets you set browser arguments for Chromium based browsers. When selecting Chrome, Firefox, and Edge, you can set browser options using `ChromeOptions`, `EdgeOptions`, and `FirefoxOptions` capability as shown below.
+
+**For Chrome**:
+
+```java
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class ChromeTest {
+    public static void main(String[] args) {
+        ChromeOptions options = new ChromeOptions();
+        // Set Chrome capabilities
+        options.addArguments("--headless");
+
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("http://example.com");
+        // Your test code here
+        driver.quit();
+    }
+}
+```
+
+**For Firefox**:
+
+```java
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
+public class FirefoxTest {
+    public static void main(String[] args) {
+        FirefoxOptions options = new FirefoxOptions();
+        // Set Firefox capabilities
+        options.addArguments("--headless");
+
+        WebDriver driver = new FirefoxDriver(options);
+        driver.get("http://example.com");
+        // Your test code here
+        driver.quit();
+    }
+}
+```
+
+**For Edge**:
+
+```java
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+
+public class EdgeTest {
+    public static void main(String[] args) {
+        EdgeOptions options = new EdgeOptions();
+        // Set Edge capabilities
+        options.addArguments("--headless");
+
+        WebDriver driver = new EdgeDriver(options);
+        driver.get("http://example.com");
+        // Your test code here
+        driver.quit();
+    }
+}
+```
+
+
 ## Appium Capabilities
 
 * * *
@@ -725,7 +794,7 @@ In this table, LambdaTest advanced capabilities key,values and capabilities are 
 | network    |true / false <br />disable: stops capturing the console logs <br /> errors: shows only error output in console <br /> warnings: shows warning and error output in the console <br /> info: shows info statement, warning and error output in the console <br />true/verbose: shows all console output"             | Captures a recording for network packets while the test gets executed. By default, the network flag is set as false. <br/>**Note**: test execution time will increase if it’s set as ‘true’.  <br/>```capabilities.setCapability("network",true)```; <br />     | FALSE |networkLogs |recording for newtwork packets |Boolean |```capabilities.setCapability(""network"",true);``` |Case sensitive <br />Network logs not supported|
 | console    | true, false             | Javascript logs will be recorded for the test. By default, it is set as false. <br/>**Note:** test execution time will increase if it’s set as ‘true’.   <br/>```capabilities.setCapability("console",true)```; | FALSE |Capture browser console errors |Capture browser console errors  |String |Javascript logs will be recorded for the test. By default, it is set as false. ```capabilities.setCapability("console","disable");``` |Case Sensitive <br/>No error found <br />Not supported on this browser |
 | tunnel     | true, false      | To test your locally hosted web application with Lambda Tunnel, which establishes an SSH(Secure Shell) connection between your system and our cloud servers. By default, the tunnel flag, will be set as false.  <br/>```capabilities.setCapability("tunnel",true);```  <br/>Find more about Lambda Tunnel from our documentation to test on  [locally hosted web applications.](/docs/testing-locally-hosted-pages/)   | FALSE |local |To test your locally hosted web application with LambdaTest Tunnel which establishes an SSH(Secure Shell) connection between your system and our cloud servers. By default, the tunnel flag, will be set as false. |Boolean |```capabilities.setCapability("tunnel",true);```<br/> Find more about LambdaTest Tunnel from our documentation to test on locally hosted web applications. |Case Sensitive <br/>Tunnel not running |
-| tunnelName | Your desire tunnel name | To provide the tunnel identifier in your test suite capability when user wants to execute the test through a particular tunnel  <br/>```capabilities.setCapability("tunnelName","your desire tunnel name")```;| |localName |Tunnel Name to identify your tunnel among all tunnels in your account |String |```capabilities.setCapability("tunnelName","your desire tunnel name");``` |Case Sensitive   <br/>Tunnel not running   <br />Tunnel Name not exists |
+| tunnelName | Your desire tunnel name | To provide the tunnel identifier in your test suite capability when user wants to execute the test through a particular tunnel  <br/>```capabilities.setCapability("tunnelName","your desire tunnel name")```;| |localName |Tunnel Name to identify your tunnel among all tunnels in your account |String |```capabilities.setCapability("tunnelName","your desire tunnel name");``` |Case Sensitive   <br/>Tunnel not running   <br />Tunnel Name not exisits |
 | timezone   | Example: UTC+07:00      | Represents the custom timezone you select for executing a test.   <br/>```capabilities.setCapability("timezone","UTC+07:00")```;    | UTC+00:00| |Change the timezone of OS |String |```capabilities.setCapability("timezone","UTC+07:00");``` |Case sensitive <br/> Timezone not supported by OS <br />Timezone is different |
 ## View Lighthouse Performance Metrics
 ***
@@ -826,7 +895,7 @@ For example:
 | Ruby |capabilities[“lambdaMaskCommands”] = [“setValues”, “setCookies”, “getCookies”]|
 
 >Got any questions?<br/>
-Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at support@lambdatest.com.
+Please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us at support@lambdatest.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

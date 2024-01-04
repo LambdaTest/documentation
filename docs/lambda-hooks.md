@@ -42,7 +42,7 @@ slug: lambda-hooks/
 
 # Lambda Hooks For Selenium Automation
 * * *
-LambdaTest Selenium Grid offers a set of hooks also known as Lambda Hooks that you can leverage to modify your automation test cases and perform multiple operations in your automation scripts. These hooks are supported for both Web Automation and App Automation as well. 
+LambdaTest Selenium Grid offers a set of hooks also known as Lambda Hooks that you can leverage to modify your automation test cases and perform multiple operations in your automation scripts. 
 
 Below is the representation of the available Lambda Hooks along with the function it performs.
 
@@ -59,7 +59,7 @@ Lambda Hooks  | Descriptions
 
 > **Note**: These hooks will only work if you're connected to your [LambdaTest Hub URL](/support/docs/hyperexecute-general-faqs/#17-how-can-i-access-my-lambdatest-hub-url). If you use these hooks on any other platform, you might see the error: `javascript error: Invalid left-hand side in assignment` 
 
-Got Questions? Give a **<span className="doc__lt" onClick={() => window.openLTChatWidget()}>Shout</span>** to us. We're here for you 24/7. <br />Happy testing! :)
+Got Questions? Give a **<span className="doc__lt" onClick={() => window.openLTChatWidget()}>Shout</span>** to us. We're here for you 24/7. <br />Happy testing! :)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

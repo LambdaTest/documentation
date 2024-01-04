@@ -61,22 +61,24 @@ The platform automatically gets the instructions from the HyperExecute YAML file
 1. Go to the [Quickstart](https://hyperexecute.lambdatest.com/quickstart) page.
 
 2. Select your preferred test automation framework and hit **Get Started**.
-  <img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/run1.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/1.png').default} alt="Image"  className="doc_img"/>
 
 3. You can overwrite the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml) here (Optional).
 Otherwise just click on **Trigger test** to run your first job. 
-  <img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/run2.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/2.png').default} alt="Image"  className="doc_img"/>
 
 4. At this step the test execution is initiated using the HyperExecute CLI in the background.
-  <img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/run3.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/3.png').default} alt="Image"  className="doc_img"/>
 
-5. Click on **Go to dashboard** to navigate to HyperExecute Dashboard where you can see the job getting executed and the test results.
+5. Click on **View Test Result** to navigate to HyperExecute Dashboard where you can see the job getting executed and the test results.
+
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/10.png').default} alt="Image"  className="doc_img"/>
 
 ***
 
 ## 2. Using Local System
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/onboarding.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/onboarding.png').default} alt="Image"  className="doc_img"/>
 
 To run your Test Scripts on HyperExecute from you Local system, you'll need the following:
 - [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file which contains all the necessary instructions.
@@ -89,26 +91,28 @@ We will be taking care of everything one by one, just follow the steps given bel
 
 2. Choose your test automation framework, Select **Run on Local System** and click on **Get Started**. 
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/run4.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/4.png').default} alt="Image"  className="doc_img"/>
 
 3. Download a sample project by clicking on **Code Sample**. (Skip this step if you already have a project you want to test)
 
-    <img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/machine33.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/5.png').default} alt="Image"  className="doc_img"/>
 
 4. Download the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) as per the OS that you are on.
 
-    <img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/machine4.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/6.png').default} alt="Image"  className="doc_img"/>
 
 5. Select the OS on which you want to run your tests and then download the `HyperExecute YAML` file shown on screen. This contains all the configurations required for running tests on HyperExecute. 
 
-    <img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/machine5.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/7.png').default} alt="Image"  className="doc_img"/>
+
+    <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/8.png').default} alt="Image"  className="doc_img"/>
 
    > **Note**: Your Yaml file should be in the root directory of your project. If you are renaming it, also change the file name in the execution script as well. You can learn more about the advanced configurations [here](/support/docs/deep-dive-into-hyperexecute-yaml/), however for the given sample projects you can simply download the file using the small icon on top right. 
 
 6. In order to run your tests, copy the command from screen and run in your terminal: 
-    <img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/machine6.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/9.png').default} alt="Image"  className="doc_img"/>
 
-7. The generic command required to initiate test execution is given below. You will need to insert the [Username, Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) and name of your YAML file in place of the `<your_username>`, `<your_access_key>`  and `<your_yaml_file_name>` before running this command. (Skip if you already used the command from Step 6. )
+7. The generic command required to initiate test execution is given below. You will need to insert the [Username, Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) and name of your YAML file in place of the `<your_username>`, `<your_acess_key>`  and `<your_yaml_file_name>` before running this command. (Skip if you already used the command from Step 6. )
 
     ```bash
     ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>"
@@ -119,7 +123,7 @@ We will be taking care of everything one by one, just follow the steps given bel
 8. When you run this command, the HyperExecute CLI will send your test scripts to the HyperExecute Platform for execution across multiple parallel Test Execution Nodes.
 
 9. Once your Job is running, you can click on **View Test Results** to navigate to HyperExecute Dashboard where you can see the job getting executed along with the test results.
-    <img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/dashboard.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/10.png').default} alt="Image"  className="doc_img"/>
 
 > If you are facing any issues in running your first job? Watch our [Webinar Video](/support/docs/hyperexecute-running-your-first-job/#hyperexecute-webinar-video)
 
@@ -131,12 +135,12 @@ We will be taking care of everything one by one, just follow the steps given bel
 
 2. Choose your test automation framework, select **Run test on Gitpod** and click on **Get Started**.
 
-    <img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/run5.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/11.png').default} alt="Image"  className="doc_img"/>
 
 3. You will need to login into your Gitpod account, or create a new one. <br/>
   (If you are creating a new account, choose your preferred editor. We recommend VS Code)
 
-    <img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/gitpod2.png').default} alt="Image"  className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/12.png').default} alt="Image"  className="doc_img"/>
 
 4. As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
 

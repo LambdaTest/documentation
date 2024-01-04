@@ -158,7 +158,7 @@ Once you integrate LambdaTest integration for Slack, you need to configure notif
 
 <img loading="lazy" src={require('../assets/images/slack-integration/Capture50.webp').default} alt="find the remove button right under the 'Slack' "  width="1365" height="647" className="doc_img"/>
 
->That was all you need to know for LambdaTest + Slack Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing! 
+>That was all you need to know for LambdaTest + Slack Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing! 
 
 
 

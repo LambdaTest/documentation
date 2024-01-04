@@ -2,7 +2,7 @@
 id: getting-started-with-appium-testing
 title: Appium Testing On LambdaTest
 sidebar_label: Appium Testing
-description: Get started with Appium testing using LambdaTest's comprehensive documentation. Kick off your journey to seamless mobile app testing.
+description: Getting Started with Appium Testing on LambdaTest Upload, Script, Execute, View - Run your automation scripts seamlessly on 3000+ real browsers and operating systems.
 keywords:
   - appium
   - java
@@ -19,6 +19,7 @@ slug: getting-started-with-appium-testing/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -77,43 +78,23 @@ If you do not have any **.apk** or **.ipa** file, you can run your sample tests 
 
 ### Step 1: Upload Your Application
 
-Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your iOS application (.ipa file) or android application (.apk file) to the LambdaTest servers using our REST API. You need to provide your Username and AccessKey in the format `Username:AccessKey` in the cURL command for authentication. Here is an example cURL request to upload your app using our REST API:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs className="docs__val">
-  <TabItem value="file" label="App file" default>
+  <TabItem value="MacOS" label="MacOS" default>
 
-<Tabs className="docs__val">
-<TabItem value="macos-file" label="Linux / MacOS" default>
-
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
---location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' \\
---form 'name="Android_App"' \\
---form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"' 
-`}
-</CodeBlock>
-</div>
-
-</TabItem>
-
-<TabItem value="windows-file" label="Windows" default>
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-powershell">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \`
--X POST "https://manual-api.lambdatest.com/app/upload/realDevice" \`
--F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk""
-`}
-</CodeBlock>
-</div>
-</TabItem>
-</Tabs>
+```bash
+curl -u "shantanuw:abcdefghijklmnopqrstuvwxyz" \
+--location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' \
+--form 'name="Android_App"' \
+--form 'appFile=@"/Users/shantanuwali/Desktop/LT_Java_Appium/proverbial_android.apk"'
+```
 
   </TabItem>
-  <TabItem value="url" label="App URL" default>
+  <TabItem value="windows" label="Windows" default>
 
 <Tabs className="docs__val">
 <TabItem value="macos-url" label="Linux / MacOS" default>
@@ -440,7 +421,7 @@ public class iOSApp {
 
 ### Step 3: Execute Your Test Case
 
-Debug and run your code. Run `iOSApp.java` or `AndroidApp.java` in your editor.
+Debug and run your code. Run iOSApp.java or AndroidApp.java in your editor.
 
 ### Step 4: View Test Execution
 

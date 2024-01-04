@@ -14,8 +14,7 @@ url: https://www.lambdatest.com/support/docs/selenium-tests-with-nemojs/
 site_name: LambdaTest
 slug: selenium-tests-with-nemojs/
 ---
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -74,24 +73,19 @@ $ npm install --save-dev nemo
 
 4. To run your Selenium tests with NemoJS, you would need to set your LambdaTest username and access key in the environment variables. To get it, visit [Automation Dashboard](https://automation.lambdatest.com/) and click on the Key button from the top-right.
 
-  * For **Linux/macOS**:
+**For Windows:**
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`export LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
-export LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-</CodeBlock>
-</div>
+``` js
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
 
-  * For **Windows**:
+**For Mac/Linux:**
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`$env:LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
-$env:LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-</CodeBlock>
-</div>
-
+``` js
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+```
 
 5. Install the dependencies by executing the following command.
 

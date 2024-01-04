@@ -54,31 +54,31 @@ HyperExecute is a smart test orchestration platform to run end-to-end tests at t
 
 ## 1\. Triggering a job on Hyperexecute  
 In order to trigger a job on hyperexecute, it requires the [HyperExecute CLI](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and a set of instructions inside the [HyperExecute Yaml](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/) file. When you trigger the CLI command, it connects with the Hyperexecute APIs which then distributes the tests across different machines/nodes for parallel execution as shown in the diagram below:
-<img loading="lazy" src={require('../assets/images/he-real-devices/rd1.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd1.png').default} alt="Image"  className="doc_img"/>
 
 
 ## 2\. Real Devices Test Execution on Hyperexecute
 In case of Real devices test execution the test scripts from the machines run the actual tests on connected real devices as shown in the diagram below:
-<img loading="lazy" src={require('../assets/images/he-real-devices/rd2.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd2.png').default} alt="Image"  className="doc_img"/>
 
 ## 3\. Triggering through local machine
 When you are triggering your test cases from the local machine the flow of data is as shown in the diagram below:
-<img loading="lazy" src={require('../assets/images/he-real-devices/rd3.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd3.png').default} alt="Image"  className="doc_img"/>
 
 ## 4\. Triggering through Jenkins
 In order to execute a job on Hyperexecute via Jenkins, you would need to perform 2 simple steps :  
-<img loading="lazy" src={require('../assets/images/he-real-devices/rd4.png').default} alt="Image"  className="doc_img"/>   
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd4.png').default} alt="Image"  className="doc_img"/>   
 
 
 You can read more about it [here](https://www.lambdatest.com/support/docs/hyperexecute-integration-with-ci-cd-tools/).  When you want the job to be initiated from the Jenkins Pipeline, it would look as shown in the diagram below: 
-<img loading="lazy" src={require('../assets/images/he-real-devices/rd5.png').default} alt="Image"  className="doc_img"/>  
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd5.png').default} alt="Image"  className="doc_img"/>  
 
 ## 5\. How to Trigger Real Device tests on Hyperexecute ?
 All of the above 4 parts were under the assumption that you have set up and executed your test scripts on the Standard [Real Device Automation](https://www.lambdatest.com/support/docs/appium-python-pytest/) offering, hence we had left the APP ID part out, just to make sure you get a hold of the basic flow first. There are multiple ways for you to experience Hyperexecute. However, we have listed down a few ways which are divided into two parts - **Manual and Advanced Usage.**
 
 There are two ways that you can upload your Application:
 
-1. **Generate your appId:** When you are running your test scripts directly on [Real Device Automation](https://www.lambdatest.com/support/docs/appium-python-pytest/), you need to upload the APK/IPA first, which can be done using a simple [cURL command](https://www.lambdatest.com/support/docs/appium-python-pytest/#1-upload-your-application). This can be further done in two ways as explained in the [official documentation](https://www.lambdatest.com/support/docs/appium-python-pytest/#1-upload-your-application). When running your test scripts via HyperExecute, you can use the **_Upload Via URL_** so that the same could be easily replicated every time your APK is updated at the URL you have provided in the cURL command. As a response of this cURL command you will get the APP ID of the format as mentioned below **_“lt://APP123456789123456789”_** 
+1. **Generate your appId:** When you are running your test scripts directly on [Real Device Automation](https://www.lambdatest.com/support/docs/appium-python-pytest/), you need to upload the APK/IPA first, which can be done using a simple [cURL command](https://www.lambdatest.com/support/docs/appium-python-pytest/#1-upload-your-application). This can be further done in two ways as explained in the [official documentation](https://www.lambdatest.com/support/docs/appium-python-pytest/#1-upload-your-application). When running your test scripts via HyperExecute, you can use the **_Upload Via URL_** so that the same could be easily replicated every time your APK is updated at the URL you have provided in the cURL command. As a response of this cURL command you will get the APP ID of the format as mentioned below **_“lt://APP123456789123456789”_** 
 
 
 2. **Provide a custom appId:** Alternatively you can provide any name of your choice as the appId. All you need to do is **_Upload Via URL and provide the parameter “custom_id” in the cURL command._** Here’s a link to the [official documentation](https://www.lambdatest.com/support/docs/app-testing-apis/#uploading-your-application).
@@ -121,9 +121,9 @@ You’re all set to experience Hyperexecute!
 
 ## **Advanced Usage**
 
-Hyperexecute has a way to pass variables in the Hyperexecute Yaml using Hyperexecute CLI flags. We can use a shell script to automate this entire process - upload the app and pass the appId using vars flag and set the value as environment variables. The scripts can use those environment variables in the capabilities to pass the appID. 
+Hyperexecute has a way to pass variables in the Hyperexecute Yaml using Hyperexecute CLI flags. We can use a shell script to automate this entire process - upload the app and pass the appId using vars flag and set the value as environment variables. The scripts can use those environment variables in the capabilities to pass the appID. 
 
-Further, we have divided the scripts into two sections - **Bash Script to be used in Linux or MacOS devices and Powershell Script that can be used in a Microsoft OS.**
+Further, we have divided the scripts into two sections - **Bash Script to be used in Linux or MacOS devices and Powershell Script that can be used in a Microsoft OS.**
 
 ***
 > **Please note: You will need to update the Username, Access Key , APP_URL and APP_NAME as per your use case. Here, for simplicity we have used the APP_NAME variable for the custom_id naming convention. The upload url will remain the same.**
@@ -292,7 +292,7 @@ if ($response.Content -like "*app_url*") {
   Write-Host "Error: $error_message"
 }
 ```
-**Please note:** The [**Hyperexecute YAML**](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/) in this case would be slightly different than before since the appId would be passed as environment variables here. Below is a sample for your reference: 
+**Please note:** The [**Hyperexecute YAML**](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/) in this case would be slightly different than before since the appId would be passed as environment variables here. Below is a sample for your reference: 
 
 ```bash
 version: 0.2
@@ -314,7 +314,7 @@ framework:
 ```
 ## **Support**
 
-We at Lambdatest take pride in our Support system. We ensure that we do the heavy lifting while our customers can focus on the test scripts and strategy. As a first step in the POC, our support engineers conduct a working session over Zoom or Gmeet to understand your use case and provide you with the right configuration to execute your test cases on Hyperexecute. Our support engineers are always available over slack, mail and calls to ensure that we provide you with the right kind of support and set you up for a win. 
+We at Lambdatest take pride in our Support system. We ensure that we do the heavy lifting while our customers can focus on the test scripts and strategy. As a first step in the POC, our support engineers conduct a working session over Zoom or Gmeet to understand your use case and provide you with the right configuration to execute your test cases on Hyperexecute. Our support engineers are always available over slack, mail and calls to ensure that we provide you with the right kind of support and set you up for a win. 
 
 Please feel free to give us a shout if you have any questions or require any assistance.
 

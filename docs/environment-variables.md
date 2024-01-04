@@ -73,7 +73,7 @@ LambdaTest Authentication Credentials consists of two fields:
 
 **Step 2**: You will find your Username & Access Key.
 
-<img loading="lazy" src={require('../assets/images/environment-variables/environment-variables-3.webp').default} alt="Image" width="521" height="268" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/env-variable/environment-variables-3.webp').default} alt="Image" width="521" height="268" className="doc_img"/>
 
 ## Configuring Environment Variables On Mac OSX/Linux Systems
 ***

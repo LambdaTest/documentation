@@ -15,8 +15,6 @@ url: https://www.lambdatest.com/support/docs/karma-integration-with-lambdatest/
 site_name: LambdaTest
 slug: karma-integration-with-lambdatest/
 ---
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -77,24 +75,17 @@ To install node.js with homebrew use the below command.
 
 Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
-  * For **Linux/macOS**:
+* For Windows user:
+```
+set LT_USERNAME=”YOUR_USERNAME”
+set LT_ACCESS_KEY=”YOUR ACCESS KEY”
+```
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`export LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
-export LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-</CodeBlock>
-</div>
-
-  * For **Windows**:
-
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`$env:LT_USERNAME= "${ YOUR_LAMBDATEST_USERNAME()}" 
-$env:LT_ACCESS_KEY= "${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-</CodeBlock>
-</div>
-
+* For macOS/Linux user:
+```
+export LT_USERNAME=”YOUR_USERNAME”
+export LT_ACCESS_KEY=”YOUR ACCESS KEY”
+```
 
 ## Getting Started With Karma Test Runner Installation By Creating A Sample Project
 * * *

@@ -98,7 +98,7 @@ Now commit your job and run the build.
 
 
 **Below is an example of a HyperExecute job that was triggered through the above pipeline:**
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/he-travis-ci.webp').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/travis-ci/he-travis-ci.webp').default} alt="Create New Project" width="" height=""/>
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

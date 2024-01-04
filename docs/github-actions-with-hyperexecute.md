@@ -59,7 +59,7 @@ To integrate GitHub Actions Pipeline with HyperExecute, follow the below steps:
 ### 2. Create a New Workflow
 In the left sidebar, click the **New workflow** button. 
  
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/github_new_workflow.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/github/github_new_workflow.png').default} alt="Create New Project" width="" height=""/>
 
 ### 3. Create the GitHub Actions work-flow YAML file:
 
@@ -120,21 +120,21 @@ In the steps section, you should declare the execution commands.
 
 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/github_action_yaml.png').default} alt="Create New Pipeline" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/github/github_action_yaml.png').default} alt="Create New Pipeline" width="" height=""/>
 
 ### 4. Run the Workflow
 To run the new pipeline that you just created, click the **Run workflow** button on the workflow page.
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/run_workflow.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/github/run_workflow.png').default} alt="Create New Project" width="" height=""/>
 
 <p></p>
 
 **Below is an example of how a test that is run on the GitHub Actions pipeline gets executed:**
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/githubactions_example.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/github/githubactions_example.png').default} alt="Create New Project" width="" height=""/>
 
 <p></p>
 
 **Below is an example of a Hyperexecute job that was triggered through the above pipeline:**
-<img loading="lazy" src={require('../assets/images/hyperexecute/main/githubactions_execution.png').default} alt="Create New Project" width="" height=""/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/github/githubactions_execution.png').default} alt="Create New Project" width="" height=""/>
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

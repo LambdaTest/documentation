@@ -3,7 +3,7 @@ id: semaphore-ci-integration
 title: Semaphore CI Integration With LambdaTest
 hide_title: true
 sidebar_label: Semaphore Integration
-description: Simplify test automation with LambdaTest's Semaphore integration documentation, enhancing your testing workflow.
+description: Boost market delivery with LambdaTest's integration with Semaphore CI and automate tests on a cloud grid with 3000+ real browsers seamlessly.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools
@@ -182,7 +182,7 @@ blocks:
         commands:
           - checkout
           - cd /home/semaphore/protractor-selenium-semaphore-sample
-          - wget https://s3.amazonaws.com/lambda-tunnel/LT_Linux.zip
+          - wget https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip
           #Extracting tunnel binary
           - sudo apt-get install unzip
           - unzip LT_Linux.zip

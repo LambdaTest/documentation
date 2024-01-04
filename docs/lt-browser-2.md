@@ -105,20 +105,13 @@ The following new features are available in LT Browser 2.0:
 To get started with LT Browser 2.0, download the below executable file based on your operating system.
 
 <div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.exe" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser 2.0 For Windows</a>
+<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.exe" onClick={() => window.sendAnalytics('Download LT Browser 2.0')}>Download LT Browser 2.0 For Windows</a>
 </div>   
 
 <div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.dmg" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser 2.0 For macOS</a>
+<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.dmg" onClick={() => window.sendAnalytics('Download LT Browser 2.0')}>Download LT Browser 2.0 For macOS</a>
 </div>
 
-<div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.deb" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser 2.0 For Linux (.deb file)</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.rpm" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser 2.0 For Linux (.rpm file)</a>
-</div>
 
 ## Running Your First Responsive Test
 ---

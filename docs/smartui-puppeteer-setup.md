@@ -154,7 +154,7 @@ node navigation.js
 
 - You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
 
-For additional information about Puppteer framework please explore the documentation [here](https://staging.lambdatestinternal.com/support/docs/puppeteer-testing/)
+For additional information about Puppteer framework please explore the documentation [here](/docs/puppeteer-testing/)
 
 ## Advanced Options for Screenshot Comparison
 

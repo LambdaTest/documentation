@@ -25,7 +25,7 @@ slug: tas-how-to-guides-bb-token/
 > **NOTE:** TAS needs read access to `Account`, `Workspace membership`, `Projects`, `Repositories` and `Pull requests` in order to function properly.
 
 <p align="center">
-<img loading="lazy" src={require('../assets/images/tas/how-to-guides/bb-token.gif').default} alt="generating gitlab token" width="1340" height="617" className="doc_img"/>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2IcoXmxsRrw?si=JjvTbB3JyORocvgD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </p>
 
 <br/>

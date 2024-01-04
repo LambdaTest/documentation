@@ -3,7 +3,7 @@ id: localstack-integration-with-lambdatest
 title: LocalStack Integration With LambdaTest
 hide_title: true
 sidebar_label: LocalStack Integration
-description: Conduct tests at a high speed even without a continuous internet connection. Leveraging LambdaTest's advanced AI solutions enhances the testing experience, leading to improved productivity and efficiency in the development and testing process.
+description: LocalStack is a tool that acts as a drop-in replacement for AWS on your local machine, understand the how LocalStack integration with LambdaTest will help you.
 keywords:
   - lambdatest integrations
   - push issues to localstack
@@ -50,6 +50,8 @@ slug: localstack-integration-with-lambdatest/
 ***
 
 LocalStack is a tool that acts as a drop-in replacement for AWS on your local machine. It works on your laptop or in your CI environment. With LocalStack, you can run your AWS applications or Lambdas on your own computer without needing to connect to a remote cloud provider!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BKjPOhQE2hg?si=Tbd-qeSZvCeqLEdJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 LocalStack and LambdaTest have partnered to create a special combination that makes your tests run faster. Using LocalStack's local cloud emulation abilities and LambdaTest's smart AI solutions, developers and testers can speed up their work and get products out quickly. This collaboration helps you test things faster and bring your products to market sooner.
 

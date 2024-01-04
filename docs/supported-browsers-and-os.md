@@ -39,7 +39,7 @@ LambdaTest supports the below listed browsers, browser versions and Operating Sy
    ],
 ```
 
-| OPERATING SYSTEM | CHROME                   | FIREFOX      | MICROSOFT EDGE                     |
+| OPERATING SYSTEM | CHROME                   | FIREFOX      | EDGE                     |
 | ---------------- | ------------------------ | ------------ | ------------------------ |
 | macOS Ventura    | 66 and above (Except 82) | 60 and above | 80 and above (Except 82) |
 | macOS Monterey   | 66 and above (Except 82) | 60 and above | 80 and above (Except 82) |

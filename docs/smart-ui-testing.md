@@ -3,7 +3,7 @@ id: smart-ui-testing
 title: Smart UI Testing Using HyperExecute
 hide_title: true
 sidebar_label: HyperExecute Smart UI Testing
-description: Enhance bug detection with LambdaTest Smart Visual UI Regression Testing! Easily identify visual deviations and regression bugs in new builds for flawless application delivery.
+description: Improve bug discovery using LambdaTest's Advanced Visual UI Regression Testing. Effortlessly pinpoint visual discrepancies and regression issues in recent builds to ensure impeccable app deployment.
 keywords:
   - smart ui testing in lambdatest
   - smart ui testing in hyperexecute

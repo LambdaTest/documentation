@@ -293,12 +293,12 @@ If you are using the `deviceSelectorStrategy: any`, then in that case all the sp
 
 ```bash
 chmod u+x <cliFileNAme>
-./<cliFileNAme> -user <userName> -key <accessKey> --verbose -i <yamlFileName>.yaml
+./<cliFileNAme> --user <userName> --key <accessKey> --verbose -i <yamlFileName>.yaml
 ```
 
 You can refer to this example and screenshot below:
 ```
-./hyperexecute -user my_user_name -key xyx123abc --verbose -i hyperexecute.yaml
+./hyperexecute --user my_user_name --key xyx123abc --verbose -i hyperexecute.yaml
 ```
 <img loading="lazy" src={require('../assets/images/app-automation/example-folder.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

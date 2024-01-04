@@ -204,10 +204,10 @@ framework:
       mappings:
       - name: shard1
         strategy: "only-testing/skip-testing"
-        values: ["<className> / <className/testName>"]
+        values: ["<className>/<className/testName>"]
      - name: shard2
        strategy: "only-testing/skip-testing"
-       values: [""<className> / <className/testName>"", ""<className> / <className/testName>""]
+       values: [""<className>/<className/testName>"", ""<className>/<className/testName>""]
 ```
 
 :::tip When shards are added
@@ -236,12 +236,12 @@ If you are using the `deviceSelectorStrategy: any`, then in that case all the me
 
 ```bash
 chmod u+x <cliFileNAme>
-./<cliFileNAme> -u <userName> -k <accessKey> --verbose -i <yamlFileName>.yaml
+./<cliFileNAme> --u <userName> --k <accessKey> --verbose -i <yamlFileName>.yaml
 ```
 
 You can refer to this example and screenshot below:
 ```
-./hyperexecute -u my_user_name -k xyx123abc --verbose -i hyperexecute.yaml
+./hyperexecute --u my_user_name --k xyx123abc --verbose -i hyperexecute.yaml
 ```
 <img loading="lazy" src={require('../assets/images/app-automation/example-folder.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
