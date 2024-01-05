@@ -96,8 +96,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [codeDirectory](/support/docs/deep-dive-into-hyperexecute-yaml/#codedirectory) | String |Defines in which directory all of your commands defined in yaml would run. Your code would be downloaded in this directory. | 
 | [cacheTestURL](/support/docs/deep-dive-into-hyperexecute-yaml/#cachetesturl) | Boolean |It enables users to cache static test files. |
 | [afterAll](/support/docs/deep-dive-into-hyperexecute-yaml/#afterall) | Map |It is used to run commands after the job has finished. |
-<!-- | [beforeAll](/support/docs/deep-dive-into-hyperexecute-yaml/#beforeall) | Map |N.A.| -->
-| [captureScreenRecordingForScenarios](/support/docs/deep-dive-into-hyperexecute-yaml/#capturescreenrecordingforscenarios) | bool |If this key is set to true, the video will be recorded for whole scenario execution
+| [captureScreenRecordingForScenarios](/support/docs/deep-dive-into-hyperexecute-yaml/#capturescreenrecordingforscenarios) | bool |If this key is set to true, the video will be recorded for whole scenario execution |
 | [performance](/support/docs/deep-dive-into-hyperexecute-yaml/#performance) | Map |For load testing a command at a specified rate. |
 | [captureCSVResult](/support/docs/deep-dive-into-hyperexecute-yaml/#capturecsvresult) | Boolean |If this directive is enabled, it will generate the performance stats artifact having aggregated information for the time taken by Selenium Commands. |
 | [matrixEnvPrefix](/support/docs/deep-dive-into-hyperexecute-yaml/#matrixenvprefix) | Boolean |This flag is used to prefix env variables with `HE_ENV_` being set when you run a job in “matrix” mode. Default is false. |
@@ -109,7 +108,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [tunnelOpts](/support/docs/deep-dive-into-hyperexecute-yaml/#tunnelopts) | Map | All the configuration related to tunnel will be mention here. Please note tunnelOpts will work along with either `tunnel` or `tunnelNames`. |
 | [tunnelNames](/support/docs/deep-dive-into-hyperexecute-yaml/#tunnelnames) | List of Strings | List of tunnels name which has been registered and running with HyperExecute. |
 | [testRunnerExecutor](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnerexecutor) | String | To switch the test execution from powershell to the command line. |
-|[workingDirectory](/support/docs/deep-dive-into-hyperexecute-yaml/#workingdirectory)| Path of Location |This flag determines where test discovery and execution commands operate, including the creation of associated files or directories.
+|[workingDirectory](/support/docs/deep-dive-into-hyperexecute-yaml/#workingdirectory)| Path of Location |This flag determines where test discovery and execution commands operate, including the creation of associated files or directories. |
 
 ## AutoSplit Mode Parameters
 
