@@ -66,7 +66,7 @@ The first step is to create a project with the application in which we will comb
 
 1. Go to [Projects page](https://smartui.lambdatest.com/)
 2. Click on the `new project` button
-3. Select the platform as <b>CLI</b> for executing your `SDK` tests.
+3. Select the platform as <b>CLI</b> or <b>Web</b> for executing your `SDK` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
@@ -76,8 +76,7 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-**Using Github Sample**
-- You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use `JavaSmartUISDK.java` file.
+You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use `JavaSmartUISDK.java` file.
   
 ```bash
 git clone https://github.com/LambdaTest/smartui-java-testng-sample
@@ -96,7 +95,6 @@ git clone https://github.com/LambdaTest/smartui-java-testng-sample
 	<systemPath> path-to-jar </systemPath>
 </dependency>
 ```
-
 ### **Step 3**: Install the Dependencies
 
 Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
