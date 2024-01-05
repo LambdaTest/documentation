@@ -66,7 +66,7 @@ The first step is to create a project with the application in which we will comb
 
 1. Go to [Projects page](https://smartui.lambdatest.com/)
 2. Click on the `new project` button
-3. Select the platform as <b>CLI</b> for executing your `SDK` tests.
+3. Select the platform as <b>CLI</b> or <b>Web</b> for executing your `SDK` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
@@ -76,8 +76,7 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-**Using Github Sample**
-- You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `SmartUI_SDK.js` file.
+You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `sdk.js` file present in the `sdk` folder.
 
 ```bash
 git clone https://github.com/LambdaTest/smartui-node-sample
@@ -87,8 +86,25 @@ git clone https://github.com/LambdaTest/smartui-node-sample
 Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
 
 ```bash
-npm i @lambdatest/selenium-driver -g @lambdatest/smartui-cli
+npm init
 ```
+
+```bash
+npm i -g @lambdatest/smartui-cli
+```
+```bash
+npm i @lambdatest/selenium-driver 
+```
+```bash
+npm i selenium-webdriver
+```
+
+:::info
+To ensure seamless execution of ES6 modules within our repository, it is essential to configure the Node.js environment to recognize ES6 module syntax. This is accomplished by specifying the module type in your `package.json` file.
+```bash
+"type": "module"
+```
+:::
 
 ### **Step 3:** Configure your Project Token
 
@@ -102,7 +118,7 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -203,7 +219,7 @@ import { smartuiSnapshot } from '@lambdatest/selenium-driver';
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-smartui exec node <Test fIle name>.js
+smartui exec node <fileName>.js
 ```
 
 :::note 
