@@ -86,17 +86,7 @@ git clone https://github.com/LambdaTest/smartui-node-sample
 Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
 
 ```bash
-npm init
-```
-
-```bash
-npm i -g @lambdatest/smartui-cli
-```
-```bash
-npm i @lambdatest/selenium-driver 
-```
-```bash
-npm i selenium-webdriver
+npm i @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
 ```
 
 :::info
@@ -140,7 +130,7 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
-smartui config:create smartui-web.json
+npx smartui config:create smartui-web.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
@@ -204,8 +194,6 @@ import { smartuiSnapshot } from '@lambdatest/selenium-driver';
         // Please specify your driver and the screenshot name in this function
         // driver - selenium driver instance (required)
         // Screenshot_Name - Name of the screenshot ; unique to each screenshot (required)
-        await driver.get('https://www.example.com');
-        await smartuiSnapshot(driver, '<Screenshot Name>');
     } finally {
         await driver.quit();
     }
@@ -219,11 +207,11 @@ import { smartuiSnapshot } from '@lambdatest/selenium-driver';
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-smartui exec node <fileName>.js
+npx smartui exec node <fileName>.js
 ```
 
 :::note 
-You may use the `smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
+You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
 :::
 
 ##  View SmartUI Results
