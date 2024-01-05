@@ -85,7 +85,7 @@ Click on **Save** button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-dex/step6.png').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-**Step 8:** Now set the total number of **Concurrent Sessions** that you want to run on HyperExecute and click on the **Run** button.
+**Step 8:** Now set the total number of **Concurrent Sessions** that you want to run on HyperExecute, enable the [Retry on Failure](#auto-retry-for-non-assertion-errors) (optional) and click on the **Run** button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-dex/step7.png').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
@@ -94,3 +94,27 @@ Click on **Save** button.
 You can also download the video output.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-dex/step9.png').default} alt="Image" width="1365" height="650" className="doc_img"/>
+
+## Auto Retry for Non-Assertion Errors
+
+You can enhance the efficiency of Tosca test execution by automating the retry process in the event of **Non-Assertion Errors**. It usually occurs when a program encounters an unexpected conditions like runtime error, timeouts, connectivity issues etc.
+
+To enable the **Auto Retry** on Failure of tests:
+
+**Step 1:** After setting up your DEX Server, select the events that you want to execute. Click on the Run button.
+
+**Step 2:** Now enable the toggle button for **Retry on Failure** and click on the Run button.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-dex/step10.png').default} alt="Image" width="1365" height="650" className="doc_img"/>
+
+Now, once your execution is finished, the platform will automatically analyze your execution list results and logs.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-dex/step11.png').default} alt="Image" width="1365" height="650" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-dex/step12.png').default} alt="Image" width="1365" height="650" className="doc_img"/>
+
+If your execution lists fail due to any non-assertion error, HyperExecute will automatically trigger those specific failed lists again.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-dex/step13.png').default} alt="Image" width="1365" height="650" className="doc_img"/>
+
+> **NOTE :** Your event name should be same with the execution list.
