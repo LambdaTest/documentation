@@ -290,8 +290,9 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 ```
 
 :::note
+- Ensure that both the **language** and **locale** parameters are passed simultaneously in the API request.
 - App should support the language and locale mentioned in the API request to work.
-- For sharding related tests, you have to mention this in the `.yaml` file.
+- For XCUI sharding tests, you have to mention this in the `.yaml` file.
 :::
 
 <nav aria-label="breadcrumbs">

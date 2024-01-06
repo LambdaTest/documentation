@@ -308,8 +308,9 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/bu
 ```
 
 :::note
+- Ensure that both the **language** and **locale** parameters are passed simultaneously in the API request.
 - App should support the language and locale mentioned in the API request to work.
-- For sharding related tests, you have to mention this in the `.yaml` file.
+- For espresso sharding tests, you have to mention this in the `.yaml` file.
 :::
 
 
