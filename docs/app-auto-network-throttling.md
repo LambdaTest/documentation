@@ -92,12 +92,11 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     ```python
     driver.execute_script("updateNetworkProfile=3g-umts-good")
     ```
-- **Offline** mode can be supported during test execution by using using the following LambdaHook:
+- **Offline** mode can be supported during test execution by using using the following LambdaHook (only for **android**):
 
     ```python
     driver.execute_script("updateNetworkProfile=offline")
     ```
-
 
 ### Supported Network Profiles
 
@@ -110,6 +109,8 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 | 3g-umts-good             | 5 Mbps          | 2 Mbps       | 100 ms  |
 | 4g-lte-good              | 15 Mbps         | 7 Mbps       | 70 ms   |
 | 4g-lte-advanced-good     | 25 Mbps         | 12 Mbps      | 20 ms   |
+| default                  | NA             | NA          | NA     |
+
 ---
 ### Custom Profiles
 
@@ -129,6 +130,7 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 
 :::caution
 - **Wrong Capability Name or Value:** Providing an incorrect capability value results in a bad request error with a descriptive message.
+- **LambdaHook Error:** If you pass any wrong value in LambdaHook,you will receive an error message.
 :::
 
 
