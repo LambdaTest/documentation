@@ -17,14 +17,17 @@ jobs:
         uses: actions/checkout@v3   # You MUST checkout your repository first!
 
       - name: Run DocSearch Scraper
+        env:
+            API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
+            HOST: ${{ secrets.TYPESENSE_HOST }}
         uses: celsiusnarhwal/typesense-scraper@v2
         with:
           # The secret containing your Typesense API key. Required.
-          api-key: ${{ secrets.TYPESENSE_API_KEY }}
+          api-key: ${{ env.API_KEY }}
 
           # The hostname or IP address of your Typesense server. Required.
-          host: ${{ secrets.TYPESENSE_HOST }}
-          
+          host: ${{ env.HOST }}
+           
           # The port on which your Typesense server is listening. Optional. Default: 8108.
           port: 443
           
