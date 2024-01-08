@@ -3,7 +3,7 @@ name: Typesense crawler for prod
 on:
     pull_request:
       branches:
-        - main
+        - stage
     merge_group:
 
 
