@@ -89,7 +89,7 @@ To use HyperExecute reports, simply follow these steps:
 
 **Step 4:** Analyze the test results and identify any areas where improvement is needed. -->
 
-Tips for Using HyperExecute Reports Effectively
+Tips for Using HyperExecute Reports Effectively:
 
 :::tip
 Different HyperExecute reports provide different information. Choose the report that is most relevant to your needs. For example, if you want to quickly identify which tests failed, you would use the Summary Report
