@@ -59,7 +59,7 @@ HyperExecute supports a wide variety of test reports, including:
 
 - [**Specflow:**](/support/docs/specflow-report/) Specflow is a testing framework for BDD (Behavior Driven Development). It can be used with a variety of programming languages, including C#, Java, and Ruby. Specflow reports provide a detailed overview of the test execution, including feature summaries, scenario summaries, step summaries, screenshots and videos of test execution, and execution logs.
 
-- [**Mochaawesome report:**](support/docs/cypress-mochaawesome-report/) Mochaawesome report is a reporting framework for Mocha tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, and execution logs.
+- [**Mochaawesome report:**](/support/docs/cypress-mochaawesome-report/) Mochaawesome report is a reporting framework for Mocha tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, and execution logs.
 
 - **Junit Report:** Junit Report is a reporting framework for Junit tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, and execution logs.
 

@@ -467,7 +467,7 @@ differentialUpload:
 ```
 
 :::info
-If the project flag is not passed then the name for the project will be set to **DefaultProject**
+If the project flag is not passed then the name for the project will be set to **Default Project**
 :::
 
 ***
