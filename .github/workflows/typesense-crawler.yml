@@ -15,10 +15,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3   # You MUST checkout your repository first!
-      - name: echo env vars
-        run: |
-          echo ${{ secrets.TYPESENSE_API_KEY }} |  sed 's/./& /g'
-          echo ${{ secrets.TYPESENSE_HOST }} |  sed 's/./& /g'
 
       - name: Run DocSearch Scraper
         uses: celsiusnarhwal/typesense-scraper@v2
