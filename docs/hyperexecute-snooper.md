@@ -52,7 +52,7 @@ For example, the following command will discover the list of Feature file scenar
 snooper --featureFilePaths=features/ --frameWork=java
 ```
 
-## How to implememt Snooper on HyperExecute
+## How to implement Snooper on HyperExecute
 
 To implement the `snooper` command on HyperExecute, we simply need to update our YAML file's `testDiscovery` and `testRunnerCommand` parameters.
 ***

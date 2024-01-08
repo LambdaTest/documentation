@@ -782,6 +782,7 @@ module.exports = {
                 "camera-image-injection",
                 "biometric-authentication",
                 "reg-expression",
+                "app-auto-network-throttling",
                 "appium-app-performance",
                 "appium-ios-app-settings",
                 "adb-commands-support",
@@ -1675,9 +1676,37 @@ module.exports = {
           id: "smartui-cli",
         },
         {
-          type: "doc",
-          label: "Setup with Selenium",
-          id: "selenium-visual-regression",
+          type: "category",
+          collapsed: false,
+          label: "Selenium",
+          items: [
+            // "smartui-selenium-js-sdk",
+            // "selenium-visual-regression"
+            {
+              type: "category",
+              label: "SDK",
+              collapsed:true,
+              // id: "smart-visual-regression-testing",
+              items: [
+                {
+                  type: "doc",
+                  label: "Javascript",
+                  id: "smartui-selenium-js-sdk",
+                },
+                {
+                  type: "doc",
+                  label: "Java",
+                  id: "smartui-selenium-java-sdk"
+                },
+                {
+                  type: "doc",
+                  label: "Python",
+                  id: "smartui-selenium-python-sdk"
+                }
+              ]
+            },
+                "selenium-visual-regression"
+          ],
         },
         {
           type: "doc",

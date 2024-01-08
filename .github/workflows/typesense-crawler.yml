@@ -1,0 +1,39 @@
+name: Typesense crawler for prod
+
+on:
+    pull_request:
+      branches:
+        - main
+    merge_group:
+
+
+jobs:
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3   # You MUST checkout your repository first!
+
+      - name: Run DocSearch Scraper
+        uses: celsiusnarhwal/typesense-scraper@v2
+        with:
+          # The secret containing your Typesense API key. Required.
+          api-key: H6UjkS5WMjkTb39wBEAs1GZHCFA6Ms7s
+          
+          # The hostname or IP address of your Typesense server. Required.
+          host: muzrs6ht21cdqnb7p-1.a1.typesense.net
+          
+          # The port on which your Typesense server is listening. Optional. Default: 8108.
+          port: 443
+          
+          # The protocol to use when connecting to your Typesense server. Optional. Default: http.
+          protocol: https
+          
+          # The path to your DocSearch config file. Optional. Default: docsearch.config.json.
+          config: config.json
+
+          # run: |
+          #     cat config.json
+          #     docker run -it --env-file=.env -e "CONFIG=$(cat config.json | jq -r tostring)" typesense/docsearch-scraper:0.9.1

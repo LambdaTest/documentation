@@ -52,12 +52,12 @@ Using the LambdaTest platform, perform regression testing in just one click and 
 
 ## Enabling build mapping for multiple screenshots
 
-If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite. We have to enable the mapping with the `smartUI.build` to be added your capabilites.
+If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite. We have to enable the mapping with the `smartUI.build` to be added your capabilities.
 
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="selenium" label="Selenium" default>
 
-```js title="Please add the following to your capabilites configuration"
+```js title="Please add the following to your capabilities configuration"
 let capabilities = {
     // highlight-next-line
     "smartUI.build": <Your_Build_Name> // Please add your build name of choice here
@@ -122,7 +122,7 @@ If you want to mark your build as a baseline from your test suite while executin
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="selenium" label="Selenium" default>
 
-```js title="Please add the following to your capabilites configuration"
+```js title="Please add the following to your capabilities configuration"
 let capabilities = {
   // highlight-next-line
   "smartUI.baseline": true / false, // Enable if you want to update to a new baseline build
@@ -185,8 +185,8 @@ const capabilities = {
 The following are the list of features that are available for the build process in SmartUI:
 
 - All the screenshots are grouped together as a one build.
-- The screenshots are mapped from the **baseline** to the **Comaprison screenshot** in the same sequential pattern as per the baseline build.
-- Add additional screenshots if needed for the exisiting build by using the same build name in the capabilities. This will add new screenshots to the build.
+- The screenshots are mapped from the **baseline** to the **Comparison screenshot** in the same sequential pattern as per the baseline build.
+- Add additional screenshots if needed for the existing build by using the same build name in the capabilities. This will add new screenshots to the build.
 - You can also update any build of choice as a new **Baseline** build.
 
 :::info
@@ -197,7 +197,7 @@ We currently only support one baseline for one project in our current version. W
 
 ## Build Status Information
 
-We are provide mutliple build status options for the project owners to check the status of builds and take required actions to the screenshots by the approver(s).
+We are provide multiple build status options for the project owners to check the status of builds and take required actions to the screenshots by the approver(s).
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/build-status-dotlapse.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

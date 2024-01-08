@@ -112,7 +112,7 @@ Yes, HyperExecute can be set up completely on the Premises.
 ***
 
 #### 13. What about the SAS token?
-SAS token is generated only for 60 min in use and is different every time. This toke is time-based authenticated and can only be used once.
+SAS token is generated only for 60 min in use and is different every time. This token is time-based authenticated and can only be used once.
 
 
 >If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.

@@ -3,7 +3,7 @@ id: hyperexecute-cli-run-tests-on-hyperexecute-grid
 title: HyperExecute CLI - Run test on HyperExecute Grid
 hide_title: true
 sidebar_label: HyperExecute CLI - Run test on HyperExecute Grid
-description: Expalins about HyperExecute CLI
+description: Explains about HyperExecute CLI
 keywords:
   - lambdatest automation
   - lambdatest hyperexecute

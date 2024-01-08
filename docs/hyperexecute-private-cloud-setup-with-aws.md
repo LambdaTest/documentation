@@ -117,7 +117,7 @@ To deploy the CloudFormation template on AWS, follow these steps:
 
 **Step 4:** Browse for the main template file **hyperexecute_deployment.yaml** and click **Next**.
 
-<img loading="lazy" src={require('../assets/images/hyp-aws/Step1.png').default} alt="Image" width="585" height="674" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/aws/Step1.png').default} alt="Image" width="585" height="674" className="doc_img img_center"/>
 
 **Step 5:** On the **Specify Stack details** page, provide a name for the stack (deployment) and provide the necessary configuration details. Refer to the configuration parameters details sections for guidance.
 
@@ -125,11 +125,11 @@ To deploy the CloudFormation template on AWS, follow these steps:
 
 **Step 7:** Click **Next** to review all the details, and then initiate the launch to deploy the HyperExecute CloudFormation stack.
 
-<img loading="lazy" src={require('../assets/images/hyp-aws/Step3.png').default} alt="Image" width="585" height="674" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/aws/Step3.png').default} alt="Image" width="585" height="674" className="doc_img img_center"/>
 
 By following these steps, you can deploy the HyperExecute CloudFormation template from the AWS Marketplace and set up the required infrastructure for your testing needs.
 
-<img loading="lazy" src={require('../assets/images/hyp-aws/Step2.png').default} alt="Image" width="585" height="674" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/aws/Step2.png').default} alt="Image" width="585" height="674" className="doc_img img_center"/>
 
 ### Configuration Parameters
 
@@ -207,7 +207,7 @@ Once the CloudFormation template is successfully deployed, you can access HyperE
 
    This command will provide a list of namespaces created.
 
-<img loading="lazy" src={require('../assets/images/hyp-aws/namespace_output.png').default} alt="Image" width="585" height="674" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/aws/namespace_output.png').default} alt="Image" width="585" height="674" className="doc_img img_center"/>
 
 **Step 4:** Execute the command:
 
@@ -217,7 +217,7 @@ Once the CloudFormation template is successfully deployed, you can access HyperE
 
    This command will provide a list of pods created under the `hyperexecute` namespace.
 
-<img loading="lazy" src={require('../assets/images/hyp-aws/list_pods.png').default} alt="Image" width="585" height="674" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/aws/list_pods.png').default} alt="Image" width="585" height="674" className="doc_img img_center"/>
 
 **Step 5:** Access the Private Cloud deployment using the provided [link](https://dashboard.hyperexecute.cloud/).
 

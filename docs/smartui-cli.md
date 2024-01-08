@@ -84,7 +84,7 @@ npm install -g @lambdatest/smartui-cli
 ### **Step 2:** Create URL file
 
 ```
-smartui config:web-static urls.json
+smartui config:create-web-static urls.json
 ```
 Once, the `URLs` file will be created, you will be seeing the sample pre-filled URLs in the `urls.json` file:
 
@@ -137,7 +137,7 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
-smartui config:create-web smartui-web.json
+smartui config:create smartui-web.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
@@ -152,7 +152,7 @@ Once, the configuration file will be created, you will be seeing the default con
       "edge",
       // Add more browser configuration here
     ],
-    "resolutions": [
+    "viewports": [
       [
         1920,
         1080
@@ -169,6 +169,10 @@ Once, the configuration file will be created, you will be seeing the default con
   }
 }
 ```
+
+:::note 
+You may use the `smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
+:::
 
 #### SmartUI CLI Config Options
 
@@ -217,7 +221,7 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 
 ### View SmartUI Results
 
-You can see the Smart UI dashboard to view the results. This will help you identify the mis-matches from the existing `Baseline` build and do the required visual testing.
+You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui_ss_cli.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

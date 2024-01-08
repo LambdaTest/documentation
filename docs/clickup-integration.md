@@ -97,7 +97,7 @@ LambdaTest integration with ClickUp will help you report bugs and UI anomalies d
 * Set a Status for the task.
 * Assign it to a colleague.
 * Provide a task name.
-* A relevent Description about the UI observation.
+* A relevant Description about the UI observation.
 ---
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/clickup-7.webp').default} alt="clickup integration" width="1364" height="654" className="doc_img"/>
