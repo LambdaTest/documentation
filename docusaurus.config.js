@@ -24,6 +24,7 @@ module.exports = {
     //   defer: true,
     // }
   ],
+  themes: ['docusaurus-theme-search-typesense'],
   themeConfig: {
     // docs: {
     //   sidebar: {
