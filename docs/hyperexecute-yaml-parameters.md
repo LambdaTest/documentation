@@ -77,6 +77,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [postDirectives](/support/docs/deep-dive-into-hyperexecute-yaml/#postdirectives) | Map |Similar to post with option to retry. |
 | [cachekey](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) | String | File which can be used to generate unique key for cache. Example : package.json |
 | [cacheDirectories](/support/docs/deep-dive-into-hyperexecute-yaml/#cachedirectories) | List of Strings | Dependency directories that are cached to improve the test execution speed. |
+| [projectName](/support/docs/deep-dive-into-hyperexecute-yaml/#projectname) | String | Segregate data at a project/repo level |
 | [differentialUpload](/support/docs/deep-dive-into-hyperexecute-yaml/#differentialupload) | Map | Minimize the time of upload of code. |
 | [report](/support/docs/deep-dive-into-hyperexecute-yaml/#report) | Boolean | To generate the test report at the end of the job using the framework generated reports, set this value to true. We also need to set partialReports for generating report |
 | [partialReports](/support/docs/deep-dive-into-hyperexecute-yaml/#reports) | Map | Configurations related to generate report. |

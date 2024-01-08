@@ -433,6 +433,16 @@ cacheDirectories:
 
 ***
 
+## `projectName`
+
+This flag is used to set the Name of your Projects which would later allow you to see all jobs of that Project at one place.
+
+```bash
+projectName: '<Your Project Name>':'<Your Project ID>'
+```
+
+***
+
 ## `differentialUpload`
 This flag is used to minimize the time taken to upload the codebase to the platform for testing.
 
