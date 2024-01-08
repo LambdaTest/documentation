@@ -115,7 +115,7 @@ To demonstrate, we take an example of Real-time testing.
 
 <img loading="lazy" src={require('../assets/images/google-chat-integration/bug-icon.webp').default} alt="mark as bug" width="1320" height="618" className="doc_img"/>
 
-**Step 5:** A Google Chat ticket will open up. Fill in the details like **Asignee, Issue Type, Priority, Summary, and Description**. After populating the required fields, check the **“Send to Google Chat”** option and click **'Mark as Bug'**. 
+**Step 5:** A Google Chat ticket will open up. Fill in the details like **Assignee, Issue Type, Priority, Summary, and Description**. After populating the required fields, check the **“Send to Google Chat”** option and click **'Mark as Bug'**. 
 
 <img loading="lazy" src={require('../assets/images/google-chat-integration/raise-ticket.webp').default} alt="details" width="1365" height="616" className="doc_img"/>
 

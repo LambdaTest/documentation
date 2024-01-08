@@ -81,7 +81,7 @@ To install the TeamCity plugin, you need to download the compressed zip file fro
 
 <img loading="lazy" src={require('../assets/images/teamcity-plugin/lambdatest-plugins-list.webp').default} alt="teamcity plugin" width="768" height="311" className="doc_img"/>
 
-Thats it. The LambdaTest TeamCity plugin has been added in your TeacmCity Server successfully.
+That's it. The LambdaTest TeamCity plugin has been added in your TeacmCity Server successfully.
 
 ## Configuring Project To Use LambdaTest TeamCity Plugin
 * * *
@@ -139,7 +139,7 @@ Once you run your tests, you can see the Lambda Tunnel getting activated during 
 
 * * *
 
-Thats it folks! If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy testing! 🙂
+That's it folks! If you have any doubt or questions, feel free to contact our experts at <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

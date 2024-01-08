@@ -44,7 +44,7 @@ slug: hyperexecute-how-to-configure-tunnel/
 
 ## How to Configure Tunnel with HyperExecute?
 
-> You can use any verison of YAML to pass the Tunnel Parameters.
+> You can use any version of YAML to pass the Tunnel Parameters.
 
 If you want to use a tunnel with HyperExecute, you will have to download the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and configure it.
 

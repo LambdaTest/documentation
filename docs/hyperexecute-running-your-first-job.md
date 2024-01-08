@@ -78,7 +78,7 @@ Otherwise just click on **Trigger test** to run your first job.
 
 ## 2. Using Local System
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-getting-started/onboarding.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/onboarding.png').default} alt="Image"  className="doc_img"/>
 
 To run your Test Scripts on HyperExecute from you Local system, you'll need the following:
 - [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file which contains all the necessary instructions.

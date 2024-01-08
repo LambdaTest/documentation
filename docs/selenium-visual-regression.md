@@ -1,7 +1,7 @@
 ---
 id: selenium-visual-regression
 title: Getting Started With Visual Regression Testing Using Selenium On SmartUI
-sidebar_label: Selenium
+sidebar_label: LambdaTest Hooks
 description: Master Selenium Visual Regression testing with LambdaTest. Detect visual deviations early in your web applications to ensure a seamless user experience.
 keywords:
   - Visual Regression
@@ -484,7 +484,7 @@ config.put("element", "<Required Element>");                    //Add your requi
 
 You have successfully integrated SmartUI with your Selenium tests. Visit your [SmartUI project](https://smartui.lambdatest.com/projects) to view builds and compare snapshots between different test runs.
 
-You can see the Smart UI dashboard to view the results. This will help you identify the mis-matches from the existing `Baseline` build and do the required visual testing.
+You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 ## Fetching Screenshot Status and Results using WebHook
 
@@ -541,7 +541,7 @@ driver.executeScript("smartui.fetchScreenshotStatus=<Your Screenshot Name>")
 
 </TabItem>
 
-<TabItem value="python" label="Python / Ruby" default>
+<TabItem value="python" label="Python" default>
 
 ```python
 driver.execute_script("smartui.fetchScreenshotStatus=<Your Screenshot Name>")
@@ -621,7 +621,7 @@ This may take a few seconds to process the screenshot. Please ensure that you ha
   **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
   
 
-  **Advanced Test Settings** - We offer mutilple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites. To know more about our advanced P2P comparison options, click [here](https://www.lambdatest.com/support/docs/test-settings-options/).
+  **Advanced Test Settings** - We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites. To know more about our advanced P2P comparison options, click [here](https://www.lambdatest.com/support/docs/test-settings-options/).
   
 
   **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, click [here](/support/docs/html-dom-smartui-options/#configuration-for-selenium).

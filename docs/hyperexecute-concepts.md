@@ -57,13 +57,13 @@ A [`Job`](/support/docs/hyperexecute-concepts/#1-jobs) can attain different stat
 
 | Icon | Status |
 |------|------|
-|<img loading="lazy" src={require('../assets/images/hye-icons/aborted.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Aborted|
-|<img loading="lazy" src={require('../assets/images/hye-icons/failed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Failed|
-|<img loading="lazy" src={require('../assets/images/hye-icons/initiated.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Initiated|
-|<img loading="lazy" src={require('../assets/images/hye-icons/passed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Completed|
-|<img loading="lazy" src={require('../assets/images/hye-icons/skipped.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Skipped|
-|<img loading="lazy" src={require('../assets/images/hye-icons/lambda-error.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> |Lambda Error - An error arose from LambdaTest’s side|
-|<img loading="lazy" src={require('../assets/images/hye-icons/blocked.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Blocked|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Aborted|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Failed|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/initiated.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Initiated|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Completed|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Skipped|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> |Lambda Error - An error arose from LambdaTest’s side|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/blocked.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Blocked|
 
 ## 2. Tasks
 
@@ -77,13 +77,13 @@ A [`Task`](/support/docs/hyperexecute-concepts/#2-tasks) can attain different st
 
 | Icon | Status |
 | ------| ------ |
-|<img loading="lazy" src={require('../assets/images/hye-icons/aborted.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Aborted||
-|<img loading="lazy" src={require('../assets/images/hye-icons/failed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Failed||
-|<img loading="lazy" src={require('../assets/images/hye-icons/initiated.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Initiated||
-|<img loading="lazy" src={require('../assets/images/hye-icons/passed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Completed||
-|<img loading="lazy" src={require('../assets/images/hye-icons/skipped.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Skipped||
-|<img loading="lazy" src={require('../assets/images/hye-icons/lambda-error.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> |Lambda Error - An error arose from LambdaTest’s side.|
-|<img loading="lazy" src={require('../assets/images/hye-icons/blocked.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Blocked|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Aborted||
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Failed||
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/initiated.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Initiated||
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Completed||
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Skipped||
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> |Lambda Error - An error arose from LambdaTest’s side.|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/blocked.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Blocked|
 
 
 ## 3. Stages
@@ -98,14 +98,14 @@ A [`Stage`](/support/docs/hyperexecute-concepts/#2-stages) can attain different 
 
 | Icon | Status |
 | ---------| :---- |
-| <img loading="lazy" src={require('../assets/images/hye-icons/completed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/> | Completed  |
-| <img loading="lazy" src={require('../assets/images/hye-icons/failed.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Failed  |
-| <img loading="lazy" src={require('../assets/images/hye-icons/created.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Created |
-| <img loading="lazy" src={require('../assets/images/hye-icons/skipped.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Skipped |
-| <img loading="lazy" src={require('../assets/images/hye-icons/cancelled.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Cancelled |
-| <img loading="lazy" src={require('../assets/images/hye-icons/aborted.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Aborted |
-| <img loading="lazy" src={require('../assets/images/hye-icons/time-out.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Time Out |
-| <img loading="lazy" src={require('../assets/images/hye-icons/lambda-error.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Lambda Error - An error arose from LambdaTest’s side. |
+| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/completed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/> | Completed  |
+| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Failed  |
+| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/created.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Created |
+| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Skipped |
+| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/cancelled.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Cancelled |
+| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Aborted |
+| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/time-out.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Time Out |
+| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> | Lambda Error - An error arose from LambdaTest’s side. |
 
 ## 4. Scenarios
 
@@ -115,11 +115,11 @@ A [`Scenario`](/support/docs/hyperexecute-concepts/#4-scenarios) can attain diff
 
 | Icon | Status |
 |------|------|
-|<img loading="lazy" src={require('../assets/images/hye-icons/aborted.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Aborted|
-|<img loading="lazy" src={require('../assets/images/hye-icons/failed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Failed|
-|<img loading="lazy" src={require('../assets/images/hye-icons/passed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Completed|
-|<img loading="lazy" src={require('../assets/images/hye-icons/skipped.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Skipped|
-|<img loading="lazy" src={require('../assets/images/hye-icons/lambda-error.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> |Lambda Error - An error arose from LambdaTest’s side|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Aborted|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Failed|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Completed|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Skipped|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> |Lambda Error - An error arose from LambdaTest’s side|
 
 ## 5. Tests
 
@@ -132,13 +132,13 @@ A [`Test`](/support/docs/hyperexecute-concepts/#5-tests) can attain different st
 
 | Icon | Status |
 |------|------|
-|<img loading="lazy" src={require('../assets/images/hye-icons/aborted.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Aborted|
-|<img loading="lazy" src={require('../assets/images/hye-icons/failed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Failed|
-|<img loading="lazy" src={require('../assets/images/hye-icons/initiated.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Initiated|
-|<img loading="lazy" src={require('../assets/images/hye-icons/passed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Completed|
-|<img loading="lazy" src={require('../assets/images/hye-icons/lambda-error.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> |Lambda Error - An error arose from LambdaTest’s side|
-|<img loading="lazy" src={require('../assets/images/hye-icons/idle-timeout.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> |Idle-Timeout|
-|<img loading="lazy" src={require('../assets/images/hye-icons/passed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/> |Passed|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Aborted|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Failed|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/initiated.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Initiated|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Completed|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> |Lambda Error - An error arose from LambdaTest’s side|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/idle-timeout.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/> |Idle-Timeout|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/> |Passed|
 
 ### User Defined Status
 HyperExecute allows users to define the status of tests using **lambda hooks**. This can be helpful for monitoring test status and results.
@@ -147,12 +147,12 @@ HyperExecute supports the following user-defined lambda hooks status:
 
 | Icon | Status | Status Description |
 | ------| ------ | ------|
-|<img loading="lazy" src={require('../assets/images/hye-icons/completed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Passed| A test case has passed when it has executed successfully, and all the assertions have been verified without any errors. <br /> `driver.executeScript("lambda-status=passed");`|
-|<img loading="lazy" src={require('../assets/images/hye-icons/failed.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Failed| A test case has failed when it has not executed as expected, and one or more assertions have not been verified or have failed. <br /> `driver.executeScript("lambda-status=failed");`|
-|<img loading="lazy" src={require('../assets/images/hye-icons/skipped.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Skipped| A test case may be skipped if it is not relevant or cannot be executed due to some issues like environment setup, data, or configuration. This status can also be used for test cases that are marked for review or maintenance. <br />`driver.executeScript("lambda-status=skipped");`|
-|<img loading="lazy" src={require('../assets/images/hye-icons/ignored.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Ignored| The ignored status is used when a test case is intentionally not executed, such as when it is marked for future development, or a feature is not yet implemented. <br/> `driver.executeScript("lambda-status=ignored");`|
-|<img loading="lazy" src={require('../assets/images/hye-icons/ignored.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Unknown| When a user wants to mark status of thier tests as undecided. <br /> `driver.executeScript("lambda-status=unknown");`|
-|<img loading="lazy" src={require('../assets/images/hye-icons/error.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Error| A test case can end in an error status when an unexpected exception is thrown during its execution. This error can be due to a coding error or a defect in the application under test. <br /> `driver.executeScript("lambda-status=error");`|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/completed.png').default} alt="Image" style={{width: '20px',margin: '0px',}} className="doc_img"/>|Passed| A test case has passed when it has executed successfully, and all the assertions have been verified without any errors. <br /> `driver.executeScript("lambda-status=passed");`|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Failed| A test case has failed when it has not executed as expected, and one or more assertions have not been verified or have failed. <br /> `driver.executeScript("lambda-status=failed");`|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Skipped| A test case may be skipped if it is not relevant or cannot be executed due to some issues like environment setup, data, or configuration. This status can also be used for test cases that are marked for review or maintenance. <br />`driver.executeScript("lambda-status=skipped");`|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/ignored.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Ignored| The ignored status is used when a test case is intentionally not executed, such as when it is marked for future development, or a feature is not yet implemented. <br/> `driver.executeScript("lambda-status=ignored");`|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/ignored.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Unknown| When a user wants to mark status of their tests as undecided. <br /> `driver.executeScript("lambda-status=unknown");`|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/error.png').default} alt="Image" style={{width: '20px',margin: '0px',}}  className="doc_img"/>|Error| A test case can end in an error status when an unexpected exception is thrown during its execution. This error can be due to a coding error or a defect in the application under test. <br /> `driver.executeScript("lambda-status=error");`|
 
 ### Priority Scenario Mapping
 

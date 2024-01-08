@@ -266,7 +266,7 @@ You can add environment variables in TAS to securely use sensitive information s
 
 **Example**
 
-This example will demonstate how we can refer secrets in `.tas.yml`.
+This example will demonstrate how we can refer secrets in `.tas.yml`.
 ```yml
 framework: jest
 modifiers:

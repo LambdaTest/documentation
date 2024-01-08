@@ -122,6 +122,23 @@ runtime:
       version : "7.0"
 ```
 
+- You can also provide **multiple languages** and their **specified versions** that you want installed on your machine.
+
+```bash
+runtime:
+  - language: java
+    version: '17'
+    addons:
+      - name: gauge
+        version: '1.5.6'
+      - name: gradle
+        version: '7.6'
+  - language: python
+    version: '3.10'
+  - language: node
+    version: '16'
+```
+
 ***
 ## `jobLabel`
 The `jobLabel` YAML key is used to add tags or labels to jobs. This allows you to search your jobs using the labels or tags assigned to them. 
@@ -235,6 +252,29 @@ With maxRetries and retryOnFailure you need not have to rerun your job to retry 
 The maximum number of times your tests can be retried. You can allocate a numerical value between 1 and 5 for this field. 
 ```bash
 maxRetries: 2
+```
+
+***
+
+## `retryOptions`
+
+Regular Expressions provides more granular control over when test retries are triggered. You can achieve this through **`retryOptions`** flag.
+
+- You can specify precise error patterns using regular expressions to determine which errors should initiate retries.
+- It works seamlessly with Cypress, CDP, and Selenium framework tests.
+- It is supported in both YAML 0.1 and 0.2
+
+### Configuration:
+
+- Set `retryOnFailure: true` to activate the retry feature.
+- Indicate the maximum number of retry attempts with `maxRetries: <number>`.
+- Within the `retryOptions` section, create an `errorRegexps` array to list the regular expressions that represent the errors you want to trigger retries.
+
+```bash
+retryOnFailure: true
+maxRetries: 3
+retryOptions:
+  errorRegexps: ["org.openqa.selenium.NoSuchElementException"]
 ```
 
 ***
@@ -361,7 +401,7 @@ postDirectives:
 
 ***
 ## `cachekey`
-It is a unique identifier to each of the cache that are created by your organization on HyperExecute. This is generally defined as a checksum of your dependency file list (e.g package-lock.json, pom.xml, etc) so that if you modify the dependency directories, they will be downloaded, resolved and cached again.
+It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. When you run your tests for the very first time, HyperExecute caches the dependency files (e.g., package-lock.json, pom.xml, etc.). Now, when you execute the same test suite again (without making any changes), HyperExecute searches for a matching cached result within its cache storage, and if a valid cached result is found, HyperExecute utilizes it directly, skipping redundant execution.
 
 ```bash
 {{ checksum "package-lock.json" }}
@@ -373,7 +413,6 @@ If you are using Windows as well, then also you can define the path of the cache
 ```bash
 {{ checksum "dir1/dir2/package-lock.json" }}
 ```
-
 :::
 
 ***
@@ -383,6 +422,15 @@ It is used to cache a certain set of files which are not supposed to change freq
 cacheDirectories:
   - .m2
 ```
+
+> **NOTE:** In version 0.2 YAML, the support for caching is by default, the user does not need to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster. <br />
+If the user adds the cacheDirectories and cacheKey keys in his YAML, the default caching gets disabled and preference is given to the user specified cache.
+```bash
+cacheKey: '{{ checksum "pom.xml" }}'
+cacheDirectories:
+  - .m2
+```
+
 ***
 
 ## `report`
@@ -445,7 +493,7 @@ uploadArtefacts:
 
 The **`linkValidity`** flag is used to customize the duration of validity for report and artifact URLs generated after job completion. Currently URLs are inherently valid for 48 hours post-generation but you can tailor the validity period to align with the specific requirements, ensuring you can access the associated resources within the defined timeframe. 
 
-> **Note:** If `linkValidity` is not defined or 0, then the default link validity to access the artifacts and reports is 2 days. The maximum validity is 60 days.
+> **Note:** If `linkValidity` is not defined or 0, then the default link validity to access the artifacts and reports is 2 days. The maximum validity is 60 days.
 
 ```bash
 report: true
@@ -539,7 +587,7 @@ There are two scenarios associated with it:
 
 **Solution :** When `scenarioCommandStatusOnly` is set `true` in YAML, it will mark the task as passed even though no test is associated to it. In the given screenshot **task 8** is passed even though no test is associated to it.
 
-<img loading="lazy" src={require('../assets/images/he-yaml/scenario-1.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/yaml/scenario-1.png').default} alt="Image" className="doc_img"/>
 
 #### Scenario 2: When test cases are run n no of times:
 - Some times a user might runs some test cases n no of times inherently due to framework retries etc.  Those test cases are considered as separate entries for us, and if one fails, scenario is marked as failed and hence the task and job is marked as fail. Need a way to update status of the task as if a test case first fails and then passes, it should be shown as passing and with green tick. Currently it shows as failed.
@@ -556,7 +604,7 @@ There are two scenarios associated with it:
 
 As seen in the screenshot, when one of the tests is marked as failed while the other tests are marked as passed, the overall scenario is marked as passed.
 
-<img loading="lazy" src={require('../assets/images/he-yaml/scenario-2.jpeg').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/yaml/scenario-2.jpeg').default} alt="Image" className="doc_img"/>
 
 ***
 ## `skipArtifactStageIfNoTest`
@@ -647,14 +695,14 @@ In the JSON file, we have a data object and not an array of objects, hence you c
 
 #### 2. Using via env variables
 
-You can use the env variables to access the defined paramters as:
+You can use the env variables to access the defined parameters as:
 
 ```
 STATIC_DATA_1_<ParameterName>
 ```
 > **NOTE:-** In the above syntax, **1** represents the file passed in the yaml file and not the data object within the file.
 
-For instance, to access data from **file1.json**, the syantax would be:
+For instance, to access data from **file1.json**, the syntax would be:
 ```
 STATIC_DATA_1_Username
 ```
@@ -702,7 +750,7 @@ For instance you want to further process the artifacts and create a custom PDF. 
 - Want to run some commands after the job is finished.
 - Want to run these commands from the same host from which hyperexecute-cli is run.
 
-***
+<!-- ***
 ## `beforeAll`
 BeforeAll is used for running pre operations like discovery and payload_update. It can be executed either on local system or on hyperexecute beforeAll VM. 
 ```bash
@@ -713,7 +761,7 @@ beforeAll:
     commands:
 pip install -r requirements.txt 
 ```
-We can choose to run on local/remote(on HYP Vms) from the location command. Type can be either discovery/update_payload (type of operation to be performed) and commands will have all the commands that needs to be run for that operation.
+We can choose to run on local/remote(on HYP Vms) from the location command. Type can be either discovery/update_payload (type of operation to be performed) and commands will have all the commands that needs to be run for that operation. -->
 
 
 ***
@@ -833,7 +881,7 @@ background:
   - mysql-server
 ```
 
-> To learn more about it, refer to the [Bakground Service](https://www.lambdatest.com/support/docs/hyperexecute-background-services/) page.
+> To learn more about it, refer to the [Background Service](https://www.lambdatest.com/support/docs/hyperexecute-background-services/) page.
 
 ***
 ##  `vars`
@@ -903,7 +951,7 @@ tunnelNames: [“lambdatest_tunnel”]
 ## `testRunnerExecutor`
 When utilizing the `testRunnerCommand` to execute a job on a Windows Virtual Machine, the default behavior is to run the command in PowerShell. However, in situations where test names include special characters, you may encounter an error like below.
 
-<img loading="lazy" src={require('../assets/images/he-yaml/testRunnerExecutor.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/yaml/testRunnerExecutor.png').default} alt="Image" className="doc_img"/>
 
 To address this, it is necessary to include this specific flag to switch the test execution from powershell to the command line as intended.
 
@@ -940,9 +988,7 @@ Setting **autosplit** to true will distribute the `scenarios` among the concurre
 
 If you want to distribute you **m** commands on **n** VMs automatically and you don’t need to bother much about which all commands are grouped together on a single VM, you can use the **autosplit** feature for this purpose.
 
-
 For instance, you have a parallelism of 10 and you want to run 50 commands in total. Using autosplit, the system will distribute these 50 commands on 10 Vms in the most efficient manner possible. Each VM(`task`) will receive some commands to run out of these 50 commands.
-
 
 > Note: In `static mode`, these commands will be distributed among VMs smartly(AI) using history data, such that each VM(`task`) gets to run for almost the same amount of time. This is to reduce the total `job` time.
 
@@ -1014,7 +1060,7 @@ matrix:
 
 ## `combineTasksInMatrixMode`
 
-The `concurrency` flag is not acknowledged in [matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) mode. Therefore, you must set `combineTasksInMatrixMode` to `true` if you wish to use a limited number of concurrencies that are available in your license for a matrix-mode job. Instead of using one machine per matrix combination, this will run the (matrix-multiplied) combinations as scenarios in the number of HyperExecute machines that was specified in concurrency.
+The `concurrency` flag is not acknowledged in [matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) mode. Therefore, you must set `combineTasksInMatrixMode` to `true` if you wish to use a limited number of concurrencies that are available in your license for a matrix-mode job. Instead of using one machine per matrix combination, this will run the (matrix-multiplied) combinations as scenarios in the number of HyperExecute machines that was specified in concurrency.
 
 For example, the below-mentioned YAML snippet will generate a total of 8 scenarios, and since the concurrency is set to 2, these 8 scenarios will run in parallel on 2 HyperExecute machines. In each machine (let's say each has 4 scenarios to execute), they will be running sequentially only.
 

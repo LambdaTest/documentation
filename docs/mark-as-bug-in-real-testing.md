@@ -60,7 +60,7 @@ Now, you can avoid the hassle of capturing a screenshot, annotating the same bef
 **Note:** Mark as Bug feature is not restricted to any particular feature at LambdaTest. In other words, every type of testing that you perform on LambdaTest will have **mark as bug** embedded in it. Below are various types of testing that we offer at LambdaTest.
 * **Real Time Testing:** To help you test your web-app with live interaction by running it on VMs hosted by LambdaTest cloud server.
 * **Screenshot Testing:** Automated bulk screenshot testing on 25(browsers + OS) combination in a single test session.
-* **Responsive Testing:** Perform cross browser testing across a variety of mobile & desktop devices to ensure your website renders well across different view-ports. Run resposive testing on 46 devices in a single test session.
+* **Responsive Testing:** Perform cross browser testing across a variety of mobile & desktop devices to ensure your website renders well across different view-ports. Run responsive testing on 46 devices in a single test session.
 * **Automation Testing:** Perform automated cross browser testing with our on-cloud Selenium Grid. You can execute parallel testing to trim down your test cycles drastically. Our Selenium Grid supports is compatible with every test automation framework that supports Selenium.
 * **Smart UI Testing:** Automated visual regression testing that performs a pixel-to-pixel comparison between multiple images & highlights any UI deviations such as padding, icon, text, etc with respect to the baseline images.
 

@@ -2,7 +2,7 @@
 id: cyp-environment
 title: Environment Variables Support for Cypress Tests
 sidebar_label: Environment Variables Support for Cypress Tests
-description: Learn how to specify Environment vairables. 
+description: Learn how to specify Environment variables. 
 keywords:
   - Cypress Automation
   - Cypress Testing Guide

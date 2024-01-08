@@ -200,7 +200,7 @@ def after_all(context):
 ```
 > You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.
 
-### Execting the Test
+### Executing the Test
 
 **Step 7:** The tests can be executed in the terminal using the following command.
 ```bash

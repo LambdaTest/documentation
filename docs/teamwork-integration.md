@@ -84,7 +84,7 @@ When two different applications interact with each other, a server-to-server com
 
 <img loading="lazy" src={require('../assets/images/teamwork-integration/teamwork-5-1.webp').default} alt="teamwork integration edit" width="1347" height="487" className="doc_img"/>
 
-**Step 7:** As you click on “Show your Token”, your API token will be displayed along with a button to copy it to clipboard. You will also recieve a notification at the bottom to indicate that the string has been “Copied to clipboard”.
+**Step 7:** As you click on “Show your Token”, your API token will be displayed along with a button to copy it to clipboard. You will also receive a notification at the bottom to indicate that the string has been “Copied to clipboard”.
 
 <img loading="lazy" src={require('../assets/images/teamwork-integration/teamwork-6-1.webp').default} alt="teamwork integration token" width="1346" height="552" className="doc_img"/>
 

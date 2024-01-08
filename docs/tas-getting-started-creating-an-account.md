@@ -41,7 +41,7 @@ In order to setup a new account, visit [TAS Login Page](https://tas.lambdatest.c
 1. **TAS Cloud** - You can get started right away on our cloud. No technical setup or installation required. **(Recommended)**
 > ❤️ **TAS Cloud** is free for Open source & educational projects. Including hosting and smart features.
 
-2. **TAS - Self Hosted** - You need to setup TAS on your own wokrstation or cloud. Basic installation & configuration required.
+2. **TAS - Self Hosted** - You need to setup TAS on your own workstation or cloud. Basic installation & configuration required.
 
 
 > **NOTE**:  If any team member from your organisation has already signed up on TAS and selected a TAS mode, you will not be asked to select it again. The selected mode would be linked to your organisation and **can not be modified or reverted** later.

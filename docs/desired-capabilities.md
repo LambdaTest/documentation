@@ -133,6 +133,75 @@ ltOptions.put("w3c", true);
 browserOptions.setCapability("LT:Options", ltOptions);
 ```
 
+## Setting Browser Options
+---
+
+Selenium lets you set browser arguments for Chromium based browsers. When selecting Chrome, Firefox, and Edge, you can set browser options using `ChromeOptions`, `EdgeOptions`, and `FirefoxOptions` capability as shown below.
+
+**For Chrome**:
+
+```java
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class ChromeTest {
+    public static void main(String[] args) {
+        ChromeOptions options = new ChromeOptions();
+        // Set Chrome capabilities
+        options.addArguments("--headless");
+
+        WebDriver driver = new ChromeDriver(options);
+        driver.get("http://example.com");
+        // Your test code here
+        driver.quit();
+    }
+}
+```
+
+**For Firefox**:
+
+```java
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
+public class FirefoxTest {
+    public static void main(String[] args) {
+        FirefoxOptions options = new FirefoxOptions();
+        // Set Firefox capabilities
+        options.addArguments("--headless");
+
+        WebDriver driver = new FirefoxDriver(options);
+        driver.get("http://example.com");
+        // Your test code here
+        driver.quit();
+    }
+}
+```
+
+**For Edge**:
+
+```java
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+
+public class EdgeTest {
+    public static void main(String[] args) {
+        EdgeOptions options = new EdgeOptions();
+        // Set Edge capabilities
+        options.addArguments("--headless");
+
+        WebDriver driver = new EdgeDriver(options);
+        driver.get("http://example.com");
+        // Your test code here
+        driver.quit();
+    }
+}
+```
+
+
 ## Appium Capabilities
 
 * * *

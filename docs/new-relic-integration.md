@@ -65,7 +65,7 @@ This will automatically deploy a pre-built dashboard for you in New Relic. Click
 
 <img loading="lazy" src={require('../assets/images/new-relic/6.png').default} alt="Gitpod popup" width="1215" height="625" className="doc_img img_center"/><br/>
 
-**Step 3:** Visit the LambdaTest Dashbaord. Go to the **Settings** page.
+**Step 3:** Visit the LambdaTest Dashboard. Go to the **Settings** page.
 
 **Step 4:** Click on the **Integrations** tab. Select **New Relic** from the **Analytics** section.
 

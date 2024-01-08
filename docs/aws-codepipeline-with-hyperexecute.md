@@ -63,7 +63,7 @@ To integrate AWS CodePipeline with HyperExecute, follow the below mentioned step
 ### Step 2: Add a Source Provider
 
 - In the **Source Provider**, select the **GitHub (Version 2)** option.
-- Conect your GitHub account.
+- Connect your GitHub account.
 - Select the desired Repository.
 - Select the specified branch name, for which you want to establish the pipeline.
 

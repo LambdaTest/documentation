@@ -64,7 +64,7 @@ HyperExecute lets you run E2E (end-to-end) Selenium tests at the fastest possibl
 
 End-to-end encryption of the data (including the source code) ensures that the *data* is secure whether it is rest or in transit. YAML-based workflow helps in realizing the benefits of optimal test execution and orchestration. Along with the unique features offered by HyperExecute, you also get access to a host of LambdaTest cloud features like detailed logs, Smart CI features, network insights, video recording, access to a range of browsers & platforms on the cloud, amongst others.
 
-> HyperExecute has several state of the art features to help you optmize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute) to take a look at all the tools that HyperExecute offers. 
+> HyperExecute has several state of the art features to help you optimize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute) to take a look at all the tools that HyperExecute offers. 
 
 >HyperExecute is compliant with leading security standards - SOC2, GDPR, and CCPA. Refer to [HyperExecute Getting Started Guide](/docs/getting-started-with-hyperexecute) for more information about features offered by HyperExecute.
 
@@ -130,7 +130,7 @@ set LT_ACCESS_KEY=LT_ACCESS_KEY
 
 For PyUnit, the *project dependencies* must be available for installation either in *requirements.txt* (global) or *pyproject.toml* (venv).
 
-The project requirements (or pre-requisites) must be installed as a part of the *pre* step in HyperExecute. This step remains the same irrespective of whether you are using global or virtual installatation of Python packages.
+The project requirements (or pre-requisites) must be installed as a part of the *pre* step in HyperExecute. This step remains the same irrespective of whether you are using global or virtual installation of Python packages.
 
 Here are the *pre* steps as mentioned in the sample [Matrix](https://github.com/LambdaTest/pyunit-selenium-hyperexecute-sample/blob/master/yaml/win/pyunit_hyperexecute_matrix_sample.yaml) and [Auto-Split](https://github.com/LambdaTest/pyunit-selenium-hyperexecute-sample/blob/master/yaml/win/pyunit_hyperexecute_autosplit_sample.yaml) YAML files.
 
@@ -271,13 +271,13 @@ Shown below is *HyperExecute CLI* command that has to be triggered from the root
 
 Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/pyunit/pyunit_matrix_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pyunit/pyunit_matrix_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 Shown below is the execution screenshot when the YAML file is triggered from the terminal:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/pyunit/pyunit_matrix_cmd_1.png').default} alt="PyUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pyunit/pyunit_matrix_cmd_1.png').default} alt="PyUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/pyunit/pyunit_matrix_cmd_2.png').default} alt="PyUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pyunit/pyunit_matrix_cmd_2.png').default} alt="PyUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
 ## Running PyUnit Tests on HyperExecute Grid using Auto-split Execution
 ***
@@ -403,13 +403,13 @@ Shown below is *HyperExecute CLI* command that has to be triggered from the root
 
 Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/pyunit/pyunit_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pyunit/pyunit_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 Shown below is the execution screenshot when the YAML file is triggered from the terminal:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/pyunit/pyunit_autosplit_cmd_1.png').default} alt="PyUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pyunit/pyunit_autosplit_cmd_1.png').default} alt="PyUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/pyunit/pyunit_autosplit_cmd_2.png').default} alt="PyUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pyunit/pyunit_autosplit_cmd_2.png').default} alt="PyUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
 ## Pre Steps, Post Steps, Dependency Caching, and Artifacts Management
 ***
@@ -481,21 +481,21 @@ uploadArtefacts:
 
 HyperExecute also facilitates the provision to download the artifacts on your local machine. To download the artifacts, click on Artifacts button corresponding to the associated TestID.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/pyunit/pyunit_artifacts_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pyunit/pyunit_artifacts_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 You can download the artifacts by clicking on the Download button as shown below:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/pyunit/pyunit_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pyunit/pyunit_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ## Secrets Management
 
 In case you want to use any secret keys in the YAML file, the same can be set by clicking on the Secrets button the dashboard.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/pyunit/pyunit_secret_management_1.png').default} alt="secret management"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pyunit/pyunit_secret_management_1.png').default} alt="secret management"  width="1920" height="868" className="doc_img"/>
 
 Now create secrets that you can use in the HyperExecute YAML file.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/pyunit/pyunit_secret_management_2.png').default} alt="secret management"  width="100" height="650" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pyunit/pyunit_secret_management_2.png').default} alt="secret management"  width="100" height="650" className="doc_img"/>
 
 ## Navigation in Automation Dashboard
 
@@ -503,11 +503,11 @@ Every test run on the HyperExecute Grid has a unique *jobId* associated with it.
 
 HyperExecute lets you seamlessly navigate between jobId's and taskId's. The same can be done by navigating to *Automation* -> *HyperExecute logs* -> *Corresponding jobId* on the HyperExecute automation dashboard.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/pyunit/pyunit_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pyunit/pyunit_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 The snapshot below shows how to navigate to the respective *testID* for viewing the Selenium logs:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/pyunit/pyunit_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pyunit/pyunit_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 >
 For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />

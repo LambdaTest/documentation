@@ -94,7 +94,7 @@ Other options:
 
 | Key | Value | Capability Description 
 | -------- | -----| ------------ | 
-| Device List   |  TYPE: STRING<br/> DEFAULT: Untitled<br/> `"iPhone 12-14", "iPhone 6S-13"`|  Add the devices here on which the test will be executed.<br/> Devices are comma seperated.   | 
+| Device List   |  TYPE: STRING<br/> DEFAULT: Untitled<br/> `"iPhone 12-14", "iPhone 6S-13"`|  Add the devices here on which the test will be executed.<br/> Devices are comma separated.   | 
 |Build Name  |   TYPE: STRING<br/> DEFAULT: Untitled<br/> `iOS Small Run` |  You can group your tests like a job containing multiple tests. | 
 | Queue Timeout |  TYPE: STRING<br/> DEFAULT: 600<br/> `300` | Enter the time in seconds after which you want your build to timeout from queue.  | 
 | Idle Timeout |  TYPE: STRING<br/> DEFAULT: 120<br/> `120` | Enter the time in seconds for maximum running time on a test in the build. | 

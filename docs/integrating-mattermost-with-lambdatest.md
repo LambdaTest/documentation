@@ -70,7 +70,7 @@ The LambdaTest Mattermost Integration allows you to share or push a bug to your 
 
 <img loading="lazy" src={require('../assets/images/integrating-mattermost-with-lambdatest/paste-the-webhook.webp').default} alt="Enter your **webhook URL" width="1921" height="869" className="doc_img"/>
 
-**Step 6:** Once you press on Install, Mattermost will be integrated with LambdaTest on the same webhook URL, and an alert-box will appear on the top right corner of the screen stating that the integration is successfull.  
+**Step 6:** Once you press on Install, Mattermost will be integrated with LambdaTest on the same webhook URL, and an alert-box will appear on the top right corner of the screen stating that the integration is successful.  
 <img loading="lazy" src={require('../assets/images/integrating-mattermost-with-lambdatest/Intergration-successful-message.webp').default} alt="Mattermost will be integrated"  className="doc_img"  width="510" height="157"/>
 
 **Step 7:** Voila! Go to Integrations tab again and you will see a Mattermost under "My Integrations".  
@@ -99,7 +99,7 @@ Also, you can see a **green tick** in front of Mattermost under Communication ca
 
 **Step 5:** Complete the **Bug/Task/Issue Form** that appears upon clicking the **"Mark as Bug"** button, as per your requirement:
 >* Select the **Issue type** as Bug/Task/Issue. Here, we have selected it as Bug.
-* Set the **Priority** of the bug as per convinience.
+* Set the **Priority** of the bug as per convenience.
 * You can assign the bug to a member of your team by populating the field '**Assignee**'.
 * Write the '**Summary**' of the bug that would be sent to the assigned member.
 * You also get to post an optional **description** to help with the bug.

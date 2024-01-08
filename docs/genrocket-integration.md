@@ -137,7 +137,7 @@ Till now you have learnt how to set up your generators on GenRocket. Now, in ord
 
 Following two commands have been already added in the “[pre](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre)” section of this HyperExecute Yaml.
 
-* In Hyperexecute, everytime the tests are run, a new environment is created, and gets destroyed as soon as the tests are completed. 
+* In Hyperexecute, every time the tests are run, a new environment is created, and gets destroyed as soon as the tests are completed. 
 
 * To configure Genrocket on HyperExecute we need to create a directory in the HyperExecute Machine with the name **.genrocket** which is done by the following command. 
 

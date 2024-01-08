@@ -93,7 +93,7 @@ data = {
 
 driver.execute_script("lambda-uninstall-app", data)
 
-# Payload required to re-use data of the old app while installing the new one
+# Payload required to reuse data of the old app while installing the new one
 data = {
   "appUrl": "lt://APPID",
   "retainData": True

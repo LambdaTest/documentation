@@ -30,7 +30,7 @@ This documentation provides a comprehensive guide on how to integrate LambdaTest
 
 <img loading="lazy" src={require('../assets/images/lambdatestreport-jenkins/ok.png').default} alt="Image" width="1919" height="900" className="doc_img img_center"/> <br/>
 
-It will route you to a Configuration dashbaord. 
+It will route you to a Configuration dashboard. 
 
 4. From the left menu, click **Pipeline**.
 

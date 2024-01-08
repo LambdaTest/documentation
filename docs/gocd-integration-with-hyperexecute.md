@@ -77,13 +77,13 @@ This document will show you how to integrate GoCD with HyperExecute to greatly s
 
 #### Part 1: Material
 
-- Select the **Matrial Type**. For the demo purposes, we will be using the Git.
+- Select the **Material Type**. For the demo purposes, we will be using the Git.
 
 - Enter the **Repository URL** from which you want to set up the project.
 
 - Enter your **Reposiroty branch** name.
 
-- Enter the **Username** and **Password** of your GitHub. (It is required incase the access to the repo needed authentication).
+- Enter the **Username** and **Password** of your GitHub. (It is required in case the access to the repo needed authentication).
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/gocd/2.png').default} alt="Image"  className="doc_img"/>
 

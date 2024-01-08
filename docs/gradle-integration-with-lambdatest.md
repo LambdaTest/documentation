@@ -55,18 +55,15 @@ Gradle is a build automation tool for multi-language software development. It co
 **Step 1:** Add LambdaTest Gradle Plugin to the `build.gradle` file.
 
 ```bash
-buildscript {
-  repositories {
-    maven {
-      url "https://plugins.gradle.org/m2/"
-    }
-  }
-  dependencies {
-    classpath "io.github.lambdatest:lambdatest-gradle-plugin:1.0.5"
-  }
+plugins {
+    id 'io.github.lambdatest.gradle' version '1.0.5'
 }
 
-apply plugin: "io.github.lambdatest.gradle"
+repositories {
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
 ```
 
 **Step 2:** Configure LambdaTest Parameters in `build.gradle`

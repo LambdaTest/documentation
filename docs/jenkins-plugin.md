@@ -126,7 +126,7 @@ Here we will look at the process of enabling Lambda Tunnel to test your locally 
 1.  We would recommend keeping the LambdaTest Local Path empty; that way, the plugin will automatically download the LT binary file. However, if you wish to use a binary by downloading externally, you need to provide the file's location as the 'LambdaTest Local Path.' But if your Jenkins works on the master-slave configuration set up, then it would be best to leave the path empty for allowing the plugin to download the relevant binary file for the operating system of your local machine.
 2.  You can configure additional settings with Lambda Tunnel by using the option to Use Local Tunnel.
 
-## Enviroment Variable For LambdaTest Jenkins Plugin
+## Environment Variable For LambdaTest Jenkins Plugin
 |Environment Variables|Description|
 |--- |--- |
 |$LT_USERNAME|Your LambdaTest username.|
@@ -142,7 +142,7 @@ Here we will look at the process of enabling Lambda Tunnel to test your locally 
 |$LT_TUNNEL_NAME|Name of your Lambda Tunnel for local testing.|
 
 
-Using the above variables you will recieve an output in the below format.
+Using the above variables you will receive an output in the below format.
 
 ```javascript
 sample Output $LT_BROWSERS:

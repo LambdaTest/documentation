@@ -94,7 +94,7 @@ In a few seconds, after you execute the command, an SSH connection will be estab
 * * *
 >**Note:** If you were already running a test session through tunnel then you will have to terminate the existing SSH connection in cmd before you re-establish it for a new directory.
 
-**Step 1:** If want to test the local folders and files stored in your system, pass an additional argument ‘dir’ with the directory/folder name in double qoutes as you run the command on Windows cmd to establish a SSH connecton with LambdaTest Tunnel.
+**Step 1:** If want to test the local folders and files stored in your system, pass an additional argument ‘dir’ with the directory/folder name in double quotes as you run the command on Windows cmd to establish a SSH connection with LambdaTest Tunnel.
 
 **Sample format:**
 
@@ -152,7 +152,7 @@ You will receive the below highlighted messages indicating the termination on SS
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-15.webp').default} alt="Image"  className="doc_img"/>
 
-**Option 2:** You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button thats says **“Tunnel active”**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'x'. Hit the 'x' to terminate the SSH tunnel.
+**Option 2:** You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button that's says **“Tunnel active”**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'x'. Hit the 'x' to terminate the SSH tunnel.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-16.webp').default} alt="Image"  className="doc_img"/>
 

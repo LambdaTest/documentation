@@ -216,7 +216,7 @@ That's it, now all the Network logs will start to show up and we can interact wi
 
 ## Mocking data 
 
-Charles Proxy offers the ability to mock the data that is being passed to and fro.
+Charles Proxy offers the ability to mock the data that is being passed to and for.
 Let's look at one such example.
 
 The clean data looks something like this:

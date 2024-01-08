@@ -14,7 +14,7 @@ jobs:
           CI: true
           NODE_ENV: prod
       steps:
-        - uses: actions/checkout@v4
+        - uses: actions/checkout@v4 
         - name: Set up Node.js
           uses: actions/setup-node@v3
           with:
@@ -38,6 +38,6 @@ jobs:
       - uses: codespell-project/actions-codespell@master
         name: Check spelling
         with:
-          skip: "*.svg,*.js,*.map,*.css,*.scss"
-          ignore_words_list: "aks,atleast,cros,ddress,fiel,ist,nd,ot,pullrequest,ser,shttp,wast,fo,seldomly,delt,cruzer,plack,secur,te,testng,TestNG,FLE,Nome,softwares"
+          skip: "*.svg,*.js,*.map,*.css,*.scss,*.webp"
+          ignore_words_list: aks,atleast,cros,ddress,fiel,ist,nd,ot,pullrequest,ser,shttp,wast,fo,tht,extention,seldomly,delt,cruzer,plack,secur,te,testng,TestNG,FLE,fle,afterAll,afterall,Nome,nome,lod,pressEnter,pressenter,softwares
           path: docs

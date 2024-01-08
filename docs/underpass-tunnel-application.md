@@ -106,7 +106,7 @@ After logging in, you will be presented with the home screen of Underpass. Here,
 <img loading="lazy" src={require('../assets/images/underpass-tunnel-application/underpass_home.jpg').default} alt="LambdaTest Underpass" width="788" height="595" className="doc_img"/>
 
 
-> On Windows, you may get another promt from your firewall defender to allow LT, which is a binary file for Lambda Tunnel. Earlier, you used to trigger the LT file through your command line or terminal. Now, as you allow LT(Lambda Tunnel) the permissions, the Underpass will take care of the rest of the execution.
+> On Windows, you may get another prompt from your firewall defender to allow LT, which is a binary file for Lambda Tunnel. Earlier, you used to trigger the LT file through your command line or terminal. Now, as you allow LT(Lambda Tunnel) the permissions, the Underpass will take care of the rest of the execution.
 
 Next, you just have to wait for a couple seconds while the tunnel loads. You can see the logs as well.
 
@@ -138,7 +138,7 @@ As you click on **Show Advanced Configurations**, you get the below screen.
 
 ### Local Testing By MITM(Man-In-The-Middle)
 * * *
-The MITM(Man-in-the-middle) toggle enables you to test websites using self-signed certificates on your local system or internal network. It happens very often that you may try to test a website on localhost which may not have valid SSL certificates before the website is made live. In such cases, you may recieve the below error.
+The MITM(Man-in-the-middle) toggle enables you to test websites using self-signed certificates on your local system or internal network. It happens very often that you may try to test a website on localhost which may not have valid SSL certificates before the website is made live. In such cases, you may receive the below error.
 
 <img loading="lazy" src={require('../assets/images/underpass-tunnel-application/invalid-ssl.webp').default} alt="LambdaTest Underpass" width="1266" height="657" className="doc_img"/>
 
@@ -167,7 +167,7 @@ To view the tunnel logs instantly, click on **Logs** after selecting a tunnel in
 
 <img loading="lazy" src={require('../assets/images/underpass-tunnel-application/underpass_logs.png').default} alt="LambdaTest Underpass" width="779" height="532" className="doc_img"/>
 
-You can find the tunnel logs stroed in the following location:
+You can find the tunnel logs stored in the following location:
 
 * On macOS: `~/Library/Application Support/Underpass/logs`
 * On Windows: `C:\Users\%USERNAME%\AppData\Local\Underpass\logs`

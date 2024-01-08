@@ -39,8 +39,8 @@ When you configure TAS to run in self-hosted environment, all the test execution
 Here is a sample flow for you to understand how it works
 - After configuring TAS self-hosted mode and integrating your repositories with TAS platform.
 - Whenever you make a commit, raise a PR or merge a PR, the TAS platform receives a webhook event from your git provider.
-- This webhook event is simply sent to your self-hosted environment in order to initate jobs for test execution.
-- The test-at-scale binary running on your self hosted enviroment receives this event and spawns containers to execute those jobs.
+- This webhook event is simply sent to your self-hosted environment in order to initiate jobs for test execution.
+- The test-at-scale binary running on your self hosted environment receives this event and spawns containers to execute those jobs.
 - Your code or business logic never leaves your setup environment.
 - Only basic test metadata is sent to the TAS server in order to provide you with test insights and other relevant information on the TAS dashboard.​<br/>
 
