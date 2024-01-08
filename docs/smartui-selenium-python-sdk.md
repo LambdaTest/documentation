@@ -65,7 +65,7 @@ The first step is to create a project with the application in which we will comb
 
 1. Go to [Projects page](https://smartui.lambdatest.com/)
 2. Click on the `new project` button
-3. Select the platform as <b>CLI</b> for executing your `SDK` tests.
+3. Select the platform as <b>CLI</b> or <b>Web</b> for executing your `SDK` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
@@ -75,8 +75,7 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-**Using Github Sample**
-- You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `SmartUI_SDK_LT_hub.py` file.
+You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `SmartUI_SDK_LT_hub.py` file.
 
 ```bash
 git clone https://github.com/LambdaTest/smartui-python-sample
@@ -86,7 +85,7 @@ git clone https://github.com/LambdaTest/smartui-python-sample
 Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
 
 ```bash
-npm i -g @lambdatest/smartui-cli
+npm i @lambdatest/smartui-cli
 ```
 ```bash
 pip install lambdatest-selenium-driver
@@ -126,7 +125,7 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
-smartui config:create smartui-web.json
+npx smartui config:create smartui-web.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
@@ -182,7 +181,7 @@ from selenium import webdriver
 
 driver = webdriver.Chrome()
 try:
-    driver.get('https://www.lambdatest.com/visual-regression-testing')
+    driver.get('<Required URL>')
     smartui_snapshot(driver,"<Screenshot Name>")
 except Exception as err:
     print(err)
@@ -195,11 +194,11 @@ finally:
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-smartui exec python <Test fIle name>.py
+npx smartui exec python <Test fIle name>.py
 ```
 
 :::note 
-You may use the `smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
+You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
 :::
 
 ##  View SmartUI Results
