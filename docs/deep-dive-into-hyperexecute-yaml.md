@@ -440,7 +440,6 @@ This flag is used to set the Name of your Projects which would later allow you t
 ```bash
 projectName: '<Your Project Name>':'<Your Project ID>'
 ```
-
 ***
 
 ## `differentialUpload`
@@ -467,7 +466,7 @@ differentialUpload:
 ```
 
 :::info
-If the project flag is not passed then the name for the project will be set to **DefaultProject**
+If the project flag is not passed then the name for the project will be set to **Default Project**
 :::
 
 ***
