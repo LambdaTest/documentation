@@ -342,6 +342,7 @@ module.exports = {
               "puppeteer-mocha",
               "puppeteer-jest",
               "puppeteer-codecept",
+              "puppeteer-pytest-pyppeteer",
               "puppeteer-cicd",
             ],
           },
