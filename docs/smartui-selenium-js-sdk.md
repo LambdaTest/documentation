@@ -80,6 +80,7 @@ You can clone the sample repository to run `LambdaTest` automation tests with `S
 
 ```bash
 git clone https://github.com/LambdaTest/smartui-node-sample
+cd smartui-node-sample/sdk
 ```
 ### **Step 2**: Install the Dependencies
 
