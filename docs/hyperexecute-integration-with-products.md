@@ -73,13 +73,6 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   </div>
   </a>
 
-  <a href = "/support/docs/hyperexecute-azure-test-plan/">
-  <div className="support_inners">
-    <h3>Azure Test Plan</h3>
-    <p>Manage your entire Test Suite for your web and desktop applications using Azure Test Plan.</p>
-  </div>
-  </a>
-
 </div>
 
 >If your favourite products are not mentioned in the list above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have them ready for you.
