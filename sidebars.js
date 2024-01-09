@@ -382,7 +382,6 @@ module.exports = {
             "local-testing-puppeteer",
             "puppeteer-mocha",
             "puppeteer-jest",
-            "puppeteer-codecept",
             "puppeteer-pytest-pyppeteer",
             "puppeteer-cicd",
           ],
