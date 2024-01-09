@@ -75,6 +75,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [preDirectives](/support/docs/deep-dive-into-hyperexecute-yaml/#predirectives) | Map | Similar to pre with option to retry and specify shell. |
 | [post](/support/docs/deep-dive-into-hyperexecute-yaml/#post) | List of Strings | The actions that are performed after test execution. |
 | [postDirectives](/support/docs/deep-dive-into-hyperexecute-yaml/#postdirectives) | Map |Similar to post with option to retry. |
+| [alwaysRunPostSteps](/support/docs/deep-dive-into-hyperexecute-yaml/#alwaysrunpoststeps) | Boolean | Execute the Post Steps in every scenario case |
 | [cachekey](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) | String | File which can be used to generate unique key for cache. Example : package.json |
 | [cacheDirectories](/support/docs/deep-dive-into-hyperexecute-yaml/#cachedirectories) | List of Strings | Dependency directories that are cached to improve the test execution speed. |
 | [projectName](/support/docs/deep-dive-into-hyperexecute-yaml/#projectname) | String | Segregate data at a project/repo level |

@@ -391,15 +391,32 @@ post:
 ***
 ## `postDirectives`
 This is an advanced version of `post` where you can control “how” your post commands should be executed in a parallel HyperExecute Executor. If both post and postDirectives flags are provided at the same time, then the precedence is given to the postDirectives flag.
+
 postDirectives currently has the ability to take the following additional inputs:
+
 - `commands`: actual commands that needs to run like `echo <some-dir>/output/output.log`
+
 - `shell`: shell to execute the commands under. This is typically helpful if you want to run your post commands in a specific shell. For example, `powershell` for Windows or `bash` for Linux and MacOS. (Coming Soon)
+
 ```bash
 postDirectives:
   - cat yaml/win/*.*hyperexecute_autosplits.yaml 
 ```
 
 ***
+
+## `alwaysRunPostSteps`
+
+**Problem :** Test scenarios failing led to the cancellation of post-steps, incomplete cleanup, being unable to upload reports, and other actions that you need to perform after all test executions.
+
+**Solution :** The `alwaysRunPostSteps` flag ensures that post-steps execute even if the scenario stage fails.
+
+```bash
+alwaysRunPostSteps: true
+```
+
+***
+
 ## `cachekey`
 It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. When you run your tests for the very first time, HyperExecute caches the dependency files (e.g., package-lock.json, pom.xml, etc.). Now, when you execute the same test suite again (without making any changes), HyperExecute searches for a matching cached result within its cache storage, and if a valid cached result is found, HyperExecute utilizes it directly, skipping redundant execution.
 
