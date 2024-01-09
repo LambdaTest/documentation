@@ -1206,7 +1206,7 @@ module.exports = {
                 collapsed: true,
                 link: {
                   type: "doc",
-                  id: "integration-products",
+                  id: "hyperexecute-integration-with-products",
                 },
                 items: [
                   {
@@ -1517,9 +1517,20 @@ module.exports = {
               id: "hyperexecute-browser-list-api",
               },
               {
-                type: "doc",
+                type: "category",
+                collapsed: true,
                 label: "HyperExecute Widgets",
-                id: "hyperexecute-widgets"
+                link: {
+                  type: "doc",
+                  id: "hyperexecute-widgets",
+                },
+                items: [
+                  "hyperexecute-job-widgets",
+                  "hyperexecute-stage-widgets",
+                  "hyperexecute-task-widgets",
+                  "hyperexecute-test-widgets",
+                  "hyperexecute-resource-widgets"
+                ]
               },
               {
                 type: "category",

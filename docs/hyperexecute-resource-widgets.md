@@ -1,0 +1,48 @@
+---
+id: hyperexecute-resource-widgets
+title: HyperExecute Resource Utilization Widgets
+hide_title: true
+sidebar_label: Resource Utilization Widgets
+description: Effortlessly Set Up Hyperexecute Widgets to analyze the test results
+keywords:
+  - LambdaTest Hyperexecute
+  - LambdaTest Hyperexecute help
+  - LambdaTest Hyperexecute documentation
+  - HyperExecute
+  - HyperExecute Widgets
+url: https://www.lambdatest.com/support/docs/hyperexecute-resource-widgets/
+site_name: LambdaTest
+slug: hyperexecute-resource-widgets/
+---
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lambdatest.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://www.lambdatest.com/support/docs/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "HyperExecute Widgets",
+          "item": "https://www.lambdatest.com/support/docs/hyperexecute-resource-widgets/"
+        }]
+      })
+    }}
+></script>
+
+# HyperExecute Resource Utilization Widgets
+
+## Concurrency Trends
+
+The Concurrency Trends widget allows you to know the tests which are kept in the queue and the tests that are put in a running state. The information can be filtered by clicking on the relevant legends at the bottom of the graph.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/concurrency-trends.png').default} alt="job-trends" className="doc_img"/>
