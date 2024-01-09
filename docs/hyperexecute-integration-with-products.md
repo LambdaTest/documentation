@@ -55,7 +55,7 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   <a href = "/support/docs/katalon-integration-with-hyperexecute/">
   <div className="support_inners">
     <h3>Katalon</h3>
-    <p>Perfrom Cross Platform Testing ranging from web, API, mobile, and desktop applications.</p>
+    <p>Perform Cross Platform Testing ranging from web, API, mobile, and desktop applications.</p>
   </div>
   </a>
 
@@ -70,13 +70,6 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   <div className="support_inners">
     <h3>Accelq</h3>
     <p>Perform codeless automated functional and API testing using Acceelq.</p>
-  </div>
-  </a>
-
-  <a href = "/support/docs/hyperexecute-azure-test-plan/">
-  <div className="support_inners">
-    <h3>Azure Test Plan</h3>
-    <p>Manage your entire Test Suite for your web and desktop applications using Azure Test Plan.</p>
   </div>
   </a>
 
