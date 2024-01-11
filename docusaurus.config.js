@@ -24,7 +24,7 @@ module.exports = {
     //   defer: true,
     // }
   ],
-  themes: ['docusaurus-theme-search-typesense'],
+  // themes: ['docusaurus-theme-search-typesense'],
 
   themeConfig: {
     // docs: {
@@ -32,63 +32,63 @@ module.exports = {
     //     hideable: true,
     //   },
     // },
-    typesense: {
-      // Replace this with the name of your index/collection.
-      // It should match the "index_name" entry in the scraper's "config.json" file.
-      typesenseCollectionName: 'lambdatest-internal',
+    // typesense: {
+    //   // Replace this with the name of your index/collection.
+    //   // It should match the "index_name" entry in the scraper's "config.json" file.
+    //   typesenseCollectionName: 'lambdatest-internal',
 
-      typesenseServerConfig: {
-        nodes: [
-          {
-            host: 'muzrs6ht21cdqnb7p-1.a1.typesense.net',
-            port: 443,
-            protocol: 'https',
-          },
-          // {
-          //   host: 'muzrs6ht21cdqnb7p-1.a1.typesense.net',
-          //   port: 8108,
-          //   protocol: 'https',
-          // },
-          // {
-          //   host: 'muzrs6ht21cdqnb7p-1.a1.typesense.net',
-          //   port: 8108,
-          //   protocol: 'https',
-          // }
-          // {
-          //   host: 'xxx-2.a1.typesense.net',
-          //   port: 443,
-          //   protocol: 'https',
-          // },
-          // {
-          //   host: 'xxx-3.a1.typesense.net',
-          //   port: 443,
-          //   protocol: 'https',
-          // },
-        ],
-        apiKey: 'qg3GMB0SuBhq7i6kKdOdCn7kr9WgPgU7',
-      },
+    //   typesenseServerConfig: {
+    //     nodes: [
+    //       {
+    //         host: 'muzrs6ht21cdqnb7p-1.a1.typesense.net',
+    //         port: 443,
+    //         protocol: 'https',
+    //       },
+    //       // {
+    //       //   host: 'muzrs6ht21cdqnb7p-1.a1.typesense.net',
+    //       //   port: 8108,
+    //       //   protocol: 'https',
+    //       // },
+    //       // {
+    //       //   host: 'muzrs6ht21cdqnb7p-1.a1.typesense.net',
+    //       //   port: 8108,
+    //       //   protocol: 'https',
+    //       // }
+    //       // {
+    //       //   host: 'xxx-2.a1.typesense.net',
+    //       //   port: 443,
+    //       //   protocol: 'https',
+    //       // },
+    //       // {
+    //       //   host: 'xxx-3.a1.typesense.net',
+    //       //   port: 443,
+    //       //   protocol: 'https',
+    //       // },
+    //     ],
+    //     apiKey: 'qg3GMB0SuBhq7i6kKdOdCn7kr9WgPgU7',
+    //   },
 
-      // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
-      typesenseSearchParameters: {},
+    //   // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
+    //   typesenseSearchParameters: {},
 
-      // Optional
-      contextualSearch: true,
-    },
+    //   // Optional
+    //   contextualSearch: true,
+    // },
     
     prism: {
         additionalLanguages: ['powershell','java','csharp','php','ruby','robotframework'],
     },
-    // algolia: {
-    //   apiKey: '21e5be14ef037223a329241ae6ac5678',
-    //   indexName: 'lambdatest',
-    //   appId: 'LTX5ENOXAD',
-    //   // Optional: see doc section bellow
-    //   // contextualSearch: true,
-    //   contextualSearch: false,
-    //   // Optional: Algolia search parameters
-    //   searchParameters: {},
-    //   //... other Algolia params
-    // },
+    algolia: {
+      apiKey: '21e5be14ef037223a329241ae6ac5678',
+      indexName: 'lambdatest',
+      appId: 'LTX5ENOXAD',
+      // Optional: see doc section bellow
+      // contextualSearch: true,
+      contextualSearch: false,
+      // Optional: Algolia search parameters
+      searchParameters: {},
+      //... other Algolia params
+    },
     navbar: {
       title: null,
       hideOnScroll: true,
