@@ -1237,6 +1237,19 @@ module.exports = {
                     label: "Accelq",
                     id: "hyperexecute-accelq-integration",
                   },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Azure Test Plan",
+                    link: {
+                      type: "doc",
+                      id: "hyperexecute-azure-test-plan",
+                    },
+                    items: [
+                      "hyperexecute-azure-setup-test-plan",
+                      "hyperexecute-azure-associate-test-case",
+                    ]
+                  },
                 ],
               },
               {
@@ -1413,6 +1426,11 @@ module.exports = {
                 items: [
                   "hyperexecute-espresso-testing",
                 ]
+              },
+              {
+                type: "doc",
+                label: "Maestro",
+                id: "hyperexecute-maestro-testing",
               }
             ],
           },
