@@ -1428,11 +1428,11 @@ module.exports = {
                   "hyperexecute-espresso-testing",
                 ]
               },
-              {
-                type: "doc",
-                label: "Maestro",
-                id: "hyperexecute-maestro-testing",
-              }
+              // {
+              //   type: "doc",
+              //   label: "Maestro",
+              //   id: "hyperexecute-maestro-testing",
+              // }
             ],
           },
           {
