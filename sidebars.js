@@ -1406,6 +1406,10 @@ module.exports = {
                 type: "category",
                 collapsed: true,
                 label: "Cypress",
+                // link: {
+                //   type: "doc",
+                //   id: "cypress-integration-with-hyperexecute",
+                // },
                 items: [
                   "cypressv9-on-hyperexecute",
                   "cypressv10-on-hyperexecute",
@@ -2424,6 +2428,7 @@ module.exports = {
             "testrigor-integration",
             "localstack-integration-with-lambdatest",
             "genrocket-integration",
+            "netlify-integration-with-lambdatest"
           ],
         // },
       ], 
