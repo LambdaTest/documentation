@@ -44,7 +44,7 @@ slug: axosoft-integration/
         }]
       })
     }}
-></script>
+>,</script>
 
 # Axosoft Integration
 ***

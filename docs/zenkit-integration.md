@@ -44,12 +44,20 @@ slug: zenkit-integration/
         }]
       })
     }}
-></script>
+> 
+
+</script>
 
 # Zenkit Integration
 ***
 
 Zenkit is a SaaS tool that helps teams collaborate on projects and build databases. It lets you track your information from the start, like brainstorming ideas all the way to finishing tasks together. Think of Zenkit as a flexible space to arrange and manage any work. 
+
+<div className="ytframe"> 
+<div className="youtube" data-embed="ZurBm9DvuFI">
+    <div className="play-button"></div>
+</div>
+</div>
 
 LambdaTest's integration with Zenkit provides a seamless solution for tracking and managing bugs and issues encountered during [cross-browser testing](https://www.lambdatest.com/online-browser-testing). With this integration, developers can effortlessly log bugs directly from the LambdaTest platform to their Zenkit instance, eliminating the need to maintain tasks and issues manually.
 
