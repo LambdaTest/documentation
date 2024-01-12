@@ -3,7 +3,7 @@ id: hyperexecute-resource-widgets
 title: HyperExecute Resource Utilization Widgets
 hide_title: true
 sidebar_label: Resource Utilization Widgets
-description: Effortlessly Set Up Hyperexecute Widgets to analyze the test results
+description: HyperExecute's Concurrency Trends widget tracks queued and running tests, offering insights into resource utilization.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
