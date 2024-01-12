@@ -104,6 +104,10 @@ LambdaTest offers you plugins with various third-party application to help you p
 <a href="/docs/gradle-integration-with-lambdatest/">Gradle Plugin</a>
 </div>
 
+<div className="download_btn mb-10">
+<a href="/docs/netlify-integration-with-lambdatest/">Netlify Plugin</a>
+</div>
+
 **Got something to recommend?**  
 We would love to hear it. Drop the suggestion in the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> for any plugin that you may want us to integrate with.
 
