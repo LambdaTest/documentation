@@ -101,7 +101,7 @@ The `runtime` flag is used to:
 - Download and install the dependent language and framework that is needed to execute your tests.
 - You can provide the language and the version you want to be installed.
 
-> Languages Supported: **java, dotnet, node**, **ruby**, **android-sdk** and **python**
+> Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-sdk** and **python**
 
 ```bash
 runtime:
