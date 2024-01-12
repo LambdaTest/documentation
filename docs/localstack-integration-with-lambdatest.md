@@ -45,34 +45,6 @@ slug: localstack-integration-with-lambdatest/
       })
     }}
 >,
- <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": "LambdaTest-LocalStack Integration | Unleashing Testing Power | LambdaTest Integrations🔗",
-      "description": "Explore the transformative integration of LocalStack and LambdaTest, enhancing testing speeds and efficiency. ",
-      "thumbnailUrl": "https://i.ytimg.com/vi/BKjPOhQE2hg/default.jpg",
-      "uploadDate": "2023-10-13",
-      "duration": "PT3M9S",  
-      "publisher": {
-        "@type": "Organization",
-        "name": "LambdaTest",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.lambdatest.com/resources/images/lambdatest-1-1.jpg",
-          "width": 400,
-          "height": 400
-        }
-      },
-      "contentUrl": "https://www.youtube.com/watch?v=BKjPOhQE2hg",
-      "embedUrl": "https://www.youtube.com/embed/BKjPOhQE2hg"
-    }
-    </script>
-
-
-
-
-
 </script>
 
 # LocalStack Integrates With LambdaTest

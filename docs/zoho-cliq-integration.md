@@ -44,32 +44,7 @@ slug: zoho-cliq-integration/
         }]
       })
     }}
->,<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": "LambdaTest - Zoho Cliq Integration | Empower Team Collaboration | LambdaTest Integrations🔗",
-      "description": "Discover the power of seamless team collaboration and communication with Zoho Cliq Integration.",
-      "thumbnailUrl": "https://i.ytimg.com/vi/GSSvxCZ_ysE/default.jpg",
-      "uploadDate": "2023-06-14",
-      "duration": "PT3M17S",  
-      "publisher": {
-        "@type": "Organization",
-        "name": "LambdaTest",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.lambdatest.com/resources/images/lambdatest-1-1.jpg",
-          "width": 400,
-          "height": 400
-        }
-      },
-      "contentUrl": "https://www.youtube.com/watch?v=GSSvxCZ_ysE",
-      "embedUrl": "https://www.youtube.com/embed/GSSvxCZ_ysE"
-    }
-    </script>
-
-
-
+>
 
 
 </script>

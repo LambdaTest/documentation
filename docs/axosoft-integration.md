@@ -44,37 +44,7 @@ slug: axosoft-integration/
         }]
       })
     }}
->,
-
- <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": "LambdaTest-Axosoft Integration | Streamline Bug Tracking and Management  | LambdaTest Integrations🔗",
-      "description": "Effortlessly manage projects and bugs with Axosoft and LambdaTest integration, enhancing collaboration and efficiency. ",
-      "thumbnailUrl": "https://i.ytimg.com/vi/0mkUc57rXtc/default.jpg",
-      "uploadDate": "2023-10-31",
-      "duration": "PT4M7S",  
-      "publisher": {
-        "@type": "Organization",
-        "name": "LambdaTest",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.lambdatest.com/resources/images/lambdatest-1-1.jpg",
-          "width": 400,
-          "height": 400
-        }
-      },
-      "contentUrl": "https://www.youtube.com/watch?v=0mkUc57rXtc",
-      "embedUrl": "https://www.youtube.com/embed/0mkUc57rXtc"
-    }
-    </script>
-
-
-
-
-
-</script>
+>,</script>
 
 # Axosoft Integration
 ***

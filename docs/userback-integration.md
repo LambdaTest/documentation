@@ -44,36 +44,7 @@ slug: userback-integration/
         }]
       })
     }}
->,  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": "LambdaTest-Userback Integration | Log UI Bugs In A Single Click | LambdaTest Integrations🔗",
-      "description": "Experience seamless bug tracking and improved collaboration with the effortless integration of LambdaTest and Userback.",
-      "thumbnailUrl": "https://i.ytimg.com/vi/FuUuqsTrT2Y/default.jpg",
-      "uploadDate": "2023-10-16",
-      "duration": "PT3M59S",  
-      "publisher": {
-        "@type": "Organization",
-        "name": "LambdaTest",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.lambdatest.com/resources/images/lambdatest-1-1.jpg",
-          "width": 400,
-          "height": 400
-        }
-      },
-      "contentUrl": "https://www.youtube.com/watch?v=FuUuqsTrT2Y",
-      "embedUrl": "https://www.youtube.com/embed/FuUuqsTrT2Y"
-    }
-    </script>
-
-
-
-
-
-
-</script>
+>,  </script>
 
 # Userback Integration
 ***

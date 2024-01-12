@@ -36,33 +36,6 @@ slug: pivotal-tracker-integration/
       })
     }}
 >,
- <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": "LambdaTest-Pivotal Tracker Integration | Seamless bug tracking | LambdaTest Integrations🔗",
-      "description": "Boost your project's productivity by seamlessly integrating LambdaTest with Pivotal Tracker. Streamline your testing and development workflows for maximum efficiency.",
-      "thumbnailUrl": "https://i.ytimg.com/vi/ZurBm9DvuFI/default.jpg",
-      "uploadDate": "2023-11-07",
-      "duration": "PT3M20S",  
-      "publisher": {
-        "@type": "Organization",
-        "name": "LambdaTest",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.lambdatest.com/resources/images/lambdatest-1-1.jpg",
-          "width": 400,
-          "height": 400
-        }
-      },
-      "contentUrl": "https://www.youtube.com/watch?v=auUaheszuvs",
-      "embedUrl": "https://www.youtube.com/embed/auUaheszuvs"
-    }
-    </script>
-
-
-
-
 </script>
 
 # Pivotal Tracker Integration

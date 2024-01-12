@@ -3,7 +3,7 @@ id: hyperexecute-job-widgets
 title: HyperExecute Job Widgets
 hide_title: true
 sidebar_label: Job Widgets
-description: Effortlessly Set Up Hyperexecute Widgets to analyze the test results
+description: Quickly and easily set up Hyperexecute Widgets for efficient analysis of test results.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
