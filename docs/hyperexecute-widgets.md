@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-widgets
-title: Hyperexecute Widgets
+title: HyperExecute Widgets
 hide_title: true
 sidebar_label: HyperExecute Widgets
 description: Effortlessly Set Up Hyperexecute Widgets to analyze the test results
@@ -8,6 +8,11 @@ keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
   - LambdaTest Hyperexecute documentation
+  - HyperExecute
+  - HyperExecute Widgets
+  - HyperExecute Jobs
+  - HyperExecute Stage
+  - HyperExecute Tasks
 url: https://www.lambdatest.com/support/docs/hyperexecute-widgets/
 site_name: LambdaTest
 slug: hyperexecute-widgets/
@@ -30,7 +35,7 @@ slug: hyperexecute-widgets/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "HyperExecute Concepts",
+          "name": "HyperExecute Widgets",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-widgets/"
         }]
       })
@@ -39,80 +44,83 @@ slug: hyperexecute-widgets/
 
 # HyperExecute Widgets
 
-The HyperExecute Widgets enables you to get all the insights of the Jobs executed in one place. You can easily find information ranging from the count of the jobs, tasks, and stages run on the platform and their insights.
+The HyperExecute Widgets enables you to get all the insights of the Jobs executed in one place. You can easily find information ranging from the count of the Jobs, Stages, Tasks, and Tests run on the platform and their insights.
 
-## Job Trends
+<div className="support_main">  
+  <a href="/docs/hyperexecute-job-widgets/">
+    <div className="support_inners">
+      <h3>Job Widgets</h3>
+      <p>Learn the insights of your triggered Jobs on HyperExecute Platform.</p>
+    </div>
+  </a>
+  <a href="/docs/hyperexecute-stage-widgets/">
+    <div className="support_inners">
+      <h3>Stage Widgets</h3>
+      <p>Learn the insights of the Stages of your Jobs on HyperExecute Platform.</p>
+    </div>
+  </a>
+  <a href="/docs/hyperexecute-task-widgets/">
+    <div className="support_inners">
+      <h3>Task Widgets</h3>
+      <p>Learn the insights of the Tasks on HyperExecute Platform.</p>
+    </div>
+  </a>
+  <a href="/docs/hyperexecute-test-widgets/">
+    <div className="support_inners">
+      <h3>Test Widgets</h3>
+      <p>Learn the insights of your Tasks based on the defined parameters in the Tests.</p>
+    </div>
+  </a>
+  <a href="/docs/hyperexecute-resource-widgets/">
+  <div className="support_inners">
+    <h3>Resource Utilization Widgets</h3>
+    <p>Learn about the HyperExecute Resource Utilization Widgets.</p>
+  </div>
+  </a>
+</div>
 
-The `Job Trends` Widget empowers you to analyze the trends of executed Jobs on the LambdaTest platform, categorized as **Failed**, **Aborted**, **Lambda Error**, **Timeout**, and **Completed**.
+## Create Your Widgets Dashboard using Pre-built Template
 
-You can leverage the widget to understand the distribution of Job statuses, enabling a comprehensive assessment of your team's application performance. By utilizing legends for seamless filtering, you can quickly identify specific failing Job numbers and troubleshoo
+To create your widgets dashboard, follow the below mentioned steps:
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/job-trends.png').default} alt="job-trends" className="doc_img"/>
+**Step 1:** Go to the Insights section from the LambdaTest Dashboard.
 
-## Stage Trends
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/step1.png').default} alt="job-trends" className="doc_img"/>
 
-The `Stage Trends` widget enables the user to track the total Stages being run on the platform grouped by their status including **Completed**, **Skipped**, **Failed**, **Aborted**, etc.
+**Step 2:** Click on the **Create New** button, then select the **Pre-built Templates** option.
 
-You can use this widget when you want to get a total of the Stages being executed on the platform for a specific environment or status. With the Stage Summary widget you can see the total count of the desired use cases.
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/step4.png').default} alt="job-trends" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/stage-trends.png').default} alt="job-trends" className="doc_img"/>
+**Step 3:** Select HyperExecute Report
 
-## Task Trends
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/step5.png').default} alt="job-trends" className="doc_img"/>
 
-The `Task Trends` widget allows you to analyze the trends of the Task for each Job executed on the platform categorized into **Completed**, **Failed**, **Aborted**, **Lambda Error**, and **Cancelled**, which can be filtered by a specific date and time.
+**Step 4:** Enter your Dashboard name and then click on **Create Dashboard** button.
 
-If you want to know the status distribution of the Tasks in the Jobs executed by the team to understand the performance of their application. You can identify if any particular Task in the Job is failing and get the information about it.
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/step6.png').default} alt="job-trends" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/task-trends.png').default} alt="job-trends" className="doc_img"/>
+## Create Your Custom Widgets Dashboard
 
-## Job Insights
+To create your widgets dashboard, follow the below mentioned steps:
 
-The `Job Insights` widget allows the user to get deep insights about the Jobs executed on the platform categorized by their status including **Completed**, **Failed**, **Lambda Error**, **Timeout**, and **Cancelled**.
+**Step 1:** Go to the Insights from the LambdaTest Dashboard.
 
-You can understand the status distribution of the Jobs executed by your team and drill down into each failed Job number to understand where the error lies and troubleshoot it.
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/step1.png').default} alt="job-trends" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/job-insights.png').default} alt="job-trends" className="doc_img"/>
+**Step 2:** Click on the **Create New** button, then select the **Custom Widgets** option.
 
-## Job Summary
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/step2.png').default} alt="job-trends" className="doc_img"/>
 
-The `Job Summary` widget enables you to track the total Jobs being run on the platform grouped by their status including **Completed**, **Partially Completed**, **Failed**, **Aborted**, etc.
+**Step 3:** Now customize your Widget Dashboard
 
-If you wants to get a total number of the Jobs being executed on the platform for a specific environment or status. With the Job Summary widget you can see the total count of the desired use cases.
+- Select HyperExecute
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/job-summary.png').default} alt="job-trends" className="doc_img"/>
+- Give name to your Dashboard
 
-## Task Summary
+- Select your desired widgets that you want in your dashboard.
 
-The `Task Summary` widget enables the user to track the total Tasks being run on the platform grouped by their status including **Completed**, **Skipped**, **Failed**, **Aborted**, etc.
+> Note: You can re-customize the same dashboard by adding more widgets later.
 
-If you wants to get a total of the Tasks being executed on the platform for a specific environment or status. With the Task Summary widget you can see the total count of the desired use cases.
+- Click on **Create Dashboard** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/task-summary.png').default} alt="job-trends" className="doc_img"/>
-
-## Stage Summary
-
-The `Stage Summary` widget enables the user to track the total Stages being run on the platform grouped by their status including **Completed**, **Skipped**, **Failed**, **Aborted**, etc.
-
-If you wants to get a total of the Stages being executed on the platform for a specific environment or status. With the Stage Summary widget you can see the total count of the desired use cases.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/stage-summary.png').default} alt="job-trends" className="doc_img"/>
-
-## Task Status Ratio
-
-The `Task Status Ratio` widget provides an insightful overview of the quality of your current test cases, as marked by the status within your framework on the platform. 
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/task-status-ratio.png').default} alt="job-trends" className="doc_img"/>
-
-## Job Queue Time Trends
-
-The **Job Queue Time Trends** Widget provides you a comprehensive view of the total queue time for all jobs in a visual format. The widget displays a stacked line or bar chart, with the total queue time for each job on the y-axis and the job number in descending order from right on the x-axis.
-
-This visualization enables you to quickly identify trends and patterns in the queue time across multiple jobs, helping to optimize the testing processes and resource allocation with other use cases like:
-
-- Identifying trends in queue time
-- Optimizing resource allocation
-- Monitoring the impact of changes
-- Comparing performance over time
-- Sharing insights with team members
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/job-queue-time.png').default} alt="job-trends" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/widgets/step3.png').default} alt="job-trends" className="doc_img"/>

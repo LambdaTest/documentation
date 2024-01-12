@@ -101,7 +101,7 @@ The `runtime` flag is used to:
 - Download and install the dependent language and framework that is needed to execute your tests.
 - You can provide the language and the version you want to be installed.
 
-> Languages Supported: **java, dotnet, node**, **ruby**, **android-sdk** and **python**
+> Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-sdk** and **python**
 
 ```bash
 runtime:
@@ -391,15 +391,32 @@ post:
 ***
 ## `postDirectives`
 This is an advanced version of `post` where you can control “how” your post commands should be executed in a parallel HyperExecute Executor. If both post and postDirectives flags are provided at the same time, then the precedence is given to the postDirectives flag.
+
 postDirectives currently has the ability to take the following additional inputs:
+
 - `commands`: actual commands that needs to run like `echo <some-dir>/output/output.log`
+
 - `shell`: shell to execute the commands under. This is typically helpful if you want to run your post commands in a specific shell. For example, `powershell` for Windows or `bash` for Linux and MacOS. (Coming Soon)
+
 ```bash
 postDirectives:
   - cat yaml/win/*.*hyperexecute_autosplits.yaml 
 ```
 
 ***
+
+## `alwaysRunPostSteps`
+
+**Problem :** Test scenarios failing led to the cancellation of post-steps, incomplete cleanup, being unable to upload reports, and other actions that you need to perform after all test executions.
+
+**Solution :** The `alwaysRunPostSteps` flag ensures that post-steps execute even if the scenario stage fails.
+
+```bash
+alwaysRunPostSteps: true
+```
+
+***
+
 ## `cachekey`
 It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. When you run your tests for the very first time, HyperExecute caches the dependency files (e.g., package-lock.json, pom.xml, etc.). Now, when you execute the same test suite again (without making any changes), HyperExecute searches for a matching cached result within its cache storage, and if a valid cached result is found, HyperExecute utilizes it directly, skipping redundant execution.
 
@@ -430,6 +447,44 @@ cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
   - .m2
 ```
+
+***
+
+## `projectName`
+
+This flag is used to set the Name of your Projects which would later allow you to see all jobs of that Project at one place.
+
+```bash
+projectName: '<Your Project Name>':'<Your Project ID>'
+```
+***
+
+## `differentialUpload`
+This flag is used to minimize the time taken to upload the codebase to the platform for testing.
+
+Running and Debugging multiple Jobs on HyperExecute often results in extended wait times. There can be various factors contriubuting to this slow upload time, like network issues, a large codebase (>50MB), or a large number of files being zipped and uploaded to our storage.
+
+If enabled, when you upload the same codebase a second time (< 75% changes), it will only fetch those parts of the codebase that have been updated or newly added, and the rest will be mapped from the previous uploaded version of the codebase.
+
+### Configuration :
+
+- **enabled (boolean):** Enables or disables the differentialUpload feature. Set to true to activate the optimization, and false to maintain the default behavior.
+
+- **ttlHours (integer):** Specifies the Time-To-Live (TTL) for the uploaded code, allowing users to control the duration for which the optimized upload remains active. Valid values range from 1 hour to 60 days.
+
+> **NOTE:** The default value for **ttlHous** is 60 hours
+
+```bash
+project:
+  name: XYZ Name
+differentialUpload:
+  enabled: #true/false
+  ttlHours: #int value, with possible range of values [1 hour to 60 days]
+```
+
+:::info
+If the project flag is not passed then the name for the project will be set to **Default Project**
+:::
 
 ***
 

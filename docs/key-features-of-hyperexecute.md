@@ -165,7 +165,7 @@ To ensure that your testing environment can be optimised, HyperExecute provides 
 
 - [**Integrations with CI/CD Tool :**](/support/docs/hyperexecute-integration-with-ci-cd-tools/) Explore a range of CI/CD tool integrations to optimize your testing pipeline.
 
-- [**Integration with Products :**](/support/docs/integration-with-products/) Effortlessly integrate with products like Tosca, Katalon and more for streamlined test execution and management.
+- [**Integration with Products :**](/support/docs/hyperexecute-integration-with-products/) Effortlessly integrate with products like Tosca, Katalon and more for streamlined test execution and management.
 
 - [**Integration with LambdaTest Products :**](/support/docs/he-integration-with-lambdatest-products/) Integrate seamlessly with other LambdaTest products sucha as Smart UI or Real Device and enhance your testing environment's efficiency.
 

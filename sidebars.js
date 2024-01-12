@@ -382,6 +382,7 @@ module.exports = {
             "local-testing-puppeteer",
             "puppeteer-mocha",
             "puppeteer-jest",
+            "puppeteer-pytest-pyppeteer",
             "puppeteer-cicd",
           ],
         },
@@ -1206,7 +1207,7 @@ module.exports = {
                 collapsed: true,
                 link: {
                   type: "doc",
-                  id: "integration-products",
+                  id: "hyperexecute-integration-with-products",
                 },
                 items: [
                   {
@@ -1236,6 +1237,19 @@ module.exports = {
                     type: "doc",
                     label: "Accelq",
                     id: "hyperexecute-accelq-integration",
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Azure Test Plan",
+                    link: {
+                      type: "doc",
+                      id: "hyperexecute-azure-test-plan",
+                    },
+                    items: [
+                      "hyperexecute-azure-setup-test-plan",
+                      "hyperexecute-azure-associate-test-case",
+                    ]
                   },
                 ],
               },
@@ -1392,6 +1406,10 @@ module.exports = {
                 type: "category",
                 collapsed: true,
                 label: "Cypress",
+                // link: {
+                //   type: "doc",
+                //   id: "cypress-integration-with-hyperexecute",
+                // },
                 items: [
                   "cypressv9-on-hyperexecute",
                   "cypressv10-on-hyperexecute",
@@ -1413,7 +1431,12 @@ module.exports = {
                 items: [
                   "hyperexecute-espresso-testing",
                 ]
-              }
+              },
+              // {
+              //   type: "doc",
+              //   label: "Maestro",
+              //   id: "hyperexecute-maestro-testing",
+              // }
             ],
           },
           {
@@ -1517,9 +1540,20 @@ module.exports = {
               id: "hyperexecute-browser-list-api",
               },
               {
-                type: "doc",
+                type: "category",
+                collapsed: true,
                 label: "HyperExecute Widgets",
-                id: "hyperexecute-widgets"
+                link: {
+                  type: "doc",
+                  id: "hyperexecute-widgets",
+                },
+                items: [
+                  "hyperexecute-job-widgets",
+                  "hyperexecute-stage-widgets",
+                  "hyperexecute-task-widgets",
+                  "hyperexecute-test-widgets",
+                  "hyperexecute-resource-widgets"
+                ]
               },
               {
                 type: "category",
@@ -2394,6 +2428,7 @@ module.exports = {
             "testrigor-integration",
             "localstack-integration-with-lambdatest",
             "genrocket-integration",
+            "netlify-integration-with-lambdatest"
           ],
         // },
       ], 

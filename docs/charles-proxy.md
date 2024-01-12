@@ -169,6 +169,29 @@ On clicking the **Launch** button, you will be able to start the tunnel with the
 
 <img loading="lazy" src={require('../assets/images/charles/underpass3.png').default} alt="cmd" className="doc_img"/>
 
+## Steps to Download the SSL certificate in the LambdaTest Real Device:
+
+---
+
+**Step 1:** Launch the session with the tunnel which we have enabled and visit http://chls.pro/ssl site to download the SSL certificate.
+
+**Step 2:** Visit the settings of the device and search for "CA certificate"
+
+
+
+**Step 3:** Click on CA certificate
+
+<img loading="lazy" src={require('../assets/images/charles/real_device_ssl1.png').default} alt="cmd" className="doc_img"/>
+
+
+**Step 4:** Click on "Install Anyway"
+
+<img loading="lazy" src={require('../assets/images/charles/real_device_ssl2.png').default} alt="cmd" className="doc_img"/>
+
+**Step 5:** Select the Charles Proxy SSL proxying certificate to install it.
+
+<img loading="lazy" src={require('../assets/images/charles/real_device_ssl3.png').default} alt="cmd" className="doc_img"/>
+
 ## Viewing Network Logs Through Charles Proxy
 
 ---
