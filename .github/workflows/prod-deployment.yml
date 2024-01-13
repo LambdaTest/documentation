@@ -53,7 +53,7 @@ jobs:
         run: |
           cp -R assets/ build/
           cd build/
-          aws s3 sync . s3://lambdatest-prod-docs/support-temp/ --exclude 'robots.txt' --delete
+          aws s3 sync . s3://lambdatest-prod-docs/support/ --exclude 'robots.txt' --delete
 
       - name: Cloudflare Invalidation
         run: |
