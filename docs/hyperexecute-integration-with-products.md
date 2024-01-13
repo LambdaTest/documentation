@@ -55,7 +55,7 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   <a href = "/support/docs/katalon-integration-with-hyperexecute/">
   <div className="support_inners">
     <h3>Katalon</h3>
-    <p>Perfrom Cross Platform Testing ranging from web, API, mobile, and desktop applications.</p>
+    <p>Perform Cross Platform Testing ranging from web, API, mobile, and desktop applications.</p>
   </div>
   </a>
 
