@@ -55,6 +55,10 @@ jobs:
           cd build/
           aws s3 sync . s3://lambdatest-prod-docs/support/ --exclude 'robots.txt' --delete
 
+      - name: Invalidate Cloudfront
+        run : |
+          aws cloudfront create-invalidation --distribution-id EEMGB6PM4ZZ7A  --paths "/support/*"
+          
       - name: Cloudflare Invalidation
         run: |
           curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" -H "X-Auth-Email: security@lambdatest.com" -H "X-Auth-Key: ${{ secrets.CF_API_SECRET }}" -H "Content-Type: application/json" --data '{"hosts":["${{ secrets.PROD_WEBSITE_URL }}"] }'
