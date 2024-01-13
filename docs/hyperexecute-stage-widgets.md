@@ -3,7 +3,7 @@ id: hyperexecute-stage-widgets
 title: HyperExecute Stage Widgets
 hide_title: true
 sidebar_label: Stage Widgets
-description: Effortlessly Set Up Hyperexecute Widgets to analyze the test results
+description: HyperExecute Stage Widgets track and group stages by status (Completed, Skipped, Failed, Aborted, etc.) for efficient monitoring.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help

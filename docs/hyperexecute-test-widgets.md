@@ -3,7 +3,7 @@ id: hyperexecute-test-widgets
 title: HyperExecute Test Widgets
 hide_title: true
 sidebar_label: Test Widgets
-description: Effortlessly Set Up Hyperexecute Widgets to analyze the test results
+description: HyperExecute Test Widgets allow trend analysis of tests over time, providing insights into platform performance.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
