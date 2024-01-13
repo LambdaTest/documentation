@@ -35,7 +35,7 @@ slug: pivotal-tracker-integration/
         }]
       })
     }}
->,
+>
 </script>
 
 # Pivotal Tracker Integration
