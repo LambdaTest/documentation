@@ -56,6 +56,11 @@ Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK re
 
 - Basic understanding of Command Line Interface and Selenium is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Install **virtualenv** which is the recommended way to run your tests. It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules.
+  
+```bash
+pip install virtualenv
+```
 
 The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Selenium SDK integration.
 
@@ -75,11 +80,25 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `SmartUI_SDK_LT_hub.py` file.
+- You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `SmartUI_SDK_LT_hub.py` file.
 
 ```bash
 git clone https://github.com/LambdaTest/smartui-python-sample
+cd smartui-python-sample
 ```
+
+- Create a virtual environment in your project folder (the environment name is arbitrary).
+  
+```bash
+virtualenv venv
+```
+
+- Activate the environment.
+  
+```bash
+source venv/bin/activate
+```
+
 ### **Step 2**: Install the Dependencies
 
 Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
@@ -194,7 +213,7 @@ finally:
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui exec python <Test fIle name>.py
+npx smartui exec python <Test_file_name>.py
 ```
 
 :::note 

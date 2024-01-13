@@ -101,7 +101,7 @@ The `runtime` flag is used to:
 - Download and install the dependent language and framework that is needed to execute your tests.
 - You can provide the language and the version you want to be installed.
 
-> Languages Supported: **java, dotnet, node**, **ruby**, **android-sdk** and **python**
+> Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-sdk** and **python**
 
 ```bash
 runtime:
@@ -430,6 +430,45 @@ cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
   - .m2
 ```
+
+***
+
+## `projectName`
+
+This flag is used to set the Name of your Projects which would later allow you to see all jobs of that Project at one place.
+
+```bash
+projectName: '<Your Project Name>':'<Your Project ID>'
+```
+
+***
+
+## `differentialUpload`
+This flag is used to minimize the time taken to upload the codebase to the platform for testing.
+
+Running and Debugging multiple Jobs on HyperExecute often results in extended wait times. There can be various factors contriubuting to this slow upload time, like network issues, a large codebase (>50MB), or a large number of files being zipped and uploaded to our storage.
+
+If enabled, when you upload the same codebase a second time (< 75% changes), it will only fetch those parts of the codebase that have been updated or newly added, and the rest will be mapped from the previous uploaded version of the codebase.
+
+### Configuration :
+
+- **enabled (boolean):** Enables or disables the differentialUpload feature. Set to true to activate the optimization, and false to maintain the default behavior.
+
+- **ttlHours (integer):** Specifies the Time-To-Live (TTL) for the uploaded code, allowing users to control the duration for which the optimized upload remains active. Valid values range from 1 hour to 60 days.
+
+> **NOTE:** The default value for **ttlHous** is 60 hours
+
+```bash
+project:
+  name: XYZ Name
+differentialUpload:
+  enabled: #true/false
+  ttlHours: #int value, with possible range of values [1 hour to 60 days]
+```
+
+:::info
+If the project flag is not passed then the name for the project will be set to **DefaultProject**
+:::
 
 ***
 
