@@ -55,7 +55,7 @@ HTTP authentication is incompatible among the majority of the web browser. It is
 | BROWSER | SUPPORT FOR BASIC HTTP AUTHENTICATION |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | Google Chrome | Supported |
-| Mozila FireFox | Although supported, Mozilla Firefox may throw a prompt confirmation. Mozilla Firefox performs a check to evaluate whether basic HTTP authentication is mandatory to access the website. In cases, where it isn’t necessary, Firefox will throw a similar warning: “You are about to log in to the site “www.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you.” For more information, refer to the [MDN document](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication). |
+| Mozilla FireFox | Although supported, Mozilla Firefox may throw a prompt confirmation. Mozilla Firefox performs a check to evaluate whether basic HTTP authentication is mandatory to access the website. In cases, where it isn’t necessary, Firefox will throw a similar warning: “You are about to log in to the site “www.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you.” For more information, refer to the [MDN document](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication). |
 | Safari | Unsupported |
 | Edge | Unsupported |
 | Internet Explorer | Supported |

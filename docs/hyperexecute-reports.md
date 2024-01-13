@@ -73,7 +73,7 @@ Here is the sample report generated.
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/report4.png').default} alt="Image"  className="doc_img"/>
 
 :::info
-Refer to the deatiled documentataion on [Job Reports](/support/docs/hyperexecute-job-reports/)
+Refer to the detailed documentation on [Job Reports](/support/docs/hyperexecute-job-reports/)
 :::
 
 

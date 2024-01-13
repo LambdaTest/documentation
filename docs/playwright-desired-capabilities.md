@@ -52,7 +52,7 @@ tests.
 |----|----------|----------|------------|
 | browserName| Chrome, Microsoft Edge<br/> <br/>**Playwright Bundled Browsers**: pw-chromium, pw-webkit, and pw-firefox| Specify the browser to test on | `const capability = {"browserName": "pw-webkit"}`                                    | 
 | browserVersion | Chrome 83 & above, Edge 83 & above | Specify the browser version to test on                        | `const capability = {"browserVersion": "latest"}` |
-| platform | **Windows**: 11, 10, 8, 8.1, 7 <br/><br/> **macOS**: Monterey, Big Sur, Cataline, Mojave| Specify the platform name | `const capability = { "LT:Options": {"platform": "Windows 10",}}`|
+| platform | **Windows**: 11, 10, 8, 8.1, 7 <br/><br/> **macOS**: Monterey, Big Sur, Catiline, Mojave| Specify the platform name | `const capability = { "LT:Options": {"platform": "Windows 10",}}`|
 | build | Playwright Sample Build | Represent the build number for your test | ```const capability = {"LT:Options": {"build": "<build_name>",}}```                  |
 | name| Playwright Sample Test| Represents the name of a test| `const capability = {"LT:Options": {"name": "<test_name>",}}`|
 | projectName | Playwright Sample Project| Represents the name of a project | `const capability = {"LT:Options": {"projectName": "<project_name>",}}`|

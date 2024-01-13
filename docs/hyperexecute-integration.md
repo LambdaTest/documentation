@@ -44,7 +44,7 @@ slug: integration-with-hyperexecute/
 Integrate HyperExecute with your favourite CI/CD tools, products and LambdaTest tools to accelerate and optimize your testing ecosystem. 
 
 <div className="download_btn mb-10">
-<a href="/support/docs/integration-with-products/">Integration With Products</a>
+<a href="/support/docs/hyperexecute-integration-with-products/">Integration With Products</a>
 </div>
 
 <div className="download_btn mb-10">
