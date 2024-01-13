@@ -1406,10 +1406,10 @@ module.exports = {
                 type: "category",
                 collapsed: true,
                 label: "Cypress",
-                // link: {
-                //   type: "doc",
-                //   id: "cypress-integration-with-hyperexecute",
-                // },
+                link: {
+                  type: "doc",
+                  id: "cypress-integration-with-hyperexecute",
+                },
                 items: [
                   "cypressv9-on-hyperexecute",
                   "cypressv10-on-hyperexecute",
