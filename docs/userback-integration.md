@@ -44,7 +44,7 @@ slug: userback-integration/
         }]
       })
     }}
->  </script>
+></script>
 
 # Userback Integration
 ***
