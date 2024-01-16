@@ -27,6 +27,8 @@ jobs:
         run: |
           echo "${{ secrets.APPLICATION_ID }}" >> .env
           echo "${{ secrets.API_KEY }}" >> .env
+          ls
+          cat .env
       - name: Run algolia crawler on stage website
         run: |
              cat algolia_config.json
