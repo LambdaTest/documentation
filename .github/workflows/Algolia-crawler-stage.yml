@@ -27,8 +27,8 @@ jobs:
         run: |
           pwd
           touch .env
-          echo "${{ secrets.APPLICATION_ID }}" >> .env
-          echo "${{ secrets.API_KEY }}" >> .env
+          echo "APPLICATION_ID=${{ secrets.APPLICATION_ID }}" >> .env
+          echo "API_KEY=${{ secrets.API_KEY }}" >> .env
           ls -lart
           cat .env
       - name: Run algolia crawler on stage website
