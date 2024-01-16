@@ -50,7 +50,7 @@ HyperExecute seamlessly integrates with Tosca, providing a Just-in-Time Tosca En
   
   <a href = "/support/docs/tosca-integration-with-hyperexecute-using-commander/">
   <div className="support_inners">
-    <h3>Tosca Integration using Commander</h3>
+    <h3>Integration using Commander</h3>
     <p>Use Tosca Commander to integrate with HyperExecute.
     </p>
   </div>
@@ -58,8 +58,16 @@ HyperExecute seamlessly integrates with Tosca, providing a Just-in-Time Tosca En
   
   <a href = "/support/docs/tosca-integration-with-hyperexecute-using-dex/">
   <div className="support_inners">
-    <h3>Tosca Integration using DEX</h3>
+    <h3>Integration using DEX</h3>
     <p>Use Tosca DEX Server to integrate with HyperExecute.
+    </p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/tosca-integration-with-hyperexecute-for-sap/">
+  <div className="support_inners">
+    <h3>Integration for SAP</h3>
+    <p>Use Tosca for SAP to integrate with HyperExecute.
     </p>
   </div>
   </a>

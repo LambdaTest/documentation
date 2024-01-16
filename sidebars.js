@@ -1221,6 +1221,7 @@ module.exports = {
                     items: [
                       "tosca-integration-with-hyperexecute-using-commander",
                       "tosca-integration-with-hyperexecute-using-dex",
+                      "tosca-integration-with-hyperexecute-for-sap"
                     ]
                   },
                   {

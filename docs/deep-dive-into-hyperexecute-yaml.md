@@ -460,17 +460,20 @@ projectName: '<Your Project Name>':'<Your Project ID>'
 ***
 
 ## `differentialUpload`
-This flag is used to minimize the time taken to upload the codebase to the platform for testing.
 
-Running and Debugging multiple Jobs on HyperExecute often results in extended wait times. There can be various factors contriubuting to this slow upload time, like network issues, a large codebase (>50MB), or a large number of files being zipped and uploaded to our storage.
+When you run and debug multiple jobs on HyperExecute, sometimes you may notice that **occasionally** your codebase is taking a long time to upload to the platform for testing. This delay can be attributed to various factors, such as **network issues**, a **very large codebase**, or a significant number of files being zipped and uploaded to the storage.
 
-If enabled, when you upload the same codebase a second time (< 75% changes), it will only fetch those parts of the codebase that have been updated or newly added, and the rest will be mapped from the previous uploaded version of the codebase.
+To overcome this challenge, you can use `differentialUpload` flag, which is used to minimize the time taken to upload the codebase, especially when there are incremental changes.
 
-### Configuration :
+This flag optimizes codebase uploads by **fetching** only the parts of the codebase that have been **updated** or **newly added**, significantly **reducing upload times**.
 
-- **enabled (boolean):** Enables or disables the differentialUpload feature. Set to true to activate the optimization, and false to maintain the default behavior.
+### Configuration
 
-- **ttlHours (integer):** Specifies the Time-To-Live (TTL) for the uploaded code, allowing users to control the duration for which the optimized upload remains active. Valid values range from 1 hour to 60 days.
+- **enabled (boolean):** Set to true to activate the optimization, and false to maintain the default behavior.
+
+- **ttlHours (integer):** Specifies the Time-To-Live (TTL) for the uploaded code. Users can control the duration for which the optimized upload remains active, with valid values ranging from 1 hour to 60 days.
+
+When you pass the `differentialUpload` flag, it ensures that whenever you upload the **same codebase a second time with less than 75% changes, only the modified or new parts are fetched**. The rest is mapped to the previously uploaded version of the codebase. This approach is beneficial in scenarios where network issues or a large codebase contribute to slow upload times.
 
 > **NOTE:** The default value for **ttlHous** is 60 hours
 
@@ -483,8 +486,10 @@ differentialUpload:
 ```
 
 :::info
-If the project flag is not passed then the name for the project will be set to **Default Project**
+If the project flag is not passed then the name for the project will be set to **"Default Project"**.
 :::
+
+By activating this feature, you can experience a significant reduction in upload times, enhancing the efficiency of running and debugging multiple jobs on HyperExecute.
 
 ***
 
