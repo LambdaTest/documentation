@@ -25,12 +25,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: 'Create env file'
         run: |
-          pwd
           touch .env
           echo "APPLICATION_ID=${{ secrets.APPLICATION_ID }}" >> .env
           echo "API_KEY=${{ secrets.API_KEY }}" >> .env
-          ls -lart
-          cat .env
+          
       - name: Run algolia crawler on stage website
         run: |
              cat algolia_config.json
