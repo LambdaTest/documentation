@@ -2205,6 +2205,665 @@ HyperExecuteSidebar: [
             type: "doc",
             id: "hyperexecute-private-cloud-setup-with-azure",
           },
+          items: [
+            {
+              type: "doc",
+              label: "Deep Dive into HyperExecute YAML",
+              id: "deep-dive-into-hyperexecute-yaml",
+            },
+            {
+              type: "doc",
+              label: "HyperExecute Yaml Version 0.2",
+              id: "hyperexecute-yaml-version0.2",
+            },
+            {
+              type: "doc",
+              label: "Using Snooper on HyperExecute",
+              id: "hyperexecute-snooper",
+            },
+            {
+              type: "doc",
+              label: "Inherit Your YAML Configurations",
+              id: "hyperexecute-inherit-config",
+            },
+          ],
+        },
+        {
+          type: "category",
+          collapsed: true,
+          label: "HyperExecute CLI",
+          link: {
+            type: "doc",
+            id: "hyperexecute-cli-run-tests-on-hyperexecute-grid",
+          },
+          items: [
+            {
+              type: "doc",
+              label: "GitIgnore and HyperexecuteIgnore",
+              id: "hyperexecute-gitignore",
+            },
+          ],
+        },
+        {
+          type: "category",
+          collapsed: true,
+          label: "HyperExecute Private Cloud",
+          link: {
+            type: "doc",
+            id: "hyperexecute-private-cloud-setup",
+          },
+          items: [
+            {
+              type: "doc",
+              label: "HyperExecute Private Cloud Benefits",
+              id: "hyperexecute-private-cloud-benefits",
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Setup with Azure",
+              link: {
+                type: "doc",
+                id: "hyperexecute-private-cloud-setup-with-azure",
+              },
+  
+  
+              items: [
+                {
+                  type: "doc",
+                  label: "HyperExecute Private Cloud on JumpHost",
+                  id: "hyperexecute-private-cloud-on-jumphost",
+                },
+                {
+                  type: "doc",
+                  label: "VNet Peering and VNet Links",
+                  id: "hyperexecute-vnet-peering-for-private-cloud",
+                },
+              ],
+            },
+            {
+              type: "doc",
+              label: "Setup with AWS",
+              id: "he-aws",
+            },
+          ],
+        },
+          {
+            type: "doc",
+            label: "HyperExecute vs Traditional Grids",
+            id: "hyperexecute-vs-traditional-test-grids",
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Key features of HyperExecute",
+            link: {
+              type: "doc",
+              id: "key-features-of-hyperexecute",
+            },
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "Test Splitting and Multiplexing",
+                link: {
+                  type: "doc",
+                  id: "hyperexecute-test-splitting-and-multiplexing",
+                },
+                items: [
+                  {
+                    type: "doc",
+                    label: "Auto Split Strategy",
+                    id: "hyperexecute-auto-split-strategy",
+                  },
+                  {
+                    type: "doc",
+                    label: "Matrix Multiplexing Strategy" ,
+                    id: "hyperexecute-matrix-multiplexing-strategy",
+                  },
+                  {
+                    type: "doc",
+                    label: "Hybrid Strategy",
+                    id: "hyperexecute-hybrid-strategy",
+                  },
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Job Artifacts and Reports",
+                items: [
+                  {
+                    type: "doc",
+                    label: "HyperExecute Job Artifacts ",
+                    id: "hyperexecute-artifacts",
+                  },
+                  {
+                    type: "doc",
+                    label: "HyperExecute Job Reports ",
+                    id: "hyperexecute-reports",
+                  },
+                  {
+                    type: "doc",
+                    label: "Test Artifact Management",
+                    id: "hyperexecute-artifacts-url",
+                  },
+                  {
+                    type: "doc",
+                    label: "Receive the Job Reports as an Email",
+                    id: "hyperexecute-email-reports",
+                  },
+                ],
+              },
+              {
+                type: "doc",
+                label: "FailFast",
+                id: "hyperexecute-failfast",
+              },
+              {
+                type: "doc",
+                label: "Jobs Prioritization",
+                id: "hyperexecute-prioritize-tests",
+              },
+              {
+                type: "doc",
+                id: "rca",
+              },
+              {
+                type: "doc",
+                id: "hyperexecute-background-services",
+              },
+              {
+                type: "doc",
+                label: "Auto Healing",
+                id: "hyperexecute-auto-healing",
+              },
+              {
+                type: "doc",
+                label: "Hyperexecute Projects",
+                id: "hyperexecute-projects",
+              },
+              {
+                type: "doc",
+                label: "Jobs Archiving",
+                id: "hyperexecute-jobs-archiving",
+              },
+              {
+                type: "doc",
+                label: "HyperExecute Workflows",
+                id: "hyperexecute-workflows",
+              },
+              {
+                type: "doc",
+                label: "HyperExecute Test Muting",
+                id: "hyperexecute-test-muting",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Integrations",
+            link: {
+              type: "doc",
+              id: "integration-he",
+            },
+            items: [
+              {
+                type: "category",
+                label: "Integration with CI/CD tools",
+                collapsed: true,
+                link: {
+                  type: "doc",
+                  id: "hyperexecute-integration-with-ci-cd-tools",
+                },
+                items: [
+                  {
+                    type: "doc",
+                    label: "AWS Codepipeline",
+                    id: "aws-codepipeline-with-hyperexecute",
+                  },
+                  {
+                    type: "doc",
+                    label: "Azure Devops",
+                    id: "azure-with-hyperexecute",
+                  },
+                  {
+                    type: "doc",
+                    label: "GitHub Actions",
+                    id: "github-actions-with-hyperexecute",
+                  },
+                  {
+                    type: "doc",
+                    label: "GitLab",
+                    id: "gitlab-integration-with-hyperexecute",
+                  },
+                  {
+                    type: "doc",
+                    label: "CircleCI",
+                    id: "circle-ci-with-hyperexecute",
+                  },
+                  {
+                    type: "doc",
+                    label: "Bitbucket",
+                    id: "jenkins-with-hyperexecute",
+                  },
+                  {
+                    type: "doc",
+                    label: "Bitbucket",
+                    id: "bitbucket-pipeline-with-hyperexecute",
+                  },
+                  {
+                    type: "doc",
+                    label: "Travis CI",
+                    id: "travis-ci-with-hyperexecute",
+                  },
+                  {
+                    type: "doc",
+                    label: "TeamCity",
+                    id: "teamcity-with-hyperexecute",
+                  },
+                  {
+                    type: "doc",
+                    label: "GoCD",
+                    id: "gocd-integration-with-hyperexecute",
+                  },
+                  {
+                    type: "doc",
+                    label: "Bamboo CI",
+                    id: "bamboo-integration-with-hyperexecute",
+                  },
+                  {
+                    type: "doc",
+                    label: "Semaphore",
+                    id: "semaphore-integration-with-hyperexecute",
+                  },
+                ],
+              },
+              {
+                type: "category",
+                label: "Integration with Products",
+                collapsed: true,
+                link: {
+                  type: "doc",
+                  id: "hyperexecute-integration-with-products",
+                },
+                items: [
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Tosca",
+                    link: {
+                      type: "doc",
+                      id: "tosca-integration-hyperexecute",
+                    },
+                    items: [
+                      "tosca-integration-with-hyperexecute-using-commander",
+                      "tosca-integration-with-hyperexecute-using-dex",
+                      "tosca-integration-with-hyperexecute-for-sap"
+                    ]
+                  },
+                  {
+                    type: "doc",
+                    label: "Katalon",
+                    id: "katalon-integration-with-hyperexecute",
+                  },
+                  {
+                    type: "doc",
+                    label: "Microsoft Excel",
+                    id: "he-excel",
+                  },
+                  {
+                    type: "doc",
+                    label: "Accelq",
+                    id: "hyperexecute-accelq-integration",
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Azure Test Plan",
+                    link: {
+                      type: "doc",
+                      id: "hyperexecute-azure-test-plan",
+                    },
+                    items: [
+                      "hyperexecute-azure-setup-test-plan",
+                      "hyperexecute-azure-associate-test-case",
+                    ]
+                  },
+                ],
+              },
+              {
+                type: "category",
+                label: "Integration with LambdaTest Products",
+                collapsed: true,
+                link: {
+                  type: "doc",
+                  id: "integration-lt-products",
+                },
+                items: [
+                  {
+                    type: "category",
+                    label: "HyperExecute Smart UI Testing",
+                    collapsed: true,
+                    link: {
+                      type: "doc",
+                      id: "smart-ui-testing",
+                    },
+                    items: [
+                      {
+                        type: "doc",
+                        label: "Hyperexecute Smart UI Testing - Selenium",
+                        id: "hyperexecute-smart-ui-testing-using-selenium",
+                      },
+                      {
+                        type: "doc",
+                        label: "Hyperexecute Smart UI Testing - Cypress",
+                        id: "hyperexecute-smart-ui-testing-using-cypress",
+                      },
+                    ]
+                  },
+                  {
+                    type: "doc",
+                    label: "Hyperexecute Real Devices Testing",
+                    id: "real-devices-integration-with-hyperexecute",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Languages and Frameworks",
+            items: [
+              "hyperexecute-supported-languages-and-frameworks",
+              {
+                type: "category",
+                collapsed: true,
+                label: "Selenium",
+                items: [
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Java",
+                    items: [
+                      "testng-on-hyperexecute-grid",
+                      "junit-on-hyperexecute-grid",
+                      "cucumber-on-hyperexecute-grid",
+                    ],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "JavaScript",
+                    items: [
+                      "webdriverio-on-hyperexecute-grid",
+                      "protractor-on-hyperexecute-grid",
+                      "nightwatch-on-hyperexecute-grid",
+                    ],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "C#",
+                    items: [
+                      "nunit-on-hyperexecute-grid",
+                      "specflow-on-hyperexecute-grid",
+                    ],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Python",
+                    items: [
+                      "pyunit-on-hyperexecute-grid",
+                      "pytest-on-hyperexecute-grid",
+                      "robot-on-hyperexecute-grid",
+                      "behave-on-hyperexecute-grid",
+                    ],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Ruby",
+                    items: [
+                      "ruby-on-hyperexecute-grid",
+                      "capybara-on-hyperexecute-grid",
+                    ],
+                  },
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Puppeteer",
+                items: [
+                  "jest-on-hyperexecute",
+                  "mocha-on-hyperexecute",
+                  "codecept-on-hyperexecute",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Playwright",
+                items: [
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Python",
+                    items: [
+                      "pytest-on-hyperexecute",
+                      "playwright-python-on-hyperexecute",
+                    ],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Javascript",
+                    items: [
+                      "playwright-vanillajs-on-hyperexecute",
+                      "playwright-codeceptjs-on-hyperexecute",
+                      "playwright-jest-on-hyperexecute",
+                    ],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Java",
+                    items: ["playwright-junit-on-hyperexecute"],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "C#",
+                    items: ["playwright-dotnet-on-hyperexecute"],
+                  },
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Cypress",
+                link: {
+                  type: "doc",
+                  id: "cypress-integration-with-hyperexecute",
+                },
+                items: [
+                  "cypressv9-on-hyperexecute",
+                  "cypressv10-on-hyperexecute",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Appium",
+                items: [
+                  "hyperexecute-appium-testing",
+                  "hyperexecute-webapp-appium-testing",
+                ]
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Espresso",
+                items: [
+                  "hyperexecute-espresso-testing",
+                ]
+              },
+              // {
+              //   type: "doc",
+              //   label: "Maestro",
+              //   id: "hyperexecute-maestro-testing",
+              // }
+            ],
+          },
+          {
+            type: "category",
+            label: "HyperExecute FAQs",
+            collapsed: true,
+            link: {
+              type: "doc",
+              id: "hyperexecute-faqs",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "General FAQs",
+                id: "he-general-faqs",
+              },
+              {
+                type: "doc",
+                label: "YAML FAQs",
+                id: "hyperexecute-yaml-faqs",
+              },
+              {
+                type: "doc",
+                label: "CLI FAQs",
+                id: "he-cli-faqs",
+              },
+              {
+                type: "doc",
+                label: "Features FAQs",
+                id: "he-feature-faqs",
+              },
+              {
+                type: "doc",
+                label: "Platform FAQs",
+                id: "he-platform-faqs",
+              },
+              {
+                type: "doc",
+                label: "Pricing FAQs",
+                id: "he-pricing-faqs",
+              },
+              {
+                type: "doc",
+                label: "Security FAQs",
+                id: "he-security-faqs",
+              },
+              {
+                type: "doc",
+                label: "Enterprise FAQs",
+                id: "he-enterprise-faqs",
+              },
+            ],
+          },
+          {
+            type: "category",
+            label: "Knowledge Base",
+            collapsed: true,
+            link: {
+              type: "doc",
+              id: "hyperexecute-knowledge-base",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "concepts",
+                id: "hyperexecute-concepts",
+              },
+              {
+                type: "doc",
+                label: "How to Get my Username & Access Key",
+                id: "hyperexecute-how-to-get-my-username-and-access-key",
+              },
+              {
+                type: "doc",
+                label: "HyperExecute Environment Variable Setup",
+                id: "hyperexecute-environment-variable-setup",
+              },
+              {
+                type: "doc",
+                label: "How to Manage Secrets in HyperExecute",
+                id: "hyperexecute-how-to-save-and-manage-secrets",
+              },
+              {
+                type: "doc",
+                label: "How to Configure Tunnel",
+                id: "hyperexecute-how-to-configure-tunnel",
+              },
+              {
+                type: "doc",
+                label: "How to Find Correct Concurrency",
+                id: "hyperexecute-how-to-find-correct-concurrency",
+              },
+              {
+                type: "doc",
+                label: "How to configure sourcePayload",
+                id: "hyperexecute-how-to-configure-sourcePayload",
+              },
+              {
+              type: "doc",
+              label: "How to List Supported Browser in HyperExecute via API",
+              id: "hyperexecute-browser-list-api",
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "HyperExecute Widgets",
+                link: {
+                  type: "doc",
+                  id: "hyperexecute-widgets",
+                },
+                items: [
+                  "hyperexecute-job-widgets",
+                  "hyperexecute-stage-widgets",
+                  "hyperexecute-task-widgets",
+                  "hyperexecute-test-widgets",
+                  "hyperexecute-resource-widgets"
+                ]
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Debugging Guide",
+                items: [
+                  "hyperexecute-how-to-debug-job",
+                  "hyperexecute-cli-error",
+                  "hyperexecute-pre-steps-error",
+                  "hyperexecute-scenario-steps-error",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "HyperExecute Job Reports",
+                link: {
+                  type: "doc",
+                  id: "hyperexecute-job-reports",
+                },
+                items: [
+                  "extent-report",
+                  "native-extent-report",
+                  "allure-reports",
+                  "cucumber-report",
+                  "playwright-html-report",
+                  "specflow-report",
+                  "cypress-mochaawesome-report",
+                ]
+              },
 
 
           items: [
