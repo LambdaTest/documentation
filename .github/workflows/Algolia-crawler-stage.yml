@@ -25,6 +25,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: 'Create env file'
         run: |
+          touch .env
           echo "${{ secrets.APPLICATION_ID }}" >> .env
           echo "${{ secrets.API_KEY }}" >> .env
           ls
