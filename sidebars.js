@@ -644,57 +644,6 @@ module.exports = {
           },
           {
             type: "category",
-            label: "HyperExecute FAQs",
-            collapsed: true,
-            link: {
-              type: "doc",
-              id: "hyperexecute-faqs",
-            },
-            items: [
-              {
-                type: "doc",
-                label: "General FAQs",
-                id: "he-general-faqs",
-              },
-              {
-                type: "doc",
-                label: "YAML FAQs",
-                id: "hyperexecute-yaml-faqs",
-              },
-              {
-                type: "doc",
-                label: "CLI FAQs",
-                id: "he-cli-faqs",
-              },
-              {
-                type: "doc",
-                label: "Features FAQs",
-                id: "he-feature-faqs",
-              },
-              {
-                type: "doc",
-                label: "Platform FAQs",
-                id: "he-platform-faqs",
-              },
-              {
-                type: "doc",
-                label: "Pricing FAQs",
-                id: "he-pricing-faqs",
-              },
-              {
-                type: "doc",
-                label: "Security FAQs",
-                id: "he-security-faqs",
-              },
-              {
-                type: "doc",
-                label: "Enterprise FAQs",
-                id: "he-enterprise-faqs",
-              },
-            ],
-          },
-          {
-            type: "category",
             label: "Knowledge Base",
             collapsed: true,
             link: {
@@ -708,40 +657,54 @@ module.exports = {
                 id: "hyperexecute-concepts",
               },
               {
-                type: "doc",
-                label: "How to Get my Username & Access Key",
-                id: "hyperexecute-how-to-get-my-username-and-access-key",
+                type: "category",
+                collapsed: true,
+                label: "How To Guide",
+                items: [
+                  "hyperexecute-how-to-get-my-username-and-access-key",
+                  "hyperexecute-environment-variable-setup",
+                  "hyperexecute-how-to-save-and-manage-secrets",
+                  "hyperexecute-how-to-configure-tunnel",
+                  "hyperexecute-how-to-find-correct-concurrency",
+                  "hyperexecute-how-to-configure-sourcePayload",
+                  "hyperexecute-browser-list-api"
+                ],
               },
-              {
-                type: "doc",
-                label: "HyperExecute Environment Variable Setup",
-                id: "hyperexecute-environment-variable-setup",
-              },
-              {
-                type: "doc",
-                label: "How to Manage Secrets in HyperExecute",
-                id: "hyperexecute-how-to-save-and-manage-secrets",
-              },
-              {
-                type: "doc",
-                label: "How to Configure Tunnel",
-                id: "hyperexecute-how-to-configure-tunnel",
-              },
-              {
-                type: "doc",
-                label: "How to Find Correct Concurrency",
-                id: "hyperexecute-how-to-find-correct-concurrency",
-              },
-              {
-                type: "doc",
-                label: "How to configure sourcePayload",
-                id: "hyperexecute-how-to-configure-sourcePayload",
-              },
-              {
-              type: "doc",
-              label: "How to List Supported Browser in HyperExecute via API",
-              id: "hyperexecute-browser-list-api",
-              },
+              // {
+              //   type: "doc",
+              //   label: "How to Get my Username & Access Key",
+              //   id: "hyperexecute-how-to-get-my-username-and-access-key",
+              // },
+              // {
+              //   type: "doc",
+              //   label: "HyperExecute Environment Variable Setup",
+              //   id: "hyperexecute-environment-variable-setup",
+              // },
+              // {
+              //   type: "doc",
+              //   label: "How to Manage Secrets in HyperExecute",
+              //   id: "hyperexecute-how-to-save-and-manage-secrets",
+              // },
+              // {
+              //   type: "doc",
+              //   label: "How to Configure Tunnel",
+              //   id: "hyperexecute-how-to-configure-tunnel",
+              // },
+              // {
+              //   type: "doc",
+              //   label: "How to Find Correct Concurrency",
+              //   id: "hyperexecute-how-to-find-correct-concurrency",
+              // },
+              // {
+              //   type: "doc",
+              //   label: "How to configure sourcePayload",
+              //   id: "hyperexecute-how-to-configure-sourcePayload",
+              // },
+              // {
+              // type: "doc",
+              // label: "How to List Supported Browser in HyperExecute via API",
+              // id: "hyperexecute-browser-list-api",
+              // },
               {
                 type: "category",
                 collapsed: true,
@@ -795,6 +758,57 @@ module.exports = {
                 items: [
                   "saucelabs-to-hyperexecute-migrate",
                 ],
+              },
+            ],
+          },
+          {
+            type: "category",
+            label: "HyperExecute FAQs",
+            collapsed: true,
+            link: {
+              type: "doc",
+              id: "hyperexecute-faqs",
+            },
+            items: [
+              {
+                type: "doc",
+                label: "General FAQs",
+                id: "he-general-faqs",
+              },
+              {
+                type: "doc",
+                label: "YAML FAQs",
+                id: "hyperexecute-yaml-faqs",
+              },
+              {
+                type: "doc",
+                label: "CLI FAQs",
+                id: "he-cli-faqs",
+              },
+              {
+                type: "doc",
+                label: "Features FAQs",
+                id: "he-feature-faqs",
+              },
+              {
+                type: "doc",
+                label: "Platform FAQs",
+                id: "he-platform-faqs",
+              },
+              {
+                type: "doc",
+                label: "Pricing FAQs",
+                id: "he-pricing-faqs",
+              },
+              {
+                type: "doc",
+                label: "Security FAQs",
+                id: "he-security-faqs",
+              },
+              {
+                type: "doc",
+                label: "Enterprise FAQs",
+                id: "he-enterprise-faqs",
               },
             ],
           },
