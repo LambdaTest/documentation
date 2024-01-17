@@ -58,7 +58,9 @@ Add **"downloads"** capability in the `lambdatest-config.json` file and define t
 
 <img loading="lazy" src={require('../assets/images/cypress/cypress4.png').default} alt="Image" width="1282" height="722" className="doc_img"/>
 
-### Add --sync Flag
+To download the Cypress Artifacts from the LambdaTest Cloud Machine, we have two methods:
+
+### Method 1: Add --sync Flag
 
 ---
 
@@ -72,7 +74,7 @@ Once the test gets executed, you will find a `build_id` on the console correspon
 
 <img loading="lazy" src={require('../assets/images/cypress/cypress5.png').default} alt="Image" width="1282" height="722" className="doc_img"/>
 
-### Get session_id In lambdatest_run.json
+### Method 2: Get session_id In lambdatest_run.json
 ---
 
 Go to your `lambdatest_run.json` file and copy the `session_id`.
@@ -90,7 +92,7 @@ Now pass the session_id by running the following command.
 lambdatest-cypress generate-report --session_id 6c899177-047e-4432-a9a7-17776e23aae3
 ```
 
-### View The Downloaded Folder
+## View The Downloaded Folder
 ---
 
 - A new folder with the name **lambdatest-artifacts** will get created in the **root** directory of your project and all the files will be downloaded in this folder.
