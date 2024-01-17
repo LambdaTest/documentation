@@ -1,7 +1,9 @@
 module.exports = {
-  apiSidebar: ['support-start', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'getting-started-with-hyperexecute', 'real-time-testing', 'smart-visual-regression-testing', 'analytics-overview', 'test-intelligence-overview', 'tas-overview', 'capability-map', 'visual-ui-testing', 'lt-browser', 'record-and-replay', 'testing-locally-hosted-pages', 'bug-tracking-tools', 'test-management', 'account-management', 'single-sign-on','scim'],
+  apiSidebar: ['support-start', 'getting-started-with-automation', 'getting-started-with-hyperexecute', 'real-time-testing', 'smart-visual-regression-testing', 'settings-and-security', 'analytics-overview', 'test-intelligence-overview', 'tas-overview', 'capability-map', 'visual-ui-testing', 'lt-browser', 'testing-locally-hosted-pages', 'bug-tracking-tools', 'test-management'],
 
-    SeleniumTestingSidebar: [
+  // 'app-automation', 'web-automation', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'record-and-replay', 
+
+    AutomationSidebar: [
       {
         type: 'link',
         label: '<- Back',
@@ -14,358 +16,25 @@ module.exports = {
         {
           type: "category",
           collapsed: true,
-          label: "Selenium Testing",
+          label: "Automation Testing",
           link: {
             type: "doc",
-            id: "getting-started",
+            id: "getting-started-with-automation",
           },
     
           items: [
-            {
-              type: "category",
-              collapsed: true,
-              label: "Getting Started",
-              link: {
-                type: "doc",
-                id: "inside-lambdatest-automation-platform",
-              },
-              items: [
-                "filter-your-selenium-tests",
-                "mark-as-bug-in-automation-testing",
-                "sharing-test-results",
-                "download-files-using-lambdatest-selenium-grid",
-                "live-interaction",
-                "group-tests-using-custom-tags",
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Languages and Frameworks",
-              type: "category",
-              collapsed: true,
-              items: [
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Java",
-                  link: {
-                    type: "doc",
-                    id: "java-framework",
-                  },
-                  items: [
-                    "testng-framework",
-                    "junit-frameworks",
-                    "selenide-frameworks",
-                    "gauge-frameworks",
-                    "running-serenity-test-on-selenium-grid",
-                    "cucumber-script-testng-selenium",
-                    "geb-frameworks",
-                  ],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "JavaScript",
-                  link: {
-                    type: "doc",
-                    id: "running-javascript-test-scripts-on-lambdatest",
-                  },
-                  items: [
-                    "running-protractor-test-scripts-on-lambdatest",
-                    "automation-testing-with-mocha-and-selenium",
-                    "run-nightwatch-tests-on-lambdatest-selenium-grid",
-                    "run-wd-atomation-test-on-lambdatest-selenium-grid",
-                    "automation-testing-using-webdriverIO-5-6-2",
-                    "run-webdriverio-automation-scripts-on-lambdatest",
-                    "automation-testing-with-selenium-and-jest",
-                    "run-automation-tests-using-angularjs-with-karma",
-                    "cucumberjs-testing-using-lambdatest-selenium-grid",
-                    "automation-testing-using-jasmine-with-karma",
-                    "karma-integration-with-lambdatest",
-                    "npm-plugin-for-testcafe-integration-with-lambdatest",
-                    "selenium-tests-with-nemojs",
-                  ],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "CSharp",
-                  link: {
-                    type: "doc",
-                    id: "csharp-with-selenium",
-                  },
-                  items: [
-                    "nunit-with-selenium",
-                    "mstest-with-selenium",
-                    "specflow-with-selenium",
-                  ],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Python",
-                  link: {
-                    type: "doc",
-                    id: "python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid",
-                  },
-                  items: [
-                    "unit-testing-in-python",
-                    "pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid",
-                    "robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid",
-                    "behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid",
-                    "automation-testing-selenium-with-lettuce",
-                  ],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "PHP",
-                  link: {
-                    type: "doc",
-                    id: "php-framework",
-                  },
-                  items: [
-                    "behat-php-framework",
-                    "laravel-php-framework",
-                    "codeception-php-framework",
-                    "phpunit-php-framework",
-                  ],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Ruby",
-                  link: {
-                    type: "doc",
-                    id: "ruby",
-                  },
-                  items: ["ruby-capybara", "ruby-rspec", "ruby-testunit"],
-                },
-                "executing-tesbo-automation-script-over-online-selenium-grid",
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Test Capabilities",
-              link: {
-                type: "doc",
-                id: "desired-capabilities",
-              },
-              items: [
-                "view-lighthouse-performance-metrics",
-                "network-throttling",
-                "perform-selenium-automation-on-headless-browsers",
-                "debugging-options",
-                "telemetry-logs",
-                "smart-wait",
-                "custom-header",
-                "auto-heal",
-                "command-annotations",
-                "custom-dns-map"
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Troubleshooting",
-              items: [
-                "error-messages",
-                "timeouts-issues-and-resolutions",
-                "lambda-exceptions",
-                "performance-tips",
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "FAQs",
-              items: [
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Configuration",
-                  items: [
-                    "environment-variables",
-                    "Selenium-Grid-Configuration",
-                    "supported-browsers-and-operating-systems-for-the-web-interface",
-                    "change-individual-test-details",
-                    "queuing",
-                    "lambda-hooks",
-                  ],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Proxy Settings",
-                  items: [
-                    "white-listing-proxy-with-lambdatest",
-                    "run-selenium-test-behind-the-proxy",
-                  ],
-                },
-                "upload-files-using-lambdatest",
-                "daily-usage-limit",
-                "setup-pre-run-executable",
-                "build-split",
-              ],
-            },
-            "mobile-web-automation-on-real-devices",
-          ],
-        },
-      ]
-    ],
-
-    CypressTestingSidebar: [
-      {
-        type: 'link',
-        label: '<- Back',
-        href: '/docs/',
-        customProps: {
-        className: 'back-to-main-menu'
-        },
-      },
-      [
-        {
-          type: "doc",
-          label: "Cypress Testing",
-          id: "getting-started-with-cypress-testing",
-        },
-        {
-          type: "doc",
-          label: "Authentication",
-          id: "authentication",
-        },
-        {
-          type: "doc",
-          label: "Parallel Testing",
-          id: "run-your-cypress-tests-in-parallel",
-        },
-        {
-          type: "doc",
-          label: "Specify Browsers and OS",
-          id: "supported-browsers-and-os",
-        },
-        {
-          type: "doc",
-          label: "Supported Cypress Versions",
-          id: "supported-cypress-versions",
-        },
-        {
-          type: "doc",
-          label: "Cypress Testing Using WebKit",
-          id: "cypress-webkit",
-        },
-        {
-          type: "doc",
-          label: "Cypress CLI Commands",
-          id: "cypress-cli-commands",
-        },
-        {
-          type: "doc",
-          label: "Configure Cypress Test Execution",
-          id: "run-settings",
-        },
-        {
-          type: "doc",
-          label: "Test On Different Screen Resolutions",
-          id: "screen-resolution-cypress",
-        },
-        {
-          type: "doc",
-          label: "Download Artefacts For Cypress Project",
-          id: "download-artefacts-cypress",
-        },
-        {
-          type: "doc",
-          label: "Integrate LambdaTest with Cypress Dashboard",
-          id: "integrate-lambdatest-with-cypress",
-        },
-        {
-          type: "doc",
-          label: "Execute Including Private Dependencies",
-          id: "private-dependencies-cypress",
-        },
-        {
-          type: "doc",
-          label: "Applitools Integration For Cypress",
-          id: "applitools-integration-cypress",
-        },
-        {
-          type: "doc",
-          label: "Report Portal IO Integration For Cypress",
-          id: "report-portal-cypress",
-        },
-        {
-          type: "doc",
-          label: "Multi Reporters Support",
-          id: "cyp-multi-reporters",
-        },
-        {
-          type: "doc",
-          label: "Environment Variables Support for Cypress Tests",
-          id: "cyp-environment",
-        },
-        {
-          type: "doc",
-          label: "Cypress Terminal Reports",
-          id: "cypress-detailed-command-logs"
-        },
-        {
-          type: "doc",
-          label: "Install NPM via Tunnel",
-          id: "npm-via-tunnel"
+            "web-automation",
+            "app-automation"
+          ]
         }
-      ],
-    ],
-
-    PlaywrightTestingSidebar: [
-      {
-        type: 'link',
-        label: '<- Back',
-        href: '/docs/',
-        customProps: {
-        className: 'back-to-main-menu'
-        },
-      },
-      [
-        {
-          type: "category",
-          collapsed: true,
-          label: "Playwright Testing ",
-          items: [
-            "playwright-testing-guide"
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Test on Android Device",
-              link: {
-                type: "doc",
-                id: "playwright-android-guide",
-              },
-              items: [
-                "playwright-android-guide",
-                "playwright-android-caps"
-              ],
-            },
-            "parallel-playwright-test",
-            "migrate-playwright-tests",
-            "playwright-test-execution",
-            "playwright-caps",
-            "local-testing-playwright",
-            "playwright-playwrighttest",
-            "playwright-cucumberjs",
-            "playwright-cicd"
       ]
     ],
 
-    PuppeteerTestingSidebar: [
+    WebAutomationSidebar: [
       {
         type: 'link',
         label: '<- Back',
-        href: '/docs/',
+        href: '/docs/getting-started-with-automation',
         customProps: {
         className: 'back-to-main-menu'
         },
@@ -374,273 +43,28 @@ module.exports = {
         {
           type: "category",
           collapsed: true,
-          label: "Puppeteer Testing ",
+          label: 'Web Automation',
+          link: {
+            type: "doc",
+            id:'web-automation',
+          },
+
           items: [
-            "puppeteer-testing-guide",
-            "puppeteer-test-execution",
-            "puppeteer-capabilities",
-            "local-testing-puppeteer",
-            "puppeteer-mocha",
-            "puppeteer-jest",
-            "puppeteer-pytest-pyppeteer",
-            "puppeteer-cicd",
+            "getting-started",
+            'getting-started-with-cypress-testing',
+            'playwright-testing-guide',
+            'puppeteer-testing-guide',
+            'k6-browser-testing',
           ],
         },
-    
       ]
     ],
-
-    K6BrowserTestingSidebar: [
-      {
-        type: 'link',
-        label: '<- Back',
-        href: '/docs/',
-        customProps: {
-        className: 'back-to-main-menu'
-        },
-      },
-      [
-        {
-          type: "doc",
-          id: "k6-browser-testing",
-          label: "K6 Browser Testing ",
-        },
-      ]
-    ],
-
-    // AppAutomationSidebar: [
-    //   {
-    //     type: 'link',
-    //     label: '<- Back',
-    //     href: '/docs/',
-    //     customProps: {
-    //     className: 'back-to-main-menu'
-    //     },
-    //   },
-
-    //   [
-    //     {
-    //       AppiumTestingSidebar: [
-    //         {
-    //           type: 'link',
-    //           label: '<- Back',
-    //           href: '/docs/',
-    //           customProps: {
-    //           className: 'back-to-main-menu'
-    //           },
-    //         },
-    //         [
-    //           {
-    //             type: "category",
-    //             collapsed: true,
-    //             label: "Appium Testing",
-    //             link: {
-    //               type: "doc",
-    //               id: "getting-started-with-appium-testing",
-    //             },
-    //             items: [
-    //               {
-    //                 type: "category",
-    //                 collapsed: true,
-    //                 label: "Languages and Frameworks",
-    //                 link: {
-    //                   type: "doc",
-    //                   id: "appium-languages-and-frameworks",
-    //                 },
-    //                 items: [
-    //                   {
-    //                     type: "category",
-    //                     collapsed: true,
-    //                     label: "Java",
-    //                     link: {
-    //                       type: "doc",
-    //                       id: "appium-java",
-    //                     },
-    //                     items: [
-    //                       "appium-java-junit",
-    //                       "appium-java-jbehave",
-    //                       "appium-java-cucumber",
-    //                       "appium-java-testng",
-    //                     ],
-    //                   },
-    //                   {
-    //                     type: "category",
-    //                     collapsed: true,
-    //                     label: "JavaScript",
-    //                     link: {
-    //                       type: "doc",
-    //                       id: "appium-nodejs",
-    //                     },
-    //                     items: ["appium-nodejs-webdriverio", "appium-nodejs-mocha"],
-    //                   },
-    //                   {
-    //                     type: "category",
-    //                     collapsed: true,
-    //                     label: "Python",
-    //                     link: {
-    //                       type: "doc",
-    //                       id: "appium-python",
-    //                     },
-    //                     items: [
-    //                       "appium-python-behave",
-    //                       "appium-python-robot",
-    //                       "appium-python-gauge",
-    //                       "appium-python-pytest",
-    //                     ],
-    //                   },
-    //                   {
-    //                     type: "category",
-    //                     collapsed: true,
-    //                     label: "Ruby",
-    //                     link: {
-    //                       type: "doc",
-    //                       id: "appium-ruby",
-    //                     },
-    //                     items: ["appium-ruby-cucumber", "appium-ruby-rspec"],
-    //                   },
-    //                   {
-    //                     type: "category",
-    //                     collapsed: true,
-    //                     label: "PHP",
-    //                     link: {
-    //                       type: "doc",
-    //                       id: "appium-php",
-    //                     },
-    //                     items: ["appium-php-behat"],
-    //                   },
-    //                   {
-    //                     type: "category",
-    //                     collapsed: true,
-    //                     label: "C#",
-    //                     link: {
-    //                       type: "doc",
-    //                       id: "appium-csharp",
-    //                     },
-    //                     items: ["appium-csharp-nunit"],
-    //                   },
-    //                   "appium-kotlin",
-    //                 ],
-    //               },
-    //               {
-    //                 type: "category",
-    //                 collapsed: true,
-    //                 label: "Setup",
-    //                 items: [
-    //                   "desired-capabilities-in-appium",
-    //                   "list-of-supported-locales",
-    //                   "app-testing-apis",
-    //                   "appium-lambdatest-hooks",
-    //                   "appium-install-uninstall-lambdatest-hooks",
-    //                   "appium-uploading-retrieving-files",
-    //                   "appium-firebase-app-upload",
-    //                 ],
-    //               },
-    //               {
-    //                 type: "category",
-    //                 collapsed: true,
-    //                 label: "Features",
-    //                 items: [
-    //                   "camera-image-injection",
-    //                   "biometric-authentication",
-    //                   "reg-expression",
-    //                   "appium-app-performance",
-    //                   "appium-ios-app-settings",
-    //                   "adb-commands-support",
-    //                   "login-google-android",
-    //                   "disable-screenshot-block",
-    //                   "basic-authentication-for-web-automation",
-      
-    //                 ],
-    //               },
-    //               {
-    //                 type: "category",
-    //                 collapsed: true,
-    //                 label: "Smart TV Automation",
-    //                 items: ["appium-appletv", "appium-firetv", "appium-rokutv"],
-    //               },
-    //               {
-    //                 type: "category",
-    //                 collapsed: true,
-    //                 label: "Integrations",
-    //                 items: ["appium-inspector"],
-    //               },
-    //               {
-    //                 type: "category",
-    //                 collapsed: true,
-    //                 label: "Local Testing",
-    //                 items: ["testing-apps-locally"],
-    //               },
-    //               "migrate-appium-tests-from-browserstack-and-saucelabs",
-    //             ],
-    //           },
-    //         ]
-    //       ],
-
-    //       EspressoTestingSidebar: [
-    //       {
-    //         type: 'link',
-    //         label: '<- Back',
-    //         href: '/docs/',
-    //         customProps: {
-    //         className: 'back-to-main-menu'
-    //         },
-    //       },
-    //       [
-    //         {
-    //           type: "category",
-    //           collapsed: true,
-    //           label: "Espresso Testing",
-    //           items: [
-    //             "getting-started-with-espresso-testing",
-    //             "debug-espresso-tests",
-    //             "speedup-espresso",
-    //             "getting-started-with-flutter-dart-android-automation",
-    //           ],
-    //         },
-    //       ]
-    //       ],
-
-    //       XCUITestingSidebar: [
-    //       {
-    //         type: 'link',
-    //         label: '<- Back',
-    //         href: '/docs/',
-    //         customProps: {
-    //         className: 'back-to-main-menu'
-    //         },
-    //       },
-    //       [
-    //         {
-    //           type: "category",
-    //           collapsed: true,
-    //           label: "XCUI Testing",
-    //           items: [
-    //             "getting-started-with-xcui-testing",
-    //             "ios-ipa-files-xcui",
-    //             {
-    //               type: "category",
-    //               collapsed: true,
-    //               label: "Speedup XCUI",
-    //               items: [
-    //                 "filters-xcui",
-    //                 "sharding-xcui"
-    //               ],
-    //             },
-    //             ,
-    //           ],
-    //         },
-    //       ]
-    //       ],
-    //     }
-
-    //   ]
-    // ],
 
     AppAutomationSidebar: [
       {
         type: 'link',
         label: '<- Back',
-        href: '/docs/',
+        href: '/docs/getting-started-with-automation',
         customProps: {
         className: 'back-to-main-menu'
         },
@@ -649,243 +73,21 @@ module.exports = {
         {
           type: "category",
           collapsed: true,
-          label: "App Automation (Emu/Sim)",
-          items: [
-            "app-automation-app-sim",
-
-          ],
-        },
-
-      ]
-    ],
-
-    AppiumTestingSidebar: [
-      {
-        type: 'link',
-        label: '<- Back',
-        href: '/docs/',
-        customProps: {
-        className: 'back-to-main-menu'
-        },
-      },
-      [
-        {
-          type: "category",
-          collapsed: true,
-          label: "Appium Testing",
+          label: 'App Automation',
           link: {
             type: "doc",
-            id: "getting-started-with-appium-testing",
+            id:'app-automation',
           },
-          items: [
-            {
-              type: "category",
-              collapsed: true,
-              label: "Languages and Frameworks",
-              link: {
-                type: "doc",
-                id: "appium-languages-and-frameworks",
-              },
-              items: [
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Java",
-                  link: {
-                    type: "doc",
-                    id: "appium-java",
-                  },
-                  items: [
-                    "appium-java-junit",
-                    "appium-java-jbehave",
-                    "appium-java-cucumber",
-                    "appium-java-testng",
-                  ],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "JavaScript",
-                  link: {
-                    type: "doc",
-                    id: "appium-nodejs",
-                  },
-                  items: ["appium-nodejs-webdriverio", "appium-nodejs-mocha"],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Python",
-                  link: {
-                    type: "doc",
-                    id: "appium-python",
-                  },
-                  items: [
-                    "appium-python-behave",
-                    "appium-python-robot",
-                    "appium-python-gauge",
-                    "appium-python-pytest",
-                  ],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Ruby",
-                  link: {
-                    type: "doc",
-                    id: "appium-ruby",
-                  },
-                  items: ["appium-ruby-cucumber", "appium-ruby-rspec"],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "PHP",
-                  link: {
-                    type: "doc",
-                    id: "appium-php",
-                  },
-                  items: ["appium-php-behat"],
-                },
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "C#",
-                  link: {
-                    type: "doc",
-                    id: "appium-csharp",
-                  },
-                  items: ["appium-csharp-nunit"],
-                },
-                "appium-kotlin",
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Setup",
-              items: [
-                "desired-capabilities-in-appium",
-                "supported-appium-versions",
-                "list-of-supported-locales",
-                "app-testing-apis",
-                "appium-lambdatest-hooks",
-                "appium-install-uninstall-lambdatest-hooks",
-                "appium-uploading-retrieving-files",
-                "appium-firebase-app-upload",
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Features",
-              items: [
-                "camera-image-injection",
-                "biometric-authentication",
-                "reg-expression",
-                "app-auto-network-throttling",
-                "appium-app-performance",
-                "appium-ios-app-settings",
-                "adb-commands-support",
-                "login-google-android",
-                "disable-screenshot-block",
-                "basic-authentication-for-web-automation",
 
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Smart TV Automation",
-              items: ["appium-appletv", "appium-firetv", "appium-rokutv"],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Integrations",
-              items: ["appium-inspector"],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Local Testing",
-              items: ["testing-apps-locally"],
-            },
-            "migrate-appium-tests-from-browserstack-and-saucelabs",
+          items: [
+            "getting-started-with-appium-testing",
+            'getting-started-with-espresso-testing',
+            'getting-started-with-xcui-testing', 
+            'app-automation-app-sim',
           ],
         },
       ]
     ],
-
-    EspressoTestingSidebar: [
-      {
-        type: 'link',
-        label: '<- Back',
-        href: '/docs/',
-        customProps: {
-        className: 'back-to-main-menu'
-        },
-      },
-      [
-        {
-          type: "category",
-          collapsed: true,
-          label: "Espresso Testing",
-          items: [
-            "getting-started-with-espresso-testing",
-            "debug-espresso-tests",
-            {
-              type: "category",
-              collapsed: true,
-              label: "Speedup Espresso Tests",
-              items: [
-                {
-                  type: "doc",
-                  label: "Sharding for Espresso",
-                  id: "sharding-espresso",
-                },
-                "speedup-espresso"
-              ]
-
-            },
-            "getting-started-with-flutter-dart-android-automation",
-            "espresso-junit-report",
-          ],
-        },
-      ]
-    ],
-
-    XCUITestingSidebar: [
-      {
-        type: 'link',
-        label: '<- Back',
-        href: '/docs/',
-        customProps: {
-        className: 'back-to-main-menu'
-        },
-      },
-      [
-        {
-          type: "category",
-          collapsed: true,
-          label: "XCUI Testing",
-              items: [
-                "getting-started-with-xcui-testing",
-                "ios-ipa-files-xcui",
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Speedup XCUI Tests",
-                  items: [
-                    "sharding-xcui",
-                    "filters-xcui",
-                  ],
-                },
-                "xcui-xml-report",
-              ],
-        },
-      ]
-],
 
     HyperExecuteSidebar: [
       {
@@ -1690,7 +892,974 @@ module.exports = {
       ]
     ],
 
-    SmartUITestingSidebar: [
+    IntegrationsSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          // type: "category",
+          // collapsed: true,
+          // label: "Integrations",
+          // items: [
+          //   {
+              type: "category",
+              collapsed: true,
+              label: "Bug Tracking Tools",
+              link: {
+                type: "doc",
+                id: "bug-tracking-tools",
+              },
+              items: [
+                "jira-integration",
+                "jira-self-hosted-integration",
+                "airtable-integration",
+                "notion-integration",
+                "linear-app-integration",
+                "azure-devops-integration",
+                "youtrack-integration",
+                "mantis-integration",
+                "pagerduty-integration",
+                "bugasura-integration",
+                "zoho-bugtracker-integration",
+                "goodday-integration",
+                "bugherd-integration",
+                "zipboard-integration",
+                "bugzilla-integration",
+                "bugsnag-integration",
+                "devrev-integration",
+                "fogbugz-integration",
+                "airbrake-integration",
+                "userback-integration",
+                "zenkit-integration",
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Project Management Tools",
+              link: {
+                type: "doc",
+                id: "project-management-tools",
+              },
+              items: [
+                "clickup-integration",
+                "project-management-tools-github-integration",
+                "clubhouse-integration",
+                "project-management-tools-gitlab-integration",
+                "redmine-integration",
+                "asana-integration",
+                "monday-integration",
+                "trello-integration",
+                "miro-integration",
+                "project-management-tools-bitbucket-integration",
+                "integrating-wrike-with-lambdatest",
+                "pivotal-tracker-integration",
+                "hive-integration",
+                "teamwork-integration",
+                "targetprocess-integration",
+                "project-management-tools-paymo-integration",
+                "practitest-integration",
+                "breeze-integration",
+                "backlog-integration",
+                "favro-integration",
+                "zapier-integration-with-lambdatest",
+                "axosoft-integration",
+
+
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Analytics Tools",
+              items: [
+                "datadog-integration",
+                "sumo-logic-integration",
+                "new-relic-integration"
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Team Communication Tools",
+              link: {
+                type: "doc",
+                id: "team-communication-tools",
+              },
+              items: [
+                "slack-integration",
+                "microsoft-teams-integration",
+                "rocketchat-integration-with-lambdatest",
+                "integrating-mattermost-with-lambdatest",
+                "flock-integration",
+                "google-chat-integration",
+                "webex-teams-integration",
+                "zoho-cliq-integration",
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Integrations With CI/CD Tools",
+              link: {
+                type: "doc",
+                id: "integrations-with-ci-cd-tools",
+              },
+              items: [
+                "bitbucket-pipelines-integration",
+                "aws-codepipeline-Integration",
+                "bamboo-integration",
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Jenkins Plugin",
+                  items: [
+                    "jenkins-plugin",
+                    "integrating-your-jenkins-pipeline-with-lambdatest",
+                  ],
+                },
+                "semaphore-ci-integration",
+                "circleci-integration",
+                "travis-ci-with-lambdatest",
+                "gitlab-ci-integration",
+                "codeship-integration",
+                "teamcity-integration",
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Integrate Azure Pipelines",
+                  items: [
+                    "azure-pipeline",
+                    "integrate-lambdatest-extension-with-azure-pipelines",
+                  ],
+                },
+                "concource-ci",
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "GoCD Integration",
+                  items: ["gocd-integration", "yaml-integration"],
+                },
+                "drone-ci",
+                "appveyor-ci-integration",
+                "google-cloud-ci-integration",
+                "appium-bitrise",
+                "espresso-bitrise",
+                "bitrise-integration-xcuitest",
+                "buildkite-integration",
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Codeless Automation Tools",
+              link: {
+                type: "doc",
+                id: "codeless-automation-tools",
+              },
+              items: [
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Katalon Integration",
+    
+                  items: [
+                    "katalon-integration-with-lambdatest",
+                    "katalon-integration",
+                    "running-groovy-script-in-katalon",
+                  ],
+                },
+                "run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid",
+                "ranorex-integration-with-lambdatest",
+                "oxygen-integration",
+                "leapwork-integration",
+                "vividus-integration",
+                "qmetry-integration",
+                "cerberus-integration",
+                "testingwhiz-integration",
+                "testsigma-integration",
+                "tricentis-tosca-integration",
+                "ghost-inspector-integration",
+                "accelq-integration",
+                "algoshack-integration",
+              ],
+            },
+    
+            {
+              type: "category",
+              collapsed: true,
+              label: "Accessibility Testing Tools",
+              items: ["deque-integration"],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Test Reporting & Test Management Tools",
+              link: {
+                type: "doc",
+                id: "integrate-test-reporting-test-management-tools",
+              },
+              items: [
+                "testrail-integration-with-lambdatest-selenium-grid",
+                "zebrunner-integration",
+                "zephyr-scale",
+                "testmo-integration"
+              ],
+            },
+    
+            {
+              type: "category",
+              collapsed: true,
+              label: "Code Coverage Tools",
+              items: ["rktracer-integration"],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Plugins and Extensions",
+              link: {
+                type: "doc",
+                id: "plugins-and-extensions",
+              },
+              items: [
+                "chrome-extensions",
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Jenkins Plugin",
+                  items: [
+                    "jenkins-plugin",
+                    "integrating-lambdaTest-with-jenkins-freestyle-project",
+                    "lambdatest-report-with-jenkins-pipeline",
+                  ],
+                },
+                "wordpress-plugin",
+                "npm-plugin-for-testcafe-integration-with-lambdatest",
+                "fastlane-plugin",
+                "azure-pipeline",
+                "teamcity-plugin",
+                "shopify-integration",
+                "vscode-extension",
+                "xcode-plugin-lambdamax",
+                "android-studio-plugin-lambdroid",
+                "docker-tunnel-extension",
+                "gradle-integration-with-lambdatest"
+              ],
+            },
+            {
+              type: "doc",
+              label: "LT Debug",
+              id: 'record-and-replay',
+            },
+            "zalenium-integration-with-lambdatest",
+            "applitools-integration-with-lambdatest",
+            "selenified-integration-with-lambdatest",
+            "microsoft-team",
+            "app-center-integration",
+            "app-center-automation",
+            "siesta-integration",
+            "testcomplete-integration",
+            "testrigor-integration",
+            "localstack-integration-with-lambdatest",
+            "genrocket-integration",
+            "netlify-integration-with-lambdatest"
+          ],
+        // },
+    ],
+
+    SettingsAndSecuritySidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: true,
+          label: "Settings and Security",
+          link: {
+            type: "doc",
+            id: "settings-and-security",
+          },
+    
+          items: [
+            'account-management',
+            'single-sign-on',
+            'scim'
+          ]
+        }
+      ]
+    ],
+
+    SeleniumTestingSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/web-automation',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: true,
+          label: "Selenium Testing",
+          link: {
+            type: "doc",
+            id: "getting-started",
+          },
+    
+          items: [
+            {
+              type: "category",
+              collapsed: true,
+              label: "Getting Started",
+              link: {
+                type: "doc",
+                id: "inside-lambdatest-automation-platform",
+              },
+              items: [
+                "filter-your-selenium-tests",
+                "mark-as-bug-in-automation-testing",
+                "sharing-test-results",
+                "download-files-using-lambdatest-selenium-grid",
+                "live-interaction",
+                "group-tests-using-custom-tags",
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Languages and Frameworks",
+              type: "category",
+              collapsed: true,
+              items: [
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Java",
+                  link: {
+                    type: "doc",
+                    id: "java-framework",
+                  },
+                  items: [
+                    "testng-framework",
+                    "junit-frameworks",
+                    "selenide-frameworks",
+                    "gauge-frameworks",
+                    "running-serenity-test-on-selenium-grid",
+                    "cucumber-script-testng-selenium",
+                    "geb-frameworks",
+                  ],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "JavaScript",
+                  link: {
+                    type: "doc",
+                    id: "running-javascript-test-scripts-on-lambdatest",
+                  },
+                  items: [
+                    "running-protractor-test-scripts-on-lambdatest",
+                    "automation-testing-with-mocha-and-selenium",
+                    "run-nightwatch-tests-on-lambdatest-selenium-grid",
+                    "run-wd-atomation-test-on-lambdatest-selenium-grid",
+                    "automation-testing-using-webdriverIO-5-6-2",
+                    "run-webdriverio-automation-scripts-on-lambdatest",
+                    "automation-testing-with-selenium-and-jest",
+                    "run-automation-tests-using-angularjs-with-karma",
+                    "cucumberjs-testing-using-lambdatest-selenium-grid",
+                    "automation-testing-using-jasmine-with-karma",
+                    "karma-integration-with-lambdatest",
+                    "npm-plugin-for-testcafe-integration-with-lambdatest",
+                    "selenium-tests-with-nemojs",
+                  ],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "CSharp",
+                  link: {
+                    type: "doc",
+                    id: "csharp-with-selenium",
+                  },
+                  items: [
+                    "nunit-with-selenium",
+                    "mstest-with-selenium",
+                    "specflow-with-selenium",
+                  ],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Python",
+                  link: {
+                    type: "doc",
+                    id: "python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid",
+                  },
+                  items: [
+                    "unit-testing-in-python",
+                    "pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid",
+                    "robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid",
+                    "behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid",
+                    "automation-testing-selenium-with-lettuce",
+                  ],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "PHP",
+                  link: {
+                    type: "doc",
+                    id: "php-framework",
+                  },
+                  items: [
+                    "behat-php-framework",
+                    "laravel-php-framework",
+                    "codeception-php-framework",
+                    "phpunit-php-framework",
+                  ],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Ruby",
+                  link: {
+                    type: "doc",
+                    id: "ruby",
+                  },
+                  items: ["ruby-capybara", "ruby-rspec", "ruby-testunit"],
+                },
+                "executing-tesbo-automation-script-over-online-selenium-grid",
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Test Capabilities",
+              link: {
+                type: "doc",
+                id: "desired-capabilities",
+              },
+              items: [
+                "view-lighthouse-performance-metrics",
+                "network-throttling",
+                "perform-selenium-automation-on-headless-browsers",
+                "debugging-options",
+                "telemetry-logs",
+                "smart-wait",
+                "custom-header",
+                "auto-heal",
+                "command-annotations",
+                "custom-dns-map"
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Troubleshooting",
+              items: [
+                "error-messages",
+                "timeouts-issues-and-resolutions",
+                "lambda-exceptions",
+                "performance-tips",
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "FAQs",
+              items: [
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Configuration",
+                  items: [
+                    "environment-variables",
+                    "Selenium-Grid-Configuration",
+                    "supported-browsers-and-operating-systems-for-the-web-interface",
+                    "change-individual-test-details",
+                    "queuing",
+                    "lambda-hooks",
+                  ],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Proxy Settings",
+                  items: [
+                    "white-listing-proxy-with-lambdatest",
+                    "run-selenium-test-behind-the-proxy",
+                  ],
+                },
+                "upload-files-using-lambdatest",
+                "daily-usage-limit",
+                "setup-pre-run-executable",
+                "build-split",
+              ],
+            },
+            "mobile-web-automation-on-real-devices",
+          ],
+        },
+      ]
+    ],
+
+    CypressTestingSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/web-automation',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "doc",
+          label: "Cypress Testing",
+          id: "getting-started-with-cypress-testing",
+        },
+        {
+          type: "doc",
+          label: "Authentication",
+          id: "authentication",
+        },
+        {
+          type: "doc",
+          label: "Parallel Testing",
+          id: "run-your-cypress-tests-in-parallel",
+        },
+        {
+          type: "doc",
+          label: "Specify Browsers and OS",
+          id: "supported-browsers-and-os",
+        },
+        {
+          type: "doc",
+          label: "Supported Cypress Versions",
+          id: "supported-cypress-versions",
+        },
+        {
+          type: "doc",
+          label: "Cypress Testing Using WebKit",
+          id: "cypress-webkit",
+        },
+        {
+          type: "doc",
+          label: "Cypress CLI Commands",
+          id: "cypress-cli-commands",
+        },
+        {
+          type: "doc",
+          label: "Configure Cypress Test Execution",
+          id: "run-settings",
+        },
+        {
+          type: "doc",
+          label: "Test On Different Screen Resolutions",
+          id: "screen-resolution-cypress",
+        },
+        {
+          type: "doc",
+          label: "Download Artefacts For Cypress Project",
+          id: "download-artefacts-cypress",
+        },
+        {
+          type: "doc",
+          label: "Integrate LambdaTest with Cypress Dashboard",
+          id: "integrate-lambdatest-with-cypress",
+        },
+        {
+          type: "doc",
+          label: "Execute Including Private Dependencies",
+          id: "private-dependencies-cypress",
+        },
+        {
+          type: "doc",
+          label: "Applitools Integration For Cypress",
+          id: "applitools-integration-cypress",
+        },
+        {
+          type: "doc",
+          label: "Report Portal IO Integration For Cypress",
+          id: "report-portal-cypress",
+        },
+        {
+          type: "doc",
+          label: "Multi Reporters Support",
+          id: "cyp-multi-reporters",
+        },
+        {
+          type: "doc",
+          label: "Environment Variables Support for Cypress Tests",
+          id: "cyp-environment",
+        },
+        {
+          type: "doc",
+          label: "Cypress Terminal Reports",
+          id: "cypress-detailed-command-logs"
+        },
+        {
+          type: "doc",
+          label: "Install NPM via Tunnel",
+          id: "npm-via-tunnel"
+        }
+      ],
+    ],
+
+    PlaywrightTestingSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/web-automation',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: true,
+          label: "Playwright Testing ",
+          items: [
+            "playwright-testing-guide"
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Test on Android Device",
+              link: {
+                type: "doc",
+                id: "playwright-android-guide",
+              },
+              items: [
+                "playwright-android-guide",
+                "playwright-android-caps"
+              ],
+            },
+            "parallel-playwright-test",
+            "migrate-playwright-tests",
+            "playwright-test-execution",
+            "playwright-caps",
+            "local-testing-playwright",
+            "playwright-playwrighttest",
+            "playwright-cucumberjs",
+            "playwright-cicd"
+      ]
+    ],
+
+    PuppeteerTestingSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/web-automation',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: true,
+          label: "Puppeteer Testing ",
+          items: [
+            "puppeteer-testing-guide",
+            "puppeteer-test-execution",
+            "puppeteer-capabilities",
+            "local-testing-puppeteer",
+            "puppeteer-mocha",
+            "puppeteer-jest",
+            "puppeteer-pytest-pyppeteer",
+            "puppeteer-cicd",
+          ],
+        },
+    
+      ]
+    ],
+
+    K6BrowserTestingSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/web-automation',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "doc",
+          id: "k6-browser-testing",
+          label: "K6 Browser Testing ",
+        },
+      ]
+    ],
+
+    EmuSimuSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/app-automation',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: true,
+          label: "Emulator / Simulator)",
+          items: [
+            "app-automation-app-sim",
+
+          ],
+        },
+
+      ]
+    ],
+
+    AppiumTestingSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/app-automation',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: true,
+          label: "Appium Testing",
+          link: {
+            type: "doc",
+            id: "getting-started-with-appium-testing",
+          },
+          items: [
+            {
+              type: "category",
+              collapsed: true,
+              label: "Languages and Frameworks",
+              link: {
+                type: "doc",
+                id: "appium-languages-and-frameworks",
+              },
+              items: [
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Java",
+                  link: {
+                    type: "doc",
+                    id: "appium-java",
+                  },
+                  items: [
+                    "appium-java-junit",
+                    "appium-java-jbehave",
+                    "appium-java-cucumber",
+                    "appium-java-testng",
+                  ],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "JavaScript",
+                  link: {
+                    type: "doc",
+                    id: "appium-nodejs",
+                  },
+                  items: ["appium-nodejs-webdriverio", "appium-nodejs-mocha"],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Python",
+                  link: {
+                    type: "doc",
+                    id: "appium-python",
+                  },
+                  items: [
+                    "appium-python-behave",
+                    "appium-python-robot",
+                    "appium-python-gauge",
+                    "appium-python-pytest",
+                  ],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Ruby",
+                  link: {
+                    type: "doc",
+                    id: "appium-ruby",
+                  },
+                  items: ["appium-ruby-cucumber", "appium-ruby-rspec"],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "PHP",
+                  link: {
+                    type: "doc",
+                    id: "appium-php",
+                  },
+                  items: ["appium-php-behat"],
+                },
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "C#",
+                  link: {
+                    type: "doc",
+                    id: "appium-csharp",
+                  },
+                  items: ["appium-csharp-nunit"],
+                },
+                "appium-kotlin",
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Setup",
+              items: [
+                "desired-capabilities-in-appium",
+                "supported-appium-versions",
+                "list-of-supported-locales",
+                "app-testing-apis",
+                "appium-lambdatest-hooks",
+                "appium-install-uninstall-lambdatest-hooks",
+                "appium-uploading-retrieving-files",
+                "appium-firebase-app-upload",
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Features",
+              items: [
+                "camera-image-injection",
+                "biometric-authentication",
+                "reg-expression",
+                "app-auto-network-throttling",
+                "appium-app-performance",
+                "appium-ios-app-settings",
+                "adb-commands-support",
+                "login-google-android",
+                "disable-screenshot-block",
+                "basic-authentication-for-web-automation",
+
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Smart TV Automation",
+              items: ["appium-appletv", "appium-firetv", "appium-rokutv"],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Integrations",
+              items: ["appium-inspector"],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Local Testing",
+              items: ["testing-apps-locally"],
+            },
+            "migrate-appium-tests-from-browserstack-and-saucelabs",
+          ],
+        },
+      ]
+    ],
+
+    EspressoTestingSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/app-automation',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: true,
+          label: "Espresso Testing",
+          items: [
+            "getting-started-with-espresso-testing",
+            "debug-espresso-tests",
+            {
+              type: "category",
+              collapsed: true,
+              label: "Speedup Espresso Tests",
+              items: [
+                {
+                  type: "doc",
+                  label: "Sharding for Espresso",
+                  id: "sharding-espresso",
+                },
+                "speedup-espresso"
+              ]
+
+            },
+            "getting-started-with-flutter-dart-android-automation",
+            "espresso-junit-report",
+          ],
+        },
+      ]
+    ],
+
+    XCUITestingSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/app-automation',
+        customProps: {
+        className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: true,
+          label: "XCUI Testing",
+              items: [
+                "getting-started-with-xcui-testing",
+                "ios-ipa-files-xcui",
+                {
+                  type: "category",
+                  collapsed: true,
+                  label: "Speedup XCUI Tests",
+                  items: [
+                    "sharding-xcui",
+                    "filters-xcui",
+                  ],
+                },
+                "xcui-xml-report",
+              ],
+        },
+      ]
+    ],
+
+    VisualRegressionTestingSidebar: [
       {
         type: 'link',
         label: '<- Back',
@@ -2044,7 +2213,6 @@ module.exports = {
       ],
         // },
       ],
-    // ],
 
     LTBrowserSidebar: [
       {
@@ -2099,27 +2267,27 @@ module.exports = {
       ]
     ],
 
-    LTDebugSidebar: [
-      {
-        type: 'link',
-        label: '<- Back',
-        href: '/docs/',
-        customProps: {
-        className: 'back-to-main-menu'
-        },
-      },
-      [
-        {
-          type: "doc",
-          // collapsed: true,
-          label: "LT Debug",
-          id: 'record-and-replay',
-          // items: [
-          //   "record-and-replay",
-          // ],
-        },
-      ]
-    ],
+    // LTDebugSidebar: [
+    //   {
+    //     type: 'link',
+    //     label: '<- Back',
+    //     href: '/docs/',
+    //     customProps: {
+    //     className: 'back-to-main-menu'
+    //     },
+    //   },
+    //   [
+    //     {
+    //       type: "doc",
+    //       // collapsed: true,
+    //       label: "LT Debug",
+    //       id: 'record-and-replay',
+    //       // items: [
+    //       //   "record-and-replay",
+    //       // ],
+    //     },
+    //   ]
+    // ],
 
     TestingLocalPagesSidebar: [
       {
@@ -2157,283 +2325,6 @@ module.exports = {
         "charles-proxy",
       ]
     ],
-
-    IntegrationsSidebar: [
-      {
-        type: 'link',
-        label: '<- Back',
-        href: '/docs/',
-        customProps: {
-        className: 'back-to-main-menu'
-        },
-      },
-      [
-        {
-          // type: "category",
-          // collapsed: true,
-          // label: "Integrations",
-          // items: [
-          //   {
-              type: "category",
-              collapsed: true,
-              label: "Bug Tracking Tools",
-              link: {
-                type: "doc",
-                id: "bug-tracking-tools",
-              },
-              items: [
-                "jira-integration",
-                "jira-self-hosted-integration",
-                "airtable-integration",
-                "notion-integration",
-                "linear-app-integration",
-                "azure-devops-integration",
-                "youtrack-integration",
-                "mantis-integration",
-                "pagerduty-integration",
-                "bugasura-integration",
-                "zoho-bugtracker-integration",
-                "goodday-integration",
-                "bugherd-integration",
-                "zipboard-integration",
-                "bugzilla-integration",
-                "bugsnag-integration",
-                "devrev-integration",
-                "fogbugz-integration",
-                "airbrake-integration",
-                "userback-integration",
-                "zenkit-integration",
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Project Management Tools",
-              link: {
-                type: "doc",
-                id: "project-management-tools",
-              },
-              items: [
-                "clickup-integration",
-                "project-management-tools-github-integration",
-                "clubhouse-integration",
-                "project-management-tools-gitlab-integration",
-                "redmine-integration",
-                "asana-integration",
-                "monday-integration",
-                "trello-integration",
-                "miro-integration",
-                "project-management-tools-bitbucket-integration",
-                "integrating-wrike-with-lambdatest",
-                "pivotal-tracker-integration",
-                "hive-integration",
-                "teamwork-integration",
-                "targetprocess-integration",
-                "project-management-tools-paymo-integration",
-                "practitest-integration",
-                "breeze-integration",
-                "backlog-integration",
-                "favro-integration",
-                "zapier-integration-with-lambdatest",
-                "axosoft-integration",
-
-
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Analytics Tools",
-              items: [
-                "datadog-integration",
-                "sumo-logic-integration",
-                "new-relic-integration"
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Team Communication Tools",
-              link: {
-                type: "doc",
-                id: "team-communication-tools",
-              },
-              items: [
-                "slack-integration",
-                "microsoft-teams-integration",
-                "rocketchat-integration-with-lambdatest",
-                "integrating-mattermost-with-lambdatest",
-                "flock-integration",
-                "google-chat-integration",
-                "webex-teams-integration",
-                "zoho-cliq-integration",
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Integrations With CI/CD Tools",
-              link: {
-                type: "doc",
-                id: "integrations-with-ci-cd-tools",
-              },
-              items: [
-                "bitbucket-pipelines-integration",
-                "aws-codepipeline-Integration",
-                "bamboo-integration",
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Jenkins Plugin",
-                  items: [
-                    "jenkins-plugin",
-                    "integrating-your-jenkins-pipeline-with-lambdatest",
-                  ],
-                },
-                "semaphore-ci-integration",
-                "circleci-integration",
-                "travis-ci-with-lambdatest",
-                "gitlab-ci-integration",
-                "codeship-integration",
-                "teamcity-integration",
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Integrate Azure Pipelines",
-                  items: [
-                    "azure-pipeline",
-                    "integrate-lambdatest-extension-with-azure-pipelines",
-                  ],
-                },
-                "concource-ci",
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "GoCD Integration",
-                  items: ["gocd-integration", "yaml-integration"],
-                },
-                "drone-ci",
-                "appveyor-ci-integration",
-                "google-cloud-ci-integration",
-                "appium-bitrise",
-                "espresso-bitrise",
-                "bitrise-integration-xcuitest",
-                "buildkite-integration",
-              ],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Codeless Automation Tools",
-              link: {
-                type: "doc",
-                id: "codeless-automation-tools",
-              },
-              items: [
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Katalon Integration",
-    
-                  items: [
-                    "katalon-integration-with-lambdatest",
-                    "katalon-integration",
-                    "running-groovy-script-in-katalon",
-                  ],
-                },
-                "run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid",
-                "ranorex-integration-with-lambdatest",
-                "oxygen-integration",
-                "leapwork-integration",
-                "vividus-integration",
-                "qmetry-integration",
-                "cerberus-integration",
-                "testingwhiz-integration",
-                "testsigma-integration",
-                "tricentis-tosca-integration",
-                "ghost-inspector-integration",
-                "accelq-integration",
-                "algoshack-integration",
-              ],
-            },
-    
-            {
-              type: "category",
-              collapsed: true,
-              label: "Accessibility Testing Tools",
-              items: ["deque-integration"],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Test Reporting & Test Management Tools",
-              link: {
-                type: "doc",
-                id: "integrate-test-reporting-test-management-tools",
-              },
-              items: [
-                "testrail-integration-with-lambdatest-selenium-grid",
-                "zebrunner-integration",
-                "zephyr-scale",
-                "testmo-integration"
-              ],
-            },
-    
-            {
-              type: "category",
-              collapsed: true,
-              label: "Code Coverage Tools",
-              items: ["rktracer-integration"],
-            },
-            {
-              type: "category",
-              collapsed: true,
-              label: "Plugins and Extensions",
-              link: {
-                type: "doc",
-                id: "plugins-and-extensions",
-              },
-              items: [
-                "chrome-extensions",
-                {
-                  type: "category",
-                  collapsed: true,
-                  label: "Jenkins Plugin",
-                  items: [
-                    "jenkins-plugin",
-                    "integrating-lambdaTest-with-jenkins-freestyle-project",
-                    "lambdatest-report-with-jenkins-pipeline",
-                  ],
-                },
-                "wordpress-plugin",
-                "npm-plugin-for-testcafe-integration-with-lambdatest",
-                "fastlane-plugin",
-                "azure-pipeline",
-                "teamcity-plugin",
-                "shopify-integration",
-                "vscode-extension",
-                "xcode-plugin-lambdamax",
-                "android-studio-plugin-lambdroid",
-                "docker-tunnel-extension",
-                "gradle-integration-with-lambdatest"
-              ],
-            },
-            "zalenium-integration-with-lambdatest",
-            "applitools-integration-with-lambdatest",
-            "selenified-integration-with-lambdatest",
-            "microsoft-team",
-            "app-center-integration",
-            "app-center-automation",
-            "siesta-integration",
-            "testcomplete-integration",
-            "testrigor-integration",
-            "localstack-integration-with-lambdatest",
-            "genrocket-integration",
-            "netlify-integration-with-lambdatest"
-          ],
-        // },
-      ], 
-    // ],
 
     TestManagementSidebar: [
       {
@@ -2482,7 +2373,7 @@ module.exports = {
       {
         type: 'link',
         label: '<- Back',
-        href: '/docs/',
+        href: '/docs/settings-and-security',
         customProps: {
         className: 'back-to-main-menu'
         },
@@ -2555,7 +2446,7 @@ module.exports = {
       {
         type: 'link',
         label: '<- Back',
-        href: '/docs/',
+        href: '/docs/settings-and-security',
         customProps: {
           className: 'back-to-main-menu'
         },
@@ -2584,7 +2475,7 @@ module.exports = {
       {
         type: 'link',
         label: '<- Back',
-        href: '/docs/',
+        href: '/docs/settings-and-security',
         customProps: {
         className: 'back-to-main-menu'
         },
@@ -2623,8 +2514,5 @@ module.exports = {
       ]
       
     ],
-
-
-  // },
 
 };
