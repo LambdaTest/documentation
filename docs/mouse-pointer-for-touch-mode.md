@@ -43,22 +43,19 @@ slug: mouse-pointer-for-touch-mode/
 * * *
 [LT Browser](https://www.lambdatest.com/lt-browser/) allows you to replicate the touch screen devices. Now you can use the touch mode for both mobile devices, desktops, laptops, and navigation in the same way as you would use the touch feature on your mobile device. 
 
->
-We are going to release a new version of LT Browser with loaded features. Please stay tuned.
+To get started, you need to download the executable file from here.
 
-<!-- To get started, you need to download the executable file from here. -->
-
-<!-- <div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/LTBrowser.exe" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser For Windows</a>
+<div className="download_btn mb-10">
+<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.exe" onClick={() => window.sendAnalytics('Download LT Browser 2.0')}>Download LT Browser For Windows</a>
 </div>   
 
 <div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/LTBrowser.dmg" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser For macOS</a>
+<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.dmg" onClick={() => window.sendAnalytics('Download LT Browser 2.0')}>Download LT Browser For macOS</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/LTBrowser.AppImage" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser For Linux</a>
-</div> -->
+<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.deb" onClick={() => window.sendAnalytics('Download LT Browser 2.0')}>Download LT Browser For Linux</a>
+</div>
 
 To enable the touch mode, navigate to the **'Settings'** button from the top left and enable the **'Mouse Pointer'** button.
 

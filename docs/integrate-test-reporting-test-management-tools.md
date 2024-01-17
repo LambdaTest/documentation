@@ -61,7 +61,7 @@ LambdaTest offers integration with test reporting and test management tools, all
 |:-----------------------------------------------------------------------------------------------------------------:|
 
 
-If your favourite test reporting and test management tool is not in the above mentioned, then just give us a shout and we will have it ready shortly for you.
+If your favourite test reporting and test management tool is not in the above mentioned, then just give us a shout and we will have it ready shortly for you.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

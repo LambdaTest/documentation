@@ -1,5 +1,5 @@
 {
-  "name": "my-website",
+  "name": "lambdatest-docs",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -17,17 +17,17 @@
     "@docusaurus/core": "2.4.3",
     "@docusaurus/preset-classic": "2.4.3",
     "@mdx-js/react": "^1.6.21",
-    "@orama/orama": "^2.0.0-beta.10",
-    "@orama/plugin-docusaurus": "^2.0.0-beta.10",
-    "@orama/plugin-parsedoc": "^2.0.0-beta.10",
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
+    "docusaurus-theme-search-typesense": "^0.15.0",
+    "dotenv": "^16.3.1",
     "file-loader": "^6.2.0",
     "prism-react-renderer": "^1.2.1",
     "query-string": "^8.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^6.18.0",
+    "react-scripts": "^5.0.1",
     "url-loader": "^4.1.1"
   },
   "browserslist": {

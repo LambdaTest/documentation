@@ -152,7 +152,7 @@ John is a QA Manager, and wants to see the trends of the increase or decrease in
 The following are the different use cases to annalyze your tests with **Test Trends**: 
 
 - Analyze the performance your of the tests which are run on the platform. 
-- Filter by any test capablity and track the performance of the tests. 
+- Filter by any test capability and track the performance of the tests. 
 - Track trends of individual capability applied for the tests for the executed on the Lambdatest platform. 
 
 ## Test Device Coverage
@@ -187,7 +187,7 @@ John wants to understand the distribution of the status of the executed tests on
 
 The following are the different use cases to annalyze your tests with **Test Status Ratio**: 
 - Review the Passed/Failed or other status distribution of the tests run on the platform. 
-- Check you distribution for all your SMOKE/Regression tests by filtering by Porject Name, Build Name or test names. 
+- Check you distribution for all your SMOKE/Regression tests by filtering by Project Name, Build Name or test names. 
 - Track only required status by editing the widget in the settings. 
 
 <nav aria-label="breadcrumbs">

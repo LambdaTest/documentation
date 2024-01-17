@@ -48,7 +48,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ---
 
 <div className="ytframe"> 
-<div className="youtube" data-embed="7dczd7AfPFs">
+<div className="youtube" data-embed="7dczd7AfPFs" data-loading-attribute="eager">
     <div className="play-button"></div>
 </div>
 </div>

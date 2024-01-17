@@ -191,7 +191,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/e
     "app" : "lt://APP_ID",
     "testSuite": "lt://TestSuite_ID",
     "device" :  ["Galaxy S21 5G-12"],
-    "queueTimeout": 360,
+    "queueTimeout": 10800,
     "IdleTimeout": 150,
     "deviceLog": true,
     "network": false,
@@ -262,12 +262,57 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/bu
     "app" : "app_id",
     "testSuite": "testsuite_id",
     "device" :  ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
-    "queueTimeout": 360,
+    "queueTimeout": 10800,
     "IdleTimeout": 150,
     "deviceLog": true,
     "build" : "Proverbial-Espresso"
 }'
 ```
+## Setting Locale and Language
+---
+You can also configure both locale and language during Espresso test execution for a seamless user experience in diverse linguistic and regional contexts of your app.
+
+**Language**
+
+To test a localized version of your app on LambdaTest, use the `language` parameter in the Espresso test execution API request. This allows you to change the language of the application under test.
+
+| Parameter | Description                            | Values     |
+|-----------|----------------------------------------|------------|
+| language  | Set the language of the app under test | Example: ‘hi’ |
+
+**Locale**
+
+To test a localized version of your app on LambdaTest, use the `locale` parameter in the Espresso test execution API request. This allows you to set the locale for the application under test.
+
+| Parameter | Description                       | Values     |
+|-----------|-----------------------------------|------------|
+| locale    | Set locale for the app under test | Example: IN (Country name abbreviation) |
+
+**For Example:** 
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/build' \
+--header 'Authorization: Basic <Enter_Basic_Auth>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "app" : "app_id",
+    "testSuite": "testsuite_id",
+    "device" :  ["Galaxy S20-10"],
+    "queueTimeout": 360,
+    "IdleTimeout": 150,
+    "deviceLog": true,
+    "build" : "Proverbial-Espresso",
+    "language": "fr",
+    "locale": "CA"
+}'
+```
+
+:::note
+- Ensure that both the **language** and **locale** parameters are passed simultaneously in the API request.
+- App should support the language and locale mentioned in the API request to work.
+- For espresso sharding tests, you have to mention this in the `.yaml` file.
+:::
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

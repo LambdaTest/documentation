@@ -44,7 +44,7 @@ Sumo Logic is a cloud-based platform that modernizes your security operations. B
 
 LambdaTest and Sumo Logic enables you to view LambdaTest results in a custom Sumo Logic dashboard and gain deeper insight into your automation scripts to ship quality products at light speed.
 
-## Pre-requisites
+## Prerequisites
 ***
 
 1. A LambdaTest account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/register).

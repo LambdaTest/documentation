@@ -17,7 +17,7 @@ slug: tas-configuring-tas-yml/
 # Configuring TAS yml
 ***
 In this section we will explain how to make a `.tas.yml` configuration file for your project. This file defines the steps that are required for a test execution job to run on TAS. This step is same for **TAS Cloud** mode and **TAS - Self Hosted** mode. <br/> 
-You can begin with the **Basic configurations** first and then go towards the **Advanced configurations** as per the requriements of your project. You can also refer to our **sample configuration file** given at the end of this page.
+You can begin with the **Basic configurations** first and then go towards the **Advanced configurations** as per the requirements of your project. You can also refer to our **sample configuration file** given at the end of this page.
 
 ## Basic configuration parameters
 ***
@@ -63,10 +63,13 @@ This section contains the glob patterns for the test cases that you want to exec
 ```yml
 postMerge:
   pattern: 
-    - test/unit/**/*.js # This is a sample glob pattern for all the tests inside the unit folder ending with .js extention.
-  #env:  in case you need to set any env variables
-    #NODE_ENV: development
-    #AWS_KEY: ${{ secrets.AWS_KEY }} # More details in Managing Secrets section
+    # This is a sample glob pattern for all the tests inside the "unit" folder ending with .js extension.
+    - test/unit/**/*.js
+    # This is a sample glob pattern for all the tests inside the "unit", "node" and "development" folder ending with .js extension.
+    - test/{unit,node,development}/**/*.js
+  # env: (optional) in case you need to set any env variables
+    # NODE_ENV: development
+    # AWS_KEY: ${{ secrets.AWS_KEY }} # More details in Managing Secrets section
 ```
 
 | Sub-Parameters | Required  | Type      | Description   |
@@ -103,11 +106,14 @@ This section contains the glob patterns for the test cases that you want to exec
 **Example**
 ```yml
 preMerge:
-  pattern: 
-    - test/unit/**/*.js # This is a sample glob pattern for all the tests inside the unit folder ending with .js extention.
-  #env:  in case you need to set any env variables
-    #NODE_ENV: development
-    #AWS_KEY: ${{ secrets.AWS_KEY }} # More details in Managing Secrets section
+  pattern:
+    # This is a sample glob pattern for all the tests inside the "unit" folder ending with .js extension.
+    - test/unit/**/*.js
+    # This is a sample glob pattern for all the tests inside the "unit", "node" and "development" folder ending with .js extension.
+    - test/{unit,node,development}/**/*.js
+  # env: (optional) in case you need to set any env variables
+    # NODE_ENV: development
+    # AWS_KEY: ${{ secrets.AWS_KEY }} # More details in Managing Secrets section
 ```
 
 | Sub-Parameters | Required  | Type      | Description   |
@@ -136,7 +142,7 @@ postRun:
 <br/>
 
 ### configFile
-You might need to add a framework specific configuraiton file in some cases. The relative path for the configuration file like your custom `mocharc`, `jest.config`, `spec/support/jasmine.json` etc will need to be mentioned here. 
+You might need to add a framework specific configuration file in some cases. The relative path for the configuration file like your custom `mocharc`, `jest.config`, `spec/support/jasmine.json` etc will need to be mentioned here. 
 
 ```yml
 configFile: test/jest.config.json
@@ -229,7 +235,7 @@ containerImage: lambdatest/nucleus:latest
 <br/>
 
 ### version
-The version field is intended to be used in order to issue warnings for deprecation or breaking changes on the platfrom level.<br/>
+The version field is intended to be used in order to issue warnings for deprecation or breaking changes on the platform level.<br/>
  
 **Example**
 ```yml
@@ -327,5 +333,5 @@ Once you have prepared the configuration file, place this file correctly inside 
 3. Commit and Push the changes to your master branch. 
 
 <p align="center">
-<img loading="lazy" src={require('../assets/images/tas/getting-started/yml_placing.gif').default} alt="Import Repository" width="1340" height="617" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/tas/getting-started/yml-addition-in-repo.gif').default} alt="Import Repository" width="1340" height="617" className="doc_img"/>
 </p>

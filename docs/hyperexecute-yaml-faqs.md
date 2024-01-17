@@ -254,7 +254,7 @@ Pass this maven arguments which require to handle mvn ssl cert errors
 
 For more information on the HyperExecute YAML file, visit this [page](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
->If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
+>If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

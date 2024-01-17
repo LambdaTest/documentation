@@ -152,7 +152,7 @@ cd ROOT_FOLDER
 - Enter your Task Description.
 - Select the **Interpreter** as **Shell**.
 - Choose the **Script Location** as **Inline**.
-- Add the followiing code in the **Script Body**
+- Add the following code in the **Script Body**
 
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute

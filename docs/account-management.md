@@ -3,7 +3,7 @@ id: account-management
 title: Account Management
 hide_title: true
 sidebar_label: Account Management
-description: Navigate Account Management effortlessly with our guide! Manage subscriptions, service accounts, team & group, enable MFA, access support, audit logs & more with ease!
+description: Guide tpage to access the different components related to Account Management like Managing Subscriptions, Work on Service Accounts, Concurrency distribution in Sub-Organization, Support Access, Team Management, Multi Factor Authentication, hopw to Delete your Account, Group Management, Check Audit logs.
 keywords:
   - lambdatest automation
   - lambdatest hyperexecute

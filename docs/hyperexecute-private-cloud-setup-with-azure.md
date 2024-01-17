@@ -3,7 +3,7 @@ id: hyperexecute-private-cloud-setup-with-azure
 title: HyperExecute Private Cloud Setup with Azure
 hide_title: true
 sidebar_label: HyperExecute Private Cloud Setup with Azure
-description: Leverage the Power of HyperExecute Private Cloud Setup with Azure, as You Dive into Configuration Inheritance for Optimal Performance Enhancement and Seamless Workflow Integration.
+description: Discover HyperExecute Private Cloud Setup with Azure and understand how to inherit configurations for optimal performance. Explore the integration of hyperexecute inherit config.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -74,7 +74,7 @@ Follow the steps below to understand how to setup **HyperExecute Private Cloud**
 6. Enablements on Preview features of **Pod Identity**
 
 ## IP Ranges
-By default the setup creates its own network with IP range `10.26.0.0/16`. if in case the customer needs customised environment than minimum 2 subnets are required to accomodate the resources.
+By default the setup creates its own network with IP range `10.26.0.0/16`. if in case the customer needs customised environment than minimum 2 subnets are required to accommodate the resources.
 
 - /24 subnet for test execution machines
 - /22 subnet for Kubernetes
@@ -89,35 +89,35 @@ By default the setup creates its own network with IP range `10.26.0.0/16`. if in
 
 - Go on [HyperExecute’s Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/lambdatestinc1584019832435.hyperexeonprem?exp=ubp8&tab=Overview) listing, and click on **Get It Now**.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-private-cloud-setup-with-azure/1.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/private-cloud-setup/1.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 - Fill your details in the pop-up, and select a plan between **HyperExecute Private Cloud - Monthly** or **HyperExecute Private Cloud - Annual**. Click on **Continue** to proceed.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-private-cloud-setup-with-azure/2.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/private-cloud-setup/2.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 - Alternatively, you can also search for HyperExecute from the search bar on Azure Marketplace’s homepage. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-private-cloud-setup-with-azure/3.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/private-cloud-setup/3.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 - Click on the **Get It Now** button on the **HyperExecute Private Cloud** listing.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-private-cloud-setup-with-azure/4.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/private-cloud-setup/4.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 - Select a plan between **HyperExecute Private Cloud - Monthly** or **HyperExecute Private Cloud - Annual**. Click on **Continue** to proceed.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-private-cloud-setup-with-azure/5.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/private-cloud-setup/5.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 **Step 3:** You will be redirected to HyperExecute Private Cloud listing page. Click on **Create** to proceed. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-private-cloud-setup-with-azure/6.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'1000px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/private-cloud-setup/6.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'1000px', height:'auto'}}/>
 
 **Step 4:** You will be redirected to the **Basics** page where you have to configure your plan for **HyperExecute Private Cloud.**
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-private-cloud-setup-with-azure/7.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'1000px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/private-cloud-setup/7.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'1000px', height:'auto'}}/>
 
 **Step 5:** Configure the fields as per your requirements, and click on **Review + create** to proceed further.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-private-cloud-setup-with-azure/8.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'1000px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/private-cloud-setup/8.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'1000px', height:'auto'}}/>
 
 - **Subscription**: The Azure subscription where the resource will be billed.
     
@@ -139,7 +139,7 @@ By default the setup creates its own network with IP range `10.26.0.0/16`. if in
 
 **Step 6:** You can review all of your entries and then select the checkbox under **Co-Admin Access Permission**, indicating that you agree to the **Terms and Conditions** listed above.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-private-cloud-setup-with-azure/9.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'1000px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/private-cloud-setup/9.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'1000px', height:'auto'}}/>
 
 **Step 7:** Click on **Create** and you will have successfully set up the HyperExecute Private Cloud.
 

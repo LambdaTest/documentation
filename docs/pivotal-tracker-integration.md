@@ -35,7 +35,8 @@ slug: pivotal-tracker-integration/
         }]
       })
     }}
-></script>
+>
+</script>
 
 # Pivotal Tracker Integration
 

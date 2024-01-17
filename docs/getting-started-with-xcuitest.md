@@ -186,7 +186,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
     "testSuite": "lt://TestSuite_ID",
     "device" :  ["iPhone 11-14"],
     "video" : true,
-    "queueTimeout": 360,
+    "queueTimeout": 10800,
     "idleTimeout": 150,
     "devicelog": true,
     "network": false,
@@ -242,12 +242,58 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
     "app" : "lt://APP_ID",
     "testSuite": "lt://TestSuite_ID",
     "device" :  ["iPhone 11-14","iPhone 12 Pro-15","iPhone X-13"],
-    "queueTimeout": 360,
+    "queueTimeout": 10800,
     "IdleTimeout": 150,
     "deviceLog": true,
     "build" : "Proverbial-XCUITest"
 }'
 ```
+## Setting Locale and Language
+---
+You can also configure both locale and language during XCUI test execution for a seamless user experience in diverse linguistic and regional contexts of your app.
+
+**Language**
+
+To test a localized version of your app on LambdaTest, use the `language` parameter in the XCUI test execution API request. This allows you to change the language of the application under test.
+
+| Parameter | Description                            | Values     |
+|-----------|----------------------------------------|------------|
+| language  | Set the language of the app under test | Example: ‘hi’ |
+
+**Locale**
+
+To test a localized version of your app on LambdaTest, use the `locale` parameter in the XCUI test execution API request. This allows you to set the locale for the application under test.
+
+| Parameter | Description                       | Values     |
+|-----------|-----------------------------------|------------|
+| locale    | Set locale for the app under test | Example: IN (Country name abbreviation) |
+
+**For Example:** 
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
+--header 'Authorization: Basic <Enter_Basic_Auth>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "app" : "lt://APP_ID",
+    "testSuite": "lt://TestSuite_ID",
+    "device" :  ["iPhone 11-14"],
+    "video" : true,
+    "queueTimeout": 10800,
+    "idleTimeout": 150,
+    "devicelog": true,
+    "network": false,
+    "build" : "Proverbial-XCUITest",
+    "language": "fr",
+    "locale": "CA"
+}'
+```
+
+:::note
+- Ensure that both the **language** and **locale** parameters are passed simultaneously in the API request.
+- App should support the language and locale mentioned in the API request to work.
+- For XCUI sharding tests, you have to mention this in the `.yaml` file.
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

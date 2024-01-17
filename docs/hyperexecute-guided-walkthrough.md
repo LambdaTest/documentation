@@ -63,7 +63,7 @@ On this page you have other things such as filters, help center, docs, [secrets 
 
 The top panel contains multiple items:
 
-- **Parallel**: It reflects the number of tasks running parallely
+- **Parallel**: It reflects the number of tasks running parallelly
 
 - **Queued**: It shows number of the tasks queued and are not yet started.
 

@@ -105,20 +105,13 @@ The following new features are available in LT Browser 2.0:
 To get started with LT Browser 2.0, download the below executable file based on your operating system.
 
 <div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.exe" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser 2.0 For Windows</a>
+<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.exe" onClick={() => window.sendAnalytics('Download LT Browser 2.0')}>Download LT Browser 2.0 For Windows</a>
 </div>   
 
 <div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.dmg" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser 2.0 For macOS</a>
+<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.dmg" onClick={() => window.sendAnalytics('Download LT Browser 2.0')}>Download LT Browser 2.0 For macOS</a>
 </div>
 
-<div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.deb" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser 2.0 For Linux (.deb file)</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="https://downloads.lambdatest.com/lt-browser/v2/LTBrowser.rpm" onClick={() => window.sendAnalytics('lt-browser-downloaded')}>Download LT Browser 2.0 For Linux (.rpm file)</a>
-</div>
 
 ## Running Your First Responsive Test
 ---
@@ -297,7 +290,7 @@ Upon clicking on the Screenshot icon, you will receive a prompt message stating 
 
 <img loading="lazy" src={require('../assets/images/lt-browser-chromium/capture_fps.png').default} alt="view screen"  className="doc_img" width="1366" height="722"/><br/><br/>
 
-3. Once the screenshots are captured, it will guide you to the page where you can download your full-page screenshots into the LT Brower 2.0 by pressing the 'Save' button or you can download your screenshots into your local machine by clicking on the 'Arrow' button. 
+3. Once the screenshots are captured, it will guide you to the page where you can download your full-page screenshots into the LT Browser 2.0 by pressing the 'Save' button or you can download your screenshots into your local machine by clicking on the 'Arrow' button. 
 
 <img loading="lazy" src={require('../assets/images/lt-browser-chromium/save_fps.png').default} alt="view screen"  className="doc_img" width="1366" height="722"/><br/><br/>
 

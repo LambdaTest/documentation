@@ -49,7 +49,7 @@ import TabItem from '@theme/TabItem';
 ></script>
 
 
-Generally the XCUI tests are run in sequence which is a time taking process. This document explains how you can speed up this process by splitting the tests into **shards**. We can divide the various tests into shards which can run parallely and save time while running various XCUI tests. 
+Generally the XCUI tests are run in sequence which is a time taking process. This document explains how you can speed up this process by splitting the tests into **shards**. We can divide the various tests into shards which can run parallelly and save time while running various XCUI tests. 
 
 This document will cover how to execute **XCUI Tests** on real devices with **HyperExecute**. HyperExecute is a smart test orchestration platform to run end-to-end tests at the fastest speed possible. HyperExecute is configured using a YAML file.
 
@@ -204,10 +204,10 @@ framework:
       mappings:
       - name: shard1
         strategy: "only-testing/skip-testing"
-        values: ["<className> / <className/testName>"]
+        values: ["<className>/<className/testName>"]
      - name: shard2
        strategy: "only-testing/skip-testing"
-       values: [""<className> / <className/testName>"", ""<className> / <className/testName>""]
+       values: [""<className>/<className/testName>"", ""<className>/<className/testName>""]
 ```
 
 :::tip When shards are added

@@ -1,8 +1,8 @@
 ---
 id: smartui-selenium-js-sdk
 title: Integrate SmartUI SDK with Selenium Tests
-sidebar_label: Integrate with Javascript
-description: In this documentation, learn how intergrate your Selenium automated tests with LambdaTest's SmartUI.
+sidebar_label: Javascript
+description: In this documentation, learn how integrate your Selenium Javascript automated tests with LambdaTest's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -49,22 +49,24 @@ import NewTag from '../src/component/newTag';
     }}
 ></script>
 
-Elevate your Selenium automated tests with SmartUI SDK integration. By seamlessly integrating SmartUI into your testing suite, you can effortlessly identify visual differences in your web application and streamline your visual testing workflow.
+Welcome to the world of simplified visual testing with the SmartUI SDK. 
 
-## Pre-requisites for running SmartUI CLI
+Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
+
+## Pre-requisites for running tests through SmartUI SDK
 
 - Basic understanding of Command Line Interface and Selenium is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
 The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Selenium SDK integration.
 
-## Create a SmartUI Web-Project
+## Create a SmartUI Project
 
 The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
 
 1. Go to [Projects page](https://smartui.lambdatest.com/)
 2. Click on the `new project` button
-3. Select the platform as <b>Web</b> for executing your `SDK` tests.
+3. Select the platform as <b>CLI</b> or <b>Web</b> for executing your `SDK` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
@@ -74,25 +76,26 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-**Using Github Sample**
-- You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI`.
+You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `sdk.js` file present in the `sdk` folder.
 
 ```bash
 git clone https://github.com/LambdaTest/smartui-node-sample
+cd smartui-node-sample/sdk
 ```
-
-:::info
-Currently, the selenium SDK is only supported with `Selenium-JavaScript` tests, the support for other languages and frameworks will be available soon.
-:::
-  
-
 ### **Step 2**: Install the Dependencies
 
 Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
 
 ```bash
-npm i @lambdatest/selenium-driver -g @lambdatest/smartui-cli
+npm i @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
 ```
+
+:::info
+To ensure seamless execution of ES6 modules within our repository, it is essential to configure the Node.js environment to recognize ES6 module syntax. This is accomplished by specifying the module type in your `package.json` file.
+```bash
+"type": "module"
+```
+:::
 
 ### **Step 3:** Configure your Project Token
 
@@ -106,7 +109,7 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -128,12 +131,12 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
-smartui config:create-web smartui-web.json
+npx smartui config:create smartui-web.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
 
-```json title="/smartui-cli-project/smartui-web.json"
+```json title="/smartui-sdk-project/smartui-web.json"
 {
   "web": {
     "browsers": [
@@ -143,7 +146,7 @@ Once, the configuration file will be created, you will be seeing the default con
       "edge",
       // Add more browser configuration here
     ],
-    "resolutions": [
+    "viewports": [
       [
         1920,
         1080
@@ -156,10 +159,22 @@ Once, the configuration file will be created, you will be seeing the default con
         360,
         640
       ]
-    ]      
+    ],
+    "waitForPageRender": 50000, // Optional (Should only be used in case of websites which take more than 30s to load)
+    "waitForTimeout": 1000 //Optional (Should only be used in case lazy-loading/async components are present )
+
   }
 }
 ```
+
+:::info Optional Keys in SmartUI configuration
+
+**waitForPageRender** - If one or more `URLs` in your script require a relatively higher amount of time to load, you may use the `waitForPageRender` key in the config file to make sure the screenshots are rendered correctly. Avoid using the same in case your websites render in less than 30 seconds as it might increase the execution time of your tests.
+
+
+**waitForTimeout** - If you are using any `async` components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.
+:::
+
 ### **Step 5:** Adding SmartUI function to take screenshot
 
 - You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
@@ -175,13 +190,11 @@ import { smartuiSnapshot } from '@lambdatest/selenium-driver';
         .build();
 
     try {
-        await driver.get('https://www.github.com'); //enter your desired URL here
+        await driver.get('<Required URL>'); //enter your desired URL here
         await smartuiSnapshot(driver, '<Screenshot_Name>');
         // Please specify your driver and the screenshot name in this function
         // driver - selenium driver instance (required)
         // Screenshot_Name - Name of the screenshot ; unique to each screenshot (required)
-        await driver.get('https://www.pinterest.com/pin/112801165652823604/')
-        await smartuiSnapshot(driver, 'NYC');
     } finally {
         await driver.quit();
     }
@@ -195,30 +208,18 @@ import { smartuiSnapshot } from '@lambdatest/selenium-driver';
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-smartui exec node <Test fIle name>.js
+npx smartui exec node <fileName>.js
 ```
-<!-- 
-CLI Process Snippet:
-```bash
-#<Placeholder>
-``` -->
 
-<!-- ### Setup with Continuous Integration (CI)
-
-If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI Selenium (JS) SDK` execution then the following are the steps needs to be added to your `.yaml` file:
-
-
-```yaml
-#<Placeholder for .yaml>
-
-```
- -->
+:::note 
+You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
+:::
 
 ##  View SmartUI Results
 
 You have successfully integrated SmartUI SDK with your Selenium tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
 
-You can see the Smart UI dashboard to view the results. This will help you identify the mis-matches from the existing `Baseline` build and do the required visual testing.
+You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui_ss_cli.png').default} alt="cmd" width="768" height="373" className="doc_img"/>

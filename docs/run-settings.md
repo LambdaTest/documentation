@@ -438,11 +438,11 @@ You can run Headless tests with Cypress by the `headless` key to `true`.
 ## Capture Network Logs
 ***
 
-You can generate Network logs with Cypress by setting the `network` key to `true`. 
+You can generate Network logs with Cypress by setting the `network` key to `true`.
 
 | Key |  Description | Type |
 | -------- | ------------ | -------- |
-| network   | Record network packets while the test is running | Boolean |
+| headless   | Record network packets while the test is running | Boolean |
 
 **Example**:
 
@@ -455,17 +455,6 @@ You can generate Network logs with Cypress by setting the `network` key to `true
   }
 }
 ```
-If you want to generate network logs via the Cypress CLI, use the following command. 
-
-```bash
-lambdatest-cypress run --network=true
-```
-
-You can also access the network logs on the [Automation Dashboard](https://automation.lambdatest.com/build). Click on the **Network** button highlighted in the image attached below. If you want to download the network logs, click on the **Download** button on the right-hand side.
-
-<img loading="lazy" src={require('../assets/images/cypress-doc/network.png').default} alt="jira-integration"  className="doc_img" width="1337" height="613"/>
-
-***
 
 ## Specifying NPM Package Dependencies
 ---
@@ -520,5 +509,4 @@ It's recommended to use `npm_dependencies` instead of `package.json` because `pa
     </li>
   </ul>
 </nav>
-
 

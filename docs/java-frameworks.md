@@ -76,11 +76,11 @@ Before you can start performing Java automation testing with Selenium, you would
 
   - **Step 1:** Download the latest Java Selenium Bindings from the [official website](https://www.selenium.dev/downloads/) and extract the **ZIP** file to your project directory.
   - **Step 2:** Create a new Java project and once it's created, you can open the project settings. Here we are showing an example for the same in **IntelliJ IDEA CE**.
-    <img loading="lazy" src={require('../assets/images/selenium/java1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+    <img loading="lazy" src={require('../assets/images/selenium/java1.png').default} alt="cmd" width="1260" height="1071" className="doc_img"/>
 
   - **Step 3:** Navigate to **dependencies** in module settings where you can add your external JARs.
   - **Step 4:** Under dependencies by clicking the **`+`** icon, you can add your downloaded **Selenium JARs** to the project. Once they are added, it should look like this :
-    <img loading="lazy" src={require('../assets/images/selenium/java2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+    <img loading="lazy" src={require('../assets/images/selenium/java2.png').default} alt="cmd" width="1150" height="740" className="doc_img"/>
 
 Now you are good to run the Java automation testing scripts.
 

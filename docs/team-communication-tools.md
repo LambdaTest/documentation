@@ -39,50 +39,55 @@ slug: team-communication-tools/
 ></script>
 
 # Team Communication Tools
+***
 
----
+LambdaTest allows you to integrate your LambdaTest account with your favourite communication tools. That way you can instantly share any UI bug that you come across while cross browser testing over 3000+ real browsers hosted by LambdaTest cloud servers. Here are the instant messaging tools that you can integrate with LambdaTest.
 
-LambdaTest allows you to integrate your LambdaTest account with your favorite communication tools. That way you can instantly share any UI bug that you come across while cross browser testing over 3000+ real browsers hosted by LambdaTest cloud servers. Here are the instant messaging tools that you can integrate with LambdaTest.
+<table align="center">   
 
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/slack-integration/">Slack Integration With LambdaTest</a>
-</div>
+| [Slack Integration](/docs/slack-integration/) |
+|:---------------------------------------:|
 
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/microsoft-teams-integration/">Microsoft Teams Integration With LambdaTest</a>
-</div>
+</table>
 
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/rocketchat-integration-with-lambdatest/">RocketChat Integration With LambdaTest</a>
-</div>
+<table align="center"> 
 
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/integrating-mattermost-with-lambdatest/">Mattermost Integration With LambdaTest</a>
-</div>
+| [Microsoft Teams Integration](/docs/microsoft-teams-integration/) |
+|:-----------------------------------------------------------:|
 
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/flock-integration/">Flock Integration With LambdaTest</a>
-</div>
+</table>
 
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/google-chat-integration/">Google Chat Integration With LambdaTest</a>
-</div>
+<table align="center"> 
 
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/webex-teams-integration/">Webex Teams Integration With LambdaTest</a>
-</div>
+| [Rocket.Chat Integration](/docs/rocketchat-integration-with-lambdatest/) |
+|:-----------------------------------------------------------:|
 
-<div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/zoho-cliq-integration/">Zoho Cliq Integration With LambdaTest</a>
-</div>
+</table>
 
-## Got something to recommend?
+<table align="center"> 
 
----
+| [Mattermost Integration](/docs/integrating-mattermost-with-lambdatest/) |
+|:-----------------------------------------------------------:|
 
-<!-- We would love to hear it. Drop the suggestion in the 24/7 customer chat support for any other instant messaging or team communication tool that you may want us to integrate with. -->
+</table>
 
-We would love to hear it. Drop the suggestion in the <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 customer chat support**</span> for any other instant messaging or team communication tool that you may want us to integrate with.
+<table align="center"> 
+
+| [Flock Integration](/docs/flock-integration/) |
+|:-----------------------------------------------------------:|
+
+</table>
+
+<table align="center"> 
+
+| [Google Chat Integration](/docs/google-chat-integration/) |
+|:-----------------------------------------------------------:|
+
+</table>
+
+**Got something to recommend?**
+<!-- We would love to hear it. Drop the suggestion in the 24/7 customer chat support for any other instant-messaging or team communication tool that you may want us to integrate with. -->
+We would love to hear it. Drop the suggestion in the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 customer chat support**</span> for any other instant-messaging or team communication tool that you may want us to integrate with.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

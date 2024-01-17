@@ -43,7 +43,7 @@ Downloading Job Reports and Artifacts manually from the HyperExecute UI can be a
 
 ## YAML Configuration
 
-To recieve the Artifacts and Reports via mail, you will have to add the `email` flag with a `to` tag to select the email IDs where the report or artifacts should be sent. The example added below shows you how to add your email IDs:
+To receive the Artifacts and Reports via mail, you will have to add the `email` flag with a `to` tag to select the email IDs where the report or artifacts should be sent. The example added below shows you how to add your email IDs:
 
 ```bash
 email:
@@ -72,9 +72,9 @@ email:
 
 ## How to receive your Artifacts via Email?
 
-Follow the below mentioned steps to recieve your Artifacts via email:
+Follow the below mentioned steps to receive your Artifacts via email:
 
-**Step 1:** You need to mention the `email` flag along with the `to` tag under the `uploadArtifacts` flag in the YAML file configuration.
+**Step 1:** You need to mention the `email` flag along with the `to` tag under the `uploadArtifacts` flag in the YAML file configuration.
 
 > **NOTE:** You can also add a separate email ID for each report generated, as mentioned below in the YAML code.
 
@@ -108,7 +108,7 @@ uploadArtifacts:
 
 ## How to receive your Job Report via Email?
 
-Follow the below mentioned steps to recieve your Job Reports via email:
+Follow the below mentioned steps to receive your Job Reports via email:
 
 **Step 1:** Set the `report` flag to `true` in the HyperExecute YAML.
 

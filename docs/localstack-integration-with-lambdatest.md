@@ -44,7 +44,8 @@ slug: localstack-integration-with-lambdatest/
         }]
       })
     }}
-></script>
+>
+</script>
 
 # LocalStack Integrates With LambdaTest
 ***

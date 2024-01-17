@@ -49,7 +49,7 @@ You can now test Flutter apps on the LambdaTest [Appium testing](#) platform acr
 ## Prerequisites
 ***
 
-Before automating Flutter apps using Appium, make sure you have the followings things configured.
+Before automating Flutter apps using Appium, make sure you have the following things configured.
 
 1. Your Flutter App must be compiled in `debug` or `profile` mode, as  Appium Flutter Driver does not support Flutter App running in release mode. 
 

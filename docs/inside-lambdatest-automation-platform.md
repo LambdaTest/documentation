@@ -81,19 +81,17 @@ When you click the test, it opens the **Automation Logs**, where you can view th
 
 <img loading="lazy" src={require('../assets/images/inside-lambdatest-automation-platform/test-view.webp').default} alt="Image"  className="doc_img" width="1024" height="490"/>
 
-## Analytics Dashboard
+## Analytics in Automation Testing Dashboard
 ----------------------
-LambdaTest Analytics dashboard lets you efficiently track tests and get deep insight into the testing process with its numerous widgets. Using its highly customizable dashboards, you can easily track and improve your tests in one place.
+In the Analytics section, you can view and analyse the test run on the LambdaTest automation platform.
 
-Currently, LambdaTest provides Analytics for the following products.
+The Analytics view gives you the deep understanding and analytics of all the builds and test run.
 
-1. Web Automation
-2. HyperExecute
-3. App Automation
+To dig a more informed and prudent decision, you can view the analytics on different filter parameters like **Build View, Test View, Environment filter, Day, Week**, and **Month.** This will give you more specific result.
 
-To get started with Analytics, please visit the documentation [LambdaTest Analytics](https://www.lambdatest.com/support/docs/analytics-overview/).
+Analytics dashboard gives you real time statistic of **Total Builds Run, Minutes Consumed, Build Passed, Builds Failed,** and **Total Bugs Logged.**
 
-<img loading="lazy" src={require('../assets/images/inside-lambdatest-automation-platform/analytics.webp').default} alt="cmd" width="1630" height="1052" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/inside-lambdatest-automation-platform/4.webp').default} alt="Image"  className="doc_img" width="933" height="1024"/>
 
 ## Automation Logs
 ---------------

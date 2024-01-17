@@ -48,7 +48,7 @@ slug: parallel-testing-with-playwright/
 LambdaTest allows you to perform parallel testing with Playwright across 40+ browsers and OS to automate your several test cases simultaneously. You can run one test case across various browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
 
 
-Shown below are the steps on running parallel tests with Playright on the LambdaTest platform. 
+Shown below are the steps on running parallel tests with Playwright on the LambdaTest platform. 
 
 1. Clone the [LambdaTest-Playwright GitHub repository](https://github.com/LambdaTest/playwright-sample) and switch to the cloned directory.
 
@@ -186,4 +186,3 @@ On clicking the session name of the respective test, you can view the details of
     </li>
   </ul>
 </nav>
-

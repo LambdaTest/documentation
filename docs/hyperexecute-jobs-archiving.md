@@ -3,7 +3,7 @@ id: hyperexecute-jobs-archiving
 title: Jobs Archiving
 hide_title: true
 sidebar_label: Jobs Archiving
-description: Efficiently manage and archive HyperExecute jobs with LambdaTest documentation. Simplify your workflow for streamlined job control.
+description: Optimize  your workspace with HyperExecute job archiving to boost productivity. Keep only relevant jobs. Learn more!
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -43,7 +43,7 @@ HyperExecute's job archiving feature lets you seamlessly organize your workspace
 
 ## Archive the Jobs
 
-In order to archive any job, just click on the elipsis (three dots) that you see on the right side on job list page, it would provide you a small dropdown to be able to archive that job.
+In order to archive any job, just click on the eclipses (three dots) that you see on the right side on job list page, it would provide you a small dropdown to be able to archive that job.
 
 > Archived jobs are not deleted, they are just removed from the default view on this page.
 

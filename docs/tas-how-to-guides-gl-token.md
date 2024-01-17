@@ -25,11 +25,6 @@ slug: tas-how-to-guides-gl-token/
 > **NOTE:** TAS needs `api`, `read_api`, `read_user`, `read_repository` permissions in order to function properly.
 
 <p align="center">
-<div className="ytframe"> 
-<div className="youtube" data-embed="A-SwlWav6VM">
-    <div className="play-button"></div>
-</div>
-</div>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A-SwlWav6VM?si=iWEUDgH-6Y7mcL45" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 </p>

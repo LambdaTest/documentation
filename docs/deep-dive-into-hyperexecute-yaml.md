@@ -101,7 +101,7 @@ The `runtime` flag is used to:
 - Download and install the dependent language and framework that is needed to execute your tests.
 - You can provide the language and the version you want to be installed.
 
-> Languages Supported: **java, dotnet, node**, **ruby**, **android-sdk** and **python**
+> Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-sdk** and **python**
 
 ```bash
 runtime:
@@ -120,6 +120,23 @@ runtime:
       version: "1.4.0"
     - name: "gradle"
       version : "7.0"
+```
+
+- You can also provide **multiple languages** and their **specified versions** that you want installed on your machine.
+
+```bash
+runtime:
+  - language: java
+    version: '17'
+    addons:
+      - name: gauge
+        version: '1.5.6'
+      - name: gradle
+        version: '7.6'
+  - language: python
+    version: '3.10'
+  - language: node
+    version: '16'
 ```
 
 ***
@@ -239,6 +256,29 @@ maxRetries: 2
 
 ***
 
+## `retryOptions`
+
+Regular Expressions provides more granular control over when test retries are triggered. You can achieve this through **`retryOptions`** flag.
+
+- You can specify precise error patterns using regular expressions to determine which errors should initiate retries.
+- It works seamlessly with Cypress, CDP, and Selenium framework tests.
+- It is supported in both YAML 0.1 and 0.2
+
+### Configuration:
+
+- Set `retryOnFailure: true` to activate the retry feature.
+- Indicate the maximum number of retry attempts with `maxRetries: <number>`.
+- Within the `retryOptions` section, create an `errorRegexps` array to list the regular expressions that represent the errors you want to trigger retries.
+
+```bash
+retryOnFailure: true
+maxRetries: 3
+retryOptions:
+  errorRegexps: ["org.openqa.selenium.NoSuchElementException"]
+```
+
+***
+
 ## `testDiscovery`
 The testDiscovery key is used to locate or discover relevant tests via class names, filters, file names, etc. 
 ```bash
@@ -351,17 +391,34 @@ post:
 ***
 ## `postDirectives`
 This is an advanced version of `post` where you can control “how” your post commands should be executed in a parallel HyperExecute Executor. If both post and postDirectives flags are provided at the same time, then the precedence is given to the postDirectives flag.
+
 postDirectives currently has the ability to take the following additional inputs:
+
 - `commands`: actual commands that needs to run like `echo <some-dir>/output/output.log`
+
 - `shell`: shell to execute the commands under. This is typically helpful if you want to run your post commands in a specific shell. For example, `powershell` for Windows or `bash` for Linux and MacOS. (Coming Soon)
+
 ```bash
 postDirectives:
   - cat yaml/win/*.*hyperexecute_autosplits.yaml 
 ```
 
 ***
+
+## `alwaysRunPostSteps`
+
+**Problem :** Test scenarios failing led to the cancellation of post-steps, incomplete cleanup, being unable to upload reports, and other actions that you need to perform after all test executions.
+
+**Solution :** The `alwaysRunPostSteps` flag ensures that post-steps execute even if the scenario stage fails.
+
+```bash
+alwaysRunPostSteps: true
+```
+
+***
+
 ## `cachekey`
-It is a unique identifier to each of the cache that are created by your organization on HyperExecute. This is generally defined as a checksum of your dependency file list (e.g package-lock.json, pom.xml, etc) so that if you modify the dependency directories, they will be downloaded, resolved and cached again.
+It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. When you run your tests for the very first time, HyperExecute caches the dependency files (e.g., package-lock.json, pom.xml, etc.). Now, when you execute the same test suite again (without making any changes), HyperExecute searches for a matching cached result within its cache storage, and if a valid cached result is found, HyperExecute utilizes it directly, skipping redundant execution.
 
 ```bash
 {{ checksum "package-lock.json" }}
@@ -373,7 +430,6 @@ If you are using Windows as well, then also you can define the path of the cache
 ```bash
 {{ checksum "dir1/dir2/package-lock.json" }}
 ```
-
 :::
 
 ***
@@ -383,6 +439,58 @@ It is used to cache a certain set of files which are not supposed to change freq
 cacheDirectories:
   - .m2
 ```
+
+> **NOTE:** In version 0.2 YAML, the support for caching is by default, the user does not need to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster. <br />
+If the user adds the cacheDirectories and cacheKey keys in his YAML, the default caching gets disabled and preference is given to the user specified cache.
+```bash
+cacheKey: '{{ checksum "pom.xml" }}'
+cacheDirectories:
+  - .m2
+```
+
+***
+
+## `projectName`
+
+This flag is used to set the Name of your Projects which would later allow you to see all jobs of that Project at one place.
+
+```bash
+projectName: '<Your Project Name>':'<Your Project ID>'
+```
+***
+
+## `differentialUpload`
+
+When you run and debug multiple jobs on HyperExecute, sometimes you may notice that **occasionally** your codebase is taking a long time to upload to the platform for testing. This delay can be attributed to various factors, such as **network issues**, a **very large codebase**, or a significant number of files being zipped and uploaded to the storage.
+
+To overcome this challenge, you can use `differentialUpload` flag, which is used to minimize the time taken to upload the codebase, especially when there are incremental changes.
+
+This flag optimizes codebase uploads by **fetching** only the parts of the codebase that have been **updated** or **newly added**, significantly **reducing upload times**.
+
+### Configuration
+
+- **enabled (boolean):** Set to true to activate the optimization, and false to maintain the default behavior.
+
+- **ttlHours (integer):** Specifies the Time-To-Live (TTL) for the uploaded code. Users can control the duration for which the optimized upload remains active, with valid values ranging from 1 hour to 60 days.
+
+When you pass the `differentialUpload` flag, it ensures that whenever you upload the **same codebase a second time with less than 75% changes, only the modified or new parts are fetched**. The rest is mapped to the previously uploaded version of the codebase. This approach is beneficial in scenarios where network issues or a large codebase contribute to slow upload times.
+
+> **NOTE:** The default value for **ttlHous** is 60 hours
+
+```bash
+project:
+  name: XYZ Name
+differentialUpload:
+  enabled: #true/false
+  ttlHours: #int value, with possible range of values [1 hour to 60 days]
+```
+
+:::info
+If the project flag is not passed then the name for the project will be set to **"Default Project"**.
+:::
+
+By activating this feature, you can experience a significant reduction in upload times, enhancing the efficiency of running and debugging multiple jobs on HyperExecute.
+
 ***
 
 ## `report`
@@ -539,7 +647,7 @@ There are two scenarios associated with it:
 
 **Solution :** When `scenarioCommandStatusOnly` is set `true` in YAML, it will mark the task as passed even though no test is associated to it. In the given screenshot **task 8** is passed even though no test is associated to it.
 
-<img loading="lazy" src={require('../assets/images/he-yaml/scenario-1.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/yaml/scenario-1.png').default} alt="Image" className="doc_img"/>
 
 #### Scenario 2: When test cases are run n no of times:
 - Some times a user might runs some test cases n no of times inherently due to framework retries etc.  Those test cases are considered as separate entries for us, and if one fails, scenario is marked as failed and hence the task and job is marked as fail. Need a way to update status of the task as if a test case first fails and then passes, it should be shown as passing and with green tick. Currently it shows as failed.
@@ -556,7 +664,7 @@ There are two scenarios associated with it:
 
 As seen in the screenshot, when one of the tests is marked as failed while the other tests are marked as passed, the overall scenario is marked as passed.
 
-<img loading="lazy" src={require('../assets/images/he-yaml/scenario-2.jpeg').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/yaml/scenario-2.jpeg').default} alt="Image" className="doc_img"/>
 
 ***
 ## `skipArtifactStageIfNoTest`
@@ -647,14 +755,14 @@ In the JSON file, we have a data object and not an array of objects, hence you c
 
 #### 2. Using via env variables
 
-You can use the env variables to access the defined paramters as:
+You can use the env variables to access the defined parameters as:
 
 ```
 STATIC_DATA_1_<ParameterName>
 ```
 > **NOTE:-** In the above syntax, **1** represents the file passed in the yaml file and not the data object within the file.
 
-For instance, to access data from **file1.json**, the syantax would be:
+For instance, to access data from **file1.json**, the syntax would be:
 ```
 STATIC_DATA_1_Username
 ```
@@ -702,7 +810,7 @@ For instance you want to further process the artifacts and create a custom PDF. 
 - Want to run some commands after the job is finished.
 - Want to run these commands from the same host from which hyperexecute-cli is run.
 
-***
+<!-- ***
 ## `beforeAll`
 BeforeAll is used for running pre operations like discovery and payload_update. It can be executed either on local system or on hyperexecute beforeAll VM. 
 ```bash
@@ -713,7 +821,7 @@ beforeAll:
     commands:
 pip install -r requirements.txt 
 ```
-We can choose to run on local/remote(on HYP Vms) from the location command. Type can be either discovery/update_payload (type of operation to be performed) and commands will have all the commands that needs to be run for that operation.
+We can choose to run on local/remote(on HYP Vms) from the location command. Type can be either discovery/update_payload (type of operation to be performed) and commands will have all the commands that needs to be run for that operation. -->
 
 
 ***
@@ -833,7 +941,7 @@ background:
   - mysql-server
 ```
 
-> To learn more about it, refer to the [Bakground Service](https://www.lambdatest.com/support/docs/hyperexecute-background-services/) page.
+> To learn more about it, refer to the [Background Service](https://www.lambdatest.com/support/docs/hyperexecute-background-services/) page.
 
 ***
 ##  `vars`
@@ -858,24 +966,6 @@ preDirectives:
 Indicates whether to enable a tunnel for accessing your applications which are  locally hosted or behind a firewall. The cli will launch a tunnel as sub process if tunnel is set to true
 ```bash
 tunnel: true
-```
-
-If you want to use tunnel for connecting HyperExecute with your organization (that is working with a maven project), you can add one of the following parameters in the `preDirectives` field depending on the tech stack that your organization is using:
-
-- For Maven Projects:
-
-`-DproxyHost=${LT_PROXY_HOST}`
-
-`-DproxyPort=${LT_PROXY_PORT}`
-
-- For Nodejs Projects:
-
-`npm config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT} npm config set https-proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}`
-
-```bash
-preDirectives:
-  commands:
-  - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install -DproxyHost=${LT_PROXY_HOST} -DproxyPort=${LT_PROXY_PORT}
 ```
 
 ***
@@ -921,7 +1011,7 @@ tunnelNames: [“lambdatest_tunnel”]
 ## `testRunnerExecutor`
 When utilizing the `testRunnerCommand` to execute a job on a Windows Virtual Machine, the default behavior is to run the command in PowerShell. However, in situations where test names include special characters, you may encounter an error like below.
 
-<img loading="lazy" src={require('../assets/images/he-yaml/testRunnerExecutor.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/yaml/testRunnerExecutor.png').default} alt="Image" className="doc_img"/>
 
 To address this, it is necessary to include this specific flag to switch the test execution from powershell to the command line as intended.
 
@@ -958,9 +1048,7 @@ Setting **autosplit** to true will distribute the `scenarios` among the concurre
 
 If you want to distribute you **m** commands on **n** VMs automatically and you don’t need to bother much about which all commands are grouped together on a single VM, you can use the **autosplit** feature for this purpose.
 
-
 For instance, you have a parallelism of 10 and you want to run 50 commands in total. Using autosplit, the system will distribute these 50 commands on 10 Vms in the most efficient manner possible. Each VM(`task`) will receive some commands to run out of these 50 commands.
-
 
 > Note: In `static mode`, these commands will be distributed among VMs smartly(AI) using history data, such that each VM(`task`) gets to run for almost the same amount of time. This is to reduce the total `job` time.
 

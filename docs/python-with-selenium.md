@@ -65,7 +65,7 @@ By the end of this topic, you will be able to:
 Before you can start performing **Python** automation testing with **Selenium**, you would need to:
 
 * Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
-* Make sure **pip** is installed in your system. You can install **pip** from [here](https://pip.pypa.io/en/stable/installation/).
+* Make sure **pip** is installed in your system. You can install **pip** from [https://pip.pypa.io/en/stable/installation/](https://pip.pypa.io/en/stable/installation/).
 * Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/). Latest versions of **Selenium Client** and **WebDriver** are ideal for running your automation script on LambdaTest Selenium cloud grid.
 
 ### Installing Selenium Dependencies and Tutorial Repo
@@ -112,7 +112,7 @@ import os
     Configuration
     ----------
     username: Username can be found at automation dashboard
-    accessToken:  AccessToken can be genarated from automation dashboard or profile section
+    accessToken:  AccessToken can be generated from automation dashboard or profile section
 
     Result
     -------
@@ -121,7 +121,7 @@ import os
 
 # username: Username can be found at automation dashboard
 username = os.getenv("LT_USERNAME")
-# accessToken:  AccessToken can be genarated from automation dashboard or profile section
+# accessToken:  AccessToken can be generated from automation dashboard or profile section
 accessToken = os.getenv("LT_ACCESS_KEY")
 # gridUrl: gridUrl can be found at automation dashboard
 gridUrl = "hub.lambdatest.com/wd/hub"
@@ -142,8 +142,8 @@ url = "https://"+username+":"+accessToken+"@"+gridUrl
 
 """
     ----------
-    platformName : Supported platfrom - (Windows 10, Windows 8.1, Windows 8, Windows 7,  macOS High Sierra, macOS Sierra, OS X El Capitan, OS X Yosemite, OS X Mavericks)
-    browserName : Supported platfrom - (chrome, firefox, Internet Explorer, MicrosoftEdge)
+    platformName : Supported platform - (Windows 10, Windows 8.1, Windows 8, Windows 7,  macOS High Sierra, macOS Sierra, OS X El Capitan, OS X Yosemite, OS X Mavericks)
+    browserName : Supported platform - (chrome, firefox, Internet Explorer, MicrosoftEdge)
     browserVersion :  Supported list of version can be found at https://www.lambdatest.com/capabilities-generator/
 
     Result

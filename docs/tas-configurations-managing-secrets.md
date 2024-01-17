@@ -22,11 +22,11 @@ You can add environment variables in TAS to securely use sensitive information s
 ***
 ### Adding secrets for the first time - TAS CLOUD
 - While configuring .tas.yml
-- Scroll down to "Managing Secrets" section
-- You can add secrets in this section and use them while configuring the .tas.yml (steps mentioned below.)
+- Click on the `Manage secrets` option located at the bottom
+- You can add secrets in this section and use them while configuring the `.tas.yml` (steps mentioned below.)
 
 <p align="center">
-  <img loading="lazy" src={require('../assets/images/tas/getting-started/yml_secrets.gif').default} alt="Import Repository" width="1340" height="617" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/tas/getting-started/yml-secrets.gif').default} alt="Import Repository" width="1340" height="617" className="doc_img"/>
 </p>
 
 <br/>
@@ -50,7 +50,7 @@ You can add environment variables in TAS to securely use sensitive information s
 ## Using the secrets
 ***
 - You can use the secrets added in TAS portal inside your `.tas.yml` using `${secret_name}` parameter
-- The following sample file demonstates how we can refer secrets inside `.tas.yml`.
+- The following sample file demonstrates how we can refer secrets inside `.tas.yml`.
 
 ```yml title=".tas.yml"
 framework: mocha

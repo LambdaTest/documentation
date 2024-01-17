@@ -42,6 +42,12 @@ slug: new-relic-integration/
 
 New Relic is a comprehensive observability platform that helps you monitor, troubleshoot, and optimize your software systems. It collects data from all your applications, infrastructure, and logs and provides insights into how your system is performing and where potential problems lie.
 
+<div className="ytframe"> 
+<div className="youtube" data-embed="dv1Dy7Ioc4E">
+    <div className="play-button"></div>
+</div>
+</div>
+
 LambdaTest and New Relic enable you to view LambdaTest results in a custom New Relic dashboard and gain deeper insight into your automation scripts to ship quality products at light speed.
 
 ## Pre-requisites
@@ -65,7 +71,7 @@ This will automatically deploy a pre-built dashboard for you in New Relic. Click
 
 <img loading="lazy" src={require('../assets/images/new-relic/6.png').default} alt="Gitpod popup" width="1215" height="625" className="doc_img img_center"/><br/>
 
-**Step 3:** Visit the LambdaTest Dashbaord. Go to the **Settings** page.
+**Step 3:** Visit the LambdaTest Dashboard. Go to the **Settings** page.
 
 **Step 4:** Click on the **Integrations** tab. Select **New Relic** from the **Analytics** section.
 

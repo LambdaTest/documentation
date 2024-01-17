@@ -87,8 +87,7 @@ Enter the **Workspace Details**, i.e., Username (mandatory) and Password (option
 
 To Integrate Tosca with HyperExecute using YAML, follow the below mentioned steps:
 
-#### Pre-requisite:
-
+#### Prerequisite
 
 -  Ensure that you have integrated Tosca with [LambdaTest’s cloud-based Selenium Grid](https://www.lambdatest.com/support/docs/tricentis-tosca-integration-lambdatest-selenium-grid/).
 

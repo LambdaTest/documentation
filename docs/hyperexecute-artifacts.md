@@ -91,6 +91,24 @@ Here is the sample artifact generated.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/artifact4.png').default} alt="Image"  className="doc_img"/>
 
+:::info
+You can replace the Artifacts folder name value with any of the Matrix parameters value.
+
+```bash
+matrix:
+   os: [win]
+   browser: ["chrome-latest-1", "firefox-latest-2"]
+
+uploadArtefacts:
+  - name: $browser
+    path: 
+      - allure-results/
+```
+
+As shown in the above code, the artifacts folder generated will be named **chrome-latest-1** and **firefox-latest-2**
+
+:::
+
 ## Download the Generated Artifacts
 
 **Step 1:** Go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) portal and click on your Job.

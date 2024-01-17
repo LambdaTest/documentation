@@ -42,7 +42,7 @@ slug: analytics-overview/
 Analytics in LambdaTest allows the QA managers and executives to efficiently track the tests conducted on the platform and get deep-level insights with the numerous widgets that the product provides.
 
 <div className="ytframe"> 
-<div className="youtube" data-embed="AFQWaAkLg6o">
+<div className="youtube" data-embed="AFQWaAkLg6o" data-loading-attribute="eager">
     <div className="play-button"></div>
 </div>
 </div>

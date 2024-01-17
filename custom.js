@@ -142,7 +142,23 @@
       document.execCommand('copy')
     }
 
+    function sendAmplitudeEvents(eventName,data){
+      if (window.amplitude) {
+        window.amplitude.getInstance().logEvent(eventName, {
+          ...data,
+        });
+      }
+     }
     window.addEventListener('click', function (event) {
+      if(event.target.matches(".menu__link")){
+        let params = window.location.href.split('/');
+        let pageName = params[params.length-2];
+        if(pageName.includes('hyperexecute')){
+          sendAmplitudeEvents('HYP: page changed - docs',{
+            pageName,
+          })
+        }
+      }
       if (event.target.matches(".clean-btn")) {
         let target = event.target || event.srcElement;
         let codeblock = target.closest('.lambdatest__codeblock');

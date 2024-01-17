@@ -142,7 +142,7 @@ Verify: @Page_Heading text is equal to ignore case 'ajax form submit with Loadin
 Step: Enter 'Tesbo' in @Name_Text_Box_Field
 Step: Enter 'Tesbo is the hybrid test framework that is built upon the keyword-driven.' in @Comment_Text_Box_Field
 Step: Click on @Submit_Button
-Verify: @Confirmation_message text is equal to 'Form submited Successfully!'
+Verify: @Confirmation_message text is equal to 'Form submitted Successfully!'
 End
 
 Test: Verify JQuery List Box functionality
@@ -348,7 +348,7 @@ Here is the new config.json to run parallel testing with Tesbo & LambdaTest.
 ```
 
 <div className="ytframe"> 
-<div className="youtube" data-embed="Jhzs9rlgL0w">
+<div className="youtube" data-embed="Jhzs9rlgL0w" data-loading-attribute="eager">
     <div className="play-button"></div>
 </div>
 </div>

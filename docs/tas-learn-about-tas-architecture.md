@@ -64,3 +64,5 @@ The role of this component is to connect on-prem/local runners to LamdaTest Serv
     - Synapse runs container for action on the local system
   - For TAS Cloud
     - TAS queues the action in the relevant queue depending on the license type 
+    - Queued actions will schedule containers for each action
+
