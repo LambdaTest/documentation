@@ -90,9 +90,13 @@ git clone https://github.com/LambdaTest/smartui-java-testng-sample
 <dependency>
     <groupId>io.github.lambdatest</groupId>
     <artifactId>lambdatest-java-sdk</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
+
+:::note
+You can check the latest version of [lambdatest-java-sdk]( https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk) and update the latest version accordingly.
+:::
 ### **Step 3**: Install the Dependencies
 
 Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
