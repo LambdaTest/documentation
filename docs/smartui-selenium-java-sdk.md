@@ -76,7 +76,7 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use `SmartUISDKCloud.java` file in the `sdk` folder.
+You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use `SmartUISDKCloud.java` file located in the `src/test/java/com/lambdatest/sdk` directory.
   
 ```bash
 git clone https://github.com/LambdaTest/smartui-java-testng-sample
