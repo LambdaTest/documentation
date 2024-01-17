@@ -61,7 +61,7 @@ slug: app-automation/
       <p>Run app test automation of your iOS applications on XCUI automation cloud.</p>
     </div>
   </a>
-  <a href="/docs/getapp-automation-on-emulators-simulators/">
+  <a href="/docs/app-automation-on-emulators-simulators/">
     <div className="support_inners">
       <h3>Emulator Simulator Testing</h3>
       <p>Run app automated tests on Emulators and Simulators using LambdaTest virtual testing cloud.</p>
