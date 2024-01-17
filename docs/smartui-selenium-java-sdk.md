@@ -76,7 +76,7 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use `JavaSmartUISDK.java` file.
+You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use `SmartUISDKCloud.java` file located in the `src/test/java/com/lambdatest/sdk` directory.
   
 ```bash
 git clone https://github.com/LambdaTest/smartui-java-testng-sample
@@ -88,13 +88,15 @@ git clone https://github.com/LambdaTest/smartui-java-testng-sample
 
 ```xml
 <dependency>
-	<groupId>com.github.lambdatest</groupId>
-	<artifactId>lambdatest-java-sdk</artifactId>
-	<version>1.0.0</version>
-	<scope>system</scope>
-	<systemPath> path-to-jar </systemPath>
+    <groupId>io.github.lambdatest</groupId>
+    <artifactId>lambdatest-java-sdk</artifactId>
+    <version>1.0.1</version>
 </dependency>
 ```
+
+:::note
+You can check the latest version of [lambdatest-java-sdk]( https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk) and update the latest version accordingly.
+:::
 ### **Step 3**: Install the Dependencies
 
 Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
@@ -220,7 +222,7 @@ import io.github.lambdatest.*; //Importing the lambdatest-java SDK
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui exec mvn test
+npx smartui exec -- mvn test -D suite=sdk-cloud.xml
 ```
 :::note 
 You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.

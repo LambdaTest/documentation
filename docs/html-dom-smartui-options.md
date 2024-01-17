@@ -68,34 +68,34 @@ The following are the different options which are currently supported:
 <TabItem value="IgnoreDOM" label="Ignore DOM" default>
 
 ```js title="This is a sample for your webhook configuration for Javascript"
-let obj = {
-            screenshotName: 'Ignore DOM element',
-            fullPage: false, //You can make this property as true in case of Chrome browser
-            ignoreDOM: {
-               id: ["ID-1","ID-2"], // Ignoring elements by ID, you can ignore multiple at once
-                class: ["Class-1", "Class-2"], // Ignoring elements by class, you can ignore multiple at once
-            cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Ignoring elements by CSS selector, you can ignore multiple at once
-               xpath: ['Xpath-1', 'Xpath-2'] // Ignoring elements by XPath, you can ignore multiple at once
-            }
-          };
-        await driver.executeScript("smartui.takeScreenshot", obj);
+let config = {
+  screenshotName: "Ignore DOM element",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    id: ["ID-1", "ID-2"], // Ignoring elements by ID, you can ignore multiple at once
+    class: ["Class-1", "Class-2"], // Ignoring elements by class, you can ignore multiple at once
+    cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Ignoring elements by CSS selector, you can ignore multiple at once
+    xpath: ["Xpath-1", "Xpath-2"], // Ignoring elements by XPath, you can ignore multiple at once
+  },
+};
+await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 </TabItem>
 <TabItem value="SelectDOM" label="Select DOM">
 
 ```js title="This is a sample for your webhook configuration for Javascript"
-let obj = {
-            screenshotName: 'Select DOM element',
-            fullPage: false, //You can make this property as true in case of Chrome browser
-            selectDOM: {
-               id: ["ID-1","ID-2"], // Selecting elements by ID, you can select multiple at once
-                class: ["Class-1", "Class-2"], // Selecting elements by class, you can select multiple at once
-            cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Selecting elements by CSS selector, you can select multiple at once
-               xpath: ['Xpath-1', 'Xpath-2'] // Selecting elements by XPath, you can select multiple at once
-            }
-          };
-        await driver.executeScript("smartui.takeScreenshot", obj);
+let config = {
+  screenshotName: "Select DOM element",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    id: ["ID-1", "ID-2"], // Selecting elements by ID, you can select multiple at once
+    class: ["Class-1", "Class-2"], // Selecting elements by class, you can select multiple at once
+    cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Selecting elements by CSS selector, you can select multiple at once
+    xpath: ["Xpath-1", "Xpath-2"], // Selecting elements by XPath, you can select multiple at once
+  },
+};
+await driver.executeScript("smartui.takeScreenshot", config);
 ```
 
 </TabItem>
