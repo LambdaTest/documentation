@@ -43,7 +43,7 @@ slug: hyperexecute-azure-associate-test-case/
 
 After setting up a Test Plan, now you need to associate your test cases as well with the Test Plan. To perform the same, we must have a Visual Studio IDE installed in our local machine. Login with same credentials for Visual Studio as in Test Plan.
 
-Follow the steps below to compelete the test case association:
+Follow the steps below to complete the test case association:
 
 **Step 1:** In your Visual Studio Code IDE, click on a **sln** file in a **C# project**.
 

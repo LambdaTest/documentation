@@ -99,7 +99,7 @@ Your changes will be triggered and deployed.
 
 <img loading="lazy" src={require('../assets/images/netlify-integration/4.png').default} alt="Image" className="doc_img"/>
 
-### Step 4: Compare the Changes Smart-UI Dashbaord
+### Step 4: Compare the Changes Smart-UI Dashboard
 
 - Go to your Smart-UI Dashbard. You will notice there is already a project with the same name you entered while configuring in **Step 1**
 

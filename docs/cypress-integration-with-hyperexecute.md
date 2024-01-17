@@ -57,7 +57,7 @@ However, for larger projects and complex testing scenarios, certain challenges e
 
 ## Advantages of Integrating Cypress with HyperExecute
 
-**HyperExecute**, a powerfull platform with features designed to seamlessly complement Cypress and address its limitations via:
+**HyperExecute**, a powerful platform with features designed to seamlessly complement Cypress and address its limitations via:
 
 ### [Intelligently Orchestrate Your Tests](https://www.lambdatest.com/support/docs/hyperexecute-test-splitting-and-multiplexing/)
 

@@ -112,7 +112,7 @@ This will take you to a new window with a comparison image. You can zoom-in or Z
 
 There are multiple options for you to view your images. The side by side mode will open all three images, baseline image, comparison image, and comparison result image in a single window. In this mode, you can also mark the image as a bug. Or you can switch to any other mode.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart-visual-testing-11.webp').default} alt="Side by Side Image Comparision" width="1438" height="750" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart-visual-testing-11.webp').default} alt="Side by Side Image Comparison" width="1438" height="750" className="doc_img"/>
 
 ## Slider Mode
 

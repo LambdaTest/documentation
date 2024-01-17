@@ -56,7 +56,7 @@ Create a file with the name `reporter-config_mochawesome_junit.json` and copy th
 {   
     "reporterEnabled": "mochawesome,mocha-junit-reporter",
     "mochawesomeReporterOptions": {
-        "reportDir": "cypress/results/json",
+        "reportDir": "cypress/results/mochawesome",
         "overwrite": true,
         "html": true,
 		"json": true
