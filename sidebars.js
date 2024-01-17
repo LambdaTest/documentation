@@ -1377,7 +1377,8 @@ module.exports = {
                 "custom-header",
                 "auto-heal",
                 "command-annotations",
-                "custom-dns-map"
+                "custom-dns-map",
+                "lighthouse-reports-hooks",
               ],
             },
             {
