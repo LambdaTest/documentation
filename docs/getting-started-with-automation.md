@@ -40,30 +40,17 @@ slug: getting-started-with-automation/
     }}
 ></script>
 
-# Automation in LambdaTest
+<div className="Doc_intro_cta">
+<div className="Doc_intro_cta_text">
+<h1>Automation in LambdaTest</h1>
+<p>Helping you test better for web and app automation.</p>
+</div>
+<div className="Doc_intro_cta_image">
+<img  loading="eager" src={require('../assets/images/automation/automation.png').default} alt="Image" width="701" height="576" className="" role="presentation"/>
+</div>
+</div>
 
-**Automation** has revolutionized software testing, streamlining processes, accelerating feedback, and ensuring unparalleled quality. But when it comes to choosing the right platform to empower your automation journey, look no further than **LambdaTest** 🚀 .
-
-LambdaTest empowers your automation through powerful features like:
-
-- **Parallel Execution:** Slash testing time by running your scripts simultaneously on multiple browsers and devices. Say goodbye to slow test cycles and hello to lightning-fast feedback ⚡ .
-
-- **Seamless Framework Integrations:** Whether you're a Selenium aficionado or an Appium enthusiast, LambdaTest integrates seamlessly with your favorite framework, ensuring a smooth and familiar workflow 👨‍💻.
-
-- **Advanced Reporting and Insights:** Gain deep insights into your test results with detailed logs, screenshots, and video recordings. Pinpoint errors, refine your scripts, and optimize your testing strategy with ease 📈 .
-
-- **Rock-solid Scalability and Security:** Scale your testing needs effortlessly with our robust cloud infrastructure. Rest assured, your data is always secure with industry-leading encryption and compliance certifications 🔐.
-
-<a 
-href="https://www.lambdatest.com/automation-testing" 
-target="_blank" 
-style={{background: "#0EABC5", color: "#fff", fontWeight:"bolder", padding: "8px", borderRadius:"5px"}} 
-type="button" 
-> 
-Start your Automation Journey 🚀
-</a>
-
-## [Web Automation](https://www.lambdatest.com/support/docs/web-automation/)
+## Web Automation
 
 Master frameworks like Selenium, Playwright, Cypress, K6 and Puppeteer with step-by-step guides and best practices.
 
@@ -100,7 +87,7 @@ Master frameworks like Selenium, Playwright, Cypress, K6 and Puppeteer with step
   </a>
 </div>
 
-## [App Automation](https://www.lambdatest.com/support/docs/app-automation/)
+## App Automation
 
 Conquer mobile testing with Appium, XCUI Test, and Espresso across Android and iOS platforms.
 
