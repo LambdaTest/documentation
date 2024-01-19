@@ -1,4 +1,4 @@
-name: Typesense crawler for prod
+name: Typesense crawler for stage
 
 on:
     pull_request:
