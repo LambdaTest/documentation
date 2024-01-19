@@ -1,10 +1,10 @@
 name: Typesense crawler for prod
 
-# on:
-#     pull_request:
-    #   branches:
-    #     - main
-    # merge_group:
+on:
+    pull_request:
+      branches:
+        - main
+    merge_group:
 
 
 jobs:
