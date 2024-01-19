@@ -17,9 +17,9 @@ jobs:
         uses: actions/checkout@v3   # You MUST checkout your repository first!
 
       - name: Run DocSearch Scraper
-        # env:
-        #     API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
-        #     HOST: ${{ secrets.TYPESENSE_HOST }}
+        env:
+            API_KEY: ${{ secrets.TYPESENSE_API_KEY }}
+            HOST: ${{ secrets.TYPESENSE_HOST }}
         uses: celsiusnarhwal/typesense-scraper@v2
         with:
           # The secret containing your Typesense API key. Required.
