@@ -20,6 +20,7 @@
     "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
     "docusaurus-theme-search-typesense": "^0.14.1",
+    "dotenv": "^16.3.1",
     "file-loader": "^6.2.0",
     "prism-react-renderer": "^1.2.1",
     "query-string": "^8.1.0",

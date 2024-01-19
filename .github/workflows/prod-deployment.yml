@@ -39,6 +39,12 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_MKT }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_MKT }}
           aws-region: us-east-1
+
+      - name: 'Create env file'
+        run: |
+          touch .env
+          echo "HOST=${{ secrets.TYPESENSE_HOST }}" >> .env
+          echo "API=${{ secrets.PUBLIC_APY_TYPESENSE }}" >> .env
           
       - name: Use Node.js 16.14.x
         uses: actions/setup-node@v3

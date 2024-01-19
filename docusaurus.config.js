@@ -1,3 +1,4 @@
+require('dotenv').config();
 module.exports = {
   title: 'LambdaTest',
   tagline: 'Ensure your web-apps work seamlessly on every desktop and mobile browsers.',
@@ -24,26 +25,50 @@ module.exports = {
     //   defer: true,
     // }
   ],
+  themes: ['docusaurus-theme-search-typesense'],
+
   themeConfig: {
     // docs: {
     //   sidebar: {
     //     hideable: true,
     //   },
     // },
+    typesense: {
+      // Replace this with the name of your index/collection.
+      // It should match the "index_name" entry in the scraper's "config.json" file.
+      typesenseCollectionName: 'lambdatest',
+
+      typesenseServerConfig: {
+        nodes: [
+          {
+            host: process.env.HOST,
+            port: 443,
+            protocol: 'https',
+          },
+        ],
+        apiKey: process.env.API,
+      },
+
+      // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
+      typesenseSearchParameters: {},
+
+      // Optional
+      contextualSearch: true,
+    },
     
     prism: {
         additionalLanguages: ['powershell','java','csharp','php','ruby','robotframework'],
     },
-    algolia: {
-      apiKey: '21e5be14ef037223a329241ae6ac5678',
-      indexName: 'lambdatest',
-      appId: 'LTX5ENOXAD',
-      // Optional: see doc section bellow
-      contextualSearch: false,
-      // Optional: Algolia search parameters
-      searchParameters: {},
-      //... other Algolia params
-    },
+    // algolia: {
+    //   apiKey: '21e5be14ef037223a329241ae6ac5678',
+    //   indexName: 'lambdatest',
+    //   appId: 'LTX5ENOXAD',
+    //   // Optional: see doc section bellow
+    //   contextualSearch: false,
+    //   // Optional: Algolia search parameters
+    //   searchParameters: {},
+    //   //... other Algolia params
+    // },
     
     navbar: {
       title: null,
