@@ -11,7 +11,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    # environment: stage
+    environment: prod
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3   # You MUST checkout your repository first!
