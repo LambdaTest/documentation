@@ -1,11 +1,10 @@
 name: Typesense crawler for stage
 
 on:
+    push:
     pull_request:
-      branches:
-        - stage
-    merge_group:
-
+        branches:
+            - stage
 
 jobs:
   build:
