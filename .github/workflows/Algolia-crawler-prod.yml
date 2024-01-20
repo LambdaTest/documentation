@@ -3,9 +3,9 @@
 name: Algolia crawler for prod
 
 on:
-  schedule:
-   - cron: "0 */2 * * *"
-  workflow_dispatch:
+  # schedule:
+  #  - cron: "0 */2 * * *"
+  # workflow_dispatch:
      inputs:
       environment:
         description: 'Environment you want to run'
