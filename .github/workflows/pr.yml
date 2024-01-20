@@ -20,6 +20,13 @@ jobs:
           with:
             node-version: '16.14.0'
             cache: 'npm'
+            
+        - name: 'Create env file'
+        run: |
+          touch .env
+          echo "HOST=${{ secrets.TYPESENSE_HOST }}" >> .env
+          echo "API=${{ secrets.PUBLIC_APY_TYPESENSE }}" >> .env
+
         - name: Docusaurus Webpack cache
           uses: actions/cache@v3
           with:
