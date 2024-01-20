@@ -3,7 +3,7 @@
 name: Algolia crawler for stage
 
 on:
- workflow_dispatch:
+#  workflow_dispatch:
      inputs:
       environment:
         description: 'Environment you want to run'
