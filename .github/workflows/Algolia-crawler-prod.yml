@@ -3,14 +3,14 @@
 name: Algolia crawler for prod
 
 on:
-  schedule:
-   - cron: "0 */2 * * *"
-  workflow_dispatch:
-     inputs:
-      environment:
-        description: 'Environment you want to run'
-        required: true
-        default: 'https://www.lambdatest.com'
+  # schedule:
+  #  - cron: "0 */2 * * *"
+  # workflow_dispatch:
+    #  inputs:
+    #   environment:
+    #     description: 'Environment you want to run'
+    #     required: true
+    #     default: 'https://www.lambdatest.com'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:

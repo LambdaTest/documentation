@@ -3,12 +3,12 @@
 name: Algolia crawler for stage
 
 on:
- workflow_dispatch:
-     inputs:
-      environment:
-        description: 'Environment you want to run'
-        required: true
-        default: 'https://staging.lambdatestinternal.com'
+#  workflow_dispatch:
+    #  inputs:
+    #   environment:
+    #     description: 'Environment you want to run'
+    #     required: true
+    #     default: 'https://staging.lambdatestinternal.com'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
