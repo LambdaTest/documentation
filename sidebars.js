@@ -1,7 +1,7 @@
 module.exports = {
-  apiSidebar: ['support-start', 'getting-started-with-automation', 'getting-started-with-hyperexecute', 'real-time-testing', 'smart-visual-regression-testing', 'settings-and-security', 'analytics-overview', 'test-intelligence-overview', 'tas-overview', 'capability-map', 'visual-ui-testing', 'lt-browser', 'testing-locally-hosted-pages', 'bug-tracking-tools', 'test-management'],
+  apiSidebar: ['support-start', 'getting-started-with-automation', 'getting-started-with-hyperexecute', 'real-time-testing', 'smart-visual-regression-testing', 'analytics-overview', 'test-intelligence-overview', 'capability-map', 'visual-ui-testing', 'lt-browser', 'testing-locally-hosted-pages', 'bug-tracking-tools', 'test-management', 'settings-and-security'],
 
-  // 'app-automation', 'web-automation', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'record-and-replay', 
+  // 'support-start', 'tas-overview', 'app-automation', 'web-automation', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'record-and-replay', 
 
     AutomationSidebar: [
       {
@@ -175,9 +175,119 @@ module.exports = {
         {
           type: "category",
           collapsed: true,
-          label: "Run a Sample Build",
+          label: "Key features of HyperExecute",
+          link: {
+            type: "doc",
+            id: "key-features-of-hyperexecute",
+          },
           items: [
-            "hyperexecute-supported-languages-and-frameworks",
+            {
+              type: "category",
+              collapsed: true,
+              label: "Test Splitting and Multiplexing",
+              link: {
+                type: "doc",
+                id: "hyperexecute-test-splitting-and-multiplexing",
+              },
+              items: [
+                {
+                  type: "doc",
+                  label: "Auto Split Strategy",
+                  id: "hyperexecute-auto-split-strategy",
+                },
+                {
+                  type: "doc",
+                  label: "Matrix Multiplexing Strategy" ,
+                  id: "hyperexecute-matrix-multiplexing-strategy",
+                },
+                {
+                  type: "doc",
+                  label: "Hybrid Strategy",
+                  id: "hyperexecute-hybrid-strategy",
+                },
+              ],
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Job Artifacts and Reports",
+              items: [
+                {
+                  type: "doc",
+                  label: "HyperExecute Job Artifacts ",
+                  id: "hyperexecute-artifacts",
+                },
+                {
+                  type: "doc",
+                  label: "HyperExecute Job Reports ",
+                  id: "hyperexecute-reports",
+                },
+                {
+                  type: "doc",
+                  label: "Test Artifact Management",
+                  id: "hyperexecute-artifacts-url",
+                },
+                {
+                  type: "doc",
+                  label: "Receive the Job Reports as an Email",
+                  id: "hyperexecute-email-reports",
+                },
+              ],
+            },
+            {
+              type: "doc",
+              label: "FailFast",
+              id: "hyperexecute-failfast",
+            },
+            {
+              type: "doc",
+              label: "Jobs Prioritization",
+              id: "hyperexecute-prioritize-tests",
+            },
+            {
+              type: "doc",
+              id: "rca",
+            },
+            {
+              type: "doc",
+              id: "hyperexecute-background-services",
+            },
+            {
+              type: "doc",
+              label: "Auto Healing",
+              id: "hyperexecute-auto-healing",
+            },
+            {
+              type: "doc",
+              label: "Hyperexecute Projects",
+              id: "hyperexecute-projects",
+            },
+            {
+              type: "doc",
+              label: "Jobs Archiving",
+              id: "hyperexecute-jobs-archiving",
+            },
+            {
+              type: "doc",
+              label: "HyperExecute Workflows",
+              id: "hyperexecute-workflows",
+            },
+            {
+              type: "doc",
+              label: "HyperExecute Test Muting",
+              id: "hyperexecute-test-muting",
+            },
+          ],
+        },
+        {
+          type: "category",
+          collapsed: true,
+          label: "Languages and Frameworks",
+          link: {
+            type: "doc",
+            id: "hyperexecute-supported-languages-and-frameworks",
+          },
+          items: [
             {
               type: "category",
               collapsed: true,
@@ -491,113 +601,6 @@ module.exports = {
             },
           ],
         },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Key features of HyperExecute",
-            link: {
-              type: "doc",
-              id: "key-features-of-hyperexecute",
-            },
-            items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "Test Splitting and Multiplexing",
-                link: {
-                  type: "doc",
-                  id: "hyperexecute-test-splitting-and-multiplexing",
-                },
-                items: [
-                  {
-                    type: "doc",
-                    label: "Auto Split Strategy",
-                    id: "hyperexecute-auto-split-strategy",
-                  },
-                  {
-                    type: "doc",
-                    label: "Matrix Multiplexing Strategy" ,
-                    id: "hyperexecute-matrix-multiplexing-strategy",
-                  },
-                  {
-                    type: "doc",
-                    label: "Hybrid Strategy",
-                    id: "hyperexecute-hybrid-strategy",
-                  },
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Job Artifacts and Reports",
-                items: [
-                  {
-                    type: "doc",
-                    label: "HyperExecute Job Artifacts ",
-                    id: "hyperexecute-artifacts",
-                  },
-                  {
-                    type: "doc",
-                    label: "HyperExecute Job Reports ",
-                    id: "hyperexecute-reports",
-                  },
-                  {
-                    type: "doc",
-                    label: "Test Artifact Management",
-                    id: "hyperexecute-artifacts-url",
-                  },
-                  {
-                    type: "doc",
-                    label: "Receive the Job Reports as an Email",
-                    id: "hyperexecute-email-reports",
-                  },
-                ],
-              },
-              {
-                type: "doc",
-                label: "FailFast",
-                id: "hyperexecute-failfast",
-              },
-              {
-                type: "doc",
-                label: "Jobs Prioritization",
-                id: "hyperexecute-prioritize-tests",
-              },
-              {
-                type: "doc",
-                id: "rca",
-              },
-              {
-                type: "doc",
-                id: "hyperexecute-background-services",
-              },
-              {
-                type: "doc",
-                label: "Auto Healing",
-                id: "hyperexecute-auto-healing",
-              },
-              {
-                type: "doc",
-                label: "Hyperexecute Projects",
-                id: "hyperexecute-projects",
-              },
-              {
-                type: "doc",
-                label: "Jobs Archiving",
-                id: "hyperexecute-jobs-archiving",
-              },
-              {
-                type: "doc",
-                label: "HyperExecute Workflows",
-                id: "hyperexecute-workflows",
-              },
-              {
-                type: "doc",
-                label: "HyperExecute Test Muting",
-                id: "hyperexecute-test-muting",
-              },
-            ],
-          },
           {
             type: "category",
             collapsed: true,
@@ -1886,7 +1889,7 @@ module.exports = {
       [
         {
           type: "doc",
-          label: "Visual Regression Testing",
+          label: "Visual Regression",
           id: "smart-visual-regression-testing",
         },
         {
