@@ -78,7 +78,7 @@ cd CSharp-Selenium-Sample
 ## Setting up Your Authentication
 ---
 
-Make sure you have your LambdaTest credentials with you to run C# automation scripts. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/login?utm_source=github&utm_medium=repo&utm_campaign=CSharp-Selenium) or by your LambdaTest Profile.
+Make sure you have your LambdaTest credentials with you to run C# automation scripts. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/login/) or by your LambdaTest Profile.
 
 Set LambdaTest Username and Access Key in environment variables.
 
