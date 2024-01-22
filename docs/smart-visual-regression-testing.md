@@ -2,7 +2,7 @@
 id: smart-visual-regression-testing
 title: Smart Visual Regression Testing Using LambdaTest
 hide_title: true
-sidebar_label: Visual Regression Testing
+sidebar_label: Visual Regression
 description: Experience Visual Regression Testing at its finest with SmartUI by LambdaTest. Automate UI changes tracking for precision, collaboration, and scalability on the cloud. Optimize your testing journey now!
 keywords:
   - smart visual testing in lambdatest
