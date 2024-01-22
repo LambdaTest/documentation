@@ -670,7 +670,8 @@ module.exports = {
                   "hyperexecute-how-to-configure-tunnel",
                   "hyperexecute-how-to-find-correct-concurrency",
                   "hyperexecute-how-to-configure-sourcePayload",
-                  "hyperexecute-browser-list-api"
+                  "hyperexecute-browser-list-api",
+                  "hyperexecute-how-smart-caching-boosts-tests-speed"
                 ],
               },
               // {
