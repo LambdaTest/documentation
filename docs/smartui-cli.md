@@ -154,6 +154,26 @@ Once, the configuration file will be created, you will be seeing the default con
     ],
     "viewports": [
       [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        360
+      ]
+    ]//Full Page Screenshots are captured by default
+  }
+}
+```
+
+#### For capturing viewport screenshots
+
+To capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport width in your configuration settings. Specify the desired width parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area.
+
+```json
+    "viewports": [
+      [
         1920,
         1080
       ],
@@ -165,9 +185,7 @@ Once, the configuration file will be created, you will be seeing the default con
         360,
         640
       ]
-    ]      
-  }
-}
+    ],
 ```
 
 :::note 

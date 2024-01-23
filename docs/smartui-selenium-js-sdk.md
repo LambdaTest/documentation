@@ -148,6 +148,36 @@ Once, the configuration file will be created, you will be seeing the default con
     ],
     "viewports": [
       [
+        1920
+      ],
+      [
+        1366
+      ],
+      [
+        360
+      ]
+    ], // Full Page screenshots are captured by default
+    "waitForPageRender": 50000, // Optional (Should only be used in case of websites which take more than 30s to load)
+    "waitForTimeout": 1000 //Optional (Should only be used in case lazy-loading/async components are present )
+
+  }
+}
+```
+:::info Optional Keys in SmartUI configuration
+
+**waitForPageRender** - If one or more `URLs` in your script require a relatively higher amount of time to load, you may use the `waitForPageRender` key in the config file to make sure the screenshots are rendered correctly. Avoid using the same in case your websites render in less than 30 seconds as it might increase the execution time of your tests.
+
+
+**waitForTimeout** - If you are using any `async` components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.
+:::
+
+#### For capturing viewport screenshots
+
+To capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport width in your configuration settings. Specify the desired width parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area.
+
+```json
+    "viewports": [
+      [
         1920,
         1080
       ],
@@ -160,20 +190,7 @@ Once, the configuration file will be created, you will be seeing the default con
         640
       ]
     ],
-    "waitForPageRender": 50000, // Optional (Should only be used in case of websites which take more than 30s to load)
-    "waitForTimeout": 1000 //Optional (Should only be used in case lazy-loading/async components are present )
-
-  }
-}
 ```
-
-:::info Optional Keys in SmartUI configuration
-
-**waitForPageRender** - If one or more `URLs` in your script require a relatively higher amount of time to load, you may use the `waitForPageRender` key in the config file to make sure the screenshots are rendered correctly. Avoid using the same in case your websites render in less than 30 seconds as it might increase the execution time of your tests.
-
-
-**waitForTimeout** - If you are using any `async` components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.
-:::
 
 ### **Step 5:** Adding SmartUI function to take screenshot
 
@@ -208,7 +225,7 @@ import { smartuiSnapshot } from '@lambdatest/selenium-driver';
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui exec node <fileName>.js
+npx smartui exec node sdkCloud.js --config smartui-web.json
 ```
 
 :::note 
