@@ -3,7 +3,7 @@ id: settings-and-security
 title: Settings and Security
 hide_title: true
 sidebar_label: Settings and Security
-description: Learn how to configure App Center on LambdaTest platform to run App automation tests on real device cloud.
+description: Discover how to protect your data with LambdaTest- Manage security settings & ensure data confidentiality and integrity efficiently.
 keywords:
   - SCIM
   - SSO

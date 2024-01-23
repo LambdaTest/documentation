@@ -3,7 +3,7 @@ id: getting-started-with-automation
 title: Automation in LambdaTest
 hide_title: true
 sidebar_label: Automation
-description: Learn how to configure App Center on LambdaTest platform to run App automation tests on real device cloud.
+description: Start web automation with Selenium, Playwright, Cypress, K6, & Puppeteer. Access step-by-step guides to start testing with LambdTest.
 keywords:
   - App Automation
   - XCUI

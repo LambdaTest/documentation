@@ -3,7 +3,7 @@ id: app-center-automation
 title: How to automate apps using App Center on LambdaTest
 hide_title: true
 sidebar_label: App Center For Automation
-description: Learn how to configure App Center on LambdaTest platform to run App automation tests on real device cloud.
+description: Learn App Test Automation with App Center & how to install apps for testing in this guide.
 keywords:
   - App Center
   - Microsoft App Center

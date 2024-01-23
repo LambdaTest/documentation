@@ -3,7 +3,7 @@ id: app-automation
 title: App Automation in LambdaTest
 hide_title: true
 sidebar_label: App Automation
-description: Learn how to configure App Center on LambdaTest platform to run App automation tests on real device cloud.
+description: Integrate effortlessly with Appium, XCUI, & Espresso. Master mobile app testing with ease using LambdaTest.
 keywords:
   - App Automation
   - XCUI
