@@ -52,6 +52,15 @@ This page outlines how to execute your Espresso tests on HyperExecute using conc
 
 > HyperExecute uses [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) to perform the tests using Espresso.
 
+<!-- ## Objective
+
+---
+
+By the end of this topic, you will be able to:
+
+1. Run a sample automation script of Java for application testing with espresso.
+2. Learn more about Desired capabilities for espresso testing. -->
+
 ## Running Espresso Tests on HyperExecute
 *** 
 
