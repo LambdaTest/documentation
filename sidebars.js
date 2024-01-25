@@ -1,5 +1,5 @@
 module.exports = {
-  apiSidebar: ['support-start', 'getting-started-with-automation', 'getting-started-with-hyperexecute', 'real-time-testing', 'smart-visual-regression-testing', 'analytics-overview', 'test-intelligence-overview', 'capability-map', 'visual-ui-testing', 'lt-browser', 'testing-locally-hosted-pages', 'bug-tracking-tools', 'test-management', 'settings-and-security'],
+  apiSidebar: [ 'getting-started-with-automation', 'getting-started-with-hyperexecute', 'real-time-testing', 'smart-visual-regression-testing', 'analytics-overview', 'test-intelligence-overview', 'capability-map', 'visual-ui-testing', 'lt-browser', 'testing-locally-hosted-pages', 'bug-tracking-tools', 'test-management', 'settings-and-security'],
 
   // 'support-start', 'tas-overview', 'app-automation', 'web-automation', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'record-and-replay', 
 
@@ -558,6 +558,7 @@ module.exports = {
                   items: [
                     "hyperexecute-azure-setup-test-plan",
                     "hyperexecute-azure-associate-test-case",
+                    // "hyperexecute-integrate-azure-test-plan"
                   ]
                 },
               ],

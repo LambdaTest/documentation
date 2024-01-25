@@ -47,22 +47,150 @@ slug: /
 <div className="Doc_intro_cta">
 <div className="Doc_intro_cta_text">
 <h1>LambdaTest Support and Knowledge Base</h1>
-<p>Helping you test web and mobile apps at scale.</p>
+<p>Ensure your web-apps work seamlessly on <br /> every desktop and mobile browsers</p>
 </div>
 <div className="Doc_intro_cta_image">
 <img  loading="eager" src={require('../assets/images/support/Illustration.png').default} alt="Image" width="701" height="576" className="" role="presentation"/>
 </div>
 </div>
 
-<div className="support_h2"> 
-
-## Automation 
-
+<!-- start of first section -->
+<div className="home_main">
+    <h2>Web Automation</h2>
+    <h2>App Automation</h2> 
+    <h2>HyperExecute</h2>
+    <h2>Analytics</h2>
 </div>
 
+<div className="home_inners">
+  <a href="/docs/getting-started-with-lambdatest-automation/"><p>Selenium Testing</p></a>
+  <a href="/docs/getting-started-with-appium-testing/"><p>Appium Testing</p></a>
+  <a href="/docs/getting-started-with-hyperexecute/"><p>Getting Started</p></a>
+  <a href="/docs/analytics-dashboard-templates/"><p>Dashbaord Templates</p></a>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/getting-started-with-cypress-testing/"><p>Cypress Testing</p></a>
+  <a href="/docs/getting-started-with-espresso-testing/"><p>Espresso Testing</p></a>
+  <a href="/docs/hyperexecute-yaml-parameters/"><p>HyperExecute YAML</p></a>
+  <a href="/docs/analytics-create-dashboard/"><p>Custom Dashbaord</p></a>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/playwright-testing/"><p>Playwright Testing</p></a>
+  <a href="/docs/getting-started-with-xcuitest/"><p>XCUI Testing</p></a>
+  <a href="/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p>HyperExecute CLI</p></a>
+  <p>Analytics Widgets</p>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/puppeteer-testing/"><p>Puppeteer Testing</p></a>
+  <a href="/docs/app-automation-on-emulators-simulators/"><p>Virtual Devices</p></a>
+  <a href="/docs/integration-with-hyperexecute/"><p>Integrations</p></a>
+  <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p>Flaky Test</p></a>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/k6-browser-testing/"><p>K6 Testing</p></a>
+  <p></p>
+  <a href="/docs/key-features-of-hyperexecute/"><p>Features</p></a>
+  <a href="/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p>Command Logs Analytics</p></a>
+</div>
+
+<div className="home_inners">
+  <p></p>
+  <p></p>
+  <a href="/docs/hyperexecute-private-cloud-setup/"><p>Private Cloud</p></a>
+  <a href="/docs/analytics-test-case-insights/"><p>Test Case Insights</p></a>
+</div>
+
+<!-- end of first section -->
+
+<!-- start of second section -->
+
+<div className="home_main">
+  <h2>Visual UI</h2>
+  <h2>Real Time</h2>
+  <h2>Testing Locally</h2>
+  <h2>Integrations</h2>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/smart-visual-regression-testing/"><p>Smart UI</p></a>
+  <p>Desktop Browser Testing</p>
+  <a href="/docs/testing-locally-hosted-pages/"><p>Testing Locally Hosted Pages</p></a>
+  <a href="/docs/bug-tracking-tools/"><p>Bug Tracking</p></a>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/smartui-cli/"><p>CLI</p></a>
+  <p>Mobile Browser Testing</p>
+  <a href="/docs/getting-started-with-lambdatest-automation/"><p>LambdaTest Tunnel</p></a>
+  <a href="/docs/integrations-with-project-management-tools/"><p>Project Management</p></a>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/smartui-upload-api-v2/"><p>Upload through API</p></a>
+  <p>Mobile App Testing</p>
+  <a href="/docs/docker-tunnel/"><p>Docker Tunnel</p></a>
+  <p>Analytics</p>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/smartui-pdf-comparison/"><p>Samrt PDF Comparison</p></a>
+  <p>Key Features</p>
+  <a href="/docs/troubleshooting-lambda-tunnel/"><p>Troubleshooting Tunnel</p></a>
+  <p>Test Reporting</p>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/smart-ui-build-options/"><p>Build Config and Options</p></a>
+  <p></p>
+  <a href="/docs/load-balancing-in-lambda-tunnel/"><p>Load Balancing in Tunnel</p></a>
+  <p>Communication Tools</p>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/test-settings-options/"><p>Advance Comparison</p></a>
+  <p></p>
+  <a href="/docs/dedicated-proxy/"><p>IP Whitelisting</p></a>
+  <a href="/docs/plugins-and-extensions/"><p>Plugin and Extensions</p></a>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/html-dom-smartui-options/"><p>Handling Dynamic Data</p></a>
+  <p></p>
+  <a href="/docs/charles-proxy/"><p>Charles Proxy</p></a>
+</div>
+
+<!-- end of second section -->
 
 
-<div className="support_main">  
+<!-- start of third section -->
+<div className="home_main">
+  <h2>Setting and Security</h2>
+  <h2>Other Docs</h2>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/account-management/"><p>Account Management</p></a>
+  <a href="/docs/lt-browser/"><p>LT Browser</p></a>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/single-sign-on/"><p>Single Sign On</p></a>
+  <a href="/docs/test-management/"><p>Test Management</p></a>
+</div>
+
+<div className="home_inners">
+  <a href="/docs/scim/"><p>SCIM</p></a>
+  <a href="/docs/test-intelligence-overview/"><p>Test Intelligence</p></a>
+</div>
+
+<!-- end of third section -->
+
+
+<!-- <div className="support_main">  
   <a href="/docs/getting-started-with-lambdatest-automation/">
     <div className="support_inners">
       <h3>Selenium Testing</h3>
@@ -458,4 +586,4 @@ slug: /
       </a>
     </li>
   </ul>
-</nav>
+</nav> -->
