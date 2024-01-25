@@ -66,14 +66,14 @@ slug: /
   <a href="/docs/getting-started-with-lambdatest-automation/"><p>Selenium Testing</p></a>
   <a href="/docs/getting-started-with-appium-testing/"><p>Appium Testing</p></a>
   <a href="/docs/getting-started-with-hyperexecute/"><p>Getting Started</p></a>
-  <a href="/docs/analytics-dashboard-templates/"><p>Dashbaord Templates</p></a>
+  <a href="/docs/analytics-dashboard-templates/"><p>Dashboard Templates</p></a>
 </div>
 
 <div className="home_inners">
   <a href="/docs/getting-started-with-cypress-testing/"><p>Cypress Testing</p></a>
   <a href="/docs/getting-started-with-espresso-testing/"><p>Espresso Testing</p></a>
   <a href="/docs/hyperexecute-yaml-parameters/"><p>HyperExecute YAML</p></a>
-  <a href="/docs/analytics-create-dashboard/"><p>Custom Dashbaord</p></a>
+  <a href="/docs/analytics-create-dashboard/"><p>Custom Dashboard</p></a>
 </div>
 
 <div className="home_inners">
