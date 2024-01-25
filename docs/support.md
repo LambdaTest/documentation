@@ -54,6 +54,8 @@ slug: /
 </div>
 </div>
 
+<div className="primary_main">
+
 <!-- start of first section -->
 <div className="home_main">
     <h2>Web Automation</h2>
@@ -86,14 +88,14 @@ slug: /
 <div className="home_inners">
   <a href="/docs/puppeteer-testing/"><p>Puppeteer Testing</p></a>
   <a href="/docs/app-automation-on-emulators-simulators/"><p>Virtual Devices</p></a>
-  <a href="/docs/integration-with-hyperexecute/"><p>Integrations</p></a>
+  <a href="/docs/key-features-of-hyperexecute/"><p>Features</p></a>
   <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p>Flaky Test</p></a>
 </div>
 
 <div className="home_inners">
   <a href="/docs/k6-browser-testing/"><p>K6 Testing</p></a>
   <p></p>
-  <a href="/docs/key-features-of-hyperexecute/"><p>Features</p></a>
+  <a href="/docs/integration-with-hyperexecute/"><p>Integrations</p></a>
   <a href="/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p>Command Logs Analytics</p></a>
 </div>
 
@@ -188,7 +190,7 @@ slug: /
 </div>
 
 <!-- end of third section -->
-
+</div>
 
 <!-- <div className="support_main">  
   <a href="/docs/getting-started-with-lambdatest-automation/">

@@ -632,12 +632,16 @@
    padding: 20px 15px;
  }
 
+  .primary_main {
+    margin-top: 50px !important;
+  }
+
   .home_main {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-gap: 0px 20px;
     margin-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
 
   .home_inners {
@@ -647,6 +651,7 @@
     position: relative;
     border-radius: 3px;
     /* padding: 20px 15px; */
+    margin-bottom: 12px !important;
   }
 
  .social_button {
@@ -1362,7 +1367,7 @@
  }
 
   .home_main>h2 {
-    font-weight: 700;
+    font-weight: 600;
     color: #000;
     font-size: 20px !important;
     margin-bottom: 10px;
@@ -1370,6 +1375,7 @@
 
   .home_inners>p {
     font-size: 14px !important;
+    font-weight: 500 !important;
   }
 
   .home_inners>a {
