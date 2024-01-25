@@ -53,11 +53,11 @@ Netlify is a cloud computing company that offers hosting and serverless backend 
 
 1. A LambdaTest account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/dashboard).
 
-2. Your project should already be setup in Netlify.
+2. You need to have a site deployed in your Netlify account.
 
 ## Steps to Setup the Netlify Plugin
 
-### Step 1: Configure your Netlify with LambdaTest
+### Step 1: Configure your LambdaTest Integration on Netlify Dashboard
 
 - Go to your Netlify Dashboard.
 
@@ -81,15 +81,13 @@ You can also enter your already-existing smart-UI project name.
 
 <img loading="lazy" src={require('../assets/images/netlify-integration/2.png').default} alt="Image" className="doc_img"/>
 
-### Step 2: Deploy the Project (Pre-Changes build)
+### Step 2: Deploy the Site for which you want to compare the results
 
 - Go to the **Deploys** section, click on **Deploy site** button and deploy your project. 
 
 <img loading="lazy" src={require('../assets/images/netlify-integration/3.png').default} alt="Image" className="doc_img"/>
 
 - This deployment is before any changes you have made and will be your **Baseline** image.
-
-### Step 3: Update the Project
 
 - Now you need to make the required changes in your project and push the changes.
 
