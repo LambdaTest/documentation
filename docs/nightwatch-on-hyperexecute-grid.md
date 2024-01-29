@@ -51,387 +51,219 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
-# Run automation tests on HyperExecute using Nightwatch
-***
+# Running Nightwatch Framework Tests on HyperExecute
+JUnit is a widely-used testing framework for Java applications, designed to simplify and enhance the testing process for developers. It provides a flexible and powerful platform for running test suites, enabling effective unit testing, integration testing, and end-to-end testing of Java applications
 
-HyperExecute lets you run E2E (End-to-End) Selenium tests at the fastest possible speed. Unlike normal Selenium grid that involves multiple hops during the process of test execution, speed of execution on HyperExecute Grid is *super fast* as the code is executed on a secure cloud.
+HyperExecute, a smart test orchestration platform, empowers you to run **end-to-end** Selenium tests **quickly** and **efficiently**.
 
-End-to-end encryption of the data (including the source code) ensures that the *data* is secure whether it is at rest or in transit. YAML-based workflow helps in realizing the benefits of optimal test execution and orchestration. Along with the unique features offered by HyperExecute, you also get access to a host of LambdaTest cloud features like detailed logs, Smart CI features, network insights, video recording, access to a range of browsers & platforms on the cloud, amongst others.
+This guide details how to execute your **JUnit** framework tests on **HyperExecute** using [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) via two different methods:
 
-> HyperExecute has several state of the art features to help you optimize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute) to take a look at all the tools that HyperExecute offers. 
+- [**Using Local System**](/support/docs/JUnit-on-hyperexecute-grid/#1-testing-using-local-system) - Requires [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) to execute tests from your Local System. 
+- [**Using Gitpod**](/support/docs/JUnit-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
->HyperExecute is compliant with leading security standards - SOC2, GDPR, and CCPA. Refer to [HyperExecute Getting Started Guide](/docs/getting-started-with-hyperexecute) for more information about features offered by HyperExecute.
+## 1. Testing Using Local System
 
-> All the code samples in this documentation can be found in the [Nightwatch HyperExecute GitHub repository](https://github.com/LambdaTest/Hyperexecute-Nightwatch-Sample). You can either download or clone the repository to run tests on the HyperExecute Grid.
+Follow the step-by-step guide to execute your test on HyperExecute.
 
-## Gitpod
-***
+### Prerequisites
 
-Follow the below steps to run Gitpod button:
+To run the Tests on HyperExecute from your Local System, you are required:
 
-1. Click '**Open in Gitpod**' button (You will be redirected to Login/Signup page).
+- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
+- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution [Job](/support/docs/hyperexecute-concepts/#1-jobs).
+- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
+
+### Step 1: Download the Sample Repository
+
+:::tip Sample repo
+
+Download or Clone the code sample for the JUnit from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/Hyperexecute-Nightwatch-Sample.git" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+
+:::
+
+### Step 2: Setup the CLI in your Test Suite
+
+After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
+
+#### Download the HyperExecute CLI
+
+The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
+
+You can download the CLI for your desired platfrom from the below mentioned links:
+
+| Platform | HyperExecute CLI |
+| ---------| ---------------- |
+| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
+| MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
+
+#### Setup Environment Variable
+
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+
+Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs className="docs__val">
+  <TabItem value="Linux / MacOS" label="Linux / MacOS" default>
+
+```bash
+export LT_USERNAME=YOUR_LT_USERNAME
+export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
+```
+
+  </TabItem>
+  <TabItem value="Windows" label="Windows" default>
+
+```bash
+set LT_USERNAME=YOUR_LT_USERNAME
+set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
+```
+  </TabItem>
+</Tabs>
+
+### Step 3: Configure YAML in your Test Suite
+
+Configure your YAML file as per your use cases using **key value** pairs.
+
+In this sample YAML file, we have mentioned:
+
+- **version** of the YAML file
+- **Timeouts** for executing your project
+- **Mode of execution** is [Autosplit](/support/docs/hyperexecute-auto-split-strategy/). You can also opt for [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid](/support/docs/hyperexecute-hybrid-strategy/) mdoe.
+- **Pre and Post** commands
+- **Reports and Artefacts** that will be generated after the completion of tests
+- and other necessary YAML Parameters
+
+```bash
+---
+version: 0.2
+globalTimeout: 150
+testSuiteTimeout: 150
+testSuiteStep: 150
+
+runson: linux
+
+autosplit: true
+retryOnFailure: true
+
+maxRetries: 1
+concurrency: 4
+
+shell: bash
+
+env:
+  # PAT: ${{ .secrets.testKey }}
+  CACHE_DIR: m2_cache_dir
+
+cacheKey: '{{ checksum "pom.xml" }}'
+cacheDirectories:
+  - .m2
+
+pre:
+  # Skip execution of the tests in the pre step
+  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
+
+post:
+  - ls target/surefire-reports/
+
+mergeArtifacts: true
+uploadArtefacts:
+ - name: ExecutionSnapshots
+   path:
+    - target/surefire-reports/html/**
+
+report: true
+partialReports:
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
+
+framework:
+  name: maven/JUnit
+  defaultReports: false
+  flags:
+    - "-Dplatname=linux"
+    - "--file=pom02.xml"
+
+jobLabel: [selenium-JUnit, linux, autosplit]
+```
+
+### Step 4: Execute your Test Suite
+
+> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+
+Run the below command in your terminal at the root folder of the project:
+
+```bash
+./hyperexecute --config <path_of_yaml_file>
+```
+
+OR use this command if you have not exported your username and access key in the step 2.
+
+```bash
+./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
+```
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_1.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+
+### Step 5: Monitor the Test Execution
+
+Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+### Step 6: Download Artifacts and Reports
+
+HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+## 2. Testing Using Gitpod
+
+Follow the below steps to run Test using Gitpod:
+
+**Step 1:**  Click '**Open in Gitpod**' button. You will be redirected to Login/Signup page.
+
+[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Selenium&framework=JUnit)
+
+**Step 2:** Login with LambdaTest credentials. Once logged in, a pop-up confirmation will appear, asking you to **'Proceed'** to the Gitpod editor in a new tab. The current tab will display the HyperExecute Dashboard.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_popup.png').default} alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
 
-2. Login with Lambdatest credentials. You will be redirected to HyperExecute dashboard with pop-up confirming to **'Proceed'** to Gitpod editor in the new tab and current tab will show hyperexecute dashboard.
+**Step 3:** Choose your preferred editor (we recommend VS Code Editor)
 
+**Step 4:**  As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
 
-[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Selenium&framework=NightwatchJS)
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod2.png').default} alt="Image"  className="doc_img"/>
 
+**Step 5:**  Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
 
+:::tip
 
-## Getting started with Nightwatch tests on HyperExecute
-***
-
-The *HyperExecute CLI* is used for triggering tests on HyperExecute Grid. The CLI provides a host of other useful features that accelerate test execution. You should download the HyperExecute CLI binary on the host system for running tests on HyperExecute. Shown below is the HyperExecute CLI download location for different platforms:
-
-| Platform | HyperExecute CLI download location |
-| ---------| --------------------------- |
-| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
-| macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
-| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
-
-For detailed information about HyperExecute CLI, please refer to [HyperExecute CLI section](/docs/getting-started-with-hyperexecute/#hyperexecute-cli-to-interact-with-hyperexecute) in the HyperExecute getting started guide.
-
->
-The fundamental difference between running Selenium tests on a cloud Selenium Grid and HyperExecute Grid is that you need not have any configurations on the local machine (i.e. the machine from where HyperExecute CLI is triggered). This is because the source code from the local machine will be zipped and securely uploaded to the cloud where the execution will be performed on the remote Virtual Machine (VM).
-
-## Prerequisites for running Nightwatch tests on HyperExecute Grid
-***
-
-Before using HyperExecute, you have to download HyperExecute CLI corresponding to the host OS. You also need to export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile). Follow the below mentioned steps to set the environment variables *LT_USERNAME* & *LT_ACCESS_KEY* from the terminal.
-
-For macOS:
-
-```bash
-export LT_USERNAME=LT_USERNAME
-export LT_ACCESS_KEY=LT_ACCESS_KEY
-```
-
-For Linux:
-
-```bash
-export LT_USERNAME=LT_USERNAME
-export LT_ACCESS_KEY=LT_ACCESS_KEY
-```
-
-For Windows:
-
-```bash
-set LT_USERNAME=LT_USERNAME
-set LT_ACCESS_KEY=LT_ACCESS_KEY
-```
-
-Dependency caching is enabled in the YAML file to ensure that the package dependencies are not downloaded in subsequent runs. The integrity of *package-lock.json* is checked using the checksum functionality.
-
-```yaml
-cacheKey: '{{ checksum "package-lock.json" }}'
-cacheDirectories:
-  - node_modules
-```
-
-Steps (or commands) that must run before the test execution are listed in the pre run step. In the example, the packages are installed using the *npm install* command.
-
-```yaml
-pre:
-  - npm install
-```
-
-To reduce the upload size, it is recommended to include *files to be added in the ignore list* in *.hyperexecuteignore* which is located at the root of the project. You can modify the content of *.hyperexecuteignore* as per your project requirements:
-
-```
-hyperexecute.exe
-*.zip
-*.log
-artifacts
-logs
-```
-
-## Running Nightwatch Tests on HyperExecute Grid using Matrix Execution
-***
-
-Shown below is the HyperExecute YAML file for matrix execution:
-
-```yaml
-globalTimeout: 90
-testSuiteTimeout: 90
-testSuiteStep: 90
-
-runson: win
-
-env:
-  LT_USERNAME: LT_USERNAME
-  LT_ACCESS_KEY: LT_ACCESS_KEY
-pre:
-      - hyper.bat  
-matrix:
-  os: [win]
-  version: ["latest"]
-  browser: ["chrome","firefox","edge"]
-  platform: ["win10"]
-
-post:
-  - cat yaml/hyperExecuteMatrix.yaml
-
-testSuites:
-  - ./node_modules/.bin/nightwatch -e $browser
-```
-
-Here are the major pointers that you should know for executing Nightwatch tests using matrix execution:
-
-- Global timeout, test suite timeout, and test suite step timeout : 90 minutes
-
-```yaml
-version: 0.1
-globalTimeout: 90
-testSuiteTimeout: 90
-testSuiteStep: 90
-```
-
-- The target platform is set to *win* using the *runson* key
-
-```yaml
-runson: win
-```
-
-- The *matrix* constitutes of the following entries - *os*, *browser*, *version*, and *platform*. Nightwatch *nightwatch.json* file contains the browser Capabilities to run on the HyperExecute grid. The file *BrowserName* runs in parallel on the basis of scenario by using the specified input combinations.
-
-```yaml
-matrix:
-  os: [win]
-  version: ["latest"]
-  browser: ["chrome","firefox","edge"]
-  platform: ["win10"]
-```
-
-- Test dependencies and required packages are installed as a part of the *pre* step. The packages are installed by executing the batch file *hyper.bat*
-
-```yaml
-pre:
-  - hyper.bat
-```
-
-- Commands that have to run after test execution are listed in the *post* step. In the example, we cat the contents of *yaml/hyperExecuteMatrix.yaml*
-
-```yaml
-post:
-  - cat yaml/hyperExecuteMatrix.yaml
-```
-
-### Test Execution using Matrix Multiplexing
-
-The CLI option *--config* is used for providing the custom HyperExecute YAML file (i.e. *yaml/hyperExecuteMatrix.yaml*). Run the following command on the terminal to trigger the tests on the HyperExecute Grid. The *--download-artifacts* option is used to inform HyperExecute to download the artifacts for the job.
-
-Shown below is *HyperExecute CLI* command that has to be triggered from the root folder of the project (in case the execution platform is Windows):
-
-```bash
-./hyperexecute --config yaml/hyperExecuteMatrix.yaml --download-artifacts --force-clean-artifacts
-```
-
-Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution:
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/nightwatch/nightwatch_matrix_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
-## Running Nightwatch Tests on HyperExecute Grid using Auto-split Execution
-***
-
-Shown below is the HyperExecute YAML file for auto-split execution:
-
-```yaml
----
-version: 0.1
-globalTimeout: 90
-testSuiteTimeout: 90
-testSuiteStep: 90
-retryOnFailure: true
-runson: win
-maxRetries: 2
-concurrency: 3
-autosplit: true
-pre:
-  - npm install
-
-cacheKey: '{{ checksum "package-lock.json" }}'
-cacheDirectories:
-  - node_modules
-testDiscovery:
-  type: raw
-  mode: static
-  command: grep -B1 'desiredCapabilities' nightwatch.json | sed 's/-//g' | grep -vE 'desiredCapabilities' | grep -vE 'skip_testcases_on_fail' | awk '{print$1}' | sed 's/://g' | sed 's/"//g'
-testRunnerCommand: ./node_modules/.bin/nightwatch -e $test
-
-uploadArtefacts:
-  - name: Reports
-    path:
-      - reports/
-
-post:
-  - cat yaml/hyperExecuteStatic.yaml
-
-env:
-  LT_ACCESS_KEY: ${{.secrets.LT_ACCESS_KEY}}
-  LT_USERNAME: LT_USERNAME
-```
-
-Here are the major pointers that you should know for executing Nightwatch tests using auto-split execution:
-
-- The target platform is set to *win* using the *runson* key
-
-```yaml
-runson: win
-```
-
-- Auto-split is set to true in the YAML file
-
-```yaml
-autosplit: true
-```
-
-- *retryOnFailure* is set to true to instruct HyperExecute to retry the failed commands. The retry operation is carried out till the number of retries mentioned in *maxRetries* are exhausted or the command execution results in a Pass.
-
-```yaml
-autosplit: true
-retryOnFailure: true
-maxRetries: 2
-```
-
-- The concurrency (i.e. number of parallel sessions) is set to 3.
-
-```yaml
-concurrency: 3
-```
-
-- Steps (or commands) that must run before the test execution are listed in the *pre* run step.
-
-```yaml
-pre:
-  - npm install
-```
-
-- Commands to be run after test execution are listed in the *post* step. In the example, we cat the contents of *HyperExecute-Yaml/.hypertestStatic.yaml*
-
-```yaml
-post:
-  - cat yaml/hyperExecuteStatic.yaml
-```
-
-The *testDiscovery* directive contains the command that gives details of the mode of execution, along with detailing the command that is used for test execution. Here, we are fetching the list of Feature file scenarios that would be further executed using the value passed in the *testRunnerCommand*
-
-```yaml
-testDiscovery:
-  type: raw
-  mode: static
-  command: grep -B1 'desiredCapabilities' nightwatch.json | sed 's/-//g' | grep -vE 'desiredCapabilities' | grep -vE 'skip_testcases_on_fail' | awk '{print$1}' | sed 's/://g' | sed 's/"//g'
-testRunnerCommand: ./node_modules/.bin/nightwatch -e $test
-```
-
-Running the above command on the terminal will give the list of browsers that are located in the Project folder:
-
-```
-* edge firefox chrome
-```
-
-The *testRunnerCommand* contains the command that is used for triggering the test. Its output is fetched to the *testRunnerCommand*
-
-```yaml
-testRunnerCommand: ./node_modules/.bin/nightwatch -e $test
-```
-
-### Command to trigger Autosplit execution
-
-Shown below is *HyperExecute CLI* command that has to be triggered from the root folder of the project:
-
-```bash
-./hyperexecute --config --verbose yaml/hyperExecuteStatic.yaml --download-artifacts --force-clean-artifacts
-```
-
-Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution:
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/nightwatch/nightwatch_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
-Shown below is the execution screenshot when the YAML file is triggered from the terminal:
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/nightwatch/nightwatch_autosplit_cmd_1.png').default} alt="Nightwatch HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
-
-
-## Pre Steps, Post Steps, Dependency Caching, and Artifacts Management
-***
-
-Here are some of the advanced features (i.e. dependency caching, retries, post, and artifacts management) of HyperExecute that must be leveraged for accelerated package installation and verifying the results of the test execution. All the advanced features are applicable to Matrix and Auto-split modes.
-
-### Pre Steps and Dependency Caching
-
-Dependency caching is enabled in the YAML file to ensure that the package dependencies are not downloaded in subsequent runs. The first step is to set the Key used to cache directories. Here, we cache the packages that are downloaded in the *node_modules* folder.
-
-```yaml
-cacheKey: '{{ checksum "package-lock.json" }}'
-cacheDirectories:
-  - node_modules
-```
-
-Steps (or commands) that must run before the test execution are listed in the pre run step. Packages listed in *package.json* are installed using the *npm install* command.
-
-### Post steps
-
-Steps (or commands) that need to run after the test execution are listed in the *post* step. In the example, we *cat* the contents of *yaml/hyperExecuteStatic.yaml*
-
-```yaml
-post:
-  - cat yaml/hyperExecuteStatic.yaml
-```
-
-### Retries
-
-The *retryOnFailure* directive when set to *true* instructs HyperExecute to retry failed command(s). The retry operation is carried out till the number of retries mentioned in *maxRetries* are exhausted or the command execution results in a pass. Here is the combination of *retryOnFailure* and *maxRetries* that can be used for retrying command (or test) execution:
-
-```yaml
-retryOnFailure: true
-maxRetries: 2
-```
-
-### Artifacts Management
-
-The *mergeArtifacts* directive (which is by default *false*) is set to *true* for merging the artifacts and combing artifacts generated under each task.
-
-The *uploadArtefacts* directive informs HyperExecute to upload artifacts [files, reports, etc.] generated after task completion. In the example, *path* consists of a regex for parsing the directory (i.e. *reports*) that contain the test execution report in the HTML format.
-
-```yaml
-mergeArtifacts: true
-
-uploadArtefacts:
-  - name: Reports
-    path:
-      - reports/
-```
-
-HyperExecute also facilitates the provision to download the artifacts on your local machine. To download the artifacts, click on Artifacts button corresponding to the associated TestID.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/nightwatch/nightwatch_artifacts_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
-You can download the artifacts by clicking on the Download button as shown below:
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/nightwatch/nightwatch_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
-## Secrets Management
-
-In case you want to use any secret keys in the YAML file, the same can be set by clicking on the Secrets button the dashboard.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pytest/pytest_secret_management_1.png').default} alt="secret management"  width="1920" height="868" className="doc_img"/>
-
-Now create secrets that you can use in the HyperExecute YAML file.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/pytest/pytest_secret_management_2.png').default} alt="secret management"  width="100" height="650" className="doc_img"/>
+You can also implement [Secret Keys](https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
+:::
 
 ## Navigation in Automation Dashboard
 
-Every test run on the HyperExecute Grid has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute automation dashboard](https://automation.lambdatest.com/hyperexecute/) for checking the status of the test execution.
+Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/build) for checking the status of the test execution.
 
-HyperExecute lets you seamlessly navigate between jobId's and taskId's. The same can be done by navigating to *Automation* -> *HyperExecute logs* -> *Corresponding jobId* on the HyperExecute automation dashboard.
+You can seamlessly navigate between JobId's and taskId's. You need to click on the *testID* to navigate from the HyperExecute logs to the Automation Dashbaord.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/nightwatch/nightwatch_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
->
-For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
 Happy testing!
 
 <nav aria-label="breadcrumbs">
