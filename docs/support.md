@@ -57,136 +57,136 @@ slug: /
 <div className="primary_main">
 
 <!-- start of first section -->
-<div className="home_main">
-    <h2>Web Automation</h2>
-    <h2>App Automation</h2> 
-    <h2>HyperExecute</h2>
-    <h2>Analytics</h2>
-</div>
 
-<div className="home_inners">
-  <a href="/docs/getting-started-with-lambdatest-automation/"><p>Selenium Testing</p></a>
-  <a href="/docs/getting-started-with-appium-testing/"><p>Appium Testing</p></a>
-  <a href="/docs/getting-started-with-hyperexecute/"><p>Getting Started</p></a>
-  <a href="/docs/analytics-dashboard-templates/"><p>Dashboard Templates</p></a>
-</div>
+  <div className="home_main">
+      <h2>Web Automation</h2>
+      <h2>App Automation</h2> 
+      <h2>HyperExecute</h2>
+      <h2>Analytics</h2>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/getting-started-with-cypress-testing/"><p>Cypress Testing</p></a>
-  <a href="/docs/getting-started-with-espresso-testing/"><p>Espresso Testing</p></a>
-  <a href="/docs/hyperexecute-yaml-parameters/"><p>HyperExecute YAML</p></a>
-  <a href="/docs/analytics-create-dashboard/"><p>Custom Dashboard</p></a>
-</div>
+  <div className="home_inners">
+    <a href="/docs/getting-started-with-lambdatest-automation/"><p className="p_home_inners">Selenium Testing</p></a>
+    <a href="/docs/getting-started-with-appium-testing/"><p className="p_home_inners">Appium Testing</p></a>
+    <a href="/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Getting Started</p></a>
+    <a href="/docs/analytics-dashboard-templates/"><p className="p_home_inners">Dashboard Templates</p></a>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/playwright-testing/"><p>Playwright Testing</p></a>
-  <a href="/docs/getting-started-with-xcuitest/"><p>XCUI Testing</p></a>
-  <a href="/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p>HyperExecute CLI</p></a>
-  <p>Analytics Widgets</p>
-</div>
+  <div className="home_inners">
+    <a href="/docs/getting-started-with-cypress-testing/"><p className="p_home_inners">Cypress Testing</p></a>
+    <a href="/docs/getting-started-with-espresso-testing/"><p className="p_home_inners">Espresso Testing</p></a>
+    <a href="/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
+    <a href="/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboard</p></a>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/puppeteer-testing/"><p>Puppeteer Testing</p></a>
-  <a href="/docs/app-automation-on-emulators-simulators/"><p>Virtual Devices</p></a>
-  <a href="/docs/key-features-of-hyperexecute/"><p>Features</p></a>
-  <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p>Flaky Test</p></a>
-</div>
+  <div className="home_inners">
+    <a href="/docs/playwright-testing/"><p className="p_home_inners">Playwright Testing</p></a>
+    <a href="/docs/getting-started-with-xcuitest/"><p className="p_home_inners">XCUI Testing</p></a>
+    <a href="/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
+    <p className="p_home_inners">Analytics Widgets</p>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/k6-browser-testing/"><p>K6 Testing</p></a>
-  <p></p>
-  <a href="/docs/integration-with-hyperexecute/"><p>Integrations</p></a>
-  <a href="/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p>Command Logs Analytics</p></a>
-</div>
+  <div className="home_inners">
+    <a href="/docs/puppeteer-testing/"><p className="p_home_inners">Puppeteer Testing</p></a>
+    <a href="/docs/app-automation-on-emulators-simulators/"><p className="p_home_inners">Virtual Devices</p></a>
+    <a href="/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
+    <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test</p></a>
+  </div>
 
-<div className="home_inners">
-  <p></p>
-  <p></p>
-  <a href="/docs/hyperexecute-private-cloud-setup/"><p>Private Cloud</p></a>
-  <a href="/docs/analytics-test-case-insights/"><p>Test Case Insights</p></a>
+  <div className="home_inners">
+    <a href="/docs/k6-browser-testing/"><p className="p_home_inners">K6 Testing</p></a>
+    <p className="p_home_inners"></p>
+    <a href="/docs/integration-with-hyperexecute/"><p className="p_home_inners">Integrations</p></a>
+    <a href="/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Command Logs Analytics</p></a>
+  </div>
+
+  <div className="home_inners">
+  <p className="p_home_inners"></p>
+  <p className="p_home_inners"></p>
+  <a href="/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
+  <a href="/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
 </div>
 
 <!-- end of first section -->
 
 <!-- start of second section -->
 
-<div className="home_main">
-  <h2>Visual UI</h2>
-  <h2>Real Time</h2>
-  <h2>Testing Locally</h2>
-  <h2>Integrations</h2>
-</div>
+  <div className="home_main">
+    <h2>Visual UI</h2>
+    <h2>Real Time</h2>
+    <h2>Testing Locally</h2>
+    <h2>Integrations</h2>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/smart-visual-regression-testing/"><p>Smart UI</p></a>
-  <p>Desktop Browser Testing</p>
-  <a href="/docs/testing-locally-hosted-pages/"><p>Testing Locally Hosted Pages</p></a>
-  <a href="/docs/bug-tracking-tools/"><p>Bug Tracking</p></a>
-</div>
+  <div className="home_inners">
+    <a href="/docs/smart-visual-regression-testing/"><p className="p_home_inners">Smart UI</p></a>
+    <p className="p_home_inners">Desktop Browser Testing</p>
+    <a href="/docs/testing-locally-hosted-pages/"><p className="p_home_inners">Testing Locally Hosted Pages</p></a>
+    <a href="/docs/bug-tracking-tools/"><p className="p_home_inners">Bug Tracking</p></a>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/smartui-cli/"><p>CLI</p></a>
-  <p>Mobile Browser Testing</p>
-  <a href="/docs/getting-started-with-lambdatest-automation/"><p>LambdaTest Tunnel</p></a>
-  <a href="/docs/integrations-with-project-management-tools/"><p>Project Management</p></a>
-</div>
+  <div className="home_inners">
+    <a href="/docs/smartui-cli/"><p className="p_home_inners">CLI</p></a>
+    <p className="p_home_inners">Mobile Browser Testing</p>
+    <a href="/docs/getting-started-with-lambdatest-automation/"><p className="p_home_inners">LambdaTest Tunnel</p></a>
+    <a href="/docs/integrations-with-project-management-tools/"><p className="p_home_inners">Project Management</p></a>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/smartui-upload-api-v2/"><p>Upload through API</p></a>
-  <p>Mobile App Testing</p>
-  <a href="/docs/docker-tunnel/"><p>Docker Tunnel</p></a>
-  <p>Analytics</p>
-</div>
+  <div className="home_inners">
+    <a href="/docs/smartui-upload-api-v2/"><p className="p_home_inners">Upload through API</p></a>
+    <p className="p_home_inners">Mobile App Testing</p>
+    <a href="/docs/docker-tunnel/"><p className="p_home_inners">Docker Tunnel</p></a>
+    <p className="p_home_inners">Analytics</p>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/smartui-pdf-comparison/"><p>Samrt PDF Comparison</p></a>
-  <p>Key Features</p>
-  <a href="/docs/troubleshooting-lambda-tunnel/"><p>Troubleshooting Tunnel</p></a>
-  <p>Test Reporting</p>
-</div>
+  <div className="home_inners">
+    <a href="/docs/smartui-pdf-comparison/"><p className="p_home_inners">Samrt PDF Comparison</p></a>
+    <p className="p_home_inners">Key Features</p>
+    <a href="/docs/troubleshooting-lambda-tunnel/"><p className="p_home_inners">Troubleshooting Tunnel</p></a>
+    <p className="p_home_inners">Test Reporting</p>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/smart-ui-build-options/"><p>Build Config and Options</p></a>
-  <p></p>
-  <a href="/docs/load-balancing-in-lambda-tunnel/"><p>Load Balancing in Tunnel</p></a>
-  <p>Communication Tools</p>
-</div>
+  <div className="home_inners">
+    <a href="/docs/smart-ui-build-options/"><p className="p_home_inners">Build Config and Options</p></a>
+    <p className="p_home_inners"></p>
+    <a href="/docs/load-balancing-in-lambda-tunnel/"><p className="p_home_inners">Load Balancing in Tunnel</p></a>
+    <p className="p_home_inners">Communication Tools</p>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/test-settings-options/"><p>Advance Comparison</p></a>
-  <p></p>
-  <a href="/docs/dedicated-proxy/"><p>IP Whitelisting</p></a>
-  <a href="/docs/plugins-and-extensions/"><p>Plugin and Extensions</p></a>
-</div>
+  <div className="home_inners">
+    <a href="/docs/test-settings-options/"><p className="p_home_inners">Advance Comparison</p></a>
+    <p className="p_home_inners"></p>
+    <a href="/docs/dedicated-proxy/"><p className="p_home_inners">IP Whitelisting</p></a>
+    <a href="/docs/plugins-and-extensions/"><p className="p_home_inners">Plugin and Extensions</p></a>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/html-dom-smartui-options/"><p>Handling Dynamic Data</p></a>
-  <p></p>
-  <a href="/docs/charles-proxy/"><p>Charles Proxy</p></a>
+  <div className="home_inners">
+  <a href="/docs/html-dom-smartui-options/"><p className="p_home_inners">Handling Dynamic Data</p></a>
+  <p className="p_home_inners"></p>
+  <a href="/docs/charles-proxy/"><p className="p_home_inners">Charles Proxy</p></a>
 </div>
 
 <!-- end of second section -->
 
-
 <!-- start of third section -->
-<div className="home_main">
-  <h2>Setting and Security</h2>
-  <h2>Other Docs</h2>
-</div>
+  <div className="home_main">
+    <h2>Setting and Security</h2>
+    <h2>Other Docs</h2>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/account-management/"><p>Account Management</p></a>
-  <a href="/docs/lt-browser/"><p>LT Browser</p></a>
-</div>
+  <div className="home_inners">
+    <a href="/docs/account-management/"><p className="p_home_inners">Account Management</p></a>
+    <a href="/docs/lt-browser/"><p className="p_home_inners">LT Browser</p></a>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/single-sign-on/"><p>Single Sign On</p></a>
-  <a href="/docs/test-management/"><p>Test Management</p></a>
-</div>
+  <div className="home_inners">
+    <a href="/docs/single-sign-on/"><p className="p_home_inners">Single Sign On</p></a>
+    <a href="/docs/test-management/"><p className="p_home_inners">Test Management</p></a>
+  </div>
 
-<div className="home_inners">
-  <a href="/docs/scim/"><p>SCIM</p></a>
-  <a href="/docs/test-intelligence-overview/"><p>Test Intelligence</p></a>
+  <div className="home_inners">
+  <a href="/docs/scim/"><p className="p_home_inners">SCIM</p></a>
+  <a href="/docs/test-intelligence-overview/"><p className="p_home_inners">Test Intelligence</p></a>
 </div>
 
 <!-- end of third section -->

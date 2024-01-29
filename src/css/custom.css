@@ -640,8 +640,8 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-gap: 0px 20px;
-    margin-top: 30px;
-    margin-bottom: 16px;
+    margin-top: 50px;
+    margin-bottom: 16px !important;
   }
 
   .home_inners {
@@ -650,8 +650,6 @@
     grid-gap: 0px 20px;
     position: relative;
     border-radius: 3px;
-    /* padding: 20px 15px; */
-    margin-bottom: 12px !important;
   }
 
  .social_button {
@@ -1373,13 +1371,15 @@
     margin-bottom: 10px;
   }
 
-  .home_inners>p {
+  .p_home_inners {
     font-size: 14px !important;
     font-weight: 500 !important;
+    margin-bottom: 12px !important;
   }
 
   .home_inners>a {
     color: #0969DA;
+    margin: 0px;
   }
 
  .markdown>h3 {
