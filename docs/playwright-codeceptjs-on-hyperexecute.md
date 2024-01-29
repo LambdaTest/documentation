@@ -97,7 +97,7 @@ After cloning / downloading the sample repo, you need to setup the CLI and the e
 
 The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
 
-You can download the CLI for your desired platfrom from the below mentioned links:
+You can download the CLI for your desired platform from the below mentioned links:
 
 | Platform | HyperExecute CLI |
 | ---------| ---------------- |
@@ -140,7 +140,7 @@ In this sample YAML file, we have mentioned:
 
 - **version** of the YAML file
 - **Timeouts** for executing your project
-- **Mode of execution** is [Autosplit](/support/docs/hyperexecute-auto-split-strategy/). You can also opt for [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid](/support/docs/hyperexecute-hybrid-strategy/) mdoe.
+- **Mode of execution** is [Autosplit](/support/docs/hyperexecute-auto-split-strategy/). You can also opt for [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid](/support/docs/hyperexecute-hybrid-strategy/) mode.
 - **Pre and Post** commands
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
@@ -260,7 +260,7 @@ You can also implement [Secret Keys](https://www.lambdatest.com/support/docs/hyp
 
 Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/build) for checking the status of the test execution.
 
-You can seamlessly navigate between JobId's and taskId's. You need to click on the *testID* to navigate from the HyperExecute logs to the Automation Dashbaord.
+You can seamlessly navigate between JobId's and taskId's. You need to click on the *testID* to navigate from the HyperExecute logs to the Automation Dashboard.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
