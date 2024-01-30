@@ -1577,7 +1577,8 @@ module.exports = {
             "local-testing-playwright",
             "playwright-playwrighttest",
             "playwright-cucumberjs",
-            "playwright-cicd"
+            "playwright-cicd",
+            "playwright-lighthouse-library"
       ]
     ],
 
