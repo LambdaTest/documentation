@@ -52,14 +52,14 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ></script>
 
 # Running Behave Framework Tests on HyperExecute
-JUnit is a widely-used testing framework for Java applications, designed to simplify and enhance the testing process for developers. It provides a flexible and powerful platform for running test suites, enabling effective unit testing, integration testing, and end-to-end testing of Java applications
+Behave is a behavior-driven development (BDD) framework for Python that is commonly used with Selenium for automated testing. It allows teams to write test scenarios in a natural language format using Gherkin syntax.
 
-HyperExecute, a smart test orchestration platform, empowers you to run **end-to-end** Selenium tests **quickly** and **efficiently**.
+HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
-This guide details how to execute your **JUnit** framework tests on **HyperExecute** using [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) via two different methods:
+This guide details how to execute your **Behave** framework tests on **HyperExecute** via two different methods:
 
-- [**Using Local System**](/support/docs/JUnit-on-hyperexecute-grid/#1-testing-using-local-system) - Requires [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) to execute tests from your Local System. 
-- [**Using Gitpod**](/support/docs/JUnit-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
+- [**Using Local System**](/support/docs/JUnit-on-hyperexecute-grid/#1-testing-using-local-system) - You can use your own local machine to execute tests.
+- [**Using Gitpod Platform**](/support/docs/JUnit-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
 ## 1. Testing Using Local System
 
@@ -74,7 +74,9 @@ To run the Tests on HyperExecute from your Local System, you are required:
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution [Job](/support/docs/hyperexecute-concepts/#1-jobs).
 - Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
 
-### Step 1: Download the Sample Repository
+### Step 1: Configure Your Test Suite
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
 
@@ -83,6 +85,28 @@ Download or Clone the code sample for the JUnit from the LambdaTest GitHub repos
 <a href="https://github.com/LambdaTest/behave-selenium-hyperexecute-sample.git" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
+
+If you are using your own project, make sure you update the **Hub endpoint** in your tests file.
+
+By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
+
+
+Configure the desired capabilities based on your test requirements. For example:
+
+```bash
+[
+  {
+    "platform": "Windows 10",
+    "browserName": "chrome",
+    "version": "latest",
+    "build": "Behave Selenium Sample",
+    "name": "Behave Sample Test"
+  }
+]
+```
+
+> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+
 
 ### Step 2: Setup the CLI in your Test Suite
 
@@ -110,21 +134,28 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs className="docs__val">
-  <TabItem value="Linux / MacOS" label="Linux / MacOS" default>
 
-```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
+<TabItem value="bash" label="Linux / MacOS" default>
 
-  </TabItem>
-  <TabItem value="Windows" label="Windows" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-```bash
-set LT_USERNAME=YOUR_LT_USERNAME
-set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
-  </TabItem>
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
 </Tabs>
 
 ### Step 3: Configure YAML in your Test Suite
@@ -142,10 +173,10 @@ In this sample YAML file, we have mentioned:
 
 ```bash
 ---
-version: 0.2
-globalTimeout: 150
-testSuiteTimeout: 150
-testSuiteStep: 150
+version: 0.1
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
 
 runson: linux
 
@@ -153,45 +184,45 @@ autosplit: true
 retryOnFailure: true
 
 maxRetries: 1
-concurrency: 4
-
-shell: bash
+concurrency: 2
 
 env:
-  # PAT: ${{ .secrets.testKey }}
-  CACHE_DIR: m2_cache_dir
+#  PAT: ${{ .secrets.testKey }}
+ TARGET_OS: LINUX
 
-cacheKey: '{{ checksum "pom.xml" }}'
+cacheKey: '{{ checksum "requirements.txt" }}'
 cacheDirectories:
-  - .m2
-
+  - pip_cache
 pre:
-  # Skip execution of the tests in the pre step
-  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
-
+  - pip3 install -r requirements.txt --cache-dir pip_cache
 post:
-  - ls target/surefire-reports/
+  - cat yaml/linux/behave_hyperexecute_autosplit_sample.yaml
+upload:
+  - reports/test_report.json
 
 mergeArtifacts: true
+
 uploadArtefacts:
- - name: ExecutionSnapshots
-   path:
-    - target/surefire-reports/html/**
+  - name: TestReports
+    path:
+    - reports/**
 
 report: true
 partialReports:
-  location: target/surefire-reports/html
-  type: html
-  frameworkName: extent
+    type: json
+    location: /
+    frameworkName: extent
 
-framework:
-  name: maven/JUnit
-  defaultReports: false
-  flags:
-    - "-Dplatname=linux"
-    - "--file=pom02.xml"
+# Details about HTML Formatter at https://pypi.org/project/behave-html-formatter/
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: grep -nri 'Feature' features -ir --include=\*.feature | sed 's/:.*//'
 
-jobLabel: [selenium-JUnit, linux, autosplit]
+# Reports are generated in the pretty JSON format
+testRunnerCommand: behave -f json.pretty -o reports/test_report.json $test
+
+jobLabel: [selenium-behave, linux, autosplit]
 ```
 
 ### Step 4: Execute your Test Suite
@@ -228,17 +259,21 @@ HyperExecute also facilitates the provision to download the [Artifacts](/support
 
 ## 2. Testing Using Gitpod
 
+You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
+
 Follow the below steps to run Test using Gitpod:
 
-**Step 1:**  Click '**Open in Gitpod**' button. You will be redirected to Login/Signup page.
+**Step 1:**  Click '**Open in Gitpod**' button. You will be redirected to Login/Signup page. This button is configured to redirect you to the Gitpod platform where you will be able to execute our sample repository.
 
-[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Selenium&framework=JUnit)
+[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Selenium&framework=Behave)
 
 **Step 2:** Login with LambdaTest credentials. Once logged in, a pop-up confirmation will appear, asking you to **'Proceed'** to the Gitpod editor in a new tab. The current tab will display the HyperExecute Dashboard.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_popup.png').default} alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
 
 **Step 3:** Choose your preferred editor (we recommend VS Code Editor)
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_config.png').default} alt="Image"  className="doc_img"/>
 
 **Step 4:**  As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
 
