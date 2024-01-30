@@ -41,7 +41,7 @@ slug: playwright-lighthouse-library/
 # Generating Lighthouse Reports With Playwright Lighthouse Library
 ---
 
-LambdaTest lets you perform Playwright automation while allowing you to generate Lighthouse reports with Playwright Lighthouse Libarary in a single test.
+LambdaTest lets you perform Playwright automation while allowing you to generate Lighthouse reports with Playwright Lighthouse Library in a single test.
 
 ## Prerequisites
 ---
