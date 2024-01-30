@@ -1,5 +1,5 @@
 ---
-id: playwright-lighthouse library
+id: playwright-lighthouse-library
 title: How to Generate Lighthouse Reports With Playwright Lighthouse Library
 hide_title: true
 sidebar_label: Playwright Lighthouse Library
