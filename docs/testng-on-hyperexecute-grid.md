@@ -54,12 +54,12 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Running TestNG Framework Tests on HyperExecute
 TestNG is a widely-used testing framework for Java applications, designed to simplify and enhance the testing process for developers. It provides a flexible and powerful platform for running test suites, enabling effective unit testing, integration testing, and end-to-end testing of Java applications
 
-HyperExecute, a smart test orchestration platform, empowers you to run **end-to-end** Selenium tests **quickly** and **efficiently**.
+HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
 This guide details how to execute your **TestNG** framework tests on **HyperExecute** using [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) via two different methods:
 
-- [**Using Local System**](/support/docs/testng-on-hyperexecute-grid/#1-testing-using-local-system) - Requires [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) to execute tests from your Local System. 
-- [**Using Gitpod**](/support/docs/testng-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
+- [**Using Local System**](/support/docs/testng-on-hyperexecute-grid/#1-testing-using-local-system) - You can use your own local machine to execute tests.
+- [**Using Gitpod Platform**](/support/docs/testng-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
 ## 1. Testing Using Local System
 
@@ -74,15 +74,33 @@ To run the Tests on HyperExecute from your Local System, you are required:
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution [Job](/support/docs/hyperexecute-concepts/#1-jobs).
 - Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
 
-### Step 1: Download the Sample Repository
+### Step 1: Configure Your Test Suite
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-
 Download or Clone the code sample for the TestNG from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-
 :::
+
+If you are using your own project, make sure you update the **Hub endpoint** in your tests file.
+
+By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
+
+
+Configure the desired capabilities based on your test requirements. For example:
+
+```bash
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setCapability("browserName", "chrome");
+capabilities.setCapability("version", "70.0");
+capabilities.setCapability("platform", "win10"); # If this cap isn't specified, it will just get the any available one
+capabilities.setCapability("build", "LambdaTestSampleApp");
+capabilities.setCapability("name", "LambdaTestJavaSample");
+```
+
+> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
 
 ### Step 2: Setup the CLI in your Test Suite
 
@@ -110,21 +128,28 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs className="docs__val">
-  <TabItem value="Linux / MacOS" label="Linux / MacOS" default>
 
-```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
+<TabItem value="bash" label="Linux / MacOS" default>
 
-  </TabItem>
-  <TabItem value="Windows" label="Windows" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-```bash
-set LT_USERNAME=YOUR_LT_USERNAME
-set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
-  </TabItem>
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
 </Tabs>
 
 ### Step 3: Configure YAML in your Test Suite
@@ -228,9 +253,11 @@ HyperExecute also facilitates the provision to download the [Artifacts](/support
 
 ## 2. Testing Using Gitpod
 
+You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
+
 Follow the below steps to run Test using Gitpod:
 
-**Step 1:**  Click '**Open in Gitpod**' button. You will be redirected to Login/Signup page.
+**Step 1:**  Click '**Open in Gitpod**' button. You will be redirected to Login/Signup page. This button is configured to redirect you to the Gitpod platform where you will be able to execute our sample repository.
 
 [<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Selenium&framework=TestNG)
 
@@ -239,6 +266,8 @@ Follow the below steps to run Test using Gitpod:
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_popup.png').default} alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
 
 **Step 3:** Choose your preferred editor (we recommend VS Code Editor)
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_config.png').default} alt="Image"  className="doc_img"/>
 
 **Step 4:**  As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
 
