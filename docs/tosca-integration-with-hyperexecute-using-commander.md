@@ -3,7 +3,7 @@ id: tosca-integration-with-hyperexecute-using-commander
 title: Tosca Integration using Commander
 hide_title: true
 sidebar_label: Tosca Integration using Commander
-description: This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute 
+description: Here is a detailed guide on seamlessly integrating Tosca with HyperExecute using Commander.
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products
