@@ -1057,6 +1057,10 @@
    color: #CAD1D9;
  }
 
+  [data-theme=dark] .homeMain_h2 {
+    color: #CBD1D9 !important;
+  }
+
  [data-theme=dark] .support_h2 h2 {
    color: #CBD1D9 !important;
  }
@@ -1161,6 +1165,10 @@
  [data-theme=dark] .Doc_intro_cta .Doc_intro_cta_text p {
    color: #8D949E;
  }
+/* 
+ [data-theme=dark] .home_image {
+  background-image: url('../../assets/images/support/home_dark.png') !important;
+ } */
 
  [data-theme=dark] .pagination-nav__sublabel {
    color: var(--ifm-footer-link-color)

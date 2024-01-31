@@ -50,7 +50,7 @@ slug: /
 <p>Ensure your web-apps work seamlessly on <br /> every desktop and mobile browsers</p>
 </div>
 <div className="Doc_intro_cta_image">
-<img  loading="eager" src={require('../assets/images/support/Illustration.png').default} alt="Image" width="701" height="576" className="" role="presentation"/>
+<img  loading="eager" src={require('../assets/images/support/home_light.png').default} alt="Image" width="701" height="576" className="home_image" role="presentation"/>
 </div>
 </div>
 
@@ -59,10 +59,10 @@ slug: /
 <!-- start of first section -->
 
   <div className="home_main">
-      <h2>Web Automation</h2>
-      <h2>App Automation</h2> 
-      <h2>HyperExecute</h2>
-      <h2>Analytics</h2>
+      <h2 className='homeMain_h2'>Web Automation</h2>
+      <h2 className='homeMain_h2'>App Automation</h2> 
+      <h2 className='homeMain_h2'>HyperExecute</h2>
+      <h2 className='homeMain_h2'>Analytics</h2>
   </div>
 
   <div className="home_inners">
@@ -112,45 +112,45 @@ slug: /
 <!-- start of second section -->
 
   <div className="home_main">
-    <h2>Visual UI</h2>
-    <h2>Real Time</h2>
-    <h2>Testing Locally</h2>
-    <h2>Integrations</h2>
+    <h2 className='homeMain_h2'>Visual UI</h2>
+    <h2 className='homeMain_h2'>Real Time</h2>
+    <h2 className='homeMain_h2'>Testing Locally</h2>
+    <h2 className='homeMain_h2'>Integrations</h2>
   </div>
 
   <div className="home_inners">
     <a href="/docs/smart-visual-regression-testing/"><p className="p_home_inners">Smart UI</p></a>
-    <p className="p_home_inners">Desktop Browser Testing</p>
+    <a href="/docs/real-time-browser-testing/" ><p className="p_home_inners">Desktop Browser Testing</p></a>
     <a href="/docs/testing-locally-hosted-pages/"><p className="p_home_inners">Testing Locally Hosted Pages</p></a>
     <a href="/docs/bug-tracking-tools/"><p className="p_home_inners">Bug Tracking</p></a>
   </div>
 
   <div className="home_inners">
     <a href="/docs/smartui-cli/"><p className="p_home_inners">CLI</p></a>
-    <p className="p_home_inners">Mobile Browser Testing</p>
+    <a href="/docs/webview-testing-in-android/"><p className="p_home_inners">Mobile Browser Testing</p></a>
     <a href="/docs/getting-started-with-lambdatest-automation/"><p className="p_home_inners">LambdaTest Tunnel</p></a>
     <a href="/docs/integrations-with-project-management-tools/"><p className="p_home_inners">Project Management</p></a>
   </div>
 
   <div className="home_inners">
     <a href="/docs/smartui-upload-api-v2/"><p className="p_home_inners">Upload through API</p></a>
-    <p className="p_home_inners">Mobile App Testing</p>
+    <a href="/docs/live-interactive-mobile-app-testing/"><p className="p_home_inners">Mobile App Testing</p></a>
     <a href="/docs/docker-tunnel/"><p className="p_home_inners">Docker Tunnel</p></a>
-    <p className="p_home_inners">Analytics</p>
+    <a href="/docs/integrations-with-ci-cd-tools/"><p className="p_home_inners">CI / CD Integration</p></a>
   </div>
 
   <div className="home_inners">
     <a href="/docs/smartui-pdf-comparison/"><p className="p_home_inners">Samrt PDF Comparison</p></a>
-    <p className="p_home_inners">Key Features</p>
+    <a href="/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>
     <a href="/docs/troubleshooting-lambda-tunnel/"><p className="p_home_inners">Troubleshooting Tunnel</p></a>
-    <p className="p_home_inners">Test Reporting</p>
+    <a href="/docs/integrate-test-reporting-test-management-tools/"><p className="p_home_inners">Test Reporting</p></a>
   </div>
 
   <div className="home_inners">
     <a href="/docs/smart-ui-build-options/"><p className="p_home_inners">Build Config and Options</p></a>
     <p className="p_home_inners"></p>
     <a href="/docs/load-balancing-in-lambda-tunnel/"><p className="p_home_inners">Load Balancing in Tunnel</p></a>
-    <p className="p_home_inners">Communication Tools</p>
+    <a href="/docs/team-communication-tools/"><p className="p_home_inners">Communication Tools</p></a>
   </div>
 
   <div className="home_inners">
@@ -170,8 +170,8 @@ slug: /
 
 <!-- start of third section -->
   <div className="home_main">
-    <h2>Setting and Security</h2>
-    <h2>Other Docs</h2>
+    <h2 className='homeMain_h2'>Setting and Security</h2>
+    <h2 className='homeMain_h2'>Other Docs</h2>
   </div>
 
   <div className="home_inners">
