@@ -195,10 +195,11 @@ const GRID_HOST = "@beta-hub.lambdatest.com/wd/hub";
 
 ### Smart UI Test Keywords
 
-| Key                              | Description                                                                                                       |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `transparency`                   | Command to adjust test transparency settings                                                                      |
-| `largeImageThreshold`            | Command to set the threshold value for the comparison output                                                      |
-| `BoundingBoxes: [box1, box2]`    | Command to narrow down the area of comparison by specifying a bounding box measured in pixels from the top left   |
-| `ignoredBoxes: [box1, box2]`     | Command to exclude part of the image from comparison, by specifying the excluded area in pixels from the top left |
-| `ignoredAreasColoredWith: color` | Command to exclude pixels that match the specific color on a reference image from comparison                      |
+| Key | Description |
+|-----|------------ |
+| `transparency` | Command to adjust test transparency settings |
+| `largeImageThreshold` | Command to set the threshold value for the comparison output |
+| `BoundingBoxes: [box1, box2]` | Command to narrow down the area of comparison by specifying a bounding box measured in pixels from the top left |
+| `ignoredBoxes: [box1, box2]` | Command to exclude part of the image from comparison, by specifying the excluded area in pixels from the top left |
+| `ignoredAreasColoredWith: color` | Command to exclude pixels that match the specific color on a reference image from comparison |
+| `ignoreDOM` | Command to specify a selector based on the HTML DOM ID, CSS class or CSS selector used by your webpage that should be excluded from the comparison. |
