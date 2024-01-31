@@ -90,13 +90,6 @@ Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Fr
 npm i @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
 ```
 
-:::info
-To ensure seamless execution of ES6 modules within our repository, it is essential to configure the Node.js environment to recognize ES6 module syntax. This is accomplished by specifying the module type in your `package.json` file.
-```bash
-"type": "module"
-```
-:::
-
 ### **Step 3:** Configure your Project Token
 
 Setup your project token show in the **SmartUI** app after, creating your project.
@@ -124,7 +117,8 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 </Tabs>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-project-token.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
 
 ### **Step 4:** Create and Configure SmartUI Config
 
@@ -198,26 +192,21 @@ To capture a screenshot of the content currently visible in your viewport, rathe
   
 
 ```js
-import  { Builder, By, Key, until } from 'selenium-webdriver';
-import { smartuiSnapshot } from '@lambdatest/selenium-driver';
+const { Builder, By, Key, until } = require('selenium-webdriver');
+const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 
 (async function example() {
-    let driver = await new Builder()
-        .forBrowser('chrome')
-        .build();
+  let driver = await new Builder().forBrowser("chrome").build();
 
-    try {
-        await driver.get('<Required URL>'); //enter your desired URL here
-        await smartuiSnapshot(driver, '<Screenshot_Name>');
-        // Please specify your driver and the screenshot name in this function
-        // driver - selenium driver instance (required)
-        // Screenshot_Name - Name of the screenshot ; unique to each screenshot (required)
-    } finally {
-        await driver.quit();
-    }
+  try {
+    await driver.get("https://www.lambdatest.com");
+    await smartuiSnapshot(driver, "Lambdatest");
+    await driver.get("https://www.pinterest.com/pin/112801165652823604/");
+    await smartuiSnapshot(driver, "NYC");
+  } finally {
+    await driver.quit();
+  }
 })();
-
-
 ```
 
 ### **Step 6:** Execute the Tests on SmartUI Cloud
@@ -239,7 +228,182 @@ You have successfully integrated SmartUI SDK with your Selenium tests. Visit you
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui_ss_cli.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
+## Arguments supported in the `smartUISnapshot` function
+
+The following are the different options which are currently supported:
+
+| Key                       | Description                                                                                                               | Example                                                                                                                                                                                     |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `driver` (instance)    | The instance of the web driver used in your tests. |
+| `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
+| `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
+
+
+## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />** 
+
+When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
+
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="IgnoreID" label="Ignore ID" default>
+
+```js title="This is a sample for your configuration for Javascript to ignore by ID"
+options = {
+            ignoreDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
+        await driver.get('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
+```
+
+</TabItem>
+<TabItem value="IgoreClass" label="Ignore Class">
+
+```js title="This is a sample for your configuration for Javascript to ignore by Class"
+options = {
+            ignoreDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
+        await driver.get('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
+```
+
+</TabItem>
+<TabItem value="IgnoreXPath" label="Ignore XPath">
+
+```js title="This is a sample for your configuration for Javascript to ignore by XPath"
+options = {
+            ignoreDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
+        await driver.get('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
+```
+
+</TabItem>
+
+<TabItem value="IgnoreSelector" label="Ignore CSS Selector">
+
+```js title="This is a sample for your configuration for Javascript to ignore by CSS Selector"
+options = {
+            ignoreDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
+        await driver.get('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
+```
+</TabItem>
+
+</Tabs>
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="SelectID" label="Select ID" default>
+
+```js title="This is a sample for your configuration for Javascript to select by ID."
+options = {
+            selectDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
+        await driver.get('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
+```
+
+</TabItem>
+<TabItem value="SelectClass" label="Select Class">
+
+```js title="This is a sample for your configuration for Javascript to select by Class"
+options = {
+            selectDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
+        await driver.get('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
+```
+
+</TabItem>
+<TabItem value="SelectXPath" label="Select XPath">
+
+```js title="This is a sample for your configuration for Javascript to select by XPath"
+options = {
+            selectDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
+        await driver.get('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
+```
+
+</TabItem>
+
+<TabItem value="SelectSelector" label="Select CSS Selector">
+
+```js title="This is a sample for your webhook configuration for Javascript to select by CSS Selector"
+options = {
+            selectDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
+        await driver.get('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
+```
+</TabItem>
+
+</Tabs>
+
+## For capturing interactive lazy loading elements
+
+If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
+
+```js Example for scrolling to bottom for lazy elements
+const { Builder, By, Key, until } = require('selenium-webdriver');
+const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
+
+(async function example() {
+  let driver = await new Builder().forBrowser("chrome").build();
+
+  try {
+    await driver.get("Required URL");
+    async function quickScrollToBottom(lastPageWait) {
+      try {
+          let height = await driver.executeScript("return document.body.scrollHeight");
+          let heightOfPage = parseInt(height, 10);
+          let size = 200;
+          let noOfLoop = Math.floor(heightOfPage / size);
+          
+          for (let i = 1; i <= noOfLoop; i++) {
+              await driver.executeScript(`window.scrollTo(${(i - 1) * size}, ${i * size})`);
+              await new Promise(resolve => setTimeout(resolve, 1000));
+              if (i === noOfLoop) {
+                  
+                  await driver.executeScript(`window.scrollTo(${i * size}, ${heightOfPage})`);
+                  await new Promise(resolve => setTimeout(resolve, lastPageWait));
+              }
+          }
+  
+          // Now scroll to the top
+          await driver.executeScript("window.scrollTo(0,0)");
+          await new Promise(resolve => setTimeout(resolve, 10000));
+          console.log("Scroll Completed");
+      } catch (e) {
+          console.log("Got some errors" + e.toString());
+      }
+  }
+    await quickScrollToBottom(100); //use wait time accordingly
+    await smartuiSnapshot(driver, "Screenshot Name");
+  } finally {
+    await driver.quit();
+  }
+})();
+
+```
 
 
 For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
