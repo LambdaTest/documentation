@@ -711,15 +711,16 @@ shell: bash
 ***
 ## `dataJsonPath`
 DataJsonPaths helps to distribute data/configs over the VMs. In this you can create a json files and put configurations/data required for your suite as json array inside the file. For example:
+
 ```bash
 [
  { 
-  “Username”: “user1”.
-  “Password”: “pass1”
+  "Username": "user1",
+  "Password": "pass1"
  },
  {
-  “Username”: “user2”,
-  “Password”: “pass2”
+  "Username": "user2",
+  "Password": "pass2"
  }
 ]
 ```
@@ -746,10 +747,10 @@ To access the data from the JSON files, there are primarily 2 methods:
 
 In the JSON file, we have a data object and not an array of objects, hence you can directly read the data from the file.
 
-```
+```bash
 { 
-  “Username”: “user1”.
-  “Password”: “pass1”
+  "Username": "user1".
+  "Password": "pass1"
 }
 ```
 
@@ -894,7 +895,7 @@ When we run a job in matrix mode, we set the keys with their resolved value as e
 When we set dynamicAllocation true, the test cases are distributed among parallels at the runtime. This is valid in case of static test discovery. In this case, the parallels are utilised in the most optimised manner. 
 <!-- **(Currently in BETA)** -->
 
-```
+```bash
 dynamicAllocation: true
 ```
 
@@ -985,7 +986,7 @@ The options to use when running the [tunnel](/support/docs/deep-dive-into-hypere
 tunnel: true
 tunnelOpts: 
 	args:
-	 - “--verbose”
+	 - "--verbose"
 ```
 
 ```bash
@@ -1005,7 +1006,7 @@ tunnelOpts:
 Specify the list of  already running tunnel names which you want to use for  accessing your applications which are locally hosted or behind a firewall.
 
 ```bash
-tunnelNames: [“lambdatest_tunnel”]
+tunnelNames: ["lambdatest_tunnel"]
 ```
 
 ## `testRunnerExecutor`
@@ -1088,19 +1089,19 @@ testRunnerCommand: npm test -- $test
 ### `macTestRunnerCommand`
 In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple OS using the same yaml. On different OS `testRunnerCommand` can be different. So for specifying specific commands for MAC OS in hybrid mode. You can use this command.
 ```bash
-macTestRunnerCommand: mvn test -Dcucumber.options=”$test” -Dscenario=”$test” -DOs=”mac”
+macTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="mac"
 ```
 
 ### `winTestRunnerCommand`
 In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple OS using the same yaml. On different OS `testRunnerCommand` can be different. So for specifying specific commands for Windows in hybrid mode. You can use this command.
 ```bash
-winTestRunnerCommand: mvn test `-Dcucumber.options=”$test”` `-Dscenario=”$test”`  `-DOs=”win 10”`
+winTestRunnerCommand: mvn test `-Dcucumber.options="$test"` `-Dscenario="$test"`  `-DOs="win 10"`
 ```
 
 ### `linuxTestRunnerCommand`
 In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple OS using the same yaml. On different OS `testRunnerCommand` can be different. So for specifying specific commands for Linux in hybrid mode. You can use this command.
 ```bash
-linuxTestRunnerCommand: mvn test `-Dcucumber.options=”$test”`  `-Dscenario=”$test”`   `-DOs=”linux”`
+linuxTestRunnerCommand: mvn test `-Dcucumber.options="$test"`  `-Dscenario="$test"`   `-DOs="linux"`
 ```
 > Note: If the OS specific command is not provided then the testRunnerCommand will be used by default. If both are not provided then you will get an error.
 
