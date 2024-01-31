@@ -83,7 +83,7 @@ slug: /
     <a href="/docs/playwright-testing/"><p className="p_home_inners">Playwright Testing</p></a>
     <a href="/docs/getting-started-with-xcuitest/"><p className="p_home_inners">XCUI Testing</p></a>
     <a href="/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
-    <p className="p_home_inners">Analytics Widgets</p>
+    <a href="/docs/analytics-widgets/"><p className="p_home_inners">Analytics Widgets</p></a>
   </div>
 
   <div className="home_inners">
