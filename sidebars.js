@@ -2010,6 +2010,10 @@ module.exports = {
               type: "category",
               collapsed: true,
               label: "Analytics Widgets",
+              link: {
+                type: "doc",
+                id: "analytics-widgets",
+              },
               items: [
                 "analytics-modules-test-overview",
                 "analytics-modules-error-insights",
