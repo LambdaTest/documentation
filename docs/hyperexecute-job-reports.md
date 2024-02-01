@@ -75,6 +75,8 @@ Mochawesome report is a reporting framework for Mocha tests. It provides a detai
 
 ### [Error Categorization Report](/support/docs/error-categorization-report/)
 
+The Error Categorization Report serves as a tailored solution designed to assist users in classifying errors based on failed tests, fostering a systematic and lucid understanding of test failures with shared characteristics. Its primary objective is to streamline the process of pinpointing problematic stages and associated tests, offering users the ability to seamlessly navigate through detailed views and download pertinent information for in-depth analysis.
+
 ### Cypress Report
 
 Cypress Reports is a reporting framework for Cypress tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
