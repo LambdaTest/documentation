@@ -65,17 +65,19 @@ Cucumber Reports is a reporting framework for Cucumber tests. It provides a deta
 
 Playwright HTML is a reporting framework for Playwright tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
 
-### Cypress Report
-
-Cypress Reports is a reporting framework for Cypress tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
-
 ### [Specflow](/support/docs/specflow-report/)
 
 Specflow is a testing framework for BDD (Behavior Driven Development). It can be used with a variety of programming languages, including C#, Java, and Ruby. Specflow reports provide a detailed overview of the test execution, including feature summaries, scenario summaries, step summaries, screenshots and videos of test execution, and execution logs.
 
-### [Mochaawesome Report](/support/docs/cypress-mochaawesome-report/)
+### [Cypress Mochawesome Report](/support/docs/cypress-mochaawesome-report/)
 
-Mochaawesome report is a reporting framework for Mocha tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, and execution logs.
+Mochawesome report is a reporting framework for Mocha tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, and execution logs.
+
+### [Error Categorization Report](/support/docs/error-categorization-report/)
+
+### Cypress Report
+
+Cypress Reports is a reporting framework for Cypress tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
 
 ### Junit Report
 

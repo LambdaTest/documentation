@@ -669,41 +669,6 @@ module.exports = {
                   "hyperexecute-browser-list-api"
                 ],
               },
-              // {
-              //   type: "doc",
-              //   label: "How to Get my Username & Access Key",
-              //   id: "hyperexecute-how-to-get-my-username-and-access-key",
-              // },
-              // {
-              //   type: "doc",
-              //   label: "HyperExecute Environment Variable Setup",
-              //   id: "hyperexecute-environment-variable-setup",
-              // },
-              // {
-              //   type: "doc",
-              //   label: "How to Manage Secrets in HyperExecute",
-              //   id: "hyperexecute-how-to-save-and-manage-secrets",
-              // },
-              // {
-              //   type: "doc",
-              //   label: "How to Configure Tunnel",
-              //   id: "hyperexecute-how-to-configure-tunnel",
-              // },
-              // {
-              //   type: "doc",
-              //   label: "How to Find Correct Concurrency",
-              //   id: "hyperexecute-how-to-find-correct-concurrency",
-              // },
-              // {
-              //   type: "doc",
-              //   label: "How to configure sourcePayload",
-              //   id: "hyperexecute-how-to-configure-sourcePayload",
-              // },
-              // {
-              // type: "doc",
-              // label: "How to List Supported Browser in HyperExecute via API",
-              // id: "hyperexecute-browser-list-api",
-              // },
               {
                 type: "category",
                 collapsed: true,
@@ -736,6 +701,7 @@ module.exports = {
                   "playwright-html-report",
                   "specflow-report",
                   "cypress-mochaawesome-report",
+                  "error-categorization-report"
                 ]
               },
 
