@@ -45,25 +45,47 @@ HyperExecute reports are a powerful tool for analyzing the quality of your build
 
 HyperExecute supports a wide variety of test reports, including:
 
-- [**Extent Reports:**](/support/docs/extent-report/) Extent Reports is a popular reporting framework for Java, TestNG, and Selenium tests. It provides a comprehensive set of features for reporting test results, including detailed test case summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
+### [Extent Report](/support/docs/extent-report/)
 
-- [**Extent Native:**](/support/docs/native-extent-report/) Extent Native is a newer reporting framework from the Extent Reports team. It provides a native reporting experience for Java, TestNG, and Selenium tests. Extent Native reports are interactive and responsive, and they can be viewed on any device. They also include features such as drill-down analysis, custom filters, and real-time updates.
+Extent Reports is a popular reporting framework for Java, TestNG, and Selenium tests. It provides a comprehensive set of features for reporting test results, including detailed test case summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
 
-- [**Allure:**](/support/docs/allure-reports/) Allure is a cross-platform reporting framework that can be used with a variety of testing frameworks and languages. It provides a rich reporting experience with features such as interactive and responsive reports, drill-down analysis, custom filters, real-time updates, and integration with CI/CD tools.
+### [Extent Native](/support/docs/native-extent-report/) 
 
-- [**Cucumber Reports:**](/support/docs/cucumber-report/) Cucumber Reports is a reporting framework for Cucumber tests. It provides a detailed overview of the test execution, including test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
+Extent Native is a newer reporting framework from the Extent Reports team. It provides a native reporting experience for Java, TestNG, and Selenium tests. Extent Native reports are interactive and responsive, and they can be viewed on any device. They also include features such as drill-down analysis, custom filters, and real-time updates.
 
-- [**Playwright HTML:**](/support/docs/playwright-html-report/) Playwright HTML is a reporting framework for Playwright tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
+### [Allure Report](/support/docs/allure-reports/) 
 
-- **Cypress Reports:** Cypress Reports is a reporting framework for Cypress tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
+Allure is a cross-platform reporting framework that can be used with a variety of testing frameworks and languages. It provides a rich reporting experience with features such as interactive and responsive reports, drill-down analysis, custom filters, real-time updates, and integration with CI/CD tools.
 
-- [**Specflow:**](/support/docs/specflow-report/) Specflow is a testing framework for BDD (Behavior Driven Development). It can be used with a variety of programming languages, including C#, Java, and Ruby. Specflow reports provide a detailed overview of the test execution, including feature summaries, scenario summaries, step summaries, screenshots and videos of test execution, and execution logs.
+### [Cucumber Report](/support/docs/cucumber-report/)
 
-- [**Mochaawesome report:**](/support/docs/cypress-mochaawesome-report/) Mochaawesome report is a reporting framework for Mocha tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, and execution logs.
+Cucumber Reports is a reporting framework for Cucumber tests. It provides a detailed overview of the test execution, including test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
 
-- **Junit Report:** Junit Report is a reporting framework for Junit tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, and execution logs.
+### [Playwright HTML](/support/docs/playwright-html-report/)
 
-- **Specflow Custom:** Specflow Custom reports are custom reports that can be generated using the Specflow reporting API. You can use the Specflow reporting API to generate reports in any format you want, such as HTML, PDF, or XML.
+Playwright HTML is a reporting framework for Playwright tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
+
+### [Specflow](/support/docs/specflow-report/)
+
+Specflow is a testing framework for BDD (Behavior Driven Development). It can be used with a variety of programming languages, including C#, Java, and Ruby. Specflow reports provide a detailed overview of the test execution, including feature summaries, scenario summaries, step summaries, screenshots and videos of test execution, and execution logs.
+
+### [Cypress Mochawesome Report](/support/docs/cypress-mochaawesome-report/)
+
+Mochawesome report is a reporting framework for Mocha tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, and execution logs.
+
+### [Error Categorization Report](/support/docs/error-categorization-report/)
+
+### Cypress Report
+
+Cypress Reports is a reporting framework for Cypress tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
+
+### Junit Report
+
+Junit Report is a reporting framework for Junit tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, and execution logs.
+
+### Specflow Custom
+
+Specflow Custom reports are custom reports that can be generated using the Specflow reporting API. You can use the Specflow reporting API to generate reports in any format you want, such as HTML, PDF, or XML.
 
 ## Benefits of Using HyperExecute Reports
 
@@ -89,7 +111,7 @@ To use HyperExecute reports, simply follow these steps:
 
 **Step 4:** Analyze the test results and identify any areas where improvement is needed. -->
 
-Tips for Using HyperExecute Reports Effectively:
+Tips for Using HyperExecute Reports Effectively
 
 :::tip
 Different HyperExecute reports provide different information. Choose the report that is most relevant to your needs. For example, if you want to quickly identify which tests failed, you would use the Summary Report
