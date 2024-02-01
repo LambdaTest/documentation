@@ -1905,14 +1905,22 @@ module.exports = {
           id: "smart-ui-cypress",
         },
         {
-          type: "doc",
-          label: "Setup with Playwright",
-          id: "playwright-visual-regression",
+          type: "category",
+          collapsed: true,
+          label: "Playwright",
+          items: [
+                "smartui-playwright-sdk",
+                "playwright-visual-regression"
+          ],
         },
         {
-          type: "doc",
-          label: "Setup with Puppeteer",
-          id: "puppeteer-visual-regression",
+          type: "category",
+          collapsed: true,
+          label: "Puppeteer",
+          items: [
+                "smartui-puppeteer-sdk",
+                "puppeteer-visual-regression"
+          ]
         },
         {
           type: "doc",
