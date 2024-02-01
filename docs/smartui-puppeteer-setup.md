@@ -1,7 +1,7 @@
 ---
 id: puppeteer-visual-regression
 title: Getting started with Smart UI using Puppeteer
-sidebar_label: Puppeteer
+sidebar_label: LambdaTest Hooks
 description: Learn Puppeteer Visual Regression Set up Smart UI, run tests on LambdaTest Cloud across 40+ browsers. Step-by-step guide for seamless testing.
 keywords:
   - Visual Regression

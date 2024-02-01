@@ -1,7 +1,7 @@
 ---
-id: smartui-selenium-js-sdk
-title: Integrate SmartUI SDK with Selenium Tests
-sidebar_label: Javascript
+id: smartui-puppeteer-sdk
+title: Integrate SmartUI SDK with Puppeteer Tests
+sidebar_label: SDK
 description: In this documentation, learn how integrate your Selenium Javascript automated tests with LambdaTest's SmartUI.
 keywords:
   - Visual Regression
@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.lambdatest.com/support/docs/smartui-cli/
-slug: smartui-selenium-js-sdk/
+slug: smartui-puppeteer-sdk/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -76,18 +76,18 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `sdkCloud.js` file present in the `sdk` folder.
+You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `puppeteerCloud.js` file present in the `sdk` folder.
 
 ```bash
-git clone https://github.com/LambdaTest/smartui-node-sample
-cd smartui-node-sample/sdk
+git clone https://github.com/LambdaTest/smartui-puppeteer-sample
+cd smartui-puppeteer-sample/sdk
 ```
 ### **Step 2**: Install the Dependencies
 
 Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
 
 ```bash
-npm i @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+npm i @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
 ```
 
 ### **Step 3:** Configure your Project Token
@@ -192,20 +192,26 @@ To capture a screenshot of the content currently visible in your viewport, rathe
   
 
 ```js
-const { Builder, By, Key, until } = require('selenium-webdriver');
-const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
+const puppeteer = require("puppeteer");
+const { smartuiSnapshot } = require('@lambdatest/puppeteer-driver'); // Assuming you still want to use smartuiSnapshot locally
 
-(async function example() {
-  let driver = await new Builder().forBrowser("chrome").build();
+(async () => {
+  // Launch a browser instance locally
+  const browser = await puppeteer.launch({
+    headless: false, // Set to false to see the UI
+    args: ['--start-maximized'], // Start browser maximized, remove if not needed
+  });
+  const page = await browser.newPage();
+  await page.setViewport({ width: 1280, height: 720 }); // Set viewport size as needed
 
-  try {
-    await driver.get("https://www.lambdatest.com");
-    await smartuiSnapshot(driver, "Lambdatest");
-    await driver.get("https://www.pinterest.com/pin/112801165652823604/");
-    await smartuiSnapshot(driver, "NYC");
-  } finally {
-    await driver.quit();
-  }
+  // Navigate to the desired URL
+  await page.goto('https://www.lambdatest.com');
+
+  // Take a screenshot with Smart UI. Replace "LT-Home" with a relevant name for your use case
+  await smartuiSnapshot(page, "LT-Home");
+
+  // Close the browser
+  await browser.close();
 })();
 ```
 
@@ -214,7 +220,7 @@ const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui exec node sdkCloud.js --config smartui-web.json
+npx smartui exec node puppeteerCloud.js --config smartui-web.json
 ```
 
 :::note 
@@ -249,54 +255,54 @@ When conducting visual tests, you may encounter scenarios where certain elements
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
-```js title="This is a sample for your configuration for Javascript to ignore by ID"
+```js title="This is a sample for your configuration for Puppeteer to ignore by ID"
 options = {
             ignoreDOM: {
                 id: ["ID-1", "ID-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(driver, 'Screenshot Name', options);
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
 ```
 
 </TabItem>
 <TabItem value="IgoreClass" label="Ignore Class">
 
-```js title="This is a sample for your configuration for Javascript to ignore by Class"
+```js title="This is a sample for your configuration for Puppeteer to ignore by Class"
 options = {
             ignoreDOM: {
                 class: ["Class-1", "Class-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(driver, 'Screenshot Name', options);
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
 ```
 
 </TabItem>
 <TabItem value="IgnoreXPath" label="Ignore XPath">
 
-```js title="This is a sample for your configuration for Javascript to ignore by XPath"
+```js title="This is a sample for your configuration for Puppeteer to ignore by XPath"
 options = {
             ignoreDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(driver, 'Screenshot Name', options);
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
 ```
 
 </TabItem>
 
 <TabItem value="IgnoreSelector" label="Ignore CSS Selector">
 
-```js title="This is a sample for your configuration for Javascript to ignore by CSS Selector"
+```js title="This is a sample for your configuration for Puppeteer to ignore by CSS Selector"
 options = {
             ignoreDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(driver, 'Screenshot Name', options);
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
 ```
 </TabItem>
 
@@ -305,54 +311,54 @@ options = {
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>
 
-```js title="This is a sample for your configuration for Javascript to select by ID."
+```js title="This is a sample for your configuration for Puppeteer to select by ID."
 options = {
             selectDOM: {
                 id: ["ID-1", "ID-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(driver, 'Screenshot Name', options);
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
 ```
 
 </TabItem>
 <TabItem value="SelectClass" label="Select Class">
 
-```js title="This is a sample for your configuration for Javascript to select by Class"
+```js title="This is a sample for your configuration for Puppeteer to select by Class"
 options = {
             selectDOM: {
                 class: ["Class-1", "Class-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(driver, 'Screenshot Name', options);
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
 ```
 
 </TabItem>
 <TabItem value="SelectXPath" label="Select XPath">
 
-```js title="This is a sample for your configuration for Javascript to select by XPath"
+```js title="This is a sample for your configuration for Puppeteer to select by XPath"
 options = {
             selectDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(driver, 'Screenshot Name', options);
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
 ```
 
 </TabItem>
 
 <TabItem value="SelectSelector" label="Select CSS Selector">
 
-```js title="This is a sample for your webhook configuration for Javascript to select by CSS Selector"
+```js title="This is a sample for your webhook configuration for Puppeteer to select by CSS Selector"
 options = {
             selectDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(driver, 'Screenshot Name', options);
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
 ```
 </TabItem>
 
@@ -363,46 +369,52 @@ options = {
 If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
 
 ```js Example for scrolling to bottom for lazy elements
-const { Builder, By, Key, until } = require('selenium-webdriver');
-const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
+const puppeteer = require('puppeteer');
+const { smartuiSnapshot } = require('@lambdatest/puppeteer-driver');
 
-(async function example() {
-  let driver = await new Builder().forBrowser("chrome").build();
+(async () => {
+  const browser = await puppeteer.launch({ headless: false }); // Launches a browser
+  const page = await browser.newPage(); // Opens a new page
 
   try {
-    await driver.get("Required URL");
+    await page.goto('Required URL'); // Navigate to the required URL
+
+    // Function to scroll to the bottom of the page
     async function quickScrollToBottom(lastPageWait) {
-      try {
-          let height = await driver.executeScript("return document.body.scrollHeight");
-          let heightOfPage = parseInt(height, 10);
-          let size = 200;
-          let noOfLoop = Math.floor(heightOfPage / size);
-          
-          for (let i = 1; i <= noOfLoop; i++) {
-              await driver.executeScript(`window.scrollTo(${(i - 1) * size}, ${i * size})`);
-              await new Promise(resolve => setTimeout(resolve, 1000));
-              if (i === noOfLoop) {
-                  
-                  await driver.executeScript(`window.scrollTo(${i * size}, ${heightOfPage})`);
-                  await new Promise(resolve => setTimeout(resolve, lastPageWait));
-              }
+      await page.evaluate(async (lastPageWait) => {
+        const scrollToBottom = async (lastPageWait) => {
+          const getScrollHeight = () => document.body.scrollHeight;
+          let lastHeight = await getScrollHeight();
+          let currentHeight = 0;
+
+          while (currentHeight < lastHeight) {
+            window.scrollTo(0, lastHeight);
+            await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for the page to load more content
+            currentHeight = lastHeight;
+            lastHeight = await getScrollHeight();
           }
-  
-          // Now scroll to the top
-          await driver.executeScript("window.scrollTo(0,0)");
-          await new Promise(resolve => setTimeout(resolve, 10000));
-          console.log("Scroll Completed");
-      } catch (e) {
-          console.log("Got some errors" + e.toString());
-      }
-  }
-    await quickScrollToBottom(100); //use wait time accordingly
-    await smartuiSnapshot(driver, "Screenshot Name");
+
+          if (lastPageWait) {
+            await new Promise(resolve => setTimeout(resolve, lastPageWait)); // Additional wait at the bottom
+          }
+
+          // Scroll back to the top after reaching the bottom
+          window.scrollTo(0, 0);
+          await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for scroll to top
+        };
+        await scrollToBottom(lastPageWait);
+      }, lastPageWait);
+    }
+
+    await quickScrollToBottom(100); // Adjust the wait time as needed
+
+    // Taking a screenshot with Smart UI
+    await smartuiSnapshot(page, "Screenshot Name");
+
   } finally {
-    await driver.quit();
+    await browser.close(); // Close the browser
   }
 })();
-
 ```
 
 
