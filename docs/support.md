@@ -50,7 +50,8 @@ slug: /
 <p>Ensure your web-apps work seamlessly on <br /> every desktop and mobile browsers</p>
 </div>
 <div className="Doc_intro_cta_image">
-<img  loading="eager" src={require('../assets/images/support/home_light.png').default} alt="Image" width="701" height="576" className="home_image" role="presentation"/>
+<img  loading="eager" src={require('../assets/images/support/home_light.png').default} alt="Image" width="701" height="576" className="home_light_cta" role="presentation"/>
+<img  loading="eager" src={require('../assets/images/support/home_dark.png').default} alt="Image" width="701" height="576" className="home_dark_cta" role="presentation"/>
 </div>
 </div>
 
@@ -59,10 +60,10 @@ slug: /
 <!-- start of first section -->
 
   <div className="home_main">
-      <h2 className='homeMain_h2'>Web Automation</h2>
-      <h2 className='homeMain_h2'>App Automation</h2> 
-      <h2 className='homeMain_h2'>HyperExecute</h2>
-      <h2 className='homeMain_h2'>Analytics</h2>
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/automation-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/automation-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Web Automation</h2>
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/appAutomation-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/appAutomation-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>App Automation</h2> 
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/hyp-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/hyp-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>HyperExecute</h2>
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/analytics-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/analytics-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Analytics</h2>
   </div>
 
   <div className="home_inners">
@@ -112,10 +113,10 @@ slug: /
 <!-- start of second section -->
 
   <div className="home_main">
-    <h2 className='homeMain_h2'>Visual UI</h2>
-    <h2 className='homeMain_h2'>Real Time</h2>
-    <h2 className='homeMain_h2'>Testing Locally</h2>
-    <h2 className='homeMain_h2'>Integrations</h2>
+    <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/visual-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/visual-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Visual UI</h2>
+    <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Realtime-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Realtime-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Real Time</h2>
+    <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/testing-locally-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Testing Locally</h2>
+    <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Integration-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Integration-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Integrations</h2>
   </div>
 
   <div className="home_inners">
@@ -170,8 +171,8 @@ slug: /
 
 <!-- start of third section -->
   <div className="home_main">
-    <h2 className='homeMain_h2'>Setting and Security</h2>
-    <h2 className='homeMain_h2'>Other Docs</h2>
+    <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Setting and Security</h2>
+    <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/other-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/other-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Other Docs</h2>
   </div>
 
   <div className="home_inners">

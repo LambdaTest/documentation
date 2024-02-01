@@ -28,10 +28,15 @@
    display: block;
  }
 
- [data-theme=dark] .footer_light_logo {
+ [data-theme=dark] .footer_light_logo{
    display: none;
  }
-
+ [data-theme=dark] .home_dark_cta {
+  display: block;
+}
+[data-theme=dark] .home_light_cta{
+  display: none;
+}
  [data-theme=dark] .footer__link-item:hover {
    color: #1E8287;
  }
@@ -977,7 +982,7 @@
    width: 147px;
  }
 
- .footer_dark_logo {
+ .footer_dark_logo,.home_dark_cta {
    display: none;
  }
 
@@ -1165,11 +1170,6 @@
  [data-theme=dark] .Doc_intro_cta .Doc_intro_cta_text p {
    color: #8D949E;
  }
-/* 
- [data-theme=dark] .home_image {
-  background-image: url('../../assets/images/support/home_dark.png') !important;
- } */
-
  [data-theme=dark] .pagination-nav__sublabel {
    color: var(--ifm-footer-link-color)
  }
@@ -1873,3 +1873,9 @@
  .DocSearch-Button {
    display: none;
  }
+
+ .homeMain_h2{display: flex; align-items: center;}
+ .home_icons{margin-right: 5px;}
+ .home_dark_icon{display: none;}
+ [data-theme='dark'] .home_dark_icon{display: block;}
+ [data-theme='dark'] .home_light_icon{display: none;}
