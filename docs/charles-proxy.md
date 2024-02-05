@@ -130,7 +130,7 @@ Now you need to setup and configure the LambdaTest Tunnel through which you will
 
 To configure the tunnel, you need to download the **LambdaTest's Tunnel Binary File** following the steps mentioned in the pre-requisites before. You can find the shell command in the [LambdaTest Dashboard](https://accounts.lambdatest.com/dashboard) to setup a basic tunnel.
 
-<img loading="lazy" src={require('../assets/images/charles/charles2.webp').default} alt="cmd" className="doc_img" width="806" height="544"/>
+<img loading="lazy" src={require('../assets/images/charles/Charles_RD.png').default} alt="cmd" className="doc_img" width="806" height="544"/>
 
 ---
 
@@ -169,9 +169,10 @@ On clicking the **Launch** button, you will be able to start the tunnel with the
 
 <img loading="lazy" src={require('../assets/images/charles/underpass3.png').default} alt="cmd" className="doc_img"/>
 
-## Steps to Download the SSL certificate in the LambdaTest Real Device:
+## Steps to download the SSL certificate in the LambdaTest Private Real Devices:
 
 ---
+> Only for **Private Cloud** Users.
 
 **Step 1:** Launch the session with the tunnel which we have enabled and visit http://chls.pro/ssl site to download the SSL certificate.
 
@@ -184,7 +185,7 @@ On clicking the **Launch** button, you will be able to start the tunnel with the
 <img loading="lazy" src={require('../assets/images/charles/real_device_ssl1.png').default} alt="cmd" className="doc_img"/>
 
 
-**Step 4:** Click on "Install Anyway"
+**Step 4:** Confirm installation by clicking "Install Anyway" when prompted.
 
 <img loading="lazy" src={require('../assets/images/charles/real_device_ssl2.png').default} alt="cmd" className="doc_img"/>
 

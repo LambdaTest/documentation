@@ -111,7 +111,8 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 | 4g-lte-advanced-good     | 25 Mbps         | 12 Mbps      | 20 ms   |
 | default                  | NA             | NA          | NA     |
 
----
+> Download speed is currently stable, expect additional feature updates shortly.
+
 ### Custom Profiles
 
 - **LambdaHook:** Define and implement custom network profiles with LambdaHook by specifying the maximum download speed (kbps), maximum upload speed (kbps), and latency (ms) for the custom condition, as illustrated in the example.
