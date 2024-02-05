@@ -423,11 +423,6 @@ module.exports = {
               ]
             },
             {
-              type: "doc",
-              label: "Maestro",
-              id: "hyperexecute-maestro-testing",
-            },
-            {
               type: "category",
               collapsed: true,
               label: "Troubleshooting Guide",
