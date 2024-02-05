@@ -638,7 +638,7 @@
  }
 
   .primary_main {
-    margin-top: 50px !important;
+    margin-top: 40px !important;
   }
 
  
@@ -1870,7 +1870,8 @@
  .home_dark_icon{display: none;}
  [data-theme='dark'] .home_dark_icon{display: block;}
  [data-theme='dark'] .home_light_icon{display: none;}
- .home_main {display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-gap: 0px 20px; margin-top: 50px; margin-bottom: 16px !important;}
+ .home_main {display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-gap: 0px 20px;}
+ .home_inners_box{ margin-top: 30px; margin-bottom: 16px !important;}
 @media (max-width: 767px) {
   .home_main{display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
