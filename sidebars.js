@@ -426,7 +426,21 @@ module.exports = {
               type: "doc",
               label: "Maestro",
               id: "hyperexecute-maestro-testing",
-            }
+            },
+            {
+              type: "category",
+              collapsed: true,
+              label: "Troubleshooting Guide",
+              link: {
+                type: "doc",
+                id: "hyperexecute-how-to-debug-job",
+              },
+              items: [
+                "hyperexecute-cli-error",
+                "hyperexecute-pre-steps-error",
+                "hyperexecute-scenario-steps-error",
+              ],
+            },
           ],
         },
         {
@@ -690,17 +704,6 @@ module.exports = {
                   "hyperexecute-test-widgets",
                   "hyperexecute-resource-widgets"
                 ]
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Debugging Guide",
-                items: [
-                  "hyperexecute-how-to-debug-job",
-                  "hyperexecute-cli-error",
-                  "hyperexecute-pre-steps-error",
-                  "hyperexecute-scenario-steps-error",
-                ],
               },
               {
                 type: "category",
