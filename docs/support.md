@@ -42,8 +42,6 @@ slug: /
     }}
 ></script>
 
-
-
 <div className="Doc_intro_cta">
 <div className="Doc_intro_cta_text">
 <h1>LambdaTest Support and Knowledge Base</h1>
@@ -60,140 +58,129 @@ slug: /
 <!-- start of first section -->
 
   <div className="home_main">
+    <div className="home_inners_box">
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/automation-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/automation-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Web Automation</h2>
+      <div className="home_inners">
+        <a href="/docs/getting-started-with-lambdatest-automation/"><p className="p_home_inners">Selenium Testing</p></a>
+        <a href="/docs/getting-started-with-cypress-testing/"><p className="p_home_inners">Cypress Testing</p></a>
+        <a href="/docs/playwright-testing/"><p className="p_home_inners">Playwright Testing</p></a>
+        <a href="/docs/puppeteer-testing/"><p className="p_home_inners">Puppeteer Testing</p></a>
+        <a href="/docs/k6-browser-testing/"><p className="p_home_inners">K6 Testing</p></a>
+      </div>
+    </div>
+   <div className="home_inners_box">
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/appAutomation-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/appAutomation-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>App Automation</h2> 
+      <div className="home_inners">
+        <a href="/docs/getting-started-with-appium-testing/"><p className="p_home_inners">Appium Testing</p></a>
+        <a href="/docs/getting-started-with-espresso-testing/"><p className="p_home_inners">Espresso Testing</p></a>
+        <a href="/docs/getting-started-with-xcuitest/"><p className="p_home_inners">XCUI Testing</p></a>
+        <a href="/docs/app-automation-on-emulators-simulators/"><p className="p_home_inners">Virtual Devices</p></a>
+      </div>
+    </div>
+   <div className="home_inners_box">
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/hyp-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/hyp-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>HyperExecute</h2>
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/analytics-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/analytics-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Analytics</h2>
-  </div>
-
-  <div className="home_inners">
-    <a href="/docs/getting-started-with-lambdatest-automation/"><p className="p_home_inners">Selenium Testing</p></a>
-    <a href="/docs/getting-started-with-appium-testing/"><p className="p_home_inners">Appium Testing</p></a>
-    <a href="/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Getting Started</p></a>
-    <a href="/docs/analytics-dashboard-templates/"><p className="p_home_inners">Dashboard Templates</p></a>
-  </div>
-
-  <div className="home_inners">
-    <a href="/docs/getting-started-with-cypress-testing/"><p className="p_home_inners">Cypress Testing</p></a>
-    <a href="/docs/getting-started-with-espresso-testing/"><p className="p_home_inners">Espresso Testing</p></a>
-    <a href="/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
-    <a href="/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboard</p></a>
-  </div>
-
-  <div className="home_inners">
-    <a href="/docs/playwright-testing/"><p className="p_home_inners">Playwright Testing</p></a>
-    <a href="/docs/getting-started-with-xcuitest/"><p className="p_home_inners">XCUI Testing</p></a>
-    <a href="/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
-    <a href="/docs/analytics-widgets/"><p className="p_home_inners">Analytics Widgets</p></a>
-  </div>
-
-  <div className="home_inners">
-    <a href="/docs/puppeteer-testing/"><p className="p_home_inners">Puppeteer Testing</p></a>
-    <a href="/docs/app-automation-on-emulators-simulators/"><p className="p_home_inners">Virtual Devices</p></a>
-    <a href="/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
-    <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test</p></a>
-  </div>
-
-  <div className="home_inners">
-    <a href="/docs/k6-browser-testing/"><p className="p_home_inners">K6 Testing</p></a>
-    <p className="p_home_inners"></p>
+      <div className="home_inners">
+        <a href="/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Getting Started</p></a>
+        <a href="/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
+        <a href="/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
+        <a href="/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
     <a href="/docs/integration-with-hyperexecute/"><p className="p_home_inners">Integrations</p></a>
-    <a href="/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Command Logs Analytics</p></a>
+     <a href="/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
+      </div>
+    </div>
+    <div className="home_inners_box">
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/analytics-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/analytics-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Analytics</h2>
+      <div className="home_inners">
+        <a href="/docs/analytics-dashboard-templates/"><p className="p_home_inners">Dashboard Templates</p></a>
+        <a href="/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboard</p></a>
+        <a href="/docs/analytics-widgets/"><p className="p_home_inners">Analytics Widgets</p></a>
+        <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test</p></a>
+        <a href="/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Command Logs Analytics</p></a>
+        <a href="/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
+      </div>
+    </div>
   </div>
 
-  <div className="home_inners">
-  <p className="p_home_inners"></p>
-  <p className="p_home_inners"></p>
-  <a href="/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
-  <a href="/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
-</div>
 
 <!-- end of first section -->
 
 <!-- start of second section -->
 
-  <div className="home_main">
-    <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/visual-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/visual-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Visual UI</h2>
-    <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Realtime-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Realtime-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Real Time</h2>
-    <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/testing-locally-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Testing Locally</h2>
-    <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Integration-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Integration-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Integrations</h2>
+<div className="home_main">
+   <div className="home_inners_box">
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/visual-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/visual-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Visual UI</h2>
+      <div className="home_inners">
+        <a href="/docs/smart-visual-regression-testing/"><p className="p_home_inners">Smart UI</p></a>
+        <a href="/docs/smartui-cli/"><p className="p_home_inners">CLI</p></a>
+        <a href="/docs/smartui-upload-api-v2/"><p className="p_home_inners">Upload through API</p></a>
+        <a href="/docs/smartui-pdf-comparison/"><p className="p_home_inners">Samrt PDF Comparison</p></a>
+        <a href="/docs/smart-ui-build-options/"><p className="p_home_inners">Build Config and Options</p></a>
+        <a href="/docs/test-settings-options/"><p className="p_home_inners">Advance Comparison</p></a>
+        <a href="/docs/html-dom-smartui-options/"><p className="p_home_inners">Handling Dynamic Data</p></a>
+      </div>
+    </div>
+    <div className="home_inners_box">
+       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Realtime-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Realtime-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Real Time</h2>
+      <div className="home_inners">
+        <a href="/docs/real-time-browser-testing/" ><p className="p_home_inners">Desktop Browser Testing</p></a>
+        <a href="/docs/webview-testing-in-android/"><p className="p_home_inners">Mobile Browser Testing</p></a>
+        <a href="/docs/live-interactive-mobile-app-testing/"><p className="p_home_inners">Mobile App Testing</p></a>
+         <a href="/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>
+      </div>
+    </div>
+    <div className="home_inners_box">
+       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/testing-locally-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Testing Locally</h2>
+      <div className="home_inners">
+        <a href="/docs/testing-locally-hosted-pages/"><p className="p_home_inners">Testing Locally Hosted Pages</p></a>
+        <a href="/docs/getting-started-with-lambdatest-automation/"><p className="p_home_inners">LambdaTest Tunnel</p></a>
+        <a href="/docs/docker-tunnel/"><p className="p_home_inners">Docker Tunnel</p></a>
+        <a href="/docs/troubleshooting-lambda-tunnel/"><p className="p_home_inners">Troubleshooting Tunnel</p></a>
+        <a href="/docs/load-balancing-in-lambda-tunnel/"><p className="p_home_inners">Load Balancing in Tunnel</p></a>
+        <a href="/docs/dedicated-proxy/"><p className="p_home_inners">IP Whitelisting</p></a>
+        <a href="/docs/charles-proxy/"><p className="p_home_inners">Charles Proxy</p></a>
+      </div>
+    </div>
+    <div className="home_inners_box">
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Integration-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Integration-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Integrations</h2>
+      <div className="home_inners">
+        <a href="/docs/bug-tracking-tools/"><p className="p_home_inners">Bug Tracking</p></a>
+        <a href="/docs/integrations-with-project-management-tools/"><p className="p_home_inners">Project Management</p></a>
+        <a href="/docs/integrations-with-ci-cd-tools/"><p className="p_home_inners">CI / CD Integration</p></a>
+        <a href="/docs/integrate-test-reporting-test-management-tools/"><p className="p_home_inners">Test Reporting</p></a>
+        <a href="/docs/team-communication-tools/"><p className="p_home_inners">Communication Tools</p></a>
+        <a href="/docs/plugins-and-extensions/"><p className="p_home_inners">Plugin and Extensions</p></a>
+      </div>
+    </div>
   </div>
-
-  <div className="home_inners">
-    <a href="/docs/smart-visual-regression-testing/"><p className="p_home_inners">Smart UI</p></a>
-    <a href="/docs/real-time-browser-testing/" ><p className="p_home_inners">Desktop Browser Testing</p></a>
-    <a href="/docs/testing-locally-hosted-pages/"><p className="p_home_inners">Testing Locally Hosted Pages</p></a>
-    <a href="/docs/bug-tracking-tools/"><p className="p_home_inners">Bug Tracking</p></a>
-  </div>
-
-  <div className="home_inners">
-    <a href="/docs/smartui-cli/"><p className="p_home_inners">CLI</p></a>
-    <a href="/docs/webview-testing-in-android/"><p className="p_home_inners">Mobile Browser Testing</p></a>
-    <a href="/docs/getting-started-with-lambdatest-automation/"><p className="p_home_inners">LambdaTest Tunnel</p></a>
-    <a href="/docs/integrations-with-project-management-tools/"><p className="p_home_inners">Project Management</p></a>
-  </div>
-
-  <div className="home_inners">
-    <a href="/docs/smartui-upload-api-v2/"><p className="p_home_inners">Upload through API</p></a>
-    <a href="/docs/live-interactive-mobile-app-testing/"><p className="p_home_inners">Mobile App Testing</p></a>
-    <a href="/docs/docker-tunnel/"><p className="p_home_inners">Docker Tunnel</p></a>
-    <a href="/docs/integrations-with-ci-cd-tools/"><p className="p_home_inners">CI / CD Integration</p></a>
-  </div>
-
-  <div className="home_inners">
-    <a href="/docs/smartui-pdf-comparison/"><p className="p_home_inners">Samrt PDF Comparison</p></a>
-    <a href="/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>
-    <a href="/docs/troubleshooting-lambda-tunnel/"><p className="p_home_inners">Troubleshooting Tunnel</p></a>
-    <a href="/docs/integrate-test-reporting-test-management-tools/"><p className="p_home_inners">Test Reporting</p></a>
-  </div>
-
-  <div className="home_inners">
-    <a href="/docs/smart-ui-build-options/"><p className="p_home_inners">Build Config and Options</p></a>
-    <p className="p_home_inners"></p>
-    <a href="/docs/load-balancing-in-lambda-tunnel/"><p className="p_home_inners">Load Balancing in Tunnel</p></a>
-    <a href="/docs/team-communication-tools/"><p className="p_home_inners">Communication Tools</p></a>
-  </div>
-
-  <div className="home_inners">
-    <a href="/docs/test-settings-options/"><p className="p_home_inners">Advance Comparison</p></a>
-    <p className="p_home_inners"></p>
-    <a href="/docs/dedicated-proxy/"><p className="p_home_inners">IP Whitelisting</p></a>
-    <a href="/docs/plugins-and-extensions/"><p className="p_home_inners">Plugin and Extensions</p></a>
-  </div>
-
-  <div className="home_inners">
-  <a href="/docs/html-dom-smartui-options/"><p className="p_home_inners">Handling Dynamic Data</p></a>
-  <p className="p_home_inners"></p>
-  <a href="/docs/charles-proxy/"><p className="p_home_inners">Charles Proxy</p></a>
-</div>
 
 <!-- end of second section -->
 
 <!-- start of third section -->
-  <div className="home_main">
-    <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Setting and Security</h2>
-    <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/other-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/other-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Other Docs</h2>
-  </div>
 
-  <div className="home_inners">
-    <a href="/docs/account-management/"><p className="p_home_inners">Account Management</p></a>
-    <a href="/docs/lt-browser/"><p className="p_home_inners">LT Browser</p></a>
-  </div>
-
-  <div className="home_inners">
-    <a href="/docs/single-sign-on/"><p className="p_home_inners">Single Sign On</p></a>
-    <a href="/docs/test-management/"><p className="p_home_inners">Test Management</p></a>
-  </div>
-
-  <div className="home_inners">
-  <a href="/docs/scim/"><p className="p_home_inners">SCIM</p></a>
-  <a href="/docs/test-intelligence-overview/"><p className="p_home_inners">Test Intelligence</p></a>
+<div className="home_main">
+    <div className="home_inners_box">
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Setting and Security</h2>
+      <div className="home_inners">
+        <a href="/docs/account-management/"><p className="p_home_inners">Account Management</p></a>
+        <a href="/docs/single-sign-on/"><p className="p_home_inners">Single Sign On</p></a>
+        <a href="/docs/scim/"><p className="p_home_inners">SCIM</p></a>
+      </div>
+    </div>
+    <div className="home_inners_box">
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/other-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/other-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Other Docs</h2>
+      <div className="home_inners">
+        <a href="/docs/lt-browser/"><p className="p_home_inners">LT Browser</p></a>
+        <a href="/docs/test-management/"><p className="p_home_inners">Test Management</p></a>
+        <a href="/docs/test-intelligence-overview/"><p className="p_home_inners">Test Intelligence</p></a>
+      </div>
+    </div>
 </div>
+
 
 <!-- end of third section -->
 </div>
 
-<!-- <div className="support_main">  
+<!-- <div className="support_main">
   <a href="/docs/getting-started-with-lambdatest-automation/">
     <div className="support_inners">
       <h3>Selenium Testing</h3>
@@ -253,7 +240,7 @@ slug: /
       <h3>API Reference</h3>
       <p>API to scalable Selenium testing infrastructure for agile teams.</p>
     </div>
-  </a>  
+  </a>
   <a href="/docs/inside-lambdatest-platform/">
     <div className="support_inners">
       <h3>LambdaTest Platform Basics</h3>
@@ -298,7 +285,7 @@ slug: /
   </a>
 </div>
 
-<div className="support_h2">  
+<div className="support_h2">
 
 ## Live Interactive Testing
 
@@ -307,13 +294,13 @@ slug: /
 
 <div className="support_main">
   <a href="/docs/real-time-browser-testing/">
-    <div className="support_inners"> 
+    <div className="support_inners">
       <h3>Real Time Testing</h3>
       <p>Troubleshoot problems encountered while performing Real Time test.</p>
     </div>
   </a>
   <a href="/docs/mark-as-bug-in-automation-testing/">
-    <div className="support_inners"> 
+    <div className="support_inners">
       <h3>Mark As Bug</h3>
       <p>One click bug logging to bug tracking and project management tool.</p>
     </div>
@@ -356,7 +343,7 @@ slug: /
   </a>
 </div>
 
-<div className="support_h2">  
+<div className="support_h2">
 
 ## LT Browser
 
@@ -372,7 +359,7 @@ slug: /
   </a>
 </div>
 
-<div className="support_h2">   
+<div className="support_h2">
 
 ## Visual Testing
 
@@ -412,7 +399,7 @@ slug: /
   </a>
 </div>
 
-<div className="support_h2">  
+<div className="support_h2">
 
 ## Integrations
 
@@ -458,7 +445,7 @@ slug: /
   </a>
 </div>
 
-<div className="support_h2">   
+<div className="support_h2">
 
 ## Plugins
 
@@ -480,7 +467,7 @@ slug: /
   </a>
 </div>
 
-<div className="support_h2">   
+<div className="support_h2">
 
 ## List Of Browsers
 
@@ -496,7 +483,7 @@ slug: /
   </a>
 </div>
 
-<div className="support_h2">   
+<div className="support_h2">
 
 ## List Of Real Devices
 
@@ -512,7 +499,7 @@ slug: /
   </a>
 </div>
 
-<div className="support_h2">   
+<div className="support_h2">
 
 ## Issue Tracker
 
@@ -528,7 +515,7 @@ slug: /
   </a>
 </div>
 
-<div className="support_h2">   
+<div className="support_h2">
 
 ## Test Logs
 
@@ -544,7 +531,7 @@ slug: /
   </a>
 </div>
 
-<div className="support_h2">   
+<div className="support_h2">
 
 ## Developer Tools
 
@@ -560,7 +547,7 @@ slug: /
   </a>
 </div>
 
-<div className="support_h2">   
+<div className="support_h2">
 
 ## Test Localhost or Private Page
 

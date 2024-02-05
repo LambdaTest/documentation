@@ -641,22 +641,7 @@
     margin-top: 50px !important;
   }
 
-  .home_main {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-gap: 0px 20px;
-    margin-top: 50px;
-    margin-bottom: 16px !important;
-  }
-
-  .home_inners {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-gap: 0px 20px;
-    position: relative;
-    border-radius: 3px;
-  }
-
+ 
  .social_button {
    display: flex;
    flex-direction: row;
@@ -696,6 +681,7 @@
    .social_button .chat_btn {
      margin-bottom: 20px !important;
      margin-top: 20px !important;
+     padding: 12px 10px !important;
    }
 
    .Doc_intro_cta {
@@ -731,6 +717,10 @@
      padding: 8px 10px;
      margin: 26px 10px 0px;
    }
+   .social_button .chat_btn {
+    padding: 8px 10px!important;
+    margin: 26px 10px 0px !important;
+  }
 
    .Doc_intro_cta .Doc_intro_cta_text p {
      font-size: 20px !important;
@@ -1372,10 +1362,10 @@
    font-size: 24px;
  }
 
-  .home_main>h2 {
+  .home_main h2 {
     font-weight: 600;
     color: #000;
-    font-size: 20px !important;
+    font-size: 20px;
     margin-bottom: 10px;
   }
 
@@ -1868,6 +1858,7 @@
      width: 154px !important;
      font-size: 15px;
    }
+   .home_main h2{font-size: 18px;}
  }
 
  .DocSearch-Button {
@@ -1879,3 +1870,7 @@
  .home_dark_icon{display: none;}
  [data-theme='dark'] .home_dark_icon{display: block;}
  [data-theme='dark'] .home_light_icon{display: none;}
+ .home_main {display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-gap: 0px 20px; margin-top: 50px; margin-bottom: 16px !important;}
+@media (max-width: 767px) {
+  .home_main{display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
