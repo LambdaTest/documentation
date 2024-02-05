@@ -83,44 +83,13 @@ Upload your iOS application (.ipa file) or android application (.apk file) to th
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<Tabs className="docs__val">
-  <TabItem value="MacOS" label="MacOS" default>
-
-```bash
-curl -u "shantanuw:abcdefghijklmnopqrstuvwxyz" \
---location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' \
---form 'name="Android_App"' \
---form 'appFile=@"/Users/shantanuwali/Desktop/LT_Java_Appium/proverbial_android.apk"'
-```
-
-  </TabItem>
-  <TabItem value="windows" label="Windows" default>
-
-<Tabs className="docs__val">
-<TabItem value="macos-url" label="Linux / MacOS" default>
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
---location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' \\
---form 'name="Android_App"' \\
---form 'url="https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk"'`}
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
+`}
 </CodeBlock>
 </div>
-
-</TabItem>
-
-<TabItem value="windows-url" label="Windows" default>
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-powershell">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/upload/realDevice" --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" --data-urlencode "name=Proverbial_App"`}
-</CodeBlock>
-</div>
-</TabItem>
-</Tabs>
-
-  </TabItem>
-</Tabs>
 
 :::info Note
 
