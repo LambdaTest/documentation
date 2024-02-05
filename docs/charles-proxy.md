@@ -130,7 +130,7 @@ Now you need to setup and configure the LambdaTest Tunnel through which you will
 
 To configure the tunnel, you need to download the **LambdaTest's Tunnel Binary File** following the steps mentioned in the pre-requisites before. You can find the shell command in the [LambdaTest Dashboard](https://accounts.lambdatest.com/dashboard) to setup a basic tunnel.
 
-<img loading="lazy" src={require('../assets/images/charles/charles2.webp').default} alt="cmd" className="doc_img" width="806" height="544"/>
+<img loading="lazy" src={require('../assets/images/charles/Charles_RD.png').default} alt="cmd" className="doc_img" width="806" height="544"/>
 
 ---
 
@@ -168,6 +168,30 @@ Make sure to also select **Advanced Configuration** and turn on **MITM** (Man in
 On clicking the **Launch** button, you will be able to start the tunnel with the configured proxy setup. Make sure you are running the Charles Software before launching the tunnel using Charles Proxy Port. You will be able to see the status as **"running"** once the tunnel is launched successfully.
 
 <img loading="lazy" src={require('../assets/images/charles/underpass3.png').default} alt="cmd" className="doc_img"/>
+
+## Steps to download the SSL certificate in the LambdaTest Private Real Devices:
+
+---
+> Only for **Private Cloud** Users.
+
+**Step 1:** Launch the session with the tunnel which we have enabled and visit http://chls.pro/ssl site to download the SSL certificate.
+
+**Step 2:** Visit the settings of the device and search for "CA certificate"
+
+
+
+**Step 3:** Click on CA certificate
+
+<img loading="lazy" src={require('../assets/images/charles/real_device_ssl1.png').default} alt="cmd" className="doc_img"/>
+
+
+**Step 4:** Confirm installation by clicking "Install Anyway" when prompted.
+
+<img loading="lazy" src={require('../assets/images/charles/real_device_ssl2.png').default} alt="cmd" className="doc_img"/>
+
+**Step 5:** Select the Charles Proxy SSL proxying certificate to install it.
+
+<img loading="lazy" src={require('../assets/images/charles/real_device_ssl3.png').default} alt="cmd" className="doc_img"/>
 
 ## Viewing Network Logs Through Charles Proxy
 
