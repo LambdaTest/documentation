@@ -51,14 +51,14 @@ import NewTag from '../src/component/newTag';
 
 Welcome to the world of simplified visual testing with the SmartUI SDK. 
 
-Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
+Integrating seamlessly into your existing Playwright testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
 
 ## Pre-requisites for running tests through SmartUI SDK
 
-- Basic understanding of Command Line Interface and Selenium is required.
+- Basic understanding of Command Line Interface and Playwright is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Selenium SDK integration.
+The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Playwright SDK integration.
 
 ## Create a SmartUI Project
 
@@ -84,7 +84,7 @@ cd smartui-playwright-sample/sdk
 ```
 ### **Step 2**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
+Install required NPM modules for `LambdaTest Smart UI Playwright SDK` in your **Frontend** project.
 
 ```bash
 npm i @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
@@ -188,7 +188,7 @@ To capture a screenshot of the content currently visible in your viewport, rathe
 
 ### **Step 5:** Adding SmartUI function to take screenshot
 
-- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
+- You can incorporate SmartUI into your custom `Playwright` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of Playwright script of which we would like to take the screenshot, as shown below: 
   
 
 ```js
@@ -229,7 +229,7 @@ You may use the `npx smartui --help` command in case you are facing issues durin
 
 ##  View SmartUI Results
 
-You have successfully integrated SmartUI SDK with your Selenium tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
+You have successfully integrated SmartUI SDK with your Playwright tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
 
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
