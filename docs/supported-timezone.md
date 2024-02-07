@@ -50,15 +50,15 @@ import TabItem from '@theme/TabItem';
 
 In automated testing with Appium on LambdaTest, configuring the timezone accurately is crucial for precise testing scenarios. LambdaTest provides support for various timezones, allowing users to customize their testing environments to meet specific requirements.
 
-By default, the timezone for Appium testing on LambdaTest is selected based on the device's default settings. However, users have the flexibility to explicitly specify the timezone using the **timeZone** capability in their desired capabilities.
+By default, the timezone for Appium testing on LambdaTest is selected based on the device's default settings. However, users have the flexibility to explicitly specify the timezone using the **timezone** capability in their desired capabilities.
 
 ## Timezone Configuration
 ---
-To specify the timezone for automated tests in Appium on LambdaTest, the **timeZone** capability can be utilized. This ensures that tests are executed in the desired timezone, facilitating accurate validation of application behavior across different regions.
+To specify the timezone for automated tests in Appium on LambdaTest, the **timezone** capability can be utilized. This ensures that tests are executed in the desired timezone, facilitating accurate validation of application behavior across different regions.
 
 | Capability | Type | Description                                      |
 |------------|-----------|--------------------------------------------------|
-| **timeZone**   | String    | Sets a specific timezone on the mobile device.  |            
+| **timezone**   | String    | Sets a specific timezone on the mobile device.  |            
 
 Here's an example of how to set the timezone in your Appium test script:
 
@@ -67,7 +67,7 @@ Here's an example of how to set the timezone in your Appium test script:
 // Java code example for configuring timezone in Appium tests on LambdaTest
 
 DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("timeZone", "Tonga");
+capabilities.setCapability("timezone", "Tonga");
 capabilities.setCapability("platformName", "android");
 // Add other capabilities as needed                       |
 ```
