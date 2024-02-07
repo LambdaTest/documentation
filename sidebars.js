@@ -1927,6 +1927,11 @@ module.exports = {
         },
         {
           type: "doc",
+          label: "Setup with Testcafe",
+          id: "smartui-testcafe-sdk",
+        },
+        {
+          type: "doc",
           label: "Setup with K6",
           id: "smartui-k6-setup",
         },
