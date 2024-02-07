@@ -1730,6 +1730,7 @@ module.exports = {
                 "desired-capabilities-in-appium",
                 "supported-appium-versions",
                 "list-of-supported-locales",
+                "supported-timezone",
                 "app-testing-apis",
                 "appium-lambdatest-hooks",
                 "appium-install-uninstall-lambdatest-hooks",
