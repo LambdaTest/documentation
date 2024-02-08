@@ -1,14 +1,14 @@
 ---
 id: hyperexecute-how-smart-caching-boosts-tests-speed
-title: How smart Caching helps in boosting the Speed
+title: Turbo Boost Your Tests Execution with Smart Caching
 hide_title: true
-sidebar_label: How to Turbo Boost Your Tests Execution
+sidebar_label: Turbo Boost Your Tests Execution with Smart Caching
 description: Learn how to turbo boost your tests execution using the smart caching concept in hyperexecute
 keywords:
-  - LambdaTest HyperExecute
-  - LambdaTest HyperExecute help
+  - Smart Caching
+  - LambdaTest
   - LambdaTest HyperExecute documentation
-  - How to Configure Tunnel with HyperExecute
+  - How Smart Caching turbo boost your tests execution with HyperExecute
 url: https://www.lambdatest.com/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/
 site_name: LambdaTest
 slug: hyperexecute-how-smart-caching-boosts-tests-speed/
@@ -31,7 +31,7 @@ slug: hyperexecute-how-smart-caching-boosts-tests-speed/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Integrations",
+          "name": "Use Cases",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/"
         }]
       })
