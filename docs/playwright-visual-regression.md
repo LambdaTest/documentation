@@ -1,7 +1,7 @@
 ---
 id: playwright-visual-regression
 title: Getting started with Smart UI using Playwright
-sidebar_label: Playwright
+sidebar_label: LambdaTest Hooks
 description: Master Playwright Visual Regression with our step-by-step guide. Seamlessly integrate SmartUI, enhance your testing skills, and unlock a world of possibilities.
 keywords:
   - Visual Regression
