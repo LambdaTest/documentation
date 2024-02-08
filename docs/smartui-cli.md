@@ -1,7 +1,7 @@
 ---
 id: smartui-cli
 title: Getting started with Lambdatest's Smart UI CLI 
-sidebar_label: CLI
+sidebar_label: CLI - Web
 description: In this documentation, learn how to perform Visual UI Testing using command line interface on the LambdaTest Automation Cloud across 40+ browser versions.
 keywords:
   - Visual Regression
