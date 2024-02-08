@@ -686,8 +686,17 @@ module.exports = {
                   "hyperexecute-how-to-find-correct-concurrency",
                   "hyperexecute-how-to-configure-sourcePayload",
                   "hyperexecute-browser-list-api",
-                  "hyperexecute-how-smart-caching-boosts-tests-speed"
                 ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "HyperExecute Use Cases",
+                items: [
+                  "hyperexecute-how-smart-caching-boosts-tests-speed",
+                  "hyperexecute-seamless-integration-with-tools",
+                  "hyperexecute-multi-webdriver-support"
+                ]
               },
               {
                 type: "category",
