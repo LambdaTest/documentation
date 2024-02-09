@@ -1,7 +1,7 @@
 ---
 id: smartui-puppeteer-sdk
 title: Integrate SmartUI SDK with Puppeteer Tests
-sidebar_label: SDK
+sidebar_label: Puppeteer
 description: In this documentation, learn how integrate your Puppeteer Javascript automated tests with LambdaTest's SmartUI.
 keywords:
   - Visual Regression

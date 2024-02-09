@@ -1,8 +1,8 @@
 ---
-id: smartui-playwright-sdk
-title: Integrate SmartUI SDK with Playwright Tests
-sidebar_label: Playwright
-description: In this documentation, learn how integrate your Playwright automated tests with LambdaTest's SmartUI.
+id: smartui-testcafe-sdk
+title: Integrate SmartUI SDK with Testcafe Tests
+sidebar_label: Testcafe
+description: In this documentation, learn how integrate your Testcafe automated tests with LambdaTest's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.lambdatest.com/support/docs/smartui-cli/
-slug: smartui-playwright-sdk/
+slug: smartui-testcafe-sdk/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -51,14 +51,14 @@ import NewTag from '../src/component/newTag';
 
 Welcome to the world of simplified visual testing with the SmartUI SDK. 
 
-Integrating seamlessly into your existing Playwright testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
+Integrating seamlessly into your existing Testcafe testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
 
 ## Pre-requisites for running tests through SmartUI SDK
 
-- Basic understanding of Command Line Interface and Playwright is required.
+- Basic understanding of Command Line Interface and Testcafe is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Playwright SDK integration.
+The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Testcafe SDK integration.
 
 ## Create a SmartUI Project
 
@@ -76,18 +76,18 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `plawrightCloud.js` file present in the `sdk` folder.
+You can clone the sample repository to run `Testcafe` tests with `SmartUI` and use the `testcafeSDKLocal.js` file.
 
 ```bash
-git clone https://github.com/LambdaTest/smartui-playwright-sample
-cd smartui-playwright-sample/sdk
+git clone https://github.com/LambdaTest/smartui-testcafe-sample
+cd smartui-testcafe-sample
 ```
 ### **Step 2**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI Playwright SDK` in your **Frontend** project.
+Install required NPM modules for `LambdaTest Smart UI Testcafe SDK` in your **Frontend** project.
 
 ```bash
-npm i @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
+npm i @lambdatest/smartui-cli @lambdatest/testcafe-driver testcafe
 ```
 
 ### **Step 3:** Configure your Project Token
@@ -188,30 +188,20 @@ To capture a screenshot of the content currently visible in your viewport, rathe
 
 ### **Step 5:** Adding SmartUI function to take screenshot
 
-- You can incorporate SmartUI into your custom `Playwright` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of Playwright script of which we would like to take the screenshot, as shown below: 
+- You can incorporate SmartUI into your custom `Testcafe` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of testcafe script of which we would like to take the screenshot, as shown below: 
   
 
 ```js
-const { chromium } = require("playwright");
-const smartuiSnapshot = require("@lambdatest/playwright-driver");
+import { Selector } from 'testcafe';
+import { smartuiSnapshot } from '@lambdatest/testcafe-driver';
 
-(async () => {
-  // Launch a local browser instance
-  const browser = await chromium.launch({
-    headless: false, // Set to false to see the browser UI
-  });
+fixture('Amazon Test')
+  .page('https://www.lambdatest.com');
 
-  const page = await browser.newPage();
-
-  // Navigate to the desired URL
-  await page.goto("https://www.lambdatest.com");
-
-  // Use smartuiSnapshot to take a visual snapshot locally
-  await smartuiSnapshot.smartuiSnapshot(page, "Lambdatest");
-
-  // Close the browser
-  await browser.close();
-})();
+test('Take Amazon Homepage Screenshot', async (t) => {
+  // Take a screenshot using LambdaTest's TestCafe driver
+  await smartuiSnapshot(t, 'LT-Homepage');
+});
 
 ```
 
@@ -220,7 +210,7 @@ const smartuiSnapshot = require("@lambdatest/playwright-driver");
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui exec node playwrightCloud.js --config smartui-web.json
+npx smartui exec testcafe chrome testcafeSDKLocal.js --config smartui-web.json
 ```
 
 :::note 
@@ -229,7 +219,7 @@ You may use the `npx smartui --help` command in case you are facing issues durin
 
 ##  View SmartUI Results
 
-You have successfully integrated SmartUI SDK with your Playwright tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
+You have successfully integrated SmartUI SDK with your Testcafe tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
 
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
@@ -242,10 +232,9 @@ The following are the different options which are currently supported:
 
 | Key                       | Description                                                                                                               | Example                                                                                                                                                                                     |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `driver` (instance)    | The instance of the web driver used in your tests. |
+| `t` (test controller)    | This object allows you to control the test execution and interact with the web page under test. |
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
-
 
 ## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />** 
 
@@ -255,54 +244,54 @@ When conducting visual tests, you may encounter scenarios where certain elements
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
-```js title="This is a sample for your configuration for Playwright to ignore by ID"
+```js title="This is a sample for your configuration for Testcafe to ignore by ID"
 options = {
             ignoreDOM: {
                 id: ["ID-1", "ID-2"],
             }
         }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await driver.get('Required URL');
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 </TabItem>
 <TabItem value="IgoreClass" label="Ignore Class">
 
-```js title="This is a sample for your configuration for Playwright to ignore by Class"
+```js title="This is a sample for your configuration for Testcafe to ignore by Class"
 options = {
             ignoreDOM: {
                 class: ["Class-1", "Class-2"],
             }
         }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await driver.get('Required URL');
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 </TabItem>
 <TabItem value="IgnoreXPath" label="Ignore XPath">
 
-```js title="This is a sample for your configuration for Playwright to ignore by XPath"
+```js title="This is a sample for your configuration for Testcafe to ignore by XPath"
 options = {
             ignoreDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
             }
         }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await driver.get('Required URL');
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 </TabItem>
 
 <TabItem value="IgnoreSelector" label="Ignore CSS Selector">
 
-```js title="This is a sample for your configuration for Playwright to ignore by CSS Selector"
+```js title="This is a sample for your configuration for Testcafe to ignore by CSS Selector"
 options = {
             ignoreDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await driver.get('Required URL');
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 </TabItem>
 
@@ -311,54 +300,54 @@ options = {
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>
 
-```js title="This is a sample for your configuration for Playwright to select by ID."
+```js title="This is a sample for your configuration for Testcafe to select by ID."
 options = {
             selectDOM: {
                 id: ["ID-1", "ID-2"],
             }
         }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await driver.get('Required URL');
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 </TabItem>
 <TabItem value="SelectClass" label="Select Class">
 
-```js title="This is a sample for your configuration for Playwright to select by Class"
+```js title="This is a sample for your configuration for Testcafe to select by Class"
 options = {
             selectDOM: {
                 class: ["Class-1", "Class-2"],
             }
         }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await driver.get('Required URL');
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 </TabItem>
 <TabItem value="SelectXPath" label="Select XPath">
 
-```js title="This is a sample for your configuration for Playwright to select by XPath"
+```js title="This is a sample for your configuration for Testcafe to select by XPath"
 options = {
             selectDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
             }
         }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await driver.get('Required URL');
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
 </TabItem>
 
 <TabItem value="SelectSelector" label="Select CSS Selector">
 
-```js title="This is a sample for your webhook configuration for Playwright to select by CSS Selector"
+```js title="This is a sample for your webhook configuration for Testcafe to select by CSS Selector"
 options = {
             selectDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await driver.get('Required URL');
+        await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 </TabItem>
 
@@ -369,51 +358,39 @@ options = {
 If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
 
 ```js Example for scrolling to bottom for lazy elements
-const { chromium } = require('playwright');
-const smartuiSnapshot = require('@lambdatest/playwright-driver');
+import { Selector } from 'testcafe';
+import { smartuiSnapshot } from '@lambdatest/testcafe-driver';
 
-(async () => {
-  const browser = await chromium.launch({ headless: false }); // Set headless: false to see the browser UI
-  const page = await browser.newPage();
+// Function to scroll through the page and then back to the top
+async function scrollToBottomAndTop(t, lastPageWait = 100) {
+    const getScrollHeight = Selector(() => document.body.scrollHeight);
+    const heightOfPage = await getScrollHeight();
+    let size = 200;
+    let noOfLoop = Math.floor(heightOfPage / size);
 
-  try {
-    await page.goto('Required URL');
-
-    // Function to scroll to the bottom of the page
-    async function quickScrollToBottom(lastPageWait) {
-      await page.evaluate(async (lastPageWait) => {
-        const scrollToBottom = async (lastPageWait) => {
-          const getScrollHeight = () => document.body.scrollHeight;
-          let lastHeight = await getScrollHeight();
-          let currentHeight = 0;
-
-          while (currentHeight < lastHeight) {
-            window.scrollTo(0, lastHeight);
-            await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for page to load
-            currentHeight = lastHeight;
-            lastHeight = await getScrollHeight();
-          }
-
-          if (lastPageWait) {
-            await new Promise(resolve => setTimeout(resolve, lastPageWait)); // Additional wait at the bottom
-          }
-
-          // Scroll back to the top after reaching the bottom
-          window.scrollTo(0, 0);
-          await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for scroll to top
-        };
-
-        await scrollToBottom(lastPageWait);
-      }, lastPageWait);
+    for (let i = 1; i <= noOfLoop; i++) {
+        await t.scrollBy({ x: 0, y: size });
+        await t.wait(1000);
+        if (i === noOfLoop) {
+            await t.scrollTo({ x: 0, y: heightOfPage });
+            await t.wait(lastPageWait);
+        }
     }
 
-    await quickScrollToBottom(100); // Adjust wait time as needed
-    await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+    // Scroll to the top
+    await t.scrollTo({ x: 0, y: 0 });
+    await t.wait(10000);
+    console.log("Scroll Completed");
+}
 
-  } finally {
-    await browser.close();
-  }
-})();
+fixture `Page Scroll Test`
+    .page `Required URL`; // Replace `Required URL` with the actual URL
+
+test('Scroll through the page, then take a smartUI Snapshot', async t => {
+    await scrollToBottomAndTop(t, 100); // Adjust wait time as needed
+    await smartuiSnapshot(t, 'Screenshot Name'); // Adjust the screenshot name as needed
+});
+
 ```
 
 
