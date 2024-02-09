@@ -1,7 +1,7 @@
 ---
 id: selenium-visual-regression
 title: Getting Started With Visual Regression Testing Using Selenium On SmartUI
-sidebar_label: LambdaTest Hooks
+sidebar_label: Selenium
 description: Master Selenium Visual Regression testing with LambdaTest. Detect visual deviations early in your web applications to ensure a seamless user experience.
 keywords:
   - Visual Regression

@@ -1880,19 +1880,24 @@ module.exports = {
         },
         {
           type: "doc",
+          label: "Setup with Storybook",
+          id: "smart-ui-storybook",
+        },
+        {
+          type: "doc",
           label: "Setup with CLI",
           id: "smartui-cli",
         },
         {
           type: "category",
           collapsed: false,
-          label: "Selenium",
+          label: "SDK",
           items: [
             // "smartui-selenium-js-sdk",
             // "selenium-visual-regression"
             {
               type: "category",
-              label: "SDK",
+              label: "Selenium",
               collapsed:true,
               // id: "smart-visual-regression-testing",
               items: [
@@ -1913,46 +1918,30 @@ module.exports = {
                 }
               ]
             },
-                "selenium-visual-regression"
-          ],
-        },
-        {
-          type: "doc",
-          label: "Setup with Cypress",
-          id: "smart-ui-cypress",
-        },
-        {
-          type: "category",
-          collapsed: true,
-          label: "Playwright",
-          items: [
-                "smartui-playwright-sdk",
-                "playwright-visual-regression"
+            "smartui-playwright-sdk",
+            "smartui-puppeteer-sdk",
+            "smartui-testcafe-sdk"
           ],
         },
         {
           type: "category",
-          collapsed: true,
-          label: "Puppeteer",
+          collapsed: false,
+          label: "LambdaTest Hooks",
           items: [
-                "smartui-puppeteer-sdk",
-                "puppeteer-visual-regression"
-          ]
-        },
-        {
-          type: "doc",
-          label: "Setup with K6",
-          id: "smartui-k6-setup",
-        },
-        {
-          type: "doc",
-          label: "Setup with Storybook",
-          id: "smart-ui-storybook",
-        },
-        {
-          type: "doc",
-          label: "Setup with Appium",
-          id: "appium-visual-regression",
+            // "smartui-selenium-js-sdk",
+            // "selenium-visual-regression"
+            
+            "selenium-visual-regression",
+            "smart-ui-cypress",
+            "playwright-visual-regression",
+            "puppeteer-visual-regression",
+            "smartui-k6-setup",
+            "appium-visual-regression",
+            "html-dom-smartui-options",
+            "smart-ui-build-options",
+            "test-settings-options"
+            
+          ],
         },
         {
           type: "doc",
@@ -1966,23 +1955,8 @@ module.exports = {
         },
         {
           type: "doc",
-          label: "Build Config & Options",
-          id: "smart-ui-build-options",
-        },
-        {
-          type: "doc",
           label: "Project Settings",
           id: "smartui-project-settings",
-        },
-        {
-          type: "doc",
-          label: "Advanced Comparison Settings",
-          id: "test-settings-options",
-        },
-        {
-          type: "doc",
-          label: "HTML DOM Config & Options",
-          id: "html-dom-smartui-options",
         },
         {
           type: "doc",
