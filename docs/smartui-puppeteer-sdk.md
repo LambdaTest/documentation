@@ -262,7 +262,7 @@ options = {
             }
         }
         await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 </TabItem>
@@ -275,7 +275,7 @@ options = {
             }
         }
         await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 </TabItem>
@@ -288,7 +288,7 @@ options = {
             }
         }
         await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 </TabItem>
@@ -302,7 +302,7 @@ options = {
             }
         }
         await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 </TabItem>
 
@@ -318,7 +318,7 @@ options = {
             }
         }
         await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 </TabItem>
@@ -331,7 +331,7 @@ options = {
             }
         }
         await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 </TabItem>
@@ -344,7 +344,7 @@ options = {
             }
         }
         await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 
 </TabItem>
@@ -358,7 +358,7 @@ options = {
             }
         }
         await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
 ```
 </TabItem>
 
