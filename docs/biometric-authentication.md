@@ -75,7 +75,7 @@ Below given is the list of Biometric Authentication APIs which are supported. Pl
 
 
 Note: The OS versions and APIs mentioned above are subject to change as per the latest OS updates and best practices recommended by Android and iOS.
-## Biometric Authentication in Real Time App Testing
+## Biometric Authentication in Real Device App Testing
 
 ----
 
@@ -86,7 +86,7 @@ This feature allows you to simulate successful or failed biometric authenticatio
 :::tip
 After uploading your application, please wait atleast for 1-2 minutes for the application file patching process to complete.
 :::
-3. Hover over the app in which you want to use Biometric Authentication and click on **Settings** icon. You will see a **toggle** for Biometric Authentication, turn it on as illustrated in the image below. Click on **Start** to start the session and run your app on the selected device.
+3. Hover over the app for which you wish to enable Biometric Authentication and click on the **Settings** icon. You'll find a **toggle** for Biometric Authentication; switch it on, as depicted in the image below. After toggling the switch, remember to click on Save changes. Then, proceed by clicking on **Start** to initiate the session and run your app on the selected device.
 
 <img loading="lazy" src={require('../assets/images/biometric-authentication/biometric-authentication.png').default} alt="Image" width="100" height="100" className="doc_img"/>
 
