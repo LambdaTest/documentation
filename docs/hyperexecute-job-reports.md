@@ -45,37 +45,41 @@ HyperExecute reports are a powerful tool for analyzing the quality of your build
 
 HyperExecute supports a wide variety of test reports, including:
 
-### [Extent Report](/support/docs/extent-report/)
+### Extent Report
 
-Extent Reports is a popular reporting framework for Java, TestNG, and Selenium tests. It provides a comprehensive set of features for reporting test results, including detailed test case summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
+[**Extent Report**](/support/docs/extent-report/) is a popular reporting framework for Java, TestNG, and Selenium tests. It provides a comprehensive set of features for reporting test results, including detailed test case summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
 
-### [Extent Native](/support/docs/native-extent-report/) 
+### Extent Native
 
-Extent Native is a newer reporting framework from the Extent Reports team. It provides a native reporting experience for Java, TestNG, and Selenium tests. Extent Native reports are interactive and responsive, and they can be viewed on any device. They also include features such as drill-down analysis, custom filters, and real-time updates.
+[**Extent Native**](/support/docs/native-extent-report/) is a newer reporting framework from the Extent Reports team. It provides a native reporting experience for Java, TestNG, and Selenium tests. Extent Native reports are interactive and responsive, and they can be viewed on any device. They also include features such as drill-down analysis, custom filters, and real-time updates.
 
-### [Allure Report](/support/docs/allure-reports/) 
+### Allure Report
 
-Allure is a cross-platform reporting framework that can be used with a variety of testing frameworks and languages. It provides a rich reporting experience with features such as interactive and responsive reports, drill-down analysis, custom filters, real-time updates, and integration with CI/CD tools.
+[**Allure**](/support/docs/allure-reports/) is a cross-platform reporting framework that can be used with a variety of testing frameworks and languages. It provides a rich reporting experience with features such as interactive and responsive reports, drill-down analysis, custom filters, real-time updates, and integration with CI/CD tools.
 
-### [Cucumber Report](/support/docs/cucumber-report/)
+### Cucumber Report
 
-Cucumber Reports is a reporting framework for Cucumber tests. It provides a detailed overview of the test execution, including test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
+[**Cucumber Report**](/support/docs/cucumber-report/) is a reporting framework for Cucumber tests. It provides a detailed overview of the test execution, including test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
 
-### [Playwright HTML](/support/docs/playwright-html-report/)
+### Playwright HTML
 
-Playwright HTML is a reporting framework for Playwright tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
+[**Playwright HTML**](/support/docs/playwright-html-report/) is a reporting framework for Playwright tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
+
+### Specflow
+
+[**Specflow**](/support/docs/specflow-report/) is a testing framework for BDD (Behavior Driven Development). It can be used with a variety of programming languages, including C#, Java, and Ruby. Specflow reports provide a detailed overview of the test execution, including feature summaries, scenario summaries, step summaries, screenshots and videos of test execution, and execution logs.
+
+### Cypress Mochawesome Report
+
+[**Cypress Mochawesome**](/support/docs/cypress-mochaawesome-report/) report is a reporting framework for Mocha tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, and execution logs.
+
+### Error Categorization Report
+
+The [**Error Categorization Report**](/support/docs/error-categorization-report/) serves as a tailored solution designed to assist users in classifying errors based on failed tests, fostering a systematic and lucid understanding of test failures with shared characteristics. Its primary objective is to streamline the process of pinpointing problematic stages and associated tests, offering users the ability to seamlessly navigate through detailed views and download pertinent information for in-depth analysis.
 
 ### Cypress Report
 
 Cypress Reports is a reporting framework for Cypress tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results.
-
-### [Specflow](/support/docs/specflow-report/)
-
-Specflow is a testing framework for BDD (Behavior Driven Development). It can be used with a variety of programming languages, including C#, Java, and Ruby. Specflow reports provide a detailed overview of the test execution, including feature summaries, scenario summaries, step summaries, screenshots and videos of test execution, and execution logs.
-
-### [Mochaawesome Report](/support/docs/cypress-mochaawesome-report/)
-
-Mochaawesome report is a reporting framework for Mocha tests. It provides a detailed overview of the test execution, including test suite summaries, test case summaries, test step summaries, screenshots and videos of test execution, and execution logs.
 
 ### Junit Report
 
