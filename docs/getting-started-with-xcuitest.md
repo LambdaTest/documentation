@@ -225,6 +225,8 @@ The following capabilities are supported:
 
 11. **tunnel, tunnelName** - Set tunnel as `true` and provide the tunnelName such as `NewTunnel` as needed if you are running a tunnel.
 
+12. **resignApp** - Set this to `false` if you wish to prevent the apps from being re-signed. The app should be built for enterprise distribution.
+
 :::caution Important
 Only one of **GeoLocation** or **Tunnel** must be used in single execute command.
 :::

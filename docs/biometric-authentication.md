@@ -75,7 +75,7 @@ Below given is the list of Biometric Authentication APIs which are supported. Pl
 
 
 Note: The OS versions and APIs mentioned above are subject to change as per the latest OS updates and best practices recommended by Android and iOS.
-## Biometric Authentication in Real Time App Testing
+## Biometric Authentication in Real Device App Testing
 
 ----
 

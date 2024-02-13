@@ -97,7 +97,7 @@ result = driver.execute_script("lambda-adb",params)
 The command is used to auto rotate the screen of the device while running an app automation test script. The following is a Python sample using the adb command to allow auto rotation with LambdaTest executor.
 
 ```bash
-params = {"command":"autorotate", "enableAutoRotate", true}
+params = {"command":"autorotate", "enableAutoRotate": True}
 result = driver.execute_script("lambda-adb",params)
 ```
 ### ADB Shell Command
