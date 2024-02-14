@@ -556,6 +556,11 @@ module.exports = {
                   label: "Accelq",
                   id: "hyperexecute-accelq-integration",
                 },
+                {
+                  type: "doc",
+                  label: "Testsigma",
+                  id: "hyperexecute-testsigma-integration",
+                },
               ],
             },
             {
