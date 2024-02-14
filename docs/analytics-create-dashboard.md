@@ -51,11 +51,13 @@ Once, logged in to the application, please navigate to https://analytics.lambdat
 
 Now, you can select the available options to **create the dashboard**. Once, selected you will be able to select the required **widgets** according to the choice of your product for which you want to create the dashboard for.
 
-<img loading="lazy" src={require('../assets/images/analytics/create-new-dashboard.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/On-Boarding.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-:::note
+:::note Other Dashboard Options
 
 You can also create a **Demo Dashboard** on choosing this option you can explore the platform with dummy data for exploring the dashboard and widgets supported by the platform.
+
+Or you try using the **Pre-built templates** for quick dashboard creating for your required reports. To know more click [here](/docs/analytics-dashboard-templates/).
 
 :::
 
@@ -63,21 +65,28 @@ You can also create a **Demo Dashboard** on choosing this option you can explore
 
 Now, you select any widget you want to be added to the dashboard from the available list. You can filter by product and by category.
 
-<img loading="lazy" src={require('../assets/images/analytics/create-dashboard-widgets.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/Custom-Dashboard.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 Add **Dashboard Name** of your choice, according to the **report** which needs to be created. Then, click on the `Create New Dashboard` button and you're done!
 
-<img loading="lazy" src={require('../assets/images/analytics/create-dashboard-add-name.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/Custom-Dashboard-Name.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 Your dashboard is ready to start **Analyzing** the data of all your tests which are executed using the Lambdatest Cloud platform.
 
-<img loading="lazy" src={require('../assets/images/analytics/create-dashboard-final-view.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/Demo-Dashboard-with-Widget.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 :::tip
 
 You can add more widgets of the same type to your dashboard multiple times and also edit the layout of the dashboard according to your configuration. 
 
 :::
+
+## Explore More Dashboard Features
+
+* Scheduling a Email notification of the dashboard - Read More
+* Share the Dashboard with a public or a private link with your team - [Read More](/docs/analytics-dashboard-features/#expiry-settings-for-dashboard-share-link)
+* Exporting the Dashboard as a PDF - [Read More](/docs/analytics-dashboard-features/#export-dashboard-as-pdf)
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
