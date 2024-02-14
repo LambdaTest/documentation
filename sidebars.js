@@ -575,6 +575,11 @@ module.exports = {
                     // "hyperexecute-integrate-azure-test-plan"
                   ]
                 },
+                {
+                  type: "doc",
+                  label: "Testsigma",
+                  id: "hyperexecute-testsigma-integration",
+                },
               ],
             },
             {
