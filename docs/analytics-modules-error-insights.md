@@ -1,7 +1,7 @@
 ---
 id: analytics-modules-error-insights
 title: Analytics Modules
-sidebar_label: Error Insights
+sidebar_label: Error Session Insights
 description: Analytics Modules - Error Insights
 keywords:
   - analytics

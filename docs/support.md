@@ -89,13 +89,13 @@ slug: /
       </div>
     </div>
     <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/analytics-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/analytics-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Analytics</h2>
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/analytics-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/analytics-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Insights</h2>
       <div className="home_inners">
-        <a href="/docs/analytics-dashboard-templates/"><p className="p_home_inners">Dashboard Templates</p></a>
-        <a href="/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboard</p></a>
-        <a href="/docs/analytics-widgets/"><p className="p_home_inners">Analytics Widgets</p></a>
-        <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test</p></a>
-        <a href="/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Command Logs Analytics</p></a>
+        <a href="/docs/analytics-dashboard-templates/"><p className="p_home_inners">Pre-built Dashboards</p></a>
+        <a href="/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboards</p></a>
+        <a href="/docs/analytics-widgets/"><p className="p_home_inners">Widgets</p></a>
+        <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
+        <a href="/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Error Logs Insights</p></a>
         <a href="/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
       </div>
     </div>
@@ -108,14 +108,15 @@ slug: /
 
 <div className="home_main">
    <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/visual-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/visual-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Visual UI</h2>
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/visual-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/visual-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>SmartUI</h2>
       <div className="home_inners">
-        <a href="/docs/smart-visual-regression-testing/"><p className="p_home_inners">Smart UI</p></a>
+        <a href="/docs/smart-visual-regression-testing/"><p className="p_home_inners">Getting Started</p></a>
+        <a href="/docs/smartui-selenium-js-sdk/"><p className="p_home_inners">Explore SDKs</p></a>
         <a href="/docs/smartui-cli/"><p className="p_home_inners">CLI</p></a>
-        <a href="/docs/smartui-upload-api-v2/"><p className="p_home_inners">Upload through API</p></a>
-        <a href="/docs/smartui-pdf-comparison/"><p className="p_home_inners">Samrt PDF Comparison</p></a>
+        <a href="/docs/smartui-upload-api-v2/"><p className="p_home_inners">Upload Screenshots</p></a>
+        <a href="/docs/smartui-pdf-comparison/"><p className="p_home_inners">Smart PDF Comparison</p></a>
         <a href="/docs/smart-ui-build-options/"><p className="p_home_inners">Build Config and Options</p></a>
-        <a href="/docs/test-settings-options/"><p className="p_home_inners">Advance Comparison</p></a>
+        <a href="/docs/test-settings-options/"><p className="p_home_inners">Advance Comparison Options</p></a>
         <a href="/docs/html-dom-smartui-options/"><p className="p_home_inners">Handling Dynamic Data</p></a>
       </div>
     </div>

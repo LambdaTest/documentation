@@ -1,7 +1,7 @@
 ---
 id: analytics-overview
-title: Advanced Test Analytics for your cloud platform
-sidebar_label: Analytics
+title: Lambdatest - Test Insights for visualizing your tests runs
+sidebar_label: Insights
 description: Unlock valuable insights with LambdaTest Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes
 keywords:
   - analytics
@@ -35,7 +35,7 @@ slug: analytics-overview/
 ></script>
 ---
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-overview-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/Demo-Dashboard-with-Widget.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ## What is Analytics?
 
