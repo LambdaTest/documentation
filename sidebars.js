@@ -598,6 +598,19 @@ module.exports = {
                 label: "Hyperexecute Real Devices Testing",
                 id: "real-devices-integration-with-hyperexecute",
               },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Performance Testing",
+                link: {
+                  type: "doc",
+                  id: "hyperexecute-performance-testing",
+                },
+                items: [
+                  "hyperexecute-create-jmeter-test-plan",
+                  "hyperexecute-run-jmeter-tests"
+                ]
+              },
             ],
           },
         ],
