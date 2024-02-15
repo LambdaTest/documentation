@@ -525,6 +525,21 @@ framework:
 ```
 
 ***
+
+## `errorCategorizedOnFailureOnly`
+
+The `errorCategorizedOnFailureOnly` flag allows you to control the behavior of error categorization after the job execution based on stage status.
+
+By default, error categorization is applied to each stage, regardless of the stage's status. This means that error categorization is generated for every stage, regardless of whether it succeeds or fails.
+
+When you enable this flag as mentioned below, the error categorization will only be generated for stages that are not green.
+
+```bash
+errorCategorizedOnFailureOnly: true
+```
+
+***
+
 ## `mergeArtifacts`
 It is used to combine the artifacts created under each task to one. 
 ```bash
