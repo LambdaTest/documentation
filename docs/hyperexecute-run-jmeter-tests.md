@@ -56,7 +56,7 @@ After setting up a Test Plan, now you need to associate your test cases and exec
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/2.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
-- Browse and Uplaod the test files that you have created.
+- Browse and Upload the test files that you have created.
 
 - Click on the **Save** button
 
