@@ -1307,13 +1307,14 @@ module.exports = {
                 {
                   type: "category",
                   collapsed: true,
-                  label: "CSharp",
+                  label: "C#",
                   link: {
                     type: "doc",
                     id: "csharp-with-selenium",
                   },
                   items: [
                     "nunit-with-selenium",
+                    "selenium-xunit",
                     "mstest-with-selenium",
                     "specflow-with-selenium",
                   ],
