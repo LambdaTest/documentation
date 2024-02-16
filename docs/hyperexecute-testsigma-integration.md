@@ -63,7 +63,7 @@ Testsigma can help you with:
 
 ### Step 1: Creation of Agent
 
-- Navigate to your Testsigma Dashbaord to [Create an agent](https://testsigma.com/docs/agent/setup-on-windows-mac-linux/).
+- Navigate to your Testsigma Dashboard to [Create an agent](https://testsigma.com/docs/agent/setup-on-windows-mac-linux/).
 
 > **Note:** 
 - This agent has an activation key. You must ensure that it is secure and accessible.
