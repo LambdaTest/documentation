@@ -74,7 +74,7 @@ Testsigma can help you with:
 
 When creating the YAML, consider the following points:
 
-- **One-to-One Mapping:** Each test plan ID can only be linked to a single agent at a time. This means for parallel execution of two test plans, you need to assign each plan to its own dedicated agent.
+- **One-to-One Mapping:** Each test plan ID can only be linked to a single agent at a time. This means two separate agents will be required to execute two test plans parallelly.
 
 - **Agent Activation Wait:** Since the agents are activated before test execution, it's crucial to include a waiting period of 90-100 seconds. This ensures the agents are fully operational and ready to handle the upcoming workload.
 
@@ -142,7 +142,7 @@ jobLabel: [testsigma]
 
 ### Step 3: Setup the Test Execution Files
 
-- Create a **.bat** file. This particular **.bat** file will start the agent in [background services](/support/docs/hyperexecute-background-services/). 
+- Create a **start-agent.bat** file. This particular **.bat** file will start the agent in [background services](/support/docs/hyperexecute-background-services/). 
 
 ```bash
 @echo off
@@ -160,7 +160,7 @@ REM Step 4: Run start.bat with the provided activation key
 start.bat "TS_ACTIVATION_KEY=%1"
 ```
 
-- Create a **.bat** file. This **.bat** file will stop the agent after the completion of execution
+- Create a **stop-agent.bat** file. This **.bat** file will stop the agent after the completion of execution.
 
 ```bash
 @echo off
