@@ -61,6 +61,8 @@ You will have to first setup the JMeter Test Plan before integrating HyperExecut
 
 - Go to **JMETER_HOME/bin** and start JMeter with **jmeterw.bat** on Windows and **jmeter.sh** on Linux/Unix.
 
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/j1.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+
 ### Step 2: Create a Test Plan
 
 - Double-click the **jmeter.jar** file in your JMeter installation directory.
@@ -73,12 +75,16 @@ You will have to first setup the JMeter Test Plan before integrating HyperExecut
 
 - Right-click on the Test Plan and select **Threads (Users) -> Thread Group**.
 
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/j2.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+
 - Configure the Thread Group:
 
   - **Name:** Assign a descriptive name (e.g., "Basic HTTP Load Test").
   - **Number of Threads (users):** Specify the number of simulated users you want to simulate (e.g., 10).
   - **Ramp-Up Period (seconds):** Set the time it takes for all threads to ramp up to the specified number (e.g., 30 seconds).
   - **Loop Count:** If you want to run the test repeatedly, set the number of loops (e.g., 1).
+
+  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/j3.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
 #### Add an HTTP Request
 
@@ -93,6 +99,8 @@ You will have to first setup the JMeter Test Plan before integrating HyperExecut
   - **Method:** Choose the HTTP method (e.g., GET, POST).
   - **Parameters:** If needed, define any request parameters.
 
+  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/j4.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+
 #### Add Listeners 
 
 - Listeners collect and display test results. While not strictly necessary for a basic test, they're valuable for analysis.
@@ -103,7 +111,21 @@ You will have to first setup the JMeter Test Plan before integrating HyperExecut
   - **Aggregate Report:** Provides summary statistics across all requests.
   - **Graph Results:** Presents response times graphically.
 
-### Step 4: Save the file
+  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/j5.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+
+### Step 4: Save and Run the file
+
+-  Save the test plan files and now execute these using [HyperExecute Performance Testing](/support/docs/hyperexecute-run-jmeter-tests/).
+
+- Now, open a terminal or command prompt.
+
+- Navigate to the directory where the JMeter executable file is located.
+
+- Enter the following command to run the test:
+
+```bash
+jmeter -n -t /path/to/your/test.jmx -l /path/to/save/results.csv 
+```
 
 <!-- ### Step 5: Perform the Load Testing
 
