@@ -60,7 +60,7 @@ Integrate the Azure Test Plan with HyperExecute in just 3 simple steps 🚀
 
 ### Step 1: Setup the Azure Test Plan
 
-You will have to [setup your test plan](/support/docs/hyperexecute-azure-setup-test-plan/) in the Azure Test Plan Dashbaord.
+You will have to [setup your test plan](/support/docs/hyperexecute-azure-setup-test-plan/) in the Azure Test Plan Dashboard.
 
 ### Step 2: Associate the Test Cases with Azure Test Plan
 
