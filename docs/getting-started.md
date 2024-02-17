@@ -138,6 +138,9 @@ Here are all the languages and frameworks supported by LambdaTest online Seleniu
         <li>
           <a href="/docs/nunit-with-selenium-running-nunit-automation-scripts-on-lambdatest-selenium-grid/">NUnit</a>
         </li>
+         <li>
+          <a href="/docs/selenium-with-xunit/">xUnit</a>
+        </li>
       </ul>
     </div>
     <div className="lt_col lt_framework_wrapper">
