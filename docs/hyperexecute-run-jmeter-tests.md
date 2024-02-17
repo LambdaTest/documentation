@@ -78,7 +78,7 @@ After setting up a Test Plan, now you need to associate your test cases and exec
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/5.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
-  - **Total Load Distribution :** Configure the regions in which you want to distrbute the load testing as per the % of the users.
+  - **Total Load Distribution :** Configure the regions in which you want to distribute the load testing as per the % of the users.
 
 - Click on the **Run Test** button.
 
