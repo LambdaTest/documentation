@@ -572,7 +572,7 @@ module.exports = {
                   items: [
                     "hyperexecute-azure-setup-test-plan",
                     "hyperexecute-azure-associate-test-case",
-                    // "hyperexecute-integrate-azure-test-plan"
+                    "hyperexecute-integrate-azure-test-plan"
                   ]
                 },
                 {

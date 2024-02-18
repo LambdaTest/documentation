@@ -73,6 +73,13 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   </div>
   </a>
 
+  <a href = "/support/docs/hyperexecute-azure-test-plan/">
+  <div className="support_inners">
+    <h3>Azure Test Plan</h3>
+    <p>Manage test plans, test suites, and test cases for your web and desktop applications.</p>
+  </div>
+  </a>
+
   <a href = "/support/docs/hyperexecute-testsigma-integration/">
   <div className="support_inners">
     <h3>Testsigma</h3>
