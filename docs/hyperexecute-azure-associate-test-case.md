@@ -41,6 +41,8 @@ slug: hyperexecute-azure-associate-test-case/
 
 # Step 2: How to Associate the Test Cases
 
+> Test Plan works in Association with specific [**Visual Studio subscriptions**](https://learn.microsoft.com/en-us/azure/devops/organizations/billing/buy-access-tfs-test-hub?view=azure-devops-2022#buy-monthly-access-to-azure-test-plans).
+
 After setting up a Test Plan, now you need to associate your test cases as well with the Test Plan. To perform the same, we must have a Visual Studio IDE installed in our local machine. Login with same credentials for Visual Studio as in Test Plan.
 
 Follow the steps below to compelete the test case association:
