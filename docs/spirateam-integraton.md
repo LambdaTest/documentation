@@ -84,7 +84,7 @@ It is very useful for managing teams programs, portfolios, requirements, release
 
 - Visit your SpiralTeam profile.
 
-- Go to your desired dashbaord in which you have created the ticket in the above step.
+- Go to your desired dashboard in which you have created the ticket in the above step.
 
 - Update your ticket information here and click on the **Save** button.
 
