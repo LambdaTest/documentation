@@ -1145,6 +1145,60 @@ module.exports = {
         // },
     ],
 
+    AccessibilityTestingSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/',
+        customProps: {
+          className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "doc",
+          // collapsed: true,
+          label: "Accessibility DevTools",
+          id: "accessibility-testing"
+          // link: {
+          //   type: "doc",
+          //   id: "accessibility-testing"
+          // },
+          // items: [
+          //   "accessibility-testing",
+          //   "accessibility-testing"
+          // ]
+        },
+        {
+          type: "category",
+          collapsed: true,
+          label: "Scan User Workflow",
+          items: [
+            {
+              type: "doc",
+              label: "Full Page Scanner",
+              id: "full-page-scanner",
+            },
+            {
+              type: "doc",
+              label: "Partial Page Scanner",
+              id: "partial-page-scanner",
+            },
+            {
+              type: "doc",
+              label: "Multi Page Scanner",
+              id: "multi-page-scanner"
+            },
+            {
+              type: "doc",
+              label: "Workflow Scanner",
+              id: "workflow-scanner",
+            },
+          ]
+        }
+      ]
+    ],
+
     SettingsAndSecuritySidebar: [
       {
         type: 'link',
