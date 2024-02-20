@@ -159,6 +159,12 @@ slug: /
 
 <div className="home_main">
     <div className="home_inners_box">
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Accessibility Testing</h2>
+      <div className="home_inners">
+        <a href="/docs/accessibility-testing/"><p className="p_home_inners">Accessibility DevTools</p></a>
+      </div>
+    </div>
+    <div className="home_inners_box">
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Setting and Security</h2>
       <div className="home_inners">
         <a href="/docs/account-management/"><p className="p_home_inners">Account Management</p></a>
