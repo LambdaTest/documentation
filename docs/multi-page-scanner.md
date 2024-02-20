@@ -85,6 +85,6 @@ You can use Multi Page Scanner for:
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/multi-page-scanner/3.png').default} alt="automation-dashboard" className="doc_img"/>
 
-- You can also filter out your issues list by selecting any specifc page.
+- You can also filter out your issues list by selecting any specific page.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/multi-page-scanner/4.png').default} alt="automation-dashboard" className="doc_img"/>
