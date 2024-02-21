@@ -1,5 +1,5 @@
 ---
-id: full-page-scanner
+id: accessibility-testing-full-page-scanner
 title: Full Page Scanner
 hide_title: false
 sidebar_label: Full Page Scanner
@@ -8,10 +8,13 @@ keywords:
     - LambdaTest
     - Accessibility
     - Testing
+    - DevTools
+    - run quick scan
+    - test issues
     - Full Page Scanner
-url: https://www.lambdatest.com/support/docs/full-page-scanner/
+url: https://www.lambdatest.com/support/docs/accessibility-testing-full-page-scanner/
 site_name: LambdaTest
-slug: full-page-scanner/
+slug: accessibility-testing-full-page-scanner/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -35,7 +38,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "How to run Full Page Scanner",
-          "item": "https://www.lambdatest.com/support/docs/full-page-scanner/"
+          "item": "https://www.lambdatest.com/support/docs/accessibility-testing-full-page-scanner/"
         }]
       })
     }}
@@ -46,25 +49,20 @@ Full Page Scanner is used to analyze the accessibility of entire web pages at on
 ## Functionalities of Full Page Scanner
 
 - **Scans Multiple elements :** It analyzes various aspects of your webpage, including HTML/CSS code, images, forms, multimedia, and interactive elements.
-
 - **WCAG Compliance Checks :** It identifies potential violations against relevant WCAG guidelines (e.g., missing alt text, insufficient color contrast, keyboard navigation issues).
-
 - **Automated Issue Detection :** It automatically highlights problems and provides detailed descriptions, pinpointing them directly on the scanned page.
-
 - **Prioritization Options:** It prioritizes issues based on severity and potential impact, helping you focus on the most critical ones first.
-
 - **Integration with other tools:** You can integrate the Full Page Scanner with other LambdaTest features like screen readers and automated checks for a more comprehensive analysis.
 
 ## Execute the Full Page Scanner for Your Website
 
 ### Prerequisite
 
-- You have to [setup the Accessibility DevTools](/support/docs/accessibility-testing/#how-to-setup-the-accessibility-devtools) in your browser.
+- You have to [setup the Accessibility DevTools](/support/docs/accessibility-testing-install-devtools) in your browser.
 
-### Configure the Accessibility DevTool
+### Trigger the Accessibility DevTool
 
-- Go to the **Inspect** panel >> **Accessibility DevTools** of your required website.
-
+- Go to the **Inspect** panel >> **LambdaTest Accessibility DevTools** of your required website.
 - Click on the **Full Page Scan** button to start the scanning for **Accessibility Issue** for that particular page.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/full-page-scanner/1.png').default} alt="automation-dashboard" className="doc_img"/>
@@ -72,7 +70,6 @@ Full Page Scanner is used to analyze the accessibility of entire web pages at on
 ### Review Your Issues
 
 - This will list down all of the issues after scanning your complete webpage.
-
 - You can click on those issues to check with which particular element it is causing issue.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/full-page-scanner/2.png').default} alt="automation-dashboard" className="doc_img"/>
