@@ -43,7 +43,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
 Accessibility Dashboard offers a comprehensive overview of your website's accessibility performance, providing valuable insights and actionable steps for improvement.
 
 You can access the dashboard either by clicking on the **Dashboard** button as shown below or you can visit the [Accessibility Dashboard](https://accessibility.lambdatest.com/) directly.

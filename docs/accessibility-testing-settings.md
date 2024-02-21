@@ -41,7 +41,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
 LambdaTest Accessibility DevTools offer a comprehensive set of settings to customize your testing experience and tailor it to your specific needs.
 
 - Click on your **profile icon** >> **Settings** button.

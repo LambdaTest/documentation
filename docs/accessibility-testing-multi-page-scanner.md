@@ -43,7 +43,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
 The Multi Page Scanner analyzes accessibility across multiple webpages within a website or application, providing a comprehensive overview of potential issues. 
 
 You can use Multi Page Scanner for:

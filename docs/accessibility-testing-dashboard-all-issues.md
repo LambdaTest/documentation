@@ -41,7 +41,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
 This section enlists all the issues along with the tag of type of issue, what guideline of WCAG it is violating, and also you can filter it as per your convenience.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/dashboard/9.png').default} alt="automation-dashboard" className="doc_img"/>

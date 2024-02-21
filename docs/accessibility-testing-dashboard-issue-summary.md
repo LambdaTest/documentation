@@ -41,7 +41,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
 The issue summary page describes the complete test summary. It divides the complete report in two major sections :
 
 ## Summary

@@ -1277,7 +1277,7 @@ module.exports = {
         }
       ]
     ],
-
+  
     SettingsAndSecuritySidebar: [
       {
         type: 'link',
