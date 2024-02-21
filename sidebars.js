@@ -1156,18 +1156,25 @@ module.exports = {
       },
       [
         {
-          type: "doc",
-          // collapsed: true,
-          label: "Accessibility DevTools",
-          id: "accessibility-testing"
-          // link: {
-          //   type: "doc",
-          //   id: "accessibility-testing"
-          // },
-          // items: [
-          //   "accessibility-testing",
-          //   "accessibility-testing"
-          // ]
+          type: "category",
+          collapsed: false,
+          label: "Getting Started",
+          link: {
+            type: "doc",
+            id: "accessibility-testing"
+          },
+          items: [
+            {
+              type: "doc",
+              label: "Install Accessibility Toolkit",
+              id: "accessibility-testing-install-devtools",
+            },
+            {
+              type: "doc",
+              label: "Run a Quck Scan",
+              id: "accessibility-testing-run-quick-scan",
+            },
+          ],
         },
         {
           type: "category",
@@ -1177,23 +1184,49 @@ module.exports = {
             {
               type: "doc",
               label: "Full Page Scanner",
-              id: "full-page-scanner",
+              id: "accessibility-testing-full-page-scanner",
             },
             {
               type: "doc",
               label: "Partial Page Scanner",
-              id: "partial-page-scanner",
+              id: "accessibility-testing-partial-page-scanner",
             },
             {
               type: "doc",
               label: "Multi Page Scanner",
-              id: "multi-page-scanner"
+              id: "accessibility-testing-multi-page-scanner"
             },
             {
               type: "doc",
               label: "Workflow Scanner",
-              id: "workflow-scanner",
+              id: "accessibility-testing-workflow-scanner",
             },
+          ]
+        },
+        {
+          type: "doc",
+          label: "Configure Settings",
+          id: "accessibility-testing-settings"
+        },
+        {
+          type: "category",
+          collapsed: true,
+          label: "Navigating Dashboard",
+          link: {
+            type: "doc",
+            id: "accessibility-testing-navigating-dashboard"
+          },
+          items: [
+            {
+              type: "doc",
+              label: "Issue Summary",
+              id: "accessibility-testing-dashboard-issue-summary"
+            },
+            {
+              type: "doc",
+              label: "All Issues",
+              id: "accessibility-testing-dashboard-all-issues"
+            }
           ]
         }
       ]

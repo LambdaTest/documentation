@@ -1,13 +1,14 @@
 ---
 id: accessibility-testing
-title: Accessibility Testing
+title: LambdaTest Accessibility DevTools
 hide_title: false
-sidebar_label: Accessibility Testing
-description: Accessibility Testing
+sidebar_label: Getting Started
+description: LambdaTest Accessibility Testing DevTools
 keywords:
     - LambdaTest
     - Accessibility
     - Testing
+    - DevTools
 url: https://www.lambdatest.com/support/docs/accessibility-testing/
 site_name: LambdaTest
 slug: accessibility-testing/
@@ -55,40 +56,33 @@ Accessibility testing ensures that your product is usable by people with disabil
 - **Hearing impairments:** Deafness, hearing loss, relying on captions and transcripts.
 - **Cognitive impairments:** Difficulty focusing, understanding complex information, needing simpler interfaces.
 
-## How to Setup the Accessibility DevTools
-
-**Step 1:** Go to the Accessibility Dashboard and click on the **Download Plugin** button.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/1.png').default} alt="automation-dashboard" className="doc_img"/>
-
-**Step 2:** This will redirect you to the **Chrome Web Store** from where you can download the extension.
-
-- Click on **Add to Chrome** button to install the extension and pin the extension.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/2.png').default} alt="automation-dashboard" className="doc_img"/>
-
-**Step 3:** Go to the **Inspect** panel of your desired website. Switch to the **Accessibility DevTools** panel.
-
-- Login to your LambdaTest account.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/3.png').default} alt="automation-dashboard" className="doc_img"/>
-
-## Select Your Type of Scan
+## Types of LambdaTest Accessibility Scans
 
 Now, you need to select the type of scan as per your requirement:
 
-### Full Page Scan
-
-[Full Page Scan](/support/docs/full-page-scanner) gives you the comprehensive analysis of entire web page for accessibility compliance & best practices.
-
-### Partial Page Scan
-
-[Partial Page Scan](/support/docs/partial-page-scanner) gives you the accessibility check for selected sections or elements within a web page.
-
-### Multi Page Scan
-
-[Multi Page Scan](/support/docs/multi-page-scanner) assess accessibility across various pages for site-wide compliance.
-
-### Workflow Scan
-
-[Workflow Scan](/support/docs/workflow-scanner) sequentially ensure accessibility standards across multiple pages or flows.
+<div className="support_main">  
+  <a href="/docs/accessibility-testing-full-page-scanner">
+    <div className="support_inners">
+      <h3>Full Page Scan</h3>
+      <p>Get a comprehensive analysis of entire web page for accessibility compliance & best practices..</p>
+    </div>
+  </a>
+  <a href="/docs/accessibility-testing-partial-page-scanner">
+    <div className="support_inners">
+      <h3>Partial Page Scan</h3>
+      <p>Get the accessibility check for selected sections or elements within a web page.</p>
+    </div>
+  </a>
+  <a href="/docs/accessibility-testing-multi-page-scanner">
+    <div className="support_inners">
+      <h3>Multi Page Scan</h3>
+      <p>Learn how to assess accessibility across various pages for site-wide compliance.</p>
+    </div>
+  </a>
+  <a href="/docs/accessibility-testing-workflow-scanner">
+    <div className="support_inners">
+      <h3>Workflow Scan</h3>
+      <p>Workflow Scan sequentially ensure accessibility standards across multiple pages or flows.</p>
+    </div>
+  </a>
+</div> 

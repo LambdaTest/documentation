@@ -1,5 +1,5 @@
 ---
-id: multi-page-scanner
+id: accessibility-testing-multi-page-scanner
 title: Multi Page Scanner
 hide_title: false
 sidebar_label: Multi Page Scanner
@@ -8,10 +8,13 @@ keywords:
     - LambdaTest
     - Accessibility
     - Testing
+    - DevTools
+    - run quick scan
+    - test issues
     - Multi Page Scanner
-url: https://www.lambdatest.com/support/docs/multi-page-scanner/
+url: https://www.lambdatest.com/support/docs/accessibility-testing-multi-page-scanner/
 site_name: LambdaTest
-slug: multi-page-scanner/
+slug: accessibility-testing-multi-page-scanner/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -35,7 +38,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "How to run Multi Page Scanner",
-          "item": "https://www.lambdatest.com/support/docs/multi-page-scanner/"
+          "item": "https://www.lambdatest.com/support/docs/accessibility-testing-multi-page-scanner/"
         }]
       })
     }}
@@ -52,21 +55,18 @@ You can use Multi Page Scanner for:
 ## Functionalities of Multi Page Scanner
 
 - Crawls your website based on user-defined settings like starting URL, crawl depth, and exclusion patterns.
-
 - Performs accessibility checks on each scanned page using the same principles as the Full Page Scanner.
-
 - Generates a consolidated report highlighting issues across all scanned pages, prioritizing them based on severity and impact.
 
 ## Execute the Full Page Scanner for Your Website
 
 ### Prerequisite
 
-- You have to [setup the Accessibility DevTools](/support/docs/accessibility-testing/#how-to-setup-the-accessibility-devtools) in your browser.
+- You have to [setup the Accessibility DevTools](/support/docs/accessibility-testing-install-devtools) in your browser.
 
-### Configure the Accessibility DevTool
+### Trigger the Accessibility DevTool
 
-- Go to the **Inspect** panel >> **Accessibility DevTools** of your required website.
-
+- Go to the **Inspect** panel >> **LambdaTest Accessibility DevTools** of your required website.
 - Click on the **Multi Page Scan** button to start the scanning for **Accessibility Issue** for that particular page.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/multi-page-scanner/1.png').default} alt="automation-dashboard" className="doc_img"/>
@@ -74,7 +74,6 @@ You can use Multi Page Scanner for:
 ### Scan the Multiple Webpages
 
 - Simply add all the URLs of the webpages that you want to scan.
-
 - Click on the **Start Scan** button.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/multi-page-scanner/2.png').default} alt="automation-dashboard" className="doc_img"/>
