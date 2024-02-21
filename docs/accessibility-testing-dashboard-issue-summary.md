@@ -46,9 +46,9 @@ The issue summary page describes the complete test summary. It divides the compl
 ## Summary
 
 - **Total Issues :** Total number of issues your website have.
-- **Isssue Types :** Total number of segregated issues your website have.
+- **Issue Types :** Total number of segregated issues your website have.
 - **Affected Element groups :** Total number of element groups affected.
-- **Best Practices :** Recommeneded Best Practices to make your website more compliant.
+- **Best Practices :** Recommended Best Practices to make your website more compliant.
 - **Needs Review :** Total number of issues that needs to be reviewed.
 - **Affected WCAG Guidelines :** Total number of WCAG Guidelineds affecting from these issues.
 
