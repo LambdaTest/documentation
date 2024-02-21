@@ -40,7 +40,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
 Imagine you have to navigate a website without a sight, relying solely on a screen reader to guide you. You are trying to interact with an app or a web-app using only voice commands due to limited mobility. Sounds scary!
 
 This is the reality for millions of people with disabilities who encounter barriers when interacting with digital products. Accessibility testing aims to break down these barriers, ensuring everyone has equal access to information and functionality online.

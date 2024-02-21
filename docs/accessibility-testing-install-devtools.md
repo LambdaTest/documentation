@@ -41,7 +41,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
 **Step 1:** Go to the Accessibility Dashboard and click on the **Download Plugin** button.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/1.png').default} alt="automation-dashboard" className="doc_img"/>

@@ -42,7 +42,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
 ### Prerequisite
 
 - You have to [setup the Accessibility DevTools](/support/docs/accessibility-testing-install-devtools) in your browser.

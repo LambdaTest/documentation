@@ -43,7 +43,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
 Full Page Scanner is used to analyze the accessibility of entire web pages at once. It goes beyond individual element checks and provides a comprehensive overview of potential accessibility issues across the entire page content.
 
 ## Functionalities of Full Page Scanner
