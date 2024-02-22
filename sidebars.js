@@ -1954,39 +1954,40 @@ module.exports = {
       },
       [
         {
+          type: "doc",
+          id:"analytics-overview"
+        },
+        {
           type: "category",
-          collapsed: true,
-          label: "Analytics",
-          link: {
-            type: "doc",
-            id: "analytics-overview",
-          },
+          collapsed: false,
+          label: "Getting Started",
+  
           items: [
-            "analytics-create-dashboard",
             "analytics-dashboard-templates",
-            {
-              type: "category",
-              collapsed: true,
-              label: "Analytics Widgets",
-              link: {
-                type: "doc",
-                id: "analytics-widgets",
-              },
-              items: [
-                "analytics-modules-test-overview",
-                "analytics-modules-error-insights",
-                "analytics-modules-resource-utilization",
-                "analytics-modules-hyperexecute",
-              ],
-            },
-            "analytics-modules-test-intelligence-flaky-test-analytics",
-            "analytics-modules-test-intelligence-command-logs-analytics",
-            "analytics-test-case-insights",
-            "analytics-dashboard-edit-layout",
-            "analytics-dashboard-features",
-            "analytics-faqs",
+            "analytics-create-dashboard",
           ],
         },
+        {
+          type: "category",
+          collapsed: false,
+          label: "Analytics Widgets",
+          link: {
+            type: "doc",
+            id: "analytics-widgets",
+          },
+          items: [
+            "analytics-modules-test-overview",
+            "analytics-modules-error-insights",
+            "analytics-modules-resource-utilization",
+            "analytics-modules-hyperexecute",
+          ],
+        },
+        "analytics-modules-test-intelligence-flaky-test-analytics",
+        "analytics-modules-test-intelligence-command-logs-analytics",
+        "analytics-test-case-insights",
+        "analytics-dashboard-edit-layout",
+        "analytics-dashboard-features",
+        "analytics-faqs",
       ]
     ],
 

@@ -1,7 +1,7 @@
 ---
 id: analytics-dashboard-templates
 title: Analytics Dashboard Pre-built templates
-sidebar_label: Dashboard Templates
+sidebar_label: Create with Pre-Built templates
 description: Discover Dashboard Templates for streamlined test analysis. Save time with pre-built widgets tailored to specific testing needs. Learn more
 keywords:
   - analytics
@@ -36,7 +36,7 @@ slug: analytics-dashboard-templates/
 
 ---
 
-<!-- <img loading="lazy" src={require('../assets/images/analytics/analytics-overview-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
+<img loading="lazy" src={require('../assets/images/analytics/Dashboard-Template.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ## About the Dashboard templates:
 
@@ -210,6 +210,12 @@ The following are the use cases for the template:
 3. Evaluate the progress and performance of various stages within jobs, ensuring seamless execution and identifying potential bottlenecks.
 4. Obtain a high-level overview of all jobs executed on the platform to assess their status and prioritize actions accordingly.
 5. Assess the efficiency of HyperExecute workflows by analyzing job, task, and stage summaries, enabling continuous optimization and improved test execution times.
+
+## Explore More Dashboard Features
+
+* Scheduling a Email notification of the dashboard - Read More
+* Share the Dashboard with a public or a private link with your team - [Read More](/docs/analytics-dashboard-features/#expiry-settings-for-dashboard-share-link)
+* Exporting the Dashboard as a PDF - [Read More](/docs/analytics-dashboard-features/#export-dashboard-as-pdf)
 
 
 <nav aria-label="breadcrumbs">
