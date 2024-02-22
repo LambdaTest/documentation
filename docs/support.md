@@ -157,8 +157,13 @@ slug: /
 <!-- end of second section -->
 
 <!-- start of third section -->
-
 <div className="home_main">
+    <div className="home_inners_box">
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Accessibility DevTools</h2>
+      <div className="home_inners">
+        <a href="/docs/accessibility-testing/"><p className="p_home_inners">Getting Started</p></a>
+      </div>
+    </div>
     <div className="home_inners_box">
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Setting and Security</h2>
       <div className="home_inners">

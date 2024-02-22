@@ -42,12 +42,16 @@ function ApiDoc() {
                         <iframe className="embed-responsive-item"
                             src="https://stage-swagger-api-support.lambdatestinternal.com/scim/index.html"></iframe>
                     </TabItem>
+                    <TabItem value="hyperexecute" label="HyperExecute">
+                        <iframe className="embed-responsive-item"
+                            src="https://stage-swagger-api-support.lambdatestinternal.com/hyperexecute/openapi.yaml"></iframe>
+                    </TabItem>
                     <TabItem value="auditlogs" label="Audit Logs">
                         <iframe className="embed-responsive-item"
                             src="https://stage-swagger-api-support.lambdatestinternal.com/audit-logs/index.html"></iframe>
                     </TabItem>
 
-                    
+
                 </Tabs>
             </div>
         </Layout>

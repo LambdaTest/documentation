@@ -583,11 +583,6 @@ export default function index() {
               <p>Any premium plan will allow you to test apps on emulators/simulators. The number of parallel sessions will depend on your parallel session plan. Refer to our <a href="https://www.lambdatest.com/pricing">plans and pricing</a>  page for further information.</p>
             </details>
             <details>
-              <summary>Does On-demand pass covers access to Realtime Native App testing on emulators/simulators?
-              </summary>
-              <p>Through On-demand pass you can get 120 minutes of manual testing time on LambdaTest platform at $10 for 30 days. Currently, On-demand pass is not covered for Realtime Native App testing.</p>
-            </details>
-            <details>
               <summary>How does the concurrency for Realtime Native App testing works?
               </summary>
               <p>You need not opt for a seperate App Testing Plan, as parallelism (or concurrency) for app testing is synced with Realtime Browser testing. To run native mobile app tests parallelly (or concurrently) with Realtime Browser testing, you need to ‘at least’ be on a two (or more) parallel session plan.</p>
@@ -1148,13 +1143,6 @@ export default function index() {
               </summary>
               <p>LambdaTest price is based on plan level and the no. of parallel sessions. As per your need you can upgrade and downgrade at any time. However, changes will not take effect until your next billing cycle.</p>
             </details>
-
-            <details>
-              <summary>What is a On Demand Pass and how does it work?
-              </summary>
-              <p>An On Demand Pass is a one time payment option for to those who wish to use LambdaTest for a shorter duration. With On Demand Pass, you get 120 Minutes of testing time with full access to LambdaTest features for 30 days at a price of just $10. This is a non recurring payment ,i.e. if you wish to continue this plan you would have to purchase On Demand Pass again.</p>
-            </details>
-
           </TabItem>
         </Tabs>
       </div>
