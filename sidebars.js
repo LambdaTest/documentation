@@ -2082,46 +2082,47 @@ module.exports = {
         label: '<- Back',
         href: '/docs/',
         customProps: {
-        className: 'back-to-main-menu'
+          className: 'back-to-main-menu'
         },
       },
-      [
-        {
-          type: "category",
-          collapsed: true,
-          label: "Analytics",
-          link: {
-            type: "doc",
-            id: "analytics-overview",
-          },
-          items: [
-            "analytics-create-dashboard",
-            "analytics-dashboard-templates",
-            {
-              type: "category",
-              collapsed: true,
-              label: "Analytics Widgets",
-              link: {
-                type: "doc",
-                id: "analytics-widgets",
-              },
-              items: [
-                "analytics-modules-test-overview",
-                "analytics-modules-error-insights",
-                "analytics-modules-resource-utilization",
-                "analytics-modules-hyperexecute",
-              ],
-            },
-            "analytics-modules-test-intelligence-flaky-test-analytics",
-            "analytics-modules-test-intelligence-command-logs-analytics",
-            "analytics-test-case-insights",
-            "analytics-dashboard-edit-layout",
-            "analytics-dashboard-features",
-            "analytics-faqs",
-          ],
+      {
+        type: "doc",
+        id:"analytics-overview"
+      },
+      {
+        type: "category",
+        collapsed: false,
+        label: "Getting Started",
+  
+        items: [
+          "analytics-dashboard-templates",
+          "analytics-create-dashboard",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: false,
+        label: "Analytics Widgets",
+        link: {
+          type: "doc",
+          id: "analytics-widgets",
         },
-      ]
+        items: [
+          "analytics-modules-test-overview",
+          "analytics-modules-error-insights",
+          "analytics-modules-resource-utilization",
+          "analytics-modules-hyperexecute",
+        ],
+      },
+      "analytics-modules-test-intelligence-flaky-test-analytics",
+      "analytics-modules-test-intelligence-command-logs-analytics",
+      "analytics-test-case-insights",
+      "analytics-dashboard-edit-layout",
+      "analytics-dashboard-features",
+      "analytics-faqs",
+  
     ],
+  
 
     TestIntelligence: [
       {
