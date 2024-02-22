@@ -83,7 +83,6 @@ You can add more widgets of the same type to your dashboard multiple times and a
 
 ## Explore More Dashboard Features
 
-* Scheduling a Email notification of the dashboard - Read More
 * Share the Dashboard with a public or a private link with your team - [Read More](/docs/analytics-dashboard-features/#expiry-settings-for-dashboard-share-link)
 * Exporting the Dashboard as a PDF - [Read More](/docs/analytics-dashboard-features/#export-dashboard-as-pdf)
 
