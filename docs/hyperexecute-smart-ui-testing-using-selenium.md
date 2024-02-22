@@ -129,7 +129,7 @@ let gridUrl =
   ":" + 
   //highlight-next-line
   "<Your Access Key>" +
-  `@beta-hub.lambdatest.com/wd/hub`;
+  `@hub.lambdatest.com/wd/hub`;
 
 // Here is your Remote WebDrive Connection
 let driver = await new webdriver.Builder()
@@ -190,7 +190,7 @@ driver.executeScript("smartui.takeScreenshot");
 This section of code should be used to configure your Smart UI test with the host
 
 ```javascript
-const GRID_HOST = "@beta-hub.lambdatest.com/wd/hub";
+const GRID_HOST = "@hub.lambdatest.com/wd/hub";
 ```
 
 ### Smart UI Test Keywords
