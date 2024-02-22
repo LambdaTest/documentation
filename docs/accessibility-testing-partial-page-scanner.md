@@ -43,7 +43,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-While the [Full Page Scanner](/support/docs/full-page-scanner/) analyzes an entire webpage, the Partial Page Scanner provides a more focused approach to accessibility evaluation.
+While the [Full Page Scanner](/support/docs/accessibility-testing-full-page-scanner/) analyzes an entire webpage, the Partial Page Scanner provides a more focused approach to accessibility evaluation.
 
 It analyzes specific regions or elements within a webpage instead of the entire page. It is Ideal for:
 
