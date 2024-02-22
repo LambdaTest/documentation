@@ -1,5 +1,5 @@
 ---
-id: workflow-scanner
+id: accessibility-testing-workflow-scanner
 title: Workflow Scanner
 hide_title: false
 sidebar_label: Workflow Scanner
@@ -8,10 +8,13 @@ keywords:
     - LambdaTest
     - Accessibility
     - Testing
+    - DevTools
+    - run quick scan
+    - test issues
     - Workflow Scanner
-url: https://www.lambdatest.com/support/docs/workflow-scanner/
+url: https://www.lambdatest.com/support/docs/accessibility-testing-workflow-scanner/
 site_name: LambdaTest
-slug: workflow-scanner/
+slug: accessibility-testing-workflow-scanner/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -35,12 +38,11 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "How to run Workflow Scanner",
-          "item": "https://www.lambdatest.com/support/docs/workflow-scanner/"
+          "item": "https://www.lambdatest.com/support/docs/accessibility-testing-workflow-scanner/"
         }]
       })
     }}
 ></script>
-
 Workflow Scan allows you to record multiple real-time interactions and page loads within a user journey on a website and then analyze them for accessibility issues. This helps ensure that users with disabilities can easily navigate and interact with your website across different scenarios.
 
 ## Functionalities of Workflow Scan:
@@ -54,12 +56,11 @@ Workflow Scan allows you to record multiple real-time interactions and page load
 
 ### Prerequisite
 
-- You have to [setup the Accessibility DevTools](/support/docs/accessibility-testing/#how-to-setup-the-accessibility-devtools) in your browser.
+- You have to [setup the Accessibility DevTools](/support/docs/accessibility-testing-install-devtools) in your browser.
 
-### Configure the Accessibility DevTool
+### Trigger the Accessibility DevTool
 
-- Go to the **Inspect** panel >> **Accessibility DevTools** of your required website.
-
+- Go to the **Inspect** panel >> **LambdaTest Accessibility DevTools** of your required website.
 - Click on the **Workflow Scan** button to start the scanning for **Accessibility Issue** for that particular page.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/workflow-scanner/1.png').default} alt="automation-dashboard" className="doc_img"/>
