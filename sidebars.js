@@ -704,6 +704,7 @@ module.exports = {
                   "hyperexecute-how-to-find-correct-concurrency",
                   "hyperexecute-how-to-configure-sourcePayload",
                   "hyperexecute-browser-list-api",
+                  "hyperexecute-how-to-run-tests-using-local-selenium-drivers"
                 ],
               },
               {

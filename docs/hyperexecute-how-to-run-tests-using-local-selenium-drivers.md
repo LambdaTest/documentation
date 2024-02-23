@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-how-to-run-tests-using-local-selenium-drivers
-title: How to Run Tests on HyperExecute using Local Selenium Web Driver
+title: "Streamline Your Tests: Leveraging Local Selenium Drivers on HyperExecute"
 hide_title: false
 sidebar_label: How to Run Tests on HyperExecute using Local Selenium Web Driver
 description: How to Run Tests on HyperExecute using Local Selenium Web Driver
@@ -42,8 +42,84 @@ As a tester, whenever you switch from local web drivers to remote web drivers ca
 
 HyperExecute's support for **Local Selenium Driver** allows you to seamlessly run your tests on our platform with very minimal changes. It will help you in
 
-- **Reduce Onboarding Time :** Youc can skip the manual code changes and configuration associated with remote web drivers, and accelerate your integration with HyperExecute.
+- **Reduce Onboarding Time :** You can skip the manual code changes and configuration associated with remote web drivers, and accelerate your integration with HyperExecute.
 
 - **Minimal Code Refactoring :** You can now maintain your existing test code, without worrying about the need for significant modifications.
 
 - **Seamless Platform Transitions :** You can run both web and mobile tests (using Selenium and Appium) without platform-specific changes.
+
+## How to Trigger Your Tests?
+
+To utilize the native Selenium driver support in HyperExecute, you need to incorporate the following steps into your testing workflow:
+
+### Step 1: Configure Your Test Suite
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+Download or Clone the code sample for the TestNG from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/tree/localdriver" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
+### Step 2: Update YAML Configuration:
+
+- Add the `platformConfig` flag to your YAML file, specifying the platforms and configurations for your tests.
+- Use the `platform` flag to define individual platform configurations (OS, browser/device, capabilities).
+- Utilize the `config` flag to set global capabilities applicable to all platforms.
+
+> **NOTE :** `platformConfig` is only supported in pure [Matrix mode](/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid mode](/support/docs/hyperexecute-hybrid-strategy/) for both [YAML 0.1](/support/docs/hyperexecute-yaml-parameters/) and [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
+
+```bash
+platformConfig:
+  platform:
+    - os: win10
+      browserName: chrome
+      browserVersion: latest
+      build: win10
+      network: false
+      goog:chromeOptions:
+        args: [ "--start-maximized", "--disable-gpu" ]
+    - os: win10
+      browserName: firefox
+      browserVersion: latest
+    - os: android
+      deviceName: Galaxy Tab 2
+    - os: ios
+      deviceName: iPad 10.2 (2019)
+  config:
+    build: latest
+    network: true
+    console: true 
+```
+
+### Step 3: Run Your Tests:
+
+- Execute your tests as usual through your test framework (e.g., JUnit, TestNG).
+- HyperExecute automatically intercepts Selenium commands and routes them to its platform.
+
+```bash
+./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
+```
+
+## Priority Mapping of Capability Selection
+
+HyperExecute follows a specific priority order when selecting capabilities. The capabilities added in the `config` flag are **global** and applicable to all the platforms.
+
+So in the above example, `network:true` capability is applied to all the platform configurations but in the case of **platform win10-chrome** network capabilities will be set as `false`.
+
+| Script Config | YAML `config` | YAML `platform` | Final Status |
+|---------------|-------------|-------------|--------------|
+|`"console": info` | `"console": debug` | `"console": warning` | `"console": warning` |
+|`"console": info` | `"console": debug` | NA | `"console": debug` |
+|`"console": debug` | NA | `"console": debug` | `"console": debug` |
+| NA | `"console": debug` | `"console": warning` | `"console": warning` |
+
+## Considerations and Constraints
+
+While HyperExecute's native Selenium driver support offers significant advantages, it's essential to note the following constraints:
+
+- If you are using **IEDriver** in your scripts, the tests won’t be run on any platform beside **Windows 10**
+- Currently **SafariDriver** is not compatible with the following feature.
+- Scripts with hardcoded paths for Selenium drivers may require minor adjustments.
+- Support for **AndroidDriver** is not yet available; however, **Chromedriver** can be used for Appium testing.
