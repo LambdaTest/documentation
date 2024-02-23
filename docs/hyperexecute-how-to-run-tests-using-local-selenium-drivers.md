@@ -108,7 +108,7 @@ HyperExecute follows a specific priority order when selecting capabilities. The 
 
 So in the above example, `network:true` capability is applied to all the platform configurations but in the case of **platform win10-chrome** network capabilities will be set as `false`.
 
-| Script Config | YAML `conifg` | YAML `platform` | Final Status |
+| Script Config | YAML `config` | YAML `platform` | Final Status |
 |---------------|-------------|-------------|--------------|
 |`"console": info` | `"console": debug` | `"console": warning` | `"console": warning` |
 |`"console": info` | `"console": debug` | NA | `"console": debug` |
