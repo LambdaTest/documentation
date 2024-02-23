@@ -2,7 +2,7 @@
 id: hyperexecute-how-to-run-tests-using-local-selenium-drivers
 title: "Streamline Your Tests: Leveraging Local Selenium Drivers on HyperExecute"
 hide_title: false
-sidebar_label: "Streamline Your Tests: Leveraging Local Selenium Drivers on HyperExecute"
+sidebar_label: How to Run Tests on HyperExecute using Local Selenium Web Driver
 description: How to Run Tests on HyperExecute using Local Selenium Web Driver
 keywords:
   - LambdaTest Hyperexecute
