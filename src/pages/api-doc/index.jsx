@@ -44,7 +44,7 @@ function ApiDoc() {
                     </TabItem>
                     <TabItem value="hyperexecute" label="HyperExecute">
                         <iframe className="embed-responsive-item"
-                            src="https://stage-swagger-api-support.lambdatestinternal.com/hyperexecute/openapi.yaml"></iframe>
+                            src="https://stage-swagger-api-support.lambdatestinternal.com/hyperexecute/index.html"></iframe>
                     </TabItem>
                     <TabItem value="auditlogs" label="Audit Logs">
                         <iframe className="embed-responsive-item"
