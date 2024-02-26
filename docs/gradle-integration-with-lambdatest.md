@@ -50,6 +50,12 @@ slug: gradle-integration-with-lambdatest/
 
 Gradle is a build automation tool for multi-language software development. It controls the development process in the tasks of compilation and packaging to testing, deployment, and publishing. Supported languages include Java, Kotlin, Groovy, Scala, C/C++, and JavaScript.
 
+<div className="ytframe"> 
+<div className="youtube" data-embed="as5IU-UjtAg">
+    <div className="play-button"></div>
+</div>
+</div>
+
 ## Steps to Setup the Gradle Plugin
 
 **Step 1:** Add LambdaTest Gradle Plugin to the `build.gradle` file.
