@@ -162,6 +162,8 @@ slug: /
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Accessibility DevTools</h2>
       <div className="home_inners">
         <a href="/docs/accessibility-testing/"><p className="p_home_inners">Getting Started</p></a>
+        <a href="/docs/accessibility-testing-run-quick-scan/"><p className="p_home_inners">Run Your Quick Scan</p></a>
+        <a href="/docs/accessibility-testing-workflow-scanner/"><p className="p_home_inners">Scanning Alternatives</p></a>
       </div>
     </div>
     <div className="home_inners_box">
@@ -178,6 +180,8 @@ slug: /
         <a href="/docs/lt-browser/"><p className="p_home_inners">LT Browser</p></a>
         <a href="/docs/test-management/"><p className="p_home_inners">Test Management</p></a>
         <a href="/docs/test-intelligence-overview/"><p className="p_home_inners">Test Intelligence</p></a>
+        <a href="/docs/automated-screenshot-testing/"><p className="p_home_inners">Screenshot Testing</p></a>
+        <a href="/docs/responsive-testing/"><p className="p_home_inners">Responsive Testing</p></a>
       </div>
     </div>
 </div>
