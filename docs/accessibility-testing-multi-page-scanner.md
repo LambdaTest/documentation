@@ -3,7 +3,7 @@ id: accessibility-testing-multi-page-scanner
 title: Multi Page Scanner
 hide_title: false
 sidebar_label: Multi Page Scanner
-description: Multi Page Scanner
+description: Analyze accessibility across multiple webpages with the Multi Page Scanner for a comprehensive overview of potential issues and prioritize fixes impacting the user experience.
 keywords:
     - LambdaTest
     - Accessibility

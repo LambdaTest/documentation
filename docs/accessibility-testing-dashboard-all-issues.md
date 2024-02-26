@@ -3,7 +3,7 @@ id: accessibility-testing-dashboard-all-issues
 title: All Issues
 hide_title: false
 sidebar_label: All Issues
-description: All Issues
+description: Access a detailed breakdown of issues, including type, WCAG guideline violations, and customizable filtering options for a seamless user experience.
 keywords:
     - LambdaTest
     - Accessibility
