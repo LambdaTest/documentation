@@ -44,7 +44,7 @@ slug: hyperexecute-release-notes-2-1-5/
 
 Optimize your development workflow with HyperExecute's streamlined Maven runtime integration. Benefit from seamless integration and performance enhancements designed specifically for Maven-driven projects, refining your execution processes to increase efficiency.
 
-> Check the [documentation](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) for deatiled understanding.
+> Check the [documentation](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) for detailed understanding.
 
 ## Refined Test Control Through Regex Retry Option ⚙️
 
