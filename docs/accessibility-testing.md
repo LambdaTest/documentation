@@ -3,7 +3,7 @@ id: accessibility-testing
 title: LambdaTest Accessibility DevTools
 hide_title: false
 sidebar_label: Getting Started
-description: LambdaTest Accessibility Testing DevTools
+description: Break down barriers with LambdaTest Accessibility DevTools. Make your digital products usable for people with disabilities through comprehensive testing and improvement.
 keywords:
     - LambdaTest
     - Accessibility
@@ -89,5 +89,5 @@ Now, you need to select the type of scan as per your requirement:
 <br /><br />
 
 <div className="support_main ms-auto">
-  <p><i>Powered By <b>Axe-Core</b></i></p>
+  <p><i>Powered By <b><a href="https://github.com/dequelabs/axe-core" target="_blank">Axe-Core</a></b></i></p>
 </div>

@@ -3,7 +3,7 @@ id: accessibility-testing-navigating-dashboard
 title: Navigating Dashboard
 hide_title: false
 sidebar_label: Navigating Dashboard
-description: Navigating Dashboard
+description: Access valuable insights and actionable steps for improving your website's accessibility performance with Accessibility Dashboard.
 keywords:
     - LambdaTest
     - Accessibility
