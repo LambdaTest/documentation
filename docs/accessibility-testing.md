@@ -84,4 +84,10 @@ Now, you need to select the type of scan as per your requirement:
       <p>Workflow Scan sequentially ensure accessibility standards across multiple pages or flows.</p>
     </div>
   </a>
-</div> 
+</div>
+
+<br /><br />
+
+<div className="support_main ms-auto">
+  <p><i>Powered By <b>Axe-Core</b></i></p>
+</div>

@@ -1179,8 +1179,13 @@ module.exports = {
         {
           type: "category",
           collapsed: true,
-          label: "Scan User Workflow",
+          label: "Scanning Alternatives",
           items: [
+            {
+              type: "doc",
+              label: "Workflow Scanner",
+              id: "accessibility-testing-workflow-scanner",
+            },
             {
               type: "doc",
               label: "Full Page Scanner",
@@ -1195,11 +1200,6 @@ module.exports = {
               type: "doc",
               label: "Multi Page Scanner",
               id: "accessibility-testing-multi-page-scanner"
-            },
-            {
-              type: "doc",
-              label: "Workflow Scanner",
-              id: "accessibility-testing-workflow-scanner",
             },
           ]
         },
