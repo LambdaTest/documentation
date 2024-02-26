@@ -3,7 +3,7 @@ id: accessibility-testing-settings
 title: Configure Settings
 hide_title: false
 sidebar_label: Configure Settings
-description: Accessibility Testing Settings
+description: Customize your testing experience with LambdaTest Accessibility DevTools' comprehensive settings to meet your specific needs and preferences.
 keywords:
     - LambdaTest
     - Accessibility

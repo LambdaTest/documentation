@@ -3,7 +3,7 @@ id: accessibility-testing-partial-page-scanner
 title: Partial Page Scanner
 hide_title: false
 sidebar_label: Partial Page Scanner
-description: Partial Page Scanner
+description: The Partial Page Scanner focuses on specific regions or elements within a webpage, allowing for targeted accessibility evaluation. It is ideal for testing components, investigating reported issues, and evaluating changes made to a specific area.
 keywords:
     - LambdaTest
     - Accessibility
