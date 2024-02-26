@@ -782,6 +782,41 @@ module.exports = {
             items: [
               {
                 type: "doc",
+                label: "Release Notes 2.1.2",
+                id: "hyperexecute-release-notes-2-2-2",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 2.2.1",
+                id: "hyperexecute-release-notes-2-2-1",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 2.2.0",
+                id: "hyperexecute-release-notes-2-2-0",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 2.1.6",
+                id: "hyperexecute-release-notes-2-1-6",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 2.1.5",
+                id: "hyperexecute-release-notes-2-1-5",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 2.1.4",
+                id: "hyperexecute-release-notes-2-1-4",
+              },
+              {
+                type: "doc",
+                label: "Release Notes 2.1.3",
+                id: "hyperexecute-release-notes-2-1-3",
+              },
+              {
+                type: "doc",
                 label: "Release Notes 2.1.1",
                 id: "hyperexecute-release-notes-2-1-1",
               },
