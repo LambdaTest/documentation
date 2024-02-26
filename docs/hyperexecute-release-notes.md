@@ -58,6 +58,13 @@ You can seamlessly deploy with your favourite Cloud Platform
 
 | Release Number | Release Date |
 |:---|:--|
+| [2.2.2](/support/docs/hyperexecute-release-notes-2-2-2) | February 25, 2024|
+| [2.2.1](/support/docs/hyperexecute-release-notes-2-2-1) | February 18, 2024|
+| [2.2.0](/support/docs/hyperexecute-release-notes-2-2-0) | February 11, 2024|
+| [2.1.6](/support/docs/hyperexecute-release-notes-2-1-6) | January 14, 2024|
+| [2.1.5](/support/docs/hyperexecute-release-notes-2-1-5) | January 07, 2024|
+| [2.1.4](/support/docs/hyperexecute-release-notes-2-1-4) | December 31, 2023|
+| [2.1.3](/support/docs/hyperexecute-release-notes-2-1-3) | December 10, 2023|
 | [2.1.1](/support/docs/hyperexecute-release-notes-2-1-1) | December 17, 2023|
 | [2.1.0](/support/docs/hyperexecute-release-notes-2-1-0) | December 10, 2023|
 | [1.139.0](/support/docs/hyperexecute-release-notes-1-139-0) | December 3, 2023|
