@@ -2,7 +2,7 @@
 id: analytics-widgets
 title: Analytics Widgets
 sidebar_label: Analytics Widgets
-description: Unlock valuable insights with LambdaTest Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes
+description: Unlock valuable insights with LambdaTest Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes.
 keywords:
   - analytics
 url: https://www.lambdatest.com/support/docs/analytics-widgets/
