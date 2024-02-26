@@ -3,7 +3,7 @@ id: error-categorization-report
 title: Error Categorization Report on HyperExecute
 hide_title: true
 sidebar_label: Error Categorization Report
-description: Learn how to generate Extent Report on lambdatest and download the reports from the dashboard
+description: Streamline error analysis with the Error Categorization Report. Identify patterns in test failures to enhance quality and efficiency in your testing process.
 keywords:
   - error categorization reports
   - error testing lambdatest 

@@ -3,7 +3,7 @@ id: tosca-integration-with-hyperexecute-for-sap
 title: Tosca Integration for SAP
 hide_title: true
 sidebar_label: Tosca Integration for SAP
-description: This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute 
+description: Master seamless integration of Tosca with HyperExecute using our detailed guide. Enhance your testing strategy for faster, more efficient automation results.
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products
