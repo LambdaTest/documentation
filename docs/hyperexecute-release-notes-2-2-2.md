@@ -46,4 +46,4 @@ Testsigma is an AI-powered, cloud-based test automation platform designed to hel
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/testsigma/2.png').default} alt="HyperExecute" className="doc_img"/>
 
-> Refer to the detailed documentation on how to integrate [Testsigma](support/docs/hyperexecute-testsigma-integration/) with HyperExecute.
+> Refer to the detailed documentation on how to integrate [Testsigma](/support/docs/hyperexecute-testsigma-integration/) with HyperExecute.
