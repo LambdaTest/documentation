@@ -2,7 +2,7 @@
 id: analytics-overview
 title: Lambdatest - Test Insights for visualizing your tests runs
 sidebar_label: Insights
-description: Unlock valuable insights with LambdaTest Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes
+description: Optimize test management with Test Insights. Visualize test runs, track progress, and improve quality with actionable analytics. Enhance testing efficiency.
 keywords:
   - analytics
 url: https://www.lambdatest.com/support/docs/analytics-overview/
