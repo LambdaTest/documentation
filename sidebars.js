@@ -1145,6 +1145,93 @@ module.exports = {
         // },
     ],
 
+    AccessibilityTestingSidebar: [
+      {
+        type: 'link',
+        label: '<- Back',
+        href: '/docs/',
+        customProps: {
+          className: 'back-to-main-menu'
+        },
+      },
+      [
+        {
+          type: "category",
+          collapsed: false,
+          label: "Getting Started",
+          link: {
+            type: "doc",
+            id: "accessibility-testing"
+          },
+          items: [
+            {
+              type: "doc",
+              label: "Install Accessibility Toolkit",
+              id: "accessibility-testing-install-devtools",
+            },
+            {
+              type: "doc",
+              label: "Run a Quck Scan",
+              id: "accessibility-testing-run-quick-scan",
+            },
+          ],
+        },
+        {
+          type: "category",
+          collapsed: true,
+          label: "Scanning Alternatives",
+          items: [
+            {
+              type: "doc",
+              label: "Workflow Scanner",
+              id: "accessibility-testing-workflow-scanner",
+            },
+            {
+              type: "doc",
+              label: "Full Page Scanner",
+              id: "accessibility-testing-full-page-scanner",
+            },
+            {
+              type: "doc",
+              label: "Partial Page Scanner",
+              id: "accessibility-testing-partial-page-scanner",
+            },
+            {
+              type: "doc",
+              label: "Multi Page Scanner",
+              id: "accessibility-testing-multi-page-scanner"
+            },
+          ]
+        },
+        {
+          type: "doc",
+          label: "Configure Settings",
+          id: "accessibility-testing-settings"
+        },
+        {
+          type: "category",
+          collapsed: true,
+          label: "Navigating Dashboard",
+          link: {
+            type: "doc",
+            id: "accessibility-testing-navigating-dashboard"
+          },
+          items: [
+            {
+              type: "doc",
+              label: "Issue Summary",
+              id: "accessibility-testing-dashboard-issue-summary"
+            },
+            {
+              type: "doc",
+              label: "All Issues",
+              id: "accessibility-testing-dashboard-all-issues"
+            }
+          ]
+        }
+      ]
+    ],
+  
     SettingsAndSecuritySidebar: [
       {
         type: 'link',
