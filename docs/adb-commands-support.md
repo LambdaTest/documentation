@@ -110,6 +110,43 @@ This command is used to obtain detailed information about installed packages on 
 params = {"command": "shell", "text": "dumpsys package <package_info>"}
 result = driver.execute_script("lambda-adb",params)
 ```
+### Enable/Disable Notification
+
+- **enableNotification**
+
+These commands enable or disable your app notifications on the device based on the value provided for `enableNotification`. **True** is used to enable notifications, while **False** is used to disable them.The following is a Python sample using the adb command with LambdaTest executor:
+
+```bash
+params = {"command": "enable-notification", "enableNotification":True/False}
+result = driver.execute_script("lambda-adb",params)
+```
+
+:::note
+- These commands are compatible with Android versions 13 and above.
+- When you disable app notification permissions using the command, the app go into the background. This behavior occurs due to limitations with ADB, and you need to reactivate the app through test script.
+:::
+
+### Enable/Disable Battery Optimization
+
+- **disableBatteryOptimization**
+
+This command is used to enable or disable battery optimization for your app on the device. The following is a Python sample using the adb command to disable battery optimization with LambdaTest executor:
+
+```bash
+params = {"command":"disable-battery-optimization", "disableBatteryOptimization":True/False}
+result = driver.execute_script("lambda-adb",params)
+```
+
+### Fixed-to-User Rotation
+
+- **fixedToUserRotation**
+
+This command serves to lock the screen rotation in alignment with the app's default behavior and user-defined settings. Below is a Python example utilizing the adb command to enforce fixed screen rotation with the LambdaTest executor:
+
+```bash
+params = {"command":"fixed-to-user-rotation", "fixedToUserRotation":True}
+result = driver.execute_script("lambda-adb",params)
+```
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
