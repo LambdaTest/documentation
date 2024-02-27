@@ -384,7 +384,7 @@ module.exports = {
                 id: "playwright-junit-on-hyperexecute",
               },
               {
-                type: "category",
+                type: "doc",
                 label: "C#",
                 id: "playwright-junit-on-hyperexecute",
               },
@@ -448,7 +448,6 @@ module.exports = {
               id: "hyperexecute-performance-testing",
             },
             items: [
-              "hyperexecute-create-jmeter-test-plan",
               "hyperexecute-run-jmeter-tests"
             ]
           },
