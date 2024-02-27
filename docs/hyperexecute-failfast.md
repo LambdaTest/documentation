@@ -50,7 +50,7 @@ HyperExecute's FailFast feature lets you to optimize your testing regimen by aut
 
 The  **maxNumberOfTests**  flag serves as a parameter that determines the number of consecutive tests that need to be failed before the job is aborted automatically.
 
-For instance, if you set the **maxNumberOfTests** flag to 4, then your job will be aborted after four consecutive test failures. However, if three of your jobs fail and the fourth one is passed, then the FailFast feature will reset and look for the next four consecutive jobs that are failing.
+For instance, if you set the **maxNumberOfTests** flag to 4, then your job will be aborted after four consecutive test failures. However, if three of your tests fail and the fourth one is passed, then the FailFast feature will reset and look for the next four consecutive tests that are failing.
 
 This allows you to speed up your test execution process and provide you with faster feedback.
 
