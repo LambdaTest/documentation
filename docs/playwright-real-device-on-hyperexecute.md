@@ -1,32 +1,21 @@
 ---
-id: playwright-dotnet-on-hyperexecute
-title: Run playwright automation tests on HyperExecute using .Net
+id: playwright-real-device-on-hyperexecute
+title: Run playwright automation tests on HyperExecute using Real Devices
 hide_title: true
-sidebar_label: C#
-description: Learn how to run playwright automation tests on HyperExecute using .Net framework
+sidebar_label: Real Device
+description: Learn how to run playwright automation tests uisng Real Devices on HyperExecute
 keywords:
-  - unittest
-  - unittest selenium
-  - python selenium
-  - unit testing
-  - unit testing tutorial
-  - python unit testing
-  - python automation testing
-  - selenium webdriver python
-  - selenium python testing tutorial
-  - python selenium framework
-  - selenium
-  - selenium automation testing
-  - selenium testing tool
-  - selenium testing tutorial
-  - hyperexecute grid
-  - hyperexecute pyunit testing
-  - hyperexecute automation testing
-  - hyperexecute pyunit testing
-  - hyperexecute python testing
-url: https://www.lambdatest.com/support/docs/playwright-dotnet-on-hyperexecute/
+    - hyperexecute
+    - hyperexecute testing
+    - real devices
+    - playwright
+    - playwright test
+    - playright hyperexecute
+    - real device playwright
+    - real device test
+url: https://www.lambdatest.com/support/docs/playwright-real-device-on-hyperexecute/
 site_name: LambdaTest
-slug: playwright-dotnet-on-hyperexecute/
+slug: playwright-real-device-on-hyperexecute/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -49,14 +38,15 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to run playwright automation tests on HyperExecute using .Net framework",
-          "item": "https://www.lambdatest.com/support/docs/playwright-dotnet-on-hyperexecute/"
+          "name": "How to run playwright automation tests on HyperExecute using JUnit framework",
+          "item": "https://www.lambdatest.com/support/docs/playwright-real-device-on-hyperexecute/"
         }]
       })
     }}
 ></script>
 
-# Running DotNet Framework Tests on HyperExecute
+# Running Playwright with Real Devices on HyperExecute
+
 Playwright for .NET is a framework that enables browser automation and end-to-end testing using the .NET programming language, such as C#. Developed by Microsoft, Playwright offers a comprehensive .NET API for automating interactions with web pages in Chromium, Firefox, and WebKit browsers
 
 HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
@@ -282,26 +272,3 @@ You can seamlessly navigate between JobId's and taskId's. You need to click on t
 The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
-> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
-Happy testing!
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Run PyUnit tests on HyperExecute Grid
-      </span>
-    </li>
-  </ul>
-</nav>
