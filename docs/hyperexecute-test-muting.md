@@ -41,23 +41,11 @@ slug: hyperexecute-test-muting/
 
 # Test Muting
 
-> This is currently under the **Beta** version.
-
-<!-- ## Overview
-
-The "**Test Muting**" feature is designed to help you manage and control test scenarios that consistently fail. It allows you to mute specific tests that have failed for a predefined number of consecutive times. Additionally, you can enable **Auto-Muting** to automatically mute scenarios across all the jobs in your organization.
-
-## Why do you need Test Muting? -->
-
 Imagine you are a software tester, and you have a test suite with hundreds of tests. Some of these tests are known to fail consistently, but there is no way to disable them. This means that every time you run the test suite, these failing tests cause the suite to fail. This can be frustrating and time-consuming, especially if you are trying to identify and resolve real problems with the application under test.
 
 **Test Muting** is a feature that allows you to temporarily disable a test case from being executed. This can be useful for skipping failing or irrelevant tests, which can improve the efficiency and effectiveness of your test runs and help you focus on the most important results.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/4.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
-
-:::info
-To activate Test Muting for your organization, reach out to our **Customer Support** team to enable the Test Muting feature.
-:::
 
 ## How do you Enable Test Muting for your Organization?
 

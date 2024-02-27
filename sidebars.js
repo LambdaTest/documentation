@@ -379,16 +379,19 @@ module.exports = {
                 ],
               },
               {
-                type: "category",
-                collapsed: true,
+                type: "doc",
                 label: "Java",
-                items: ["playwright-junit-on-hyperexecute"],
+                id: "playwright-junit-on-hyperexecute",
               },
               {
                 type: "category",
-                collapsed: true,
                 label: "C#",
-                items: ["playwright-dotnet-on-hyperexecute"],
+                id: "playwright-junit-on-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "Real Device",
+                id: "playwright-real-device-on-hyperexecute",
               },
             ],
           },
@@ -435,6 +438,19 @@ module.exports = {
               "hyperexecute-pre-steps-error",
               "hyperexecute-scenario-steps-error",
             ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Performance Testing",
+            link: {
+              type: "doc",
+              id: "hyperexecute-performance-testing",
+            },
+            items: [
+              "hyperexecute-create-jmeter-test-plan",
+              "hyperexecute-run-jmeter-tests"
+            ]
           },
         ],
       },
@@ -597,19 +613,6 @@ module.exports = {
                 type: "doc",
                 label: "Hyperexecute Real Devices Testing",
                 id: "real-devices-integration-with-hyperexecute",
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Performance Testing",
-                link: {
-                  type: "doc",
-                  id: "hyperexecute-performance-testing",
-                },
-                items: [
-                  "hyperexecute-create-jmeter-test-plan",
-                  "hyperexecute-run-jmeter-tests"
-                ]
               },
             ],
           },

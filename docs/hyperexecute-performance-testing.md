@@ -3,7 +3,7 @@ id: hyperexecute-performance-testing
 title: Performance Testing
 hide_title: false
 sidebar_label: Performance Testing
-description: Learn how to do the performance testing using the jmeter tests
+description: Prevent app launch disaster! Test app performance under load with HyperExecute and JMeter. Get real-time insights, identify weaknesses & ensure smooth launch. 
 keywords:
   - hyperexecute performance testing
   - hyperexecute
@@ -46,6 +46,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 **Imagine launching your dream app...only to see it crash under the weight of excited users !!**
 
+> This is currently in the **Beta** version.
+
 Your team devoted months to meticulously crafting an app or a website that is finally ready for the world. Your users are hyped, anticipation is boiling, and you hit the **launch** button. 🚀
 
 But instead of smooth sailing, the app stumbles under the surge of eager users. And now they are left with only frustrating delays, error messages, and app crash notifications. It might sound familiar and scary at the same time, but unfortunately, it's a common scenario for apps without the armor of **performance testing**. 
@@ -67,13 +69,3 @@ HyperExecute offers a comprehensive platform for performance testing, providing 
 - **Customizable Load Distribution:** HyperExecute enables users to configure load distribution, specifying different data center names and percentages of load to be generated from them. This flexibility ensures efficient utilization of resources and accurate simulation of real-world scenarios.
 
 - **Robust Security and Compliance:** HyperExecute prioritizes security, implementing robust measures to protect user data and test plans. Furthermore, it ensures compliance with relevant data protection regulations, such as GDPR, safeguarding user privacy and data integrity.
-
-## Steps to start your Performance Testing journey with HyperExecute
-
-### Step 1: Create a Test Plan
-
-[Create an HTTP Test Plan](/support/docs/hyperexecute-create-jmeter-test-plan/) to construct your testing scenarios using the Apache JMeter GUI.
-
-### Step 2: Trigger Your Tests
-
-[Execute your tests](/support/docs/hyperexecute-run-jmeter-tests/) by simply uploading your JMeter test file to HyperExecute and initiating your performance test with ease.

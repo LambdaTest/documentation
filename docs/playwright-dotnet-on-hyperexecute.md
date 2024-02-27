@@ -2,7 +2,7 @@
 id: playwright-dotnet-on-hyperexecute
 title: Run playwright automation tests on HyperExecute using .Net
 hide_title: true
-sidebar_label: .Net
+sidebar_label: C#
 description: Learn how to run playwright automation tests on HyperExecute using .Net framework
 keywords:
   - unittest
