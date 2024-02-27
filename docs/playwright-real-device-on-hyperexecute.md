@@ -3,14 +3,14 @@ id: playwright-real-device-on-hyperexecute
 title: Run playwright automation tests on HyperExecute using Real Devices
 hide_title: true
 sidebar_label: Real Device
-description: Learn how to run playwright automation tests uisng Real Devices on HyperExecute
+description: Learn how to run playwright automation tests using Real Devices on HyperExecute
 keywords:
     - hyperexecute
     - hyperexecute testing
     - real devices
     - playwright
     - playwright test
-    - playright hyperexecute
+    - playwright hyperexecute
     - real device playwright
     - real device test
 url: https://www.lambdatest.com/support/docs/playwright-real-device-on-hyperexecute/
