@@ -52,25 +52,25 @@ After setting up a Test Plan, now you need to associate your test cases and exec
 
 - Go to the [HyperExecute Project's Dashboard](https://hyperexecute.lambdatest.com/hyperexecute/projects) and click on the **Setup new project** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/1.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/1.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
 - Select the **Tool** as **JMeter** and enter your **Project Name**.
 
 - Click on Continue.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/2.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/2.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
 - Browse and Upload the test plans that you have created.
 
 - Click on the **Save** button
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/3.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/3.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
 ## Step 2: Execute Your Test Plans
 
 - Select your desired **.jmx** file and click on the **Run** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/4.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/4.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
 - Configure the following parameters to perform the testing and click on the **Continue** button
 
@@ -80,13 +80,13 @@ After setting up a Test Plan, now you need to associate your test cases and exec
   
   - **Ramp-up Time (min) :** This specifies the amount of time it should take to reach the peak test load.
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/5.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/5.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
   - **Total Load Distribution :** Configure the regions in which you want to distribute the load testing as per the % of the users.
 
 - Click on the **Run Test** button.
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/6.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/6.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
 ## Step 3: Analyze Your Project Performance
 
@@ -102,24 +102,24 @@ After setting up a Test Plan, now you need to associate your test cases and exec
   - **Load** and **Response Time** graph.
   - Additional details like **regions** and test duration.
   
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/7.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/7.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
 ### Timeline Report
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/8.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/8.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
 ### Request Stats
 
 You can analyze the number of requests sent on that particular time.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/9.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/9.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
 ### Errors
 - Here you can check the Error Code type, Error Count, percentage of that error, and the percent of error in all the samples.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/10.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/10.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
 
 ### Logs
 - You can check the logs of your Jobs executed.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/performance_testing/11.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/11.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>

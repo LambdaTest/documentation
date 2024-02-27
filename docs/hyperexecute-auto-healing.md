@@ -43,15 +43,9 @@ slug: hyperexecute-auto-healing/
 
 HyperExecute's Auto Healing feature helps you enhance the robustness of the test suites by automatically overcoming certain types of unexpected failures during the execution of your test scripts.
 
-<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/autohealing.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/> -->
-
 ## Enable Auto Healing
 
 **Step 1:** ​To еnablе thе Auto Hеaling fеaturе, you nееd to pass thе **`autoHеal: truе`** as a capability in your WеbDrivеr configuration.
-
-:::info
-Before passing the capability **`autoHеal: truе`**, you need to contact our Customer Support team to enable the Auto Heal feature for your organization.
-:::
 
 ```bash
 const capability = {
