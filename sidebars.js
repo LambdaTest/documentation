@@ -379,16 +379,19 @@ module.exports = {
                 ],
               },
               {
-                type: "category",
-                collapsed: true,
+                type: "doc",
                 label: "Java",
-                items: ["playwright-junit-on-hyperexecute"],
+                id: "playwright-junit-on-hyperexecute",
               },
               {
-                type: "category",
-                collapsed: true,
+                type: "doc",
                 label: "C#",
-                items: ["playwright-dotnet-on-hyperexecute"],
+                id: "playwright-junit-on-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "Real Device",
+                id: "playwright-real-device-on-hyperexecute",
               },
             ],
           },
@@ -435,6 +438,18 @@ module.exports = {
               "hyperexecute-pre-steps-error",
               "hyperexecute-scenario-steps-error",
             ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Performance Testing",
+            link: {
+              type: "doc",
+              id: "hyperexecute-performance-testing",
+            },
+            items: [
+              "hyperexecute-run-jmeter-tests"
+            ]
           },
         ],
       },
