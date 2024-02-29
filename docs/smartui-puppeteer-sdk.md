@@ -256,7 +256,7 @@ When conducting visual tests, you may encounter scenarios where certain elements
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
 ```js title="This is a sample for your configuration for Puppeteer to ignore by ID"
-options = {
+let options = {
             ignoreDOM: {
                 id: ["ID-1", "ID-2"],
             }
@@ -269,7 +269,7 @@ options = {
 <TabItem value="IgoreClass" label="Ignore Class">
 
 ```js title="This is a sample for your configuration for Puppeteer to ignore by Class"
-options = {
+let options = {
             ignoreDOM: {
                 class: ["Class-1", "Class-2"],
             }
@@ -282,7 +282,7 @@ options = {
 <TabItem value="IgnoreXPath" label="Ignore XPath">
 
 ```js title="This is a sample for your configuration for Puppeteer to ignore by XPath"
-options = {
+let options = {
             ignoreDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
             }
@@ -296,7 +296,7 @@ options = {
 <TabItem value="IgnoreSelector" label="Ignore CSS Selector">
 
 ```js title="This is a sample for your configuration for Puppeteer to ignore by CSS Selector"
-options = {
+let options = {
             ignoreDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
@@ -312,7 +312,7 @@ options = {
 <TabItem value="SelectID" label="Select ID" default>
 
 ```js title="This is a sample for your configuration for Puppeteer to select by ID."
-options = {
+let options = {
             selectDOM: {
                 id: ["ID-1", "ID-2"],
             }
@@ -325,7 +325,7 @@ options = {
 <TabItem value="SelectClass" label="Select Class">
 
 ```js title="This is a sample for your configuration for Puppeteer to select by Class"
-options = {
+let options = {
             selectDOM: {
                 class: ["Class-1", "Class-2"],
             }
@@ -338,7 +338,7 @@ options = {
 <TabItem value="SelectXPath" label="Select XPath">
 
 ```js title="This is a sample for your configuration for Puppeteer to select by XPath"
-options = {
+let options = {
             selectDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
             }
@@ -352,7 +352,7 @@ options = {
 <TabItem value="SelectSelector" label="Select CSS Selector">
 
 ```js title="This is a sample for your webhook configuration for Puppeteer to select by CSS Selector"
-options = {
+let options = {
             selectDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
