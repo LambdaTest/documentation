@@ -43,7 +43,7 @@ Testing your webapp or applications often involves using the sensitive data like
 HyperExecute provides a secure and user-friendly solution for managing your secrets during testing. This documentation will guide you through utilizing HyperExecute's **Secret Management Vault** to keep your sensitive information safe and secure.
 
 :::info
-These Secrets are stored as `key:value` pair where these **values** are not visible or accessible to anyone but can only be [updated](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#update-your-exisiting-secrets) with a new value.
+These Secrets are stored as `key:value` pair where these **values** are not visible or accessible to anyone but can only be [updated](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#update-your-existing-secrets) with a new value.
 :::
 
 ## Create a New Secret
@@ -67,7 +67,7 @@ className="doc_img"/> -->
 <source src= {require('../assets/videos/hyperexecute/knowledge-base/secrets/add-secret.mp4').default} type="video/mp4" />
 </video>
 
-## Update Your Exisiting Secrets
+## Update Your Existing Secrets
 
 Follow the steps mentioned to update your secrets values to HyperExecute and ensure their safe storage:
 
