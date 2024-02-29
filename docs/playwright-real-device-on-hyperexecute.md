@@ -73,7 +73,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 Download or Clone the code sample for the Playwright Real Device from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/LambdaTest/dotnet_playwright_hyperexecute_sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/LambdaTest-HyperExecute-Playwright-Appium-Sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
 
