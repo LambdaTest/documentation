@@ -38,7 +38,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to run playwright automation tests on HyperExecute using JUnit framework",
+          "name": "How to run playwright real deices automation tests on HyperExecute",
           "item": "https://www.lambdatest.com/support/docs/playwright-real-device-on-hyperexecute/"
         }]
       })
@@ -47,20 +47,16 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 # Running Playwright with Real Devices on HyperExecute
 
-Playwright for .NET is a framework that enables browser automation and end-to-end testing using the .NET programming language, such as C#. Developed by Microsoft, Playwright offers a comprehensive .NET API for automating interactions with web pages in Chromium, Firefox, and WebKit browsers
-
-HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
-
-This guide details how to execute your **DotNet** framework tests on **HyperExecute** via two different methods:
-
+This guide details how to execute your **Playwright Real Device** tests on **HyperExecute**:
+<!-- 
 - [**Using Local System**](/support/docs/JUnit-on-hyperexecute-grid/#1-testing-using-local-system) - You can use your own local machine to execute tests.
-- [**Using Gitpod Platform**](/support/docs/JUnit-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
+- [**Using Gitpod Platform**](/support/docs/JUnit-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account) -->
 
-## 1. Testing Using Local System
+<!-- ## Testing Using Local System
 
-Follow the step-by-step guide to execute your test on HyperExecute.
+Follow the step-by-step guide to execute your test on HyperExecute. -->
 
-### Prerequisites
+## Prerequisites
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
@@ -69,32 +65,56 @@ To run the Tests on HyperExecute from your Local System, you are required:
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution [Job](/support/docs/hyperexecute-concepts/#1-jobs).
 - Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
 
-### Step 1: Configure Your Test Suite
+## Step 1: Setup Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
 
-Download or Clone the code sample for the JUnit from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the Playwright Real Device from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/dotnet_playwright_hyperexecute_sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
 
-If you are using your own project, make sure you update the **Hub endpoint** in your tests file.
+### Configure the Capabilities
 
-By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
+Configure the desired capabilities based on your test requirements. For example:
 
-
-<!-- Configure the desired capabilities based on your test requirements. For example: -->
+```bash
+const capabilities = {
+  'browserName': 'Chrome', #Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
+  'browserVersion': 'latest',
+  'LT:Options': {
+    'platform': 'android',
+    'build': 'Playwright HyperExecute Build',
+    'name': 'Playwright HyperExecute Test',
+    'user': '<your_lambdatest_user_name>',
+    'accessKey': '<your_lambdatest_access_key>',
+    # 'network': true,
+    'video': true,
+    'console': true
+  }
+}
+```
 
 > You can generate capabilities for your test requirements with the help of our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
 
-### Step 2: Setup the CLI in your Test Suite
+### Configure the CDP URL
+
+- You will have to update the **CDP (Chrome DevTools Protocol) URL** which is a protocol used for communication between the browser and the developer tools.
+
+```bash
+const browser = await chromium.connect({
+  wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
+})
+```
+
+## Step 2: Setup the CLI in your Test Suite
 
 After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
 
-#### Download the HyperExecute CLI
+### Download the HyperExecute CLI
 
 The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
 
@@ -106,7 +126,7 @@ You can download the CLI for your desired platform from the below mentioned link
 | MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-#### Setup Environment Variable
+### Setup Environment Variable
 
 Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
 
@@ -140,67 +160,83 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 </Tabs>
 
-### Step 3: Configure YAML in your Test Suite
+## Step 3: Configure YAML in your Test Suite
 
 Configure your YAML file as per your use cases using **key value** pairs.
 
 In this sample YAML file, we have mentioned:
 
 - **version** of the YAML file
-- **Timeouts** for executing your project
+- **runson** flag to specify the operating system
 - **Mode of execution** is [Autosplit](/support/docs/hyperexecute-auto-split-strategy/). You can also opt for [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid](/support/docs/hyperexecute-hybrid-strategy/) mode.
 - **Pre and Post** commands
-- **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
 ```bash
 ---
-version: 0.1
-globalTimeout: 90
-testSuiteTimeout: 90
-testSuiteStep: 90
+version: "0.2"
 
-runson: win
-
-concurrency: 3
+runson: android
 
 autosplit: true
 
+concurrency: 1
+
 retryOnFailure: true
+maxRetries: 2
 
-maxRetries: 5
-
+cacheKey: '{{ checksum "package-lock.json" }}'
+cacheDirectories:
+  - node_modules
 
 env:
-  NUGET_PACKAGES: 'C:\nuget_global_cache'
-  NUGET_HTTP_CACHE_PATH: 'C:\nuget_http_cache'
-  NUGET_PLUGINS_CACHE_PATH: 'C:\nuget_plugins_cache'
-
-pre:
- # https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-list-package
- - npm install playwright@1.25.0 --save-exact
- - dotnet list PlaywrightDotnetTests.csproj package > packages.txt
- - nuget locals all -clear
- - dotnet build -c Release
+  INFRA_TIMEOUT: 2000
 
 runtime:
-  language: dotnet
-  version: "6.0.303"
+  language: node
+  version: "18"
+
+pre:
+  - npm install
+  - npx playwright install
 
 testDiscovery:
-  type: raw
-  mode: dynamic
-  command: grep -lr 'GotoAsync' -ir --include=*.cs
-  
-post:
-  - cat yaml/linux/dotnet_playwright_hyperexecute_autosplit_sample.yaml
+    command: cat pw_androidtests.txt
+    mode: static
+    type: raw
 
-testRunnerCommand: dotnet run $test
+testRunnerCommand: npm run test-android --verbose
 
-jobLabel: [playwright-Dotnet, linux, autosplit]
+# highlight-start
+framework:
+  name: appium
+  args:
+    playwrightRD : true
+    region: eu
+# highlight-end
+
+jobLabel: ['Playwright', 'Real-Device', 'HyperExecute']
 ```
 
-### Step 4: Execute your Test Suite
+:::info
+To Run test on Mobile Containers in a Particular Region
+
+```bash
+dynamicAllocation: true
+
+framework:
+  name: appium
+  args:
+    playwrightRD : true
+    region: ap       # supported regions -> ap, eu, us 
+    reservation: false
+```
+
+- If **`reservation : false`**, it means that it will allocate the device from any region. If you want to allocate the device of any specific region, keep the **`reservation : true`**.
+
+:::
+
+## Step 4: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -216,59 +252,18 @@ OR use this command if you have not exported your username and access key in the
 ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
 ```
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_1.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/playwright/real-device/1.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/playwright/real-device/2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-### Step 5: Monitor the Test Execution
+## Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/playwright/real-device/3.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-### Step 6: Download Artifacts and Reports
+## Step 6: Download Artifacts and Reports
 
 HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
-## 2. Testing Using Gitpod
-
-You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
-
-Follow the below steps to run Test using Gitpod:
-
-**Step 1:**  Click '**Open in Gitpod**' button. You will be redirected to Login/Signup page. This button is configured to redirect you to the Gitpod platform where you will be able to execute our sample repository.
-
-[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=PlayWright&framework=Playwright-.Net)
-
-**Step 2:** Login with LambdaTest credentials. Once logged in, a pop-up confirmation will appear, asking you to **'Proceed'** to the Gitpod editor in a new tab. The current tab will display the HyperExecute Dashboard.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_popup.png').default} alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
-
-**Step 3:** Choose your preferred editor (we recommend VS Code Editor)
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_config.png').default} alt="Image"  className="doc_img"/>
-
-**Step 4:**  As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod2.png').default} alt="Image"  className="doc_img"/>
-
-**Step 5:**  Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
-
-:::tip
-
-You can also implement [Secret Keys](https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
-:::
-
-## Navigation in Automation Dashboard
-
-Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/build) for checking the status of the test execution.
-
-You can seamlessly navigate between JobId's and taskId's. You need to click on the *testID* to navigate from the HyperExecute logs to the Automation Dashboard.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
-The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/playwright/real-device/4.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
