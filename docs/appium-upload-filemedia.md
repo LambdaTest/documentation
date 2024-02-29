@@ -50,7 +50,7 @@ import TabItem from '@theme/TabItem';
 
 # Uploading Files and Media on Real Devices
 
-LambdaTest's file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to LambdaTest's cloud devices.In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use `uploadMedia` capability while running your test scripts.
+LambdaTest's file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to LambdaTest's cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use `uploadMedia` capability while running your test scripts.
 
 ## Objectives
 By the end of this topic, you will be able to:
@@ -87,7 +87,7 @@ Easily upload media or non-media files onto real devices during active sessions,
 |                 |          | Default gallery app, `/sdcard/Movies`                | Videos         |
 |                 | iOS      | Camera Roll, `/private/var/mobile/Media/DCIM/`       | Images and Videos |
 | Non-Media Files | Android  | Default Downloads folder of the device               | Files          |
-|                 | iOS      | App’s directory: Files app → On My iPhone → Your app's directory → ‘Custom_Files’ | Files          |
+|                 | iOS      | App’s directory: Files app → On My iPhone → Your app's directory | Files          |
 
 ### Supported File Types
 
@@ -112,16 +112,14 @@ You can use the following curl command to upload any file `media` and `non-media
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-  curl --location 'https://mobile-mgm.lambdatest.com/mfs/v1.0/media/upload' \
-  --header 'Authorization: Basic bmltaXR2OjljU0pQRnR5Y3VkcXI1ZlAxMXBIdjg0TkVrdzVIeGFoOThrVlQwVlpPRFBFUjlIQ2Fo' \
-  --form 'type="image"' \
-  --form 'custom_id="sample"' \
-  --form 'media_file=@"/Users/Desktop/Docs/dummy.pdf"'
+{`curl --user "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://mobile-mgm.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/image.jpeg"" -F "type=image" -F "custom_id=SampleImage"`
+}
 </CodeBlock>
 </div>
 
 **Request Parameters**
 - `media_file`: This parameter denotes the media file to be uploaded from your local.
+- `type`: This parameter denotes file type out of image,video and doc. 
 - `custom_id`: This parameter specifies a custom identifier for the media file.
 
 Below is a sample response demonstrating the return of the `media_url` parameter value:
@@ -149,7 +147,6 @@ Once the files are uploaded to LambdaTest's cloud, seamlessly integrate files in
     <div className="lambdatest__codeblock">
       <CodeBlock className="language-python">
         {`desired_capabilities = {
-  "enableImageInjection": True,
   "uploadMedia": ["lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]
 }`}
       </CodeBlock>
@@ -160,7 +157,6 @@ Once the files are uploaded to LambdaTest's cloud, seamlessly integrate files in
     <div className="lambdatest__codeblock">
       <CodeBlock className="language-javascript">
         {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-desiredCapabilities.setCapability("enableImageInjection", "true");
 desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825d6002416a3969", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]);`}
       </CodeBlock>
     </div>
@@ -169,8 +165,9 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
 
 :::note
 
-- **Limitation on Uploads**: Each session permits a maximum of five file uploads.
-- **File Storage Duration**: Files are retained on lambdatest servers for a duration of up to 60 days.
+- Each automation session permits a maximum of five file uploads.
+- In manual testing, iOS app needs to installed first to upload non-media files.
+- For non-media files, make sure your iOS app's Info.plist file includes the UIFileSharingEnabled and LSSupportsOpeningDocumentsInPlace keys set to true. This configuration is necessary to enable your app's folder accessibility within the Files app.
 
 :::
 
