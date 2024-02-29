@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-how-to-save-and-manage-secrets
-title: How to Manage Secrets in HyperExecute
-hide_title: true
+title: Securely Manage Your Secrets with HyperExecute
+hide_title: false
 sidebar_label: How to Manage Secrets in HyperExecute
 description: Find out how to Save and Manage Secrets
 keywords:
@@ -38,83 +38,90 @@ slug: hyperexecute-how-to-save-and-manage-secrets/
     }}
 ></script>
 
-# How to Manage Secrets in HyperExecute
+Testing your webapp or applications often involves using the sensitive data like passwords, API keys, and other credentials. Storing these secrets data directly in your code can be risky and exposing it can lead to potential security breaches.
 
-In order to run tests on HyperExecute, you sometimes might require your env variables, access tokens etc which can be used via the HyperExecute Yaml file. You can use the HyperExecute Secrets section to securely save and manage your secrets such as sensitive data, keys, passwords etc.
+HyperExecute provides a secure and user-friendly solution for managing your secrets during testing. This documentation will guide you through utilizing HyperExecute's **Secret Management Vault** to keep your sensitive information safe and secure.
 
 :::info
-These Secrets are stored as `key:value` pair where these **values** are not visible / accessible to anyone but can only be [**updated**](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#update-the-secrets) with a new value.
+These Secrets are stored as `key:value` pair where these **values** are not visible or accessible to anyone but can only be [updated](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#update-your-exisiting-secrets) with a new value.
 :::
 
-This page explains how you can Manage your Secrets using HyperExecute Secret Vault. 
-***
+## Create a New Secret
 
-## Add the Secrets
+Follow the steps mentioned to seamlessly add new secrets to HyperExecute and ensure their safe storage:
 
-Steps to Add the Secrets via HyperExecute Dashboard:
+**Step 1:** Navigate to the **Secrets Section** in the top right corner of the HyperExecute dashboard.
 
-**Step 1:** Go to the Secrets Section
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/3.png').default} alt="Image"  
+**Step 2:** Click on the **Add a Secret** button to create a New Secret.
+
+**Step 3:** Provide a descriptive **Key Name** and then enter your secret **Value**. This could be a password, API key, or any other credential.
+
+**Step 4:** Click on **Add Secret** button and your secret will be stored safely within HyperExecute's system.
+
+<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/3.png').default} alt="Image"  
+className="doc_img"/> -->
+<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/4.png').default} alt="Image"  style={{width: '600px',}} className="doc_img"/> -->
+<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/5.png').default} alt="Image"  style={{width: '600px',}} className="doc_img"/> -->
+
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/knowledge-base/secrets/add-secret.mp4').default} type="video/mp4" />
+</video>
+
+## Update Your Exisiting Secrets
+
+Follow the steps mentioned to update your secrets values to HyperExecute and ensure their safe storage:
+
+**Step 1:** Navigate to the **Secrets Section** in the top right corner of the HyperExecute dashboard.
+
+**Step 2:** Click on the **...** and then **Edit** button of the secret you want to update.
+
+**Step 3:** Enter updated value of the secret.
+
+**Step 4:** Click on Edit Secret Value to complete the editing.
+
+<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/3.png').default} alt="Image"  
 className="doc_img"/>
-
-**Step 2:** Click on the **+Add** button to create a New Secret.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/4.png').default} alt="Image"  style={{width: '600px',}} className="doc_img"/>
-
-**Step 3:** Enter a descriptive Key Name and your Secret in the **Value**. 
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/5.png').default} alt="Image"  style={{width: '600px',}} className="doc_img"/>
-
-**Step 4:** Click on **Add New Secret** and your secret will be stored safely.
-
-## Update the Secrets
-
-**Step 1:** Login to HyperExecute.
-
-**Step 2:** Click on “Secrets“ tab in the top right corner of the screen.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/3.png').default} alt="Image"  
-className="doc_img"/>
-
-**Step 3:** Click on Edit Button of the secret you want to update.
-
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/39.png').default} alt="Image"  
 className="doc_img"/>
-
-**Step 4:** Enter updated value of the secret.
-
-**Step 5:** Click on Edit Secret Value to complete the editing.
-
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/40.png').default} alt="Image"  
-className="doc_img"/>
+className="doc_img"/> -->
+
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/knowledge-base/secrets/update-secret.mp4').default} type="video/mp4" />
+</video>
 
 ## Delete the Secrets
 
-**Step 1:** Login to HyperExecute.
+Follow the steps mentioned to delete your secrets values from the HyperExecute:
 
-**Step 2:** Click on “Secrets“ tab in the top right corner of the screen.
+**Step 1:** Navigate to the **Secrets Section** in the top right corner of the HyperExecute dashboard.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/3.png').default} alt="Image"  
+**Step 2:** Click on the **...** and then **Delete** button of the secret you want to delete.
+
+**Step 3:** Click on **Confirm Deletion** button to delete your secret.
+
+<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/3.png').default} alt="Image"  
 className="doc_img"/>
-
-**Step 3:** Click on Delete Button of the secret you want to delete.
-
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/39.png').default} alt="Image"  
-className="doc_img"/>
+className="doc_img"/> -->
 
-The secret will be deleted.
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/knowledge-base/secrets/delete-secret.mp4').default} type="video/mp4" />
+</video>
 
 ## Using Secrets in YAML
 
-Lets take an example that we have secret key names as secretKey1, secretKey2
+During HyperExecute test execution, you might need to access sensitive information like environment variables or access tokens. This section guides you on how to securely integrate these secrets into your YAML file.
+
+Consider these secret key names: `secretKey1` and `secretKey2`.
 
 ```bash
 version: 0.1
 env:
-  MyKey: ${{ .secrets.secretKey1 }}
+  MyKey1: ${{.secrets.secretKey1}}
 
 vars:
- MyKey2: ${{ .secrets.secretKey2 }}
+ MyKey2: ${{.secrets.secretKey2}}
  Path: /java/files*.feature
  
  runson: win
@@ -124,13 +131,24 @@ vars:
    args:
      featureFilePath: ${Path}
      
-testRunnerCommand: npm run --username abc --password ${{ .secrets.SecretKey2 }}
+testRunnerCommand: npm run --username abc --password ${{.secrets.SecretKey2}}
 ```
+
+- The `env` and `vars` sections within your YAML file are used to define variables.
+- The syntax `{{.secrets.secretKey1}}` allows you to access the corresponding secret value stored securely in HyperExecute.
+
+In the above sample YAML file:
+
+- **MyKey1** in the env section uses `secretKey1`.
+- **MyKey2** in the vars section uses `secretKey2`.
+- **testRunnerCommand** utilizes `secretKey2` for the password.
+
 <!-- Since we do not have SecretKey3 saved. CLI will error out with “**SecretKey3 not found in vault.**“ -->
 
-These Secrets are stored in the **HashiCorp Vault** and are fetch from the vaults at the time of your test execution within the machine that has been spinned up Just-in-Time for the test execution.
-
->If you have more questions, feel free to <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Chat</span> with us.
+:::info
+- By using secrets within your YAML file, you avoid embedding sensitive information directly in your code, enhancing security.
+- HyperExecute securely retrieves these secrets from its storage i.e. **HashiCorp Vault** at runtime, ensuring they are not exposed during code sharing or storage.
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
