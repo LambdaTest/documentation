@@ -2025,6 +2025,11 @@ module.exports = {
                 type: "doc",
                 label: "Python",
                 id: "smartui-selenium-python-sdk"
+              },
+              {
+                type: "doc",
+                label: "Ruby",
+                id: "smartui-selenium-ruby-sdk"
               }
             ]
           },
