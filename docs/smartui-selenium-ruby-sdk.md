@@ -1,8 +1,8 @@
 ---
-id: smartui-testcafe-sdk
-title: Integrate SmartUI SDK with Testcafe Tests
-sidebar_label: Testcafe
-description: In this documentation, learn how integrate your Testcafe automated tests with LambdaTest's SmartUI.
+id: smartui-selenium-ruby-sdk
+title: Integrate SmartUI SDK with Selenium Tests
+sidebar_label: Ruby
+description: In this documentation, learn how integrate your Selenium Ruby automated tests with LambdaTest's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.lambdatest.com/support/docs/smartui-cli/
-slug: smartui-testcafe-sdk/
+slug: smartui-selenium-ruby-sdk/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -51,14 +51,14 @@ import NewTag from '../src/component/newTag';
 
 Welcome to the world of simplified visual testing with the SmartUI SDK. 
 
-Integrating seamlessly into your existing Testcafe testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
+Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
 
 ## Pre-requisites for running tests through SmartUI SDK
 
-- Basic understanding of Command Line Interface and Testcafe is required.
+- Basic understanding of Command Line Interface and Selenium is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Testcafe SDK integration.
+The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Selenium SDK integration.
 
 ## Create a SmartUI Project
 
@@ -76,18 +76,22 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 ### **Step 1:** Create/Update your test
 
-You can clone the sample repository to run `Testcafe` tests with `SmartUI` and use the `testcafeSDKLocal.js` file.
+You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `sdkCloud.rb` file present in the `sdk` folder.
 
 ```bash
-git clone https://github.com/LambdaTest/smartui-testcafe-sample
-cd smartui-testcafe-sample
+git clone https://github.com/LambdaTest/smartui-ruby-selenium-sample
+cd smartui-ruby-selenium-sample/sdk
 ```
 ### **Step 2**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI Testcafe SDK` in your **Frontend** project.
+Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
 
 ```bash
-npm i @lambdatest/smartui-cli @lambdatest/testcafe-driver testcafe
+npm i @lambdatest/smartui-cli
+```
+
+```
+gem install lambdatest-selenium-driver selenium-webdriver
 ```
 
 ### **Step 3:** Configure your Project Token
@@ -188,21 +192,20 @@ To capture a screenshot of the content currently visible in your viewport, rathe
 
 ### **Step 5:** Adding SmartUI function to take screenshot
 
-- You can incorporate SmartUI into your custom `Testcafe` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of testcafe script of which we would like to take the screenshot, as shown below: 
+- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
   
 
-```js
-import { Selector } from 'testcafe';
-import { smartuiSnapshot } from '@lambdatest/testcafe-driver';
+```ruby
+require "selenium-webdriver"
+require "lambdatest/selenium/driver"
 
-fixture('Amazon Test')
-  .page('https://www.lambdatest.com');
+driver = Selenium::WebDriver.for :chrome
+driver.navigate.to "https://www.pinterest.com/pin/16958936087791895/"
 
-test('Take Amazon Homepage Screenshot', async (t) => {
-  // Take a screenshot using LambdaTest's TestCafe driver
-  await smartuiSnapshot(t, 'LT-Homepage');
-});
+# Take a snapshot
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name")
 
+driver.quit
 ```
 
 ### **Step 6:** Execute the Tests on SmartUI Cloud
@@ -210,7 +213,7 @@ test('Take Amazon Homepage Screenshot', async (t) => {
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui exec testcafe chrome testcafeSDKLocal.js --config smartui-web.json
+npx smartui exec ruby sdkCloud.rb --config smartui-web.json
 ```
 
 :::note 
@@ -219,7 +222,7 @@ You may use the `npx smartui --help` command in case you are facing issues durin
 
 ##  View SmartUI Results
 
-You have successfully integrated SmartUI SDK with your Testcafe tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
+You have successfully integrated SmartUI SDK with your Selenium tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
 
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
@@ -232,9 +235,10 @@ The following are the different options which are currently supported:
 
 | Key                       | Description                                                                                                               | Example                                                                                                                                                                                     |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `t` (test controller)    | This object allows you to control the test execution and interact with the web page under test. |
+| `driver` (instance)    | The instance of the web driver used in your tests. |
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
+
 
 ## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />** 
 
@@ -244,54 +248,54 @@ When conducting visual tests, you may encounter scenarios where certain elements
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
-```js title="This is a sample for your configuration for Testcafe to ignore by ID"
-let options = {
+```rb title="This is a sample for your configuration for Ruby to ignore by ID"
+options = {
             ignoreDOM: {
                 id: ["ID-1", "ID-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(t, 'Screenshot Name', options);
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </TabItem>
 <TabItem value="IgoreClass" label="Ignore Class">
 
-```js title="This is a sample for your configuration for Testcafe to ignore by Class"
-let options = {
+```rb title="This is a sample for your configuration for Ruby to ignore by Class"
+options = {
             ignoreDOM: {
                 class: ["Class-1", "Class-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(t, 'Screenshot Name', options);
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </TabItem>
 <TabItem value="IgnoreXPath" label="Ignore XPath">
 
-```js title="This is a sample for your configuration for Testcafe to ignore by XPath"
-let options = {
+```rb title="This is a sample for your configuration for Ruby to ignore by XPath"
+options = {
             ignoreDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(t, 'Screenshot Name', options);
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </TabItem>
 
 <TabItem value="IgnoreSelector" label="Ignore CSS Selector">
 
-```js title="This is a sample for your configuration for Testcafe to ignore by CSS Selector"
-let options = {
+```rb title="This is a sample for your configuration for Ruby to ignore by CSS Selector"
+options = {
             ignoreDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(t, 'Screenshot Name', options);
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 </TabItem>
 
@@ -300,54 +304,54 @@ let options = {
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>
 
-```js title="This is a sample for your configuration for Testcafe to select by ID."
-let options = {
+```rb title="This is a sample for your configuration for Ruby to select by ID."
+options = {
             selectDOM: {
                 id: ["ID-1", "ID-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(t, 'Screenshot Name', options);
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </TabItem>
 <TabItem value="SelectClass" label="Select Class">
 
-```js title="This is a sample for your configuration for Testcafe to select by Class"
-let options = {
+```rb title="This is a sample for your configuration for Ruby to select by Class"
+options = {
             selectDOM: {
                 class: ["Class-1", "Class-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(t, 'Screenshot Name', options);
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </TabItem>
 <TabItem value="SelectXPath" label="Select XPath">
 
-```js title="This is a sample for your configuration for Testcafe to select by XPath"
-let options = {
+```rb title="This is a sample for your configuration for Ruby to select by XPath"
+options = {
             selectDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(t, 'Screenshot Name', options);
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 
 </TabItem>
 
 <TabItem value="SelectSelector" label="Select CSS Selector">
 
-```js title="This is a sample for your webhook configuration for Testcafe to select by CSS Selector"
-let options = {
+```rb title="This is a sample for your webhook configuration for Ruby to select by CSS Selector"
+options = {
             selectDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
-        await driver.get('Required URL');
-        await smartuiSnapshot(t, 'Screenshot Name', options);
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
 ```
 </TabItem>
 
@@ -357,39 +361,41 @@ let options = {
 
 If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
 
-```js Example for scrolling to bottom for lazy elements
-import { Selector } from 'testcafe';
-import { smartuiSnapshot } from '@lambdatest/testcafe-driver';
+```rb Example for scrolling to bottom for lazy elements
+require 'selenium-webdriver'
+require 'lambdatest/selenium/driver'
 
-// Function to scroll through the page and then back to the top
-async function scrollToBottomAndTop(t, lastPageWait = 100) {
-    const getScrollHeight = Selector(() => document.body.scrollHeight);
-    const heightOfPage = await getScrollHeight();
-    let size = 200;
-    let noOfLoop = Math.floor(heightOfPage / size);
+def quick_scroll_to_bottom(driver, last_page_wait)
+  height = driver.execute_script("return document.body.scrollHeight")
+  height_of_page = height.to_i
+  size = 200
+  no_of_loop = height_of_page / size
 
-    for (let i = 1; i <= noOfLoop; i++) {
-        await t.scrollBy({ x: 0, y: size });
-        await t.wait(1000);
-        if (i === noOfLoop) {
-            await t.scrollTo({ x: 0, y: heightOfPage });
-            await t.wait(lastPageWait);
-        }
-    }
+  (1..no_of_loop).each do |i|
+    driver.execute_script("window.scrollTo(#{(i - 1) * size}, #{i * size})")
+    sleep 1 
+    if i == no_of_loop
+      driver.execute_script("window.scrollTo(#{i * size}, #{height_of_page})")
+      sleep last_page_wait / 1000.0 
+    end
+  end
 
-    // Scroll to the top
-    await t.scrollTo({ x: 0, y: 0 });
-    await t.wait(10000);
-    console.log("Scroll Completed");
-}
+  # Now scroll to the top
+  driver.execute_script("window.scrollTo(0,0)")
+  sleep 10 # Wait for 10 seconds
+  puts "Scroll Completed"
+rescue => e
+  puts "Got some errors: #{e}"
+end
 
-fixture `Page Scroll Test`
-    .page `Required URL`; // Replace `Required URL` with the actual URL
-
-test('Scroll through the page, then take a smartUI Snapshot', async t => {
-    await scrollToBottomAndTop(t, 100); // Adjust wait time as needed
-    await smartuiSnapshot(t, 'Screenshot Name'); // Adjust the screenshot name as needed
-});
+driver = Selenium::WebDriver.for :chrome
+begin
+  driver.get("Required URL")
+  quick_scroll_to_bottom(driver, 100) # Use wait time accordingly
+  Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name")
+ensure
+  driver.quit
+end
 
 ```
 
