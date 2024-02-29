@@ -1902,6 +1902,7 @@ module.exports = {
                 "camera-image-injection",
                 "biometric-authentication",
                 "reg-expression",
+                "appium-upload-media",
                 "app-auto-network-throttling",
                 "appium-app-performance",
                 "appium-ios-app-settings",
