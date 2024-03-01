@@ -47,29 +47,19 @@ slug: hyperexecute-smart-ui-testing-using-cypress/
 
 # Smart UI Tests in HyperExecute using Cypress
 
----
-
-Smart UI Testing is a powerful tool that enables you to execute regression testing effortlessly and identify Visual UI Regression bugs with ease. This guide will walk you through the process of running Smart UI tests on the HyperExecute platform
+This documentation will guide you step-by-step to execute the Smart UI tests on the HyperExecute platform using Cypress
 
 ## Pre-requisites
 
 - Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
-
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution [Job](/support/docs/hyperexecute-concepts/#1-jobs).
-
 - Setup the Environment Variable
-
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-
-- Basic understanding of Cypress is required.
-
 - To run Smart UI tests, you need to have a **Baseline Image** and a **Comparison** image. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser.
 
----
+## Step 1: Setup your Project
 
-### Step 1: Setup your Project
-
-#### Download HyperExecute CLI
+### Download HyperExecute CLI
 
 The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
 
@@ -79,7 +69,7 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-#### Setup Environment Variable
+### Setup Environment Variable
 
 Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
@@ -98,7 +88,7 @@ set LT_USERNAME=YOUR_LT_USERNAME
 set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 ```
 
-### Step 2: Configure your Cypress Project
+## Step 2: Configure your Cypress Project
 
 1. Go to your project **YAML** file.
 
@@ -137,7 +127,7 @@ cypressOps:
         SmartUIBaseline: true
 ```
 
-### Step 3: Execute your Project and Compare the Results
+## Step 3: Execute your Project and Compare the Results
 
 To execute the project run the below command in your terminal at the root folder.
 
