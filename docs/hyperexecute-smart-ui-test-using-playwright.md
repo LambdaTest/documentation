@@ -63,9 +63,9 @@ This documentation will guide you step-by-step to execute the Smart UI tests on 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the TestNG from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the Playwright JavaScript from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/HyperExecute-Playwright-Vanilla-Javascript/tree/smart-ui" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 If you are using your own project, make sure you update the **CDP endpoint** in your tests file.
@@ -183,16 +183,17 @@ cacheDirectories:
   - ${CACHE_DIR}
 
 matrix:
-  classname: ["playwright-smartui.js"]
+  classname: ["pw-smartui.js"]
 
 pre:
-  - npm install playwright@1.35.0 --save-exact
-  - npm install expect
+  # install playwright version to be used.
+  - npm install playwright@1.42.0 --save-exact
 
 testSuites:
-  - node $classname
+  - node hooks/pw-smartui.js
 
-jobLabel: ['HYP' 'Playwright' 'SmartUI']
+jobLabel: ['HYP', 'Playwright' 'SmartUI']
+
 ```
 
 ## Step 4: Execute your Test Suite
@@ -213,24 +214,26 @@ OR use this command if you have not exported your username and access key in the
 
 ## Step 5: Monitor the Test Execution
 
-- Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. Click on the **Changes Found** button. 
+- Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. Click on the **Approved** button. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 - This will redirect you the Smart UI dashboard where you can see all the images you have pushed for the testing.
 
-- Check those images once and click on the **Mark as Baseline** button to make these screenshots as baseline images.
-
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 - Now you can make the changes in the UI as per your requirement and trigger the Job once again.
 
-- Again click on the **Changes Found** button. This time you will notice that in the previous Job, instead of **Changes Found** its written **Approved** as we have already assign those screenshots as baseline.
+- Again click on the **Apprved** button again.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/3.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-Open any screenshot, and you can see the comparison between the two images, i.e. the Baseline Image (we approved in the previous steps) and the Comparison Image.
+- Now, you will find two builds in your dashboard. One will be the **Baseline Build** and the other one will be the **Non Baseline Build**
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/4.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+- Open any screenshot from the **Non Baseline Build**, and you can see the comparison between the two screenshots, i.e. the Baseline Image and the Non Baseline Image.
 
 - You can now approve or reject the changes directly from the dashboard as well.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/3.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/5.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
