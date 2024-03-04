@@ -965,6 +965,7 @@ module.exports = {
           "airbrake-integration",
           "userback-integration",
           "zenkit-integration",
+          "spirateam-integration",
         ],
       },
       {
