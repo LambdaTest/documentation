@@ -21,7 +21,6 @@ url: https://www.lambdatest.com/support/docs/network-throttling/
 site_name: LambdaTest
 slug: network-throttling/
 ---
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -48,8 +47,9 @@ slug: network-throttling/
 
 # Network Throttling
 
-***
-There might be instances where you would have to check the functionality of your website on low latency networks ( 2G/3G/LTE) or even offline. Such networks have variable upload and download speeds which can alter how your website performs on different browsers.
+---
+
+There might be instances where you would have to check the functionality of your website on low latency networks (2G/3G/LTE) or even offline. Such networks have variable upload and download speeds which can alter how your website performs on different browsers.
 
 In order to validate your website on such network profiles, you can simulate these network conditions using our capabilities. If you want the test suite to start with the default network use our preset capabilities. However, the device will have unobstructed internet connectivity.
 
@@ -58,57 +58,66 @@ capabilities.setCapability("networkThrottling", "Regular 4G");
 ```
 
 ## List Of Network Profiles
-***
 
-| CONDITION | MAX DOWNLOAD SPEED (KBPS) | MAX UPLOAD SPEED (KBPS) | LATENCY (MS) |
-| ---------  | ------------ | ----------- | ------------ |
-| Offline | 0 | 0 | 0 |
-| Reset | Reset to default | Reset to default | Reset to default |
-| GPRS | 50 | 20 | 500 |
-| Regular 2G | 250 | 50 | 300 |
-| Good 2G | 450 | 150 | 150 |
-| Regular 3G | 750 | 250 | 100 |
-| Good 3G | 1 Mbps | 750 | 20 |
-| Regular 4G | 4 Mbps | 3 Mbps | 20 |
-| DSL | 2 Mbps | 1 Mbps | 5 |
+---
+
+
+| CONDITION  | MAX DOWNLOAD SPEED (KBPS) | MAX UPLOAD SPEED (KBPS) | LATENCY (MS)     |
+| ------------ | --------------------------- | ------------------------- | ------------------ |
+| Offline    | 0                         | 0                       | 0                |
+| Reset      | Reset to default          | Reset to default        | Reset to default |
+| GPRS       | 50                        | 20                      | 500              |
+| Regular 2G | 250                       | 50                      | 300              |
+| Good 2G    | 450                       | 150                     | 150              |
+| Regular 3G | 750                       | 250                     | 100              |
+| Good 3G    | 1 Mbps                    | 750                     | 20               |
+| Regular 4G | 4 Mbps                    | 3 Mbps                  | 20               |
+| DSL        | 2 Mbps                    | 1 Mbps                  | 5                |
 
 **Custom Network Profile**: For creating custom network conditions you can use objects. Define the upload speed, max download speed, and latency for the custom condition, as shown in the above table.
 
 ## Configuring Network Profile
-***
-The Selenium JavaScript Executor allows you to enable network simulation capabilities for tests and to generate custom log files. You can use conditional capabilities to simulate network conditions for individual test cases.
+
+---
+
+The Selenium JavaScript Executor allows you to enable network simulation capabilities for tests and to generate custom log files. You can use conditional capabilities to simulate network conditions for individual test cases. driver.executeScript("lambda-throttle-network", throttleParams);
+```java
+// Using executeScript to apply custom network throttling
+Map<String, Object> throttleParams = Map.of(
+    "download", 500,  // Maximum download speed in kbps
+    "upload", 100,    // Maximum upload speed in kbps
+    "latency", 30     // Latency in ms
+);
+
+driver.executeScript("lambda-throttle-network", throttleParams);
 
 ```
-driver.execute_script("networkProfile")
-```
-
 LambdaTest now allows you to select a network profile before running automation tests. This will allow you to conduct the functional tests of your website or web app on low/high latency networks and offline. In order to simulate the network conditions, you can use the networkProfile capability as shown below.
 
-| JAVASCRIPT EXECUTOR COMMAND | REQUEST PARAMETERS | EXAMPLE |
-| ----------------------- | ------------------------------------------ | -------------------- |
-| networkProfile | condition: a string or object representing browser network conditions | driver.execute_script(“networkProfile”, {“condition”: {“download”: 500,“upload”: 100,“latency”: 30}}) |
+
+| JAVASCRIPT EXECUTOR COMMAND | REQUEST PARAMETERS                                                    | EXAMPLE                                                                                                         |
+| ----------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| networkProfile              | condition: a string or object representing browser network conditions | driver.execute_script(“networkProfile”, {“condition”: {“download”: 500,“upload”: 100,“latency”: 30}}) |
 
 ## Configuring Network Throttling In Test Automation
-***
+
+---
 
 To configure network throttling in automation, we have used the [LambdaTest TestNG GitHub repository](https://github.com/LambdaTest/Java-TestNG-Selenium) to run our automation tests. You would just have to define network throttle capabilities in your automation scripts.
 
-```javascript
+### Configuring Capabilities For Pre-defined Network Settings
+```java
 DesiredCapabilities caps = new DesiredCapabilities();
-caps.setCapability("platform", "macOS High Sierra");
-caps.setCapability("browserName", "Safari");
-caps.setCapability("version","11.0");
+caps.setCapability("browserName", "Chrome");
 caps.setCapability("build", "Demo-TestNG");
 caps.setCapability("name", "TestNG-Todo-Script-1");
-caps.setCapability("networkThrottling", "Regular 4G");
-caps.setCapability("visual", true);
-caps.setCapability("video", true);
-caps.setCapability("console", true);
+caps.setCapability("networkThrottling", "Regular 4G");  //Set Network Speed to Regular 4G 
 ```
 
 The following below is the TestNG code. It will validate your LambdaTest credentials for authentication purposes. The code will select the basic capabilities such as OS, browser, browser version, network, and so on.
 
-```javascript
+### Configuring Custom Network Settings
+```java
 package com.lambdatest;
 
 import java.net.MalformedURLException;
@@ -134,20 +143,24 @@ public class TestNGTodo1 {
 		String hub = "@hub.lambdatest.com/wd/hub";
 
 		DesiredCapabilities caps = new DesiredCapabilities();
-		caps.setCapability("platform", "macOS High Sierra"); // If this cap isn't specified, it will just get the any available one
-		caps.setCapability("browserName", "Safari");
-		caps.setCapability("version","11.0");
+		caps.setCapability("browserName", "Chrome");
 		caps.setCapability("build", "Demo-TestNG");
 		caps.setCapability("name", "TestNG-Todo-Script-1");
-		caps.setCapability("networkThrottling", "Regular 4G");  //To enable network throttling
-		caps.setCapability("visual", true);     // To enable step by step screenshot
-		caps.setCapability("video", true);     //To enable video recording
-		caps.setCapability("console", true);  //To capture console logs
-		
-	driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
-		
-	}
+		caps.setCapability("networkThrottling", true);  //To enable network throttling
 	
+	driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
+
+	// Custom network throttling using executeScript
+        Map<String, Object> throttleParams = new HashMap<>();
+        throttleParams.put("download", 500); // Maximum download speed in kbps
+        throttleParams.put("upload", 100);   // Maximum upload speed in kbps
+        throttleParams.put("latency", 30);   // Latency in ms
+        
+        // Use executeScript with the provided payload
+        driver.executeScript("lambda-throttle-network", throttleParams);
+	
+	}
+
 
 	@Test
 	public void basicTest() throws InterruptedException {
@@ -230,9 +243,8 @@ public class TestNGTodo1 {
 }
 ```
 
-Here is the demo screenshot of the above-executed automation test. You can find your defined network capabilities under the section ‘Input Config’ by navigating to the ‘METADATA’ section of your automation build-logs.
+ You can find your defined network capabilities under the section ‘Input Config’ by navigating to the ‘METADATA’ section of your automation build-logs.
 
-<img loading="lazy" src={require('../assets/images/network-throttling/tht.webp').default} alt="Image" width="1362" height="622" className="doc_img"/>
 
 > In case you have any questions, feel free to share them with us.Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span>. You can also drop us a mail at support@lambdatest.com. Happy testing! 🙂
 
