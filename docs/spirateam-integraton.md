@@ -80,7 +80,7 @@ It is very useful for managing teams programs, portfolios, requirements, release
 
 <img loading="lazy" src={require('../assets/images/spirateam-integration/4.png').default} alt="1" className="doc_img"/>
 
-### Step 4: Complete Your Ticket Configuration
+### Step 4: (Optional) Complete Your Ticket Configuration if needed
 
 - Visit your SpiralTeam profile.
 
