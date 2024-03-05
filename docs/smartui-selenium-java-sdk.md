@@ -90,7 +90,7 @@ git clone https://github.com/LambdaTest/smartui-java-testng-sample
 <dependency>
     <groupId>io.github.lambdatest</groupId>
     <artifactId>lambdatest-java-sdk</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 ```
 
