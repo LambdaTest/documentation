@@ -137,7 +137,7 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 </Tabs>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-project-token.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ### **Step 4:** Create and Configure SmartUI Config
 
@@ -156,8 +156,7 @@ Once, the configuration file will be created, you will be seeing the default con
       "chrome", 
       "firefox",
       "safari",
-      "edge",
-      // Add more browser configuration here
+      "edge"
     ],
     "viewports": [
       [
@@ -245,11 +244,179 @@ You have successfully integrated SmartUI SDK with your Selenium tests. Visit you
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui_ss_cli.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
+
+
+## Arguments supported in the `smartUISnapshot` function
+
+The following are the different options which are currently supported:
+
+| Key                       | Description                                                                                                               | Example                                                                                                                                                                                     |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `driver` (instance)    | The instance of the web driver used in your tests. |
+| `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
+| `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
+
+
+## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />** 
+
+When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
+
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="IgnoreID" label="Ignore ID" default>
+
+```rb title="This is a sample for your configuration for Python to ignore by ID"
+options = {
+            ignoreDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+```
+
+</TabItem>
+<TabItem value="IgoreClass" label="Ignore Class">
+
+```py title="This is a sample for your configuration for Python to ignore by Class"
+options = {
+            ignoreDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
+driver.get('<Required URL>')
+smartui_snapshot(driver,"<Screenshot Name>", options)
+```
+
+</TabItem>
+<TabItem value="IgnoreXPath" label="Ignore XPath">
+
+```py title="This is a sample for your configuration for Python to ignore by XPath"
+options = {
+            ignoreDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
+driver.get('<Required URL>')
+smartui_snapshot(driver,"<Screenshot Name>", options)
+```
+
+</TabItem>
+
+<TabItem value="IgnoreSelector" label="Ignore CSS Selector">
+
+```py title="This is a sample for your configuration for Python to ignore by CSS Selector"
+options = {
+            ignoreDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
+driver.get('<Required URL>')
+smartui_snapshot(driver,"<Screenshot Name>", options)
+```
+</TabItem>
+
+</Tabs>
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="SelectID" label="Select ID" default>
+
+```py title="This is a sample for your configuration for Python to select by ID."
+options = {
+            selectDOM: {
+                id: ["ID-1", "ID-2"],
+            }
+        }
+driver.get('<Required URL>')
+smartui_snapshot(driver,"<Screenshot Name>", options)
+```
+
+</TabItem>
+<TabItem value="SelectClass" label="Select Class">
+
+```py title="This is a sample for your configuration for Python to select by Class"
+options = {
+            selectDOM: {
+                class: ["Class-1", "Class-2"],
+            }
+        }
+driver.get('<Required URL>')
+smartui_snapshot(driver,"<Screenshot Name>", options)
+```
+
+</TabItem>
+<TabItem value="SelectXPath" label="Select XPath">
+
+```py title="This is a sample for your configuration for Python to select by XPath"
+options = {
+            selectDOM: {
+                xpath: ["Xpath-1", "Xpath-2"],
+            }
+        }
+driver.get('<Required URL>')
+smartui_snapshot(driver,"<Screenshot Name>", options)
+```
+
+</TabItem>
+
+<TabItem value="SelectSelector" label="Select CSS Selector">
+
+```py title="This is a sample for your webhook configuration for Python to select by CSS Selector"
+options = {
+            selectDOM: {
+                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
+            }
+        }
+driver.get('<Required URL>')
+smartui_snapshot(driver,"<Screenshot Name>", options)
+```
+</TabItem>
+
+</Tabs>
+
+## For capturing interactive lazy loading elements
+
+If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
+
+```py Example for scrolling to bottom for lazy elements
+from selenium import webdriver
+from lambdatest_selenium_driver import smartui_snapshot
+
+def quick_scroll_to_bottom(driver, last_page_wait):
+    try:
+        height = driver.execute_script("return document.body.scrollHeight")
+        height_of_page = int(height)
+        size = 200
+        no_of_loop = height_of_page // size
+
+        for i in range(1, no_of_loop + 1):
+            driver.execute_script(f"window.scrollTo({(i - 1) * size}, {i * size})")
+            driver.implicitly_wait(1)
+            if i == no_of_loop:
+                driver.execute_script(f"window.scrollTo({i * size}, {height_of_page})")
+                driver.implicitly_wait(last_page_wait / 1000.0)
+
+        # Now scroll to the top
+        driver.execute_script("window.scrollTo(0,0)")
+        driver.implicitly_wait(10)  # Wait for 10 seconds
+        print("Scroll Completed")
+    except Exception as e:
+        print(f"Got some errors: {e}")
+
+# Example usage
+if __name__ == "__main__":
+    driver = webdriver.Chrome()  # Initialize the WebDriver instance
+    try:
+        driver.get("Required URL")  # Change "Required URL" to the actual URL you want to test
+        quick_scroll_to_bottom(driver, 100)  # Use wait time accordingly
+        smartui_snapshot(driver, "Screenshot Name")
+    finally:
+        driver.quit()
+```
 
 For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
-
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
