@@ -60,6 +60,9 @@ LambdaTest offers integration with test reporting and test management tools, all
 | [TestMo Integration With LambdaTest](/docs/testmo-integration/) |
 |:-----------------------------------------------------------------------------------------------------------------:|
 
+| [qtest Integration With LambdaTest](/docs/qtest-integration/) |
+|:-----------------------------------------------------------------------------------------------------------------:|
+
 
 If your favourite test reporting and test management tool is not in the above mentioned, then just give us a shout and we will have it ready shortly for you.
 
