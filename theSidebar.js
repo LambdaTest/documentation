@@ -1448,6 +1448,7 @@ module.exports = {
               "testrail-integration-with-lambdatest-selenium-grid",
               "zebrunner-integration",
               "zephyr-scale",
+              "qtest-integration",
             ],
           },
   
