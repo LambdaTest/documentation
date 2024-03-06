@@ -1149,6 +1149,7 @@ module.exports = {
           "ghost-inspector-integration",
           "accelq-integration",
           "algoshack-integration",
+          "testim-integration"
         ],
       },
 
