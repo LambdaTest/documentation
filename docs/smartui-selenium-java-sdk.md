@@ -136,7 +136,8 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 </Tabs>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-project-token.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
 
 ### **Step 5:** Create and Configure SmartUI Config
 
@@ -240,7 +241,7 @@ import io.github.lambdatest.*; //Importing the lambdatest-java SDK
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui exec -- mvn test -D suite=sdk-cloud.xml --config smartui-web.json
+npx smartui --config smartui-web.json exec -- mvn test -D suite=sdk-cloud.xml
 ```
 :::note 
 You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
@@ -253,8 +254,186 @@ You have successfully integrated SmartUI SDK with your Selenium tests. Visit you
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui_ss_cli.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
+## Arguments supported in the `smartUISnapshot` function
+
+The following are the different options which are currently supported:
+
+| Key                       | Description                                                                                                               | Example                                                                                                                                                                                     |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `driver` (instance)    | The instance of the web driver used in your tests. |
+| `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
+| `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
+
+
+## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />** 
+
+When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
+
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="IgnoreID" label="Ignore ID" default>
+
+```java title="This is a sample for your configuration for Java to ignore by ID"
+List<String> cssID = Arrays.asList("<required ID>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> ignore = new HashMap<>();
+ignore.put("id", cssID);
+options.put("ignoreDOM", ignore);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+
+</TabItem>
+<TabItem value="IgoreClass" label="Ignore Class">
+
+```java title="This is a sample for your configuration for Java to ignore by Class"
+List<String> cssclass = Arrays.asList("<required class>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> ignore = new HashMap<>();
+ignore.put("class", cssclass);
+options.put("ignoreDOM", ignore);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+
+</TabItem>
+<TabItem value="IgnoreXPath" label="Ignore XPath">
+
+```java title="This is a sample for your configuration for Java to ignore by XPath"
+List<String> path = Arrays.asList("<required xpath>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> ignore = new HashMap<>();
+ignore.put("xpath", path);
+options.put("ignoreDOM", ignore);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+
+</TabItem>
+
+<TabItem value="IgnoreSelector" label="Ignore CSS Selector">
+
+```java title="This is a sample for your configuration for Java to ignore by CSS Selector"
+List<String> selector = Arrays.asList("<required selector>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> ignore = new HashMap<>();
+ignore.put("cssSelector", selector);
+options.put("ignoreDOM", ignore);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+</TabItem>
+
+</Tabs>
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="SelectID" label="Select ID" default>
+
+```java title="This is a sample for your configuration for Java to select by ID."
+List<String> cssID = Arrays.asList("<required ID>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> select = new HashMap<>();
+select.put("id", cssID);
+options.put("selectDOM", select);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+
+</TabItem>
+<TabItem value="SelectClass" label="Select Class">
+
+```java title="This is a sample for your configuration for Java to select by Class"
+List<String> cssclass = Arrays.asList("<required class>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> select = new HashMap<>();
+select.put("class", cssclass);
+options.put("selectDOM", select);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+
+</TabItem>
+<TabItem value="SelectXPath" label="Select XPath">
+
+```java title="This is a sample for your configuration for Java to select by XPath"
+List<String> path = Arrays.asList("<required xpath>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> select = new HashMap<>();
+select.put("xpath", path);
+options.put("selectDOM", select);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+
+</TabItem>
+
+<TabItem value="SelectSelector" label="Select CSS Selector">
+
+```java title="This is a sample for your webhook configuration for Java to select by CSS Selector"
+List<String> selector = Arrays.asList("<required selector>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> select = new HashMap<>();
+select.put("cssSelector", selector);
+options.put("selectDOM", select);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+</TabItem>
+
+</Tabs>
+
+## For capturing interactive lazy loading elements
+
+If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
+
+```java Example for scrolling to bottom for lazy elements
+//Rest of your code here
+
+@Test
+public void basicTest() throws Exception {
+    System.out.println("Loading Url");
+    driver.get("Required URL");
+    quickScrollToBottom();
+
+    SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name");
+    Thread.sleep(5000); // wait for 5 seconds
+    System.out.println("Test Finished");
+}
+
+public void quickScrollToBottom() throws InterruptedException {
+    long lastHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
+    while (true) {
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+        Thread.sleep(2000);
+        
+        long newHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
+        if (newHeight == lastHeight) {
+            break;
+        }
+        lastHeight = newHeight;
+    }
+    ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+    Thread.sleep(1000); // wait for 1 second
+}
+
+@AfterMethod
+public void tearDown() {
+    if (driver != null) {
+        driver.quit();
+    }
+}
+}
+```
 
 For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
 
