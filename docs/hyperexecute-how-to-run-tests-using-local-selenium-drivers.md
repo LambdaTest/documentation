@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-how-to-run-tests-using-local-selenium-drivers
-title: Trigger Your Job via Local Selenium Web Driver
+title: "Streamline Your Tests: Leveraging Local Selenium Drivers on HyperExecute"
 hide_title: false
 sidebar_label: How to Run Tests on HyperExecute using Local Selenium Web Driver
 description: How to Run Tests on HyperExecute using Local Selenium Web Driver
@@ -38,12 +38,14 @@ slug: hyperexecute-how-to-run-tests-using-local-selenium-drivers/
     }}
 ></script>
 
-As a tester, whenever you switch from local web driver to remote web driver can be a tedious and time-consuming process. You will have to manually modify your tests which includes adding Desired Capabilities, and adjusting code just to get them running on a cloud testing platform. 
+As a tester, whenever you switch from local web drivers to remote web drivers can be a tedious and time-consuming process. You will have to manually modify your tests which includes adding Desired Capabilities, and adjusting code just to get them running on a cloud testing platform. 
 
 HyperExecute's support for **Local Selenium Driver** allows you to seamlessly run your tests on our platform with very minimal changes. It will help you in
 
 - **Reduce Onboarding Time :** You can skip the manual code changes and configuration associated with remote web drivers, and accelerate your integration with HyperExecute.
+
 - **Minimal Code Refactoring :** You can now maintain your existing test code, without worrying about the need for significant modifications.
+
 - **Seamless Platform Transitions :** You can run both web and mobile tests (using Selenium and Appium) without platform-specific changes.
 
 ## How to Trigger Your Tests?
@@ -64,58 +66,11 @@ Download or Clone the code sample for the TestNG from the LambdaTest GitHub repo
 
 - Add the `platformConfig` flag to your YAML file, specifying the platforms and configurations for your tests.
 - Use the `platform` flag to define individual platform configurations (OS, browser/device, capabilities).
-- **(Optional)** Utilize the `config` flag to set global capabilities applicable to all platforms.
+- Utilize the `config` flag to set global capabilities applicable to all platforms.
+
+> **NOTE :** `platformConfig` is only supported in pure [Matrix mode](/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid mode](/support/docs/hyperexecute-hybrid-strategy/) for both [YAML 0.1](/support/docs/hyperexecute-yaml-parameters/) and [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
 
 ```bash
----
-version: 0.1
-globalTimeout: 150
-testSuiteTimeout: 150
-testSuiteStep: 150
-
-runson: win
-
-autosplit: true
-
-retryOnFailure: true
-maxRetries: 1
-
-parallelism: 1
-concurrency: 1
-
-env:
-  CACHE_DIR: m2_cache_dir
-
-cacheKey: '{{ checksum "pom.xml" }}'
-cacheDirectories:
-  - m2_cache
-
-pre:
-  - mvn dependency:resolve
-
-mergeArtifacts: true
-uploadArtefacts:
- - name: ExecutionSnapshots
-   path:
-    - target/surefire-reports/html/**
-
-report: true
-partialReports:
-  location: target/surefire-reports/html
-  type: html
-  frameworkName: extent
-
-testDiscovery:
-  type: raw
-  mode: dynamic
-  command: grep 'test name' xml/testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
-
-testRunnerCommand: mvn test dependency:resolve
-winTestRunnerCommand: mvn test dependency:resolve
-macTestRunnerCommand: mvn test dependency:resolve
-linuxTestRunnerCommand: mvn test dependency:resolve
-
-#highlight-start
 platformConfig:
   platform:
     - os: win10
@@ -123,45 +78,20 @@ platformConfig:
       browserVersion: latest
       build: win10
       network: false
-    - os: win11
-      browserName: chrome
       goog:chromeOptions:
         args: [ "--start-maximized", "--disable-gpu" ]
-    - os: mac
+    - os: win10
       browserName: firefox
-      browserVersion: 119
-    - os: linux
-      browserName: firefox
-      browserVersion: 115
+      browserVersion: latest
     - os: android
-      deviceName: .*
-      browserName: chrome
+      deviceName: Galaxy Tab 2
     - os: ios
-      deviceName: .*
-
+      deviceName: iPad 10.2 (2019)
   config:
     build: latest
     network: true
-    console: true
-#highlight-end
+    console: true 
 ```
-
-:::info
-- For operating system **win, mac,** and **linux**, only the **os** flag is mandatory, rest are optional.
-- For operating system **android** and **ios**, the **os** and **deviceName** flags are mandatory, rest are optional.
-:::
-
-In the above sample YAML file, we have passed **parallelism = 1** and **total number of platforms = 6**
-
-The number of tasks created = **(total number of platforms) * (parallelism)** = 6 tasks
-
-- 1 windows 10 with Chrome Browser
-- 1 windows 11 with Chrome browser
-- 1 mac with Firefox browser
-- 1 android with any device (we have not specified device name)
-- 1 ios with any device (we have not specified device name)
-
-> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
 
 ### Step 3: Run Your Tests:
 
@@ -171,8 +101,6 @@ The number of tasks created = **(total number of platforms) * (parallelism)** = 
 ```bash
 ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
 ```
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/how-to-guide/local-web-driver.png').default} alt="Image"  className="doc_img"/>
 
 ## Priority Mapping of Capability Selection
 
