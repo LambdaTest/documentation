@@ -3,7 +3,7 @@ id: accessibility-testing
 title: LambdaTest Accessibility DevTools
 hide_title: false
 sidebar_label: Getting Started
-description: Break down barriers with LambdaTest Accessibility DevTools. Make your digital products usable for people with disabilities through comprehensive testing and improvement.
+description: Make your digital products usable for people with disabilities through comprehensive testing and improvement using LambdaTest Accessibility DevTools
 keywords:
     - LambdaTest
     - Accessibility

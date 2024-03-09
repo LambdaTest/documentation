@@ -3,7 +3,7 @@ id: accessibility-testing-dashboard-issue-summary
 title: Issue Summary
 hide_title: false
 sidebar_label: Issue Summary
-description: Understand your website's complete test summary with a detailed breakdown of total issues, issue types, affected element groups, best practices, needs review, and affected WCAG guidelines.
+description: Get a comprehensive guide of your website's test summary, including total issues, their type, affected element groups, best practices, and WCAG guidelines.
 keywords:
     - LambdaTest
     - Accessibility
