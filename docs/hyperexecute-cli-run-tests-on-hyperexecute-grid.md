@@ -206,6 +206,39 @@ This method allows you to name your variables. It helps you optimize the content
 ```
 ***
 
+### `--job-secret-file`
+
+- This flag allows you to specify the Secrets file containing the necessary secrets (credentials, API keys, ) for a particular job.
+
+- The contents of this file will be accessible only within the scope of that specific job execution, enhancing security and streamlining secret management.
+
+- This eliminates the need to store secrets on the service account and prevents their accidental exposure through the `--vars` flag.
+
+```bash
+--job-secret-file <RELATIVE_PATH_OF_YOUR_SECRET_FILE>
+```
+
+#### Sample Secret File
+
+```bash
+secret1=value1
+secret2=value2
+```
+
+:::info
+The secrets file contains highly sensitive information and must be strictly excluded from public exposure. Here's how to ensure its security:
+
+**Store Outside the Repository (Recommended)**
+
+- Store the secrets file in a location outside your project repository altogether. This method is more secure as it automatically gets excluded from your code scripts zip file.
+
+**Exclude from Version Control**
+
+- Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.
+:::
+
+***
+
 ## Running HyperExecute CLI 
 
 In order to trigger your test on Hyperexecute, just need to use the following command. Please replace the placeholder values with your details. 
