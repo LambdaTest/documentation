@@ -206,6 +206,27 @@ This method allows you to name your variables. It helps you optimize the content
 ```
 ***
 
+### `--job-secret-file`
+
+- This flag allows you to specify the Secrets file containing the necessary secrets (credentials, API keys, ) for a particular job.
+
+- The contents of this file will be accessible only within the scope of that specific job execution, enhancing security and streamlining secret management.
+
+- This eliminates the need to store secrets on the service account and prevents their accidental exposure through the `--vars` flag.
+
+```bash
+--job-secret-file <RELATIVE_PATH_OF_YOUR_SECRET_FILE>
+```
+
+#### Sample Secret File
+
+```bash .secrets
+secret1=value1
+secret2=value2
+```
+
+***
+
 ## Running HyperExecute CLI 
 
 In order to trigger your test on Hyperexecute, just need to use the following command. Please replace the placeholder values with your details. 
