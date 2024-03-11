@@ -65,6 +65,9 @@ Out of the box, HyperExecute supports multiple languages and testing frameworks 
     {label: 'Puppeteer', value: 'Puppeteer'},
      {label: 'Playwright', value: 'Playwright'},
      {label: 'Cypress', value: 'Cypress'},
+     {label: 'Appium', value: 'Appium' },
+     {label: 'Espresso', value: 'Espresso' },
+     {label: 'Maestro', value: 'Maestro' },
   ]}>
 
 <TabItem value="Selenium">
@@ -217,6 +220,48 @@ Out of the box, HyperExecute supports multiple languages and testing frameworks 
     </div>
 </TabItem>
 
+<TabItem value="Appium">
+<div className="lt_row ">
+    <div className="lt_col lt_framework_wrapper">
+      <img loading="lazy" src={require('../assets/images/getting-started/appium.jpeg').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <ul className="lt_framework_list">
+        <li>
+          <a href="/support/docs/hyperexecute-appium-testing/">Mobile Application</a>
+        </li>
+        <li>
+          <a href="/support/docs/hyperexecute-webapp-appium-testing/">Web Application</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</TabItem>
+
+<TabItem value="Espresso">
+<div className="lt_row ">
+    <div className="lt_col lt_framework_wrapper">
+      <img loading="lazy" src={require('../assets/images/getting-started/espresso.png').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <ul className="lt_framework_list">
+        <li>
+          <a href="/support/docs/hyperexecute-espresso-testing/">Espresso via Sharding</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</TabItem>
+
+<TabItem value="Maestro">
+<div className="lt_row ">
+    <div className="lt_col lt_framework_wrapper">
+      <img loading="lazy" src={require('../assets/images/getting-started/maestro.png').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <ul className="lt_framework_list">
+        <li>
+          <a href="/support/docs/hyperexecute-maestro-testing/">Maestro</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</TabItem>
+
 </Tabs>
 </div>
 
@@ -225,81 +270,6 @@ Out of the box, HyperExecute supports multiple languages and testing frameworks 
     <p>In case your favorite framework or tool isn't listed here, just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Shout Out Here</span>.
     <br/>In case of any other problems, feel free to <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Contact Us</span>.</p>
   </div>
-
-<!-- <div className="lt_row lt_framework_list_row">
-<div className="lt_col lt_framework_wrapper">
- <img loading="lazy" src={require('../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon"/>
-  <ul className="lt_framework_list">
-    <li>
-      <a href="/docs/testng-on-hyperexecute-grid/">TestNG</a>
-    </li>
-    <li>
-      <a href="/docs/junit-on-hyperexecute-grid/">JUnit</a>
-    </li>
-    <li>
-      <a href="/docs/cucumber-on-hyperexecute-grid/">Cucumber</a>
-    </li>
-  </ul>
-</div>
-<div className="lt_col lt_framework_wrapper">
-  <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
-  <ul className="lt_framework_list">
-    <li>
-      <a href="/docs/webdriverio-on-hyperexecute-grid/">WebdriverIO</a>
-    </li>
-    <li>
-      <a href="/docs/protractor-on-hyperexecute-grid/">Protractor</a>
-    </li>
-    <li>
-      <a href="/docs/nightwatch-on-hyperexecute-grid/">Nightwatch</a>
-    </li>
-  </ul>
-</div>
-<div className="lt_col lt_framework_wrapper">
- <img loading="lazy" src={require('../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon"/>
-  <ul className="lt_framework_list">
-    <li>
-      <a href="/docs/nunit-on-hyperexecute-grid/">NUnit</a>
-    </li>
-    <li>
-      <a href="/docs/specflow-on-hyperexecute-grid/">SpecFlow</a>
-    </li>
-  </ul>
-</div>
-<div className="lt_col lt_framework_wrapper">
-  <img loading="lazy" src={require('../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon"/>
-  <ul className="lt_framework_list">
-    <li>
-      <a href="/docs/pyunit-on-hyperexecute-grid/">PyUnit</a>
-    </li>
-    <li>
-      <a href="/docs/pytest-on-hyperexecute-grid/">PyTest</a>
-    </li>
-    <li>
-      <a href="/docs/robot-on-hyperexecute-grid/">Robot</a>
-    </li>
-    <li>
-      <a href="/docs/behave-on-hyperexecute-grid/">Behave</a>
-    </li>
-  </ul>
-</div>
-<div className="lt_col lt_framework_wrapper">
-  <img loading="lazy" src={require('../assets/images/getting-started/ruby-icon.webp').default} alt="Ruby" width="200" height="200" className="language-icon"/>
-  <ul className="lt_framework_list">
-    <li>
-      <a href="/docs/ruby-on-hyperexecute-grid/">Ruby</a>
-    </li>
-    <li>
-      <a href="/docs/capybara-on-hyperexecute-grid/">Capybara</a>
-    </li>
-  </ul>
-</div>
-  </div>
-  <div className="lt-framework-list-footer">
-    <p>We support all languages and frameworks that are compatible with Selenium, so in case your favorite isn't in the table.<br/>Don't worry, you can still run the test. <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Contact Us</span> for any help.</p>
-  </div>
-
-*Note:* We are preparing documentation for more frameworks. If you want us to prioritize documentation of your preferred framework then feel free to give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**shout**</span>. -->
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
