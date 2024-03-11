@@ -150,18 +150,6 @@ In the above sample YAML file:
 - HyperExecute securely retrieves these secrets from its storage i.e. **HashiCorp Vault** at runtime, ensuring they are not exposed during code sharing or storage.
 :::
 
-## Secure Your Secrets File: A Must-Do
-
-The secrets file contains highly sensitive information and must be strictly excluded from public exposure. Here's how to ensure its security:
-
-### Exclude from Version Control
-
-- Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.
-
-### Store Outside the Repository (Recommended)
-
-- Store the secrets file in a location outside your project repository altogether. This adds an additional layer of protection.
-
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
