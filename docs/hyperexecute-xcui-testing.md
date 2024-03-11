@@ -1,20 +1,20 @@
 ---
-id: hyperexecute-maestro-testing
-title: Execute Maestro Framework Tests on HyperExecute
-sidebar_label: Maestro
-description: Follow the instructions in this documentation, so that you can seamlessly execute Maestro tests on HyperExecute via LambdaTest.
+id: hyperexecute-xcui-testing
+title: Execute XCUI Framework Tests on HyperExecute
+sidebar_label: XCUI
+description: Follow the instructions in this documentation, so that you can seamlessly execute XCUI tests on HyperExecute via LambdaTest.
 keywords:
-  - maestro
-  - java
-  - lambdatest java
+  - xcui
+  - iOS
+  - lambdatest 
   - framework on lambdatest
   - testng
   - app testing
   - real devices
 # image: /assets/images/og-images/espresso-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-maestro-testing/
+url: https://www.lambdatest.com/support/docs/hyperexecute-xcui-testing/
 site_name: LambdaTest
-slug: hyperexecute-maestro-testing/
+slug: hyperexecute-xcui-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -40,14 +40,14 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Maestro Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-maestro-testing/"
+          "name": "Getting Started With XCUI Testing on LambdaTest",
+          "item": "https://www.lambdatest.com/support/docs/hyperexecute-xcui-testing/"
         }]
       })
     }}
 ></script>
 
-This page outlines how to execute your Maestro tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
+This page outlines how to execute your XCUI tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
 
 ## Prerequisites
 
@@ -64,9 +64,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 :::tip Sample repo
 
-Download or Clone the code sample for the Maestro framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the XCUI framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/LambdaTest/maestro-sample-test" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/hyperexecute_real_devices_ios_xcui" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
 
@@ -192,7 +192,7 @@ framework:
     deviceLog: true
     # App ID to be installed (mandatory field, using <app_id>)
     # highlight-next-line
-    appId: lt://<app-id>
+    appId: <app-id>
     # Build name for identification on the automation dashboard
     buildName: maestro-t1
     # All devices are in a private cloud
@@ -231,4 +231,4 @@ OR use this command if you have not exported your username and access key in the
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/playwright/real-device/3.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>

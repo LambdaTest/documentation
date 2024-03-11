@@ -252,6 +252,12 @@ Pass this maven arguments which require to handle mvn ssl cert errors
 
 ***
 
+#### 14. Will my YAML parameters overwrite properties in my XML configuration?
+
+No, your XML configurations are not overwritten by YAML parameters.
+
+***
+
 For more information on the HyperExecute YAML file, visit this [page](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
 >If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.

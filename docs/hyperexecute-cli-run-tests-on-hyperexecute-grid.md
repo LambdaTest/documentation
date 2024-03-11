@@ -220,7 +220,7 @@ This method allows you to name your variables. It helps you optimize the content
 
 #### Sample Secret File
 
-```bash .secrets
+```bash
 secret1=value1
 secret2=value2
 ```
@@ -228,13 +228,13 @@ secret2=value2
 :::info
 The secrets file contains highly sensitive information and must be strictly excluded from public exposure. Here's how to ensure its security:
 
-**Exclude from Version Control**
-
-- Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.
-
 **Store Outside the Repository (Recommended)**
 
 - Store the secrets file in a location outside your project repository altogether. This method is more secure as it automatically gets excluded from your code scripts zip file.
+
+**Exclude from Version Control**
+
+- Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.
 :::
 
 ***
