@@ -66,7 +66,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 Download or Clone the code sample for the XCUI framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/LambdaTest/hyperexecute_real_devices_ios_xcui" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/hyperexecute-xcui-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
 
@@ -117,13 +117,47 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 </Tabs>
 
-## Step 3: Upload your Application
+## Step 3: Configure YAML in your Test Suite
 
-Upload your <b>_android_</b> application (.apk file) to the LambdaTest servers using our <b>REST API</b>. You need to provide your <b>Username</b> and <b>AccessKey</b> in the format `Username:AccessKey` in the <b>cURL</b> command for authentication.
+Enter your `<RELATIVE_APP_PATH>` and `<RELATIVE_TEST_SUITE_PATH>` in the YAML file
 
-:::info
+```bash
+---
+version: "0.2"
+
+runson: ios
+
+autosplit: true
+
+concurrency: 1
+
+retryOnFailure: true
+maxRetries: 2
+
+framework:
+  name: "ios/xcui"
+  args:
+  # highlight-next-line
+    appPath: <RELATIVE_APP_PATH>
+    # highlight-next-line
+    testSuitePath: <RELATIVE_TEST_SUITE_PATH>
+    video: true
+    filters:
+      attributes:
+      - type: className
+        values: ["LambdaUiKitIOSUITestsLaunchTests"]
+      - type: testName
+        values: ["LambdaUiKitIOSUITests/testverifyAppLaunch"]
+    deviceSelectionStrategy: any
+    devices: [".*"]
+
+jobLabel: ['HyperExecute', 'XCUI', 'Real Device']
+```
+
+:::tip
+You can also upload your **application** to the LambdaTest servers using our <b>REST API</b>. You need to provide your <b>Username</b> and <b>AccessKey</b> in the format `Username:AccessKey` in the <b>cURL</b> command for authentication.
+
 Enter your local path of the code repository instead of `<YOUR_LOCAL_APP_PATH>` in the below cURL command.
-:::
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -132,86 +166,16 @@ Enter your local path of the code repository instead of `<YOUR_LOCAL_APP_PATH>` 
 </CodeBlock>
 </div>
 
-
-> Response of above cURL will be a **JSON** object containing the `App ID` of the format - `<APP123456789012345678901234567>` and will be used in the next step.
-
-## Step 4: Configure YAML in your Test Suite
-
-Enter your `<APP_ID>` in the YAML file (line 52) that you have fetched in the above step.
+Enter your `<APP_ID>` in the YAML file in the `framework` flag:
 
 ```bash
----
-# Define the version of the configuration file
-version: "0.2"
-
-# Specify the target platform for test execution (Android in this case)
-runson: android
-
-# Enable autosplit for test execution
-autosplit: true
-
-# Set the concurrency level for test execution (2 devices in parallel)
-concurrency: 1
-
-# Only report the status of the test framework
-frameworkStatusOnly: true
-
-# Enable dynamic allocation of resources
-dynamicAllocation: true
-
-# Pre-install required dependencies using pip
-# will need java and maestro inside the container
-pre:
-  - ./maestro-test/setup-script.sh
-
-env:
-  MAESTRO: true
-
-# Test discovery configuration
-testDiscovery:
-  # Command to discover tests from the test.txt file
-  command: cat ./maestro-test/discover.txt
-  # Test discovery mode can be static/dynamic
-  mode: static
-  # Test type is raw (custom test implementation)
-  type: raw
-
-# Command to run the tests using the testRunnerCommand
-testRunnerCommand: ./maestro-test/runTest.sh $test
-
-# Test framework configuration
-framework:
-  # Name of the test framework (raw in this case)
-  name: raw
-  args:
-    # List of devices to run tests on (two Pixel 5 devices in this case)
-    devices: ["Galaxy S22 Ultra 5G"]
-    # Enable or disable video recording support
-    video: true
-    # Enable or disable device log support
-    deviceLog: true
-    # App ID to be installed (mandatory field, using <app_id>)
-    # highlight-next-line
-    appId: <app-id>
-    # Build name for identification on the automation dashboard
-    buildName: maestro-t1
-    # All devices are in a private cloud
-    privateCloud: true
-    # Timeout for device queue
-    queueTimeout: 600
-    # Configuration fields specific to running raw tests
-    region: ap
-    disableReleaseDevice: true
-    isRealMobile: true
-    reservation: false
-    platformName: android
-
-jobLabel: [maestro-testing, android, autosplit]
+appId: lt://<APP_ID>
 ```
+:::
 
-## Step 5: Execute your Test Suite
+## Step 4: Execute your Test Suite
 
-> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+> **NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
 Run the below command in your terminal at the root folder of the project:
 
@@ -225,10 +189,8 @@ OR use this command if you have not exported your username and access key in the
 ./hyperexecute --user <your_username> --key <your_access_key> --config <path_of_yaml_file>
 ```
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/1.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
-
-## Step 6: Monitor the Test Execution
+## Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/playwright/real-device/3.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/xcui/1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
