@@ -597,6 +597,11 @@ module.exports = {
                 label: "Testsigma",
                 id: "hyperexecute-testsigma-integration",
               },
+              {
+                type: 'doc',
+                label: "Slack",
+                id: "hyperexecute-slack-integration"
+              }
             ],
           },
           {
