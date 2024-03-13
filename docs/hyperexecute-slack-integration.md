@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-slack-integration
-title: Recieve Instant Notification on your Jobs Directly in your Slack
+title: Receive Instant Notification on your Jobs Directly in your Slack
 hide_title: false
 sidebar_label: Slack
 description:  Explore seamless integrations with popular tools at HyperExecute. Enhance your testing workflow for faster, efficient cross-browser testing.
