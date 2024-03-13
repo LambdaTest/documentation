@@ -449,7 +449,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Performance Testing",
+            label: "JMeter-Performance Testing",
             link: {
               type: "doc",
               id: "hyperexecute-performance-testing",
@@ -606,6 +606,11 @@ module.exports = {
                 type: 'doc',
                 label: "qTest",
                 id: "hyperexecute-qtest-integration"
+              },
+              {
+                type: 'doc',
+                label: "Zephyr",
+                id: "hyperexecute-zephyr-integration"
               }
             ],
           },

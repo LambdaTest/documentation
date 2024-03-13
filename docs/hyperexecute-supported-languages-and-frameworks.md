@@ -243,7 +243,7 @@ Out of the box, HyperExecute supports multiple languages and testing frameworks 
       <img loading="lazy" src={require('../assets/images/getting-started/espresso.png').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
       <ul className="lt_framework_list">
         <li>
-          <a href="/support/docs/hyperexecute-espresso-testing/">Espresso via Sharding</a>
+          <a href="/support/docs/hyperexecute-espresso-testing/">Espresso</a>
         </li>
       </ul>
     </div>

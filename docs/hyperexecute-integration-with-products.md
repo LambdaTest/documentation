@@ -87,6 +87,20 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   </div>
   </a>
 
+  <a href = "/support/docs/hyperexecute-slack-integration/">
+  <div className="support_inners">
+    <h3>Slack</h3>
+    <p>Receive real-time notifications and crucial job details directly within your Slack workspace.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-qtest-integration/">
+  <div className="support_inners">
+    <h3>qTest</h3>
+    <p>Perform Cross Platform Testing, and get a centralized test management tool.</p>
+  </div>
+  </a>
+
 </div>
 
 >If your favourite products are not mentioned in the list above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have them ready for you.
