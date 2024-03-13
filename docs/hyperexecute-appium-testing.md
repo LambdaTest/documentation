@@ -134,10 +134,7 @@ import TabItem from '@theme/TabItem';
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
---location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' \\
---form 'name="Android_App"' \\
---form 'appFile=@"/Users/macuser/Downloads/proverbial_android.apk"' 
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' --form 'name="Android_App"' --form 'appFile=@"<RELATIVE_PATH_OF_YOUR_APP>"' 
 `}
 </CodeBlock>
 </div>
@@ -147,9 +144,7 @@ import TabItem from '@theme/TabItem';
 <TabItem value="windows-file" label="Windows" default>
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-powershell">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \`
--X POST "https://manual-api.lambdatest.com/app/upload/realDevice" \`
--F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk""
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"<RELATIVE_PATH_OF_YOUR_APP>""
 `}
 </CodeBlock>
 </div>
@@ -505,6 +500,18 @@ framework:
 - ap (Asia-Pacific)
 - us (United States)
 - eu (European Union)
+
+## Configure Smart UI
+
+To configure SmartUI with HyperExecute, you need to simply add a capability in your test file:
+
+```bash java
+"smartUI.project": "<YOUR_SMARTUI_PROJECT_NAME>"
+```
+
+> Refer to the [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to understand how to write the capability in different languages.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/appium/capability-generator.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ## More About Desired Capabilities
 

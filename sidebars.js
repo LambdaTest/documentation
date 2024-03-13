@@ -418,12 +418,19 @@ module.exports = {
             ]
           },
           {
-            type: "category",
-            collapsed: true,
+            type: "doc",
             label: "Espresso",
-            items: [
-              "hyperexecute-espresso-testing",
-            ]
+            id: "hyperexecute-espresso-testing"
+          },
+          {
+            type: "doc",
+            label: "Maestro",
+            id: "hyperexecute-maestro-testing",
+          },
+          {
+            type: 'doc',
+            label: 'XCUI',
+            id: 'hyperexecute-xcui-testing'
           },
           {
             type: "category",
@@ -442,7 +449,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Performance Testing",
+            label: "JMeter-Performance Testing",
             link: {
               type: "doc",
               id: "hyperexecute-performance-testing",
@@ -575,6 +582,16 @@ module.exports = {
                 type: "doc",
                 label: "Testsigma",
                 id: "hyperexecute-testsigma-integration",
+              },
+              {
+                type: 'doc',
+                label: "Slack",
+                id: "hyperexecute-slack-integration"
+              },
+              {
+                type: 'doc',
+                label: "qTest",
+                id: "hyperexecute-qtest-integration"
               },
             ],
           },
@@ -803,7 +820,12 @@ module.exports = {
         items: [
           {
             type: "doc",
-            label: "Release Notes 2.1.2",
+            label: "Release Notes 2.2.3",
+            id: 'hyperexecute-release-notes-2-2-3'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.2.2",
             id: "hyperexecute-release-notes-2-2-2",
           },
           {
