@@ -68,6 +68,7 @@ Out of the box, HyperExecute supports multiple languages and testing frameworks 
      {label: 'Appium', value: 'Appium' },
      {label: 'Espresso', value: 'Espresso' },
      {label: 'Maestro', value: 'Maestro' },
+     {label: 'XCUI', value: 'XCUI' },
   ]}>
 
 <TabItem value="Selenium">
@@ -256,6 +257,19 @@ Out of the box, HyperExecute supports multiple languages and testing frameworks 
       <ul className="lt_framework_list">
         <li>
           <a href="/support/docs/hyperexecute-maestro-testing/">Maestro</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</TabItem>
+
+<TabItem value="XCUI">
+<div className="lt_row ">
+    <div className="lt_col lt_framework_wrapper">
+      <img loading="lazy" src={require('../assets/images/getting-started/xcui.jpeg').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <ul className="lt_framework_list">
+        <li>
+          <a href="/support/docs/hyperexecute-xcui-testing/">XCUI</a>
         </li>
       </ul>
     </div>
