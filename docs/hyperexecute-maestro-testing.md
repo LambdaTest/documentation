@@ -5,6 +5,7 @@ sidebar_label: Maestro
 description: Follow the instructions in this documentation, so that you can seamlessly execute Maestro tests on HyperExecute via LambdaTest.
 keywords:
   - maestro
+  - raw
   - java
   - lambdatest java
   - framework on lambdatest
