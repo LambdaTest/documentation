@@ -593,11 +593,6 @@ module.exports = {
                 label: "qTest",
                 id: "hyperexecute-qtest-integration"
               },
-              {
-                type: 'doc',
-                label: "Zephyr",
-                id: "hyperexecute-zephyr-integration"
-              }
             ],
           },
           {
