@@ -601,6 +601,11 @@ module.exports = {
                 type: 'doc',
                 label: "Slack",
                 id: "hyperexecute-slack-integration"
+              },
+              {
+                type: 'doc',
+                label: "qTest",
+                id: "hyperexecute-qtest-integration"
               }
             ],
           },
