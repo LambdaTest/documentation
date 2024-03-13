@@ -1,8 +1,8 @@
 ---
 id: hyperexecute-performance-testing
-title: Performance Testing
+title: JMeter-Performance Testing
 hide_title: false
-sidebar_label: Performance Testing
+sidebar_label: JMeter-Performance Testing
 description: Prevent app launch disaster! Test app performance under load with HyperExecute and JMeter. Get real-time insights, identify weaknesses & ensure smooth launch. 
 keywords:
   - hyperexecute performance testing

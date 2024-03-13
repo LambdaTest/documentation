@@ -126,6 +126,10 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
     {label: 'Puppeteer', value: 'Puppeteer'},
      {label: 'Playwright', value: 'Playwright'},
      {label: 'Cypress', value: 'Cypress'},
+     {label: 'Appium', value: 'Appium' },
+     {label: 'Espresso', value: 'Espresso' },
+     {label: 'Maestro', value: 'Maestro' },
+     {label: 'XCUI', value: 'XCUI' },
   ]}>
 
 <TabItem value="Selenium">
@@ -315,6 +319,61 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
         </li>
         <li>
           <a href="/docs/cypressv10-on-hyperexecute/">Cypress v10</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</TabItem>
+
+<TabItem value="Appium">
+<div className="lt_row ">
+    <div className="lt_col lt_framework_wrapper">
+      <img loading="lazy" src={require('../assets/images/getting-started/appium.jpeg').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <ul className="lt_framework_list">
+        <li>
+          <a href="/support/docs/hyperexecute-appium-testing/">Mobile Application</a>
+        </li>
+        <li>
+          <a href="/support/docs/hyperexecute-webapp-appium-testing/">Web Application</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</TabItem>
+
+<TabItem value="Espresso">
+<div className="lt_row ">
+    <div className="lt_col lt_framework_wrapper">
+      <img loading="lazy" src={require('../assets/images/getting-started/espresso.png').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <ul className="lt_framework_list">
+        <li>
+          <a href="/support/docs/hyperexecute-espresso-testing/">Espresso</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</TabItem>
+
+<TabItem value="Maestro">
+<div className="lt_row ">
+    <div className="lt_col lt_framework_wrapper">
+      <img loading="lazy" src={require('../assets/images/getting-started/maestro.png').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <ul className="lt_framework_list">
+        <li>
+          <a href="/support/docs/hyperexecute-maestro-testing/">Maestro</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</TabItem>
+
+<TabItem value="XCUI">
+<div className="lt_row ">
+    <div className="lt_col lt_framework_wrapper">
+      <img loading="lazy" src={require('../assets/images/getting-started/xcui.jpeg').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <ul className="lt_framework_list">
+        <li>
+          <a href="/support/docs/hyperexecute-xcui-testing/">XCUI</a>
         </li>
       </ul>
     </div>
