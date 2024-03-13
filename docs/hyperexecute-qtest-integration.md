@@ -109,7 +109,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 - Go to the `conf.json` file and make the following changes:
 
-    - **git_url :** The shell script uses the url to clone a repository and send pull requests everytime it runs if -g input is used.
+    - **git_url :** The shell script uses the url to clone a repository and send pull requests every time it runs if -g input is used.
     - **local_repository :** The folder containing the test cases. The shell script will use this to know where to run the maven build. Make sure to place this folder in the same directory as the the python and shell scripts.
     - **qtest_api_token :** The token used to authorize the connection to qTest Manager.
     - **qtest_url :** The personal url that is used to access QASymphony API.
