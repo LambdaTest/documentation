@@ -2093,7 +2093,8 @@ module.exports = {
           },
           "smartui-playwright-sdk",
           "smartui-puppeteer-sdk",
-          "smartui-testcafe-sdk"
+          "smartui-testcafe-sdk",
+          "smartui-cypress-sdk"
         ],
       },
       {
