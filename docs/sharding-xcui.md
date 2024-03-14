@@ -176,6 +176,7 @@ runson: ios
 autosplit: true
 maxRetries: 2
 retryOnFailure: true
+globalTimeout: 180    #MAXQUEUETIMEOUT
 
 framework:
   name: "ios/xcui"
@@ -251,6 +252,10 @@ You can refer to this example and screenshot below:
 <img loading="lazy" src={require('../assets/images/app-automation/sharding-appauto.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 - [LambdaTest HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute)
 <img loading="lazy" src={require('../assets/images/app-automation/sharding-he.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
+:::note
+**globalTimeout** ​ The globalTimeout value determines the maximum duration (in minutes) of a Job . It can be set between 5 and 180 minutes, and has a default value of 10 minutes. 
+:::
 
 ## Filters in Sharding
 

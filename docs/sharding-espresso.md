@@ -182,6 +182,7 @@ version: "0.2"
 concurrency: 2
 runson: android
 autosplit: false
+globalTimeout: 180  #MAXQUEUETIMEOUT
 
 framework:
   name: "android/espresso"
@@ -249,6 +250,7 @@ version: "0.2"
 concurrency: 2
 runson: android
 autosplit: true
+globalTimeout: 180  #MAXQUEUETIMEOUT
 
 framework:
   name: "android/espresso"
@@ -308,6 +310,10 @@ You can refer to this example and screenshot below:
 <img loading="lazy" src={require('../assets/images/app-automation/espresso_sharding.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 - [LambdaTest HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute)
 <img loading="lazy" src={require('../assets/images/app-automation/espresso_cli.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
+:::note
+**globalTimeout** ​ The globalTimeout value determines the maximum duration (in minutes) of a Job . It can be set between 5 and 180 minutes, and has a default value of 10 minutes. 
+:::
 
 ## Filters in Sharding
 
