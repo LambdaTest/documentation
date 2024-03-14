@@ -66,22 +66,35 @@ To perform Playwright testing on LambdaTest, you need to define the `browserName
 Following is a list of compatible Playwright bundled browsers that you can use to run tests on the LambdaTest platform.
 
 | Playwright Versions | Compatible Browsers | 
-| -------- | -----| 
-| v1.28   |  **Chromium** 108.0 <br/> **Firefox** 106.0 <br/> **WebKit** 16.4 |
-| v1.27   |  **Chromium** 107.0 <br/> **Firefox** 105.0 <br/> **WebKit** 16.0 | 
-| v1.26   |  **Chromium** 106.0 <br/> **Firefox** 104.0 <br/> **WebKit** 16.0 | 
-| v1.25   |  **Chromium** 105.0 <br/> **Firefox** 103.0 <br/> **WebKit** 16.0 | 
-| v1.24   |  **Chromium** 103.0 <br/> **Firefox** 102.0 <br/> **WebKit** 16.0 | 
-| v1.23   |  **Chromium** 103.0 <br/> **Firefox** 100.0 <br/> **WebKit** 15.4 | 
-| v1.22   |  **Chromium** 102.0 <br/> **Firefox** 99.0 <br/> **WebKit** 15.4 | 
-| v1.21   |  **Chromium** 101.0 <br/> **Firefox** 98.0 <br/> **WebKit** 15.4 | 
-| v1.20   |  **Chromium** 101.0 <br/> **Firefox** 97.0 <br/> **WebKit** 15.4 | 
-| v1.19   |  **Chromium** 100.0 <br/> **Firefox** 96.0 <br/> **WebKit** 15.4 | 
-| v1.18   |  **Chromium** 99.0 <br/> **Firefox** 95.0 <br/> **WebKit** 15.4 | 
-| v1.17   |  **Chromium** 98.0 <br/> **Firefox** 94.0 <br/> **WebKit** 15.4 | 
-| v1.16   |  **Chromium** 97.0 <br/> **Firefox** 93.0 <br/> **WebKit** 15.4 | 
-| v1.15   |  **Chromium** 96.0 <br/> **Firefox** 92.0 <br/> **WebKit** 15.0 | 
-
+| --------------------|---------------------| 
+| v1.42               | **Chromium** 123.0 <br/> **Firefox** 123.0 <br/> **WebKit** 17.4 |
+| v1.41               | **Chromium** 121.0 <br/> **Firefox** 121.0 <br/> **WebKit** 17.4 |
+| v1.40               | **Chromium** 120.0 <br/> **Firefox** 119.0 <br/> **WebKit** 17.4 |
+| v1.39               | **Chromium** 119.0 <br/> **Firefox** 118.0 <br/> **WebKit** 17.4 |
+| v1.38               | **Chromium** 117.0 <br/> **Firefox** 117.0 <br/> **WebKit** 17.0 |
+| v1.37               | **Chromium** 116.0 <br/> **Firefox** 115.0 <br/> **WebKit** 17.0 |
+| v1.36               | **Chromium** 115.0 <br/> **Firefox** 115.0 <br/> **WebKit** 17.0 |
+| v1.35               | **Chromium** 115.0 <br/> **Firefox** 113.0 <br/> **WebKit** 16.4 |
+| v1.34               | **Chromium** 115.0 <br/> **Firefox** 113.0 <br/> **WebKit** 16.4 |
+| v1.33               | **Chromium** 113.0 <br/> **Firefox** 112.0 <br/> **WebKit** 16.4 |
+| v1.32               | **Chromium** 112.0 <br/> **Firefox** 111.0 <br/> **WebKit** 16.4 |
+| v1.31               | **Chromium** 111.0 <br/> **Firefox** 109.0 <br/> **WebKit** 16.4 |
+| v1.30               | **Chromium** 110.0 <br/> **Firefox** 108.0 <br/> **WebKit** 16.4 |
+| v1.29               | **Chromium** 109.0 <br/> **Firefox** 107.0 <br/> **WebKit** 16.0 |
+| v1.28               | **Chromium** 108.0 <br/> **Firefox** 106.0 <br/> **WebKit** 16.4 |
+| v1.27               | **Chromium** 107.0 <br/> **Firefox** 105.0 <br/> **WebKit** 16.0 |
+| v1.26               | **Chromium** 106.0 <br/> **Firefox** 104.0 <br/> **WebKit** 16.0 |
+| v1.25               | **Chromium** 105.0 <br/> **Firefox** 103.0 <br/> **WebKit** 16.0 |
+| v1.24               | **Chromium** 103.0 <br/> **Firefox** 102.0 <br/> **WebKit** 16.0 |
+| v1.23               | **Chromium** 103.0 <br/> **Firefox** 100.0 <br/> **WebKit** 15.4 |
+| v1.22               | **Chromium** 102.0 <br/> **Firefox** 99.0 <br/> **WebKit** 15.4  |
+| v1.21               | **Chromium** 101.0 <br/> **Firefox** 98.0 <br/> **WebKit** 15.4  |
+| v1.20               | **Chromium** 101.0 <br/> **Firefox** 97.0 <br/> **WebKit** 15.4  |
+| v1.19               | **Chromium** 100.0 <br/> **Firefox** 96.0 <br/> **WebKit** 15.4  |
+| v1.18               | **Chromium** 99.0 <br/> **Firefox** 95.0 <br/> **WebKit** 15.4   |
+| v1.17               | **Chromium** 98.0 <br/> **Firefox** 94.0 <br/> **WebKit** 15.4   |
+| v1.16               | **Chromium** 97.0 <br/> **Firefox** 93.0 <br/> **WebKit** 15.4   |
+| v1.15               | **Chromium** 96.0 <br/> **Firefox** 92.0 <br/> **WebKit** 15.0   |
 
 ## Organizing Tests
 ***
