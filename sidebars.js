@@ -1220,6 +1220,7 @@ module.exports = {
       "testrigor-integration",
       "localstack-integration-with-lambdatest",
       "genrocket-integration",
+      "netlify-integration-with-lambdatest"
     ],
     // },
   ],
