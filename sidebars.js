@@ -2571,8 +2571,13 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "User Management",
+        id: "user-management",
+      },
+      {
+        type: "doc",
         label: "Team Management",
-        id: "team-management",
+        id: "team-management"
       },
       {
         type: "doc",
