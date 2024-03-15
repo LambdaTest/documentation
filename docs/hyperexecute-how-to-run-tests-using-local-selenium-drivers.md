@@ -161,6 +161,8 @@ The number of tasks created = **(total number of platforms) * (parallelism)** = 
 - 1 android with any device (we have not specified device name)
 - 1 ios with any device (we have not specified device name)
 
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/how-to-guide/local-driver-os.png').default} alt="Image"  className="doc_img"/>
+
 > You can generate capabilities for your test requirements with the help of our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
 
 ### Step 3: Run Your Tests:
