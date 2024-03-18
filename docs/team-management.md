@@ -87,3 +87,19 @@ Your created team will be permanently deleted.
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/team-management/4.mp4').default} type="video/mp4" />
 </video>
+
+## Access Rules for Builds, Tests & Test Details
+
+This table outlines the access rules for builds, tests, and test details based on the role of that particular user (user level access or admin level access)
+
+| Scenario of Team (Role of the User Added) | Test Executed with Access Role | Test Visible to Access Role |
+|-------------------------------------------|--------------------------------|-----------------------------|
+| No Teams Created | User or Admin | Admin and User |
+| Team is Created (only Admin) | Admin | Admin and User |
+| Team is Created (only Admin) | User | User only |
+| Team is Created (only User) | User | User and Admin |
+| Team is Created (only User) | Admin | Admin only |
+| Team is Created (Admin and User in different team) | User | User only |
+| Team is Created (Admin and User in different team) | Admin | Admin only |
+| Team is Created (Admin and User in same team) | User or Admin | Admin and User |
+| Team is Deleted | User or Admin | Admin and User |
