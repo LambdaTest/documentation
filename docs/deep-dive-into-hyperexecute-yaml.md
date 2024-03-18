@@ -462,7 +462,7 @@ projectName: '<Your Project Name>':'<Your Project ID>'
 
 ## `differentialUpload`
 
-When you run and debug multiple jobs on HyperExecute, sometimes you may notice that **occasionally** your codebase is taking a long time to upload to the platform for testing. This delay can be attributed to various factors, such as **network issues**, a **very large codebase**, or a significant number of files being zipped and uploaded to the storage.
+When you are working with relatively large codebases, and constantly updating and upgrading your test scripts. Getting them onto the HyperExecute platform for every run might consume extra time.
 
 To overcome this challenge, you can use `differentialUpload` flag, which is used to minimize the time taken to upload the codebase, especially when there are incremental changes.
 
@@ -740,21 +740,6 @@ DataJsonPaths helps to distribute data/configs over the VMs. In this you can cre
  }
 ]
 ```
-
-The above data will be distributed over n vms in round robin manner. Like array element 1 will be on vms with index 1, 3, 5….. so on and array element 2 will be distributed on vms with index 2, 4, 6…. so on.
-The data will be stored on the VM in the base directory with suffix as “_context.json” on the VM.
-
-For Instance, if file name is abc.json, then on VM the file will be named abc_context.json and will contain only one element of the array according to the index of the VM.
-You can provide data json paths in the yaml in the below manner
-
-```bash
-dataJsonPath:
-  - xyz/bin/file1.json
-  - xyz/file2.json
-```
-
-The VM will contain two files with the name file1_context.json and file2_context.json.
-If the file name is data.json and is in the root directory then it will use it by default and there is no need to provide the path.
 
 ### Access the JSON file Data:
 To access the data from the JSON files, there are primarily 2 methods:
