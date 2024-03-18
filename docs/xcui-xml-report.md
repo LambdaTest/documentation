@@ -71,7 +71,7 @@ To fetch the XML report for a `non-shard` build, you can use the following cURL 
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`curl --location "https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<build_id>/report/" 
+{`curl --location "https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/builds/<build_id>/report/?encoder=false" \
 --header 'Authorization: Basic <Base64 Authentication>'`}
 </CodeBlock>
 </div>
@@ -82,7 +82,7 @@ To fetch the XML report for a `single shard` in a shard build,use:
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?shard=<shard_id>' 
+{`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?shard=<shard_id>&encoder=false' \
 --header 'Authorization: Basic <Base64 Authentication>'`}
 </CodeBlock>
 </div>
@@ -93,7 +93,7 @@ To fetch the XML reports for `all shards` in a shard build, use:
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/' 
+{`curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/framework/jobs/<job_id>/report/?encoder=false' \
 --header 'Authorization: Basic <Base64 Authentication>'`}
 </CodeBlock>
 </div>
@@ -103,6 +103,7 @@ To fetch the XML reports for `all shards` in a shard build, use:
 :::note
 - Authenticate the API using your LambdaTest username and access key, and replace `build_id`, `job_id` and `shard_id` for which you want to fetch report.
 - It is recommended to run the sharding test(via HyperExecute CLI) in the verbose mode i.e. with the **--verbose** flag. This allows the shard ID(task ID) and build ID(Job ID) to be displayed in the logs and then they can be used to fetch the above reports.
+- In case the report is not a valid XML format, the `encoder=true` parameter can be utilized to prevent the decoding of certain characters. Decoding is usually performed at the server's end to enhance the readability of the report. 
 :::
 
 <nav aria-label="breadcrumbs">
