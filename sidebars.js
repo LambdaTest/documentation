@@ -1905,6 +1905,7 @@ module.exports = {
               "adb-commands-support",
               "login-google-android",
               "disable-screenshot-block",
+              "appium-custom-header",
               "basic-authentication-for-web-automation",
 
             ],
