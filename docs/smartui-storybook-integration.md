@@ -165,7 +165,7 @@ Please read the following table for more information about the configuration fil
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | browsers       | You can add all the supported browsers brands here to run your tests for SmartUI. <br/> Ex: `"chrome", "firefox", "safari", "edge", etc..` | Mandatory |
 | viewports    | You can add all the supported browser viewpoints here to run your tests for SmartUI <br/> Ex: `[1920, 1080],[width, height] etc..` <br/> | Mandatory |
-| waitForTimeout | You can add wait time for the page to load DOM of your StoryBook components. <br/> Ex: `3000`                                      | Optional  |
+| waitForTimeout | You can add wait time for the page to load DOM of your StoryBook components. This can be added globally to your configuration and to individual stories as well. <br/> Ex: `3000`                                      | Optional  |
 | include        | Add the stories which should only be included in SmartUI tests <br/> Ex: `"/dashboard/","/features/"`                              | Optional  |
 | exclude        | Don't compare the stories which should be excluded in SmartUI tests <br/> Ex: `"/login/","/marketing/"`                            | Optional  |
 
@@ -212,7 +212,7 @@ To configure custom viewports for your stories, you can update the `.smartui.jso
         "styles": {
           "width": 320, //Small mobile view
           "height": 568
-        }
+        },
       },
       {
         "stories": [
@@ -221,6 +221,14 @@ To configure custom viewports for your stories, you can update the `.smartui.jso
         "styles": {
           "width": 834, //Tablet view
           "height": 1112
+        },
+        "waitForTimeout": 4000 //Story-level waitForTimeout (Applied to all the combinations of the mentioned stories)
+      }
+      {
+        "stories": [
+          "<name of the stories/components>" 
+        ],
+        "waitForTimeout": 3000 //Story-level waitForTimeout (Applied to all the combinations of the mentioned stories)
         }
       }
       // Additional custom viewport configurations can be added here
@@ -229,6 +237,13 @@ To configure custom viewports for your stories, you can update the `.smartui.jso
 ...
 }
 ```
+
+:::info
+The `waitForTimeout` setting at the story level takes precedence over the global `waitForTimeout` configuration and only applies to the specific stories to which it is assigned. 
+
+For instance, if `Story-1` has a story-level `waitForTimeout` value (T1) set within custom viewport settings, and there exists a global `waitForTimeout` value (T2) defined in the configuration, all browser and viewport combinations of `Story-1` will render with T1. Conversely, all other stories will be rendered with T2 across all combinations.
+:::
+
 ### **Step 5:** Execute the Tests on SmartUI Cloud using CLI
 
 You can now execute your `StoryBook` components for `Visual Regression Testing` using the following options:.
