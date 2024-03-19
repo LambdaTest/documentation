@@ -132,8 +132,6 @@ Monitor and analyze your test result on the **[LambdaTest automation dashboard](
 
 **Step 4:** In the root of your repository, create a file named `pipeline.yml` in a `.buildkite` directory. In `pipeline.yml`, define your pipeline steps.
 
-Sample `pipeline.yml` File:
-
 ```bash
 steps:
   - label: ":docs-testing:"
