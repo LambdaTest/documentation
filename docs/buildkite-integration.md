@@ -51,7 +51,7 @@ LambdaTest now integrates with Buildkite to boost your go-to-market delivery. Pe
 2. A GitHub repository. Here is our sample GitHub repository for [Buildkite](https://github.com/LambdaTest/buildkite-selenium-sample).
     
 
-## Integrating Buildkite with LambdaTest
+## Integrating Buildkite with LambdaTest via UI
 ***
 **Step 1:** Login to Buildkite and click the + icon to create a new pipeline
 
@@ -118,6 +118,52 @@ Now the build should be created and run. After the build runs successfully, you 
 That is it! You can also add a webhook to your repository to trigger the build whenever a change is done in the repository.
 
 Monitor and analyze your test result on the **[LambdaTest automation dashboard](https://automation.lambdatest.com/).**
+
+
+## Integrating Buildkite with LambdaTest via YAML
+
+**Step 1:** Login to Buildkite.
+
+**Step 2:** Select **Settings** > **YAML Migration** to open the YAML migration settings. Select **Use YAML Steps for New Pipelines**, then confirm the action in the modal.
+
+<img loading="lazy" src={require('../assets/images/buildkite-integration/yaml/1.png').default} alt="settings page" width="1365" height="650" className="doc_img"/>
+
+**Step 3:** Go to your desired GitHub repository for which you want to build the pipeline.
+
+**Step 4:** In the root of your repository, create a file named `pipeline.yml` in a `.buildkite` directory. In `pipeline.yml`, define your pipeline steps.
+
+Sample `pipeline.yml` File:
+
+```bash
+steps:
+  - label: ":docs-testing:"
+    commands:
+      - python3 lambdatest.py
+```
+
+**Step 5:** Now go to your **Buildkite dashboard** and click on the **Pipelines** > select **New pipeline**.
+
+**Step 6:** Select the appropriate repository from the list of existing ones in your account.
+
+**Step 7:** Enter your pipeline's details in the respective **Name** and **Description** fields. You can always change these details later from your pipeline's settings.
+
+**Step 8:** In the Steps editor, ensure there's a step to upload the definition from your repository.
+
+<img loading="lazy" src={require('../assets/images/buildkite-integration/yaml/2.png').default} alt="settings page" width="1365" height="650" className="doc_img"/>
+
+**Step 9:** Click on the **Create Pipeline** button.
+
+**Step 10:** On the next page showing your pipeline name, click New Build. In the modal that opens, create a build using the pre-filled details. Select **Create Build**.
+
+<img loading="lazy" src={require('../assets/images/buildkite-integration/yaml/3.png').default} alt="settings page" width="1365" height="650" className="doc_img"/>
+
+:::info
+- Run the pipeline whenever you make changes you want to verify. If you want to add more functionality, go back to editing your steps and repeat.
+
+- If you've configured webhooks, your pipeline will trigger when you push updates to the repository. Otherwise, select New Build in the Buildkite dashboard to trigger the pipeline.
+:::
+
+> Monitor and analyze your test result on the **[LambdaTest automation dashboard](https://automation.lambdatest.com/).**
 
 Reliably deploy your code at scale using Buildkite integration with LambdaTest, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
 
