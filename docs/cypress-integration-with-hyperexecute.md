@@ -46,11 +46,8 @@ In the realm of the software development and testing, developers and QA engineer
 They needed a robust end-to-end testing framework that can help them to deal with issues like flaky tests, time travel debugging, parallel test execution, etc. Hence they turned to Cypress, that provides the following advantages:
 
 - **Parallel Test Execution :** Cypress supports parallel test execution, enabling faster test runs and optimized resource utilization.
-
 - **End-to-End Test Execution :** Cypress allows you to write and run end-to-end tests for web applications. You can easily run these tests locally on your machine verify the checks.
-
 - **Dashboard and Reports :** Cypress offers a Cloud Based Dashboard, a centralized location for all the reports and tests result visualizations.
-
 - **Flaky Test Detections :** Cypress is a great framework option for addressing flaky tests and providing a stable testing environment.
 
 However, for larger projects and complex testing scenarios, certain challenges emerged, including **Test Parallelization**, **CI Pipeline Infrastructure**, **Fail Fasts mechanism**, **Detailed Reports** etc. Here comes a need for an effective companion to augment the capabilities of Cypress.
@@ -105,4 +102,6 @@ HyperExecute streamlines your CI/CD workflows by eliminating the need for manual
 
 ### Incremental Updates for Seamless Testing
 
-Optimize your testing workflows with HyperExecute's intelligent [**Incremental Code Updates**](/support/docs/deep-dive-into-hyperexecute-yaml/#differentialupload) feature. This feature significantly reduces upload times by only transferring necessary files for subsequent test runs. If your codebase changes are less than 75%, HyperExecute intelligently identifies and uploads only the updated or added parts, efficiently mapping the remainder from previous uploads. This approach minimizes wait times and streamlines your testing cycles, leading to faster results and a smoother overall testing experience.
+Optimize your testing workflows with HyperExecute's intelligent [**Incremental Code Updates**](/support/docs/deep-dive-into-hyperexecute-yaml/#differentialupload) feature. This feature significantly reduces upload times by only transferring necessary files for subsequent test runs.
+
+If your codebase changes are less than 75%, HyperExecute intelligently identifies and uploads only the updated or added parts, efficiently mapping the remainder from previous uploads. This approach minimizes wait times and streamlines your testing cycles, leading to faster results and a smoother overall testing experience.
