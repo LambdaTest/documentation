@@ -219,50 +219,50 @@ This feature enables users to manually specify shards along with their definitio
 ### Sample Manual Sharding YAML File
 
 ```bash
+---
 version: "0.2"
 concurrency: 2
 runson: android
 autosplit: false
-
 framework:
-  name: "android/espresso"
+  name: android/espresso
   args:
-    buildName: "Espresso"
+    buildName: Espresso
     video: true
     deviceLog: true
-    
+
     # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
-
     #highlight-next-line
-    appPath: Proverbial.apk 
+    appPath: Proverbial.apk
 
-    testSuitePath: ProverbialExpressoTest.apk
-    # We have used the appPath and testSuitePath here. 
-
+    testSuitePath: ProverbialExpressoTest.apk # We have used the appPath and testSuitePath here. 
     
     #highlight-next-line
     appId: lt://APP1010461471690377432133206
-    testSuiteAppId: lt://APP10104592261690377454846669
-    # We have used the appId and testSuiteAppID here.
-
+    
+    testSuiteAppId: lt://APP10104592261690377454846669 # We have used the appId and testSuiteAppID here.
     deviceSelectionStrategy: all
-    devices: ["Galaxy.*", "Pixel.*"]
-
+    devices:
+      - Galaxy.*
+      - Pixel.*
     shards:
       mappings:
-     - name: shard1
-        strategy: "class"
-        values: ["com.lambdatest.proverbial.BrowserTest"]
+        - name: shard1
+          strategy: class
+          values:
+            - com.lambdatest.proverbial.BrowserTest
     # The strategy for this shard is based on "class".
     # This shard will run all tests from the class com.lambdatest.proverbial.BrowserTest.
-     - name: shard2
-       strategy: "package"
-       values: ["com.lambdatest.proverbial"]
+        - name: shard2
+          strategy: package
+          values:
+            - com.lambdatest.proverbial
     # The strategy for this shard is based on "package". 
     # This shard will run all tests that belong to the package com.lambdatest.proverbial.l.
-     - name: shard3
-       strategy: "skipClass"
-       values: ["com.lambdatest.proverbial.BrowserTest"]
+        - name: shard3
+          strategy: skipClass
+          values:
+            - com.lambdatest.proverbial.BrowserTest
     # The strategy for this shard is to skip a specific class. 
     # This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
 ```
