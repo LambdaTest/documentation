@@ -59,50 +59,50 @@ However, for larger projects and complex testing scenarios, certain challenges e
 
 **HyperExecute**, a powerful platform with features designed to seamlessly complement Cypress and address its limitations via:
 
-### [Intelligently Orchestrate Your Tests](https://www.lambdatest.com/support/docs/hyperexecute-test-splitting-and-multiplexing/)
+### Intelligently Orchestrate Your Tests
 
-Cypress excels in parallel testing, but managing large test suites within complex CI pipelines can be challenging. HyperExecute's AI-powered orchestration intelligently distributes tests across available resources, optimizing execution speed and ensuring CI/CD stability.
+Cypress excels in parallel testing, but managing large test suites within complex CI pipelines can be challenging. HyperExecute's [**AI-powered orchestration**](/support/docs/hyperexecute-test-splitting-and-multiplexing/) intelligently distributes tests across available resources, optimizing execution speed and ensuring CI/CD stability.
 
-### [Comprehensive Artifacts of Your Job](https://www.lambdatest.com/support/docs/hyperexecute-artifacts/)
+### Comprehensive Artifacts of Your Job
 
-While Cypress offers basic test reports, detailed logs and artifacts can be crucial for debugging and analysis. HyperExecute captures every step of your test run, providing comprehensive artifacts for in-depth troubleshooting and failure identification.
+While Cypress offers basic [**test reports**](/support/docs/cypress-mochaawesome-report/), detailed logs and [**artifacts**](/support/docs/hyperexecute-artifacts/) can be crucial for debugging and analysis. HyperExecute captures every step of your test run, providing comprehensive artifacts for in-depth troubleshooting and failure identification.
 
-### [Fail Fast Mechanism](https://www.lambdatest.com/support/docs/hyperexecute-failfast/)
+### Fail Fast Mechanism
 
-Cypress prioritizes fast execution, but catching flaky tests early on can save time and prevent unnecessary re-runs. HyperExecute's smart "Fail Fast" mechanism identifies flaky tests quickly, stopping irrelevant test executions and focusing resources on reliable tests.
+Cypress prioritizes fast execution, but catching flaky tests early on can save time and prevent unnecessary re-runs. HyperExecute's smart "[**Fail Fast**](/support/docs/hyperexecute-failfast/)" mechanism identifies flaky tests quickly, stopping irrelevant test executions and focusing resources on reliable tests.
 
-### [Mute Your Flaky Tests](https://www.lambdatest.com/support/docs/hyperexecute-test-muting/)
+### Mute Your Flaky Tests
 
-Flaky tests can disrupt your testing workflow. HyperExecute allows you to temporarily mute unreliable tests while investigating the root cause, eliminating wasted resources and maintaining testing stability.
+Flaky tests can disrupt your testing workflow. HyperExecute allows you to temporarily [**mute unreliable tests**](/support/docs/hyperexecute-test-muting/) while investigating the root cause, eliminating wasted resources and maintaining testing stability.
 
-### [Smart Caching](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey)
+### Smart Caching
 
-Repeatedly fetching data during tests can slow down execution. HyperExecute's intelligent caching stores frequently accessed data, significantly speeding up test runs and optimizing resource utilization.
+Repeatedly fetching data during tests can slow down execution. HyperExecute's [**intelligent caching**](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) stores frequently accessed data, significantly speeding up test runs and optimizing resource utilization.
 
-### [Detailed Reports of Your Job](https://www.lambdatest.com/support/docs/cypress-mochaawesome-report/)
+### Detailed Reports of Your Job
 
-Beyond basic pass/fail information, HyperExecute generates detailed reports with performance metrics, logs, and screenshots for each test case. This granularity provides deeper insights into your testing process and facilitates informed decision-making.
+Beyond basic pass/fail information, HyperExecute generates [**detailed reports**](/support/docs/cypress-mochaawesome-report/) with performance metrics, logs, and screenshots for each test case. This granularity provides deeper insights into your testing process and facilitates informed decision-making.
 
-### [Auto Retries](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure)
+### Auto Retries
 
-Occasional test failures happen. HyperExecute's configurable retry mechanism allows you to automatically re-run flaky or failed tests based on defined criteria, ensuring accurate results and preventing false negatives.
+Occasional test failures happen. HyperExecute's configurable [**retry mechanism**](/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure) allows you to automatically re-run flaky or failed tests based on defined criteria, ensuring accurate results and preventing false negatives.
 
-### [Prioritzing your Jobs](https://www.lambdatest.com/support/docs/hyperexecute-prioritize-tests/)
+### Prioritzing your Jobs
 
-In complex testing scenarios, prioritizing critical tests is essential. HyperExecute lets you define job priorities, ensuring high-priority tests get executed first, maximizing efficiency and meeting your testing goals.
+In complex testing scenarios, prioritizing critical tests is essential. HyperExecute lets you define [**job priorities**](/support/docs/hyperexecute-prioritize-tests/), ensuring high-priority tests get executed first, maximizing efficiency and meeting your testing goals.
 
-### [Run Background Services](https://www.lambdatest.com/support/docs/hyperexecute-background-services/)
+### Run Background Services
 
-Cypress focuses on browser interactions. HyperExecute empowers you to run background services like database calls or API tests alongside your Cypress tests, streamlining your testing workflow and reducing overall execution time.
+Cypress focuses on browser interactions. HyperExecute empowers you to run [**background services**](/support/docs/hyperexecute-background-services/) like database calls or API tests alongside your Cypress tests, streamlining your testing workflow and reducing overall execution time.
 
-### [Archive Your Jobs](https://www.lambdatest.com/support/docs/hyperexecute-jobs-archiving/)
+### Archive Your Jobs
 
-Maintaining a clean testing history is crucial. HyperExecute lets you archive completed jobs with their artifacts and reports, providing a comprehensive audit trail and valuable data for future analysis.
+Maintaining a clean testing history is crucial. HyperExecute lets you [**archive your jobs**](/support/docs/hyperexecute-jobs-archiving/) with their artifacts and reports, providing a comprehensive audit trail and valuable data for future analysis.
 
-### [Secure Upload, Zero Hassle](https://www.lambdatest.com/support/docs/hyperexecute-how-to-configure-sourcePayload/)
+### Secure Upload, Zero Hassle
 
-HyperExecute streamlines your CI/CD workflows by eliminating the need for manual test script uploads. All you have to do is just configure the `sourcePayload` parameter in your HyperExecute YAML file, and it will securely access your test scripts directly from your Git repository using secure access tokens.
+HyperExecute streamlines your CI/CD workflows by eliminating the need for manual test script uploads. All you have to do is just configure the [**`sourcePayload`**](/support/docs/hyperexecute-how-to-configure-sourcePayload/) parameter in your HyperExecute YAML file, and it will securely access your test scripts directly from your Git repository using secure access tokens.
 
-### [Incremental Updates for Seamless Testing](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#differentialupload)
+### Incremental Updates for Seamless Testing
 
-Optimize your testing workflows with HyperExecute's intelligent Incremental Code Updates feature. This feature significantly reduces upload times by only transferring necessary files for subsequent test runs. If your codebase changes are less than 75%, HyperExecute intelligently identifies and uploads only the updated or added parts, efficiently mapping the remainder from previous uploads. This approach minimizes wait times and streamlines your testing cycles, leading to faster results and a smoother overall testing experience.
+Optimize your testing workflows with HyperExecute's intelligent [**Incremental Code Updates**](/support/docs/deep-dive-into-hyperexecute-yaml/#differentialupload) feature. This feature significantly reduces upload times by only transferring necessary files for subsequent test runs. If your codebase changes are less than 75%, HyperExecute intelligently identifies and uploads only the updated or added parts, efficiently mapping the remainder from previous uploads. This approach minimizes wait times and streamlines your testing cycles, leading to faster results and a smoother overall testing experience.
