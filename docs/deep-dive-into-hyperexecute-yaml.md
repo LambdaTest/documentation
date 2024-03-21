@@ -472,11 +472,11 @@ This flag optimizes codebase uploads by **fetching** only the parts of the codeb
 
 - **enabled (boolean):** Set to true to activate the optimization, and false to maintain the default behavior.
 
-- **ttlHours (integer):** Specifies the Time-To-Live (TTL) for the uploaded code. Users can control the duration for which the optimized upload remains active, with valid values ranging from 1 hour to 1440 hours.
+- **ttlHours (integer):** Specifies the Time-To-Live (TTL) for the uploaded code. Users can control the duration for which the optimized upload remains active, with valid values ranging from 1 hour to 360 hours.
 
 When you pass the `differentialUpload` flag, it ensures that whenever you upload the **same codebase a second time with less than 75% changes, only the modified or new parts are fetched**. The rest is mapped to the previously uploaded version of the codebase. This approach is beneficial in scenarios where network issues or a large codebase contribute to slow upload times.
 
-> **NOTE:** The default value for **ttlHous** is 60 hours
+> **NOTE:** The default value for **ttlHours** is 60 hours
 
 ```bash
 project:
