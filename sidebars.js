@@ -1928,6 +1928,7 @@ module.exports = {
               "reg-expression",
               "appium-upload-media",
               "app-auto-network-throttling",
+              "appium-ip-geolocation",
               "appium-app-performance",
               "appium-ios-app-settings",
               "adb-commands-support",
