@@ -50,28 +50,31 @@ To execute the Test Plan with HyperExecute, you will have to follow the below me
 
 **Step 1:** Download these exeutable files and place it in the root directory of your test suite.
 
+| Binary | Download Link |
+|--------|---------------|
+| Testplan Discovery | https://downloads.lambdatest.com/hyperexecute/testplan-discovery-win.exe |
+| Testplan Status | https://downloads.lambdatest.com/hyperexecute/testplan-status-update-win.exe |
+| Test Link Attachment | https://downloads.lambdatest.com/hyperexecute/test-link-attach-win.exe |
+
 **Step 2:** Add the following command in your YAML file
 
 ```bash
 testDiscovery:
-  autosubset: true
-  command: discovery.exe <test_plan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token>
+  command: testplan-discovery-win.exe <test_plan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token>
   mode: static
-  shell: bash
   type: raw
 ```
 
 **Step 3:** To keep the test case distribution perfectly, make sure you pass the `dynamicAllocation` flag as `true`.
 
 ```bash
-dynamicAllocation: false
+dynamicAllocation: true
 ```
 
 **Step 4:** Now, you need to pass the following command in your YAML file. 
 
 ```bash
-testRunnerCommand: status.exe <testplan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token> <lt_username> <lt_access_key>
-                   test.exe <azure_org_name> <azure_project_name> <azure_access_token>
+testRunnerCommand: dotnet test path\of\dll --settings path\of\runsettings --filter '"Name=$test"' ; testplan-status-update-win.exe <testplan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token> <lt_username> <lt_access_key> ; test-link-attach-win.exe <azure_org_name> <azure_project_name> <azure_access_token>
 ```
 
 **Step 5:** Trigger your test plan on HyperExecute.
