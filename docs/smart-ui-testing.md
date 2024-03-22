@@ -82,6 +82,12 @@ To execute Smart UI Testing using HyperExecute, you can opt for the following me
       <p>HyperExecute allows you to execute your Smart UI Tests in HyperExecute using Cypress.</p>
     </div>
   </a>
+    <a href = "/support/docs/hyperexecute-smart-ui-test-using-playwright/">
+    <div className="support_inners">
+      <h3>Using Playwright</h3>
+      <p>HyperExecute allows you to execute your Smart UI Tests in HyperExecute using Playwright.</p>
+    </div>
+  </a>
 </div>
 
 

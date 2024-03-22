@@ -3,13 +3,14 @@ id: hyperexecute-azure-setup-test-plan
 title: Azure Test Plan
 hide_title: true
 sidebar_label: Setup the Test Plan
-description: You can now integrate Tosca with HyperExecute. To do so, follow the steps listed in the document.
+description: Learn how to set up your Azure Test Plan project for seamless integration with HyperExecute.
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products
     - products
     - azure test plan
     - azure integration
+    - azure test-plan setup 
 url: https://www.lambdatest.com/support/docs/hyperexecute-azure-setup-test-plan/
 site_name: LambdaTest
 slug: hyperexecute-azure-setup-test-plan/

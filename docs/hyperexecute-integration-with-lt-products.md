@@ -43,15 +43,30 @@ slug: he-integration-with-lambdatest-products/
 
 You can now integrate HyperExecute with other LambdaTest products like Smart UI testing. You can go through the links below to see the integrations we offer at the moment. 
 
-<div className="download_btn mb-10">
-<a href="/support/docs/smart-ui-testing/">Smart UI Testing With HyperExecute</a>
-</div>
+<div className="support_main">
+  
+  <a href = "/support/docs/smart-ui-testing/">
+  <div className="support_inners">
+    <h3>Smart UI</h3>
+    <p>Execute Smart UI Tests to ensure the visual consistency of web applications using HyperExecute.</p>
+  </div>
+  </a>
+  
+  <a href = "/support/docs/hyperexecute-integration-with-virtual-devices/">
+  <div className="support_inners">
+    <h3>Virtual Devices</h3>
+    <p>Run app automated tests on Emulators and Simulators using HyperExecute.</p>
+  </div>
+  </a>
 
-<div className="download_btn mb-10">
-<a href="/support/docs/real-devices-integration-with-hyperexecute/">Real Devices Testing With HyperExecute</a>
-</div>
+  <a href = "/support/docs/real-devices-integration-with-hyperexecute/">
+  <div className="support_inners">
+    <h3>Real Devices</h3>
+    <p>Run app automated tests on Real Mobile Devices using HyperExecute..</p>
+  </div>
+  </a>
 
-***
+</div>
 
 >If your favourite products are not mentioned in the list above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have them ready for you.
 
