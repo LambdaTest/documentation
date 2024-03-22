@@ -3,7 +3,7 @@ id: hyperexecute-azure-test-plan
 title: Azure Test Plan
 hide_title: true
 sidebar_label: Azure Test Plan
-description: You can now integrate Tosca with HyperExecute. To do so, follow the steps listed in the document.
+description: Seamless Azure Test Plan integration with HyperExecute for efficient test management and execution. Boost software quality effortlessly.
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products

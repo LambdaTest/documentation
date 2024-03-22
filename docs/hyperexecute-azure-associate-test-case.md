@@ -3,13 +3,15 @@ id: hyperexecute-azure-associate-test-case
 title: Associate Test Cases 
 hide_title: true
 sidebar_label: Associate the Test Cases
-description: You can now integrate Tosca with HyperExecute. To do so, follow the steps listed in the document.
+description: Associate test cases with Test Plan via Visual Studio Code. Follow the instructions to integrate your test cases and enhance your testing process seamlessly
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products
     - products
     - azure test plan
     - azure integration
+    - azure associate test case
+    - test case
 url: https://www.lambdatest.com/support/docs/hyperexecute-azure-associate-test-case/
 site_name: LambdaTest
 slug: hyperexecute-azure-associate-test-case/
@@ -41,7 +43,7 @@ slug: hyperexecute-azure-associate-test-case/
 
 # Step 2: How to Associate the Test Cases
 
-> Test Plan works in Association with specific [**Visual Studio subscriptions**](https://learn.microsoft.com/en-us/azure/devops/organizations/billing/buy-access-tfs-test-hub?view=azure-devops-2022#buy-monthly-access-to-azure-test-plans).
+> Test Plan works in Association with specific [**Visual Studio subscriptions**](https://learn.microsoft.com/en-us/azure/devops/test/create-a-test-plan?view=azure-devops#:~:text=Basic%20%2B%20Test%20Plans%20access%20level%20to%20add%20test%20plans%20and%20test%20suites%2C%20delete%20test%20artifacts%2C%20and%20define%20test%20configurations.%20Or%2C%20have%20one%20of%20the%20following%20Visual%20Studio%20subscriptions).
 
 After setting up a Test Plan, now you need to associate your test cases as well with the Test Plan. To perform the same, we must have a Visual Studio IDE installed in our local machine. Login with same credentials for Visual Studio as in Test Plan.
 
