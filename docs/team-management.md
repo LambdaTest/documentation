@@ -90,16 +90,35 @@ Your created team will be permanently deleted.
 
 ## Access Rules for Builds, Tests & Test Details
 
-This table outlines the access rules for builds, tests, and test details based on the role of that particular user (user level access or admin level access)
+This section outlines a series of test cases (TC) designed to verify test visibility within the system under various user role and team configurations:
 
-| Scenario of Team (Role of the User Added) | Test Executed with Access Role | Test Visible to Access Role |
-|-------------------------------------------|--------------------------------|-----------------------------|
-| No Teams Created | User or Admin | Admin and User |
-| Team is Created (only Admin) | Admin | Admin and User |
-| Team is Created (only Admin) | User | User only |
-| Team is Created (only User) | User | User and Admin |
-| Team is Created (only User) | Admin | Admin only |
-| Team is Created (Admin and User in different team) | User | User only |
-| Team is Created (Admin and User in different team) | Admin | Admin only |
-| Team is Created (Admin and User in same team) | User or Admin | Admin and User |
-| Team is Deleted | User or Admin | Admin and User |
+- **Admin Role:** Has full access to all builds, tests, and test details.
+- **User Role:** Limited access based on team membership.
+
+### Scenario 1: No Teams Created
+
+- **Case 1:** An Admin user can see all builds, tests, and test details.
+- **Case 2:** A User cannot see any builds, tests, or test details, regardless of the Admin running a test.
+
+### Scenario 2: Team Created with Admin User Only
+
+- **Case 3:** Test run by the Admin user is visible to both the Admin and User.
+- **Case 4:** Test run by the User is not visible to anyone.
+
+### Scenario 3: Team Created with User Only
+
+- **Case 5:** Test run by the User is visible to both the Admin and User.
+- **Case 6:** Test run by the Admin is not visible to the User.
+
+### Scenario 4: Teams Created, Separate Teams for Each User
+
+- **Case 7:** Test run by the User is not visible to the Admin.
+- **Case 8:** Test run by the Admin is not visible to the User.
+
+### Scenario 5: Teams Created, Same Team for Both Users
+
+- **Case 9:** Test run by one user is visible to the other user.
+
+### Scenario 6: All Teams Deleted
+
+- **Case 10:** All previously run tests are visible to both users, regardless of their prior team assignments.
