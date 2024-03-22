@@ -579,6 +579,20 @@ module.exports = {
                 id: "hyperexecute-accelq-integration",
               },
               {
+                type: "category",
+                collapsed: true,
+                label: "Azure Test Plan",
+                link: {
+                  type: "doc",
+                  id: "hyperexecute-azure-test-plan",
+                },
+                items: [
+                  "hyperexecute-azure-setup-test-plan",
+                  "hyperexecute-azure-associate-test-case",
+                  "hyperexecute-integrate-azure-test-plan"
+                ]
+              },
+              {
                 type: "doc",
                 label: "Testsigma",
                 id: "hyperexecute-testsigma-integration",
