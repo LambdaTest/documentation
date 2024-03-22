@@ -3,7 +3,7 @@ id: hyperexecute-slack-integration
 title: Receive Instant Notification on your Jobs Directly in your Slack
 hide_title: false
 sidebar_label: Slack
-description:  Explore seamless integrations with popular tools at HyperExecute. Enhance your testing workflow for faster, efficient cross-browser testing.
+description:  Streamline testing & communication! Integrate LambdaTest HyperExecute with Slack for real-time test notifications & updates. 
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -11,6 +11,8 @@ keywords:
   - slack
   - Integrations
   - Products
+  - Automated testing alerts
+  - DevOps communication
 url: https://www.lambdatest.com/support/docs/hyperexecute-slack-integration/
 site_name: LambdaTest
 slug: hyperexecute-slack-integration/
