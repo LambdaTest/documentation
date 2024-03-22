@@ -3,13 +3,15 @@ id: hyperexecute-azure-associate-test-case
 title: Associate Test Cases 
 hide_title: true
 sidebar_label: Associate the Test Cases
-description: You can now integrate Tosca with HyperExecute. To do so, follow the steps listed in the document.
+description: Associate test cases with Test Plan via Visual Studio Code. Follow the instructions to integrate your test cases and enhance your testing process seamlessly
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products
     - products
     - azure test plan
     - azure integration
+    - azure associate test case
+    - test case
 url: https://www.lambdatest.com/support/docs/hyperexecute-azure-associate-test-case/
 site_name: LambdaTest
 slug: hyperexecute-azure-associate-test-case/

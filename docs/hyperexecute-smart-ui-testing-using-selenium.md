@@ -237,13 +237,131 @@ Here you can see the difference.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/selenium/smart-ui-4.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-## Smart UI Test Keywords
+## Handling Dynamic Data with DOM Configuration
 
 | Key | Description |
 |-----|------------ |
-| `transparency` | Command to adjust test transparency settings |
-| `largeImageThreshold` | Command to set the threshold value for the comparison output |
-| `BoundingBoxes: [box1, box2]` | Command to narrow down the area of comparison by specifying a bounding box measured in pixels from the top left |
-| `ignoredBoxes: [box1, box2]` | Command to exclude part of the image from comparison, by specifying the excluded area in pixels from the top left |
-| `ignoredAreasColoredWith: color` | Command to exclude pixels that match the specific color on a reference image from comparison |
-| `ignoreDOM` | Command to specify a selector based on the HTML DOM ID, CSS class or CSS selector used by your webpage that should be excluded from the comparison. |
+| `screenshotName` (string) | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
+| `fullPage` (boolean) | Specify `true` if you want to take a Full Page Screenshot and `false` for viewport screenshots; `fullPage: true` is currently only supported for `Chrome`. |
+| `ignoreDOM` (object) | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or Xpath` used by your webpage that should be excluded from the comparison. |
+| `selectDOM` (object) | Specify one or a combination of selectors based on the `HTML DOM ID, CSS class, CSS selector or XPath` used by your webpage that should be included in the comparison. |
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="IgnoreID" label="Ignore ID" default>
+
+```js title="This is a sample for your webhook configuration for Javascript to ignore by ID"
+let config = {
+  screenshotName: "Ignore-ID",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    id: ["ID-1", "ID-2"], // Ignoring elements by ID, you can ignore multiple at once
+  },
+};
+await driver.executeScript("smartui.takeScreenshot", config);
+```
+
+</TabItem>
+<TabItem value="IgoreClass" label="Ignore Class">
+
+```js title="This is a sample for your webhook configuration for Javascript to ignore by Class"
+let config = {
+  screenshotName: "Ignore-Class",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    class: ["Class-1", "Class-2"], // Ignoring elements by class, you can ignore multiple at once
+  },
+};
+await driver.executeScript("smartui.takeScreenshot", config);
+```
+
+</TabItem>
+<TabItem value="IgnoreXPath" label="Ignore XPath">
+
+```js title="This is a sample for your webhook configuration for Javascript to ignore by XPath"
+let config = {
+  screenshotName: "Ignore-XPath",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    xpath: ["Xpath-1", "Xpath-2"], // Ignoring elements by XPath, you can ignore multiple at once
+  },
+};
+await driver.executeScript("smartui.takeScreenshot", config);
+```
+
+</TabItem>
+
+<TabItem value="IgnoreSelector" label="Ignore CSS Selector">
+
+```js title="This is a sample for your webhook configuration for Javascript to ignore by CSS Selector"
+let config = {
+  screenshotName: "Ignore-cssSelector",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  ignoreDOM: {
+    cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Ignoring elements by CSS selector, you can ignore multiple at once
+  },
+};
+await driver.executeScript("smartui.takeScreenshot", config);
+```
+</TabItem>
+
+</Tabs>
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="SelectID" label="Select ID" default>
+
+```js title="This is a sample for your webhook configuration for Javascript to select by ID."
+let config = {
+  screenshotName: "Select-ID",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    id: ["ID-1", "ID-2"], // Selecting elements by ID, you can select multiple at once
+  },
+};
+await driver.executeScript("smartui.takeScreenshot", config);
+```
+
+</TabItem>
+<TabItem value="SelectClass" label="Select Class">
+
+```js title="This is a sample for your webhook configuration for Javascript to select by Class"
+let config = {
+  screenshotName: "Select-Class",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    class: ["Class-1", "Class-2"], // Selecting elements by class, you can select multiple at once
+  },
+};
+await driver.executeScript("smartui.takeScreenshot", config);
+```
+
+</TabItem>
+<TabItem value="SelectXPath" label="Select XPath">
+
+```js title="This is a sample for your webhook configuration for Javascript to select by XPath"
+let config = {
+  screenshotName: "Select-XPath",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    xpath: ["Xpath-1", "Xpath-2"], // Selecting elements by XPath, you can select multiple at once
+  },
+};
+await driver.executeScript("smartui.takeScreenshot", config);
+```
+
+</TabItem>
+
+<TabItem value="SelectSelector" label="Select CSS Selector">
+
+```js title="This is a sample for your webhook configuration for Javascript to select by CSS Selector"
+let config = {
+  screenshotName: "Select-cssSelector",
+  fullPage: false, //You can make this property as true in case of Chrome browser
+  selectDOM: {
+    cssSelector: ["CSS-Selector-1", "CSS-Selector-2"], // Selecting elements by CSS selector, you can select multiple at once
+  },
+};
+await driver.executeScript("smartui.takeScreenshot", config);
+```
+</TabItem>
+
+</Tabs>
