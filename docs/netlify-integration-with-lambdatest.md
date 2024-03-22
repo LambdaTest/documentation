@@ -3,7 +3,7 @@ id: netlify-integration-with-lambdatest
 title: Netlify Integration With LambdaTest
 hide_title: true
 sidebar_label: Netlify Integration
-description: Control the development process in the tasks of compilation and packaging to testing, deployment, and publishing with LambdaTest integration
+description: Simplify DevOps! Run blazing-fast Cypress tests on LambdaTest directly from your Netlify builds.
 keywords:
   - lambdatest integrations
   - lambdatest netlify integration

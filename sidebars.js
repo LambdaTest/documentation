@@ -646,6 +646,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Hyperexecute Virtual Devices Testing",
+                id: "hyperexecute-integration-with-virtual-devices",
+              },
+              {
+                type: "doc",
                 label: "Hyperexecute Real Devices Testing",
                 id: "real-devices-integration-with-hyperexecute",
               },

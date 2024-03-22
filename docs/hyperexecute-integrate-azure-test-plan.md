@@ -3,13 +3,16 @@ id: hyperexecute-integrate-azure-test-plan
 title: Integrate Test Cases 
 hide_title: true
 sidebar_label: Intgerate the Test Cases
-description: You can now integrate Tosca with HyperExecute. To do so, follow the steps listed in the document.
+description: Integrate your Test Plan with HyperExecute by downloading necessary executable files, configure YAML files, and trigger your test plan for efficient test execution.
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products
     - products
     - azure test plan
     - azure integration
+    - test cases
+    - azure binaries
+    - azure test plan integration
 url: https://www.lambdatest.com/support/docs/hyperexecute-integrate-azure-test-plan/
 site_name: LambdaTest
 slug: hyperexecute-integrate-azure-test-plan/

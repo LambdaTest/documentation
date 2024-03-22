@@ -3,7 +3,7 @@ id: hyperexecute-qtest-integration
 title: Integrate qTest with HyperExecute
 hide_title: false
 sidebar_label: qTest
-description:  Explore seamless integrations with popular tools at HyperExecute. Enhance your testing workflow for faster, efficient cross-browser testing.
+description:  Unleash the power of QTest & LambdaTest HyperExecute! Streamline test management & experience blazing-fast execution.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -11,6 +11,9 @@ keywords:
   - qtest
   - Integrations
   - Products
+  - Test case management
+  - Automated testing
+  - Cloud-based testing
 url: https://www.lambdatest.com/support/docs/hyperexecute-qtest-integration/
 site_name: LambdaTest
 slug: hyperexecute-qtest-integration/
