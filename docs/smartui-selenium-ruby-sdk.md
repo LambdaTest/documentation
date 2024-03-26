@@ -357,6 +357,67 @@ Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options
 
 </Tabs>
 
+## For capturing the screenshot of a specific element
+
+You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
+
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="ElementID" label="Capture Element by ID" default>
+
+```rb title="This is a sample for your configuration for Ruby to capture an element by ID."
+options = {
+      element: {
+          id: 'Required ID',
+      }
+  }
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+```
+
+</TabItem>
+<TabItem value="ElementClass" label="Capture Element by Class">
+
+```rb title="This is a sample for your configuration for Ruby to capture an element by Class"
+options = {
+      element: {
+          class: 'Required Class',
+      }
+  }
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+```
+
+</TabItem>
+<TabItem value="ElementXPath" label="Capture Element by XPath">
+
+```rb title="This is a sample for your configuration for Ruby to capture an element by XPath"
+options = {
+      element: {
+          xpath: 'Required Xpath',
+      }
+  }
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+```
+
+</TabItem>
+
+<TabItem value="ElementSelector" label="Capture Element by Selector">
+
+```rb title="This is a sample for your webhook configuration for Ruby to capture an element by CSS Selector"
+options = {
+      element: {
+          cssSelector: 'Required CSS Selector',
+      }
+  }
+driver.navigate.to 'Required URL'
+Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+```
+</TabItem>
+
+</Tabs>
+
 ## For capturing interactive lazy loading elements
 
 If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.

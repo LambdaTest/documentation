@@ -392,6 +392,63 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 </Tabs>
 
+## For capturing the screenshot of a specific element
+
+You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
+
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="ElementID" label="Capture Element by ID" default>
+
+```java title="This is a sample for your configuration for Javas to capture an element by ID."
+HashMap<String, Object> options = new HashMap<>();
+HashMap<String, String> locator = new HashMap<>();
+options.put("element", locator);
+locator.put("id", "Required ID");
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+
+</TabItem>
+<TabItem value="ElementClass" label="Capture Element by Class">
+
+```java title="This is a sample for your configuration for Java to capture an element by Class"
+HashMap<String, Object> options = new HashMap<>();
+HashMap<String, String> locator = new HashMap<>();
+options.put("element", locator);
+locator.put("class", "Required Class");
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+
+</TabItem>
+<TabItem value="ElementXPath" label="Capture Element by XPath">
+
+```java title="This is a sample for your configuration for Java to capture an element by XPath"
+HashMap<String, Object> options = new HashMap<>();
+HashMap<String, String> locator = new HashMap<>();
+options.put("element", locator);
+locator.put("xpath", "Required Xpath");
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+
+</TabItem>
+
+<TabItem value="ElementSelector" label="Capture Element by Selector">
+
+```java title="This is a sample for your configuration for Java to capture an element by CSS Selector"
+HashMap<String, Object> options = new HashMap<>();
+HashMap<String, String> locator = new HashMap<>();
+options.put("element", locator);
+locator.put("cssSelector", "Required Selector");
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+</TabItem>
+
+</Tabs>
+
 ## For capturing interactive lazy loading elements
 
 If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.

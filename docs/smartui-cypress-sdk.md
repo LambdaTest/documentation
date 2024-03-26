@@ -353,6 +353,63 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 
 </Tabs>
 
+## For capturing the screenshot of a specific element
+
+You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
+
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="ElementID" label="Capture Element by ID" default>
+
+```js title="This is a sample for your configuration for Cypress to capture an element by ID."
+let options = {
+      element: {
+          id: 'Required ID',
+      }
+  };
+cy.smartuiSnapshot(‘Screenshot Name’, options);
+```
+
+</TabItem>
+<TabItem value="ElementClass" label="Capture Element by Class">
+
+```js title="This is a sample for your configuration for Cypress to capture an element by Class"
+let options = {
+      element: {
+          class: 'Required Class',
+      }
+  };
+cy.smartuiSnapshot(‘Screenshot Name’, options);
+```
+
+</TabItem>
+<TabItem value="ElementXPath" label="Capture Element by XPath">
+
+```js title="This is a sample for your configuration for Cypress to capture an element by XPath"
+let options = {
+      element: {
+          xpath: 'Required Xpath',
+      }
+  };
+cy.smartuiSnapshot(‘Screenshot Name’, options);
+
+```
+
+</TabItem>
+
+<TabItem value="ElementSelector" label="Capture Element by Selector">
+
+```js title="This is a sample for your webhook configuration for Cypress to capture an element by CSS Selector"
+let options = {
+      element: {
+          cssSelector: 'Required CSS Selector',
+      }
+  };
+cy.smartuiSnapshot(‘Screenshot Name’, options);
+```
+</TabItem>
+
+</Tabs>
 
 
 For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
