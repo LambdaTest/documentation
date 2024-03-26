@@ -42,6 +42,8 @@ slug: pre-loaded-chrome-extension/
 
 The LambdaTest Pre-loaded Chrome Extension lets you add your favourite Chrome extensions before initiating the test session, thereby allowing you to access the same Chrome extension within the test session. This eliminates the need to log in and add Chrome extensions inside VMs repeatedly. 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tdJVeAmoxxc?si=0hZni7DeXv6Xm_1B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 This quick guide will explain how to add your favourite Chrome extension using the Pre-loaded Extension.
 
 >**Important**: The *Preloaded Extension* is only accessible on Chrome browsers.
