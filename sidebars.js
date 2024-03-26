@@ -607,6 +607,11 @@ module.exports = {
                 label: "qTest",
                 id: "hyperexecute-qtest-integration"
               },
+              {
+                type: 'doc',
+                label: "Zephyr",
+                id: "hyperexecute-zephyr-scale-integration"
+              },
             ],
           },
           {
@@ -620,7 +625,7 @@ module.exports = {
             items: [
               {
                 type: "category",
-                label: "HyperExecute Smart UI Testing",
+                label: "HyperExecute Smart UI - Hooks",
                 collapsed: true,
                 link: {
                   type: "doc",
@@ -641,6 +646,36 @@ module.exports = {
                     type: "doc",
                     label: "Hyperexecute Smart UI Testing - Playwright",
                     id: "hyperexecute-smart-ui-test-using-playwright"
+                  }
+                ]
+              },
+              {
+                type: "category",
+                label: "HyperExecute Smart UI - SDK",
+                collapsed: true,
+                items: [
+                  {
+                    type: "category",
+                    label: "Selenium",
+                    collapsed: true,
+                    items: [
+                      'hyperexecute-smart-ui-hooks-selenium-javascript',
+                    ]
+                  },
+                  {
+                    type: "doc",
+                    label: "Hyperexecute Smart UI Testing - Cypress",
+                    id: "hyperexecute-smart-ui-hooks-using-cypress",
+                  },
+                  {
+                    type: "doc",
+                    label: "Hyperexecute Smart UI Testing - Playwright",
+                    id: "hyperexecute-smart-ui-hooks-using-playwright"
+                  },
+                  {
+                    type: "doc",
+                    label: "Hyperexecute Smart UI Testing - Puppeteer",
+                    id: "hyperexecute-smart-ui-hooks-using-puppeteer"
                   }
                 ]
               },

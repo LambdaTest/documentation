@@ -2,7 +2,7 @@
 id: hyperexecute-smart-ui-testing-using-selenium
 title: Smart UI Tests in HyperExecute using Selenium
 hide_title: false
-sidebar_label: Using Selenium
+sidebar_label: Selenium
 description: Accelerate bug identification with HyperExecute's intelligent UI testing via Selenium. Conduct Visual UI Regression Testing for flawless application deployment.
 keywords:
   - smart ui testing in lambdatest

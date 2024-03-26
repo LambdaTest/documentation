@@ -47,8 +47,15 @@ You can now integrate HyperExecute with other LambdaTest products like Smart UI 
   
   <a href = "/support/docs/smart-ui-testing/">
   <div className="support_inners">
-    <h3>Smart UI</h3>
+    <h3>Smart UI - Hooks</h3>
     <p>Execute Smart UI Tests to ensure the visual consistency of web applications using HyperExecute.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/smart-ui-testing/">
+  <div className="support_inners">
+    <h3>Smart UI - SDK</h3>
+    <p>Execute Smart UI Tests using SDK to ensure the visual consistency of web applications using HyperExecute.</p>
   </div>
   </a>
   
