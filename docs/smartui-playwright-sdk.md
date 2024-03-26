@@ -364,6 +364,67 @@ let options = {
 
 </Tabs>
 
+## For capturing the screenshot of a specific element
+
+You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
+
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="ElementID" label="Capture Element by ID" default>
+
+```js title="This is a sample for your configuration for Playwright to capture an element by ID."
+let options = {
+      element: {
+          id: 'Required ID',
+      }
+  };
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```
+
+</TabItem>
+<TabItem value="ElementClass" label="Capture Element by Class">
+
+```js title="This is a sample for your configuration for Playwright to capture an element by Class"
+let options = {
+      element: {
+          class: 'Required Class',
+      }
+  };
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```
+
+</TabItem>
+<TabItem value="ElementXPath" label="Capture Element by XPath">
+
+```js title="This is a sample for your configuration for Playwright to capture an element by XPath"
+let options = {
+      element: {
+          xpath: 'Required Xpath',
+      }
+  };
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```
+
+</TabItem>
+
+<TabItem value="ElementSelector" label="Capture Element by Selector">
+
+```js title="This is a sample for your webhook configuration for Playwright to capture an element by CSS Selector"
+let options = {
+      element: {
+          cssSelector: 'Required CSS Selector',
+      }
+  };
+        await page.goto('Required URL');
+        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```
+</TabItem>
+
+</Tabs>
+
 ## For capturing interactive lazy loading elements
 
 If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.

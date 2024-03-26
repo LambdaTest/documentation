@@ -250,7 +250,6 @@ let options = {
                 id: ["ID-1", "ID-2"],
             }
         }
-        await driver.get('Required URL');
         await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
@@ -263,7 +262,6 @@ let options = {
                 class: ["Class-1", "Class-2"],
             }
         }
-        await driver.get('Required URL');
         await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
@@ -276,7 +274,6 @@ let options = {
                 xpath: ["Xpath-1", "Xpath-2"],
             }
         }
-        await driver.get('Required URL');
         await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
@@ -290,7 +287,6 @@ let options = {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
-        await driver.get('Required URL');
         await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 </TabItem>
@@ -306,7 +302,6 @@ let options = {
                 id: ["ID-1", "ID-2"],
             }
         }
-        await driver.get('Required URL');
         await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
@@ -319,7 +314,6 @@ let options = {
                 class: ["Class-1", "Class-2"],
             }
         }
-        await driver.get('Required URL');
         await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
@@ -332,7 +326,6 @@ let options = {
                 xpath: ["Xpath-1", "Xpath-2"],
             }
         }
-        await driver.get('Required URL');
         await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 
@@ -346,12 +339,69 @@ let options = {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
-        await driver.get('Required URL');
         await smartuiSnapshot(t, 'Screenshot Name', options);
 ```
 </TabItem>
 
 </Tabs>
+
+## For capturing the screenshot of a specific element
+
+You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
+
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="ElementID" label="Capture Element by ID" default>
+
+```js title="This is a sample for your configuration for Testcafe to capture an element by ID."
+let options = {
+      element: {
+          id: 'Required ID',
+      }
+  };
+        await smartuiSnapshot(t, 'Screenshot Name', options);
+```
+
+</TabItem>
+<TabItem value="ElementClass" label="Capture Element by Class">
+
+```js title="This is a sample for your configuration for Testcafe to capture an element by Class"
+let options = {
+      element: {
+          class: 'Required Class',
+      }
+  };
+        await smartuiSnapshot(t, 'Screenshot Name', options);
+```
+
+</TabItem>
+<TabItem value="ElementXPath" label="Capture Element by XPath">
+
+```js title="This is a sample for your configuration for Testcafe to capture an element by XPath"
+let options = {
+      element: {
+          xpath: 'Required Xpath',
+      }
+  };
+        await smartuiSnapshot(t, 'Screenshot Name', options);
+```
+
+</TabItem>
+
+<TabItem value="ElementSelector" label="Capture Element by Selector">
+
+```js title="This is a sample for your webhook configuration for Testcafe to capture an element by CSS Selector"
+let options = {
+      element: {
+          cssSelector: 'Required CSS Selector',
+      }
+  };
+        await smartuiSnapshot(t, 'Screenshot Name', options);
+```
+</TabItem>
+
+</Tabs>
+
 
 ## For capturing interactive lazy loading elements
 

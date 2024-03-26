@@ -376,6 +376,67 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 </Tabs>
 
+## For capturing the screenshot of a specific element
+
+You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
+
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="ElementID" label="Capture Element by ID" default>
+
+```py title="This is a sample for your configuration for Python to capture an element by ID."
+options = {
+      element: {
+          id: 'Required ID',
+      }
+  }
+driver.get('<Required URL>')
+smartui_snapshot(driver,"<Screenshot Name>", options)
+```
+
+</TabItem>
+<TabItem value="ElementClass" label="Capture Element by Class">
+
+```py title="This is a sample for your configuration for Python to capture an element by Class"
+options = {
+      element: {
+          class: 'Required Class',
+      }
+  }
+driver.get('<Required URL>')
+smartui_snapshot(driver,"<Screenshot Name>", options)
+```
+
+</TabItem>
+<TabItem value="ElementXPath" label="Capture Element by XPath">
+
+```py title="This is a sample for your configuration for Python to capture an element by XPath"
+options = {
+      element: {
+          xpath: 'Required Xpath',
+      }
+  }
+driver.get('<Required URL>')
+smartui_snapshot(driver,"<Screenshot Name>", options)
+```
+
+</TabItem>
+
+<TabItem value="ElementSelector" label="Capture Element by Selector">
+
+```py title="This is a sample for your webhook configuration for Python to capture an element by CSS Selector"
+options = {
+      element: {
+          cssSelector: 'Required CSS Selector',
+      }
+  }
+driver.get('<Required URL>')
+smartui_snapshot(driver,"<Screenshot Name>", options)
+```
+</TabItem>
+
+</Tabs>
+
 ## For capturing interactive lazy loading elements
 
 If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
