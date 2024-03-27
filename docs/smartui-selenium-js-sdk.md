@@ -125,20 +125,19 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
-npx smartui config:create smartui-web.json
+npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
 
-```json title="/smartui-sdk-project/smartui-web.json"
+```json title="/smartui-sdk-project/.smartui.json"
 {
   "web": {
     "browsers": [
-      "chrome", 
+      "chrome",
       "firefox",
       "safari",
-      "edge",
-      // Add more browser configuration here
+      "edge"
     ],
     "viewports": [
       [
@@ -148,13 +147,22 @@ Once, the configuration file will be created, you will be seeing the default con
         1366
       ],
       [
-        360
+        1028
       ]
-    ], // Full Page screenshots are captured by default
-    "waitForPageRender": 50000, // Optional (Should only be used in case of websites which take more than 30s to load)
-    "waitForTimeout": 1000 //Optional (Should only be used in case lazy-loading/async components are present )
-
-  }
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 :::info Optional Keys in SmartUI configuration
@@ -214,7 +222,7 @@ const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui exec node sdkCloud.js --config smartui-web.json
+npx smartui exec node sdkCloud.js --config .smartui.json
 ```
 
 :::note 
@@ -305,7 +313,7 @@ let options = {
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>
 
-```js title="This is a sample for your configuration for Javascript to select by ID."
+```js title="This is a sample for your configuration for Javascript to select by ID"
 let options = {
             selectDOM: {
                 id: ["ID-1", "ID-2"],
@@ -351,6 +359,67 @@ let options = {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
+        await driver.get('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
+```
+</TabItem>
+
+</Tabs>
+
+## For capturing the screenshot of a specific element
+
+You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
+
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="ElementID" label="Capture Element by ID" default>
+
+```js title="This is a sample for your configuration for Javascript to capture an element by ID."
+let options = {
+      element: {
+          id: 'Required ID',
+      }
+  };
+        await driver.get('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
+```
+
+</TabItem>
+<TabItem value="ElementClass" label="Capture Element by Class">
+
+```js title="This is a sample for your configuration for Javascript to capture an element by Class"
+let options = {
+      element: {
+          class: 'Required Class',
+      }
+  };
+        await driver.get('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
+```
+
+</TabItem>
+<TabItem value="ElementXPath" label="Capture Element by XPath">
+
+```js title="This is a sample for your configuration for Javascript to capture an element by XPath"
+let options = {
+      element: {
+          xpath: 'Required Xpath',
+      }
+  };
+        await driver.get('Required URL');
+        await smartuiSnapshot(driver, 'Screenshot Name', options);
+```
+
+</TabItem>
+
+<TabItem value="ElementSelector" label="Capture Element by Selector">
+
+```js title="This is a sample for your webhook configuration for Javascript to capture an element by CSS Selector"
+let options = {
+      element: {
+          cssSelector: 'Required CSS Selector',
+      }
+  };
         await driver.get('Required URL');
         await smartuiSnapshot(driver, 'Screenshot Name', options);
 ```

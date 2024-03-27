@@ -144,20 +144,19 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
-npx smartui config:create smartui-web.json
+npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
 
-```json title="/smartui-sdk-project/smartui-web.json"
+```json title="/smartui-sdk-project/.smartui.json"
 {
   "web": {
     "browsers": [
-      "chrome", 
+      "chrome",
       "firefox",
       "safari",
-      "edge",
-      // Add more browser configuration here
+      "edge"
     ],
     "viewports": [
       [
@@ -167,13 +166,22 @@ Once, the configuration file will be created, you will be seeing the default con
         1366
       ],
       [
-        360
+        1028
       ]
-    ], // Full Page screenshots are captured by default
-    "waitForPageRender": 50000, // Optional (Should only be used in case of websites which take more than 30s to load)
-    "waitForTimeout": 1000 //Optional (Should only be used in case lazy-loading/async components are present )
-
-  }
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 
@@ -233,7 +241,6 @@ import io.github.lambdatest.*; //Importing the lambdatest-java SDK
 
     }
 
-
 ```
 
 ### **Step 7:** Execute the Tests on SmartUI Cloud
@@ -241,7 +248,7 @@ import io.github.lambdatest.*; //Importing the lambdatest-java SDK
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui --config smartui-web.json exec -- mvn test -D suite=sdk-cloud.xml
+npx smartui --config .smartui.json exec -- mvn test -D suite=sdk-cloud.xml
 ```
 :::note 
 You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
@@ -385,6 +392,63 @@ Map<String, List<String>> select = new HashMap<>();
 select.put("cssSelector", selector);
 options.put("selectDOM", select);
 
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+</TabItem>
+
+</Tabs>
+
+## For capturing the screenshot of a specific element
+
+You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
+
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="ElementID" label="Capture Element by ID" default>
+
+```java title="This is a sample for your configuration for Javas to capture an element by ID."
+HashMap<String, Object> options = new HashMap<>();
+HashMap<String, String> locator = new HashMap<>();
+options.put("element", locator);
+locator.put("id", "Required ID");
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+
+</TabItem>
+<TabItem value="ElementClass" label="Capture Element by Class">
+
+```java title="This is a sample for your configuration for Java to capture an element by Class"
+HashMap<String, Object> options = new HashMap<>();
+HashMap<String, String> locator = new HashMap<>();
+options.put("element", locator);
+locator.put("class", "Required Class");
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+
+</TabItem>
+<TabItem value="ElementXPath" label="Capture Element by XPath">
+
+```java title="This is a sample for your configuration for Java to capture an element by XPath"
+HashMap<String, Object> options = new HashMap<>();
+HashMap<String, String> locator = new HashMap<>();
+options.put("element", locator);
+locator.put("xpath", "Required Xpath");
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
+```
+
+</TabItem>
+
+<TabItem value="ElementSelector" label="Capture Element by Selector">
+
+```java title="This is a sample for your configuration for Java to capture an element by CSS Selector"
+HashMap<String, Object> options = new HashMap<>();
+HashMap<String, String> locator = new HashMap<>();
+options.put("element", locator);
+locator.put("cssSelector", "Required Selector");
 driver.get("Required URL");
 SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
