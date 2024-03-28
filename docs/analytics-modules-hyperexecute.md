@@ -1,6 +1,6 @@
 ---
 id: analytics-modules-hyperexecute
-title: Analytics Modules
+title: Analytics Modules - Jobs & Tests Overview
 sidebar_label: HyperExecute
 description: Analytics Modules - HyperExecute
 keywords:
@@ -33,143 +33,160 @@ slug: analytics-modules-hyperexecute/
       })
     }}
 ></script>
-
-# HyperExecute
-
 ---
 
-#### _All the HyperExecute insights you need!_
+# HyperExecute Analytics
 
-The `HyperExecute` module enables the QA managers to get all the HyperExecute insights in one place. One can easily find information ranging from the count of the jobs, tasks, and stages run on the platform and their insights.
-
-There following are **widgets** supported in the HyperExecute module:
-
-- Job Trends
-- Job Insights
-- Job Queue Time Trends
-- Job Summary
-- Stage Summary
-- Stage Trends
-- Task Summary
-- Task Trends
+The HyperExecute Analytics module empowers QA managers to gain comprehensive insights into their HyperExecute testing pipeline. This module provides a centralized view of all the key metrics related to jobs, tasks, and stages executed on the LambdaTest platform.
 
 ## Job Trends
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-1.png').default} alt="Job Trends" width="768" height="373" className="doc_img"/>
 
-The `Job Trends` widget allows the user to analyze the trends of the `Jobs` executed on the platform categorized into Failed, Aborted, Lambda Error, Timeout, and Completed which can easily be filtered with the legends added at the top of the graph.
-:::tip Use case
-John is a QA Manager, and his team runs more than 50,000 Jobs in a month across various LambdaTest products like Web Automation, App Automation, and HyperExecute.
+The Job Trends widget allows you to analyze the trends of jobs executed on the platform, categorized by their status: Failed, Aborted, Lambda Error, Timeout, and Completed. You can easily filter the data using the legends at the top of the graph.
 
-John wants to know the status distribution of the Jobs executed by his team to understand the performance of their application.
+- X-Axis: Represents the time intervals at which the job trends are measured.
+- Y-Axis: Represents the number of jobs categorized by their status.
 
-He can identify if any particular Job number is failing and troubleshoot it by viewing the logs.
-:::
+#### How It Works
+- The widget tracks the number of jobs and their respective statuses over a specified time period.
+- It presents the job trends in a graph format, displaying the number of jobs for each status at each time interval.
+- You can hover over specific data points to view the exact number of jobs for each status at that particular time.
 
-## Job Insights
+#### Value Proposition
+By examining the Job Trends widget, you can identify patterns, fluctuations, or anomalies in your job execution over time. This information helps you assess the stability and reliability of your HyperExecute testing pipeline, allowing you to proactively address any emerging issues and ensure the consistent quality of your jobs.
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+#### Use Case
+As a QA Manager, John's team runs over 50,000 jobs per month across various LambdaTest products. With the Job Trends widget, John can:
+- Understand the status distribution of jobs executed by his team.
+- Identify any failing job numbers and troubleshoot them by viewing the logs.
 
-The `Job Insights` widget allows the user to get deep insights about the `Jobs` executed on the platform categorized by their status including Completed, Failed, Lambda Error, Timeout, and Cancelled.
-
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-3.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
-
-The high-level insights for the day can be drilled down to know about each `Job` run on the platform on a particular day by clicking on the respective bar.
-
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-4.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
-
-Which can further be expanded to know about the exact count of each `Step` and `Scenario` of the particular `Job`.
-
-:::tip Use case
-John is a QA Manager, and his team runs more than 50,000 Jobs in a month across various LambdaTest products like Web Automation, App Automation, and HyperExecute.
-
-John wants to know the status distribution of the Jobs executed by his team and drill down into each failed Job number to understand where the error lies and troubleshoot it.
-:::
 
 ## Job Queue Time Trends
 
-The Total `Queue Time of Jobs Widget` provides users with a comprehensive view of the total queue time for all jobs in a visual format. 
+The Job Queue Time Trends widget provides a comprehensive view of the total queue time for all jobs in a visual format. It displays a stacked line or bar chart, with the total queue time for each job on the y-axis and the job number in descending order from right on the x-axis.
 
-The widget displays a stacked line or bar chart, with the total queue time for each job on the y-axis and the job number in descending order from right on the x-axis. 
+- X-Axis: Represents the job numbers in descending order.
+- Y-Axis: Represents the total queue time for each job.
 
-This visualization enables users to quickly identify trends and patterns in the queue time across multiple jobs, helping them optimize their testing processes and resource allocation.
+#### How It Works
+- The widget calculates the total queue time for each job executed on the platform.
+- It presents the queue time trends in a graph format, displaying the total queue time for each job.
+- You can hover over specific data points to view the exact queue time for a particular job.
 
-#### Use Cases for this Widget
+#### Value Proposition
+By analyzing the Job Queue Time Trends widget, you can identify bottlenecks, optimize resource allocation, and minimize waiting times in your HyperExecute testing pipeline. This information helps you streamline your testing process, ensure efficient utilization of resources, and reduce overall execution time.
 
-- **Identifying trends in queue time:** With the Total Queue Time of Jobs Widget, users can quickly identify trends in queue time across multiple jobs, allowing them to investigate the causes behind the fluctuations and take necessary actions to optimize their testing processes.
-
-- **Optimizing resource allocation:** By understanding the total queue time for each job, users can make informed decisions about resource allocation, ensuring that their testing infrastructure is used optimally and reducing the overall queue time.
-
-- **Monitoring the impact of changes:** The widget allows users to monitor the impact of changes made to their testing processes, infrastructure, or configurations. This enables them to measure the effectiveness of any adjustments and validate whether they have led to improvements in queue time.
-
-- **Comparing performance over time:** The widget can be used to compare performance over time by selecting different date ranges, providing insights into how the testing pipeline's efficiency has evolved and helping to identify areas for continuous improvement.
-
-- **Sharing insights with team members:** The Total Queue Time of Jobs Widget can be shared with team members, fostering collaboration and driving improvements in testing processes. Users can discuss patterns and trends in queue time, brainstorm potential solutions, and work together to optimize their testing pipeline.
+#### Use Cases
+- Identify trends in queue time and investigate the causes behind fluctuations.
+- Optimize resource allocation to reduce overall queue time.
+- Monitor the impact of changes made to testing processes, infrastructure, or configurations.
+- Compare performance over time by selecting different date ranges.
+- Share insights with team members to foster collaboration and drive improvements.
 
 ## Job Summary
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-7.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-7.png').default} alt="Job Summary" width="768" height="373" className="doc_img"/>
 
-The `Job Summary` widget enables the user to track the total Jobs being run on the platform grouped by their status including Completed, Partially Completed, Failed, Aborted, etc. 
+The Job Summary widget enables you to track the total number of jobs run on the platform, grouped by their status: Completed, Partially Completed, Failed, Aborted, etc.
 
-:::tip Use case
-John is a QA Manager, and his 10+ member team runs innumerable tests on HyperExecute.
+#### How It Works
+- The widget calculates the total number of jobs executed on the platform.
+- It categorizes the jobs based on their status and provides a summary of the count for each status.
 
-He wants to get a total of the Jobs being executed on the platform for a specific environment or status. With the Job Summary widget he can see the total count of his desired use cases.
-:::
+#### Value Proposition
+The Job Summary widget gives you a high-level overview of the overall health and progress of your HyperExecute testing efforts. By monitoring the total count of jobs and their status distribution, you can assess the efficiency and effectiveness of your testing pipeline and identify areas that require attention or optimization.
 
+#### Use Case
+John can use the Job Summary widget to:
+- Get a total count of jobs executed on the platform for a specific environment or status.
+- Monitor the overall health and progress of his team's testing efforts.
 
 ## Stage Summary
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-8.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-8.png').default} alt="Stage Summary" width="768" height="373" className="doc_img"/>
 
-The `Stage Summary` widget enables the user to track the total Stages being run on the platform grouped by their status including Completed, Skipped, Failed, Aborted, etc. 
+The Stage Summary widget allows you to track the total number of stages run on the platform, grouped by their status: Completed, Skipped, Failed, Aborted, etc.
 
-:::tip Use case
-John is a QA Manager, and his 10+ member team runs innumerable tests on HyperExecute.
+#### How It Works
+- The widget calculates the total number of stages executed on the platform.
+- It categorizes the stages based on their status and provides a summary of the count for each status.
 
-He wants to get a total of the Stages being executed on the platform for a specific environment or status. With the Stage Summary widget he can see the total count of his desired use cases.
-:::
+#### Value Proposition
+The Stage Summary widget provides a granular view of the execution progress at the stage level. By monitoring the total count of stages and their status distribution, you can identify any bottlenecks, failures, or inefficiencies within specific stages of your HyperExecute testing pipeline. This information helps you focus your optimization efforts on the critical stages that require attention.
+
+#### Use Case
+John can use the Stage Summary widget to:
+- Get a total count of stages executed on the platform for a specific environment or status.
+- Identify any bottlenecks or issues at the stage level.
 
 ## Stage Trends
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-5.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-5.png').default} alt="Stage Trends" width="768" height="373" className="doc_img"/>
 
-The `Stage Trends` widget allows the user to analyze the trends of the `Stage` for each `Job` executed on the platform categorized into Completed, Failed, Lambda Error, and Cancelled which can be filtered by a specific date and time.
+The Stage Trends widget enables you to analyze the trends of stages for each job executed on the platform, categorized into Completed, Failed, Lambda Error, and Cancelled. You can filter the data by a specific date and time.
 
-:::tip Use case
-John is a QA Manager, and his team runs more than 50,000 Jobs in a month across various LambdaTest products like Web Automation, App Automation, and HyperExecute.
+- X-Axis: Represents the time intervals at which the stage trends are measured.
+- Y-Axis: Represents the number of stages categorized by their status.
 
-John wants to know the status distribution of the Stages in the Jobs executed by his team to understand the performance of their application.
+#### How It Works
+- The widget tracks the number of stages and their respective statuses over a specified time period.
+- It presents the stage trends in a graph format, displaying the number of stages for each status at each time interval.
+- You can hover over specific data points to view the exact number of stages for each status at that particular time.
 
-He can identify if any particular Stage for the Job is failing and get the information about it.
-:::
+#### Value Proposition
+By examining the Stage Trends widget, you can identify patterns, fluctuations, or anomalies in your stage execution over time. This information helps you assess the stability and reliability of specific stages within your HyperExecute testing pipeline, allowing you to proactively address any emerging issues and ensure the consistent quality of your stages.
+
+#### Use Case
+John can use the Stage Trends widget to:
+- Understand the status distribution of stages in the jobs executed by his team.
+- Identify any failing stages and gather information for troubleshooting.
 
 ## Task Summary
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-9.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-9.png').default} alt="Task Summary" width="768" height="373" className="doc_img"/>
 
-The `Task Summary` widget enables the user to track the total Tasks being run on the platform grouped by their status including Completed, Skipped, Failed, Aborted, etc. 
+The Task Summary widget allows you to track the total number of tasks run on the platform, grouped by their status: Completed, Skipped, Failed, Aborted, etc.
 
-:::tip Use case
-John is a QA Manager, and his 10+ member team runs innumerable tests on HyperExecute.
+#### How It Works
+- The widget calculates the total number of tasks executed on the platform.
+- It categorizes the tasks based on their status and provides a summary of the count for each status.
 
-He wants to get a total of the Tasks being executed on the platform for a specific environment or status. With the Task Summary widget he can see the total count of his desired use cases.
-:::
+#### Value Proposition
+The Task Summary widget provides a granular view of the execution progress at the task level. By monitoring the total count of tasks and their status distribution, you can identify any bottlenecks, failures, or inefficiencies within specific tasks of your HyperExecute testing pipeline. This information helps you focus your optimization efforts on the critical tasks that require attention.
+
+#### Use Case
+John can use the Task Summary widget to:
+- Get a total count of tasks executed on the platform for a specific environment or status.
+- Monitor the granular progress of his team's testing efforts.
 
 ## Task Trends
 
-<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-6.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/analytics-hypex-6.png').default} alt="Task Trends" width="768" height="373" className="doc_img"/>
 
-The `Task Trends` widget allows the user to analyze the trends of the `Task` for each `Job` executed on the platform categorized into Completed, Failed, Aborted, Lambda Error, and Cancelled, which can be filtered by a specific date and time.
+The Task Trends widget enables you to analyze the trends of tasks for each job executed on the platform, categorized into Completed, Failed, Aborted, Lambda Error, and Cancelled. You can filter the data by a specific date and time.
 
-:::tip Use case
-John is a QA Manager, and his team runs more than 50,000 Jobs in a month across various LambdaTest products like Web Automation, App Automation, and HyperExecute.
+- X-Axis: Represents the time intervals at which the task trends are measured.
+- Y-Axis: Represents the number of tasks categorized by their status.
 
-John wants to know the status distribution of the Tasks in the Jobs executed by his team to understand the performance of their application.
+#### How It Works
+- The widget tracks the number of tasks and their respective statuses over a specified time period.
+- It presents the task trends in a graph format, displaying the number of tasks for each status at each time interval.
+- You can hover over specific data points to view the exact number of tasks for each status at that particular time.
 
-He can identify if any particular Task in the Job is failing and get the information about it.
-:::
+#### Value Proposition
+By examining the Task Trends widget, you can identify patterns, fluctuations, or anomalies in your task execution over time. This information helps you assess the stability and reliability of specific tasks within your HyperExecute testing pipeline, allowing you to proactively address any emerging issues and ensure the consistent quality of your tasks.
+
+#### Use Case
+John can use the Task Trends widget to:
+- Understand the status distribution of tasks in the jobs executed by his team.
+- Identify any failing tasks and gather information for troubleshooting.
+
+---
+
+The HyperExecute Analytics module provides a powerful set of tools to gain deep insights into your HyperExecute testing pipeline. By leveraging these widgets, you can optimize your testing process, identify bottlenecks, and ensure the smooth execution of your jobs, stages, and tasks.
+
+Unlock the full potential of HyperExecute Analytics today and take your testing game to the next level!
 
 
 
