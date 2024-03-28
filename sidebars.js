@@ -2180,10 +2180,6 @@ module.exports = {
             type: "category",
             collapsed: false,
             label: "Tests Overview",
-            link: {
-              type: "doc",
-              id: "analytics-widgets",
-            },
             items: [
               "analytics-modules-automation-test-overview",
               "analytics-modules-hyperexecute",
@@ -2195,10 +2191,6 @@ module.exports = {
             type: "category",
             collapsed: false,
             label: "Error Insights",
-            link: {
-              type: "doc",
-              id: "analytics-modules-test-intelligence-command-logs-analytics",
-            },
             items: [
               "analytics-modules-test-intelligence-command-logs-analytics",
               "analytics-modules-error-insights",
