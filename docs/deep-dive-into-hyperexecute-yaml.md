@@ -407,7 +407,7 @@ postDirectives:
 
 ## `alwaysRunPostSteps`
 
-**Problem :** Test scenarios failing led to the cancellation of post-steps, incomplete cleanup, being unable to upload reports, and other actions that you need to perform after all test executions.
+**Problem :** Test scenarios failing led to the cancellation of post-steps, being unable to upload reports, and other actions that you need to perform after all test executions.
 
 **Solution :** The `alwaysRunPostSteps` flag ensures that post-steps execute even if the scenario stage fails.
 
@@ -749,7 +749,7 @@ In the JSON file, we have a data object and not an array of objects, hence you c
 
 ```bash
 { 
-  "Username": "user1".
+  "Username": "user1",
   "Password": "pass1"
 }
 ```
