@@ -1,13 +1,13 @@
 ---
-id: analytics-widgets
-title: Widgets
-sidebar_label: Widgets
+id: analytics-widgets-tests-overview-landing
+title: Test Overview Widgets
+sidebar_label: Tests Overview
 description: Unlock valuable insights with LambdaTest Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes.
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-widgets/
+url: https://www.lambdatest.com/support/docs/analytics-widgets-tests-overview-landing/
 site_name: LambdaTest
-slug: analytics-widgets/
+slug: analytics-widgets-tests-overview-landing/
 ---
 
 <script type="application/ld+json"
@@ -28,7 +28,7 @@ slug: analytics-widgets/
           "@type": "ListItem",
           "position": 3,
           "name": "Analytics Widgets",
-          "item": "https://www.lambdatest.com/support/docs/analytics-widgets/"
+          "item": "https://www.lambdatest.com/support/docs/analytics-widgets-tests-overview-landing/"
         }]
       })
     }}
@@ -36,45 +36,7 @@ slug: analytics-widgets/
 
 import NewTag from '../src/component/newTag';
 
-
 Analytics in LambdaTest allows the QA managers and executives to efficiently track the tests conducted on the platform and get deep-level insights with the numerous widgets that the product provides.
-
-## Insights Modules
-
-<div className="support_main">  
-<a href="/docs/analytics-modules-resource-utilization/">
-    <div className="support_inners">
-      <h3>Concurrency Usage</h3>
-      <p>Learn how to to get an overview of the LambdaTest resources being utilized by your teams.</p>
-    </div>
-  </a>
-  <a href="/docs/analytics-modules-automation-test-overview/">
-    <div className="support_inners">
-      <h3>Tests Overview</h3>
-      <p>Learn how to get an overview of the tests running on the LambdaTest.</p>
-    </div>
-  </a>
-  <a href="/docs/analytics-modules-test-intelligence-command-logs-analytics/">
-    <div className="support_inners">
-      <h3>Error Insights</h3>
-      <p>Learn how to get all the insights into the test errors on the LambdaTest.</p>
-    </div>
-  </a>
-  <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/">
-    <div className="support_inners">
-      <h3>Flaky Tests AI &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
-      <p>Monitor all the Flaky tests run on the platform and review the quality of the feature on your SMOKE and Regression Jobs.</p>
-    </div>
-  </a>
-  <a href="/docs/analytics-test-case-insights/">
-    <div className="support_inners">
-      <h3>Test Case Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
-      <p>Get insights for `describe()` block level for your test frameworks in HyperExecute. Monitor the quality metrics at each test case.</p>
-    </div>
-  </a>
-</div>
-
-## Product Specific Widgets
 
 <div className="support_main">
 

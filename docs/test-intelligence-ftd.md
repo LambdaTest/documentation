@@ -28,7 +28,7 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-test-overview/"
+          "item": "https://www.lambdatest.com/support/docs/test-intelligence-flakiness-test-detection/"
         }]
       })
     }}

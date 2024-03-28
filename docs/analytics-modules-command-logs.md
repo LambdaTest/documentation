@@ -125,3 +125,23 @@ The following are the steps to use Command Logs Analytics:
    8. Analyzing the proportion of error messages in the total commands
    9. Finding correlations between error message occurrences and system performance
    10. Inspecting tests with specific error messages for debugging
+
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">
+      Command Errors </span>
+    </li>
+  </ul>
+</nav>

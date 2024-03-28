@@ -1538,7 +1538,7 @@ module.exports = {
             collapsed: true,
             label: "Analytics Widgets",
             items: [
-              "analytics-modules-test-overview",
+              "analytics-widgets-tests-overview-landing",
               "analytics-modules-error-insights",
               "analytics-modules-resource-utilization",
               "analytics-modules-hyperexecute",
