@@ -137,20 +137,19 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
-smartui config:create smartui-web.json
+npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
 
-```json title="/smartui-cli-project/smartui-web.json"
+```json title="/smartui-sdk-project/.smartui.json"
 {
   "web": {
     "browsers": [
-      "chrome", 
+      "chrome",
       "firefox",
       "safari",
-      "edge",
-      // Add more browser configuration here
+      "edge"
     ],
     "viewports": [
       [
@@ -160,9 +159,17 @@ Once, the configuration file will be created, you will be seeing the default con
         1366
       ],
       [
-        360
+        1028
       ]
-    ]//Full Page Screenshots are captured by default
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
   }
 }
 ```
@@ -210,7 +217,7 @@ Please read the following table for more information about the configuration fil
 You can now execute tests for `Visual Regression Testing` using the following options:.
 
 ```bash
-smartui capture urls.json --config smartui-web.json
+smartui capture urls.json --config .smartui.json
 ```
 ### Setup with Continuous Integration (CI)
 

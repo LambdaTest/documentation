@@ -130,20 +130,19 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
-npx smartui config:create smartui-web.json
+npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
 
-```json title="/smartui-sdk-project/smartui-web.json"
+```json title="/smartui-sdk-project/.smartui.json"
 {
   "web": {
     "browsers": [
-      "chrome", 
+      "chrome",
       "firefox",
       "safari",
-      "edge",
-      // Add more browser configuration here
+      "edge"
     ],
     "viewports": [
       [
@@ -153,13 +152,22 @@ Once, the configuration file will be created, you will be seeing the default con
         1366
       ],
       [
-        360
+        1028
       ]
-    ], // Full Page screenshots are captured by default
-    "waitForPageRender": 50000, // Optional (Should only be used in case of websites which take more than 30s to load)
-    "waitForTimeout": 1000 //Optional (Should only be used in case lazy-loading/async components are present )
-
-  }
+    ] // Full Page screenshots are captured by default for web viewports
+  },
+  "mobile": {
+    "devices": [
+      "iPhone 14",  //iPhone 14 viewport
+      "Galaxy S24"  //Galaxy S24 viewport
+    ],
+    "fullPage": true, //Full Page is true by default for mobile viewports
+    "orientation": "portrait" //Change to "landscape" for landscape snapshot
+  },
+  "waitForTimeout": 1000, //Optional (Should only be used in case lazy-loading/async components are present)
+  "waitForPageRender": 50000, //Optional (Should only be used in case of websites which take more than 30s to load)
+  "enableJavaScript": false, //Enable javascript for all the screenshots of the project
+  "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
 :::info Optional Keys in SmartUI configuration
@@ -218,7 +226,7 @@ describe('Test Case name', () => {
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui --config smartui-web.json exec -- npx cypress run --spec cypress/e2e/smartuiSDKLocal.cy.js --browser chrome --headed
+npx smartui --config .smartui.json exec -- npx cypress run --spec cypress/e2e/smartuiSDKLocal.cy.js --browser chrome --headed
 ```
 
 :::note 
@@ -353,6 +361,63 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 
 </Tabs>
 
+## For capturing the screenshot of a specific element
+
+You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
+
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="ElementID" label="Capture Element by ID" default>
+
+```js title="This is a sample for your configuration for Cypress to capture an element by ID."
+let options = {
+      element: {
+          id: 'Required ID',
+      }
+  };
+cy.smartuiSnapshot(‘Screenshot Name’, options);
+```
+
+</TabItem>
+<TabItem value="ElementClass" label="Capture Element by Class">
+
+```js title="This is a sample for your configuration for Cypress to capture an element by Class"
+let options = {
+      element: {
+          class: 'Required Class',
+      }
+  };
+cy.smartuiSnapshot(‘Screenshot Name’, options);
+```
+
+</TabItem>
+<TabItem value="ElementXPath" label="Capture Element by XPath">
+
+```js title="This is a sample for your configuration for Cypress to capture an element by XPath"
+let options = {
+      element: {
+          xpath: 'Required Xpath',
+      }
+  };
+cy.smartuiSnapshot(‘Screenshot Name’, options);
+
+```
+
+</TabItem>
+
+<TabItem value="ElementSelector" label="Capture Element by Selector">
+
+```js title="This is a sample for your webhook configuration for Cypress to capture an element by CSS Selector"
+let options = {
+      element: {
+          cssSelector: 'Required CSS Selector',
+      }
+  };
+cy.smartuiSnapshot(‘Screenshot Name’, options);
+```
+</TabItem>
+
+</Tabs>
 
 
 For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
