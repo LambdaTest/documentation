@@ -1,7 +1,7 @@
 ---
 id: analytics-create-dashboard
 title: Creating your first Dashboard using Lambdatest Analytics
-sidebar_label: Create Your Custom Dashboard
+sidebar_label: Create your Custom Dashboard
 description: Analytics - Overview
 keywords:
   - analytics
