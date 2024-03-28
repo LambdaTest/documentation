@@ -77,9 +77,6 @@ npm i wdio-lambdatest-test-case-analytics-service
 Now, once the package has been installed, you need to add the following code in your `wdio.conf.js` file.
 
 ```javascript
-// Import the library in your wdio.conf.js file
-const WdioCaptureIt = require('wdio-lambdatest-test-case-analytics-service').default;
-
 exports.config = {
     // ...
     services: [
