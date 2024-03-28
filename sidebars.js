@@ -425,7 +425,7 @@ module.exports = {
           {
             type: "doc",
             label: "Maestro",
-            id: "hyperexecute-maestro-testing", 
+            id: "hyperexecute-maestro-testing",
           },
           {
             type: 'doc',
@@ -2219,14 +2219,38 @@ module.exports = {
         id: "analytics-widgets",
       },
       items: [
-        "analytics-modules-test-overview",
-        "analytics-modules-error-insights",
         "analytics-modules-resource-utilization",
-        "analytics-modules-hyperexecute",
+        {
+          type: "category",
+          collapsed: false,
+          label: "Tests Overview",
+          link: {
+            type: "doc",
+            id: "analytics-widgets",
+          },
+          items: [
+            "analytics-modules-automation-test-overview",
+            "analytics-modules-hyperexecute",
+            "analytics-modules-manual-test-overview",
+            "analytics-modules-smartui-analytics"
+          ],
+        },
+        {
+          type: "category",
+          collapsed: false,
+          label: "Error Insights",
+          link: {
+            type: "doc",
+            id: "analytics-modules-test-intelligence-command-logs-analytics",
+          },
+          items: [
+            "analytics-modules-test-intelligence-command-logs-analytics",
+            "analytics-modules-error-insights",
+          ],
+        },
       ],
     },
     "analytics-modules-test-intelligence-flaky-test-analytics",
-    "analytics-modules-test-intelligence-command-logs-analytics",
     "analytics-test-case-insights",
     "analytics-dashboard-edit-layout",
     "analytics-dashboard-features",

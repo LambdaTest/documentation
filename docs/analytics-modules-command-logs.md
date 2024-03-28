@@ -1,7 +1,7 @@
 ---
 id: analytics-modules-test-intelligence-command-logs-analytics
 title: Command Logs Analytics with Test Intelligence
-sidebar_label: Command Logs Analytics
+sidebar_label: Command Errors
 description: A Explore LambdaTest's powerful Analytics Modules for comprehensive test intelligence and command logs analytics. Elevate your testing efficiency today.
 keywords:
   - analytics
@@ -125,20 +125,3 @@ The following are the steps to use Command Logs Analytics:
    8. Analyzing the proportion of error messages in the total commands
    9. Finding correlations between error message occurrences and system performance
    10. Inspecting tests with specific error messages for debugging
-
-### **Command Success Trends Widget** <NewTag value="UPCOMING" bgColor="#7c39ff" color="#fff" />
-
-   **About the Widget** 
-
-   The Command Logs Success Trends Widget provides a time-series view of the number of tests where all commands were successfully executed with a "200 SUCCESS" status.
-
-   **Widget Simulation**
-
-   A line or bar chart displays with the x-axis representing the timestamp of the tests run and the y-axis showing the total number of tests where all command logs had a "200 SUCCESS" status.
-
-   **Use Cases**
-   1. Tracking trends of successful command execution over time
-   2. Comparing successful command execution rates over different periods
-   3. Correlating successful command execution rates with system performance
-   4. Analyzing the consistency of system performance based on successful command executions
-   5. Evaluating the effectiveness of bug fixes or performance enhancements by tracking changes in successful command execution rates.
