@@ -1,7 +1,7 @@
 ---
 id: analytics-modules-resource-utilization
 title: Analytics Modules
-sidebar_label: Resource Utilization
+sidebar_label: Concurrency Usage Insights
 description: Analytics Modules - Resource Utilization
 keywords:
   - analytics
@@ -34,23 +34,29 @@ slug: analytics-modules-resource-utilization/
     }}
 ></script>
 
-# Resource Utilization
-
 ---
 
-#### _Know how your team utilizes LambdaTest_
+# Resource Utilization
 
 The `Resource Utilization` module enables the QA Managers to get an overview of the LambdaTest resources being utilized by their teams.
 
-There is **1 widget** under the Resource Utilization module
 
-- Concurrency Trends
-
-## Concurrency Trends
+## About Concurrency Trends
 
 <img loading="lazy" src={require('../assets/images/analytics/resource-utilization-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-The `Concurrency Trends` widget allows the user to know the tests which are kept in the queue and the tests that are put in a running state. The information can be filtered by clicking on the relevant legends at the bottom of the graph.
+The Concurrency Trends widget provides a visual representation of your parallel test execution on the LambdaTest platform. It allows you to monitor the number of concurrent sessions running over time, helping you optimize resource utilization and identify peak testing periods.
+
+- X-Axis: Represents the time intervals at which the concurrent sessions are measured.
+- Y-Axis: Represents the number of concurrent sessions, categorized into "Queued" and "In Use" sessions.
+
+## How It Works
+- The widget tracks the number of concurrent sessions running on the platform over a specified time period.
+- It presents the concurrency trends in a graph format, displaying the number of sessions in use and the number of sessions queued at each time interval.
+- You can hover over specific data points to view the exact number of sessions in use and queued at that particular time.
+
+## Value Proposition
+By analyzing the concurrency trends, you can make informed decisions about scaling your testing infrastructure, ensuring efficient resource allocation, and minimizing queuing times. This widget empowers you to strike the right balance between test execution speed and cost-effectiveness.
 
 :::tip Use case
 John is a QA Manager, and his team runs more than 50,000 Jobs in a month across various LambdaTest products like Web Automation, App Automation, and HyperExecute.
