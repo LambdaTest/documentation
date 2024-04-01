@@ -91,6 +91,7 @@ By integrating LambdaTest with ACCELQ, you can perform web and mobile app automa
 
 5. Now click **Start Capture** and it will launch your test session on the selected device.
 
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
