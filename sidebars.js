@@ -612,6 +612,11 @@ module.exports = {
                 label: "Zephyr",
                 id: "hyperexecute-zephyr-scale-integration"
               },
+              {
+                type: 'doc',
+                label: "Testim",
+                id: "hyperexecute-testim-integration"
+              },
             ],
           },
           {

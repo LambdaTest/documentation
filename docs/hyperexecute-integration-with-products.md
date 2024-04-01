@@ -101,6 +101,20 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   </div>
   </a>
 
+  <a href = "/support/docs/hyperexecute-zephyr-scale-integration/">
+  <div className="support_inners">
+    <h3>Zephyr</h3>
+    <p>Zephyr is a test case management tool allows you to centrally manage your test suite cases.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-testim-integration/">
+  <div className="support_inners">
+    <h3>Testim</h3>
+    <p>Automate your software testing by creating stable automated tests.</p>
+  </div>
+  </a>
+
 </div>
 
 >If your favourite products are not mentioned in the list above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have them ready for you.
