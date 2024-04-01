@@ -88,7 +88,7 @@ This document details the seamless integration between HyperExecute and Testim, 
 
 Create an empty folder, inside which create your YAML file to trigger the test.
 
-- In the `pre` flag, enter the command to donwload the testim cli.
+- In the `pre` flag, enter the command to download the testim cli.
 - In the `testRunnerCommand`, enter your runner command copied in the previous step.
 
 ```bash
