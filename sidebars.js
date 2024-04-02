@@ -1569,6 +1569,7 @@ module.exports = {
               "command-annotations",
               "custom-dns-map",
               "lighthouse-reports-hooks",
+              "har-log-viewer"
             ],
           },
           {
