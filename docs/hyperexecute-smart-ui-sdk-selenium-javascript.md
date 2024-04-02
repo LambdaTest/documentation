@@ -1,21 +1,21 @@
 ---
-id: hyperexecute-smart-ui-hooks-using-puppeteer
+id: hyperexecute-smart-ui-sdk-selenium-javascript
 title: Streamline UI Testing with HyperExecute and Smart UI SDK
 hide_title: false
-sidebar_label: Puppeteer
-description: Streamline Hyperexecute UI testing with Smart UI SDK & Puppeteer. Write robust, end-to-end tests effortlessly. 
+sidebar_label: JavaScript
+description: Effortlessly automate Hyperexecute UIs with Smart UI SDK & Selenium JavaScript. Write modular, cross-browser tests.
 keywords:
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
   - regression testing tool
   - perform visual ui testing online
   - compare image to image
-  - puppeteer pytest
-  - puppeteer mocha
-  - automation testing with puppeteer
-url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-using-puppeteer/
+  - selenium integration
+  - selenium javascript
+  - javascript
+url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-sdk-selenium-javascript/
 site_name: LambdaTest
-slug: hyperexecute-smart-ui-hooks-using-puppeteer/
+slug: hyperexecute-smart-ui-sdk-selenium-javascript/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -42,12 +42,12 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Smart UI Testing",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-using-puppeteer/"
+          "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-selenium-javascript/"
         }]
       })
     }}
 ></script>
-This documentation will guide you step-by-step to execute the Smart UI tests on the HyperExecute platform using Selenium
+This documentation will guide you step-by-step to execute the Smart UI SDK tests on the HyperExecute platform using **Selenium - JavaScript**
 
 ## Prerequisites
 
@@ -75,9 +75,9 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 :::tip Sample repo
 
-Download or Clone the code sample for the Maestro framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the Selenium - JavaScript framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/LambdaTest/hyperexecute-smartui-sdk-puppeteer" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/hyperexecute-smartui-sdk-selenium-javascript" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
 
@@ -85,13 +85,14 @@ Download or Clone the code sample for the Maestro framework from the LambdaTest 
 
 In the `sdkCloud.js` file, update the following capabilities
 
-```javascript
-  const capabilities = {
-    "LT:Options": {
-      "build": "Puppeteer SmartUI Build", // Provide the name of your test
-      "name": "Puppeteer SmartUI Test", // Mention your desired build name
-    },
-  };
+```java
+let capabilities = {
+  "LT:Options": {
+    project: "PROJECT_NAME", // Enter your Project Name
+    name: "TEST_NAME", // Provide the name of your test
+    build: "BUILD_NAME", // Mention your desired build name
+  },
+};
 ```
 
 ## Step 3: Setup the CLI in your Test Suite
@@ -162,23 +163,28 @@ maxRetries: 1
 concurrency: 1
 
 env:
+  CACHE_DIR: m2_cache_dir
   PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here
 
+cacheKey: '{{ checksum "package.json" }}'
+cacheDirectories:
+  - node_modules
+
 pre:
-  - npm i @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
+  - npm i @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
   - npx smartui config:create smartui-web.json
 
 post:
-  - cat hyperexecute-smartui-sdk.yaml
+  - cat hyp-smartui-sdk.yaml
 
 testDiscovery:
   type: raw
   mode: static
-  command: ls sdk/puppeteerCloud.js
+  command: ls sdk/sdkCloud.js
 
-testRunnerCommand: npx smartui exec node sdk/puppeteerCloud.js --config smartui-web.json
+testRunnerCommand: npx smartui exec node sdk/sdkCloud.js --config smartui-web.json
 
-jobLabel: ["smart-ui-sdk", "hyperexecute", "puppeteer"]
+jobLabel: ["smart-ui-sdk", "hyperexecute", "selenium", "javascript"]
 ```
 
 :::info
@@ -186,7 +192,7 @@ It is mandatory to mention these commands in the pre flag to download all the ne
 
 ```bash
 pre:
-  - npm i @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
+  - npm i @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
   - npx smartui config:create smartui-web.json
 ```
 :::
@@ -211,4 +217,4 @@ OR use this command if you have not exported your username and access key in the
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui-sdk/puppeteer.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui-sdk/selenium-js.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>

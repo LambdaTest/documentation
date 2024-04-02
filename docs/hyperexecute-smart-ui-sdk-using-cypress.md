@@ -1,21 +1,20 @@
 ---
-id: hyperexecute-smart-ui-hooks-selenium-javascript
+id: hyperexecute-smart-ui-sdk-using-cypress
 title: Streamline UI Testing with HyperExecute and Smart UI SDK
 hide_title: false
-sidebar_label: JavaScript
-description: Effortlessly automate Hyperexecute UIs with Smart UI SDK & Selenium JavaScript. Write modular, cross-browser tests.
+sidebar_label: Cypress
+description: Automate Hyperexecute tests seamlessly! Integrate Smart UI SDK with Cypress for efficient & reliable UI testing. 
 keywords:
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
-  - regression testing tool
   - perform visual ui testing online
   - compare image to image
-  - selenium integration
-  - selenium javascript
-  - javascript
-url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-selenium-javascript/
+  - smart ui sdk
+  - cypress
+  - hyperexecute integrations with cypress sdk
+url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-sdk-using-cypress/
 site_name: LambdaTest
-slug: hyperexecute-smart-ui-hooks-selenium-javascript/
+slug: hyperexecute-smart-ui-sdk-using-cypress/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -42,12 +41,14 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Smart UI Testing",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-selenium-javascript/"
+          "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-using-cypress/"
         }]
       })
     }}
 ></script>
-This documentation will guide you step-by-step to execute the Smart UI SDK tests on the HyperExecute platform using **Selenium - JavaScript**
+This documentation will guide you step-by-step to execute the Smart UI tests on the HyperExecute platform using Selenium
+
+> **Note :** SmartUI SDK only supports Cypress versions >= 10.0.0
 
 ## Prerequisites
 
@@ -75,25 +76,11 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 :::tip Sample repo
 
-Download or Clone the code sample for the Selenium - JavaScript framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the Maestro framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/LambdaTest/hyperexecute-smartui-sdk-selenium-javascript" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/hyperexecute-smartui-sdk-cypress" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
-
-### Configure Your Test Suite
-
-In the `sdkCloud.js` file, update the following capabilities
-
-```java
-let capabilities = {
-  "LT:Options": {
-    project: "PROJECT_NAME", // Enter your Project Name
-    name: "TEST_NAME", // Provide the name of your test
-    build: "BUILD_NAME", // Mention your desired build name
-  },
-};
-```
 
 ## Step 3: Setup the CLI in your Test Suite
 
@@ -153,9 +140,12 @@ globalTimeout: 90
 testSuiteTimeout: 90
 testSuiteStep: 90
 
-runson: win
+runson: linux
 
 autosplit: true
+
+# highlight-next-line
+cypress: true
 
 retryOnFailure: true
 maxRetries: 1
@@ -163,28 +153,29 @@ maxRetries: 1
 concurrency: 1
 
 env:
-  CACHE_DIR: m2_cache_dir
-  PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here
+  CYPRESS_CACHE_FOLDER: cypressCache
+  PROJECT_TOKEN: "YOUR_PROJECT_TOKEN"
 
 cacheKey: '{{ checksum "package.json" }}'
 cacheDirectories:
   - node_modules
+  - cypressCache
 
 pre:
-  - npm i @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+  - npm i @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
   - npx smartui config:create smartui-web.json
 
 post:
-  - cat hyp-smartui-sdk.yaml
+  - cat hyp-smartui-sdk-cypress.yaml
 
 testDiscovery:
   type: raw
   mode: static
-  command: ls sdk/sdkCloud.js
+  command: ls cypress/e2e
 
-testRunnerCommand: npx smartui exec node sdk/sdkCloud.js --config smartui-web.json
+testRunnerCommand: npx smartui --config smartui-web.json exec -- npx cypress run --spec cypress/e2e/smartuiSDKLocal.cy.js --browser chrome --headed
 
-jobLabel: ["smart-ui-sdk", "hyperexecute", "selenium", "javascript"]
+jobLabel: ["smart-ui-sdk", "hyperexecute", "cypress"]
 ```
 
 :::info
@@ -192,7 +183,7 @@ It is mandatory to mention these commands in the pre flag to download all the ne
 
 ```bash
 pre:
-  - npm i @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+  - npm i @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
   - npx smartui config:create smartui-web.json
 ```
 :::
@@ -217,4 +208,4 @@ OR use this command if you have not exported your username and access key in the
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui-sdk/selenium-js.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui-sdk/cypress.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
