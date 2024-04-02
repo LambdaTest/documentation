@@ -45,7 +45,7 @@ slug: analytics-modules-automation-test-overview/
 
 The Test Overview module in LambdaTest Analytics is a powerful tool that provides you with a comprehensive view of your test performance across various dimensions. By leveraging this module, you can gain valuable insights into test flakiness, total tests run, and test categorization by status and platform.
 
-## Test Case Health Snapshot
+## Test Health Snapshot
 
 <img loading="lazy" src={require('../assets/images/analytics/test-overview-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
