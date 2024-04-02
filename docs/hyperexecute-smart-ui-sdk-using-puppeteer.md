@@ -1,19 +1,21 @@
 ---
-id: hyperexecute-smart-ui-hooks-using-playwright
+id: hyperexecute-smart-ui-sdk-using-puppeteer
 title: Streamline UI Testing with HyperExecute and Smart UI SDK
 hide_title: false
-sidebar_label: Playwright
-description: Supercharge Hyperexecute UI automation with Smart UI SDK & Playwright. Simplify test creation for all browsers.
+sidebar_label: Puppeteer
+description: Streamline Hyperexecute UI testing with Smart UI SDK & Puppeteer. Write robust, end-to-end tests effortlessly. 
 keywords:
-  - smart ui testing in lambdatest
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
+  - regression testing tool
   - perform visual ui testing online
   - compare image to image
-  - playwright parallel tests
-  - parallel testing with playwright
-url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-using-playwright
-slug: hyperexecute-smart-ui-hooks-using-playwright/
+  - puppeteer pytest
+  - puppeteer mocha
+  - automation testing with puppeteer
+url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-sdk-using-puppeteer/
+site_name: LambdaTest
+slug: hyperexecute-smart-ui-sdk-using-puppeteer/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -40,7 +42,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Smart UI Testing",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-using-playwright/"
+          "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-using-puppeteer/"
         }]
       })
     }}
@@ -75,19 +77,19 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 Download or Clone the code sample for the Maestro framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/LambdaTest/hyperexecute-smartui-sdk-playwright" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/hyperexecute-smartui-sdk-puppeteer" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
 
 ### Configure Your Test Suite
 
-In the `playwrightCloud.js` file, update the following capabilities
+In the `sdkCloud.js` file, update the following capabilities
 
 ```javascript
   const capabilities = {
     "LT:Options": {
-      build: "Playwright SmartUI Build", // Provide the name of your test
-      name: "Playwright SmartUI Test", // Mention your desired build name
+      "build": "Puppeteer SmartUI Build", // Mention your desired build name
+      "name": "Puppeteer SmartUI Test", // Provide the name of your test
     },
   };
 ```
@@ -163,20 +165,20 @@ env:
   PROJECT_TOKEN: "YOUR_PROJECT_TOKEN" #Enter your project token here
 
 pre:
-  - npm i @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
+  - npm i @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
   - npx smartui config:create smartui-web.json
 
 post:
-  - cat hyp-smartui-sdk.yaml
+  - cat hyperexecute-smartui-sdk.yaml
 
 testDiscovery:
   type: raw
   mode: static
-  command: ls sdk/playwrightCloud.js
+  command: ls sdk/puppeteerCloud.js
 
-testRunnerCommand: npx smartui exec node sdk/playwrightCloud.js --config smartui-web.json
+testRunnerCommand: npx smartui exec node sdk/puppeteerCloud.js --config smartui-web.json
 
-jobLabel: ["smart-ui-sdk", "hyperexecute", "playwright"]
+jobLabel: ["smart-ui-sdk", "hyperexecute", "puppeteer"]
 ```
 
 :::info
@@ -184,7 +186,7 @@ It is mandatory to mention these commands in the pre flag to download all the ne
 
 ```bash
 pre:
-  - npm i @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
+  - npm i @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
   - npx smartui config:create smartui-web.json
 ```
 :::
@@ -209,4 +211,4 @@ OR use this command if you have not exported your username and access key in the
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui-sdk/playwright.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui-sdk/puppeteer.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
