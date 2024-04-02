@@ -664,23 +664,23 @@ module.exports = {
                     label: "Selenium",
                     collapsed: true,
                     items: [
-                      'hyperexecute-smart-ui-hooks-selenium-javascript',
+                      'hyperexecute-smart-ui-sdk-selenium-javascript',
                     ]
                   },
                   {
                     type: "doc",
                     label: "Hyperexecute Smart UI Testing - Cypress",
-                    id: "hyperexecute-smart-ui-hooks-using-cypress",
+                    id: "hyperexecute-smart-ui-sdk-using-cypress",
                   },
                   {
                     type: "doc",
                     label: "Hyperexecute Smart UI Testing - Playwright",
-                    id: "hyperexecute-smart-ui-hooks-using-playwright"
+                    id: "hyperexecute-smart-ui-sdk-using-playwright"
                   },
                   {
                     type: "doc",
                     label: "Hyperexecute Smart UI Testing - Puppeteer",
-                    id: "hyperexecute-smart-ui-hooks-using-puppeteer"
+                    id: "hyperexecute-smart-ui-sdk-using-puppeteer"
                   }
                 ]
               },
