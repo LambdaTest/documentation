@@ -66,7 +66,7 @@ The first step is to create a project with the application in which we will comb
 
 1. Go to [Projects page](https://smartui.lambdatest.com/)
 2. Click on the `new project` button
-3. Select the platform as <b>Web</b> for executing your `StoryBook` tests.
+3. Select the platform as <b>CLI</b> for executing your `StoryBook` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
