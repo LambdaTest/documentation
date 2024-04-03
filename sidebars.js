@@ -358,6 +358,10 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Playwright",
+            link: {
+              type: "doc",
+              id: "playwright-integration-with-hyperexecute",
+            },            
             items: [
               {
                 type: "category",
