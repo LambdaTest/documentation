@@ -82,6 +82,7 @@ This document will help you understand all the modifiers/arguments used with Lam
 | N/A | --maxSSHConnections | Increase the SSH Connection from Tunnel Client to Tunnel Server. Maximum allow is 30 | N/A |
 | -n           | --tunnelName    | Specifies the custom LambdaTest Tunnel name to be used.                                                                                             | String  |
 | -u           | --user          | LambdaTest Username.                                                                                                                                | String  |
+|              | --use-private-ip         | Sets remote address to an internal IP of client machine.                                                                                      | Boolean  |
 | -v           | --verbose       | Should Every Proxy Request Be Logged To Stdout                                                                                                      | N/A     |
 |              | --version       | Displays the installed version for LambdaTest Tunnel                                                                                                | N/A     |
 
