@@ -52,6 +52,15 @@ This document will show you how to integrate GitHub Actions Pipeline with HyperE
 ***
 
 To integrate GitHub Actions Pipeline with HyperExecute, follow the below steps: 
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/main" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
 ### 1. Log into your GitHub account
 -  Navigate to the main page of the repository.
 -  Under your repository name, click  **Actions**.
@@ -65,8 +74,8 @@ In the left sidebar, click the **New workflow** button.
 
 To create the GitHub Actions pipeline YAML file, follow the sample command below:
 
-```
-name: Hyperexecute-Playwright
+```bash
+name: HyperExecute
 on:
   workflow_dispatch:
     inputs:
@@ -76,36 +85,28 @@ on:
       accessKey:
         description: LT Access Key
         required: true
-      sampleRepoLink:
-        description: Link to the HyperExecute sample repo
-        default: https://github.com/prateekLambda/HyperExecute-Playwright-Vanilla-Javascript
-        required: true
+        
 jobs:
-  HyperExecute-Playwright:
-    runs-on: ${{ matrix.os }}
+  HyperExecute:
+    runs-on: ubuntu-latest
     timeout-minutes: 15
     strategy:
       fail-fast: false
-      matrix:
-        os: [windows-latest]
     steps:
       - name: Checkout sources
         uses: actions/checkout@v2
 
-      - name: Starting CLI testing
+      - name: Download CLI and Setting Environment Variables
         shell: bash
         run: |
-          echo "STEP 1 ) Downloading sample suite"
-          git clone ${{ github.event.inputs.sampleRepoLink }}
-          echo "STEP 2) Download CLI and setting environment variables"
-              cd HyperExecute-Playwright-Vanilla-Javascript
-              curl https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe -o hyperexecute.exe
-              export LT_USERNAME=${{ github.event.inputs.username }}
-              export LT_ACCESS_KEY=${{ github.event.inputs.accessKey }}
-              echo $LT_USERNAME 
-              echo $LT_ACCESS_KEY
-              ./hyperexecute --user $LT_USERNAME --key $LT_ACCESS_KEY --config yaml/win/.hyperexecute_autosplits.yaml
-
+          curl https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute -o hyperexecute
+          chmod +x hyperexecute
+      
+      - name: Executing the Job
+        shell: bash
+        run: |
+          ./hyperexecute --user ${{ github.event.inputs.username }} --key ${{ github.event.inputs.accessKey }} --download-artifacts --config yaml/autosplit_linux.yaml
+          echo "Test completion"
 ```
 - **On:**
   - **Workflow_dispatch:** In the **workflow_dispatch** section, you should declare the pre-defined variables that will be used before running the GitHub Actions PipeLine as an input. 

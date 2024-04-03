@@ -51,6 +51,15 @@ This document will show you how to integrate CircleCI Pipeline with HyperExecute
 ***
 
 To integrate CircleCI Pipeline with HyperExecute, follow the below steps: 
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/circleci-project-setup" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
 ### 1. Log into your CircleCI account
 
 
@@ -66,8 +75,6 @@ Follow these steps to create a new project in CircleCI:
 
 If you cannot see your project, check that you have selected the correct organization in the top left-hand corner of CircleCI.
  
-
-
 ### 3. Specify a Config File
 
 Once you have set up your project, you will be prompted to provide a config.yml file.
@@ -84,48 +91,27 @@ Once you have set up your project, you will be prompted to provide a config.yml 
 
 Below is a sample of CircleCI YAML created for your reference:
 
-```
+```bash
 version: 2.1
-
-jobs: # basic units of work in a run
-  build:
-    Lambdatest: # use the Lambdatest executor
-      # CircleCI Node images available at: https://circleci.com/developer/images/image/cimg/node
-      - image: cimg/node:17.2.0
-        auth:
-          username: LT_USERNAME
-          access key: LT_ACCESS_KEY
-    steps: # steps that comprise the `build` job
-      - checkout # check out source code to working directory
-      # Run a step to setup an environment variable
-      # Redirect MY_ENV_VAR into $BASH_ENV
+jobs:
+  test-java:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
       - run:
-          name: "Setup custom environment variables"
-          command: echo 'export MY_ENV_VAR="FOO"' >> "$BASH_ENV"
-      - run: # print the name of the branch we're on
-          name: "What branch am I on?"
-          command: echo ${CIRCLE_BRANCH}
-      # Run another step, the same as above; note that you can
-      # invoke environment variable without curly braces.
+          name: "Download HE CLI"
+          command: wget https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
       - run:
-          name: "What branch am I on now?"
-          command: echo $CIRCLE_BRANCH
+          name: "Permissions"
+          command: chmod u+x hyperexecute
       - run:
-          name: "What was my custom environment variable?"
-          command: echo ${MY_ENV_VAR}
-      - run:
-          name: "Print an env var stored in the Project"
-          command: echo ${PROJECT_ENV_VAR}
-      - run:
-          name: "Print an env var stored in a Context"
-          command: echo ${CONTEXT_ENV_VAR}
-
-workflows: # a single workflow with a single job called build
-  build:
+          name: "Runner Command"
+          command: ./hyperexecute --config yaml/autosplit_linux.yaml
+workflows:
+  build-and-test:
     jobs:
-      - build:
-          context: Testing-Env-Vars
-
+      - test-java
 ```
 
 - Click the blue **Set Up Project** button.
