@@ -833,7 +833,7 @@ This can be majorly used for non selenium based tests to have the recorded video
 captureScreenRecordingForScenarios: true
 ```
 
-***
+<!-- ***
 ## `performance`
 This feature allows you to run a single command across multiple linux VM for load testing.
 
@@ -843,7 +843,7 @@ performance:
   count: 50
 ```
 The rate specifies the rate at which task should start running and count is the total number of task to fire. In the above example, 50 task will be created and it will start executing at rate of 10 task per second.
-> **Note**: Performance testing is only allowed for linux and there is no discovery command needed for this.
+> **Note**: Performance testing is only allowed for linux and there is no discovery command needed for this. -->
 
 ***
 ## `captureCSVResult`
