@@ -54,7 +54,10 @@ You can download the binary file responsible for establishing a tunnel connectio
 
 
 >This file is supported for the below listed macOS:   
->* macOS Big Sur
+> * macOS Sonoma 
+* macOS Ventura
+* macOS Monterey
+* macOS Big Sur
 * macOS Catalina
 * macOS Mojave
 * macOS High Sierra
