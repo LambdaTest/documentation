@@ -88,37 +88,43 @@ Your created team will be permanently deleted.
 <source src= {require('../assets/videos/team-management/4.mp4').default} type="video/mp4" />
 </video>
 
-## Access Rules for Builds, Tests & Test Details
+## Access Rules for Builds, Tests, and Test Details
 
-This section outlines a series of test cases (TC) designed to verify test visibility within the system under various user role and team configurations:
+This section outlines a series of test cases (TC) designed to verify test visibility within the system under various user roles and team configurations:
 
 - **Admin Role:** Has full access to all builds, tests, and test details.
 - **User Role:** Limited access based on team membership.
+- **Guest Role:** The scope of a "**Guest Role**" user is identical to that of a "**User Role**" user.
+
+The following scenarios explain who can see the test results and under what circumstances:
 
 ### Scenario 1: No Teams Created
 
-- **Case 1:** An Admin user can see all builds, tests, and test details.
-- **Case 2:** A User cannot see any builds, tests, or test details, regardless of the Admin running a test.
+In this case, users having any of the **Admin Role** and **User Role** access can see all test results, regardless of any team affiliation.
 
-### Scenario 2: Team Created with Admin User Only
+### Scenario 2: Teams Created with:
 
-- **Case 3:** Test run by the Admin user is visible to both the Admin and User.
-- **Case 4:** Test run by the User is not visible to anyone.
+#### Only the "Admin Role" user is a part of the Team
 
-### Scenario 3: Team Created with User Only
+In this case, if you have **Admin Role** access, then only you can see the test results for that particular team. Anyone with **User Role** access cannot see any test results.
 
-- **Case 5:** Test run by the User is visible to both the Admin and User.
-- **Case 6:** Test run by the Admin is not visible to the User.
+#### Only the "User Role" user is a part of the Team
 
-### Scenario 4: Teams Created, Separate Teams for Each User
+In this case, if you have **User Role** access, then only you can see the test results for that particular team. Anyone with the **Admin Role** access cannot see any test results.
 
-- **Case 7:** Test run by the User is not visible to the Admin.
-- **Case 8:** Test run by the Admin is not visible to the User.
+### Scenario 3: Teams are Created, Users in Different Teams
 
-### Scenario 5: Teams Created, Same Team for Both Users
+If both the **Admin Role** and **User Role** users are on separate teams, neither can see each other's team's test results.
 
-- **Case 9:** Test run by one user is visible to the other user.
+### Scenario 4: Teams are Created, Users in the Same Team
 
-### Scenario 6: All Teams Deleted
+When both the **Admin Role** and **User Role** users are part of the same team, they can both see all test results for that team.
 
-- **Case 10:** All previously run tests are visible to both users, regardless of their prior team assignments.
+### Scenario 5: All Teams Deleted
+If all teams are deleted, both the **Admin Role** and **User Role** users can see all test results again, similar to Scenario 1.
+
+### Scenario 6: Users/Admins Not in a Team, But Teams Exist
+If any of the users with **Admin Role** and **User Role** access aren't assigned to any team, but there are teams in the organization, they can still see all test results.
+
+### Scenario 7: User/Admin Switches Teams
+When a user with **Admin Role** or **User Role** access is switched from one team (Team A) to another (Team B), they will no longer see test results from Team A. They will only have access to test results associated with their new team, Team B.
