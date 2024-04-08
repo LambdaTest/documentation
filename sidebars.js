@@ -814,6 +814,7 @@ module.exports = {
             items: [
               "extent-report",
               "native-extent-report",
+              'hyperexeute-native-testng-report',
               "allure-reports",
               "cucumber-report",
               "playwright-html-report",
