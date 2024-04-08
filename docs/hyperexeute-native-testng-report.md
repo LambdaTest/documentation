@@ -55,7 +55,7 @@ report: true
 partialReports:
     type: json
     location: <location_of_the_emailable-report.html_file>
-    frameworkName: testng-te
+    frameworkName: testng-native
 ```
 
 - Set `report: true` to enable report generation.
