@@ -14,6 +14,12 @@ site_name: LambdaTest
 slug: hyperexecute-environment-variable-setup/
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -38,9 +44,6 @@ slug: hyperexecute-environment-variable-setup/
     }}
 ></script>
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
 # HyperExecute Environment Variable Setup
 ***
 
@@ -56,51 +59,70 @@ LambdaTest Authentication Credentials consists of two fields:
 
 >You can find these authentication credentials by either visiting the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/) or your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile).
 
-### Fetching Authentication Credential from the HyperExecute tab
-***
+#**Step 1:** Go to the right side Profile dropdown and select **Account Settings**.
 
-**Step 1**: Visit the HyperExecute tab from the left navigation menu.
+**Step 2:** Under Account Settings, go to **Password & Security**
 
-**Step 2**: Click on the key icon from the top-right corner of your screen and copy the Access Key and Username.
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/knowledge-base/username-accesskey/method1.mp4').default} type="video/mp4" />
+</video>
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/env-variable/Hyperexecute-dashboard.png').default} alt="Image" width="1919" height="878" className="doc_img"/>
+**Step 3:** You will find your LT Username and Access Key here, this would be required in order to trigger a Job using the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
 
-### Fetching Authentication Credential from your LambdaTest Profile
-***
+:::tip
+You can directly copy your Username and Access Key using shortcut key button.
 
-**Step 1**: Visit your LambdaTest Profile by clicking on the user icon on the top-right followed by clicking on Profile.
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/knowledge-base/username-accesskey/method2.mp4').default} type="video/mp4" />
+</video>
+:::
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/env-variable/Hyperexecute-profile-snap.png').default} alt="Image" width="1363" height="544" className="doc_img"/>
-
-**Step 2**: You will find your Username & Access Key.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/env-variable/environment-variables-3.webp').default} alt="Image" width="521" height="268" className="doc_img"/>
-
-## Configuring Environment Variables On Mac OSX/Linux Systems/Windows
-***
+## Configuring Environment Variables on your Operating System
 
 Before the tests are run, please set the environment variables LT_USERNAME & LT_ACCESS_KEY from the terminal. The account details are available on your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile) page.
 
-For macOS:
+### Download the HyperExecute CLI
 
-```bash
-export LT_USERNAME=LT_USERNAME
-export LT_ACCESS_KEY=LT_ACCESS_KEY
-```
+The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
 
-For Linux:
+You can download the CLI for your desired platform from the below mentioned links:
 
-```bash
-export LT_USERNAME=LT_USERNAME
-export LT_ACCESS_KEY=LT_ACCESS_KEY
-```
+| Platform | HyperExecute CLI |
+| ---------| ---------------- |
+| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
+| MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-For Windows:
+### Setup Environment Variable
 
-```bash
-set LT_USERNAME=LT_USERNAME
-set LT_ACCESS_KEY=LT_ACCESS_KEY
-```
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+
+Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Linux / MacOS" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
 
 
 <nav aria-label="breadcrumbs">
