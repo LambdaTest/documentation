@@ -2,7 +2,7 @@
 id: analytics-modules-automation-test-overview
 title: Analytics Modules - Test Overview
 sidebar_label: Web & App Automation
-description: A comprehensive guide to using the Test Overview module in LambdaTest Analytics for analyzing test performance and trends.
+description: A comprehensive guide to understanding test health and trends module. Explore widgets for Test Status, Browser, OS Distribution and more.
 keywords:
  - analytics
  - test overview
