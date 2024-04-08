@@ -41,17 +41,24 @@ slug: hyperexecute-how-to-get-my-username-and-access-key/
 # How to Get my Username and Access key
 
 This page explains where you can find your LT Username and Access Key. 
-***
 
-1. Go to the right side Profile dropdown and select `Account Settings`.
+**Step 1:** Go to the right side Profile dropdown and select **Account Settings**.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/username-key/hyperexecute-how-to-get-my-username-and-access-key-cta.png').default} width="50%" />
+**Step 2:** Under Account Settings, go to **Password & Security**
 
-2. Under Account Settings, go to `Password & Security`
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/knowledge-base/username-accesskey/method1.mp4').default} type="video/mp4" />
+</video>
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/username-key/hyperexecute-how-to-get-my-username-and-access-key.png').default} width="100%" />
+**Step 3:** You will find your LT Username and Access Key here, this would be required in order to trigger a Job using the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
 
-3. You will find your LT Username and Access Key here, this would be required in order to trigger a Job using the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
+:::tip
+You can directly copy your Username and Access Key using shortcut key button.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/knowledge-base/username-accesskey/method2.mp4').default} type="video/mp4" />
+</video>
+:::
 
 >If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
 
