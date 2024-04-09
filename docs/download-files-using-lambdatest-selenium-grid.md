@@ -49,7 +49,7 @@ import TabItem from '@theme/TabItem';
 
 ***
 
-While you perform Selenium test automation, you may want to test the download functionality of your web-application or website. With LambdaTest [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/), you can test the download feature of your web-application on 3000+ real browsers for mobile and desktop. You can download a file inside the test machine through your Selenium test automation script by Base64 encryption & decryption.
+While you perform Selenium test automation, you may want to test the download functionality of your web-application or website. With LambdaTest Selenium Grid, you can test the download feature of your web-application on 3000+ real browsers for mobile and desktop. You can download a file inside the test machine through your Selenium test automation script by Base64 encryption & decryption.
 
 LambdaTest Selenium Grid will provide you with an encoded string of base64 which you can leverage to download any file inside the virtual machine triggered through your Selenium testing scripts. For this, LambdaTest has provided three main flags using JavascriptExecutor to:
 
@@ -102,8 +102,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class PullFileSelenium {
-    public String username = "kaustubhd";
-    public String accesskey = "8HvZgofk5sGPes4zC986qrrg2HWhxsQxE";
+    public String username = "johnduo";
+    public String accesskey = "Y6TyVzfvvWrK8bo2tNABUYR9e8RduQPCu2tN";
     public RemoteWebDriver driver;
     public String gridURL = "@hub.lambdatest.com/wd/hub";
     String status = "passed";
@@ -112,24 +112,17 @@ public class PullFileSelenium {
     public void setUp() throws Exception {
 
         ChromeOptions options = new ChromeOptions();
-//        options.addPreference("browser.download.folderList", 2);
-//        options.addPreference("browser.download.dir", "D:\\Downloads");
-//        options.addPreference("browser.download.useDownloadDir", true);
-//        options.addPreference("browser.helperApps.neverAsk.saveToDisk", "image/jpeg");
 
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-//        ltOptions.put("browserName", "firefox");
-        ltOptions.put("version", "latest");
-        ltOptions.put("platform", "Windows 11");
+        ltOptions.put("version", "123.0");
+        ltOptions.put("platform", "Linux");
         ltOptions.put("build", "Download functionality test");
-        ltOptions.put("name", "sample test");
+        ltOptions.put("name", "LT Test");
         ltOptions.put("network", true); // To enable network logs
         ltOptions.put("visual", true);
         ltOptions.put("video", true); // To enable video recording`
         ltOptions.put("console", true); // To capture console logs
-//        capabilities.setCapability("selenium_version", "3.4.0");
         options.setCapability("lt:Options", ltOptions);
-//        capabilities.merge(options);
 
         try {
 
@@ -147,20 +140,17 @@ public class PullFileSelenium {
         try {
 
             driver.get("https://file-examples.com/wp-content/storage/2017/02/file_example_XLSX_10.xlsx");
-//            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//            driver.switchTo().frame("iframeResult");
-
-//            WebElement element = driver.findElement(By.xpath("//a[@href='/images/myw3schoolsimage.jpg']"));
-//            element.click();
 
             Thread.sleep(4000);
 
-            Assert.assertEquals(((JavascriptExecutor) driver).executeScript("lambda-file-exists=file_example_XLSX_10.xlsx"),
+            Assert.assertEquals(
+                    ((JavascriptExecutor) driver).executeScript("lambda-file-exists=file_example_XLSX_10.xlsx"),
                     true); // file exist check
 
-            System.out.println(((JavascriptExecutor) driver).executeScript("lambda-file-stats=file_example_XLSX_10.xlsx")); // retrieve
-                                                                                                                       // file
-                                                                                                                       // stats
+            System.out.println(
+                    ((JavascriptExecutor) driver).executeScript("lambda-file-stats=file_example_XLSX_10.xlsx")); // retrieve
+            // file
+            // stats
 
             String base64EncodedFile = ((JavascriptExecutor) driver)
                     .executeScript("lambda-file-content=file_example_XLSX_10.xlsx").toString(); // file content download
