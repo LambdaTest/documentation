@@ -65,7 +65,7 @@ This documentation guides you on how to integrate Provar seamlessly with HyperEx
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/provar/2.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
 
-- You will recieve a pop-up to enter your configurations:
+- You will receive a pop-up to enter your configurations:
 
     - Enter the **Name** for your new Browser Provider.
     - Select the **Type** as **LambdaTest**
