@@ -458,6 +458,11 @@ module.exports = {
               "hyperexecute-run-jmeter-tests"
             ]
           },
+          {
+            type: 'doc',
+            label: 'API Testing',
+            id: 'hyperexecute-api-testing'
+          }
         ],
       },
       {
@@ -550,30 +555,6 @@ module.exports = {
             },
             items: [
               {
-                type: "category",
-                collapsed: true,
-                label: "Tosca",
-                link: {
-                  type: "doc",
-                  id: "tosca-integration-hyperexecute",
-                },
-                items: [
-                  "tosca-integration-with-hyperexecute-using-commander",
-                  "tosca-integration-with-hyperexecute-using-dex",
-                  "tosca-integration-with-hyperexecute-for-sap"
-                ]
-              },
-              {
-                type: "doc",
-                label: "Katalon",
-                id: "katalon-integration-with-hyperexecute",
-              },
-              {
-                type: "doc",
-                label: "Microsoft Excel",
-                id: "he-excel",
-              },
-              {
                 type: "doc",
                 label: "Accelq",
                 id: "hyperexecute-accelq-integration",
@@ -594,13 +575,18 @@ module.exports = {
               },
               {
                 type: "doc",
-                label: "Testsigma",
-                id: "hyperexecute-testsigma-integration",
+                label: "Katalon",
+                id: "katalon-integration-with-hyperexecute",
               },
               {
-                type: 'doc',
-                label: "Slack",
-                id: "hyperexecute-slack-integration"
+                type: "doc",
+                label: "Microsoft Excel",
+                id: "he-excel",
+              },
+              {
+                type: "doc",
+                label: "Provar",
+                id: "hyperexecute-provar-integration",
               },
               {
                 type: 'doc',
@@ -609,13 +595,37 @@ module.exports = {
               },
               {
                 type: 'doc',
-                label: "Zephyr",
-                id: "hyperexecute-zephyr-scale-integration"
+                label: "Slack",
+                id: "hyperexecute-slack-integration"
               },
               {
                 type: 'doc',
                 label: "Testim",
                 id: "hyperexecute-testim-integration"
+              },
+              {
+                type: "doc",
+                label: "Testsigma",
+                id: "hyperexecute-testsigma-integration",
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Tosca",
+                link: {
+                  type: "doc",
+                  id: "tosca-integration-hyperexecute",
+                },
+                items: [
+                  "tosca-integration-with-hyperexecute-using-commander",
+                  "tosca-integration-with-hyperexecute-using-dex",
+                  "tosca-integration-with-hyperexecute-for-sap"
+                ]
+              },
+              {
+                type: 'doc',
+                label: "Zephyr",
+                id: "hyperexecute-zephyr-scale-integration"
               },
             ],
           },
