@@ -51,6 +51,14 @@ You can now integrate HyperExecute with your Jenkins project to shorten your tes
 
 To integrate HyperExecute with your Jenkins project, follow the steps listed below. 
 
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/Jenkins" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
 1. Log Into your Jenkins account. You will be directed to your Jenkins dashboard. 
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/jenkins/j1.png').default} alt="Jenkins Plugin"  className="doc_img" width="966" height="419"/>
@@ -112,8 +120,27 @@ To integrate HyperExecute with your Jenkins project, follow the steps listed bel
 * * *
 You have successfully integrated your Jenkins project with HyperExecute. 
 
+## Sample Jenkins File
 
+```bash
+pipeline {
+    agent any
 
+    stages {
+        # Download and Run Hyperexecute stage (optional)
+        stage('Download & Run Hyperexecute') {
+            steps {
+                # Download Hyperexecute CLI for macOS (adjust for other OS)
+                sh name: 'Download Hyperexecute CLI', script: 'wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute'
+                # Grant execute permission to the downloaded binary
+                sh name: 'Make Hyperexecute executable', script: 'chmod +x hyperexecute'
+                # Run Hyperexecute with user credentials and configuration file
+                sh name: 'Run Hyperexecute Tests', script: './hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>
+            }
+        }
+    }
+}
+```
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

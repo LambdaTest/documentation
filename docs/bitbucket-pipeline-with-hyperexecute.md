@@ -54,6 +54,14 @@ This document will show you how to integrate Bitbucket Pipelines with HyperExecu
  
 ## How To Integrate Bitbucket Pipeline with Hyperexecute
 
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/bitbucket" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
 ### 1. Log into your [Bitbucket](https://www.atlassian.com/software/bitbucket/bundle) cloud account.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/bitbucket-login.png').default} alt="Create New Project" width="" height=""/>
@@ -111,6 +119,28 @@ After configuring your environment variables, select **Commit file** at the bott
 
 **Below is an example of a Hyperexecute job that was triggered through the above pipeline:**
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/bitbucket/successful_gitlab.png').default} alt="Create New Project" width="" height=""/>
+
+## Sample Bitbucket Workflow File
+
+```bash
+image: ubuntu:latest  # Adjust for macOS if needed
+
+pipelines:
+  default:
+    branches:
+      - master  # Adjust as needed
+    steps:
+      ## Download Hyperexecute CLI (descriptive name)
+      - name: Download Hyperexecute CLI
+        script: |
+          wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
+          chmod u+x hyperexecute
+
+      ## Run Hyperexecute tests (descriptive name)
+      - name: Run Hyperexecute Tests
+        script: |
+          ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>
+```
 
 >
 **Run your tests at speeds never seen before. Happy testing! :)**

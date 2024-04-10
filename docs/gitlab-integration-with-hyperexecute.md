@@ -52,6 +52,15 @@ This document will show you how to integrate GitLab Pipeline with HyperExecute t
 ***
 
 To integrate GitLab Pipeline with HyperExecute, follow the below steps: 
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/gitlab" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
 ### 1. Log into your GitLab account
 
 
@@ -84,38 +93,30 @@ To connect your external repository by URL, fill in the required information in 
 
 Below is a sample of GitLab YAML created for your reference:
 
-```
-stages:          # List of stages for jobs, and their order of execution
-  - build
-  - test
-  - deploy
+```bash
+## Define the image to use (adjust for macOS if needed)
+image: ubuntu:latest
 
-build-job:       # This job runs in the build stage, which runs first.
-  stage: build
-  script:
-    - echo "Compiling the code..."
-    - echo "Compile complete."
+## Define pipelines (can have multiple pipelines)
+pipelines:
+  ## Default pipeline (can be named differently)
+  default:
+    ## Branches to trigger this pipeline on (adjust as needed)
+    branches:
+      - master
 
-unit-test-job:   # This job runs in the test stage.
-  stage: test    # It only starts when the job in the build stage completes successfully.
-  script:
-    - echo "Running unit tests... This will take about 60 seconds."
-    - sleep 60
-    - echo "Code coverage is 90%"
+    ## Define steps in the pipeline
+    steps:
+      ## Download Hyperexecute CLI (descriptive name)
+      - name: Download Hyperexecute CLI
+        script: |
+          wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
+          chmod u+x hyperexecute
 
-lint-test-job:   # This job also runs in the test stage.
-  stage: test    # It can run at the same time as unit-test-job (in parallel).
-  script:
-    - echo "Linting code... This will take about 10 seconds."
-    - sleep 10
-    - echo "No lint issues found."
-
-deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
-  environment: production
-  script:
-    - echo "Deploying application..."
-    - echo "Application successfully deployed."
+      ## Run Hyperexecute tests (descriptive name)
+      - name: Run Hyperexecute Tests
+        script: |
+          ./hyperexecute --user <your_user_name> --key <your_access_key> --config <your_yaml_file_path>
 ```
 
 ### 5. Run Your Job

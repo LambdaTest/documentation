@@ -58,6 +58,15 @@ This document will show you how to integrate Azure Devops Pipeline with HyperExe
 ***
 
 To integrate Azure DevOps Pipeline with HyperExecute, follow the below steps: 
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/azure" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
 ### 1. Log into your Azure DevOps account
 
 ### 2. Create a New Project
@@ -77,22 +86,29 @@ Next, you need to create a new pipeline. To create a new pipeline, click the **P
 
 To configure the Azure DevOps pipeline YAML to execute the HyperExecute CLI Binary, run the following command: 
 
-```
+```bash
 trigger:
 - main
 
 pool:
-  vmImage: windows-latest
-  
-steps: 
-   
-- script: |
-           curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe 
-// download HyperExecute CLI binary 
-           
-          hyperexecute.exe -u $(LT_USERNAME) -k $(LT_ACCESS_KEY) -i yaml/win/.hyperexecute_autosplits.yaml
+  vmImage: 'ubuntu-latest'  # Adjust for macOS if needed
 
-// Execute HyperExecute CLI binary. 
+steps:
+  - task: Bash@3
+    inputs:
+      targetType: 'inline'
+      script: |
+        # Download Hyperexecute CLI for macOS (adjust for other OS)
+        name: Download HyperExecute CLI
+        script: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
+        
+        # Grant execute permission to the downloaded binary
+        name: Make HyperExecute executable
+        script: chmod +x hyperexecute
+        
+        # Run Hyperexecute with user credentials and configuration file
+        name: Run Hyperexecute Tests
+        script: ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>
 ```
 
 - **Trigger:** In the **trigger** section, state the branch of your your test repository that you would like to trigger.
