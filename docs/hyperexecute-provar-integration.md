@@ -87,7 +87,7 @@ You have to generate the `build.xml` file using the Provar GUI. You can follow t
 <property name="provar.home" value="../ProvarHome"/>
 ```
 
-- Add the following tags inside your `build.xml` file. Theses tags should be present inside the `<project default="runtests">` tag as mentioned below:
+- Add the following tags inside your `build.xml` file. These tags should be present inside the `<project default="runtests">` tag as mentioned below:
 
 ```bash
 <property name="license.path" value="../licenseHyperexeute"/>
