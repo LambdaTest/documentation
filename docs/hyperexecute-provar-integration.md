@@ -102,7 +102,7 @@ You have to generate the `build.xml` file using the Provar GUI. You can follow t
 
 ## Step 3: Set the Provar License as Secret
 
-You will have to [create a new secret](support/docs/hyperexecute-how-to-save-and-manage-secrets/#create-a-new-secret) in HyperExecute. 
+You will have to [create a new secret](/support/docs/hyperexecute-how-to-save-and-manage-secrets/#create-a-new-secret) in HyperExecute. 
 
 - Set **Key Name** as `provarLicense`
 - Set the **Value** as the contents of the license file.
