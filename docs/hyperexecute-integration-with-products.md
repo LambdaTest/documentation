@@ -44,28 +44,7 @@ slug: hyperexecute-integration-with-products/
 LambdaTest now offers you the chance to integrate HyperExecute with products like Tosca, Katalon and more. You can go through the links below to see the integrations we offer at the moment. 
 
 <div className="support_main">
-  
-  <a href = "/support/docs/tosca-integration-with-hyperexecute/">
-  <div className="support_inners">
-    <h3>Tosca</h3>
-    <p>Optimize and accelerate end-to-end testing for your entire digital landscape.</p>
-  </div>
-  </a>
-  
-  <a href = "/support/docs/katalon-integration-with-hyperexecute/">
-  <div className="support_inners">
-    <h3>Katalon</h3>
-    <p>Perform Cross Platform Testing ranging from web, API, mobile, and desktop applications.</p>
-  </div>
-  </a>
 
-  <a href = "/support/docs/hyperexecute-excel-integration/">
-  <div className="support_inners">
-    <h3>Microsoft Excel</h3>
-    <p>Perform the testing for the tests that are based on Microsoft Excel for TestNG Framework.</p>
-  </div>
-  </a>
-  
   <a href = "/support/docs/hyperexecute-accelq-integration/">
   <div className="support_inners">
     <h3>Accelq</h3>
@@ -80,17 +59,24 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   </div>
   </a>
 
-  <a href = "/support/docs/hyperexecute-testsigma-integration/">
+  <a href = "/support/docs/katalon-integration-with-hyperexecute/">
   <div className="support_inners">
-    <h3>Testsigma</h3>
-    <p>Perform codeless test automation to easily create and maintain tests.</p>
+    <h3>Katalon</h3>
+    <p>Perform Cross Platform Testing ranging from web, API, mobile, and desktop applications.</p>
   </div>
   </a>
 
-  <a href = "/support/docs/hyperexecute-slack-integration/">
+  <a href = "/support/docs/hyperexecute-excel-integration/">
   <div className="support_inners">
-    <h3>Slack</h3>
-    <p>Receive real-time notifications and crucial job details directly within your Slack workspace.</p>
+    <h3>Microsoft Excel</h3>
+    <p>Perform the testing for the tests that are based on Microsoft Excel for TestNG Framework.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-provar-integration/">
+  <div className="support_inners">
+    <h3>Provar</h3>
+    <p>Enable efficient creation and execution of UI and API tests.</p>
   </div>
   </a>
 
@@ -101,10 +87,10 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   </div>
   </a>
 
-  <a href = "/support/docs/hyperexecute-zephyr-scale-integration/">
+  <a href = "/support/docs/hyperexecute-slack-integration/">
   <div className="support_inners">
-    <h3>Zephyr</h3>
-    <p>Zephyr is a test case management tool allows you to centrally manage your test suite cases.</p>
+    <h3>Slack</h3>
+    <p>Receive real-time notifications and crucial job details directly within your Slack workspace.</p>
   </div>
   </a>
 
@@ -115,6 +101,26 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   </div>
   </a>
 
+  <a href = "/support/docs/hyperexecute-testsigma-integration/">
+  <div className="support_inners">
+    <h3>Testsigma</h3>
+    <p>Perform codeless test automation to easily create and maintain tests.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/tosca-integration-with-hyperexecute/">
+  <div className="support_inners">
+    <h3>Tosca</h3>
+    <p>Optimize and accelerate end-to-end testing for your entire digital landscape.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-zephyr-scale-integration/">
+  <div className="support_inners">
+    <h3>Zephyr</h3>
+    <p>Zephyr is a test case management tool allows you to centrally manage your test suite cases.</p>
+  </div>
+  </a>
 </div>
 
 >If your favourite products are not mentioned in the list above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have them ready for you.
