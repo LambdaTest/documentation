@@ -332,7 +332,7 @@ driver.Execute("smartui.takeScreenshot", config);
 Map<String, Object> config = new HashMap<>();
 config.put("screenshotName", "<Your Screenshot Name>");
 config.put("fullPage", true);
-config.put("fullPage", 15); // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
+config.put("pageCount", 15); // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
 ((JavascriptExecutor)driver).execute("smartui.takeScreenshot", config);
 ```
 
@@ -340,7 +340,7 @@ config.put("fullPage", 15); // Enter the number of pages for the Full Page scree
 </Tabs>
 
 :::note 
-Please note that this webhook is only applicable to <b>native app screenshots</b>. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.
+Please note that this webhook is only applicable to <b>native app screenshots</b> and has known limitations. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.
 :::
 
 For additional information about appium framework please explore the documentation [here](https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/)
