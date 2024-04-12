@@ -560,6 +560,11 @@ module.exports = {
                 id: "hyperexecute-accelq-integration",
               },
               {
+                type: "doc",
+                label: "algoQA",
+                id: "hyperexecute-algoqa-integration",
+              },
+              {
                 type: "category",
                 collapsed: true,
                 label: "Azure Test Plan",
