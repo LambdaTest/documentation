@@ -48,65 +48,40 @@ Enter **one or multiple email addresses** along with a **role** for these users 
 They would be granted access to LambdaTest with the role you selected while inviting.
 
 
-## View Sent Invitations
----
+This section outlines a series of cases designed to verify test visibility within the system under various user roles and team configurations:
 
-Click on **Pending Invitations** to see the list of invitations sent from your account. Default filter would show only the pending invitations. To see all statuses you can change to a different filter.
+- **Admin:** Has full access to all builds, tests, and test details.
+- **User:** Limited access based on team membership.
+- **Guest:** The scope of a "**Guest**" user is identical to that of a "**User**" access.
+
+:::info
+- Users with **Admine** and **User** level access can be a part of multiple teams.
+- All the users are independent of the tests visibility.
+:::
 
 <img loading="lazy" src={require('../assets/images/team-management/pending-invite.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
+### Scenario 1: No Teams are Created
 
-## Managing Users
----
+In this case, any of the user can see all test results, regardless of any team affiliation.
 
-As an administrator you can do the following:
+### Scenario 2: Teams are Created by:
 
-1. See the list of users.
-2. View username & access token of a User.
-3. Change password of your users.
-4. Delete a user from your team.
-5. Reset MFA of a user.
+If you have created the teams for the admins access, then only they can see the test results for that particular team and vice versa.
 
+### Scenario 3: Teams are Created but Users are in Different Teams
 
-### 1. List of Users
----
+Suppose if you have created two teams, each having five users, then neither can see each other's team's test results.
 
-Head to the **Organization Settings** tab to see a list of users. Under the **Members** tab, you can see a list of users in your account.
+### Scenario 4: Teams are Created and Users are in the Same Team
 
-<img loading="lazy" src={require('../assets/images/team-management/team-org.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+If you have created a team, then all the users can see each other's test results.
 
-### 2. View username & access token of a user
----
+### Scenario 5: All Teams are Deleted
+If all teams are removed, then all users can view all test results again, similar to Scenario 1.
 
-As an Admin, you can view the **access token** of a user to be used in your CI/CD systems. Click on the **three dots** and select **View username & access token** to open a modal.
+### Scenario 6: Users are Not in a Team, But Teams Exist
+If any of the users aren't assigned to any team, but there are teams in the organization, they can still see all test results.
 
-<img loading="lazy" src={require('../assets/images/team-management/user-id-one.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-<img loading="lazy" src={require('../assets/images/team-management/user-id-two.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-### 3. Change password of a user
----
-
-As an Admin, you can change a user's password in your LambdaTest account. Click on the **three dots** and select **Change Password** would open a modal where you can set a new password.
-
-<img loading="lazy" src={require('../assets/images/team-management/change-password-one.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-<img loading="lazy" src={require('../assets/images/team-management/change-password-two.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-### 4. Delete a user
----
-
-As an Admin you can **delete** users from your LambdaTest account. Click on the **three dots** and select **Delete User** option which would ask for a reconfirmation. Confirming the same would remove the selected user from your account.
-
-<img loading="lazy" src={require('../assets/images/team-management/delete-one.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-<img loading="lazy" src={require('../assets/images/team-management/delete-two.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-### 5. Export
----
-
-You can **export** list of **users, service accounts and invitations** sent from your LambdaTest account.
-
-<img loading="lazy" src={require('../assets/images/team-management/export.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-
+### Scenario 7: Users Switches Teams
+When a user is switched from one team (Team A) to another (Team B), they will no longer see test results from Team A. They will only have access to test results associated with their new team, Team B.
