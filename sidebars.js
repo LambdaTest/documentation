@@ -390,7 +390,7 @@ module.exports = {
               {
                 type: "doc",
                 label: "C#",
-                id: "playwright-junit-on-hyperexecute",
+                id: "playwright-dotnet-on-hyperexecute",
               },
               {
                 type: "doc",
@@ -789,6 +789,18 @@ module.exports = {
               "hyperexecute-browser-list-api",
               "hyperexecute-how-to-run-tests-using-local-selenium-drivers"
             ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "HyperExecute Use Cases",
+            items: [
+              "hyperexecute-how-smart-caching-boosts-tests-speed",
+              "hyperexecute-seamless-integration-with-tools",
+              "hyperexecute-multi-webdriver-support",
+              "hyperexecute-build-mobile-apps-using-tools",
+              "hyperexecute-utilizing-custom-libraries"
+            ]
           },
           {
             type: "category",
