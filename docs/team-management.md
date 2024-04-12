@@ -1,87 +1,123 @@
 ---
 id: team-management
 title: Team Management
-hide_title: true
+hide_title: false
 sidebar_label: Team Management
-description: This documentation will help you create and manage team on LambdaTest.
+description: This documentation will help you create and manage teams on LambdaTest.
 keywords:
-- team management lambdatest
-- manage team
+- teams management lambdatest
+- manage teams
 url: https://www.lambdatest.com/support/docs/team-management/
 site_name: LambdaTest
 slug: team-management/
 ---
 
-# Team Management
----
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lambdatest.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://www.lambdatest.com/support/docs/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Settings and Security",
+          "item": "https://www.lambdatest.com/support/docs/team-management/"
+        }]
+      })
+    }}
+></script>
 
-With Organization Settings in LambdaTest, you have the ability to effortlessly invite your team members to your LambdaTest Account. LambdaTest offers a range of roles that can be assigned to users.
+The LambdaTest Team Management empowers organizations to collaborate effectively on their Web and App Automation testing by creating isolated testing environments.
 
-At present, LambdaTest supports the following roles:
+This functionality addresses the need for:
 
-**Admin:** This role grants full access to all the features and functionalities of LambdaTest, enabling the user to administer the account effectively.
+- **Organized Test Management:** Group users and corresponding tests based on specific projects, teams, or departments.
+- **Improved Visibility and Control:** Admins can control user access to specific test data, preventing unauthorized viewing of confidential tests.
+- **Enhanced Team Collaboration:** Facilitate communication and knowledge sharing within designated teams.
 
-**User:** Users with this role have access to all the subscribed products and are able to execute and stop their own tests. However, certain Organization Settings, such as Team Management, Subscriptions & Invoices, Authentication & SSO, remain inaccessible.
+## Create an Organization
 
-**Guest:** This role provides the ability to view test logs, analytics, and other reports. However, guests do not have the privilege to initiate test runs.
+- Go to the **Settings** page > select **Organization Settings** section.
+- Click on the **Teams** tab and edit your **Organization Name**.
 
-By leveraging the flexibility of Organization Settings, you can seamlessly manage your team members and their respective roles within your LambdaTest Account.
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/team-management/1.mp4').default} type="video/mp4" />
+</video>
 
+## Create your First Team
 
+- Click on the **Create Team** button in the Teams page.
+- Enter the name of your team.
+:::info
+You cannot leave the Team name as empty. It is mandatory to enter the name of your team.
+:::
+- Select all the **users** you want to add to your team and click on **Finish** button.
 
-## Access Organization Settings
----
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/team-management/2.mp4').default} type="video/mp4" />
+</video>
 
-To access the organization settings, head to **Settings** and select **Organization Settings** from the dropdown.
+## Edit your Team Settings
 
-<img loading="lazy" src={require('../assets/images/lambdatest-mfa/org-settings.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+- Go to your **Teams** section.
+- Click on the **three dots (...)** > **Edit** button.
+- Edit your team setting by updating your teams name or by adding/removing the users from the team.
+- Click on the **Finish** button.
 
-This page shows a list of users in your organization with options to invite new users, update an user, change their password etc.
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/team-management/3.mp4').default} type="video/mp4" />
+</video>
 
-## Invite Users To Your LambdaTest Account
----
+## Delete your Team
 
-Enter **one or multiple email addresses** along with a **role** for these users and system would send **email invitations** for the invitee to accept invitations to join LambdaTest.
+- Go to your **Teams** section.
+- Click on the **three dots (...)** > **Delete** button.
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/add-user.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+Your created team will be permanently deleted.
 
-They would be granted access to LambdaTest with the role you selected while inviting.
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/team-management/4.mp4').default} type="video/mp4" />
+</video>
 
+## Access Rules for Builds, Tests, and Test Details
 
-This section outlines a series of cases designed to verify test visibility within the system under various user roles and team configurations:
-
-- **Admin:** Has full access to all builds, tests, and test details.
-- **User:** Limited access based on team membership.
-- **Guest:** The scope of a "**Guest**" user is identical to that of a "**User**" access.
+This section outlines a series of cases designed to verify test visibility within the system.
 
 :::info
-- Users with **Admine** and **User** level access can be a part of multiple teams.
-- All the users are independent of the tests visibility.
+- All the user roles (admin, user, guest) are independent of the tests visibility in teams.
 :::
 
-<img loading="lazy" src={require('../assets/images/team-management/pending-invite.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+The following scenarios explain who can see the test results and under what circumstances:
+
+> - To restrict any user from accessing all tests, please ensure to add that user to a team.
+- A user can be a part of multiple teams.
 
 ### Scenario 1: No Teams are Created
+In this case, any of the user can see all test results.
 
-In this case, any of the user can see all test results, regardless of any team affiliation.
+### Scenario 2: Teams are Created
+If you have created a team then only the members of that particular team and any user who is not associated with any team can see the test results for that team.
 
-### Scenario 2: Teams are Created by:
+- #### Users are in Different Teams
+  Suppose if you have created two teams, each having five users, then neither can see each other's team's test results.
 
-If you have created the teams for the admins access, then only they can see the test results for that particular team and vice versa.
+- #### Users are in the Same Team
+  If you have created a team, then all the users of the same team can see each other's test results.
 
-### Scenario 3: Teams are Created but Users are in Different Teams
+- #### Users are not in a Team, but Teams exist
+  If any of the users aren't assigned to any team, but there are teams in the organization, they can still see all test results.
 
-Suppose if you have created two teams, each having five users, then neither can see each other's team's test results.
-
-### Scenario 4: Teams are Created and Users are in the Same Team
-
-If you have created a team, then all the users can see each other's test results.
-
-### Scenario 5: All Teams are Deleted
-If all teams are removed, then all users can view all test results again, similar to Scenario 1.
-
-### Scenario 6: Users are Not in a Team, But Teams Exist
-If any of the users aren't assigned to any team, but there are teams in the organization, they can still see all test results.
-
-### Scenario 7: Users Switches Teams
+### Scenario 3: Users Switches Teams
 When a user is switched from one team (Team A) to another (Team B), they will no longer see test results from Team A. They will only have access to test results associated with their new team, Team B.
+
+### Scenario 4: All Teams are Deleted
+If all teams are removed, then all users can view all test results again.
