@@ -1,112 +1,123 @@
 ---
 id: team-management
 title: Team Management
-hide_title: true
+hide_title: false
 sidebar_label: Team Management
-description: This documentation will help you create and manage team on LambdaTest.
+description: This documentation will help you create and manage teams on LambdaTest.
 keywords:
-- team management lambdatest
-- manage team
+- teams management lambdatest
+- manage teams
 url: https://www.lambdatest.com/support/docs/team-management/
 site_name: LambdaTest
 slug: team-management/
 ---
 
-# Team Management
----
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lambdatest.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://www.lambdatest.com/support/docs/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Settings and Security",
+          "item": "https://www.lambdatest.com/support/docs/team-management/"
+        }]
+      })
+    }}
+></script>
 
-With Organization Settings in LambdaTest, you have the ability to effortlessly invite your team members to your LambdaTest Account. LambdaTest offers a range of roles that can be assigned to users.
+The LambdaTest Team Management empowers organizations to collaborate effectively on their Web and App Automation testing by creating isolated testing environments.
 
-At present, LambdaTest supports the following roles:
+This functionality addresses the need for:
 
-**Admin:** This role grants full access to all the features and functionalities of LambdaTest, enabling the user to administer the account effectively.
+- **Organized Test Management:** Group users and corresponding tests based on specific projects, teams, or departments.
+- **Improved Visibility and Control:** Admins can control user access to specific test data, preventing unauthorized viewing of confidential tests.
+- **Enhanced Team Collaboration:** Facilitate communication and knowledge sharing within designated teams.
 
-**User:** Users with this role have access to all the subscribed products and are able to execute and stop their own tests. However, certain Organization Settings, such as Team Management, Subscriptions & Invoices, Authentication & SSO, remain inaccessible.
+## Create an Organization
 
-**Guest:** This role provides the ability to view test logs, analytics, and other reports. However, guests do not have the privilege to initiate test runs.
+- Go to the **Settings** page > select **Organization Settings** section.
+- Click on the **Teams** tab and edit your **Organization Name**.
 
-By leveraging the flexibility of Organization Settings, you can seamlessly manage your team members and their respective roles within your LambdaTest Account.
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/team-management/1.mp4').default} type="video/mp4" />
+</video>
 
+## Create your First Team
 
+- Click on the **Create Team** button in the Teams page.
+- Enter the name of your team.
+:::info
+You cannot leave the Team name as empty. It is mandatory to enter the name of your team.
+:::
+- Select all the **users** you want to add to your team and click on **Finish** button.
 
-## Access Organization Settings
----
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/team-management/2.mp4').default} type="video/mp4" />
+</video>
 
-To access the organization settings, head to **Settings** and select **Organization Settings** from the dropdown.
+## Edit your Team Settings
 
-<img loading="lazy" src={require('../assets/images/lambdatest-mfa/org-settings.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+- Go to your **Teams** section.
+- Click on the **three dots (...)** > **Edit** button.
+- Edit your team setting by updating your teams name or by adding/removing the users from the team.
+- Click on the **Finish** button.
 
-This page shows a list of users in your organization with options to invite new users, update an user, change their password etc.
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/team-management/3.mp4').default} type="video/mp4" />
+</video>
 
-## Invite Users To Your LambdaTest Account
----
+## Delete your Team
 
-Enter **one or multiple email addresses** along with a **role** for these users and system would send **email invitations** for the invitee to accept invitations to join LambdaTest.
+- Go to your **Teams** section.
+- Click on the **three dots (...)** > **Delete** button.
 
-<img loading="lazy" src={require('../assets/images/sub-organizations/add-user.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+Your created team will be permanently deleted.
 
-They would be granted access to LambdaTest with the role you selected while inviting.
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/team-management/4.mp4').default} type="video/mp4" />
+</video>
 
+## Access Rules for Builds, Tests, and Test Details
 
-## View Sent Invitations
----
+This section outlines a series of cases designed to verify test visibility within the system.
 
-Click on **Pending Invitations** to see the list of invitations sent from your account. Default filter would show only the pending invitations. To see all statuses you can change to a different filter.
+:::info
+- All the user roles (admin, user, guest) are independent of the tests visibility in teams.
+:::
 
-<img loading="lazy" src={require('../assets/images/team-management/pending-invite.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
+The following scenarios explain who can see the test results and under what circumstances:
 
+> - To restrict any user from accessing all tests, please ensure to add that user to a team.
+- A user can be a part of multiple teams.
 
-## Managing Users
----
+### Scenario 1: No Teams are Created
+In this case, any of the user can see all test results.
 
-As an administrator you can do the following:
+### Scenario 2: Teams are Created
+If you have created a team then only the members of that particular team and any user who is not associated with any team can see the test results for that team.
 
-1. See the list of users.
-2. View username & access token of a User.
-3. Change password of your users.
-4. Delete a user from your team.
-5. Reset MFA of a user.
+- #### Users are in Different Teams
+  Suppose if you have created two teams, each having five users, then neither can see each other's team's test results.
 
+- #### Users are in the Same Team
+  If you have created a team, then all the users of the same team can see each other's test results.
 
-### 1. List of Users
----
+- #### Users are not in a Team, but Teams exist
+  If any of the users aren't assigned to any team, but there are teams in the organization, they can still see all test results.
 
-Head to the **Organization Settings** tab to see a list of users. Under the **Members** tab, you can see a list of users in your account.
+### Scenario 3: Users Switches Teams
+When a user is switched from one team (Team A) to another (Team B), they will no longer see test results from Team A. They will only have access to test results associated with their new team, Team B.
 
-<img loading="lazy" src={require('../assets/images/team-management/team-org.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-### 2. View username & access token of a user
----
-
-As an Admin, you can view the **access token** of a user to be used in your CI/CD systems. Click on the **three dots** and select **View username & access token** to open a modal.
-
-<img loading="lazy" src={require('../assets/images/team-management/user-id-one.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-<img loading="lazy" src={require('../assets/images/team-management/user-id-two.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-### 3. Change password of a user
----
-
-As an Admin, you can change a user's password in your LambdaTest account. Click on the **three dots** and select **Change Password** would open a modal where you can set a new password.
-
-<img loading="lazy" src={require('../assets/images/team-management/change-password-one.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-<img loading="lazy" src={require('../assets/images/team-management/change-password-two.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-### 4. Delete a user
----
-
-As an Admin you can **delete** users from your LambdaTest account. Click on the **three dots** and select **Delete User** option which would ask for a reconfirmation. Confirming the same would remove the selected user from your account.
-
-<img loading="lazy" src={require('../assets/images/team-management/delete-one.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-<img loading="lazy" src={require('../assets/images/team-management/delete-two.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-### 5. Export
----
-
-You can **export** list of **users, service accounts and invitations** sent from your LambdaTest account.
-
-<img loading="lazy" src={require('../assets/images/team-management/export.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
-
+### Scenario 4: All Teams are Deleted
+If all teams are removed, then all users can view all test results again.
