@@ -90,40 +90,35 @@ Your created team will be permanently deleted.
 
 ## Access Rules for Builds, Tests, and Test Details
 
-This section outlines a series of cases designed to verify test visibility within the system under various user roles and team configurations:
-
-- **Admin:** Has full access to all builds, tests, and test details.
-- **User:** Limited access based on team membership.
-- **Guest:** The scope of a "**Guest**" user is identical to that of a "**User**" access.
+This section outlines a series of cases designed to verify test visibility within the system.
 
 :::info
-- Users with **Admine** and **User** level access can be a part of multiple teams.
-- All the users are independent of the tests visibility.
+- All the user roles (admin, user, guest) are independent of the tests visibility in teams.
 :::
 
 The following scenarios explain who can see the test results and under what circumstances:
 
+> - To restrict any user from accessing all tests, please ensure to add that user to a team.
+- A user can be a part of multiple teams.
+
 ### Scenario 1: No Teams are Created
+In this case, any of the user can see all test results.
 
-In this case, any of the user can see all test results, regardless of any team affiliation.
+### Scenario 2: Teams are Created
+If you have created a team then only the members of that particular team and any user who is not associated with any team can see the test results for that team.
 
-### Scenario 2: Teams are Created by:
+- #### Users are in Different Teams
+  Suppose if you have created two teams, each having five users, then neither can see each other's team's test results.
 
-If you have created the teams for the admins access, then only they can see the test results for that particular team and vice versa.
+- #### Users are in the Same Team
+  If you have created a team, then all the users of the same team can see each other's test results.
 
-### Scenario 3: Teams are Created but Users are in Different Teams
+- #### Users are not in a Team, but Teams exist
+  If any of the users aren't assigned to any team, but there are teams in the organization, they can still see all test results.
 
-Suppose if you have created two teams, each having five users, then neither can see each other's team's test results.
-
-### Scenario 4: Teams are Created and Users are in the Same Team
-
-If you have created a team, then all the users can see each other's test results.
-
-### Scenario 5: All Teams are Deleted
-If all teams are removed, then all users can view all test results again, similar to Scenario 1.
-
-### Scenario 6: Users are Not in a Team, But Teams Exist
-If any of the users aren't assigned to any team, but there are teams in the organization, they can still see all test results.
-
-### Scenario 7: Users Switches Teams
+### Scenario 3: Users Switches Teams
 When a user is switched from one team (Team A) to another (Team B), they will no longer see test results from Team A. They will only have access to test results associated with their new team, Team B.
+
+### Scenario 4: All Teams are Deleted
+If all teams are removed, then all users can view all test results again.
+
