@@ -166,7 +166,7 @@ jobLabel: ['HYP', 'algoQA']
 
 ## Step 4: Amend in your ApplicationSettings.xml file
 
-In your `ApplicationSettings.xml` file, update the following capabilites:
+In your `ApplicationSettings.xml` file, update the following capabilities:
 
 - **BrowserType :** It should be Lambda.
 - **LambdaTestBuild :** Provide your build name.
