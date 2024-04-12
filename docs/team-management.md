@@ -90,41 +90,40 @@ Your created team will be permanently deleted.
 
 ## Access Rules for Builds, Tests, and Test Details
 
-This section outlines a series of test cases (TC) designed to verify test visibility within the system under various user roles and team configurations:
+This section outlines a series of cases designed to verify test visibility within the system under various user roles and team configurations:
 
-- **Admin Role:** Has full access to all builds, tests, and test details.
-- **User Role:** Limited access based on team membership.
-- **Guest Role:** The scope of a "**Guest Role**" user is identical to that of a "**User Role**" user.
+- **Admin:** Has full access to all builds, tests, and test details.
+- **User:** Limited access based on team membership.
+- **Guest:** The scope of a "**Guest**" user is identical to that of a "**User**" access.
+
+:::info
+- Users with **Admine** and **User** level access can be a part of multiple teams.
+- All the users are independent of the tests visibility.
+:::
 
 The following scenarios explain who can see the test results and under what circumstances:
 
-### Scenario 1: No Teams Created
+### Scenario 1: No Teams are Created
 
-In this case, users having any of the **Admin Role** and **User Role** access can see all test results, regardless of any team affiliation.
+In this case, any of the user can see all test results, regardless of any team affiliation.
 
-### Scenario 2: Teams Created with:
+### Scenario 2: Teams are Created by:
 
-#### Only the "Admin Role" user is a part of the Team
+If you have created the teams for the admins access, then only they can see the test results for that particular team and vice versa.
 
-In this case, if you have **Admin Role** access, then only you can see the test results for that particular team. Anyone with **User Role** access cannot see any test results.
+### Scenario 3: Teams are Created but Users are in Different Teams
 
-#### Only the "User Role" user is a part of the Team
+Suppose if you have created two teams, each having five users, then neither can see each other's team's test results.
 
-In this case, if you have **User Role** access, then only you can see the test results for that particular team. Anyone with the **Admin Role** access cannot see any test results.
+### Scenario 4: Teams are Created and Users are in the Same Team
 
-### Scenario 3: Teams are Created, Users in Different Teams
+If you have created a team, then all the users can see each other's test results.
 
-If both the **Admin Role** and **User Role** users are on separate teams, neither can see each other's team's test results.
+### Scenario 5: All Teams are Deleted
+If all teams are removed, then all users can view all test results again, similar to Scenario 1.
 
-### Scenario 4: Teams are Created, Users in the Same Team
+### Scenario 6: Users are Not in a Team, But Teams Exist
+If any of the users aren't assigned to any team, but there are teams in the organization, they can still see all test results.
 
-When both the **Admin Role** and **User Role** users are part of the same team, they can both see all test results for that team.
-
-### Scenario 5: All Teams Deleted
-If all teams are deleted, both the **Admin Role** and **User Role** users can see all test results again, similar to Scenario 1.
-
-### Scenario 6: Users/Admins Not in a Team, But Teams Exist
-If any of the users with **Admin Role** and **User Role** access aren't assigned to any team, but there are teams in the organization, they can still see all test results.
-
-### Scenario 7: User/Admin Switches Teams
-When a user with **Admin Role** or **User Role** access is switched from one team (Team A) to another (Team B), they will no longer see test results from Team A. They will only have access to test results associated with their new team, Team B.
+### Scenario 7: Users Switches Teams
+When a user is switched from one team (Team A) to another (Team B), they will no longer see test results from Team A. They will only have access to test results associated with their new team, Team B.
