@@ -735,7 +735,7 @@ DataJsonPaths helps to distribute data/configs over the VMs. In this you can cre
   "Password": "pass1"
  },
  {
-  "Username": "user2",
+  "Username": "user2", 
   "Password": "pass2"
  }
 ]
