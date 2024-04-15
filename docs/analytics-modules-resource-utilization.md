@@ -78,7 +78,8 @@ John wants to know the duration of the tests kept in queue and the duration of t
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Resource Utilization </span>
+      Resource Utilization 
+      </span>
     </li>
   </ul>
 </nav>

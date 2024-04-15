@@ -121,7 +121,8 @@ before: function (capabilities, specs, browser) {
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Deque axe Integration</span>
+      Deque axe Integration
+      </span>
     </li>
   </ul>
 </nav>

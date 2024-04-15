@@ -212,8 +212,7 @@ Please refer to the example `cURL` requests given below for your reference.
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Speeding up Espresso Tests</span>
+      <span className="breadcrumbs__link"> Speeding up Espresso Tests</span>
     </li>
   </ul>
 </nav>

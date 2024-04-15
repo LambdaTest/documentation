@@ -131,7 +131,8 @@ An admin user is the user who has created the dashboard. Only the creator is all
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Create Your First Dashboard </span>
+      Create Your First Dashboard 
+      </span>
     </li>
   </ul>
 </nav>

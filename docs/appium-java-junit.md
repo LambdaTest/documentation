@@ -105,7 +105,7 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 :::tip
 
 - If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample application :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
-- Response of above cURL will be a **JSON** object containing the `App URL` of the format - <lt://APP1234567891234567890> and will be used in the next steps.
+- Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP1234567891234567890`` and will be used in the next steps.
 
 :::
 
@@ -474,7 +474,8 @@ Your test results would be displayed on the test console (or command-line interf
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      JUnit With Appium</span>
+      JUnit With Appium
+      </span>
     </li>
   </ul>
 </nav>
