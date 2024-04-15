@@ -208,7 +208,7 @@ framework:
         values: ["<className>/<className/testName>"]
      - name: shard2
        strategy: "only-testing/skip-testing"
-       values: [""<className>/<className/testName>"", ""<className>/<className/testName>""]
+       values: ["<className>/<className/testName>", "<className>/<className/testName>"]
 ```
 
 :::tip When shards are added
