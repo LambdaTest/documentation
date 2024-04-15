@@ -122,59 +122,72 @@ Now that we have set up our LambdaTest Authentication Credentials as System Envi
 
 - For **JUnit** & **TestNG**:
 
-        lambdatestUserName = System.getenv("LT_USERNAME");
-        lambdatestAccessKey = System.getenv("LT_ACCESS_KEY");
+```
+  lambdatestUserName = System.getenv("LT_USERNAME");
+  lambdatestAccessKey = System.getenv("LT_ACCESS_KEY");
+```
 
 ### Python
 ***
 
 - For **PyTest** & **unittest**:
-
-        lambdatest_username = os.environ["LT_USERNAME"]
-        lambdatest_access_key = os.environ["LT_ACCESS_KEY"]
+```
+lambdatest_username = os.environ["LT_USERNAME"]
+lambdatest_access_key = os.environ["LT_ACCESS_KEY"]
+```
 
 ### NodeJS
 ***
 
 - For **Mocha-Chai** & **Jasmine-Chai**:
 
-        let username = process.env.LT_USERNAME,
-            accessKey = process.env.LT_ACCESS_KEY,
+```
+let username = process.env.LT_USERNAME,
+accessKey = process.env.LT_ACCESS_KEY,
+```
 
 - For **Protractor-Jasmine**:
 
-        exports.config = {
-           lambdatestUser: process.env.LT_USERNAME,
-            lambdatestKey: process.env.LT_ACCESS_KEY,
+```
+exports.config = {
+          lambdatestUser: process.env.LT_USERNAME,
+          lambdatestKey: process.env.LT_ACCESS_KEY
+        }
+```
 
 ### Ruby
 ***
 
 - For **RSpec**:
 
+```
         username: ENV['LT_USERNAME'],
         accessKey: ENV['LT_ACCESS_KEY']
+```
 
 ### C#
 ***
 
 - For **NUnit**:
 
-        var lambdatestUserName =
-            Environment.GetEnvironmentVariable("LT_USERNAME", EnvironmentVariableTarget.User);     
-        var lambdatestAccessKey =
-            Environment.GetEnvironmentVariable("LT_ACCESS_KEY", EnvironmentVariableTarget.User);
+```
+var lambdatestUserName =
+    Environment.GetEnvironmentVariable("LT_USERNAME", EnvironmentVariableTarget.User);     
+var lambdatestAccessKey =
+    Environment.GetEnvironmentVariable("LT_ACCESS_KEY", EnvironmentVariableTarget.User);
+```
 
 ### PHP
 ***
 
 - For **Behat**:
 
-        $user = getenv('LT_USERNAME')
-        $accesskey = getenv('LT_ACCESS_KEY')
+```
+$user = getenv('LT_USERNAME')
+$accesskey = getenv('LT_ACCESS_KEY')
+```
 
->
-If you come across any issues during the setup, you can let us know. Our Support team is available <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7**</span>. You can also mail us at **support@lambdatest.com**.
+> If you come across any issues during the setup, you can let us know. Our Support team is available <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7**</span>. You can also mail us at **support@lambdatest.com**.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

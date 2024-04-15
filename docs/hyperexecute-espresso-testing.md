@@ -147,7 +147,7 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 
-> Response of above cURL will be a **JSON** object containing the `App URL` of the format - <lt://APP123456789123456789> and will be used in the next step.
+> Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
 
 #### Step 2: Upload the Test Suite
 
@@ -335,7 +335,8 @@ By following the instructions in this documentation, you can seamlessly execute 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      espresso Testing </span>
+      espresso Testing 
+      </span>
     </li>
   </ul>
 </nav>

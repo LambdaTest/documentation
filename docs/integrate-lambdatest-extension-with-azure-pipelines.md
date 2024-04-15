@@ -223,7 +223,7 @@ While configuring the LambdaTest Configuration Setup job, as shown above, check 
 
 Once you activate it, a LambdaTest Tunnel Options box will appear, which require the [modifiers/arguments](/docs/lambda-tunnel-modifiers/) to configure the tunnel as per requirement. Pass the LambdaTest Tunnel modifiers in JSON format in the options box.
 
-> Note: Make sure to use the camel case for passing the tunnel modifiers. For example, use sharedTunnel if you want to use the modifier --shared-tunnel. For our demo purpose, we will be using simple modifiers, such as --tunnel-name and --proxy-port: {“tunnelName”:”azure tunnel”, “proxyPort”:8050}
+> Note: Make sure to use the camel case for passing the tunnel modifiers. For example, use sharedTunnel if you want to use the modifier --shared-tunnel. For our demo purpose, we will be using simple modifiers, such as --tunnel-name and --proxy-port: &lbrace;“tunnelName”:”azure tunnel”, “proxyPort”:8050&rbrace;
 
 The LambdaTest Tunnel has been successfully configured now. You can test your locally hosted pages and privately hosted pages at the LambdaTest Platform using LambdaTest Tunnel.
 

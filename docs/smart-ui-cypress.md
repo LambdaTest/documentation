@@ -178,8 +178,7 @@ For additional information about Cypress framework please explore the documentat
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-     Smart UI with Cypress  </span>
+      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
     </li>
   </ul>
 </nav>

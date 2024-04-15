@@ -128,7 +128,7 @@ preDirectives:
     - npm config set registry <artifactory_URL>
 ```
 
-**Note**: Replace the placeholder value <artifactory_URL> with the link to your private node registry.
+**Note**: Replace the placeholder value &lt;artifactory_URL&gt; with the link to your private node registry.
 
 ***
 
