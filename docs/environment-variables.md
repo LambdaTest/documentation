@@ -122,8 +122,10 @@ Now that we have set up our LambdaTest Authentication Credentials as System Envi
 
 - For **JUnit** & **TestNG**:
 
-        lambdatestUserName = System.getenv("LT_USERNAME");
-        lambdatestAccessKey = System.getenv("LT_ACCESS_KEY");
+```
+  lambdatestUserName = System.getenv("LT_USERNAME");
+  lambdatestAccessKey = System.getenv("LT_ACCESS_KEY");
+```
 
 ### Python
 ***
