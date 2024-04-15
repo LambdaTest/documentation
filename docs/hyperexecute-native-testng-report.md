@@ -1,5 +1,5 @@
 ---
-id: hyperexeute-native-testng-report
+id: hyperexecute-native-testng-report
 title: Native TestNG Reports on HyperExecute
 hide_title: false
 sidebar_label: Native TestNG Reports
@@ -8,9 +8,9 @@ keywords:
     - native testng reports
     - hyperexecute testng reports
     - hyperexecute native testng testing
-url: https://www.lambdatest.com/support/docs/hyperexeute-native-testng-report/
+url: https://www.lambdatest.com/support/docs/hyperexecute-native-testng-report/
 site_name: LambdaTest
-slug: hyperexeute-native-testng-report/
+slug: hyperexecute-native-testng-report/
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,7 +30,7 @@ slug: hyperexeute-native-testng-report/
           "@type": "ListItem",
           "position": 3,
           "name": "Allure Reports",
-          "item": "https://www.lambdatest.com/support/docs/hyperexeute-native-testng-report/"
+          "item": "https://www.lambdatest.com/support/docs/hyperexecute-native-testng-report/"
         }]
       })
     }}
@@ -63,9 +63,7 @@ partialReports:
 - Define the `location` where the reports will be stored.
 - Provide a meaningful `frameworkName` for the Native TestNG Reports.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/testng-native-1.png').default} alt="Image"  className="doc_img"/>
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/testng-native-2.png').default} alt="Image"  className="doc_img"/>
+x
 
 ## Conclusion
 

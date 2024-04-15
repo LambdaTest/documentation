@@ -829,7 +829,7 @@ module.exports = {
             items: [
               "extent-report",
               "native-extent-report",
-              'hyperexeute-native-testng-report',
+              'hyperexecute-native-testng-report',
               "allure-reports",
               "cucumber-report",
               "playwright-html-report",
@@ -909,6 +909,21 @@ module.exports = {
           id: "hyperexecute-release-notes",
         },
         items: [
+          {
+            type: "doc",
+            label: "Release Notes 2.2.8",
+            id: 'hyperexecute-release-notes-2-2-8'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.2.7",
+            id: 'hyperexecute-release-notes-2-2-7'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.2.6",
+            id: 'hyperexecute-release-notes-2-2-6'
+          },
           {
             type: "doc",
             label: "Release Notes 2.2.5",
