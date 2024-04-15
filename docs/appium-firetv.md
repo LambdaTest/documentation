@@ -107,7 +107,7 @@ Upload your **Fire TV** application (.apk file) to the LambdaTest servers using 
 :::tip
 
 - If you do not have any **.apk** file, you can run your sample tests on LambdaTest by using our sample :link: [FireTV app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/fireos-sample-app.apk).
-- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - <lt://APP123456789123456789> and will be used in the next step.
+- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
 
 :::
 
@@ -305,7 +305,8 @@ Your test results would be displayed on the test console (or command-line interf
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Fire TV With Appium</span>
+      Fire TV With Appium
+      </span>
     </li>
   </ul>
 </nav>

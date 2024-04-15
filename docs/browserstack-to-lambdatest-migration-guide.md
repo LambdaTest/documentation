@@ -60,7 +60,7 @@ The following are the changes in the parameters:
 
 You can find Username and Access Key in the LambdaTest Profile Section of the Automation Dashboard.
 
-<<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/dashboard.webp').default} alt="Image" width="1024" height="667" />
+<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/dashboard.webp').default} alt="Image" width="1024" height="667" />
 
 When migrating from BrowserStack to LambdaTest, you need to make the following changes in the existing code:
 

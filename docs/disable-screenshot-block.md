@@ -125,7 +125,8 @@ You can use the appium capability to turn the **Disable Screenshot Block** on in
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Disable Screenshot Block</span>
+      Disable Screenshot Block
+      </span>
     </li>
   </ul>
 </nav>

@@ -333,7 +333,8 @@ Deploy your code in a reliable manner at scale using Drone CI integration with L
       <a className="breadcrumbs__link" target="_ self" href="https://www.lambdatest.com/support/docs/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Drone CI Integration with LambdaTest</span>
+      <span className="breadcrumbs__link">Drone CI Integration with LambdaTest
+      </span>
     </li>
   </ul>
 </nav>

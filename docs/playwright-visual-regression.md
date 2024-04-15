@@ -258,7 +258,8 @@ For additional information about Playwright framework please explore the documen
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Getting Started with Selenium Visual Regression  </span>
+      Getting Started with Selenium Visual Regression  
+      </span>
     </li>
   </ul>
 </nav>

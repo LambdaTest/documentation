@@ -183,7 +183,8 @@ Multiple options can be selected. By understanding these errors, you can debug i
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Install or Uninstall App</span>
+      Install or Uninstall App
+      </span>
     </li>
   </ul>
 </nav>

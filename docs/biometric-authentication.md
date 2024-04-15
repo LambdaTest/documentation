@@ -158,7 +158,8 @@ To use the web hook, passing **biometric** or **enableBiometricsAuthentication**
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Biometric Authentication</span>
+      Biometric Authentication
+      </span>
     </li>
   </ul>
 </nav>

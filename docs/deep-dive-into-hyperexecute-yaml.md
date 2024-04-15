@@ -853,8 +853,8 @@ captureCSVResult: true
 ```
 
 Below mentioned custom Lambda hooks are also required to be added in the Selenium script:
-lambda-start-timer=<some_label>
-lambda-end-timer=<some_label>
+lambda-start-timer=&lt;some_label&gt;
+lambda-end-timer=&lt;some_label&gt;
 These custom lambda hooks are basically used to track the amount of time taken by the Selenium command.
 
 Above performance stats artifact would be of the CSV format with headers as Label, Average, Min, Max, Median, P95, P99.
