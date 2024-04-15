@@ -52,6 +52,14 @@ They needed a robust end-to-end testing framework that can help them to deal wit
 
 However, for larger projects and complex testing scenarios, certain challenges emerged, including **Test Parallelization**, **CI Pipeline Infrastructure**, **Fail Fasts mechanism**, **Detailed Reports** etc. Here comes a need for an effective companion to augment the capabilities of Cypress.
 
+:::info
+Currently HyperExecute support these Operating Systems:
+
+- Linux
+- Windows -> Windows 10, Windows 11
+- macOS -> Monterra, Ventura
+:::
+
 ## Advantages of Integrating Cypress with HyperExecute
 
 **HyperExecute**, a powerful platform with features designed to seamlessly complement Cypress and address its limitations via:
