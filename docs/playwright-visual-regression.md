@@ -22,6 +22,8 @@ slug: playwright-visual-regression/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+
 
 ---
 This documentation will act as your step-by-step guide in to perform Playwright test with SmartUI.
