@@ -35,6 +35,10 @@ lambdatest-cypress <command> [options]
 | **build-info** | To get information about the build                     |
 | **build-stop** | To stop all the tests in the build                     |
 | **generate-report** | To generate the test session report               |
+| **--vip **, **--vi-project** | To set the smart ui project name. <br /> The acceptable data type is `string` |
+| **--vib** , **--vi-build** | To set the smart ui build name. <br /> The acceptable data type is `string` |
+| **--vibase** , **--vi-base** | To set that build as baseline for smart ui. <br /> The acceptable data type is `boolean` |
+
 
 ## init command
 ---
