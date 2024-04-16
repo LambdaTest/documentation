@@ -946,7 +946,7 @@ background:
 
 ***
 ##  `vars`
-This method allows you to name your variables. This will make the process of modifying the YAML file easier. You can use these variables in the YAML file as ${your_variable_name}.
+This method allows you to name your variables. This will make the process of modifying the YAML file easier. You can use these variables in the YAML file as &#36;&lbrace;your_variable_name&rbrace;.
 Below example shows how to use vars keyword and how to use the variables define under it at other places in yaml.
 
 ```bash
@@ -1152,7 +1152,7 @@ testSuites: - mvn test -Dtest=$files
 <!-- HYBRID MODE STARTED-->
 
 ## `parallelism`
-If we mention runson: ${matrix.os}, then we need to make sure that parallelism is defined as well. 
+If we mention runson: &#36;&lbrace;matrix.os&rbrace;, then we need to make sure that parallelism is defined as well. 
 There are 2 ways to define parallelism, either you can mention common parallelism which can be used in any platform or you can mention platform specific parallelism ex - winParallelism, linuxParallelism etc.
 ```bash
 parallelism: 2

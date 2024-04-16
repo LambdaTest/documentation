@@ -14,6 +14,9 @@ site_name: LambdaTest
 slug: cypress-testing-using-webkit/
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Cypress Testing Using WebKit
 ---
 

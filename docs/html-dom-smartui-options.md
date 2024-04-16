@@ -21,6 +21,7 @@ slug: html-dom-smartui-options/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 
 ---
 
