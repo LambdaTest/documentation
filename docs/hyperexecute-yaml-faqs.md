@@ -175,7 +175,7 @@ A sample testRunnerCommand to accomplish this is:
 ```bash
 testRunnerCommand: mvn test `-DselectedTests="$test" `-Dmaven.repo.local=./.m2 dependency:resolve `-Dbrowser=${browser} `-Dversion=${version}
 ```
-In this example, **browser** and **version** are the two choice parameters from Jenkins, as shown in the image below. You can call them in the YAML file as ${browser} and ${version} in the testRunnerCommand or testDiscovery command.
+In this example, **browser** and **version** are the two choice parameters from Jenkins, as shown in the image below. You can call them in the YAML file as &#36;&lbrace;browser&rbrace; and &#36;&lbrace;version&rbrace; in the testRunnerCommand or testDiscovery command.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/faq/hyperexecute-yaml-faqs.png').default} alt="Image" style={{width: '1000px',}} className="doc_img"/>
 
