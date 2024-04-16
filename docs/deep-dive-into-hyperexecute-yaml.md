@@ -748,7 +748,7 @@ To access the data from the JSON files, there are primarily 2 methods:
 In the JSON file, we have a data object and not an array of objects, hence you can directly read the data from the file.
 
 ```bash
-{ 
+{
   "Username": "user1",
   "Password": "pass1"
 }
