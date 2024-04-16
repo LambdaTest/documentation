@@ -138,8 +138,7 @@ That's it folks! That's all about the Lighthouse Performance Metrics with Lambda
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-         View Lighthouse Performance Metrics</span>
+      <span className="breadcrumbs__link">View Lighthouse Performance Metrics</span>
     </li>
   </ul>
 </nav>

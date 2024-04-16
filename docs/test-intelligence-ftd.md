@@ -10,6 +10,7 @@ site_name: LambdaTest
 slug: test-intelligence-flakiness-test-detection/
 ---
 import NewTag from '../src/component/newTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

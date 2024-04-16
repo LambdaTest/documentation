@@ -295,8 +295,7 @@ This example will run only the 2 classes & one test as mentioned from the TestSu
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Sharding in XCUIT</span>
+      <span className="breadcrumbs__link">Sharding in XCUIT</span>
     </li>
   </ul>
 </nav>

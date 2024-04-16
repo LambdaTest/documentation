@@ -22,6 +22,8 @@ slug: playwright-visual-regression/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+
 
 ---
 This documentation will act as your step-by-step guide in to perform Playwright test with SmartUI.
@@ -258,7 +260,8 @@ For additional information about Playwright framework please explore the documen
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Getting Started with Selenium Visual Regression  </span>
+      Getting Started with Selenium Visual Regression  
+      </span>
     </li>
   </ul>
 </nav>

@@ -127,7 +127,7 @@ import TabItem from '@theme/TabItem';
 :::tip
 
 - If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
-- Response of above cURL will be a **JSON** object containing the `App URL` of the format - <lt://APP123456789123456789> and will be used in the next step.
+- Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
 
 :::
 
@@ -199,7 +199,8 @@ We have now successfully attached to the session and can see & perform operation
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Appium Inspector </span>
+      Appium Inspector 
+      </span>
     </li>
   </ul>
 </nav>

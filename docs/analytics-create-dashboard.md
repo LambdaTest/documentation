@@ -101,7 +101,8 @@ You can add more widgets of the same type to your dashboard multiple times and a
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Create Your First Dashboard </span>
+      Create Your First Dashboard 
+      </span>
     </li>
   </ul>
 </nav>

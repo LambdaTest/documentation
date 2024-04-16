@@ -137,7 +137,8 @@ Other options:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Bitrise Integration XCUITest</span>
+       Bitrise Integration XCUITest
+       </span>
     </li>
   </ul>
 </nav>

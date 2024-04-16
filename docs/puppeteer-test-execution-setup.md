@@ -172,7 +172,7 @@ Puppeteer tests run with a `1920x1080` resolution by default for desktop browser
 
 | Capability | Description  | Expected Values | Example |
 | -------- | -----| ------------ | -----------------------------|
-| resolution   |  Specifying your desktop resolution before initiating the test |   String, **Default value**: 1920x1080 <br/> <br/> **Windows 11 & 10**: `1024x768, 1280x800, 1280x1024, 1366x768, 1440x900, 1680x1050, 1600x1200, 1920x1200, 1920x1080 and 2048x1536` <br/><br/> **macOS**: `1024x768, 1280x960, 1280x1024, 1600x1200 and 1920x1080`  | const caps = <br/>{<br/>'resolution': '1024x768',<br/>}; |
+| resolution   |  Specifying your desktop resolution before initiating the test |   String, **Default value**: 1920x1080 <br/> <br/> **Windows 11 & 10**: `1024x768, 1280x800, 1280x1024, 1366x768, 1440x900, 1680x1050, 1600x1200, 1920x1200, 1920x1080 and 2048x1536` <br/><br/> **macOS**: `1024x768, 1280x960, 1280x1024, 1600x1200 and 1920x1080`  | const caps = <br/>&lbrace;<br/>'resolution': '1024x768',<br/>&rbrace;; |
 
 ## Changing Browser Window Size
 ***

@@ -215,7 +215,8 @@ const capabilities = {
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      JavaScript Automation Testing  </span>
+      JavaScript Automation Testing  
+      </span>
     </li>
   </ul>
 </nav>

@@ -93,7 +93,7 @@ import TabItem from '@theme/TabItem';
 
 :::info Note
 
-Response of above cURL will be a **JSON** object containing the `App URL` of the format - <lt://APP123456789123456789> and will be used in the next step.
+Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
 
 :::
 
@@ -458,7 +458,8 @@ For more details, please refer to our guide on [Desired Capabilities in Appium] 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Appium Testing </span>
+      Appium Testing 
+      </span>
     </li>
   </ul>
 </nav>

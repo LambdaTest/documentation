@@ -49,8 +49,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 This guide details how to execute your **Playwright Real Device** tests on **HyperExecute**:
 <!-- 
-- [**Using Local System**](/support/docs/JUnit-on-hyperexecute-grid/#1-testing-using-local-system) - You can use your own local machine to execute tests.
-- [**Using Gitpod Platform**](/support/docs/JUnit-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account) -->
+- [**Using Local System**](/support/docs/junit-on-hyperexecute-grid/#1-testing-using-local-system) - You can use your own local machine to execute tests.
+- [**Using Gitpod Platform**](/support/docs/junit-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account) -->
 
 <!-- ## Testing Using Local System
 

@@ -99,7 +99,8 @@ You can not use the following filters simultaneously.
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Speeding up XCUI Tests</span>
+      Speeding up XCUI Tests
+      </span>
     </li>
   </ul>
 </nav>

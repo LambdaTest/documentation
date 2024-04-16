@@ -161,7 +161,8 @@ The title of the keys displayed on your iOS app settings page must be unique.
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      iOS App Settings</span>
+      iOS App Settings
+      </span>
     </li>
   </ul>
 </nav>

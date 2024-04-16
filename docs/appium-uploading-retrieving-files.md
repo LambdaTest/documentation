@@ -251,7 +251,8 @@ byte[] fileBase64 = driver.PullFile("@com.lambdatest.proverbial:documents/sample
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Uploading/Retrieving files on Real Devices</span>
+      Uploading/Retrieving files on Real Devices
+      </span>
     </li>
   </ul>
 </nav>

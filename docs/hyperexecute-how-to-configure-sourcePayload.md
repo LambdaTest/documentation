@@ -120,7 +120,8 @@ sourcePayload:
 
 ### Generating a Personal Access Token
 
-<details><summary>Generate Personal Access Token on GitHub</summary>
+<details>
+<summary>Generate Personal Access Token on GitHub</summary>
    You can generate a **PAT** on **GitHub** by following the steps below.
 
 ***
@@ -153,7 +154,8 @@ sourcePayload:
 
 </details>
 
-<details><summary>Generate Personal Access Token on GitLab</summary>
+<details>
+<summary>Generate Personal Access Token on GitLab</summary>
 
 1. Navigate to [GitLab Settings](https://gitlab.com/-/profile/personal_access_tokens).
 2. Enter **Token name** and add **Expiration date**.
@@ -167,7 +169,8 @@ sourcePayload:
 
 </details>
 
-<details><summary>Generate Project Access Token on GitLab</summary>
+<details>
+<summary>Generate Project Access Token on GitLab</summary>
 
 1. Navigate to the project for which you want to create a token.
 2. Select **Settings** from the top menu. Choose **Access Tokens** from the left sidebar.
@@ -178,7 +181,8 @@ sourcePayload:
 
 </details>
 
-<details><summary>Generate Repository Access Token on Bitbucket</summary>
+<details>
+<summary>Generate Repository Access Token on Bitbucket</summary>
 
 We need to follow the 2 steps mentioned below:
 1. Need to create the access token for bitbucket repo

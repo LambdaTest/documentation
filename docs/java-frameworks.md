@@ -286,7 +286,8 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Java Automation Testing </span>
+      Java Automation Testing 
+      </span>
     </li>
   </ul>
 </nav>

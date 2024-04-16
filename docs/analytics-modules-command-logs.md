@@ -141,7 +141,8 @@ The following are the steps to use Command Logs Analytics:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Command Errors </span>
+      Command Errors 
+      </span>
     </li>
   </ul>
 </nav>

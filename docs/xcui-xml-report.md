@@ -119,8 +119,7 @@ To fetch the XML reports for `all shards` in a shard build, use:
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      espresso Testing </span>
+      <span className="breadcrumbs__link"> espresso Testing </span>
     </li>
   </ul>
 </nav>

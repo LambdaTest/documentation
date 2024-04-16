@@ -343,7 +343,8 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Gauge Automation Testing  </span>
+      Gauge Automation Testing  
+      </span>
     </li>
   </ul>
 </nav>
