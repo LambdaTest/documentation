@@ -66,8 +66,8 @@ All the code samples in this documentation can be found on **LambdaTest's Github
 ### Step 2: Setup the Environment Variables
 
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [LambdaTest Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
-<Tabs className="docs__val">
 
+<Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
@@ -76,7 +76,6 @@ export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
 </TabItem>
-
 <TabItem value="powershell" label="Windows" default>
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
@@ -85,6 +84,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
 </TabItem>
+</Tabs>
 
 ### Step 3: Upload your Application
 Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
