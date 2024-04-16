@@ -435,9 +435,7 @@ DesiredCapabilities caps = new DesiredCapabilities();
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Java With Appium
-      </span>
+      <span className="breadcrumbs__link">Java With Appium</span>
     </li>
   </ul>
 </nav>
