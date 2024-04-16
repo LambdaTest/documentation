@@ -42,7 +42,7 @@ slug: hyperexecute-release-notes-2-2-6/
 
 HyperExecute now supports the Native TestNG Reports that offer a standardized and easily accessible summary of information extracted from raw Extent reports per Virtual Machine (VM) at the end of a HyperExecute job.
 
-> Read the [Native TestNG documentation](/support/docs/hyperexeute-native-testng-report/) to understand how to generate it.
+> Read the [Native TestNG documentation](/support/docs/hyperexecute-native-testng-report/) to understand how to generate it.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/testng-native-1.png').default} alt="Image"  className="doc_img"/>
 
