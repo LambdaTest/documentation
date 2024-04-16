@@ -77,7 +77,7 @@ Once the test gets executed, you will find a `build_id` on the console correspon
 <img loading="lazy" src={require('../assets/images/cypress/cypress5.png').default} alt="Image" width="1282" height="722" className="doc_img"/>
 
 ### Method 2: Get session_id In lambdatest_run.json
-To downlaod the artifacts for a test that is already executed with `downloads` key in run settings. 
+To download the artifacts for a test that is already executed with `downloads` key in run settings. 
 
 Go to your `lambdatest_run.json` file and copy the `session_id`.
 
