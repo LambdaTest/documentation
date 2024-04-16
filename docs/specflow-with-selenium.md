@@ -177,8 +177,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      SpecFlow Automation Testing  </span>
+      <span className="breadcrumbs__link"> SpecFlow Automation Testing  </span>
     </li>
   </ul>
 </nav>

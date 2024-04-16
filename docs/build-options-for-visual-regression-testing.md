@@ -215,7 +215,8 @@ We are provide multiple build status options for the project owners to check the
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-     Smart UI with Cypress  </span>
+     Smart UI with Cypress  
+     </span>
     </li>
   </ul>
 </nav>

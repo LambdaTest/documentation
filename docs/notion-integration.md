@@ -112,7 +112,7 @@ We will perform one-click bug looging while perform Real Time Testing.
 
 2. Enter the test URL, select the test environment details like Browser, Browser versions, OS and Resolution. Then click on **'START'**.
 
-<<img loading="lazy" src={require('../assets/images/notion-integration/select-config.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/notion-integration/select-config.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
 3. A cloud-based virtual machine will launch where you can perform real time testing of websites and web apps. If you found a bug, click on the **'Mark as Bug'** icon from the left tool bar to grab the screenshot.  
 

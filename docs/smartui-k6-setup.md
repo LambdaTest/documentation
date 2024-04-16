@@ -258,8 +258,7 @@ For additional information about K6 framework please explore the documentation [
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Getting Started with Selenium Visual Regression  </span>
+      <span className="breadcrumbs__link"> Getting Started with Selenium Visual Regression  </span>
     </li>
   </ul>
 </nav>

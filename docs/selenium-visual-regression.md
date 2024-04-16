@@ -640,8 +640,7 @@ This may take a few seconds to process the screenshot. Please ensure that you ha
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Getting Started with Selenium Visual Regression  </span>
+      <span className="breadcrumbs__link"> Getting Started with Selenium Visual Regression  </span>
     </li>
   </ul>
 </nav>

@@ -97,7 +97,7 @@ LambdaTest now allows you to select a network profile before running automation 
 
 | JAVASCRIPT EXECUTOR COMMAND | REQUEST PARAMETERS                                                    | EXAMPLE                                                                                                         |
 | ----------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| networkProfile              | condition: a string or object representing browser network conditions | driver.execute_script(“networkProfile”, {“condition”: {“download”: 500,“upload”: 100,“latency”: 30}}) |
+| networkProfile              | condition: a string or object representing browser network conditions | driver.execute_script(“networkProfile”, &lbrace;“condition”: &lbrace;“download”: 500,“upload”: 100,“latency”: 30&rbrace;&rbrace;) |
 
 ## Configuring Network Throttling In Test Automation
 

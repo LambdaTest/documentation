@@ -124,8 +124,7 @@ rkresults
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      RKTracer Integration</span>
+      <span className="breadcrumbs__link">RKTracer Integration</span>
     </li>
   </ul>
 </nav>

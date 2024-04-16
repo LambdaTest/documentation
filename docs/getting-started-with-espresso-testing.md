@@ -112,7 +112,7 @@ import TabItem from '@theme/TabItem';
 
 :::note
 
-Response of above cURL will be a **JSON** object containing the `App URL` of the format - <lt://APP123456789123456789> and will be used in the last step.
+Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the last step.
 
 :::
 
@@ -150,7 +150,7 @@ Upload your **test suite** (.apk file) to the LambdaTest servers using our **RES
 
 :::note
 
-Response of above cURL will be a **JSON** object containing the `App URL` of the format - <lt://APP123456789123456789> and will be used in the next step.
+Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
 
 :::
 
@@ -328,7 +328,8 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/bu
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Espresso Testing </span>
+      Espresso Testing 
+      </span>
     </li>
   </ul>
 </nav>

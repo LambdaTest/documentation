@@ -144,7 +144,7 @@ import TabItem from '@theme/TabItem';
 
 :::info Note
 
-Response of above cURL will be a **JSON** object containing the `App URL` of the format - <lt://APP123456789123456789> and will be used in the Step 2.
+Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the Step 2.
 
 :::
 

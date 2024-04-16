@@ -91,7 +91,8 @@ Follow the below-mentioned steps to interact with the browser manually in an aut
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Live Interaction </span>
+      Live Interaction 
+      </span>
     </li>
   </ul>
 </nav>

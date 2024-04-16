@@ -439,8 +439,7 @@ let capabilities = {
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Test Settings Options </span>
+      <span className="breadcrumbs__link"> Test Settings Options </span>
     </li>
   </ul>
 </nav>

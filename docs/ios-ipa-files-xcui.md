@@ -161,7 +161,8 @@ This process will overwrite the **Build settings** at the Project Level to the g
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      XCUI Testing</span>
+      XCUI Testing
+      </span>
     </li>
   </ul>
 </nav>
