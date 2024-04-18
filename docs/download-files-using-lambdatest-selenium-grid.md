@@ -42,11 +42,14 @@ slug: download-files-using-lambdatest-selenium-grid/
     }}
 ></script>
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Download Files Using LambdaTest Selenium Grid
 
 ***
 
-While you perform Selenium test automation, you may want to test the download functionality of your web-application or website. With LambdaTest [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/), you can test the download feature of your web-application on 3000+ real browsers for mobile and desktop. You can download a file inside the test machine through your Selenium test automation script by Base64 encryption & decryption.
+While you perform Selenium test automation, you may want to test the download functionality of your web-application or website. With LambdaTest Selenium Grid, you can test the download feature of your web-application on 3000+ real browsers for mobile and desktop. You can download a file inside the test machine through your Selenium test automation script by Base64 encryption & decryption.
 
 LambdaTest Selenium Grid will provide you with an encoded string of base64 which you can leverage to download any file inside the virtual machine triggered through your Selenium testing scripts. For this, LambdaTest has provided three main flags using JavascriptExecutor to:
 
@@ -74,7 +77,113 @@ Response: List of files in downloads dir starting with sample
 
 ## Downloading File Using Selenium With Java
 ***
-```javascript
+<Tabs className="docs__val">
+<TabItem value="android" label="Selenium 4" default>
+
+```java 
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Base64;
+import java.util.HashMap;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class PullFileSelenium {
+    public String username = "johnduo";
+    public String accesskey = "Y6TyVzfvvWrK8bo2tNABUYR9e8RduQPCu2tN";
+    public RemoteWebDriver driver;
+    public String gridURL = "@hub.lambdatest.com/wd/hub";
+    String status = "passed";
+
+    @BeforeTest
+    public void setUp() throws Exception {
+
+        ChromeOptions options = new ChromeOptions();
+
+        HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+        ltOptions.put("version", "123.0");
+        ltOptions.put("platform", "Linux");
+        ltOptions.put("build", "Download functionality test");
+        ltOptions.put("name", "LT Test");
+        ltOptions.put("network", true); // To enable network logs
+        ltOptions.put("visual", true);
+        ltOptions.put("video", true); // To enable video recording`
+        ltOptions.put("console", true); // To capture console logs
+        options.setCapability("lt:Options", ltOptions);
+
+        try {
+
+            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), options);
+
+        } catch (MalformedURLException e) {
+            System.out.println("Invalid grid URL");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    @Test()
+    public void fileDownload() throws Exception {
+        try {
+
+            driver.get("https://file-examples.com/wp-content/storage/2017/02/file_example_XLSX_10.xlsx");
+
+            Thread.sleep(4000);
+
+            Assert.assertEquals(
+                    ((JavascriptExecutor) driver).executeScript("lambda-file-exists=file_example_XLSX_10.xlsx"),
+                    true); // file exist check
+
+            System.out.println(
+                    ((JavascriptExecutor) driver).executeScript("lambda-file-stats=file_example_XLSX_10.xlsx")); // retrieve
+            // file
+            // stats
+
+            String base64EncodedFile = ((JavascriptExecutor) driver)
+                    .executeScript("lambda-file-content=file_example_XLSX_10.xlsx").toString(); // file content download
+            System.out.println(base64EncodedFile);
+
+            byte[] data = Base64.getDecoder().decode(base64EncodedFile);
+            OutputStream stream = new FileOutputStream("file_example_XLSX_10.xlsx");
+            stream.write(data);
+
+        } catch (NoSuchElementException e) {
+            System.out.println(e.getMessage());
+
+            SessionId id = driver.getSessionId();
+            System.out.println("Failed test session id: " + id.toString());
+        }
+
+    }
+
+    @AfterTest
+    public void tearDown() throws Exception {
+        if (driver != null) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            driver.quit();
+        }
+    }
+}
+```
+
+</TabItem>
+
+<TabItem value="ios" label="Selenium 3" default>
+
+```java
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.net.MalformedURLException;
@@ -179,6 +288,11 @@ public class DownloadCheck {
 	}
 }
 ```
+
+</TabItem>
+
+</Tabs>
+
 
 ## Downloading File Using Selenium With Python
 ***
