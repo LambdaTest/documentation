@@ -2135,10 +2135,23 @@ module.exports = {
         id: "smart-visual-regression-testing",
       },
       {
-        type: "doc",
-        label: "Setup with Storybook",
-        id: "smart-ui-storybook",
+        type: "category",
+        collapsed: true,
+        label: "CLI - Storybook",
+        items: [
+          {
+            type: "doc",
+            label: "Setup with Storybook",
+            id: "smart-ui-storybook",
+          },
+          {
+            type: "doc",
+            label: "Branching Strategy",
+            id: "smartui-git-branching-strategy"
+          }
+        ]
       },
+      
       {
         type: "doc",
         label: "Setup with CLI",
@@ -2183,7 +2196,8 @@ module.exports = {
           "smartui-puppeteer-sdk",
           "smartui-testcafe-sdk",
           "smartui-cypress-sdk",
-          "smartui-sdk-config-options"
+          "smartui-sdk-config-options",
+          "smartui-cli-git-branching-strategy"
         ],
       },
       {
