@@ -1,7 +1,7 @@
 ---
 id: testing-locally-hosted-pages
-title: Perform Testing Of Locally Hosted Web Pages
-hide_title: true
+title: Test Locally Hosted Web Pages
+hide_title: false
 sidebar_label: Testing Locally Hosted Pages
 description: Test your locally hosted web applications for cross browser compatibility across 3000+ browser and OS combinations with LambdaTest.
 keywords:
@@ -42,14 +42,19 @@ slug: testing-locally-hosted-pages/
       })
     }}
 ></script>
+**LambdaTest Tunnel** is a secure and encrypted tunneling feature that allows devs and QAs to test their locally hosted web applications or websites on the cloud-based real machines. It establishes a secure connection between the user’s local machine and the real machine in the cloud **via TCP - 443 port**.
 
-# Testing Locally Hosted Pages
+<img loading="lazy" src={require('../assets/images/tunnel/tunnel.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
----
+## Why to Use LambdaTest Tunnel?
 
-You can test your locally hosted pages and privately hosted pages at LambdaTest [Selenium Test Automation](https://www.lambdatest.com/selenium-automation) Platform using LambdaTest tunnel app. The LambdaTest tunnel allows you to connect your local system with LambdaTest servers via SSH based integration tunnel. Once this tunnel is established you can test your locally hosted pages on all 3000+ browser environments present on the platform.
+LambdaTest Tunnel offers numerous benefits for web developers, testers, and QA professionals. These include secure and encrypted connection, cross-browser compatibility testing, localhost testing, etc.
 
-Here’s a short video on how to connect LambdaTest tunnel
+- **Secured and Encrypted :** It provides a secure and encrypted connection between your local machine and the virtual machines in the cloud, thereby ensuring the privacy of your test data and online communications.
+- **Cost Effective :** With LambdaTest Tunnel, you can test your web applications or websites, local folder, and files across a wide range of browsers and operating systems without setting up complex and expensive local testing environments.
+- **Test on Real Environment :** It lets you test your locally hosted web applications or websites on cloud-based real OS machines. You can even run accessibility tests on desktop browsers while testing locally hosted web applications and pages.
+
+## How to Connect LambdaTest Tunnel?
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="1B27vRreyKU">
@@ -57,7 +62,7 @@ Here’s a short video on how to connect LambdaTest tunnel
 </div>
 </div>
 
-**LambdaTest Tunnel Guide**
+## LambdaTest Tunnel Guide
 
 <div className="download_btn mb-10"> <a href="/docs/local-testing-windows/">How To Connect LambdaTest Tunnel For Windows?</a></div>
 
