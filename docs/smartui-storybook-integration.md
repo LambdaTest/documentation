@@ -1,7 +1,7 @@
 ---
 id: smart-ui-storybook
 title: Getting started with Smart UI using Storybook On LambdaTest
-sidebar_label: CLI - Storybook
+sidebar_label: Setup with Storybook
 description: In this documentation, learn how to perform Visual UI Testing with Storybook on the LambdaTest Automation Cloud across 40+ browser versions.
 keywords:
   - Visual Regression
