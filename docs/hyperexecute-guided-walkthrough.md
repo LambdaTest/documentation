@@ -254,7 +254,7 @@ These commands utilize `--labels` to specify the parameter being configured and 
 
 - #### Dynamic Build Creation:
 
-  Specifying `buildPrefix` results in the creation of a new build for each executed job. The build name format follows **buildPrefix-{jobID}** to ensure uniqueness.
+  Specifying `buildPrefix` results in the creation of a new build for each executed job. The build name format follows **buildPrefix-&lbrace;jobID&rbrace;** to ensure uniqueness.
 
 - #### Compatibility of Build Naming Variables:
 
