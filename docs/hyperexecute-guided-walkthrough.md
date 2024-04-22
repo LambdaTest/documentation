@@ -205,7 +205,7 @@ This can be activated in two ways:
 
   - **`buildPrefix`**: This parameter sets a custom prefix for dynamically generated build names. The format employs ${name} as a placeholder, which will be replaced with a specific value during configuration.
 
-  - **`buildName`**: This parameter allows you to define a specific name for the build. Similar to buildPrefix, ${name} acts as a placeholder for a custom value.
+  - **`buildName`**: This parameter allows you to define a specific name for the build. Similar to buildPrefix, $&lbrace;name&rbrace; acts as a placeholder for a custom value.
 
   ```bash
   buildConfig:
