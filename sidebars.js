@@ -1476,6 +1476,27 @@ module.exports = {
     ]
   ],
 
+  RealDeviceSidebar: [
+    {
+      type: 'link',
+      label: '<- Back',
+      href: '/docs/web-automation',
+      customProps: {
+        className: 'back-to-main-menu'
+      },
+    },
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Real Device App Testing",
+        items: [
+          "real-device-app-testing"
+        ],
+      },
+    ]
+  ],
+
   SeleniumTestingSidebar: [
     {
       type: 'link',
