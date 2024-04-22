@@ -128,6 +128,13 @@ slug: /
          <a href="/support/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>
       </div>
     </div>
+
+<div className="home_inners_box">
+       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Realtime-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Realtime-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Real Device</h2>
+      <div className="home_inners">
+        <a href="/support/docs/real-device-app-testing/" ><p className="p_home_inners">Real Device App Testing</p></a>
+      </div>
+    </div>
     <div className="home_inners_box">
        <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/testing-locally-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Testing Locally</h2>
       <div className="home_inners">
@@ -140,6 +147,12 @@ slug: /
         <a href="/support/docs/charles-proxy/"><p className="p_home_inners">Charles Proxy</p></a>
       </div>
     </div>
+    </div>
+
+<!-- end of second section -->
+
+<!-- start of third section -->
+<div className="home_main">
     <div className="home_inners_box">
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Integration-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Integration-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Integrations</h2>
       <div className="home_inners">
@@ -151,12 +164,6 @@ slug: /
         <a href="/support/docs/plugins-and-extensions/"><p className="p_home_inners">Plugin and Extensions</p></a>
       </div>
     </div>
-  </div>
-
-<!-- end of second section -->
-
-<!-- start of third section -->
-<div className="home_main">
     <div className="home_inners_box">
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Accessibility DevTools</h2>
       <div className="home_inners">
