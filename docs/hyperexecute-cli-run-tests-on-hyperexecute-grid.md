@@ -297,4 +297,4 @@ set CI=true
 
 #### Output
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/quiet-mode.webp').default} alt="Image" width="1350" height="619" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/cli/cli-execute.png').default} alt="Image" width="1350" height="619" className="doc_img"/>

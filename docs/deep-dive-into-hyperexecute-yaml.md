@@ -749,9 +749,9 @@ To access the data from the JSON files, there are primarily 2 methods:
 In the JSON file, we have a data object and not an array of objects, hence you can directly read the data from the file.
 
 ```bash
-{ 
-  "Username": "user1".
-  "Password": "pass1"
+{
+  "Username": "user1",
+  "Password": "pass1" 
 }
 ```
 
@@ -982,6 +982,7 @@ The options to use when running the [tunnel](/support/docs/deep-dive-into-hypere
 |`global`| Boolean | Should the tunnel be enabled for all the steps? Default true. |
 |`systemProxy`| Boolean | Should the tunnel be OS system wide? Default false. |
 |`checkTunnelOnFailure`| Boolean | Check tunnel on failure adds a check on our system to check the tunnel connection if a test fails and the tunnel is set to true. This option will retry the test 2 times if tunnel connection is flaky. |
+|`--expose`| | This flag takes arguments in the form of `service_name:host_name_host_port`. <br /> When you trigger a test, there are environment variables exposed in the machine with the variable name :- <br /> 1. `service_name_PROXY_HOST` <br /> 2. `service_name_PROXY_PORT` |
 
 ```bash
 tunnel: true
@@ -1000,6 +1001,19 @@ tunnelOpts:
 	global: true
   #------OR------
 	systemProxy: true
+```
+
+```bash
+pre:
+  - echo %LT_PROXY_PORT%
+  - echo %LT_PROXY_HOST%
+  - echo %MYSQL_PROXY_HOST%
+  - echo %MYSQL_PROXY_PORT%
+
+tunnel: true
+tunnelOpts:
+  args: 
+    - "--expose mysql:localhost:3306"
 ```
 
 ***

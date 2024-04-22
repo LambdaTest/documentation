@@ -42,7 +42,9 @@ slug: testing-locally-hosted-pages/
       })
     }}
 ></script>
-**LambdaTest Tunnel** is a secure and encrypted tunneling feature that allows devs and QAs to test their locally hosted web applications or websites on the cloud-based real machines. It establishes a secure connection between the user’s local machine and the real machine in the cloud **via TCP - 443 port**.
+**LambdaTest Tunnel** is a secure and encrypted tunneling feature that allows devs and QAs to test their locally hosted web applications or websites on the cloud-based real machines. It establishes a secure connection between the user’s local machine and the real machine in the cloud.
+
+There are multiple connectivity options like **SSH (port 22 or 443)**, **TCP- port 443** or **websocket over 443**. Tunnel Binary performs network scanning and selects the best mode if not explicitly specified.
 
 <img loading="lazy" src={require('../assets/images/tunnel/tunnel.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
