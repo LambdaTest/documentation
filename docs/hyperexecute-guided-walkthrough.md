@@ -139,13 +139,13 @@ You can see the details of your test on the panel on the top of the screen. It c
     <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/11.png').default} alt="Image"  className="doc_img"/>  
 
 
-### Videos & Screenshots 
+### Videos and Screenshots 
 
 HyperExecute provides you with tools like videos and screenshots of your tests to give you a clear picture of what goes on in the background.
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/12.png').default} alt="Image"  className="doc_img"/> 
 
-### Commands & Logs
+### Commands and Logs
 
 You can access the commands involved in the test, and the logs on the right hand side on this Dashboard.
 
@@ -184,7 +184,7 @@ This can be activated in two ways:
 
   The YAML configuration file utilizes the `buildConfig` to manage hyperlink behavior based on test status. Here's a breakdown of the parameters within buildConfig:
 
-  - **`buildPrefix`**: This parameter sets a custom prefix for dynamically generated build names. The format employs ${name} as a placeholder, which will be replaced with a specific value during configuration.
+  - **`buildPrefix`**: This parameter sets a custom prefix for dynamically generated build names. The format employs $&lbrace;name&rbrace; as a placeholder, which will be replaced with a specific value during configuration.
 
   - **`buildName`**: This parameter allows you to define a specific name for the build. Similar to buildPrefix, $&lbrace;name&rbrace; acts as a placeholder for a custom value.
 
