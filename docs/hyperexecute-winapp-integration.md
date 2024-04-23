@@ -1,8 +1,8 @@
 ---
-id: he-excel
-title: Microsoft Excel
+id: hyperexecute-winapp-integration
+title: WinAppDriver
 hide_title: true
-sidebar_label: Microsoft Excel
+sidebar_label: WinAppDriver
 description: Unlock enhanced automation testing by seamlessly integrating Excel with HyperExecute using LambdaTest's support documentation.
 keywords:
   - LambdaTest Hyperexecute
@@ -11,9 +11,9 @@ keywords:
   - Integrations
   - Products
   - Microsoft Excel
-url: https://www.lambdatest.com/support/docs/hyperexecute-excel-integration/
+url: https://www.lambdatest.com/support/docs/hyperexecute-winapp-integration/
 site_name: LambdaTest
-slug: hyperexecute-excel-integration/
+slug: hyperexecute-winapp-integration/
 ---
 
 <script type="application/ld+json"
@@ -34,15 +34,15 @@ slug: hyperexecute-excel-integration/
           "@type": "ListItem",
           "position": 3,
           "name": "Integration with Products",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-excel-integration/"
+          "item": "https://www.lambdatest.com/support/docs/hyperexecute-winapp-integration/"
         }]
       })
     }}
 ></script>
 
-# Microsoft Excel with HyperExecute
+# WinAppDriver Integration with HyperExecute
 
-You can use HyperExecute run your tests that are based on Microsoft Excel. To do this, we use the TestNG framework. If you need some help with creating a TestNG project, you can go through [this page](https://www.lambdatest.com/blog/create-testng-project-in-eclipse-run-selenium-test-script/). 
+You can use HyperExecute run your tests that are based on Microsoft Office Suite. To do this, we use the TestNG framework. If you need some help with creating a TestNG project, you can go through [this page](https://www.lambdatest.com/blog/create-testng-project-in-eclipse-run-selenium-test-script/). 
 
 You can go through the page below to understand how you can use HyperExecute to run your test cases. 
 

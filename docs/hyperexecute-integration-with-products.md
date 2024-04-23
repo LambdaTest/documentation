@@ -75,13 +75,6 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   </div>
   </a>
 
-  <a href = "/support/docs/hyperexecute-excel-integration/">
-  <div className="support_inners">
-    <h3>Microsoft Excel</h3>
-    <p>Perform the testing for the tests that are based on Microsoft Excel for TestNG Framework.</p>
-  </div>
-  </a>
-
   <a href = "/support/docs/hyperexecute-provar-integration/">
   <div className="support_inners">
     <h3>Provar</h3>
@@ -121,6 +114,13 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   <div className="support_inners">
     <h3>Tosca</h3>
     <p>Optimize and accelerate end-to-end testing for your entire digital landscape.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-winapp-integration/">
+  <div className="support_inners">
+    <h3>WinAppDriver</h3>
+    <p>Perform the testing for the tests that are based on Microsoft Office Suite for TestNG Framework.</p>
   </div>
   </a>
 
