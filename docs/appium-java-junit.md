@@ -2,7 +2,7 @@
 id: appium-java-junit
 title: Appium With JUnit
 sidebar_label: JUnit
-description: Now you can run your Appium automation scripts using JUnit on LambdaTest Real Device Cloud Platform of 3000+ real mobile devices.
+description: Automate Mobile App using Java Appium Testing with JUnit Framework
 keywords:
   - appium
   - java
