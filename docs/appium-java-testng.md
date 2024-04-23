@@ -128,7 +128,6 @@ An automation script for the sample application given above has been provided he
 <TabItem value="android" label="Android" default>
 
 ```java title="AndroidApp.java"
-
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
@@ -231,8 +230,6 @@ public class AndroidApp {
                 e.printStackTrace();
             }
         }
-
-
     }
 }
 ```
