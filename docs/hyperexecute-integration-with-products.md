@@ -43,6 +43,8 @@ slug: hyperexecute-integration-with-products/
 
 LambdaTest now offers you the chance to integrate HyperExecute with products like Tosca, Katalon and more. You can go through the links below to see the integrations we offer at the moment. 
 
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/hyp-products.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
 <div className="support_main">
 
   <a href = "/support/docs/hyperexecute-accelq-integration/">
