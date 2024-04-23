@@ -13,6 +13,8 @@ keywords:
   - testing local web pages
   - secure-shell-tunnel
   - ssh tunnel
+  - tcp
+  - websocket
 image: /resources/images/og-images/Testing-Locally-Hosted-Pages-min.jpg
 url: https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/
 site_name: LambdaTest

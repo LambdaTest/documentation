@@ -114,21 +114,9 @@ It provides you with all the necessary data points that you need for your test.
 ### Top Panel 
 
 -   **Create an Issue**:  You can create an issue/tickets on directly onto Slack, Jira etc with the integrations that we provide.
-<!--
-    <img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/23.png').default} alt="Image"  className="doc_img"/>
-    <img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/24.png').default} alt="Image"  className="doc_img"/>
--->
 -   **Analytics**: You can access the analytics of all of your tests by clicking on the **Analytics** button.
-<!--
-    <img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/25.png').default} alt="Image"  className="doc_img"/>
--->
 -   **Access Key**: Your Username and Access Key can be accessed by clicking on the **Access Key** button on the top right-hand side of the dashboard.  
-    
 -   **Help**: Click on the **Question Mark (?)** icon to access the Help Center.
-<!--
-    <img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/26.png').default} alt="Image" style={{width: '300px',}} className="doc_img"/>  
--->
-
 ### Basic Summary
 You can see the details of your test on the panel on the top of the screen. It contains several details like the browser, the test status, the test name, and more.
 
@@ -156,13 +144,6 @@ You can see the details of your test on the panel on the top of the screen. It c
 HyperExecute provides you with tools like videos and screenshots of your tests to give you a clear picture of what goes on in the background.
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/12.png').default} alt="Image"  className="doc_img"/> 
-
-  
-<!-- 
--   **Basic Info**: Contains information of your test, such as, your username, the test duration, etc.  
--   **Input Config**: Configuration that HyperExecute used to run your test.
--   **Videos**: View or Download the video of the entire test execution.
--   **Screenshots**: Download the screenshots taken during the course of test execution.   -->
 
 ### Commands & Logs
 
@@ -269,19 +250,13 @@ If you need more help regarding HyperExecute, click on **Support** to speak to L
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Guided Walkthrough
-      </span>
+      <span className="breadcrumbs__link">Guided Walkthrough</span>
     </li>
   </ul>
 </nav>
