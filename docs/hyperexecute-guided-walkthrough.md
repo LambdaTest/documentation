@@ -174,7 +174,7 @@ This can be activated in two ways:
 
 - #### Frontend Activation :
 
-  > For frontend activation, please contact us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+  > For frontend activation, please contact us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
 
 - #### Backend Configuration :
 
@@ -186,7 +186,7 @@ This can be activated in two ways:
 
   - **`buildPrefix`**: This parameter sets a custom prefix for dynamically generated build names. The format employs $&lbrace;name&rbrace; as a placeholder, which will be replaced with a specific value during configuration.
 
-  - **`buildName`**: This parameter allows you to define a specific name for the build. Similar to buildPrefix, ${name} acts as a placeholder for a custom value.
+  - **`buildName`**: This parameter allows you to define a specific name for the build. Similar to buildPrefix, $&lbrace;name&rbrace; acts as a placeholder for a custom value.
 
   ```bash
   buildConfig:
@@ -235,7 +235,7 @@ These commands utilize `--labels` to specify the parameter being configured and 
 
 - #### Dynamic Build Creation:
 
-  Specifying `buildPrefix` results in the creation of a new build for each executed job. The build name format follows **buildPrefix-{jobID}** to ensure uniqueness.
+  Specifying `buildPrefix` results in the creation of a new build for each executed job. The build name format follows **buildPrefix-&lbrace;jobID&rbrace;** to ensure uniqueness.
 
 - #### Compatibility of Build Naming Variables:
 
