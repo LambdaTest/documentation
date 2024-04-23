@@ -365,3 +365,5 @@ await driver.executeScript("smartui.takeScreenshot", config);
 </TabItem>
 
 </Tabs>
+
+> **NOTE :** Please contact [Customer Support](mailto:support@lambdatest.com) team to enable the **ignoreDOM** feature.

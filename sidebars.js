@@ -589,11 +589,6 @@ module.exports = {
               },
               {
                 type: "doc",
-                label: "Microsoft Excel",
-                id: "he-excel",
-              },
-              {
-                type: "doc",
                 label: "Provar",
                 id: "hyperexecute-provar-integration",
               },
@@ -630,6 +625,11 @@ module.exports = {
                   "tosca-integration-with-hyperexecute-using-dex",
                   "tosca-integration-with-hyperexecute-for-sap"
                 ]
+              },
+              {
+                type: "doc",
+                label: "WinApp Driver",
+                id: "hyperexecute-winapp-integration",
               },
               {
                 type: 'doc',
@@ -909,6 +909,11 @@ module.exports = {
           id: "hyperexecute-release-notes",
         },
         items: [
+          {
+            type: "doc",
+            label: "Release Notes 2.2.9",
+            id: 'hyperexecute-release-notes-2-2-9'
+          },
           {
             type: "doc",
             label: "Release Notes 2.2.8",

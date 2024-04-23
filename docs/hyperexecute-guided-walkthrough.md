@@ -114,21 +114,9 @@ It provides you with all the necessary data points that you need for your test.
 ### Top Panel 
 
 -   **Create an Issue**:  You can create an issue/tickets on directly onto Slack, Jira etc with the integrations that we provide.
-<!--
-    <img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/23.png').default} alt="Image"  className="doc_img"/>
-    <img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/24.png').default} alt="Image"  className="doc_img"/>
--->
 -   **Analytics**: You can access the analytics of all of your tests by clicking on the **Analytics** button.
-<!--
-    <img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/25.png').default} alt="Image"  className="doc_img"/>
--->
 -   **Access Key**: Your Username and Access Key can be accessed by clicking on the **Access Key** button on the top right-hand side of the dashboard.  
-    
 -   **Help**: Click on the **Question Mark (?)** icon to access the Help Center.
-<!--
-    <img loading="lazy" src={require('../assets/images/hyperexecute-guided-walkthrough/26.png').default} alt="Image" style={{width: '300px',}} className="doc_img"/>  
--->
-
 ### Basic Summary
 You can see the details of your test on the panel on the top of the screen. It contains several details like the browser, the test status, the test name, and more.
 
@@ -151,20 +139,13 @@ You can see the details of your test on the panel on the top of the screen. It c
     <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/11.png').default} alt="Image"  className="doc_img"/>  
 
 
-### Videos & Screenshots 
+### Videos and Screenshots 
 
 HyperExecute provides you with tools like videos and screenshots of your tests to give you a clear picture of what goes on in the background.
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/12.png').default} alt="Image"  className="doc_img"/> 
 
-  
-<!-- 
--   **Basic Info**: Contains information of your test, such as, your username, the test duration, etc.  
--   **Input Config**: Configuration that HyperExecute used to run your test.
--   **Videos**: View or Download the video of the entire test execution.
--   **Screenshots**: Download the screenshots taken during the course of test execution.   -->
-
-### Commands & Logs
+### Commands and Logs
 
 You can access the commands involved in the test, and the logs on the right hand side on this Dashboard.
 
@@ -180,8 +161,87 @@ You can access the commands involved in the test, and the logs on the right hand
 
 >**Note**: You can download the logs by clicking on the Download button on the top right-hand corner of the logs tab. 
 
+## Test Summary Hyperlink
 
-### Support
+This introduces clickable links within your **test summary**. When you click on these hyperlinks, it dynamically redirects you to the automation dashboard, providing immediate access to detailed test information corresponding to the specific test status clicked.
+
+Additionally, upon redirection, the automation dashboard opens the relevant tab that aligns with the selected test status, streamlining your experience.
+
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/16.png').default} alt="Image"  className="doc_img"/> 
+
+### How to Activate Test Summary Hyperlinks
+This can be activated in two ways:
+
+- #### Frontend Activation :
+
+  > For frontend activation, please contact us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+
+- #### Backend Configuration :
+
+  Update your designated [HyperExecute YAML](/support/docs/hyperexecute-yaml-parameters/) file configuration to activate the "**Test Summary Hyperlink**" feature. This configuration allows you to define specific parameters that govern the behavior of the hyperlinks based on the test summary status.
+
+  #### YAML Configuration Details
+
+  The YAML configuration file utilizes the `buildConfig` to manage hyperlink behavior based on test status. Here's a breakdown of the parameters within buildConfig:
+
+  - **`buildPrefix`**: This parameter sets a custom prefix for dynamically generated build names. The format employs $&lbrace;name&rbrace; as a placeholder, which will be replaced with a specific value during configuration.
+
+  - **`buildName`**: This parameter allows you to define a specific name for the build. Similar to buildPrefix, $&lbrace;name&rbrace; acts as a placeholder for a custom value.
+
+  ```bash
+  buildConfig:
+    buildPrefix: myCustomBuildPrefix-${name}
+    buildName : "name=${name}"
+  ```
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/17.png').default} alt="Image"  className="doc_img"/>
+
+
+:::info NOTE
+### Dynamic Build Naming via CLI
+
+If you prefer to set `buildPrefix` and `buildName` values through the command-line interface (CLI), the following commands can be used:
+
+To set `buildPrefix`:
+```bash
+--labels buildPrefix --vars "name=xyz"
+```
+
+To set `buildName`:
+
+```bash
+--labels buildName --vars "name=xyz"
+```
+
+These commands utilize `--labels` to specify the parameter being configured and `--vars "name=xyz"` to define the value to be replaced for `${name}`.
+:::
+
+### Key Pointers
+
+- #### Build Configuration Handling:
+
+  If `buildConfig` is not provided, then the `build_id` column within the job table remains empty. When you specify the `buildConfig`, it populates the `build_id` column with the corresponding value.
+
+- #### Build Configuration Precedence:
+
+  When both `buildConfig` and the `build` capability are defined, `buildConfig` takes priority.
+
+- #### Priority of Build Naming Parameters:
+
+  If both `buildConfig.buildName` and `buildConfig.buildPrefix` are specified, preference is given to `buildPrefix`.
+
+- #### Association with Build Name:
+
+  Defining `buildName` associates test results with the designated name, enabling organized tracking and management.
+
+- #### Dynamic Build Creation:
+
+  Specifying `buildPrefix` results in the creation of a new build for each executed job. The build name format follows **buildPrefix-&lbrace;jobID&rbrace;** to ensure uniqueness.
+
+- #### Compatibility of Build Naming Variables:
+
+  Both `buildPrefix` and `buildName` are compatible with vars and can be used together or independently based on your requirements.
+
+## Support
 
 If you need more help regarding HyperExecute, click on **Support** to speak to LambdaTest Support. You can also access LambdaTest Support by clicking on the bottom right-hand side of your dashboard.
 
@@ -190,19 +250,13 @@ If you need more help regarding HyperExecute, click on **Support** to speak to L
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Guided Walkthrough
-      </span>
+      <span className="breadcrumbs__link">Guided Walkthrough</span>
     </li>
   </ul>
 </nav>

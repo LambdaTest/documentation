@@ -79,7 +79,7 @@ slug: hyperexecute-feature-faqs/
 
 #### 7. **Can I use HyperExecute to run test cases on Microsoft Excel?**
 
-  Yes, you can configure HyperExecute to run your Microsoft Excel test cases. However, this feature is only available on request at this moment. Visit [our documentation](/support/docs/hyperexecute-excel-integration/) for this feature or contact support@lambdatest.com to know more.
+  Yes, you can configure HyperExecute to run your Microsoft Excel test cases. However, this feature is only available on request at this moment. Visit [our documentation](/support/docs/hyperexecute-winapp-integration/) for this feature or contact support@lambdatest.com to know more.
 
 ***
 

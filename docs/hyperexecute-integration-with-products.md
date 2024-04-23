@@ -43,6 +43,8 @@ slug: hyperexecute-integration-with-products/
 
 LambdaTest now offers you the chance to integrate HyperExecute with products like Tosca, Katalon and more. You can go through the links below to see the integrations we offer at the moment. 
 
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/hyp-products.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
 <div className="support_main">
 
   <a href = "/support/docs/hyperexecute-accelq-integration/">
@@ -70,13 +72,6 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   <div className="support_inners">
     <h3>Katalon</h3>
     <p>Perform Cross Platform Testing ranging from web, API, mobile, and desktop applications.</p>
-  </div>
-  </a>
-
-  <a href = "/support/docs/hyperexecute-excel-integration/">
-  <div className="support_inners">
-    <h3>Microsoft Excel</h3>
-    <p>Perform the testing for the tests that are based on Microsoft Excel for TestNG Framework.</p>
   </div>
   </a>
 
@@ -119,6 +114,13 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   <div className="support_inners">
     <h3>Tosca</h3>
     <p>Optimize and accelerate end-to-end testing for your entire digital landscape.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-winapp-integration/">
+  <div className="support_inners">
+    <h3>WinAppDriver</h3>
+    <p>Perform the testing for the tests that are based on Microsoft Office Suite for TestNG Framework.</p>
   </div>
   </a>
 
