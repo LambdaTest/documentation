@@ -1,6 +1,6 @@
 ---
 id: appium-java-cucumber
-title: Java Cucumber With Appium
+title: Appium With Cucumber 
 sidebar_label: Cucumber
 description: Now you can run your Appium automation scripts using Java Cucumber on LambdaTest Real Device Cloud Platform of 3000+ real mobile devices.
 keywords:

@@ -1,6 +1,6 @@
 ---
 id: appium-java-testng
-title: TestNG With Appium
+title: Appium With TestNG
 sidebar_label: TestNG
 description: Now you can run your Appium automation scripts using TestNG on LambdaTest Real Device Cloud Platform of 3000+ real mobile devices.
 keywords:
