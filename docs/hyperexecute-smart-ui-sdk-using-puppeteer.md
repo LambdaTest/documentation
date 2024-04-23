@@ -3,7 +3,7 @@ id: hyperexecute-smart-ui-sdk-using-puppeteer
 title: Streamline UI Testing with HyperExecute and Smart UI SDK
 hide_title: false
 sidebar_label: Puppeteer
-description: Streamline Hyperexecute UI testing with Smart UI SDK & Puppeteer. Write robust, end-to-end tests effortlessly. 
+description: Streamline Hyperexecute UI testing with Smart UI SDK and Puppeteer. Write robust, end-to-end tests effortlessly. 
 keywords:
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
@@ -61,12 +61,12 @@ To run the Tests on HyperExecute from your Local System, you are required:
 
 ## Step 1: Create a SmartUI Project
 
-The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
+Create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
 
 1. Go to [Projects page](https://smartui.lambdatest.com/)
-2. Click on the `new project` button
-3. Select the platform as <b>CLI</b> or <b>Web</b> for executing your `SDK` tests.
-4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
+2. Now, click on the `new project` button
+3. Select the platform as **CLI** or **Web** for executing your `SDK` tests.
+4. Add name of the project, approvers for the changes found, and tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
 ## Step 2: Setup Your Test Suite
@@ -74,11 +74,9 @@ The first step is to create a project with the application in which we will comb
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-
 Download or Clone the code sample for the Puppeteer framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/hyperexecute-smartui-sdk-puppeteer" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-
 :::
 
 ### Configure Your Test Suite
@@ -96,11 +94,11 @@ In the `sdkCloud.js` file, update the following capabilities
 
 ## Step 3: Setup the CLI in your Test Suite
 
-After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
+After cloning / downloading the sample repo, you will have to setup the CLI and the environment variables.
 
 ### Download the HyperExecute CLI
 
-The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
+The Command Line Interface (CLI) is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
 
 You can download the CLI for your desired platform from the below mentioned links:
 
@@ -143,7 +141,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ## Step 4: Configure YAML in your Test Suite
 
-You need to edit the `PROJECT_TOKEN: "YOUR_PROJECT_TOKEN"` flag and enter your project token that show in the SmartUI app after, creating your project.
+Edit the `PROJECT_TOKEN: "YOUR_PROJECT_TOKEN"` flag and enter your project token that show in the SmartUI app after, creating your project.
 
 ```bash
 ---
@@ -193,7 +191,7 @@ pre:
 
 ## Step 5: Execute your Test Suite
 
-> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+> **NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security and Privacy** → **General tab**.
 
 Run the below command in your terminal at the root folder of the project:
 
