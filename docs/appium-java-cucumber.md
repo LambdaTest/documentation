@@ -9,7 +9,6 @@ keywords:
   - cucumber
   - lambdatest java
   - framework on lambdatest
-  - testng
   - app testing
   - real devices
 url: https://www.lambdatest.com/support/docs/appium-java-cucumber/

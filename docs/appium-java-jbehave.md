@@ -112,11 +112,9 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 </Tabs>
 
 :::tip
-
 - If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
-
 :::
 
 ### Step 4: Update your Automation Script
