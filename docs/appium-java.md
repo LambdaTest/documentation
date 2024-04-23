@@ -2,7 +2,7 @@
 id: appium-java
 title: Appium with Java
 sidebar_label: Java
-description: Now you can run your Appium automation scripts using Java on LambdaTest Real Device Cloud Platform of 3000+ real mobile devices.
+description: Automate Mobile Apps with ease using Java and Appium
 keywords:
   - appium
   - java
