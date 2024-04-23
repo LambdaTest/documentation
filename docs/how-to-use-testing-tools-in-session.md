@@ -79,7 +79,7 @@ Just as your screenshots, you can find your recorded video in the gallery. You c
 
 ### Mark As Bug
 
-The Mark as Bug feature allows you to push your UI related issues/ edited screenshot to your integrated workspace instantly. 
+The Mark as Bug feature allows you to push your UI related issues/edited screenshot to your integrated workspace instantly. 
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/mark-as-bug-app-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
