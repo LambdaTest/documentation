@@ -2,7 +2,7 @@
 id: appium-java-jbehave
 title: Appium With JBehave
 sidebar_label: JBehave
-description: Now you can run your Appium automation scripts using Java JBehave on LambdaTest Real Device Cloud Platform of 3000+ real mobile devices.
+description: Run your Appium automation scripts using Java JBehave on LambdaTest Real Device Cloud Platform of 3000+ real mobile devices.
 keywords:
   - appium
   - jbehave
