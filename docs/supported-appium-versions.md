@@ -84,14 +84,22 @@ capabilities.setCapability("platformName", "ios");
 >**Note**: Starting June 1st, 2024, the following versions of Appium will be retained. Make sure to review and update your scripts accordingly if necessary.
 
 
-**Appium Versions for Android**:
+### Appium Versions for Android
 
 | Supported Versions       | Default Version | Latest Version                             |
 |--------------------------|-----------------|--------------------------------------------|
 | 1.21.0, 1.22.0, 1.22.3  |       -          |            -                                |
 | 2.0, 2.1.3, 2.2.1, 2.3.0 | 2.2.1           | 2.3.0 (Updated in sync with Appium releases) |
 
-**Appium Versions for iOS**: 
+**Latest Version**:
+
+The latest version for Android at LambdaTest is 2.3.0. This version is kept up to date in synchronization with new releases of Appium, ensuring users have access to the latest features and improvements.
+
+**Default Version**:
+
+The default version set for Android users is 2.2.1. This version provides a stable and tested environment for most users, ensuring compatibility with a wide range of devices and applications.
+
+### Appium Versions for iOS
 
 *iOS 12, 13, 14*
 
@@ -100,12 +108,20 @@ capabilities.setCapability("platformName", "ios");
 | 1.22.3, 2.0       |       -          |      -          |
 | 2.1.3, 2.2.1       | 2.2.1           | 2.2.1          |
 
+**Default Version**: 2.2.1
+
+**Latest Version**: 2.2.1
+
 *iOS 15, 16, 17*
 
 | Supported Versions | Default Version | Latest Version                             |
 |--------------------|-----------------|--------------------------------------------|
 | 1.22.3, 2.0, 2.1.3 |          -       |        -                                    |
 | 2.2.1, 2.3.0       | 2.2.1           | 2.3.0 (Updated in sync with Appium releases) |
+
+**Default Version**: 2.2.1
+
+**Latest Version**: 2.3.0 (Updated in sync with Appium releases)
 
 **iOS Compatibility Note**:
 
