@@ -2,7 +2,7 @@
 id: how-to-use-testing-tools-in-session
 title: How to use testing tools in-session?
 hide_title: true
-sidebar_label: How to use testing tools in-session?
+sidebar_label: Testing Tools
 description: Mobile app testing is the process of testing a mobile application to ensure that their functionality and usability is not compromised when installed across multiple Android and iOS devices. With LambdaTest, you can test mobile applications manually to ensure they perform seamlessly across all Android and iOS real devices.
 keywords:
   - real device app testing
@@ -40,13 +40,11 @@ slug: how-to-use-testing-tools-in-session/
 
 # How to Use Testing Tools In-Session?
 
-Mobile app testing is the process of testing a mobile application to ensure that their functionality and usability is not compromised when installed across multiple Android and iOS devices. With LambdaTest, you can test mobile applications manually to ensure they perform seamlessly across all Android and iOS real devices.
+With LambdaTest Real Device App Testing, you get access to a plethora of features that helps QA ease their app testing process, without the need of leaving the instance window. From mark as bug and changing IP geolocation, to in-depth device logs and network logs, LambdaTest's real device app testing offers it all. 
 
 Let us get an overview of all the features in our real device instance:
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/real-device-app-testing-home.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
-
-
 
 ## Comprehensive Sidebar
 ***
@@ -55,7 +53,7 @@ Let us get an overview of all the features in our real device instance:
 
 The Home feature on the left-sidebar allows you to go to the home screen of your selected real device instantly. 
 
-### App Control
+### App Controls
 
 The App Control feature offers you the ability to perform actions with your installed application within your current test session. This feature offers a dropdown with options such as:
 
