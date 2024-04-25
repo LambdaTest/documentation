@@ -53,7 +53,7 @@ This documentation will guide you step-by-step to execute the Smart UI tests on 
 
 You must do the following in order to run the tests on HyperExecute from your local system:
 
-- Get your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) from the dashbaord
+- Get your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) from the dashboard
 - Download [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution [Job](/support/docs/hyperexecute-concepts/#1-jobs).
 - Set your [Environmental Variables](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.

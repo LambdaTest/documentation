@@ -599,6 +599,11 @@ module.exports = {
               },
               {
                 type: 'doc',
+                label: "Sikuli",
+                id: "hyperexecute-sikuli-integration"
+              },
+              {
+                type: 'doc',
                 label: "Slack",
                 id: "hyperexecute-slack-integration"
               },
