@@ -51,27 +51,27 @@ This documentation will guide you step-by-step to execute the Smart UI tests on 
 
 ## Prerequisites
 
-To run the Tests on HyperExecute from your Local System, you are required:
+You must do the following in order to run the tests on HyperExecute from your local system:
 
-- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
-- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution [Job](/support/docs/hyperexecute-concepts/#1-jobs).
-- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
+- Get your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) from the dashboard
+- Download [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution [Job](/support/docs/hyperexecute-concepts/#1-jobs).
+- Set your [Environmental Variables](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Use your login credentials to access [LambdaTest SmartUI](https://smartui.lambdatest.com/).
 
 ## Step 1: Create a SmartUI Project
 
-Create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
+With the application, create a project in which we will merge all of your builds that have been applied to the project. To initiate a SmartUI Project, take the following actions:
 
-1. Go to [Projects page](https://smartui.lambdatest.com/)
-2. Now, click on the `new project` button
-3. Select the platform as **CLI** or **Web** for executing your `SDK` tests.
-4. Add name of the project, approvers for the changes found, and tags for any filter or easy navigation.
-5. Click on the **Submit**.
+1. Access the [Projects page](https://smartui.lambdatest.com/).
+2. Click the `new project` button now.
+3. Choose the **CLI** or **Web** platform to run your `SDK` tests on.
+4. Include the project name, the approvers of the changes that were discovered, and tags for any filters or simple navigation.
+5. Select **Submit** by clicking.
 
 ## Step 2: Setup Your Test Suite
 
-You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+To configure and test it, you can use your own project. We are using the sample repository for demonstration purposes.
 
 :::tip Sample repo
 Download or Clone the code sample for the Puppeteer framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
@@ -94,11 +94,11 @@ In the `sdkCloud.js` file, update the following capabilities
 
 ## Step 3: Setup the CLI in your Test Suite
 
-After cloning / downloading the sample repo, you will have to setup the CLI and the environment variables.
+Following the download or cloning of the sample repository, you must configure the environment variables and the CLI.
 
 ### Download the HyperExecute CLI
 
-The Command Line Interface (CLI) is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
+The tests on HyperExecute are started using the Command Line Interface (CLI). To run the tests on HyperExecute, it is advised to download the CLI binary to the host system and store it in the suite's root directory.
 
 You can download the CLI for your desired platform from the below mentioned links:
 
@@ -110,7 +110,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you have to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
@@ -191,7 +191,7 @@ pre:
 
 ## Step 5: Execute your Test Suite
 
-> **NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security and Privacy** → **General tab**.
+> **NOTE:** On macOS, you can grant permission by running **`chmod u+x./hyperexecute`** if you receive a permission denied warning when using the CLI. If a security pop-up appears, click the Allow button on the **System Preferences** → **.Security and Privacy** → **.General tab**.
 
 Run the below command in your terminal at the root folder of the project:
 
@@ -207,6 +207,6 @@ OR use this command if you have not exported your username and access key in the
 
 ## Step 6: Monitor the Test Execution
 
-Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+Go to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to see the status of your job.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui-sdk/puppeteer.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
