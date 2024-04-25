@@ -178,68 +178,7 @@ This can be activated in two ways:
 
 - #### Backend Configuration :
 
-  Update your designated [HyperExecute YAML](/support/docs/hyperexecute-yaml-parameters/) file configuration to activate the "**Test Summary Hyperlink**" feature. This configuration allows you to define specific parameters that govern the behavior of the hyperlinks based on the test summary status.
-
-  #### YAML Configuration Details
-
-  The YAML configuration file utilizes the `buildConfig` to manage hyperlink behavior based on test status. Here's a breakdown of the parameters within buildConfig:
-
-  - **`buildPrefix`**: This parameter sets a custom prefix for dynamically generated build names. The format employs $&lbrace;name&rbrace; as a placeholder, which will be replaced with a specific value during configuration.
-
-  - **`buildName`**: This parameter allows you to define a specific name for the build. Similar to buildPrefix, $&lbrace;name&rbrace; acts as a placeholder for a custom value.
-
-  ```bash
-  buildConfig:
-    buildPrefix: myCustomBuildPrefix-${name}
-    buildName : "name=${name}"
-  ```
-  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/17.png').default} alt="Image"  className="doc_img"/>
-
-
-:::info NOTE
-### Dynamic Build Naming via CLI
-
-If you prefer to set `buildPrefix` and `buildName` values through the command-line interface (CLI), the following commands can be used:
-
-To set `buildPrefix`:
-```bash
---labels buildPrefix --vars "name=xyz"
-```
-
-To set `buildName`:
-
-```bash
---labels buildName --vars "name=xyz"
-```
-
-These commands utilize `--labels` to specify the parameter being configured and `--vars "name=xyz"` to define the value to be replaced for `${name}`.
-:::
-
-### Key Pointers
-
-- #### Build Configuration Handling:
-
-  If `buildConfig` is not provided, then the `build_id` column within the job table remains empty. When you specify the `buildConfig`, it populates the `build_id` column with the corresponding value.
-
-- #### Build Configuration Precedence:
-
-  When both `buildConfig` and the `build` capability are defined, `buildConfig` takes priority.
-
-- #### Priority of Build Naming Parameters:
-
-  If both `buildConfig.buildName` and `buildConfig.buildPrefix` are specified, preference is given to `buildPrefix`.
-
-- #### Association with Build Name:
-
-  Defining `buildName` associates test results with the designated name, enabling organized tracking and management.
-
-- #### Dynamic Build Creation:
-
-  Specifying `buildPrefix` results in the creation of a new build for each executed job. The build name format follows **buildPrefix-&lbrace;jobID&rbrace;** to ensure uniqueness.
-
-- #### Compatibility of Build Naming Variables:
-
-  Both `buildPrefix` and `buildName` are compatible with vars and can be used together or independently based on your requirements.
+  Update your designated HyperExecute YAML file with [`buildConfig`](/support/docs/deep-dive-into-hyperexecute-yaml/#buildconfig) configuration to activate the "**Test Summary Hyperlink**" feature. This configuration allows you to define specific parameters that govern the behavior of the hyperlinks based on the test summary status.
 
 ## Support
 

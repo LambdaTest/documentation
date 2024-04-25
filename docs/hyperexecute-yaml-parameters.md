@@ -100,7 +100,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [cacheTestURL](/support/docs/deep-dive-into-hyperexecute-yaml/#cachetesturl) | Boolean |It enables users to cache static test files. |
 | [afterAll](/support/docs/deep-dive-into-hyperexecute-yaml/#afterall) | Map |It is used to run commands after the job has finished. |
 | [captureScreenRecordingForScenarios](/support/docs/deep-dive-into-hyperexecute-yaml/#capturescreenrecordingforscenarios) | bool |If this key is set to true, the video will be recorded for whole scenario execution |
-| [performance](/support/docs/deep-dive-into-hyperexecute-yaml/#performance) | Map |For load testing a command at a specified rate. |
+| [buildConfig](/support/docs/deep-dive-into-hyperexecute-yaml/#buildconfig) | Map | For managing the Hyperlink behaviour. |
 | [captureCSVResult](/support/docs/deep-dive-into-hyperexecute-yaml/#capturecsvresult) | Boolean |If this directive is enabled, it will generate the performance stats artifact having aggregated information for the time taken by Selenium Commands. |
 | [matrixEnvPrefix](/support/docs/deep-dive-into-hyperexecute-yaml/#matrixenvprefix) | Boolean |This flag is used to prefix env variables with `HE_ENV_` being set when you run a job in “matrix” mode. Default is false. |
 | [dynamicAllocation](/support/docs/deep-dive-into-hyperexecute-yaml/#dynamicallocation) | Boolean |This flag dynamically allocate test cases to workers as they become available and ensures that all available resources are used to run tests. |
