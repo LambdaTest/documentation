@@ -1,0 +1,52 @@
+---
+id: hyperexecute-release-notes-2-3-0
+title: Release Notes 2.3.0
+hide_title: false
+sidebar_label: Release Notes 2.3.0
+description: Release Notes 2.3.0
+keywords:
+  - LambdaTest Hyperexecute
+  - LambdaTest Hyperexecute help
+  - LambdaTest Hyperexecute documentation
+  - FAQs
+url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-3-0/
+site_name: LambdaTest
+slug: hyperexecute-release-notes-2-3-0/
+---
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lambdatest.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://www.lambdatest.com/support/docs/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Release Notes",
+          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-3-0/"
+        }]
+      })
+    }}
+></script>
+
+## Test Summary Hyperlinks for Enhanced Debugging Efficiency
+
+[Test Summary Hyperlinks](/support/docs/hyperexecute-guided-walkthrough/#test-summary-hyperlink) provide a seamless redirection from your test summary to detailed test information within the automation dashboard. This eliminates the need for time-consuming navigation, allowing you to focus on what matters most - analyzing results and optimizing your tests.
+
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/16.png').default} alt="Image"  className="doc_img"/> 
+
+## Benefits:
+
+- **Accelerated Debugging:** Effortlessly transition from high-level summaries to granular test data, streamlining your troubleshooting process.
+- **Improved Workflow Efficiency:** Minimize time spent navigating between screens and maximize focus on actionable insights.
+- **Enhanced User Experience:** Experience an intuitive workflow that prioritizes clear visibility into your test results.
+Start Testing 🚀
