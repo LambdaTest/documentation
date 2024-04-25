@@ -89,6 +89,13 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   </div>
   </a>
 
+  <a href = "/support/docs/hyperexecute-sikuli-integration/">
+  <div className="support_inners">
+    <h3>Sikuli</h3>
+    <p>Automate the visual testing of any software by integrating Sikuli with HyperExecute.</p>
+  </div>
+  </a>
+
   <a href = "/support/docs/hyperexecute-slack-integration/">
   <div className="support_inners">
     <h3>Slack</h3>
