@@ -170,9 +170,14 @@ Additionally, upon redirection, the automation dashboard opens the relevant tab 
   <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/16.png').default} alt="Image"  className="doc_img"/> 
 
 ### How to Activate Test Summary Hyperlinks
-This can be activated in two ways:
 
-- #### Frontend Activation :
+- #### Update your Org Configuration :
+
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/guided-walkthrough/test-summary.mp4').default} type="video/mp4" />
+</video>
+
+- #### Frontend Configuration :
 
   > For frontend activation, please contact us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
 
