@@ -38,39 +38,41 @@ slug: real-device-app-testing/
 
 # Getting Started with Real Device App Testing
 
-Real device app testing is the process of testing a mobile application to ensure that their functionality and usability is not comprised when installed across multiple Android and iOS devices. With LambdaTest, you can test mobile applications manually to ensure they perform seamlessly across all Android emulators and iOS simulators.
+Real device app testing is the process of testing a mobile application to ensure that their functionality and usability is not comprised when installed across multiple Android and iOS devices. With LambdaTest, you can test mobile applications manually to ensure they perform seamlessly across 3000 + real mobile devices.
 
 ***
 
-**Step 1:** Login to your LambdaTest account. Go to "**App Testing**" under “**Real Device**” from the left navigation menu.
-
-**Step 2**: Choose the OS version of your choice. ( Android or iOS )
+**Step 1:** Login to your LambdaTest account. Go to **App Testing** under **Real Device** from the left sidebar.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-dashboard.webp').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
 
-**Step 3**: You can upload an application directly from your files or by entering a URL. To select an app, simply scroll through the uploaded files or use the search bar to find a specific application. The uploading time may vary depending on the size of the application.
+**Step 2**: Choose the OS version of your choice. ( Android or iOS )
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/os-versions.webp').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
+
+**Step 3**: You can upload an application directly from your system or by entering a valid public URL. Once the app gets uploaded you can select the app from the **applist** or use the search bar to find a specific application. The uploading time may vary depending on the size of the application.
 
 In the case of **Android**, you can install from Play Store or App Center. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-devices-for-android.webp').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
 
-In the case of **iOS**, you can install from the App Store, install from Test Flight or from App Center. 
+In the case of **iOS**, you can install from the App Store, Test Flight or from App Center. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-devices-for-ios.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-**Step 4**: Navigate to the top right-hand side of the screen and click on the "**Region**" option. Here, you can choose from the available regions: North America, Europe, Asia, or select All. For assistance with using this feature, please feel free to email us at [support@lambdatest.com](mailto:support@lambdatest.com). 
+**Step 4**: You can select your preferred region from the **Region** dropdown. Choose from the available regions i.e., North America, Europe, Asia, or select All. For assistance with using this feature, please feel free to email us at [support@lambdatest.com](mailto:support@lambdatest.com). 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-region-feature.webp').default} alt="Real Device Region Feature"  className="doc_img" width="1366" height="629"/>
 
-**Step 5**: To test your locally hosted and privately hosted pages on the LambdaTest Platform, select the **Tunnel** option at the top right-hand side. 
+**Step 5**: Select the **Tunnel** option in the top right corner to test your locally hosted and privately hosted websites. 
 
-For detailed instructions on how to activate the tunnel, please refer to the detailed [support documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/).
+Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) to learn how to activate the LT Tunnel.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-tunnel.webp').default} alt="Real Device Tunnel"  className="doc_img" width="1366" height="629"/>
 
-**Step 6**: Select the preferred **Device** and **OS Version**. You can also use the search bar to choose your devices.
+**Step 6**: Select the preferred **Device** and **OS Version**. You can also use the search bar to select your devices.
 
-**Step 7**: Click on **Start** to execute your test.
+**Step 7**: Click on **Start** to run your test session.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
