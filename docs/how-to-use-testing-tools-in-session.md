@@ -31,14 +31,16 @@ slug: how-to-use-testing-tools-in-session/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "FogBugz Integration",
-          "item": "https://www.lambdatest.com/support/docs/fogbugz-integration/"
+          "name": "How to use testing tools in-session?",
+          "item": "https://www.lambdatest.com/support/docs/how-to-use-testing-tools-in-session/"
         }]
       })
     }}
 ></script>
 
 # How to Use Testing Tools In-Session?
+
+***
 
 With LambdaTest Real Device App Testing, you get access to a plethora of features that helps QA ease their app testing process, without the need of leaving the instance window. From mark as bug and changing IP geolocation, to in-depth device logs and network logs, LambdaTest's real device app testing offers it all. 
 
@@ -114,7 +116,7 @@ With LambdaTest’s Network Throttling, you can test mobile applications across 
 
 You can simulate these network environments using either pre-defined profiles or by creating custom network profiles to suit your needs.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/app-controls.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/network-throttling-real-device.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 Check out our detailed support documentation to know more about the [Network Throttling](https://www.lambdatest.com/support/docs/app-auto-network-throttling/) feature.
 
@@ -157,7 +159,7 @@ The settings section offer the following features:
 - **Projects:** The projects feature allows you to open your existing project in your real device. 
 
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/ios-settings-real-device.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/settings-real-device.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 ### Switch
 
