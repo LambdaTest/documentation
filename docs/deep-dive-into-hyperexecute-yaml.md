@@ -859,6 +859,7 @@ This is used to manage hyperlink behavior based on test status. Here's a breakdo
     buildName : "name=${name}"
   ```
 
+
   > The value for `${name}` in the above command can be passed through the vars command either by the [CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) as mentioned below or through [YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#vars).
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/17.png').default} alt="Image"  className="doc_img"/>
