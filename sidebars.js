@@ -1494,7 +1494,19 @@ module.exports = {
           "real-device-app-testing"
         ],
       },
+    ],
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Real Device App Testing",
+        items: [
+          "real-device-app-testing",
+          "how-to-use-testing-tools-in-session",
+        ],
+      },
     ]
+    
   ],
 
   SeleniumTestingSidebar: [
