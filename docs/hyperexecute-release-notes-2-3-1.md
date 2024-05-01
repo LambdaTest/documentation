@@ -38,7 +38,7 @@ slug: hyperexecute-release-notes-2-3-1/
     }}
 ></script>
 
-## Mask Your Sensistive Data
+## Mask Your Sensitive Data
 
 Test recordings often capture all user interactions, including potentially sensitive information like credentials, geo-location, storage-state etc. This can be a security risk if the recordings are accidentally exposed. Hence to overcome this limitation, HyperExecute releases a new feature **Lambda Masking**.
 
