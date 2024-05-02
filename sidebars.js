@@ -2243,6 +2243,7 @@ module.exports = {
       ],
     },
     "analytics-modules-test-intelligence-flaky-test-analytics",
+    "analytics-dashboard-copilot",
     "analytics-test-case-insights",
     "analytics-dashboard-edit-layout",
     "analytics-dashboard-features",
