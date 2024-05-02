@@ -20,6 +20,9 @@ slug: hyperexecute-espresso-testing/
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -44,116 +47,51 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
----
+This page outlines how to execute your Espresso tests on HyperExecute with [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/)
 
-<!-- This post will help you in getting started with **espresso testing** on [LambdaTest Real Device cloud platform](https://www.lambdatest.com/real-device-cloud). -->
-
-This page outlines how to execute your Espresso tests on HyperExecute using concepts of [**Sharding**](#sharding)
-
-> HyperExecute uses [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) to perform the tests using Espresso.
-
-## Running Espresso Tests on HyperExecute
-*** 
-
-### Prerequisites
+## Prerequisites
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution [Job](/support/docs/hyperexecute-concepts/#1-jobs).
-- Setup the Environmental Variable
+- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-- Access to an **Android** app (.apk or .aab file).
+- An Android app (.apk or .aab file).
 
-<!-- 1. You will need a LambdaTest username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://appautomation.lambdatest.com/). -->
+## Step 1: Setup Your Test Suite
 
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-> If you do not have any **.apk** you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk).
+:::tip Sample repo
 
-#### Download HyperExecute CLI
+Download or Clone the code sample for the Espresso framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
-The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
+<a href="https://github.com/LambdaTest/hyp-real-device-espresso" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
-| Platform | HyperExecute CLI download location |
-| ---------| --------------------------- |
+:::
+
+## Step 2: Setup the CLI in your Test Suite
+
+After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
+
+### Download the HyperExecute CLI
+
+The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
+
+You can download the CLI for your desired platform from the below mentioned links:
+
+| Platform | HyperExecute CLI |
+| ---------| ---------------- |
 | Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
-| macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-#### Setup Environment Variable
-Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
-Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
+### Setup Environment Variable
 
-***
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
 
-For macOS:
-
-```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
-
-For Linux:
-
-```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
-
-For Windows:
-
-```bash
-set LT_USERNAME=YOUR_LT_USERNAME
-set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
-
-### Steps to Run Your Test
-
----
-
-#### Step 1: Upload your Application
-
-Upload your <b>_android_</b> application (.apk file) to the LambdaTest servers using our <b>REST API</b>. You need to provide your <b>Username</b> and <b>AccessKey</b> in the format `Username:AccessKey` in the <b>cURL</b> command for authentication. Make sure to add the path of the <b>appFile</b> in the cURL request.
-
-Here is an example cURL request to upload your app using our REST API:
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-**Using App File:**
-
-<Tabs className="docs__val">
-<TabItem value="macos-file" label="Linux / MacOS" default>
-
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" \\
---location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\
---form 'appFile=@"/Users/macuser/Downloads/proverbial.apk"' \\
---form 'type="espresso-android"' 
-`}
-</CodeBlock>
-</div>
-
-</TabItem>
-
-<TabItem value="windows-file" label="Windows" default>
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-powershell">
-{`curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/uploadFramework" -F "appFile=@"/Users/macuser/Downloads/proverbial.apk"" -F "type="espresso-android""
-`}
-</CodeBlock>
-</div>
-</TabItem>
-</Tabs>
-
-> Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
-
-#### Step 2: Upload the Test Suite
-
-Upload your **test suite (.apk file)** to the LambdaTest servers using our REST API by providing your **Username** and **AccessKey** in the format `Username:AccessKey` in the cURL command for authentication.
-
-Here is an example cURL request to upload your app using our REST API:
+Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
 <Tabs className="docs__val">
 
@@ -161,10 +99,8 @@ Here is an example cURL request to upload your app using our REST API:
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
---location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\
---form 'appFile=@"/Users/macuser/Downloads/ProverbialEspressoTest.apk"' \\
---form 'type="espresso-android"'`}
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
 
@@ -174,73 +110,119 @@ Here is an example cURL request to upload your app using our REST API:
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/varunkumarb/Downloads/ProverbialEspressoTest.apk"" --form "type=\"espresso-android\""`}
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
   </CodeBlock>
 </div>
 
 </TabItem>
 </Tabs>
 
-#### Step 3: Execute the Test
+## Step 3: Upload your Application
 
-Now execute your test by using the following command in your terminal:
+Upload your <b>_android_</b> application (.apk file) to the LambdaTest servers using our <b>REST API</b>. You need to provide your <b>Username</b> and <b>AccessKey</b> in the format `Username:AccessKey` in the <b>cURL</b> command for authentication.
 
-```bash
-chmod u+x <YOUR_CLI_FILE_NAME>
-./<YOUR_CLI_FILE_NAME> -user <UserName> -key <AccessKey> --verbose -i <yamlFileName>.yaml
-```
+:::info
+Enter your local path of your android app instead of `<YOUR_LOCAL_APP_PATH>` in the below cURL command.
+:::
 
-Example Reference with Output:
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"<YOUR_LOCAL_APP_PATH>"" -F "name="sampleApp""
+`}
+</CodeBlock>
+</div>
 
-```bash
-chmod u+x ./hyperexecute
-./hyperexecute -user <UserName> -key <AccessKey> --verbose -i <yamlFileName>.yaml
-```
+> Response of above cURL will be a **JSON** object containing the `App ID` of the format - `<APP123456789012345678901234567>` and will be used in the next step.
 
-- Now, go to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and click on your executed Job.
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/espresso/espresso-he.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+## Step 4: Upload your Test Suite
 
-- Click on the **View Test** button to check the logs in the App Automation Dashboard. 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/espresso/espress-he-app.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+Upload your **test suite (.apk file)** to the LambdaTest servers using our REST API by providing your **Username** and **AccessKey** in the format `Username:AccessKey` in the cURL command for authentication.
 
+Here is an example cURL request to upload your app using our REST API:
 
-## Additional Details
-
-### Sharding
-
-**Sharding** is a mobile test automation technique that distributes test cases across multiple real and virtual devices via parallel testing. It entails breaking down test suites into smaller subsets known as shards and running each shard concurrently on separate test execution environments.
-
-There are two types of Sharding:
-
-### Manual Sharding
-This feature enables users to manually specify shards along with their definitions, offering multiple strategies such as class, package, and more. By doing so, users can have greater flexibility and control over the sharding process.
+:::info
+Enter your local path of your test suite app instead of `<YOUR_LOCAL_APP_PATH>` in the below cURL command.
+:::
 
 
-### Sample Manual Sharding YAML File
+## Step 5: Configure YAML in your Test Suite
+
+Enter your `<APP_ID>` and `<TEST_SUITE_ID>` in the YAML file that you have fetched in the above step.
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Auto Sharding" default>
 
 ```bash
 ---
 version: "0.2"
+globalTimeout: 150
+testSuiteTimeout: 150
+testSuiteStep: 150
+
 concurrency: 2
+
 runson: android
+
+autosplit: true
+
+framework:
+  name: "android/espresso"
+  args:
+    buildName: "Espresso"
+    video: true
+    deviceLog: true
+    
+    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
+    appPath: proverbial_android.apk
+    testSuitePath: proverbial_android_expressotest.apk
+    # We have used the appPath and testSuitePath here. 
+    
+    # highlight-next-line
+    appId: lt://<APP_ID>
+    # highlight-next-line
+    testSuiteAppId: lt://<TEST_SUITE_ID>
+    # We have used the appId and testSuiteAppID here.
+
+    deviceSelectionStrategy: all
+    devices: ["Galaxy.*", "Pixel.*"]
+
+jobLabel: ['HYP', 'Espresso', 'Auto Sharding']
+```
+</TabItem>
+
+<TabItem value="powershell" label="Manual Sharding" default>
+
+You can use either the `appId` and `testSuiteAppId` or provide the path of the application using `appPath` and `testSuitePath`. Both examples are given below.
+
+```bash
+---
+version: "0.2"
+globalTimeout: 150
+testSuiteTimeout: 150
+testSuiteStep: 150
+
+concurrency: 2
+
+runson: android
+
 autosplit: false
+
 framework:
   name: android/espresso
   args:
     buildName: Espresso
     video: true
     deviceLog: true
-
-    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
-    #highlight-next-line
-    appPath: Proverbial.apk
-
-    testSuitePath: ProverbialExpressoTest.apk # We have used the appPath and testSuitePath here. 
-    
-    #highlight-next-line
-    appId: lt://APP1010461471690377432133206
-    
-    testSuiteAppId: lt://APP10104592261690377454846669 # We have used the appId and testSuiteAppID here.
+    # highlight-next-line
+    appPath: proverbial_android.apk
+    # highlight-next-line
+    testSuitePath: proverbial_android_expressotest.apk # We have used the appPath and testSuitePath here. 
+    # highlight-next-line
+    appId: lt://APP123456789
+    # highlight-next-line
+    testSuiteAppId: lt://APP123456789 # We have used the appId and testSuiteAppID here.
     deviceSelectionStrategy: all
     devices:
       - Galaxy.*
@@ -265,44 +247,48 @@ framework:
             - com.lambdatest.proverbial.BrowserTest
     # The strategy for this shard is to skip a specific class. 
     # This shard will avoid running tests from the class com.lambdatest.proverbial.BrowserTest.
+
+jobLabel: ['HYP', 'Espresso', 'Manual Sharding']
 ```
+
+</TabItem>
+</Tabs>
+
+## Step 6: Execute your Test Suite
+
+> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+
+Run the below command in your terminal at the root folder of the project:
+
+```bash
+./hyperexecute --config <path_of_yaml_file>
+```
+
+OR use this command if you have not exported your username and access key in the step 2.
+
+```bash
+./hyperexecute --user <your_username> --key <your_access_key> --config <path_of_yaml_file>
+```
+
+> Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+
+<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/espresso/espresso-he.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
+
+<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/espresso/espress-he-app.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
+
+## Additional Details
+
+### Sharding
+
+**Sharding** is a mobile test automation technique that distributes test cases across multiple real and virtual devices via parallel testing. It entails breaking down test suites into smaller subsets known as shards and running each shard concurrently on separate test execution environments.
+
+There are two types of Sharding:
+
+### Manual Sharding
+This feature enables users to manually specify shards along with their definitions, offering multiple strategies such as class, package, and more. By doing so, users can have greater flexibility and control over the sharding process.
 
 ### Auto Sharding
 The system intelligently determines the distribution of tests across devices, employing specific criteria to optimize the testing process.
-
-### Sample Auto Sharding YAML File
-
-```bash
-version: "0.2"
-concurrency: 2
-runson: android
-autosplit: true
-
-framework:
-  name: "android/espresso"
-  args:
-    buildName: "Espresso"
-    video: true
-    deviceLog: true
-    
-    # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
-
-    #highlight-next-line
-    appPath: Proverbial.apk 
-
-    testSuitePath: ProverbialExpressoTest.apk
-    # We have used the appPath and testSuitePath here. 
-
-    
-    #highlight-next-line
-    appId: lt://APP1010461471690377432133206
-    testSuiteAppId: lt://APP10104592261690377454846669
-    # We have used the appId and testSuiteAppID here.
-
-    deviceSelectionStrategy: all
-    devices: ["Galaxy.*", "Pixel.*"]
-
-```
 
 :::tip
 
@@ -318,7 +304,7 @@ framework:
 :::
 
 ## Conclusion
-By following the instructions in this documentation, you can seamlessly execute the espresso tests on HyperExecute, leveraging its secure cloud infrastructure, advanced features, and optimized test execution workflow.
+By following the instructions in this documentation, you can seamlessly execute the Espresso tests on HyperExecute, leveraging its secure cloud infrastructure, advanced features, and optimized test execution workflow.
 
 
 <nav aria-label="breadcrumbs">
@@ -335,7 +321,7 @@ By following the instructions in this documentation, you can seamlessly execute 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      espresso Testing 
+      Espresso Testing 
       </span>
     </li>
   </ul>
