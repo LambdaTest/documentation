@@ -304,7 +304,7 @@ The system intelligently determines the distribution of tests across devices, em
 :::
 
 ## Conclusion
-By following the instructions in this documentation, you can seamlessly execute the espresso tests on HyperExecute, leveraging its secure cloud infrastructure, advanced features, and optimized test execution workflow.
+By following the instructions in this documentation, you can seamlessly execute the Espresso tests on HyperExecute, leveraging its secure cloud infrastructure, advanced features, and optimized test execution workflow.
 
 
 <nav aria-label="breadcrumbs">
@@ -321,7 +321,7 @@ By following the instructions in this documentation, you can seamlessly execute 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      espresso Testing 
+      Espresso Testing 
       </span>
     </li>
   </ul>
