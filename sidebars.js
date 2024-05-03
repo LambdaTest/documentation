@@ -599,6 +599,11 @@ module.exports = {
               },
               {
                 type: 'doc',
+                label: "Sikuli",
+                id: "hyperexecute-sikuli-integration"
+              },
+              {
+                type: 'doc',
                 label: "Slack",
                 id: "hyperexecute-slack-integration"
               },
@@ -909,6 +914,16 @@ module.exports = {
           id: "hyperexecute-release-notes",
         },
         items: [
+          {
+            type: "doc",
+            label: "Release Notes 2.3.1",
+            id: 'hyperexecute-release-notes-2-3-1'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.3.0",
+            id: 'hyperexecute-release-notes-2-3-0'
+          },
           {
             type: "doc",
             label: "Release Notes 2.2.9",
@@ -2107,6 +2122,7 @@ module.exports = {
         items: [
           "getting-started-with-espresso-testing",
           "debug-espresso-tests",
+          "troubleshoot-espresso-tests",
           {
             type: "category",
             collapsed: true,
@@ -2345,6 +2361,7 @@ module.exports = {
       ],
     },
     "analytics-modules-test-intelligence-flaky-test-analytics",
+    "analytics-dashboard-copilot",
     "analytics-test-case-insights",
     "analytics-dashboard-edit-layout",
     "analytics-dashboard-features",
