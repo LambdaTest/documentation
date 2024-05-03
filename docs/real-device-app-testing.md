@@ -58,17 +58,17 @@ In the case of **iOS**, you can install from the App Store, install from Test Fl
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-devices-for-ios.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-**Step 4**: Navigate to the top right-hand side of the screen and click on the "**Region**" option. Here, you can choose from the available regions: North America, Europe, Asia, or select All. For assistance with using this feature, please feel free to email us at [support@lambdatest.com](mailto:support@lambdatest.com). 
+**Step 4**: You can select your preferred region from the **Region** dropdown. Choose from the available regions i.e., North America, Europe, Asia, or select All. If you would like to choose devices from specific regions, please reach out to [support@lambdatest.com](mailto:support@lambdatest.com) to get the option enabled.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-region-feature.webp').default} alt="Real Device Region Feature"  className="doc_img" width="1366" height="629"/>
 
-**Step 5**: To test your locally hosted and privately hosted pages on the LambdaTest Platform, select the **Tunnel** option at the top right-hand side. 
+**Step 5**: Select the **Tunnel** option in the top right corner (optional) to test your locally hosted and privately hosted websites.
 
 For detailed instructions on how to activate the tunnel, please refer to the detailed [support documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/).
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-tunnel.webp').default} alt="Real Device Tunnel"  className="doc_img" width="1366" height="629"/>
 
-**Step 6**: Select the preferred **Device** and **OS Version**. You can also use the search bar to choose your devices.
+**Step 6**: Select the preferred **Brand**,**Device Name** and **OS Version** to easily navigate to your required device. You can also use the search bar to select your devices.
 
 **Step 7**: Click on **Start** to execute your test.
 
