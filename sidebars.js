@@ -2083,6 +2083,7 @@ module.exports = {
         items: [
           "getting-started-with-espresso-testing",
           "debug-espresso-tests",
+          "troubleshoot-espresso-tests",
           {
             type: "category",
             collapsed: true,
