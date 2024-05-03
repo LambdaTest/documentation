@@ -60,17 +60,17 @@ In the case of **iOS**, you can install from the App Store, Test Flight or from 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-devices-for-ios.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-**Step 4**: You can select your preferred region from the **Region** dropdown. Choose from the available regions i.e., North America, Europe, Asia, or select All. For assistance with using this feature, please feel free to email us at [support@lambdatest.com](mailto:support@lambdatest.com). 
+**Step 4**: You can select your preferred region from the **Region** dropdown. Choose from the available regions i.e., North America, Europe, Asia, or select All. If you would like to choose devices from specific regions, please reach out to [support@lambdatest.com](mailto:support@lambdatest.com) to get the option enabled.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-region-feature.webp').default} alt="Real Device Region Feature"  className="doc_img" width="1366" height="629"/>
 
-**Step 5**: Select the **Tunnel** option in the top right corner to test your locally hosted and privately hosted websites. 
+**Step 5**: Select the **Tunnel** option in the top right corner (optional) to test your locally hosted and privately hosted websites.
 
 Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) to learn how to activate the LT Tunnel.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-tunnel.webp').default} alt="Real Device Tunnel"  className="doc_img" width="1366" height="629"/>
 
-**Step 6**: Select the preferred **Device** and **OS Version**. You can also use the search bar to select your devices.
+**Step 6**: Select the preferred **Brand**,**Device Name** and **OS Version** to easily navigate to your required device. You can also use the search bar to select your devices.
 
 **Step 7**: Click on **Start** to run your test session.
 
