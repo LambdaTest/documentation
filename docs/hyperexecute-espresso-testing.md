@@ -276,6 +276,11 @@ OR use this command if you have not exported your username and access key in the
 
 <!-- <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/espresso/espress-he-app.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
 
+:::tip Troubleshoot Guide
+
+If you are stumbling upon errors during Espresso test execution, then refer to the [**Espresso Troubleshoot**](/support/docs/troubleshoot-espresso-tests/#sharded-espresso-errors) guide for detailed explanations to your common errors.
+:::
+
 ## Additional Details
 
 ### Sharding
