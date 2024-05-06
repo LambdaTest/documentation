@@ -56,9 +56,117 @@ Sikuli is an open-source tool that empowers you to automate tasks on your comput
 This documentation guides you on how to integrate Sikuli seamlessly with HyperExecute to leverage the power of image recognition.
 
 ## Prerequisites
+- An active LambdaTest account with Admin or User-level access.
+- Refer to the [Sikuli](https://www.softwaretestinghelp.com/sikuli-tutorial-part-1/) documentation to understand how to write a sikuli test.
 
--   Ensure that you have integrated sikuli Studio with LambdaTest. Follow the steps on this [page](https://www.lambdatest.com/support/docs/sikuli-integration-with-lambdatest/) to do so.
-    
--   Ensure that you have the necessary licenses required to use sikuli Studio. You need the [sikuli Runtime License](https://docs.sikuli.com/docs/legacy/products-and-licenses/sikuli-studio-enterprise-and-runtime-engine-licenses/sikuli-runtime-engine-floating-license) to integrate sikuli with HyperExecute. To learn more about these licenses, read this [page](https://docs.sikuli.com/docs/legacy/products-and-licenses/sikuli-studio-enterprise-and-runtime-engine-licenses/license-overview).
+## Step 1: Build your Visual Test with SikuliX
 
+Write your project code and all the other necessary dependencies in your code-repository.
 
+## Step 2: Configure your HyperExecute YAML
+
+Here is a sample YAML file, you can configure it with different [YAML flags](/support/docs/hyperexecute-yaml-parameters/) as per your requirements.
+
+```bash
+---
+version: 0.1
+runson: win
+testSuiteTimeout: 90
+
+autosplit: true
+
+retryOnFailure: true
+maxRetries: 1
+
+concurrency: 1
+
+env:
+  CACHE_DIR: m2_cache_dir
+
+cacheKey: '{{ checksum "pom.xml" }}'
+cacheDirectories:
+  - $CACHE_DIR
+
+runtime:
+    language: java
+    version: 17
+
+pre:
+  # Create the Cache directory
+  - mvn -Dmaven.repo.local=./.m2 -Dmaven.test.skip=true clean install
+
+testDiscovery:
+  type: raw
+  mode: dynamic
+  shell: bash
+  command: grep 'Test_1' testng.xml | awk '{print$4}' | sed 's/name=//g' | sed 's/\x3e//g' | sed 's/"//' | sed 's/"//'
+
+testRunnerCommand: mvn test `-Dtests=$test
+```
+
+## Step 3: Setup your Authentication / Environment Variables
+
+After configuring your project and HyperExecute YAML file, you need to setup the CLI and the environment variables.
+
+### Download the HyperExecute CLI
+
+The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
+
+You can download the CLI for your desired platform from the below mentioned links:
+
+| Platform | HyperExecute CLI |
+| ---------| ---------------- |
+| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
+| MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
+
+### Setup Environment Variable
+
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+
+Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Linux / MacOS" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
+## Step 4: Execute and Monitor your Project
+
+:::info note
+In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+:::
+
+Run the below command in your terminal at the root folder of the project:
+
+```bash
+./hyperexecute --config <path_of_yaml_file>
+```
+
+OR use this command if you have not exported your username and access key in the step 2.
+
+```bash
+./hyperexecute --user <your_username> --key <your_access_key> --config <path_of_yaml_file>
+```
+
+> Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
