@@ -1494,6 +1494,7 @@ module.exports = {
           "real-device-app-testing",
           "how-to-use-testing-tools-in-session",
           "upload-apps-on-real-device-cloud",
+          "app-settings",
         ],
       },
     ],
