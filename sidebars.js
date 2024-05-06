@@ -1492,6 +1492,8 @@ module.exports = {
         items: [
           "real-device-app-testing",
           "how-to-use-testing-tools-in-session",
+          "real-device-network-logs",
+          "real-device-device-logs",
         ],
       },
     ]
