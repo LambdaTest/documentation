@@ -1494,6 +1494,8 @@ module.exports = {
           "how-to-use-testing-tools-in-session",
           "upload-apps-on-real-device-cloud",
           "app-settings",
+          "install-apps-from-play-store",
+          "install-apps-from-test-flight",
         ],
       },
     ]
