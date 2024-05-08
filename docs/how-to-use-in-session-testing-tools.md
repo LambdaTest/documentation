@@ -3,7 +3,7 @@ id: how-to-use-in-session-testing-tools
 title: How to use in-session testing tools?
 hide_title: true
 sidebar_label: Testing Tools
-description: Mobile app testing is the process of testing a mobile application to ensure that their functionality and usability is not compromised when installed across multiple Android and iOS devices. With LambdaTest, you can test mobile applications manually to ensure they perform seamlessly across all Android and iOS real devices.
+description: With LambdaTest, perform live interactive testing of websites and web applications on real Android and iOS devices to ensure seamless user experience.
 keywords:
   - real device app testing
   - real device browser testing
@@ -53,16 +53,16 @@ Let us get an overview of all the features in our real device instance:
 
 ### Home
 
-The Home feature on the left-sidebar allows you to go to the home screen of your selected real device instantly. 
+The **Home** feature on the left-sidebar allows you to go to the home screen of your selected real device instantly. 
 
 
 ### Screenshot
 
-The Screenshot feature allows you to take a screenshot in an instant of the current screen of the device that you are currently testing on. You can access the screenshots and even download them in the gallery section. 
+The **Screenshot** feature allows you to take a screenshot in an instant of the current screen of the device that you are currently testing on. You can access the screenshots and even download them in the gallery section. 
 
 ### Record Session
 
-The record session feature allows you to screen record the current test session inside the real device. As you click on the button a timer would start, indicating the recording time. You can click on the stop button to stop the video recording.
+The **Record Session** feature allows you to screen record the current test session inside the real device. As you click on the button a timer would start, indicating the recording time. You can click on the stop button to stop the video recording.
 
 Just as your screenshots, you can find your recorded video in the gallery. You can also download the recording by clicking on the download button.
 
@@ -70,7 +70,7 @@ Just as your screenshots, you can find your recorded video in the gallery. You c
 
 ### Mark As Bug
 
-The Mark as Bug feature allows you to push your UI related issues/edited screenshot to your integrated workspace instantly. 
+The **Mark as Bug** feature allows you to push your UI related issues/edited screenshot to your integrated workspace instantly. 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/mark-as-bug-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -78,14 +78,13 @@ Check out detailed documentation to know more about  Mark as Bug feature.
 
 ### Gallery
 
-All screenshots and video recordings from test sessions are stored in the Gallery. To access, 
-select Gallery from the left toolbar and you'll find the saved screenshots and videos.To download the screenshots or videos to your local machine, click on the Download icon.
+All screenshots and video recordings from test sessions are stored in the Gallery. To access, select **Gallery** from the left toolbar and you'll find the saved screenshots and videos.To download the screenshots or videos to your local machine, click on the Download icon.
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/gallery-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 ### IP Geolocation
 
-The IP Geolocation feature enables you to simulate website and mobile behavior from over 45 countries by using local IP addresses. This allows you to test localized content such as pricing, languages, and product listings. By enabling IP Geolocation, you can ensure your app's traffic originates from a specific country, allowing for comprehensive global testing.
+The **IP Geolocation** feature allows you to emulate website and mobile experiences from more than 45 countries using local IP addresses. This enables you to test localized elements like pricing, languages, and product offerings. With IP Geolocation activated, you can verify that your app's traffic is coming from a particular country, facilitating thorough global testing.
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/ip-geolocation-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -93,17 +92,16 @@ Check out our detailed support documentation to know more about the [IP Geolocat
 
 ### GPS Location
 
-GPS Geolocation testing allows you to simulate specific device locations using exact GPS coordinates to evaluate location-based app scenarios.
+**GPS Geolocation** testing allows you to simulate specific device locations using exact GPS coordinates to evaluate location-based app scenarios. You can enter your preferred location by entering the name of the location. 
 
-Implement this by using the GPS location feature in your code as illustrated below, where you'll need to input the desired latitude and longitude.
+However, if your preferred location is not showing, you can specify the exact location by entering the lattitude and longitude of the location. 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/gps-location-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the GPS Location feature.
 
 ### Network Throttling
 
-With LambdaTest’s Network Throttling, you can test mobile applications across a range of network conditions, including offline and airplane modes, as well as specific network profiles like 3G-UMTS-Good and 4G-LTE-Good, using its extensive real mobile device cloud.
+With LambdaTest’s **Network Throttling**, you can test mobile applications across a range of network conditions, including offline, as well as specific network profiles like 3G, 3G+, 4G LTE, 4G Advanced and even custom network profile with its extensive real mobile device cloud.
 
 You can simulate these network environments using either pre-defined profiles or by creating custom network profiles to suit your needs.
 
@@ -114,26 +112,26 @@ Check out our detailed support documentation to know more about the [Network Thr
 
 ### Device Controls
 
-As the name suggests, with the device control feature you can control the volume and change the orientation of your real device.
+As the name suggests, with the **Device Control** feature you can control the volume and change the orientation of your real device.
 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/device-control-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 ### Settings
 
-The settings section offer the following features:
+The **settings** section offer the following features:
 
-- **Idle Timeout:** This feature allows you to set the idle timeout for your test session by selecting from the dropdown menu. 
-- **Time Zone:** With this feature, you can select the time zone of your preference from the dropdown menu. Refer to the doc for specific time zones offered.
+- **Idle Timeout:** This feature allows you to set the idle timeout for your test session by selecting from the dropdown menu. The default Idle Timeout is 5 minutes and the maximum limit is 45 minutes. 
+- **Time Zone:** With this feature, you can select the time zone of your preference from the dropdown menu. The time zone are set to GMT by default and can be changed as per preference. 
 - **Language:** With this feature, you can change the language in your test session for a more localized testing experience. Language locale doc.
-- **Projects:** The projects feature allows you to open your existing project in your real device. 
+- **Projects:** The projects feature allows you to track your existing test session in an existing project. You can create and access your projects under **More Tools**.
 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/settings-real-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 ### Switch
 
-This feature allows you to switch between devices and their OS versions and device detail cards such as  without exiting your current test session.
+This feature allows you to **switch** between devices, browser and their OS versions without exiting your current test session.
 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/switch-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
@@ -160,7 +158,7 @@ Check out our detailed support documentation to know more about the Chrome DevTo
 
 ### Safari Web Inspector
 
-LambdaTest’s real device browser testing offers in-built Safari Web Inspector, an open-source web development tool to simplify optimizing, prototyping, and debugging web applications for iOS and OS X.
+LambdaTest’s real device browser testing offers in-built **Safari Web Inspector**, an open-source web development tool to simplify optimizing, prototyping, and debugging web applications for iOS and OS X.
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/safari-web-inspector.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -169,13 +167,13 @@ Check out our detailed support documentation to know more about the Safari Web I
 
 ### Test Manager
 
-Unified Test Manager simplifies test authoring, management, triggering, and reporting, boosting efficiency throughout all testing phases.
+Unified **Test Manager** simplifies test authoring, management, triggering, and reporting, boosting efficiency throughout all testing phases.
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/test-manager-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 Check out our detailed support documentation to know more about the Test Manager.
 
-> **Notes:** The max duration for running manual tests on LambdaTest Real Device Cloud is 2 hours. We offer a private cloud with dedicated real devices for your organization.
+> **Notes:** The max duration for running manual tests on LambdaTest Real Device Cloud is 2 hours. In order to extend the duration, you can opt for our dedicated real device cloud.
 
 
 

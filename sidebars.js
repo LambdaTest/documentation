@@ -1499,13 +1499,23 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Real Device App Testing",
+        label: "Real Device Browser Testing",
         items: [
-          "real-device-app-testing",
-          "how-to-use-testing-tools-in-session",
+          "real-device-browser-testing",
+          "how-to-use-in-session-testing-tools",
         ],
       },
-    ]
+    ],
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Private Cloud",
+        items: [
+          "public-cloud-vs-private-cloud",
+        ],
+      },
+    ],
     
   ],
 
