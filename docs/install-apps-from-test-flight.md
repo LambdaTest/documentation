@@ -1,6 +1,6 @@
 ---
 id: install-apps-from-test-flight
-title: Testing apps installed from Test Flight
+title: How to Test Apps Installed via Test flight?
 hide_title: true
 sidebar_label: Install Apps from Test Flight
 description: With LambdaTest, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
@@ -29,14 +29,14 @@ slug: install-apps-from-test-flight/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Testing apps installed from Test Flight",
+          "name": "How to Test Apps Installed via Test flight?",
           "item": "https://www.lambdatest.com/support/docs/install-apps-from-test-flight/"
         }]
       })
     }}
 ></script>
 
-# Testing apps installed from Test Flight
+# How to Test Apps Installed via Test flight?
 
 LambdaTest provides a seamless testing environment for beta versions of mobile applications on real iOS devices. With TestFlight preinstalled, developers can log into TestFlight, install their beta apps on iOS devices, and test before the apps are released on the App Store. This allows developers to effectively assess and improve app performance and user experience prior to launch.
 
