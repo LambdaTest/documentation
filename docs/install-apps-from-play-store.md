@@ -1,6 +1,6 @@
 ---
 id: install-apps-from-play-store
-title: Testing apps installed from Play Store
+title: How to Test Apps Installed via Play Store?
 hide_title: true
 sidebar_label: Install Apps from Play Store
 description: With LambdaTest, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
@@ -29,14 +29,14 @@ slug: install-apps-from-play-store/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Testing apps installed from the Play Store",
+          "name": "How to Test Apps Installed via Play Store?",
           "item": "https://www.lambdatest.com/support/docs/install-apps-from-play-store/"
         }]
       })
     }}
 ></script>
 
-# Testing apps installed from Play Store
+# How to Test Apps Installed via Play Store?
 
 LambdaTest enables developers to test their mobile applications and websites across a range of real devices and browsers. It allows for direct installation of apps from the Google Play Store, facilitating testing of apps on real android devices to ensure optimal performance and compatibility.
 
