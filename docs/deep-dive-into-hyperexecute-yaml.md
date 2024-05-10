@@ -523,6 +523,27 @@ framework:
   defaultReports: false
 ```
 
+:::tip
+
+If you want to generate multiple reports of different frameworks.
+
+```bash
+partialReports:
+  - location: reports/json
+    type: json
+    frameworkName: extent-native
+    email:
+        to:
+          - johndoe@example.com
+  - location: target/surefire-reports
+    type: html
+    frameworkName: testng-me
+    email:
+        to:
+          - johndoe@example.com
+```
+:::
+
 ***
 
 ## `errorCategorizedOnFailureOnly`
