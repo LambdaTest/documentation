@@ -730,7 +730,7 @@ An unknown error will usually be specific to a particular driver, so it's a good
 The unknown command error is a WebDriver error that occurs when the driver does not recognize the command/HTTP endpoint.
 
 Example:
-The /session/{session id}/foo endpoint does not exist, and will return an unknown command error with a 404 Not Found HTTP status code
+The /session/&lbrace;session id&rbrace;/foo endpoint does not exist, and will return an unknown command error with a 404 Not Found HTTP status code
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">

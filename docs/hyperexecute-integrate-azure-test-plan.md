@@ -2,7 +2,7 @@
 id: hyperexecute-integrate-azure-test-plan
 title: Integrate Test Cases 
 hide_title: true
-sidebar_label: Intgerate the Test Cases
+sidebar_label: Integrate the Test Cases
 description: Integrate your Test Plan with HyperExecute by downloading necessary executable files, configure YAML files, and trigger your test plan for efficient test execution.
 keywords:
     - hyperexecute integrations
@@ -77,7 +77,7 @@ dynamicAllocation: true
 **Step 4:** Now, you need to pass the following command in your YAML file. 
 
 ```bash
-testRunnerCommand: dotnet test path\of\dll --settings path\of\runsettings --filter '"Name=$test"' ; testplan-status-update-win.exe <testplan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token> <lt_username> <lt_access_key> ; test-link-attach-win.exe <azure_org_name> <azure_project_name> <azure_access_token>
+testRunnerCommand: dotnet test path\of\dll --settings path\of\runsettings --filter '"Name=$test"' ; ./testplan-status-update-win.exe <testplan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token> <lt_username> <lt_access_key> ; ./test-link-attach-win.exe <azure_org_name> <azure_project_name> <azure_access_token>
 ```
 
 **Step 5:** Trigger your test plan on HyperExecute.

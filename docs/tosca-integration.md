@@ -102,7 +102,7 @@ For demonstrating Tosca-LambdaTest integration, we would be considering the foll
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_15.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-**Step 16:**  Select **standard.tsu** file from *<installation_path>/Tosca_Projects/ToscaCommander* folder.
+**Step 16:**  Select **standard.tsu** file from *&lt;installation_path&gt;/Tosca_Projects/ToscaCommander* folder.
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_16.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 

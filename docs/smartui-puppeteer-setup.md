@@ -178,8 +178,7 @@ For additional information about Puppteer framework please explore the documenta
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Getting Started with Selenium Visual Regression  </span>
+      <span className="breadcrumbs__link"> Getting Started with Selenium Visual Regression  </span>
     </li>
   </ul>
 </nav>

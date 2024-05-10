@@ -161,7 +161,7 @@ For more information about Screenshot testing, refer to the documentation [Autom
 
 **Step 2**: Once you hover on LambdaTest App, a cross icon will appear. Click on the Cross icon.
 
-<<img loading="lazy" src={require('../assets/images/slack-app-integration/remove-app.webp').default} alt="Slack App" width="1360" height="719" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/slack-app-integration/remove-app.webp').default} alt="Slack App" width="1360" height="719" className="doc_img"/>
 
 The LambdaTest Slack App will be removed successfully from Slack.
 

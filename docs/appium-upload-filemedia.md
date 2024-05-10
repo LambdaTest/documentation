@@ -185,7 +185,8 @@ desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Camera Image Injection</span>
+      Camera Image Injection
+      </span>
     </li>
   </ul>
 </nav>

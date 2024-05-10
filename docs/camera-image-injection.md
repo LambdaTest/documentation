@@ -220,7 +220,8 @@ You need to first add a logic to inject the uploaded image in the script. Therea
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Camera Image Injection</span>
+      Camera Image Injection
+      </span>
     </li>
   </ul>
 </nav>

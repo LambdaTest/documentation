@@ -164,8 +164,7 @@ The Sumo Logic integration will be uninstalled.
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Sumo Logic Integration</span>
+      <span className="breadcrumbs__link"> Sumo Logic Integration</span>
     </li>
   </ul>
 </nav>

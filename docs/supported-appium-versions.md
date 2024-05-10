@@ -22,6 +22,7 @@ slug: supported-appium-versions/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -78,23 +79,56 @@ capabilities.setCapability("platformName", "ios");
 
 :::
 
+## Supported Appium Versions <NewTag value="UPCOMING CHANGE" bgColor="#ffec02" color="#000" />
+---
+>**Note**: Starting June 1st, 2024, the following versions of Appium will be retained. Make sure to review and update your scripts accordingly if necessary.
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       List of Supported Appium Versions
-      </span>
-    </li>
-  </ul>
-</nav>
+
+### Appium Versions for Android
+
+| Supported Versions       | Default Version | Latest Version                             |
+|--------------------------|-----------------|--------------------------------------------|
+| 1.21.0, 1.22.0, 1.22.3  |       -          |            -                                |
+| 2.0, 2.1.3, 2.2.1, 2.3.0 | 2.2.1           | 2.3.0 (Updated in sync with Appium releases) |
+
+**Latest Version**:
+
+The latest version for Android at LambdaTest is 2.3.0. This version is kept up to date in synchronization with new releases of Appium, ensuring users have access to the latest features and improvements.
+
+**Default Version**:
+
+The default version set for Android users is 2.2.1. This version provides a stable and tested environment for most users, ensuring compatibility with a wide range of devices and applications.
+
+### Appium Versions for iOS
+
+*iOS 12, 13, 14*
+
+| Supported Versions | Default Version | Latest Version |
+|--------------------|-----------------|----------------|
+| 1.22.3, 2.0       |       -          |      -          |
+| 2.1.3, 2.2.1       | 2.2.1           | 2.2.1          |
+
+**Default Version**: 2.2.1
+
+**Latest Version**: 2.2.1
+
+*iOS 15, 16, 17*
+
+| Supported Versions | Default Version | Latest Version                             |
+|--------------------|-----------------|--------------------------------------------|
+| 1.22.3, 2.0, 2.1.3 |          -       |        -                                    |
+| 2.2.1, 2.3.0       | 2.2.1           | 2.3.0 (Updated in sync with Appium releases) |
+
+**Default Version**: 2.2.1
+
+**Latest Version**: 2.3.0 (Updated in sync with Appium releases)
+
+**iOS Compatibility Note**:
+
+For devices running iOS 17 and newer, it is recommended to use Appium versions 2.2.1 and above to ensure the best compatibility and performance.
+
+**Version Configuration Requirement**:
+
+If a user does not specify any *appiumVersion*, the system will default to the pre-configured default version. To use a different supported version, users must explicitly pass the desired version in the desired capabilities.
+
+---

@@ -21,6 +21,7 @@ slug: html-dom-smartui-options/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 
 ---
 
@@ -371,7 +372,8 @@ await page.evaluate((_) => {},
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-     Smart UI with Cypress  </span>
+     Smart UI with Cypress  
+     </span>
     </li>
   </ul>
 </nav>

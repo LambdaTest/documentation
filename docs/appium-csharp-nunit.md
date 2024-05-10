@@ -1,6 +1,6 @@
 ---
 id: appium-csharp-nunit
-title: NUnit With Appium
+title:  Appium with NUnit
 sidebar_label: NUnit
 description: Now you can run your Appium automation scripts using NUnit on LambdaTest Real Device Cloud Platform of 3000+ real mobile devices.
 keywords:
@@ -16,6 +16,12 @@ url: https://www.lambdatest.com/support/docs/appium-csharp-nunit/
 site_name: LambdaTest
 slug: appium-csharp-nunit/
 ---
+
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -41,126 +47,96 @@ slug: appium-csharp-nunit/
     }}
 ></script>
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+In this documentation, you will learn how to trigger a automation script of **NUnit** for application testing with **Appium** on LambdaTest, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of LambdaTest.
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+## Prerequisites
 
-## Tutorial To Run Your First Test On LambdaTest
-
----
-
-In this topic, you will learn how to configure and run your **NUnit** automation testing scripts with **Appium** on **LambdaTest Real Device Cloud platform**.
-
-## Objective
-
----
-
-By the end of this topic, you will be able to:
-
-1. Set up an environment for testing your hosted web pages using **C#** framework **NUNit with Appium.**
-2. Understand and configure the desired capabilities required for your Appium Test Suite.
-3. Explore advanced features of LambdaTest.
-
-:::tip Sample repo
-
-All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-csharp-nunit" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-
-:::
-
-## Pre-requisites
-
----
-
-Before you can start performing App automation testing with Appium, you would need to follow these steps:
-
-- You would need LambdaTest username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials in the [LambdaTest Profile](https://accounts.lambdatest.com/login).
+- Your LambdaTest [Username and Access key](https://accounts.lambdatest.com/security).
 - Install the MS Visual Studio 2013 or later version for C#. We recommend using the latest version.
-- Make sure you install the framework [NUnit3.0](https://nunit.org/). Along with this install latest [NuGet](https://www.nuget.org/downloads) Plugin for Visual Studio and add the NuGet CLI executable installed in your path.
+- Install the framework [NUnit3.0](https://nunit.org/), and [NuGet](https://www.nuget.org/downloads) plugin for Visual Studio and add the NuGet CLI executable installed in your path.
 - Access to an Android app (.apk or .aab file) or an iOS app (.ipa file).
 
-## Run your first test
+## Install and Setup the Dependencies
 
----
-
-### 1. Upload your application
-Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
-
- **Using App File from System:**
- <div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
-`}
-</CodeBlock>
-</div>
-
-**Using App URL:**
-
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"
-`}
-</CodeBlock>
-</div>
-
-:::tip
-
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
-
-- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - <lt://APP123456789123456789> and will be used in the next step.
-
-:::
-
-### 2. Clone the sample project
-
-- Clone the LambdaTest’s :link: [LT-appium-csharp-nunit](https://github.com/LambdaTest/LT-appium-csharp-nunit) repository.
-
-- Open the Android/iOS project using the file with a .sln extension.
-
-### 3. Install the dependencies
-
-1. Install the NuGet packages for the project:
+- Install the NuGet packages for the project:
 ```bash
 nuget.exe install ..\NUnitSelenium\packages.config
 ```
-2. Clean and rebuild the project
+- Clean and rebuild the project
 ```bash
 nmake clean build
 ```
 
-### 4. Set up your authentication
+## Try our Sample Repository
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set LambdaTest `Username` and `Access Key` in environment variables with following commands.
+### Step 1: Get a Sample Project
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-csharp-nunit" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
+> Open the Android/iOS project using the file with a .sln extension.
+
+### Step 2: Setup the Environment Variables
+
+You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [LambdaTest Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
 
 <Tabs className="docs__val">
-
 <TabItem value="bash" label="Linux / MacOS" default>
   <div className="lambdatest__codeblock">
-  <CodeBlock className="language-bash">
-  {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
-export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-</CodeBlock>
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
 </div>
-
 </TabItem>
-
 <TabItem value="powershell" label="Windows" default>
-
   <div className="lambdatest__codeblock">
-  <CodeBlock className="language-powershell">
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \`
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-</CodeBlock>
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
 </div>
-
 </TabItem>
 </Tabs>
 
-### 5. Write your automation script
+### Step 3: Upload your Application
+Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
 
-An automation script for the sample application available above has been provided here. Ensure to update the `APP_URL`, `username` and `accesKey` in the code scripts before running the tests.
+Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="App File" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""`}
+    </CodeBlock>
+  </div>
+</TabItem>
+
+<TabItem value="powershell" label="App URL" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+      {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"`}
+    </CodeBlock>
+  </div>
+</TabItem>
+
+</Tabs>
+
+:::tip
+
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+
+- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
+
+:::
+
+### Step 4: Update your Automation Script
+
+An automation script for the sample application given above has been provided here. Ensure to update the `APP_URL`, `username` and `accessKey` in the code scripts before running the tests.
 
 ```csharp title="NUnitAppiumTests.cs"
 using System;
@@ -182,13 +158,6 @@ namespace NUnitSelenium
     [TestFixture("OnePlus 6", "8", "Android", "APP_URL")]    // Android Testing 
     //highlight-next-line
     [TestFixture("iPhone 11", "14", "iOS", "APP_URL")]      // iOS testing
-    //[TestFixture("OnePlus 6T", "9", "Android", "APP_URL")]
-    //[TestFixture("OnePlus 6T", "9", "Android", "APP_URL")]
-    //[TestFixture("OnePlus 6T", "9", "Android", "APP_URL")]
-    //[TestFixture("OnePlus 6T", "9", "Android", "APP_URL")]
-    //[TestFixture("OnePlus 6T", "9", "Android", "APP_URL")]
-    //[TestFixture("OnePlus 6T", "9", "Android", "APP_URL")]
-    // [TestFixture("OnePlus 6T", "9", "Android", "APP_URL")]
     [Parallelizable(ParallelScope.Fixtures)]
     public class NUnitSeleniumSample
     {
@@ -199,9 +168,6 @@ namespace NUnitSelenium
         public static string build = Environment.GetEnvironmentVariable("LT_BUILD") == null ? "your build name" : Environment.GetEnvironmentVariable("LT_BUILD");
         public static string seleniumUri = "https://mobile-hub.lambdatest.com:443/wd/hub";
 
-
-
-
         //-------------------------Initialization of Driver--------------------------
         AndroidDriver<AndroidElement> driver;
 
@@ -210,8 +176,6 @@ namespace NUnitSelenium
         private String platformVersion;
         private String platformName;
         private String app;
-
-       
 
         public NUnitSeleniumSample(String deviceName, String platformVersion, String platformName, String app)
         {
@@ -238,8 +202,7 @@ namespace NUnitSelenium
             capabilities.AddAdditionalCapability("name", "NUnit Test");
             capabilities.AddAdditionalCapability("isRealMobile", true);
 
-            
-                 driver = new AndroidDriver<AndroidElement> (new Uri(seleniumUri), capabilities, TimeSpan.FromSeconds(600));
+            driver = new AndroidDriver<AndroidElement> (new Uri(seleniumUri), capabilities, TimeSpan.FromSeconds(600));
             
            // Console.Out.WriteLine(driver);
             Console.Out.WriteLine("On Which Device/Platform test is running:"+deviceName+" "+platformVersion+" "+platformName);
@@ -312,8 +275,6 @@ namespace NUnitSelenium
                 driver.PressKeyCode(AndroidKeyCode.Back);
                 System.Threading.Thread.Sleep(1000);
 
-
-
                 //----------------------Speed Test Button---------------------------------
                 Console.WriteLine("6.Speed Test Button Clicked");
 
@@ -346,12 +307,6 @@ namespace NUnitSelenium
                    MobileBy.Id("url"))
             );
 
-                //String command = "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView("
-                //          + url + ");";
-
-                //driver.FindElementByAndroidUIAutomator(command);
-
-
                 url.Click();
 
                 url.SendKeys("www.lambdatest.com");
@@ -361,12 +316,6 @@ namespace NUnitSelenium
                 driver.PressKeyCode(AndroidKeyCode.Back);
 
                 System.Threading.Thread.Sleep(3000);
-
-
-
-
-
-
             }
         }
 
@@ -388,69 +337,57 @@ namespace NUnitSelenium
                 
                 driver.Quit();
             }
-
-            
-
-         
-
-
-
-
-
-
         }
     }
 }
 
 ```
 
-### Configuring Your Test Capabilities
+### Step 5: Configure the Test Capabilities
 
-You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as:
+You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
 
+The capabilities object in the sample code are defined as:
 
 ```csharp
 AppiumOptions capabilities = new AppiumOptions();
-            capabilities.AddAdditionalCapability("user", "LT_USERNAME");   //Add LambdaTest username here
-            capabilities.AddAdditionalCapability("accessKey", "LT_ACCESS_KEY");   //Add LambdaTest accessKey here
-            capabilities.AddAdditionalCapability("app",app);
-            capabilities.AddAdditionalCapability("deviceName", deviceName);
-            capabilities.AddAdditionalCapability("platformVersion", platformVersion);
-            capabilities.AddAdditionalCapability("platformName", platformName);
-            capabilities.AddAdditionalCapability("build", "Csharp NUnit");
-            capabilities.AddAdditionalCapability("name", "NUnit Test");
-            capabilities.AddAdditionalCapability("isRealMobile", true);
+capabilities.AddAdditionalCapability("user", "LT_USERNAME");   //Add LambdaTest username here
+capabilities.AddAdditionalCapability("accessKey", "LT_ACCESS_KEY");   //Add LambdaTest accessKey here
+capabilities.AddAdditionalCapability("app",app);
+capabilities.AddAdditionalCapability("deviceName", deviceName);
+capabilities.AddAdditionalCapability("platformVersion", platformVersion);
+capabilities.AddAdditionalCapability("platformName", platformName);
+capabilities.AddAdditionalCapability("build", "Csharp NUnit");
+capabilities.AddAdditionalCapability("name", "NUnit Test");
+capabilities.AddAdditionalCapability("isRealMobile", true);
 ```
 
+:::info
 
-:::info Note
-
-- You must add the generated **APP_URL** to the `"app"` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.For more details, please refer to our guide on [Desired Capabilities in Appium](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+- You must add the generated **APP_URL** to the `app` capability in the config file.
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
 
 :::
 
-### 6. Execute your test case
+### Step 6: Execute and Monitor your Tests
 
-Run the following command in the directory where your project has been saved to execute your build and run the tests parallelly.
+Run the following command in your project directory to execute your build and run the tests parallelly.
+
 ```bash
 nmake all
 ```
-or 
+
+OR
 
 Go to **Build menu** in Visual Studio Code menu bar and click on **Build Solution**. After the solution is built navigate built navigate to **Test menu** and click on **Test All** to execute the tests.
+
 :::caution Warning
 Make sure that **DotNetSeleniumExtras.WaitHelpers** in the NuGet packages which you can check from **Project Menu -> Manage NuGet Packages**.
 :::
 
-### 7. View test execution
+  > Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://appautomation.lambdatest.com/build).
-
-
-## Additional Links
-
----
+## Reference Guides
 
 - [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
@@ -470,7 +407,8 @@ Once you have run your tests, you can view the test execution along with logs. Y
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Java With Appium</span>
+      Java With Appium
+      </span>
     </li>
   </ul>
 </nav>

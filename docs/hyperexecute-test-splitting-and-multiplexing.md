@@ -63,8 +63,7 @@ You can utilise these modes to split and execute tests as per your requirements.
   <a href = "/support/docs/hyperexecute-hybrid-strategy/">
   <div className="support_inners">
     <h3>Hybrid Strategy</h3>
-    <p>Combination of both Auto Split Strategy and Matrix Multiplexing Strategy to run tests in parallel on our virtual machines.
-</p>
+    <p>Combination of both Auto Split Strategy and Matrix Multiplexing Strategy to run tests in parallel on our virtual machines.</p>
   </div>
   </a>
 </div>

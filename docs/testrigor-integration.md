@@ -38,9 +38,7 @@ slug: testrigor-integration/
 ></script>
 
 # testRigor Integration
-***
-
-TestRigor is a test automation tool that allows your team to build, maintain, and understand tests written in plain English. It also has a Chrome plugin that speeds up test creation, and its AI-powered system significantly reduces test maintenance.
+testRigor is a Generative AI-based codeless test automation tool that helps companies empower manual testers to create test automation through executable specifications in plain English. This innovative system enables your team to easily build and maintain tests, while its AI-powered features significantly reduce the effort required for test maintenance.
 
 LambdaTest integration with testRigor enables you to perform desktop web, mobile web and native app testing across 3000+ real browsers, devices, and operating systems.
 

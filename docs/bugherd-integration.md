@@ -1,7 +1,7 @@
 ---
 id: bugherd-integration
-title: BugHerd Integration
-hide_title: true 
+title: BugHerd Integration with LambdaTest
+hide_title: false 
 sidebar_label: BugHerd Integration
 description: LambdaTest helps you manage your bugs in BugHerd by moving them to project in a single click. All the details you provide in LambdaTest like task list, assignee, title and description would automatically be presented in the project on BugHerd.
 keywords:
@@ -45,99 +45,66 @@ slug: bugherd-integration/
     }}
 ></script>
 
-# BugHerd Integration
-***
-BugHerd is a bug tracker that presents a virtual representation of your website, allowing you to highlight any visual deviation before you log a bug regarding the same. The view presented by visual representation is shareable with your team and your clients. A note provided in BugHerd gets pinned on the UI, just like a sticky note sticks to a board. These pins help the developers to know the exact areas, where the UI needs improvement. Also, as developers click on the sticky note, they receive all the information related to the bug.
+[BugHerd](https://bugherd.com/) is a website bug tracker that allows you to easily create bug reports and track feedback, all without leaving your website. Developers can pin notes on the UI right on the element where the bug occurs, and also easily collect bug reports from users and team members.   Along with each bug report, user technical data is automatically captured so there’s no back and forth, and BugHerd channels all feedback into an integrated Kanban board for easy task management.
 
-LambdaTest integration with BugHerd helps you in filing issues to your project in BugHerd directly from LambdaTest platform. With one-click integration you can push annotated issues to the project of your choice, assign it to the required team mate, and attach necessary screenshots. You can do all that while in the middle of a test session in LambdaTest platform. The fields populated by you when marking as bug through LambdaTest are displayed as information on the BugHerd for a testing instance.
+LambdaTest integrates with BugHerd, allowing users to file issues directly from the platform, assign them to team members, and attach screenshots during a test session, with populated fields displayed on the BugHerd platform for each testing instance.
 
-> BugHerd Integration with LambdaTest, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.
+> BugHerd Integration with LambdaTest is available for freemium as well as premium plan.
 
-## How to establish integration with BugHerd from your LambdaTest account?
-***
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+## Integrate BugHerd from your LambdaTest Account
 
-**Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
 
-**Step 3:** Click on ‘ADD’ under the block that says ‘BugHerd’.
+**Step 2:** Click on Settings -> Integrations -> Bug Tracker.
 
-<img loading="lazy" src={require('../assets/images/bugherd-integration/bugherd-integration-1.webp').default} alt="add" width="1342" height="647" className="doc_img"/>
+**Step 3:** Click on **Connect** button of ‘BugHerd’ block.
 
-**Step 4:** Once you click on install, you will be redirected to the below screen. You will be asked to provide your BugHerd API Token credentials in the highlighted fields to establish integration with LambdaTest.
+**Step 4:** Now, provide your BugHerd API Token to establish integration with LambdaTest and click on **install** button.
 
-<img loading="lazy" src={require('../assets/images/bugherd-integration/bugherd-integration-2.webp').default} alt="Api token" width="1357" height="646" className="doc_img"/>
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/bugherd-integration/bugherd-integrate.mp4').default} type="video/mp4" />
+</video>
 
-> What is an API token?
-When two different applications interact with each other, a server-to-server communication is established. API token is needed for authenticating user identity from one server to another, by fetching user-owned resources available on the server from where the communication is initiated. API token has been a necessity for maintaining security and data integrity of any application. They are just as vital to an end user as they are to an application. API tokens are relevant if an end user logs in an application through a 2-step verification process.
+:::info Fetch your Bugherd API Token
 
-**Step 5:** To find the API token, visit your BugHerd account. Go to‘Settings’ tab.
+- Visit your BugHerd account -> **Settings** tab.
+- You will find the “**API Token**” under the section **Authentication Token**. Copy your API token.
 
-<img loading="lazy" src={require('../assets/images/bugherd-integration/bugherd-integration-3.webp').default} alt="setting" width="1365" height="401" className="doc_img"/>
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/bugherd-integration/api-token.mp4').default} type="video/mp4" />
+</video>
 
-**Step 6:** As you click on Settings, you will find the “API Token” under the section Authentication Token. Copy your API token.
+:::
 
-<img loading="lazy" src={require('../assets/images/bugherd-integration/bugherd-integration-4.webp').default} alt="api token" width="1350" height="643" className="doc_img"/>
+## Lodge your First Bug
 
-**Step 7:** Paste the API token into the field provided at LambdaTest & hit the ‘Next’ button. You are all set to experience one-click bug logging to share your issues directly from your LambdaTest account to your project on bugherd.
+**Step 1:** Go to your BugHerd Projects, create a new one if you haven't already.
 
-<img loading="lazy" src={require('../assets/images/bugherd-integration/bugherd-integration-5.webp').default} alt="bug logging" width="1365" height="647" className="doc_img"/>
+**Step 2:** Enter your Project Name and the Website URL which you want to test and report bugs. Click on **Create Projects** button.
 
-That’s it! Go to Integrations again and you will be able to notice a green tick indicating that bugherd is successfully installed.
+**Step 3:** Now click on the **Open Website** button to start testing your website.
 
-<img loading="lazy" src={require('../assets/images/bugherd-integration/bugherd-integration-6.webp').default} alt="installed" width="1339" height="653" className="doc_img"/>
+**Step 4:** After detecting any bug on your site, or web-app, click on any of the method from **Tag an element**, **Tag the page**, **Video Feedback** that you want to use for reporting the bug.
 
-## How to log your first bug through BugHerd integration?
-***
-**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking “Real Time Test” option.
+**Step 5:** Now update the comments of the bug and other details and click on **Create Task** button.
 
-**Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & hit ‘Start‘.
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/bugherd-integration/lodge-bug.mp4').default} type="video/mp4" />
+</video>
 
-<img loading="lazy" src={require('../assets/images/bugherd-integration/jira-1.webp').default} alt="start" width="1365" height="660" className="doc_img"/>
+**Step 6:** Go to your dashboard and check a ticket will be created for the same.
 
-**Step 3:** After the VM is launched and operable. You can find bugs on you website by performing live, interactive testing. If a bug gets revealed, then you need to click on the bug icon from the left panel for [capturing a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the same. We have highlighted that controller button in the below image.
+## Uninstall BugHerd Integration
 
-<img loading="lazy" src={require('../assets/images/bugherd-integration/bugherd-integration-7.webp').default} alt="controller" width="1248" height="617" className="doc_img"/>
+**Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
 
-**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says “Mark as Bug”.
+**Step 2:** Click on Settings -> Integrations -> Bug Tracker.
 
-<img loading="lazy" src={require('../assets/images/bugherd-integration/bugherd-integration-8.webp').default} alt="mark as bug" width="1273" height="616" className="doc_img"/>
+**Step 3:** Click on the **Remove** button.
 
-**Step 5:** After clicking on “Mark as Bug” button a BugHerd specific form would open up. Fill the fields as per your requirement.
-
----
-
-* You can select which project should the ticket go under.
-* You can assign the bug to a colleague by populating the ‘Assigned To’ field.
-* You can set the severity of the bug.
-* You can mention the status as well for better visibility on dashboard.
-* You also get to post a description to help relate the cause of the issue or the task.
----
-
-<img loading="lazy" src={require('../assets/images/bugherd-integration/bugherd-integration-9.webp').default} alt="fill the fields" width="1352" height="615" className="doc_img"/>
-
-**Step 6:** Click on “Create Bug” & observe it being successfully marked through a single click effort. Once you hit the button, you will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning “Bug successfully marked” indicating that the issue has been successfully pushed to the respective workspace.
-
-<img loading="lazy" src={require('../assets/images/bugherd-integration/Capture15.webp').default} alt="bug marked" width="347" height="75" className="doc_img"/>
-
-**Step 7:** Visit your BugHerd dashboard. You will be able to notice the logged issue right away by going to stories in the particular project. You will find it under you **‘Unscheduled’** section.
-
-<img loading="lazy" src={require('../assets/images/bugherd-integration/bugherd-integration-10.webp').default} alt="unscheduled" width="1365" height="416" className="doc_img"/>
-
-**Step 8:** As you click on the task you will notice all the data you provided in LambdaTest already presented in the task under task details. LambdaTest automatically includes test environment details and related screenshots in the ticket as attachments.
-
-<img loading="lazy" src={require('../assets/images/bugherd-integration/bugherd-integration-11.webp').default} alt="task details" width="1365" height="644" className="doc_img"/>
-
-## How to uninstall BugHerd integration?
-***
-> You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to `uninstall` your current integration. Here is how you can do that.
-
-**Step 1:** Login to your LambdaTest account.
-
-**Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
-
-**Step 3:** Click on ‘REMOVE’. You can find the remove button right under the ‘BugHerd’ block which would be highlighted with a green tick.
-
-<img loading="lazy" src={require('../assets/images/bugherd-integration/bugherd-integration-12.webp').default} alt="uninstall" width="1338" height="625" className="doc_img"/>
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/bugherd-integration/uninstall-bugherd.mp4').default} type="video/mp4" />
+</video>
 
 > That was all you need to know for LambdaTest + BugHerd Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock. 
 

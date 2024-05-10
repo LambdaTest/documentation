@@ -84,7 +84,7 @@ Here's how you can upload your PDFs:
 | ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
 | projectToken | string | This token is required to upload PDF files and validate your project. <br/> Example: `projectToken:123456#1234abcd-****-****-****-************` | Yes       |
 | pathToFiles  | array  | Add the path to the PDFs that will be uploaded. <br/> Example: `pathToFiles : [ "path/to/pdf-1", "path/to/pdf-2"]`                                      | Yes       |
-| buildName    | string | Assign a name of your choice to the build comprising the uploaded PDFs. <br/> Example: `buildName : #<Build_Name>                               | No        |
+| buildName    | string | Assign a name of your choice to the build comprising the uploaded PDFs. <br/> Example: `buildName : #&lt;Build_Name&gt;                               | No        |
 
 :::note 
 Only files in `.pdf` format are compatible with this feature.

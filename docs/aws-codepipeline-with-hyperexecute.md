@@ -53,6 +53,15 @@ This document will show you how to integrate AWS CodePipeline with HyperExecute 
 
 To integrate AWS CodePipeline with HyperExecute, follow the below mentioned steps:
 
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/aws-codebuild" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
+
 ### Step 1: Create a new AWS CodePipeline pipeline.
 
 - Enter the Pipeline Name.
@@ -85,12 +94,21 @@ To integrate AWS CodePipeline with HyperExecute, follow the below mentioned step
 
 ```bash
 version: 0.2
+
 phases:
+  install:
+    commands:
+      # Download Hyperexecute CLI for macOS (adjust for other OS)
+      - name: Download Hyperexecute CLI
+        command: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
+      # Grant execute permission to the downloaded binary
+      - name: Make HyperExecute executable
+        command: chmod u+x hyperexecute
   build:
     commands:
-      - curl -O http://downloads.lambdatest.com/hyperexecute/linux/hyperexecute
-      - chmod +x hyperexecute
-      - ./hyperexecute --user <your_user_name> --key <your_access_key> --config <your_yaml_file>
+      # Run Hyperexecute with user credentials and configuration file
+      - name: Trigger HyperExecute tests
+        command: ./hyperexecute --user <your_user_name> --key <your_access_key> --config <your_yaml_file>
 ```
 
 - In the **buildspec** specification, choose the first option - **“Use a buildspec file”**.

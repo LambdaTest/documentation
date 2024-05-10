@@ -124,7 +124,8 @@ Other LambdaTest products will be added soon with Analytics support.
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      FAQs </span>
+      FAQs 
+      </span>
     </li>
   </ul>
 </nav>

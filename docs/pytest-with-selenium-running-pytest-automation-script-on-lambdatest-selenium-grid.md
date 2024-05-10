@@ -227,7 +227,8 @@ Once you are able to connect **LambdaTest Tunnel** successfully, you would just 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      PyTest Automation Testing  </span>
+      PyTest Automation Testing
+      </span>
     </li>
   </ul>
 </nav>

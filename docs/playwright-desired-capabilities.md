@@ -68,7 +68,7 @@ tests.
 | tunnelName | true /false | Specify tunnel name | `const capability = { "LT:Options": {"tunnelName": "<tunnel_name>",}}`|
 | geoLocation | AR (Argentina) | Specify country code | `const capability = { "LT:Options": {"geoLocation": "AR",}}`|
 | idleTimeout | number| Specifies the timeout of the commands in seconds. <br /><br /> <b>Default value:</b> 300 <br /><br /> <b>Max value:</b> 1800<br /><br /> If a value greater than 1800 is added, idleTimeout will be set to 1800.| `const capability = { "LT:Options": {"idleTimeout": "<number>",}}`|
-
+| lambdaMaskCommands | array | <b> `sendType` </b> Masks the type method of the ElementHandle and Locator class. <br /><br /> <b> `sendFill` </b> Masks the user-id or password in the test recording command logs. <br /><br /> <b>`sendPress`</b> Masks the press method of the ElementHandle and Locator class. <br /><br /> <b>`setHTTPCredentials`</b> Masks the HTTP credentials parameter in the newContext and newPage method of the browser class. <br/><br /> <b>`setStorageState`</b> Masks the storage state parameter in the newContext and newPage method of the browser class <br /><br /> <b>`setGeolocation`</b> Masks the Geolocation parameter in the newContext and newPage method of the browser class.|`const capability = { "LT:Options": {'lambdaMaskCommands': ["sendType", "sendFill", "sendPress", "setHTTPCredentials", "setStorageState", "setGeolocation"]}}` <br /><br /> |
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

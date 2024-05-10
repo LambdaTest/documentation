@@ -43,6 +43,8 @@ slug: he-integration-with-lambdatest-products/
 
 You can now integrate HyperExecute with other LambdaTest products like Smart UI testing. You can go through the links below to see the integrations we offer at the moment. 
 
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/hyp-lt-products.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
 <div className="support_main">
   
   <a href = "/support/docs/smart-ui-testing/">

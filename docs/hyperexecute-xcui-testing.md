@@ -117,7 +117,81 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </TabItem>
 </Tabs>
 
-## Step 3: Configure YAML in your Test Suite
+## Step 3: Upload your Application and Test Suite
+
+### Upload your App
+
+Upload your **iOS** application (.ipa file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format ```Username:AccessKey``` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request.
+
+Here is an example cURL request to upload your app using our REST API:
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Linux / MacOS" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
+--location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \\
+--form 'appFile=@"/Users/macuser/Downloads/proverbial.ipa"' \\
+--form 'type="xcuit-ios"'`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/uploadFramework" -F "appFile=@"/Users/macuser/Downloads/proverbial.ipa"" -F "type="xcuit-ios""`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
+:::note
+Response of above cURL will be a **JSON** object containing the `App URL` of the format - `APP123456789123456789` and will be used in the last step as `appId`.
+:::
+
+### Upload your Test Suite
+
+Upload your **test suite** (.ipa file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Linux / MacOS" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
+--location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \
+--form 'appFile=@"/Users/macuser/Downloads/proverbial_ios_xcuitest.ipa"' \
+--form 'type="xcuit-ios"'`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/varunkumarb/Downloads/proverbial_ios_xcuitest.ipa"" --form "type=\"xcuit-ios\""`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
+:::note
+
+Response of above cURL will be a **JSON** object containing the `App URL` of the format - `APP123456789123456789` and will be used in the next step as ``testSuiteAppId``
+
+:::
+
+## Step 4: Configure YAML in your Test Suite
 
 Enter your `<RELATIVE_APP_PATH>` and `<RELATIVE_TEST_SUITE_PATH>` in the YAML file
 
@@ -151,29 +225,40 @@ framework:
     deviceSelectionStrategy: any
     devices: [".*"]
 
+    shards:
+      mappings:
+      - name: shard1
+        strategy: "only-testing/skip-testing"
+        values: ["<className>/<className/testName>"]
+     - name: shard2
+       strategy: "only-testing/skip-testing"
+       values: ["<className>/<className/testName>", "<className>/<className/testName>"]
+
 jobLabel: ['HyperExecute', 'XCUI', 'Real Device']
 ```
 
-:::tip
-You can also upload your **application** to the LambdaTest servers using our <b>REST API</b>. You need to provide your <b>Username</b> and <b>AccessKey</b> in the format `Username:AccessKey` in the <b>cURL</b> command for authentication.
+:::tip When shards are added
 
-Enter your local path of the code repository instead of `<YOUR_LOCAL_APP_PATH>` in the below cURL command.
+If you are using the `deviceSelectorStrategy: all`, then in that case all the mentioned shards will be executed on all the devices.<br/>
+**For example:** There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on 2 devices (2 Shards * 2 Devices).
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"<YOUR_LOCAL_APP_PATH>"" -F "name="sampleApp""
-`}
-</CodeBlock>
-</div>
+If you are using the `deviceSelectorStrategy: any`, then in that case all the mentioned shards will be executed on any one device from the list provided.<br/>
+**For example:** There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on any device (2 shards * any device mentioned).
 
-Enter your `<APP_ID>` in the YAML file in the `framework` flag:
-
-```bash
-appId: lt://<APP_ID>
-```
 :::
 
-## Step 4: Execute your Test Suite
+:::caution When shards aren't added
+
+If you are using the `deviceSelectorStrategy: all`, then in that case all the tests will be executed on all the devices based on the concurrency. <br/>
+**For example:** There are 6 tests and 10 devices mentioned, then the 6 tests will be auto distributed on the devices based on the max concurrency.
+
+
+If you are using the `deviceSelectorStrategy: any`, then in that case all the mentioned tests will be executed on any one device from the list provided. <br/>
+**For example:** There are 6 tests and 10 devices mentioned, then the 6 tests will be executed on any one device.
+
+:::
+
+## Step 5: Execute your Test Suite
 
 > **NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
@@ -189,7 +274,7 @@ OR use this command if you have not exported your username and access key in the
 ./hyperexecute --user <your_username> --key <your_access_key> --config <path_of_yaml_file>
 ```
 
-## Step 5: Monitor the Test Execution
+## Step 6: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 

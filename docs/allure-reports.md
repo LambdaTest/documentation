@@ -74,4 +74,19 @@ partialReports:
 
 > **NOTE:** The above example is only for the WDIO framework and the baseline concept remains the same across all the frameworks that the allure-results should be saved in a parent folder and that location of the parent folder is to be provided in the location parameters of reports in the HyperExecute YAML file. 
 
+:::info
+To enrich Allure reports with more specific details, we can use custom plugins. These plugins require configurations to function properly.
+
+To achieve this, you can use `configPath` flag within HyperExecute YAML. This specifies the location of the configuration file containing the custom plugin settings, allowing Allure to generate reports with the desired level of detail and this will be passed as `allure --config <CONFIG_PATH>`
+
+```bash
+report: true
+partialReports:
+  location: reports
+  # highlight-next-line
+  configPath: allure-config.yml
+  type: html
+  frameworkName: allure
+```
+:::
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/allure.png').default} alt="Image"  className="doc_img"/>

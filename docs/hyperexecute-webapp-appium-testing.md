@@ -446,7 +446,8 @@ By following the instructions in this documentation, you can seamlessly execute 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Appium Testing </span>
+      Appium Testing 
+      </span>
     </li>
   </ul>
 </nav>

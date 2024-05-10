@@ -47,51 +47,83 @@ Testim provides an automated testing platform to create stable tests using AI-po
 
 Integrating LambdaTest with Testim lets you run Testim automated tests on LambdaTest cloud-based grid across 3000+ real browsers and OS.
 
-## Adding LambdaTest Grid From Testim
+## Prerequisites
 ---
 
-1. Refer to the guidelines in the [Adding a grid](https://help.testim.io/docs/grid-management#adding-a-grid) section, opting for the LambdaTest option as the Grid Type.
+- Create an account on Testim.
+- Create a LambdaTest account. You can [sign up for free](https://accounts.lambdatest.com/dashboard).
+- Get your LambdaTest Username and Access Key.
 
-2. Proceed by clicking **Next**.
-
-3. Modify the specified fields:
-
-   - **Name**: Enter the grid name to be used during runtime.
-
-   - **Host**: Input the LambdaTest host name (e.g., hub.lambdatest.com).
-
-   - **Port**: Set the LambdaTest port (Default: 443).
-
-   - **Username**: Specify your LambdaTest username.
-
-   - **Password/Access Key**: Provide the LambdaTest access key for connection or password.
-
- <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/testim-integration/1.mp4').default} type="video/mp4" />
-</video>
-
-## Running Testim Tests on LambdaTest
+## Setting Up the Grid
 ---
 
-You have multiple options for running your Testim tests on LambdaTest cloud.
+Shown below are the steps to set up your Grid on Testim.
 
-* **CLI / CI**: Add the *--grid* parameter along with the grid name.
+1. Click on your profile icon > **Grids** button.
 
-* **Scheduler**: Use the Grid field to select the specific grid for test execution.
+2. Click on **Add New Grid**. Then, select **LambdaTest** as your Grid Type and click on **Next** button.
 
-* **Test Plan**: Choose the desired grid for running your tests using the Grid field.
-
-* **From the Editor**:
-
-1. Run your test directly on the grid from the test editor.
-
-2. Click on the options arrow next to the **Run** button.
-
-3. Select **Run on a grid**.
-
-4. To modify the configuration, grid, or base URL for that run, click on **Edit**.
-
+3. To configure the Grid:
+    - Enter the Grid name.
+    - Update your Host and Port number.
+    - Enter your LambdaTest Username and Access Key and click on **Add** button.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/testim-integration/2.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/hyperexecute/integration/products/testim/grid-setup.mp4').default} type="video/mp4" />
 </video>
+
+## Recording the Tests
+---
+
+Shown below are the steps to record your tests on Testim.
+
+1. Click on **New Test** > **Start Recording**.
+
+2. Enter your app URL and click on **Create Test**.
+
+3. It will start recording the tests. Once your testing is completed, stop the recording and save your tests.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/integration/products/testim/test-record.mp4').default} type="video/mp4" />
+</video>
+
+## Configuring the Capabilities
+---
+
+Include the capabilities you wish to use in a `.json` file and ensure this file is located in the same directory as your Testim runner.
+
+```json
+{
+  "resolution": "1280x800",
+  "browserName": "chrome",
+  "version": "latest"
+}
+```
+
+## Running the Testim Tests on LambdaTest
+---
+
+To execute the tests, check:
+
+* If the Testim CLI is not already installed on your system, use the entire command provided by the Testim CLI or dashboard. 
+
+**For example:**
+```json
+npm i -g @testim/testim-cli && testim --token "2jWxWxXcmJRON0PA73YZWt92fFGU76cd" --project "GTJL28fMHad" --grid "LAMBDA-TEST" --test-id "2u8QnIm454" --selenium-caps-file "local.json"
+```
+
+* If the Testim CLI is already installed, you can run a simpler command that includes your Testim token, project ID, grid, test ID, and the name of your Selenium capabilities file.
+
+**For example:**
+
+```json
+testim --token "2jWxWxXcmJRON0PA73YZWt92fFGU76cd" --project "GTJL28fMHad" --grid "LAMBDA-TEST" --test-id "2u8QnIm454" --selenium-caps-file "local.json"
+```
+
+To view your test results, navigate to the LambdaTest Web Automation Dashboard.
+
+<img loading="lazy" src={require('../assets/images/tr-testim.png').default} alt="Web Automation Dashboard" width="1920" height="1080" className="doc_img"/>
+
+
+>
+**Note**: To explore additional configuration options, you can execute `testim --help` in PowerShell or bash, which will display further customizations available for writing and executing your test cases.

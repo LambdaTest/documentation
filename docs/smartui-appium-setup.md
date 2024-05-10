@@ -24,6 +24,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import CodeBlock from '@theme/CodeBlock';
+import NewTag from '../src/component/newTag';
 
 ---
 
@@ -95,7 +96,7 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 :::tip
 
 - If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
-- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `<lt://APP123456789123456789>` and will be used in the next step.
+- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - ```lt://APP123456789123456789``` and will be used in the next step.
 
 :::
 
@@ -224,41 +225,123 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 ---
 
-In this module we discussed about running smart visual tests on **NodeJS**, here we will know more about running those tests for any language or framework with appium. To execute visual testing on LambdaTest SmartUI, we need to execute `"smartui.takeScreenshot"` using appium Webdriver.
+In this module we discussed about running smart visual tests on **NodeJS**, here we will know more about running those tests for any language or framework with appium. 
+
+In a similar way, we can run visual tests for other languages and frameworks using their corresponding script executing commands. To understand better, we provided the commands for some of the popular languages and frameworks:
+
+#### For taking viewport screenshot
+
+This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="nodejs" label="NodeJS" default>
 
 ```javascript
-driver.executeScript("smartui.takeScreenshot=<Name of your screenshot>");
+driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 ```
 
 </TabItem>
 
-<TabItem value="python" label="Python / Ruby" default>
+<TabItem value="python" label="Python" default>
 
 ```python
-driver.execute_script("smartui.takeScreenshot=<Your Screenshot Name>")
+driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
+```
+
+</TabItem>
+<TabItem value="ruby" label="Ruby" default>
+
+```python
+driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 </TabItem>
 <TabItem value="csharp" label="C#" default>
 
 ```csharp
-driver.ExecuteScript("smartui.takeScreenshot=<Your Screenshot Name>");
+driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
 </TabItem>
 <TabItem value="java" label="Java" default>
 
 ```java
-((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
+((JavascriptExecutor)driver).execute("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
 </TabItem>
 </Tabs>
 
-In a similar way, we can run visual tests for other languages and frameworks using their corresponding script executing commands. To understand better, we provided the commands for some of the popular languages and frameworks:
+#### For capturing full page screenshot in Native Apps <NewTag value="BETA" bgColor="#ffec02" color="#000" />
+
+You can capture the full page screenshot for apps which have a scrolling functionality on their application user interface for your **Appium** functional testing.
+
+Add the following **Webhook** to your test cases where we need to capture the screenshot of your application.
+
+<Tabs className="docs__val" groupId="language">
+<TabItem value="nodejs" label="NodeJS" default>
+
+```javascript
+let config = {
+  screenshotName: '<Name of your screenshot>',
+  fullPage: true,
+  pageCount: 15   // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
+};
+await driver.execute("smartui.takeScreenshot", config);
+```
+</TabItem>
+
+<TabItem value="python" label="Python" default>
+
+```python
+config = {
+  'screenshotName': '<Your Screenshot Name>',
+  'fullPage': True,
+  'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
+}
+driver.execute("smartui.takeScreenshot", config)
+```
+</TabItem>
+<TabItem value="ruby" label="Ruby" default>
+
+```ruby
+config = {
+  'screenshotName' => '<Your Screenshot Name>',
+  'fullPage': true,
+  'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
+}
+driver.execute("smartui.takeScreenshot", config)
+```
+</TabItem>
+
+<TabItem value="csharp" label="C#" default>
+
+```csharp
+var config = new Dictionary<string, string> {
+  {"screenshotName", "<Your Screenshot Name>"},
+  {"fullPage", true},
+  {"pageCount", 15} // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
+};
+driver.Execute("smartui.takeScreenshot", config);
+```
+
+</TabItem>
+<TabItem value="java" label="Java" default>
+
+```java
+Map<String, Object> config = new HashMap<>();
+config.put("screenshotName", "<Your Screenshot Name>");
+config.put("fullPage", true);
+config.put("pageCount", 15); // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
+((JavascriptExecutor)driver).execute("smartui.takeScreenshot", config);
+```
+
+</TabItem>
+</Tabs>
+
+:::note 
+Please note that this webhook is only applicable to <b>native app screenshots</b> and has known limitations. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.
+:::
 
 For additional information about appium framework please explore the documentation [here](https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/)
 
@@ -276,8 +359,7 @@ For additional information about appium framework please explore the documentati
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Getting Started with appium Visual Regression  </span>
+      <span className="breadcrumbs__link"> Getting Started with appium Visual Regression  </span>
     </li>
   </ul>
 </nav>
