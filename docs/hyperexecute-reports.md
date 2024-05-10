@@ -62,6 +62,27 @@ partialReports:
 ```
 > **Note**: If you do not specify a framework but you do mention the type of the report, then a report of the default framework is created.
 
+:::tip
+
+If you want to generate multiple reports of different frameworks.
+
+```bash
+partialReports:
+  - location: reports/json
+    type: json
+    frameworkName: extent-native
+    email:
+        to:
+          - johndoe@example.com
+  - location: target/surefire-reports
+    type: html
+    frameworkName: testng-me
+    email:
+        to:
+          - johndoe@example.com
+```
+:::
+
 **Step 3:** Now trigger your job and go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
 
 **Step 4:** Click on the **Open** button of the **Reports**.
