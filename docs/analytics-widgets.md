@@ -41,6 +41,14 @@ Analytics in LambdaTest allows the QA managers and executives to efficiently tra
 
 ## Insights Modules
 
+:::note Explore AI Dashboard CoPilot
+
+We have recently launched an AI Dashboard CoPilot <NewTag value="BETA" bgColor="#ffec02" color="#000" /> feature that provides intelligent recommendations, insights, and predictions tailored to your specific data.
+
+To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analytics-dashboard-copilot/) documentation.
+
+:::
+
 <div className="support_main">  
 <a href="/docs/analytics-modules-resource-utilization/">
     <div className="support_inners">
