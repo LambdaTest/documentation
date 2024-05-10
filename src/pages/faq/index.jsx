@@ -942,6 +942,14 @@ export default function index() {
             </details>
 
             <details>
+              <summary>Does your public cloud plan offer access to iOS device settings?
+              </summary>
+              <p>As of now, accessing settings on iOS is restricted with the public cloud plan. However, you can access iOS device settings with our private cloud plan.
+              </p>
+            </details>
+
+
+            <details>
               <summary>How I can handle the location pop-up on iOS devices?
               </summary>
               <p>In order to handle the location pop-up, you can use below capability in the script and the location will be auto handle in the test.<br/>
