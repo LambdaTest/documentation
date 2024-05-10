@@ -157,7 +157,7 @@ This flag allows you to download all the test related results that are generated
 ***
 
 ### `--force-clean-artifacts`
-This flag will downlaod the new artifacts of your job and will store it into the `artifacts` folder. If you have previously downloaded artifacts, it will be renamed as `artifacts-old`. 
+This flag will download the new artifacts of your job and will store it into the `artifacts` folder. If you have previously downloaded artifacts, it will be renamed as `artifacts-old`. 
 
 ***
 
