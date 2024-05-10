@@ -45,9 +45,9 @@ slug: bugherd-integration/
     }}
 ></script>
 
-BugHerd is a website bug tracker that provides a virtual representation of your website, allowing you to identify visual deviations before logging a bug. Developers can pin notes on the UI, receiving information related to the bug.
+[BugHerd](https://bugherd.com/) is a website bug tracker that allows you to easily create bug reports and track feedback, all without leaving your website. Developers can pin notes on the UI right on the element where the bug occurs, and also easily collect bug reports from users and team members.   Along with each bug report, user technical data is automatically captured so there’s no back and forth, and BugHerd channels all feedback into an integrated Kanban board for easy task management.
 
-LambdaTest integrates with BugHerd, allowing users to file issues directly from the platform, assign them to team members, and attach screenshots during a test session, with populated fields displayed on the BugHerd for a testing instance.
+LambdaTest integrates with BugHerd, allowing users to file issues directly from the platform, assign them to team members, and attach screenshots during a test session, with populated fields displayed on the BugHerd platform for each testing instance.
 
 > BugHerd Integration with LambdaTest is available for freemium as well as premium plan.
 
