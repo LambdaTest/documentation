@@ -38,23 +38,23 @@ slug: analytics-dashboard-edit-layout/
 
 ## Introduction
 
-Lambdatest Analytics is a powerful platform designed to provide custom analytics for test execution on cloud-based web and mobile platforms. As a software QA tester or manager, you can now further personalize your analytics experience with **Edit Layout** feature. This feature allows you to change the layout, resize, and reposition the widgets on your dashboard, providing an optimized view for your specific needs.
+Lambdatest insights is a powerful platform designed to provide custom insights for test execution on cloud-based web and mobile platforms. As a software QA tester or manager, you can now further personalize your insights experience with **Edit Layout** feature. This feature allows you to change the layout, resize, and reposition the widgets on your dashboard, providing an optimized view for your specific needs.
 
 This technical support document will walk you through the steps to utilize this feature effectively.
 
 ## Pre-Requisites
 
-To use the new widget management feature in Lambdatest Analytics, ensure that you have the following:
+To use the new widget management feature in Lambdatest insights, ensure that you have the following:
 
 - An active Lambdatest account
 - Existing dashboards with widgets
 
 ## Step by Step Process to Use the Feature
 
-Follow these steps to utilize the new widget management feature in Lambdatest Analytics:
+Follow these steps to utilize the new widget management feature in Lambdatest insights:
 
 1. Log in to your Lambdatest account.
-2. Go to Analytics section in the sidebar menu.
+2. Go to Insights section in the sidebar menu.
 3. Navigate to the dashboard you want to customize.
 4. Click the 'Edit' button located at the top-right corner of the dashboard to enter the edit mode.
 5. Perform the following actions to customize your widgets:

@@ -2348,6 +2348,7 @@ module.exports = {
       },
       items: [
         "analytics-modules-resource-utilization",
+        "analytics-test-time-trends",
         {
           type: "category",
           collapsed: false,
