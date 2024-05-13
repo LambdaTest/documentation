@@ -45,7 +45,9 @@ In mobile app development, thorough testing on real devices is essential for per
 
 Our detailed document compares Public Device Cloud and Private Device Cloud, focusing on their benefits for real device testing. It considers factors such as device access, session duration, settings control, and testing capabilities allowing organizations to make informed decisions about their testing strategies based on their needs and goals.
 
-## Private Cloud vs Public Cloud: Detailed Comparison
+<img loading="lazy" src={require('../assets/images/real-device-browser-testing/private-cloud-vs-public-cloud.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
+
+## Why Choose Private Cloud
 ***
 
 Here is the detailed comparison of Public Cloud and Private Cloud:
@@ -60,11 +62,9 @@ Here is the detailed comparison of Public Cloud and Private Cloud:
 | Apple Pay Testing  | Not Supported.| Supported for thorough testing scenarios.|
 | Bluetooth-Based Use Cases | Bluetooth functionality not available for testing.| Bluetooth functionality available for testing on dedicated devices.|
 | Assistive Touch  | Unavailable.| Available only on dedicated devices.|
+| Device Status  | Unavailable.| Real time device status with active user name.|
 
-## Conclusion
-***
-
-To conclude, both Public Device Cloud and Private Device Cloud are useful for real device testing, but the best choice depends on an organization's needs. Private Device Cloud offers exclusive access, longer session duration, control over device retention, advanced testing features, and clear device usage status making it ideal for organizations prioritizing security, customization, and thorough testing. By using Private Device Cloud, organizations can improve their testing, work more efficiently, and provide better mobile apps to users.
+To conclude, both Public Device Cloud and Private Device Cloud are useful for real device testing, but the best choice depends on an organization's needs. Private Device Cloud offers **exclusive access, longer session duration, control over device retention, advanced testing features,** and **clear device usage status** making it ideal for organizations prioritizing security, customization, and thorough testing. By using Private Device Cloud, organizations can improve their testing, work more efficiently, and provide better mobile apps to users.
 
 
 
