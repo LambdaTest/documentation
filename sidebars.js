@@ -1501,7 +1501,7 @@ module.exports = {
         collapsed: true,
         label: "Real Device Browser Testing",
         items: [
-          "real-device-browser-testing",
+          "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
         ],
       },
