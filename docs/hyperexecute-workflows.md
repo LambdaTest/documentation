@@ -52,7 +52,7 @@ You can setup scheduled workflows on HyperExecute platform to enable scheduled t
 - In the **Workflow Name** field, provide the name of your workflow.
 - Provide the path of your repository in the **Repo URL** field from which you want to setup the workflow.
 - Enter the specified **Branch Name** of your repository.
-- Provide the **Access Token**.
+- Provide the [**Access Token**](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 - Provide the **File Location** of your YAML file in the repository.
 
 Click on **Continue** button.
