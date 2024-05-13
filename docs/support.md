@@ -43,7 +43,6 @@ slug: /
 
 import NewTag from '../src/component/newTag';
 
-
 <div className="Doc_intro_cta">
 <div className="Doc_intro_cta_text">
 <h1>LambdaTest Support and Knowledge Base</h1>
@@ -96,14 +95,14 @@ import NewTag from '../src/component/newTag';
         <a href="/docs/analytics-dashboard-templates/"><p className="p_home_inners">Pre-built Dashboards</p></a>
         <a href="/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboards</p></a>
         <a href="/docs/analytics-widgets/"><p className="p_home_inners">Widgets</p></a>
-        <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></p></a>
+        <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA" bgColor="#ffec02" color="#000" /></p></a>
         <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
         <a href="/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Error Logs Insights</p></a>
         <a href="/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
+        <a href="/docs/analytics-allure-api-widgets/"><p className="p_home_inners">API Tests Insights</p></a>
       </div>
     </div>
   </div>
-
 
 <!-- end of first section -->
 
@@ -188,7 +187,6 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
 </div>
-
 
 <!-- end of third section -->
 </div>
