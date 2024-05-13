@@ -90,7 +90,7 @@ module.exports = {
         {
           type: 'html',
           position: 'right',
-          value: '<a role="button" tabindex="0" id="signbtn" href="https://stage-accounts.lambdatestinternal.com/register" class="getstart_btn">Get Started Free</a>',
+          value: '<a role="button" tabindex="0" id="signbtn" href="https://stage-accounts.lambdatestinternal.com/register" class="getstart_btn">Get Started</a>',
         },
         {
           to: 'docs/',
