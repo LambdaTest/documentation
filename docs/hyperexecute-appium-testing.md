@@ -180,7 +180,7 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-> Response of above cURL will be a **JSON** object containing the `App URL` of the format - <lt://APP123456789123456789> and will be used in the next step.
+> Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
 
 **Step 2:** Write Your Automation Script in the client language of your choice from the ones supported by Appium. An automation script for the sample applications have been provided below.
 
@@ -583,7 +583,8 @@ By following the instructions in this documentation, you can seamlessly execute 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Appium Testing </span>
+      Appium Testing 
+      </span>
     </li>
   </ul>
 </nav>

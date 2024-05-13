@@ -93,7 +93,8 @@ Please note, this hook is designed to be used exclusively with Safari on iOS Rea
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Basic Authentication for Safari Web Automation</span>
+      Basic Authentication for Safari Web Automation
+      </span>
     </li>
   </ul>
 </nav>

@@ -51,6 +51,14 @@ This document will show you how to integrate Semaphore CI/CD with HyperExecute t
 
 To integrate Semaphore Pipeline with HyperExecute, follow the below steps:
 
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/semaphore" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
 **Step 1:** Go to the [Semaphore CI/CD](https://semaphoreci.com/) website and login to the site using GitHub or Bitbucket.
 
 **Step 2:** Click on **Choose Repository** button.
@@ -87,3 +95,31 @@ Click on **Run the workflow** button.
 - Output in the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) Dashboard
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/7.png').default} alt="Image"  className="doc_img"/>
+
+## Sample Workflow File
+
+```bash
+version: 1
+
+image: ubuntu:latest  # Adjust for macOS if needed
+
+stages:
+  - download  # Descriptive stage name
+  - run-tests  # Descriptive stage name
+
+jobs:
+  download:  # Descriptive job name
+    stage: download
+    tasks:
+      - name: Download Hyperexecute CLI  # Descriptive task name
+        command: wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
+      - name: Make Hyperexecute executable  # Descriptive task name
+        command: chmod u+x hyperexecute
+
+  run-tests:  # Descriptive job name
+    stage: run-tests
+    depends_on: download  # Specify dependency on download job
+    tasks:
+      - name: Run Hyperexecute Tests  # Descriptive task name
+        command: ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>
+```

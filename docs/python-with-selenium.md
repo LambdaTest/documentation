@@ -252,7 +252,8 @@ Once you are able to connect **LambdaTest Tunnel** successfully, you would just 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run Python Automation Testing Scripts on Cloud Selenium Grid      </span>
+      Run Python Automation Testing Scripts on Cloud Selenium Grid      
+      </span>
     </li>
   </ul>
 </nav>

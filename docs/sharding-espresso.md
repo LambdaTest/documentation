@@ -353,8 +353,7 @@ This example will fetch all the test cases from 2 classes and 1 package as defin
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Sharding in XCUIT</span>
+      <span className="breadcrumbs__link">Sharding in XCUIT</span>
     </li>
   </ul>
 </nav>

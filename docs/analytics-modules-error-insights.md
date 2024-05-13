@@ -66,7 +66,8 @@ John wants to understand the error distribution of the executed tests on the pla
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Error Insights </span>
+      Error Insights 
+      </span>
     </li>
   </ul>
 </nav>

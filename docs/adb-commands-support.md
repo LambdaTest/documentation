@@ -162,7 +162,8 @@ result = driver.execute_script("lambda-adb",params)
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      ADB Commands Support </span>
+      ADB Commands Support 
+      </span>
     </li>
   </ul>
 </nav>

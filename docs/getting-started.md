@@ -113,9 +113,6 @@ Here are all the languages and frameworks supported by LambdaTest online Seleniu
           <a href="/docs/rspec-with-selenium-running-rspec-automation-scripts-on-lambdatest-selenium-grid/">RSpec</a>
         </li>
         <li>
-          <a href="/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-lambdatest-selenium-grid/">Cucumber</a>
-        </li>
-        <li>
           <a href="/docs/testunit-with-selenium-running-testunit-automation-scripts-on-lambdatest-selenium-grid/">Test::Unit</a>
         </li>
         <li>

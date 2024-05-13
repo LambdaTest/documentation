@@ -50,7 +50,7 @@ HyperExecute, a powerful test automation orchestration platform, boasts seamless
 
 - [**AccelQ**](/docs/hyperexecute-accelq-integration/): HyperExecute seamlessly integrates with AccelQ's data-driven testing capabilities. Leverage AccelQ's data sheets and dynamic test case generation within HyperExecute's orchestration workflows for efficient test execution.
 
-- [**Excel**](/docs/hyperexecute-excel-integration/): HyperExecute seamlessly integrates with Excel spreadsheets. Leverage Excel for data-driven testing within HyperExecute's orchestration workflows, using familiar spreadsheet functionalities for efficient test data management.
+- [**MS Office Suite**](/docs/hyperexecute-winapp-integration/): HyperExecute seamlessly integrates with MS Office tools. Leverage Excel, Notepad and other tools for data-driven testing within HyperExecute's orchestration workflows, using familiar functionalities for efficient test data management.
 
 <!-- - Provar: HyperExecute integrates with Provar's low-code test automation framework. Execute Provar tests alongside other tools within HyperExecute's orchestration, benefiting from Provar's intuitive interface and ease of use. -->
 

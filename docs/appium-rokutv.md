@@ -107,7 +107,7 @@ Upload your **Roku TV** application (.zip file) to the LambdaTest servers using 
 :::tip
 
 - If you do not have any **.zip** file, you can run your sample tests on LambdaTest by using our sample :link: [RokuTV app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/roku-sample-app.zip).
-- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - <lt://APP123456789123456789> and will be used in the next step.
+- Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
 
 :::
 
@@ -312,7 +312,8 @@ Your test results would be displayed on the test console (or command-line interf
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Roku TV With Appium</span>
+      Roku TV With Appium
+</span>
     </li>
   </ul>
 </nav>

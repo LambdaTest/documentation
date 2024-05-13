@@ -154,7 +154,7 @@ Shown below is the response of the above API call.
 ## Step 3: Fetch All The Releases For An App
 ***
 
-If you have the {name} and {owner.name} (as received in Step 2), you can use the API call below to retrieve all the Release information for a particular app.
+If you have the &lbrace;name&rbrace; and &lbrace;owner.name&rbrace; (as received in Step 2), you can use the API call below to retrieve all the Release information for a particular app.
 
 ```js
 curl -X GET "https://api.appcenter.ms/v0.1/apps/{owner.name}/{name}/releases" \ -H "Content-Type: application/json" \ 
@@ -217,7 +217,7 @@ Shown below is the response of the above API call.
 ## Step 4: Fetch The Required App Release Information For An App
 ***
 
-Using the API call below, use the {name} and {owner.name} (received from Step 2), and the id (received from Step 3) to fetch Release information for a specific App: 
+Using the API call below, use the &lbrace;name&rbrace; and &lbrace;owner.name&rbrace; (received from Step 2), and the id (received from Step 3) to fetch Release information for a specific App: 
 
 ```js
 curl -X GET "https://api.appcenter.ms/v0.1/apps/{owner.name}/{name}/releases/{id}" \ -H "Content-Type: application/json" \ 

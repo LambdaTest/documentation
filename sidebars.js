@@ -358,6 +358,10 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Playwright",
+            link: {
+              type: "doc",
+              id: "playwright-integration-with-hyperexecute",
+            },            
             items: [
               {
                 type: "category",
@@ -458,6 +462,11 @@ module.exports = {
               "hyperexecute-run-jmeter-tests"
             ]
           },
+          {
+            type: 'doc',
+            label: 'API Testing',
+            id: 'hyperexecute-api-testing'
+          }
         ],
       },
       {
@@ -550,33 +559,14 @@ module.exports = {
             },
             items: [
               {
-                type: "category",
-                collapsed: true,
-                label: "Tosca",
-                link: {
-                  type: "doc",
-                  id: "tosca-integration-hyperexecute",
-                },
-                items: [
-                  "tosca-integration-with-hyperexecute-using-commander",
-                  "tosca-integration-with-hyperexecute-using-dex",
-                  "tosca-integration-with-hyperexecute-for-sap"
-                ]
-              },
-              {
-                type: "doc",
-                label: "Katalon",
-                id: "katalon-integration-with-hyperexecute",
-              },
-              {
-                type: "doc",
-                label: "Microsoft Excel",
-                id: "he-excel",
-              },
-              {
                 type: "doc",
                 label: "Accelq",
                 id: "hyperexecute-accelq-integration",
+              },
+              {
+                type: "doc",
+                label: "algoQA",
+                id: "hyperexecute-algoqa-integration",
               },
               {
                 type: "category",
@@ -594,8 +584,23 @@ module.exports = {
               },
               {
                 type: "doc",
-                label: "Testsigma",
-                id: "hyperexecute-testsigma-integration",
+                label: "Katalon",
+                id: "katalon-integration-with-hyperexecute",
+              },
+              {
+                type: "doc",
+                label: "Provar",
+                id: "hyperexecute-provar-integration",
+              },
+              {
+                type: 'doc',
+                label: "qTest",
+                id: "hyperexecute-qtest-integration"
+              },
+              {
+                type: 'doc',
+                label: "Sikuli",
+                id: "hyperexecute-sikuli-integration"
               },
               {
                 type: 'doc',
@@ -604,8 +609,32 @@ module.exports = {
               },
               {
                 type: 'doc',
-                label: "qTest",
-                id: "hyperexecute-qtest-integration"
+                label: "Testim",
+                id: "hyperexecute-testim-integration"
+              },
+              {
+                type: "doc",
+                label: "Testsigma",
+                id: "hyperexecute-testsigma-integration",
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Tosca",
+                link: {
+                  type: "doc",
+                  id: "tosca-integration-hyperexecute",
+                },
+                items: [
+                  "tosca-integration-with-hyperexecute-using-commander",
+                  "tosca-integration-with-hyperexecute-using-dex",
+                  "tosca-integration-with-hyperexecute-for-sap"
+                ]
+              },
+              {
+                type: "doc",
+                label: "WinApp Driver",
+                id: "hyperexecute-winapp-integration",
               },
               {
                 type: 'doc',
@@ -659,23 +688,23 @@ module.exports = {
                     label: "Selenium",
                     collapsed: true,
                     items: [
-                      'hyperexecute-smart-ui-hooks-selenium-javascript',
+                      'hyperexecute-smart-ui-sdk-selenium-javascript',
                     ]
                   },
                   {
                     type: "doc",
                     label: "Hyperexecute Smart UI Testing - Cypress",
-                    id: "hyperexecute-smart-ui-hooks-using-cypress",
+                    id: "hyperexecute-smart-ui-sdk-using-cypress",
                   },
                   {
                     type: "doc",
                     label: "Hyperexecute Smart UI Testing - Playwright",
-                    id: "hyperexecute-smart-ui-hooks-using-playwright"
+                    id: "hyperexecute-smart-ui-sdk-using-playwright"
                   },
                   {
                     type: "doc",
                     label: "Hyperexecute Smart UI Testing - Puppeteer",
-                    id: "hyperexecute-smart-ui-hooks-using-puppeteer"
+                    id: "hyperexecute-smart-ui-sdk-using-puppeteer"
                   }
                 ]
               },
@@ -805,6 +834,7 @@ module.exports = {
             items: [
               "extent-report",
               "native-extent-report",
+              'hyperexecute-native-testng-report',
               "allure-reports",
               "cucumber-report",
               "playwright-html-report",
@@ -884,6 +914,41 @@ module.exports = {
           id: "hyperexecute-release-notes",
         },
         items: [
+          {
+            type: "doc",
+            label: "Release Notes 2.3.1",
+            id: 'hyperexecute-release-notes-2-3-1'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.3.0",
+            id: 'hyperexecute-release-notes-2-3-0'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.2.9",
+            id: 'hyperexecute-release-notes-2-2-9'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.2.8",
+            id: 'hyperexecute-release-notes-2-2-8'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.2.7",
+            id: 'hyperexecute-release-notes-2-2-7'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.2.6",
+            id: 'hyperexecute-release-notes-2-2-6'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.2.5",
+            id: 'hyperexecute-release-notes-2-2-5'
+          },
           {
             type: "doc",
             label: "Release Notes 2.2.3",
@@ -1288,7 +1353,9 @@ module.exports = {
       "testrigor-integration",
       "localstack-integration-with-lambdatest",
       "genrocket-integration",
-      "netlify-integration-with-lambdatest"
+      "netlify-integration-with-lambdatest",
+      "testim-integration"
+
     ],
     // },
   ],
@@ -1405,6 +1472,28 @@ module.exports = {
           'scim'
         ]
       }
+    ]
+  ],
+
+  RealDeviceSidebar: [
+    {
+      type: 'link',
+      label: '<- Back',
+      href: '/docs/web-automation',
+      customProps: {
+        className: 'back-to-main-menu'
+      },
+    },
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Real Device App Testing",
+        items: [
+          "real-device-app-testing",
+          "how-to-use-testing-tools-in-session",
+        ],
+      },
     ]
   ],
 
@@ -1573,6 +1662,7 @@ module.exports = {
               "command-annotations",
               "custom-dns-map",
               "lighthouse-reports-hooks",
+              "har-log-viewer"
             ],
           },
           {
@@ -2020,6 +2110,7 @@ module.exports = {
         items: [
           "getting-started-with-espresso-testing",
           "debug-espresso-tests",
+          "troubleshoot-espresso-tests",
           {
             type: "category",
             collapsed: true,
@@ -2089,10 +2180,23 @@ module.exports = {
         id: "smart-visual-regression-testing",
       },
       {
-        type: "doc",
-        label: "Setup with Storybook",
-        id: "smart-ui-storybook",
+        type: "category",
+        collapsed: true,
+        label: "CLI - Storybook",
+        items: [
+          {
+            type: "doc",
+            label: "Setup with Storybook",
+            id: "smart-ui-storybook",
+          },
+          {
+            type: "doc",
+            label: "Branching Strategy",
+            id: "smartui-git-branching-strategy"
+          }
+        ]
       },
+      
       {
         type: "doc",
         label: "Setup with CLI",
@@ -2136,7 +2240,9 @@ module.exports = {
           "smartui-playwright-sdk",
           "smartui-puppeteer-sdk",
           "smartui-testcafe-sdk",
-          "smartui-cypress-sdk"
+          "smartui-cypress-sdk",
+          "smartui-sdk-config-options",
+          "smartui-cli-git-branching-strategy"
         ],
       },
       {

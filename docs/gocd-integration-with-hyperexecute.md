@@ -54,6 +54,14 @@ This document will show you how to integrate GoCD with HyperExecute to greatly s
 
 - [Download](https://www.gocd.org/download/#osx) the GoCD Server and Agent and unzip the folder.
 
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/gocd" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
+
 ### Step 1: Start the GoCD Server
 
 - Go to the gocd/bin folder and run the following commands:
@@ -139,3 +147,27 @@ After the build is successful, go to your HyperExecute Dashboard and check the o
 - #### Job Status Passed
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/gocd/9.png').default} alt="Image"  className="doc_img"/>
+
+## Sample Workflow File
+
+```xml
+<pipeline name="Download-and-Run-Hyperexecute">
+  <stage name="Download">
+    <job name="Download-Hyperexecute">
+      <run on="ubuntu" />  # Adjust for macOS if needed
+      <tasks>
+        <exec command="wget https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute" />
+        <exec command="chmod u+x hyperexecute" />
+      </tasks>
+    </job>
+  </stage>
+  <stage name="Run-Tests">
+    <job name="Run-Hyperexecute-Tests">
+      <run on="ubuntu" />  # Adjust for macOS if needed
+      <tasks>
+        <exec command="./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>" />
+      </tasks>
+    </job>
+  </stage>
+</pipeline>
+```

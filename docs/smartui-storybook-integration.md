@@ -1,7 +1,7 @@
 ---
 id: smart-ui-storybook
 title: Getting started with Smart UI using Storybook On LambdaTest
-sidebar_label: CLI - Storybook
+sidebar_label: Setup with Storybook
 description: In this documentation, learn how to perform Visual UI Testing with Storybook on the LambdaTest Automation Cloud across 40+ browser versions.
 keywords:
   - Visual Regression
@@ -66,7 +66,7 @@ The first step is to create a project with the application in which we will comb
 
 1. Go to [Projects page](https://smartui.lambdatest.com/)
 2. Click on the `new project` button
-3. Select the platform as <b>Web</b> for executing your `StoryBook` tests.
+3. Select the platform as <b>CLI</b> for executing your `StoryBook` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
@@ -337,8 +337,7 @@ For additional information about SmartUI APIs please explore the documentation [
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-     Smart UI with Cypress  </span>
+      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
     </li>
   </ul>
 </nav>

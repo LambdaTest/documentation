@@ -82,7 +82,7 @@ It is very useful for managing teams programs, portfolios, requirements, release
 
 ### Step 4: (Optional) Complete Your Ticket Configuration if needed
 
-- Visit your SpiralTeam profile.
+- Visit your SpiraTeam profile.
 
 - Go to your desired dashboard in which you have created the ticket in the above step.
 

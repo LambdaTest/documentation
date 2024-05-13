@@ -1,7 +1,7 @@
 ---
 id: smartui-git-branching-strategy
-title: Git Branching Strategy in SmartUI
-sidebar_label: Git Baseline Branching
+title: Git Branching Strategy in SmartUI Storybook Integration
+sidebar_label: Storybook Git Baseline Branching
 description: In this documentation, learn how the Git Branching Strategy is implemented in Visual Regression testing on the LambdaTest Automation Cloud across 40+ browser versions.
 keywords:
   - Visual Regression

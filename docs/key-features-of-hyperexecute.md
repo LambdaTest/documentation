@@ -60,8 +60,7 @@ In addition to all of the core features that LambdaTest cloud provides to your t
   <a href = "/support/docs/hyperexecute-test-splitting-and-multiplexing/">
   <div className="support_inners">
     <h3>Test Splitting and Multiplexing</h3>
-    <p>Use Smart Auto Split Strategy, Matrix Strategy or Hybrid Strategy modes to split and execute tests as per your requirements.
-    </p>
+    <p>Use Smart Auto Split Strategy, Matrix Strategy or Hybrid Strategy modes to split and execute tests as per your requirements.</p>
   </div>
   </a>
 

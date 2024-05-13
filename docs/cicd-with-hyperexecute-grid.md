@@ -42,11 +42,12 @@ slug: hyperexecute-integration-with-ci-cd-tools/
 ></script>
 
 # HyperExecute Integration With CI/CD Tools
-***
 HyperExecute offers integrations with numerous CI/CD tools to assist you to:
 - Expend less manual effort
 - Deliver faster
 - Reduce risk
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/ci-cd.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 To integrate any CI pipeline with HyperExecute, follow these steps:
 

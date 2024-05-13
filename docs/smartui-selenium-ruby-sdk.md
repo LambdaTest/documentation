@@ -66,7 +66,7 @@ The first step is to create a project with the application in which we will comb
 
 1. Go to [Projects page](https://smartui.lambdatest.com/)
 2. Click on the `new project` button
-3. Select the platform as <b>CLI</b> or <b>Web</b> for executing your `SDK` tests.
+3. Select the platform as <b>CLI</b> for executing your `SDK` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
@@ -126,7 +126,7 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 ### **Step 4:** Create and Configure SmartUI Config
 
-You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
+You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
 npx smartui config:create .smartui.json
@@ -169,34 +169,11 @@ Once, the configuration file will be created, you will be seeing the default con
   "allowedHostnames": [] //Additional hostnames to capture assets from
 }
 ```
-:::info Optional Keys in SmartUI configuration
-
-**waitForPageRender** - If one or more `URLs` in your script require a relatively higher amount of time to load, you may use the `waitForPageRender` key in the config file to make sure the screenshots are rendered correctly. Avoid using the same in case your websites render in less than 30 seconds as it might increase the execution time of your tests.
-
-
-**waitForTimeout** - If you are using any `async` components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.
+:::info Advanced options in SmartUI configuration
+- For capturing fullpage or viewport screenshots, please refer to this [documentation](/docs/smartui-sdk-config-options/#12-viewports)
+- For the list of available mobile viewports, please refer to this [documentation](/docs/smartui-sdk-config-options/#list-of-supported-device-viewports)
+- For more information about SmartUI config global options, please refer to this [documentation](/docs/smartui-sdk-config-options/#3-global-options-optional).
 :::
-
-#### For capturing viewport screenshots
-
-To capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport width in your configuration settings. Specify the desired width parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area.
-
-```json
-    "viewports": [
-      [
-        1920,
-        1080
-      ],
-      [
-        1366,
-        768
-      ],
-      [
-        360,
-        640
-      ]
-    ],
-```
 
 ### **Step 5:** Adding SmartUI function to take screenshot
 
@@ -485,8 +462,7 @@ For additional information about SmartUI APIs please explore the documentation [
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-     Smart UI with Cypress  </span>
+      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
     </li>
   </ul>
 </nav>

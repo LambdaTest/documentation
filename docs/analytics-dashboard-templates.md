@@ -232,7 +232,8 @@ The following are the use cases for the template:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Analytics </span>
+      Analytics 
+      </span>
     </li>
   </ul>
 </nav>

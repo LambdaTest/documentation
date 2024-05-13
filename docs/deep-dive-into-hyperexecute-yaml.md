@@ -101,7 +101,7 @@ The `runtime` flag is used to:
 - Download and install the dependent language and framework that is needed to execute your tests.
 - You can provide the language and the version you want to be installed.
 
-> Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-sdk** and **python**
+> Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-sdk**, **katalon** and **python**
 
 ```bash
 runtime:
@@ -407,7 +407,7 @@ postDirectives:
 
 ## `alwaysRunPostSteps`
 
-**Problem :** Test scenarios failing led to the cancellation of post-steps, incomplete cleanup, being unable to upload reports, and other actions that you need to perform after all test executions.
+**Problem :** Test scenarios failing led to the cancellation of post-steps, being unable to upload reports, and other actions that you need to perform after all test executions.
 
 **Solution :** The `alwaysRunPostSteps` flag ensures that post-steps execute even if the scenario stage fails.
 
@@ -522,6 +522,27 @@ framework:
   name: maven/testng
   defaultReports: false
 ```
+
+:::tip
+
+If you want to generate multiple reports of different frameworks.
+
+```bash
+partialReports:
+  - location: reports/json
+    type: json
+    frameworkName: extent-native
+    email:
+        to:
+          - johndoe@example.com
+  - location: target/surefire-reports
+    type: html
+    frameworkName: testng-me
+    email:
+        to:
+          - johndoe@example.com
+```
+:::
 
 ***
 
@@ -734,7 +755,7 @@ DataJsonPaths helps to distribute data/configs over the VMs. In this you can cre
   "Password": "pass1"
  },
  {
-  "Username": "user2",
+  "Username": "user2", 
   "Password": "pass2"
  }
 ]
@@ -748,9 +769,9 @@ To access the data from the JSON files, there are primarily 2 methods:
 In the JSON file, we have a data object and not an array of objects, hence you can directly read the data from the file.
 
 ```bash
-{ 
-  "Username": "user1".
-  "Password": "pass1"
+{
+  "Username": "user1",
+  "Password": "pass1" 
 }
 ```
 
@@ -758,7 +779,7 @@ In the JSON file, we have a data object and not an array of objects, hence you c
 
 You can use the env variables to access the defined parameters as:
 
-```
+```bash
 STATIC_DATA_1_<ParameterName>
 ```
 > **NOTE:-** In the above syntax, **1** represents the file passed in the yaml file and not the data object within the file.
@@ -832,8 +853,8 @@ This can be majorly used for non selenium based tests to have the recorded video
 ```bash
 captureScreenRecordingForScenarios: true
 ```
-
 ***
+<!-- ***
 ## `performance`
 This feature allows you to run a single command across multiple linux VM for load testing.
 
@@ -843,7 +864,71 @@ performance:
   count: 50
 ```
 The rate specifies the rate at which task should start running and count is the total number of task to fire. In the above example, 50 task will be created and it will start executing at rate of 10 task per second.
-> **Note**: Performance testing is only allowed for linux and there is no discovery command needed for this.
+> **Note**: Performance testing is only allowed for linux and there is no discovery command needed for this. -->
+
+## `buildConfig`
+
+This is used to manage hyperlink behavior based on test status. Here's a breakdown of the parameters within buildConfig:
+
+  - **`buildPrefix`**: This parameter sets a custom prefix for dynamically generated build names. The format employs $&lbrace;name&rbrace; as a placeholder, which will be replaced with a specific value during configuration.
+
+  - **`buildName`**: This parameter allows you to define a specific name for the build. Similar to buildPrefix, $&lbrace;name&rbrace; acts as a placeholder for a custom value.
+
+  ```bash
+  buildConfig:
+    buildPrefix: myCustomBuildPrefix-${name}
+    buildName : "name=${name}"
+  ```
+
+
+  > The value for `${name}` in the above command can be passed through the vars command either by the [CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) as mentioned below or through [YAML](/support/docs/deep-dive-into-hyperexecute-yaml/#vars).
+
+  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/17.png').default} alt="Image"  className="doc_img"/>
+
+:::info NOTE
+### Dynamic Build Naming via CLI
+
+If you prefer to set `buildPrefix` and `buildName` values through the command-line interface (CLI), the following commands can be used:
+
+To set `buildPrefix`:
+```bash
+--labels buildPrefix --vars "name=xyz"
+```
+
+To set `buildName`:
+
+```bash
+--labels buildName --vars "name=xyz"
+```
+
+These commands utilize `--labels` to specify the parameter being configured and `--vars "name=xyz"` to define the value to be replaced for `${name}`.
+:::
+
+### Key Pointers
+
+- #### Build Configuration Handling:
+
+  If `buildConfig` is not provided, then the `build_id` column within the job table remains empty. When you specify the `buildConfig`, it populates the `build_id` column with the corresponding value.
+
+- #### Build Configuration Precedence:
+
+  When both `buildConfig` and the `build` capability are defined, `buildConfig` takes priority.
+
+- #### Priority of Build Naming Parameters:
+
+  If both `buildConfig.buildName` and `buildConfig.buildPrefix` are specified, preference is given to `buildPrefix`.
+
+- #### Association with Build Name:
+
+  Defining `buildName` associates test results with the designated name, enabling organized tracking and management.
+
+- #### Dynamic Build Creation:
+
+  Specifying `buildPrefix` results in the creation of a new build for each executed job. The build name format follows **buildPrefix-&lbrace;jobID&rbrace;** to ensure uniqueness.
+
+- #### Compatibility of Build Naming Variables:
+
+  Both `buildPrefix` and `buildName` are compatible with vars and can be used together or independently based on your requirements.
 
 ***
 ## `captureCSVResult`
@@ -853,8 +938,8 @@ captureCSVResult: true
 ```
 
 Below mentioned custom Lambda hooks are also required to be added in the Selenium script:
-lambda-start-timer=<some_label>
-lambda-end-timer=<some_label>
+lambda-start-timer=&lt;some_label&gt;
+lambda-end-timer=&lt;some_label&gt;
 These custom lambda hooks are basically used to track the amount of time taken by the Selenium command.
 
 Above performance stats artifact would be of the CSV format with headers as Label, Average, Min, Max, Median, P95, P99.
@@ -946,7 +1031,7 @@ background:
 
 ***
 ##  `vars`
-This method allows you to name your variables. This will make the process of modifying the YAML file easier. You can use these variables in the YAML file as ${your_variable_name}.
+This method allows you to name your variables. This will make the process of modifying the YAML file easier. You can use these variables in the YAML file as &#36;&lbrace;your_variable_name&rbrace;.
 Below example shows how to use vars keyword and how to use the variables define under it at other places in yaml.
 
 ```bash
@@ -981,6 +1066,7 @@ The options to use when running the [tunnel](/support/docs/deep-dive-into-hypere
 |`global`| Boolean | Should the tunnel be enabled for all the steps? Default true. |
 |`systemProxy`| Boolean | Should the tunnel be OS system wide? Default false. |
 |`checkTunnelOnFailure`| Boolean | Check tunnel on failure adds a check on our system to check the tunnel connection if a test fails and the tunnel is set to true. This option will retry the test 2 times if tunnel connection is flaky. |
+|`--expose`| | This flag takes arguments in the form of `service_name:host_name_host_port`. <br /> When you trigger a test, there are environment variables exposed in the machine with the variable name :- <br /> 1. `service_name_PROXY_HOST` <br /> 2. `service_name_PROXY_PORT` |
 
 ```bash
 tunnel: true
@@ -999,6 +1085,19 @@ tunnelOpts:
 	global: true
   #------OR------
 	systemProxy: true
+```
+
+```bash
+pre:
+  - echo %LT_PROXY_PORT%
+  - echo %LT_PROXY_HOST%
+  - echo %MYSQL_PROXY_HOST%
+  - echo %MYSQL_PROXY_PORT%
+
+tunnel: true
+tunnelOpts:
+  args: 
+    - "--expose mysql:localhost:3306"
 ```
 
 ***
@@ -1152,7 +1251,7 @@ testSuites: - mvn test -Dtest=$files
 <!-- HYBRID MODE STARTED-->
 
 ## `parallelism`
-If we mention runson: ${matrix.os}, then we need to make sure that parallelism is defined as well. 
+If we mention runson: &#36;&lbrace;matrix.os&rbrace;, then we need to make sure that parallelism is defined as well. 
 There are 2 ways to define parallelism, either you can mention common parallelism which can be used in any platform or you can mention platform specific parallelism ex - winParallelism, linuxParallelism etc.
 ```bash
 parallelism: 2
