@@ -107,7 +107,6 @@ However, if your preferred location is not showing, you can specify the exact lo
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/gps-location.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the GPS Location feature.
 
 ### Network Throttling
 

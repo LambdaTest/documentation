@@ -43,19 +43,19 @@ Real device browser testing refers to the process of testing web applications an
 
 Below are the steps to run your first browser test on LambdaTest's Real Device Cloud:
 
-**Step 1:** Login to your LambdaTest account. From the left sidebar, head to Real Device and select Browser Testing.
+**Step 1:** Login to your LambdaTest account. From the left sidebar, head to Real Device and select **Browser Testing**.
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/real-device-browser-home.webp').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
 
-**Step 2**: Select the device and OS version of your choice. You can also search the preferred real Android or iOS device in the search bar.
-
-<img loading="lazy" src={require('../assets/images/real-device-browser-testing/real-device-browser-testing-os.webp').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
-
-**Step 3**: Select the browser of your choice. 
+**Step 2**: Select the **OS** and **browser** of your choice. 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/real-device-browser-browser.webp').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
 
 >**Note:** Certain browsers might not be supported on certain devices. 
+
+**Step 3**: Select the **real device** of your choice. You can also search the preferred real **Android** or **iOS** device in the search bar.
+
+<img loading="lazy" src={require('../assets/images/real-device-browser-testing/real-device-browser-testing-os.webp').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
 
 
 **Step 4**: In the case of **Android** devices, simply enter the website URL in the address bar.
