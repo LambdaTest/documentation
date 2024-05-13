@@ -537,7 +537,7 @@ partialReports:
           - johndoe@example.com
   - location: target/surefire-reports
     type: html
-    frameworkName: testng-me
+    frameworkName: testng
     email:
         to:
           - johndoe@example.com
