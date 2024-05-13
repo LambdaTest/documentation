@@ -138,7 +138,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/real-device-app-testing/" ><p className="p_home_inners">Real Device App Testing</p></a>
       </div>
         <div className="home_inners">
-        <a href="/support/docs/real-device-browser-testing/" ><p className="p_home_inners">Real Device Browser Testing</p></a>
+        <a href="/support/docs/browser-testing-on-real-devices/" ><p className="p_home_inners">Real Device Browser Testing</p></a>
       </div>
       <div className="home_inners">
         <a href="/support/docs/public-cloud-vs-private-cloud/" ><p className="p_home_inners">Public Cloud VS Private Cloud</p></a>
