@@ -98,15 +98,8 @@ partialReports:
 
 This helps you to get an overview of the test execution results using the Allure API. This widget provides insights into the test execution results, test status, and test duration.
 
-> This is a <NewTag value="BETA" bgColor="#ffec02" color="#000" /> feature and is available to limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@lambdatest.com).
-
-:::tip mandatory
-- You need to have the Allure report generated for your test cases.
--  Add the `API` keyword as [job label](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel) for the API test cases to be displayed in the widget.
-
-```bash
-jobLabel: ['API', 'API-XYZ']
-```
+:::info
+The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@lambdatest.com).
 :::
 
 > **NOTE :** Refer to the [Allure API Test Insights with HyperExecute documentation](/support/docs/analytics-allure-api-widgets/) for a comprehensive explanation
