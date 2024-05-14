@@ -12,6 +12,9 @@ url: https://www.lambdatest.com/support/docs/allure-reports/
 site_name: LambdaTest
 slug: allure-reports/
 ---
+
+import NewTag from '../src/component/newTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -90,3 +93,15 @@ partialReports:
 ```
 :::
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/allure.png').default} alt="Image"  className="doc_img"/>
+
+## Allure API Test Insights
+
+This helps you to get an overview of the test execution results using the Allure API. This widget provides insights into the test execution results, test status, and test duration.
+
+:::info
+The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@lambdatest.com).
+:::
+
+> **NOTE :** Refer to the [Allure API Test Insights with HyperExecute documentation](/support/docs/analytics-allure-api-widgets/) for a comprehensive explanation
+
+<img loading="lazy" src={require('../assets/images/analytics/api-test-report.webp').default} alt="cmd" width="800" height="400" className="doc_img" />
