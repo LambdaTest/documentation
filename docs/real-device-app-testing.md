@@ -37,6 +37,7 @@ slug: real-device-app-testing/
 ></script>
 
 # Getting Started with Real Device App Testing
+***
 
 Real device app testing is the process of testing a mobile application to ensure that their functionality and usability is not comprised when installed across multiple Android and iOS devices. With LambdaTest, you can test mobile applications manually to ensure they perform seamlessly across 3000 + real mobile devices.
 
