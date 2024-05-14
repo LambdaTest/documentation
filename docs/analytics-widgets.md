@@ -86,6 +86,12 @@ To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analy
       <p>Get API test time-series insights using Allure report integration with your test suite and run it on HyperExecute.</p>
     </div>
   </a>
+  <a href="/docs/analytics-sub-organization-widgets/">
+    <div className="support_inners">
+      <h3>Sub Organization Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+      <p>Monitor and allocate the right resources required for your organizations with advanced insights.</p>
+    </div>
+  </a>
 </div>
 
 ## Product Specific Widgets
