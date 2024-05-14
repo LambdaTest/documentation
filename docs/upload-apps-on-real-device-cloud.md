@@ -2,7 +2,7 @@
 id: upload-apps-on-real-device-cloud
 title: Upload Apps on LambdaTest’s Real Device Cloud
 hide_title: true
-sidebar_label: Uploading Apps
+sidebar_label: Upload Apps
 description: With LambdaTest, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
 keywords:
 - upload apps on real device cloud 
@@ -33,7 +33,7 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Native Mobile App Testing",
+          "name": "Upload Apps on LambdaTest’s Real Device Cloud",
           "item": "https://www.lambdatest.com/support/docs/upload-apps-on-real-device-cloud/"
         }]
       })
@@ -59,7 +59,7 @@ Upload the .ipa files of your app from your system or from a public URL and ensu
 </TabItem>
 </Tabs>
 
-## How to Upload Apps
+## How to Upload Apps?
 
 **From Your System:** Select the **Upload** button to add an application from your system.
 

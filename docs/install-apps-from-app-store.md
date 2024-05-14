@@ -1,8 +1,8 @@
 ---
 id: install-apps-from-app-store
-title: Testing apps installed from App Store
+title: How to Test Apps Installed via App Store?
 hide_title: true
-sidebar_label: Install Apps from App Store
+sidebar_label: App Store
 description: With LambdaTest, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
 keywords:
 - install apps from app store
@@ -29,32 +29,32 @@ slug: install-apps-from-app-store/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Native Mobile App Testing",
+          "name": "How to Test Apps Installed via App Center?",
           "item": "https://www.lambdatest.com/support/docs/install-apps-from-app-store/"
         }]
       })
     }}
 ></script>
 
-# Testing apps installed from App Store
+# How to Test Apps Installed via App Store?
 
 The Apple App Store is a digital marketplace for purchasing and downloading mobile applications on iOS devices. LambdaTest allows you to install apps directly from the App Store and test them on real iOS devices, ensuring that they perform well in actual user environments.
 
 Let's dive in to learn how to test apps installed from App Store.
 
-1. Login to your LambdaTest account. Visit **Real Device** from the left panel and navigate to the **App Testing**.
+**Step 1**: Login to your LambdaTest account. Visit **Real Device** from the left panel and navigate to the **App Testing**.
 
-2. Choose the OS version of your choice. In this case lets choose **iOS**.
+**Step 2**: Next, choose the OS version. In this case lets choose **iOS**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/upload-apps-through-ios.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-3. From the uploading apps section choose **Install from App Store**.
+**Step 3**: From the uploading apps section choose **Install from App Store**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/install-from-app-store.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-4. Select the **iOS device** and **resolution** of your choice to launch the test session.
+**Step 4**: Select the **iOS device** and **resolution** of your choice to launch the test session.
 
-5. Use your Apple ID to log into the App Store, install the app and begin testing.
+**Step 5**: Use your Apple ID to log into the App Store, install the app and begin testing.
 
 
 
