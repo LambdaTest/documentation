@@ -916,6 +916,11 @@ module.exports = {
         items: [
           {
             type: "doc",
+            label: "Release Notes 2.3.3",
+            id: 'hyperexecute-release-notes-2-3-3'
+          },
+          {
+            type: "doc",
             label: "Release Notes 2.3.1",
             id: 'hyperexecute-release-notes-2-3-1'
           },
@@ -1498,7 +1503,29 @@ module.exports = {
           "install-apps-from-test-flight",
         ],
       },
-    ]
+    ],
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Real Device Browser Testing",
+        items: [
+          "browser-testing-on-real-devices",
+          "how-to-use-in-session-testing-tools",
+        ],
+      },
+    ],
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Private Cloud",
+        items: [
+          "public-cloud-vs-private-cloud",
+        ],
+      },
+    ],
+    
   ],
 
   SeleniumTestingSidebar: [
@@ -2333,7 +2360,7 @@ module.exports = {
         "analytics-test-time-trends",
         {
           type: "category",
-          collapsed: false,
+          collapsed: true,
           label: "Tests Overview",
           items: [
             "analytics-modules-automation-test-overview",
@@ -2344,7 +2371,7 @@ module.exports = {
         },
         {
           type: "category",
-          collapsed: false,
+          collapsed: true,
           label: "Error Insights",
           items: [
             "analytics-modules-test-intelligence-command-logs-analytics",
@@ -2355,6 +2382,7 @@ module.exports = {
     },
     "analytics-modules-test-intelligence-flaky-test-analytics",
     "analytics-dashboard-copilot",
+    "analytics-allure-api-widgets",
     "analytics-test-case-insights",
     "analytics-dashboard-edit-layout",
     "analytics-dashboard-features",

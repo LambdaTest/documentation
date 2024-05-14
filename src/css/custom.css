@@ -719,6 +719,8 @@
  }
 
  @media (min-width: 996px) and (max-width: 1366px) {
+  .Doc_bottom_Cta .right_sec h2{font-size: 16px!important;}
+  .Doc_bottom_Cta{padding: 50px 30px!important;}
   .social_button .btnlink {
     width: auto;
     padding: 8px 10px;
@@ -1658,7 +1660,7 @@
  }
 
  @media (min-width: 1367px) and (max-width: 1500px) {
-
+  .Doc_bottom_Cta{padding: 55px 30px!important;}
    table td,
    table th {
      font-size: 14px !important;
@@ -1852,6 +1854,7 @@
      font-size: 15px;
    }
    .home_main h2{font-size: 18px;}
+   .Doc_cta{display: block!important;} .Doc_bottom_Cta .right_sec{width: 100%!important;} .Doc_bottom_Cta .left_sec{display: none!important;} .Doc_bottom_Cta{padding:25px 30px!important;}
  }
 
  .DocSearch-Button {
@@ -1867,3 +1870,12 @@
  .home_inners_box{ margin-top: 30px; margin-bottom: 16px !important;}
 @media (max-width: 767px) {.home_main{display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }}
 .navbar__inner .navbar__items--right{padding-right: 30px;}
+/* BottomCTa */
+.Doc_bottom_Cta{background: #E2EEFF; padding: 70px 30px; margin: 20px 0px 40px 0px; position: relative;width: 100%; border-radius: 6px;}
+.Doc_cta{display: flex; align-items: center;}
+.Doc_bottom_Cta .right_sec{width: 50%;} .left_sec{width: 50%; height: auto; position: absolute; right: 0; bottom: 0;}
+.Doc_bottom_Cta .right_sec h2{font-size:20px; font-weight:700; color:#041227;}
+.Doc_bottom_Cta .right_sec a{background:#C24E00; padding: 10px 18px 10px  18px; color: #fff; border-radius: 3.75px; font-size:16px; font-weight: 600; margin-top: 10px; display: inline-block}
+.Doc_bottom_Cta .right_sec a:hover{background: #C95100; text-decoration: none;}
+@media (min-width: 1025px) and (max-width: 1250px){.Doc_bottom_Cta{padding: 40px 30px!important;}}
+@media (min-width: 1450px) and (max-width: 1550px){.Doc_bottom_Cta{padding: 60px 30px!important;}}

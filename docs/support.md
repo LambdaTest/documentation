@@ -43,7 +43,6 @@ slug: /
 
 import NewTag from '../src/component/newTag';
 
-
 <div className="Doc_intro_cta">
 <div className="Doc_intro_cta_text">
 <h1>LambdaTest Support and Knowledge Base</h1>
@@ -96,14 +95,14 @@ import NewTag from '../src/component/newTag';
         <a href="/docs/analytics-dashboard-templates/"><p className="p_home_inners">Pre-built Dashboards</p></a>
         <a href="/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboards</p></a>
         <a href="/docs/analytics-widgets/"><p className="p_home_inners">Widgets</p></a>
-        <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></p></a>
+        <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA" bgColor="#ffec02" color="#000" /></p></a>
         <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
         <a href="/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Error Logs Insights</p></a>
         <a href="/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
+        <a href="/docs/analytics-allure-api-widgets/"><p className="p_home_inners">API Tests Insights</p></a>
       </div>
     </div>
   </div>
-
 
 <!-- end of first section -->
 
@@ -137,6 +136,12 @@ import NewTag from '../src/component/newTag';
        <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Realtime-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Realtime-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Real Device</h2>
       <div className="home_inners">
         <a href="/support/docs/real-device-app-testing/" ><p className="p_home_inners">Real Device App Testing</p></a>
+      </div>
+        <div className="home_inners">
+        <a href="/support/docs/browser-testing-on-real-devices/" ><p className="p_home_inners">Real Device Browser Testing</p></a>
+      </div>
+      <div className="home_inners">
+        <a href="/support/docs/public-cloud-vs-private-cloud/" ><p className="p_home_inners">Private Cloud</p></a>
       </div>
     </div>
     <div className="home_inners_box">
@@ -195,7 +200,6 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
 </div>
-
 
 <!-- end of third section -->
 </div>
