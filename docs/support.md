@@ -137,6 +137,12 @@ import NewTag from '../src/component/newTag';
       <div className="home_inners">
         <a href="/support/docs/real-device-app-testing/" ><p className="p_home_inners">Real Device App Testing</p></a>
       </div>
+        <div className="home_inners">
+        <a href="/support/docs/browser-testing-on-real-devices/" ><p className="p_home_inners">Real Device Browser Testing</p></a>
+      </div>
+      <div className="home_inners">
+        <a href="/support/docs/public-cloud-vs-private-cloud/" ><p className="p_home_inners">Private Cloud</p></a>
+      </div>
     </div>
     <div className="home_inners_box">
        <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/testing-locally-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Testing Locally</h2>

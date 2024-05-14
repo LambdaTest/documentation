@@ -1499,7 +1499,29 @@ module.exports = {
           "how-to-use-testing-tools-in-session",
         ],
       },
-    ]
+    ],
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Real Device Browser Testing",
+        items: [
+          "browser-testing-on-real-devices",
+          "how-to-use-in-session-testing-tools",
+        ],
+      },
+    ],
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Private Cloud",
+        items: [
+          "public-cloud-vs-private-cloud",
+        ],
+      },
+    ],
+    
   ],
 
   SeleniumTestingSidebar: [
