@@ -94,7 +94,7 @@ Check out our detailed support documentation to know more about the [IP Geolocat
 
 **GPS Geolocation** testing allows you to simulate specific device locations using exact GPS coordinates to evaluate location-based app scenarios. You can enter your preferred location by entering the name of the location. 
 
-However, if your preferred location is not showing, you can specify the exact location by entering the lattitude and longitude of the location. 
+However, if your preferred location is not showing, you can specify the exact location by entering the latitude and longitude of the location. 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/gps-location-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
