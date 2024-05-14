@@ -2332,6 +2332,7 @@ module.exports = {
       "analytics-dashboard-copilot",
       "analytics-allure-api-widgets",
       "analytics-test-case-insights",
+      "analytics-sub-organization-widgets",
       "analytics-dashboard-edit-layout",
       "analytics-dashboard-features",
       "analytics-faqs",
