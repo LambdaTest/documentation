@@ -58,6 +58,7 @@ You can seamlessly deploy with your favourite Cloud Platform
 
 | Release Number | Release Date |
 |:---|:--|
+| [2.3.3](/support/docs/hyperexecute-release-notes-2-3-3) | May 13, 2024|
 | [2.3.1](/support/docs/hyperexecute-release-notes-2-3-1) | April 29, 2024|
 | [2.3.0](/support/docs/hyperexecute-release-notes-2-3-0) | April 22, 2024|
 | [2.2.9](/support/docs/hyperexecute-release-notes-2-2-9) | April 15, 2024|
