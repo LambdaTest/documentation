@@ -1,15 +1,15 @@
 ---
-id: install-apps-from-play-store
-title: How to Test Apps Installed via Play Store?
+id: install-apps-from-app-center
+title: How to Test Apps Installed via App Center?
 hide_title: true
-sidebar_label: Play Store
+sidebar_label: App Center
 description: With LambdaTest, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
 keywords:
-- install apps from play store
-- play store
-url: https://www.lambdatest.com/support/docs/install-apps-from-play-store/
+- install apps from app center
+- app center
+url: https://www.lambdatest.com/support/docs/install-apps-from-app-center/
 site_name: LambdaTest
-slug: install-apps-from-play-store/
+slug: install-apps-from-app-center/
 ---
 
 <script type="application/ld+json"
@@ -29,32 +29,37 @@ slug: install-apps-from-play-store/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Test Apps Installed via Play Store?",
-          "item": "https://www.lambdatest.com/support/docs/install-apps-from-play-store/"
+          "name": "How to Test Apps Installed via App Center?",
+          "item": "https://www.lambdatest.com/support/docs/install-apps-from-app-center/"
         }]
       })
     }}
 ></script>
 
-# How to Test Apps Installed via Play Store?
+# How to Test Apps Installed via App Center?
 
-LambdaTest enables developers to test their mobile applications and websites across a range of real devices and browsers. It allows for direct installation of apps from the Google Play Store, facilitating testing of apps on real android devices to ensure optimal performance and compatibility.
+LambdaTest enables developers to test their mobile applications and websites across a range of real devices and browsers. It allows you to install apps directly from the App Center to test them on real android or iOS devices, ensuring that they perform well in actual user environments.
 
-Let's dive in to learn how to test apps installed from Play Store.
+Let's dive in to learn how to test apps installed from App Center.
 
 **Step 1**: Login to your LambdaTest account. Visit **Real Device** from the left panel and navigate to the **App Testing**.
 
-**Step 2**: Next, choose the OS version. In this case lets choose **Android**.
+**Step 2**: Choose the OS version of your choice. In this case lets choose **Android**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-devices-for-android.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-**Step 3**: From the uploading apps section choose **Install from Play Store**.
+**Step 3**: From the uploading apps section choose **Install from App Center** and enter the **API Token**. 
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/install-from-play-store.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/install-from-app-center.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-**Step 4**: Select the **Device** and **OS Version** of your choice to launch the test session.
+**Step 4**: You will be able to view the **Configure App Center** detail box, enter the **API Token**, select the **Build** of your choice and click on **Sync**.
 
-**Step 5**: Log in to the Play Store with your Google account to install and test your app.
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/api-token.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+**Step 5**: You can also **Reconfigure** and share the Builds with other team members.
+
+**Step 6**: Select the **Device** and **OS Version** of your choice to launch the test session.
+
 
 
 

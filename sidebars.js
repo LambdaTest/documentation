@@ -1495,15 +1495,31 @@ module.exports = {
         collapsed: true,
         label: "Real Device App Testing",
         items: [
-          "real-device-app-testing",
+          "app-testing-on-real-devices",
           "how-to-use-testing-tools-in-session",
-          "upload-apps-on-real-device-cloud",
-          "app-settings",
-          "install-apps-from-play-store",
-          "install-apps-from-test-flight",
+          {
+            type: "category",
+            collapsed: false,
+            label: "Applications",
+            items: [
+              "upload-apps-on-real-device-cloud",
+              "app-settings",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: false,
+            label: "App Source",
+            items: [
+              "install-apps-from-play-store",
+              "install-apps-from-test-flight",
+              "install-apps-from-app-center",
+              "install-apps-from-app-store",
+            ],
+          },
         ],
       },
-    ],
+  ],
     [
       {
         type: "category",
@@ -1524,8 +1540,7 @@ module.exports = {
           "public-cloud-vs-private-cloud",
         ],
       },
-    ],
-    
+    ],  
   ],
 
   SeleniumTestingSidebar: [

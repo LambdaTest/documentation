@@ -28,14 +28,14 @@ slug: app-settings/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Native Mobile App Testing",
+          "name": "App Settings in Real Device Cloud",
           "item": "https://www.lambdatest.com/support/docs/app-settings/"
         }]
       })
     }}
 ></script>
 
-# App Settings
+# App Settings in Real Device Cloud
 
 App settings play a crucial role in testing the environment for mobile applications. These settings, provided by LambdaTest, offer developers a range of capabilities to enhance testing procedures and ensure comprehensive validation of their apps functionality.
 
