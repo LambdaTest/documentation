@@ -37,8 +37,8 @@ module.exports = {
     //   },
     // },
     zoom: {
+      selector: 'img:not(.no-zoom)',
       config: {
-        selector: '.markdown img',
         // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
         background: {
           light: 'rgb(255, 255, 255)',
