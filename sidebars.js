@@ -1547,7 +1547,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/web-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -1765,7 +1765,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/web-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -1868,7 +1868,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/web-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -1911,7 +1911,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/web-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -1940,7 +1940,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/web-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -1958,7 +1958,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/app-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -1981,7 +1981,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/app-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -2143,7 +2143,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/app-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -2182,7 +2182,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/app-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
