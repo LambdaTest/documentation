@@ -2249,6 +2249,11 @@ module.exports = {
         id: "smartui-cli",
       },
       {
+        type: "doc",
+        label: "Setup with Figma CLI",
+        id: "smartui-cli-figma",
+      },
+      {
         type: "category",
         collapsed: false,
         label: "SDK",
