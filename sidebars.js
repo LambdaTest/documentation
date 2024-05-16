@@ -1425,6 +1425,63 @@ module.exports = {
     ]
   ],
 
+
+  TestManagerSidebar: [
+    {
+      type: 'link',
+      label: '<- Back',
+      href: '/docs/',
+      customProps: {
+      className: 'back-to-main-menu'
+      },
+    },
+    [
+      {
+        type: "doc",
+        label: "Introduction to Test Manager",
+        id: "test-manager",
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Projects",
+        items: [
+              "create-projects",
+              "fields-and-values",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test cases",
+        items: [
+              "test-case-creation",
+              "test-case-import",
+              "test-case-repository",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test Plan",
+        items: [
+              "test-plan-creation",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Build",
+        items: [
+              "build-creation",
+              "execute-builds",
+              "build-history",
+              "build-details",
+        ],
+      }, 
+    ]
+  ],
+  
   RealDeviceSidebar: [
     {
       type: 'link',
