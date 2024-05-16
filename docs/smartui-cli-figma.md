@@ -192,7 +192,7 @@ Please read the following table for more information about the configuration fil
 You can now execute tests for `Visual Testing for Figma objects` using the following options:.
 
 ```bash
-smartui upload-figma designs.json
+npx smartui upload-figma designs.json
 ```
 
 ### Advanced options for baseline management
@@ -200,19 +200,19 @@ smartui upload-figma designs.json
 1. `markBaseline` - You can mark a specific build as a baseline through the runner command 
 
 ```bash
-smartui upload-figma designs.json --markBaseline
+npx smartui upload-figma designs.json --markBaseline
 ```
 2. `buildName` - You can add your custom build name to a build by running the following command
 
 ```bash
-smartui upload-figma designs.json --buildName "<Build_Name>"
+npx smartui upload-figma designs.json --buildName "<Build_Name>"
 ```
 
 <b> You can use these options in a nested way as well, as shown below </b>
 
 
 ```bash
-smartui upload-figma designs.json --buildName "<Build_Name>" --markBaseline
+npx smartui upload-figma designs.json --buildName "<Build_Name>" --markBaseline
 ```
 
 :::note
@@ -233,7 +233,7 @@ steps:
     - run: |
        npm install @lambdatest/smartui-cli
        npx playwright install-deps
-       smartui upload-figma designs.json
+       npx smartui upload-figma designs.json
 ```
 
 ### View SmartUI Results
