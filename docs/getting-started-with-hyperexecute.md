@@ -135,7 +135,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
 <TabItem value="Selenium">
 <div className="lt_row">
 <div className="lt_col lt_framework_wrapper">
- <img loading="lazy" src={require('../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon"/>
+ <img loading="lazy" src={require('../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon no-zoom"/>
   <ul className="lt_framework_list">
     <li>
       <a href="/docs/testng-on-hyperexecute-grid/">TestNG</a>
@@ -149,7 +149,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
   </ul>
 </div>
 <div className="lt_col lt_framework_wrapper">
-  <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+  <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="JavaScript" width="200" height="200" className="language-icon no-zoom"/>
   <ul className="lt_framework_list">
     <li>
       <a href="/docs/webdriverio-on-hyperexecute-grid/">WebdriverIO</a>
@@ -163,7 +163,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
   </ul>
 </div>
 <div className="lt_col lt_framework_wrapper">
- <img loading="lazy" src={require('../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon"/>
+ <img loading="lazy" src={require('../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon no-zoom"/>
   <ul className="lt_framework_list">
     <li>
       <a href="/docs/nunit-on-hyperexecute-grid/">NUnit</a>
@@ -174,7 +174,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
   </ul>
 </div>
 <div className="lt_col lt_framework_wrapper">
-  <img loading="lazy" src={require('../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon"/>
+  <img loading="lazy" src={require('../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon no-zoom"/>
   <ul className="lt_framework_list">
     <li>
       <a href="/docs/pyunit-on-hyperexecute-grid/">PyUnit</a>
@@ -191,7 +191,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
   </ul>
 </div>
 <div className="lt_col lt_framework_wrapper">
-  <img loading="lazy" src={require('../assets/images/getting-started/ruby-icon.webp').default} alt="Ruby" width="200" height="200" className="language-icon"/>
+  <img loading="lazy" src={require('../assets/images/getting-started/ruby-icon.webp').default} alt="Ruby" width="200" height="200" className="language-icon no-zoom"/>
   <ul className="lt_framework_list">
     <li>
       <a href="/docs/ruby-on-hyperexecute-grid/">Ruby</a>
@@ -207,7 +207,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
 <TabItem value="Puppeteer">
 <div className="lt_row ">
     <div className="lt_col lt_framework_wrapper">
-      <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="JavaScript" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
           <a href="/docs/jest-on-hyperexecute/">Jest</a>
@@ -226,7 +226,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
 <TabItem value="Playwright">
 <div className="lt_row">
 <div className="lt_col lt_framework_wrapper">
-  <img loading="lazy" src={require('../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon"/>
+  <img loading="lazy" src={require('../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
           <a href="/docs/pytest-on-hyperexecute/">PyTest</a>
@@ -237,7 +237,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
       </ul>
     </div>
     <div className="lt_col lt_framework_wrapper">
-  <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="Javascript" width="200" height="200" className="language-icon"/>
+  <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="Javascript" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
           <a href="/docs/playwright-vanillajs-on-hyperexecute/">VanillaJs</a>
@@ -251,7 +251,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
       </ul>
     </div>
     <div className="lt_col lt_framework_wrapper">
-  <img loading="lazy" src={require('../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon"/>
+  <img loading="lazy" src={require('../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
           <a href="/docs/playwright-junit-on-hyperexecute/">JUnit</a>
@@ -259,7 +259,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
       </ul>
     </div>
      <div className="lt_col lt_framework_wrapper">
-  <img loading="lazy" src={require('../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon"/>
+  <img loading="lazy" src={require('../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
           <a href="/docs/playwright-dotnet-on-hyperexecute/">.Net</a>
@@ -312,7 +312,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
 <TabItem value="Cypress">
 <div className="lt_row ">
     <div className="lt_col lt_framework_wrapper">
-      <img loading="lazy" src={require('../assets/images/getting-started/cypress_logo.png').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <img loading="lazy" src={require('../assets/images/getting-started/cypress_logo.png').default} alt="JavaScript" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
           <a href="/docs/cypressv9-on-hyperexecute/">Cypress v9</a>
@@ -328,7 +328,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
 <TabItem value="Appium">
 <div className="lt_row ">
     <div className="lt_col lt_framework_wrapper">
-      <img loading="lazy" src={require('../assets/images/getting-started/appium.jpeg').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <img loading="lazy" src={require('../assets/images/getting-started/appium.jpeg').default} alt="JavaScript" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
           <a href="/support/docs/hyperexecute-appium-testing/">Mobile Application</a>
@@ -357,7 +357,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
 <TabItem value="Maestro">
 <div className="lt_row ">
     <div className="lt_col lt_framework_wrapper">
-      <img loading="lazy" src={require('../assets/images/getting-started/maestro.png').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <img loading="lazy" src={require('../assets/images/getting-started/maestro.png').default} alt="JavaScript" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
           <a href="/support/docs/hyperexecute-maestro-testing/">Maestro</a>
@@ -370,7 +370,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
 <TabItem value="XCUI">
 <div className="lt_row ">
     <div className="lt_col lt_framework_wrapper">
-      <img loading="lazy" src={require('../assets/images/getting-started/xcui.jpeg').default} alt="JavaScript" width="200" height="200" className="language-icon"/>
+      <img loading="lazy" src={require('../assets/images/getting-started/xcui.jpeg').default} alt="JavaScript" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
           <a href="/support/docs/hyperexecute-xcui-testing/">XCUI</a>

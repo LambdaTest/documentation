@@ -229,7 +229,9 @@ This flag allows you to run a certain number of tests via tunnel. The default ma
 ***
 
 ### `-z, --use-zip`
-This flag allows you to indicate the path of the zip file that needs to be uploaded for your tests to run. 
+This flag allows you to indicate the path of the zip file that needs to be uploaded for your tests to run.
+Let's say you already have a zipped payload that you want to upload, so you can provide the path of that payload and upload it.
+
 ```bash
 --use-zip "/home/users/work/yaml/zip/"
 ```
