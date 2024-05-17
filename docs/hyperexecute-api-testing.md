@@ -75,7 +75,7 @@ REST-Assured seamlessly integrates with popular testing frameworks like JUnit an
 - Handling authentication mechanisms
 - Supporting data-driven testing with external data sources
 
-For e.g. REST-Assured provides function to write get method such as `given().when().get(url).then().log().all();` This will help you to call a get request to fetch all the fata from the API. Once the Call is complete you can either verify using the response of that call or by checking the status of the request.
+For e.g. REST-Assured provides function to write get method such as `given().when().get(url).then().log().all();` This will help you to call a get request to fetch all the data from the API. Once the Call is complete you can either verify using the response of that call or by checking the status of the request.
 
 ```bash
 given().when().get(url).then().assertThat().statusCode(200);
