@@ -42,6 +42,12 @@ SpiraTeam is a software tool used for Application Lifecycle Management (ALM). It
 
 It is very useful for managing teams programs, portfolios, requirements, releases, test cases, issues, baselines, workflows, and tasks in one unified environment.
 
+<div className="ytframe"> 
+<div className="youtube" data-embed="kKSHidsC6tk">
+    <div className="play-button"></div>
+</div>
+</div>
+
 ## Steps to Integrate LambdaTest with SpiraTeam
 
 ### Step 1: Setup Your Accounts
