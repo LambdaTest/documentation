@@ -258,8 +258,8 @@ options = {
                 id: ["ID-1", "ID-2"],
             }
         }
-driver.navigate.to 'Required URL'
-Lambdatest::Selenium::Driver.smartui_snapshot(driver, "Screenshot Name", options)
+driver.get('<Required URL>')
+smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 </TabItem>

@@ -2220,7 +2220,24 @@ module.exports = {
               }
             ]
           },
-          "smartui-playwright-sdk",
+          {
+            type: "category",
+            label: "Playwright",
+            collapsed: true,
+            // id: "smart-visual-regression-testing",
+            items: [
+              {
+                type: "doc",
+                label: "Javascript",
+                id: "smartui-playwright-sdk",
+              },
+              {
+                type: "doc",
+                label: "Java",
+                id: "smartui-playwright-python-sdk"
+              }
+            ]
+          },
           "smartui-puppeteer-sdk",
           "smartui-testcafe-sdk",
           "smartui-cypress-sdk",
