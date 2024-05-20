@@ -11,6 +11,9 @@ module.exports = {
   clientModules: [
     require.resolve('./custom.js'),
   ],
+
+  plugins: [require.resolve("docusaurus-plugin-image-zoom")],
+  
   scripts: [
     {
       src: 'https://www.lambdatest.com/resources/js/zohoscript.js',
@@ -33,6 +36,16 @@ module.exports = {
     //     hideable: true,
     //   },
     // },
+    zoom: {
+      selector: 'img:not(.no-zoom)',
+      config: {
+        // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)'
+        }
+      }
+    },
     typesense: {
       // Replace this with the name of your index/collection.
       // It should match the "index_name" entry in the scraper's "config.json" file.
