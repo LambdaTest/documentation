@@ -83,8 +83,8 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 - You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `SmartUI_SDK_LT_hub.py` file.
 
 ```bash
-git clone https://github.com/LambdaTest/smartui-python-sample
-cd smartui-python-sample
+git clone https://github.com/LambdaTest/smartui-playwright-python-sdk-sample
+cd smartui-playwright-python-sdk-sample
 ```
 
 - Create a virtual environment in your project folder (the environment name is arbitrary).
