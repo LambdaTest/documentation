@@ -60,5 +60,5 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 | singleRunnerInvocation | Boolean | Set this to `true` if you want to execute test cases together with a `single test runner invocation`.This can help significantly speed up the test execution time. By default, each test case is invoked separately. **Default:** `false` |
 
 :::caution Important
-You can eihter use **GeoLocation** or **Tunnel** in single execute command. They both are mutually exclusive.
+You can either use **GeoLocation** or **Tunnel** in single execute command. They both are mutually exclusive.
 :::

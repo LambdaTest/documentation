@@ -60,5 +60,5 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 | resignApp | Boolean | Set this to `false` if you want to to prevent the apps from being re-signed. The app should be built for enterprise distribution. |
 
 :::caution Important
-You can eihter use **GeoLocation** or **Tunnel** in single execute command. They both are mutually exclusive.
+You can either use **GeoLocation** or **Tunnel** in single execute command. They both are mutually exclusive.
 :::
