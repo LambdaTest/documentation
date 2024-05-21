@@ -2214,7 +2214,7 @@ module.exports = {
           "getting-started-with-espresso-testing",
           "espresso-supported-capabilities",
           "regular-expression-espresso",
-          "supported-locales-xcui",
+          "supported-locales-espresso",
           "debug-espresso-tests",
           "troubleshoot-espresso-tests",
           {
