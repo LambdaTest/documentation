@@ -2097,7 +2097,7 @@ module.exports = {
             items: [
               "camera-image-injection",
               "biometric-authentication",
-              "reg-expression",
+              "regular-expression-appium",
               "appium-upload-media",
               "app-auto-network-throttling",
               "appium-app-performance",
@@ -2150,6 +2150,9 @@ module.exports = {
         label: "Espresso Testing",
         items: [
           "getting-started-with-espresso-testing",
+          "espresso-supported-capabilities",
+          "regular-expression-espresso",
+          "supported-locales-xcui",
           "debug-espresso-tests",
           "troubleshoot-espresso-tests",
           {
@@ -2189,6 +2192,9 @@ module.exports = {
         label: "XCUI Testing",
         items: [
           "getting-started-with-xcui-testing",
+          "xcui-supported-capabilities",
+          "regular-expression-xcui",
+          "supported-locales-xcui",
           "ios-ipa-files-xcui",
           {
             type: "category",
