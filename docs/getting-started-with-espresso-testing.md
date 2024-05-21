@@ -44,8 +44,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
----
-
 Espresso is a testing framework that allows developers to write automation test cases for user interface (UI) testing. Developed by Google and free to use, Espresso aims to provide a simple yet powerful framework to help automate the process of testing Android apps.
 
 ## Objective
@@ -222,31 +220,6 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/e
 ### Step 4: View Test Execution
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://accounts.lambdatest.com/login).
-
-## Capabilities Supported
-
----
-
-The following capabilities are supported:
-
-1. **app:** Enter the app id generated while uploading the app. Example:`lt://APP123456789123456789`
-2. **testSuite:** Enter the test suite id generated while uploading the test suite. Example: `lt://APP123456789123456789`
-3. **device:** Enter the name and os version of the device in “DeviceName-OSVersion” format. Example: `Pixel 3 XL-9` or `Galaxy S21 Ultra 5G-11`.
-4. **video:** Generate video for all the tests that have run. Example: `true`.
-5. **queueTimeout:** Enter the time in seconds after which you want your build to timeout from queue. Example: `300`.
-6. **idleTimeout:** Enter the time in seconds for maximum running time on a test in the build. Example: `120`.
-7. **deviceLog:** Boolean value to generate device logs. Example: `true`.
-<!-- 8. **network:** Boolean value to generate network logs. Example: `false`. -->
-9. **build:** Set the name of the Espresso test build. Example: `My Espresso Build`.
-10. **geoLocation:** Set the geolocation country code if you want to enable the same in your test. Example - `FR`.
-11. **tunnel, tunnelName:** Set tunnel as `true` and provide the tunnelName such as `NewTunnel` as needed if you are running a tunnel.
-12. **disableAnimation:** Set this to `true` if you want to disable animations for espresso tests. **Default:** `false`
-13. **clearPackageData:** Set this to `true` if you want to clear the app data after each test has completed running. **Default**: `false`
-14. **singleRunnerInvocation:** Set this to `true` if you want to execute test cases together with a `single test runner invocation`.This can help significantly speed up the test execution time. By default, each test case is invoked separately. **Default:** `false`
-
-:::caution Important
-Only one of **GeoLocation** or **Tunnel** must be used in single execute command.
-:::
 
 ## Running Tests in Parallel
 
