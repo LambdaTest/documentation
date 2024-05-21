@@ -1,5 +1,5 @@
 ---
-id: reg-expression
+id: regular-expression-appium
 title: Regular Expression (REGEX)
 # hide_title: true
 sidebar_label: Regular Expression
@@ -7,10 +7,9 @@ description: There may be instances when the device you chose for a test on Lamb
 keywords:
 - regular expression lambdatest
 - regular expression app automation
-
-url: https://www.lambdatest.com/support/docs/regular-expression/
+url: https://www.lambdatest.com/support/docs/regular-expression-appium/
 site_name: LambdaTest
-slug: regular-expression/
+slug: regular-expression-appium/
 ---
 
 <script type="application/ld+json"
@@ -31,19 +30,18 @@ slug: regular-expression/
           "@type": "ListItem",
           "position": 3,
           "name": "App Automation: Regular Expression",
-          "item": "https://www.lambdatest.com/support/docs/regular-expression/"
+          "item": "https://www.lambdatest.com/support/docs/regular-expression-appium/"
         }]
       })
     }}
 ></script>
-
-## REGEX for App/Browser Automation
-
 Regular Expression or REGEX is widely used to make searching/find characters in a string.
 
 When you run a test on LambdaTest using a specific device, there may be scenarios, in which the particular device that you selected isn’t available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.
 
 To quote an example, consider you want to run the test on an iPhone. It doesn’t matter which one, but it’s got to be an iPhone. In these cases, we can use REGEX to specify exactly that. You’ll now be allotted any iPhone that’s available which widens the search of devices considerably.
+
+## REGEX for App/Browser Automation
 
 | REGEX CHARACTERS | DESCRIPTION | EXAMPLE |
 |-----------------|-------------|------------|

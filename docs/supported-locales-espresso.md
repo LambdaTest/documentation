@@ -1,5 +1,5 @@
 ---
-id: list-of-supported-locales
+id: supported-locales-espresso
 title: Supported Locales And Languages
 hide_title: false
 sidebar_label: Supported Locales And Languages
@@ -9,9 +9,9 @@ keywords:
   - Locales
   - Appium supported locales
   
-url: https://www.lambdatest.com/support/docs/list-of-supported-locales/
+url: https://www.lambdatest.com/support/docs/supported-locales-espresso/
 site_name: LambdaTest
-slug: list-of-supported-locales/
+slug: supported-locales-espresso/
 ---
 
 <script type="application/ld+json"
@@ -32,7 +32,7 @@ slug: list-of-supported-locales/
           "@type": "ListItem",
           "position": 3,
           "name": "List of Supported Locales",
-          "item": "https://www.lambdatest.com/support/docs/list-of-supported-locales/"
+          "item": "https://www.lambdatest.com/support/docs/supported-locales-espresso/"
         }]
       })
     }}
@@ -90,7 +90,9 @@ Language to be passed in the capability - language:'fr' where fr is language cod
 | Vietnamese             |  vi                        |
 
 ### Android Locale and Locale Codes
+
 Set Appium's locale capability with an appropriate country code to display or format data such as dates, times, decimal separators, and calendars in accordance with the specified country's regional conventions.
+
 :::info
 Locale to be passed in the capability - locale:'FR' where FR is the locale code for France
 :::
@@ -149,131 +151,3 @@ Locale to be passed in the capability - locale:'FR' where FR is the locale code 
 | USA                    |  US                        | 
 | Vietnam                |  VN                        | 
 | Zimbabwe               |  ZA                        | 
-
-##  iOS Locales and Language Codes
-***
-
-To test localised strings in your iOS app, configure Appium's language capability with language code. 
-:::info
-Language to be passed in the capability - language:'fr' where fr is language code for french
-:::
-### iOS Language and Language Codes
-
-| Language               | Language Code  |              
-| -----------------------| ---------------------------| 
-| Chinese                | zh                         |
-| Czech                  | cs                         |
-| Dutch                  | nl                         |
-| English                | en                         |
-| Finnish                | fi                         |
-| French                 | fr                         |
-| German                 | de                         |
-| Greek                  | el                         |
-| Hebrew                 | he                         |
-| Hindi                  | hi                         |
-| Hungarian              | hu                         |
-| Indonesian             | id                         |
-| Italian                | it                         |
-| Japanese               | ja                         |
-| Korean                 | ko                         |
-| Malay                  | ms                         |
-| Norwegian (Bokmal)     | nb                         |
-| Polish                 | pl                         |
-| Portuguese (Brazil)    | pt                         |
-| Romanian               | ro                         |
-| Russian                | ru                         |
-| Slovak                 | sk                         |
-| Spanish                | es                         |
-| Swedish                | sv                         |
-| Tagalog                | tl                         |
-| Thai                   | th                         |
-| Turkish                | tr                         |
-| Ukrainian              | uk                         |
-| Vietnamese             | vi                         |
-
-Set Appium's locale capability with an appropriate country code to display or format data such as dates, times, decimal separators, and calendars in accordance with the specified country's regional conventions.
-
-:::info
-Locale to be passed in the capability - locale: 'fr_FR' where fr is language code for french and FR is the locale code for France
-:::
-### iOS Locale and Locale Codes
-
-| Locale                 | Locale Code                |
-| -----------------------| ---------------------------|
-| Australia              | en_AU                      |
-| Belgium                | nl_BE                      |
-| Belgium                | fr_BE                      |
-| Brunei Darussalam      | ms_BN                      |
-| Canada                 | en_CA                      |
-| Canada                 | fr_CA                      |
-| Czech Republic         | cs_CZ                      |
-| Finland                | fi_FI                      |
-| Germany                | de_DE                      |
-| Greece                 | el_GR                      |
-| Hungary                | hu_HU                      |
-| India                  | hi_IN                      |
-| Indonesia              | id_ID                      |
-| Israel                 | he_IL                      |
-| Italy                  | it_IT                      |
-| Japan                  | ja_JP                      |
-| Malaysia               | ms_MY                      |
-| Netherlands            | nl_NL                      |
-| New Zealand            | en_NZ                      |
-| Norway                 | nb_NO                      |
-| Philippines            | tl_PH                      |
-| Poland                 | pl_PL                      |
-| PRC                    | zh_CN                      |
-| Romania                | ro_RO                      |
-| Russia                 | ru_RU                      |
-| Singapore              | en_SG                      |
-| Slovakia               | sk_SK                      |
-| Korea                  | ko_KR                      |
-| Sweden                 | sv_SE                      |
-| Taiwan                 | zh_TW                      |
-| Thailand               | th_TH                      |
-| Turkey                 | tr_TR                      |
-| UK                     | en_GB                      |
-| Ukraine                | uk_UA                      |
-| US                     | es_US                      |
-| USA                    | en_US                      |
-| Vietnam                | vi_VN                      |
-| Brazil                 | pt-BR                      |
-| China (Simplified)     | zh-Hans                    |
-| China (Traditional)    | zh-Hant                    |
-| Hong Kong              | zh-HK                      |
-| India                  | en-IN                      |
-| Ireland                | en-IE                      |
-| Latin America          | es-419                     |
-| Mexico                 | es-MX                      |
-| South Africa           | en-ZA                      |
-
->
-That's all! In case you come across any doubts or have any questions for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@lambdatest.com](mailto:support@lambdatest.com)**.
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-       Linear App Integration
-      </span>
-    </li>
-  </ul>
-</nav>
-
-
-
-
-
-
-
-
