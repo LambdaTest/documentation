@@ -1,7 +1,7 @@
 ---
 id: smartui-playwright-sdk
 title: Integrate SmartUI SDK with Playwright Tests
-sidebar_label: Playwright
+sidebar_label: Javascript
 description: In this documentation, learn how integrate your Playwright automated tests with LambdaTest's SmartUI.
 keywords:
   - Visual Regression
@@ -225,9 +225,9 @@ You can see the Smart UI dashboard to view the results. This will help you ident
 
 The following are the different options which are currently supported:
 
-| Key                       | Description                                                                                                               | Example                                                                                                                                                                                     |
+| Key                       | Description                                                                                                               |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `driver` (instance)    | The instance of the web driver used in your tests. |
+| `page` (instance)    | The instance of page used in your tests. |
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
 

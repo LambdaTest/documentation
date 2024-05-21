@@ -1,8 +1,8 @@
 ---
-id: smartui-selenium-python-sdk
-title: Integrate SmartUI SDK with Selenium Tests
+id: smartui-playwright-python-sdk
+title: Integrate SmartUI SDK with Playwright Tests
 sidebar_label: Python
-description: In this documentation, learn how integrate your Selenium Python automated tests with LambdaTest's SmartUI.
+description: In this documentation, learn how integrate your Playwright Python automated tests with LambdaTest's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -16,7 +16,7 @@ keywords:
   - How to Run Visual Regression Tests
 
 url: https://www.lambdatest.com/support/docs/smartui-cli/
-slug: smartui-selenium-python-sdk/
+slug: smartui-playwright-python-sdk/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -50,11 +50,11 @@ import NewTag from '../src/component/newTag';
 ></script>
 Welcome to the world of simplified visual testing with the SmartUI SDK. 
 
-Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
+Integrating seamlessly into your existing Playwright testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
 
 ## Pre-requisites for running tests through SmartUI SDK
 
-- Basic understanding of Command Line Interface and Selenium is required.
+- Basic understanding of Command Line Interface and Playwright is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
 - Install **virtualenv** which is the recommended way to run your tests. It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules.
   
@@ -62,7 +62,7 @@ Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK re
 pip install virtualenv
 ```
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Selenium SDK integration.
+The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Playwright SDK integration.
 
 ## Create a SmartUI Project
 
@@ -83,8 +83,8 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 - You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `SmartUI_SDK_LT_hub.py` file.
 
 ```bash
-git clone https://github.com/LambdaTest/smartui-python-sample
-cd smartui-python-sample
+git clone https://github.com/LambdaTest/smartui-playwright-python-sdk-sample
+cd smartui-playwright-python-sdk-sample
 ```
 
 - Create a virtual environment in your project folder (the environment name is arbitrary).
@@ -101,13 +101,13 @@ source venv/bin/activate
 
 ### **Step 2**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI Selenium SDK` in your **Frontend** project.
+Install required NPM modules for `LambdaTest Smart UI Playwright Python SDK` in your **Frontend** project.
 
 ```bash
 npm i @lambdatest/smartui-cli
 ```
 ```bash
-pip install lambdatest-selenium-driver
+pip install lambdatest-playwright-driver
 ```
 
 ### **Step 3:** Configure your Project Token
@@ -192,22 +192,33 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ### **Step 5:** Adding SmartUI function to take screenshot
 
-- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
+- You can incorporate SmartUI into your custom `Playwright` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of playwright script of which we would like to take the screenshot, as shown below: 
   
 
 ```python
-from lambdatest_selenium_driver import smartui_snapshot
-from selenium import webdriver
+ffrom playwright.sync_api import sync_playwright, Playwright
+from lambdatest_playwright_driver import smartui_snapshot
 
+def run(playwright: Playwright):
+    webkit = playwright.webkit
+    browser = webkit.launch()
+    context = browser.new_context()
+    page = context.new_page()
+    
+    try:
+        page.goto("Required URL")
+        smartui_snapshot(page, "Screenshot Name")
 
-driver = webdriver.Chrome()
-try:
-    driver.get('<Required URL>')
-    smartui_snapshot(driver,"<Screenshot Name>")
-except Exception as err:
-    print(err)
-finally: 
-    driver.close()
+        print("SmartUI snapshot taken successfully!")
+
+    except Exception as e:
+        print(f"Error occurred during SmartUI snapshot: {e}")
+
+    finally:
+        browser.close()
+
+with sync_playwright() as playwright:
+    run(playwright)
 ```
 
 ### **Step 6:** Execute the Tests on SmartUI Cloud
@@ -215,7 +226,7 @@ finally:
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui exec python SmartUI_SDK_LT_hub.py --config .smartui.json
+npx smartui --config .smartui.json exec -- python SmartUI_SDK_LT_hub.py
 ```
 
 :::note 
@@ -224,7 +235,7 @@ You may use the `npx smartui --help` command in case you are facing issues durin
 
 ##  View SmartUI Results
 
-You have successfully integrated SmartUI SDK with your Selenium tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
+You have successfully integrated SmartUI SDK with your Playwright tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
 
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
@@ -237,9 +248,9 @@ You can see the Smart UI dashboard to view the results. This will help you ident
 
 The following are the different options which are currently supported:
 
-| Key                       | Description                                                                                                                                                                                                                                |
+| Key                       | Description                                                                                                               |                                                                                                                             
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `driver` (instance)    | The instance of the web driver used in your tests. |
+| `page` (instance)    | The instance of the page used in your tests. |
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
 
@@ -258,8 +269,8 @@ options = {
                 id: ["ID-1", "ID-2"],
             }
         }
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>", options)
+page.goto("Required URL")
+smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 </TabItem>
@@ -271,8 +282,8 @@ options = {
                 class: ["Class-1", "Class-2"],
             }
         }
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>", options)
+page.goto("Required URL")
+smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 </TabItem>
@@ -284,8 +295,8 @@ options = {
                 xpath: ["Xpath-1", "Xpath-2"],
             }
         }
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>", options)
+page.goto("Required URL")
+smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 </TabItem>
@@ -298,8 +309,8 @@ options = {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>", options)
+page.goto("Required URL")
+smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 </TabItem>
 
@@ -314,8 +325,8 @@ options = {
                 id: ["ID-1", "ID-2"],
             }
         }
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>", options)
+page.goto("Required URL")
+smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 </TabItem>
@@ -327,8 +338,8 @@ options = {
                 class: ["Class-1", "Class-2"],
             }
         }
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>", options)
+page.goto("Required URL")
+smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 </TabItem>
@@ -340,8 +351,8 @@ options = {
                 xpath: ["Xpath-1", "Xpath-2"],
             }
         }
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>", options)
+page.goto("Required URL")
+smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 </TabItem>
@@ -354,8 +365,8 @@ options = {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
             }
         }
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>", options)
+page.goto("Required URL")
+smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 </TabItem>
 
@@ -375,8 +386,8 @@ options = {
           id: 'Required ID',
       }
   }
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>", options)
+page.goto("Required URL")
+smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 </TabItem>
@@ -388,8 +399,8 @@ options = {
           class: 'Required Class',
       }
   }
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>", options)
+page.goto("Required URL")
+smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 </TabItem>
@@ -401,8 +412,8 @@ options = {
           xpath: 'Required Xpath',
       }
   }
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>", options)
+page.goto("Required URL")
+smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 
 </TabItem>
@@ -415,52 +426,12 @@ options = {
           cssSelector: 'Required CSS Selector',
       }
   }
-driver.get('<Required URL>')
-smartui_snapshot(driver,"<Screenshot Name>", options)
+page.goto("Required URL")
+smartui_snapshot(page,"<Screenshot Name>", options)
 ```
 </TabItem>
 
 </Tabs>
-
-## For capturing interactive lazy loading elements
-
-If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
-
-```py Example for scrolling to bottom for lazy elements
-from selenium import webdriver
-from lambdatest_selenium_driver import smartui_snapshot
-
-def quick_scroll_to_bottom(driver, last_page_wait):
-    try:
-        height = driver.execute_script("return document.body.scrollHeight")
-        height_of_page = int(height)
-        size = 200
-        no_of_loop = height_of_page // size
-
-        for i in range(1, no_of_loop + 1):
-            driver.execute_script(f"window.scrollTo({(i - 1) * size}, {i * size})")
-            driver.implicitly_wait(1)
-            if i == no_of_loop:
-                driver.execute_script(f"window.scrollTo({i * size}, {height_of_page})")
-                driver.implicitly_wait(last_page_wait / 1000.0)
-
-        # Now scroll to the top
-        driver.execute_script("window.scrollTo(0,0)")
-        driver.implicitly_wait(10)  # Wait for 10 seconds
-        print("Scroll Completed")
-    except Exception as e:
-        print(f"Got some errors: {e}")
-
-# Example usage
-if __name__ == "__main__":
-    driver = webdriver.Chrome()  # Initialize the WebDriver instance
-    try:
-        driver.get("Required URL")  # Change "Required URL" to the actual URL you want to test
-        quick_scroll_to_bottom(driver, 100)  # Use wait time accordingly
-        smartui_snapshot(driver, "Screenshot Name")
-    finally:
-        driver.quit()
-```
 
 For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
 
