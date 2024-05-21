@@ -483,7 +483,7 @@ project:
   name: XYZ Name
 differentialUpload:
   enabled: #true/false
-  ttlHours: #int value, with possible range of values [1 hour to 1440 hours]
+  ttlHours: #int value, with possible range of values [1 hour to 360 hours]
 ```
 
 :::info
