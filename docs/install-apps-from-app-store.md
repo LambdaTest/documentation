@@ -3,7 +3,7 @@ id: install-apps-from-app-store
 title: How to Test Apps Installed via App Store?
 hide_title: true
 sidebar_label: App Store
-description: With LambdaTest, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
+description: Learn how to test apps installed from the App Store on LambdaTest for optimal performance on real iOS devices.
 keywords:
 - install apps from app store
 - app store
