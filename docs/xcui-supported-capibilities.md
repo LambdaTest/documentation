@@ -44,6 +44,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
+This document provide details about the features and capabilities supported for XCUI Framework on LambdaTest.
+
 | Capability Name | Data Type | Description |
 |------|-----------|-------------|
 | app | String | Enter the app id generated while uploading the app to the platform. Example:`lt://APP123456789123456789` |
