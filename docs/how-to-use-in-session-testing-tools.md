@@ -74,7 +74,7 @@ The **Mark as Bug** feature allows you to push your UI related issues/edited scr
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/mark-as-bug-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out detailed documentation to know more about  Mark as Bug feature.
+
 
 ### Gallery
 
@@ -153,7 +153,6 @@ LambdaTest’s real device browser testing offers in-built developer tools to he
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/chrome-devtools-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the Chrome DevTools feature.
 
 
 ### Safari Web Inspector
@@ -162,7 +161,7 @@ LambdaTest’s real device browser testing offers in-built **Safari Web Inspecto
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/safari-web-inspector.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the Safari Web Inspector feature.
+
 
 
 ### Test Manager
@@ -171,7 +170,7 @@ Unified **Test Manager** simplifies test authoring, management, triggering, and 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/test-manager-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the Test Manager.
+
 
 > **Notes:** The max duration for running manual tests on LambdaTest Real Device Cloud is 2 hours. In order to extend the duration, you can opt for our dedicated real device cloud.
 
