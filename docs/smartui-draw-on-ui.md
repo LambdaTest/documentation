@@ -2,7 +2,7 @@
 id: smartui-draw-on-ui
 title: Ignore or Select Annotated Regions
 sidebar_label: Ignore or Select Regions
-description: In this documentation, learn how to ignore, select the annoted regions of the tests with LambdaTest's SmartUI.
+description: In this documentation, learn how to ignore, select the annotated regions of the tests with LambdaTest's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
