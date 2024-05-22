@@ -70,7 +70,7 @@ Check out our detailed [support documentation](https://www.lambdatest.com/suppor
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-tunnel.webp').default} alt="Real Device Tunnel"  className="doc_img" width="1366" height="629"/>
 
-**Step 6**: Select the preferred **Brand**,**Device Name** and **OS Version** to easily navigate to your required device. You can also use the search bar to select your devices.
+**Step 6**: Select the preferred **Brand**, **Device Name** and **OS Version** to easily navigate to your required device. You can also use the search bar to select your devices.
 
 **Step 7**: Click on **Start** to run your test session.
 
