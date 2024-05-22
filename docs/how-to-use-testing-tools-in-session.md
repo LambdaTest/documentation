@@ -83,7 +83,6 @@ The **Mark as Bug** feature allows you to push your UI related issues/edited scr
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/mark-as-bug-app-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out detailed documentation to know more about  Mark as Bug feature.
 
 ### Gallery
 
@@ -118,13 +117,6 @@ You can simulate these network environments using either pre-defined profiles or
 
 Check out our detailed support documentation to know more about the [Network Throttling](https://www.lambdatest.com/support/docs/app-auto-network-throttling/) feature.
 
-### Image Injection
-
-LambdaTest’s real device app testing offers the capability to test functionalities like image capture and QR/Barcode scanning through the camera on LambdaTest’s real devices. This feature is ideal for mobile app features including check scanning, profile image capture, and QR/Barcode scanning, ensuring these key functionalities perform as expected in your app.
-
-
-
-Check out our detailed support documentation to know more about the [Image Injection](https://www.lambdatest.com/support/docs/camera-image-injection/) feature.
 
 ### Files Upload
 
@@ -180,7 +172,7 @@ With the **zoom in-out** slider, you can zoom in and out in your real device as 
 
 **Network Logs** record performance metrics including network traffic, latency, and HTTP requests and responses in the HAR (HTTP Archive) format. These logs provide a detailed overview of all network requests, such as REST API calls, from your app and their response times, aiding in the identification of performance bottlenecks and troubleshooting of failed REST API responses.
 
-Check out our detailed support documentation to know more about the Network Logs feature.
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/network-logs-real-app.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 ### Device Logs
 
@@ -188,7 +180,7 @@ Check out our detailed support documentation to know more about the Network Logs
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/device-logs.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the Device Logs feature.
+
 
 ### UI Inspector
 
@@ -196,7 +188,7 @@ The Intelligent **UI Inspector** for real device testing streamlines mobile app 
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/ui-inspector.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the UI Inspector feature.
+
 
 ### Test Manager
 
@@ -204,7 +196,7 @@ Unified **Test Manager** simplifies test authoring, management, triggering, and 
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/test-manager.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the Test Manager.
+
 
 > **Notes:** The max duration for running manual tests on LambdaTest Real Device Cloud is 2 hours. In order to extend the duration, you can opt for our dedicated real device cloud.
 
