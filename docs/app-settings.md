@@ -3,7 +3,7 @@ id: app-settings
 title: App Settings in Real Device Cloud
 hide_title: true
 sidebar_label: App Settings
-description: With LambdaTest, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
+description: Explore App Settings in LambdaTest's Real Device Cloud to enhance testing functionality and ensure comprehensive app validation.
 keywords:
 - app settings 
 url: https://www.lambdatest.com/support/docs/app-settings/
@@ -53,15 +53,11 @@ Enable this setting to effortlessly test your biometric authentication-reliant a
 
 Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/biometric-authentication/) to learn in detail about the Biometric supported APIs and much more.
 
-## Disable App Resigning (only iOS)
-
-When users upload an iOS application to Lambdatest servers, Lambdatest will re-sign the app with a self-provisioning profile for installation on their devices during testing. This re-signing process may lead to the removal of entitlements from your iOS app. However, if the app is already signed using the Apple Developer Enterprise Program, users have this setting to opt out of this behavior. This enables you to thoroughly test functionalities like push notifications and universal links on Lambdatest devices without any hindrance.
-
-## Disable Screenshot Unblock (only Android)
+## Disable Screenshot Block (only Android)
 
 Enable this setting to conduct uninterrupted testing of your application's performance, even when screenshot capture is restricted within your app. This tool facilitates testing in both app-live and app automation scenarios, ensuring seamless evaluation of your applications.
 
-Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/disable-screenshot-block/) to learn in detail about the Network logs feature.
+Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/disable-screenshot-block/) to learn in detail about disable screenshot block feature.
 
 ## Default Network Logs
 

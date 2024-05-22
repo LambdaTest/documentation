@@ -3,7 +3,7 @@ id: install-apps-from-app-center
 title: How to Test Apps Installed via App Center?
 hide_title: true
 sidebar_label: App Center
-description: With LambdaTest, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
+description: Learn how to test apps installed from App Center on LambdaTest for optimal performance on real Android and iOS devices.
 keywords:
 - install apps from app center
 - app center
