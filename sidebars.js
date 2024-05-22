@@ -2412,6 +2412,13 @@ module.exports = {
         label: "Project Settings",
         id: "smartui-project-settings",
       },
+
+      {
+        type: "doc",
+        label: "Ignore or Select Annotated Regions",
+        id: "smartui-draw-on-ui",
+      },
+
       {
         type: "doc",
         label: "Git Baseline Branching",
@@ -2422,6 +2429,7 @@ module.exports = {
         label: "Github App Integration",
         id: "smartui-github-app-integration",
       },
+
     ]
   ],
 
