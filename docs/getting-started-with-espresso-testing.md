@@ -208,7 +208,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/e
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://accounts.lambdatest.com/login).
 
-<img loading="lazy" src={require('../assets/images/espresso/espresso-test.png').default} alt="Image" width="521" height="268" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/espresso/espresso-test.jpeg').default} alt="Image" width="521" height="268" className="doc_img"/>
 
 ## Running Tests in Parallel
 
