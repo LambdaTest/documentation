@@ -131,6 +131,19 @@ import NewTag from '../src/component/newTag';
          <a href="/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>
       </div>
     </div>
+
+<div className="home_inners_box">
+       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Realtime-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Realtime-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Real Device</h2>
+      <div className="home_inners">
+        <a href="/support/docs/app-testing-on-real-devices/" ><p className="p_home_inners">Real Device App Testing</p></a>
+      </div>
+        <div className="home_inners">
+        <a href="/support/docs/browser-testing-on-real-devices/" ><p className="p_home_inners">Real Device Browser Testing</p></a>
+      </div>
+      <div className="home_inners">
+        <a href="/support/docs/public-cloud-vs-private-cloud/" ><p className="p_home_inners">Private Cloud</p></a>
+      </div>
+    </div>
     <div className="home_inners_box">
        <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/testing-locally-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Testing Locally</h2>
       <div className="home_inners">
@@ -143,6 +156,12 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/charles-proxy/"><p className="p_home_inners">Charles Proxy</p></a>
       </div>
     </div>
+    </div>
+
+<!-- end of second section -->
+
+<!-- start of third section -->
+<div className="home_main">
     <div className="home_inners_box">
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Integration-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Integration-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Integrations</h2>
       <div className="home_inners">
@@ -154,12 +173,6 @@ import NewTag from '../src/component/newTag';
         <a href="/docs/plugins-and-extensions/"><p className="p_home_inners">Plugin and Extensions</p></a>
       </div>
     </div>
-  </div>
-
-<!-- end of second section -->
-
-<!-- start of third section -->
-<div className="home_main">
     <div className="home_inners_box">
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon" role="presentation"/>Accessibility DevTools</h2>
       <div className="home_inners">

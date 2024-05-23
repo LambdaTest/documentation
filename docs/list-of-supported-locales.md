@@ -1,7 +1,7 @@
 ---
 id: list-of-supported-locales
-title: List of Supported Locales
-hide_title: true
+title: Supported Locales And Languages
+hide_title: false
 sidebar_label: Supported Locales And Languages
 description: Checkout the list of all supported locales
 keywords:
@@ -38,15 +38,16 @@ slug: list-of-supported-locales/
     }}
 ></script>
 
-# Supported Locales And Languages
-***
 Use the given below list of supported locale and language codes for app testing.
-## Android locales and language codes
+
+## Android Locales and Language Codes
+
 To test localised strings in your android app, configure Appium's language capability with language code. 
 :::info
 Language to be passed in the capability - language:'fr' where fr is language code for french
 :::
-### Android language and language codes
+
+### Android Language and Language Codes
 
 | Language               | Language Code              |              
 | -----------------------| ---------------------------|                
@@ -88,7 +89,7 @@ Language to be passed in the capability - language:'fr' where fr is language cod
 | Ukrainian              |  uk                        |
 | Vietnamese             |  vi                        |
 
-### Android locale and locale codes
+### Android Locale and Locale Codes
 Set Appium's locale capability with an appropriate country code to display or format data such as dates, times, decimal separators, and calendars in accordance with the specified country's regional conventions.
 :::info
 Locale to be passed in the capability - locale:'FR' where FR is the locale code for France
@@ -149,14 +150,14 @@ Locale to be passed in the capability - locale:'FR' where FR is the locale code 
 | Vietnam                |  VN                        | 
 | Zimbabwe               |  ZA                        | 
 
-##  iOS locales and language codes
+##  iOS Locales and Language Codes
 ***
 
 To test localised strings in your iOS app, configure Appium's language capability with language code. 
 :::info
 Language to be passed in the capability - language:'fr' where fr is language code for french
 :::
-### iOS language and language codes
+### iOS Language and Language Codes
 
 | Language               | Language Code  |              
 | -----------------------| ---------------------------| 
@@ -195,7 +196,7 @@ Set Appium's locale capability with an appropriate country code to display or fo
 :::info
 Locale to be passed in the capability - locale: 'fr_FR' where fr is language code for french and FR is the locale code for France
 :::
-### iOS locale and locale codes
+### iOS Locale and Locale Codes
 
 | Locale                 | Locale Code                |
 | -----------------------| ---------------------------|

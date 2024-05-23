@@ -1476,11 +1476,74 @@ module.exports = {
     ]
   ],
 
-  SeleniumTestingSidebar: [
+  RealDeviceSidebar: [
     {
       type: 'link',
       label: '<- Back',
       href: '/docs/web-automation',
+      customProps: {
+        className: 'back-to-main-menu'
+      },
+    },
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Real Device App Testing",
+        items: [
+          "app-testing-on-real-devices",
+          "how-to-use-testing-tools-in-session",
+          {
+            type: "category",
+            collapsed: false,
+            label: "Applications",
+            items: [
+              "upload-apps-on-real-device-cloud",
+              "app-settings",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: false,
+            label: "App Source",
+            items: [
+              "install-apps-from-play-store",
+              "install-apps-from-test-flight",
+              "install-apps-from-app-center",
+              "install-apps-from-app-store",
+            ],
+          },
+        ],
+      },
+  ],
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Real Device Browser Testing",
+        items: [
+          "browser-testing-on-real-devices",
+          "how-to-use-in-session-testing-tools",
+        ],
+      },
+    ],
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Private Cloud",
+        items: [
+          "public-cloud-vs-private-cloud",
+        ],
+      },
+    ],  
+  ],
+
+  SeleniumTestingSidebar: [
+    {
+      type: 'link',
+      label: '<- Back',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -1698,7 +1761,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/web-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -1801,7 +1864,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/web-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -1844,7 +1907,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/web-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -1873,7 +1936,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/web-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -1891,7 +1954,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/app-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -1914,7 +1977,7 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/app-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
@@ -2034,7 +2097,7 @@ module.exports = {
             items: [
               "camera-image-injection",
               "biometric-authentication",
-              "reg-expression",
+              "regular-expression-appium",
               "appium-upload-media",
               "app-auto-network-throttling",
               "appium-app-performance",
@@ -2075,37 +2138,64 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/app-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
     },
     [
       {
+        type: "doc",
+        label: "Getting Started with Espresso Testing",
+        id: "getting-started-with-espresso-testing",
+      },
+      {
+        type: "doc",
+        label: "Supported Capabilities",
+        id: "espresso-supported-capabilities",
+      },
+      {
+        type: "doc",
+        label: "RegEx in Espresso",
+        id: "regular-expression-espresso",
+      },
+      {
+        type: "doc",
+        label: "Supported Locales",
+        id: "supported-locales-espresso",
+      },
+      {
+        type: "doc",
+        label: "Debug Espresso Tests",
+        id: "debug-espresso-tests",
+      },
+      {
+        type: "doc",
+        label: "Troubleshoot Espresso Tests",
+        id: "troubleshoot-espresso-tests",
+      },
+      {
         type: "category",
         collapsed: true,
-        label: "Espresso Testing",
+        label: "Speedup Espresso Tests",
         items: [
-          "getting-started-with-espresso-testing",
-          "debug-espresso-tests",
-          "troubleshoot-espresso-tests",
           {
-            type: "category",
-            collapsed: true,
-            label: "Speedup Espresso Tests",
-            items: [
-              {
-                type: "doc",
-                label: "Sharding for Espresso",
-                id: "sharding-espresso",
-              },
-              "speedup-espresso"
-            ]
-
+            type: "doc",
+            label: "Sharding for Espresso",
+            id: "sharding-espresso",
           },
-          "getting-started-with-flutter-dart-android-automation",
-          "espresso-junit-report",
-        ],
+          "speedup-espresso"
+        ]
+      },
+      {
+        type: "doc",
+        label: "Getting Started with Flutter Automation",
+        id: "getting-started-with-flutter-dart-android-automation",
+      },
+      {
+        type: "doc",
+        label: "JUnit Report",
+        id: "espresso-junit-report",
       },
     ]
   ],
@@ -2114,30 +2204,50 @@ module.exports = {
     {
       type: 'link',
       label: '<- Back',
-      href: '/docs/app-automation',
+      href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
       },
     },
     [
       {
+        type: "doc",
+        label: "Getting Started with XCUI Testing",
+        id: "getting-started-with-xcui-testing",
+      },
+      {
+        type: "doc",
+        label: "Supported Capabilities",
+        id: "xcui-supported-capabilities",
+      },
+      {
+        type: "doc",
+        label: "RegEx in XCUI",
+        id: "regular-expression-xcui",
+      },
+      {
+        type: "doc",
+        label: "Supported Locales",
+        id: "supported-locales-xcui",
+      },
+      {
+        type: "doc",
+        label: "Creating iOS Applications",
+        id: "ios-ipa-files-xcui",
+      },
+      {
         type: "category",
         collapsed: true,
-        label: "XCUI Testing",
+        label: "Speedup XCUI Tests",
         items: [
-          "getting-started-with-xcui-testing",
-          "ios-ipa-files-xcui",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Speedup XCUI Tests",
-            items: [
-              "sharding-xcui",
-              "filters-xcui",
-            ],
-          },
-          "xcui-xml-report",
+          "sharding-xcui",
+          "filters-xcui",
         ],
+      },
+      {
+        type: "doc",
+        label: "Xml Report",
+        id: "xcui-xml-report",
       },
     ]
   ],
