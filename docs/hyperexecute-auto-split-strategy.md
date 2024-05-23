@@ -41,6 +41,8 @@ slug: hyperexecute-auto-split-strategy/
 
 The Smart **Auto Split Strategy** enables you to distribute tests across multiple virtual machines efficiently. This strategy ensures optimal utilization of concurrency by allowing you to split tests based on various levels, such as files, modules, and scenarios.
 
+It also enables you to **automatically reorder** your test cases. Let's say you ran a job of 10 tests and 3 of them failed, then in the next execution those 3 failed tests will take the precedence over the other tests and they will be executed first for faster feedback.
+
 ## Key Benefits of Auto Split Strategy
 - Efficient distribution of tests across nodes.
 - Fine-grained control over test distribution.
