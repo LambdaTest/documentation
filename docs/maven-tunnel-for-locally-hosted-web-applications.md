@@ -1,7 +1,7 @@
 ---
 id: maven-tunnel-for-locally-hosted-web-applications
 title: Maven Tunnel For Locally Hosted Web Applications
-hide_title: true
+hide_title: false
 sidebar_label: Maven Tunnel For Locally Hosted Web Apps
 description: Configure a secure LambdaTest Tunnel to execute your Selenium test automation scripts through your Maven project on our online Selenium Grid.
 keywords:
@@ -40,20 +40,15 @@ slug: maven-tunnel-for-locally-hosted-web-applications/
     }}
 ></script>
 
-# Maven Tunnel For Locally Hosted Web Applications
-
-***
 Maven is a renowned build automation tool for orchestrating project builds by automatically handling Selenium dependencies, compiling source code to binary & then packaging of the binary. LambdaTest offers an SSH (Secure Shell) tunnel which allows you to test your locally hosted websites over 3000+ browsers for both mobile and desktop through LambdaTest Selenium Grid.
 
 This document will help you configure a secure LambdaTest Tunnel to execute your [Selenium test automation](https://www.lambdatest.com/selenium-automation) scripts through your Maven project on our online Selenium Grid.
 
 > LambdaTest Maven Tunnel is now compatible with both **Java 17** and **Java 20**. Additionally, we also rolled out the latest **[Maven Tunnel v2.0.2](https://mvnrepository.com/artifact/com.github.lambdatest/lambdatest-tunnel-binary/2.0.2)**, with various enhancements and optimizations. 
 
-
 ## Prerequisites
-* * *
 
-* **LambdaTest Authentication Credentials:**
+**LambdaTest Authentication Credentials:**
 Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your LambdaTest automation dashboard by clicking on the key icon near the help button.
 
 **For Linux/Mac:**
@@ -62,11 +57,13 @@ Be aware of your LambdaTest authentication credentials i.e. your LambdaTest user
 $ export LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
 $ export LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
 ```
+
 **For Windows:**
 ```javascript
 $ set LT_USERNAME= {YOUR_LAMBDATEST_USERNAME}
 $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
 ```
+
 * Make sure you have [Maven installed](https://maven.apache.org/install.html).
 * Install [Java 8](https://www.oracle.com/in/java/technologies/javase/javase-jdk8-downloads.html).
 
@@ -323,7 +320,6 @@ In order to trigger parallel test execution with Maven Tunnel using Serenity BDD
 </dependency>
 ```
 
-
 ## Optional Arguments For LambdaTest Tunnel
 * * *
 | ARGUMENT | SYNTAX | DESCRIPTION |
@@ -336,7 +332,8 @@ In order to trigger parallel test execution with Maven Tunnel using Serenity BDD
 | customBinaryPath | `tunnelArgs.put("binary", "<YOUR LT BINARY PATH>")` | To give custom binary path. |
 | basicAuth | `tunnelArgs.put("basicAuth", "<YOUR BASIC AUTH>")` | Basic Auth. |
 | mitm | `tunnelArgs.put("mitm", "true")` | MITM only if basicAuth is provided. |
-For more arguments, refer to our document of [LambdaTest Tunnel Modifiers](https://www.lambdatest.com/support/docs/lambda-tunnel-modifiers/).
+
+> For more arguments, refer to our document of [LambdaTest Tunnel Modifiers](https://www.lambdatest.com/support/docs/lambda-tunnel-modifiers/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -43,13 +43,16 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
+
+This document provide details about the features and capabilities supported for Espresso Framework on LambdaTest.
+
 | Capability Name | Data Type | Description |
 |------|-----------|-------------|
 | app | String | Enter the app id generated while uploading the app to the platform. Example:`lt://APP123456789123456789` |
 | testSuite | String | Enter the test suite id generated while uploading the test suite to the platform. Example: `lt://APP123456789123456789` |
 | device | String | Enter the device name and os version in `DeviceName-OSVersion` format. Example: `"device" :  ["Galaxy S20-10","Pixel 3 XL-9"]` |
 | video | Boolean | When you pass the `video: true`, it will generate the video for all the tests that are executed. |
-| queueTimeout | Integer | Enter the time in seconds after which you want your build to timeout from queue. Example: `queueTimeout: 300` |
+| queueTimeout | Integer | Total execution time of the build. Example: `queueTimeout: 300`. Maximum value is `10800`|
 | idleTimeout | Integer | Enter the time in seconds for maximum running time of a test in a build. Example: `idleTimeout: 120`|
 | deviceLog | Boolean | To generate the device logs, pass the value as `deviceLog: true` |
 | build | String | To set the Espresso build name. Example: `build: My Espresso Build`. |
