@@ -70,9 +70,9 @@ The LambdaTest Integration with Slack allows you to push a bug directly to your 
 
 <img loading="lazy" src={require('../assets/images/slack-integration/5.11.webp').default} alt="Image" width="1341" height="635" className="doc_img"/>
 
-**Step 6:** Provide your **Slack** crendentials to login.
+**Step 6:** Provide your **Slack** credentials to login.
 
-<img loading="lazy" src={require('../assets/images/slack-integration/5.2.webp').default} alt="Provide your Slack crendentials to login" width="1345" height="635" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/slack-integration/5.2.webp').default} alt="Provide your Slack credentials to login" width="1345" height="635" className="doc_img"/>
 
 >* ** Why we ask for your login credentials?**   
 Slack APIs uses OAuth 2.0's [ authorization code grant flow][8] for generating access tokens on user's behalf.    

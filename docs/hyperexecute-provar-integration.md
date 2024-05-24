@@ -210,7 +210,7 @@ OR use this command if you have not exported your username and access key in the
 ./hyperexecute --user <your_username> --key <your_access_key> --config <path_of_yaml_file>
 ```
 
-## Step 5: Montior Your Tests
+## Step 5: Monitor Your Tests
 
 - Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 

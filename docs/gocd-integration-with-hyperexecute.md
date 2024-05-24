@@ -89,7 +89,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 
 - Enter the **Repository URL** from which you want to set up the project.
 
-- Enter your **Reposiroty branch** name.
+- Enter your **Repository branch** name.
 
 - Enter the **Username** and **Password** of your GitHub. (It is required in case the access to the repo needed authentication).
 
