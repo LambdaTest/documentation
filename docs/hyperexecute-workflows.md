@@ -38,7 +38,7 @@ slug: hyperexecute-workflows/
 ></script>
 # HyperExecute Workflows
 
-> This is currently under the **Beta** version.
+> The workflow feature is currently in the **Beta** version, so it works only in the [dynamic mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
 
 You can setup scheduled workflows on HyperExecute platform to enable scheduled test execution on your projects acutomatically.
 
