@@ -63,7 +63,7 @@ The LambdaTest Asana Integration allows you to create a task directly to your sp
 
 <img loading="lazy" src={require('../assets/images/asana-integration/asana-2.webp').default} alt="asana-integration" width="1365" height="638" className="doc_img"/>
 
-**Step 5:** If you are not already logged in, then you will be redirected to a page where you can do so. Provide your login crendentials. You can even login using your **Google account**.
+**Step 5:** If you are not already logged in, then you will be redirected to a page where you can do so. Provide your login credentials. You can even login using your **Google account**.
 
 <img loading="lazy" src={require('../assets/images/asana-integration/asana-2.webp').default} alt="asana-integration" width="1365" height="638" className="doc_img"/>
 

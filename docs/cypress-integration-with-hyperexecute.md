@@ -92,7 +92,7 @@ Beyond basic pass/fail information, HyperExecute generates [**detailed reports**
 
 Occasional test failures happen. HyperExecute's configurable [**retry mechanism**](/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure) allows you to automatically re-run flaky or failed tests based on defined criteria, ensuring accurate results and preventing false negatives.
 
-### Prioritzing your Jobs
+### Prioritizing your Jobs
 
 In complex testing scenarios, prioritizing critical tests is essential. HyperExecute lets you define [**job priorities**](/support/docs/hyperexecute-prioritize-tests/), ensuring high-priority tests get executed first, maximizing efficiency and meeting your testing goals.
 

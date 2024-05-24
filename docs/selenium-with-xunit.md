@@ -67,7 +67,7 @@ cd CSharp-xUnit-Selenium
 ## Setting up Your Authentication
 ---
 
-Ensure you have your LambdaTest credentials to run C# automation scripts. Get these credentials from the LambdaTest Profile by heading to **Account Settings** > **Password & Securit**y tab.
+Ensure you have your LambdaTest credentials to run C# automation scripts. Get these credentials from the LambdaTest Profile by heading to **Account Settings** > **Password & Security** tab.
 
 2. Set your LambdaTest Username and Access Key in environment variables.
 

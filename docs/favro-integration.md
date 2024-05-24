@@ -87,7 +87,7 @@ The LambdaTest Favro Integration allows you to create a task directly to your sp
 
 **Step 9:** Once your API token is generated, copy the same by clicking on**'Copy to clipboard'**.
 
-<img loading="lazy" src={require('../assets/images/favro-integration/Screenshot-203.webp').default} alt="Using API Tocken" width="1010" height="364" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/favro-integration/Screenshot-203.webp').default} alt="Using API Token" width="1010" height="364" className="doc_img"/>
 
 **Step 10:** Then enter your e-mail address and paste the API token into the field provided at LambdaTest & hit the **'Install'** button. If you are using **'Self hosted' **Favro instance, instead of API token, you would just have to add your favro login password.
 
