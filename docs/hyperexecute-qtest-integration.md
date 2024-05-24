@@ -157,7 +157,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/3.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
 
-## Step 5: Montior Your Tests
+## Step 5: Monitor Your Tests
 
 - Login into qTest Manager, go to the Test Execution tab, and there should be a test cycle under your project called **Junit Automated Tests**
 - Click on the test cycle and it should show all of the tests that were run through the maven build and their statuses.

@@ -96,7 +96,7 @@ The following configured area will be ignored in every consecutive build for the
 
 **Step 1:** Click on the **Actions** button.
 
-**Step 2:** Delete al your selected regions from the screenshot.
+**Step 2:** Delete all your selected regions from the screenshot.
 
 **Step 3:** Click on the **Save** button to delete the ignored/selected area.
 
@@ -116,7 +116,7 @@ The SmartUI Annotation Tool offers keyboard shortcuts to streamline the resizing
 - `Shift + S:` Resize down
 - `Shift + D:` Resize right
 - `Shift + W:` Resize up
-- **Configure Entire Screenshot:** Use Shift + T to quickly define a region encompassing the entire screenshot.
-- **Remove Area:** Press the Delete or Backspace key to remove the currently selected area.
+- `Shift + T:` Define a region encompassing the entire screenshot.
+- `Delete or Backspace:` Remove the currently selected area.
 
 > By effectively utilizing these best practices and keyboard shortcuts, you can significantly enhance the accuracy and efficiency of your annotation workflow.
