@@ -1369,6 +1369,7 @@ module.exports = {
               "travis-ci-with-lambdatest",
               "gitlab-ci-integration",
               "codeship-integration",
+              "codefresh-ci-integration",
               "teamcity-integration",
               {
                 type: "category",
