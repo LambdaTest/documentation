@@ -56,11 +56,18 @@ import TabItem from '@theme/TabItem';
 
 Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience. 
 
+<div className="ytframe"> 
+<div className="youtube" data-embed="32e7bBHiYKg">
+    <div className="play-button"></div>
+</div>
+</div>
+
 LambdaTest now supports Biometric Authentication for real devices (iOS and android). This new feature allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.
 
 :::info
 **OS Version:** Biometric authentication is supported only on Android devices with OS version `11` or `above`, and on iOS devices with OS version `13` or `above`.
 :::
+
 ### Biometric Authentication APIs supported
 
 Below given is the list of Biometric Authentication APIs which are supported. Please ensure that your app uses these APIs only to enable Biometric Authentication.
