@@ -39,31 +39,31 @@ slug: tas-overview/
   <div className="support_inners">
   <h2>Getting Started</h2>
   <ul className="support_inners_ul">
-    <li><a href="/docs/tas-getting-started-creating-an-account/">Creating an account</a></li>
-    <li><a href="/docs/tas-getting-started-integrating-your-first-repo/">Setup your first repo</a></li>
-    <li><a href="/docs/tas-configuring-tas-yml/">Configuring TAS YML</a></li>
+    <li><a href="/support/docs/tas-getting-started-creating-an-account/">Creating an account</a></li>
+    <li><a href="/support/docs/tas-getting-started-integrating-your-first-repo/">Setup your first repo</a></li>
+    <li><a href="/support/docs/tas-configuring-tas-yml/">Configuring TAS YML</a></li>
   </ul>
   </div>
   <div className="support_inners">
   <h2>TAS - Self Hosted</h2>
   <ul className="support_inners_ul">
-    <li><a href="/docs/tas-self-hosted-overview/">Overview</a></li>
-    <li><a href="/docs/tas-self-hosted-installation/">Installation</a></li>
-    <li><a href="/docs/tas-self-hosted-configuration/">Configuration</a></li>
+    <li><a href="/support/docs/tas-self-hosted-overview/">Overview</a></li>
+    <li><a href="/support/docs/tas-self-hosted-installation/">Installation</a></li>
+    <li><a href="/support/docs/tas-self-hosted-configuration/">Configuration</a></li>
   </ul>
   </div>
   <div className="support_inners">
   <h2>Tutorial</h2>
   <ul className="support_inners_ul">
-    <li><a href="/docs/tas-tutorial-cloud-demo/">TAS Cloud Demo</a></li>
-    <li><a href="/docs/tas-tutorial-self-hosted-demo/">TAS Self Hosted Demo</a></li>
+    <li><a href="/support/docs/tas-tutorial-cloud-demo/">TAS Cloud Demo</a></li>
+    <li><a href="/support/docs/tas-tutorial-self-hosted-demo/">TAS Self Hosted Demo</a></li>
   </ul>
   </div>
   <div className="support_inners">
   <h2>Learn about TAS</h2>
   <ul className="support_inners_ul">
-    <li><a href="/docs/tas-learn-about-tas-how-tas-works/">How tas works</a></li>
-    <li><a href="/docs/tas-learn-about-tas-features-and-languages/">Features and Languages</a></li>
+    <li><a href="/support/docs/tas-learn-about-tas-how-tas-works/">How tas works</a></li>
+    <li><a href="/support/docs/tas-learn-about-tas-features-and-languages/">Features and Languages</a></li>
   </ul>
   </div>
   <div className="support_inners">
@@ -77,7 +77,7 @@ slug: tas-overview/
   <h2>Support</h2>
   <ul className="support_inners_ul">
     <li><a href="https://www.lambdatest.com/demo?type=TAS">Contact Us</a></li>
-    <li><a href="/docs/tas-faq-and-troubleshooting/">FAQs and Troubleshooting</a></li>
+    <li><a href="/support/docs/tas-faq-and-troubleshooting/">FAQs and Troubleshooting</a></li>
   </ul>
   </div>
 </div>

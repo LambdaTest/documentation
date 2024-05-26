@@ -77,7 +77,7 @@ That's all Testers!. In case you come across any doubts, feel free to reach out 
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="/docs/">
+      <a className="breadcrumbs__link" target="_self" href="/support/docs/">
         Support
       </a>
     </li>

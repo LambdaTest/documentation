@@ -51,67 +51,67 @@ slug: account-management/
 # Account Management
 
 <div className="support_main">  
-  <a href="/docs/manage-subscriptions/">
+  <a href="/support/docs/manage-subscriptions/">
     <div className="support_inners">
       <h3>Manage Subscriptions</h3>
       <p>Learn how to manage your account subscription for the LambdaTest.</p>
     </div>
   </a>
-  <a href="/docs/service-accounts/">
+  <a href="/support/docs/service-accounts/">
     <div className="support_inners">
       <h3>Service Accounts</h3>
       <p>Learn how to Monitor and Report Test Execution at the user level.</p>
     </div>
   </a>
-  <a href="/docs/sub-organizations/">
+  <a href="/support/docs/sub-organizations/">
     <div className="support_inners">
       <h3>Sub Organizations</h3>
       <p>Learn how to distribute concurrency to different sub-organizations .</p>
     </div>
   </a>
-  <a href="/docs/support-access/">
+  <a href="/support/docs/support-access/">
     <div className="support_inners">
       <h3>Support Access</h3>
       <p>Learn how to take access to your LambdaTest account and log in on your behalf from the backend.</p>
     </div>
   </a>
-  <a href="/docs/team-management/">
+  <a href="/support/docs/team-management/">
     <div className="support_inners">
       <h3>Team Management</h3>
       <p>Learn how to invite your team members to your organizational LambdaTest Account.</p>
     </div>
   </a>
-  <a href="/docs/multi-factor-authentication/">
+  <a href="/support/docs/multi-factor-authentication/">
     <div className="support_inners">
       <h3>Multi Factor Authentication</h3>
       <p>Learn how to increase the account security by enabling Multi Factor Authentication.</p>
     </div>
   </a>
-  <a href="/docs/delete-lambdatest-account/">
+  <a href="/support/docs/delete-lambdatest-account/">
     <div className="support_inners">
       <h3>Deleting LambdaTest Account</h3>
       <p>This documentation will guide you through the steps to delete your LambdaTest account</p>
     </div>
   </a>
-  <a href="/docs/group-management/">
+  <a href="/support/docs/group-management/">
     <div className="support_inners">
       <h3>Group Management</h3>
       <p>Learn how to perform the test automation by dividing the concurrency among the groups.</p>
     </div>
   </a>
-  <a href="/docs/audit-logs/">
+  <a href="/support/docs/audit-logs/">
     <div className="support_inners">
       <h3>Audit Logs</h3>
       <p>Learn how to Audit your Logs as well as of your Organization Team Members.</p>
     </div>
   </a>
-  <a href="/docs/password-and-access-key-expiration-policy/">
+  <a href="/support/docs/password-and-access-key-expiration-policy/">
     <div className="support_inners">
       <h3>Password and Access Key Expiration Policy</h3>
       <p>Learn how to manage your and yours organization member Password and Access Key Expiration Policy.</p>
     </div>
   </a>
-  <a href="/docs/tunnel-security/">
+  <a href="/support/docs/tunnel-security/">
     <div className="support_inners">
       <h3>Tunnel Security</h3>
       <p>Learn how to manage your Tunnel Setup and Securities.</p>

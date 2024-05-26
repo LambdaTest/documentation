@@ -148,7 +148,7 @@ Kudos! Now, you can rapidly commit changes and validate them for UI/UX anomalies
       <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/docs/">Support</a>
+      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">AWS CodePipeline Integration With LambdaTest</span>

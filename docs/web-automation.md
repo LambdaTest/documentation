@@ -50,31 +50,31 @@ Seamlessly integrate with popular frameworks like **Selenium, Playwright**, and 
 Explore these detailed **Testing Frameworks** guides and boost your Web Automation Journey 🚀
 
 <div className="support_main">  
-  <a href="/docs/getting-started-with-lambdatest-automation/">
+  <a href="/support/docs/getting-started-with-lambdatest-automation/">
     <div className="support_inners">
       <h3>Selenium Testing</h3>
       <p>Learn how to start Selenium Automation Testing across multitude of desktop and mobile browsers.</p>
     </div>
   </a>
-  <a href="/docs/getting-started-with-cypress-testing/">
+  <a href="/support/docs/getting-started-with-cypress-testing/">
     <div className="support_inners">
       <h3>Cypress Testing</h3>
       <p>Run & analyze Cypress test scripts across 40+ browser versions on cloud.</p>
     </div>
   </a>
-  <a href="/docs/playwright-testing/">
+  <a href="/support/docs/playwright-testing/">
     <div className="support_inners">
       <h3>Playwright Testing</h3>
       <p>Conduct online Playwright Testing of your websites across 40+ browser versions.</p>
     </div>
   </a>
-  <a href="/docs/puppeteer-testing/">
+  <a href="/support/docs/puppeteer-testing/">
     <div className="support_inners">
       <h3>Puppeteer Testing</h3>
       <p>Test your Puppeteer scripts online across 40+ browser versions.</p>
     </div>
   </a>
-  <a href="/docs/k6-browser-testing/">
+  <a href="/support/docs/k6-browser-testing/">
     <div className="support_inners">
       <h3>K6 Browser Testing</h3>
       <p>Test your K6 scripts online across 40+ browser versions.</p>
