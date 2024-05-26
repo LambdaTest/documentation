@@ -57,7 +57,7 @@ In case if you have any dynamic elements that are not in the same position acros
 
 The following are the different options which are currently supported:
 
-| Key                       | Description                                                                                                               | Example                                                                                                                                                                                     |
+| Key                       | Description                                                                                                                                                                                                                                                                                              |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `screenshotName` (string) | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline    |     
 | `fullPage` (boolean) | Specify `true` if you want to take a Full Page Screenshot and `false` for viewport screenshots; `fullPage: true` is currently only supported for `Chrome` |       
@@ -190,8 +190,8 @@ await driver.executeScript("smartui.takeScreenshot", config);
 
 The following are the different options which are currently supported:
 
-| Key                       | Description                                                                                                               | Example                                                                                                                                                                                     |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- | 
+| Key | Description  |
+| ------------------------- | --------------------------------------- | 
 | `screenshotName` (string) | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline             | 
 | `ignoreDOM` (object)      | Specify a selector based on the HTML DOM ID, CSS class or CSS selector used by your webpage that should be excluded from the comparison | 
 | `selectDOM` (object)      | Specify a selector based on the HTML DOM ID, CSS class or CSS selector used by your webpage that should be included in the comparison |
@@ -276,7 +276,7 @@ await page.evaluate((_) => {},
 
 The following are the different options which are currently supported:
 
-| Key                       | Description                                                                                                               | Example                                                                                                                                                                                     |
+| Key                       | Description                                                                                                                                                                                                                                                                                                  |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `screenshotName` (string) | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline             |
 | `ignoreDOM` (object)      | Specify a selector based on the HTML DOM ID, CSS class or CSS selector used by your webpage that should be excluded from the comparison | 
