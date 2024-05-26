@@ -223,7 +223,7 @@ You can see the Smart UI dashboard to view the results. This will help you ident
 
 The following are the different options which are currently supported:
 
-| Key                       | Description                                                                                                               | Example                                                                                                                                                                                     |
+| Key                       | Description                                                                                                                                                                                                                                                                                                |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `t` (test controller)    | This object allows you to control the test execution and interact with the web page under test. |
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |

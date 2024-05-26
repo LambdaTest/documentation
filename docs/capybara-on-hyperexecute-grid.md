@@ -191,7 +191,7 @@ testSuiteTimeout: 90
 testSuiteStep: 90
 ```
 
-- The target platform is set to *win (i.e. ${matrix.os})* using the *runson* key
+- The target platform is set to *win (i.e. &#36;&lbrace;matrix.os&rbrace;)* using the *runson* key
 
 ```yaml
 runson: ${matrix.os}

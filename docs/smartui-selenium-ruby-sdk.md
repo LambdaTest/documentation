@@ -218,7 +218,7 @@ You can see the Smart UI dashboard to view the results. This will help you ident
 
 The following are the different options which are currently supported:
 
-| Key                       | Description                                                                                                               | Example                                                                                                                                                                                     |
+| Key                       | Description                                                                                                                                                                                                                                                                                                 |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `driver` (instance)    | The instance of the web driver used in your tests. |
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
