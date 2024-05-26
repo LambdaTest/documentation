@@ -49,19 +49,19 @@ With [smart features](/support/docs/key-features-of-hyperexecute/) such as auto-
 You can learn more about the HyperExecute Private Cloud by going through our documentation below. 
 
 <div className="support_main">  
-  <a href="/docs/hyperexecute-private-cloud-benefits/">
+  <a href="/support/docs/hyperexecute-private-cloud-benefits/">
     <div className="support_inners">
       <h3>Benefits of HyperExecute Private Cloud</h3>
       <p>Learn why HyperExecute Private Cloud is a must-have for your organization.</p>
     </div>
   </a>
-  <a href="/docs/hyperexecute-private-cloud-setup-with-azure/">
+  <a href="/support/docs/hyperexecute-private-cloud-setup-with-azure/">
     <div className="support_inners">
       <h3>Setup with Azure</h3>
       <p>Learn how to distribute concurrency to different sub-organizations .</p>
     </div>
   </a>
-  <a href="/docs/hyperexecute-private-cloud-setup-with-aws/">
+  <a href="/support/docs/hyperexecute-private-cloud-setup-with-aws/">
     <div className="support_inners">
       <h3>Setup with AWS</h3>
       <p>Learn how to take access to your LambdaTest account and log in on your behalf from the backend.</p>

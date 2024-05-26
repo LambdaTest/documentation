@@ -40,42 +40,42 @@ Analytics in LambdaTest allows the QA managers and executives to efficiently tra
 
 <div className="support_main">
 
-<a href="/docs/analytics-modules-automation-test-overview/">
+<a href="/support/docs/analytics-modules-automation-test-overview/">
   <div className="support_inners">
     <h3>Web Automation Widgets</h3>
     <p>Gain valuable insights into your web automation testing efforts with comprehensive analytics and metrics.</p>
   </div>
 </a>
 
-<a href="/docs/analytics-modules-automation-test-overview/">
+<a href="/support/docs/analytics-modules-automation-test-overview/">
   <div className="support_inners">
     <h3>App Automation Widgets</h3>
     <p>Unlock the power of analytics to optimize your mobile app testing process and improve app quality.</p>
   </div>
 </a>
 
-<a href="/docs/analytics-modules-hyperexecute/">
+<a href="/support/docs/analytics-modules-hyperexecute/">
   <div className="support_inners">
     <h3>HyperExecute Widgets</h3>
     <p>Leverage advanced analytics to streamline your HyperExecute testing pipeline and boost testing efficiency.</p>
   </div>
 </a>
 
-<a href="/docs/analytics-modules-manual-test-overview/">
+<a href="/support/docs/analytics-modules-manual-test-overview/">
   <div className="support_inners">
     <h3>Realtime Widgets &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
     <p>Get real-time insights into your testing activities and make data-driven decisions on the fly.</p>
   </div>
 </a>
 
-<a href="/docs/analytics-modules-manual-test-overview/">
+<a href="/support/docs/analytics-modules-manual-test-overview/">
   <div className="support_inners">
     <h3>Real-Device Widgets</h3>
     <p>Analyze your real device testing performance and identify optimization opportunities.</p>
   </div>
 </a>
 
-<a href="/docs/analytics-modules-smartui-analytics/">
+<a href="/support/docs/analytics-modules-smartui-analytics/">
   <div className="support_inners">
     <h3>SmartUI Widgets &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
     <p>Gain actionable insights into your SmartUI testing efforts and ensure exceptional user experiences.</p>

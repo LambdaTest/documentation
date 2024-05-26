@@ -42,31 +42,31 @@ slug: test-management/
 # Test Management
 
 <div className="support_main">  
-  <a href="/docs/issue-tracker/">
+  <a href="/support/docs/issue-tracker/">
     <div className="support_inners">
       <h3>Issue Tracker</h3>
       <p>Issue tracker helps you to instantly maintain and handle your bugs at one place.</p>
     </div>
   </a>
-  <a href="/docs/test-logs/">
+  <a href="/support/docs/test-logs/">
     <div className="support_inners">
       <h3>Test Logs</h3>
       <p>Check the logs of all cross browser testing performed by you on LambdaTest.</p>
     </div>
   </a>
-  <a href="/docs/lambda-exceptions/">
+  <a href="/support/docs/lambda-exceptions/">
     <div className="support_inners">
       <h3>Assertion Errors</h3>
       <p>Learn how to view assertion errors as exceptions and handle them better.</p>
     </div>
   </a>
-  <a href="/docs/filter-your-selenium-tests/">
+  <a href="/support/docs/filter-your-selenium-tests/">
     <div className="support_inners">
       <h3>Filter Selenium Tests</h3>
       <p>Learn how to use filter toolbar for each tab and how you can filter your tests on each of them.</p>
     </div>
   </a>
-  <a href="/docs/group-and-filter-your-test-builds-using-build-tags/">
+  <a href="/support/docs/group-and-filter-your-test-builds-using-build-tags/">
     <div className="support_inners">
       <h3>Group and Filter Tests</h3>
       <p>Learn how to group your test builds with Build tags.</p>

@@ -63,19 +63,19 @@ Here is a list of languages and frameworks that are supported by the LambdaTest 
       <img loading="lazy" src={require('../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon"/>
       <ul className="lt_framework_list">
         <li>
-          <a className="lt_primary" href="/docs/appium-java/">Java</a>
+          <a className="lt_primary" href="/support/docs/appium-java/">Java</a>
         </li>
         <li>
-          <a href="/docs/appium-java-junit/">JUnit</a>
+          <a href="/support/docs/appium-java-junit/">JUnit</a>
         </li>
         <li>
-          <a href="/docs/appium-java-jbehave/">JBehave</a>
+          <a href="/support/docs/appium-java-jbehave/">JBehave</a>
         </li>
         <li>
-          <a href="/docs/appium-java-cucumber/">Cucumber</a>
+          <a href="/support/docs/appium-java-cucumber/">Cucumber</a>
         </li>
         <li>
-          <a href="/docs/appium-java-testng/">TestNG</a>
+          <a href="/support/docs/appium-java-testng/">TestNG</a>
         </li>
       </ul>
     </div>
@@ -83,13 +83,13 @@ Here is a list of languages and frameworks that are supported by the LambdaTest 
        <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="Javascript" width="181" height="200" className="language-icon"/>
       <ul className="lt_framework_list">
         <li>
-          <a className="lt_primary" href="/docs/appium-nodejs/">JavaScript</a>
+          <a className="lt_primary" href="/support/docs/appium-nodejs/">JavaScript</a>
         </li>
         <li>
-          <a href="/docs/appium-nodejs-webdriverio/">WebDriverIO</a>
+          <a href="/support/docs/appium-nodejs-webdriverio/">WebDriverIO</a>
         </li>
         <li>
-          <a href="/docs/appium-nodejs-mocha/">Mocha</a>
+          <a href="/support/docs/appium-nodejs-mocha/">Mocha</a>
         </li>
       </ul>
     </div>
@@ -97,19 +97,19 @@ Here is a list of languages and frameworks that are supported by the LambdaTest 
       <img loading="lazy" src={require('../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon"/>
       <ul className="lt_framework_list">
       <li>
-          <a className="lt_primary" href="/docs/appium-python/">Python</a>
+          <a className="lt_primary" href="/support/docs/appium-python/">Python</a>
         </li>
         <li>
-          <a href="/docs/appium-python-behave/">Behave</a>
+          <a href="/support/docs/appium-python-behave/">Behave</a>
         </li>
         <li>
-          <a href="/docs/appium-python-robot/">Robot</a>
+          <a href="/support/docs/appium-python-robot/">Robot</a>
         </li>
         <li>
-          <a href="/docs/appium-python-gauge/">Gauge</a>
+          <a href="/support/docs/appium-python-gauge/">Gauge</a>
         </li>
         <li>
-          <a href="/docs/appium-python-pytest/">PyTest</a>
+          <a href="/support/docs/appium-python-pytest/">PyTest</a>
         </li>
       </ul>
     </div>
@@ -117,13 +117,13 @@ Here is a list of languages and frameworks that are supported by the LambdaTest 
        <img loading="lazy" src={require('../assets/images/getting-started/ruby-icon.webp').default} alt="Ruby" width="200" height="200" className="language-icon"/>
       <ul className="lt_framework_list">
         <li>
-          <a className="lt_primary" href="/docs/appium-ruby/">Ruby</a>
+          <a className="lt_primary" href="/support/docs/appium-ruby/">Ruby</a>
         </li>
         <li>
-          <a href="/docs/appium-ruby-cucumber/">Cucumber</a>
+          <a href="/support/docs/appium-ruby-cucumber/">Cucumber</a>
         </li>
         <li>
-          <a href="/docs/appium-ruby-rspec/">RSpec</a>
+          <a href="/support/docs/appium-ruby-rspec/">RSpec</a>
         </li>
       </ul>
     </div>
@@ -131,10 +131,10 @@ Here is a list of languages and frameworks that are supported by the LambdaTest 
       <img loading="lazy" src={require('../assets/images/getting-started/php-icon.webp').default} alt="PHP" width="2500" height="1250" className="language-icon"/>
       <ul className="lt_framework_list">
         <li>
-          <a className="lt_primary" href="/docs/appium-php/">PHP</a>
+          <a className="lt_primary" href="/support/docs/appium-php/">PHP</a>
         </li>
         <li>
-          <a href="/docs/appium-php-behat/">Behat</a>
+          <a href="/support/docs/appium-php-behat/">Behat</a>
         </li>
         </ul>
     </div>
@@ -142,10 +142,10 @@ Here is a list of languages and frameworks that are supported by the LambdaTest 
      <img loading="lazy" src={require('../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon"/>
       <ul className="lt_framework_list">
         <li>
-          <a className="lt_primary" href="/docs/appium-csharp/">C#</a>
+          <a className="lt_primary" href="/support/docs/appium-csharp/">C#</a>
         </li>
         <li>
-          <a href="/docs/appium-csharp-nunit//">NUnit</a>
+          <a href="/support/docs/appium-csharp-nunit//">NUnit</a>
         </li>
       </ul>
     </div>

@@ -60,25 +60,25 @@ Accessibility testing ensures that your product is usable by people with disabil
 Now, you need to select the type of scan as per your requirement:
 
 <div className="support_main">  
-  <a href="/docs/accessibility-testing-full-page-scanner">
+  <a href="/support/docs/accessibility-testing-full-page-scanner">
     <div className="support_inners">
       <h3>Full Page Scan</h3>
       <p>Get a comprehensive analysis of entire web page for accessibility compliance & best practices..</p>
     </div>
   </a>
-  <a href="/docs/accessibility-testing-partial-page-scanner">
+  <a href="/support/docs/accessibility-testing-partial-page-scanner">
     <div className="support_inners">
       <h3>Partial Page Scan</h3>
       <p>Get the accessibility check for selected sections or elements within a web page.</p>
     </div>
   </a>
-  <a href="/docs/accessibility-testing-multi-page-scanner">
+  <a href="/support/docs/accessibility-testing-multi-page-scanner">
     <div className="support_inners">
       <h3>Multi Page Scan</h3>
       <p>Learn how to assess accessibility across various pages for site-wide compliance.</p>
     </div>
   </a>
-  <a href="/docs/accessibility-testing-workflow-scanner">
+  <a href="/support/docs/accessibility-testing-workflow-scanner">
     <div className="support_inners">
       <h3>Workflow Scan</h3>
       <p>Workflow Scan sequentially ensure accessibility standards across multiple pages or flows.</p>
