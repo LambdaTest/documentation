@@ -20,24 +20,26 @@ module.exports = {
       src: 'https://www.lambdatest.com/resources/js/lambda_gtm.js',
       defer: true,
     },
-    // {
-    //   src: 'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js',
-    //   defer: true,
-    // }
   ],
   themes: ['docusaurus-theme-search-typesense'],
-
+  plugins: [require.resolve("docusaurus-plugin-image-zoom")],
   themeConfig: {
     // docs: {
     //   sidebar: {
     //     hideable: true,
     //   },
     // },
+    zoom: {
+      selector: 'img:not(.no-zoom)',
+      config: {
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)'
+        }
+      }
+    },
     typesense: {
-      // Replace this with the name of your index/collection.
-      // It should match the "index_name" entry in the scraper's "config.json" file.
       typesenseCollectionName: 'lambdatest',
-
       typesenseServerConfig: {
         nodes: [
           {
@@ -48,28 +50,13 @@ module.exports = {
         ],
         apiKey: process.env.API,
       },
-
-      // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
       typesenseSearchParameters: {},
-
-      // Optional
       contextualSearch: true,
     },
-    
+
     prism: {
-        additionalLanguages: ['powershell','java','csharp','php','ruby','robotframework'],
+      additionalLanguages: ['powershell', 'java', 'csharp', 'php', 'ruby', 'robotframework'],
     },
-    // algolia: {
-    //   apiKey: '21e5be14ef037223a329241ae6ac5678',
-    //   indexName: 'lambdatest',
-    //   appId: 'LTX5ENOXAD',
-    //   // Optional: see doc section bellow
-    //   contextualSearch: false,
-    //   // Optional: Algolia search parameters
-    //   searchParameters: {},
-    //   //... other Algolia params
-    // },
-    
     navbar: {
       title: null,
       hideOnScroll: true,
@@ -78,9 +65,9 @@ module.exports = {
         src: 'img/logo.svg',
         srcDark: 'img/logo_dark.svg',
         href: 'https://www.lambdatest.com',
-        target:'_self',
-        width:'147',
-        height:'26'
+        target: '_self',
+        width: '147',
+        height: '26'
       },
       items: [
         {
@@ -124,11 +111,8 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          showLastUpdateTime: true,    
-          breadcrumbs: false,      
-          // Please change this to your repo.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/edit/master/website/',
+          showLastUpdateTime: true,
+          breadcrumbs: false,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
