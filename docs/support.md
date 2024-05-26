@@ -49,8 +49,8 @@ import NewTag from '../src/component/newTag';
 <p>Ensure your web-apps work seamlessly on <br /> every desktop and mobile browsers</p>
 </div>
 <div className="Doc_intro_cta_image">
-<img  loading="eager" src={require('../assets/images/support/home_light.png').default} alt="Image" width="701" height="576" className="home_light_cta" role="presentation"/>
-<img  loading="eager" src={require('../assets/images/support/home_dark.png').default} alt="Image" width="701" height="576" className="home_dark_cta" role="presentation"/>
+<img  loading="eager" src={require('../assets/images/support/home_light.png').default} alt="Image" width="701" height="576" className="home_light_cta no-zoom" role="presentation"/>
+<img  loading="eager" src={require('../assets/images/support/home_dark.png').default} alt="Image" width="701" height="576" className="home_dark_cta no-zoom" role="presentation"/>
 </div>
 </div>
 
