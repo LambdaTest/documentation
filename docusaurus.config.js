@@ -24,11 +24,6 @@ module.exports = {
   themes: ['docusaurus-theme-search-typesense'],
   plugins: [require.resolve("docusaurus-plugin-image-zoom")],
   themeConfig: {
-    // docs: {
-    //   sidebar: {
-    //     hideable: true,
-    //   },
-    // },
     zoom: {
       selector: 'img:not(.no-zoom)',
       config: {
