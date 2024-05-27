@@ -118,7 +118,7 @@ You can see the pipeline running.
 
 <img loading="lazy" src={require('../assets/images/codefresh-integration/lt_dash.png').default} alt="opt for Codeship Basic" width="798" height="415" className="doc_img"/>
 
-Similary you can run test scripts based on any framework using this above described method.
+Similarly you can run test scripts based on any framework using this above described method.
 Here is the selenium test script for your reference.
 
 ```
@@ -132,7 +132,7 @@ username = os.getenv("LT_USERNAME")  # Replace the username
 access_key = os.getenv("LT_ACCESS_KEY")  # Replace the access key
 
 
-# paste your capibility options below
+# paste your capability options below
 options = ChromeOptions()
 options.browser_version = "latest"
 options.platform_name = "win10"
