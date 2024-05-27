@@ -75,7 +75,7 @@ accessibility.wcagVersion: 'wcag21a'
 
 ### Review Issues
 
-There are certain issues that are required reviews by QA or Developers to mark them as issues and clarifies that it needs to be resolved. Click on the **Review** button in your dashbaord to initiate the process.
+There are certain issues that are required reviews by QA or Developers to mark them as issues and clarifies that it needs to be resolved. Click on the **Review** button in your dashboard to initiate the process.
 
 To enable the needs review checks in your automated tests, set the capability `needsReview: true` in your configuration file.
 
