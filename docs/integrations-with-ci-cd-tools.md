@@ -82,6 +82,10 @@ LambdaTest offers integrations with numerous CI/CD tools to help you fast-track 
 </div>
 
 <div className="download_btn mb-10">
+<a href="https://www.lambdatest.com/support/docs/codefresh-ci-integration-with-lambdatest/">Codefresh CI Pipelines Integration With LambdaTest</a>
+</div>
+
+<div className="download_btn mb-10">
 <a href="https://www.lambdatest.com/support/docs/teamcity-integration-with-lambdatest/">TeamCity Integration With LambdaTest</a>
 </div>
 
