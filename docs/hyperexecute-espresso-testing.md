@@ -254,6 +254,10 @@ jobLabel: ['HYP', 'Espresso', 'Manual Sharding']
 </TabItem>
 </Tabs>
 
+:::caution note
+The uploadArtefact flag is currently not available for Espresso framework tests.
+:::
+
 ## Step 6: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.

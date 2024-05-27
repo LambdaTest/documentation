@@ -582,12 +582,15 @@ mergeArtifacts: true
 ***
 ## `uploadArtefacts`
 It uploads the artifacts generated from running the tests, these artifacts are uploaded, preserved and can be downloaded once the job ends. 
+
 ```bash
 uploadArtefacts:
-  # Will upload your reports from target/site/** to HyperExecute as FinalReport
+
+# Will upload your reports from target/site/** to HyperExecute as FinalReport
   - name: FinalReport 
     path:
     - target/site/**
+  
   # Will upload your Surefire reports from target/surefire-reports/**to HyperExecute as Surefire Report
   - name: Surefire Report
      path:
@@ -595,6 +598,11 @@ uploadArtefacts:
 ```
 
 > You can use the flag `--download-artifacts-zip` to download the single zip file for all the artifacts that are generated.
+
+:::caution note
+The uploadArtefact flag is not currently supported for tests running with the **Espresso** or **XCUI** frameworks. Please be aware of this limitation when configuring your tests.
+:::
+
 
 ***
 
