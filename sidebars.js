@@ -2371,6 +2371,7 @@ module.exports = {
           "puppeteer-visual-regression",
           "smartui-k6-setup",
           "appium-visual-regression",
+          "espresso-visual-regression",
           "html-dom-smartui-options",
           "smart-ui-build-options",
           "test-settings-options"

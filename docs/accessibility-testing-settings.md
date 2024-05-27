@@ -59,7 +59,7 @@ You can select any WCAG Version to run compliance tests with a specific version.
 
 ### Review Issues
 
-There are certain issues that are required reviews by QA or Developers to mark them as issues and clarifies that it needs to be resolved.
+There are certain issues that are required reviews by QA or Developers to mark them as issues and clarifies that it needs to be resolved. Click on the **Review** button in your dashboard to initiate the process.
 
 - Click on the **Review** button.
 
