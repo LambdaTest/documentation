@@ -59,10 +59,9 @@ In this documentation, you will learn step-by-step how to perform regression tes
 - Your LambdaTest [Username and Access key](https://accounts.lambdatest.com/security).
 - Access to an **Android** app (.apk) and an **Espresso Test** app (.apk file).
 - Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
-- Access your Hub for your espresso **remote connection** instance at `@mobile-hub.lambdatest.com/wd/hub`.
 
 :::tip
-If you do not have any **Android** app (.apk) and an **Espresso Test** app (.apk) file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) and a sample :link: [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android_expressotest.apk).
+If you do not have any **Android** app (.apk) and an **Android Test** app (.apk) file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) and a sample :link: [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android_expressotest.apk).
 :::
 
 ## Step 1: Create a SmartUI Project
@@ -72,7 +71,7 @@ To create a SmartUI Project, follow these steps:
 
 1. Go to [Projects page](https://smartui.lambdatest.com/)
 2. Click on the `new project` button
-3. Select the platform as <b>Real Device `BETA`</b> for executing your `Espresso` tests.
+3. Select the platform as <b>Real Device </b> for executing your `Espresso` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
@@ -126,7 +125,7 @@ public class BrowserTest {
   
   @Test
   public void checkBrowserPageIsOpened() throws InterruptedException {
-    String response = smartUIApp.screenshot("test-espresso-name123");
+    String response = smartUIApp.screenshot("LT-Espresso-Test");
   }
 }
 ```
@@ -229,28 +228,24 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' 
         "Galaxy.*"
     ],
     "smartUI.project": "Espresso-SmartUI-Project", 
-    "smartUI.cropNavigationBar" : true,
-    "smartUI.cropStatusBar" : true,
+    "smartUI.build": "Espresso-SmartUI-Build",
+    "smartUI.cropNavigationBar" : true, // Optional (By default false)
+    "smartUI.cropStatusBar" : true, // Optional (By default true)
     "queueTimeout": 300,
     "IdleTimeout": 30,
     "deviceLog": true,
     "network": false,
-    "visual": true,  //mandatory to capture screenshots
+    "visual": true,
     "build": "Proverbial-Espresso-Test",
     "singleRunnerInvocation": false
 }'
 ```
-:::caution Important
-
-It is important that the `visual:true` is set your capabilities configuration for capturing the screenshots to SmartUI - Visual Regression tests and add into the build for comparison. If this capability is not added then the build status will be shown as `Error`. 
-
-:::
 
 > You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
 
 ## Smart Crop With SmartUI
 
-The all-new **Real Device mobile notification status bar crop** feature in SmartUI allows you to take your visual regression testing workflows to the next level. With Smart Crop, you can crop the status bar from screenshots, enabling them to focus solely on the core UI elements during visual comparisons.
+The all-new **Real Device mobile notification status bar and navigation bar crop** feature in SmartUI allows you to take your visual regression testing workflows to the next level. With Smart Crop, you can crop the status bar and navigation bar or footer from screenshots, enabling them to focus solely on the core UI elements during visual comparisons.
 
 By leveraging machine learning algorithms, it accurately detects and crops the status bar from screenshots. With precise image processing techniques, SmartUI precisely identifies the location of status bar elements. By excluding it from visual comparisons, the focus is solely on critical UI elements.  
 

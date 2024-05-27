@@ -65,7 +65,7 @@ To create a SmartUI Project, follow these steps:
 
 1. Go to [Projects page](https://smartui.lambdatest.com/)
 2. Click on the `new project` button
-3. Select the platform as <b>Real Device `BETA`</b> for executing your `Appium` tests.
+3. Select the platform as <b>Real Device </b> for executing your `Appium` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
@@ -162,6 +162,8 @@ let capabilities = {
   "smartUI.project": "<Your Project Name>", // Replace the name of project with the new project name (Mandatory)
   "smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name (Optional)
   "smartUI.baseline": false, // Enable if you want to update to a new baseline build (Optional)
+  "smartUI.cropNavigationBar" : true, // Optional (By default false)
+  "smartUI.cropStatusBar" : true, // Optional (By default true)
   //highlight-end
 };
 
@@ -207,19 +209,17 @@ npm i && node your_test_script.js
 
 ## **Smart Crop With SmartUI**
 
----
+The all-new **Real Device mobile notification status bar and navigation bar crop** feature in SmartUI allows you to take your visual regression testing workflows to the next level. With Smart Crop, you can crop the status bar and navigation bar or footer from screenshots, enabling them to focus solely on the core UI elements during visual comparisons.
 
-The all-new **Real Device mobile notification status bar crop** feature in SmartUI allows you to take your visual regression testing workflows to the next level. With Smart Crop, you can crop the status bar from screenshots, enabling them to focus solely on the core UI elements during visual comparisons.
+By leveraging machine learning algorithms, it accurately detects and crops the status bar from screenshots. With precise image processing techniques, SmartUI precisely identifies the location of status bar elements. By excluding it from visual comparisons, the focus is solely on critical UI elements. 
 
-By leveraging machine learning algorithms, it accurately detects and crops the status bar from screenshots. With precise image processing techniques, SmartUI precisely identifies the location of status bar elements. By excluding it from visual comparisons, the focus is solely on critical UI elements.  
-
-**Original Screenshot:**
+### Original Screenshot:
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/screenshot.webp').default} alt="Profile" width="1360" height="603" className="doc_img"/>
 
-**Cropped Screenshot:**
+### Cropped Screenshot
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_screenshot.webp').default} alt="Profile" width="1360" height="603" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt="Profile" width="1360" height="603" className="doc_img"/>
 
 ## **Running Tests on Other Languages and Frameworks**
 
