@@ -181,6 +181,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/accessibility-testing/"><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/accessibility-testing-run-quick-scan/"><p className="p_home_inners">Run Your Quick Scan</p></a>
         <a href="/support/docs/accessibility-testing-workflow-scanner/"><p className="p_home_inners">Scanning Alternatives</p></a>
+        <a href="/support/docs/accessibility-automation/"><p className="p_home_inners">Accessibility Automation</p></a>
       </div>
     </div>
     <div className="home_inners_box">
@@ -208,7 +209,7 @@ import NewTag from '../src/component/newTag';
 <!-- start of fourth section -->
     <div className="home_inners_box">
        <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/testing-locally-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Test Manager</h2>
-      <div className="home_inners">
+      <div className="home_inners"> 
         <a href="/support/docs/create-projects/"><p className="p_home_inners">Create Projects</p></a>
         <a href="/support/docs/test-case-creation/"><p className="p_home_inners">Test Case Creation</p></a>
         <a href="/support/docs/test-plan-creation/"><p className="p_home_inners">Test Plan Creation</p></a>
