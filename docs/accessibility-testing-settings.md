@@ -41,27 +41,47 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-LambdaTest Accessibility DevTools offer a comprehensive set of settings to customize your testing experience and tailor it to your specific needs.
 
-- Click on your **profile icon** >> **Settings** button.
+LambdaTest Accessibility DevTools offers a set of settings to configure your Accessibility Tests to ensure comprehensive and effective assessments. Key configuration options include enabling accessibility checks, selecting the appropriate **WCAG version**, and specifying to include **Best Practice** and **Needs Review**.
+
+> Click on your **profile icon** >> **Settings** button.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/settings/1.png').default} alt="automation-dashboard" className="doc_img"/>
 
 ## Scan Settings
 
+To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
+
+```java
+capabilities: [{
+  accessibility : true,                 // Enable accessibility testing
+  accessibility.wcagVersion: 'wcag21a', // Specify WCAG version (e.g., WCAG 2.1 Level A)
+  accessibility.bestPractice: false,    // Exclude best practice issues from results
+  accessibility.needsReview: true       // Include issues that need review
+}]
+```
+
 ### WCAG Version
 
-You can select any WCAG Version to run compliance tests with a specific version.
+- It defines which **Web Content Accessibility Guidelines (WCAG)** version your tests should adhere to. You can select any WCAG Version to run compliance tests with a specific version. Typically, WCAG 2.0, WCAG 2.1 AA, or WCAG 2.1 AAA are used in general practice, but the recommended version is **WCAG 2.1 AA**.
 
-> The recommended version is **WCAG 2.1 AA**.
+- To set the wcag version in your automated tests, set the capability `wcagVersion: <YOUR_WCAG_VERSION>` in your configuration file.
+
+```bash
+accessibility.wcagVersion: 'wcag21a'
+```
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/settings/4.png').default} alt="automation-dashboard" className="doc_img"/>
 
 ### Review Issues
 
-There are certain issues that are required reviews by QA or Developers to mark them as issues and clarifies that it needs to be resolved.
+There are certain issues that are required reviews by QA or Developers to mark them as issues and clarifies that it needs to be resolved. Click on the **Review** button in your dashbaord to initiate the process.
 
-- Click on the **Review** button.
+To enable the needs review checks in your automated tests, set the capability `needsReview: true` in your configuration file.
+
+```bash
+needsReview: true
+```
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/settings/5.png').default} alt="automation-dashboard" width="1346" height="647" className="doc_img"/>
 
@@ -75,6 +95,12 @@ There are certain issues that are required reviews by QA or Developers to mark t
 ### Best Practices
 
 **Best practices** are those issues that may not violate Accessibility guidelines but fixing them will enhance your user experience.
+
+- To enable the best practices checks in your automated tests, set the capability `bestPractice: true` in your configuration file.
+
+```bash
+bestPractice: true
+```
 
 ## Other Settings
 
