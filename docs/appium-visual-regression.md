@@ -26,11 +26,33 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import CodeBlock from '@theme/CodeBlock';
 import NewTag from '../src/component/newTag';
 
----
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lambdatest.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://www.lambdatest.com/support/docs/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SmartUI-Hooks",
+          "item": "https://www.lambdatest.com/support/docs/appium-visual-regression/"
+        }]
+      })
+    }}
+></script>
 
 Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
-### Pre-requisites for SmartUI with App Automation
+## Prerequisites for SmartUI with App Automation
 
 - Basic understanding of [appium](https://appium.io/docs/en/2.0/intro/) and remote [WebDriver](https://www.selenium.dev/documentation/webdriver/drivers/remote_webdriver/) is required.
 - Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
@@ -58,7 +80,7 @@ set LT_ACCESS_KEY="YOUR ACCESS KEY"
 
 The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
 
-### **Step 1:** Create a SmartUI Project
+## Step 1: Create a SmartUI Project
 
 The first step is to create a project with the application in which we will combine all your **builds** run on the project.
 To create a SmartUI Project, follow these steps:
@@ -71,11 +93,12 @@ To create a SmartUI Project, follow these steps:
 
 <!-- <img loading="lazy" src={require('../assets/images/uploads/smart-ui-1.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
 
-### **Step 2:** Upload your application
+## Step 2: Upload your application
 
 Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
-**Using App File from System:**
+<Tabs className="docs__val" groupId="language">
+<TabItem value="App File" label="App File" default>
 
  <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -84,7 +107,8 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 </CodeBlock>
 </div>
 
-**Using App URL:**
+</TabItem>
+<TabItem value="App URL" label="App URL" default>
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -93,6 +117,9 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 </CodeBlock>
 </div>
 
+</TabItem>
+</Tabs>
+
 :::tip
 
 - If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
@@ -100,7 +127,7 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
 :::
 
-### **Step 3:** Clone the sample project
+## Step 3: Clone the sample project
 
 Clone the LambdaTest’s :link: [LT-appium-nodejs](https://github.com/LambdaTest/LT-appium-nodejs) repository and navigate to the code directory as shown below:
 
@@ -109,7 +136,7 @@ git clone https://github.com/LambdaTest/LT-appium-nodejs
 cd LT-appium-nodejs
 ```
 
-### **Step 4:** Set up your authentication
+## Step 4: Set up your authentication
 
 Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set LambdaTest `Username` and `Access Key` in environment variables with following commands.
 
@@ -137,7 +164,7 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </TabItem>
 </Tabs>
 
-### **Step 5:** Configure your test with Appium Desired Capabilities
+## Step 5: Configure your test with Appium Desired Capabilities
 
 :::tip Explore more capabilities
 
@@ -162,8 +189,8 @@ let capabilities = {
   "smartUI.project": "<Your Project Name>", // Replace the name of project with the new project name (Mandatory)
   "smartUI.build": "<Your Build Name>", // Replace the name of Build with the new Build name (Optional)
   "smartUI.baseline": false, // Enable if you want to update to a new baseline build (Optional)
-  "smartUI.cropNavigationBar" : true, // Optional (By default false)
   "smartUI.cropStatusBar" : true, // Optional (By default true)
+  "smartUI.cropFooter" : true, // Optional (By default false)
   //highlight-end
 };
 
@@ -207,11 +234,11 @@ npm i && node your_test_script.js
 
 - You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
 
-## **Smart Crop With SmartUI**
+## Smart Crop With SmartUI
 
 The all-new **Real Device mobile notification status bar and navigation bar crop** feature in SmartUI allows you to take your visual regression testing workflows to the next level. With Smart Crop, you can crop the status bar and navigation bar or footer from screenshots, enabling them to focus solely on the core UI elements during visual comparisons.
 
-By leveraging machine learning algorithms, it accurately detects and crops the status bar from screenshots. With precise image processing techniques, SmartUI precisely identifies the location of status bar elements. By excluding it from visual comparisons, the focus is solely on critical UI elements. 
+By leveraging machine learning algorithms, it accurately detects and crops the status bar and navigation bar from screenshots. With precise image processing techniques, SmartUI precisely identifies the location of status bar elements. By excluding it from visual comparisons, the focus is solely on critical UI elements. 
 
 ### Original Screenshot:
 
@@ -221,7 +248,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt="Profile" width="1360" height="603" className="doc_img"/>
 
-## **Running Tests on Other Languages and Frameworks**
+## Running Tests on Other Languages and Frameworks
 
 ---
 
@@ -229,7 +256,7 @@ In this module we discussed about running smart visual tests on **NodeJS**, here
 
 In a similar way, we can run visual tests for other languages and frameworks using their corresponding script executing commands. To understand better, we provided the commands for some of the popular languages and frameworks:
 
-#### For taking viewport screenshot
+### For taking viewport screenshot
 
 This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.
 
@@ -272,7 +299,7 @@ driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 </TabItem>
 </Tabs>
 
-#### For capturing full page screenshot in Native Apps <NewTag value="BETA" bgColor="#ffec02" color="#000" />
+### For capturing full page screenshot in Native Apps <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
 You can capture the full page screenshot for apps which have a scrolling functionality on their application user interface for your **Appium** functional testing.
 
