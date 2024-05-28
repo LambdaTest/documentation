@@ -116,13 +116,13 @@ Other LambdaTest products will be added soon with Insights support. For any requ
       <p>Get insights for `describe()` block level for your test frameworks in HyperExecute. Monitor the quality metrics at each test case.</p>
     </div>
   </a>
-    <a href="/docs/analytics-allure-api-widgets/">
+    <a href="/support/docs/analytics-allure-api-widgets/">
     <div className="support_inners">
       <h3>API Test Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
       <p>Get API test time-series insights using Allure report integration with your test suite and run it on HyperExecute.</p>
     </div>
   </a>
-  <a href="/docs/analytics-sub-organization-widgets/">
+  <a href="/support/docs/analytics-sub-organization-widgets/">
     <div className="support_inners">
       <h3>Sub Organization Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
       <p>Monitor and allocate the right resources required for your organizations with advanced insights.</p>
