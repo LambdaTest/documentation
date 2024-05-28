@@ -302,14 +302,14 @@ The system intelligently determines the distribution of tests across devices, em
 :::tip
 
 - **When Shards are added :**
-   - If you are using the `deviceSelectorStrategy: all`,then in that case all the specified shards will be executed on every device available.<br/>
+   - If you are using the `deviceSelectionStrategy: all`,then in that case all the specified shards will be executed on every device available.<br/>
 
-   - If you are using the `deviceSelectorStrategy: any`, then in that case all the specified shards will be executed on just one device from the provided list.<br/>
+   - If you are using the `deviceSelectionStrategy: any`, then in that case all the specified shards will be executed on just one device from the provided list.<br/>
 
 - **When Shards are not added :**
-   - If you are using the `deviceSelectorStrategy: all`, then in that case the tests will be executed on all mentioned devices in `.yaml` based on the concurrency.  <br/>
+   - If you are using the `deviceSelectionStrategy: all`, then in that case the tests will be executed on all mentioned devices in `.yaml` based on the concurrency.  <br/>
 
-   - If you are using the `deviceSelectorStrategy: any`, then in that case all the specified tests will be executed on each device from the provided list, considering the concurrency setting. <br/>
+   - If you are using the `deviceSelectionStrategy: any`, then in that case all the specified tests will be executed on each device from the provided list, considering the concurrency setting. <br/>
 :::
 
 ## Conclusion
