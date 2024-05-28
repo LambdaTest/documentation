@@ -1353,7 +1353,7 @@ module.exports = {
       "app-center-integration",
       "app-center-automation",
       "siesta-integration",
-      "testcomplete-integration",
+      // "testcomplete-integration",
       "testrigor-integration",
       "localstack-integration-with-lambdatest",
       "genrocket-integration",
