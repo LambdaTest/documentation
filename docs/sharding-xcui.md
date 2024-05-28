@@ -213,21 +213,21 @@ framework:
 
 :::tip When shards are added
 
-If you are using the `deviceSelectorStrategy: all`, then in that case all the mentioned shards will be executed on all the devices.<br/>
+If you are using the `deviceSelectionStrategy: all`, then in that case all the mentioned shards will be executed on all the devices.<br/>
 **For example:** There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on 2 devices (2 Shards * 2 Devices).
 
-If you are using the `deviceSelectorStrategy: any`, then in that case all the mentioned shards will be executed on any one device from the list provided.<br/>
+If you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned shards will be executed on any one device from the list provided.<br/>
 **For example:** There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on any device (2 shards * any device mentioned).
 
 :::
 
 :::caution When shards aren't added
 
-If you are using the `deviceSelectorStrategy: all`, then in that case all the tests will be executed on all the devices based on the concurrency. <br/>
+If you are using the `deviceSelectionStrategy: all`, then in that case all the tests will be executed on all the devices based on the concurrency. <br/>
 **For example:** There are 6 tests and 10 devices mentioned, then the 6 tests will be auto distributed on the devices based on the max concurrency.
 
 
-If you are using the `deviceSelectorStrategy: any`, then in that case all the mentioned tests will be executed on any one device from the list provided. <br/>
+If you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned tests will be executed on any one device from the list provided. <br/>
 **For example:** There are 6 tests and 10 devices mentioned, then the 6 tests will be executed on any one device.
 
 :::
