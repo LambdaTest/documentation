@@ -230,11 +230,11 @@ framework:
 
 :::tip When shards are added
 
-If you are using the `deviceSelectorStrategy: all`,then in that case all the specified shards will be executed on every device available.<br/>
+If you are using the `deviceSelectionStrategy: all`,then in that case all the specified shards will be executed on every device available.<br/>
 **For example:** If there are 3 shards, 2 devices in list (d1, d2) and test suites contains total 10 test cases.
 Then, d1 has 3 shards, i.e., total 3 devices of d1 configuration will be used. 10 test cases distributed among these 3 shards and similarly d2 also has 3 shards, i.e., total 3 devices of d2 configuration will be used. 10 test cases will be distributed among these 3 shards.
 
-If you are using the `deviceSelectorStrategy: any`, then in that case all the mentioned shards will be executed on just one device from the provided list.<br/>
+If you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned shards will be executed on just one device from the provided list.<br/>
 **For example:** If there are 2 shards mentioned in `.yaml`and 3 devices mentioned, the system will create 2 shards. These shards might use any 2 devices from the given 3 configurations. It's also possible that the same device configuration could be used for both shards. In this setup, test cases will be distributed between these shards.
 :::
 
@@ -281,11 +281,11 @@ framework:
 
 :::tip When shards aren't added
 
-If you are using the `deviceSelectorStrategy: all`, then in that case the tests will be executed on all mentioned devices in `.yaml` based on the concurrency.  <br/>
+If you are using the `deviceSelectionStrategy: all`, then in that case the tests will be executed on all mentioned devices in `.yaml` based on the concurrency.  <br/>
 **For example:** If the concurrency is 3, 2 devices in list (d1, d2) and test suites contains total 10 test cases.
 Then, d1 has 3 shards, i.e., total 3 devices of d1 configuration will be used. 10 test cases distributed among these 3 shards and similarly d2 also has 3 shards, i.e., total 3 devices of d2 configuration will be used. 10 test cases will be distributed among these 3 shards.
 
-If you are using the `deviceSelectorStrategy: any`, then in that case all the specified tests will be executed on each device from the provided list, considering the concurrency setting. <br/>
+If you are using the `deviceSelectionStrategy: any`, then in that case all the specified tests will be executed on each device from the provided list, considering the concurrency setting. <br/>
 **For example:** If the concurrency is set to 2 and 3 devices mentioned, the system will create 2 shards. These shards might use any 2 devices from the given 3 configurations. It's also possible that the same device configuration could be used for both shards. In this setup, test cases will be distributed between these shards.
 :::
 
