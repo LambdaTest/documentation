@@ -1433,27 +1433,7 @@ module.exports = {
 
       },
 
-      {
-        type: "category",
-        collapsed: true,
-        label: "Accessibility Automation",
-        link: {
-          type: "doc",
-          id: "accessibility-automation"
-        },
-        items: [
-          {
-            type: "doc",
-            label: "Accessibility Automation Test",
-            id: "accessibility-automation-test"
-          },
-          {
-            type: "doc",
-            label: "Configure Settings",
-            id: "accessibility-automation-settings"
-          },
-        ]
-      },
+     
       {
         type: "category",
         collapsed: true,
