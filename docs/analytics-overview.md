@@ -37,6 +37,14 @@ slug: analytics-overview/
 import NewTag from '../src/component/newTag';
 
 
+:::note Explore AI Dashboard CoPilot
+
+We have recently launched an AI Dashboard CoPilot <NewTag value="BETA" bgColor="#ffec02" color="#000" /> feature that provides intelligent recommendations, insights, and predictions tailored to your specific data.
+
+To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analytics-dashboard-copilot/) documentation.
+
+:::
+
 <img loading="lazy" src={require('../assets/images/analytics/Demo-Dashboard-with-Widget.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ## What is Insights?
@@ -77,14 +85,6 @@ Other LambdaTest products will be added soon with Insights support. For any requ
 
 ## Insights Modules
 
-:::note Explore AI Dashboard CoPilot
-
-We have recently launched an AI Dashboard CoPilot <NewTag value="BETA" bgColor="#ffec02" color="#000" /> feature that provides intelligent recommendations, insights, and predictions tailored to your specific data.
-
-To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analytics-dashboard-copilot/) documentation.
-
-:::
-
 <div className="support_main">  
 <a href="/docs/analytics-modules-resource-utilization/">
     <div className="support_inners">
@@ -114,6 +114,18 @@ To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analy
     <div className="support_inners">
       <h3>Test Case Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
       <p>Get insights for `describe()` block level for your test frameworks in HyperExecute. Monitor the quality metrics at each test case.</p>
+    </div>
+  </a>
+    <a href="/docs/analytics-allure-api-widgets/">
+    <div className="support_inners">
+      <h3>API Test Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+      <p>Get API test time-series insights using Allure report integration with your test suite and run it on HyperExecute.</p>
+    </div>
+  </a>
+  <a href="/docs/analytics-sub-organization-widgets/">
+    <div className="support_inners">
+      <h3>Sub Organization Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+      <p>Monitor and allocate the right resources required for your organizations with advanced insights.</p>
     </div>
   </a>
 </div>
