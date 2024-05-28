@@ -174,11 +174,12 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Accessibility DevTools</h2>
+      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Accessibility Testing</h2>
       <div className="home_inners">
         <a href="/support/docs/accessibility-testing/"><p className="p_home_inners">Getting Started</p></a>
-        <a href="/support/docs/accessibility-testing-run-quick-scan/"><p className="p_home_inners">Run Your Quick Scan</p></a>
-        <a href="/support/docs/accessibility-testing-workflow-scanner/"><p className="p_home_inners">Scanning Alternatives</p></a>
+        <a href="/support/docs/accessibility-devtools/"><p className="p_home_inners">Accessibility DevTools</p></a>
+        <a href="/support/docs/accessibility-automation/"><p className="p_home_inners">Accessibility Automation</p></a>
+        <a href="/support/docs/accessibility-testing-navigating-dashboard/"><p className="p_home_inners">Navigating Dashboard</p></a>
       </div>
     </div>
     <div className="home_inners_box">

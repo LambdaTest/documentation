@@ -1,8 +1,8 @@
 ---
-id: accessibility-testing-settings
-title: Configure Settings
+id: accessibility-devtools-settings
+title: Configure Accessibility DevTools
 hide_title: false
-sidebar_label: Configure Settings
+sidebar_label: Configure Accessibility DevTools
 description: Customize your testing experience with LambdaTest Accessibility DevTools' comprehensive settings to meet your specific needs and preferences.
 keywords:
     - LambdaTest
@@ -10,9 +10,9 @@ keywords:
     - Testing
     - DevTools
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/accessibility-testing-settings/
+url: https://www.lambdatest.com/support/docs/accessibility-devtools-settings/
 site_name: LambdaTest
-slug: accessibility-testing-settings/
+slug: accessibility-devtools-settings/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -36,7 +36,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Testing Settings",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-testing-settings/"
+          "item": "https://www.lambdatest.com/support/docs/accessibility-devtools-settings/"
         }]
       })
     }}
@@ -59,7 +59,7 @@ You can select any WCAG Version to run compliance tests with a specific version.
 
 ### Review Issues
 
-There are certain issues that are required reviews by QA or Developers to mark them as issues and clarifies that it needs to be resolved. Click on the **Review** button in your dashboard to initiate the process.
+There are certain issues that are required reviews by QA or Developers to mark them as issues and clarifies that it needs to be resolved.
 
 - Click on the **Review** button.
 

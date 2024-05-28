@@ -42,18 +42,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-### Prerequisite
+## Prerequisite
 
 - You have to [setup the Accessibility DevTools](/support/docs/accessibility-testing-install-devtools) in your browser.
 
-### Trigger the Accessibility DevTool
+## Trigger the Accessibility DevTool
 
 - Go to the **Inspect** panel >> **LambdaTest Accessibility DevTools** of your required website.
 - Click on the **Full Page Scan** button to start the scanning for **Accessibility Issue** for that particular page.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/full-page-scanner/1.png').default} alt="automation-dashboard" className="doc_img"/>
 
-### Review Your Issues
+## Review Your Issues
 
 - This will list down all of the issues after scanning your complete webpage.
 - You can click on those issues to check with which particular element it is causing issue.
