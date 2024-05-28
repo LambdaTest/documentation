@@ -1457,22 +1457,6 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Accessibility Automation",
-        link: {
-          type: "doc",
-          id: "accessibility-automation"
-        },
-        items: [
-          {
-            type: "doc",
-            label: "Accessibility Automation Test",
-            id: "accessibility-automation-test"
-          },
-        ]
-      },
-      {
-        type: "category",
-        collapsed: true,
         label: "Navigating Dashboard",
         link: {
           type: "doc",
