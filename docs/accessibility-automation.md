@@ -1,6 +1,6 @@
 ---
 id: accessibility-automation
-title: Accessibility Automation
+title: LambdaTest Accessibility Automation
 hide_title: false
 sidebar_label: Accessibility Automation
 description: Use Automation tools like LambdaTest Accessibility DevTools' to detect and report accessibility issues using WCAG Guidelines.

@@ -1377,12 +1377,17 @@ module.exports = {
     },
     [
       {
+        type: "doc",
+        label: "Accessibility Testing",
+        id: "accessibility-testing",
+      },
+      {
         type: "category",
-        collapsed: false,
-        label: "Getting Started",
+        collapsed: true,
+        label: "Accessibility DevTools",
         link: {
           type: "doc",
-          id: "accessibility-testing"
+          id: "accessibility-devtools"
         },
         items: [
           {
@@ -1395,35 +1400,43 @@ module.exports = {
             label: "Run a Quck Scan",
             id: "accessibility-testing-run-quick-scan",
           },
+
+          {
+            type: "category",
+            collapsed: true,
+            label: "Scanning Alternatives",
+            items: [
+              {
+                type: "doc",
+                label: "Workflow Scanner",
+                id: "accessibility-testing-workflow-scanner",
+              },
+              {
+                type: "doc",
+                label: "Full Page Scanner",
+                id: "accessibility-testing-full-page-scanner",
+              },
+              {
+                type: "doc",
+                label: "Partial Page Scanner",
+                id: "accessibility-testing-partial-page-scanner",
+              },
+              {
+                type: "doc",
+                label: "Multi Page Scanner",
+                id: "accessibility-testing-multi-page-scanner"
+              },
+            ]
+          },
+          {
+            type: "doc",
+            label: "Configure Settings",
+            id: "accessibility-devtools-settings"
+          },
         ],
+
       },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Scanning Alternatives",
-        items: [
-          {
-            type: "doc",
-            label: "Workflow Scanner",
-            id: "accessibility-testing-workflow-scanner",
-          },
-          {
-            type: "doc",
-            label: "Full Page Scanner",
-            id: "accessibility-testing-full-page-scanner",
-          },
-          {
-            type: "doc",
-            label: "Partial Page Scanner",
-            id: "accessibility-testing-partial-page-scanner",
-          },
-          {
-            type: "doc",
-            label: "Multi Page Scanner",
-            id: "accessibility-testing-multi-page-scanner"
-          },
-        ]
-      },
+
       {
         type: "category",
         collapsed: true,
@@ -1438,12 +1451,12 @@ module.exports = {
             label: "Accessibility Automation Test",
             id: "accessibility-automation-test"
           },
+          {
+            type: "doc",
+            label: "Configure Settings",
+            id: "accessibility-automation-settings"
+          },
         ]
-      },
-      {
-        type: "doc",
-        label: "Configure Settings",
-        id: "accessibility-testing-settings"
       },
       {
         type: "category",
@@ -1465,7 +1478,7 @@ module.exports = {
             id: "accessibility-testing-dashboard-all-issues"
           }
         ]
-      }
+      },
     ]
   ],
 
