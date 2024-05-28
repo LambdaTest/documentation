@@ -80,7 +80,7 @@ To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analy
       <p>Get insights for `describe()` block level for your test frameworks in HyperExecute. Monitor the quality metrics at each test case.</p>
     </div>
   </a>
-  <a href="/docs/analytics-test-case-insights/">
+  <a href="/docs/analytics-allure-api-widgets/">
     <div className="support_inners">
       <h3>API Test Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
       <p>Get API test time-series insights using Allure report integration with your test suite and run it on HyperExecute.</p>

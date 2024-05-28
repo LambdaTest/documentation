@@ -92,14 +92,14 @@ import NewTag from '../src/component/newTag';
     <div className="home_inners_box">
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/analytics-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/analytics-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Insights</h2>
       <div className="home_inners">
-        <a href="/docs/analytics-dashboard-templates/"><p className="p_home_inners">Pre-built Dashboards</p></a>
-        <a href="/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboards</p></a>
-        <a href="/docs/analytics-widgets/"><p className="p_home_inners">Widgets</p></a>
-        <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA" bgColor="#ffec02" color="#000" /></p></a>
-        <a href="/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
-        <a href="/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Error Logs Insights</p></a>
-        <a href="/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
-        <a href="/docs/analytics-allure-api-widgets/"><p className="p_home_inners">API Tests Insights</p></a>
+        <a href="/support/docs/analytics-dashboard-templates/"><p className="p_home_inners">Pre-built Dashboards</p></a>
+        <a href="/support/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboards</p></a>
+        <a href="/support/docs/analytics-widgets/"><p className="p_home_inners">Widgets</p></a>
+        <a href="/support/docs/analytics-dashboard-copilot/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA" bgColor="#ffec02" color="#000" /></p></a>
+        <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
+        <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Error Logs Insights</p></a>
+        <a href="/support/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
+        <a href="/support/docs/analytics-allure-api-widgets/"><p className="p_home_inners">API Tests Insights</p></a>
       </div>
     </div>
   </div>
