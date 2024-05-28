@@ -1471,11 +1471,6 @@ module.exports = {
         ]
       },
       {
-        type: "doc",
-        label: "Configure Settings",
-        id: "accessibility-testing-settings"
-      },
-      {
         type: "category",
         collapsed: true,
         label: "Navigating Dashboard",
