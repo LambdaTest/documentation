@@ -1,8 +1,8 @@
 ---
-id: accessibility-testing-settings
-title: Configure Settings
+id: accessibility-devtools-settings
+title: Configure Accessibility DevTools
 hide_title: false
-sidebar_label: Configure Settings
+sidebar_label: Configure Accessibility DevTools
 description: Customize your testing experience with LambdaTest Accessibility DevTools' comprehensive settings to meet your specific needs and preferences.
 keywords:
     - LambdaTest
@@ -10,9 +10,9 @@ keywords:
     - Testing
     - DevTools
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/accessibility-testing-settings/
+url: https://www.lambdatest.com/support/docs/accessibility-devtools-settings/
 site_name: LambdaTest
-slug: accessibility-testing-settings/
+slug: accessibility-devtools-settings/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -36,52 +36,32 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Testing Settings",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-testing-settings/"
+          "item": "https://www.lambdatest.com/support/docs/accessibility-devtools-settings/"
         }]
       })
     }}
 ></script>
+LambdaTest Accessibility DevTools offer a comprehensive set of settings to customize your testing experience and tailor it to your specific needs.
 
-LambdaTest Accessibility DevTools offers a set of settings to configure your Accessibility Tests to ensure comprehensive and effective assessments. Key configuration options include enabling accessibility checks, selecting the appropriate **WCAG version**, and specifying to include **Best Practice** and **Needs Review**.
-
-> Click on your **profile icon** >> **Settings** button.
+- Click on your **profile icon** >> **Settings** button.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/settings/1.png').default} alt="automation-dashboard" className="doc_img"/>
 
 ## Scan Settings
 
-To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
-
-```java
-capabilities: [{
-  accessibility : true,                 // Enable accessibility testing
-  accessibility.wcagVersion: 'wcag21a', // Specify WCAG version (e.g., WCAG 2.1 Level A)
-  accessibility.bestPractice: false,    // Exclude best practice issues from results
-  accessibility.needsReview: true       // Include issues that need review
-}]
-```
-
 ### WCAG Version
 
-- It defines which **Web Content Accessibility Guidelines (WCAG)** version your tests should adhere to. You can select any WCAG Version to run compliance tests with a specific version. Typically, WCAG 2.0, WCAG 2.1 AA, or WCAG 2.1 AAA are used in general practice, but the recommended version is **WCAG 2.1 AA**.
+You can select any WCAG Version to run compliance tests with a specific version.
 
-- To set the wcag version in your automated tests, set the capability `wcagVersion: <YOUR_WCAG_VERSION>` in your configuration file.
-
-```bash
-accessibility.wcagVersion: 'wcag21a'
-```
+> The recommended version is **WCAG 2.1 AA**.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/settings/4.png').default} alt="automation-dashboard" className="doc_img"/>
 
 ### Review Issues
 
-There are certain issues that are required reviews by QA or Developers to mark them as issues and clarifies that it needs to be resolved. Click on the **Review** button in your dashboard to initiate the process.
+There are certain issues that are required reviews by QA or Developers to mark them as issues and clarifies that it needs to be resolved.
 
-To enable the needs review checks in your automated tests, set the capability `needsReview: true` in your configuration file.
-
-```bash
-needsReview: true
-```
+- Click on the **Review** button.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/settings/5.png').default} alt="automation-dashboard" width="1346" height="647" className="doc_img"/>
 
@@ -95,12 +75,6 @@ needsReview: true
 ### Best Practices
 
 **Best practices** are those issues that may not violate Accessibility guidelines but fixing them will enhance your user experience.
-
-- To enable the best practices checks in your automated tests, set the capability `bestPractice: true` in your configuration file.
-
-```bash
-bestPractice: true
-```
 
 ## Other Settings
 

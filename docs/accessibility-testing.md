@@ -1,8 +1,8 @@
 ---
 id: accessibility-testing
-title: LambdaTest Accessibility DevTools
+title: LambdaTest Accessibility Testing
 hide_title: false
-sidebar_label: Getting Started
+sidebar_label: Accessibility Testing
 description: Make your digital products usable for people with disabilities through comprehensive testing and improvement using LambdaTest Accessibility DevTools
 keywords:
     - LambdaTest
@@ -55,33 +55,19 @@ Accessibility testing ensures that your product is usable by people with disabil
 - **Hearing impairments:** Deafness, hearing loss, relying on captions and transcripts.
 - **Cognitive impairments:** Difficulty focusing, understanding complex information, needing simpler interfaces.
 
-## Types of LambdaTest Accessibility Scans
-
-Now, you need to select the type of scan as per your requirement:
+## Types of LambdaTest Accessibility Testing
 
 <div className="support_main">  
-  <a href="/docs/accessibility-testing-full-page-scanner">
+  <a href="/support/docs/accessibility-devtools">
     <div className="support_inners">
-      <h3>Full Page Scan</h3>
-      <p>Get a comprehensive analysis of entire web page for accessibility compliance & best practices..</p>
+      <h3>Accessibility DevTools</h3>
+      <p>Get a comprehensive accessibility analysis via browser extension.</p>
     </div>
   </a>
-  <a href="/docs/accessibility-testing-partial-page-scanner">
+  <a href="/support/docs/accessibility-automation">
     <div className="support_inners">
-      <h3>Partial Page Scan</h3>
-      <p>Get the accessibility check for selected sections or elements within a web page.</p>
-    </div>
-  </a>
-  <a href="/docs/accessibility-testing-multi-page-scanner">
-    <div className="support_inners">
-      <h3>Multi Page Scan</h3>
-      <p>Learn how to assess accessibility across various pages for site-wide compliance.</p>
-    </div>
-  </a>
-  <a href="/docs/accessibility-testing-workflow-scanner">
-    <div className="support_inners">
-      <h3>Workflow Scan</h3>
-      <p>Workflow Scan sequentially ensure accessibility standards across multiple pages or flows.</p>
+      <h3>Accessibility Automation</h3>
+      <p>Get the accessibility check for automated tests and scripts.</p>
     </div>
   </a>
 </div>
