@@ -1333,7 +1333,7 @@ module.exports = {
           "fastlane-plugin",
           "azure-pipeline",
           "teamcity-plugin",
-          "shopify-integration",
+          // "shopify-integration",
           "vscode-extension",
           "xcode-plugin-lambdamax",
           "android-studio-plugin-lambdroid",
