@@ -15,7 +15,9 @@ url: https://www.lambdatest.com/support/docs/testcomplete-integration/
 site_name: LambdaTest
 slug: testcomplete-integration/
 ---
-
+<head>
+  <meta name="robots" content="noindex, nofollow" />
+</head>
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
