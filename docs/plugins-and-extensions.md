@@ -79,11 +79,6 @@ LambdaTest offers you plugins with various third-party application to help you p
 <a href="/support/docs/teamcity-plugin/">TeamCity Plugin</a>
 </div>
 
-
-<div className="download_btn mb-10">
-<a href="/support/docs/shopify-integration/">Shopify Plugin</a>
-</div>
-
 <div className="download_btn mb-10">
 <a href="/support/docs/vs-code-extension/">LambdaTest VS Code Extension</a>
 </div>
