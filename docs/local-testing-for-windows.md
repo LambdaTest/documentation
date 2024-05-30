@@ -88,7 +88,7 @@ In a few seconds, after you execute the command, an SSH connection will be estab
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/start-localhost-testing-using-lambda-tunnel.webp').default} alt="Image"  className="doc_img"/>
 
-> **IMPORTANT NOTE**: Some browsers doesn’t support automatic resolution of the URL string “localhost”. Therefore if you test on URLs like “http://localhost/” or “http://localhost:8080” etc, you would get an error in these browsers. A possible solution is to use “localhost.lambdatest.com” or replace the string “localhost” with machine IP address. For example if you wanted to test “http://localhost/dashboard” or, and your machine IP is 192.168.2.6 you can instead test on “`http://192.168.2.6/dashboard`”.
+> **IMPORTANT NOTE**: Some browsers doesn’t support automatic resolution of the URL string “localhost”. Therefore if you test on URLs like “http://localhost/” or “`http://localhost:8080`” etc, you would get an error in these browsers. A possible solution is to use “localhost.lambdatest.com” or replace the string “localhost” with machine IP address. For example if you wanted to test “http://localhost/dashboard” or, and your machine IP is 192.168.2.6 you can instead test on “`http://192.168.2.6/dashboard`”.
 
 ## Testing Local Folder Files Using LambdaTest Tunnel
 * * *

@@ -3,7 +3,7 @@ id: accessibility-automation-test
 title: Execute Your Automation Tests with Accessibility Tool
 hide_title: false
 sidebar_label: Run Accessibility Automation Test
-description: Use Automation tools like LambdaTest Accessibility DevTools' to detect and report accessibility issues using WCAG Guidelines.
+description: Use LambdaTest Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines.
 keywords:
     - LambdaTest
     - Accessibility
