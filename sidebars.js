@@ -2501,7 +2501,11 @@ module.exports = {
         label: "Github App Integration",
         id: "smartui-github-app-integration",
       },
-
+      {
+        type: "doc",
+        label: "Slack Integration",
+        id: "smartui-slack-integration",
+      },
     ]
   ],
 
