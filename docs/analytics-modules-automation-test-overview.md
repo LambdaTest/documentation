@@ -2,7 +2,7 @@
 id: analytics-modules-automation-test-overview
 title: Analytics Modules - Test Overview
 sidebar_label: Web & App Automation
-description: A comprehensive guide to understanding test health and trends module. Explore widgets for Test Status, Browser, OS Distribution and more.
+description: A detailed guide to understanding the test health and trends module. Explore widgets for Test Status, Browser, OS Distribution, and more.
 keywords:
  - analytics
  - test overview

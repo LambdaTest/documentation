@@ -3,7 +3,7 @@ id: browser-testing-on-real-devices
 title: Getting started with Real Device Browser Testing
 hide_title: true
 sidebar_label: Getting Started
-description: With LambdaTest, perform live interactive testing of websites and web applications on real Android and iOS devices to ensure seamless user experience.
+description: With LambdaTest, conduct live interactive testing of websites and web apps on real Android and iOS devices to ensure a seamless user experience.
 keywords:
 - real device browser testing 
 - lambdatest real device browser testing 
