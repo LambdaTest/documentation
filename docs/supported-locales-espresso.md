@@ -3,7 +3,7 @@ id: supported-locales-espresso
 title: Supported Locales And Languages
 hide_title: false
 sidebar_label: Supported Locales And Languages
-description: Checkout the list of all supported locales
+description: Checkout the list of all supported locales for espresso.
 keywords:
   - Supported locales
   - Locales

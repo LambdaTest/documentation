@@ -3,7 +3,7 @@ id: regular-expression-espresso
 title: Regular Expression (REGEX)
 # hide_title: true
 sidebar_label: Regular Expression
-description: There may be instances when the device you chose for a test on LambdaTest is not available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.
+description: If your chosen device for testing on LambdaTest is unavailable, use REGEX to broaden the search for alternative devices to run espresso test.
 keywords:
 - regular expression lambdatest
 - regular expression app automation

@@ -2,7 +2,7 @@
 id: appium-visual-regression
 title: Getting Started With Visual Regression Testing Using Appium On SmartUI Real Devices (NodeJS)
 sidebar_label: Appium
-description: Dive into our detailed Appium Visual Regression support documentation for step-by-step guidance! Efficiently perform visual testing, manage applications, and ensure your mobile apps are visually perfect before launch.
+description: Explore our Appium Visual Regression support documentation for step-by-step guidance! Conduct visual testing, manage apps, and ensure your mobile apps are flawless before launch.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
