@@ -80,7 +80,7 @@ You can clone the sample repository to run `LambdaTest` automation tests with `S
   
 ```bash
 git clone https://github.com/LambdaTest/smartui-csharp-sample
-cd LambdaTest.Selenium.Driver.Test
+cd smartui-csharp-sample/LambdaTest.Selenium.Driver.Test
 ```
 
 ### **Step 2**: Update the Dependencies
