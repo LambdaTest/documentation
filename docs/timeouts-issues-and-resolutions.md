@@ -41,8 +41,8 @@ If the LambdaTest Selenium grid detects inactivity for 120 seconds then you may 
 
 >**Idle Timeout Capability**  
 >```
-"idleTimeout": "125" //extends idle timeout from 120 seconds to 125.
-```
+>"idleTimeout": "125" //extends idle timeout from 120 seconds to 125.
+>```
 >Although, you can extend the inactivity limit to 1800 seconds but doing so may lead to performance issues. We recommend you extend the idle timeout between 270-360 seconds.
 
 ### 2. Improper Use Of Exception Handling
@@ -67,9 +67,9 @@ The maximum number of test that are allowed to be queued for your LambdaTest acc
 
 **Maximum Queuing Capacity**
 >```javascript
-Maximum number of test cases that can be queued = n + 150 
-Here, n = number of concurrent sessions.
-```
+>Maximum number of test cases that can be queued = n + 150 
+>Here, n = number of concurrent sessions.
+>```
 
 
 Here is an example, if your LambdaTest account is eligible for 10 concurrent sessions, then your queue can have a maximum of (10 + 150) queued test cases i.e. 160 queued test cases. The scheduling and execution of test cases in your queue will be taken care of by LambdaTest.
