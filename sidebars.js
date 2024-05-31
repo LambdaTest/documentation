@@ -2357,6 +2357,11 @@ module.exports = {
                 type: "doc",
                 label: "Ruby",
                 id: "smartui-selenium-ruby-sdk"
+              },
+              {
+                type: "doc",
+                label: "C#",
+                id: "smartui-selenium-csharp-sdk"
               }
             ]
           },
