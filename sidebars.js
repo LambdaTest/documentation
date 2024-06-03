@@ -3,92 +3,6 @@ module.exports = {
 
   // 'support-start', 'tas-overview', 'app-automation', 'web-automation', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'record-and-replay', 
 
-  AutomationSidebar: [
-    {
-      type: 'link',
-      label: '<- Back',
-      href: '/docs/',
-      customProps: {
-        className: 'back-to-main-menu'
-      },
-    },
-    [
-      {
-        type: "category",
-        collapsed: true,
-        label: "Automation Testing",
-        link: {
-          type: "doc",
-          id: "getting-started-with-automation",
-        },
-
-        items: [
-          "web-automation",
-          "app-automation"
-        ]
-      }
-    ]
-  ],
-
-  WebAutomationSidebar: [
-    {
-      type: 'link',
-      label: '<- Back',
-      href: '/docs/getting-started-with-automation',
-      customProps: {
-        className: 'back-to-main-menu'
-      },
-    },
-    [
-      {
-        type: "category",
-        collapsed: true,
-        label: 'Web Automation',
-        link: {
-          type: "doc",
-          id: 'web-automation',
-        },
-
-        items: [
-          "getting-started",
-          'getting-started-with-cypress-testing',
-          'playwright-testing-guide',
-          'puppeteer-testing-guide',
-          'k6-browser-testing',
-        ],
-      },
-    ]
-  ],
-
-  AppAutomationSidebar: [
-    {
-      type: 'link',
-      label: '<- Back',
-      href: '/docs/getting-started-with-automation',
-      customProps: {
-        className: 'back-to-main-menu'
-      },
-    },
-    [
-      {
-        type: "category",
-        collapsed: true,
-        label: 'App Automation',
-        link: {
-          type: "doc",
-          id: 'app-automation',
-        },
-
-        items: [
-          "getting-started-with-appium-testing",
-          'getting-started-with-espresso-testing',
-          'getting-started-with-xcui-testing',
-          'app-automation-app-sim',
-        ],
-      },
-    ]
-  ],
-
   HyperExecuteSidebar: [
     {
       type: 'link',
@@ -1510,7 +1424,6 @@ module.exports = {
     ]
   ],
 
-
   TestManagerSidebar: [
     {
       type: 'link',
@@ -1984,7 +1897,7 @@ module.exports = {
       },
       "parallel-playwright-test",
       "migrate-playwright-tests",
-      "playwright-test-execution",
+      "playwright-test-execution-setup",
       "playwright-caps",
       "local-testing-playwright",
       "playwright-playwrighttest",
@@ -2580,7 +2493,6 @@ module.exports = {
     "analytics-faqs",
 
   ],
-
 
   TestIntelligence: [
     {
