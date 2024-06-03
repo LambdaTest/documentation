@@ -149,6 +149,23 @@ You can set any `branch` name as your **Baseline** branch in the SmartUI project
 4. In the project settings section you can provide the input of the `branch` name.
 5. Click on the `Update Settings` button to update the settings.
 
+You can also set the Baseline branch name through your terminal by setting the following environment variable which will automatically update your project settings as well once the test is run.
+
+<Tabs className="docs__val" groupId="language">
+<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+
+```bash
+export BASELINE_BRANCH="Required baseline branch"
+```
+</TabItem>
+<TabItem value="Windows" label="Windows" default>
+
+```bash
+set BASELINE_BRANCH="Required baseline branch"
+```
+</TabItem>
+</Tabs>
+
 :::caution Default Selection of Baseline Branch
 
 In case, if there is no branch is set in your new or existing project created. Then, the `repository's` where SmartUI CLI command is executed to run the tests, **HEAD Branch** will be updated as the **Baseline** branch for that project by default.
@@ -208,11 +225,28 @@ $ npx smartui --config .smartui.json exec -- <Execution command>
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/git-working-on-same-branch.webp').default} alt="Smart Visual Testing" width="1600" height="803" className="doc_img"/>
 
+You can streamline your workflow by setting the current branch name directly through your terminal. By configuring the following environment variable, you can automatically designate the input branch name as the branch for that build. This approach effectively overwrites the current Git branch from which you are running the test, providing a convenient method to manage new branches according to specific use cases without altering the Git configuration.
+
+<Tabs className="docs__val" groupId="language">
+<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+
+```bash
+export CURRENT_BRANCH="Required branch"
+```
+</TabItem>
+<TabItem value="Windows" label="Windows" default>
+
+```bash
+set CURRENT_BRANCH="Required branch"
+```
+</TabItem>
+</Tabs>
+
 ### Updating the Baseline Branch Name
 
 In this workflow, if you have created a SmartUI project on the Web App and have executed few builds with a `Branch Name: Master` and want to switch your **Baseline** branch to `development` branch in your `Git`, then following will be the workflow that will help you in switching the **Baseline Branch** for your project:
 
-1. You have to go to the `SmartUI Project Settings` page to update your **Baseline Branch** in the project settings from `master` to `development`..
+1. You can go to the `SmartUI Project Settings` page to update your **Baseline Branch** in the project settings from `master` to `development` or update the `BASELINE_BRANCH` variable in the environment to update the baseline branch.
 2. Now, execute the `SmartUI CLI` command to run the Visual Regression tests.
 3. Then, SmartUI algorithm will check for existing latest `build` with `development` run on the SmartUI project in Builds history.
 
