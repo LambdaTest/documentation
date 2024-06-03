@@ -89,6 +89,10 @@ Once you integrate Slack, you need to configure notification settings to get tes
 <source src= {require('../assets/videos/smart-ui/slack-integration/slack-integration.mp4').default} type="video/mp4" />
 </video>
 
+- Once you save that configuration, you will start receiving the custom notifications in Slack!
+
+<img loading="lazy" src={require('../assets/videos/smart-ui/slack-integration/slack-notification.png').default} alt="add slack-notification"  className="doc_img" width="1347" height="648"/>
+
 ## Remove the Slack Integration
 
 - Go to the **Settings** > **Integration** page.
