@@ -74,9 +74,9 @@ capabilities.setCapability("platformName", "ios");
 // Add other capabilities as needed
 ```
 
-**Latest Version**: We update the `latest` version for all platforms, including Android and iOS, to stay aligned with the latest stable releases of Appium. This ensures users always have access to the most current and reliable versions.
+**Latest Version**: We update the `latest` version for all platforms, including Android and iOS, to stay aligned with the latest stable releases of Appium. This ensures users always have access to the most current and reliable versions.To use the latest version, pass `latest` in **appiumVersion** capability.
 
-**Default Version**: A new `default` version is supported when the user does not explicitly specify a appium version or pass capability.
+**Default Version**: A new `default` version is supported when the user does not explicitly specify a appium version or pass `default` in **appiumVersion** capability.
 
 
 :::note 
