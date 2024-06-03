@@ -1,5 +1,5 @@
 ---
-id: playwright-test-execution
+id: playwright-test-execution-setup
 title: Playwright Test Execution Setup
 hide_title: true
 sidebar_label: Test Execution Setup
@@ -67,6 +67,8 @@ Following is a list of compatible Playwright bundled browsers that you can use t
 
 | Playwright Versions | Compatible Browsers | 
 | --------------------|---------------------| 
+| v1.44               | **Chromium** 125.0 <br/> **Firefox** 125.0.1 <br/> **WebKit** 17.4 |
+| v1.43               | **Chromium** 124.0 <br/> **Firefox** 124.0 <br/> **WebKit** 17.4 |
 | v1.42               | **Chromium** 123.0 <br/> **Firefox** 123.0 <br/> **WebKit** 17.4 |
 | v1.41               | **Chromium** 121.0 <br/> **Firefox** 121.0 <br/> **WebKit** 17.4 |
 | v1.40               | **Chromium** 120.0 <br/> **Firefox** 119.0 <br/> **WebKit** 17.4 |
