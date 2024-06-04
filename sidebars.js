@@ -691,8 +691,8 @@ module.exports = {
         items: [
           {
             type: "doc",
-            label: "concepts",
-            id: "hyperexecute-concepts",
+            label: "HyperExecute Status",
+            id: "hyperexecute-status",
           },
           {
             type: "category",
