@@ -93,9 +93,9 @@ You can click on a particular Job to navigate to the Job Details Page.
     -   **Artifacts**: Can be used to configure and generate custom reports and artifacts.
     -   **Report**: A detailed report for your test execution for the Job.
 - The left side shows all the Tasks (Just-in-time testing environments) that were a part of the Job.
-- Each [Task](/support/docs/hyperexecute-concepts/#2-tasks) has 3 types of [Stages](/support/docs/hyperexecute-concepts/#3-stages): Pre stages, Scenario stages, Post stages.
+- Each Task has 3 types of Stages : Pre stages, Scenario stages, Post stages.
 
-> **Note** - You can learn about Job, Tasks and Stages [here](/support/docs/hyperexecute-concepts/).
+<!-- > **Note** - You can learn about Job, Tasks and Stages [here](/support/docs/hyperexecute-concepts/). -->
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/4.png').default} alt="Image"  className="doc_img"/>
 

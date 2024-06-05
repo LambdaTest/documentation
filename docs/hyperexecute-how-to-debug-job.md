@@ -47,7 +47,7 @@ The HyperExecute Dashboard provides a central view of all your test runs, includ
 
 - HyperExecute Dashboard Access.
 - A Job  is triggered on HyperExecute, and it has a `Failed` status.
-- Identify which [Task](/support/docs/hyperexecute-concepts/#2-tasks) has failed. Click on that task and check which of the [Stage](/support/docs/hyperexecute-concepts/#3-stage) categories is throwing an error.
+- Identify which Task  has failed. Click on that task and check which of the Stage categories is throwing an error.
 
 ## Pre Steps
 You can see in the screenshot mentioned below that the Pre Step of the Task has failed. To understand the issue causing the step to fail, scroll down, go through the logs once, and you can find the **type of error** and its **location** in the code as well.
