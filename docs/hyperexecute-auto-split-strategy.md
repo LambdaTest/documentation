@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-auto-split-strategy
-title: Auto-Test Splitting Strategy
-hide_title: true
+title: AutoSplit Strategy
+hide_title: false
 sidebar_label: Auto Split Strategy
 description: Explore HyperExecute Auto Split Strategy | Optimize Testing Efficiency - Discover how HyperExecute revolutionizes testing with auto split strategy for enhanced efficiency.
 keywords:
@@ -37,22 +37,16 @@ slug: hyperexecute-auto-split-strategy/
     }}
 ></script>
 
-# Auto Split Strategy
-
 The Smart **Auto Split Strategy** enables you to distribute tests across multiple virtual machines efficiently. This strategy ensures optimal utilization of concurrency by allowing you to split tests based on various levels, such as files, modules, and scenarios.
-
-It also enables you to **automatically reorder** your test cases. Let's say you ran a job of 10 tests and 3 of them failed, then in the next execution those 3 failed tests will take the precedence over the other tests and they will be executed first for faster feedback.
 
 ## Key Benefits of Auto Split Strategy
 - Efficient distribution of tests across nodes.
 - Fine-grained control over test distribution.
 - Maximization of concurrency for faster results.
+- [Automatic reordering of test cases](/support/docs/hyperexecute-auto-split-strategy/#automatic-reordering-of-test-cases), prioritizing failed ones for faster feedback in subsequent executions.
 
-#### Without HyperExecute Auto Split
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/autosplit/WO_HYP_Autosplit.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/autosplit/autosplit.png').default} alt="Image"  className="doc_img" />
 
-#### With HyperExecute Auto Split
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/autosplit/W_HYP_Autosplit.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 > HyperExecute provides flexibility to distribute tests at file level, scenario level, module level, and practically anything, provided you have a way to list down all the possible values of the entity that has to be distributed.
 
@@ -83,7 +77,7 @@ Along with that, you need to provide `testDiscovery` and `testRunnerCommand` par
 
 A few samples are given below:
 
-``` yaml
+```bash
 # The following command (or value) when assigned to testDiscoverer key searches for the scenarios by matching the string Scenario [or Scenario Outline] in the .feature  files located in the *src* directory of the project.
 testDiscovery:
   type: raw
@@ -91,13 +85,35 @@ testDiscovery:
   command: grep -nri 'Scenario:\^|Scenario Outline:' src -ir --include=\*.feature |  awk '{print $1}' | sed 's/\.\///g' | sed 's/\(.*\):/\1 /'
 ```
 
-``` yaml
-
+```bash
 testDiscovery:
   type: raw
   mode: dynamic
   command: grep 'class name' testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
 ```
+
+## Advanced Concepts
+
+### Automatic Reordering of Test Cases
+
+Suppose you are performing regression testing in your large test suite project via github actions, but some test cases are failing unexpectedly for no reason. These flaky tests have become a time-consuming nightmare for QA and developers. After fixing the issues, you trigger the testing pipeline again, but you have to wait to check the status of that particular test.
+
+It would be much better if those flaky tests ran first in the sequence, so you don't have to wait longer to see the status of your previously failed tests.
+
+That's exactly the problem HyperExecute's autosplit with automatic re-ordering aims to solve! It's like having a testing assistant who remembers which tests were tricky last time.
+
+#### How does it work?
+When you run tests with HyperExecute's autosplit feature, your tests are divided up and run simultaneously on multiple machines, executing them in parallel. This is great for speeding things up, but during this run, HyperExecute keeps track of which tests fail.
+
+After the initial run is complete, HyperExecute takes note of the failing tests. It may use this information to automatically reorder your tests for the next time you run them.
+
+On subsequent runs, HyperExecute might prioritize the failing tests from the previous run for faster feedback.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/autosplit/auto-reorder.png').default} alt="Image"  className="doc_img" />
+
+:::important info
+Automatic reordering is a behind-the-scenes feature that optimizes test execution. You don't need to specifically configure it; it might happen automatically as part of the autosplit process. It's like a hidden perk that can significantly improve your testing experience.
+:::
 
 ### Concurrency Control
 

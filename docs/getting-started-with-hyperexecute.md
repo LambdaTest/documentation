@@ -55,7 +55,7 @@ import TabItem from '@theme/TabItem';
 * * *
 HyperExecute is an AI Powered Test Orchestration Cloud Platform, enabling test automation teams worldwide to achieve an accelerated time to market by providing JIT (Just-in-time) testing infrastructure that offers enhanced test execution speeds, smart test orchestration, detailed execution logs and much more.
 
-It requires a [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file which contains all the necessary instructions and a [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution [`Job`](/support/docs/hyperexecute-concepts/#1-jobs).
+It requires a [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file which contains all the necessary instructions and a [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/hyperexecute.png').default} alt="Image"  className="doc_img"/>
 
@@ -81,10 +81,10 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
       <p>Learn about the different configurations & creating a YAML suited for your needs.</p>
     </div>
   </a>
-  <a href="/support/docs/hyperexecute-concepts/">
+  <a href="/support/docs/hyperexecute-status/">
     <div className="support_inners">
-      <h3>Concepts</h3>
-      <p>Everything you need to know about HyperExecute concepts and how it works.</p>
+      <h3>Status</h3>
+      <p>Everything you need to know about HyperExecute status and what does it implies.</p>
     </div>
   </a>
   <a href="/support/docs/key-features-of-hyperexecute/">

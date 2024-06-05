@@ -3,7 +3,7 @@ id: testng-on-hyperexecute-grid
 title: Run automation tests on HyperExecute using TestNG
 hide_title: true
 sidebar_label: TestNG
-description: Learn how to run Selenium automation tests on HyperExecute grid using the TestNG framework
+description: Learn how to run Selenium automation tests on HyperExecute using the TestNG framework
 keywords:
   - TestNG
   - TestNG selenium
@@ -14,7 +14,7 @@ keywords:
   - TestNG Java Selenium framework
   - lambdatest TestNG
   - frameworks on lambdatest
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute TestNG testing
   - hyperexecute TestNG testing
   - hyperexecute automation testing
@@ -51,309 +51,223 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
-# Run Automation Tests on HyperExecute using TestNG
-This page outlines how to execute your tests on HyperExecute using TestNG with YAML 0.2
+# Running TestNG Framework Tests on HyperExecute
+TestNG is a widely-used testing framework for Java applications, designed to simplify and enhance the testing process for developers. It provides a flexible and powerful platform for running test suites, enabling effective unit testing, integration testing, and end-to-end testing of Java applications
 
-> HyperExecute uses [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) to perform the tests using TestNG.
+HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
-***
+This guide details how to execute your **TestNG** framework tests on **HyperExecute** using [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) via two different methods:
 
-## Overview
-
-HyperExecute is a smart test orchestration platform that allows you to run end-to-end Selenium tests as quickly as possible by providing a test infrastructure with optimal speed, test orchestration, and detailed execution logs.
-
-HyperExecute offers features like detailed logs, Smart CI, network insights, video recording, and access to various browsers and platforms.
-
-## Running Specific TestNG Tests
-***
-
-When working with TestNG, you may sometimes want to run specific tests instead of executing the entire test suite. Here's how you can achieve this with the provided Java-TestNG-Selenium repository on LambdaTest:
-
-:::tip Sample repo
-
-All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/Java-TestNG-Selenium" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-
-:::
-
-### Pre-requisite
-
-- Install the Java Development Environment.
-- Install [Maven](https://maven.apache.org/), which supports the TestNG framework out of the box. Maven can also be installed easily on **Linux/MacOS** using [Homebrew](https://brew.sh/) package manager.
-
-### Cloning Repo and Installing Dependencies
-
-Clone the LambdaTest's Java-TestNG-Selenium repository:
-
-```bash
-git clone https://github.com/LambdaTest/Java-TestNG-Selenium
-cd Java-TestNG-Selenium
-```
-
-### Setup Environment Variable
-Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
-Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
-
-For macOS / Linux:
-
-```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
-
-For Windows:
-
-```bash
-set LT_USERNAME=YOUR_LT_USERNAME
-set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
-
-### Integrate your 1st Test Case on LambdaTest
-The Java-TestNG-Selenium repository provides a sample TestNG test that you can execute.
-
-**Step 1:** Open the TestNGTodo.java file and update the username and accesskey variables with your LambdaTest credentials.
-
-> **NOTE:** Make sure to update the Hub endpoint using the variable **gridURL**.
-
-By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
-
-```java title="TestNG To Do"
-import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import java.net.MalformedURLException;
-import java.net.URL;
-public class TestNGTodo{
-    public String username = "YOUR_LAMBDATEST_USERNAME";
-    public String accesskey = "YOUR_LAMBDATEST_ACCESS_KEY";
-    public static RemoteWebDriver driver = null;
-    // highlight-next-line
-    public String gridURL = "@hub.lambdatest.com/wd/hub"; //hub endpoint
-    boolean status = false;
-    @BeforeClass
-    public void setUp() throws Exception {
-       DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("browserName", "chrome");
-        capabilities.setCapability("version", "70.0");
-        capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get the any available one
-        capabilities.setCapability("build", "LambdaTestSampleApp");
-        capabilities.setCapability("name", "LambdaTestJavaSample");
-        try {
-          // highlight-next-line
-            driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), capabilities);
-        } catch (MalformedURLException e) {
-            System.out.println("Invalid grid URL");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
-    @Test
-    public void testSimple() throws Exception {
-       try {//Change it to production page
-            driver.get("https://lambdatest.github.io/sample-todo-app/");
-              //Let's mark done first two items in the list.
-              driver.findElement(By.name("li1")).click();
-            driver.findElement(By.name("li2")).click();
-             // Let's add an item in the list.
-              driver.findElement(By.id("sampletodotext")).sendKeys("Yey, Let's add it to list");
-            driver.findElement(By.id("addbutton")).click();
-              // Let's check that the item we added is added in the list.
-            String enteredText = driver.findElementByXPath("/html/body/div/div/div/ul/li[6]/span").getText();
-            if (enteredText.equals("Yey, Let's add it to list")) {
-                status = true;
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
-    @AfterClass
-    public void tearDown() throws Exception {
-       if (driver != null) {
-            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
-            driver.quit();
-        }
-    }
-}
-```
-
-**Step 2:** Configure the desired capabilities based on your test requirements. For example:
-
-```java
-DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("browserName", "chrome");
-        capabilities.setCapability("version", "70.0");
-        capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get the any available one
-        capabilities.setCapability("build", "LambdaTestSampleApp");
-        capabilities.setCapability("name", "LambdaTestJavaSample");
-```
-
-> You can generate capabilities for your test requirements with the help of our inbuilt :link: **[Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/)**.
-
-**Step 3:** Save the changes to the TestNGTodo.java file. <br />
-**Step 4:** In the terminal, execute the test using the following command to run the test using the single.xml TestNG suite configuration.
-
-```bash
-mvn test -D suite=single.xml
-```
-
-:::info
-
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://accounts.lambdatest.com/login). LambdaTest Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
-
-:::
-
-## Running TestNG Tests on HyperExecute
-***
-
-TestNG Tests can be executed on HyperExecute Grid using 2 methods:
-
-1. [**Using Local System**](/support/docs/hyperexecute-running-your-first-job/#2-using-local-system) - Requires [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) to execute tests from your Local System. 
-2. [**Using Gitpod**](/support/docs/hyperexecute-running-your-first-job/#3-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
+- [**Using Local System**](/support/docs/testng-on-hyperexecute-grid/#1-testing-using-local-system) - You can use your own local machine to execute tests.
+- [**Using Gitpod Platform**](/support/docs/testng-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
 ## 1. Testing Using Local System
-***
 
-### Pre-requisites:
+Follow the step-by-step guide to execute your test on HyperExecute.
+
+### Prerequisites
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
-- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution [Job](/support/docs/hyperexecute-concepts/#1-jobs).
-- Setup the Environmental Variable
+- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
+- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
+- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
+
+### Step 1: Configure Your Test Suite
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
+Download or Clone the code sample for the TestNG from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
-All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-
+<a href="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
-#### Download HyperExecute CLI
+If you are using your own project, make sure you update the **Hub endpoint** in your tests file.
 
-The *HyperExecute CLI* is used for triggering tests on HyperExecute Grid. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
+By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
-| Platform | HyperExecute CLI download location |
-| ---------| --------------------------- |
+
+Configure the desired capabilities based on your test requirements. For example:
+
+```bash
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setCapability("browserName", "chrome");
+capabilities.setCapability("version", "70.0");
+capabilities.setCapability("platform", "win10"); # If this cap isn't specified, it will just get the any available one
+capabilities.setCapability("build", "LambdaTestSampleApp");
+capabilities.setCapability("name", "LambdaTestJavaSample");
+```
+
+> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+
+### Step 2: Setup the CLI in your Test Suite
+
+After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
+
+#### Download the HyperExecute CLI
+
+The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
+
+You can download the CLI for your desired platform from the below mentioned links:
+
+| Platform | HyperExecute CLI |
+| ---------| ---------------- |
 | Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
-| macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-<!-- For detailed information about HyperExecute CLI, please refer to [HyperExecute CLI section](/docs/getting-started-with-hyperexecute/#hyperexecute-cli-to-interact-with-hyperexecute) in the HyperExecute getting started guide. -->
+#### Setup Environment Variable
 
-<!-- > -->
-<!-- The fundamental difference between running Selenium tests on a cloud Selenium Grid and HyperExecute Grid is that you need not have any configurations on the local machine (i.e. the machine from where HyperExecute CLI is triggered). This is because the source code from the local machine will be zipped and securely uploaded to the cloud where the execution will be performed on the remote Virtual Machine (VM). -->
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
 
+Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-### Setup Environment Variable
-Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
-Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-***
+<Tabs className="docs__val">
 
-For macOS:
+<TabItem value="bash" label="Linux / MacOS" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
+### Step 3: Configure YAML in your Test Suite
+
+Configure your YAML file as per your use cases using **key value** pairs.
+
+In this sample YAML file, we have mentioned:
+
+- **version** of the YAML file
+- **Timeouts** for executing your project
+- **Mode of execution** is [Autosplit](/support/docs/hyperexecute-auto-split-strategy/). You can also opt for [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid](/support/docs/hyperexecute-hybrid-strategy/) mode.
+- **Pre and Post** commands
+- **Reports and Artefacts** that will be generated after the completion of tests
+- and other necessary YAML Parameters
 
 ```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
-
-For Linux:
-
-```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
-
-For Windows:
-
-```bash
-set LT_USERNAME=YOUR_LT_USERNAME
-set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
-
-### Steps to execute the Tests
-Follow the below steps to run Test using Local System:
-
-**Step 1:** Download or Clone the [TestNG HyperExecute GitHub repository](https://github.com/LambdaTest/testng-selenium-hyperexecute-sample) for the code samples to run tests on the HyperExecute (skip this step if you are performing tests on your own project).
-
-**Step 2:** Download the HyperExecute CLI as per your host Operating System. The CLI must be in the root directory of the project.
-
-**Step 3:** Configure your YAML file as per your use cases using **key value** pairs.
-
-```bash
+---
 version: 0.2
 globalTimeout: 150
 testSuiteTimeout: 150
 testSuiteStep: 150
 
-runson: win
+runson: linux
 
 autosplit: true
 retryOnFailure: true
 
 maxRetries: 1
-concurrency: 5
+concurrency: 4
+
+shell: bash
+
+env:
+  # PAT: ${{ .secrets.testKey }}
+  CACHE_DIR: m2_cache_dir
+
+cacheKey: '{{ checksum "pom.xml" }}'
+cacheDirectories:
+  - .m2
 
 pre:
   # Skip execution of the tests in the pre step
-  - mvn dependency:resolve
+  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
 
 post:
   - ls target/surefire-reports/
 
 mergeArtifacts: true
-
-
 uploadArtefacts:
  - name: ExecutionSnapshots
    path:
     - target/surefire-reports/html/**
 
+report: true
+partialReports:
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
+
 framework:
   name: maven/testng
   defaultReports: false
   flags:
-    - "-Dplatname=win"
+    - "-Dplatname=linux"
+    - "--file=pom02.xml"
+
+jobLabel: [selenium-testng, linux, autosplit]
 ```
 
-**Step 4:** Run the below command in your terminal at the root folder of the project:
+### Step 4: Execute your Test Suite
+
+> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+
+Run the below command in your terminal at the root folder of the project:
 
 ```bash
-./hyperexecute --config yaml/win/testng_hyperexecute_autosplit_sample.yaml --download-artifacts --force-clean-artifacts
+./hyperexecute --config <path_of_yaml_file>
 ```
 
-Shown below is the execution screenshot when the YAML file is triggered from the terminal:
+OR use this command if you have not exported your username and access key in the step 2.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_cmd_1.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+```bash
+./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
+```
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_cmd_2.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_1.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-**Step 5:** Monitor the test execution status on the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute).
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+
+### Step 5: Monitor the Test Execution
+
+Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-HyperExecute also facilitates the provision to download the artifacts on your local machine. To download the artifacts, click on Artifacts button corresponding to the associated TestID.
+### Step 6: Download Artifacts and Reports
+
+HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ## 2. Testing Using Gitpod
-***
+
+You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
 
 Follow the below steps to run Test using Gitpod:
 
-**Step 1:**  Click '**Open in Gitpod**' button. You will be redirected to Login/Signup page.
+**Step 1:**  Click '**Open in Gitpod**' button. You will be redirected to Login/Signup page. This button is configured to redirect you to the Gitpod platform where you will be able to execute our sample repository.
 
 [<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Selenium&framework=TestNG)
 
-**Step 2:** Login with Lambdatest credentials. Once logged in, a pop-up confirmation will appear, asking you to **'Proceed'** to the Gitpod editor in a new tab. The current tab will display the hyperexecute dashboard.
+**Step 2:** Login with LambdaTest credentials. Once logged in, a pop-up confirmation will appear, asking you to **'Proceed'** to the Gitpod editor in a new tab. The current tab will display the HyperExecute Dashboard.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_popup.png').default} alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
 
 **Step 3:** Choose your preferred editor (we recommend VS Code Editor)
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_config.png').default} alt="Image"  className="doc_img"/>
 
 **Step 4:**  As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
 
@@ -366,63 +280,19 @@ Follow the below steps to run Test using Gitpod:
 You can also implement [Secret Keys](https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
-## Sample Yaml Version 0.2
-
-```bash
----
-version: 0.2
-globalTimeout: 150
-testSuiteTimeout: 150
-testSuiteStep: 150
-
-runson: win
-
-autosplit: true
-retryOnFailure: true
-
-maxRetries: 1
-concurrency: 5
-
-pre:
-  # Skip execution of the tests in the pre step
-  - mvn dependency:resolve
-
-post:
-  - ls target/surefire-reports/
-
-mergeArtifacts: true
-
-
-uploadArtefacts:
- - name: ExecutionSnapshots
-   path:
-    - target/surefire-reports/html/**
-
-framework:
-  name: maven/testng
-  defaultReports: false
-  flags:
-    - "-Dplatname=win"
-```
-
 ## Navigation in Automation Dashboard
 
-Every test run on the HyperExecute Grid has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute automation dashboard](https://automation.lambdatest.com/hyperexecute/) for checking the status of the test execution.
+Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/build) for checking the status of the test execution.
 
-HyperExecute lets you seamlessly navigate between jobId's and taskId's. It can be done by navigating to *Automation* -> *HyperExecute logs* -> *Corresponding jobId* on the HyperExecute automation dashboard.
+You can seamlessly navigate between JobId's and taskId's. You need to click on the *testID* to navigate from the HyperExecute logs to the Automation Dashboard.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/dashboard2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-The snapshot below shows how to navigate to the respective *testID* for viewing the Selenium logs:
+The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-## Conclusion
-By following the instructions in this documentation, you can seamlessly execute the TestNG tests on HyperExecute, leveraging its secure cloud infrastructure, advanced features, and optimized test execution workflow.
-
->
-For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
-Happy testing!
+> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -438,7 +308,7 @@ Happy testing!
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run TestNG tests on HyperExecute Grid
+      Run TestNG tests on HyperExecute
       </span>
     </li>
   </ul>

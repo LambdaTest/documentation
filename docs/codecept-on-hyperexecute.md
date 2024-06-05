@@ -53,220 +53,224 @@ slug: codecept-on-hyperexecute/
     }}
 ></script>
 
-
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
+# Running Codecept Framework Tests on HyperExecute
+CodeceptJS is a versatile JavaScript testing framework that supports Puppeteer for end-to-end testing of web applications. It introduces a human-readable syntax and a versatile architecture that allows writing tests in a natural language style.
+
+HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+
+This guide details how to execute your **Codecept** framework tests on **HyperExecute** via two different methods:
+
+- [**Using Local System**](/support/docs/JUnit-on-hyperexecute-grid/#1-testing-using-local-system) - You can use your own local machine to execute tests.
+- [**Using Gitpod Platform**](/support/docs/JUnit-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
+
+## 1. Testing Using Local System
+
+Follow the step-by-step guide to execute your test on HyperExecute.
+
+### Prerequisites
+
+To run the Tests on HyperExecute from your Local System, you are required:
+
+- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
+- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
+- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
+
+### Step 1: Configure Your Test Suite
+
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+
+:::tip Sample repo
+
+Download or Clone the code sample for the JUnit from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+
+<a href="https://github.com/LambdaTest/hyperexecute-puppeteer-codecept-sample.git" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+
+:::
+
+If you are using your own project, make sure you update the **Hub endpoint** in your tests file.
+
+By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
 
-# Run automation tests on HyperExecute using Puppeteer-CodeceptJs
-***
+<!-- Configure the desired capabilities based on your test requirements. For example: -->
 
-HyperExecute is a smart test orchestration platform to run end-to-end Puppeteer tests at the fastest speed possible. HyperExecute lets you achieve an accelerated time to market by providing a test infrastructure that offers optimal speed, test orchestration, and detailed execution logs.
+> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
 
-The overall experience helps teams test code and fix issues at a much faster pace. HyperExecute is configured using a YAML file. Instead of moving the Hub close to you, HyperExecute brings the test scripts close to the Hub! This guide will cover the basics of getting started with Puppeteer-Codecept testing on the Lambdatest HyperExecute grid.
+### Step 2: Setup the CLI in your Test Suite
 
-> HyperExecute has several state of the art features to help you optimize your testing process. Go through the [features page](/support/docs/key-features-of-hyperexecute) to take a look at all the tools that HyperExecute offers. 
+After cloning / downloading the sample repo, you need to setup the CLI and the environment variables.
 
->HyperExecute is compliant with leading security standards - SOC2, GDPR, and CCPA. Refer to [HyperExecute Getting Started Guide](/docs/getting-started-with-hyperexecute) for more information about features offered by HyperExecute.
+#### Download the HyperExecute CLI
 
-> All the code samples in this documentation can be found in the [Puppeteer-Codecept HyperExecute GitHub repository](https://github.com/LambdaTest/puppeteer-codecept-sample/). You can either download or clone the repository to run tests on the HyperExecute Grid.
+The CLI is used for triggering the tests on HyperExecute. It is recommend to download the CLI binary on the host system and keep it in the root directory of the suite to perform the tests on HyperExecute.
 
-## Gitpod
-***
+You can download the CLI for your desired platform from the below mentioned links:
 
-Follow the below steps to run Gitpod button:
-1. Click the **Open in Gitpod** button (You will be redirected to Login/Signup page).
-<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_popup.png').default} alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
-2. Login with Lambdatest credentials. You will be redirected to HyperExecute dashboard with pop-up confirming to **'Proceed'** to Gitpod editor in the new tab and current tab will show hyperexecute dashboard.
-
-[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Puppeteer&framework=Puppeteer-CodeceptJs)
-
-## Prerequisites for running Puppeteer-CodeceptJs tests on HyperExecute Grid
-***
--  **Download the *HyperExecute CLI*:**
-The *HyperExecute* CLI is used for triggering tests on HyperExecute Grid. It provides a host of other useful features that accelerate test execution. You should download the HyperExecute CLI binary on the host system for running tests on HyperExecute. Shown below is the HyperExecute CLI download location for different platforms:
-
-| Platform | HyperExecute CLI download location |
-| ---------| --------------------------- |
+| Platform | HyperExecute CLI |
+| ---------| ---------------- |
 | Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
-| macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+| MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
-For detailed information about HyperExecute CLI, please refer to [HyperExecute CLI section](/docs/getting-started-with-hyperexecute/#hyperexecute-cli-to-interact-with-hyperexecute) in the HyperExecute getting started guide.
 
-- **Configure Environment Variables:**
-Before the tests are run, please set the environment variables LT_USERNAME & LT_ACCESS_KEY from the terminal. The account details are available on your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile) page.
-For macOS:
-```bash
-export LT_USERNAME=LT_USERNAME
-export LT_ACCESS_KEY=LT_ACCESS_KEY
-```
-For Linux:
-```bash
-export LT_USERNAME=LT_USERNAME
-export LT_ACCESS_KEY=LT_ACCESS_KEY
-```
-For Windows:
-```bash
-set LT_USERNAME=LT_USERNAME
-set LT_ACCESS_KEY=LT_ACCESS_KEY
-```
-## Auto-Split Execution with Puppeteer-CodeceptJs
-***
-Auto-split execution mechanism lets you run tests at predefined concurrency and distribute the tests over the available infrastructure. Concurrency can be achieved at different levels - file, module, test suite, test, scenario, etc.
-For more information about auto-split execution, check out the [Auto-Split Getting Started Guide](/support/docs/hyperexecute-auto-split-strategy/)
+#### Setup Environment Variable
 
-### Core
-Auto-split YAML file (*yaml/win/.hyperexecute_autosplits.yaml*) in the repo contains the following configuration:
-```yaml
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+
+Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs className="docs__val">
+
+<TabItem value="bash" label="Linux / MacOS" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
+### Step 3: Configure YAML in your Test Suite
+
+Configure your YAML file as per your use cases using **key value** pairs.
+
+In this sample YAML file, we have mentioned:
+
+- **version** of the YAML file
+- **Timeouts** for executing your project
+- **Mode of execution** is [Autosplit](/support/docs/hyperexecute-auto-split-strategy/). You can also opt for [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid](/support/docs/hyperexecute-hybrid-strategy/) mode.
+- **Pre and Post** commands
+- **Reports and Artefacts** that will be generated after the completion of tests
+- and other necessary YAML Parameters
+
+```bash
+---
+version: "0.1"
+
 globalTimeout: 90
 testSuiteTimeout: 90
 testSuiteStep: 90
-```
-Global timeout, testSuite timeout, and testSuite timeout are set to 90 minutes.
-The *runson* key determines the platform (or operating system) on which the tests are executed. Here we have set the target OS as Windows.
-```yaml
-runson: win
-```
-Auto-split is set to true in the YAML file.
-```yaml
- autosplit: true
-```
-*retryOnFailure* is set to true, instructing HyperExecute to retry failed command(s). The retry operation is carried out till the number of retries mentioned in *maxRetries* are exhausted or the command execution results in a *Pass*. In addition, the concurrency (i.e. number of parallel sessions) is set to 2.
-```yaml
-retryOnFailure: true
-runson: win
-maxRetries: 2
-```
-### Pre Steps and Dependency Caching
-To leverage the advantage offered by *Dependency Caching* in HyperExecute, the integrity of *package-lock.json* is checked using the checksum functionality.
-```yaml
-cacheKey: '{{ checksum "package-lock.json" }}'
-```
-The caching advantage offered by *NPM* can be leveraged in HyperExecute, whereby the downloaded packages can be stored (or cached) in a secure server for future executions. The packages available in the cache will only be used if the checksum stage results in a Pass.
-```yaml
+
+runson: linux
+
+autosplit: true
+
+retryOnFailure: false
+maxRetries: 1
+
+concurrency: 2
+
+pre:
+  - npm install
+
+cacheKey: '{{ checksum "package.json" }}'
 cacheDirectories:
   - node_modules
-```
-The *testDiscovery* directive contains the command that gives details of the mode of execution, along with detailing the command that is used for test execution. Here, we are fetching the list of Test file scenario that would be further executed using the *value* passed in the *testRunnerCommand*
-```yaml
+
 testDiscovery:
   type: raw
   mode: dynamic
   command: grep -lr 'Scenario' *test.js
-testRunnerCommand: npx codeceptjs run $test --steps
-```
-Running the above command on the terminal will give a list of Test Scenario lines that are located in the Project folder:
-Test Discovery Output:
-react_app_test.js
-todo_test.js
-The *testRunnerCommand* contains the command that is used for triggering the test. The output fetched from the *testDiscoverer* command acts as an input to the *testRunner* command.
-```yaml
-testRunnerCommand: npx codeceptjs run $test --steps
-```
-### Artifacts Management
-The *mergeArtifacts* directive (which is by default *false*) is set to *true* for merging the artifacts and combing artifacts generated under each task.
-The *uploadArtefacts* directive informs HyperExecute to upload artifacts [files, reports, etc.] generated after task completion.  In the example, *path* consists of a regex for parsing the directory (i.e. *reports* that contains the test reports).
-```yaml
-mergeArtifacts: true
-uploadArtefacts:
-  [{
-    "name": "Reports",
-    "path": ["Reports\\"]
-  }]
-```
-HyperExecute also facilitates the provision to download the artifacts on your local machine. To download the artifacts, click on *Artifacts* button corresponding to the associated TestID.
-### Test Execution
-The CLI option *--config* is used for providing the custom HyperExecute YAML file (i.e. *yaml/.hyperexecute_autosplits.yaml*). Run the following command on the terminal to trigger the tests in JS files on the HyperExecute grid. The *--download-artifacts* option is used to inform HyperExecute to download the artifacts for the job.
-```bash
-./hyperexecute --config --verbose yaml/win/.hyperexecute_autosplits.yaml
-```
-Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution
-# Matrix Execution with Puppeteer-CodeceptJs
-Matrix multiplexing execution strategy is used for running the same tests across different test (or input) combinations. The Matrix directive in HyperExecute YAML file is a *key:value* pair where value is an array of strings.
-Also, the *key:value* pairs are opaque strings for HyperExecute. For more information about matrix multiplexing, check out the [Matrix Getting Started Guide](/support/docs/hyperexecute-matrix-multiplexing-strategy/)
-### Core
-In the current example, matrix YAML file (*yaml/hyperexecute_matrix_sample.yaml*) in the repo contains the following configuration:
-```yaml
-globalTimeout: 90
-testSuiteTimeout: 90
-testSuiteStep: 90
-```
-Global timeout, testSuite timeout, and testSuite timeout are set to 90 minutes.
-The target platform is set to Windows. Please set the *[runson]* key to *[mac]* if the tests have to be executed on the macOS platform.
-```yaml
-runson: win
-```
-Puppeteer-CodeceptJs js files in the 'Tests' folder contain the Test Scenario run on the HyperExecute grid. In the example, the Test file *tests/test_4.spec.js* run in parallel on the basis of scenario by using the specified input combinations.
-```yaml
-matrix:
-  os: [linux]
-  files: ["react_app_test.js","todo_test.js"]
-```
-The *testSuites* object contains a list of commands (that can be presented in an array). In the current YAML file, commands for executing the tests are put in an array (with a '-' preceding each item). The npx command is used to run tests in *.js* files. The tags are mentioned as an array to the *methods* key that is a part of the matrix.
-```yaml
-testSuites:
-  - npx codeceptjs run $files --steps
-```
-### Pre Steps and Dependency Caching
-Dependency caching is enabled in the YAML file to ensure that the package dependencies are not downloaded in subsequent runs. The first step is to set the Key used to cache directories.
-```yaml
-cacheKey: '{{ checksum "package-lock.json" }}'
-```
-Set the array of files & directories to be cached. In the example, all the packages will be cached in the *CacheDir* directory.
-```yaml
-cacheDirectories:
-  - node_modules
-```
-Steps (or commands) that must run before the test execution are listed in the *pre* run step. In the example, the packages listed in *requirements.txt* are installed using the *npm install* command.
-```yaml
-pre:
-  - npm install
-```
-### Artifacts Management
-The *mergeArtifacts* directive (which is by default *false*) is set to *true* for merging the artifacts and combing artifacts generated under each task.
-The *uploadArtefacts* directive informs HyperExecute to upload artifacts [files, reports, etc.] generated after task completion. In the example, *path* consists of a regex for parsing the directory (i.e. *reports* that contains the test reports).
-```yaml
-mergeArtifacts: true
-uploadArtefacts:
-  [{
-    "name": "Reports",
-    "path": ["Reports\\"]
-  }]
-```
-HyperExecute also facilitates the provision to download the artifacts on your local machine. To download the artifacts, click on Artifacts button corresponding to the associated TestID.
-## Test Execution
-The CLI option *--config* is used for providing the custom HyperExecute YAML file (i.e. *yaml/win/.hyperexecute_matrix.yaml*). Run the following command on the terminal to trigger the tests in Test file Scenario on the HyperExecute grid.
-```bash
-./hyperexecute --config --verbose yaml/win/.hyperexecute_matrix.yaml
-```
-Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution:
-## Run Puppeteer-CodeceptJs tests on Windows, Linux and Mac platforms
-The CLI option *--config* is used for providing the custom HyperExecute YAML file (i.e. *yaml/win/.hyperexecute_autosplits.yaml* for Windows and *yaml/linux/.hyperexecute_autosplits.yaml* for Linux).
-Run the following command on the terminal to trigger tests on Windows platform:
-```bash
-./hyperexecute --config --verbose yaml/win/.hyperexecute_autosplits.yaml
-```
-Run the following command on the terminal to trigger tests on Linux platform:
-```bash
-./hyperexecute --config --verbose yaml/linux/.hyperexecute_autosplits.yaml
-```
-Run the following command on the terminal to trigger tests on Mac platform:
-```bash
-./hyperexecute --config --verbose yaml/mac/.hyperexecute_autosplits.yaml
-```
-## Secrets Management
-In case you want to use any secret keys in the YAML file, the same can be set by clicking on the **Secrets** button on the dashboard.
 
-All you need to do is create an environment variable that uses the secret key:
-```yaml
-env:
-  AccessKey: ${{.secrets.AccessKey}}
+testRunnerCommand: npx codeceptjs run $test --steps
+
+jobLabel: [puppeteer-CodeceptJS, linux, autosplit]
 ```
+
+### Step 4: Execute your Test Suite
+
+> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+
+Run the below command in your terminal at the root folder of the project:
+
+```bash
+./hyperexecute --config <path_of_yaml_file>
+```
+
+OR use this command if you have not exported your username and access key in the step 2.
+
+```bash
+./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
+```
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_1.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+
+### Step 5: Monitor the Test Execution
+
+Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+### Step 6: Download Artifacts and Reports
+
+HyperExecute also facilitates the provision to download the [Artifacts](/support/docs/hyperexecute-artifacts/) and [Reports](/support/docs/hyperexecute-reports/) on your local machine. Click on the corresponding button to download your generated artifacts and reports.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+## 2. Testing Using Gitpod
+
+You can also use the Gitpod platform to execute our sample repository. It will fetch all the sample codebases and trigger the CLI to execute the tests.
+
+Follow the below steps to run Test using Gitpod:
+
+**Step 1:**  Click '**Open in Gitpod**' button. You will be redirected to Login/Signup page. This button is configured to redirect you to the Gitpod platform where you will be able to execute our sample repository.
+
+[<img alt="Run in Gitpod" width="200 px" align="center" src="https://user-images.githubusercontent.com/1688653/165307331-fbcf16b0-ce49-40f5-9f87-4f080d674624.png" />](https://hyperexecute.lambdatest.com/hyperexecute/jobs?type=gitpod&frameworkType=Puppeteer&framework=Puppeteer-CodeceptJs)
+
+**Step 2:** Login with LambdaTest credentials. Once logged in, a pop-up confirmation will appear, asking you to **'Proceed'** to the Gitpod editor in a new tab. The current tab will display the HyperExecute Dashboard.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_popup.png').default} alt="Gitpod popup" width="1919" height="878" className="doc_img"/>
+
+**Step 3:** Choose your preferred editor (we recommend VS Code Editor)
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod_config.png').default} alt="Image"  className="doc_img"/>
+
+**Step 4:**  As you are running a sample project, Fetching of the Test Scripts, [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/), [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and Triggering your tests using the `Execution Command` will be automated. 
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/gitpod2.png').default} alt="Image"  className="doc_img"/>
+
+**Step 5:**  Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
+
+:::tip
+
+You can also implement [Secret Keys](https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
+:::
+
 ## Navigation in Automation Dashboard
-HyperExecute lets you navigate from/to *Test Logs* in Automation Dashboard from/to *HyperExecute Logs*. You also get relevant get relevant Puppeteer test details like video, network log, commands, Exceptions & more in the Dashboard. Effortlessly navigate from the automation dashboard to HyperExecute logs (and vice-versa) to get more details of the test execution.
->
-For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+
+Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/build) for checking the status of the test execution.
+
+You can seamlessly navigate between JobId's and taskId's. You need to click on the *testID* to navigate from the HyperExecute logs to the Automation Dashboard.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+The snapshot below shows the videos, logs and other meta data for that specific *test_ID*
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_artifacts_2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+> For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
 Happy testing!
 
 <nav aria-label="breadcrumbs">
