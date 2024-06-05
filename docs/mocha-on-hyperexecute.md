@@ -63,12 +63,10 @@ HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers yo
 
 This guide details how to execute your **Mocha** framework tests on **HyperExecute** via two different methods:
 
-- [**Using Local System**](/support/docs/junit-on-hyperexecute-grid/#1-testing-using-local-system) - You can use your own local machine to execute tests.
-- [**Using Gitpod Platform**](/support/docs/junit-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
+- [**Using Local System**](/support/docs/mocha-on-hyperexecute/#1-testing-using-local-system) - You can use your own local machine to execute tests.
+- [**Using Gitpod Platform**](/support/docs/mocha-on-hyperexecute/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
-### Step 1: Configure Your Test Suite
-
-You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
+## 1. Testing Using Local System
 
 Follow the step-by-step guide to execute your test on HyperExecute.
 
