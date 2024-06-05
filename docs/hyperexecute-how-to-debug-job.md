@@ -46,7 +46,7 @@ The HyperExecute Dashboard provides a central view of all your test runs, includ
 ## Pre-requisites
 
 - HyperExecute Dashboard Access.
-- A [Job](/support/docs/hyperexecute-concepts/#1-jobs) is triggered on HyperExecute, and it has a `Failed` status.
+- A Job  is triggered on HyperExecute, and it has a `Failed` status.
 - Identify which [Task](/support/docs/hyperexecute-concepts/#2-tasks) has failed. Click on that task and check which of the [Stage](/support/docs/hyperexecute-concepts/#3-stage) categories is throwing an error.
 
 ## Pre Steps
