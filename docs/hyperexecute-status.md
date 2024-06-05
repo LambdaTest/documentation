@@ -16,7 +16,7 @@ keywords:
   - task status
   - list of hyperexecute status
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-concepts/
+url: https://www.lambdatest.com/support/docs/hyperexecute-status/
 site_name: LambdaTest
 slug: hyperexecute-status/
 ---
@@ -52,7 +52,7 @@ HyperExecute categorizes test execution outcomes into distinct levels, offering 
  
 All kinds of tests get executed on Hyperexecute in the form of a [`JOB`] . You can see all the executed jobs on the HyperExecute [Jobs Page](https://hyperexecute.lambdatest.com/hyperexecute). 
 
-Each job has a unique ` JOB Number ` and is executed as a group of [` Tasks `](/support/docs/hyperexecute-concepts/#2-tasks).
+Each job has a unique ` JOB Number ` and is executed as a group of [` Tasks `] .
 
 <!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/concepts/concepts1.png').default} alt="Image"  className="doc_img"/> -->
 
@@ -76,7 +76,7 @@ A Task is a further subdivision within a job, often representing the execution o
 
 <!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/concepts/concepts2.png').default} alt="Image"  className="doc_img"/> -->
 
-A [`Task`](/support/docs/hyperexecute-concepts/#2-tasks) can attain different statuses based on the completion level.
+A [`Task`]  can attain different statuses based on the completion level.
 
 | Icon | Status |
 | ------| ------ |
@@ -90,14 +90,14 @@ A [`Task`](/support/docs/hyperexecute-concepts/#2-tasks) can attain different st
 
 
 ## 3. Stage Level Status
-A Tasks can have multiple [`stages`](/support/docs/hyperexecute-concepts/#2-stages) which are usually divided into 3 categories:
+A Tasks can have multiple stages which are usually divided into 3 categories:
 1. **Pre Steps** - The stages/actions that are performed before Test execution begins, like installation of dependencies etc.
 2. **Scenarios** - Test execution stages.
 3. **Post Steps** - The stages/actions that are performed after Test execution is completed, like creation of reports, artifacts etc.
 
 <!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/concepts/task.png').default} alt="Image" className="doc_img"/> -->
 
-A [`Stage`](/support/docs/hyperexecute-concepts/#2-stages) can attain different statuses based on the completion level.
+A Stage can attain different statuses based on the completion level.
 
 | Icon | Status |
 | ---------| :---- |
@@ -114,7 +114,7 @@ A [`Stage`](/support/docs/hyperexecute-concepts/#2-stages) can attain different 
 
 This section would show all the test suites or test scenarios that have been executed in the Job under the selected Task.
 
-A [`Scenario`](/support/docs/hyperexecute-concepts/#4-scenarios) can attain different statuses based on the completion level.
+A scenario can attain different statuses based on the completion level.
 
 | Icon | Status |
 |------|------|
@@ -131,7 +131,7 @@ A scenario can have multiple tests (browser sessions) associated to it.
 You can also see the history of a particular test to understand since when this test case started failing for instance.
 <!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/concepts/hyperexecute-test-history.png').default} alt="Image" className="doc_img"/> -->
 
-A [`Test`](/support/docs/hyperexecute-concepts/#5-tests) can attain different statuses based on the completion level.
+A Test can attain different statuses based on the completion level.
 
 | Icon | Status |
 |------|------|

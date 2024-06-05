@@ -41,7 +41,7 @@ slug: hyperexecute-knowledge-base/
 # HyperExecute Knowledge Base
 
 <div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-concepts/">Concepts</a>
+<a href="/support/docs/hyperexecute-status/">Status</a>
 </div>
 
 <div className="download_btn mb-10">

@@ -81,10 +81,10 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
       <p>Learn about the different configurations & creating a YAML suited for your needs.</p>
     </div>
   </a>
-  <a href="/support/docs/hyperexecute-concepts/">
+  <a href="/support/docs/hyperexecute-status/">
     <div className="support_inners">
-      <h3>Concepts</h3>
-      <p>Everything you need to know about HyperExecute concepts and how it works.</p>
+      <h3>Status</h3>
+      <p>Everything you need to know about HyperExecute status and what does it implies.</p>
     </div>
   </a>
   <a href="/support/docs/key-features-of-hyperexecute/">

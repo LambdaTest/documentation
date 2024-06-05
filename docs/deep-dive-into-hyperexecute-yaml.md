@@ -213,11 +213,11 @@ Set status of scenario based on framework tests status. For instance, if you run
 ***
 
 ## `testSuiteTimeout`
-It is used to set the timeout on all [`scenario`](/support/docs/hyperexecute-concepts/#3-stages) stages in a task. If defined, your complete test suite should get executed within this time. Its max value is 150 minutes.  If you want to increase this time beyond the default maximum limit of 150 minutes, you need to contact the support team.
+It is used to set the timeout on all scenario  stages in a task. If defined, your complete test suite should get executed within this time. Its max value is 150 minutes.  If you want to increase this time beyond the default maximum limit of 150 minutes, you need to contact the support team.
 ```yaml
 testSuiteTimeout: 30   
 ```
-In the above example, your [`scenario`](/support/docs/hyperexecute-concepts/#3-stages) stage should finish within 30 mins otherwise the `task` and [`Job`]  would get marked as **timed out** after 30 minutes of execution.
+In the above example, your scenario  stage should finish within 30 mins otherwise the `task` and [`Job`]  would get marked as **timed out** after 30 minutes of execution.
 
 ***
 ## `testSuiteStep`
