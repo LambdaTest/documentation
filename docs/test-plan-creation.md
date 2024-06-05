@@ -74,15 +74,15 @@ The process of creating a test plan is user-friendly and intuitive. Users can se
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/select-any-test-case.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-6. It is recommended to add details such as priority, assignee and configurations for the test cases to create a build. 
+6. It is recommended to add details such as priority, assignee and configurations for the test cases to create a build. You can also add multiple test cases from the **Add Test Cases** option available on the top right hand side.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/add-details.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-7. You can also add multiple test cases from the **Add Test Cases** option available on the top right hand side.
+7. Select all the test cases together and add bulk assignees and configurations or click on **Select Configuration**.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/add-multiple-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/add-bulk-details.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-8. Click on **Select Configuration** where you can select a single configuration or multiple configurations for any of your test cases. 
+8. Choose a single configuration or multiple configurations for any of your test cases.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/select-configuration.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
