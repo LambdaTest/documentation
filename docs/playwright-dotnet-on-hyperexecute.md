@@ -63,8 +63,8 @@ HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers yo
 
 This guide details how to execute your **DotNet** framework tests on **HyperExecute** via two different methods:
 
-- [**Using Local System**](/support/docs/JUnit-on-hyperexecute-grid/#1-testing-using-local-system) - You can use your own local machine to execute tests.
-- [**Using Gitpod Platform**](/support/docs/JUnit-on-hyperexecute-grid/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
+- [**Using Local System**](/support/docs/playwright-dotnet-on-hyperexecute/#1-testing-using-local-system) - You can use your own local machine to execute tests.
+- [**Using Gitpod Platform**](/support/docs/playwright-dotnet-on-hyperexecute/#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
 ## 1. Testing Using Local System
 
