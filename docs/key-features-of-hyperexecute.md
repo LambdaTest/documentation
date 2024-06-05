@@ -184,7 +184,7 @@ HyperExecute prioritises the safety and security of your data above everything e
 
 For enterprises that want to keep everything behind their own firewalls, HyperExecute comes with private cloud facilities. You can set up your own cloud runners and storage which ensures that no data leaves your organisation’s firewalls. 
 
-You can use HyperExecute’s [Quickstart feature](https://hyperexecute.lambdatest.com/quickstart) to run your first test, and go through our [Concepts page](/support/docs/hyperexecute-concepts/) to understand the ins and out of HyperExecute. 
+You can use HyperExecute’s [Quickstart feature](https://hyperexecute.lambdatest.com/quickstart) to run your first test, and go through our Concepts page to understand the ins and out of HyperExecute. 
 
 [Frequently asked questions](/support/docs/hyperexecute-feature-faqs/) about HyperExecute Features.
 
