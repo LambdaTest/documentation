@@ -50,13 +50,13 @@ HyperExecute categorizes test execution outcomes into distinct levels, offering 
 
 ## 1. Job Level Status
  
-All kinds of tests get executed on Hyperexecute in the form of a [`JOB`] . You can see all the executed jobs on the HyperExecute [Jobs Page](https://hyperexecute.lambdatest.com/hyperexecute). 
+All kinds of tests get executed on Hyperexecute in the form of a Job. You can see all the executed jobs on the HyperExecute [Jobs Page](https://hyperexecute.lambdatest.com/hyperexecute). 
 
 Each job has a unique ` JOB Number ` and is executed as a group of [` Tasks `] .
 
 <!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/concepts/concepts1.png').default} alt="Image"  className="doc_img"/> -->
 
-A [`Job`]  can attain different statuses based on the completion level.
+A Job  can attain different statuses based on the completion level.
 
 | Icon | Status |
 |------|------|
@@ -76,7 +76,7 @@ A Task is a further subdivision within a job, often representing the execution o
 
 <!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/concepts/concepts2.png').default} alt="Image"  className="doc_img"/> -->
 
-A [`Task`]  can attain different statuses based on the completion level.
+A Task can attain different statuses based on the completion level.
 
 | Icon | Status |
 | ------| ------ |
