@@ -86,9 +86,9 @@ pre:
 
 ## `globalTimeout`
 
-The `globalTimeout` value determines the maximum duration (in minutes) of a [`Job`](/support/docs/hyperexecute-concepts/#1-jobs). It can be set between 1 and 150 minutes, and has a default value of 90 minutes. 
+The `globalTimeout` value determines the maximum duration (in minutes) of a [`Job`] . It can be set between 1 and 150 minutes, and has a default value of 90 minutes. 
 
-For example, if you set the `globalTimeout` to 120 minutes, a [`Job`](/support/docs/hyperexecute-concepts/#1-jobs) that exceed this duration will be automatically terminated. If you’re expecting that running all your test-cases despite parallelism is going to take more than 90 mins, set it to an appropriate value, for example, 120. If you have tests that run for longer than the maximum limit of 150 minutes, you need to get in touch with our support team.
+For example, if you set the `globalTimeout` to 120 minutes, a [`Job`]  that exceed this duration will be automatically terminated. If you’re expecting that running all your test-cases despite parallelism is going to take more than 90 mins, set it to an appropriate value, for example, 120. If you have tests that run for longer than the maximum limit of 150 minutes, you need to get in touch with our support team.
 ```yaml
 globalTimeout: 90   
 ```
@@ -217,7 +217,7 @@ It is used to set the timeout on all [`scenario`](/support/docs/hyperexecute-con
 ```yaml
 testSuiteTimeout: 30   
 ```
-In the above example, your [`scenario`](/support/docs/hyperexecute-concepts/#3-stages) stage should finish within 30 mins otherwise the `task` and [`Job`](/support/docs/hyperexecute-concepts/#1-jobs) would get marked as **timed out** after 30 minutes of execution.
+In the above example, your [`scenario`](/support/docs/hyperexecute-concepts/#3-stages) stage should finish within 30 mins otherwise the `task` and [`Job`]  would get marked as **timed out** after 30 minutes of execution.
 
 ***
 ## `testSuiteStep`
