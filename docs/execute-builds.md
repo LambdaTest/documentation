@@ -62,27 +62,37 @@ Executing a build in Test Manager initiates the testing phase for your selected 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/run-test-case.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-3. Upon execution, the screen redirects to where the test case runs based on the selected configuration. You will see a box shown in the top right hand side, click on **Expand details** to get an overview of the test steps for the test case. 
+3. Upon execution, the screen redirects to the test case location based on the selected configuration. A notification box appears in the top right-hand corner. After each test step, a screenshot is automatically captured. You can also manually capture additional screenshots.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/capture-screenshots.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+4. Click on Expand details to view the test steps for the test case. The image labeled as 'test evidence' is captured automatically, and the 'recorded media' displays the screenshots we have captured.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/expand-details.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-4. The status for each test step for test case 1 must be marked as passed or failed in the **Test Step Execution Summary** box along with remarks. Also mark the status as passed in the top right hand side.
+5. The status for each test step for test case 1 must be marked as passed or failed in the **Test Step Execution Summary** box along with remarks. Also mark the status as passed in the top right hand side.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-step-execution-summary.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-5. Switch configurations to proceed with the **Next Test Case**.
+6. Switch configurations to proceed with the **Next Test Case**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/switch-configurations.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-6. If you prefer not to execute the test case based on its configuration, you can select the test case and mark its status as failed, passed, or skipped. In the below image, step 1 is marked as passed, step 2 as failed, and step 3 as skipped. After you finish marking the status for each step, set the overall status of the test case to **Passed**.
+7. If you prefer not to execute the test case based on its configuration, you can select the test case and mark its status as failed, passed, or skipped. In the below image, step 1 is marked as passed, step 2 as failed, and step 3 as skipped. After you finish marking the status for each step, set the overall status of the test case to **Passed**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-status.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-7. All the selected test cases have now been executed based on their configuration and assignee. However, test case 1 and 2 that have not been executed through LT, will have a symbol reflecting it.
+8. All selected test cases have been executed according to their assigned configurations and assignees. Test cases 1 and 2, which were not executed through LambdaTest, will display a specific symbol to indicate this. You can update the overall progress status in the top right corner.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/selected-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
+9. Click on the test case executed to have a detailed view of the test steps. 
 
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/detailed-test-cases-view.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+10. The status of the number of builds passed, failed, skipped or not started can be viewed as shown in the below image
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/status-of-builds.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 
 <nav aria-label="breadcrumbs">
