@@ -830,6 +830,11 @@ module.exports = {
         items: [
           {
             type: "doc",
+            label: "Release Notes 2.3.6",
+            id: 'hyperexecute-release-notes-2-3-6'
+          },
+          {
+            type: "doc",
             label: "Release Notes 2.3.3",
             id: 'hyperexecute-release-notes-2-3-3'
           },
