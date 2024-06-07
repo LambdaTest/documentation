@@ -1,8 +1,8 @@
 ---
 id: testng-framework
-title: TestNG with Selenium
+title: Execute Selenium Tests With TestNG
 sidebar_label: TestNG
-description: Now you can run your automation scripts using Selenium with TestNG on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Your guide to running tests using TestNG on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
 keywords:
   - java selenium
   - testng selenium
@@ -49,13 +49,13 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Tutorial to run your first test on Lambdatest
+# Selenium With TestNG Tutorial
 
 ---
 
-In this topic, you will learn how to configure and run your Java automation testing scripts on [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using **Java** framework **TestNG**.
+In this topic, you will learn how to configure and run tests using **TestNG** on LambdaTest's [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
 
-## Objective
+## Objectives
 
 ---
 
