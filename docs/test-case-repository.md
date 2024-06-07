@@ -56,7 +56,7 @@ A test case repository serves as a centralized location for all test cases withi
 
 2. It offers search and filter capabilities, enabling users to efficiently locate specific test cases. Use the search bar and filter options to locate specific test cases based on keywords such as status, creator, tags. This functionality enhances user productivity by quickly narrowing down the relevant test cases.
 
-3. From the repository, you can view, edit, delete, or execute test cases.
+3. From the repository, you can view, edit, delete and filter test cases.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-repository.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
