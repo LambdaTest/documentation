@@ -1,8 +1,8 @@
 ---
-id: test-case-creation
-title: Test Case Creation
+id: manual-test-case-creation
+title: Manual Test Case Creation
 hide_title: true
-sidebar_label: Test Case Creation
+sidebar_label: Manual Test Case Creation
 description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
 keywords:
   - test manager
@@ -17,7 +17,7 @@ keywords:
   - executing build
   - build history
   - real time testing using test manager
-url: https://www.lambdatest.com/support/docs/test-case-creation/
+url: https://www.lambdatest.com/support/docs/manual-test-case-creation/
 site_name: LambdaTest
 slug: test-case-creation/
 ---
@@ -39,20 +39,20 @@ slug: test-case-creation/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Test Case Creation",
-          "item": "https://www.lambdatest.com/support/docs/test-case-creation/"
+          "name": "Manual Test Case Creation",
+          "item": "https://www.lambdatest.com/support/docs/manual-test-case-creation/"
         }]
       })
     }}
 ></script>
 
-# Test Case Creation
+# Manual Test Case Creation
 
-Test Manager streamlines the process of creating, managing, and editing test cases. It enables users to develop both manual and automated test cases, facilitating efficient management of all testing activities from a single platform.
+Test Manager streamlines the process of creating, managing, and editing test cases. It enables users to develop manual test cases, facilitating efficient management of all testing activities from a single platform.
 
 **Steps for Creating Manual Test Cases**
 
-1. After selecting your project, you'll be prompted to type your test case title or press Tab to generate the title using AI, in order to create a new test case. You can also create a folder to organize and store the test cases.
+1. After selecting your project, you'll be prompted to type your test case title to create a new test case. You can also create a folder to organize and store the test cases.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-title.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
@@ -60,7 +60,7 @@ Test Manager streamlines the process of creating, managing, and editing test cas
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/created-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-3. To add a new test case, click on the **Add Test Case** button on the right side. Use **Command + \ for Mac** and **Control + \ for Windows** to create a new test case, and press Tab to generate the title using AI.
+3. To add a new test case, click on the **Add Test Case** button on the right side. Use **Command + \ for Mac** and **Control + \ for Windows** to create a new test case.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/new-test-case.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
@@ -80,45 +80,24 @@ Test Manager streamlines the process of creating, managing, and editing test cas
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-details.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-8. **Execution History** provides an overview of all test cases executed, whether manually or through automation. It includes detailed information such as resolution, assignee name, date, and the duration of each test case run.
+8. **Execution History** provides an overview of all test cases executed, whether manually or through automation. It includes detailed information such as resolution, assignee name, date, and the duration of each test case run.  
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/execution-history.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-9. In the **Issues** section, link Jira by entering the issue key or URL. This allows you to view the issue name, ID, type, status, priority, and assignee. You can also unlink the issue if necessary. 
-
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/link-issues.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
-
-10. Test cases typically consist of multiple steps. You can add these steps using one of two templates: **Manual Test** Steps or **BDD Scenarios**.
+9. Test cases typically consist of multiple steps. You can add these steps using the **Manual Test** steps
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-templates.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-11. Add steps to your test cases, each with a title, and an optional outcome field. Attachments can be added to any step if required.
+10. Add steps to your test cases, each with a title, and an optional outcome field. Attachments can be added to any step if required.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-steps.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-12. You can also add an extra step by clicking Generate or Press Tab allowing AI to create the test step.
+11. Test cases can be reordered using drag and drop. You can also modify a test step by clicking the edit option on the right-hand side. Steps can be deleted by selecting the **Delete** option.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/generate-test-steps.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
-
-13. Test cases can be reordered using drag and drop. You can also modify a test step by clicking the edit option on the right-hand side. Steps can be deleted by selecting the **Delete** option.
-
-14. Click on **Save Test Case** to create your test steps and update your test case. 
+12. Click on **Save Test Case** to create your test steps and update your test case. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/save-test-case.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-**Steps for Creating Automated Test Cases**
-
-1. Start by running the automation script, then navigate to the automation dashboard upon completion. You will find an 'Unlink Test' toggle where the automation test cases are recorded. 
-
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/automated-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
-
-2. Click on Link Test Case in case you want to browse the test cases or add new test cases for your automation script. 
-
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/link-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
-
-3. Navigate to the test case section within the test manager to access the BDD Scenarios template. This scenario is automatically generated by AI from the command logs of the linked automated test run.
-
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd-scenarios.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 
 
@@ -136,7 +115,7 @@ Test Manager streamlines the process of creating, managing, and editing test cas
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Test Case Creation
+       Manual Test Case Creation
       </span>
     </li>
   </ul>

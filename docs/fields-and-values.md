@@ -48,6 +48,8 @@ slug: fields-and-values/
 
 # Fields and Values
 
+Explore the structured organization of your test projects through the use of Fields and Values, accessible via the Project's dashboard. Dive into System Fields for essential categorizations or enhance your project's flexibility with Custom Fields to improve your testing workflows.
+
 1. In the Project's dashboard, click on **Settings** in the top right hand side.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/project-dashboard.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
