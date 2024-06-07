@@ -1,8 +1,8 @@
 ---
 id: junit-frameworks
-title: JUnit with Selenium
+title: Execute Selenium Tests With JUnit
 sidebar_label: JUnit
-description: Now you can run your automation scripts using Selenium with JUnit on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Your guide to running tests using JUnit on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
 keywords:
   - java selenium
   - java selenium tutorial
@@ -48,13 +48,13 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-# Tutorial to Run Your First Test on LambdaTest
+# Selenium With JUnit Tutorial
 
 ---
 
-In this topic, you will learn how to configure and run your Java automation testing scripts on [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using **Java** framework **JUnit**.
+In this topic, you will learn how to configure and run tests using **JUnit** on LambdaTest's [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
 
-## Objective
+## Objectives
 
 ---
 

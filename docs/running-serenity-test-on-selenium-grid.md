@@ -1,8 +1,8 @@
 ---
 id: running-serenity-test-on-selenium-grid
-title: Serenity with Selenium
+title: Execute Selenium Tests With Serenity BDD
 sidebar_label: Serenity BDD
-description: This document will help you run Serenity automation tests over LambdaTest Grid. LambdaTest enables you to run your Serenity automated tests across 3000+ real browsers for desktop &amp; mobile combination on its cloud Selenium Grid.
+description: Your guide to running tests using Serenity BDD on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
 keywords:
   - serenity selenium
   - serenity bdd
@@ -44,11 +44,11 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-# Tutorial to Run Your First Test on LambdaTest
+# Selenium With Serenity BDD Tutorial
 
 ---
 
-In this topic, you will learn how to configure and run your Java automation testing scripts on [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using **Java** framework **Serenity**.
+In this topic, you will learn how to configure and run tests using **Gauge** on LambdaTest's [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
 
 ## Objective
 
