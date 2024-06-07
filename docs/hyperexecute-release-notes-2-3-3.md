@@ -65,8 +65,3 @@ partialReports:
 ```
 
 > 📕 Read the documentation - [Test Reports](/support/docs/hyperexecute-reports/) to learn more about it.
-
-## Browser Support in HyperExecute 🚀
-
-HyperExecute has released the support for new version of browsers (Chrome, Edge and Firefox) 
-
