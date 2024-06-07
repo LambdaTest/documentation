@@ -1458,9 +1458,18 @@ module.exports = {
         collapsed: true,
         label: "Test cases",
         items: [
-              "test-case-creation",
+              "manual-test-case-creation",
+              "manual-test-cases-with-ai",
               "test-case-import",
               "test-case-repository",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Automated Test Cases",
+        items: [
+              "automated-test-cases-with-ai",
         ],
       },
       {
@@ -1481,6 +1490,14 @@ module.exports = {
               "build-history",
               "build-details",
         ],
+      },
+        {
+          type: "category",
+          collapsed: true,
+          label: "Jira Integration",
+          items: [
+                "link-jira-issues-with-test-manager",
+          ],
       }, 
     ]
   ],
