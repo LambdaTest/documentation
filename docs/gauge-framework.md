@@ -1,8 +1,8 @@
 ---
 id: gauge-frameworks
-title: Gauge with Selenium
+title: Execute Selenium Tests With Gauge
 sidebar_label: Gauge
-description: This document will help you execute automated browser testing using Gauge scripts in Java, over the LambdaTest Selenium Grid of 3000+ real browsers, and OS.
+description: Your guide to running tests using Gauge on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
 keywords:
   - gauge automation testing
   - gauge scripts
@@ -48,13 +48,13 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-# Tutorial to Run Your First Test on LambdaTest
+# Selenium With Gauge Test Tutorial
 
 ---
 
-In this topic, you will learn how to configure and run your Java automation testing scripts on [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using **Gauge framework**. Like Selenium, Gauge also offers support for various languages such as **JavaScript, C#, Ruby, Python, and Java**.
+In this topic, you will learn how to configure and run tests using **Gauge** on LambdaTest's [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
 
-## Objective
+## Objectives
 
 ---
 

@@ -1,8 +1,8 @@
 ---
 id: java-framework
-title: Java with Selenium
+title: Execute Selenium Tests With Java
 sidebar_label: Java
-description: Complete guide to running your first Java Selenium automated test scripts on LambdaTest Selenium Grid cloud. Test on 3000+ different desktop and mobile browsers.
+description: Your guide to running tests using Java on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
 keywords:
   - java selenium
   - java selenium tutorial
@@ -45,13 +45,13 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-# Tutorial to run your first test on LambdaTest
+# Selenium With Java Tutorial
 
 ---
 
-In this topic, you will learn how to configure and run your Java automation testing scripts on [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation).
+In this topic, you will learn how to configure and run tests using **Java** on LambdaTest's [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
 
-## Objective
+## Objectives
 
 ---
 
