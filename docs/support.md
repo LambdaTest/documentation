@@ -211,9 +211,11 @@ import NewTag from '../src/component/newTag';
        <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/testing-locally-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Test Manager</h2>
       <div className="home_inners"> 
         <a href="/support/docs/create-projects/"><p className="p_home_inners">Create Projects</p></a>
-        <a href="/support/docs/test-case-creation/"><p className="p_home_inners">Test Case Creation</p></a>
+        <a href="/support/docs/manual-test-case-creation"><p className="p_home_inners">Manual Test Cases</p></a>
+        <a href="/support/docs/automated-test-cases-with-ai/"><p className="p_home_inners">Automated Test Cases</p></a>
         <a href="/support/docs/test-plan-creation/"><p className="p_home_inners">Test Plan Creation</p></a>
-        <a href="/support/docs/build-creation/"><p className="p_home_inners">Build Creation</p></a>
+        <a href="/support/docs/build-creation/"><p className="p_home_inners">Builds</p></a>
+        <a href="/support/docs/link-jira-issues-with-test-manager/"><p className="p_home_inners">Jira Integration</p></a>
       </div>
     </div>
 </div>
