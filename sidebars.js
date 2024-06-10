@@ -1478,6 +1478,7 @@ module.exports = {
         label: "Test Plan",
         items: [
               "test-plan-creation",
+              "build-history",
         ],
       },
       {
@@ -1487,7 +1488,6 @@ module.exports = {
         items: [
               "build-creation",
               "execute-builds",
-              "build-history",
               "build-details",
         ],
       },
