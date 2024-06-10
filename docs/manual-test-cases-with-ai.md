@@ -50,7 +50,7 @@ Test Manager enhances the process of manual test case creation by integrating AI
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-title.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-2. The test case is then created, and you will be redirected to a screen listing all the  test cases created. 
+2. The test case is then created, redirecting to a screen listing all the test cases created. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/created-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
@@ -58,15 +58,11 @@ Test Manager enhances the process of manual test case creation by integrating AI
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/new-test-case.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-4. You can now view all created test cases and filter them based on status, creator, and tags.
-
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/filter-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
-
-5. Add steps to your test cases by clicking Generate or Press Tab allowing AI to create the test step.
+4. Add steps to your test cases by clicking **Generate** or **Press Tab** allowing AI to create the test step.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/generate-test-steps.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-6. Click on **Save Test Case** to create your test steps and update your AI generated test cases. 
+5. Click on **Save Test Case** to create the test steps and update your AI generated test cases. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/save-test-case.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
