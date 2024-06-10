@@ -56,7 +56,7 @@ Explore the structured organization of your test projects through the use of Fie
 
 2. You will be able to view the **System Fields** and **Custom Fields**.
 
-- System Fields is a default feature provided by LambdaTest that includes standard fields like ‘Priority’, ‘Status’, and ‘Type’. These fields help organize and track your test cases. They can be seamlessly integrated into your test management process and customized by adding values. To do so, simply click on any field and select 'Add Value'.
+- System Fields is a default feature provided by LambdaTest that includes standard fields like **Priority**, **Status**, and **Type**. These fields help organize and track your test cases. They can be seamlessly integrated into your test management process and customized by adding values. To do so, simply click on any field and select **Add Value**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/system-fields.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 

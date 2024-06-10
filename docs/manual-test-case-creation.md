@@ -68,7 +68,7 @@ Test Manager streamlines the process of creating, managing, and editing test cas
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/multiple-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-5. You can now view all created test cases and filter them based on status, creator, and tags.
+5. You can now view all created test cases and filter them based on **Status**, **Creator**, and **Tags**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/filter-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
@@ -78,7 +78,7 @@ Test Manager streamlines the process of creating, managing, and editing test cas
 
 7. Upon selecting a test case, you will be able to view a section where **Test Details**, **Execution History** and **Issues** are displayed. Enter the test case details screen, add information such as Test Name, Description, Precondition, Type, Status, Priority, Tag(s), and Add attachments if necessary. 
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-details.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-details-information.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 8. **Execution History** provides an overview of all test cases executed, whether manually or through automation. It includes detailed information such as resolution, assignee name, date, and the duration of each test case run.  
 
