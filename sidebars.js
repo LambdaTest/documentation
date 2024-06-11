@@ -1425,6 +1425,80 @@ module.exports = {
     ]
   ],
 
+
+  TestManagerSidebar: [
+    {
+      type: 'link',
+      label: '<- Back',
+      href: '/docs/',
+      customProps: {
+      className: 'back-to-main-menu'
+      },
+    },
+    [
+      {
+        type: "doc",
+        label: "Introduction to Test Manager",
+        id: "test-manager",
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Projects",
+        items: [
+              "create-projects",
+              "fields-and-values",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test cases",
+        items: [
+              "manual-test-case-creation",
+              "manual-test-cases-with-ai",
+              "test-case-import",
+              "test-case-repository",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Automated Test Cases",
+        items: [
+              "automated-test-cases-with-ai",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test Plan",
+        items: [
+              "test-plan-creation",
+              "build-history",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Build",
+        items: [
+              "build-creation",
+              "execute-builds",
+              "build-details",
+        ],
+      },
+        {
+          type: "category",
+          collapsed: true,
+          label: "Jira Integration",
+          items: [
+                "link-jira-issues-with-test-manager",
+          ],
+      }, 
+    ]
+  ],
+  
   RealDeviceSidebar: [
     {
       type: 'link',
