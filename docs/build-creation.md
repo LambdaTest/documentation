@@ -54,15 +54,15 @@ Creating a build in Test Manager is an important step that helps test plan from 
 
 **Steps for Creating a Build**
 
-1. Create a build for the test plan by selecting the Create Build button that is provided in the test plan section. Alternatively, navigate to the section where builds are managed within your project and click on **Create Build**.
+1. Create a build for the test plan by clicking the Create Build button in the test plan section. Alternatively, navigate to the builds section and click on **Create Build**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/create-build.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-2. Choose the test plan that will be executed as part of this build and enter relevant information such as “Build Name”, “Tag(s), and select **Create**.
+2. Choose the test plan that will be executed as part of this build and enter relevant information such as **Build Name**, **Tag(s)**, and select **Create**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/build-information.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-3. The build is now created. Enter details to mark status for various credentials such as Status and Assignee.
+3. The build is now created. Enter details to mark status for various credentials such as **Status** and **Assignee**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/build-is-created.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 

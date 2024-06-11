@@ -60,11 +60,11 @@ Explore the structured organization of your test projects through the use of Fie
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/system-fields.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-- Custom Fields enables users to store additional information beyond system fields. With custom fields, you can create a new field by entering the required information.
+- Custom Fields enables users to store additional information beyond system fields. To create a new field, enter the **Type**, **Name**, **Placeholder** and **Mark as Required**. Optionally, **Apply to all future projects**, then click **Create**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/custom-fields.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-3. You can also link a single or multiple projects of your choice to the custom fields.
+3. You can also link a single or multiple projects of your choice to the custom fields and click on **Save changes**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/link-projects.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 

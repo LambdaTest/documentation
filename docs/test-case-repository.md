@@ -52,9 +52,9 @@ A test case repository serves as a centralized location for all test cases withi
 
 **Navigating the Test Case Repository**
 
-1. Within your project, navigate to the test cases section to view the repository. It offers search and filter capabilities, allowing for efficient location of specific test cases. Utilize the search bar and filter options to locate the desired test cases easily.
+1. Within your project, navigate to the test cases section to view the repository. Use the search bar and filter options for efficient location of specific test cases.
 
-2. By clicking on **Status** you can filter test cases by their current state - Draft, Open or Closed.
+2. By clicking on **Status**, filter the test cases by their current state - Draft, Open or Closed.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/status-repository.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
@@ -62,11 +62,11 @@ A test case repository serves as a centralized location for all test cases withi
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/creation-repository.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-4. You can also select a test case based on its **tags** which helps categorize and access tests more efficiently based on specific criteria. 
+4. Select test cases based on **Tags**, which helps categorize and access tests more efficiently according to specific criteria. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/tags-repository.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-5. Lastly, you have the flexibility to can **Edit** or **Delete** the test cases enabling easy management and updates to your testing workflow.
+5. Lastly, there's flexibility to **Edit** or **Delete** the test cases enabling easy management and updates to your testing workflow.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/other-filters.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
