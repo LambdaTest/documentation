@@ -110,8 +110,7 @@ tunnelOpts:
 
 preDirectives:
   commands:
-  - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install 
-  - -DproxyHost=${LT_PROXY_HOST} -DproxyPort=${LT_PROXY_PORT}
+  - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install -DproxyHost=${LT_PROXY_HOST} -DproxyPort=${LT_PROXY_PORT}
 ```
 
 > **Note**: The variables ‘LT_PROXY_HOST’ and ‘LT_PROXY_PORT’ are exposed with the tunnel proxy value by default on HyperExecute machines when the tunnel flag is set to _true_ in the HyperExecute YAML. 
