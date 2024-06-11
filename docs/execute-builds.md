@@ -54,7 +54,7 @@ Executing a build in Test Manager initiates the testing phase for your selected 
 
 **Steps for Execution of a Build**
 
-1. Click on the build that you created. You can execute the build for which the assignee and configuration is added and click on **Run Build** presented on the right side to execute all the test cases in one go.
+1. Click on the created build. To execute it, ensure the **Status** and **Assignee** are added, then click **Run Build** on the right side to execute all test cases at once.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/run-build.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
@@ -62,15 +62,15 @@ Executing a build in Test Manager initiates the testing phase for your selected 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/run-test-case.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-3. Upon execution, the screen redirects to the test case location based on the selected configuration. A notification box appears in the top right-hand corner. After each test step, a screenshot is automatically captured. You can also manually capture additional screenshots.
+3. Upon execution, the screen redirects to the test case location based on the selected configuration. A notification box appears in the top right-hand corner. After each test step, a screenshot is automatically captured, with the option to manually capture additional screenshots.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/capture-screenshots.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-4. Click on Expand details to view the test steps for the test case. The image labeled as 'test evidence' is captured automatically, and the 'recorded media' displays the screenshots we have captured.
+4. Click on **Expand details** to view the test steps for the test case. The image labeled as **Test Evidence** is captured automatically, and the **Recorded Media** displays the screenshots captured by users.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/expand-details.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-5. The status for each test step for test case 1 must be marked as passed or failed in the **Test Step Execution Summary** box along with remarks. Also mark the status as passed in the top right hand side.
+5. The status for each test step for **test case 1** must be marked as Passed or Failed in the **Test Step Execution Summary** box along with remarks. Also mark the status as **Passed** in the top right hand side.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-step-execution-summary.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
@@ -78,19 +78,19 @@ Executing a build in Test Manager initiates the testing phase for your selected 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/switch-configurations.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-7. If you prefer not to execute the test case based on its configuration, you can select the test case and mark its status as failed, passed, or skipped. In the below image, step 1 is marked as passed, step 2 as failed, and step 3 as skipped. After you finish marking the status for each step, set the overall status of the test case to **Passed**.
+7. If not executing the test case based on its configuration, select the test case and mark its status as Passed, Failed, or Skipped. In the image below, step 1 is marked as passed, step 2 as failed, and step 3 as skipped.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-status.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-8. All selected test cases have been executed according to their assigned configurations and assignees. Test cases 1 and 2, which were not executed through LambdaTest, will display a specific symbol to indicate this. You can update the overall progress status in the top right corner.
+8. All selected test cases have been executed according to their configurations and assignees. Test cases 1 and 2, not executed through LambdaTest, will display a symbol indicating the same. Update the progress status in the top right corner.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/selected-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-9. Click on the test case executed to have a detailed view of the test steps. 
+9. Click on the test case executed to have a detailed view of the **Test Steps**. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/detailed-test-cases-view.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-10. The status of the number of builds passed, failed, skipped or not started can be viewed as shown in the below image
+10. The status of the number of builds **Passed**, **Failed**, **Skipped** or **Not Started** can be viewed as shown in the below image
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/status-of-builds.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 

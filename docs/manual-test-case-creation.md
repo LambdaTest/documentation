@@ -19,7 +19,7 @@ keywords:
   - real time testing using test manager
 url: https://www.lambdatest.com/support/docs/manual-test-case-creation/
 site_name: LambdaTest
-slug: test-case-creation/
+slug: manual-test-case-creation/
 ---
 
 <script type="application/ld+json"
@@ -52,7 +52,7 @@ Test Manager streamlines the process of creating, managing, and editing test cas
 
 **Steps for Creating Manual Test Cases**
 
-1. After selecting your project, you'll be prompted to type your test case title to create a new test case. You can also create a folder to organize and store the test cases.
+1. After selecting your project, type your test case title to create a new test case. You can also create a folder to organize and store the test cases.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-title.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
@@ -68,33 +68,31 @@ Test Manager streamlines the process of creating, managing, and editing test cas
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/multiple-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-5. You can now view all created test cases and filter them based on **Status**, **Creator**, and **Tags**.
-
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/filter-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
-
-6. Organize your test cases efficiently by creating folders. Add existing test cases to the folders, or create new folders and subfolders to meet your specific needs. 
+5. Organize your test cases efficiently by creating folders. Add existing test cases to the folders, or create new folders and subfolders to meet your specific needs. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/add-test-cases-to-folders.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-7. Upon selecting a test case, you will be able to view a section where **Test Details**, **Execution History** and **Issues** are displayed. Enter the test case details screen, add information such as Test Name, Description, Precondition, Type, Status, Priority, Tag(s), and Add attachments if necessary. 
+6. Upon selecting a test case, you will be able to view a section where **Test Details**, **Execution History** and **Issues** are displayed. Enter the test case details screen, add information such as **Test Name**, **Description**, **Precondition**, **Type**, **Status**, **Priority**, **Tag(s)**, and add attachments if necessary. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-details-information.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-8. **Execution History** provides an overview of all test cases executed, whether manually or through automation. It includes detailed information such as resolution, assignee name, date, and the duration of each test case run.  
+7. **Execution History** provides an overview of all test cases executed, whether manually or through automation. It includes detailed information such as resolution, assignee name, date, and the duration of each test case run.  
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/execution-history.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-9. Test cases typically consist of multiple steps. You can add these steps using the **Manual Test** steps
+8. Test cases typically consist of multiple steps. You can add these steps using the **Manual Test Steps**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-templates.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-10. Add steps to your test cases, each with a title, and an optional outcome field. Attachments can be added to any step if required.
+9. Add steps to your test cases, each with a title, and an optional outcome field. Attachments can be added to any step if required.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-steps.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-11. Test cases can be reordered using drag and drop. You can also modify a test step by clicking the edit option on the right-hand side. Steps can be deleted by selecting the **Delete** option.
+10. Test steps can be modified by clicking the **Edit** option on the right-hand side and deleted by selecting the **Delete** option.
 
-12. Click on **Save Test Case** to create your test steps and update your test case. 
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/edit-or-delete.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+11. Click on **Save Test Case** to create your test steps and update your test case. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/save-test-case.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 

@@ -66,11 +66,11 @@ Test Manager enhances its functionality by seamlessly linking test cases with Ji
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/link-issue.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-6. You to view the issue name, ID, type, status, priority, and assignee. Also link additional issues by clicking on the **Link Issue** button in the right hand side. 
+6. View the issue name, ID, type, status, priority, and assignee. To link additional issues, use the **Link Issue** button on the right side. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/link-additional-issues.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-7. Also **Unlink Issue** by clicking on the right side of the created issue. 
+7. **Unlink Issue** by clicking on the toggle that is present on the right side of the created issue. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/unlink-issues.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
