@@ -3,14 +3,10 @@ id: link-jira-issues-with-test-manager
 title: Link Jira Issues with Test Manager
 hide_title: true
 sidebar_label: Link Jira Issues with Test Manager
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Effortlessly link Jira issues with Test Manager using LambdaTest to streamline workflows and enhance project management efficiency.
 keywords:
-  - test manager
-  - test case management 
-  - test case
-  - test case creation
-  - automated test case creation
-  - automated test cases
+  - link jira issues
+  - link jira issues with test manager
 url: https://www.lambdatest.com/support/docs/link-jira-issues-with-test-manager/
 site_name: LambdaTest
 slug: link-jira-issues-with-test-manager/

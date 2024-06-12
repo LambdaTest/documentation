@@ -3,14 +3,12 @@ id: manual-test-cases-with-ai
 title: Manual Test Cases with AI
 hide_title: true
 sidebar_label: Manual Test Cases with AI
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Enhance your manual test cases with AI from LambdaTest's Test Manager, facilitating efficient management of all testing activities on a single platform.
 keywords:
-  - test manager
-  - test case management 
+  - manual test cases with ai 
+  - manual test cases
+  - test cases
   - test case
-  - test case creation
-  - automated test case creation
-  - automated test cases
 url: https://www.lambdatest.com/support/docs/manual-test-cases-with-ai/
 site_name: LambdaTest
 slug: manual-test-cases-with-ai/
