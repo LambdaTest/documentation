@@ -47,60 +47,37 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
----
 
 Usually, all the test cases of your XCUI test suite are executed, but there is a way to filter these. You can specify some selected classes or tests, which provides you with options to filter the test cases which you want to execute.
 
-To filter the test cases, you just need to pass the suitable parameters in LambdaTest’s [REST API](https://lambdatest.com/support/docs/getting-started-with-xcuitest/) request. Refer to the table below to understand how to use various filters provided by LambdaTest.
+To filter the test cases, you just need to pass the suitable parameters in LambdaTest’s REST API request. Refer to the table below to understand how to use various filters provided by LambdaTest.
 
 Given below is the REST API endpoint:
 
 ```bash
-POST   /framework/v1/xcui/build
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
+--header 'Authorization: Basic BASIC_AUTH_TOKEN' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "app" : "APP_ID",
+  "testSuite": "TEST_SUITE_ID",
+  "device" :  ["iPhone 11-14"],
+  "video" : true,
+  "queueTimeout": 10800,
+  "idleTimeout": 150,
+  "devicelog": true,
+  "network": false,
+  "build" : "Proverbial-XCUITest"
+}'
 ```
 
-
-| Parameters                  | Description                  | Values                                                                                                                                                                   | Datatype                                                                                                                                                                                                                                                                                                                                                        |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `only-testing`               | Allows the user to run only those tests/classes provided in the list               | Values can be of the following format: className or className/testName. E.g. `["Class1/Test1", "Class2"]`                                                                                                                                                             | Array                                                                                                                                                                                                                                                                                                                                                             |
-| `skip-testing`               | Allows the user to run all the tests/classes except the ones provided in the list               | Values can be of the following format: className or className/testName. E.g. `["Class1/Test1", "Class2"]`                                                                                                                                                             | Array                                                                                                                                                                                                                                                                                                                                                             |
-
-### XCTest Plan
-
-This will only be used for filtering tests using xctestplan. You can use the following capability in xcui/build api:
-`"xctestplan" : "lt://APP1234567891234567890"` and use the following curl to upload xctestplan file.
-
-```bash 
-curl --location --request POST 'https://manual-api.lambdatest.com/app/xctestplan' \
---header 'Cookie: cf_use_ob=0' \
---header 'Authorization: Basic <Enter_Basic_Auth>' \
---form 'appFile=@"/path/to/file"' \
---form 'type="xctestplan"'
-```
+| Parameters | Description | Values | Datatype | 
+|----------- | ----------- | ------ | -------- |
+| `only-testing` | Allows the user to run only those tests/classes provided in the list | Values can be of the following format: className or className/testName. E.g. `["Class1/Test1", "Class2"]` | Array |
+| `skip-testing`| Allows the user to run all the tests/classes except the ones provided in the list | Values can be of the following format: className or className/testName. E.g. `["Class1/Test1", "Class2"]` | Array |
 
 :::info Note
 You can not use the following filters simultaneously. 
 - `only-testing` and `skip-testing`
 - `xctestplan` and `only-testing`/`skip-testing`
 :::
-
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Speeding up XCUI Tests
-      </span>
-    </li>
-  </ul>
-</nav>
