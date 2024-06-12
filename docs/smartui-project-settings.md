@@ -18,13 +18,10 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-project-settings/
 site_name: LambdaTest
 slug: smartui-project-settings/
-
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
----
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -49,10 +46,6 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-
-
-# SmartUI Project Settings Guide
-
 This guide provides detailed information on how to navigate and configure the various options available in SmartUI's Project Settings. SmartUI offers a wide array of settings to customize your project, manage approvals, configure comparison parameters, and more. Before delving into the Project Settings, ensure you meet the following prerequisites:
 
 ## Prerequisites for Accessing Project Settings in SmartUI
