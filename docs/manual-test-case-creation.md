@@ -3,20 +3,12 @@ id: manual-test-case-creation
 title: Manual Test Case Creation
 hide_title: true
 sidebar_label: Manual Test Case Creation
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Learn efficient manual test case creation with LambdaTest's Test Manager, streamlining testing processes and enhancing test execution.
 keywords:
-  - test manager
-  - test case management 
-  - creating projects
-  - test case
-  - test case import
   - test case creation
-  - test case repository
-  - test plan creation
-  - build creation
-  - executing build
-  - build history
-  - real time testing using test manager
+  - test case
+  - test cases
+  - manual test case creation
 url: https://www.lambdatest.com/support/docs/manual-test-case-creation/
 site_name: LambdaTest
 slug: manual-test-case-creation/

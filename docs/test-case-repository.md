@@ -3,20 +3,11 @@ id: test-case-repository
 title: Test Case Repository
 hide_title: true
 sidebar_label: Test Case Repository
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Manage your test case repository with LambdaTest's Test Manager, ensuring organized, accessible, and efficient handling of all your test cases.
 keywords:
-  - test manager
-  - test case management 
-  - creating projects
-  - test case
-  - test case import
-  - test case creation
   - test case repository
-  - test plan creation
-  - build creation
-  - executing build
-  - build history
-  - real time testing using test manager
+  - test cases
+  - test case
 url: https://www.lambdatest.com/support/docs/test-case-repository/
 site_name: LambdaTest
 slug: test-case-repository/

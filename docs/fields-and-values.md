@@ -3,20 +3,13 @@ id: fields-and-values
 title: Fields and Values
 hide_title: true
 sidebar_label: Fields and Values
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Manage system and custom fields in LambdaTest's Test Manager, enhancing test case organization and streamlining processes with detailed fields and values.
 keywords:
   - test manager
-  - test case management 
-  - creating projects
-  - test case
-  - test case import
-  - test case creation
-  - test case repository
-  - test plan creation
-  - build creation
-  - executing build
-  - build history
-  - real time testing using test manager
+  - fields and values
+  - system fields
+  - custom fields
+  - projects
 url: https://www.lambdatest.com/support/docs/fields-and-values/
 site_name: LambdaTest
 slug: fields-and-values/

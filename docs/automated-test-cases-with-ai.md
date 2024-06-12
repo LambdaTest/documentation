@@ -3,14 +3,11 @@ id: automated-test-cases-with-ai
 title: Automated Test Cases with AI
 hide_title: true
 sidebar_label: Automated Test Cases with AI
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Streamline automated test cases and Test Manager with AI on LambdaTest, enhancing software testing efficiency and workflows.
 keywords:
-  - test manager
-  - test case management 
-  - test case
-  - test case creation
-  - automated test case creation
   - automated test cases
+  - automated test cases with ai 
+  - test cases
 url: https://www.lambdatest.com/support/docs/automated-test-cases-with-ai/
 site_name: LambdaTest
 slug: automated-test-cases-with-ai/
