@@ -3,20 +3,10 @@ id: test-plan-creation
 title: Test Plan Creation
 hide_title: true
 sidebar_label: Test Plan Creation
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Gain insights into effective Test Plan Creation with LambdaTest, designed to streamline your workflow.
 keywords:
-  - test manager
-  - test case management 
-  - creating projects
-  - test case
-  - test case import
-  - test case creation
-  - test case repository
-  - test plan creation
-  - build creation
-  - executing build
-  - build history
-  - real time testing using test manager
+  - test plan
+  - test plan creation 
 url: https://www.lambdatest.com/support/docs/test-plan-creation/
 site_name: LambdaTest
 slug: test-plan-creation/

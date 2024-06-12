@@ -3,20 +3,10 @@ id: build-details
 title: Build Details
 hide_title: true
 sidebar_label: Build Details
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Explore comprehensive build details on LambdaTest to enhance your testing strategy and gain deeper insights into your test executions.
 keywords:
-  - test manager
-  - test case management 
-  - creating projects
-  - test case
-  - test case import
-  - test case creation
-  - test case repository
-  - test plan creation
-  - build creation
-  - executing build
-  - build history
-  - real time testing using test manager
+  - build details
+  - navigating build details
 url: https://www.lambdatest.com/support/docs/build-details/
 site_name: LambdaTest
 slug: build-details/

@@ -3,20 +3,10 @@ id: build-creation
 title: Build Creation
 hide_title: true
 sidebar_label: Build Creation
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Learn build creation with LambdaTest to efficiently set up and manage builds for optimized testing and seamless project execution.
 keywords:
-  - test manager
-  - test case management 
-  - creating projects
-  - test case
-  - test case import
-  - test case creation
-  - test case repository
-  - test plan creation
   - build creation
-  - executing build
-  - build history
-  - real time testing using test manager
+  - builds 
 url: https://www.lambdatest.com/support/docs/build-creation/
 site_name: LambdaTest
 slug: build-creation/

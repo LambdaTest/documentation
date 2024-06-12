@@ -3,20 +3,10 @@ id: execute-builds
 title: Execute Builds
 hide_title: true
 sidebar_label: Execute Builds
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Discover how to execute builds effectively using LambdaTest, optimizing your testing process for better efficiency and reliability.
 keywords:
-  - test manager
-  - test case management 
-  - creating projects
-  - test case
-  - test case import
-  - test case creation
-  - test case repository
-  - test plan creation
-  - build creation
-  - executing build
-  - build history
-  - real time testing using test manager
+  - execute builds
+  - steps for execution of a build
 url: https://www.lambdatest.com/support/docs/execute-builds/
 site_name: LambdaTest
 slug: execute-builds/

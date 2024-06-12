@@ -1494,6 +1494,7 @@ module.exports = {
           label: "Jira Integration",
           items: [
                 "link-jira-issues-with-test-manager",
+                "lambdatest-jira-app",
           ],
       }, 
     ]
