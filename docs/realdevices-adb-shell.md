@@ -40,14 +40,14 @@ slug: real-device-adb-shell/
 
 # Execute ADB shell commands
 
-The integration of Android Debug Bridge (ADB) shell support within the LambdaTest Manual Testing platform for app testing on Android devices empowers users to run approved ADB shell commands directly on devices during manual testing sessions, receiving instant output. This feature addresses the challenge of remote device communication, enabling users to interact with devices as if they were physically present.
+The integration of Android Debug Bridge (ADB) shell support within the LambdaTest Manual Testing platform for app testing on Android devices empowers users to run supported ADB shell commands directly on devices during manual testing sessions, receiving instant output. This feature addresses the challenge of remote device communication, enabling users to interact with devices as if they were physically present.
+
+---
 
 ## Benefits
 
 - Unlock new testing scenarios that require direct device interaction, simplifying the development process.
-
 - Speed up testing by easily accessing native device capabilities and APIs, reducing reliance on framework-specific commands.
-
 - Gain better control over device configurations to execute specific commands tailored to your test cases.
 
 
@@ -59,8 +59,8 @@ The integration of Android Debug Bridge (ADB) shell support within the LambdaTes
 
 **Step 3:** Access **ADB Shell**
 - Once in the test session, find the **ADB Shell** icon on the top bar.
-- Click the ADB Shell icon to open the terminal and start running approved ADB shell commands.
-- On one click, you can clear the terminal content and download the terminal output as a .txt file as well.
+- Click the ADB Shell icon to open the terminal and start running supported ADB shell commands.
+- With a single click, you can clear the terminal content or download the terminal output as a `.txt` file.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/adbmanual.webp').default} alt="ADB Shell Access"  className="doc_img" width="1366" height="629"/>
 
