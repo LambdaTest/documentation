@@ -1730,7 +1730,8 @@ module.exports = {
               "command-annotations",
               "custom-dns-map",
               "lighthouse-reports-hooks",
-              "har-log-viewer"
+              "har-log-viewer",
+              "custom-chrome",
             ],
           },
           {
