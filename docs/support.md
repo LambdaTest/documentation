@@ -164,7 +164,19 @@ import NewTag from '../src/component/newTag';
 <!-- end of second section -->
 
 <!-- start of third section -->
+
 <div className="home_main">
+ <div className="home_inners_box">
+       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/test-manager-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Test Manager &nbsp; <NewTag  value="NEW" bgColor="#ffec02" color="#000" /></h2>
+      <div className="home_inners"> 
+        <a href="/support/docs/create-projects/"><p className="p_home_inners">Create Projects</p></a>
+        <a href="/support/docs/manual-test-case-creation"><p className="p_home_inners">Manual Test Cases</p></a>
+        <a href="/support/docs/automated-test-cases-with-ai/"><p className="p_home_inners">Automated Test Cases</p></a>
+        <a href="/support/docs/test-plan-creation/"><p className="p_home_inners">Test Plan Creation</p></a>
+        <a href="/support/docs/build-creation/"><p className="p_home_inners">Builds</p></a>
+        <a href="/support/docs/link-jira-issues-with-test-manager/"><p className="p_home_inners">Jira Integration</p></a>
+      </div>
+    </div>
     <div className="home_inners_box">
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Integration-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Integration-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Integrations</h2>
       <div className="home_inners">
@@ -193,7 +205,12 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/scim/"><p className="p_home_inners">SCIM</p></a>
       </div>
     </div>
-    <div className="home_inners_box">
+
+
+<!-- end of third section -->
+
+<!-- start of fourth section -->
+<div className="home_inners_box">
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/other-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/other-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Other Docs</h2>
       <div className="home_inners">
         <a href="/support/docs/lt-browser/"><p className="p_home_inners">LT Browser</p></a>
@@ -203,20 +220,5 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/responsive-testing/"><p className="p_home_inners">Responsive Testing</p></a>
       </div>
     </div>
-</div>
-
-<!-- end of third section -->
-
-<!-- start of fourth section -->
-    <div className="home_inners_box">
-       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/testing-locally-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Test Manager</h2>
-      <div className="home_inners"> 
-        <a href="/support/docs/create-projects/"><p className="p_home_inners">Create Projects</p></a>
-        <a href="/support/docs/manual-test-case-creation"><p className="p_home_inners">Manual Test Cases</p></a>
-        <a href="/support/docs/automated-test-cases-with-ai/"><p className="p_home_inners">Automated Test Cases</p></a>
-        <a href="/support/docs/test-plan-creation/"><p className="p_home_inners">Test Plan Creation</p></a>
-        <a href="/support/docs/build-creation/"><p className="p_home_inners">Builds</p></a>
-        <a href="/support/docs/link-jira-issues-with-test-manager/"><p className="p_home_inners">Jira Integration</p></a>
-      </div>
-    </div>
+</div>   
 </div>
