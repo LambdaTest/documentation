@@ -3,20 +3,11 @@ id: build-history
 title: Build History
 hide_title: true
 sidebar_label: Build History
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Review your test build executions with LambdaTest's Build History, streamlining your tracking for better testing outcomes and decisions.
 keywords:
-  - test manager
-  - test case management 
-  - creating projects
-  - test case
-  - test case import
-  - test case creation
-  - test case repository
-  - test plan creation
-  - build creation
-  - executing build
   - build history
-  - real time testing using test manager
+  - build 
+  - builds
 url: https://www.lambdatest.com/support/docs/build-history/
 site_name: LambdaTest
 slug: build-history/

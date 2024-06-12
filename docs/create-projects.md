@@ -3,20 +3,11 @@ id: create-projects
 title: Create Projects
 hide_title: true
 sidebar_label: Create Projects
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Create projects seamlessly with LambdaTest's Test Manager, streamlining your testing processes and ensuring efficient management of all your test activities.
 keywords:
   - test manager
-  - test case management 
-  - creating projects
-  - test case
-  - test case import
-  - test case creation
-  - test case repository
-  - test plan creation
-  - build creation
-  - executing build
-  - build history
-  - real time testing using test manager
+  - create projects
+  - create project
 url: https://www.lambdatest.com/support/docs/create-projects/
 site_name: LambdaTest
 slug: create-projects/
