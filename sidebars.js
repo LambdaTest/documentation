@@ -1604,6 +1604,14 @@ module.exports = {
               "install-apps-from-app-store",
             ],
           },
+          {
+            type: "category",
+            collapsed: false,
+            label: "Features",
+            items: [
+              "real-device-adb-shell"
+            ],
+          },
         ],
       },
   ],
