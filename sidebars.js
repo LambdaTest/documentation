@@ -81,6 +81,11 @@ module.exports = {
         items: [
           {
             type: "doc",
+            label: "HyperExecute GUI for CLI",
+            id: "hyperexecute-cli-gui"
+          },
+          {
+            type: "doc",
             label: "GitIgnore and HyperexecuteIgnore",
             id: "hyperexecute-gitignore",
           },
