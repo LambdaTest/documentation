@@ -132,7 +132,7 @@ Here is a list of languages and frameworks that are supported by the LambdaTest 
           <a className="lt_primary" href="/support/docs/appium-csharp/">C#</a>
         </li>
         <li>
-          <a href="/support/docs/appium-csharp-nunit//">NUnit</a>
+          <a href="/support/docs/appium-csharp-nunit/">NUnit</a>
         </li>
       </ul>
     </div>
