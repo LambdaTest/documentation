@@ -2482,7 +2482,7 @@ module.exports = {
       {
         type: "category",
         collapsed: false,
-        label: "Analytics Widgets",
+        label: "Widgets",
         link: {
           type: "doc",
           id: "analytics-widgets",
