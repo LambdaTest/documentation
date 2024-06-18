@@ -358,20 +358,6 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Troubleshooting Guide",
-            link: {
-              type: "doc",
-              id: "hyperexecute-how-to-debug-job",
-            },
-            items: [
-              "hyperexecute-cli-error",
-              "hyperexecute-pre-steps-error",
-              "hyperexecute-scenario-steps-error",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
             label: "JMeter-Performance Testing",
             link: {
               type: "doc",
@@ -386,6 +372,20 @@ module.exports = {
             label: 'API Testing',
             id: 'hyperexecute-api-testing'
           }
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Troubleshooting Guide",
+        link: {
+          type: "doc",
+          id: "hyperexecute-how-to-debug-job",
+        },
+        items: [
+          "hyperexecute-cli-error",
+          "hyperexecute-pre-steps-error",
+          "hyperexecute-scenario-steps-error",
         ],
       },
       {
@@ -703,6 +703,10 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "How To Guide",
+            link: {
+              type: "doc",
+              id: "hyperexecute-how-to-guide",
+            },
             items: [
               "hyperexecute-how-to-get-my-username-and-access-key",
               "hyperexecute-environment-variable-setup",
@@ -717,7 +721,11 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "HyperExecute Use Cases",
+            label: "Use Cases",
+            link: {
+              type: "doc",
+              id: "hyperexecute-use-cases",
+            },
             items: [
               "hyperexecute-how-smart-caching-boosts-tests-speed",
               "hyperexecute-seamless-integration-with-tools",
@@ -729,7 +737,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "HyperExecute Widgets",
+            label: "Widgets",
             link: {
               type: "doc",
               id: "hyperexecute-widgets",
@@ -745,7 +753,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "HyperExecute Job Reports",
+            label: "Job Reports",
             link: {
               type: "doc",
               id: "hyperexecute-job-reports",

@@ -1,8 +1,8 @@
 ---
 id: hyperexecute-knowledge-base
-title: Hyperexecute knowledge base
-hide_title: true
-sidebar_label: How To?
+title: Hyperexecute Knowledge Base
+hide_title: false
+sidebar_label: Hyperexecute Knowledge Base
 description: Discover the HyperExecute Knowledge Base for insights on concepts, setup, configuration, and more. Get answers to your questions about HyperExecute.
 keywords:
   - LambdaTest Hyperexecute
@@ -38,40 +38,44 @@ slug: hyperexecute-knowledge-base/
     }}
 ></script>
 
-# HyperExecute Knowledge Base
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-status/">Status</a>
+<div className="support_main">  
+  <a href="/support/docs/hyperexecute-status/">
+    <div className="support_inners">
+      <h3>HyperExecute Status</h3>
+      <p>Learn all the status of the HyperExecute at different levels - Job level, Task level, Stage level and Test level.</p>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-how-to-guide/">
+    <div className="support_inners">
+      <h3>How To Guide</h3>
+      <p>Understand how to perform various activities in the HyperExecute Dashboard.</p>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-use-cases/">
+    <div className="support_inners">
+      <h3>HyperExecute Use Cases</h3>
+      <p>Learn about the real world implementations of the HyperExecute.</p>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-widgets/">
+    <div className="support_inners">
+      <h3>HyperExecute Widgets</h3>
+      <p>Learn the insights of your Tasks based on the defined parameters in the Tests.</p>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-job-reports/">
+  <div className="support_inners">
+    <h3>HyperExecute Job Reports</h3>
+    <p>Learn about different types of Job Reports based on various frameworks.</p>
+  </div>
+  </a>
+  <a href="/support/docs/saucelabs-to-hyperexecute-migrate/">
+  <div className="support_inners">
+    <h3>Migration Guide</h3>
+    <p>Learn how to migrate your tests from the Saucelabs to HyperExecute.</p>
+  </div>
+  </a>
 </div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-how-to-get-my-username-and-access-key/"> How to get my username and access key</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-environment-variable-setup/"> How to setup HyperExecute Environment Variables</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-how-to-save-and-manage-secrets/"> How to save and manage secrets</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-how-to-configure-tunnel/"> How to configure tunnel</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-how-to-find-correct-concurrency/"> How to find correct concurrency for my Job</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-how-to-configure-sourcePayload/"> How to configure sourcePayload</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-browser-list-api/"> How to list supported Browsers via API</a>
-</div>
-
 
 >If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
 
