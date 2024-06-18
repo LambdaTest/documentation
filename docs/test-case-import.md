@@ -3,20 +3,11 @@ id: test-case-import
 title: Test Case Import
 hide_title: true
 sidebar_label: Test Case Import
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Simplify your test case import with LambdaTest's Test Manager. Easily upload and manage test cases to enhance testing efficiency and productivity.
 keywords:
-  - test manager
-  - test case management 
-  - creating projects
-  - test case
   - test case import
-  - test case creation
-  - test case repository
-  - test plan creation
-  - build creation
-  - executing build
-  - build history
-  - real time testing using test manager
+  - test cases
+  - test case
 url: https://www.lambdatest.com/support/docs/test-case-import/
 site_name: LambdaTest
 slug: test-case-import/

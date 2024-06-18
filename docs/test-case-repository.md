@@ -3,20 +3,11 @@ id: test-case-repository
 title: Test Case Repository
 hide_title: true
 sidebar_label: Test Case Repository
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Manage your test case repository with LambdaTest's Test Manager, ensuring organized, accessible, and efficient handling of all your test cases.
 keywords:
-  - test manager
-  - test case management 
-  - creating projects
-  - test case
-  - test case import
-  - test case creation
   - test case repository
-  - test plan creation
-  - build creation
-  - executing build
-  - build history
-  - real time testing using test manager
+  - test cases
+  - test case
 url: https://www.lambdatest.com/support/docs/test-case-repository/
 site_name: LambdaTest
 slug: test-case-repository/
@@ -52,14 +43,23 @@ A test case repository serves as a centralized location for all test cases withi
 
 **Navigating the Test Case Repository**
 
-1. Within your project, go to the test cases section to view the repository.
+1. Within your project, navigate to the test cases section to view the repository. Use the search bar and filter options for efficient location of specific test cases.
 
-2. It offers search and filter capabilities, enabling users to efficiently locate specific test cases. Use the search bar and filter options to locate specific test cases based on keywords such as status, creator, tags. This functionality enhances user productivity by quickly narrowing down the relevant test cases.
+2. By clicking on **Status**, filter the test cases by their current state - Draft, Open or Closed.
 
-3. From the repository, you can view, edit, delete, or execute test cases.
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/status-repository.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-repository.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+3. The **Creator** option allows you to select test cases based on assignee. 
 
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/creation-repository.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+4. Select test cases based on **Tags**, which helps categorize and access tests more efficiently according to specific criteria. 
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/tags-repository.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+5. Lastly, there's flexibility to **Edit** or **Delete** the test cases enabling easy management and updates to your testing workflow.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/other-filters.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 
 

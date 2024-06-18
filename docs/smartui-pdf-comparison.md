@@ -54,6 +54,12 @@ This functionality is exclusive to our enterprise plan subscribers on SmartUI. F
 
 In the following section, we will walk you through the process of conducting your first Visual Regression test using LambdaTest's SmartUI platform.
 
+<div className="ytframe"> 
+<div className="youtube" data-embed="H91z4j5_JvQ">
+    <div className="play-button"></div>
+</div>
+</div>
+
 ## Step 1: Establishing a SmartUI Project
 
 To initiate a SmartUI PDF Comparison Project, adhere to the following instructions:

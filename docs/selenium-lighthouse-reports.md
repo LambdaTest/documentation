@@ -60,6 +60,7 @@ jse.executeScript("lambdatest_executor: {\"action\": \"generateLighthouseReport\
 - You can execute the hook multiple times with a configurable URL.
 - In case of an error from Lighthouse report execution, a *200* status response with the message *Failed to generate Lighthouse report. Please try again.* will be sent. However, the test execution will continue.
 - For browsers other than Chrome, a 4XX error will be thrown stating *Lighthouse report is supported only for Chrome browser.*
+- If you generate Lighthouse reports using Lambda hook, ensure to turn off the `performance:true` capability.
 - Successful generation of the report will return a *200* status and a response body containing:
 
 ``` java

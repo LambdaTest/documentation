@@ -1,8 +1,8 @@
 ---
 id: geb-frameworks
-title: Geb with Selenium
+title: Execute Selenium Tests With Geb
 sidebar_label: Geb
-description: Here are the prerequisites and steps required to run your Geb automation scripts over LambdaTest online Selenium Grid. Learn to perform parallel testing, along with testing for locally hosted web applications using Geb with LambdaTest.
+description: Your guide to running tests using Geb on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
 keywords:
   - geb
   - groovy
@@ -50,7 +50,7 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-# Tutorial to Run Your First Test on LambdaTest
+# Selenium Testing With Geb Tutorial
 
 ---
 

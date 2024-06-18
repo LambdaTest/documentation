@@ -3,20 +3,11 @@ id: build-history
 title: Build History
 hide_title: true
 sidebar_label: Build History
-description: Experience Test Manager for streamlined test management and real-time testing. Elevate your testing efficiency with various features and insights.
+description: Review your test build executions with LambdaTest's Build History, streamlining your tracking for better testing outcomes and decisions.
 keywords:
-  - test manager
-  - test case management 
-  - creating projects
-  - test case
-  - test case import
-  - test case creation
-  - test case repository
-  - test plan creation
-  - build creation
-  - executing build
   - build history
-  - real time testing using test manager
+  - build 
+  - builds
 url: https://www.lambdatest.com/support/docs/build-history/
 site_name: LambdaTest
 slug: build-history/
@@ -52,11 +43,25 @@ Test Manager provides users with the build history for each test plan. This feat
 
 **Navigating Build History**
 
-1. Under the test plan section, open the **test plan 1** for which you want to view the build history. Click on the **Build History** tab within the test plan details. Each entry in the build history represents a test execution instance, displaying information such as status, tags, assignee.
-
-2. Each entry in the build history represents a test execution instance, displaying information such as status, tags, assignee.
+1. In the test plan section, navigate to the desired test plan and click on the Build History tab. Each entry in the **Build History** shows a test execution instance with details on when and by whom the build was created.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/build-history.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+2. By clicking on **Status**, filter builds based on their status such as **Passed**, **Failed**, **Skipped**, **In Progress** and **Not Started**.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/build-history-options.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+3. Builds can also be selected based on **Tags**, which helps categorize and access them more efficiently according to specific criteria.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/build-tags.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+4. The **Creator** option allows you to select test cases based on assignee.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/build-creator.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+5. On the right side, view the status of test cases based on their execution. 
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/build-status.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 
 <nav aria-label="breadcrumbs">

@@ -1,8 +1,8 @@
 ---
 id: selenide-frameworks
-title: Selenide with Selenium
+title: Execute Selenium Tests With Selenide
 sidebar_label: Selenide
-description: LambdaTest integration with Selenide will help you pace your test automation effort. You can run your automation script on online scalable Selenium Grid of more than 2000 real browsers.
+description: Your guide to running tests using Selenide on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
 keywords:
   - Selenide
   - Selenium
@@ -49,11 +49,11 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-# Tutorial to Run Your First Test on LambdaTest
+# Selenium With Selenide Tutorial
 
 ---
 
-In this topic, you will learn how to configure and run your Java automation testing scripts on [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using **Selenide Automation** framework.
+In this topic, you will learn how to configure and run tests using **Selenide** on LambdaTest's [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
 
 ## Objective
 
