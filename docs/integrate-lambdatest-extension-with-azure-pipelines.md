@@ -235,6 +235,50 @@ To stop the LambdaTest Tunnel, you need to add the _LambdaTest Stop Tunnel_ task
 
 You must keep this task at the end of your all tests, to let your tests execute successfully before stopping the LambdaTest Tunnel.
 
+
+To setup your azure pipeline using LambdaTest Azure Pipeline Extension, you can refer to the below example:
+
+```
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: refs/heads/main
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  pool:
+    vmImage: windows-2019
+  steps:
+  - checkout: self
+    clean: true
+    fetchTags: false
+  - task: Lambdatest.lambda-azure-pipeline-extention.configuration-task.configuration@1
+    displayName: LambdaTest configuration setup
+    inputs:
+      connection: 'connect endpoint'  // provide your connection name
+      isTunnelActivate: true
+      isAppAutomate: false // set true if you want to run your app automate test scripts
+
+  - task: PythonScript@0
+    displayName: Run a Python script
+    inputs:
+      scriptSource: inline
+      script: >-
+        print('Hello world') // provide your python script or command to run your test scripts
+
+  - task: Lambdatest.lambda-azure-pipeline-extention.stopLambdaTunnel-task.stoptunnel@1
+    displayName: LambdaTest Stop Tunnel
+  - task: Lambdatest.lambda-azure-pipeline-extention.showResults-task.LambdatestResults@1
+    displayName: Lambdatest Results
+...
+```
+Also you may use the YAMl assistant to add your tasks in the pipeline YAML file
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/assistant.png').default} alt="azure pipeline" width="768" height="345" className="doc_img"/>
+
+Click on the ```show assistant``` button and search for lambdatest extension tasks and add them in you pipeline YAML.
+<img loading="lazy" src={require('../assets/images/azure-devops-integration/assistantSearch.png').default} alt="azure pipeline" width="768" height="345" className="doc_img"/>
+
 * * *
 
 > That was all you need to know for integrating LambdaTest Extension with Azure Pipelines. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing! :)
