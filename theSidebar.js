@@ -1549,6 +1549,7 @@ module.exports = {
           "analytics-modules-test-intelligence-command-logs-analytics",
           "analytics-dashboard-edit-layout",
           "analytics-dashboard-features",
+          "analytics-widget-drill-down-export",
           "analytics-faqs",
         ],
       },
