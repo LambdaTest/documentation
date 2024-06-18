@@ -2,7 +2,7 @@
 id: hyperexecute-widgets
 title: HyperExecute Widgets
 hide_title: true
-sidebar_label: HyperExecute Widgets
+sidebar_label: Widgets
 description: HyperExecute Widgets offer comprehensive insights into executed Jobs, all in one convenient location for easy exploration.
 keywords:
   - LambdaTest Hyperexecute
