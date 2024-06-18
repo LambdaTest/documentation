@@ -2528,6 +2528,7 @@ module.exports = {
     "analytics-sub-organization-widgets",
     "analytics-dashboard-edit-layout",
     "analytics-dashboard-features",
+    "analytics-widget-drill-down-export",
     "analytics-faqs",
 
   ],
