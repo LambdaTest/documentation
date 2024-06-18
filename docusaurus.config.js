@@ -73,7 +73,7 @@ module.exports = {
         {
           type: 'html',
           position: 'right',
-          value: '<a id="signbtn" href="https://accounts.lambdatest.com/register" class="getstart_btn">Get Started Free</a>',
+          value: '<a id="signbtn" href="https://accounts.lambdatest.com/register" class="getstart_btn">Get Started</a>',
         },
         {
           to: 'docs/',
