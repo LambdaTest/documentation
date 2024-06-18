@@ -1432,7 +1432,7 @@ module.exports = {
       label: '<- Back',
       href: '/docs/',
       customProps: {
-      className: 'back-to-main-menu'
+        className: 'back-to-main-menu'
       },
     },
     [
@@ -1446,8 +1446,8 @@ module.exports = {
         collapsed: true,
         label: "Projects",
         items: [
-              "create-projects",
-              "fields-and-values",
+          "create-projects",
+          "fields-and-values",
         ],
       },
       {
@@ -1455,10 +1455,10 @@ module.exports = {
         collapsed: true,
         label: "Test cases",
         items: [
-              "manual-test-case-creation",
-              "manual-test-cases-with-ai",
-              "test-case-import",
-              "test-case-repository",
+          "manual-test-case-creation",
+          "manual-test-cases-with-ai",
+          "test-case-import",
+          "test-case-repository",
         ],
       },
       {
@@ -1466,7 +1466,7 @@ module.exports = {
         collapsed: true,
         label: "Automated Test Cases",
         items: [
-              "automated-test-cases-with-ai",
+          "automated-test-cases-with-ai",
         ],
       },
       {
@@ -1474,8 +1474,8 @@ module.exports = {
         collapsed: true,
         label: "Test Plan",
         items: [
-              "test-plan-creation",
-              "build-history",
+          "test-plan-creation",
+          "build-history",
         ],
       },
       {
@@ -1483,23 +1483,23 @@ module.exports = {
         collapsed: true,
         label: "Build",
         items: [
-              "build-creation",
-              "execute-builds",
-              "build-details",
+          "build-creation",
+          "execute-builds",
+          "build-details",
         ],
       },
-        {
-          type: "category",
-          collapsed: true,
-          label: "Jira Integration",
-          items: [
-                "link-jira-issues-with-test-manager",
-                "lambdatest-jira-app",
-          ],
-      }, 
+      {
+        type: "category",
+        collapsed: true,
+        label: "Jira Integration",
+        items: [
+          "link-jira-issues-with-test-manager",
+          "lambdatest-jira-app",
+        ],
+      },
     ]
   ],
-  
+
   RealDeviceSidebar: [
     {
       type: 'link',
@@ -2519,6 +2519,7 @@ module.exports = {
       "analytics-sub-organization-widgets",
       "analytics-dashboard-edit-layout",
       "analytics-dashboard-features",
+      "analytics-widget-drill-down-export",
       "analytics-faqs",
     ]
   ],
