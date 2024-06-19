@@ -65,9 +65,7 @@ Below is a list of the supported Appium plugins on LambdaTest:
 | `element-wait`    | Provides enhanced wait capabilities for elements, allowing tests to wait for elements to be in a certain state.For further details, please check [this documentation](https://github.com/AppiumTestDistribution/appium-wait-plugin). | "appiumPlugins": ["element-wait"] |
 | `gestures`        | Adds support for gesture-based interactions, enabling tests to perform complex gestures like swipe, pinch, and zoom. For further details, please check [this documentation](https://github.com/AppiumTestDistribution/appium-gestures-plugin). | "appiumPlugins": ["gestures"]
 
-### Example Configuration
-
-**Java Example:**
+**Python Example:**
 
 ```python
 capabilities = {
