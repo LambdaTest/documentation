@@ -2122,6 +2122,7 @@ module.exports = {
             items: [
               "desired-capabilities-in-appium",
               "supported-appium-versions",
+              "supported-appium-plugins",
               "list-of-supported-locales",
               "supported-timezone",
               "app-testing-apis",
