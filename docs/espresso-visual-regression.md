@@ -109,6 +109,8 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 ## Step 3: Update your App Configurations
 
+> It should be in your app configurations then only you can perform the Espresso integration.
+
 - In your `build.gradle` file, add the [lambdatest-espresso](https://central.sonatype.com/artifact/io.github.lambdatest/lambdatest-espresso) dependency:
 
 ```bash
@@ -228,7 +230,7 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' 
         "Galaxy.*"
     ],
     "smartUI.project": "Espresso-SmartUI-Project", 
-    "smartUI.build": "Espresso-SmartUI-Build",
+    "smartUI.build": "Espresso-SmartUI-Build", // Optional
     "smartUI.cropNavigationBar" : true, // Optional (By default false)
     "smartUI.cropStatusBar" : true, // Optional (By default true)
     "queueTimeout": 300,
@@ -249,137 +251,9 @@ The all-new **Real Device mobile notification status bar and navigation bar crop
 
 By leveraging machine learning algorithms, it accurately detects and crops the status bar and navigation bar from screenshots. With precise image processing techniques, SmartUI precisely identifies the location of status bar elements. By excluding it from visual comparisons, the focus is solely on critical UI elements.  
 
-### Original Screenshot:
-
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/screenshot.webp').default} alt="Profile" width="1360" height="603" className="doc_img"/>
-
-### Cropped Screenshot
-
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt="Profile" width="1360" height="603" className="doc_img"/>
-
-<!-- ## Running Tests on Other Languages and Frameworks
-
----
-
-In this module we discussed about running smart visual tests on **NodeJS**, here we will know more about running those tests for any language or framework with appium. 
-
-In a similar way, we can run visual tests for other languages and frameworks using their corresponding script executing commands. To understand better, we provided the commands for some of the popular languages and frameworks:
-
-#### For taking viewport screenshot
-
-This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.
-
-<Tabs className="docs__val" groupId="language">
-<TabItem value="nodejs" label="NodeJS" default>
-
-```javascript
-driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
-```
-
-</TabItem>
-
-<TabItem value="python" label="Python" default>
-
-```python
-driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
-```
-
-</TabItem>
-<TabItem value="ruby" label="Ruby" default>
-
-```python
-driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
-```
-
-</TabItem>
-<TabItem value="csharp" label="C#" default>
-
-```csharp
-driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
-```
-
-</TabItem>
-<TabItem value="java" label="Java" default>
-
-```java
-((JavascriptExecutor)driver).execute("smartui.takeScreenshot=<Your Screenshot Name>");
-```
-
-</TabItem>
-</Tabs>
-
-#### For capturing full page screenshot in Native Apps <NewTag value="BETA" bgColor="#ffec02" color="#000" />
-
-You can capture the full page screenshot for apps which have a scrolling functionality on their application user interface for your **Appium** functional testing.
-
-Add the following **Webhook** to your test cases where we need to capture the screenshot of your application.
-
-<Tabs className="docs__val" groupId="language">
-<TabItem value="nodejs" label="NodeJS" default>
-
-```javascript
-let config = {
-  screenshotName: '<Name of your screenshot>',
-  fullPage: true,
-  pageCount: 15   // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
-};
-await driver.execute("smartui.takeScreenshot", config);
-```
-</TabItem>
-
-<TabItem value="python" label="Python" default>
-
-```python
-config = {
-  'screenshotName': '<Your Screenshot Name>',
-  'fullPage': True,
-  'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
-}
-driver.execute("smartui.takeScreenshot", config)
-```
-</TabItem>
-<TabItem value="ruby" label="Ruby" default>
-
-```ruby
-config = {
-  'screenshotName' => '<Your Screenshot Name>',
-  'fullPage': true,
-  'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
-}
-driver.execute("smartui.takeScreenshot", config)
-```
-</TabItem>
-
-<TabItem value="csharp" label="C#" default>
-
-```csharp
-var config = new Dictionary<string, string> {
-  {"screenshotName", "<Your Screenshot Name>"},
-  {"fullPage", true},
-  {"pageCount", 15} // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
-};
-driver.Execute("smartui.takeScreenshot", config);
-```
-
-</TabItem>
-<TabItem value="java" label="Java" default>
-
-```java
-Map<String, Object> config = new HashMap<>();
-config.put("screenshotName", "<Your Screenshot Name>");
-config.put("fullPage", true);
-config.put("pageCount", 15); // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
-((JavascriptExecutor)driver).execute("smartui.takeScreenshot", config);
-```
-
-</TabItem>
-</Tabs>
-
-:::note 
-Please note that this webhook is only applicable to <b>native app screenshots</b> and has known limitations. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.
-:::
-
-For additional information about appium framework please explore the documentation [here](https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/) --->
+| Original Screenshot | Cropped Screenshot |
+|---------------------|--------------------|
+| <img loading="lazy" src={require('../assets/images/smart-visual-testing/screenshot.webp').default} alt="Profile" width="1360" height="603" className="doc_img"/> | <img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt="Profile" width="1360" height="603" className="doc_img"/> |
 
 
 <nav aria-label="breadcrumbs">
