@@ -49,6 +49,7 @@ This page provides a comprehensive overview of the various statuses available in
 HyperExecute categorizes test execution outcomes into distinct levels, offering a granular view of the entire testing process. Here's a breakdown of these levels and their associated statuses:
 
 ## 1. Job Level Status
+All the tests on HyperExecute get executed as a Job. Each Job has a Status, a unique Job Number, a set of Labels, info on number of Tasks executed as part of that Job, and a Summary section followed by the details of the Job Duration and who initiated the Job.
 
 | Icon | Status | Status Description |
 |------|--------|--------------------|
@@ -64,6 +65,8 @@ HyperExecute categorizes test execution outcomes into distinct levels, offering 
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/blocked.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Blocked| The job is currently stuck due to an external dependency or resource constraint. This could involve waiting for another job using the same resources to finish or limitations on available browsers/devices. |
 
 ## 2. Task Level Status
+
+A Task is a further subdivision within a job, often representing the execution of tests on a specific browser and operating system combination.
 
 | Icon | Status | Status Description |
 |------|--------|--------------------|
@@ -100,6 +103,8 @@ A Stage can attain different statuses based on the completion level.
 
 ## 4. Tests Level Status
 
+The most granular level, representing an individual test case verifying a specific functionality of your application. It's like a single action you perform to test something.
+
 | Icon | Status | Status Description |
 |------|--------|--------------------|
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/created.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Created| The test has been defined in your test script but hasn't begun execution yet.
@@ -110,8 +115,6 @@ A Stage can attain different statuses based on the completion level.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/stopped.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Stopped| When you abort the stage, your tests are marked as Stopped.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/idle-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Idle Timeout| It indicates that your session was inactive for the defined time.
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Lambda Error| An error originating from LambdaTest's side prevented the stage from executing as planned. This could be a temporary glitch or require contacting LambdaTest support for further investigation.
-
-
 
 ### User Defined Status
 HyperExecute allows users to define the status of tests using **lambda hooks**. This can be helpful for monitoring test status and results.
