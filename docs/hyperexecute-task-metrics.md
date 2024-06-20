@@ -3,7 +3,7 @@ id: hyperexecute-task-metrics
 title: HyperExecute- Monitoring CPU and Memory Resource Consumption
 hide_title: false
 sidebar_label: Task Metrics
-description: HyperExecute Task Metrics helps you to understand your resource utlization for different stages of test execution.
+description: HyperExecute Task Metrics helps you to understand your resource utilization for different stages of test execution.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -47,7 +47,7 @@ This document outlines how to monitor CPU and Memory consumption of virtual mach
 
 ## Task Level View
 
-The task level view provides insights into the CPU and memory consumption at the individual task level. This means you can see specific metrics related to how much CPU and memory is utlized by each task.
+The task level view provides insights into the CPU and memory consumption at the individual task level. This means you can see specific metrics related to how much CPU and memory is utilized by each task.
 
 By analyzing the task level view, you can pinpoint any tasks that may be causing high CPU or memory usage issues, allowing you to optimize their performance for better overall results.
 
