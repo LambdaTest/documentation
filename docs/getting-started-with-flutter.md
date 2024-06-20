@@ -75,7 +75,7 @@ If you do not have any **Flutter Android** app (.apk) and an **Flutter Test Suit
 
 ---
 
-### **Step 1: Upload Your Application**
+### Step 1: Upload Your Application
 
 Upload your **android** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
@@ -116,7 +116,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 :::
 
-### **Step 2: Uploading Test Suite**
+### Step 2: Uploading Test Suite
 
 Upload your **test suite** (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
@@ -154,7 +154,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 :::
 
-### **Step 3: Executing The Test**
+### Step 3: Executing The Test
 
 #### Basic Authentication
 
@@ -191,7 +191,6 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
     "app" : "lt://APP_ID",
     "testSuite": "lt://TestSuite_ID",
     "device" :  ["Galaxy S21 5G-12"],
-    "testTimeout": 150, 
     "deviceLog": true,
     "network": false,
     "build" : "Sample-Flutter"
@@ -209,7 +208,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
     <CodeBlock className="lamguage-powershell">
 
 ```
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"],\"testTimeout\": 150,\"deviceLog\": true,\"network\": false,\"build\" : \"Sample-Flutter\"}"
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"], \"deviceLog\": true,\"network\": false,\"build\" : \"Sample-Flutter\"}"
 ```
 
   </CodeBlock>
@@ -232,10 +231,9 @@ The following capabilities are supported:
 2. **testSuite:** Enter the test suite id generated while uploading the test suite. Example: `lt://APP123456789123456789`
 3. **device:** Enter the name and os version of the device in “DeviceName-OSVersion” format. Example: `Pixel 3 XL-9` or `Galaxy S21 Ultra 5G-11`.
 4. **video:** Generate video for all the tests that have run. Example: `true`.
-5. **testTimeout:** Max wait time for test execution (default value - 900 secs)
-6. **queueTimeout:** Enter the time in seconds after which you want your build to timeout from queue for device allocation. Example: `900`.
-7. **deviceLog:** Boolean value to generate device logs. Example: `true`. 
-8. **build:** Set the name of the Espresso test build. Example: `My Flutter Build`.
+5. **queueTimeout:** Enter the time in seconds after which you want your build to timeout from queue for device allocation. Example: `900`.
+6. **deviceLog:** Boolean value to generate device logs. Example: `true`. 
+7. **build:** Set the name of the Espresso test build. Example: `My Flutter Build`.
 
 
 ## Running Tests in Parallel
