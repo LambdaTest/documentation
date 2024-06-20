@@ -214,7 +214,7 @@ import NewTag from '../src/component/newTag';
       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/other-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/other-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Other Docs</h2>
       <div className="home_inners">
         <a href="/support/docs/lt-browser/"><p className="p_home_inners">LT Browser</p></a>
-        <a href="/support/docs/test-management/"><p className="p_home_inners">Test Management</p></a>
+        <a href="/support/docs/test-logs/"><p className="p_home_inners">Test Logs</p></a>
         <a href="/support/docs/test-intelligence-overview/"><p className="p_home_inners">Test Intelligence</p></a>
         <a href="/support/docs/automated-screenshot-testing/"><p className="p_home_inners">Screenshot Testing</p></a>
         <a href="/support/docs/responsive-testing/"><p className="p_home_inners">Responsive Testing</p></a>

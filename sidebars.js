@@ -1,5 +1,5 @@
 module.exports = {
-  apiSidebar: ['getting-started-with-automation', 'getting-started-with-hyperexecute', 'real-time-testing', 'smart-visual-regression-testing', 'analytics-overview', 'test-intelligence-overview', 'capability-map', 'visual-ui-testing', 'lt-browser', 'testing-locally-hosted-pages', 'bug-tracking-tools', 'test-management', 'settings-and-security'],
+  apiSidebar: ['getting-started-with-automation', 'getting-started-with-hyperexecute', 'real-time-testing', 'smart-visual-regression-testing', 'analytics-overview', 'test-intelligence-overview', 'capability-map', 'visual-ui-testing', 'lt-browser', 'testing-locally-hosted-pages', 'bug-tracking-tools', 'settings-and-security'],
 
   // 'support-start', 'tas-overview', 'app-automation', 'web-automation', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'record-and-replay', 
 
@@ -193,8 +193,13 @@ module.exports = {
           },
           {
             type: "doc",
-            label: "HyperExecute Test Muting",
+            label: "Test Muting",
             id: "hyperexecute-test-muting",
+          },
+          {
+            type: "doc",
+            label: "Test Metrics",
+            id: "hyperexecute-task-metrics",
           },
         ],
       },
@@ -1622,6 +1627,7 @@ module.exports = {
               "download-files-using-lambdatest-selenium-grid",
               "live-interaction",
               "group-tests-using-custom-tags",
+              "group-and-filter-your-test-builds-using-build-tags",
             ],
           },
           {
@@ -2851,33 +2857,8 @@ module.exports = {
     [
       {
         type: "doc",
-        label: "Test Management",
-        id: "test-management",
-      },
-      {
-        type: "doc",
-        label: "Issue Tracker",
-        id: "issue-tracker",
-      },
-      {
-        type: "doc",
         label: "Test Logs",
         id: "test-logs",
-      },
-      {
-        type: "doc",
-        label: "View Assertion Errors using Lambda Exceptions",
-        id: "lambda-exceptions",
-      },
-      {
-        type: "doc",
-        label: "Filtering your Selenium Tests",
-        id: "filter-your-selenium-tests",
-      },
-      {
-        type: "doc",
-        label: "Group/Filter Tests using Build Tags",
-        id: "group-and-filter-your-test-builds-using-build-tags",
       },
     ]
   ],
