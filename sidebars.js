@@ -2289,9 +2289,13 @@ module.exports = {
         label: "Speedup XCUI Tests",
         items: [
           "sharding-xcui",
-          "xctestplan",
-          "filters-xcui",
+          "speedup-xcui",
         ],
+      },
+      {
+        type: "doc",
+        label: "XCTestPlan",
+        id: "xctestplan",
       },
       {
         type: "doc",
