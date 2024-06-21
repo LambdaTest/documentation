@@ -1,5 +1,5 @@
 ---
-id: filters-xcui
+id: speedup-xcui
 title: Filters for XCUI Tests
 sidebar_label: Filters for XCUI Tests
 description: This document helps you learn how to speed up your XCUI Tests.
