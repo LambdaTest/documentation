@@ -1563,7 +1563,8 @@ module.exports = {
             collapsed: false,
             label: "Features",
             items: [
-              "real-device-adb-shell"
+              "real-device-adb-shell",
+              "ui-inspector",
             ],
           },
         ],
@@ -1587,6 +1588,7 @@ module.exports = {
         label: "Private Cloud",
         items: [
           "public-cloud-vs-private-cloud",
+          "select-pre-installed-apps",
         ],
       },
     ],  
