@@ -2,7 +2,7 @@
 id: hyperexecute-status
 title: HyperExecute Status
 hide_title: false
-sidebar_label: HyperExecute Status List
+sidebar_label: Status
 description: This documentation outlines the status list and the meaning of status used in job, test, task and scenario level at hyperexecute.
 keywords:
   - LambdaTest Hyperexecute
@@ -49,45 +49,37 @@ This page provides a comprehensive overview of the various statuses available in
 HyperExecute categorizes test execution outcomes into distinct levels, offering a granular view of the entire testing process. Here's a breakdown of these levels and their associated statuses:
 
 ## 1. Job Level Status
- 
-All kinds of tests get executed on Hyperexecute in the form of a Job. You can see all the executed jobs on the HyperExecute [Jobs Page](https://hyperexecute.lambdatest.com/hyperexecute). 
+All the tests on HyperExecute get executed as a Job. Each Job has a Status, a unique Job Number, a set of Labels, info on number of Tasks executed as part of that Job, and a Summary section followed by the details of the Job Duration and who initiated the Job.
 
-Each job has a unique ` JOB Number ` and is executed as a group of [` Tasks `] .
-
-<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/concepts/concepts1.png').default} alt="Image"  className="doc_img"/> -->
-
-A Job  can attain different statuses based on the completion level.
-
-| Icon | Status |
-|------|------|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/initiated.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Initiated|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/running.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img"/>|Running|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/completed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Completed|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img"/>|Skipped|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Failed|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> |Aborted|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> |Lambda Error|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/idle-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> |Idle Timeout|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/blocked.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Blocked|
+| Icon | Status | Status Description |
+|------|--------|--------------------|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/initiated.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Initiated| The payload is uploading and is waiting to be assigned to an available virtual machine as per the given OS request in the YAML file. |
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/running.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img no-zoom"/>|Running| The job is actively executing tests across different browser and OS combinations as defined in your configuration. |
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Completed| The job has finished executing all tests, irrespective of the overall outcome (passed/failed).|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/partially-completed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Partially Completed| This status indicates a non-standard scenario where all steps within the job's runner command execution finished, but no test session was created. <br /><br /> This can occur primarily in two cases: <br />  1. API/Desktop Tests <br />  2. Local Web Test Execution. <br />
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Failed| One or more test cases within the job encountered errors or failed assertions indicating an issue within the tests. |
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Aborted| An unexpected error or issue caused the job to terminate prematurely before all tests could run. |
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Lambda Error| An error originating from LambdaTest's side prevented the job from executing as planned. This could be a temporary glitch or require contacting LambdaTest support for further investigation. |
+| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/idle-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> | Time Out | The job exceeded the maximum allocated execution time limit. This might occur due to complex tests, slow environments, or resource limitations. |
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/ignored.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img no-zoom"/>|Ignored| It is a user-defined status, used when a test case is intentionally not executed, such as when it is marked for future development, or a feature is not yet implemented.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/blocked.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Blocked| The job is currently stuck due to an external dependency or resource constraint. This could involve waiting for another job using the same resources to finish or limitations on available browsers/devices. |
 
 ## 2. Task Level Status
 
-A Task is a further subdivision within a job, often representing the execution of tests on a specific browser and operating system combination. Multiple tasks can execute concurrently within a job to optimize testing speed.
+A Task is a further subdivision within a job, often representing the execution of tests on a specific browser and operating system combination.
 
-<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/concepts/concepts2.png').default} alt="Image"  className="doc_img"/> -->
-
-A Task can attain different statuses based on the completion level.
-
-| Icon | Status |
-| ------| ------ |
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Aborted||
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img"/>|Failed||
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/initiated.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Initiated||
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img"/>|Completed||
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Skipped||
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> |Lambda Error - An error arose from LambdaTest’s side.|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/blocked.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Blocked|
-
+| Icon | Status | Status Description |
+|------|--------|--------------------|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/initiated.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Initiated| The payload has been uploaded and is waiting to be assigned to an available virtual machine as per the given OS request in the YAML file.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/running.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img no-zoom"/>|Running| The job is actively executing tests as defined in your YAML file configuration.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Completed| The task has finished executing all its assigned test steps and all the test running in that tasks are passed.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Skipped| It is a user-defined status indicates that the task was intentionally bypassed, possibly due to configuration settings, conditional execution logic, or irrelevance to the current test scenario.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Failed| When one or more assertions within the task failed, indicating a problem with the tests themselves.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/ignored.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img no-zoom"/>|Ignored| Similar to the job level, the task was entirely disregarded, likely due to configuration issues or specific conditions set to trigger execution.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Aborted| An unforeseen error or issue caused the task to terminate prematurely before all steps could run.
+| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/idle-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> | Time Out | The task exceeded the maximum allocated execution time limit. This might occur due to complex test steps, slow environments, or resource limitations
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Lambda Error| An error originating from LambdaTest's side prevented the task from executing as planned. This could be a temporary glitch or require contacting LambdaTest support for further investigation.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/blocked.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Blocked| The task is currently stuck due to an external dependency or resource constraint. This could involve waiting for another task using the same resources to finish or limitations on available browsers/devices.
 
 ## 3. Stage Level Status
 A Tasks can have multiple stages which are usually divided into 3 categories:
@@ -95,53 +87,34 @@ A Tasks can have multiple stages which are usually divided into 3 categories:
 2. **Scenarios** - Test execution stages.
 3. **Post Steps** - The stages/actions that are performed after Test execution is completed, like creation of reports, artifacts etc.
 
-<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/concepts/task.png').default} alt="Image" className="doc_img"/> -->
-
 A Stage can attain different statuses based on the completion level.
 
-| Icon | Status |
-| ---------| :---- |
-| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/completed.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img"/> | Completed  |
-| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> | Failed  |
-| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/created.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> | Created |
-| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> | Skipped |
-| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/cancelled.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> | Cancelled |
-| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> | Aborted |
-| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/idle-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> | Time Out |
-| <img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> | Lambda Error - An error arose from LambdaTest’s side. |
+| Icon | Status | Status Description |
+|------|--------|--------------------|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/running.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Running| The stage is currently executing the defined actions or test steps. This indicates active progress within a specific stage of your test
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Completed| The stage has finished executing all its test steps successfully.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/ignored.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Ignored| It is a user-defined status which indicates that the stage was entirely bypassed during execution, likely due to configuration settings or conditional logic within your test script.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Skipped| It is a user-defined status indicates that the stage was intentionally bypassed, possibly due to configuration settings, conditional execution logic, or irrelevance to the current test scenario.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Failed| One or more assertions within the stage failed, signifying an issue within the tests.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/muted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Muted| This stage's results are being suppressed due to the HyperExecute [test muting](https://www.lambdatest.com/support/docs/hyperexecute-test-muting/) functionality. 
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Aborted| An unexpected error or issue caused the stage to terminate prematurely before all actions could be completed.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/cancelled.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Cancelled| If you have aborted your job in the middle of test execution, then all the left over tests will be marked as Cancelled.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/> |Lambda Error| An error originating from LambdaTest's side prevented the stage from executing as planned. This could be a temporary glitch or require contacting LambdaTest support for further investigation.
 
-## 4. Scenario Level Status
+## 4. Tests Level Status
 
-This section would show all the test suites or test scenarios that have been executed in the Job under the selected Task.
+The most granular level, representing an individual test case verifying a specific functionality of your application. It's like a single action you perform to test something.
 
-A scenario can attain different statuses based on the completion level.
-
-| Icon | Status |
-|------|------|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Aborted|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img"/>|Failed|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img"/>|Completed|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Skipped|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> |Lambda Error - An error arose from LambdaTest’s side|
-
-## 5. Tests Level Status
-
-A scenario can have multiple tests (browser sessions) associated to it. 
-<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/concepts/hyperexecute-test.png').default} alt="Image" className="doc_img"/> -->
-You can also see the history of a particular test to understand since when this test case started failing for instance.
-<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/concepts/hyperexecute-test-history.png').default} alt="Image" className="doc_img"/> -->
-
-A Test can attain different statuses based on the completion level.
-
-| Icon | Status |
-|------|------|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/aborted.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Aborted|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img"/>|Failed|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/initiated.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Initiated|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img"/>|Completed|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> |Lambda Error - An error arose from LambdaTest’s side|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/idle-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/> |Idle-Timeout|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img"/> |Passed|
+| Icon | Status | Status Description |
+|------|--------|--------------------|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/created.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Created| The test has been defined in your test script but hasn't begun execution yet.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/running.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Running| The test is actively being executed as per the configurations.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/completed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Completed| The test has finished execution and is successfully passed.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/queued.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Queue| The test is waiting for the virtual machine to be allocated.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/queue-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Queue Timeout| The wait time exceeded the maximum limit for the virtual machine to be allocated.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/stopped.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Stopped| When you abort the stage, your tests are marked as Stopped.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/idle-timeout.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Idle Timeout| It indicates that your session was inactive for the defined time.
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/lambda-error.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img no-zoom"/>|Lambda Error| An error originating from LambdaTest's side prevented the stage from executing as planned. This could be a temporary glitch or require contacting LambdaTest support for further investigation.
 
 ### User Defined Status
 HyperExecute allows users to define the status of tests using **lambda hooks**. This can be helpful for monitoring test status and results.
@@ -149,8 +122,8 @@ HyperExecute allows users to define the status of tests using **lambda hooks**. 
 HyperExecute supports the following user-defined lambda hooks status:
 
 | Icon | Status | Status Description |
-| ------| ------ | ------|
-|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/completed.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img"/>|Passed| A test case has passed when it has executed successfully, and all the assertions have been verified without any errors. <br /> `driver.executeScript("lambda-status=passed");`|
+|------|--------|--------------------|
+|<img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '30px',margin: '0px',}} className="doc_img"/>|Passed| A test case has passed when it has executed successfully, and all the assertions have been verified without any errors. <br /> `driver.executeScript("lambda-status=passed");`|
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Failed| A test case has failed when it has not executed as expected, and one or more assertions have not been verified or have failed. <br /> `driver.executeScript("lambda-status=failed");`|
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/skipped.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Skipped| A test case may be skipped if it is not relevant or cannot be executed due to some issues like environment setup, data, or configuration. This status can also be used for test cases that are marked for review or maintenance. <br />`driver.executeScript("lambda-status=skipped");`|
 |<img loading="lazy" src={require('../assets/images/hyperexecute/icons/ignored.png').default} alt="Image" style={{width: '30px',margin: '0px',}}  className="doc_img"/>|Ignored| The ignored status is used when a test case is intentionally not executed, such as when it is marked for future development, or a feature is not yet implemented. <br/> `driver.executeScript("lambda-status=ignored");`|

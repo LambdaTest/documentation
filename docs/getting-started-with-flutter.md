@@ -40,26 +40,11 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
----
-
 Flutter, an open-source UI toolkit created by Google, is a popular choice among developers to build natively compiled applications for mobile, web, and desktop from a single codebase. With Dart as its programming language, Flutter enables fast development of beautiful apps with a highly productive, extensible and open-source set of features.
 
 In this guide, we will explore how to run your first Flutter Dart test on an Android device using the LambdaTest Real Device Cloud. By combining the capabilities of Flutter Dart and LambdaTest, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
 
-## Objective
-
----
-
-By the end of this topic, you will be able to:
-
-1. Run a sample automation script of an Flutter Test
-2. Learn more about capabilities supported for Flutter Dart testing.
-
-
 ## Prerequisites for Getting Started
-
----
 
 1. Flutter SDK installed on your system
 2. You will need a LambdaTest username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://appautomation.lambdatest.com/).
@@ -73,9 +58,7 @@ If you do not have any **Flutter Android** app (.apk) and an **Flutter Test Suit
 
 ## Run Your First Test
 
----
-
-### **Step 1: Upload Your Application**
+### Step 1: Upload Your Application
 
 Upload your **android** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
@@ -116,7 +99,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 :::
 
-### **Step 2: Uploading Test Suite**
+### Step 2: Uploading Test Suite
 
 Upload your **test suite** (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
@@ -154,7 +137,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 :::
 
-### **Step 3: Executing The Test**
+### Step 3: Executing The Test
 
 #### Basic Authentication
 
@@ -191,7 +174,6 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
     "app" : "lt://APP_ID",
     "testSuite": "lt://TestSuite_ID",
     "device" :  ["Galaxy S21 5G-12"],
-    "testTimeout": 150, 
     "deviceLog": true,
     "network": false,
     "build" : "Sample-Flutter"
@@ -209,7 +191,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
     <CodeBlock className="lamguage-powershell">
 
 ```
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"],\"testTimeout\": 150,\"deviceLog\": true,\"network\": false,\"build\" : \"Sample-Flutter\"}"
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"], \"deviceLog\": true,\"network\": false,\"build\" : \"Sample-Flutter\"}"
 ```
 
   </CodeBlock>
@@ -218,13 +200,11 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/f
 </TabItem>
 </Tabs>
 
-### **Step 4: View Test Execution**
+### Step 4: View Test Execution
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://accounts.lambdatest.com/login).
 
 ## Capabilities Supported
-
----
 
 The following capabilities are supported:
 
@@ -232,15 +212,13 @@ The following capabilities are supported:
 2. **testSuite:** Enter the test suite id generated while uploading the test suite. Example: `lt://APP123456789123456789`
 3. **device:** Enter the name and os version of the device in “DeviceName-OSVersion” format. Example: `Pixel 3 XL-9` or `Galaxy S21 Ultra 5G-11`.
 4. **video:** Generate video for all the tests that have run. Example: `true`.
-5. **testTimeout:** Max wait time for test execution (default value - 900 secs)
-6. **queueTimeout:** Enter the time in seconds after which you want your build to timeout from queue for device allocation. Example: `900`.
+5. **queueTimeout:** Enter the time in seconds after which you want your build to timeout from queue for device allocation. Example: `900`.
+6. **testTimeout:** Max wait time for test execution (default value - 900 secs)
 7. **deviceLog:** Boolean value to generate device logs. Example: `true`. 
 8. **build:** Set the name of the Espresso test build. Example: `My Flutter Build`.
 
 
 ## Running Tests in Parallel
-
----
 
 You can run tests in parallel on multiple devices by passing the device name in comma separated format in the execute command as show below:
 
