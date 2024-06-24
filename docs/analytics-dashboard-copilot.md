@@ -103,6 +103,12 @@ The AI CoPilot Dashboard offers a wide range of powerful features to enhance you
 
 All the widgets available within the dashboard's widget library are AI CoPilot enabled, allowing you to interact with them seamlessly. Simply ask questions or enter queries related to a specific widget, and the AI CoPilot will provide relevant insights and recommendations based on the data represented in that widget.
 
+## Rate Limit and Usage Guidelines
+
+To ensure optimal performance and availability of the AI CoPilot Dashboard, we have implemented rate limits and usage guidelines. These measures are designed to prevent abuse, maintain system stability, and provide a consistent user experience for all customers.
+
+We currently allow a maximum of **5 prompts per day** for each organization account. This limit is subject to change based on usage patterns and system load. If you exceed the daily query limit, you may experience temporary restrictions on AI CoPilot functionality until the limit resets.
+
 ## Support and Assistance
 
 We understand that adopting new technologies can sometimes be challenging. If you encounter any difficulties or have questions regarding the AI CoPilot Dashboard, our dedicated support team is here to assist you. Feel free to reach out to our [24/7 customer support](mailto:support@lambdatest.com) for expert guidance and troubleshooting. We are committed to ensuring your success and providing you with the best possible experience while using the AI CoPilot Dashboard.
