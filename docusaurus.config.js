@@ -1,4 +1,5 @@
 require('dotenv').config();
+import { themes as prismThemes } from 'prism-react-renderer';
 module.exports = {
   title: 'LambdaTest',
   tagline: 'Ensure your web-apps work seamlessly on every desktop and mobile browsers.',
@@ -71,6 +72,7 @@ module.exports = {
     
     prism: {
         additionalLanguages: ['powershell','java','csharp','php','ruby','robotframework'],
+      theme: prismThemes.github,
     },
     // algolia: {
     //   apiKey: '21e5be14ef037223a329241ae6ac5678',
@@ -138,7 +140,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateTime: true,    
-          breadcrumbs: false,      
+          breadcrumbs: true,      
           // Please change this to your repo.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/edit/master/website/',
