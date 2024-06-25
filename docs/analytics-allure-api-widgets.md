@@ -1,8 +1,8 @@
 ---
 id: analytics-allure-api-widgets
-title: Allure API Test Insights with HyperExecute
-sidebar_label: Allure API Test Insights
-description: API Test Insights by executing test cases using the Allure report with HyperExecute
+title: Allure Test Insights with HyperExecute
+sidebar_label: Allure Test Insights
+description: Test Insights by executing test cases using the Allure report with HyperExecute
 keywords:
   - analytics
 url: https://www.lambdatest.com/support/docs/analytics-allure-api-widgets/
@@ -51,33 +51,33 @@ className="doc_img"
 The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@lambdatest.com).
 :::
 
-## Understanding The Allure API Test Insights Widget
+## Understanding The Allure Test Insights Widget
 
-The `Allure API Test Insights` module helps you to get an overview of the test execution results using the Allure API. This widget provides insights into the test execution results, test status, and test duration.
+The `Allure Test Insights` module helps you to get an overview of the test execution results using the Allure. This widget provides insights into the test execution results, test status, and test duration.
 
-## How To Use Allure API Test Insights?
+## How To Use Allure Test Insights?
 
 :::note Please Note
-The `Allure API Test Insights` widget is available for the `HyperExecute` product only. You need to have access to the `HyperExecute` product to use these widgets.
+The `Allure Test Insights` widget is available for the `HyperExecute` product only. You need to have access to the `HyperExecute` product to use these widgets.
 
-Additionally, you need to have the Allure report generated for your test cases within the `HyperExecute` YAML file changes and add the `API` job label for the API test cases to be displayed in the widget.
+Additionally, you need to have the Allure report generated for your test cases within the `HyperExecute` YAML file changes and add the job label for the test cases to be displayed in the widget.
 
 Read more about the [HyperExecute Reports](/docs/allure-reports/) product to get started.
 :::
 
-You can check the Allure API Test Insights for your test environments by following the below steps:
+You can check the Allure Test Insights for your test environments by following the below steps:
 
 - Navigate to the `Insights` module from the left navigation menu.
 - Create a new `Custom` dashboard or select an existing dashboard.
 - Click on the `HyperExecute` product.
-- Search for the `API Test` widgets from the list of available widgets.
+- Search for the `Allure Test` widgets from the list of available widgets.
 - Add the required widget to your dashboard.
 
 
 
-## What are the Key Insights Provided by Allure API Test Insights Widget?
+## What are the Key Insights Provided by Allure Test Insights Widget?
 
-The `Allure API Test Insights` widget provides the following key insights:
+The `Allure Test Insights` widget provides the following key insights:
 
 - **Test Execution Results**: The test execution results for the test cases executed using the Allure report.
 - **Test Status**: The status of the test cases executed using the Allure report.
@@ -87,9 +87,9 @@ The `Allure API Test Insights` widget provides the following key insights:
 - **Job Labels**: The job labels associated with the test cases executed using the Allure report.
 - **Test History**: The history of the test cases executed using the Allure report.
 
-## API Test Trends
+## Allure Test Trends
 
-The `API Test Trends` widget provides insights into the test execution results, test status, and test duration for the test cases executed using the Allure report. This widget helps you to get an overview of the test execution results and identify the bottlenecks in the test execution process.
+The `Allure Test Trends` widget provides insights into the test execution results, test status, and test duration for the test cases executed using the Allure report. This widget helps you to get an overview of the test execution results and identify the bottlenecks in the test execution process.
 
 <img
 loading="lazy"
@@ -100,15 +100,15 @@ height="400"
 className="doc_img"
 />
 
-#### Use Cases of API Test Trends Widget
+#### Use Cases of Allure Test Trends Widget
 - Get insights about the time series trends of the test execution count. 
 - Identify the trends of the tests run over a period of time.
 - Monitor for any anomalies in the test execution counts.
 
 
-## API Suite Health
+## Allure Suite Health
 
-The `API Suite Health` widget provides insights into the health of the test suites executed using the Allure report. This widget helps you to get an overview of the test suite health and identify the test suites that require attention.
+The `Allure Suite Health` widget provides insights into the health of the test suites executed using the Allure report. This widget helps you to get an overview of the test suite health and identify the test suites that require attention.
 
 <img
 loading="lazy"
@@ -119,14 +119,14 @@ height="400"
 className="doc_img"
 />
 
-#### Use Cases of API Suite Health Widget
+#### Use Cases of Allure Suite Health Widget
 - Get insights into the health of the test suites executed using the Allure report.
 - Identify the test suites that require attention based on the test status.
 - Monitor the test suite health trends over time.
 
-## API Test Status Ratio
+## Allure Test Status Ratio
 
-The `API Test Status Ratio` widget provides insights into the test status ratio for the test cases executed using the Allure report. This widget helps you to get an overview of the test status ratio and identify the test cases that require attention.
+The `Allure Test Status Ratio` widget provides insights into the test status ratio for the test cases executed using the Allure report. This widget helps you to get an overview of the test status ratio and identify the test cases that require attention.
 
 <img
 loading="lazy"
@@ -137,12 +137,12 @@ height="400"
 className="doc_img"
 />
 
-#### Use Cases of API Test Status Ratio Widget
+#### Use Cases of Allure Test Status Ratio Widget
 - Get insights into the test status ratio for the test cases executed using the Allure report.
 - Check for any anomalies in the test status ratio and identify the test cases that require attention.
 - Monitor the test status ratio trends over time and take corrective actions.
 
-## API Test Duration
+## Allure Test Duration
 
 The `API Test Duration` widget provides insights into the average test duration for the test cases executed using the Allure report. This widget helps you to get an overview of the test duration and identify the test cases that require attention.
 
@@ -155,7 +155,7 @@ height="400"
 className="doc_img"
 />
 
-#### Use Cases of API Test Duration Widget
+#### Use Cases of Allure Test Duration Widget
 - Get insights into the average test duration for the test cases executed using the Allure report.
 - Identify the test cases with high test duration and optimize the test execution process.
 - Monitor the test duration trends over time and reduce the test duration for better efficiency.
