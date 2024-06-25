@@ -73,6 +73,7 @@ module.exports = {
     prism: {
         additionalLanguages: ['powershell','java','csharp','php','ruby','robotframework'],
       theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
     },
     // algolia: {
     //   apiKey: '21e5be14ef037223a329241ae6ac5678',
