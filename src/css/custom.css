@@ -1558,6 +1558,7 @@
 table{border: 1px solid #d4d4d4;border-radius: 10px;width: fit-content;}
 table thead tr{border-bottom: none;border-top: none;}
 table th, table td{border: none;}
+table th{background-color: #fff;}
 table th:not(:last-child), table td:not(:last-child){border-right: 1px solid #d4d4d4;}
 
  .desired-capabilities-page table {
@@ -1678,6 +1679,14 @@ table th:not(:last-child), table td:not(:last-child){border-right: 1px solid #d4
 
  html[data-theme='dark'] .feedback__form__submit__btn {
    background-color: #2d2d2d;
+ }
+
+ html[data-theme='dark'] table th {
+   background-color: #0D1117;
+ }
+
+ html[data-theme='dark'] table, table th:not(:last-child), table td:not(:last-child), table tr {
+   border-color: #30363D;
  }
 
  html[data-theme='dark'] .feedback__box__form {
