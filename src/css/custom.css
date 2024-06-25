@@ -1234,16 +1234,16 @@
    background-color: unset;
  }
 
- .support_main h3 {
+ .support_main h3, .support_main a:hover h3 {
    font-weight: 600;
    font-size: 16px;
-   color: #333333;
+   color: #0969DA;
  }
 
  .support_main p {
    font-weight: 400;
    font-size: 14px;
-   color: #333333;
+   color: #666;
  }
 
  .support_main a {
