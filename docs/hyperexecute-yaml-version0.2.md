@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-yaml-version0.2
 title: HyperExecute Yaml Version 0.2
-hide_title: true
+hide_title: false
 sidebar_label: HyperExecute Yaml Version 0.2
 description: Learn more about HyperExecute YAML 0.2
 keywords:
@@ -36,10 +36,6 @@ slug: hyperexecute-yaml-version0.2/
       })
     }}
 ></script>
-
-# Hyperexecute Yaml Version 0.2
-* * *
-
 Hyperexecute YAML Version 0.2. This version introduces several new features and improvements compared to Version 0.1. This documentation will guide you through the changes and help you understand when to use Version 0.2 instead of Version 0.1.
 
 > Note: Currently we only support ***maven/testng*** framework.
@@ -74,6 +70,8 @@ framework:
   name: maven/testng
   defaultReports: false
   flags: ["-Dplatname=win"]
+  args:
+    region: ap
 ``` 
 
 <!-- ## Supported Fields In Framework Object -->
@@ -89,6 +87,7 @@ The framework field supports the following parameters
 | [discoveryType](#discoveryType) | String | No | Specifies the type of test discovery to use. Supported values are "method" and "class". The default is "method".|
 | [workingDirectory](#workingDirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
 | [defaultReports](#defaultReports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
+| [region](#region) | String | No | Specifies in which region you want to spin your appium tests.|
 
 ### `name`
 Specifies the testing framework used in your repository.
@@ -180,6 +179,22 @@ framework:
     - "-Dplatname=win"
 ```
 
+### `region`
+
+The region parameter specifies the region or location where the Appium tests will be executed. Our platform supports the following three regions:
+
+- ap (Asia-Pacific)
+- us (United States)
+- eu (European Union)
+
+> The region parameter should always be defined under the `args` parameter, as shown in the below sample code.
+
+```bash
+framework:
+  args:
+    region: us
+```
+
 ## Sample Yaml Version 0.2
 
 ```bash
@@ -217,6 +232,8 @@ framework:
   defaultReports: false
   flags:
     - "-Dplatname=win"
+  args:
+    region: us
 ```
 
 ## Additional Details
