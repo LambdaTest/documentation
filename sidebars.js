@@ -1607,20 +1607,259 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Selenium Testing",
+        label: 'Getting Started',
         link: {
-          type: "doc",
-          id: "getting-started",
+          type: 'doc',
+          id: 'getting-started'
         },
-
+        items: [
+          "lambdatest-running-your-first-job",
+          "inside-lambdatest-automation-platform"
+        ]
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Languages and Frameworks",
+        link: {
+          type:'doc',
+          id: 'selenium-supported-languages-and-frameworks'
+        },
         items: [
           {
             type: "category",
             collapsed: true,
-            label: "Getting Started",
+            label: "Java",
             link: {
               type: "doc",
-              id: "inside-lambdatest-automation-platform",
+              id: "java-framework",
+            },
+            items: [
+              "testng-framework",
+              "junit-frameworks",
+              "cucumber-script-testng-selenium",
+              "selenide-frameworks",
+              "gauge-frameworks",
+              "geb-frameworks",
+              "running-serenity-test-on-selenium-grid",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "JavaScript",
+            link: {
+              type: "doc",
+              id: "running-javascript-test-scripts-on-lambdatest",
+            },
+            items: [
+              "running-protractor-test-scripts-on-lambdatest",
+              "automation-testing-with-mocha-and-selenium",
+              "run-nightwatch-tests-on-lambdatest-selenium-grid",
+              "run-wd-atomation-test-on-lambdatest-selenium-grid",
+              "automation-testing-using-webdriverIO-5-6-2",
+              "run-webdriverio-automation-scripts-on-lambdatest",
+              "automation-testing-with-selenium-and-jest",
+              "run-automation-tests-using-angularjs-with-karma",
+              "cucumberjs-testing-using-lambdatest-selenium-grid",
+              "automation-testing-using-jasmine-with-karma",
+              "karma-integration-with-lambdatest",
+              "npm-plugin-for-testcafe-integration-with-lambdatest",
+              "selenium-tests-with-nemojs",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "C#",
+            link: {
+              type: "doc",
+              id: "csharp-with-selenium",
+            },
+            items: [
+              "nunit-with-selenium",
+              "selenium-xunit",
+              "mstest-with-selenium",
+              "specflow-with-selenium",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Python",
+            link: {
+              type: "doc",
+              id: "python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid",
+            },
+            items: [
+              "unit-testing-in-python",
+              "pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid",
+              "robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid",
+              "behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid",
+              "automation-testing-selenium-with-lettuce",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "PHP",
+            link: {
+              type: "doc",
+              id: "php-framework",
+            },
+            items: [
+              "behat-php-framework",
+              "laravel-php-framework",
+              "codeception-php-framework",
+              "phpunit-php-framework",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Ruby",
+            link: {
+              type: "doc",
+              id: "ruby",
+            },
+            items: ["ruby-capybara", "ruby-rspec", "ruby-testunit"],
+          },
+          "executing-tesbo-automation-script-over-online-selenium-grid",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test Capabilities",
+        link: {
+          type: "doc",
+          id: "desired-capabilities",
+        },
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "Browser Configuration",
+            items: [
+              "perform-selenium-automation-on-headless-browsers",
+              "custom-chrome",
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Network",
+            items: [
+              "network-throttling",
+              "custom-dns-map",
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Performance",
+            items: [
+              "view-lighthouse-performance-metrics",
+              "lighthouse-reports-hooks",
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Debugging",
+            items: [
+              "debugging-options",
+              "telemetry-logs",
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Test Execution",
+            items: [
+              "smart-wait",
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Security",
+            items: [
+              "custom-header",
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Other Capabilities",
+            items: [
+              "auto-heal",
+              "command-annotations",
+              "har-log-viewer",
+            ]
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Troubleshooting",
+        items: [
+          "error-messages",
+          "timeouts-issues-and-resolutions",
+          "lambda-exceptions",
+          "performance-tips",
+        ],
+      }, 
+      {
+        type: "category",
+        collapsed: true,
+        label: "Advanced Features",
+        items: [
+          "upload-files-using-lambdatest",
+          "setup-pre-run-executable",
+          "build-split",
+          "daily-usage-limit",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Knowledge Base",
+        link: {
+          type: "doc",
+          id: "selenium-knowledge-base",
+        },
+        items: [
+          "lambda-hooks",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Configuration",
+            items: [
+              "environment-variables",
+              "Selenium-Grid-Configuration",
+              "supported-browsers-and-operating-systems-for-the-web-interface",
+              "change-individual-test-details",
+              "queuing",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Proxy Settings",
+            items: [
+              "white-listing-proxy-with-lambdatest",
+              "run-selenium-test-behind-the-proxy",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "How To Guide",
+            link: {
+              type: "doc",
+              id: "selenium-how-to-guide",
             },
             items: [
               "filter-your-selenium-tests",
@@ -1632,187 +1871,272 @@ module.exports = {
               "group-and-filter-your-test-builds-using-build-tags",
             ],
           },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Languages and Frameworks",
-            type: "category",
-            collapsed: true,
-            items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "Java",
-                link: {
-                  type: "doc",
-                  id: "java-framework",
-                },
-                items: [
-                  "testng-framework",
-                  "junit-frameworks",
-                  "selenide-frameworks",
-                  "gauge-frameworks",
-                  "running-serenity-test-on-selenium-grid",
-                  "cucumber-script-testng-selenium",
-                  "geb-frameworks",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "JavaScript",
-                link: {
-                  type: "doc",
-                  id: "running-javascript-test-scripts-on-lambdatest",
-                },
-                items: [
-                  "running-protractor-test-scripts-on-lambdatest",
-                  "automation-testing-with-mocha-and-selenium",
-                  "run-nightwatch-tests-on-lambdatest-selenium-grid",
-                  "run-wd-atomation-test-on-lambdatest-selenium-grid",
-                  "automation-testing-using-webdriverIO-5-6-2",
-                  "run-webdriverio-automation-scripts-on-lambdatest",
-                  "automation-testing-with-selenium-and-jest",
-                  "run-automation-tests-using-angularjs-with-karma",
-                  "cucumberjs-testing-using-lambdatest-selenium-grid",
-                  "automation-testing-using-jasmine-with-karma",
-                  "karma-integration-with-lambdatest",
-                  "npm-plugin-for-testcafe-integration-with-lambdatest",
-                  "selenium-tests-with-nemojs",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "C#",
-                link: {
-                  type: "doc",
-                  id: "csharp-with-selenium",
-                },
-                items: [
-                  "nunit-with-selenium",
-                  "selenium-xunit",
-                  "mstest-with-selenium",
-                  "specflow-with-selenium",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Python",
-                link: {
-                  type: "doc",
-                  id: "python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid",
-                },
-                items: [
-                  "unit-testing-in-python",
-                  "pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid",
-                  "robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid",
-                  "behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid",
-                  "automation-testing-selenium-with-lettuce",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "PHP",
-                link: {
-                  type: "doc",
-                  id: "php-framework",
-                },
-                items: [
-                  "behat-php-framework",
-                  "laravel-php-framework",
-                  "codeception-php-framework",
-                  "phpunit-php-framework",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Ruby",
-                link: {
-                  type: "doc",
-                  id: "ruby",
-                },
-                items: ["ruby-capybara", "ruby-rspec", "ruby-testunit"],
-              },
-              "executing-tesbo-automation-script-over-online-selenium-grid",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Test Capabilities",
-            link: {
-              type: "doc",
-              id: "desired-capabilities",
-            },
-            items: [
-              "view-lighthouse-performance-metrics",
-              "network-throttling",
-              "perform-selenium-automation-on-headless-browsers",
-              "debugging-options",
-              "telemetry-logs",
-              "smart-wait",
-              "custom-header",
-              "auto-heal",
-              "command-annotations",
-              "custom-dns-map",
-              "lighthouse-reports-hooks",
-              "har-log-viewer",
-              "custom-chrome",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Troubleshooting",
-            items: [
-              "error-messages",
-              "timeouts-issues-and-resolutions",
-              "lambda-exceptions",
-              "performance-tips",
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "FAQs",
-            items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "Configuration",
-                items: [
-                  "environment-variables",
-                  "Selenium-Grid-Configuration",
-                  "supported-browsers-and-operating-systems-for-the-web-interface",
-                  "change-individual-test-details",
-                  "queuing",
-                  "lambda-hooks",
-                ],
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Proxy Settings",
-                items: [
-                  "white-listing-proxy-with-lambdatest",
-                  "run-selenium-test-behind-the-proxy",
-                ],
-              },
-              "upload-files-using-lambdatest",
-              "daily-usage-limit",
-              "setup-pre-run-executable",
-              "build-split",
-            ],
-          },
           "mobile-web-automation-on-real-devices",
         ],
       },
+      {
+        type: "doc",
+        label: "Frequently Asked Questions",
+        id: "selenium-faq",
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Release Notes",
+        link: {
+          type: "doc",
+          id: "hyperexecute-release-notes",
+        },
+        items: [
+          {
+            type: "doc",
+            label: "Release Notes 2.3.6",
+            id: 'hyperexecute-release-notes-2-3-6'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.3.3",
+            id: 'hyperexecute-release-notes-2-3-3'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.3.1",
+            id: 'hyperexecute-release-notes-2-3-1'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.3.0",
+            id: 'hyperexecute-release-notes-2-3-0'
+          },
+          {
+            type: "doc",
+            label: "Release Notes 2.2.9",
+            id: 'hyperexecute-release-notes-2-2-9'
+          },
+        ]
+      },     
     ]
   ],
+
+  // SeleniumTestingSidebar: [
+  //   {
+  //     type: 'link',
+  //     label: '<- Back',
+  //     href: '/docs/',
+  //     customProps: {
+  //       className: 'back-to-main-menu'
+  //     },
+  //   },
+  //   [
+  //     {
+  //       type: "category",
+  //       collapsed: true,
+  //       label: "Selenium Testing",
+  //       link: {
+  //         type: "doc",
+  //         id: "getting-started",
+  //       },
+
+  //       items: [
+  //         {
+  //           type: "category",
+  //           collapsed: true,
+  //           label: "Getting Started",
+  //           link: {
+  //             type: "doc",
+  //             id: "inside-lambdatest-automation-platform",
+  //           },
+  //           items: [
+  //             "filter-your-selenium-tests",
+  //             "mark-as-bug-in-automation-testing",
+  //             "sharing-test-results",
+  //             "download-files-using-lambdatest-selenium-grid",
+  //             "live-interaction",
+  //             "group-tests-using-custom-tags",
+  //             "group-and-filter-your-test-builds-using-build-tags",
+  //           ],
+  //         },
+  //         {
+  //           type: "category",
+  //           collapsed: true,
+  //           label: "Languages and Frameworks",
+  //           type: "category",
+  //           collapsed: true,
+  //           items: [
+  //             {
+  //               type: "category",
+  //               collapsed: true,
+  //               label: "Java",
+  //               link: {
+  //                 type: "doc",
+  //                 id: "java-framework",
+  //               },
+  //               items: [
+  //                 "testng-framework",
+  //                 "junit-frameworks",
+  //                 "selenide-frameworks",
+  //                 "gauge-frameworks",
+  //                 "running-serenity-test-on-selenium-grid",
+  //                 "cucumber-script-testng-selenium",
+  //                 "geb-frameworks",
+  //               ],
+  //             },
+  //             {
+  //               type: "category",
+  //               collapsed: true,
+  //               label: "JavaScript",
+  //               link: {
+  //                 type: "doc",
+  //                 id: "running-javascript-test-scripts-on-lambdatest",
+  //               },
+  //               items: [
+  //                 "running-protractor-test-scripts-on-lambdatest",
+  //                 "automation-testing-with-mocha-and-selenium",
+  //                 "run-nightwatch-tests-on-lambdatest-selenium-grid",
+  //                 "run-wd-atomation-test-on-lambdatest-selenium-grid",
+  //                 "automation-testing-using-webdriverIO-5-6-2",
+  //                 "run-webdriverio-automation-scripts-on-lambdatest",
+  //                 "automation-testing-with-selenium-and-jest",
+  //                 "run-automation-tests-using-angularjs-with-karma",
+  //                 "cucumberjs-testing-using-lambdatest-selenium-grid",
+  //                 "automation-testing-using-jasmine-with-karma",
+  //                 "karma-integration-with-lambdatest",
+  //                 "npm-plugin-for-testcafe-integration-with-lambdatest",
+  //                 "selenium-tests-with-nemojs",
+  //               ],
+  //             },
+  //             {
+  //               type: "category",
+  //               collapsed: true,
+  //               label: "C#",
+  //               link: {
+  //                 type: "doc",
+  //                 id: "csharp-with-selenium",
+  //               },
+  //               items: [
+  //                 "nunit-with-selenium",
+  //                 "selenium-xunit",
+  //                 "mstest-with-selenium",
+  //                 "specflow-with-selenium",
+  //               ],
+  //             },
+  //             {
+  //               type: "category",
+  //               collapsed: true,
+  //               label: "Python",
+  //               link: {
+  //                 type: "doc",
+  //                 id: "python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid",
+  //               },
+  //               items: [
+  //                 "unit-testing-in-python",
+  //                 "pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid",
+  //                 "robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid",
+  //                 "behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid",
+  //                 "automation-testing-selenium-with-lettuce",
+  //               ],
+  //             },
+  //             {
+  //               type: "category",
+  //               collapsed: true,
+  //               label: "PHP",
+  //               link: {
+  //                 type: "doc",
+  //                 id: "php-framework",
+  //               },
+  //               items: [
+  //                 "behat-php-framework",
+  //                 "laravel-php-framework",
+  //                 "codeception-php-framework",
+  //                 "phpunit-php-framework",
+  //               ],
+  //             },
+  //             {
+  //               type: "category",
+  //               collapsed: true,
+  //               label: "Ruby",
+  //               link: {
+  //                 type: "doc",
+  //                 id: "ruby",
+  //               },
+  //               items: ["ruby-capybara", "ruby-rspec", "ruby-testunit"],
+  //             },
+  //             "executing-tesbo-automation-script-over-online-selenium-grid",
+  //           ],
+  //         },
+  //         {
+  //           type: "category",
+  //           collapsed: true,
+  //           label: "Test Capabilities",
+  //           link: {
+  //             type: "doc",
+  //             id: "desired-capabilities",
+  //           },
+  //           items: [
+  //             "view-lighthouse-performance-metrics",
+  //             "network-throttling",
+  //             "perform-selenium-automation-on-headless-browsers",
+  //             "debugging-options",
+  //             "telemetry-logs",
+  //             "smart-wait",
+  //             "custom-header",
+  //             "auto-heal",
+  //             "command-annotations",
+  //             "custom-dns-map",
+  //             "lighthouse-reports-hooks",
+  //             "har-log-viewer",
+  //             "custom-chrome",
+  //           ],
+  //         },
+  //         {
+  //           type: "category",
+  //           collapsed: true,
+  //           label: "Troubleshooting",
+  //           items: [
+  //             "error-messages",
+  //             "timeouts-issues-and-resolutions",
+  //             "lambda-exceptions",
+  //             "performance-tips",
+  //           ],
+  //         },
+  //         {
+  //           type: "category",
+  //           collapsed: true,
+  //           label: "FAQs",
+  //           items: [
+  //             {
+  //               type: "category",
+  //               collapsed: true,
+  //               label: "Configuration",
+  //               items: [
+  //                 "environment-variables",
+  //                 "Selenium-Grid-Configuration",
+  //                 "supported-browsers-and-operating-systems-for-the-web-interface",
+  //                 "change-individual-test-details",
+  //                 "queuing",
+  //                 "lambda-hooks",
+  //               ],
+  //             },
+  //             {
+  //               type: "category",
+  //               collapsed: true,
+  //               label: "Proxy Settings",
+  //               items: [
+  //                 "white-listing-proxy-with-lambdatest",
+  //                 "run-selenium-test-behind-the-proxy",
+  //               ],
+  //             },
+  //             "upload-files-using-lambdatest",
+  //             "daily-usage-limit",
+  //             "setup-pre-run-executable",
+  //             "build-split",
+  //           ],
+  //         },
+  //         "mobile-web-automation-on-real-devices",
+  //       ],
+  //     },
+  //   ]
+  // ],
 
   CypressTestingSidebar: [
     {
