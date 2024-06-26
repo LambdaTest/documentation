@@ -187,7 +187,7 @@ The region parameter specifies the region or location where the Appium tests wil
 - us (United States)
 - eu (European Union)
 
-> The region parameter should always be define under the `args` parameter as shown in the below sample code.
+> The region parameter should always be defined under the `args` parameter, as shown in the below sample code.
 
 ```bash
 framework:
