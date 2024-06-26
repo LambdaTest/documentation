@@ -2,7 +2,7 @@
 id: executing-tesbo-automation-script-over-online-selenium-grid
 title: Run Tesbo Automation Script Over Selenium Grid Online
 hide_title: true
-sidebar_label: Tesbo Framework
+sidebar_label: Tesbo
 description: Tesbo is a hybrid framework that works on a keyword-driven approach, allowing you to write automation scripts in plain English &amp; run it over Selenium Grid online. Read this document to run Tesbo script on LambdaTest Selenium Grid on cloud.
 keywords:
 - testbo
