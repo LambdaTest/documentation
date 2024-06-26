@@ -1,8 +1,8 @@
 ---
 id: inside-lambdatest-automation-platform
 title: LambdaTest Automation Platform:Timeline, Analytics and Automation Logs
-hide_title: true
-sidebar_label: Inside LambdaTest Automation Platform
+hide_title: false
+sidebar_label: Guided Walkthrough
 description: You can view the Timelines, Analytics, and Automation Log of all the tests and builds run on the LambdaTest.
 keywords:
   - Automation Platform
@@ -38,8 +38,6 @@ slug: inside-lambdatest-platform/
     }}
 ></script>
 
-# Inside LambdaTest Automation Platform
-***
 In the LambdaTest automation testing dashboard, you can view the **Timelines, Analytics,** and **Automation Logs** of all the tests and builds that run on the LambdaTest. With these advanced filters, Analytic dashboard gives you detail information of your all the tests.
 
 If you wish to have a detailed view regarding overall performance of your test at LambdaTest, then Analytics dashboard will help you with it. With Analytics, you can set up filters and multiple visualization metrics for an intuitive display.
