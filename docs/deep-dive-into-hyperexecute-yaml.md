@@ -367,15 +367,16 @@ This command will provide a Test Discovery Result that lists the tests and their
 This is an advanced version of `pre` where you can control **how** your pre commands should be executed in a parallel HyperExecute `Task`. If both pre and preDirectives flags are provided at the same time, then the precedence is given to the preDirectives flag.
 preDirectives currently has the ability to take the following additional inputs:
 - `maxRetries`: You can retry the commands that failed in the pre-step by using this directive. The numerical value assigned to this field determines the amount of times you can retry the failed pre commands.
-- `commands`: actual commands that needs to run like `npm install` or `mvn install`
+- `commands`: The actual commands that needs to run like `npm install` or `mvn install`
 - `shell`: shell to execute the commands under. This is typically helpful if you want to run your pre commands in a specific shell. For example, `powershell` for Windows or `bash` for Linux and MacOS.
+- `workingDirectory`: This specifies the location of the directory in which all test discovery and execution commands will run, as well as the location of any files or directories that are created as a result of the command execution.
 
 ```yaml
 preDirectives:
-  commands: 
-    - mkdir -p m2_cache_dir
-    - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install  
-  maxRetries: 3
+    commands: ['mvn -Dmaven.repo.local=./.m2 dependency:resolve', sleep 60]
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
 ```
 
 ***
@@ -395,12 +396,14 @@ This is an advanced version of `post` where you can control “how” your post 
 postDirectives currently has the ability to take the following additional inputs:
 
 - `commands`: actual commands that needs to run like `echo <some-dir>/output/output.log`
-
 - `shell`: shell to execute the commands under. This is typically helpful if you want to run your post commands in a specific shell. For example, `powershell` for Windows or `bash` for Linux and MacOS. (Coming Soon)
+- `workingDirectory`: This specifies the location of the directory in which all test discovery and execution commands will run, as well as the location of any files or directories that are created as a result of the command execution.
 
 ```yaml
 postDirectives:
-  - cat yaml/win/*.*hyperexecute_autosplits.yaml 
+    commands: [cat yaml/linux/v1/testng_hyperexecute_autosplit_sample.yaml]
+    shell: ""
+    workingDirectory: ""
 ```
 
 ***
@@ -1159,7 +1162,7 @@ testRunnerExecutor: bat
 ## `workingDirectory`
 <!-- Specifies the working directory where all discovery and execution commands will be executed. -->
 
-The `working directory` specifies the location of the directory in which all test discovery and execution commands will be run, as well as the location of any files or directories that are created as a result of the command execution.  If the `workingDirectory` option is not specified, then the working directory will be the directory where the YAML file is located.
+The `working directory` specifies the location of the directory in which all test discovery and execution commands will run, as well as the location of any files or directories that are created as a result of the command execution.  If the `workingDirectory` option is not specified, then the working directory will be the directory where the YAML file is located.
 
 ```yaml
 framework:
