@@ -848,6 +848,11 @@ module.exports = {
         items: [
           {
             type: "doc",
+            label: "Release Notes 2.3.8",
+            id: 'hyperexecute-release-notes-2-3-8'
+          },
+          {
+            type: "doc",
             label: "Release Notes 2.3.6",
             id: 'hyperexecute-release-notes-2-3-6'
           },
@@ -1878,43 +1883,7 @@ module.exports = {
         type: "doc",
         label: "Frequently Asked Questions",
         id: "selenium-faq",
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Release Notes",
-        link: {
-          type: "doc",
-          id: "hyperexecute-release-notes",
-        },
-        items: [
-          {
-            type: "doc",
-            label: "Release Notes 2.3.6",
-            id: 'hyperexecute-release-notes-2-3-6'
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.3.3",
-            id: 'hyperexecute-release-notes-2-3-3'
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.3.1",
-            id: 'hyperexecute-release-notes-2-3-1'
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.3.0",
-            id: 'hyperexecute-release-notes-2-3-0'
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.2.9",
-            id: 'hyperexecute-release-notes-2-2-9'
-          },
-        ]
-      },     
+      },    
     ]
   ],
 

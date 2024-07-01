@@ -1,15 +1,15 @@
 ---
 id: getting-started-with-hyperexecute
 title: Getting started with Hyperexecute
-hide_title: true
+hide_title: false
 sidebar_label: HyperExecute 
 description: Get started with HyperExecute on LambdaTest for faster web automation tests using Matrix and Auto-Split strategies. Test with Selenium languages at high speeds.
 keywords:
   - lambdatest automation
   - lambdatest hyperexecute
   - hyperexecute automation grid
-  - hyperexecute grid online
-  - online hyperexecute grid
+  - hyperexecute online
+  - online hyperexecute
   - hyperexecute automation grid online
   - lambdatest hypterest tutorial
   - hyperexecute getting started
@@ -23,6 +23,9 @@ url: https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute
 site_name: LambdaTest
 slug: getting-started-with-hyperexecute/
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -47,12 +50,6 @@ slug: getting-started-with-hyperexecute/
       })
     }}
 ></script>
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-# Getting Started with HyperExecute 
-* * *
 HyperExecute is an AI Powered Test Orchestration Cloud Platform, enabling test automation teams worldwide to achieve an accelerated time to market by providing JIT (Just-in-time) testing infrastructure that offers enhanced test execution speeds, smart test orchestration, detailed execution logs and much more.
 
 It requires a [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file which contains all the necessary instructions and a [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job.
@@ -113,7 +110,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
   </a>
 </div>
 
-<!-- Here are all the languages and frameworks supported by HyperExecute Grid. -->
+<!-- Here are all the languages and frameworks supported by HyperExecute. -->
 
 <div className= "lt_framework_list_row">
 <p></p>
@@ -405,7 +402,7 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Languages and Frameworks Supported By HyperExecute Grid
+       Languages and Frameworks Supported By HyperExecute
       </span>
     </li>
   </ul>

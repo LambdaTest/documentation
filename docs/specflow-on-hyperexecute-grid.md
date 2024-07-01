@@ -3,7 +3,7 @@ id: specflow-on-hyperexecute-grid
 title: Run automation tests on HyperExecute using SpecFlow
 hide_title: true
 sidebar_label: SpecFlow
-description: Learn how to run Selenium automation tests on HyperExecute grid using the SpecFlow framework
+description: Learn how to run Selenium automation tests on HyperExecute using the SpecFlow framework
 keywords:
   - SpecFlow
   - SpecFlow selenium
@@ -14,7 +14,7 @@ keywords:
   - SpecFlow C# Selenium framework
   - lambdatest SpecFlow
   - frameworks on lambdatest
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute SpecFlow testing
   - hyperexecute python testing
   - hyperexecute automation testing
@@ -319,7 +319,7 @@ Happy testing!
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run SpecFlow tests on HyperExecute Grid
+      Run SpecFlow tests on HyperExecute
       </span>
     </li>
   </ul>

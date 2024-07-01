@@ -3,7 +3,7 @@ id: ruby-on-hyperexecute-grid
 title: Run automation tests on HyperExecute using Ruby
 hide_title: true
 sidebar_label: Ruby
-description: Learn how to run Selenium automation tests on HyperExecute grid using Ruby
+description: Learn how to run Selenium automation tests on HyperExecute using Ruby
 keywords:
   - Ruby
   - Ruby selenium
@@ -13,7 +13,7 @@ keywords:
   - Ruby Selenium framework
   - lambdatest Ruby
   - frameworks on lambdatest
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute Ruby testing
   - hyperexecute Ruby testing
   - hyperexecute automation testing
@@ -292,7 +292,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run Ruby tests on HyperExecute Grid
+      Run Ruby tests on HyperExecute
       </span>
     </li>
   </ul>

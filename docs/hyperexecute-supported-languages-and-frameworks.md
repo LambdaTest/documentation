@@ -3,7 +3,7 @@ id: hyperexecute-supported-languages-and-frameworks
 title: Languages and Frameworks supported on HyperExecute 
 hide_title: true
 sidebar_label: Supported Languages
-description: HyperExecute Grid supports languages and frameworks that are compatible with Selenium 
+description: HyperExecute supports languages and frameworks that are compatible with Selenium 
 keywords:
  - Selenium
  - selenium languages
@@ -299,7 +299,7 @@ Out of the box, HyperExecute supports multiple languages and testing frameworks 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Languages and Frameworks Supported By HyperExecute Grid
+       Languages and Frameworks Supported By HyperExecute
       </span>
     </li>
   </ul>

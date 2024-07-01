@@ -1,7 +1,7 @@
 ---
 id: deep-dive-into-hyperexecute-yaml
 title: Deep Dive into HyperExecute YAML
-hide_title: true
+hide_title: false
 sidebar_label: Deep Dive into HyperExecute YAML
 description: This document delivers detailed elucidations for each and every YAML flags, offering an in-depth understanding of each configuration parameter
 keywords:
@@ -12,6 +12,9 @@ url: https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/
 site_name: LambdaTest Deep dive into hyperexecute yaml
 slug: deep-dive-into-hyperexecute-yaml/
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -37,28 +40,23 @@ slug: deep-dive-into-hyperexecute-yaml/
     }}
 ></script>
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-# Deep Dive Into HyperExecute YAML
-* * *
-
 This document delivers detailed elucidations for each and every YAML flags, offering an in-depth understanding of each configuration parameter.
 
-<!-- MANDATORY STARTED-->
+## Mandatory Parameters
 
-## `version`
+### `version`
 The version of HyperExecute YAML being used to run the tests. Currently there are two supported versions are [0.1](/support/docs/deep-dive-into-hyperexecute-yaml/#hyperexecute-yaml-parameters) and [0.2](/support/docs/hyperexecute-yaml-version0.2/). 
 ```yaml
 version: 0.1
 ```
 
-***
-## `runson`
+### `runson`
 OS on which you will run your Test. You can run your tests on Linux(linux), MacOS(mac), Windows10(win) or Windows10(win11). 
+
 ```yaml
 runson: linux # or mac or win or win11
 ```
+
 If you want to run a multi OS job, you can provide `${matrix.os}` in this field as shown below.
 ```yaml
 runson: ${matrix.os}
@@ -67,9 +65,7 @@ matrix:
   - linux
 ```
 
-***
-
-## `pre`
+### `pre`
 All actions you need to perform before test execution, such as installing dependencies. You’ll ideally want to use this parameter to “pre” run simple commands like `npm install`, `yarn install`, `mvn install` etc
 
 ```yaml
@@ -78,24 +74,239 @@ pre:
   - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install
 ```
 
-<!-- MANDATORY ENDED-->
-
 ***
 
-<!-- GENERAL STARTED-->
+## AutoSplit Mode Parameters
 
-## `globalTimeout`
+<!-- AUTOSPLIT MODE STARTED-->
 
-The `globalTimeout` value determines the maximum duration (in minutes) of a Job . It can be set between 1 and 150 minutes, and has a default value of 90 minutes. 
+### `autosplit` 
+Setting **autosplit** to true will distribute the `scenarios` among the concurrent number of tasks.
 
-For example, if you set the `globalTimeout` to 120 minutes, a Job  that exceed this duration will be automatically terminated. If you’re expecting that running all your test-cases despite parallelism is going to take more than 90 mins, set it to an appropriate value, for example, 120. If you have tests that run for longer than the maximum limit of 150 minutes, you need to get in touch with our support team.
+If you want to distribute you **m** commands on **n** VMs automatically and you don’t need to bother much about which all commands are grouped together on a single VM, you can use the **autosplit** feature for this purpose.
+
+For instance, you have a parallelism of 10 and you want to run 50 commands in total. Using autosplit, the system will distribute these 50 commands on 10 Vms in the most efficient manner possible. Each VM(`task`) will receive some commands to run out of these 50 commands.
+
+> Note: In `static mode`, these commands will be distributed among VMs smartly(AI) using history data, such that each VM(`task`) gets to run for almost the same amount of time. This is to reduce the total `job` time.
+
+If your Auto Split test has to be enabled, set this boolean value to true. For more information on the Auto split feature, go to [this page](/support/docs/hyperexecute-auto-split-strategy/).
 ```yaml
-globalTimeout: 90   
+autosplit: true   
+```
+
+### `concurrency`
+Indicates the number of concurrent tasks to run on HyperExecute for processing all your scenarios and/or test-cases. A HyperExecute job, thus triggered, creates as many threads as the value provided for this key. Required for [autosplit](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit). 
+
+```yaml
+concurrency: 10   
+```
+> **Pro Tip**: The platform will guide you to utilize a higher concurrency automatically after analyzing your usage and test cases. You can find this information on the left side banner. [Learn more](/support/docs/hyperexecute-how-to-find-correct-concurrency/)
+
+> **Note**: You can see the overall concurrency trends using our analytics widgets. [Learn more](/support/docs/analytics-modules-resource-utilization/#concurrency-trends)
+
+### `testRunnerCommand`
+The testRunnerCommand is a command used to run a single test entity in isolation. This entity could be a file, module, feature, or scenario. It is defined in the YAML file and tells the system how to run the test entity.
+
+```yaml
+#For example
+testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
+```
+This command runs the test using Maven and passes in the options for Cucumber, the scenario to run, and the operating system to use.
+
+> Note: This is only required in yaml `version 0.1` and if you are not running in [**matrix mode**](/support/docs/hyperexecute-matrix-multiplexing-strategy/).
+
+```yaml
+#Another example
+testRunnerCommand: npm test -- $test
 ```
 
 ***
 
-## `runtime`
+## Matrix Mode Parameters
+
+### `matrix`
+A matrix allows you to create multiple tasks by performing variable substitutions in a single job. For example, you can use a matrix to create more than one version of a browser, operating system, etc. For more information on Matrix multiplexing strategy, go to this page [this page](/support/docs/hyperexecute-matrix-multiplexing-strategy/).
+```yaml
+matrix: 
+  files: ["Test1","Test2","Test3"]  
+```
+
+### `combineTasksInMatrixMode`
+
+The `concurrency` flag is not acknowledged in [matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) mode. Therefore, you must set `combineTasksInMatrixMode` to `true` if you wish to use a limited number of concurrencies that are available in your license for a matrix-mode job. Instead of using one machine per matrix combination, this will run the (matrix-multiplied) combinations as scenarios in the number of HyperExecute machines that was specified in concurrency.
+
+For example, the below-mentioned YAML snippet will generate a total of 8 scenarios, and since the concurrency is set to 2, these 8 scenarios will run in parallel on 2 HyperExecute machines. In each machine (let's say each has 4 scenarios to execute), they will be running sequentially only.
+
+> **Total Scenarios =** *[Entries in os List] x [Entries in browser List] x [Entries in Files List]*
+
+```yaml
+concurrency: 2
+combineTasksInMatrixMode: true
+
+matrix:
+   os:[mac, linux]
+   browser:['edge', 'brave']
+   files: ['Test1', 'Test2']
+```
+
+### `testSuites`
+A command to run the tests that were mentioned in the scenario key for [matrix](/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) based test execution. [Learn more](/support/docs/hyperexecute-matrix-multiplexing-strategy/).
+
+```yaml
+testSuites: - mvn test -Dtest=$files
+```
+
+***
+
+## Hybrid Mode Parameters
+
+<!-- HYBRID MODE STARTED-->
+
+### `parallelism`
+
+If we mention runson: &#36;&lbrace;matrix.os&rbrace;, then we need to make sure that parallelism is defined as well. 
+There are 2 ways to define parallelism, either you can mention common parallelism which can be used in any platform or you can mention platform specific parallelism ex - winParallelism, linuxParallelism etc.
+```yaml
+parallelism: 2
+matrix:
+ os: [win, mac]
+ version: [1, 2, 3]
+ browser: [chrome]
+```
+
+In the above example we have total of 3 combinations for each os i.e.<br />
+**For win:**<br />
+  Version: 1, Browser: Chrome<br />
+  Version: 2, Browser: Chrome<br />
+  Version: 3, Browser: Chrome <br /><br />
+**For mac:** <br />
+  Version: 1, Browser: Chrome<br />
+  Version: 2, Browser: Chrome<br />
+  Version: 3, Browser: Chrome
+
+So each combination will run on a parallelism provided in the yaml. Here all combinations will run on a parallelism of 2.
+
+#### `macParallelism`
+
+It is used if you want to provide different parallelism for MAC OS. If mac parallelism is not present it will consider parallelism as the default value.
+```yaml
+parallelism: 2
+macParallelism: 3
+matrix:
+ os: [win, mac]
+ version: [1, 2, 3]
+ browser: [chrome]
+``` 
+In the above example windows combinations will run on a parallelism on 2 and MAC combinations will run on a parallelism defined by macParallelism i.e. 3.
+
+#### `winParallelism`
+
+It is used if you want to provide different parallelism for win os. If win parallelism is not present it will consider parallelism as the default value.
+```yaml
+parallelism: 2
+winParallelism: 3
+matrix:
+ os: [win, mac]
+ version: [1, 2, 3]
+ browser: [chrome]
+```
+So in the above example mac combinations will run on a parallelism on 2 and windows combinations will run on a parallelism defined by winParallelism i.e. 3
+
+
+#### `linuxParallelism`
+
+It is used if you want to provide different parallelism for linux os. If linux parallelism is not present it will consider parallelism as the default value.
+```yaml
+parallelism: 2
+linuxParallelism: 3
+matrix:
+ os: [win, linux]
+ version: [1, 2, 3]
+ browser: [chrome]
+```
+So in the above example windows combinations will run on a parallelism on 2 and linux combinations will run on a parallelism defined by linuxParallelism i.e. 3
+
+> **Note** : For platform if both is missing then the CLI will throw an error.
+
+### `testRunnerCommand`
+The testRunnerCommand is a command used to run a single test entity in isolation. This entity could be a file, module, feature, or scenario. It is defined in the YAML file and tells the system how to run the test entity.
+
+```yaml
+#For example
+testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
+```
+This command runs the test using Maven and passes in the options for Cucumber, the scenario to run, and the operating system to use.
+
+> Note: This is only required in yaml `version 0.1` and if you are not running in [**matrix mode**](/support/docs/hyperexecute-matrix-multiplexing-strategy/).
+
+```yaml
+#Another example
+testRunnerCommand: npm test -- $test
+
+#### `macTestRunnerCommand`
+In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple OS using the same yaml. On different OS `testRunnerCommand` can be different. So for specifying specific commands for MAC OS in hybrid mode. You can use this command.
+```yaml
+macTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="mac"
+```
+
+#### `winTestRunnerCommand`
+In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple OS using the same yaml. On different OS `testRunnerCommand` can be different. So for specifying specific commands for Windows in hybrid mode. You can use this command.
+```yaml
+winTestRunnerCommand: mvn test `-Dcucumber.options="$test"` `-Dscenario="$test"`  `-DOs="win 10"`
+```
+
+#### `linuxTestRunnerCommand`
+In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple OS using the same yaml. On different OS `testRunnerCommand` can be different. So for specifying specific commands for Linux in hybrid mode. You can use this command.
+```yaml
+linuxTestRunnerCommand: mvn test `-Dcucumber.options="$test"`  `-Dscenario="$test"`   `-DOs="linux"`
+```
+> Note: If the OS specific command is not provided then the testRunnerCommand will be used by default. If both are not provided then you will get an error.
+
+***
+
+## Basic Parameters
+
+### `cachekey`
+It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. When you run your tests for the very first time, HyperExecute caches the dependency files (e.g., package-lock.json, pom.xml, etc.). Now, when you execute the same test suite again (without making any changes), HyperExecute searches for a matching cached result within its cache storage, and if a valid cached result is found, HyperExecute utilizes it directly, skipping redundant execution.
+
+```yaml
+{{ checksum "package-lock.json" }}
+```
+
+:::tip
+If you are using Windows as well, then also you can define the path of the cache file using **forward slashes** if your file is inside the directories as shown below:
+
+```yaml
+{{ checksum "dir1/dir2/package-lock.json" }}
+```
+:::
+
+### `cacheDirectories`
+It is used to cache a certain set of files which are not supposed to change frequently such as dependency files for your tests (e.g. node_modules, .m2). HyperExecute can cache such files to help speed up your test execution time further the next time you run your job. 
+```yaml
+cacheDirectories:
+  - .m2
+```
+
+> **NOTE:** In version 0.2 YAML, the support for caching is by default, the user does not need to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster. <br />
+If the user adds the cacheDirectories and cacheKey keys in his YAML, the default caching gets disabled and preference is given to the user specified cache.
+```yaml
+cacheKey: '{{ checksum "pom.xml" }}'
+cacheDirectories:
+  - .m2
+```
+
+### `env`
+This variable can be used to define a list of key values which can be used to set runtime variables on the code execution platform i.e. machines. 
+
+```yaml
+env:
+  USERNAME: abc
+  PLATFORM: windows
+```
+This is helpful to set environment variables on the machine and use it in your code or install dependencies to run your test cases.
+
+### `runtime`
 
 The `runtime` flag is used to:
 - Download and install the dependent language and framework that is needed to execute your tests.
@@ -137,6 +348,17 @@ runtime:
     version: '3.10'
   - language: node
     version: '16'
+```
+
+***
+
+## `globalTimeout` 
+
+The `globalTimeout` value determines the maximum duration (in minutes) of a Job . It can be set between 1 and 150 minutes, and has a default value of 90 minutes. 
+
+For example, if you set the `globalTimeout` to 120 minutes, a Job  that exceed this duration will be automatically terminated. If you’re expecting that running all your test-cases despite parallelism is going to take more than 90 mins, set it to an appropriate value, for example, 120. If you have tests that run for longer than the maximum limit of 150 minutes, you need to get in touch with our support team.
+```yaml
+globalTimeout: 90   
 ```
 
 ***
@@ -194,17 +416,6 @@ hostsOverride:
   - host: example1.com
     ip: 127.0.0.1
 ```
-***
-
-## `env`
-This variable can be used to define a list of key values which can be used to set runtime variables on the code execution platform i.e. machines. 
-
-```yaml
-env:
-  USERNAME: abc
-  PLATFORM: windows
-```
-This is helpful to set environment variables on the machine and use it in your code or install dependencies to run your test cases.
 
 ***
 ## `frameworkStatusOnly`
@@ -416,39 +627,6 @@ postDirectives:
 
 ```yaml
 alwaysRunPostSteps: true
-```
-
-***
-
-## `cachekey`
-It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. When you run your tests for the very first time, HyperExecute caches the dependency files (e.g., package-lock.json, pom.xml, etc.). Now, when you execute the same test suite again (without making any changes), HyperExecute searches for a matching cached result within its cache storage, and if a valid cached result is found, HyperExecute utilizes it directly, skipping redundant execution.
-
-```yaml
-{{ checksum "package-lock.json" }}
-```
-
-:::tip
-If you are using Windows as well, then also you can define the path of the cache file using **forward slashes** if your file is inside the directories as shown below:
-
-```yaml
-{{ checksum "dir1/dir2/package-lock.json" }}
-```
-:::
-
-***
-## `cacheDirectories`
-It is used to cache a certain set of files which are not supposed to change frequently such as dependency files for your tests (e.g. node_modules, .m2). HyperExecute can cache such files to help speed up your test execution time further the next time you run your job. 
-```yaml
-cacheDirectories:
-  - .m2
-```
-
-> **NOTE:** In version 0.2 YAML, the support for caching is by default, the user does not need to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster. <br />
-If the user adds the cacheDirectories and cacheKey keys in his YAML, the default caching gets disabled and preference is given to the user specified cache.
-```yaml
-cacheKey: '{{ checksum "pom.xml" }}'
-cacheDirectories:
-  - .m2
 ```
 
 ***
@@ -892,17 +1070,6 @@ This can be majorly used for non selenium based tests to have the recorded video
 captureScreenRecordingForScenarios: true
 ```
 ***
-<!-- ***
-## `performance`
-This feature allows you to run a single command across multiple linux VM for load testing.
-
-```yaml
-performance:
-  rate: 10
-  count: 50
-```
-The rate specifies the rate at which task should start running and count is the total number of task to fire. In the above example, 50 task will be created and it will start executing at rate of 10 task per second.
-> **Note**: Performance testing is only allowed for linux and there is no discovery command needed for this. -->
 
 ## `buildConfig`
 
@@ -1177,181 +1344,6 @@ framework:
 
 <!-- GENERAL ENDED-->
 
-***
-
-<!-- AUTOSPLIT MODE STARTED-->
-
-## `autosplit` 
-Setting **autosplit** to true will distribute the `scenarios` among the concurrent number of tasks.
-
-If you want to distribute you **m** commands on **n** VMs automatically and you don’t need to bother much about which all commands are grouped together on a single VM, you can use the **autosplit** feature for this purpose.
-
-For instance, you have a parallelism of 10 and you want to run 50 commands in total. Using autosplit, the system will distribute these 50 commands on 10 Vms in the most efficient manner possible. Each VM(`task`) will receive some commands to run out of these 50 commands.
-
-> Note: In `static mode`, these commands will be distributed among VMs smartly(AI) using history data, such that each VM(`task`) gets to run for almost the same amount of time. This is to reduce the total `job` time.
-
-If your Auto Split test has to be enabled, set this boolean value to true. For more information on the Auto split feature, go to [this page](/support/docs/hyperexecute-auto-split-strategy/).
-```yaml
-autosplit: true   
-```
-***
-## `concurrency`
-Indicates the number of concurrent tasks to run on HyperExecute for processing all your scenarios and/or test-cases. A HyperExecute job, thus triggered, creates as many threads as the value provided for this key. Required for [autosplit](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit). 
-
-```yaml
-concurrency: 10   
-```
-> **Pro Tip**: The platform will guide you to utilize a higher concurrency automatically after analyzing your usage and test cases. You can find this information on the left side banner. [Learn more](/support/docs/hyperexecute-how-to-find-correct-concurrency/)
-
-> **Note**: You can see the overall concurrency trends using our analytics widgets. [Learn more](/support/docs/analytics-modules-resource-utilization/#concurrency-trends)
-
-***
-
-## `testRunnerCommand`
-The testRunnerCommand is a command used to run a single test entity in isolation. This entity could be a file, module, feature, or scenario. It is defined in the YAML file and tells the system how to run the test entity.
-
-```yaml
-#For example
-testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
-```
-This command runs the test using Maven and passes in the options for Cucumber, the scenario to run, and the operating system to use.
-
-> Note: This is only required in yaml `version 0.1` and if you are not running in [**matrix mode**](/support/docs/hyperexecute-matrix-multiplexing-strategy/).
-
-```yaml
-#Another example
-testRunnerCommand: npm test -- $test
-```
-
-### `macTestRunnerCommand`
-In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple OS using the same yaml. On different OS `testRunnerCommand` can be different. So for specifying specific commands for MAC OS in hybrid mode. You can use this command.
-```yaml
-macTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="mac"
-```
-
-### `winTestRunnerCommand`
-In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple OS using the same yaml. On different OS `testRunnerCommand` can be different. So for specifying specific commands for Windows in hybrid mode. You can use this command.
-```yaml
-winTestRunnerCommand: mvn test `-Dcucumber.options="$test"` `-Dscenario="$test"`  `-DOs="win 10"`
-```
-
-### `linuxTestRunnerCommand`
-In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple OS using the same yaml. On different OS `testRunnerCommand` can be different. So for specifying specific commands for Linux in hybrid mode. You can use this command.
-```yaml
-linuxTestRunnerCommand: mvn test `-Dcucumber.options="$test"`  `-Dscenario="$test"`   `-DOs="linux"`
-```
-> Note: If the OS specific command is not provided then the testRunnerCommand will be used by default. If both are not provided then you will get an error.
-
-<!-- AUTOSPLIT MODE ENDED-->
-
-***
-
-<!-- MATRIX MODE STARTED-->
-
-## `matrix`
-A matrix allows you to create multiple tasks by performing variable substitutions in a single job. For example, you can use a matrix to create more than one version of a browser, operating system, etc. For more information on Matrix multiplexing strategy, go to this page [this page](/support/docs/hyperexecute-matrix-multiplexing-strategy/).
-```yaml
-matrix: 
-  files: ["Test1","Test2","Test3"]  
-```
-***
-
-## `combineTasksInMatrixMode`
-
-The `concurrency` flag is not acknowledged in [matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) mode. Therefore, you must set `combineTasksInMatrixMode` to `true` if you wish to use a limited number of concurrencies that are available in your license for a matrix-mode job. Instead of using one machine per matrix combination, this will run the (matrix-multiplied) combinations as scenarios in the number of HyperExecute machines that was specified in concurrency.
-
-For example, the below-mentioned YAML snippet will generate a total of 8 scenarios, and since the concurrency is set to 2, these 8 scenarios will run in parallel on 2 HyperExecute machines. In each machine (let's say each has 4 scenarios to execute), they will be running sequentially only.
-
-> **Total Scenarios =** *[Entries in os List] x [Entries in browser List] x [Entries in Files List]*
-
-```yaml
-concurrency: 2
-combineTasksInMatrixMode: true
-
-matrix:
-   os:[mac, linux]
-   browser:['edge', 'brave']
-   files: ['Test1', 'Test2']
-```
-
-***
-## `testSuites`
-A command to run the tests that were mentioned in the scenario key for [matrix](/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) based test execution. [Learn more](/support/docs/hyperexecute-matrix-multiplexing-strategy/).
-
-```yaml
-testSuites: - mvn test -Dtest=$files   
-```
-
-<!-- MATRIX MODE ENDED-->
-
-***
-
-<!-- HYBRID MODE STARTED-->
-
-## `parallelism`
-If we mention runson: &#36;&lbrace;matrix.os&rbrace;, then we need to make sure that parallelism is defined as well. 
-There are 2 ways to define parallelism, either you can mention common parallelism which can be used in any platform or you can mention platform specific parallelism ex - winParallelism, linuxParallelism etc.
-```yaml
-parallelism: 2
-matrix:
- os: [win, mac]
- version: [1, 2, 3]
- browser: [chrome]
-```
-In the above example we have total of 3 combinations for each os i.e.
-For win:
-  Version: 1, Browser: Chrome
-  Version: 2, Browser: Chrome
-  Version: 3, Browser: Chrome
-For mac:
-  Version: 1, Browser: Chrome
-  Version: 2, Browser: Chrome
-  Version: 3, Browser: Chrome
-
-So each combination will run on a parallelism provided in the yaml. Here all combinations will run on a parallelism of 2.
-
-### `macParallelism`
-It is used if you want to provide different parallelism for MAC OS. If mac parallelism is not present it will consider parallelism as the default value.
-```yaml
-parallelism: 2
-macParallelism: 3
-matrix:
- os: [win, mac]
- version: [1, 2, 3]
- browser: [chrome]
-``` 
-In the above example windows combinations will run on a parallelism on 2 and MAC combinations will run on a parallelism defined by macParallelism i.e. 3.
-
-### `winParallelism`
-
-It is used if you want to provide different parallelism for win os. If win parallelism is not present it will consider parallelism as the default value.
-```yaml
-parallelism: 2
-winParallelism: 3
-matrix:
- os: [win, mac]
- version: [1, 2, 3]
- browser: [chrome]
-```
-So in the above example mac combinations will run on a parallelism on 2 and windows combinations will run on a parallelism defined by winParallelism i.e. 3
-
-
-### `linuxParallelism`
-
-It is used if you want to provide different parallelism for linux os. If linux parallelism is not present it will consider parallelism as the default value.
-```yaml
-parallelism: 2
-linuxParallelism: 3
-matrix:
- os: [win, linux]
- version: [1, 2, 3]
- browser: [chrome]
-```
-So in the above example windows combinations will run on a parallelism on 2 and linux combinations will run on a parallelism defined by linuxParallelism i.e. 3
-
-> **Note** : For platform if both is missing then the CLI will throw an error.
-
-<!-- HYBRID MODE ENDED-->
 
 
 <nav aria-label="breadcrumbs">
