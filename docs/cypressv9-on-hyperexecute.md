@@ -453,8 +453,9 @@ Follow the below steps to run Cypress Tests on HyperExecute using Gitpod:
 **Step 5:** Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
 
 
-## Secrets Management
-***
+## Additional Details
+
+### Secrets Management
 
 If you want to use any secret keys in the YAML file, this can be set by clicking on the **Secrets** button on the dashboard. All you need to do is create an environment variable that uses the secret key:
 
@@ -462,6 +463,28 @@ If you want to use any secret keys in the YAML file, this can be set by clicking
 env:
   PAT: ${{ .secrets.testKey }}
 ```
+
+### HAR Logs
+
+HAR files are a standardized format for archiving HTTP Archive data. They provide a detailed record of all network requests and responses made by a web browser, including information like URLs, headers, timings, and response data
+
+HAR logs offer a comprehensive view of your application's network activity during testing. This can be helpful for:
+
+- Debugging network-related issues
+- Analyzing performance bottlenecks
+- Diagnosing Load Order Issues
+
+Network Logs are disabled by default. To enable it, pass the `Network` and `FullHar` capability to `true` in the [`cypressOps`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag.
+
+```yaml
+cypressOps:
+  Network: true
+  FullHar: true
+```
+
+:::tip
+You can download network logs via the Automate Dashboard. You can visualize HAR files using the [HAR Viewer](http://www.softwareishard.com/har/viewer/).
+:::
 
 >For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
 Happy testing!
