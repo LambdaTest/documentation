@@ -621,6 +621,7 @@
     background-color: #fff;
   }
   
+  [data-theme=dark] .primary_main{background-color: initial;}
  @media (max-width: 767px) {
    .pagination-nav{display: block;}
    .support_main {
@@ -651,6 +652,7 @@
 
    .Doc_intro_cta .Doc_intro_cta_text p {
      font-size: 20px !important;
+     margin-right: 0px!important;
    }
 
    .DocSearch-Button {
@@ -898,6 +900,8 @@
    display: block;
  }
 .pagination-nav__link{box-shadow: 0px 3px 6px 0px #424A531F; border: 1px solid #d4d4d4;padding: 32px!important;margin-bottom: 10px;}
+.pagination-nav__link:hover{background-color: #DDDDDD33;border-color: #d4d4d4;}
+[data-theme=dark] .pagination-nav__link:hover{background-color: #B1B1B11F;}
  .doc_footer {
    display: flex;
    flex-wrap: wrap;
@@ -951,7 +955,8 @@
    margin-bottom: 20px;
  }
 .pagination-nav{margin-top: 0!important;gap:24px}
- [data-theme=dark] .main_heading_support {color: #C9D1D9;}
+ [data-theme=dark] .main_heading_support {color: #C9D1D9;border-bottom: 1px solid #30363D;}
+ [data-theme=dark] .pagination-nav__link{border-color: #30363D;}
 
  [data-theme=dark] .social_button .chat_btn img {
    opacity: 0.8;
@@ -1145,16 +1150,19 @@
  .Doc_intro_cta {
    background-color: #F5F8FA;
    display: flex;
-   padding: 25px 75px 0px 65px;
+   padding: 25px 0px 25px;
    align-items: center;
    flex-wrap: wrap;
    position: relative;
  }
-.Doc_intro_cta::after{background-color: #F7F7F7;position: absolute;width: 300%;height: 107%;content: '';left: -100%;top:-7%; z-index: -1;}
+.Doc_intro_cta::after{background-color: #F7F7F7;position: absolute;width: 300%;height: 107%;content: '';left: -100%;top:-7%; z-index: 1;}
+[data-theme=dark] .Doc_intro_cta::after{background-color: #171A21;}
 /* .main-wrapper div > button.clean-btn + div{overflow: hidden;} */
 
  .Doc_intro_cta .Doc_intro_cta_text {
    width: 70%;
+   position: relative;
+   z-index: 9;
  }
 
  .Doc_intro_cta .Doc_intro_cta_text h1 {
@@ -1167,18 +1175,19 @@
  .Doc_intro_cta .Doc_intro_cta_text p {
    font-size: 24px;
    font-weight: 400;
-   color: #000;
+   color: #666;
    line-height: 36px;
    margin-top: 8px;
+   margin-right: 170px;
  }
 
  .Doc_intro_cta .Doc_intro_cta_image {
    width: 30%;
+   z-index: 9;
+   position: relative;
  }
 
  .Doc_intro_cta .Doc_intro_cta_image img {
-   position: relative;
-   bottom: -25px;
    width: auto;
    height: auto;
  }
