@@ -1123,6 +1123,7 @@
  }
 
  [data-theme=dark] .lg_fr_container{border:1px solid #30363D}
+ .tabs{position: relative;}
   .tabs__item {
    font-size: 16px;
    font-weight: 500;
@@ -1158,6 +1159,7 @@
 .Doc_intro_cta::after{background-color: #F7F7F7;position: absolute;width: 300%;height: 107%;content: '';left: -100%;top:-7%; z-index: 1;}
 [data-theme=dark] .Doc_intro_cta::after{background-color: #171A21;}
 /* .main-wrapper div > button.clean-btn + div{overflow: hidden;} */
+.hide_extra_space_main_div{overflow: hidden;}
 
  .Doc_intro_cta .Doc_intro_cta_text {
    width: 70%;

@@ -301,11 +301,7 @@
   //username ends
 
 })();
-setTimeout(function () {
-  if (typeof document !== "undefined") {
-    youtubeIframe()
-  }
-}, 500);
+
 
 function youtubeIframe() {
   var youtube = document.querySelectorAll(".youtube");
@@ -329,7 +325,28 @@ function youtubeIframe() {
     });
   };
 }
-
+function overflowMainScreen(){
+  const path = window.location.pathname;
+  if (path === "/support/docs/") {
+    const mainWrapper = document.querySelector('.main-wrapper');
+    if (mainWrapper) {
+      const cleanButton = mainWrapper.querySelector('button.clean-btn');
+      if (cleanButton) {
+        const nextDiv = cleanButton.nextElementSibling;
+        if (nextDiv && nextDiv.tagName.toLowerCase() === 'div') {
+          nextDiv.classList.add('hide_extra_space_main_div');
+          console.log("Class added to next div");
+        } 
+      } 
+    } 
+  }
+}
+setTimeout(function () {
+  if (typeof document !== "undefined") {
+    youtubeIframe()
+    overflowMainScreen()
+  }
+}, 500);
 
 (function () {
   if (typeof window !== "undefined") {
