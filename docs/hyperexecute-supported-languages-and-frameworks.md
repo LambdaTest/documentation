@@ -55,8 +55,6 @@ import TabItem from '@theme/TabItem';
 Out of the box, HyperExecute supports multiple languages and testing frameworks like Selenium, Cypress, Playwright, Puppeteer etc. Currently we provide sample code for the following languages and frameworks: 
 
 <div className= "lt_framework_list_row">
-<p></p>
-<p> </p>
 <Tabs
   groupId="languages"
   defaultValue= 'Selenium'

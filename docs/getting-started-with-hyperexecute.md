@@ -113,8 +113,6 @@ You can also find us on the [Microsoft Azure Marketplace](https://azuremarketpla
 <!-- Here are all the languages and frameworks supported by HyperExecute. -->
 
 <div className= "lt_framework_list_row">
-<p></p>
-<p> </p>
 <Tabs
   groupId="languages"
   defaultValue= 'Selenium'
