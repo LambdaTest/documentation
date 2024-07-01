@@ -46,7 +46,7 @@ import NewTag from '../src/component/newTag';
 <div className="Doc_intro_cta">
 <div className="Doc_intro_cta_text">
 <h1>LambdaTest Support and Knowledge Base</h1>
-<p>Ensure your web-apps work seamlessly on <br /> every desktop and mobile browsers</p>
+<p>Ensure your web-apps work seamlessly on every desktop and mobile browsers</p>
 </div>
 <div className="Doc_intro_cta_image">
 <img  loading="eager" src={require('../assets/images/support/home_light.png').default} alt="Image" width="701" height="576" className="home_light_cta" role="presentation"/>
