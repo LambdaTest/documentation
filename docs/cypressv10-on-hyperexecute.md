@@ -1,7 +1,7 @@
 ---
 id: cypressv10-on-hyperexecute
-title: Run automation tests on HyperExecute using Cypress v10
-hide_title: true
+title: Run Automation Tests on HyperExecute using Cypress v10
+hide_title: false
 sidebar_label: Cypress v10
 description: Learn how to run playwright automation tests on HyperExecute using Cypress v10 framework
 keywords:
@@ -58,9 +58,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Run Automation Tests Using Cypress v10
-* * *
-
 > **NOTE :** This documentation is applicable for **Cypress v10** and **later versions**.
 
 HyperExecute is a smart test orchestration platform that allows you to run end-to-end Cypress tests as quickly as possible by providing a test infrastructure with optimal speed, test orchestration, and detailed execution logs.
@@ -68,7 +65,6 @@ HyperExecute is a smart test orchestration platform that allows you to run end-t
 This guide will cover the basics of getting started with Cypress v10 testing on the HyperExecute.
 
 ## Running Cypress v10 Tests on HyperExecute
-***
 
 Cypress Tests can be executed on HyperExecute using 2 ways:
 
@@ -76,7 +72,6 @@ Cypress Tests can be executed on HyperExecute using 2 ways:
 2. [**Using Gitpod**](/support/docs/cypressv9-on-hyperexecute#2-testing-using-gitpod) -  Execute tests using GitPod. (Requires a [Gitpod](https://gitpod.io/login/) account)
 
 ## 1. Testing Using Local System
-***
 
 ### Pre-requisites:
 
@@ -135,12 +130,10 @@ set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 ```
 
 ### Execution Methods:
-***
 
 Cypress Tests can be executed on HyperExecute using 2 methods:
 
 ### 1. Execution Using Auto-Split
-***
 
 The Auto-Split mechanism enables you to run tests at predefined concurrency levels and distribute them across available infrastructure. Concurrency can be achieved at various levels, including file, module, test suite, test, and scenario.
 
@@ -265,43 +258,49 @@ Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hype
 ```bash
 ---
 version: 0.1
-globalTimeout: 90
-testSuiteTimeout: 90
-testSuiteStep: 90
-retryOnFailure: true
+
 runson: win
 cypress: true
-maxRetries: 1
-concurrency: 2
+
 autosplit: true
+concurrency: 2
+
+retryOnFailure: true
+maxRetries: 1
+
 pre:
   - npm install
   - npm install cypress --save-dev
+
 cacheKey: '{{ checksum "package.json" }}'
 cacheDirectories:
   - node_modules
   - cypressCache
+
 env:
   CYPRESS_CACHE_FOLDER: cypressCache
+
 testDiscovery:
   mode: static
   type: raw
   command: ls cypress/e2e/2-advanced-examples
+
 testRunnerCommand: npx cypress run  --spec ./cypress/e2e/2-advanced-examples/$test --browser=chrome-95.0 --headed --config video=false
+
 cypressOps:
- Build: "Hyperexecute Cypress Sample Build"
- Tags: ["Hyperexecute","Cypress", "Windows", "Autosplit"]
- BuildTags: ["Hyperexecute-Cypress"]
+  Build: "Hyperexecute Cypress Sample Build"
+  Tags: ["Hyperexecute","Cypress", "Windows", "Autosplit"]
+  BuildTags: ["Hyperexecute-Cypress"]
+  Network: true
+  FullHar: true
+
 post:
   - cat yaml/win/.hyperexecute_autosplit.yaml
-
 
 jobLabel: [cypress-v10, win, autosplit]
 ```
 
-
 ### 2. Execution Using Matrix
-***
 
 Matrix-based test execution is used for running the same tests across different test (or input) combinations. The Matrix directive in HyperExecute YAML file is a *key:value* pair where value is an array of strings. Also, the *key:value* pairs are opaque strings for HyperExecute.
 
@@ -406,31 +405,38 @@ Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hype
 ```bash
 ---
 version: 0.1
-globalTimeout: 90
-testSuiteTimeout: 90
-testSuiteStep: 90
-retryOnFailure: false
+
 runson: ${matrix.os}
 cypress: true
-maxRetries: 2
+
 parallelism: 1
-concurrency: 2
-pre:
-  - npm install
-  - npm install cypress --save-dev
+
+retryOnFailure: false
+maxRetries: 2
+
 cacheKey: '{{ checksum "package.json" }}'
 cacheDirectories:
   - node_modules
+
+pre:
+  - npm install
+  - npm install cypress --save-dev
+
 matrix:
    os: [win]
    browser: ["chrome-103.0","chrome-104.0","chrome-105.0"]
    files: ["actions.cy.js"]
+
 testSuites: 
   - npx cypress run  --spec ./cypress/e2e/2-advanced-examples/$files --browser=$browser --headed --config video=false
+
 cypressOps:
- Build: "Hyperexecute Cypress Sample Build"
- Tags: ["Hyperexecute","Cypress", "Windows", "Matrix"]
- BuildTags: ["Hyperexecute-Cypress"]
+  Build: "Hyperexecute Cypress Sample Build"
+  Tags: ["Hyperexecute","Cypress", "Windows", "Matrix"]
+  BuildTags: ["Hyperexecute-Cypress"]
+  Network: true
+  FullHar: true
+
 post:
   - cat yaml/win/.hyperexecute_matrix.yaml
 
@@ -460,9 +466,9 @@ Follow the below steps to run Cypress Tests on HyperExecute using Gitpod:
 
 **Step 5:** Once you see the `Job Link` in the logs, you can visit the [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to see the tests getting executed.
 
+## Additional Details
 
-## Secrets Management
-***
+### Secrets Management
 
 If you want to use any secret keys in the YAML file, this can be set by clicking on the **Secrets** button on the dashboard. All you need to do is create an environment variable that uses the secret key:
 
@@ -470,6 +476,28 @@ If you want to use any secret keys in the YAML file, this can be set by clicking
 env:
   PAT: ${{ .secrets.testKey }}
 ```
+
+### HAR Logs
+
+HAR files are a standardized format for archiving HTTP Archive data. They provide a detailed record of all network requests and responses made by a web browser, including information like URLs, headers, timings, and response data.
+
+HAR logs offer a comprehensive view of your application's network activity during testing. This can be helpful for:
+
+- Debugging network-related issues
+- Analyzing performance bottlenecks
+- Diagnosing Load Order Issues
+
+Network Logs are disabled by default. To enable it, pass the `Network` and `FullHar` capability to `true` in the [`cypressOps`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag.
+
+```yaml
+cypressOps:
+  Network: true
+  FullHar: true
+```
+
+:::tip
+You can download network logs via the Automate Dashboard. You can visualize HAR files using the [HAR Viewer](http://www.softwareishard.com/har/viewer/).
+:::
 
 >For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
 Happy testing!
