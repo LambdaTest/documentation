@@ -38,7 +38,7 @@ slug: hyperexecute-yaml-version0.2/
 ></script>
 Hyperexecute YAML Version 0.2. This version introduces several new features and improvements compared to Version 0.1. This documentation will guide you through the changes and help you understand when to use Version 0.2 instead of Version 0.1.
 
-> Note: Currently we only support ***maven/testng*** framework.
+> **Note:** Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **wdio/mocha**, and **wdio/jasmine** framework.
 
 ## Version 0.2 vs. Version 0.1
 
@@ -91,8 +91,6 @@ The framework field supports the following parameters
 
 ### `name`
 Specifies the testing framework used in your repository.
-
-> **Note:** Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **wdio/mocha**, and **wdio/jasmine** framework.
 
 ```bash
 framework:

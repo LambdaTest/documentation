@@ -977,6 +977,72 @@ Similarly, to access the data from the second file i.e **file2.json**:
 STATIC_DATA_2_Username
 ```
 
+### `dataJsonBuilder`
+This flag is used to read the data from your specified JSON files for distributed testing scenarios. It achieves this by:
+
+- Reading JSON data from a specified file specified in the `path` configuration
+- Optionally filtering the data based on user-defined criteria using `filter` configuration.
+- Indexing the JSON objects based on the specified key in the `index` configuration .
+
+#### Use Cases
+
+- #### Filtering and Indexing
+  When both filtering and indexing are required, the filters will be applied first, followed by the indexing of the filtered results.
+
+  ```yaml
+  dataJsonBuilder:
+    path: data/file/sample.json
+    index: username
+    filters:
+      query: (username == 'abc' or username == 'bcd')
+      attributes:
+        - key: username
+          value: ["abc", "bcd"]
+  ```
+
+- #### Only Filtering
+  If only filtering is required without indexing, the `index` key can be omitted.
+
+  ```yaml
+  dataJsonBuilder:
+    path: data/file/sample.json
+    filters:
+      query: (username == 'abc' or username == 'bcd')
+  ```
+
+- #### Only Indexing
+  If only indexing is required without filtering, the `filters` key can be omitted. 
+
+  ```yaml
+  dataJsonBuilder:
+    path: data/file/sample.json
+    index: username
+  ```
+
+#### Sample JSON File
+The input JSON data should be in the following format:
+
+```yaml title="sample.json"
+[
+  {
+      "username": "abc",
+      "accesskey": "jhscuystc7ewgucu79as8yc9"
+  },
+  {
+      "username": "bcd",
+      "accesskey": "cjdy87328yeiqhd93urd28hh"
+  },
+  {
+      "username": "def",
+      "accesskey": "chiwuhaszld88h8e2f7hf228"
+  },
+  {
+      "username": "def",
+      "accesskey": "zkcm1xp1d3dqxjccuqwebci1"
+  }
+]
+```
+
 ### `strict`
 If strict is set to true in yaml then the variables used in yaml must be present in either vars or environment variables on the user machine. If not present then only a warning is displayed. But in case of strict: true, the execution will throw an error.
 
