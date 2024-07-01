@@ -3,7 +3,7 @@ id: nunit-on-hyperexecute-grid
 title: Run automation tests on HyperExecute using NUnit
 hide_title: true
 sidebar_label: NUnit
-description: Learn how to run Selenium automation tests on HyperExecute grid using the NUnit framework
+description: Learn how to run Selenium automation tests on HyperExecute using the NUnit framework
 keywords:
   - NUnit
   - NUnit selenium
@@ -14,7 +14,7 @@ keywords:
   - NUnit C# Selenium framework
   - lambdatest NUnit
   - frameworks on lambdatest
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute NUnit testing
   - hyperexecute NUnit testing
   - hyperexecute automation testing
@@ -309,7 +309,7 @@ Happy testing!
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run NUnit tests on HyperExecute Grid
+      Run NUnit tests on HyperExecute
       </span>
     </li>
   </ul>

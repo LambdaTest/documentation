@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-vs-traditional-test-grids
 title: HyperExecute vs Traditional Test Grids
-hide_title: true
+hide_title: false
 sidebar_label: HyperExecute vs Traditional Test Grids
 description: Discover the nuances in testing efficiency with HyperExecute vs. Traditional Test Grids Explore the comparison and choose the right approach for optimized testing. 
 keywords:
@@ -42,7 +42,6 @@ slug: hyperexecute-vs-traditional-test-grids/
     }}
 ></script>
 
-# HyperExecute v/s Traditional Test Grids
 Traditional automation testing solutions are slow since the triggered test scenarios are first sent to the Hub, which in turn are scheduled to run on the best-suited Node. This results in unnecessary lag as a number of components are involved in the entire process. Over & above, multiple network hops with the network separated components results in increased test flakiness, a factor that can be a huge hindrance to time-to-market.
 
 ## Traditional Tests Grids
@@ -74,13 +73,13 @@ As seen above, tests are securely run on dedicated machines on the Azure cloud. 
 
 ### Features and Advantages
 
-- <b>Auto Split Strategy:</b> Enables parallel test execution by intelligently distributing test scenarios based on custom filters, that reduces test execution time.
+- [**Auto Split Strategy**](/support/docs/hyperexecute-auto-split-strategy/): Enables parallel test execution by intelligently distributing test scenarios based on custom filters, that reduces test execution time.
 
-- <b>Matrix Multiplexing Strategy:</b> Empowers users to execute a single command across multiple scenarios, conditions, and environments, facilitating efficient regression testing and improving code stability.
+- [**Matrix Multiplexing Strategy**](/support/docs/hyperexecute-matrix-multiplexing-strategy/ ): Empowers users to execute a single command across multiple scenarios, conditions, and environments, facilitating efficient regression testing and improving code stability.
+
+- [**Smart Caching**](/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/) : Optimizes regression testing by intelligently caching test artifacts, speeding up the subsequent test runs.
 
 - <b>Auto Purging of Environments:</b> Automates the cleanup of test environments after build completion, maintaining a clean and optimized testing setup.
-
-- <b>Smart Caching:</b> Optimizes regression testing by intelligently caching test artifacts, speeding up the subsequent test runs.
 
 - <b>Fine-Grained Concurrency Control:</b> Hyperscale of HyperExecute allows users to have fine grain control over test execution concurrency using YAML files.
 

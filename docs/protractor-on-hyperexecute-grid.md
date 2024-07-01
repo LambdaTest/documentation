@@ -3,7 +3,7 @@ id: protractor-on-hyperexecute-grid
 title: Run automation tests on HyperExecute using Protractor
 hide_title: true
 sidebar_label: Protractor
-description: Learn how to run Selenium automation tests on HyperExecute grid using the Protractor framework
+description: Learn how to run Selenium automation tests on HyperExecute using the Protractor framework
 keywords:
   - Protractor
   - Protractor selenium
@@ -14,7 +14,7 @@ keywords:
   - Protractor JavaScript Selenium framework
   - lambdatest Protractor
   - frameworks on lambdatest
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute Protractor testing
   - hyperexecute Protractor testing
   - hyperexecute automation testing
@@ -303,7 +303,7 @@ Happy testing!
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run Protractor tests on HyperExecute Grid
+      Run Protractor tests on HyperExecute
       </span>
     </li>
   </ul>

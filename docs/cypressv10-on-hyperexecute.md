@@ -93,7 +93,7 @@ You can either download or clone the code samples of Cypress v9 from the **Lambd
 
 #### Download HyperExecute CLI
 
-The *HyperExecute CLI* is used for triggering tests on HyperExecute Grid. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
+The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
 
 | Platform | HyperExecute CLI download location |
 | ---------| --------------------------- |
@@ -104,7 +104,7 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute Grid. It is 
 <!-- For detailed information about HyperExecute CLI, please refer to [HyperExecute CLI section](/docs/getting-started-with-hyperexecute/#hyperexecute-cli-to-interact-with-hyperexecute) in the HyperExecute getting started guide. -->
 
 <!-- > -->
-<!-- The fundamental difference between running Selenium tests on a cloud Selenium Grid and HyperExecute Grid is that you need not have any configurations on the local machine (i.e. the machine from where HyperExecute CLI is triggered). This is because the source code from the local machine will be zipped and securely uploaded to the cloud where the execution will be performed on the remote Virtual Machine (VM). -->
+<!-- The fundamental difference between running Selenium tests on a cloud Selenium Grid and HyperExecute is that you need not have any configurations on the local machine (i.e. the machine from where HyperExecute CLI is triggered). This is because the source code from the local machine will be zipped and securely uploaded to the cloud where the execution will be performed on the remote Virtual Machine (VM). -->
 
 
 #### Setup Environment Variable

@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-guided-walkthrough
 title: Guided Walkthrough of HyperExecute
-hide_title: true
+hide_title: false
 sidebar_label: Guided Walkthrough 
 description: Learn how to manage Jobs, configure tunnels, upgrade subscriptions, and access detailed test and job information. Discover the power of custom report, analytic.
 keywords:
@@ -37,11 +37,7 @@ slug: hyperexecute-guided-walkthrough/
       })
     }}
 ></script>
-
-# Guided Walkthrough of HyperExecute
-
 This page gives you a guided walkthrough of all the things on the HyperExecute Dashboard and how you can get the most out of the Platform, once you have successfully [ran you first sample Job](/support/docs/hyperexecute-running-your-first-job/). 
-***
 
 ## Jobs Page
 
@@ -49,7 +45,7 @@ All the tests on HyperExecute get executed as a Job. All the Jobs can be found o
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/1.png').default} alt="Image"  className="doc_img"/>
 
-Each Job has a `Status`, a unique `Job Number`, a set of `Labels`, info on number of `Tasks` executed as part of that Job, and a `Summary` section followed by the details of the `Job Duration` and who initiated the Job
+Each [Job](/support/docs/hyperexecute-status/#1-job-level-status) has a [Status](/support/docs/hyperexecute-status/#3-stage-level-status), a unique `Job Number`, a set of [Labels](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel), info on number of [Tasks](/support/docs/hyperexecute-status/#2-task-level-status) executed as part of that Job, and a `Summary` section followed by the details of the `Job Duration` and who initiated the Job
 
 On this page you have other things such as filters, help center, docs, [secrets management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) and much more. You can also filter through all of the jobs on the basis of the date, status, type etc.
 
@@ -64,15 +60,10 @@ On this page you have other things such as filters, help center, docs, [secrets 
 The top panel contains multiple items:
 
 - **Parallel**: It reflects the number of tasks running parallelly
-
 - **Queued**: It shows number of the tasks queued and are not yet started.
-
 - **Configure Tunnel**: Tunnel is used to ensure the security of your data for private websites. 
-
 - **Announcements**: The latest announcements and updates can be found here.
-
 - **Settings**: Manage all of your account and organisation details in this section.
-
 - **Upgrade**: You can upgrade your LambdaTest subscription from here.
       
 *** 
@@ -82,18 +73,18 @@ The top panel contains multiple items:
 You can click on a particular Job to navigate to the Job Details Page.
 
 - On the top you can see all the Job related details like Job Number, Summary etc.
-    -   **Job Number** - The Number of your Job.
-    -   **Summary** - A brief breakdown of all of your tests on the basis of their status.
-    -   **Status** - The status of your Job.
-    -   **Created At** - The date of the creation of the Job.  
-    -   **User** - Your user details who triggered the Job.
-    -   **Job Duration**: The time it took to run your entire Job.
-    -   **Test Duration**: The time it took to run your tests.
-    -   **Type**: The job type (Selenium, Playwright, etc) along with the mode of the job (AutoSplit or Matrix).
-    -   **Artifacts**: Can be used to configure and generate custom reports and artifacts.
-    -   **Report**: A detailed report for your test execution for the Job.
+  -   **Job Number** - The Number of your Job.
+  -   **Summary** - A brief breakdown of all of your tests on the basis of their status.
+  -   **Status** - The status of your Job.
+  -   **Created At** - The date of the creation of the Job.  
+  -   **User** - Your user details who triggered the Job.
+  -   **Job Duration**: The time it took to run your entire Job.
+  -   **Test Duration**: The time it took to run your tests.
+  -   **Type**: The job type (Selenium, Playwright, etc) along with the mode of the job (AutoSplit or Matrix).
+  -   **[Artifacts](/support/docs/hyperexecute-artifacts/)**: Can be used to configure and generate custom reports and artifacts.
+  -   **[Report](/support/docs/hyperexecute-reports/)**: A detailed report for your test execution for the Job.
 - The left side shows all the Tasks (Just-in-time testing environments) that were a part of the Job.
-- Each Task has 3 types of Stages : Pre stages, Scenario stages, Post stages.
+- Each Task has 3 types of Stages : [Pre stages, Scenario stages, Post stages](/support/docs/hyperexecute-status/#3-stage-level-status).
 
 <!-- > **Note** - You can learn about Job, Tasks and Stages [here](/support/docs/hyperexecute-concepts/). -->
 
@@ -174,7 +165,7 @@ Additionally, upon redirection, the automation dashboard opens the relevant tab 
 - #### Update your Org Configuration :
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/hyperexecute/guided-walkthrough/test-summary.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/hyperexecute/getting-started/guided-walkthrough/test-summary.mp4').default} type="video/mp4" />
 </video>
 
 - #### Frontend Configuration :
