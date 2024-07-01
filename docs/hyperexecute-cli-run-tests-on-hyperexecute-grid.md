@@ -1,15 +1,15 @@
 ---
 id: hyperexecute-cli-run-tests-on-hyperexecute-grid
-title: HyperExecute CLI - Run test on HyperExecute Grid
+title: HyperExecute CLI - Run test on HyperExecute
 hide_title: true
-sidebar_label: HyperExecute CLI - Run test on HyperExecute Grid
+sidebar_label: HyperExecute CLI - Run test on HyperExecute
 description: Explains about HyperExecute CLI
 keywords:
   - lambdatest automation
   - lambdatest hyperexecute
   - hyperexecute automation grid
-  - hyperexecute grid online
-  - online hyperexecute grid
+  - hyperexecute online
+  - online hyperexecute
   - hyperexecute automation grid online
   - lambdatest hypterest tutorial
   - hyperexecute getting started

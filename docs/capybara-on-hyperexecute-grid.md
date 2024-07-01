@@ -3,7 +3,7 @@ id: capybara-on-hyperexecute-grid
 title: Run automation tests on HyperExecute using Capybara
 hide_title: true
 sidebar_label: Capybara
-description: Learn how to run Selenium automation tests on HyperExecute grid using Capybara
+description: Learn how to run Selenium automation tests on HyperExecute using Capybara
 keywords:
   - Capybara
   - Capybara selenium
@@ -13,7 +13,7 @@ keywords:
   - Capybara Selenium framework
   - lambdatest Capybara
   - frameworks on lambdatest
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute Capybara testing
   - hyperexecute Capybara testing
   - hyperexecute automation testing
@@ -308,7 +308,7 @@ Happy testing!
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run Capybara tests on HyperExecute Grid
+      Run Capybara tests on HyperExecute
       </span>
     </li>
   </ul>

@@ -10,7 +10,7 @@ keywords:
     - hyperexecute cypress testing
     - hyperexecute automation testing
     - hyperexecute cypressv10 testing
-    - hyperexecute grid cypress testing
+    - hyperexecute cypress testing
   
 url: https://www.lambdatest.com/support/docs/cypress-detailed-command-logs/
 site_name: LambdaTest

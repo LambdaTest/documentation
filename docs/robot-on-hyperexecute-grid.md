@@ -14,7 +14,7 @@ keywords:
   - python selenium framework
   - lambdatest python
   - framework on lambdatest
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute python robot testing
   - hyperexecute robot testing
   - hyperexecute automation testing

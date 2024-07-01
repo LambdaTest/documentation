@@ -3,7 +3,7 @@ id: jest-on-hyperexecute
 title: Run automation tests on HyperExecute using Puppeteer Jest
 hide_title: true
 sidebar_label: Jest
-description: Learn how to run Selenium automation tests on HyperExecute grid using the Puppeteer Jest framework
+description: Learn how to run Selenium automation tests on HyperExecute using the Puppeteer Jest framework
 keywords:
   - unittest
   - unittest selenium
@@ -19,7 +19,7 @@ keywords:
   - selenium automation testing
   - selenium testing tool
   - selenium testing tutorial
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute pyunit testing
   - hyperexecute automation testing
   - hyperexecute pyunit testing
@@ -301,7 +301,7 @@ Happy testing!
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run PyUnit tests on HyperExecute Grid
+      Run PyUnit tests on HyperExecute
       </span>
     </li>
   </ul>

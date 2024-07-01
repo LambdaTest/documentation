@@ -78,7 +78,7 @@ To run the Tests on HyperExecute from your Local System, you are required:
 
 #### Download HyperExecute CLI
 
-The *HyperExecute CLI* is used for triggering tests on HyperExecute Grid. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
+The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
 
 | Platform | HyperExecute CLI download location |
 | ---------| --------------------------- |
@@ -422,7 +422,7 @@ Sample Capabilities for both android and iOS web app mentioned below -
 
 ## Navigation in Automation Dashboard
 
-Every test run on the HyperExecute Grid has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute automation dashboard](https://automation.lambdatest.com/hyperexecute/) for checking the status of the test execution.
+Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute automation dashboard](https://automation.lambdatest.com/hyperexecute/) for checking the status of the test execution.
 
 The snapshot below shows how to navigate to the respective *testID* for viewing the Selenium logs:
 

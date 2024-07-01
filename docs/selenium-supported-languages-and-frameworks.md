@@ -3,7 +3,7 @@ id: selenium-supported-languages-and-frameworks
 title: Languages and Frameworks supported on LambdaTest Selenium
 hide_title: false
 sidebar_label: Languages and Frameworks
-description: HyperExecute Grid supports languages and frameworks that are compatible with Selenium 
+description: HyperExecute supports languages and frameworks that are compatible with Selenium 
 keywords:
  - Selenium
  - selenium languages

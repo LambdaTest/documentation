@@ -3,7 +3,7 @@ id: mocha-on-hyperexecute
 title: Run automation tests on HyperExecute using Puppeteer Mocha
 hide_title: true
 sidebar_label: Mocha
-description: Learn how to run Selenium automation tests on HyperExecute grid using the Puppeteer Mocha framework
+description: Learn how to run Selenium automation tests on HyperExecute using the Puppeteer Mocha framework
 keywords:
   - unittest
   - unittest selenium
@@ -19,7 +19,7 @@ keywords:
   - selenium automation testing
   - selenium testing tool
   - selenium testing tutorial
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute pyunit testing
   - hyperexecute automation testing
   - hyperexecute pyunit testing
@@ -300,7 +300,7 @@ Happy testing!
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run PyUnit tests on HyperExecute Grid
+      Run PyUnit tests on HyperExecute
       </span>
     </li>
   </ul>
