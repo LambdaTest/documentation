@@ -911,15 +911,16 @@ Additional options include:
 - **Dedicated Proxy**: This is a boolean parameter to be passed in cypressOps. When  enabled user’s traffic will be passed to a dedicated proxy server, this feature has to be enabled from customer support team.
 - **Network**: This is  a boolean parameter which when set to true enables network proxy logs for the test.
 - **GeoLocation**: This parameter is used to pass the test traffic through a specific geolocation. Value to be passed here is geolocation code
+- **FullHar**: This flag generates the HAR logs that offer a comprehensive view of your application's network activity during testing.
 
 ```yaml
 cypressOps:
- dedicatedProxy: true
- build: "test_03"
- tags: ["a", "b"]
- buildTags: ["t1"]
- network: true
- geoLocation: IN
+  Build: "Hyperexecute Cypress Sample Build"
+  Tags: ["Hyperexecute","Cypress", "Windows", "Matrix"]
+  BuildTags: ["Hyperexecute-Cypress"]
+  Network: true
+  FullHar: true
+  geoLocation: IN
 ```
 
 ### `shell`
