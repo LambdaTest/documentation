@@ -6,7 +6,7 @@ module.exports = {
   HyperExecuteSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -994,7 +994,7 @@ module.exports = {
   RealTimeBrowserTestingSiebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -1024,7 +1024,7 @@ module.exports = {
   IntegrationsSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -1311,7 +1311,7 @@ module.exports = {
   AccessibilityTestingSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -1427,7 +1427,7 @@ module.exports = {
   SettingsAndSecuritySidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -1455,7 +1455,7 @@ module.exports = {
   TestManagerSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
       className: 'back-to-main-menu'
@@ -1529,7 +1529,7 @@ module.exports = {
   RealDeviceSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -1602,7 +1602,7 @@ module.exports = {
   SeleniumTestingSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -1890,7 +1890,7 @@ module.exports = {
   // SeleniumTestingSidebar: [
   //   {
   //     type: 'link',
-  //     label: '<- Back',
+  //     label: 'Back',
   //     href: '/docs/',
   //     customProps: {
   //       className: 'back-to-main-menu'
@@ -2110,7 +2110,7 @@ module.exports = {
   CypressTestingSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2213,7 +2213,7 @@ module.exports = {
   PlaywrightTestingSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2256,7 +2256,7 @@ module.exports = {
   PuppeteerTestingSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2285,7 +2285,7 @@ module.exports = {
   K6BrowserTestingSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2303,7 +2303,7 @@ module.exports = {
   EmuSimuSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2326,7 +2326,7 @@ module.exports = {
   AppiumTestingSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2489,7 +2489,7 @@ module.exports = {
   EspressoTestingSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2555,7 +2555,7 @@ module.exports = {
   XCUITestingSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2612,7 +2612,7 @@ module.exports = {
   VisualRegressionTestingSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2782,7 +2782,7 @@ module.exports = {
   Analytics: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2850,7 +2850,7 @@ module.exports = {
   TestIntelligence: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2878,7 +2878,7 @@ module.exports = {
   TestAtScale: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2959,7 +2959,7 @@ module.exports = {
   LambdaTestMigrationGuideSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -2992,7 +2992,7 @@ module.exports = {
   VisualUITestingSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -3036,7 +3036,7 @@ module.exports = {
   LTBrowserSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -3089,7 +3089,7 @@ module.exports = {
   // LTDebugSidebar: [
   //   {
   //     type: 'link',
-  //     label: '<- Back',
+  //     label: 'Back',
   //     href: '/docs/',
   //     customProps: {
   //     className: 'back-to-main-menu'
@@ -3111,7 +3111,7 @@ module.exports = {
   TestingLocalPagesSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -3148,7 +3148,7 @@ module.exports = {
   TestManagementSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/',
       customProps: {
         className: 'back-to-main-menu'
@@ -3166,7 +3166,7 @@ module.exports = {
   AccountManagementSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/settings-and-security',
       customProps: {
         className: 'back-to-main-menu'
@@ -3244,7 +3244,7 @@ module.exports = {
   ScimSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/settings-and-security',
       customProps: {
         className: 'back-to-main-menu'
@@ -3273,7 +3273,7 @@ module.exports = {
   SingleSignOnSidebar: [
     {
       type: 'link',
-      label: '<- Back',
+      label: 'Back',
       href: '/docs/settings-and-security',
       customProps: {
         className: 'back-to-main-menu'
