@@ -8,8 +8,8 @@ keywords:
   - lambdatest automation
   - lambdatest hyperexecute
   - hyperexecute automation grid
-  - hyperexecute grid online
-  - online hyperexecute grid
+  - hyperexecute online
+  - online hyperexecute
   - hyperexecute automation grid online
   - lambdatest hypterest tutorial
   - hyperexecute getting started

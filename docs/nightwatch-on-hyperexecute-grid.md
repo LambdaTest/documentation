@@ -3,7 +3,7 @@ id: nightwatch-on-hyperexecute-grid
 title: Run automation tests on HyperExecute using Nightwatch
 hide_title: true
 sidebar_label: Nightwatch
-description: Learn how to run Selenium automation tests on HyperExecute grid using the Nightwatch framework
+description: Learn how to run Selenium automation tests on HyperExecute using the Nightwatch framework
 keywords:
   - Nightwatch
   - Nightwatch selenium
@@ -14,7 +14,7 @@ keywords:
   - Nightwatch JavaScript Selenium framework
   - lambdatest Nightwatch
   - frameworks on lambdatest
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute Nightwatch testing
   - hyperexecute Nightwatch testing
   - hyperexecute automation testing
@@ -314,7 +314,7 @@ Happy testing!
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run Nightwatch tests on HyperExecute Grid
+      Run Nightwatch tests on HyperExecute
       </span>
     </li>
   </ul>

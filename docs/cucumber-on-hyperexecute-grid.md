@@ -3,7 +3,7 @@ id: cucumber-on-hyperexecute-grid
 title: Run automation tests on HyperExecute using cucumber
 hide_title: true
 sidebar_label: Cucumber
-description: Learn how to run Selenium automation tests on HyperExecute grid using the Cucumber framework
+description: Learn how to run Selenium automation tests on HyperExecute using the Cucumber framework
 keywords:
   - Cucumber
   - Cucumber selenium
@@ -14,7 +14,7 @@ keywords:
   - Cucumber Java Selenium framework
   - lambdatest Cucumber
   - frameworks on lambdatest
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute Cucumber testing
   - hyperexecute Cucumber testing
   - hyperexecute automation testing
@@ -320,7 +320,7 @@ Happy testing!
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run Cucumber tests on HyperExecute Grid
+      Run Cucumber tests on HyperExecute
       </span>
     </li>
   </ul>
