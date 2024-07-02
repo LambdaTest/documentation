@@ -1,7 +1,7 @@
 ---
 id: live-debug-in-app-automation
 title: Live Debug Your App Automation Tests
-sidebar_label: Live Debug App Automation tests
+sidebar_label: Live Inspect
 description: Optimize your app automation with LambdaTest's Live Debugger. Enjoy live debugging and direct interaction with real devices from the app automation dashboard.
 keywords:
   - app automation
@@ -42,7 +42,7 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-# Live Debug Your App Automation Tests
+# Live Inspect Your App Automation Tests
 
 ---
 
