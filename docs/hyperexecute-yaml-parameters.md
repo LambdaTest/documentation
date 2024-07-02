@@ -153,6 +153,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [cypressOps](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) | Map |This map is used to pass cypress specific options. |  
 | [shell](/support/docs/deep-dive-into-hyperexecute-yaml/#shell) | String |Defines the shell on which all your commands should run. | 
 | [dataJsonPath](/support/docs/deep-dive-into-hyperexecute-yaml/#datajsonpath) | Array of String | DataJsonPaths helps to distribute data over VMs based on different Jsons.| 
+| [dataJsonBuilder](/support/docs/deep-dive-into-hyperexecute-yaml/#datajsonbuilder) | Array of String | dataJsonBuilder flag reads the data from your specified JSON files for distributed testing scenarios.| 
 | [strict](/support/docs/deep-dive-into-hyperexecute-yaml/#strict) | Boolean |If strict is set to true in yaml then the variables used in yaml must be present in either vars or environment variables on the user machine. | 
 | [codeDirectory](/support/docs/deep-dive-into-hyperexecute-yaml/#codedirectory) | String |Defines in which directory all of your commands defined in yaml would run. Your code would be downloaded in this directory. | 
 | [preDirectives](/support/docs/deep-dive-into-hyperexecute-yaml/#predirectives) | Map | Similar to pre with option to retry and specify shell. |
