@@ -2469,7 +2469,7 @@ module.exports = {
               "disable-screenshot-block",
               "appium-custom-header",
               "basic-authentication-for-web-automation",
-              "live-inspect",
+              "live-debug-in-app-automation",
 
             ],
           },
