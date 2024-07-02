@@ -84,7 +84,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
         <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
-        <a href="/support/docs/hyperexecute-cli-gui/"><p className="p_home_inners">GUI for CLI &nbsp; <NewTag  value="NEW" bgColor="#ffec02" color="#000" /></p></a>
+        <a href="/support/docs/hyperexecute-cli-gui/"><p className="p_home_inners">GUI for CLI &nbsp; <NewTag  value="NEW" /></p></a>
         <a href="/support/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
     <a href="/support/docs/integration-with-hyperexecute/"><p className="p_home_inners">Integrations</p></a>
      <a href="/support/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
@@ -96,7 +96,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/analytics-dashboard-templates/"><p className="p_home_inners">Pre-built Dashboards</p></a>
         <a href="/support/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboards</p></a>
         <a href="/support/docs/analytics-widgets/"><p className="p_home_inners">Widgets</p></a>
-        <a href="/support/docs/analytics-dashboard-copilot/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA" bgColor="#ffec02" color="#000" /></p></a>
+        <a href="/support/docs/analytics-dashboard-copilot/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA" /></p></a>
         <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
         <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Error Logs Insights</p></a>
         <a href="/support/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
@@ -167,7 +167,7 @@ import NewTag from '../src/component/newTag';
 
 <div className="home_main">
  <div className="home_inners_box">
-       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/test-manager-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Test Manager &nbsp; <NewTag  value="NEW" bgColor="#ffec02" color="#000" /></h2>
+       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/test-manager-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Test Manager &nbsp; <NewTag  value="NEW" /></h2>
       <div className="home_inners"> 
         <a href="/support/docs/create-projects/"><p className="p_home_inners">Create Projects</p></a>
         <a href="/support/docs/manual-test-case-creation"><p className="p_home_inners">Manual Test Cases</p></a>
