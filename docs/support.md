@@ -129,7 +129,9 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/real-time-browser-testing/" ><p className="p_home_inners">Desktop Browser Testing</p></a>
         <a href="/support/docs/webview-testing-in-android/"><p className="p_home_inners">Mobile Browser Testing</p></a>
         <a href="/support/docs/live-interactive-mobile-app-testing/"><p className="p_home_inners">Mobile App Testing</p></a>
-         <a href="/support/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>
+        <a href="/support/docs/chrome-os-web-browser-testing/"><p className="p_home_inners">ChromeOS Web Browser Testing</p></a>
+        <a href="/support/docs/chrome-os-app-testing/"><p className="p_home_inners">ChromeOS App Testing</p></a>
+        <a href="/support/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>     
       </div>
     </div>
 
