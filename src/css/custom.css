@@ -1010,10 +1010,6 @@
    color: #CAD1D9;
  }
 
- [data-theme=dark] .navbar__link:after {
-   background: #CAD1D9;
- }
-
  [data-theme=dark] .markdown h1:first-child, [data-theme=dark] .markdown>h2 {
    color: #CAD1D9;
  }
@@ -1381,12 +1377,6 @@ color: var(--ifm-color-primary);
    color: #333;
  }
 
- .menu__list-item-collapsible:hover,
- .menu__caret:hover,
- .menu__list-item-collapsible--active {
-   background-color: unset;
- }
-
  .support_inners_ul li a:hover {
    color: var(--ifm-link-color-primary);
    background-color: unset;
@@ -1539,13 +1529,13 @@ ul.theme-doc-sidebar-menu > li:first-child a::before{
 
  .theme-doc-sidebar-item-category-level-1 .menu__list:not(:has(ul)) .menu__link {
    border: none;
-   border-radius: 0 !important;
  }
 
  .theme-doc-sidebar-item-category-level-1 .menu__list:not(:has(ul)) .menu__link--active, .table-of-contents__link--active, .menu__list-item:not(:has(ul)) .menu__link--active {
    background-color: #DDDDDD33 !important;
    position: relative;
    font-weight: 600;
+   border-radius: 6px;
  }
  .theme-doc-sidebar-item-category-level-1 .menu__list:not(:has(ul)) .menu__link--active::before, .table-of-contents__link--active::before, .menu__list-item:not(:has(ul)) .menu__link--active::before {
    position: absolute;
@@ -1562,13 +1552,7 @@ ul.theme-doc-sidebar-menu > li:first-child a::before{
  .menu__list-item:not(:first-child) {
    margin-top: 0px;
  }
-
- 
-
- .menu__list-item-collapsible .menu__link:hover {
-   background-color: #F0F0F0 !important;
- }
-
+.theme-doc-sidebar-menu.menu__list{padding-right: 10px;}
  .menu__list-item-collapsible--active a.menu__link--active {
    font-weight: 600;
  }
