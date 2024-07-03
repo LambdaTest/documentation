@@ -1023,6 +1023,15 @@ module.exports = {
           "webview-testing-in-android",
         ],
       },
+      {
+        type: "category",
+        collapsed: true,
+        label: "ChromeOS Testing",
+        items: [
+          "chrome-os-web-browser-testing",
+          "chrome-os-app-testing",
+        ],
+      },
       "developer-tools",
       "mark-as-bug-in-real-time-testing",
       "live-interactive-mobile-app-testing",
