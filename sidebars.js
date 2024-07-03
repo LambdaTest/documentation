@@ -2030,7 +2030,7 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Emulator / Simulator)",
+        label: "Emulator / Simulator",
         items: [
           "app-automation-app-sim",
 
@@ -2175,6 +2175,7 @@ module.exports = {
               "disable-screenshot-block",
               "appium-custom-header",
               "basic-authentication-for-web-automation",
+              "live-debug-in-app-automation",
 
             ],
           },
