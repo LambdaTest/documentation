@@ -1896,6 +1896,7 @@ module.exports = {
             ],
           },
           "mobile-web-automation-on-real-devices",
+          "selenium-bidi-integration",
         ],
       },
       {
