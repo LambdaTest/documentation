@@ -42,6 +42,12 @@ import SettingsLightIcon from '../assets/images/support/settings-light-icon.svg'
 import SettingsDarkIcon from '../assets/images/support/settings-dark-icon.svg';
 import VisualLightIcon from '../assets/images/support/visual-light-icon.svg';
 import VisualDarkIcon from '../assets/images/support/visual-dark-icon.svg';
+import RealDeviceLightIcon from '../assets/images/support/realDevice-light.svg';
+import RealDeviceDarkIcon from '../assets/images/support/realDevice-dark.svg';
+import TestManagerLightIcon from '../assets/images/support/testManager-light.svg';
+import TestManagerDarkIcon from '../assets/images/support/testManager-dark.svg';
+import AccessibilityDarkIcon from '../assets/images/support/accessibility-dark.svg';
+import AccessibilityLightIcon from '../assets/images/support/accessibility-light.svg';
 
 
 <script type="application/ld+json"
@@ -156,7 +162,7 @@ import NewTag from '../src/component/newTag';
     </div>
 
 <div className="home_inners_box">
-       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Realtime-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Realtime-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Real Device</h2>
+       <h2 className='homeMain_h2'><RealDeviceLightIcon className="home_icons home_light_icon" role="presentation"/> <RealDeviceDarkIcon className="home_icons home_dark_icon" role="presentation"/>Real Device</h2>
       <div className="home_inners">
         <a href="/support/docs/app-testing-on-real-devices/" ><p className="p_home_inners">Real Device App Testing</p></a>
       </div>
@@ -189,7 +195,7 @@ import NewTag from '../src/component/newTag';
 
 <div className="home_main">
  <div className="home_inners_box">
-       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/test-manager-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Test Manager &nbsp; <NewTag  value="NEW" /></h2>
+       <h2 className='homeMain_h2'><TestManagerLightIcon className="home_icons home_light_icon" role="presentation"/> <TestManagerDarkIcon className="home_icons home_dark_icon" role="presentation"/>Test Manager &nbsp; <NewTag  value="NEW" /></h2>
       <div className="home_inners"> 
         <a href="/support/docs/create-projects/"><p className="p_home_inners">Create Projects</p></a>
         <a href="/support/docs/manual-test-case-creation"><p className="p_home_inners">Manual Test Cases</p></a>
@@ -211,7 +217,7 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Accessibility Testing</h2>
+      <h2 className='homeMain_h2'><AccessibilityLightIcon className="home_icons home_light_icon" role="presentation"/> <AccessibilityDarkIcon className="home_icons home_dark_icon" role="presentation"/>Accessibility Testing</h2>
       <div className="home_inners">
         <a href="/support/docs/accessibility-testing/"><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/accessibility-devtools/"><p className="p_home_inners">Accessibility DevTools</p></a>
