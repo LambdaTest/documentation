@@ -41,17 +41,13 @@ This page gives you a guided walkthrough of all the things on the HyperExecute D
 
 ## Jobs Page
 
-All the tests on HyperExecute get executed as a Job. All the Jobs can be found on our [Jobs page](https://hyperexecute.lambdatest.com/hyperexecute).
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/1.png').default} alt="Image"  className="doc_img"/>
-
-Each [Job](/support/docs/hyperexecute-status/#1-job-level-status) has a [Status](/support/docs/hyperexecute-status/#3-stage-level-status), a unique `Job Number`, a set of [Labels](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel), info on number of [Tasks](/support/docs/hyperexecute-status/#2-task-level-status) executed as part of that Job, and a `Summary` section followed by the details of the `Job Duration` and who initiated the Job
+All the tests on HyperExecute get executed as a Job. All the Jobs can be found on our [Jobs page](https://hyperexecute.lambdatest.com/hyperexecute). Each [Job](/support/docs/hyperexecute-status/#1-job-level-status) has a [`Status`](/support/docs/hyperexecute-status/#3-stage-level-status), a unique `Job Number`, a set of [`Labels`](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel), info on number of [`Tasks`](/support/docs/hyperexecute-status/#2-task-level-status) executed as part of that Job, and a `Summary` section followed by the details of the `Job Duration` and who initiated the Job
 
 On this page you have other things such as filters, help center, docs, [secrets management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) and much more. You can also filter through all of the jobs on the basis of the date, status, type etc.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/2.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/1.png').default} alt="Image"  className="doc_img"/>
 
-> Learn more about Secrets Management, Getting User Name and Access Key from our [Knowledge Base](/support/docs/hyperexecute-knowledge-base/)
+> Learn more about [Secrets Management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/), getting [User Name and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) from our [Knowledge Base](/support/docs/hyperexecute-knowledge-base/)
 
 ### Top Panel
     
@@ -100,55 +96,33 @@ You can access a much more detailed section for your test cases on the Automatio
 
 It provides you with all the necessary data points that you need for your test. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/6.png').default} alt="Image"  className="doc_img"/>
-
-### Top Panel 
-
--   **Create an Issue**:  You can create an issue/tickets on directly onto Slack, Jira etc with the integrations that we provide.
--   **Analytics**: You can access the analytics of all of your tests by clicking on the **Analytics** button.
--   **Access Key**: Your Username and Access Key can be accessed by clicking on the **Access Key** button on the top right-hand side of the dashboard.  
--   **Help**: Click on the **Question Mark (?)** icon to access the Help Center.
 ### Basic Summary
 You can see the details of your test on the panel on the top of the screen. It contains several details like the browser, the test status, the test name, and more.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/7.png').default} alt="Image"  className="doc_img"/>
-
--   **Test Status**: The status of your test. If the test has passed, the status will be passed.  
--   **Test Name**: The name of your test. You can rename the test, copy the name and see all the tests in the build.  
--   **Test ID**: The test ID of your test. You can copy the test ID by clicking on the **Copy** button. 
--   **Browser**: The browser on which your tests are run. 
--   **OS**: The Operating System on which your tests are run.
--   **Resolution**: The resolution of the screen.
--   **Duration**: The amount of time it took for your test to run.
--   **Test Meta Data**: You can view the test meta data by clicking on the **info** icon.
-    <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/8.png').default} alt="Image"  className="doc_img"/>
--   **Tunnel Information**: Tells whether you have used a tunnel to run your tests or not.
-    <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/9.png').default} alt="Image"  className="doc_img"/>
--   **Share**: You can share the details of this test by clicking on the **Share** icon.
-    <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/10.png').default} alt="Image"  className="doc_img"/>  
--   **Delete**: You can delete the test entirely by clicking on the **Delete** icon.  
-    <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/11.png').default} alt="Image"  className="doc_img"/>  
-
-
-### Videos and Screenshots 
+- **Test Status**: The status of your test. If the test has passed, the status will be passed.  
+- **Test Name**: The name of your test. You can rename the test, copy the name and see all the tests in the build.  
+- **Test ID**: The test ID of your test. You can copy the test ID by clicking on the **Copy** button. 
+- **Browser**: The browser on which your tests are run. 
+- **OS**: The Operating System on which your tests are run.
+- **Resolution**: The resolution of the screen.
+- **Duration**: The amount of time it took for your test to run.
+- **Test Meta Data**: You can view the test meta data by clicking on the **info** icon.
+- **Tunnel Information**: Tells whether you have used a tunnel to run your tests or not.
+- **Share**: You can share the details of this test by clicking on the **Share** icon.
+- **Delete**: You can delete the test entirely by clicking on the **Delete** icon.
+### Videos and Screenshots
 
 HyperExecute provides you with tools like videos and screenshots of your tests to give you a clear picture of what goes on in the background.
-
-  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/12.png').default} alt="Image"  className="doc_img"/> 
 
 ### Commands and Logs
 
 You can access the commands involved in the test, and the logs on the right hand side on this Dashboard.
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/13.png').default} alt="Image"  className="doc_img"/>  
-
 -   **All Commands**: Each command that is run as a part of your test case is shown here. Each command also contains its own parameters, that can be accessed by hovering on the command and clicking on **View Parameters**.
-
 -   **Network**: Access the network logs while your tests were getting executed on the **Network** tab.
-
 -   **Logs**: View all kinds of logs at one place. You can toggle between the **Console Logs**, **Terminal Logs** and the **Test Framework Logs**.
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/14.png').default} alt="Image"  className="doc_img"/> 
+<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/6.png').default} alt="Image"  className="doc_img"/>
 
 >**Note**: You can download the logs by clicking on the Download button on the top right-hand corner of the logs tab. 
 
@@ -175,12 +149,6 @@ Additionally, upon redirection, the automation dashboard opens the relevant tab 
 - #### Backend Configuration :
 
   Update your designated HyperExecute YAML file with [`buildConfig`](/support/docs/deep-dive-into-hyperexecute-yaml/#buildconfig) configuration to activate the "**Test Summary Hyperlink**" feature. This configuration allows you to define specific parameters that govern the behavior of the hyperlinks based on the test summary status.
-
-## Support
-
-If you need more help regarding HyperExecute, click on **Support** to speak to LambdaTest Support. You can also access LambdaTest Support by clicking on the bottom right-hand side of your dashboard.
-
-  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/15.png').default} alt="Image"  className="doc_img"/> 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

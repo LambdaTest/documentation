@@ -159,7 +159,7 @@ modules:
             version: '71.0'
             tunnel: false # sets tunnel value to true for routing traffic through your local machine
 ```
-> **Note:** You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.
+> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
 
 ### Executing the Test
 **Step 5:** The tests can be executed in the terminal using the following command:

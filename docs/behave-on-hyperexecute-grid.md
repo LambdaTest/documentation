@@ -105,7 +105,7 @@ Configure the desired capabilities based on your test requirements. For example:
 ]
 ```
 
-> You can generate capabilities for your test requirements with the help of our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
 
 
 ### Step 2: Setup the CLI in your Test Suite
