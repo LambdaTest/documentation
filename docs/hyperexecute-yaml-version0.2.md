@@ -36,47 +36,23 @@ slug: hyperexecute-yaml-version0.2/
       })
     }}
 ></script>
-Hyperexecute YAML Version 0.2. This version introduces several new features and improvements compared to Version 0.1. This documentation will guide you through the changes and help you understand when to use Version 0.2 instead of Version 0.1.
+This version introduces several new features and improvements over Version 0.1. This documentation outlines the changes and provides guidance on when to use Version 0.2 instead of Version 0.1.
 
-> **Note:** Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **wdio/mocha**, and **wdio/jasmine** framework.
+:::info
+- Currently supported frameworks are **maven/testng**, **maven/junit4**, **maven/junit5**, **wdio/mocha**, and **wdio/jasmine** framework.
+- Version 0.2 supports all the fields available in Version 0.1, except for [`testDiscovery`](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) and [`testRunnerCommand`](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand)
+- The new [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) flag has been introduced to configure the test framework.
+:::
 
-## Version 0.2 vs. Version 0.1
+## Why to use HyperExecute YAML Version 0.2?
 
-The following are the key differences between Version 0.2 and Version 0.1:
-
-- In Version 0.2, the support for matrix mode has been removed, and only static discovery is available. This means that the discovery command will run on your system rather than in a matrix.
-
-- Version 0.2 supports all the fields available in Version 0.1, except for ```testDiscovery``` and ```testRunnerCommand```
-
-- The new ```framework``` field has been introduced to configure the test framework.
+- The new framework feature supports caching by default. You do not have to specify any directories to cache for faster performance. If you adds the [`cacheKey`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) and [`cacheDirectories`](/support/docs/deep-dive-into-hyperexecute-yaml/#cachedirectories) keys in your yaml, the default caching gets disabled and preference is given to user specified cache.
+- In Version 0.2, the support for [matrix mode](/support/docs/hyperexecute-matrix-multiplexing-strategy/) has been removed, and only [static discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) is available. This means that the discovery command will run on your system rather than in a matrix.
+- Since the support for [`testRunnerCommand`](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) is removed, the test orchestration will be managed automatically.
 
 ## ```framework```
 
-The ```framework``` field in Hyperexecute YAML Version 0.2 allows you to configure the test framework settings. It provides more flexibility and customization options for your testing needs.
-
-The ```framework``` field has following attributes:
-
-| Item | Details|
-|---|---|
-| Required | Yes |
-| Type | Object |
-
-<!-- | Description | Code coverage threshold values.| -->
-
-Example
-
-```bash
-framework: 
-  name: maven/testng
-  defaultReports: false
-  flags: ["-Dplatname=win"]
-  args:
-    region: ap
-``` 
-
-<!-- ## Supported Fields In Framework Object -->
-
-The framework field supports the following parameters
+The ```framework``` field in Hyperexecute YAML Version 0.2 allows you to configure the test framework settings. It provides more flexibility and customization options for your testing needs with the following parameters.
 
 | Parameters | Type | Mandatory | Description|
 |:---|:--|:---|:---|
@@ -92,14 +68,14 @@ The framework field supports the following parameters
 ### `name`
 Specifies the testing framework used in your repository.
 
-```bash
+```yaml
 framework:
   name: "maven/testng"
 ``` 
 
 To enable maven runner with Appium, you have to pass `appium: true` before the `framework` field
 
-```bash
+```yaml
 appium: true
 framework: 
   name: "maven/testng"
@@ -108,7 +84,7 @@ framework: 
 ### `flags`
 Specifies the command line flags to pass to the custom runner for both test discovery and execution.
 
-```bash
+```yaml
 framework:
   name: "maven/testng"
   flags: ["-Dplatname=win", "-Dgroups=selenium-test"]
@@ -117,7 +93,7 @@ framework:
 ### `discoveryFlags`
 Specifies the command line flags to pass to the custom runner for test discovery only.
 
-```bash
+```yaml
 framework:
   name: "maven/testng"
   discoveryFlags: ["-Dgroups=selenium-test"]
@@ -126,7 +102,7 @@ framework:
 ### `runnerFlags`
 Specifies the command line flags to pass to the custom runner for test execution only.
 
-```bash
+```yaml
 framework:
   name: "maven/testng"
   runnerFlags: ["-Dgroups=database"]
@@ -135,7 +111,7 @@ framework:
 ### `discoveryType`
 Specifies the level at which user wants to discover the tests. Supported values are "method" and "class". The default is "method".
 
-```bash
+```yaml
 framework:
   name: maven/testng
   #highlight-next-line
@@ -146,9 +122,7 @@ framework:
 ```
 :::info
 - For **maven/testng** the supported discovery types are **method, class** and **xmltest**. The default is **method**.
-
 - For **maven/junit4** and **maven/junit5**  the supported discovery types are **method** and **class**. The default is **method**.
-
 - For **wdio/mocha** and **wdio/jasmine** the supported discovery types are **test, spec, suite** and **wdiosuite**. The default is **spec**. 
 :::
 
@@ -157,7 +131,7 @@ framework:
 
 The `working directory` specifies the location of the directory in which all test discovery and execution commands will be run, as well as the location of any files or directories that are created as a result of the command execution.  If the `workingDirectory` option is not specified, then the working directory will be the directory where the YAML file is located.
 
-```bash
+```yaml
 framework:
   name: maven/testng
   discoveryType: method
@@ -169,7 +143,7 @@ framework:
 ### `defaultReports`
 Specifies whether to create default reports for the specified framework.
 
-```bash
+```yaml
 framework:
   name: maven/testng
   defaultReports: false
@@ -187,15 +161,17 @@ The region parameter specifies the region or location where the Appium tests wil
 
 > The region parameter should always be defined under the `args` parameter, as shown in the below sample code.
 
-```bash
+```yaml
 framework:
   args:
     region: us
 ```
 
+> 📕 Learn [how to perform group-based test discovery in TestNG](/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng)
+
 ## Sample Yaml Version 0.2
 
-```bash
+```yaml
 ---
 version: 0.2
 globalTimeout: 150
@@ -227,114 +203,16 @@ uploadArtefacts:
 
 framework:
   name: maven/testng
-  defaultReports: false
   flags:
     - "-Dplatname=win"
+  discoveryFlags: ["-Dgroups=selenium-test"]
+  runnerFlags: ["-Dgroups=database"]
+  discoveryType: method
+  workingDirectory: src/main
+  defaultReports: false
   args:
     region: us
 ```
-
-## Additional Details
-
-### Default Caching Support
-
-> <b>NOTE:</b> The new framework feature supports caching by default, the user does not need to specify any directories to cache for faster performance.
-
-For example in maven we cache the entire .m2 directory in home folder so that subsequent tasks run faster.
-
-If the user adds the cacheDirectories and cacheKey keys in his yaml, the default caching gets disabled and preference is given to user specified cache.
-
-```bash
-cacheKey: '{{ checksum "pom.xml" }}'
-cacheDirectories:
-  - .m2
-```
-
-### Performing Group-Based Test Discovery in TestNG
-
-TestNG provides group-based test discovery functionality. You can specify groups for your tests and execute or exclude specific groups during test runs.
-
-To perform group-based test discovery, you can use the ***@BeforeGroups*** and ***@AfterGroups*** annotations in your TestNG tests. These annotations allow you to specify setup and cleanup methods that run before and after specific groups of tests.
-
-For example:
-
-```bash
-public class GroupIntegrationTest {
-
-    @BeforeGroups("database")
-    public void setupDB() {
-        System.out.println("setupDB()");
-    }
-
-    @AfterGroups("database")
-    public void cleanDB() {
-        System.out.println("cleanDB()");
-    }
-
-    @Test(groups = "selenium-test")
-    public void runSelenium() {
-        System.out.println("runSelenium()");
-    }
-
-    @Test(groups = "selenium-test")
-    public void runSelenium1() {
-        System.out.println("runSelenium()1");
-    }
-
-    @Test(groups = "database")
-    public void testConnectOracle() {
-        System.out.println("testConnectOracle()");
-    }
-
-    @Test(groups = "database")
-    public void testConnectMsSQL() {
-        System.out.println("testConnectMsSQL");
-    }
-
-}
-```
-
-In the Hyperexecute YAML Version 0.2 configuration, you can use the ```discoveryFlags``` parameter to specify the groups to discover during test discovery.
-
-```bash
-framework:
-  name: "maven/testng"
-  discoveryFlags: ["-Dgroups=database"]
-```
-
-Here it will only discover tests belonging to the group database. Use comma-separated values if you want to specify multiple groups.
-
-Similarly, you can use the ```excludedGroups``` parameter that can be used to run all test groups except for the defined set of groups.
-
-```bash
-framework:
-  name: "maven/testng"
-  discoveryFlags: ["-DexcludedGroups=database"]
-```
-
-This discovers all test of groups except database.
-
-
-Alternatively, you can also specify the groups or excluded groups directly in the pom.xml file using the Maven Surefire Plugin
-
-```bash
-<plugins>
-    [...]
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.22.1</version>
-        <configuration>
-          <groups>database,selenium-test</groups>
-        </configuration>
-      </plugin>
-    [...]
-</plugins>
-```
-
-## Conclusion
-
-This documentation provides an overview of the Hyperexecute YAML Version 0.2 and its features. We hope this information helps you understand the changes and improvements in Version 0.2 compared to Version 0.1.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

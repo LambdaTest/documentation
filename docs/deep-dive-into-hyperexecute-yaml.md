@@ -40,7 +40,7 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-This document delivers detailed elucidations for each and every YAML flags, offering an in-depth understanding of each configuration parameter.
+This document contains detailed explanations for all YAML flags, providing an in-depth understanding of each configuration parameter.
 
 ## Mandatory Parameters
 
@@ -51,18 +51,19 @@ version: 0.1
 ```
 
 ### `runson`
-OS on which you will run your Test. You can run your tests on Linux(linux), MacOS(mac), Windows10(win) or Windows10(win11). 
+In this flag, you will define your required Operating System on which you want to run your tests.
+> Currently we support Linux, macOS, Windows10 and Windows11. 
 
 ```yaml
-runson: linux # or mac or win or win11
+runson: linux # mac, win, win11
 ```
 
-If you want to run a multi OS job, you can provide `${matrix.os}` in this field as shown below.
+If you want to run a multi OS job, you can use [matrix method](/support/docs/hyperexecute-matrix-multiplexing-strategy/) as shown below
+
 ```yaml
 runson: ${matrix.os}
 matrix:
-  - mac
-  - linux
+  os: [win, mac, linux]
 ```
 
 ### `pre`
@@ -70,70 +71,124 @@ All actions you need to perform before test execution, such as installing depend
 
 ```yaml
 pre:
-  - mkdir -p m2_cache_dir
-  - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install
+  - npm install
+  - mvn install 
 ```
 
 ***
-
 ## AutoSplit Mode Parameters
 
 <!-- AUTOSPLIT MODE STARTED-->
 
 ### `autosplit` 
-Setting **autosplit** to true will distribute the `scenarios` among the concurrent number of tasks.
+Auto-Split mode automatically splits your [`scenarios`](/support/docs/hyperexecute-status/#3-stage-level-status) among the concurrent number of [`tasks`](/support/docs/hyperexecute-status/#2-task-level-status) and executes them parallelly. This ensures optimal utilization of resources and significantly reduces the overall execution time of your test suite.
 
-If you want to distribute you **m** commands on **n** VMs automatically and you don’t need to bother much about which all commands are grouped together on a single VM, you can use the **autosplit** feature for this purpose.
+For instance, if you have a concurrency of 10 and you want to run 50 tests in total, AutoSplit mode will distribute these 50 tests on 10 VMs in the most efficient manner possible to reduce your overall job execution time.
 
-For instance, you have a parallelism of 10 and you want to run 50 commands in total. Using autosplit, the system will distribute these 50 commands on 10 Vms in the most efficient manner possible. Each VM(`task`) will receive some commands to run out of these 50 commands.
+> **Note:** In [`static mode`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode), these commands will be smartly distributed among the VMs using history data, such that each VM (`task`) gets to run for almost the same amount of time to reduce your total [`job`](/support/docs/hyperexecute-guided-walkthrough/#jobs-page) time.
 
-> Note: In `static mode`, these commands will be distributed among VMs smartly(AI) using history data, such that each VM(`task`) gets to run for almost the same amount of time. This is to reduce the total `job` time.
-
-If your Auto Split test has to be enabled, set this boolean value to true. For more information on the Auto split feature, go to [this page](/support/docs/hyperexecute-auto-split-strategy/).
 ```yaml
 autosplit: true   
 ```
 
+> 📕 Take a closer look at the [AutoSplit mode](/support/docs/hyperexecute-auto-split-strategy/).
+
 ### `concurrency`
-Indicates the number of concurrent tasks to run on HyperExecute for processing all your scenarios and/or test-cases. A HyperExecute job, thus triggered, creates as many threads as the value provided for this key. Required for [autosplit](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit). 
+This indicates the total number of concurrent sessions that can run in parallel for processing your test-cases. Your job will have as many virtual machines [(`tasks`)](/support/docs/hyperexecute-status/#2-task-level-status) as you have defined for this flag.
+
+> if you are using the [AutoSplit strategy](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) then it is mandatory for you to define the concurrency.
 
 ```yaml
 concurrency: 10   
 ```
-> **Pro Tip**: The platform will guide you to utilize a higher concurrency automatically after analyzing your usage and test cases. You can find this information on the left side banner. [Learn more](/support/docs/hyperexecute-how-to-find-correct-concurrency/)
+:::tip Pro Tip
+- After analyzing your test cases and usage patterns, the platform will automatically recommend the optimal concurrency settings tailored to your needs. These recommendations are displayed in the banner on the left-hand side. [Learn more here.](/support/docs/hyperexecute-how-to-find-correct-concurrency/)
+- You can see the overall concurrency trends using our [analytics widgets.](/support/docs/analytics-modules-resource-utilization/#concurrency-trends)
+:::
 
-> **Note**: You can see the overall concurrency trends using our analytics widgets. [Learn more](/support/docs/analytics-modules-resource-utilization/#concurrency-trends)
+### `testDiscovery`
+This is used to locate or discover relevant tests via class names, filters, file names, etc. 
+```yaml
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
+```
+
+It contains the following attributes: 
+#### `type` 
+```yaml
+#(Recommended). When we are passing a command to discover tests. 
+type: raw   #or
+
+#(Advanced). For more advanced use cases.
+type: automatic 
+```
+
+**`type:raw`**
+
+- **Purpose:** Perform a basic test discovery based on the provided command.
+- **Functionality:** Directly executes the specified command and displays the discovered tests.
+- **Limitations:** Doesn't utilize any built-in logic or advanced discovery capabilities.
+- **Suitable for:** Simple test discovery scenarios where the command directly identifies the desired tests.
+
+**`type:automatic`**
+
+- **Purpose:** Utilize backend logic to discover tests using external tools.
+- **Functionality:** Relies on a backend tool, such as Snooper, to perform test discovery.
+- **Limitations:** Cannot be used directly with a command-based approach.
+- **Suitable for:** Complex test discovery scenarios where advanced logic or external tools are required.
+
+In summary, `type:raw` is a basic and straightforward approach for discovering tests based on a specified command, while `type:automatic` provides more flexibility and advanced capabilities by leveraging external tools and backend logic.
+
+#### `mode`   
+```yaml
+#test discovery happens on machine where CLI is running
+mode: static  #or
+
+#test discovery happens on HyperExecute VMs
+mode: dynamic
+```
+
+#### `command`
+The command that fetches the list of test scenario that would be further executed using the value passed in testRunnerCommand
+```yaml
+command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
+```
+
+:::tip
+- Test orchestration will happen with [`mode: static`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only.
+- 📕 Learn how to perform [dependent test discovery](/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/).
+:::
 
 ### `testRunnerCommand`
-The testRunnerCommand is a command used to run a single test entity in isolation. This entity could be a file, module, feature, or scenario. It is defined in the YAML file and tells the system how to run the test entity.
+The `testRunnerCommand` used to run a single test entity in isolation. This entity could be a file, module, feature, or scenario. It is defined in the YAML file and tells the system how to run the test entity.
 
 ```yaml
-#For example
 testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
-```
-This command runs the test using Maven and passes in the options for Cucumber, the scenario to run, and the operating system to use.
 
-> Note: This is only required in yaml `version 0.1` and if you are not running in [**matrix mode**](/support/docs/hyperexecute-matrix-multiplexing-strategy/).
-
-```yaml
-#Another example
-testRunnerCommand: npm test -- $test
+# This command runs the test using Maven and passes in the options for Cucumber, the scenario to run, and the operating system to use.
 ```
 
 ***
-
 ## Matrix Mode Parameters
 
 ### `matrix`
-A matrix allows you to create multiple tasks by performing variable substitutions in a single job. For example, you can use a matrix to create more than one version of a browser, operating system, etc. For more information on Matrix multiplexing strategy, go to this page [this page](/support/docs/hyperexecute-matrix-multiplexing-strategy/).
+The [matrix mode](/support/docs/hyperexecute-matrix-multiplexing-strategy/) allows you to run the same set of tests across multiple combinations of environments, configurations, or parameters. This is particularly useful for ensuring that your software works correctly under different conditions, such as various operating systems, browser versions, or dependency files.
+
 ```yaml
-matrix: 
-  files: ["Test1","Test2","Test3"]  
+runson: ${matrix.os}
+
+matrix:
+  os: ["win", "mac", "linux"]
+  version: ["latest, dev"]
+  browser: ["Chrome", "Firefox"]
+  files: ["@File1","@File2"]
 ```
 
 ### `combineTasksInMatrixMode`
 
-The `concurrency` flag is not acknowledged in [matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) mode. Therefore, you must set `combineTasksInMatrixMode` to `true` if you wish to use a limited number of concurrencies that are available in your license for a matrix-mode job. Instead of using one machine per matrix combination, this will run the (matrix-multiplied) combinations as scenarios in the number of HyperExecute machines that was specified in concurrency.
+In matrix mode, the [concurrency](/support/docs/deep-dive-into-hyperexecute-yaml/#concurrency) flag is not recognized. Therefore, in order to use the limited concurrencies that come with your license for a matrix-mode job, you need to set `combineTasksInMatrixMode` to `true`. This will run the (matrix-multiplied) combinations as scenarios in the number of HyperExecute machines that was specified in concurrency, as opposed to using one machine per matrix combination.
 
 For example, the below-mentioned YAML snippet will generate a total of 8 scenarios, and since the concurrency is set to 2, these 8 scenarios will run in parallel on 2 HyperExecute machines. In each machine (let's say each has 4 scenarios to execute), they will be running sequentially only.
 
@@ -144,13 +199,13 @@ concurrency: 2
 combineTasksInMatrixMode: true
 
 matrix:
-   os:[mac, linux]
-   browser:['edge', 'brave']
-   files: ['Test1', 'Test2']
+   os: ["mac", "linux"]
+   browser: ["edge", "brave"]
+   files: ["Test1", "Test2"]
 ```
 
 ### `testSuites`
-A command to run the tests that were mentioned in the scenario key for [matrix](/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) based test execution. [Learn more](/support/docs/hyperexecute-matrix-multiplexing-strategy/).
+A command to run the tests that were mentioned in the scenario key for [matrix](/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) based test execution.
 
 ```yaml
 testSuites: - mvn test -Dtest=$files
@@ -163,11 +218,12 @@ testSuites: - mvn test -Dtest=$files
 <!-- HYBRID MODE STARTED-->
 
 ### `parallelism`
+`parallelism` defines the number of virtual machines [('tasks')](/support/docs/hyperexecute-status/#2-task-level-status) to be spawned in the case of hybrid mode. If you are not defining the parallelism, then you must define operating system-specific parallelism (win, mac, and  Linux). If both are defined, then preference will be given to OS-based parallelism.
 
-If we mention runson: &#36;&lbrace;matrix.os&rbrace;, then we need to make sure that parallelism is defined as well. 
-There are 2 ways to define parallelism, either you can mention common parallelism which can be used in any platform or you can mention platform specific parallelism ex - winParallelism, linuxParallelism etc.
 ```yaml
+runson: {matrix.os}
 parallelism: 2
+
 matrix:
  os: [win, mac]
  version: [1, 2, 3]
@@ -186,110 +242,78 @@ In the above example we have total of 3 combinations for each os i.e.<br />
 
 So each combination will run on a parallelism provided in the yaml. Here all combinations will run on a parallelism of 2.
 
-#### `macParallelism`
+#### Platform specific parallelism -> `macParallelism`, `winParallelism`, and `linuxParallelism`
 
-It is used if you want to provide different parallelism for MAC OS. If mac parallelism is not present it will consider parallelism as the default value.
+If you want to provide different parallelism for macOS, linux and windows. If any of the specific operating system parallelism is not present it will consider the `parallelism` as the default value.
+
 ```yaml
 parallelism: 2
+linuxParallelism: 2
+winParallelism: 1
 macParallelism: 3
+
 matrix:
  os: [win, mac]
  version: [1, 2, 3]
  browser: [chrome]
 ``` 
-In the above example windows combinations will run on a parallelism on 2 and MAC combinations will run on a parallelism defined by macParallelism i.e. 3.
-
-#### `winParallelism`
-
-It is used if you want to provide different parallelism for win os. If win parallelism is not present it will consider parallelism as the default value.
-```yaml
-parallelism: 2
-winParallelism: 3
-matrix:
- os: [win, mac]
- version: [1, 2, 3]
- browser: [chrome]
-```
-So in the above example mac combinations will run on a parallelism on 2 and windows combinations will run on a parallelism defined by winParallelism i.e. 3
-
-
-#### `linuxParallelism`
-
-It is used if you want to provide different parallelism for linux os. If linux parallelism is not present it will consider parallelism as the default value.
-```yaml
-parallelism: 2
-linuxParallelism: 3
-matrix:
- os: [win, linux]
- version: [1, 2, 3]
- browser: [chrome]
-```
-So in the above example windows combinations will run on a parallelism on 2 and linux combinations will run on a parallelism defined by linuxParallelism i.e. 3
-
-> **Note** : For platform if both is missing then the CLI will throw an error.
+In the above example linux combinations will run on a parallelism on 2, `windows` combinations will run on a parallelism on 1, and `mac` combinations will run on a parallelism defined of 3.
 
 ### `testRunnerCommand`
-The testRunnerCommand is a command used to run a single test entity in isolation. This entity could be a file, module, feature, or scenario. It is defined in the YAML file and tells the system how to run the test entity.
+The `testRunnerCommand` used to run a single test entity in isolation. This entity could be a file, module, feature, or scenario. It is defined in the YAML file and tells the system how to run the test entity.
 
 ```yaml
-#For example
 testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
+
+# This command runs the test using Maven and passes in the options for Cucumber, the scenario to run, and the operating system to use.
 ```
-This command runs the test using Maven and passes in the options for Cucumber, the scenario to run, and the operating system to use.
 
-> Note: This is only required in yaml `version 0.1` and if you are not running in [**matrix mode**](/support/docs/hyperexecute-matrix-multiplexing-strategy/).
+#### Platform specific `testRunnerCommand`
+
+In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple operating system using the same yaml. You can provide different `testRunnerCommand` for macOS, linux and windows.
+
+If any of the specific operating system `testRunnerCommand` is not present it will consider the `testRunnerCommand` as the default value.
 
 ```yaml
-#Another example
-testRunnerCommand: npm test -- $test
-
-#### `macTestRunnerCommand`
-In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple OS using the same yaml. On different OS `testRunnerCommand` can be different. So for specifying specific commands for MAC OS in hybrid mode. You can use this command.
-```yaml
+testRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="win 10"
+linuxTestRunnerCommand: mvn test `-Dcucumber.options="$test"`  `-Dscenario="$test"`   `-DOs="linux"`
+winTestRunnerCommand: mvn test `-Dcucumber.options="$test"` `-Dscenario="$test"`  `-DOs="win 10"`
 macTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DOs="mac"
 ```
 
-#### `winTestRunnerCommand`
-In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple OS using the same yaml. On different OS `testRunnerCommand` can be different. So for specifying specific commands for Windows in hybrid mode. You can use this command.
-```yaml
-winTestRunnerCommand: mvn test `-Dcucumber.options="$test"` `-Dscenario="$test"`  `-DOs="win 10"`
-```
-
-#### `linuxTestRunnerCommand`
-In [hybrid mode](/support/docs/hyperexecute-hybrid-strategy/), you can run your tests on multiple OS using the same yaml. On different OS `testRunnerCommand` can be different. So for specifying specific commands for Linux in hybrid mode. You can use this command.
-```yaml
-linuxTestRunnerCommand: mvn test `-Dcucumber.options="$test"`  `-Dscenario="$test"`   `-DOs="linux"`
-```
-> Note: If the OS specific command is not provided then the testRunnerCommand will be used by default. If both are not provided then you will get an error.
-
 ***
-
 ## Basic Parameters
 
-### `cachekey`
-It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. When you run your tests for the very first time, HyperExecute caches the dependency files (e.g., package-lock.json, pom.xml, etc.). Now, when you execute the same test suite again (without making any changes), HyperExecute searches for a matching cached result within its cache storage, and if a valid cached result is found, HyperExecute utilizes it directly, skipping redundant execution.
+### `cacheKey`
+It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. HyperExecute generates a hash value for the files specified in the `cacheKey` and checks the database to see if an entry with this hash already exists.
+
+If an entry exists and the dependencies haven't changed, HyperExecute reuses the cached directives. If no entry exists, a new one is created. Upon successful job completion, the directives are cached for future use. This process avoids redundant downloads of dependencies, ensuring faster test execution.
 
 ```yaml
-{{ checksum "package-lock.json" }}
+cacheKey: '{{ checksum "pom.xml" }}'
 ```
 
 :::tip
-If you are using Windows as well, then also you can define the path of the cache file using **forward slashes** if your file is inside the directories as shown below:
+If you also use Windows, you can use **forward slashes** to specify the cache file's path if your file is inside one of the directories, as demonstrated below:
 
 ```yaml
-{{ checksum "dir1/dir2/package-lock.json" }}
+cacheKey: {{ checksum "dir1/dir2/package-lock.json" }}
 ```
 :::
 
 ### `cacheDirectories`
-It is used to cache a certain set of files which are not supposed to change frequently such as dependency files for your tests (e.g. node_modules, .m2). HyperExecute can cache such files to help speed up your test execution time further the next time you run your job. 
+It is used to cache files that do not change frequently, such as dependency files for your tests (e.g., node_modules, .m2). By caching these files, HyperExecute can significantly speed up your test execution time in subsequent runs.
+
 ```yaml
 cacheDirectories:
   - .m2
 ```
 
-> **NOTE:** In version 0.2 YAML, the support for caching is by default, the user does not need to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster. <br />
-If the user adds the cacheDirectories and cacheKey keys in his YAML, the default caching gets disabled and preference is given to the user specified cache.
+:::info
+In [version 0.2 YAML](/support/docs/hyperexecute-yaml-version0.2/), the support for caching is by default, you don't have to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster. <br />
+
+If you add the `cacheDirectories` and `cacheKey` keys in your YAML file, then the default caching gets disabled and preference is given your specified cache.
+:::
 ```yaml
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
@@ -297,14 +321,14 @@ cacheDirectories:
 ```
 
 ### `env`
-This variable can be used to define a list of key values which can be used to set runtime variables on the code execution platform i.e. machines. 
+This is helpful to set environment variables on the machine and use it in your code or install dependencies to run your test cases.
 
 ```yaml
 env:
   USERNAME: abc
   PLATFORM: windows
 ```
-This is helpful to set environment variables on the machine and use it in your code or install dependencies to run your test cases.
+
 
 ### `runtime`
 
@@ -351,39 +375,37 @@ runtime:
 ```
 
 ### `retryOnFailure`
-Retry on failure would allow you to set up automatic retries in case of a failed test scenario.
-If set to true, then it will retry tests based on the `maxRetries` key as defined below.
-Default value is `false`.
+This allows you to configure automatic retries for failed test scenarios. When set to true (`retryOnFailure: true`), tests will be retried based on the [`maxRetries`](support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) value specified. The default setting is **false**.
 
-For instance instead of running your whole job again to make sure whether a test scenario actually was failing or having some issue. Using retryOnFailure will allow you to have test retires just in time of a failure to understand whether the test was actually failing or passed in consecutive attempts.
+This feature eliminates the need to rerun the entire job to verify if a test scenario is genuinely failing or encountering an intermittent issue. By enabling `retryOnFailure`, you can promptly retry tests upon failure, helping determine if the test consistently fails or passes in subsequent attempts."
+
 ```yaml
-retryOnFailure: true   
+retryOnFailure: true
 ```
 
 ### `maxRetries`
-MaxRetries is the number of retries that can be done if your scenario failed. This key is used along with retryOnFailure key. If  `retryOnFailure` key is set to true, then this key indicates the number of retries for each scenario.
+The `maxRetries` key defines the number of retries allowed for a failed test scenario. It is used in conjunction with the `retryOnFailure` key. When `retryOnFailure` is set to true, `maxRetries` specifies how many times each test will be retried upon failure.
+
+With `maxRetries` and `retryOnFailure`, you don't need to rerun the entire job to retry failed test scenarios. Instead, your tests are automatically retried immediately after a failure, allowing you to determine if they pass in subsequent attempts.
+
+> You can set a value between 1 and 5 for `maxRetries`, indicating the maximum number of retries for your tests.
+
 ```yaml
 retryOnFailure: true
 maxRetries: 2
 ```
-With maxRetries and retryOnFailure you need not have to rerun your job to retry the test scenarios, instead your test scenarios are re-tried just in time.
-
-The maximum number of times your tests can be retried. You can allocate a numerical value between 1 and 5 for this field. 
-```yaml
-maxRetries: 2
-```
 
 ### `post`
-All actions you need to perform after all test executions, such as printing an output file, uploading a report through **curl** API request. You’ll ideally want to use this parameter to **post** run simple commands like `echo <some-dir>/output/output.log` etc
+This parameter is used for executing actions after all your tests are executed, such as printing an output file or uploading a report via a curl API request. It's ideal for performing post-run tasks.
+
 ```yaml
 post:
   - echo <some-dir>/output/output.log
   - curl https://www.example.com
-
 ```
 
 ### `report`
-This allows you to download the test reports generated by running your test suites on VM. You can download the report either from the jobs detail page or you can pass –download-report flag in the job triggering command from HyperExecute CLI. For using this feature, provide report: true, and the relative path of the report where your test suite generates report, type, frameworkName inside partialReports as shown in below example.
+This allows you to generate a consolidated report across the VMs. To use this feature, provide `report: true`, and the relative path of the data where it is expected to store and generate the reports after your test execution. You can also define the type and frameworkName of the report inside `partialReports` as shown in below example.
 
 ```yaml
 report: true
@@ -392,62 +414,32 @@ partialReports:
  type: html
  frameworkName: extent
 ```
-You can also email the generated report by adding `email` key in partialReports, below `frameworkName`. [Learn more](/support/docs/hyperexecute-email-reports/) 
 
-```yaml
-report: true
-partialReports:
- location: target/surefire-reports/html
- type: html
- frameworkName: extent
- email:
-  to:
-    - johndoe@example.com 
- ```
+It helps you to view the report on the dashboard itself. You can download the report either from the [jobs detail page](/support/docs/hyperexecute-guided-walkthrough/#job-details-page) or you can pass[`-–download-report`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--download-report) flag in the job triggering command from [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/).
 
-> **Note**: Set `defaultReport` as false in the framework if you are using yaml `version 0.2` and you want to generate a report using `partialReports` as shown below.
+:::tip
+
+- 📕 Take a closer look at the [HyperExecute Reports](/support/docs/hyperexecute-reports/)
+- Understand how you can [email the generated report](/support/docs/hyperexecute-email-reports/)
+- How you can generate [different types of report](/support/docs/hyperexecute-job-reports/) based on your requirements
+:::
+
+> **Note**: Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below.
 ```yaml
 framework:
   name: maven/testng
   defaultReports: false
 ```
 
-:::tip
-
-If you want to generate multiple reports of different frameworks.
-
-```yaml
-partialReports:
-  - location: reports/json
-    type: json
-    frameworkName: extent-native
-    email:
-        to:
-          - johndoe@example.com
-  - location: target/surefire-reports
-    type: html
-    frameworkName: testng
-    email:
-        to:
-          - johndoe@example.com
-```
-:::
-
-***
-
 ### `errorCategorizedOnFailureOnly`
 
-The `errorCategorizedOnFailureOnly` flag allows you to control the behavior of error categorization after the job execution based on stage status.
+The `errorCategorizedOnFailureOnly` flag allows you to control the behavior of error categorization after your job is executed based on the status of your stage. By default, error categorization is applied to each stage, regardless of it's status. This means that error categorization is generated for every stage, whether it succeeds or fails.
 
-By default, error categorization is applied to each stage, regardless of the stage's status. This means that error categorization is generated for every stage, regardless of whether it succeeds or fails.
-
-When you enable this flag as mentioned below, the error categorization will only be generated for stages that are not green.
+When you enable this flag as mentioned below, the error categorization will only be generated for stages that are not passed.
 
 ```yaml
 errorCategorizedOnFailureOnly: true
 ```
-
-***
 
 ### `errorCategorizedReport`
 
@@ -462,11 +454,15 @@ errorCategorizedReport:
 
 ### `jobLabel`
 The `jobLabel` YAML key is used to add tags or labels to jobs. This allows you to search your jobs using the labels or tags assigned to them. 
-  -   **Prioritize Your Job Pipeline**:  To prioritize your jobs, you need to add the required priority to the jobLabel key in the YAML file e.g `jobLabel: [ 'high', 'Low','medium']`. With 'high' priority jobs triggered first, followed by medium priority jobs and finally low priority jobs. The values are case insensitive and the default priority is 'medium'.
-  -   You can also use it along with your existing job labels like this: 
+
+#### Prioritize Your Job Pipeline
+
+To prioritize your jobs, you need to add the required priority to the jobLabel key in the YAML file e.g `high`, `low`, and `'medium'`. With `'high'` priority jobs triggered first, followed by `'medium'` priority jobs and finally `'low'` priority jobs. The values are case insensitive and the default priority is 'medium'.
+
+You can also use it along with your existing job labels like this: 
     
 ```yaml
-jobLabel: [ '${DATE} - ${DAY}','Foo','Bar', 'low']
+jobLabel: ['chrome', 'linux', 'low']
 ```
 
 ***
@@ -607,90 +603,6 @@ retryOptions:
   errorRegexps: ["org.openqa.selenium.NoSuchElementException"]
 ```
 
-### `testDiscovery`
-The testDiscovery key is used to locate or discover relevant tests via class names, filters, file names, etc. 
-```yaml
-testDiscovery:
-  type: raw
-  mode: dynamic
-  command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
-```
-
-It contains the following attributes: 
-#### `type` 
-```yaml
-#(Recommended). When we are passing a command to discover tests. 
-type: raw   #or
-
-#(Advanced). For more advanced use cases.
-type: automatic 
-```
-
-**`type:raw`**
-
-- **Purpose:** Perform a basic test discovery based on the provided command.
-- **Functionality:** Directly executes the specified command and displays the discovered tests.
-- **Limitations:** Doesn't utilize any built-in logic or advanced discovery capabilities.
-- **Suitable for:** Simple test discovery scenarios where the command directly identifies the desired tests.
-
-**`type:automatic`**
-
-- **Purpose:** Utilize backend logic to discover tests using external tools.
-- **Functionality:** Relies on a backend tool, such as Snooper, to perform test discovery.
-- **Limitations:** Cannot be used directly with a command-based approach.
-- **Suitable for:** Complex test discovery scenarios where advanced logic or external tools are required.
-
-In summary, `type:raw` is a basic and straightforward approach for discovering tests based on a specified command, while `type:automatic` provides more flexibility and advanced capabilities by leveraging external tools and backend logic.
-
-#### `mode`   
-```yaml
-#test discovery happens on machine where CLI is running
-mode: static  #or
-
-#test discovery happens on HyperExecute VMs
-mode: dynamic
-```
-
-#### `command`
-The command that fetches the list of test scenario that would be further executed using the value passed in testRunnerCommand
-```yaml
-command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
-```
-> Note: Test orchestration will happen with [`mode: static`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only. [`testDiscovery`](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) works with yaml `version 0.1` and if you are not running in [**matrix mode**](/support/docs/hyperexecute-matrix-multiplexing-strategy/).
-
-#### Dependent Test Case Discovery
-Dependent tests signify that one test relies on the outcome of another. To achieve this, TestNG offers the '**dependsOnMethods**' attribute within @Test annotations.
-
-For instance, consider the code snippet in which '**SignIn()**' depends on '**OpenBrowser()**,' and '**LogOut()**' depends on 'SignIn().'
-
-```java
-import org.testng.annotations.Test;
-public class DependsOnTest {
-  @Test
-  public void OpenBrowser() {
-	  System.out.println("The browser is opened");
-  }
-  
-  @Test (dependsOnMethods = { "OpenBrowser" })
-  public void SignIn() {
-	  System.out.println("User has signed in successfully");
-  }
-  
-  @Test (dependsOnMethods = { "SignIn" })
-  public void LogOut() {
-	  System.out.println("The user logged out successfully");
-  }
-}
-```
-
-To discover and manage dependent tests using the Test Discovery command, you can use the following syntax:
-
-```yaml
-mvn test -Dmode=discover -Dplatname=win -Dframework=testng -Ddiscovery=dependent
-```
-
-This command will provide a Test Discovery Result that lists the tests and their dependencies, ensuring that dependent tests are executed in the correct order, such as ["Test1#SignIn,Test1#LogOut,Test1#OpenBrowser"].
-
 ### `preDirectives`
 This is an advanced version of `pre` where you can control **how** your pre commands should be executed in a parallel HyperExecute `Task`. If both pre and preDirectives flags are provided at the same time, then the precedence is given to the preDirectives flag.
 preDirectives currently has the ability to take the following additional inputs:
@@ -761,8 +673,6 @@ When you are working with relatively large codebases, and constantly updating an
 To overcome this challenge, you can use `differentialUpload` flag, which is used to minimize the time taken to upload the codebase, especially when there are incremental changes.
 
 This flag optimizes codebase uploads by **fetching** only the parts of the codebase that have been **updated** or **newly added**, significantly **reducing upload times**.
-
-### Configuration
 
 - **enabled (boolean):** Set to true to activate the optimization, and false to maintain the default behavior.
 
@@ -945,7 +855,6 @@ DataJsonPaths helps to distribute data/configs over the VMs. In this you can cre
 ]
 ```
 
-### Access the JSON file Data:
 To access the data from the JSON files, there are primarily 2 methods:
 
 #### 1. By reading the JSON file
@@ -1110,8 +1019,7 @@ This is used to manage hyperlink behavior based on test status. Here's a breakdo
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/17.png').default} alt="Image"  className="doc_img"/>
 
-:::info NOTE
-### Dynamic Build Naming via CLI
+:::info Dynamic Build Naming via CLI
 
 If you prefer to set `buildPrefix` and `buildName` values through the command-line interface (CLI), the following commands can be used:
 
@@ -1196,7 +1104,7 @@ Here is the sample code showing how we can use the above mentioned Lambda hooks:
 > **Note**: t1 will denote the time taken by each selenium command between start and end.
 
 ***
-## `matrixEnvPrefix`
+### `matrixEnvPrefix`
 When we run a job in matrix mode, we set the keys with their resolved value as env variables in the scenario being run. The keys are not prefixed and hence, in some cases, we had found out that some variables like “os” can affect your test runs (for example in dotnet build commands). So, if one has an `os` key in `matrix`, it may affect `dotnet build` command if one doesn’t set the matrixEnvPrefix: true in yaml to have the “os” key of matrix available to us as `HE_ENV_os
 
 ### `dynamicAllocation`
