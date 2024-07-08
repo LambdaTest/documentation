@@ -38,7 +38,7 @@ slug: analytics-create-dashboard/
 import VideoEmbed from '../src/component/videoEmbed';
 
 
-### Using Custom Dashbaords
+### Using Custom Dashboards
 
 Add widgets of multiple products and various insights to your dashboard. You can create a custom dashboard with the widgets of your choice. You can add widgets of the same type multiple times and also edit the layout of the dashboard according to your configuration.
 
