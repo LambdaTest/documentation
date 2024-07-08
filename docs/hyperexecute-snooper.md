@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-snooper
-title: Using Snooper on Hyperexecute
-hide_title: true
+title: Using Snooper Command on Hyperexecute
+hide_title: false
 sidebar_label: Using Snooper on Hyperexecute
 description: Learn more about Using Snooper on Hyperexecute
 keywords:
@@ -36,19 +36,14 @@ slug: hyperexecute-snooper/
       })
     }}
 ></script>
-
-# Snooper Command
-***
-
 A `snooper` is a command that can be used to discover the list of Feature file scenarios that would be further executed using the value passed in the `testRunnerCommand`. The `snooper` command takes two arguments:
 
 - **`featureFilePaths`**: This argument specifies the path to the Feature files that you want to discover.
-
 - **`frameWork`**: This argument specifies the framework that you are using for your tests.
 
 For example, the following command will discover the list of Feature file scenarios in the features folder that are using the Java framework:
 
-```
+```yaml
 snooper --featureFilePaths=features/ --frameWork=java
 ```
 
@@ -90,7 +85,7 @@ It offers two methods to implement it:
 
 In this method, tests are discovered on the user's machine. The user needs to configure the appropriate parameters, and the command will be executed automatically with the appropriate parameters.
 
-```bash
+```yaml
  testDiscovery:
   type: automatic
   mode: static
@@ -110,7 +105,7 @@ The user needs to configure the following parameters as per their requirements:
 
 In this method, tests are discovered on the user's machine. The user needs to provide a `command` and appropriate tags that will be executed.
 
-```bash
+```yaml
 testDiscovery: 
   type: raw 
   mode: static
@@ -123,7 +118,6 @@ The user needs to configure the following parameters as per their requirements:
 
 
 ### `testRunnerCommand`
-***
 
 This command helps to execute the test cases and needs a command that will help to execute the single test. It is executed on the Hyperexecute VMs for each scenario at an individual level.
 
@@ -131,7 +125,7 @@ There are two methods to execute the runner command for cucumber:
 
 #### Method 1: Using `options` flag
 
-```bash
+```yaml
 testRunnerCommand: mvn test -Dcucumber.options="$test"
 ```
 
@@ -141,7 +135,7 @@ testRunnerCommand: mvn test -Dcucumber.options="$test"
 
 > **Note:** This flag is applicable for cucumber version 7 and above only.
 
-```bash
+```yaml
 testRunnerCommand: mvn test -Dcucumber.features="$test"
 ```
 
@@ -153,7 +147,7 @@ We can also debug `testDiscovery` using `snooper` to check whether all the desir
 
 To debug the discovery of the snooper, configure the following command as per the desired parameters:
 
-```bash
+```yaml
 .hyperexecute/snooper --targetOs=win --ignoredTags=@ignore @skipDaily --featureFilePaths=src/test/java/Features --frameWork=java | sed 's/:.*//' | uniq
 ```
 
@@ -163,27 +157,26 @@ To debug the discovery of the snooper, configure the following command as per th
 
 - Snooper discovery can be customized where you can use set of tags that you want to discover the tests.
 
-```bash
+```yaml
 specificTags: ["@tag1","@tag2"]
 ```
 
 - Discovery can also be customized by passing logical query in the snooper using `query` tag:
 
-```bash
+```yaml
 query: ["((@tag1 or @tag2) and not @tag3)"]
 ```  
 
 - You can also skip the tests that have some specific tags using `ignoredTags`:
 
-```bash
+```yaml
 ignoredTags : ["@tag3","@tag2"]
 ```
 
 ## Sample YAML File
-***
 Here is a sample HyperExecute file with cucumber 7 and above to discover all the feature files without any tags.
 
-```bash
+```yaml
 version: 0.1
 globalTimeout: 90
 testSuiteTimeout: 90

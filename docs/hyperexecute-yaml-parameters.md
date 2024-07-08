@@ -83,7 +83,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 
 | Key | Type | Description|
 |-----|------|------------|
-| [cachekey](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) | String | File which can be used to generate unique key for cache. Example : package.json |
+| [cacheKey](/support/docs/deep-dive-into-hyperexecute-yaml/#cachekey) | String | File which can be used to generate unique key for cache. Example : package.json |
 | [cacheDirectories](/support/docs/deep-dive-into-hyperexecute-yaml/#cachedirectories) | List of Strings | Dependency directories that are cached to improve the test execution speed. |
 | [env](/support/docs/deep-dive-into-hyperexecute-yaml/#env) | Map | No | Here we can define all the env variables for VM , we can even refer all the key stored in vault by using syntax like `${{ .secrets.KeyName }}`.|
 | [runtime](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) | Map | Install any dependent language/framework with any specific version. |
@@ -93,6 +93,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [report](/support/docs/deep-dive-into-hyperexecute-yaml/#report) | Boolean | To generate the test report at the end of the job using the framework generated reports, set this value to true. We also need to set partialReports for generating report |
 | [partialReports](/support/docs/deep-dive-into-hyperexecute-yaml/#reports) | Map | Configurations related to generate report. |
 | [errorCategorizedOnFailureOnly](/support/docs/deep-dive-into-hyperexecute-yaml/#errorcategorizedonfailureonly) | Boolean | Control the behavior of error categorization generated on your tests|
+|[errorCategorizedReport](/support/docs/deep-dive-into-hyperexecute-yaml/#errorcategorizedreport) | Map, Boolean | Generate a RCA report for your failed tests.|
 | [jobLabel](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel) | List of Strings | Add tags or labels to jobs. This allows you to search your jobs using the labels or tags assigned to them. |
 
 ## Advanced Parameters
@@ -138,7 +139,6 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [sourcePayload](/support/docs/deep-dive-into-hyperexecute-yaml/#sourcepayload) | Map | You can use this to define the source of your test scripts so that the scripts can directly be fetched from your git directly for execution on HyperExecute. |
 | [hostsOverride](/support/docs/deep-dive-into-hyperexecute-yaml/#hostsoverride) | List of Maps |If you want to add custom domain mappings in local DNS entry. |
 | [frameworkStatusOnly](/support/docs/deep-dive-into-hyperexecute-yaml/#frameworkstatusonly) | Boolean | Set status of scenario based on it’s tests status / remarks. |
-|[errorCategorizedReport](/support/docs/deep-dive-into-hyperexecute-yaml/#errorcategorizedreport) | Map, Boolean | Generate a RCA report for your failed tests.|
 | [vars](/support/docs/deep-dive-into-hyperexecute-yaml/#vars) | Map |  Here we define all the variable which can be refer in other parts of yaml. You can use these variables in the YAML file as `${your_variable_name}`. |
 | [testRunnerExecutor](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnerexecutor) | String | To switch the test execution from powershell to the command line. |
 |[workingDirectory](/support/docs/deep-dive-into-hyperexecute-yaml/#workingdirectory)| Path of Location |This flag determines where test discovery and execution commands operate, including the creation of associated files or directories. |
