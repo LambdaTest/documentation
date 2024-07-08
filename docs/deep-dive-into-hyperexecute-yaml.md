@@ -158,7 +158,7 @@ command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 
 :::tip
 - Test orchestration will happen with [`mode: static`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only.
-- 📕 Learn how to perfrom [dependent test discovery](/support/docs/hyperexecute-yaml-how-to#dependent-test-case-discovery).
+- 📕 Learn how to perform [dependent test discovery](/support/docs/hyperexecute-yaml-how-to#dependent-test-case-discovery).
 :::
 
 ### `testRunnerCommand`
@@ -218,7 +218,7 @@ testSuites: - mvn test -Dtest=$files
 <!-- HYBRID MODE STARTED-->
 
 ### `parallelism`
-`parallelism` defines the number of virtual machines [('tasks')](/suppor/docs/hyperexecute-status/#2-task-level-status) to be spawned in the case of hybrid mode. If you are not defining the parallelism, then you must define operating system-specific parallelism (win, mac, and  Linux). If both are defined, then preference will be given to OS-based parallelism.
+`parallelism` defines the number of virtual machines [('tasks')](/support/docs/hyperexecute-status/#2-task-level-status) to be spawned in the case of hybrid mode. If you are not defining the parallelism, then you must define operating system-specific parallelism (win, mac, and  Linux). If both are defined, then preference will be given to OS-based parallelism.
 
 ```yaml
 runson: {matrix.os}
@@ -285,9 +285,9 @@ macTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DO
 ## Basic Parameters
 
 ### `cachekey`
-It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. It generates a hash value for the files specified in the `cachekey`. Once generated, it checks in the db if the entry exists and gets the directives, then these directives are re-used assuming that there is no change in the dependencies. if not then a new entry is added and on the successful completetion of the job, those directives are cached for the later use.
+It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. It generates a hash value for the files specified in the `cachekey`. Once generated, it checks in the db if the entry exists and gets the directives, then these directives are re-used assuming that there is no change in the dependencies. if not then a new entry is added and on the successful completion of the job, those directives are cached for the later use.
 
-This avoid redundant download of dependenices ensuring faster test execution
+This avoid redundant download of dependencies ensuring faster test execution
 
 ```yaml
 {{ checksum "package-lock.json" }}
