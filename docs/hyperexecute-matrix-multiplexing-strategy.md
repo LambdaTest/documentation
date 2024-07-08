@@ -110,7 +110,7 @@ Let’s take a case where the test scenarios are implemented in Java. Files File
 ***
 
 ## Exclusion in Matrix Strategy
-Assuming that you created a matrix but there is one specific combination that you don't want the system to consider. This can happen for instance if you have a combination of Safari and Windows which won't be a valid combination, in such cases you can exclude such a combination using the `exclusionMatrix` paramter as shown below.
+Assuming that you created a matrix but there is one specific combination that you don't want the system to consider. This can happen for instance if you have a combination of Safari and Windows which won't be a valid combination, in such cases you can exclude such a combination using the `exclusionMatrix` parameter as shown below.
 ``` yaml
 #runson defines the OS of your test execution node.
 runson: ${matrix.os}
