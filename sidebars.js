@@ -720,7 +720,9 @@ module.exports = {
               "hyperexecute-how-to-find-correct-concurrency",
               "hyperexecute-how-to-configure-sourcePayload",
               "hyperexecute-browser-list-api",
-              "hyperexecute-how-to-run-tests-using-local-selenium-drivers"
+              "hyperexecute-how-to-run-tests-using-local-selenium-drivers",
+              "hyperexecute-how-to-perform-dependent-test-based-discovery",
+              "hyperexecute-how-to-perform-group-based-test-discovery-in-testng"
             ],
           },
           {
@@ -736,7 +738,7 @@ module.exports = {
               "hyperexecute-seamless-integration-with-tools",
               "hyperexecute-multi-webdriver-support",
               "hyperexecute-build-mobile-apps-using-tools",
-              "hyperexecute-utilizing-custom-libraries"
+              "hyperexecute-utilizing-custom-libraries"              
             ]
           },
           {

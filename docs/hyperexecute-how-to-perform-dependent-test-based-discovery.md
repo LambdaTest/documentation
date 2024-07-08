@@ -1,14 +1,15 @@
 ---
-id: hyperexecute-yaml-how-to
-title: YAML how to
-hide_title: true
-sidebar_label: YAML How to
-description: YAML How to
+id: hyperexecute-how-to-perform-dependent-test-based-discovery
+title: How to Perform Dependent Test Case Discovery
+hide_title: false
+sidebar_label: How to Perform Dependent Test Case Discovery
+description: How to Perform Dependent Test Case Discovery
 keywords:
     - hyperexecute yaml
-url: https://www.lambdatest.com/support/docs/hyperexecute-yaml-how-to/
+    - How to Perform Dependent Test Case Discovery
+url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/
 site_name: LambdaTest
-slug: hyperexecute-yaml-how-to/
+slug: hyperexecute-how-to-perform-dependent-test-based-discovery/
 ---
 
 <script type="application/ld+json"
@@ -28,14 +29,13 @@ slug: hyperexecute-yaml-how-to/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Cypress Integration with HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-yaml-how-to/"
+          "name": "How to Perform Dependent Test Case Discovery",
+          "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/"
         }]
       })
     }}
 ></script>
 
-## Dependent Test Case Discovery
 Dependent tests signify that one test relies on the outcome of another. To achieve this, TestNG offers the '**dependsOnMethods**' attribute within @Test annotations.
 
 For instance, consider the code snippet in which '**SignIn()**' depends on '**OpenBrowser()**,' and '**LogOut()**' depends on 'SignIn().'
