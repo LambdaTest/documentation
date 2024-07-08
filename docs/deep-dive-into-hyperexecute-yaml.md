@@ -158,7 +158,7 @@ command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 
 :::tip
 - Test orchestration will happen with [`mode: static`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only.
-- 📕 Learn how to perform [dependent test discovery](/support/docs/hyperexecute-yaml-how-to#dependent-test-case-discovery).
+- 📕 Learn how to perform [dependent test discovery](/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/).
 :::
 
 ### `testRunnerCommand`
@@ -284,32 +284,36 @@ macTestRunnerCommand: mvn test -Dcucumber.options="$test" -Dscenario="$test" -DO
 ***
 ## Basic Parameters
 
-### `cachekey`
-It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. It generates a hash value for the files specified in the `cachekey`. Once generated, it checks in the db if the entry exists and gets the directives, then these directives are re-used assuming that there is no change in the dependencies. if not then a new entry is added and on the successful completion of the job, those directives are cached for the later use.
+### `cacheKey`
+It is a unique identifier that enables HyperExecute to store and retrieve cached results efficiently. HyperExecute generates a hash value for the files specified in the `cacheKey` and checks the database to see if an entry with this hash already exists.
 
-This avoid redundant download of dependencies ensuring faster test execution
+If an entry exists and the dependencies haven't changed, HyperExecute reuses the cached directives. If no entry exists, a new one is created. Upon successful job completion, the directives are cached for future use. This process avoids redundant downloads of dependencies, ensuring faster test execution.
 
 ```yaml
-{{ checksum "package-lock.json" }}
+cacheKey: '{{ checksum "pom.xml" }}'
 ```
 
 :::tip
-If you are using Windows as well, then also you can define the path of the cache file using **forward slashes** if your file is inside the directories as shown below:
+If you also use Windows, you can use **forward slashes** to specify the cache file's path if your file is inside one of the directories, as demonstrated below:
 
 ```yaml
-{{ checksum "dir1/dir2/package-lock.json" }}
+cacheKey: {{ checksum "dir1/dir2/package-lock.json" }}
 ```
 :::
 
 ### `cacheDirectories`
-It is used to cache a certain set of files which are not supposed to change frequently such as dependency files for your tests (e.g. node_modules, .m2). HyperExecute can cache such files to help speed up your test execution time further the next time you run your job. 
+It is used to cache files that do not change frequently, such as dependency files for your tests (e.g., node_modules, .m2). By caching these files, HyperExecute can significantly speed up your test execution time in subsequent runs.
+
 ```yaml
 cacheDirectories:
   - .m2
 ```
 
-> **NOTE:** In version 0.2 YAML, the support for caching is by default, the user does not need to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster. <br />
-If the user adds the cacheDirectories and cacheKey keys in his YAML, the default caching gets disabled and preference is given to the user specified cache.
+:::info
+In [version 0.2 YAML](/support/docs/hyperexecute-yaml-version0.2/), the support for caching is by default, you don't have to specify any directories to cache for faster performance. For example, in Maven, we cache the entire .m2 directory in the home folder so that subsequent tasks run faster. <br />
+
+If you add the `cacheDirectories` and `cacheKey` keys in your YAML file, then the default caching gets disabled and preference is given your specified cache.
+:::
 ```yaml
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
@@ -371,30 +375,28 @@ runtime:
 ```
 
 ### `retryOnFailure`
-Retry on failure would allow you to set up automatic retries in case of a failed test scenario.
-If set to true, then it will retry tests based on the `maxRetries` key as defined below.
-Default value is `false`.
+This allows you to configure automatic retries for failed test scenarios. When set to true (`retryOnFailure: true`), tests will be retried based on the [`maxRetries`](support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) value specified. The default setting is **false**.
 
-For instance instead of running your whole job again to make sure whether a test scenario actually was failing or having some issue. Using retryOnFailure will allow you to have test retires just in time of a failure to understand whether the test was actually failing or passed in consecutive attempts.
+This feature eliminates the need to rerun the entire job to verify if a test scenario is genuinely failing or encountering an intermittent issue. By enabling `retryOnFailure`, you can promptly retry tests upon failure, helping determine if the test consistently fails or passes in subsequent attempts."
+
 ```yaml
-retryOnFailure: true   
+retryOnFailure: true
 ```
 
 ### `maxRetries`
-MaxRetries is the number of retries that can be done if your scenario failed. This key is used along with retryOnFailure key. If  `retryOnFailure` key is set to true, then this key indicates the number of retries for each scenario.
+The `maxRetries` key defines the number of retries allowed for a failed test scenario. It is used in conjunction with the `retryOnFailure` key. When `retryOnFailure` is set to true, `maxRetries` specifies how many times each test will be retried upon failure.
+
+With `maxRetries` and `retryOnFailure`, you don't need to rerun the entire job to retry failed test scenarios. Instead, your tests are automatically retried immediately after a failure, allowing you to determine if they pass in subsequent attempts.
+
+> You can set a value between 1 and 5 for `maxRetries`, indicating the maximum number of retries for your tests.
+
 ```yaml
 retryOnFailure: true
 maxRetries: 2
 ```
-With maxRetries and retryOnFailure you need not have to rerun your job to retry the test scenarios, instead your test scenarios are re-tried just in time.
-
-The maximum number of times your tests can be retried. You can allocate a numerical value between 1 and 5 for this field. 
-```yaml
-maxRetries: 2
-```
 
 ### `post`
-All actions you need to perform after all test executions, such as printing an output file, uploading a report through **curl** API request. You’ll ideally want to use this parameter to **post** run simple commands like: 
+This parameter is used for executing actions after all your tests are executed, such as printing an output file or uploading a report via a curl API request. It's ideal for performing post-run tasks.
 
 ```yaml
 post:
@@ -403,9 +405,7 @@ post:
 ```
 
 ### `report`
-This allows you to generate a consolidated report across the VMs. This helps you to view the report on the dashboard itself and you can download the report either from the jobs detail page or you can pass –download-report flag in the job triggering command from HyperExecute CLI.
-
-For using this feature, provide `report: true`, and the relative path of the data where it is expected to store and generate the reports after your test execution. You can also define the type and frameworkName of the report inside `partialReports` as shown in below example.
+This allows you to generate a consolidated report across the VMs. To use this feature, provide `report: true`, and the relative path of the data where it is expected to store and generate the reports after your test execution. You can also define the type and frameworkName of the report inside `partialReports` as shown in below example.
 
 ```yaml
 report: true
@@ -414,62 +414,32 @@ partialReports:
  type: html
  frameworkName: extent
 ```
-You can also email the generated report by adding `email` key in partialReports, below `frameworkName`. [Learn more](/support/docs/hyperexecute-email-reports/) 
 
-```yaml
-report: true
-partialReports:
- location: target/surefire-reports/html
- type: html
- frameworkName: extent
- email:
-  to:
-    - johndoe@example.com 
- ```
+It helps you to view the report on the dashboard itself. You can download the report either from the [jobs detail page](/support/docs/hyperexecute-guided-walkthrough/#job-details-page) or you can pass[`-–download-report`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--download-report) flag in the job triggering command from [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/).
 
-> **Note**: Set `defaultReport` as false in the framework if you are using yaml `version 0.2` and you want to generate a report using `partialReports` as shown below.
+:::tip
+
+- 📕 Take a closer look at the [HyperExecute Reports](/support/docs/hyperexecute-reports/)
+- Understand how you can [email the generated report](/support/docs/hyperexecute-email-reports/)
+- How you can generate [different types of report](/support/docs/hyperexecute-job-reports/) based on your requirements
+:::
+
+> **Note**: Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below.
 ```yaml
 framework:
   name: maven/testng
   defaultReports: false
 ```
 
-:::tip
-
-If you want to generate multiple reports of different frameworks.
-
-```yaml
-partialReports:
-  - location: reports/json
-    type: json
-    frameworkName: extent-native
-    email:
-        to:
-          - johndoe@example.com
-  - location: target/surefire-reports
-    type: html
-    frameworkName: testng
-    email:
-        to:
-          - johndoe@example.com
-```
-:::
-
-***
-
 ### `errorCategorizedOnFailureOnly`
 
-The `errorCategorizedOnFailureOnly` flag allows you to control the behavior of error categorization after the job execution based on stage status.
+The `errorCategorizedOnFailureOnly` flag allows you to control the behavior of error categorization after your job is executed based on the status of your stage. By default, error categorization is applied to each stage, regardless of it's status. This means that error categorization is generated for every stage, whether it succeeds or fails.
 
-By default, error categorization is applied to each stage, regardless of the stage's status. This means that error categorization is generated for every stage, regardless of whether it succeeds or fails.
-
-When you enable this flag as mentioned below, the error categorization will only be generated for stages that are not green.
+When you enable this flag as mentioned below, the error categorization will only be generated for stages that are not passed.
 
 ```yaml
 errorCategorizedOnFailureOnly: true
 ```
-
-***
 
 ### `errorCategorizedReport`
 
@@ -484,11 +454,15 @@ errorCategorizedReport:
 
 ### `jobLabel`
 The `jobLabel` YAML key is used to add tags or labels to jobs. This allows you to search your jobs using the labels or tags assigned to them. 
-  -   **Prioritize Your Job Pipeline**:  To prioritize your jobs, you need to add the required priority to the jobLabel key in the YAML file e.g `jobLabel: [ 'high', 'Low','medium']`. With 'high' priority jobs triggered first, followed by medium priority jobs and finally low priority jobs. The values are case insensitive and the default priority is 'medium'.
-  -   You can also use it along with your existing job labels like this: 
+
+#### Prioritize Your Job Pipeline
+
+To prioritize your jobs, you need to add the required priority to the jobLabel key in the YAML file e.g `high`, `low`, and `'medium'`. With `'high'` priority jobs triggered first, followed by `'medium'` priority jobs and finally `'low'` priority jobs. The values are case insensitive and the default priority is 'medium'.
+
+You can also use it along with your existing job labels like this: 
     
 ```yaml
-jobLabel: [ '${DATE} - ${DAY}','Foo','Bar', 'low']
+jobLabel: ['chrome', 'linux', 'low']
 ```
 
 ***
@@ -700,8 +674,6 @@ To overcome this challenge, you can use `differentialUpload` flag, which is used
 
 This flag optimizes codebase uploads by **fetching** only the parts of the codebase that have been **updated** or **newly added**, significantly **reducing upload times**.
 
-### Configuration
-
 - **enabled (boolean):** Set to true to activate the optimization, and false to maintain the default behavior.
 
 - **ttlHours (integer):** Specifies the Time-To-Live (TTL) for the uploaded code. Users can control the duration for which the optimized upload remains active, with valid values ranging from 1 hour to 360 hours.
@@ -883,7 +855,6 @@ DataJsonPaths helps to distribute data/configs over the VMs. In this you can cre
 ]
 ```
 
-### Access the JSON file Data:
 To access the data from the JSON files, there are primarily 2 methods:
 
 #### 1. By reading the JSON file
@@ -1048,8 +1019,7 @@ This is used to manage hyperlink behavior based on test status. Here's a breakdo
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/guided-walkthrough/17.png').default} alt="Image"  className="doc_img"/>
 
-:::info NOTE
-### Dynamic Build Naming via CLI
+:::info Dynamic Build Naming via CLI
 
 If you prefer to set `buildPrefix` and `buildName` values through the command-line interface (CLI), the following commands can be used:
 
@@ -1134,7 +1104,7 @@ Here is the sample code showing how we can use the above mentioned Lambda hooks:
 > **Note**: t1 will denote the time taken by each selenium command between start and end.
 
 ***
-## `matrixEnvPrefix`
+### `matrixEnvPrefix`
 When we run a job in matrix mode, we set the keys with their resolved value as env variables in the scenario being run. The keys are not prefixed and hence, in some cases, we had found out that some variables like “os” can affect your test runs (for example in dotnet build commands). So, if one has an `os` key in `matrix`, it may affect `dotnet build` command if one doesn’t set the matrixEnvPrefix: true in yaml to have the “os” key of matrix available to us as `HE_ENV_os
 
 ### `dynamicAllocation`
