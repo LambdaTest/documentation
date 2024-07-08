@@ -3,7 +3,7 @@ id: junit-on-hyperexecute-grid
 title: Run automation tests on HyperExecute using JUnit
 hide_title: true
 sidebar_label: JUnit
-description: Learn how to run Selenium automation tests on HyperExecute grid using the JUnit framework
+description: Learn how to run Selenium automation tests on HyperExecute using the JUnit framework
 keywords:
   - JUnit
   - JUnit selenium
@@ -14,7 +14,7 @@ keywords:
   - JUnit Java Selenium framework
   - lambdatest JUnit
   - frameworks on lambdatest
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute JUnit testing
   - hyperexecute JUnit testing
   - hyperexecute automation testing
@@ -323,7 +323,7 @@ Happy testing!
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run JUnit tests on HyperExecute Grid
+      Run JUnit tests on HyperExecute
       </span>
     </li>
   </ul>

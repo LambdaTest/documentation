@@ -3,7 +3,7 @@ id: behave-on-hyperexecute-grid
 title: Run automation tests on HyperExecute using Behave
 hide_title: true
 sidebar_label: Behave
-description: Learn how to run Selenium automation tests on HyperExecute grid using the Behave framework
+description: Learn how to run Selenium automation tests on HyperExecute using the Behave framework
 keywords:
   - behave
   - behave selenium
@@ -14,7 +14,7 @@ keywords:
   - python selenium framework
   - lambdatest python
   - framework on lambdatest
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute python testing
   - hyperexecute behave testing
   - hyperexecute automation testing
@@ -314,7 +314,7 @@ The snapshot below shows the videos, logs and other meta data for that specific 
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run Behave tests on HyperExecute Grid
+      Run Behave tests on HyperExecute
       </span>
     </li>
   </ul>

@@ -22,6 +22,34 @@ site_name: LambdaTest
 slug: /
 ---
 
+import AutomationLightIcon from '../assets/images/support/automation-light-icon.svg';
+import AutomationDarkIcon from '../assets/images/support/automation-dark-icon.svg';
+import AppAutomationLightIcon from '../assets/images/support/appAutomation-light-icon.svg';
+import AppAutomationDarkIcon from '../assets/images/support/appAutomation-dark-icon.svg';
+import HyperexecuteLightIcon from '../assets/images/support/hyp-light-icon.svg';
+import HyperexecuteDarkIcon from '../assets/images/support/hyp-dark-icon.svg';
+import AnalyticsLightIcon from '../assets/images/support/analytics-light-icon.svg';
+import AnalyticsDarkIcon from '../assets/images/support/analytics-dark-icon.svg';
+import IntegrationsLightIcon from '../assets/images/support/Integration-light-icon.svg';
+import IntegrationsDarkIcon from '../assets/images/support/Integration-dark-icon.svg';
+import RealtimeLightIcon from '../assets/images/support/Realtime-light-icon.svg';
+import RealtimeDarkIcon from '../assets/images/support/Realtime-dark-icon.svg';
+import TestingLocallyLightIcon from '../assets/images/support/testing-locally-light-icon.svg';
+import TestingLocallyDarkIcon from '../assets/images/support/testing-locally-dark-icon.svg';
+import OtherLightIcon from '../assets/images/support/other-light-icon.svg';
+import OtherDarkIcon from '../assets/images/support/other-dark-icon.svg';
+import SettingsLightIcon from '../assets/images/support/settings-light-icon.svg';
+import SettingsDarkIcon from '../assets/images/support/settings-dark-icon.svg';
+import VisualLightIcon from '../assets/images/support/visual-light-icon.svg';
+import VisualDarkIcon from '../assets/images/support/visual-dark-icon.svg';
+import RealDeviceLightIcon from '../assets/images/support/realDevice-light.svg';
+import RealDeviceDarkIcon from '../assets/images/support/realDevice-dark.svg';
+import TestManagerLightIcon from '../assets/images/support/testManager-light.svg';
+import TestManagerDarkIcon from '../assets/images/support/testManager-dark.svg';
+import AccessibilityDarkIcon from '../assets/images/support/accessibility-dark.svg';
+import AccessibilityLightIcon from '../assets/images/support/accessibility-light.svg';
+
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -46,7 +74,7 @@ import NewTag from '../src/component/newTag';
 <div className="Doc_intro_cta">
 <div className="Doc_intro_cta_text">
 <h1>LambdaTest Support and Knowledge Base</h1>
-<p>Ensure your web-apps work seamlessly on <br /> every desktop and mobile browsers</p>
+<p>Ensure your web-apps work seamlessly on every desktop and mobile browsers</p>
 </div>
 <div className="Doc_intro_cta_image">
 <img  loading="eager" src={require('../assets/images/support/home_light.png').default} alt="Image" width="701" height="576" className="home_light_cta" role="presentation"/>
@@ -60,7 +88,7 @@ import NewTag from '../src/component/newTag';
 
   <div className="home_main">
     <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/automation-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/automation-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Web Automation</h2>
+      <h2 className='homeMain_h2'><AutomationLightIcon className="home_icons home_light_icon" role="presentation"/> <AutomationDarkIcon className="home_icons home_dark_icon" role="presentation"/>Web Automation</h2>
       <div className="home_inners">
         <a href="/support/docs/getting-started-with-lambdatest-automation/"><p className="p_home_inners">Selenium Testing</p></a>
         <a href="/support/docs/getting-started-with-cypress-testing/"><p className="p_home_inners">Cypress Testing</p></a>
@@ -70,7 +98,7 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
    <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/appAutomation-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/appAutomation-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>App Automation</h2> 
+      <h2 className='homeMain_h2'><AppAutomationLightIcon className="home_icons home_light_icon" role="presentation"/> <AppAutomationDarkIcon className="home_icons home_dark_icon" role="presentation"/>App Automation</h2> 
       <div className="home_inners">
         <a href="/support/docs/getting-started-with-appium-testing/"><p className="p_home_inners">Appium Testing</p></a>
         <a href="/support/docs/getting-started-with-espresso-testing/"><p className="p_home_inners">Espresso Testing</p></a>
@@ -79,24 +107,24 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
    <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/hyp-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/hyp-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>HyperExecute</h2>
+      <h2 className='homeMain_h2'><HyperexecuteLightIcon className="home_icons home_light_icon" role="presentation"/> <HyperexecuteDarkIcon className="home_icons home_dark_icon" role="presentation"/>HyperExecute</h2>
       <div className="home_inners">
         <a href="/support/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
         <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
-        <a href="/support/docs/hyperexecute-cli-gui/"><p className="p_home_inners">GUI for CLI &nbsp; <NewTag  value="NEW" bgColor="#ffec02" color="#000" /></p></a>
+        <a href="/support/docs/hyperexecute-cli-gui/"><p className="p_home_inners">GUI for CLI &nbsp; <NewTag  value="NEW" /></p></a>
         <a href="/support/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
     <a href="/support/docs/integration-with-hyperexecute/"><p className="p_home_inners">Integrations</p></a>
      <a href="/support/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
       </div>
     </div>
     <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/analytics-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/analytics-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Insights</h2>
+      <h2 className='homeMain_h2'><AnalyticsLightIcon className="home_icons home_light_icon" role="presentation"/> <AnalyticsDarkIcon className="home_icons home_dark_icon" role="presentation"/>Insights</h2>
       <div className="home_inners">
         <a href="/support/docs/analytics-dashboard-templates/"><p className="p_home_inners">Pre-built Dashboards</p></a>
         <a href="/support/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboards</p></a>
         <a href="/support/docs/analytics-widgets/"><p className="p_home_inners">Widgets</p></a>
-        <a href="/support/docs/analytics-dashboard-copilot/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA" bgColor="#ffec02" color="#000" /></p></a>
+        <a href="/support/docs/analytics-dashboard-copilot/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA" /></p></a>
         <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
         <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Error Logs Insights</p></a>
         <a href="/support/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
@@ -111,7 +139,7 @@ import NewTag from '../src/component/newTag';
 
 <div className="home_main">
    <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/visual-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/visual-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>SmartUI</h2>
+      <h2 className='homeMain_h2'><VisualLightIcon className="home_icons home_light_icon" role="presentation"/> <VisualDarkIcon className="home_icons home_dark_icon" role="presentation"/>SmartUI</h2>
       <div className="home_inners">
         <a href="/support/docs/smart-visual-regression-testing/"><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/smartui-selenium-js-sdk/"><p className="p_home_inners">Explore SDKs</p></a>
@@ -124,17 +152,19 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
-       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Realtime-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Realtime-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Real Time</h2>
+       <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>Real Time</h2>
       <div className="home_inners">
         <a href="/support/docs/real-time-browser-testing/" ><p className="p_home_inners">Desktop Browser Testing</p></a>
         <a href="/support/docs/webview-testing-in-android/"><p className="p_home_inners">Mobile Browser Testing</p></a>
         <a href="/support/docs/live-interactive-mobile-app-testing/"><p className="p_home_inners">Mobile App Testing</p></a>
-         <a href="/support/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>
+        <a href="/support/docs/chrome-os-web-browser-testing/"><p className="p_home_inners">ChromeOS Web Browser Testing</p></a>
+        <a href="/support/docs/chrome-os-app-testing/"><p className="p_home_inners">ChromeOS App Testing</p></a>
+        <a href="/support/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>     
       </div>
     </div>
 
 <div className="home_inners_box">
-       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Realtime-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Realtime-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Real Device</h2>
+       <h2 className='homeMain_h2'><RealDeviceLightIcon className="home_icons home_light_icon" role="presentation"/> <RealDeviceDarkIcon className="home_icons home_dark_icon" role="presentation"/>Real Device</h2>
       <div className="home_inners">
         <a href="/support/docs/app-testing-on-real-devices/" ><p className="p_home_inners">Real Device App Testing</p></a>
       </div>
@@ -146,7 +176,7 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
-       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/testing-locally-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Testing Locally</h2>
+       <h2 className='homeMain_h2'><TestingLocallyLightIcon className="home_icons home_light_icon" role="presentation"/> <TestingLocallyDarkIcon className="home_icons home_dark_icon" role="presentation"/>Testing Locally</h2>
       <div className="home_inners">
         <a href="/support/docs/testing-locally-hosted-pages/"><p className="p_home_inners">Testing Locally Hosted Pages</p></a>
         <a href="/support/docs/lambda-tunnel-modifiers/"><p className="p_home_inners">LambdaTest Tunnel Modifiers</p></a>
@@ -167,7 +197,7 @@ import NewTag from '../src/component/newTag';
 
 <div className="home_main">
  <div className="home_inners_box">
-       <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/test-manager-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/testing-locally-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Test Manager &nbsp; <NewTag  value="NEW" bgColor="#ffec02" color="#000" /></h2>
+       <h2 className='homeMain_h2'><TestManagerLightIcon className="home_icons home_light_icon" role="presentation"/> <TestManagerDarkIcon className="home_icons home_dark_icon" role="presentation"/>Test Manager &nbsp; <NewTag  value="NEW" /></h2>
       <div className="home_inners"> 
         <a href="/support/docs/create-projects/"><p className="p_home_inners">Create Projects</p></a>
         <a href="/support/docs/manual-test-case-creation"><p className="p_home_inners">Manual Test Cases</p></a>
@@ -178,7 +208,7 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/Integration-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/Integration-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Integrations</h2>
+      <h2 className='homeMain_h2'><IntegrationsLightIcon className="home_icons home_light_icon" role="presentation"/> <IntegrationsDarkIcon className="home_icons home_dark_icon" role="presentation"/>Integrations</h2>
       <div className="home_inners">
         <a href="/support/docs/bug-tracking-tools/"><p className="p_home_inners">Bug Tracking</p></a>
         <a href="/support/docs/integrations-with-project-management-tools/"><p className="p_home_inners">Project Management</p></a>
@@ -189,7 +219,7 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Accessibility Testing</h2>
+      <h2 className='homeMain_h2'><AccessibilityLightIcon className="home_icons home_light_icon" role="presentation"/> <AccessibilityDarkIcon className="home_icons home_dark_icon" role="presentation"/>Accessibility Testing</h2>
       <div className="home_inners">
         <a href="/support/docs/accessibility-testing/"><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/accessibility-devtools/"><p className="p_home_inners">Accessibility DevTools</p></a>
@@ -198,7 +228,7 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/settings-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/settings-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Setting and Security</h2>
+      <h2 className='homeMain_h2'><SettingsLightIcon className="home_icons home_light_icon" role="presentation"/> <SettingsDarkIcon className="home_icons home_dark_icon" role="presentation"/>Setting and Security</h2>
       <div className="home_inners">
         <a href="/support/docs/account-management/"><p className="p_home_inners">Account Management</p></a>
         <a href="/support/docs/single-sign-on/"><p className="p_home_inners">Single Sign On</p></a>
@@ -211,7 +241,7 @@ import NewTag from '../src/component/newTag';
 
 <!-- start of fourth section -->
 <div className="home_inners_box">
-      <h2 className='homeMain_h2'><img  loading="eager" src={require('../assets/images/support/other-light-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_light_icon no-zoom" role="presentation"/><img  loading="eager" src={require('../assets/images/support/other-dark-icon.png').default} alt="Image" width="16" height="16" className="home_icons home_dark_icon no-zoom" role="presentation"/>Other Docs</h2>
+      <h2 className='homeMain_h2'><OtherLightIcon className="home_icons home_light_icon" role="presentation"/> <OtherDarkIcon className="home_icons home_dark_icon" role="presentation"/>Other Docs</h2>
       <div className="home_inners">
         <a href="/support/docs/lt-browser/"><p className="p_home_inners">LT Browser</p></a>
         <a href="/support/docs/test-logs/"><p className="p_home_inners">Test Logs</p></a>

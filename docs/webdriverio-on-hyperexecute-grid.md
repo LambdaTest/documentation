@@ -3,7 +3,7 @@ id: webdriverio-on-hyperexecute-grid
 title: Run automation tests on HyperExecute using WebdriverIO
 hide_title: true
 sidebar_label: WebdriverIO
-description: Learn how to run Selenium automation tests on HyperExecute grid using the WebdriverIO framework
+description: Learn how to run Selenium automation tests on HyperExecute using the WebdriverIO framework
 keywords:
   - WebdriverIO
   - WebdriverIO selenium
@@ -14,7 +14,7 @@ keywords:
   - WebdriverIO JavaScript Selenium framework
   - lambdatest WebdriverIO
   - frameworks on lambdatest
-  - hyperexecute grid
+  - hyperexecute
   - hyperexecute WebdriverIO testing
   - hyperexecute WebdriverIO testing
   - hyperexecute automation testing
@@ -309,7 +309,7 @@ Happy testing!
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Run WebdriverIO tests on HyperExecute Grid
+      Run WebdriverIO tests on HyperExecute
       </span>
     </li>
   </ul>

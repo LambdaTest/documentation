@@ -73,6 +73,7 @@ module.exports = {
     prism: {
         additionalLanguages: ['powershell','java','csharp','php','ruby','robotframework'],
       theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
     },
     // algolia: {
     //   apiKey: '21e5be14ef037223a329241ae6ac5678',
@@ -124,6 +125,11 @@ module.exports = {
           activeBasePath: 'faq',
           label: 'FAQ',
           position: 'left',
+        },
+        {
+          type: 'html',
+          position: 'left',
+          value: '<a role="button" tabindex="0" href="https://www.lambdatest.com/testmuconf-2024" target="_blank" class="navbar__item navbar__link">TestMu Conf 2024</a>',
         },
         {
           type: 'html',

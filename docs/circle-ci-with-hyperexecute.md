@@ -1,7 +1,7 @@
 ---
 id: circle-ci-with-hyperexecute
-title: CircleCI Integration
-hide_title: true
+title: CircleCI Integration with Hyperexecute
+hide_title: false
 sidebar_label: CircleCI
 description: HyperExecute integrates with CircleCI to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
@@ -40,8 +40,6 @@ slug: circle-ci-with-hyperexecute/
     }}
 ></script>
 
-# CircleCI Integration with Hyperexecute
-* * *
 CircleCI allows you to build fully automated pipelines from testing to deployment, freeing up your time to focus on the real work of innovation. Using CircleCI, you can automate your entire testing suite for new commits, reducing the possibility of human error, while also automating deploys with orbs.
 
 This document will show you how to integrate CircleCI Pipeline with HyperExecute to greatly shorten your test cycles.

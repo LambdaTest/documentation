@@ -1,7 +1,7 @@
 ---
 id: real-time-testing-troubleshooting
 title: Real Time Testing Troubleshooting
-hide_title: true
+hide_title: false
 sidebar_label: Real Time Testing Troubleshooting
 description: Perform real time live interactive cross browser compatibility testing of your website or web application with LambdaTest.
 keywords:
@@ -45,18 +45,13 @@ slug: real-time-testing-troubleshooting/
     }}
 ></script>
 
-# Real-Time Testing Troubleshooting
-
-***
 Real-Time Testing allows you to perform live-interactive cross browser testing of your website on more than 3000+ real browsers & browser versions running on various operating systems in the cloud. LambdaTest provides you real-time testing experience by virtual machines hosted on our cloud servers.
 
-| [Click Here More Information About Real Time Testing At LambdaTest](/docs/real-time-browser-testing/) |
-| --------------------------------------------- |
+Click here to know more about [Real Time Testing at LambdaTest](/support/docs/real-time-browser-testing/)
 
 We have observed that in specific scenarios, users face issues while connecting to our Selenium Grid. This document will help you troubleshoot such scenarios.
 
 ## Why Real-Time Testing Is Failing?
-***
 
 It might be possible the WebSockets are either blocked on your network or on your local browsers, which are used to access the LambdaTest platform. You can validate if the website is blocked using the below link:
 
@@ -64,8 +59,7 @@ It might be possible the WebSockets are either blocked on your network or on you
 
 In case your website is blocked, we request you to ask your network admin to open up the web sockets for the LambdaTest platform.
 
->
-For better performance of the LambdaTest platform, we recommend using the latest Google Chrome browser version to access the platform.
+> For better performance of the LambdaTest platform, we recommend using the latest Google Chrome browser version to access the platform.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

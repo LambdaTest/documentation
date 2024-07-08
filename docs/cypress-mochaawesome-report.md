@@ -1,7 +1,7 @@
 ---
 id: cypress-mochaawesome-report
 title: Consolidated Mochawesome Report for Cypress on HyperExecute
-hide_title: true
+hide_title: false
 sidebar_label: Cypress Mochawesome Report
 description: Discover how to create MochaAwesome test reports for Cypress framework testing on LambdaTest and how to download these reports from the dashboard
 keywords:
@@ -10,7 +10,7 @@ keywords:
     - hyperexecute cypress testing
     - hyperexecute automation testing
     - hyperexecute cypressv10 testing
-    - hyperexecute grid cypress testing
+    - hyperexecute cypress testing
   
 url: https://www.lambdatest.com/support/docs/cypress-mochaawesome-report/
 site_name: LambdaTest
@@ -39,14 +39,12 @@ slug: cypress-mochaawesome-report/
       })
     }}
 ></script>
-
-# Consolidated Mochawesome Report for Cypress Framework on HyperExecute 
-* * *
 Cypress is an open-source, end-to-end testing framework made especially for contemporary web applications. It enables programmers to create and run tests that mimic user interactions right inside a web browser.
 
 ### Built-in Reporters
 There several pre-defined or built-in reporters and since Cypress is built on top of Mocha, that means any reporter built for Mocha can be used with Cypress as well. Each reporter may present the test results in a different way, suitable for specific needs or preferences. These built-in reporters offer different levels of detail and visualization options, helping developers to understand the test results and identify any potential issues more effectively.
->
+
+:::note info
 Following are some of the built-in reporters:
 - Spec Reporter
 - Dot Matrix Reporter
@@ -54,6 +52,7 @@ Following are some of the built-in reporters:
 - Tap Reporter
 - Landing Strip Reporter
 - List Reporter
+:::
 
 There are many other built-in reporters as well. By default, Cypress uses the `spec` reporter to output information to `STDOUT`
 
