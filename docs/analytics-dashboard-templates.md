@@ -36,7 +36,12 @@ slug: analytics-dashboard-templates/
 
 ---
 
-<img loading="lazy" src={require('../assets/images/analytics/Dashboard-Template.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+import VideoEmbed from '../src/component/videoEmbed';
+
+<VideoEmbed 
+  src="https://share.synthesia.io/embeds/videos/f990e40b-de80-404c-95f9-e446ef8d8ee7" 
+  title="Exploring Pre-Built Templates in Lambdatest Insights"
+/>
 
 ## About the Dashboard templates:
 
@@ -49,6 +54,8 @@ With various templates available for different test analytics purposes, testers 
 ## Pre-Requisites
 
 You should have an account subscribed to [Lambdatest Account](https://accounts.lambdatest.com) and have relevant test data available in the system.
+
+<img loading="lazy" src={require('../assets/images/analytics/Dashboard-Template.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ## How to use it?
 

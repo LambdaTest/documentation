@@ -37,23 +37,17 @@ slug: analytics-allure-api-widgets/
 ---
 
 import NewTag from '../src/component/newTag';
+import VideoEmbed from '../src/component/videoEmbed';
 
-<img
-loading="lazy"
-src={require('../assets/images/analytics/api-test-report.webp').default}
-alt="cmd"
-width="800"
-height="400"
-className="doc_img"
-/>
-
-:::info
-The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are available for limited users only. If you wish to try them out, please reach out to our [24/7 customer support](mailto:support@lambdatest.com).
-:::
 
 ## Understanding The Allure Test Insights Widget
 
 The `Allure Test Insights` module helps you to get an overview of the test execution results using the Allure. This widget provides insights into the test execution results, test status, and test duration.
+
+<VideoEmbed 
+  src="https://share.synthesia.io/embeds/videos/d85c33ca-fd75-47cb-b9d6-77d8071449b5" 
+  title="Integrate Allure Test Insights with HyperExecute"
+/>
 
 ## How To Use Allure Test Insights?
 
@@ -86,6 +80,15 @@ The `Allure Test Insights` widget provides the following key insights:
 - **Test Method**: The method in which the test cases were executed using the Allure report.
 - **Job Labels**: The job labels associated with the test cases executed using the Allure report.
 - **Test History**: The history of the test cases executed using the Allure report.
+
+<img
+loading="lazy"
+src={require('../assets/images/analytics/api-test-report.webp').default}
+alt="cmd"
+width="800"
+height="400"
+className="doc_img"
+/>
 
 ## Allure Test Trends
 

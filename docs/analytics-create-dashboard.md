@@ -35,21 +35,32 @@ slug: analytics-create-dashboard/
 ></script>
 
 ---
+import VideoEmbed from '../src/component/videoEmbed';
 
-### Pre-Requisites to use Lambdatest Analytics
+
+### Using Custom Dashboards
+
+Add widgets of multiple products and various insights to your dashboard. You can create a custom dashboard with the widgets of your choice. You can add widgets of the same type multiple times and also edit the layout of the dashboard according to your configuration.
+
+<VideoEmbed 
+  src="https://share.synthesia.io/embeds/videos/b94567c6-a454-4b85-9d19-46448ccb0e77" 
+  title="Create Customed Dashboard using Lambdatest Analytics"
+/>
+
+### Pre-Requisites to use Lambdatest Insights
 
 The following are requirements:
 
 - Should be logged in to the [Lambdatest application](https://accounts.lambdatest.com/login) using your credentials. If account is not created, please create an new account [here](https://accounts.lambdatest.com/register).
 - Have executed any tests on the Lambdatest Cloud Platform. _(Optional)_
 
-### Step 1: Navigate to Lambdatest Analytics
+### Step 1: Navigate to Lambdatest Insights
 
-Once, logged in to the application, please navigate to https://analytics.lambdatest.com/ or you can select **Analytics** from the sidebar navigation as well.
+Once, logged in to the application, please navigate to https://analytics.lambdatest.com/ or you can select **Insights** from the sidebar navigation as well.
 
 ### Step 2: Creating the dashboard
 
-Now, you can select the available options to **create the dashboard**. Once, selected you will be able to select the required **widgets** according to the choice of your product for which you want to create the dashboard for.
+Now, you can select the available options to **create new**. Once, selected you will be able to select the required **widgets** according to the choice of your product for which you want to create the dashboard for.
 
 <img loading="lazy" src={require('../assets/images/analytics/On-Boarding.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
