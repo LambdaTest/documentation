@@ -57,7 +57,7 @@ Provides programmatic access to manipulate the emulated ChromeOS device's state 
 </p>
 
 ## App Controls
-Offers programmatic control over installed apps within the emulator (e.g., install new app, kill the exisiting app, or uninstall the app).
+Offers programmatic control over installed apps within the emulator (e.g., install new app, kill the existing app, or uninstall the app).
 
 <p align="center">
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/app-control.png').default} style={{ height: '350px' }} className="doc_img"/>
@@ -78,7 +78,7 @@ Records a video of user interactions within the emulator, enabling detailed bug 
 </p>
 
 ## Mark as Bug
-Facilitates efficient bug reporting by capturing a screenshot, optionally annotating it, and reporting it via your preffered integrated [project management tool](/support/docs/integrations-with-project-management-tools/).
+Facilitates efficient bug reporting by capturing a screenshot, optionally annotating it, and reporting it via your preferred integrated [project management tool](/support/docs/integrations-with-project-management-tools/).
 
 <p align="center">
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/mark-bug.gif').default} style={{ height: '350px' }} className="doc_img"/>
