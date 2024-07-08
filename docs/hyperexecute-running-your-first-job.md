@@ -14,6 +14,11 @@ site_name: LambdaTest
 slug: hyperexecute-running-your-first-job/
 ---
 
+import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -103,14 +108,15 @@ We will be taking care of everything one by one, just follow the steps given bel
 
 **Step 8:** Once your Job is running, you can click on **View Test Results** to navigate to HyperExecute Dashboard where you can see the job getting executed along with the test results.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/9.png').default} alt="Image"  className="doc_img"/>
-
 :::note
-The generic command required to initiate test execution is given below. You will need to insert the [Username, Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/) and name of your YAML file in place of the `<your_username>`, `<your_acess_key>`  and `<your_yaml_file_name>` before running this command. (Skip if you already used the command from Step 6. )
+The generic command required to initiate test execution is given below. You will need to insert the name of your YAML file in place of the `YOUR_YAML_FILE` before running this command. (Skip if you already used the command from Step 6. )
 
-    ```bash
-    ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>"
-    ```
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`./hyperexecute --user="${ YOUR_LAMBDATEST_USERNAME()}" --key "${ YOUR_LAMBDATEST_ACCESS_KEY()}" --config "YOUR_YAML_FILE" `}
+    </CodeBlock>
+  </div>
+
 :::tip
 In case of MAC, if you get a permission denied warning while executing CLI, simply run `chmod u+x ./hyperexecute` to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General** tab.
 :::
