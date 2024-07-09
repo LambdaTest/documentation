@@ -58,26 +58,27 @@ For enabling auto-test splitting, set the `autosplit` key to *true*  in the Hype
 autosplit: true
 ```
 
-Along with that, you need to provide `testDiscovery` and `testRunnerCommand` parameters as well.
+Along with that, you need to provide [`testDiscovery`](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) and [`testRunnerCommand`](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) flags in your YAML file as well.
 
 ### Configuration Parameters
 
-#### 1. `testDiscovery` Parameter
-- It is used to list down all the values to be distributed. HyperExecute will execute the **testDiscovery** command verbatim and expects distinct values to be on separate lines. It can be as simple as a list of files on different lines.
-- This can be used later to split tests over files, modules, or any level supported by your language and framework.
-- It is used for locating/discovering the tests that are a part of the project. You can use the combination of *grep*, *awk*, *sed*, or any valid command to locate the tests that you intend to run. 
-- For NodeJS, usually at file level, for Python at class level, in Java  at class and module level. For Cucumber based frameworks at scenario level or feature level or at tag level. 
+#### 1. `concurrency`
+The `concurrency`  key indicates the total number of concurrent sessions that can run in parallel. With both of these commands (`testDiscovery` and `testRunnerCommand`), HyperExecute intelligently distributes tests over multiple virtual machines as specified by the `concurrency` directive in the YAML file.
 
-#### 2. `testRunnerCommand` Parameter
-- It is used to run a single item from the **testDiscovery**. You need to add *$test* in the testRunnerCommand for interpolating one of the values from the testDiscovery.
+For example, assume that the total number of test scenarios [discovered via `testDiscovery`] are 27 and `concurrency` is set to 7. In this case, HyperExecute would allocate 7 nodes for running the 27 tests in parallel.
 
-- It tells the system how to run a single test entity in isolation. This entity could be a file, module, feature or scenario. Test runner command will run over each of the values extracted from the testDiscovery command.
+``` yaml
+concurrency: 7
+```
 
-### Sample Commands
+#### 2. `testDiscovery`
+- It is used to list down all the values to be distributed. HyperExecute will execute the **`testDiscovery`** command verbatim and expects distinct values to be on separate lines. It can be as simple as a list of files on different lines.
+- This can be used later to split tests over files, modules, or any level supported by your [language and framework](/support/docs/hyperexecute-supported-languages-and-frameworks/).
+- It is used for locating/discovering the tests that are a part of the project. You can use the combination of *grep*, **`awk`**, **`sed`**, or any valid command to locate the tests that you intend to run. For NodeJS, usually at file level, for Python at class level, in Java  at class and module level. For Cucumber based frameworks at scenario level or feature level or at tag level. 
 
 A few samples are given below:
 
-```bash
+```yaml
 # The following command (or value) when assigned to testDiscoverer key searches for the scenarios by matching the string Scenario [or Scenario Outline] in the .feature  files located in the *src* directory of the project.
 testDiscovery:
   type: raw
@@ -85,12 +86,16 @@ testDiscovery:
   command: grep -nri 'Scenario:\^|Scenario Outline:' src -ir --include=\*.feature |  awk '{print $1}' | sed 's/\.\///g' | sed 's/\(.*\):/\1 /'
 ```
 
-```bash
+```yaml
 testDiscovery:
   type: raw
   mode: dynamic
   command: grep 'class name' testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
 ```
+
+#### 3. `testRunnerCommand`
+- It is used to run a single item from the **`testDiscovery`**. You need to add **`$test`** in the `testRunnerCommand` for interpolating one of the values from the `testDiscovery`.
+- It tells the system how to run a single test entity in isolation. This entity could be a file, module, feature or scenario. Test runner command will run over each of the values extracted from the `testDiscovery` command.
 
 ## Advanced Concepts
 
@@ -114,28 +119,6 @@ On subsequent runs, HyperExecute might prioritize the failing tests from the pre
 :::important info
 Automatic reordering is a behind-the-scenes feature that optimizes test execution. You don't need to specifically configure it; it might happen automatically as part of the autosplit process. It's like a hidden perk that can significantly improve your testing experience.
 :::
-
-### Concurrency Control
-
-The `concurrency`  key indicates the total number of concurrent sessions that can run in parallel. With both of these commands (**testDiscovery** and **testRunnerCommand**), HyperExecute intelligently distributes tests over multiple virtual machines as specified by the `concurrency` directive in the YAML file. Autosplit mode provides fine grain control over the test distribution.
-
-For example, assume that the total number of test scenarios [discovered via `testDiscovery`] are 27 and `concurrency` is set to 7. In this case, HyperExecute would allocate 7 nodes for running the 27 tests in parallel.
-
-``` yaml
-concurrency: 7
-```
-
-The Test Execution Tasks [1..7] run in parallel whereas tests within each Task, run in a serial manner. Considering the above test scenario, this is how the tests would be executed on HyperExecute:
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/autosplit/autosplit_explain.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
-
-* Test Executor - 1: 4 tests (running in a sequence)
-* Test Executor - 2: 4 tests (running in a sequence)
-* Test Executor - 3: 4 tests (running in a sequence)
-* Test Executor - 4: 4 tests (running in a sequence)
-* Test Executor - 5: 4 tests (running in a sequence)
-* Test Executor - 6: 4 tests (running in a sequence)
-* Test Executor - 7: 3 tests (running in a sequence)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

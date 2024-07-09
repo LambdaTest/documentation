@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-failfast
-title: FailFast Feature
-hide_title: true
+title: FailFast
+hide_title: false
 sidebar_label: FailFast
 description: Learn more about how to use HyperExecute's FailFast feature.
 keywords:
@@ -37,26 +37,23 @@ slug: hyperexecute-failfast/
       })
     }}
 ></script>
-
-# FailFast 
-
 HyperExecute's FailFast feature lets you to optimize your testing regimen by automatically aborting jobs that surpass a specified number of consecutive failures. This intelligent feature ensures that you receive prompt feedback and maintain a well-orchestrated testing process.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/failfast/failfast.png').default} alt="Image"  className="doc_img" />
 
-### `maxNumberOfTests` Flag
+## `maxNumberOfTests`
 
-The  **maxNumberOfTests**  flag serves as a parameter that determines the number of consecutive tests that need to be failed before the job is aborted automatically.
+The  `maxNumberOfTests`  flag serves as a parameter that determines the number of consecutive tests that need to be failed before the job is aborted automatically.
 
-For instance, if you set the **maxNumberOfTests** flag to 4, then your job will be aborted after four consecutive test failures. However, if three of your tests fail and the fourth one is passed, then the FailFast feature will reset and look for the next four consecutive tests that are failing.
+For instance, if you set the `maxNumberOfTests` flag to 4, then your job will be aborted after four consecutive test failures. However, if three of your tests fail and the fourth one is passed, then the FailFast feature will reset and look for the next four consecutive tests that are failing.
 
 This allows you to speed up your test execution process and provide you with faster feedback.
 
-### Implementing FailFast
+## Implementing FailFast
 
 To leverage the **FailFast** feature, simply incorporate the following command in your HyperExecute YAML file:
 
-```bash
+```yaml
 failFast: 
     maxNumberOfTests: 2
 ```
