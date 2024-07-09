@@ -38,8 +38,8 @@ slug: hyperexecute-snooper/
 ></script>
 A `snooper` is a command that can be used to discover the list of Feature file scenarios that would be further executed using the value passed in the `testRunnerCommand`. The `snooper` command takes two arguments:
 
-- **`featureFilePaths`**: This argument specifies the path to the Feature files that you want to discover.
-- **`frameWork`**: This argument specifies the framework that you are using for your tests.
+- `featureFilePaths`: This argument specifies the path to the Feature files that you want to discover.
+- `frameWork`: This argument specifies the framework that you are using for your tests.
 
 For example, the following command will discover the list of Feature file scenarios in the features folder that are using the Java framework:
 
@@ -49,44 +49,21 @@ snooper --featureFilePaths=features/ --frameWork=java
 
 ## How to implement Snooper on HyperExecute
 
+> `snooper` command works only with HyperExecute YAML 0.1
+
 To implement the `snooper` command on HyperExecute, we simply need to update our YAML file's `testDiscovery` and `testRunnerCommand` parameters.
-***
-
-### Pre-requisite
-
-- The project must be integrated with the LambdaTest grid.
-
-- Download or Clone the Sample Project.
-
-:::tip Sample repo
-All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/cucumber-selenium-hyperexecute-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-:::
-
- > Follow the steps [here](https://www.lambdatest.com/support/docs/cucumber-on-hyperexecute-grid/) to implement the above Sample Project Test on HyperExecute using Cucumber.
-
-### Downloading the HyperExecute Snooper CLI
-
-You can download the `HyperExecute CLI` for your OS from the links given below :
-
-| Platform | Download Link |
-| ---------| --------------------------- |
-| Windows | https://downloads.lambdatest.com/hyperexecute/windows/snooper.exe |
-| macOS | https://downloads.lambdatest.com/hyperexecute/darwin/snooper |
-| macOS ARM64 | https://downloads.lambdatest.com/hyperexecute/darwin/arm64/snooper |
-| Linux | https://downloads.lambdatest.com/hyperexecute/linux/snooper |
 
 ### `testDiscovery`
-***
-This command helps to discover all the test scenarios within the project.
-
-It offers two methods to implement it:
+This command helps to discover all the test scenarios within the project. It offers two methods to implement it:
 
 #### Method 1: Discovering test cases on Hyperexecute machines:
 
-In this method, tests are discovered on the user's machine. The user needs to configure the appropriate parameters, and the command will be executed automatically with the appropriate parameters.
+- `featureFilePaths`: Path where all feature files are located
+- `frameWork`: Framework of Testing
+- `specificTags`: (optional) Tags that need to be tested
 
 ```yaml
- testDiscovery:
+testDiscovery:
   type: automatic
   mode: static
   args:
@@ -95,15 +72,9 @@ In this method, tests are discovered on the user's machine. The user needs to co
     specificTags: [""]
 ```
 
-The user needs to configure the following parameters as per their requirements:
+#### Method 2: Discovering test cases on Local machines
 
-- **`featureFilePaths`:** Path where all feature files are located
-- **`frameWork`:** Framework of Testing
-- **`specificTags`:** (optional) Tags that need to be tested
-
-#### Method 2: Discovering test cases on Local machines:
-
-In this method, tests are discovered on the user's machine. The user needs to provide a `command` and appropriate tags that will be executed.
+- `command`: It is a mandatory parameter in the yaml file and would throw an error if not found by the compiler.
 
 ```yaml
 testDiscovery: 
@@ -111,11 +82,6 @@ testDiscovery:
   mode: static
   command: snooper  --targetOs=win --featureFilePaths=src/test/java/Features/ --frameWork=java --specificTags=@tag1,@tag2
 ```
-
-The user needs to configure the following parameters as per their requirements:
-
-- **`command`:** It is a mandatory parameter in the yaml file and would throw an error if not found by the compiler.
-
 
 ### `testRunnerCommand`
 
@@ -129,7 +95,7 @@ There are two methods to execute the runner command for cucumber:
 testRunnerCommand: mvn test -Dcucumber.options="$test"
 ```
 
-- **`-Dcucumber.options`:** This parameter is used to specify the feature that will help execute on VMs.
+- `-Dcucumber.options`: This parameter is used to specify the feature that will help execute on VMs.
 
 #### Method 2: Using `features` flag
 
@@ -139,7 +105,7 @@ testRunnerCommand: mvn test -Dcucumber.options="$test"
 testRunnerCommand: mvn test -Dcucumber.features="$test"
 ```
 
-- **`-Dcucumber.features`:** This parameter is used to execute one single feature file.
+- `-Dcucumber.features`: This parameter is used to execute one single feature file.
 
 ## Debug
 
@@ -177,44 +143,33 @@ ignoredTags : ["@tag3","@tag2"]
 Here is a sample HyperExecute file with cucumber 7 and above to discover all the feature files without any tags.
 
 ```yaml
-version: 0.1
-globalTimeout: 90
-testSuiteTimeout: 90
-testSuiteStep: 90
-
+---
+version: "0.1"
 runson: win
-
 autosplit: true
+
+concurrency: 1
+
 retryOnFailure: true
-
 maxRetries: 1
-concurrency: 4
 
-env:
-  CACHE_DIR: m2_cache_dir
-
-cacheKey: '{{ checksum "pom.xml" }}'
+cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
-  - ${CACHE_DIR}
+  - node_modules
 
 pre:
-  - mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install
-
-mergeArtifacts: true
-
-uploadArtefacts:
-  - name: XmlReports
-    path:
-      - target/surefire-reports/testng-results.xml
-  - name: JsonReports
-    path:
-      - target/cucumber-reports/CucumberTestReport.json
+  - npm install
 
 testDiscovery:
   type: automatic
-  mode: static
+  mode: dynamic
   args:
-    featureFilePaths: src/test/java/Features
-    frameWork: java
-testRunnerCommand: mvn test -Dcucumber.features="$test"
+    featureFilePaths: features/sample_website
+    frameWork: javascript
+    specificTags: [ "@test" ]
+#  command: .hyperexecute/snooper  --targetOs=win --featureFilePaths=features/onepass_website --frameWork=javascript --specificTags=@test | sed 's/:.*//' | uniq
+
+testRunnerCommand: npm run execute-tests $test
+
+jobLabel: [snooper, autosplit]
 ```

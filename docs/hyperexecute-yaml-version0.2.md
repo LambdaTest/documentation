@@ -174,32 +174,14 @@ framework:
 ```yaml
 ---
 version: 0.2
-globalTimeout: 150
-testSuiteTimeout: 150
-testSuiteStep: 150
-
 runson: win
 
 autosplit: true
-retryOnFailure: true
-
-maxRetries: 1
-concurrency: 5
+concurrency: 2
 
 pre:
   # Skip execution of the tests in the pre step
   - mvn dependency:resolve
-
-post:
-  - ls target/surefire-reports/
-
-mergeArtifacts: true
-
-
-uploadArtefacts:
- - name: ExecutionSnapshots
-   path:
-    - target/surefire-reports/html/**
 
 framework:
   name: maven/testng
@@ -212,6 +194,18 @@ framework:
   defaultReports: false
   args:
     region: us
+
+retryOnFailure: true
+maxRetries: 1
+
+post:
+  - ls target/surefire-reports/
+
+mergeArtifacts: true
+uploadArtefacts:
+ - name: ExecutionSnapshots
+   path:
+    - target/surefire-reports/html/**
 ```
 
 <nav aria-label="breadcrumbs">

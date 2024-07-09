@@ -55,11 +55,6 @@ module.exports = {
           },
           {
             type: "doc",
-            label: "HyperExecute Yaml Version 0.2",
-            id: "hyperexecute-yaml-version0.2",
-          },
-          {
-            type: "doc",
             label: "Using Snooper on HyperExecute",
             id: "hyperexecute-snooper",
           },
@@ -67,6 +62,11 @@ module.exports = {
             type: "doc",
             label: "Inherit Your YAML Configurations",
             id: "hyperexecute-inherit-config",
+          },
+          {
+            type: "doc",
+            label: "HyperExecute Yaml Version 0.2",
+            id: "hyperexecute-yaml-version0.2",
           },
         ],
       },

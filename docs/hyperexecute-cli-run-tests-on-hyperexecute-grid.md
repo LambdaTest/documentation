@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-cli-run-tests-on-hyperexecute-grid
 title: HyperExecute CLI - Run test on HyperExecute
-hide_title: true
+hide_title: false
 sidebar_label: HyperExecute CLI - Run test on HyperExecute
 description: Explains about HyperExecute CLI
 keywords:
@@ -23,6 +23,11 @@ url: https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyper
 site_name: LambdaTest
 slug: hyperexecute-cli-run-tests-on-hyperexecute-grid/
 ---
+
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -47,31 +52,23 @@ slug: hyperexecute-cli-run-tests-on-hyperexecute-grid/
       })
     }}
 ></script>
-
-
-# HyperExecute CLI 
-
 `HyperExecute CLI` is a command line interface that is required to run tests on HyperExecute. This page outlines all you need to know about the CLI and also explains about the different flags & functionalities supported by the HyperExecute CLI.
 
-***
-
-### Downloading the HyperExecute CLI
+## Download the HyperExecute CLI
 
 You can download the `HyperExecute CLI` for your OS from the links given below :
 
 | Platform | Download Link |
 | ---------| --------------------------- |
+| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 | Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
-| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
 ## HyperExecute CLI Supported Flags 
 
 HyperExecute CLI provides different command-line flags that let you control the HyperExecute platform as per your customised requirements. You can run `hyperexecute.exe --help` on your terminal to explore the different flags.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/cli/cli-help.png').default} alt="Image"  className="doc_img"/>
-
-***
 
 The various flags that are supported are listed below. 
 
@@ -288,15 +285,22 @@ The secrets file contains highly sensitive information and must be strictly excl
 
 ***
 
-## Running HyperExecute CLI 
+## Trigger your Test from HyperExecute CLI 
 
-In order to trigger your test on Hyperexecute, just need to use the following command. Please replace the placeholder values with your details. 
+In order to trigger your job on HyperExecute, execute the following command in your terminal. You will need to insert the name of your YAML file in place of the `YOUR_YAML_FILE` before running this command.
 
-``` bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
-```
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config YOUR_YAML_FILE `}
+    </CodeBlock>
+  </div>
 
-> **Note**: If you're running on a minimal alpine image, please make sure to install essential linux dependencies for HyperExecute CLI to work. 
+:::tip
+In case of macOS, if you get a permission denied warning while executing CLI, simply run `chmod u+x ./hyperexecute` to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General** tab.
+:::
+
+:::note
+If you're running on a minimal alpine image, please make sure to install essential linux dependencies for HyperExecute CLI to work. 
 (An example with our sample repo has been given below):
   ``` bash
   apk add libc6-compat git bash
@@ -306,44 +310,35 @@ In order to trigger your test on Hyperexecute, just need to use the following co
   chmod +x hyperexecute
   ./hyperexecute --user <lt_user> --key <lt_access_key> --config yaml/win/behave_hyperexecute_autosplit_sample.yaml
   ```
-
-*** 
-
-### `.gitignore` & `.hyperexecuteignore` 
-
-The HyperExecute CLI binary ignores all the files listed in the `.gitignore` file during the testing process. 
-
-We also provide a similar functionality using te `.hyperexecuteignore`. [Learn More](/support/docs/hyperexecute-gitignore/)
-
-> Feel free to go over the [frequently asked questions](/support/docs/hyperexecute-cli-faqs/) about the HyperExecute CLI.
+:::
 
 ## Running HyperExecute CLI in Quiet Mode
 
-Each time a job is run in Hyperexecute, a large number of logs are produced. These logs are sometimes beneficial for thorough debugging and analysis, it occasionally overwhelms Continuous Integration (CI) systems with an excessive amount of logs, especially when handling a large number of test executions. Hyperexecute provides a **"Quiet mode"** as a solution to this issue and to give users more control over the logging output. By only displaying significant updates during the test execution, this enables you to run tests with less logs.
+Each time a job is run in Hyperexecute, a large number of logs are produced. These logs are sometimes beneficial for thorough debugging and analysis, it occasionally overwhelms Continuous Integration (CI) systems with an excessive amount of logs, especially when handling a large number of test executions.
 
-### Enabling Quiet Mode using CLI
-First, you need to paas these commands in CLI or terminal to enable the **Quiet Mode** and then trigger the command to execute your job.
+Hyperexecute provides a **"Quiet mode"** as a solution to this issue and to give users more control over the logging output. By only displaying significant updates during the test execution, this enables you to run tests with less logs.
 
-For macOS / Linux:
+To enable the **Quiet Mode**, you need to paas these commands in your terminal and then trigger the command to execute your job.
 
-```bash
-env | grep CI
-# Used to check if the CI variable is set to true or not
+<Tabs className="docs__val">
+<TabItem value="bash" label="Linux / macOS" default>
+  ```yaml
+  env | grep CI # Used to check if the CI variable is set to true or not
+  export CI=true # If it's not set to true, then use this command to set as true
+  ```
+</TabItem>
 
-export CI=true
-# If it's not set to true, then use this command to set as true
-```
-
-For Windows:
-
-```bash
-env | grep CI
-# Used to check if the CI variable is set to true or not
-
-set CI=true
-# If it's not set to true, then use this command to set as true
-```
+<TabItem value="powershell" label="Windows" default>
+  ```yaml
+  env | grep CI # Used to check if the CI variable is set to true or not
+  set CI=true # If it's not set to true, then use this command to set as true
+  ```
+</TabItem>
+</Tabs>
 
 #### Output
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/cli/cli-execute.png').default} alt="Image" width="1350" height="619" className="doc_img"/>
+<br /><br />
+> 📕 Use the HyperExecute CLI's [Frequently Asked Questions](/support/docs/hyperexecute-cli-faqs/) to gain more knowledge about it.
+
