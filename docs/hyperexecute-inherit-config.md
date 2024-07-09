@@ -41,15 +41,13 @@ YAML inheritance in HyperExecute allows you to reuse common configuration settin
 
 For example, you can create a base YAML file with common settings like **browsers**, **OS versions**, and **devices**, and then inherit from it in other YAML files for different environments or test types. This **reduces boilerplate code and errors** while making it easy to switch between environments and manage complex test execution configurations.
 
-### Prerequisites
+## Prerequisites
 
 -   You must inherit a YAML file of the same version as your original file.
-    
 -   The mode of execution, i.e. Matrix, AutoSplit, or Hybrid, must remain the same in both of the YAML files.
-    
 -   The files that you want to inherit cannot be cyclically dependent. If you want to inherit **A.yaml** in **B.yaml**, then **A.yaml** cannot inherit **B.yaml**.
 
-### How do you use the Inheritance feature?
+## How do you use the Inheritance feature?
 
 You can use the inheritance feature by entering the following flag in your YAML file:
 
@@ -69,22 +67,22 @@ base:
 
 Go through the example attached below to understand how the resultant YAML will function if you inherit a base YAML in your parent YAML file. 
 
-**Parent YAML**:
+### Parent YAML
+
 ```yaml
 ---
 version: 0.1
-testSuiteTimeout: 10
-testSuiteStep: 8
+runson: win
 
 base:
   yamls:
     - ./level1/base1.yaml
 
-runson: win
 autosplit: true
+concurrency: 2
+
 retryOnFailure: false
 maxRetries: 5
-concurrency: 2
 
 env:
   CACHE_DIR: m2_cache_dir
@@ -96,6 +94,12 @@ preDirectives:
     - echo yaml/level0/level1/base1.yaml
     - mvn dependency:resolve
 
+testDiscovery:
+  type: raw
+  command: grep 'test name' xml/testng_win.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+
+testRunnerCommand: mvn test `-Dplatname=win `-Dmaven.repo.local=./.m2 dependency:resolve `-DselectedTests=$test
+
 postDirectives:
   commands:
     - ls
@@ -108,26 +112,20 @@ uploadArtefacts:
    path:
     - target/surefire-reports/html/**
 
-testDiscovery:
-  type: raw
-  command: grep 'test name' xml/testng_win.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
-
-testRunnerCommand: mvn test `-Dplatname=win `-Dmaven.repo.local=./.m2 dependency:resolve `-DselectedTests=$test
+jobLabel: ['parent']
 ```
 
-**Base YAML**: 
+### Base YAML
 ```yaml
 ---
 version: 0.1
-testSuiteTimeout: 10
-testSuiteStep: 0
-
-
 runson: mac
+
 autosplit: true
+concurrency: 1
+
 retryOnFailure: true
 maxRetries: 5
-concurrency: 1
 
 env:
   CACHE_DIR: m2_cache_dir
@@ -136,18 +134,6 @@ preDirectives:
   commands:
     - pwd
     - mvn dependency:resolve
-
-postDirectives:
-  commands:
-    - ls
-    - pwd
-
-mergeArtifacts: false
-taskIdentifierInNonConflictingArtefacts: true
-uploadArtefacts:
- - name: ExecutionSnapshots
-   path:
-    - target/surefire-reports/html/**
 
 testDiscovery:
   type: raw
@@ -155,32 +141,6 @@ testDiscovery:
 
 testRunnerCommand: echo test
 
-jobLabel: ['base1']
-```
-
-
-**Resultant YAML**: 
-```yaml
----
-version: 0.1
-testSuiteTimeout: 10
-testSuiteStep: 8
-
-
-runson: mac
-autosplit: true
-retryOnFailure: true
-maxRetries: 5
-concurrency: 1
-
-env:
-  CACHE_DIR: m2_cache_dir
-
-preDirectives:
-  commands:
-    - pwd
-    - mvn dependency:resolve
-
 postDirectives:
   commands:
     - ls
@@ -193,12 +153,47 @@ uploadArtefacts:
    path:
     - target/surefire-reports/html/**
 
+jobLabel: ['base1']
+```
+
+### Resultant YAML
+```yaml
+---
+version: 0.1
+runson: mac
+
+autosplit: true
+concurrency: 1
+
+retryOnFailure: true
+maxRetries: 5
+
+env:
+  CACHE_DIR: m2_cache_dir
+
+preDirectives:
+  commands:
+    - pwd
+    - mvn dependency:resolve
+
 testDiscovery:
   type: raw
   mode: static
   command: grep 'test name' xml/testng_win.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
 
 testRunnerCommand: mvn test `-Dplatname=win `-Dmaven.repo.local=./.m2 dependency:resolve `-DselectedTests=$test
+
+postDirectives:
+  commands:
+    - ls
+    - pwd
+
+mergeArtifacts: false
+taskIdentifierInNonConflictingArtefacts: true
+uploadArtefacts:
+ - name: ExecutionSnapshots
+   path:
+    - target/surefire-reports/html/**
 
 jobLabel: ['base1']
 
