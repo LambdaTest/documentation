@@ -1,7 +1,7 @@
 ---
 id: key-features-of-hyperexecute
 title: Key Features of HyperExecute
-hide_title: true
+hide_title: false
 sidebar_label: Key Features of HyperExecute
 description: Various key features of HyperExecute is mentioned in this document
 keywords:
@@ -42,15 +42,7 @@ slug: key-features-of-hyperexecute/
     }}
 ></script>
 
-
-
-# Key Features Of HyperExecute
-
-HyperExecute provides you with the tools that you need to run your tests at the fastest speeds possible.
-
-## Industry Leading Features
-
-In addition to all of the core features that LambdaTest cloud provides to your tests (for example: detailed logs, smart CI features, network insights, video recording, access to browsers & platforms on the cloud), HyperExecute takes a step forward to improve your experience. It supports all [programming languages and major test automation frameworks](/support/docs/hyperexecute-supported-languages-and-frameworks/).
+HyperExecute provides you with the tools that you need to run your tests at the fastest speeds possible. In addition to all of the core features that LambdaTest cloud provides to your tests (for example: detailed logs, smart CI features, network insights, video recording, access to browsers & platforms on the cloud), HyperExecute takes a step forward to improve your experience. It supports all [programming languages and major test automation frameworks](/support/docs/hyperexecute-supported-languages-and-frameworks/).
 
 >Check out [LambdaTest HyperExecute on Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/lambdatestinc1584019832435.hyper_execute?exp=ubp8&tab=Overview)
     
@@ -140,49 +132,54 @@ In addition to all of the core features that LambdaTest cloud provides to your t
     <p>Mute scenarios that have been continuously failing for a pre-defined number of times, ignore expected failures, achieve better runtimes and faster feedback on the executed Jobs.</p>
   </div>
   </a>  
-</div>
 
-<!-- 
+  <a href="/support/docs/hyperexecute-test-muting/">
   <div className="support_inners">
-    <h3>Dependency Caching</h3>
-    <p>HyperExecute caches all environments and framework-level dependencies to minimise the time it takes for configuration and installation steps.</p>
+    <h3>Task Metrics</h3>
+    <p>Track your CPU, and Memory utilization of the virtual machines for a seamless user experience.</p>
   </div>
-  <div className="support_inners">
-    <h3>Customizable Test Environments</h3>
-    <p>Customize your test execution environment completely and add the dependencies to your runners using pre-scripts and post-scripts.</p>
-  </div> -->
-  
-
+  </a>  
+</div>
 
 ## Availability
 
-HyperExecute is available on Windows, Linux and Mac. You can use HyperExecute in more than 60 regions that are supported by Microsoft Azure. 
+HyperExecute is available on Windows, Linux and Mac. You can use HyperExecute in more than 60 regions that are supported by Microsoft Azure.
 
 ## Integrations
+To ensure that your testing environment can be optimised, HyperExecute provides you with multiple [Integrations](/support/docs/integration-with-hyperexecute/), such as:
 
-To ensure that your testing environment can be optimised, HyperExecute provides you with multiple Integrations, such as:
+<div className="support_main">
+  <a href = "/support/docs/hyperexecute-integration-with-ci-cd-tools/">
+  <div className="support_inners">
+    <h3>Integrations with CI/CD Tool</h3>
+    <p>Explore a range of CI/CD tool integrations to optimize your testing pipeline.</p>
+  </div>
+  </a>
 
-- [**Integrations with CI/CD Tool :**](/support/docs/hyperexecute-integration-with-ci-cd-tools/) Explore a range of CI/CD tool integrations to optimize your testing pipeline.
+  <a href = "/support/docs/hyperexecute-integration-with-products/">
+  <div className="support_inners">
+    <h3>Integration with Products</h3>
+    <p>Effortlessly integrate with products like Tosca, Katalon and more for streamlined test execution and management.</p>
+  </div>
+  </a>
 
-- [**Integration with Products :**](/support/docs/hyperexecute-integration-with-products/) Effortlessly integrate with products like Tosca, Katalon and more for streamlined test execution and management.
-
-- [**Integration with LambdaTest Products :**](/support/docs/he-integration-with-lambdatest-products/) Integrate seamlessly with other LambdaTest products sucha as Smart UI or Real Device and enhance your testing environment's efficiency.
-
-Go through the [Integrations page](/support/docs/integration-with-hyperexecute/) to know more about the myriad of options that HyperExecute provides. 
+  <a href="/support/docs/he-integration-with-lambdatest-products/">
+  <div className="support_inners">
+    <h3>Integration with LambdaTest Products</h3>
+    <p>Integrate seamlessly with other LambdaTest products sucha as Smart UI or Real Device and enhance your testing environment's efficiency.</p>
+  </div>
+  </a>  
+</div>
 
 ## Security
-
 HyperExecute prioritises the safety and security of your data above everything else. The entirety of your data is encrypted for the entire duration of your testing lifecycle. HyperExecute is compliant with the industry leading security standards offering you:
 
 - **Data Encryption and Compliance :** HyperExecute prioritizes data safety through full encryption, adhering to industry standards like ([SOC2, GDPR, and CCPA](https://www.lambdatest.com/security)).
-
 - **Dedicated Proxy Server Option :** Ensure secure connections by utilizing dedicated proxy servers for your testing activities.
-
 - **Automatic Tunnel Management :** Maintain data security for private websites with automatic tunnel management through Network Address Translation (NAT) instances.
 
 ## Enterprise
-
-For enterprises that want to keep everything behind their own firewalls, HyperExecute comes with private cloud facilities. You can set up your own cloud runners and storage which ensures that no data leaves your organisation’s firewalls. 
+For enterprises that want to keep everything behind their own firewalls, HyperExecute comes with [private cloud facilities](/support/docs/hyperexecute-private-cloud-setup/). You can set up your own cloud runners and storage which ensures that no data leaves your organisation’s firewalls. 
 
 You can use HyperExecute’s [Quickstart feature](https://hyperexecute.lambdatest.com/quickstart) to run your first test, and go through our Concepts page to understand the ins and out of HyperExecute. 
 

@@ -45,7 +45,7 @@ Downloading Job Reports and Artifacts manually from the HyperExecute UI can be a
 
 To receive the Artifacts and Reports via mail, you will have to add the `email` flag with a `to` tag to select the email IDs where the report or artifacts should be sent. The example added below shows you how to add your email IDs:
 
-```bash
+```yaml
 email:
   to: 
     - <your_email_id@example.com>
@@ -56,7 +56,7 @@ You can also use the `currentUser` and `org` tag to send the reports to the emai
 
 - **currentUser**: This tag will allow you to send the report to the email ID associated with your LambdaTest account.
 
-```bash
+```yaml
 email:
   to: 
     - currentUser
@@ -64,7 +64,7 @@ email:
 
 - **org**: This tag will allow you to send the report to all the email IDs associated with your organization on LambdaTest.
 
-```bash
+```yaml
 email:
   to:
     - org 
@@ -78,7 +78,7 @@ Follow the below mentioned steps to receive your Artifacts via email:
 
 > **NOTE:** You can also add a separate email ID for each report generated, as mentioned below in the YAML code.
 
-```bash
+```yaml
 uploadArtifacts:
   - name: Reports 1
     path:
@@ -116,7 +116,7 @@ Follow the below mentioned steps to receive your Job Reports via email:
 
 **Step 3:** Add the `email` flag with `to` tag in the YAML file configuration:
 
-```bash
+```yaml
 report: true
 partialReports:
   frameworkName: testng
@@ -132,7 +132,7 @@ partialReports:
 
 The Email IDs that you enter must be valid. You can enter your email IDs in the formats mentioned below.
 
-```bash
+```yaml
 - John Doe <johndoe@example.com>
 - John <johndoe@example.com>
 - johndoe@example.com
@@ -140,7 +140,7 @@ The Email IDs that you enter must be valid. You can enter your email IDs in the 
 
 However, if your email IDs are added in an unsupported format, the feature will not work. A few examples of unsupported email ID formats are added below.
 
-```bash
+```yaml
 - John Doe johndoe@example.com>
 - John <<johndoe@example.com>
 - John johndoe@example.com
