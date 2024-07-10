@@ -36,7 +36,7 @@
     --alert-danger-background-color:#F851491A;
     --alert-danger-border-color:#F8514966;
     --new-tag-color: #DB61A2;
-    --docsearch-highlight-color: #B1B1B114
+    --docsearch-highlight-color: #767676
  }
  .alert_note{border: 1px solid;}
 .alert_tip{background-color: var(--alert-tip-background-color);border: 1px solid var(--alert-tip-border-color);box-shadow: none;color: var(--ifm-color-primary);}
