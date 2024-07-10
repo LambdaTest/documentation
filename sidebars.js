@@ -151,13 +151,12 @@ module.exports = {
               },
               {
                 type: "doc",
-                label: "HyperExecute Job Reports ",
-                id: "hyperexecute-reports",
-              },
-              {
-                type: "doc",
                 label: "Test Artifact Management",
                 id: "hyperexecute-artifacts-url",
+              },              {
+                type: "doc",
+                label: "HyperExecute Job Reports ",
+                id: "hyperexecute-reports",
               },
               {
                 type: "doc",

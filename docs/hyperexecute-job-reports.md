@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-job-reports
 title: HyperExecute Job Reports
-hide_title: true
+hide_title: false
 sidebar_label: HyperExecute Job Reports
 description: Effortlessly download your HyperExecute job reports from the UI. Click the Report button on the top right-hand side of your tasks page. .
 keywords:
@@ -36,9 +36,6 @@ slug: hyperexecute-job-reports/
       })
     }}
 ></script>
-
-# HyperExecute Reports
-
 HyperExecute reports are a powerful tool for analyzing the quality of your builds and identifying potential issues. By understanding the different types of reports available and how to use them, you can improve your testing process and deliver high-quality software.
 
 ## Types of HyperExecute Reports
@@ -100,18 +97,6 @@ There are many benefits to using HyperExecute reports, including:
 - **Track progress over time:** HyperExecute reports can be used to track your team's progress over time and identify areas where improvement is needed. For example, you can use reports to track the percentage of tests that are passing and the average execution time.
 
 - **Improve communication and collaboration:** HyperExecute reports can be shared with other members of your team and stakeholders. This can help to improve communication and collaboration, and ensure that everyone is on the same page.
-
-<!-- ## How to Use HyperExecute Reports?
-
-To use HyperExecute reports, simply follow these steps:
-
-**Step 1:** Run your tests using HyperExecute.
-
-**Step 2:** Once your tests have finished running, download the test reports from the HyperExecute dashboard.
-
-**Step 3:** Open the test reports in your browser or a PDF viewer.
-
-**Step 4:** Analyze the test results and identify any areas where improvement is needed. -->
 
 Tips for Using HyperExecute Reports Effectively
 
