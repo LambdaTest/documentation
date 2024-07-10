@@ -45,13 +45,13 @@ Imagine you are a software tester, and you have a test suite with hundreds of te
 
 **Test Muting** is a feature that allows you to temporarily disable a test case from being executed. This can be useful for skipping failing or irrelevant tests, which can improve the efficiency and effectiveness of your test runs and help you focus on the most important results.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/4.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/4.png').default} alt="Image" className="doc_img"/>
 
 ## How do you Enable Test Muting for your Organization?
 
 As you can see, we have triggered a Job in HyperExecute, and we've encountered a recurring issue with a specific test consistently failing. To address this, we will implement Test Muting functionality, enabling automatic muting of a test that fails a predefined consecutive number of times.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/8.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/8.png').default} alt="Image" className="doc_img"/>
 
 Now, to enable the Test Muting, follow the below mentioned steps:
 
@@ -59,13 +59,9 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 **Step 2:** Click on the **Settings** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/1.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
-
 **Step 3:** Click to the **Organization Settings** section.
 
 **Step 4:** Go to the **Org Product Preferences** section.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/2.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 **Step 5:** Click on the "**Automatically mute tests**" toggle button.
 
@@ -73,11 +69,9 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 - Customize your **Notification Settings** to mute specific tests and reduce distractions during test execution.
 - You can also choose if you would like to receive updates on your mail id and click on **Save** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/3.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
-
 **Step 6:** Now, if you trigger the same job again, you will notice that the particular test has muted.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/6.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/test-mute.gif').default} alt="Image" className="doc_img"/>
 
 ## How do you Manually Mute specific Tests?
 
@@ -86,7 +80,7 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 - Click on the **3 dots** of the desired test you want to **Mute**.
 - Click on the **Mute Scenario** button.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/5.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/manual-mute.gif').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 **Step 2:** Trigger the same job again, and you will notice that particular test won't be executed.
 
@@ -98,6 +92,6 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 **Step 2:** Click on the **Unmute scenario** button. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/7.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/unmute.gif').default} alt="Image" className="doc_img"/>
 
 > The test will remain in-active until manually unmuted.

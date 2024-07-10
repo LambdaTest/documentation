@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-release-notes-2-1-4
-title: Release Notes 2.1.4
-hide_title: true
-sidebar_label: Release Notes 2.1.4
-description: Release Notes 2.1.4
+title: Version 2.1.4
+hide_title: false
+sidebar_label: Version 2.1.4
+description: Version 2.1.4
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -31,15 +31,12 @@ slug: hyperexecute-release-notes-2-1-4/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Release Notes",
+          "name": "Version",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-1-4/"
         }]
       })
     }}
 ></script>
-
-# Release Notes 2.1.4
-
 ## Support for Multiple Runtime Environments 
 
 You can now download and install **multiple languages** and and frameworks of a **specified versions** in your machine that is needed to execute your tests.

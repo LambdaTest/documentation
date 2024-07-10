@@ -38,6 +38,10 @@ slug: hyperexecute-workflows/
 ></script>
 # HyperExecute Workflows
 
+:::warning note
+The workflow feature is getting deprecated from **30th August, 2024** and will be shifted under [Projects](/support/docs/hyperexecute-projects/) feature.
+:::
+
 > The workflow feature is currently in the **Beta** version, so it works only in the [dynamic mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
 
 You can setup scheduled workflows on HyperExecute platform to enable scheduled test execution on your projects acutomatically.

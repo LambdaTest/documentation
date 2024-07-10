@@ -41,18 +41,8 @@ slug: hyperexecute-release-notes/
 # HyperExecute Release Notes
 
 HyperExecute is an AI Powered Test Orchestration Cloud Platform, enabling test automation teams worldwide to achieve an accelerated time to market by providing JIT (Just-in-time) testing infrastructure that offers enhanced test execution speeds, smart test orchestration, detailed execution logs and much more.
-<!-- 
-<img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/quick.png').default} alt="Image"  className="doc_img"/> -->
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/release-notes.png').default} alt="Image"  className="doc_img"/>
-
-## Marketplace
-
-You can seamlessly deploy with your favourite Cloud Platform
-
-- [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/lambdatestinc1584019832435.hyperexeonprem?tab=overview)
-
-- [Amazon Web Services](https://aws.amazon.com/marketplace/pp/prodview-35cneaxfou2eq)
+<img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/release-notes.gif').default} alt="Image"  className="doc_img"/>
 
 ## HyperExecute Releases
 

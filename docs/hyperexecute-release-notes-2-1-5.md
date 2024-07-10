@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-release-notes-2-1-5
-title: Release Notes 2.1.5
-hide_title: true
-sidebar_label: Release Notes 2.1.5
-description: Release Notes 2.1.5
+title: Version 2.1.5
+hide_title: false
+sidebar_label: Version 2.1.5
+description: Version 2.1.5
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -31,15 +31,12 @@ slug: hyperexecute-release-notes-2-1-5/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Release Notes",
+          "name": "Version",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-1-5/"
         }]
       })
     }}
 ></script>
-
-# Release Notes 2.1.5
-
 ## Optimize Maven Runtime Integration for Enhanced Project Development 🧑‍💻
 
 Optimize your development workflow with HyperExecute's streamlined Maven runtime integration. Benefit from seamless integration and performance enhancements designed specifically for Maven-driven projects, refining your execution processes to increase efficiency.

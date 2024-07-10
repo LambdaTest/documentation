@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-release-notes-1-133-0
-title: Release Notes 1.133.0
-hide_title: true
-sidebar_label: Release Notes 1.133.0
-description: Release Notes 1.133.0
+title: Version 1.133.0
+hide_title: false
+sidebar_label: Version 1.133.0
+description: Versions 1.133.0
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -31,15 +31,12 @@ slug: hyperexecute-release-notes-1-133-0/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Release Notes",
+          "name": "Version",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-1-133-0/"
         }]
       })
     }}
 ></script>
-
-# Release Notes 1.133.0
-
 ## Bamboo CI/CD Integration
 
 Bamboo is a continuous integration (CI) and continuous delivery (CD) server from Atlassian. It helps teams automate the software development and delivery process, from code commit to production deployment. Bamboo can be used to build, test, and deploy software on a variety of platforms, including cloud, on-premises, and hybrid environments.
