@@ -119,8 +119,6 @@ You can also find us on your favourite Cloud Platform:
 <!-- Here are all the languages and frameworks supported by HyperExecute. -->
 
 <div className= "lt_framework_list_row">
-<p></p>
-<p> </p>
 <Tabs
   groupId="languages"
   defaultValue= 'Selenium'
