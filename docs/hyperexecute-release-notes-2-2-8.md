@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-release-notes-2-2-8
-title: Release Notes 2.2.8
+title: Version 2.2.8
 hide_title: false
-sidebar_label: Release Notes 2.2.8
-description: Release Notes 2.2.8
+sidebar_label: Version 2.2.8
+description: Version 2.2.8
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -31,7 +31,7 @@ slug: hyperexecute-release-notes-2-2-8/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Release Notes",
+          "name": "Version",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-2-8/"
         }]
       })

@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-release-notes-2-2-1
-title: Release Notes 2.2.1
-hide_title: true
-sidebar_label: Release Notes 2.2.1
-description: Release Notes 2.2.1
+title: Version 2.2.1
+hide_title: false
+sidebar_label: Version 2.2.1
+description: Version 2.2.1
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -31,15 +31,12 @@ slug: hyperexecute-release-notes-2-2-1/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Release Notes",
+          "name": "Version",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-2-1/"
         }]
       })
     }}
 ></script>
-
-# Release Notes 2.2.1
-
 ## Configure the behavior of Error Categorization of Your Job!!
 
 The `errorCategorizedOnFailureOnly` flag lets you control when error categorization happens after a job runs. Normally, errors are categorized for every stage, even if the stage succeeded. Enabling this flag ensures that errors are only categorized for stages that failed (not green).

@@ -54,10 +54,16 @@ HyperExecute is an AI Powered Test Orchestration Cloud Platform, enabling test a
 
 It requires a [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file which contains all the necessary instructions and a [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job.
 
+> Let's understand the [HyperExecute Dashboard](/support/docs/hyperexecute-guided-walkthrough/) together.
+
 <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/hyperexecute.png').default} alt="Image"  className="doc_img"/>
 
-> See our [Guided walkthrough](/support/docs/hyperexecute-guided-walkthrough/) to learn more. 
-You can also find us on the [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/lambdatestinc1584019832435.hyper_execute?exp=ubp8&tab=Overview).
+:::tip  FIND US on cloud **🔍**
+You can also find us on your favourite Cloud Platform:
+- [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/lambdatestinc1584019832435.hyper_execute?exp=ubp8&tab=Overview)
+- [Amazon Web Services Marketplace](https://aws.amazon.com/marketplace/pp/prodview-35cneaxfou2eq) and
+- [Google Cloud Provider Marketplace](https://console.cloud.google.com/marketplace/product/hyperexecute-privatecloud/lambdatest?pli=1)
+:::
 
 <div className="support_main">
   <a href="/support/docs/hyperexecute-running-your-first-job/">

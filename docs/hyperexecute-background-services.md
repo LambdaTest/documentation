@@ -82,37 +82,6 @@ To check the background service logs, follow the below mentioned steps:
 **Step 3:** Click on the desired **background service** you have triggered to check its logs.
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/background-service/background-service.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-## Sample YAML File
-***
-
-```yaml
----
-version: 0.2
-runson: win
-
-autosplit: true
-concurrency: 2
-
-pre:
-  - npm install
-
-#highlight-next-line
-background:
-#highlight-next-line
-  - npx static-server
-  #highlight-next-line
-  - mysql-server
-
-framework:
-  name: maven/testng
-  defaultReports: false
-  flags:
-    - "-Dplatname=win"
-    - "--file=pom02.xml"
-
-jobLabel: [background service]
-```
-
 ## Frequently Asked Questions
 
 <details><summary>Is the service intended to operate within the same Virtual Machine or externally?</summary> Yes, the service will run within the same Virtual Machine. </details>
