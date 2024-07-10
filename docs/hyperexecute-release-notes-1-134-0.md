@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-release-notes-1-134-0
-title: Release Notes 1.134.0
-hide_title: true
-sidebar_label: Release Notes 1.134.0
-description: Release Notes 1.134.0
+title: Version 1.134.0
+hide_title: false
+sidebar_label: Version 1.134.0
+description: Version 1.134.0
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -31,14 +31,12 @@ slug: hyperexecute-release-notes-1-134-0/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Release Notes",
+          "name": "Version",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-1-134-0/"
         }]
       })
     }}
 ></script>
-
-# Release Notes 1.134-0
 
 ## Semaphore CI/CD Integration
 

@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-release-notes-2-3-7
-title: Release Notes 2.3.7
+title: Version 2.3.7
 hide_title: false
-sidebar_label: Release Notes 2.3.7
-description: Release Notes 2.3.7
+sidebar_label: Version 2.3.7
+description: Version 2.3.7
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -31,7 +31,7 @@ slug: hyperexecute-release-notes-2-3-7/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Release Notes",
+          "name": "Version",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-3-7/"
         }]
       })

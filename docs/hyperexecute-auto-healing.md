@@ -72,6 +72,8 @@ const capability = {
 
 **Step 4:** Click on the **band-aid** icon as shown below to check what part of your test case is healed.
 
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/auto-heal/autoheal.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
 ## How Auto Healing Works
 
 Auto Healing employs a dynamic locator strategy that adapts to DOM (Document Object Model) changes in real-time. When an element is initially located, the system records its DOM path and associated attributes. If subsequent attempts to find the element fail due to application updates, the Auto Healing mechanism activates. It analyzes the current DOM structure, comparing it against the previously recorded state, and generates new, contextually relevant locators by intelligently combining element attributes and hierarchical information. This process occurs seamlessly during test runtime, allowing scripts to continue execution despite locator changes. The system continuously monitors the web page for DOM modifications, ensuring sustained test reliability even in the face of frequent application updates.
