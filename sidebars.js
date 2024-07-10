@@ -2501,6 +2501,7 @@ module.exports = {
               "analytics-modules-error-insights",
             ],
           },
+          "analytics-modules-groups",
         ],
       },
       "analytics-modules-test-intelligence-flaky-test-analytics",
