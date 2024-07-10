@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-release-notes-2-2-2
-title: Release Notes 2.2.2
-hide_title: true
-sidebar_label: Release Notes 2.2.2
-description: Release Notes 2.2.2
+title: Version 2.2.2
+hide_title: false
+sidebar_label: Version 2.2.2
+description: Version 2.2.2
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -31,15 +31,12 @@ slug: hyperexecute-release-notes-2-2-2/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Release Notes",
+          "name": "Version",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-2-2/"
         }]
       })
     }}
 ></script>
-
-# Release Notes 2.2.2
-
 ## Testsigma Integration
 
 Testsigma is an AI-powered, cloud-based test automation platform designed to help testers create, run, and maintain automated tests for various applications. It caters to web, mobile, and API testing, aiming to simplify the automation process for users of all experience levels.

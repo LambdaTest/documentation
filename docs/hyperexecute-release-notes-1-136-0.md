@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-release-notes-1-136-0
-title: Release Notes 1.136.0
-hide_title: true
-sidebar_label: Release Notes 1.136.0
-description: Release Notes 1.136.0
+title: Version 1.136.0
+hide_title: false
+sidebar_label: Version 1.136.0
+description: Version 1.136.0
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -31,15 +31,12 @@ slug: hyperexecute-release-notes-1-136-0/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Release Notes",
+          "name": "Version",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-1-136-0/"
         }]
       })
     }}
 ></script>
-
-# Release Notes 1.136.0
-
 ## Security Improvements
 
 HyperExecute is committed to prioritizing security and safeguarding our users' data and infrastructure. This release introduces a comprehensive set of security enhancements that reinforce our commitment to providing a secure and reliable testing platform.

@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-release-notes-1-139-0
-title: Release Notes 1.139.0
-hide_title: true
-sidebar_label: Release Notes 1.139.0
-description: Release Notes 1.139.0
+title: Version 1.139.0
+hide_title: false
+sidebar_label: Version 1.139.0
+description: Version 1.139.0
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -31,15 +31,12 @@ slug: hyperexecute-release-notes-1-139-0/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Release Notes",
+          "name": "Version",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-1-139-0/"
         }]
       })
     }}
 ></script>
-
-# Release Notes 1.139.0
-
 ## Enhanced User Experience with Refined UI/UX
 
 HyperExecute is committed to continuously improving the user experience by implementing thoughtful UI/UX enhancements. This release brings a host of refinements that streamline navigation, enhance accessibility, and elevate the overall user experience.

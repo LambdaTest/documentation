@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-release-notes-2-2-0
-title: Release Notes 2.2.0
-hide_title: true
-sidebar_label: Release Notes 2.2.0
-description: Release Notes 2.2.0
+title: Version 2.2.0
+hide_title: false
+sidebar_label: Version 2.2.0
+description: Version 2.2.0
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -31,15 +31,12 @@ slug: hyperexecute-release-notes-2-2-0/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Release Notes",
+          "name": "Version",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-2-0/"
         }]
       })
     }}
 ></script>
-
-# Release Notes 2.2.0
-
 ## Speed Up Your Development Workflow ⚡
 
 Supercharge your development workflow by significantly reducing codebase upload times, especially when you're making frequent, incremental changes. 

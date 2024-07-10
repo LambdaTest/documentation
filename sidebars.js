@@ -851,154 +851,118 @@ module.exports = {
         },
         items: [
           {
-            type: "doc",
-            label: "Release Notes 2.4.0",
-            id: "hyperexecute-release-notes-2-4-0",
+            type: "category",
+            collapsed: true,
+            label: "July, 2024",
+            items: [
+              'hyperexecute-release-notes-2-4-0',
+            ]
           },
           {
-            type: "doc",
-            label: "Release Notes 2.3.8",
-            id: "hyperexecute-release-notes-2-3-8",
+            type: "category",
+            collapsed: true,
+            label: "June, 2024",
+            items: [
+              'hyperexecute-release-notes-2-3-8',
+              'hyperexecute-release-notes-2-3-7',
+              'hyperexecute-release-notes-2-3-6'
+            ]
           },
           {
-            type: "doc",
-            label: "Release Notes 2.3.7",
-            id: "hyperexecute-release-notes-2-3-7",
+            type: "category",
+            collapsed: true,
+            label: "May, 2024",
+            items: [
+              'hyperexecute-release-notes-2-3-3',
+            ]
           },
           {
-            type: "doc",
-            label: "Release Notes 2.3.6",
-            id: "hyperexecute-release-notes-2-3-6",
+            type: "category",
+            collapsed: true,
+            label: "April, 2024",
+            items: [
+              'hyperexecute-release-notes-2-3-1',
+              'hyperexecute-release-notes-2-3-0',
+              'hyperexecute-release-notes-2-2-9',
+              'hyperexecute-release-notes-2-2-8',
+              'hyperexecute-release-notes-2-2-7',
+            ]
           },
           {
-            type: "doc",
-            label: "Release Notes 2.3.3",
-            id: "hyperexecute-release-notes-2-3-3",
+            type: "category",
+            collapsed: true,
+            label: "March, 2024",
+            items: [
+              'hyperexecute-release-notes-2-2-6',
+              'hyperexecute-release-notes-2-2-5',
+              'hyperexecute-release-notes-2-2-3'
+            ]
           },
           {
-            type: "doc",
-            label: "Release Notes 2.3.1",
-            id: "hyperexecute-release-notes-2-3-1",
+            type: "category",
+            collapsed: true,
+            label: "February, 2024",
+            items: [
+              'hyperexecute-release-notes-2-2-2',
+              'hyperexecute-release-notes-2-2-1',
+              'hyperexecute-release-notes-2-2-0'
+            ]
           },
           {
-            type: "doc",
-            label: "Release Notes 2.3.0",
-            id: "hyperexecute-release-notes-2-3-0",
+            type: "category",
+            collapsed: true,
+            label: "January, 2024",
+            items: [
+              'hyperexecute-release-notes-2-1-6',
+              'hyperexecute-release-notes-2-1-5',
+            ]
           },
           {
-            type: "doc",
-            label: "Release Notes 2.2.9",
-            id: "hyperexecute-release-notes-2-2-9",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.2.8",
-            id: "hyperexecute-release-notes-2-2-8",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.2.7",
-            id: "hyperexecute-release-notes-2-2-7",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.2.6",
-            id: "hyperexecute-release-notes-2-2-6",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.2.5",
-            id: "hyperexecute-release-notes-2-2-5",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.2.3",
-            id: "hyperexecute-release-notes-2-2-3",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.2.2",
-            id: "hyperexecute-release-notes-2-2-2",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.2.1",
-            id: "hyperexecute-release-notes-2-2-1",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.2.0",
-            id: "hyperexecute-release-notes-2-2-0",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.1.6",
-            id: "hyperexecute-release-notes-2-1-6",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.1.5",
-            id: "hyperexecute-release-notes-2-1-5",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.1.4",
-            id: "hyperexecute-release-notes-2-1-4",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.1.3",
-            id: "hyperexecute-release-notes-2-1-3",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.1.1",
-            id: "hyperexecute-release-notes-2-1-1",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 2.1.0",
-            id: "hyperexecute-release-notes-2-1-0",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 1.139.0",
-            id: "hyperexecute-release-notes-1-139-0",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 1.138.0",
-            id: "hyperexecute-release-notes-1-138-0",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 1.137.0",
-            id: "hyperexecute-release-notes-1-137-0",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 1.136.0",
-            id: "hyperexecute-release-notes-1-136-0",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 1.135.0",
-            id: "hyperexecute-release-notes-1-135-0",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 1.134.0",
-            id: "hyperexecute-release-notes-1-134-0",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 1.133.0",
-            id: "hyperexecute-release-notes-1-133-0",
-          },
-          {
-            type: "doc",
-            label: "Release Notes 1.131.0",
-            id: "hyperexecute-release-notes-1-131-0",
+            type: "category",
+            collapsed: true,
+            label: "2023 Releases",
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "December, 2023",
+                items: [
+                  'hyperexecute-release-notes-2-1-4',
+                  'hyperexecute-release-notes-2-1-3',
+                  'hyperexecute-release-notes-2-1-1',
+                  'hyperexecute-release-notes-2-1-0',
+                  'hyperexecute-release-notes-1-139-0'
+                ]
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "November, 2023",
+                items: [
+                  'hyperexecute-release-notes-1-138-0',
+                  'hyperexecute-release-notes-1-137-0',
+                ]
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "October, 2023",
+                items: [
+                  'hyperexecute-release-notes-1-136-0',
+                  'hyperexecute-release-notes-1-135-0',
+                  'hyperexecute-release-notes-1-134-0',
+                  'hyperexecute-release-notes-1-133-0'
+                ]
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "September, 2023",
+                items: [
+                  'hyperexecute-release-notes-1-131-0',
+                ]
+              },
+            ]
           },
         ],
       },
