@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-matrix-multiplexing-strategy
 title: Matrix Multiplexing Strategy
-hide_title: true
+hide_title: false
 sidebar_label: Matrix Multiplexing Strategy
 description: Discover the power of HyperExecute's Matrix Multiplexing Strategy for efficient cross-browser testing. Optimize test combinations for faster results..
 keywords:
@@ -36,9 +36,6 @@ slug: hyperexecute-matrix-multiplexing-strategy/
       })
     }}
 ></script>
-
-# Matrix Multiplexing Strategy
-
 HyperExecute's Matrix Multiplexing Strategy allows you to execute test cases across a variety of combinations efficiently. This strategy is especially useful when dealing with browser and OS combinations or other parameters like files, tags, and more.
 
 By utilizing the Matrix Multiplexing Strategy, you can parallelize your testing process and achieve faster results. HyperExecute generates permutations and combinations using key-value pairs, launching virtual machines for each combination and running tests in parallel.
@@ -46,7 +43,6 @@ By utilizing the Matrix Multiplexing Strategy, you can parallelize your testing 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/matrix/hyp_matrix.png').default} alt="Image"  className="doc_img" width="1232" height="534" style={{ width:'700px', height:'auto'}}/>
 
 ## Configuration and Execution
-***
 
 ### Setting Up Matrix Multiplexing
 
@@ -69,8 +65,6 @@ testSuites:
 
 In the YAML file shown above, **files**  is a user-generated key. **Files**  and its associated value(s) are opaque to HyperExecute. You can also name it as **Files1**, **FileNames**, etc., as long as the Key is unique in that YAML file.
 
-***
-
 ## When to opt for Matrix Strategy
 
 Matrix multiplexing strategy is ideally used when you have to run specific test scenarios across different input (or value) combinations. For example, this approach would be useful if you have to run “scenario1”  on “N” version(s) of Chrome and Firefox browsers (that are installed on the Windows 10 platform).
@@ -83,20 +77,19 @@ Let’s modify the above YAML file to run the scenarios on “latest” version 
 
 ``` yaml
 #runson defines the OS of your test execution node.
-runson: win
+runson: ${matrix.os}
 
 matrix:
-  # Browser version(s) separated by Comma
-  version: ["latest"]
-  # Browser name separated by Comma
+  os: ["win", "linux"]
+  version: ["latest", "beta", "dev"]
   browser: ["Chrome", "Firefox"]
-  # Test Files separated by Comma
   files: ["@File1","@File2"]
+
 ```
 
 A combination of test scenarios is generated using the following formula:
 
-*Total Test Scenarios = [Entries in os  List] x [Entries in browser version  List] x [Entries in browser  List] x [Entries in Files List]*
+> **Total Test Scenarios** = *[Entries in os  List] x [Entries in browser version  List] x [Entries in browser  List] x [Entries in Files List]*
 
 Let’s take a case where the test scenarios are implemented in Java. Files File1.java and File2. java contains one test method each. In such a scenario, the total number of test combinations would be  (1 x 1 x 2 x 2)  →  4. Here is the list of the  total test scenarios that would be run on HyperExecute (based on the YAML file shown earlier):
 
@@ -106,8 +99,6 @@ Let’s take a case where the test scenarios are implemented in Java. Files File
 | 2 | @File1 (Test Method_1) | Win (Windows 11) | Firefox | latest |
 | 3 | @File2 (Test Method_2) | Win (Windows 11) | Chrome | latest |
 | 4 | @File2 (Test Method_2) | Win (Windows 11) | Firefox | latest |
-
-***
 
 ## Exclusion in Matrix Strategy
 Assuming that you created a matrix but there is one specific combination that you don't want the system to consider. This can happen for instance if you have a combination of Safari and Windows which won't be a valid combination, in such cases you can exclude such a combination using the `exclusionMatrix` parameter as shown below.
@@ -119,7 +110,7 @@ matrix:
   # Browser version(s) separated by Comma
   version: ["latest"]
   # OS name sepataed by Coma
-  os: [win, mac, linux]
+  os: ["win", "mac", "linux"]
   # Browser name separated by Comma
   browser: ["Chrome", "Firefox", "brave"]
   # Test Files separated by Comma

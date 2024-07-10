@@ -113,7 +113,7 @@ The generic command required to initiate test execution is given below. You will
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-  {`./hyperexecute --user="${ YOUR_LAMBDATEST_USERNAME()}" --key "${ YOUR_LAMBDATEST_ACCESS_KEY()}" --config "YOUR_YAML_FILE" `}
+  {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config "YOUR_YAML_FILE" `}
     </CodeBlock>
   </div>
 
