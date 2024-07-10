@@ -1,7 +1,7 @@
 ---
 id: playwright-caps
 title: Capabilities for Playwright Testing
-hide_title: true
+hide_title: false
 sidebar_label: Playwright Capabilities
 description: Master Playwright testing with our guide on configuring capabilities! Select browsers & OS, organize tests, adjust desktop resolution, and more for efficient and precise testing outcomes.
 keywords:
@@ -40,10 +40,6 @@ slug: capabilities-for-playwright/
       })
     }}
 ></script>
-
-# Capabilities for Playwright Testing
----
-
 The LambdaTest Capability Generator allows you to automatically create the capabilities class needed to run your
 Playwright automation scripts on LambdaTest. Here are a few capabilities that you can configure to run your Playwright
 tests.
@@ -68,7 +64,7 @@ tests.
 | tunnelName | true /false | Specify tunnel name | `const capability = { "LT:Options": {"tunnelName": "<tunnel_name>",}}`|
 | geoLocation | AR (Argentina) | Specify country code | `const capability = { "LT:Options": {"geoLocation": "AR",}}`|
 | idleTimeout | number| Specifies the timeout of the commands in seconds. <br /><br /> <b>Default value:</b> 300 <br /><br /> <b>Max value:</b> 1800<br /><br /> If a value greater than 1800 is added, idleTimeout will be set to 1800.| `const capability = { "LT:Options": {"idleTimeout": "<number>",}}`|
-| lambdaMaskCommands <br /><br /> **Note:** This capability is only applicable for **HyperExecute** Jobs. | array | <b> `sendType` or `sendFill` </b> Masks the type method of the ElementHandle and Locator class. <br /><br /> <b>`sendPress`</b> Masks the press method of the ElementHandle and Locator class. <br /><br /> <b>`setHTTPCredentials`</b> Masks the HTTP credentials parameter in the newContext and newPage method of the browser class. <br/><br /> <b>`setStorageState`</b> Masks the storage state parameter in the newContext and newPage method of the browser class <br /><br /> <b>`setGeolocation`</b> Masks the Geolocation parameter in the newContext and newPage method of the browser class.|`const capability = { "LT:Options": {'lambdaMaskCommands': ["sendType", "sendFill", "sendPress", "setHTTPCredentials", "setStorageState", "setGeolocation"]}}` <br /><br /> |
+| lambdaMaskCommands | array | <b> `sendType` or `sendFill` </b> Masks the type method of the ElementHandle and Locator class. <br /><br /> <b>`sendPress`</b> Masks the press method of the ElementHandle and Locator class. <br /><br /> <b>`setHTTPCredentials`</b> Masks the HTTP credentials parameter in the newContext and newPage method of the browser class. <br/><br /> <b>`setStorageState`</b> Masks the storage state parameter in the newContext and newPage method of the browser class <br /><br /> <b>`setGeolocation`</b> Masks the Geolocation parameter in the newContext and newPage method of the browser class.|`const capability = { "LT:Options": {'lambdaMaskCommands': ["sendType", "sendFill", "sendPress", "setHTTPCredentials", "setStorageState", "setGeolocation"]}}` <br /><br /> |
 | useSpecificBundleVersion | Boolean | If set **`true`:** LambdaTest will select the playwright server version as per the browser version you have passed in the capabilities. Check the [supported browser version list](/support/docs/playwright-test-execution-setup/#playwright-supported-browsers). <br /><br /> If the value set in the `browser version` capability is supported by multiple Playwright versions, LambdaTest checks your Playwright client version and sets the Playwright version accordingly. <br /><br /><br /> If set **`false` :** LambdaTest will run your playwright tests with the same version as setup in your local system and the browser version will also be used the compatible one as per the [supported browser version list](/support/docs/playwright-test-execution-setup/#playwright-supported-browsers) and not your defined one. | `const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}` |
 
 
