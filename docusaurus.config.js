@@ -1,4 +1,5 @@
 require('dotenv').config();
+import { themes as prismThemes } from 'prism-react-renderer';
 module.exports = {
   title: 'LambdaTest',
   tagline: 'Ensure your web-apps work seamlessly on every desktop and mobile browsers.',
@@ -51,6 +52,8 @@ module.exports = {
 
     prism: {
       additionalLanguages: ['powershell', 'java', 'csharp', 'php', 'ruby', 'robotframework'],
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
     },
     navbar: {
       title: null,
@@ -108,7 +111,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateTime: true,
-          breadcrumbs: false,
+          breadcrumbs: true,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
