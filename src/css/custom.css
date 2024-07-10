@@ -36,13 +36,14 @@
     --alert-danger-background-color:#F851491A;
     --alert-danger-border-color:#F8514966;
     --new-tag-color: #DB61A2;
+    --docsearch-highlight-color: #767676
  }
  .alert_note{border: 1px solid;}
 .alert_tip{background-color: var(--alert-tip-background-color);border: 1px solid var(--alert-tip-border-color);box-shadow: none;color: var(--ifm-color-primary);}
 .alert_info{background-color: var(--alert-info-background-color);border: 1px solid var(--alert-info-border-color);box-shadow: none;color: var(--ifm-color-primary);}
 .alert_warning{background-color: var(--alert-warning-background-color);border: 1px solid var(--alert-warning-border-color);box-shadow: none;color: var(--ifm-color-primary);}
 .alert_danger{background-color: var(--alert-danger-background-color);border: 1px solid var(--alert-danger-border-color);box-shadow: none;color: var(--ifm-color-primary);}
-.newTagColor{color: var(--new-tag-color);font-weight:bold;font-size: 12px;padding: 4px 8px;border-radius: 20px;border:1px solid #BF3989}
+.newTagColor{color: var(--new-tag-color);font-weight:bold;font-size: 10px;padding: 1px 6px;border-radius: 20px;border:1px solid #BF3989}
  [data-theme=dark] .footer__title {
    color: #CAD1D9;
  }
