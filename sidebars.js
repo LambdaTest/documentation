@@ -1435,6 +1435,7 @@ module.exports = {
         id: "scim",
       },
   ],
+],
 
   TestManagerSidebar: [
     {
