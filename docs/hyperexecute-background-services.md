@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-background-services
-title: Background Services in HyperExecute
-hide_title: true
+title: Background Services
+hide_title: false
 sidebar_label: Background Services
 description: This documentation will help you 
 keywords:
@@ -34,9 +34,6 @@ slug: hyperexecute-background-services/
       })
     }}
 ></script>
-
-# Background Services
-
 Background Services is a feature of HyperExecute which is generally used to run the long running **Application Servers**. You can trigger the background services by using either the `background` or `backgroundDirectives` property in the [HyperExecute YAML](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#background) file.
 
 This feature is useful for the following cases:
@@ -47,22 +44,12 @@ This feature is useful for the following cases:
 - Running messaging or chat applications.
 - Providing APIs for other applications to use.
 
-<!-- - **Generating Reports :**  Background services can be used to generate reports in the background. This can help to save the user time and effort, as they do not have to manually generate the reports.
-
-- **Monitoring Systems :** Background services can be used to monitor systems in the background. This can help to identify any problems with the system early on, so that they can be fixed before they cause any major issues. -->
-
-<!-- - **Flexibility :** You can use a YAML file to define a variety of background services, including HTTP requests, JavaScript functions, Python scripts, and Bash scripts. This gives you a lot of flexibility in how you use background services.
-
-- **Efficiency :** Background services can be a more efficient way to run long-running tasks. This is because they can continue to run even when you are not using the HyperExecute dashboard. -->
-
 ## Enable Background Service
-***
-
 There are two methods to enable the **Background Service** from the HyperExecute YAML file:
 
 ### 1. Using `backgroundDirectives`
 
-```bash
+```yaml
 backgroundDirectives:
   shell: bash
   commands:
@@ -71,15 +58,13 @@ backgroundDirectives:
     - name: Database
       command: mysql-server
 ```
-The **`shell`** property defines the terminal it should use to run the background service.
-
-The **`command`** property specifies the command to be executed in the background.
-
-The **`name`** property specifies the name of your Background Service.
+- `shell`: defines the terminal it should use to run the background service.
+- `command`: specifies the command to be executed in the background.
+- `name`: specifies the name of your Background Service.
 
 ### 2. Using `background`
 
-```bash
+```yaml
 background:
   - npx static-server
   - mysql-server
@@ -87,45 +72,29 @@ background:
 <!-- If background command fails, then the whole task will be marked as a fail -->
 
 ## Background Service Logs
-***
 
 To check the background service logs, follow the below mentioned steps:
 
 **Step 1:** After executing your job, go to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute/jobs) to check the status of the job.
 
 **Step 2:** Click on the **Background Service** button.
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/background-service/Step2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 **Step 3:** Click on the desired **background service** you have triggered to check its logs.
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/background-service/Step3.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/background-service/background-service.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ## Sample YAML File
 ***
 
-```bash
+```yaml
 ---
-version: 0.1
-globalTimeout: 100
-testSuiteTimeout: 90
-testSuiteStep: 90
-retryOnFailure: false
-runson: ${matrix.os}
-cypress: true
-maxRetries: 0
-parallelism: 1
-concurrency: 2
+version: 0.2
+runson: win
+
 autosplit: true
+concurrency: 2
 
 pre:
   - npm install
-
-cacheKey: '{{ checksum "package.json" }}'
-cacheDirectories:
-  - node_modules
-
-matrix:
-   os: [win]
-   browser: ["chrome-103.0","chrome-104.0","chrome-105.0"]
 
 #highlight-next-line
 background:
@@ -134,19 +103,14 @@ background:
   #highlight-next-line
   - mysql-server
 
-testDiscovery:
-  mode: dynamic
-  type: raw
-  command: ls cypress/integration | sed -n 1,'10p'
+framework:
+  name: maven/testng
+  defaultReports: false
+  flags:
+    - "-Dplatname=win"
+    - "--file=pom02.xml"
 
-testRunnerCommand: npx cypress run  --spec ./cypress/integration/$test --browser=${matrix.browser} --headed --config video=false
-
-cypressOps:
- Build: "Hyperexecute Cypress Sample Build"
- Tags: ["Hyperexecute","Cypress", "Windows", "Hybrid", "V9"]
- BuildTags: ["Hyperexecute-Cypress"]
-
-jobLabel: [cypress-v9, hybrid]
+jobLabel: [background service]
 ```
 
 ## Frequently Asked Questions

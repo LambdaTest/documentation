@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-artifacts
-title: HyperExecute Job Artifacts
-hide_title: true
+title: Job Artifacts
+hide_title: false
 sidebar_label: HyperExecute Job Artifacts
 description: Learn how to generate the Artifacts for your desired framework and seamlessly interact with artifacts through the HyperExecute UI.
 keywords:
@@ -36,69 +36,37 @@ slug: hyperexecute-artifacts/
       })
     }}
 ></script>
-
-# Artifacts
-
 Artifacts are files generated during test execution, including reports and logs. You can refer to these files for obtaining consolidated information about the executed test cases, and can seamlessly interact with artifacts through the HyperExecute UI.
 
 Following the completion of a Job, these artifacts are automatically stored in the **artifacts folder**, distinguishing previous files into **old-artifacts** on subsequent runs while retaining the recent files in artifacts.
 
-## Steps to Generate Artifacts
-
+## Steps to Generate and Download Artifacts
 Follow the below mentioned steps to generate the Artifacts for your desired framework:
 
 **Step 1:** Go to the HyperExecute YAML file
 
 **Step 2:** Add the below mentioned parameters in the YAML file to generate the Artifacts
 
-```bash
-uploadArtifacts: 
-    - name: #user defined name of the artifact
-      path:
-        - #path of the generated artifact
-    - name: #user defined name of the artifact
-      path:
-        - #path of the generated artifact
-```
-
-```bash
+```yaml
 uploadArtifacts:
-    - name: Executed-Job-Artifacts
+    - name: Executed-Job-Artifacts #user defined name of the artifact
       path:
-        - src/test/index.html
+        - src/test/index.html #path of the generated artifact
     - name: My-Job-Artifacts
       path:
         - src/collect/info.html
 ```
+:::note
+- If you are generating multiple artifacts, then it is recommended to use this parameter, [`mergeArtifacts`](/support/docs/deep-dive-into-hyperexecute-yaml/#mergeartifacts) in your YAML, as it will zip all your Artifacts files while downloading from the dashboard.
 
-> **Note:** If you are generating multiple artifacts, then it is recommended to use this parameter, `mergeArtifacts` in your YAML, as it will zip all your Artifacts files while downloading from the dashboard.
+- You can replace the Artifacts folder name value with any of the Matrix parameters value.
 
-```bash
-mergeArtifacts: true
-uploadArtifacts:
-    - name: SrcData
-      path:
-      - src/test/index.html
-```
-
-**Step 3:** Now trigger your job and go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
-
-**Step 4:** Click on any of the artifacts generated.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/artifact3.jpeg').default} alt="Image"  className="doc_img"/>
-
-Here is the sample artifact generated.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/artifact4.png').default} alt="Image"  className="doc_img"/>
-
-:::info
-You can replace the Artifacts folder name value with any of the Matrix parameters value.
-
-```bash
+```yaml
 matrix:
    os: [win]
    browser: ["chrome-latest-1", "firefox-latest-2"]
 
+mergeArtifacts: true
 uploadArtefacts:
   - name: $browser
     path: 
@@ -106,17 +74,14 @@ uploadArtefacts:
 ```
 
 As shown in the above code, the artifacts folder generated will be named **chrome-latest-1** and **firefox-latest-2**
-
 :::
 
-## Download the Generated Artifacts
+**Step 3:** Now trigger your job and go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
 
-**Step 1:** Go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) portal and click on your Job.
+**Step 4:** Click on any of the artifacts generated. You can also download the artifacts from the dashboard
 
-**Step 2:** Click on the **Artifacts** button in the upper right corner.
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/artifacts.gif').default} alt="Image"  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/artifact1.png').default} alt="Image"  className="doc_img"/>
+Here is the sample artifact generated.
 
-**Step 3:** Click on the **Download** icon to download your Job Artifacts.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/artifact2.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/artifact4.png').default} alt="Image"  className="doc_img"/>

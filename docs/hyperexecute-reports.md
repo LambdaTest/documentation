@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-reports
-title: HyperExecute Job Reports
-hide_title: true
+title: Job Reports
+hide_title: false
 sidebar_label: HyperExecute Job Reports
 description: Effortlessly explore HyperExecute Reports! Gain a deeper understanding of your test outcomes with the comprehensive insights and analytics offered by LambdaTest.
 keywords:
@@ -36,12 +36,9 @@ slug: hyperexecute-reports/
       })
     }}
 ></script>
-
-# Reports
-
 Reports provide summarized job information, including status counts and links to tests. You can generate and download detailed reports at the end of job execution that helps you analyze the outcome of your tests based on your framework. 
 
-## Steps to Generate Reports
+## Steps to Generate and Download Reports
 
 Follow the below mentioned steps to generate the Reports for your desired framework:
 
@@ -50,10 +47,9 @@ Follow the below mentioned steps to generate the Reports for your desired framew
 **Step 2:** Add the below mentioned parameters in the YAML file to generate the Reports
 
 - You must set the `report` flag to **true**.
-
 - You will have to specify the **location**, **type** and **framework** associated with your report in the `partialReports` field to generate it. 
 
-```bash
+```yaml
 report: true
 partialReports:
   frameworkName: testng
@@ -66,7 +62,7 @@ partialReports:
 
 If you want to generate multiple reports of different frameworks.
 
-```bash
+```yaml
 partialReports:
   - location: reports/json
     type: json
@@ -87,7 +83,7 @@ partialReports:
 
 **Step 4:** Click on the **Open** button of the **Reports**.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/report3.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/reports.gif').default} alt="Image"  className="doc_img"/>
 
 Here is the sample report generated.
 
@@ -96,20 +92,6 @@ Here is the sample report generated.
 :::info
 Refer to the detailed documentation on [Job Reports](/support/docs/hyperexecute-job-reports/)
 :::
-
-
-## Download the Generated Reports
-
-**Step 1:** Go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) portal and click on your Job.
-
-**Step 2:** Click on the **Reports** button in the upper right corner.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/report1.png').default} alt="Image"  className="doc_img"/>
-
-**Step 3:** Click on the **Download** button to download your Job Reports.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/report2.png').default} alt="Image"  className="doc_img"/>
-
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
