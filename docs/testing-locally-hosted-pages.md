@@ -68,35 +68,35 @@ LambdaTest Tunnel offers numerous benefits for web developers, testers, and QA p
 
 ## LambdaTest Tunnel Guide
 
-<div className="download_btn mb-10"> <a href="/docs/local-testing-windows/">How To Connect LambdaTest Tunnel For Windows?</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/local-testing-windows/">How To Connect LambdaTest Tunnel For Windows?</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/local-testing-macos/">How To Connect LambdaTest Tunnel For Mac?</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/local-testing-macos/">How To Connect LambdaTest Tunnel For Mac?</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/local-testing-linux/">How To Connect LambdaTest Tunnel For Linux?</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/local-testing-linux/">How To Connect LambdaTest Tunnel For Linux?</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/underpass-tunnel-application/">Underpass - GUI Application for LambdaTest tunnel</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/underpass-tunnel-application/">Underpass - GUI Application for LambdaTest tunnel</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/advanced-tunnel-features/">Advanced LambdaTest Tunnel Features</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/advanced-tunnel-features/">Advanced LambdaTest Tunnel Features</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/environment-variables-supported-by-lambda-tunnel/">Environment Variables Supported By LambdaTest tunnel</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/environment-variables-supported-by-lambda-tunnel/">Environment Variables Supported By LambdaTest tunnel</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/maven-tunnel-for-locally-hosted-web-applications/">Maven Tunnel For Locally Hosted Web Applications</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/maven-tunnel-for-locally-hosted-web-applications/">Maven Tunnel For Locally Hosted Web Applications</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/sharing-lambda-tunnel/">Sharing LambdaTest Tunnel</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/sharing-lambda-tunnel/">Sharing LambdaTest Tunnel</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/lambda-tunnel-modifiers/">LambdaTest Tunnel Modifiers</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/lambda-tunnel-modifiers/">LambdaTest Tunnel Modifiers</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/docker-tunnel/">Docker Tunnel</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/docker-tunnel/">Docker Tunnel</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/troubleshooting-lambda-tunnel/">Troubleshooting LambdaTest Tunnel</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/troubleshooting-lambda-tunnel/">Troubleshooting LambdaTest Tunnel</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/how-to-set-the-open-file-limit-while-using-tunnel/">Setting Up The Open File Limit While Using Tunnel</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/how-to-set-the-open-file-limit-while-using-tunnel/">Setting Up The Open File Limit While Using Tunnel</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/load-balancing-in-lambda-tunnel/">Load Balancing In LambdaTest Tunnel</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/load-balancing-in-lambda-tunnel/">Load Balancing In LambdaTest Tunnel</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/dedicated-proxy/">Dedicated Proxy For IP Whitelisting</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/dedicated-proxy/">Dedicated Proxy For IP Whitelisting</a></div>
 
-<div className="download_btn mb-10"> <a href="/docs/charles-proxy/">Setting Up Charles Proxy</a></div>
+<div className="download_btn mb-10"> <a href="/support/docs/charles-proxy/">Setting Up Charles Proxy</a></div>
 
 
 <nav aria-label="breadcrumbs">

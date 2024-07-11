@@ -57,97 +57,97 @@ Welcome to SmartUI, an innovative tool by LambdaTest that integrates the robustn
 
 
 <div className="support_main">  
-      <a href="/docs/smartui-cli/">
+      <a href="/support/docs/smartui-cli/">
     <div className="support_inners">
       <h3>Setup with CLI</h3>
       <p>Learn how to perform Visual UI Testing using command line interface.</p>
     </div>
   </a>
-  <a href="/docs/selenium-visual-regression/">
+  <a href="/support/docs/selenium-visual-regression/">
     <div className="support_inners">
       <h3>Setup with Selenium</h3>
       <p>Learn how to perform Visual Regression Testing using Selenium Testing on Smart UI.</p>
     </div>
   </a>
-  <a href="/docs/smart-ui-cypress/">
+  <a href="/support/docs/smart-ui-cypress/">
     <div className="support_inners">
       <h3>Setup with Cypress</h3>
       <p>Learn how to perform Visual Regression Testing using Cypress Testing on Smart UI.</p>
     </div>
   </a>
-  <a href="/docs/playwright-visual-regression/">
+  <a href="/support/docs/playwright-visual-regression/">
     <div className="support_inners">
       <h3>Setup with Playwright</h3>
       <p>Learn how to perform Visual Regression Testing using Playwright Testing on Smart UI.</p>
     </div>
   </a>
-  <a href="/docs/puppeteer-visual-regression/">
+  <a href="/support/docs/puppeteer-visual-regression/">
     <div className="support_inners">
       <h3>Setup with Puppeteer</h3>
       <p>Learn how to perform Visual Regression Testing using Puppeteer Testing on Smart UI.</p>
     </div>
   </a>
-  <a href="/docs/smartui-k6-setup/">
+  <a href="/support/docs/smartui-k6-setup/">
     <div className="support_inners">
       <h3>Setup with K6</h3>
       <p>Learn how to perform Visual Regression Testing using K6 on Smart UI.</p>
     </div>
   </a>
-  <a href="/docs/smart-ui-storybook/">
+  <a href="/support/docs/smart-ui-storybook/">
     <div className="support_inners">
       <h3>Setup with Storybook</h3>
       <p>Learn how to perform Visual Regression Testing using Storybook Testing on Smart UI.</p>
     </div>
   </a>
-  <a href="/docs/appium-visual-regression/">
+  <a href="/support/docs/appium-visual-regression/">
     <div className="support_inners">
       <h3>Setup with Appium</h3>
       <p>Learn how to perform Visual Regression Testing using Appium Testing on Smart UI.</p>
     </div>
   </a>
-  <a href="/docs/smartui-upload-api-v2/">
+  <a href="/support/docs/smartui-upload-api-v2/">
     <div className="support_inners">
       <h3>Upload through API</h3>
       <p>Upload Screenshots through API for Visual Regression Testing</p>
     </div>
   </a>
-  <a href="/docs/smartui-pdf-comparison/">
+  <a href="/support/docs/smartui-pdf-comparison/">
     <div className="support_inners">
       <h3>Compare PDFs</h3>
       <p>Learn how to perform Visual Regression testing of PDFs using SmartUI.</p>
     </div>
   </a>
-  <a href="/docs/smart-ui-build-options/">
+  <a href="/support/docs/smart-ui-build-options/">
     <div className="support_inners">
       <h3>Build Config & Options</h3>
       <p>Learn grouping your screenshots into different builds and map as per your testing suite needs.</p>
     </div>
   </a>
-   <a href="/docs/smartui-project-settings/">
+   <a href="/support/docs/smartui-project-settings/">
     <div className="support_inners">
       <h3>Project Settings</h3>
       <p>Learn how to customize your project, manage approvals, configure comparison parameters, and more.</p>
     </div>
     </a>
-  <a href="/docs/test-settings-options/">
+  <a href="/support/docs/test-settings-options/">
     <div className="support_inners">
       <h3>Advanced Comparison Settings</h3>
       <p>Learn how configure advanced comparison settings options.</p>
     </div>
   </a>
-  <a href="/docs/html-dom-smartui-options/">
+  <a href="/support/docs/html-dom-smartui-options/">
     <div className="support_inners">
       <h3>HTML DOM Config & Options</h3>
       <p>Learn how to handle HTML DOM in Smart UI</p>
     </div>
   </a>  
-  <a href="/docs/smartui-git-branching-strategy">
+  <a href="/support/docs/smartui-git-branching-strategy">
     <div className="support_inners">
       <h3>Git Baseline Branching</h3>
       <p>Learn Git Branching with SmartUI projects.</p>
     </div>
   </a>
-  <a href="/docs/smartui-github-app-integration/">
+  <a href="/support/docs/smartui-github-app-integration/">
     <div className="support_inners">
       <h3>Github App Integration</h3>
       <p>Setup your Github Repos with SmartUI projects and run your CI along with visual regression testing.</p>
@@ -239,7 +239,7 @@ You can change the baseline or comparison image easily. Just click on the settin
       <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/docs/">Support</a>
+      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Smart Visual Testing</span>
