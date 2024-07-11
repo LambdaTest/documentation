@@ -1729,7 +1729,7 @@ module.exports = {
             label: "Test Capabilities",
             link: {
               type: "doc",
-              id: "desired-capabilities",
+              id: "selenium-automation-capabilities",
             },
             items: [
               "view-lighthouse-performance-metrics",

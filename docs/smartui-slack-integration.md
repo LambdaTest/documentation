@@ -2,7 +2,7 @@
 id: smartui-slack-integration
 title: Slack Integration with SmartUI
 sidebar_label: Slack Integration
-description: Effortlessly integrate LambdaTest SmartUI with GitHub App for Visual Regression testing. Follow simple steps to enhance your CI workflow with SmartUI.
+description: Integrate Slack with LambdaTest SmartUI for real-time notifications. Follow our guide to set up, configure, and receive SmartUI job updates directly in your Slack workspace.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

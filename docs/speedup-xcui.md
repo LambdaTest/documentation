@@ -2,7 +2,7 @@
 id: speedup-xcui
 title: Filters for XCUI Tests
 sidebar_label: Filters for XCUI Tests
-description: This document helps you learn how to speed up your XCUI Tests.
+description: Filter XCUI test cases with LambdaTest's REST API. Run specific tests or skip others using customizable parameters. Streamline your testing process effortlessly.
 keywords:
   - XCUI test filters
   - app test automation

@@ -50,7 +50,7 @@ LambdaTest Analytics Modules provide comprehensive insights into your test group
 
 <img loading="lazy" src={require('../assets/images/analytics/atx-usage-by-groups.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
-The Usage by Groups widget provides insights into the performance of your test groups. You can this widget to your dashbaord and apply required filters to view the performance of your test groups. The widget displays the following information:
+The Usage by Groups widget provides insights into the performance of your test groups. You can this widget to your dashboard and apply required filters to view the performance of your test groups. The widget displays the following information:
 
 * **Group Name**: The name of the test group.
 * **Total Test Cases**: The total number of test cases in the group.
