@@ -83,5 +83,5 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 - **3.66.78.89**
 - **13.126.37.58**
 
-## AWS NAT Public IP
+## LambdaTest Integration Tools
 - **3.208.126.109**
