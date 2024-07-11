@@ -44,49 +44,49 @@ slug: visual-ui-testing/
 # Visual UI Testing
 
 <div className="support_main">  
-  <a href="/docs/automated-screenshot-testing/">
+  <a href="/support/docs/automated-screenshot-testing/">
     <div className="support_inners">
       <h3>Automated Screenshot Testing</h3>
       <p>Learn how to capture screenshots in bulk through different desktops and mobile devices running on various OS in a single go.</p>
     </div>
   </a>
-  <a href="/docs/mark-as-bug-in-screenshot-testing/">
+  <a href="/support/docs/mark-as-bug-in-screenshot-testing/">
     <div className="support_inners">
       <h3>Mark As Bug In Screenshot Testing</h3>
       <p>Mark as Bug is a feature that would help you highlight any UI observation from your test sessions on LambdaTest.</p>
     </div>
   </a>
-  <a href="/docs/automated-screenshot-api-for-cross-browser-testing/">
+  <a href="/support/docs/automated-screenshot-api-for-cross-browser-testing/">
     <div className="support_inners">
       <h3>Automated Screenshot API</h3>
       <p>Learn how to capture full-page screenshots of any URL by invoking an API call to LambdaTest cloud servers.</p>
     </div>
   </a>
-  <a href="/docs/taking-screenshots-of-pages-behind-login/">
+  <a href="/support/docs/taking-screenshots-of-pages-behind-login/">
     <div className="support_inners">
       <h3>Taking Screenshots of Pages Behind Login</h3>
       <p>Learn how to to automatically capture bulk, full-paged screenshots of any URL over different browsers.</p>
     </div>
   </a>
-  <a href="/docs/default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing/">
+  <a href="/support/docs/default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing/">
     <div className="support_inners">
       <h3>List Of Mobile And Desktop Browsers</h3>
       <p>The default list of Mobile and Desktop browsers for Automated Screenshot Testing </p>
     </div>
   </a>
-  <a href="/docs/responsive-testing/">
+  <a href="/support/docs/responsive-testing/">
     <div className="support_inners">
       <h3>Responsive Testing</h3>
       <p>Learn how to check the appearance of a website with RWD(Responsive Web Design).</p>
     </div>
   </a>
-  <a href="/docs/mark-as-bug-in-responsive-testing/">
+  <a href="/support/docs/mark-as-bug-in-responsive-testing/">
     <div className="support_inners">
       <h3>Mark As Bug In Responsive Testing</h3>
       <p>Mark as Bug is a feature that would help you highlight any UI observation from your test sessions on LambdaTest.</p>
     </div>
   </a>
-  <a href="/docs/smart-visual-testing/">
+  <a href="/support/docs/smart-visual-testing/">
     <div className="support_inners">
       <h3>Smart Visual Testing</h3>
       <p>Learn how to test and compare two image layouts to determine the differences between them quickly.</p>

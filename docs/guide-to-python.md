@@ -181,7 +181,7 @@ To use your choice of environment for the test you can leverage our Capability G
       <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/docs/">Support</a>
+      <a className="breadcrumbs__link" href="/support/docs/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Guide To Run Python Tests on Selenium Grid</span>

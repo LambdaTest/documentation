@@ -139,13 +139,13 @@ You can also find us on your favourite Cloud Platform:
  <img loading="lazy" src={require('../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon no-zoom"/>
   <ul className="lt_framework_list">
     <li>
-      <a href="/docs/testng-on-hyperexecute-grid/">TestNG</a>
+      <a href="/support/docs/testng-on-hyperexecute-grid/">TestNG</a>
     </li>
     <li>
-      <a href="/docs/junit-on-hyperexecute-grid/">JUnit</a>
+      <a href="/support/docs/junit-on-hyperexecute-grid/">JUnit</a>
     </li>
     <li>
-      <a href="/docs/cucumber-on-hyperexecute-grid/">Cucumber</a>
+      <a href="/support/docs/cucumber-on-hyperexecute-grid/">Cucumber</a>
     </li>
   </ul>
 </div>
@@ -153,13 +153,13 @@ You can also find us on your favourite Cloud Platform:
   <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="JavaScript" width="200" height="200" className="language-icon no-zoom"/>
   <ul className="lt_framework_list">
     <li>
-      <a href="/docs/webdriverio-on-hyperexecute-grid/">WebdriverIO</a>
+      <a href="/support/docs/webdriverio-on-hyperexecute-grid/">WebdriverIO</a>
     </li>
     <li>
-      <a href="/docs/protractor-on-hyperexecute-grid/">Protractor</a>
+      <a href="/support/docs/protractor-on-hyperexecute-grid/">Protractor</a>
     </li>
     <li>
-      <a href="/docs/nightwatch-on-hyperexecute-grid/">Nightwatch</a>
+      <a href="/support/docs/nightwatch-on-hyperexecute-grid/">Nightwatch</a>
     </li>
   </ul>
 </div>
@@ -167,10 +167,10 @@ You can also find us on your favourite Cloud Platform:
  <img loading="lazy" src={require('../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon no-zoom"/>
   <ul className="lt_framework_list">
     <li>
-      <a href="/docs/nunit-on-hyperexecute-grid/">NUnit</a>
+      <a href="/support/docs/nunit-on-hyperexecute-grid/">NUnit</a>
     </li>
     <li>
-      <a href="/docs/specflow-on-hyperexecute-grid/">SpecFlow</a>
+      <a href="/support/docs/specflow-on-hyperexecute-grid/">SpecFlow</a>
     </li>
   </ul>
 </div>
@@ -178,16 +178,16 @@ You can also find us on your favourite Cloud Platform:
   <img loading="lazy" src={require('../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon no-zoom"/>
   <ul className="lt_framework_list">
     <li>
-      <a href="/docs/pyunit-on-hyperexecute-grid/">PyUnit</a>
+      <a href="/support/docs/pyunit-on-hyperexecute-grid/">PyUnit</a>
     </li>
     <li>
-      <a href="/docs/pytest-on-hyperexecute-grid/">PyTest</a>
+      <a href="/support/docs/pytest-on-hyperexecute-grid/">PyTest</a>
     </li>
     <li>
-      <a href="/docs/robot-on-hyperexecute-grid/">Robot</a>
+      <a href="/support/docs/robot-on-hyperexecute-grid/">Robot</a>
     </li>
     <li>
-      <a href="/docs/behave-on-hyperexecute-grid/">Behave</a>
+      <a href="/support/docs/behave-on-hyperexecute-grid/">Behave</a>
     </li>
   </ul>
 </div>
@@ -195,10 +195,10 @@ You can also find us on your favourite Cloud Platform:
   <img loading="lazy" src={require('../assets/images/getting-started/ruby-icon.webp').default} alt="Ruby" width="200" height="200" className="language-icon no-zoom"/>
   <ul className="lt_framework_list">
     <li>
-      <a href="/docs/ruby-on-hyperexecute-grid/">Ruby</a>
+      <a href="/support/docs/ruby-on-hyperexecute-grid/">Ruby</a>
     </li>
     <li>
-      <a href="/docs/capybara-on-hyperexecute-grid/">Capybara</a>
+      <a href="/support/docs/capybara-on-hyperexecute-grid/">Capybara</a>
     </li>
   </ul>
 </div>
@@ -211,13 +211,13 @@ You can also find us on your favourite Cloud Platform:
       <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="JavaScript" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
-          <a href="/docs/jest-on-hyperexecute/">Jest</a>
+          <a href="/support/docs/jest-on-hyperexecute/">Jest</a>
         </li>
         <li>
-          <a href="/docs/mocha-on-hyperexecute/">Mocha</a>
+          <a href="/support/docs/mocha-on-hyperexecute/">Mocha</a>
         </li>
          <li>
-          <a href="/docs/codecept-on-hyperexecute/">CodeceptJs</a>
+          <a href="/support/docs/codecept-on-hyperexecute/">CodeceptJs</a>
         </li>
       </ul>
     </div>
@@ -230,10 +230,10 @@ You can also find us on your favourite Cloud Platform:
   <img loading="lazy" src={require('../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
-          <a href="/docs/pytest-on-hyperexecute/">PyTest</a>
+          <a href="/support/docs/pytest-on-hyperexecute/">PyTest</a>
         </li>
         <li>
-          <a href="/docs/playwright-python-on-hyperexecute/">Python</a>
+          <a href="/support/docs/playwright-python-on-hyperexecute/">Python</a>
         </li>
       </ul>
     </div>
@@ -241,13 +241,13 @@ You can also find us on your favourite Cloud Platform:
   <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="Javascript" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
-          <a href="/docs/playwright-vanillajs-on-hyperexecute/">VanillaJs</a>
+          <a href="/support/docs/playwright-vanillajs-on-hyperexecute/">VanillaJs</a>
         </li>
         <li>
-          <a href="/docs/playwright-codeceptjs-on-hyperexecute/">CodeceptJs</a>
+          <a href="/support/docs/playwright-codeceptjs-on-hyperexecute/">CodeceptJs</a>
         </li>
         <li>
-          <a href="/docs/playwright-jest-on-hyperexecute/">Jest</a>
+          <a href="/support/docs/playwright-jest-on-hyperexecute/">Jest</a>
         </li>
       </ul>
     </div>
@@ -255,7 +255,7 @@ You can also find us on your favourite Cloud Platform:
   <img loading="lazy" src={require('../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
-          <a href="/docs/playwright-junit-on-hyperexecute/">JUnit</a>
+          <a href="/support/docs/playwright-junit-on-hyperexecute/">JUnit</a>
         </li>
       </ul>
     </div>
@@ -263,7 +263,7 @@ You can also find us on your favourite Cloud Platform:
   <img loading="lazy" src={require('../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
-          <a href="/docs/playwright-dotnet-on-hyperexecute/">.Net</a>
+          <a href="/support/docs/playwright-dotnet-on-hyperexecute/">.Net</a>
         </li>
       </ul>
     </div>
@@ -316,10 +316,10 @@ You can also find us on your favourite Cloud Platform:
       <img loading="lazy" src={require('../assets/images/getting-started/cypress_logo.png').default} alt="JavaScript" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
         <li>
-          <a href="/docs/cypressv9-on-hyperexecute/">Cypress v9</a>
+          <a href="/support/docs/cypressv9-on-hyperexecute/">Cypress v9</a>
         </li>
         <li>
-          <a href="/docs/cypressv10-on-hyperexecute/">Cypress v10</a>
+          <a href="/support/docs/cypressv10-on-hyperexecute/">Cypress v10</a>
         </li>
       </ul>
     </div>
