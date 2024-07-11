@@ -354,6 +354,7 @@ div.lambda-demo:hover {
 
 .menu__list-item ul.menu__list .menu__list-item .menu__link--sublist:after {
   display: block !important;
+  margin-right: -6px;
 }
 
 .menu__link--sublist:after {
