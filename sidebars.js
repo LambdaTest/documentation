@@ -1412,18 +1412,27 @@ module.exports = {
     },
     [
       {
-        type: "category",
-        collapsed: true,
-        label: "Settings and Security",
-        link: {
-          type: "doc",
-          id: "settings-and-security",
-        },
-
-        items: ["account-management", "single-sign-on", "scim"],
+        type: "doc",
+        label: "Account Management",
+        id: "account-management",
       },
-    ],
+      {
+        type: "doc",
+        label: "LambdaTest Public IP Ranges",
+        id: "lambdatest-public-ip",
+      },
+      {
+        type: "doc",
+        label: "Single Sign On",
+        id: "single-sign-on",
+      },
+      {
+        type: "doc",
+        label: "SCIM",
+        id: "scim",
+      },
   ],
+],
 
 
   TestManagerSidebar: [
@@ -1720,7 +1729,7 @@ module.exports = {
             label: "Test Capabilities",
             link: {
               type: "doc",
-              id: "desired-capabilities",
+              id: "selenium-automation-capabilities",
             },
             items: [
               "view-lighthouse-performance-metrics",

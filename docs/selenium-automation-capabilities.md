@@ -1,5 +1,5 @@
 ---
-id: desired-capabilities
+id: selenium-automation-capabilities
 title: Desired Capabilities In Selenium To Run Automated Tests
 hide_title: true
 sidebar_label: Desired Capabilities In Selenium
@@ -46,6 +46,7 @@ slug: selenium-automation-capabilities/
 ></script>
 
 # Desired Capabilities In Selenium
+
 ***
 LambdaTest [Desired Selenium Capabilities Generator][1] autogenerates the capabilities class needed to run your Selenium and Appium automation testing scripts on LambdaTest [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). The Selenium capabilities generator will provide you with the entire code of capabilities class based on your mouse-interactions from the UI. Also, you will get the code for your selected configurations in all of the six programming languages i.e. Java, PHP, Ruby, JavaScript, C#, and Python. 
 

@@ -3,7 +3,7 @@ id: chrome-os-web-browser-testing
 title: ChromeOS Web Browser Testing
 hide_title: false
 sidebar_label: ChromeOS Web Browser Testing
-description: LambdaTest provides a powerful solution for testing web apps designed for Chromebooks by offering real Chrome browsers, live interactive testing capabilities, and device emulation for responsive design testing.
+description: LChromeOS web browser testing with features like bug marking, IP geolocation, device controls, session recording, network throttling, and more for seamless testing.
 keywords:
     - ChromeOS
     - ChromeOS webapp

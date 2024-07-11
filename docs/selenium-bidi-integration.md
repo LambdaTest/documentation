@@ -3,7 +3,7 @@ id: selenium-bidi-integration
 title: BiDi Testing with Selenium WebDriver on LambdaTest
 hide_title: false
 sidebar_label: BiDi Testing
-description: LambdaTest provides a powerful solution for testing web apps designed for Chromebooks by offering real Chrome browsers, live interactive testing capabilities, and device emulation for responsive design testing.
+description: Discover BiDi testing with Selenium WebDriver on LambdaTest. Enjoy enhanced automation, seamless cross-browser support, fine-grained control, and future-proof your test suite
 keywords:
   - lambdatest automation
   - selenium automation grid
