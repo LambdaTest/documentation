@@ -3,7 +3,7 @@ id: hyperexecute-integrate-azure-test-plan
 title: Integrate Test Cases 
 hide_title: true
 sidebar_label: Integrate the Test Cases
-description: Integrate your Test Plan with HyperExecute by downloading necessary executable files, configure YAML files, and trigger your test plan for efficient test execution.
+description: To ensure effective test execution, integrate your test plan with HyperExecute by downloading the required executable files, configuring YAML files, and starting your test plan.
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products
@@ -61,7 +61,7 @@ To execute the Test Plan with HyperExecute, you will have to follow the below me
 
 **Step 2:** Add the following command in your YAML file
 
-```bash
+```yaml
 testDiscovery:
   command: testplan-discovery-win.exe <test_plan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token>
   mode: static
@@ -70,13 +70,13 @@ testDiscovery:
 
 **Step 3:** To keep the test case distribution perfectly, make sure you pass the `dynamicAllocation` flag as `true`.
 
-```bash
+```yaml
 dynamicAllocation: true
 ```
 
 **Step 4:** Now, you need to pass the following command in your YAML file. 
 
-```bash
+```yaml
 testRunnerCommand: dotnet test path\of\dll --settings path\of\runsettings --filter '"Name=$test"' ; ./testplan-status-update-win.exe <testplan_id> <test_suite_id> <azure_org> <azure_project> <azure_access_token> <lt_username> <lt_access_key> ; ./test-link-attach-win.exe <azure_org_name> <azure_project_name> <azure_access_token>
 ```
 
@@ -131,5 +131,5 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 OR use this command if you have not exported your username and access key.
 
 ```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
+./hyperexecute --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()} --config YOUR_YAML_FILE
 ```
