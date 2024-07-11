@@ -2,7 +2,7 @@
 id: smartui-github-app-integration
 title: Github App Integration with SmartUI
 sidebar_label: Github App Integration
-description: Effortlessly integrate LambdaTest SmartUI with GitHub App for Visual Regression testing. Follow simple steps to enhance your CI workflow with SmartUI.
+description: Integrate GitHub with LambdaTest SmartUI for seamless CI and visual regression testing. Follow our guide to set up, configure, and run your first test suite.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
