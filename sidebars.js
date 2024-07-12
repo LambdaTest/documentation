@@ -1705,10 +1705,22 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
+            label: "Selenium Capabilities",
+            items: [
+              "selenium-default-capabilities",
+              "selenium-three-capabilities",
+              "selenium-four-capabilities",
+              "lambdatest-selenium-advance-capabilities"
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
             label: "Browser Configuration",
             items: [
               "perform-selenium-automation-on-headless-browsers",
               "custom-chrome",
+              "selenium-set-browser-options"
             ],
           },
           {
@@ -1748,7 +1760,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Other Capabilities",
-            items: ["auto-heal", "command-annotations", "har-log-viewer"],
+            items: ["auto-heal", "command-annotations", "har-log-viewer", "selenium-geolocation-capabilities", "selenium-mask-your-data"],
           },
         ],
       },
