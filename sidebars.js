@@ -1353,6 +1353,11 @@ module.exports = {
             label: "Configure Settings",
             id: "accessibility-devtools-settings",
           },
+          {
+            type: "doc",
+            label: "Update DevTools",
+            id: "accessibility-update-devtools-extension"
+          }
         ],
       },
 
