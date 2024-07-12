@@ -57,7 +57,7 @@ You can generate the capabilities in all of the six programming languages i.e. J
 <div className="support_main">
   <a href = "/support/docs/selenium-default-capabilities/">
   <div className="support_inners">
-    <h3>Selenium Default Capabilites</h3>
+    <h3>Selenium Default Capabilities</h3>
     <p>Use Smart Auto Split Strategy, Matrix Strategy or Hybrid Strategy modes to split and execute tests as per your requirements.</p>
   </div>
   </a>

@@ -2,7 +2,7 @@
 id: selenium-four-capabilities
 title: Selenium Capabilities for version >= 4
 hide_title: false
-sidebar_label: Selenium Capabilites v4
+sidebar_label: Selenium Capabilities v4
 description: This document contains all the desired capabilities that are supported by LambdaTest for Selenium version 4 and above
 keywords:
   - lambdatest automation
@@ -30,7 +30,7 @@ slug: selenium-four-capabilities/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Selenium Capabilites v4",
+          "name": "Selenium Capabilities v4",
           "item": "https://www.lambdatest.com/support/docs/selenium-four-capabilities/"
         }]
       })

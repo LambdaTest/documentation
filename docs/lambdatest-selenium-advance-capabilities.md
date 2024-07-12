@@ -30,7 +30,7 @@ slug: lambdatest-selenium-advance-capabilities/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Advance Capabilites",
+          "name": "Advance Capabilities",
           "item": "https://www.lambdatest.com/support/docs/lambdatest-selenium-advance-capabilities/"
         }]
       })

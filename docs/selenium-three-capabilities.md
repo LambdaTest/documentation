@@ -2,7 +2,7 @@
 id: selenium-three-capabilities
 title: Selenium Capabilities for version <= 3
 hide_title: false
-sidebar_label: Selenium Capabilites v3
+sidebar_label: Selenium Capabilities v3
 description: This document list down all the desired capabilities that are supported by LambdaTest for Selenium version 3 and less
 keywords:
   - lambdatest automation
@@ -30,7 +30,7 @@ slug: selenium-three-capabilities/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Selenium Capabilites v3",
+          "name": "Selenium Capabilities v3",
           "item": "https://www.lambdatest.com/support/docs/selenium-three-capabilities/"
         }]
       })
