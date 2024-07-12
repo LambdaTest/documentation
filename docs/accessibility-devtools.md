@@ -43,11 +43,10 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 LambdaTest Accessibility DevTools is a browser extension designed to help developers and testers identify and resolve accessibility issues within web applications. It simplifies the process of ensuring your website is usable by everyone, regardless of their abilities.
 
-<p align="center">
 <a href="https://chromewebstore.google.com/detail/lambdatest-accessibility/mmbbmjhbidfflcbiffppojapgonepmab" target="_blank">
-<img loading="lazy" src={require('../assets/images/accessibility-testing/download.png').default} alt="automation-dashboard" className="doc_img no-zoom"/>
+<img loading="lazy" src={require('../assets/images/accessibility-testing/download.png').default} alt="automation-dashboard" style={{width: '300px'}} className="doc_img no-zoom"/>
 </a>
-</p>
+
 ## Key Features
 
 - **Accessibility Scanning:** The DevTools can scan entire web pages (full page scan), specific website elements (partial page scan), or even multiple pages simultaneously (multi-page scan) to identify accessibility violations.
