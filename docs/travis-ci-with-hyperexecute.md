@@ -65,7 +65,7 @@ Once you have set up your project, you need to add a `.travis.yml` file to your 
 
 Below is a sample of Travis CI YAML created for your reference:
 
-```bash
+```yaml
 language: node
 
 services:
@@ -77,7 +77,7 @@ before_script:
   - npm install
 
 script:
-  - ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
+  - ./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_name>
 ```
 - Add the `.travis.yml` file to root directory, commit it and then click to **"Trigger a Travis CI build"**.
 

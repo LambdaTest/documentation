@@ -175,7 +175,7 @@ public class Test1 {
 
 A sample YAML file that can run the test scenario mentioned above is shown below. You can learn more about configuring your YAML file by going through [this page](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
-```bash
+```yaml
 ---
 version: 0.1
 globalTimeout: 150

@@ -64,7 +64,7 @@ const capability = {
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-  {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config YOUR_YAML_FILE `}
+  {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
     </CodeBlock>
   </div>
 
