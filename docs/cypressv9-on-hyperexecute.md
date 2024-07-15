@@ -270,7 +270,7 @@ Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hype
 
 #### Sample YAML File for Auto-Split
 
-```bash
+```yaml
 ---
 version: 0.1
 globalTimeout: 90
@@ -396,7 +396,7 @@ Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hype
 
 #### Sample YAML File for Matrix
 
-```bash
+```yaml
 ---
 version: 0.1
 globalTimeout: 90

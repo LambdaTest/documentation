@@ -125,11 +125,11 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 - Run the below command in your terminal at the root folder of the project
 
 ```bash
-./hyperexecute --config <path_of_yaml_file>
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key.
 
 ```bash
-./hyperexecute --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()} --config YOUR_YAML_FILE
+./hyperexecute --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```

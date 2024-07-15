@@ -88,7 +88,7 @@ sourcePayload:
 
 A sample HyperExecute YAML file is added below for your reference.
 
-```bash
+```yaml
 ---
 version: "0.1"
 globalTimeout: 90
@@ -200,7 +200,7 @@ https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-to
 
 In order for HyperExecute to be able to fetch tests from **bitbucket**, **bitbucket-server**, or **github**, the token has to be added in the Job Trigger API. Example given below: 
 
-```bash
+```yaml
 ---
 sourcePayload:
   platform: git

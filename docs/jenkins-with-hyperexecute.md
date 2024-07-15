@@ -94,7 +94,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 
       ```
         curl -O https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe 
-        hyperexecute.exe -u <your_username> -k <your_access_key> -i <path_of_your_yaml_file>
+        hyperexecute.exe -u <your_username> -k <your_access_key> -i <path_of_RELATIVE_PATH_OF_YOUR_YAML_FILE>
       ```
 
     **Note**: Replace the placeholder values in the code with your username and access key for HyperExecute.
@@ -135,7 +135,7 @@ pipeline {
                 # Grant execute permission to the downloaded binary
                 sh name: 'Make Hyperexecute executable', script: 'chmod +x hyperexecute'
                 # Run Hyperexecute with user credentials and configuration file
-                sh name: 'Run Hyperexecute Tests', script: './hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>
+                sh name: 'Run Hyperexecute Tests', script: './hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_path>
             }
         }
     }

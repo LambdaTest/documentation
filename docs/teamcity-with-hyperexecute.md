@@ -102,7 +102,7 @@ To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
 chmod +x hyperexecute
-./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
+./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_name>
 ```
 
 > Since my default agent is mac I am using darwin CLI in the **cURL** command. Kindly change it according to your system default agent. <br /> 

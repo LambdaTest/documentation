@@ -121,5 +121,5 @@ jobs:
     depends_on: download  # Specify dependency on download job
     tasks:
       - name: Run Hyperexecute Tests  # Descriptive task name
-        command: ./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>
+        command: ./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_path>
 ```

@@ -128,9 +128,11 @@ You can download the CLI for your desired platform from the below mentioned link
 
 - If you are macOS user, go to the `run.sh` file or if you are a windows user go to the `run.bat` file and instead of `mvn` command, you need to pass the below mentioned command:
 
-```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <path_of_yaml_file> --download-artifacts
-```
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
 
 > Refer the documentation to understand how to get your [Username and Access key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 

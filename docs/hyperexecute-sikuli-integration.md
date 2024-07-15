@@ -67,7 +67,7 @@ Write your project code and all the other necessary dependencies in your code-re
 
 Here is a sample YAML file, you can configure it with different [YAML flags](/support/docs/hyperexecute-yaml-parameters/) as per your requirements.
 
-```bash
+```yaml
 ---
 version: 0.1
 runson: win
@@ -160,13 +160,15 @@ In case of MacOS, if you get a permission denied warning while executing CLI, si
 Run the below command in your terminal at the root folder of the project:
 
 ```bash
-./hyperexecute --config <path_of_yaml_file>
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
 
-```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <path_of_yaml_file>
-```
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
 
 > Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 

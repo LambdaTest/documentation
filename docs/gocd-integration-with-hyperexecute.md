@@ -116,7 +116,7 @@ A Stage is a group of Jobs and a Job is a work which needs to be executed.
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute
 chmod +x hyperexecute
-./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
+./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_name>
 ```
 
 > Since my default agent is mac I am using darwin CLI in the cURL command. Kindly change it according to your system default agent. <br />
@@ -165,7 +165,7 @@ After the build is successful, go to your HyperExecute Dashboard and check the o
     <job name="Run-Hyperexecute-Tests">
       <run on="ubuntu" />  # Adjust for macOS if needed
       <tasks>
-        <exec command="./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_path>" />
+        <exec command="./hyperexecute --user <your_username> --key <your_access_key> --config <RELATIVE_PATH_OF_YOUR_YAML_FILE_path>" />
       </tasks>
     </job>
   </stage>

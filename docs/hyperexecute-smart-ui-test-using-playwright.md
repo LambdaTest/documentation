@@ -58,6 +58,10 @@ This documentation will guide you step-by-step to execute the Smart UI tests on 
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - To run Smart UI tests, you need to have a **Baseline Image** and a **Comparison Image**. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser.
 
+:::info
+After creating the project, you will get your `PROJECT_TOKEN`. You need to keep this project token safe as it will be used in the further steps below.
+:::
+
 ## Step 1: Configure Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
@@ -160,7 +164,7 @@ In this sample YAML file, we have mentioned:
 - **Pre** command
 - and other necessary YAML Parameters
 
-```bash
+```yaml
 ---
 version: 0.1
 globalTimeout: 150
@@ -203,14 +207,16 @@ jobLabel: ['HYP', 'Playwright' 'SmartUI']
 Run the below command in your terminal at the root folder of the project:
 
 ```bash
-./hyperexecute --config <path_of_yaml_file>
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
-OR use this command if you have not exported your username and access key in the step 2.
+OR use this command if you have not exported your username and access key in the step 3.
 
-```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
-```
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
 
 ## Step 5: Monitor the Test Execution
 

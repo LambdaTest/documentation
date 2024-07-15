@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-smart-ui-sdk-using-cypress
-title: Streamline UI Testing with HyperExecute and Smart UI SDK
+title: UI Testing with Cypress using HyperExecute and Smart UI SDK
 hide_title: false
 sidebar_label: Cypress
 description: Automate Hyperexecute tests seamlessly! Integrate Smart UI SDK with Cypress for efficient & reliable UI testing. 
@@ -70,6 +70,10 @@ The first step is to create a project with the application in which we will comb
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
+:::info
+After creating the project, you will get your `PROJECT_TOKEN`. You need to keep this project token safe as it will be used in the further steps below.
+:::
+
 ## Step 2: Setup Your Test Suite
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
@@ -81,6 +85,23 @@ Download or Clone the code sample for the Maestro framework from the LambdaTest 
 <a href="https://github.com/LambdaTest/hyperexecute-smartui-sdk-cypress" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
+
+### Adding SmartUI function to take screenshot
+You can incorporate SmartUI into your custom `Cypress` test script, as shown below: 
+
+```javascript
+/// <reference types="cypress" />
+describe('Test Case name', () => {
+  beforeEach(() => {
+
+    cy.visit('Required URL')
+  })
+
+  it('SmartUI Snapshot', () => {
+    cy.smartuiSnapshot('Screenshot Name');
+  })
+})
+```
 
 ## Step 3: Setup the CLI in your Test Suite
 
@@ -133,7 +154,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 You need to edit the `PROJECT_TOKEN: "YOUR_PROJECT_TOKEN"` flag and enter your project token that show in the SmartUI app after, creating your project.
 
-```bash
+```yaml
 ---
 version: 0.1
 globalTimeout: 90
@@ -195,14 +216,16 @@ pre:
 Run the below command in your terminal at the root folder of the project:
 
 ```bash
-./hyperexecute --config <path_of_yaml_file>
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
-OR use this command if you have not exported your username and access key in the step 2.
+OR use this command if you have not exported your username and access key in the step 3.
 
-```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <path_of_yaml_file>
-```
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
 
 ## Step 6: Monitor the Test Execution
 
