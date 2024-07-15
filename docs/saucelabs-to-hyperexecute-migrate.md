@@ -14,6 +14,9 @@ site_name: LambdaTest
 slug: saucelabs-to-hyperexecute-migrate/
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -106,7 +109,7 @@ set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 
 **Sample YAML File**
 
-```bash
+```yaml
 ---
 version: 0.2
 globalTimeout: 150
@@ -225,9 +228,11 @@ public static final String Hub_URL = "https://" + user_name + ":" + access_key +
 
 Run the below command in your downloaded CLI to trigger your test scripts in the HyperExecute Platform.
 
-```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name> --download-artifacts --force-clean-artifacts"
-```
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
 
 > In case of MAC, if you get a permission denied warning while executing CLI, simply run `chmod u+x ./hyperexecute` to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 

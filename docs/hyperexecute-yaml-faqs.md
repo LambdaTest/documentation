@@ -46,7 +46,7 @@ slug: hyperexecute-yaml-faqs/
 
 HyperExecute offers you the option to use our AutoSplit mode. You can learn more about the AutoSplit mode by going through [this page](/support/docs/hyperexecute-auto-split-strategy/). A sample YAML file that supports AutoSplit looks like this:
 
-```bash
+```yaml
 ---
 version: 0.1
 runson: linux
@@ -99,7 +99,7 @@ Moreover, add one of the following parameters in the `preDirectives` field depen
 
 Therefore, if you want to use a tunnel for connecting HyperExecute with your organization (that is working with a maven project), you should configure your YAML file like this:
 
-```bash
+```yaml
 ---
 version: 0.1
 runson: linux

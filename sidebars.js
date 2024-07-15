@@ -618,7 +618,7 @@ module.exports = {
                     type: "category",
                     label: "Selenium",
                     collapsed: true,
-                    items: ["hyperexecute-smart-ui-sdk-selenium-javascript"],
+                    items: ["hyperexecute-smart-ui-sdk-selenium-javascript", "hyperexecute-smart-ui-sdk-selenium-csharp"],
                   },
                   {
                     type: "doc",
@@ -1935,6 +1935,7 @@ module.exports = {
       "parallel-playwright-test",
       "migrate-playwright-tests",
       "playwright-test-execution-setup",
+      "playwright-bundled-browser-support",
       "playwright-caps",
       "local-testing-playwright",
       "playwright-playwrighttest",

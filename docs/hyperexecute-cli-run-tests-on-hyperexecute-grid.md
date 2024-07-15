@@ -287,11 +287,11 @@ The secrets file contains highly sensitive information and must be strictly excl
 
 ## Trigger your Test from HyperExecute CLI 
 
-In order to trigger your job on HyperExecute, execute the following command in your terminal. You will need to insert the name of your YAML file in place of the `YOUR_YAML_FILE` before running this command.
+In order to trigger your job on HyperExecute, execute the following command in your terminal. You will need to insert the name of your YAML file in place of the `RELATIVE_PATH_OF_YOUR_YAML_FILE` before running this command.
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-  {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config YOUR_YAML_FILE `}
+  {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
     </CodeBlock>
   </div>
 

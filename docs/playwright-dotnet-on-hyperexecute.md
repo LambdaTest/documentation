@@ -163,7 +163,7 @@ In this sample YAML file, we have mentioned:
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
-```bash
+```yaml
 ---
 version: 0.1
 globalTimeout: 90
@@ -217,14 +217,17 @@ jobLabel: [playwright-Dotnet, linux, autosplit]
 Run the below command in your terminal at the root folder of the project:
 
 ```bash
-./hyperexecute --config <path_of_yaml_file>
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
 
-```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
-```
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
+
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_1.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 

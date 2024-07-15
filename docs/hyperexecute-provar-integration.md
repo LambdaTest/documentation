@@ -160,7 +160,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 Replace the `pre` command with your own command that discovers the desired **.testcase** files. 
 
-```bash
+```yaml
 ---
 version: 0.2
 globalTimeout: 150
@@ -201,14 +201,16 @@ framework:
 Run the below command in your terminal at the root folder of the project:
 
 ```bash
-./hyperexecute --config <path_of_yaml_file>
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
 
-```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <path_of_yaml_file>
-```
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
 
 ## Step 5: Monitor Your Tests
 

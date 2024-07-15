@@ -154,7 +154,7 @@ Enter your `<APP_ID>` and `<TEST_SUITE_ID>` in the YAML file that you have fetch
 
 <TabItem value="bash" label="Auto Sharding" default>
 
-```bash
+```yaml
 ---
 version: "0.2"
 globalTimeout: 150
@@ -196,7 +196,7 @@ jobLabel: ['HYP', 'Espresso', 'Auto Sharding']
 
 You can use either the `appId` and `testSuiteAppId` or provide the path of the application using `appPath` and `testSuitePath`. Both examples are given below.
 
-```bash
+```yaml
 ---
 version: "0.2"
 globalTimeout: 150
@@ -265,14 +265,16 @@ The uploadArtefact flag is currently not available for Espresso framework tests.
 Run the below command in your terminal at the root folder of the project:
 
 ```bash
-./hyperexecute --config <path_of_yaml_file>
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
 
-```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <path_of_yaml_file>
-```
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
 
 > Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 

@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-smart-ui-sdk-using-puppeteer
-title: Streamline UI Testing with HyperExecute and Smart UI SDK
+title: UI Testing with Puppeteer using HyperExecute and Smart UI SDK
 hide_title: false
 sidebar_label: Puppeteer
 description: Streamline Hyperexecute UI testing with Smart UI SDK and Puppeteer. Write robust, end-to-end tests effortlessly. 
@@ -68,6 +68,10 @@ With the application, create a project in which we will merge all of your builds
 3. Choose the **CLI** or **Web** platform to run your `SDK` tests on.
 4. Include the project name, the approvers of the changes that were discovered, and tags for any filters or simple navigation.
 5. Select **Submit** by clicking.
+
+:::info
+After creating the project, you will get your `PROJECT_TOKEN`. You need to keep this project token safe as it will be used in the further steps below.
+:::
 
 ## Step 2: Setup Your Test Suite
 
@@ -143,7 +147,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 Edit the `PROJECT_TOKEN: "YOUR_PROJECT_TOKEN"` flag and enter your project token that show in the SmartUI app after, creating your project.
 
-```bash
+```yaml
 ---
 version: 0.1
 globalTimeout: 90
@@ -196,14 +200,16 @@ pre:
 Run the below command in your terminal at the root folder of the project:
 
 ```bash
-./hyperexecute --config <path_of_yaml_file>
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
-OR use this command if you have not exported your username and access key in the step 2.
+OR use this command if you have not exported your username and access key in the step 3.
 
-```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <path_of_yaml_file>
-```
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
 
 ## Step 6: Monitor the Test Execution
 
