@@ -15,6 +15,9 @@ site_name: LambdaTest
 slug: tosca-integration-with-hyperexecute-using-commander/
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -152,7 +155,7 @@ save
 Thus, you might see a security popup on whether to allow the execution of the tool or not. You can allow it from your **System Preferences** → **Security & Privacy** → **General** tab.
 
   **Sample Hyperexecute YAML file for TOSCA**:
-  ```bash
+  ```yaml
 ---
 version: "0.1"
 matrix:
@@ -181,9 +184,12 @@ uploadArtefacts:
 
 - After configuring the YAML, execute it via terminal using the following command:
 
-```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
-```
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
+
 
 You have successfully integrated your Tricentis Tosca project with HyperExecute.
 

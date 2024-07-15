@@ -14,6 +14,9 @@ site_name: LambdaTest
 slug: hyperexecute-how-to-run-tests-using-local-selenium-drivers/
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -66,7 +69,7 @@ Download or Clone the code sample for the TestNG from the LambdaTest GitHub repo
 - Use the `platform` flag to define individual platform configurations (OS, browser/device, capabilities).
 - **(Optional)** Utilize the `config` flag to set global capabilities applicable to all platforms.
 
-```bash
+```yaml
 ---
 version: 0.1
 globalTimeout: 150
@@ -170,9 +173,11 @@ The number of tasks created = **(total number of platforms) * (parallelism)** = 
 - Execute your tests as usual through your test framework (e.g., JUnit, TestNG).
 - HyperExecute automatically intercepts Selenium commands and routes them to its platform.
 
-```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <your_yaml_file_name>
-```
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/how-to-guide/local-web-driver.png').default} alt="Image"  className="doc_img"/>
 

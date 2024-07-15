@@ -140,7 +140,7 @@ Enter your local path of the code repository instead of `<YOUR_LOCAL_APP_PATH>` 
 
 Enter your `<APP_ID>` in the YAML file (line 52) that you have fetched in the above step.
 
-```bash
+```yaml
 ---
 # Define the version of the configuration file
 version: "0.2"
@@ -217,14 +217,16 @@ jobLabel: [maestro-testing, android, autosplit]
 Run the below command in your terminal at the root folder of the project:
 
 ```bash
-./hyperexecute --config <path_of_yaml_file>
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
 
-```bash
-./hyperexecute --user <your_username> --key <your_access_key> --config <path_of_yaml_file>
-```
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/1.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 

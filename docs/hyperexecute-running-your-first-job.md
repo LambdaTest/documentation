@@ -109,13 +109,13 @@ We will be taking care of everything one by one, just follow the steps given bel
 **Step 8:** Once your Job is running, you can click on **View Test Results** to navigate to HyperExecute Dashboard where you can see the job getting executed along with the test results.
 
 :::note
-The generic command required to initiate test execution is given below. You will need to insert the name of your YAML file in place of the `YOUR_YAML_FILE` before running this command. (Skip if you already used the command from Step 6. )
+The generic command required to initiate test execution is given below. You will need to insert the name of your YAML file in place of the `RELATIVE_PATH_OF_YOUR_YAML_FILE` before running this command. (Skip if you already used the command from Step 6. )
 
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config "YOUR_YAML_FILE" `}
-    </CodeBlock>
-  </div>
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
 
 :::tip
 In case of MAC, if you get a permission denied warning while executing CLI, simply run `chmod u+x ./hyperexecute` to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General** tab.
