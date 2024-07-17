@@ -2,7 +2,7 @@
 id: analytics-widget-filter-by-regex
 title: Analytics Widgets - Filter by Regex
 sidebar_label: Filter using Regex
-description: Filter all the .
+description: Filter all the data with Regex patterns to get insights on your test runs. Learn how to use Regex in the analytics widget.
 keywords:
   - analytics
   - insights
