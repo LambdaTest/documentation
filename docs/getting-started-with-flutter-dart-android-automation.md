@@ -1,8 +1,8 @@
 ---
 id: getting-started-with-flutter-dart-android-automation
-title: Flutter Dart Testing On LambdaTest
+title: Flutter Dart Testing On LambdaTest - Android
 sidebar_label: Flutter Dart Android
-description: Now you can run your automation scripts for Flutter dart on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts for Flutter dart on LambdaTest online grid of 5000+ real devices.
 keywords:
 - flutter
 - lambdatest
@@ -34,8 +34,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Espresso Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-espresso-testing/"
+          "name": "Getting Started With Flutter Tests on LambdaTest",
+          "item": "https://www.lambdatest.com/support/docs/getting-started-with-flutter-dart-android-automation/"
         }]
       })
     }}
@@ -76,7 +76,7 @@ import TabItem from '@theme/TabItem';
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \
 --form 'appFile=@"/Users/macuser/Downloads/sample-flutter-app.apk"' \
---form 'type="espresso-android"'`}
+--form 'type="flutter-android"'`}
   </CodeBlock>
 </div>
 
@@ -86,7 +86,7 @@ import TabItem from '@theme/TabItem';
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/varunkumarb/Downloads/proverbial_android.apk"" --form "type=\"espresso-android\""`}
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/winuser/Downloads/proverbial_android.apk"" --form "type=\"flutter-android\""`}
   </CodeBlock>
 </div>
 
@@ -95,7 +95,7 @@ import TabItem from '@theme/TabItem';
 
 :::note
 
-Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the last step.
+Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789123456789`` and will be used in the last step.
 
 :::
 
@@ -114,7 +114,7 @@ Upload your **test suite** (.apk file) to the LambdaTest servers using our **RES
   {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" \\
 --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' \
 --form 'appFile=@"/Users/macuser/Downloads/sample-flutter-testsuite.apk"' \
---form 'type="espresso-android"'`}
+--form 'type="flutter-android"'`}
   </CodeBlock>
 </div>
 
@@ -124,7 +124,7 @@ Upload your **test suite** (.apk file) to the LambdaTest servers using our **RES
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/varunkumarb/Downloads/proverbial_android_expressotest.apk"" --form "type=\"espresso-android\""`}
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"C:/Users/winuser/Downloads/proverbial_android_expressotest.apk"" --form "type=\"flutter-android\""`}
   </CodeBlock>
 </div>
 
@@ -133,7 +133,7 @@ Upload your **test suite** (.apk file) to the LambdaTest servers using our **RES
 
 :::note
 
-Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
+Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789123456789`` and will be used in the next step.
 
 :::
 
@@ -210,9 +210,9 @@ The following capabilities are supported:
 
 1. **app:** Enter the app id generated while uploading the app. Example:`lt://APP123456789123456789`
 2. **testSuite:** Enter the test suite id generated while uploading the test suite. Example: `lt://APP123456789123456789`
-3. **device:** Enter the name and os version of the device in “DeviceName-OSVersion” format. Example: `Pixel 3 XL-9` or `Galaxy S21 Ultra 5G-11`.
+3. **device:** Enter the name and os version of the device in “DeviceName-OSVersion” format. Example: `Pixel 6-12` or `Galaxy S21 Ultra 5G-11`. You can also choose to use regular expression for device name such as `Pixel.*-12`.
 4. **video:** Generate video for all the tests that have run. Example: `true`.
-5. **queueTimeout:** Enter the time in seconds after which you want your build to timeout from queue for device allocation. Example: `900`.
+5. **queueTimeout:** Enter the time in seconds for total execution time of the build. Example: `900`.
 6. **testTimeout:** Max wait time for test execution (default value - 900 secs)
 7. **deviceLog:** Boolean value to generate device logs. Example: `true`. 
 8. **build:** Set the name of the Espresso test build. Example: `My Flutter Build`.
@@ -229,12 +229,18 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 --data-raw '{
     "app" : "app_id",
     "testSuite": "testsuite_id",
-    "device" :  ["Galaxy S20-10","Galaxy S20-10","Redmi Note 9-10","Galaxy S10+-10","Galaxy S7 edge-8","Galaxy S9+-8"],
+    "device" :  ["Galaxy S22 5G-12","Galaxy S24-14","Pixel 7-13","Galaxy S10+-10"],
     "queueTimeout": 10800,
     "deviceLog": true,
     "build" : "Sample-Flutter"
 }'
 ```
+
+:::tip
+
+Do note that Flutter builds when run in parallel, result in separate builds being generated for each parallel run.
+
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -250,7 +256,7 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Espresso Testing 
+      Flutter Testing 
       </span>
     </li>
   </ul>
