@@ -36,6 +36,8 @@ slug: analytics-widget-filter-by-regex/
       })
     }}
 ></script>
+---
+import VideoEmbed from '../src/component/videoEmbed';
 
 ## About Regex Mode
 
