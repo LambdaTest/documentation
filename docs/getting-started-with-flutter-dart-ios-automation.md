@@ -182,7 +182,7 @@ The following capabilities are supported:
 6. **build:** Set the name of the Flutter iOS test build. Example: `My Flutter iOS`.
 7. **deviceLog:** Boolean value to generate device logs. Example: `true`.  
 8. **tunnel:** Boolean value to run build via Tunnel. Example: `true`.  
-9. **tunnelName:** Name of the tunnel to be used in conjuction with `tunnel` capability.  
+9. **tunnelName:** Name of the tunnel to be used in conjunction with `tunnel` capability.  
 10. **region:** String to device the region from which device will be allocated. Example - `eu`,`us`,`ap`.
 
 
