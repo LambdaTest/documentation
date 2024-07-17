@@ -2497,11 +2497,6 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Getting Started with Flutter Automation",
-        id: "getting-started-with-flutter-dart-android-automation",
-      },
-      {
-        type: "doc",
         label: "JUnit Report",
         id: "espresso-junit-report",
       },
@@ -2562,6 +2557,29 @@ module.exports = {
     ],
   ],
 
+  FlutterTestingSidebar: [
+    {
+      type: 'link',
+      label: 'Back',
+      href: '/docs/',
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "doc",
+        label: "Getting Started with Flutter Android",
+        id: "getting-started-with-flutter-dart-android-automation",
+      },
+      {
+        type: "doc",
+        label: "Getting Started with Flutter iOS",
+        id: "getting-started-with-flutter-dart-ios-automation",
+      },
+    ],
+  ],
+  
   VisualRegressionTestingSidebar: [
     {
       type: "link",
