@@ -2811,6 +2811,7 @@ module.exports = {
     "analytics-dashboard-edit-layout",
     "analytics-dashboard-features",
     "analytics-widget-drill-down-export",
+    "analytics-widget-filter-by-regex",
     "analytics-faqs",
   ],
 
