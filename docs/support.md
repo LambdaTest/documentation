@@ -102,6 +102,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/getting-started-with-appium-testing/"><p className="p_home_inners">Appium Testing</p></a>
         <a href="/support/docs/getting-started-with-espresso-testing/"><p className="p_home_inners">Espresso Testing</p></a>
         <a href="/support/docs/getting-started-with-xcuitest/"><p className="p_home_inners">XCUI Testing</p></a>
+        <a href="/support/docs/getting-started-with-flutter-dart-android-automation/"><p className="p_home_inners">Flutter Testing</p></a>
         <a href="/support/docs/app-automation-on-emulators-simulators/"><p className="p_home_inners">Virtual Devices</p></a>
       </div>
     </div>
