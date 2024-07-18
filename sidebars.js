@@ -995,7 +995,22 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "ChromeOS Testing",
-        items: ["chrome-os-web-browser-testing", "chrome-os-app-testing"],
+        link: {
+          type: "doc",
+          id: 'chrome-os-testing'
+        },
+        items: [
+          {
+            type: "doc",
+            label: "ChromeOS Web BrowserTesting",
+            id: 'chrome-os-web-browser-testing'
+          },
+          {
+            type: "doc",
+            label: "ChromeOS App Testing",
+            id: "chrome-os-app-testing"
+          }
+        ],
       },
       "developer-tools",
       "mark-as-bug-in-real-time-testing",
