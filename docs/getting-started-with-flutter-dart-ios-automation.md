@@ -52,7 +52,7 @@ In this guide, we will explore how to run your first Flutter Dart test on an iOS
 
 :::tip
 
-If you do not have any **Flutter iOS** test suite (.zip), you can run your sample tests on LambdaTest by using our sample :link: [Flutter iOS](https://prod-mobile-artefacts.lambdatest.com/assets/docs/sample-flutter-app.apk).
+If you do not have any **Flutter iOS** test suite (.zip), you can run your sample tests on LambdaTest by using our sample :link: [Flutter iOS](https://prod-mobile-artefacts.lambdatest.com/assets/docs/Flutter_iOS.zip).
 
 :::
 
@@ -140,7 +140,6 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
     "video": true,
     "deviceLog": true,
     "queueTimeout": 9000,
-    "IdleTimeout": 600,
     "network": true,
     "build": "Flutter iOS"
 }'
@@ -200,7 +199,6 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
     "video": true,
     "deviceLog": true,
     "queueTimeout": 9000,
-    "IdleTimeout": 600,
     "network": true,
     "build": "Flutter iOS - Parallel"
 }'
