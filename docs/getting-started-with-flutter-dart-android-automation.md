@@ -190,8 +190,8 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
   <div className="lambdatest__codeblock">
     <CodeBlock className="lamguage-powershell">
 
-```
-curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"], \"deviceLog\": true,\"network\": false,\"build\" : \"Sample-Flutter\"}"
+```bash
+curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/flutter/android/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"], \"deviceLog\": true,\"network\": false,\"build\" : \"Sample-Flutter\"}"
 ```
 
   </CodeBlock>
@@ -202,7 +202,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/f
 
 ### Step 4: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://accounts.lambdatest.com/login).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://appautomation.lambdatest.com/build).
 
 ## Capabilities Supported
 
@@ -215,7 +215,7 @@ The following capabilities are supported:
 5. **queueTimeout:** Enter the time in seconds for total execution time of the build. Example: `900`.
 6. **testTimeout:** Max wait time for test execution (default value - 900 secs)
 7. **deviceLog:** Boolean value to generate device logs. Example: `true`. 
-8. **build:** Set the name of the Espresso test build. Example: `My Flutter Build`.
+8. **build:** Set the name of your Flutter test build. Example: `My Flutter Build`.
 
 
 ## Running Tests in Parallel
@@ -223,7 +223,7 @@ The following capabilities are supported:
 You can run tests in parallel on multiple devices by passing the device name in comma separated format in the execute command as show below:
 
 ```bash
-curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/build' \
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/android/build' \
 --header 'Authorization: Basic <Enter_Basic_Auth>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
