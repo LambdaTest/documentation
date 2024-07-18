@@ -70,7 +70,6 @@ You can perform Selenium automation testing from the below-listed countries.
 | Bangladesh      | "BD" | 
 | Belarus         | "BY" | 
 | Belgium         | "BE" | 
-| Bosnia and Herzegovina| "BA" | 
 | Brazil          | "BR" | 
 | Bulgaria        | "BG" | 
 | Cambodia        | "KH" | 
