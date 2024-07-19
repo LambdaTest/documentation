@@ -167,7 +167,7 @@ Make sure to enter your **basic authentication**, **app url** (generated in the 
     <CodeBlock className="language-bash">
 
 ```bash
-curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/build' \
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/android/build' \
 --header 'Authorization: Basic <Enter_Basic_Auth>' \
 --header 'Content-Type: application/json' \
 --data-raw '{

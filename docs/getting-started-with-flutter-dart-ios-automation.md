@@ -177,7 +177,7 @@ The following capabilities are supported:
 2. **device:** Enter the name and os version of the device in “DeviceName-OSVersion” format. Example: `iPhone 14-16` or `iPhone 15 Pro-17`. You can also choose to use regular expression for device name such as `iPhone.*-16`.
 3. **video:** Generate video for all the tests that have run. Example: `true`.
 4. **queueTimeout:** Enter the time in seconds for total execution time of the build. Example: `9000`. Minimum queueTimeout: `1800`, Maximum queueTimeout: `10800`
-5. **idleTimeout:** Enter the time in seconds after which you want your build to timeout while waiting for command. Example: `600`. Minimum queueTimeout: `120`, Maximum queueTimeout: `1080`
+5. **network:** Boolean value to generate network logs. Example: `"network": true`.  
 6. **build:** Set the name of the Flutter iOS test build. Example: `My Flutter iOS`.
 7. **deviceLog:** Boolean value to generate device logs. Example: `true`.  
 8. **tunnel:** Boolean value to run build via Tunnel. Example: `true`.  
