@@ -1836,3 +1836,4 @@ table th:not(:last-child), table td:not(:last-child){border-right: 1px solid #d4
 
 
 .support_container{display: flex;gap:100px}
+.docusaurus-theme-github-codeblock .theme-code-block{max-height: 300px;overflow: auto;}

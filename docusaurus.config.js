@@ -29,7 +29,7 @@ module.exports = {
     //   defer: true,
     // }
   ],
-  themes: ['docusaurus-theme-search-typesense'],
+  themes: ['docusaurus-theme-search-typesense', 'docusaurus-theme-github-codeblock'],
 
   themeConfig: {
     // docs: {
