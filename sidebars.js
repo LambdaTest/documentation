@@ -92,11 +92,11 @@ module.exports = {
           id: "hyperexecute-cli-run-tests-on-hyperexecute-grid",
         },
         items: [
-          {
-            type: "doc",
-            label: "HyperExecute GUI for CLI",
-            id: "hyperexecute-cli-gui",
-          },
+          // {
+          //   type: "doc",
+          //   label: "HyperExecute GUI for CLI",
+          //   id: "hyperexecute-cli-gui",
+          // },
           {
             type: "doc",
             label: "GitIgnore and HyperexecuteIgnore",
