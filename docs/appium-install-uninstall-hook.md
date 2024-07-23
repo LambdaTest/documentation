@@ -110,24 +110,24 @@ driver.execute_script("lambda-install-app", data)
 <CodeBlock className="language-powershell">
 
 ```python
-# Payload required while uninstalling app
-data = {
-  "appPackage": "sampleapp.ios.app",
-}
+# Send the current app in background
+driver.background_app(-1)
 
-driver.execute_script("lambda-uninstall-app", data)
 
 # Payload required while installing the new upgrade 
 data = {
   "appUrl": "lt://APPID",
+  "retainData": True
 }
 driver.execute_script("lambda-install-app", data)
 
 # Note : In case of enterprise app, user have to pass the below payload 
 data = {
   "appUrl": "lt://APPID",
-  "resignApp": False
+  "resignApp": False,
+  "retainData": True
 }
+
 ```
 </CodeBlock>
 </div>
