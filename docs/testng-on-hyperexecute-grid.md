@@ -165,58 +165,9 @@ In this sample YAML file, we have mentioned:
 - **Reports and Artefacts** that will be generated after the completion of tests
 - and other necessary YAML Parameters
 
-```yaml
----
-version: 0.2
-globalTimeout: 150
-testSuiteTimeout: 150
-testSuiteStep: 150
 
-runson: linux
-
-autosplit: true
-retryOnFailure: true
-
-maxRetries: 1
-concurrency: 4
-
-shell: bash
-
-env:
-  # PAT: ${{ .secrets.testKey }}
-  CACHE_DIR: m2_cache_dir
-
-cacheKey: '{{ checksum "pom.xml" }}'
-cacheDirectories:
-  - .m2
-
-pre:
-  # Skip execution of the tests in the pre step
-  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
-
-post:
-  - ls target/surefire-reports/
-
-mergeArtifacts: true
-uploadArtefacts:
- - name: ExecutionSnapshots
-   path:
-    - target/surefire-reports/html/**
-
-report: true
-partialReports:
-  location: target/surefire-reports/html
-  type: html
-  frameworkName: extent
-
-framework:
-  name: maven/testng
-  defaultReports: false
-  flags:
-    - "-Dplatname=linux"
-    - "--file=pom02.xml"
-
-jobLabel: [selenium-testng, linux, autosplit]
+```yaml reference title="HyperExecute AutoSplit YAML"
+https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/testng_hyperexecute_autosplit_sample.yaml
 ```
 
 ### Step 4: Execute your Test Suite
