@@ -60,6 +60,7 @@ Learn how to use Playwright with JavaScript to automate web application testing 
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
+cd playwright-test-js
 ```
 
 2. Install the npm dependencies.

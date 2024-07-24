@@ -59,6 +59,7 @@ Learn how to use Playwright with Jest framework to automate web application test
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
+cd playwright-jest-js
 ```
 
 2. Install the npm dependencies.
