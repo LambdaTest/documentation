@@ -72,60 +72,42 @@ HyperExecute CLI provides different command-line flags that let you control the 
 
 The various flags that are supported are listed below. 
 
-| Flags | Type | Description
-|---|---|---|
-| [-h, --help](#-h---help) | NA | Help for hyperexecute. |
-| [--version](#--version) | NA | Prints the HyperExecute CLI version. |
-| [-u, --user](#-u---user) | string | LambdaTest username. |
-| [-k, --key](#-k---key) | string | LambdaTest Access Key. |
+| Flags | Type | Description|
+|-------|------|------------|
 | [--concurrency](#--concurrency) | Numerical | Indicates the number of concurrent sessions on HyperExecute. | 
 | [--config](#--config) | string | Custom location for hyperexecute.yaml. |
-| [--no-track](#--no-track) | NA | Stops updating the progress of the uplodaed jobs. |
-| [--download-artifacts](#--download-artifacts) | NA | Whether artifacts have to be downloaded or not. |
-| [--force-clean-artifacts](#--force-clean-artifacts) | NA | Download the updated artifacts of your job. |
-| [--download-report](#--download-report) | NA | Whether reports have to be downloaded or not. |
+| [--download-artifacts](#--download-artifacts) | NA | Download the artifacts for a job. |
+| [--download-artifacts-path](#--download-artifacts-path) | string | Path of the directory to download artifacts for a job |
+| [--download-artifacts-zip](#--download-artifacts-zip) | NA | Download the artifacts for a job as a zip. |
 | [--download-logs](#--download-logs) | NA | Downloads console logs of your every tests of a job. |
+| [--download-report](#--download-report) | NA | Whether reports have to be downloaded or not. |
+| [--force-clean-artifacts](#--force-clean-artifacts) | NA | Download the updated artifacts of your job. |
+| [-h, --help](#-h---help) | NA | Help for hyperexecute. |
+| [--job-secret-file](#--job-secret-file) | string | Enter your secrets flie path |
+| [-k, --key](#-k---key) | string | LambdaTest Access Key. |
+| [--labels](#--labels) | string | Incorporates the labels in your job. |
+| [--no-track](#--no-track) | NA | Stops updating the progress of the uplodaed jobs. |
 | [--preserve-payload](#--preserve-payload) | string | Preserves the job payload after its successful completion. |
 | [-s --scan](#-s---scan) | NA | Runs the network logs |
-| [analyze](#analyze) | NA | Shows the project description of the user. |
-| [--labels](#--labels) | string | Incorporates the labels in your job. |
+| [--server-port](#--server-port) | string | Port number for the server (default "9191") |
 | [-t, --target-directory](#-t---target-directory) | string | Directory where the test script has to be uploaded. |
 | [--target-path](#--target-path) | string | Upload the files and folders as part of the suite payload. |
 | [--tests-per-tunnel](#--tests-per-tunnel) | INT | Run the number of tests via tunnel. |
 | [-z, --use-zip](#-z---use-zip) | string | Path of the zip file that needs to be uploaded. |
-| [--verbose](#--verbose) | NA | Logging of every proxy request to stdout. |
+| [-u, --user](#-u---user) | string | LambdaTest username. |
 | [--vars](#--vars) | string |  Method used to name keys. |
+| [--verbose](#--verbose) | NA | Logging of every proxy request to stdout. |
+| [--version](#--version) | NA | Version of the HyperExecute CLI. |
 
-### `-h, --help`
-You can run this command if you need any help in understanding the definition of the flags on the CLI itself. However, if you need any further assistance we're just a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**ping**</span> away. 
-```bash
---help
-```
-***
-### `--version`
-This flag indicates the version of HyperExecute CLI binary that you are running on your system. 
-```bash
---version 
-```
-***
-### `-u, --user`
-The username of your LambdaTest account. 
-```bash
---user "randomdeveloper"
-```
-***
-### `-k, --key`
-The access key of your LambdaTest account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).
-```bash
---key "your_access_key"
-```
-***
+| [analyze](#analyze) | NA | Shows the project description of the user. |
+
 ### `--concurrency`
 This flag allows you to define the number of concurrent sessions running on HyperExecute. For more information on concurrency, go to [this page](/support/docs/hyperexecute-auto-split-strategy/).
 ```bash
 --concurrency 2
 ```
 ***
+
 ### `--config`
 
 This flag allows you to enter a custom location where you can download the HyperExecute YAML file. To learn more about the HyperExecute YAML, visit [this page](/support/docs/deep-dive-into-hyperexecute-yaml/).  
@@ -133,28 +115,39 @@ This flag allows you to enter a custom location where you can download the Hyper
 --config "/home/users/work/yaml/"  
 ```
 ***
-### `--no-track`
-You can track the progress of your uploaded jobs with HyperExecute. However, this flag allows you to opt out of receiving those updates. 
-
-```bash
---no-track
-```
-***
 
 ### `--download-artifacts`
-This flag allows you to download all the test related results that are generated by your testing framework. You can use this key if you want to download the artifacts. 
+This flag allows you to download all the test related results that are generated by your testing framework. You can use this key if you want to download the artifacts.
 
-  - **--download-artifacts-path**: In case you want the artifacts to be downloaded to a specific directory, please provide the exact path followed by the flag as shown in the example below.
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts`}
+  </CodeBlock>
+</div>
 
-```bash
---download-artifacts-path "/home/users/work/yaml/artifacts/"
-```
-  - **--download-artifacts-zip** : If you want to download the zip file of the artifacts for a job.
+
+### `--download-artifacts-path`
+In case you want the artifacts to be downloaded to a specific directory, please provide the exact path followed by the flag as shown in the example below.
+
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts-path "PATH_OF_YOUR_SPECIFIED_DIRECTORY"`}
+  </CodeBlock>
+</div>
+
+### `--download-artifacts-zip`
+If you want to download the zip file of the artifacts for a job.
+
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts-zip`}
+  </CodeBlock>
+</div>
 
 ***
 
-### `--force-clean-artifacts`
-This flag will download the new artifacts of your job and will store it into the `artifacts` folder. If you have previously downloaded artifacts, it will be renamed as `artifacts-old`. 
+### `--download-logs`
+This flag allows you to download the detailed console logs of your entire job including your individual tests and your pre and discovery phase.
 
 ***
 
@@ -163,9 +156,75 @@ This flag allows you to download all the test related results that are generated
 
 ***
 
-### `--download-logs`
-This flag allows you to download the detailed console logs of your entire job including your individual tests and your pre and discovery phase.
+### `--force-clean-artifacts`
+This flag will download the new artifacts of your job and will store it into the `artifacts` folder. If you have previously downloaded artifacts, it will be renamed as `artifacts-old`. 
 
+***
+
+### `-h, --help`
+You can run this command if you need any help in understanding the definition of the flags on the CLI itself. However, if you need any further assistance we're just a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**ping**</span> away. 
+```bash
+--help
+```
+***
+
+### `--job-secret-file`
+
+- This flag allows you to specify the Secrets file containing the necessary secrets (credentials, API keys, ) for a particular job.
+
+- The contents of this file will be accessible only within the scope of that specific job execution, enhancing security and streamlining secret management.
+
+- This eliminates the need to store secrets on the service account and prevents their accidental exposure through the `--vars` flag.
+
+```bash
+--job-secret-file <RELATIVE_PATH_OF_YOUR_SECRET_FILE>
+```
+
+#### Sample Secret File
+
+```bash title="secretFile.txt"
+secret1=value1
+secret2=value2
+```
+
+:::info
+The secrets file contains highly sensitive information and must be strictly excluded from public exposure. Here's how to ensure its security:
+
+**Store Outside the Repository (Recommended)**
+
+- Store the secrets file in a location outside your project repository altogether. This method is more secure as it automatically gets excluded from your code scripts zip file.
+
+**Exclude from Version Control**
+
+- Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.
+:::
+
+***
+
+### `-k, --key`
+The access key of your LambdaTest account. To find out how to retrieve your access key, visit [this page](/support/docs/hyperexecute-guided-walkthrough/#hyperexecute-dashboard).
+
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`--key ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+  </CodeBlock>
+</div>
+
+***
+
+### `--labels`
+This flag allows you to pass the labels of your Job. 
+```bash
+--labels "testing"
+```
+***
+
+### `--no-track`
+You can track the progress of your uploaded jobs with HyperExecute. However, this flag allows you to opt out of receiving those updates. 
+
+```bash
+--no-track
+```
 ***
 
 ### `--preserve-payload`
@@ -178,21 +237,21 @@ This flag allows you to preserve the job payload after the job is completed succ
 ### `-s, --scan`
 This flag runs the network logs in your local machine console . 
 
+```bash
+--scan
+```
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/cli/scan.png').default} alt="project-hyperexecute" className="doc_img "/>
+
 ***
 
-### `analyze`
-This flag runs **HyperExecute Analyze**, which is a language and environment detection tool used to render every language and framework detail the user has in his project, which includes finding private dependencies.
+### `--server-port`
+The `--server-port` flag is used to specify the port number that the HyperExecute server will use for communication. This can be useful if you need to run the server on a specific port due to network configurations or to avoid port conflicts with other applications.
 
 ```bash
-hyperexecute analyze
+--server-port=8080
 ```
-***
 
-### `--labels`
-This flag allows you to pass the labels of your Job. 
-```bash
---labels "testing"
-```
 ***
 
 ### `-t, --target-directory`
@@ -238,11 +297,15 @@ In another scenario, suppose you first created a folder. Inside that folder, you
 ```
 ***
 
-### `--verbose`
-This flag allows you to log all of your proxy requests to the output section (stdout). 
-```bash
---verbose 
-```
+### `-u, --user`
+The username of your LambdaTest account. 
+
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`--user ${ YOUR_LAMBDATEST_USERNAME()}`}
+  </CodeBlock>
+</div>
+
 ***
 
 ### `--vars`
@@ -252,37 +315,26 @@ This method allows you to name your variables. It helps you optimize the content
 ```
 ***
 
-### `--job-secret-file`
+### `--verbose`
+This flag allows you to log all of your proxy requests to the output section (stdout). 
+```bash
+--verbose 
+```
+***
 
-- This flag allows you to specify the Secrets file containing the necessary secrets (credentials, API keys, ) for a particular job.
+### `--version`
+This flag indicates the version of HyperExecute CLI binary that you are running on your system. 
+```bash
+--version 
+```
+***
 
-- The contents of this file will be accessible only within the scope of that specific job execution, enhancing security and streamlining secret management.
-
-- This eliminates the need to store secrets on the service account and prevents their accidental exposure through the `--vars` flag.
+### `analyze`
+This flag runs **HyperExecute Analyze**, which is a language and environment detection tool used to render every language and framework detail the user has in his project, which includes finding private dependencies.
 
 ```bash
---job-secret-file <RELATIVE_PATH_OF_YOUR_SECRET_FILE>
+hyperexecute analyze
 ```
-
-#### Sample Secret File
-
-```bash
-secret1=value1
-secret2=value2
-```
-
-:::info
-The secrets file contains highly sensitive information and must be strictly excluded from public exposure. Here's how to ensure its security:
-
-**Store Outside the Repository (Recommended)**
-
-- Store the secrets file in a location outside your project repository altogether. This method is more secure as it automatically gets excluded from your code scripts zip file.
-
-**Exclude from Version Control**
-
-- Adding the relative path of the file (in which you have stored your secret data) to your [`.gitignore` or `.hyperexecuteignore`](/support/docs/hyperexecute-gitignore/) file. This prevents accidental inclusion of the file in your code repository.
-:::
-
 ***
 
 ## Trigger your Test from HyperExecute CLI 
