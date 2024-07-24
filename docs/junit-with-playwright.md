@@ -60,6 +60,7 @@ Learn how to use Playwright with JUnit to automate web application testing acros
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
+cd playwright-java-junit
 ```
 
 2. Install the npm dependencies.
@@ -120,7 +121,7 @@ public class LTCapability {
 Pass the below command in the terminal to run the test.
 
 ```java
-mvn -Dexec.mainClass="com.lambdatest.LTCapability" -Dexec.classpathScope=test test-compile exec:java
+mvn clean test
 ```
 
 ## View your test results

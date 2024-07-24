@@ -60,6 +60,7 @@ Learn how to use Playwright with Python to automate web application testing acro
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
+cd playwright-python
 ```
 
 2. Install the npm dependencies.

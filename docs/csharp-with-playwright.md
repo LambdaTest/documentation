@@ -60,6 +60,7 @@ Learn how to use Playwright with C# to automate web application testing across 5
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
 cd playwright-sample
+cd playwright-csharp
 ```
 
 2. Install the npm dependencies.
@@ -143,11 +144,18 @@ class PlaywrightTestSingle
 }
 ```
 
-Pass the below command in the terminal to run the test.
+1. Pass the below command in the terminal:
+
+```js
+dotnet build
+```
+
+2. To run the test, pass the below command:
 
 ```js
 dotnet run single
 ```
+
 **Note**: To run sessions on custom devices with emulation, run `dotnet run iphonetest` or `dotnet run ipadtest`.
 
 ## View your test results
