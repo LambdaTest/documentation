@@ -162,3 +162,5 @@ OR use this command if you have not exported your username and access key in the
 ### Step 5: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/k6/output.png').default} alt="Image" className="doc_img"/>
