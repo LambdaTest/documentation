@@ -69,8 +69,17 @@ Test Manager enables the creation and management of automated test cases directl
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/link-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
+3. Initiate bug reporting directly from the automation dashboard by selecting **Raise a bug**.
 
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/raise-a-bug.webp').default} alt="Real "  className="doc_img" width="1600" height="726"/>
 
+4. It will open an instance window, enter the details required to automatically link the bug to your Jira account, streamlining the issue creation process.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/link-the-bug.webp').default} alt="Real "  className="doc_img" width="1600" height="730"/>
+
+5. Once logged, the issue is immediately reflected in the **Issues** section of the corresponding test case.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/issue-logged.webp').default} alt="Real "  className="doc_img" width="1600" height="730"/>
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
