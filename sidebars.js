@@ -1940,6 +1940,48 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
+        label: "Languages and Frameworks",
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "Java",
+            items: [
+              "java-with-playwright",
+              "junit-with-playwright"
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "JavaScript",
+            items: [
+              "javascript-with-playwright",
+              "jest-with-playwright",
+              "typescript-with-playwright"
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "C#",
+            items: [
+              "csharp-with-playwright",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Python",
+            items: [
+              "python-with-playwright",
+            ],
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
         label: "Test on Android Device",
         link: {
           type: "doc",
