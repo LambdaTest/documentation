@@ -83,7 +83,7 @@ The various flags that are supported are listed below.
 | [--download-report](#--download-report) | NA | Whether reports have to be downloaded or not. |
 | [--force-clean-artifacts](#--force-clean-artifacts) | NA | Download the updated artifacts of your job. |
 | [-h, --help](#-h---help) | NA | Help for hyperexecute. |
-| [--job-secret-file](#--job-secret-file) | string | Enter your secrets flie path |
+| [--job-secret-file](#--job-secret-file) | string | Enter your secrets file path |
 | [-k, --key](#-k---key) | string | LambdaTest Access Key. |
 | [--labels](#--labels) | string | Incorporates the labels in your job. |
 | [--no-track](#--no-track) | NA | Stops updating the progress of the uplodaed jobs. |
