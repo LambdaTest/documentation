@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-k6-testing
-title: k6 Testing
+title: Execute k6 Tests on HyperExecute
 hide_title: false
 sidebar_label: k6
 description: Prevent app launch disaster! Test app performance under load with HyperExecute and JMeter. Get real-time insights, identify weaknesses & ensure smooth launch. 
