@@ -370,6 +370,11 @@ module.exports = {
             id: "hyperexecute-xcui-testing",
           },
           {
+            type: "doc",
+            label: "k6",
+            id: "hyperexecute-k6-testing",
+          },
+          {
             type: "category",
             collapsed: true,
             label: "JMeter-Performance Testing",
