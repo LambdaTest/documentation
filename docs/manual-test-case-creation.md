@@ -72,19 +72,31 @@ Test Manager streamlines the process of creating, managing, and editing test cas
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/execution-history.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-8. Test cases typically consist of multiple steps. You can add these steps using the **Manual Test Steps**.
+8. Click on any test run to redirect to its execution detail page.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/execution-detail-page.webp').default} alt="Real "  className="doc_img" width="1600" height="723"/>
+
+9. For manually executed test cases, click on the desired test case which will redirect to the build page, where you can review the **Test Steps** and **Details**.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/build-page.webp').default} alt="Real "  className="doc_img" width="1600" height="724"/>
+
+10. For automated test cases, click on the test case to be directed to the automation dashboard,  where the particular test case has been executed.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/automation-dashboard.webp').default} alt="Real "  className="doc_img" width="1600" height="732"/>
+
+11. Test cases typically consist of multiple steps. You can add these steps using the **Manual Test Steps**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-templates.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-9. Add steps to your test cases, each with a title, and an optional outcome field. Attachments can be added to any step if required.
+12. Add steps to your test cases, each with a title, and an optional outcome field. Attachments can be added to any step if required.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test-steps.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-10. Test steps can be modified by clicking the **Edit** option on the right-hand side and deleted by selecting the **Delete** option.
+13. Test steps can be modified by clicking the **Edit** option on the right-hand side and deleted by selecting the **Delete** option.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/edit-or-delete.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-11. Click on **Save Test Case** to create your test steps and update your test case. 
+14. Click on **Save Test Case** to create your test steps and update your test case. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/save-test-case.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 

@@ -72,15 +72,19 @@ The process of creating a test plan is user-friendly and intuitive. Users can se
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/add-bulk-details.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-8. Choose a single configuration or multiple configurations for any of the test cases. You can also **Create Configuration** if needed.
+8. Select configurations from the list of existing configurations. You can search or filter them as well.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/select-configuration.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/select-configurations.webp').default} alt="Real "  className="doc_img" width="1600" height="729"/>
 
-9. A screen will be presented offering support for Real Time, Falcon, and Real Devices for both web and app testing. Enter the required details in the provided fields for the configuration to be created and click on **Create**.
+9. To create a new configuration, start typing the title of the configuration as shown in the image below.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/create-configuration.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/create-new-configuration.webp').default} alt="Real "  className="doc_img" width="1600" height="730"/>
 
-10. Select the **Priority**, **Assignee** and **Configuration** for the test cases, click on **Update Test Plan**.
+10. Click on **Assign Variables** to select your preferred Operating Systems and Browsers. Once selected, click on **Assign & Continue** to finalize your choices.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/assign-variables.webp').default} alt="Real "  className="doc_img" width="1600" height="726"/>
+
+11. Select the **Priority**, **Assignee** and **Configuration** for the test cases, click on **Update Test Plan**.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/click-on-create-test-plan.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
