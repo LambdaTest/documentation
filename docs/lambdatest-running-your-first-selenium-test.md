@@ -1,6 +1,6 @@
 ---
-id: lambdatest-running-your-first-job
-title: Running Your First Job on LambdaTest
+id: lambdatest-running-your-first-selenium-test
+title: Run Your First Test on LambdaTest using Selenium
 hide_title: false
 sidebar_label: Running Your First Job
 description: You can view the Timelines, Analytics, and Automation Log of all the tests and builds run on the LambdaTest.
@@ -9,9 +9,9 @@ keywords:
   - Dashboard
   - Automation Testing
   - Lambdatest Dashboard
-url: https://www.lambdatest.com/support/docs/lambdatest-running-your-first-job/
+url: https://www.lambdatest.com/support/docs/lambdatest-running-your-first-selenium-test/
 site_name: LambdaTest
-slug: lambdatest-running-your-first-job/
+slug: lambdatest-running-your-first-selenium-test/
 ---
 
 <script type="application/ld+json"
@@ -32,10 +32,18 @@ slug: lambdatest-running-your-first-job/
           "@type": "ListItem",
           "position": 3,
           "name": "Inside LambdaTest Automation Platform",
-          "item": "https://www.lambdatest.com/support/docs/lambdatest-running-your-first-job/"
+          "item": "https://www.lambdatest.com/support/docs/lambdatest-running-your-first-selenium-test/"
         }]
       })
     }}
 ></script>
 
-In this document the steps to run your first selenium test in lambdatest automation
+LambdaTest provides a powerful Selenium Grid that allows you to perform automated cross-browser testing on over **3000+ real browsers** and operating systems. This guide will walk you through the process of setting up and running your first Selenium test on the LambdaTest platform.
+
+## Prerequisites
+Before you begin, ensure you have the following:
+
+- Your LambdaTest Username and Access Key (available in the LambdaTest dashboard)
+- Java Development Kit (JDK) installed
+- A Java IDE (e.g., IntelliJ IDEA, Eclipse)
+- Maven installed (for dependency management)
