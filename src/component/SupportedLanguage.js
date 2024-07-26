@@ -10,6 +10,9 @@ export default function SupportedLanguage() {
             </div>
         <ul className="lg_fr_framework_list">
         <li>
+          <a href="/support/docs/java-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/">Java</a>
+        </li>
+        <li>
           <a href="/support/docs/selenide-tests-with-lambdatest-online-selenium-grid-for-automated-cross-browser-testing/">Selenide</a>
         </li>
         <li>
@@ -40,6 +43,9 @@ export default function SupportedLanguage() {
               <ul className="lg_fr_framework_list">
         
         <li>
+          <a href="/support/docs/php-with-selenium-running-php-automation-scripts-on-lambdatest-selenium-grid/">PHP</a>
+        </li>
+        <li>
           <a href="/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-lambdatest-selenium-grid/">Laravel</a>
         </li>
         <li>
@@ -60,6 +66,9 @@ export default function SupportedLanguage() {
               </div>
               <ul className="lg_fr_framework_list">
         <li>
+          <a href="/support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-lambdatest-selenium-grid/">Ruby</a>
+        </li>
+        <li>
           <a href="/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-lambdatest-selenium-grid/">RSpec</a>
         </li>
         <li>
@@ -77,6 +86,9 @@ export default function SupportedLanguage() {
 
               </div>
               <ul className="lg_fr_framework_list">
+        <li>
+          <a href="/support/docs/c-with-selenium-running-c-automation-scripts-on-lambdatest-selenium-grid/">C#</a>
+        </li>
         <li>
           <a href="/support/docs/specflow-with-selenium-running-specflow-automation-scripts-on-lambdatest-selenium-grid/">SpecFlow</a>
         </li>
@@ -98,6 +110,9 @@ export default function SupportedLanguage() {
 
               </div>
               <ul className="lg_fr_framework_list">
+        <li>
+          <a href="/support/docs/python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid/">Python</a>
+        </li>
         <li>
           <a href="/support/docs/pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid/">Pytest</a>
         </li>
@@ -122,6 +137,9 @@ export default function SupportedLanguage() {
 
               </div>
               <ul className="lg_fr_framework_list">
+        <li>
+          <a href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-lambdatest-selenium-grid/">JavaScript</a>
+        </li>
         <li>
           <a href="/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-lambdatest-selenium-grid/">WebDriverIO 5.6.2</a>
         </li>
