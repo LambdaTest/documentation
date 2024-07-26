@@ -22,7 +22,7 @@ module.exports = {
       defer: true,
     },
   ],
-  themes: ['docusaurus-theme-search-typesense'],
+  themes: ['docusaurus-theme-search-typesense','docusaurus-theme-github-codeblock'],
   plugins: [require.resolve("docusaurus-plugin-image-zoom")],
   themeConfig: {
     zoom: {
