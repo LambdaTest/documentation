@@ -1,6 +1,5 @@
 module.exports = {
   apiSidebar: [
-    "getting-started-with-automation",
     "getting-started-with-hyperexecute",
     "real-time-testing",
     "smart-visual-regression-testing",
@@ -860,6 +859,7 @@ module.exports = {
             collapsed: true,
             label: "July, 2024",
             items: [
+              'hyperexecute-release-notes-2-4-4',
               'hyperexecute-release-notes-2-4-0',
             ]
           },
@@ -1601,10 +1601,10 @@ module.exports = {
         label: "Getting Started",
         link: {
           type: "doc",
-          id: "getting-started",
+          id: "getting-started-with-lambdatest-automation",
         },
         items: [
-          "lambdatest-running-your-first-job",
+          "lambdatest-running-your-first-selenium-test",
           "inside-lambdatest-automation-platform",
         ],
       },
