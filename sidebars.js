@@ -1,6 +1,5 @@
 module.exports = {
   apiSidebar: [
-    "getting-started-with-automation",
     "getting-started-with-hyperexecute",
     "real-time-testing",
     "smart-visual-regression-testing",
@@ -860,6 +859,7 @@ module.exports = {
             collapsed: true,
             label: "July, 2024",
             items: [
+              'hyperexecute-release-notes-2-4-4',
               'hyperexecute-release-notes-2-4-0',
             ]
           },
