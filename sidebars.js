@@ -1815,10 +1815,6 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Knowledge Base",
-        link: {
-          type: "doc",
-          id: "selenium-knowledge-base",
-        },
         items: [
           "lambda-hooks",
           {
@@ -1846,10 +1842,6 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "How To Guide",
-            link: {
-              type: "doc",
-              id: "selenium-how-to-guide",
-            },
             items: [
               "filter-your-selenium-tests",
               "mark-as-bug-in-automation-testing",
