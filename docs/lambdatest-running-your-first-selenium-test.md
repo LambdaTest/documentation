@@ -70,7 +70,7 @@ cd java-testng-selenium
 
 ### Step 2: Update the dependencies
 
-Before proceeding forward, run the below command to update the outdated dependecies 
+Before proceeding forward, run the below command to update the outdated dependencies 
 
 ```bash
 mvn versions:display-dependency-updates
