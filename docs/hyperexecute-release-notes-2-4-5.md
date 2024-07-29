@@ -39,7 +39,7 @@ slug: hyperexecute-release-notes-2-4-5/
 ></script>
 
 ## Selenium Version Support Expanded
-We've enhanced compatibility by adding support for **Selenium versions 4.16 to 4.21**. This update ensures broader options for test automation frameworks and provides access to the latest Selenium features.
+HyperExecute now supports **Selenium versions 4.16 to 4.21**. This update ensures broader options for test automation frameworks and provides access to the latest Selenium features.
 
 ## Firefox Browser Updated
 To maintain browser compatibility and access the newest features, we've incorporated support for **Firefox version 128**. This update guarantees reliable testing on the latest Firefox releases.
