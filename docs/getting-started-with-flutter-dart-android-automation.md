@@ -2,7 +2,7 @@
 id: getting-started-with-flutter-dart-android-automation
 title: Flutter Dart Testing On LambdaTest - Android
 sidebar_label: Flutter Dart Android
-description: Now you can run your automation scripts for Flutter dart on LambdaTest online grid of 5000+ real devices.
+description: This guide shows you how to run your first Flutter Dart test on 5000+ real Android devices using LambdaTest's Real Device Cloud.
 keywords:
 - flutter
 - lambdatest
