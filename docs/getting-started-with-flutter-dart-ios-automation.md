@@ -2,7 +2,7 @@
 id: getting-started-with-flutter-dart-ios-automation
 title: Flutter Dart Testing On LambdaTest - iOS
 sidebar_label: Flutter Dart iOS
-description: Now you can run your automation scripts for Flutter dart on LambdaTest online grid of 5000+ real devices.
+description: This guide details running your first Flutter Dart test on real iPhones using LambdaTest's Real Device Cloud.
 keywords:
 - flutter
 - lambdatest
