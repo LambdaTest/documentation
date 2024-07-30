@@ -54,3 +54,7 @@ capabilities.setCapability("timezone", "Kolkata");
 ```
 
 📕 Learn how to use [timezone capability](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/#lambdatest-advanced-selenium-capabilities:~:text=Name%20not%20exists-,timezone,-Example%3A%20UTC%2B07)
+
+:::warning note
+This capability is not supported in the Espresso and XCUI frameworks.
+:::
