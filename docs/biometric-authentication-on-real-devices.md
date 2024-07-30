@@ -1,5 +1,5 @@
 ---
-id: biometric-authentication
+id: biometric-authentication-on-real-devices
 title: Biometric Authentication
 sidebar_label: Biometric Authentication
 description: Now you can test biometric authentication functionalities such as fingerprint or face recognition in your app on LambdaTest Real Device Cloud Platform with 3000+ real mobile devices.
@@ -16,9 +16,9 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.comsupport/docs/biometric-authentication/
+url: https://www.lambdatest.comsupport/docs/biometric-authentication-on-real-devices/
 site_name: LambdaTest
-slug: biometric-authentication/
+slug: biometric-authentication-on-real-devices/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -45,14 +45,20 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Biometric Authentication",
-          "item": "https://www.lambdatest.com/support/docs/biometric-authentication/"
+          "item": "https://www.lambdatest.com/support/docs/biometric-authentication-on-real-devices/"
         }]
       })
     }}
 ></script>
-Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience.
+Biometric Authentication is a security mechanism that utilizes unique biological traits to verify user identities. This feature is commonly implemented in native applications to enhance security while providing a frictionless user experience.
 
-LambdaTest now supports Biometric Authentication for real devices (iOS and android). This new feature allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.
+LambdaTest has extended its testing capabilities to include Biometric Authentication support for both iOS and Android real devices. This enhancement enables developers and QA teams to thoroughly evaluate their application's biometric authentication functionality across diverse device ecosystems.
+
+<div className="ytframe"> 
+<div className="youtube" data-embed="32e7bBHiYKg">
+    <div className="play-button"></div>
+</div>
+</div>
 
 :::info
 **OS Version:** Biometric authentication is supported only on Android devices with OS version `11` or `above`, and on iOS devices with OS version `13` or `above`.
@@ -92,32 +98,19 @@ Below given is the list of Biometric Authentication APIs which are supported. Pl
 The OS versions and APIs mentioned above are subject to change as per the latest OS updates and best practices recommended by Android and iOS.
 :::
 
-## Biometric Authentication in App Automation
+## Biometric Authentication in Real Device App Testing
 
-### Using desired Capabilities 
+This feature allows you to simulate successful or failed biometric authentication during real-time app testing. Follow the steps below to enable biometric authentication in your testing session:
 
-To enable biometric authentication feature in your automation script, set the capability `enableBiometricsAuthentication` to `true`.
-
-```java
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setcapability("enableBiometricsAuthentication",true)
-```
-
-### Using Lambda-Hook
-
-To implement `pass` or `fail` conditions for biometric authentication in your automation script, you have to use our Lambda-hook mentioned below:
-
-```python
-driver.execute_script("lambda-biometric-injection=fail")
-```
-
-| TYPE | KEY | DATA TYPE| VALUES |
-|------|-----|----------|--------|
-| capability (for both iOS & android)|enableBiometricsAuthentication|boolean| `true` <br/> OR <br/> `false` 
-| lambda-hook | lambda-biometric-injection  || `lambda-biometric-injection=fail` <br/> OR <br/> `lambda-biometric-injection=pass` |
-
-:::note
-- To use the web hook, passing `biometric` or `enableBiometricsAuthentication` capability is mandatory.
-- If you plan to use the **Uninstall Lambda Hook**, and then the **Install Lambda Hook** for the same application, biometric authentication can be used afterwards only via the lambda-hook. In this case, the initial capability won't be applicable anymore.
-- Biometric authentication will work for all the applications that were uploaded after 23rd June 2023. 
+1. Go to **App Testing** under the **Real Devices** section given in the side bar of your LambdaTest console.
+2. On the **App testing** page upload your application.
+:::tip
+After uploading your application, please wait atleast for 1-2 minutes for the application file patching process to complete.
 :::
+3. Hover over the app for which you wish to enable Biometric Authentication and click on the **Settings** icon. You'll find a **toggle** for Biometric Authentication; switch it on, as depicted in the image below. After toggling the switch, remember to click on Save changes. Then, proceed by clicking on **Start** to initiate the session and run your app on the selected device.
+
+<img loading="lazy" src={require('../assets/images/biometric-authentication/biometric-authentication.png').default} alt="Image" width="100" height="100" className="doc_img"/>
+
+4. Once your session starts and biometric authentication is enabled for the app, use Lambdatest's **Biometric Authentication** pop-up shown below to interact with any instance where biometric authentication is invoked.
+
+<img loading="lazy" src={require('../assets/images/biometric-authentication/biometric-ss.png').default} alt="Image" width="100" height="100" className="doc_img"/>
