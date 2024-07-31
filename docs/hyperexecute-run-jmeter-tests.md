@@ -42,6 +42,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
+> This is currently in the **Beta** version.
+
 ## Prerequisites
 
 - Setup the [JMeter Test Plan](https://jmeter.apache.org/usermanual/build-web-test-plan.html) using Apache JMeter GUI.
