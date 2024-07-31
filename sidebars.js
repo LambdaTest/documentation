@@ -2652,12 +2652,12 @@ module.exports = {
       },
       {
         type: "category",
-        collapsed: true,
-        label: "CLI - Storybook",
+        collapsed: false,
+        label: "Component Testing",
         items: [
           {
             type: "doc",
-            label: "Setup with Storybook",
+            label: "CLI-Storybook",
             id: "smart-ui-storybook",
           },
           {
@@ -2677,6 +2677,23 @@ module.exports = {
         type: "doc",
         label: "Setup with Figma CLI",
         id: "smartui-cli-figma",
+      },
+      {
+        type: "category",
+        collapsed: false,
+        label: "Bring your Own Screenshots",
+        items: [
+          {
+            type: "doc",
+            label: "Upload through CLI",
+            id: "smartui-cli-upload",
+          },
+          {
+            type: "doc",
+            label: "Upload through API",
+            id: "smartui-upload-api-v2",
+          },
+        ],
       },
       {
         type: "category",
@@ -2766,11 +2783,6 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Upload through API",
-        id: "smartui-upload-api-v2",
-      },
-      {
-        type: "doc",
         label: "Smart PDF Comparison",
         id: "smartui-pdf-comparison",
       },
@@ -2784,12 +2796,6 @@ module.exports = {
         type: "doc",
         label: "Ignore or Select Annotated Regions",
         id: "smartui-draw-on-ui",
-      },
-
-      {
-        type: "doc",
-        label: "Git Baseline Branching",
-        id: "smartui-git-branching-strategy",
       },
       {
         type: "doc",
