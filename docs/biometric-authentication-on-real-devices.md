@@ -102,15 +102,18 @@ The OS versions and APIs mentioned above are subject to change as per the latest
 
 This feature allows you to simulate successful or failed biometric authentication during real-time app testing. Follow the steps below to enable biometric authentication in your testing session:
 
-1. Go to **App Testing** under the **Real Devices** section given in the side bar of your LambdaTest console.
-2. On the **App testing** page upload your application.
-:::tip
+**Step 1:** Click on the **Real Devices** > **App Testing**
+
+**Step 2:** Select your required device and upload your application which supports the camera APIs listed above.
+
+**Step 3:** Now, hover over your app and click on the **Settings** icon. Toggle the **Biometric Authentication** option and click on **Save Changes** button. Click on **Start** to run your app on the selected device.
+
+:::info
 After uploading your application, please wait atleast for 1-2 minutes for the application file patching process to complete.
 :::
-3. Hover over the app for which you wish to enable Biometric Authentication and click on the **Settings** icon. You'll find a **toggle** for Biometric Authentication; switch it on, as depicted in the image below. After toggling the switch, remember to click on Save changes. Then, proceed by clicking on **Start** to initiate the session and run your app on the selected device.
 
-<img loading="lazy" src={require('../assets/images/biometric-authentication/biometric-authentication.png').default} alt="Image" width="100" height="100" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/biometric-authentication/biometric-authentication.png').default} className="doc_img"/>
 
-4. Once your session starts and biometric authentication is enabled for the app, use Lambdatest's **Biometric Authentication** pop-up shown below to interact with any instance where biometric authentication is invoked.
+**Step 4:** Once your session starts and biometric authentication is enabled for the app, use Lambdatest's **Biometric Authentication** pop-up shown below to interact with any instance where biometric authentication is invoked.
 
-<img loading="lazy" src={require('../assets/images/biometric-authentication/biometric-ss.png').default} alt="Image" width="100" height="100" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/biometric-authentication/biometric-ss.png').default} className="doc_img"/>
