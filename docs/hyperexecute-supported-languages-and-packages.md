@@ -48,42 +48,36 @@ This document provides a comprehensive list of programming languages and addons 
 <Tabs className="docs__val">
 
 <TabItem value="linux" label="Linux" default>
-| Supported Languages | Addons | Version |
+| Supported Languages | Version |
 |---------------------|---------|
-|java| gradle
-|| gauge
-|| maven
-
+|java| 8, 9, 11, 13, 15, 17, 18, 19|
 |ruby| |
 |dotnet| |
-|python | |
-|nodejs | |
-|katalon| android-sdk |
-
-
+|python | 3.8, 3.9, 3.10, 3.11|
+|nodejs | 12, 13, 14, 15, 16, 17, 18, 19, 20 |
 
 </TabItem>
 
 <TabItem value="windows" label="Windows" default>
     <Tabs className="docs__val">
         <TabItem value="win10" label="Windows 10" default>
-            | Supported Languages and Packages | Version |
-            |----------------------------------|---------|
-            |java| |
+            | Supported Languages | Version |
+            |---------------------|---------|
+            |java| 8, 9, 11, 13, 15, 17, 18, 19 |
             |ruby| |
-            |dotnet| |
-            |python | |
-            |nodejs | |
+            |dotnet|5, 6, 7, 8|
+            |python |3.8, 3.9, 3.10, 3.11 |
+            |nodejs | 12, 13, 14, 15, 16, 17, 18, 19, 20 |
             |katalon| |
         </TabItem>
         <TabItem value="win11" label="Windows 11" default>
-            | Supported Languages and Packages | Version |
-            |----------------------------------|---------|
-            |java| |
+            | Supported Languages | Version |
+            |---------------------|---------|
+            |java| 8, 9, 11, 13, 15, 17, 18, 19 |
             |ruby| |
-            |dotnet| |
-            |python | |
-            |nodejs | |
+            |dotnet|5, 6, 7, 8 |
+            |python |3.8, 3.9, 3.10, 3.11 |
+            |nodejs | 12, 13, 14, 15, 16, 17, 18, 19, 20 |
             |katalon| |
         </TabItem>
     </Tabs>
@@ -92,18 +86,18 @@ This document provides a comprehensive list of programming languages and addons 
 <TabItem value="mac" label="macOS" default>
     <Tabs className="docs__val">
         <TabItem value="mac12" label="macOS 12" default>
-            | Supported Languages and Packages | Version |
-            |----------------------------------|---------|
-            |java| |
+            | Supported Languages | Version |
+            |---------------------|---------|
+            |java| 8, 9, 11, 13, 15, 17, 18, 19 |
             |ruby| |
-            |dotnet| |
-            |python | |
-            |nodejs | |
+            |dotnet| 5, 6, 7, 8|
+            |python |3.8, 3.9, 3.10, 3.11  |
+            |nodejs |12, 13, 14, 15, 16, 17, 18, 19, 20 |
             |katalon| |
         </TabItem>
         <TabItem value="mac13" label="macOS 13" default>
-            | Supported Languages and Packages | Version |
-            |----------------------------------|---------|
+            | Supported Languages | Version |
+            |---------------------|---------|
             |java| |
             |ruby| |
             |dotnet| |
