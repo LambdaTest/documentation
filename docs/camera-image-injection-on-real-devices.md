@@ -107,22 +107,23 @@ Below given is the list of Camera APIs which are supported by LambdaTest Image I
 
 This feature helps you inject any image which you want your app to click or scan through the device camera. You just need to follow the steps given below:
 
-1. Go to **App Testing** testing under the **Real Devices** section given in the side bar of your LambdaTest console.
-2. On the **App testing** page select the device of your choice and upload your application which supports the camera APIs listed above.
-3. Hover over the app in which you want to use Image Injection and click on **Settings** icon. You will see a **toggle** for Image Injection, turn it on as illustrated in the image below. Click on **Start** to run your app on the selected device.
+**Step 1:** Click on the **Real Devices** > **App Testing**
 
-<img loading="lazy" src={require('../assets/images/app-automation/Group2.png').default} alt="Image" width="1200" height="550" className="doc_img"/>
+**Step 2:** Select your required device and upload your application which supports the camera APIs listed above.
 
-4. Once the session is started, go to **Device Controls** in the toolbar as shown below. Select Image Injection and click **Upload Image** to inject the desired image from your computer to the app.
+**Step 3:** Now, hover over your app and click on the **Settings** icon. Toggle the **Image Injection** option and click on **Save Changes** button. Click on **Start** to run your app on the selected device.
 
-<img loading="lazy" src={require('../assets/images/app-automation/image21.png').default} alt="Image" width="1200" height="250
-" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/camera-injection/step1.gif').default} className="doc_img"/>
 
-5. You can see the image preview in the Image Injection section. You can **delete** or **reupload** the image from here.
+**Step 4:** After the above config, click on the **Start** button to start the session. Now, go to **Device Controls** in the toolbar as shown below. Select Image Injection and click **Upload Image** to inject the desired image from your computer to the app.
 
-6. Now go to camera feature in your app, the camera pops up. When you click the image from your app, you will see a black image. Please proceed with the same by clicking on **Use Photo**. 
+**Step 5:** You can see the image preview in the Image Injection section. You can **delete** or **reupload** the image from here.
 
-7. The black image is now replaced with an injected image.
+**Step 6:** Now go to camera feature in your app, the camera pops up. When you click the image from your app, you will see a black image. Please proceed with the same by clicking on **Use Photo**. 
+
+**Step 7:** The black image is now replaced with an injected image.
+
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/camera-injection/step2.gif').default} className="doc_img"/>
 
 :::info
 
