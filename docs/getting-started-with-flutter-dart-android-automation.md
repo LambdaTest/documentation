@@ -213,9 +213,11 @@ The following capabilities are supported:
 3. **device:** Enter the name and os version of the device in “DeviceName-OSVersion” format. Example: `Pixel 6-12` or `Galaxy S21 Ultra 5G-11`. You can also choose to use regular expression for device name such as `Pixel.*-12`.
 4. **video:** Generate video for all the tests that have run. Example: `true`.
 5. **queueTimeout:** Enter the time in seconds for total execution time of the build. Example: `900`.
-6. **testTimeout:** Max wait time for test execution (default value - 900 secs)
+6. **testTimeout:** Max wait time for test execution (default value - `900` secs)
 7. **deviceLog:** Boolean value to generate device logs. Example: `true`. 
 8. **build:** Set the name of your Flutter test build. Example: `My Flutter Build`.
+9. **autoGrantPermissions:**  Boolean value to automatically grant the required permissions based on the [Android manifest](https://developer.android.com/guide/topics/manifest/manifest-intro) in the app’s **.apk** Example: `true`. 
+
 
 
 ## Running Tests in Parallel
@@ -231,16 +233,39 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
     "testSuite": "testsuite_id",
     "device" :  ["Galaxy S22 5G-12","Galaxy S24-14","Pixel 7-13","Galaxy S10+-10"],
     "queueTimeout": 10800,
+    "testTimeout": 900,
     "deviceLog": true,
-    "build" : "Sample-Flutter"
+    "build" : "Sample-Flutter",
 }'
 ```
-
-:::tip
+:::note
 
 Do note that Flutter builds when run in parallel, result in separate builds being generated for each parallel run.
 
 :::
+
+## Auto-Grant Permissions for Android Apps
+
+While testing Android apps, user might need to handle various pop-ups or dialogs asking for permissions like contacts, notifications, photos, etc.
+
+To simplify this process, set Flutter's `autoGrantPermissions` parameter to automatically grant the required permissions based on the [Android manifest](https://developer.android.com/guide/topics/manifest/manifest-intro) in the app’s **.APK** file.Please find a example `cURL` request to enable `autoGrantPermissions`:
+
+```bash
+curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/flutter/android/build' \
+--header 'Authorization: Basic <Enter_Basic_Auth>' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "app" : "app_id",
+    "testSuite": "testsuite_id",
+    "device" :  ["Galaxy S22 5G-12"]
+    "queueTimeout": 10800,
+    "testTimeout": 900,
+    "deviceLog": true,
+    "build" : "Sample-Flutter",
+    "autoGrantPermissions" : true
+}'
+```
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
