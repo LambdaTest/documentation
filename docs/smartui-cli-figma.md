@@ -1,7 +1,7 @@
 ---
 id: smartui-cli-figma
 title: Getting started with Lambdatest's Smart UI Figma CLI 
-sidebar_label: CLI - Figma
+sidebar_label: Figma CLI
 description: In this documentation, learn how to perform Visual Testing of your Figma files using command line interface using SmartUI CLI.
 keywords:
   - Visual Regression

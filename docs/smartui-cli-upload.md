@@ -1,8 +1,8 @@
 ---
-id: smartui-cli
+id: smartui-cli-upload
 title: Getting started with Lambdatest's Smart UI CLI 
-sidebar_label: Capture Static URLs
-description: In this documentation, learn how to perform Visual UI Testing using command line interface on the LambdaTest Automation Cloud across 40+ browser versions.
+sidebar_label: Upload through CLI
+description: In this documentation, learn how to upload and compare images (jpgs, jpegs, pngs) using the SmartUI CLI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-cli/
-slug: smartui-cli/
+url: https://www.lambdatest.com/support/docs/smartui-cli-upload/
+slug: smartui-cli-upload/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -51,7 +51,7 @@ import NewTag from '../src/component/newTag';
 
 Welcome to the LambdaTest SmartUI CLI documentation! 
 
-With SmartUI CLI, you can seamlessly perform visual regression testing on the LambdaTest platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Visual Regression tests using SmartUI CLI.
+With SmartUI CLI, you can seamlessly perform visual regression testing on the LambdaTest platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
 
 ## Pre-requisites for running SmartUI CLI
 
@@ -78,38 +78,10 @@ The first step is to create a project with the application in which we will comb
 Install required NPM modules for `LambdaTest Smart UI CLI` in your **Frontend** project.
 
 ```bash
-npm install -g @lambdatest/smartui-cli
+npm install @lambdatest/smartui-cli
 ```
 
-### **Step 2:** Create URL file
-
-```
-smartui config:create-web-static urls.json
-```
-Once, the `URLs` file will be created, you will be seeing the sample pre-filled URLs in the `urls.json` file:
-
-```json title="/smartui-cli-project/urls.json"
-[
-  {
-    "name": "lambdatest-home-page",
-    "url": "https://www.lambdatest.com",
-    "waitForTimeout": 1000 //Optional
-  },
-  {
-    "name": "example-page",
-    "url": "https://example.com/"
-  }
-]
-
-```
-:::caution Please Note
-The `waitForTimeout` is an optional configuration.
-
-If you are using any async components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.
-
-:::
-
-### **Step 3:** Configure your Project Token
+### **Step 2:** Configure your Project Token
 
 Setup your project token show in the **SmartUI** app after, creating your project.
 
@@ -132,93 +104,39 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-### **Step 4:** Create and Configure SmartUI Config
+### **Step 3:** Upload the required directory of images
 
-You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
+```
+npx smartui upload <directoryName> 
+```
+The screenshots in the directory name will be uploaded to SmartUI.
 
-```bash
-smartui config:create .smartui.json
+
+#### For ignoring the resolutions of the images
+
+By default, SmartUI captures and considers image resolutions. If you prefer to ignore resolutions and compare images solely based on their names, use the following flag:
+
+```
+npx smartui upload <directoryName> --ignoreResolutions
 ```
 
-Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
 
-```json title="/smartui-sdk-project/.smartui.json"
-{
-  "web": {
-    "browsers": [
-      "chrome",
-      "firefox",
-      "safari",
-      "edge"
-    ],
-    "viewports": [
-      [
-        1920
-      ],
-      [
-        1366
-      ],
-      [
-        1028
-      ]
-    ] // Full Page screenshots are captured by default for web viewports
-  },
-  "mobile": {
-    "devices": [
-      "iPhone 14",  //iPhone 14 viewport
-      "Galaxy S24"  //Galaxy S24 viewport
-    ],
-    "fullPage": true, //Full Page is true by default for mobile viewports
-    "orientation": "portrait" //Change to "landscape" for landscape snapshot
-  }
-}
-```
+#### SmartUI CLI Upload Options
 
-#### For capturing viewport screenshots
+Please read the following table for more information about the options available to upload a directory of static images to SmartUI.
 
-To capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport's width and height in your configuration settings. Specify the desired width and height parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area.
+| Config Key Shortcut  |       Configuration Key     &nbsp;&nbsp;&nbsp;  | Description|               Usage     &nbsp;&nbsp;&nbsp;       |
+| ---------------------| ---------------------------------------------------------------------------|--------------| -------------------- |
+| -R |      --ignoreResolutions | Ignores resolutions to compare only based on screenshot names | `npx smartui upload <directoryName> -R` |
+| -F | --files extensions             | Comma-separated list of allowed file extensions| `npx smartui upload <directoryName> -F jpg,png`|
+| -E | --removeExtensions          | Strips file extensions from snapshot names| `npx smartui upload <directoryName>  -E` |
+| -i | --ignoreDir patterns         | Comma-separated list of directories to ignore | `npx smartui upload <directoryName> -i` |
 
-```json
-    "viewports": [
-      [
-        1920,
-        1080
-      ],
-      [
-        1366,
-        768
-      ],
-      [
-        360,
-        640
-      ]
-    ],
-```
 
 :::note 
-You may use the `smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
+You may use the `smartui upload --help` command in case you are facing issues during the execution of SmartUI Upload options in the CLI.
 :::
 
-#### SmartUI CLI Config Options
-
-Please read the following table for more information about the configuration file:
-
-| Config Key     | Description                                                                                                                        | Usage     |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| browsers       | You can add all the supported browsers brands here to run your tests for SmartUI. <br/> Ex: `"chrome", "firefox", "safari", "edge", etc..` | Mandatory |
-| resolutions    | You can add all the supported browser viewpoints here to run your tests for SmartUI <br/> Ex: `[1920, 1080],[width, height] etc..` <br/> | Mandatory |
-
-
-
-
-
-### **Step 5:** Execute the Tests on SmartUI Cloud using CLI
-
-You can now execute tests for `Visual Regression Testing` using the following options:.
-
-```bash
-smartui capture urls.json --config .smartui.json
-```
 ### Setup with Continuous Integration (CI)
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI CLI` execution then the following are the steps needs to be added to your `.yaml` file:
@@ -228,13 +146,10 @@ If you are using the Continuous Integration (CI) pipeline for your application a
 steps:
   - name: Running SmartUI CLI Tests
     - run: |
-       npm install -g @lambdatest/smartui-cli
+       npm install @lambdatest/smartui-cli
        npx playwright install-deps
-       smartui capture urls.json --config smartui-web.json
+       npx smartui upload <Directory Name> --removeExtensions
 ```
-
-
-
 
 ### SmartUI CLI Options and Keys
 
