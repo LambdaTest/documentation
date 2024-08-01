@@ -1561,7 +1561,7 @@ module.exports = {
             type: "category",
             collapsed: false,
             label: "Features",
-            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "real-device-adb-shell", "ui-inspector"],
+            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector"],
           },
         ],
       },
