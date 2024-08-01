@@ -43,6 +43,10 @@ HyperExecute has released an update for the location-based timezone capability.
 
 With this exciting update, you can now use location names (e.g., "Kolkata") alongside UTC offsets. This empowers you to set precise timezones based on a user's location, ensuring a more seamless user experience.
 
+:::warning note
+This capability will work with Selenium, Playwright, Puppeteer, Cypress, and Appium, except for Espresso and XCUI frameworks.
+:::
+
 Previously, you might have needed to use:
 ```yaml
 capabilities.setCapability("timezone", "UTC+05:30");
@@ -55,6 +59,3 @@ capabilities.setCapability("timezone", "Kolkata");
 
 📕 Learn how to use [timezone capability](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/#lambdatest-advanced-selenium-capabilities:~:text=Name%20not%20exists-,timezone,-Example%3A%20UTC%2B07)
 
-:::warning note
-This capability is not supported in the Espresso and XCUI frameworks.
-:::
