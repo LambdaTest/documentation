@@ -52,12 +52,6 @@ import TabItem from '@theme/TabItem';
 ></script>
 Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience.
 
-<div className="ytframe"> 
-<div className="youtube" data-embed="32e7bBHiYKg">
-    <div className="play-button"></div>
-</div>
-</div>
-
 LambdaTest now supports Biometric Authentication for real devices (iOS and android). This new feature allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.
 
 :::info
@@ -123,7 +117,8 @@ driver.execute_script("lambda-biometric-injection=fail")
 | lambda-hook | lambda-biometric-injection  || `lambda-biometric-injection=fail` <br/> OR <br/> `lambda-biometric-injection=pass` |
 
 :::note
-- To use the web hook, passing `biometric` or `enableBiometricsAuthentication` capability is mandatory.
+- To use the web hook, passing `enableBiometricsAuthentication` capability is mandatory.
 - If you plan to use the **Uninstall Lambda Hook**, and then the **Install Lambda Hook** for the same application, biometric authentication can be used afterwards only via the lambda-hook. In this case, the initial capability won't be applicable anymore.
-- Biometric authentication will work for all the applications that were uploaded after 23rd June 2023. 
 :::
+
+> 📕 Check the [documentation for Biometrics Authentication](/support/docs/biometric-authentication-on-real-devices/) feature in Manual App Testing on Real devices
