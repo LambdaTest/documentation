@@ -190,6 +190,8 @@ Refer to the code snippets given below to upload the image with the action `Imag
 
 You need to first add a logic to inject the uploaded image in the script. Thereafter add the logic to click the camera button in the mobile app. This will show you the last injected image on your mobile app screen.
 
+> 📕 Check the [documentation for Camera Image Injection](/support/docs/camera-image-injection-on-real-devices/) feature in Manual App Testing on Real devices
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
