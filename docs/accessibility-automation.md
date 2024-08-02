@@ -58,7 +58,7 @@ Our goal is **a web that's accessible to all**.  Accessibility automation helps 
 
 LambdaTest Accessibility Automation seamlessly integrates with your existing workflows:
 
-- **Integrated Testing:** Works hand-in-hand with popular testing frameworks like Selenium.
+- **Integrated Testing:** Works hand-in-hand with popular testing frameworks like Selenium and Cypress.
 - **Issue Detection:** Get clear reports highlighting the specific accessibility roadblocks found, their severity (critical, high, medium, low), and suggestions on how to fix them.
 - **Automated Scans:** These tools meticulously scan your web pages, checking them against a comprehensive set of accessibility best practices. This includes identifying issues like missing image descriptions (alt text), insufficient color contrast between text and background, or incorrect use of ARIA attributes (accessibility features for screen readers and other assistive technologies).
 
