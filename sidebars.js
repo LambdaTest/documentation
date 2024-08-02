@@ -1381,7 +1381,6 @@ module.exports = {
           }
         ],
       },
-
       {
         type: "category",
         collapsed: true,
@@ -1393,14 +1392,23 @@ module.exports = {
         items: [
           {
             type: "doc",
-            label: "Accessibility Automation Test",
+            label: 'Selenium',
             id: "accessibility-automation-test",
           },
           {
-            type: "doc",
-            label: "Configure Settings",
-            id: "accessibility-automation-settings",
+            type: "category",
+            collapsed: true,
+            label: 'Cypress',
+            items: [
+              "cypress-v9-accessibility-test",
+              "cypress-v10-accessibility-test",
+            ],
           },
+          {
+            type: 'doc',
+            label: 'Accessibility Automation Settings',
+            id: "accessibility-automation-settings",
+          }
         ],
       },
       {
