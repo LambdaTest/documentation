@@ -50,11 +50,11 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-With App Live, you can interact with the built-in Contacts app on our real devices to test your app's functionality. To support diverse testing, we've included sample contact data for you to use.
+With LambdaTest Real Devices, you can interact with the built-in Contacts app on our real devices to test your app's functionality. To support diverse testing, we've included sample contact data for you to use.
 
 ## Supported Devices
 
-LambdaTest supports access to the Contacts app on the following devices:
+LambdaTest supports access to the dummy Contacts on the following devices:
 
 - Devices running Android 10 and higher(Except Tabs).
 - Devices running iOS 13 and higher.
@@ -66,4 +66,3 @@ With access to the Contacts app on the remote devices, you can now test scenario
 - Access contacts from the Contacts app.
 - Add/Save your custom contacts to the Contacts app.
 - Edit/delete a contact.
-- Send SMS/email by selecting the recipient from the phone contacts list.
