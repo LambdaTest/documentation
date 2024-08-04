@@ -1,7 +1,6 @@
 ---
 id: he-platform-faqs
-title: Platform FAQs
-hide_title: true
+title: HyperExecute Platform FAQs
 sidebar_label: Platform FAQs
 description: Find answers to frequently asked questions about the HyperExecute platform, covering OS support, available browsers, customization options, and more for efficient testing.
 keywords:
@@ -37,10 +36,6 @@ slug: hyperexecute-platform-faqs/
       })
     }}
 ></script>
-
-# HyperExecute Platform FAQs
-
-***
 
 #### 1. **What OS does HyperExecute provide to execute tests?**
 
