@@ -1550,13 +1550,13 @@ module.exports = {
           "how-to-use-testing-tools-in-session",
           {
             type: "category",
-            collapsed: false,
+            collapsed: true,
             label: "Applications",
             items: ["upload-apps-on-real-device-cloud", "app-settings"],
           },
           {
             type: "category",
-            collapsed: false,
+            collapsed: true,
             label: "App Source",
             items: [
               "install-apps-from-play-store",
@@ -1567,7 +1567,7 @@ module.exports = {
           },
           {
             type: "category",
-            collapsed: false,
+            collapsed: true,
             label: "Features",
             items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector"],
           },
