@@ -254,8 +254,14 @@ jobLabel: ['HYP', 'Espresso', 'Manual Sharding']
 </TabItem>
 </Tabs>
 
-:::caution note
-The uploadArtefact flag is currently not available for Espresso framework tests.
+:::info info
+- The **uploadArtefact** flag is currently not available for Espresso framework tests.
+- To run **adb commands** in the **pre** and **post-steps**, include the following two flags in your YAML file: To execute it, you must have purchased an equivalent number of parallels for both HyperExecute and Real Device.
+
+```yaml
+private: true 
+preservedDevice: true
+```
 :::
 
 ## Step 6: Execute your Test Suite
