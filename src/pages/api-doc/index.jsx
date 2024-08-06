@@ -38,7 +38,7 @@ function ApiDoc() {
                         <iframe className="embed-responsive-item"
                             src="https://stage-swagger-api-support.lambdatestinternal.com/user_management/index.html"></iframe>
                     </TabItem>
-                    <TabItem value="test-management" label="Test Management">
+                    <TabItem value="test-management" label="Test Manager">
                         <iframe className="embed-responsive-item"
                             src="https://stage-swagger-api-support.lambdatestinternal.com/test_management/index.html"></iframe>
                     </TabItem>
