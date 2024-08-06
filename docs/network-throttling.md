@@ -53,7 +53,11 @@ There might be instances where you would have to check the functionality of your
 
 In order to validate your website on such network profiles, you can simulate these network conditions using our capabilities. If you want the test suite to start with the default network use our preset capabilities. However, the device will have unobstructed internet connectivity.
 
-```
+| KEY | VALUES |CAPABILITY |
+|-----|--------|-----------|
+| networkThrottling | Regular 4G, Regular 3G, Regular 2G, Good 3G, Good 2G, Offline, Reset, GPRS, DSL | Based on the user-provided input, this capability helps to start test suite with default network. For example, if user selects the value **Regular 4G** then the capabilities will look like this: <br/> ```capabilities.setCapability("networkThrottling", "Regular 4G");``` |
+
+```yaml
 capabilities.setCapability("networkThrottling", "Regular 4G");
 ```
 
