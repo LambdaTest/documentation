@@ -46,12 +46,10 @@ This document details the configuration options available for your automated acc
 To enable the accessibility testing within your automated test suite, set the accessibility: true in your configuration file. You can also define other settings capabilities as described below.
 
 ```java
-capabilities: [{
-  accessibility : true,                 // Enable accessibility testing
-  accessibility.wcagVersion: 'wcag21a', // Specify WCAG version (e.g., WCAG 2.1 Level A)
-  accessibility.bestPractice: false,    // Exclude best practice issues from results
-  accessibility.needsReview: true       // Include issues that need review
-}]
+"accessibility" : true,                 // Enable accessibility testing
+"accessibility.wcagVersion": "wcag21a", // Specify WCAG version (e.g., WCAG 2.1 Level A)
+"accessibility.bestPractice": false,    // Exclude best practice issues from results
+"accessibility.needsReview": true       // Include issues that need review
 ```
 
 ## Key Configurations Options
