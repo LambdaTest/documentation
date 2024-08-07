@@ -69,48 +69,8 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run y
 
 Configure the desired capabilities based on your test requirements. For example:
 
-```javascript reference title="lambdatest-config.json"
+```yaml reference title="lambdatest-config.json"
 https://github.com/LambdaTest/lambdatest-accessibility-cypress-v10/blob/main/lambdatest-config.json
-
-// {
-//   "lambdatest_auth": {
-//      "username": "<Your LambdaTest username>",
-//      "access_key": "<Your LambdaTest access key>"
-//   },
-//   "browsers": [
-//      {
-//         "browser": "Chrome",
-//         "platform": "Windows 10",
-//         "versions": [
-//            "latest-1"
-//         ]
-//      },
-//      {
-//         "browser": "Firefox",
-//         "platform": "Windows 10",
-//         "versions": [
-//            "latest-1"
-//         ]
-//      }
-//   ],
-//   "run_settings": {
-//      "cypress_config_file": "cypress.config.js",
-//      "reporter_config_file": "base_reporter_config.json",
-//      "build_name": "build-name",
-//      "parallels": 1,
-//      "specs": "./*.cy.js",
-//      "ignore_files": "",
-//      "network": false,
-//      "headless": false,
-//      "npm_dependencies": {
-//         "cypress": "10.0.0"
-//      }
-//   },
-//   "tunnel_settings": {
-//      "tunnel": false,
-//      "tunnel_name": null
-//   }
-// }
 ```
 
 ### Step 2: Establish User Authentication
