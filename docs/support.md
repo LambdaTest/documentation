@@ -200,6 +200,7 @@ import NewTag from '../src/component/newTag';
        <h2 className='homeMain_h2'><TestManagerLightIcon className="home_icons home_light_icon" role="presentation"/> <TestManagerDarkIcon className="home_icons home_dark_icon" role="presentation"/>Test Manager &nbsp; <NewTag  value="NEW" /></h2>
       <div className="home_inners"> 
         <a href="/support/docs/create-projects/"><p className="p_home_inners">Create Projects</p></a>
+        <a href="/support/docs/insights-dashboard/"><p className="p_home_inners">Insights Dashboard</p></a>
         <a href="/support/docs/manual-test-case-creation"><p className="p_home_inners">Manual Test Cases</p></a>
         <a href="/support/docs/automated-test-cases-with-ai/"><p className="p_home_inners">Automated Test Cases</p></a>
         <a href="/support/docs/test-plan-creation/"><p className="p_home_inners">Test Plan Creation</p></a>
