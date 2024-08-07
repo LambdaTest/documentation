@@ -35,7 +35,7 @@ function ApiDoc() {
                     </TabItem>
                     <TabItem value="test-management" label="Test Manager">
                         <iframe className="embed-responsive-item"
-                            src="https://stage-swagger-api-support.lambdatestinternal.com/test_management/index.html"></iframe>
+                            src="https://swagger-api-support.lambdatest.com/test_management/index.html"></iframe>
                     </TabItem>
                     <TabItem value="hyperexecute" label="HyperExecute">
                         <iframe className="embed-responsive-item"
