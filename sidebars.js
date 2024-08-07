@@ -1496,6 +1496,14 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
+        label: "Insights",
+        items: [
+          "insights-dashboard"
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
         label: "Test cases",
         items: [
           "manual-test-case-creation",
