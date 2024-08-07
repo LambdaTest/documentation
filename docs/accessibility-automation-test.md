@@ -1,8 +1,7 @@
 ---
 id: accessibility-automation-test
-title: Execute Your Automation Tests with Accessibility Tool
-hide_title: false
-sidebar_label: Run Accessibility Automation Test
+title: Automation Tests with Accessibility Tool using Selenium
+sidebar_label: Selenium
 description: Use LambdaTest Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines.
 keywords:
     - LambdaTest
@@ -62,17 +61,14 @@ You can use your own project to configure and test it. For demo purposes, we are
 :::tip sample repo
 Download or Clone the code sample from the LambdaTest GitHub repository to run your tests.
 
-<a href="https://github.com/LambdaTest/webdriverio-selenium" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/lambdatest-accessibility-selenium" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
-If you are using your own project, make sure you update the **Hub endpoint** in your tests file.
-
-By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
-
+If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
 Configure the desired capabilities based on your test requirements. For example:
 
-```bash
+```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("browserName", "chrome");
 capabilities.setCapability("version", "70.0");
@@ -119,16 +115,18 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
 
 ```java
-capabilities: [{
-  accessibility : true,                 // Enable accessibility testing
-  accessibility.wcagVersion: 'wcag21a', // Specify WCAG version (e.g., WCAG 2.1 Level A)
-  accessibility.bestPractice: false,    // Exclude best practice issues from results
-  accessibility.needsReview: true       // Include issues that need review
-}]
+capability.setCapability("accessibility", true); // Enable accessibility testing
+capability.setCapability("accessibility.wcagVersion", "wcag21a"); // Specify WCAG version (e.g., WCAG 2.1 Level A)
+capability.setCapability("accessibility.bestPractice", false); // Exclude best practice issues from results
+capability.setCapability("accessibility.needsReview", true); // Include issues that need review
 ```
 
 ### Step 4: Execute and Monitor your Test
 
 Now execute your tests and visit the [Automation Dashboard](https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
+
+```bash
+mvn test
+```
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/accessibility-automation.png').default} alt="automation-dashboard" className="doc_img"/>
