@@ -30,7 +30,7 @@ slug: create-projects/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Creating Projects",
+          "name": "Create Projects",
           "item": "https://www.lambdatest.com/support/docs/create-projects/"
         }]
       })
