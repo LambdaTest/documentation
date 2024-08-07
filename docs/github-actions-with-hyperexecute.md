@@ -73,7 +73,7 @@ https://github.com/LambdaTest/hyp-ci-cd-integration-sample/blob/main/.github/wor
     - The third step is the execution command which executes the [*Hyperexecute CLI binary*](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/). This contains your LambdaTest Username, Access Key, and path of the YAML created for HyperExecute.
 
 ### Step 3: Run the Workflow
-To run the new pipeline that you just created, click the **Run workflow** button on the workflow page. A prompt will ask you to enter your **LT Username**, and **LT Access Key** and your tests will be triggerd.
+To run the new pipeline that you just created, click the **Run workflow** button on the workflow page. A prompt will ask you to enter your **LT Username**, and **LT Access Key** and your tests will be triggered.
 
 > You can fetch your credentials from the [Accounts and Settings dashboard](https://accounts.lambdatest.com/security).
 
