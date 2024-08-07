@@ -2579,6 +2579,14 @@ module.exports = {
         ],
       },
       {
+        type: "category",
+        collapsed: true,
+        label: "Integrate with CI/CD tool",
+        items: [
+          "smartui-with-github-actions"
+        ],
+      },
+      {
         type: "doc",
         label: "Smart PDF Comparison",
         id: "smartui-pdf-comparison",
