@@ -64,53 +64,13 @@ You can use your own project to configure and test it. For demo purposes, we are
 :::tip sample repo
 Download or Clone the code sample from the LambdaTest GitHub repository to run your tests.
 
-<a href="https://github.com/LambdaTest/lambdatest-accessibility-cypress-v10" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/lambdatest-accessibility-cypress-v10" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
-
-If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
 Configure the desired capabilities based on your test requirements. For example:
 
-```javascript title="lambdatest-config.json"
-{
-  "lambdatest_auth": {
-     "username": "<Your LambdaTest username>",
-     "access_key": "<Your LambdaTest access key>"
-  },
-  "browsers": [
-     {
-        "browser": "Chrome",
-        "platform": "Windows 10",
-        "versions": [
-           "latest-1"
-        ]
-     },
-     {
-        "browser": "Firefox",
-        "platform": "Windows 10",
-        "versions": [
-           "latest-1"
-        ]
-     }
-  ],
-  "run_settings": {
-     "cypress_config_file": "cypress.config.js",
-     "reporter_config_file": "base_reporter_config.json",
-     "build_name": "build-name",
-     "parallels": 1,
-     "specs": "./*.cy.js",
-     "ignore_files": "",
-     "network": false,
-     "headless": false,
-     "npm_dependencies": {
-        "cypress": "10.0.0"
-     }
-  },
-  "tunnel_settings": {
-     "tunnel": false,
-     "tunnel_name": null
-  }
-}
+```yaml reference title="lambdatest-config.json"
+https://github.com/LambdaTest/lambdatest-accessibility-cypress-v10/blob/main/lambdatest-config.json
 ```
 
 ### Step 2: Establish User Authentication
@@ -150,14 +110,21 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 - If you are passing npm dependencies through **package.json**, then add the below mentioned line there:
 
-```javascript title="package.json"
-"lambdatest-cypress-cli"
+```javascript reference title="package.json"
+https://github.com/LambdaTest/lambdatest-accessibility-cypress-v10/blob/main/package.json
 ```
 
 - If you are using **lambdatest-config.json** to pass the dependency, then pass the given line there:
 
 ```javascript title="lambdatest-config.json"
-"lambdatest-cypress-cli": "^3.0.30"
+"run_settings": {
+  //...
+  "npm_dependencies": {
+     "cypress": "10.0.0",
+     "lambdatest-cypress-cli": "^3.0.30"
+  },
+  //...
+}
 ```
 
 - if you are not passing npm dependency in **lambdatest-config.json** you can run
@@ -178,20 +145,8 @@ import 'lambdatest-cypress-cli/accessibility/scanner'
 
 Add this template in your config file.
 
-```javascript title="cypress.config.js"
-const { defineConfig } = require("cypress");
-const lambdatestAccessibility = require('lambdatest-cypress-cli/accessibility/plugin');
-module.exports = defineConfig({
-  e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-      
-      lambdatestAccessibility(on, config);
-      return config;
-      
-    },
-  },
-});
+```javascript reference title="cypress.config.js"
+https://github.com/LambdaTest/lambdatest-accessibility-cypress-v10/blob/main/cypress.config.js
 ```
 
 #### 4. Add the capabilities in the `lambdatest-config.json` file
@@ -199,12 +154,10 @@ module.exports = defineConfig({
 To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
 
 ```javascript title="lambdatest-config.json"
-capabilities: [{
-    "accessibility" : true,                 // Enable accessibility testing
-    "accessibility.wcagVersion": "wcag21a", // Specify WCAG version (e.g., WCAG 2.1 Level A)
-    "accessibility.bestPractice": false,    // Exclude best practice issues from results
-    "accessibility.needsReview": true       // Include issues that need review
-}]
+"accessibility" : true,                 // Enable accessibility testing
+"accessibility.wcagVersion": "wcag21a", // Specify WCAG version (e.g., WCAG 2.1 Level A)
+"accessibility.bestPractice": false,    // Exclude best practice issues from results
+"accessibility.needsReview": true       // Include issues that need review
 ```
 
 ### Step 4: Execute and Monitor your Test
@@ -215,4 +168,4 @@ Now execute your tests and visit the [Automation Dashboard](https://accounts.lam
 lambdatest-cypress-cli run
 ```
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/cypress/cypressv10.png').default} alt="automation-dashboard" className="doc_img"/>v
+<img loading="lazy" src={require('../assets/images/accessibility-testing/cypress/cypressv10.png').default} alt="automation-dashboard" className="doc_img"/>
