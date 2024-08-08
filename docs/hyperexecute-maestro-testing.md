@@ -164,7 +164,6 @@ dynamicAllocation: true
 # will need java and maestro inside the container
 pre:
   - chmod +x ./maestro-test/setup-script.sh
-  - chmod +x ./maestro-test/runTest.sh
 
 env:
   MAESTRO: true
