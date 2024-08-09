@@ -72,16 +72,6 @@ Click on the **Finish** button and your job will be triggered on the defined day
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/setup-workflow.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-## Additional Workflow Configurations
-
-- Click on the **Jobs** tab to see your triggered jobs.
-- You can also **search** and **filter** your workflows by User Name and Branch Name.
-- If you want to create another workflow inside that project, you can do that by clicking on the **Create Workflow** button.
-- You can also manually trigger your job by clicking on that **execute** button.
-- Click on the **three dots** and you will get option to **Edit**, **Clone** or **Delete** your workflow.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/workflow-config.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
-
 ## Additional Resources
 
 You can also setup different products like Tosca, Tosca DEX or JMeter projects as well, for further details refer to the respective pages:

@@ -2,7 +2,7 @@
 id: gradle-integration-with-lambdatest
 title: Gradle Plugin Integration With LambdaTest
 hide_title: true
-sidebar_label: Gradle Plugin Integration
+sidebar_label: Gradle Plugin
 description: Automate testing at scale! Integrate LambdaTest with Gradle for seamless CI/CD & lightning-fast execution.
 keywords:
   - lambdatest integrations

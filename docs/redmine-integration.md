@@ -2,7 +2,7 @@
 id: redmine-integration
 title: Redmine Integration
 hide_title: true
-sidebar_label: Redmine Integration
+sidebar_label: Redmine
 description: Using LambdaTest integration with Redmine, you’ll be able to log bugs in your Redmine project from LambdaTest in just one click. You can grab a screenshot of a problem, highlight an exception, annotate additional detail, select an assignee, include a fitting title and a summary to help convey further actions. You can do all of this directly from LambdaTest.
 keywords:
   - redmine integration

@@ -2,7 +2,7 @@
 id: hive-integration
 title: Hive Integration
 hide_title: true
-sidebar_label: Hive Integration
+sidebar_label: Hive
 description: LambdaTest helps you to push bugs directly in Hive project with details like work space, assignee, title and description with a single click.
 keywords:
   - lambdatest integrations

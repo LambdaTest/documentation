@@ -2,7 +2,7 @@
 id: testim-integration
 title: Testim Integration
 hide_title: true
-sidebar_label: Testim Integration
+sidebar_label: Testim
 description: LambdaTest offers integration with Testim to help you perform automated browser testing on 3000+ real browsers and OS.
 keywords:
 - lambdatest integrations

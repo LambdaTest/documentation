@@ -2,7 +2,7 @@
 id: vividus-integration
 title: How to Perform Vividus Automation Tests Using LambdaTest?
 hide_title: true
-sidebar_label: Vividus Integration
+sidebar_label: Vividus
 description: With this integration, run your tests from Vividus tool, directly on LambdaTest cloud-based Selenium Grid, on 3000+ desktop &amp; mobile browser and OS combinations
 keywords:
 - lambdatest integrations

@@ -2,7 +2,7 @@
 id: aws-codepipeline-Integration
 title: How to integrate AWS CodePipeline with LambdaTest
 hide_title: true
-sidebar_label: AWS CodePipeline Integration
+sidebar_label: AWS CodePipeline
 description: Rapidly commit changes in CI CD pipeline and validate them for UI/UX anomalies by integrating your AWS CodePipeline instance with LambdaTest Selenium Grid.
 keywords:
   - lambdatest integrations

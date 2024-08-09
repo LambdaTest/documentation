@@ -2,7 +2,7 @@
 id: slack-integration
 title: Slack Integration
 hide_title: true
-sidebar_label: Slack Integration
+sidebar_label: Slack
 description: The LambdaTest Integration with Slack allows you to push a bug directly to your specified Slack channel from LambdaTest platform. 
 keywords:
   - slack integration

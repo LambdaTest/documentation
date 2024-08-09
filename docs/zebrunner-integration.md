@@ -2,7 +2,7 @@
 id: zebrunner-integration
 title: How To Integrate LambdaTest With Zebrunner Instance
 hide_title: true
-sidebar_label: Zebrunner Integration
+sidebar_label: Zebrunner
 description: LambdaTest Selenium Grid integration to Zebrunner will help you run your Selenium automation scripts from Zebrunner instance to our cloud-based Selenium Grid.
 keywords:
 - lambdatest integrations

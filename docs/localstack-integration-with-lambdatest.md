@@ -2,7 +2,7 @@
 id: localstack-integration-with-lambdatest
 title: LocalStack Integration With LambdaTest
 hide_title: true
-sidebar_label: LocalStack Integration
+sidebar_label: LocalStack
 description: LocalStack is a tool that acts as a drop-in replacement for AWS on your local machine, understand the how LocalStack integration with LambdaTest will help you.
 keywords:
   - lambdatest integrations

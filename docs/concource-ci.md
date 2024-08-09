@@ -2,7 +2,7 @@
 id: concource-ci
 title: Selenium Testing With Concourse CI And LambdaTest
 hide_title: true
-sidebar_label: Concourse CI Integration
+sidebar_label: Concourse CI
 description: This document will help you understand how you can integrate your Concourse CI instance with cloud Selenium Grid for continuous testing.
 keywords:
   - concourse ci

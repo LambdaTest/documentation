@@ -2,7 +2,7 @@
 id: bugasura-integration
 title: Bugasura Integration
 hide_title: true
-sidebar_label: Bugasura Integration
+sidebar_label: Bugasura 
 description: Integrate LambdaTest with Bugasura for efficient one-click bug logging of your web applications and avoid the hassle of maintaining bugs and tasks manually.
 keywords:
   - lambdatest integration with bugasura

@@ -2,7 +2,7 @@
 id: sumo-logic-integration
 title: Sumo Logic Integration With LambdaTest
 hide_title: true
-sidebar_label: Sumo Logic Integration
+sidebar_label: Sumo Logic
 description: View your LambdaTest test results in a custom Sumo Logic dashboard. Gain deep insights into your automation scripts and identify gaps to ship quality products at light speed.
 keywords:
   - lambdatest integrations

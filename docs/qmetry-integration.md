@@ -2,7 +2,7 @@
 id: qmetry-integration
 title: How to Run QMetry Automation Tests using LambdaTest?
 hide_title: true
-sidebar_label: QMetry Integration
+sidebar_label: QMetry
 description: With this integration, run your tests from QMetry app, directly on LambdaTest's cloud-based Selenium Grid, on 3000+ desktop & mobile browser and OS combinations
 keywords:
  - LambdaTest integrations

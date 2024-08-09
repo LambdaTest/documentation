@@ -2,7 +2,7 @@
 id: monday-integration
 title: monday.com Integration
 hide_title: true
-sidebar_label: monday.com Integration
+sidebar_label: monday.com
 description: LLambdaTest helps you manage your bugs in monday.com by moving them to project in a single click. You&#039;ll get all the details like task list, assignee, and title in you monday project.
 keywords:
   - lambdatest integrations

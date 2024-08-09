@@ -2,7 +2,7 @@
 id: gitlab-ci-integration
 title: GitLab CI Integration
 hide_title: true
-sidebar_label: Gitlab CI Integration
+sidebar_label: Gitlab CI
 description: Integrate GitLab CI seamlessly with LambdaTest for efficient and automated testing, supported by step-by-step guides and detailed support doc.
 keywords:
   - lambdatest integrations
