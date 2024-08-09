@@ -38,11 +38,9 @@ slug: hyperexecute-release-notes-2-4-4/
     }}
 ></script>
 
-## HyperExecute now integrates with k6 for Scalable Performance Testing
+## HyperExecute now integrates with k6
 
-HyperExecute now supports k6, a powerful open-source performance testing tool. This integration empowers QA and developers to effortlessly scale their performance testing efforts and gain deeper insights into their applications' performance.
-
-HyperExecute supports all versions of k6 (till 0.52). To use any particular version, all you have to do is mention that specific version in the [runson flag](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runson) in your [HyperExecute YAML](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/) file.
+HyperExecute now supports k6, a powerful open-source performance testing tool. HyperExecute supports all versions of k6 (till 0.52). To use any particular version, all you have to do is mention that specific version in the [runson flag](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runson) in your [HyperExecute YAML](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/) file.
 
 ```yaml
 runtime:
