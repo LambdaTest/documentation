@@ -2,7 +2,7 @@
 id: ghost-inspector-integration
 title: Ghost Inspector Integration With LambdaTest’s Cloud 
 hide_title: true
-sidebar_label: Ghost Inspector Integration
+sidebar_label: Ghost Inspector
 description: LambdaTest now integrates with Ghost Inspector to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
   - lambdatest integrations

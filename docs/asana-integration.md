@@ -2,7 +2,7 @@
 id: asana-integration
 title: Asana Integration For Easy Browser Testing | LambdaTest
 hide_title: true
-sidebar_label: Asana Integration
+sidebar_label: Asana
 description: With LambdaTest - Asana integration, now you can mark your bug to Asana dashboard directly from LambdaTest while performing testing.
 keywords:
   - LambdaTest Asana integration

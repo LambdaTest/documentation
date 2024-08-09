@@ -2,7 +2,7 @@
 id: genrocket-integration
 title: GenRocket Integration
 hide_title: true
-sidebar_label: GenRocket Integration
+sidebar_label: GenRocket
 description: Integrate LambdaTest with GenRocket to perform desktop web, mobile web and native app testing across 3000+ real browsers, devices, and operating systems.
 keywords:
   - lambdatest integration with GenRocket

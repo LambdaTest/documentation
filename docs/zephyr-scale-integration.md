@@ -2,7 +2,7 @@
 id: zephyr-scale
 title: Zephyr Scale Integration
 hide_title: true
-sidebar_label: Zephyr Scale Integration
+sidebar_label: Zephyr Scale
 description: Integrate Zephyr Scale with LambdaTest to perform automated browser testing, and view test results directly from the LambdaTest platform to your Zephyr Scale instance.
 
 keywords:

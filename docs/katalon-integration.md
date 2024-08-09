@@ -1,7 +1,7 @@
 ---
 id: katalon-integration
 title: Katalon Integration with LambdaTest
-sidebar_label: Katalon Integration [Real Devices]
+sidebar_label: Katalon - Real Devices
 description: Leverage LambdaTest's cloud mobile devices to run automation testing using Katalon Studio.
 keywords:
   - katalon studio

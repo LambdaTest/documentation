@@ -2,7 +2,7 @@
 id: qtest-integration
 title: How to integrate qTest With LambdaTest
 hide_title: true
-sidebar_label: qTest Integration
+sidebar_label: qTest
 description: Run your tests using qTest Launch on LambdaTest.
 keywords:
   - LambdaTest integration

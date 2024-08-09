@@ -2,7 +2,7 @@
 id: zoho-bugtracker-integration
 title: Zoho BugTracker Integration
 hide_title: true
-sidebar_label: Zoho BugTracker Integration
+sidebar_label: Zoho BugTracker 
 description: Integrate LambdaTest with Zoho BugTracker and perform effortless one-click bug logging from LambdaTest platform to Zoho BugTracker projects. Capture screenshots, annotate bugs, and more.
 keywords:
   - lambdatest integration with zoho bugtracker

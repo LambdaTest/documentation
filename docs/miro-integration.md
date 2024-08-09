@@ -2,7 +2,7 @@
 id: miro-integration
 title: Miro Integration with LambdaTest
 hide_title: true
-sidebar_label: Miro Integration
+sidebar_label: Miro
 description: LambdaTest’s integration with Miro will help you to log bugs to boards on Miro. You can easily find and report any cross browser compatibility issues to your team instantly.
 keywords:
   - lambdatest integrations

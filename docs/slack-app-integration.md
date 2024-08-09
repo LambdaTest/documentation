@@ -2,7 +2,7 @@
 id: slack-app
 title: Slack App Integration
 hide_title: true
-sidebar_label: Slack App Integration
+sidebar_label: Slack App
 description: Integrate Slack App with LambdaTest and quickly launch the real-time and screenshot tests directly from Slack. Collaborate faster with your teammates on issues and fasten the feedback cycle.
 keywords:
 - integrate lambdatest with slack

@@ -1,7 +1,7 @@
 ---
 id: applitools-integration-with-lambdatest
 title: Applitools Integration With LambdaTest
-sidebar_label: Applitools Integration
+sidebar_label: Applitools
 description: LambdaTest integration with Applitools will allow you perform automated cross browser testing on more than 2000 real browsers running on real operating systems, hosted on a cloud-based Selenium Grid. You can execute your automation test script on LambdaTest Selenium Grid directly from your Applitools instance.
 keywords:
   - lambdatest integrations
