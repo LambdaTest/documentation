@@ -2,7 +2,7 @@
 id: testmo-integration
 title: How to integrate TestMo With LambdaTest
 hide_title: true
-sidebar_label: TestMo Integration
+sidebar_label: TestMo
 description: LambdaTest integration to TestMo will help you run your automation scripts from TestMo instance to our cloud-based Grid.
 keywords:
   - LambdaTest integration

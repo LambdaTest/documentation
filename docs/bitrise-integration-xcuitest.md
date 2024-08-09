@@ -2,7 +2,7 @@
 id: bitrise-integration-xcuitest
 title: Integrating LambdaTest as a Bitrise CI/CD Step [XCUITest] 
 hide_title: true
-sidebar_label: Bitrise Integration (XCUITest)
+sidebar_label: Bitrise - XCUITest
 description: Integrate LambdaTest with Bitrise CI/CD Step [XCUITest] to run your XCUITest workflow successfully on LambdaTest.
 keywords:
 - lambdatest bitrise 

@@ -2,7 +2,7 @@
 id: zipboard-integration
 title: zipBoard Integration
 hide_title: true
-sidebar_label: zipBoard Integration
+sidebar_label: zipBoard 
 description: This document will help you integrate LambdaTest with zipBoard. That way, you can log bugs to your zipBoard project in a single click as you perform cross browser testing with LambdaTest.
 keywords:
   - lambdatest integrations

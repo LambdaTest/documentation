@@ -2,7 +2,7 @@
 id: clickup-integration
 title: ClickUp 
 hide_title: true
-sidebar_label: ClickUp Integration
+sidebar_label: ClickUp
 description: Mark UI bugs to your ClickUp project directly while performing cross browser testing with LambdaTest. Capture screenshot, annotate and assign it to a colleague.
 keywords:
   - lambdatest integrations

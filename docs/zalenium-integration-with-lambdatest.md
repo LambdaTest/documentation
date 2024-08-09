@@ -1,7 +1,7 @@
 ---
 id: zalenium-integration-with-lambdatest
 title: Zalenium Integration With LambdaTest
-sidebar_label: Zalenium Integration
+sidebar_label: Zalenium 
 description: LambdaTest integration with Zalenium will allow you perform automated cross browser testing for your locally hosted web pages for over 3000+ real browser and browser versions, installed and hosted on-cloud.
 keywords:
   - Zelenium

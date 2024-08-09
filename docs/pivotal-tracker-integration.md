@@ -2,7 +2,7 @@
 id: pivotal-tracker-integration
 title: LambdaTest Integration with Pivotal Tracker
 hide_title: true
-sidebar_label: Pivotal Tracker Integration
+sidebar_label: Pivotal Tracker
 description: LambdaTest provides integrations with Pivotal Tracker to help you log bugs directly from the middle of your test session on LambdaTest to your Pivotal Tracker.
 keywords:
   - lambdatest integrations

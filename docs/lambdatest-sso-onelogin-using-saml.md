@@ -2,7 +2,7 @@
 id: lambdatest-sso-onelogin-using-saml
 title: LambdaTest SSO & OneLogin Using SAML
 hide_title: true
-sidebar_label: OneLogin Integration
+sidebar_label: OneLogin
 description: Now integrate your OneLogin user directory with your LambdaTest organization subscription through an IDP, so that your team could leverage the SSO setup.
 keywords:
   - sso

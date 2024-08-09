@@ -61,7 +61,55 @@ In order to execute the tests, you can just select whatever tests you want to ru
 
 **Step 5 :** You can provide the number of concurrent sessions you want to execute your test cases just in time. HyperExecute will intelligently split your tests across the given concurrency and run your tests at the fastest speed possible.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/hyp-projects-run.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
+**Step 1:** Click on the **Setup Workflow** button.
+- Enter your workflow name.
+- Provide your branch name.
+- Enter the path of your YAML file you want to execute.
+
+Click on the **Next** button.
+
+**Step 2:** Configure the schedule of your workflow. Select your **day** (you can select multiple days also) and **time** at which you want to trigger your tests. Click on the **Next** button.
+
+**Step 3:** You can also link other existing workflows in this project that are completed.
+
+Click on the **Finish** button and your job will be triggered on the defined day and time.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/setup-workflow.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+## Additional Resources
+
+You can also setup different products like Tosca, Tosca DEX or JMeter projects as well, for further details refer to the respective pages:
+
+<div className="support_main">
+
+  <a href = "/support/docs/tosca-integration-with-hyperexecute-using-commander/">
+  <div className="support_inners">
+    <h3>Tosca using Commander</h3>
+    <p>Optimize and accelerate end-to-end testing for your entire digital landscape using Tosca.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/tosca-integration-with-hyperexecute-using-dex/">
+  <div className="support_inners">
+    <h3>Tosca using DEX</h3>
+    <p>Perform end-to-end testing using Tosca DEX with HyperExecute.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/tosca-integration-with-hyperexecute-for-sap/">
+  <div className="support_inners">
+    <h3>Tosca for SAP</h3>
+    <p>Use Tosca for SAP to integrate with HyperExecute.</p>
+  </div>
+  </a>
+
+  <a href = "/support/docs/hyperexecute-run-jmeter-tests/">
+  <div className="support_inners">
+    <h3>JMeter</h3>
+    <p>Experience the JMeter Performance Testing with HyperExecute.</p>
+  </div>
+  </a>
+</div>
 
 
 <nav aria-label="breadcrumbs">

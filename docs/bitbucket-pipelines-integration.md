@@ -2,7 +2,7 @@
 id: bitbucket-pipelines-integration
 title: Bitbucket Pipelines Integration With LambdaTest
 hide_title: true
-sidebar_label: Bitbucket Pipelines Integration 
+sidebar_label: Bitbucket Pipelines 
 description: LambdaTest integration with Bitbucket Pipelines will help you perform cross-browser testing on 3000+ real browsers &amp; browser versions, through a Selenium Grid hosted on LambdaTest cloud servers.
 keywords:
   - bitbucket pipelines

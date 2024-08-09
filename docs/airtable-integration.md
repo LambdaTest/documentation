@@ -2,7 +2,7 @@
 id: airtable-integration
 title: LambdaTest Integration With Airtable
 hide_title: true
-sidebar_label: Airtable Integration
+sidebar_label: Airtable
 description: Using LambdaTest integration with Airtable, you’ll be able to log bugs over your project in Airtable from LambdaTest in just a single click. You can capture a screenshot of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title and description to help relay further actions.
 keywords:
   - lambdatest integrations

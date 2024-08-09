@@ -2,7 +2,7 @@
 id: azure-devops-integration
 title: Integrate LambdaTest with Azure DevOps | LambdaTest
 hide_title: true
-sidebar_label: Azure DevOps Integration
+sidebar_label: Azure DevOps
 description: LambdaTest provides integrations with Azure DevOps to help you log bugs directly from the middle of your test session on LambdaTest to your Azure DevOps project.
 keywords:
   - LambdaTest integrations

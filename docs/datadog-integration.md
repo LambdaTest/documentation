@@ -2,7 +2,7 @@
 id: datadog-integration
 title: Datadog Integration
 hide_title: true
-sidebar_label: Datadog Integration
+sidebar_label: Datadog
 description: With LambdaTest and Datadog, you can log bugs with a single click while performing cross-browser testing. Capture screenshots, highlight bugs, and send them directly from the LambdaTest platform to Datadog.
 keywords:
   - LambdaTest integration with Datadog

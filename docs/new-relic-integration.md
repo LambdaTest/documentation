@@ -2,7 +2,7 @@
 id: new-relic-integration
 title: New Relic Integration With LambdaTest
 hide_title: true
-sidebar_label: New Relic Integration
+sidebar_label: New Relic
 description: View your LambdaTest test results in a custom New Relic dashboard. Gain deep insights into your automation scripts and identify gaps to ship quality products at light speed.
 keywords:
   - lambdatest integrations

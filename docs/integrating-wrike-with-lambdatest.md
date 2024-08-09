@@ -2,7 +2,7 @@
 id: integrating-wrike-with-lambdatest
 title: Integrating Wrike With LambdaTest
 hide_title: true
-sidebar_label: Wrike Integration 
+sidebar_label: Wrike 
 description: With LambdaTest + Wrike integration, now you can mark your bug directly to Wrike workspace from LambdaTest even in middle of testing, and effectively track it.
 keywords:
  - LambdaTest Wrike integration

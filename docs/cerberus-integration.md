@@ -2,7 +2,7 @@
 id: cerberus-integration
 title: Running Cerberus Automation Tests Using LambdaTest
 hide_title: true
-sidebar_label: Cerberus Integration
+sidebar_label: Cerberus
 description: Now perform cross-browser testing of your website or web app on 3000+ desktop & mobile browser and OS combinations, using LambdaTest and Cerberus integration
 keywords:
  - LambdaTest integrations

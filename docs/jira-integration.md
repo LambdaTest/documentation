@@ -2,7 +2,7 @@
 id: jira-integration
 title: Integrate LambdaTest with Jira | LambdaTest
 hide_title: true
-sidebar_label: Jira Integration
+sidebar_label: Jira
 description: LambdaTest provides integrations with JIRA to help you log bugs directly from the middle of your test session on LambdaTest to JIRA platform.
 keywords:
   - LambdaTest integrations
