@@ -35,46 +35,44 @@ slug: hyperexecute-projects/
       })
     }}
 ></script>
+> Currently in the **Beta**.
 
+Projects serve as a centralized platform for organizing and managing test executions. By grouping similar tests, controlling access, and tracking progress, Projects streamline the testing process. You can configure [custom project](/support/docs/hyperexecute-projects/#setup-your-project) and [workflow setups](/support/docs/hyperexecute-projects/#schedule-your-workflows), as well as [integrate Tosca, Tosca DEX, and JMeter tests](/support/docs/hyperexecute-projects/#setting-up-specialized-projects) for unified management. This enables efficient test script creation, automated execution scheduling, and valuable insights into test results.
 
-In the following guide, we will walk you through the comprehensive process of establishing a **custom project** and constructing an efficient **workflow** within the HyperExecute platform. By leveraging these features, you can optimize your testing procedures and streamline your development pipeline.
-
-> This is currently in the **Beta** version.
-
-## Steps to setup your Custom Project
-
+## Setup your Project
 **Step 1:** Go to the **Projects** section in HyperExecute. Click on the **New Project** to create your projects on HyperExecute.
 
-**Step 2:** Select **Custom Project** as the **Type of Project**. Provide a unique **Project Name** (required) and select your desired framework and language for which you want to execute the test. Click the **Continue** button.
+**Step 2:** Select **Custom Project** as the **Type of Project**. Provide a unique **Project Name** (required) and select your desired framework and language used in your project. Click on the **Continue**.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/create-project.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-**Step 3:** Provide the **URL** and the **[Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)** of your repository. You can also add your team members as **Co-Owners** to allow them to edit or delete the project alongside you.
+**Step 3:** Provide the **GitHub URL** and the **[Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)** of your repository. You can also add your team members as **Co-Owners** to allow them to edit or delete the project alongside you.
 
-Click on the **Save** button to finish the setup of your project.
+:::info important
+Currently, only **GitHub** repositories are supported.
+:::
+
+Click on **Save** button to finish the setup of your project.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/project-detail.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-## Steps to setup your Workflow inside the Project
+## Schedule your Workflows
+Within each HyperExecute Project, you can set up one or more workflows. These workflows allow for scheduled execution of your tests, providing you with the flexibility to automate your testing process according to your development and release cycles.
 
-**Step 1:** Click on the **Setup Workflow** button.
-- Enter your workflow name.
-- Provide your branch name.
-- Enter the path of your YAML file you want to execute.
+> Currently in the **Beta**, and works only in the [dynamic mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
 
-Click on the **Next** button.
+**Step 1:** Click on the **Setup Workflow**. Enter your workflow name, provide your branch name and then enter the path of your YAML file you want to execute. Click on **Next**.
 
-**Step 2:** Configure the schedule of your workflow. Select your **day** (you can select multiple days also) and **time** at which you want to trigger your tests. Click on the **Next** button.
+**Step 2:** Configure the schedule of your workflow. Select the **days** and **time** at which you want to trigger your tests. Click on **Next**.
 
-**Step 3:** You can also link other existing workflows in this project that are completed.
+**Step 3: Workflow Linking (Optional)-** You can connect this workflow to other existing workflows in this project or others that you own. When this workflow is completed successfully, it can automatically activate the linked workflows. To configure this, select the workflows you want to trigger from the list of existing workflows. This feature enables you to create automated workflow chains for more complex testing and deployment processes.
 
 Click on the **Finish** button and your job will be triggered on the defined day and time.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/setup-workflow.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-## Additional Resources
-
-You can also setup different products like Tosca, Tosca DEX or JMeter projects as well, for further details refer to the respective pages:
+## Setting Up Specialized Projects
+In addition to custom projects, HyperExecute supports integration with specialized testing tools such as Tosca, Tosca DEX, and Performance testing with JMeter. For detailed instructions on setting up these specific projects, please refer to their dedicated documentation pages:
 
 <div className="support_main">
 
