@@ -2,7 +2,7 @@
 id: trello-integration
 title: Integrate LambdaTest with Trello | LambdaTest
 hide_title: true
-sidebar_label: Trello Integration
+sidebar_label: Trello
 description: LambdaTest provides integrations with Trello to help you log bugs directly from the middle of your test session on LambdaTest to your Trello card.
 keywords:
   - LambdaTest integrations

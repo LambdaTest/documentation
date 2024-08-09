@@ -1,7 +1,7 @@
 ---
 id: yaml-integration
 title: Configure YAML For Integrating GoCD Pipelines With LambdaTest
-sidebar_label: YAML Integration
+sidebar_label: YAML
 description: This topic will teach you how you can configure your own YAML through GoCD and then integrate your pipeline with an online Selenium Grid.
 keywords:
   - gocd

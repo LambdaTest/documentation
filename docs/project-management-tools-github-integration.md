@@ -2,7 +2,7 @@
 id: project-management-tools-github-integration
 title: Integrate LambdaTest with GitHub | LambdaTest
 hide_title: true
-sidebar_label: GitHub Integration
+sidebar_label: GitHub
 description: LambdaTest provides integrations with GitHub to help you log bugs directly from the middle of your test session on LambdaTest to your GitHub repository.
 keywords:
   - lambdatest integrations

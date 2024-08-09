@@ -2,7 +2,7 @@
 id: espresso-bitrise
 title: How to integrate your Espresso tests with Bitrise CI
 hide_title: true
-sidebar_label: Bitrise Integration (Espresso)
+sidebar_label: Bitrise - Espresso
 description: Integrate LambdaTest with Bitrise CI to get started with Espresso test automation across a wide range of real Android devices.
 keywords:
 - lambdatest bitrise 

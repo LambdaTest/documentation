@@ -2,7 +2,7 @@
 id: backlog-integration
 title: LambdaTest Integration With Backlog
 hide_title: true
-sidebar_label: Backlog Integration
+sidebar_label: Backlog
 description: LambdaTest integration with Backlog will help you file any UI bug on your Backlog project instance, directly from LambdaTest. If you ever come across a browser compatibility bug while cross browser testing on LambdaTest, all you need to do is hit a single click and the bug will be logged into your Backlog project.
 keywords:
   - lambdatest integrations

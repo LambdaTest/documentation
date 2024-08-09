@@ -2,7 +2,7 @@
 id: accelq-integration
 title: ACCELQ Integration
 hide_title: true
-sidebar_label: ACCELQ Integration
+sidebar_label: ACCELQ
 description: Accelerate your end-to-end digital testing journey with LambdaTest and ACCELQ.  Automate your web and mobile apps across 3000+ real browsers, devices and operating system combinations.
 keywords:
   - lambdatest integration with accelq

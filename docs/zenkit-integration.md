@@ -2,7 +2,7 @@
 id: zenkit-integration
 title: Zenkit Integration
 hide_title: true
-sidebar_label: Zenkit Integration
+sidebar_label: Zenkit 
 description: Discover how LambdaTest and Zenkit seamlessly integrate to enhance your testing workflows. Dive into our support doc to leverage the power of both platforms for efficient bug tracking and collaboration.
 keywords:
   - lambdatest integrations

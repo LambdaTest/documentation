@@ -2,7 +2,7 @@
 id: buildkite-integration
 title: Buildkite Integration With LambdaTest
 hide_title: true
-sidebar_label: Buildkite Integration
+sidebar_label: Buildkite
 description: LambdaTest offers continuous integration with Buildkite to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.
 keywords:
   - lambdatest integrations

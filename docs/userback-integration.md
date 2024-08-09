@@ -2,7 +2,7 @@
 id: userback-integration
 title: Userback Integration
 hide_title: true
-sidebar_label: Userback Integration
+sidebar_label: Userback
 description: LambdaTest helps you manage your bugs in your Userback instance in a single click. All the details you provide in LambdaTest like task list, assignee, title and description would automatically be presented in the project in your Userback instance.
 keywords:
   - lambdatest integrations

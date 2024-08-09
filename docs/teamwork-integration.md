@@ -2,7 +2,7 @@
 id: teamwork-integration
 title: Teamwork Integration With LambdaTest
 hide_title: false
-sidebar_label: Teamwork Integration
+sidebar_label: Teamwork
 description: LambdaTest helps you to push bugs directly in Teamwork project with details like task list, assignee, title and description with a single click.
 keywords:
   - lambdatest integrations
