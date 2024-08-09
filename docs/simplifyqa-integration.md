@@ -66,7 +66,7 @@ This document will guide you step-by-step method to integrate the SimplifyQA wit
 
 <img loading="lazy" src={require('../assets/images/integrations/simplifyqa/setup-simplifyqa.gif').default} alt="Image"  className="doc_img"/>
 
-### Step 3: Uplaod your application
+### Step 3: Upload your application
 - Go to LambdaTest's **Real Device** > **App Testing** and upload your desired **.apk** file.
 - After successfully uploading the APK, click on the settings icon and copy the provided **App ID**.
 
