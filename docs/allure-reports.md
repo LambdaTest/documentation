@@ -1,7 +1,7 @@
 ---
 id: allure-reports
 title: Allure Reports on HyperExecute
-hide_title: true
+hide_title: false
 sidebar_label: Allure Reports
 description: Learn how to generate Allure test report for HyperExecute on lambdatest and download the reports from the dashboard
 keywords:
@@ -39,8 +39,6 @@ import NewTag from '../src/component/newTag';
     }}
 ></script>
 
-# Allure Reports
-
 Allure Framework is a versatile, lightweight, multi-language test reporting tool designed to provide a concise representation of tested functionalities in a visually appealing web report format. It facilitates easy extraction of valuable information for all stakeholders involved in the development process.
 
 ## Integration with HyperExecute
@@ -65,10 +63,10 @@ export const config = {
 - The `disableWebdriverStepsReporting` and `disableWebdriverScreenshotsReporting` parameters allow customization of reporting options.
 
 :::tip
-Alternatively this can also be done by creating an `allure.properties` file in the `src/test/resources` 
+Alternatively this can also be done by creating an `allure.properties` file in the `src/test/resources` directory. 
 
-```yaml
-allure.results.directory=target/allure-results
+```yaml title="allure.properties"
+allure.results.directory=reports/allure-results
 ```
 :::
 

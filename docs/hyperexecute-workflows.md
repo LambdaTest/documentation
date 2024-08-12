@@ -38,8 +38,8 @@ slug: hyperexecute-workflows/
 ></script>
 # HyperExecute Workflows
 
-:::warning note
-The workflow feature is getting deprecated from **30th August, 2024** and will be shifted under [Projects](/support/docs/hyperexecute-projects/) feature.
+:::danger important
+The workflow feature is getting deprecated from **30th August, 2024** and will be shifted under [Projects](/support/docs/hyperexecute-projects/) section.
 :::
 
 > The workflow feature is currently in the **Beta** version, so it works only in the [dynamic mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
@@ -59,7 +59,7 @@ You can setup scheduled workflows on HyperExecute platform to enable scheduled t
 - Provide the [**Access Token**](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 - Provide the **File Location** of your YAML file in the repository.
 
-Click on **Continue** button.
+Click on **Continue**.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/smart-workflow/hyp-workflow-add.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
