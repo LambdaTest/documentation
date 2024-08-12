@@ -88,6 +88,7 @@ The various flags that are supported are listed below.
 | [--labels](#--labels) | string | Incorporates the labels in your job. |
 | [--no-track](#--no-track) | NA | Stops updating the progress of the uplodaed jobs. |
 | [--preserve-payload](#--preserve-payload) | string | Preserves the job payload after its successful completion. |
+| [--runson](#--runson) | string | (comma-separated values of) OS on which the tests should run. |
 | [-s --scan](#-s---scan) | NA | Runs the network logs |
 | [--server-port](#--server-port) | string | Port number for the server (default "9191") |
 | [-t, --target-directory](#-t---target-directory) | string | Directory where the test script has to be uploaded. |
@@ -232,6 +233,23 @@ This flag allows you to preserve the job payload after the job is completed succ
 ```bash
 --preserve-payload
 ```
+***
+
+### `--runson`
+This flag overrides the defined OS value in your YAML file's [`runson`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runson) flag. You can also define multiple values for OS (comma separated) in the case of [Matrix](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/) and [Hybrid](https://www.lambdatest.com/support/docs/hyperexecute-hybrid-strategy/) mode execution.
+
+In case of [AutoSplit](https://www.lambdatest.com/support/docs/hyperexecute-auto-split-strategy/) mode:
+
+```bash
+--runson linux
+```
+
+In case of [Matrix](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid](https://www.lambdatest.com/support/docs/hyperexecute-hybrid-strategy/) mode:
+
+```bash
+--runson linux,win,win11,mac,mac13
+```
+
 ***
 
 ### `-s, --scan`
