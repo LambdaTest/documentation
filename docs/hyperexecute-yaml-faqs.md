@@ -89,12 +89,12 @@ tunnel: true
 Moreover, add one of the following parameters in the `preDirectives` field depending on the tech stack that your organization is using.
 
 -   For Maven projects:  
-    `-DproxyHost=${LT_PROXY_HOST}`
-    
+    `-DproxyHost=${LT_PROXY_HOST}`<br />
     `-DproxyPort=${LT_PROXY_PORT}`
     
 -   For Node:  
-    `npm config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT} npm config set https-proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}`
+    `npm config set proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}`<br />
+    `npm config set https-proxy http://${LT_PROXY_HOST}:${LT_PROXY_PORT}`
     
 
 Therefore, if you want to use a tunnel for connecting HyperExecute with your organization (that is working with a maven project), you should configure your YAML file like this:

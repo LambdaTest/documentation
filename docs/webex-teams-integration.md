@@ -2,7 +2,7 @@
 id: webex-teams-integration
 title: Webex Teams Integration
 hide_title: true
-sidebar_label: Webex Teams Integration
+sidebar_label: Webex Teams
 description: LambdaTest helps you manage your bugs in Webex Teams by moving them to project in a single click. All the details you provide in LambdaTest like task list, assignee, title and description would automatically be presented in the project in your Webex Teams Space.
 keywords:
   - lambdatest integrations

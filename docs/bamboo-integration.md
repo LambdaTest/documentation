@@ -2,7 +2,7 @@
 id: bamboo-integration
 title: How to integrate Bamboo with LambdaTest
 hide_title: true
-sidebar_label: Bamboo Integration
+sidebar_label: Bamboo
 description: Deploy your code in a reliable manner at scale using Bamboo integration with LambdaTest, and ensure it looks robust across every browser with Selenium Grid on cloud.
 keywords:
   - bamboo integrations

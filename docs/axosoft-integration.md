@@ -2,7 +2,7 @@
 id: axosoft-integration
 title: Axosoft Integration
 hide_title: true
-sidebar_label: Axosoft Integration
+sidebar_label: Axosoft
 description: With LambdaTest - Axosoft integration, now you can mark your bug to Axosoft dashboard directly from LambdaTest while performing testing.
 keywords:
   - lambdatest integrations

@@ -2,7 +2,7 @@
 id: codeship-integration
 title: Codeship Integration With LambdaTest
 hide_title: true
-sidebar_label: Codeship Integration
+sidebar_label: Codeship
 description: LambdaTest offers continuous integration with Codeship to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.
 keywords:
   - lambdatest integrations

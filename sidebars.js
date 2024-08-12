@@ -1178,7 +1178,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "GoCD Integration",
+            label: "GoCD",
             items: ["gocd-integration", "yaml-integration"],
           },
           "drone-ci",
@@ -1202,8 +1202,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Katalon Integration",
-
+            label: "Katalon",
             items: [
               "katalon-integration-with-lambdatest",
               "katalon-integration",
@@ -1307,6 +1306,7 @@ module.exports = {
       "genrocket-integration",
       "netlify-integration-with-lambdatest",
       "testim-integration",
+      "simplifyqa-integration"
     ],
     // },
   ],

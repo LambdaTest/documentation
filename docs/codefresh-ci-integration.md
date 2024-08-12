@@ -2,7 +2,7 @@
 id: codefresh-ci-integration
 title: Codefresh CI Integration With LambdaTest
 hide_title: true
-sidebar_label: Codefresh CI Integration
+sidebar_label: Codefresh CI
 description: LambdaTest offers continuous integration with Codefresh to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.
 keywords:
   - lambdatest integrations

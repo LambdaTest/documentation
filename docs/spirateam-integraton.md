@@ -2,7 +2,7 @@
 id: spirateam-integration
 title: SpiraTeam Integration
 hide_title: false
-sidebar_label: SpiraTeam Integration
+sidebar_label: SpiraTeam
 description: LambdaTest provides integrations with SpiraTeam to help you log bugs directly from the middle of your test session on LambdaTest to SpiraTeam platform.
 keywords:
   - LambdaTest integrations

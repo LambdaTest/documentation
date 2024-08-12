@@ -1,7 +1,7 @@
 ---
 id: allure-reports
 title: Allure Reports on HyperExecute
-hide_title: true
+hide_title: false
 sidebar_label: Allure Reports
 description: Learn how to generate Allure test report for HyperExecute on lambdatest and download the reports from the dashboard
 keywords:
@@ -39,8 +39,6 @@ import NewTag from '../src/component/newTag';
     }}
 ></script>
 
-# Allure Reports
-
 Allure Framework is a versatile, lightweight, multi-language test reporting tool designed to provide a concise representation of tested functionalities in a visually appealing web report format. It facilitates easy extraction of valuable information for all stakeholders involved in the development process.
 
 ## Integration with HyperExecute
@@ -51,23 +49,30 @@ If your testing framework already generates Allure reports, you can seamlessly i
 
 **Step 1:** To configure the Allure reporter in the **WDIO framework**, update your `wdio.conf.js` file as follows:
 
-```bash
+```javascript title="wdio.conf.js"
 export const config = {
     reporters: [['allure', {
-        outputDir: 'allure-results',
+        outputDir: 'reports/allure-results',
         disableWebdriverStepsReporting: true,
         disableWebdriverScreenshotsReporting: true,
     }]],
 }
 ```
-
 - The `outputDir` parameter specifies the directory where Allure reports will be stored. In this example, it is set to **'reports/allure-results'**. This parent folder is essential for HyperExecute integration, as detailed later.
 
 - The `disableWebdriverStepsReporting` and `disableWebdriverScreenshotsReporting` parameters allow customization of reporting options.
 
+:::tip
+Alternatively this can also be done by creating an `allure.properties` file in the `src/test/resources` directory. 
+
+```yaml title="allure.properties"
+allure.results.directory=reports/allure-results
+```
+:::
+
 **Step 2:** Add the following report parameters in your HyperExecute YAML file
 
-```bash
+```yaml
 report: true
 partialReports:
   location: reports

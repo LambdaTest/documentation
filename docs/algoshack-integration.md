@@ -2,7 +2,7 @@
 id: algoshack-integration
 title: algoQA Integration
 hide_title: true
-sidebar_label: algoQA Integration
+sidebar_label: algoQA
 description: Integrate LambdaTest with algoQA and automate your browser testing on an online browser farm of 3000+ real browsers and operating system combinations.
 keywords:
   - lambdatest integration with algoqa

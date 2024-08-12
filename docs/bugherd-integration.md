@@ -2,7 +2,7 @@
 id: bugherd-integration
 title: BugHerd Integration with LambdaTest
 hide_title: false 
-sidebar_label: BugHerd Integration
+sidebar_label: BugHerd 
 description: LambdaTest helps you manage your bugs in BugHerd by moving them to project in a single click. All the details you provide in LambdaTest like task list, assignee, title and description would automatically be presented in the project on BugHerd.
 keywords:
   - lambdatest integrations

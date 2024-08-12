@@ -2,7 +2,7 @@
 id: leapwork-integration
 title: How to Perform Automation Testing with LEAPWORK and LambdaTest
 hide_title: true
-sidebar_label: LEAPWORK Integration
+sidebar_label: Leapwork
 description: In our latest attempt to make life easy for testers, LambdaTest integrates with LeapWork to make your automation flows more seamless than ever before.
 keywords:
 - LambdaTest Leapwork
