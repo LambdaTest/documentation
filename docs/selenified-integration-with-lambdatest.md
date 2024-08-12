@@ -2,7 +2,7 @@
 id: selenified-integration-with-lambdatest
 title: How to integrate selenified with LambdaTest
 hide_title: true
-sidebar_label: Selenified Integration
+sidebar_label: Selenified
 description: With LambdaTest integration to Selenified, you can perform cross browser testing in parallel on more than 2000 real browsers available at an online Selenium Grid offered by LambdaTest. So you don’t have to worry about configuring an in-house testing infrastructure as LambdaTest will take care of that for you.
 keywords:
   - selenified integration

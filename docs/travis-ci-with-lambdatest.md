@@ -2,7 +2,7 @@
 id: travis-ci-with-lambdatest
 title: How to integrate Travis CI with LambdaTest
 hide_title: true
-sidebar_label: Travis CI Integration
+sidebar_label: Travis CI
 description: LambdaTest now integrates with Travis CI to boost go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down test cycles.
 keywords:
     - lambdatest integrations

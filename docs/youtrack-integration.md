@@ -2,7 +2,7 @@
 id: youtrack-integration
 title: YouTrack Integration
 hide_title: true
-sidebar_label: YouTrack Integration
+sidebar_label: YouTrack 
 description: LambdaTest provides YouTrack integration to help you perform one-click bug logging from the LambdaTest to your YouTrack dashboard right away.
 keywords:
   - LambdaTest integration with YouTrack 

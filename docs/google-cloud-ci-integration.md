@@ -2,7 +2,7 @@
 id: google-cloud-ci-integration
 title: How to run selenium test with google cloud CI
 hide_title: true
-sidebar_label: Google Cloud CI Integration
+sidebar_label: Google Cloud CI
 description: This documentation will help you in integrating Selenium test suites with Google Cloud CI and perform automated testing on cloud Selenium grid.
 keywords:
   - ci cd google cloud

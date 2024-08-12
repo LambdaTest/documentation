@@ -2,7 +2,7 @@
 id: bugzilla-integration
 title: Bugzilla Integration
 hide_title: true
-sidebar_label: Bugzilla Integration
+sidebar_label: Bugzilla 
 description: Perform one-click bug logging with LambdaTest and Bugzilla integration. Capture screenshots, annotate issues, and share them directly from the LambdaTest platform to your Bugzilla products.
 keywords:
   - LambdaTest integration with Bugzilla 

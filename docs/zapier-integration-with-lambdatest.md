@@ -1,7 +1,7 @@
 ---
 id: zapier-integration-with-lambdatest
 title: Zapier Integration With LambdaTest
-sidebar_label: Zapier Integration
+sidebar_label: Zapier 
 description: LambdaTest integration with Zapier enable you to create a smarter and more customized workflow, helping you save time to focus on the important things to ship quality products at light speed. 
 keywords:
   - Zapier

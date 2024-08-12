@@ -1,7 +1,7 @@
 ---
 id: tricentis-tosca-integration
 title: Tricentis Tosca Integration With LambdaTest’s Cloud Based Selenium Grid
-sidebar_label: Tricentis Tosca Integration
+sidebar_label: Tricentis Tosca
 description: Now you can run your Tosca  automation tests  on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - tricentis tosca

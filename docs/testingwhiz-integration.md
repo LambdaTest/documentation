@@ -2,7 +2,7 @@
 id: testingwhiz-integration
 title: Running Automation Tests Using TestingWhiz LambdaTest
 hide_title: true
-sidebar_label: TestingWhiz Integration
+sidebar_label: TestingWhiz
 description: Now perform cross-browser testing of your website or web app on 3000+ desktop & mobile browser and OS combinations, using LambdaTest and TestingWhiz integration
 keywords:
  - LambdaTest integrations

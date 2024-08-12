@@ -2,7 +2,7 @@
 id: pagerduty-integration
 title: PagerDuty Integration
 hide_title: true
-sidebar_label: PagerDuty Integration
+sidebar_label: PagerDuty 
 description: You can log defects with a single click when performing cross-browser testing using LambdaTest and PagerDuty integration. Capture screenshots, pinpoint errors, and send them straight to PagerDuty from the LambdaTest platform.
 keywords:
   - LambdaTest integration with PagerDuty
