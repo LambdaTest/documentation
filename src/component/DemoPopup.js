@@ -1,5 +1,5 @@
 // Modal.js
-import axios from 'axios';
+// import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react';
 import { getProductType, injectRevenueHero, parseJwt } from './utilities';
 

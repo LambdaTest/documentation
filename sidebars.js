@@ -747,6 +747,7 @@ module.exports = {
               "hyperexecute-multi-webdriver-support",
               "hyperexecute-build-mobile-apps-using-tools",
               "hyperexecute-utilizing-custom-libraries",
+              "hyperexecute-supported-languages-and-packages"
             ],
           },
           {
