@@ -317,9 +317,7 @@ You can refer to this example and screenshot below:
 
 ## Filters in Sharding
 
-You can filter the Classes / Tests that you'd like to execute using filters.
-Here's an example of the same.This will not work
-
+You can filter the Classes / Tests that you'd like to execute using filters. Here's an example of the same.
 
 ```java
 filters:
