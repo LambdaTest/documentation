@@ -1,15 +1,15 @@
 ---
 id: hyperexecute-cli-gui
-title: HypEx-GUI﹕Effortless Setup and Execution for Automated Tests
+title: HyperExecute-GUI
 hide_title: false
-sidebar_label: CLI with HypEx-GUI
+sidebar_label: HyperExecute-GUI
 description: This documentation outlines the steps on how to trigger a job on hyperexecute using the underpass app - gui app for hyperexecute cli.
 keywords:
   - LambdaTest
   - HyperExecute
   - LambdaTest HyperExecute
   - CLI
-  - HypEx-GUI
+  - HyperExecute-GUI
   - test execute
   - hyperexecute job
   - automation
@@ -41,30 +41,30 @@ slug: hyperexecute-cli-gui/
       })
     }}
 ></script>
-HyperExecute currently requires writing YAML files and using specific CLI commands to trigger tests. This process can be a hurdle if you are new to YAML or unfamiliar with the specific flags and functionalities supported by HyperExecute.
+> Currently in the **Beta**.
 
-The HypEx-GUI simplifies test execution by providing a user-friendly graphical interface. This eliminates the need to write YAML files or memorize complex commands, saving you time and effort.
+HyperExecute currently requires writing [YAML](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/) files and using specific [CLI](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) commands to trigger tests. This process can be a hurdle if you are new to YAML or unfamiliar with the specific flags and functionalities supported by HyperExecute.
+
+The HyperExecute-GUI simplifies test execution by providing a user-friendly graphical interface. This eliminates the need to write YAML files or memorize complex commands, saving you time and effort.
 
 > **NOTE :** Currently we only support TestNG framework.
 
-## Steps to trigger your tests using the HypEx-GUI
+## Steps to trigger your tests using the HyperExecute-GUI
 
 ### Step 1: Download and Install the Underpass App
-Download the HypEx-GUI installer from the LambdaTest dashboard and follow the on-screen installation instructions.
+Download the HyperExecute-GUI installer from the LambdaTest dashboard and follow the on-screen installation instructions.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/step1.mp4').default} type="video/mp4" />
 </video>
 
 ### Step 2: Login and Project Selection
-Launch the HypEx-GUI and log in using your existing LambdaTest credentials. If you're new, start your free trial. The application will display a list of your existing projects.
-
-After signing in, you will have to upload your desired TestNG project from your local system.
+Launch the HyperExecute-GUI and log in using your existing LambdaTest credentials. If you're new, start your free trial. After signing in, you will have to upload your desired project from your local system.
 
 <img loading="lazy" src={require('../assets/videos/hyperexecute/cli-gui/step2.png').default} alt="project-hyperexecute" className="doc_img "/><br/><br/>
 
 ### Step 3: Project Details and Analysis
-The HypEx-GUI will automatically analyze your test scripts to detect whether you are using a suitable framework or not. It will then check all the dependencies required to execute your project.
+The HyperExecute-GUI will automatically analyze your test scripts and detect your project's framework and language. It will then check all the dependencies required to execute your project.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/step3.mp4').default} type="video/mp4" />
@@ -73,7 +73,7 @@ The HypEx-GUI will automatically analyze your test scripts to detect whether you
 Now click on the Proceed button.
 
 ### Step 4: Test Discovery and Selection
-The HypEx-GUI will automatically discover all the test cases within your project and display them in a list. You can easily select individual tests, an entire test project, or a group of suites to execute based on your needs.
+The HyperExecute-GUI will automatically discover all the test cases within your project and display them in a list. You can easily select individual tests, an entire test project, or a group of suites to execute based on your needs.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/step4.mp4').default} type="video/mp4" />
@@ -92,4 +92,4 @@ After selecting the necessary tests, you will have to to configure your project 
 Click on the "Run Test" button to start the test execution. Click on the "View Job" button to get redirected to the HyperExecute dashboard.
 
 ### Monitor and View Results
-The HypEx-GUI displays the job logs in real-time as your tests run. Once complete, you can view the detailed test results in the HyperExecute Dashboard.
+The HyperExecute-GUI displays the job logs in real-time as your tests run. Once complete, you can view the detailed test results in the HyperExecute Dashboard.
