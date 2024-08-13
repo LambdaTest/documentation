@@ -112,7 +112,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
         <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
-        <!-- <a href="/support/docs/hyperexecute-cli-gui/"><p className="p_home_inners">HypEx GUI &nbsp; <NewTag  value="Beta" /></p></a> -->
+        <a href="/support/docs/hyperexecute-cli-gui/"><p className="p_home_inners">HypEx GUI &nbsp; <NewTag  value="Beta" /></p></a>
         <a href="/support/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
     <a href="/support/docs/integration-with-hyperexecute/"><p className="p_home_inners">Integrations</p></a>
      <a href="/support/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
