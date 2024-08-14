@@ -38,17 +38,46 @@ slug: analytics-test-case-insights/
 
 Analyzing the test case level insights of your test automation execution on LambdaTest is now easier than ever with the `Test Case Insights` module. The user can easily find information about the count, and type of the test cases through the highly customizable widgets.
 
-## Pre-requisites For Test Case Insights: 
+## Pre-requisites For Insights: 
 1. You should have an active LambdaTest account.
-2. You should han active subscription plan with HyperExecute. 
-3. You should have executed at least one test on the LambdaTest HyperExecute platform.
+2. You should han active subscription plan with HyperExecute or App Automation. 
+3. You should have executed at least one test on the LambdaTest HyperExecute / App Automation platform.
 
 ## How To Access Test Case Insights?
-Go to the `Analytics` tab on the left navigation bar and click on the `Test Case Insights` module. Select the `Test Overview` module from the menu.Add the widgets to the dashboard by clicking on the `Add Widget` button.
+1. Go to the `Insights` tab on the left navigation bar and click on the `Create New`. 
+2. Select the `Custom Dashboard` option from the menu. 
+3. Now, search for `Test Case` widgets in the `App Automation & HyperExecute` products. 
+4. Add the widgets to the dashboard by clicking on the `Add Widget` button.
 
-<img loading="lazy" src={require('../assets/images/analytics/test-case-widgets-dashboard.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
+<!-- <img loading="lazy" src={require('../assets/images/analytics/test-case-widgets-dashboard.webp').default} alt="cmd" width="800" height="400" className="doc_img"/> -->
 
-## Capture the Test Case Insights
+## Capture Test Case Insights for App Automation
+
+### Capture by WebHook
+You can use LambdaHooks to start and end a test case within a single Appium session. 
+
+#### Test Case Start
+
+To start a test case, use the `lambda-testCase-start` hook:
+
+```java
+// To start a test case
+((JavascriptExecutor) driver).executeScript("lambda-testCase-start=find Name");
+```
+
+#### Test Case End
+
+To end a test case, use the `lambda-testCase-end` hook:
+
+```java
+// To end a test case
+((JavascriptExecutor) driver).executeScript("lambda-testCase-end=find Name");
+
+```
+
+To know more about the hooks and how to use them, you can refer to the [LambdaHooks for Appium](https://www.lambdatest.com/support/docs/appium-lambdatest-hooks/#differentiating-test-cases-in-single-session) documentation.
+
+## Capture Test Case Insights for HyperExecute
 
 ### Capture by WebHook 
 
@@ -63,7 +92,7 @@ driver.executeScript(`lambda-testCase-end=${Name of test case}`)
 
 ```
 
-### Capture by NPM Package
+### Capture by NPM Package for WebdriverIO
 
 You can capture the test case insights by using the NPM Package. You need to add the following `NPM Package` in your test script. Here is the link to the NPM package: [wdio-lambdatest-test-case-analytics-service](https://www.npmjs.com/package/wdio-lambdatest-test-case-analytics-service)
 
