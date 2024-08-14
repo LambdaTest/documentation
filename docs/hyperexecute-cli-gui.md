@@ -59,7 +59,7 @@ Download the HyperExecute-GUI installer from the LambdaTest dashboard and follow
 </video>
 
 ### Step 2: Login and Project Selection
-Launch the HyperExecute-GUI and log in using your existing LambdaTest credentials. If you're new, start your free trial. After signing in, you will have to upload your desired project from your local system.
+Launch the HyperExecute-GUI and log in using your existing LambdaTest credentials. If you're new, start your free trial. After signing in, you will have to browse your desired project from your local system.
 
 <img loading="lazy" src={require('../assets/videos/hyperexecute/cli-gui/step2.png').default} alt="project-hyperexecute" className="doc_img "/><br/><br/>
 
