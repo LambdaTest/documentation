@@ -81,7 +81,7 @@ This document provides a comprehensive list of all the supported versions of pro
     </Tabs>
 </TabItem>
 
-<TabItem value="mac" label="macOS" default>
+<TabItem value="mac" label="macOS (Intel)" default>
     <Tabs className="docs__val">
         <TabItem value="mac12" label="macOS 12" default>
             | Supported Languages | Version |
