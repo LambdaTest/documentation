@@ -51,7 +51,33 @@ Analyzing the test case level insights of your test automation execution on Lamb
 
 <!-- <img loading="lazy" src={require('../assets/images/analytics/test-case-widgets-dashboard.webp').default} alt="cmd" width="800" height="400" className="doc_img"/> -->
 
-## Capture the Test Case Insights for HyperExecute
+## Capture Test Case Insights for App Automation
+
+### Capture by WebHook
+You can use LambdaHooks to start and end a test case within a single Appium session. 
+
+#### Test Case Start
+
+To start a test case, use the `lambda-testCase-start` hook:
+
+```java
+// To start a test case
+((JavascriptExecutor) driver).executeScript("lambda-testCase-start=find Name");
+```
+
+#### Test Case End
+
+To end a test case, use the `lambda-testCase-end` hook:
+
+```java
+// To end a test case
+((JavascriptExecutor) driver).executeScript("lambda-testCase-end=find Name");
+
+```
+
+To know more about the hooks and how to use them, you can refer to the [LambdaHooks for Appium](https://www.lambdatest.com/support/docs/appium-lambdatest-hooks/#differentiating-test-cases-in-single-session) documentation.
+
+## Capture Test Case Insights for HyperExecute
 
 ### Capture by WebHook 
 
