@@ -45,7 +45,7 @@ import TabItem from '@theme/TabItem';
 
 This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using LambdaTest's Accessibility Tool.
 
-> It is supported for Chrome version 88 and later only. 
+> Compatible only with Chrome and Edge browser versions >= 90.
 
 ## Prerequisites
 
