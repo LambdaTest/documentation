@@ -66,7 +66,7 @@ Launch the HyperExecute-GUI installer app and log in using your existing LambdaT
 <img loading="lazy" src={require('../assets/videos/hyperexecute/cli-gui/step2.png').default} alt="project-hyperexecute" className="doc_img "/><br/><br/>
 
 ### Step 3: Analyze Project Details
-After uploading your project, the HyperExecute-GUI will automatically analyze your test scripts to identify the framework and language used. The GUI will then verify and check all required dependencies to ensure your project is ready for execution.
+The HyperExecute-GUI will automatically analyze your test scripts to identify the framework and language used. The GUI will then verify and check all required dependencies to ensure your project is ready for execution.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/step3.mp4').default} type="video/mp4" />
