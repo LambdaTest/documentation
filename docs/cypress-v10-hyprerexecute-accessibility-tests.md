@@ -120,7 +120,19 @@ pre:
   - npm i lambdatest-cypress-cli
 ```
 
-#### 2. In the `e2e.js` file
+#### 2. Add the capabilities in the YAML file
+
+To enable the accessibility testing within your automated test suite, set the `accessibility: true` in the [cypressOps](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag of your YAML file. You can also define other settings capabilities as described below.
+
+```yaml title="hyperexecute.yaml"
+cypressOps:
+  accessibility: true                 #Enable accessibility testing
+  accessibilityWcagVersion: "wcag21a" #Specify WCAG version (e.g., WCAG 2.1 Level A)
+  accessibilityBestPractice: false    #Exclude best practice issues from results
+  accessibilityNeedsReview: true      #Include issues that need review
+```
+
+#### 3. In the `e2e.js` file
 
 Add this import statement in your `e2e.js` file to import the acceessibility scanner dependency
 
@@ -128,7 +140,7 @@ Add this import statement in your `e2e.js` file to import the acceessibility sca
 import 'lambdatest-cypress-cli/accessibility/scanner'
 ```
 
-#### 3. In the `cypress.config.js` file
+#### 4. In the `cypress.config.js` file
 
 Add this code snippet in your `cypress.config.js` file.
 
@@ -147,18 +159,6 @@ module.exports = defineConfig({
     },
     ...//
 });
-```
-
-#### 4. Add the capabilities in the YAML file
-
-To enable the accessibility testing within your automated test suite, set the `accessibility: true` in the [cypressOps](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag of your YAML file. You can also define other settings capabilities as described below.
-
-```yaml title="hyperexecute.yaml"
-cypressOps:
-  accessibility: true                 #Enable accessibility testing
-  accessibilityWcagVersion: "wcag21a" #Specify WCAG version (e.g., WCAG 2.1 Level A)
-  accessibilityBestPractice: false    #Exclude best practice issues from results
-  accessibilityNeedsReview: true      #Include issues that need review
 ```
 
 ### Step 3: Execute and Monitor your Test
