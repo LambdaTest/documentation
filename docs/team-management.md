@@ -105,7 +105,7 @@ The following scenarios explain who can see the test results and under what circ
 In this case, any of the user can see all test results.
 
 ### Scenario 2: Teams are Created
-If you have created a team then only the members of that particular team and any user who is not associated with any team can see the test results for that team.
+If you create a team, only members of that team and users who are not part of any team can see the test results for that team. Additionally, team members can view their own team's tests as well as the tests run by users who are not associated with any team.
 
 - #### Users are in Different Teams
   Suppose if you have created two teams, each having five users, then neither can see each other's team's test results.
