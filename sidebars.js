@@ -1393,24 +1393,47 @@ module.exports = {
         },
         items: [
           {
-            type: "doc",
-            label: 'Selenium',
-            id: "accessibility-automation-test",
+            type: "category",
+            collapsed: true,
+            label: "Standard Grid",
+            items: [
+              {
+                type: "doc",
+                label: 'Selenium',
+                id: "accessibility-automation-test",
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: 'Cypress',
+                items: [
+                  "cypress-v10-accessibility-test",
+                  "cypress-v9-accessibility-test",
+                ],
+              },
+            ]
           },
           {
             type: "category",
             collapsed: true,
-            label: 'Cypress',
+            label: "HyperExecute",
             items: [
-              "cypress-v10-accessibility-test",
-              "cypress-v9-accessibility-test",
-            ],
+              {
+                type: "category",
+                collapsed: true,
+                label: 'Cypress',
+                items: [
+                  "cypress-v10-hyprerexecute-accessibility-tests",
+                  "cypress-v9-hyprerexecute-accessibility-tests",
+                ],
+              },
+            ]
           },
           {
             type: 'doc',
             label: 'Accessibility Automation Settings',
             id: "accessibility-automation-settings",
-          }
+          },
         ],
       },
       {
