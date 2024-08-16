@@ -30,6 +30,8 @@ slug: cypressv10-on-hyperexecute/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -54,9 +56,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 > **NOTE :** This documentation is applicable for **Cypress v10** and **later versions**.
 
@@ -96,38 +95,34 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-<!-- For detailed information about HyperExecute CLI, please refer to [HyperExecute CLI section](/docs/getting-started-with-hyperexecute/#hyperexecute-cli-to-interact-with-hyperexecute) in the HyperExecute getting started guide. -->
-
-<!-- > -->
-<!-- The fundamental difference between running Selenium tests on a cloud Selenium Grid and HyperExecute is that you need not have any configurations on the local machine (i.e. the machine from where HyperExecute CLI is triggered). This is because the source code from the local machine will be zipped and securely uploaded to the cloud where the execution will be performed on the remote Virtual Machine (VM). -->
-
-
 #### Setup Environment Variable
 Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
-***
+<Tabs className="docs__val">
 
-For macOS:
+<TabItem value="bash" label="Linux / MacOS" default>
 
-```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-For Linux:
+</TabItem>
 
-```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
+<TabItem value="powershell" label="Windows" default>
 
-For Windows:
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-```bash
-set LT_USERNAME=YOUR_LT_USERNAME
-set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
+</TabItem>
+</Tabs>
 
 ### Execution Methods:
 
