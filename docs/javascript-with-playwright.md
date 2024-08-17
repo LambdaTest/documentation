@@ -52,10 +52,13 @@ Learn how to use Playwright with JavaScript to automate web application testing 
 ## Prerequisites
 ***
 
->Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
-<a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-test-js" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
+1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-1. Clone the LambdaTest-Playwright repository on your system.
+:::tip Sample repo
+Download or clone the code sample for the Playwright JavaScript from the LambdaTest GitHub repository to run the tests.
+
+<a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-test-js" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
 
 ```js
 git clone https://github.com/LambdaTest/playwright-sample.git
@@ -71,7 +74,7 @@ npm install
 
 3. A LambdaTest Username and Access key. You can get it from your LambdaTest Profile section. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
 
-<img loading="lazy" src={require('../assets/images/legacy_platform_to_lambdatest/auth.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
 4. To run Playwright tests, set your LambdaTest Username and Access key in the Environment Variables.
 
@@ -165,7 +168,7 @@ npm run test
 ## View your test results
 ---
 
-Go to the [LambdaTest Automation dashboard](https://automation.lambdatest.com/build) to see your Playwright JavaScript test results.
+Go to the [LambdaTest Web Automation Dashboard](https://automation.lambdatest.com/build) to see your Playwright JavaScript test results.
 
 
 
