@@ -46,7 +46,11 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 This document provides a detailed, step-by-step walkthrough for executing automated accessibility tests using LambdaTest's Accessibility Tool on HyperExecute using Cypress v9 and below.
-> **NOTE:** This documentation is applicable for **Cypress v9** and **previous versions**.
+:::note
+This documentation is applicable for **Cypress v9** and **previous versions**.
+
+Please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span> to enable the Accessibility feature for your organization.
+:::
 
 ## Prerequisites
 To run the Tests on HyperExecute from your Local System, you are required:
