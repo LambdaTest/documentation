@@ -49,6 +49,7 @@ This document provides a detailed, step-by-step walkthrough for executing automa
 > **NOTE:** This documentation is applicable for **Cypress v9** and **previous versions**.
 
 ## Prerequisites
+To run the Tests on HyperExecute from your Local System, you are required:
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Your [LambdaTest Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)

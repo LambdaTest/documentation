@@ -3,7 +3,7 @@ id: lambdatest-running-your-first-selenium-test
 title: Run Your First Test on LambdaTest using Selenium
 hide_title: false
 sidebar_label: Running Your First Job
-description: You can view the Timelines, Analytics, and Automation Log of all the tests and builds run on the LambdaTest.
+description: Learn how to run your first Selenium test on LambdaTest's cross-browser testing platform. Step-by-step guide for setup and execution on 3000+ browsers.
 keywords:
   - Automation Platform
   - Dashboard
