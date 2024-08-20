@@ -2,7 +2,7 @@
 id: biometric-authentication-on-real-devices
 title: Biometric Authentication
 sidebar_label: Biometric Authentication
-description: Now you can test biometric authentication functionalities such as fingerprint or face recognition in your app on LambdaTest Real Device Cloud Platform with 3000+ real mobile devices.
+description: Learn how to test biometric authentication in iOS and Android apps using LambdaTest's real device testing platform. Enhance app security and user experience.
 keywords:
   - biometric authentication
   - Fingerprint authentication
