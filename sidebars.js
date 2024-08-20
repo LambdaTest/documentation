@@ -2621,7 +2621,8 @@ module.exports = {
         label: "Integrate with CI/CD tool",
         items: [
           "smartui-with-github-actions",
-          "smartui-with-gitlab"
+          "smartui-with-gitlab",
+          "smartui-with-netlify"
         ],
       },
       {
