@@ -149,6 +149,42 @@ However, if your email IDs are added in an unsupported format, the feature will 
 
 Now that you have added your email IDs successfully, you can access your job reports. Download the report from the email, and get all the information that you need. Alternatively, you can also open the clickable link in the email and view the report on your browser.
 
+## How to dynamically set your email address?
+In your YAML configuration file instead of hardcoding the email address to which you want to share the report or artifacts, you can use a variable that can be set dynamically when you pass the execution command.
+
+In this example, the `${email}` and `${email1}` variables are used to specify the email address. You can pass the value of this variable using the [`vars`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars) flag as an argument when executing your test via CLI.
+
+```yaml title="hyperexecute.yaml"
+report: true
+partialReports:
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
+# highlight-start
+  email:
+      to:
+        - "${email}"
+        - "${email1}"
+# highlight-end
+
+uploadArtifacts:
+  - name: Reports 1
+    path:
+      - ProtractorTestReport.html
+# highlight-start      
+    email:
+      to: 
+        - "${email}"
+        - "${email1}"
+# highlight-end
+```
+
+This is how you can pass the value of your email address via CLI by running the command
+
+```bash
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
+```
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
