@@ -45,7 +45,11 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 This document provides a detailed, step-by-step way to execute your accessibility tests using LambdaTest's Accessibility Tool on HyperExecute.
-> **NOTE:** This documentation is applicable for all [supported languages](/support/docs/hyperexecute-supported-languages-and-frameworks/) for Selenium framework.
+:::note
+This documentation is applicable for all [supported languages](/support/docs/hyperexecute-supported-languages-and-frameworks/) for Selenium framework.
+
+Please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span> to enable the Accessibility feature for your organization.
+:::
 
 ## Prerequisites
 To run the Tests on HyperExecute from your Local System, you are required:
