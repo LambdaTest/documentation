@@ -64,7 +64,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 
 - Select your required template for CI/CD workflow file. For the demo we are using the Test template.
 - Now, write your workflow YAML file. Here is the sample file for your reference.
-- Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipleine.
+- Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipeline.
 
 ```yaml reference title=".gitlab-ci.yml"
 https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/gitlab/.gitlab-ci.yml
