@@ -1419,6 +1419,11 @@ module.exports = {
             label: "HyperExecute",
             items: [
               {
+                type: "doc",
+                label: 'Selenium',
+                id: "selenium-hyprerexecute-accessibility-tests"
+              },
+              {
                 type: "category",
                 collapsed: true,
                 label: 'Cypress',
