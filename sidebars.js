@@ -1519,7 +1519,7 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Projects",
-        items: ["create-projects", "fields-and-values"],
+        items: ["create-projects", "system-and-custom-fields"],
       },
       {
         type: "category",
