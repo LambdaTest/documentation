@@ -15,28 +15,62 @@ site_name: LambdaTest
 slug: lambdatest-sso-okta-integration/
 ---
 
-<script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
+<script
+
+  type="application/ld+json"
+
+  dangerouslySetInnerHTML={{
+
+    __html: JSON.stringify({
+
+      "@context": "https://schema.org",
+
+      "@type": "BreadcrumbList",
+
+      "itemListElement": [
+
+        {
+
           "@type": "ListItem",
+
           "position": 1,
+
           "name": "LambdaTest",
+
           "item": "https://www.lambdatest.com"
-        },{
+
+        },
+
+        {
+
           "@type": "ListItem",
+
           "position": 2,
+
           "name": "Support",
+
           "item": "https://www.lambdatest.com/support/docs/"
-        },{
+
+        },
+
+        {
+
           "@type": "ListItem",
+
           "position": 3,
+
           "name": "SSO Okta Integration",
+
           "item": "https://www.lambdatest.com/support/docs/lambdatest-sso-okta-integration/"
-        }]
-      })
-    }}
+
+        }
+
+      ]
+
+    })
+
+  }}
+
 ></script>
 
 # LambdaTest SSO & Okta Integration
@@ -48,7 +82,6 @@ LambdaTest allows you to integrate an external user directory with your LambdaTe
 After you integrate your Okta instance with your LambdaTest for Single Sign-on, you can benefit from the following features:
 * SP-initiated SSO.
 * IdP-initiated SSO.
-* Group Assignment via Groups on Okta.
 
 To know more, refer to <a href="https://help.okta.com/en/prod/Content/Topics/Reference/glossary.htm">Okta's glossary</a>.
 
@@ -57,49 +90,60 @@ To know more, refer to <a href="https://help.okta.com/en/prod/Content/Topics/Ref
 To enable LambdaTest SSO through Okta integration:
 
 * You will need an Enterprise plan with LambdaTest.
-* The Admin of your LambdaTest organization needs to raise a request for enabling SSO. They could drop us an email over <a href="mailto:support@lambdatest.com">support@lambdatest.com</a> or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in app chat support**</span>.
-* You will also need the admin level access of your organization in Okta.
+* The Admin of your LambdaTest organization needs to raise a request for enabling SSO Self Serve UI. They could drop us an email over <a href="mailto:support@lambdatest.com">support@lambdatest.com</a> or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in app chat support**</span>.
+* You will also need the admin level access of Okta  to configure the SSO.
 
 
 ## Configuring LambdaTest & Okta Integration Using SAML
 ---
 
-You can also integrate SSO option of LambdaTest and Okta, with the help of SAML. To do so, follow the steps mentioned below:
+1. Go to LambdaTest <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
+   <img loading="lazy" src={require('../assets/images/sso-self-serve/setup-sso.png').default} alt="setup sso button" width="944" height="409" className="doc_img"/>
 
-1. Login to your okta account. 
+2. Enter Connection Name and Click on  **Add New Connection**.
+   <img loading="lazy" src={require('../assets/images/sso-self-serve/connection-name.png').default} alt="connection name button" width="944" height="409" className="doc_img"/>
+
+3. Select **Okta** as your identity provider.
+   <img loading="lazy" src={require('../assets/images/sso-self-serve/select-idp.png').default} alt="select identity provider" width="944" height="407" className="doc_img"/>
+
+4. Now copy the details required for setting up SSO connection in your **Identity Provider**.
+   Once configured, click on continue
+   <img loading="lazy" src={require('../assets/images/sso-self-serve/copy-info.png').default} alt="configure IDP details" width="945" height="542" className="doc_img"/>
+
+5. Now Configure the Attributes and Claims in your **Identity Provider**.
+   Once configured, click on continue
+   <img loading="lazy" src={require('../assets/images/sso-self-serve/attributes.png').default} alt="configure attributes" width="945" height="542" className="doc_img"/>
+
+6. Login to your okta account. 
 <img loading="lazy" src={require('../assets/images/uploads/okta-saml-7.webp').default} alt="okta integration" width="944" height="487" className="doc_img"/>
 
-2. Go to Application menu from the toolbar and click on **Add Application**.
-<img loading="lazy" src={require('../assets/images/uploads/59657a57-6023-4050-b0a4-e7d19bbe9019-1.webp').default} alt="okta integration application" width="944" height="409" className="doc_img"/> 
-
-3. In the Add Application window, click on Create New App button, to create a new LambdaTest SSO integration app.
-<img loading="lazy" src={require('../assets/images/uploads/okta-saml.webp').default} alt="oktra integration app" width="944" height="407" className="doc_img"/>
-
-4. Now in the new app window, choose the **Platform** as **Web**, and then choose against the option **SAML 2.0**. Once done, click on **Create** to move forward. 
-<img loading="lazy" src={require('../assets/images/uploads/okta-saml-1.webp').default} alt="oktra integration" width="945" height="542" className="doc_img"/>
-
-5. Give the created app a name of your choice, in the **App Name** box, and click Next. For instance, in the image below, the name provided is "LambdaTest-SAML-POC".
-<img loading="lazy" src={require('../assets/images/uploads/okta-saml-2.webp').default} alt="oktra integration" width="945" height="477" className="doc_img"/>
-
-6. Fill in the details as per LambdaTest email received on request. Make sure Name ID format is set to *x5095SubjectName*, and Application username is set to <em>Email</em>. Enter the information and click Next
-<img loading="lazy" src={require('../assets/images/uploads/okta-saml-3.webp').default} alt="oktra integration" width="957" height="670" className="doc_img"/>
-
-7. Set the Attribute Statements as per the image below and click Next.
+7. Go to Application menu from the toolbar and click on **Create App Integration**.
+<img loading="lazy" src={require('../assets/images/sso/img.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
+8. Select the **SAML 2.0** option and click on **Next**.
+<img loading="lazy" src={require('../assets/images/sso/img_1.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
+9. Give the created app a name of your choice, in the **App Name** box, and click Next.
+<img loading="lazy" src={require('../assets/images/sso/img_2.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
+10. Fill in the details as per in step 4 and step 5 and then click Next.
+<img loading="lazy" src={require('../assets/images/sso/img_7.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
+12. Set the Attribute Statements as per the image below and click Next.
 <img loading="lazy" src={require('../assets/images/sso-self-serve/okta-claims.png').default} alt="oktra integration" width="944" height="670" className="doc_img"/>
+13. In the next window of this Okta SAML integration, choose App Type as **This is an internal app that we have created**, as shown in the image below, and then click on **Finish** to complete the app creation.
+<img loading="lazy" src={require('../assets/images/sso/img_8.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
+14. Once the app is created, you will be redirected to the app's general settings. Click on the **Sign On** tab. Copy the Metadata URL and paste it in the LambdaTest SSO setup page.
+<img loading="lazy" src={require('../assets/images/sso/img_9.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
+15. Fill the required fields  and click on **Create Connection**:
 
-8. In the next window of this Okta SAML integration, choose the setting **I am okta Customer adding to Internal app** and check the box against **This is an internal app that we have created**, as shown in the image below, and then click on **Finish** to complete the app creation.
-<img loading="lazy" src={require('../assets/images/uploads/okta-saml-4.webp').default} alt="oktra integration" width="944" height="346" className="doc_img"/> 
+* SSO Domains (Comma-separated list of the domains that can be authenticated in the Identity Provider.)
+* Have Metadata URL (Select this option if you have metadata file URL of your Identity Provider.)
+* Metadata URL (Enter the metadata file URL of your Identity Provider.)
+* Sign In URL (Enter the sign-in URL of your Identity Provider.)
+* X509 Certificate (Upload the base64 encoded X509 certificate of your Identity Provider.)
 
-9. Now for the newly created app, click on **View setup instructions**.
-<img loading="lazy" src={require('../assets/images/uploads/okta-saml-5.webp').default} alt="Oktra Integration" width="944" height="378" className="doc_img"/>
+<h4>Create Connection with Metadata URL </h4>
+<img loading="lazy" src={require('../assets/images/sso-self-serve/finalize-sso-metadata.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
-10. From the setup instructions, copy the **SSO URL**, **download the certificate**, and share these with the LambdaTest team over same email thread.
-<img loading="lazy" src={require('../assets/images/uploads/okta-saml-6.webp').default} alt="oktra integration" width="944" height="431" className="doc_img"/>
+> That's all you need to know for Configuring LambdaTest SSO Integration with Okta. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
 
-
-11. Once the email is shared, sit back and relax. We will revert with a confirmation email over your registered email address after the SSO is enabled for your organization.
->
-That's all you need to know to integrate your LambdaTest Organization with the Okta. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

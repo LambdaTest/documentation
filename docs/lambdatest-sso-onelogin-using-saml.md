@@ -60,89 +60,63 @@ To set-up and use OneLogin & LambdaTest Single Sign-on (SSO) feature:
 
 * * *
 
->
-**Important Note**: Once SSO is setup successfully for your LambdaTest organization then the colleagues would neither be able to login via their Google Auth nor by using login credentials for their LambdaTest account. Email invites for adding new members to the LambdaTest organization, won't work anymore as well.
+1. Go to LambdaTest <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
+   <img loading="lazy" src={require('../assets/images/sso-self-serve/setup-sso.png').default} alt="setup sso button" width="944" height="409" className="doc_img"/>
 
-Follow the below steps to configure LambdaTest SSO & OneLogin Integration
+2. Enter Connection Name and Click on  **Add New Connection**.
+   <img loading="lazy" src={require('../assets/images/sso-self-serve/connection-name.png').default} alt="connection name button" width="944" height="409" className="doc_img"/>
 
-### Step 1: Add LambdaTest App to your enterprise's OneLogin SSO page
+3. Select **OneLogin** as your identity provider.
+   <img loading="lazy" src={require('../assets/images/sso-self-serve/select-idp.png').default} alt="select identity provider" width="944" height="407" className="doc_img"/>
 
-* * *
+4. Now copy the details required for setting up SSO connection in your **Identity Provider**.
+   Once configured, click on continue
+   <img loading="lazy" src={require('../assets/images/sso/img_10.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
+5. Now Configure the Attributes and Claims in your **Identity Provider**.
+   Once configured, click on continue
+   <img loading="lazy" src={require('../assets/images/sso/img_11.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
 
-To configure the LambdaTest SSO and OneLogin Integration, the organization's admin must log into the OneLogin Identity Provider’s SSO page and then follow the below steps to complete the integration:
-
-1.  Log in to the [OneLogin Dashboard](https://app.onelogin.com/login). 
+6. Log in to the [OneLogin Dashboard](https://app.onelogin.com/login). 
 
 <img loading="lazy" src={require('../assets/images/uploads/12cdf52a-e33f-41b1-ac1a-31171a542b1f.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="494"/>
-2.  Go to Applications 
+7. Go to Applications 
 
 <img loading="lazy" src={require('../assets/images/uploads/8d4b7e47-e9c1-454d-9df2-e9c127965aa9.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="460"/>
-3.  Add a new Application, by clicking on Add App. 
+8. Add a new Application, by clicking on Add App. 
 
 <img loading="lazy" src={require('../assets/images/uploads/9face4b3-94c8-4e53-a03b-0b74c3cfb0c2.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="492"/>
-4.  Search for SAML Test Connector and select **Add SAML Test Connector (Advanced)** 
+9. Search for SAML Test Connector and select **Add SAML Test Connector (Advanced)** 
 
 <img loading="lazy" src={require('../assets/images/uploads/4f1de915-1d55-4169-a90a-ea1f00e46862.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="942" height="488"/>
-5.  In the window that appears, choose a suitable name for your app, and **save**. 
+10. In the window that appears, choose a suitable name for your app, and **save**. 
 
 <img loading="lazy" src={require('../assets/images/uploads/d9b4d2bc-600c-4093-b76b-04050227732f.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="493"/>
 
-### Step 2: Integrate the newly created app with LambdaTest SSO
-
-* * *
-
-Your enterprise SSO account will be created at OneLogin. Now to enable this SSO at LambdaTest, you need to fetch the below details and pass it on to the LambdaTest team.
-
-1.   Go to the SSO tab, and after you choose _SAML Signature Algorithm_ to **SHA-256**, copy the values for **SAML 2.0 Endpoint (HTTP)** and **SLO Endpoint (HTTP). Once done, click on Save.** 
-
-<img loading="lazy" src={require('../assets/images/uploads/fdd6893b-40ea-451a-9abb-de83579756d4.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="589"/>
-
-2.    Now, click on the **View Details** link at the **X.509 certificate** field. 
-
-<img loading="lazy" src={require('../assets/images/uploads/fbfd2747-d702-4a81-812d-98911e91b679.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="391"/>
-
-3.   In the window that opens, make sure the SHA fingerprint is SHA256, and download the X.509 certificate as a _.pem_ file. Once done, click on Save. 
-
-<img loading="lazy" src={require('../assets/images/uploads/f71b4398-0917-4c84-a762-5dc0fceb1369.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="546"/>
-
-4. Now Click on the Parameters tab and set the user attributes to the following values:
-<img loading="lazy" src={require('../assets/images/sso-self-serve/onelogin-claims.png').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="546"/>
-
-### Step 3: Authenticate and complete LambdaTest SSO & OneLogin integration
-
-* * *
-
-Upon reviewing the data, the LambdaTest team will revert you with details of your LambdaTest SSO & OneLogin integration. Once you receive the details:
-
-1.   Re-login to your enterprise's OneLogin dashboard, and go to applications. 
-
-<img loading="lazy" src={require('../assets/images/uploads/65cd0ab0-b882-4534-a020-32d1612fa17e.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="460"/>
-
-2.   Choose the previously created app (created in Step 1). 
-
-<img loading="lazy" src={require('../assets/images/uploads/ce007004-3511-4d69-857b-c186cc374376.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="145"/>
-
-3.   In the window that appears, go to **Configurations** tab, and update the details received. 
-
-<img loading="lazy" src={require('../assets/images/uploads/f5300281-2902-4e75-8c5e-abfdf00fe7b0.webp').default} alt="lambdatest onlogin integration"  className="doc_img" width="943" height="467"/> For example, below are sample details to be updated in the Configurations section:
-
-    ```Audience (EntityID): 	urn:auth0:{tenantID}:{ConnectionName}
-    Recipient: 		https://{tenantID}.us.auth0.com/login/callback?connection={ConnectionName}
-    ACS (Consumer) URL Validator: [-a-zA-Z0-9@:%.+~#=]{2,256}.[a-z]{2,6}\b([-a-zA-Z0-9@:%+.~#?&//=]*)
-    ACS (Consumer) URL: 	https://{tenantID}.us.auth0.com/login/callback?connection={ConnectionName}
-    Login URL: 		https://accounts.lambdatest.com/auth0/{version}/login
-    SAML initiator: 	Service Provider
-    SAML nameID format: 	Email
-    SAML issuer type: 	Specific
-    SAML signature element: Response
-    Encrypt assertion: 	false (unchecked)
-    
-
-* * *
+11. Click on configurations tab in the sidebar and fill the details as per the details copied from LambdaTest in step 4.
+    <img loading="lazy" src={require('../assets/images/sso/img_12.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
 
 
->
-That's it. Your enterprise's LambdaTest SSO and OneLogin has been integrated successfully. If you face any challenge, or come across any issues, please feel free to contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span>. You can even mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!
+12. Click on the parameters tab and fill the details as per the details copied from LambdaTest in step 5.
+    <img loading="lazy" src={require('../assets/images/sso/img_13.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
+
+
+13. Now go to the SSO tab set the SAML Signature Algorithm to SHA-256
+    <img loading="lazy" src={require('../assets/images/sso/img_16.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
+
+
+14. Copy the Issuer URL 
+
+<img loading="lazy" src={require('../assets/images/sso/img_17.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
+
+15. Go back to LambdaTest and paste the copied Issuer URL in the **Metadata URL** field. Fill the required fields  and click on **Create Connection**:
+
+* SSO Domains (Comma-separated list of the domains that can be authenticated in the Identity Provider.)
+* Have Metadata URL (Select this option if you have metadata file URL of your Identity Provider.)
+* Metadata URL (Enter the metadata URL of your Identity Provider.)
+
+<img loading="lazy" src={require('../assets/images/sso-self-serve/finalize-sso-metadata.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
+
+> That's it. Your enterprise's LambdaTest SSO and OneLogin has been integrated successfully. If you face any challenge, or come across any issues, please feel free to contact our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Support Team**</span>. You can even mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

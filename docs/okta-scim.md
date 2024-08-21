@@ -83,7 +83,25 @@ Click Test Connection to ensure Okta can connect to LambdaTest. If the connectio
 
 userName, Active, name.givenName, name.familyName are required attributes
 
-**urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole**: Custom attribute used to set LambdaTest Organization Role for Users, If this attribute is not mapped **User** role would be set by default. Allowed values are (Admin/Guest/User)
+***Creating Custom Attributes***
+
+**urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole**: 
+
+For creating custom attribute in Okta, go to Directory > Profile Editor > Add Attribute ([Create Custom Attribute](https://help.okta.com/en-us/content/topics/users-groups-profiles/usgp-add-custom-user-attributes.htm))
+
+Enter Display Name as per your choice 
+Enter Variable name as **OrganizationRole**
+Enter External name as **OrganizationRole**
+Enter External namespace as **urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User**
+<img loading="lazy" src={require('../assets/images/sso/img_18.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
+
+Set the data type as **String**
+Select Enum as **Yes**
+Enter the values as **Admin, Guest, User**
+<img loading="lazy" src={require('../assets/images/sso/img_19.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
+
+
+
 
 
 **Step 10:** To enable the Okta provisioning service for LambdaTest, set Create Users, Update User Attributes and Deactivate Users to enabled

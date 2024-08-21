@@ -2,7 +2,7 @@
 id: single-sign-on
 title: Getting Started With Single Sign On (SSO)
 hide_title: true
-sidebar_label: Single Sign On
+sidebar_label: Getting Started
 description: Single sign-on (SSO) is an authentication feature that allows users to authenticate and access to LambdaTest through an identity provider (IdP).  
 keywords:
     - LambdaTest single sign on
