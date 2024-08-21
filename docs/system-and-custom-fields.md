@@ -1,18 +1,18 @@
 ---
-id: fields-and-values
-title: Fields and Values
+id: system-and-custom-fields
+title: System and Custom Fields
 hide_title: true
-sidebar_label: Fields and Values
-description: Learn about LambdaTest's Fields and Values feature for test project organization. Explore System Fields and create Custom Fields to enhance your testing workflows.
+sidebar_label: System and Custom Fields
+description: Learn about LambdaTest's system and custom Fields feature for test project organization. Explore System Fields and create Custom Fields to enhance your testing workflows.
 keywords:
   - test manager
   - fields and values
   - system fields
   - custom fields
   - projects
-url: https://www.lambdatest.com/support/docs/fields-and-values/
+url: https://www.lambdatest.com/support/docs/system-and-custom-fields/
 site_name: LambdaTest
-slug: fields-and-values/
+slug: system-and-custom-fields/
 ---
 
 <script type="application/ld+json"
@@ -32,14 +32,14 @@ slug: fields-and-values/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Fields and Values",
-          "item": "https://www.lambdatest.com/support/docs/fields-and-values/"
+          "name": "System and Custom Fields",
+          "item": "https://www.lambdatest.com/support/docs/system-and-custom-fields/"
         }]
       })
     }}
 ></script>
 
-# Fields and Values
+# System and Custom Fields
 
 Explore the structured organization of your test projects through the use of Fields and Values, accessible via the Project's dashboard. Dive into System Fields for essential categorizations or enhance your project's flexibility with Custom Fields to improve your testing workflows.
 
@@ -53,7 +53,15 @@ Explore the structured organization of your test projects through the use of Fie
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/system-fields.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-- Custom Fields enables users to store additional information beyond system fields. To create a new field, enter the **Type**, **Name**, **Placeholder** and **Mark as Required**. Optionally, **Apply to all future projects**, then click **Create**.
+- Custom Fields allow you to store additional information beyond what System Fields offer. To create a new field, enter the required details and choose the appropriate data type from the **Type** function. Available types include String, Textarea, Number, Dropdown (Single Select), Dropdown (Multi Select), Boolean (Checkbox), Date, User, and URL.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/new-fields.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+- For Dropdown types (Single Select and Multi Select), you also have the option to add values.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/dropdown-types.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+- Enter the name, placeholder, mark the field, apply it to all future projects if required and click create.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/custom-fields.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
@@ -77,7 +85,7 @@ Explore the structured organization of your test projects through the use of Fie
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Fields and Values
+        System and Custom Fields
       </span>
     </li>
   </ul>
