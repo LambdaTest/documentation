@@ -1489,7 +1489,7 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Single Sign On",
+        label: "Getting Started",
         id: "single-sign-on",
       },
       {
