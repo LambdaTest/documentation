@@ -327,9 +327,11 @@ The username of your LambdaTest account.
 ***
 
 ### `--vars`
-This method allows you to name your variables. It helps you optimize the content of your YAML file by allowing for more flexibility. 
+This method allows you to name your variables. It helps you optimize the content of your YAML file by allowing for more flexibility.
+
+You can specify the email address for sharing [reports](/support/docs/hyperexecute-reports/) or [artifacts](/support/docs/hyperexecute-artifacts/) in a YAML configuration file using a variable. This allows you to dynamically set the email address and pass it via CLI, providing more flexibility than hardcoding the email address in the YAML file. Learn about this in [detail](/support/docs/hyperexecute-email-reports/#how-to-dynamically-set-your-email-address).
 ```bash
---vars "org=Lambdatest" --vars "product=HyperExecute"
+--vars "org=Lambdatest" --vars "product=HyperExecute" --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
 ***
 
