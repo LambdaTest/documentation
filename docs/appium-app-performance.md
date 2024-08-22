@@ -138,7 +138,7 @@ Just add the following capability inside your test, and set it to `true`.
 "appProfiling" : true;
 ```
 
-> **Note**: The `appProfiling` flag is supported for Appium tests on iOS and Android devices. However, it is only supported on devices with an Android version of 9 or above. 
+> **Note**: The `appProfiling` flag is supported for Appium tests on iOS and Android devices. However, it is only supported on devices with an Android version of 9 or above and tests where the `resignApp` capability is not set to `false`. 
 
 A sample output of this test will look like: 
 
