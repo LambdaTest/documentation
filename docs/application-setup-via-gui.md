@@ -2,7 +2,7 @@
 id: application-setup-via-gui
 title: Perform Operations on your Application via GUI
 sidebar_label: via GUI
-description: Expore how to perform operations with your applications like uploading, deleting via gui for real and virtual devices.
+description: Explore how to perform operations with your applications like uploading, deleting via gui for real and virtual devices.
 keywords:
   - appium
   - application operations
