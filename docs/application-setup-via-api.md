@@ -46,7 +46,7 @@ import CodeBlock from '@theme/CodeBlock';
 To test your **iOS** (.ipa file) or **Android** (.apk or .aab file) application on LambdaTest, you can use our public REST APIs. In this documentation, we have listed all the operations you can perform with your application via APIs or cURL commands for both Virtual and Real Devices.
 
 :::note
-The maxiumum size for application should not exceed 1GB.
+The maximum size for application should not exceed 1GB.
 :::
 
 :::tip
