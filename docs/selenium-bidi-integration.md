@@ -60,7 +60,6 @@ Following are the steps to run tests on LambdaTest using **WebdriverIO with BiDi
 ### Prerequisites
 - Node.js >= 12
 - Your LambdaTest [Username and Access Key](/support/docs/using-environment-variables-for-authentication-credentials/)
-- Make sure your LambdaTest plan supports BiDi protocol.
 
 ### Step 1: Setup the project
 
