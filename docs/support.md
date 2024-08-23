@@ -227,6 +227,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/accessibility-devtools/"><p className="p_home_inners">Accessibility DevTools</p></a>
         <a href="/support/docs/accessibility-automation/"><p className="p_home_inners">Accessibility Automation</p></a>
         <a href="/support/docs/accessibility-testing-navigating-dashboard/"><p className="p_home_inners">Navigating Dashboard</p></a>
+        <a href="/support/docs/accessibility-faq/"><p className="p_home_inners">FAQ</p></a>
       </div>
     </div>
     <div className="home_inners_box">

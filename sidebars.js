@@ -797,7 +797,7 @@ module.exports = {
       },
       {
         type: "category",
-        label: "HyperExecute FAQs",
+        label: "FAQs",
         collapsed: true,
         link: {
           type: "doc",
@@ -1461,6 +1461,42 @@ module.exports = {
             type: "doc",
             label: "All Issues",
             id: "accessibility-testing-dashboard-all-issues",
+          },
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "FAQs",
+        link: {
+          type: "doc",
+          id: "accessibility-faq",
+        },
+        items: [
+          {
+            type: "doc",
+            label: "Compliance and Standards",
+            id: "accessibility-compliance-standard-faq",
+          },
+          {
+            type: "doc",
+            label: "Technical Requirements",
+            id: "accessibility-technical-faq",
+          },
+          {
+            type: "doc",
+            label: "Account and Usage",
+            id: "accessibility-account-faq",
+          },
+          {
+            type: "doc",
+            label: "Reporting and Analysis",
+            id: "accessibility-reports-faq",
+          },
+          {
+            type: "doc",
+            label: "Testing Capabilities",
+            id: "accessibility-testing-capability-faq",
           },
         ],
       },
@@ -2622,7 +2658,8 @@ module.exports = {
         items: [
           "smartui-with-github-actions",
           "smartui-with-gitlab",
-          "smartui-with-netlify"
+          "smartui-with-netlify",
+          "smartui-with-bitbucket"
         ],
       },
       {
