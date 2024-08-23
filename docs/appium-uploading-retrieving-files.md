@@ -71,7 +71,7 @@ Refer to the code snippets given below for push and pull commands in different l
 
 <TabItem value="Android" label="Android" default>
 
-While using pull and push features of Appium, please copy the files and retrieve them from the given folders, `/sdcard/Download/`, `/sdcard/Pictures` and `/sdcard/Android/data/<app_package>`, on the LambdaTest Real Device.
+While using pull and push features of Appium, please copy the files and retrieve them from the given folders, `/sdcard/Downloads/`, `/sdcard/Pictures` and `/sdcard/Android/data/<app_package>`, on the LambdaTest Real Device.
 
 <Tabs className="docs__val">
 
@@ -79,7 +79,7 @@ While using pull and push features of Appium, please copy the files and retrieve
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-python">
   {` # Push a file
-dest_path = '/sdcard/Download/file.txt'
+dest_path = '/sdcard/Downloads/file.txt'
 driver.push_file(dest_path, 'Hello World'.encode("utf-8"))
 # Pull a file
 file_base64 = driver.pull_file(dest_path)
@@ -94,9 +94,9 @@ file_base64 = driver.pull_file(dest_path)
   <CodeBlock className="language-javascript">
   {`// Push a file
 let data = new Buffer("Hello LambdaTest").toString('base64');
-driver.pushFile('/sdcard/Download/sample.txt', data);
+driver.pushFile('/sdcard/Downloads/sample.txt', data);
 // Pull file
-let data = driver.pullFile('/sdcard/Download/sample.txt');`}
+let data = driver.pullFile('/sdcard/Downloads/sample.txt');`}
   </CodeBlock>
   </div>
 </TabItem>
@@ -105,9 +105,9 @@ let data = driver.pullFile('/sdcard/Download/sample.txt');`}
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-php">
   {`// Push a file
-$driver->pushFile('/sdcard/Download/sample.txt', 'QXJlIHlvdXIgYmVlcnMgb2theT8=');
+$driver->pushFile('/sdcard/Downloads/sample.txt', 'QXJlIHlvdXIgYmVlcnMgb2theT8=');
 // Pull file
-$data = $driver->pullFile('/sdcard/Download/sample.txt');`}
+$data = $driver->pullFile('/sdcard/Downloads/sample.txt');`}
   </CodeBlock>
   </div>
 </TabItem>
@@ -116,9 +116,9 @@ $data = $driver->pullFile('/sdcard/Download/sample.txt');`}
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-java">
   {`// Push a file
-driver.pushFile("/sdcard/Download/sample.jpg", new File("/Users/macuser/Desktop/sample.jpg"));
+driver.pushFile("/sdcard/Downloads/sample.jpg", new File("/Users/macuser/Desktop/sample.jpg"));
 // Pull file
-byte[] fileBase64 = driver.pullFile("/sdcard/Download/sample.jpg");`}
+byte[] fileBase64 = driver.pullFile("/sdcard/Downloads/sample.jpg");`}
   </CodeBlock>
   </div>
 </TabItem>
@@ -127,9 +127,9 @@ byte[] fileBase64 = driver.pullFile("/sdcard/Download/sample.jpg");`}
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-ruby">
   {`# Push a file
-driver.push_file('/sdcard/Download/sample.jpg', File.read('/Users/macuser/Desktop/sample.jpg'))
+driver.push_file('/sdcard/Downloads/sample.jpg', File.read('/Users/macuser/Desktop/sample.jpg'))
 # Pull file
-pull_file('/sdcard/Download/sample.jpg')`}
+pull_file('/sdcard/Downloads/sample.jpg')`}
   </CodeBlock>
   </div>
 </TabItem>
@@ -138,9 +138,9 @@ pull_file('/sdcard/Download/sample.jpg')`}
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-csharp">
   {`// Push a file
-driver.PushFile("/sdcard/Download/sample.jpg", new FileInfo("/Users/macuser/Desktop/sample.jpg"))
+driver.PushFile("/sdcard/Downloads/sample.jpg", new FileInfo("/Users/macuser/Desktop/sample.jpg"))
 // Pull file
-byte[] fileBase64 = driver.PullFile("/sdcard/Download/sample.jpg");`}
+byte[] fileBase64 = driver.PullFile("/sdcard/Downloads/sample.jpg");`}
   </CodeBlock>
   </div>
 </TabItem>
