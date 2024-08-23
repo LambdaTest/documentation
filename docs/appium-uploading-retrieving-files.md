@@ -152,9 +152,9 @@ byte[] fileBase64 = driver.PullFile("/sdcard/Download/sample.jpg");`}
 
 While using pull and push feature of Appium in iOS, please adhere to the following points:
 
-- Copy and save the files in the app's **documents folder** on the real device.
+- Copy and save the files in the app's **Documents folder** on the real device.
 - Make sure that the app has `UIFileSharingEnabled` key set to true in the **Info.plist**
-- Follow this specific format for the destination path while using push feature: `@<app_bundle_id>:documents/<sample_image>.png` 
+- Follow this specific format for the destination path while using push feature: `@<app_bundle_id>:Documents/<sample_image>.png` 
 
 <Tabs className="docs__val">
 
@@ -162,9 +162,9 @@ While using pull and push feature of Appium in iOS, please adhere to the followi
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-python">
   {` # Push file
-driver.push_file('@com.lambdatest.proverbial:documents/sample-image1.png', source_path='/Users/macuser/Desktop/sample-image1.png')
+driver.push_file('@com.lambdatest.proverbial:Documents/sample-image1.png', source_path='/Users/macuser/Desktop/sample-image1.png')
 # Push a text file
-dest_path = '@com.lambdatest.proverbial:documents/file.txt'
+dest_path = '@com.lambdatest.proverbial:Documents/file.txt'
 driver.push_file(dest_path, 'Hello LambdaTest'.encode("utf-8"))
 # Pull file
 file_base64 = driver.pull_file(dest_path)
@@ -179,9 +179,9 @@ file_base64 = driver.pull_file(dest_path)
   <CodeBlock className="language-javascript">
   {`// Push file
 let data = new Buffer("Hello LambdaTest").toString('base64');
-driver.pushFile('@com.lambdatest.proverbial:documents/sample.txt', data);
+driver.pushFile('@com.lambdatest.proverbial:Documents/sample.txt', data);
 // Pull file
-let data = driver.pullFile('@com.lambdatest.proverbial:documents/sample.txt');`}
+let data = driver.pullFile('@com.lambdatest.proverbial:Documents/sample.txt');`}
   </CodeBlock>
   </div>
 </TabItem>
@@ -190,9 +190,9 @@ let data = driver.pullFile('@com.lambdatest.proverbial:documents/sample.txt');`}
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-php">
   {` // Push file
-  $driver->pushFile('@com.lambdatest.proverbial:documents/foo.bar', 'QXJlIHlvdXIgYmVlcnMgb2theT8=');
+  $driver->pushFile('@com.lambdatest.proverbial:Documents/foo.bar', 'QXJlIHlvdXIgYmVlcnMgb2theT8=');
 // Pull file
-$data = $driver->pullFile('@com.lambdatest.proverbial:documents/foo.bar');`}
+$data = $driver->pullFile('@com.lambdatest.proverbial:Documents/foo.bar');`}
   </CodeBlock>
   </div>
 </TabItem>
@@ -201,9 +201,9 @@ $data = $driver->pullFile('@com.lambdatest.proverbial:documents/foo.bar');`}
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-java">
   {`// Push file
-driver.pushFile("@com.lambdatest.proverbial:documents/sample-image.jpg", new File("/Users/macuser/Desktop/sample-image.jpg"));
+driver.pushFile("@com.lambdatest.proverbial:Documents/sample-image.jpg", new File("/Users/macuser/Desktop/sample-image.jpg"));
 // Pull file
-byte[] fileBase64 = driver.pullFile("@com.lambdatest.proverbial:documents/sample-image.jpg");`}
+byte[] fileBase64 = driver.pullFile("@com.lambdatest.proverbial:Documents/sample-image.jpg");`}
   </CodeBlock>
   </div>
 </TabItem>
@@ -212,9 +212,9 @@ byte[] fileBase64 = driver.pullFile("@com.lambdatest.proverbial:documents/sample
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-ruby">
   {`# Push file
-driver.push_file('@com.lambdatest.proverbial:documents/sample-image.jpg', File.read('/Users/macuser/Desktop/sample-image.jpg'))
+driver.push_file('@com.lambdatest.proverbial:Documents/sample-image.jpg', File.read('/Users/macuser/Desktop/sample-image.jpg'))
 # Pull file
-pull_file('@com.lambdatest.proverbial:documents/sample-image.jpg')`}
+pull_file('@com.lambdatest.proverbial:Documents/sample-image.jpg')`}
   </CodeBlock>
   </div>
 </TabItem>
@@ -223,9 +223,9 @@ pull_file('@com.lambdatest.proverbial:documents/sample-image.jpg')`}
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-csharp">
   {`// Push file
-driver.PushFile("@com.lambdatest.proverbial:documents/sample-image.jpg", new FileInfo("/Users/macuser/Desktop/sample-image.jpg"))
+driver.PushFile("@com.lambdatest.proverbial:Documents/sample-image.jpg", new FileInfo("/Users/macuser/Desktop/sample-image.jpg"))
 // Pull file
-byte[] fileBase64 = driver.PullFile("@com.lambdatest.proverbial:documents/sample-image.jpg");`}
+byte[] fileBase64 = driver.PullFile("@com.lambdatest.proverbial:Documents/sample-image.jpg");`}
   </CodeBlock>
   </div>
 </TabItem>
