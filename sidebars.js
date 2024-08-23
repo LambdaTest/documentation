@@ -1472,40 +1472,9 @@ module.exports = {
         ],
       },
       {
-        type: "category",
-        collapsed: true,
+        type: "doc",
         label: "FAQs",
-        link: {
-          type: "doc",
-          id: "accessibility-faq",
-        },
-        items: [
-          {
-            type: "doc",
-            label: "Compliance and Standards",
-            id: "accessibility-compliance-standard-faq",
-          },
-          {
-            type: "doc",
-            label: "Technical Requirements",
-            id: "accessibility-technical-faq",
-          },
-          {
-            type: "doc",
-            label: "Account and Usage",
-            id: "accessibility-account-faq",
-          },
-          {
-            type: "doc",
-            label: "Reporting and Analysis",
-            id: "accessibility-reports-faq",
-          },
-          {
-            type: "doc",
-            label: "Testing Capabilities",
-            id: "accessibility-testing-capability-faq",
-          },
-        ],
+        id: "accessibility-faq",
       },
     ],
   ],
