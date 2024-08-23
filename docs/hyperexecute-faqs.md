@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-faqs
-title: FAQs
-hide_title: true
+title: HyperExecute Frequently Asked Questions !!
+hide_title: false
 sidebar_label: FAQs
 description: Get quick answers to all your HyperExecute queries with our comprehensive FAQs! 
 keywords:
@@ -13,6 +13,12 @@ url: https://www.lambdatest.com/support/docs/hyperexecute-faqs/
 site_name: LambdaTest
 slug: hyperexecute-faqs/
 ---
+
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import DocCard from '../src/component/DocCard';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -37,41 +43,16 @@ slug: hyperexecute-faqs/
       })
     }}
 ></script>
-
-# HyperExecute FAQs
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-general-faqs/">General FAQs</a>
+<div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
+    <DocCard heading="General FAQs" link="/support/docs/hyperexecute-general-faqs/" />
+    <DocCard heading="YAML FAQs" link="/support/docs/hyperexecute-yaml-faqs/" />
+    <DocCard heading="CLI FAQs" link="/support/docs/hyperexecute-cli-faqs/" />
+    <DocCard heading="Features FAQs" link="/support/docs/hyperexecute-feature-faqs/" />
+    <DocCard heading="Platform FAQs" link="/support/docs/hyperexecute-platform-faqs/" />
+    <DocCard heading="Pricing FAQs" link="/support/docs/hyperexecute-pricing-faqs/" />
+    <DocCard heading="Security FAQs" link="/support/docs/hyperexecute-security-faqs/" />
+    <DocCard heading="Enterprise FAQs" link="/support/docs/hyperexecute-enterprise-faqs/" />
 </div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-yaml-faqs/">YAML FAQs</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-cli-faqs/">CLI FAQs</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-feature-faqs/">Features FAQs</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-platform-faqs/">Platform FAQs</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-pricing-faqs/">Pricing FAQs</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-security-faqs/">Security FAQs</a>
-</div>
-
-<div className="download_btn mb-10">
-<a href="/support/docs/hyperexecute-enterprise-faqs/">Enterprise FAQs</a>
-</div>
-
 
 >If you have more questions, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will answer them for you.
 
