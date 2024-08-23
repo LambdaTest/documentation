@@ -91,7 +91,7 @@ By setting up the Hub endpoint, you establish the communication channel between 
 
 Configure the desired capabilities based on your test requirements. For example:
 
-```bash
+```java title="test.java"
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("browserName", "chrome");
 capabilities.setCapability("version", "70.0");
@@ -167,7 +167,7 @@ In this sample YAML file, we have mentioned:
 
 
 ```yaml reference title="HyperExecute AutoSplit YAML"
-https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/testng_hyperexecute_autosplit_sample.yaml
+https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/v2/testng_hyperexecute_autosplit_sample.yaml
 ```
 
 ### Step 4: Execute your Test Suite

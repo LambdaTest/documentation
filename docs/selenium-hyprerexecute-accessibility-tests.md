@@ -67,14 +67,14 @@ You can use your own Selenium project to configure and test it. For demo purpose
 :::tip Sample repo
 Download or Clone the code sample for the TestNG from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
 Configure the desired capabilities based on your test requirements. For example:
 
-```java
+```java title="test.java"
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("browserName", "chrome");
 capabilities.setCapability("version", "70.0");
@@ -135,7 +135,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ### Step 3: Add the Capabilities to enable the Accessibility 
 To generate the accessibility reports, add a capability `accessibility: true` in your test files. You can also define some advanced capabilities like `accessibility.wcagVersion`, `accessibility.bestPractice`, and `accessibility.needsReview` as shown below:
 
-```java
+```java title="test.java"
 capabilities.setCapability("accessibility", true); // Enable accessibility testing
 capabilities.setCapability("accessibility.wcagVersion", "wcag21a"); // Specify WCAG version (e.g., WCAG 2.1 Level A)
 capabilities.setCapability("accessibility.bestPractice", false); // Exclude best practice issues from results
@@ -153,7 +153,7 @@ Configure your YAML file as per your use cases using **key value** pairs. In thi
 - and other necessary YAML Parameters
 
 ```yaml reference title="HyperExecute AutoSplit YAML"
-https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/testng_hyperexecute_autosplit_sample.yaml
+https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/blob/main/yaml/linux/v2/testng_hyperexecute_autosplit_sample.yaml
 ```
 
 ### Step 5: Execute your Test Suite
