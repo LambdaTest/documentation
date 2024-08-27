@@ -46,7 +46,7 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 ## What's the latest WCAG version supported?
-We support **WCAG 2.2 AA**, which is the most recent version of the Web Content Accessibility Guidelines.
+We adhere to **WCAG 2.2 AA**, the most recent version of the Web Content Accessibility Guidelines. In addition to this, we support the following versions: WCAG 2.0 A, WCAG 2.0 AA, WCAG 2.1 A, WCAG 2.1 AA, WCAG 2.1 AAA, and WCAG 2.2 A.
 
 ## Do you have screen reader support?
 Yes, we provide comprehensive screen reader support:
