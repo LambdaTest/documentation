@@ -151,25 +151,23 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/html-dom-smartui-options/"><p className="p_home_inners">Handling Dynamic Data</p></a>
       </div>
     </div>
-
-<div className="home_inners_box">
-   <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>KaneAI &nbsp; <NewTag  value="BETA" /> </h2>
-  <div className="home_inners">
-    <a href="/support/docs/getting-started-with-kane-ai/" ><p className="p_home_inners">Getting Started</p></a>   
-  </div>
-</div>
-
-<div className="home_inners_box">
-   <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>Real Time</h2>
-  <div className="home_inners">
-    <a href="/support/docs/real-time-browser-testing/" ><p className="p_home_inners">Desktop Browser Testing</p></a>
-    <a href="/support/docs/webview-testing-in-android/"><p className="p_home_inners">Mobile Browser Testing</p></a>
-    <a href="/support/docs/live-interactive-mobile-app-testing/"><p className="p_home_inners">Mobile App Testing</p></a>
-    <a href="/support/docs/chrome-os-web-browser-testing/"><p className="p_home_inners">ChromeOS Web Browser Testing</p></a>
-    <a href="/support/docs/chrome-os-app-testing/"><p className="p_home_inners">ChromeOS App Testing</p></a>
-    <a href="/support/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>     
-  </div>
-</div>
+    <div className="home_inners_box">
+       <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>KaneAI &nbsp; <NewTag  value="BETA" /> </h2>
+      <div className="home_inners">
+        <a href="/support/docs/getting-started-with-kane-ai/" ><p className="p_home_inners">Getting Started</p></a>   
+      </div>
+    </div>
+    <div className="home_inners_box">
+       <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>Real Time</h2>
+      <div className="home_inners">
+        <a href="/support/docs/real-time-browser-testing/" ><p className="p_home_inners">Desktop Browser Testing</p></a>
+        <a href="/support/docs/webview-testing-in-android/"><p className="p_home_inners">Mobile Browser Testing</p></a>
+        <a href="/support/docs/live-interactive-mobile-app-testing/"><p className="p_home_inners">Mobile App Testing</p></a>
+        <a href="/support/docs/chrome-os-web-browser-testing/"><p className="p_home_inners">ChromeOS Web Browser Testing</p></a>
+        <a href="/support/docs/chrome-os-app-testing/"><p className="p_home_inners">ChromeOS App Testing</p></a>
+        <a href="/support/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>     
+      </div>
+    </div>
 
 <div className="home_inners_box">
        <h2 className='homeMain_h2'><RealDeviceLightIcon className="home_icons home_light_icon" role="presentation"/> <RealDeviceDarkIcon className="home_icons home_dark_icon" role="presentation"/>Real Device</h2>
@@ -184,8 +182,6 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
 </div>
-
-    
 
 <!-- end of second section -->
 
@@ -238,7 +234,6 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
 
-
 <!-- end of third section -->
 
 <!-- start of fourth section -->
@@ -251,7 +246,6 @@ import NewTag from '../src/component/newTag';
     <a href="/support/docs/scim/"><p className="p_home_inners">SCIM</p></a>
   </div>
 </div>
-
 <div className="home_inners_box">
       <h2 className='homeMain_h2'><OtherLightIcon className="home_icons home_light_icon" role="presentation"/> <OtherDarkIcon className="home_icons home_dark_icon" role="presentation"/>Other Docs</h2>
       <div className="home_inners">
