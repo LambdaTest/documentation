@@ -858,6 +858,15 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
+            label: "August, 2024",
+            items: [
+              'hyperexecute-release-notes-2-4-7',
+              'hyperexecute-release-notes-2-4-6',
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
             label: "July, 2024",
             items: [
               'hyperexecute-release-notes-2-4-5',
