@@ -1004,6 +1004,7 @@ module.exports = {
           id: "getting-started-with-kane-ai",
         },
         items: [
+          "why-we-need-kane-ai"
         ],
       },
     ]
