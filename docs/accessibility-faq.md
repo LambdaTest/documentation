@@ -46,40 +46,35 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 ## What's the latest WCAG version supported?
-We support **WCAG 2.2 AA**, which is the most recent version of the Web Content Accessibility Guidelines. This version includes all previous WCAG 2.1 success criteria plus additional ones, ensuring your web content meets the latest accessibility standards.
+We adhere to **WCAG 2.2 AA**, the most recent version of the Web Content Accessibility Guidelines. In addition to this, we support the following versions: WCAG 2.0 A, WCAG 2.0 AA, WCAG 2.1 A, WCAG 2.1 AA, WCAG 2.1 AAA, and WCAG 2.2 A.
 
 ## Do you have screen reader support?
 Yes, we provide comprehensive screen reader support:
 
 - **Windows:** Full support for popular screen readers like JAWS and NVDA.
 - **macOS:** Complete support for VoiceOver.
-- **Mobile:** We are actively developing support for VoiceOver on Android and TalkBack on iOS. These mobile screen reader supports are expected to be fully implemented in the near future, enhancing our accessibility testing capabilities across all major platforms.
+- **Mobile:** We actively develop support for VoiceOver on Android and TalkBack on iOS. These mobile screen reader supports are expected to be fully implemented soon, enhancing our accessibility testing capabilities across all major platforms.
 
 ## Which browsers are supported?
-Our accessibility testing tools are optimized for **Chromium-based** browsers, **version 90 and above**. This includes **Google Chrome, Microsoft Edge, Opera, and other Chromium-based browsers**. Using the latest version ensures the best compatibility and performance with our tools.
+Our accessibility testing tools are optimized for **Chromium-based** browsers, **version 90 and above**. This includes **Google Chrome, Microsoft Edge, and other Chromium-based browsers**. Using the latest version ensures the best compatibility and performance with our tools.
 
 ## Do I need to add explicit wait time to scan for accessibility?
-No, you don't need to add explicit wait times. Our advanced tools are designed with built-in intelligence to automatically detect when DOM elements are loaded. They then immediately initiate accessibility scans for these elements. This feature ensures a seamless and efficient testing process without manual intervention for timing.
+No, you don't need to add explicit wait times. Our advanced tools are designed with built-in intelligence to detect when DOM elements are loaded automatically. They then immediately initiate accessibility scans for these elements. This feature ensures a seamless and efficient testing process without manual intervention for timing.
 
 ## How can I enable accessibility for my account/organization?
-Accessibility testing is a premium feature that requires activation. To enable it, contact our sales team through our [website](https://www.lambdatest.com/accessibility-automation) or your account manager. They will provide you with pricing details and plan options. Once you've chosen a plan, our team will activate the feature for your account. You'll then have immediate access to our suite of accessibility testing tools.
+Accessibility testing is a premium feature that requires activation. To enable it, contact our sales team through our [website](https://www.lambdatest.com/accessibility-automation) or your account manager. They will provide you with pricing details and plan options. Once you've chosen a plan, our team will activate the feature for your account.
 
 ## How many accessibility automation scans does one organization get?
-We offer unlimited accessibility automation scans with our paid plans. This means:
-
-- No restrictions on the number of pages you can scan.
-- No limitations on the number of parallel tests or threads you can run.
-- Freedom to conduct as many scans as needed for thorough accessibility testing.
+Although there is limitations on the number of parallel tests or threads you can run but there are no restrictions on the number of pages you can scan for thorough accessibility testing.
 
 ## Why is it showing a sub-version (e.g. 1.41.3) even though I have selected WCAG 2.1 AA?
 WCAG 2.1 AA is the overall accessibility standard you've selected for testing. The sub-versions (like 1.4.1 or 1.1.1) are specific guidelines within that standard. These sub-versions represent individual success criteria that fall under WCAG 2.1 AA. While you test against the broader WCAG 2.1 AA standard, the results show compliance with these more specific guidelines to provide detailed insights into your site's accessibility.
 
 ## Is it possible to scan private or non-public websites?
-Yes, our system is fully capable of scanning private or non-public websites. We offer two methods:
+Yes, our system is fully capable of scanning private or non-public websites.
 
-- **DevTools:** For quick scans of authenticated pages.
-- **Accessibility Automation:** For more comprehensive testing.
-Both methods utilize secure tunneling technology, allowing our tools to access your private sites safely without compromising security. This ensures that even your most sensitive web applications can undergo thorough accessibility testing.
+- **DevTools:** DevTools runs on your local system, it can directly scan your locally hosted projects.
+- **Accessibility Automation:**  The same way you use a tunnel to access any websites hosted locally, we can do the same for Accessibility Automation.
 
 ## On what basis are the different statuses (e.g., critical, minor) assigned?
 Our system uses a proprietary algorithm to assign severity statuses to accessibility issues. These statuses (such as critical, major, minor) are based on several factors:
@@ -91,15 +86,10 @@ Our system uses a proprietary algorithm to assign severity statuses to accessibi
 This nuanced approach helps you prioritize your accessibility improvements effectively.
 
 ## What frameworks are supported?
-We offer broad support for popular testing frameworks:
-
-- **Selenium:** Ideal for Java, Python, C#, and other language users.
-- **Cypress:** Perfect for modern web testing with JavaScript.
-- **Playwright:** Great for cross-browser testing with a single API.
-Each framework is fully integrated with our accessibility testing tools, allowing you to incorporate accessibility checks into your existing test suites seamlessly.
+Currently we offer support for Selenium, Cypress and PlayWright.
 
 ## Can I share the dashboard link with anyone?
-Yes, you can share dashboard links with anyone within your organization. This feature promotes collaboration and transparency in your accessibility efforts. However, for security reasons, access is limited to members of your organization to protect potentially sensitive information about your web applications.
+Yes, you can share dashboard links with anyone within your organization. However, for security reasons, access is limited to members of your organization to protect potentially sensitive information about your web applications.
 
 ## What is the accessibility score given by LambdaTest and how should it be interpreted?
 The LambdaTest accessibility score is a proprietary metric designed to give you a quick overview of your site's accessibility. It's calculated based on:
@@ -109,11 +99,7 @@ The LambdaTest accessibility score is a proprietary metric designed to give you 
 > A higher score indicates better accessibility, but it's important to note that this score should be used as a general guide rather than a definitive measure of compliance. Always review the detailed reports alongside the score for a comprehensive understanding of your site's accessibility.
 
 ## How many parallel automated accessibility tests can I run?
-With our accessibility automation plan, there are no restrictions on the number of parallel tests you can run. This allows you to:
-
-- Test multiple pages or sites simultaneously
-- Integrate accessibility testing into your CI/CD pipeline without bottlenecks
-- Scale your testing efforts as needed without additional costs
+The number of parallel automated accessibility tests you can run depends on the number of parallels included in your automation plan. For example, if your plan includes 2 parallels, you can run 2 concurrent tests.
 
 ## Can I run tests on mobile browsers/apps?
 Currently, our accessibility testing tools are optimized for desktop web environments. Mobile browser and app testing is not supported at this time. However, we recognize the growing importance of mobile accessibility and are actively working on expanding our capabilities to include mobile platforms in future updates.
