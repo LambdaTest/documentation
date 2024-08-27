@@ -153,6 +153,12 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
+       <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>KaneAI &nbsp; <NewTag  value="BETA" /> </h2>
+      <div className="home_inners">
+        <a href="/support/docs/getting-started-with-kane-ai/" ><p className="p_home_inners">Getting Started</p></a>   
+      </div>
+    </div>
+    <div className="home_inners_box">
        <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>Real Time</h2>
       <div className="home_inners">
         <a href="/support/docs/real-time-browser-testing/" ><p className="p_home_inners">Desktop Browser Testing</p></a>
@@ -176,21 +182,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/public-cloud-vs-private-cloud/" ><p className="p_home_inners">Private Cloud</p></a>
       </div>
     </div>
-    <div className="home_inners_box">
-       <h2 className='homeMain_h2'><TestingLocallyLightIcon className="home_icons home_light_icon" role="presentation"/> <TestingLocallyDarkIcon className="home_icons home_dark_icon" role="presentation"/>Testing Locally</h2>
-      <div className="home_inners">
-        <a href="/support/docs/testing-locally-hosted-pages/"><p className="p_home_inners">Testing Locally Hosted Pages</p></a>
-        <a href="/support/docs/lambda-tunnel-modifiers/"><p className="p_home_inners">LambdaTest Tunnel Modifiers</p></a>
-        <a href="/support/docs/docker-tunnel/"><p className="p_home_inners">Docker Tunnel</p></a>
-        <a href="/support/docs/troubleshooting-lambda-tunnel/"><p className="p_home_inners">Troubleshooting Tunnel</p></a>
-        <a href="/support/docs/load-balancing-in-lambda-tunnel/"><p className="p_home_inners">Load Balancing in Tunnel</p></a>
-        <a href="/support/docs/dedicated-proxy/"><p className="p_home_inners">IP Whitelisting</p></a>
-        <a href="/support/docs/charles-proxy/"><p className="p_home_inners">Charles Proxy</p></a>
-      </div>
     </div>
-    </div>
-
-    
 
 <!-- end of second section -->
 
@@ -231,19 +223,30 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
-      <h2 className='homeMain_h2'><SettingsLightIcon className="home_icons home_light_icon" role="presentation"/> <SettingsDarkIcon className="home_icons home_dark_icon" role="presentation"/>Settings and Security</h2>
+       <h2 className='homeMain_h2'><TestingLocallyLightIcon className="home_icons home_light_icon" role="presentation"/> <TestingLocallyDarkIcon className="home_icons home_dark_icon" role="presentation"/>Testing Locally</h2>
       <div className="home_inners">
-        <a href="/support/docs/account-management/"><p className="p_home_inners">Account Management</p></a>
-        <a href="/support/docs/lambdatest-public-ip/"><p className="p_home_inners">LambdaTest Public IP</p></a>
-        <a href="/support/docs/single-sign-on/"><p className="p_home_inners">Single Sign On</p></a>
-        <a href="/support/docs/scim/"><p className="p_home_inners">SCIM</p></a>
+        <a href="/support/docs/testing-locally-hosted-pages/"><p className="p_home_inners">Testing Locally Hosted Pages</p></a>
+        <a href="/support/docs/lambda-tunnel-modifiers/"><p className="p_home_inners">LambdaTest Tunnel Modifiers</p></a>
+        <a href="/support/docs/docker-tunnel/"><p className="p_home_inners">Docker Tunnel</p></a>
+        <a href="/support/docs/troubleshooting-lambda-tunnel/"><p className="p_home_inners">Troubleshooting Tunnel</p></a>
+        <a href="/support/docs/load-balancing-in-lambda-tunnel/"><p className="p_home_inners">Load Balancing in Tunnel</p></a>
+        <a href="/support/docs/dedicated-proxy/"><p className="p_home_inners">IP Whitelisting</p></a>
+        <a href="/support/docs/charles-proxy/"><p className="p_home_inners">Charles Proxy</p></a>
       </div>
     </div>
-
 
 <!-- end of third section -->
 
 <!-- start of fourth section -->
+<div className="home_inners_box">
+  <h2 className='homeMain_h2'><SettingsLightIcon className="home_icons home_light_icon" role="presentation"/> <SettingsDarkIcon className="home_icons home_dark_icon" role="presentation"/>Settings and Security</h2>
+  <div className="home_inners">
+    <a href="/support/docs/account-management/"><p className="p_home_inners">Account Management</p></a>
+    <a href="/support/docs/lambdatest-public-ip/"><p className="p_home_inners">LambdaTest Public IP</p></a>
+    <a href="/support/docs/single-sign-on/"><p className="p_home_inners">Single Sign On</p></a>
+    <a href="/support/docs/scim/"><p className="p_home_inners">SCIM</p></a>
+  </div>
+</div>
 <div className="home_inners_box">
       <h2 className='homeMain_h2'><OtherLightIcon className="home_icons home_light_icon" role="presentation"/> <OtherDarkIcon className="home_icons home_dark_icon" role="presentation"/>Other Docs</h2>
       <div className="home_inners">
