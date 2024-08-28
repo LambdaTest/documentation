@@ -1012,7 +1012,7 @@ module.exports = {
         collapsed: true,
         label: "Run your First Test",
         items: [
-          "kane-ai-web-test"
+          "kane-ai-web-test",
         ],
       },
     ]
