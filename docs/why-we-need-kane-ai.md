@@ -2,8 +2,8 @@
 id: why-we-need-kane-ai
 title: Why do we need KaneAI?
 hide_title: false
-sidebar_label: Why do we need KaneAI?
-description: Get started with KaneAI on LambdaTest to create, debug and evolve end to end tests using natural languages.
+sidebar_label: Why KaneAI?
+description: Learn about the need of kane ai and how it can help QA and developers in the real life cases.
 keywords:
   - lambdatest automation
   - lambdatest kaneai
@@ -14,7 +14,6 @@ slug: why-we-need-kane-ai/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import VideoEmbed from '../src/component/videoEmbed';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

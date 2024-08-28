@@ -39,6 +39,9 @@ import VideoEmbed from '../src/component/videoEmbed';
       })
     }}
 ></script>
+:::warning note
+Currently in the **Beta**. <br />Please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**support team**</span> to enable the Accessibility feature for your organization.
+:::
 
 KaneAI is an AI-powered next-gen testing assistant that revolutionizes software testing. Whether you're a seasoned QA professional or a developer new to testing, KaneAI simplifies complex testing processes, making them accessible to everyone.
 
