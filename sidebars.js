@@ -797,7 +797,7 @@ module.exports = {
       },
       {
         type: "category",
-        label: "HyperExecute FAQs",
+        label: "FAQs",
         collapsed: true,
         link: {
           type: "doc",
@@ -1470,6 +1470,11 @@ module.exports = {
             id: "accessibility-testing-dashboard-all-issues",
           },
         ],
+      },
+      {
+        type: "doc",
+        label: "FAQs",
+        id: "accessibility-faq",
       },
     ],
   ],
@@ -2624,6 +2629,17 @@ module.exports = {
           "html-dom-smartui-options",
           "smart-ui-build-options",
           "test-settings-options",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Integrate with CI/CD tool",
+        items: [
+          "smartui-with-github-actions",
+          "smartui-with-gitlab",
+          "smartui-with-netlify",
+          "smartui-with-bitbucket"
         ],
       },
       {
