@@ -1003,7 +1003,16 @@ module.exports = {
           id: "getting-started-with-kane-ai",
         },
         items: [
-          "why-we-need-kane-ai"
+          "why-we-need-kane-ai",
+          "kane-ai-guided-walkthrough"
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Run your First Test",
+        items: [
+          "kane-ai-web-test"
         ],
       },
     ]
