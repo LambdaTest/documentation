@@ -1,6 +1,7 @@
 module.exports = {
   apiSidebar: [
     "getting-started-with-hyperexecute",
+    "getting-started-with-kane-ai",
     "real-time-testing",
     "smart-visual-regression-testing",
     "analytics-overview",
@@ -12,8 +13,6 @@ module.exports = {
     "bug-tracking-tools",
     "settings-and-security",
   ],
-
-  // 'support-start', 'tas-overview', 'app-automation', 'web-automation', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'record-and-replay',
 
   HyperExecuteSidebar: [
     {
@@ -797,7 +796,7 @@ module.exports = {
       },
       {
         type: "category",
-        label: "HyperExecute FAQs",
+        label: "FAQs",
         collapsed: true,
         link: {
           type: "doc",
@@ -855,6 +854,15 @@ module.exports = {
           id: "hyperexecute-release-notes",
         },
         items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "August, 2024",
+            items: [
+              'hyperexecute-release-notes-2-4-7',
+              'hyperexecute-release-notes-2-4-6',
+            ]
+          },
           {
             type: "category",
             collapsed: true,
@@ -974,6 +982,40 @@ module.exports = {
         ],
       },
     ],
+  ],
+
+  KaneAISidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Getting Started",
+        link: {
+          type: "doc",
+          id: "getting-started-with-kane-ai",
+        },
+        items: [
+          "why-we-need-kane-ai",
+          "kane-ai-guided-walkthrough"
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Run your First Test",
+        items: [
+          "kane-ai-web-test",
+        ],
+      },
+    ]
   ],
 
   RealTimeBrowserTestingSiebar: [
@@ -1395,24 +1437,52 @@ module.exports = {
         },
         items: [
           {
-            type: "doc",
-            label: 'Selenium',
-            id: "accessibility-automation-test",
+            type: "category",
+            collapsed: true,
+            label: "Standard Grid",
+            items: [
+              {
+                type: "doc",
+                label: 'Selenium',
+                id: "accessibility-automation-test",
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: 'Cypress',
+                items: [
+                  "cypress-v10-accessibility-test",
+                  "cypress-v9-accessibility-test",
+                ],
+              },
+            ]
           },
           {
             type: "category",
             collapsed: true,
-            label: 'Cypress',
+            label: "HyperExecute",
             items: [
-              "cypress-v10-accessibility-test",
-              "cypress-v9-accessibility-test",
-            ],
+              {
+                type: "doc",
+                label: 'Selenium',
+                id: "selenium-hyprerexecute-accessibility-tests"
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: 'Cypress',
+                items: [
+                  "cypress-v10-hyprerexecute-accessibility-tests",
+                  "cypress-v9-hyprerexecute-accessibility-tests",
+                ],
+              },
+            ]
           },
           {
             type: 'doc',
             label: 'Accessibility Automation Settings',
             id: "accessibility-automation-settings",
-          }
+          },
         ],
       },
       {
@@ -1435,6 +1505,11 @@ module.exports = {
             id: "accessibility-testing-dashboard-all-issues",
           },
         ],
+      },
+      {
+        type: "doc",
+        label: "FAQs",
+        id: "accessibility-faq",
       },
     ],
   ],
@@ -1461,7 +1536,7 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Single Sign On",
+        label: "Getting Started",
         id: "single-sign-on",
       },
       {
@@ -1491,7 +1566,7 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Projects",
-        items: ["create-projects", "fields-and-values"],
+        items: ["create-projects", "system-and-custom-fields"],
       },
       {
         type: "category",
@@ -2592,7 +2667,10 @@ module.exports = {
         collapsed: true,
         label: "Integrate with CI/CD tool",
         items: [
-          "smartui-with-github-actions"
+          "smartui-with-github-actions",
+          "smartui-with-gitlab",
+          "smartui-with-netlify",
+          "smartui-with-bitbucket"
         ],
       },
       {

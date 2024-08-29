@@ -336,10 +336,11 @@ The `runtime` flag is used to:
 - Download and install the dependent language and framework that is needed to execute your tests.
 - You can provide the language and the version you want to be installed.
 
-:::info note
-- Current Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-sdk**, **katalon** and **python**
-- 📕 Check the [supported versions](/support/docs/hyperexecute-supported-languages-and-packages/) of all the languages along with the respective operating system.
+:::info
+Current Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-sdk**, **katalon** and **python**
 :::
+
+> 📕 Check the [supported versions](/support/docs/hyperexecute-supported-languages-and-packages/) of all the languages along with the respective operating system.
 
 ```yaml
 runtime:

@@ -1,15 +1,15 @@
 ---
 id: hyperexecute-cli-gui
-title: HypEx-GUI﹕Effortless Setup and Execution for Automated Tests
+title: "HyperExecute-GUI App: A Simplified Approach to Test Execution"
 hide_title: false
-sidebar_label: CLI with HypEx-GUI
+sidebar_label: HyperExecute-GUI
 description: This documentation outlines the steps on how to trigger a job on hyperexecute using the underpass app - gui app for hyperexecute cli.
 keywords:
   - LambdaTest
   - HyperExecute
   - LambdaTest HyperExecute
   - CLI
-  - HypEx-GUI
+  - HyperExecute-GUI
   - test execute
   - hyperexecute job
   - automation
@@ -41,48 +41,50 @@ slug: hyperexecute-cli-gui/
       })
     }}
 ></script>
-HyperExecute currently requires writing YAML files and using specific CLI commands to trigger tests. This process can be a hurdle if you are new to YAML or unfamiliar with the specific flags and functionalities supported by HyperExecute.
+:::note
+The HyperExecute GUI is currently in **BETA**.
 
-The HypEx-GUI simplifies test execution by providing a user-friendly graphical interface. This eliminates the need to write YAML files or memorize complex commands, saving you time and effort.
+At this stage, it only supports the **TestNG framework** from the [available languages and frameworks](https://www.lambdatest.com/support/docs/hyperexecute-supported-languages-and-frameworks/) in HyperExecute. If you have specific requests for additional framework and language support, please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span>.
+:::
 
-> **NOTE :** Currently we only support TestNG framework.
+HyperExecute has been a cornerstone for automation testing, offering unparalleled flexibility with its [YAML](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/) configurations and [command-line interface](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/). To further elevate your testing experience, we are introducing the new HyperExecute-GUI, a user-friendly graphic interface designed to simplify your test execution process.
 
-## Steps to trigger your tests using the HypEx-GUI
+With HyperExecute-GUI, you can seamlessly leverage the full capabilities of HyperExecute without the need for YAML files or command-line interactions. This intuitive graphical interface allows you to execute your existing test scripts with ease, saving you valuable time and effort and enabling a more efficient and effective testing process.
 
-### Step 1: Download and Install the Underpass App
-Download the HypEx-GUI installer from the LambdaTest dashboard and follow the on-screen installation instructions.
+## Steps to trigger your tests
+
+### Step 1: Download and Install the  HyperExecute-GUI installer
+To begin, access the LambdaTest dashboard and download the HyperExecute-GUI installer (as demonstrated in the video below). This tool is essential for triggering your tests through a user-friendly interface. After downloading, install the application on your system.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/step1.mp4').default} type="video/mp4" />
 </video>
 
-### Step 2: Login and Project Selection
-Launch the HypEx-GUI and log in using your existing LambdaTest credentials. If you're new, start your free trial. The application will display a list of your existing projects.
-
-After signing in, you will have to upload your desired TestNG project from your local system.
+### Step 2: Browse your Project
+Launch the HyperExecute-GUI installer app and log in using your existing LambdaTest credentials. If you're new to LambdaTest, you can start by signing up for a free trial. Once logged in, browse your project from your local system to begin the test setup.
 
 <img loading="lazy" src={require('../assets/videos/hyperexecute/cli-gui/step2.png').default} alt="project-hyperexecute" className="doc_img "/><br/><br/>
 
-### Step 3: Project Details and Analysis
-The HypEx-GUI will automatically analyze your test scripts to detect whether you are using a suitable framework or not. It will then check all the dependencies required to execute your project.
+### Step 3: Analyze Project Details
+The HyperExecute-GUI will automatically analyze your test scripts to identify the framework and language used. The GUI will then verify and check all required dependencies to ensure your project is ready for execution.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/step3.mp4').default} type="video/mp4" />
 </video>
 
-Now click on the Proceed button.
+Now click on the Proceed button to move to the next step.
 
-### Step 4: Test Discovery and Selection
-The HypEx-GUI will automatically discover all the test cases within your project and display them in a list. You can easily select individual tests, an entire test project, or a group of suites to execute based on your needs.
+### Step 4: Discover and Select Tests
+HyperExecute-GUI will automatically identify all test cases within your project and present them in a comprehensive list. You can then select specific tests, an entire test project, or groups of test suites according to your needs and preferences.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/step4.mp4').default} type="video/mp4" />
 </video>
 
 ### Step 5: Test Execution Configuration
-After selecting the necessary tests, you will have to to configure your project by specifying the [OS](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runson), [concurrency](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#concurrency) (number of tests to run simultaneously), [retry on failure](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure), and a [job label](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel) for easy identification to execute on the HyperExecute dashboard.
+Before executing your tests, customize the test run settings. Specify the [operating system](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runson), [concurrency](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#concurrency) level to optimize performance, and [retries](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure) for failed tests and add a [job label](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel) for easy identification and tracking.
 
-> To understand in detail what these configurations are, you can go through our [HyperExecute YAML](https://lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml) documentation.
+> **Note :** For detailed information on these configuration options, please refer to our [HyperExecute YAML](https://lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml) documentation.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/step5.mp4').default} type="video/mp4" />
@@ -92,4 +94,4 @@ After selecting the necessary tests, you will have to to configure your project 
 Click on the "Run Test" button to start the test execution. Click on the "View Job" button to get redirected to the HyperExecute dashboard.
 
 ### Monitor and View Results
-The HypEx-GUI displays the job logs in real-time as your tests run. Once complete, you can view the detailed test results in the HyperExecute Dashboard.
+The HyperExecute-GUI displays the job logs in real-time as your tests run. Once complete, you can view the detailed test results in the HyperExecute Dashboard.
