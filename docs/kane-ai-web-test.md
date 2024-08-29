@@ -44,8 +44,18 @@ In this guide, we'll walk you through the process of generating, and executing a
 ## Steps to generate the test cases
 
 ### Step 1: Create a Web Test
-Navigate to the [KaneAI homepage](https://kaneai.lambdatest.com/objective) and click on the **Create a Web Test** button to initiate the process of generating test cases for your web app.
+Navigate to the [KaneAI homepage](https://kaneai.lambdatest.com/objective) and click on the **Create a Web Test** button to initiate the process of generating test cases for your web app. In the right side, a window will open with which you can navigate to your platform to perform the testing.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/create-web-test.gif').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-### Step 2: 
+### Step 2: Write Your Test Cases in Plain English
+**Let KaneAI do the coding!** In this step, you'll describe your desired test outcomes using plain English. Don't worry about writing specific code or scripts – KaneAI will handle that for you.
+
+For example:
+- Visit the website "www.lambdatest.com"
+- Click on the Login button.
+
+Keep adding tests in plain English as you go; KaneAI will automatically queue them up for execution, so you don't have to wait for one test to finish before writing the next.
+> **Remember:** The more specific you are, the more accurate KaneAI's generated test cases will be.
+
+<!-- <img loading="lazy" src={require('../assets/images/kane-ai/write-web-test.gif').default} alt="Image" width="1347" height="616"  className="doc_img"/> -->
