@@ -75,5 +75,6 @@ Accessibility testing ensures that your product is usable by people with disabil
 <br /><br />
 
 <div className="support_main ms-auto">
-  <p><i>Powered By <b><a href="https://github.com/dequelabs/axe-core" target="_blank">Axe-Core</a></b></i></p>
+  <p><i>Powered By <b><a href="https://github.com/dequelabs/axe-core" target="_blank">Axe-Core</a></b></i></p><br />
+  <p><i>Axe-core® is a trademark of Deque Systems, Inc. in the US and other countries.</i></p>
 </div>
