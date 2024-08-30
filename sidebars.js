@@ -1004,17 +1004,18 @@ module.exports = {
         },
         items: [
           "why-we-need-kane-ai",
-          "kane-ai-guided-walkthrough"
+          "kane-ai-guided-walkthrough",
+          "kane-ai-web-test"
         ],
       },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Run your First Test",
-        items: [
-          "kane-ai-web-test",
-        ],
-      },
+      // {
+      //   type: "category",
+      //   collapsed: true,
+      //   label: "Run your First Test",
+      //   items: [
+      //     "kane-ai-web-test",
+      //   ],
+      // },
     ]
   ],
 
