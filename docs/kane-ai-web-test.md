@@ -2,7 +2,7 @@
 id: kane-ai-web-test
 title: Automate your Web App Testing with KaneAI
 hide_title: false
-sidebar_label: Web Test
+sidebar_label: Run your First Test
 description: This documentation will walk you through the dashboard of the KaneAI and its components. You can learn about these components in details.
 keywords:
   - lambdatest automation
