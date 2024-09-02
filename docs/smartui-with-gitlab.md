@@ -1,8 +1,8 @@
 ---
-id: smartui-with-bitbucket
-title: Bitbucket Pipeline Integration with SmartUI
-sidebar_label: Bitbucket
-description: SmartUI now integrates with Bitbucket Pipeline to boost your go-to market delivery. Perform automated cross browser testing with SmartUI to ensure your development code renders seamlessly providing 3000+ real browsers running through machines.
+id: smartui-with-gitlab
+title: GitLab Pipeline Integration with SmartUI
+sidebar_label: GitLab
+description: SmartUI now integrates with GitLab Pipeline to boost your go-to market delivery. Perform automated cross browser testing with SmartUI to ensure your development code renders seamlessly providing 3000+ real browsers running through machines.
 keywords:
   - lambdatest integrations
   - smart ui integration
@@ -10,10 +10,10 @@ keywords:
   - ci/cd tools
   - continuous integration,continuous delivery
   - continuous integration tools
-  - bitbucket ci cd
+  - gitlab ci cd
 url: https://www.lambdatest.com/support/docs/smartui-with-gitlab/
 site_name: LambdaTest
-slug: smartui-with-bitbucket/
+slug: smartui-with-gitlab/
 ---
 
 <script type="application/ld+json"
@@ -33,8 +33,8 @@ slug: smartui-with-bitbucket/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Bitbucket Pipeline Integration",
-          "item": "https://www.lambdatest.com/support/docs/smartui-with-bitbucket/"
+          "name": "GitLab Pipeline Integration",
+          "item": "https://www.lambdatest.com/support/docs/smartui-with-gitlab/"
         }]
       })
     }}

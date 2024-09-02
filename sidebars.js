@@ -1,6 +1,7 @@
 module.exports = {
   apiSidebar: [
     "getting-started-with-hyperexecute",
+    "getting-started-with-kane-ai",
     "real-time-testing",
     "smart-visual-regression-testing",
     "analytics-overview",
@@ -860,6 +861,7 @@ module.exports = {
             collapsed: true,
             label: "August, 2024",
             items: [
+              'hyperexecute-release-notes-2-4-8',
               'hyperexecute-release-notes-2-4-7',
               'hyperexecute-release-notes-2-4-6',
             ]
@@ -983,6 +985,33 @@ module.exports = {
         ],
       },
     ],
+  ],
+
+  KaneAISidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Getting Started",
+        link: {
+          type: "doc",
+          id: "getting-started-with-kane-ai",
+        },
+        items: [
+          "why-we-need-kane-ai",
+          "kane-ai-web-test",
+          "kane-ai-guided-walkthrough",
+        ],
+      },
+    ]
   ],
 
   RealTimeBrowserTestingSiebar: [
@@ -1513,7 +1542,6 @@ module.exports = {
   ],
 ],
 
-
   TestManagerSidebar: [
     {
       type: 'link',
@@ -1937,6 +1965,7 @@ module.exports = {
       },
     ],
   ],
+
   CypressTestingSidebar: [
     {
       type: 'link',
@@ -2633,9 +2662,13 @@ module.exports = {
         ],
       },
       {
-        type: "doc",
-        label: "Integrate with CI/CD tool",
-        id: "smartui-with-bitbucket"
+        type: "category",
+        collapsed: true,
+        label: "Integrate with CI/CD tools",
+        items: [
+          "smartui-with-github-actions",
+          "smartui-with-gitlab",
+        ],
       },
       {
         type: "doc",
