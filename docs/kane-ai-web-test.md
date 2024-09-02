@@ -55,7 +55,7 @@ For example:
 - Visit the website "www.lambdatest.com"
 - Click on the Login button.
 
-Keep adding tests in plain English as you go; KaneAI will automatically queue them up for execution, so you don't have to wait for one test to finish before writing the next. Click on the **Fininsh Test** button.
+Keep adding instructions/commands in plain English as you go; KaneAI will automatically queue them up for execution, so you don't have to wait for one test to finish before writing the next. Click on the **Fininsh Test** button.
 > **Remember:** The more specific you are, the more accurate KaneAI's generated test cases will be.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/write-web-test.gif').default} alt="Image" width="1347" height="616"  className="doc_img"/>
