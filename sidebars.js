@@ -2662,9 +2662,13 @@ module.exports = {
         ],
       },
       {
-        type: "doc",
-        label: "Integrate with CI/CD tool",
-        id: "smartui-with-bitbucket"
+        type: "category",
+        collapsed: true,
+        label: "Integrate with CI/CD tools",
+        items: [
+          "smartui-with-github-actions",
+          "smartui-with-gitlab",
+        ],
       },
       {
         type: "doc",
