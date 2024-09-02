@@ -859,6 +859,7 @@ module.exports = {
             collapsed: true,
             label: "August, 2024",
             items: [
+              'hyperexecute-release-notes-2-4-8',
               'hyperexecute-release-notes-2-4-7',
               'hyperexecute-release-notes-2-4-6',
             ]
@@ -2659,7 +2660,7 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Integrate with CI/CD tool",
+        label: "Integrate with CI/CD tools",
         items: [
           "smartui-with-github-actions",
           "smartui-with-gitlab",

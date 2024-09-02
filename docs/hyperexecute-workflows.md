@@ -39,7 +39,7 @@ slug: hyperexecute-workflows/
 # HyperExecute Workflows
 
 :::danger important
-The workflow feature is getting deprecated from **30th August, 2024** and will be shifted under [Projects](/support/docs/hyperexecute-projects/) section.
+The workflow feature is getting deprecated from **13th September, 2024** and will be shifted under [Projects](/support/docs/hyperexecute-projects/) section.
 :::
 
 > The workflow feature is currently in the **Beta** version, so it works only in the [dynamic mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
