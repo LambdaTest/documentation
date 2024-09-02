@@ -1,7 +1,7 @@
 ---
 id: desired-capabilities-in-appium
-title: Desired Capabilities In Appium
-sidebar_label: Desired Capabilities in Appium
+title: Desired Capabilities 
+sidebar_label: Desired Capabilities
 description: This document will teach you how to leverage LambdaTest Capability Generator to easily for declaring desired capabilities in Appium to run your App Automation leveraging Appium Desktop.
 keywords:
   - cross browser testing
@@ -46,15 +46,14 @@ slug: desired-capabilities-in-appium/
 
 ---
 
-LambdaTest provides the capabilities class needed to run your App Automation leveraging Appium Desktop.
+Desired capabilities in [Appium](https://www.lambdatest.com/appium) are essential for guiding the Appium server to create the correct test automation environment. Represented as a set of key-value pairs within a JSON object, these capabilities allow [QA automation](https://www.lambdatest.com/blog/qa-automation/) engineers to specify the desired mobile platform and configuration for their test sessions. 
+
+By setting these parameters, QAs can ensure that the Appium server accurately targets the intended test environment, facilitating effective and efficient [mobile app testing](https://www.lambdatest.com/mobile-app-testing). 
+
+> **Note:** With LambdaTest [capabilities generator](https://www.lambdatest.com/capabilities-generator/) run your App Automation leveraging Appium Desktop.
 
 
 <div class="desired-capabilities-page">
-
-
----
-
-
 
 
 ## Mandatory capabilities
@@ -174,12 +173,6 @@ curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sess
 --header 'Content-Type: application/json' \
 --data '{"mode": "offline/online"}'
 ```
-
-## Espresso Tests
-
-| KEY                  | VALUES                                                                                                                                                                   | CAPABILITY DESCRIPTION                                                                                                                                                                                                                                                                                                                                                               |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| clearPackageData               | TYPE: BOOLEAN <br/> `clearPackageData=TRUE` <br/> OR <br/> `clearPackageData=FALSE`                                                                                                          | This capability will clear the data that the application might have stored on the device before the app gets installed. <br/> Useful when we are running the same test case on the same device.      |
 
 
 </div>
