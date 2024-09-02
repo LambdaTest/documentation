@@ -860,6 +860,7 @@ module.exports = {
             collapsed: true,
             label: "August, 2024",
             items: [
+              'hyperexecute-release-notes-2-4-8',
               'hyperexecute-release-notes-2-4-7',
               'hyperexecute-release-notes-2-4-6',
             ]
@@ -1513,7 +1514,6 @@ module.exports = {
   ],
 ],
 
-
   TestManagerSidebar: [
     {
       type: 'link',
@@ -1937,6 +1937,7 @@ module.exports = {
       },
     ],
   ],
+
   CypressTestingSidebar: [
     {
       type: 'link',
