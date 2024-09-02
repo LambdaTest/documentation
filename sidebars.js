@@ -1,6 +1,7 @@
 module.exports = {
   apiSidebar: [
     "getting-started-with-hyperexecute",
+    "getting-started-with-kane-ai",
     "real-time-testing",
     "smart-visual-regression-testing",
     "analytics-overview",
@@ -984,6 +985,33 @@ module.exports = {
         ],
       },
     ],
+  ],
+
+  KaneAISidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Getting Started",
+        link: {
+          type: "doc",
+          id: "getting-started-with-kane-ai",
+        },
+        items: [
+          "why-we-need-kane-ai",
+          "kane-ai-web-test",
+          "kane-ai-guided-walkthrough",
+        ],
+      },
+    ]
   ],
 
   RealTimeBrowserTestingSiebar: [
