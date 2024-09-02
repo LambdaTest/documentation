@@ -1004,18 +1004,10 @@ module.exports = {
         },
         items: [
           "why-we-need-kane-ai",
+          "kane-ai-web-test",
           "kane-ai-guided-walkthrough",
-          "kane-ai-web-test"
         ],
       },
-      // {
-      //   type: "category",
-      //   collapsed: true,
-      //   label: "Run your First Test",
-      //   items: [
-      //     "kane-ai-web-test",
-      //   ],
-      // },
     ]
   ],
 
@@ -2670,7 +2662,6 @@ module.exports = {
         items: [
           "smartui-with-github-actions",
           "smartui-with-gitlab",
-          "smartui-with-netlify",
           "smartui-with-bitbucket"
         ],
       },
