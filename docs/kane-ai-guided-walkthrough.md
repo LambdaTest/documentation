@@ -44,7 +44,7 @@ This guided walkthrough will help you understand the various components and feat
 > Navigate to the [Test Manager](https://test-manager.lambdatest.com/projects) and [select your project and folder](/support/docs/kane-ai-web-test/#step-3-save-your-test-case) into which you have saved your tests to manage your tests.
 
 ## Projects Page
-All the Test Cases generated are accessible from the Test Manager page in the Test Cases section. Each of the Test Case has a unique `Test Case ID` and `Labels` to uniquely identify them. The top section displays the project name, number of Test Cases in that particlar project folder, Test Plans, Builds and its creation details.
+All the Test Cases generated are accessible from the Test Manager page in the Test Cases section. Each of the Test Case has a unique `Test Case ID` and `Labels` to uniquely identify them. The top section displays the project name, number of Test Cases in that particular project folder, Test Plans, Builds and its creation details.
 
 On this page you have other things such as **filters**, **adding test cases**, **importing csv files** and much more. You can also filter through all of the test cases on the basis of the status, creator, and tags.
 
@@ -69,7 +69,7 @@ The test case dashboard provides a comprehensive view of a specific test case, i
 
 ### Code
 
-The code page within the test manager provides a comprehensive view of the code used to execute a specific test case. This page typically includes the language and the framwework used to create the test case code.
+The code page within the test manager provides a comprehensive view of the code used to execute a specific test case. This page typically includes the language and the framework used to create the test case code.
 
 - **Generate New Code:** If you want to generate another codebase in different language or framework for the same test case.
 - **HyperExecute:** This button will trigger your steps to the HyperExecute.
