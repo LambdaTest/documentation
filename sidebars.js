@@ -1349,7 +1349,8 @@ module.exports = {
       "genrocket-integration",
       "netlify-integration-with-lambdatest",
       "testim-integration",
-      "simplifyqa-integration"
+      "simplifyqa-integration",
+      "uipath-integration"
     ],
     // },
   ],
