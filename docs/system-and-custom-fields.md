@@ -55,7 +55,7 @@ Explore the structured organization of your test projects through the use of Fie
 
 - Custom Fields allow you to store additional information beyond what System Fields offer. To create a new field, enter the required details and choose the appropriate data type from the **Type** function. Available types include String, Textarea, Number, Dropdown (Single Select), Dropdown (Multi Select), Boolean (Checkbox), Date, User, and URL.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/new-fields.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/create-new-fields.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 - For Dropdown types (Single Select and Multi Select), you also have the option to add values.
 
