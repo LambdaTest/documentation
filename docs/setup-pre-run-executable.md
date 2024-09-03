@@ -95,7 +95,7 @@ curl --request POST \
 "prerun": {
         "accessKey": "****",
         "background": False,
-        "filePath": "xyz/pre/install_certificate.ps1",
+        "filePath": "<organization-id>/uploads/install_certificate.ps1",
         "postAction": {
             "filePath": "xyz/post/delete_certificate.ps1",
             "url": "<https://api.lambdatest.com/automation/api/v1/files/download>"
