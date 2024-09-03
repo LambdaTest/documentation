@@ -14,6 +14,8 @@ module.exports = {
     "settings-and-security",
   ],
 
+  // 'support-start', 'tas-overview', 'app-automation', 'web-automation', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'record-and-replay',
+
   HyperExecuteSidebar: [
     {
       type: 'link',
@@ -986,31 +988,6 @@ module.exports = {
   ],
 
   KaneAISidebar: [
-    {
-      type: "link",
-      label: "Back",
-      href: "/docs/",
-      customProps: {
-        className: "back-to-main-menu",
-      },
-    },
-    [
-      {
-        type: "category",
-        collapsed: true,
-        label: "Getting Started",
-        link: {
-          type: "doc",
-          id: "getting-started-with-kane-ai",
-        },
-        items: [
-          "why-we-need-kane-ai"
-        ],
-      },
-    ]
-  ],
-
-  RealTimeBrowserTestingSiebar: [
     {
       type: "link",
       label: "Back",
