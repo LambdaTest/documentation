@@ -1009,6 +1009,14 @@ module.exports = {
           "kane-ai-guided-walkthrough",
         ],
       },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Knowledge Base",
+        items: [
+          "kane-ai-command-guide",
+        ],
+      },
     ]
   ],
 
