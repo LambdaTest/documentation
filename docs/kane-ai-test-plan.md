@@ -42,7 +42,7 @@ import TabItem from '@theme/TabItem';
 ></script>
 The Intelligent Test Planner feature in KaneAI empowers you by simplifying the test generation process. Instead of manually writing test steps or scenarios, you can now provide high-level objectives, and KaneAI will automatically translate them into executable test scripts.
 
-This document will guide you through the end-to-end implementation for your web applicaitons.
+This document will guide you through the end-to-end implementation for your web applications.
 
 ## Steps to generate and execute your test cases
 ### Step 1: Define your test objective
