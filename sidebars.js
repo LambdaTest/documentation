@@ -1010,6 +1010,11 @@ module.exports = {
         ],
       },
       {
+        type: "doc",
+        label: "Test Plan",
+        id: "kane-ai-test-plan"
+      },
+      {
         type: "category",
         collapsed: true,
         label: "Knowledge Base",
