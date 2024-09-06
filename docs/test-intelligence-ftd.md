@@ -54,7 +54,7 @@ To read more about the Flaky Tests Analytics, you can refer the documentation at
 
 ## How to use Flaky Test Detection?
 
-There are following pre-requisites to use Flaky Test Detection:
+There are following Prerequisites to use Flaky Test Detection:
 
 - You should have a LambdaTest account. If you don't have one, you can sign up [here](https://accounts.lambdatest.com/register).
 - You should have a test suite with same test name run on the platform at least 10 times.

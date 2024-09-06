@@ -38,7 +38,7 @@ slug: analytics-test-case-insights/
 
 Analyzing the test case level insights of your test automation execution on LambdaTest is now easier than ever with the `Test Case Insights` module. The user can easily find information about the count, and type of the test cases through the highly customizable widgets.
 
-## Pre-requisites For Insights: 
+## Prerequisites For Insights: 
 1. You should have an active LambdaTest account.
 2. You should han active subscription plan with HyperExecute or App Automation. 
 3. You should have executed at least one test on the LambdaTest HyperExecute / App Automation platform.

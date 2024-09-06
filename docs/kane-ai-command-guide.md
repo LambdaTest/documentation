@@ -3,7 +3,7 @@ id: kane-ai-command-guide
 title: KanAI - Command Guide
 hide_title: false
 sidebar_label: Command Types
-description: This documentation will walk you through the dashboard of the KaneAI and its components. You can learn about these components in details.
+description: Master KaneAI commands to automate web actions like navigation, clicking, typing, and more. Create dynamic, readable test cases with ease
 keywords:
   - lambdatest automation
   - lambdatest kaneai

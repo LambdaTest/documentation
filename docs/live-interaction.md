@@ -52,7 +52,7 @@ slug: live-interaction/
 - It is a powerful tool to find the root cause of the exception raised during the automated tests and even allow them to debug the exception during the session.
 - It works smartly by letting the stakeholders know who has stopped/paused the test, which helps effectively report the issue.
 
-## Pre-requisites and Limitations
+## Prerequisites and Limitations
 
 - Live interaction is available on: 
    - **Windows**: 11, 10, 8, and 8.1

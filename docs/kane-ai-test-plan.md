@@ -3,7 +3,7 @@ id: kane-ai-test-plan
 title: Intelligent Test Planner - Automate your Test Generation
 hide_title: false
 sidebar_label: Test Planner
-description: This documentation will walk you through the dashboard of the KaneAI and its components. You can learn about these components in details.
+description: Automate test generation with KaneAI’s Intelligent Test Planner. Define objectives, set parameters, and execute tests seamlessly for web apps.
 keywords:
   - lambdatest automation
   - lambdatest kaneai

@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 This documentation will act as your step-by-step guide in to perform Puppteer test with SmartUI.
 
-### Pre-requisites for running SmartUI with Puppeteer
+### Prerequisites for running SmartUI with Puppeteer
 
 - Basic understanding of Puppeteer is required.
 - Go to [SmartUI](https://smartui.lambdatest.com/) and login along with your credentials.

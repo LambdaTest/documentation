@@ -68,7 +68,7 @@ By the end of this topic, you will know:
 2. How can we record interactions using Katalon Record Mobile and create Automation Scripts.
 3. Executing Katalon Scripts using LambdaTest’s real device cloud.
 
-## Pre-requisites for Getting Started
+## Prerequisites for Getting Started
 
 ---
 

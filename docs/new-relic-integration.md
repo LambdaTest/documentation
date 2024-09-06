@@ -50,7 +50,7 @@ New Relic is a comprehensive observability platform that helps you monitor, trou
 
 LambdaTest and New Relic enable you to view LambdaTest results in a custom New Relic dashboard and gain deeper insight into your automation scripts to ship quality products at light speed.
 
-## Pre-requisites
+## Prerequisites
 ***
 
 - A LambdaTest account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/register).

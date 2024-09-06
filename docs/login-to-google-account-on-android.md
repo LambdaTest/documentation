@@ -48,7 +48,7 @@ This documentation will guide you to log in to your Google Account on an Android
 
 To log in to Google Account on Real Devices [Android], and perform testing using Google account-related tasks.
 
-## Pre-requisites
+## Prerequisites
 ---
 
 1. LambdaTest App Automation Account.

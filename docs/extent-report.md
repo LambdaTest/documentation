@@ -40,7 +40,7 @@ slug: extent-report/
 
 Extent Reports is a popular reporting framework for Java, TestNG, and Selenium tests. It provides a comprehensive set of features for reporting test results, including detailed test case summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results..
 
-### Pre-requisites
+### Prerequisites
 
 1. Upgrade to extent reporting version 5 in the `pom.xml` file.
 2. Update import statements in the codebase from `com.relevantcodes` (version 2) to `com.aventstack` (version 5).

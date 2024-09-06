@@ -43,7 +43,7 @@ SimplifyQA is a test automation platform designed to leverage AI for creating, e
 
 This document will guide you step-by-step method to integrate the SimplifyQA with LambdaTest's Real Device.
 
-## Pre-requisites 
+## Prerequisites 
 - SimplifyQA subscription 
 - SimplifyQA agent installed in Local Machine 
 - LambdaTest Subscription 

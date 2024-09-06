@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 This documentation will act as your step-by-step guide in to perform K6 test with SmartUI.
 
-### Pre-requisites for running SmartUI with K6
+### Prerequisites for running SmartUI with K6
 
 - Basic understanding of K6 is required.
 - Go to [SmartUI](https://smartui.lambdatest.com/) and login along with your credentials.

@@ -52,7 +52,7 @@ LambdaTest allows you to run Puppeteer tests with Mocha on a browser farm of 40+
 
 This guide will cover the basics of getting started with Puppeteer testing with Mocha on the LambdaTest platform.
 
-## Pre-requisites
+## Prerequisites
 ***
 
 >Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.

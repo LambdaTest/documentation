@@ -46,7 +46,7 @@ Puppeteer is a Node package that automates the Chrome browser for web testing. O
 
 LambdaTest allows you to run Puppeteer tests on a browser farm of 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with Puppeteer testing on the LambdaTest platform.
 
-## Pre-requisites
+## Prerequisites
 ***
 
 >Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.

@@ -58,7 +58,7 @@ Now the given `parallelism` is 2, hence it will create the same set of the above
 
 ## Using Hybrid Strategy with HyperExecute
 
-### Pre-requisites:
+### Prerequisites:
 
 -   The version of the YAML file that you are using is `0.1`.    
 -   The test discovery mode has to be dynamic.
