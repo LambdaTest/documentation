@@ -108,10 +108,10 @@ This document provides an overview of the different prompts available in KaneAI,
 
 ## Assertions and Queries
 ### Assert Element Text
-- `"assert if red button text is subscribe"`
+- `assert if red button text is "subscribe"`
 
 ### Assert Element Presence
-- `"assert if KaneAI is present on the viewport"`
+- `assert if KaneAI is present on the "viewport"`
 
 ### Query Information
 - `query the current url`

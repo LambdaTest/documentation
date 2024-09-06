@@ -84,4 +84,8 @@ Click on the Live Preview button to enter the playground and check the live exec
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kane-ai-test-planner-live-preview.png').default} alt="Image" className="doc_img"/>
 
+You will be redirected to playground where your tests will be getting executed and you can check the complete process.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/kane-test-plan-result.png').default} alt="Image" className="doc_img"/>
+
 > You can now go to the **Test Manager** where you have saved your test case and trigger it on HyperExecute.
