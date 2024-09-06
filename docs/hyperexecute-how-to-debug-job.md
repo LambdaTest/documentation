@@ -43,7 +43,7 @@ As a developer or tester, you know that running tests is an essential part of th
 
 The HyperExecute Dashboard provides a central view of all your test runs, including the test results, error logs, and performance metrics. By understanding how to find and interpret error logs, you can quickly identify the root cause of a failed test and take steps to fix the issue. This document will help you debug failed tests on HyperExecute by finding error logs in different stages using the HyperExecute Dashboard.
 
-## Pre-requisites
+## Prerequisites
 
 - HyperExecute Dashboard Access.
 - A Job  is triggered on HyperExecute, and it has a `Failed` status.

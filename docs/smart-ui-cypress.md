@@ -47,7 +47,7 @@ slug: smart-ui-cypress/
 
 Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
-## Pre-requisites for running SmartUI with Cypress
+## Prerequisites for running SmartUI with Cypress
 
 - Basic understanding of Cypress is required.
 - Cypress version should be higher than 9.5.0. Click [here](https://docs.cypress.io/guides/references/changelog) to know more

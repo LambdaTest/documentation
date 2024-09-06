@@ -53,7 +53,7 @@ Welcome to the LambdaTest SmartUI CLI documentation!
 
 With SmartUI CLI, you can seamlessly perform visual regression testing on the LambdaTest platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Visual Regression tests using SmartUI CLI.
 
-## Pre-requisites for running SmartUI CLI
+## Prerequisites for running SmartUI CLI
 
 - Basic understanding of Command Line Interface is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.

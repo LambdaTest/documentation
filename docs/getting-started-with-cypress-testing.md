@@ -38,7 +38,7 @@ In this guide, learn how to get started with Cypress testing on the LambdaTest p
 
 
 
-## Pre-requisites
+## Prerequisites
 ---
 
 :::tip Sample repo

@@ -51,7 +51,7 @@ These templates help testers save time by not having to create custom dashboards
 
 With various templates available for different test analytics purposes, testers can quickly gain insights into test performance, error reports, resource usage, and trends.
 
-## Pre-Requisites
+## Prerequisites
 
 You should have an account subscribed to [Lambdatest Account](https://accounts.lambdatest.com) and have relevant test data available in the system.
 

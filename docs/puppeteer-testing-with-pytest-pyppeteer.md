@@ -50,7 +50,7 @@ slug: puppeteer-testing-with-pytest-pyppeteer/
 
 Learn how to run your Puppeteer tests with CodeceptJS across 40+ real browsers and operating systems on the LambdaTest platform. 
 
-## Pre-requisites
+## Prerequisites
 ***
 
 >Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.

@@ -3,7 +3,7 @@ id: getting-started-with-kane-ai
 title: Getting started with KaneAI
 hide_title: false
 sidebar_label: Getting Started 
-description: Get started with KaneAI on LambdaTest to create, debug and evolve end to end tests using natural languages.
+description: Discover KaneAI, the AI-powered testing assistant that simplifies complex testing for web, mobile, and cloud apps, ensuring accuracy and speed
 keywords:
   - lambdatest automation
   - lambdatest kaneai

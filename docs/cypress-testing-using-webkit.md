@@ -24,7 +24,7 @@ WebKit is a web browser engine based on KHTML that displays and interacts with w
 
 LambdaTest lets you perform Cypress testing using WebKit, Safari's browser engine. By testing your web apps in WebKit, you can get an idea of how your website will run in Safari.
 
-## Pre-requisites
+## Prerequisites
 ---
 
 :::tip Sample repo

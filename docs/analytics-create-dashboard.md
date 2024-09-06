@@ -47,7 +47,7 @@ Add widgets of multiple products and various insights to your dashboard. You can
   title="Create Customed Dashboard using Lambdatest Analytics"
 />
 
-### Pre-Requisites to use Lambdatest Insights
+### Prerequisites to use Lambdatest Insights
 
 The following are requirements:
 

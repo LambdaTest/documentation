@@ -3,7 +3,7 @@ id: kane-ai-guided-walkthrough
 title: Guided Walkthrough of KaneAI
 hide_title: false
 sidebar_label: Guided Walkthrough
-description: This documentation will walk you through the dashboard of the KaneAI and its components. You can learn about these components in details.
+description: Explore KaneAI’s features and components to efficiently manage automated tests. Learn to navigate projects, edit test cases, and track test history.
 keywords:
   - lambdatest automation
   - lambdatest kaneai
