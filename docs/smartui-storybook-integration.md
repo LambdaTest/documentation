@@ -51,7 +51,7 @@ import NewTag from '../src/component/newTag';
 
 Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
-## Pre-requisites for running SmartUI with StoryBook
+## Prerequisites for running SmartUI with StoryBook
 
 - Basic understanding of [StoryBook](https://storybook.js.org/docs/react/get-started/introduction) is required.
 - Node version installed should be higher than `14.15.0.` Click [here](https://nodejs.org/en/download/releases/) to know more

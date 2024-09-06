@@ -95,7 +95,7 @@ LambdaTest prioritizes data privacy and provides mechanisms for data deletion to
 
 ---
 
-### Pre-requisites
+### Prerequisites
 
 Before deploying the CloudFormation template for HyperExecute through the AWS Marketplace, ensure that the following prerequisites are met:
 

@@ -3,7 +3,7 @@ id: why-we-need-kane-ai
 title: Why do we need KaneAI?
 hide_title: false
 sidebar_label: Why KaneAI?
-description: Learn about the need of kane ai and how it can help QA and developers in the real life cases.
+description: Learn how KaneAI automates and optimizes testing for e-commerce and mobile apps, providing comprehensive coverage and saving valuable time.
 keywords:
   - lambdatest automation
   - lambdatest kaneai

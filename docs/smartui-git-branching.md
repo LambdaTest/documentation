@@ -54,7 +54,7 @@ import TabItem from '@theme/TabItem';
 This is the guide to understand our Git Branching with SmartUI projects which can detect the commit history and execute the appropriate actions for your visual regression testing.
 :::
 
-### Pre-requisites for running Git with Smart UI
+### Prerequisites for running Git with Smart UI
 
 - You have an account with [Lambdatest](https://accounts.lambdatest.com).
 - You must have an active [subscription](https://www.lambdatest.com/pricing) plan with valid screenshots limit.

@@ -65,7 +65,7 @@ By the end of this article, you will be able to :
 
 In Web and Internet development we are unable to see what is being sent and received between the client and the server. So, it is difficult to determine exactly where the fault is. By using Charles, users can get the idea of what is happening to quickly diagnose and fix problems.
 
-## Pre-requisites
+## Prerequisites
 
 ---
 
@@ -128,7 +128,7 @@ Now you need to setup and configure the LambdaTest Tunnel through which you will
 
 ---
 
-To configure the tunnel, you need to download the **LambdaTest's Tunnel Binary File** following the steps mentioned in the pre-requisites before. You can find the shell command in the [LambdaTest Dashboard](https://accounts.lambdatest.com/dashboard) to setup a basic tunnel.
+To configure the tunnel, you need to download the **LambdaTest's Tunnel Binary File** following the steps mentioned in the Prerequisites before. You can find the shell command in the [LambdaTest Dashboard](https://accounts.lambdatest.com/dashboard) to setup a basic tunnel.
 
 <img loading="lazy" src={require('../assets/images/charles/Charles_RD.png').default} alt="cmd" className="doc_img" width="806" height="544"/>
 
@@ -152,7 +152,7 @@ You need to run the above command from the terminal in the directory where you h
 
 ---
 
-Before you can configure and setup the tunnel, you need to download the Underpass application as mentioned in the pre-requisites before. For more details about Underpass, refer to our guide on [getting started with Underpass application](https://www.lambdatest.com/support/docs/underpass-tunnel-application/). Once you install Underpass, you need to pass your **LambdaTest authentication credentials** as shown below.
+Before you can configure and setup the tunnel, you need to download the Underpass application as mentioned in the Prerequisites before. For more details about Underpass, refer to our guide on [getting started with Underpass application](https://www.lambdatest.com/support/docs/underpass-tunnel-application/). Once you install Underpass, you need to pass your **LambdaTest authentication credentials** as shown below.
 
 
 

@@ -56,7 +56,7 @@ Welcome to the LambdaTest SmartUI Figma CLI documentation!
 
 With SmartUI Figma CLI, you can seamlessly perform visual regression testing of your Figma designs on SmartUI using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Figma Visual tests using SmartUI CLI.
 
-## Pre-requisites for running SmartUI Figma CLI 
+## Prerequisites for running SmartUI Figma CLI 
 
 - Basic understanding of Command Line Interface is required.
 - Basic understanding of Figma file structuring is required.

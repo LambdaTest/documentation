@@ -59,7 +59,7 @@ LambdaTest allows you to run k6 Browser tests on a browser farm of 40+ real brow
 
 **Note**: k6 Browser is an experimental module that supports browser testing through the Chrome DevTools Protocol (CDP).
 
-## Pre-requisites
+## Prerequisites
 
 ***
 

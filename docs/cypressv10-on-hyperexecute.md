@@ -72,7 +72,7 @@ Cypress Tests can be executed on HyperExecute using 2 ways:
 
 ## 1. Testing Using Local System
 
-### Pre-requisites:
+### Prerequisites:
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
