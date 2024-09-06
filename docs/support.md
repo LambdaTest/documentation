@@ -158,8 +158,8 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/getting-started-with-kane-ai/" ><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/kane-ai-web-test/" ><p className="p_home_inners">Run your First Test</p></a>
         <a href="/support/docs/kane-ai-guided-walkthrough/" ><p className="p_home_inners">Guided Walkthrough</p></a>
-        <a href="/support/docs/kane-ai-command-guide/" ><p className="p_home_inners">Command Types</p></a>
         <a href="/support/docs/kane-ai-test-plan/" ><p className="p_home_inners">Test Planner</p></a>
+        <a href="/support/docs/kane-ai-command-guide/" ><p className="p_home_inners">Command Types</p></a>
       </div>
     </div>
     <div className="home_inners_box">
