@@ -3,7 +3,7 @@ id: kane-ai-test-plan
 title: Intelligent Test Planner - Automate your Test Generation
 hide_title: false
 sidebar_label: Test Planner
-description: This documentation will walk you through the dashboard of the KaneAI and its components. You can learn about these components in details.
+description: Automate test generation with KaneAI’s Intelligent Test Planner. Define objectives, set parameters, and execute tests seamlessly for web apps.
 keywords:
   - lambdatest automation
   - lambdatest kaneai
@@ -83,5 +83,9 @@ Click on **Schedule Test** button.
 Click on the Live Preview button to enter the playground and check the live execution of your test based on your defined objective.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kane-ai-test-planner-live-preview.png').default} alt="Image" className="doc_img"/>
+
+You will be redirected to playground where your tests will be getting executed and you can check the complete process.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/kane-test-plan-result.png').default} alt="Image" className="doc_img"/>
 
 > You can now go to the **Test Manager** where you have saved your test case and trigger it on HyperExecute.

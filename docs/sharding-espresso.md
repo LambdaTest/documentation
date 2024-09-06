@@ -66,7 +66,7 @@ By the end of this topic, you will be able to:
 2. Learn more about HyperExecute
 3. Explore advanced features of LambdaTest
 
-## Pre-requisites
+## Prerequisites
 
 ---
 

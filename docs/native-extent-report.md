@@ -42,7 +42,7 @@ slug: native-extent-report/
 
 The Extent Native Reports offer a standardized and easily accessible summary of information extracted from raw Extent reports per Virtual Machine (VM) at the end of a HyperExecute job.
 
-### Pre-requisites
+### Prerequisites
 
 Before implementing Extent Native Reports, ensure the following prerequisites are met:
 

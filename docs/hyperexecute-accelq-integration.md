@@ -49,7 +49,7 @@ ACCELQ is a cloud-based, continuous testing platform for functional and API test
 ***
 Accelq is the most powerful software testing tool to achieve Codeless test automation and accelerate continuous testing.
 
-### Pre-requisites
+### Prerequisites
 ---
 - Sample scripts in Accelq
 - Ensure that you have integrated [Accelq with LambdaTest](https://www.lambdatest.com/support/docs/accelq-integration/) Cloud Selenium Grid 

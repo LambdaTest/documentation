@@ -31,7 +31,7 @@ git clone https://github.com/LambdaTest/Cypress-Cloud.git
 cd Cypress-Cloud
 ```
 
-**Step-2:** Setup the **LambdaTest-Cypress CLI** and configure the configuration file, as shown in the pre-requisites before. A file named `lambdatest-config.json` is generated in your project using the below command:
+**Step-2:** Setup the **LambdaTest-Cypress CLI** and configure the configuration file, as shown in the Prerequisites before. A file named `lambdatest-config.json` is generated in your project using the below command:
 
 ```bash
 lambdatest-cypress init

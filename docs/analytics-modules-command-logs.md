@@ -43,7 +43,7 @@ import NewTag from '../src/component/newTag';
 Lambdatest Analytics help you intelligently analyze your test execution steps on the platform. It provides you with the insights on the errors that are causing your test runs to fail. 
 
 
-### Pre-requisites for using Command Logs Analytics
+### Prerequisites for using Command Logs Analytics
 The following are the steps to use Command Logs Analytics:
 1. You should have a LambdaTest account. If you don't have one, you can sign up [here](https://accounts.lambdatest.com/register).
 2. You should have access to the `Test Intelligence` subscription plan. You can join the waitlist [here](https://www.lambdatest.com/test-intelligence).

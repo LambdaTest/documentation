@@ -3,7 +3,7 @@ id: kane-ai-command-guide
 title: KanAI - Command Guide
 hide_title: false
 sidebar_label: Command Types
-description: This documentation will walk you through the dashboard of the KaneAI and its components. You can learn about these components in details.
+description: Master KaneAI commands to automate web actions like navigation, clicking, typing, and more. Create dynamic, readable test cases with ease
 keywords:
   - lambdatest automation
   - lambdatest kaneai
@@ -108,10 +108,10 @@ This document provides an overview of the different prompts available in KaneAI,
 
 ## Assertions and Queries
 ### Assert Element Text
-- `"assert if red button text is subscribe"`
+- `assert if red button text is "subscribe"`
 
 ### Assert Element Presence
-- `"assert if KaneAI is present on the viewport"`
+- `assert if KaneAI is present on the "viewport"`
 
 ### Query Information
 - `query the current url`

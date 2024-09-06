@@ -40,7 +40,7 @@ const capability = {
 }
 ```
 
-> **Note:** There are no pre-requisites required for enabling the auto-healing feature. You can enable the auto-healing feature directly via desired capabilities.  
+> **Note:** There are no Prerequisites required for enabling the auto-healing feature. You can enable the auto-healing feature directly via desired capabilities.  
 
 ### Language Preferences:
 ---

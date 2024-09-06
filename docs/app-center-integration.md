@@ -63,7 +63,7 @@ By the end of this article, you will be able to :
 
 It can be used to decrease the manual effort of uploading the app & **automate** the process.
 
-## Pre-requisites
+## Prerequisites
 
 ---
 

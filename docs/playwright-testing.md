@@ -49,7 +49,7 @@ LambdaTest allows you to run Playwright tests across 40+ real browsers and opera
 
 *You can run tests using Playwright versions **v1.15.0** to the latest.*
 
-## Pre-requisites
+## Prerequisites
 ***
 
 >Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.

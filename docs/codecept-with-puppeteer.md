@@ -47,7 +47,7 @@ slug: puppeteer-testing-with-codecept/
 
 Learn how to run your Puppeteer tests with CodeceptJS across 40+ real browsers and operating systems on the LambdaTest platform. 
 
-## Pre-requisites
+## Prerequisites
 ***
 
 1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.

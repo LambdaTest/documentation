@@ -47,7 +47,7 @@ slug: smartui-upload-api-v2/
 This is the guide to setup the **version 2** of the SmartUI upload API. 
 :::
 
-### Pre-requisites for running Smart UI
+### Prerequisites for running Smart UI
 
 - Basic understanding of HTTP APIs is required.
 - Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.

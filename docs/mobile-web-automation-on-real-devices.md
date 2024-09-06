@@ -46,7 +46,7 @@ Mobile web automation involves testing websites or web apps on real mobile devic
 
  LambdaTest allows you to perform mobile web automation via Appium on a wide range of real Android and iOS devices. You can [test on mobile devices](https://www.lambdatest.com/test-on-mobile-devices) from a wide range of OEMs like Samsung, Apple, Xiaomi, and more.
 
-Here are the pre-requisites for performing mobile web automation on real devices using Python language. 
+Here are the Prerequisites for performing mobile web automation on real devices using Python language. 
 
 1.  Download the latest version of [Python](https://www.python.org/downloads/).
 2.  Install the Appium dependency by running the following command from the CMD terminal.

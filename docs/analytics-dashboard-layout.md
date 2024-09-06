@@ -42,7 +42,7 @@ Lambdatest insights is a powerful platform designed to provide custom insights f
 
 This technical support document will walk you through the steps to utilize this feature effectively.
 
-## Pre-Requisites
+## Prerequisites
 
 To use the new widget management feature in Lambdatest insights, ensure that you have the following:
 

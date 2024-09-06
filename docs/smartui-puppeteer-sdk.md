@@ -15,7 +15,7 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-cli/
+url: https://www.lambdatest.com/support/docs/smartui-puppeteer-sdk/
 slug: smartui-puppeteer-sdk/
 ---
 
@@ -53,7 +53,7 @@ Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 Integrating seamlessly into your existing Puppeteer testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
 
-## Pre-requisites for running tests through SmartUI SDK
+## Prerequisites
 
 - Basic understanding of Command Line Interface and Puppeteer is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.

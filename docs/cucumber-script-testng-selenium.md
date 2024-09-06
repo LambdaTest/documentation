@@ -68,7 +68,7 @@ All the code samples in this documentation can be found on **LambdaTest's Github
 
 :::
 
-## Pre-requisites
+## Prerequisites
 
 ---
 

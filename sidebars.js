@@ -2649,6 +2649,7 @@ module.exports = {
           "smartui-puppeteer-sdk",
           "smartui-testcafe-sdk",
           "smartui-cypress-sdk",
+          "smartui-appium-sdk",
           "smartui-wdio-sdk",
           "smartui-sdk-config-options",
           "smartui-cli-git-branching-strategy",
