@@ -1022,6 +1022,17 @@ module.exports = {
           "kane-ai-command-guide",
         ],
       },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Video Tutorials",
+        items: [
+         "kaneai-test",
+         "kaneai-test-manual",
+         "kaneai-edit-test-steps",
+  
+        ],
+      },
     ]
   ],
 
