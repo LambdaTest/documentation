@@ -152,8 +152,6 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 1. Write your automation script in your preferred language that Appium framework supports. 
 
-Here is a sample automation script in Java for the sample app downloaded above. You can clone the automation code in Java for the sample app from the [LambdaTest GitHub repository](https://github.com/LambdaTest/LT_Java_Appium).
-
 In the below test script, ensure to update the `app_url`, `username` and `accesskey`. 
 
 

@@ -112,7 +112,13 @@ Check out our detailed support documentation to know more about the [Network Thr
 
 ### Device Controls
 
-As the name suggests, with the **Device Control** feature you can control the volume and change the orientation of your real device.
+With the **Device Controls** feature, you can easily manage various settings on your device, such as adjusting the volume and changing its orientation.
+
+Under Device Control, you'll find multiple options to customize your device's settings:
+
+1. **Volume**: Adjust the device's volume to your preferred level.
+2. **Rotate**: Change the screen orientation between landscape and portrait modes.
+3. **Recent Apps** : Available on `iOS 14` and above, this feature allows you to view recent apps. Note that it is not supported on devices that rely on a physical button for accessing recent apps instead of the swipe-up gesture.
 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/device-control-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
