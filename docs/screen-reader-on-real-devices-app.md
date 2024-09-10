@@ -1,7 +1,7 @@
 ---
-id: screen-recorder-on-real-devices-browser
-title: Screen Recorder on Real Devices Web Browser
-sidebar_label: Screen Recorder
+id: screen-reader-on-real-devices-app
+title: Screen Reader on Real Devices App
+sidebar_label: Screen Reader
 description: Test camera functionalities in mobile apps with LambdaTest's Camera Image Injection. Support for QR codes, barcodes, and image capture across 3000+ real devices.
 keywords:
   - image injection
@@ -14,9 +14,9 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/screen-recorder-on-real-devices-browser/
+url: https://www.lambdatest.com/support/docs/screen-reader-on-real-devices-app/
 site_name: LambdaTest
-slug: screen-recorder-on-real-devices-browser/
+slug: screen-reader-on-real-devices-app/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -42,16 +42,17 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Screen Recorder on Real Devices Web",
-          "item": "https://www.lambdatest.com/support/docs/screen-recorder-on-real-devices-browser/"
+          "name": "Screen Reader on Real Devices App",
+          "item": "https://www.lambdatest.com/support/docs/screen-reader-on-real-devices-app/"
         }]
       })
     }}
 ></script>
+> Currently in the **Beta**.
 
 Manual accessibility testing is crucial to ensure that your mobile websites are fully compliant with the Web Content Accessibility Guidelines (WCAG). This guarantees that your websites are usable by people with disabilities, regardless of their device or browsing capabilities.
 
-LambdaTest's Live ScreenReader feature empowers you to conduct manual accessibility testing on real devices web browsers. It works similarly to Google TalkBack, enabling you to navigate your mobile web element by element and hear spoken descriptions of the UI.
+LambdaTest's Live Screen Reader feature empowers you to conduct manual accessibility testing on real Android devices. It works similarly to [Google TalkBack](https://support.google.com/accessibility/android/topic/3529932?hl=en&ref_topic=9078845), enabling you to navigate your mobile app element by element and hear spoken descriptions of the UI.
 
 ## Supported Devices
 In the first phase, this feature support will be limited to specific devices to reduce maintainability and facilitate an easier rollout.
@@ -65,19 +66,18 @@ In the first phase, this feature support will be limited to specific devices to 
 |Samsung Galaxy S22 5G|Android 12|
 |Google Pixel 6 Pro|Android 12|
 
-## Screen Recorder in Real Device
+## Screen Recorder in Real Device App Testing
 
-**Step 1:** Click on the **Real Devices** > **Browser Testing**
+**Step 1:** Click on the **Real Devices** > **App Testing**
 
-**Step 2:** Enter your website URL, select your required device and click on Start button.
+**Step 2:** Select your required device and upload your application and click on Start button.
 
-**Step 3:** Click on the screen recorder button and toggle it to enable in your device.
+**Step 3:** Click on the screen reader button and toggle it to enable in your device.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/talkback.png').default} className="doc_img"/>
 
-
-## Talkback Keyboard Shortcuts
-For the ScreenReader feature on Android devices, use the following keyboard shortcuts to trigger TalkBack actions :
+## Screen Reader Keyboard Shortcuts
+For the Screen Reader feature on Android devices, use the following keyboard shortcuts to trigger Screen Reader actions :
 | TalkBack Action | MacOS Keyboard Shortcut | Windows Keyboard Shortcut |
 |-----------------|-------------------------|---------------------------|
 | Move to previous/next item | Command + (Left/Right arrow) |  Ctrl + (Left/Right arrow) |
@@ -90,4 +90,5 @@ For the ScreenReader feature on Android devices, use the following keyboard shor
 | Go to home screen | Control + Option + H|Ctrl + ALT + H |
 | Go to recents | Control + Option + R| Ctrl + ALT + R|
 | Go to quick settings | Control + Option + Q|Ctrl + ALT + Q |
+
 

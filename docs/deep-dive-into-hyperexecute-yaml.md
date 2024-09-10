@@ -421,19 +421,41 @@ partialReports:
 
 It helps you to view the report on the dashboard itself. You can download the report either from the [jobs detail page](/support/docs/hyperexecute-guided-walkthrough/#job-details-page) or you can pass[`-–download-report`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--download-report) flag in the job triggering command from [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/).
 
+:::info
+If you want to generate multiple reports and of different frameworks supported by HyperExecute:
+
+```yaml
+partialReports:
+  - location: reports/json
+    type: json
+    frameworkName: extent-native
+    email:
+        to:
+          - johndoe@example.com
+  - location: target/surefire-reports
+    type: html
+    frameworkName: testng
+    email:
+        to:
+          - johndoe@example.com
+```
+:::
+
+:::note
+Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below. <br />
+```yaml
+framework:
+  name: maven/testng
+  defaultReports: false
+```
+:::
+
 :::tip
 
 - 📕 Take a closer look at the [HyperExecute Reports](/support/docs/hyperexecute-reports/)
 - Understand how you can [email the generated report](/support/docs/hyperexecute-email-reports/)
 - How you can generate [different types of report](/support/docs/hyperexecute-job-reports/) based on your requirements
 :::
-
-> **Note**: Set `defaultReport` as false in the [`framework`](/support/docs/hyperexecute-yaml-version0.2/#framework) if you are using [`YAML version 0.2`](/support/docs/hyperexecute-yaml-version0.2/) and you want to generate a report using `partialReports` as shown below.
-```yaml
-framework:
-  name: maven/testng
-  defaultReports: false
-```
 
 ### `errorCategorizedOnFailureOnly`
 
