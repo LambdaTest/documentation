@@ -2690,8 +2690,21 @@ module.exports = {
         items: [
           "smartui-with-github-actions",
           "smartui-with-gitlab",
-          "smartui-with-bitbucket"
         ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Stabilize Your Screenshots",
+        items: [
+          "smartui-freeze-animations",
+          "smartui-handle-dynamic-data",
+          "smartui-ignore-1px-diff",
+          "smartui-handle-videos",
+          "smartui-handle-lazy-loading",
+          "smartui-browser-specific-behaviour",
+          "smartui-handle-sticky-elements"
+        ]
       },
       {
         type: "doc",
