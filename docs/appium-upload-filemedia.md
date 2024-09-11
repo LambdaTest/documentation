@@ -143,12 +143,11 @@ You can also utilize LambdaTest's user-friendly UI to upload the files on Lambda
 Once the files are uploaded to LambdaTest's cloud, seamlessly integrate files into your automation tests via the capability. Set the **uploadMedia** capability to the **media_url** parameter returned in the API response.
 
 <Tabs className="docs__val">
-  <TabItem value="python" label="Python" default>
+  <TabItem value="Java" label="Java">
     <div className="lambdatest__codeblock">
-      <CodeBlock className="language-python">
-        {`desired_capabilities = {
-  "uploadMedia": ["lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]
-}`}
+      <CodeBlock className="language-java">
+        {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+desiredCapabilities.setCapability("uploadMedia", Arrays.asList("lt://MEDIAfcdb39b9602d474f825d6002416a3969", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"));`}
       </CodeBlock>
     </div>
   </TabItem>
@@ -158,6 +157,16 @@ Once the files are uploaded to LambdaTest's cloud, seamlessly integrate files in
       <CodeBlock className="language-javascript">
         {`DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 desiredCapabilities.setCapability("uploadMedia", ["lt://MEDIAfcdb39b9602d474f825d6002416a3969", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]);`}
+      </CodeBlock>
+    </div>
+  </TabItem>
+  
+  <TabItem value="python" label="Python" default>
+    <div className="lambdatest__codeblock">
+      <CodeBlock className="language-python">
+        {`desired_capabilities = {
+  "uploadMedia": ["lt://MEDIAf446d4170cd946aa9ec307d10cb679b9", "lt://MEDIA8d13e569b3e140c18e82b066022518bd"]
+}`}
       </CodeBlock>
     </div>
   </TabItem>
