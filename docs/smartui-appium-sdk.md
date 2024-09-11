@@ -80,7 +80,7 @@ The LambdaTest SmartUI SDK supports multiple programming languages for running A
   <div className="lt_col lt_framework_wrapper">
     <img loading="lazy" src={require('../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon no-zoom"/>
     <ul className="lt_framework_list">
-      <li><a href="/support/docs/smartui-selenium-chsharp-sdk/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>C#</a></li>
+      <li><a href="/support/docs/smartui-selenium-csharp-sdk/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>C#</a></li>
     </ul>
   </div>
 </div>
