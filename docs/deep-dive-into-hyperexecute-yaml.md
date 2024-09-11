@@ -422,7 +422,7 @@ partialReports:
 It helps you to view the report on the dashboard itself. You can download the report either from the [jobs detail page](/support/docs/hyperexecute-guided-walkthrough/#job-details-page) or you can pass[`-–download-report`](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--download-report) flag in the job triggering command from [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/).
 
 :::info
-If you want to generate multiple reports and of different frameworks supported by HyperExecute:
+If you want to generate multiple reports of different types [supported by HyperExecute](/support/docs/hyperexecute-job-reports/):
 
 ```yaml
 partialReports:
