@@ -859,6 +859,14 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
+            label: "September, 2024",
+            items: [
+              'hyperexecute-release-notes-2-5-0',
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
             label: "August, 2024",
             items: [
               'hyperexecute-release-notes-2-4-8',
@@ -1658,7 +1666,7 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Real Device App Testing",
+        label: "App Testing",
         items: [
           "app-testing-on-real-devices",
           "how-to-use-testing-tools-in-session",
@@ -1692,7 +1700,7 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Real Device Browser Testing",
+        label: "Browser Testing",
         items: [
           "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
