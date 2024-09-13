@@ -1683,7 +1683,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Features",
-            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "real-device-adb-shell"],
+            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "real-device-adb-shell", "screen-reader-on-real-devices-app"],
           },
         ],
       },
@@ -1696,6 +1696,7 @@ module.exports = {
         items: [
           "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
+          "screen-reader-on-real-devices-browser"
         ],
       },
     ],
