@@ -118,13 +118,6 @@ HyperExecute provides you with the tools that you need to run your tests at the 
     <p>Jobs Archiving allows you to archive the non important jobs so that you and your team can focus only on required ones.</p>
   </div>
   </a>
-  
-  <a href="/support/docs/hyperexecute-workflows/">
-  <div className="support_inners">
-    <h3>Smart Workflows</h3>
-    <p>Schedule your tests smartly on the HyperExecute to perform the tests automatically at the scheduled day, date and time.</p>
-  </div>
-  </a>
 
   <a href="/support/docs/hyperexecute-test-muting/">
   <div className="support_inners">
