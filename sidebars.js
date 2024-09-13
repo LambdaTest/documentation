@@ -200,11 +200,6 @@ module.exports = {
           },
           {
             type: "doc",
-            label: "HyperExecute Workflows",
-            id: "hyperexecute-workflows",
-          },
-          {
-            type: "doc",
             label: "Test Muting",
             id: "hyperexecute-test-muting",
           },
