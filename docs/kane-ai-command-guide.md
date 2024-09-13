@@ -90,7 +90,7 @@ This document provides an overview of the different prompts available in KaneAI,
 - `open new lambdatest tab`
 
 ### Switch Tabs
-- `witch to 2nd tab`
+- `switch to 2nd tab`
 - `switch to lambdatest tab`
 
 ### Close Tab
