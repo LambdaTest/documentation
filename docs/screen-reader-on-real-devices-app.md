@@ -62,7 +62,7 @@ LambdaTest's Live Screen Reader feature empowers you to perform manual accessibi
 
 **Step 2:** Select your required device and upload your application and click on Start button.
 
-**Step 3:** Click on the screen reader option from toolbar and use toggle to enable and diable talkBack feature on your device.
+**Step 3:** Click on the screen reader option from toolbar and use toggle to enable and disable talkBack feature on your device.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/talkback.png').default} className="doc_img"/>
 
