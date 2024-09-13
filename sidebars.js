@@ -2742,20 +2742,6 @@ module.exports = {
         ],
       },
       {
-        type: "category",
-        collapsed: true,
-        label: "Stabilize Your Screenshots",
-        items: [
-          "smartui-freeze-animations",
-          "smartui-handle-dynamic-data",
-          // "smartui-ignore-1px-diff",
-          "smartui-handle-videos",
-          "smartui-handle-lazy-loading",
-          "smartui-browser-specific-behaviour",
-          "smartui-handle-sticky-elements"
-        ]
-      },
-      {
         type: "doc",
         label: "Smart PDF Comparison",
         id: "smartui-pdf-comparison",
