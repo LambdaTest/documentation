@@ -852,6 +852,14 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
+            label: "September, 2024",
+            items: [
+              'hyperexecute-release-notes-2-5-0',
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
             label: "August, 2024",
             items: [
               'hyperexecute-release-notes-2-4-8',
@@ -1041,6 +1049,43 @@ module.exports = {
       },
     },
     [
+      // {
+      //   type: "category",
+      //   collapsed: true,
+      //   label: "Web Browser Testing",
+      //   items: [
+      //     {
+      //       type: "category",
+      //       collapsed: false,
+      //       label: "Desktop Browser Testing",
+      //       items: [
+      //         'real-time-testing',
+      //         'real-time-testing',
+      //         'real-time-testing'
+      //       ]
+      //     },
+      //     {
+      //       type: "category",
+      //       collapsed: true,
+      //       label: "Virtual Mobile Testing",
+      //       items: [
+      //         'real-time-testing',
+      //         'real-time-testing',
+      //         'real-time-testing'
+      //       ]
+      //     }
+      //   ]
+      // },
+      // {
+      //   type: "category",
+      //   collapsed: true,
+      //   label: "App Testing",
+      //   items: [
+      //     'real-time-testing',
+      //     'real-time-testing',
+      //     'real-time-testing'
+      //   ]
+      // },
       {
         type: "category",
         collapsed: true,
@@ -1641,7 +1686,7 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Real Device App Testing",
+        label: "App Testing",
         items: [
           "app-testing-on-real-devices",
           "how-to-use-testing-tools-in-session",
@@ -1675,7 +1720,7 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Real Device Browser Testing",
+        label: "Browser Testing",
         items: [
           "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
@@ -2694,7 +2739,7 @@ module.exports = {
         items: [
           "smartui-freeze-animations",
           "smartui-handle-dynamic-data",
-          "smartui-ignore-1px-diff",
+          // "smartui-ignore-1px-diff",
           "smartui-handle-videos",
           "smartui-handle-lazy-loading",
           "smartui-browser-specific-behaviour",
