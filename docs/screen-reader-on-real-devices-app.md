@@ -1,6 +1,6 @@
 ---
 id: screen-reader-on-real-devices-app
-title: Screen Reader on Real Devices App
+title: Screen Reader (TalkBack) for Android
 sidebar_label: Screen Reader
 description: Test camera functionalities in mobile apps with LambdaTest's Camera Image Injection. Support for QR codes, barcodes, and image capture across 3000+ real devices.
 keywords:
@@ -48,14 +48,27 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-> Currently in the **Beta**.
 
-Manual accessibility testing is crucial to ensure that your mobile websites are fully compliant with the Web Content Accessibility Guidelines (WCAG). This guarantees that your websites are usable by people with disabilities, regardless of their device or browsing capabilities.
+Manual accessibility testing is crucial to ensure that your mobile apps and websites are fully compliant with the Web Content Accessibility Guidelines (WCAG). This guarantees that your websites are usable by people with disabilities, regardless of their device or browsing capabilities.
 
-LambdaTest's Live Screen Reader feature empowers you to conduct manual accessibility testing on real Android devices. It works similarly to [Google TalkBack](https://support.google.com/accessibility/android/topic/3529932?hl=en&ref_topic=9078845), enabling you to navigate your mobile app element by element and hear spoken descriptions of the UI.
+LambdaTest's Live Screen Reader feature empowers you to perform manual accessibility testing on real Android devices, allowing you to navigate through app elements with spoken descriptions of the UI—similar to the [Google TalkBack](https://support.google.com/accessibility/android/topic/3529932?hl=en&ref_topic=9078845) functionality. This feature enables comprehensive accessibility testing to ensure compliance with WCAG standards.
+
+> This feature is currently in **Beta**
+
+
+## Accessing Screen Reader in Real Device App Testing
+
+**Step 1:** Click on the **Real Devices** > **App Testing**
+
+**Step 2:** Select your required device and upload your application and click on Start button.
+
+**Step 3:** Click on the screen reader option from toolbar and use toggle to enable and disable talkBack feature on your device.
+
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/talkback.png').default} className="doc_img"/>
 
 ## Supported Devices
-In the first phase, this feature support will be limited to specific devices to reduce maintainability and facilitate an easier rollout.
+
+ Screen feature is available on below android devices only to ensure a smooth rollout. We'll expand support to more devices based on feedback and performance insights only.
 
 | Device |Android Version |
 |--------|--------------|
@@ -66,22 +79,19 @@ In the first phase, this feature support will be limited to specific devices to 
 |Samsung Galaxy S22 5G|Android 12|
 |Google Pixel 6 Pro|Android 12|
 
-## Screen Recorder in Real Device App Testing
+---
+## How to Navigate using Keyboard Shortcuts
 
-**Step 1:** Click on the **Real Devices** > **App Testing**
+Users accessing your mobile website on an Android device with TalkBack enabled can interact through touch gestures or by using keyboard shortcuts via a Bluetooth keyboard. Both options enable them to carry out "TalkBack actions," such as navigating between elements or having content read aloud.
 
-**Step 2:** Select your required device and upload your application and click on Start button.
+These two navigation methods function similarly, performing the same actions within the UI, ensuring that your site remains fully accessible, no matter the approach. Once your website meets WCAG standards using one method, it will be compatible with the other as well.
 
-**Step 3:** Click on the screen reader button and toggle it to enable in your device.
+For the **Screen Reader** feature on android devices , use the following keyboard shortcuts to trigger the different actions :
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/talkback.png').default} className="doc_img"/>
-
-## Screen Reader Keyboard Shortcuts
-For the Screen Reader feature on Android devices, use the following keyboard shortcuts to trigger Screen Reader actions :
 | TalkBack Action | MacOS Keyboard Shortcut | Windows Keyboard Shortcut |
 |-----------------|-------------------------|---------------------------|
-| Move to previous/next item | Command + (Left/Right arrow) |  Ctrl + (Left/Right arrow) |
-| Activate/open element |Control + Option + Space | Ctrl + ALT + Space|
+| Move to previous/next item | Control + Option + (Left/Right arrow) |  Ctrl + (Left/Right arrow) |
+| Activate/open element | Control + Option + Space | Ctrl + ALT + Space|
 | Go back | Esc|Esc |
 | Pause or resume speech |Control + Option + Z |Ctrl + ALT + Z |
 | Read from next item |Control + Option + P | Ctrl + ALT + P|
