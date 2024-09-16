@@ -2719,6 +2719,14 @@ module.exports = {
       },
       {
         type: "category",
+        collapsed: false,
+        label: "Difference Options",
+        items: [
+          "smartui-smartignore",
+        ],
+      },
+      {
+        type: "category",
         collapsed: true,
         label: "Integrate with CI/CD tools",
         items: [
