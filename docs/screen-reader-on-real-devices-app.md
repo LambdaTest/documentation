@@ -62,7 +62,7 @@ LambdaTest's Live Screen Reader feature empowers you to perform manual accessibi
 
 **Step 2:** Select your required device and upload your application and click on Start button.
 
-**Step 3:** Click on the screen reader option from toolbar and use toggle to enable and disable talkBack feature on your device.
+**Step 3:** Click on the **screen reader** option from toolbar and use toggle to enable and disable talkBack feature on your device.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/talkback.png').default} className="doc_img"/>
 
@@ -73,7 +73,6 @@ LambdaTest's Live Screen Reader feature empowers you to perform manual accessibi
 | Device |Android Version |
 |--------|--------------|
 |Google Pixel 8 Pro|Android 14|
-|Samsung Galaxy S24|Android 14|
 |Samsung Galaxy S23|Android 13|
 |Google Pixel 6 Pro|Android 13|
 |Samsung Galaxy S22 5G|Android 12|
@@ -91,14 +90,14 @@ For the **Screen Reader** feature on android devices , use the following keyboar
 | TalkBack Action | MacOS Keyboard Shortcut | Windows Keyboard Shortcut |
 |-----------------|-------------------------|---------------------------|
 | Move to previous/next item | Control + Option + (Left/Right arrow) |  Ctrl + (Left/Right arrow) |
-| Activate/open element | Control + Option + Space | Ctrl + ALT + Space|
+| Activate/open element | Control + Option + Space | Ctrl + Alt + Space|
 | Go back | Esc|Esc |
-| Pause or resume speech |Control + Option + Z |Ctrl + ALT + Z |
-| Read from next item |Control + Option + P | Ctrl + ALT + P|
-| Move up the slider | Control + Option + U|Ctrl + ALT + U|
-| Move down the slider | Control + Option + D| Control + Option + D |
-| Go to home screen | Control + Option + H|Ctrl + ALT + H |
-| Go to recents | Control + Option + R| Ctrl + ALT + R|
-| Go to quick settings | Control + Option + Q|Ctrl + ALT + Q |
+| Pause or resume speech |Control + Option + Z |Ctrl + Alt + Z |
+| Read from next item |Control + Option + P | Ctrl + Alt + P|
+| Move up the slider | Control + Option + U|Ctrl + Alt + U|
+| Move down the slider | Control + Option + D| Ctrl + Alt + D |
+| Go to home screen | Control + Option + H|Ctrl + Alt + H |
+| Go to recents | Control + Option + R| Ctrl + Alt + R|
+| Go to quick settings | Control + Option + Q|Ctrl + Alt + Q |
 
 
