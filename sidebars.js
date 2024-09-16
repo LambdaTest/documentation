@@ -2,7 +2,6 @@ module.exports = {
   apiSidebar: [
     "getting-started-with-hyperexecute",
     "getting-started-with-kane-ai",
-    "real-time-testing",
     "smart-visual-regression-testing",
     "analytics-overview",
     "test-intelligence-overview",
@@ -1061,6 +1060,7 @@ module.exports = {
             label: "Desktop Browser Testing",
             items: [
               'getting-started-with-desktop-browser-real-time-testing',
+              'real-time-desktop-browser-testing-tools'
             ]
           },
           {
@@ -1069,6 +1069,7 @@ module.exports = {
             label: "Virtual Mobile Testing",
             items: [
               'getting-started-with-mobile-browser-real-time-testing',
+              'real-time-mobile-browser-testing-tools'
             ]
           }
         ]
@@ -1079,6 +1080,7 @@ module.exports = {
         label: "App Testing",
         items: [
           'getting-started-with-mobile-app-real-time-testing',
+          'real-time-mobile-app-testing-tools'
         ]
       },
       {
@@ -1086,7 +1088,6 @@ module.exports = {
         collapsed: true,
         label: "Real Time Browser Testing",
         items: [
-          "real-time-testing",
           "pre-loaded-extension",
           "real-time-testing-troubleshooting",
           "http-basic-authentication",
@@ -1115,8 +1116,6 @@ module.exports = {
         ],
       },
       "developer-tools",
-      "mark-as-bug-in-real-time-testing",
-      "live-interactive-mobile-app-testing",
       "troubleshooting-ios-apps",
       "entitlements",
     ],
