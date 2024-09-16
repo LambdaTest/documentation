@@ -116,8 +116,6 @@ For this demo purpose, we have set the required details as shown in the image be
 
 These steps will mark the bug successfully. You can a message appearing on your top right screen showing you that the bug has been marked successfully. <img loading="lazy" src={require('../assets/images/uploads/14-1.webp').default} alt="bug mark" width="500" height="103" className="doc_img"/>
 
-To know more about the bug marking in LambdaTest, you can refer to [this article](/docs/mark-as-bug/).
-
 You can even integrate 3rd party apps in your account from our vast [list of integrations](https://www.lambdatest.com/integrations) to send the bug directly on your desired workspace. You can also track your issues using our [Issue Tracker](https://issues.lambdatest.com/) directly, and much more.
 
 >That's all to get started for performing WebView Testing in Android on LambdaTest. We are constantly adding more features and integrations to increase your productivity through our testing environment. If you still have any doubts or questions, please don't hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at **[support@lambdatest.com](mailto:support@lambdatest.com)**.
