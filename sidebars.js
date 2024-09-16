@@ -2739,7 +2739,6 @@ module.exports = {
         items: [
           "smartui-freeze-animations",
           "smartui-handle-dynamic-data",
-          // "smartui-ignore-1px-diff",
           "smartui-handle-videos",
           "smartui-handle-lazy-loading",
           "smartui-browser-specific-behaviour",
