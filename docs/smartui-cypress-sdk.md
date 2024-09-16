@@ -84,15 +84,31 @@ cd smartui-cypress-sdk-sample
 ```
 ### **Step 2**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI Cypress SDK` in your **Frontend** project.
+1. Install required NPM modules for `LambdaTest Smart UI Cypress SDK` in your **Frontend** project.
 
 ```bash
 npm i @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
 ```
 
+2. Import the LambdaTest Cypress driver in `support/e2e.js`.
+
+```js
+import '@lambdatest/cypress-driver'
+```
+
+3. Update your config `(cypress.config.js)` or `plugins/index.js` with the following snippet
+
+```js
+on('task', {
+        log(message) {
+            console.log(message);
+            return null;
+        },
+ });
+```
+
 :::info 
-**SmartUI SDK only supports Cypress versions >= 10.0.0
-**
+SmartUI SDK only supports Cypress versions >= 10.0.0
 :::
 
 ### **Step 3:** Configure your Project Token
