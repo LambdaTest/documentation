@@ -1086,17 +1086,6 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Real Time Browser Testing",
-        items: [
-          "pre-loaded-extension",
-          "real-time-testing-troubleshooting",
-          "http-basic-authentication",
-          "webview-testing-in-android",
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
         label: "ChromeOS Testing",
         link: {
           type: "doc",
@@ -1115,7 +1104,18 @@ module.exports = {
           }
         ],
       },
-      "developer-tools",
+      {
+        type: "category",
+        collapsed: true,
+        label: "Key Features",
+        items: [
+          "developer-tools",
+          "pre-loaded-extension",
+          "real-time-testing-troubleshooting",
+          "http-basic-authentication",
+          "webview-testing-in-android",
+        ],
+      },
       "troubleshooting-ios-apps",
       "entitlements",
     ],
