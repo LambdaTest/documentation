@@ -1,6 +1,6 @@
 ---
 id: kane-ai-command-guide
-title: KanAI - Command Guide
+title: KaneAI - Command Guide
 hide_title: false
 sidebar_label: Command Types
 description: Master KaneAI commands to automate web actions like navigation, clicking, typing, and more. Create dynamic, readable test cases with ease
