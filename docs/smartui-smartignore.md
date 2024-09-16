@@ -30,14 +30,14 @@ Smart Ignore distinguishes between content changes and mere content displacement
 
 In scenarios where large areas of the page are impacted by content displacement, traditional pixel to pixel comparison would highlight these areas in a blurred and cluttered manner making it difficult to identify the actual content changes. Smart Ignore minimizes this clutter, highlighting only those areas where content has genuinely changed. In the image below you can see confusing comparison due to the `pixel to pixel` approach, which is unable to highlight the actual reasons behind the mismatch.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart-ignore/p2p.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart-ignore/p2p.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 
 #### 3. Targeted Visual Testing: 
 
 By focusing only on the significant changes, **Smart Ignore** enhances the precision of your visual testing. This feature is particularly useful when testing pages where frequent updates or dynamic content are expected, ensuring that only the most relevant differences are brought to your attention. In the image below you can see the actual changes being highlighted as Smart Ignore understands the images and yields out the best results.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart-ignore/smartignore.png').default} alt="cmd" width="768" height="375" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart-ignore/smartignore.webp').default} alt="cmd" width="768" height="375" className="doc_img"/>
 
 ## How to Use Smart Ignore?
 
