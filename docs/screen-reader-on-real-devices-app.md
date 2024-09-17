@@ -74,7 +74,7 @@ LambdaTest's Live Screen Reader feature empowers you to perform manual accessibi
 |--------|--------------|
 |Google Pixel 8 Pro|Android 14|
 |Samsung Galaxy S23|Android 13|
-|Google Pixel 6 Pro|Android 13|
+|Google Pixel 7 Pro|Android 13|
 |Samsung Galaxy S22 5G|Android 12|
 |Google Pixel 6 Pro|Android 12|
 
