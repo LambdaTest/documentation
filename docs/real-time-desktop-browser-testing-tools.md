@@ -52,11 +52,11 @@ Capture high-quality screenshots of the current screen on your test device insta
 ## Record Session
 Record your entire test session for detailed analysis and playback. Click on the Record Session button to begin recording. A timer will display the recording duration, helping you pinpoint specific moments during playback. To end the recording, click the Stop button. The recorded video will be saved automatically in the [gallery](/support/docs/real-time-desktop-browser-testing-tools/#gallery) for review.
 
-## Mark as Bug
-This feature allows you to mark any bug in your UI during the session. You can mark the bug in your UI via different shapes, texts and of different colors. You can also configure different project management tools with your session to create a ticket for the same. You can also share that bug, save the image to the gallery or download that screenshot.
-
 ## Gallery
 The Gallery stores all screenshots and video recordings from your test sessions in one place, allowing you to easily review, download, or manage your media files. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon.
+
+## Mark as Bug
+This feature allows you to mark any bug in your UI during the session. You can mark the bug in your UI via different shapes, texts and of different colors. You can also configure different project management tools with your session to create a ticket for the same. You can also share that bug, save the image to the gallery or download that screenshot.
 
 ## Resolution
 Optimize your tests for different screen sizes and resolutions to ensure your web application looks and functions correctly on all devices. Adjust the resolution settings to simulate how your website will appear on different displays.
