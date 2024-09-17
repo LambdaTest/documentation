@@ -1038,6 +1038,25 @@ module.exports = {
   
         ],
       },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Release Notes",
+        link: {
+          type: "doc",
+          id: "kaneai-release-notes",
+        },
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "September, 2024",
+            items: [
+              'kaneai-release-notes-0-0-1',
+            ]
+          },
+        ]
+      },
     ]
   ],
 
