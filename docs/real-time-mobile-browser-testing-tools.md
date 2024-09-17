@@ -44,25 +44,31 @@ slug: real-time-mobile-browser-testing-tools/
       })
     }}
 ></script>
-## Device Controls
-The Device Control feature allows you tp perform certain actions with your device  within your current test session:
+LambdaTest offers a comprehensive suite of real-time mobile web browser testing tools designed to improve your testing experience. This guide provides detailed instructions on how to use each of the tools.
 
-- **Volume:** Adjust the device volume directly within your testing session, ensuring optimal audio levels for your tests.
-- **Lock Device :** Lock or unlock your device seamlessly during testing sessions without interrupting your workflow.
+## Device Controls
+The Device Controls feature allows you to simulate various actions on your test device during a testing session, enabling comprehensive testing of your web applications' behavior in real-world scenarios.
+
+- **Volume Control:** Adjust the device volume directly within your test session to test audio-related features, such as media playback or notifications, ensuring they function correctly at different volume levels.
+- **Lock Device:** Seamlessly lock or unlock the device during your testing session without interrupting your workflow. This is useful for verifying app behavior upon device unlocking or handling lock-screen notifications.
+- **Shake Device:** Simulate a device shake to test functionalities that rely on shake gestures, such as undo actions or triggering specific in-app events.
+- **Rotate Device:** Rotate the device's orientation between portrait and landscape modes to test the responsiveness and adaptability of your web application. This feature helps you ensure your application layout adjusts properly and remains user-friendly across different orientations.
 
 ## Screenshot
-Capture clear screenshots of the current screen on your test device. Easily access and download these screenshots for future reference or bug reporting.
+Capture high-quality screenshots of the current screen on your test device instantly. Screenshots are essential for documenting bugs, UI issues, and other anomalies during testing. Click on the Screenshot icon in the sidebar to take a snapshot of the current screen and will automatically start downloading in your local machine and it will be saved in the [gallery](/support/docs/real-time-mobile-browser-testing-tools/#gallery) as well.
 
 ## Record Session
-Record your entire test session for detailed playback. A timer keeps track of recording duration, allowing you to pinpoint specific moments for review. You can click on the stop button to stop the video recording.
-
-## Mark as Bug
-This feature allows you to mark any bug in your UI during the session. You can mark the bug in your UI via different shapes, texts and of different colors. You can also configure different project management tools with your session to create a ticket for the same.
-
-You can also share that bug, save the image to the gallery or download that screenshot.
+Record your entire test session for detailed analysis and playback. Click on the Record Session button to begin recording. A timer will display the recording duration, helping you pinpoint specific moments during playback. To end the recording, click the Stop button. The recorded video will be saved automatically in the [gallery](/support/docs/real-time-mobile-browser-testing-tools/#gallery) for review.
 
 ## Gallery
 All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon.
+
+## Mark as Bug
+Highlight and report any bugs found during your testing session using the Mark as Bug feature.
+
+- **How to Mark a Bug:** Use various shapes (rectangles, circles), text annotations, and colors to highlight bugs directly on the screen.
+- **Integration with Project Management Tools:** Create bug tickets directly from the test session by integrating with tools like Jira, Trello, and Asana.
+- **Save and Share:** Save the marked image to the gallery, download it for local use, or share it directly with your team.
 
 ## IP Geolocation
 The IP Geolocation feature enables you to simulate website and mobile experiences from over 45 countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.

@@ -2743,7 +2743,6 @@ module.exports = {
           "smartui-handle-dynamic-data",
           "smartui-handle-videos",
           "smartui-handle-lazy-loading",
-          "smartui-browser-specific-behaviour",
           "smartui-handle-sticky-elements"
         ]
       },
