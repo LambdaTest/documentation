@@ -1122,13 +1122,6 @@ If strict is set to true in yaml then the variables used in yaml must be present
 
 ***
 
-### `codeDirectory`
-Defines in which directory all of your commands defined in yaml would run. Your code would be downloaded in this directory.
-
-> **NOTE:** This features will be deprecated after Decemeber 2023.
-
-***
-
 ### `cacheTestURL`
 It enables you to cache static test files in the browser.
 ```yaml
