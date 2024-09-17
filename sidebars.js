@@ -2695,6 +2695,18 @@ module.exports = {
           "smartui-wdio-sdk",
           "smartui-sdk-config-options",
           "smartui-cli-git-branching-strategy",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Stabilize Your Screenshots",
+            items: [
+              "smartui-freeze-animations",
+              "smartui-handle-dynamic-data",
+              "smartui-handle-videos",
+              "smartui-handle-lazy-loading",
+              "smartui-handle-sticky-elements"
+            ]
+          },
         ],
       },
       {
@@ -2725,18 +2737,6 @@ module.exports = {
           "smartui-with-github-actions",
           "smartui-with-gitlab",
         ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Stabilize Your Screenshots",
-        items: [
-          "smartui-freeze-animations",
-          "smartui-handle-dynamic-data",
-          "smartui-handle-videos",
-          "smartui-handle-lazy-loading",
-          "smartui-handle-sticky-elements"
-        ]
       },
       {
         type: "doc",
