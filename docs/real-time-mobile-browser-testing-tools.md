@@ -44,6 +44,8 @@ slug: real-time-mobile-browser-testing-tools/
       })
     }}
 ></script>
+LambdaTest offers a comprehensive suite of real-time mobile web browser testing tools designed to improve your testing experience. This guide provides detailed instructions on how to use each of the tools.
+
 ## Device Controls
 The Device Control feature allows you tp perform certain actions with your device  within your current test session:
 
