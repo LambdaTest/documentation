@@ -1004,7 +1004,7 @@ dataJsonBuilder:
     query: <filter_query>
     attributes:
       - key: <attribute_key>
-        value: [<value1>, <value2>, ...]
+        values: [<value1>, <value2>, ...]
 ```
 
 #### Configuration
@@ -1019,9 +1019,9 @@ dataJsonBuilder:
 - **filters (optional) :** Applies filtering on the JSON objects before indexing.
   - **query:** A logical expression to filter JSON objects based on their attributes. It supports complex queries using logical operators. Example:
     ```yaml
-    query: (username == 'abc' or username == 'bcd')
+    query: (username == "abc" or username == "bcd")
     ```
-  - **attributes:** A list of key-value pairs to filter JSON objects. It has higher precedence over queries. Example:
+  - **attributes:** A list of key-value pairs to filter JSON objects. It has higher precedence over `query`. Example:
     ```yaml
     attributes:
       - key: username
@@ -1090,10 +1090,11 @@ If filters are specified, the JSON objects are filtered according to the rules:
     path: data/file/abc.json
     index: username
     filters:
-      query: (username == 'abc' or username == 'bcd')
+      #either query or attributes can be used, if both are mentioned then the attributes will have higher precedence.
+      query: (username == "abc" or username == "bcd")
       attributes:
         - key: username
-          value: ["abc", "bcd"]
+          values: ["abc", "bcd"]
   ```
 
 - **Only Filtering :** If only filtering is required without indexing, omit the index key. In this case, no indexing will occur, and each JSON object will be distributed in a round-robin manner among parallel executions.
@@ -1101,7 +1102,7 @@ If filters are specified, the JSON objects are filtered according to the rules:
   dataJsonBuilder:
     path: data/file/abc.json
     filters:
-      query: (username == 'abc' or username == 'bcd')
+      query: (username == "abc" or username == "bcd")
   ```
 
 - **Only Indexing :** If only indexing is required without filtering, omit the filters section.
