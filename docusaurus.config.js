@@ -129,11 +129,6 @@ module.exports = {
         {
           type: 'html',
           position: 'left',
-          value: '<a role="button" tabindex="0" href="https://www.lambdatest.com/testmuconf-2024" target="_blank" class="navbar__item navbar__link">TestMu Conf 2024</a>',
-        },
-        {
-          type: 'html',
-          position: 'left',
           value: '<a role="button" tabindex="0" href="https://github.com/LambdaTest" target="_blank" class="navbar__item navbar__link">GitHub<img src="https://staging.lambdatestinternal.com/support/img/Github.svg" alt="" role="presentation" title="LambdaTest GitHub" width="12" height="12" class="head_gitimg" style="margin-left:5px;"/></a>',
         }
       ],
