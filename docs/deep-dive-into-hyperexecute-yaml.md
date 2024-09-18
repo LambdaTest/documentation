@@ -1016,72 +1016,118 @@ dataJsonBuilder:
   ```yaml
   index: username
   ```
-- **filters (optional) :** Applies filtering on the JSON objects before indexing.
-  - **query:** A logical expression to filter JSON objects based on their attributes. It supports complex queries using logical operators. Example:
+- **filters (optional) :** Applies filtering on the JSON objects before indexing. Either `query` or `attributes` can be used, if both are mentioned then the `attributes` will have higher precedence.
+  - **query:** These are used for more complex filtering operations. If both attributes and queries are provided, attributes take precedence. This means that if there’s a conflict, the filter based on attributes will be used. Example:
     ```yaml
     query: (username == "abc" or username == "bcd")
     ```
-  - **attributes:** A list of key-value pairs to filter JSON objects. It has higher precedence over `query`. Example:
+  - **attributes:** These are key-value pairs used for filtering. You can provide a list of attributes with their corresponding values, and the filtering will include only those JSON objects where each specified attribute matches one of the provided values. Attributes are applied with an "AND" logic between different keys and an "OR" logic within the same key. Example:
     ```yaml
     attributes:
       - key: username
         value: ["abc", "bcd"]
+      - key: tags
+        values: ["@x", "@y"]
     ```
-
-#### Input data
-The input JSON data should follow this format:
-```javascript title="sample.json"
-[
-  {
-      "username": "abc",
-  },
-  {
-      "username": "bcd",
-  },
-  {
-      "username": "def",
-  },
-  {
-      "username": "def",
-  }
-]
-```
-
-#### Output data
-The processed data includes additional fields `HYPERTEST_INDEX` and `HYPERTEST_CONCURRENCY` for indexing and concurrency information:
-```javascript title="sample.json
-[
-  {
-    "username": "abc",
-    "HYPERTEST_INDEX": 0,
-    "HYPERTEST_CONCURRENCY": 1
-  },
-  {
-    "username": "bcd",
-    "HYPERTEST_INDEX": 0,
-    "HYPERTEST_CONCURRENCY": 1
-  },
-  {
-    "username": "def",
-    "HYPERTEST_INDEX": 0,
-    "HYPERTEST_CONCURRENCY": 2
-  },
-  {
-    "username": "def",
-    "HYPERTEST_INDEX": 1,
-    "HYPERTEST_CONCURRENCY": 2
-  }
-]
-```
 
 #### Working of `dataJsonBuilder`
 
-- **Reading JSON Data:** The JSON data is read from the file specified in the path configuration.
-- **Applying Filters:**
-If filters are specified, the JSON objects are filtered according to the rules:
-  - **Attributes:** Filters based on specified key-value pairs are applied first.
-  - **Query:** A logical query filter is applied if the attributes filter is not specified or after the attributes filter is applied.
-- **Indexing:** The JSON objects are then indexed based on the key specified in the index configuration. This indexing helps in determining the distribution pattern for test execution.
+- The **input JSON data** should follow this format:
+  ```javascript title="sample.json"
+  [
+    {
+      "accesskey": "jhscuystc7ewgucu79as8yc9",
+      "username": "abc",
+      "tags": "@x"
+    },
+    {
+      "accesskey": "cjdy87328yeiqhd93urd28hh",
+      "username": "bcd",
+      "tags": "@y"
+    },
+    {
+      "accesskey": "jhscuystc7ewgucu79as8yc9",
+      "username": "abc",
+      "tags": "@y"
+    },
+    {
+      "accesskey": "cjdy87328yeiqhd93urd28hh",
+      "username": "bcd",
+      "tags": "@a"
+    }
+  ]
+  ```
+
+- **`dataJsonBuilder`** flag passed in the HyperExecute YAML file:
+
+  ```yaml title="hyperexecute.yaml"
+  dataJsonBuilder:
+    path: sample.json
+    filters:
+      attributes:
+        - key: username
+          values: ["abc", "bcd"]
+        - key: tags
+          values: ["@x", "@y"]
+  ```
+
+- The **filtered JSON data** will be:
+  ```javascript title="sample.json"
+  [
+    {
+      "accesskey": "jhscuystc7ewgucu79as8yc9",
+      "username": "abc",
+      "tags": "@x"
+    },
+    {
+      "accesskey": "cjdy87328yeiqhd93urd28hh",
+      "username": "bcd",
+      "tags": "@y"
+    },
+    {
+      "accesskey": "jhscuystc7ewgucu79as8yc9",
+      "username": "abc",
+      "tags": "@y"
+    }
+  ]
+  ```
+The objects with **usernames** `"abc"` and `"bcd"` and **tags** `"@x"` and `"@y"` are selected as they meet the criteria defined by the attributes filter.
+
+#### Indexing and Test Case Distribution:
+After filtering, the JSON data is indexed to distribute test cases. Here’s how the distribution works:
+- **VM Allocation:** Each filtered JSON object corresponds to a separate VM. If the filtered JSON contains 3 objects, 3 VMs are allocated.
+- **Test Case Distribution:** Test cases are then distributed across these VMs. For each VM, test cases are distributed based on the `username` present in the filtered JSON objects. All test cases related to the same `username` are assigned to the VMs containing that `username`.
+
+So as per the above filtered JSON data:
+
+- **VM1** will receive all test cases related to `username: "abc"`
+  ```javascript
+  {
+    "accesskey": "jhscuystc7ewgucu79as8yc9",
+    "username": "abc",
+    "tags": "@x"
+  }
+  ```
+
+- **VM2** will receive all test cases related to `username: "bcd"`.
+  ```javascript
+  {
+    "accesskey": "cjdy87328yeiqhd93urd28hh",
+    "username": "bcd",
+    "tags": "@y"
+  }
+  ```
+
+- **VM3** will handle the JSON object:
+  ```javascript
+  {
+    "accesskey": "jhscuystc7ewgucu79as8yc9",
+    "username": "abc",
+    "tags": "@y"
+  }
+  ```
+
+Test cases related to `username: "abc"` will be split between **VM1** and **VM3**, while test cases related to `username: "bcd"` will be handled by **VM2**.
 
 #### Use Cases
 - **Filtering and Indexing :** When both filtering and indexing are required, filters are applied first, followed by indexing of the filtered results.
