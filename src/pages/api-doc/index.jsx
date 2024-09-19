@@ -41,6 +41,10 @@ function ApiDoc() {
                         <iframe className="embed-responsive-item"
                             src="https://swagger-api-support.lambdatest.com/hyperexecute/index.html"></iframe>
                     </TabItem>
+                    <TabItem value="accessibility-testing" label="Accessibility Testing">
+                        <iframe className="embed-responsive-item"
+                            src="https://swagger-api-support.lambdatest.com/accessibility/index.html"></iframe>
+                    </TabItem>
                     <TabItem value="auditlogs" label="Audit Logs">
                         <iframe className="embed-responsive-item"
                             src="https://swagger-api-support.lambdatest.com/audit-logs/index.html"></iframe>
