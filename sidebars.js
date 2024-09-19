@@ -1094,6 +1094,7 @@ module.exports = {
         label: "Mobile App Testing",
         items: [
           'getting-started-with-mobile-app-real-time-testing',
+          'real-time-mobile-app-testing-tools'
         ]
       },
       {
