@@ -21,7 +21,7 @@ function ApiDoc() {
                         <iframe className="embed-responsive-item"
                             src="https://app-automation-apis-docs.lambdatest.com"></iframe>
                     </TabItem>
-                    <TabItem value="smart-ui-automation" label="Smart UI Automation">
+                    <TabItem value="smart-ui" label="Smart UI">
                         <iframe className="embed-responsive-item"
                             src="https://swagger-api-support.lambdatest.com/smartui/index.html"></iframe>
                     </TabItem>
@@ -40,6 +40,10 @@ function ApiDoc() {
                     <TabItem value="hyperexecute" label="HyperExecute">
                         <iframe className="embed-responsive-item"
                             src="https://swagger-api-support.lambdatest.com/hyperexecute/index.html"></iframe>
+                    </TabItem>
+                    <TabItem value="accessibility-testing" label="Accessibility Testing">
+                        <iframe className="embed-responsive-item"
+                            src="https://swagger-api-support.lambdatest.com/accessibility/index.html"></iframe>
                     </TabItem>
                     <TabItem value="auditlogs" label="Audit Logs">
                         <iframe className="embed-responsive-item"
