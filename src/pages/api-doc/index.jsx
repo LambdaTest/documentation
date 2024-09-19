@@ -9,6 +9,22 @@ import TabItem from '@theme/TabItem';
 
 
 function ApiDoc() {
+    useEffect(() => {
+        const removeAlternateLinks = () => {
+            const alternateLinks = document.querySelectorAll('link[rel="alternate"]');
+            alternateLinks.forEach(link => link.parentNode.removeChild(link));
+        };
+        removeAlternateLinks();
+        const observer = new MutationObserver((mutationsList) => {
+            for (const mutation of mutationsList) {
+                if (mutation.type === 'childList') {
+                    removeAlternateLinks();
+                }
+            }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+        return () => observer.disconnect();
+    }, []);
     return (
         <Layout title="LambdaTest API Documentation"
             description="Manage and organize your test builds, test sessions, tunnel status and more with LambdaTest APIs for Selenium automation, App automation, Smart UI automation and Automated screenshots. ">
