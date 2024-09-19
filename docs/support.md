@@ -164,9 +164,9 @@ import NewTag from '../src/component/newTag';
     <div className="home_inners_box">
        <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>Real Time</h2>
       <div className="home_inners">
-        <a href="/support/docs/real-time-browser-testing/" ><p className="p_home_inners">Desktop Browser Testing</p></a>
-        <a href="/support/docs/webview-testing-in-android/"><p className="p_home_inners">Mobile Browser Testing</p></a>
-        <a href="/support/docs/live-interactive-mobile-app-testing/"><p className="p_home_inners">Mobile App Testing</p></a>
+        <a href="/support/docs/getting-started-with-desktop-browser-real-time-testing/" ><p className="p_home_inners">Web Browser Testing</p></a>
+        <a href="/support/docs/getting-started-with-mobile-browser-real-time-testing/"><p className="p_home_inners">Mobile Browser Testing</p></a>
+        <a href="/support/docs/getting-started-with-mobile-app-real-time-testing/"><p className="p_home_inners">Mobile App Testing</p></a>
         <a href="/support/docs/chrome-os-web-browser-testing/"><p className="p_home_inners">ChromeOS Web Browser Testing</p></a>
         <a href="/support/docs/chrome-os-app-testing/"><p className="p_home_inners">ChromeOS App Testing</p></a>
         <a href="/support/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>     

@@ -1070,43 +1070,33 @@ module.exports = {
       },
     },
     [
-      // {
-      //   type: "category",
-      //   collapsed: true,
-      //   label: "Web Browser Testing",
-      //   items: [
-      //     {
-      //       type: "category",
-      //       collapsed: false,
-      //       label: "Desktop Browser Testing",
-      //       items: [
-      //         'real-time-testing',
-      //         'real-time-testing',
-      //         'real-time-testing'
-      //       ]
-      //     },
-      //     {
-      //       type: "category",
-      //       collapsed: true,
-      //       label: "Virtual Mobile Testing",
-      //       items: [
-      //         'real-time-testing',
-      //         'real-time-testing',
-      //         'real-time-testing'
-      //       ]
-      //     }
-      //   ]
-      // },
-      // {
-      //   type: "category",
-      //   collapsed: true,
-      //   label: "App Testing",
-      //   items: [
-      //     'real-time-testing',
-      //     'real-time-testing',
-      //     'real-time-testing'
-      //   ]
-      // },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Web Browser Testing",
+        items: [
+          'getting-started-with-desktop-browser-real-time-testing',
+          'real-time-desktop-browser-testing-tools'
+        ]
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Mobile Browser Testing",
+        items: [
+          'getting-started-with-mobile-browser-real-time-testing',
+          'real-time-mobile-browser-testing-tools'
+        ]
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Mobile App Testing",
+        items: [
+          'getting-started-with-mobile-app-real-time-testing',
+          'real-time-mobile-app-testing-tools'
+        ]
+      },
       {
         type: "category",
         collapsed: true,
