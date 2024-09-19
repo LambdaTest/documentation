@@ -21,7 +21,7 @@ function ApiDoc() {
                         <iframe className="embed-responsive-item"
                             src="https://app-automation-apis-docs.lambdatest.com"></iframe>
                     </TabItem>
-                    <TabItem value="smart-ui-automation" label="Smart UI Automation">
+                    <TabItem value="smart-ui" label="Smart UI">
                         <iframe className="embed-responsive-item"
                             src="https://swagger-api-support.lambdatest.com/smartui/index.html"></iframe>
                     </TabItem>
