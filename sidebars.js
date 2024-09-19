@@ -1062,9 +1062,9 @@ module.exports = {
 
   RealTimeBrowserTestingSiebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/',
+      type: "link",
+      label: "Back",
+      href: "/docs/",
       customProps: {
         className: "back-to-main-menu",
       },
@@ -1100,18 +1100,6 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Real Time Browser Testing",
-        items: [
-          "real-time-testing",
-          "pre-loaded-extension",
-          "real-time-testing-troubleshooting",
-          "http-basic-authentication",
-          "webview-testing-in-android",
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
         label: "ChromeOS Testing",
         link: {
           type: "doc",
@@ -1130,9 +1118,18 @@ module.exports = {
           }
         ],
       },
-      "developer-tools",
-      "mark-as-bug-in-real-time-testing",
-      "live-interactive-mobile-app-testing",
+      {
+        type: "category",
+        collapsed: true,
+        label: "Key Features",
+        items: [
+          "developer-tools",
+          "pre-loaded-extension",
+          "real-time-testing-troubleshooting",
+          "http-basic-authentication",
+          "webview-testing-in-android",
+        ],
+      },
       "troubleshooting-ios-apps",
       "entitlements",
     ],
