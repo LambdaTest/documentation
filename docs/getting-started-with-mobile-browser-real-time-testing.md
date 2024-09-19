@@ -52,4 +52,4 @@ Navigate to the Real Time Testing section and select **Virtual Mobile** from the
 
 Afterwards click on the **Start** button to initiate the testing process.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/getting-started-with-mobile-browser.gif').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/getting-started-with-mobile-browser.gif').default} alt="Image" className="doc_img"/>
