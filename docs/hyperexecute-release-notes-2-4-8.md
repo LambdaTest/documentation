@@ -32,7 +32,7 @@ slug: hyperexecute-release-notes-2-4-8/
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-4-7/"
+          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-4-8/"
         }]
       })
     }}
