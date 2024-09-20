@@ -55,4 +55,4 @@ HyperExecute Projects is now generally available (GA), moving beyond the Beta ph
 HyperExecute expands its support for the latest versions of dev and beta browsers for the Windows platform. With this expanded compatibility, you can streamline your testing process and deliver exceptional user experiences with confidence!
 
 - **Dev version:** 130.0
-- **Beta version:** 128.0
+- **Beta version:** 128.0.2739.42
