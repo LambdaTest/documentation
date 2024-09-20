@@ -130,7 +130,7 @@ specificTags: ["@tag1","@tag2"]
 - Discovery can also be customized by passing logical query in the snooper using `query` tag:
 
 ```yaml
-query: ["((@tag1 or @tag2) and not @tag3)"]
+query: "((@tag1 or @tag2) and not @tag3)"
 ```  
 
 - You can also skip the tests that have some specific tags using `ignoredTags`:
