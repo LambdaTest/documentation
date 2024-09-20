@@ -38,7 +38,20 @@ slug: hyperexecute-release-notes-2-5-1/
     }}
 ></script>
 
-## HyperExecute - New Version Release for Beta and Dev Edge Browser 
+## HyperExecute Projects - General Availability (GA)
+
+HyperExecute Projects is now generally available (GA), moving beyond the Beta phase! Projects offer a centralized platform for organizing and managing your test executions to streamline your testing process more efficiently than ever before.
+
+## Key Updates:
+
+- **Centralized Test Management :** Group similar tests, control access, and track progress within custom projects.
+- **Workflow Automation :** Set up automated workflows with scheduled test executions and optional workflow linking.
+- **GitHub Integration :** Support for GitHub repositories with easy setup for collaborative testing.
+- **Framework Support :** Integration with Tosca, Tosca DEX, and JMeter for unified test management.
+
+> 📕 Read the [documentation](/support/docs/hyperexecute-projects/) to learn more about it.
+
+## New Version Release for Beta and Dev Edge Browser 
 HyperExecute expands its support for the latest versions of dev and beta browsers for the Windows platform. With this expanded compatibility, you can streamline your testing process and deliver exceptional user experiences with confidence!
 
 - **Dev version:** 130.0
