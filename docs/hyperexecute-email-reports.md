@@ -185,6 +185,38 @@ This is how you can pass the value of your email address via CLI by running the 
 ./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
 
+:::note
+If you have a pipeline that requires multiple email values, consider consolidating them into a single variable separated by commas. This approach eliminates the need for multiple variables or manual pipeline edits whenever the email list changes.
+
+```yaml title="hyperexecute.yaml"
+report: true
+partialReports:
+  location: target/surefire-reports/html
+  type: html
+  frameworkName: extent
+# highlight-start
+  email:
+      to:
+        - "${email}"
+# highlight-end
+
+uploadArtifacts:
+  - name: Reports 1
+    path:
+      - ProtractorTestReport.html
+# highlight-start      
+    email:
+      to: 
+        - "${email}"
+# highlight-end
+```
+
+```bash
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --vars "email=xyz@abc.com,abc@xyz.com,def@wxy.com"
+```
+:::
+
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
