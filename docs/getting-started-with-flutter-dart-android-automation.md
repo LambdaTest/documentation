@@ -113,6 +113,19 @@ For testing, you need to build a Flutter app and test suite. You can create Flut
 Avoiding this step might result in **No Tests Ran** issue on the dashboard
 :::
 
+To create APKs with optional Flutter parameters, first run the Flutter tests in verbose mode with the flutter cli. This allows you to see the Gradle command used internally to build the APKs.
+
+For example, to use `--no-sound-null-safety` in your tests, run the following command.
+
+```bash
+flutter run -v --no-sound-null-safety
+```
+
+Next, look for gradlew execution in the logs. The above command generates a gradlew command in the logs that looks something like the following. To build your apk files, replace the parameter `YOUR_APP_PATH` with your actual path of the application in the following command:
+
+```bash
+gradlew --full-stacktrace --info -Pverbose=true -Ptarget-platform=android-arm64 -Ptarget=YOUR_APP_PATH/lib/main.dart -Pbase-application-name=android.app.Application -Pdart-obfuscation=false -Pextra-front-end-options=--no-sound-null-safety -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root assembleDebug  
+```
 
 ### Step 2: Upload Your Application
 
