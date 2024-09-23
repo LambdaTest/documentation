@@ -1648,6 +1648,7 @@ module.exports = {
         items: [
           "manual-test-case-creation",
           "manual-test-cases-with-ai",
+          "copy-and-move-support-for-test-cases",
           "test-case-import",
           "test-case-repository",
         ],
