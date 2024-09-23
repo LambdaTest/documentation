@@ -3,7 +3,7 @@ id: copy-and-move-support-for-test-cases
 title: Copy and Move Support for Test Cases
 hide_title: true
 sidebar_label: Copy and Move Test Cases
-description: Learn efficient manual test case creation with LambdaTest's Test Manager, streamlining testing processes and enhancing test execution.
+description: Learn how to efficiently copy and move test cases within LambdaTest, streamlining your testing process and enhancing organization across multiple projects.
 keywords:
   - copy test cases
   - move test cases
