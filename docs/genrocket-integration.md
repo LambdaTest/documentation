@@ -54,12 +54,12 @@ This collaboration delivers substantial advantages to customers using both platf
 ## Creating User In GenRocket
 ---
 
-GenRocket is sold to enterprise (of all sizes) customers. It is not available to “unaffiliated” individuals and/or general public. Access to GenRocket is provided during a qualified Proof of Concept (POC) phase. 
+GenRocket is sold to enterprise (of all sizes) customers. It is not available to "unaffiliated" individuals and/or general public. Access to GenRocket is provided during a qualified Proof of Concept (POC) phase. 
 
 ## Setting Up A Project for Data Generation
 ---
 
-As described above, users need to setup the test data project (“Model” and “Design”) for the test data needed. 
+As described above, users need to setup the test data project ("Model" and "Design") for the test data needed. 
 
 <!-- You can learn about data generation in detail [here](https://genrocket.freshdesk.com/support/solutions/19000103805). -->
 
@@ -73,7 +73,7 @@ In order to generate data using GenRocket, you can follow the steps given below:
 
 >**Note:** Users can Generate a Scenario through GenRocket Dashboard by [following this documentation](https://genrocket.freshdesk.com/support/solutions/folders/19000164896). 
 
-**Step 2:** Although “Scenarios” can be used to design the volume and variety of data, in practice, most customers who deal with complex data use G-Cases. Learn about G-Cases [here](https://genrocket.freshdesk.com/support/solutions/folders/19000164899).
+**Step 2:** Although "Scenarios" can be used to design the volume and variety of data, in practice, most customers who deal with complex data use G-Cases. Learn about G-Cases [here](https://genrocket.freshdesk.com/support/solutions/folders/19000164899).
 
 **Step 3:** Genrocket User profile and scenario file should be downloaded and placed in the project.
 
@@ -135,7 +135,7 @@ Till now you have learnt how to set up your generators on GenRocket. Now, in ord
 
 >**Note:** The HyperExecute YAML configuration file is already present in the sample project that you have downloaded.
 
-Following two commands have been already added in the “[pre](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre)” section of this HyperExecute Yaml.
+Following two commands have been already added in the "[pre](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre)" section of this HyperExecute Yaml.
 
 * In Hyperexecute, every time the tests are run, a new environment is created, and gets destroyed as soon as the tests are completed. 
 

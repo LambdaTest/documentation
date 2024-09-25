@@ -59,7 +59,7 @@ Once you have your project set up in the QMetry app and test suite ready, you ne
 3.  Now, you need to provide access of your LambdaTest account to the QMetry app. To do so, add your _username_ and _access key_ over their corresponding fields, and click on **FETCH PLATFORM LIST** button. This will verify your credentials and connect your LambdaTest account with the QMetry app successfully, based on your current plan. 
 
 <img loading="lazy" src={require('../assets/images/uploads/QMetry-2.webp').default} alt="LambdaTest Configuration in Qmetry App" width="2882" height="1801" className="doc_img"/>
->To get your Username and Access Key, go to your LambdaTest automation dashboard and click on the “key” icon left to the help button, on the top right corner. 
+>To get your Username and Access Key, go to your LambdaTest automation dashboard and click on the "key" icon left to the help button, on the top right corner. 
 
 <img loading="lazy" src={require('../assets/images/uploads/QMetry-4.webp').default} alt="Finding Username and Access Key" width="2882" height="1801" className="doc_img"/>
 

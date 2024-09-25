@@ -93,7 +93,7 @@ As you create a new token a key would be generated. Copy this key as you will ne
 
 <img loading="lazy" src={require('../assets/images/testprocess-integration/target-process-8.webp').default} alt="Image" width="1920" height="733"  className="doc_img"/>
 
-Kudos! You’ve successfully integrated LambdaTest with TargetProcess. You will find TargetProcess Integration highlighted under the section **“My Integration“**.
+Kudos! You’ve successfully integrated LambdaTest with TargetProcess. You will find TargetProcess Integration highlighted under the section **"My Integration"**.
 
 <img loading="lazy" src={require('../assets/images/testprocess-integration/target-process-9.webp').default} alt="Image" width="1920" height="938"  className="doc_img"/>
 
@@ -143,7 +143,7 @@ Kudos! You’ve successfully integrated LambdaTest with TargetProcess. You will 
 
 **Step 2**: Select **Integrations** from the left-navigation menu. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
 
-**Step 3**: Under **“My Integrations“**, you’ll find the TargetProcess Integration. Click on Remove button to uninstall the integration with LambdaTest and TargetProcess.
+**Step 3**: Under **"My Integrations"**, you’ll find the TargetProcess Integration. Click on Remove button to uninstall the integration with LambdaTest and TargetProcess.
 
 <img loading="lazy" src={require('../assets/images/testprocess-integration/target-process-16.webp').default} alt="Image" width="1920" height="931"  className="doc_img"/>
 

@@ -57,7 +57,7 @@ Below is the step by step guide to help you integrate LambdaTest with your Testi
 3.  Now you need to provide access of your LambdaTest account to your TestingWhiz app. To do so, click on **Add** button. <img loading="lazy" src={require('../assets/images/uploads/testingwhiz-3.webp').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
 4.  In the open dialog box, you need to enter your Profile name, username, and access key. You can use any name for your profile on TestingWhiz. <img loading="lazy" src={require('../assets/images/uploads/testingwhiz-4.webp').default} alt="TestingWhiz Profile" width="1281" height="679" className="doc_img"/>
 
-    >To get your Username and Access Key, go to your LambdaTest automation dashboard and click on the “key” icon left to the help button, on the top right corner. <img loading="lazy" src={require('../assets/images/uploads/profile-1.webp').default} alt="LambdaTest username and access key" width="462" height="325" className="doc_img"/>
+    >To get your Username and Access Key, go to your LambdaTest automation dashboard and click on the "key" icon left to the help button, on the top right corner. <img loading="lazy" src={require('../assets/images/uploads/profile-1.webp').default} alt="LambdaTest username and access key" width="462" height="325" className="doc_img"/>
 
 5.  Click on Validate and then on OK once the credentials are validated successfully.
 6.  Now apply your changes by clicking on Apply and then press OK.

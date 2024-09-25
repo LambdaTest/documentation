@@ -68,7 +68,7 @@ LambdaTest integrates with BugHerd, allowing users to file issues directly from 
 :::info Fetch your Bugherd API Token
 
 - Visit your BugHerd account -> **Settings** tab.
-- You will find the “**API Token**” under the section **Authentication Token**. Copy your API token.
+- You will find the "**API Token**" under the section **Authentication Token**. Copy your API token.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/bugherd-integration/api-token.mp4').default} type="video/mp4" />

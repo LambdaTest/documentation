@@ -73,7 +73,7 @@ Safari browser will be added in the upcoming releases.
 Follow the below-mentioned steps to interact with the browser manually in an automation test:
 
 - Open the test summary page in the **LambdaTest dashboard**
-- Click on the **“Click to view live test”** button
+- Click on the **"Click to view live test"** button
 - The status of the test changes to **idle_timeout** while using the Live Interaction feature
 - Take complete control of the browser ✅
 

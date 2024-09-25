@@ -77,14 +77,14 @@ Be aware of your LambdaTest authentication credentials i.e. your LambdaTest user
 
 * For Windows user:
 ```
-set LT_USERNAME=”YOUR_USERNAME”
-set LT_ACCESS_KEY=”YOUR ACCESS KEY”
+set LT_USERNAME="YOUR_USERNAME"
+set LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
 
 * For macOS/Linux user:
 ```
-export LT_USERNAME=”YOUR_USERNAME”
-export LT_ACCESS_KEY=”YOUR ACCESS KEY”
+export LT_USERNAME="YOUR_USERNAME"
+export LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
 
 ## Getting Started With Karma Test Runner Installation By Creating A Sample Project
@@ -203,7 +203,7 @@ If you wish to use Jenkins, then [follow this documentation](/docs/jenkins-with-
 
 Parallel testing is one of the most in-demand feature of LambdaTest Selenium Grid. By parallel testing, you can run more than one test case, simultaneously. This means that, parallel testing would allow you to execute numerous automation test cases altogether. So you execute a single test scenario across different browsers or could run different test scenarios across the same browser but with different browser versions.
 
-To perform parallel testing, navigate to sample project “**angular-karma-sample**” and run the below command.
+To perform parallel testing, navigate to sample project "**angular-karma-sample**" and run the below command.
 
 `$ ng test`
 

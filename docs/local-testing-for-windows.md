@@ -37,7 +37,7 @@ This file is supported for the below listed windows:
 
 ## Configuring SSH connection with LambdaTest Tunnel 
 * * *
-**Step 1**: Click the button **“Configure Tunnel”**. Download the binary zip file by clicking the **“Download Link”**. Also, hit the ‘Copy’ button in the form that opens up to copy the complete string to your system’s clipboard.
+**Step 1**: Click the button **"Configure Tunnel"**. Download the binary zip file by clicking the **"Download Link"**. Also, hit the ‘Copy’ button in the form that opens up to copy the complete string to your system’s clipboard.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-1.webp').default} alt="Image"  className="doc_img"/>
 
@@ -62,7 +62,7 @@ So for example, if your user login email is example@lambdatest.com and your user
 ---
 **Note:** After you execute the command, Windows may ask for user permission. Make sure you have administrator access to allow the file to run successfully.
 
-In a few seconds, after you execute the command, an SSH connection will be established. You will receive a message inside your command prompt mentioning “**Secure connection established, you may start your tests now**”.
+In a few seconds, after you execute the command, an SSH connection will be established. You will receive a message inside your command prompt mentioning "**Secure connection established, you may start your tests now**".
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-4.webp').default} alt="Image"  className="doc_img"/>
 
@@ -88,7 +88,7 @@ In a few seconds, after you execute the command, an SSH connection will be estab
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/start-localhost-testing-using-lambda-tunnel.webp').default} alt="Image"  className="doc_img"/>
 
-> **IMPORTANT NOTE**: Some browsers doesn’t support automatic resolution of the URL string “localhost”. Therefore if you test on URLs like “http://localhost/” or “`http://localhost:8080`” etc, you would get an error in these browsers. A possible solution is to use “localhost.lambdatest.com” or replace the string “localhost” with machine IP address. For example if you wanted to test “http://localhost/dashboard” or, and your machine IP is 192.168.2.6 you can instead test on “`http://192.168.2.6/dashboard`”.
+> **IMPORTANT NOTE**: Some browsers doesn’t support automatic resolution of the URL string "localhost". Therefore if you test on URLs like "http://localhost/" or "`http://localhost:8080`" etc, you would get an error in these browsers. A possible solution is to use "localhost.lambdatest.com" or replace the string "localhost" with machine IP address. For example if you wanted to test "http://localhost/dashboard" or, and your machine IP is 192.168.2.6 you can instead test on "`http://192.168.2.6/dashboard`".
 
 ## Testing Local Folder Files Using LambdaTest Tunnel
 * * *
@@ -100,11 +100,11 @@ In a few seconds, after you execute the command, an SSH connection will be estab
 
 `LT --user {user login email} --key {user key} --dir {"directory/folder name"}`
 
-**Example:** Let us consider your user login email to be “example@lambdatest.com” with your user key as ‘123asd123’ and you want to test files in the ‘Downloads’ folder, then the command would be:
+**Example:** Let us consider your user login email to be "example@lambdatest.com" with your user key as ‘123asd123’ and you want to test files in the ‘Downloads’ folder, then the command would be:
 
 `LT --user example@lambdatest.com --key 123asd123 --dir "/home/lambda/Downloads"`
 
-**Step 2:** After you establish a SSH connection, go to LambdaTest and navigate to Real Time test. Enter “local-folder.lambdatest.com” in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice.
+**Step 2:** After you establish a SSH connection, go to LambdaTest and navigate to Real Time test. Enter "local-folder.lambdatest.com" in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-9.webp').default} alt="Image"  className="doc_img"/>
 
@@ -114,13 +114,13 @@ In a few seconds, after you execute the command, an SSH connection will be estab
 
 **Note:** Similarly, if you want to run any file in the specified directory, you need to give URL as local-folder.lambdatest.com/filename.
 
-**For example:** If you have a file ‘test.html’ in your folder. You need to give URL as “local-folder.lambdatest.com/test.html” to run the same file.
+**For example:** If you have a file ‘test.html’ in your folder. You need to give URL as "local-folder.lambdatest.com/test.html" to run the same file.
 
 In this way, you can run any HTML, PHP, Python or similar web files present in any folder of your system, directly in LambdaTest browser.
 
 #### Testing Locally Hosted Web Pages On Android
 * * *
-**Step 1:** Go to “**Real Time Test**” from the left navigation menu and click on the **mobile** icon. This will guide you to a screen where you can perform cross browser testing for your website on mobile OS. Select the icon for Android and choose from a variety of **Android** mobile devices to start testing.
+**Step 1:** Go to "**Real Time Test**" from the left navigation menu and click on the **mobile** icon. This will guide you to a screen where you can perform cross browser testing for your website on mobile OS. Select the icon for Android and choose from a variety of **Android** mobile devices to start testing.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-11.webp').default} alt="Image"  className="doc_img"/>
 
@@ -131,9 +131,9 @@ In this way, you can run any HTML, PHP, Python or similar web files present in a
 #### Testing Locally Hosted Web Pages On iOS
 * * *
 
-**Step 1:** Go to **“Real Time Test”** from the left navigation menu and click on the mobile icon. This will guide you to a screen where you can perform cross browser testing for your website on mobile OS. Select the icon for Apple and choose from a variety of iOS devices to start testing.
+**Step 1:** Go to **"Real Time Test"** from the left navigation menu and click on the mobile icon. This will guide you to a screen where you can perform cross browser testing for your website on mobile OS. Select the icon for Apple and choose from a variety of iOS devices to start testing.
 
-**Note:** To test your locally hosted web pages on iOS, you need to mention “`http://localhost.lambdatest.com`” or simply mention your machine IP as the URL in the below-highlighted box. For example if you wanted to test "`http://localhost/dashboard`" or "`http://localhost/dashboard:8080`", and your machine IP is 192.168.2.6 you can instead test on "`http://localhost.lambdatest.com/dashboard`" or "`http://192.168.2.6/dashboard`".
+**Note:** To test your locally hosted web pages on iOS, you need to mention "`http://localhost.lambdatest.com`" or simply mention your machine IP as the URL in the below-highlighted box. For example if you wanted to test "`http://localhost/dashboard`" or "`http://localhost/dashboard:8080`", and your machine IP is 192.168.2.6 you can instead test on "`http://localhost.lambdatest.com/dashboard`" or "`http://192.168.2.6/dashboard`".
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-13.webp').default} alt="Image"  className="doc_img"/>
 
@@ -152,7 +152,7 @@ You will receive the below highlighted messages indicating the termination on SS
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-15.webp').default} alt="Image"  className="doc_img"/>
 
-**Option 2:** You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button that's says **“Tunnel active”**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'x'. Hit the 'x' to terminate the SSH tunnel.
+**Option 2:** You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button that's says **"Tunnel active"**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'x'. Hit the 'x' to terminate the SSH tunnel.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-16.webp').default} alt="Image"  className="doc_img"/>
 
@@ -220,15 +220,15 @@ An Access Key is a unique string used for the identification of your account.
 
 As we offer a cloud-based platform to host a testing ecosystem to everyone around the globe. Access key plays a crucial role in mapping a Secure Shell (SSH) environment for hosting your locally stored web pages online. They work as your IDs when you gain access to our cloud servers.
 
-If you ever misplace your Access key into the hands of someone you don’t trust. You can always redefine it by clicking the button for “**Regenerate Access Key**”.
+If you ever misplace your Access key into the hands of someone you don’t trust. You can always redefine it by clicking the button for "**Regenerate Access Key**".
 
 **Access Key** is pivotal for establishing a Secure Shell(SSH) through LambdaTest Tunnel to test your locally hosted web-pages or web-apps.
 
-Find your Access Key while performing any type of testing, from the left **navigation menu**. You will find a button that says “**Configure Tunnel**”. Click on that button & a string containing your access key will be presented.
+Find your Access Key while performing any type of testing, from the left **navigation menu**. You will find a button that says "**Configure Tunnel**". Click on that button & a string containing your access key will be presented.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-17.webp').default} alt="Image"  className="doc_img"/>
 
-For instance, if you go to **Real-Time Test**, you will observe a button that says “**Configure Tunnel**” on the top-right area of the page. Click on that button and a form would open up through it, providing you with a string containing your access key. You will find the access key in the area underlined below.
+For instance, if you go to **Real-Time Test**, you will observe a button that says "**Configure Tunnel**" on the top-right area of the page. Click on that button and a form would open up through it, providing you with a string containing your access key. You will find the access key in the area underlined below.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-windows/For-windows-18.webp').default} alt="Image"  className="doc_img"/>
 

@@ -48,7 +48,7 @@ This article will guide you on how to integrate the **LambdaTest** platform with
 
   ***
 
-- Define the file name in the “`reporter_config_file`“ capability of `lambdatest-config.json` file as mentioned in the below screenshot
+- Define the file name in the "`reporter_config_file`" capability of `lambdatest-config.json` file as mentioned in the below screenshot
 
   <img loading="lazy" src={require('../assets/images/report-portal-cypress/report4.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
 

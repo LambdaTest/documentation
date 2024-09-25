@@ -40,7 +40,7 @@ With this new plugin, testers and developers never have to leave XCode to execut
 
 <img loading="lazy" src={require('../assets/images/lambdamax/lambdamax-build-dropdown.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
-6. Click on **+** icon to add **“New Script Run Action”**. You can change the path and capabilities as per your preference, which will reflect directly on the LambdaTest Grid.
+6. Click on **+** icon to add **"New Script Run Action"**. You can change the path and capabilities as per your preference, which will reflect directly on the LambdaTest Grid.
 
 <img loading="lazy" src={require('../assets/images/lambdamax/lambdamax-build-code.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 

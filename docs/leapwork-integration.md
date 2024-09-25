@@ -83,7 +83,7 @@ This is where you-
   * Provide the IP address, machine name, or DNS name for the LambdaTest’s Hub
   * Specify LambdaTest Port – the default is 80.
   * Enter your LambdaTest username and access (refer- Step 4.)
-  * Specify the desired “Platform & OS.” A drop-down will appear once you navigate to that section.
+  * Specify the desired "Platform & OS." A drop-down will appear once you navigate to that section.
   * For the selected platform, specify the platform version from the drop-down list on which you would like to execute the test.
   * Specify the browser from the drop-down list on which you would like to execute the test.
   * You can specify the browser version if the test has to be executed on a specific version. Otherwise, you can select ‘latest,’ which will automatically run the test case on the latest available browser version.
