@@ -72,7 +72,7 @@ LambdaTest integration with ClickUp will help you report bugs and UI anomalies d
 ## Log Your First Bug Through LambdaTest Integration With ClickUp
 ***
 
-**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking **“Real Time Testing”** option.
+**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking **"Real Time Testing"** option.
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & hit **'Start'**.
 
@@ -82,11 +82,11 @@ LambdaTest integration with ClickUp will help you report bugs and UI anomalies d
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/clickup-5.webp').default} alt="mark as bug icon" width="1325" height="653" className="doc_img"/>
 
-**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says **“Mark as Bug”**.
+**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says **"Mark as Bug"**.
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/clickup-6.webp').default} alt="mark as bug" width="1365" height="650" className="doc_img"/>
 
-**Step 5:** After clicking on **“Mark as Bug”** button a form specific to ClickUp would open up. Fill the fields as per your requirement, and **create the issue**.
+**Step 5:** After clicking on **"Mark as Bug"** button a form specific to ClickUp would open up. Fill the fields as per your requirement, and **create the issue**.
 
 ---
 
@@ -102,7 +102,7 @@ LambdaTest integration with ClickUp will help you report bugs and UI anomalies d
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/clickup-7.webp').default} alt="clickup integration" width="1364" height="654" className="doc_img"/>
 
-> Note: After you click on **“Create Bug”**, you will be able to observe it being successfully marked through a single click effort. You will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a prompt message **“Bug successfully marked”** indicating that the screenshot has been pushed to your **ClickUp project**.
+> Note: After you click on **"Create Bug"**, you will be able to observe it being successfully marked through a single click effort. You will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a prompt message **"Bug successfully marked"** indicating that the screenshot has been pushed to your **ClickUp project**.
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/Capture15.webp').default} alt="clickup integration" width="347" height="75" className="doc_img"/>
 

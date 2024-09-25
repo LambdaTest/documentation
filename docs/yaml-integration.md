@@ -49,7 +49,7 @@ npm install
 
 <img loading="lazy" src={require('../assets/images/yaml-integration/YAML-4.webp').default} alt="Image"  className="doc_img"/>
 
-**Step 6:** You will find the YAML configuration file generated over the right side panel. In rare cases, if it doesn’t then you need to select the configuration language to first JSON, and then select YAML again. Now, if you scroll to bottom you will find a section to “Add Your Pipeline as Code Definitions to Your SCM Repository”. Click on the button to “Download Config”.
+**Step 6:** You will find the YAML configuration file generated over the right side panel. In rare cases, if it doesn’t then you need to select the configuration language to first JSON, and then select YAML again. Now, if you scroll to bottom you will find a section to "Add Your Pipeline as Code Definitions to Your SCM Repository". Click on the button to "Download Config".
 
 <img loading="lazy" src={require('../assets/images/yaml-integration/YAML-5.webp').default} alt="Image"  className="doc_img"/>
 

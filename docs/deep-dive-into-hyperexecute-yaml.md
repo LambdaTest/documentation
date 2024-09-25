@@ -71,7 +71,7 @@ matrix:
 ***
 
 ### `pre`
-All actions you need to perform before test execution, such as installing dependencies. You’ll ideally want to use this parameter to “pre” run simple commands like `npm install`, `yarn install`, `mvn install` etc
+All actions you need to perform before test execution, such as installing dependencies. You’ll ideally want to use this parameter to "pre" run simple commands like `npm install`, `yarn install`, `mvn install` etc
 
 ```yaml
 pre:
@@ -624,7 +624,7 @@ sourcePayload:
 ***
 
 ### `hostsOverride`
-This field allows you to add domain mappings which are required to be added in the local DNS entry represented by the /etc/hosts file. This is required if you want to map a custom domain name to an ip (local or otherwise) so that any requests on this domain name resolves to the provided ip on HyperExecute machines where your tests are running. For instance, suppose for a domain “example.com”, global DNS is having the entry which resolves the network call to the public IP address. With hostsOverride flag you can explicitly route the network call to a local IP address, instead of allowing the call to go through a public IP address.
+This field allows you to add domain mappings which are required to be added in the local DNS entry represented by the /etc/hosts file. This is required if you want to map a custom domain name to an ip (local or otherwise) so that any requests on this domain name resolves to the provided ip on HyperExecute machines where your tests are running. For instance, suppose for a domain "example.com", global DNS is having the entry which resolves the network call to the public IP address. With hostsOverride flag you can explicitly route the network call to a local IP address, instead of allowing the call to go through a public IP address.
 
 ```yaml
 hostsOverride:
@@ -702,7 +702,7 @@ preDirectives:
 ***
 
 ### `postDirectives`
-This is an advanced version of `post` where you can control “how” your post commands should be executed in a parallel HyperExecute Executor. If both post and postDirectives flags are provided at the same time, then the precedence is given to the postDirectives flag.
+This is an advanced version of `post` where you can control "how" your post commands should be executed in a parallel HyperExecute Executor. If both post and postDirectives flags are provided at the same time, then the precedence is given to the postDirectives flag.
 
 postDirectives currently has the ability to take the following additional inputs:
 
@@ -1320,7 +1320,7 @@ Here is the sample code showing how we can use the above mentioned Lambda hooks:
 ***
 
 ### `matrixEnvPrefix`
-When we run a job in matrix mode, we set the keys with their resolved value as env variables in the scenario being run. The keys are not prefixed and hence, in some cases, we had found out that some variables like “os” can affect your test runs (for example in dotnet build commands). So, if one has an `os` key in `matrix`, it may affect `dotnet build` command if one doesn’t set the matrixEnvPrefix: true in yaml to have the “os” key of matrix available to us as `HE_ENV_os
+When we run a job in matrix mode, we set the keys with their resolved value as env variables in the scenario being run. The keys are not prefixed and hence, in some cases, we had found out that some variables like "os" can affect your test runs (for example in dotnet build commands). So, if one has an `os` key in `matrix`, it may affect `dotnet build` command if one doesn’t set the matrixEnvPrefix: true in yaml to have the "os" key of matrix available to us as `HE_ENV_os
 
 ***
 

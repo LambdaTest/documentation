@@ -169,7 +169,7 @@ You will receive the below highlighted message **‘Tunnel stopped successfully
 
 <img loading="lazy" src={require('../assets/images/local-testing-windows/local-windows-17.webp').default} alt="Stopping tunnel" width="977" height="292" className="doc_img"/>
 
-**Option 2:**  You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button that's says **“Tunnel active”**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an **‘x’**  button. Press the **‘x’**  button to terminate the LambdaTest tunnel.
+**Option 2:**  You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button that's says **"Tunnel active"**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an **‘x’**  button. Press the **‘x’**  button to terminate the LambdaTest tunnel.
 
 <img loading="lazy" src={require('../assets/images/local-testing-windows/local-windows-18.webp').default} alt="disconnecting LambdaTest tunnel" width="1349" height="622" className="doc_img"/>
 

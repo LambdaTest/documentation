@@ -75,11 +75,11 @@ When two different applications interact with each other, a server-to-server com
 
 <img loading="lazy" src={require('../assets/images/shortcut-integration/shortcut-integration-3.webp').default} alt="settings" width="1361" height="649" className="doc_img"/>
 
-**Step 6:** As you click on Settings, select “API Tokens” from the left hand side. 
+**Step 6:** As you click on Settings, select "API Tokens" from the left hand side. 
 
 <img loading="lazy" src={require('../assets/images/shortcut-integration/shortcut-integration-4.webp').default} alt="generate token" width="1365" height="645" className="doc_img"/>
 
-**Step 7:** Provide a token name and hit the button that says “Generate Token”. 
+**Step 7:** Provide a token name and hit the button that says "Generate Token". 
 
 <img loading="lazy" src={require('../assets/images/shortcut-integration/shortcut-integration-5.webp').default} alt="copy api token" width="1365" height="642" className="doc_img"/>
 
@@ -99,7 +99,7 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 ## How To Log Your First Bug Through Shortcut Integration?
 ***
-**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking “Real Time Test” option.
+**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking "Real Time Test" option.
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & hit ‘Start‘.
 
@@ -109,11 +109,11 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 <img loading="lazy" src={require('../assets/images/shortcut-integration/shortcut-integration-9.webp').default} alt="VM launched" width="1348" height="619" className="doc_img"/>
 
-**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says “Mark as Bug”.
+**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says "Mark as Bug".
 
 <img loading="lazy" src={require('../assets/images/shortcut-integration/shortcut-integration-10.webp').default} alt="mark as bug" width="1320" height="618" className="doc_img"/>
 
-**Step 5:** After clicking on “Mark as Bug” button a Shortcut specific form would open up. Fill the fields as per your requirement. Click on “Create Issue” & observe it being successfully marked through a single click effort. 
+**Step 5:** After clicking on "Mark as Bug" button a Shortcut specific form would open up. Fill the fields as per your requirement. Click on "Create Issue" & observe it being successfully marked through a single click effort. 
 
 ---
 

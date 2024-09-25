@@ -71,7 +71,7 @@ LambdaTest integration with Backlog will help you file any UI bug on your Backlo
 
 <img loading="lazy" src={require('../assets/images/backlog-integration/backlog-3.webp').default} alt="Backlog Integration" width="933" height="72" className="doc_img"/>
 
-**Step 6:** On top-right corner of your Backlog instance, you will find a drop-down menu with your profile icon. Click on the drop-down and go to “Personal Settings”.
+**Step 6:** On top-right corner of your Backlog instance, you will find a drop-down menu with your profile icon. Click on the drop-down and go to "Personal Settings".
 
 <img loading="lazy" src={require('../assets/images/backlog-integration/backlog-4.webp').default} alt="Backlog Integration" width="1352" height="595" className="doc_img"/>
 
@@ -90,7 +90,7 @@ LambdaTest integration with Backlog will help you file any UI bug on your Backlo
 ## Log Your First Bug From LambdaTest Integration With Backlog
 ***
 
-**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking “Real Time Test” option.
+**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking "Real Time Test" option.
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & hit ‘Start‘.
 
@@ -100,15 +100,15 @@ LambdaTest integration with Backlog will help you file any UI bug on your Backlo
 
 <img loading="lazy" src={require('../assets/images/backlog-integration/clickup-5.webp').default} alt="Backlog Integration" width="1325" height="653" className="doc_img"/>
 
-**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says “Mark as Bug”.
+**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says "Mark as Bug".
 
 <img loading="lazy" src={require('../assets/images/backlog-integration/clickup-6.webp').default} alt="Backlog Integration" width="1365" height="650" className="doc_img"/>
 
-**Step 5:** After clicking on “Mark as Bug” button a form specific to Backlog would open up. Fill the fields as per your requirement, and create the issue.
+**Step 5:** After clicking on "Mark as Bug" button a form specific to Backlog would open up. Fill the fields as per your requirement, and create the issue.
 
 <img loading="lazy" src={require('../assets/images/backlog-integration/backlog-9.webp').default} alt="Backlog Integration" width="1365" height="613" className="doc_img"/>
 
-> Note: After you click on “Create Bug”, you will be able to observe it being successfully marked through a single click effort. You will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a prompt message “Bug successfully marked” indicating that the screenshot has been pushed to your Backlog project.
+> Note: After you click on "Create Bug", you will be able to observe it being successfully marked through a single click effort. You will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a prompt message "Bug successfully marked" indicating that the screenshot has been pushed to your Backlog project.
 
 <img loading="lazy" src={require('../assets/images/backlog-integration/Capture15.webp').default} alt="Backlog Integration" width="347" height="75" className="doc_img"/>
 

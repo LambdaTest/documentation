@@ -69,7 +69,7 @@ In this document, we will see how to run Selenium IDE tests on LambdaTest cloud 
 ```
 
 
-*   You also need your LambdaTest authentication credentials, which includes your LambdaTest username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [LambdaTest automation dashboard](https://automation.lambdatest.com/) and click on the “key” icon left to the help button, on the top right corner. 
+*   You also need your LambdaTest authentication credentials, which includes your LambdaTest username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [LambdaTest automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner. 
 
 <img loading="lazy" src={require('../assets/images/uploads/profile-1.webp').default} alt="LambdaTest Access Key" width="462" height="325" className="doc_img"/>
 

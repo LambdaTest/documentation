@@ -73,7 +73,7 @@ selenium.grid.password=<LT_ACCESS_KEY>
 
 This will verify your credentials and connect your LambdaTest account with the Vividus tool successfully, based on your current plan.
 
-To get your Username and Access Key, go to your [LambdaTest automation dashboard](https://automation.lambdatest.com/timeline/) and click on the “key” icon left to the help button, on the top right corner.
+To get your Username and Access Key, go to your [LambdaTest automation dashboard](https://automation.lambdatest.com/timeline/) and click on the "key" icon left to the help button, on the top right corner.
 
 <img loading="lazy" src={require('../assets/images/vividus-integration/lt-credentials.webp').default} alt="Finding Username and Access Key to Perform Automation Testing" width="1281" height="721" className="doc_img"/>
 

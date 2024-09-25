@@ -52,7 +52,7 @@ caps.setCapability("seTelemetryLogs", true);
 2. Pass the `selenium_version` capability in your test scripts and set it as `4.2.0`.
 
 ```bash
-caps.setCapability(“selenium_version”, “4.2.0”);
+caps.setCapability("selenium_version", "4.2.0");
 ```
 
 ## Visualizing Telemetry Logs using Jaeger 

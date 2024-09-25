@@ -71,15 +71,15 @@ The LambdaTest GoodDay integration helps you in filing bug-related issues to you
 > **What is an API token?**
 What is an API token? When two different applications interact with each other, a server-to-server communication is established. API token is needed for authenticating user identity from one server to another, by fetching user-owned resources available on the server from where the communication is initiated. API token has been a necessity for maintaining security and data integrity of any application. They are just as vital to an end user as they are to an application. API tokens are relevant if an end user logs in an application through a 2-step verification process.
 
-**Step 5:** You can find your API token from your GoodDay account. If you have not generated one before, you can generate an API token by going to the settings. You will find the “Settings” icon on the top right corner of your dashboard. 
+**Step 5:** You can find your API token from your GoodDay account. If you have not generated one before, you can generate an API token by going to the settings. You will find the "Settings" icon on the top right corner of your dashboard. 
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-3.webp').default} alt="settings" width="1361" height="649" className="doc_img"/>
 
-**Step 6:** As you click on “Settings”, you will see a section named “Integrations” on the left side navigation bar. Upon clicking “Integrations”, you need to select “API” from the drop-down.  
+**Step 6:** As you click on "Settings", you will see a section named "Integrations" on the left side navigation bar. Upon clicking "Integrations", you need to select "API" from the drop-down.  
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-4.webp').default} alt="generate token" width="1365" height="645" className="doc_img"/>
 
-**Step 7:** Now click on the button “Generate” in order to generate your API token. 
+**Step 7:** Now click on the button "Generate" in order to generate your API token. 
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-5.webp').default} alt="copy api token" width="1365" height="642" className="doc_img"/>
 
@@ -99,7 +99,7 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 ## How To Log Your First Bug Through GoodDay Integration?
 ***
-**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking “Real Time Test” option.
+**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking "Real Time Test" option.
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & hit ‘Start‘.
 
@@ -109,11 +109,11 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-9.webp').default} alt="VM launched" width="1348" height="619" className="doc_img"/>
 
-**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says “Mark as Bug”.
+**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says "Mark as Bug".
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-10.webp').default} alt="mark as bug" width="1320" height="618" className="doc_img"/>
 
-**Step 5:** After clicking on “Mark as Bug” button a GoodDay specific form would open up. Fill the fields as per your requirement. Click on “Create Issue” & observe it being successfully marked through a single click effort. You can select the following: 
+**Step 5:** After clicking on "Mark as Bug" button a GoodDay specific form would open up. Fill the fields as per your requirement. Click on "Create Issue" & observe it being successfully marked through a single click effort. You can select the following: 
 
 * You can select which **Project** should the ticket go under.
 * You can set the particular **Story Type**.
@@ -123,12 +123,12 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-11.webp').default} alt="details" width="1365" height="616" className="doc_img"/>
 
-**Step 6:** Visit your GoodDay dashboard. Under “Pinned Projects”, you will find the recently raised issue being highlighted. 
+**Step 6:** Visit your GoodDay dashboard. Under "Pinned Projects", you will find the recently raised issue being highlighted. 
 
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-12.webp').default} alt="story" width="1365" height="644" className="doc_img"/>
 
-**Step 8:** As you click on the recently raised issue under the “Not Started” tab, you will notice that all the data which you provided through LambdaTest would already be presented in it. LambdaTest automatically includes test environment details and related screenshots in the ticket as attachments. 
+**Step 8:** As you click on the recently raised issue under the "Not Started" tab, you will notice that all the data which you provided through LambdaTest would already be presented in it. LambdaTest automatically includes test environment details and related screenshots in the ticket as attachments. 
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-13.webp').default} alt="story" width="1365" height="644" className="doc_img"/>
 

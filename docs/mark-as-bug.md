@@ -103,7 +103,7 @@ LambdaTest offers more than 3000+ real browsers and browser versions on every ty
 
 ## Pushing Bugs To Third Party Tools
 
-LambdaTest provides integration with various 3rd party applications to help you collaborate with your teammates easily as you perform cross browser testing on our cloud-based platform. The “Mark as Bug” button will allow you instantly push your edited screenshot into your integrated workspace. You can integrate with the below mentioned 3rd party tools.
+LambdaTest provides integration with various 3rd party applications to help you collaborate with your teammates easily as you perform cross browser testing on our cloud-based platform. The "Mark as Bug" button will allow you instantly push your edited screenshot into your integrated workspace. You can integrate with the below mentioned 3rd party tools.
 
 - [JIRA](/docs/jira-integration/)
 - [Slack](/docs/slack-integration/)
@@ -130,7 +130,7 @@ LambdaTest provides integration with various 3rd party applications to help you 
 
 We are continually adding more integration to our platform. If you use some other tool, don’t hesitate to share it with us! Just drop a message through <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> & we’ll bring it here on our platform for you.
 
-As you click on the “**Mark as Bug**” button, an integration specific form would open up. Fill in the fields as per your requirement. For instance, if you have installed LambdaTest + Asana integration, you can fill the below-represented fields.
+As you click on the "**Mark as Bug**" button, an integration specific form would open up. Fill in the fields as per your requirement. For instance, if you have installed LambdaTest + Asana integration, you can fill the below-represented fields.
 
 - You can select which workspace the task should go under.
 

@@ -130,7 +130,7 @@ You can attach the below details with the screenshot:
 
 Every detail you provide at LambdaTest will automatically be reflected in the zipBoard task.
 
-> Note: After you click on “Create Bug”, you will be able to observe it being successfully marked through a single click effort. You will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a prompt message “Bug successfully marked” indicating that the screenshot has been pushed to your zipBoard project.
+> Note: After you click on "Create Bug", you will be able to observe it being successfully marked through a single click effort. You will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a prompt message "Bug successfully marked" indicating that the screenshot has been pushed to your zipBoard project.
 
 **Step 6:** If you visit your respective Project on zipBoard, you will find a new task created under it.
 

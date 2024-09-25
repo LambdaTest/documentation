@@ -60,7 +60,7 @@ Now to activate the Load Balancing feature in the LambdaTest Tunnel, create more
 `LT --user username --key access_key --tunnelName SampleTunnel --load-balanced`
 
 >
-To get your LambdaTest Username and Access Key, visit your LambdaTest automation dashboard and click on the “key” icon, present on the left to the help button, on the top right corner.
+To get your LambdaTest Username and Access Key, visit your LambdaTest automation dashboard and click on the "key" icon, present on the left to the help button, on the top right corner.
 <img loading="lazy" src={require('../assets/images/load-balancing-in-lambda-tunnel/load-balancing-1.webp').default} alt="Load Balancing In LambdaTest Tunnel" width="462" height="325" className="doc_img"/>
 
 For example, in the below screenshot, you can see two tunnels activated in the Load Balanced mode, using the above syntax:
@@ -75,10 +75,10 @@ Now when you will go to you LambdaTest dashboard, you will find both the tunnels
 
 * * *
 
-After activating the load balanced tunnels, all you need to do is to pass the “tunnel” capability as true in your automation test script. This will automatically run your tests in parallel by taking advantage of the Load Balancing.
+After activating the load balanced tunnels, all you need to do is to pass the "tunnel" capability as true in your automation test script. This will automatically run your tests in parallel by taking advantage of the Load Balancing.
 
 >
-Please note that you do not need to set the “tunnelName” capability as the tunnel name will be automatically managed from active tunnels in your profile.
+Please note that you do not need to set the "tunnelName" capability as the tunnel name will be automatically managed from active tunnels in your profile.
 
 For example, here is the Automation Logs view of the test run using the Load Balancing feature of LambdaTest Tunnel.
 

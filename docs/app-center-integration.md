@@ -82,13 +82,13 @@ Before getting started with the setup, you would need access to the following:
 
   ***
 
-2. Click on the “User API Tokens” to generate a token.
+2. Click on the "User API Tokens" to generate a token.
 
   <img loading="lazy" src={require('../assets/images/app-center-integration/app-center02.webp').default} alt="cmd" className="doc_img"/>
 
   ***
 
-3. Click on “Add new API token” to add the new token.
+3. Click on "Add new API token" to add the new token.
 
   <img loading="lazy" src={require('../assets/images/app-center-integration/app-center03.webp').default} alt="cmd" className="doc_img"/>
 
@@ -104,7 +104,7 @@ Before getting started with the setup, you would need access to the following:
 
 ---
 
-1. Click on the “Configure” Button
+1. Click on the "Configure" Button
 
   <img loading="lazy" src={require('../assets/images/app-center-integration/app-center05.webp').default} alt="cmd" className="doc_img"/>
 
@@ -116,7 +116,7 @@ Before getting started with the setup, you would need access to the following:
 
   ***
 
-3. Now Select your Builds on App Center by clicking on “Select Builds” to Select the “Builds” from App Center.
+3. Now Select your Builds on App Center by clicking on "Select Builds" to Select the "Builds" from App Center.
 
   <img loading="lazy" src={require('../assets/images/app-center-integration/app-center07.webp').default} alt="cmd" className="doc_img"/>
 

@@ -63,7 +63,7 @@ tunnel: true
 Specify the list of already running tunnel names which you want to use for accessing your applications which are locally hosted or behind a firewall.
 
 ```bash
-tunnelNames: [“lambdatest_tunnel”]
+tunnelNames: ["lambdatest_tunnel"]
 ```
 
 ### 3. Advanced `tunnel` Configurations

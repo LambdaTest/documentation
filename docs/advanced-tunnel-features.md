@@ -118,7 +118,7 @@ Key: 123456789abcdefghijklmnopqrstuv
 TunnelName: LambdaTest
 ```
 
-> **Note:** You will need to replace this file with your credentials and it has to be named exactly “`.lt.yaml`“. Once you specify the proxy information as environment variable, it gets auto detected.
+> **Note:** You will need to replace this file with your credentials and it has to be named exactly "`.lt.yaml`". Once you specify the proxy information as environment variable, it gets auto detected.
 
 Similarly, you can go ahead and pass any other variables by just specifying them in the YAML file. For example, if you wish to have verbose variable passed on for detailed logs while the binary is being configured. You will add the verbose flag in your YAML file:
 

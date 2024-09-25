@@ -67,7 +67,7 @@ Axosoft Integration with LambdaTest, like all of the integrations to 3rd party a
 
 **Step 1:** Log in to your [LambdaTest account](https://accounts.lambdatest.com/register). You need to have Admin or User level access to see and install 3rd party integrations.
 
-**Step 2:** Select the ‘Integrations’ tab from the left navigation menu bar under “Settings”. This will guide you to a screen where you will find a list of 3rd party applications, that have already been integrated as well as that are available to integrate with your LambdaTest account.
+**Step 2:** Select the ‘Integrations’ tab from the left navigation menu bar under "Settings". This will guide you to a screen where you will find a list of 3rd party applications, that have already been integrated as well as that are available to integrate with your LambdaTest account.
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-one.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -91,7 +91,7 @@ Axosoft Integration with LambdaTest, like all of the integrations to 3rd party a
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-six.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 8:** Click on the Manage Tokens section, and create a non-expiring token for the app you've just created. Select “LambdaTest” under app, "read and write" under scope, and enter create.
+**Step 8:** Click on the Manage Tokens section, and create a non-expiring token for the app you've just created. Select "LambdaTest" under app, "read and write" under scope, and enter create.
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-seven.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -99,7 +99,7 @@ Axosoft Integration with LambdaTest, like all of the integrations to 3rd party a
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-eight.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 10:** Once you enter “install” Axosoft will be integrated with LambdaTest, and an alert box will appear on the top right corner of the screen stating that the integration is in progress, you will be notified on your mail post successful integration.
+**Step 10:** Once you enter "install" Axosoft will be integrated with LambdaTest, and an alert box will appear on the top right corner of the screen stating that the integration is in progress, you will be notified on your mail post successful integration.
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-nine.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -115,7 +115,7 @@ Axosoft Integration with LambdaTest, like all of the integrations to 3rd party a
 
 **Step 1:** Select any of the tests from the left navigation menu of LambdaTest. For this instance, we will be taking the "Real Time Testing" option.
 
-**Step 2:** Enter the URL of the web app to be tested in the URL box, and select “mobile” device for testing. Press 'Start' after selecting the configuration of the browser and operating system as per your choice. 
+**Step 2:** Enter the URL of the web app to be tested in the URL box, and select "mobile" device for testing. Press 'Start' after selecting the configuration of the browser and operating system as per your choice. 
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-eleven.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -123,7 +123,7 @@ Axosoft Integration with LambdaTest, like all of the integrations to 3rd party a
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-twelve.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 4:** A screenshot will be captured and appear on your screen in an in-built image editor. Annotate any issue as per your choice in this editor, and then press the "Mark as Bug" button under “Axosoft” integration. 
+**Step 4:** A screenshot will be captured and appear on your screen in an in-built image editor. Annotate any issue as per your choice in this editor, and then press the "Mark as Bug" button under "Axosoft" integration. 
 
 <img loading="lazy" src={require('../assets/images/axosoft-integration/axosoft-thirteen.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -147,7 +147,7 @@ You can work with one integration at a time. So if you want to integrate into a 
 
 **Step 1:** Log in to your LambdaTest account.
 
-**Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you can remove the Axosoft integration under the tab that says “My Integrations”.
+**Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you can remove the Axosoft integration under the tab that says "My Integrations".
 
 **Step 3:** On the Axosoft block, a "REMOVE" button will appear. Click on ‘REMOVE’. 
 

@@ -196,7 +196,7 @@ Navigation caused the user agent to hit a certificate warning, which is usually 
 
 * SSL works through a combination of programs and encryption/decryption routine that exist on the web server computer and web server browser.
 * When a secure connection is not established between the server and client due to the certificate, following SSL certificate error will be manifested.
-* Suppose you provide some https request in the browser and get a prompt such as “This connection is untrusted” or the “The site’s security certificate is not trusted” (which varies as per the browser being used). Then such an error is subject to SSL certificate error.
+* Suppose you provide some https request in the browser and get a prompt such as "This connection is untrusted" or the "The site’s security certificate is not trusted" (which varies as per the browser being used). Then such an error is subject to SSL certificate error.
 
 
 ### Possible Solutions:

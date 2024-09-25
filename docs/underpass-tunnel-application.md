@@ -64,7 +64,7 @@ With LambdaTest Underpass, you can perform [cross browser testing](https://www.l
 | [Download Underpass For macOS](https://downloads.lambdatest.com/underpass/master/UnderPass.dmg) |
 | [Download Underpass For Linux](https://downloads.lambdatest.com/underpass/master/UnderPass.AppImage) |
 
-You can also download the Underpass tunnel application from the LambdaTest web-application. Login to your LambdaTest account, and hit the button to configure tunnel. After that, switch to the tab “Download App” and click the button which says “Download Tunnel App”. This will download the binary file using which you can perform browser compatibility testing over your locally hosted web-applications or websites.
+You can also download the Underpass tunnel application from the LambdaTest web-application. Login to your LambdaTest account, and hit the button to configure tunnel. After that, switch to the tab "Download App" and click the button which says "Download Tunnel App". This will download the binary file using which you can perform browser compatibility testing over your locally hosted web-applications or websites.
 
 <img loading="lazy" src={require('../assets/images/underpass-tunnel-application/underpass_download.png').default} alt="LambdaTest Underpass" width="1345" height="624" className="doc_img"/>
 
@@ -148,7 +148,7 @@ You can test such websites by leveraging the MITM toggle under advanced configur
 
 ### Accessing A Local Directory
 * * *
-With Underpass application, you can easily access a local folder or directory in your computer. All you need to do is paste the address of folder in the field “LOCAL DIRECTORY” under the advanced configurations.
+With Underpass application, you can easily access a local folder or directory in your computer. All you need to do is paste the address of folder in the field "LOCAL DIRECTORY" under the advanced configurations.
 
 <img loading="lazy" src={require('../assets/images/underpass-tunnel-application/underpass_localfiles.jpg').default} alt="LambdaTest Underpass" width="776" height="506" className="doc_img"/>
 

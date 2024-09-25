@@ -131,7 +131,7 @@ Go to Integrations again and you will be able to notice a green tick indicating 
 ## Logging Your First Bug Through GitHub Integration
 ***
 
-**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking **“Real Time Test”** option.
+**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking **"Real Time Test"** option.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/Screenshot-112.webp').default} alt="github-integration" width="1348" height="566" className="doc_img"/>
 
@@ -143,11 +143,11 @@ Go to Integrations again and you will be able to notice a green tick indicating 
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/Screenshot-108.webp').default} alt="github-integration" width="1366" height="574" className="doc_img"/>
 
-**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an **in-built image editor.** Once you are done highlighting the bug, click on the button that says **“Mark as Bug”.**
+**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an **in-built image editor.** Once you are done highlighting the bug, click on the button that says **"Mark as Bug".**
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/Screenshot-109.webp').default} alt="github-integration" width="1366" height="562" className="doc_img"/>
 
-**Step 5**: After clicking on **“Mark as Bug”** button a GitHub specific form would open up. Fill the fields as per your requirement.
+**Step 5**: After clicking on **"Mark as Bug"** button a GitHub specific form would open up. Fill the fields as per your requirement.
 
  - You can select which repo should the observation be marked under.
  - You can select a relevant label for the same UI observation.
@@ -156,7 +156,7 @@ Go to Integrations again and you will be able to notice a green tick indicating 
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/Screenshot-110.webp').default} alt="github-integration" width="1366" height="566"  className="doc_img"/>
 
-**Step 6**: Click on **“Create Issue”** & observe it being successfully marked through a single click effort. Once you hit the button, you will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning **“Bug successfully marked”** indicating that the bug has been pushed to the desired GitHub repository.
+**Step 6**: Click on **"Create Issue"** & observe it being successfully marked through a single click effort. Once you hit the button, you will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning **"Bug successfully marked"** indicating that the bug has been pushed to the desired GitHub repository.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/Capture15.webp').default} alt="github-integration" width="347" height="75" className="doc_img"/>
 

@@ -64,7 +64,7 @@ The LambdaTest Bitbucket Integration allows you to create an issue directly in y
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-form.webp').default} alt="form"  className="doc_img"  width="1365" height="722"/>
 
-**Step 5.** As you press “ADD” button, you will be directed to an authentication page. Here you will need to grant LambdaTest the access to your user-owned resources on Bitbucket. Hit on the blue button that says **“Grant access”.**
+**Step 5.** As you press "ADD" button, you will be directed to an authentication page. Here you will need to grant LambdaTest the access to your user-owned resources on Bitbucket. Hit on the blue button that says **"Grant access".**
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-grantaccess.webp').default} alt="grant access"  className="doc_img" width="1362" height="585"/>
 
@@ -91,7 +91,7 @@ That is it, you will be notified with a prompt message on top mentioning that Bi
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-bug.webp').default} alt="bug"  className="doc_img" width="1365" height="647"/>
 
-**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking **“Real Time Test”** option.
+**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking **"Real Time Test"** option.
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & click **‘Start‘.**
 
@@ -101,7 +101,7 @@ That is it, you will be notified with a prompt message on top mentioning that Bi
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-testing.webp').default} alt="testing"  className="doc_img" width="1348" height="619"/>
 
-**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an **in-built image editor.** Once you are done highlighting the bug, click on the button that says **“Mark as Bug”.**
+**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an **in-built image editor.** Once you are done highlighting the bug, click on the button that says **"Mark as Bug".**
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-markbug.webp').default} alt="mark bug"  className="doc_img" width="1320" height="618"/>
 
@@ -109,7 +109,7 @@ When marking as bug, make sure that you have a repository already created into y
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-errormessage.webp').default} alt="error message"  className="doc_img" width="1365" height="652"/>
 
-**Step 5:** If you are up and ready with a repository, then once you click on **“Mark as Bug”** button a Bitbucket specific form would open up. Fill the fields as per your requirement.
+**Step 5:** If you are up and ready with a repository, then once you click on **"Mark as Bug"** button a Bitbucket specific form would open up. Fill the fields as per your requirement.
 
  - You can choose out of your **‘Repositories’,** for logging your UI observation.
  - You can set the appropriate **‘Label’** for the same.
@@ -118,7 +118,7 @@ When marking as bug, make sure that you have a repository already created into y
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-demo.webp').default} alt="demo"  className="doc_img" width="1365" height="767"/>
 
-**Step 6:** Click on **“Create Bug”** & observe it being successfully marked through a single click effort. Once you hit the button, you will get **prompt messages** on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning **“Bug successfully marked”** indicating that the UI observation has been pushed to your Bitbucket repository.
+**Step 6:** Click on **"Create Bug"** & observe it being successfully marked through a single click effort. Once you hit the button, you will get **prompt messages** on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning **"Bug successfully marked"** indicating that the UI observation has been pushed to your Bitbucket repository.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-markedbug.webp').default} alt="marked bug"  className="doc_img" width="347" height="75"/>
 

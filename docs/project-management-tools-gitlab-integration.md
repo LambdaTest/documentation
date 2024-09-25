@@ -105,7 +105,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-accesstoken.webp').default} alt="access token"  className="doc_img"  width="1366" height="627"/>
 
-4. **“Add a personal access token”** by providing a name for the application. Keep the name that is easy for you to remember as you access token will be derived from it. You can also set an expiry date for that token. Also, select the checkboxes for **‘api’, ‘read_user’ & read_repository** as scopes. These scopes will define the access to authenticate API over Basic OAuth for their respective personal token. After selecting the scopes hit the green button to **“Create personal access token”.**
+4. **"Add a personal access token"** by providing a name for the application. Keep the name that is easy for you to remember as you access token will be derived from it. You can also set an expiry date for that token. Also, select the checkboxes for **‘api’, ‘read_user’ & read_repository** as scopes. These scopes will define the access to authenticate API over Basic OAuth for their respective personal token. After selecting the scopes hit the green button to **"Create personal access token".**
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/personal-accesstoken.webp').default} alt="personal access token"  className="doc_img" width="1365" height="693"/>
 
@@ -116,7 +116,7 @@ In scenarios where OAuth is excessively utilized, Personal Access Tokens comes t
 
 ---
 
-After you click on **“Create personal access token”,** you will get a prompt message saying **“Your new personal access token has been created”.** You will find it under the highlighted field.
+After you click on **"Create personal access token",** you will get a prompt message saying **"Your new personal access token has been created".** You will find it under the highlighted field.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/Gitlab-Integrations-Project-Management-enter.webp').default} alt="create token"  className="doc_img" width="1348" height="627"/>
 
@@ -138,7 +138,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 ---
 
-**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking **“Real Time Test”** option.
+**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking **"Real Time Test"** option.
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & click **‘Start‘.**
 
@@ -148,11 +148,11 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/mark-bug.webp').default} alt="mark as bug"  className="doc_img" width="1358" height="619"/>
 
-**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says **“Mark as Bug”.**
+**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says **"Mark as Bug".**
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/image-editor.webp').default} alt="image editor"  className="doc_img" width="1164" height="562"/>
 
-**Step 5:** After clicking on **“Mark as Bug”** button a GitLab specific form would open up. Fill the fields as per your requirement.
+**Step 5:** After clicking on **"Mark as Bug"** button a GitLab specific form would open up. Fill the fields as per your requirement.
 
  - You can select which **Projects** should the observation be marked under.
  - You can select a relevant **Label** for the same UI observation.
@@ -161,7 +161,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-form.webp').default} alt="form"  className="doc_img" width="368" height="491"/>
 
-**Step 6:** Click on **“Create Bug”** & observe it being successfully marked through a single click effort. Once you hit the button, you will get **prompt messages** on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning **“Bug marked successfully”** indicating that the bug has been pushed to the desired GitLab repository.
+**Step 6:** Click on **"Create Bug"** & observe it being successfully marked through a single click effort. Once you hit the button, you will get **prompt messages** on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning **"Bug marked successfully"** indicating that the bug has been pushed to the desired GitLab repository.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/create-bug.webp').default} alt="create a bug"  className="doc_img" width="1340" height="162"/>
 

@@ -90,7 +90,7 @@ Currently, App Automate supports the following permission settings:
 
 One important thing to remember while handling Permission Settings is that, we have to first take action on the **Permission Pop ups** from the app when they appear and then only those particular Permission Settings will be reflected in the app settings page. For example:
 
-Let's say we pass Camera: “On“ in the lambda hook’s preferences even before handling Camera’s permission popup from the app, the Camera key would be missing on the app settings page which would result in failure. So we have to be sure that we have handled the permission pop ups before calling lambda hook.
+Let's say we pass Camera: "On" in the lambda hook’s preferences even before handling Camera’s permission popup from the app, the Camera key would be missing on the app settings page which would result in failure. So we have to be sure that we have handled the permission pop ups before calling lambda hook.
 
 :::info
 
@@ -122,7 +122,7 @@ Currently, App Automate supports the following custom settings:
 
 Apart from Textfields and Sliders, for every other settings, we have to pass the Name of that particular setting as the **key-value pair**. For example:
 
-- “Reset App“ : “On“.
+- "Reset App" : "On".
 
 For **textfields and sliders**, we pass the index of that particular textfield or slider starting from 1 when we traverse from top to bottom. For example:
 

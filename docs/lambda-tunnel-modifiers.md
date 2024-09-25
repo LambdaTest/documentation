@@ -68,7 +68,7 @@ This document will help you understand all the modifiers/arguments used with Lam
 | -l           | --load-balanced | Activates [Load Balancing](https://www.lambdatest.com/support/docs/load-balancing-in-lambda-tunnel/) for LambdaTest Tunnel                          | N/A     |
 |              | --logFile       | Location of the LambdaTest Tunnel Log File                                                                                                          | String  |
 | -m           | --mitm          | Enable the [MITM(Man-in-the-middle)](https://www.lambdatest.com/support/docs/advanced-tunnel-features/#mitmlocaltesting) mode for LambdaTest Tunnel | N/A     |
-|              | --mode          | Specifies in which mode tunnel should run [ssh,ws]. (default “ssh”)                                                                                 | String  |
+|              | --mode          | Specifies in which mode tunnel should run [ssh,ws]. (default "ssh")                                                                                 | String  |
 |              | --ntlm          | To use Microsoft NTLM (Windows NT LAN Manager) authentication for communication or transport purposes.                                                  | Boolean |
 |              | --pidfile       | Path Of Pidfile, Where Process ID will Be Written                                                                                                   | String  |
 | -p           | --port          | Port for LambdaTest Tunnel to activate.                                                                                                             | Integer |
