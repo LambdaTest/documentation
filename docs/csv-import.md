@@ -1,16 +1,16 @@
 ---
-id: test-case-import
-title: Test Case Import
+id: csv-import
+title: CSV Import
 hide_title: true
-sidebar_label: Test Case Import
-description: Simplify your test case import with LambdaTest's Test Manager. Easily upload and manage test cases to enhance testing efficiency and productivity.
+sidebar_label: CSV Import
+description: Simplify your csv import with LambdaTest's Test Manager. Easily upload and manage test cases to enhance testing efficiency and productivity.
 keywords:
   - test case import
-  - test cases
+  - csv import
   - test case
-url: https://www.lambdatest.com/support/docs/test-case-import/
+url: https://www.lambdatest.com/support/docs/csv-import/
 site_name: LambdaTest
-slug: test-case-import/
+slug: csv-import/
 ---
 
 <script type="application/ld+json"
@@ -30,20 +30,20 @@ slug: test-case-import/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Test Case Import",
-          "item": "https://www.lambdatest.com/support/docs/test-case-import/"
+          "name": "CSV Import",
+          "item": "https://www.lambdatest.com/support/docs/csv-import/"
         }]
       })
     }}
 ></script>
 
-# Test Case Import
+# CSV Import
 
-Importing test cases into Test Manager allows you to seamlessly integrate existing test cases from other sources or formats, facilitating a smooth transition and consolidation of your testing assets.
+CSV import in Test Manager allows seamless integration of existing test cases from various sources, making the transition and consolidation of testing assets effortless.
 
-**Steps for Importing Test Cases**
+**Steps for Enabling CSV Import**
 
-There are four major steps to be followed to import test cases:
+There are four major steps to be followed to use CSV Import:
 
 - Upload CSV file
 - Map fields
@@ -93,7 +93,7 @@ Let’s have a look at each of these steps in detail:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Test Case Import
+        CSV Import
       </span>
     </li>
   </ul>
