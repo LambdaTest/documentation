@@ -3,7 +3,7 @@ id: one-click-migration-from-testrail
 title: One Click Migration from TestRail
 hide_title: true
 sidebar_label: One Click Migration from TestRail
-description: Learn how to efficiently copy and move test cases within LambdaTest, streamlining your testing process and enhancing organization across multiple projects.
+description: Effortlessly migrate from TestRail to LambdaTest with our one-click migration guide. Simplify the process and enhance your testing capabilities in minutes.
 keywords:
   - testrail
   - import data from testrail
