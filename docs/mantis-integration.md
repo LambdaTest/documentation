@@ -72,19 +72,19 @@ LambdaTest integration with Mantis helps you in filing issues to your project in
 When two different applications interact with each other, a server-to-server communication is established. API token is needed for authenticating user identity from one server to another, by fetching user-owned resources available on the server from where the communication is initiated. API token has been a necessity for maintaining security and data integrity of any application. They are just as vital to an end user as they are to an application. API tokens are relevant if an end user logs in an application through a 2-step verification process.
 
 > **What is Mantis Site Address?**
-Your “Mantis Site Address” would be the URL for the instance of your project on Mantishub. The part highlighted with blue in the below image will be your Mantis Site Address.
+Your "Mantis Site Address" would be the URL for the instance of your project on Mantishub. The part highlighted with blue in the below image will be your Mantis Site Address.
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-3.webp').default} alt="mantis integration" width="1366" height="768" className="doc_img"/>
 
-**Step 5:** To find the API token, login to your MantisHub account. Go to the ‘administrator’ drop-down on the top-right corner and click on “My Account”.
+**Step 5:** To find the API token, login to your MantisHub account. Go to the ‘administrator’ drop-down on the top-right corner and click on "My Account".
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-5.webp').default} alt="create api mantis" width="1364" height="649" className="doc_img"/>
 
-**Step 6:** As you click on “My Account”, you will find a tab for “API Tokens”. Enter a value in the provided field. It could be any value you like and then click on the button that says “Create API Token”.
+**Step 6:** As you click on "My Account", you will find a tab for "API Tokens". Enter a value in the provided field. It could be any value you like and then click on the button that says "Create API Token".
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-6.webp').default} alt="Mantis integration Token" width="1365" height="649" className="doc_img"/>
 
-**Step 7:** As you click on “Create API Token”, an API token would be generated. Keep the API token stored with you safely as you won’t be able to see it again.
+**Step 7:** As you click on "Create API Token", an API token would be generated. Keep the API token stored with you safely as you won’t be able to see it again.
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-8.webp').default} alt="mantis integration api" width="1364" height="648" className="doc_img"/>
 
@@ -102,7 +102,7 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 ## How To Log Your First Bug Through Mantis Integration?
 * * *
-**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking “Real Time Test” option.
+**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking "Real Time Test" option.
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & hit ‘Start‘.
 
@@ -112,11 +112,11 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-12.webp').default} alt="bug icon" width="1365" height="639" className="doc_img"/>
 
-**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says “Mark as Bug”.
+**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says "Mark as Bug".
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mark-as-bug.webp').default} alt="mark as bug" width="1365" height="619" className="doc_img"/>
 
-**Step 5:** As you click on “Mark as Bug” button, a Mantis specific form would open up. Fill the fields as per your requirement.
+**Step 5:** As you click on "Mark as Bug" button, a Mantis specific form would open up. Fill the fields as per your requirement.
 
 ---
 
@@ -126,12 +126,12 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 * You can set the severity as well as the priority of the bug.
 * You can mention the summary as well for better visibility on dashboard.
 * You also get to post a description to help relate the cause of the issue or the task.
-* If you have got a lot to convey then you can do so by populating the “Additional Information”.
+* If you have got a lot to convey then you can do so by populating the "Additional Information".
 ---
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-13.webp').default} alt="mantis integration" width="1365" height="647" className="doc_img"/>
 
-**Step 6:** Click on “Create Bug” & observe it being successfully marked through a single click effort. Once you hit the button, you will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning “Bug successfully marked” indicating that the issue has been successfully pushed to the respective workspace.
+**Step 6:** Click on "Create Bug" & observe it being successfully marked through a single click effort. Once you hit the button, you will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning "Bug successfully marked" indicating that the issue has been successfully pushed to the respective workspace.
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/Capture15.webp').default} alt="mantis integration" width="345" height="75" className="doc_img"/>
 

@@ -72,7 +72,7 @@ LambdaTest now integrates with Codeship to boost your go-to-market delivery. Per
 
 ## Integrating Codeship With LambdaTest
 ***
-**Step 1:** Sign up on Codeship with your GitHub account, and create a **“New Project.”**
+**Step 1:** Sign up on Codeship with your GitHub account, and create a **"New Project."**
 
 <img loading="lazy" src={require('../assets/images/codeship-integration/codeship.webp').default} alt="Sign up on Codeship" width="1365" height="650" className="doc_img"/>
 
@@ -84,7 +84,7 @@ LambdaTest now integrates with Codeship to boost your go-to-market delivery. Per
 
 <img loading="lazy" src={require('../assets/images/codeship-integration/codeship-2.webp').default} alt="Provide your GitHub organization" width="1344" height="649" className="doc_img"/>
 
-**Step 4:** Now, you need to opt for **"Codeship Basic"** as your project type by clicking on **“Select Basic Project.”**
+**Step 4:** Now, you need to opt for **"Codeship Basic"** as your project type by clicking on **"Select Basic Project."**
 
 <img loading="lazy" src={require('../assets/images/codeship-integration/codeship-3.webp').default} alt="opt for Codeship Basic" width="798" height="415" className="doc_img"/>
 
@@ -97,14 +97,14 @@ npm install
 npm install -g protractor
 ```
 
-**Step 6:** Create a new pipeline in the section **“Configure Test Pipelines.”** Use the below command to connect it with your **GitHub repository** by replacing the **GitHubOrganization & reponame** with the input's values.
+**Step 6:** Create a new pipeline in the section **"Configure Test Pipelines."** Use the below command to connect it with your **GitHub repository** by replacing the **GitHubOrganization & reponame** with the input's values.
 
 ```
 cd /home/rof/src/github.com/<GitHubOrganization>/<reponame>/conf 
 protractor single.conf.js 
 ```
 
-**Step 7:** Provide your LambdaTest authentication credentials in the **Environment Variables** and hit the **“Save and go to Dashboard”** button.
+**Step 7:** Provide your LambdaTest authentication credentials in the **Environment Variables** and hit the **"Save and go to Dashboard"** button.
 
 That is it! Now, any changes you commit in your GitHub repository will trigger the build in Codeship and run your test on LambdaTest Selenium Grid.
 
@@ -154,7 +154,7 @@ cd /home/rof/src/github.com/<GitHubOrganization>/<reponame>/conf
 protractor local.conf.js
 ```
 
-The setup command will be the same as mentioned earlier under the “Integration With Codeship” section. After then commit any changes into the repository and get your test run using LambdaTest Tunnel.
+The setup command will be the same as mentioned earlier under the "Integration With Codeship" section. After then commit any changes into the repository and get your test run using LambdaTest Tunnel.
 
 ## Parallel Testing
 ***

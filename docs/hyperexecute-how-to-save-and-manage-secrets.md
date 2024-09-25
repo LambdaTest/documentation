@@ -143,7 +143,7 @@ In the above sample YAML file:
 - **MyKey2** in the vars section uses `secretKey2`.
 - **testRunnerCommand** utilizes `secretKey2` for the password.
 
-<!-- Since we do not have SecretKey3 saved. CLI will error out with “**SecretKey3 not found in vault.**“ -->
+<!-- Since we do not have SecretKey3 saved. CLI will error out with "**SecretKey3 not found in vault.**" -->
 
 :::info
 - By using secrets within your YAML file, you avoid embedding sensitive information directly in your code, enhancing security.

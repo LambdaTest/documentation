@@ -71,11 +71,11 @@ The LambdaTest Paymo integration helps you in filing issues to your project in P
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-instance.webp').default} alt="instance" className="doc_img" width="1361" height="655"/>
 
-**Step 6:** As you click on settings icon, go to **“Your Settings”.**
+**Step 6:** As you click on settings icon, go to **"Your Settings".**
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-settings.webp').default} alt="settings" className="doc_img" width="1365" height="650"/>
 
-**Step 7:** Scroll down to the bottom of the page and you will find a section for **“APP PASSWORDS(API KEYS)”.** Mention any input you like in the box & click on **‘Generate’.**
+**Step 7:** Scroll down to the bottom of the page and you will find a section for **"APP PASSWORDS(API KEYS)".** Mention any input you like in the box & click on **‘Generate’.**
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-generatepassword.webp').default} alt="generate password" className="doc_img" width="1365" height="656"/>
 
@@ -99,7 +99,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 ---
 
-**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking **“Real Time Test”** option.
+**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking **"Real Time Test"** option.
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & click **‘Start‘.**
 
@@ -109,11 +109,11 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-findbugs.webp').default} alt="find bug" className="doc_img" width="1348" height="619"/>
 
-**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an **in-built image editor.** Once you are done highlighting the bug, click on the button that says **“Mark as Bug”.**
+**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an **in-built image editor.** Once you are done highlighting the bug, click on the button that says **"Mark as Bug".**
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-markbug.webp').default} alt="mark bug" className="doc_img" width="1320" height="618"/>
 
-**Step 5:** After clicking on **“Mark as Bug”** button a Paymo specific form would open up. Fill the fields as per your requirement.
+**Step 5:** After clicking on **"Mark as Bug"** button a Paymo specific form would open up. Fill the fields as per your requirement.
 
 > - You can select which **project** should the ticket go under, along with the **Issue type.**
 
@@ -124,7 +124,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-createissue.webp').default} alt="create issue" className="doc_img" width="1360" height="647"/>
 
-**Step 6:** Click on **“Create Bug”** & observe it being successfully marked through a single click effort. Once you hit the button, you will get **prompt messages** on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning **“Bug successfully marked”** indicating that the issue has been successfully pushed to the respective workspace.
+**Step 6:** Click on **"Create Bug"** & observe it being successfully marked through a single click effort. Once you hit the button, you will get **prompt messages** on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning **"Bug successfully marked"** indicating that the issue has been successfully pushed to the respective workspace.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-paymo-integration/paymo-bugmarked.webp').default} alt="bug marked" className="doc_img" width="347" height="75"/>
 

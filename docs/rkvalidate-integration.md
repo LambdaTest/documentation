@@ -105,7 +105,7 @@ rkresults
 5. Run the below command to get the results.
 
 ```
-“rkresults”
+"rkresults"
 ```
 <img loading="lazy" src={require('../assets/images/rktracer-integration/7.png').default} alt="rktracer" width="1345" height="627" className="doc_img"/>
 

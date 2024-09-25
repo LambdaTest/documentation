@@ -48,7 +48,7 @@ The TeamCity plugin will help you to manage your LambdaTest credentials, write a
 
 ## Downloading The TeamCity Plugin From Marketplace
 
-Visit the [JetBrains marketplace](https://plugins.jetbrains.com/) and enter “LambdaTest” in the search bar.
+Visit the [JetBrains marketplace](https://plugins.jetbrains.com/) and enter "LambdaTest" in the search bar.
 
 <img loading="lazy" src={require('../assets/images/teamcity-plugin/teamcity-plugin-13-768x401.webp').default} alt="jetbrain" width="768" height="432" className="doc_img"/>
 

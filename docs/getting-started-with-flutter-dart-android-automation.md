@@ -276,7 +276,7 @@ The following capabilities are supported:
 
 1. **app:** Enter the app id generated while uploading the app. Example:`lt://APP123456789123456789`
 2. **testSuite:** Enter the test suite id generated while uploading the test suite. Example: `lt://APP123456789123456789`
-3. **device:** Enter the name and os version of the device in “DeviceName-OSVersion” format. Example: `Pixel 6-12` or `Galaxy S21 Ultra 5G-11`. You can also choose to use regular expression for device name such as `Pixel.*-12`.
+3. **device:** Enter the name and os version of the device in "DeviceName-OSVersion" format. Example: `Pixel 6-12` or `Galaxy S21 Ultra 5G-11`. You can also choose to use regular expression for device name such as `Pixel.*-12`.
 4. **video:** Generate video for all the tests that have run. Example: `true`.
 5. **queueTimeout:** Enter the time in seconds for total execution time of the build. Example: `900`.
 6. **testTimeout:** Max wait time for test execution (default value - `900` secs)

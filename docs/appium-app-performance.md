@@ -52,7 +52,7 @@ LambdaTest provides you with two metrics in a time-series format representing th
 
 1. **System CPU Usage (%)**: The total percentage of CPU being used by the entire system
 
-2. **App CPU Usage (%)**: The share of “System CPU usage” being used by the AUT.
+2. **App CPU Usage (%)**: The share of "System CPU usage" being used by the AUT.
 
 ***
 

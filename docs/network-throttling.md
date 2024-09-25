@@ -98,10 +98,9 @@ driver.executeScript("lambda-throttle-network", throttleParams);
 ```
 LambdaTest now allows you to select a network profile before running automation tests. This will allow you to conduct the functional tests of your website or web app on low/high latency networks and offline. In order to simulate the network conditions, you can use the networkProfile capability as shown below.
 
-
-| JAVASCRIPT EXECUTOR COMMAND | REQUEST PARAMETERS                                                    | EXAMPLE                                                                                                         |
-| ----------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| networkProfile              | condition: a string or object representing browser network conditions | driver.execute_script(“networkProfile”, &lbrace;“condition”: &lbrace;“download”: 500,“upload”: 100,“latency”: 30&rbrace;&rbrace;) |
+| JAVASCRIPT EXECUTOR COMMAND | REQUEST PARAMETERS | EXAMPLE |
+| ----------------------- | ------------------------------------------ | -------------------- |
+| networkProfile | condition: a string or object representing browser network conditions | driver.execute_script("networkProfile", &lbrace;"condition": &lbrace;"download": 500,"upload": 100,"latency": 30&rbrace;&rbrace;) |
 
 ## Configuring Network Throttling In Test Automation
 

@@ -29,7 +29,7 @@ slug: tas-faq-and-troubleshooting/
 - You need to migrate the step in your CI pipeline that runs the tests of your repository.
 
 **What are the different Hosting options?**
-- **TAS Cloud** - The entire infrastructure is managed by TAS including the “test runners” that has access to your code for running the tests. The tests in your repository will be executed on cloud runners managed by TAS.
+- **TAS Cloud** - The entire infrastructure is managed by TAS including the "test runners" that has access to your code for running the tests. The tests in your repository will be executed on cloud runners managed by TAS.
 - **Self Hosted** - In this option, you need to provide the machines (and manage those machines yourselves) to run tests in your repository. TAS will only receive the tests metadata to show you the insights on TAS portal.
 
 **Will this work on an on-premise data centre.**

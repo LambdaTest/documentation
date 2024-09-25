@@ -90,7 +90,7 @@ As a result, you’ll be able to expand your test coverage, analyze and extract 
 ```bash
 npm install -g selenium-side-runner
 ```
-* You also need your LambdaTest authentication credentials, which includes your LambdaTest username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your LambdaTest automation dashboard and click on the “key” icon left to the help button, on the top right corner.
+* You also need your LambdaTest authentication credentials, which includes your LambdaTest username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your LambdaTest automation dashboard and click on the "key" icon left to the help button, on the top right corner.
 
 <p align="center">
 <img loading="lazy" src={require('../assets/images/uploads/ghost-inspector-dashboard-5.webp').default} alt="Integrate Ghost Inspector" width="775" height="647" className="doc_img"/>

@@ -59,7 +59,7 @@ To perform your tests with LambdaTest, you would need the below things to be alr
 
 2.  You also need your LambdaTest authentication credentials, which include your LambdaTest username, and access key.
 
-> To get your Username and Access Key, go to your [LambdaTest automation dashboard](https://automation.lambdatest.com/) and click on the “key” icon left to the help button, on the top right corner. <img loading="lazy" src={require('../assets/images/uploads/profile-1.webp').default} alt="appveyor ci integration" width="462" height="325" className="doc_img"/>
+> To get your Username and Access Key, go to your [LambdaTest automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner. <img loading="lazy" src={require('../assets/images/uploads/profile-1.webp').default} alt="appveyor ci integration" width="462" height="325" className="doc_img"/>
 
 Update your username and access key in the "Config.properties" file.
 
@@ -90,9 +90,9 @@ Below is the step-by-step execution of the AppVeyor CI pipeline.
 1.  Make sure to add your LambdaTest's hub URL and [Desired Capabilities](/docs/selenium-automation-capabilities/) in your test setup, as done in the _AppveyorCI/src/main/java/stepDefinitions/ToDoStepDefinition.java_ file of the mentioned GitHub repository.
 
 2.  Push the changes to your integrated GitHub repository. For example, we have changed the test name in the forked repository.
-3.  Once the edit is complete, click on “Commit Changes” to save and commit the changes made. AppVeyor CI is activated as soon as this step is done since we have used “push event” for triggering the AppVeyor CI. <img loading="lazy" src={require('../assets/images/uploads/appveyorCi-10-1024x417.webp').default} alt="appveyor ci integration" width="768" height="313" className="doc_img"/>
+3.  Once the edit is complete, click on "Commit Changes" to save and commit the changes made. AppVeyor CI is activated as soon as this step is done since we have used "push event" for triggering the AppVeyor CI. <img loading="lazy" src={require('../assets/images/uploads/appveyorCi-10-1024x417.webp').default} alt="appveyor ci integration" width="768" height="313" className="doc_img"/>
 
-4.  As soon as the AppVeyor CI is triggered (through push event in this case), a new build can be seen in the “Timeline” on your [LambdaTest's automation dashboard](https://automation.lambdatest.com/timeline/). The current status of this build will be “running” or “executing”. <img loading="lazy" src={require('../assets/images/uploads/appveyorCi-11-1024x460.webp').default} alt="appveyor ci integration" width="768" height="345" className="doc_img"/>
+4.  As soon as the AppVeyor CI is triggered (through push event in this case), a new build can be seen in the "Timeline" on your [LambdaTest's automation dashboard](https://automation.lambdatest.com/timeline/). The current status of this build will be "running" or "executing". <img loading="lazy" src={require('../assets/images/uploads/appveyorCi-11-1024x460.webp').default} alt="appveyor ci integration" width="768" height="345" className="doc_img"/>
 
 5.  Now based on the tests, this build can pass or fail. If passed, a green tick along with the term **Passed** will appear in the summary of the test. Else if failed, a red cross will appear instead, along with the term **Failed**, as shown below.<img loading="lazy" src={require('../assets/images/uploads/appveyorCi-12-1024x462.webp').default} alt="appveyor ci integration" width="768" height="347" className="doc_img"/>
 

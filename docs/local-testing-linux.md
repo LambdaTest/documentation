@@ -79,7 +79,7 @@ LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelN
 
 >**Note:**  After you execute the command, you may be asked for user permission. Make sure you have administrator access to allow the file to run successfully.
 
-In a few seconds, after you execute the command, a tunnel connection will be established. You will receive a message inside your command prompt mentioning **“You can start testing now”**.
+In a few seconds, after you execute the command, a tunnel connection will be established. You will receive a message inside your command prompt mentioning **"You can start testing now"**.
 
 <img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-3.webp').default} alt="Start localhost testing on Linux" width="1522" height="167" className="doc_img"/>
 

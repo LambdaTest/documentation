@@ -174,7 +174,7 @@ Once you have run your tests, you can view the test execution along with logs. Y
 The following capabilities are supported:
 
 1. **testSuite:** Enter the app id generated while uploading the app. Example:`lt://APP123456789123456789123456789`
-2. **device:** Enter the name and os version of the device in “DeviceName-OSVersion” format. Example: `iPhone 14-16` or `iPhone 15 Pro-17`. You can also choose to use regular expression for device name such as `iPhone.*-16`.
+2. **device:** Enter the name and os version of the device in "DeviceName-OSVersion" format. Example: `iPhone 14-16` or `iPhone 15 Pro-17`. You can also choose to use regular expression for device name such as `iPhone.*-16`.
 3. **video:** Generate video for all the tests that have run. Example: `true`.
 4. **queueTimeout:** Enter the time in seconds for total execution time of the build. Example: `9000`. Minimum queueTimeout: `1800`, Maximum queueTimeout: `10800`
 5. **network:** Boolean value to generate network logs. Example: `"network": true`.  

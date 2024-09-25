@@ -79,11 +79,11 @@ LambdaTest integration with GoCD will help your perform Selenium test automation
 ## Configuring GoCD Pipeline For LambdaTest Selenium Grid
 ***
 
-**Step 1:** Visit your GoCD Dashboard and create a new pipeline by selecting the option to “Use Pipeline as Code”.
+**Step 1:** Visit your GoCD Dashboard and create a new pipeline by selecting the option to "Use Pipeline as Code".
 
 <img loading="lazy" src={require('../assets/images/gocd-integration/gocd-1.webp').default} alt="GoCD Integration" width="1344" height="574" className="doc_img"/>
 
-**Step 2:** Scroll-down to the section to “Register Your Pipelines as Code Repo with GoCD” and untick the box for using the same SCM repository.
+**Step 2:** Scroll-down to the section to "Register Your Pipelines as Code Repo with GoCD" and untick the box for using the same SCM repository.
 
 <img loading="lazy" src={require('../assets/images/gocd-integration/gocd-1-1.webp').default} alt="GoCD Integration" width="1365" height="542" className="doc_img"/>
 

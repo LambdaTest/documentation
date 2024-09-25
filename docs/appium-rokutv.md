@@ -226,14 +226,14 @@ if __name__ == "__main__":
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as:
 
 **Supported Model:**
-- Device: `"Roku Ultra"` ; OS Version:`“11"`
-- Device: `"Roku Express"` ; OS Version:`“11"`
+- Device: `"Roku Ultra"` ; OS Version:`"11"`
+- Device: `"Roku Express"` ; OS Version:`"11"`
 
 **Supported Capabilities:**
 Please check at the end of the doc.
 
 **Platform:**
-`”roku"`
+`"roku"`
 
 ```python title="main.py"
     caps = {

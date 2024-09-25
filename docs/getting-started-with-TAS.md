@@ -58,7 +58,7 @@ The TAS engine intelligently interprets & runs only the relevant subset of tests
 ***
 - Click on the **import** button for the repository you want to integrate with TAS. You will see a message saying - "**Repo added successfully**". Then click on **go to project**.
 - Follow the instructions on the YAML configuration page (or see docs here)  to make a suitable TAS YAML file.
-- Once done with the configurations, download the file and rename it to “**.tas.yml**”. Place it at the **root level** of your repository and push the changes to your repo. 
+- Once done with the configurations, download the file and rename it to "**.tas.yml**". Place it at the **root level** of your repository and push the changes to your repo. 
 - After making the commit, click on **Start Testing**.
 - Once you have successfully integrated your repo you will see a dashboard for that repository.
 
@@ -369,8 +369,8 @@ Need to test with 443 outbound port.
 - Navigate to AWS Console.
 - From services go to EC2.
 - From sidebar navigate to instances
-- Click on `“Launch Instances”` button
-- In `choose an amazon machine image` section search for “tas-synapse-ami-name” and click on select button
+- Click on `"Launch Instances"` button
+- In `choose an amazon machine image` section search for "tas-synapse-ami-name" and click on select button
 - Choose the instance size as per your requirement
 - Click on `Next` button
 - Configure `Instance Details` as per requirement and click on `Next`
@@ -456,7 +456,7 @@ Free credits will be reset every month.
 > You need to migrate the step in your CI pipeline that runs the tests of your repository.
 
 **What are the different Hosting options?**
-> **TAS Managed** - The entire infrastructure is managed by TAS including the “runners” that has access to your code for running the tests. The tests in your repository will be executed on our cloud runners managed by TAS.
+> **TAS Managed** - The entire infrastructure is managed by TAS including the "runners" that has access to your code for running the tests. The tests in your repository will be executed on our cloud runners managed by TAS.
 
 > **Self Hosted** - In this option, you need to provide the machines (and manage those machines yourselves) to run tests of your repository. TAS will only receive the tests metadata to show you the insights on TAS portal.
 
