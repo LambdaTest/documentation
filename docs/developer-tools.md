@@ -50,7 +50,7 @@ slug: developer-tools/
 
 ## How To Launch Developer Tools On Desktop?
 ***
-**Step 1:** Login to your LambdaTest account. Go to **“Real Time Test”** from the left navigation menu.
+**Step 1:** Login to your LambdaTest account. Go to **"Real Time Test"** from the left navigation menu.
 
 <img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-1.webp').default} alt="Image" width="1365" height="654" className="doc_img"/>
 
@@ -63,11 +63,11 @@ slug: developer-tools/
 
 <img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-3.webp').default} alt="Image" width="1365" height="652" className="doc_img"/>
 
-**Step 4:** Once the desired VM is launched and operable, right-click on the webpage that gets loaded inside the VM and click on “**Inspect Element**”.
+**Step 4:** Once the desired VM is launched and operable, right-click on the webpage that gets loaded inside the VM and click on "**Inspect Element**".
 
 <img loading="lazy" src={require('../assets/images/developer-tools/dev-tool-real-time-4.webp').default} alt="Image" width="1365" height="614" className="doc_img"/>
 
-**Step 5:** As you click on “Inspect Element”, the developer tools would pop up at the bottom of the virtual machine.
+**Step 5:** As you click on "Inspect Element", the developer tools would pop up at the bottom of the virtual machine.
 
 <img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-5.webp').default} alt="Image" width="1365" height="617" className="doc_img"/>
 
@@ -75,7 +75,7 @@ slug: developer-tools/
 ***
 > **Note:** Developer tools for android devices are not supported for android versions below 7.0.
 
-**Step 1:** Login to your LambdaTest account. Go to **“Real Time Test”** from the left navigation menu.
+**Step 1:** Login to your LambdaTest account. Go to **"Real Time Test"** from the left navigation menu.
 
 <img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-5.webp').default} alt="Image" width="1365" height="657" className="doc_img"/>
 

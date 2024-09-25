@@ -106,7 +106,7 @@ LambdaTest integration with Pivotal Tracker will help you instantly log UI bugs 
 
 <img loading="lazy" src={require('../assets/images/pivotal-tracker-integration/pivotal-two.webp').default} alt="Pivotal Tracker Integration" width="1340" height="617" className="doc_img"/>
 
-**Note:** After you click on **Mark As Bug**, you will be able to observe it being successfully marked through a single click effort. You will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a **prompt message** *"Your bug has been logged successfully”* indicating that the screenshot has been pushed to your **Pivotal Tracker project**. 
+**Note:** After you click on **Mark As Bug**, you will be able to observe it being successfully marked through a single click effort. You will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. After few seconds you will be notified with a **prompt message** *"Your bug has been logged successfully"* indicating that the screenshot has been pushed to your **Pivotal Tracker project**. 
 
 <img loading="lazy" src={require('../assets/images/pivotal-tracker-integration/pivotal-three.png').default} alt="Pivotal Tracker Integration" width="1340" height="617" className="doc_img"/>
 

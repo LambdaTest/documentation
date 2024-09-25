@@ -68,7 +68,7 @@ LambdaTest integrates with Teamwork Projects, allowing users to file issues dire
 :::info Fetch your Teamwork API Token
 
 - Visit your Teamwork account -> **Edit my details** button.
-- You will find the “**API Token**” under the section **API & Mobile**. Copy your API token.
+- You will find the "**API Token**" under the section **API & Mobile**. Copy your API token.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/teamwork-integration/api-key.mp4').default} type="video/mp4" />
@@ -86,7 +86,7 @@ LambdaTest integrates with Teamwork Projects, allowing users to file issues dire
 
 **Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the Bug icon from the left panel for capturing a screenshot of the same.
 
-**Step 4:** After clicking on “Mark as Bug” button a Teamwork specific form would open up. Fill the fields as per your requirement.
+**Step 4:** After clicking on "Mark as Bug" button a Teamwork specific form would open up. Fill the fields as per your requirement.
 - Select which project should the ticket go under.
 - Set which Task List should the bug go under.
 - Set the priority of the issue.

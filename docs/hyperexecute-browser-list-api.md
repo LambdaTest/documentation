@@ -160,7 +160,7 @@ Example Error Response: -->
 
 ```bash
 {
- "platform": “windows 10” #optional
+ "platform": "windows 10" #optional
  "stable":  true  #if passed we will return only stable version of browsers
 }
 ```

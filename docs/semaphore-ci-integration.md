@@ -172,8 +172,8 @@ blocks:
       - name: NODE_ENV
         commands:
           - ls -al
-          - echo 'export LT_USERNAME=”<YOUR_LAMBDATEST_USERNAME>”' >> .bashrc
-          - echo 'export LT_ACCESS_KEY=”<YOUR_LAMBDATEST_ACCESS_KEY>”' >> .bashrc
+          - echo 'export LT_USERNAME="<YOUR_LAMBDATEST_USERNAME>"' >> .bashrc
+          - echo 'export LT_ACCESS_KEY="<YOUR_LAMBDATEST_ACCESS_KEY>"' >> .bashrc
           
   - name: Set Tunnel
     task:

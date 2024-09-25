@@ -133,7 +133,7 @@ class FirstCest
     }
 ```
 ### Configuration of Your Test Capabilities
-**Step 4:** In the test script, you need to update your test capabilities. Notice the declaration of class name **“AcceptanceTester”**. We used this class to specify test configuration, port number, browser name, browser version and other desired capabilities.
+**Step 4:** In the test script, you need to update your test capabilities. Notice the declaration of class name **"AcceptanceTester"**. We used this class to specify test configuration, port number, browser name, browser version and other desired capabilities.
 
 ```php
 # Codeception Test Suite Configuration

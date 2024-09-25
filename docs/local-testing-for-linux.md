@@ -58,7 +58,7 @@ So for example, if your user login email is example@lambdatest.com and your user
 
 >**Note:** After you execute the command, you may be asked for user permission. Make sure you have administrator access to allow the file to run successfully.
 
-In a few seconds, after you execute the command, an SSH connection will be established. You will receive a message inside your command prompt mentioning “***Secure connection established, you may start your tests now***”.
+In a few seconds, after you execute the command, an SSH connection will be established. You will receive a message inside your command prompt mentioning "***Secure connection established, you may start your tests now***".
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-linux/For-linux-4.webp').default} alt="Image"  className="doc_img"/>
 
@@ -84,7 +84,7 @@ In a few seconds, after you execute the command, an SSH connection will be estab
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-linux/start-local-testing-on-linux-using-ssh-tunnel.webp').default} alt="Image"  className="doc_img"/>
 
->**Important Note:** Some Safari browsers, on both Mac machines and iOS browsers, doesn’t support automatic resolution of URL string “localhost”. Therefore if you test on URLs like “`http://localhost/`” or “`http://localhost:8080`” etc, you would get an error in these browsers. A possible solution is to replace the string “`localhost`” with machine IP address. For example if you wanted to test “`http://localhost/dashboard`” or “`http://localhost/dashboard:8080`”, and your machine IP is 192.168.2.6 you can instead test on “`http://192.168.2.6/dashboard`” or “`http://192.168.2.6/dashboard:8080`”.
+>**Important Note:** Some Safari browsers, on both Mac machines and iOS browsers, doesn’t support automatic resolution of URL string "localhost". Therefore if you test on URLs like "`http://localhost/`" or "`http://localhost:8080`" etc, you would get an error in these browsers. A possible solution is to replace the string "`localhost`" with machine IP address. For example if you wanted to test "`http://localhost/dashboard`" or "`http://localhost/dashboard:8080`", and your machine IP is 192.168.2.6 you can instead test on "`http://192.168.2.6/dashboard`" or "`http://192.168.2.6/dashboard:8080`".
 
 ## Testing Local Folder Files Using LambdaTest tunnel
 * * *
@@ -96,11 +96,11 @@ In a few seconds, after you execute the command, an SSH connection will be estab
 
 `LT --user {user login email} --key {user key} --dir {"directory/folder name"}`
 
-**Example:** Let us consider your user login email to be “example@lambdatest.com” with your user key as ‘123asd123’ and you want to test files in the ‘Downloads’ folder, then the command would be:
+**Example:** Let us consider your user login email to be "example@lambdatest.com" with your user key as ‘123asd123’ and you want to test files in the ‘Downloads’ folder, then the command would be:
 
 `LT --user example@lambdatest.com --key 123asd123 --dir "/home/lambda/Downloads"`
 
-**Step 2:** After you establish a SSH connection, go to LambdaTest and navigate to **Real Time test**. Enter local-folder.lambdatest.com” in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice.
+**Step 2:** After you establish a SSH connection, go to LambdaTest and navigate to **Real Time test**. Enter local-folder.lambdatest.com" in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-linux/For-linux-9.webp').default} alt="Image"  className="doc_img"/>
 
@@ -110,7 +110,7 @@ In a few seconds, after you execute the command, an SSH connection will be estab
 
 > **Note:** Similarly, if you want to run any file in the specified directory, you need to give URL as local-folder.lambdatest.com/filename.
 
-For example: If you have a file ‘test.html’ in your folder. You need to give URL as “local-folder.lambdatest.com/test.html” to run the same file. In this way, you can run any HTML, PHP, Python or similar web files present in any folder of your system, directly in LambdaTest browser.
+For example: If you have a file ‘test.html’ in your folder. You need to give URL as "local-folder.lambdatest.com/test.html" to run the same file. In this way, you can run any HTML, PHP, Python or similar web files present in any folder of your system, directly in LambdaTest browser.
 
 ## Terminating The SSH Connection
 * * *
@@ -122,7 +122,7 @@ You will receive the below highlighted messages indicating the termination on SS
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-linux/For-linux-11.webp').default} alt="Image"  className="doc_img"/>
 
-**Option 2:** You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button that says “**Tunnel active**:“. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'X'. Hit the 'x' to terminate the SSH tunnel.
+**Option 2:** You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button that says "**Tunnel active**:". This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an 'X'. Hit the 'x' to terminate the SSH tunnel.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-linux/For-linux-12.webp').default} alt="Image"  className="doc_img"/>
 
@@ -195,11 +195,11 @@ If you ever misplace your Access key into the hands of someone you don’t trust
 
 Access Key is pivotal for establishing a Secure Shell(SSH) through LambdaTest tunnel to test your locally hosted web-pages or web-apps.
 
-Find your Access Key while performing any type of testing, from the left navigation menu. You will find a button that says “Configure Tunnel”. Click on that button & a string containing your access key will be presented.
+Find your Access Key while performing any type of testing, from the left navigation menu. You will find a button that says "Configure Tunnel". Click on that button & a string containing your access key will be presented.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-linux/For-linux-13.webp').default} alt="Image"  className="doc_img"/>
 
-For instance, if you go to **Real-Time Test**, you will observe a button that says “**Configure Tunnel**” on the top-right area of the page. Click on that button and a form would open up through it, providing you with a string containing your access key. You will find the access key in the area underlined below.
+For instance, if you go to **Real-Time Test**, you will observe a button that says "**Configure Tunnel**" on the top-right area of the page. Click on that button and a form would open up through it, providing you with a string containing your access key. You will find the access key in the area underlined below.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-linux/For-linux-14.webp').default} alt="Image"  className="doc_img"/>
 

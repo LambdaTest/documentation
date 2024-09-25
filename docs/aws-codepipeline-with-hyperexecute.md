@@ -111,11 +111,11 @@ phases:
         command: ./hyperexecute --user <your_user_name> --key <your_access_key> --config <your_yaml_file>
 ```
 
-- In the **buildspec** specification, choose the first option - **“Use a buildspec file”**.
+- In the **buildspec** specification, choose the first option - **"Use a buildspec file"**.
 
-- Now Click the **“continue to code pipeline”** button and then click on **Next**.
+- Now Click the **"continue to code pipeline"** button and then click on **Next**.
 
-- You can “**Skip deploy stage”** and finally click **“Create Pipeline”** button.
+- You can "**Skip deploy stage"** and finally click **"Create Pipeline"** button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/aws/STEP4.webp').default} alt="Image"  className="doc_img"/>
 

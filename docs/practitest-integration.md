@@ -69,7 +69,7 @@ Visit your PractiTest Dashboard -> Settings -> API Tokens.
 
 **Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the Bug icon from the left panel for capturing a screenshot of the same.
 
-**Step 4:** After clicking on “**Mark as Bug**” button a PractiTest specific form would open up. Fill the fields as per your requirement.
+**Step 4:** After clicking on "**Mark as Bug**" button a PractiTest specific form would open up. Fill the fields as per your requirement.
 
 - Select which project should the ticket go under.
 - Set which Task List should the bug go under.

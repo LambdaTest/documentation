@@ -68,7 +68,7 @@ After configuring the tunnel, you might get into the error similar to the below 
 
 <img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/localhost-refused-to-connect.webp').default} alt="troubleshoot lambdatest tunnel" width="1600" height="750" className="doc_img"/>
 
-The error “localhost refused to connect” occurs because of using the URL as localhost which is unfortunately not compatible with various browsers and browser versions. We are deliberately eliminating the URL localhost and recovering it with localhost.lambdatest.com or your local system IP.
+The error "localhost refused to connect" occurs because of using the URL as localhost which is unfortunately not compatible with various browsers and browser versions. We are deliberately eliminating the URL localhost and recovering it with localhost.lambdatest.com or your local system IP.
 
 For example you might find above error with URL: `https://localhost/demo.html`
 
@@ -78,21 +78,21 @@ however, URL: `https://localhost.lambdatest.com/demo.html` or `10.0.0.15/demo.ht
 
 * * *
 
-While testing an application hosted on your local machine, you may receive an “Invalid Host Header” error message when testing on LambdaTest using a local connection. This error is most commonly caused by a misconfiguration of the application server that causes it to reject non-local connections or reject requests directed at hostnames other than localhost(or any custom one set)
+While testing an application hosted on your local machine, you may receive an "Invalid Host Header" error message when testing on LambdaTest using a local connection. This error is most commonly caused by a misconfiguration of the application server that causes it to reject non-local connections or reject requests directed at hostnames other than localhost(or any custom one set)
 
-Since, web applications are now built with various different kinds of frameworks like angular, react etc; In order to test it using tunnel the command used to run your web app needs to modified in your project manifest file i.e. “package.json”
+Since, web applications are now built with various different kinds of frameworks like angular, react etc; In order to test it using tunnel the command used to run your web app needs to modified in your project manifest file i.e. "package.json"
 
 <img loading="lazy" src={require('../assets/images/troubleshooting-lambda-tunnel/invalid-host-header.webp').default} alt="troubleshoot lambdatest tunnel" width="1600" height="754" className="doc_img"/>
 
-- **Angular Framework Project**: For Angular framework based web app, ideally you might be using “ng serve” or “npm start” to run your web application or your package.json file configuration would be set as “ng serve” in order to start your web app and as usual, it would be working fine on local browser. However, this might throw an “Invalid Host Header”error or error something related to the invalid host in a Real Time Test.
+- **Angular Framework Project**: For Angular framework based web app, ideally you might be using "ng serve" or "npm start" to run your web application or your package.json file configuration would be set as "ng serve" in order to start your web app and as usual, it would be working fine on local browser. However, this might throw an "Invalid Host Header"error or error something related to the invalid host in a Real Time Test.
 
-To resolve this, here is the quick small solution for you. While running your application, you can either use command `ng serve --host 0.0.0.0 --disable-host-check` or set your start configuration in package.json file as `“ng serve --host 0.0.0.0 --disable-host-check”` instead of changing your running command.
+To resolve this, here is the quick small solution for you. While running your application, you can either use command `ng serve --host 0.0.0.0 --disable-host-check` or set your start configuration in package.json file as `"ng serve --host 0.0.0.0 --disable-host-check"` instead of changing your running command.
 
 - **React Framework Project**: For React framework based web app, you need to create an env file in which you have to add the hostname,syntax: `HOST=< hostname >`, once you are done with it, now you can add your localhost IP along with your hostname in your system hosts file.
 
 Example: `127.0.0.1 < hostname >`
 
-This would help you avoiding “Invalid Host Header” error.
+This would help you avoiding "Invalid Host Header" error.
 
 ## 3. WordPress - CSS Not Loading
 
@@ -159,7 +159,7 @@ The requests are also logged into a log file `lt.log` which is created in the sa
 * * *
 
 Catalina OS users may get the below error from the command line while trying to configure the LambdaTest Tunnel to test their locally hosted web pages:
-“LT can’t be opened because Apple cannot check it for malicious software”
+"LT can’t be opened because Apple cannot check it for malicious software"
 
 This error occurs due to the increased restrictions on third-party software, downloaded from the internet. Since Catalina OS is recently launched by Apple, we are working to make our LambdaTest Tunnel compatible with the new OS.
 

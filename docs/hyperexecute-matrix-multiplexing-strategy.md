@@ -67,13 +67,13 @@ In the YAML file shown above, **files**  is a user-generated key. **Files**  and
 
 ## When to opt for Matrix Strategy
 
-Matrix multiplexing strategy is ideally used when you have to run specific test scenarios across different input (or value) combinations. For example, this approach would be useful if you have to run “scenario1”  on “N” version(s) of Chrome and Firefox browsers (that are installed on the Windows 10 platform).
+Matrix multiplexing strategy is ideally used when you have to run specific test scenarios across different input (or value) combinations. For example, this approach would be useful if you have to run "scenario1"  on "N" version(s) of Chrome and Firefox browsers (that are installed on the Windows 10 platform).
 
 Here, ‘N’ could be browser version  number(s) that are common between the two web browsers e.g. 68.0, 69.0, 89.0, etc. You can also leverage matrix multiplexing strategy to run scenarios based on different tags, files, features, and more. You can specify required key:value pairs in the HyperExecute YAML file or you can specify the same in the source code.
 
 In matrix multiplexing strategy, *`key`:`value`* pairs mentioned in the source code override the same `key`:`value`  pairs mentioned in the HyperExecute YAML file.
 
-Let’s modify the above YAML file to run the scenarios on “latest” version of the Firefox browser:
+Let’s modify the above YAML file to run the scenarios on "latest" version of the Firefox browser:
 
 ``` yaml
 #runson defines the OS of your test execution node.

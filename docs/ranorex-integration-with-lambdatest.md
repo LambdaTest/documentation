@@ -61,11 +61,11 @@ In this documentation, we will demonstrate how to set up your Selenium Server us
 
 ## Getting Started With Ranorex
 ***
-**Step 1:**  Open Ranorex & click on **“New solution via wizard”**  from the left menu.
+**Step 1:**  Open Ranorex & click on **"New solution via wizard"**  from the left menu.
 
 <img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/1.webp').default} alt="Ranorax New solution via wizard" width="1024" height="545" className="doc_img"/>
 
-**Step 2:**  Select the method for **Web testing**  over different browsers. Then hit on the button that says **“Click here”**.
+**Step 2:**  Select the method for **Web testing**  over different browsers. Then hit on the button that says **"Click here"**.
 
 <img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/2.webp').default} alt="Website Testing Using Ranorax and LambdaTest" width="1365" height="730" className="doc_img"/>
 
@@ -77,7 +77,7 @@ In this documentation, we will demonstrate how to set up your Selenium Server us
 
 <img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/4.webp').default} alt="Setup Website Testing" width="1365" height="728" className="doc_img"/>
 
-**Step 5:**  Select your recording behaviour as **“Do not use whitelisting”**.
+**Step 5:**  Select your recording behaviour as **"Do not use whitelisting"**.
 
 <img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/5.webp').default} alt="Select recording behaviour" width="1365" height="728" className="doc_img"/>
 
@@ -91,7 +91,7 @@ In this documentation, we will demonstrate how to set up your Selenium Server us
 
 <img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/7.webp').default} alt="LambdaTest Ranorex test suite" width="1365" height="730" className="doc_img"/>
 
-**Step 2:**  Add the **end point** to run the test suite on Selenium Grid offered by LambdaTest. You can do so by going to the tab for **“Endpoint”**   Select **WebDriver**   Provide an **Endpoint name**  & **Address(Hub URL)**. Click on **Add endpoint**.
+**Step 2:**  Add the **end point** to run the test suite on Selenium Grid offered by LambdaTest. You can do so by going to the tab for **"Endpoint"**   Select **WebDriver**   Provide an **Endpoint name**  & **Address(Hub URL)**. Click on **Add endpoint**.
 
 
 >**Note:**  You can check your connection by clicking on **Test connection**.
@@ -114,7 +114,7 @@ In this documentation, we will demonstrate how to set up your Selenium Server us
 >Variable name- Mac
 >Variable value – Safari
 
-**Step 2:**  Now, under the tab **“Endpoint”**, you need to add a **new configuration**  to set up the DesiredCapabilities for LambdaTest Selenium Grid.
+**Step 2:**  Now, under the tab **"Endpoint"**, you need to add a **new configuration**  to set up the DesiredCapabilities for LambdaTest Selenium Grid.
 
 <img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/14.webp').default} alt="set up Desired Capabilities" width="1365" height="730" className="doc_img"/>
 
@@ -122,7 +122,7 @@ In this documentation, we will demonstrate how to set up your Selenium Server us
 
 <img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/15.webp').default} alt="Selenium Capability Generator." width="1365" height="728" className="doc_img"/>
 
-**Step 4:**  Copy the DesiredCapabilities & add them in Endpoint configurations by placing them in **“Capabilities JSON”**. Don’t forget to provide a name as well.
+**Step 4:**  Copy the DesiredCapabilities & add them in Endpoint configurations by placing them in **"Capabilities JSON"**. Don’t forget to provide a name as well.
 
 <img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/16.webp').default} alt="Capabilities JSON" width="1365" height="730" className="doc_img"/>
 

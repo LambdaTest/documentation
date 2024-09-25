@@ -56,7 +56,7 @@ You can upload the files on the LambdaTest cloud based Selenium Grid, using our 
 *   Enter your LambdaTest username and access key, in the box that appears, to validate your credentials. Once done, click on the "Authorise button to verify the credentials, and click on Close to close the window. <img loading="lazy" src={require('../assets/images/uploads/upload-files-2.webp').default} alt="authorize button" width="1281" height="722" className="doc_img"/>
 
 >
-To get your LambdaTest Username and Access Key, visite your [LambdaTest automation dashboard](https://automation.lambdatest.com/) and click on the “key” icon, present on the top right corner.
+To get your LambdaTest Username and Access Key, visite your [LambdaTest automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon, present on the top right corner.
 <img loading="lazy" src={require('../assets/images/uploads/access-key.webp').default} alt="automation key" width="1281" height="721" className="doc_img"/>
 
 *   Then click on the "Try it out" button. <img loading="lazy" src={require('../assets/images/uploads/upload-files-3.webp').default} alt="choose file" width="1281" height="721" className="doc_img"/>

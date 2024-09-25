@@ -48,7 +48,7 @@ Here, n = number of concurrent sessions.
 ```
 Here is an example, if your LambdaTest account is eligible for 10 concurrent sessions, then your queue can have a maximum of (10 + 150) queued test cases i.e. 160 queued test cases. The scheduling and execution of test cases in your queue will be taken care of by LambdaTest.
 
-If more tests are sent for execution than allowed by your concurrency limit then they will be put in a queue until the queue reaches its maximum holding capacity. So, if you have a concurrency of 100 but you send 200 tests, the “extra” tests will be queued and run as the first round of tests finish. In this scenario, when the number of running tests drops to 99, 1 test from the queue will start running, and when the next test finishes, another test from the queue will start running. This continues until all the queued tests are executed.
+If more tests are sent for execution than allowed by your concurrency limit then they will be put in a queue until the queue reaches its maximum holding capacity. So, if you have a concurrency of 100 but you send 200 tests, the "extra" tests will be queued and run as the first round of tests finish. In this scenario, when the number of running tests drops to 99, 1 test from the queue will start running, and when the next test finishes, another test from the queue will start running. This continues until all the queued tests are executed.
 
 Keep in mind the below key points before you start queuing your automated test cases using LambdaTest Selenium grid.
 

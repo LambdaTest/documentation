@@ -56,9 +56,9 @@ For example:
 
 | Language | Example |
 |-------|-------------|
-| Java	|`capabilities.setCapability(“lambdaMaskCommands”, &lbrace;“setValues”, “setCookies, getCookies”&rbrace;);` |
-| Node.js | `capabilities[‘lambdaMaskCommands’] = [“setValues”, “setCookies”, “getCookies”]`|
-| C# | `capabilities.SetCapability(“lambdaMaskCommands”, &lbrace;“setValues”, “setCookies”, “getCookies”&rbrace;);`|
-| PHP	| `$capabilities[“lambdaMaskCommands”] = array(“setValues”, “setCookies”, “getCookies”)`|
-| Python | `capabilities[“lambdaMaskCommands”] = [“setValues”, “setCookies”, “getCookies”]`|
-| Ruby |`capabilities[“lambdaMaskCommands”] = [“setValues”, “setCookies”, “getCookies”]`|
+| Java	|`capabilities.setCapability("lambdaMaskCommands", {"setValues", "setCookies, getCookies"});` |
+| Node.js | `capabilities[‘lambdaMaskCommands’] = ["setValues", "setCookies", "getCookies"]`|
+| C# | `capabilities.SetCapability("lambdaMaskCommands", {"setValues", "setCookies", "getCookies"});`|
+| PHP	| `$capabilities["lambdaMaskCommands"] = array("setValues", "setCookies", "getCookies")`|
+| Python | `capabilities["lambdaMaskCommands"] = ["setValues", "setCookies", "getCookies"]`|
+| Ruby |`capabilities["lambdaMaskCommands"] = ["setValues", "setCookies", "getCookies"]`|

@@ -33,10 +33,10 @@ This topic will be focusing on:
 For demonstrating Tosca-LambdaTest integration, we would be considering the following test scenario:
 
 1. Open [LambdaTest Selenium PlayGround](https://www.lambdatest.com/selenium-playground/).
-2. Click the “Simple Form Demo” link. 
-3. Enter the text “Happy Testing” in the text box.
-4. Click the “Get Checked value” button.
-5. Verify if the entered text is present under the “Your Message” section.
+2. Click the "Simple Form Demo" link. 
+3. Enter the text "Happy Testing" in the text box.
+4. Click the "Get Checked value" button.
+5. Verify if the entered text is present under the "Your Message" section.
    <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_01.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
 
