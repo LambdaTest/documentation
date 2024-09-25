@@ -1632,7 +1632,19 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Projects",
-        items: ["create-projects", "system-and-custom-fields"],
+        items: [
+          "create-projects", 
+          "system-and-custom-fields", 
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Import Test Case Data",
+        items: [
+          "csv-import",
+          "one-click-migration-from-testrail", 
+        ],
       },
       {
         type: "category",
@@ -1650,7 +1662,6 @@ module.exports = {
           "manual-test-case-creation",
           "manual-test-cases-with-ai",
           "copy-and-move-support-for-test-cases",
-          "test-case-import",
           "test-case-repository",
         ],
       },
