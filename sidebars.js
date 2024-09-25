@@ -853,6 +853,7 @@ module.exports = {
             collapsed: true,
             label: "September, 2024",
             items: [
+              'hyperexecute-release-notes-2-5-2',
               'hyperexecute-release-notes-2-5-1',
               'hyperexecute-release-notes-2-5-0',
             ]
@@ -1050,6 +1051,7 @@ module.exports = {
             collapsed: true,
             label: "September, 2024",
             items: [
+              'kaneai-release-notes-0-0-2',
               'kaneai-release-notes-0-0-1',
             ]
           },

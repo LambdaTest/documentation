@@ -1,6 +1,6 @@
 ---
 id: kaneai-release-notes-0-0-1
-title: Beta Version 0.0.1
+title: Version 0.0.1 - Beta
 hide_title: false
 sidebar_label: Version 0.0.1
 description: Beta Version 0.0.1
@@ -13,6 +13,7 @@ url: https://www.lambdatest.com/support/docs/kaneai-release-notes-0-0-1/
 site_name: LambdaTest
 slug: kaneai-release-notes-0-0-1/
 ---
+import NewTag from '../src/component/newTag';
 import EnhancementTag from '../src/component/enhancementTag';
 import BugFixTag from '../src/component/bugFixTag';
 
