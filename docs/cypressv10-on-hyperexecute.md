@@ -494,8 +494,21 @@ cypressOps:
 You can download network logs via the Automate Dashboard. You can visualize HAR files using the [HAR Viewer](http://www.softwareishard.com/har/viewer/).
 :::
 
->For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
-Happy testing!
+### Detailed Cypress Command Logs
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+
+The **Detailed Command Logs** feature can be used to generate a comprehensive record of all Cypress commands and their results, both in the console and in a file. This can be extremely useful for debugging and troubleshooting Cypress tests because it narrows down the logs to reveal specific information. The logs are presented in a human-readable format, making them simple to read and comprehend.
+
+Prerequisite to get the detailed logs in HyperExecute:
+
+```yaml
+pre:
+  - npm install cypress-terminal-report --save-dev
+```
+
+:::tip
+For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](https://www.lambdatest.com/support/docs/cypress-detailed-command-logs/#for-cypress-v10-and-later-versions) documentation.
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
