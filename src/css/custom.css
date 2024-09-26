@@ -22,7 +22,9 @@
     --alert-danger-border-color:#FF818266;
     --new-tag-color: #BF3989;
     --enhancement-tag-color: #f4b400;
+    --newReleaseColor-tag-color: #389d59;
     --bugFix-tag-color: #db4437;
+    --featureColor-tag-color: #860ac6;
     --ifm-tabs-color:#333333
  }
 
@@ -50,6 +52,10 @@
 .newTagColor{color: var(--new-tag-color);font-weight:bold;font-size: 10px;padding: 1px 6px;border-radius: 20px;border:1px solid #BF3989}
 .enhancementColor{color: #ffffff; background-color: var(--enhancement-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--enhancement-tag-color)}
 .bugFixTagColor{color: #ffffff; background-color: var(--bugFix-tag-color); font-weight:bold; margin: -2px 3px; font-size: 12px; padding: 5px 10px; border-radius: 20px; border:1px solid var(--bugFix-tag-color)}
+.newReleaseColor{color: #ffffff; background-color: var(--newReleaseColor-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--newReleaseColor-tag-color)}
+.featureColor{color: #ffffff; background-color: var(--featureColor-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--featureColor-tag-color)}
+
+
  [data-theme=dark] .footer__title {
    color: #CAD1D9;
  }
