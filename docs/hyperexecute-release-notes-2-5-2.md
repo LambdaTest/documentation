@@ -43,14 +43,14 @@ import BugFixTag from '../src/component/bugFixTag';
 ></script>
 
 ## 1. Cypress Detailed Command Logs for Enhanced Debugging <NewReleaseTag value="New Release" /> 
-**Detailed Cypress Command Logs** in HyperExecute generates an extensive, human-readable record of all Cypress commands and their corresponding results, both in the console and as a file. It helps narrow down test logs, making it easier to debug and troubleshoot Cypress tests.
+**Detailed Cypress Command Logs** in HyperExecute generate an extensive, human-readable record of all Cypress commands and their corresponding results, both in the console and as a file. It helps narrow down test logs, making debugging and troubleshooting Cypress tests easier.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/detailed-cypress-logs.png').default} style={{width: '600px'}}  alt="HyperExecute" className="doc_img"/> <br /><br />
 
 > 📕 Learn how to enable [Detailed Command Logs](https://www.lambdatest.com/support/docs/cypress-detailed-command-logs/) for your Cypress tests.
 
 ## 2. Parameterized Report Email Handling in YAML <EnhancementTag value="Enhancement" /> 
-HyperExecute now supports a enhanced approach for managing multiple email addresses within the YAML configuration file. Previously, you needed to define multiple variables for email addresses (`${email1}`, `${email2}`, etc.). With this update, a single variable can now hold multiple email addresses, separated by commas or underscores, simplifying report sharing. This enhancement eliminates the need for multiple variables, making it easier to maintain and modify email configurations.
+HyperExecute now supports an enhanced approach for managing multiple email addresses within the YAML configuration file. Previously, you needed to define multiple variables for email addresses (`${email1}`, `${email2}`, etc.). With this update, a single variable can now hold multiple email addresses, separated by commas or underscores, simplifying report sharing. This enhancement eliminates the need for multiple variables, making maintaining and modifying email configurations easier.
 
 > 📕 Check the [Reports documentation](https://www.lambdatest.com/support/docs/hyperexecute-email-reports/#how-to-dynamically-set-your-email-address) to learn more about it.
 
