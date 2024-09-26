@@ -41,20 +41,45 @@ slug: cypress-detailed-command-logs/
 ></script>
 
 # Detailed Command Logs for Cypress
+The **Detailed Command Logs** feature provides a comprehensive record of all Cypress commands and their results, both in the console and in a file. This functionality is ideal for debugging and troubleshooting, enabling you to pinpoint specific logs quickly and effectively.
 
-The **Detailed Command Logs** functionality can be used to generate an extensive record of all the Cypress commands and their results, both to the console and to a file. This can be very useful for debugging and troubleshooting Cypress tests as it will narrow down the logs to find specific information.
+The logs are presented in an easy-to-read, human-readable format using the [cypress-terminal-report](https://www.npmjs.com/package/cypress-terminal-report) plugin. Below are the steps to implement this feature for Cypress versions below and above 10.
 
-The logs are formatted in a human-readable format, making them easy to read and understand. It makes use of the **cypress-terminal-report** plugin internally.
+## Prerequisite: Install Cypress and Cypress Terminal Report
+Before proceeding, ensure that you have installed Cypress and the cypress-terminal-report plugin.
 
-To implement this plugin in your Cypress test, follow the below-mentioned procedure:
+- Open your `package.json` or `lambdatest-config.json` file.
+- Add the appropriate version of [cypress-terminal-report](https://www.npmjs.com/package/cypress-terminal-report) as a dependency:
 
-## For Cypress version Below 10
+### For Cypress < 10:
 
-**Step 1:** Go to *cypress/plugins/index.js* in your repository.
+```javascript
+"cypress-terminal-report": "4.1.3"
+```
 
-**Step 2:** Add the below-mentioned code to your *index.js* file.
+### For Cypress >= 10:
 
-```java
+```javascript
+"cypress-terminal-report": "^5.3.2"
+```
+
+- In the `lambdatest-config.json`, enable detailed command logs by adding the following setting:
+> **NOTE:-** You will be able to see this tab only when you use this capability **detailed_command_logs** in run_settings in lambdatest-config.json
+
+```javascript
+"run_settings": {
+  "detailed_command_logs": true,
+  "downloads": "./cypress/results"
+}
+```
+
+## For Cypress v9 and previous versions.
+
+### Step 1: Configure the Plugin
+- Open the `cypress/plugins/index.js` file in your project.
+- Add the following code to install and configure the cypress-terminal-report plugin:
+
+```javascript
 const installLogsPrinter = require('cypress-terminal-report/src/installLogsPrinter')
 
 module.exports = (on, config) => {
@@ -70,38 +95,40 @@ module.exports = (on, config) => {
   })
 }
 ```
-> To get the detailed report in the terminal logs, simply add the **printLogsToConsole: 'always'** hook in the **installLogsPrinter** as shown in the below-mentioned code.
 
-```java
+### Step 2: Enable Logs in the Console (Optional)
+To display detailed logs in the terminal, update the `installLogsPrinter` with the `printLogsToConsole: 'always'` code:
+
+```javascript
 module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
   installLogsPrinter(on, {
-    printLogsToConsole: 'always'
+    printLogsToConsole: 'always', // Enables logs in the terminal
     printLogsToFile: 'always',
     outputRoot: 'cypress/results/detailCommandLogs',
     outputTarget: {
       'detailCommandLogs.json': 'json',
     },
-  })
-}
+  });
+};
 ```
 
-**Step 3:** Go to the following file: *cypress/support/index.js*. Add the below-mentioned code.
+### Step 3: Install Logs Collector
+- Navigate to `cypress/support/index.js`.
+- Add the following code to install the log collector:
 
-```java
+```javascript
 const installLogsCollector = require('cypress-terminal-report/src/installLogsCollector')
 
 installLogsCollector()
 ```
 
-## For Cypress version 10 and Above
+## For Cypress v10 and later versions.
 
-**Step 1:** Go to *cypress.config.js* in your repository.
+### Step 1: Configure the Plugin
+- Open `cypress.config.js` in your project.
+- Add the following code to configure the plugin:
 
-**Step 2:** Add the below-mentioned code to your *config.js* file.
-
-```java
+```javascript
 const { defineConfig } = require("cypress");
 const  installLogsPrinter = require("cypress-terminal-report/src/installLogsPrinter");
 module.exports = defineConfig({
@@ -120,9 +147,10 @@ module.exports = defineConfig({
 });
 ```
 
-> To get the detailed report in the terminal logs, simply add the **printLogsToConsole: 'always'** hook in the **installLogsPrinter** as shown in the below-mentioned code.
+### Step 2: Enable Logs in the Console (Optional)
+If you need logs in the terminal, update the code like this:
 
-```java
+```javascript
 const { defineConfig } = require("cypress");
 const  installLogsPrinter = require("cypress-terminal-report/src/installLogsPrinter");
 module.exports = defineConfig({
@@ -142,55 +170,19 @@ module.exports = defineConfig({
 });
 ```
 
-**Step 3:** Go to the following file: *cypress/support/e2e.js*. Add the below-mentioned code.
+### Step 3: Install Logs Collector
+- Open `cypress/support/e2e.js`.
+- Add the following code to install the log collector:
 
-```java
+```javascript
 import installLogsCollector from 'cypress-terminal-report/src/installLogsCollector'
 
 installLogsCollector()
 ```
 
-**Step 4:** If you are passing npm dependencies through package.json, then add the **"cypress-terminal-report"** dependency there, or if you are using **"lambdatest-config.json"** to pass the dependency, add it there.
-
-- for **cypress < 10** use this version "cypress-terminal-report": "4.1.3"
-- for **cypress >= 10** use "cypress-terminal-report": "^5.3.2"
-
-- Make sure to set this key **"detailed_command_logs"** to **'true'** in  **run_settings** in *lambdatest-config.json* like below:
-
-- You can download the logs as usual by passing **"downloads": "./cypress/results"** 
-
-> For comprehensive details on downloading reports, please refer to the following [resource](https://www.lambdatest.com/support/docs/download-artefacts-cypress/).
-
-```bash
-"run_settings": {
-    "reporter_config_file":"base_reporter_config.json",
-    # highlight-next-line
-    "downloads": "./cypress/results",
-    "build_name": "Cypress 10",
-    "parallels": 1,
-    "specs": "cypress/e2e/1-getting-started/todo.cy.js",
-    "ignore_files": "",
-    "network": false,
-    "headless": false,
-    "npm_dependencies": {
-        "cypress": "12.17.0",
-        "mocha-junit-reporter": "latest",
-        "playwright-webkit":"1.27.0",
-        "cypress-terminal-report": "^5.3.2"
-    },
-    # highlight-next-line
-    "detailed_command_logs" : true
-},
-```
-
 ## View Generated Logs
+Once the Cypress tests are executed, you can view the detailed command logs in the **"Detailed Command Logs"** tab on the test details page.
 
-After running your Cypress tests with the **cypress-terminal-report** plugin, you can view the detailed command logs in the **"detailed command logs"** tab on the test details page.
+For more information, visit [Artefacts For A Cypress Project](https://www.lambdatest.com/support/docs/download-artefacts-cypress/)
 
-Refer to the [Artefacts For A Cypress Project](https://www.lambdatest.com/support/docs/download-artefacts-cypress/) for detailed understanding in logs and accessing artefacts.
-
-<img loading="lazy" src={require('../assets/images/cypress-doc/detailed_log.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
-
-Now you can effectively capture and analyze detailed command logs for your Cypress tests, helping you identify and debug issues with ease.
-
-> **NOTE:-** You will be able to see this tab only when you use this capability **detailed_command_logs** in run_settings in lambdatest-config.json
+<img loading="lazy" src={require('../assets/images/cypress/detailed-cypress-logs.png').default} alt="Image" className="doc_img"/>

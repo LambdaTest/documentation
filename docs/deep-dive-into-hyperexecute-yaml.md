@@ -197,6 +197,31 @@ matrix:
 
 ***
 
+### `exclusionMatrix`
+The [exclusion matrix](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/#exclusion-in-matrix-strategy) allows you to omit specific combinations of parameters from being tested. For instance, if Safari on Windows is not a valid combination, you can exclude it using the exclusionMatrix parameter, ensuring that invalid or irrelevant test combinations are skipped.
+
+```yaml
+#runson defines the OS of your test execution node.
+runson: ${matrix.os}
+
+matrix:
+  # Browser version(s) separated by Comma
+  version: ["latest"]
+  # OS name sepataed by Coma
+  os: ["win", "mac", "linux"]
+  # Browser name separated by Comma
+  browser: ["Chrome", "Firefox", "Safari"]
+  # Test Files separated by Comma
+  files: ["@File1","@File2","@File3","@File4"]
+
+exclusionMatrix: 
+  - os: [win]
+    browser: ["Safari"]
+    files: ["@File2","@File3"]
+```
+
+***
+
 ### `combineTasksInMatrixMode`
 
 In matrix mode, the [concurrency](/support/docs/deep-dive-into-hyperexecute-yaml/#concurrency) flag is not recognized. Therefore, in order to use the limited concurrencies that come with your license for a matrix-mode job, you need to set `combineTasksInMatrixMode` to `true`. This will run the (matrix-multiplied) combinations as scenarios in the number of HyperExecute machines that was specified in concurrency, as opposed to using one machine per matrix combination.
