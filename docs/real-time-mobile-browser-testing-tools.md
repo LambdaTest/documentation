@@ -64,12 +64,12 @@ Capture high-quality screenshots of the current screen on your test device insta
 ## Record Session
 Record your entire test session for detailed analysis and playback. Click on the Record Session button to begin recording. A timer will display the recording duration, helping you pinpoint specific moments during playback. To end the recording, click the Stop button. The recorded video will be saved automatically in the [gallery](/support/docs/real-time-mobile-browser-testing-tools/#gallery) for review.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/recordings.jpg').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/recordings.png').default} alt="Image" className="doc_img"/>
 
 ## Gallery
 All screenshots and video recordings from test sessions are stored in the Gallery. To access, select Gallery from the left toolbar and you'll find the saved screenshots and videos. To download the screenshots or videos to your local machine, click on the Download icon. You can also mark them as bug by clicking on the Bug icon.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/gallery.jpg').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/gallery.png').default} alt="Image" className="doc_img"/>
 
 ## Mark as Bug
 Highlight and report any bugs found during your testing session using the Mark as Bug feature.
@@ -78,22 +78,22 @@ Highlight and report any bugs found during your testing session using the Mark a
 - **Integration with Project Management Tools:** Create bug tickets directly from the test session by integrating with tools like Jira, Trello, and Asana.
 - **Save and Share:** Save the marked image to the gallery, download it for local use, or share it directly with your team.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/mark-bug.jpg').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/mark-bug.png').default} alt="Image" className="doc_img"/>
 
 ## IP Geolocation
 The IP Geolocation feature enables you to simulate website and mobile experiences from over 45 countries by using local IP addresses. This allows you to test localized features such as pricing, languages, and product offerings. With IP Geolocation enabled, you can verify that your app's traffic is coming from a specific country, allowing for comprehensive global testing.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/ip-geolocation.jpg').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/ip-geolocation.png').default} alt="Image" className="doc_img"/>
  
 ## Network Throttling
 LambdaTest's network throttling feature empowers you to simulate real-world network conditions (2G, 3G, LTE) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/network-throttling.jpg').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/network-throttling.png').default} alt="Image" className="doc_img"/>
 
 ## Projects
 The projects feature allows you to track your existing test session in an existing project.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/projects.jpg').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/projects.png').default} alt="Image" className="doc_img"/>
 
 ## Settings
 The settings section offer the following features:
@@ -101,7 +101,7 @@ The settings section offer the following features:
 - **Time Zone :** With this feature, you can select the time zone of your preferred region that align with your testing needs.
 - **Keyboard Input** With this feature, you can change the language in your test session for a more localized testing experience.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/settings.jpg').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/settings.png').default} alt="Image" className="doc_img"/>
  
 ## Switch
 This feature allows you to switch between devices, browser and their OS versions without exiting your current test session.
@@ -111,4 +111,4 @@ This feature allows you to switch between devices, browser and their OS versions
 ## End Session
 By clicking on the end session button, you can close your current test session.
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/end-session.jpg').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/end-session.png').default} alt="Image" className="doc_img"/>
