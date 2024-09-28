@@ -101,7 +101,7 @@ Enhance your testing capabilities with LambdaTest by leveraging various Chrome e
 ## Accessibility
 Ensure your web applications are accessible to all users, including those with disabilities, using LambdaTest's accessibility testing tools. This tool helps identify and address potential accessibility issues to enhance your website's usability and compliance with accessibility standards like WCAG (Web Content Accessibility Guidelines).
 
-<img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/accessbility.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/accessibility.png').default} alt="Image" className="doc_img"/>
 
 ## Settings
 Customize your test environment with various settings:
