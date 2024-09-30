@@ -13,6 +13,9 @@ site_name: LambdaTest
 slug: appium-app-performance-analytics/
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -36,8 +39,6 @@ slug: appium-app-performance-analytics/
       })
     }}
 ></script>
-
-
 When it comes to building an application, tracking its performance is crucial. You can follow the performance of your applications with LambdaTest's Real Device cloud platform on metrics like CPU consumption, network usage and many more. Go through the page below to understand each metric that LambdaTest provides you with.
 
 ## Metrics
@@ -54,6 +55,8 @@ LambdaTest provides you with two metrics in a time-series format representing th
 
 2. **App CPU Usage (%)**: The share of "System CPU usage" being used by the AUT.
 
+<img loading="lazy" src={require('../assets/images/appium-app/cpu.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
 ***
 
 ### 2. Memory Consumption
@@ -68,6 +71,8 @@ LambdaTest provides you with three metrics in a time-series format representing 
 2. Memory Consumed by your application (in MB) throughout the session
 3. Memory Available for use (in MB) throughout the session
 
+<img loading="lazy" src={require('../assets/images/appium-app/memory.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
 ***
 
 ### 3. Battery 
@@ -76,15 +81,15 @@ A high-performing app could also drain the mobile device's battery quickly, affe
 
 You can monitor the battery drained while using your app and subsequently optimize the features that may contribute to a lot of battery drain, improving the battery life of devices running your app.
 
+<img loading="lazy" src={require('../assets/images/appium-app/battery.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
 ***
 
 ### 4. Temperature
 
-You can identify elements that cause the battery to overheat by monitoring the battery temperatures while using your app. 
+You can identify elements that cause the battery to overheat by monitoring the battery temperatures while using your app. This might help you decide which features to optimise first to save energy and prolong the battery life of the devices running your app. You won't have to worry about your smartphone overheating or encountering performance issues due to a heated battery, improving the user experience.
 
-This might help you decide which features to optimise first to save energy and prolong the battery life of the devices running your app.
-
-Users won't have to worry about their smartphone overheating or encountering performance issues due to a heated battery, improving the user experience.
+<img loading="lazy" src={require('../assets/images/appium-app/temperature.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ***
 
@@ -93,6 +98,8 @@ Users won't have to worry about their smartphone overheating or encountering per
 Rendering performance is a typical performance issue that any app faces. Rendering is measured at different stages in the app’s lifecycle to ensure that users do not have a bad experience with the app. 
 
 LambdaTest provides the frames rate or FPS (frames per second) observed throughout the session.
+
+<img loading="lazy" src={require('../assets/images/appium-app/rendering.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ***
 
@@ -106,13 +113,13 @@ LambdaTest provides the following information to capture network usage better:
 1. Network download size throughout the session in time-series
 2. Network upload size throughout the session in time-series
 
+<img loading="lazy" src={require('../assets/images/appium-app/network.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
 ***
 
 ### 7. ANR (Application Not Responding)
 
-Sometimes, your application stops responding, and you receive a pop-up to wait or close the app. Knowing what part of the application's life cycle results in an ANR and in which condition is critical. 
-
-Such instances can ruin the user experience, especially when inputting any information. 
+Sometimes, your application stops responding, and you receive a pop-up to wait or close the app. Knowing what part of the application's life cycle results in an ANR and in which condition is critical. Such instances can ruin the user experience, especially when inputting any information. 
 
 LambdaTest provides information on the number of times your app faced ANR and a dump of logs to find more details quickly. However, this feature is supported only for Android devices for now. 
 
@@ -130,20 +137,30 @@ This can result in a more responsive and smoother user experience. Currently, yo
 
 ### Track the Metrics via App Automation
 
-You can track the performance metrics for your application inside an app automation test. The data will be captured at the test level and shown on the test details page. 
+You can track the performance metrics for your application inside an app automation test. The data will be captured at the test level and shown on the test details page. Just add the following capability inside your test, and set it to `true`.
 
-Just add the following capability inside your test, and set it to `true`.
-
-```bash
+```javascript
 "appProfiling" : true;
 ```
 
-> **Note**: The `appProfiling` flag is supported for Appium tests on iOS and Android devices. However, it is only supported on devices with an Android version of 9 or above and tests where the `resignApp` capability is not set to `false`. 
+:::tip
+The `appProfiling` flag is supported for Appium tests on iOS and Android devices. However, it is only supported on devices with an **Android version >=9** and tests where the `resignApp` capability is not set to `false`. 
+:::
+
+:::note
+You can also also use this API to enable the app profiling feature in your tests:
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+      {`https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/`}
+    </CodeBlock>
+  </div>
+
+:::
 
 A sample output of this test will look like: 
 
-<img loading="lazy" src={require('../assets/images/appium-app/2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
-
+<img loading="lazy" src={require('../assets/images/appium-app/app-profiling.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ***
 
