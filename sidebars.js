@@ -1018,6 +1018,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "App Test",
+        id: "kane-ai-app-test"
+      },
+      {
+        type: "doc",
         label: "Test Plan",
         id: "kane-ai-test-plan"
       },

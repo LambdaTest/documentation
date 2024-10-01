@@ -63,7 +63,7 @@ Keep adding instructions/commands in plain English as you go; KaneAI will automa
 ### Step 3: Save your Test Case
 Now, save your test cases that you have generated till now.
 
-Select your Project, and the folder in which you want to store your test cases. The **Test Name** and the **Description** will be generated automatically, and you can also edit it. Select the **Type** of your test, and the status, and define the necessary tags which will help ypu to search your tests later.
+Select your Project, and the folder in which you want to store your test cases. The **Test Name** and the **Description** will be generated automatically, and you can also edit it. Select the **Type** of your test, and the **Status**, and define the necessary tags which will help ypu to search your tests later.
 <img loading="lazy" src={require('../assets/images/kane-ai/save-test.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 ### Step 4: Execute your test
