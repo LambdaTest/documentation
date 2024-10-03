@@ -48,8 +48,7 @@ The logs are presented in an easy-to-read, human-readable format using the [cypr
 ## Prerequisite: Install Cypress and Cypress Terminal Report
 Before proceeding, ensure that you have installed Cypress and the cypress-terminal-report plugin.
 
-- Open your `package.json` or `lambdatest-config.json` file.
-- Add the appropriate version of [cypress-terminal-report](https://www.npmjs.com/package/cypress-terminal-report) as a dependency:
+In your `package.json` or `lambdatest-config.json` file, add the appropriate version of [cypress-terminal-report](https://www.npmjs.com/package/cypress-terminal-report) as a dependency:
 
 ### For Cypress < 10:
 
