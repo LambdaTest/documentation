@@ -47,4 +47,5 @@ slug: selenium-default-capabilities/
 | `webStorageEnabled` | true, false | Decides if a session is able to connect with [storage objects](https://www.w3.org/TR/2009/WD-webstorage-20091029/).|
 | `acceptSslCerts` | true, false | Decides if a session by default should accept all SSL certificates.|
 | `unexpectedAlertBehaviour` | accept, dismiss, ignore | Determines the action of a browser for handling alerts, prior to pointing the UnhandledAlertException. |
-| elementScrollBehavior | integer | Determines the scrolling behavior according to the user provided input. The user can decide if the elements should be aligned to top(0) or bottom(1) with respect to the elements scroll-ability inside the viewport. By default the value is set to 1, aligning the scroll behavior to top. This is compatible with IE and Firefox (since 2.36) |
+| `elementScrollBehavior` | integer | Determines the scrolling behavior according to the user provided input. The user can decide if the elements should be aligned to top(0) or bottom(1) with respect to the elements scroll-ability inside the viewport. By default the value is set to 1, aligning the scroll behavior to top. This is compatible with IE and Firefox (since 2.36) |
+| `enableCrossSiteBlocking` | true, false | Prevents cross-site tracking. |
