@@ -1,8 +1,8 @@
 ---
 id: error-categorization-report
 title: Error Categorization Report on HyperExecute
-hide_title: true
-sidebar_label: Error Categorization Report
+hide_title: false
+sidebar_label: Error Categorization
 description: Streamline error analysis with the Error Categorization Report. Identify patterns in test failures to enhance quality and efficiency in your testing process.
 keywords:
   - error categorization reports
@@ -35,55 +35,25 @@ slug: error-categorization-report/
       })
     }}
 ></script>
+The Error Categorization Report is a specialized report that helps simplify the process of identifying and categorizing errors in your HyperExecute job. By organizing test failures with similar characteristics, this report provides a clear and structured overview of problematic stages and associated tests for efficient error tracking and analysis.
 
-# HyperExecute Error Categorization Report
+:::info
+You can generate and download other reports as well, along with the error-report.
+:::
 
-The Error Categorization Report is a custom report that is used to help you categorize errors based on failed tests, providing a clear and organized view of test failures with similar characteristics.
+## Configure YAML file to Generate the Error Categorization Report
 
-This report aims to simplify the identification of problematic stages and associated tests, allowing you to navigate through detailed views and download relevant information for further analysis.
+This report is generated when your job includes multiple error categories. To enable the error categorization report, simply pass the [`errorCategorizedReport`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#errorcategorizedreport) flag to your YAML file:
 
-## Generate Error Categorization Report
-
-Follow the guided steps below to generate the error-categorized report for your HyperExecute Job.
-
-### Prerequisite
-
-- This report will only be generated if your job contains multiple categories of errors.
-
-### Step 1: YAML file Configuration
-
-In your YAML file, add the below code to generate the error-categorization report.
-
-```bash
+```yaml
 errorCategorizedReport:
   enabled: true
 ```
 
-:::tip
-There is no dependency on the [**report flag**](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#report). It means that even if you do not pass the `report: true`, it will still generate the error-categorized report.
+:::note
+This report does not depend on the [`report: true`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#report) flag. It will generate the error report even if you do not pass the `report: true` flag in your YAML file.
 :::
 
-> **NOTE :** You can generate and download other reports as well, along with the error-report.
+Now trigger your job on HyperExecute, and if your job fails (encounters any failed tests), it will generate the Error Categorization Report. This report list down all the error summaries along with the specific details. You can also check for the particular error for the specific test.
 
-### Step 2: Execute your Job
-
-After configuring your YAML file, you can execute your Job on the HyperExecute. 
-
-- In the below screenshot, you can see that 3 categories of errors are generated
-  - ElementNotFound Error
-  - Assertion Error
-  - WebDriver Exception 
-
-- You can either open the **Error-RCA Report** or you can download it as well.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/error-dashbaord.png').default} alt="Image"  className="doc_img"/>
-
-### Step 3: Download or Open the Generated Error Report
-
-- This report list down all the error summaries along with the specific details.
-
-- You can also check for the particular error for the specific test.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/error-categorized-report-1.png').default} alt="Image"  className="doc_img"/>
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/error-categorized-report-2.png').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/error-categorization-report.gif').default} alt="Image" className="doc_img"/> 
