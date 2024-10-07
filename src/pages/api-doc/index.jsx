@@ -2,8 +2,33 @@ import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { useLocation } from 'react-router-dom';
 
 function ApiDoc() {
+    const location = useLocation();
+    useEffect(() => {
+        console.log(location.pathname)
+        if (location.pathname === '/support/api-doc/') {
+            const removeAlternateLinks = () => {
+                const alternateLinks = document.querySelectorAll('link[rel="alternate"]');
+                alternateLinks.forEach(link => link.parentNode.removeChild(link));
+            };
+
+            removeAlternateLinks();
+
+            const observer = new MutationObserver((mutationsList) => {
+                for (const mutation of mutationsList) {
+                    if (mutation.type === 'childList') {
+                        removeAlternateLinks();
+                    }
+                }
+            });
+
+            observer.observe(document.body, { childList: true, subtree: true });
+            
+            return () => observer.disconnect();
+        }
+    }, [location.pathname]);
     return (
         <Layout title="LambdaTest API Documentation"
             description="Manage and organize your test builds, test sessions, tunnel status and more with LambdaTest APIs for Selenium automation, App automation, Smart UI automation and Automated screenshots. ">
