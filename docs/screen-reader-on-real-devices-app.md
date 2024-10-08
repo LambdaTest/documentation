@@ -2,7 +2,7 @@
 id: screen-reader-on-real-devices-app
 title: Screen Reader (TalkBack) for Android
 sidebar_label: Screen Reader
-description: Test camera functionalities in mobile apps with LambdaTest's Camera Image Injection. Support for QR codes, barcodes, and image capture across 3000+ real devices.
+description: Test your app's accessibility with LambdaTest's Screen Reader. Navigate through app elements with spoken descriptions on real Android devices, ensuring compliance with WCAG standards.
 keywords:
   - image injection
   - app test automation
