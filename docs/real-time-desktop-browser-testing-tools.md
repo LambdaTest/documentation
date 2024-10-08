@@ -3,7 +3,7 @@ id: real-time-desktop-browser-testing-tools
 title: How to use Testing Tools?
 hide_title: false
 sidebar_label: Testing Tools
-description: If you want to perform real time cross browser testing for your website on LambdaTest using the desktop.
+description: Enhance your web testing with LambdaTest's comprehensive tool suite. Capture screenshots, record sessions, manage files, and more. Test across devices, browsers, and locations for optimal results.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature

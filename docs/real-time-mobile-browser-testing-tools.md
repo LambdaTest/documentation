@@ -3,7 +3,7 @@ id: real-time-mobile-browser-testing-tools
 title: How to use Testing Tools?
 hide_title: false
 sidebar_label: Testing Tools
-description: If you want to perform real time cross browser testing for your website on LambdaTest using the virtual mobile app.
+description: Enhance your mobile app testing with LambdaTest's comprehensive tools. Simulate actions, capture screenshots, record sessions, and more. Test across devices, locations, and network conditions for optimal results.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature

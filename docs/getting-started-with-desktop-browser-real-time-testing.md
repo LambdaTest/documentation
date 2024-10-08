@@ -3,7 +3,7 @@ id: getting-started-with-desktop-browser-real-time-testing
 title: Getting started with Desktop Web Browser Real Time Testing
 hide_title: false
 sidebar_label: Getting Started
-description: If you want to perform real time cross browser testing for your website on LambdaTest using the desktop.
+description: Test your websites on real desktop browsers with LambdaTest's Real-Time Desktop Web Browser Testing. Easily launch virtual machines and test across different OS, browsers, and versions.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature
