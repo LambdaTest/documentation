@@ -120,6 +120,8 @@ Efficiently switch between different devices, browsers, and their OS versions wi
 ## On Screen Keyboard
 This allows testers to simulate keyboard input directly on the virtual devices during real-time testing sessions. This feature is particularly useful when testing on devices with different keyboard layouts or when physical keyboard access is limited or unavailable.
 
+<img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/on-screen-keyboard.png').default} alt="Image" className="doc_img"/>
+
 ## End Session
 Conclude your testing session by clicking on the End Session button.
 
