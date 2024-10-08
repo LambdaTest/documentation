@@ -1,6 +1,6 @@
 ---
 id: error-categorization-report
-title: Error Categorization Report on HyperExecute
+title: Error Categorization Report
 hide_title: false
 sidebar_label: Error Categorization
 description: Streamline error analysis with the Error Categorization Report. Identify patterns in test failures to enhance quality and efficiency in your testing process.
@@ -45,7 +45,7 @@ You can generate and download other reports as well, along with the error-report
 
 This report is generated when your job includes multiple error categories. To enable the error categorization report, simply pass the [`errorCategorizedReport`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#errorcategorizedreport) flag to your YAML file:
 
-```yaml
+```yaml title="hyperexecute.yaml"
 errorCategorizedReport:
   enabled: true
 ```

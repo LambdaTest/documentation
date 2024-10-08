@@ -1,8 +1,8 @@
 ---
 id: playwright-html-report
-title: Consolidated Playwright HTML Report on HyperExecute
-hide_title: true
-sidebar_label: Playwright HTML Report
+title: Consolidated Playwright HTML Report
+hide_title: false
+sidebar_label: Playwright HTML
 description: Learn how to generate html test report for playwright framework testing on lambdatest and download the reports from the dashboard
 keywords:
  -  playwright testing with Playwright test runner
@@ -40,71 +40,34 @@ slug: playwright-html-report/
       })
     }}
 ></script>
+Playwright offers built-in HTML reports to help visualize the results of your test runs. These reports are detailed, user-friendly, and interactive, allowing you to analyze each test's status, logs, and errors in an organized manner.
 
-# Consolidated Playwright HTML Report on HyperExecute 
-* * *
+## Steps to Generate Consolidated HTML Report
+Follow these steps to generate a consolidated Playwright HTML report:
 
-Playwright is a Node.js library that uses a single API to automate Chromium, Firefox, and WebKit. It is designed to enable powerful, reliable, and efficient automated browser testing. Playwright can also automate Microsoft Edge since it is built on the open-source Chromium web framework.
+### Step 1: Update Your Playwright Configuration
 
-LambdaTest allows you to run Playwright tests across 40+ real browsers and operating system combinations. This guide will help you on how to generate a HTML Report for Playwright testing on the LambdaTest platform.
+In your Playwright configuration file `playwright.config.js`, add the following code to enable the reporter:
 
-## Reporters
-***
-
-Reporters are components or tools that generate human-readable output to display the results of test executions. They play a crucial role in providing developers, testers, and other stakeholders with valuable insights into the outcomes of automated tests. Reporters take the raw test execution data and format it into a structured and readable presentation.
-
-### Built-in Reporters
-Playwright Test provides several pre-defined or built-in reporters. Each reporter may present the test results in a different way, suitable for specific needs or preferences. These built-in reporters offer different levels of detail and visualization options, helping developers to understand the test results and identify any potential issues more effectively.
->
-Following are the Playwright built-in reporters:
-- List Reporter
-- Line Reporter
-- Dot Reporter
-- HTML Reporter
-- JSON Reporter
-- JUnit Reporter
-- GitHub Actions annotations
-
-### Custom Reporters
-Apart from the built-in reporters, Playwright Test also allows developers to create custom reporters i.e. you have the flexibility to define your own format and layout for displaying test results. Custom reporters are beneficial when you have specific reporting requirements or when you want to integrate the test results seamlessly into your existing development or CI/CD (Continuous Integration/Continuous Deployment) workflow.
-
-## HTML Report on HyperExecute
-***
-
-There are several built-in reporters in **Playwright Test** for various needs, along with an option to create Custom Reporters.
-
-HTML reporter produces a self-contained folder that contains a report for the test run that can be served as a web page. With Hyperexecute, we support the generation of a single HTML report for the complete job.
-
-By default, an HTML report is opened automatically if some of the tests failed. However, you can control this behavior via the `open` property in the **Playwright config file**. The possible values for that property are `always`, `never`, and `on-failure` (default).
-
-> In the case of Hyperexecute, we always have to set it to `never`.
-
-### Steps to Generate HTML Report on HyperExecute
-
-**Step 1:** Update your Playwright Configuration File by adding the below code
-
-#### playwright.config.js File
-
-```javascript
+```javascript title="playwright.config.js"
 import { devices } from '@playwright/test';
 
-const config = { 
-  timeout: 5 * 60 * 1000, // Maximum time one test can run for
-  testDir: './tests',
-  testMatch: /.*\.spec\.js/,
+const config = {
+  ...//
   reporter: [['html', { open: 'never' }]],
+  ...//
 };
 ```
+:::note
+- In the case of HyperExecute, we always have to set the value of `open: never`.
 
-:::tip Note
-
-By default, the report is written into the **playwright-report folder** in the current working directory. The same location can be used in the report parameters in the YAML file.
-
+- By default, the report is written into the **playwright-report folder** in the current working directory. The same location can be used in the report parameters in the YAML file.
 :::
 
-**Step 2:** Now configure the report parameters in the **HyperExecute YAML** file.
+### Step 2: Configure the HyperExecute YAML File
+In your HyperExecute YAML configuration, define the [`report`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
-```bash
+```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
   frameworkName: playwright
@@ -112,6 +75,7 @@ partialReports:
   type: html
 ```
 
-**Step 3:** Now execute your job by triggering the HyperExecute CLI. You can  visit the HyperExecute dashboard to download the report after job completion.
+### Step 3: Execute Your Tests
+Run your Playwright tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the consolidated Plywright HTML report.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/html-report.webp').default} alt="Image" className="doc_img"/> 
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/playwright-html-report.gif').default} alt="Image" className="doc_img"/> 

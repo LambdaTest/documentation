@@ -2,7 +2,7 @@
 id: extent-report
 title: Extent Report on HyperExecute
 hide_title: true
-sidebar_label: Extent Report
+sidebar_label: Extent
 description: Learn how to generate Extent Report on lambdatest and download the reports from the dashboard
 keywords:
   - extent testing reports
