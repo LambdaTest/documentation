@@ -2,7 +2,7 @@
 id: cucumber-report
 title: Cucumber Report on HyperExecute
 hide_title: true
-sidebar_label: Cucumber Report
+sidebar_label: Cucumber
 description: Learn how to generate Cucumber Report on lambdatest and download the reports from the dashboard
 keywords:
   - cucumber testing reports

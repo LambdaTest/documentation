@@ -2,7 +2,7 @@
 id: native-extent-report
 title: Native Extent Report on HyperExecute
 hide_title: true
-sidebar_label: Extent Native Report
+sidebar_label: Extent Native
 description: Learn how to generate Native Extent Report on lambdatest and download the reports from the dashboard
 keywords:
   - native testing reports

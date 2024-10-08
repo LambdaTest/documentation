@@ -1,8 +1,8 @@
 ---
 id: cypress-mochaawesome-report
-title: Consolidated Mochawesome Report for Cypress on HyperExecute
+title: Consolidated Mochawesome Report for Cypress
 hide_title: false
-sidebar_label: Cypress Mochawesome Report
+sidebar_label: Cypress Mochawesome
 description: Discover how to create MochaAwesome test reports for Cypress framework testing on LambdaTest and how to download these reports from the dashboard
 keywords:
     - cypress testing
@@ -33,46 +33,21 @@ slug: cypress-mochaawesome-report/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Playwright Testing With Playwright Test",
+          "name": "Cypress Mochawesome Report",
           "item": "https://www.lambdatest.com/support/docs/cypress-mochaawesome-report/"
         }]
       })
     }}
 ></script>
-Cypress is an open-source, end-to-end testing framework made especially for contemporary web applications. It enables programmers to create and run tests that mimic user interactions right inside a web browser.
+The Mochawesome reporter is a custom Cypress reporter designed to generate standalone HTML reports. These reports are clean, modern, and interactive, making it easier to visualize test results. With features like filtering tests and displaying stack traces for failures, the Mochawesome report is an essential tool in Cypress for clear and concise test insights.
 
-### Built-in Reporters
-There several pre-defined or built-in reporters and since Cypress is built on top of Mocha, that means any reporter built for Mocha can be used with Cypress as well. Each reporter may present the test results in a different way, suitable for specific needs or preferences. These built-in reporters offer different levels of detail and visualization options, helping developers to understand the test results and identify any potential issues more effectively.
+## Generating a Consolidated HTML Report
+Follow these steps to generate a consolidated HTML report using Mochawesome:
 
-:::note info
-Following are some of the built-in reporters:
-- Spec Reporter
-- Dot Matrix Reporter
-- Nyan Reporter
-- Tap Reporter
-- Landing Strip Reporter
-- List Reporter
-:::
+### Step 1: Update Your Cypress Configuration
+In your Cypress configuration file `cypress.config.js`, add the following code to enable Mochawesome as a reporter:
 
-There are many other built-in reporters as well. By default, Cypress uses the `spec` reporter to output information to `STDOUT`
-
-### Custom Reporters
-Apart from the built-in reporters, Cypress Test also allows developers to create custom reporters i.e. you have the flexibility to define your own format and layout for displaying test results. Custom reporters are beneficial when you have specific reporting requirements or when you want to integrate the test results seamlessly into your existing development workflow.
-
-You can load custom Mocha reporters through a relative or absolute path which can be specified in your **Cypress Configuration file** or via the **CLI**.
-
-## Mochawesome Report on HyperExecute
-***
-
-Mochawesome reporter is a custom reporter that generates a standalone HTML report which helps to help visualize the test runs. It has simple, clean, and modern design. The report has filters to display only the desired tests and renders stack trace for failed tests. The Mochawesome report is one of the most important reports in Cypress.
-
-### Steps to Generate HTML Report on HyperExecute
-
-**Step 1:** Update your Cypress Configuration File by adding the below code
-
-#### Cypress Config File
-
-```bash
+```javascript title="cypress.config.js"
 "reporter": "cypress-multi-reporters",
   "reporterOptions": {
     "reporterEnabled": [
@@ -87,17 +62,16 @@ Mochawesome reporter is a custom reporter that generates a standalone HTML repor
   }
 ```
 
-> The `overwrite` parameter should be set to **true** and `html` should be set to **false** because the mocha-merge utility which we use to merge reports do not support html files in path while merging json files
-
-:::tip Note
-
-The path to report is set to **``"reportDir": "cypress/results"``** and it should not be changed as we use this path for showing command logs on a dashboard.
-
+:::note
+- The `overwrite` parameter should be set to `true` to ensure the report is replaced with the latest run results.
+- The `html` option should be set to `false` because we will be merging JSON files later, and the mocha-merge utility does not support HTML files.
+- Ensure the `reportDir` path is set to `"cypress/results"` —this path is used to generate logs that will be visible on the dashboard. **Do not change this path.**
 :::
 
-**Step 2:** Now configure the report parameters in the **HyperExecute YAML** file.
+### Step 2: Configure the HyperExecute YAML File
+In your HyperExecute YAML configuration, define the [`report`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
-```bash
+```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
   frameworkName: cypress
@@ -105,6 +79,7 @@ partialReports:
   type: html
 ```
 
-**Step 3:** Now Execute your job by triggering the HyperExecute CLI. You can  visit the HyperExecute dashboard to download the report after job completion.
+### Step 3: Execute Your Tests
+Run your Cypress tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the consolidated Mochawesome report.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/mochawesome-report.png').default} alt="Image" className="doc_img"/> 
+<img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/cypress-mochawesome-report.gif').default} alt="Image" className="doc_img"/> 
