@@ -3,7 +3,7 @@ id: getting-started-with-mobile-browser-real-time-testing
 title: Getting started with Mobile Web Browser Real Time Testing
 hide_title: false
 sidebar_label: Getting Started
-description: If you want to perform real time cross browser testing for your website on LambdaTest using the virtual mobile app.
+description: Test your websites on real mobile browsers with LambdaTest's Real-Time Mobile Web Browser Testing. Easily launch virtual machines and test across various OS, browsers, and versions.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature
