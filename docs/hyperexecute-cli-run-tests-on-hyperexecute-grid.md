@@ -126,6 +126,10 @@ This flag allows you to download all the test related results that are generated
   </CodeBlock>
 </div>
 
+:::note
+- This functionality is not available with **XCUI** tests.
+- For Espresso with private devices HyperExecute can download user generated artefacts.
+:::
 
 ### `--download-artifacts-path`
 In case you want the artifacts to be downloaded to a specific directory, please provide the exact path followed by the flag as shown in the example below.
