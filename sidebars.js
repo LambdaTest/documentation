@@ -1029,6 +1029,7 @@ module.exports = {
         label: "Knowledge Base",
         items: [
           "kane-ai-command-guide",
+          "kane-ai-javascript-execution"
         ],
       },
       {
