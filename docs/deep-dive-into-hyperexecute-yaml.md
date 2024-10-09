@@ -15,6 +15,7 @@ slug: deep-dive-into-hyperexecute-yaml/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -133,14 +134,14 @@ type: raw   #or
 type: automatic 
 ```
 
-**`type:raw`**
+**`type: raw`**
 
 - **Purpose:** Perform a basic test discovery based on the provided command.
 - **Functionality:** Directly executes the specified command and displays the discovered tests.
 - **Limitations:** Doesn't utilize any built-in logic or advanced discovery capabilities.
 - **Suitable for:** Simple test discovery scenarios where the command directly identifies the desired tests.
 
-**`type:automatic`**
+**`type: automatic`**
 
 - **Purpose:** Utilize backend logic to discover tests using external tools.
 - **Functionality:** Relies on a backend tool, such as Snooper, to perform test discovery.
@@ -149,14 +150,47 @@ type: automatic
 
 In summary, `type:raw` is a basic and straightforward approach for discovering tests based on a specified command, while `type:automatic` provides more flexibility and advanced capabilities by leveraging external tools and backend logic.
 
-#### `mode`   
+#### `mode`
+This attribute defines where the test discovery occurs and how it is executed. HyperExecute now supports three discovery modes: `static`, `dynamic`, and `remote`.
+
 ```yaml
 #test discovery happens on machine where CLI is running
 mode: static  #or
 
 #test discovery happens on HyperExecute VMs
-mode: dynamic
+mode: dynamic #or
+
+# test discovery happens in designated HyperExecute VMs
+mode: remote
 ```
+**`mode: static`**
+
+- **Purpose:** Test discovery is performed locally on the machine where the CLI is running.
+- **Use Case:** Ideal for small projects or when tests need to be discovered locally.
+- **Limitations:** Requires dependencies installed locally and doesn’t support matrix-based distributions. Debugging logs are generated locally, limiting visibility.
+
+**`mode: dynamic`**
+
+- **Purpose:** Test discovery occurs on HyperExecute’s VMs during runtime, depending on the concurrency and OS settings.
+- **Use Case:** Suitable for scenarios where distributed test discovery is required across different VMs.
+- **Limitations:** Increases test execution time due to VM-level discovery. It also lacks efficient test distribution across VMs, and is incompatible with YAML 0.2 test discovery runners.
+
+**`mode: remote`** <NewTag value="NEW" bgColor="#ffec02" color="#000" />
+
+The `remote` discovery mode addresses the limitations of both `static` and `dynamic` modes. Instead of running test discovery on your local machine (static) or on multiple Virtual Machines (dynamic), this mode centralizes the process by using a dedicated remote Virtual Machines. 
+
+This setup helps to ease the discovery process and makes it more efficient, especially for complex test setups. Additionally, it fully supports [matrix-based testing](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/), which allows you to discover and manage tests across different configurations more effectively.
+
+#### Key Features:
+- **Centralized Discovery Tasks:** Tests are discovered remotely in a Virtual Machines designed for this purpose. Discovery tasks focus solely on identifying the tests without executing them, optimizing the discovery process.
+
+- **Orchestration Support:** Once tests are identified, orchestration algorithms ensure they are efficiently distributed across Virtual Machines, reducing idle time and improving resource utilization.
+
+- **Matrix Support:** Fully supports matrix configurations, allowing individual test discovery for each matrix combination, particularly useful for YAML 0.2 runners.
+
+- **Optimized Caching:** Remote Discovery Mode reduces redundant cache operations by performing them once in the discovery task, and sharing the cache across all Execution Tasks. This speeds up the overall process and minimizes resource wastage.
+
+- **Code Caching:** For users cloning their codebase via Git, Remote Discovery caches the code during the discovery task, reducing Git rate limits and accelerating the execution tasks.
 
 #### `command`
 The command that fetches the list of test scenario that would be further executed using the value passed in testRunnerCommand
