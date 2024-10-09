@@ -259,7 +259,7 @@ jobLabel: ['HYP', 'Espresso', 'Manual Sharding']
 - To run **adb commands** in the **pre** and **post-steps**, include the following two flags in your YAML file: To execute it, you must have purchased an equivalent number of parallels for both HyperExecute and Real Device.
 
 ```yaml
-private: true 
+privateCloud: true 
 preservedDevice: true
 ```
 :::
