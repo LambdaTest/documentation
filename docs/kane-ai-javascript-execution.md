@@ -51,14 +51,14 @@ This can be very useful for:
 - **Seamless Execution:** Test JavaScript code directly without any setup.
 
 ## How to Execute Custom JavaScript Tests
-### Step 1: Open the Test Input Field
-In KaneAI’s test editor, navigate to the input field where you typically write your test scenarios in plain English.
+### Step 1: Click on the "Write a Step" Field
+In KaneAI’s test editor, navigate to the "Write a Step" field where you typically write your test scenarios in plain English.
 
 ### Step 2: Trigger JavaScript Mode
-To switch to JavaScript execution mode, type the forward slash `/`. You will see a JavaScript Pop-up Option appear. Click on the JavaScript option to switch the input mode to custom JavaScript.
+To switch to JavaScript execution mode, type the forward slash `/` or click on the `+` icon. You will see a JavaScript Pop-up Option appear. Click on the JavaScript option to switch the input mode to custom JavaScript.
 
 ### Step 3: Write or Paste Your JavaScript Code
-Now, you can write or paste your custom JavaScript code snippet directly into the input field. A sample JavaScript code:
+Now, you can write or paste your custom JavaScript code snippet directly into the text field. A sample JavaScript code:
 
 ```javascript
 function simulateTyping(element, text) {
@@ -91,7 +91,7 @@ simulateTyping(inputElement3, 'amanc@lambdatest.com');
 return {"First name": "Aman", "Last name": "Chopra", "email": "amanc@lambdatest.com"};
 ```
 
-The provided code snippet simulates typing into input fields programmatically by dispatching key-related events such as keydown, input, keyup, and change. It mimics real user interaction by typing each character into the field and updating its value accordingly. The example provided fills in the first name, last name, and email fields with specific values and returns them in an object format.
+The provided code snippet simulates typing into text fields programmatically by dispatching key-related events such as keydown, input, keyup, and change. It mimics real user interaction by typing each character into the field and updating its value accordingly. The example provided fills in the first name, last name, and email fields with specific values and returns them in an object format.
 
 ### Step 4: Execute the Test
 Once your code is ready, simply press Enter. KaneAI will run your custom JavaScript snippet in the current testing environment.
