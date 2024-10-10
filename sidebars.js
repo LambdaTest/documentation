@@ -740,7 +740,6 @@ module.exports = {
             items: [
               "hyperexecute-how-smart-caching-boosts-tests-speed",
               "hyperexecute-seamless-integration-with-tools",
-              "hyperexecute-multi-webdriver-support",
               "hyperexecute-build-mobile-apps-using-tools",
               "hyperexecute-utilizing-custom-libraries",
               "hyperexecute-supported-languages-and-packages"
@@ -1018,6 +1017,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "App Test",
+        id: "kane-ai-app-test"
+      },
+      {
+        type: "doc",
         label: "Test Plan",
         id: "kane-ai-test-plan"
       },
@@ -1027,6 +1031,7 @@ module.exports = {
         label: "Knowledge Base",
         items: [
           "kane-ai-command-guide",
+          "kane-ai-javascript-execution"
         ],
       },
       {
