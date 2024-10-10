@@ -96,6 +96,22 @@ The provided code snippet simulates typing into text fields programmatically by 
 ### Step 4: Execute the Test
 Once your code is ready, simply press Enter. KaneAI will run your custom JavaScript snippet in the current testing environment.
 
+#### Handling Return Values and Variable Usage
+If your JavaScript snippet contains return values, KaneAI will automatically save these values in a variable that can be used later in the test. The output from your JavaScript code will be captured and assigned to a variable. This variable will be available for use throughout your test execution.
+
+For example, in the code snippet provided:
+
+```javascript
+return {"First name": "Aman", "Last name": "Chopra", "email": "amanc@lambdatest.com"};
+```
+
+The returned object with the keys `First name`, `Last name`, and `email` will be stored in a variable. You can reference this variable later in your test to validate or reuse the values.
+
+> Variables created from return values can be used in subsequent test steps. To use the variable, simply refer to the specific property (e.g., First name) in your test steps for verification or further actions.
+
+#### JavaScript Snippets in Generated Code
+When your test is executed, the JavaScript code snippet you provided will be added directly into the generated test code. This ensures that any custom interactions performed with JavaScript are part of the overall test logic. The inclusion of JavaScript in the generated code allows for easy tracking, debugging, and modification if needed.
+
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/images/kane-ai/kane-ai-js-execution.mp4').default} type="video/mp4" />
 </video>
