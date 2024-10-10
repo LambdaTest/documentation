@@ -740,7 +740,6 @@ module.exports = {
             items: [
               "hyperexecute-how-smart-caching-boosts-tests-speed",
               "hyperexecute-seamless-integration-with-tools",
-              "hyperexecute-multi-webdriver-support",
               "hyperexecute-build-mobile-apps-using-tools",
               "hyperexecute-utilizing-custom-libraries",
               "hyperexecute-supported-languages-and-packages"

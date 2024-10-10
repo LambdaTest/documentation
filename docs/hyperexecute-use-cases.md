@@ -49,11 +49,6 @@ slug: hyperexecute-use-cases/
       <h3>How you can seamlessly integrate your tests testing tool with HyperExecute for enhanced Test Orchestration?</h3>
     </div>
   </a>
-  <a href="/support/docs/hyperexecute-multi-webdriver-support/">
-    <div className="support_inners">
-      <h3>How to perform multi webdriver based parallel execution?</h3>
-    </div>
-  </a>
   <a href="/support/docs/hyperexecute-build-mobile-apps-using-tools/">
     <div className="support_inners">
       <h3>How to build your mobile applications via HyperExecute?</h3>
