@@ -120,7 +120,7 @@ This is used to locate or discover relevant tests via class names, filters, file
 ```yaml
 testDiscovery:
   type: raw
-  mode: dynamic
+  mode: local
   command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 ```
 
@@ -131,7 +131,7 @@ It contains the following attributes:
 type: raw   #or
 
 #(Advanced). For more advanced use cases.
-type: automatic 
+type: automatic
 ```
 
 **`type: raw`**
@@ -151,35 +151,36 @@ type: automatic
 In summary, `type:raw` is a basic and straightforward approach for discovering tests based on a specified command, while `type:automatic` provides more flexibility and advanced capabilities by leveraging external tools and backend logic.
 
 #### `mode`
-This attribute defines where the test discovery occurs and how it is executed. HyperExecute now supports three discovery modes: `static`, `dynamic`, and `remote`.
+This attribute defines where the test discovery occurs and how it is executed. HyperExecute now supports three discovery modes: `local`, and `remote`.
 
 ```yaml
 #test discovery happens on machine where CLI is running
-mode: static  #or
-
-#test discovery happens on HyperExecute VMs
-mode: dynamic #or
+mode: local  #or
 
 # test discovery happens in designated HyperExecute VMs
 mode: remote
 ```
-**`mode: static`**
+<!-- #test discovery happens on HyperExecute VMs
+mode: dynamic #or -->
+**`mode: local`**
 
 - **Purpose:** Test discovery is performed locally on the machine where the CLI is running.
 - **Use Case:** Ideal for small projects or when tests need to be discovered locally.
 - **Limitations:** Requires dependencies installed locally and doesn’t support matrix-based distributions. Debugging logs are generated locally, limiting visibility.
 
-**`mode: dynamic`**
+<!-- **`mode: dynamic`**
 
 - **Purpose:** Test discovery occurs on HyperExecute’s VMs during runtime, depending on the concurrency and OS settings.
 - **Use Case:** Suitable for scenarios where distributed test discovery is required across different VMs.
-- **Limitations:** Increases test execution time due to VM-level discovery. It also lacks efficient test distribution across VMs, and is incompatible with YAML 0.2 test discovery runners.
+- **Limitations:** Increases test execution time due to VM-level discovery. It also lacks efficient test distribution across VMs, and is incompatible with YAML 0.2 test discovery runners. -->
 
 **`mode: remote`** <NewTag value="NEW" bgColor="#ffec02" color="#000" />
 
-The `remote` discovery mode addresses the limitations of both `static` and `dynamic` modes. Instead of running test discovery on your local machine (static) or on multiple Virtual Machines (dynamic), this mode centralizes the process by using a dedicated remote Virtual Machines. 
+The `remote` discovery mode addresses the limitations of `local` modes. Instead of running test discovery on your local machine (local), this mode centralizes the process by using a dedicated remote Virtual Machines. 
 
 This setup helps to ease the discovery process and makes it more efficient, especially for complex test setups. Additionally, it fully supports [matrix-based testing](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/), which allows you to discover and manage tests across different configurations more effectively.
+
+> **NOTE :** [`type`](/support/docs/deep-dive-into-hyperexecute-yaml/#type) is not required with remote discovery.
 
 #### Key Features:
 - **Centralized Discovery Tasks:** Tests are discovered remotely in a Virtual Machines designed for this purpose. Discovery tasks focus solely on identifying the tests without executing them, optimizing the discovery process.
@@ -193,13 +194,13 @@ This setup helps to ease the discovery process and makes it more efficient, espe
 - **Code Caching:** For users cloning their codebase via Git, Remote Discovery caches the code during the discovery task, reducing Git rate limits and accelerating the execution tasks.
 
 #### `command`
-The command that fetches the list of test scenario that would be further executed using the value passed in testRunnerCommand
+The command that fetches the list of test scenario that would be further executed using the value passed in `testRunnerCommand`
 ```yaml
 command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
 ```
 
 :::tip
-- Test orchestration will happen with [`mode: static`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only.
+- Test orchestration will happen with [`mode: local`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) only.
 - 📕 Learn how to perform [dependent test discovery](/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/).
 :::
 
