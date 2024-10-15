@@ -3,7 +3,7 @@ id: pre-loaded-extension
 title: Pre-Loaded Extension for Chrome
 hide_title: false
 sidebar_label: Pre-Loaded Extension
-description: Install your favourite Chrome extensions using the Pre-loaded Extension feature before launching the test session. Eliminate the hassle of repetitively installing Chrome extensions inside VMs.
+description: Learn how to install and manage Chrome extensions during real-time testing on LambdaTest. Enhance your manual testing sessions with ad blockers, debugging tools, and more.
 keywords:
   - lambdatest pre loaded chrome extension
   - lambdatest pre loaded extension for chrome 

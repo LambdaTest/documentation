@@ -3,7 +3,7 @@ id: real-time-recents-and-favourites
 title: Recents and Favourites
 hide_title: false
 sidebar_label: Recents and Favourites
-description: Enhance mobile app testing with LambdaTest's comprehensive tools. Simulate actions, capture screenshots, record sessions, and more. Test across devices, locations, and network conditions for optimal results.
+description: Discover how to use the Recents and Favourites feature under Quick Links in LambdaTest. Quickly access recently used items and mark important resources for faster navigation.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature
