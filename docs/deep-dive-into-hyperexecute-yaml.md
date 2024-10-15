@@ -90,7 +90,7 @@ Auto-Split mode automatically splits your [`scenarios`](/support/docs/hyperexecu
 
 For instance, if you have a concurrency of 10 and you want to run 50 tests in total, AutoSplit mode will distribute these 50 tests on 10 VMs in the most efficient manner possible to reduce your overall job execution time.
 
-> **Note:** In [`static mode`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode), these commands will be smartly distributed among the VMs using history data, such that each VM (`task`) gets to run for almost the same amount of time to reduce your total [`job`](/support/docs/hyperexecute-guided-walkthrough/#jobs-page) time.
+> **Note:** In [`local mode`](/support/docs/deep-dive-into-hyperexecute-yaml/#mode), these commands will be smartly distributed among the VMs using history data, such that each VM (`task`) gets to run for almost the same amount of time to reduce your total [`job`](/support/docs/hyperexecute-guided-walkthrough/#jobs-page) time.
 
 ```yaml
 autosplit: true   
