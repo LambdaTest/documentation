@@ -100,11 +100,6 @@ LambdaTest's network throttling feature empowers you to simulate real-world netw
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-app/network-throttling.png').default} alt="Image" className="doc_img"/>
 
-## Projects
-The projects feature allows you to track your existing test session in an existing project.
-
-<img loading="lazy" src={require('../assets/images/real-time-testing/mobile-app/projects.png').default} alt="Image" className="doc_img"/>
-
 ## Settings
 The settings section offer the following features:
 - **Idle Timeout :** This feature allows you to set the idle timeout for your test session. The default Idle Timeout is 5 minutes and the maximum limit is 60 minutes.

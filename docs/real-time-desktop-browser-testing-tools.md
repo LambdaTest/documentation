@@ -22,27 +22,27 @@ slug: real-time-desktop-browser-testing-tools/
 ---
 
 <script type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({
-       "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
-        },{
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Real Time Desktop Browser Testing",
-          "item": "https://www.lambdatest.com/support/docs/real-time-desktop-browser-testing-tools/"
-        }]
-      })
-    }}
+  dangerouslySetInnerHTML={{ __html: JSON.stringify({
+   "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "LambdaTest",
+      "item": "https://www.lambdatest.com"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Support",
+      "item": "https://www.lambdatest.com/support/docs/"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Real Time Desktop Browser Testing",
+      "item": "https://www.lambdatest.com/support/docs/real-time-desktop-browser-testing-tools/"
+    }]
+  })
+}}
 ></script>
 LambdaTest offers a comprehensive suite of real-time desktop web browser testing tools designed to enhance the efficiency and accuracy of your testing process. This guide provides detailed instructions on how to utilize each tool to its fullest potential.
 
@@ -88,17 +88,12 @@ Upload files directly to the test environment for scenarios that require file in
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/upload.png').default} alt="Image" className="doc_img"/>
 
-## Projects
-Organize and manage your test sessions efficiently with the Projects feature. You can track your ongoing and past test sessions within specific projects to maintain a clear view of testing progress and results.
-
-<img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/projects.png').default} alt="Image" className="doc_img"/>
-
 ## Chrome Extension
 Enhance your testing capabilities with LambdaTest by leveraging various Chrome extensions that provide additional functionalities and streamline your testing process. These extensions can help automate repetitive tasks, assist in accessibility checks, and integrate AI tools into your workflow.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/chrome-extension.png').default} alt="Image" className="doc_img"/>
 
-## Accessibility
+## Screen Reader
 Ensure your web applications are accessible to all users, including those with disabilities, using LambdaTest's accessibility testing tools. This tool helps identify and address potential accessibility issues to enhance your website's usability and compliance with accessibility standards like WCAG (Web Content Accessibility Guidelines).
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/accessibility.png').default} alt="Image" className="doc_img"/>
