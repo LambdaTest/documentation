@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 function ApiDoc() {
     useEffect(() => {
         const linkTag = ['link[rel="alternate"]'];
-        function addRoleAndTabIndexAttributes() {
+        function removeLinkAttributes() {
             linkTag.forEach(link => {
                 let alternateLinks = document.querySelectorAll(link);
                 console.log("in loop", alternateLinks)
@@ -22,7 +22,7 @@ function ApiDoc() {
     
             })
         }
-        addEventListener('load', addRoleAndTabIndexAttributes);
+        addEventListener('load', removeLinkAttributes);
     }, []);
     return (
         <Layout title="LambdaTest API Documentation"
