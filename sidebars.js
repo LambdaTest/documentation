@@ -1133,6 +1133,7 @@ module.exports = {
           "real-time-testing-troubleshooting",
           "http-basic-authentication",
           "webview-testing-in-android",
+          "real-time-recents-and-favourites"
         ],
       },
       "troubleshooting-ios-apps",
