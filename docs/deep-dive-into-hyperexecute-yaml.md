@@ -927,7 +927,7 @@ When running a test case, it tries to fetch from cache, which browser was used f
 
 If you feel that browser setup time is more than expected, you should enable this feature. However, please note that it will reduce the browser setup time of the next test only if the current test takes enough time to launch the browser for the next test in background.
 
-This would work only for `version 0.1` and static discovery mode.
+This would work only for `version 0.1` and local discovery mode.
 
 As this is dependent on the previous run of a job, any change in the browser capability or test name or test order might render the cache invalid. And browser setup time reduction might not be visible in this run, rather, it would appear in the next run.
 
@@ -1385,7 +1385,7 @@ When we run a job in matrix mode, we set the keys with their resolved value as e
 ***
 
 ### `dynamicAllocation`
-When we set dynamicAllocation true, the test cases are distributed among parallels at the runtime. This is valid in case of static test discovery. In this case, the parallels are utilised in the most optimised manner. 
+When we set dynamicAllocation true, the test cases are distributed among parallels at the runtime. This is valid in case of local test discovery. In this case, the parallels are utilised in the most optimised manner. 
 <!-- **(Currently in BETA)** -->
 
 ```yaml
