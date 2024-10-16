@@ -48,8 +48,9 @@ Real-Time Mobile Web Browser Testing is the process of testing websites and web 
 
 ## Launch the Virtual Machine
 
-Navigate to the Real Time Testing section and select **Virtual Mobile** from the **Web Browser Testing** section. To test a website, enter its URL and select your **Device** - Andoroid, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version.
-
-Afterwards click on the **Start** button to initiate the testing process.
+- Navigate to the Real Time Testing section.
+- Select **Virtual Mobile** from the **Web Browser Testing** section.
+- To test a website, enter its URL and select your **Device** - Andoroid, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version.
+- Afterwards click on the **Start** button to initiate the testing process.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/getting-started-with-mobile-browser.gif').default} alt="Image" className="doc_img"/>

@@ -1,8 +1,8 @@
 ---
-id: real-time-upload-and-download-files
-title: Upload and Download Files
+id: real-time-locally-hosted-pages
+title: Locally Hosted Pages
 hide_title: false
-sidebar_label: Upload and Download Files
+sidebar_label: Locally Hosted Pages
 description: Discover how to use the Recents and Favourites feature under Quick Links in LambdaTest. Quickly access recently used items and mark important resources for faster navigation.
 keywords:
   - real time testing in lambdatest
@@ -16,9 +16,9 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/real-time-upload-and-download-files/
+url: https://www.lambdatest.com/support/docs/real-time-locally-hosted-pages/
 site_name: LambdaTest
-slug: real-time-upload-and-download-files/
+slug: real-time-locally-hosted-pages/
 ---
 
 <script type="application/ld+json"
@@ -38,8 +38,8 @@ slug: real-time-upload-and-download-files/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Real Time Upload and Download Files",
-          "item": "https://www.lambdatest.com/support/docs/real-time-upload-and-download-files/"
+          "name": "Real Time Locally Hosted Pages",
+          "item": "https://www.lambdatest.com/support/docs/real-time-locally-hosted-pages/"
         }]
       })
     }}

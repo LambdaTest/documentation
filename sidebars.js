@@ -1165,7 +1165,9 @@ module.exports = {
           "real-time-testing-troubleshooting",
           "http-basic-authentication",
           "webview-testing-in-android",
-          "real-time-recents-and-favourites"
+          "real-time-locally-hosted-pages",
+          "real-time-recents-and-favourites",
+          "real-time-upload-and-download-files"
         ],
       },
       "troubleshooting-ios-apps",
