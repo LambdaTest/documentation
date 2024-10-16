@@ -48,8 +48,9 @@ Real-Time Mobile App Testing is the process of testing mobile applications direc
 
 ## Launch the Virtual Machine
 
-Navigate to the Real Time Testing section and select **Virtual Mobile** from the **App Testing** section. To test your application, enter its URL or upload your application from your local machine and select your **Device** - Andoroid, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version.
-
-Afterwards click on the **Start** button to initiate the testing process.
+- Navigate to the Real Time Testing section.
+- Select **Virtual Mobile** from the **App Testing** section.
+- To test your application, enter its URL or upload your application from your local machine and select your **Device** - Andoroid, iOS, or [ChromeOS](/support/docs/chrome-os-testing/), and its version.
+- Afterwards click on the **Start** button to initiate the testing process.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-app/getting-started-with-mobile-app.gif').default} alt="Image" className="doc_img"/>

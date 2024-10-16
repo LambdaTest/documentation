@@ -48,8 +48,9 @@ Real-Time Desktop Web Browser Testing is the process of testing websites and web
 
 ## Launch the Virtual Machine
 
-Navigate to the Real Time Testing section and select **Desktop** from the **Web Browser Testing** section. To test a website, enter its URL and select your **Operating System**, **browser**, **browser version**, and **screen resolution**.
-
-Afterwards click on the **Start** button to initiate the testing process.
+- Navigate to the Real Time Testing section.
+- Select **Desktop** from the **Web Browser Testing** section.
+- To test a website, enter its URL and select your **Operating System**, **browser**, **browser version**, and **screen resolution**.
+- Afterwards click on the **Start** button to initiate the testing process.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/getting-started-with-desktop-browser.gif').default} alt="Image" className="doc_img"/>
