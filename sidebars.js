@@ -1028,7 +1028,9 @@ module.exports = {
         label: "Knowledge Base",
         items: [
           "kane-ai-command-guide",
-          "kane-ai-javascript-execution"
+          "kane-ai-javascript-execution",
+          "kane-ai-geolocation-tunnel-proxy",
+          "kane-ai-scroll-in-feature"
         ],
       },
       {
