@@ -1010,17 +1010,19 @@ module.exports = {
           "why-we-need-kane-ai",
           "kane-ai-web-test",
           "kane-ai-guided-walkthrough",
+          "kane-ai-app-test",
+          "kane-ai-test-plan"
         ],
       },
       {
-        type: "doc",
-        label: "App Test",
-        id: "kane-ai-app-test"
-      },
-      {
-        type: "doc",
-        label: "Test Plan",
-        id: "kane-ai-test-plan"
+        type: "category",
+        collapsed: true,
+        label: "Features",
+        items: [
+          "kane-ai-javascript-execution",
+          "kane-ai-geolocation-tunnel-proxy",
+          "kane-ai-scroll-in-feature"
+        ],
       },
       {
         type: "category",
@@ -1028,9 +1030,7 @@ module.exports = {
         label: "Knowledge Base",
         items: [
           "kane-ai-command-guide",
-          "kane-ai-javascript-execution",
-          "kane-ai-geolocation-tunnel-proxy",
-          "kane-ai-scroll-in-feature"
+          "kane-ai-web-test-writing-guidelines"
         ],
       },
       {
