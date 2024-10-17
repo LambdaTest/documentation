@@ -56,7 +56,7 @@ For example:
 - Write the test in the text field "This is a sample app".
 - Click on the "+" button.
 
-Continue to add instructions/commands in plain English as you go; KaneAI will automatically queue them for execution, eliminating the need to wait for one test to finish before writing the next. Click the **Fininsh Test**.
+Continue to add instructions/commands in plain English as you go; KaneAI will automatically queue them for execution, eliminating the need to wait for one test to finish before writing the next. Click the **Finish Test**.
 
 > **Remember:** The more specific you are, the more accurate KaneAI's generated test cases will be.
 
