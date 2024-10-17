@@ -83,8 +83,8 @@ Simulate website and mobile experiences from over 45 countries using local IP ad
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/ip-geolocation.png').default} alt="Image" className="doc_img"/>
 
-## Upload
-Upload files directly to the test environment for scenarios that require file input or uploads, such as testing form submissions, image uploads, or file management features.
+## Files and Media
+The [Upload and Download Files](/support/docs/real-time-upload-and-download-files/) feature allows to manage files directly within remote testing environments. This functionality streamlines the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/upload.png').default} alt="Image" className="doc_img"/>
 
