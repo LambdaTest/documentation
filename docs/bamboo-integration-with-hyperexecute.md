@@ -90,7 +90,7 @@ cd ROOT_FOLDER
 ./bin/start-bamboo.sh
 ```
 
-- Now type **http://localhost:8085/** in your browser to open the Bamboo GUI.
+- Now type ``http://localhost:8085/`` in your browser to open the Bamboo GUI.
 
 > **NOTE:** If you are running Bamboo for the very first time, then you need to configure the Setup Wizard as well. Follow the instructions [here](https://confluence.atlassian.com/bamboo/running-the-setup-wizard-289276851.html) to configure it.
 
