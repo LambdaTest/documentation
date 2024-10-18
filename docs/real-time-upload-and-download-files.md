@@ -63,13 +63,13 @@ The Upload and Download Files feature allows you to manage files directly within
 
 **Step 1 :** Log in to the [Web Browser Testing](https://app.lambdatest.com/console/realtime/browser/desktop) dashboard.
 
-**Step 2 :** Upload or install your app and select the Android device from the device listing to launch your test session.
+**Step 2 :** Select your required OS and relevant browser, and device from the listing to launch your test session.
 
-**Step 3 :** On the App Live vertical toolbar, click Files & Media.
+**Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** On the Files & Media prompt, click the File tab.
+**Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
 
-**Step 5 :** Click Upload files to the Device > Upload new file.
+<img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-web-browser.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
 </TabItem>
 
@@ -77,13 +77,13 @@ The Upload and Download Files feature allows you to manage files directly within
 
 **Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/browser/mobile) dashboard from the **Web Browser Testing** section.
 
-**Step 2 :** Upload or install your app and select the Android device from the device listing to launch your test session.
+**Step 2 :** Select your required OS and relevant browser, and device from the listing to launch your test session.
 
-**Step 3 :** On the App Live vertical toolbar, click Files & Media.
+**Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** On the Files & Media prompt, click the File tab.
+**Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
 
-**Step 5 :** Click Upload files to the Device > Upload new file.
+<img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-mobile-browser.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
 </TabItem>
 
@@ -91,13 +91,13 @@ The Upload and Download Files feature allows you to manage files directly within
 
 **Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/app) dashboard from the **App Testing** section.
 
-**Step 2 :** Upload or install your app and select the Android device from the device listing to launch your test session.
+**Step 2 :** Select your OS and the required device, upload your app and then launch your test session.
 
-**Step 3 :** On the App Live vertical toolbar, click Files & Media.
+**Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** On the Files & Media prompt, click the File tab.
+**Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
 
-**Step 5 :** Click Upload files to the Device > Upload new file.
+<img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-app.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
 </TabItem>
 </Tabs>
