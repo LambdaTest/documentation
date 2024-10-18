@@ -56,6 +56,52 @@ The Upload and Download Files feature allows you to manage files directly within
 - Integrated download capability for test outputs
 - Seamless integration with existing manual testing workflows
 
+## Steps to Upload or Download the Files
+
+<Tabs className="docs__val">
+<TabItem value="web-browser" label="Web Browser" default>
+
+**Step 1 :** Log in to the [Web Browser Testing](https://app.lambdatest.com/console/realtime/browser/desktop) dashboard.
+
+**Step 2 :** Upload or install your app and select the Android device from the device listing to launch your test session.
+
+**Step 3 :** On the App Live vertical toolbar, click Files & Media.
+
+**Step 4 :** On the Files & Media prompt, click the File tab.
+
+**Step 5 :** Click Upload files to the Device > Upload new file.
+
+</TabItem>
+
+<TabItem value="mobile-browser" label="Mobile Browser" default>
+
+**Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/browser/mobile) dashboard from the **Web Browser Testing** section.
+
+**Step 2 :** Upload or install your app and select the Android device from the device listing to launch your test session.
+
+**Step 3 :** On the App Live vertical toolbar, click Files & Media.
+
+**Step 4 :** On the Files & Media prompt, click the File tab.
+
+**Step 5 :** Click Upload files to the Device > Upload new file.
+
+</TabItem>
+
+<TabItem value="mobile-app" label="Mobile App" default>
+
+**Step 1 :** Log in to the [Virtual Mobile](https://app.lambdatest.com/console/realtime/app) dashboard from the **App Testing** section.
+
+**Step 2 :** Upload or install your app and select the Android device from the device listing to launch your test session.
+
+**Step 3 :** On the App Live vertical toolbar, click Files & Media.
+
+**Step 4 :** On the Files & Media prompt, click the File tab.
+
+**Step 5 :** Click Upload files to the Device > Upload new file.
+
+</TabItem>
+</Tabs>
+
 ## Supported Platform Compatibility
 
 <Tabs className="docs__val">
@@ -102,7 +148,7 @@ The Upload and Download Files feature allows you to manage files directly within
 ## File Types and Sizes
 
 <Tabs className="docs__val">
-<TabItem value="uplaod" label="Uploading Files" default>
+<TabItem value="upload" label="Uploading Files" default>
 
 | File Type | Supported Formats | Maximum File Size |
 |-----------|-------------------|-------------------|
