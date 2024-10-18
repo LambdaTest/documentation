@@ -37,7 +37,7 @@ slug: hyperexecute-guided-walkthrough/
       })
     }}
 ></script>
-This page gives you a guided walkthrough of all the things on the HyperExecute Dashboard and how you can get the most out of the Platform, once you have successfully [ran you first sample Job](/support/docs/hyperexecute-running-your-first-job/). 
+This page gives you a guided walkthrough of all the things on the HyperExecute Dashboard and how you can get the most out of the platform once you have successfully [run your first sample Job](/support/docs/hyperexecute-running-your-first-job/). 
 
 ## Jobs Page
 
