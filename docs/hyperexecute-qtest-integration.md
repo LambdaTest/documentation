@@ -52,7 +52,7 @@ This document details the seamless integration between HyperExecute and qTest, e
 
 ## Prerequisites
 
-- You must have [Python 3.6](https://www.python.org/downloads/), [Apache Maven](https://maven.apache.org), and [Git](https://git-scm.com/download/) installed on your local machine.
+- You must have [Python 3.6](https://www.python.org/downloads/), [Apache Maven](https://maven.apache.org), and [Git](https://git-scm.com/downloads) installed on your local machine.
 - [Download](https://support-hub.tricentis.com/open?sys_kb_id=194a54eedb4f5c181ea7bb13f3961950&id=kb_article_view&number=KB0015571) and extract the **agentctl-[version]-mac-x64-full.tgz** file to a desired installation directory.
 - Login to qTest Manager as an administrator and access the Resources page.
 - Expand the **APIs and SDK** sections.
@@ -65,7 +65,7 @@ This document details the seamless integration between HyperExecute and qTest, e
 ./agentctl start
 ```
 
-- Visit [http://localhost:6789](http://localhost:6789), add your details and click on the **Register** button.
+- Visit ``http://localhost:6789``, add your details and click on the **Register** button.
 
     - **Host Name :** You have to enter any name that will be assigned as the host name.
     - **qTest URL :** Enter the URL of your qTest Manager page. For e.g. `https://aman.qtestnet.com`
@@ -138,7 +138,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ## Step 3: Setup the Automation
 
-- Navigate to your [Automation Host](http://localhost:6789/home) and click on the **Add** button to add a new agent.
+- Navigate to your Automation Host ``http://localhost:6789/home`` and click on the **Add** button to add a new agent.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/1.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
 
