@@ -143,7 +143,7 @@ When the screenshot is captured and it is then compressed to a file format such 
 
 The following are the supported options for the pixel comparison feature:
 
-- `antialiasing` - ignores the smoothing of edges in digital images, click [here](https://sisu.ut.ee/imageprocessing/book/4) to know more.
+- `antialiasing` - ignores the smoothing of edges in digital images.
 - `alpha` - ignores the alpha of the pixel color and makes into solid color without any opacity, click [here](https://sites.uci.edu/iap2015/2015/01/14/the-alpha-attribute-of-a-picture/#:~:text=In%20digital%20images%2C%20each%20pixel,of%200%20means%20totally%20transparent.) to know more.
 - `colors` - added corrected lightness to the screenshot by ignoring the default pixel color value.
 - `nothing` - ignores none of the false positive options from the comparison.
