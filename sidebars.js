@@ -853,8 +853,18 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
+            label: "October, 2024",
+            items: [
+              'hyperexecute-release-notes-2-5-5',
+              'hyperexecute-release-notes-2-5-4',
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
             label: "September, 2024",
             items: [
+              'hyperexecute-release-notes-2-5-3',
               'hyperexecute-release-notes-2-5-2',
               'hyperexecute-release-notes-2-5-1',
               'hyperexecute-release-notes-2-5-0',
