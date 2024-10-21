@@ -1091,8 +1091,8 @@ export default function index() {
             </details>
             <details>
               <summary>Do you operate physical infrastructure? If so what certifications do they hold related to physical security? Can we see the audit/certification reports?</summary>
-              <p>Our application is hosted entirely on third party hosting providers like AWS, Hetzner, etc. All our hosting partners have very high security protocols. For example checkout <a href="https://aws.amazon.com/security/">AWS security protocols</a>, or <a href="https://hetzner.co.za/help-centre/products-and-services/dedicated-hosting/what-iso-and-data-security-protection-does-hetzner-employ-on-managed-servers//">Hetzner Security protocols.</a></p>
-            </details>
+              <p>Our application is hosted entirely on third party hosting providers like AWS, Hetzner, etc. All our hosting partners have very high security protocols. For example checkout <a href="https://aws.amazon.com/security/">AWS security protocols</a>, or Hetzner Security protocols.</p>
+              </details>
             <details>
               <summary>What is your incident response process?</summary>
               <p>We, here, at LambdaTest follow a 6 step incident reponse process. The various stages of the response proces are prepration, identification, containment, eradication, recovery, and learning. We use industry leading practices for each step and test our response workflow once a month.</p>
