@@ -67,7 +67,7 @@ The Upload and Download Files feature allows you to manage files directly within
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
+**Step 4 :** Click **Uploads / Downloads** button Upload or Download the file.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-web-browser.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
@@ -81,7 +81,7 @@ The Upload and Download Files feature allows you to manage files directly within
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
+**Step 4 :** Click **Uploads / Downloads** button Upload or Download the file.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-mobile-browser.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
@@ -95,7 +95,7 @@ The Upload and Download Files feature allows you to manage files directly within
 
 **Step 3 :** Click on Files and Media from the toolbar.
 
-**Step 4 :** Click **Uploads / Downloads** button Upload or Downlaod the file.
+**Step 4 :** Click **Uploads / Downloads** button Upload or Download the file.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/key-features/upload-download-app.png').default} alt="zebrunner integration" width="1281" height="722" className="doc_img"/>
 
