@@ -81,6 +81,10 @@ This integration allows you to capture real-time feedback and track issues direc
 
 **Step 4:** Go to your dashboard and check a ticket will be created for the same.
 
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/integration/bug-tracking/zipboard/lodge-bug.mp4').default} type="video/mp4" />
+</video>
+
 ## Uninstall zipBoard Integration
 
 **Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
