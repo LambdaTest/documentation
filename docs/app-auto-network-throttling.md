@@ -79,23 +79,15 @@ By the end of this guide, you will learn how to:
     }
     ```
 
-
 :::note
-To utilize the **networkProfile** capability, ensure that you include `network: True` in the capabilities 
+To utilize the **networkProfile** capability, ensure that you include `network: True` in the capabilities.
 :::  
-
 
 ### During Test Execution
 
 - **LambdaHook:** Dynamically alter the network profile within the test session using the following LambdaHook:
-
     ```python
     driver.execute_script("updateNetworkProfile=3g-umts-good")
-    ```
-- **Offline** mode can be supported during test execution by using using the following LambdaHook (only for **android**):
-
-    ```python
-    driver.execute_script("updateNetworkProfile=offline")
     ```
 
 ### Supported Network Profiles
@@ -109,31 +101,60 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 | 3g-umts-good             | 5 Mbps          | 2 Mbps       | 100 ms  |
 | 4g-lte-good              | 15 Mbps         | 7 Mbps       | 70 ms   |
 | 4g-lte-advanced-good     | 25 Mbps         | 12 Mbps      | 20 ms   |
-| default                  | NA             | NA          | NA     |
+| default                  | NA             | NA           | NA      |
 
-> Download speed is currently stable, expect additional feature updates shortly.
 
 ### Custom Profiles
 
 - **LambdaHook:** Define and implement custom network profiles with LambdaHook by specifying the maximum download speed (kbps), maximum upload speed (kbps), and latency (ms) for the custom condition, as illustrated in the example.
-
     ```python
     driver.execute_script("customNetworkProfile: { \"downloadSpeed\": 500, \"uploadSpeed\" : 250, \"latency\": 100 }" )
     ```
 
-### Default/Reset network configuration
+### Default/Reset Network Configuration
 
 - **LambdaHook:** Employ this webhook to seamlessly restore the device's network profile to its default state. Invocation of this LambdaHook removes any predefined or custom network settings, ensuring the device is reset to its original configuration.
-
     ```python
     driver.execute_script("updateNetworkProfile=default")
     ```
 
-:::caution
-- **Wrong Capability Name or Value:** Providing an incorrect capability value results in a bad request error with a descriptive message.
-- **LambdaHook Error:** If you pass any wrong value in LambdaHook,you will receive an error message.
-:::
+### Offline Mode
 
+#### Android
+
+- To initialize tests in **offline mode**, set the `networkProfile` capability to `offline` during session initiation:
+    ```python
+    caps = {
+        "network": True,
+        "networkProfile": "offline"  # Set to offline mode
+    }
+    ```
+
+- **LambdaHook:** You can also switch to offline mode during the test execution with the following command:
+    ```python
+    driver.execute_script("updateNetworkProfile=offline")
+    ```
+
+#### iOS
+
+- For **iOS** devices, offline mode cannot be set using the `networkProfile` capability. Instead, use the offline mode API by sending a cURL request within the running test session:
+    ```bash
+    curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<session-id>/update_network' \
+    --header 'Authorization: Basic <username:access_key>' \
+    --header 'Content-Type: application/json' \
+    --data '{"mode": "offline"}'
+    ```
+
+
+:::note
+- **Network throttling** results may vary sometimes based on multiple factors including network conditions and device performance.
+
+- **Wrong Capability Name or Value:** Providing an incorrect capability value results in a bad request error with a descriptive message.
+
+- **LambdaHook Error:** If you pass any wrong value in LambdaHook, you will receive an error message.
+
+- In offline mode, **live video** will not be available for the duration of the test session.
+:::
 
 > In case you have any questions, feel free to share them with us.Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 Customer chat support**</span>. You can also drop us a mail at support@lambdatest.com. Happy testing! 🙂
 
