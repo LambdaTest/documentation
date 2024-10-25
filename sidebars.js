@@ -2747,6 +2747,8 @@ module.exports = {
           "smartui-wdio-sdk",
           "smartui-sdk-config-options",
           "smartui-cli-git-branching-strategy",
+          "smartui-cli-env-variables",
+          "smartui-cli-responsive-dom",
           {
             type: "category",
             collapsed: true,
