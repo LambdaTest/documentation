@@ -75,7 +75,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
   ```bash
   ./bin/go-agent start
   ```
-- Now type **http://localhost:8153/go** in your browser to open the GoCD GUI.
+- Now type ``http://localhost:8153/`` go in your browser to open the GoCD GUI.
 
 - Click on the New Pipeline Button.
 

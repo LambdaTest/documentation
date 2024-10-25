@@ -139,7 +139,7 @@ bin/deploy.sh
 
 The above command will create the **S3 buckets**, put the bucket names into the parameter store, create the `DLQ Topic` for failed Lambda invokes, create the Lambda functions, connect the S3 bucket to the resizer lambda, and create the web application.
 
-> **Note:** You can visit [webapp.s3-website.localhost.localstack.cloud:4566](http://webapp.s3-website.localhost.localstack.cloud:4566/) on your web browser and paste the function URL of the pre sign Lambda function you created earlier.
+> **Note:** You can visit **webapp.s3-website.localhost.localstack.cloud:4566** on your web browser and paste the function URL of the pre sign Lambda function you created earlier.
 
 <img loading="lazy" src={require('../assets/images/localstack-integration/localstack-one.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 

@@ -850,8 +850,19 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
+            label: "October, 2024",
+            items: [
+              'hyperexecute-release-notes-2-5-6',
+              'hyperexecute-release-notes-2-5-5',
+              'hyperexecute-release-notes-2-5-4',
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
             label: "September, 2024",
             items: [
+              'hyperexecute-release-notes-2-5-3',
               'hyperexecute-release-notes-2-5-2',
               'hyperexecute-release-notes-2-5-1',
               'hyperexecute-release-notes-2-5-0',
@@ -1010,17 +1021,19 @@ module.exports = {
           "why-we-need-kane-ai",
           "kane-ai-web-test",
           "kane-ai-guided-walkthrough",
+          "kane-ai-app-test",
+          "kane-ai-test-plan"
         ],
       },
       {
-        type: "doc",
-        label: "App Test",
-        id: "kane-ai-app-test"
-      },
-      {
-        type: "doc",
-        label: "Test Plan",
-        id: "kane-ai-test-plan"
+        type: "category",
+        collapsed: true,
+        label: "Features",
+        items: [
+          "kane-ai-javascript-execution",
+          "kane-ai-geolocation-tunnel-proxy",
+          "kane-ai-scroll-in-feature"
+        ],
       },
       {
         type: "category",
@@ -1028,7 +1041,7 @@ module.exports = {
         label: "Knowledge Base",
         items: [
           "kane-ai-command-guide",
-          "kane-ai-javascript-execution"
+          "kane-ai-web-test-writing-guidelines"
         ],
       },
       {
@@ -1133,6 +1146,9 @@ module.exports = {
           "real-time-testing-troubleshooting",
           "http-basic-authentication",
           "webview-testing-in-android",
+          "real-time-locally-hosted-pages",
+          "real-time-recents-and-favourites",
+          "real-time-upload-and-download-files"
         ],
       },
       "troubleshooting-ios-apps",
@@ -1668,6 +1684,7 @@ module.exports = {
           "manual-test-case-creation",
           "manual-test-cases-with-ai",
           "copy-and-move-support-for-test-cases",
+          "export-test-cases",
           "test-case-repository",
         ],
       },
@@ -1736,7 +1753,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Features",
-            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app"],
+            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios"],
           },
         ],
       },

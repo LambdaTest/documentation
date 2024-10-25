@@ -44,12 +44,31 @@ slug: getting-started-with-desktop-browser-real-time-testing/
       })
     }}
 ></script>
-Real-Time Desktop Web Browser Testing is the process of testing websites and web applications directly on live desktop browsers in real-time. This testing method allows developers, testers, and QA professionals to interact with their web applications across different browser environments, operating systems, and versions without the need to set up complex infrastructure on their local machines.
+Real-Time Desktop Web Browser Testing allows you to test your websites and web applications directly on live desktop browsers. This approach allows developers, testers, and QA professionals to interact with their web applications across various browser environments, operating systems, and versions without the need to configure complex infrastructure on local machines. Whether you want to verify cross-browser compatibility, perform functional testing, or check responsive design, this process provides a seamless way to carry out testing efficiently.
 
 ## Launch the Virtual Machine
 
-Navigate to the Real Time Testing section and select **Desktop** from the **Web Browser Testing** section. To test a website, enter its URL and select your **Operating System**, **browser**, **browser version**, and **screen resolution**.
-
-Afterwards click on the **Start** button to initiate the testing process.
+- Navigate to the Real Time Testing section.
+- Select **Desktop** from the **Web Browser Testing** section.
+- To test a website, enter its URL and select your **Operating System**, **browser**, **browser version**, and **screen resolution**.
+- Afterwards click on the **Start** button to initiate the testing process.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/getting-started-with-desktop-browser.gif').default} alt="Image" className="doc_img"/>
+
+## Understanding the Dashboard
+The dashboard for real-time desktop browser testing is designed to simplify the testing process with an intuitive user interface. Here’s a breakdown of its key components:
+
+- **Operating System Selection Panel :** Choose from different OS versions of Windows and macOS, such as Windows 11, Windows 10..., macOS Sequoia, macOS Sonoma, macOS Ventura,... Each selection expands to show supported versions.
+
+- **Browser and its Version Selection Panel :** Lists the available web browsers and their corresponding versions. Versions are displayed with release dates for easy reference. Clicking on a browser filters the versions available for the selected OS.
+
+- **Screen Resolution Options :** Shows the available resolutions for the selected browser version. This allows you to test responsive design scenarios and see how your application behaves across various screen sizes.
+
+- **URL Input Field :** Enter the URL of your web application which you want to test in the real time console of LambdaTest.
+
+### Additional Options
+- The top panel contains advanced settings, including the ability to enable a [Tunnel](/support/docs/real-time-locally-hosted-pages/) for testing internal or locally hosted applications, as well as a toggle for Private Cloud access if applicable.
+- [Chrome Extensions](/support/docs/pre-loaded-chrome-extension/) dropdown allows for adding extensions during a test session, making it suitable for testing add-on functionalities.
+- The Start button triggers the virtual machine with the chosen settings.
+
+These features provide flexibility for comprehensive browser testing, making it easier to identify issues and ensure a consistent user experience across different configurations.
