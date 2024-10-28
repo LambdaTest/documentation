@@ -1,6 +1,6 @@
 ---
 id: smartui-cli-responsive-dom
-title: SmartUI SDK Advanced Configuration Options
+title: Capturing Responsive DOM with SmartUI SDK
 sidebar_label: Capture Responsive DOM
 description: In this documentation, learn how to capture responsive DOM by capturing multiple screenshots of the same DOM
 keywords:
