@@ -22,6 +22,12 @@ To trace each request, you can leverage Selenium 4 and OpenTelemetry integration
 
 However, managing several requests, tracing logs, and troubleshooting request failures in a distributed environment can be challenging. In such instances, you can integrate Telemetry logs with Jaeger - a distributed tracing system - to quickly visualize and query traces. 
 
+<div className="ytframe"> 
+<div className="youtube" data-embed="uOGxauw0K4w">
+    <div className="play-button"></div>
+</div>
+</div>
+
 ## Supported Operating Systems
 ---
 
