@@ -2,7 +2,7 @@
 id: specflow-report
 title: SpecFlow Report on HyperExecute
 hide_title: true
-sidebar_label: SpecFlow Report
+sidebar_label: SpecFlow
 description: Learn how to generate SpecFlow Report on lambdatest and download the reports from the dashboard
 keywords:
   - specflow testing reports

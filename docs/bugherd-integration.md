@@ -62,7 +62,7 @@ LambdaTest integrates with BugHerd, allowing users to file issues directly from 
 **Step 4:** Now, provide your BugHerd API Token to establish integration with LambdaTest and click on **install** button.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/bugherd-integration/bugherd-integrate.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/integration/bug-tracking/bugherd/bugherd-integrate.mp4').default} type="video/mp4" />
 </video>
 
 :::info Fetch your Bugherd API Token
@@ -71,7 +71,7 @@ LambdaTest integrates with BugHerd, allowing users to file issues directly from 
 - You will find the "**API Token**" under the section **Authentication Token**. Copy your API token.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/bugherd-integration/api-token.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/integration/bug-tracking/bugherd/api-token.mp4').default} type="video/mp4" />
 </video>
 
 :::
@@ -89,7 +89,7 @@ LambdaTest integrates with BugHerd, allowing users to file issues directly from 
 **Step 5:** Now update the comments of the bug and other details and click on **Create Task** button.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/bugherd-integration/lodge-bug.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/integration/bug-tracking/bugherd/lodge-bug.mp4').default} type="video/mp4" />
 </video>
 
 **Step 6:** Go to your dashboard and check a ticket will be created for the same.
@@ -103,7 +103,7 @@ LambdaTest integrates with BugHerd, allowing users to file issues directly from 
 **Step 3:** Click on the **Remove** button.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/bugherd-integration/uninstall-bugherd.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/integration/bug-tracking/bugherd/uninstall-bugherd.mp4').default} type="video/mp4" />
 </video>
 
 > That was all you need to know for LambdaTest + BugHerd Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock. 
