@@ -1,7 +1,7 @@
 ---
 id: testim-integration
 title: Testim Integration
-hide_title: true
+hide_title: false
 sidebar_label: Testim
 description: LambdaTest offers integration with Testim to help you perform automated browser testing on 3000+ real browsers and OS.
 keywords:
@@ -39,24 +39,16 @@ slug: testim-integration/
       })
     }}
 ></script>
-
-# Testim Integration
-***
-
 Testim provides an automated testing platform to create stable tests using AI-powered capabilities, along with tools that facilitate scaling quality across your software development process.
 
 Integrating LambdaTest with Testim lets you run Testim automated tests on LambdaTest cloud-based grid across 3000+ real browsers and OS.
 
 ## Prerequisites
----
-
 - Create an account on Testim.
 - Create a LambdaTest account. You can [sign up for free](https://accounts.lambdatest.com/dashboard).
 - Get your LambdaTest Username and Access Key.
 
 ## Setting Up the Grid
----
-
 Shown below are the steps to set up your Grid on Testim.
 
 1. Click on your profile icon > **Grids** button.
@@ -73,8 +65,6 @@ Shown below are the steps to set up your Grid on Testim.
 </video>
 
 ## Recording the Tests
----
-
 Shown below are the steps to record your tests on Testim.
 
 1. Click on **New Test** > **Start Recording**.
@@ -88,8 +78,6 @@ Shown below are the steps to record your tests on Testim.
 </video>
 
 ## Configuring the Capabilities
----
-
 Include the capabilities you wish to use in a `.json` file and ensure this file is located in the same directory as your Testim runner.
 
 ```json
@@ -101,8 +89,6 @@ Include the capabilities you wish to use in a `.json` file and ensure this file 
 ```
 
 ## Running the Testim Tests on LambdaTest
----
-
 To execute the tests, check:
 
 * If the Testim CLI is not already installed on your system, use the entire command provided by the Testim CLI or dashboard. 
@@ -125,5 +111,4 @@ To view your test results, navigate to the LambdaTest Web Automation Dashboard.
 <img loading="lazy" src={require('../assets/images/tr-testim.png').default} alt="Web Automation Dashboard" width="1920" height="1080" className="doc_img"/>
 
 
->
-**Note**: To explore additional configuration options, you can execute `testim --help` in PowerShell or bash, which will display further customizations available for writing and executing your test cases.
+> **Note**: To explore additional configuration options, you can execute `testim --help` in PowerShell or bash, which will display further customizations available for writing and executing your test cases.

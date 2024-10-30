@@ -47,59 +47,29 @@ This document outlines the requirements and testing procedures for accessibility
 ## Accessibility Settings
 The following features are essential to test when ensuring accessibility for mobile apps and web content on iOS devices:
 
-### Text Size Adjustment
-- **Requirements :** Implementation of a dropdown menu with size options or a slider control for the text size.
-- **Functionality :**
-    - **1. Real-time Updates :**
-        - Text size changes must apply immediately
-        - All text elements should scale proportionally
-        - No application restart required
-    - **2. Visual Feedback :**
-        - Loading indicator must display during backend updates
-        - Success notification required after completion
-- **Testing Checklist :**
-    - ✅ Control interface is easily accessible
-    - ✅ Text scaling occurs in real-time
-    - ✅ Loading animation displays during updates
-    - ✅ Success notification appears after completion
-    - ✅ All application text responds to size changes
-    - ✅ No text overlap or truncation occurs
+### Display and Text Size
+This section focuses on improving text visibility and contrast to assist users with visual needs.
 
-### Contrast Adjustment
-- **Requirements :** Implementation of a high-contrast mode toggle and Binary selection (normal/high contrast)
-- **Functionality :**
-    - **1. Toggle Implementation :**
-        - Single switch interface
-        - Clear visual indication of current state
-    - **2. Real-time Updates :**
-        - Immediate contrast changes
-        - System-wide application within the app
-    - **3. Visual Feedback :**
-        - Loading indicator during backend processing
-        - Success notification upon completion
-- **Testing Checklist :**
-    - ✅ Toggle is accessible and clearly labeled
-    - ✅ Contrast changes apply immediately
-    - ✅ Loading animation displays during processing
-    - ✅ Success notification appears after completion
-    - ✅ All UI elements reflect contrast changes
-    - ✅ Text remains readable in both states
+#### Key Features:
+- **Increase Contrast :** Enabling this option enhances the contrast of UI elements against the background, making text and interface components easier to see.
+
+- **Smart Invert :** This option reverses colors on the display, except for media and images. It's designed for users who prefer darker backgrounds without inverting every color on the screen.
+
+- **Larger Accessibility Settings :** When enabled, this option adjusts interface elements to be larger and more accessible without affecting the core layout of the device’s UI.
+
+- **Text Size Adjustment :** A slider is provided to adjust the size of the text throughout the system. Users can move the slider to the right for larger text and to the left for smaller text. This feature benefits users who need larger fonts for readability across apps and system interfaces.
+
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/accessibility-1.png').default} className="doc_img"/>
 
 ### Reduce Motion
-- **Requirements :** Implementation of motion reduction toggle and integration with iOS accessibility settings.
-- **Functionality :**
-    - **1. Motion Control :**
-        - Single toggle interface
-        - Simplified animation transitions
-        - Reduced motion alternatives
-    - **2. Visual Feedback :**
-        - Success notification upon setting update
-- **Testing Checklist :**
-    - ✅ Toggle is accessible and functional
-    - ✅ Animations are simplified when enabled
-    - ✅ Transitions use motion-reduced alternatives
-    - ✅ Success notification appears after toggle
-    - ✅ Settings persist across app sessions
-    - ✅ No jarring visual effects present
+
+The Reduce Motion setting is designed to minimize dynamic animations and motion effects. This can benefit users sensitive to motion or those who prefer a more static display.
+
+#### Key Features:
+- **Reduce Motion of User Interface :** This toggle reduces animations throughout the system, including the parallax effect of icons on the Home Screen and in-app transitions.
+- **Parallax Effect Adjustment :** Disabling parallax can create a more stable and comfortable experience, particularly for users prone to motion sickness.
+
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/accessibility-2.png').default} className="doc_img"/>
+
 ## Conclusion
-Testing these accessibility features on iOS devices ensures that mobile apps and web content are inclusive and user-friendly for individuals with various accessibility needs. Implementing real-time changes, visual feedback (loaders/animations), and notifications for updates enhances the user experience and compliance with accessibility standards.
+These accessibility settings allow iOS users to customize their device’s interface to match individual needs, improving usability and comfort. Whether adjusting text size or reducing motion,
