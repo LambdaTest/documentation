@@ -1,7 +1,7 @@
 ---
 id: extent-report
-title: Extent Report on HyperExecute
-hide_title: true
+title: Extent Report
+hide_title: false
 sidebar_label: Extent
 description: Learn how to generate Extent Report on lambdatest and download the reports from the dashboard
 keywords:
@@ -35,53 +35,84 @@ slug: extent-report/
       })
     }}
 ></script>
+Extent Reports is a powerful reporting library used in test automation frameworks to generate visually appealing and detailed test reports. It provides insights into the status of each test case, including whether they passed, failed, or were skipped, along with additional information such as logs, screenshots, and system/environment details. This makes it especially popular in Selenium, Appium, and API testing frameworks.
 
-# HyperExecute Extent Report
-
-Extent Reports is a popular reporting framework for Java, TestNG, and Selenium tests. It provides a comprehensive set of features for reporting test results, including detailed test case summaries, screenshots and videos of test execution, execution logs, and charts and graphs to analyze test results..
-
-### Prerequisites
-
-1. Upgrade to extent reporting version 5 in the `pom.xml` file.
-2. Update import statements in the codebase from `com.relevantcodes` (version 2) to `com.aventstack` (version 5).
-
-## Implementation Steps
-
+## Steps to Generate Extent Reports `(Version <= 2)` on HyperExecute 
 Follow these steps to enable Extent Reports for your HyperExecute job:
 
-### 1. Upgrade Extent Reporting Version
+### Step 1: Add Dependency
+If using Maven, add the following dependency to your `pom.xml` file:
 
-Update the `pom.xml` file to include the latest version of the Extent Reporting library (version 5). Ensure that the necessary dependencies are correctly configured.
-
-```xml
+```xml title="pom.xml"
 <dependency>
-    <groupId>com.aventstack</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>5.0.0</version>
+  <groupId>com.relevantcodes</groupId>
+  <artifactId>extentreports</artifactId>
+  <version>2.41.2</version>
 </dependency>
 ```
 
-### 2. Modify Import Statements
+### Step 2: Create an Extent Report Listener
+Create a class, e.g., `ExtentReportListenerV2.java`, to initialize and flush Extent Reports during test execution. This listener will log each test case’s status to the report.
 
-Update import statements in your codebase to reflect the new package structure in Extent Reporting version 5. Replace `com.relevantcodes` with `com.aventstack`.
-
-```java
-// Before
+```java title="ExtentReportListenerV2.java"
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult
+public class ExtentReportListenerV2 implements ITestListener {
+    private static ExtentReports extent;
+    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>()
+    @Override
+    public void onStart(ITestContext context) {
+        // Initialize ExtentReports with the report path
+        extent = new ExtentReports("extent-report.html", true); 
+        extent.addSystemInfo("Environment", "QA").addSystemInfo("User", "Tester");
+    }
+```
+---
+## Steps to Generate Extent Reports `(Version > 2)` on HyperExecute 
+Follow these steps to enable Extent Reports for your HyperExecute job:
 
-// After
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
+### Step 1: Add Dependency
+If using Maven, add the latest extentreports dependency to `pom.xml` file:
+
+```xml title="pom.xml"
+<dependency>
+  <groupId>com.aventstack</groupId>
+  <artifactId>extentreports</artifactId>
+  <version>5.0.9</version> <!-- Use latest version available -->
+</dependency>
 ```
 
-### 3. Generate JSON Reports
+### Step 2: Create an Extent Report Listener
+For Extent Reports > 2, use `ExtentHtmlReporter` to generate and customize the HTML report. Create `ExtentReportListener.java`:
 
-Make changes in your codebase to generate individual JSON reports. These reports will serve as the source for the Extent   Reports.
+```java title="ExtentReportListener.java"
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult
+public class ExtentReportListener implements ITestListener {
+    private static ExtentReports extent;
+    private static ThreadLocal<ExtentTest> test = new ThreadLocal<>()
+    @Override
+    public void onStart(ITestContext context) {
+        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("extent-report.html");
+        htmlReporter.config().setTheme(Theme.STANDARD);
+        htmlReporter.config().setDocumentTitle("Test Report");
+        htmlReporter.config().setReportName("Automation Test Results")
+        extent = new ExtentReports();
+        extent.attachReporter(htmlReporter);
+    }
+```
 
-### 4. Update HyperExecute YAML Configuration
-
-In the HyperExecute YAML configuration, add the following section to instruct the HyperExecute systems to generate Extent   Reports:
+## Configure the HyperExecute YAML File
+In your HyperExecute YAML configuration, define the [`report`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
 ```yaml
 report: true
@@ -92,7 +123,3 @@ partialReports:
 ```
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/extent.png').default} alt="Image"  className="doc_img"/>
-
-## Conclusion
-
-By following these steps, your HyperExecute job will generate Extent Reports, providing a consolidated HTML report derived from individual JSON reports. This enhancement allows customers to access comprehensive and standardized reports conveniently at the conclusion of their HyperExecute jobs.

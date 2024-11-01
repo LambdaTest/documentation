@@ -43,7 +43,7 @@ Cucumber itself provides basic reporting in the command line, but additional plu
 ### Step 1: Configure the TestRunner File
 In your `TestRunner` file, configure `@CucumberOptions` to specify report formats and output paths. Here’s an example configuration:
 
-```javascript
+```javascript title="TestRunner.java"
 @CucumberOptions(
         features = "src/main/java/Features",
         glue = {"Steps"},

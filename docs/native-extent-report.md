@@ -1,7 +1,7 @@
 ---
 id: native-extent-report
-title: Native Extent Report on HyperExecute
-hide_title: true
+title: Native Extent Report
+hide_title: false
 sidebar_label: Extent Native
 description: Learn how to generate Native Extent Report on lambdatest and download the reports from the dashboard
 keywords:
@@ -37,9 +37,6 @@ slug: native-extent-report/
       })
     }}
 ></script>
-
-# HyperExecute Extent Native Report
-
 The Extent Native Reports offer a standardized and easily accessible summary of information extracted from raw Extent reports per Virtual Machine (VM) at the end of a HyperExecute job.
 
 ### Prerequisites
