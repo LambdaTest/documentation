@@ -1,13 +1,12 @@
 ---
 id: cucumber-report
-title: Cucumber Report on HyperExecute
-hide_title: true
+title: Cucumber Report
+hide_title: false
 sidebar_label: Cucumber
 description: Learn how to generate Cucumber Report on lambdatest and download the reports from the dashboard
 keywords:
   - cucumber testing reports
   - cucumber testing lambdatest 
-  
 url: https://www.lambdatest.com/support/docs/cucumber-report/
 site_name: LambdaTest
 slug: cucumber-report/
@@ -35,34 +34,39 @@ slug: cucumber-report/
       })
     }}
 ></script>
+Cucumber reporting is a way to visualize and analyze test results when using the Cucumber testing framework. Cucumber is widely used for Behavior-Driven Development (BDD), allowing tests to be written in plain language using Gherkin syntax. The reports generated from Cucumber tests provide a readable format for stakeholders to understand the results, which helps in understanding the behavior of the system being tested without requiring technical expertise.
 
-# Cucumber Reports
-
-Cucumber uses reporter plugins to produce reports that contain information about what scenarios have passed or failed.
-
-## Built-in Reporters
-There several pre-defined or built-in reporters for Cucumber. Each reporter may present the test results in a different way, suitable for specific needs or preferences. These built-in reporters offer different levels of detail and visualization options, helping developers to understand the test results and identify any potential issues more effectively.
-
-Following are some of the built-in reporters:
-- message
-- progress
-- pretty
-- html
-- json
-- rerun
-- junit
-- testng
-
-## Custom Reporters
-Apart from the built-in reporters, Cucumber Test also allows developers to create custom reporters i.e. you have the flexibility to define your own format and layout for displaying test results. Custom reporters are beneficial when you have specific reporting requirements or when you want to integrate the test results seamlessly into your existing development workflow.
-
-This involves creating a class that implements/extends the standard formatter interface.
+Cucumber itself provides basic reporting in the command line, but additional plugins and tools can enhance the reporting experience, generating rich HTML or JSON reports.
 
 ## Steps to Generate Cucumber Reports on HyperExecute
 
-**Step 1:** Configure the report parameters in the HyperExecute YAML file.
+### Step 1: Configure the TestRunner File
+In your `TestRunner` file, configure `@CucumberOptions` to specify report formats and output paths. Here’s an example configuration:
 
-```bash
+```javascript title="TestRunner.java"
+@CucumberOptions(
+        features = "src/main/java/Features",
+        glue = {"Steps"},
+        tags = {"~@Ignore"},
+        format = {
+                "pretty",
+                "html:target/cucumber-reports/cucumber-pretty",
+                "json:target/cucumber-reports/CucumberTestReport.json",
+                "rerun:target/cucumber-reports/rerun.txt"
+        },plugin = "json:target/cucumber-reports/CucumberTestReport.json")
+```
+
+Explanation of plugin Options:
+
+- **pretty :** Outputs readable format in console.
+- **html:target/cucumber-reports/cucumber-pretty :** Generates HTML report in the target directory.
+- **json:target/cucumber-reports/CucumberTestReport.json :** Generates JSON report, often required for CI/CD and advanced reporting.
+- **rerun:target/cucumber-reports/rerun.txt :** Logs any failed scenarios for rerun.
+
+### Step 2: Configure the HyperExecute YAML File
+In your HyperExecute YAML configuration, define the [`report`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+
+```yaml title="hyperexecute.yaml"
 report: true
 partialReports:
  location: target/cucumber-reports/
@@ -70,6 +74,7 @@ partialReports:
  type: json
 ```
 
-**Step 2:** Now execute your job by triggering the HyperExecute CLI. You can visit the HyperExecute dashboard to download the report after job completion.
+### Step 3: Execute Your Tests
+Run your tests on HyperExecute using the CLI. After your job completes, you can visit the HyperExecute dashboard to download and view the Cucumber report.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/cucumber.png').default} alt="Image" className="doc_img"/> 

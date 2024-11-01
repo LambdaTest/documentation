@@ -1,7 +1,7 @@
 ---
 id: specflow-report
-title: SpecFlow Report on HyperExecute
-hide_title: true
+title: SpecFlow Report
+hide_title: false
 sidebar_label: SpecFlow
 description: Learn how to generate SpecFlow Report on lambdatest and download the reports from the dashboard
 keywords:
@@ -35,11 +35,7 @@ slug: specflow-report/
       })
     }}
 ></script>
-
-# SpecFlow Reports
-
 SpecFlow is a free tool for automating tests using BDD. It's often used to create automation scripts for .NET projects.
-
 This technical document provides a guide on generating SpecFlow reports after executing tests on HyperExecute.
 
 ## Steps to Generate Cucumber Reports on HyperExecute
