@@ -43,7 +43,7 @@ Follow these steps to enable Extent Reports for your HyperExecute job:
 ### Step 1: Add Dependency
 If using Maven, add the following dependency to your `pom.xml` file:
 
-```xml titile="pom.xml"
+```xml title="pom.xml"
 <dependency>
   <groupId>com.relevantcodes</groupId>
   <artifactId>extentreports</artifactId>
@@ -78,7 +78,7 @@ Follow these steps to enable Extent Reports for your HyperExecute job:
 ### Step 1: Add Dependency
 If using Maven, add the latest extentreports dependency to `pom.xml` file:
 
-```xml titile="pom.xml"
+```xml title="pom.xml"
 <dependency>
   <groupId>com.aventstack</groupId>
   <artifactId>extentreports</artifactId>
