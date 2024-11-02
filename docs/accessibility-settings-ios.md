@@ -1,6 +1,6 @@
 ---
 id: accessibility-settings-ios
-title: Accessibility Testing for iOS Devices
+title: Accessibility Testing on iOS Devices
 hide_title: false
 sidebar_label: Accessibility Settings (iOS)
 description: Ensure iOS app accessibility by testing text size, high-contrast, and reduce motion settings with real-time updates, notifications, and simplified animations.
@@ -42,18 +42,20 @@ import TabItem from '@theme/TabItem';
 ></script>
 Accessibility testing ensures that mobile applications and web content are accessible to all users, including those with disabilities. On iOS devices, this involves testing various accessibility features like text size adjustments, contrast settings, and motion reduction.
 
-This document outlines the accessibility settings features provided in Real Devices (iOS) at LambdaTest. These features ensure that applications are usable by individuals with various accessibility needs.
+This document provides an overview of the accessibility features available on iOS devices within LambdaTest's Real Devices Cloud. With support for key features like text size adjustments, contrast settings, motion reduction, and more, you can ensure your applications are optimized for users with diverse accessibility needs.
 
 ## Accessibility Settings
-iOS devices offer a range of accessibility features that can be enabled during setup and customized through the Settings app, as outlined in [Apple’s documentation](https://support.apple.com/en-in/guide/iphone/iph3e2e4367/ios).
+iOS devices offer a range of accessibility features that can be enabled or disabled during setup and customized through the settings app, as outlined in [Apple’s documentation](https://support.apple.com/en-in/guide/iphone/iph3e2e4367/ios).
 
-> This feature is supported in manual testing for both apps and browsers on iOS real devices.
+Both Real Devices App and Browser testing now support these features to enable accessibility testing of your websites and applications. 
 
-## Steps to set accessibility settings:
+## Accessing iOS accessibility settings 
 
-**Step 1 :** Go to the **Real Devices** > **App Testing** / **Browser Testing** <br />
-**Step 2 :** Select the device-browser combination to start your test session. <br />
-**Step 3 :** On the testing toolbar, click on the **iOS Settings** > **Accessibility**. <br />
+**Step 1 :** Login to your LambdaTest account and navigate to **App Testing/Browser Testing** under Real Devices from the sidebar.
+
+**Step 2 :** Select the device-browser combination to start your test session. 
+
+**Step 3 :** On the testing toolbar, click on the **iOS Settings** > **Accessibility**. 
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/accessibility-1.png').default} className="doc_img"/>
 
@@ -71,7 +73,6 @@ iOS devices offer a range of accessibility features that can be enabled during s
 - **Larger Accessibility Settings :** When enabled, this option adjusts interface elements to be larger and more accessible without affecting the core layout of the device’s UI.
 - **Text Size Adjustment :** A slider is provided to adjust the size of the text throughout the system. Users can move the slider to the right for larger text and to the left for smaller text. This feature benefits users who need larger fonts for readability across apps and system interfaces.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/accessibility-2.png').default} className="doc_img"/>
 
 </TabItem>
 
@@ -87,6 +88,7 @@ iOS devices offer a range of accessibility features that can be enabled during s
 
 </TabItem>
 </Tabs>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/accessibility-2.png').default} className="doc_img"/>
 
 ## Conclusion
-These accessibility settings allow iOS users to customize their device’s interface to match individual needs, improving usability and comfort. Whether adjusting text size or reducing motion,
+These accessibility settings allow iOS users to customize their device’s interface to match individual needs, improving usability and comfort. Whether adjusting display, text size or reducing motion.
