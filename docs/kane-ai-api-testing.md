@@ -106,7 +106,7 @@ Once all APIs are added, KaneAI enables simultaneous execution, with details ava
 
 - **Step**: Click to execute all added APIs in one go and review the response details for insights into API performance and data returned.
 
-    <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image10.jpg').default} alt="kenai-jira integration" className="doc_img"/>
+    <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image13.jpg').default} alt="kenai-jira integration" className="doc_img"/>
 
 
 This structure provides logical groupings for different aspects of API testing with KaneAI, making it easier to follow each type of action required for comprehensive API testing.
