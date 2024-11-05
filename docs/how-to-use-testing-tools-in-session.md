@@ -130,7 +130,11 @@ Check out our detailed support documentation to know more about the [Files Uploa
 
 With the **iOS settings**, you can access the crash logs as well as the app settings. For crash logs, If the app crashes at any point, the crash log gets downloaded automatically. Application settings allows you to access the default application settings in your iOS devices. 
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/ios-settings-real-device.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/ios-settings-real-device.png').default} alt="add" width="1346" height="647" className="doc_img"/>
+
+- **Crash Logs :** You can download your crashed logs of the application.
+- **App Settings :** This will open the settings of the application in your mobile device.
+- **Accessibility :** Accessibility testing on iOS devices focuses on ensuring that applications and web content are usable by individuals with different abilities. Learn in detailed way about [Accessibility in iOS devices.](/support/docs/accessibility-settings-ios)
 
 ### Device Controls
 

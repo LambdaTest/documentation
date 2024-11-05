@@ -727,6 +727,7 @@ module.exports = {
               "hyperexecute-how-to-run-tests-using-local-selenium-drivers",
               "hyperexecute-how-to-perform-dependent-test-based-discovery",
               "hyperexecute-how-to-perform-group-based-test-discovery-in-testng",
+              "hyperexecute-how-to-resolve-version-conflict"
             ],
           },
           {
@@ -1763,7 +1764,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Features",
-            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "real-device-adb-shell", "screen-reader-on-real-devices-app"],
+            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios"],
           },
         ],
       },
