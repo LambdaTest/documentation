@@ -143,7 +143,7 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     driver.execute_script("updateNetworkProfile=offline")
     ```
 
-- For both iOS and android devicess you can use the offline/online mode API as well within the running test session:
+- For both iOS and android devices you can use the offline/online mode API as well within the running test session:
 
     ```bash
     curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<session-id>/update_network' \
