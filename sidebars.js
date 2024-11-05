@@ -1034,7 +1034,8 @@ module.exports = {
           "kane-ai-javascript-execution",
           "kane-ai-geolocation-tunnel-proxy",
           "kane-ai-scroll-in-feature",
-          "kane-ai-jira-integration"
+          "kane-ai-jira-integration",
+          "kane-ai-api-testing"
         ],
       },
       {
