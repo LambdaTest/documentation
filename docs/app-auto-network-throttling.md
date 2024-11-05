@@ -137,7 +137,14 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 
 #### iOS
 
-- For **iOS** devices, offline mode cannot be set using the `networkProfile` capability. Instead, use the offline mode API by sending a cURL request within the running test session:
+
+- **LambdaHook:** You can also switch to offline mode during the test execution with the following command:
+    ```python
+    driver.execute_script("updateNetworkProfile=offline")
+    ```
+
+- For both iOS and android devices you can use the offline/online mode API as well within the running test session:
+
     ```bash
     curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<session-id>/update_network' \
     --header 'Authorization: Basic <username:access_key>' \

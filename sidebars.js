@@ -1036,7 +1036,9 @@ module.exports = {
         items: [
           "kane-ai-javascript-execution",
           "kane-ai-geolocation-tunnel-proxy",
-          "kane-ai-scroll-in-feature"
+          "kane-ai-scroll-in-feature",
+          "kane-ai-jira-integration",
+          "kane-ai-api-testing"
         ],
       },
       {
@@ -1045,7 +1047,8 @@ module.exports = {
         label: "Knowledge Base",
         items: [
           "kane-ai-command-guide",
-          "kane-ai-web-test-writing-guidelines"
+          "kane-ai-web-test-writing-guidelines",
+          "kane-ai-using-variables"
         ],
       },
       {
@@ -1764,7 +1767,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Features",
-            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices",  "real-device-adb-shell", "screen-reader-on-real-devices-app", "accessibility-settings-ios"],
+            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios"],
           },
         ],
       },
