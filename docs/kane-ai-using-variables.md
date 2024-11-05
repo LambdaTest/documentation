@@ -47,7 +47,7 @@ The new variable definition feature in KaneAI allows users to define reusable va
 ## Why Use Variables?
 Using variables enables you to:
 - Avoid repetitive entries in test cases.
-- Update values in one place without needing to modify multiple test cases.
+- Get values from within the application under test & store it in variable to validate the accuracy of data.
 - Increase the reusability and adaptability of test scripts, especially useful for parameters that might change frequently, such as URLs, credentials, or environmental settings.
 
 ## Variable Syntax
@@ -61,11 +61,11 @@ To work with variables in KaneAI, you need to follow these syntax rules:
 To create a variable:
 
 - Navigate to the "Write a Step" text field
-- Type your instruction using the following format: *create a variable `$variableName`*
+- Type your instruction in natural language such as: *Set username as John* and a variable `$username` will be created with value John.
 
 Example:
 ```bash
-create a variable $phoneNumber
+Set username as John
 ```
 
 ## Using Variables
@@ -84,6 +84,5 @@ use the value of $phoneNumber in the given text field
 - Use camelCase for multi-word variable names
 
 ### Variable Management
-- Create variables at the beginning of your test case when possible
 - Document the purpose of each variable in comments
 - Verify that variables are defined before using them
