@@ -77,9 +77,9 @@ After you post the comment, Kane AI will process the request and respond with a 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/jira-integration/jira-test-case.webp').default} alt="kenai-jira integration" className="doc_img"/>
 
 ### Step 4: Review and Schedule the Test Case on LambdaTest
-- **Access the Test Case :** Click on the link provided by Kane AI in the Jira comment. This will direct you to the [Test Planner platform](/support/docs/kane-ai-test-plan/#step-2-define-your-state-outcomes-error-messages-constraints-and-user-inputs) where the test case has been created.
+- **Access the Test Case :** Click on the link provided by Kane AI in the Jira comment. This will create a [Test Plan](/support/docs/kane-ai-test-plan/#step-2-define-your-state-outcomes-error-messages-constraints-and-user-inputs) for you to review and execute via KaneAI.
 - **Review Test Case Details :** Check the generated test case for accuracy. You can review test steps, expected outcomes, and conditions to ensure they align with your requirements.
-- **Schedule Test Execution :** Once verified, schedule the test case for execution.
+- **Schedule the Task for KaneAI :** Once verified, schedule the task for KaneAI to generate and automate the test case on its own.
 
 ### Step 5: Check the test execution
 Click on the Live Preview button to enter the playground and check the live execution of your test based on your defined objective.
