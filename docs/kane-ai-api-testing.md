@@ -86,7 +86,7 @@ KaneAI allows batch processing of multiple APIs to streamline testing. This feat
 
 - **Step**: Add multiple APIs by clicking the plus icon and selecting each API, or paste multiple curl commands to add them automatically to the test steps.
 
-  <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image9.jpg').default} alt="kenai-jira integration" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image10.jpg').default} alt="kenai-jira integration" className="doc_img"/>
   
 
 ## 6. Handling Different HTTP Methods
@@ -98,7 +98,7 @@ KaneAI supports various HTTP methods like POST, PUT, GET, and DELETE, allowing y
   
     <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image6.jpg').default} alt="kenai-jira integration" className="doc_img"/>
   
-    <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image10.jpg').default} alt="kenai-jira integration" className="doc_img"/>
+    <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image9.jpg').default} alt="kenai-jira integration" className="doc_img"/>
 
 ## 7. Executing and Reviewing Test Steps
 
