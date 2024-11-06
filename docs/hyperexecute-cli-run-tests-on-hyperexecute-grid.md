@@ -100,8 +100,6 @@ The various flags that are supported are listed below.
 | [--verbose](#--verbose) | NA | Logging of every proxy request to stdout. |
 | [--version](#--version) | NA | Version of the HyperExecute CLI. |
 
-| [analyze](#analyze) | NA | Shows the project description of the user. |
-
 ### `--concurrency`
 This flag allows you to define the number of concurrent sessions running on HyperExecute. For more information on concurrency, go to [this page](/support/docs/hyperexecute-auto-split-strategy/).
 ```bash

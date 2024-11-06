@@ -44,10 +44,10 @@ Projects serve as a centralized platform for organizing and managing test execut
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/create-project.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-**Step 3:** Provide the **GitHub URL** and the **[Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)** of your repository. You can also add your team members as **Co-Owners** to allow them to edit or delete the project alongside you.
+**Step 3:** Provide your **GitHub URL** and the **[Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)** / **Bitbucket URL** and the **[Repository Access Tokens](https://support.atlassian.com/bitbucket-cloud/docs/repository-access-tokens/)** of your repository. You can also add your team members as **Co-Owners** to allow them to edit or delete the project alongside you.
 
 :::info important
-Currently, only **GitHub** repositories are supported.
+Currently, only **GitHub** and **Bitbucket** repositories are supported.
 :::
 
 Click on **Save** button to finish the setup of your project.
