@@ -46,11 +46,11 @@ This document provides a detailed guide to performing API testing using KaneAI. 
 
 ## 1. Adding an API in a Web Test
 
-To start API testing on KaneAI, create a web test using the PetStore API, a commonly available sample. This will allow you to demonstrate API testing capabilities effectively.
+To start API testing on KaneAI, create a web test on the KaneAI home page. Click on "+" icon or type "/" in the input field at the bottom left and a modal will appear. Choose API from it to proceed ahead.
 
-- **Step**: Add an API through the slash command and navigate to the API module.
+- **Step**: Add an API through the slash command or click on "+" icon in the field and navigate to the API module.
   
-  <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image1.jpg').default} alt="kenai-jira integration" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/add-api-image.jpg').default} alt="Add API" className="doc_img"/>
   
 
 ## 2. Adding a Curl Command
@@ -59,7 +59,7 @@ Within the API module, you can input the curl command to configure the API setti
 
 - **Step**: Paste your curl command into the designated area. KaneAI will populate all necessary details. You may choose to validate the API response or add it directly to the test steps.
 
-  <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image2.jpg').default} alt="kenai-jira integration" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image2.jpg').default} alt="Copy a Curl" className="doc_img"/>
   
 
 ## 3. Validating API Response on KaneAI
@@ -68,7 +68,7 @@ To ensure the API works as expected, use the validation feature. This step confi
 
 - **Step**: Click the 'validate' option to check the API response. A 200 response status indicates successful validation, automatically adding the API to your test steps. You can now proceed to submit multiple APIs simultaneously if needed.
 
-  <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image3.jpg').default} alt="kenai-jira integration" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image3.jpg').default} alt="kaneai-jira integration" className="doc_img"/>
   
 
 ## 4. Adding Non-Success APIs in Test Steps
@@ -77,7 +77,7 @@ For APIs that do not return a 200 status, you can review the response body and m
 
 - **Step**: If the API returns a 400 Bad Request or another error, it will not be added automatically. Review the response and add the API manually if needed.
 
-  <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image8.jpg').default} alt="kenai-jira integration" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image8.jpg').default} alt="kaneai-jira integration" className="doc_img"/>
   
 
 ## 5. Adding Multiple APIs in One Go
@@ -86,7 +86,7 @@ KaneAI allows batch processing of multiple APIs to streamline testing. This feat
 
 - **Step**: Add multiple APIs by clicking the plus icon and selecting each API, or paste multiple curl commands to add them automatically to the test steps.
 
-  <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image10.jpg').default} alt="kenai-jira integration" className="doc_img"/>
+  <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image10.jpg').default} alt="kaneai-jira integration" className="doc_img"/>
   
 
 ## 6. Handling Different HTTP Methods
@@ -96,9 +96,9 @@ KaneAI supports various HTTP methods like POST, PUT, GET, and DELETE, allowing y
 - **Step**: Add APIs using different HTTP methods, such as a PUT or DELETE command. Validate each API as before, and if successful, they will be automatically included in the test steps.
 
   
-    <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image6.jpg').default} alt="kenai-jira integration" className="doc_img"/>
+    <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image6.jpg').default} alt="kaneai-jira integration" className="doc_img"/>
   
-    <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image9.jpg').default} alt="kenai-jira integration" className="doc_img"/>
+    <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image9.jpg').default} alt="kaneai-jira integration" className="doc_img"/>
 
 ## 7. Executing and Reviewing Test Steps
 
@@ -106,7 +106,7 @@ Once all APIs are added, KaneAI enables simultaneous execution, with details ava
 
 - **Step**: Click to execute all added APIs in one go and review the response details for insights into API performance and data returned.
 
-    <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image13.jpg').default} alt="kenai-jira integration" className="doc_img"/>
+    <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/api-testing/image13.jpg').default} alt="kaneai-jira integration" className="doc_img"/>
 
 
 This structure provides logical groupings for different aspects of API testing with KaneAI, making it easier to follow each type of action required for comprehensive API testing.
