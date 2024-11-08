@@ -78,7 +78,7 @@ The first step is to create a project with the application in which we will comb
 Install required NPM modules for `LambdaTest Smart UI CLI` in your **Frontend** project.
 
 ```bash
-npm install -g @lambdatest/smartui-cli
+npm install @lambdatest/smartui-cli
 ```
 
 ### **Step 2:** Create URL file
@@ -137,7 +137,7 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
-smartui config:create .smartui.json
+npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
@@ -217,7 +217,26 @@ Please read the following table for more information about the configuration fil
 You can now execute tests for `Visual Regression Testing` using the following options:.
 
 ```bash
-smartui capture urls.json --config .smartui.json
+npx smartui capture urls.json --config .smartui.json
+```
+
+
+### Fetch results
+
+You can fetch build results by adding the `--fetch-results` flag to your test execution command. Here are different ways to use this feature:
+
+#### Default Usage
+If no filename is specified, results will be stored in `results.json`:
+
+```bash
+npx smartui capture urls.json --config .smartui.json --fetch-results
+```
+
+#### Custom Filename
+Specify a custom filename for your results:
+
+```bash
+npx smartui capture urls.json --config .smartui.json --fetch-results custom-results.json 
 ```
 ### Setup with Continuous Integration (CI)
 
