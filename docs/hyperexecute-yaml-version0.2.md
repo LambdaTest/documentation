@@ -64,7 +64,7 @@ The ```framework``` field in Hyperexecute YAML Version 0.2 allows you to configu
 | [workingDirectory](#workingDirectory) | String | No | Specifies the working directory where all discovery and execution commands will be executed.|
 | [defaultReports](#defaultReports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
 | [region](#region) | String | No | Specifies in which region you want to spin your appium tests.|
-| [artifacts](#artifacts) | Boolean | No | Specifies whether to genreate artifacts or not |
+| [artifacts](#artifacts) | Boolean | No | Specifies whether to generate artifacts or not |
 
 ### `name`
 Specifies the testing framework used in your repository.
