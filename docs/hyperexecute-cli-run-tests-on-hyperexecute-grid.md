@@ -125,7 +125,6 @@ This flag allows you to download all the test related results that are generated
 </div>
 
 :::note
-- This functionality is not available with **XCUI** tests.
 - For Espresso with private devices HyperExecute can download user generated artefacts.
 :::
 
