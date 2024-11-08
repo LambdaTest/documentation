@@ -224,6 +224,7 @@ framework:
         values: ["LambdaUiKitIOSUITests/testverifyAppLaunch"]
     deviceSelectionStrategy: any
     devices: [".*"]
+    artifacts: true
 
     shards:
       mappings:
@@ -258,25 +259,38 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 
 :::
 
-## Step 5: Execute your Test Suite
+## Step 5: Generate Artifacts
+To generate artifacts for your XCUI tests, add the `artifacts: true` flag in your YAML file:
+
+```yaml
+framework:
+  name: "ios/xcui"
+  args:
+    artifacts: true
+    ...//
+```
+
+To download these artifacts in your local machine, you can pass the `--download-artifacts` flag with the CLI command to execute the tests as shown in the next step.
+
+## Step 6: Execute your Test Suite
 
 > **NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
 Run the below command in your terminal at the root folder of the project:
 
 ```bash
-./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
-    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts`}
   </CodeBlock>
 </div>
 
-## Step 6: Monitor the Test Execution
+## Step 7: Monitor the Test Execution
 
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
