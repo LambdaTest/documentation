@@ -2759,6 +2759,7 @@ module.exports = {
           "smartui-cli-git-branching-strategy",
           "smartui-cli-env-variables",
           "smartui-cli-responsive-dom",
+          "smartui-sdk-fetch-results",
         ],
       },
       {
