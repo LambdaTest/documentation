@@ -2329,6 +2329,11 @@ module.exports = {
         label: "Emulator / Simulator",
         items: ["app-automation-app-sim"],
       },
+      {
+        type: 'doc',
+        label: 'Supported Appium Version',
+        id: 'supported-appium-versions-on-emulator-simulator'
+      }
     ],
   ],
 
