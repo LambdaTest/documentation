@@ -46,6 +46,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 This document provide details about the features and capabilities supported for Espresso Framework on LambdaTest.
 
+> The capabilities listed in this document are also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
+
 | Capability Name | Data Type | Description |
 |------|-----------|-------------|
 | app | String | Enter the app id generated while uploading the app to the platform. Example:`lt://APP123456789123456789` |

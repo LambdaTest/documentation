@@ -44,30 +44,13 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
----
-
-## Introduction
----
-
 XML reports provide a detailed summary of test execution, allowing you to better understand your test outcomes. This document aims to guide you through the process of retrieving XML reports for XCUI tests executed on the LambdaTest platform.
 
-## Objective
----
-### By the end of this document, you should be able to:
-
-1. Fetch XML reports for non-shard XCUI builds.
-
-2. Fetch XML reports for shard builds, both for individual shards and all shards collectively.
-
-
+> This feature is also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
 
 ## XML report APIs
-----
-
-**Non-shard build :** 
+### Non-shard build
 To fetch the XML report for a `non-shard` build, you can use the following cURL command:
-
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -76,8 +59,7 @@ To fetch the XML report for a `non-shard` build, you can use the following cURL 
 </CodeBlock>
 </div>
 
-
-**Shard build (For single shard):**
+### Shard build (For single shard)
 To fetch the XML report for a `single shard` in a shard build,use:
 
 <div className="lambdatest__codeblock">
@@ -87,8 +69,7 @@ To fetch the XML report for a `single shard` in a shard build,use:
 </CodeBlock>
 </div>
 
-
-**Shard build (For all the shards):**
+### Shard build (For all the shards)
 To fetch the XML reports for `all shards` in a shard build, use:
 
 <div className="lambdatest__codeblock">
@@ -97,8 +78,6 @@ To fetch the XML reports for `all shards` in a shard build, use:
 --header 'Authorization: Basic <Base64 Authentication>'`}
 </CodeBlock>
 </div>
-
-
 
 :::note
 - Authenticate the API using your LambdaTest username and access key, and replace `build_id`, `job_id` and `shard_id` for which you want to fetch report.
