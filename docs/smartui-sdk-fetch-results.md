@@ -61,7 +61,7 @@ SmartUI CLI allows you to fetch detailed build results after executing your visu
 
 ## Steps to Use
 
-### *Step 1:* Install SmartUI CLI
+### **Step 1:** Install SmartUI CLI
 
 If you haven't already installed SmartUI CLI, install it using npm:
 

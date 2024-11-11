@@ -252,9 +252,6 @@ steps:
        smartui capture urls.json --config smartui-web.json
 ```
 
-
-
-
 ### SmartUI CLI Options and Keys
 
 The following are supported `CLI (Command Line Interface)` options for Visual Regression Testing with SmartUI:
@@ -269,6 +266,37 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
+### Parallely running static URLs
+
+You can reduce the build time by executing parallel URLs in the following way. 
+
+```bash
+npx smartui capture urls.json --config .smartui.json --parallel <number-of-parallels> --fetch-results   
+```
+
+- The `--parallel` flag determines how many URLs will be processed simultaneously
+- Each thread captures screenshots independently, maximizing throughput
+
+>**Example:**
+>```bash
+>npx smartui capture urls.json --config .smartui.json --parallel 3 --fetch-results   
+>```
+
+#### Determining Optimal Thread Count
+The maximum number of parallel threads is calculated using the formula: log<sub>2</sub>(N) where N is the total number of URLs.
+
+>**For example:**
+>- For 100 URLs: Maximum parallel threads = log<sub>2</sub>(100) = 6 threads
+>- For 50 URLs: Maximum parallel threads = log<sub>2</sub>(50) = 5 threads
+>- For 25 URLs: Maximum parallel threads = log<sub>2</sub>(25) = 4 threads
+
+#### Best Practices for parallel execution
+
+- Start with a lower thread count and gradually increase based on your system's performance
+- Monitor system resources during execution
+- Ensure stable internet connection for reliable parallel processing
+
 
 For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
 
