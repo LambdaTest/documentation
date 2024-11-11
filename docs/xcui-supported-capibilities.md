@@ -46,6 +46,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 This document provide details about the features and capabilities supported for XCUI Framework on LambdaTest.
 
+> The capabilities listed in this document are also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
+
 | Capability Name | Data Type | Description |
 |------|-----------|-------------|
 | app | String | Enter the app id generated while uploading the app to the platform. Example:`lt://APP123456789123456789` |
@@ -59,7 +61,7 @@ This document provide details about the features and capabilities supported for 
 | build | String | To set the Espresso build name. Example: `build: My Espresso Build`. |
 | geoLocation | String | Set the geolocation country code if you want to enable the same in your test. Example - `geoLocation: FR`|
 | tunnel, tunnelName | Boolean | To activate the tunnel mode, pass the value as `tunnel: true` and provide the name of your tunnel as `tunnelName: NewTunnel` |
-| resignApp | Boolean | Set this to `false` if you want to to prevent the apps from being re-signed. The app should be built for enterprise distribution. |
+| resignApp <br /> <br />Not supported in **Virtual Devices** | Boolean | Set this to `false` if you want to to prevent the apps from being re-signed. The app should be built for enterprise distribution. |
 
 :::caution Important
 You can either use **GeoLocation** or **Tunnel** in single execute command. They both are mutually exclusive.

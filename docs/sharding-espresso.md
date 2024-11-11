@@ -47,8 +47,6 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-
-
 Running **Espresso** tests sequentially can be laborious and time-intensive. This guide offers an efficient solution by introducing the concept of **sharding**. By breaking down tests into shards, they can be executed in parallel, significantly trimming down the total testing duration.
 
 Furthermore, this document provides insights on executing Espresso Tests on real devices using the innovative **HyperExecute** platform. Designed with precision, HyperExecute stands out as a test orchestration solution, tailored to execute end-to-end tests at breakneck speed. To streamline its setup and configuration, a user-friendly `YAML` file is employed. Dive into this guide to make your testing process more agile and efficient.
@@ -57,19 +55,9 @@ Furthermore, this document provides insights on executing Espresso Tests on real
 You can learn more about the HyperExecute portal and UI by going through our [Guided Walkthrough](/support/docs/hyperexecute-guided-walkthrough/) page. It contains all the relevant information that you need to optimize your testing process with HyperExecute. 
 :::
 
-## Objectives
-
----
-
-By the end of this topic, you will be able to:
-1. Speed up your Espresso tests with sharding
-2. Learn more about HyperExecute
-3. Explore advanced features of LambdaTest
+> This feature is also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
 
 ## Prerequisites
-
----
-
 Before you start performing your App automation testing with Espresso, please make sure:
 
 - You have access to LambdaTest username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials at the [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile)
@@ -113,14 +101,9 @@ Here is an example cURL request to upload your app using our REST API:
 </TabItem>
 </Tabs>
 
-
-
 >Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the last step as `appId`.
 
-
-
 ### Step 2: Uploading Test Suite
-
 Upload your **test suite** (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 **Using App File:**
@@ -154,11 +137,7 @@ Upload your **test suite** (.apk file) to the LambdaTest servers using our **RES
 
 >Response of above cURL will be a **JSON** object containing the `App URL` of the format - `lt://APP123456789123456789` and will be used in the next step as ``testSuiteAppId``
 
-
 ## How to use Sharding
-
----
-
 1. Firstly, create a folder on your local.
 2. Download the **HyperExecute CLI** file and put it under this folder based on your platform.
 #### Download HyperExecute CLI
@@ -177,7 +156,7 @@ Sharding can be categorized into two types:
 
 Refer to the sample `.yaml` file here
 
-```bash title="SampleYamlFile.yaml"
+```yaml title="SampleYamlFile.yaml"
 version: "0.2"
 concurrency: 2
 runson: android
@@ -238,14 +217,11 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 **For example:** If there are 2 shards mentioned in `.yaml`and 3 devices mentioned, the system will create 2 shards. These shards might use any 2 devices from the given 3 configurations. It's also possible that the same device configuration could be used for both shards. In this setup, test cases will be distributed between these shards.
 :::
 
----
-
-
 **Auto Sharding** : The system intelligently determines the distribution of tests across devices, employing specific criteria to optimize the testing process.
 
 Refer to the sample `.yaml` file here
 
-```bash title="SampleYamlFile.yaml"
+```yaml title="SampleYamlFile.yaml"
 version: "0.2"
 concurrency: 2
 runson: android
@@ -289,8 +265,6 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the s
 **For example:** If the concurrency is set to 2 and 3 devices mentioned, the system will create 2 shards. These shards might use any 2 devices from the given 3 configurations. It's also possible that the same device configuration could be used for both shards. In this setup, test cases will be distributed between these shards.
 :::
 
-
-
 4. Go to the location of the folder on the terminal and run the below commands. After the second command, you may need to give permission on **System Settings/Privacy & Security**. 
 
 ```bash
@@ -331,8 +305,6 @@ filters:
 This example will fetch all the test cases from 2 classes and 1 package as defined above and divide them with respect to concurrency given in the yaml file.
 
 ## Additional Links
-
----
 
 - [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
