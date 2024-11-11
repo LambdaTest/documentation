@@ -267,7 +267,7 @@ You can see the Smart UI dashboard to view the results. This will help you ident
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-### Parallely running static URLs
+### Parallel execution of static URLs
 
 You can reduce the build time by executing parallel URLs in the following way. 
 
