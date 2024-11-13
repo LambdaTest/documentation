@@ -272,7 +272,7 @@ preservedDevice: true
 :::
 
 ## Step 6: Generate Reports and Artifacts
-To generate artifacts for your Espresso tests, add the `artifacts: true` flag in your YAML file:
+To generate artifacts for your Espresso tests, add the `artifacts: true`, and `report: true` flag in your YAML file:
 
 ```yaml
 report: true
