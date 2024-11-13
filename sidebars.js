@@ -777,6 +777,7 @@ module.exports = {
               "specflow-report",
               "cypress-mochaawesome-report",
               "error-categorization-report",
+              "junit-xml-report"
             ],
           },
 
@@ -853,6 +854,7 @@ module.exports = {
             collapsed: true,
             label: "November, 2024",
             items: [
+              'hyperexecute-release-notes-2-5-9',
               'hyperexecute-release-notes-2-5-8',
             ]
           },
@@ -861,6 +863,7 @@ module.exports = {
             collapsed: true,
             label: "October, 2024",
             items: [
+              'hyperexecute-release-notes-2-5-7',
               'hyperexecute-release-notes-2-5-6',
               'hyperexecute-release-notes-2-5-5',
               'hyperexecute-release-notes-2-5-4',
