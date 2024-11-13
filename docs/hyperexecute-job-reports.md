@@ -98,3 +98,6 @@ The [Error Categorization Report](/support/docs/error-categorization-report/) re
 - Simplified error classification by grouping failures with shared characteristics.
 - Detailed navigation through the problematic test stages.
 - Downloadable data for thorough analysis and resolution.
+
+## JUnit XML Report
+The [JUnit XML Report](/support/docs/junit-xml-report/) provides a summary of test results conducted on [Date and Time]. The tests are organized into multiple test suites, with detailed information on execution time, status, and individual test cases.

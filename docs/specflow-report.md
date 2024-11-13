@@ -44,10 +44,10 @@ This technical document provides a guide on generating SpecFlow reports after ex
 
 **Step 2:** Configure the report parameters in the HyperExecute YAML file.
 
-```bash
+```yaml
 report: true
 partialReports:
-  location: GlobalPolaris\Reports
+  location: YOUR_REPORTS_LOCATION
   type: html
   frameworkName: specflow
   email:
@@ -60,10 +60,10 @@ partialReports:
 :::info
 You can also generate Custom Specflow reports using the Specflow reporting API. You can use the Specflow reporting API to generate reports in any format you want, such as HTML, PDF, or XML.
 
-```bash
+```yaml
 report: true
 partialReports:
-  location: GlobalPolaris\Reports
+  location: YOUR_REPORTS_LOCATION
   type: html
   frameworkName: specflow-custom
   email:
