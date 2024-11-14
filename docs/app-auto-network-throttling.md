@@ -1,7 +1,7 @@
 ---
 id: app-auto-network-throttling
 title: Network Throttling 
-hide_title: true
+hide_title: false
 sidebar_label: Network Throttling
 description: Now validate your mobile applications over low latency networks (2G/3G/LTE) or in offline mode with varying upload and download speeds. LambdaTest empowers you to simulate these mobile network conditions through its desired capabilities, ensuring comprehensive testing of your mobile applications.
 keywords:
@@ -50,25 +50,11 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-
-# Network Throttling
-
-***
 In Appium testing, assessing your app's performance under diverse network conditions (2G/3G/LTE) and offline scenarios, is crucial. Fluctuating upload and download speeds can significantly impact your app's behavior across different devices.
 
 LambdaTest simplifies testing by enabling simulation of diverse network conditions. Whether starting with defaults or custom profiles, these features replicate real-world scenarios, proving invaluable for Appium tests. The device maintains uninterrupted internet connectivity throughout, ensuring a reliable testing experience for your mobile applications.
 
-## Objectives
-----
-
-By the end of this guide, you will learn how to:
-- Initialize a test session with predefined network profiles.
-- Dynamically change network profiles during test execution using LambdaHooks.
-- Define and implement custom network profiles.
-- Reset the network profile to default settings.
-
 ## Workflow
-----
 ### Initialization
 
 - **Capability:** Initiate a test session with predefined network profiles using the `networkProfile` capability. Example:
@@ -137,11 +123,12 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
 
 #### iOS
 
-
 - **LambdaHook:** You can also switch to offline mode during the test execution with the following command:
     ```python
     driver.execute_script("updateNetworkProfile=offline")
     ```
+
+## Toggle Offline/Online Mode via API
 
 - For both iOS and android devices you can use the offline/online mode API as well within the running test session:
 
@@ -151,7 +138,6 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     --header 'Content-Type: application/json' \
     --data '{"mode": "offline"}'
     ```
-
 
 :::note
 - **Network throttling** results may vary sometimes based on multiple factors including network conditions and device performance.4
