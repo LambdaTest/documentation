@@ -78,7 +78,7 @@ By setting these parameters, QAs can ensure that the Appium server accurately ta
 | queueTimeout | TYPE: Integer <br/> DEFAULT: 600 <br/> `queueTimeout=300` | This capability can be used to modify the Queue timeout value within a range. queueTimeout Range : 300-900. |
 | idleTimeout | TYPE: Integer <br/> DEFAULT: 120 <br/> `idleTimeout=120` | This capability can be used to modify the timeout value. |
 | deviceOrientation | TYPE: STRING <br/> DEFAULT: PORTRAIT <br/> `deviceOrientation=portrait` <br/> OR <br/> `deviceOrientation=landscape` | Change the screen orientation of the device. |
-| orientation | TYPE: STRING <br/> `orientation=auto` | Change the screen orientation of the device. |
+| orientation | TYPE: STRING <br/> `orientation=auto` | This capability allows the app or browser to automatically adjust its display based on the physical orientation of the device. |
 | newCommandTimeout | TYPE: STRING <br/> DEFAULT: 60 <br/> `newCommandTimeout=60` | | How long (in seconds) Appium will wait for a new command from the client before assuming the client quit and ending the session. |
 | automationName | TYPE: STRING <br/> DEFAULT (Android): UiAutomator2 <br/> DEFAULT (iOS): XCUITest <br/> `automationName = UiAutomator2` | Choose which automation engine you'd like to use. <br/> Android - `UiAutomator2`, `Flutter`. <br/> iOS - `XCUITest`, `Flutter`. |
 | eventTimings | TYPE: BOOLEAN <br/> DEFAULT: FALSE <br/> `true` | Enable or disable the reporting of the timings for various Appium-internal events (e.g., the start and end of each command, etc.). To enable, use true. The timings are then reported as events property on response to querying the current session. See the event timing docs for the the structure of this response. |
@@ -133,15 +133,6 @@ location | TYPE: HashMap <br/> <br/> Python example: <br/> `location: {"lat": "2
 | dedicatedProxy | TYPE: BOOLEAN <br/> `dedicatedProxy=TRUE` <br/> OR <br/> `dedicatedProxy=FALSE` | Dedicated Proxy. |
 | blockDomains | TYPE: Array of Strings <br/> `"blockDomains": ["www.facebook.com", "www.amazon.com"]  ` | It is used to block the mentioned domains on the device.
 
-### Network Throttling (Offline/Online)
-To test your apps over an offline or online mode, pass the below cURL request within the running test session.
-
-```bash
-curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<session-id>/update_network' \
---header 'Authorization: Basic <username:access_key>' \
---header 'Content-Type: application/json' \
---data '{"mode": "offline/online"}'
-```
 </div>
 
 > Got any questions?<br/>
