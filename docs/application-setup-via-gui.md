@@ -47,7 +47,7 @@ import NewTag from '../src/component/newTag';
 ></script>
 To test your iOS (.ipa file) or Android (.apk or .aab file) application on LambdaTest, you can upload them directly from the dashboard. In this documentation, we have listed the the ways via which you can upload your application for both Virtual and Real Devices.
 
-## via Real Device
+## Real Device Dashboard
 - **Access the Dashboard :** Log in to your LambdaTest account and navigate to the [Real Device dashboard](https://applive.lambdatest.com/app).
 - **Initiate the Upload :** Click the Upload button in the dashboard and select your application file from your local system:
   - **For Android :** Ensure the file is in `.apk` or `.aab` format.
@@ -60,7 +60,7 @@ Wait for the file to upload and process. A success message will indicate when yo
 
 > Learn how to [Upload Apps on LambdaTest’s Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/) in detail.
 
-## via Automation
+## Automation Dashboard
 - **Access the App Automation Dashboard :** Log in to your LambdaTest account and navigate to the [App Automation Dashboard](https://appautomation.lambdatest.com/build).
 - **Upload the Application :** Click the Browse File button in the App tab under the Real Device or Virtual Device section. Select your application file from your local system:
   - **Android :** Upload a `.aab` or `.apk` file.
