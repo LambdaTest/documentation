@@ -1875,8 +1875,10 @@ table th:not(:last-child), table td:not(:last-child){border-right: 1px solid #d4
  }
  @media (max-width:767px) {
   .lambda-api .tabs-container{display: block;width: 100%;margin-bottom: 0px;overflow: hidden;}
+  .storylane-iframe{display: none;}
  }
 
 
 .support_container{display: flex;gap:100px}
 .docusaurus-theme-github-codeblock .theme-code-block{max-height: 500px;overflow: auto;}
+.storylane-iframe{min-height: 700px; margin-top: 50px; border-radius: 20px; margin: auto; max-width: 100%;}
