@@ -60,6 +60,20 @@ In the following section, we will walk you through the process of conducting you
 </div>
 </div>
 
+## Getting Started with PDF Comparison
+
+  <iframe
+  src="https://app.storylane.io/share/cq92opbjnlxu"
+  width="100%"
+  height="100%"
+  allowFullScreen
+  loading="lazy"
+  importance="low"
+  title="LambdaTest Automation Testing Demo"
+  className="storylane-iframe"
+></iframe>
+
+
 ## Step 1: Establishing a SmartUI Project
 
 To initiate a SmartUI PDF Comparison Project, adhere to the following instructions:
@@ -95,6 +109,7 @@ Here's how you can upload your PDFs:
 :::note 
 Only files in `.pdf` format are compatible with this feature.
 :::
+
 
 ## Use Cases of Smart PDF Comparison
 
