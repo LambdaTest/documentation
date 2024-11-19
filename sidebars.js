@@ -1624,6 +1624,11 @@ module.exports = {
         ],
       },
       {
+        type: "doc",
+        label: "Accessibility Test Scheduling",
+        id: "accessibility-test-scheduling"
+      },
+      {
         type: "category",
         collapsed: true,
         label: "Navigating Dashboard",
