@@ -1800,9 +1800,7 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Private Cloud",
-        items: [
-          "public-cloud-vs-private-cloud",
-        ],
+        items: ["public-cloud-vs-private-cloud", "select-pre-installed-apps", "private-device-allocation-to-teams"],
       },
     ],
   ],
