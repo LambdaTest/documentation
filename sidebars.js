@@ -1711,7 +1711,7 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Automated Test Cases",
+        label: "Linking Automated Test Cases",
         items: ["automated-test-cases-with-ai", "automated-test-cases-linked-with-test-manager"],
       },
       {
