@@ -1589,9 +1589,14 @@ module.exports = {
         ],
       },
       {
-        type: "doc",
+        type: "category",
+        collapsed: true,
         label: "Accessibility Test Scheduling",
-        id: "accessibility-test-scheduling"
+        link: {
+          type: "doc",
+          id: "accessibility-test-scheduling"
+        },
+        items: ["accessibility-test-scheduling-scan", "accessibility-test-scheduling-edit"]
       },
       {
         type: "category",
