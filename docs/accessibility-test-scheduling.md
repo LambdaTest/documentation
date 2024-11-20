@@ -41,9 +41,11 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-Web accessibility ensures that all users, including those with disabilities, can access and interact with web content. The process of manually verifying accessibility compliance is often time-consuming and prone to errors. To address this, the **Scheduled Accessibility Scan** feature allows you to automate accessibility checks for websites based on specified **WCAG (Web Content Accessibility Guidelines)** standards, making the process efficient and reliable.
+Web Accessibility is crucial for creating inclusive digital experiences. This ensures that all the users, including those with disabilities, can access and interact with web content. However, manually verifying accessibility compliance is often time-intensive and prone to human error.
 
-This guide explains how to schedule, configure, and manage accessibility scans using the **Accessibility Testing Dashboard**.
+To address these challenges, LambdaTest introduces the Accessibility Scheduler—an automated solution to help you stay compliant with WCAG (Web Content Accessibility Guidelines). This tool streamlines accessibility testing by automating checks and generating comprehensive reports, ensuring a faster, more reliable process.
+
+The Scheduled Accessibility Scan feature allows you to automate recurring or one-time accessibility scans, significantly reducing manual effort while ensuring high standards of accessibility compliance.
 
 ## Key Features
 - **Automated Scheduling :** Set up recurring or one-time scans for your websites.
@@ -51,61 +53,7 @@ This guide explains how to schedule, configure, and manage accessibility scans u
 - **Local and Authenticated Pages :** Configure scans for local environments and authenticated pages.
 - **Comprehensive Reporting :** Receive detailed scan reports via email and access them on the dashboard.
 
-## Steps to Schedule an Accessibility Scan
-### Step 1: Access the Scheduled Scan Feature
-- Open the Accessibility Testing Dashboard.
-- Click the “Scheduled Scan” option from the menu.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/schedule-scan/1.png').default} className="doc_img"/>
-
-### Step 2: Configure the Scan
-- Enter the Scan Name for identification.
-- Select the desired WCAG version for compliance.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/schedule-scan/2.png').default} className="doc_img"/>
-
-### Step 3. Add Pages for the Scan
-
-<Tabs className="docs__val">
-
-<TabItem value="manual" label="Add URLs Manually" default>
-- In the Add Pages field, input individual URLs.
-- Click Add for each URL.
-<img loading="lazy" src={require('../assets/images/accessibility-testing/schedule-scan/3.1.png').default} className="doc_img"/>
-</TabItem>
-
-<TabItem value="csv" label="Upload URLs via CSV" default>
-- Prepare a CSV file with the list of URLs.
-- Click Upload CSV to import the file.
-<img loading="lazy" src={require('../assets/images/accessibility-testing/schedule-scan/3.3.png').default} className="doc_img"/>
-</TabItem>
-
-<TabItem value="sitemap" label="Extract URLs from Sitemap" default>
-- Enter your domain URL or XML sitemap URL
-- Click on the Fetch Sitemap button to extract all the URLs
-<img loading="lazy" src={require('../assets/images/accessibility-testing/schedule-scan/3.2.png').default} className="doc_img"/>
-</TabItem>
-
-</Tabs>
-
-#### Advanced Options
-- **Local Testing Setup :** If scanning locally hosted URLs, add a Local Testing Setup/Tunnel to access non-public environments.
-- **Login Configuration :** For pages requiring authentication, configure the Login Settings by providing credentials or session details.
-- **Review Issues :** Enable Needs Review for areas requiring manual inspection.
-- **Best Practices Issues :** Check Best Practices to include suggestions for better accessibility.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/schedule-scan/3.4.png').default} className="doc_img"/>
-
-### Step 4. Create the Scan
-- Select between a Recurring scan (Recommended) or a Quick scan.
-- Specify the frequency (e.g., daily, weekly) and timing details.
-
-Once all details are configured, click Schedule Scan button.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/schedule-scan/4.png').default} className="doc_img"/>
-
-### Step 5: Access Reports
-- Navigate to the Website Scanner section on the dashboard.
-- Select the desired report from the Scan Summary list.
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/schedule-scan/5.png').default} className="doc_img"/>
+## Use Case
+- **Developers :** Stay ahead of accessibility issues by scheduling regular scans and ensuring WCAG compliance throughout the development lifecycle.
+- **QA Testers :** Conduct detailed accessibility testing as part of their quality assurance workflows.
+- **Product Managers :** Monitor accessibility performance across websites to meet organizational and legal compliance requirements.
