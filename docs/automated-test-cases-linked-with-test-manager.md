@@ -2,7 +2,7 @@
 id: automated-test-cases-linked-with-test-manager
 title: Linking Automated Test Cases to Test Manager
 hide_title: false
-sidebar_label: Linking Automated Test Cases
+sidebar_label: via Capabilities
 description: Link your automated test cases with the test manager using the test case id and run the automation test via Autoamtion dashboard or HyperExecute 
 keywords:
   - automated test cases
@@ -48,16 +48,12 @@ To link an automated test run with a specific test case, add the `tms.tc_id` key
 
 ```javascript
 const capabilities = {
-  "browserName": "Chrome", // Specify browser name
-  "browserVersion": "120.0", // Specify browser version
   "lt:Options": {
       "tms.tc_id": "TC-1470" // Link the test execution to the Test Case ID 'TC-1470'
   }
 };
 ```
 
-- `browserName` : Name of the browser being used for the test.
-- `browserVersion` : Version of the browser.
 - `lt:Options` : A JSON object containing additional options for LambdaTest configurations.
 - `tms.tc_id` : The key used to link a test case in Test Manager. Replace "TC-1470" with your desired Test Case ID.
 
