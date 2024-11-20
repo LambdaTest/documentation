@@ -42,6 +42,15 @@ import TabItem from '@theme/TabItem';
 ></script>
 The Teams feature for Private Cloud Devices enables organization admins to divide and allocate private cloud devices among teams within their organization which ensures effective resource management. Team members then gain exclusive access to the allocated devices, ensuring efficient and secure testing workflows.
 
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+
+:::note
+These are the type of private devices available 
+- **Active :** These devices are available and ready for testing. Users can select an active device to execute their test cases without any delay.
+- **Unavailable :** These devices are temporarily inaccessible due to ongoing usage or maintenance. They are currently occupied or in a state where they cannot be allocated for testing. Users must wait until the device becomes active.
+- **Offline :** Devices in this state are not connected to the LambdaTest Private Cloud. This could be due to network issues, power outages, or administrative configurations. Offline devices must be reconnected or brought online by the administrator to make them available for testing.
+:::
+
 ## Steps to Allocate Devices to Teams
 
 ### Step 1:  Create or Select a Team
