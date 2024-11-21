@@ -419,21 +419,21 @@ Current Languages Supported: **maven, java, dotnet, node**, **ruby**, **android-
 
 ```yaml
 runtime:
-  language: java
-  version: "11"
+  - language: java
+    version: "11"
 ```
 
 - You can also install **gauge** and **gradle** only as an additional frameworks or tools independent of the language defined.
 
 ```yaml
 runtime:
-  language: java
-  version: 11
-  addons:
-    - name: "gauge"
-      version: "1.4.0"
-    - name: "gradle"
-      version : "7.0"
+  - language: java
+    version: 11
+    addons:
+      - name: "gauge"
+        version: "1.4.0"
+      - name: "gradle"
+        version : "7.0"
 ```
 
 - You can also provide **multiple languages** and their **specified versions** that you want installed on your machine.

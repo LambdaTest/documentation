@@ -307,9 +307,9 @@ This flag allows you to run a certain number of tests via tunnel. The default ma
 This flag allows you to indicate the path of the zip file that needs to be uploaded for your tests to run.
 Let's say you already have a zipped payload that you want to upload, so you can provide the path of that payload and upload it.
 
-Whenever you zip your test files, it creates a folder, let's say **tests.zip**. Now, when this zip folder is unarchived, HyperExecute searches for a file named **.hyperexecute.yaml**, which should be present in the root folder only.
+Whenever you zip your test files, it creates a folder, let's say **tests.zip**. Now, when this zip folder is unarchived, HyperExecute searches for a file named **`hyperexecute.yaml`**.
 
-In another scenario, suppose you first created a folder. Inside that folder, you put all your required test files and then zip that folder (say **folder.zip**). When this zip folder is unarchived, HyperExecute will again search for the **.hyperexecute.yaml** file, which in this case won't be available as it will be inside the folder, which will throw an error.
+In another scenario, suppose you first created a folder. Inside that folder, you put all your required test files and then zip that folder (say **folder.zip**). When this zip folder is unarchived, HyperExecute will again search for the **`hyperexecute.yaml`** file, which in this case won't be available as it will be inside the folder, which will throw an error.
 
 ```bash
 --use-zip "/home/users/work/yaml/zip/"
