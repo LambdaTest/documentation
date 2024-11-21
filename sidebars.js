@@ -2444,6 +2444,12 @@ module.exports = {
             collapsed: true,
             label: "Setup",
             items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: 'Application',
+                items: ['application-setup-via-api','application-setup-via-gui'],
+              },
               "desired-capabilities-in-appium",
               "supported-appium-versions",
               "supported-appium-plugins",
