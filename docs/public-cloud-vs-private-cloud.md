@@ -1,7 +1,7 @@
 ---
 id: public-cloud-vs-private-cloud
 title: Public Cloud VS Private Cloud
-hide_title: true
+hide_title: false
 sidebar_label: Public Cloud VS Private Cloud
 description: Discover how LambdaTest's private real device cloud ensures seamless app and website functionality across devices with tailored, robust testing solutions for accuracy and flexibility.
 keywords:
@@ -38,9 +38,6 @@ slug: public-cloud-vs-private-cloud/
       })
     }}
 ></script>
-
-# Public Cloud vs Private Cloud
-***
 In mobile app development, thorough testing on real devices is essential for performance and seamless user experience. Platforms like Public and Private Device Clouds offer access to a variety of real devices for testing, each with differences in accessibility, security, and features. Understanding these nuances is crucial for organizations to choose the right option.
 
 Our detailed document compares Public Device Cloud and Private Device Cloud, focusing on their benefits for real device testing. It considers factors such as device access, session duration, settings control, and testing capabilities allowing organizations to make informed decisions about their testing strategies based on their needs and goals.
@@ -48,12 +45,11 @@ Our detailed document compares Public Device Cloud and Private Device Cloud, foc
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/private-cloud-vs-public-cloud.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 ## Why Choose Private Cloud
-***
 
 Here is the detailed comparison of Public Cloud and Private Cloud:
 
 | Features | Public Device Cloud | Private Device Cloud |
-| -------- | ------- | ------ |
+| -------- | ------------------- | -------------------- |
 | Device Access | Accessible by only a single user during session, but shared for different test sessions.| Only accessible by the specific organization and no access to anyone else. | 
 | Session Duration | Maximum session duration is 6 hours.| Maximum session duration is 12 hours.|     
 | Session Retention  | Devices undergo a factory reset after each session.| Users have the option to retain the session or reset as per their need. |

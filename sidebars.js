@@ -1800,9 +1800,7 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Private Cloud",
-        items: [
-          "public-cloud-vs-private-cloud",
-        ],
+        items: ["public-cloud-vs-private-cloud", "select-pre-installed-apps", "private-device-allocation-to-teams"],
       },
     ],
   ],
@@ -2446,6 +2444,12 @@ module.exports = {
             collapsed: true,
             label: "Setup",
             items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: 'Application',
+                items: ['application-setup-via-api','application-setup-via-gui'],
+              },
               "desired-capabilities-in-appium",
               "supported-appium-versions",
               "supported-appium-plugins",
