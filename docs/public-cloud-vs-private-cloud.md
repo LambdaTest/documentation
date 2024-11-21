@@ -49,7 +49,7 @@ Our detailed document compares Public Device Cloud and Private Device Cloud, foc
 Here is the detailed comparison of Public Cloud and Private Cloud:
 
 | Features | Public Device Cloud | Private Device Cloud |
-| -------- | ------- | ------ |
+| -------- | ------------------- | -------------------- |
 | Device Access | Accessible by only a single user during session, but shared for different test sessions.| Only accessible by the specific organization and no access to anyone else. | 
 | Session Duration | Maximum session duration is 6 hours.| Maximum session duration is 12 hours.|     
 | Session Retention  | Devices undergo a factory reset after each session.| Users have the option to retain the session or reset as per their need. |
