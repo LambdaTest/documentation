@@ -44,14 +44,9 @@ The Teams feature for Private Cloud Devices enables organization admins to divid
 
 > To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
 
-:::note
-These are the type of private devices available 
-- **Active :** These devices are available and ready for testing. Users can select an active device to execute their test cases without any delay.
-- **Unavailable :** These devices are temporarily inaccessible due to ongoing usage or maintenance. They are currently occupied or in a state where they cannot be allocated for testing. Users must wait until the device becomes active.
-- **Offline :** Devices in this state are not connected to the LambdaTest Private Cloud. This could be due to network issues, power outages, or administrative configurations. Offline devices must be reconnected or brought online by the administrator to make them available for testing.
-:::
-
 ## Steps to Allocate Devices to Teams
+
+> Only the organization's Admins have the authority to allocate or deallocate devices.
 
 ### Step 1:  Create or Select a Team
 - Go to the Teams section under the Organization Settings
@@ -67,7 +62,7 @@ In the **Private Cloud Devices** tab section, distribute your devices amongst yo
     - Click on the **Bulk Distribute** button and select all the devices that you want to allocate to the teams.
     - Click on the **Distribute** button. In the popup, choose the teams from the dropdown list.
     - Click on the **Allocate** button.
-The devices will now appear in the team’s device pool, accessible only to its members.
+The devices will now appear in the selected team’s device pool, accessible only to its members.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/teams/bulk-distribute.gif').default} alt="Image" className="doc_img img_center"/>
 
@@ -86,21 +81,25 @@ The selected device will now appear in the team’s device pool, accessible only
 
 > You can also see tags of all those teams to which those devices are allocated.
 
-## De-Allocate any Device from Teams
+## Deallocate any Device from Teams
 - Click on the **Deallocate** button from the right side of your desired device.
 
 The selected device will no longer appear in all those allocated team’s device pool.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/teams/deallocate-device.gif').default} alt="Image" className="doc_img img_center"/>
 
-## Edit Allocatation of any Device
-To edit allocation of any device, or simply if you want to add/remove any team allocation from any particular device then:
+## Edit Allocation of any Device
+To edit allocation of any device, or simply if you want to add/remove any team allocation for any particular device then:
 
-- Click on the Edit Allocation button from the right side of your desired device.
+- Click on the **Edit Allocation** button from the right side of your desired device.
 - Select or Deselect your required teams.
 - Click on the **Allocate** button.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/teams/edit-allocation.gif').default} alt="Image" className="doc_img img_center"/>
+
+:::info
+A device in a busy state will not be allocated or deallocated.
+:::
 
 ## Filter your Devices
 In the topbar, you have plenty of options to filter your devices based on:
@@ -108,6 +107,6 @@ In the topbar, you have plenty of options to filter your devices based on:
 - You can select from the drop down whether you want to see **All Devices**, **Allocated Devices**, or all the **Available Devices** in the table.
 - You can also search for a particular device based on the **device name**, or its **UDID**.
 - **OS :** Select which OS devices you want to allocate or deallocate.
-- **Teams :** Select from which team you want to filter your device and perform allocatation or deallocation of devices.
+- **Teams :** Select from which team you want to filter your device and perform allocation or deallocation of devices.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/teams/filters.png').default} alt="Image" className="doc_img img_center"/>
