@@ -43,6 +43,7 @@ import CodeBlock from '@theme/CodeBlock';
       })
     }}
 ></script>
+
 To test your **iOS** (.ipa file) or **Android** (.apk or .aab file) application on LambdaTest, you can use our public REST APIs. In this documentation, we have listed all the operations you can perform with your application via APIs or cURL commands for both Virtual and Real Devices.
 
 :::note

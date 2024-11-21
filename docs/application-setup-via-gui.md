@@ -10,7 +10,6 @@ keywords:
   - mobile testing
   - apis
   - setup application
-
 url: https://www.lambdatest.com/support/docs/application-setup-via-gui/
 site_name: LambdaTest
 slug: application-setup-via-gui/
