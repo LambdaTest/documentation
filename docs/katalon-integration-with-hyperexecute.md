@@ -80,29 +80,36 @@ It also comes with a built-in interface for codeless automation testing and vali
 
 4. Create the hyperexecute.yaml file in the root directory of your Katalon project with the given parameters:
 
-  ```bash
-  version: 0.1
-  globalTimeout: 90
-  testSuiteTimeout: 90
-  testSuiteStep: 90
-  retryOnFailure: false
-  maxRetries: 1
-  runson: win
-  pre: 
-    - pip install requests # To install pip request
-    - python installer.py # To install the certs in the Machine 
+```yaml
+version: 0.1
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
 
-  tunnel: true
-  tunnelOpts:
-    global: true
-  autosplit: true
-  concurrency: 2
-  testDiscovery:
-    type: raw
-    mode: dynamic
-    command: grep -lr 'testSuiteGuid' */*.ts | sed 's/:.*//' | sed 's/.ts//g'
-  testRunnerCommand:  katalonc `-noSplash `-runMode=console `-projectPath="G:\foreman\Hyperexecute_Sample\Hyperexecute_Sample.prj" `-retry=0 `-testSuitePath="$test" `-browserType="firefox" `-executionProfile="default" `-apiKey="aaa9402b-6a2e-4621-a4c3-05fe356f5aad" `-`-config `-webui.autoUpdateDrivers=true
-  ```
+autosplit: true
+
+runson: win
+
+tunnel: true
+tunnelOpts:
+  global: true
+concurrency: 2
+
+pre: 
+  - pip install requests # To install pip request
+  - python installer.py # To install the certs in the Machine 
+runtime: katalon
+
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: grep -lr 'testSuiteGuid' */*.ts | sed 's/:.*//' | sed 's/.ts//g'
+
+testRunnerCommand:  katalonc `-noSplash `-runMode=console `-projectPath="G:\foreman\Hyperexecute_Sample\Hyperexecute_Sample.prj" `-retry=0 `-testSuitePath="$test" `-browserType="firefox" `-executionProfile="default" `-apiKey="aaa9402b-6a2e-4621-a4c3-05fe356f5aad" `-`-config `-webui.autoUpdateDrivers=true
+
+retryOnFailure: false
+maxRetries: 1
+```
   
 Paste the command that you generated from the Katalon UI to fill the **testRunnerCommand** field in the _hyperexecute.yaml_ file.
 
