@@ -1,8 +1,8 @@
 ---
-id: automated-test-cases-linked-with-test-manager
+id: automated-test-cases-linked-using-capability
 title: Linking Automated Test Cases to Test Manager
 hide_title: false
-sidebar_label: via Capabilities
+sidebar_label: Link Test Case using Capabilities
 description: Link your automated test cases with the test manager using the test case id and run the automation test via Autoamtion dashboard or HyperExecute 
 keywords:
   - automated test cases
@@ -10,9 +10,9 @@ keywords:
   - test cases
   - automation
   - hyperexecute
-url: https://www.lambdatest.com/support/docs/automated-test-cases-linked-with-test-manager/
+url: https://www.lambdatest.com/support/docs/automated-test-cases-linked-using-capabilityr/
 site_name: LambdaTest
-slug: automated-test-cases-linked-with-test-manager/
+slug: automated-test-cases-linked-using-capability/
 ---
 
 <script type="application/ld+json"
@@ -33,7 +33,7 @@ slug: automated-test-cases-linked-with-test-manager/
           "@type": "ListItem",
           "position": 3,
           "name": "Linking Automated Test Cases to Test Manager",
-          "item": "https://www.lambdatest.com/support/docs/automated-test-cases-linked-with-test-manager/"
+          "item": "https://www.lambdatest.com/support/docs/automated-test-cases-linked-using-capability/"
         }]
       })
     }}
