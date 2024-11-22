@@ -3,10 +3,10 @@ id: hyperexecute-how-to-resolve-version-conflict
 title: How to Resolve Version Conflict Issues
 hide_title: false
 sidebar_label: How to Resolve Version Conflict Issues
-description: How to Perform Group-Based Test Discovery in TestNG
+description: Resolve version conflicts by ensuring consistency across YAML, package files, and environment variables for frameworks like Selenium, Playwright, and Cypress to avoid errors.
 keywords:
     - hyperexecute yaml
-    - How to Perform Group-Based Test Discovery in TestNG
+    - resolve version conflicts
 url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
 site_name: LambdaTest
 slug: hyperexecute-how-to-resolve-version-conflict/
