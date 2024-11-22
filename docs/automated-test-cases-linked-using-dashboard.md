@@ -3,7 +3,7 @@ id: automated-test-cases-linked-using-dashboard
 title: Manual Linking of Automation Runs with Test Manager
 hide_title: false
 sidebar_label: Link Test Case using Dashboard
-description: Streamline automated test cases and Test Manager with AI on LambdaTest, enhancing software testing efficiency and workflows.
+description: Effortlessly link test cases manually with Test Manager. Create, link, or raise bugs directly, and sync issues with Jira for streamlined test management.
 keywords:
   - automated test cases
   - automated test cases with ai 

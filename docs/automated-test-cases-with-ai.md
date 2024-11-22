@@ -3,7 +3,7 @@ id: automated-test-cases-with-ai
 title: Managing Automated Tests with Test Manager
 hide_title: false
 sidebar_label: via Dashboard
-description: Streamline automated test cases and Test Manager with AI on LambdaTest, enhancing software testing efficiency and workflows.
+description: Streamline testing with Test Manager! Manage automated tests, auto-generate BDD scenarios, and link automation runs seamlessly for Selenium Web frameworks.
 keywords:
   - automated test cases
   - automated test cases with ai 
@@ -38,8 +38,6 @@ slug: automated-test-cases-with-ai/
 ></script>
 Test Manager enables the creation and management of automated test cases directly within its platform. This feature not only streamlines test case development but also integrates AI to auto-generate BDD Scenarios from automated test runs, further optimizing the management of testing activities.
 
-> Currently, this feature is supported for Selenium Web frameworks.
-
 ## Automated Linking of Automation Runs with Test Manager
 
 1. Initiate the automation script and once it completes, proceed to the automation dashboard. The automation test run will be visible.
@@ -55,5 +53,7 @@ Test Manager enables the creation and management of automated test cases directl
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/newly-created-project.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 4. In the Test Case section, **BDD Scenarios** will be automatically visible in the Test Case that is created from the command logs of the linked automated test run.
+
+> Currently, this feature is supported for Selenium Web frameworks.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd-scenarios.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
