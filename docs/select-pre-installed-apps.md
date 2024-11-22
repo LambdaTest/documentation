@@ -3,7 +3,7 @@ id: select-pre-installed-apps
 title: Select Pre-Installed App in Session
 hide_title: false
 sidebar_label: Select Pre-Installed Apps
-description: Learn real device app testing with LambdaTest across Android and iOS devices. Start testing effortlessly today!
+description: Accelerate testing with pre-installed apps on LambdaTest. Start sessions faster, reduce setup time, and enhance efficiency in private cloud environments.
 keywords:
 - select pre installed apps
 - select pre installed apps in session

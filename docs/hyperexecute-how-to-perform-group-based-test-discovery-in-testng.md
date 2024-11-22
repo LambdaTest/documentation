@@ -3,7 +3,7 @@ id: hyperexecute-how-to-perform-group-based-test-discovery-in-testng
 title: How to Perform Group-Based Test Discovery in TestNG
 hide_title: false
 sidebar_label: How to Perform Group-Based Test Discovery in TestNG
-description: How to Perform Group-Based Test Discovery in TestNG
+description: Perform group-based test discovery in TestNG with @BeforeGroups and @AfterGroups annotations. Configure tests in HyperExecute and Maven for flexible test execution.
 keywords:
     - hyperexecute yaml
     - How to Perform Group-Based Test Discovery in TestNG
