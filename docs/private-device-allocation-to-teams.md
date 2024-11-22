@@ -3,7 +3,7 @@ id: private-device-allocation-to-teams
 title: Private Device Allocation to Teams
 hide_title: false
 sidebar_label: Private Device Allocation to Teams
-description: Learn real device app testing with LambdaTest across Android and iOS devices. Start testing effortlessly today!
+description: Efficiently manage private cloud devices with LambdaTest's Teams feature. Allocate or deallocate devices to teams for secure and streamlined testing workflows.
 keywords:
 - private device
 - private decive allocation to teams

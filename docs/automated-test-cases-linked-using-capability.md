@@ -3,7 +3,7 @@ id: automated-test-cases-linked-using-capability
 title: Linking Automated Test Cases to Test Manager
 hide_title: false
 sidebar_label: Link Test Case using Capabilities
-description: Link your automated test cases with the test manager using the test case id and run the automation test via Autoamtion dashboard or HyperExecute 
+description: Link automated tests to Test Manager with Test Case IDs for better traceability. Supported on HyperExecute and Web Automation. Streamline your workflows!
 keywords:
   - automated test cases
   - automated test cases linking to test manager

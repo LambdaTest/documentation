@@ -3,7 +3,7 @@ id: junit-xml-report
 title: JUnit XML Report
 hide_title: false
 sidebar_label: JUnit XML
-description: Streamline error analysis with the Error Categorization Report. Identify patterns in test failures to enhance quality and efficiency in your testing process.
+description: Generate a consolidated JUnit XML report with HyperExecute. Track test results, including pass/fail statuses, with easy-to-follow configuration steps
 keywords:
   - junit xml reports
   - report junit xml lambdatest 
