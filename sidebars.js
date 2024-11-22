@@ -1705,7 +1705,14 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Linking Automated Test Cases",
-        items: ["automated-test-cases-with-ai", "automated-test-cases-linked-with-test-manager"],
+        link: {
+          type: "doc",
+          id: "automated-test-cases-with-ai",
+        },
+        items: [
+          "automated-test-cases-linked-using-dashboard",
+          "automated-test-cases-linked-using-capability"
+        ],
       },
       {
         type: "category",
