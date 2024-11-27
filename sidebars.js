@@ -2920,6 +2920,7 @@ module.exports = {
     "analytics-dashboard-copilot",
     "analytics-allure-api-widgets",
     "analytics-test-case-insights",
+    "insights-private-real-devices",
     "analytics-sub-organization-widgets",
     "analytics-dashboard-edit-layout",
     "analytics-dashboard-features",
