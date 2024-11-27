@@ -1,6 +1,6 @@
 ---
 id: analytics-modules-smartui-analytics
-title: Analytics Modules - Test Overview
+title: Analytics Modules - Overview
 sidebar_label: SmartUI
 description: Discover LambdaTest's SmartUI Analytics widgets for comprehensive visual regression testing insights. Optimize your visual testing efforts today.
 keywords:
@@ -66,7 +66,7 @@ By leveraging the SmartUI Snapshot widget, you can easily track the volume of yo
 
 ## Builds Summary
 
-<!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/builds-summary.png').default} alt="Builds Summary" width="768" height="373" className="doc_img"/> --> -->
+<!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/builds-summary.png').default} alt="Builds Summary" width="768" height="373" className="doc_img"/> --> 
 
 The Builds Summary widget offers a detailed breakdown of the status distribution for the Visual Regression tests run on the LambdaTest platform. It provides valuable insights into the overall health and success rate of your visual testing builds.
 
@@ -80,7 +80,7 @@ By analyzing the Builds Summary widget, you can gain a deeper understanding of t
 
 ## Builds Trends
 
-<!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/builds-trends.png').default} alt="Builds Trends" width="768" height="373" className="doc_img"/> --> -->
+<!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/builds-trends.png').default} alt="Builds Trends" width="768" height="373" className="doc_img"/> --> 
 
 The Builds Trends widget provides a visual representation of the status trends for the Visual Regression tests run on the LambdaTest platform over time. It allows you to analyze the performance and consistency of your visual testing builds.
 
@@ -97,7 +97,7 @@ By examining the Builds Trends widget, you can identify patterns, fluctuations, 
 
 ## Screenshot Trends
 
-<!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/screenshot-trends.png').default} alt="Screenshot Trends" width="768" height="373" className="doc_img"/> --> -->
+<!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/screenshot-trends.png').default} alt="Screenshot Trends" width="768" height="373" className="doc_img"/> --> 
 
 The Screenshot Trends widget provides a visual representation of the screenshot comparison trends for the Visual Regression tests run on the LambdaTest platform over time. It allows you to track the volume and progress of your visual testing screenshots.
 
@@ -114,7 +114,7 @@ By analyzing the Screenshot Trends widget, you can gain insights into the volume
 
 ## Screenshots Browsers/Device Coverage
 
-<!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/screenshots-browsers-device-coverage.png').default} alt="Screenshots Browsers/Device Coverage" width="768" height="373" className="doc_img"/> --> -->
+<!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/screenshots-browsers-device-coverage.png').default} alt="Screenshots Browsers/Device Coverage" width="768" height="373" className="doc_img"/> --> 
 
 The Screenshots Browsers/Device Coverage widget provides a detailed breakdown of the browser and device coverage for the Visual Regression tests run on the LambdaTest platform. It helps you understand the distribution of your visual testing efforts across different browsers and devices.
 
@@ -127,7 +127,7 @@ By leveraging the Screenshots Browsers/Device Coverage widget, you can ensure th
 
 ## Screenshots Viewport Coverage
 
-<!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/screenshots-viewport-coverage.png').default} alt="Screenshots Viewport Coverage" width="768" height="373" className="doc_img"/> --> -->
+<!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/screenshots-viewport-coverage.png').default} alt="Screenshots Viewport Coverage" width="768" height="373" className="doc_img"/> -->
 
 The Screenshots Viewport Coverage widget provides a comprehensive overview of the viewport coverage for the Visual Regression tests run on the LambdaTest platform. It helps you understand the distribution of your visual testing efforts across different viewport sizes.
 
@@ -140,7 +140,7 @@ By analyzing the Screenshots Viewport Coverage widget, you can ensure that your 
 
 ## Build Status Ratio
 
-<!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/build-status-ratio.png').default} alt="Build Status Ratio" width="768" height="373" className="doc_img"/> --> -->
+<!-- <!-- <img loading="lazy" src={require('../assets/images/analytics/build-status-ratio.png').default} alt="Build Status Ratio" width="768" height="373" className="doc_img"/> -->
 
 The Build Status Ratio widget provides a visual representation of the status ratio trends for the Visual Regression tests run on the LambdaTest platform over time. It allows you to track the proportion of builds with different statuses and monitor the overall health of your visual testing process.
 
