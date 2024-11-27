@@ -101,3 +101,6 @@ The [Error Categorization Report](/support/docs/error-categorization-report/) re
 
 ## JUnit XML Report
 The [JUnit XML Report](/support/docs/junit-xml-report/) provides a summary of test results conducted on [Date and Time]. The tests are organized into multiple test suites, with detailed information on execution time, status, and individual test cases.
+
+## Karate Report
+[Karate Reports](/support/docs/karate-report/) provide a comprehensive overview of your test execution results, offering detailed insights into test performance, coverage, and failures. With visually appealing and interactive HTML reports, you can quickly analyze test outcomes, debug issues, and share results across teams. These reports are seamlessly integrated into Karate's powerful testing framework, ensuring clarity and efficiency in your test automation journey.
