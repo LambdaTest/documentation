@@ -2879,12 +2879,14 @@ module.exports = {
         {
           type: "category",
           collapsed: true,
-          label: "Tests Overview",
+          label: "Overview",
           items: [
             "analytics-modules-automation-test-overview",
             "analytics-modules-hyperexecute",
             "analytics-modules-manual-test-overview",
             "analytics-modules-smartui-analytics",
+            "analytics-modules-accessibility-widgets",
+            "analytics-modules-test-manager-widgets"
           ],
         },
         {
