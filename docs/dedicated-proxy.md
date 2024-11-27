@@ -44,7 +44,7 @@ slug: dedicated-proxy/
 
 This article will guide you on how does Lambdatest Cloud access network restricted resources using a dedicated proxy server.
 
-## Pre-requisites
+## Prerequisites
 
 ---
 

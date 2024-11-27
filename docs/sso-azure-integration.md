@@ -65,8 +65,6 @@ To enable LambdaTest SSO through Azure AD integration, you will need:
 
 * * *
 
-> **Important Note**: Once SSO is setup successfully for your LambdaTest organization then the colleagues would neither be able to login via their Google Auth nor by using login credentials for their LambdaTest account. Email invites for adding new members to the LambdaTest organization, won't work anymore as well.
-
 **Step 1:** To begin, you will need to login with your [Microsoft Azure](https://portal.azure.com/#home) account.
 
 **Step 2:** Navigate to **Manage Azure Active Directory**.

@@ -167,13 +167,16 @@ runson: android
 
 autosplit: true
 
+report: true #to generate reports
+
 framework:
   name: "android/espresso"
   args:
     buildName: "Espresso"
     video: true
     deviceLog: true
-    
+    artifacts: true #to generate artifacts
+
     # You can use either the appId (lt://APP1234567) or provide the path of the application using appPath. Both examples are given below.
     appPath: proverbial_android.apk
     testSuitePath: proverbial_android_expressotest.apk
@@ -209,12 +212,16 @@ runson: android
 
 autosplit: false
 
+report: true #to generate reports
+
 framework:
   name: android/espresso
   args:
     buildName: Espresso
     video: true
     deviceLog: true
+    artifacts: true #to generate artifacts
+
     # highlight-next-line
     appPath: proverbial_android.apk
     # highlight-next-line
@@ -259,26 +266,39 @@ jobLabel: ['HYP', 'Espresso', 'Manual Sharding']
 - To run **adb commands** in the **pre** and **post-steps**, include the following two flags in your YAML file: To execute it, you must have purchased an equivalent number of parallels for both HyperExecute and Real Device.
 
 ```yaml
-private: true 
+privateCloud: true 
 preservedDevice: true
 ```
 :::
 
-## Step 6: Execute your Test Suite
+## Step 6: Generate Reports and Artifacts
+To generate artifacts for your Espresso tests, add the `artifacts: true`, and `report: true` flag in your YAML file:
+
+```yaml
+report: true
+framework:
+  name: "android/espresso"
+  args:
+    artifacts: true
+    ...//
+```
+
+To download these artifacts in your local machine, you can pass the `--download-artifacts` and `--download-report` flag with the CLI command to execute the tests as shown in the next step.
+## Step 7: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
 Run the below command in your terminal at the root folder of the project:
 
 ```bash
-./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
-    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report`}
   </CodeBlock>
 </div>
 

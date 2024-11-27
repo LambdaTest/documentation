@@ -49,18 +49,15 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-
 With LambdaTest Real Devices, you can interact with the built-in Contacts app on our real devices to test your app's functionality. To support diverse testing, we've included sample contact data for you to use.
 
 ## Supported Devices
-
 LambdaTest supports access to the dummy Contacts on the following devices:
 
 - Devices running Android 10 and higher(Except Tabs).
 - Devices running iOS 13 and higher.
 
 ## What you can test?
-
 With access to the Contacts app on the remote devices, you can now test scenarios, such as:
 
 - Access contacts from the Contacts app.

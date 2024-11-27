@@ -31,7 +31,7 @@ git clone https://github.com/LambdaTest/Cypress-Cloud.git
 cd Cypress-Cloud
 ```
 
-**Step-2:** Setup the **LambdaTest-Cypress CLI** and configure the configuration file, as shown in the pre-requisites before. A file named `lambdatest-config.json` is generated in your project using the below command:
+**Step-2:** Setup the **LambdaTest-Cypress CLI** and configure the configuration file, as shown in the Prerequisites before. A file named `lambdatest-config.json` is generated in your project using the below command:
 
 ```bash
 lambdatest-cypress init
@@ -93,7 +93,7 @@ Also in `run-settings` section you need to specify the path of your `spec.js` fi
 ```
 
 :::info Note
-In this demo, all occurrences of **http://localhost:8080** have been replaced with [https://example.cypress.io](https://example.cypress.io) to prevent running the Cypress tests locally. Alternatively, if you want to run your tests locally, refer to the [**Run locally**](https://www.lambdatest.com/support/docs/running-your-first-cypress-test/#running-your-cypress-tests-locally-on-lambdatest-platform) section below.
+In this demo, all occurrences of ``http://localhost:8080`` have been replaced with [https://example.cypress.io](https://example.cypress.io) to prevent running the Cypress tests locally. Alternatively, if you want to run your tests locally, refer to the [**Run locally**](https://www.lambdatest.com/support/docs/running-your-first-cypress-test/#running-your-cypress-tests-locally-on-lambdatest-platform) section below.
 :::
 
 **Step-3:** Execute your tests using the following command in the terminal:

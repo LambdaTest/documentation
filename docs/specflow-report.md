@@ -1,8 +1,8 @@
 ---
 id: specflow-report
-title: SpecFlow Report on HyperExecute
-hide_title: true
-sidebar_label: SpecFlow Report
+title: SpecFlow Report
+hide_title: false
+sidebar_label: SpecFlow
 description: Learn how to generate SpecFlow Report on lambdatest and download the reports from the dashboard
 keywords:
   - specflow testing reports
@@ -35,11 +35,7 @@ slug: specflow-report/
       })
     }}
 ></script>
-
-# SpecFlow Reports
-
 SpecFlow is a free tool for automating tests using BDD. It's often used to create automation scripts for .NET projects.
-
 This technical document provides a guide on generating SpecFlow reports after executing tests on HyperExecute.
 
 ## Steps to Generate Cucumber Reports on HyperExecute
@@ -48,10 +44,10 @@ This technical document provides a guide on generating SpecFlow reports after ex
 
 **Step 2:** Configure the report parameters in the HyperExecute YAML file.
 
-```bash
+```yaml
 report: true
 partialReports:
-  location: GlobalPolaris\Reports
+  location: YOUR_REPORTS_LOCATION
   type: html
   frameworkName: specflow
   email:
@@ -64,10 +60,10 @@ partialReports:
 :::info
 You can also generate Custom Specflow reports using the Specflow reporting API. You can use the Specflow reporting API to generate reports in any format you want, such as HTML, PDF, or XML.
 
-```bash
+```yaml
 report: true
 partialReports:
-  location: GlobalPolaris\Reports
+  location: YOUR_REPORTS_LOCATION
   type: html
   frameworkName: specflow-custom
   email:

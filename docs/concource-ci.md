@@ -82,7 +82,7 @@ npm install npm@latest -g
 
     ---
 
-4. Install Concourse and start a Concourse server at port 8080 i.e. *http://127.0.0.1:8080*.
+4. Install Concourse and start a Concourse server at port 8080 i.e. ``http://127.0.0.1:8080``.
 
 5. Install fly CLI tool for Concourse CI/CD. We recommend using the latest fly version, you can check the fly version using:
 

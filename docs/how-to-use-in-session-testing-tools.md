@@ -39,22 +39,17 @@ slug: how-to-use-in-session-testing-tools/
 ></script>
 
 # How to Use In-Session Testing Tools ?
-***
-
 With LambdaTest’s Real Device browser testing, you get access to a plethora of features that helps QA ease their real device browser testing process, without the need of leaving the instance window. From features such as mark as bug and changing IP geolocation, to in-depth Chrome DevTools and Safari Web Inspector, LambdaTest's Real Device browser testing offers it all.
 
 Let us get an overview of all the features in our real device instance:
 
-
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/real-device-browser-testing-home.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 ## Comprehensive Sidebar
-***
 
 ### Home
 
 The **Home** feature on the left-sidebar allows you to go to the home screen of your selected real device instantly. 
-
 
 ### Screenshot
 
@@ -73,8 +68,6 @@ Just as your screenshots, you can find your recorded video in the gallery. You c
 The **Mark as Bug** feature allows you to push your UI related issues/edited screenshot to your integrated workspace instantly. 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/mark-as-bug-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
-
-
 
 ### Gallery
 
@@ -110,9 +103,21 @@ You can simulate these network environments using either pre-defined profiles or
 Check out our detailed support documentation to know more about the [Network Throttling](https://www.lambdatest.com/support/docs/app-auto-network-throttling/) feature.
 
 
+### iOS Settings
+
+With the **iOS settings**, you can enable the Accessibility Testing. It focuses on ensuring that applications and web content are usable by individuals with different abilities. Learn in detailed way about [Accessibility in iOS devices.](/support/docs/accessibility-settings-ios)
+
+<img loading="lazy" src={require('../assets/images/real-device-browser-testing/ios-settings-real-device.png').default} alt="add" width="1346" height="647" className="doc_img"/>
+
 ### Device Controls
 
-As the name suggests, with the **Device Control** feature you can control the volume and change the orientation of your real device.
+With the **Device Controls** feature, you can easily manage various settings on your device, such as adjusting the volume and changing its orientation.
+
+Under Device Control, you'll find multiple options to customize your device's settings:
+
+1. **Volume**: Adjust the device's volume to your preferred level.
+2. **Rotate**: Change the screen orientation between landscape and portrait modes.
+3. **Recent Apps** : Available on `iOS 15` and above, this feature allows you to view recent apps. Note that it is not supported on devices that rely on a physical button for accessing recent apps instead of the swipe-up gesture.
 
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/device-control-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>

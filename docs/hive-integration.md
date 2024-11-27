@@ -95,7 +95,7 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 ## How To Log Your First Bug Through Hive Integration?
 ***
-**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking “Real Time Test” option.
+**Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking "Real Time Test" option.
 
 **Step 2:** Present a URL of the web-app you need to test in the dialog box. After that, select any configuration for browser and operating system of your choice & hit ‘Start‘.
 
@@ -105,11 +105,11 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 <img loading="lazy" src={require('../assets/images/hive-integration/Capture9-3.webp').default} alt="bug icon" width="1348" height="619" className="doc_img"/>
 
-**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says “Mark as Bug”.
+**Step 4:** After a screenshot is captured, you can annotate any issue or a task with an in-built image editor. Once you are done highlighting the bug, click on the button that says "Mark as Bug".
 
 <img loading="lazy" src={require('../assets/images/hive-integration/Capture13.webp').default} alt="mark as bug" width="1320" height="618" className="doc_img"/>
 
-**Step 5:** After clicking on “Mark as Bug” button a Hive specific form would open up. Fill the fields as per your requirement.
+**Step 5:** After clicking on "Mark as Bug" button a Hive specific form would open up. Fill the fields as per your requirement.
 
 ---
 
@@ -123,7 +123,7 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 <img loading="lazy" src={require('../assets/images/hive-integration/hive-9.webp').default} alt="fill the fields" width="1364" height="644" className="doc_img"/>
 
-**Step 6:** Click on “Create Bug” & observe it being successfully marked through a single click effort. Once you hit the button, you will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning **“Bug successfully marked”** indicating that the issue has been successfully pushed to the respective workspace.
+**Step 6:** Click on "Create Bug" & observe it being successfully marked through a single click effort. Once you hit the button, you will get prompt messages on top of your Virtual Machine indicating the progress of bug logging. You will get a prompt message in few seconds mentioning **"Bug successfully marked"** indicating that the issue has been successfully pushed to the respective workspace.
 
 <img loading="lazy" src={require('../assets/images/hive-integration/Capture15.webp').default} alt="bug marked" width="347" height="75" className="doc_img"/>
 

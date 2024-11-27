@@ -47,17 +47,22 @@ slug: puppeteer-testing-with-codecept/
 
 Learn how to run your Puppeteer tests with CodeceptJS across 40+ real browsers and operating systems on the LambdaTest platform. 
 
-## Pre-requisites
+## Prerequisites
 ***
 
->Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
-<a href="https://github.com/LambdaTest/puppeteer-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
+1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-1. Clone the LambdaTest-Puppeteer repository on your system.
+:::tip Sample repo
+Download or clone the code sample for the Puppeteer Codecept from the LambdaTest GitHub repository to run the tests.
+
+<a href="https://github.com/LambdaTest/puppeteer-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
 
 ```js
 git clone https://github.com/LambdaTest/puppeteer-sample.git
-cd playwright-sample
+cd puppeteer-sample
+cd puppeteer-codecept
+
 ```
 
 2. Install the npm dependencies.
@@ -66,9 +71,15 @@ cd playwright-sample
 npm install
 ```
 
-3. To run Puppeteer tests with CodeceptJS, set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+3. If you are running Codecept for the first time, run the below command:
 
-<img loading="lazy" src={require('../assets/images/legacy_platform_to_lambdatest/auth.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
+```
+npm install codeceptjs puppeteer --save
+```
+
+4. To run Puppeteer tests with CodeceptJS, set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+
+<img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
 
 **Windows**
@@ -163,7 +174,7 @@ exports.config = {
 2. Now pass the below command to run your test.
 
 ```
-npm run test
+npx codeceptjs run
 ```
 
-3. Visit the [LambdaTest Automation dashboard](https://automation.lambdatest.com/build) to see your test results.
+3. Visit the [LambdaTest Web Automation Dashboard](https://automation.lambdatest.com/build) to see your test results.

@@ -35,8 +35,6 @@ slug: hyperexecute-projects/
       })
     }}
 ></script>
-> Currently in the **Beta**.
-
 Projects serve as a centralized platform for organizing and managing test executions. By grouping similar tests, controlling access, and tracking progress, Projects streamline the testing process. You can configure [custom project](/support/docs/hyperexecute-projects/#setup-your-project) and [workflow setups](/support/docs/hyperexecute-projects/#schedule-your-workflows), as well as [integrate Tosca, Tosca DEX, and JMeter tests](/support/docs/hyperexecute-projects/#setting-up-specialized-projects) for unified management. This enables efficient test script creation, automated execution scheduling, and valuable insights into test results.
 
 ## Setup your Project
@@ -46,10 +44,10 @@ Projects serve as a centralized platform for organizing and managing test execut
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/create-project.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-**Step 3:** Provide the **GitHub URL** and the **[Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)** of your repository. You can also add your team members as **Co-Owners** to allow them to edit or delete the project alongside you.
+**Step 3:** Provide your **GitHub URL** and the **[Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)** / **Bitbucket URL** and the **[Repository Access Tokens](https://support.atlassian.com/bitbucket-cloud/docs/repository-access-tokens/)** of your repository. You can also add your team members as **Co-Owners** to allow them to edit or delete the project alongside you.
 
 :::info important
-Currently, only **GitHub** repositories are supported.
+Currently, only **GitHub** and **Bitbucket** repositories are supported.
 :::
 
 Click on **Save** button to finish the setup of your project.
@@ -59,7 +57,7 @@ Click on **Save** button to finish the setup of your project.
 ## Schedule your Workflows
 Within each HyperExecute Project, you can set up one or more workflows. These workflows allow for scheduled execution of your tests, providing you with the flexibility to automate your testing process according to your development and release cycles.
 
-> Currently in the **Beta**, and works only in the [dynamic mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
+> **NOTE :** Currently, it works only in the [dynamic mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
 
 **Step 1:** Click on the **Setup Workflow**. Enter your workflow name, provide your branch name and then enter the path of your YAML file you want to execute. Click on **Next**.
 

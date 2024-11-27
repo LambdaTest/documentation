@@ -70,7 +70,7 @@ All the code samples in this documentation can be found on **LambdaTest's Github
 
 :::
 
-## Pre-requisites
+## Prerequisites
 
 ---
 
@@ -253,13 +253,13 @@ if __name__ == "__main__":
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as:
 
 **Supported Model:**
-- Device: `"Apple TV"` ; OS Version:`“16"`
+- Device: `"Apple TV"` ; OS Version:`"16"`
 
 **Supported Capabilities:**
 Same as iOS
 
 **Platform:**
-`”tvOS"`
+`"tvOS"`
 
 ```python title="appletv.py"
 def getCaps():

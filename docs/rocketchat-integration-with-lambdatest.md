@@ -56,7 +56,7 @@ The LambdaTest Rocket.Chat Integration enables users to share or push bugs to th
 **Step 4:** Now, provide your Rocket.Chat Webhook URL to establish integration with LambdaTest and click on **install** button.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/rocketchat-integration/rocketchat-integration.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/integration/team-communication/rocketchat/rocketchat-integration.mp4').default} type="video/mp4" />
 </video>
 
 :::info generate your webhook url
@@ -67,7 +67,7 @@ The LambdaTest Rocket.Chat Integration enables users to share or push bugs to th
 - Enter the details and click on the **Save** button -> copy your Webhook URL.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/rocketchat-integration/rocketchat-webhook.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/integration/team-communication/rocketchat/rocketchat-webhook.mp4').default} type="video/mp4" />
 </video>
 
 :::
@@ -82,7 +82,7 @@ The LambdaTest Rocket.Chat Integration enables users to share or push bugs to th
 
 **Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the Bug icon from the left panel for capturing a screenshot of the same.
 
-**Step 4:** After clicking on “Mark as Bug” button a Teamwork specific form would open up. Fill the fields as per your requirement.
+**Step 4:** After clicking on "Mark as Bug" button a Teamwork specific form would open up. Fill the fields as per your requirement.
 - Select which project should the ticket go under.
 - Set which Task List should the bug go under.
 - Set the priority of the issue.
@@ -92,7 +92,7 @@ The LambdaTest Rocket.Chat Integration enables users to share or push bugs to th
 **Step 5:** Click on **Mark as Bug** button. Now go to your dashboard and check a ticket will be created for the same.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/rocketchat-integration/rocketchat-bug.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/integration/team-communication/rocketchat/rocketchat-bug.mp4').default} type="video/mp4" />
 </video>
 
 **Step 6:** Go to your Rocket.Chat dashboard and you can check on your assigned channel, a notification is sent for the same.
@@ -106,10 +106,8 @@ The LambdaTest Rocket.Chat Integration enables users to share or push bugs to th
 **Step 3:** Click on the **Remove** button.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/rocketchat-integration/rocketchat-remove.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/integration/team-communication/rocketchat/rocketchat-remove.mp4').default} type="video/mp4" />
 </video>
-
-
 
 >That was all you need to know for LambdaTest + Rocket.Chat Integration. Increase your productivity multifold with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing! 
 

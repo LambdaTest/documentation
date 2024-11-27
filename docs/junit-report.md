@@ -45,29 +45,14 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
----
-
-## Introduction
----
-
 JUnit reports provide a detailed summary of test execution, allowing you to better understand your test outcomes. This document aims to guide you through the process of retrieving JUnit reports for Espresso tests executed on the LambdaTest platform.
 
-## Objective
----
-### By the end of this document, you should be able to:
+> This feature is also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
 
-1. Fetch JUnit reports for non-shard Espresso builds.
+## JUnit Report APIs
 
-2. Fetch JUnit reports for shard builds, both for individual shards and all shards collectively.
-
-
-
-## JUnit report APIs
-----
-
-**Non-shard build :** 
+### Non-shard build
 To fetch the JUnit report for a `non-shard` build, you can use the following cURL command:
-
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -76,8 +61,7 @@ To fetch the JUnit report for a `non-shard` build, you can use the following cUR
 </CodeBlock>
 </div>
 
-
-**Shard build (For single shard):**
+### Shard build (For single shard)
 To fetch the JUnit report for a `single shard` in a shard build,use:
 
 <div className="lambdatest__codeblock">
@@ -88,7 +72,7 @@ To fetch the JUnit report for a `single shard` in a shard build,use:
 </div>
 
 
-**Shard build (For all the shards):**
+### Shard build (For all the shards)
 To fetch the JUnit reports for `all shards` in a shard build, use:
 
 <div className="lambdatest__codeblock">
@@ -97,8 +81,6 @@ To fetch the JUnit reports for `all shards` in a shard build, use:
 --header 'Authorization: Basic <Base64 Authentication>'`}
 </CodeBlock>
 </div>
-
-
 
 :::note
 - Authenticate the API using your LambdaTest username and access key, and replace `build_id`, `job_id` and `shard_id` for which you want to fetch report.

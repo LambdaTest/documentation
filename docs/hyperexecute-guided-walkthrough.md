@@ -37,11 +37,11 @@ slug: hyperexecute-guided-walkthrough/
       })
     }}
 ></script>
-This page gives you a guided walkthrough of all the things on the HyperExecute Dashboard and how you can get the most out of the Platform, once you have successfully [ran you first sample Job](/support/docs/hyperexecute-running-your-first-job/). 
+This page gives you a guided walkthrough of all the things on the HyperExecute Dashboard and how you can get the most out of the platform once you have successfully [run your first sample Job](/support/docs/hyperexecute-running-your-first-job/). 
 
 ## Jobs Page
 
-All the tests on HyperExecute get executed as a Job. All the Jobs can be found on our [Jobs page](https://hyperexecute.lambdatest.com/hyperexecute). Each [Job](/support/docs/hyperexecute-status/#1-job-level-status) has a [`Status`](/support/docs/hyperexecute-status/#3-stage-level-status), a unique `Job Number`, a set of [`Labels`](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel), info on number of [`Tasks`](/support/docs/hyperexecute-status/#2-task-level-status) executed as part of that Job, and a `Summary` section followed by the details of the `Job Duration` and who initiated the Job
+All the tests on HyperExecute get executed as a Job. All the Jobs can be found on our [Jobs page](https://hyperexecute.lambdatest.com/hyperexecute). Each [Job](/support/docs/hyperexecute-status/#1-job-level-status) has a [`Status`](/support/docs/hyperexecute-status/#3-stage-level-status), a unique `Job Number`, a set of [`Labels`](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel), info on number of [`Tasks`](/support/docs/hyperexecute-status/#2-task-level-status) executed as part of that Job, and a `Summary` section followed by the details of the `Job Duration` and who initiated the Job.
 
 On this page you have other things such as filters, help center, docs, [secrets management](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) and much more. You can also filter through all of the jobs on the basis of the date, status, type etc.
 

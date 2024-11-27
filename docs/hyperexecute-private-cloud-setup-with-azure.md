@@ -43,7 +43,7 @@ HyperExecute Private Cloud is now available on the [Azure Marketplace](https://a
 
 Follow the steps below to understand how to setup **HyperExecute Private Cloud** via the Azure Marketplace.
 
-## Pre-requisites
+## Prerequisites
 
 1.  **Resource Provider**  
     The following resource providers must be registered to install HyperExecute successfully. If you do not have them registered, follow the steps on this [page](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-providers-and-types).

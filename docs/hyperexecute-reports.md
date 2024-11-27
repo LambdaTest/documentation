@@ -58,9 +58,18 @@ partialReports:
 ```
 > **Note**: If you do not specify a framework but you do mention the type of the report, then a report of the default framework is created.
 
-:::tip
+**Step 3:** Now trigger your job and go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
 
-If you want to generate multiple reports of different frameworks.
+**Step 4:** Click on the **Open** button of the **Reports**.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/reports.gif').default} alt="Image"  className="doc_img"/>
+
+Here is the sample report generated.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/report4.png').default} alt="Image"  className="doc_img"/>
+
+## Generate Multiple Reports
+If you want to generate multiple reports of different types [supported by HyperExecute](/support/docs/hyperexecute-job-reports/), simply add the required specifications in the `partialReports` field as shown below:
 
 ```yaml
 partialReports:
@@ -77,17 +86,6 @@ partialReports:
         to:
           - johndoe@example.com
 ```
-:::
-
-**Step 3:** Now trigger your job and go to the [HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute/jobs) dashboard.
-
-**Step 4:** Click on the **Open** button of the **Reports**.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/reports.gif').default} alt="Image"  className="doc_img"/>
-
-Here is the sample report generated.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/report4.png').default} alt="Image"  className="doc_img"/>
 
 :::info
 Refer to the detailed documentation on [Job Reports](/support/docs/hyperexecute-job-reports/)

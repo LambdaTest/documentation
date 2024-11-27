@@ -16,6 +16,8 @@ slug: getting-started-with-flutter-dart-android-automation/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -58,12 +60,76 @@ If you do not have any **Flutter Android** app (.apk) and an **Flutter Test Suit
 
 ## Run Your First Test
 
-### Step 1: Upload Your Application
+### Step 1: Create your Android Flutter app and test suite for testing
+For testing, you need to build a Flutter app and test suite. You can create Flutter applications and test suites using either Flutter cli or Gradlew. The steps below demonstrate how to create apks with Gradlew.
+
+- Create an instrumentation test file in your application's directory `android/app/src/androidTest/java/com/example/lambdatestSampleApp/`. Replace **com**, **example**, and **lambdatestSampleApp** values with those from your app's package name. 
+
+  ```java title="SampleTest.java"
+  package com.example.lambdatestSampleApp;
+      import androidx.test.rule.SampleTestRule;
+      import dev.flutter.plugins.integration_test.FlutterTestRunner;
+      import org.junit.Rule;
+      import org.junit.runner.RunWith;
+      import com.example.lambdatestSampleApp.Sample;
+      @RunWith(FlutterTestRunner.class)
+      public class SampleTest {
+        @Rule
+        public SampleTestRule<Sample> rule = new SampleTestRule<>(Sample.class, true, false);
+      }
+  ```
+
+- Update your application's `lambdatestSampleApp/android/app/build.gradle` file to use androidx's version of `AndroidJUnitRunner` and include the `androidx` libraries as dependencies.
+
+  ```java title="build.gradle"
+  android {
+        ...
+        defaultConfig {
+          ...
+          testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        }
+      }
+      dependencies {
+          testImplementation 'junit:junit:4.12'
+          androidTestImplementation 'androidx.test:runner:1.2.0'
+          androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+      }
+   ```
+
+- Use the following `Gradle` commands to build an instrumentation `test.apk` file(test suite) using the `Sample.java` created in the `androidTest` directory as mentioned in step 1.
+
+  ```java title="Terminal"
+  //Go to the android folder which contains the "gradlew" script used for building Android apps from the terminal
+  pushd android
+  //Build an Android test APK (uses the Sample.java file created in step 1)
+  ./gradlew app:assembleAndroidTest
+  //Build a debug APK by passing the integration test file
+  ./gradlew app:assembleDebug -Ptarget="INTEGRATION_TEST_FILE_PATH"
+  //Go back to the root of the project
+  popd
+  ```
+
+:::info
+Avoiding this step might result in **No Tests Ran** issue on the dashboard
+:::
+
+To create APKs with optional Flutter parameters, first run the Flutter tests in verbose mode with the flutter cli. This allows you to see the Gradle command used internally to build the APKs.
+
+For example, to use `--no-sound-null-safety` in your tests, run the following command.
+
+```bash
+flutter run -v --no-sound-null-safety
+```
+
+Next, look for gradlew execution in the logs. The above command generates a gradlew command in the logs that looks something like the following. To build your apk files, replace the parameter `YOUR_APP_PATH` with your actual path of the application in the following command:
+
+```bash
+gradlew --full-stacktrace --info -Pverbose=true -Ptarget-platform=android-arm64 -Ptarget=YOUR_APP_PATH/lib/main.dart -Pbase-application-name=android.app.Application -Pdart-obfuscation=false -Pextra-front-end-options=--no-sound-null-safety -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root assembleDebug  
+```
+
+### Step 2: Upload Your Application
 
 Upload your **android** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 **Using App File:**
 
@@ -99,7 +165,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 :::
 
-### Step 2: Uploading Test Suite
+### Step 3: Uploading Test Suite
 
 Upload your **test suite** (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
@@ -137,7 +203,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 :::
 
-### Step 3: Executing The Test
+### Step 4: Executing The Test
 
 #### Basic Authentication
 
@@ -200,7 +266,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/f
 </TabItem>
 </Tabs>
 
-### Step 4: View Test Execution
+### Step 5: View Test Execution
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://appautomation.lambdatest.com/build).
 
@@ -210,7 +276,7 @@ The following capabilities are supported:
 
 1. **app:** Enter the app id generated while uploading the app. Example:`lt://APP123456789123456789`
 2. **testSuite:** Enter the test suite id generated while uploading the test suite. Example: `lt://APP123456789123456789`
-3. **device:** Enter the name and os version of the device in “DeviceName-OSVersion” format. Example: `Pixel 6-12` or `Galaxy S21 Ultra 5G-11`. You can also choose to use regular expression for device name such as `Pixel.*-12`.
+3. **device:** Enter the name and os version of the device in "DeviceName-OSVersion" format. Example: `Pixel 6-12` or `Galaxy S21 Ultra 5G-11`. You can also choose to use regular expression for device name such as `Pixel.*-12`.
 4. **video:** Generate video for all the tests that have run. Example: `true`.
 5. **queueTimeout:** Enter the time in seconds for total execution time of the build. Example: `900`.
 6. **testTimeout:** Max wait time for test execution (default value - `900` secs)

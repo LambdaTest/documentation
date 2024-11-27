@@ -53,7 +53,7 @@ Welcome to the LambdaTest SmartUI CLI documentation!
 
 With SmartUI CLI, you can seamlessly perform visual regression testing on the LambdaTest platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
 
-## Pre-requisites for running SmartUI CLI
+## Prerequisites for running SmartUI CLI
 
 - Basic understanding of Command Line Interface is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
@@ -128,10 +128,10 @@ Please read the following table for more information about the options available
 | Config Key Shortcut  |       Configuration Key     &nbsp;&nbsp;&nbsp;  | Description|               Usage     &nbsp;&nbsp;&nbsp;       |
 | ---------------------| ---------------------------------------------------------------------------|--------------| -------------------- |
 | -R |      --ignoreResolutions | Ignores resolutions to compare only based on screenshot names | `npx smartui upload <directoryName> -R` |
-| -F | --files extensions             | Comma-separated list of allowed file extensions| `npx smartui upload <directoryName> -F jpg,png`|
+| -F | --files `extensions`            | Comma-separated list of allowed file extensions| `npx smartui upload <directoryName> -F jpg,png`|
 | -E | --removeExtensions          | Strips file extensions from snapshot names| `npx smartui upload <directoryName>  -E` |
-| -i | --ignoreDir patterns         | Comma-separated list of directories to ignore | `npx smartui upload <directoryName> -i` |
-
+| -i | --ignoreDir `patterns`        | Comma-separated list of directories to ignore | `npx smartui upload <directoryName> -i dir1/dir2,dir3` |
+|    | --fetch-results | Live fetched comparison results in a json file | `npx smartui upload <directoryName> --fetch-results`|
 
 :::note 
 You may use the `smartui upload --help` command in case you are facing issues during the execution of SmartUI Upload options in the CLI.
@@ -163,6 +163,25 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 ### View SmartUI Results
 
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
+
+
+### Fetch results
+
+You can fetch build results by adding the `--fetch-results` flag to your test execution command. Here are different ways to use this feature:
+
+#### Default Usage
+If no filename is specified, results will be stored in `results.json`:
+
+```bash
+npx smartui upload <directoryName> --fetch-results
+```
+
+#### Custom Filename
+Specify a custom filename for your results:
+
+```bash
+npx smartui upload <directoryName> --fetch-results custom-results.json 
+```
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

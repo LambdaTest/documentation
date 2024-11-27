@@ -117,7 +117,7 @@ You will be routed to LambdaTest Real Time Console where you can perform Real ti
 
 <img loading="lazy" src={require('../assets/images/uploads/Screenshot-156.webp').default} alt="LambdaTest Real Time Console" width="1362" height="612" className="doc_img"/>
 
-For more information, refer to **[Real Time Testing documentation](/docs/real-time-browser-testing/)**.
+For more information, refer to **[Real Time Testing documentation](/support/docs/getting-started-with-desktop-browser-real-time-testing/)**.
 
 
 ## How To Capture Screenshots?

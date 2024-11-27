@@ -1,7 +1,7 @@
 module.exports = {
   apiSidebar: [
     "getting-started-with-hyperexecute",
-    "real-time-testing",
+    "getting-started-with-kane-ai",
     "smart-visual-regression-testing",
     "analytics-overview",
     "test-intelligence-overview",
@@ -12,8 +12,6 @@ module.exports = {
     "bug-tracking-tools",
     "settings-and-security",
   ],
-
-  // 'support-start', 'tas-overview', 'app-automation', 'web-automation', 'getting-started', 'getting-started-with-cypress-testing', 'playwright-testing-guide', 'puppeteer-testing-guide', 'k6-browser-testing', 'app-automation-app-sim','getting-started-with-appium-testing', 'getting-started-with-espresso-testing', 'getting-started-with-xcui-testing', 'record-and-replay',
 
   HyperExecuteSidebar: [
     {
@@ -196,11 +194,6 @@ module.exports = {
             type: "doc",
             label: "Jobs Archiving",
             id: "hyperexecute-jobs-archiving",
-          },
-          {
-            type: "doc",
-            label: "HyperExecute Workflows",
-            id: "hyperexecute-workflows",
           },
           {
             type: "doc",
@@ -731,6 +724,7 @@ module.exports = {
               "hyperexecute-how-to-run-tests-using-local-selenium-drivers",
               "hyperexecute-how-to-perform-dependent-test-based-discovery",
               "hyperexecute-how-to-perform-group-based-test-discovery-in-testng",
+              "hyperexecute-how-to-resolve-version-conflict"
             ],
           },
           {
@@ -744,7 +738,6 @@ module.exports = {
             items: [
               "hyperexecute-how-smart-caching-boosts-tests-speed",
               "hyperexecute-seamless-integration-with-tools",
-              "hyperexecute-multi-webdriver-support",
               "hyperexecute-build-mobile-apps-using-tools",
               "hyperexecute-utilizing-custom-libraries",
               "hyperexecute-supported-languages-and-packages"
@@ -784,6 +777,7 @@ module.exports = {
               "specflow-report",
               "cypress-mochaawesome-report",
               "error-categorization-report",
+              "junit-xml-report"
             ],
           },
 
@@ -797,7 +791,7 @@ module.exports = {
       },
       {
         type: "category",
-        label: "HyperExecute FAQs",
+        label: "FAQs",
         collapsed: true,
         link: {
           type: "doc",
@@ -855,6 +849,47 @@ module.exports = {
           id: "hyperexecute-release-notes",
         },
         items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "November, 2024",
+            items: [
+              'hyperexecute-release-notes-2-5-9',
+              'hyperexecute-release-notes-2-5-8',
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "October, 2024",
+            items: [
+              'hyperexecute-release-notes-2-5-7',
+              'hyperexecute-release-notes-2-5-6',
+              'hyperexecute-release-notes-2-5-5',
+              'hyperexecute-release-notes-2-5-4',
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "September, 2024",
+            items: [
+              'hyperexecute-release-notes-2-5-3',
+              'hyperexecute-release-notes-2-5-2',
+              'hyperexecute-release-notes-2-5-1',
+              'hyperexecute-release-notes-2-5-0',
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "August, 2024",
+            items: [
+              'hyperexecute-release-notes-2-4-8',
+              'hyperexecute-release-notes-2-4-7',
+              'hyperexecute-release-notes-2-4-6',
+            ]
+          },
           {
             type: "category",
             collapsed: true,
@@ -976,6 +1011,88 @@ module.exports = {
     ],
   ],
 
+  KaneAISidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "category",
+        collapsed: true,
+        label: "Getting Started",
+        link: {
+          type: "doc",
+          id: "getting-started-with-kane-ai",
+        },
+        items: [
+          "why-we-need-kane-ai",
+          "kane-ai-web-test",
+          "kane-ai-guided-walkthrough",
+          "kane-ai-app-test",
+          "kane-ai-test-plan"
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Features",
+        items: [
+          "kane-ai-javascript-execution",
+          "kane-ai-geolocation-tunnel-proxy",
+          "kane-ai-scroll-in-feature",
+          "kane-ai-jira-integration",
+          "kane-ai-api-testing"
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Knowledge Base",
+        items: [
+          "kane-ai-command-guide",
+          "kane-ai-web-test-writing-guidelines",
+          "kane-ai-using-variables"
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Video Tutorials",
+        items: [
+         "kaneai-test",
+         "kaneai-test-manual",
+         "kaneai-edit-test-steps",
+  
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Release Notes",
+        link: {
+          type: "doc",
+          id: "kaneai-release-notes",
+        },
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "September, 2024",
+            items: [
+              'kaneai-release-notes-0-0-2',
+              'kaneai-release-notes-0-0-1',
+            ]
+          },
+        ]
+      },
+    ]
+  ],
+
   RealTimeBrowserTestingSiebar: [
     {
       type: "link",
@@ -989,14 +1106,29 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Real Time Browser Testing",
+        label: "Web Browser Testing",
         items: [
-          "real-time-testing",
-          "pre-loaded-extension",
-          "real-time-testing-troubleshooting",
-          "http-basic-authentication",
-          "webview-testing-in-android",
-        ],
+          'getting-started-with-desktop-browser-real-time-testing',
+          'real-time-desktop-browser-testing-tools'
+        ]
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Mobile Browser Testing",
+        items: [
+          'getting-started-with-mobile-browser-real-time-testing',
+          'real-time-mobile-browser-testing-tools'
+        ]
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Mobile App Testing",
+        items: [
+          'getting-started-with-mobile-app-real-time-testing',
+          'real-time-mobile-app-testing-tools'
+        ]
       },
       {
         type: "category",
@@ -1019,9 +1151,21 @@ module.exports = {
           }
         ],
       },
-      "developer-tools",
-      "mark-as-bug-in-real-time-testing",
-      "live-interactive-mobile-app-testing",
+      {
+        type: "category",
+        collapsed: true,
+        label: "Key Features",
+        items: [
+          "developer-tools",
+          "pre-loaded-extension",
+          "real-time-testing-troubleshooting",
+          "http-basic-authentication",
+          "webview-testing-in-android",
+          "real-time-locally-hosted-pages",
+          "real-time-recents-and-favourites",
+          "real-time-upload-and-download-files"
+        ],
+      },
       "troubleshooting-ios-apps",
       "entitlements",
     ],
@@ -1306,7 +1450,8 @@ module.exports = {
       "genrocket-integration",
       "netlify-integration-with-lambdatest",
       "testim-integration",
-      "simplifyqa-integration"
+      "simplifyqa-integration",
+      "uipath-integration"
     ],
     // },
   ],
@@ -1395,25 +1540,63 @@ module.exports = {
         },
         items: [
           {
-            type: "doc",
-            label: 'Selenium',
-            id: "accessibility-automation-test",
+            type: "category",
+            collapsed: true,
+            label: "Standard Grid",
+            items: [
+              {
+                type: "doc",
+                label: 'Selenium',
+                id: "accessibility-automation-test",
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: 'Cypress',
+                items: [
+                  "cypress-v10-accessibility-test",
+                  "cypress-v9-accessibility-test",
+                ],
+              },
+            ]
           },
           {
             type: "category",
             collapsed: true,
-            label: 'Cypress',
+            label: "HyperExecute",
             items: [
-              "cypress-v10-accessibility-test",
-              "cypress-v9-accessibility-test",
-            ],
+              {
+                type: "doc",
+                label: 'Selenium',
+                id: "selenium-hyprerexecute-accessibility-tests"
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: 'Cypress',
+                items: [
+                  "cypress-v10-hyprerexecute-accessibility-tests",
+                  "cypress-v9-hyprerexecute-accessibility-tests",
+                ],
+              },
+            ]
           },
           {
             type: 'doc',
             label: 'Accessibility Automation Settings',
             id: "accessibility-automation-settings",
-          }
+          },
         ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Accessibility Test Scheduling",
+        link: {
+          type: "doc",
+          id: "accessibility-test-scheduling"
+        },
+        items: ["accessibility-test-scheduling-scan", "accessibility-test-scheduling-edit"]
       },
       {
         type: "category",
@@ -1435,6 +1618,11 @@ module.exports = {
             id: "accessibility-testing-dashboard-all-issues",
           },
         ],
+      },
+      {
+        type: "doc",
+        label: "FAQs",
+        id: "accessibility-faq",
       },
     ],
   ],
@@ -1461,7 +1649,7 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Single Sign On",
+        label: "Getting Started",
         id: "single-sign-on",
       },
       {
@@ -1491,7 +1679,19 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Projects",
-        items: ["create-projects", "fields-and-values"],
+        items: [
+          "create-projects", 
+          "system-and-custom-fields", 
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Import Test Case Data",
+        items: [
+          "csv-import",
+          "one-click-migration-from-testrail", 
+        ],
       },
       {
         type: "category",
@@ -1508,15 +1708,23 @@ module.exports = {
         items: [
           "manual-test-case-creation",
           "manual-test-cases-with-ai",
-          "test-case-import",
+          "copy-and-move-support-for-test-cases",
+          "export-test-cases",
           "test-case-repository",
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Automated Test Cases",
-        items: ["automated-test-cases-with-ai"],
+        label: "Linking Automated Test Cases",
+        link: {
+          type: "doc",
+          id: "automated-test-cases-with-ai",
+        },
+        items: [
+          "automated-test-cases-linked-using-dashboard",
+          "automated-test-cases-linked-using-capability"
+        ],
       },
       {
         type: "category",
@@ -1552,7 +1760,7 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Real Device App Testing",
+        label: "App Testing",
         items: [
           "app-testing-on-real-devices",
           "how-to-use-testing-tools-in-session",
@@ -1577,7 +1785,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Features",
-            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector"],
+            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios"],
           },
         ],
       },
@@ -1586,10 +1794,11 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Real Device Browser Testing",
+        label: "Browser Testing",
         items: [
           "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
+          "screen-reader-on-real-devices-browser"
         ],
       },
     ],
@@ -1598,7 +1807,7 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Private Cloud",
-        items: ["public-cloud-vs-private-cloud", "select-pre-installed-apps"],
+        items: ["public-cloud-vs-private-cloud", "select-pre-installed-apps", "private-device-allocation-to-teams"],
       },
     ],
   ],
@@ -2123,11 +2332,15 @@ module.exports = {
     },
     [
       {
-        type: "category",
-        collapsed: true,
+        type: "doc",
         label: "Emulator / Simulator",
-        items: ["app-automation-app-sim"],
+        id: "app-automation-app-sim",
       },
+      {
+        type: 'doc',
+        label: 'Supported Appium Version',
+        id: 'supported-appium-versions-on-emulator-simulator'
+      }
     ],
   ],
 
@@ -2241,10 +2454,7 @@ module.exports = {
                 type: "category",
                 collapsed: true,
                 label: 'Application',
-                items: [
-                  'application-setup-via-api',
-                  'application-setup-via-gui'
-                ],
+                items: ['application-setup-via-api','application-setup-via-gui'],
               },
               "desired-capabilities-in-appium",
               "supported-appium-versions",
@@ -2562,9 +2772,25 @@ module.exports = {
           "smartui-puppeteer-sdk",
           "smartui-testcafe-sdk",
           "smartui-cypress-sdk",
+          "smartui-appium-sdk",
           "smartui-wdio-sdk",
           "smartui-sdk-config-options",
           "smartui-cli-git-branching-strategy",
+          "smartui-cli-env-variables",
+          "smartui-cli-responsive-dom",
+          "smartui-sdk-fetch-results",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Stabilize Your Screenshots",
+            items: [
+              "smartui-freeze-animations",
+              "smartui-handle-dynamic-data",
+              "smartui-handle-videos",
+              "smartui-handle-lazy-loading",
+              "smartui-handle-sticky-elements"
+            ]
+          },
         ],
       },
       {
@@ -2589,11 +2815,19 @@ module.exports = {
       },
       {
         type: "category",
+        collapsed: false,
+        label: "Difference Options",
+        items: [
+          "smartui-smartignore",
+        ],
+      },
+      {
+        type: "category",
         collapsed: true,
-        label: "Integrate with CI/CD tool",
+        label: "Integrate with CI/CD tools",
         items: [
           "smartui-with-github-actions",
-          "smartui-with-gitlab"
+          "smartui-with-gitlab",
         ],
       },
       {

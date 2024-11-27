@@ -39,6 +39,8 @@ slug: selenium-bidi-integration/
 ></script>
 Selenium WebDriver BiDi is a W3C standard protocol used to establish communication between a test script and a remote WebDriver server. It introduces bi-directional communication, which means both the script and the browser can send requests and responses, leading to a more dynamic and reactive testing experience.
 
+> BiDi is compatible with **Chrome**, **Firefox**, and **Edge** browsers. For more information, please refer to the [documentation](https://wpt.fyi/results/webdriver/tests/bidi?label=stable&label=master&aligned).
+
 ## Why to use WebDriver BiDi Protocol?
 
 There are several compelling reasons to consider using BiDi testing with Selenium WebDriver on LambdaTest:
@@ -60,7 +62,6 @@ Following are the steps to run tests on LambdaTest using **WebdriverIO with BiDi
 ### Prerequisites
 - Node.js >= 12
 - Your LambdaTest [Username and Access Key](/support/docs/using-environment-variables-for-authentication-credentials/)
-- Make sure your LambdaTest plan supports BiDi protocol.
 
 ### Step 1: Setup the project
 

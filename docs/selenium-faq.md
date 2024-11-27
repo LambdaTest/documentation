@@ -3,11 +3,11 @@ id: selenium-faq
 title: Frequently Asked Questions
 hide_title: false
 sidebar_label: FAQs
-description: Get quick answers to all your HyperExecute queries with our comprehensive FAQs! 
+description: Get quick answers to all your Selenium queries with our Frequently Asked Questions documentation.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - LambdaTest Selenium
+  - LambdaTest Selenium help
+  - LambdaTest Selenium documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/selenium-faq/
 site_name: LambdaTest

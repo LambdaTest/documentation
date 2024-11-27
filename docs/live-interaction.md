@@ -52,7 +52,7 @@ slug: live-interaction/
 - It is a powerful tool to find the root cause of the exception raised during the automated tests and even allow them to debug the exception during the session.
 - It works smartly by letting the stakeholders know who has stopped/paused the test, which helps effectively report the issue.
 
-## Pre-requisites and Limitations
+## Prerequisites and Limitations
 
 - Live interaction is available on: 
    - **Windows**: 11, 10, 8, and 8.1
@@ -73,7 +73,7 @@ Safari browser will be added in the upcoming releases.
 Follow the below-mentioned steps to interact with the browser manually in an automation test:
 
 - Open the test summary page in the **LambdaTest dashboard**
-- Click on the **“Click to view live test”** button
+- Click on the **"Click to view live test"** button
 - The status of the test changes to **idle_timeout** while using the Live Interaction feature
 - Take complete control of the browser ✅
 

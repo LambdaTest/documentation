@@ -53,7 +53,7 @@ Welcome to the LambdaTest SmartUI CLI documentation!
 
 With SmartUI CLI, you can seamlessly perform visual regression testing on the LambdaTest platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Visual Regression tests using SmartUI CLI.
 
-## Pre-requisites for running SmartUI CLI
+## Prerequisites for running SmartUI CLI
 
 - Basic understanding of Command Line Interface is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
@@ -78,7 +78,7 @@ The first step is to create a project with the application in which we will comb
 Install required NPM modules for `LambdaTest Smart UI CLI` in your **Frontend** project.
 
 ```bash
-npm install -g @lambdatest/smartui-cli
+npm install @lambdatest/smartui-cli
 ```
 
 ### **Step 2:** Create URL file
@@ -137,7 +137,7 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
-smartui config:create .smartui.json
+npx smartui config:create .smartui.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
@@ -217,7 +217,26 @@ Please read the following table for more information about the configuration fil
 You can now execute tests for `Visual Regression Testing` using the following options:.
 
 ```bash
-smartui capture urls.json --config .smartui.json
+npx smartui capture urls.json --config .smartui.json
+```
+
+
+### Fetch results
+
+You can fetch build results by adding the `--fetch-results` flag to your test execution command. Here are different ways to use this feature:
+
+#### Default Usage
+If no filename is specified, results will be stored in `results.json`:
+
+```bash
+npx smartui capture urls.json --config .smartui.json --fetch-results
+```
+
+#### Custom Filename
+Specify a custom filename for your results:
+
+```bash
+npx smartui capture urls.json --config .smartui.json --fetch-results custom-results.json 
 ```
 ### Setup with Continuous Integration (CI)
 
@@ -233,9 +252,6 @@ steps:
        smartui capture urls.json --config smartui-web.json
 ```
 
-
-
-
 ### SmartUI CLI Options and Keys
 
 The following are supported `CLI (Command Line Interface)` options for Visual Regression Testing with SmartUI:
@@ -250,6 +266,37 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
+### Parallel execution of static URLs
+
+You can reduce the build time by executing parallel URLs in the following way. 
+
+```bash
+npx smartui capture urls.json --config .smartui.json --parallel <number-of-parallels> --fetch-results   
+```
+
+- The `--parallel` flag determines how many URLs will be processed simultaneously
+- Each thread captures screenshots independently, maximizing throughput
+
+>**Example:**
+>```bash
+>npx smartui capture urls.json --config .smartui.json --parallel 3 --fetch-results   
+>```
+
+#### Determining Optimal Thread Count
+The maximum number of parallel threads is calculated using the formula: log<sub>2</sub>(N) where N is the total number of URLs.
+
+>**For example:**
+>- For 100 URLs: Maximum parallel threads = log<sub>2</sub>(100) = 6 threads
+>- For 50 URLs: Maximum parallel threads = log<sub>2</sub>(50) = 5 threads
+>- For 25 URLs: Maximum parallel threads = log<sub>2</sub>(25) = 4 threads
+
+#### Best Practices for parallel execution
+
+- Start with a lower thread count and gradually increase based on your system's performance
+- Monitor system resources during execution
+- Ensure stable internet connection for reliable parallel processing
+
 
 For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
 

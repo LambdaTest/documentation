@@ -78,7 +78,7 @@ LambdaTest provides an integration with Bamboo, using which you can perform cros
 
 <img loading="lazy" src={require('../assets/images/bamboo-integration/1.webp').default} alt="Bamboo Integration" width="810" height="1010" className="doc_img"/>
 
-**Step 4:** To create your first task, “Source Code Checkout,” you need to fetch the relevant Git repository.
+**Step 4:** To create your first task, "Source Code Checkout," you need to fetch the relevant Git repository.
 
 **Step 5:** Task number two would require to you install the required package for npm.
 

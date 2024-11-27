@@ -30,6 +30,8 @@ slug: cypressv10-on-hyperexecute/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -55,9 +57,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 > **NOTE :** This documentation is applicable for **Cypress v10** and **later versions**.
 
 HyperExecute is a smart test orchestration platform that allows you to run end-to-end Cypress tests as quickly as possible by providing a test infrastructure with optimal speed, test orchestration, and detailed execution logs.
@@ -73,7 +72,7 @@ Cypress Tests can be executed on HyperExecute using 2 ways:
 
 ## 1. Testing Using Local System
 
-### Pre-requisites:
+### Prerequisites:
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
@@ -96,38 +95,34 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-<!-- For detailed information about HyperExecute CLI, please refer to [HyperExecute CLI section](/docs/getting-started-with-hyperexecute/#hyperexecute-cli-to-interact-with-hyperexecute) in the HyperExecute getting started guide. -->
-
-<!-- > -->
-<!-- The fundamental difference between running Selenium tests on a cloud Selenium Grid and HyperExecute is that you need not have any configurations on the local machine (i.e. the machine from where HyperExecute CLI is triggered). This is because the source code from the local machine will be zipped and securely uploaded to the cloud where the execution will be performed on the remote Virtual Machine (VM). -->
-
-
 #### Setup Environment Variable
 Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
-***
+<Tabs className="docs__val">
 
-For macOS:
+<TabItem value="bash" label="Linux / MacOS" default>
 
-```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-For Linux:
+</TabItem>
 
-```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
+<TabItem value="powershell" label="Windows" default>
 
-For Windows:
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-```bash
-set LT_USERNAME=YOUR_LT_USERNAME
-set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
+</TabItem>
+</Tabs>
 
 ### Execution Methods:
 
@@ -499,8 +494,21 @@ cypressOps:
 You can download network logs via the Automate Dashboard. You can visualize HAR files using the [HAR Viewer](http://www.softwareishard.com/har/viewer/).
 :::
 
->For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
-Happy testing!
+### Detailed Cypress Command Logs
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+
+The **Detailed Command Logs** feature can be used to generate a comprehensive record of all Cypress commands and their results, both in the console and in a file. This can be extremely useful for debugging and troubleshooting Cypress tests because it narrows down the logs to reveal specific information. The logs are presented in a human-readable format, making them simple to read and comprehend.
+
+Prerequisite to get the detailed logs in HyperExecute:
+
+```yaml
+pre:
+  - npm install cypress-terminal-report --save-dev
+```
+
+:::tip
+For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](https://www.lambdatest.com/support/docs/cypress-detailed-command-logs/#for-cypress-v10-and-later-versions) documentation.
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

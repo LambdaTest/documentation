@@ -43,10 +43,11 @@ import CodeBlock from '@theme/CodeBlock';
       })
     }}
 ></script>
+
 To test your **iOS** (.ipa file) or **Android** (.apk or .aab file) application on LambdaTest, you can use our public REST APIs. In this documentation, we have listed all the operations you can perform with your application via APIs or cURL commands for both Virtual and Real Devices.
 
 :::note
-The maxiumum size for application should not exceed 1GB.
+The maximum size for application should not exceed 1GB.
 :::
 
 :::tip
@@ -61,7 +62,7 @@ The maxiumum size for application should not exceed 1GB.
 | `storage` | `-F "storage=file"` <br/> DEFAULT: `url` | Used to change the way LambdaTest stores the link. <br/> Used when we Upload using App URL |
 | `visibility` | `-F "visibility=team"` <br/> DEFAULT: `individual` | Used to change the visibility of the application being uploaded. Once the app is uploaded using the `team`, everyone in the organisation can use the same URL to run the tests. |
 
-### Using App File:
+### Using App File
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -70,7 +71,7 @@ The maxiumum size for application should not exceed 1GB.
 </CodeBlock>
 </div>
 
-### Using App URL:
+### Using App URL
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
@@ -162,6 +163,7 @@ To unlock features such as network logs, image injection, and screenshotunblock 
 --header 'Content-Type: application/json' \y
 --data-raw '{
     "appId": "APP10160161171698993659206876",
+    "networkLogsEnabled": true,
     "imageInjectionEnabled": true,
     "screenshotUnblockEnabled": true
 }'`}

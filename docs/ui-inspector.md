@@ -1,9 +1,9 @@
 ---
 id: ui-inspector
 title: UI Inspector
-hide_title: true
+hide_title: false
 sidebar_label: UI Inspector
-description: Learn real device app testing with LambdaTest across Android and iOS devices. Start testing effortlessly today!
+description: Inspect and interact with mobile app elements using LambdaTest UI Inspector. Visualize the DOM, identify elements, and generate automation Xpaths for efficient testing.
 keywords:
 - ui inspector 
 url: https://www.lambdatest.com/support/docs/ui-inspector/
@@ -34,12 +34,7 @@ slug: ui-inspector/
       })
     }}
 ></script>
-
-# UI Inspector
-
 LambdaTest UI App Inspector provides a graphical interface to inspect and interact with the elements of a mobile application. When you launch your mobile app, it retrieves the DOM (Document Object Model) of the app. This DOM includes various UI elements such as buttons, text fields, labels, etc., organised in a hierarchical structure.
-
-***
 
 ## Benefits of UI Inspector
 
@@ -84,8 +79,6 @@ Let's have a detailed look at each of these components:
 
 - The Screenshot View provides a comprehensive overview of the mobile application's user interface elements, presented in a visual representation typically in the form of a screenshot dump.
 - Users can click on individual elements within the screenshot dump, triggering simultaneous highlighting of the corresponding element in both the Hierarchy View and the Properties Table, facilitating quick navigation and detailed inspection.
-
-
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

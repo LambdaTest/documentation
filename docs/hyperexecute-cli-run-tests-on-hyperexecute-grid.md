@@ -100,8 +100,6 @@ The various flags that are supported are listed below.
 | [--verbose](#--verbose) | NA | Logging of every proxy request to stdout. |
 | [--version](#--version) | NA | Version of the HyperExecute CLI. |
 
-| [analyze](#analyze) | NA | Shows the project description of the user. |
-
 ### `--concurrency`
 This flag allows you to define the number of concurrent sessions running on HyperExecute. For more information on concurrency, go to [this page](/support/docs/hyperexecute-auto-split-strategy/).
 ```bash
@@ -126,6 +124,9 @@ This flag allows you to download all the test related results that are generated
   </CodeBlock>
 </div>
 
+:::note
+- For Espresso with private devices HyperExecute can download user generated artefacts.
+:::
 
 ### `--download-artifacts-path`
 In case you want the artifacts to be downloaded to a specific directory, please provide the exact path followed by the flag as shown in the example below.
@@ -306,9 +307,9 @@ This flag allows you to run a certain number of tests via tunnel. The default ma
 This flag allows you to indicate the path of the zip file that needs to be uploaded for your tests to run.
 Let's say you already have a zipped payload that you want to upload, so you can provide the path of that payload and upload it.
 
-Whenever you zip your test files, it creates a folder, let's say **tests.zip**. Now, when this zip folder is unarchived, HyperExecute searches for a file named **.hyperexecute.yaml**, which should be present in the root folder only.
+Whenever you zip your test files, it creates a folder, let's say **tests.zip**. Now, when this zip folder is unarchived, HyperExecute searches for a file named **`hyperexecute.yaml`**.
 
-In another scenario, suppose you first created a folder. Inside that folder, you put all your required test files and then zip that folder (say **folder.zip**). When this zip folder is unarchived, HyperExecute will again search for the **.hyperexecute.yaml** file, which in this case won't be available as it will be inside the folder, which will throw an error.
+In another scenario, suppose you first created a folder. Inside that folder, you put all your required test files and then zip that folder (say **folder.zip**). When this zip folder is unarchived, HyperExecute will again search for the **`hyperexecute.yaml`** file, which in this case won't be available as it will be inside the folder, which will throw an error.
 
 ```bash
 --use-zip "/home/users/work/yaml/zip/"
@@ -327,9 +328,11 @@ The username of your LambdaTest account.
 ***
 
 ### `--vars`
-This method allows you to name your variables. It helps you optimize the content of your YAML file by allowing for more flexibility. 
+This method allows you to name your variables. It helps you optimize the content of your YAML file by allowing for more flexibility.
+
+You can specify the email address for sharing [reports](/support/docs/hyperexecute-reports/) or [artifacts](/support/docs/hyperexecute-artifacts/) in a YAML configuration file using a variable. This allows you to dynamically set the email address and pass it via CLI, providing more flexibility than hardcoding the email address in the YAML file. Learn about this in [detail](/support/docs/hyperexecute-email-reports/#how-to-dynamically-set-your-email-address).
 ```bash
---vars "org=Lambdatest" --vars "product=HyperExecute"
+--vars "org=Lambdatest" --vars "product=HyperExecute" --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
 ***
 

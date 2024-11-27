@@ -12,7 +12,7 @@ keywords:
  - test browser
  - test OS
  - test device coverage
-url: https://www.lambdatest.com/support/docs/analytics-modules-resource-utilization/
+url: https://www.lambdatest.com/support/docs/analytics-modules-manual-test-overview/
 site_name: LambdaTest
 slug: analytics-modules-manual-test-overview/
 ---
@@ -35,7 +35,7 @@ slug: analytics-modules-manual-test-overview/
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-resource-utilization/"
+          "item": "https://www.lambdatest.com/support/docs/analytics-modules-manual-test-overview/"
         }]
       })
     }}

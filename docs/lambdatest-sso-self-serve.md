@@ -55,8 +55,7 @@ Create SSO Connection With LambdaTest:
 
 * You will need an Enterprise plan with LambdaTest.
 * The Admin of your LambdaTest organization needs to raise a request for enabling SSO Self Serve UI. They could drop us an email over <a href="mailto:support@lambdatest.com">support@lambdatest.com</a> or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in app chat support**</span>.
-* You will also need the admin level access of your IdP  to configure the SSO.
-
+* You will also need the admin level access of OneLogin to configure the SSO.
 
 ## Configuring LambdaTest SSO Integration Using SAML
 ---
@@ -81,7 +80,7 @@ Once configured, click on continue
 
 * SSO Domains (Comma-separated list of the domains that can be authenticated in the Identity Provider.) 
 * Have Metadata URL (Select this option if you have metadata file URL of your Identity Provider.)
-* Metadata URL (Enter the metadata file URL of your Identity Provider.)
+* Metadata URL (Enter the metadata URL of your Identity Provider.)
 * Sign In URL (Enter the sign-in URL of your Identity Provider.)
 * X509 Certificate (Upload the base64 encoded X509 certificate of your Identity Provider.)
 

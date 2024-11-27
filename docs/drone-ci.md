@@ -74,7 +74,7 @@ In order to perform your tests with LambdaTest, you would need the below things 
 
 For this article, we have cloned and used this [Github repository](https://github.com/LambdaTest/webdriverio-selenium-sample/blob/master/.drone.yml).
 
-3. You also need your LambdaTest authentication credentials, which includes your LambdaTest username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [LambdaTest automation dashboard](https://automation.lambdatest.com/) and click on the “key” icon left to the help button, on the top right corner.
+3. You also need your LambdaTest authentication credentials, which includes your LambdaTest username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [LambdaTest automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner.
 
 <img loading="lazy" src={require('../assets/images/drone-ci/profile.webp').default} alt="Drone CI Integration" width="462" height="325" className="doc_img"/>
 
@@ -102,12 +102,12 @@ To activate and integrate your Github repository with Drone CI on LambdaTest, yo
 
 <img loading="lazy" src={require('../assets/images/drone-ci/activate.webp').default} alt="Drone CI Integration" width="1012" height="205" className="doc_img"/>
 
-You may not be able to activate it for CI/CD. (This is because the drone admin user is robot-lt and this user should be the admin of the repository to activate it for CI/CD). You can try by clicking on the repository and then clicking on the “Activate Repository” button.
+You may not be able to activate it for CI/CD. (This is because the drone admin user is robot-lt and this user should be the admin of the repository to activate it for CI/CD). You can try by clicking on the repository and then clicking on the "Activate Repository" button.
 
 <img loading="lazy" src={require('../assets/images/drone-ci/activate-repo.webp').default} alt="Drone CI Integration" width="1012" height="420" className="doc_img"/>
 
 ---
-After clicking on “Activate Repository,” it might happen that the repository is not activated and states that “There was a problem”
+After clicking on "Activate Repository," it might happen that the repository is not activated and states that "There was a problem"
 
 <img loading="lazy" src={require('../assets/images/drone-ci/repositery.webp').default} alt="Drone CI Integration" width="1023" height="351" className="doc_img"/>
 
@@ -115,7 +115,7 @@ To resolve this error, kindly add the robot-lt user as admin of the repository a
 
 ---
 
-**Step 6:** After enabling your repository, the Settings tab will appear. Check the Trusted checkbox in the Project Settings row (this might not occur if the OAuth is already trusted) and select the Private radio button in the Project visibility row and enter the name of your YAML configuration file (in which pipelines will be defined) in the text box in Configuration row. Here we have entered the “.drone.yml” file name, as we are integrating Drone CI.
+**Step 6:** After enabling your repository, the Settings tab will appear. Check the Trusted checkbox in the Project Settings row (this might not occur if the OAuth is already trusted) and select the Private radio button in the Project visibility row and enter the name of your YAML configuration file (in which pipelines will be defined) in the text box in Configuration row. Here we have entered the ".drone.yml" file name, as we are integrating Drone CI.
 
 <img loading="lazy" src={require('../assets/images/drone-ci/setting.webp').default} alt="Drone CI Integration" width="1012" height="484" className="doc_img"/>
 
@@ -182,7 +182,7 @@ kind: pipeline
 name: Build
 ```
 
-We are making a docker pipeline so here the type defined will be docker. (Note: To make another type of pipeline you may check drone [official documentation](https://docs.drone.io/) and steps will be almost similar.) We will also give a name to our pipeline. Here, we have given the name “Build”.
+We are making a docker pipeline so here the type defined will be docker. (Note: To make another type of pipeline you may check drone [official documentation](https://docs.drone.io/) and steps will be almost similar.) We will also give a name to our pipeline. Here, we have given the name "Build".
 
 * Now we are defining when this pipeline should be executed.
 
@@ -219,7 +219,7 @@ Here the pipeline will be triggered when the event will be a push event received
   - /LT -user $USERNAME -key $PASSWORD &
 ```
 
-Here we are giving a name to our step, i.e. “Tunnel”. Image is used for builder containers and commands are the steps to be executed to connect to the LambdaTest Tunnel, build our source code, and make it executable. Here the LT_ACCESS_KEY and LT_USERNAME are fetched from Secrets.
+Here we are giving a name to our step, i.e. "Tunnel". Image is used for builder containers and commands are the steps to be executed to connect to the LambdaTest Tunnel, build our source code, and make it executable. Here the LT_ACCESS_KEY and LT_USERNAME are fetched from Secrets.
 
 **Step II:**
 
@@ -267,21 +267,21 @@ Now push your code and enjoy the CI/CD pipeline.
 
 Below is the step-by-step execution of the Drone CI pipeline.
 
-1. Edit the “.drone.yml” and add the code as discussed above.
+1. Edit the ".drone.yml" and add the code as discussed above.
 
 <img loading="lazy" src={require('../assets/images/drone-ci/edit-drone-yml.webp').default} alt="Drone CI Integration" width="627" height="231" className="doc_img"/>
 
-2. Once the edit is complete, click on “Commit Changes” to save and commit the changes made. Drone CI is activated as soon as this step is done since we have used “push event” for triggering the Drone CI.
+2. Once the edit is complete, click on "Commit Changes" to save and commit the changes made. Drone CI is activated as soon as this step is done since we have used "push event" for triggering the Drone CI.
 
 <img loading="lazy" src={require('../assets/images/drone-ci/commit.webp').default} alt="Drone CI Integration" width="1137" height="308" className="doc_img"/>
 
 <img loading="lazy" src={require('../assets/images/drone-ci/select-repo.webp').default} alt="Drone CI Integration" width="1055" height="225" className="doc_img"/>
 
-3. As soon as the Drone CI is triggered (through push event in this case), a new activity can be seen in the “ACTIVITY FEED” tab. The current status of this activity will be “running” or “executing”.
+3. As soon as the Drone CI is triggered (through push event in this case), a new activity can be seen in the "ACTIVITY FEED" tab. The current status of this activity will be "running" or "executing".
 
 <img loading="lazy" src={require('../assets/images/drone-ci/pipeline-started.webp').default} alt="Drone CI Integration" width="627" height="181" className="doc_img"/>
 
-4. The series of execution of steps includes cloning, followed by the provided tests in the .drone.yml file. For example, we have provided two tests by name “Tunnel” and “SampleTest”. Hence the series of steps to be executed will be:
+4. The series of execution of steps includes cloning, followed by the provided tests in the .drone.yml file. For example, we have provided two tests by name "Tunnel" and "SampleTest". Hence the series of steps to be executed will be:
 
     * Clone
     * Tunnel
@@ -304,7 +304,7 @@ clone:
 
 <img loading="lazy" src={require('../assets/images/drone-ci/activity-tab.webp').default} alt="Drone CI Integration" width="627" height="141" className="doc_img"/>
 
-6. You can view the status and details about each activity by clicking on it. After opening an activity, you can click on any of the passed or failed test cases to view the log. For example, in the below image, we have clicked on the failed test “SampleTest” and its log has appeared on its right.
+6. You can view the status and details about each activity by clicking on it. After opening an activity, you can click on any of the passed or failed test cases to view the log. For example, in the below image, we have clicked on the failed test "SampleTest" and its log has appeared on its right.
 
 <img loading="lazy" src={require('../assets/images/drone-ci/failed-test.webp').default} alt="Drone CI Integration" width="1025" height="467" className="doc_img"/>
 

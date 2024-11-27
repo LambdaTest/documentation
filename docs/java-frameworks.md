@@ -62,7 +62,7 @@ By the end of this topic, you will be able to:
 3. Test your locally hosted pages on LambdaTest platform.
 4. Explore advanced features of LambdaTest.
 
-## Pre-requisites
+## Prerequisites
 
 ---
 

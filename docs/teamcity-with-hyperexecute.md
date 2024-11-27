@@ -60,7 +60,7 @@ To integrate TeamCity with HyperExecute, follow the below mentioned steps:
 ### Step 1: Start the TeamCity GUI
 
 - Go to the **teamcity/bin** folder and run the command **./runAll.sh start** to start the TeamCity Server in your system.
-- Now type **http://localhost:8111/** in your browser to open the TeamCity GUI.
+- Now type ``http://localhost:8111/`` in your browser to open the TeamCity GUI.
 - Click on Create Project button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step1.webp').default} alt="Image"  className="doc_img"/>

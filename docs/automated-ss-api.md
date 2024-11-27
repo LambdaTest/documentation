@@ -189,8 +189,8 @@ In case you wish to fetch all the details from an already executed screenshot te
 ```javascript
 https://api.lambdatest.com/screenshots/v1/Test ID
 ```
->
-**Note:** Test ID is a mandatory field for making use of this GET request. This would fetch details in JSON format for all bulk screenshots captured in a test session specified by you.
+
+> **Note:** Test ID is a mandatory field for making use of this GET request. This would fetch details in JSON format for all bulk screenshots captured in a test session specified by you.
 
 Client URL would be:
 
@@ -376,8 +376,8 @@ https://api.lambdatest.com/screenshots/v1/stop/TES11111111111111111111
 Client URL: curl -X PUT "https://api.lambdatest.com/screenshots/v1/stop/TES100962431563281759448763"
 -H "accept: application/json" -H "Authorization: Basic 123456789abcdefghijklmno="
 ```
->
-**Note:** This will terminate only a running test session. Providing a TestID of an already completed test session will provide you with a 404 error as the server response.
+
+> **Note:** This will terminate only a running test session. Providing a TestID of an already completed test session will provide you with a 404 error as the server response.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

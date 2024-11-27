@@ -77,13 +77,13 @@ After creating the project, you will get your `PROJECT_TOKEN`. You need to keep 
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-:::tip Sample repo
+<!-- :::tip Sample repo
 
 Download or Clone the code sample for the Selenium - JavaScript framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/hyperexecute-smartui-sdk-selenium-csharp" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
-:::
+::: -->
 
 ### Update the Dependencies
 

@@ -15,7 +15,7 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-cli/
+url: https://www.lambdatest.com/support/docs/smartui-cypress-sdk/
 slug: smartui-cypress-sdk/
 ---
 
@@ -53,7 +53,7 @@ Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 Integrating seamlessly into your existing Cypress testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
 
-## Pre-requisites for running tests through SmartUI SDK
+## Prerequisites
 
 - Basic understanding of Command Line Interface and Cypress is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
@@ -84,15 +84,31 @@ cd smartui-cypress-sdk-sample
 ```
 ### **Step 2**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI Cypress SDK` in your **Frontend** project.
+1. Install required NPM modules for `LambdaTest Smart UI Cypress SDK` in your **Frontend** project.
 
 ```bash
 npm i @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
 ```
 
+2. Import the LambdaTest Cypress driver in `support/e2e.js`.
+
+```js
+import '@lambdatest/cypress-driver'
+```
+
+3. Update your config `(cypress.config.js)` or `plugins/index.js` with the following snippet
+
+```js
+on('task', {
+        log(message) {
+            console.log(message);
+            return null;
+        },
+ });
+```
+
 :::info 
-**SmartUI SDK only supports Cypress versions >= 10.0.0
-**
+SmartUI SDK only supports Cypress versions >= 10.0.0
 :::
 
 ### **Step 3:** Configure your Project Token

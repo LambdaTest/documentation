@@ -62,16 +62,16 @@ LambdaTest integrates with Teamwork Projects, allowing users to file issues dire
 **Step 4:** Now, provide your Teamwork API Token and Teamwork site address to establish integration with LambdaTest and click on **install** button.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/teamwork-integration/teamwork-integration.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/integration/project-management/teamwork/teamwork-integration.mp4').default} type="video/mp4" />
 </video>
 
 :::info Fetch your Teamwork API Token
 
 - Visit your Teamwork account -> **Edit my details** button.
-- You will find the “**API Token**” under the section **API & Mobile**. Copy your API token.
+- You will find the "**API Token**" under the section **API & Mobile**. Copy your API token.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/teamwork-integration/api-key.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/integration/project-management/teamwork/api-key.mp4').default} type="video/mp4" />
 </video>
 
 :::
@@ -86,7 +86,7 @@ LambdaTest integrates with Teamwork Projects, allowing users to file issues dire
 
 **Step 3:** After the VM is launched and operable. You can perform testing on your web-app for finding bugs. If a bug gets revealed, then you need to click on the Bug icon from the left panel for capturing a screenshot of the same.
 
-**Step 4:** After clicking on “Mark as Bug” button a Teamwork specific form would open up. Fill the fields as per your requirement.
+**Step 4:** After clicking on "Mark as Bug" button a Teamwork specific form would open up. Fill the fields as per your requirement.
 - Select which project should the ticket go under.
 - Set which Task List should the bug go under.
 - Set the priority of the issue.
@@ -96,7 +96,7 @@ LambdaTest integrates with Teamwork Projects, allowing users to file issues dire
 **Step 5:** Click on **Mark as Bug** button. Now go to your dashboard and check a ticket will be created for the same.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/teamwork-integration/lodge-bug.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/integration/project-management/teamwork/lodge-bug.mp4').default} type="video/mp4" />
 </video>
 
 ## Uninstall Teamwork Integration
@@ -108,7 +108,7 @@ LambdaTest integrates with Teamwork Projects, allowing users to file issues dire
 **Step 3:** Click on the **Remove** button.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/teamwork-integration/uninstall-teamwork.mp4').default} type="video/mp4" />
+<source src= {require('../assets/videos/integration/project-management/teamwork/uninstall-teamwork.mp4').default} type="video/mp4" />
 </video>
 
 > That was all you need to know for LambdaTest + Teamwork Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing!

@@ -46,6 +46,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 This document provide details about the features and capabilities supported for Espresso Framework on LambdaTest.
 
+> The capabilities listed in this document are also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
+
 | Capability Name | Data Type | Description |
 |------|-----------|-------------|
 | app | String | Enter the app id generated while uploading the app to the platform. Example:`lt://APP123456789123456789` |
@@ -55,6 +57,8 @@ This document provide details about the features and capabilities supported for 
 | queueTimeout | Integer | Total execution time of the build. Example: `queueTimeout: 300`. Maximum value is `10800`|
 | idleTimeout | Integer | Enter the time in seconds for maximum running time of a test in a build. Example: `idleTimeout: 120`|
 | deviceLog | Boolean | To generate the device logs, pass the value as `deviceLog: true` |
+| network | Boolean | To generate the network logs , pass the value as `network: true` |
+| network.har | Boolean | To generate the network logs in .har format, pass the value as `network.har: true` only works with `network:true` |
 | build | String | To set the Espresso build name. Example: `build: My Espresso Build`. |
 | geoLocation | String | Set the geolocation country code if you want to enable the same in your test. Example - `geoLocation: FR`|
 | tunnel, tunnelName | Boolean | To activate the tunnel mode, pass the value as `tunnel: true` and provide the name of your tunnel as `tunnelName: NewTunnel` |

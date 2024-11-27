@@ -80,13 +80,13 @@ Run your samplе tеsts on HyperExecute using our samplе Android and iOS applic
 
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-:::tip Sample repo
+<!-- :::tip Sample repo
 
 Download or Clone the code sample for the Virtual Devices from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/hyp-virtual-device-appium" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
-:::
+::: -->
 
 ## Step 2: Setup the CLI in your Test Suite
 

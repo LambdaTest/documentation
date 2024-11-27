@@ -47,12 +47,12 @@ Platform version is not mandatory only if `deviceName` is passed using regex. If
 Usual way to pass the `deviceName` and `platformVersion` looks like this: <br/>
 
 ```java
-"device" : [“Pixel 6 Pro-12“]
+"device" : ["Pixel 6 Pro-12"]
 ```
 
 Passing `deviceName` using REGEX:<br/>
 ```java
-"device" : [“Pixel.*-12“]
+"device" : ["Pixel.*-12"]
 ```
 
 :::tip Right way to pass REGEX:

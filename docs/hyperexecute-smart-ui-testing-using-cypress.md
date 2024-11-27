@@ -49,7 +49,7 @@ slug: hyperexecute-smart-ui-testing-using-cypress/
 
 This documentation will guide you step-by-step to execute the Smart UI tests on the HyperExecute platform using Cypress
 
-## Pre-requisites
+## Prerequisites
 
 - Your lambdatest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
