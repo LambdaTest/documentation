@@ -14,6 +14,9 @@ site_name: LambdaTest
 slug: advanced-tunnel-features/
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -38,11 +41,6 @@ slug: advanced-tunnel-features/
     }}
 ></script>
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
----
-
 **LambdaTest Tunnel** feature allows you to test your **private server URLs** or **locally hosted web-apps** or **websites** on **3000+** real browsers through LambdaTest. However, sometimes corporate firewalls and proxy settings may have restricted you to leverage the LambdaTest Tunnel binary. Not anymore though, as we’ve come up with a new binary for LambdaTest Tunnel. LambdaTest Tunnel follows various protocols such as **Web Socket, HTTPS, SSH(Secure Shell)** etc. to help you establish a secure and unique tunnel connection between your system and LambdaTest cloud servers.
 
 You can download the **LambdaTest Tunnel binary** that will help you establish a secure connection through corporate firewalls between your computer and [LambdaTest](https://www.lambdatest.com/) cloud servers for a testing locally hosted website or web-applications. You can test plain **HTML, CSS, PHP, Python** or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on LambdaTest.
@@ -55,9 +53,6 @@ You can download the **LambdaTest Tunnel binary** that will help you establish a
 | [FreeBSD](https://downloads.lambdatest.com/tunnel/v3/freebsd/64bit/LT_Freebsd.zip) |
 
 ## Executing LambdaTest Tunnel for Client Connection
-
----
-
 After you download the zip file for your operating system, extract it in a folder and open you command line there. Once you have your terminal routed to the correct directory where the LambdaTest Tunnel binary file is placed, you need to execute the below command.
 
 ```bash title="Format"
@@ -85,27 +80,15 @@ Once you execute the command, you will successfully establish a client connectio
 <img loading="lazy" src={require('../assets/images/lambda-tunnel-for-corporate-firewalls/test-using-lambda-tunnel.webp').default} alt="Advanced LambdaTest Tunnel" width="970" height="313" className="doc_img"/>
 
 ## What Makes The New LambdaTest Tunnel Binary Special?
-
----
-
 Well, other than the fact that you can now establish a connection through your corporate firewalls with the new LambdaTest Tunnel binary. Here are a couple things to top it off -
 
 ### Auto Update Functionality
-
----
-
 Earlier, for every version update in out LambdaTest Tunnel, you were compelled to download the latest binary from our platform and over write it over the outdated version in your computer. Well, now this new binary will take care of that. Every time you execute this binary, it will check for the **latest** version available and will update itself **automatically**, in case it gets outdated.
 
 ### Default Port 443
-
----
-
 Now, by default, everything will run over the **port 443** to ensure a secure web browser communication through **http protocol** over **TLS/SSL**.
 
 ### Leverage `.lt.yaml` file
-
----
-
 With this new LambdaTest Tunnel binary, you can declare your LambdaTest authentication credentials in a **YAML** file configuration and keep it in the same directory as the **LT binary file**. That way, you won’t have to pass the environment variables in the cmd every time you wish to configure the LambdaTest Tunnel. Once you specify these variables in the `.lt.yaml file`, you will just have to execute the binary file through cmd **LT.exe** and the YAML file will automatically configure a secure LambdaTest Tunnel connection by auto detecting the variables specified in the YAML file.
 
 <img loading="lazy" src={require('../assets/images/lambda-tunnel-for-corporate-firewalls/lt-yaml-file.webp').default} alt="Advanced LambdaTest Tunnel" width="978" height="239" className="doc_img"/>
@@ -122,7 +105,7 @@ TunnelName: LambdaTest
 
 Similarly, you can go ahead and pass any other variables by just specifying them in the YAML file. For example, if you wish to have verbose variable passed on for detailed logs while the binary is being configured. You will add the verbose flag in your YAML file:
 
-```
+```yaml
 User: salmank
 Key: 123456789abcdefghijklmnopqrstuv
 TunnelName: LambdaTest
@@ -134,9 +117,6 @@ Now, when you trigger the binary file through cmd. You will have your verbose lo
 <img loading="lazy" src={require('../assets/images/lambda-tunnel-for-corporate-firewalls/automatic-verbose-logs.webp').default} alt="Advanced LambdaTest Tunnel" width="1359" height="639" className="doc_img"/>
 
 ### Local Testing By MITM (Man-In-The-Middle)
-
----
-
 The **MITM(Man-in-the-middle)** mode enables you to test websites using self-signed certificates on your local system or internal network. It happens very often that you may try to test a website on the localhost which may not have valid SSL certificates before the website is made live. In such cases, you may receive the below error.
 
 <img loading="lazy" src={require('../assets/images/lambda-tunnel-for-corporate-firewalls/Local-Testing-By-MITM.webp').default} alt="Advanced LambdaTest Tunnel" width="1266" height="657" className="doc_img"/>
@@ -150,9 +130,6 @@ Here is a screenshot of the same website that was throwing an error earlier but 
 <img loading="lazy" src={require('../assets/images/lambda-tunnel-for-corporate-firewalls/test-using-mitm-mode.webp').default} alt="Advanced LambdaTest Tunnel" width="1069" height="687" className="doc_img"/>
 
 ### Using The Tunnel InfoAPIs
-
----
-
 By using the tunnel **Info APIs**, you can fetch the current status of the tunnel and can use it to stop the tunnel. You can fetch the current tunnel status using the Info API on the tunnel. Suppose the **InfoAPI** is available on the host over port **8000**, then use the below command to infuse the **InfoAPI** in the tunnel.
 
 ```bash
@@ -177,10 +154,22 @@ curl -X DELETE http://127.0.0.1:8000/api/v1.0/stop
 
 <img loading="lazy" src={require('../assets/images/lambda-tunnel-for-corporate-firewalls/stop-current-tunnel.webp').default} alt="Advanced LambdaTest Tunnel" width="1365" height="223" className="doc_img"/>
 
+### Tunnel Logs
+The --log-level flag in the LambdaTest CLI is used to specify the desired log level for tunnel logs. This feature enables users to control the verbosity of logs generated during tunnel operations, making it easier to debug or monitor activities as needed.
+
+```bash
+--log-level YOUR_LOG_LEVEL
+```
+
+#### Supported Log Levels:
+- **info :** Provides informational messages about the general operation of the tunnel.
+- **warn :** Highlights potential issues that might not immediately affect functionality but require attention.
+- **debug :** Outputs detailed logs, including diagnostic information, for troubleshooting purposes.
+- **error :** Displays error messages when something goes wrong in the tunnel operation.
+- **fatal :** Shows critical issues that cause the tunnel to terminate unexpectedly.
+
+
 ## AllowHost In Tunnel
-
----
-
 With the latest tunnel binary release we have introduced the capability to provide the domains which will be resolved from tunnel binary and the rest of the urls will be resolved from our servers. This can speed up the execution of test as the latency will be reduced by transferring data from the tunnel client. You may also use this to restrict the traffic flowing from user’s network.
 
 **Usage:**
@@ -197,9 +186,6 @@ LT  --user <username> --key <accessKey> –allowHosts google.com,apple.com,amazo
 When this flag is used only requests for provided domains will be routed via tunnel and resolved from the user's network. Requests for domains other than mentioned will be resolved from Lambdatest’s network.
 
 ## Tunnel Arguments
-
----
-
 You can find all the arguments for LambdaTest Tunnel by running the below command in your command line:
 
 ```bash

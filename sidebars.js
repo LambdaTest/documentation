@@ -780,7 +780,8 @@ module.exports = {
               "specflow-report",
               "cypress-mochaawesome-report",
               "error-categorization-report",
-              "junit-xml-report"
+              "junit-xml-report",
+              "karate-report"
             ],
           },
 
