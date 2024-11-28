@@ -92,6 +92,18 @@ To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analy
       <p>Monitor and allocate the right resources required for your organizations with advanced insights.</p>
     </div>
   </a>
+  <a href="/support/docs/insights-private-real-devices/">
+    <div className="support_inners">
+      <h3>Private Real Device Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+      <p>Gain detailed insights for ensuring optimal performance and resource utilization for your dedicated devices.</p>
+    </div>
+  </a>
+  <a href="/support/docs/insights-private-real-devices/">
+    <div className="support_inners">
+      <h3>Usage Report &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+      <p>Get detailed insights into your product usage and optimize your testing efforts.</p>
+    </div>
+  </a>
 </div>
 
 ## Product Specific Widgets
@@ -121,15 +133,15 @@ To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analy
 
 <a href="/support/docs/analytics-modules-manual-test-overview/">
   <div className="support_inners">
-    <h3>Realtime Widgets &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
-    <p>Get real-time insights into your testing activities and make data-driven decisions on the fly.</p>
+    <h3>Real-Device Widgets</h3>
+    <p>Analyze your real device testing performance and identify optimization opportunities.</p>
   </div>
 </a>
 
 <a href="/support/docs/analytics-modules-manual-test-overview/">
   <div className="support_inners">
-    <h3>Real-Device Widgets</h3>
-    <p>Analyze your real device testing performance and identify optimization opportunities.</p>
+    <h3>Realtime Widgets &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+    <p>Get real-time insights into your testing activities and make data-driven decisions on the fly.</p>
   </div>
 </a>
 
@@ -137,6 +149,18 @@ To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analy
   <div className="support_inners">
     <h3>SmartUI Widgets &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
     <p>Gain actionable insights into your SmartUI testing efforts and ensure exceptional user experiences.</p>
+  </div>
+</a>
+<a href="/support/docs/analytics-modules-accessibility-widgets/">
+  <div className="support_inners">
+    <h3>Accessibility Widgets &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+    <p>Ensure your application or website meets WCAG standards with comprehensive accessibility insights.</p>
+  </div>
+</a>
+<a href="/support/docs/analytics-modules-test-manager-widgets/">
+  <div className="support_inners">
+    <h3>Test Manager Widgets &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+    <p>Manage your project-level tests comprehensively, track the progress of test suite development with detailed insights.</p>
   </div>
 </a>
 
