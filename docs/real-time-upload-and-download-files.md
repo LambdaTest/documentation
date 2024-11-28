@@ -152,9 +152,9 @@ The Upload and Download Files feature allows you to manage files directly within
 
 | File Type | Supported Formats | Maximum File Size |
 |-----------|-------------------|-------------------|
-| Image | JPG, JPEG, PNG, GIF, BMP | 15 MB |
+| Image | JPG, JPEG, PNG, GIF, BMP, DCM, STL, SIF | 15 MB |
 | Video | MP4, MOV, 3GP | 15 MB |
-| Non-media | XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, PPT, Contacts | 15 MB |
+| Non-media | XLS, XLSX, DOC, DOCX, PDF, CSV, TXT, PPT, Contacts, Zip, CER, PFX | 15 MB |
 
 </TabItem>
 <TabItem value="download" label="Downloading Files" default>
