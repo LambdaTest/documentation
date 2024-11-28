@@ -2906,6 +2906,7 @@ module.exports = {
     "analytics-allure-api-widgets",
     "analytics-test-case-insights",
     "insights-private-real-devices",
+    "insights-usage-report",
     "analytics-sub-organization-widgets",
     "analytics-dashboard-edit-layout",
     "analytics-dashboard-features",
