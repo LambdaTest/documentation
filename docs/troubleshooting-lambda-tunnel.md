@@ -101,10 +101,10 @@ If you are testing a server that requires IP whitelisting, then you just have to
 
 `http://ts.lambdatest.com/`<br />
 
-- 199.58.84.59 - US East
-- 23.82.88.184 - US West
-- 23.106.34.219 - EU
-- 23.106.54.77 - India
+- 199.58.84.59
+- 23.82.88.184
+- 23.106.34.219
+- 23.106.54.77
 
 :::note
 Below are IPs that will be deprecated soon
