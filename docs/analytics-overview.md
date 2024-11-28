@@ -33,9 +33,10 @@ slug: analytics-overview/
       })
     }}
 ></script>
----
-import NewTag from '../src/component/newTag';
 
+---
+
+import NewTag from '../src/component/newTag';
 
 :::note Explore AI Dashboard CoPilot
 
@@ -61,33 +62,17 @@ Insights in LambdaTest allows the QA managers and executives to efficiently trac
 
 When managing multiple product lines it gets arduous for the QA managers to track the progress and quality of tests running on the platform.
 
-Insights effectively allows these managers to track and improve the tests at one sight with the help of the highly customizable dashboards available with Insights
-
-## How does it work?
-
-Setting up insights is simple. Just run the tests on your favorite LambdaTest products and Insights will automatically track the test information from the platform. In order to create your dashboard follow the steps mentioned in this article.
-
-## What LambdaTest products does Insights support?
-
-Analytics is currently supported for LambdaTest products
-
-- Web Automation
-- HyperExecute
-- App Automation
-- Real-time Testing &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" />
-- Real Device Testing 
-- SmartUI Testing &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" />
-- Accessibility Testing &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" />
-- Test Manager &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" />
-
-:::info Note
-Other LambdaTest products will be added soon with Insights support. For any request or additional information reach out to our [support team](mailto:support@lambdatest.com).
-:::
-
+Insights effectively allows these managers to track and improve the tests at one sight with the help of the highly customizable dashboards available with Insights.
 
 ## Insights Modules
 
 <div className="support_main">  
+<a href="/support/docs/analytics-dashboard-templates/">
+    <div className="support_inners">
+      <h3>Dashboards</h3>
+      <p>Explore various dashboards that provide a comprehensive view of your testing activities, enabling you to monitor performance, identify issues, and make data-driven decisions.</p>     
+    </div>
+  </a>
 <a href="/support/docs/analytics-modules-resource-utilization/">
     <div className="support_inners">
       <h3>Concurrency Usage</h3>
@@ -128,6 +113,18 @@ Other LambdaTest products will be added soon with Insights support. For any requ
     <div className="support_inners">
       <h3>Sub Organization Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
       <p>Monitor and allocate the right resources required for your organizations with advanced insights.</p>
+    </div>
+  </a>
+    <a href="/support/docs/insights-private-real-devices/">
+    <div className="support_inners">
+      <h3>Private Real Device Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+      <p>Gain detailed insights for ensuring optimal performance and resource utilization for your dedicated devices.</p>
+    </div>
+  </a>
+  <a href="/support/docs/insights-private-real-devices/">
+    <div className="support_inners">
+      <h3>Usage Report &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+      <p>Get detailed insights into your product usage and optimize your testing efforts.</p>
     </div>
   </a>
 </div>
@@ -175,6 +172,19 @@ Other LambdaTest products will be added soon with Insights support. For any requ
   <div className="support_inners">
     <h3>SmartUI Widgets &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
     <p>Gain actionable insights into your SmartUI testing efforts and ensure exceptional user experiences.</p>
+  </div>
+</a>
+
+<a href="/support/docs/analytics-modules-accessibility-widgets/">
+  <div className="support_inners">
+    <h3>Accessibility Widgets &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+    <p>Ensure your application or website meets WCAG standards with comprehensive accessibility insights.</p>
+  </div>
+</a>
+<a href="/support/docs/analytics-modules-test-manager-widgets/">
+  <div className="support_inners">
+    <h3>Test Manager Widgets &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+    <p>Manage your project-level tests comprehensively, track the progress of test suite development with detailed insights.</p>
   </div>
 </a>
 
