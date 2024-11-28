@@ -69,7 +69,7 @@ Setting up insights is simple. Just run the tests on your favorite LambdaTest pr
 
 ## What LambdaTest products does Insights support?
 
-Analytics is currently supported by 3 LambdaTest products
+Analytics is currently supported for LambdaTest products
 
 - Web Automation
 - HyperExecute
@@ -77,6 +77,8 @@ Analytics is currently supported by 3 LambdaTest products
 - Real-time Testing &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 - Real Device Testing 
 - SmartUI Testing &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" />
+- Accessibility Testing &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" />
+- Test Manager &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
 :::info Note
 Other LambdaTest products will be added soon with Insights support. For any request or additional information reach out to our [support team](mailto:support@lambdatest.com).
@@ -94,7 +96,7 @@ Other LambdaTest products will be added soon with Insights support. For any requ
   </a>
   <a href="/support/docs/analytics-modules-automation-test-overview/">
     <div className="support_inners">
-      <h3>Tests Overview</h3>
+      <h3>Overview</h3>
       <p>Learn how to get an overview of the tests running on the LambdaTest.</p>
     </div>
   </a>

@@ -2879,12 +2879,14 @@ module.exports = {
         {
           type: "category",
           collapsed: true,
-          label: "Tests Overview",
+          label: "Overview",
           items: [
             "analytics-modules-automation-test-overview",
             "analytics-modules-hyperexecute",
             "analytics-modules-manual-test-overview",
             "analytics-modules-smartui-analytics",
+            "analytics-modules-accessibility-widgets",
+            "analytics-modules-test-manager-widgets"
           ],
         },
         {
@@ -2903,6 +2905,7 @@ module.exports = {
     "analytics-dashboard-copilot",
     "analytics-allure-api-widgets",
     "analytics-test-case-insights",
+    "insights-private-real-devices",
     "analytics-sub-organization-widgets",
     "analytics-dashboard-edit-layout",
     "analytics-dashboard-features",
