@@ -3227,7 +3227,7 @@ module.exports = {
     {
       type: "link",
       label: "Back",
-      href: "/docs/settings-and-security",
+      href: "/docs/",
       customProps: {
         className: "back-to-main-menu",
       },
@@ -3305,7 +3305,7 @@ module.exports = {
     {
       type: "link",
       label: "Back",
-      href: "/docs/settings-and-security",
+      href: "/docs/",
       customProps: {
         className: "back-to-main-menu",
       },
@@ -3333,7 +3333,7 @@ module.exports = {
     {
       type: "link",
       label: "Back",
-      href: "/docs/settings-and-security",
+      href: "/docs/",
       customProps: {
         className: "back-to-main-menu",
       },
@@ -3366,8 +3366,13 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Azure AD Integration",
+        label: "Azure AD",
         id: "sso-azure-integration",
+      },
+      {
+        type: "doc",
+        label: "PingIdentity",
+        id: "lambdatest-sso-pingidentity-integration",
       },
     ],
   ],
