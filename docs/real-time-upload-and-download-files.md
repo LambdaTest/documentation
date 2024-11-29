@@ -166,10 +166,10 @@ The Upload and Download Files feature allows you to manage files directly within
 </TabItem>
 </Tabs>
 
-:::note
+:::info
 - **Number of File Uploads per Session :** You can upload 5 files max per testing session.
 
 - **File Storage Duration :** All files uploaded to Lambdatest servers, whether media or non-media, will be retained for a period of 30 days. After this period, the files will be automatically purged from the servers.
 
-- **Non-Media File Considerations for iOS :** For non-media files on iOS, it is imperative to ensure that the iOS app has the `UIFileSharingEnabled` and `LSSupportsOpeningDocumentsInPlace` keys set to `true` in the `Info.plist` file.
+<!-- - **Non-Media File Considerations for iOS :** For non-media files on iOS, it is imperative to ensure that the iOS app has the `UIFileSharingEnabled` and `LSSupportsOpeningDocumentsInPlace` keys set to `true` in the `Info.plist` file. -->
 :::
