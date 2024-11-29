@@ -1,7 +1,7 @@
 ---
 id: lambdatest-sso-okta-integration
 title: LambdaTest SSO & Okta Integration
-hide_title: true
+hide_title: false
 sidebar_label: Okta
 description: LambdaTest allows you to integrate an external user directory with your LambdaTest Organization through an IDP so your team could leverage the Single Sign-on setup. This document will help you integrate your LambdaTest organization with your Okta directory.
 keywords:
@@ -16,67 +16,34 @@ slug: lambdatest-sso-okta-integration/
 ---
 
 <script
-
   type="application/ld+json"
-
   dangerouslySetInnerHTML={{
-
     __html: JSON.stringify({
-
       "@context": "https://schema.org",
-
       "@type": "BreadcrumbList",
-
       "itemListElement": [
-
         {
-
           "@type": "ListItem",
-
           "position": 1,
-
           "name": "LambdaTest",
-
           "item": "https://www.lambdatest.com"
-
         },
-
         {
-
           "@type": "ListItem",
-
           "position": 2,
-
           "name": "Support",
-
           "item": "https://www.lambdatest.com/support/docs/"
-
         },
-
         {
-
           "@type": "ListItem",
-
           "position": 3,
-
           "name": "SSO Okta Integration",
-
           "item": "https://www.lambdatest.com/support/docs/lambdatest-sso-okta-integration/"
-
         }
-
       ]
-
     })
-
   }}
-
 ></script>
-
-# LambdaTest SSO & Okta Integration
-
-* * *
-
 LambdaTest allows you to integrate an external user directory with your LambdaTest Organization through an IDP so your team could leverage the Single Sign-on setup. With Okta, you can integrate your LambdaTest organization in two ways i.e. through the Dev Console or the SAML.
 
 After you integrate your Okta instance with your LambdaTest for Single Sign-on, you can benefit from the following features:
@@ -85,17 +52,14 @@ After you integrate your Okta instance with your LambdaTest for Single Sign-on, 
 
 To know more, refer to <a href="https://help.okta.com/en/prod/Content/Topics/Reference/glossary.htm">Okta's glossary</a>.
 
-## Prerequisites ##
----
+## Prerequisites
 To enable LambdaTest SSO through Okta integration:
 
 * You will need an Enterprise plan with LambdaTest.
 * The Admin of your LambdaTest organization needs to raise a request for enabling SSO Self Serve UI. They could drop us an email over <a href="mailto:support@lambdatest.com">support@lambdatest.com</a> or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in app chat support**</span>.
 * You will also need the admin level access of Okta  to configure the SSO.
 
-
 ## Configuring LambdaTest & Okta Integration Using SAML
----
 
 1. Go to LambdaTest <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
    <img loading="lazy" src={require('../assets/images/sso-self-serve/setup-sso.png').default} alt="setup sso button" width="944" height="409" className="doc_img"/>
