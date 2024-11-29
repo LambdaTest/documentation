@@ -88,6 +88,10 @@ function ApiDoc() {
                             <iframe className="embed-responsive-item"
                                 src="https://stage-swagger-api-support.lambdatestinternal.com/audit-logs/index.html"></iframe>
                         </TabItem>
+                        <TabItem value="performanceTesting" label="Performance Testing">
+                            <iframe className="embed-responsive-item"
+                                src="https://stage-swagger-api-support.lambdatestinternal.com/performance_testing/index.html"></iframe>
+                        </TabItem>
                     </Tabs>
                 </div>
             </Layout>
