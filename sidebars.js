@@ -2818,6 +2818,7 @@ module.exports = {
         items: [
           "smartui-with-github-actions",
           "smartui-with-gitlab",
+          "smartui-with-bitbucket"
         ],
       },
       {
