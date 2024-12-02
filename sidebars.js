@@ -2818,6 +2818,7 @@ module.exports = {
         items: [
           "smartui-with-github-actions",
           "smartui-with-gitlab",
+          "smartui-with-bitbucket"
         ],
       },
       {
@@ -3214,9 +3215,9 @@ module.exports = {
 
   AccountManagementSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/settings-and-security',
+      type: "link",
+      label: "Back",
+      href: "/docs/",
       customProps: {
         className: "back-to-main-menu",
       },
@@ -3292,9 +3293,9 @@ module.exports = {
 
   ScimSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/settings-and-security',
+      type: "link",
+      label: "Back",
+      href: "/docs/",
       customProps: {
         className: "back-to-main-menu",
       },
@@ -3320,9 +3321,9 @@ module.exports = {
 
   SingleSignOnSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/settings-and-security',
+      type: "link",
+      label: "Back",
+      href: "/docs/",
       customProps: {
         className: "back-to-main-menu",
       },
@@ -3355,8 +3356,13 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Azure AD Integration",
+        label: "Azure AD",
         id: "sso-azure-integration",
+      },
+      {
+        type: "doc",
+        label: "PingIdentity",
+        id: "lambdatest-sso-pingidentity-integration",
       },
     ],
   ],
