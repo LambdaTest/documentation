@@ -2781,6 +2781,18 @@ module.exports = {
           "smartui-cli-env-variables",
           "smartui-cli-responsive-dom",
           "smartui-sdk-fetch-results",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Stabilize Your Screenshots",
+            items: [
+              "smartui-freeze-animations",
+              "smartui-handle-dynamic-data",
+              "smartui-handle-videos",
+              "smartui-handle-lazy-loading",
+              "smartui-handle-sticky-elements"
+            ]
+          },
         ],
       },
       {
