@@ -91,7 +91,7 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD" default>
+<TabItem value="Windows" label="Windows" default>
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -100,7 +100,7 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 </Tabs>
 
-> Setting the project token env variable does not require any user level authentication.
+> Setting the project token environment variable does not require any user level authentication.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
