@@ -84,10 +84,17 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 |**3.64.247.89**|<p align="center"> <img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '25px',margin: '0px'}}  className="doc_img no-zoom"/> </p>|<p align="center"> <img loading="lazy" src={require('../assets/images/hyperexecute/icons/failed.png').default} alt="Image" style={{width: '25px',margin: '0px'}}  className="doc_img no-zoom"/> </p>|<p align="center"> <img loading="lazy" src={require('../assets/images/hyperexecute/icons/passed.png').default} alt="Image" style={{width: '25px',margin: '0px'}}  className="doc_img no-zoom"/> </p>|
 
 ## Tunnel IP ranges
-- **3.214.241.254**
-- **52.36.84.247**
-- **3.66.78.89**
-- **13.126.37.58**
+
+- **199.58.84.59**
+- **23.82.88.184**
+- **23.106.34.219**
+- **23.106.54.77**
+
+>Below are IPs that will be deprecated soon
+> - 3.214.241.254
+> - 52.36.84.247
+> - 13.126.37.58
+> - 3.66.78.89
 
 ## LambdaTest Integration Tools
 - **3.208.126.109**
