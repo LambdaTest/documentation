@@ -53,9 +53,58 @@ Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 This guide is designed to provide you with comprehensive information about the various environment variables options available within the SmartUI SDK. SmartUI retrieves additional details from the environment it is running in, like the branch name, baseline branch,proxies etc. You can modify certain aspects of SmartUI behavior by configuring these environment variables within your CI environment:
 
+## 1. Setting the Project Name
+
+Set the Project Name you want to add the current build run to by exporting these enviroment variables:
+
+<Tabs className="docs__val" groupId="language">
+<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+
+```bash
+export LT_USERNAME="YOUR USERNAME"
+export LT_ACCESS_KEY="YOUR ACCESS KEY"
+export PROJECT_NAME="Required Project Name"
+```
+</TabItem>
+<TabItem value="Windows" label="Windows" default>
+
+```bash
+set LT_USERNAME="YOUR USERNAME"
+set LT_ACCESS_KEY="YOUR ACCESS KEY"
+set PROJECT_NAME="Required Project Name"
+```
+</TabItem>
+</Tabs>
+
+> If you specify a project name that doesn't already exist, a new project will be created by the user whose authentication is added in the environment.
 
 
-## 1. Setting the Baseline Branch
+## 2: Set your Project Token
+
+Setup your project token show in the **SmartUI** app after, creating your project.
+
+<Tabs className="docs__val" groupId="language">
+<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+
+```bash
+export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+<TabItem value="Windows" label="Windows - CMD" default>
+
+```bash
+set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+</Tabs>
+
+> Setting the project token env variable does not require any user level authentication.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
+## 3. Setting the Baseline Branch
 
 Set the baseline branch for `CLI` projects:
 
@@ -74,7 +123,7 @@ set BASELINE_BRANCH="Required branch"
 </TabItem>
 </Tabs>
 
-## 2. Setting the current branch
+## 4. Setting the current branch
 
 Set the current branch for `CLI` projects:
 
@@ -93,7 +142,7 @@ set CURRENT_BRANCH="Required branch"
 </TabItem>
 </Tabs>
 
-## 3. Setting proxies
+## 5. Setting proxies
 
 In case you are accessing your network using corporate proxies, set the proxies in the environment variables as follows
 
@@ -135,7 +184,7 @@ set HTTPS_PROXY="Required branch"
 
 > **NOTE :** In most cases setting only HTTP_PROXY should be enough, but if you have different proxies for HTTP and HTTPS, you can set both.The format for proxy’s is `http[s]://<username>:<password>@<domain.com>:<port>/` [username and password is optional].
 
-## 4. Enabling Debug mode
+## 6. Enabling Debug mode
 
 To enable SmartUI CLI Debug mode, use the following environment variable.
 
@@ -154,7 +203,7 @@ set LT_SDK_DEBUG=true
 </TabItem>
 </Tabs>
 
-## 5. Ignoring captured cookies
+## 7. Ignoring captured cookies
 
 Set the following variable to true, to stop the use of cookies captured automatically. The default is set to `false`.
 
