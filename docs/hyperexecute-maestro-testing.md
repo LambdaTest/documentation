@@ -63,7 +63,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 
 :::tip Sample repo
 Download or Clone the code sample for the Maestro framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
-<a href="https://github.com/LambdaTest/maestro-sample-test" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/hyperexecute-maestro-sample-test" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 ## Step 2: Setup the CLI in your Test Suite
@@ -129,19 +129,31 @@ Enter your local path of the code repository instead of `<YOUR_LOCAL_APP_PATH>` 
 Enter your `APP_ID` in the YAML file that you have fetched in the above step.
 
 <Tabs className="docs__val">
-<TabItem value="android" label="Android" default>
+<TabItem value="android-rd" label="Android-Real Device" default>
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/LambdaTest/maestro-sample-test/blob/main/yaml/maestro.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/maestro.yaml
 ```
 </TabItem>
 
-<TabItem value="ios" label="iOS-Simulator" default>
+<TabItem value="android-emu" label="Android-Emulator" default>
+
+> To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@lambdatest.com](mailto:support@lambdatest.com).
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/LambdaTest/maestro-sample-test/blob/ios-simulator/maestro.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/android-emulator/yaml/maestro.yaml
 ```
 </TabItem>
+
+<TabItem value="ios-simu" label="iOS-Simulator" default>
+> To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@lambdatest.com](mailto:support@lambdatest.com).
+
+
+```yaml reference title="hyperexecute.yaml"
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/ios-simulator/maestro.yaml
+```
+</TabItem>
+
 </Tabs>
 
 ## Step 5: Execute your Test Suite
