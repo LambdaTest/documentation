@@ -284,6 +284,7 @@ framework:
 ```
 
 To download these artifacts in your local machine, you can pass the `--download-artifacts` and `--download-report` flag with the CLI command to execute the tests as shown in the next step.
+
 ## Step 7: Execute your Test Suite
 
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
@@ -303,10 +304,6 @@ OR use this command if you have not exported your username and access key in the
 </div>
 
 > Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
-
-<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/espresso/espresso-he.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
-
-<!-- <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/espresso/espress-he-app.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
 
 :::tip Troubleshoot Guide
 
