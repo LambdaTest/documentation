@@ -66,30 +66,8 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 - Now, write your workflow YAML file. Here is the sample file for your reference.
 - Commit this yaml file in your repository and make the required changes in your code to automatically trigger the pipeline.
 
-```yaml title="bitbucket-pipelines.yml"
-image: maven:3.8.5-openjdk17  # Image with Maven and OpenJDK
-
-pipelines:
-  default:
-    - step:
-        name: Install Dependencies
-        script:
-          - mvn clean install  # Installs project dependencies
-
-    - step:
-        name: Configure SmartUI
-        script:
-          - npm install -g @lambdatest/smartui-cli  # Install SmartUI CLI globally
-          - npx smartui config:create .smartui.json  # Generate SmartUI config file
-
-    - step:
-        name: Run Visual Regression Tests
-        script:
-          # Set environment variables directly in the pipeline
-          - export LT_USERNAME=${LT_USERNAME}
-          - export LT_ACCESS_KEY=${LT_ACCESS_KEY}
-          - export PROJECT_TOKEN=${PROJECT_TOKEN}
-          - npx smartui --config .smartui.json exec -- mvn test -Dsuite=sdk-cloud.xml
+```yaml reference title="bitbucket-pipelines.yml"
+https://github.com/amanchopra1905/smartui-ci-cd-integrations/blob/bitbucket/bitbucket-pipelines.yml
 ```
 
 :::tip

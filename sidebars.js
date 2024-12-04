@@ -2840,7 +2840,12 @@ module.exports = {
         items: [
           "smartui-with-github-actions",
           "smartui-with-gitlab",
-          "smartui-with-bitbucket"
+          "smartui-with-bitbucket",
+          "smartui-with-semaphore",
+          "smartui-with-azure",
+          "smartui-with-buildkite",
+          "smartui-with-circle-ci",
+          "smartui-with-travis-ci"
         ],
       },
       {
