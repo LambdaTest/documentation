@@ -55,7 +55,7 @@ This guide is designed to provide you with comprehensive information about the v
 
 ## 1. Setting the Project Name
 
-Set the Project Name you want to add the current build run to by exporting these enviroment variables:
+Set the Project Name you want to add the current build run to by exporting these environment variables:
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
