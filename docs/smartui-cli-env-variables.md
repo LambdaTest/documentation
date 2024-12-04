@@ -53,6 +53,30 @@ Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 This guide is designed to provide you with comprehensive information about the various environment variables options available within the SmartUI SDK. SmartUI retrieves additional details from the environment it is running in, like the branch name, baseline branch,proxies etc. You can modify certain aspects of SmartUI behavior by configuring these environment variables within your CI environment:
 
+## 1. Setting the Project Name
+
+Set the Project Name you want to add the current build run to by exporting these environment variables:
+
+<Tabs className="docs__val" groupId="language">
+<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+
+```bash
+export LT_USERNAME="YOUR USERNAME"
+export LT_ACCESS_KEY="YOUR ACCESS KEY"
+export PROJECT_NAME="Required Project Name"
+```
+</TabItem>
+<TabItem value="Windows" label="Windows" default>
+
+```bash
+set LT_USERNAME="YOUR USERNAME"
+set LT_ACCESS_KEY="YOUR ACCESS KEY"
+set PROJECT_NAME="Required Project Name"
+```
+</TabItem>
+</Tabs>
+
+> If you specify a project name that doesn't already exist, a new project will be created by the user whose authentication is added in the environment.
 
 
 ## 1. Setting the Baseline Branch
