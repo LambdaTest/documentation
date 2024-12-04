@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-webapp-appium-testing
 title: Appium Testing On HyperExecute - WebApp
-sidebar_label: HyperExecute Appium Testing for WebApp
+sidebar_label: Appium - WebApp
 description: Now you can run your automation scripts using Selenium with Behave on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - appium
@@ -43,28 +43,10 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
----
-
-<!-- This post will help you in getting started with **Appium testing** on [LambdaTest Real Device cloud platform](https://www.lambdatest.com/real-device-cloud). -->
-
 This page outlines how to execute your Appium tests on HyperExecute for WebApps using TestNG with YAML 0.2
-
 > HyperExecute uses [YAML 0.2](/support/docs/hyperexecute-yaml-version0.2/) to perform the tests using Appium.
 
-<!-- ## Objective
-
----
-
-By the end of this topic, you will be able to:
-
-1. Run a sample automation script of Java for application testing with Appium.
-2. Learn more about Desired capabilities for Appium testing. -->
-
-## Running Appium Tests on HyperExecute for WebApp
-*** 
-
-### Prerequisites
+## Prerequisites
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
@@ -76,7 +58,7 @@ To run the Tests on HyperExecute from your Local System, you are required:
 
 <!-- > If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa). -->
 
-#### Download HyperExecute CLI
+### Download HyperExecute CLI
 
 The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recommend to download the HyperExecute CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
 
@@ -90,33 +72,32 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
-***
+<Tabs className="docs__val">
 
-For macOS:
+<TabItem value="bash" label="Linux / MacOS" default>
 
-```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-For Linux:
+</TabItem>
 
-```bash
-export LT_USERNAME=YOUR_LT_USERNAME
-export LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
+<TabItem value="powershell" label="Windows" default>
 
-For Windows:
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
 
-```bash
-set LT_USERNAME=YOUR_LT_USERNAME
-set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
-```
+</TabItem>
+</Tabs>
 
 ### Steps to Run Your Test
-
----
-
 **Step 1:** Write your Automation Script in the client language of your choice from the ones supported by [Appium](https://www.lambdatest.com/support/docs/appium-languages-and-frameworks/). An automation script for the sample applications have been provided below.
 
 Here is a sample automation script in Java. Ensure to update the `username` and `accesskey` in the below code.
@@ -378,9 +359,6 @@ framework:
 - eu (European Union)
 
 ## More About Desired Capabilities
-
----
-
 Sample Capabilities for both android and iOS web app mentioned below -
 
 <Tabs className="docs__val">

@@ -344,6 +344,7 @@ module.exports = {
             items: [
               "hyperexecute-appium-testing",
               "hyperexecute-webapp-appium-testing",
+              "hyperexecute-appium-virtual-device"
             ],
           },
           {
@@ -853,8 +854,17 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
+            label: "December, 2024",
+            items: [
+              'hyperexecute-release-notes-2-6-2',
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
             label: "November, 2024",
             items: [
+              'hyperexecute-release-notes-2-6-0',
               'hyperexecute-release-notes-2-5-9',
               'hyperexecute-release-notes-2-5-8',
             ]
