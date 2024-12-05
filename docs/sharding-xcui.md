@@ -258,10 +258,8 @@ You can refer to this example and screenshot below:
 :::
 
 ## Filters in Sharding
-
 You can filter the Classes / Tests that you'd like to execute using filters.
 Here's an example of the same.
-
 
 ```java
 filters:
@@ -271,31 +269,23 @@ filters:
       - type: testName
         values: ["LambdaUiKitIOSUITests/testverifyAppLaunch"]
 ```
-
 This example will run only the 2 classes & one test as mentioned from the TestSuite.
 
+## XCTestPlan in Sharding
+To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](https://www.lambdatest.com/support/docs/hyperexecute-yaml-version0.2/#framework) flag as shown below:
+
+```yaml
+framework:
+  name: "ios/xcui"
+  args:
+    "app" : "lt://APP_ID",
+    "testSuite": "lt://TEST_SUITE_ID",
+    "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
+```
+
+> Refer the documentation to learn how to use [XCTestPlan feature](/support/docs/xctestplan/).
+
 ## Additional Links
-
----
-
 - [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
 - [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Sharding in XCUIT</span>
-    </li>
-  </ul>
-</nav>
