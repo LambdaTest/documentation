@@ -48,7 +48,6 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-
 Camera Image Injection feature allows you to test **image capturing, QR code scanning**, and **barcode scanning** functionalities in your app across **3000+ real devices** on the LambdaTest Real Device Cloud platform.
 
 This tool is ideal for testing features such as:
@@ -84,7 +83,8 @@ Below given is the list of Camera APIs which are supported by LambdaTest Image I
     | Supported APIs |
     |----------------|
     | `didFinishPickingMediaWithInfo` API of `UIImagePickerController` iOS SDK class for capturing an image. <br /><br /> 📕 For details, please check [Apple documentation](https://developer.apple.com/documentation/uikit/uiimagepickercontrollerdelegate/1619126-imagepickercontroller)|
-    | `AVCapturePhoto` iOS SDK class for receiving captured photos from `AVCapturePhotoOutput` API. <br /><br />📕 For details, please check [Apple Documentation](https://developer.apple.com/documentation/avfoundation/avcapturephoto).  |
+    | `AVCapturePhoto` iOS SDK class for receiving captured photos from `AVCapturePhotoOutput` API. <br /><br />📕 For details, please check [Apple Documentation](https://developer.apple.com/documentation/avfoundation/avcapturephoto).|
+    | `AVMetadataMachineReadableCodeObject` is a subclass of `AVMetadataObject` iOS SDK class for scanning QR/Barcodes. <br /><br />📕 For more details, please check [AVMetadataMachineReadableCodeObject Documentation](https://developer.apple.com/documentation/avfoundation/avmetadatamachinereadablecodeobject) |
   </div>
 
 </TabItem>

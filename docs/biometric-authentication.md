@@ -74,6 +74,10 @@ Below given is the list of Biometric Authentication APIs which are supported. Pl
     |`canEvaluatePolicy`: The canEvaluatePolicy(_:error:) method of LAContext that checks whether a specific biometric authentication policy can be evaluated on the device.|
   </div>
 
+  :::warning note
+  We don’t support apps using IOS Keychain APIs with Biometric access control. For more details [IOS Keychain Documentation](https://developer.apple.com/documentation/localauthentication/accessing-keychain-items-with-face-id-or-touch-id)
+  :::
+
 </TabItem>
 
 <TabItem value="powershell" label="Android >= version 11" default>
@@ -83,12 +87,14 @@ Below given is the list of Biometric Authentication APIs which are supported. Pl
     |----------------|
     | `BiometricPrompt` class's `authenticate` method from the **AndroidX Biometric library** is used for Biometric authentication on Android devices. <br /><br />📕For details, please check [AndroidX Biometric Documentation](https://developer.android.com/jetpack/androidx/releases/biometric). |
     | **Android's Native** `BiometricPrompt` API is part of the Android platform and is used for Biometric authentication on Android devices.<br /><br />📕 For details, please check [Android Developers Documentation](https://developer.android.com/reference/android/hardware/biometrics/BiometricPrompt).|
+    | `BiometricManager` API<br /><br /> 📕 For more details [BiometricManager Documentation](https://developer.android.com/reference/android/hardware/biometrics/BiometricManager) |
+    | `KeyguardManager`  API <br /><br />📕 For more details [KeyguardManager Documentation](https://developer.android.com/reference/android/app/KeyguardManager) |
   </div>
 
 </TabItem>
 </Tabs>
 
-:::warning note
+:::tip
 The OS versions and APIs mentioned above are subject to change as per the latest OS updates and best practices recommended by Android and iOS.
 :::
 
