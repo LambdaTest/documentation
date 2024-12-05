@@ -193,16 +193,14 @@ Take note of the base64 encoded authentication which needs to be added in the 
 
 <TabItem value="bash" label="Linux / MacOS" default>
 
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-
-```bash
+```yaml
 curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "app" : "APP_ID",
-  "testSuite": "TEST_SUITE_ID",
+  "app" : "lt://APP_ID",
+  "testSuite": "lt://TEST_SUITE_ID",
+  "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
   "device" :  ["iPhone 11-14"],
   "video" : true,
   "queueTimeout": 10800,
@@ -213,23 +211,18 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 }'
 ```
 
-</CodeBlock>
-</div>
-
 </TabItem>
 
 <TabItem value="powershell" label="Windows" default>
 
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="lamguage-powershell">
-
-```bash
+```yaml
 curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/xcui/build" \
 --header "Authorization: Basic BASIC_AUTH_TOKEN" \
 --header "Content-Type: application/json" \
 --data-raw "{
-  "app" : "APP_ID",
-  "testSuite": "TEST_SUITE_ID",
+  "app" : "lt://APP_ID",
+  "testSuite": "lt://TEST_SUITE_ID",
+  "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
   "device" :  ["iPhone 11-14"],
   "video" : true,
   "queueTimeout": 10800,
@@ -239,9 +232,6 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
   "build" : "Proverbial-XCUITest"
 }"
 ```
-  </CodeBlock>
-</div>
-
 </TabItem>
 </Tabs>
 
@@ -250,3 +240,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://accounts.lambdatest.com/login).
 
 > **NOTE:** You cannot use XCTestPlan and [Filters](/support/docs/speedup-xcui/) simultaneously
+
+:::tip
+To learn how to use XCTestPlan with sharding in XCUI, refer to the detailed guide in [Sharding for XCUI](http://localhost:3000/support/docs/sharding-rd-hyperexec/#xctestplan-in-sharding).
+:::
