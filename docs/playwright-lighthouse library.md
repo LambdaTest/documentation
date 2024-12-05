@@ -84,14 +84,24 @@ The feature allows you to generate Lighthouse reports for authenticated web page
 <TabItem value="win" label="Windows" default>
 
 ```javascript
-await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({ action: 'lighthouseReport', arguments: { url: 'https://www.example.com', args: `--extra-headers ${JSON.stringify({ authtoken: "YOUR_AUTH_TOKEN" })}` } })}` ); 
+await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({ 
+  action: 'lighthouseReport', 
+  arguments: { url: 'https://www.example.com', 
+  args: `--extra-headers 
+  ${JSON.stringify({ authtoken: "YOUR_AUTH_TOKEN" })}` 
+} })}` ); 
 ```
 </TabItem>
 
 <TabItem value="mac" label="macOS" default>
 
 ```javascript
-await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({ action: 'lighthouseReport', arguments: { url: 'https://www.example.com', args: '--extra-headers "{\\"authtoken\\": \\"YOUR_AUTH_TOKEN\\"}"' } })}`);
+await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({ 
+  action: 'lighthouseReport', 
+  arguments: { url: 'https://www.example.com', 
+  args: '--extra-headers 
+  "{\\"authtoken\\": \\"YOUR_AUTH_TOKEN\\"}"' 
+} })}`);
 ```
 </TabItem>
 </Tabs>
