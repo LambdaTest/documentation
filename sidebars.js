@@ -1588,6 +1588,11 @@ module.exports = {
                   "cypress-v9-accessibility-test",
                 ],
               },
+              {
+                type: "doc",
+                label: 'Playwright',
+                id: "playwright-accessibility-test",
+              },
             ]
           },
           {
