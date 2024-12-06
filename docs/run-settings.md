@@ -392,7 +392,7 @@ It's recommended to use `npm_dependencies` instead of `package.json` because `pa
 ## Specific Node Version
 LambdaTest allows you to specify the Node.js version for running your tests using the ``useNodeVersion`` capability in the `run_settings` section of the `lambdatest-config.json` file. This capability provides greater flexibility and ensures compatibility with your project's dependencies and environment.
 
-> Supported Versions are 18, 20 and 22
+> Supported Versions are 18, 20 and 22. The exact version will be used are `18.17.1`, `20.18.0`, and `22.11.0` respectively
 
 ```javascript title="lambdatest-config.json"
 "run_settings": {
