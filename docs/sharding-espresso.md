@@ -330,6 +330,22 @@ filters:
 
 This example will fetch all the test cases from 2 classes and 1 package as defined above and divide them with respect to concurrency given in the yaml file.
 
+## Generate Reports and Artifacts
+To generate artifacts for your Espresso tests, add the `artifacts: true`, and `report: true` flag in your YAML file:
+
+```yaml
+report: true
+framework:
+  name: "android/espresso"
+  args:
+    artifacts: true
+    ...//
+```
+
+To download these artifacts in your local machine, you can pass the `--download-artifacts` and `--download-report` flag with the CLI command to execute the tests as shown in the next step.
+
+> Learn more about it in the [HyperExecute Espresso Documentation](https://www.lambdatest.com/support/docs/hyperexecute-espresso-testing/)
+
 ## Additional Links
 
 ---
