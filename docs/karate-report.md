@@ -3,7 +3,7 @@ id: karate-report
 title: Karate Report
 hide_title: false
 sidebar_label: Karate
-description: Streamline error analysis with the Error Categorization Report. Identify patterns in test failures to enhance quality and efficiency in your testing process.
+description: Learn how to configure and generate Karate test execution reports on HyperExecute with step-by-step guidance for seamless test insights and reporting.
 keywords:
   - cucumber testing reports
   - karate report lambdatest 

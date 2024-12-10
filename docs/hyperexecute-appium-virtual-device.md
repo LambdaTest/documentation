@@ -2,7 +2,7 @@
 id: hyperexecute-appium-virtual-device
 title: Appium Testing - Virtual Device On HyperExecute
 sidebar_label: Appium - Virtual Device
-description: Maximize Appium test execution with HyperExecute – Explore LambdaTest's support documentation for seamless automation testing.
+description: Execute Appium tests on virtual devices using HyperExecute with TestNG and YAML 0.2. Learn setup, configuration, and seamless test execution steps.
 keywords:
   - appium
   - java

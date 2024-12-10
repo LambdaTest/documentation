@@ -3,7 +3,7 @@ id: lambdatest-sso-pingidentity-integration
 title: LambdaTest SSO & PingIdentity Integration
 hide_title: false
 sidebar_label: PingIdentity
-description: Learn how to automate web app testing with KaneAI. Generate and execute tests in plain English, save cases, and run them seamlessly
+description: Integrate LambdaTest with Ping Identity for secure SSO using SAML. Follow step-by-step instructions to configure SP-initiated, IdP-initiated SSO, and group management.
 keywords:
   - sso
   - lambdatest sso
