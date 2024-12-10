@@ -2686,35 +2686,6 @@ module.exports = {
         collapsed: true,
         label: "CLI Setup and Configurations",
         items: [
-          "smartui-cli",
-          "smartui-cli-figma",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Bring your Own Screenshots",
-            items: [
-              {
-                type: "doc",
-                label: "Upload through CLI",
-                id: "smartui-cli-upload",
-              },
-              {
-                type: "doc",
-                label: "Upload through API",
-                id: "smartui-upload-api-v2",
-              },
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Component Testing",
-            items: [
-              "smart-ui-storybook",
-              "smartui-git-branching-strategy"
-            ]
-          },
-          "smartui-sdk-config-options",
           {
             type: "category",
             collapsed: true,
@@ -2805,6 +2776,35 @@ module.exports = {
               "smartui-sdk-fetch-results",
             ]
           },
+          "smartui-cli",
+          "smartui-cli-figma",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Bring your Own Screenshots",
+            items: [
+              {
+                type: "doc",
+                label: "Upload through CLI",
+                id: "smartui-cli-upload",
+              },
+              {
+                type: "doc",
+                label: "Upload through API",
+                id: "smartui-upload-api-v2",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Component Testing",
+            items: [
+              "smart-ui-storybook",
+              "smartui-git-branching-strategy"
+            ]
+          },
+          "smartui-sdk-config-options",
         ]
       },
       {
@@ -2812,6 +2812,37 @@ module.exports = {
         collapsed: true,
         label: "Difference Option",
         items: ["smartui-smartignore"]
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Integrations with SmartUI",
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "Trigger Visual Tests from CI/CD tools",
+            items: [
+              "smartui-github-app-integration",
+            ],
+          },
+          "smartui-slack-integration",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Integrate with CI/CD tools",
+            items: [
+              "smartui-with-github-actions",
+              "smartui-with-gitlab",
+              "smartui-with-bitbucket",
+              "smartui-with-semaphore",
+              "smartui-with-azure",
+              "smartui-with-buildkite",
+              "smartui-with-circle-ci",
+              "smartui-with-travis-ci"
+            ],
+          },
+        ]
       },
       {
         type: "category",
@@ -2842,37 +2873,6 @@ module.exports = {
           "smartui-k6-setup",
           "appium-visual-regression",
           "espresso-visual-regression",
-        ]
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Integrations with SmartUI",
-        items: [
-          "smartui-slack-integration",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Integrate with CI/CD tools",
-            items: [
-              "smartui-with-github-actions",
-              "smartui-with-gitlab",
-              "smartui-with-bitbucket",
-              "smartui-with-semaphore",
-              "smartui-with-azure",
-              "smartui-with-buildkite",
-              "smartui-with-circle-ci",
-              "smartui-with-travis-ci"
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Trigger Visual Tests from CI/CD tools",
-            items: [
-              "smartui-github-app-integration",
-            ],
-          },
         ]
       },
     ],
