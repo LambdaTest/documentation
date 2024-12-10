@@ -1070,7 +1070,16 @@ module.exports = {
         items: [
           "kane-ai-command-guide",
           "kane-ai-web-test-writing-guidelines",
-          "kane-ai-using-variables"
+          {
+            type: "category",
+            collapsed: true,
+            label: "Variables Guide",
+            link: {
+              type: "doc",
+              id: "kane-ai-using-variables"
+            },
+            items: ["kane-ai-using-json-variables"]
+          },
         ],
       },
       {
