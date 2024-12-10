@@ -3,7 +3,7 @@ id: kane-ai-using-json-variables
 title: KaneAI - Utilizing JSON Variables for Assertions
 hide_title: false
 sidebar_label: JSON Variables Guide
-description: Learn how to use variables in the KaneAI test cases
+description: Learn how to use JSON variables in the KaneAI test cases for assertions
 keywords:
   - lambdatest automation
   - lambdatest kaneai
