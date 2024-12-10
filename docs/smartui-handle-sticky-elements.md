@@ -2,7 +2,7 @@
 id: smartui-handle-sticky-elements
 title: Handle Pages with Sticky Elements
 sidebar_label: Handle Sticky Elements
-description: SmartUI can now perform automated visual testing on pages that implement lazy loading.
+description: Ensure accurate visual testing with LambdaTest Smart UI by effectively handling sticky elements. Prevent false positives and maintain consistency across visual snapshots.
 keywords:
   - lambdatest
   - smart ui
