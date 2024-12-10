@@ -132,7 +132,16 @@ To enable the accessibility testing within your automated test suite, set the `a
   }
 ```
 
-### Step 4: Execute and Monitor your Test
+### Step 4: Add the following add-on Script
+Add the following script in your lambdatest-setup.js file:
+
+```javascript
+await ltPage.goto("chrome://extensions/?id=johgkfjmgfeapgnbkmfkfkaholjbcnah");
+const secondToggleButton = ltPage.locator('#crToggle').nth(0); 
+await secondToggleButton.click();
+```
+
+### Step 5: Execute and Monitor your Test
 
 Now execute your tests and visit the [Automation Dashboard](https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
 
