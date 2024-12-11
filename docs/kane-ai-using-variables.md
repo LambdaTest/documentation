@@ -53,15 +53,15 @@ Using variables enables you to:
 ## Variable Syntax
 To work with variables in KaneAI, you need to follow these syntax rules:
 
-- Variables are defined using the `$` prefix
-- Variable names should follow the `$` symbol without any spaces
-- Example: `$username`, `$phoneNumber`, `$address`
+- Variables are defined using natural language such as "set new_variable as value".
+- Variable usage can be done using the `{{` prefix to list all existing variables.
+- Example: `{{username}}`, `{{phoneNumber}}`, `{{address}}`
 
 ## Creating Variables
 To create a variable:
 
 - Navigate to the "Write a Step" text field
-- Type your instruction in natural language such as: *Set username as John* and a variable `$username` will be created with value John.
+- Type your instruction in natural language such as: *Set username as John* and a variable `{{username}}` will be created with value John.
 
 Example:
 ```bash
@@ -69,20 +69,14 @@ Set username as John
 ```
 
 ## Using Variables
-To use a previously created variable in any subsequent step or test case, reference the variable using the same `$` syntax. Format: *use the value of `$variableName`*
+To use a previously created variable in any subsequent step or test case, reference the variable using the same `{{` syntax. This will list down all existing variables for this test. Format: *use the value of `{{variableName}}`*
 
 Example:
 ```bash
-use the value of $phoneNumber in the given text field
+use the value of {{phoneNumber}} in the given text field
 ```
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/1.png').default} alt="kenai-jira integration" className="doc_img"/>
 
 ## Best Practices
 ### Naming Conventions
 - Use descriptive names for your variables
-- Avoid special characters except for the required $ prefix
-- Use camelCase for multi-word variable names
-
-### Variable Management
-- Document the purpose of each variable in comments
-- Verify that variables are defined before using them
+- Use camelCase or underscore for multi-word variable names
