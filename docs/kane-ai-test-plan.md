@@ -14,9 +14,6 @@ site_name: LambdaTest
 slug: kane-ai-test-plan/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -57,7 +54,7 @@ You have to clearly state your goal or define the functionality that you want to
 
 Once your objective is defined, press enter and KaneAI will start analyzing the required actions to achieve the desired outcome.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kane-test-planner.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan/kane-test-planner.png').default} alt="Image" className="doc_img"/>
 
 ### Step 2: Define your State, Outcomes, Error Messages, Constraints, and User Inputs
 
@@ -66,7 +63,7 @@ Once your objective is defined, press enter and KaneAI will start analyzing the 
 - **Constraints :** These are the conditions or limitations under which the test is conducted. For example, you might constrain the testing to specific browsers, devices, or operating systems.
 - **User Inputs :** This refers to any information or data that the user needs to provide during the test. For example, in a login test, the user input would be the username and password.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kane-ai-write-test-plan.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan/kane-ai-write-test-plan.png').default} alt="Image" className="doc_img"/>
 
 Now click on the **Review and Scheule test** button.
 
@@ -77,15 +74,15 @@ In the right side, you willget an option to select your Project, Folder in which
 
 Click on **Schedule Test** button.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kane-ai-test-planner-review.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan/kane-ai-test-planner-review.png').default} alt="Image" className="doc_img"/>
 
 ### Step 4: Check the test execution
 Click on the Live Preview button to enter the playground and check the live execution of your test based on your defined objective.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kane-ai-test-planner-live-preview.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan/kane-ai-test-planner-live-preview.png').default} alt="Image" className="doc_img"/>
 
 You will be redirected to playground where your tests will be getting executed and you can check the complete process.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kane-test-plan-result.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan/kane-test-plan-result.png').default} alt="Image" className="doc_img"/>
 
 > You can now go to the **Test Manager** where you have saved your test case and trigger it on HyperExecute.
