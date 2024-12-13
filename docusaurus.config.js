@@ -21,13 +21,13 @@ module.exports = {
     //   defer: true,
     // },
     {
+      src: 'https://staging.lambdatestinternal.com/resources/js/salesforce_chatwidget.js',
+      defer: true,
+    },
+    {
       src: 'https://staging.lambdatestinternal.com/resources/js/sf_chat.js',
       defer: true,
       onload: "sf_messaging()",
-    },
-    {
-      src: 'https://staging.lambdatestinternal.com/resources/js/salesforce_chatwidget.js',
-      defer: true,
     },
     {
       src: 'https://staging.lambdatestinternal.com/resources/js/lambda_gtm.js',
