@@ -71,7 +71,7 @@ A list of test instances with various configurations will be displayed for each 
 ### Step 3: Copy the Test Plan ID
 Open the test plan to view its URL. Copy the Test Plan ID from the URL. This ID will be used in the API call for integration.
 
-Example API Call:
+#### Example API Call:
 
 ```yaml
 curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
@@ -86,6 +86,15 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 ```
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-ci-cd/image3.jpg').default} alt="Image" className="doc_img"/>
+
+#### Example API Response:
+```yaml
+{
+    "jobID": "aea5602b-abcd-1234-abcd-1234abcd1234",
+    "testBuildID": "01LAMBDATEST2024KANEAIJ8NPGDP",
+    "jobLink": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=<job-id>"
+}
+```
 
 ### Step 4: Configure the API Call
 Replace `<TestPlanID>` with the actual ID from the URL and set additional optional parameters:

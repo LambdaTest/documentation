@@ -78,7 +78,7 @@ This documentation outlines the steps to create a test plan for KaneAI generated
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step4.jpg').default} alt="Image" className="doc_img"/>
 
-### Step 5: Assign and Configure Test Plan
+### Step 5: Assign and Configure Test Cases
 - On the test plan page, review the added test cases.
 - Assign team members in bulk.
 - Update configurations as required.
@@ -86,7 +86,7 @@ This documentation outlines the steps to create a test plan for KaneAI generated
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step5.jpg').default} alt="Image" className="doc_img"/>
 
 ### Step 6: Set Browser Configurations
-- Choose from available browser configurations. If a new configuration is needed, proceed to the next step.
+- Choose from available browser configurations. If a new configuration is needed, click on Create Configuration button and choose from thousands of configuration options.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step6.jpg').default} alt="Image" className="doc_img"/>
 
