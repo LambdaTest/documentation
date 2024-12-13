@@ -42,7 +42,6 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-
 This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using LambdaTest's Accessibility Tool.
 
 <!-- > Compatible only with Chrome and Edge browser versions >= 90. -->
@@ -55,7 +54,6 @@ This document walks you through the process of evaluating the accessibility of y
 ## Step-by-Step Guide to Trigger Your Test
 
 ### Step 1: Setup Your Test Suite
-
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip sample repo
@@ -117,7 +115,6 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </Tabs>
 
 ### Step 3: Configure the Necessary Capabilities
-
 To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
 
 ```javascript
@@ -132,7 +129,16 @@ To enable the accessibility testing within your automated test suite, set the `a
   }
 ```
 
-### Step 4: Execute and Monitor your Test
+### Step 4: Add the following add-on Script
+In your `lambdatest-setup.js` file add these three lines after your page creation command as shown below:
+
+```javascript
+await ltPage.goto("chrome://extensions/?id=johgkfjmgfeapgnbkmfkfkaholjbcnah");
+const secondToggleButton = ltPage.locator('#crToggle').nth(0); 
+await secondToggleButton.click();
+```
+
+### Step 5: Execute and Monitor your Test
 
 Now execute your tests and visit the [Automation Dashboard](https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
 
