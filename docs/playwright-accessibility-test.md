@@ -146,4 +146,4 @@ Now execute your tests and visit the [Automation Dashboard](https://accounts.lam
 node test
 ```
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/playwright-accessibility.png').default} alt="automation-dashboard" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/accessibility-testing/playwright/playwright-accessibility.png').default} alt="automation-dashboard" className="doc_img"/>
