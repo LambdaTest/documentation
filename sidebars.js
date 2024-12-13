@@ -1032,8 +1032,17 @@ module.exports = {
           "kane-ai-web-test",
           "kane-ai-guided-walkthrough",
           "kane-ai-app-test",
-          "kane-ai-test-plan"
         ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Test Manager",
+        items: [
+          "kane-ai-test-plan",
+          "kaneai-hyperexecute-test-plan-execution",
+          "kaneai-ci-cd-automation"
+        ]
       },
       {
         type: "category",
