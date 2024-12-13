@@ -16,8 +16,16 @@ module.exports = {
   plugins: [require.resolve("docusaurus-plugin-image-zoom")],
   
   scripts: [
+    // {
+    //   src: 'https://www.lambdatest.com/resources/js/zohoscript.js',
+    //   defer: true,
+    // },
     {
-      src: 'https://www.lambdatest.com/resources/js/zohoscript.js',
+      src: 'https://staging.lambdatestinternal.com/resources/js/sf_chat.js',
+      defer: true,
+    },
+    {
+      src: 'https://staging.lambdatestinternal.com/resources/js/salesforce_chatwidget.js',
       defer: true,
     },
     {
