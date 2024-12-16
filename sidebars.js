@@ -2698,9 +2698,11 @@ module.exports = {
         type: "category",
         collapsed: false,
         label: "Getting Started",
-        items: [
-          "smart-visual-regression-testing",
-        ]
+        link: {
+          type: "doc",
+          id: "smart-visual-regression-testing",
+        },
+        items: ["smartui-running-your-first-test", "smartui-guided-walkthrough"],
       },
       {
         type: "category",
@@ -2733,13 +2735,18 @@ module.exports = {
                     items: [
                       {
                         type: "doc",
+                        label: "Java",
+                        id: "smartui-selenium-java-sdk",
+                      },
+                      {
+                        type: "doc",
                         label: "Javascript",
                         id: "smartui-selenium-js-sdk",
                       },
                       {
                         type: "doc",
-                        label: "Java",
-                        id: "smartui-selenium-java-sdk",
+                        label: "C#",
+                        id: "smartui-selenium-csharp-sdk",
                       },
                       {
                         type: "doc",
@@ -2750,11 +2757,6 @@ module.exports = {
                         type: "doc",
                         label: "Ruby",
                         id: "smartui-selenium-ruby-sdk",
-                      },
-                      {
-                        type: "doc",
-                        label: "C#",
-                        id: "smartui-selenium-csharp-sdk",
                       },
                     ],
                   },

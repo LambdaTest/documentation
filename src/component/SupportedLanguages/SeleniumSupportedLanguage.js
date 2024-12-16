@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function SupportedLanguage() {
+export default function SeleniumSupportedLanguage() {
   return (<>
     <div className="lg_fr_container">
         <div className="lg_fr_col"> 
             <div className="lg_fr_framework_wrapper">
-                <img loading="lazy" src={require('../../assets/images/getting-started/Java.png').default} alt="Java" width="28" height="28" className="lg_fr_language-icon"/>
+                <img loading="lazy" src={require('../../../assets/images/getting-started/Java.png').default} alt="Java" width="28" height="28" className="lg_fr_language-icon"/>
                 <a className="lt_primary" href="/support/docs/java-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/">Java</a>
             </div>
         <ul className="lg_fr_framework_list">
@@ -37,7 +37,7 @@ export default function SupportedLanguage() {
         </div>
           <div className="lg_fr_col">
               <div className="lg_fr_framework_wrapper">
-      <img loading="lazy" src={require('../../assets/images/getting-started/Php.png').default} alt="PHP" width="28" height="28" className="lg_fr_language-icon black_logo"/>
+      <img loading="lazy" src={require('../../../assets/images/getting-started/Php.png').default} alt="PHP" width="28" height="28" className="lg_fr_language-icon black_logo"/>
               <a className="lt_primary" href="/support/docs/php-with-selenium-running-php-automation-scripts-on-lambdatest-selenium-grid/">PHP</a>
               </div>
               <ul className="lg_fr_framework_list">
@@ -61,7 +61,7 @@ export default function SupportedLanguage() {
     </div>
           <div className="lg_fr_col">
               <div className="lg_fr_framework_wrapper">
-       <img loading="lazy" src={require('../../assets/images/getting-started/Ruby.png').default} alt="Ruby" width="28" height="28" className="lg_fr_language-icon"/>
+       <img loading="lazy" src={require('../../../assets/images/getting-started/Ruby.png').default} alt="Ruby" width="28" height="28" className="lg_fr_language-icon"/>
                   <a className="lt_primary" href="/support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-lambdatest-selenium-grid/">Ruby</a>
               </div>
               <ul className="lg_fr_framework_list">
@@ -81,7 +81,7 @@ export default function SupportedLanguage() {
     </div>
           <div className="lg_fr_col">
               <div className='lg_fr_framework_wrapper'>
-     <img loading="lazy" src={require('../../assets/images/getting-started/C-Sharp.png').default} alt="C#" width="28" height="28" className="lg_fr_language-icon"/>
+     <img loading="lazy" src={require('../../../assets/images/getting-started/C-Sharp.png').default} alt="C#" width="28" height="28" className="lg_fr_language-icon"/>
                   <a className="lt_primary" href="/support/docs/c-with-selenium-running-c-automation-scripts-on-lambdatest-selenium-grid/">C#</a>
 
               </div>
@@ -105,7 +105,7 @@ export default function SupportedLanguage() {
     </div>
           <div className="lg_fr_col">
               <div className='lg_fr_framework_wrapper'>
-      <img loading="lazy" src={require('../../assets/images/getting-started/Python.png').default} alt="Python" width="28" height="28" className="lg_fr_language-icon"/>
+      <img loading="lazy" src={require('../../../assets/images/getting-started/Python.png').default} alt="Python" width="28" height="28" className="lg_fr_language-icon"/>
                   <a className="lt_primary" href="/support/docs/python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid/">Python</a>
 
               </div>
@@ -132,7 +132,7 @@ export default function SupportedLanguage() {
     </div>
           <div className="lg_fr_col">
               <div className='lg_fr_framework_wrapper'>
-       <img loading="lazy" src={require('../../assets/images/getting-started/Node-JS.png').default} alt="Javascript" width="28" height="28" className="lg_fr_language-icon"/>
+       <img loading="lazy" src={require('../../../assets/images/getting-started/Node-JS.png').default} alt="Javascript" width="28" height="28" className="lg_fr_language-icon"/>
                   <a className="lt_primary" href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-lambdatest-selenium-grid/">JavaScript</a>
 
               </div>

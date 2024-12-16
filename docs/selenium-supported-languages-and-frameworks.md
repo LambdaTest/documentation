@@ -24,7 +24,7 @@ slug: selenium-supported-languages-and-frameworks/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import SupportedLanguage from '../src/component/SupportedLanguage';
+import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/SeleniumSupportedLanguage';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -51,7 +51,7 @@ import SupportedLanguage from '../src/component/SupportedLanguage';
 ></script>
 Out of the box, LambdaTest supports multiple languages under Selenium testing frameworks 
 
-<SupportedLanguage />
+<SeleniumSupportedLanguage />
 
 <div className="lt-framework-list-footer">
     <p>In case your favorite framework or tool isn't listed here, just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Shout Out Here</span>.

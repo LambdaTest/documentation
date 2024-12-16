@@ -18,7 +18,7 @@ url: https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-aut
 site_name: LambdaTest
 slug: getting-started-with-lambdatest-automation/
 ---
-import SupportedLanguage from '../src/component/SupportedLanguage';
+import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/SeleniumSupportedLanguage';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -55,7 +55,7 @@ LambdaTest provides a robust and versatile Selenium Automation Grid, designed to
 
 ## Supported Languages and Frameworks
 
-<SupportedLanguage />
+<SeleniumSupportedLanguage />
 
 :::tip Note
 We support all languages and frameworks that are compatible with Selenium, so in case your favorite isn't in the table.<br/>Don't worry, you can still run the test. <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Contact Us</span> for any help.
