@@ -45,26 +45,11 @@ module.exports = {
           id: "hyperexecute-yaml-parameters",
         },
         items: [
-          {
-            type: "doc",
-            label: "Deep Dive into HyperExecute YAML",
-            id: "deep-dive-into-hyperexecute-yaml",
-          },
-          {
-            type: "doc",
-            label: "Using Snooper on HyperExecute",
-            id: "hyperexecute-snooper",
-          },
-          {
-            type: "doc",
-            label: "Inherit Your YAML Configurations",
-            id: "hyperexecute-inherit-config",
-          },
-          {
-            type: "doc",
-            label: "HyperExecute Yaml Version 0.2",
-            id: "hyperexecute-yaml-version0.2",
-          },
+          "hyperexecute-generate-sample-yaml",
+          "deep-dive-into-hyperexecute-yaml",
+          "hyperexecute-snooper",
+          "hyperexecute-inherit-config",
+          "hyperexecute-yaml-version0.2"
         ],
       },
       {
@@ -706,6 +691,7 @@ module.exports = {
               "hyperexecute-environment-variable-setup",
               "hyperexecute-how-to-save-and-manage-secrets",
               "hyperexecute-how-to-configure-tunnel",
+              "hyperexecute-how-to-configure-os-and-browser",
               "hyperexecute-how-to-find-correct-concurrency",
               "hyperexecute-how-to-configure-sourcePayload",
               "hyperexecute-browser-list-api",
