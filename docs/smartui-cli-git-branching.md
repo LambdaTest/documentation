@@ -312,6 +312,17 @@ $ npx smartui --config .smartui.json exec -- <Execution command>
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/git-baseline-non-baseline.webp').default} alt="Smart Visual Testing" width="1600" height="803" className="doc_img"/>
 
+### Handling Builds with Missing Screenshots
+
+When a build is executed in the same branch as the **Baseline Branch**, SmartUI will compare it against the latest approved baseline build. If some screenshots (or variants) that were present in the baseline are missing from the current build, a `Missing Screenshots` warning <img loading="lazy" src={require('../assets/images/smart-visual-testing/missing-ss/Validation.webp').default} alt="Smart Visual Testing" className="doc_img"/> will be displayed.
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/missing-ss/Tooltip-missing.webp').default} alt="Smart Visual Testing" className="doc_img"/>
+
+If this build with missing screenshots shows no visual changes compared to the baseline, it will be automatically approved. However, SmartUI will mark it as an `Incomplete` build and will not set it as a new baseline.
+
+For builds with missing screenshots that do contain visual changes, you can manually approve them to set them as a new baseline if desired.
+
+> **Note**: If a build contains any new screenshots that weren't present in the baseline, SmartUI interprets this as an intentional test case modification. In such cases, the `Missing Screenshots` tooltip will not be displayed, even if some screenshots from the baseline are missing.
+
 ### Auto Updating **Baseline** build for the **Baseline** branch
 
 In this workflow, once all the `Changes Found` are approved by the `approver` for the screenshots in the **Baseline** branch's **Non-Baseline** build then the `latest` approved **Baseline Branch** build will be updated to the `Baseline`.
