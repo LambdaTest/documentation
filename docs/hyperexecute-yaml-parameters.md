@@ -163,69 +163,6 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [afterAll](/support/docs/deep-dive-into-hyperexecute-yaml/#afterall) | Map |It is used to run commands after the job has finished. |
 | [projectName](/support/docs/deep-dive-into-hyperexecute-yaml/#projectname) | String | Segregate data at a project/repo level |
 
-## Generating a HyperExecute YAML 
-
-You can also generate the HyperExecute YAML directly from the HyperExecute Portal. To accomplish this, follow the below mentioned steps:
-
-**Step 1:**  Go to [HyperExecute dashboard](https://hyperexecute.lambdatest.com/hyperexecute), click on the **Help Center**  and select **Generate YAML** from the dropdown.  
-
-**Step 2:** Select your preferred test automation framework.
-
-**Step 3** You will be redirected to the configuring section, where you can configure the HyperExecute YAML parameters. Click on **Generate YAML** button. 
-
-**Step 4:**  Once done, you can download the YAML file using the small icon on top. Alternatively, you can copy the contents of the file and modify them further according to your needs on your favorite IDE.  
-
-<video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/images/hyperexecute/yaml/1.mp4').default} type="video/mp4" />
-</video>
-
-<!-- <p align="center">
-<img loading="lazy" src={require('../assets/images/hyperexecute/yaml/1.gif').default} alt="Signup with TAS"  className="doc_img"/>
-</p> -->
-
-> HyperExecute supports multiple languages and testing frameworks. See the comprehensive list & samples [here](/support/docs/hyperexecute-supported-languages-and-frameworks/).
-
-
-## Sample HyperExecute YAML
-A sample HyperExecute YAML file looks like this:
-
-```yaml
----
-version: 0.1
-runson: win
-autosplit: true
-
-retryOnFailure: true
-maxRetries: 2
-
-concurrency: 1
-
-env:
-  CACHE_DIR: m2_cache_dir
-  TARGET_OS: Windows 10
-
-# Dependency caching for Windows
-cacheKey: '{{ checksum "pom.xml" }}'
-cacheDirectories:
-  - ${CACHE_DIR}
-
-# shell: bash
-
-pre:
-  # Create the Cache directory
-  - mkdir -p m2_cache_dir
-  # Download and install packages in the CACHE_DIR.
-  # Skip execution of the tests in the pre step
-  - mvn -Dmaven.repo.local=${CACHE_DIR} -Dmaven.test.skip=true clean install
-
-testDiscovery:
-  type: raw
-  mode: dynamic
-  command: grep 'public class' src/test/java/hyperexecute/*.java | awk '{print$3}'
-
-testRunnerCommand: mvn `-Dplatname=win `-Dmaven.repo.local=m2_cache_dir `-Dtest=$test test site surefire-report:report
-```
-
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
