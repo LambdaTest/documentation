@@ -3,7 +3,7 @@ id: smartui-guided-walkthrough
 title: Guided Walkthrough of SmartUI
 hide_title: false
 sidebar_label: Guided Walkthrough 
-description: Learn how to manage tests, update the images, compare the images, performe testing using the dashboard.
+description: Learn how to manage tests, update the images, compare the images, perform testing using the dashboard.
 keywords:
   - LambdaTest SmartUI
   - LambdaTest SmartUI help

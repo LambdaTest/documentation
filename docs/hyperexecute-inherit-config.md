@@ -42,7 +42,6 @@ YAML inheritance in HyperExecute allows you to reuse common configuration settin
 For example, you can create a base YAML file with common settings like **browsers**, **OS versions**, and **devices**, and then inherit from it in other YAML files for different environments or test types. This **reduces boilerplate code and errors** while making it easy to switch between environments and manage complex test execution configurations.
 
 ## Prerequisites
-
 -   You must inherit a YAML file of the same version as your original file.
 -   The mode of execution, i.e. Matrix, AutoSplit, or Hybrid, must remain the same in both of the YAML files.
 -   The files that you want to inherit cannot be cyclically dependent. If you want to inherit **A.yaml** in **B.yaml**, then **A.yaml** cannot inherit **B.yaml**.
@@ -61,7 +60,7 @@ base:
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/artifacts-reports/7.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
--  If the configuration YAML file is passed via the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/), then it will be treated as the main YAML. Hence, all values of the parent YAML will be overwritten by the values from the configuration YAML file. However, if the configuration YAML file has a flag that contains the Boolean value _False_ or numeric value '0', then the values from the parent YAML are used (if they are present).
+-  If the configuration YAML file is passed via the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/), then it will be treated as the main YAML. Hence, all values of the base YAML will be overwritten by the values from the parent YAML file. However, if the configuration YAML file has a flag that contains the Boolean value False or numeric value '0', then the values from the parent YAML are used (if they are present).
 
 > **Note**: If you want to inherit two YAML files, then the second YAML file takes precedence. If a key is not defined in the first file or the main YAML file, but it is defined in the second, then that key will take the value of the second file. Similarly, if a key is defined in the two YAML files that are inherited but not in the main file, then the value defined in the second file is used.
 
@@ -72,151 +71,95 @@ Go through the example attached below to understand how the resultant YAML will 
 ```yaml
 ---
 version: 0.1
-runson: win
+# highlight-next-line
+runson: linux
+
+autosplit: true
+# highlight-next-line
+concurrency: 4
 
 base:
   yamls:
-    - ./level1/base1.yaml
+    - ./base.yaml
 
-autosplit: true
-concurrency: 2
+pre:
+  - mvn dependency:resolve
 
-retryOnFailure: false
-maxRetries: 5
-
-env:
-  CACHE_DIR: m2_cache_dir
-
-preDirectives:
-  commands:
-    - pwd
-    - echo yaml/level0/main.yaml
-    - echo yaml/level0/level1/base1.yaml
-    - mvn dependency:resolve
-
+# highlight-start
 testDiscovery:
-  type: raw
-  command: grep 'test name' xml/testng_win.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+  mode: remote
+  command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
+# highlight-end
 
-testRunnerCommand: mvn test `-Dplatname=win `-Dmaven.repo.local=./.m2 dependency:resolve `-DselectedTests=$test
+testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
 
-postDirectives:
-  commands:
-    - ls
-    - pwd
+retryOnFailure: true
+maxRetries: 1
 
-mergeArtifacts: false
-
-uploadArtefacts:
- - name: ExecutionSnapshots
-   path:
-    - target/surefire-reports/html/**
-
-jobLabel: ['parent']
+# highlight-next-line
+jobLabel: [selenium-testng, linux, v1, autosplit]
 ```
 
 ### Base YAML
 ```yaml
 ---
 version: 0.1
-runson: mac
+# highlight-next-line
+runson: win
 
 autosplit: true
-concurrency: 1
+# highlight-next-line
+concurrency: 2
 
-retryOnFailure: true
-maxRetries: 5
+pre:
+  - mvn dependency:resolve
 
-env:
-  CACHE_DIR: m2_cache_dir
-
-preDirectives:
-  commands:
-    - pwd
-    - mvn dependency:resolve
-
+# highlight-start
 testDiscovery:
   type: raw
   mode: static
+  command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
+# highlight-end
 
-testRunnerCommand: echo test
+testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
 
-postDirectives:
-  commands:
-    - ls
-    - pwd
+retryOnFailure: true
+maxRetries: 1
 
-mergeArtifacts: false
-taskIdentifierInNonConflictingArtefacts: true
-uploadArtefacts:
- - name: ExecutionSnapshots
-   path:
-    - target/surefire-reports/html/**
-
-jobLabel: ['base1']
+# highlight-next-line
+jobLabel: [selenium-testng, autosplit]
 ```
 
 ### Resultant YAML
 ```yaml
----
 version: 0.1
-runson: mac
+# highlight-next-line
+runson: linux
 
 autosplit: true
-concurrency: 1
+# highlight-next-line
+concurrency: 4
 
-retryOnFailure: true
-maxRetries: 5
+base:
+    yamls:
+        - ./base.yaml
 
-env:
-  CACHE_DIR: m2_cache_dir
-
-preDirectives:
-  commands:
-    - pwd
+pre:
     - mvn dependency:resolve
 
+# highlight-start
 testDiscovery:
-  type: raw
-  mode: static
-  command: grep 'test name' xml/testng_win.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+    command: grep 'test name' xml/testng_linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/>//g'
+    mode: remote
+# highlight-end
 
-testRunnerCommand: mvn test `-Dplatname=win `-Dmaven.repo.local=./.m2 dependency:resolve `-DselectedTests=$test
+testRunnerCommand: mvn test -Dplatname=linux -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test
 
-postDirectives:
-  commands:
-    - ls
-    - pwd
+maxRetries: 1
+retryOnFailure: true
 
-mergeArtifacts: false
-taskIdentifierInNonConflictingArtefacts: true
-uploadArtefacts:
- - name: ExecutionSnapshots
-   path:
-    - target/surefire-reports/html/**
-
-jobLabel: ['base1']
-
+# highlight-next-line
+jobLabel: [selenium-testng, linux, v1, autosplit]
 ```
 
 To learn more about the HyperExecute YAML file, go through [this page](/support/docs/deep-dive-into-hyperexecute-yaml). 
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Inherit Your YAML Configurations
-      </span>
-    </li>
-  </ul>
-</nav>
