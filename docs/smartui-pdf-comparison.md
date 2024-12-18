@@ -62,17 +62,14 @@ In the following section, we will walk you through the process of conducting you
 
 ## Getting Started with PDF Comparison
 
-  <iframe
-  src="https://app.storylane.io/share/cq92opbjnlxu"
-  width="100%"
-  height="100%"
-  allowFullScreen
-  loading="lazy"
-  importance="low"
-  title="LambdaTest Automation Testing Demo"
-  className="storylane-iframe"
-></iframe>
 
+
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/czorj4fbzohf?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 ## Step 1: Establishing a SmartUI Project
 
