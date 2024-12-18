@@ -43,17 +43,62 @@ import HyperExecuteSupportedLanguageRepos from '../src/component/SupportedLangua
 ></script>
 This documentation will guide you through configuring the Operating System and Browser for your test suite on HyperExecute. We will cover the step-by-step method to implement the configuration for various test frameworks supported by HyperExecute. Each section provides practical examples to help you integrate HyperExecute with your existing automation suite.
 
-You can easily implement it on your own project. For demo purposes, we are using the TestNG sample repository. You can also access the sample repository for your desired framework:
-
+For demonstration purposes, we use the TestNG sample repository. However, you can apply the same concepts to your preferred framework. You can access the sample repositories for your required frameworks:
 <HyperExecuteSupportedLanguageRepos />
 
-## Step 1: Update the LambdaTest Capabilities in your test suite
+## Step 1: Update LambdaTest Capabilities in your test suite
+Configuring the capabilities is the first step to define the environment for your tests. These capabilities allow you to specify parameters such as the Operating System, Browser, and Browser Version on which your tests will run. LambdaTest capabilities serve as a bridge between your test framework and the HyperExecute cloud infrastructure.
+
+### Key Attributes to Configure
+- **`platform` :** Specifies the operating system (e.g., Windows, macOS, or Linux).
+- **`browserName` :** Indicates the browser to be used (e.g., Chrome, Firefox, or Edge).
+- **`version` :** Defines the specific version or sets it as latest to always use the most recent version.
+
+Below is a Java example using the TestNG framework:
+```java title="Test.java"
+DesiredCapabilities caps = new DesiredCapabilities();
+caps.setCapability("platform", "Windows");
+caps.setCapability("browserName", "Chrome");
+caps.setCapability("version", "latest"); //latest, dev, beta, latest-1, latest-2, ...
+```
+
+The above configuration ensures that your tests run on Windows OS using the latest version of Google Chrome.
 
 ## Step 2: Configure your HyperExecute YAML file
+The HyperExecute YAML configuration file is the blueprint for running your tests in the HyperExecute cloud environment. It defines the testing environment, execution strategy, and resource allocation. Properly configuring this file ensures that your tests are executed efficiently across the desired platforms and browsers.
+
 <Tabs className="docs__val" queryString="test-method">
   <TabItem value="autosplit" label="AutoSplit" default>
+    [AutoSplit mode](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) automatically splits your scenarios among the concurrent number of tasks and executes them parallelly. This ensures optimal utilization of resources and significantly reduces the overall execution time of your test suite.
+
+    In this method, you simply set the [`runson`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runson) flag to specify the Operating System for running your tests.
+
+    ```yaml title="hyperexecute_autosplit.yaml"
+    runson: linux #linux, win, win11, mac, mac13
+    ```
+    > 📕 Learn more about [AutoSplit Test Method](https://www.lambdatest.com/support/docs/hyperexecute-auto-split-strategy/)
   </TabItem>
 
   <TabItem value="matrix" label="Matrix">
+    [Matrix mode](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) allows you to run the same set of tests across multiple combinations of environments, configurations, or parameters. This is particularly useful for ensuring that your software works correctly under different conditions, such as various operating systems, browser versions, or dependency files.
+
+    - **`runson: ${matrix.os}` :** Dynamically selects the operating system from the matrix.os list (Windows, macOS, Linux) for each test job.
+    - **`os` :** Lists the operating systems for testing: `win`, `mac`, and `linux`.
+    - **`tests` :** Specifies the test cases to run, such as `Test_1` and `Test_2`.
+    - **`browser` :** Defines the browsers for testing, in this case, Chrome and Microsoft Edge.
+    - **`version` :** Sets the browser versions to test, such as latest for the most recent stable version or dev for development versions.
+    - **`files` :** Points to files or dependencies required for executing the tests, such as `@File1` and `@File2`.
+
+    ```yaml title="hyperexecute_matrix.yaml"
+    runson: ${matrix.os}
+    
+    matrix:
+      os: ["win", "mac", "linux"]
+      tests: ["Test_1", "Test_2"]
+      browser: ["Chrome", "MicrosoftEdge"]
+      version: ["latest, dev"]
+      files: ["@File1","@File2"]
+    ```
+    > 📕 Learn more about [Matrix Test Method](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/)
   </TabItem>
 </Tabs>
