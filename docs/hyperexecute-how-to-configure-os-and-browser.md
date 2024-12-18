@@ -14,6 +14,8 @@ site_name: LambdaTest
 slug: hyperexecute-how-to-configure-os-and-browser/
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import HyperExecuteSupportedLanguageRepos from '../src/component/SupportedLanguages/HyperExecuteSupportedLanguageRepos';
 
 <script type="application/ld+json"
@@ -48,3 +50,10 @@ You can easily implement it on your own project. For demo purposes, we are using
 ## Step 1: Update the LambdaTest Capabilities in your test suite
 
 ## Step 2: Configure your HyperExecute YAML file
+<Tabs className="docs__val" queryString="test-method">
+  <TabItem value="autosplit" label="AutoSplit" default>
+  </TabItem>
+
+  <TabItem value="matrix" label="Matrix">
+  </TabItem>
+</Tabs>
