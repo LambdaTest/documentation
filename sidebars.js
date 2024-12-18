@@ -2702,105 +2702,112 @@ module.exports = {
           type: "doc",
           id: "smart-visual-regression-testing",
         },
-        items: ["smartui-running-your-first-test", "smartui-guided-walkthrough"],
+        items: ["smartui-running-your-first-test", "smartui-guided-walkthrough", "smartui-cli-git-branching-strategy", "smartui-cli-env-variables"],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Core Concepts",
+        label: "Languages and Frameworks",
         items: [
-          "smartui-cli-git-branching-strategy",
-          "smartui-cli-env-variables",
+          {
+            type: "category",
+            collapsed: true,
+            label: "SDK",
+            items: [
+              {
+                type: "category",
+                label: "Selenium",
+                collapsed: true,
+                items: [
+                  {
+                    type: "doc",
+                    label: "Java",
+                    id: "smartui-selenium-java-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "Javascript",
+                    id: "smartui-selenium-js-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "C#",
+                    id: "smartui-selenium-csharp-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "Python",
+                    id: "smartui-selenium-python-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "Ruby",
+                    id: "smartui-selenium-ruby-sdk",
+                  },
+                ],
+              },
+              {
+                type: "category",
+                label: "Playwright",
+                collapsed: true,
+                // id: "smart-visual-regression-testing",
+                items: [
+                  {
+                    type: "doc",
+                    label: "Javascript",
+                    id: "smartui-playwright-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "Java",
+                    id: "smartui-playwright-python-sdk",
+                  },
+                ],
+              },
+              "smartui-puppeteer-sdk",
+              "smartui-testcafe-sdk",
+              "smartui-cypress-sdk",
+              "smartui-appium-sdk",
+              "smartui-wdio-sdk",
+            ]
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Stabilize Your Screenshots",
+            items: [
+              "smartui-freeze-animations",
+              "smartui-handle-dynamic-data",
+              "smartui-handle-videos",
+              "smartui-handle-lazy-loading",
+              "smartui-handle-sticky-elements"
+            ]
+          },
+          "smartui-cli-responsive-dom",
+          "smartui-sdk-fetch-results",
+          "smartui-sdk-config-options",
+          "smartui-pdf-comparison",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Lambda Hooks",
+            items: [
+              "selenium-visual-regression",
+              "smart-ui-cypress",
+              "playwright-visual-regression",
+              "puppeteer-visual-regression",
+              "smartui-k6-setup",
+              "appium-visual-regression",
+              "espresso-visual-regression",
+            ]
+          },
         ]
       },
       {
         type: "category",
         collapsed: true,
-        label: "CLI Setup and Configurations",
+        label: "CLI Configurations",
         items: [
-          {
-            type: "category",
-            collapsed: true,
-            label: "Languages and Frameworks",
-            items: [
-              {
-                type: "category",
-                collapsed: true,
-                label: "SDK",
-                items: [
-                  {
-                    type: "category",
-                    label: "Selenium",
-                    collapsed: true,
-                    items: [
-                      {
-                        type: "doc",
-                        label: "Java",
-                        id: "smartui-selenium-java-sdk",
-                      },
-                      {
-                        type: "doc",
-                        label: "Javascript",
-                        id: "smartui-selenium-js-sdk",
-                      },
-                      {
-                        type: "doc",
-                        label: "C#",
-                        id: "smartui-selenium-csharp-sdk",
-                      },
-                      {
-                        type: "doc",
-                        label: "Python",
-                        id: "smartui-selenium-python-sdk",
-                      },
-                      {
-                        type: "doc",
-                        label: "Ruby",
-                        id: "smartui-selenium-ruby-sdk",
-                      },
-                    ],
-                  },
-                  {
-                    type: "category",
-                    label: "Playwright",
-                    collapsed: true,
-                    // id: "smart-visual-regression-testing",
-                    items: [
-                      {
-                        type: "doc",
-                        label: "Javascript",
-                        id: "smartui-playwright-sdk",
-                      },
-                      {
-                        type: "doc",
-                        label: "Java",
-                        id: "smartui-playwright-python-sdk",
-                      },
-                    ],
-                  },
-                  "smartui-puppeteer-sdk",
-                  "smartui-testcafe-sdk",
-                  "smartui-cypress-sdk",
-                  "smartui-appium-sdk",
-                  "smartui-wdio-sdk",
-                ]
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Stabilize Your Screenshots",
-                items: [
-                  "smartui-freeze-animations",
-                  "smartui-handle-dynamic-data",
-                  "smartui-handle-videos",
-                  "smartui-handle-lazy-loading",
-                  "smartui-handle-sticky-elements"
-                ]
-              },
-              "smartui-cli-responsive-dom",
-              "smartui-sdk-fetch-results",
-            ]
-          },
           "smartui-cli",
           "smartui-cli-figma",
           {
@@ -2829,7 +2836,6 @@ module.exports = {
               "smartui-git-branching-strategy"
             ]
           },
-          "smartui-sdk-config-options",
         ]
       },
       {
@@ -2879,25 +2885,6 @@ module.exports = {
           "test-settings-options",
           "html-dom-smartui-options",
           "smart-ui-build-options",
-        ]
-      },
-      {
-        type: "doc",
-        label: "Smart PDF Comparison",
-        id: "smartui-pdf-comparison",
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Lambda Hooks",
-        items: [
-          "selenium-visual-regression",
-          "smart-ui-cypress",
-          "playwright-visual-regression",
-          "puppeteer-visual-regression",
-          "smartui-k6-setup",
-          "appium-visual-regression",
-          "espresso-visual-regression",
         ]
       },
     ],
