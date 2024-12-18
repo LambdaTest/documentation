@@ -54,6 +54,23 @@ This functionality is exclusive to our enterprise plan subscribers on SmartUI. F
 
 In the following section, we will walk you through the process of conducting your first Visual Regression test using LambdaTest's SmartUI platform.
 
+<div className="ytframe"> 
+<div className="youtube" data-embed="H91z4j5_JvQ">
+    <div className="play-button"></div>
+</div>
+</div>
+
+## Getting Started with PDF Comparison
+
+
+
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/czorj4fbzohf?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+
 ## Step 1: Establishing a SmartUI Project
 
 To initiate a SmartUI PDF Comparison Project, adhere to the following instructions:
