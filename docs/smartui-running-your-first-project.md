@@ -1,9 +1,9 @@
 ---
-id: smartui-running-your-first-test
-title: Running Your First Test on SmartUI
+id: smartui-running-your-first-project
+title: Running Your First Project on SmartUI
 hide_title: false
 sidebar_label: Running Your First Test
-description: Learn how to run your first test on smartui step by step guide for the first time users to help them understand how the platform works
+description: Learn how to run your first project on smartui step by step guide for the first time users to help them understand how the platform works
 keywords:
   - smart visual testing in lambdatest
   - visual  ui testing,image to image comparison
@@ -15,9 +15,9 @@ keywords:
   - test on samsung a7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/smartui-running-your-first-test/
+url: https://www.lambdatest.com/support/docs/smartui-running-your-first-project/
 site_name: LambdaTest
-slug: smartui-running-your-first-test/
+slug: smartui-running-your-first-project/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -43,12 +43,11 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-running-your-first-test/"
+          "item": "https://www.lambdatest.com/support/docs/smartui-running-your-first-project/"
         }]
       })
     }}
 ></script>
-
 This guide will walk you through the process of running your first visual regression test using SmartUI, a powerful feature of LambdaTest that ensures your web applications look flawless across all browsers and devices.
 ## Prerequisites
 
@@ -72,7 +71,7 @@ Now select your desired framework and click on the **Configure** button. For the
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample code repository from the LambdaTest GitHub repository to run the tests on the SmartUI.
+Download or Clone the code sample code repository from the LambdaTest GitHub repository to run the project on the SmartUI.
 
 <a href="https://github.com/LambdaTest/smartui-java-testng-sample" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -130,7 +129,6 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
 {`$Env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
 $Env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
 $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
-
 </CodeBlock>
 </div>
 </TabItem>
@@ -140,7 +138,7 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/running-first-test/1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ## Step 4: Create and Configure SmartUI Config
-You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
+You can now configure your project configurations on using various available options to run your project with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
 npx smartui config:create .smartui.json
