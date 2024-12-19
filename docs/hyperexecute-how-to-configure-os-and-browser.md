@@ -83,21 +83,13 @@ The HyperExecute YAML configuration file is the blueprint for running your tests
     [Matrix mode](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) allows you to run the same set of tests across multiple combinations of environments, configurations, or parameters. This is particularly useful for ensuring that your software works correctly under different conditions, such as various operating systems, browser versions, or dependency files.
 
     - **`runson: ${matrix.os}` :** Dynamically selects the operating system from the matrix.os list (Windows, macOS, Linux) for each test job.
-    - **`os` :** Lists the operating systems for testing: `win`, `mac`, and `linux`.
-    - **`tests` :** Specifies the test cases to run, such as `Test_1` and `Test_2`.
-    - **`browser` :** Defines the browsers for testing, in this case, Chrome and Microsoft Edge.
-    - **`version` :** Sets the browser versions to test, such as latest for the most recent stable version or dev for development versions.
-    - **`files` :** Points to files or dependencies required for executing the tests, such as `@File1` and `@File2`.
+    - **`os` :** Lists the operating systems for testing: `win`, `win11`, `mac`, `mac13`, and `linux`.
 
     ```yaml title="hyperexecute_matrix.yaml"
     runson: ${matrix.os}
     
     matrix:
-      os: ["win", "mac", "linux"]
-      tests: ["Test_1", "Test_2"]
-      browser: ["Chrome", "MicrosoftEdge"]
-      version: ["latest, dev"]
-      files: ["@File1","@File2"]
+      os: ["win", "mac", "linux"] #linux, win, win11, mac, mac13
     ```
     > 📕 Learn more about [Matrix Test Method](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/)
   </TabItem>
