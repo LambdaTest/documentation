@@ -48,6 +48,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
+
 This guide will walk you through the process of running your first visual regression test using SmartUI, a powerful feature of LambdaTest that ensures your web applications look flawless across all browsers and devices.
 ## Prerequisites
 
@@ -129,6 +130,7 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
 {`$Env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
 $Env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
 $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
+
 </CodeBlock>
 </div>
 </TabItem>
