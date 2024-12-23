@@ -3,7 +3,7 @@ id: accessibility-test-scheduling-scan
 title: Steps to Schedule an Accessibility Scan
 hide_title: false
 sidebar_label: Schedule a Scan
-description: Customize your testing with LambdaTest Accessibility DevTools' extensive settings, tailored to meet your specific needs and preferences.
+description: Learn how to schedule accessibility scans with LambdaTest. Configure scans, automate WCAG compliance checks, and analyze detailed reports with ease.
 keywords:
     - LambdaTest
     - Accessibility
