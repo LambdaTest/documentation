@@ -59,7 +59,7 @@ For example, if you want to group test steps related to login functionality, hig
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/modules/2.png').default} alt="automation-dashboard" className="doc_img"/>
 
-### Step 3: Create a New Module
+### Step 3: Create and Save your Module
 - With the relevant test steps selected, click on the Create Module button.
 - Enter a module name and description:
     - **Name :** "Login Flow for LambdaTest.com"
@@ -89,17 +89,16 @@ Here, you can browse all existing modules, including the one you just created.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/modules/7.png').default} alt="automation-dashboard" className="doc_img"/>
 
+## Conclusion
+
 By following the steps above, you can:
 
 - Reuse existing test modules effortlessly.
 - Reduce duplication in test creation.
 - Maintain consistency across test cases.
 
-> Refer here for your created [KaneAI Modules](https://kaneai.lambdatest.com/module)
+> 📕 Refer here for your created [KaneAI Modules](https://kaneai.lambdatest.com/module) 🚀
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/modules/8.png').default} alt="automation-dashboard" className="doc_img"/>
-
-## Video Explanation
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/images/kane-ai/features/modules/output.mp4').default} type="video/mp4" />
 </video>
