@@ -25,7 +25,7 @@ It provides a visual representation of how resources on a webpage are loaded and
 ## How to Use HAR Log Viewer With Waterfall on LambdaTest?
 ***
 
-To get the network logs using HAR Log Viewer With Waterfall, you need to pass `network.har = true` in your test scripts. If you want an entire response body, then pass `network.full.har = true`.
+To get the network logs using HAR Log Viewer With Waterfall, you need to pass `network.full.har = true` in your test scripts.
 
 Once you run the tests, navigate to the Web Automation Dashboard to see the HAR Log Viewer With Waterfall in action.
 
