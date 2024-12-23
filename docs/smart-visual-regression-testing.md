@@ -1,6 +1,6 @@
 ---
 id: smart-visual-regression-testing
-title: Getting started with SmartUI
+title: Explore Visual Regression tests with SmartUI
 hide_title: false
 sidebar_label: Visual Regression
 description: Experience Visual Regression Testing at its finest with SmartUI by LambdaTest. Automate UI changes tracking for precision, collaboration, and scalability on the cloud. Optimize your testing journey now!
@@ -50,70 +50,60 @@ import SmartUISDKSupportedLanguage from '../src/component/SupportedLanguages/Sma
 ></script>
 SmartUI is a visual testing tool that helps in identifying visual regressions in web applications. It uses advanced image comparison techniques to detect differences between baseline images and those captured during subsequent test runs.
 
+You can perform following Visual Regression tests using SmartUI:
+
 <div className="support_main">  
-      <a href="/support/docs/smartui-cli/">
+      <a href="/support/docs/smartui-selenium-java-sdk/">
     <div className="support_inners">
-      <h3>Setup with CLI</h3>
-      <p>Learn how to perform Visual UI Testing using command line interface.</p>
+      <h3>SDK</h3>
+      <p>Perform Visual UI Testing using CLI.</p>
     </div>
   </a>
-  <a href="/support/docs/smart-ui-storybook/">
+  <a href="/support/docs/selenium-visual-regression/">
     <div className="support_inners">
-      <h3>Setup with Storybook</h3>
-      <p>Learn how to perform Visual Regression Testing using Storybook Testing on Smart UI.</p>
+      <h3>Lambda Hooks</h3>
+      <p>Perform Visual UI Testing using Hooks.</p>
+    </div>
+  </a>
+    <a href="/support/docs/smartui-cli-figma/">
+    <div className="support_inners">
+      <h3>Figma Designs</h3>
+      <p>Perform Visual UI testing of Figma Designs using SmartUI</p>
+    </div>
+  </a>
+    <a href="/support/docs/smartui-pdf-comparison/">
+    <div className="support_inners">
+      <h3>PDFs</h3>
+      <p>Perform Visual UI testing of PDFs using SmartUI.</p>
     </div>
   </a>
   <a href="/support/docs/smartui-upload-api-v2/">
     <div className="support_inners">
       <h3>Upload through API</h3>
-      <p>Upload Screenshots through API for Visual Regression Testing</p>
+      <p>Upload Screenshots through API for Visual UI Testing</p>
     </div>
   </a>
-  <a href="/support/docs/smartui-pdf-comparison/">
+  <a href="/support/docs/smartui-cli-upload/">
     <div className="support_inners">
-      <h3>Compare PDFs</h3>
-      <p>Learn how to perform Visual Regression testing of PDFs using SmartUI.</p>
+      <h3>Upload through CLI</h3>
+      <p>Upload Screenshots through CLI for Visual UI Testing</p>
     </div>
   </a>
-  <a href="/support/docs/smart-ui-build-options/">
+  <a href="/support/docs/smart-ui-storybook/">
     <div className="support_inners">
-      <h3>Build Config & Options</h3>
-      <p>Learn grouping your screenshots into different builds and map as per your testing suite needs.</p>
+      <h3>Storybook</h3>
+      <p>Perform Visual UI Testing using Storybook on Smart UI.</p>
     </div>
   </a>
-   <a href="/support/docs/smartui-project-settings/">
-    <div className="support_inners">
-      <h3>Project Settings</h3>
-      <p>Learn how to customize your project, manage approvals, configure comparison parameters, and more.</p>
-    </div>
-    </a>
-  <a href="/support/docs/test-settings-options/">
-    <div className="support_inners">
-      <h3>Advanced Comparison Settings</h3>
-      <p>Learn how configure advanced comparison settings options.</p>
-    </div>
-  </a>
-  <a href="/support/docs/html-dom-smartui-options/">
-    <div className="support_inners">
-      <h3>HTML DOM Config & Options</h3>
-      <p>Learn how to handle HTML DOM in Smart UI</p>
-    </div>
-  </a>  
-  <a href="/support/docs/smartui-git-branching-strategy">
+    <a href="/support/docs/smartui-git-branching-strategy/">
     <div className="support_inners">
       <h3>Git Baseline Branching</h3>
-      <p>Learn Git Branching with SmartUI projects.</p>
-    </div>
-  </a>
-  <a href="/support/docs/smartui-github-app-integration/">
-    <div className="support_inners">
-      <h3>Github App Integration</h3>
-      <p>Setup your Github Repos with SmartUI projects and run your CI along with visual regression testing.</p>
+      <p>Learn how to execute SmartUI CLI with Git Commits.</p>
     </div>
   </a>
 </div>
 
-<!-- Here are all the languages and frameworks supported by SmartUI. -->
+<!-- Here are all the types to test with SmartUI. -->
 
 <Tabs className="docs__val">
   <TabItem value="sdk" label="SDK" default>
