@@ -95,36 +95,9 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ## Run Your First Test
 ---
 
-1. Add the below code snippet in your test scripts.
+1. Add the below code snippet in your test scripts to initiate your first Playwright test on LambdaTest.
 
-```js
-(async () => {
-  const capabilities = {
-    "LT:Options": {
-      "platformName": "android",
-      "deviceName": "Pixel 5",
-      "platformVersion": "11",
-      "isRealMobile": true,
-      "build": "Playwright android build",
-      "name": "Playwright android test",
-      'user': process.env.LT_USERNAME,
-      "accessKey": process.env.LT_ACCESS_KEY,
-      "network": true,
-      "video": true,
-      "console": true,
-      "projectName": "New UI",
-    },
-  };
-
-  let device = await _android.connect(
-      `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
-          JSON.stringify(capabilities))}`,
-  );
-  ```
-
-Once you are done with the above-mentioned steps, you can initiate your first Playwright test on LambdaTest.
-
-```js
+```javascript title="lambdatest-setup.js"
 const {_android} = require("playwright");
 const expect = require("chai").expect;
 
@@ -156,6 +129,8 @@ const expect = require("chai").expect;
     await device.shell("am force-stop com.android.chrome");
 
     let context = await device.launchBrowser();
+    // highlight-next-line
+    context.setDefaultTimeout(120000);
     let page = await context.newPage();
 
     await page.goto("https://duckduckgo.com");
@@ -179,6 +154,15 @@ const expect = require("chai").expect;
     await device.close();
 })();
 ```
+
+:::tip
+The timeout value specified in the Playwright configuration is not being honored during mobile browser automation tests on real devices, defaulting to 30 seconds, whereas it works correctly on desktop browsers. To resolve the issue, add the following line to the `lambdatest-setup.js` file:
+
+```javascript
+context.setDefaultTimeout(120000);  // Set your desired timeout value.
+```
+:::
+
 
 2. Pass the below command to run the test.
 
