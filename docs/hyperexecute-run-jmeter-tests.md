@@ -66,7 +66,18 @@ After setting up a Test Plan, now you need to associate your test cases and exec
   - **Total Users :** This indicates the number of users you intend to test for.
   - **Duration (min) :** This specifies the desired duration for the test.
   - **Ramp-up Time (min) :** This specifies the amount of time it should take to reach the peak test load.
-  - **Total Load Distribution :** Configure the regions in which you want to distribute the load testing as per the % of the users.
+  - **Total Load Distribution :** Configure the **regions** in which you want to distribute the load testing as per the % of the users.
+
+:::info
+**Supported Regions :** HyperExecute supports the following regions for performance testing
+- West US 2 (Moses Lake, Washington)
+- East US (Richmond, Virginia)
+- Central India (Pune, Maharashtra)
+- Southeast Asia (Singapore)
+- Brazil South (São Paulo State, Brazil)
+- Mexico Central (Querétaro State, Mexico)
+:::
+
 - Click on the **Run Test** button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/execute.gif').default} alt="HyperExecute" className="doc_img"/>

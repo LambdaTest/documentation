@@ -259,10 +259,12 @@ If you are using the `deviceSelectionStrategy: any`, then in that case all the m
 
 :::
 
-## Step 5: Generate Artifacts
-To generate artifacts for your XCUI tests, add the `artifacts: true` flag in your YAML file:
+## Step 5: Generate Reports and Artifacts
+To generate artifacts for your XCUI tests, add the `artifacts: true` and `report: true` flag in your YAML file:
 
 ```yaml
+report: true
+
 framework:
   name: "ios/xcui"
   args:
@@ -270,7 +272,7 @@ framework:
     ...//
 ```
 
-To download these artifacts in your local machine, you can pass the `--download-artifacts` flag with the CLI command to execute the tests as shown in the next step.
+To download these artifacts in your local machine, you can pass the `--download-artifacts` and `--download-report` flag with the CLI command to execute the tests as shown in the next step.
 
 ## Step 6: Execute your Test Suite
 
@@ -279,14 +281,14 @@ To download these artifacts in your local machine, you can pass the `--download-
 Run the below command in your terminal at the root folder of the project:
 
 ```bash
-./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report
 ```
 
 OR use this command if you have not exported your username and access key in the step 2.
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
-    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts`}
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE --download-artifacts --download-report`}
   </CodeBlock>
 </div>
 

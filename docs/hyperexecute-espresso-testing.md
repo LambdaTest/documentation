@@ -276,6 +276,7 @@ To generate artifacts for your Espresso tests, add the `artifacts: true`, and `r
 
 ```yaml
 report: true
+
 framework:
   name: "android/espresso"
   args:
