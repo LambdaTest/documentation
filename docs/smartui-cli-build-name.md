@@ -1,7 +1,7 @@
 ---
 id: smartui-sdk-build-name
 title: Grouping Screenshots through Build Names
-sidebar_label: Fetch Results
+sidebar_label: Groups Screenshots by Build Names
 description: In this documentation, learn how to group screenshots in a single build across multiple executions.
   - Visual Regression
   - Visual Regression Testing Guide
@@ -21,8 +21,6 @@ slug: smartui-cli-build-name/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
-
----
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -47,9 +45,7 @@ import NewTag from '../src/component/newTag';
       })
     }}
 ></script>
-
 SmartUI CLI allows you to group screenshots in a build name and append new screenshots to an existing build. This feature enables you to assign build names, add screenshots to existing builds and manage your visual tests efficiently.
-
 
 ## Prerequisites
 
@@ -58,9 +54,7 @@ SmartUI CLI allows you to group screenshots in a build name and append new scree
 - Ensure you are using `@lambdatest/smartui-cli` version 4.0.14 or higher.
 - A properly configured SmartUI CLI project
 
-## Steps to Use
-
-### **Step 1:** Install SmartUI CLI
+## Step 1: Install SmartUI CLI
 
 If you haven't already installed SmartUI CLI, install it using npm:
 
@@ -68,7 +62,7 @@ If you haven't already installed SmartUI CLI, install it using npm:
 npm i @lambdatest/smartui-cli
 ```
 
-### **Step 2:** Configure your Project Token
+## Step 2: Configure your Project Token
 
 Setup your project token show in the **SmartUI** app after, creating your project.
 
@@ -95,7 +89,7 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 </Tabs>
 
-### **Step 3:** Execute Tests with custom Build Names
+## Step 3: Execute Tests with custom Build Names
 
 You can add a custom build name by adding the `--buildName` flag to your test execution command. Here are different ways to use this feature:
 
@@ -111,14 +105,14 @@ npx smartui --config .smartui.json exec --buildName "Sample Build Name" -- <exec
 >npx smartui --config .smartui.json exec --buildName "Sample Build Name" -- node test.js
 >```
 
-#### Default Usage
+### Default Usage
 If no buildname is specified, a random build name is added to the builds:
 
 ```bash
 npx smartui --config .smartui.json exec -- <execution-command>
 ```
 
-### **Step 4:** Advanced Use Case
+## Step 4: Advanced Use Case
 
 If you are running multiple test cases in a single job (e.g., using HyperExecute) and want to club all screenshots under a single build while maintaining consistent Git baseline management, you can do the following:
 
@@ -127,34 +121,15 @@ This can be done as follows:
 ```bash
 npx smartui --config .smartui.json exec --buildName $env:JOB_ID -- node test.js
 ```
-##### This approach ensures:
 
-- A new build is created for every HyperExecute job.
-- Screenshots from all tests in the same job are appended to the same build.
-- Git branching strategies remain unaffected, improving baseline management across branches.
+## Key Benefits
+- **Efficient Grouping:** Screenshots are grouped by build names, improving organization and traceability.
+- **Seamless Git Integration:** Integrates smoothly with Git to maintain baseline integrity across branches.
+- **Flexible Updates:** Allows appending screenshots to existing builds, enhancing adaptability.
+- **Optimized Workflows:** Supports streamlined operations for both parallel and single-job executions.
 
-
->## Key Benefits
->1. Efficient grouping of screenshots by build names.
->2. Seamless integration with Git baseline management.
->3. Flexibility to append screenshots to existing builds.
->4. Optimized workflows for parallel and single-job executions.
-
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
-    </li>
-  </ul>
-</nav>
+## Conclusion
+This approach provides a structured and efficient way to manage visual tests:
+- **New Build for Each HyperExecute Job:** A dedicated build is created for every HyperExecute job, ensuring clear separation and traceability.
+- **Consolidated Screenshot Grouping:** Screenshots from all tests within the same job are appended to a single build for seamless organization.
+- **Uninterrupted Git Workflow:** Git branching strategies remain unaffected, enabling robust baseline management across branches.

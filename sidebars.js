@@ -2778,6 +2778,7 @@ module.exports = {
             collapsed: true,
             label: "CLI Configurations",
             items: [
+              "smartui-sdk-build-name",
               "smartui-sdk-fetch-results",
               "smartui-cli-responsive-dom",
               "smartui-sdk-config-options",
@@ -2824,6 +2825,7 @@ module.exports = {
             ]
           },
           "smartui-pdf-comparison",
+          "smartui-draw-on-ui",
         ]
       },
       {
@@ -2840,7 +2842,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Trigger Visual Tests from CI/CD tools",
+            label: "Run Visual Tests on PRs",
             items: [
               "smartui-github-app-integration",
             ],
@@ -2869,7 +2871,6 @@ module.exports = {
         label: "Project Management",
         items: [
           "smartui-project-settings",
-          "smartui-draw-on-ui",
           "test-settings-options",
           "html-dom-smartui-options",
           "smart-ui-build-options",
