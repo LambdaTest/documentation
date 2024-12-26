@@ -20,7 +20,6 @@ slug: getting-started-with-appium-testing/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import SupportedLanguage from '../src/component/SupportedLanguage';
 
 
 <script type="application/ld+json"
