@@ -54,10 +54,14 @@ The SmartUI dashboard presents a comparison between the baseline and the capture
 ### Diff Controls
 Located at the center of the top menu, the Diff Controls allow testers to customize how visual differences are displayed, offering multiple options to refine the comparison process. The available modes are:
 
+#### Layers
 - **Captured Diffs :** Highlights the differences detected in the current captured screenshots when compared to the baseline. Ideal for spotting changes introduced in the latest version.
 - **Baseline Diffs :** Displays the differences by focusing on the baseline's unique elements. Helps identify elements missing or changed in the new capture. Annotations : Allows users to add notes or highlight specific regions of interest on the screenshots. Useful for documenting findings or collaborating with team members.
+- **Annotations :** Controls  the visibility of your annotations in both parallel and landscape views with a toggle, default set to off, ensuring a clean visual field when not needed.
+
+#### Diff Options
 - **Strict Mode :** Highlights exact pixel mismatches between the baseline and captured screenshots. Best suited for detailed visual inspections where high precision is required.
-- **Smart Ignore :** Automatically ignores minor, non-critical differences (e.g., anti-aliasing, rendering variations). Useful for reducing noise in tests, allowing the focus to remain on significant UI changes.
+- **Smart Ignore :** Iintelligently hides the displacement differences, allowing you to concentrate on actual content changes that impact the user experience.
 
 ### Variants
 The top menu includes browser variants, which allow cross-browser testing. Variants visible in the screenshot include: Chrome, Firefox, Edge, Playwright WebKit (Pw-Webkit). Each variant shows the same test across different browsers and resolutions, helping identify browser-specific visual issues.
