@@ -238,6 +238,22 @@ Specify a custom filename for your results:
 ```bash
 npx smartui capture urls.json --config .smartui.json --fetch-results custom-results.json 
 ```
+
+### Adding a custom build name
+You can add a custom build name by adding the `--buildName` flag to your test execution command. Here is how you can utilise this feature:
+
+Specify a custom build name to group your screenshots in the following way:
+
+```bash
+npx smartui capture urls.json --buildName "Sample Build Name" --config .smartui.json
+```
+
+> Note: 
+> - If no build name is provided, a random name will be automatically assigned to the build.
+> - Specifying the name of an existing build within the project will append the screenshots to that build.
+> - Existing screenshots with the same name and configuration in the build will be overwritten during a re-run.
+
+
 ### Setup with Continuous Integration (CI)
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI CLI` execution then the following are the steps needs to be added to your `.yaml` file:

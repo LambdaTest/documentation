@@ -182,6 +182,19 @@ Specify a custom filename for your results:
 ```bash
 npx smartui upload <directoryName> --fetch-results custom-results.json 
 ```
+### Adding a custom build name
+You can add a custom build name by adding the `--buildName` flag to your test execution command. Here is how you can utilise this feature:
+
+Specify a custom build name to group your screenshots in the following way:
+
+```bash
+npx smartui upload <directoryName>  --buildName "Sample Build Name"
+```
+
+> Note: 
+> - If no build name is provided, a random name will be automatically assigned to the build.
+> - Specifying the name of an existing build within the project will append the screenshots to that build.
+> - Existing screenshots with the same name and configuration in the build will be overwritten during a re-run.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
