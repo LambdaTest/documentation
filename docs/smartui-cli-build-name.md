@@ -48,7 +48,7 @@ import NewTag from '../src/component/newTag';
     }}
 ></script>
 
-SmartUI CLI allows you to group screenshots in a build name and append new screenshots to an existing build. This feature enables you to assign build names, add screnshots to existing builds and manage your visual tests efficiently.
+SmartUI CLI allows you to group screenshots in a build name and append new screenshots to an existing build. This feature enables you to assign build names, add screenshots to existing builds and manage your visual tests efficiently.
 
 
 ## Prerequisites
@@ -117,8 +117,6 @@ If no buildname is specified, a random build name is added to the builds:
 ```bash
 npx smartui --config .smartui.json exec -- <execution-command>
 ```
-
-
 
 ### **Step 4:** Advanced Use Case
 
