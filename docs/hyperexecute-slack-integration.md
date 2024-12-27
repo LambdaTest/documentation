@@ -85,7 +85,30 @@ Once you integrate Slack, you need to configure notification settings to get tes
 - Update the **Notification Time** as well.
 - Now run the test and visit the Slack channel to view the build notification containing Job Number, Job Status, Executed By, Started At, Job Duration, Test Duration etc.
 
-## Step 4: Report a bug for a Failed Test
+## Receive Notification on Custom Slack Channels
+> - To avail this feature, connect with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Support Team.</span>
+> - This feature does not work for **private** Slack channels.
+
+After successfully integrating Slack, specify the Slack channel where you want Job updates to be sent by updating your HyperExecute YAML file:
+
+```yaml title="hyperexecute.yaml"
+slackChannel: hyperexecute-job-updates #slack channel name
+```
+
+Or, if you prefer using variable:
+
+```yaml title="hyperexecute.yaml"
+slackChannel: ${channel}
+```
+
+And then in your CLI/terminal, pass your desired channel name like:
+
+```yaml
+./hyperexecute --vars "channel=hyperexecute-job-updates" #enter your slack channel name
+```
+
+
+## Report a bug for a Failed Test
 
 - Click on the failed test. It will navigate you to the automation page.
 - Click on the bug icon.
