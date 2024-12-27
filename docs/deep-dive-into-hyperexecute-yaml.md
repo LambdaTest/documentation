@@ -814,6 +814,36 @@ project:
 
 ***
 
+### `slackChannel`
+
+This flag allows you to receive real-time notifications about your Job updates in a Slack channel of your choice, ensuring that your team stays informed about all the Job status directly within your preferred Slack workspace.
+
+:::note Prerequisites
+- To avail this feature, connect with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Support Team.</span>
+- 📕 You must first [*integrate Slack*](https://www.lambdatest.com/support/docs/hyperexecute-slack-integration/) from the **Integration** section of the LambdaTest dashboard.
+:::
+
+After successfully integrating Slack, specify the Slack channel where you want Job updates to be sent by updating your HyperExecute YAML file:
+
+```yaml title="hyperexecute.yaml"
+slackChannel: hyperexecute-job-updates #slack channel name
+```
+> This feature does not work for **private** Slack channels.
+
+Or, if you prefer using variable:
+
+```yaml title="hyperexecute.yaml"
+slackChannel: ${channel}
+```
+
+And then in your CLI/terminal, pass your desired channel name like:
+
+```yaml
+./hyperexecute --vars "channel=hyperexecute-job-updates" #enter your slack channel name
+```
+
+***
+
 ### `differentialUpload`
 
 When you are working with relatively large codebases, and constantly updating and upgrading your test scripts. Getting them onto the HyperExecute platform for every run might consume extra time.
