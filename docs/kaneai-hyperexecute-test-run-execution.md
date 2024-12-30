@@ -55,15 +55,9 @@ This documentation outlines the steps to create a test run for KaneAI generated 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step1.png').default} alt="Image" className="doc_img"/>
 
-### Step 2: View and Select Test Cases
-- Review the list of created test cases in the Test Cases section.
-- Select the desired test cases and click Create Test Run.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step2.png').default} alt="Image" className="doc_img"/>
-
-### Step 3: Create a Test Run
-- Alternatively, go to the Test Run section within the project.
-- Click Create Test Run.
+### Step 2: Create a Test Run
+- Go to the Test Run section within the project.
+- Click Demo Test Run.
 - Provide the following details:
     - **Name :** e.g., Demo Test Plan 123.
     - **Description :** A brief overview of the run.
@@ -71,26 +65,26 @@ This documentation outlines the steps to create a test run for KaneAI generated 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step3.png').default} alt="Image" className="doc_img"/>
 
-### Step 4: Select and Add Test Cases
+### Step 3: Select and Add Test Cases
 - Click Next to view available test cases.
 - Select the required test cases for the run.
 - Click Add Test Case to include them.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step4.png').default} alt="Image" className="doc_img"/>
 
-### Step 5: Assign and Configure Test Cases
+### Step 4: Assign and Configure Test Cases
 - On the test plan page, review the added test cases.
 - Assign team members in bulk.
 - Update configurations as required.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step5.png').default} alt="Image" className="doc_img"/>
 
-### Step 6: Set Browser Configurations
+### Step 5: Set Browser Configurations
 - Choose from available browser configurations. If a new configuration is needed, click on Create Configuration button and choose from thousands of configuration options.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step6.png').default} alt="Image" className="doc_img"/>
 
-### Step 7: Create New Configuration
+### Step 6: Create New Configuration
 - Enter the following details:
     - **OS :** e.g., Monterey.
     - **Browser :** e.g., Chrome 131.
@@ -99,13 +93,13 @@ This documentation outlines the steps to create a test run for KaneAI generated 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step7.png').default} alt="Image" className="doc_img"/>
 
-### Step 8: Link and Save Test Run Configurations 
+### Step 7: Link and Save Test Run Configurations 
 - Select the newly created configuration and link it to the selected test cases.
 - Confirm configurations and test cases and add additional test cases if required. Save the test plan.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step8.png').default} alt="Image" className="doc_img"/>
 
-### Step 9: Run with HyperExecute
+### Step 8: Run with HyperExecute
 - Initiate the run using HyperExecute by clicking **Run with HyperExecute**.
 - View all test instances in the dashboard.
 - Set the desired concurrency level, e.g., 5.
@@ -113,7 +107,7 @@ This documentation outlines the steps to create a test run for KaneAI generated 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step10.png').default} alt="Image" className="doc_img"/>
 
-### Step 10: Monitor Execution on HyperExecute
+### Step 9: Monitor Execution on HyperExecute
 - Navigate to the HyperExecute page.
 - Observe the discovery and rapid execution of test cases.
 
