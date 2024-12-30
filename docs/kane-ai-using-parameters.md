@@ -68,7 +68,7 @@ Reference any parameter using **dollar-curly braces syntax** (e.g.,`${phone_numb
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/4.png').default} alt="Image" className="doc_img"/>
 
-## Step 4: Test Summary Page
+## Test Summary Page
 Upon completing the test, review the Test Summary Page, where all utilized parameters are clearly displayed, and the corresponding generated code is readily available for seamless integration into future test scenarios.
 <img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/7.png').default} alt="Image" className="doc_img"/>
 
