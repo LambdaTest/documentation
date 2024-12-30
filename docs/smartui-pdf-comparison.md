@@ -62,6 +62,16 @@ In the following section, we will walk you through the process of conducting you
 
 ## Getting Started with PDF Comparison
 
+  <iframe
+  src="https://app.storylane.io/share/czorj4fbzohf"
+  width="100%"
+  height="100%"
+  allowFullScreen
+  loading="lazy"
+  importance="low"
+  title="LambdaTest Automation Testing Demo"
+  className="storylane-iframe"
+></iframe>
 
 
 <div className="storylane-iframe">
