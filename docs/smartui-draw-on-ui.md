@@ -53,6 +53,13 @@ The SmartUI Annotation tool allows you to interact directly with your screenshot
 
 By utilizing ignored/selected regions, you can keep your test results focused on the truly important changes,  streamlining your workflow and saving you time from chasing irrelevant discrepancies.
 
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/j5uyv2ol9axz?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+
 ## Key Features of Annotation Tool
 
 - **Drawing Over Screenshots:** Easily draw on compared screenshots to ignore/select specific elements, enhancing clarity and focus.

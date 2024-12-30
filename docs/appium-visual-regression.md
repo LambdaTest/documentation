@@ -52,6 +52,13 @@ import NewTag from '../src/component/newTag';
 
 Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/pmuhutnb9ixb?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+
 ## Prerequisites for SmartUI with App Automation
 
 - Basic understanding of [appium](https://appium.io/docs/en/2.0/intro/) and remote [WebDriver](https://www.selenium.dev/documentation/webdriver/drivers/remote_webdriver/) is required.

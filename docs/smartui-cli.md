@@ -49,9 +49,14 @@ import NewTag from '../src/component/newTag';
     }}
 ></script>
 
-Welcome to the LambdaTest SmartUI CLI documentation! 
-
 With SmartUI CLI, you can seamlessly perform visual regression testing on the LambdaTest platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Visual Regression tests using SmartUI CLI.
+
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/7vwai2zbxhzm?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 ## Prerequisites for running SmartUI CLI
 
