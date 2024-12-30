@@ -2,7 +2,7 @@
 id: kane-ai-using-parameters
 title: KaneAI - Using Parameters
 hide_title: false
-sidebar_label: Paramters
+sidebar_label: Parameters
 description: Learn how to use parameters in the KaneAI test cases
 keywords:
   - lambdatest automation
