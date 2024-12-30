@@ -68,8 +68,6 @@ Open the test run to view its URL. Copy the Test Run ID from the URL. This ID wi
 A list of test instances with various configurations will be displayed for each test run.
 :::
 
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-ci-cd/image2.png').default} alt="Image" className="doc_img"/>
-
 #### Example API Call:
 
 ```yaml
