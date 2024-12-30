@@ -49,13 +49,12 @@ This guide provides a detailed walkthrough for utilizing parameters in KaneAI to
 - **Multiple Configurations :** Simplify the execution of tests with different data sets.
 - **Seamless Test Management :** Centralized management of parameters improves efficiency and reduces redundancy.
 
-## Step 1: Define Parameters in a Web or App Agent Test
-- Navigate to the specific web agent test URL.
-- Prepare the test to accept inputs for `name`, `age`, and `phone_number` as parameters.
+## Define Parameters in a Web or App Agent Test
+- Navigate to the specific web agent test URL and configure the test to accept input parameters.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/1.png').default} alt="Image" className="doc_img"/>
 
-## Step 2: Create a parameter in a test
+## Create a parameter in a test
 - Confirm that parameters are already defined in the system. To add a new parameter, use one of the following methods to define the parameter:
   - Type a **`slash (/)`** and select the Parameter option.
   - Click the Plus icon and choose the Parameter icon.
@@ -64,7 +63,7 @@ Click **Create Parameter** to save.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/3.png').default} alt="Image" className="doc_img"/>
 
-## Step 3: Reference the parameter in test step
+## Reference the parameter in test step
 Reference any parameter using **dollar-curly braces syntax** (e.g.,`${phone_number}`). Enter the name in its designated input field.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/4.png').default} alt="Image" className="doc_img"/>

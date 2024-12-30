@@ -55,9 +55,9 @@ This documentation outlines the steps to create a test run for KaneAI generated 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step1.png').default} alt="Image" className="doc_img"/>
 
-### Step 2: Create a Test Run
-- Go to the Test Run section within the project.
-- Click Demo Test Run.
+### Step 2: Create a Test Plan
+- Go to the Test Plan section within the project.
+- Click Demo Test Plan.
 - Provide the following details:
     - **Name :** e.g., Demo Test Plan 123.
     - **Description :** A brief overview of the run.
