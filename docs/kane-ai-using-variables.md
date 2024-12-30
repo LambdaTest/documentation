@@ -2,7 +2,7 @@
 id: kane-ai-using-variables
 title: KaneAI - Using Variables in Test Cases
 hide_title: false
-sidebar_label: Variables Guide
+sidebar_label: Variables
 description: Learn how to use variables in the KaneAI test cases
 keywords:
   - lambdatest automation
@@ -36,7 +36,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "KaneAI Jira Integration",
+          "name": "KaneAI Variables",
           "item": "https://www.lambdatest.com/support/docs/kane-ai-using-variables/"
         }]
       })
