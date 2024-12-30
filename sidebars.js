@@ -1027,7 +1027,7 @@ module.exports = {
         label: "Test Manager",
         items: [
           "kane-ai-test-plan",
-          "kaneai-hyperexecute-test-plan-execution",
+          "kaneai-hyperexecute-test-run-execution",
           "kaneai-ci-cd-automation"
         ]
       },

@@ -1,5 +1,5 @@
 ---
-id: kaneai-hyperexecute-test-plan-execution
+id: kaneai-hyperexecute-test-run-execution
 title: Create and Execute your Test Plan for KaneAI Generated Tests on HyperExecute
 hide_title: false
 sidebar_label: Execute Test Plans on HyperExecute
@@ -13,9 +13,9 @@ keywords:
   - test plan
   - test manager
   - generate and manage test cases
-url: https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-plan-execution
+url: https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-run-execution
 site_name: LambdaTest
-slug: kaneai-hyperexecute-test-plan-execution/
+slug: kaneai-hyperexecute-test-run-execution/
 ---
 
 <script type="application/ld+json"
@@ -35,13 +35,13 @@ slug: kaneai-hyperexecute-test-plan-execution/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "KaneAI Test Plan",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-plan-execution"
+          "name": "KaneAI Test Run",
+          "item": "https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-run-execution"
         }]
       })
     }}
 ></script>
-This documentation outlines the steps to create a test plan for KaneAI generated tests using Test Manager. The steps include selecting test cases, setting configurations, and running tests with HyperExecute for efficient execution. Follow the instructions carefully to ensure seamless execution of the process.
+This documentation outlines the steps to create a test run for KaneAI generated tests using Test Manager. The steps include selecting test cases, setting configurations, and running tests with HyperExecute for efficient execution. Follow the instructions carefully to ensure seamless execution of the process.
 
 ## Prerequisites
 - Access to Test Manager.
@@ -57,23 +57,23 @@ This documentation outlines the steps to create a test plan for KaneAI generated
 
 ### Step 2: View and Select Test Cases
 - Review the list of created test cases in the Test Cases section.
-- Select the desired test cases and click Create Test Plan.
+- Select the desired test cases and click Create Test Run.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step2.png').default} alt="Image" className="doc_img"/>
 
-### Step 3: Create a Test Plan
-- Alternatively, go to the Test Plan section within the project.
-- Click Create Test Plan.
+### Step 3: Create a Test Run
+- Alternatively, go to the Test Run section within the project.
+- Click Create Test Run.
 - Provide the following details:
     - **Name :** e.g., Demo Test Plan 123.
-    - **Description :** A brief overview of the plan.
+    - **Description :** A brief overview of the run.
     - **Type :** Choose KaneAI Generated Test Cases.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step3.png').default} alt="Image" className="doc_img"/>
 
 ### Step 4: Select and Add Test Cases
 - Click Next to view available test cases.
-- Select the required test cases for the plan.
+- Select the required test cases for the run.
 - Click Add Test Case to include them.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step4.png').default} alt="Image" className="doc_img"/>
@@ -99,19 +99,13 @@ This documentation outlines the steps to create a test plan for KaneAI generated
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step7.png').default} alt="Image" className="doc_img"/>
 
-### Step 8: Link and Save Test Plan Configurations 
+### Step 8: Link and Save Test Run Configurations 
 - Select the newly created configuration and link it to the selected test cases.
 - Confirm configurations and test cases and add additional test cases if required. Save the test plan.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step8.png').default} alt="Image" className="doc_img"/>
 
-### Step 9: Create a Build
-- Once the test plan is saved, it will display test cases and configurations. Create a build and provide a name, e.g., Demo Build.
-- The test plan is automatically linked to the build. You can also add a tag for filtering our your test plans. Now create the build.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step9.png').default} alt="Image" className="doc_img"/>
-
-### Step 10: Run with HyperExecute
+### Step 9: Run with HyperExecute
 - Initiate the run using HyperExecute by clicking **Run with HyperExecute**.
 - View all test instances in the dashboard.
 - Set the desired concurrency level, e.g., 5.
@@ -119,7 +113,7 @@ This documentation outlines the steps to create a test plan for KaneAI generated
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-execute-hyperexecute/step10.png').default} alt="Image" className="doc_img"/>
 
-### Step 11: Monitor Execution on HyperExecute
+### Step 10: Monitor Execution on HyperExecute
 - Navigate to the HyperExecute page.
 - Observe the discovery and rapid execution of test cases.
 
