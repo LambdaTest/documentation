@@ -91,10 +91,10 @@ The API response contains the job ID for both jobs created for desktop web tests
 
 ```yaml
 {
-    "jobID": "abcd1234-abcd-1234-abcd-1234abcd1234",
+    "job_id": "abcd1234-abcd-1234-abcd-1234abcd1234",
     "app_job_id": "abcd1234-abcd-1234-abcd-1234abcd1234",
-    "testRunID": "01LAMBDATEST2024KANEAIJ8NPGDP",
-    "jobLink": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=<jobID>",
+    "test_run_id": "01LAMBDATEST2024KANEAIJ8NPGDP",
+    "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=<job_id>",
     "mobile_job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=<app_job_id>"
 }
 ```
