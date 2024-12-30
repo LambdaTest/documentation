@@ -1027,7 +1027,7 @@ module.exports = {
         label: "Test Manager",
         items: [
           "kane-ai-test-plan",
-          "kaneai-hyperexecute-test-plan-execution",
+          "kaneai-hyperexecute-test-run-execution",
           "kaneai-ci-cd-automation"
         ]
       },
@@ -1041,6 +1041,17 @@ module.exports = {
           "kane-ai-scroll-in-feature",
           "kane-ai-jira-integration",
           "kane-ai-api-testing",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Variables and Parameters",
+            items: [
+              "kane-ai-using-variables",
+              "kane-ai-using-json-variables",
+              "kane-ai-using-parameters",
+              "kane-ai-using-datasets"
+            ]
+          },
           "kane-ai-modules"
         ],
       },
@@ -1051,16 +1062,6 @@ module.exports = {
         items: [
           "kane-ai-command-guide",
           "kane-ai-web-test-writing-guidelines",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Variables Guide",
-            link: {
-              type: "doc",
-              id: "kane-ai-using-variables"
-            },
-            items: ["kane-ai-using-json-variables"]
-          },
         ],
       },
       {
