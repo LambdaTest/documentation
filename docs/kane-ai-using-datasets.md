@@ -42,7 +42,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-Data sets in KaneAI-LambdaTest allow you to manage and reuse input values for test cases efficiently. This guide explains how to create, edit, and manage these data sets while utilizing parameters to run test cases with a variety of inputs, improving flexibility and reducing manual data entry.
+Datasets in KaneAI-LambdaTest allow you to manage and reuse input values for test cases efficiently. This guide explains how to create, edit, and manage these data sets while utilizing parameters to run test cases with a variety of inputs, improving flexibility and reducing manual data entry.
 
 ## Step 1: Accessing Parameters and Datasets
 Navigate to the Parameters section within your project and review existing data sets under this section.
@@ -50,14 +50,13 @@ Navigate to the Parameters section within your project and review existing data 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/1.png').default} alt="Image" className="doc_img img_center"/>
 
-Every test case automatically generates a default data set during authoring. Example: A default data set might capture initial values like form submissions.
+Every test case which uses parameters in KaneAI automatically generates a default data set during authoring. Example: A default data set might capture initial values like form submissions.
 > Default Datasets are immutable in nature i.e. they cannot be modified.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/2.png').default} alt="Image" className="doc_img img_center"/>
 
 ## Step 2: Creating and Editing Datasets
-- Access the version history of a default data set.
-- Create a copy of the default data set. The copied data set is editable, allowing updates and the addition of values.
+To create a dataset, navigate to the Datasets section, click "Create Dataset," and define parameters and values as needed. For existing datasets, access the version history of a default dataset, create a copy, and edit the copied dataset to update or add values seamlessly.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/3.png').default} alt="Image" className="doc_img img_center"/>
 
@@ -65,6 +64,8 @@ Every test case automatically generates a default data set during authoring. Exa
 Open the editable Dataset. Click on "**Add a Row After**". Enter your desired values (e.g., 5 or Mike).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/4.png').default} alt="Image" className="doc_img img_center"/>
+
+### Autofill with AI
 
 Alternatively, you can use the **Autofill with AI** option to automatically populate data fields. AI generates values based on the parameter's name, saving time and effort.
 
@@ -82,12 +83,11 @@ Prepare your data set in CSV format. Use the Import Data feature in the data set
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/7.png').default} alt="Image" className="doc_img img_center"/>
 
-## Step 6: Executing Test Cases with Parameters
+## Executing Test Cases with Parameters
 Combine multiple data sets with their respective parameters.
 Execute test cases using these data sets to simulate diverse input scenarios.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/datasets/8.png').default} alt="Image" className="doc_img img_center"/>
-
 
 ## Video Explanation
 <video class="right-side" width="100%" controls id="vid">
