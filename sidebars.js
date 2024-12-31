@@ -1742,16 +1742,14 @@ module.exports = {
         ],
       },
       {
-        type: "category",
-        collapsed: true,
-        label: "Test Plan",
-        items: ["test-plan-creation", "build-history"],
+        type: "doc",
+        label: "Test Run",
+        id: 'test-run-creation-and-management',
       },
       {
-        type: "category",
-        collapsed: true,
-        label: "Build",
-        items: ["build-creation", "execute-builds", "build-details"],
+        type: "doc",
+        label: "Milestones",
+        id: 'milestone-creation-and-management',
       },
       {
         type: "category",
