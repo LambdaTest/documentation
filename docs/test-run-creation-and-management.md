@@ -109,14 +109,15 @@ Use descriptive names to easily identify test runs later.
 - Modify an existing test run by adding new test cases or removing unnecessary ones.
 - Access the test run’s options to make edits.
 
-<img loading="lazy" src={require('../assets/images/test-run/11.png').default} alt="Real "  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/test-run/12.png').default} alt="Real "  className="doc_img"/>
 
 ## 5. Executing and Archiving Test Runs
 ### Step 11: Execute on LambdaTest Cloud
 - Click the Play Icon to execute test instances on the LambdaTest Cloud.
-- During execution, manually update the status of test cases and test steps as needed.
+<img loading="lazy" src={require('../assets/images/test-run/11.png').default} alt="Real "  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/test-run/12.png').default} alt="Real "  className="doc_img"/>
+- During execution, manually update the status of test cases and test steps as needed.
+<img loading="lazy" src={require('../assets/images/test-run/14.png').default} alt="Real "  className="doc_img"/>
 
 ### Step 12: Duplicate or Archive Test Runs
 - Use the three-dot menu on a test run to Duplicate or Archive the run.
