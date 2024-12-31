@@ -201,8 +201,8 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/insights-dashboard/"><p className="p_home_inners">Insights Dashboard</p></a>
         <a href="/support/docs/manual-test-case-creation"><p className="p_home_inners">Manual Test Cases</p></a>
         <a href="/support/docs/automated-test-cases-with-ai/"><p className="p_home_inners">Automated Test Cases</p></a>
-        <a href="/support/docs/test-plan-creation/"><p className="p_home_inners">Test Plan Creation</p></a>
-        <a href="/support/docs/build-creation/"><p className="p_home_inners">Builds</p></a>
+        <a href="/support/docs/test-run-creation-and-management/"><p className="p_home_inners">Test Run</p></a>
+        <a href="/support/docs/milestone-creation-and-management/"><p className="p_home_inners">Milestones</p></a>
         <a href="/support/docs/link-jira-issues-with-test-manager/"><p className="p_home_inners">Jira Integration</p></a>
       </div>
     </div>
