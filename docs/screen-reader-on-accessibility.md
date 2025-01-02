@@ -56,5 +56,5 @@ LambdaTest supports the following screen readers during Accessibility Testing:
 These tools allow developers and testers to evaluate how well their applications or websites perform for visually impaired users, ensuring accessibility compliance and usability.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/images/accessibility-testing/playwright/output.mp4').default} type="video/mp4" />
+<source src= {require('../assets/images/accessibility-testing/screen-reader/output.mp4').default} type="video/mp4" />
 </video>
