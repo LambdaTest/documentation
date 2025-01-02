@@ -1609,6 +1609,11 @@ module.exports = {
         items: ["accessibility-test-scheduling-scan", "accessibility-test-scheduling-edit"]
       },
       {
+        type: "doc",
+        label: "Screen Reader",
+        id: "screen-reader-on-accessibility"
+      },
+      {
         type: "category",
         collapsed: true,
         label: "Navigating Dashboard",
