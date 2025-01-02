@@ -37,6 +37,7 @@ slug: smartui-guided-walkthrough/
       })
     }}
 ></script>
+
 This page gives you a guided walkthrough of all the things on the HyperExecute Dashboard and how you can get the most out of the platform once you have successfully [run your first sample project](/support/docs/smartui-running-your-first-project/).
 
 ## Projects Page
@@ -67,3 +68,4 @@ Located at the center of the top menu, the Diff Controls allow testers to custom
 The top menu includes browser variants, which allow cross-browser testing. Variants visible in the screenshot include: Chrome, Firefox, Edge, Playwright WebKit (Pw-Webkit). Each variant shows the same test across different browsers and resolutions, helping identify browser-specific visual issues.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/guided-walkthrough/2.png').default} alt="Image" className="doc_img"/>
+
