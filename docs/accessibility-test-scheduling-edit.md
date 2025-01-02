@@ -3,7 +3,7 @@ id: accessibility-test-scheduling-edit
 title: Edit an Accessibility Scan
 hide_title: false
 sidebar_label: Edit the Scan
-description: Customize your testing with LambdaTest Accessibility DevTools' extensive settings, tailored to meet your specific needs and preferences.
+description: Easily edit accessibility scan settings in LambdaTest. Update scan names, recurrence schedules, and timings to keep your tests organized and efficient.
 keywords:
     - LambdaTest
     - Accessibility

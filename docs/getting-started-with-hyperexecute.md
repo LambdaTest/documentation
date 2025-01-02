@@ -1,6 +1,6 @@
 ---
 id: getting-started-with-hyperexecute
-title: Getting started with Hyperexecute
+title: Getting started with HyperExecute
 hide_title: false
 sidebar_label: HyperExecute 
 description: Get started with HyperExecute on LambdaTest for faster web automation tests using Matrix and Auto-Split strategies. Test with Selenium languages at high speeds.
