@@ -127,7 +127,7 @@ Here is a sample that you can use on how to integrate the API with GithubActions
 In your Git repository, navigate to .github/workflows/ and create a file named sanity-test.yml.
 
 **Step 2: Sample for yml file**
-In below sample, we are executing a test run using test_run_id and then verifying the result for it using HyperExecute job status API. You can find more details on HyperExecute APIs (here)[https://www.lambdatest.com/support/api-doc/?key=hyperexecute] and update the API in the .yml file based on your needs.
+In below sample, we are executing a test run using test_run_id and then verifying the result for it using HyperExecute job status API. You can find more details on HyperExecute APIs [here](https://www.lambdatest.com/support/api-doc/?key=hyperexecute) and update the API in the .yml file based on your needs.
 
 ```yml
 name: Run Sanity Tests on LambdaTest
