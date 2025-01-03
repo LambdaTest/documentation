@@ -11,8 +11,6 @@ module.exports = {
   projectName: 'Lambdatest', // Usually your repo name.
   clientModules: [
     require.resolve('./custom.js'),
-    typeof window !== 'undefined' && require.resolve('./salesforce_chatwidget.js'),
-    typeof window !== 'undefined' && require.resolve('./sf_chat.js'),
   ],
 
   plugins: [require.resolve("docusaurus-plugin-image-zoom")],
@@ -22,19 +20,19 @@ module.exports = {
     //   src: 'https://www.lambdatest.com/resources/js/zohoscript.js',
     //   defer: true,
     // },
-    // {
-    //   src: 'https://staging.lambdatestinternal.com/resources/js/salesforce_chatwidget.js',
-    //   defer: true,
-    // },
+    {
+      src: 'https://staging.lambdatestinternal.com/resources/js/salesforce_chatwidget.js',
+      defer: true,
+    },
     {
       src: 'https://staging.lambdatestinternal.com/resources/js/lambda_gtm.js',
       defer: true,
     },
-    // {
-    //   src: 'https://staging.lambdatestinternal.com/resources/js/sf_chat.js',
-    //   defer: true,
-    //   onload: "sf_messaging()",
-    // },
+    {
+      src: 'https://staging.lambdatestinternal.com/resources/js/sf_chat.js',
+      defer: true,
+      onload: "sf_messaging()",
+    },
     // {
     //   src: 'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js',
     //   defer: true,
