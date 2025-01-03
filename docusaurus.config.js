@@ -11,8 +11,8 @@ module.exports = {
   projectName: 'Lambdatest', // Usually your repo name.
   clientModules: [
     require.resolve('./custom.js'),
-    require.resolve('./salesforce_chatwidget.js'),
-    require.resolve('./sf_chat.js'),
+    typeof window !== 'undefined' && require.resolve('./salesforce_chatwidget.js'),
+    typeof window !== 'undefined' && require.resolve('./sf_chat.js'),
   ],
 
   plugins: [require.resolve("docusaurus-plugin-image-zoom")],
