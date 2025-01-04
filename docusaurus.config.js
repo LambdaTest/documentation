@@ -13,14 +13,27 @@ module.exports = {
     require.resolve('./custom.js'),
   ],
   scripts: [
+    // {
+    //   src: 'https://www.lambdatest.com/resources/js/zohoscript.js',
+    //   defer: true,
+    // },
     {
-      src: 'https://www.lambdatest.com/resources/js/zohoscript.js',
+      src: 'https://www.lambdatest.com/resources/js/salesforce_chatwidget.js',
       defer: true,
     },
     {
       src: 'https://www.lambdatest.com/resources/js/lambda_gtm.js',
       defer: true,
     },
+    {
+      src: 'https://www.lambdatest.com/resources/js/sf_chat.js',
+      defer: true,
+      onload: "sf_messaging()",
+    },
+    // {
+    //   src: 'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js',
+    //   defer: true,
+    // }
   ],
   themes: ['docusaurus-theme-search-typesense','docusaurus-theme-github-codeblock'],
   plugins: [require.resolve("docusaurus-plugin-image-zoom")],
