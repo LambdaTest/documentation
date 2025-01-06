@@ -70,14 +70,7 @@ cd java-selenium-sample
 If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
 ```java title="Test.java"
-// highlight-next-line
 public static String hubURL = "https://hub.lambdatest.com/wd/hub";
-private WebDriver driver;
-public void setup() throws MalformedURLException {
-  //... your capabilities
-  // highlight-next-line
-  driver = new RemoteWebDriver(new URL(hubURL), capabilities);
-}
 ```
 
 ## Step 2: Update the dependencies
