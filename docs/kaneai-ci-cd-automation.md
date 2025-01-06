@@ -120,6 +120,71 @@ Confirm that the job title is unique to avoid conflicts. Select a region if you 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/test-manager/test-plan-ci-cd/image7.png').default} alt="Image" className="doc_img"/>
 
+## GithubActions sample
+Here is a sample that you can use on how to integrate the API with GithubActions in your Github repository:
+
+**Step 1: Create a GitHub Actions Workflow YAML File**
+In your Git repository, navigate to .github/workflows/ and create a file named sanity-test.yml.
+
+**Step 2: Sample for yml file**
+In below sample, we are executing a test run using test_run_id and then verifying the result for it using HyperExecute job status API. You can find more details on HyperExecute APIs [here](https://www.lambdatest.com/support/api-doc/?key=hyperexecute) and update the API in the .yml file based on your needs.
+
+```yml
+name: Run Sanity Tests on LambdaTest
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sanity-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Sanity Test on LambdaTest
+        id: trigger-test
+        run: |
+          echo "Triggering sanity tests on LambdaTest"
+          response=$(curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
+            --header 'accept: application/json' \
+            --header 'Content-Type: application/json' \
+            --header 'Authorization: Basic <Base64Auth>' \
+            --data '{
+                "test_run_id" : "<test_run_id>",
+                "concurrency" : 1,
+            }')
+          echo "Response: $response"
+          job_id=$(echo $response | jq -r '.job_id')
+          echo "Job ID: $job_id"
+          echo "::set-output name=job_id::$job_id"
+      
+      - name: Check Test Status
+        run: |
+          echo "Checking test status"
+          job_id=${{ steps.trigger-test.outputs.job_id }}
+          sleep 240  # Wait before checking the status
+          response=$(curl --location "https://api.hyperexecute.cloud/v2.0/job/$job_id" \
+            --header "accept: application/json" \
+            --header "Authorization: Basic <Base64Auth>")
+            
+          echo "Response: $response"
+          status=$(echo $response | jq -r '.data.status')
+          echo "Test status: $status"
+          if [[ "$status" != "completed" ]]; then
+            echo "Tests failed. Exiting with error."
+            exit 1
+          fi
+          echo "Sanity tests passed successfully."
+```
+
+**Step 3: Define Workflow Triggers**
+Set the workflow to trigger on push and pull_request events (you can modify the trigger based on your needs) under "on" section of the yaml above.
+
+
 ## Video Explanation
 
 :::tip
