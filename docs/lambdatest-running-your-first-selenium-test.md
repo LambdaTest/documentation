@@ -48,7 +48,7 @@ LambdaTest provides a powerful Selenium Grid that allows you to perform automate
 ## Prerequisites
 Before you begin, ensure you have the following:
 
-- Your [LambdaTest Username and Access Key](https://accounts.lambdatest.com/security)
+- Your [LambdaTest Username and Access Key](https://accounts.lambdatest.com/)
 - Install Java Development Kit (JDK). We recommend Java version 11
 - Install [Maven](https://maven.apache.org/)
 - [Download](https://www.selenium.dev/downloads/) the latest Selenium Client and its WebDriver bindings
