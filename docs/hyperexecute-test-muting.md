@@ -55,6 +55,13 @@ As you can see, we have triggered a Job in HyperExecute, and we've encountered a
 
 Now, to enable the Test Muting, follow the below mentioned steps:
 
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/ctmmlcgefgxn?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+
 **Step 1:** Go to the [LambdaTest Dashboard](https://accounts.lambdatest.com/dashboard).
 
 **Step 2:** Click on the **Settings** button.
@@ -71,16 +78,19 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 **Step 6:** Now, if you trigger the same job again, you will notice that the particular test has muted.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/test-mute.gif').default} alt="Image" className="doc_img"/>
-
 ## How do you Manually Mute specific Tests?
+
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/d9wfxwteumny?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 **Step 1:** Execute your job on HyperExecute.
 
 - Click on the **3 dots** of the desired test you want to **Mute**.
 - Click on the **Mute Scenario** button.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/manual-mute.gif').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
 **Step 2:** Trigger the same job again, and you will notice that particular test won't be executed.
 
@@ -88,10 +98,16 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 ## How do you UnMute Tests?
 
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/m48g5owz95jz?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+
 **Step 1:** Click on the **3 dots** of the muted test.
 
 **Step 2:** Click on the **Unmute scenario** button. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/unmute.gif').default} alt="Image" className="doc_img"/>
 
 > The test will remain in-active until manually unmuted.

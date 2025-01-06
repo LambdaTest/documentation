@@ -75,12 +75,18 @@ background:
 
 To check the background service logs, follow the below mentioned steps:
 
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/jxrlvsdcnfte?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+
 **Step 1:** After executing your job, go to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute/jobs) to check the status of the job.
 
 **Step 2:** Click on the **Background Service** button.
 
 **Step 3:** Click on the desired **background service** you have triggered to check its logs.
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/background-service/background-service.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ## Frequently Asked Questions
 
