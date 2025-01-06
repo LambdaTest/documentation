@@ -50,26 +50,8 @@ partialReports:
   location: YOUR_REPORTS_LOCATION
   type: html
   frameworkName: specflow
-  email:
-     to: ["example@example.com"]
-     metaInfo: ["project-name:<any>","project-env:<any>"]
 ```
 
 **Step 3:** Now execute your job by triggering the HyperExecute CLI. You can visit the HyperExecute dashboard to download the report after job completion.
-
-:::info
-You can also generate Custom Specflow reports using the Specflow reporting API. You can use the Specflow reporting API to generate reports in any format you want, such as HTML, PDF, or XML.
-
-```yaml
-report: true
-partialReports:
-  location: YOUR_REPORTS_LOCATION
-  type: html
-  frameworkName: specflow-custom
-  email:
-     to: ["example@example.com"]
-     metaInfo: ["project-name:<any>","project-env:<any>"]
-```
-:::
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/reports/specflow.png').default} alt="Image" className="doc_img"/> 
