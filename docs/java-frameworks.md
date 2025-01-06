@@ -67,6 +67,12 @@ git clone https://github.com/LambdaTest/java-selenium-sample.git
 cd java-selenium-sample
 ```
 
+If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
+
+```java title="Test.java"
+public static String hubURL = "https://hub.lambdatest.com/wd/hub";
+```
+
 ## Step 2: Update the dependencies
 Run the command below to check for outdated dependencies. Review updates carefully before modifying your `pom.xml`, as they might not be compatible with your code.
 
