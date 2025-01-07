@@ -62,7 +62,7 @@ Download or Clone the code sample for the Java from the LambdaTest GitHub reposi
 <a href="https://github.com/LambdaTest/java-selenium-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
-```bash
+```bash title="terminal"
 git clone https://github.com/LambdaTest/java-selenium-sample.git
 cd java-selenium-sample
 ```
@@ -76,8 +76,12 @@ public static String hubURL = "https://hub.lambdatest.com/wd/hub";
 ## Step 2: Update the dependencies
 Run the command below to check for outdated dependencies. Review updates carefully before modifying your `pom.xml`, as they might not be compatible with your code.
 
-```bash
+```bash title="terminal"
 mvn versions:display-dependency-updates
+```
+
+```xml reference
+https://github.com/LambdaTest/java-selenium-sample/blob/main/pom.xml
 ```
 
 ## Step 3: Configure your test Capabilities
@@ -95,7 +99,7 @@ capabilities.setCapability("name", "LambdaTestJavaSample");
 ```
 
 :::tip
-You can generate capabilities for your test requirements with the help of our inbuilt :link: **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.
+Use our [Capability Generator](https://www.lambdatest.com/capabilities-generator/) to select from a wide range of options for customizing your tests.
 :::
 
 ## Step 4: Setup your LambdaTest credentials
@@ -124,7 +128,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ## Step 5: Execute your test
 Replace the `TEST_FILE_NAME` in the below command with your desired test file to execute that particular test on LambdaTest Grid:
-```bash
+```bash title="terminal"
 mvn clean install exec:java -Dexec.mainClass="com.lambdatest.TEST_FILE_NAME" -Dexec.classpathScope=test -e
 ```
 
