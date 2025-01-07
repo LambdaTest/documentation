@@ -54,11 +54,11 @@ To configure the Appium version for your tests on LambdaTest, use the `appiumVer
 
 | Platform Versions | Supported Versions | Default Version | Latest Version |
 |-------------------|--------------------|-----------------|----------------|
-| Android (All) | 1.21.0, 1.22.0, 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2 | 2.2.1 | 2.3.0 |
+| Android (All) | 1.21.0, 1.22.0, 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2, 2.11.4, 2.12.1 | 2.2.1 | 2.3.0 |
 | iOS (12, 13, 14) | 1.22.3, 2.0.0, 2.1.3, 2.2.1 | 2.2.1 | 2.2.1 |
-| iOS (15, 16, 17, 18) | 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2 | 2.2.1 | 2.3.0 |
-| fireos | 1.21.0, 1.22.0, 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2 | 2.2.1 | 2.3.0 |
-| tvos | 1.22.3 | 1.22.3 | 1.22.3 |
+| iOS (15, 16, 17, 18) | 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2, 2.11.4, 2.12.1 | 2.2.1 | 2.3.0 |
+| fireos | 1.21.0, 1.22.0, 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0 | 2.2.1 | 2.3.0 |
+| tvos | 1.22.3, 2.2.1 | 1.22.3 | 1.22.3 |
 
 
 **Java Example:** 
@@ -91,6 +91,8 @@ capabilities.setCapability("platformName", "ios");
 | 2.6.0          | appium-xcuitest-driver@7.13.0  | appium-uiautomator2-driver@3.5.1      |
 | 2.10.3         | appium-xcuitest-driver@7.17.4  | appium-uiautomator2-driver@3.5.3      |
 | 2.11.2         | appium-xcuitest-driver@7.23.1  | appium-uiautomator2-driver@3.7.2      |
+| 2.11.4         | appium-xcuitest-driver@7.26.4  | appium-uiautomator2-driver@3.7.11     |
+| 2.12.1         | appium-xcuitest-driver@7.28.3  | appium-uiautomator2-driver@3.8.0      |
 
 :::note 
 - If a user passes any Appium version other than the mentioned versions, appropriate error will be thrown.
