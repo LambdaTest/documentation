@@ -113,7 +113,6 @@ This feature helps you inject any image which you want your app to click or scan
 
 **Step 3:** Now, hover over your app and click on the **Settings** icon. Toggle the **Image Injection** option and click on **Save Changes** button. Click on **Start** to run your app on the selected device.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/camera-injection/step1.gif').default} className="doc_img"/>
 
 **Step 4:** After the above config, click on the **Start** button to start the session. Now, go to **Device Controls** in the toolbar as shown below. Select Image Injection and click **Upload Image** to inject the desired image from your computer to the app.
 
@@ -123,7 +122,13 @@ This feature helps you inject any image which you want your app to click or scan
 
 **Step 7:** The black image is now replaced with an injected image.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/camera-injection/step2.gif').default} className="doc_img"/>
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/scecvtiqzhju?embed=inline" name="sl-embed"   name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+
 
 :::info
 
