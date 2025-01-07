@@ -43,9 +43,14 @@ With LambdaTest’s Real Device browser testing, you get access to a plethora of
 
 Let us get an overview of all the features in our real device instance:
 
-<img loading="lazy" src={require('../assets/images/real-device-browser-testing/real-device-browser-testing-home.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
-
 ## Comprehensive Sidebar
+
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/rodprkjklrvp?embed=inline"  name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 ### Home
 
@@ -147,6 +152,13 @@ By clicking on the end session button, you can close your current test session.
 
 ## Comprehensive Top Bar
 ***
+
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/bhi7qrlpgnwr?embed=inline"  name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 ### Zoom In-Out
 
