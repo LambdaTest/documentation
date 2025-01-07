@@ -116,7 +116,7 @@ To launch the Realtime test, click on **Run Test**.
 
 <img loading="lazy" src={require('../assets/images/slack-app-integration/realtime-vm.webp').default} alt="Slack App" width="1263" height="621" className="doc_img"/>
 
-To know more about Real-time Testing, refer to the documentation [Real Time Browser Testing](/docs/real-time-browser-testing/).
+To know more about Real-time Testing, refer to the documentation [Real Time Browser Testing](/docs/getting-started-with-desktop-browser-real-time-testing/).
 
 ## Running Screenshot Tests From Slack App
 * * *

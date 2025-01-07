@@ -102,7 +102,7 @@ It will take you to a cloud-based virtual machine running real browsers and oper
 <img loading="lazy" src={require('../assets/images/vscode-extension/public.png').default} alt="activate screenshot testig feature" width="1197" height="555" className="doc_img"/><br/><br/>
 
 
-For more details, head over to our guide on [Real Time Browser Testing](https://www.lambdatest.com/support/docs/real-time-browser-testing/).
+For more details, head over to our guide on [Real Time Browser Testing](https://www.lambdatest.com/support/docs/getting-started-with-desktop-browser-real-time-testing/).
 
 ## Testing Locally Hosted Websites Using VS Code Extension
 ---

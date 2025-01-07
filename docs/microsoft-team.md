@@ -114,7 +114,7 @@ Step 5: A Real-time test card will be generated consisting of the test configura
 
 <img loading="lazy" src={require('../assets/images/microsoft-team/real-time-testing.webp').default} alt="microsoft team app" width="1263" height="621" className="doc_img"/>
 
-For further information on the Real-time Testing, refer to our documentation [Real Time Browser Testing](/docs/real-time-browser-testing/).
+For further information on the Real-time Testing, refer to our documentation [Real Time Browser Testing](/docs/getting-started-with-desktop-browser-real-time-testing/).
 
 > Note: You can create the real-time test from inside your team conversation and direct conversation. You and your team members can directly launch the session from the respective card with a click of a button, resulting in better collaboration and an easier way to find UI bugs.
 
