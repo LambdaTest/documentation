@@ -55,12 +55,7 @@ As you can see, we have triggered a Job in HyperExecute, and we've encountered a
 
 Now, to enable the Test Muting, follow the below mentioned steps:
 
-<div className="storylane-iframe">
-  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
-  <div className="sl-embed">
-    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/ctmmlcgefgxn?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
-  </div>
-</div>
+
 
 **Step 1:** Go to the [LambdaTest Dashboard](https://accounts.lambdatest.com/dashboard).
 
@@ -78,14 +73,16 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 **Step 6:** Now, if you trigger the same job again, you will notice that the particular test has muted.
 
-## How do you Manually Mute specific Tests?
-
 <div className="storylane-iframe">
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
   <div className="sl-embed">
-    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/d9wfxwteumny?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/ctmmlcgefgxn?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
   </div>
 </div>
+
+## How do you Manually Mute specific Tests?
+
+
 
 **Step 1:** Execute your job on HyperExecute.
 
@@ -96,7 +93,20 @@ Now, to enable the Test Muting, follow the below mentioned steps:
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/features/test-muting/6.png').default} alt="Image" style={{width: '700px',}} className="doc_img"/>
 
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/d9wfxwteumny?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+
 ## How do you UnMute Tests?
+
+
+
+**Step 1:** Click on the **3 dots** of the muted test.
+
+**Step 2:** Click on the **Unmute scenario** button. 
 
 <div className="storylane-iframe">
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
@@ -104,10 +114,6 @@ Now, to enable the Test Muting, follow the below mentioned steps:
     <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/m48g5owz95jz?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
   </div>
 </div>
-
-**Step 1:** Click on the **3 dots** of the muted test.
-
-**Step 2:** Click on the **Unmute scenario** button. 
 
 
 > The test will remain in-active until manually unmuted.
