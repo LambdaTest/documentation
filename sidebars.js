@@ -2802,7 +2802,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Bring your Own Screenshots",
+            label: "Test your Figma Designs",
             items: [
               {
                 type: "doc",
