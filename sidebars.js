@@ -2799,7 +2799,23 @@ module.exports = {
             ],
           },
           "smartui-cli",
-          "smartui-cli-figma",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Bring your Own Screenshots",
+            items: [
+              {
+                type: "doc",
+                label: "Figma-Web",
+                id: "smartui-cli-figma-web",
+              },
+              {
+                type: "doc",
+                label: "Figma-Figma",
+                id: "smartui-cli-figma",
+              },
+            ],
+          },
           {
             type: "category",
             collapsed: true,
