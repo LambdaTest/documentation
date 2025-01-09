@@ -67,9 +67,12 @@ The platform automatically gets the instructions from the HyperExecute YAML file
 
 **Step 5:** Click on **View Test Result** to navigate to [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute/jobs) where you can see the job getting executed and the test results.
 
-<video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/hyperexecute/getting-started/run-first-job/quick-run.mp4').default} type="video/mp4" />
-</video>
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/ydgq44tmjpdc?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 ***
 
