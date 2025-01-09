@@ -2889,6 +2889,7 @@ module.exports = {
           "test-settings-options",
           "html-dom-smartui-options",
           "smart-ui-build-options",
+          "smartui-multiple-projects-per-repo"
         ]
       },
     ],
