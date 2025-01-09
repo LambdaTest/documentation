@@ -219,7 +219,7 @@ npx smartui upload-figma-web designs.json
 
 ### Working example with actual web comparisons
 
-1. Please clone the following sample Github repo (`https://github.com/LambdaTest/puppeteer-sample`).
+1. Please clone the following sample Github repo (`https://github.com/LambdaTest/smartui-figma-web-cli-sample`).
 
 ```bash
 git clone https://github.com/LambdaTest/smartui-figma-web-cli-sample
