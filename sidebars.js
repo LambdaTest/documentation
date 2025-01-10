@@ -2775,12 +2775,14 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "CLI Configurations",
+            label: "Advanced CLI Configurations",
             items: [
               "smartui-sdk-build-name",
               "smartui-sdk-fetch-results",
               "smartui-cli-responsive-dom",
               "smartui-sdk-config-options",
+              "smartui-multiple-assets-hosts",
+              "smartui-shadow-dom",
               {
                 type: "category",
                 collapsed: true,
