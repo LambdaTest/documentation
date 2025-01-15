@@ -1,6 +1,6 @@
 ---
 id: analytics-test-time-trends
-title: Analytics Modules
+title: Time Insights
 sidebar_label: Setup Time Insights
 description: Monitor and optimize test environment setup times with LambdaTest's Setup Time Insights module. Analyze trends, compare across platforms, and receive AI-driven optimization recommendations
 keywords:
@@ -9,6 +9,8 @@ url: https://www.lambdatest.com/support/docs/analytics-test-time-trends/
 site_name: LambdaTest
 slug: analytics-test-time-trends/
 ---
+
+import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -33,14 +35,6 @@ slug: analytics-test-time-trends/
       })
     }}
 ></script>
-
----
-
-import NewTag from '../src/component/newTag';
-
-
-# Setup Time Insights
-
 <img loading="lazy" src={require('../assets/images/analytics/astt-widgets.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
 ## Understanding The Setup Time Insights Widget

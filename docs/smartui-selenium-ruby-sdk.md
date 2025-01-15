@@ -1,6 +1,6 @@
 ---
 id: smartui-selenium-ruby-sdk
-title: Integrate SmartUI SDK with Selenium Tests
+title: Integrate SmartUI SDK with Selenium-Ruby
 sidebar_label: Ruby
 description: In this documentation, learn how integrate your Selenium Ruby automated tests with LambdaTest's SmartUI.
 keywords:
