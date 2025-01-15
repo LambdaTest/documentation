@@ -1,6 +1,6 @@
 ---
 id: smartui-cli
-title: Getting started with Lambdatest's Smart UI CLI 
+title: Capture Static URLs via CLI 
 sidebar_label: Capture Static URLs
 description: In this documentation, learn how to perform Visual UI Testing using command line interface on the LambdaTest Automation Cloud across 40+ browser versions.
 keywords:
@@ -75,10 +75,7 @@ The first step is to create a project with the application in which we will comb
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
-## Steps to run your first test
-
-
-### **Step 1**: Install the Dependencies
+## Step 1: Install the Dependencies
 
 Install required NPM modules for `LambdaTest Smart UI CLI` in your **Frontend** project.
 
@@ -86,7 +83,7 @@ Install required NPM modules for `LambdaTest Smart UI CLI` in your **Frontend** 
 npm install @lambdatest/smartui-cli
 ```
 
-### **Step 2:** Create URL file
+## Step 2: Create URL file
 
 ```
 smartui config:create-web-static urls.json
@@ -114,7 +111,7 @@ If you are using any async components, you can add wait time for the page to loa
 
 :::
 
-### **Step 3:** Configure your Project Token
+## Step 3: Configure your Project Token
 
 Setup your project token show in the **SmartUI** app after, creating your project.
 
@@ -137,7 +134,7 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-### **Step 4:** Create and Configure SmartUI Config
+## Step 4: Create and Configure SmartUI Config
 
 You can now configure your project settings on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
@@ -179,7 +176,7 @@ Once, the configuration file will be created, you will be seeing the default con
 }
 ```
 
-#### For capturing viewport screenshots
+### For capturing viewport screenshots
 
 To capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport's width and height in your configuration settings. Specify the desired width and height parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area.
 
@@ -204,7 +201,7 @@ To capture a screenshot of the content currently visible in your viewport, rathe
 You may use the `smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
 :::
 
-#### SmartUI CLI Config Options
+### SmartUI CLI Config Options
 
 Please read the following table for more information about the configuration file:
 
@@ -214,10 +211,7 @@ Please read the following table for more information about the configuration fil
 | resolutions    | You can add all the supported browser viewpoints here to run your tests for SmartUI <br/> Ex: `[1920, 1080],[width, height] etc..` <br/> | Mandatory |
 
 
-
-
-
-### **Step 5:** Execute the Tests on SmartUI Cloud using CLI
+## **Step 5:** Execute the Tests on SmartUI Cloud using CLI
 
 You can now execute tests for `Visual Regression Testing` using the following options:.
 
@@ -225,25 +219,40 @@ You can now execute tests for `Visual Regression Testing` using the following op
 npx smartui capture urls.json --config .smartui.json
 ```
 
-
-### Fetch results
+## Fetch results
 
 You can fetch build results by adding the `--fetch-results` flag to your test execution command. Here are different ways to use this feature:
 
-#### Default Usage
+### Default Usage
 If no filename is specified, results will be stored in `results.json`:
 
 ```bash
 npx smartui capture urls.json --config .smartui.json --fetch-results
 ```
 
-#### Custom Filename
+### Custom Filename
 Specify a custom filename for your results:
 
 ```bash
 npx smartui capture urls.json --config .smartui.json --fetch-results custom-results.json 
 ```
-### Setup with Continuous Integration (CI)
+
+## Adding a custom build name
+You can add a custom build name by adding the `--buildName` flag to your test execution command. Here is how you can utilise this feature:
+
+Specify a custom build name to group your screenshots in the following way:
+
+```bash
+npx smartui capture urls.json --buildName "Sample Build Name" --config .smartui.json
+```
+
+> Note: 
+> - If no build name is provided, a random name will be automatically assigned to the build.
+> - Specifying the name of an existing build within the project will append the screenshots to that build.
+> - Existing screenshots with the same name and configuration in the build will be overwritten during a re-run.
+
+
+## Setup with Continuous Integration (CI)
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI CLI` execution then the following are the steps needs to be added to your `.yaml` file:
 
@@ -257,7 +266,7 @@ steps:
        smartui capture urls.json --config smartui-web.json
 ```
 
-### SmartUI CLI Options and Keys
+## SmartUI CLI Options and Keys
 
 The following are supported `CLI (Command Line Interface)` options for Visual Regression Testing with SmartUI:
 
@@ -272,7 +281,7 @@ You can see the Smart UI dashboard to view the results. This will help you ident
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-### Parallel execution of static URLs
+## Parallel execution of static URLs
 
 You can reduce the build time by executing parallel URLs in the following way. 
 
@@ -288,7 +297,7 @@ npx smartui capture urls.json --config .smartui.json --parallel <number-of-paral
 >npx smartui capture urls.json --config .smartui.json --parallel 3 --fetch-results   
 >```
 
-#### Determining Optimal Thread Count
+### Determining Optimal Thread Count
 The maximum number of parallel threads is calculated using the formula: log<sub>2</sub>(N) where N is the total number of URLs.
 
 >**For example:**
@@ -296,7 +305,7 @@ The maximum number of parallel threads is calculated using the formula: log<sub>
 >- For 50 URLs: Maximum parallel threads = log<sub>2</sub>(50) = 5 threads
 >- For 25 URLs: Maximum parallel threads = log<sub>2</sub>(25) = 4 threads
 
-#### Best Practices for parallel execution
+### Best Practices for parallel execution
 
 - Start with a lower thread count and gradually increase based on your system's performance
 - Monitor system resources during execution

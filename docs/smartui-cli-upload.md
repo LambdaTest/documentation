@@ -1,6 +1,6 @@
 ---
 id: smartui-cli-upload
-title: Getting started with Lambdatest's Smart UI CLI 
+title: Upload your Screenshots via CLI
 sidebar_label: Upload through CLI
 description: In this documentation, learn how to upload and compare images (jpgs, jpegs, pngs) using the SmartUI CLI.
 keywords:
@@ -48,9 +48,6 @@ import NewTag from '../src/component/newTag';
       })
     }}
 ></script>
-
-Welcome to the LambdaTest SmartUI CLI documentation! 
-
 With SmartUI CLI, you can seamlessly perform visual regression testing on the LambdaTest platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of uploading and comparing images using the SmartUI CLI.
 
 ## Prerequisites for running SmartUI CLI
@@ -70,10 +67,7 @@ The first step is to create a project with the application in which we will comb
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
-## Steps to run your first test
-
-
-### **Step 1**: Install the Dependencies
+## Step 1: Install the Dependencies
 
 Install required NPM modules for `LambdaTest Smart UI CLI` in your **Frontend** project.
 
@@ -81,7 +75,7 @@ Install required NPM modules for `LambdaTest Smart UI CLI` in your **Frontend** 
 npm install @lambdatest/smartui-cli
 ```
 
-### **Step 2:** Configure your Project Token
+## Step 2: Configure your Project Token
 
 Setup your project token show in the **SmartUI** app after, creating your project.
 
@@ -104,7 +98,7 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-### **Step 3:** Upload the required directory of images
+## Step 3: Upload the required directory of images
 
 ```
 npx smartui upload <directoryName> 
@@ -112,7 +106,7 @@ npx smartui upload <directoryName>
 The screenshots in the directory name will be uploaded to SmartUI.
 
 
-#### For ignoring the resolutions of the images
+### For ignoring the resolutions of the images
 
 By default, SmartUI captures and considers image resolutions. If you prefer to ignore resolutions and compare images solely based on their names, use the following flag:
 
@@ -120,8 +114,7 @@ By default, SmartUI captures and considers image resolutions. If you prefer to i
 npx smartui upload <directoryName> --ignoreResolutions
 ```
 
-
-#### SmartUI CLI Upload Options
+### SmartUI CLI Upload Options
 
 Please read the following table for more information about the options available to upload a directory of static images to SmartUI.
 
@@ -137,7 +130,7 @@ Please read the following table for more information about the options available
 You may use the `smartui upload --help` command in case you are facing issues during the execution of SmartUI Upload options in the CLI.
 :::
 
-### Setup with Continuous Integration (CI)
+## Setup with Continuous Integration (CI)
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI CLI` execution then the following are the steps needs to be added to your `.yaml` file:
 
@@ -151,7 +144,7 @@ steps:
        npx smartui upload <Directory Name> --removeExtensions
 ```
 
-### SmartUI CLI Options and Keys
+## SmartUI CLI Options and Keys
 
 The following are supported `CLI (Command Line Interface)` options for Visual Regression Testing with SmartUI:
 
@@ -160,28 +153,41 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 | --config     | This is the reference configuration file containing the SmartUI Cloud Configuration | Optional |
 | --help       | This will print all help information for the SmartUI CLI options                    | Optional |
 
-### View SmartUI Results
+## View SmartUI Results
 
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 
-### Fetch results
+## Fetch results
 
 You can fetch build results by adding the `--fetch-results` flag to your test execution command. Here are different ways to use this feature:
 
-#### Default Usage
+### Default Usage
 If no filename is specified, results will be stored in `results.json`:
 
 ```bash
 npx smartui upload <directoryName> --fetch-results
 ```
 
-#### Custom Filename
+### Custom Filename
 Specify a custom filename for your results:
 
 ```bash
 npx smartui upload <directoryName> --fetch-results custom-results.json 
 ```
+## Adding a custom build name
+You can add a custom build name by adding the `--buildName` flag to your test execution command. Here is how you can utilise this feature:
+
+Specify a custom build name to group your screenshots in the following way:
+
+```bash
+npx smartui upload <directoryName>  --buildName "Sample Build Name"
+```
+
+> Note: 
+> - If no build name is provided, a random name will be automatically assigned to the build.
+> - Specifying the name of an existing build within the project will append the screenshots to that build.
+> - Existing screenshots with the same name and configuration in the build will be overwritten during a re-run.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

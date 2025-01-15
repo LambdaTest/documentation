@@ -1,6 +1,6 @@
 ---
 id: regular-expression-xcui
-title: Regular Expression (REGEX)
+title: Regular Expression - XCUI
 # hide_title: true
 sidebar_label: Regular Expression
 description: There may be instances when the device you chose for a test on LambdaTest is not available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.

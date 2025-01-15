@@ -1,6 +1,6 @@
 ---
 id: analytics-modules-smartui-analytics
-title: Analytics Modules - Overview
+title: SmartUI Analytics - Visual Regression Testing Insights
 sidebar_label: SmartUI
 description: Discover LambdaTest's SmartUI Analytics widgets for comprehensive visual regression testing insights. Optimize your visual testing efforts today.
 keywords:
@@ -12,8 +12,9 @@ keywords:
 url: https://www.lambdatest.com/support/docs/analytics-modules-smartui-analytics/
 site_name: LambdaTest
 slug: analytics-modules-smartui-analytics/
-
 ---
+
+import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -38,13 +39,6 @@ slug: analytics-modules-smartui-analytics/
       })
     }}
 ></script>
-
----
-
-
-import NewTag from '../src/component/newTag';
-
-# SmartUI Analytics - Visual Regression Testing Insights
 The SmartUI Analytics module provides a suite of widgets to help you analyze and optimize your visual regression testing efforts on the LambdaTest platform. By leveraging these widgets, you can gain valuable insights into the scale, coverage, and performance of your visual testing initiatives, enabling you to make data-driven decisions and ensure the highest quality of your application's visual integrity.
 
 :::note

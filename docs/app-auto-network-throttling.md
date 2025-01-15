@@ -1,6 +1,6 @@
 ---
 id: app-auto-network-throttling
-title: Network Throttling 
+title: Network Throttling for Appium tests
 hide_title: false
 sidebar_label: Network Throttling
 description: Now validate your mobile applications over low latency networks (2G/3G/LTE) or in offline mode with varying upload and download speeds. LambdaTest empowers you to simulate these mobile network conditions through its desired capabilities, ensuring comprehensive testing of your mobile applications.

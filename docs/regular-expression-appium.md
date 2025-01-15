@@ -1,6 +1,6 @@
 ---
 id: regular-expression-appium
-title: Regular Expression (REGEX)
+title: Regular Expression - Appium
 # hide_title: true
 sidebar_label: Regular Expression
 description: If your chosen device for testing on LambdaTest is unavailable, use REGEX to broaden the search request for alternative devices to run the test.
