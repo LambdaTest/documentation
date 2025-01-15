@@ -88,17 +88,13 @@ We will be taking care of everything one by one, just follow the steps given bel
 
 **Step 2:** Choose your test automation framework, Select **Run on Local System** and click on **Get Started**. 
 
-  <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/run-first-job/4.png').default} alt="Image"  className="doc_img"/>
-
 **Step 3:** Download our sample project by clicking on **Download Sample**. (Skip this step if you already have a project you want to test)
 
 **Step 4:** Download the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) as per the OS that you are on.
 
 **Step 5:** Select the OS on which you want to run your tests and then download the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file shown on screen. This contains all the configurations required for running tests on HyperExecute. 
 
-<video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/hyperexecute/getting-started/run-first-job/local-system.mp4').default} type="video/mp4" />
-</video>
+
 
    > **Note**: Your Yaml file should be in the root directory of your project. If you are renaming it, also change the file name in the execution script as well. You can learn more about the advanced configurations [here](/support/docs/deep-dive-into-hyperexecute-yaml/), however for the given sample projects you can simply download the file using the small icon on top right. 
 
@@ -107,6 +103,13 @@ We will be taking care of everything one by one, just follow the steps given bel
 **Step 7:** When you run this command, the HyperExecute CLI will send your test scripts to the HyperExecute Platform for execution across multiple parallel Test Execution Nodes.
 
 **Step 8:** Once your Job is running, you can click on **View Test Results** to navigate to HyperExecute Dashboard where you can see the job getting executed along with the test results.
+
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/qn3z533xbk7l?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 :::note
 The generic command required to initiate test execution is given below. You will need to insert the name of your YAML file in place of the `RELATIVE_PATH_OF_YOUR_YAML_FILE` before running this command. (Skip if you already used the command from Step 6. )
