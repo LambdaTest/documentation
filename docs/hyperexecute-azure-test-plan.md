@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-azure-test-plan
-title: Azure Test Plan
-hide_title: true
+title: Azure Test Plan Integration with HyperExecute
+hide_title: false
 sidebar_label: Azure Test Plan
 description: Seamless Azure Test Plan integration with HyperExecute for efficient test management and execution. Boost software quality effortlessly.
 keywords:
@@ -38,9 +38,6 @@ slug: hyperexecute-azure-test-plan/
       })
     }}
 ></script>
-
-# Azure Test Plan Integration with HyperExecute
-
 > It is a **Premium** feature of Azure. You will have to buy access to [Azure Test Plans](https://learn.microsoft.com/en-us/azure/devops/organizations/billing/buy-access-tfs-test-hub?view=azure-devops-2022#buy-monthly-access-to-azure-test-plans)
 
 In this fast-paced world of software development, ensuring fast and quality testing cycle in not an option anymore, but a necessity. Imagine a scenario where your team is diligently working on a project, but managing test plans, suites, spreadsheets, and cases becomes a maze of complexity. This is where Azure Test Plan comes in as your bestfriend.

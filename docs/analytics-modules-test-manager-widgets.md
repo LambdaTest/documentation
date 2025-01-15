@@ -1,6 +1,6 @@
 ---
 id: analytics-modules-test-manager-widgets
-title: Analytics Modules - Overview
+title: Test Manager Dashboard Widgets
 sidebar_label: Test Manager
 description: Discover LambdaTest's Test Manager Analytics widgets for comprehensive test cases insights. Optimize your testing efforts today.
 keywords:
@@ -12,8 +12,9 @@ keywords:
 url: https://www.lambdatest.com/support/docs/analytics-modules-test-manager-widgets/
 site_name: LambdaTest
 slug: analytics-modules-test-manager-widgets/
-
 ---
+
+import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -38,13 +39,6 @@ slug: analytics-modules-test-manager-widgets/
       })
     }}
 ></script>
-
----
-
-import NewTag from '../src/component/newTag';
-
-# Test Manager Dashboard Widgets
-
 LambdaTest Test Manager Dashboard widgets provide comprehensive insights into your test automation or manual efforts. These widgets help you optimize your testing efforts by providing detailed insights into your test execution, test case insights, and more.
 
 :::note

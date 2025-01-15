@@ -1,6 +1,6 @@
 ---
 id: analytics-modules-accessibility-widgets
-title: Analytics Modules - Overview
+title: Accessibility Dashboard Widgets
 sidebar_label: Accessibility
 description: Discover LambdaTest's Accessibility Dashboard widgets for comprehensive accessibility testing insights. Optimize your accessibility testing efforts today.
 keywords:
@@ -13,8 +13,9 @@ keywords:
 url: https://www.lambdatest.com/support/docs/analytics-modules-accessibility-widgets/
 site_name: LambdaTest
 slug: analytics-modules-accessibility-widgets/
-
 ---
+
+import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -39,12 +40,6 @@ slug: analytics-modules-accessibility-widgets/
       })
     }}
 ></script>
-
----
-
-import NewTag from '../src/component/newTag';
-
-# Accessibility Dashboard Widgets
 
 LambdaTest Accessibility Dashboard widgets provide comprehensive insights into your accessibility testing efforts. These widgets help you optimize your accessibility testing efforts by providing detailed insights into your accessibility testing scans, 
 Top 10 URLs Issue Criticality, and more.

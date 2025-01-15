@@ -1,6 +1,6 @@
 ---
 id: real-time-mobile-browser-testing-tools
-title: How to use Testing Tools?
+title: How to use Testing Tools for Mobile Browsers?
 hide_title: false
 sidebar_label: Testing Tools
 description: Enhance your mobile app testing with LambdaTest's comprehensive tools. Simulate actions, capture screenshots, record sessions, and more. Test across devices, locations, and network conditions for optimal results.

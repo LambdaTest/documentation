@@ -1,6 +1,6 @@
 ---
 id: supported-appium-versions-on-emulator-simulator
-title: Supported Appium Versions
+title: Supported Appium Versions - Virtual Devices
 hide_title: false
 sidebar_label: Supported Appium Versions
 description:  Find detailed information on the compatible Appium versions for testing your Android apps on virtual devices (emulator/simulator) using LambdaTest.

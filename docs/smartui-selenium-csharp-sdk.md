@@ -1,6 +1,6 @@
 ---
 id: smartui-selenium-csharp-sdk
-title: Integrate SmartUI SDK with Selenium Tests
+title: Integrate SmartUI SDK with Selenium-CSharp
 sidebar_label: C#
 description: In this documentation, learn how integrate your Selenium C# automated tests with LambdaTest's SmartUI.
 keywords:

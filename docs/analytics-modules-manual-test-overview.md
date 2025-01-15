@@ -1,9 +1,8 @@
 ---
 id: analytics-modules-manual-test-overview
-title: Analytics Modules - Test Overview
+title: Realtime & Real-Device Modules
 sidebar_label: Realtime & Real-Device
 description: A complete guide to understanding LambdaTest Analytics! Optimize your testing process with widgets for Browser & App Testing - OS, Browser, Device, and Trends.
-
 keywords:
  - analytics
  - test overview
@@ -40,11 +39,6 @@ slug: analytics-modules-manual-test-overview/
       })
     }}
 ></script>
-
----
-
-# Understanding Your Test Performance with the Test Overview Module
-
 The Test Overview module in LambdaTest Analytics is a powerful tool that provides you with a comprehensive view of your test performance across various dimensions. By leveraging this module, you can gain valuable insights into test flakiness, total tests run, and test categorization by status and platform.
 
 ## Browser Testing Summary

@@ -1,6 +1,6 @@
 ---
 id: smartui-selenium-java-sdk
-title: Integrate SmartUI SDK with Selenium Tests
+title: Integrate SmartUI SDK with Selenium-Java
 sidebar_label: Java
 description: In this documentation, learn how integrate your Selenium Java automated tests with LambdaTest's SmartUI.
 keywords:

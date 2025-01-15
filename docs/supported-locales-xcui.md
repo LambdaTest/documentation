@@ -1,6 +1,6 @@
 ---
 id: supported-locales-xcui
-title: Supported Locales And Languages
+title: Supported Locales And Languages - XCUI
 hide_title: false
 sidebar_label: Supported Locales And Languages
 description: Checkout the list of all supported locales

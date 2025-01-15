@@ -1,6 +1,6 @@
 ---
 id: lambdatest-sso-manage-connection
-title: LambdaTest SSO
+title: Manage SSO Connection
 hide_title: true
 sidebar_label: Manage SSO Connection
 description: This document will help you set up and manage your LambdaTest SSO connection. 
@@ -40,10 +40,6 @@ slug: lambdatest-sso-manage-connection/
       })
     }}
 ></script>
-
-
-# Manage SSO Connection
----
 Navigate to LambdaTest <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a>.
    <img loading="lazy" src={require('../assets/images/sso-self-serve/edit-connection.png').default} alt="setup sso button" width="944" height="409" className="doc_img"/>
 
