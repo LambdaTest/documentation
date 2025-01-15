@@ -1,6 +1,6 @@
 ---
 id: cypress-v10-hyprerexecute-accessibility-tests
-title: Automation Tests with Accessibility Tool using Cypress v10
+title: Accessibility Testing on HyperExecute using Cypress v10
 hide_title: false
 sidebar_label:  Cypress v10 
 description: Use LambdaTest Accessibility DevTools with HyperExecute to detect and report accessibility issues, adhering to WCAG guidelines, in your cypress tests for version 10 and above

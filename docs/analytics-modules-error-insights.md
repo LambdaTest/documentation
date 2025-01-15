@@ -1,6 +1,6 @@
 ---
 id: analytics-modules-error-insights
-title: Analytics Modules
+title: Error Insights
 sidebar_label: Session Errors 
 description: Analytics Modules - Error Insights
 keywords:
@@ -33,11 +33,6 @@ slug: analytics-modules-error-insights/
       })
     }}
 ></script>
-
----
-
-# Error Insights
-
 The `Error Insights` module enables the users to get all the insights into the test errors on LambdaTest in one place. The user can easily find information about the count, and type of the test errors through the highly customizable widgets.
 
 ## Error Stats

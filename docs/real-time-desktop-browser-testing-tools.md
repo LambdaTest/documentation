@@ -1,6 +1,6 @@
 ---
 id: real-time-desktop-browser-testing-tools
-title: How to use Testing Tools?
+title: How to use Testing Tools for Desktop Browsers?
 hide_title: false
 sidebar_label: Testing Tools
 description: Enhance your web testing with LambdaTest's comprehensive tool suite. Capture screenshots, record sessions, manage files, and more. Test across devices, browsers, and locations for optimal results.

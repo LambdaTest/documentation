@@ -1,6 +1,6 @@
 ---
 id: smartui-selenium-python-sdk
-title: Integrate SmartUI SDK with Selenium Tests
+title: Integrate SmartUI SDK with Selenium-Python
 sidebar_label: Python
 description: In this documentation, learn how integrate your Selenium Python automated tests with LambdaTest's SmartUI.
 keywords:

@@ -1,6 +1,6 @@
 ---
 id: project-management-tools-gitlab-integration
-title: GitLab Integration
+title: GitLab Integration:LambdaTest
 hide_title: true
 sidebar_label: GitLab
 description: LambdaTest provides integrations with GitLab to help you log bugs directly from the middle of your test session on LambdaTest to your GitLab repository.

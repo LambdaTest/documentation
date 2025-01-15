@@ -1,6 +1,6 @@
 ---
 id: smartui-playwright-python-sdk
-title: Integrate SmartUI SDK with Playwright Tests
+title: Integrate SmartUI SDK with Playwright-Python
 sidebar_label: Python
 description: In this documentation, learn how integrate your Playwright Python automated tests with LambdaTest's SmartUI.
 keywords:
