@@ -54,4 +54,9 @@ To use the AI-powered Test Failure Analysis feature, simply click on the Failure
 
 After categorizing errors, we offer a structured approach to address each failure type. You can efficiently get to the precise corrective measures or **Remedies** recommended alng with **Additional suggestions** for the particular error. This targeted approach expedites the issue resolution process, eliminating unnecessary steps and optimizing efficiency.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/rca/rca.gif').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/1decserb8xfq?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
