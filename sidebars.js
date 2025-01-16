@@ -828,9 +828,16 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "January, 2025",
+            label: "CLI Releases",
             items: [
-              'hyperexecute-release-notes-2-6-8',
+              {
+                type: "category",
+                collapsed: true,
+                label: "January, 2025",
+                items: [
+                  'hyperexecute-cli-release-notes-0-2-249',
+                ]
+              },
             ]
           },
 

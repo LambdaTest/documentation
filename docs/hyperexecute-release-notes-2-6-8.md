@@ -1,17 +1,17 @@
 ---
-id: hyperexecute-release-notes-2-6-8
-title: Version 2.6.8
+id: hyperexecute-cli-release-notes-0-2-249
+title: Version 0.2.249
 hide_title: false
-sidebar_label: Version 2.6.8
-description: Version 2.6.8
+sidebar_label: Version 0.2.249
+description: Version 0.2.249
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
   - LambdaTest Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-6-8/
+url: https://www.lambdatest.com/support/docs/hyperexecute-cli-release-notes-0-2-249/
 site_name: LambdaTest
-slug: hyperexecute-release-notes-2-6-8/
+slug: hyperexecute-cli-release-notes-0-2-249/
 ---
 
 import NewReleaseTag from '../src/component/newRelease.js';
