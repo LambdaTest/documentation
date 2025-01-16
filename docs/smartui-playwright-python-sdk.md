@@ -15,15 +15,13 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-cli/
+url: https://www.lambdatest.com/support/docs/smartui-playwright-python-sdk/
 slug: smartui-playwright-python-sdk/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
-
----
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -78,7 +76,7 @@ The first step is to create a project with the application in which we will comb
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots
 
-### **Step 1:** Create/Update your test
+### Step 1: Create/Update your test
 
 - You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `SmartUI_SDK_LT_hub.py` file.
 
@@ -99,7 +97,7 @@ virtualenv venv
 source venv/bin/activate
 ```
 
-### **Step 2**: Install the Dependencies
+### Step 2: Install the Dependencies
 
 Install required NPM modules for `LambdaTest Smart UI Playwright Python SDK` in your **Frontend** project.
 
@@ -110,7 +108,7 @@ npm i @lambdatest/smartui-cli
 pip install lambdatest-playwright-driver
 ```
 
-### **Step 3:** Configure your Project Token
+### Step 3: Configure your Project Token
 
 Setup your project token show in the **SmartUI** app after, creating your project.
 
@@ -139,7 +137,7 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-### **Step 4:** Create and Configure SmartUI Config
+### Step 4: Create and Configure SmartUI Config
 
 You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
@@ -190,7 +188,7 @@ Once, the configuration file will be created, you will be seeing the default con
 - For more information about SmartUI config global options, please refer to this [documentation](/docs/smartui-sdk-config-options/#3-global-options-optional).
 :::
 
-### **Step 5:** Adding SmartUI function to take screenshot
+### **Step 5: Adding SmartUI function to take screenshot
 
 - You can incorporate SmartUI into your custom `Playwright` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of playwright script of which we would like to take the screenshot, as shown below: 
   
@@ -221,7 +219,7 @@ with sync_playwright() as playwright:
     run(playwright)
 ```
 
-### **Step 6:** Execute the Tests on SmartUI Cloud
+### Step 6: Execute the Tests on SmartUI Cloud
 
 Execute `visual regression tests` on SmartUI using the following commands
 
@@ -239,10 +237,7 @@ You have successfully integrated SmartUI SDK with your Playwright tests. Visit y
 
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
-
-
 
 ## Arguments supported in the `smartUISnapshot` function
 
@@ -432,23 +427,3 @@ smartui_snapshot(page,"<Screenshot Name>", options)
 </TabItem>
 
 </Tabs>
-
-For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
-    </li>
-  </ul>
-</nav>

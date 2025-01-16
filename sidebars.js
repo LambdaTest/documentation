@@ -2766,6 +2766,11 @@ module.exports = {
                     items: [
                       {
                         type: "doc",
+                        label: "Java",
+                        id: "smartui-playwright-java-sdk",
+                      },
+                      {
+                        type: "doc",
                         label: "Javascript",
                         id: "smartui-playwright-sdk",
                       },

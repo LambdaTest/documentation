@@ -1,8 +1,8 @@
 ---
-id: smartui-playwright-sdk
-title: Integrate SmartUI SDK with Playwright-JavaScript
-sidebar_label: JavaScript
-description: In this documentation, learn how integrate your Playwright automated tests with LambdaTest's SmartUI.
+id: smartui-playwright-java-sdk
+title: Integrate SmartUI SDK with Playwright - Java
+sidebar_label: Java
+description: In this documentation, learn how integrate your Playwright Java automated tests with LambdaTest's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -15,13 +15,15 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-playwright-sdk/
-slug: smartui-playwright-sdk/
+url: https://www.lambdatest.com/support/docs/smartui-playwright-java-sdk/
+slug: smartui-playwright-java-sdk/
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -46,19 +48,23 @@ import NewTag from '../src/component/newTag';
       })
     }}
 ></script>
+The SmartUI SDK is a powerful tool that simplifies the process of capturing, comparing, and analyzing screenshots across multiple browsers and resolutions. By combining the strengths of Playwright's automation capabilities with SmartUI's visual testing features, you can:
 
-Welcome to the world of simplified visual testing with the SmartUI SDK. 
+- Ensure your application's UI is consistent across all supported environments.
+- Detect and address visual discrepancies early in the development lifecycle.
+- Streamline your testing process with minimal setup and maximum coverage.
 
-Integrating seamlessly into your existing Playwright testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
+This documentation provides step-by-step instructions for developers and QA engineers to integrate the SmartUI SDK with Playwright-Java, enabling reliable and efficient visual regression testing.
 
 ## Prerequisites
 
 - Basic understanding of Command Line Interface and Playwright is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI Playwright SDK integration.
+## Steps to run your first test
+Follow these steps to successfully run your first visual regression test on the LambdaTest platform with the SmartUI Playwright SDK integration.
 
-## Create a SmartUI Project
+### Step 1: Create a SmartUI Project
 
 The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
 
@@ -68,62 +74,78 @@ The first step is to create a project with the application in which we will comb
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
-## Steps to run your first test
+### Step 2: Configure Your Test Suite
 
-Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots
+You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
-### Step 1: Create/Update your test
+:::tip Sample repo
+Download or Clone the code sample for the Java from the LambdaTest GitHub repository to run the tests on the SmartUI.
 
-You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `plawrightCloud.js` file present in the `sdk` folder.
+<a href="https://github.com/LambdaTest/smartui-java-playwright-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
 
-```bash
-git clone https://github.com/LambdaTest/smartui-playwright-sample
-cd smartui-playwright-sample/sdk
-```
-### Step 2: Install the Dependencies
+### Step 3: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI Playwright SDK` in your **Frontend** project.
+Update your dependencies in `pom.xml` file Install required modules for LambdaTest Smart UI SDK in your frontend project.
 
 ```bash
 npm i @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
+mvn clean compile
 ```
 
-### Step 3: Configure your Project Token
+### Step 4: Setup your credentials
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+<Tabs className="docs__val">
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<TabItem value="terminal" label="Linux / MacOS" default>
 
-```bash
-export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
-```
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
+  </CodeBlock>
+</div>
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
 
-```bash
-set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
-```
+<TabItem value="cmd" label="Windows-CMD" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
+  </CodeBlock>
+</div>
 
 </TabItem>
-<TabItem value="Powershell" label="Windows-PS">
 
-```bash
-$Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
-```
+<TabItem value="powershell" label="Windows-PS" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`$Env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+$Env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+$Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
+
+  </CodeBlock>
+</div>
+
 </TabItem>
+
 </Tabs>
+
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 
-### Step 4: Create and Configure SmartUI Config
+### Step 5: Create and Configure SmartUI Config
 
 You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
 ```bash
-npx smartui config:create .smartui.json
+npx smartui config:create smartui-web.json
 ```
 
 Once, the configuration file will be created, you will be seeing the default configuration pre-filled in the configuration file:
@@ -169,41 +191,19 @@ Once, the configuration file will be created, you will be seeing the default con
 - For more information about SmartUI config global options, please refer to this [documentation](/docs/smartui-sdk-config-options/#3-global-options-optional).
 :::
 
-### Step 5: Adding SmartUI function to take screenshot
-
-- You can incorporate SmartUI into your custom `Playwright` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of Playwright script of which we would like to take the screenshot, as shown below: 
+### Step 6: Adding SmartUI function to take screenshot
+You can incorporate SmartUI into your custom `Playwright` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of Playwright script of which we would like to take the screenshot, as shown below: 
   
-
-```js
-const { chromium } = require("playwright");
-const smartuiSnapshot = require("@lambdatest/playwright-driver");
-
-(async () => {
-  // Launch a local browser instance
-  const browser = await chromium.launch({
-    headless: false, // Set to false to see the browser UI
-  });
-
-  const page = await browser.newPage();
-
-  // Navigate to the desired URL
-  await page.goto("https://www.lambdatest.com");
-
-  // Use smartuiSnapshot to take a visual snapshot locally
-  await smartuiSnapshot.smartuiSnapshot(page, "Lambdatest");
-
-  // Close the browser
-  await browser.close();
-})();
-
+```java reference
+https://github.com/LambdaTest/smartui-java-playwright-sample/blob/main/src/test/java/com/lambdatest/SmartUISDKPlaywrightCloud.java
 ```
 
 ### Step 6: Execute the Tests on SmartUI Cloud
 
-Execute `visual regression tests` on SmartUI using the following commands
+Execute visual regression tests on SmartUI using the following commands
 
 ```bash
-npx smartui exec node playwrightCloud.js --config .smartui.json
+npx smartui exec -- mvn test -D suite=sdk-playwright-local-java.xml
 ```
 
 :::note 
