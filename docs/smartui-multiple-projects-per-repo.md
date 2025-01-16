@@ -2,7 +2,7 @@
 id: smartui-multiple-projects-per-repo
 title: Configure Multiple Projects per repo
 sidebar_label: Multiple Projects per repo
-description: SmartUI can now performs visual testing on pages that have videos.
+description: Learn how to manage multiple SmartUI projects in a single repository with ease using this detailed documentation.
 keywords:
   - lambdatest
   - smart ui
