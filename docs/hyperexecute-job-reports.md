@@ -38,6 +38,10 @@ slug: hyperexecute-job-reports/
 ></script>
 HyperExecute Job Reports are designed to offer deep insights into the performance of your tests. By utilizing these reports, you can identify issues, track progress, and enhance your software testing workflow. Whether you're a developer or QA engineer, understanding and leveraging the various report types is crucial to delivering high-quality software efficiently.
 
+:::tip
+If you want to learn how to **generate** and **download** detailed reports, including **multiple reports**, please refer to the [HyperExecute Reports documentation](https://www.lambdatest.com/support/docs/hyperexecute-reports/) page.
+:::
+
 ## Extent Report
 The [Extent Report](/support/docs/extent-report/) is a robust reporting framework commonly used with Java TestNG, and Selenium tests. It provides a feature-rich environment to explore test results, offering:
 
