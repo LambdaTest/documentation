@@ -38,6 +38,10 @@ slug: hyperexecute-reports/
 ></script>
 Reports provide summarized job information, including status counts and links to tests. You can generate and download detailed reports at the end of job execution that helps you analyze the outcome of your tests based on your framework. 
 
+:::tip note
+Refer to this detailed [Job Reports](https://www.lambdatest.com/support/docs/hyperexecute-job-reports/) page to learn more about the types of reports being offered and how to configure them.
+:::
+
 ## Steps to Generate and Download Reports
 
 Follow the below mentioned steps to generate the Reports for your desired framework:
@@ -86,27 +90,3 @@ partialReports:
         to:
           - johndoe@example.com
 ```
-
-:::info
-Refer to the detailed documentation on [Job Reports](/support/docs/hyperexecute-job-reports/)
-:::
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Downloading Job Reports
-      </span>
-    </li>
-  </ul>
-</nav>
