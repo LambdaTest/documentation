@@ -188,9 +188,10 @@ mvn test -P parallel
 </TabItem>
 </Tabs>
 
+Visit the [LambdaTest Web Automation](https://automation.lambdatest.com/build) page to check the status of your test execution.
+
 <img loading="lazy" src={require('../assets/images/selenium/language-frameworks/java/1.png').default} alt="Image"  className="doc_img"/>
 
-Visit the [LambdaTest Web Automation](https://automation.lambdatest.com/build) page to check the status of your test execution.
 
 ## Additional Links
 - [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/)
