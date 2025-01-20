@@ -23,8 +23,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 
----
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -74,7 +72,7 @@ The first step is to create a project with the application in which we will comb
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots
 
-### **Step 1:** Create/Update your test
+### Step 1: Create/Update your test
 
 You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use the `plawrightCloud.js` file present in the `sdk` folder.
 
@@ -82,7 +80,7 @@ You can clone the sample repository to run `LambdaTest` automation tests with `S
 git clone https://github.com/LambdaTest/smartui-playwright-sample
 cd smartui-playwright-sample/sdk
 ```
-### **Step 2**: Install the Dependencies
+### Step 2: Install the Dependencies
 
 Install required NPM modules for `LambdaTest Smart UI Playwright SDK` in your **Frontend** project.
 
@@ -90,7 +88,7 @@ Install required NPM modules for `LambdaTest Smart UI Playwright SDK` in your **
 npm i @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
 ```
 
-### **Step 3:** Configure your Project Token
+### Step 3: Configure your Project Token
 
 Setup your project token show in the **SmartUI** app after, creating your project.
 
@@ -120,7 +118,7 @@ $Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 
-### **Step 4:** Create and Configure SmartUI Config
+### Step 4: Create and Configure SmartUI Config
 
 You can now configure your project configurations on using various available options to run your tests with the SmartUI integration. To generate the configuration file, please execute the following command:
 
@@ -171,7 +169,7 @@ Once, the configuration file will be created, you will be seeing the default con
 - For more information about SmartUI config global options, please refer to this [documentation](/docs/smartui-sdk-config-options/#3-global-options-optional).
 :::
 
-### **Step 5:** Adding SmartUI function to take screenshot
+### Step 5: Adding SmartUI function to take screenshot
 
 - You can incorporate SmartUI into your custom `Playwright` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of Playwright script of which we would like to take the screenshot, as shown below: 
   
@@ -200,7 +198,7 @@ const smartuiSnapshot = require("@lambdatest/playwright-driver");
 
 ```
 
-### **Step 6:** Execute the Tests on SmartUI Cloud
+### Step 6: Execute the Tests on SmartUI Cloud
 
 Execute `visual regression tests` on SmartUI using the following commands
 
@@ -461,25 +459,3 @@ const smartuiSnapshot = require('@lambdatest/playwright-driver');
   }
 })();
 ```
-
-
-For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
-
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
-    </li>
-  </ul>
-</nav>

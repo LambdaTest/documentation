@@ -93,12 +93,10 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 - **23.82.88.184**
 - **23.106.34.219**
 - **23.106.54.77**
-
->Below are IPs that will be deprecated soon
-> - 3.214.241.254
-> - 52.36.84.247
-> - 13.126.37.58
-> - 3.66.78.89
+- **3.214.241.254**
+- **52.36.84.247**
+- **13.126.37.58**
+- **3.66.78.89**
 
 ## LambdaTest Integration Tools
 - **3.208.126.109**
