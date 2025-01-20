@@ -223,9 +223,9 @@ You can see the Smart UI dashboard to view the results. This will help you ident
 
 The following are the different options which are currently supported:
 
-| Key                       | Description                                                                                                               |
+| Key                       | Description                                                                                                                                                                                                                                                                                                 |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `page` (instance)    | The instance of page used in your tests. |
+| `driver` (instance)    | The instance of the web driver used in your tests. |
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
 
@@ -238,54 +238,58 @@ When conducting visual tests, you may encounter scenarios where certain elements
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
-```js title="This is a sample for your configuration for Playwright to ignore by ID"
-let options = {
-            ignoreDOM: {
-                id: ["ID-1", "ID-2"],
-            }
-        }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```java title="This is a sample for your configuration for Java to ignore by ID"
+List<String> cssID = Arrays.asList("<required ID>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> ignore = new HashMap<>();
+ignore.put("id", cssID);
+options.put("ignoreDOM", ignore);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
 <TabItem value="IgoreClass" label="Ignore Class">
 
-```js title="This is a sample for your configuration for Playwright to ignore by Class"
-let options = {
-            ignoreDOM: {
-                class: ["Class-1", "Class-2"],
-            }
-        }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```java title="This is a sample for your configuration for Java to ignore by Class"
+List<String> cssclass = Arrays.asList("<required class>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> ignore = new HashMap<>();
+ignore.put("class", cssclass);
+options.put("ignoreDOM", ignore);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
 <TabItem value="IgnoreXPath" label="Ignore XPath">
 
-```js title="This is a sample for your configuration for Playwright to ignore by XPath"
-let options = {
-            ignoreDOM: {
-                xpath: ["Xpath-1", "Xpath-2"],
-            }
-        }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```java title="This is a sample for your configuration for Java to ignore by XPath"
+List<String> path = Arrays.asList("<required xpath>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> ignore = new HashMap<>();
+ignore.put("xpath", path);
+options.put("ignoreDOM", ignore);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
 
 <TabItem value="IgnoreSelector" label="Ignore CSS Selector">
 
-```js title="This is a sample for your configuration for Playwright to ignore by CSS Selector"
-let options = {
-            ignoreDOM: {
-                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
-            }
-        }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```java title="This is a sample for your configuration for Java to ignore by CSS Selector"
+List<String> selector = Arrays.asList("<required selector>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> ignore = new HashMap<>();
+ignore.put("cssSelector", selector);
+options.put("ignoreDOM", ignore);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 </TabItem>
 
@@ -294,54 +298,58 @@ let options = {
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>
 
-```js title="This is a sample for your configuration for Playwright to select by ID."
-let options = {
-            selectDOM: {
-                id: ["ID-1", "ID-2"],
-            }
-        }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```java title="This is a sample for your configuration for Java to select by ID."
+List<String> cssID = Arrays.asList("<required ID>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> select = new HashMap<>();
+select.put("id", cssID);
+options.put("selectDOM", select);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
 <TabItem value="SelectClass" label="Select Class">
 
-```js title="This is a sample for your configuration for Playwright to select by Class"
-let options = {
-            selectDOM: {
-                class: ["Class-1", "Class-2"],
-            }
-        }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```java title="This is a sample for your configuration for Java to select by Class"
+List<String> cssclass = Arrays.asList("<required class>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> select = new HashMap<>();
+select.put("class", cssclass);
+options.put("selectDOM", select);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
 <TabItem value="SelectXPath" label="Select XPath">
 
-```js title="This is a sample for your configuration for Playwright to select by XPath"
-let options = {
-            selectDOM: {
-                xpath: ["Xpath-1", "Xpath-2"],
-            }
-        }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```java title="This is a sample for your configuration for Java to select by XPath"
+List<String> path = Arrays.asList("<required xpath>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> select = new HashMap<>();
+select.put("xpath", path);
+options.put("selectDOM", select);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
 
 <TabItem value="SelectSelector" label="Select CSS Selector">
 
-```js title="This is a sample for your webhook configuration for Playwright to select by CSS Selector"
-let options = {
-            selectDOM: {
-                cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
-            }
-        }
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```java title="This is a sample for your webhook configuration for Java to select by CSS Selector"
+List<String> selector = Arrays.asList("<required selector>");
+Map<String, Object> options = new HashMap<>();
+Map<String, List<String>> select = new HashMap<>();
+select.put("cssSelector", selector);
+options.put("selectDOM", select);
+
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 </TabItem>
 
@@ -355,54 +363,50 @@ You can capture screenshots of targeted elements by leveraging various locator m
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="ElementID" label="Capture Element by ID" default>
 
-```js title="This is a sample for your configuration for Playwright to capture an element by ID."
-let options = {
-      element: {
-          id: 'Required ID',
-      }
-  };
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```java title="This is a sample for your configuration for Javas to capture an element by ID."
+HashMap<String, Object> options = new HashMap<>();
+HashMap<String, String> locator = new HashMap<>();
+options.put("element", locator);
+locator.put("id", "Required ID");
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
 <TabItem value="ElementClass" label="Capture Element by Class">
 
-```js title="This is a sample for your configuration for Playwright to capture an element by Class"
-let options = {
-      element: {
-          class: 'Required Class',
-      }
-  };
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```java title="This is a sample for your configuration for Java to capture an element by Class"
+HashMap<String, Object> options = new HashMap<>();
+HashMap<String, String> locator = new HashMap<>();
+options.put("element", locator);
+locator.put("class", "Required Class");
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
 <TabItem value="ElementXPath" label="Capture Element by XPath">
 
-```js title="This is a sample for your configuration for Playwright to capture an element by XPath"
-let options = {
-      element: {
-          xpath: 'Required Xpath',
-      }
-  };
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```java title="This is a sample for your configuration for Java to capture an element by XPath"
+HashMap<String, Object> options = new HashMap<>();
+HashMap<String, String> locator = new HashMap<>();
+options.put("element", locator);
+locator.put("xpath", "Required Xpath");
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
 
 <TabItem value="ElementSelector" label="Capture Element by Selector">
 
-```js title="This is a sample for your webhook configuration for Playwright to capture an element by CSS Selector"
-let options = {
-      element: {
-          cssSelector: 'Required CSS Selector',
-      }
-  };
-        await page.goto('Required URL');
-        await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name", options);
+```java title="This is a sample for your configuration for Java to capture an element by CSS Selector"
+HashMap<String, Object> options = new HashMap<>();
+HashMap<String, String> locator = new HashMap<>();
+options.put("element", locator);
+locator.put("cssSelector", "Required Selector");
+driver.get("Required URL");
+SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 </TabItem>
 
@@ -412,50 +416,43 @@ let options = {
 
 If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
 
-```js Example for scrolling to bottom for lazy elements
-const { chromium } = require('playwright');
-const smartuiSnapshot = require('@lambdatest/playwright-driver');
+```java Example for scrolling to bottom for lazy elements
+//Rest of your code here
 
-(async () => {
-  const browser = await chromium.launch({ headless: false }); // Set headless: false to see the browser UI
-  const page = await browser.newPage();
+@Test
+public void basicTest() throws Exception {
+    System.out.println("Loading Url");
+    driver.get("Required URL");
+    quickScrollToBottom();
 
-  try {
-    await page.goto('Required URL');
+    SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name");
+    Thread.sleep(5000); // wait for 5 seconds
+    System.out.println("Test Finished");
+}
 
-    // Function to scroll to the bottom of the page
-    async function quickScrollToBottom(lastPageWait) {
-      await page.evaluate(async (lastPageWait) => {
-        const scrollToBottom = async (lastPageWait) => {
-          const getScrollHeight = () => document.body.scrollHeight;
-          let lastHeight = await getScrollHeight();
-          let currentHeight = 0;
-
-          while (currentHeight < lastHeight) {
-            window.scrollTo(0, lastHeight);
-            await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for page to load
-            currentHeight = lastHeight;
-            lastHeight = await getScrollHeight();
-          }
-
-          if (lastPageWait) {
-            await new Promise(resolve => setTimeout(resolve, lastPageWait)); // Additional wait at the bottom
-          }
-
-          // Scroll back to the top after reaching the bottom
-          window.scrollTo(0, 0);
-          await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for scroll to top
-        };
-
-        await scrollToBottom(lastPageWait);
-      }, lastPageWait);
+public void quickScrollToBottom() throws InterruptedException {
+    long lastHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
+    while (true) {
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+        Thread.sleep(2000);
+        
+        long newHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
+        if (newHeight == lastHeight) {
+            break;
+        }
+        lastHeight = newHeight;
     }
+    ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+    Thread.sleep(1000); // wait for 1 second
+}
 
-    await quickScrollToBottom(100); // Adjust wait time as needed
-    await smartuiSnapshot.smartuiSnapshot(page, "Screenshot Name");
-
-  } finally {
-    await browser.close();
-  }
-})();
+@AfterMethod
+public void tearDown() {
+    if (driver != null) {
+        driver.quit();
+    }
+}
+}
 ```
+
+For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
