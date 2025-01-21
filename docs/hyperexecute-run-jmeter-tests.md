@@ -128,3 +128,34 @@ You can analyze the number of requests sent on that particular time.
 - You can check the logs of your Jobs executed.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/performance_testing/logs.png').default} alt="HyperExecute"  width="1920" height="868" className="doc_img"/>
+
+## Handling Special Scenarios: Overriding and Default Values
+### Scenario 1: Overriding Values via the HyperExecute UI
+When executing performance tests using HyperExecute, you have the option to override default parameters directly in the UI. Let’s explore a sample scenario to understand how HyperExecute handles these overrides.
+
+You configure the following parameters in the HyperExecute UI:
+- **Virtual Users :** (The total number of simulated users for the test): 500
+- **Ramp-Up Time :** 1 minute
+- **Total Duration :** 2 minutes
+- **Regions :** 2 (50% distribution each)
+- **Maximum Users per Machine :** 100
+
+#### Resulting Test Distribution:
+- **Load Distribution Across Regions :**
+  - The total 500 virtual users are divided equally between the two regions.
+  - Each region is allocated 250 users (500 users ÷ 2 regions).
+
+- **Machine Allocation :** Since a single machine can handle a maximum of 100 users, each region requires multiple machines to support its load:
+  - **Region 1 :** 250 users → 3 machines (lets say it distributed as 84, 83, 83 users per machine).
+  - **Region 2 :** 250 users → 3 machines (lets say it distributed as 84, 83, 83 users per machine).
+
+- **User Allocation per Machine:** Users are evenly distributed among machines to ensure optimal utilization and balanced load:
+For example, in Region 1:
+Machine 1 = 84 users, Machine 2 = 83 users, Machine 3 = 83 users.
+
+#### Key Takeaways:
+- **Flexible Overrides :** HyperExecute dynamically adjusts the load distribution and machine allocation based on your specified parameters.
+- **Optimal Resource Utilization :** It ensures that no machine exceeds the maximum user threshold, maintaining a balanced and efficient test execution.
+- **Region-Specific Allocation :** Users are distributed proportionally based on the defined load percentages for each region.
+
+This approach ensures smooth execution of performance tests and provides precise control over resource utilization, enabling you to simulate real-world scenarios effectively.
