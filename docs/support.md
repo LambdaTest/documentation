@@ -49,6 +49,7 @@ import TestManagerDarkIcon from '../assets/images/support/testManager-dark.svg';
 import AccessibilityDarkIcon from '../assets/images/support/accessibility-dark.svg';
 import AccessibilityLightIcon from '../assets/images/support/accessibility-light.svg';
 
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -76,8 +77,8 @@ import NewTag from '../src/component/newTag';
 <p>Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mobile Platforms</p>
 </div>
 <div className="Doc_intro_cta_image">
-<img  loading="eager" src={require('../assets/images/support/home_light.png').default} alt="Image" width="701" height="576" className="home_light_cta no-zoom" role="presentation"/>
-<img  loading="eager" src={require('../assets/images/support/home_dark.png').default} alt="Image" width="701" height="576" className="home_dark_cta no-zoom" role="presentation"/>
+<img  loading="eager" src={require('../assets/images/support/home_light.png').default} alt="Image" width="701" height="576" className="home_light_cta" role="presentation"/>
+<img  loading="eager" src={require('../assets/images/support/home_dark.png').default} alt="Image" width="701" height="576" className="home_dark_cta" role="presentation"/>
 </div>
 </div>
 
@@ -87,7 +88,7 @@ import NewTag from '../src/component/newTag';
 
   <div className="home_main">
     <div className="home_inners_box">
-       <h2 className='homeMain_h2'><AutomationLightIcon className="home_icons home_light_icon" role="presentation"/> <AutomationDarkIcon className="home_icons home_dark_icon" role="presentation"/>Web Automation</h2>
+      <h2 className='homeMain_h2'><AutomationLightIcon className="home_icons home_light_icon" role="presentation"/> <AutomationDarkIcon className="home_icons home_dark_icon" role="presentation"/>Web Automation</h2>
       <div className="home_inners">
         <a href="/support/docs/getting-started-with-lambdatest-automation/"><p className="p_home_inners">Selenium Testing</p></a>
         <a href="/support/docs/getting-started-with-cypress-testing/"><p className="p_home_inners">Cypress Testing</p></a>
@@ -112,7 +113,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/getting-started-with-hyperexecute/"><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/hyperexecute-yaml-parameters/"><p className="p_home_inners">HyperExecute YAML</p></a>
         <a href="/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/"><p className="p_home_inners">HyperExecute CLI</p></a>
-        <a href="/support/docs/hyperexecute-cli-gui/"><p className="p_home_inners">HypEx GUI &nbsp; <NewTag  value="BETA" /></p></a>
+        <a href="/support/docs/hyperexecute-cli-gui/"><p className="p_home_inners">HyperExecute GUI &nbsp; <NewTag  value="BETA" /></p></a>
         <a href="/support/docs/key-features-of-hyperexecute/"><p className="p_home_inners">Features</p></a>
     <a href="/support/docs/integration-with-hyperexecute/"><p className="p_home_inners">Integrations</p></a>
      <a href="/support/docs/hyperexecute-private-cloud-setup/"><p className="p_home_inners">Private Cloud</p></a>
@@ -124,11 +125,11 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/analytics-dashboard-templates/"><p className="p_home_inners">Pre-built Dashboards</p></a>
         <a href="/support/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboards</p></a>
         <a href="/support/docs/analytics-widgets/"><p className="p_home_inners">Widgets</p></a>
-        <a href="/support/docs/analytics-dashboard-copilot/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA"/></p></a>
-        <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
-        <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Error Logs Insights</p></a>
+        <a href="/support/docs/analytics-dashboard-copilot/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA" /></p></a>
         <a href="/support/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
-        <a href="/support/docs/analytics-allure-api-widgets/"><p className="p_home_inners">Allure Tests Insights</p></a>
+        <a href="/support/docs/analytics-build-comparison/"><p className="p_home_inners">Build Insights</p></a>
+        <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
+        <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Command Logs Insights</p></a>
       </div>
     </div>
   </div>
@@ -185,9 +186,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/public-cloud-vs-private-cloud/" ><p className="p_home_inners">Private Cloud</p></a>
       </div>
     </div>
-</div>
-
-    
+    </div>
 
 <!-- end of second section -->
 
@@ -207,7 +206,7 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
-       <h2 className='homeMain_h2'><IntegrationsLightIcon className="home_icons home_light_icon" role="presentation"/> <IntegrationsDarkIcon className="home_icons home_dark_icon" role="presentation"/>Integrations</h2>
+      <h2 className='homeMain_h2'><IntegrationsLightIcon className="home_icons home_light_icon" role="presentation"/> <IntegrationsDarkIcon className="home_icons home_dark_icon" role="presentation"/>Integrations</h2>
       <div className="home_inners">
         <a href="/support/docs/bug-tracking-tools/"><p className="p_home_inners">Bug Tracking</p></a>
         <a href="/support/docs/integrations-with-project-management-tools/"><p className="p_home_inners">Project Management</p></a>
@@ -241,7 +240,6 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
 
-
 <!-- end of third section -->
 
 <!-- start of fourth section -->
@@ -254,7 +252,6 @@ import NewTag from '../src/component/newTag';
     <a href="/support/docs/scim/"><p className="p_home_inners">SCIM</p></a>
   </div>
 </div>
-
 <div className="home_inners_box">
       <h2 className='homeMain_h2'><OtherLightIcon className="home_icons home_light_icon" role="presentation"/> <OtherDarkIcon className="home_icons home_dark_icon" role="presentation"/>Other Docs</h2>
       <div className="home_inners">
@@ -264,6 +261,6 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/automated-screenshot-testing/"><p className="p_home_inners">Screenshot Testing</p></a>
         <a href="/support/docs/responsive-testing/"><p className="p_home_inners">Responsive Testing</p></a>
       </div>
-      </div>
-    </div>   
+    </div>
+</div>   
 </div>

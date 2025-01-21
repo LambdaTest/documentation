@@ -2988,6 +2988,7 @@ module.exports = {
         "analytics-modules-groups",
       ],
     },
+    "analytics-build-comparison",
     "analytics-modules-test-intelligence-flaky-test-analytics",
     "analytics-dashboard-copilot",
     "analytics-allure-api-widgets",
