@@ -2303,7 +2303,7 @@ module.exports = {
           type: "doc",
           id: "playwright-android-guide",
         },
-        items: ["playwright-android-guide", "playwright-android-caps"],
+        items: ["playwright-android-caps", "playwright-webview-test"],
       },
       "parallel-playwright-test",
       "migrate-playwright-tests",
