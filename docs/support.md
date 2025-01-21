@@ -126,10 +126,10 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboards</p></a>
         <a href="/support/docs/analytics-widgets/"><p className="p_home_inners">Widgets</p></a>
         <a href="/support/docs/analytics-dashboard-copilot/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA" /></p></a>
-        <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
-        <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Error Logs Insights</p></a>
         <a href="/support/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
-        <a href="/support/docs/analytics-allure-api-widgets/"><p className="p_home_inners">Allure Tests Insights</p></a>
+        <a href="/support/docs/analytics-build-comparison/"><p className="p_home_inners">Build Insights</p></a>
+        <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
+        <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/"><p className="p_home_inners">Command Logs Insights</p></a>
       </div>
     </div>
   </div>
