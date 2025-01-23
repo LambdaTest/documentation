@@ -17,6 +17,9 @@ site_name: LambdaTest
 slug: selenium-add-test-meta-data/
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -45,18 +48,97 @@ The `customData` capability allows you to associate additional metadata with tes
 ## How to add custom metadata for running automation tests on LambdaTest
 To add custom metadata in your automation tests, simply add the capability `customData` in your test script with all the metadata information that we support to add:
 
-```javascript title="Test.js"
-exports.capabilities = {
-  // ...other capabilities
-  "customData": [{ 
-    "_id": "5f46aaa69adf77cfe2bb4fd6", 
-    "index": "0", 
-    "guid": "9451b204-12f0-4177-8fe9-fb019b3e4bf3", 
-    "isActive": "False", 
-    "picture": "https://www.placehold.it/32x32"
-  }]    
-};
+<Tabs className="docs__val">
+
+<TabItem value="Java" label="Java" default>
+
+```java title="Test.java"
+ltOptions.put("customData", new HashMap<String, Object>() {{
+    put("jiraTicket", "JIRA-12345");
+    put("githubPR", "https://github.com/organization/repo/pull/678");
+    put("testDescription", "This test validates login functionality under high load.");
+}});
 ```
+
+</TabItem>
+
+<TabItem value="Node.js" label="Node.js" default>
+
+```javascript title="Test.js"
+"LT:Options": {
+  "customData": {
+    "jiraTicket": "JIRA-12345",
+    "githubPR": "https://github.com/organization/repo/pull/678",
+    "testDescription": "This test validates login functionality under high load."
+  }
+}
+```
+</TabItem>
+
+<TabItem value="TypeScript" label="TypeScript" default>
+
+```typescript title="Test.ts"
+"LT:Options": {
+  customData: {
+    jiraTicket: "JIRA-12345",
+    githubPR: "https://github.com/organization/repo/pull/678",
+    testDescription: "This test validates login functionality under high load."
+  }
+}
+```
+</TabItem>
+
+<TabItem value="PHP" label="PHP" default>
+
+```php title="Test.php"
+"LT:Options" => [
+  "customData" => [
+    "jiraTicket" => "JIRA-12345",
+    "githubPR" => "https://github.com/organization/repo/pull/678",
+    "testDescription" => "This test validates login functionality under high load."
+  ]
+]
+```
+</TabItem>
+
+<TabItem value="Python" label="Python" default>
+
+```python title="Test.py"
+"LT:Options": {
+  "customData": {
+    "jiraTicket": "JIRA-12345",
+    "githubPR": "https://github.com/organization/repo/pull/678",
+    "testDescription": "This test validates login functionality under high load."
+  }
+}
+```
+</TabItem>
+
+<TabItem value="C#" label="C#" default>
+
+```csharp title="Test.cs"
+ltOptions.Add("customData", new Dictionary<string, object>{
+  { "jiraTicket", "JIRA-12345" },
+  { "githubPR", "https://github.com/organization/repo/pull/678" },
+  { "testDescription", "This test validates login functionality under high load." }
+});
+```
+</TabItem>
+
+<TabItem value="Ruby" label="Ruby" default>
+
+```ruby title="Test.rb"
+"LT:Options" => {
+  customData: {
+    jiraTicket: "JIRA-12345",
+    githubPR: "https://github.com/organization/repo/pull/678",
+    testDescription: "This test validates login functionality under high load."
+  }
+}
+```
+</TabItem>
+
+</Tabs>
 
 ## Use Cases for `customData`
 
@@ -156,3 +238,15 @@ exports.capabilities = {
 - **`triggeredBy` :** Indicates the trigger source (e.g., manual, GitHub Actions, Jenkins).
 - **`commitHash` :** Links the test to a specific commit in the version control system.
 
+## Limitations
+- **Payload Size :** The `customData` capability is limited to 1 KB of JSON data. Larger payloads will not be accepted.
+  - Use concise key names and avoid unnecessary fields.
+  - Prioritize critical metadata to stay within the limit.
+
+- **Readability :** Adding too many fields may reduce the readability of the metadata. Be selective in the information you include.
+
+## Best Practices
+- **Keep Metadata Concise :** Use meaningful but short key names and values.
+- **Align with Workflows :** Structure customData to integrate seamlessly with tools like GitHub, Jira, and test management systems.
+- **Validate Data Size :** Include a validation step in your scripts to ensure the payload is under 1 KB.
+- **Automate Metadata Generation :** Use scripts or CI/CD tools to dynamically populate customData fields, reducing manual effort.
