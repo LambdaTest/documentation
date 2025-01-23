@@ -2052,7 +2052,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Other Capabilities",
-            items: ["auto-heal", "command-annotations", "har-log-viewer", "selenium-geolocation-capabilities", "selenium-mask-your-data"],
+            items: ["auto-heal", "command-annotations", "har-log-viewer", "selenium-geolocation-capabilities", "selenium-mask-your-data", "selenium-add-test-meta-data"],
           },
         ],
       },

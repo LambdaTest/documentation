@@ -331,7 +331,7 @@ Argument was an invalid selector.
 
 ### Possible Solutions:
 
-* Do check the punctuations such as @, ', and [].
+* Do check the punctuation's such as @, ', and [].
 * Make sure that there is only one field name with that path; else, use the contains() method
 
 
@@ -434,7 +434,7 @@ Argument was an invalid selector.
 
 ### Possible Solutions:
 
-* Do check the punctuations such as @, ', and [].
+* Do check the punctuation's such as @, ', and [].
 * Make sure that there is only one field name with that path; else, use the contains() method
 
 
