@@ -1079,7 +1079,8 @@ module.exports = {
               "kane-ai-using-datasets"
             ]
           },
-          "kane-ai-modules"
+          "kane-ai-modules",
+          "kane-ai-secrets"
         ],
       },
       {
