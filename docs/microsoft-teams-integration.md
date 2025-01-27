@@ -48,7 +48,7 @@ The Microsoft Teams integration with LambdaTest enables seamless collaboration a
 
 ## Generate your Webhook URL
 
-**Step 1:** Visit your Teams account -> click on the **+** button and create a channel in which you want to recieve all your notifications.
+**Step 1:** Visit your Teams account -> click on the **+** button and create a channel in which you want to receive all your notifications.
 
 **Step 2:** Click on the **...** button in the top right section of your channel and select workflows.
 
