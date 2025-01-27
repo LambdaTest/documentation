@@ -85,7 +85,7 @@ use the value of {{secrets.user.email}} in the email text field
 ## How to Update your Secrets?
 **Step 1:** Navigate to the Test Manager. <br />
 **Step 2:** Click on the settings icon > Secrets.<br />
-**Step 3:** Click on the **pencli** icon to update that respective secret value.<br />
+**Step 3:** Click on the **pencil** icon to update that respective secret value.<br />
 **Step 4:** Provide the secret value and click on the **Update secret** button.
 
 <img loading="lazy" src= {require('../assets/images/kane-ai/features/secrets/update-secret.png').default} alt="Image"  className="doc_img"/>
