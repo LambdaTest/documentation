@@ -69,7 +69,7 @@ You can create Secrets variables via:
 </video>
 
 ## How to use your Secrets?
-Once created, you can now reference any secret variables in your test steps using **dollar-curly braces syntax (e.g.,`${email}`)**.
+Once created, you can now reference any secret variables in your test steps using **double-curly braces syntax (e.g.,`{{email}}`)**.
 
 > To use a previously created variable in any subsequent step or test case, reference the variable using the same `{{` syntax. This will list down all existing variables for this test.
 
