@@ -42,7 +42,6 @@ Projects serve as a centralized platform for organizing and managing test execut
 
 **Step 2:** Select **Custom Project** as the **Type of Project**. Provide a unique **Project Name** (required) and select your desired framework and language used in your project. Click on the **Continue**.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/create-project.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 **Step 3:** Provide your **GitHub URL** and the **[Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)** / **Bitbucket URL** and the **[Repository Access Tokens](https://support.atlassian.com/bitbucket-cloud/docs/repository-access-tokens/)** of your repository. You can also add your team members as **Co-Owners** to allow them to edit or delete the project alongside you.
 
@@ -52,7 +51,14 @@ Currently, only **GitHub** and **Bitbucket** repositories are supported.
 
 Click on **Save** button to finish the setup of your project.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/features/projects/project-detail.gif').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+
+<div className="storylane-iframe">
+  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
+  <div className="sl-embed">
+    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/nghrqs7qgczc?embed=inline"  name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
 
 ## Schedule your Workflows
 Within each HyperExecute Project, you can set up one or more workflows. These workflows allow for scheduled execution of your tests, providing you with the flexibility to automate your testing process according to your development and release cycles.
