@@ -316,7 +316,8 @@ module.exports = {
             items: [
               "hyperexecute-appium-testing",
               "hyperexecute-webapp-appium-testing",
-              "hyperexecute-appium-virtual-device"
+              "hyperexecute-appium-virtual-device",
+              "hyperexecute-emu-simu-devices-list"
             ],
           },
           {
