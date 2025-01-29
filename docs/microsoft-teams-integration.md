@@ -44,8 +44,6 @@ The Microsoft Teams integration with LambdaTest enables seamless collaboration a
 - Collaborate efficiently by sharing test execution logs and reports with your team.
 - Stay informed about your test runs without leaving your Teams environment.
 
-> **NOTE :** You must have either any **Bug Tracker** or **Project Management** tool integrated before proceeding with Teams integration.
-
 ## Generate your Webhook URL
 
 **Step 1:** Visit your Teams account -> click on the **+** button and create a channel in which you want to receive all your notifications.
@@ -101,7 +99,7 @@ The Microsoft Teams integration with LambdaTest enables seamless collaboration a
 **Step 3:** Click on the **Remove** button.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/images/integrations/microsoft-teams/connect-worflow.mp4').default} type="video/mp4" />
+<source src= {require('../assets/images/integrations/microsoft-teams/uninstall-workflow.mp4').default} type="video/mp4" />
 </video>
 
 > That was all you need to know for LambdaTest + Teams Integration. Increase your productivity multifold with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing!
