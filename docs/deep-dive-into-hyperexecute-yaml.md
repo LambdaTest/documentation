@@ -1302,6 +1302,18 @@ We can choose to run on local/remote(on HYP Vms) from the location command. Type
 
 ***
 
+### `afterEachScenario`
+The `afterEachScenario` flag is used to define tasks that should be executed after each test scenario. This can be particularly useful for cleanup activities, such as clearing cookies, resetting databases, or capturing logs, ensuring that each test scenario starts with a clean state. This flag allows you to specify a list of commands or scripts that will run sequentially after the completion of each scenario. This ensures that any necessary teardown steps are consistently applied, maintaining the integrity and isolation of your test scenarios.
+
+```yaml
+afterEachScenario:
+  - echo "Running a script"
+  - pwsh run.test
+  - bash script.sh
+```
+
+***
+
 ### `buildConfig`
 
 This is used to manage hyperlink behavior based on test status. Here's a breakdown of the parameters within buildConfig:
