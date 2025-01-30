@@ -56,7 +56,7 @@ driver.execute_script("lambda-adb", params)
 
 ## Supported Commands
 
----
+> **NOTE :** All these commands are supported on both Real and Virtual Devices except for the [**adb shell dumpsys**](/support/docs/adb-commands-support/#adb-shell-command) command, which is not supported for Virtual Device.
 
 ###  Swipe
 **adb shell input swipe**
