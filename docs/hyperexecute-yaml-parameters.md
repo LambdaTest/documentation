@@ -163,7 +163,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [afterAll](/support/docs/deep-dive-into-hyperexecute-yaml/#afterall) | Map |It is used to run commands after the job has finished. |
 | [project](/support/docs/deep-dive-into-hyperexecute-yaml/#project) | String | Segregate data at a project/repo level |
 | [slackChannel](/support/docs/deep-dive-into-hyperexecute-yaml/#slackchannel) | String | Allows you to receive notifications of your Job updates directly in your preferred Slack channel. |
-| [afterEachScenario](/support/docs/deep-dive-into-hyperexecute-yaml/#aftereachscenario) |  | |
+| [afterEachScenario](/support/docs/deep-dive-into-hyperexecute-yaml/#aftereachscenario) | List of Strings | Allows you to trigger your define tasks after each test scenario. |
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
