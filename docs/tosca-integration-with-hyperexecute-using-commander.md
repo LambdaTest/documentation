@@ -104,7 +104,7 @@ To Integrate Tosca with HyperExecute using YAML, follow the below mentioned step
 
 **Step 2:** Create a **TC-Shell Script**:
 
-- A TC-Shell script file usually has the extension _.tcs_, and it contains a sequence of [TC-Shell commands](https://documentation.tricentis.com/tosca/1300/en/content/tosca_commander/tcshell_commands.htm#TC-Shell_&_Keyboard_Shortcuts_699197005_998491) in plain text to configure the steps to execute a Tosca test via command line. This script file is kept in the same folder where you have the actual Tosca project saved.
+- A TC-Shell script file usually has the extension _.tcs_, and it contains a sequence of [TC-Shell commands](https://support-hub.tricentis.com/open?id=kb_article_view&table=kb_knowledge&number=KB0035628&searchTerm=shell%20commands) in plain text to configure the steps to execute a Tosca test via command line. This script file is kept in the same folder where you have the actual Tosca project saved.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/tosca/tosca-commander/Tosca2.png').default} alt="Image"  className="doc_img"/>
 
