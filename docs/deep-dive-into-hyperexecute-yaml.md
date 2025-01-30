@@ -1279,7 +1279,6 @@ The `afterEachScenario` flag is used to define tasks that should be executed aft
 afterEachScenario:
   - echo "Running a script"
   - pwsh run.test
-  - bash script.sh
 ```
 
 ***
