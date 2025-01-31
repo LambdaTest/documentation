@@ -2575,6 +2575,18 @@ module.exports = {
         label: "Supported Capabilities",
         id: "espresso-supported-capabilities",
       },
+      // {
+      //   type: "category",
+      //   collapsed: true,
+      //   label: "Supported Capabilities",
+      //   link: {
+      //     type: "doc",
+      //     id: "espresso-supported-capabilities",
+      //   },
+      //   items: [
+      //     "espresso-env-variables-settings",
+      //   ],
+      // },
       {
         type: "doc",
         label: "RegEx in Espresso",

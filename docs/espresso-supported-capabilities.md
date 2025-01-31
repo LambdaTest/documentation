@@ -65,7 +65,7 @@ This document provide details about the features and capabilities supported for 
 | disableAnimation | Boolean | Set this to `true` if you want to disable animations for espresso tests. **Default:** `false` |
 | clearPackageData | Boolean | Set this to `true` if you want to clear the app data after each test has completed running. **Default**: `false` |
 | singleRunnerInvocation | Boolean | Set this to `true` if you want to execute test cases together with a `single test runner invocation`.This can help significantly speed up the test execution time. By default, each test case is invoked separately. **Default:** `false` |
-
+<!-- | env | Map | This feature allows users to pass and retrieve environment variables (like STAGE, PROD, or DEV) during automated Android tests. That is, users can dynamically switch configurations between environments without changing the test code, enabling seamless testing across multiple setups. Learn more about [Environment Variables](https://www.lambdatest.com/support/docs/espresso-env-variables-settings/) | -->
 :::caution Important
 You can either use **GeoLocation** or **Tunnel** in single execute command. They both are mutually exclusive.
 :::
