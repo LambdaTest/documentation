@@ -280,7 +280,7 @@ framework:
   args:
     "app" : "lt://APP_ID",
     "testSuite": "lt://TEST_SUITE_ID",
-    "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
+    "xcTestPlanId" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
 ```
 
 > Refer the documentation to learn how to use [XCTestPlan feature](/support/docs/xctestplan/).
