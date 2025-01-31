@@ -2571,17 +2571,22 @@ module.exports = {
         id: "getting-started-with-espresso-testing",
       },
       {
-        type: "category",
-        collapsed: true,
+        type: "doc",
         label: "Supported Capabilities",
-        link: {
-          type: "doc",
-          id: "espresso-supported-capabilities",
-        },
-        items: [
-          "espresso-env-variables-settings",
-        ],
+        id: "espresso-supported-capabilities",
       },
+      // {
+      //   type: "category",
+      //   collapsed: true,
+      //   label: "Supported Capabilities",
+      //   link: {
+      //     type: "doc",
+      //     id: "espresso-supported-capabilities",
+      //   },
+      //   items: [
+      //     "espresso-env-variables-settings",
+      //   ],
+      // },
       {
         type: "doc",
         label: "RegEx in Espresso",
