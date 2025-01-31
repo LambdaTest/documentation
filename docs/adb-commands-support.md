@@ -20,6 +20,8 @@ slug: adb-commands-support/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,8 +46,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
-
 Android Debug Bridge (adb) is a versatile command-line tool that lets users communicate with a device. The adb command facilitates a variety of device actions, such as installing and debugging apps. 
 
 LambdaTest provides support for limited commands which can be executed in your app automation test scripts via javascript executors. The following command with the below mentioned parameters need to be used to execute adb command with LambdaTest real device cloud.
@@ -59,7 +59,7 @@ driver.execute_script("lambda-adb", params)
 > **NOTE :** All these commands are supported on both Real and Virtual Devices except for the [**adb shell dumpsys**](/support/docs/adb-commands-support/#adb-shell-command) command, which is not supported for Virtual Device.
 
 ###  Swipe
-**adb shell input swipe**
+**adb shell input swipe** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 The command is used to generate a swipe gesture by defining the coordinates of starting and ending point of the swipe. The following is a Python sample of using the adb swipe command with LambdaTest executor.
 
@@ -70,7 +70,7 @@ result = driver.execute_script("lambda-adb",params)
 
 ###  Clipboard
 
-**adb shell input sendKeys**
+**adb shell input sendKeys** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 The command is used to sends text as if typed at the keyboard in the real devices. The following is a Python sample of using the adb sendKeys command with LambdaTest executor.
 
@@ -81,7 +81,7 @@ result = driver.execute_script("lambda-adb",params)
 
 ###  Home Button
 
-- **Navigate to the home screen**
+- **Navigate to the home screen** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 The command is used to navigate to the home screen of the device while running an app automation test script. The following is a Python sample of using the adb command to navigate to the home screen with LambdaTest executor.
 
@@ -92,7 +92,7 @@ result = driver.execute_script("lambda-adb",params)
 
 ### Enable/Disable auto rotate
 
-- **enableAutoRotate**
+- **enableAutoRotate** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 The command is used to auto rotate the screen of the device while running an app automation test script. The following is a Python sample using the adb command to allow auto rotation with LambdaTest executor.
 
@@ -102,7 +102,7 @@ result = driver.execute_script("lambda-adb",params)
 ```
 ### ADB Shell Command
 
-- **adb shell dumpsys**
+- **adb shell dumpsys** <RealDeviceTag value="Real Device" />
 
 This command is used to obtain detailed information about installed packages on device. When you run this command, it provides a list of information for each package installed on the device. The output includes various details about each package.The following is a Python sample using the adb command:
 
@@ -110,9 +110,10 @@ This command is used to obtain detailed information about installed packages on 
 params = {"command": "shell", "text": "dumpsys package <package_info>"}
 result = driver.execute_script("lambda-adb",params)
 ```
+
 ### Enable/Disable Notification
 
-- **enableNotification**
+- **enableNotification** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 These commands enable or disable your app notifications on the device based on the value provided for `enableNotification`. **True** is used to enable notifications, while **False** is used to disable them.The following is a Python sample using the adb command with LambdaTest executor:
 
@@ -128,7 +129,7 @@ result = driver.execute_script("lambda-adb",params)
 
 ### Enable/Disable Battery Optimization
 
-- **disableBatteryOptimization**
+- **disableBatteryOptimization** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 This command is used to enable or disable battery optimization for your app on the device. The following is a Python sample using the adb command to disable battery optimization with LambdaTest executor:
 
@@ -139,7 +140,7 @@ result = driver.execute_script("lambda-adb",params)
 
 ### Fixed-to-User Rotation
 
-- **fixedToUserRotation**
+- **fixedToUserRotation** <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 This command serves to lock the screen rotation in alignment with the app's default behavior and user-defined settings. Below is a Python example utilizing the adb command to enforce fixed screen rotation with the LambdaTest executor:
 
@@ -147,6 +148,21 @@ This command serves to lock the screen rotation in alignment with the app's defa
 params = {"command":"fixed-to-user-rotation", "fixedToUserRotation":True}
 result = driver.execute_script("lambda-adb",params)
 ```
+
+### Disabling Animations on Android Devices <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+Disabling animations can enhance test execution speed by preventing unnecessary visual effects. The following commands are used to disable different types of animations:
+
+- `adb shell settings put global animator_duration_scale 0`: Disables property animation effects, such as object transitions and transformations.
+- `adb shell settings put global transition_animation_scale 0`: Disables window transition animations, making UI transitions instant.
+- `adb shell settings put global window_animation_scale 0`: Disables activity window animations, eliminating fade-in or zoom-in effects.
+
+These commands set the respective global animation scales to 0, effectively disabling animations.
+
+```java
+Map<String, String> params = Map.of("command", "shell", "text", "settings get global animator_duration_scale");
+androidDriver.executeScript("lambda-adb", params);
+```
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

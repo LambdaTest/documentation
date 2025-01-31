@@ -25,7 +25,9 @@
     --newReleaseColor-tag-color: #389d59;
     --bugFix-tag-color: #db4437;
     --featureColor-tag-color: #860ac6;
-    --ifm-tabs-color:#333333
+    --ifm-tabs-color:#333333;
+    --realDevice-tag-color: #28A745;
+    --virtualDevice-tag-color: #007BFF
  }
 
  [data-theme=dark] {
@@ -54,6 +56,8 @@
 .bugFixTagColor{color: #ffffff; background-color: var(--bugFix-tag-color); font-weight:bold; margin: -2px 3px; font-size: 12px; padding: 5px 10px; border-radius: 20px; border:1px solid var(--bugFix-tag-color)}
 .newReleaseColor{color: #ffffff; background-color: var(--newReleaseColor-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--newReleaseColor-tag-color)}
 .featureColor{color: #ffffff; background-color: var(--featureColor-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--featureColor-tag-color)}
+.realDeviceColor{color: #ffffff; background-color: var(--realDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--realDevice-tag-color)}
+.virtualDeviceColor{color: #ffffff; background-color: var(--virtualDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--virtualDevice-tag-color)}
 
 
  [data-theme=dark] .footer__title {
