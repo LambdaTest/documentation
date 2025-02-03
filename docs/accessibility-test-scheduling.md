@@ -47,6 +47,10 @@ To address these challenges, LambdaTest introduces the Accessibility Schedulerâ€
 
 The Scheduled Accessibility Scan feature allows you to automate recurring or one-time accessibility scans, significantly reducing manual effort while ensuring high standards of accessibility compliance.
 
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/images/accessibility-testing/accessibility-scheduling.mp4').default} type="video/mp4" />
+</video>
+
 ## Key Features
 - **Automated Scheduling :** Set up recurring or one-time scans for your websites.
 - **WCAG Compliance :** Ensure your websites adhere to WCAG standards (selectable version).
@@ -58,6 +62,3 @@ The Scheduled Accessibility Scan feature allows you to automate recurring or one
 - **QA Testers :** Conduct detailed accessibility testing as part of their quality assurance workflows.
 - **Product Managers :** Monitor accessibility performance across websites to meet organizational and legal compliance requirements.
 
-<video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/images/accessibility-testing/accessibility-scheduling.mp4').default} type="video/mp4" />
-</video>
