@@ -141,7 +141,7 @@ You can select the type of event for which you want to check the logs. You can a
 
 You can view the logs of the users for a particular date range as well. Select the start date and end dates from the date filter.
 
-> You can view Audit Logs for a maximum of 90 days.
+> You can view Audit Logs for a maximum of 60 days. Please contact support for higher retention period (Supported in Enterprise Plan).
 
 <img loading="lazy" src={require('../assets/images/audit-logs/4.png').default} alt="Image"  className="doc_img"/>
 
