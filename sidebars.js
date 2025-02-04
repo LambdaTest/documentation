@@ -827,7 +827,7 @@ module.exports = {
           id: "hyperexecute-release-notes",
         },
         items: [
-          // 2025 releases
+          // CLI releases
           {
             type: "category",
             collapsed: true,
@@ -839,6 +839,30 @@ module.exports = {
                 label: "January, 2025",
                 items: [
                   'hyperexecute-cli-release-notes-0-2-249',
+                ]
+              },
+            ]
+          },
+
+          {
+            type: "category",
+            collapsed: true,
+            label: "2025 Releases",
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "February, 2025",
+                items: [
+                  'hyperexecute-release-notes-2-7-1',
+                ]
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "January, 2025",
+                items: [
+                  'hyperexecute-release-notes-2-7-0',
                 ]
               },
             ]
