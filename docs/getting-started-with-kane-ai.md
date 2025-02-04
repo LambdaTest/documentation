@@ -39,10 +39,6 @@ import VideoEmbed from '../src/component/videoEmbed';
       })
     }}
 ></script>
-:::note
-Currently in the **Beta**. Please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span> to enable the KaneAI for your organization.
-:::
-
 KaneAI is an AI-powered next-gen testing assistant that revolutionizes software testing. Whether you're a seasoned QA professional or a developer new to testing, KaneAI simplifies complex testing processes, making them accessible to everyone.
 
 This intelligent platform creates and optimizes tests based on your application's behavior, ensuring better reliability and fewer missed bugs. KaneAI seamlessly handles testing for web, mobile, and cloud-based applications, allowing you to automate your testing workflows and deliver faster, more accurate results. It's like having an AI-powered expert by your side, saving time and catching critical edge cases you might otherwise miss.
