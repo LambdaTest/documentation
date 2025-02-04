@@ -80,3 +80,17 @@ The total duration spent widget provides insights into the total duration spent 
 ### Value Proposition
 
 The total duration spent helps in understanding the time spent on each product. This helps in optimizing your testing efforts by focusing on the products that are being used more frequently.
+
+## Unique Applications Insights 
+
+The unique applications insights widget provides insights into the unique applications that have been tested. It helps you in understanding the number of unique applications that have been tested and helps you in optimizing your testing efforts.
+
+### How it works?
+
+* Select the time frame for which you want to view the unique applications insights.
+* The widget will display the unique applications insights for the selected product and time frame.
+* Further filter the data by selecting the project, browser, operating system, etc.
+
+### Value Proposition
+
+The unique applications insights help in understanding the number of unique applications that have been tested. This helps in optimizing your testing efforts by focusing on the unique applications that have been tested.
