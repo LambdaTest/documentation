@@ -155,10 +155,6 @@ You can analyze the number of requests sent on that particular time.
     - **Region 1 :** 250 users → 3 machines (lets say it distributed as 84, 83, 83 users per machine).
     - **Region 2 :** 250 users → 3 machines (lets say it distributed as 84, 83, 83 users per machine).
   
-  - **User Allocation per Machine:** Users are evenly distributed among machines to ensure optimal utilization and balanced load:
-  For example, in Region 1:
-  Machine 1 = 84 users, Machine 2 = 83 users, Machine 3 = 83 users.
-  
   #### Key Takeaways:
   - **Flexible Overrides :** HyperExecute dynamically adjusts the load distribution and machine allocation based on your specified parameters.
   - **Optimal Resource Utilization :** It ensures that no machine exceeds the maximum user threshold, maintaining a balanced and efficient test execution.
@@ -184,7 +180,7 @@ You can analyze the number of requests sent on that particular time.
     - **Region 1 :** 3 machines → 250 users per machine.
     - **Region 2 :** 3 machines → 250 users per machine.
 
-  - **User Allocation per Machine :** Each machine in both regions processes **250 users**, resulting in a total of 750 users (250 users × 3 machines) per region.
+  - **User Allocation per Machine :** Each machine in both regions processes **250 users**, resulting in a total of 750 users (250 users × 3 machines) per region, and overall 1500 users (250 users x 3 machines * 2 regions).
 
   #### Key Takeaways:
   - **Default Behavior :** Without overrides, the user load from the .jmx file is replicated across all configured machines in each region.
