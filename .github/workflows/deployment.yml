@@ -1,6 +1,9 @@
 name: 'Deployment (Stage)'
 on:
-  workflow_dispatch:    
+  push:
+    branches:
+      - 'stage'
+  # workflow_dispatch:    
 
 jobs:
   Docusaurus:
