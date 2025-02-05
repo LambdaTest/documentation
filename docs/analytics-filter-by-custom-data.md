@@ -77,8 +77,8 @@ Currently, the feature is in the <NewTag value="BETA" bgColor="#ffec02" color="#
 
 1. Go to the `Insights` tab on the left navigation bar and click on the `Builds Comparison`.
 2. Select the `Build` from the list to drill-down.
-3. Now, search for `Test Case` widgets in the `Web Automation, App Automation & HyperExecute` products.
-4. Add the widgets to the dashboard by clicking on the `Add Widget` button.
+3. You can see the `Custom Data` filter on the top section of the page.
+4. You can filter the test sessions based on the custom data.
 
 
 ## Custom Filters Use Cases
