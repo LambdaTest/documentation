@@ -3326,6 +3326,11 @@ module.exports = {
         label: "Tunnel Security",
         id: "tunnel-security",
       },
+      {
+        type: 'doc',
+        label: "Access Management - KaneAI <> Test Manager",
+        id: "kaneai-test-manager-access-management"
+      }
     ],
   ],
 
