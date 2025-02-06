@@ -72,5 +72,5 @@ This document provides guidelines on managing access to KaneAI and Test Manager 
 > The freed-up license will be available for reassignment. To assign it to another user, follow the [Assigning a License to a User](/support/docs/kaneai-test-manager-access-management/#assigning-a-license-to-a-user) steps.
 
 <video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/images/access-management/revoke-licenses.mp4').default} type="video/mp4" />
+<source src= {require('../assets/images/access-management/revoke-license.mp4').default} type="video/mp4" />
 </video>
