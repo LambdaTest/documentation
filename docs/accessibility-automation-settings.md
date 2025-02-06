@@ -76,23 +76,19 @@ accessibility.wcagVersion: 'wcag21a'
 ```
 
 ### 3. Best Practices Checks
+> The default value for **best practice** check is **`false`** focusing strictly on WCAG violations.
 
 - **Purpose:** Include or exclude checks that go beyond the defined WCAG standards but are considered good practices for optimal usability.
-- **Default Value:** The default setting is false, focusing strictly on WCAG violations.
 - **Implementation:** Enable best practice checks by setting bestPractice to true in your configuration file.
-
-> The default value for **best practice** check is **`false`**
 
 ```bash
 accessibility.bestPractice: true
 ```
 
 ### 4. Needs Review
-
+> The default value for **needs review** check is **`false`**
 - **Purpose:** Flag potential accessibility issues that might require human evaluation for definitive assessment.
 - **Implementation:** Enable needs review checks by setting needsReview to true in your configuration file. This ensures potentially ambiguous issues get flagged for manual review.
-
-> The default value for **needs review** check is **`false`**
 
 ```bash
 accessibility.needsReview: true
