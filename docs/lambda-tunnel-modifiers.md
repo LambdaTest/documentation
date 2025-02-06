@@ -50,7 +50,7 @@ This document will help you understand all the modifiers/arguments used with Lam
 
 | FLAG (SHORT) | FLAG (LONG)     | DESCRIPTION                                                                                                                                         | TYPE    |
 | :----------- | :-------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- | :------ |
-|            | --allowHosts        |   Comma separated list of hosts to route via tunnel. Everything else will be routed via Internet.  | String  |
+|            | --allowHosts        |   Comma separated list of hosts to route via tunnel. Everything else will be routed via Internet. <br /> Learn how to use the [wildcard expressions](https://www.lambdatest.com/support/docs/tunnel-allowHost-wildcard-support/) in the `--allowHosts` flag  | String  |
 |              | --bypassHosts   | Comma separated list of hosts to bypass from tunnel. These will be routed via internet.                                                             | String  |
 |              | --callbackURL   | Callback URL for tunnel status.                                                                                                                     | String  |
 | -c           | --config        | Path of the config file to use                                                                                                                      | String  |
