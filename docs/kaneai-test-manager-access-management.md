@@ -38,7 +38,7 @@ slug: kaneai-test-manager-access-management/
 This document provides guidelines on managing access to KaneAI and Test Manager within LambdaTest. The access management functionality is exclusive to **organization administrators**, allowing them to allocate licenses to users as per the organization's requirements.
 
 ## License Allocation Rules
-- **License Limitation :** Administrators can only allocate as many licenses as they have purchased.
+- **License Limitation :** Administrators can only allocate as many licenses as they have purchased or gained licenses through trials.
 - **User Addition :** A user can only be added if there is an available license.
 - **License Reassignment :** An admin can revoke a license from one user and assign it to another, ensuring optimal resource utilization.
 - **Real-Time Monitoring :** Admins can view the current usage of licenses through the Access Management Dashboard.
@@ -47,7 +47,7 @@ This document provides guidelines on managing access to KaneAI and Test Manager 
 
 ### Accessing the License Management Panel
 **Step 1 :** Log in to your LambdaTest Admin Account. <br />
-**Step 2 :** Navigate to **Settings** > **Account Settings** > **Products**. <br />
+**Step 2 :** Navigate to **Settings** > **Organization Settings** > **Products**. <br />
 **Step 3 :** Select KaneAI or Test Manager tab to allocate the desired product license.
 
 <video class="right-side" width="100%" controls id="vid">
@@ -67,8 +67,8 @@ This document provides guidelines on managing access to KaneAI and Test Manager 
 
 ### Removing or Reassigning a License
 **Step 1 :** Locate the user from the User List. <br />
-**Step 2 :** You can select multiple users or for individual users click on the **...** button.
-**Step 3 :** Click **Revoke License** to remove access.
+**Step 2 :** You can select multiple users or for individual users click on the **...** button. <br />
+**Step 3 :** Click **Revoke License** to remove access. <br />
 > The freed-up license will be available for reassignment. To assign it to another user, follow the [Assigning a License to a User](/support/docs/kaneai-test-manager-access-management/#assigning-a-license-to-a-user) steps.
 
 <video class="right-side" width="100%" controls id="vid">
