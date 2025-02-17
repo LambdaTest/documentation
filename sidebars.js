@@ -1846,6 +1846,7 @@ module.exports = {
               "install-apps-from-test-flight",
               "install-apps-from-app-center",
               "install-apps-from-app-store",
+              "install-apps-from-firebase"
             ],
           },
           {
