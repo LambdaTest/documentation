@@ -699,7 +699,8 @@ module.exports = {
               "hyperexecute-how-to-run-tests-using-local-selenium-drivers",
               "hyperexecute-how-to-perform-dependent-test-based-discovery",
               "hyperexecute-how-to-perform-group-based-test-discovery-in-testng",
-              "hyperexecute-how-to-resolve-version-conflict"
+              "hyperexecute-how-to-resolve-version-conflict",
+              "hyperexecute-org-product-preferences"
             ],
           },
           {
