@@ -41,7 +41,10 @@ slug: kaneai-upload-and-download-files/
 
 - A valid LambdaTest account with access to Kane AI.
 - An active test session on Kane AI.
-- Supported file formats: PNG, B8EF, and CSV.
+- Supported file formats:
+  - **Images :** JPG, JPEG, PNG, GIF (Maximum size: 10 MB)
+  - **Videos :** MP4 (Maximum size: 50 MB)
+  - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT (Maximum size: 15 MB)
 
 ## Steps to Upload a File
 ### Step 1: Initiate a Test Session
@@ -61,7 +64,10 @@ slug: kaneai-upload-and-download-files/
     - Select from pre-uploaded files.
     - Upload files from your local system.
 > - Ensure the upload limit does not exceed 5 files per session. <br />
-> - Supported formats include PNG, B8EF, and CSV.
+> - Supported file formats:
+>    - **Images :** JPG, JPEG, PNG, GIF (Maximum size: 10 MB)
+>    - **Videos :** MP4 (Maximum size: 50 MB)
+>    - **Files :** XLS, XLSX, DOC, DOCX, PDF, CSV, TXT (Maximum size: 15 MB)
 - Click **Add File** to confirm your selection.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/upload-download-files/image3.png').default} alt="Image" className="doc_img"/>
@@ -69,10 +75,11 @@ slug: kaneai-upload-and-download-files/
 ### Step 4: File Upload Process
 - Upon clicking **Add File**, the selected files are uploaded successfully to the downloads folder within the session.
 - These files are treated as variables and their paths are dynamically assigned.
+- These variables are named with prefix `FILE_`
 
 ### Step 5: Accessing Uploaded Files
 - In the test environment, type upload in the command field.
-- Select the required file from the available list using **double-curly braces syntax** (e.g.,`{{IMAGE_ONE}}`).
+- Select the required file from the available list using **double-curly braces syntax** (e.g.,`upload {{FILE_IMAGE_1_PNG}} in upload section`).
 - Kane AI will detect the appropriate action for uploading and provide relevant options.
 - On the right panel, all downloaded files in the session’s downloads folder will be displayed.
 
