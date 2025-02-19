@@ -1,6 +1,6 @@
 ---
 id: screen-reader-voiceover-real-devices-app
-title: Screen Reader (VoiceOver) on iOS
+title: Screen Reader (VoiceOver) on iOS Devices
 sidebar_label: Screen Reader (VoiceOver)
 description: Test your app's accessibility with LambdaTest's Screen Reader (VoiceOver). Navigate through app elements with spoken descriptions on real iOS devices, ensuring compliance with WCAG standards.
 keywords:
@@ -46,7 +46,7 @@ import TabItem from '@theme/TabItem';
 
 Manual accessibility testing ensures that your app or website is fully accessible and compliant with Web Content Accessibility Guidelines (WCAG). With iOS VoiceOver feature on LambdaTest, you can test the accessibility of your website on supported real iOS devices. 
 
-The VoiceOver feature enables spoken UI descriptions, helping you verify element order, keyboard navigation, and accessibility compliance.
+Ensuring accessibility with VoiceOver is essential for creating inclusive digital experiences that accommodate users with visual impairments. VoiceOver provides spoken feedback, allowing users to navigate, interact, and understand UI elements without relying on visual cues.
 
 > This feature is currently in **Closed Beta**
 
@@ -55,7 +55,7 @@ The VoiceOver feature enables spoken UI descriptions, helping you verify element
 
 **Step 1:** Click on the **Real Devices** > **App Testing**
 
-**Step 2:** Select a supported **iOS device** from the list. Supported devices will have an Accessibility icon next to them as shown below.
+**Step 2:** Select a supported **iOS device** from the list. Supported devices will have an `Accessibility` icon next to them as shown below.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/talkback.png').default} className="doc_img"/>
 
@@ -63,9 +63,11 @@ The VoiceOver feature enables spoken UI descriptions, helping you verify element
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/talkback.png').default} className="doc_img"/>
 
+> Make sure your system's audio is turned on to hear the spoken descriptions provided by VoiceOver.
+
 ## Supported Devices
 
-The VoiceOver feature is currently available on the following iOS devices:
+The VoiceOver feature is currently supported on select real iOS devices, allowing accurate accessibility testing. Below is the list of supported devices, with more being added over time to enhance accessibility coverage:
 
 | Device | iOS Version |
 |--------|--------------|
@@ -73,16 +75,21 @@ The VoiceOver feature is currently available on the following iOS devices:
 | iPhone 16 | iOS 18 |
 | iPhone 15 Pro | iOS 17 |
 
+
 ---
 ## How to Navigate using Keyboard Shortcuts
 
-Users accessing your mobile website on an Android device with TalkBack enabled can interact through touch gestures or by using keyboard shortcuts via a Bluetooth keyboard. Both options enable them to carry out "TalkBack actions," such as navigating between elements or having content read aloud.
+The navigation behavior on iOS—such as moving to the next or previous element, auto-reading from the start of the page, and interacting with UI elements—can be performed using either touch gestures or keyboard shortcuts when **VoiceOver** is enabled.
 
-These two navigation methods function similarly, performing the same actions within the UI, ensuring that your site remains fully accessible, no matter the approach. Once your website meets WCAG standards using one method, it will be compatible with the other as well.
+On a real iOS device, VoiceOver navigation can be executed via keyboard shortcuts or touch gestures. However, when performing  accessibility testing, using keyboard shortcuts is the most efficient way to validate VoiceOver interactions.
 
-For the **Screen Reader** feature on android devices , use the following keyboard shortcuts to trigger the different actions :
+Ensuring that your website or application is accessible using **keyboard shortcuts** guarantees that it will also be accessible through touch gestures. If a site is fully navigable and interactable using VoiceOver keyboard commands, it will be equally accessible through swipe gestures and VoiceOver touch commands.
 
-Below is a list of **VoiceOver** keyboard shortcuts, using **Control+Option** on **macOS** and **Ctrl+Alt** on **Windows**. The commands are mapped to equivalent actions on each platform.
+To navigate and interact using VoiceOver on iOS in a Manual test session, use the following keyboard shortcuts:
+
+## VoiceOver Keyboard Shortcuts
+
+Below is a list of VoiceOver keyboard shortcuts, using `Control+Option` on macOS and `Ctrl+Alt` on Windows. These commands allow seamless navigation and interaction with UI elements.
 
 | Action                                               | macOS (Control+Option)                              | Windows (Ctrl+Alt)                                  |
 |------------------------------------------------------|------------------------------------------------------|------------------------------------------------------|
@@ -112,5 +119,9 @@ Below is a list of **VoiceOver** keyboard shortcuts, using **Control+Option** on
 | Turn the screen curtain on or off                    | Control+Option+Fn+Hyphen                            | Ctrl+Alt+Fn+Hyphen                                   |
 | Return to the previous screen                        | Esc                                                 | Esc                                                 |
 
+:::tip 
 
+ If the keyboard shortcuts do not work initially, click on the device screen in your test session to ensure that it is in focus.
+:::
 
+By incorporating VoiceOver keyboard navigation into your accessibility testing workflow, you can identify usability barriers early, ensuring compliance with WCAG standards and delivering an inclusive digital experience for all users.
