@@ -49,7 +49,6 @@ import TestManagerDarkIcon from '../assets/images/support/testManager-dark.svg';
 import AccessibilityDarkIcon from '../assets/images/support/accessibility-dark.svg';
 import AccessibilityLightIcon from '../assets/images/support/accessibility-light.svg';
 
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -222,6 +221,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/accessibility-testing/"><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/accessibility-devtools/"><p className="p_home_inners">Accessibility DevTools</p></a>
         <a href="/support/docs/accessibility-automation/"><p className="p_home_inners">Accessibility Automation</p></a>
+        <a href="/support/docs/accessibility-test-scheduling/"><p className="p_home_inners">Accessibility Scheduling &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /> </p></a>
         <a href="/support/docs/screen-reader-on-accessibility/"><p className="p_home_inners">Screen Reader</p></a>
         <a href="/support/docs/accessibility-testing-navigating-dashboard/"><p className="p_home_inners">Navigating Dashboard</p></a>
         <a href="/support/docs/accessibility-faq/"><p className="p_home_inners">FAQ</p></a>

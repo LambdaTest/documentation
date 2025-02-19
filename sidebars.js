@@ -699,7 +699,8 @@ module.exports = {
               "hyperexecute-how-to-run-tests-using-local-selenium-drivers",
               "hyperexecute-how-to-perform-dependent-test-based-discovery",
               "hyperexecute-how-to-perform-group-based-test-discovery-in-testng",
-              "hyperexecute-how-to-resolve-version-conflict"
+              "hyperexecute-how-to-resolve-version-conflict",
+              "hyperexecute-org-product-preferences"
             ],
           },
           {
@@ -825,7 +826,7 @@ module.exports = {
           id: "hyperexecute-release-notes",
         },
         items: [
-          // 2025 releases
+          // CLI releases
           {
             type: "category",
             collapsed: true,
@@ -837,6 +838,30 @@ module.exports = {
                 label: "January, 2025",
                 items: [
                   'hyperexecute-cli-release-notes-0-2-249',
+                ]
+              },
+            ]
+          },
+
+          {
+            type: "category",
+            collapsed: true,
+            label: "2025 Releases",
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "February, 2025",
+                items: [
+                  'hyperexecute-release-notes-2-7-1',
+                ]
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "January, 2025",
+                items: [
+                  'hyperexecute-release-notes-2-7-0',
                 ]
               },
             ]
@@ -1821,6 +1846,7 @@ module.exports = {
               "install-apps-from-test-flight",
               "install-apps-from-app-center",
               "install-apps-from-app-store",
+              "install-apps-from-firebase"
             ],
           },
           {
@@ -2571,22 +2597,17 @@ module.exports = {
         id: "getting-started-with-espresso-testing",
       },
       {
-        type: "doc",
+        type: "category",
+        collapsed: true,
         label: "Supported Capabilities",
-        id: "espresso-supported-capabilities",
+        link: {
+          type: "doc",
+          id: "espresso-supported-capabilities",
+        },
+        items: [
+          "espresso-env-variables-settings",
+        ],
       },
-      // {
-      //   type: "category",
-      //   collapsed: true,
-      //   label: "Supported Capabilities",
-      //   link: {
-      //     type: "doc",
-      //     id: "espresso-supported-capabilities",
-      //   },
-      //   items: [
-      //     "espresso-env-variables-settings",
-      //   ],
-      // },
       {
         type: "doc",
         label: "RegEx in Espresso",
@@ -3206,6 +3227,7 @@ module.exports = {
       "load-balancing-in-lambda-tunnel",
       "dedicated-proxy",
       "charles-proxy",
+      "tunnel-allowHost-wildcard-support"
     ],
   ],
 
@@ -3302,6 +3324,11 @@ module.exports = {
         label: "Tunnel Security",
         id: "tunnel-security",
       },
+      {
+        type: 'doc',
+        label: "Access Management - KaneAI <> Test Manager",
+        id: "kaneai-test-manager-access-management"
+      }
     ],
   ],
 

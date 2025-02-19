@@ -199,7 +199,7 @@ framework:
     # We have used the testSuiteAppID here instead of testSuitePath
 
     deviceSelectionStrategy: all
-    devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16", "Galaxy Note10+-11", "Galaxy Note20 Ultra 5G-11"]
+    devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
 
     shards:
       mappings:

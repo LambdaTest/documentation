@@ -3,7 +3,7 @@ id: kaneai-release-notes
 title: KaneAI Release Notes
 hide_title: false
 sidebar_label: Release Notes
-description: Keep yourself informed about new releases from KaneAI. View our AI-powered testing assistant's detailed release notes, which include new features and enhancements.
+description: Keep yourself informed about new releases from KaneAI. View our GenAI-Native testing assistant's detailed release notes, which include new features and enhancements.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -37,7 +37,7 @@ slug: kaneai-release-notes/
       })
     }}
 ></script>
-KaneAI is an AI-powered next-gen testing assistant that revolutionizes software testing. Whether you're a seasoned QA professional or a developer new to testing, KaneAI simplifies complex testing processes, making them accessible to everyone.
+KaneAI is a GenAI-Native testing agent that revolutionizes software testing. Whether you're a seasoned QA professional or a developer new to testing, KaneAI simplifies complex testing processes, making them accessible to everyone.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/release-notes/release-notes.gif').default} alt="Image"  className="doc_img"/>
 

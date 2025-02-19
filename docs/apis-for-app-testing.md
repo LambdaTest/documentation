@@ -91,9 +91,14 @@ To generate public shareable build link, run the below cURL command.
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' \
-  -H 'authorization: Bearer <Bearer Token>' \
-  --data-raw '{"entityIds":["123456"],"entityType":"App Automation Build","expiresAt":7}'`}
+{`curl -X POST 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' \
+-H 'Content-Type: application/json' \
+--user 'username:password' \
+-d '{
+    "entityIds": ["123456"],
+    "entityType": "App Automation Build",
+    "expiresAt": 7
+}'`}
 </CodeBlock>
 </div>
 

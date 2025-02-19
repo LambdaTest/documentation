@@ -1,6 +1,6 @@
 ---
 id: cucumber-script-testng-selenium
-title: Execute Selenium Tests With Cucumber
+title: Run your Selenium Cucumber tests on LambdaTest
 sidebar_label: Cucumber
 description: Your guide to running tests using Cucumber on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
 keywords:
@@ -44,55 +44,43 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-
-# Selenium Cucumber Testing Tutorial
-
----
-
-In this topic, you will learn how to configure and run tests using **Cucumber** on LambdaTest's [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
-
-## Objectives
-
----
-
-By the end of this topic, you will be able to:
-
-1. Set up an environment for testing your hosted web pages using **Cucumber** framework with **TestNG** and **Selenium**.
-2. Understand and configure the core capabilities required for your Selenium test suite.
-3. Test your locally hosted pages on LambdaTest platform.
-4. Explore advanced features of LambdaTest.
-
-:::tip Sample repo
-
-All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/cucumber-testng-sample" className="github__anchor"><img loading="lazy" width="50" height="50" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
-
-:::
+This guide walks you through the process of running Selenium Cucumber tests on LambdaTest, a cloud-based cross-browser testing platform. By following these steps, you can seamlessly execute automated tests on a wide range of browsers and operating systems using LambdaTest’s Selenium Grid.
 
 ## Prerequisites
+Before you begin, ensure you have the following:
 
----
+- Your [LambdaTest Username and Access Key](https://accounts.lambdatest.com/)
+- Install Java Development Kit (JDK). We recommend Java version 11
+- Install [Maven](https://maven.apache.org/)
+- [Download](https://www.selenium.dev/downloads/) the latest Selenium Client and its WebDriver bindings
 
-Before you can start performing Java automation testing with Selenium, you would need to:
+## Step 1: Configure your test suite
+:::tip Sample repo
+Download or Clone the code sample for the Cucumber from the LambdaTest GitHub repository to run the tests on our Standard Grid.
 
-- Install the latest **Java development environment**. We recommend to use **Java 11** version.
+<a href="https://github.com/LambdaTest/cucumber-testng-sample" className="github__anchor" target="_blank"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+:::
 
-- Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/). Latest versions of Selenium Client and WebDriver are ideal for running your automation script on LambdaTest Selenium cloud grid.
-
-- Install **Maven**. It can be downloaded and installed following the steps from [the official website](https://maven.apache.org/). Maven can also be installed easily on **Linux/MacOS** using [**Homebrew**](https://brew.sh/) package manager.
-
-### Cloning Repo and Installing Dependencies
-
-**Step 1:** Clone the LambdaTest’s [cucumber-testng-sample](https://github.com/LambdaTest/cucumber-testng-sample) repository and navigate to the code directory as shown below:
-
-```bash
-git clone https://github.com/LambdaTest/cucumber-testng-sample
+```bash title="terminal"
+git clone https://github.com/LambdaTest/cucumber-testng-sample.git
 cd cucumber-testng-sample
 ```
 
-You may also want to run the command below to check for outdated dependencies.
+If you are using your own project, make sure you update the **Hub endpoint** in your tests file. By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
-```bash
+```java title="Test.java"
+public static String hubURL = "https://hub.lambdatest.com/wd/hub";
+```
+
+## Step 2: Update the dependencies
+Run the command below to check for outdated dependencies. Review updates carefully before modifying your `pom.xml`, as they might not be compatible with your code.
+
+```bash title="terminal"
 mvn versions:display-dependency-updates
+```
+
+```xml reference
+https://github.com/LambdaTest/cucumber-testng-sample/blob/master/pom.xml
 ```
 
 ### Setting up your Authentication
