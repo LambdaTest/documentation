@@ -36,8 +36,9 @@ slug: responsive-testing/
       })
     }}
 ></script>
-
 # Responsive Testing
+> This feature is **deprecated** and as a result, no further support will be provided for this feature by the LambdaTest Organization. 
+
 * * *
 As the word responsive suggests, this type of testing is used to check the appearance of a website with RWD(Responsive Web Design). This design helps a website render the content in a flexible yet appropriate manner based on the devices & OS on which it gets summoned. At LambdaTest, you can [check RWD](https://www.lambdatest.com/responsive-test-online) through 50+ different devices in a single go!
 

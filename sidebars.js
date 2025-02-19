@@ -1116,6 +1116,8 @@ module.exports = {
         items: [
           "kane-ai-command-guide",
           "kane-ai-web-test-writing-guidelines",
+          "kaneai-upload-and-download-files",
+          "kaneai-modules-versions-and-enhancement"
         ],
       },
       {
