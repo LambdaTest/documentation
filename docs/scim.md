@@ -1,7 +1,7 @@
 ---
 id: scim
 title: Getting Started With Scim User Provisioning
-hide_title: true
+hide_title: false
 sidebar_label: SCIM
 description: The SCIM specification is designed to make managing user identities easier. SCIM allows your Identity Provider (IdP) to manage users within your LambdaTest workspace  
 keywords:
@@ -34,41 +34,24 @@ slug: scim/
       })
     }}
 ></script>
-
-
-
-
-# Getting Started With SCIM Auto User Provisioning
-
-* * *
-
 The SCIM specification is designed to make managing user identities easier. SCIM allows your Identity Provider (IdP) to manage users within your LambdaTest workspace
 > SSO must be integrated before enabling SCIM. Please see [Getting Started With Single Sign On (SSO)](/support/docs/single-sign-on/) or [support@lambdatest.com](mailto:support@lambdatest.com) for questions.
 
 ## Benefits Of SCIM
+Here are the following benefits of integrating SCIM with LambdaTest:
 
-* * *
+- **Efficiency and Automation**: SCIM automates the process of user identity management, making it more efficient and less error-prone. It enables automatic provisioning and de-provisioning of user accounts, reducing manual administrative tasks and associated errors.
+- **Consistency:**: SCIM ensures that user data is consistent across different systems and services. When a user's attributes (like role) are updated in the identity provider, SCIM can be used to propagate those changes to all connected service providers, maintaining accurate and up-to-date information.
+- **Security and Access Control:**:  By centralizing identity management through SCIM, organizations can better enforce access control policies and ensure that users have appropriate access rights to the resources they need. This can help mitigate security risks associated with improper access permissions.
+- **Assigning Groups to Users (If Groups Are Activated in Your Organization) :** If your organization has group functionality enabled, you can assign existing LambdaTest groups to users provisioned through an Identity Provider (IdP) such as Microsoft Azure AD, Okta, and others using SCIM. 
+> Connect with our [24/7 customer support](mailto:support@lambdatest.com) team to get the **Group** feature enabled for your organization.
 
-Here are the following benefits of integrating SCIM with LambdaTest
-
-*   **Efficiency and Automation**: SCIM automates the process of user identity management, making it more efficient and less error-prone. It enables automatic provisioning and de-provisioning of user accounts, reducing manual administrative tasks and associated errors.
-
-*   **Consistency:**: SCIM ensures that user data is consistent across different systems and services. When a user's attributes (like role) are updated in the identity provider, SCIM can be used to propagate those changes to all connected service providers, maintaining accurate and up-to-date information.
-  
-* **Security and Access Control:**:  By centralizing identity management through SCIM, organizations can better enforce access control policies and ensure that users have appropriate access rights to the resources they need. This can help mitigate security risks associated with improper access permissions.
 
 ## Feature Of SCIM
-
-* * *
-
 LambdaTest provides the support for the below SCIM features.
 
-*   **User Provisioning and De-provisioning**:  SCIM facilitates the automatic provisioning and de-provisioning of user accounts across different systems and services. When a user is added or removed from the identity provider, SCIM can be used to propagate these changes to your LambdaTest account.
-
-*   **Updating User Attributes**: Using SCIM you can update user attribute such as **Organization Role** directly from your Identity Provider.
-
-## Enable LambdaTest SCIM
-***
+- **User Provisioning and De-provisioning**:  SCIM facilitates the automatic provisioning and de-provisioning of user accounts across different systems and services. When a user is added or removed from the identity provider, SCIM can be used to propagate these changes to your LambdaTest account.
+- **Updating User Attributes**: Using SCIM you can update user attribute such as **Organization Role** directly from your Identity Provider.
 
 ## Copy SCIM Base URL and Bearer Token (Auth Header Required by IdP)
 **Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
@@ -84,7 +67,7 @@ LambdaTest provides the support for the below SCIM features.
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/scim-base-url.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
 ## SCIM User Attributes
-```json
+```javascript
 {
     "schemas": [
         "urn:ietf:params:scim:schemas:core:2.0:User",
@@ -134,7 +117,7 @@ User accounts can only be deactivated (active:false) via PUT/PATCH or DELETE Use
 
 POST `https://auth.lambdatest.com/api/scim/Users`
 
-```json
+```javascript
 {
   "schemas": [
     "urn:ietf:params:scim:schemas:core:2.0:User",
