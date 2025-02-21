@@ -101,38 +101,64 @@ params = {"Permission Settings":{"Location":"While using the app", "Precise Loca
 ```
 
 :::
-
 ### Custom App Settings 
 
 These are the settings added by the app developer using the [iOS Settings Bundle](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html#//apple_ref/doc/uid/10000059i-CH6-SW11).
 
-**Supported custom settings**
+Currently, App Automate supports the following **custom settings** - 
 
-Currently, App Automate supports the following custom settings:
+*1. Toggles-* 
 
-- Toggles
+Toggles represent simple On/Off switches. To automate toggles, use the setting name as the key and set its value to "On" or "Off".
 
-- Multivalued Settings
+Example => Biometric : On
 
-- Nested Settings
 
-- Sliders
+*2. Multivalued Settings-*
 
-- Textfields
+Multivalued settings allow users to choose from multiple options, such as dropdowns or segmented controls. The setting name is the key, and the selected option is the value.
 
-Apart from Textfields and Sliders, for every other settings, we have to pass the Name of that particular setting as the **key-value pair**. For example:
+Example => Currency : Rs
 
-- "Reset App" : "On".
+*3. Nested Settings-*
 
-For **textfields and sliders**, we pass the index of that particular textfield or slider starting from 1 when we traverse from top to bottom. For example:
+Nested settings refer to child panes or submenus within the main settings. To interact with them, use the main setting name and specify the desired nested option.
 
-1. "Slider-1":"0.1",
+Example => Other Settings : [Country:USA , Voice Command : On]
 
-2. "TextField-2":"ABCD"
+*4. Sliders-*
 
-The values in Slider are entered on a scale from 0-1 which means the values are not integers but decimals.
+Sliders accept decimal values between 0 and 1. If multiple sliders are present, specify the index to target a specific one.
 
-If any key is not present, we should get an error saying one of the keys is missing in the passed preferences.
+Example => Slider-1 : 0.5
+
+*5. Textfields-*
+
+Textfields accept plain text input. If multiple textfields exist, use an indexed key to target the correct field.
+
+Example => TextField-1 : This is LambdaTest
+
+*6. Secure Textfields-* 
+
+Secure textfields are similar to regular textfields but are used for sensitive data like passwords. They obscure the text as it’s entered.
+
+Example => SecureTextField-1: 000000
+
+Note: If any key is not present, we should get an error saying one of the keys is missing in the passed preferences.
+
+**Important Considerations:** 
+
+*1. Default Values-* 
+
+If a Textfield or Secure Textfield has a default value, it will be cleared before applying the new preference. To retain the default value, pass it explicitly in the preference.
+
+*2. Clearing Values-*
+
+Pass an empty string ("") to clear an existing value.
+
+*3. Untouched Fields-* 
+
+To leave a Textfield/Secure Textfield untouched, simply omit it from the preferences.
 
 ### Remember
 
