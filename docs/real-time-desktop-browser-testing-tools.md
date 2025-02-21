@@ -105,17 +105,9 @@ Customize your test environment with various settings:
 - **Time Zone:** Select the time zone that aligns with your testing needs to ensure accurate testing across different regions.
 - **Keyboard Input:** Change the keyboard language during the test session for localized testing scenarios.
 
+> 📘 We also provide a support for [Self Signed Certificates](https://www.lambdatest.com/support/docs/real-time-self-signed-certificate/).
+
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/settings.png').default} alt="Image" className="doc_img"/>
- 
-## Self Signed Certificate Support
-Many web features require a secure HTTPS context to function. In development and staging environments, teams often use self-signed certificates, which browsers do not trust by default. This leads to security warnings, blocked APIs, and feature failures.
-
-LambdaTest’s Self-Signed Certificates Support allows users to enable a setting that treats self-signed HTTPS sites as secure within remote test environments. This ensures seamless testing of HTTPS-only APIs, WebRTC, service workers, and other secure-context-dependent features without manual certificate installation. Its key features are:
-- **Bypass Browser Warnings :** Self-signed certificates are recognized as secure.
-- **Cross-Platform Support :** Works on Windows, macOS, Android, and iOS.
-- **Seamless Integration :** Enable via a simple toggle in the LambdaTest UI.
-
-<img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/self-signed-certificate.gif').default} alt="Image" className="doc_img"/>
 
 ## Switch
 Efficiently switch between different devices, browsers, and their OS versions without ending the current test session.

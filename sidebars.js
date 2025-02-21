@@ -1224,7 +1224,8 @@ module.exports = {
           "webview-testing-in-android",
           "real-time-locally-hosted-pages",
           "real-time-recents-and-favourites",
-          "real-time-upload-and-download-files"
+          "real-time-upload-and-download-files",
+          "real-time-self-signed-certificate"
         ],
       },
       "troubleshooting-ios-apps",
