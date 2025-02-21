@@ -1,6 +1,6 @@
 ---
 id: playwright-webview-test
-title: Playwright Webdview Testing
+title: Playwright Webview Testing
 hide_title: false
 sidebar_label: Webview Testing
 description: Learn how to perform webview testing on android using playwright framework on lambdatest platform with 3000+ browsers cross platform.
