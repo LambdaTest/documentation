@@ -1106,7 +1106,10 @@ module.exports = {
             ]
           },
           "kane-ai-modules",
-          "kane-ai-secrets"
+          "kane-ai-secrets",
+          "kaneai-upload-and-download-files",
+          "kaneai-modules-versions-and-enhancement",
+          "kane-ai-assertions"
         ],
       },
       {
@@ -1116,8 +1119,6 @@ module.exports = {
         items: [
           "kane-ai-command-guide",
           "kane-ai-web-test-writing-guidelines",
-          "kaneai-upload-and-download-files",
-          "kaneai-modules-versions-and-enhancement"
         ],
       },
       {
