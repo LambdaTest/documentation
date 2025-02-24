@@ -126,7 +126,7 @@ HyperExecute provides you with the tools that you need to run your tests at the 
   </div>
   </a>  
 
-  <a href="/support/docs/hyperexecute-task-metrics//">
+  <a href="/support/docs/hyperexecute-task-metrics/">
   <div className="support_inners">
     <h3>Task Metrics</h3>
     <p>Track your CPU, and Memory utilization of the virtual machines for a seamless user experience.</p>
