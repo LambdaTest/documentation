@@ -100,4 +100,4 @@ Note: Projects can also be shared later directly from the menu.
 **Step 5:**
 Now, you can view all the apps you’ve uploaded along with their respective versions, which can be synced with LambdaTest. Select the application, choose the version, pick the device for testing, and **start the session.**
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/akshayrox.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Laststep.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
