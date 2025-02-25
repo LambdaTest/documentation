@@ -753,6 +753,7 @@ module.exports = {
               "cucumber-report",
               "playwright-html-report",
               "specflow-report",
+              "custom-speclow-report",
               "cypress-mochaawesome-report",
               "error-categorization-report",
               "junit-xml-report",

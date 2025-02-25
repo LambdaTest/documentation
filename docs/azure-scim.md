@@ -100,9 +100,11 @@ For example we can set Constant association “Guest” for `urn:ietf:params:sci
 
 Or, can create association using the Expression like this ,
 
-`IIF(SingleAppRoleAssignment([appRoleAssignments])="Admin", "Admin"`,
-`IIF(SingleAppRoleAssignment([appRoleAssignments])="Guest", "Guest"`,
-`IIF(SingleAppRoleAssignment([appRoleAssignments])="User", "User", "User")))`
+```javascript
+IIF(SingleAppRoleAssignment([appRoleAssignments])="Admin", "Admin",
+IIF(SingleAppRoleAssignment([appRoleAssignments])="Guest", "Guest",
+IIF(SingleAppRoleAssignment([appRoleAssignments])="User", "User", "User")))
+```
 
 In the above example we are using the appRoleAssignments attribute of microsoft user to set string value.
 
@@ -116,7 +118,6 @@ After custom attribute creation, we have to map them using “Add new mapping”
 This operation starts the initial synchronization cycle of all users in Scope in the Settings section. The initial cycle takes longer to perform than subsequent cycles, which occur approximately every 40 minutes as long as the Azure AD provisioning service is running.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/azure-ad/save.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
-
 
 
 > That's all you need to know about LambdaTest SCIM Auto User Provisioning with Azure AD.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
