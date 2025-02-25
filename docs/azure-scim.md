@@ -100,9 +100,11 @@ For example we can set Constant association “Guest” for `urn:ietf:params:sci
 
 Or, can create association using the Expression like this ,
 
-`IIF(SingleAppRoleAssignment([appRoleAssignments])="Admin", "Admin"`,
-`IIF(SingleAppRoleAssignment([appRoleAssignments])="Guest", "Guest"`,
-`IIF(SingleAppRoleAssignment([appRoleAssignments])="User", "User", "User")))`
+```javascript
+IIF(SingleAppRoleAssignment([appRoleAssignments])="Admin", "Admin",
+IIF(SingleAppRoleAssignment([appRoleAssignments])="Guest", "Guest",
+IIF(SingleAppRoleAssignment([appRoleAssignments])="User", "User", "User")))
+```
 
 In the above example we are using the appRoleAssignments attribute of microsoft user to set string value.
 
