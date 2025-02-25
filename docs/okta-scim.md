@@ -1,7 +1,7 @@
 ---
 id: okta-scim
 title: Okta Scim User Provisioning
-hide_title: true
+hide_title: false
 sidebar_label: Okta
 description: Integrating LambdaTest SCIM with Okta 
 keywords:
@@ -35,18 +35,11 @@ slug: scim/okta/
     }}
 ></script>
 
-
-
-
-#   LambdaTest SCIM Auto User Provisioning with Okta
-
-* * *
-## Prerequisites ##
----
+## Prerequisites
 Integrate SCIM With LambdaTest:
 
-* You will need an Enterprise plan with LambdaTest.
-* SSO must be already integrated. Please complete [LambdaTest SSO & Okta Integration](/support/docs/lambdatest-sso-okta-integration/)
+- You will need an Enterprise plan with LambdaTest.
+- SSO must be already integrated. Please complete [LambdaTest SSO & Okta Integration](/support/docs/lambdatest-sso-okta-integration/)
 
 ## Integrating SCIM with Okta
 **Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
@@ -83,11 +76,13 @@ Click Test Connection to ensure Okta can connect to LambdaTest. If the connectio
 
 userName, Active, name.givenName, name.familyName are required attributes
 
-***Creating Custom Attributes***
+**Creating Custom Attributes**
 
-**urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole**: 
+For creating custom attribute in Okta, go to Directory > Profile Editor > Add Attribute > [Create Custom Attribute](https://help.okta.com/en-us/content/topics/users-groups-profiles/usgp-add-custom-user-attributes.htm)
 
-For creating custom attribute in Okta, go to Directory > Profile Editor > Add Attribute ([Create Custom Attribute](https://help.okta.com/en-us/content/topics/users-groups-profiles/usgp-add-custom-user-attributes.htm))
+**`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:OrganizationRole`**: 
+
+**`urn:ietf:params:scim:schemas:extension:LambdaTest:2.0:User:LambdatestGroup`** : Applicable only if organisation has group support active)
 
 Enter Display Name as per your choice 
 Enter Variable name as **OrganizationRole**
@@ -100,9 +95,9 @@ Select Enum as **Yes**
 Enter the values as **Admin, Guest, User**
 <img loading="lazy" src={require('../assets/images/sso/img_19.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
 
+Also if you want to assign this attribute at a okta group level choose AttributeType as Group
 
-
-
+<img loading="lazy" src={require('../assets/images/sso/img_20.png').default} alt="okta integration" width="944" height="487" className="doc_img"/>
 
 **Step 10:** To enable the Okta provisioning service for LambdaTest, set Create Users, Update User Attributes and Deactivate Users to enabled
 <img loading="lazy" src={require('../assets/images/lambdatest-scim/okta/provisioning-enabled.png').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
