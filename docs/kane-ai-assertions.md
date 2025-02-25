@@ -68,7 +68,7 @@ The Assertion Feature in KaneAI enhances test execution control by transitioning
 - If disabled, the test continues execution despite the failure.
 - Save the configuration and proceed.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/assertion/img3.png').default} alt="kaneai" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/assertion/img5.png').default} alt="kaneai" className="doc_img"/>
 
 ### Step 4: Review and Execute the test
 - Navigate to the Test Manager to view the summary of executed tests.
@@ -81,4 +81,4 @@ The Assertion Feature in KaneAI enhances test execution control by transitioning
 ### Step 5: Monitor the Test Execution
 - Veriy your test results in the logs as shown below:
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/assertion/img5.png').default} alt="kaneai" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/assertion/img3.png').default} alt="kaneai" className="doc_img"/>
