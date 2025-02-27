@@ -101,7 +101,7 @@ The above password is only for those users who are external to the organization 
 <img loading="lazy" src={require('../assets/images/analytics/Private-Dashboard.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 #### Summary of the feature
-This feature allows users to change the visibility of a dashboard from being accessible to all organization users to being private and only accessible to admin user. This provides better control over who can view and interact with the dashboard.
+This feature allows users to change the visibility of a dashboard from being accessible to all organization users to being private and only accessible to admin user and creator of the dashboard. This provides better control over who can view and interact with the dashboard.
 
 #### Steps to use
 1. Navigate to the dashboard you want to change the visibility of.
@@ -115,6 +115,13 @@ An admin user is the user who has created the dashboard. Only the creator is all
 #### Usecases with examples
 1. **Sensitive data protection:** Restrict access to dashboards containing sensitive or confidential information by setting visibility to "Private (Creator Only)."
 2. **Role-based access control:** Limit dashboard access
+
+
+## Admin Access for Dashboards
+
+### Summary of the feature
+This feature allows the admin user to access all the dashboards created by the organization users. The admin user can view, edit, and manage the dashboards created by other users within the organization.
+
 
 
 <nav aria-label="breadcrumbs">
