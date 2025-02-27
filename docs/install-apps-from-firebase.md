@@ -41,24 +41,31 @@ Let’s dive in to learn how to test apps installed from Firebase.
 
 **Prerequisites:**
 
-Create a project on Firebase and open this project on Google Cloud Platform (GCP). 
+Create a new project on Firebase and open it in Google Cloud Platform (GCP). Using a new project is preferred, though an existing one can be used. 
 
-Here, create an OAuth Client ID. 
+Here, create an [OAuth Client ID](https://developers.google.com/identity/protocols/oauth2). 
 
-In this step, add the Authorized Redirect URL:
-https://mobile-mwc-bye-app-center-dev.lambdatestinternal.com/app
-and the Authorized JavaScript URL:
-https://mobile-mwc-bye-app-center-dev.lambdatestinternal.com
+In this step, update the following URLs as - 
+| Input Field | URL |
+|-----------------|-------------|
+| JavaScript origins | https://applive.lambdatest.com |
+| Redirect URIs| https://applive.lambdatest.com/app |
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/vaibhavrox.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
 
 
 Download the OAuth client config JSON file, or simply take note of the Project ID, Client ID, and Client Secret Key.
 
-Go to Firebase and navigate to App Distribution to upload your application.
+Next, add an app, navigate to Firebase, and proceed to App Distribution to upload the application releases.
 
 
 :::tip
-In GCP, go to the OAuth consent screen --> Audience section, and you can add more testers for your project.
-You must be a tester for your own project, or you must publish it to ensure that this works.
+Access to the project is granted only if- 
+1. You are the owner.
+2. You are a tester for the app.
+3. The app is published.
+
+These settings can be updated in the OAuth consent screen.
 :::
 
 Steps to Test apps:
@@ -71,16 +78,26 @@ Login to your LambdaTest account. Visit **Real Device** from the left panel and 
 **Step 2:**
 When you click on Add Project, you can integrate your Firebase account with LambdaTest either by uploading a **config file** or connecting **using credentials**. You should have these credentials from the prerequisite step.
 
+Upload a Config file - 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/2photo.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+Connect with credentials - 
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Animeshrox.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 **Step 3:**
 After entering these details, the option to **sign in with Google** will appear. Follow the steps and choose the Google account through which you would like to integrate Firebase with LambdaTest.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/3photo.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/1blurry.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/2blurry.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/1blurryblurry.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/2blurryblurry.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 **Step 4:**
 You will have successfully integrated LambdaTest with Firebase. You can now click on **Share Now** to share the project with the testers you added in GCP.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/6photo.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+Note: Projects can also be shared later directly from the menu.  
+
+**Step 5:**
+Now, you can view all the apps you’ve uploaded along with their respective versions, which can be synced with LambdaTest. Select the application, choose the version, pick the device for testing, and **start the session.**
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Laststep.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>

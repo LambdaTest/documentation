@@ -105,8 +105,10 @@ Customize your test environment with various settings:
 - **Time Zone:** Select the time zone that aligns with your testing needs to ensure accurate testing across different regions.
 - **Keyboard Input:** Change the keyboard language during the test session for localized testing scenarios.
 
+> 📘 We also provide a support for [Self Signed Certificates](https://www.lambdatest.com/support/docs/real-time-self-signed-certificate/).
+
 <img loading="lazy" src={require('../assets/images/real-time-testing/web-browser/settings.png').default} alt="Image" className="doc_img"/>
- 
+
 ## Switch
 Efficiently switch between different devices, browsers, and their OS versions without ending the current test session.
 

@@ -751,6 +751,7 @@ module.exports = {
               "cucumber-report",
               "playwright-html-report",
               "specflow-report",
+              "custom-speclow-report",
               "cypress-mochaawesome-report",
               "error-categorization-report",
               "junit-xml-report",
@@ -1106,7 +1107,10 @@ module.exports = {
             ]
           },
           "kane-ai-modules",
-          "kane-ai-secrets"
+          "kane-ai-secrets",
+          "kaneai-upload-and-download-files",
+          "kaneai-modules-versions-and-enhancement",
+          "kane-ai-assertions"
         ],
       },
       {
@@ -1222,7 +1226,8 @@ module.exports = {
           "webview-testing-in-android",
           "real-time-locally-hosted-pages",
           "real-time-recents-and-favourites",
-          "real-time-upload-and-download-files"
+          "real-time-upload-and-download-files",
+          "real-time-self-signed-certificate"
         ],
       },
       "troubleshooting-ios-apps",

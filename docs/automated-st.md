@@ -42,6 +42,8 @@ slug: automated-screenshot-testing/
 ></script>
 
 # Automated Screenshot Testing
+> This feature is **deprecated** and as a result, no further support will be provided for this feature by the LambdaTest Organization. 
+
 ***
 Automated Screenshot testing will help you capture screenshots in bulk through different desktops and mobile devices running on various OS in a single go! It is facilitated by instrumented UI test cases to help you realize how seamlessly your web app renders through different screen sizes using different browsers. At LambdaTest, you can capture up to 25 screenshots of different browsers and OS configurations in a single session. You can choose from a wide range of latest to oldest browser versions of Chrome, Firefox, Safari, Edge, Internet Explorer & Opera. Also, you can test on different operating systems Windows, macOS, Android, and iOS.
 
