@@ -208,7 +208,7 @@ Please read the following table for more information about the configuration fil
 | Config Key     | Description                                                                                                                        | Usage     |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | browsers       | You can add all the supported browsers brands here to run your tests for SmartUI. <br/> Ex: `"chrome", "firefox", "safari", "edge", etc..` | Mandatory |
-| resolutions    | You can add all the supported browser viewpoints here to run your tests for SmartUI <br/> Ex: `[1920, 1080],[width, height] etc..` <br/> | Mandatory |
+| viewports    | You can add all the supported browser viewpoints here to run your tests for SmartUI <br/> Ex: `[1920, 1080],[width, height] etc..` <br/> | Mandatory |
 
 
 ## **Step 5:** Execute the Tests on SmartUI Cloud using CLI
@@ -218,6 +218,47 @@ You can now execute tests for `Visual Regression Testing` using the following op
 ```bash
 npx smartui capture urls.json --config .smartui.json
 ```
+
+## Executing browser scripts using the Capture Command
+
+SmartUI CLI provides the flexibility to execute custom JavaScript code on target URLs at specific stages of the snapshot process. This feature is crucial for:
+
+- Interacting with dynamic elements
+- Managing loading states
+- Modifying page content
+- Validating page states
+- Performing actions like accepting cookies, clicking on buttons, etc.
+These capabilities ensure that your visual tests accurately capture the true representation of your web pages.
+
+You can execute any valid JavaScript code that you would typically run inside a browser. For example, to simulate a button click, you might use:
+
+```js
+document.querySelector('.my-button-example').click();
+```
+
+### Execute Option Keys
+
+The `execute` option accepts an object with the following keys:
+
+- **afterNavigation**: This function is called after the page navigates to the specified URL. It is useful for actions that need to occur once the page has loaded.
+
+- **beforeSnapshot**: This function is called just before SmartUI captures a snapshot. It is ideal for final adjustments or interactions needed to prepare the page for capture.
+
+Example usage in a configuration:
+
+```json
+{
+  "name": "Example Page",
+  "url": "https://example.com/",
+  "waitForTimeout": 3000,
+  "execute": {
+    "afterNavigation": "await page.waitForSelector('.loading', { hidden: true })",
+    "beforeSnapshot": "document.querySelector('.cookie-banner').click()"
+  }
+}
+```
+
+This example waits for a loading element to disappear after navigation and clicks a cookie banner before taking a snapshot.
 
 ## Fetch results
 
