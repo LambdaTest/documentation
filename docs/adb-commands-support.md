@@ -111,8 +111,13 @@ result = driver.execute_script("lambda-adb",params)
   params = {"command": "shell", "text": "dumpsys package <package_info>"}
   result = driver.execute_script("lambda-adb",params)
   ```
+  Example -
+   ```python
+  params = {"command": "shell", "text": "dumpsys package dumpsys input_method"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
 
-- **adb shell getprop** <VirtualDeviceTag value="Virtual Device" />
+- **adb shell getprop** <VirtualDeviceTag value="Virtual Device" /> <RealDeviceTag value="Real Device" />
 
   This command is used to retrieve system properties from an Android device. When executed, it provides a list of key-value pairs representing various system settings and configurations. These properties include information about the device's build, hardware, and other system-related details. The output can be useful for debugging, development or understanding the device's current state. The following is a Python sample using the adb command:
 
@@ -120,6 +125,12 @@ result = driver.execute_script("lambda-adb",params)
   params = {"command": "shell", "text": "getprop"}
   result = driver.execute_script("lambda-adb",params)
   ```
+  Example -
+  ```python
+  params = {"command": "shell", "text": "getprop ro.build.version.security_patch"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+
 
 - **adb shell ping -c 4 YOUR_URL** <VirtualDeviceTag value="Virtual Device" />
 
@@ -130,6 +141,16 @@ result = driver.execute_script("lambda-adb",params)
   params = {"command": "shell", "text": "ping -c 4 google.com"}
   result = driver.execute_script("lambda-adb",params)
   ```
+
+- **adb shell cat** <RealDeviceTag value="Real Device" />
+
+  This command provides detailed information about the system’s kernel version and build information. It outputs the Linux kernel version, along with build information such as the GCC version used to compile the kernel. This command is useful when you need to check the underlying kernel version of the Android device, typically for compatibility checks, debugging, or ensuring that a device meets specific requirements for apps or tests. The following is a Python sample using the adb command:
+
+  ```python
+  params = {"command": "shell", "text": "cat /proc/version"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+<img loading="lazy" src={require('../assets/images/appium-app/adb-commands.png').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
 ### Enable/Disable Notification
 

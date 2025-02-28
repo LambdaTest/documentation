@@ -79,6 +79,7 @@ To ensure security and compatibility, we have a list of ADB commands that can be
 | pwd                                              | Prints the current working directory on the device.              |
 | dumpsys                                          | Dumps system information from the device.                        |
 | getprop                                          | Retrieves device properties.                                     |
+| cat                                         | Helps in compatibility checks, debugging and system diagnostics.                  |
 
 
 
