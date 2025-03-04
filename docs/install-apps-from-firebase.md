@@ -101,3 +101,16 @@ Note: Projects can also be shared later directly from the menu.
 Now, you can view all the apps you’ve uploaded along with their respective versions, which can be synced with LambdaTest. Select the application, choose the version, pick the device for testing, and **start the session.**
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Noblurlaststep.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+:::tip
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Buttonexplanation.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+
+**Button Functions Overview-**  
+
+1. *Add new project -* Click this button to add and sync new Firebase projects to your workspace.  
+2. *Refresh -* This button refreshes the project list, apps, and releases to their latest state without affecting your synced releases.
+3. *Project Menu -* Click here to manage your project. You can share it with team members or delete it from the list.
+4. *Sync -* Sync your release to install the app on a device. This generates a unique app ID for that release. 
+:::
