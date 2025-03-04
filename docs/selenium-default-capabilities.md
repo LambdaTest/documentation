@@ -48,4 +48,4 @@ slug: selenium-default-capabilities/
 | `acceptSslCerts` | true, false | Decides if a session by default should accept all SSL certificates.|
 | `unexpectedAlertBehaviour` | accept, dismiss, ignore | Determines the action of a browser for handling alerts, prior to pointing the UnhandledAlertException. |
 | `elementScrollBehavior` | integer | Determines the scrolling behavior according to the user provided input. The user can decide if the elements should be aligned to top(0) or bottom(1) with respect to the elements scroll-ability inside the viewport. By default the value is set to 1, aligning the scroll behavior to top. This is compatible with IE and Firefox (since 2.36) |
-| `preventCrossSiteTracking` | true, false | Enables or disables cross-site tracking. |
+| `preventCrossSiteTracking` | true, false | Blocks or unblocks cross-site tracking. |
