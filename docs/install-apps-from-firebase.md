@@ -111,6 +111,6 @@ Now, you can view all the apps you’ve uploaded along with their respective ver
 
 1. *Add new project -* Click this button to add and sync new Firebase projects to your workspace.  
 2. *Refresh -* This button refreshes the project list, apps, and releases to their latest state without affecting your synced releases.
-3. *Project Menue -* Click here to manage your project. You can share it with team members or delete it from the list.
+3. *Project Menu -* Click here to manage your project. You can share it with team members or delete it from the list.
 4. *Sync -* Sync your release to install the app on a device. This generates a unique app ID for that release. 
 :::
