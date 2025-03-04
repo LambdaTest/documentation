@@ -58,7 +58,7 @@ Gradle is a build automation tool for multi-language software development. It co
 
 ```java title="build.gradle"
 plugins {
-    id 'io.github.lambdatest.gradle' version '1.0.6'
+    id 'io.github.lambdatest.gradle' version '1.0.7'
 }
 
 repositories {
@@ -84,7 +84,7 @@ runLambdaTest {
 ```
 
 ### Step 3: Configure Upload APK Parameters
-With the release of version **`1.0.6`** of the `lambdatest-gradle-plugin`, users now have the option to upload their APK files directly to LambdaTest. Add the following configuration to build.gradle to enable APK upload:
+With the release of version **`1.0.7`** of the `lambdatest-gradle-plugin`, users now have the option to upload their APK files directly to LambdaTest. Add the following configuration to build.gradle to enable APK upload:
 
 ```java title="build.gradle"
 uploadApkToLambdaTest {
