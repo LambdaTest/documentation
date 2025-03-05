@@ -53,7 +53,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Running SpecFlow Framework Tests on HyperExecute
 SpecFlow is a behavior-driven development (BDD) framework for .NET languages, often used with Selenium for automated testing. It enables collaboration between technical and non-technical team members by expressing tests in natural language. 
 
-HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
 This guide details how to execute your **Specflow** framework tests on **HyperExecute** via two different methods:
 

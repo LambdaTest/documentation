@@ -43,13 +43,13 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
-Testsigma is an AI-powered, cloud-based test automation platform that helps testers create, run, and maintain automated tests for web, mobile, and API applications.
+Testsigma is an AI Native, cloud-based test automation platform that helps testers create, run, and maintain automated tests for web, mobile, and API applications.
 
 Testsigma can help you with:
 
 - **Natural Language Support:** You can create test cases in simple English, which makes it easy for people without programming experience to get started with test automation.
 
-- **AI-powered Test Generation:** Testsigma can automatically generate test cases for you based on your application's code or user interface.
+- **AI Native Test Generation:** Testsigma can automatically generate test cases for you based on your application's code or user interface.
 
 - **Cloud-Based Execution:** You can run your tests on the cloud without having to set up your own infrastructure.
 
