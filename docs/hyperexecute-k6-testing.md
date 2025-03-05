@@ -42,7 +42,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ></script>
 [k6](https://grafana.com/docs/k6/latest/) is an open-source tool designed to make load testing easy and accessible for developers and QA engineers. It's specifically built for testing the performance of APIs, microservices, and websites.
 
-[HyperExecute](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/) is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+[HyperExecute](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/) is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
 This guide details how to execute your **k6** tests on **HyperExecute** using [YAML 0.1](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/)
 

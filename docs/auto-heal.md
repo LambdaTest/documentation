@@ -232,7 +232,7 @@ To run the test, execute the below command:
 Self-healing plays a vital role in refining the test automation process. Here are its primary advantages:
 
 1. **Increased Test Stability:**
-The auto-healing feature of LambdaTest ensures that tests remain consistent and stable, even when faced with minor changes in the web application's UI. By dynamically adjusting to these changes, the AI-powered auto-healing feature overcomes test flakiness, providing stability and reliability to your test suite in no time.
+The auto-healing feature of LambdaTest ensures that tests remain consistent and stable, even when faced with minor changes in the web application's UI. By dynamically adjusting to these changes, the AI Native auto-healing feature overcomes test flakiness, providing stability and reliability to your test suite in no time.
 
 2. **Reduced Test Maintenance:**
 One of the significant challenges in test automation is the constant need to update and maintain test scripts due to evolving application interfaces. With LambdaTest's auto-healing capability, the system automatically adapts to these changes, reducing the manual effort required to update test scripts, and saving time and resources.

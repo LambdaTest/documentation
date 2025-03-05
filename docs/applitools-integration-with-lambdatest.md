@@ -18,7 +18,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 -----------------------------------------------------------------------------------------------------------------------------
-Applitools offers a cloud-based platform to help you perform AI-powered, end-to-end visual testing and monitoring. The platform is designed to make life easier for automation testers by delivering a flexible way to directly integrate their test scripts without worrying about learning a new language or creating a new automation script.
+Applitools offers a cloud-based platform to help you perform AI Native, end-to-end visual testing and monitoring. The platform is designed to make life easier for automation testers by delivering a flexible way to directly integrate their test scripts without worrying about learning a new language or creating a new automation script.
 
 LambdaTest integration with Applitools will help you perform automated cross browser testing on more than 2000 real browsers running on real operating systems hosted on a cloud-based Selenium Grid. You can execute your automation test script on LambdaTest Selenium Grid directly from your Applitools instance.
 

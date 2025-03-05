@@ -59,7 +59,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Running Codecept Framework Tests on HyperExecute
 CodeceptJS is a versatile JavaScript testing framework that supports Puppeteer for end-to-end testing of web applications. It introduces a human-readable syntax and a versatile architecture that allows writing tests in a natural language style.
 
-HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
 This guide details how to execute your **Codecept** framework tests on **HyperExecute** via two different methods:
 

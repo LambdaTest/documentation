@@ -53,7 +53,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Running NUnit Framework Tests on HyperExecute
 NUnit is a testing framework for .NET languages, commonly used with Selenium for automated testing. It provides a structure for organizing and executing tests, supporting features like test fixtures, assertions, and setup/teardown methods.
 
-HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
 This guide details how to execute your **NUnit** framework tests on **HyperExecute** via two different methods:
 
