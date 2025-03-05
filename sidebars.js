@@ -663,7 +663,7 @@ module.exports = {
           {
             type: "doc",
             label: "Setup with AWS",
-            id: "he-aws",
+            id: "hyperexecute-private-cloud-setup-with-aws",
           },
         ],
       },
