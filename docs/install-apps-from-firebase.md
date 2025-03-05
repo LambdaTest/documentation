@@ -102,15 +102,13 @@ Now, you can view all the apps you’ve uploaded along with their respective ver
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Noblurlaststep.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-:::tip
+
+
+## Key Actions Overview 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Buttonexplanation.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-
-**Button Functions Overview-**  
-
-1. *Add new project -* Click this button to add and sync new Firebase projects to your workspace.  
-2. *Refresh -* This button refreshes the project list, apps, and releases to their latest state without affecting your synced releases.
-3. *Project Menu -* Click here to manage your project. You can share it with team members or delete it from the list.
-4. *Sync -* Sync your release to install the app on a device. This generates a unique app ID for that release. 
-:::
+1. **Add new project:** Click this button to add and sync new Firebase projects to your workspace.  
+2. **Refresh:** This button refreshes the project list, apps, and releases to their latest state without affecting your synced releases.
+3. **Project Menu:** Click here to manage your project. You can share it with team members or delete it from the list.
+4. **Sync:** Sync your release. This is necessary to start any session and generates a unique app ID for the release, which will be used for automation test cases. 
