@@ -63,8 +63,8 @@ Here's why you should shift from legacy test execution platform to LambdaTest.
 | Features | LambdaTest | Legacy Platform |
 |------------|------------|------- ---|
 | Smart In-Built Test Orchestration Workflows | ✅ | ❌ |
-| AI-Powered Test Intelligence | ✅  | ❌ |
-| AI-Powered Root Cause Analysis (RCA) | ✅ | ❌ |
+| AI Native Test Intelligence | ✅  | ❌ |
+| AI Native Root Cause Analysis (RCA) | ✅ | ❌ |
 | Auto Healing | ✅ | ❌ |
 | 70% Faster Test Execution | ✅ |❌|
 | Flaky Test Detection | ✅ | ❌ |

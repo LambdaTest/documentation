@@ -89,7 +89,7 @@ Here you can check which part of your test case is causing an error in the video
 > **NOTE :** During the execution of scenario, you might come across different issues. To troubleshoot and resolve these issues, please refer to the relevant solutions provided on [this](https://www.lambdatest.com/support/docs/hyperexecute-scenario-steps-error/) page.
 
 ## Root Cause Analysis Report
-You can also check out our AI-Powered [RCA Report](https://www.lambdatest.com/support/docs/ai-powered-test-failure-analysis/), which will help you to quickly identify various error categories and also offer a comprehensive overview of the underlying causes.
+You can also check out our AI Native [RCA Report](https://www.lambdatest.com/support/docs/ai-powered-test-failure-analysis/), which will help you to quickly identify various error categories and also offer a comprehensive overview of the underlying causes.
 
 To generate the RCA, simply click on the **Errors** icon, where you can also see the **type of error**, and then click on the **See Details** button to go through the detailed logs.
 

@@ -46,7 +46,7 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-Testim is a AI-powered test authoring platform designed to automate software testing, particularly web and mobile applications. It focuses on creating stable and reliable automated tests. It allows creating tests without writing code or by incorporating custom JavaScript for more intricate scenarios. You can manage and scale the test automation process efficiently, which is particularly valuable for Agile development teams.
+Testim is a AI Native test authoring platform designed to automate software testing, particularly web and mobile applications. It focuses on creating stable and reliable automated tests. It allows creating tests without writing code or by incorporating custom JavaScript for more intricate scenarios. You can manage and scale the test automation process efficiently, which is particularly valuable for Agile development teams.
 
 This document details the seamless integration between HyperExecute and Testim, enabling you to run your automated tests.
 

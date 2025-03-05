@@ -49,7 +49,7 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-algoQA is an AI-powered software testing platform that automates end-to-end tests across web, mobile, desktop, and API applications. It generates optimal test cases, datasets, and executable scripts, reducing manual effort and improving test coverage.
+algoQA is an AI Native software testing platform that automates end-to-end tests across web, mobile, desktop, and API applications. It generates optimal test cases, datasets, and executable scripts, reducing manual effort and improving test coverage.
 
 This document will guide you how to integrate your algoQA project with HyperExecute
 
