@@ -59,7 +59,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Running PyTest Framework Tests on HyperExecute
 Pytest is a popular Python testing framework that can be seamlessly integrated with Playwright for efficient end-to-end testing of web applications. Pytest simplifies the testing process with its straightforward syntax and rich set of features. 
 
-HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
 This guide details how to execute your **PyTest** framework tests on **HyperExecute** via two different methods:
 

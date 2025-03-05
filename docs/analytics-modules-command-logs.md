@@ -38,7 +38,7 @@ import NewTag from '../src/component/newTag';
 ></script>
 
 
-### Introduction to AI-Powered Command Logs Analytics
+### Introduction to AI Native Command Logs Analytics
 
 Lambdatest Analytics help you intelligently analyze your test execution steps on the platform. It provides you with the insights on the errors that are causing your test runs to fail. 
 

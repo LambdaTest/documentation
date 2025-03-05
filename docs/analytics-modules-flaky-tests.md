@@ -37,7 +37,7 @@ slug: analytics-modules-test-intelligence-flaky-test-analytics/
 import VideoEmbed from '../src/component/videoEmbed';
 
 
-## AI-Powered Flaky Test Analytics
+## AI Native Flaky Test Analytics
 The best way to analyze your flaky tests is to use Test Intelligence. Test Intelligence is a machine learning-based algorithm that helps you identify flaky tests and get insights on the flaky tests that are causing your test runs to fail. By observing the historical test runs, Test Intelligence can identify the flaky tests and provide you with the insights to help you fix them.
 
 <VideoEmbed 

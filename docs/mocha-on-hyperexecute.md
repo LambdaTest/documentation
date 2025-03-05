@@ -59,7 +59,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Running Mocha Framework Tests on HyperExecute
 Mocha is a versatile JavaScript testing framework often used in conjunction with Puppeteer for testing web applications. With support for asynchronous testing and various reporting options, Mocha enables the creation of robust test suites. When combined with Puppeteer, Mocha facilitates end-to-end testing of web pages by allowing developers to control browser interactions.
 
-HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
 This guide details how to execute your **Mocha** framework tests on **HyperExecute** via two different methods:
 

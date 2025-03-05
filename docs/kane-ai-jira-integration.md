@@ -47,7 +47,7 @@ The "Jira integration" feature allows you to generate test cases from your Jira 
 ## Key Benefits of the Kane AI Jira Integration:
 - **Automated Test Creation :** Quickly transform test case descriptions in Jira into executable test cases without manual setup.
 - **Efficient QA Workflow :** Simplify testing processes by managing test creation directly from Jira, saving time and reducing errors.
-- **Reduced Bug Risk :** AI-powered test creation helps reduce the likelihood of bugs by ensuring all outlined test cases are covered and refined.
+- **Reduced Bug Risk :** AI Native test creation helps reduce the likelihood of bugs by ensuring all outlined test cases are covered and refined.
 
 ## Step-by-Step Guide
 ### Step 1: Install LambdaTest Application for Jira
