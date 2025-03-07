@@ -1,8 +1,8 @@
 ---
 id: test-intelligence-overview
-title: AI-powered Test Intelligence For Advance Test Analysis
+title: AI Native Test Intelligence For Advance Test Analysis
 sidebar_label: Test Intelligence
-description: Test Intelligence is an AI-powered analytics module that helps you to identify the flaky tests in your test suite. It provides you with the list of tests that are flaky and the reason behind the flakiness of the test.
+description: Test Intelligence is an AI Native analytics module that helps you to identify the flaky tests in your test suite. It provides you with the list of tests that are flaky and the reason behind the flakiness of the test.
 keywords:
   - analytics
 url: https://www.lambdatest.com/support/docs/test-intelligence-overview/

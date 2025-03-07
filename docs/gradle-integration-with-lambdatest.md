@@ -1,7 +1,7 @@
 ---
 id: gradle-integration-with-lambdatest
 title: Gradle Plugin Integration With LambdaTest
-hide_title: true
+hide_title: false
 sidebar_label: Gradle Plugin
 description: Automate testing at scale! Integrate LambdaTest with Gradle for seamless CI/CD & lightning-fast execution.
 keywords:
@@ -44,11 +44,7 @@ slug: gradle-integration-with-lambdatest/
       })
     }}
 ></script>
-
-# Gradle Integration with LambdaTest
-***
-
-Gradle is a build automation tool for multi-language software development. It controls the development process in the tasks of compilation and packaging to testing, deployment, and publishing. Supported languages include Java, Kotlin, Groovy, Scala, C/C++, and JavaScript.
+Gradle is a build automation tool for multi-language software development. It controls the development process across various tasks, including compilation, packaging, testing, deployment, and publishing. Supported languages include Java, Kotlin, Groovy, Scala, C/C++, and JavaScript.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="as5IU-UjtAg">
@@ -58,11 +54,11 @@ Gradle is a build automation tool for multi-language software development. It co
 
 ## Steps to Setup the Gradle Plugin
 
-**Step 1:** Add LambdaTest Gradle Plugin to the `build.gradle` file.
+### Step 1: Add LambdaTest Gradle Plugin to the `build.gradle` file
 
-```bash
+```java title="build.gradle"
 plugins {
-    id 'io.github.lambdatest.gradle' version '1.0.5'
+    id 'io.github.lambdatest.gradle' version '1.0.7'
 }
 
 repositories {
@@ -72,28 +68,50 @@ repositories {
 }
 ```
 
-**Step 2:** Configure LambdaTest Parameters in `build.gradle`
+### Step 2: Configure LambdaTest Parameters in `build.gradle` file
 
-```bash
+```java title="build.gradle"
 runLambdaTest {
-  username = '<your_lambdatest_username>'
-  accessKey = '<your_lambdatest_access_key>'
-  appFilePath = '<path_to_your_App_File>'
-  testSuiteFilePath = '<path_to_your_Test_Suite>'
-  device = '<your_desired_device_for_Testing>'
-  isFlutter = true # if you are running flutter dart tests
-  appId = "lt://1234343" #provide this only if you have already uploaded the app
-  testSuiteId = "lt://1223444" #provide this only if you have already uploaded the app
+  username = 'YOUR_LAMBDATEST_USERNAME'
+  accessKey = 'YOUR_LAMBDATEST_ACCESS_KEY>'
+  appFilePath = 'PATH_TO_YOUR_APP_FILE'
+  testSuiteFilePath = 'PATH_TO_YOUR_TEST_SUITE'
+  device = 'YOUR_DESIRED_DEVICE_FOR_TESTING'
+  isFlutter = true //if you are running flutter dart tests
+  appId = "lt://1234343" //provide this only if you have already uploaded the app
+  testSuiteId = "lt://1223444" //provide this only if you have already uploaded the app
 }
 ```
 
-## Execution
+### Step 3: Configure Upload APK Parameters
+With the release of version **`1.0.7`** of the `lambdatest-gradle-plugin`, users now have the option to upload their APK files directly to LambdaTest. Add the following configuration to build.gradle to enable APK upload:
 
-To run the plugin added in the project's `build.gradle`, use the following command:
+```java title="build.gradle"
+uploadApkToLambdaTest {
+  username = 'YOUR_LAMBDATEST_USERNAME'
+  accessKey = 'YOUR_LAMBDATEST_ACCESS_KEY>'
+  appFilePath = 'PATH_TO_YOUR_APP_FILE'
+  testSuiteFilePath = 'PATH_TO_YOUR_TEST_SUITE'
+}
+```
+### Step 4: Execute the Plugin
+To run the plugin configured in build.gradle, execute the following command:
 
 ```bash
 ./gradlew runLambdaTest
 ```
+
+If you only want to upload your APK files to LambdaTest, use the following command:
+
+```bash
+./gradlew uploadApkToLambdaTest
+```
+
+## Post Upload Configuration
+Once the upload process is completed, LambdaTest will return unique IDs for the uploaded files. These IDs can be used in the runLambdaTest configuration to execute your tests seamlessly.
+
+## Virtual Device Support
+The LambdaTest Gradle plugin now supports virtual devices. To execute tests on a virtual device, set **`isVirtualDevice: true`** in both **`runLambdaTest`** and **`uploadApkToLambdaTest`** configurations. If this flag is not provided, tests will default to running on a real device.
 
 ## Supported Capabilities
 

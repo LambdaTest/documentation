@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-private-cloud-on-jumphost
 title: HyperExecute Private Cloud on JumpHost
-hide_title: true
+hide_title: false
 sidebar_label: HyperExecute Private Cloud on JumpHost
 description: Deploy & run HyperExecute Private Cloud on Azure with JumpHost! Follow our guide for setup, test triggering, and dashboard viewing for a smooth, customizable testing experience.
 keywords:
@@ -36,46 +36,29 @@ slug: hyperexecute-private-cloud-on-jumphost/
       })
     }}
 ></script>
-
-# Using JumpHost to run HyperExecute Private Cloud
-
-Congratulations on getting the HyperExecute Private setup deployed on your Azure Cloud!
-
-You can now trigger your test cases and view your dashboard from the JumpHost virtual machine. To understand how to do that, go through the page below.
-
-***
+Congratulations on getting the HyperExecute Private setup deployed on your Azure Cloud! You can now trigger your test cases and view your dashboard from the JumpHost virtual machine. To understand how to do that, go through the page below.
 
 ## Running HyperExecute via a JumpHost VM
 
-1. Log in to your Microsoft Azure account and go to your [homepage](https://portal.azure.com/#home). 
+**Step 1:** Log in to your Microsoft Azure account and go to your [homepage](https://portal.azure.com/#home). 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/jumphost/1.png').default} alt="Image"  className="doc_img"/>
 
-***
-
-2. Go to the **search bar** on the top of your screen and search for your managed applications. 
+**Step 2:** Go to the **search bar** on the top of your screen and search for your managed applications. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/jumphost/2.png').default} alt="Image"  className="doc_img"/>
 
-***
-
-3. You will be redirected to your managed applications where you can see your installed  HyperExecute Private Cloud application. Select the HyperExecute application that you have installed recently.
+**Step 3:** You will be redirected to your managed applications where you can see your installed  HyperExecute Private Cloud application. Select the HyperExecute application that you have installed recently.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/jumphost/3.png').default} alt="Image"  className="doc_img"/>
 
-***
-
-4. You will be redirected to a page where you can see all of the resources that are a part of the selected **Managed Resource Group**. Search for a Virtual Machine called `hyex-jump` in this list and open it. 
+**Step 4:** You will be redirected to a page where you can see all of the resources that are a part of the selected **Managed Resource Group**. Search for a Virtual Machine called `hyex-jump` in this list and open it. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/jumphost/4.png').default} alt="Image"  className="doc_img"/>
 
-***
-
-5. You can now see the VM details and can use the shown public IP to connect to the virtual machine using the shared credentials over mail.
+**Step 5:** You can now see the VM details and can use the shown public IP to connect to the virtual machine using the shared credentials over mail.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/cloud/azure/jumphost/5.png').default} alt="Image"  className="doc_img"/>
-
-***
 
 To ensure that you have complete control over your HyperExecute application and your browsers, the virtual machine is completely customizable. You can make the modifications that you require and test all of your applications. Happy testing!
 

@@ -3,7 +3,7 @@ id: hyperexecute-release-notes
 title: HyperExecute Release Notes
 hide_title: false
 sidebar_label: Release Notes
-description: Stay updated on the latest HyperExecute releases. View detailed release notes, including new features, bug fixes, and improvements for our AI-powered test orchestration platform.
+description: Stay updated on the latest HyperExecute releases. View detailed release notes, including new features, bug fixes, and improvements for our AI Native test orchestration platform.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -37,7 +37,7 @@ slug: hyperexecute-release-notes/
       })
     }}
 ></script>
-HyperExecute is an AI Powered Test Orchestration Cloud Platform, enabling test automation teams worldwide to achieve an accelerated time to market by providing JIT (Just-in-time) testing infrastructure that offers enhanced test execution speeds, smart test orchestration, detailed execution logs and much more.
+HyperExecute is an AI Native Test Orchestration Cloud Platform, enabling test automation teams worldwide to achieve an accelerated time to market by providing JIT (Just-in-time) testing infrastructure that offers enhanced test execution speeds, smart test orchestration, detailed execution logs and much more.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/release-notes.gif').default} alt="Image"  className="doc_img"/>
 

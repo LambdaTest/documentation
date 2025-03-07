@@ -53,7 +53,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Running Capybara Framework Tests on HyperExecute
 Capybara is a Ruby-based testing framework commonly used with Selenium for end-to-end web application testing. It provides a clean and expressive DSL (Domain-Specific Language) for interacting with web pages and handling common browser interactions.
 
-HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
 This guide details how to execute your **Capybara** framework tests on **HyperExecute** via two different methods:
 

@@ -95,7 +95,7 @@ However, for larger projects and complex testing scenarios, certain challenges e
 
   <a href="/support/docs/ai-powered-test-failure-analysis/">
   <div className="support_inners">
-    <h3>AI Powered Root Cause Analysis</h3>
+    <h3>AI Native Root Cause Analysis</h3>
     <p>Root Cause Analysis and Error Classification features in HyperExecute to view different kinds of errors and directly land on corrective measures or fixes.</p>
   </div>
   </a>
