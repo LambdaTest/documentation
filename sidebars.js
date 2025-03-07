@@ -3021,6 +3021,7 @@ module.exports = {
       ],
     },
     "analytics-build-comparison",
+    "analytics-smart-tags-test-intelligence",
     "analytics-modules-test-intelligence-flaky-test-analytics",
     "analytics-dashboard-copilot",
     "analytics-allure-api-widgets",
