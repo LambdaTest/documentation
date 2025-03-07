@@ -54,7 +54,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Running Nightwatch Framework Tests on HyperExecute
 Nightwatch.js is an automated testing framework built on top of Selenium and Node.js. It simplifies end-to-end testing, offering a simple syntax and a powerful set of built-in commands. Nightwatch.js supports the Selenium WebDriver protocol and allows efficient browser automation, making it a popular choice for web application testing.
 
-HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
 This guide details how to execute your **Nightwatch** framework tests on **HyperExecute** via two different methods:
 

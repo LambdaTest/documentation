@@ -54,7 +54,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # Running JUnit Framework Tests on HyperExecute
 JUnit is a widely-used testing framework for Java that is extensively employed in Selenium test automation. It provides annotations and assertions to structure and validate test cases, making it an integral part of the Selenium testing ecosystem.
 
-HyperExecute is an AI-powered Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+HyperExecute is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
 This guide details how to execute your **JUnit** framework tests on **HyperExecute** via two different methods:
 

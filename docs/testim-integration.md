@@ -39,7 +39,7 @@ slug: testim-integration/
       })
     }}
 ></script>
-Testim provides an automated testing platform to create stable tests using AI-powered capabilities, along with tools that facilitate scaling quality across your software development process.
+Testim provides an automated testing platform to create stable tests using AI Native capabilities, along with tools that facilitate scaling quality across your software development process.
 
 Integrating LambdaTest with Testim lets you run Testim automated tests on LambdaTest cloud-based grid across 3000+ real browsers and OS.
 

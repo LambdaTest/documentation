@@ -68,7 +68,7 @@ Access to the project is granted only if-
 These settings can be updated in the OAuth consent screen.
 :::
 
-Steps to Test apps:
+## Steps to Test apps:
 
 **Step 1:** 
 Login to your LambdaTest account. Visit **Real Device** from the left panel and navigate to **App Testing** and click on Install from Firebase.
@@ -78,9 +78,10 @@ Login to your LambdaTest account. Visit **Real Device** from the left panel and 
 **Step 2:**
 When you click on Add Project, you can integrate your Firebase account with LambdaTest either by uploading a **config file** or connecting **using credentials**. You should have these credentials from the prerequisite step.
 
-Upload a Config file - 
+**Upload a Config file -**  
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/2photo.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
-Connect with credentials - 
+
+**Connect with credentials -** 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Animeshrox.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 **Step 3:**
@@ -95,9 +96,22 @@ You will have successfully integrated LambdaTest with Firebase. You can now clic
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/6photo.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-Note: Projects can also be shared later directly from the menu.  
+:::note
+Projects can also be shared later directly from the menu.
+::: 
 
 **Step 5:**
 Now, you can view all the apps you’ve uploaded along with their respective versions, which can be synced with LambdaTest. Select the application, choose the version, pick the device for testing, and **start the session.**
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Laststep.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Noblurlaststep.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+
+
+## Key Actions Overview 
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Buttonexplanation.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+1. **Add new project:** Click this button to add and sync new Firebase projects to your workspace.  
+2. **Refresh:** This button refreshes the project list, apps, and releases to their latest state without affecting your synced releases.
+3. **Project Menu:** Click here to manage your project. You can share it with team members or delete it from the list.
+4. **Sync:** Sync your release. This is necessary to start any session and generates a unique app ID for the release, which will be used for automation test cases. 

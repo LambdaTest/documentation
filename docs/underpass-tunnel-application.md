@@ -60,7 +60,7 @@ With LambdaTest Underpass, you can perform [cross browser testing](https://www.l
 
 | Important Links |
 |-----------------|
-| [Download Underpass For Windows](https://downloads.lambdatest.com/underpass/master/UnderPass%20Setup.exe) |
+| [Download Underpass For Windows](https://downloads.lambdatest.com/underpass/master/UnderPass.exe) |
 | [Download Underpass For macOS](https://downloads.lambdatest.com/underpass/master/UnderPass.dmg) |
 | [Download Underpass For Linux](https://downloads.lambdatest.com/underpass/master/UnderPass.AppImage) |
 

@@ -66,7 +66,7 @@ Currently HyperExecute support these Operating Systems:
 
 ### Intelligently Orchestrate Your Tests
 
-Cypress excels in parallel testing, but managing large test suites within complex CI pipelines can be challenging. HyperExecute's [**AI-powered orchestration**](/support/docs/hyperexecute-test-splitting-and-multiplexing/) intelligently distributes tests across available resources, optimizing execution speed and ensuring CI/CD stability.
+Cypress excels in parallel testing, but managing large test suites within complex CI pipelines can be challenging. HyperExecute's [**AI Native orchestration**](/support/docs/hyperexecute-test-splitting-and-multiplexing/) intelligently distributes tests across available resources, optimizing execution speed and ensuring CI/CD stability.
 
 ### Comprehensive Artifacts of Your Job
 

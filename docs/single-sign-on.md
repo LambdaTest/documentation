@@ -87,14 +87,6 @@ LambdaTest provides the support for the below Single sign-on features.
 
 You can contact the **Support Team**, who will help you enable the SSO feature for your LambdaTest account. 
 
-## See Limitations 
-
-The following is the list of limitations or things that won’t migrate to your new organization.
-
-* The test data of your old organization won’t be migrated to the new one. 
-* Any integrations or issues you have created won’t migrate to the new organization.
-* Any test logs or artifacts you have won’t migrate to the new organization.
-
 
 > That's all you need to know about Single sign-on(SSO) authentication feature.In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
 
