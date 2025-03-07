@@ -58,7 +58,7 @@ You can go through the table below to understand exactly why HyperExecute Privat
 | Intelligent Test Analytics | <p align="center">✅</p> | <p align="center"> ❌</p> |
 | Integration with major [CI/CD platforms and products](/support/docs/integration-with-hyperexecute/) | <p align="center">✅</p> | <p align="center">✅</p> |
 | Includes all features from LambdaTest's Web + Mobile Automation Plan, along with exclusive HyperExecute benefits | <p align="center">✅</p> | <p align="center"> ❌</p> |
-| 24/7 dedicated customer support for uninterrupted assistance. | <p align="center"> ❌</p> | <p align="center">✅</p> |
+| 24/7 dedicated customer support for uninterrupted assistance. | <p align="center">✅</p> | <p align="center">✅</p> |
 | Support for custom testing frameworks | <p align="center"> ❌</p> | <p align="center">✅</p> |
 | Advanced data retention rules | <p align="center"> ❌</p> | <p align="center">✅</p> |
 | Role-Based Access Control (RBAC) support for granular user permissions and security management. | <p align="center">✅</p> | <p align="center">✅</p> |
