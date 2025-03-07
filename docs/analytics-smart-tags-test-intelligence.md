@@ -37,7 +37,7 @@ slug: analytics-smart-tags-test-intelligence/
 
 Smart Tags in LambdaTest Analytics help you analyze your test automation execution faster. With Smart Tags, you can categorize your tests based on different parameters and get insights on your test execution. This feature helps you identify patterns, trends, and anomalies in your test results, making it easier to optimize your test automation strategy.
 
-## Prerequisites For Smart Tags:
+## Pre-requisites For Smart Tags:
 
 1. You should have an active LambdaTest account.
 2. You should run at least 10 tests on the LambdaTest automation platform.
