@@ -44,31 +44,31 @@ Real device app testing is the process of testing a mobile application to ensure
 
 **Step 1:** Login to your LambdaTest account. Go to **App Testing** under **Real Device** from the left sidebar.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-dashboard.webp').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/rdapptesting/Startingstep.png').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
 
 **Step 2**: Choose the OS version of your choice. ( Android or iOS )
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/os-versions.webp').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/rdapptesting/osofyourchoice.png').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
 
 **Step 3**: You can upload an application directly from your system or by entering a valid public URL. Once the app gets uploaded you can select the app from the **applist** or use the search bar to find a specific application. The uploading time may vary depending on the size of the application.
 
 In the case of **Android**, you can install from Play Store or App Center. 
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/real-devices-for-android.webp').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/rdapptesting/androidlaunch3.png').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
 
 In the case of **iOS**, you can install from the App Store, Test Flight or from App Center. 
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/real-devices-for-ios.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/rdapptesting/ioslaunch3.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 **Step 4**: You can select your preferred region from the **Region** dropdown. Choose from the available regions i.e., North America, Europe, Asia, or select All. If you would like to choose devices from specific regions, please reach out to [support@lambdatest.com](mailto:support@lambdatest.com) to get the option enabled.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-region-feature.webp').default} alt="Real Device Region Feature"  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/rdapptesting/choosedeviceregion.png').default} alt="Real Device Region Feature"  className="doc_img" width="1366" height="629"/>
 
 **Step 5**: Select the **Tunnel** option in the top right corner (optional) to test your locally hosted and privately hosted websites.
 
 Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) to learn how to activate the LT Tunnel.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-tunnel.webp').default} alt="Real Device Tunnel"  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/rdapptesting/tunnellast.png').default} alt="Real Device Tunnel"  className="doc_img" width="1366" height="629"/>
 
 **Step 6**: Select the preferred **Brand**, **Device Name** and **OS Version** to easily navigate to your required device. You can also use the search bar to select your devices.
 
