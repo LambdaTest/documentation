@@ -617,6 +617,72 @@ The uploadArtefact flag is not currently supported for tests running with the **
 
 ***
 
+### `globalPre`
+> Currently, only **Linux OS** is supported
+
+The `globalPre` flag allows you to define a pre-execution step that runs once before any task starts. This flag ensures that all necessary setup tasks, such as installing dependencies, configuring environments, or initializing resources, are completed before test execution begins.
+
+#### Functionality
+- Runs before any test execution starts, ensuring the environment is properly configured.
+- Executed on a separate machine (VM) or the local machine, based on the [test discovery mode](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) selected.
+- Useful for setup tasks, such as fetching credentials, initializing databases, or downloading required files.
+
+```yaml title="hyperexecute.yaml"
+globalPre:
+  mode: remote #local or remote
+  commands:
+    - "echo 'Setting up environment'"
+    - "apt-get update && apt-get install -y curl"
+    - "curl -X POST https://api.example.com/init"
+```
+
+#### Parameters
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| mode | string | Defines where the pre-step commands will be executed. Options: local or remote. |
+| commands | list | List of shell commands to execute before test execution begins. |
+
+***
+
+### `globalPost`
+> Currently, only **Linux OS** is supported
+
+The `globalPost` flag defines a post-execution step that runs once after all tasks have completed. This step ensures that cleanup tasks, such as removing temporary files, logging results, or notifying external systems, are performed after test execution.
+
+#### Functionality
+- Runs after all test execution is completed, ensuring final cleanup and reporting.
+- Executed on a separate machine (VM) or the local machine, based on the mode selected.
+- Useful for cleanup tasks, such as deleting test artifacts, summarizing reports, or deallocating cloud resources.
+
+```yaml title="hyperexecute.yaml"
+globalPost:
+  mode: remote #local or remote
+  commands:
+    - "echo 'Cleaning up test environment'"
+    - "rm -rf /tmp/test-results"
+    - "curl -X POST https://api.example.com/cleanup"
+```
+
+#### Parameters
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| mode | string | Defines where the post-step commands will be executed. Options: local or remote. |
+| commands | list | List of shell commands to execute after test execution completes. |
+
+#### Difference between `globalPre`/`globalPost` and `pre`/`post` flags
+| Scenario | globalPre | globalPost |	pre |	post |
+|----------|-----------|------------|-----|------|
+|Execution Scope | Runs once before all tasks | Runs once after all tasks	| Runs before each individual task | Runs after each individual task |
+|Execution Frequency | Executes once per entire test execution | Executes once after all tasks complete | Executes once per task | Executes once per task |
+|Execution Location | Separate VM or local machine | Separate VM or local machine | Inside the task environment | Inside the task environment |
+|Purpose | Global setup (e.g., install dependencies, initialize environment) | Global cleanup (e.g., remove logs, finalize reports) | Task-specific setup (e.g., prepare test data) | Task-specific cleanup (e.g., delete temporary files) |
+|Isolation | Runs in a dedicated VM (if remote) | Runs in a dedicated VM (if remote) | Runs in the same task environment | Runs in the same task environment |
+|Configuration Placement | Defined globally in the YAML configuration | Defined globally in the YAML configuration | Defined within the task block | Defined within the task block|
+|Typical Commands | Install dependencies, start services | Cleanup logs, send reports | Load test-specific configs, set environment variables | Delete temp files, reset configurations
+|Example Usage | `apt-get update`, `docker pull` | `rm -rf /logs`, `curl -X POST …` |	`export ENV=staging` | `rm -rf temp/*` |
+
+***
+
 ### `captureScreenRecordingForScenarios`
 If this key is set to true, it will record whole scenario execution, and then video is accessible from your HyperExecute dashboard.
 This can be majorly used for non selenium based tests to have the recorded video of the whole scenario.
