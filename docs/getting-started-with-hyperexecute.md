@@ -51,7 +51,7 @@ import HyperExecuteSupportedLanguageDocs from '../src/component/SupportedLanguag
       })
     }}
 ></script>
-Welcome to HyperExecute, **an AI-Powered Test Orchestration Cloud Platform**, designed to accelerate your testing process, enabling test automation teams worldwide to achieve an accelerated time to market by providing **JIT (Just-in-time) testing infrastructure**.
+Welcome to HyperExecute, **an AI-Native Test Orchestration Cloud Platform**, designed to accelerate your testing process, enabling test automation teams worldwide to achieve an accelerated time to market by providing **JIT (Just-in-time) testing infrastructure**.
 
 If you want to learn more about HyperExecute and how it can enable your team, then you are the right place. This guide will help you take your first steps with HyperExecute, from understanding the basics to running your first test.
 
@@ -63,7 +63,7 @@ If you want to learn more about HyperExecute and how it can enable your team, th
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/getting_started/hyperexecute.png').default} alt="Image"  className="doc_img"/>
 
-### What is HyperExecute?
+## What is HyperExecute?
 
 HyperExecute by LambdaTest is a cutting-edge, AI-powered platform designed for DevOps teams and QA engineers to significantly accelerate software testing pipelines. HyperExecute **replaces traditional hub-and-node test grids** with advanced orchestration techniques, **eliminating network latency and optimizing resource usage**. With HyperExecute:
 
@@ -78,7 +78,7 @@ HyperExecute by LambdaTest is a cutting-edge, AI-powered platform designed for D
 
 Whether testing web or mobile applications, HyperExecute empowers your team to deliver higher-quality software rapidly and reliably.
 
-### Compatible with All Major Frameworks
+## Compatible with All Major Frameworks
 HyperExecute seamlessly supports all major test automation frameworks as shown below. Regardless of your existing testing stack, it will integrate smoothly to enhance your workflows without disruption.
 
 <HyperExecuteSupportedLanguageDocs />
@@ -88,7 +88,7 @@ HyperExecute seamlessly supports all major test automation frameworks as shown b
     <br/>In case of any other problems, feel free to <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Contact Us</span>.</p>
   </div>
 
-### Let's Run your First Test
+## Let's Run your First Test
 Ready to experience the power of HyperExecute? Getting started is easy—we’ve simplified the process so you can effortlessly launch your first test with three flexible approaches and experience the speed by yourself:
 
 :::note RUN SAMPLE TEST
@@ -114,7 +114,7 @@ Ready to experience the power of HyperExecute? Getting started is easy—we’ve
 
 <!-- Each method provides a streamlined experience with sample projects. Our step-by-step guide walks you through the entire process, from selecting your framework to viewing your test results on the HyperExecute Dashboard. -->
 
-### Watch HyperExecute in Action
+## Watch HyperExecute in Action
 
 Get a comprehensive overview of HyperExecute's capabilities by watching our introductory webinar.
 <div className="ytframe"> 
@@ -123,7 +123,7 @@ Get a comprehensive overview of HyperExecute's capabilities by watching our intr
 </div>
 </div>
 
-### Next Steps
+## Next Steps
 
 Now that you've set up HyperExecute and run your first test, explore these resources to make the most of the platform:
 
