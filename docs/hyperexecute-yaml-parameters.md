@@ -131,6 +131,8 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 
 | Key | Type | Description|
 |-----|------|------------|
+| [globalPre](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) | Map | This flag runs once before all tasks start, used for global setup such as installing dependencies or configuring environments. |
+| [globalPost](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) | Map | This flag runs once after all tasks finish, used for global cleanup such as removing logs or finalizing reports. |
 | [failFast](/support/docs/deep-dive-into-hyperexecute-yaml/#failfast) | Map | Flag to fail a job faster if there are `x` consecutive failures. |
 | [differentialUpload](/support/docs/deep-dive-into-hyperexecute-yaml/#differentialupload) | Map | Minimize the time of upload of code. |
 | [background](/support/docs/deep-dive-into-hyperexecute-yaml/#background) | Map |It is used to trigger long-running Application Servers tasks like running WebApps or databases |
