@@ -89,7 +89,7 @@ For the **Screen Reader** feature on android devices , use the following keyboar
 
 | TalkBack Action | MacOS Keyboard Shortcut | Windows Keyboard Shortcut |
 |-----------------|-------------------------|---------------------------|
-| Move to previous/next item | Control + Option + (Left/Right arrow) |  Ctrl + (Left/Right arrow) |
+| Move to previous/next item | Control + Option + (Left/Right arrow) |  Ctrl + Alt + (Left/Right arrow) |
 | Activate/open element | Control + Option + Space | Ctrl + Alt + Space|
 | Go back | Esc|Esc |
 | Pause or resume speech |Control + Option + Z |Ctrl + Alt + Z |
