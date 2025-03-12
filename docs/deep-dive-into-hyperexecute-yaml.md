@@ -72,13 +72,15 @@ matrix:
 ***
 
 ### `pre`
-All actions you need to perform before test execution, such as installing dependencies. You’ll ideally want to use this parameter to "pre" run simple commands like `npm install`, `yarn install`, `mvn install` etc
+All actions you need to perform before each test execution, such as installing dependencies. You’ll ideally want to use this parameter to "pre" run simple commands like `npm install`, `yarn install`, `mvn install` etc
 
 ```yaml
 pre:
   - npm install
   - mvn install 
 ```
+
+>📘 Refer to [globalPre](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) command to perform a common global setup for all your tasks, such as installing dependencies or configuring environments.
 
 ***
 ## AutoSplit Mode Parameters
@@ -482,13 +484,15 @@ maxRetries: 2
 ***
 
 ### `post`
-This parameter is used for executing actions after all your tests are executed, such as printing an output file or uploading a report via a curl API request. It's ideal for performing post-run tasks.
+This parameter is used for executing actions after every test execution, such as printing an output file or uploading a report via a curl API request. It's ideal for performing post-run tasks.
 
 ```yaml
 post:
   - echo <some-dir>/output/output.log
   - curl https://www.example.com
 ```
+
+>📘 Refer to [globalPost](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) command to perform a common global setup for all your tasks, such as clean up tasks and or killing the environments.
 
 ***
 
@@ -620,11 +624,11 @@ The uploadArtefact flag is not currently supported for tests running with the **
 ### `globalPre`
 > Currently, only **Linux OS** is supported
 
-The `globalPre` flag allows you to define a pre-execution step that runs once before any task starts. This flag ensures that all necessary setup tasks, such as installing dependencies, configuring environments, or initializing resources, are completed before test execution begins.
+The `globalPre` flag allows you to define a pre-execution step that runs once before any of your tasks starts. This flag ensures that all necessary setup tasks, such as installing dependencies, configuring environments, or initializing resources, are completed before test execution begins.
 
 #### Functionality
 - Runs before any test execution starts, ensuring the environment is properly configured.
-- Executed on a separate machine (VM) or the local machine, based on the [test discovery mode](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) selected.
+- Executes on a separate machine (VM) or the local machine, based on the [test discovery mode](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) selected.
 - Useful for setup tasks, such as fetching credentials, initializing databases, or downloading required files.
 
 ```yaml title="hyperexecute.yaml"
@@ -639,8 +643,16 @@ globalPre:
 #### Parameters
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| mode | string | Defines where the pre-step commands will be executed. Options: local or remote. |
+| mode | string | Defines where the pre-step commands will be executed. <br /> Options: [local or remote](/support/docs/deep-dive-into-hyperexecute-yaml/#mode). |
 | commands | list | List of shell commands to execute before test execution begins. |
+
+#### Difference between `globalPre` and `pre` flags
+| Scenario | globalPre | pre |
+|----------|-----------|-----|
+|Purpose | Global setup (e.g., install dependencies, initialize environment) | Task-specific setup (e.g., prepare test data) |
+|Execution Frequency | Executes once per entire test execution | Executes once per task |
+|Execution Location | Separate VM or local machine | Inside the task environment |
+|Example Usage | `apt-get update`, `docker pull` |	`export ENV=staging` |
 
 ***
 
@@ -651,7 +663,7 @@ The `globalPost` flag defines a post-execution step that runs once after all tas
 
 #### Functionality
 - Runs after all test execution is completed, ensuring final cleanup and reporting.
-- Executed on a separate machine (VM) or the local machine, based on the mode selected.
+- Executes on a separate machine (VM) or the local machine, based on the mode selected.
 - Useful for cleanup tasks, such as deleting test artifacts, summarizing reports, or deallocating cloud resources.
 
 ```yaml title="hyperexecute.yaml"
@@ -666,20 +678,16 @@ globalPost:
 #### Parameters
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| mode | string | Defines where the post-step commands will be executed. Options: local or remote. |
+| mode | string | Defines where the post-step commands will be executed. <br /> Options: [local or remote](/support/docs/deep-dive-into-hyperexecute-yaml/#mode). |
 | commands | list | List of shell commands to execute after test execution completes. |
 
-#### Difference between `globalPre`/`globalPost` and `pre`/`post` flags
-| Scenario | globalPre | globalPost |	pre |	post |
-|----------|-----------|------------|-----|------|
-|Execution Scope | Runs once before all tasks | Runs once after all tasks	| Runs before each individual task | Runs after each individual task |
-|Execution Frequency | Executes once per entire test execution | Executes once after all tasks complete | Executes once per task | Executes once per task |
-|Execution Location | Separate VM or local machine | Separate VM or local machine | Inside the task environment | Inside the task environment |
-|Purpose | Global setup (e.g., install dependencies, initialize environment) | Global cleanup (e.g., remove logs, finalize reports) | Task-specific setup (e.g., prepare test data) | Task-specific cleanup (e.g., delete temporary files) |
-|Isolation | Runs in a dedicated VM (if remote) | Runs in a dedicated VM (if remote) | Runs in the same task environment | Runs in the same task environment |
-|Configuration Placement | Defined globally in the YAML configuration | Defined globally in the YAML configuration | Defined within the task block | Defined within the task block|
-|Typical Commands | Install dependencies, start services | Cleanup logs, send reports | Load test-specific configs, set environment variables | Delete temp files, reset configurations
-|Example Usage | `apt-get update`, `docker pull` | `rm -rf /logs`, `curl -X POST …` |	`export ENV=staging` | `rm -rf temp/*` |
+#### Difference between `globalPost` and `post` flags
+| Scenario | globalPost |	post |
+|----------|------------|------|
+|Purpose | Global cleanup (e.g., remove logs, finalize reports) | Task-specific cleanup (e.g., delete temporary files) |
+|Execution Frequency | Executes once after all tasks complete | Executes once per task |
+|Execution Location | Separate VM or local machine | Inside the task environment |
+|Example Usage | `rm -rf /logs`, `curl -X POST …` |	`rm -rf temp/*` |
 
 ***
 
