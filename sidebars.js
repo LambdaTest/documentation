@@ -1110,7 +1110,8 @@ module.exports = {
           "kane-ai-secrets",
           "kaneai-upload-and-download-files",
           "kaneai-modules-versions-and-enhancement",
-          "kane-ai-assertions"
+          "kane-ai-assertions",
+          "kaneai-dynamic-url-replacement"
         ],
       },
       {
