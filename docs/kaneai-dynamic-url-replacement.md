@@ -56,7 +56,7 @@ You must have [created a test run for KaneAI Generated Tests](/support/docs/kane
 
 ### Step 2: Configure the Test Execution URL
 - In the Run on HyperExecute side drawer, locate the new field labeled **Replace Test Execution URL**.
-- Enter the **Pattern URL** (your original URL used in the tests) and **Replacement URL** (URL of diferent environment you want to test) in the text field.
+- Enter the **Pattern URL** (your original URL used in the tests) and **Replacement URL** (URL of different environment you want to test) in the text field.
 
 > You can add multiple URLs for all web tests in the run to execute in different environments
 
