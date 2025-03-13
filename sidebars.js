@@ -1691,6 +1691,11 @@ module.exports = {
             label: "All Issues",
             id: "accessibility-testing-dashboard-all-issues",
           },
+          {
+            type: "doc",
+            label: "Bug Report",
+            id: "accessibility-report-bug",
+          },
         ],
       },
       {
