@@ -2845,6 +2845,7 @@ module.exports = {
                   "smartui-k6-setup",
                   "appium-visual-regression",
                   "espresso-visual-regression",
+                  "xcui-visual-regression",
                 ]
               },
             ]
