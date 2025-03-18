@@ -2,7 +2,7 @@
 id: install-apps-from-app-center
 title: How to Test Apps Installed via App Center?
 hide_title: true
-sidebar_label: App Center
+sidebar_label: App Center (Deprecating)
 description: Learn how to test apps installed from App Center on LambdaTest for optimal performance on real Android and iOS devices.
 keywords:
 - install apps from app center
@@ -36,7 +36,11 @@ slug: install-apps-from-app-center/
     }}
 ></script>
 
-# How to Test Apps Installed via App Center?
+# How to Test Apps Installed via App Center? 
+
+:::warning note
+This method of uploading applications will be deprecated on [31st March 2025](https://learn.microsoft.com/en-us/appcenter/retirement). 
+:::
 
 LambdaTest enables developers to test their mobile applications and websites across a range of real devices and browsers. It allows you to install apps directly from the App Center to test them on real android or iOS devices, ensuring that they perform well in actual user environments.
 
