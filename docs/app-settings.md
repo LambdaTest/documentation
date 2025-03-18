@@ -73,7 +73,7 @@ Enable the Disable Screenshot Block feature to conduct uninterrupted testing of 
 
 Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/disable-screenshot-block/) to learn in detail about disable screenshot block feature.
 
-## App Arrguments <IOSDeviceTag value="iOS Device" />
+## App Arguments <IOSDeviceTag value="iOS Device" />
 Enable the App Arguments feature to provide custom arguments before launching the app, allowing you to configure specific settings or behaviors. These arguments are passed to the app at startup, enabling you to control app modes, enable debugging, or customize other options based on your needs.
 
 
