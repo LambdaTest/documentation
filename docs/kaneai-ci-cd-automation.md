@@ -68,6 +68,17 @@ Open the test run to view its URL. Copy the Test Run ID from the URL. This ID wi
 A list of test instances with various configurations will be displayed for each test run.
 :::
 
+
+### Step 3: Configure the API Call
+Replace `<TestRunID>` with the actual ID from the URL and set additional optional parameters:
+
+- **concurrency :** Defaults to 1 if not specified.
+- **title :** Assign a unique job title; a random one will be generated if omitted.
+- **region :** Choose a region such as eastus or centralindia.
+- **tunnel :** Add the parameter and tunnel name if you want to run using LambdaTest Tunnel.
+- **accessibility :** Set as true if you want to run accessibility test on all your tests in the test run. (Could potentially slow the execution down if set as true)
+- **replaced_url :** To be used to dynamically replace any pattern URL in test cases with the replacement URL for entire test run.
+
 #### Example API Call:
 
 ```yaml
@@ -78,10 +89,25 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
     "test_run_id": "YOUR_TEST_RUN_ID", #enter test run id
     "concurrency": 1, # Optional, Default 1
     "title": "UNIQUE_BUILD_NAME", #Optional
-    "region": "YOUR_DESIRED_REGION" #eastus, centralindia
+    "region": "YOUR_DESIRED_REGION", #eastus, centralindia
+    "tunnel": "tunnel-name", #Optional to be used if running via tunnel
+    "accessibility": false, #Optional
+    "replaced_url": [
+      {
+          "pattern_url": "TEST_URL_1",
+          "replacement_url": "REPLACED_TEST_URL_1"
+      },
+      {
+          "pattern_url": "TEST_URL_2",
+          "replacement_url": "REPLACED_TEST_URL_2"
+      },
+      {
+          "pattern_url": "TEST_URL_3",
+          "replacement_url": "REPLACED_TEST_URL_3"
+      }
+    ] #Optional to be used to dynamically replace any pattern URL in test cases with the replacement URL
 }'
 ```
-
 
 #### Sample API Response:
 
@@ -96,15 +122,6 @@ The API response contains the job ID for both jobs created for desktop web tests
     "mobile_job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=<app_job_id>"
 }
 ```
-
-### Step 3: Configure the API Call
-Replace `<TestRunID>` with the actual ID from the URL and set additional optional parameters:
-
-- **Concurrency :** Defaults to 1 if not specified.
-- **Title :** Assign a unique job title; a random one will be generated if omitted.
-- **Region :** Choose a region such as eastus or centralindia.
-
-Confirm that the job title is unique to avoid conflicts. Select a region if you require a specific allocation for your devices.
 
 
 ### Step 4: Authenticate and Trigger the Job
