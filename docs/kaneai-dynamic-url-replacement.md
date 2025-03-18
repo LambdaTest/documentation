@@ -67,3 +67,87 @@ You must have [created a test run for KaneAI Generated Tests](/support/docs/kane
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/dynamic-url-replacement/2.png').default} alt="Image" className="doc_img"/>
 
+## How to Use Dynamic URL Replacement via API
+If you prefer to use the API to configure and execute tests with Dynamic URL Replacement, follow the instructions below:
+
+### API Endpoint
+```yaml title="POST request"
+https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
+```
+
+### Request Headers
+```javascript
+Content-Type: application/json
+Authorization: Basic <Base64Auth>
+```
+
+### Request Body
+The following JSON payload demonstrates how to use the API to configure Dynamic URL Replacement:
+
+```javascript
+{
+  "test_run_id": "YOUR_TEST_RUN_ID", // Replace with your test run ID
+  "concurrency": 1, // Optional, Default: 1
+  "title": "UNIQUE_BUILD_NAME", // Optional
+  "region": "YOUR_DESIRED_REGION", // e.g., eastus, centralindia
+  "replaced_url": [
+      {
+          "pattern_url": "TEST_URL_1",
+          "replacement_url": "REPLACED_TEST_URL_1"
+      },
+      {
+          "pattern_url": "TEST_URL_2",
+          "replacement_url": "REPLACED_TEST_URL_2"
+      },
+      {
+          "pattern_url": "TEST_URL_3",
+          "replacement_url": "REPLACED_TEST_URL_3"
+      }
+  ],
+  "accessibility": false
+}
+```
+
+### Parameters Explained
+| Parameter | Description |
+|-----------|-------------|
+| `test_run_id` | The unique identifier for the test run. |
+| `concurrency` | (Optional) Number of parallel executions. Default is 1. |
+| `title` | (Optional) A unique name for the build. |
+| `region` | The region where the tests will be executed (e.g., eastus, centralindia). |
+| `replaced_url` |  An array of objects containing `pattern_url` and `replacement_url` |
+| `accessibility` | (Optional) Enable or disable accessibility testing. |
+
+### Example cURL Command
+Here’s an example cURL command to trigger a test run with Dynamic URL Replacement:
+
+```javascript
+curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Basic <Base64Auth>' \
+--data '{
+    "test_run_id": "YOUR_TEST_RUN_ID", 
+    "concurrency": 1, 
+    "title": "UNIQUE_BUILD_NAME", 
+    "region": "eastus", 
+    "replaced_url": [
+        {
+            "pattern_url": "lambdatest",
+            "replacement_url": "ajio"
+        },
+        {
+            "pattern_url": "d",
+            "replacement_url": "flipkart"
+        },
+        {
+            "pattern_url": "hello",
+            "replacement_url": "1234"
+        }
+    ],
+    "accessibility": false
+}'
+```
+
+- Replace `<Base64Auth>` with your actual Base64-encoded authorization credentials.
+- Ensure that the `pattern_url` matches the exact URL pattern used in your test scripts.
+- Multiple `replaced_url` entries can be added to replace different URLs dynamically.
