@@ -108,6 +108,10 @@ To enable biometric authentication feature in your automation script, set the ca
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setcapability("enableBiometricsAuthentication",true)
 ```
+:::note
+Explicitly set the `autoAcceptAlerts` capability to false in order to run biometric tests on iOS devices.
+::: 
+
 
 ### Using Lambda-Hook
 
