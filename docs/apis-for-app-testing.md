@@ -246,7 +246,7 @@ To generate public **shareable build link**, run the below cURL command.
 {`curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' \
   -H 'Content-Type: application/json' \
   -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" \
-  --data-raw '{"entityIds":["buildid"],"entityType":"App Automation Build","expiresAt":7}'`}
+  --data-raw '{"entityIds":["buildID"],"entityType":"App Automation Build","expiresAt":7}'`}
 </CodeBlock>
 </div>
 
