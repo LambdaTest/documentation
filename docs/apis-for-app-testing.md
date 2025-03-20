@@ -87,28 +87,28 @@ Shown below is the response to the above cURL request.
 
 ## Generate publicly shareable build and test links
 
-To generate public shareable build link, run the below cURL command. 
-
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`curl -X POST 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' \
--H 'Content-Type: application/json' \
---user 'username:password' \
--d '{
-    "entityIds": ["123456"],
-    "entityType": "App Automation Build",
-    "expiresAt": 7
-}'`}
-</CodeBlock>
-</div>
-
-To generate public shareable test link, run the below cURL command. 
+To generate public **shareable build link**, run the below cURL command. 
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' \
-  -H 'authorization: Bearer <Bearer Token>' \
-  --data-raw '{"entityIds":["APPTESaBCDefGHI5JlMnOPQ"],"entityType":"App Automation Test","expiresAt":7}'`}
+  -H 'Content-Type: application/json' \
+  -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" \
+  --data-raw '{"entityIds":["buildid"],"entityType":"App Automation Build","expiresAt":7}'`}
+</CodeBlock>
+</div>
+
+
+To generate public **shareable test link**, run the below cURL command. 
+
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`curl 'https://api.lambdatest.com/lshs/api/v1.0/share-item/generate-sharable-link' \
+  -H 'Content-Type: application/json' \
+  -u "${YOUR_LAMBDATEST_USERNAME()}:${YOUR_LAMBDATEST_ACCESS_KEY()}" \
+  --data-raw '{"entityIds":["testID"],"entityType":"App Automation Test","expiresAt":7}'
+`}
+
 </CodeBlock>
 </div> 
 
@@ -116,6 +116,11 @@ To generate public shareable test link, run the below cURL command.
 |------|-----------|-------------|
 | Test | `entityIds` <br/>  <br/> `entityType` <br/>   <br/> `expiresAt`  | For tests, pass `entityIds` as the test id and pass `entityType` as "App Automation Test" <br/> `expiresAt` is the number of days after which the shareable test link will expire '|
 | Build | `entityIds` <br/>  <br/> `entityType` <br/> <br/> `expiresAt`  | For builds, pass `entityIds` as the build id and pass `entityType` as "App Automation Build" <br/> `expiresAt` is the number of days after which the shareable build link will expire '|
+
+:::note
+The shareable links are valid for a period of 7, 15, or 30 days, after which they will expire.
+
+:::
 
 >That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
 
