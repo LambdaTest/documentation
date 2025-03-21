@@ -3376,6 +3376,11 @@ module.exports = {
         label: "Okta",
         id: "okta-scim",
       },
+      {
+        type: "doc",
+        label: "JumpCloud",
+        id: "jumpcloud-scim",
+      },
     ],
   ],
 

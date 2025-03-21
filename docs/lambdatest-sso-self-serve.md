@@ -1,7 +1,7 @@
 ---
 id: lambdatest-sso-self-serve
 title: Create SSO Connection With LambdaTest
-hide_title: true
+hide_title: false
 sidebar_label: Create SSO Connection
 description: LambdaTest allows you to integrate an external user directory with your LambdaTest Organization through an IDP so your team could leverage the Single Sign-on setup. This document will help you set up  your LambdaTest SSO connection.
 keywords:
