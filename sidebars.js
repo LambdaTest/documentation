@@ -1111,7 +1111,8 @@ module.exports = {
           "kaneai-upload-and-download-files",
           "kaneai-modules-versions-and-enhancement",
           "kane-ai-assertions",
-          "kaneai-dynamic-url-replacement"
+          "kaneai-dynamic-url-replacement",
+          "kaneai-chrome-options"
         ],
       },
       {
