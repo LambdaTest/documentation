@@ -1113,7 +1113,8 @@ module.exports = {
           "kaneai-upload-and-download-files",
           "kaneai-modules-versions-and-enhancement",
           "kane-ai-assertions",
-          "kaneai-dynamic-url-replacement"
+          "kaneai-dynamic-url-replacement",
+          "kaneai-chrome-options"
         ],
       },
       {
@@ -3368,6 +3369,11 @@ module.exports = {
         type: "doc",
         label: "Okta",
         id: "okta-scim",
+      },
+      {
+        type: "doc",
+        label: "JumpCloud",
+        id: "jumpcloud-scim",
       },
     ],
   ],
