@@ -687,10 +687,6 @@ The `globalPost` flag defines a post-execution step that runs once after all tas
 - This feature is supported in YAML version 0.1 and 0.2 only.
 - `remote` mode is not supported for **XCUI** and **Espresso** framework jobs. Default mode for these frameworks is `local`.
 
-#### Limitations
-- This feature is supported in 0.1 and 0.2 yaml only.
-- Remote mode is not supported for XCUI and espresso framework jobs. Default mode for these frameworks is local.
-
 ```yaml title="hyperexecute.yaml"
 globalPost:
   mode: remote #local or remote
