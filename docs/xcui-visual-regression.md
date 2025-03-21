@@ -58,10 +58,6 @@ XCUI (XCTest UI) is Apple's native UI testing framework used for testing iOS app
 - Access to an **iOS** app (.ipa) and an **iOS Test** app (.ipa file).
 - Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
 
-<!-- :::tip
-If you do not have any **Android** app (.apk) and an **Android Test** app (.apk) file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) and a sample :link: [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android_expressotest.apk).
-::: -->
-
 ## Step 1: Create a SmartUI Project
 
 The first step is to create a project with the application in which we will combine all your **builds** run on the project.
@@ -72,8 +68,6 @@ To create a SmartUI Project, follow these steps:
 3. Select the platform as <b>Real Device </b> for executing your `XCUI` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
-
-<!-- <img loading="lazy" src={require('../assets/images/uploads/smart-ui-1.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
 
 ## Step 2: Set up your Authentication
 
@@ -104,33 +98,6 @@ set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 </TabItem>
 </Tabs>
-
-<!-- ## Step 3: Update your App Configurations
-
-> It should be in your app configurations then only you can perform the Espresso integration.
-
-- In your `build.gradle` file, add the [lambdatest-espresso](https://central.sonatype.com/artifact/io.github.lambdatest/lambdatest-espresso) dependency:
-
-```bash
-implementation 'io.github.lambdatest:lambdatest-espresso:1.0.1'
-```
-
-- Initialize this dependency in your test classes. You can do it as follows:
-
-```bash java
-import io.github.lambdatest.LTApp;
-public class BrowserTest {
-
-  LTApp smartUIApp = new LTApp();
-  
-  @Test
-  public void checkBrowserPageIsOpened() throws InterruptedException {
-    String response = smartUIApp.screenshot("LT-Espresso-Test");
-  }
-}
-```
-
-Now build your application. -->
 
 ## Step 3: Upload your Application
 
@@ -222,7 +189,7 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 --header 'Authorization: Basic BASIC_AUTH_TOKEN' \
 --header 'Content-Type: application/json' \
 --data '{
-    "app" : "lAPP_ID", //enter your app-id
+    "app" : "APP_ID", //enter your app-id
     "testSuite": "TEST_SUITE_ID", //enter your test-suite id
     "device" :  ["iPhone 13-16"], //enter your device names
     "smartUI.project": "XCUI-SmartUI-Project",
