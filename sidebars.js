@@ -2828,9 +2828,17 @@ module.exports = {
                   "smart-ui-cypress",
                   "playwright-visual-regression",
                   "puppeteer-visual-regression",
-                  "smartui-k6-setup",
+                  "smartui-k6-setup"
+                ]
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Visually Test Your Native Apps",
+                items: [
                   "appium-visual-regression",
-                  "espresso-visual-regression",
+                  "smartui-app-sdk",
+                  "espresso-visual-regression"
                 ]
               },
             ]
@@ -2846,6 +2854,8 @@ module.exports = {
               "smartui-sdk-config-options",
               "smartui-multiple-assets-hosts",
               "smartui-shadow-dom",
+              "smartui-cli-exec",
+              "smartui-sdk-capabilities",
               {
                 type: "category",
                 collapsed: true,

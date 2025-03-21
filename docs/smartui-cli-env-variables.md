@@ -152,13 +152,13 @@ In case you are accessing your network using corporate proxies, set the proxies 
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
 
 ```bash
-export HTTP_PROXY="Required branch"
+export HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 ```
 </TabItem>
 <TabItem value="Windows" label="Windows" default>
 
 ```bash
-set HTTP_PROXY="Required branch"
+set HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 ```
 </TabItem>
 
