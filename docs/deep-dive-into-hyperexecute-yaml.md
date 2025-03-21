@@ -622,14 +622,16 @@ The uploadArtefact flag is not currently supported for tests running with the **
 ***
 
 ### `globalPre`
-> Currently, only **Linux OS** is supported
-
 The `globalPre` flag allows you to define a pre-execution step that runs once before any of your tasks starts. This flag ensures that all necessary setup tasks, such as installing dependencies, configuring environments, or initializing resources, are completed before test execution begins.
 
 #### Functionality
 - Runs before any test execution starts, ensuring the environment is properly configured.
 - Executes on a separate machine (VM) or the local machine, based on the [test discovery mode](/support/docs/deep-dive-into-hyperexecute-yaml/#mode) selected.
 - Useful for setup tasks, such as fetching credentials, initializing databases, or downloading required files.
+
+#### Limitations
+- This feature is supported in YAML version 0.1 and 0.2 only.
+- `remote` mode is not supported for **XCUI** and **Espresso** framework jobs. Default mode for these frameworks is `local`.
 
 ```yaml title="hyperexecute.yaml"
 globalPre:
@@ -638,13 +640,30 @@ globalPre:
     - "echo 'Setting up environment'"
     - "apt-get update && apt-get install -y curl"
     - "curl -X POST https://api.example.com/init"
+  runson: win
+  cache: true
 ```
+
+:::info
+You can also use `beforeAll` as an alias for the `globalPre` command:
+
+```yaml
+beforeAll:
+  commands:
+    - "apt-get update && apt-get install -y curl"
+  mode: remote
+  runson: win
+  cache: true
+```
+:::
 
 #### Parameters
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| mode | string | Defines where the pre-step commands will be executed. <br /> Options: [local or remote](/support/docs/deep-dive-into-hyperexecute-yaml/#mode). |
+| mode | string | Defines where the pre-step commands will be executed. <br /> Options: [local or remote](/support/docs/deep-dive-into-hyperexecute-yaml/#mode). Default `mode` is `remote`.|
 | commands | list | List of shell commands to execute before test execution begins. |
+| runson | string | It specifies the operating system on which all the task would run in case of `remote mode`. By default, it is set to `linux`. |
+| cache | boolean | It is used to cache the payload after all commands have executed. It is useful in cases like: <br /> &nbsp;&nbsp;&nbsp; - If you want to made some modification in the payload at runtime by executing some set of commands. <br /> &nbsp;&nbsp;&nbsp; - If the payload is fetched from git source. By caching the payload, git rate limiting can be avoided as the payload will only be fetched once per job with `cache: true`. |
 
 #### Difference between `globalPre` and `pre` flags
 | Scenario | globalPre | pre |
@@ -657,14 +676,16 @@ globalPre:
 ***
 
 ### `globalPost`
-> Currently, only **Linux OS** is supported
-
 The `globalPost` flag defines a post-execution step that runs once after all tasks have completed. This step ensures that cleanup tasks, such as removing temporary files, logging results, or notifying external systems, are performed after test execution.
 
 #### Functionality
 - Runs after all test execution is completed, ensuring final cleanup and reporting.
 - Executes on a separate machine (VM) or the local machine, based on the mode selected.
 - Useful for cleanup tasks, such as deleting test artifacts, summarizing reports, or deallocating cloud resources.
+
+#### Limitations
+- This feature is supported in YAML version 0.1 and 0.2 only.
+- `remote` mode is not supported for **XCUI** and **Espresso** framework jobs. Default mode for these frameworks is `local`.
 
 ```yaml title="hyperexecute.yaml"
 globalPost:
@@ -673,13 +694,27 @@ globalPost:
     - "echo 'Cleaning up test environment'"
     - "rm -rf /tmp/test-results"
     - "curl -X POST https://api.example.com/cleanup"
+  runson: linux
 ```
+
+:::info
+You can also use `afterAll` as an alias for the `globalPost` command:
+
+```yaml
+afterAll:
+  commands:
+    - "curl -X POST https://api.example.com/cleanup"
+  mode: local
+  runson: linux
+```
+:::
 
 #### Parameters
 | Parameter | Type | Description |
 |-----------|------|-------------|
-| mode | string | Defines where the post-step commands will be executed. <br /> Options: [local or remote](/support/docs/deep-dive-into-hyperexecute-yaml/#mode). |
+| mode | string | Defines where the post-step commands will be executed. <br /> Options: [local or remote](/support/docs/deep-dive-into-hyperexecute-yaml/#mode). Default `mode` is `remote`. |
 | commands | list | List of shell commands to execute after test execution completes. |
+| runson | string | It specifies the operating system on which all the task would run in case of `remote mode`. By default, it is set to `linux`. |
 
 #### Difference between `globalPost` and `post` flags
 | Scenario | globalPost |	post |
@@ -1346,9 +1381,10 @@ if your test loads jquery static library multiple times and for some reason it i
 
 > **Note**: These cached resources are not yet shared across VMs. So, each VM has its own copy of cache.
 
+<!--
 ***
 
-### `afterAll`
+ ### `afterAll`
 It is used to run commands after the job has finished. Currently only local directive is allowed, means that all the commands would be run on the same host on which HyperExecute CLI was run. Running commands in `afterAll` on HyperExecute VMs(remote commands) is not yet supported. Users will have access to all the artifacts when these commands would be run.
 ```yaml
 afterAll:
@@ -1359,7 +1395,7 @@ afterAll:
 
 For instance you want to further process the artifacts and create a custom PDF. You can use `afterAll` for this purpose wherein custom commands can be invoked. Other use cases can be in case you :
 - Want to run some commands after the job is finished.
-- Want to run these commands from the same host from which hyperexecute-cli is run.
+- Want to run these commands from the same host from which hyperexecute-cli is run. -->
 
 <!-- ***
 ## `beforeAll`

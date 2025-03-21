@@ -1110,7 +1110,8 @@ module.exports = {
           "kane-ai-secrets",
           "kaneai-upload-and-download-files",
           "kaneai-modules-versions-and-enhancement",
-          "kane-ai-assertions"
+          "kane-ai-assertions",
+          "kaneai-dynamic-url-replacement"
         ],
       },
       {
@@ -2414,11 +2415,6 @@ module.exports = {
         label: "Emulator / Simulator",
         id: "app-automation-app-sim",
       },
-      {
-        type: 'doc',
-        label: 'Supported Appium Version',
-        id: 'supported-appium-versions-on-emulator-simulator'
-      }
     ],
   ],
 
@@ -2842,10 +2838,19 @@ module.exports = {
                   "smart-ui-cypress",
                   "playwright-visual-regression",
                   "puppeteer-visual-regression",
-                  "smartui-k6-setup",
+                  "smartui-k6-setup"
+                ]
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "Visually Test Your Native Apps",
+                items: [
                   "appium-visual-regression",
+                  "smartui-xcui-updates",
                   "espresso-visual-regression",
                   "xcui-visual-regression",
+                  "smartui-app-sdk",
                 ]
               },
             ]
@@ -2861,6 +2866,8 @@ module.exports = {
               "smartui-sdk-config-options",
               "smartui-multiple-assets-hosts",
               "smartui-shadow-dom",
+              "smartui-cli-exec",
+              "smartui-sdk-capabilities",
               {
                 type: "category",
                 collapsed: true,
