@@ -2838,7 +2838,8 @@ module.exports = {
                 items: [
                   "appium-visual-regression",
                   "smartui-app-sdk",
-                  "espresso-visual-regression"
+                  "espresso-visual-regression",
+                  "xcui-visual-regression",
                 ]
               },
             ]
