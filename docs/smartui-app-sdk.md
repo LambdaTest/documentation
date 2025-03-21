@@ -190,7 +190,7 @@ ssConfig.put("platform", "iOS");
 ```
 
 #### Important Notes:
-- It is adviced to use the same `deviceName` and `platform` combination across builds to compare screenshots of the same device 
+- It is advised to use the same `deviceName` and `platform` combination across builds to compare screenshots of the same device 
 - These parameters are metadata tags and don't affect the actual device selection on your cloud provider
 
 Example configurations for different cloud providers:
