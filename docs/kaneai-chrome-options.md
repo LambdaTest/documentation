@@ -50,7 +50,7 @@ Using Chrome options in KaneAI Web Agent is simple and involves defining specifi
 - Begin by accessing the Test Configuration page within the KaneAI Web Agent interface. Click on the **Create a Web Test** button.
 
 ### Step 2: Locate the Chrome Options Section
-- Toggle to On for adding chrome browser command line options to start your instance.
+- Enable the toggle to add Chrome browser command-line options when launching your instance.
 - Enter your Command line switches and you can provide the type of argument as well i.e. String or File for that particular command line.
 - You can enter up to 10 Chrome options in the provided input fields.
 - For example:
@@ -62,6 +62,8 @@ Using Chrome options in KaneAI Web Agent is simple and involves defining specifi
 
 ### Step 3: Start the Web Agent
 - Once the configuration is done, initiate the Web Agent. The browser will launch with the specified Chrome options applied, allowing you to perform your tests under the customized environment.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/chrome-options/2.png').default} alt="Image" className="doc_img"/>
 
 ## Considerations
 - **Maximum Options :** You can configure up to 10 Chrome options per session. Ensure you only input the necessary options for your test case.
