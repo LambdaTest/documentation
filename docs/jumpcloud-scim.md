@@ -114,4 +114,3 @@ In the documentation, we will discuss how to integrate JumpCloud with LambdaTest
 - **Step 14:** Enter email that does not exist on LambdaTest platform and provide test email details, and click **Test Connection** and activate button.
   <img loading="lazy" src={require('../assets/images/lambdatest-scim/jumpcloud-scim/19.png').default} alt="jira-self-hosted-integration"  className="doc_img"/> 
   <img loading="lazy" src={require('../assets/images/lambdatest-scim/jumpcloud-scim/20.png').default} alt="jira-self-hosted-integration"  className="doc_img"/> 
-  <img loading="lazy" src={require('../assets/images/lambdatest-scim/jumpcloud-scim/21.png').default} alt="jira-self-hosted-integration"  className="doc_img"/> 
