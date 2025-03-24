@@ -2854,9 +2854,12 @@ module.exports = {
               "smartui-cli-responsive-dom",
               "smartui-sdk-config-options",
               "smartui-multiple-assets-hosts",
+              "smartui-cli-basic-auth",
+              "smartui-sdk-tunnel",
               "smartui-shadow-dom",
               "smartui-cli-exec",
               "smartui-sdk-capabilities",
+              
               {
                 type: "category",
                 collapsed: true,
