@@ -2414,7 +2414,6 @@ module.exports = {
       {
         type: "doc",
         label: "Emulator / Simulator",
-        items: ["app-automation-app-sim"],
         id: "app-automation-app-sim",
       },
       {
