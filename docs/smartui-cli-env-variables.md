@@ -171,13 +171,13 @@ set HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
 
 ```bash
-export HTTPS_PROXY="Required branch"
+export HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>/"
 ```
 </TabItem>
 <TabItem value="Windows" label="Windows" default>
 
 ```bash
-set HTTPS_PROXY="Required branch"
+set HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>/"
 ```
 </TabItem>
 </Tabs>
