@@ -42,7 +42,6 @@ Projects serve as a centralized platform for organizing and managing test execut
 
 **Step 2:** Select **Custom Project** as the **Type of Project**. Provide a unique **Project Name** (required) and select your desired framework and language used in your project. Click on the **Continue**.
 
-
 **Step 3:** Provide your **GitHub URL** and the **[Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)** / **Bitbucket URL** and the **[Repository Access Tokens](https://support.atlassian.com/bitbucket-cloud/docs/repository-access-tokens/)** of your repository. You can also add your team members as **Co-Owners** to allow them to edit or delete the project alongside you.
 
 :::info important
@@ -50,8 +49,6 @@ Currently, only **GitHub** and **Bitbucket** repositories are supported.
 :::
 
 Click on **Save** button to finish the setup of your project.
-
-
 
 <div className="storylane-iframe">
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
@@ -70,6 +67,8 @@ Within each HyperExecute Project, you can set up one or more workflows. These wo
 **Step 2:** Configure the schedule of your workflow. Select the **days** and **time** at which you want to trigger your tests. Click on **Next**.
 
 **Step 3: Workflow Linking (Optional)-** You can connect this workflow to other existing workflows in this project or others that you own. When this workflow is completed successfully, it can automatically activate the linked workflows. To configure this, select the workflows you want to trigger from the list of existing workflows. This feature enables you to create automated workflow chains for more complex testing and deployment processes.
+
+> 📘 Gain a Comprehensive Understanding of [Connected Workflows](/support/docs/hyperexecute-connected-workflows/).
 
 Click on the **Finish** button and your job will be triggered on the defined day and time.
 
