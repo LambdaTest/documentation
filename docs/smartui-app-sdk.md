@@ -125,9 +125,10 @@ public class YourTestClass {
         // Configure screenshot settings
         Map<String, String> ssConfig = new HashMap<>();
         // Either use environment variable
-        // ssConfig.put("projectToken", "your-project-token-here"); // Use this if you are not setting the project token in environment variable       
+        ssConfig.put("projectToken", "your-project-token-here"); // Use this if you are not setting the project token in environment variable      
+        // ssConfig.put("buildName", "First Build"); // Optional 
         ssConfig.put("deviceName", "iPhone 15"); // Required, you can use the variables that you are setting in the cloud capabilities
-        ssConfig.put("buildName", "First Build"); // Optional
+    
         ssConfig.put("platform", "iOS"); // Optional,you can use the variables that you are setting in the cloud capabilities
 
         try {
