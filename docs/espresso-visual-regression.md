@@ -86,11 +86,12 @@ Run the below mentioned commands in your terminal to setup the CLI and the envir
 <Tabs className="docs__val">
 
 <TabItem value="bash" label="Linux / MacOS" default>
+
   <div className="lambdatest__codeblock">
-  <CodeBlock className="language-bash">
-  {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-</CodeBlock>
+  </CodeBlock>
 </div>
 
 </TabItem>
@@ -98,10 +99,10 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 <TabItem value="powershell" label="Windows" default>
 
   <div className="lambdatest__codeblock">
-  <CodeBlock className="language-powershell">
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \`
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
-</CodeBlock>
+  </CodeBlock>
 </div>
 
 </TabItem>
