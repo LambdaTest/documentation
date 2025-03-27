@@ -61,6 +61,7 @@ This document provide details about the features and capabilities supported for 
 | network.har | Boolean | To generate the network logs in .har format, pass the value as `network.har: true` only works with `network:true` |
 | build | String | To set the Espresso build name. Example: `build: My Espresso Build`. |
 | geoLocation | String | Set the geolocation country code if you want to enable the same in your test. Example - `geoLocation: FR`|
+| gpsLocation | String & Float | The capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"gpsLocation": "-73.935242,40.730610"`.|
 | tunnel, tunnelName | Boolean | To activate the tunnel mode, pass the value as `tunnel: true` and provide the name of your tunnel as `tunnelName: NewTunnel` |
 | disableAnimation | Boolean | Set this to `true` if you want to disable animations for espresso tests. **Default:** `false` |
 | clearPackageData | Boolean | Set this to `true` if you want to clear the app data after each test has completed running. **Default**: `false` |

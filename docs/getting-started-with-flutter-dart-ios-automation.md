@@ -183,6 +183,7 @@ The following capabilities are supported:
 8. **tunnel:** Boolean value to run build via Tunnel. Example: `true`.  
 9. **tunnelName:** Name of the tunnel to be used in conjunction with `tunnel` capability.  
 10. **region:** String to device the region from which device will be allocated. Example - `eu`,`us`,`ap`.
+11. **gpsLocation:** This capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"gpsLocation": "-73.935242,40.730610"`.
 
 
 ## Running Tests in Parallel

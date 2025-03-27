@@ -283,6 +283,7 @@ The following capabilities are supported:
 7. **deviceLog:** Boolean value to generate device logs. Example: `true`. 
 8. **build:** Set the name of your Flutter test build. Example: `My Flutter Build`.
 9. **autoGrantPermissions:**  Boolean value to automatically grant the required permissions based on the [Android manifest](https://developer.android.com/guide/topics/manifest/manifest-intro) in the app’s **.apk** Example: `true`. 
+10. **gpsLocation:** This capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"gpsLocation": "-73.935242,40.730610"`.
 
 
 
