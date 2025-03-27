@@ -183,7 +183,11 @@ The following capabilities are supported:
 8. **tunnel:** Boolean value to run build via Tunnel. Example: `true`.  
 9. **tunnelName:** Name of the tunnel to be used in conjunction with `tunnel` capability.  
 10. **region:** String to device the region from which device will be allocated. Example - `eu`,`us`,`ap`.
-11. **gpsLocation:** This capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"gpsLocation": "-73.935242,40.730610"`.
+11. **gpsLocation:** This capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"location": {"lat": "-50","long": "150.028333"}`.
+
+:::note
+Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
+:::
 
 
 ## Running Tests in Parallel
