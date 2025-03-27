@@ -114,4 +114,14 @@ Now, you can view all the apps you’ve uploaded along with their respective ver
 1. **Add new project:** Click this button to add and sync new Firebase projects to your workspace.  
 2. **Refresh:** This button refreshes the project list, apps, and releases to their latest state without affecting your synced releases.
 3. **Project Menu:** Click here to manage your project. You can share it with team members or delete it from the list.
-4. **Sync:** Sync your release. This is necessary to start any session and generates a unique app ID for the release, which will be used for automation test cases. 
+4. **Sync:** Sync your release. This is necessary to start any session and generates a unique app ID for the release, which will be used for automation test cases.
+
+:::note
+
+Please verify if your app is in testing mode. 
+
+If it is, ensure that you add your email as a test user in GCP. This option is available in the 'Audience' section of GCP.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Noteaddemail.png').default} alt="Real "  className="doc_img" width="1366" height="450"/>
+
+::: 
