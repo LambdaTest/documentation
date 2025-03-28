@@ -129,6 +129,10 @@ Apps that consume excessive battery negatively affect user experience. With Lamb
 
 <img loading="lazy" src={require('../assets/images/appium-app/battery.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
+:::note
+Battery consumption data is only displayed for Android applications. This feature is not available for iOS applications. 
+:::
+
 ### 7. Temperature Monitoring
 High device temperature can degrade performance and harm the user experience. LambdaTest lets you monitor battery temperature during app usage, helping you optimize features causing excessive heat generation and reducing the risk of device overheating.
 
