@@ -48,8 +48,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 **Imagine launching your dream app...only to see it crash under the weight of excited users !!**
 
-> This is currently in the **Beta** version.
-
 Your team devoted months to meticulously crafting an app or a website that is finally ready for the world. Your users are hyped, anticipation is boiling, and you hit the **launch** button. 🚀
 
 But instead of smooth sailing, the app stumbles under the surge of eager users. And now they are left with only frustrating delays, error messages, and app crash notifications. It might sound familiar and scary at the same time, but unfortunately, it's a common scenario for apps without the armor of **performance testing**. 

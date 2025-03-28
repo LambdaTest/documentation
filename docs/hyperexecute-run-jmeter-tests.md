@@ -41,7 +41,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-> This is currently in the **Beta** version.
 
 ## Prerequisites
 
