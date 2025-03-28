@@ -3053,6 +3053,7 @@ module.exports = {
     "analytics-dashboard-copilot",
     "analytics-allure-api-widgets",
     "analytics-test-case-insights",
+    "insights-app-profiling",
     "insights-private-real-devices",
     "insights-private-desktop",
     "insights-usage-report",
