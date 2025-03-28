@@ -733,6 +733,10 @@ This can be majorly used for non selenium based tests to have the recorded video
 captureScreenRecordingForScenarios: true
 ```
 
+:::warning info
+To avoid test failures, ensure the `video` capability is `false` before enabling the `captureScreenRecordingForScenarios` flag in your YAML file. If both `video` capability and `captureScreenRecordingForScenarios` flag is set to `true` simultaneously, the tests will fail. To prevent this conflict, always pass the capability `video: false` in your tests.
+:::
+
 ***
 
 ### `skipArtifactStageIfNoTest`
