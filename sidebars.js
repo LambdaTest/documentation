@@ -717,7 +717,7 @@ module.exports = {
               "hyperexecute-build-mobile-apps-using-tools",
               "hyperexecute-utilizing-custom-libraries",
               "hyperexecute-supported-languages-and-packages",
-              "hyperexecute-connected-workflows"
+              "hyperexecute-test-chains"
             ],
           },
           {
