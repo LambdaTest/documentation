@@ -58,8 +58,11 @@ XCUI (XCTest UI) is Apple's native UI testing framework used for testing iOS app
 - Access to an **iOS** app (.ipa) and an **iOS Test** app (.ipa file).
 - Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
 
-:::tip
-If you do not have any **iOS** app (.ipa) and an **iOS Test** app (.ipa) file, you can run your sample tests on LambdaTest by using our sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/prod-ios-app.ipa) and a sample :link: [iOS Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/prod-ios-test-app.ipa).
+:::tip Sample repo
+If you do not have any **iOS** app (.ipa) and an **iOS Test** app (.ipa) file, you can run your sample tests on LambdaTest by using our sample :link: [XCUI app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/prod-ios-app.ipa) and a sample :link: [XCUI Test App](https://prod-mobile-artefacts.lambdatest.com/assets/docs/prod-ios-test-app.ipa).
+
+Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
+<a href="https://github.com/LambdaTest/lambdatest-xcui" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 ## Step 1: Create a SmartUI Project
@@ -107,8 +110,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ## Step 3: Update your App Configurations
 
 > It should be in your app configurations then only you can perform the XCUI integration.
-
-- Update this dependency in your test classes. You can do it as follows:
+- Update this [dependency](https://swiftpackageindex.com/LambdaTest/lambdatest-xcui) in your test classes. You can do it as follows:
 
 ```java
 import XCTest
