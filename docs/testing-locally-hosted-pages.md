@@ -58,6 +58,24 @@ LambdaTest Tunnel offers numerous benefits for web developers, testers, and QA p
 - **Cost Effective :** With LambdaTest Tunnel, you can test your web applications or websites, local folder, and files across a wide range of browsers and operating systems without setting up complex and expensive local testing environments.
 - **Test on Real Environment :** It lets you test your locally hosted web applications or websites on cloud-based real OS machines. You can even run accessibility tests on desktop browsers while testing locally hosted web applications and pages.
 
+## Download the Tunnel Binary
+You can download the Tunnel Binary as per your respective machine architecture from the links given below :
+
+| Platform | Download Link |
+|----------|---------------|
+| Windows/AMD64 | https://downloads.lambdatest.com/tunnel/v3/windows/amd64/LT.exe |
+| Windows/386 | https://downloads.lambdatest.com/tunnel/v3/windows/386/LT.exe | 
+| Linux/AMD64 | https://downloads.lambdatest.com/tunnel/v3/linux/amd64/LT |
+| Linux/ARM64 | https://downloads.lambdatest.com/tunnel/v3/linux/arm64/LT |
+| Linux/386 | https://downloads.lambdatest.com/tunnel/v3/linux/386/LT |
+| Darwin/AMD64 | https://downloads.lambdatest.com/tunnel/v3/mac/amd64/LT |
+| Darwin/ARM64 | https://downloads.lambdatest.com/tunnel/v3/mac/arm64/LT |
+| Darwin/386 | https://downloads.lambdatest.com/tunnel/v3/mac/386/LT |
+| FreeBSD/AMD64 | https://downloads.lambdatest.com/tunnel/v3/freebsd/amd64/LT |
+| FreeBSD/ARM64 | https://downloads.lambdatest.com/tunnel/v3/freebsd/arm64/LT| 
+| FreeBSD/A386 | https://downloads.lambdatest.com/tunnel/v3/freebsd/386/LT |
+| Solaris/AMD64 | https://downloads.lambdatest.com/tunnel/v3/solaris/amd64/LT |
+
 ## How to Connect LambdaTest Tunnel?
 
 <div className="ytframe"> 
