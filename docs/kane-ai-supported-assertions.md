@@ -106,8 +106,8 @@ Property assertions involve checking styles or attributes of an element.
 - Assert if the font size of a header is "16px".
 - Assert if the padding of a button is "10px".
 
-### Spacial Assertions (To be available soon)
-Spacial assertions validate the position or arrangement of elements.
+### Spatial Assertions (To be available soon)
+Spatial assertions validate the position or arrangement of elements.
 
 **Examples:**
 - Assert that the 5th column of a table contains "Jordan.Mathews".
@@ -131,7 +131,7 @@ These assertions aim to check the state after an action, which is not supported 
 **Examples:**
 - Assert if the page is scrolled to the bottom.
 - Assert if a tooltip appears after hovering over an info icon.
-  - Cuurently, you can break this into two steps: Hover on the info icon, then assert if the tooltip is visible.
+  - Currently, you can break this into two steps: Hover on the info icon, then assert if the tooltip is visible.
 
 ### Nested Assertions (To be available soon)
 Nested assertions involve multiple layers of validation within a single assertion.
