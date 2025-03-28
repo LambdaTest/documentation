@@ -61,10 +61,17 @@ This document provide details about the features and capabilities supported for 
 | network.har | Boolean | To generate the network logs in .har format, pass the value as `network.har: true` only works with `network:true` |
 | build | String | To set the Espresso build name. Example: `build: My Espresso Build`. |
 | geoLocation | String | Set the geolocation country code if you want to enable the same in your test. Example - `geoLocation: FR`|
+| gpsLocation | Decimal | The capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"location": {"lat": "-50","long": "150.028333"}`|
 | tunnel, tunnelName | Boolean | To activate the tunnel mode, pass the value as `tunnel: true` and provide the name of your tunnel as `tunnelName: NewTunnel` |
 | disableAnimation | Boolean | Set this to `true` if you want to disable animations for espresso tests. **Default:** `false` |
 | clearPackageData | Boolean | Set this to `true` if you want to clear the app data after each test has completed running. **Default**: `false` |
 | singleRunnerInvocation | Boolean | Set this to `true` if you want to execute test cases together with a `single test runner invocation`.This can help significantly speed up the test execution time. By default, each test case is invoked separately. **Default:** `false` |
+
+:::note
+Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
+:::
+
+
 <!-- | env | Map | This feature allows users to pass and retrieve environment variables (like STAGE, PROD, or DEV) during automated Android tests. That is, users can dynamically switch configurations between environments without changing the test code, enabling seamless testing across multiple setups. Learn more about [Environment Variables](https://www.lambdatest.com/support/docs/espresso-env-variables-settings/) | -->
 :::caution Important
 You can either use **GeoLocation** or **Tunnel** in single execute command. They both are mutually exclusive.
