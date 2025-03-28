@@ -55,6 +55,9 @@ You cannot perform Geolocation testing with locally hosted web applications usin
 |-----|--------|-------------------------|-------|------------|---------|-----------------|
 | `geoLocation` | Example: US | This capability helps you to perform Selenium automation testing from different countries. <br/>`capabilities.setCapability("geoLocation","US");` |geo | String |`capabilities.setCapability("geoLocation","US");`|Case Sensitive <br/>Invalid location error
 
+
+> **NOTE :** You can verify whether your geolocation IP address is working or not via [MaxMind's GeoIP Web Services](https://www.maxmind.com/en/geoip-web-services-demo).
+
 You can perform Selenium automation testing from the below-listed countries.
 
 | Country | Country Codes | 
