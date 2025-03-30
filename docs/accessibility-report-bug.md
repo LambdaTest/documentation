@@ -51,65 +51,19 @@ The Bug Reporting feature in LambdaTest Accessibility Testing helps you to effic
 - **Team Collaboration :** Assign bugs to team members, set priorities, and track resolution status.
 
 ## Steps to Report a Bug
-LambdaTest enables seamless integration with third-party issue trackers to streamline bug management.
+### Prerequisite
+- Integrate your LambdaTest account with your required [Bug Tracker platform](https://www.lambdatest.com/support/docs/bug-tracking-tools/).
 
 ### Step 1. Navigating to Accessibility Test Report
 - Navigate to **Accessibility** section in your LambdaTest dashboard.
 - Go to the **Manual/Automation** Reports.
-- Select the report for which you want to Mark it as Bug.
+- Select the report for which you want to mark it as **Bug**.
 
-## Step 2. Reporting an Issue
-- Click on the **Report Bug** button next to the identified issue.
-- A bug reporting form will appear with pre-filled details, including:
+<img loading="lazy" src={require('../assets/images/accessibility-testing/mark-bug/1.png').default} alt="accessibility-mark-bug" className="doc_img"/>
 
-Issue type (e.g., contrast error, missing ARIA attributes, keyboard navigation failure).
+### Step 2. Reporting an Issue
+- Click on the **Report Bug** icon in the top right cornter.
+- A pop-up window will open, fill up the details and create a issue for the same.
+- The issue will be notified in your selected bug reporting platform.
 
-Affected elements and their selectors.
-
-WCAG guideline references.
-
-Automated screenshot with highlighted issue area.
-
-(Optional) Add a custom description and additional screenshots.
-
-Assign the bug to a specific team member.
-
-Set the priority (Low, Medium, High, Critical).
-
-Click Submit to log the bug.
-
-3. Tracking and Managing Bugs
-
-Navigate to the Bug Tracking Dashboard in LambdaTest.
-
-View all reported bugs along with their statuses (Open, In Progress, Resolved, Closed).
-
-Use filters to sort bugs by severity, assignee, or testing session.
-
-Click on a bug to view detailed information and comments from the assignee.
-
-Update the status or add further details as needed.
-
-Integrations with Issue Tracking Tools
-
-LambdaTest enables seamless integration with third-party issue trackers to streamline bug management.
-
-1. Configuring Integrations
-
-Navigate to Integrations in the LambdaTest dashboard.
-
-Select the issue tracker you want to connect (e.g., Jira, Trello, GitHub, GitLab, Asana).
-
-Authenticate using API keys or OAuth credentials.
-
-Configure default project settings for bug reporting.
-
-Save settings to enable automated issue logging.
-
-2. Logging Bugs to External Tools
-
-When reporting a bug, select Sync to [Issue Tracker].
-
-The bug will be automatically pushed to the selected tool with all necessary details.
-
-Updates in the external tracker will reflect in LambdaTest's Bug Tracking Dashboard.
+<img loading="lazy" src={require('../assets/images/accessibility-testing/mark-bug/2.png').default} alt="accessibility-mark-bug" className="doc_img"/>
