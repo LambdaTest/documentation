@@ -2653,6 +2653,11 @@ module.exports = {
         label: "JUnit Report",
         id: "espresso-junit-report",
       },
+      {
+        type: "doc",
+        label: "Espresso Mock Server",
+        id: "espresso-mock-server"
+      }
     ],
   ],
 
