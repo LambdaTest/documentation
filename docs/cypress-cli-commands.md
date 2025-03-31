@@ -118,6 +118,7 @@ Given below are the additional flags available with the `run` command.
 | `--sys-envs, --sys-env-variables`         | To set system variables during test run time <br /> e.g. `lambdatest-cypress run --sys-envs="BASE_URL=https://lambdatest.com;"` |String |
 | `--npm-lpd=true, --legacy-peer-deps=true` | Ignore peer dependencies and proceed with the NPM installation  | String |
 | `--npm-f=true, --npm-force=true`          | Fetch remote resources even if a local copy already exists <br /> e.g. `lambdatest-cypress run  --npm-force=true` |String |
+| `--timezone` | This allows you to run your Cypress tests in a specific timezone, which is particularly useful when testing features like localized date/time rendering or region-specific logic. <br /> e.g. `lambdatest-cypress run --timezone="UTC+03:00"` <br /> `lambdatest-cypress run --timezone="city-name"` |String |
 
 ## `build-info` command
 You can use the `build-info` command to get information on the build.
