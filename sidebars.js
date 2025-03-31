@@ -2413,16 +2413,9 @@ module.exports = {
       },
     },
     [
-      {
-        type: "doc",
-        label: "Emulator / Simulator",
-        id: "app-automation-app-sim",
-      },
-      {
-        type: "doc",
-        label: "Flutter",
-        id: "virtual-device-flutter-apps",
-      },
+      "app-automation-app-sim",
+      "virtual-device-flutter-apps",
+      "emulator-simulator-avaiable-devices"
     ],
   ],
 
