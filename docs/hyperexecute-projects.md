@@ -71,6 +71,8 @@ Within each HyperExecute Project, you can set up one or more workflows. These wo
 
 **Step 3: Workflow Linking (Optional)-** You can connect this workflow to other existing workflows in this project or others that you own. When this workflow is completed successfully, it can automatically activate the linked workflows. To configure this, select the workflows you want to trigger from the list of existing workflows. This feature enables you to create automated workflow chains for more complex testing and deployment processes.
 
+> 📘 Gain a Comprehensive Understanding of how to use connected workflows to create [Test Chains](/support/docs/hyperexecute-test-chains/).
+
 Click on the **Finish** button and your job will be triggered on the defined day and time.
 
 <div className="storylane-iframe">

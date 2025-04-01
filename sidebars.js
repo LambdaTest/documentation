@@ -718,7 +718,8 @@ module.exports = {
               "hyperexecute-seamless-integration-with-tools",
               "hyperexecute-build-mobile-apps-using-tools",
               "hyperexecute-utilizing-custom-libraries",
-              "hyperexecute-supported-languages-and-packages"
+              "hyperexecute-supported-languages-and-packages",
+              "hyperexecute-test-chains"
             ],
           },
           {
