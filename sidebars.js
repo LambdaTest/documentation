@@ -857,7 +857,6 @@ module.exports = {
                 label: "March, 2025",
                 items: [
                   'hyperexecute-release-notes-2-7-8',
-                  'hyperexecute-release-notes-2-7-6',
                 ]
               },
               {
