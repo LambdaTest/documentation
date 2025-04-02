@@ -93,6 +93,10 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 |**20.204.184.92/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 |**52.224.184.10/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 |**20.204.224.62/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
+|**137.135.87.44**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+|**20.84.36.156/31**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+|**20.38.40.139**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+|**74.234.167.63**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 
 ## Tunnel IP ranges
 
