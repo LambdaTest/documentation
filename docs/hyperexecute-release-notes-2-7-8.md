@@ -75,3 +75,28 @@ runtime:
   - language: dotnet
     version: "4.7"
 ```
+
+## Support for Project Capability in CypressOps
+You can now define your [Project](https://www.lambdatest.com/support/docs/hyperexecute-projects/) name and autocreate your project via `ProjectName` capability defined in [`cypressOps`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops).
+
+```yaml
+cypressOps:
+  ProjectName: "Cypress_Project"
+```
+
+## Consolidated Native Robot Report Generation
+The consolidated Native Robot report includes detailed information on all executed tests, i.e., which tests passed, failed, or were skipped, along with any error messages and stack traces for failed tests. It is widely supported across CI/CD tools, which makes it easy to integrate with existing workflows and with other tools or systems.
+
+Add the following configurations in your YAML file:
+
+```yaml
+testRunnerCommand: YOUR_RUNNER_COMMAND --outputdir Reports 
+
+report: true
+partialReports:
+  type: json
+  location: Reports
+  frameworkName: robot
+```
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/robot-report.png').default} alt="Image"  className="doc_img"/>
