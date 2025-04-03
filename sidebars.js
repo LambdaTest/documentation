@@ -756,7 +756,8 @@ module.exports = {
               "cypress-mochaawesome-report",
               "error-categorization-report",
               "junit-xml-report",
-              "karate-report"
+              "karate-report",
+              "robot-report"
             ],
           },
 

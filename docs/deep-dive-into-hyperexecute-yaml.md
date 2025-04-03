@@ -1125,6 +1125,8 @@ Additional options include:
 - **Network**: This is  a boolean parameter which when set to true enables network proxy logs for the test.
 - **GeoLocation**: This parameter is used to pass the test traffic through a specific geolocation. Value to be passed here is geolocation code
 - **FullHar**: This flag generates the HAR logs that offer a comprehensive view of your application's network activity during testing.
+- **reporterConfigFile**: If your Cypress project does not have a custom reporter configured, `reporterConfigFile` will automatically enable command logs using the mochawesome reporter by default.
+- **ProjectName**: You can define your project name to autocreate your project in the HyperExecute dashboard.
 
 ```yaml
 cypressOps:
@@ -1134,6 +1136,8 @@ cypressOps:
   Network: true
   FullHar: true
   geoLocation: IN
+  reporterConfigFile: "reporter_config.json",
+  ProjectName: "Cypress_Project"
 ```
 
 ***
