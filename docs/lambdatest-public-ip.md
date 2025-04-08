@@ -82,8 +82,6 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 |**3.64.247.89**|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|
 |**4.224.6.32/28**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 |**20.253.69.48/28**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
-|**20.244.104.64**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
-|**20.28.18.30**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**74.163.89.104**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**158.23.180.169**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
 |**20.198.218.39**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
@@ -93,10 +91,7 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 |**20.204.184.92/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 |**52.224.184.10/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 |**20.204.224.62/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
-|**137.135.87.44**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
-|**20.84.36.156/31**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
-|**20.38.40.139**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
-|**74.234.167.63**|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|
+
 
 ## Tunnel IP ranges
 
