@@ -1127,7 +1127,8 @@ module.exports = {
           "kaneai-modules-versions-and-enhancement",
           "kane-ai-assertions",
           "kaneai-dynamic-url-replacement",
-          "kaneai-chrome-options"
+          "kaneai-chrome-options",
+          "kaneai-scheduled-test-runs"
         ],
       },
       {
