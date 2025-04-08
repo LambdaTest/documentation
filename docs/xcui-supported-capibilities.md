@@ -62,6 +62,7 @@ This document provide details about the features and capabilities supported for 
 | geoLocation | String | Set the geolocation country code if you want to enable the same in your test. Example: `geoLocation: FR`|
 | gpsLocation | Decimal | The capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"location": {"lat": "-50","long": "150.028333"}`.|
 | tunnel, tunnelName | Boolean | To activate the tunnel mode, pass the value as `tunnel: true` and provide the name of your tunnel as `tunnelName: NewTunnel` |
+| enableBluetooth | Boolean | Used to enable the bluetooth functionality during the session. Example: `enableBluetooth: true`|
 | resignApp <br /> <br />Not supported in **Virtual Devices** | Boolean | Set this to `false` if you want to to prevent the apps from being re-signed. The app should be built for enterprise distribution. |
 
 :::note
