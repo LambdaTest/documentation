@@ -62,6 +62,7 @@ This document provide details about the features and capabilities supported for 
 | build | String | To set the Espresso build name. Example: `build: My Espresso Build`. |
 | geoLocation | String | Set the geolocation country code if you want to enable the same in your test. Example - `geoLocation: FR`|
 | gpsLocation | Decimal | The capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"location": {"lat": "-50","long": "150.028333"}`|
+| enableBluetooth | Boolean | Used to enable the bluetooth functionality during the session. Example: `enableBluetooth: true`|
 | tunnel, tunnelName | Boolean | To activate the tunnel mode, pass the value as `tunnel: true` and provide the name of your tunnel as `tunnelName: NewTunnel` |
 | disableAnimation | Boolean | Set this to `true` if you want to disable animations for espresso tests. **Default:** `false` |
 | clearPackageData | Boolean | Set this to `true` if you want to clear the app data after each test has completed running. **Default**: `false` |
