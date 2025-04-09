@@ -643,7 +643,7 @@ globalPre:
   runson: win
   cache: true
 ```
-
+<!-- 
 :::info
 You can also use `beforeAll` as an alias for the `globalPre` command:
 
@@ -655,7 +655,7 @@ beforeAll:
   runson: win
   cache: true
 ```
-:::
+::: -->
 
 #### Parameters
 | Parameter | Type | Description |
@@ -697,7 +697,7 @@ globalPost:
   runson: linux
 ```
 
-:::info
+<!-- :::info
 You can also use `afterAll` as an alias for the `globalPost` command:
 
 ```yaml
@@ -707,7 +707,7 @@ afterAll:
   mode: local
   runson: linux
 ```
-:::
+::: -->
 
 #### Parameters
 | Parameter | Type | Description |
@@ -1359,10 +1359,10 @@ if your test loads jquery static library multiple times and for some reason it i
 
 > **Note**: These cached resources are not yet shared across VMs. So, each VM has its own copy of cache.
 
-<!--
 ***
 
- ### `afterAll`
+### `afterAll`
+> This flag is deprecated, instead use [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost)
 It is used to run commands after the job has finished. Currently only local directive is allowed, means that all the commands would be run on the same host on which HyperExecute CLI was run. Running commands in `afterAll` on HyperExecute VMs(remote commands) is not yet supported. Users will have access to all the artifacts when these commands would be run.
 ```yaml
 afterAll:
@@ -1373,10 +1373,12 @@ afterAll:
 
 For instance you want to further process the artifacts and create a custom PDF. You can use `afterAll` for this purpose wherein custom commands can be invoked. Other use cases can be in case you :
 - Want to run some commands after the job is finished.
-- Want to run these commands from the same host from which hyperexecute-cli is run. -->
+- Want to run these commands from the same host from which hyperexecute-cli is run.
 
-<!-- ***
+***
+
 ## `beforeAll`
+> This flag is deprecated, instead use [`globalPre`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre)
 BeforeAll is used for running pre operations like discovery and payload_update. It can be executed either on local system or on hyperexecute beforeAll VM. 
 ```yaml
 beforeAll:
@@ -1386,7 +1388,7 @@ beforeAll:
     commands:
 pip install -r requirements.txt 
 ```
-We can choose to run on local/remote(on HYP Vms) from the location command. Type can be either discovery/update_payload (type of operation to be performed) and commands will have all the commands that needs to be run for that operation. -->
+We can choose to run on local/remote(on HYP Vms) from the location command. Type can be either discovery/update_payload (type of operation to be performed) and commands will have all the commands that needs to be run for that operation.
 
 ***
 
