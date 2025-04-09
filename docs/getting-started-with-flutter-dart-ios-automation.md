@@ -165,7 +165,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/f
 </TabItem>
 </Tabs>
 
-### Step 4: View Test Execution
+### Step 3: View Test Execution
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://appautomation.lambdatest.com/builds).
 
@@ -183,6 +183,12 @@ The following capabilities are supported:
 8. **tunnel:** Boolean value to run build via Tunnel. Example: `true`.  
 9. **tunnelName:** Name of the tunnel to be used in conjunction with `tunnel` capability.  
 10. **region:** String to device the region from which device will be allocated. Example - `eu`,`us`,`ap`.
+11. **gpsLocation:** This capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"location": {"lat": "-50","long": "150.028333"}`.
+12. **enableBluetooth:** This capability is used to enable the bluetooth functionality during the session. Example: `enableBluetooth: true`
+
+:::note
+Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
+:::
 
 
 ## Running Tests in Parallel

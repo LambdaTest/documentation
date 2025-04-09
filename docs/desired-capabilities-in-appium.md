@@ -116,6 +116,7 @@ By setting these parameters, QAs can ensure that the Appium server accurately ta
 | geoLocation | TYPE: String <br/>`geoLocation=US`<br/>`geoLocation=FR` | Used to change the geolocation of the device to the location provided. <br/> If this capability is not passed, the device will auto update the Geo Location based on the physical location of the device.|
 | enableImageInjection | TYPE: Boolean<br/> DEFAULT: false <br/>`enableImageInjection: true` | Used to enable the Image Injection for the app. <br/>Must send "media" capability along with this capability.|
 | media | TYPE: STRING <br/>`media: Path to the image`|Used to provide the media to upload the file to the app for Image Injection. If this capability is not passed, then the no media will be sent to the device. <br/>Must send "enableImageInjection" capability along with this capability.|
+| enableBluetooth | TYPE: Boolean<br/> DEFAULT: false <br/>`enableBluetooth: true` | Used to enable the bluetooth functionality during the session.|
 location | TYPE: HashMap <br/> <br/> Python example: <br/> `location: {"lat": "28.6235192", "long": "77.3662948"}` <br/> <br/> For examples in other languages, please head over to [Capability Generator](https://www.lambdatest.com/capabilities-generator/)  | Used to change the GPS Geolocation of the device to the location provided. <br/> If this capability is not passed, the device will auto update the Geo Location based on the physical location of the device. <br/> It needs to be passed in a HashMap structure with `lat` & `long` being passed separately. |
 
 
