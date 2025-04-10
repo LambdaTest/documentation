@@ -57,7 +57,7 @@ HyperExecute GUI is currently in **BETA** and supports the **Java TestNG Framewo
 ---
 **[HyperExecute](https://www.lambdatest.com/hyperexecute)** has been a **cornerstone for automation testing**, offering unparalleled flexibility with its YAML configurations and command-line interface. Now, with HyperExecute GUI, you can experience AI-powered automatic test detection, set up test environments with simple clicks and run your tests without coding.
 
-<img src={require('../assets/images/hyperexecute/gui/gui_template.webp').default} />
+<img src={require('../assets/images/hyperexecute/gui/gui_template.png').default} />
 
 ## Getting Started in 5 Simple Steps
 ---
