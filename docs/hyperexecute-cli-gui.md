@@ -57,14 +57,14 @@ HyperExecute GUI is currently in **BETA** and supports the **Java TestNG Framewo
 ---
 **[HyperExecute](https://www.lambdatest.com/hyperexecute)** has been a **cornerstone for automation testing**, offering unparalleled flexibility with its YAML configurations and command-line interface. Now, with HyperExecute GUI, you can experience AI-powered automatic test detection, set up test environments with simple clicks and run your tests without coding.
 
-<!-- <img src={require('../assets/images/hyperexecute/gui/gui_template.webp').default} /> -->
+<img src={require('../assets/images/hyperexecute/gui/gui_template.webp').default} />
 
 ## Getting Started in 5 Simple Steps
 ---
 
-<!-- <video class="right-side" width="100%" controls id="vid">
+<video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/GUI_Demo.mp4').default} type="video/mp4" />
-</video> -->
+</video>
 
 ### Step 1: Download and Install
 Download the HyperExecute GUI installer from your LambdaTest dashboard and install it on your system. Run the installer by following the on-screen instructions and launch HyperExecute GUI from your applications menu.
@@ -83,9 +83,9 @@ Launch the application, log in with your LambdaTest credentials, and select your
 - Verify and manages network connectivity
 - Set up a secure connection to your account
 
-<!-- <video class="right-side" width="100%" controls id="vid">
+<video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/projectselect_analyze.mp4').default} type="video/mp4" />
-</video> -->
+</video>
 
 :::note 
 The GUI will check the system and your project to ensure everything is ready. If any issues are found, you'll see clear instructions to resolve them. Some common issues faced by the users are:
@@ -98,9 +98,9 @@ Once you land on the Project Screen, the app will automatially initiate Test Dis
 
 This feature eliminates the need for manual test configuration and makes it easy to select which tests to run. Once you have selected the tests from "Test List" tab according to your preferences, either you can **directly run the job** or move to the next step for **additional configuration**.
 
-<!-- <video class="right-side" width="100%" controls id="vid">
+<video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/testdiscovery_select.mp4').default} type="video/mp4" />
-</video> -->
+</video>
 
 :::info Coming Soon
 Search within tests is not yet available on the GUI. We are working to make it available soon.
@@ -115,9 +115,9 @@ To learn about any conifguration in detail, please search for the keyword in the
 ### Step 5: Run Tests and View Job
 Click on the **Run Test** button to start the test execution. A pop with job status and creation logs will appear with options to Expand and View Job. Click on the **View Job** button to get redirected to the job dashboard once the job is created. The HyperExecute-GUI displays the job logs in real-time as your tests run. Once complete, you can view the detailed test results in the HyperExecute Dashboard.
 
-<!-- <video class="right-side" width="100%" controls id="vid">
+<video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/demo_25.mp4').default} type="video/mp4" />
-</video> -->
+</video>
 
 ## FAQs
 
