@@ -74,6 +74,8 @@ The various flags that are supported are listed below.
 
 | Flags | Type | Description|
 |-------|------|------------|
+| [analyze](#analyze) | NA | Analyzes the language and environment supported in your project.| 
+| [completion](#completion) | NA | Generates the autocompletion script for HyperExecute for the specified shell. |
 | [--concurrency](#--concurrency) | Numerical | Indicates the number of concurrent sessions on HyperExecute. | 
 | [--config](#--config) | string | Custom location for hyperexecute.yaml. |
 | [--download-artifacts](#--download-artifacts) | NA | Download the artifacts for a job. |
@@ -99,6 +101,28 @@ The various flags that are supported are listed below.
 | [--vars](#--vars) | string |  Method used to name keys. |
 | [--verbose](#--verbose) | NA | Logging of every proxy request to stdout. |
 | [--version](#--version) | NA | Version of the HyperExecute CLI. |
+
+### `analyze`
+This flag runs **HyperExecute Analyze**, which is a language and environment detection tool used to render every language and framework detail the user has in his project, which includes finding private dependencies.
+
+```bash
+hyperexecute analyze
+```
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/cli/analyze.png').default} alt="Image"  className="doc_img"/>
+
+***
+
+### `completion`
+This flag generates the autocompletion script for HyperExecute for the specified shell.
+
+```bash
+hyperexecute completion
+```
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/cli/completion.png').default} alt="Image"  className="doc_img"/>
+
+***
 
 ### `--concurrency`
 This flag allows you to define the number of concurrent sessions running on HyperExecute. For more information on concurrency, go to [this page](/support/docs/hyperexecute-auto-split-strategy/).
@@ -347,14 +371,6 @@ This flag allows you to log all of your proxy requests to the output section (st
 This flag indicates the version of HyperExecute CLI binary that you are running on your system. 
 ```bash
 --version 
-```
-***
-
-### `analyze`
-This flag runs **HyperExecute Analyze**, which is a language and environment detection tool used to render every language and framework detail the user has in his project, which includes finding private dependencies.
-
-```bash
-hyperexecute analyze
 ```
 ***
 
