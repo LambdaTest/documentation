@@ -1393,6 +1393,7 @@ if your test loads jquery static library multiple times and for some reason it i
 
 ### `afterAll`
 > This flag is deprecated, instead use [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost)
+
 It is used to run commands after the job has finished. Currently only local directive is allowed, means that all the commands would be run on the same host on which HyperExecute CLI was run. Running commands in `afterAll` on HyperExecute VMs(remote commands) is not yet supported. Users will have access to all the artifacts when these commands would be run.
 ```yaml
 afterAll:
@@ -1409,6 +1410,7 @@ For instance you want to further process the artifacts and create a custom PDF. 
 
 ## `beforeAll`
 > This flag is deprecated, instead use [`globalPre`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre)
+
 BeforeAll is used for running pre operations like discovery and payload_update. It can be executed either on local system or on hyperexecute beforeAll VM. 
 ```yaml
 beforeAll:
