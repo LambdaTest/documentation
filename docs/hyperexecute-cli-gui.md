@@ -94,7 +94,7 @@ The GUI will check the system and your project to ensure everything is ready. If
 :::
 
 ### Step 3: Discover and Select Tests
-Once you land on the Project Screen, the app will automatially initiate Test Discovery. **Test Discovery is an automated process** that scans your project to identify and group all test cases by **Suites, Files, Classes or Methods**. 
+Once you land on the Project Screen, the app will automatically initiate Test Discovery. **Test Discovery is an automated process** that scans your project to identify and group all test cases by **Suites, Files, Classes or Methods**. 
 
 This feature eliminates the need for manual test configuration and makes it easy to select which tests to run. Once you have selected the tests from "Test List" tab according to your preferences, either you can **directly run the job** or move to the next step for **additional configuration**.
 
@@ -110,7 +110,7 @@ Search within tests is not yet available on the GUI. We are working to make it a
 The **Run Config tab** in HyperExecute GUI offers an intuitive visual interface to configure your test environment and execution settings.
 You’ll find the basic preset configurations displayed just below your project name. If you need to modify or customize these settings, simply navigate to the Run Config tab and adjust your execution environment effortlessly — _no YAML editing required_.
 
-To learn about any conifguration in detail, please search for the keyword in the **[HyperExecute YAML Documentation](/support/docs/deep-dive-into-hyperexecute-yaml)**.
+To learn about any configuration in detail, please search for the keyword in the **[HyperExecute YAML Documentation](/support/docs/deep-dive-into-hyperexecute-yaml)**.
 
 ### Step 5: Run Tests and View Job
 Click on the **Run Test** button to start the test execution. A pop with job status and creation logs will appear with options to Expand and View Job. Click on the **View Job** button to get redirected to the job dashboard once the job is created. The HyperExecute-GUI displays the job logs in real-time as your tests run. Once complete, you can view the detailed test results in the HyperExecute Dashboard.
