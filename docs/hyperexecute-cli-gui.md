@@ -59,15 +59,11 @@ HyperExecute GUI is currently in **BETA** and supports the **Java TestNG Framewo
 
 <img src={require('../assets/images/hyperexecute/gui/gui_template.webp').default} />
 
-## Getting Started in 5 Simple Steps
+## Pre-Requisites
 ---
 
-<video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/videos/hyperexecute/cli-gui/GUI_Demo.mp4').default} type="video/mp4" />
-</video>
-
-### Step 1: Download and Install
-Download the HyperExecute GUI installer from your LambdaTest dashboard and install it on your system. Run the installer by following the on-screen instructions and launch HyperExecute GUI from your applications menu.
+Before getting started, download the HyperExecute GUI installer from your LambdaTest dashboard and install it on your system. Run the installer by following the on-screen instructions and launch HyperExecute GUI from your applications menu.
+Currently HyperExecute GUI is a part of the **LambdaTest Underpass Application**. If you already have Underpass app on your system, please update it to latest version.
 
 :::tip Download the GUI 🔗
 You can download the app directly from your **HyperExecute Dashboard** or simply click the links below based on your operating system:
@@ -76,7 +72,18 @@ You can download the app directly from your **HyperExecute Dashboard** or simply
  - **[Download for Linux](https://downloads.lambdatest.com/underpass/master/UnderPass.AppImage)**
 :::
 
-### Step 2: Select and Analyze Your Project
+## Getting Started in 4 Simple Steps
+---
+
+### Demo Walkthrough
+
+Please checkout this video demo which walks you through the step by step process of using the GUI App using a demo project. All the steps taken in this video are explained in detail in the following step by step guide too.
+
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/cli-gui/GUI_Demo.mp4').default} type="video/mp4" />
+</video>
+
+### Step 1: Select and Analyze Your Project
 Launch the application, log in with your LambdaTest credentials, and select your test project folder. The GUI will automatically analyze your project i.e.:
 
 - Detect your testing framework and language
@@ -97,7 +104,7 @@ The GUI will check the system and your project to ensure everything is ready. If
 - **Network connectivity issues**: If the GUI can't connect to LambdaTest servers, it will ask you to set up the necessary network settings through proxy.
 :::
 
-### Step 3: Discover and Select Tests
+### Step 2: Discover and Select Tests
 Once you land on the Project Screen, the app will automatically initiate Test Discovery. **Test Discovery is an automated process** that scans your project to identify and group all test cases by **Suites, Files, Classes or Methods**. 
 
 This feature eliminates the need for manual test configuration and makes it easy to select which tests to run. Once you have selected the tests from "Test List" tab according to your preferences, either you can **directly run the job** or move to the next step for **additional configuration**.
@@ -110,13 +117,13 @@ This feature eliminates the need for manual test configuration and makes it easy
 Search within tests is not yet available on the GUI. We are working to make it available soon.
 :::
 
-### Step 4: Specify Run Config _[Optional]_
+### Step 3: Specify Run Config _[Optional]_
 The **Run Config tab** in HyperExecute GUI offers an intuitive visual interface to configure your test environment and execution settings.
 You’ll find the basic preset configurations displayed just below your project name. If you need to modify or customize these settings, simply navigate to the Run Config tab and adjust your execution environment effortlessly — _no YAML editing required_.
 
 To learn about any configuration in detail, please search for the keyword in the **[HyperExecute YAML Documentation](/support/docs/deep-dive-into-hyperexecute-yaml)**.
 
-### Step 5: Run Tests and View Job
+### Step 4: Run Tests and View Job
 Click on the **Run Test** button to start the test execution. A pop with job status and creation logs will appear with options to Expand and View Job. Click on the **View Job** button to get redirected to the job dashboard once the job is created. The HyperExecute-GUI displays the job logs in real-time as your tests run. Once complete, you can view the detailed test results in the HyperExecute Dashboard.
 
 <video class="right-side" width="100%" controls id="vid">
