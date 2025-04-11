@@ -2,7 +2,7 @@
 id: smartui-smartignore
 title: Smart Ignore (Beta)
 hide_title: true
-sidebar_label: Smart Ignore (Beta)
+sidebar_label: Smart Ignore
 description: Learn how to use our new comparison engine Smart Ignore to efficiently ignore noise, layout shifts and displacement differences in your visual tests
 keywords:
 - hide displacement diffs
