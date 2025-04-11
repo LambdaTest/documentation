@@ -83,6 +83,10 @@ Launch the application, log in with your LambdaTest credentials, and select your
 - Verify and manages network connectivity
 - Set up a secure connection to your account
 
+:::tip Sample Project 🔗
+If you do not have a project handy, please feel free to use this **[Sample Project](https://github.com/LambdaTest/testng-selenium-hyperexecute-sample)** for trying out the GUI.
+:::
+
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/projectselect_analyze.mp4').default} type="video/mp4" />
 </video>
