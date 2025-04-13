@@ -2,8 +2,8 @@
 id: hyperexecute-mcp-suite
 title: Introducing HyperExecute MCP Suite
 hide_title: false
-sidebar_label: ""
-description:  
+# sidebar_label: HyperExecute MCP Suite
+description: HyperExecute MCP Server is an AI-native test orchestration platform that dramatically simplifies and accelerates your automated testing workflow.
 keywords:
   - hyperexecute performance testing
   - hyperexecute
