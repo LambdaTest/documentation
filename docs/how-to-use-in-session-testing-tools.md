@@ -123,9 +123,10 @@ Under Device Control, you'll find multiple options to customize your device's se
 1. **Volume**: Adjust the device's volume to your preferred level.
 2. **Rotate**: Change the screen orientation between landscape and portrait modes.
 3. **Recent Apps** : Available on `iOS 15` and above, this feature allows you to view recent apps. Note that it is not supported on devices that rely on a physical button for accessing recent apps instead of the swipe-up gesture.
+4. **Bluetooth**: Used to enable the bluetooth functionality during the session.
 
 
-<img loading="lazy" src={require('../assets/images/real-device-browser-testing/device-control-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-browser-testing/rdbrowserdevicecontrol.png').default} alt="add" width="1346" height="647" className="doc_img"/>
 
 ### Settings
 
