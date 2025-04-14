@@ -1,0 +1,86 @@
+---
+id: kane-ai-automation-code-generation
+title: KaneAI Automation Code Generation
+hide_title: false
+sidebar_label: Automation Code Generation
+description: Explore KaneAI’s features and components to generate automation test code.
+keywords:
+  - lambdatest automation
+  - lambdatest kaneai
+  - kaneai code gen
+url: https://www.lambdatest.com/support/docs/kane-ai-automation-code-generation
+site_name: LambdaTest
+slug: kane-ai-automation-code-generation/
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lambdatest.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://www.lambdatest.com/support/docs/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "KaneAI Code Gen",
+          "item": "https://www.lambdatest.com/support/docs/kane-ai-automation-code-generation/"
+        }]
+      })
+    }}
+></script>
+This is Kane AI's Generate code workplace where you can generate test automation code for App & Web applications in multiple available languages.
+We empower you to generate code for a variety of powerful testing tools across multiple languages. Whether you're focusing on web or mobile applications, our platform supports the most popular and effective testing frameworks. Here's a detailed look at what you can achieve with each tool and the languages we support
+
+<img loading="lazy" src={require('../assets/images/kane-ai/generate-code-button.png').default} alt="generated-code-listing" className="doc_img"/>
+Click the `Generate New Code` button to go to code generation page where you can select desired framework and language.
+
+> By Default a Selenium code in Python is generated for you.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/generate-code-page.png').default} alt="code-generation-dashboard" className="doc_img"/>
+
+
+## Web Frameworks
+
+### Selenium
+Selenium is your go-to tool for cross-browser testing, enabling automated testing across different web browsers like Chrome, Firefox, Safari, and Edge. It's perfect for end-to-end testing of web applications. With Kane AI, you can generate Selenium code in:
+
+- **Python** 
+- **Java**
+
+### Playright
+Playwright is a fast and reliable end-to-end testing for complex modern web applications it uses a single API to automate Chromium, Firefox, and WebKit. You can generate Playright code in:
+
+- **Javascript**
+- **Python**
+
+### Cypress
+Cypress is a modern web front-end testing tool built with JavaScript Mocha. It operates directly on the browsers without the need for Selenium. Its unique DOM manipulation technique makes it a very developer and QA-friendly tool. You can generate Cypress code in:
+
+- **Javascript**
+
+> **Note:** Cypress inherently doesn't support **Switching Tabs** and **File Upload**, so it wont be available for such test cases.
+
+### WebdriverIO
+WebdriverIO is a popular automation testing framework for web and mobile applications. It is built on top of the WebDriver protocol and provides a simple and flexible API for writing tests. You can generate WebdriveIO code in:
+
+- **Javascript**
+
+## App Frameworks
+
+### Appium
+Appium is an open-source automation tool for running scripts and testing native applications and mobile web apps on different platforms like iOS and Android. You can generate Appium code in:
+
+- **Javascript**
+- **Python**
+- **Java**
