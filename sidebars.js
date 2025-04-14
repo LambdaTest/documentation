@@ -74,6 +74,10 @@ module.exports = {
         ],
       },
       {
+        type: "doc",
+        id: "hyperexecute-mcp-server",
+      },
+      {
         type: "category",
         collapsed: true,
         label: "Key features of HyperExecute",
