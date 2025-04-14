@@ -1,8 +1,8 @@
 ---
-id: hyperexecute-mcp-suite
-title: Introducing HyperExecute MCP Suite
+id: hyperexecute-mcp-server
+title: Introducing HyperExecute MCP Server
 hide_title: false
-sidebar_label: HyperExecute MCP Suite
+sidebar_label: HyperExecute MCP Server
 description: HyperExecute MCP Server is an AI-native test orchestration platform that dramatically simplifies and accelerates your automated testing workflow.
 keywords:
   - hyperexecute performance testing
@@ -10,9 +10,9 @@ keywords:
   - lambdatest
   - MCP
   - MCP server
-url: https://www.lambdatest.com/support/docs/hyperexecute-mcp-suite/
+url: https://www.lambdatest.com/support/docs/hyperexecute-mcp-server/
 site_name: LambdaTest
-slug: hyperexecute-mcp-suite/
+slug: hyperexecute-mcp-server/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -36,7 +36,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "Languages and Framework",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-mcp-suite/"
+          "item": "https://www.lambdatest.com/support/docs/hyperexecute-mcp-server/"
         }]
       })
     }}
@@ -64,9 +64,9 @@ Get a comprehensive overview of HyperExecute's capabilities by watching our intr
 
 The Model Context Protocol (MCP) acts like a "USB-C for AI integrations," creating a universal language between AI models and applications. This standardized interface allows AI assistants to connect with diverse software tools, making it significantly easier to expand capabilities across your digital workflow.
 
-## Key Benefits of HyperExecute MCP Suite
+## Key Benefits of HyperExecute MCP Server
 
-Here are the key benefits of using HyperExecute MCP Suite:
+Here are the key benefits of using HyperExecute MCP Server:
 
 - **Automated Setup:** Reduce configuration time from hours to seconds
 - **Smart Analysis:** Automatically identify project types, frameworks, and test structures
