@@ -2,7 +2,7 @@
 id: hyperexecute-mcp-suite
 title: Introducing HyperExecute MCP Suite
 hide_title: false
-# sidebar_label: HyperExecute MCP Suite
+sidebar_label: HyperExecute MCP Suite
 description: HyperExecute MCP Server is an AI-native test orchestration platform that dramatically simplifies and accelerates your automated testing workflow.
 keywords:
   - hyperexecute performance testing
@@ -43,6 +43,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ></script>
 
 # Getting Started with HyperExecute MCP Server
+***
 
 ## Introduction 
 
@@ -53,7 +54,7 @@ HyperExecute MCP Server is an AI-native test orchestration platform that dramati
 Get a comprehensive overview of HyperExecute's capabilities by watching our introductory video.
 
 <div className="ytframe"> 
-<div className="youtube" data-embed="ZurBm9DvuFI">
+<div className="youtube" data-embed="tLe5VPcGDxs">
     <div className="play-button"></div>
 </div>
 </div>
@@ -76,6 +77,7 @@ Here are the key benefits of using HyperExecute MCP Suite:
 - **Instant Documentation:** Access relevant documentation through integrated AI agents
 
 ## Connecting to HyperExecute MCP Server
+
 
 ### Connecting with Cline
 
@@ -106,9 +108,11 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 <img loading="lazy" src={require('../assets/images/hyperexecute-mcp/vs-code-config.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 3. Add Server Name as **MCP-HyperExecute**.
-4. Enter the following URL in the server URL field: `http://mcp.lambdatest.com/hyperexecute/sse?username=[your-lt-username]&accessKey=[your-lt-access-key]`
+4. Enter the following URL in the server URL field: `http://mcp.lambdatest.com/hyperexecute?&username=[your-lt-username]&accessKey=[your-lt-access-key]`
 6. Replace [your-lt-username] and [your-lt-access-key] with your LambdaTest credentials.
 7. Click on **Add Server**.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/mcp-add-server.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ### Interacting with HyperExecute MCP Server
 
