@@ -852,12 +852,20 @@ module.exports = {
             ]
           },
 
-          
+          // 2025 releases
           {
             type: "category",
             collapsed: true,
             label: "2025 Releases",
             items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "April, 2025",
+                items: [
+                  'hyperexecute-release-notes-2-8-1',
+                ]
+              },
               {
                 type: "category",
                 collapsed: true,
