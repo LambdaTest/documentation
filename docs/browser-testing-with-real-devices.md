@@ -41,7 +41,13 @@ slug: browser-testing-on-real-devices/
 
 Real device browser testing refers to the process of testing web applications and websites on real devices such as smartphones, tablets, and computers to ensure that the user interface and user experience are optimal across various device types, operating systems, and browser combinations. With LambdaTest’s real device cloud, you can test websites and web applications to ensure they perform seamlessly across 3000 + real mobile devices.
 
-Below are the steps to run your first browser test on LambdaTest's Real Device Cloud:
+<div className="ytframe"> 
+<div className="youtube" data-embed="zzjTXzJkLtA" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
+
+***
 
 **Step 1:** Login to your LambdaTest account. From the left sidebar, head to Real Device and select **Browser Testing**.
 
