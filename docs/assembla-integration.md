@@ -59,7 +59,7 @@ LambdaTest integrates with Assembla, allowing users to file issues directly from
 
 **Step 3:** Click on **Connect** button of Assembla block.
 
-**Step 4:** Now, provide your Assembla API Key, Secret, Hosted URL and slect your region to establish integration with LambdaTest and click on **install** button.
+**Step 4:** Now, provide your Assembla API Key, Secret, Hosted URL and select your region to establish integration with LambdaTest and click on **install** button.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/images/integrations/assembla/1.mp4').default} type="video/mp4" />
