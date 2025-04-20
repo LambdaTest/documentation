@@ -43,6 +43,12 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 Keeping your LambdaTest Accessibility DevTools Chrome extension updated ensures you have the latest features, improvements, and security patches. Follow the detailed steps below to update your extension.
 
+<div className="ytframe"> 
+<div className="youtube" data-embed="7CuoCS7dX70" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
+
 ## Step-by-Step Guide to Update the LambdaTest Accessibility DevTools Chrome Extension
 
 ### Step 1: Open the Extensions Page
