@@ -139,20 +139,20 @@ Click on the **Run Test** button to start the test execution. A pop with job sta
 If you’re a HyperExecute YAML user, you can easily import your existing YAML configurations into the GUI. Here’s how:
 
 #### 1. Pop-Up on First Upload:
-  When you upload a project with YAML files, a pop-up will automatically appear listing the existing YAMLs in your project. Select a YAML file, and the app will import its settings for run config in the GUI.
+  When you upload a project with YAML files, a **pop-up will automatically appear listing the existing YAMLs** in your project. Select a YAML file, and the app will import its settings for run config in the GUI.
 
 #### 2. Option to Import After Project Creation:
 If your project is already set up or you want to update the run config using a YAML file later:
   - Go to the Project Details screen.
-  - Click “Load Config.”
+  - Click **“Load Config.”**
   - Choose a YAML file from your project, and its settings will be applied.
-
-:::note
-The GUI converts your YAML (version 0.2) to its own format (version 0.3) automatically, so you don’t need to adjust it manually.
-:::
+  
+  Please note that using "Load Config" will reset your test selection 
+  :::info Note
+  At its current state, the GUI will not self-discover the tests according to rules stated in the YAML file while loading it. This feature will be available soon in next release.
+  :::
 
 ## FAQs
-
 ---
 
 **1. Are Appium tests supported on GUI as of now?**
