@@ -152,6 +152,10 @@ If your project is already set up or you want to update the run config using a Y
   At its current state, the GUI will not self-discover the tests according to rules stated in the YAML file while loading it. This feature will be available soon in next release.
   :::
 
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/cli-gui/yaml_import.mp4').default} type="video/mp4" />
+</video>
+
 ## FAQs
 ---
 
