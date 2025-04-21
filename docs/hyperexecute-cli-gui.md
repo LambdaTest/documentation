@@ -47,7 +47,7 @@ import TabItem from '@theme/TabItem';
 
 :::info Currently in BETA
 
-HyperExecute GUI is currently in **BETA** and supports the **Java TestNG Framework (Java Version 11 & above)**. We're actively working on expanding support to more frameworks. If you have specific framework requests, please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span>.
+HyperExecute GUI is currently in **BETA** and supports the **Java TestNG Framework (with Java Version 11 or higher)**. We're actively working on expanding support to more frameworks. If you have specific framework requests, please reach out to our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>support team</span>.
 
 :::
 
@@ -61,9 +61,11 @@ HyperExecute GUI is currently in **BETA** and supports the **Java TestNG Framewo
 
 ## Pre-Requisites
 ---
+**1. HyperExecute Access** : You need a LambdaTest account to use the HyperExecute GUI. If you don’t have one, [sign up](https://accounts.lambdatest.com/register?) now. Ensure your account includes HyperExecute access (free or paid plan) to get started.
 
-Before getting started, download the HyperExecute GUI installer from your LambdaTest dashboard and install it on your system. Run the installer by following the on-screen instructions and launch HyperExecute GUI from your applications menu.
-Currently HyperExecute GUI is a part of the **LambdaTest Underpass Application**. If you already have Underpass app on your system, please update it to latest version.
+**2. UnderPass App Download** : Before getting started, download the HyperExecute GUI installer from your LambdaTest dashboard and install it on your system. Run the installer by following the on-screen instructions and launch HyperExecute GUI from your applications menu.
+
+Currently HyperExecute GUI is a part of the **LambdaTest UnderPass Application**. If you already have UnderPass app on your system, please update it to the latest version.
 
 :::tip Download the GUI 🔗
 You can download the app directly from your **HyperExecute Dashboard** or simply click the links below based on your operating system:
@@ -72,22 +74,24 @@ You can download the app directly from your **HyperExecute Dashboard** or simply
  - **[Download for Linux](https://downloads.lambdatest.com/underpass/master/UnderPass.AppImage)**
 :::
 
-## Getting Started in 4 Simple Steps
+## Demo Walkthrough
 ---
+For those who prefer a hands-on, visual approach, we’ve created a comprehensive video tutorial to get you up and running quickly. Checkout this video demo which walks you through the step by step process of using the GUI App using a demo project. 
 
-### Demo Walkthrough
-
-Please checkout this video demo which walks you through the step by step process of using the GUI App using a demo project. All the steps taken in this video are explained in detail in the following step by step guide too.
+All the steps taken in this video are explained in detail in the following step by step guide too.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/cli-gui/GUI_Demo.mp4').default} type="video/mp4" />
 </video>
 
+## Getting Started
+---
+
 ### Step 1: Select and Analyze Your Project
 Launch the application, log in with your LambdaTest credentials, and select your test project folder. The GUI will automatically analyze your project i.e.:
 
 - Detect your testing framework and language
-- Verify and manages network connectivity
+- Verifies network connectivity (enabling a tunnel if needed) and checks LambdaTest URL access (prompting for proxy settings if required)
 - Set up a secure connection to your account
 
 :::tip Sample Project 🔗
@@ -130,8 +134,29 @@ Click on the **Run Test** button to start the test execution. A pop with job sta
 <source src= {require('../assets/videos/hyperexecute/cli-gui/demo_25.mp4').default} type="video/mp4" />
 </video>
 
-## FAQs
+## Already Using HyperExecute via YAML?
+---
+If you’re a HyperExecute YAML user, you can easily import your existing YAML configurations into the GUI. Here’s how:
 
+#### 1. Pop-Up on First Upload:
+  When you upload a project with YAML files, a **pop-up will automatically appear listing the existing YAMLs** in your project. Select a YAML file, and the app will import its settings for run config in the GUI.
+
+#### 2. Option to Import After Project Creation:
+If your project is already set up or you want to update the run config using a YAML file later:
+  - Go to the Project Details screen.
+  - Click **“Load Config.”**
+  - Choose a YAML file from your project, and its settings will be applied.
+  
+  Please note that using "Load Config" will reset your test selection 
+  :::info Note
+  At its current state, the GUI will not self-discover the tests according to rules stated in the YAML file while loading it. This feature will be available soon in next release.
+  :::
+
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/cli-gui/yaml_import.mp4').default} type="video/mp4" />
+</video>
+
+## FAQs
 ---
 
 **1. Are Appium tests supported on GUI as of now?**
