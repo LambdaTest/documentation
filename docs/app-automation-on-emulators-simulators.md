@@ -40,7 +40,13 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-LambdaTest enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations. In this documеntation, learn how to run app automated tests on Emulators and Simulators using LambdaTest virtual testing cloud. 
+LambdaTest enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations. 
+
+<div className="ytframe"> 
+<div className="youtube" data-embed="ZcgYzi60Nmo" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
 
 :::note
 App Automation for Emulators and Simulators (**Beta**) supports Appium; contact [LambdaTest support](mailto:support@lambdatest.com) to access..
