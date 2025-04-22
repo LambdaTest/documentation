@@ -39,6 +39,14 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
+LambdaTest enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations. 
+
+<div className="ytframe"> 
+<div className="youtube" data-embed="ZcgYzi60Nmo" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
+
 ---
 
 In this documеntation, learn how to run app automated tests on Emulators and Simulators using LambdaTest virtual testing cloud. 
