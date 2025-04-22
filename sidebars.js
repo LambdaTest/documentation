@@ -3046,6 +3046,7 @@ module.exports = {
         id: "analytics-widgets",
       },
       items: [
+        "dashboards-custom-widgets",
         "analytics-modules-resource-utilization",
         "analytics-test-time-trends",
         {
