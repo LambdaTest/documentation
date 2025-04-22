@@ -3039,7 +3039,7 @@ module.exports = {
     },
     {
       type: "category",
-      collapsed: false,
+      collapsed: true,
       label: "Widgets",
       link: {
         type: "doc",
