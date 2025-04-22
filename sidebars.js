@@ -3039,13 +3039,14 @@ module.exports = {
     },
     {
       type: "category",
-      collapsed: true,
+      collapsed: false,
       label: "Widgets",
       link: {
         type: "doc",
         id: "analytics-widgets",
       },
       items: [
+        "dashboards-custom-widgets",
         "analytics-modules-resource-utilization",
         "analytics-test-time-trends",
         {
