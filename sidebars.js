@@ -3032,14 +3032,14 @@ module.exports = {
     },
     {
       type: "category",
-      collapsed: true,
+      collapsed: false,
       label: "Getting Started",
 
       items: ["analytics-dashboard-templates", "analytics-create-dashboard"],
     },
     {
       type: "category",
-      collapsed: true,
+      collapsed: false,
       label: "Widgets",
       link: {
         type: "doc",
