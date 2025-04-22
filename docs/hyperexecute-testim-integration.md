@@ -116,7 +116,7 @@ testDiscovery:
  mode: static
  command: echo "HYP with Testim"
 
-testRunnerCommand:  testim --token "YOUR_TESTIM_TOKEN" --project "YOUR_PROJECT_NAME" --grid "YOUR_GRID_NAME"
+testRunnerCommand: ./.hyperexecute/snooper --frameWork testim --testimProject YOUR_PROJECT_ID --testimToken YOUR_TESTIM_TOKEN --testimProjectBranch YOUR_BRANCH_NAME
 ```
 
 ## Step 5: Setup the CLI
