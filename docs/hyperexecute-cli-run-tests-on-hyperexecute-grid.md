@@ -78,6 +78,8 @@ The various flags that are supported are listed below.
 | [completion](#completion) | NA | Generates the autocompletion script for HyperExecute for the specified shell. |
 | [serve](#serve) | NA | Starts a server for HyperExecute info APIs |
 | [update](#update) | NA | Update the HyperExecute Binary Version |
+| [--add-testids](#--add-testids) | NA | Add test ids in job summary. |
+| [--auto-proxy](#--auto-proxy) | NA | Use detected system proxy.|
 | [--concurrency](#--concurrency) | Numerical | Indicates the number of concurrent sessions on HyperExecute. | 
 | [--config](#--config) | string | Custom location for hyperexecute.yaml. |
 | [--disable-updates](#--disable-updates) | NA | Disable auto update |
@@ -92,16 +94,19 @@ The various flags that are supported are listed below.
 | [-k, --key](#-k---key) | string | LambdaTest Access Key. |
 | [--labels](#--labels) | string | Incorporates the labels in your job. |
 | [--no-track](#--no-track) | NA | Stops updating the progress of the uplodaed jobs. |
+--onprem-host
 | [--preserve-payload](#--preserve-payload) | string | Preserves the job payload after its successful completion. |
 | [--runson](#--runson) | string | (comma-separated values of) OS on which the tests should run. |
 | [-s --scan](#-s---scan) | NA | Runs the network logs |
 | [--server-port](#--server-port) | string | Port number for the server (default "9191") |
+--static-data-filter
 | [-t, --target-directory](#-t---target-directory) | string | Directory where the test script has to be uploaded. |
 | [--target-path](#--target-path) | string | Upload the files and folders as part of the suite payload. |
 | [--tests-per-tunnel](#--tests-per-tunnel) | INT | Run the number of tests via tunnel. |
 | [-z, --use-zip](#-z---use-zip) | string | Path of the zip file that needs to be uploaded. |
 | [-u, --user](#-u---user) | string | LambdaTest username. |
 | [--vars](#--vars) | string |  Method used to name keys. |
+| [--validate](#--validate) | NA |  Validate HyperExecute YAML file. |
 | [--verbose](#--verbose) | NA | Logging of every proxy request to stdout. |
 | [--version](#--version) | NA | Version of the HyperExecute CLI. |
 
@@ -141,6 +146,24 @@ This flag updates the hyperexecute binary version.
 
 ```bash
 hyperexecute update
+```
+
+***
+
+### `--add-testids`
+This flag will add the test ids of your job in the result.json file that gets generated after your test execution.
+
+```bash
+hyperexecute --add-testids
+```
+
+***
+
+### `--auto-proxy`
+This flag use detected system proxy. It identifies and sets proxies including http_proxy and https_proxy variables.
+
+```bash
+hyperexecute --auto-proxy
 ```
 
 ***
@@ -388,6 +411,17 @@ You can specify the email address for sharing [reports](/support/docs/hyperexecu
 ```bash
 --vars "org=Lambdatest" --vars "product=HyperExecute" --vars "email=xyz@abc.com" --vars "email1=abc@xyz.com"
 ```
+***
+
+### `--validate`
+The new `--validate` flag in the HyperExecute CLI allows you to quickly check the syntax and structure of your YAML file without running any tests. Simply pass the `--validate` flag with your YAML file, and the CLI will validate its structure and syntax. It will then return a success or error message, helping you identify if the file is correctly formatted or if there are any issues that need attention.
+
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE  --validate`}
+  </CodeBlock>
+</div>
+
 ***
 
 ### `--verbose`
