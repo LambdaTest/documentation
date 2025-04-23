@@ -2959,8 +2959,8 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Difference Option",
-        items: ["smartui-smartignore"]
+        label: "Difference Options",
+        items: ["smartui-smartignore","smartui-layout-testing"]
       },
       {
         type: "category",
