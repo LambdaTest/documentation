@@ -102,5 +102,5 @@ LambdaTest integrates with Assembla, allowing users to file issues directly from
 <source src= {require('../assets/images/integrations/assembla/4.mp4').default} type="video/mp4" />
 </video>
 
-> That was all you need to know for LambdaTest + BugHerd Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock. 
+> That was all you need to know for LambdaTest + Assembla Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock. 
 
