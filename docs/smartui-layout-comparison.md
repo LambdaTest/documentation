@@ -1,7 +1,7 @@
 ---
 id: smartui-layout-testing
 title: Layout Comparison in SmartUI SDK
-sidebar_label: Layout Testing
+sidebar_label: Layout Testing (Beta)
 description: Learn how to use SmartUI SDK's layout testing feature to verify only the layout structure of your pages while ignoring content and style changes
 keywords:
   - layout comparison
@@ -17,11 +17,66 @@ site_name: LambdaTest
 slug: smartui-layout-testing/
 ---
 
+
+Layout testing is a specialized approach to visual testing that focuses on verifying the structural integrity and arrangement of UI elements rather than their specific content or styling. It ensures that your application's visual hierarchy and element positioning remain consistent across different environments and updates.
+
+The example below demonstrates localisation testing, one of the major use cases of layout testing, where a webpage is tested across languages and locales.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/layout/localisation-netflix.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
+### Why Layout Testing Matters
+
+1. **Structural Consistency**: Ensures that UI elements maintain their intended positions and relationships, regardless of content changes or style updates.
+
+2. **Cross-Environment Reliability**: Validates that your application's layout remains intact across different:
+   - Operating systems
+   - Browsers
+   - Devices
+   - Screen sizes
+   - Viewport dimensions
+
+3. **Design System Compliance**: Helps maintain consistency with your design system by verifying that components follow established layout patterns.
+
+# What Layout Comparison Ignores
+
+When using layout comparison, the following aspects are ignored:
+
+1. **Text Content**: Changes in text content are not considered in the comparison
+2. **Color Values**: Differences in color schemes or individual color values are ignored
+3. **Style Properties**: Changes in CSS properties like font size, padding, margins, etc. are not compared
+4. **Image Content**: Differences in image content are ignored, only their position and size are considered
+
+## Visual Diffs vs. Layout Diffs
+
+
+Understanding the difference between content and layout is crucial for effective visual testing:
+
+- **Visual Diffs** refer to the actual information that users interact with on a webpage, such as text, images, videos, and other elements that convey your message. 
+In the example below, you can see the visual differences between the baseline and comparison screenshot using  Smart Ignore Diff Option.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/layout/smartignore-amazon.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
+- **Layout** pertains to the arrangement and presentation of this content, including the positioning, styling, and structuring of elements. The goal of layout design is to ensure that content is visually appealing and well-organized. 
+In the example below, you can see the layout differences between the baseline and comparison screenshot using  Layout Diff Option.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/layout/layout-amazon.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
+SmartUI's layout comparison feature allows you to focus specifically on layout differences while ignoring content changes, giving you more precise control over your visual testing process.
+
 # Layout Comparison in SmartUI SDK
 
-The layout comparison feature in SmartUI SDK allows you to verify only the layout structure of your pages while ignoring content and style changes. This is particularly useful for frontend developers who need to ensure that the structural integrity of their UI remains consistent across different versions or environments.
+> **Beta Feature Notice**: The Layout Comparison feature is currently in beta and is a work in progress based on user feedback. To use this feature, you need to get it enabled by contacting our support team at support@lambdatest.com. Using this feature without getting it enabled will not work.
 
-## How to Use Layout Comparison
+
+## Prerequisites
+
+Before using the Layout Comparison feature, ensure you meet the following requirements:
+
+- SmartUI CLI version `4.1.8` or above is installed
+- The feature is only supported when using the `smartui exec` (smartUISnapshot) command
+- The feature must be enabled by contacting support@lambdatest.com
+
+## How to Use Layout Comparison with SmartUI
 
 To use the layout comparison feature, you need to set the `ignoreType` option to `"layout"` when taking a screenshot:
 
@@ -33,8 +88,8 @@ import TabItem from '@theme/TabItem';
     ```javascript
     // Set options to focus only on layout structure
     let options = {
-      ignoreType: "layout" 
-    };
+            ignoreType: ["layout"]
+          }
 
     // Take a screenshot with layout comparison enabled
     await smartuiSnapshot(driver, "ScreenshotName", options);
@@ -43,8 +98,8 @@ import TabItem from '@theme/TabItem';
   <TabItem value="java" label="Java">
     ```java
     // Set options to focus only on layout structure
-    SmartUIOptions options = new SmartUIOptions();
-    options.IgnoreType("layout"); 
+    Map<String, Object> options = new HashMap<>();
+    options.put("ignoreType", Arrays.asList("layout"));
 
     // Take a screenshot with layout comparison enabled
     smartuiSnapshot(driver, "ScreenshotName", options);
@@ -54,7 +109,7 @@ import TabItem from '@theme/TabItem';
     ```python
     # Set options to focus only on layout structure
     options = {
-        "ignoreType": "layout" 
+        "ignoreType": ["layout"]
     }
 
     # Take a screenshot with layout comparison enabled
@@ -64,9 +119,9 @@ import TabItem from '@theme/TabItem';
   <TabItem value="csharp" label="C#">
     ```csharp
     // Set options to focus only on layout structure
-    var options = new SmartUIOptions
+    var options = new Dictionary<string, object>
     {
-        IgnoreType = "layout" 
+        { "ignoreType", new List<string> { "layout" } }
     };
 
     // Take a screenshot with layout comparison enabled
@@ -77,7 +132,7 @@ import TabItem from '@theme/TabItem';
     ```ruby
     # Set options to focus only on layout structure
     options = {
-      ignoreType: "layout" 
+      ignoreType: ["layout"]
     }
 
     # Take a screenshot with layout comparison enabled
@@ -86,34 +141,14 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-This configuration tells SmartUI to focus only on the layout structure while comparing screenshots, ignoring content and style changes.
+## Known Limitations
 
-## What Layout Comparison Verifies
+The Layout Comparison feature has the following limitations:
 
-The layout comparison feature specifically focuses on:
+- Not supported with Fetch APIs
+- Not supported with Slack, Email, and GitHub integrations
+- Performance may vary based on the complexity of the page structure
 
-1. **Element Positions**: The relative positioning of elements compared to their siblings
-2. **Parent-Child Relationships**: The hierarchical structure of elements in the DOM
-3. **Basic Structural Hierarchy**: The overall layout structure of the page
-
-## What Layout Comparison Ignores
-
-When using layout comparison, the following aspects are ignored:
-
-1. **Text Content**: Changes in text content are not considered in the comparison
-2. **Color Values**: Differences in color schemes or individual color values are ignored
-3. **Style Properties**: Changes in CSS properties like font size, padding, margins, etc. are not compared
-4. **Image Content**: Differences in image content are ignored, only their position and size are considered
-
-## Content vs. Layout Diffs
-
-Understanding the difference between content and layout is crucial for effective visual testing:
-
-- **Content** refers to the actual information that users interact with on a webpage, such as text, images, videos, and other elements that convey your message.
-
-- **Layout** pertains to the arrangement and presentation of this content, including the positioning, styling, and structuring of elements. The goal of layout design is to ensure that content is visually appealing and well-organized.
-
-SmartUI's layout comparison feature allows you to focus specifically on layout differences while ignoring content changes, giving you more precise control over your visual testing process.
 
 ## Use Cases for Layout Comparison
 
@@ -131,14 +166,6 @@ The layout comparison feature is particularly valuable in the following scenario
 
 6. **Cross-Environment Testing**: Ensure that your page structure remains intact across different operating systems, browsers, devices, viewport sizes, and orientations.
 
-## Validations
-
-When using layout comparison, SmartUI performs the following validations:
-
-1. **Layout Structure Extraction**: The system extracts the layout structure from the page
-2. **Position Calculations**: Accurate calculation of element positions relative to each other
-3. **Relative Positioning**: Preservation of relative positioning between elements
-4. **Viewport Considerations**: Proper handling of viewport dimensions and scrolling
 
 ## Example Implementation
 
