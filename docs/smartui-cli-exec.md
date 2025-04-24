@@ -116,7 +116,7 @@ npx smartui exec:ping
 
 ### Step 1: Configure Server Address
 
-For most test frameworks (except Selenium Java and JavaScript), you'll need to set the server address:
+For most test frameworks (except Selenium SDKs), you'll need to set the server address:
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
@@ -161,21 +161,6 @@ your-test-command
 When running tests from IDEs like IntelliJ:
 1. Ensure the `SMARTUI_SERVER_ADDRESS` environment variable is set in your IDE's run configuration
 2. Configure the run configuration to use the appropriate test command
-
-## Taking Snapshots in Scripts
-
-You can capture snapshots in your test scripts using the SmartUI snapshot method. Here's a basic example:
-
-```javascript
-// JavaScript example
-smartui.takeScreenshot("homepage");
-
-// With options
-smartui.takeScreenshot("homepage", {
-  fullPage: true,
-  screenshotName: "custom-name"
-});
-```
 
 
 ## Best Practices
