@@ -3285,7 +3285,8 @@ module.exports = {
       "load-balancing-in-lambda-tunnel",
       "dedicated-proxy",
       "charles-proxy",
-      "tunnel-allowHost-wildcard-support"
+      "tunnel-allowHost-wildcard-support",
+      "tunel-release-notes"
     ],
   ],
 
