@@ -105,7 +105,7 @@ The core logic of Auto-Heal integrates several sophisticated systems working in 
 
 ## Video Explanation
 
-🎥 **[Watch the Demo: How Auto-Heal Works in KaneAI with HyperExecute](#)**  
+🎥 **[Watch the Demo: How Auto-Heal Works in KaneAI with HyperExecute](https://app.trupeer.ai/view?slug=R9mcuH)**  
 
 The video walkthrough explains:
 - How KaneAI generates scripts with fallback locators.
