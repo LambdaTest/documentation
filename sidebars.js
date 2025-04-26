@@ -1121,6 +1121,7 @@ module.exports = {
         items: [
           "kane-ai-javascript-execution",
           "kane-ai-geolocation-tunnel-proxy",
+          "kaneai-auto-heal",
           "kane-ai-scroll-in-feature",
           "kane-ai-jira-integration",
           "kane-ai-api-testing",
