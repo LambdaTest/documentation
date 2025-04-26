@@ -39,7 +39,7 @@ slug: kaneai-auto-heal/
 
 ## What is Auto-Heal in KaneAI & HyperExecute?
 
-KaneAI, the AI-powered automation engine from LambdaTest, generates automation test scripts across multiple languages and frameworks using natural language instructions. When these scripts are executed via **HyperExecute**, LambdaTest’s high-performance test execution platform, they come with an added layer of reliability—the **Auto-Heal** feature.
+KaneAI, the Gen AI Native testing assistant from LambdaTest, generates automation test scripts across multiple languages and frameworks using natural language instructions. When these scripts are executed via **HyperExecute**, LambdaTest’s high-performance test orchestration platform, they come with an added layer of reliability—the **Auto-Heal** feature.
 
 **Auto-Heal** ensures your automation scripts remain robust, even when the application under test undergoes changes like modified element locators (IDs, XPaths, CSS selectors). Instead of failing the test immediately when locators break, KaneAI dynamically finds new locators at runtime by leveraging the original natural language instruction used to execute the test case.
 
