@@ -1,7 +1,7 @@
 ---
 id: camera-image-injection-on-real-devices
-title: Camera Image Injection on Real Devices
-sidebar_label: Camera Image Injection
+title: Media Injection on Real Devices
+sidebar_label: Media Injection
 description: Test camera features on real devices with LambdaTest's Image Injection. Easily inject custom images for QR codes, photos, and more.
 keywords:
   - image injection
@@ -49,26 +49,26 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-LambdaTest's Camera Image Injection empowers you to test various camera-related functionalities of your app across a vast array of real mobile devices. This innovative feature supports image capture testing, QR code scanning verification and Barcode scanning assessment.
+LambdaTest's Media Injection empowers you to test various camera-related functionalities (Image Injection and Video Injection) of your app across a vast array of real mobile devices. This innovative feature supports image capture testing, QR code scanning verification and Barcode scanning assessment.
 
 ## Use Cases
 
 - URL-embedded QR code scans
 - Digital check processing
-- Profile photo capture
-- In-app image upload functionality
+- Real-time video streaming and playback
+- Video capture and upload workflows
 
 ## How It Works
 
-The Image Injection process leverages **Sensor Instrumentation** technology. When activated for a test session, it injects LambdaTest's proprietary camera module into your application and emulates or supersedes the native Android/iOS camera SDK
+The Image and Video Injection processes leverages **Sensor Instrumentation** technology. When activated for a test session, it injects LambdaTest's proprietary camera module into your application and emulates or supersedes the native Android/iOS camera SDK
 
 ### Key Features
 
-- Extensive device compatibility (3000+ real devices)
-- Comprehensive support for image-based functionalities
+- Extensive device compatibility (10000+ real devices)
+- Comprehensive support for image and video based functionalities
 - Effortless integration with existing test environments
+
 :::warning note
-- Video capture and other media types are not currently supported.
 - For iOS apps signed with Enterprise Certificates, app resigning (a prerequisite for using the Image Injection tool) is not available.
 :::
 
@@ -103,32 +103,31 @@ Below given is the list of Camera APIs which are supported by LambdaTest Image I
 </TabItem>
 </Tabs>
 
-## Image Injection in Real Device App Testing
+## Image and Video Injection in Real Device App Testing
 
-This feature helps you inject any image which you want your app to click or scan through the device camera. You just need to follow the steps given below:
+This feature helps you inject any video or image which you want your app to click or scan through the device camera. You just need to follow the steps given below:
 
 **Step 1:** Click on the **Real Devices** > **App Testing**
 
 **Step 2:** Select your required device and upload your application which supports the camera APIs listed above.
 
-**Step 3:** Now, hover over your app and click on the **Settings** icon. Toggle the **Image Injection** option and click on **Save Changes** button. Click on **Start** to run your app on the selected device.
+**Step 3:** Now, hover over your app and click on the **Settings** icon. Toggle the **Image Injection** and **Video Injection** option and click on **Save Changes** button. Click on **Start** to run your app on the selected device.
 
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/media-injection/Step3.png').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
 
-**Step 4:** After the above config, click on the **Start** button to start the session. Now, go to **Device Controls** in the toolbar as shown below. Select Image Injection and click **Upload Image** to inject the desired image from your computer to the app.
+**Step 4:** You can see the video and image preview in the Media Injection section. You can
+**delete**, **reupload** and **inject** the image or video from here.
 
-**Step 5:** You can see the image preview in the Image Injection section. You can **delete** or **reupload** the image from here.
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/media-injection/Stepfinal.png').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
+
+**Step 5:** After the above config, click on the **Start** button to start the session. Now, go to **Device Controls** in the toolbar as shown below. Select Media Injection and click **Inject** to upload the desired video or image from your computer to the app.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/media-injection/Stepfinalx.png').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
+ 
 
 **Step 6:** Now go to camera feature in your app, the camera pops up. When you click the image from your app, you will see a black image. Please proceed with the same by clicking on **Use Photo**. 
 
-**Step 7:** The black image is now replaced with an injected image.
-
-<div className="storylane-iframe">
-  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
-  <div className="sl-embed">
-    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/scecvtiqzhju?embed=inline" name="sl-embed"   name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
-  </div>
-</div>
-
+**Step 7:** The black image is now replaced with an injected image or video.
 
 :::info
 

@@ -67,7 +67,6 @@ LambdaTest utilizes **Sensor Instrumentation** to integrate with various mobile 
 - Seamless integration with your existing app testing workflow
 
 :::warning note
-- Video capture and other media types are not currently supported.
 - For iOS apps signed with Enterprise Certificates, app resigning (a prerequisite for using the Image Injection tool) is not available.
 :::
 
