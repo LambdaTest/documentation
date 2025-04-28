@@ -10,11 +10,11 @@ keywords:
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest bugherd integration
-  - integrate bugherd with lambdatest
-  - create issue in bugherd from lambdatest
+  - lambdatest assembla integration
+  - integrate assembla with lambdatest
+  - create issue in assembla from lambdatest
   - assembla integration with lambdatest
-  - create bugherd issues from lambdatest
+  - create assembla issues from lambdatest
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/assembla-integration/
