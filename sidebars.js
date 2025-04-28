@@ -2588,6 +2588,7 @@ module.exports = {
               "app-auto-network-throttling",
               "appium-app-performance",
               "appium-ios-app-settings",
+              "ios-keychain-cleanup",
               "adb-commands-support",
               "login-google-android",
               "disable-screenshot-block",
