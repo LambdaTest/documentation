@@ -2587,6 +2587,7 @@ module.exports = {
             label: "Features",
             items: [
               "camera-image-injection",
+              "video-injection",
               "biometric-authentication",
               "regular-expression-appium",
               "appium-upload-media",
