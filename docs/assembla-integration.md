@@ -47,7 +47,7 @@ slug: assembla-integration/
 
 Assembla is a cloud-based platform that provides version control and project management tools specifically designed for software development teams. It supports multiple version control systems, such as Git, Subversion (SVN), and Perforce, allowing teams to manage their source code, track changes, and collaborate more efficiently.
 
-LambdaTest integrates with Assembla, allowing users to file issues directly from the platform, assign them to team members, and attach screenshots during a test session, with populated fields displayed on the BugHerd platform for each testing instance.
+LambdaTest integrates with Assembla, allowing users to file issues directly from the platform, assign them to team members, and attach screenshots during a test session, with populated fields displayed on the Assembla platform for each testing instance.
 
 > Assembla Integration with LambdaTest is available for freemium as well as premium plan.
 

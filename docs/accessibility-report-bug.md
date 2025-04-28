@@ -44,10 +44,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 The Bug Reporting feature in LambdaTest Accessibility Testing helps you to efficiently log, track, and manage accessibility issues identified during testing. This feature ensures seamless collaboration between testers and developers by integrating with popular issue tracking tools.
 
 ## Key Features
-- **Automated Bug Logging :** Report accessibility issues directly from the LambdaTest interface.
 - **Integration with Issue Tracking Tools :** Supports integrations with Jira, Trello, Asana, GitHub, GitLab, and Slack.
 - **Detailed Issue Reports :** Capture essential details such as element selectors, contrast issues, ARIA violations, and WCAG compliance errors.
-- **Screenshots & Annotations :** Attach annotated screenshots for better issue reproduction.
 - **Team Collaboration :** Assign bugs to team members, set priorities, and track resolution status.
 
 ## Steps to Report a Bug
