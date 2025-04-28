@@ -1727,7 +1727,7 @@ module.exports = {
           {
             type: "doc",
             label: "Bug Report",
-            id: "accessibility-report-bug",
+            id: "accessibility-report-bug", 
           },
         ],
       },
