@@ -57,11 +57,11 @@ The Bug Reporting feature in LambdaTest Accessibility Testing helps you to effic
 - Go to the **Manual/Automation** Reports.
 - Select the report for which you want to mark it as **Bug**.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/mark-bug/1.png').default} alt="accessibility-mark-bug" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/accessibility-testing/mark-bug/01.png').default} alt="accessibility-mark-bug" className="doc_img"/>
 
 ### Step 2. Reporting an Issue
 - Click on the **Report Bug** icon in the top right cornter.
 - A pop-up window will open, fill up the details and create a issue for the same.
 - The issue will be notified in your selected bug reporting platform.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/mark-bug/2.png').default} alt="accessibility-mark-bug" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/accessibility-testing/mark-bug/02.png').default} alt="accessibility-mark-bug" className="doc_img"/>
