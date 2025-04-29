@@ -110,7 +110,7 @@ To ensure that the latest projects and users from your Taiga system are availabl
 
 - This will fetch the latest projects and users from your Taiga system.
 
-<img loading="lazy" src={require("../assets/images/integrations/taiga/1.png').default} alt="1" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/integrations/taiga/1.png').default} alt="1" className="doc_img"/>
 
 - If your authentication token has expired, you will be prompted to re-enter your Taiga password to authenticate again.
 <video class="right-side" width="100%" controls id="vid">
