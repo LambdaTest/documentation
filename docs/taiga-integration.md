@@ -52,7 +52,7 @@ Taiga is an open-source project management platform that supports agile methodol
 
 ## Integrate Taiga from your LambdaTest Account
 
-**Step 1:** Log in to your [LambdaTest](https://www.lambdatest.com/) account. Ensure you have Admin or User level access to manage integrations.
+**Step 1:** Log in to your [LambdaTest](https://accounts.lambdatest.com/) account. Ensure you have Admin or User level access to manage integrations.
 
 **Step 2:** Navigate to `Settings` -> `Integrations` -> `Bug Tracker`.
 
