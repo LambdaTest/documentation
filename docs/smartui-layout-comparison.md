@@ -182,7 +182,7 @@ describe('Layout Structure Test', () => {
     
     // Configure options to focus only on layout structure
     let options = {
-      ignoreType: "layout"
+      ignoreType: ["layout"]
     };
     
     // Take screenshot with layout comparison
