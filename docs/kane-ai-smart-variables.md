@@ -128,3 +128,7 @@ Below is a comprehensive list of supported smart variables, organized by categor
 |                       | `device_orientation`  | `{{smart.device_orientation}}`| Orientation of the device (e.g., Portrait, Landscape)                       |
 |                       | `app_version`         | `{{smart.app_version}}`   | Version of the app under test                                                 |
 |                       | `app_package_name`    | `{{smart.app_package_name}}`| Package name of the app under test                                            |
+
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/images/kane-ai/features/smart-variables/smart-variables-guide.mp4').default} type="video/mp4" />
+</video>
