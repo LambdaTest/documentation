@@ -47,6 +47,10 @@ They cover categories such as date & time, system information, location, connect
  When typing `{{` in the Web/App Agent, an overlay displays all available variables, including regular, secret, and smart variables, with smart variables labeled as "Smart" and accompanied by descriptions.
 :::
 
+Smart Variables listing is available near User Variables
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/smart-variables/smart-variables-list.png').default} className="doc_img"/> 
+
 ## How to Use Smart Variables in Your Tests?
 
 Smart variables can be referenced in test steps, modules, and test cases using the `{{smart.variable_name}}` syntax. Follow these steps to integrate them into your tests:
@@ -65,6 +69,8 @@ For example, to use the current date in a test step:
 Enter the value of {{smart.current_date}} in the date field
 
 ```
+
+<img loading="lazy" src={require('../assets/images/kane-ai/features/smart-variables/smart-variables-fetching.png').default} className="doc_img"/> 
 
 ### Step 3: Select a Smart Variable
 
