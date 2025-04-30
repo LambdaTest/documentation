@@ -2167,7 +2167,6 @@ module.exports = {
               "Selenium-Grid-Configuration",
               "supported-browsers-and-operating-systems-for-the-web-interface",
               "change-individual-test-details",
-              "queuing",
             ],
           },
           {
@@ -3077,6 +3076,7 @@ module.exports = {
     },
     "analytics-build-comparison",
     "analytics-smart-tags-test-intelligence",
+    "analytics-test-failure-classification",
     "analytics-modules-test-intelligence-flaky-test-analytics",
     "analytics-dashboard-copilot",
     "analytics-allure-api-widgets",
