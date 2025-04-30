@@ -2164,7 +2164,6 @@ module.exports = {
               "Selenium-Grid-Configuration",
               "supported-browsers-and-operating-systems-for-the-web-interface",
               "change-individual-test-details",
-              "queuing",
             ],
           },
           {
