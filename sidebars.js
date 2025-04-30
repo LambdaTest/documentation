@@ -1314,7 +1314,8 @@ module.exports = {
           "userback-integration",
           "zenkit-integration",
           "spirateam-integration",
-          "assembla-integration"
+          "assembla-integration",
+          "taiga-integration"
         ],
       },
       {
