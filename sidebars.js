@@ -822,6 +822,11 @@ module.exports = {
             label: "Enterprise FAQs",
             id: "he-enterprise-faqs",
           },
+          {
+            type: "doc",
+            label: "Daily Usage Limit",
+            id: "hyperexecute-daily-usage-limit"
+          }
         ],
       },
       {
