@@ -1,6 +1,6 @@
 ---
 id: accessibility-automation-test
-title: Accessibility Testing on HyperExecute using Selenium
+title: Automation Tests with Accessibility Tool using Selenium
 sidebar_label: Selenium
 description: Use LambdaTest Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines.
 keywords:
