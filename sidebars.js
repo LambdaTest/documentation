@@ -2643,9 +2643,16 @@ module.exports = {
         id: "getting-started-with-espresso-testing",
       },
       {
-        type: "doc",
+        type: "category",
+        collapsed: true,
         label: "Supported Capabilities",
-        id: "espresso-supported-capabilities",
+        link: {
+          type: "doc",
+          id: "espresso-supported-capabilities",
+        },
+        items: [
+          "espresso-env-variables-settings",
+        ],
       },
       {
         type: "doc",
