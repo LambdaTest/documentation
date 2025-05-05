@@ -117,7 +117,44 @@ driver.executeScript(`lambda-testCase-end=${Name of test case}`)
 
 ```
 
-### Capture by NPM Package for WebdriverIO
+### Capture by Playwright reporter 
+
+#### Step 1 - Configure your reporter in YAML
+
+You can capture the test case insights by using the `reporter` configuration in your `YAML` file for capturing and seeing the test cases in our test case widgets on dashboard. 
+
+Here is a link to documentation for setting up the reporter for `PlaywrightJS`: [Click here](/docs/playwright-html-report/#step-1-update-your-playwright-configuration)
+
+#### Step 2 - Add the code to lambdatest-setup file
+
+Once, you have setup the `reporter` then the following code snippet should be added to your `lambdatest-setup.js` config. 
+
+```js title=lambdatest-
+try {
+        const response = JSON.parse(await ltPage.evaluate(
+          (_, data) => {
+            return window.eval(data)
+          },
+          `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`
+        ))
+
+        if (response?.data?.test_id) {
+          testInfo.annotations.push({
+            type: 'lt_test_id',
+            description: response.data.test_id,
+          })
+          console.log('LambdaTest Test ID:', response.data.test_id)
+        }
+      } catch (err) {
+        console.warn('Could not fetch LambdaTest test details:', err.message)
+      }
+```
+
+#### Step 3 - Execute the tests using HyperExecute
+
+You can now, execute the tests on our `HyperExecute` platform and you can see the results captured in the `Test Case Widgets` on the dashboards.
+
+## Capture by NPM Package for WebdriverIO
 
 You can capture the test case insights by using the NPM Package. You need to add the following `NPM Package` in your test script. Here is the link to the NPM package: [wdio-lambdatest-test-case-analytics-service](https://www.npmjs.com/package/wdio-lambdatest-test-case-analytics-service)
 
