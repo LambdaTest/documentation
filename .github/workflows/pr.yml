@@ -21,7 +21,6 @@ jobs:
             SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
     build-and-deploy:
       runs-on: ubuntu-20.04
-      needs: sonarqube-analysis
       env:
           CI: true
           NODE_ENV: stage
