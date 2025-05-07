@@ -8,6 +8,17 @@ on:
     merge_group:
 
 jobs:
+    sonarqube-analysis:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout repo
+          uses: actions/checkout@v4
+
+        - name: SonarQube Analysis
+          uses: SonarSource/sonarqube-scan-action@master
+          env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+            SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
     build-and-deploy:
       runs-on: ubuntu-20.04
       env:
