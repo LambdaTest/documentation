@@ -2580,7 +2580,7 @@ module.exports = {
               "supported-appium-versions",
               "supported-appium-plugins",
               "list-of-supported-locales",
-              "Supported-IP-Geolocation",
+              // "appium-ip-geolocation",
               "supported-timezone",
               "app-testing-apis",
               "appium-lambdatest-hooks",

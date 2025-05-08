@@ -2,7 +2,7 @@
 id: appium-ip-geolocation
 title: IP Geolocation 
 hide_title: true
-sidebar_label: Supported-IP-Geolocation 
+sidebar_label: IP Geolocation 
 description: This document provides information about configuring IP Geolocation for tests on the LambdaTest platform and also provides a list of supported geolocations on Real Devices.
 keywords:
  - IP Geolocation
@@ -79,194 +79,195 @@ Below is the list of supported countries along with their respective country cod
 
 | Name                              | Code     |
 | --------------------------------- | -------- |
-| Andorra                           | AD       |
-| United Arab Emirates              | AE       |
-| Albania                           | AL       |
-| Armenia                           | AM       |
-| Argentina                         | AR       |
-| Austria                           | AT       |
-| Australia                         | AU       |
 | Adelaide (Australia)              | AU/AL    |
-| Brisbane (Australia)              | AU/BS    |
-| Canberra (Australia)              | AU/CN    |
-| Melbourne (Australia)             | AU/ML    |
-| Perth (Australia)                 | AU/PT    |
-| Sydney (Australia)                | AU/SY    |
-| Azerbaijan                        | AZ       |
-| Bosnia and Herzegovina            | BA       |
-| Bangladesh                        | BD       |
-| Belgium                           | BE       |
-| Bulgaria                          | BG       |
-| Bahrain                           | BH       |
-| La Paz (Bolivia)                  | BO/LPZ   |
-| Brazil                            | BR       |
-| Belarus                           | BY       |
-| Canada                            | CA       |
+| Albania                           | AL       |
 | Alberta (Canada)                  | CA/AB    |
+| Albuquerque, New Mexico (US)      | US/ABQ   |
+| Andorra                           | AD       |
+| Andhra Pradesh (India)            | IN/AP    |
+| Ankara (Turkey)                   | TR/ANK   |
+| Argentina                         | AR       |
+| Armenia                           | AM       |
+| Ashburn, Virginia (US)            | US/AB    |
+| Atlanta, Georgia (US)             | US/AT    |
+| Auckland (New Zealand)            | NZ/AU    |
+| Australia                         | AU       |
+| Austria                           | AT       |
+| Azerbaijan                        | AZ       |
+| Bahrain                           | BH       |
+| Bangladesh                        | BD       |
+| Barcelona (Spain)                 | ES/BCN   |
+| Belarus                           | BY       |
+| Belgium                           | BE       |
+| Berlin                            | V2       |
+| Berkeley Springs, WV (US)         | US/BS    |
+| Billings, Montana (US)           | US/BL    |
+| Boca Raton, Florida (US)          | US/BR    |
+| Bolivia (La Paz)                  | BO/LPZ   |
+| Bosnia and Herzegovina            | BA       |
+| Boston, Massachusetts (US)        | US/BO    |
+| Brazil                            | BR       |
 | British Colombia (Canada)         | CA/BC    |
-| Ontario (Canada)                  | CA/ON    |
-| Switzerland                       | CH       |
+| Brunswick, Maine (US)             | US/BWK   |
+| Buffalo, New York (US)            | US/BU    |
+| Bulgaria                          | BG       |
+| Cambodia                          | KH       |
+| Canada                            | CA       |
+| Canberra (Australia)              | AU/CN    |
+| Charlotte, NC (US)                | US/CH    |
+| Cheyenne, Wyoming (US)           | US/CY    |
 | Chile                             | CL       |
 | China                             | CN       |
+| Chicago, Illinois (US)            | US/CHI   |
 | Colombia                          | CO       |
+| Columbus, Ohio (US)               | US/CO    |
 | Costa Rica                        | CR       |
+| Cromwell, Connecticut (US)        | US/CM    |
 | Curacao                           | CW       |
 | Cyprus                            | CY       |
 | Czech Republic                    | CZ       |
-| Germany                           | DE       |
+| Dallas, Texas (US)                | US/DL    |
+| Dallas-Ft. Worth, Texas (US)      | US/DFW   |
 | Denmark                           | DK       |
+| Denver, Colorado (US)             | US/Y6    |
+| Des Moines, Iowa (US)             | US/DM    |
+| Detroit, Michigan (US)            | US/DET   |
 | Dominican Republic                | DO       |
+| Dublin (Ireland)                  | IE/DU    |
 | Ecuador                           | EC       |
-| Estonia                           | EE       |
 | Egypt                             | EG       |
-| Spain                             | ES       |
+| El Salvador                       | SV       |
+| Estonia                           | EE       |
 | Finland                           | FI       |
 | France                            | FR       |
-| United Kingdom                    | GB       |
 | Georgia                           | GE       |
+| Germany                           | DE       |
 | Greece                            | GR       |
 | Guatemala                         | GT       |
-| Hong Kong                         | HK       |
+| Harrisburg, Pennsylvania (US)     | US/HB    |
+| Hollywood, Florida (US)           | US/HW    |
 | Honduras                          | HN       |
-| Croatia                           | HR       |
+| Hong Kong                         | HK       |
+| Honolulu, HI                      | U3       |
+| Houston, Texas (US)               | US/HO    |
 | Hungary                           | HU       |
-| Indonesia                         | ID       |
-| Ireland                           | IE       |
-| Israel                            | IL       |
-| Isle of Man                       | IM       |
-| India                             | IN       |
 | Iceland                           | IS       |
+| India                             | IN       |
+| Indonesia                         | ID       |
+| Indianapolis, Indiana (US)        | US/IN    |
+| Ireland                           | IE       |
+| Isle of Man                       | IM       |
+| Israel                            | IL       |
 | Italy                             | IT       |
 | Jamaica                           | JM       |
-| Jordan                            | JO       |
 | Japan                             | JP       |
+| Jersey City, New Jersey (US)      | US/JC    |
+| Jordan                            | JO       |
+| Kansas City, Missouri (US)        | US/KC    |
+| Kazakhstan                        | KZ       |
 | Kenya                             | KE       |
-| Kyrgyzstan                        | KG       |
-| Cambodia                          | KH       |
 | Korea                             | KR       |
 | Kuwait                            | KW       |
-| Kazakhstan                        | KZ       |
-| Lebanon                           | LB       |
-| Lithuania                         | LT       |
-| Luxembourg                        | LU       |
+| Kyrgyzstan                        | KG       |
+| La Paz (Bolivia)                  | BO/LPZ   |
+| Las Vegas, Nevada (US)            | US/LV    |
 | Latvia                            | LV       |
-| Morocco                           | MA       |
+| Lebanon                           | LB       |
+| Lincoln, Nebraska (US)            | US/LC    |
+| Lithuania                         | LT       |
+| London                            | W8       |
+| Los Angeles, California (US)      | US/LA    |
+| Luxembourg                        | LU       |
+| Madrid (Spain)                    | ES/MAD   |
+| Manhattan, New York (US)          | US/MHT   |
+| Malta                             | MT       |
+| Melbourne (Australia)             | AU/ML    |
+| Memphis, Tennessee (US)           | US/W4    |
+| Mexico                            | MX       |
+| Miami, Florida (US)               | US/MI    |
+| Milan (Italy)                     | IT/MIL   |
+| Minneapolis, Minnesota (US)       | US/MIN   |
 | Moldova                           | MD       |
 | Mongolia                          | MN       |
-| Malta                             | MT       |
-| Mexico                            | MX       |
-| Malaysia                          | MY       |
-| Nigeria                           | NG       |
-| Nicaragua                         | NI       |
-| Netherlands                       | NL       |
-| Norway                            | NO       |
-| New Zealand                       | NZ       |
-| Oman                              | OM       |
-| Panama                            | PA       |
-| Peru                              | PE       |
-| Philippines                       | PH       |
-| Pakistan                          | PK       |
-| Poland                            | PL       |
-| Puerto Rico                       | PR       |
-| Portugal                          | PT       |
-| Paraguay                          | PY       |
-| Qatar                             | QA       |
-| Romania                           | RO       |
-| Serbia                            | RS       |
-| Russian Federation                | RU       |
-| Saudi Arabia                      | SA       |
-| Sweden                            | SE       |
-| Singapore                         | SG       |
-| Slovenia                          | SI       |
-| Slovakia                          | SK       |
-| El Salvador                       | SV       |
-| Thailand                          | TH       |
-| Turkmenistan                      | TM       |
-| Tunisia                           | TN       |
-| Turkey                            | TR       |
-| Taiwan                            | TW       |
-| Tanzania                          | TZ       |
-| Honolulu, HI                      | U3       |
-| Wilmington, DE                    | U4       |
-| Salem, NH                         | U5       |
-| Ukraine                           | UA       |
-| United States                     | US       |
-| Ashburn, Virginia (US)            | US/AB    |
-| Albuquerque, New Mexico (US)      | US/ABQ   |
-| Atlanta, Georgia (US)             | US/AT    |
-| Austin, Texas (US)                | US/AU    |
-| Bluffton, South Carolina (US)     | US/BF    |
-| Billings, Montana (US)            | US/BL    |
-| Baltimore, Maryland (US)          | US/BM    |
-| Boston, Massachusetts (US)        | US/BO    |
-| Boca Raton, Florida (US)          | US/BR    |
-| Berkeley Springs, WV (US)         | US/BS    |
-| Buffalo, New York (US)            | US/BU    |
-| Brunswick, Maine (US)             | US/BWK   |
-| Charlotte, NC (US)                | US/CH    |
-| Chicago, Illinois (US)            | US/CHI   |
-| Cromwell, Connecticut (US)        | US/CM    |
-| Columbus, Ohio (US)               | US/CO    |
-| Cheyenne, Wyoming (US)            | US/CY    |
-| Detroit, Michigan (US)            | US/DET   |
-| Dallas-Ft. Worth, Texas (US)      | US/DFW   |
-| Dallas, Texas (US)                | US/DL    |
-| Des Moines, Iowa (US)             | US/DM    |
-| Harrisburg, Pennsylvania (US)     | US/HB    |
-| Houston, Texas (US)               | US/HO    |
-| Hollywood, Florida (US)           | US/HW    |
-| Indianapolis, Indiana (US)        | US/IN    |
-| Jackson, Mississippi (US)         | US/JAC   |
-| Jersey City, New Jersey (US)      | US/JC    |
-| Kansas City, Missouri (US)        | US/KC    |
-| Los Angeles, California (US)      | US/LA    |
-| Lincoln, Nebraska (US)            | US/LC    |
-| Las Vegas, Nevada (US)            | US/LV    |
-| Manhattan, New York (US)          | US/MHT   |
-| Miami, Florida (US)               | US/MI    |
-| Minneapolis, Minnesota (US)       | US/MIN   |
 | Monticello, Illinois (US)         | US/MO    |
-| Milwaukee, Wisconsin (US)         | US/MW    |
+| Morocco                           | MA       |
+| Mumbai (India)                    | IN/MU    |
+| Munich (Germany)                  | DE/MUN   |
+| Nairobi (Kenya)                   | KE/NAI   |
+| New Jersey, New Jersey            | X4       |
 | New Orleans, Louisiana (US)       | US/NO    |
 | New York City, New York (US)      | US/NYC   |
-| Ogden, Utah (US)                  | US/OD    |
+| New York City, New York (US)      | Z0       |
+| New Zealand                       | NZ       |
+| Nicaragua                         | NI       |
+| Nigeria                           | NG       |
+| Norway                            | NO       |
 | Oklahoma City, Oklahoma (US)      | US/OKC   |
+| Oman                              | OM       |
+| Ontario (Canada)                  | CA/ON    |
 | Orlando, Florida (US)             | US/ORL   |
-| Philadelphia, Pennsylvania (US)   | US/PHI   |
+| Pakistan                          | PK       |
+| Panama                            | PA       |
+| Paraguay                          | PY       |
+| Paris (France)                    | FR/PA    |
+| Perth (Australia)                 | AU/PT    |
+| Peru                              | PE       |
+| Philippines                       | PH       |
 | Phoenix, Arizona (US)             | US/PHX   |
 | Pittsburgh, Pennsylvania (US)     | US/PIT   |
-| Portland, Oregon (US)             | US/POR   |
+| Poland                            | PL       |
+| Portugal                          | PT       |
+| Puerto Rico                       | PR       |
+| Qatar                             | QA       |
 | Raleigh, North Carolina (US)      | US/RA    |
-| Richmond, Virginia (US)           | US/RM    |
 | Reston, Virginia (US)             | US/RT    |
+| Reykjavik (Iceland)               | IS/REK   |
+| Richmond, Virginia (US)           | US/RM    |
+| Romania                           | RO       |
+| Russian Federation                | RU       |
 | Sacramento, California (US)       | US/SAC   |
-| South Bend, Indiana (US)          | US/SB    |
-| Santa Clara, California (US)      | US/SC    |
-| San Diego, California (US)        | US/SD    |
-| Seattle, Washington (US)          | US/SEA   |
-| San Francisco, California (US)    | US/SF    |
-| Sioux Falls, South Dakota (US)    | US/SFL   |
-| San Jose, California (US)         | US/SJ    |
-| Salt Lake City, Utah (US)         | US/SLC   |
+| Saint Petersburg (Russia)         | RU/SP    |
 | Salem, New Hampshire (US)         | US/SLE   |
+| Salem, NH                         | U5       |
+| Salt Lake City, Utah (US)         | US/SLC   |
+| San Diego, California (US)        | US/SD    |
+| San Francisco, California (US)    | US/SF    |
+| San Jose, California (US)         | US/SJ    |
+| Santa Clara, California (US)      | US/SC    |
+| Saudi Arabia                      | SA       |
+| Serbia                            | RS       |
+| Seattle, Washington (US)          | US/SEA   |
+| Singapore                         | SG       |
+| Sioux Falls, South Dakota (US)    | US/SFL   |
+| Slovakia                          | SK       |
+| Slovenia                          | SI       |
+| South Africa                      | ZA       |
+| South Bend, Indiana (US)          | US/SB    |
+| Spain                             | ES       |
 | Sterling, Virginia (US)           | US/ST    |
 | St Louis, Missouri (US)           | US/STL   |
+| Sweden                            | SE       |
+| Switzerland                       | CH       |
+| Sydney (Australia)                | AU/SY    |
+| Taiwan                            | TW       |
 | Tampa, Florida (US)               | US/TPA   |
-| Memphis, Tennessee (US)           | US/W4    |
-| Washington (Herndon), Virginia    | US/WAV   |
-| Wilmington, Delaware (US)         | US/WILM  |
-| Denver, Colorado (US)             | US/Y6    |
+| Tanzania                          | TZ       |
+| Thailand                          | TH       |
+| Tunisia                           | TN       |
+| Turkey                            | TR       |
+| Turkmenistan                      | TM       |
+| Ukraine                           | UA       |
+| United Arab Emirates              | AE       |
+| United Kingdom                    | GB       |
+| United States                     | US       |
 | Uruguay                           | UY       |
 | Uzbekistan                        | UZ       |
-| Berlin                            | V2       |
 | Venezuela                         | VE       |
 | Vietnam                           | VN       |
-| London                            | W8       |
-| New Jersey, New Jersey            | X4       |
-| New York City, New York (US)      | Z0       |
-| Washington                        | Z6       |
-| South Africa                      | ZA       |
-
+| Washington                         | Z6       |
+| Washington (Herndon), Virginia    | US/WAV   |
+| Wilmington, DE                    | U4       |
+| Wilmington, Delaware (US)         | US/WILM  |
 
 
 
