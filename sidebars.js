@@ -1906,7 +1906,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Features",
-            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios"],
+            items: ["camera-image-injection-on-real-devices","ip-geolocation-on-real-devices-app", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios"],
           },
         ],
       },
@@ -1919,7 +1919,8 @@ module.exports = {
         items: [
           "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
-          "screen-reader-on-real-devices-browser"
+          "screen-reader-on-real-devices-browser",
+          "ip-geolocation-on-real-devices-browser"
         ],
       },
     ],
@@ -2580,7 +2581,7 @@ module.exports = {
               "supported-appium-versions",
               "supported-appium-plugins",
               "list-of-supported-locales",
-              // "appium-ip-geolocation",
+              "appium-ip-geolocation",
               "supported-timezone",
               "app-testing-apis",
               "appium-lambdatest-hooks",
@@ -2600,6 +2601,7 @@ module.exports = {
               "regular-expression-appium",
               "appium-upload-media",
               "app-auto-network-throttling",
+              //"appium-ip-geolocation",
               "appium-app-performance",
               "appium-ios-app-settings",
               "ios-keychain-cleanup",
@@ -2776,6 +2778,11 @@ module.exports = {
         type: "doc",
         label: "Getting Started with Flutter iOS",
         id: "getting-started-with-flutter-dart-ios-automation",
+      },
+      {
+        type: "doc",
+        label: "Flutter Supported Capabilities",
+        id: "flutter-supported-capabilities",
       },
     ],
   ],
