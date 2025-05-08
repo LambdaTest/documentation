@@ -47,7 +47,7 @@ They cover categories such as date & time, system information, location, connect
  When typing `{{` in the Web/App Agent, an overlay displays all available variables, including regular, secret, and smart variables, with smart variables labeled as "Smart" and accompanied by descriptions.
 :::
 
-Smart Variables listing is available near User Variables
+Smart Variables are listed under the variables section within an authoring session.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/smart-variables/smart-variables-list.png').default} className="doc_img"/> 
 
@@ -57,7 +57,7 @@ Smart variables can be referenced in test steps, modules, and test cases using t
 
 ### Step 1: Access the Test Environment
 
-Navigate to the Web/App Agent & enter the authoring mode.
+Enter the Authoring or Editing mode for a KaneAI test case
 
 ### Step 2: Reference a Smart Variable
 
@@ -65,6 +65,7 @@ In the "Write a Step" field type `{{` to trigger the variable overlay. This will
 
 For example, to use the current date in a test step:
 
+Use `{{` syntax to get the list of smart variables listed and type to search and filter them out then select the desired one.
 ```
 Enter the value of {{smart.current_date}} in the date field
 
@@ -78,7 +79,7 @@ From the overlay, select the desired smart variable. The variable will be insert
 
 ### Step 4: Run Your Test
 
-Execute the test case. The smart variable will dynamically resolve to its corresponding value based on the current environment or condition (e.g., `2025-04-29` for `{{smart.current_date}}`).
+Once the test step is executed the smart variable will dynamically resolve to its corresponding value based on the current environment or condition (e.g., `2025-04-29` for `{{smart.current_date}}`).
 
 ## Supported Smart Variables
 
