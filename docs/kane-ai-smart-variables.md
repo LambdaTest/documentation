@@ -85,50 +85,42 @@ Once the test step is executed the smart variable will dynamically resolve to it
 
 Below is a comprehensive list of supported smart variables, organized by category, along with their syntax and descriptions:
 
-| Category              | Variable Name         | Syntax                      | Description                                                                 |
-|-----------------------|-----------------------|-----------------------------|-----------------------------------------------------------------------------|
-| **Date & Time** | `current_date`        | `{{smart.current_date}}`    | Current date in YYYY-MM-DD format                                           |
-|                       | `current_day`         | `{{smart.current_day}}`     | Current day of the week (e.g., Monday, Tuesday)                             |
-|                       | `current_month`       | `{{smart.current_month}}`   | Current month name (e.g., January, February)                                |
-|                       | `current_month_number`| `{{smart.current_month_number}}` | Current month number (01, 02, ..., 12)                                      |
-|                       | `current_year`        | `{{smart.current_year}}`    | Current year (YYYY)                                                         |
-|                       | `current_hour`        | `{{smart.current_hour}}`    | Current hour in 24-hour format (00 to 23)                                   |
-|                       | `current_minute`      | `{{smart.current_minute}}`  | Current minute (00 to 59)                                                     |
-|                       | `current_timestamp`   | `{{smart.current_timestamp}}`| Current timestamp in epoch milliseconds                                     |
-|                       | `current_timezone`    | `{{smart.current_timezone}}` | Current timezone name (e.g., GMT, UTC+5:30)                                 |
-|                       | `next_day`            | `{{smart.next_day}}`        | Date of the next day in YYYY-MM-DD format                                     |
-|                       | `previous_day`        | `{{smart.previous_day}}`    | Date of the previous day in YYYY-MM-DD format                                 |
-|                       | `start_of_week`       | `{{smart.start_of_week}}`   | Date of the first day of the current week (YYYY-MM-DD)                      |
-|                       | `end_of_week`         | `{{smart.end_of_week}}`     | Date of the last day of the current week (YYYY-MM-DD)                       |
-|                       | `start_of_month`      | `{{smart.start_of_month}}`  | Date of the first day of the current month (YYYY-MM-DD)                     |
-|                       | `end_of_month`        | `{{smart.end_of_month}}`    | Date of the last day of the current month (YYYY-MM-DD)                      |
-| **User/System Information** | `os_type`             | `{{smart.os_type}}`       | Operating system name (e.g., Windows, macOS, Linux)                          |
-|                       | `os_version`          | `{{smart.os_version}}`    | Operating system version (e.g., 10.0, 14.2)                                 |
-|                       | `browser_name`        | `{{smart.browser_name}}`    | Browser name (e.g., Chrome, Firefox, Safari)                                |
-|                       | `browser_version`     | `{{smart.browser_version}}` | Browser version (e.g., 112.0, 101.0.1)                                      |
-|                       | `user_name`           | `{{smart.user_name}}`     | Current user name on LambdaTest who triggered the test                       |
-| **Geo/Location** | `country`             | `{{smart.country}}`       | Current country name (e.g., United States, India)                           |
-|                       | `city`                | `{{smart.city}}`          | Current city name (e.g., New York, Delhi)                                   |
-|                       | `latitude`            | `{{smart.latitude}}`      | Current latitude                                                              |
-|                       | `longitude`           | `{{smart.longitude}}`     | Current longitude                                                             |
-| **Connectivity** | `ip_address`          | `{{smart.ip_address}}`    | Current IP address (IPv4)                                                     |
-| **Randomized** | `random_int`          | `{{smart.random_int}}`    | Random 3-digit integer                                                        |
-|                       | `random_float`        | `{{smart.random_float}}`  | Random 2-digit float                                                          |
-|                       | `random_string_8`     | `{{smart.random_string_8}}` | Random alphanumeric string of length 8                                        |
-|                       | `random_string_56`    | `{{smart.random_string_56}}`| Random alphanumeric string of length 56                                       |
-|                       | `random_email`        | `{{smart.random_email}}`  | Random email address                                                          |
-|                       | `random_phone`        | `{{smart.random_phone}}`  | Random phone number                                                           |
-| **HTTP Request/Response** | `http_status_code`    | `{{smart.http_status_code}}`| Status code of the last HTTP request (e.g., 200, 404)                        |
-|                       | `http_response_time`  | `{{smart.http_response_time}}`| Response time of the last HTTP request (in milliseconds)                    |
-|                       | `response_body`       | `{{smart.response_body}}` | Body of the last HTTP response                                                |
-|                       | `request_payload`     | `{{smart.request_payload}}`| Payload of the last HTTP request                                              |
-| **Device-Specific** | `device_name`         | `{{smart.device_name}}`   | Name of the mobile device under test                                          |
-|                       | `device_model`        | `{{smart.device_model}}`  | Model of the mobile device                                                    |
-|                       | `device_os`           | `{{smart.device_os}}`     | Operating system of the mobile device (e.g., iOS, Android)                  |
-|                       | `device_os_version`   | `{{smart.device_os_version}}`| Version of the operating system (e.g., 14.4, 11.0)                            |
-|                       | `device_orientation`  | `{{smart.device_orientation}}`| Orientation of the device (e.g., Portrait, Landscape)                       |
-|                       | `app_version`         | `{{smart.app_version}}`   | Version of the app under test                                                 |
-|                       | `app_package_name`    | `{{smart.app_package_name}}`| Package name of the app under test                                            |
+| Category              | Variable Name         | Syntax                        | Description                                                                 |
+|-----------------------|-----------------------|-------------------------------|-----------------------------------------------------------------------------|
+| **Date & Time**       | `current_date`        | `{{smart.current_date}}`      | Current date in YYYY-MM-DD format                                           |
+|                       | `current_day`         | `{{smart.current_day}}`       | Current day of the week (Monday, Tuesday, etc.)                             |
+|                       | `current_month`       | `{{smart.current_month}}`     | Current month name (January, February, etc.)                                |
+|                       | `current_month_number`| `{{smart.current_month_number}}`| Current month number (01, 02, ..., 12)                                      |
+|                       | `current_year`        | `{{smart.current_year}}`      | Current year (YYYY)                                                         |
+|                       | `current_hour`        | `{{smart.current_hour}}`      | Current hour in 24-hour format (00 to 23)                                   |
+|                       | `current_minute`      | `{{smart.current_minute}}`    | Current minute (00 to 59)                                                   |
+|                       | `current_timestamp`   | `{{smart.current_timestamp}}` | Current timestamp in epoch milliseconds                                     |
+|                       | `current_timezone`    | `{{smart.current_timezone}}`  | Current timezone name (e.g., GMT, UTC+5:30)                                 |
+|                       | `next_day`            | `{{smart.next_day}}`          | Date of the next day in YYYY-MM-DD format                                   |
+|                       | `previous_day`        | `{{smart.previous_day}}`      | Date of the previous day in YYYY-MM-DD format                               |
+|                       | `start_of_week`       | `{{smart.start_of_week}}`     | Date of the first day of the current week (YYYY-MM-DD)                      |
+|                       | `end_of_week`         | `{{smart.end_of_week}}`       | Date of the last day of the current week (YYYY-MM-DD)                       |
+|                       | `start_of_month`      | `{{smart.start_of_month}}`    | Date of the first day of the current month (YYYY-MM-DD)                     |
+|                       | `end_of_month`        | `{{smart.end_of_month}}`      | Date of the last day of the current month (YYYY-MM-DD)                      |
+| **User/System Information** | `os_type`       | `{{smart.os_type}}`           | Operating system name on which test is running (e.g., Windows, macOS, Linux)|
+|                       | `os_version`          | `{{smart.os_version}}`        | Operating system version on which test is running (e.g., 10.0, 14.2)        |
+|                       | `browser_name`        | `{{smart.browser_name}}`      | Browser name on which test is running (e.g., Chrome, Firefox, Safari)       |
+|                       | `browser_version`     | `{{smart.browser_version}}`   | Browser version on which test is running (e.g., 112.0, 101.0.1)             |
+|                       | `user_name`           | `{{smart.user_name}}`         | Current user name on LambdaTest who trigger the test                        |
+| **Randomized**        | `random_int`          | `{{smart.random_int}}`        | Random 3 digit integer                                                      |
+|                       | `random_float`        | `{{smart.random_float}}`      | Random 2 digit float                                                        |
+|                       | `random_string_8`     | `{{smart.random_string_8}}`   | Random alphanumeric string of specified length                              |
+|                       | `random_string_56`    | `{{smart.random_string_56}}`  | Random alphanumeric string of specified length                              |
+|                       | `random_email`        | `{{smart.random_email}}`      | Random email address                                                        |
+|                       | `random_phone`        | `{{smart.random_phone}}`      | Random phone number                                                         |
+| **Device-Specific**   | `device_name`         | `{{smart.device_name}}`       | Name of the mobile device under test                                        |
+|                       | `device_model`        | `{{smart.device_model}}`      | Model of the mobile device                                                  |
+|                       | `device_os`           | `{{smart.device_os}}`         | Operating system of the mobile device (iOS, Android)                        |
+|                       | `device_os_version`   | `{{smart.device_os_version}}` | Version of the operating system (14.4, 11.0)                                |
+|                       | `device_orientation`  | `{{smart.device_orientation}}`| Orientation of the device (Portrait, Landscape)                             |
+|                       | `app_version`         | `{{smart.app_version}}`       | Version of the app under test                                               |
+|                       | `app_package_name`    | `{{smart.app_package_name}}`  | Package name of the app under test                                          |
+                             |
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/images/kane-ai/features/smart-variables/smart-variables-guide.mp4').default} type="video/mp4" />
