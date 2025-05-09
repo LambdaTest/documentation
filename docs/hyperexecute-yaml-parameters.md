@@ -91,7 +91,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [maxRetries](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) | Integer | The maximum number of times your scenarios can be retried. <br /> If `retryOnFailure` is true then Default value will be 2. Value Range 1 to 5.|
 | [post](/support/docs/deep-dive-into-hyperexecute-yaml/#post) | List of Strings | The actions that are performed after test execution. |
 | [report](/support/docs/deep-dive-into-hyperexecute-yaml/#report) | Boolean | To generate the test report at the end of the job using the framework generated reports, set this value to true. We also need to set partialReports for generating report |
-| [partialReports](/support/docs/deep-dive-into-hyperexecute-yaml/#reports) | Map | Configurations related to generate report. |
+| [partialReports](/support/docs/deep-dive-into-hyperexecute-yaml/#report) | Map | Configurations related to generate report. |
 | [errorCategorizedOnFailureOnly](/support/docs/deep-dive-into-hyperexecute-yaml/#errorcategorizedonfailureonly) | Boolean | Control the behavior of error categorization generated on your tests|
 |[errorCategorizedReport](/support/docs/deep-dive-into-hyperexecute-yaml/#errorcategorizedreport) | Map, Boolean | Generate a RCA report for your failed tests.|
 | [jobLabel](/support/docs/deep-dive-into-hyperexecute-yaml/#joblabel) | List of Strings | Add tags or labels to jobs. This allows you to search your jobs using the labels or tags assigned to them. |
