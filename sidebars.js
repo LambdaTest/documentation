@@ -822,6 +822,11 @@ module.exports = {
             label: "Enterprise FAQs",
             id: "he-enterprise-faqs",
           },
+          {
+            type: "doc",
+            label: "Daily Usage Limit",
+            id: "hyperexecute-daily-usage-limit"
+          }
         ],
       },
       {
@@ -861,6 +866,7 @@ module.exports = {
                 collapsed: true,
                 label: "April, 2025",
                 items: [
+                  'hyperexecute-release-notes-2-8-4',
                   'hyperexecute-release-notes-2-8-2',
                   'hyperexecute-release-notes-2-8-1',
                 ]
@@ -1329,6 +1335,7 @@ module.exports = {
         items: [
           "clickup-integration",
           "project-management-tools-github-integration",
+          "github-repo-based-oauth",
           "clubhouse-integration",
           "project-management-tools-gitlab-integration",
           "redmine-integration",
@@ -1898,7 +1905,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Features",
-            items: ["camera-image-injection-on-real-devices", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios"],
+            items: ["camera-image-injection-on-real-devices","ip-geolocation-on-real-devices-app", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios"],
           },
         ],
       },
@@ -1911,7 +1918,8 @@ module.exports = {
         items: [
           "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
-          "screen-reader-on-real-devices-browser"
+          "screen-reader-on-real-devices-browser",
+          "ip-geolocation-on-real-devices-browser"
         ],
       },
     ],
@@ -2166,7 +2174,6 @@ module.exports = {
               "Selenium-Grid-Configuration",
               "supported-browsers-and-operating-systems-for-the-web-interface",
               "change-individual-test-details",
-              "queuing",
             ],
           },
           {
@@ -2566,6 +2573,7 @@ module.exports = {
               "supported-appium-versions",
               "supported-appium-plugins",
               "list-of-supported-locales",
+              "appium-ip-geolocation",
               "supported-timezone",
               "app-testing-apis",
               "appium-lambdatest-hooks",
@@ -2585,7 +2593,7 @@ module.exports = {
               "regular-expression-appium",
               "appium-upload-media",
               "app-auto-network-throttling",
-              "appium-ip-geolocation",
+              //"appium-ip-geolocation",
               "appium-app-performance",
               "appium-ios-app-settings",
               "ios-keychain-cleanup",
@@ -2767,6 +2775,11 @@ module.exports = {
         type: "doc",
         label: "Getting Started with Flutter iOS",
         id: "getting-started-with-flutter-dart-ios-automation",
+      },
+      {
+        type: "doc",
+        label: "Flutter Supported Capabilities",
+        id: "flutter-supported-capabilities",
       },
     ],
   ],
@@ -3082,6 +3095,7 @@ module.exports = {
     },
     "analytics-build-comparison",
     "analytics-smart-tags-test-intelligence",
+    "analytics-test-failure-classification",
     "analytics-modules-test-intelligence-flaky-test-analytics",
     "analytics-dashboard-copilot",
     "analytics-allure-api-widgets",

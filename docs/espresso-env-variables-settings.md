@@ -184,7 +184,6 @@ maxRetries: 2
 env:
   STAGE: stg1
   PROD: prod1
-  DEV: dev
 # highlight-end
 framework:
   name: "android/espresso"

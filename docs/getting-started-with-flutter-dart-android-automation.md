@@ -270,26 +270,6 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/f
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://appautomation.lambdatest.com/build).
 
-## Capabilities Supported
-
-The following capabilities are supported:
-
-1. **app:** Enter the app id generated while uploading the app. Example:`lt://APP123456789123456789`
-2. **testSuite:** Enter the test suite id generated while uploading the test suite. Example: `lt://APP123456789123456789`
-3. **device:** Enter the name and os version of the device in "DeviceName-OSVersion" format. Example: `Pixel 6-12` or `Galaxy S21 Ultra 5G-11`. You can also choose to use regular expression for device name such as `Pixel.*-12`.
-4. **video:** Generate video for all the tests that have run. Example: `true`.
-5. **queueTimeout:** Enter the time in seconds for total execution time of the build. Example: `900`.
-6. **testTimeout:** Max wait time for test execution (default value - `900` secs)
-7. **deviceLog:** Boolean value to generate device logs. Example: `true`. 
-8. **build:** Set the name of your Flutter test build. Example: `My Flutter Build`.
-9. **autoGrantPermissions:**  Boolean value to automatically grant the required permissions based on the [Android manifest](https://developer.android.com/guide/topics/manifest/manifest-intro) in the app’s **.apk** Example: `true`. 
-10. **gpsLocation:** This capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"location": {"lat": "-50","long": "150.028333"}`.
-11. **enableBluetooth:** This capability is used to enable the bluetooth functionality during the session. Example: `enableBluetooth: true`
-
-:::note
-Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
-:::
-
 
 ## Running Tests in Parallel
 
