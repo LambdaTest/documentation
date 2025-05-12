@@ -68,7 +68,6 @@ For example, to use the current date in a test step:
 Use `{{` syntax to get the list of smart variables listed and type to search and filter them out then select the desired one.
 ```
 Enter the value of {{smart.current_date}} in the date field
-
 ```
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/smart-variables/smart-variables-fetching.png').default} className="doc_img"/> 
