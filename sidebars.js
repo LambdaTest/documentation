@@ -1144,6 +1144,7 @@ module.exports = {
           },
           "kane-ai-modules",
           "kane-ai-secrets",
+          "kane-ai-smart-variables",
           "kaneai-upload-and-download-files",
           "kaneai-modules-versions-and-enhancement",
           "kane-ai-assertions",
