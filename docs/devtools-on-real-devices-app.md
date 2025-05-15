@@ -69,13 +69,13 @@ This enables seamless inspection of DOM elements, console logs, network activity
 
 **Step 4:** In the session toolbar, click on the **Chrome Dev Tools** button.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/Real_device_chrome_devtools.jpg').default} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/Real_device_chrome_devtools.png').default} className="doc_img"/>
 
 **Step 5:** A debugging window will open:
 - On **Android**, this launches Chrome DevTools.
 - On **iOS**, you can choose between Safari Web Inspector or Chrome DevTools.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/real_device_safari_devtools.jpg').default} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/real_device_safari_devtools.png').default} className="doc_img"/>
 
 Use the DevTools interface to inspect HTML structure, debug JavaScript, monitor network requests, and view console logs in real time.
 
