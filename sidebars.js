@@ -1906,7 +1906,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Features",
-            items: ["camera-image-injection-on-real-devices","ip-geolocation-on-real-devices-app", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios"],
+            items: ["camera-image-injection-on-real-devices","ip-geolocation-on-real-devices-app", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios","devtools-on-real-devices-app"],
           },
         ],
       },
@@ -2611,7 +2611,7 @@ module.exports = {
               "appium-custom-header",
               "basic-authentication-for-web-automation",
               "live-debug-in-app-automation",
-              "devtools-on-real-devices-app"
+              
             ],
           },
           {
