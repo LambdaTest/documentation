@@ -1,7 +1,7 @@
 ---
 id: devtools-on-real-devices-app
-title: Dev Tools On Real Device
-sidebar_label: Dev Tools
+title: DevTools On Real Devices
+sidebar_label: DevTools
 description: Inspect and debug embedded web views in real mobile devices using LambdaTest's DevTools.
 
 keywords:
@@ -53,6 +53,8 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+
 Testing hybrid apps or mobile websites that rely on embedded web views often requires advanced debugging capabilities. With LambdaTest, you can inspect and debug these web views directly on **real Android and iOS devices** using familiar tools like [**Chrome DevTools**](https://developer.chrome.com/docs/devtools/) and [**Safari Web Inspector**](https://developer.apple.com/safari/tools/#current).
 
 This enables seamless inspection of DOM elements, console logs, network activity, and JavaScript execution—giving developers the same debugging power they enjoy on desktop browsers.
@@ -67,7 +69,7 @@ This enables seamless inspection of DOM elements, console logs, network activity
 
 **Step 3:** Once your app or mobile website loads, go to the screen with the WebView content.
 
-**Step 4:** In the session toolbar, click on the **Chrome Dev Tools** button.
+**Step 4:** In the session toolbar, click on the **Chrome DevTools** button.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/Real_device_chrome_devtools.png').default} className="doc_img"/>
 
@@ -85,9 +87,15 @@ Use the DevTools interface to inspect HTML structure, debug JavaScript, monitor 
 
 | Platform | Debugging Tools Available | OS Versions Supported |
 |----------|---------------------------|------------------------|
-| Android  | Chrome DevTools           | Android 8 and above    |
-| iOS      | Safari Web Inspector, Chrome DevTools | iOS 11 and above    |
+| Android  | Chrome DevTools           | Android 9 and above    |
+| iOS      | Safari Web Inspector, Chrome DevTools | iOS 13 and above    |
 
+:::note
+With Hybrid application, release builds must enable the ability to inspect web views in your application.
+
+- On Android 4.4*, call WebView.setWebContentsDebuggingEnabled.
+- On iOS 16.4+, set isinspectable to true on on the Webkit/WKWebView instance.
+::: 
 ---
 
 ## Use Cases 
