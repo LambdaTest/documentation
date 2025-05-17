@@ -121,6 +121,7 @@ Below is the list of supported countries along with their respective country cod
 | Chicago, Illinois (US)            | US/CHI   |
 | Colombia                          | CO       |
 | Columbus, Ohio (US)               | US/CO    |
+| Connecticut (US)                  | US/CN    |
 | Costa Rica                        | CR       |
 | Cromwell, Connecticut (US)        | US/CM    |
 | Curacao                           | CW       |
@@ -129,7 +130,7 @@ Below is the list of supported countries along with their respective country cod
 | Dallas, Texas (US)                | US/DL    |
 | Dallas-Ft. Worth, Texas (US)      | US/DFW   |
 | Denmark                           | DK       |
-| Denver, Colorado (US)             | US/Y6    |
+| Denver, Colorado (US)             | Y6    |
 | Des Moines, Iowa (US)             | US/DM    |
 | Detroit, Michigan (US)            | US/DET   |
 | Dominican Republic                | DO       |
@@ -155,6 +156,7 @@ Below is the list of supported countries along with their respective country cod
 | India                             | IN       |
 | Indonesia                         | ID       |
 | Indianapolis, Indiana (US)        | US/IN    |
+| Iowa (US)                          | US/IW   |
 | Ireland                           | IE       |
 | Isle of Man                       | IM       |
 | Israel                            | IL       |
@@ -180,20 +182,25 @@ Below is the list of supported countries along with their respective country cod
 | Luxembourg                        | LU       |
 | Madrid (Spain)                    | ES/MAD   |
 | Manhattan, New York (US)          | US/MHT   |
+| Maryland (US)                     |  US/ML   |
 | Malta                             | MT       |
 | Melbourne (Australia)             | AU/ML    |
-| Memphis, Tennessee (US)           | US/W4    |
+| Memphis, Tennessee (US)           | W4    |
 | Mexico                            | MX       |
 | Miami, Florida (US)               | US/MI    |
 | Milan (Italy)                     | IT/MIL   |
 | Minneapolis, Minnesota (US)       | US/MIN   |
+| Minnesota (US)                    | US/MN   |
 | Moldova                           | MD       |
 | Mongolia                          | MN       |
+| Montana (US)                      | US/MT   |
 | Monticello, Illinois (US)         | US/MO    |
 | Morocco                           | MA       |
 | Mumbai (India)                    | IN/MU    |
 | Munich (Germany)                  | DE/MUN   |
 | Nairobi (Kenya)                   | KE/NAI   |
+| Nebraska (US)                     | US/NB    |
+| New Hamisphere (US)               | US/NH   |
 | New Jersey, New Jersey            | X4       |
 | New Orleans, Louisiana (US)       | US/NO    |
 | New York City, New York (US)      | US/NYC   |
