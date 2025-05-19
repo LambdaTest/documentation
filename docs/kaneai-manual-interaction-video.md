@@ -45,4 +45,4 @@ import TabItem from '@theme/TabItem';
 
 In this tutorial, learn how KaneAI simplifies test automation by allowing manual interaction to create prompts in natural language, analyzing test steps, generating code in various languages, and providing detailed test descriptions. 
 
-<iframe src="https://app.trupeer.ai/embed?slug=vrSqRvouk" width="640" height="360" frameborder="0" allowfullscreen="true" style="border-radius: 10px; overflow: hidden;"></iframe>
+<iframe src="https://app.trupeer.ai/embed?slug=vrSqRvouk" width="640" height="360" frameborder="0" allowfullscreen="true" className="KaneIframe"></iframe>
