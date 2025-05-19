@@ -59,7 +59,7 @@ This document provide details about the features and capabilities supported for 
 | deviceLog | Boolean | To generate the device logs, pass the value as `deviceLog: true` |
 | network | String | To generate the network logs, pass the value as `network: true`. |
 | build | String | To set the Espresso build name. Example: `build: My Espresso Build`. |
-| geoLocation | String | Set the geolocation country code if you want to enable the same in your test. Example: `geoLocation: FR`|
+| geoLocation | String | Set the geolocation [country code](/support/docs/appium-ip-geolocation/#supported-ip-geolocations) if you want to enable the same in your test. Example: `geoLocation: FR`|
 | gpsLocation | Decimal | The capability should be defined to override the device’s default GPS coordinates and should be provided as a comma-separated string. Example: `"location": {"lat": "-50","long": "150.028333"}`.|
 | tunnel, tunnelName | Boolean | To activate the tunnel mode, pass the value as `tunnel: true` and provide the name of your tunnel as `tunnelName: NewTunnel` |
 | enableBluetooth | Boolean | Used to enable the bluetooth functionality during the session. Example: `enableBluetooth: true`|
