@@ -94,9 +94,11 @@ Cline allows natural language interaction with your codebase—just describe wha
 
 Once connected, you can begin using Cline to interact with the Automation MCP Server. A typical workflow:
 
-**Step 1:** Open your project in VS Code.
-**Step 2:** Open the Cline panel.
-**Step 3:** Type the following prompt:
+
+**Step 1:** Open your project in VS Code.<br /> 
+**Step 2:** Open the Cline panel.<br /> 
+**Step 3:** Type the following prompt: 
+
 
 > “Analyze the LambdaTest TestID. Review the command logs, network logs, and console logs to identify the cause of the test failure. Suggest a code fix based on your findings.”
 
