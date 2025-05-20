@@ -2138,6 +2138,11 @@ module.exports = {
         ],
       },
       {
+        type: "doc",
+        label: "Automation MCP Server",
+        id: 'automation-mcp-server',
+      },
+      {
         type: "category",
         collapsed: true,
         label: "Troubleshooting",
@@ -2804,6 +2809,11 @@ module.exports = {
           id: "smart-visual-regression-testing",
         },
         items: ["smartui-running-your-first-project", "smartui-guided-walkthrough", "smartui-cli-git-branching-strategy", "smartui-cli-env-variables"],
+      },
+      {
+        type: "doc",
+        label: "SmartUI MCP Server",
+        id: "smartui-mcp-server",
       },
       {
         type: "category",
