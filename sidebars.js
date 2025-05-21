@@ -1711,6 +1711,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "Accessibility MCP Server",
+        id: "accessibility-mcp-server",
+      },
+      {
+        type: "doc",
         label: "Screen Reader",
         id: "screen-reader-on-accessibility"
       },
