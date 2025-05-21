@@ -2968,6 +2968,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Figma-App",
+                id: "smartui-cli-figma-app",
+              },
+              {
+                type: "doc",
                 label: "Figma-Figma",
                 id: "smartui-cli-figma",
               },
