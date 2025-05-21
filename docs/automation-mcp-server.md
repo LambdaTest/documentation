@@ -100,7 +100,9 @@ Once connected, you can begin using Cline to interact with the Automation MCP Se
 **Step 3:** Type the following prompt: 
 
 
-> “Analyze the LambdaTest TestID. Review the command logs, network logs, and console logs to identify the cause of the test failure. Suggest a code fix based on your findings.”
+```
+Analyze the LambdaTest TestID. Review the command logs, network logs, and console logs to identify the cause of the test failure. Suggest a code fix based on your findings.
+```
 
 **Step 4:** Cline will:
 
