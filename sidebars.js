@@ -1893,7 +1893,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Applications",
-            items: ["upload-apps-on-real-device-cloud", "app-settings"],
+            items: ["upload-apps-on-real-device-cloud", "app-settings", "app-manager"],
           },
           {
             type: "category",
