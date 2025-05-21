@@ -1694,6 +1694,11 @@ module.exports = {
           },
           {
             type: 'doc',
+            label: 'Android',
+            id: 'accessibility-android-test',
+          },
+          {
+            type: 'doc',
             label: 'Accessibility Automation Settings',
             id: "accessibility-automation-settings",
           },
