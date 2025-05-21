@@ -1711,6 +1711,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "Accessibility MCP Server",
+        id: "accessibility-mcp-server",
+      },
+      {
+        type: "doc",
         label: "Screen Reader",
         id: "screen-reader-on-accessibility"
       },
@@ -1887,7 +1892,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Applications",
-            items: ["upload-apps-on-real-device-cloud", "app-settings"],
+            items: ["upload-apps-on-real-device-cloud", "app-settings", "app-manager"],
           },
           {
             type: "category",
@@ -2136,6 +2141,11 @@ module.exports = {
             items: ["auto-heal", "command-annotations", "har-log-viewer", "selenium-geolocation-capabilities", "selenium-mask-your-data", "selenium-add-test-meta-data"],
           },
         ],
+      },
+      {
+        type: "doc",
+        label: "Automation MCP Server",
+        id: 'automation-mcp-server',
       },
       {
         type: "category",
@@ -2804,6 +2814,11 @@ module.exports = {
           id: "smart-visual-regression-testing",
         },
         items: ["smartui-running-your-first-project", "smartui-guided-walkthrough", "smartui-cli-git-branching-strategy", "smartui-cli-env-variables"],
+      },
+      {
+        type: "doc",
+        label: "SmartUI MCP Server",
+        id: "smartui-mcp-server",
       },
       {
         type: "category",
