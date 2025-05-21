@@ -44,6 +44,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ></script>
 
 # Getting Started with SmartUI MCP Server
+***
 The SmartUI  MCP Server allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis. It is built on [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) and connects to the LambdaTest SmartUI infrastructure via `comparisonId`.
 
 
@@ -103,7 +104,7 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 **Step 6:** Click on the Cline icon to open the Cline panel.<br />
 **Step 7:** Complete any authentication steps required during first-time setup.
 
-### Connecting Cline to HyperExecute MCP Server
+### Connecting Cline to SmartUI MCP Server
 
 #### VS Code Configuration:
 
@@ -111,7 +112,7 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 **Step 2:** Under the **MCP Servers** section, click **Remote Servers**.
 <img loading="lazy" src={require('../assets/images/hyperexecute-mcp/vs-code-config.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-**Step 3:** Add Server Name as **MCP-HyperExecute**.<br />
+**Step 3:** Add Server Name as **LambdaTest-MCP**.<br />
 **Step 4:** Enter the following URL in the server URL field: `http://mcp-api.lambdatest.com/automation?&username=[your-lt-username]&accessKey=[your-lt-access-key]` <br />
 **Step 5:** Replace [your-lt-username] and [your-lt-access-key] with your LambdaTest credentials. <br />
 **Step 6:** Click on **Add Server**. 
