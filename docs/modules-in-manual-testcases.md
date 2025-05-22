@@ -43,7 +43,7 @@ slug: modules-in-manual-testcases/
 ***
 Here's how to link and manage modules within your manual test cases:
 
-## 1. Exporting Modules 
+## 1. Module Creation from existing Test Steps 
 To export test steps as a module, first navigate to the Test Steps page of your desired Test Case. Then, select the **sequential** test steps you wish to include in the module and click the `Create a module` button.
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/select_manual_steps_to_create_module.png').default} alt="automation-dashboard" className="doc_img"/>
 
