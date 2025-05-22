@@ -63,7 +63,7 @@ Click on the `Create a Module` button. Then, define your module and outline the 
 
 Don't worry if you don't have all the details now; you can always edit or add them later.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_creation_page.png').default} alt="automation-dashboard" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_creation_page.png').default} alt="modules-listing-page" className="doc_img"/>
 
 :::note
  You must create at least one test step and provide a module name to create a new module.
@@ -76,17 +76,17 @@ Modules support both editing and versioning, but only specific fields trigger a 
  Only **Test Step** or **Expected Outcome** updation will create a new version of the module.
 :::
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_page.png').default} alt="automation-dashboard" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_page.png').default} alt="module-page" className="doc_img"/>
 
 ## Module Versions
 
 You can easily compare different versions of your module and revert to any previous version. Reverting to a previous version will create a new version in your module's history, ensuring a clear audit trail of all changes.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_version_history.png').default} alt="automation-dashboard" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_version_history.png').default} alt="modules-version-history" className="doc_img"/>
 
 Compare your version history side-by-side to easily identify differences and track changes between various iterations of your module.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_version_comparision.png').default} alt="automation-dashboard" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_version_comparision.png').default} alt="modules-version-comparision" className="doc_img"/>
 
 :::note
 Project linking is only added for manual tests in test cases. Hence, modules linked to a particular project are only available to be added in a manual test case. However, for KaneAI test cases, all modules in all projects will be available for selection.
