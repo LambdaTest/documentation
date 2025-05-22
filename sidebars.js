@@ -1694,6 +1694,11 @@ module.exports = {
           },
           {
             type: 'doc',
+            label: 'Android',
+            id: 'accessibility-android-test',
+          },
+          {
+            type: 'doc',
             label: 'Accessibility Automation Settings',
             id: "accessibility-automation-settings",
           },
@@ -1708,6 +1713,11 @@ module.exports = {
           id: "accessibility-test-scheduling"
         },
         items: ["accessibility-test-scheduling-scan", "accessibility-test-scheduling-edit"]
+      },
+      {
+        type: "doc",
+        label: "Accessibility MCP Server",
+        id: "accessibility-mcp-server",
       },
       {
         type: "doc",
@@ -1903,7 +1913,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Applications",
-            items: ["upload-apps-on-real-device-cloud", "app-settings"],
+            items: ["upload-apps-on-real-device-cloud", "app-settings", "app-manager"],
           },
           {
             type: "category",
@@ -1921,7 +1931,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Features",
-            items: ["camera-image-injection-on-real-devices","ip-geolocation-on-real-devices-app", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios"],
+            items: ["camera-image-injection-on-real-devices","ip-geolocation-on-real-devices-app", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios","devtools-on-real-devices-app"],
           },
         ],
       },
@@ -2152,6 +2162,11 @@ module.exports = {
             items: ["auto-heal", "command-annotations", "har-log-viewer", "selenium-geolocation-capabilities", "selenium-mask-your-data", "selenium-add-test-meta-data"],
           },
         ],
+      },
+      {
+        type: "doc",
+        label: "Automation MCP Server",
+        id: 'automation-mcp-server',
       },
       {
         type: "category",
@@ -2589,7 +2604,7 @@ module.exports = {
               "supported-appium-versions",
               "supported-appium-plugins",
               "list-of-supported-locales",
-              "appium-ip-geolocation",
+              //"appium-ip-geolocation",
               "supported-timezone",
               "app-testing-apis",
               "appium-lambdatest-hooks",
@@ -2609,7 +2624,7 @@ module.exports = {
               "regular-expression-appium",
               "appium-upload-media",
               "app-auto-network-throttling",
-              //"appium-ip-geolocation",
+              "appium-ip-geolocation",
               "appium-app-performance",
               "appium-ios-app-settings",
               "ios-keychain-cleanup",
@@ -2619,6 +2634,7 @@ module.exports = {
               "appium-custom-header",
               "basic-authentication-for-web-automation",
               "live-debug-in-app-automation",
+              
             ],
           },
           {
@@ -2821,6 +2837,11 @@ module.exports = {
         items: ["smartui-running-your-first-project", "smartui-guided-walkthrough", "smartui-cli-git-branching-strategy", "smartui-cli-env-variables"],
       },
       {
+        type: "doc",
+        label: "SmartUI MCP Server",
+        id: "smartui-mcp-server",
+      },
+      {
         type: "category",
         collapsed: false,
         label: "Visual Testing Configurations",
@@ -2962,6 +2983,11 @@ module.exports = {
                 type: "doc",
                 label: "Figma-Web",
                 id: "smartui-cli-figma-web",
+              },
+              {
+                type: "doc",
+                label: "Figma-App",
+                id: "smartui-cli-figma-app",
               },
               {
                 type: "doc",
