@@ -1839,9 +1839,25 @@ module.exports = {
         items: [
           "manual-test-case-creation",
           "manual-test-cases-with-ai",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Bulk Actions",
+            items: [
           "copy-and-move-support-for-test-cases",
           "export-test-cases",
+            ]
+          },
           "test-case-repository",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Modules",
+        items: [
+          "create-modules",
+          "modules-in-manual-testcases",
         ],
       },
       {
