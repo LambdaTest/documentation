@@ -102,7 +102,7 @@ Available for organisations with a private cloud real device plan with LambdaTes
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/CustomID.png').default} alt="kaneai-custom-id-app" className="doc_img"/>
 
-* **Private Device Type** - When private device type is chosen, you will get an option to `Select Pre‑Installed App in Session`; choosing it maps the app capability to `Stock` allowing you to proceed with creating a configuration without explicity defining an application. This option should be used only when your test case has first step as "Open xyz application" where xyz is the application pre-installed in the device.
+* **Private Device Type** - When private device type is chosen, you will get an option to `Select Pre‑Installed App in Session`; choosing it maps the app capability to `Stock` allowing you to proceed with creating a configuration without explicitly defining an application. This option should be used only when your test case has first step as "Open xyz application" where xyz is the application pre-installed in the device.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/PreinstalledApp.png').default} alt="kaneai-preinstalled-app" className="doc_img"/>
 
