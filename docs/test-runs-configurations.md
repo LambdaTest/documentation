@@ -47,7 +47,7 @@ This document explains how application and environment configurations behave acr
 # Creation of Configuration
 A new configuration can be created during creation or edit of a test run. While creating a configuration, users can choose either Desktop, Virtual Device or Real device. 
 
-::: tip
+:::info
 Virtual device option will only be available for non-KaneAI generated test runs.
 :::
 
@@ -82,7 +82,7 @@ Within a test run, while adding configuration to a test instance, you can choose
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/RealDeviceConfig.png').default} alt="kaneai-real-device-config" className="doc_img"/>
 
-::: tip
+:::info
 The following options are only available for only KaneAI generated test runs
 :::
 
@@ -108,7 +108,7 @@ Available for organisations with a private cloud real device plan with LambdaTes
 
 ### Browser
 
-::: tip
+:::info
 Available for only non-KaneAI generated test runs
 :::
 
@@ -124,8 +124,7 @@ Within a non-KaneAI generated test run, while adding configuration to a test ins
 
 
 ## Virtual Device Configuration
-
-::: tip
+:::info
 Available for only non-KaneAI generated test runs
 :::
 
