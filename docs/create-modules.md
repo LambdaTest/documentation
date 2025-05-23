@@ -3,7 +3,7 @@ id: create-modules
 title: Create Modules
 hide_title: true
 sidebar_label: Create Modules
-description: Guide for creating & editing Modules in Test Manger through Modules page.
+description: Guide for creating & editing Modules in Test Manager through Modules page.
 keywords:
   - module creation
   - test manager
@@ -90,7 +90,7 @@ Don't worry if you don't have all the details now; you can always edit or add th
 :::
 
 ## 2. Update Module
-Modules support duplication, editing and versioning, but only specific fields trigger a new version update.
+Modules support duplication, editing and versioning; however, a new version is only triggered when specific fields are edited.
 - Add a step by clicking on `Add Step` or update a step through edit icon. 
 - Click on `update` on top right to save changes.
 :::note
@@ -111,7 +111,7 @@ Compare your version history side-by-side to easily identify differences and tra
 
 - Click on `Compare` & select the version to compare with. 
 
-You will be redirected to the Version Comparision page where you can track changes:
+You will be redirected to the Version Comparison page where you can track changes:
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_version_comparision.png').default} alt="modules-version-comparision" className="doc_img"/>
 
