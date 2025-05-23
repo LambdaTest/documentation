@@ -43,8 +43,6 @@ slug: create-modules/
 ***
 Tired of recreating the same test steps for repetitive testing flows? With Modules in LambdaTest Test Manager you can streamline your workflow by reusing pre-existing test steps across multiple test cases. This powerful feature enables you to encapsulate redundant testing flows into modular, reusable components, saving time and ensuring consistency across your projects.
 
-Modules can be managed from the Modules central repository. For this walkthrough we will see how modules are managed from [Modules page](https://test-manager.lambdatest.com/module).
-
 ## 1.1 Module Creation from existing Test Steps
 
 To export test steps as a module, 
@@ -65,7 +63,7 @@ To export test steps as a module,
 
 ### Step 1: Go to Modules page
 
-- Click on `Modules` button in the navbar to go to the Modules listing page.
+- Click on `Modules` button in the navbar to go to the [Modules listing page](https://test-manager.lambdatest.com/module).
 - Click on `Create a Module`.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules-listing-page.png').default} alt="automation-dashboard" className="doc_img"/>
@@ -81,10 +79,14 @@ To export test steps as a module,
 
 Don't worry if you don't have all the details now; you can always edit or add them later.
 
+:::note
+ You must provide **Module name** & create at **least one test step** to be able to create a new module.
+:::
+
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_creation_page.png').default} alt="modules-listing-page" className="doc_img"/>
 
 :::note
- You must create at least one test step and provide a module name to create a new module.
+ Keep in mind Modules can't be deleted but only updated after creation.
 :::
 
 ## 2. Update Module
