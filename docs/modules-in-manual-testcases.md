@@ -2,8 +2,8 @@
 id: modules-in-manual-testcases
 title: Modules in Manual Testcases
 hide_title: true
-sidebar_label: Importing Modules into Testcases
-description: Guide for linking Modules with Manul Testcases in Test Manger.
+sidebar_label: Importing Modules into Test Cases
+description: Guide for linking Modules with Manual Testcases in Test Manager.
 keywords:
   - module creation
   - import module
@@ -39,7 +39,7 @@ slug: modules-in-manual-testcases/
     }}
 ></script>
 
-# Importing modules into Test Steps
+# Importing Modules into Test Cases
 ***
  
 To incorporate existing modules into your test steps, simply click on the Modules Icon. 
