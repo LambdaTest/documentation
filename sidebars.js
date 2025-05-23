@@ -1117,7 +1117,8 @@ module.exports = {
         items: [
           "kane-ai-test-plan",
           "kaneai-hyperexecute-test-run-execution",
-          "kaneai-ci-cd-automation"
+          "kaneai-ci-cd-automation",
+          "test-runs-configurations"
         ]
       },
       {
