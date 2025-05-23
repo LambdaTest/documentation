@@ -14,11 +14,6 @@ site_name: LambdaTest
 slug: test-runs-configurations/
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -42,18 +37,19 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
+# Configurations in KaneAI & Test Manager
 This document explains how application and environment configurations behave across **Test Manager (TM)** and **KaneAI** for **Desktop**, **Real Device** and **Virtual Device** within test runs.
 
-# Creation of Configuration
+## Creation of Configuration
 A new configuration can be created during creation or edit of a test run. While creating a configuration, users can choose either Desktop, Virtual Device or Real device. 
 
-::: tip
+:::info
 Virtual device option will only be available for non-KaneAI generated test runs.
 :::
 
-## Desktop Configuration
+### Desktop Configuration
 
-### How to create a new configuration?
+#### How to create a new configuration?
 Within a test run, while adding configuration to a test instance, you can choose to create a new configuration. By default, a desktop configuration is selected. You can then add the `Configuration Name` and the `Configuration Details`. You need to add the following fields:
 - Operating System
 - OS Version
@@ -65,13 +61,13 @@ Within a test run, while adding configuration to a test instance, you can choose
 
 ---
 
-## Real Device Configuration
+### Real Device Configuration
 
 Real device configuration supports two options for `native app` and `mobile browser` configurations. The option for `native app` is supported for only KaneAI test runs, while `mobile browser` is supported for both KaneAI and non-KaneAI test runs.
 
-### Native Application
+#### Native Application
 
-#### How to select?
+##### How to select?
 Within a test run, while adding configuration to a test instance, you can choose to create a new configuration and select the `Real Device` section from the top navigation. You can then add the `Configuration Name` and the `Configuration Details`. You need to add the following fields:
 - Device Type
 - Operating System
@@ -82,17 +78,17 @@ Within a test run, while adding configuration to a test instance, you can choose
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/RealDeviceConfig.png').default} alt="kaneai-real-device-config" className="doc_img"/>
 
-::: tip
+:::info
 The following options are only available for only KaneAI generated test runs
 :::
 
-##### Device Type: Private Cloud vs Public Cloud
+###### Device Type: Private Cloud vs Public Cloud
 Available for organisations with a private cloud real device plan with LambdaTest. The option allows for users to choose from set of public pool of devices vs private pool dedicated specifically for that organisation.
 
-#### Multi‑select for KaneAI configurations
+##### Multi‑select for KaneAI configurations
 * KaneAI allows multi‑select for Manufacturer, Device, and OS Version to allow for larger set of device pool for any configuration. Using multiple devices ensures that you always are able to proceed with executions on HyperExecute.
 
-#### Application
+##### Application
 
 * **Auto Update** – If you have new builds for application being uploaded quite frequently, ensure to check the `Update automatically when a new version is uploaded` option while selecting application in the configuration. This ensures that based on `appPackage` or `bundleId`, we automatically update your configuration with the latest build.
 
@@ -106,13 +102,13 @@ Available for organisations with a private cloud real device plan with LambdaTes
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/PreinstalledApp.png').default} alt="kaneai-preinstalled-app" className="doc_img"/>
 
-### Browser
+#### Browser
 
-::: tip
+:::info
 Available for only non-KaneAI generated test runs
 :::
 
-#### How to select?
+##### How to select?
 Within a non-KaneAI generated test run, while adding configuration to a test instance, you can choose to create a new configuration and select the `Real Device` section from the top navigation. The choose the `Web Browser` option. You can then add the `Configuration Name` and the `Configuration Details`. You need to add the following fields:
 - Operating System
 - Browser
@@ -122,14 +118,14 @@ Within a non-KaneAI generated test run, while adding configuration to a test ins
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/RDWebBrowser.png').default} alt="kaneai-rd-web-config" className="doc_img"/>
 
+---
 
-## Virtual Device Configuration
-
-::: tip
+### Virtual Device Configuration
+:::info
 Available for only non-KaneAI generated test runs
 :::
 
-### Native Application
+#### Native Application
 Within a non-KaneAI generated test run, while adding configuration to a test instance, you can choose to create a new configuration and select the `Virtual Device` section from the top navigation. The choose the `Mobile App` option. You can then add the `Configuration Name` and the `Configuration Details`. You need to add the following fields:
 - Operating System
 - Manufacturer
@@ -140,9 +136,9 @@ Within a non-KaneAI generated test run, while adding configuration to a test ins
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/VirtualWeb.png').default} alt="kaneai-virtual-web-config" className="doc_img"/>
 
 
-### Browser
+#### Browser
 
-#### How to select?
+##### How to select?
 Within a non-KaneAI generated test run, while adding configuration to a test instance, you can choose to create a new configuration and select the `Virtual Device` section from the top navigation. The choose the `Web Browser` option. You can then add the `Configuration Name` and the `Configuration Details`. You need to add the following fields:
 - Operating System
 - Browser
@@ -155,15 +151,15 @@ Within a non-KaneAI generated test run, while adding configuration to a test ins
 
 ---
 
-# Addition of Configuration in Test Runs
+## Addition of Configuration in Test Runs
 
-## Using the UI
+### Using the UI
 1. Open the **Add Configuration** dialog in a test run
 2. You can add configurations in two ways:
    - Create a new configuration
    - Select from existing configurations
 
-## Filtering and Selection Options
+### Filtering and Selection Options
 * Use the filter chips to narrow down configurations by:
   - Operating System
   - Device Type
@@ -173,6 +169,7 @@ Within a non-KaneAI generated test run, while adding configuration to a test ins
   - Select all configurations matching current filters
   - Mass assign configurations to test instances
 
+---
 
 ## Best Practices
 1. Use descriptive configuration names for easy identification
