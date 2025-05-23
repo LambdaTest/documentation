@@ -43,15 +43,30 @@ slug: create-modules/
 ***
 Tired of recreating the same test steps for repetitive testing flows? With Modules in LambdaTest Test Manager you can streamline your workflow by reusing pre-existing test steps across multiple test cases. This powerful feature enables you to encapsulate redundant testing flows into modular, reusable components, saving time and ensuring consistency across your projects.
 
-Modules can be managed from the Modules central repository. For this walkthrough we will see how modules are managed from [Modules page](https://test-manager.lambdatest.com/module).
+## 1.1 Module Creation from existing Test Steps
 
-## Create Module
+To export test steps as a module, 
+- Navigate to the Test Steps page of your desired Test Case. 
+- Select the test steps you wish to include in the module and click the `Create a module` button.
+
+:::note
+ Only **sequential** steps can be clubbed to create a module.
+:::
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/select_manual_steps_to_create_module.png').default} alt="select-test-steps" className="doc_img"/>
+
+- Clearly define your new module by entering a concise name and a detailed description. This will help you easily identify and understand its purpose later on.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/create_module_from_manual_teststeps.png').default} alt="create-modules-from-test-steps" className="doc_img"/>
+
+## 1.2 Create Module from Modules section
 
 ### Step 1: Go to Modules page
 
-You can create or duplicate modules directly from [Modules section](https://test-manager.lambdatest.com/module):
+- Click on `Modules` button in the navbar to go to the [Modules listing page](https://test-manager.lambdatest.com/module).
+- Click on `Create a Module`.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_listing_page.png').default} alt="automation-dashboard" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/modules-listing-page.png').default} alt="automation-dashboard" className="doc_img"/>
 
 :::tip
  When you duplicate a module, its steps, description, and linked projects will also be duplicated.
@@ -59,32 +74,44 @@ You can create or duplicate modules directly from [Modules section](https://test
 
 ### Step 2: Create New Module
 
-Click on the `Create a Module` button. Then, define your module and outline the steps you want to include.
+- Click on the `Create a Module` button. 
+- Define your module and outline the steps you want to include.
 
 Don't worry if you don't have all the details now; you can always edit or add them later.
+
+:::note
+ You must provide **Module name** & create at **least one test step** to be able to create a new module.
+:::
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_creation_page.png').default} alt="modules-listing-page" className="doc_img"/>
 
 :::note
- You must create at least one test step and provide a module name to create a new module.
+ Keep in mind Modules can't be deleted but only updated after creation.
 :::
 
-## Update Module
-Modules support both editing and versioning, but only specific fields trigger a new version update.
-
-:::tip
+## 2. Update Module
+Modules support duplication, editing and versioning, but only specific fields trigger a new version update.
+- Add a step by clicking on `Add Step` or update a step through edit icon. 
+- Click on `update` on top right to save changes.
+:::note
  Only **Test Step** or **Expected Outcome** updation will create a new version of the module.
 :::
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_page.png').default} alt="module-page" className="doc_img"/>
 
-## Module Versions
+## 3. Module Versions
 
-You can easily compare different versions of your module and revert to any previous version. Reverting to a previous version will create a new version in your module's history, ensuring a clear audit trail of all changes.
+### Revert to previous Version
+- Click on `revert` to revert your module to that version. Reverting to a previous version will create a new version in your module's history, ensuring a clear audit trail of all changes.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_version_history.png').default} alt="modules-version-history" className="doc_img"/>
 
+### Compare Versions
 Compare your version history side-by-side to easily identify differences and track changes between various iterations of your module.
+
+- Click on `Compare` & select the version to compare with. 
+
+You will be redirected to the Version Comparision page where you can track changes:
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/modules_version_comparision.png').default} alt="modules-version-comparision" className="doc_img"/>
 
