@@ -7,9 +7,9 @@ description: Integrating LambdaTest SCIM with JumpCloud
 keywords:
     - LambdaTest SCIM
     - JumpCloud
-url: https://www.lambdatest.com/support/docs/jumpcloud-scim
+url: https://www.lambdatest.com/support/docs/jumpcloud-scim/
 site_name: LambdaTest
-slug: jumpcloud-scim
+slug: jumpcloud-scim/
 ---
 
 <script type="application/ld+json"
