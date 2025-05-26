@@ -1,7 +1,7 @@
 ---
 id: smartui-cli-git-branching-strategy
 title: Branching Strategy in SmartUI SDK
-sidebar_label: Baseline Branching Strategy
+sidebar_label: Default Branching Strategy
 description: In this documentation, learn how the Git Branching Strategy is implemented for the SmartUI SDK
 keywords:
   - Visual Regression
