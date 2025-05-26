@@ -495,6 +495,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Postman",
+                id: "hyperexecute-postman-collection-integration"
+              },
+              {
+                type: "doc",
                 label: "Provar",
                 id: "hyperexecute-provar-integration",
               },
