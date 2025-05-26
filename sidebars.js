@@ -2840,7 +2840,7 @@ module.exports = {
           type: "doc",
           id: "smart-visual-regression-testing",
         },
-        items: ["smartui-running-your-first-project", "smartui-guided-walkthrough", "smartui-cli-git-branching-strategy", "smartui-cli-env-variables"],
+        items: ["smartui-running-your-first-project", "smartui-guided-walkthrough", "smartui-cli-env-variables"],
       },
       {
         type: "doc",
@@ -2948,6 +2948,38 @@ module.exports = {
                 ]
               },
             ]
+          },
+          {
+            type: 'category',
+            collapsed:true,
+            label: 'Branching and Merging',
+            items: [
+              {
+                type: 'doc',
+                id: 'smartui-cli-git-branching-strategy',
+                label: 'Default Git Strategy',
+              },
+              {
+                type: 'doc',
+                id: 'smartui-smart-git-strategy',
+                label: 'Smart Git Strategy',
+              },
+              {
+                type: 'doc',
+                id: 'smartui-branch-merging',
+                label: 'Branch-Level Merging',
+              },
+              {
+                type: 'doc',
+                id: 'smartui-build-merging',
+                label: 'Build-Level Merging',
+              },
+              {
+                type: 'doc',
+                id: 'smartui-baseline-management',
+                label: 'Auto Baseline Management',
+              }
+            ],
           },
           {
             type: "category",
