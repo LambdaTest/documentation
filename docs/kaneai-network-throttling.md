@@ -127,3 +127,7 @@ While executing your Test Cases every Network Throttle step will be honoered. In
 - You can view where & when Network Throttling commands are executed in the command logs present in the App Automation page.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/throttling_command_script.png').default} alt="throttling-command-script" className="doc_img"/>
+
+:::note
+ Offline Mode is not supported yet but will be added in future release in the earliest.
+:::
