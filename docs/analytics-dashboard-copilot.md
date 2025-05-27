@@ -1,7 +1,7 @@
 ---
 id: analytics-dashboard-copilot
 title: Analytics Dashboard AI CoPilot
-sidebar_label: Dashboard AI CoPilot
+sidebar_label: CoPilot - AI
 description: Analytics - Dashboard CoPilot to analyze your data and get insights faster then ever
 keywords:
   - analytics
