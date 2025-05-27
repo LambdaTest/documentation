@@ -44,7 +44,7 @@ This document outlines how to configure and use network throttling in Kane AI fo
 
 Following are the Network Throttling settings available:
 
-| Throttling Setting | Download Spped |  Upload Speed | Latency |
+| Throttling Setting | Download Speed |  Upload Speed | Latency |
 | ---------  | ------------ | ----------- | ------------ |
 | 2G | ↓ 30 - 50kbps | ↑ 1 - 16 kbps | 500ms |
 | 3G | ↓ 100 - 200kbps | ↑ 50 - 64 kbps | 400ms |
@@ -70,7 +70,7 @@ If you want to honor the Network settings in the Authoring session too:
 
 - Click on the `Honor network profile configuration` toggle.
 
-This will apply network setting in the Authoring session too, allowing you to experiance how your Application works under that particular Network setting.
+This will apply network setting in the Authoring session too, allowing you to experience how your Application works under that particular Network setting.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/honor_throttling.png').default} alt="honor-throttling" className="doc_img"/>
 
@@ -98,11 +98,11 @@ You can edit the Network Throttling setting at that particular step too. To do t
 
 <img loading="lazy" src={require('../assets/images/kane-ai/edit_throttling_step.png').default} alt="edit-throttling-step" className="doc_img"/>
 
-## Chaging network throttling in Playground
+## Changing network throttling in Playground
 Before you begin editing a test case in the Playground, you can set up network throttling. This Playground-specific setting will overwrite the network configuration previously established during the app session's initialization in Authoring mode.
 
 :::note
- The network throttling for your Playground session is determined by what you set when you start that session. If you don't specify any network settings for the Playground, no throttling will be applied. The network settings mentioned while initilizing the Authoring session will not be applicable in the Playground session, as saving changes in the Playground creates a new test case version.
+ The network throttling for your Playground session is determined by what you set when you start that session. If you don't specify any network settings for the Playground, no throttling will be applied. The network settings mentioned while initializing the Authoring session will not be applicable in the Playground session, as saving changes in the Playground creates a new test case version.
  
  And all Test Case executions, like Test Runs and code generation, are performed on the test case's latest saved version.
 :::
