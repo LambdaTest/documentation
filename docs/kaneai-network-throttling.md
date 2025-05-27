@@ -116,7 +116,7 @@ While executing your Test Cases every Network Throttle step will be honoered. Si
 
 <img loading="lazy" src={require('../assets/images/kane-ai/advanced_configurations_pre_execution.png').default} alt="advanced-configurations-pre-execution" className="doc_img"/>
 
-- Network Throttling setting is availbale in the `Network Settings` section.
+- Network Throttling setting is available in the `Network Settings` section.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/throttling_in_network_settings.png').default} alt="throttling-in-network-settings" className="doc_img"/>
 
