@@ -58,19 +58,23 @@ You can create session-specific throttling by selecting the `Custom` option.
 ## How to Set Up Network Throttling ?
 For your mobile app test session, network throttling can be set up in advance by applying those settings from the start of the Authoring session, or you can modify them at any point during the session.
 
-### Step 1: Selecting Network Setting
-- Go to `Advances Settings` in the `Create App Test` section to add Network Throttling setting in advance.
+### Selecting Network Setting
+- Go to `Advanced Settings` in the `Create App Test` section to add Network Throttling setting in advance.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/throttling_pre_authoring.png').default} alt="throttling-pre-authoring" className="doc_img"/>
 
 You can select desired Network setting & your session will start with that setting.
 
-### Step 2: Honoring the Network setting 
+### Honoring the Network setting 
 If you want to honor the Network settings in the Authoring session too: 
 
 - Click on the `Honor network profile configuration` toggle.
 
 This will apply network setting in the Authoring session too, allowing you to experience how your Application works under that particular Network setting.
+
+:::tip
+ Recomended to use this setting only if its absolutely necessary, as this will hamper Authoring experiance in low Network Bandwidth settings.
+:::
 
 <img loading="lazy" src={require('../assets/images/kane-ai/honor_throttling.png').default} alt="honor-throttling" className="doc_img"/>
 
@@ -81,7 +85,7 @@ This will apply network setting in the Authoring session too, allowing you to ex
 ## Changing Network Throttling setting mid session :
 To change Network Throttling setting in between the Authoring session:
 
-- Click on the `Change network throttling` present in Actions Tab.
+- Click on the `Change network throttling` present in Actions Tab, or type `/` to access it.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/actions_tab.png').default} alt="actions-tab" className="doc_img"/>
 
@@ -98,11 +102,11 @@ You can edit the Network Throttling setting at that particular step too. To do t
 
 <img loading="lazy" src={require('../assets/images/kane-ai/edit_throttling_step.png').default} alt="edit-throttling-step" className="doc_img"/>
 
-## Changing network throttling in Playground
-Before you begin editing a test case in the Playground, you can set up network throttling. This Playground-specific setting will overwrite the network configuration previously established during the app session's initialization in Authoring mode.
+## Changing network throttling in Edit Test Steps mode
+Before you begin editing a test case , you can set up network throttling. This Edit mode specific setting will overwrite the network configuration previously established during the app session's initialization in Authoring mode.
 
 :::note
- The network throttling for your Playground session is determined by what you set when you start that session. If you don't specify any network settings for the Playground, no throttling will be applied. The network settings mentioned while initializing the Authoring session will not be applicable in the Playground session, as saving changes in the Playground creates a new test case version.
+ The network throttling for your Editing session is determined by what you set when you start that session. If you don't specify any network settings for the Edit mode, no throttling will be applied. The network settings mentioned while initializing the Authoring session will not be applicable in the Edit session, as saving changes in the Edit mode creates a new test case version.
  
  And all Test Case executions, like Test Runs and code generation, are performed on the test case's latest saved version.
 :::
@@ -110,7 +114,7 @@ Before you begin editing a test case in the Playground, you can set up network t
 <img loading="lazy" src={require('../assets/images/kane-ai/throttling_pre_playground.png').default} alt="playground-throttling-setting" className="doc_img"/>
 
 ## Network Throttling in Test Runs
-While executing your Test Cases every Network Throttle step will be honoered. Similar to the Authoring & Playground mode, you can select the Network setting to initialize your session with :
+While executing your Test Cases every Network Throttle step will be honoered. In addition to the Authoring & Editing mode, you can also select the Network setting to initialize your session with :
 
 - Click on `Advanced Configurations` in the `Run with HyperExecute` section, present while executing a Test Run.  
 
