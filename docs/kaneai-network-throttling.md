@@ -120,6 +120,6 @@ While executing your Test Cases every Network Throttle step will be honoered. Si
 
 <img loading="lazy" src={require('../assets/images/kane-ai/throttling_in_network_settings.png').default} alt="throttling-in-network-settings" className="doc_img"/>
 
-- You can view where & when Network Throttling commands are executed in the command logs present inthe App Automation page.
+- You can view where & when Network Throttling commands are executed in the command logs present in the App Automation page.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/throttling_command_script.png').default} alt="throttling-command-script" className="doc_img"/>
