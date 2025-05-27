@@ -3183,6 +3183,7 @@ module.exports = {
       collapsed: false,
       label: "Test Intelligence - AI",
       items: [
+        "analytics-test-insights",
         "analytics-modules-test-intelligence-flaky-test-analytics",
         "analytics-build-comparison",
         "analytics-smart-tags-test-intelligence",
