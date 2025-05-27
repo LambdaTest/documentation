@@ -1,7 +1,7 @@
 ---
 id: analytics-test-failure-classification
 title: Failure Categorization AI - Test Intelligence
-sidebar_label: Failure Categorization AI
+sidebar_label: Failure Categorization
 description: LambdaTest Analytics uses Failure Categorization AI to classify test failures into different categories. This helps in identifying the root cause of failures and improving test automation efficiency.
 keywords:
   - analytics

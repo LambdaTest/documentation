@@ -1,7 +1,7 @@
 ---
 id: analytics-build-comparison
 title: Compare your builds and analyze the results with Insights
-sidebar_label: Builds Comparison
+sidebar_label: Builds Insights
 description: Analytics - Builds Comparison for analyzing the past results with the latest test runs
 keywords:
   - analytics
