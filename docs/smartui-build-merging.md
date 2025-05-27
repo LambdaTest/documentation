@@ -118,36 +118,6 @@ npx smartui capture --name hotfix-build-202
 npx smartui merge build --source hotfix-build-202 --target prod-build-456
 ```
 
-## Advanced Build Merging
-
-### Force Merge
-
-When you need to merge builds regardless of their current status:
-
-```bash
-npx smartui merge build --source build-123 --target build-456 --force
-```
-
-### Selective Merge
-
-Merge specific screenshots from one build to another:
-
-```bash
-npx smartui merge build --source build-123 --target build-456
-```
-
-### Status Management
-
-Manage build statuses during merge:
-
-```bash
-# Merge and mark as approved
-npx smartui merge build --source build-123 --target build-456
-
-# Merge and mark as baseline
-npx smartui merge build --source build-123 --target build-456 
-```
-
 ## Best Practices
 
 1. **Build Management**:
@@ -159,30 +129,6 @@ npx smartui merge build --source build-123 --target build-456
    - Plan merges in advance
    - Document merge strategies
    - Establish approval processes
-
-3. **Status Management**:
-   - Clear status tracking
-   - Document status changes
-   - Maintain audit trail
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Merge Conflicts**:
-   - Check build compatibility
-   - Verify build status
-   - Review merge history
-
-2. **Status Issues**:
-   - Verify build status
-   - Check permissions
-   - Review approval history
-
-3. **Permission Issues**:
-   - Verify user permissions
-   - Check build protection
-   - Review access settings
 
 ### Getting Help
 
