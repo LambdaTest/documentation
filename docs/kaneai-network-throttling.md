@@ -61,7 +61,7 @@ For your mobile app test session, network throttling can be set up in advance by
 ### Selecting Network Setting
 - Go to `Advanced Settings` in the `Create App Test` section to add Network Throttling setting in advance.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/throttling_pre_authoring.png').default} alt="throttling-pre-authoring" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/throttling_pre_authoring.jpeg').default} alt="throttling-pre-authoring" className="doc_img"/>
 
 You can select desired Network setting & your session will start with that setting.
 
@@ -73,10 +73,10 @@ If you want to honor the Network settings in the Authoring session too:
 This will apply network setting in the Authoring session too, allowing you to experience how your Application works under that particular Network setting.
 
 :::tip
- Recomended to use this setting only if its absolutely necessary, as this will hamper Authoring experiance in low Network Bandwidth settings.
+ Recommended to use this setting only if its absolutely necessary, as this will hamper Authoring experience in low Network Bandwidth settings.
 :::
 
-<img loading="lazy" src={require('../assets/images/kane-ai/honor_throttling.png').default} alt="honor-throttling" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/honor_throttling.jpeg').default} alt="honor-throttling" className="doc_img"/>
 
 :::note
  Network setting will always be Honored while executing the Test Case & code generation, the Honoring option is applicable for Authoring mode only.
@@ -87,11 +87,11 @@ To change Network Throttling setting in between the Authoring session:
 
 - Click on the `Change network throttling` present in Actions Tab, or type `/` to access it.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/actions_tab.png').default} alt="actions-tab" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/actions_tab.jpeg').default} alt="actions-tab" className="doc_img"/>
 
 - Then select desired Network setting.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/throttling_mid_authoring.png').default} alt="network-throttling-options" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/throttling_mid_authoring.jpeg').default} alt="network-throttling-options" className="doc_img"/>
 
 A change in Network throttling setting is also condidered as a step in the Test Case.
 
@@ -100,7 +100,7 @@ You can edit the Network Throttling setting at that particular step too. To do t
 - `Pause` the execution flow to enter into the **Draft** state.
 - Click on the `Edit Instruction` button & change the Network setting.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/edit_throttling_step.png').default} alt="edit-throttling-step" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/edit_throttling_step.jpeg').default} alt="edit-throttling-step" className="doc_img"/>
 
 ## Changing network throttling in Edit Test Steps mode
 Before you begin editing a test case , you can set up network throttling. This Edit mode specific setting will overwrite the network configuration previously established during the app session's initialization in Authoring mode.
@@ -111,7 +111,7 @@ Before you begin editing a test case , you can set up network throttling. This E
  And all Test Case executions, like Test Runs and code generation, are performed on the test case's latest saved version.
 :::
 
-<img loading="lazy" src={require('../assets/images/kane-ai/throttling_pre_playground.png').default} alt="playground-throttling-setting" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/throttling_pre_playground.jpeg').default} alt="playground-throttling-setting" className="doc_img"/>
 
 ## Network Throttling in Test Runs
 While executing your Test Cases every Network Throttle step will be honoered. In addition to the Authoring & Editing mode, you can also select the Network setting to initialize your session with :
@@ -126,7 +126,7 @@ While executing your Test Cases every Network Throttle step will be honoered. In
 
 - You can view where & when Network Throttling commands are executed in the command logs present in the App Automation page.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/throttling_command_script.png').default} alt="throttling-command-script" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/throttling_command_script.jpeg').default} alt="throttling-command-script" className="doc_img"/>
 
 :::note
  Offline Mode is not supported yet but will be added in future release in the earliest.
