@@ -1,7 +1,7 @@
 ---
 id: analytics-modules-test-intelligence-flaky-test-analytics
 title: Flaky Test Analytics with Test Intelligence
-sidebar_label: Flaky Tests AI - Analytics
+sidebar_label: Flaky Tests Insights
 description: Analyze your flaky tests with Test Intelligence and get insights on the flaky tests that are causing your test runs to fail.
 keywords:
   - analytics
