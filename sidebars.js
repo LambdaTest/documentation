@@ -498,11 +498,6 @@ module.exports = {
               },
               {
                 type: "doc",
-                label: "Postman",
-                id: "hyperexecute-postman-collection-integration",
-              },
-              {
-                type: "doc",
                 label: "Provar",
                 id: "hyperexecute-provar-integration",
               },
@@ -1262,7 +1257,6 @@ module.exports = {
           "real-time-locally-hosted-pages",
           "real-time-recents-and-favourites",
           "real-time-upload-and-download-files",
-          "real-time-self-signed-certificate",
         ],
       },
       "troubleshooting-ios-apps",
