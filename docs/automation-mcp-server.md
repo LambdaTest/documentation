@@ -12,9 +12,9 @@ keywords:
   - lambdatest
   - MCP
   - MCP server
-url: https://www.lambdatest.com/support/docs/automation-mcp-server
+url: https://www.lambdatest.com/support/docs/automation-mcp-server/
 site_name: LambdaTest
-slug: automation-mcp-server
+slug: automation-mcp-server/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -90,6 +90,19 @@ Cline allows natural language interaction with your codebase—just describe wha
 **Step 6:** Click on the Cline icon to open the Cline panel.<br />
 **Step 7:** Complete any authentication steps required during first-time setup.
 
+### Connecting Cline to SmartUI MCP Server
+
+#### VS Code Configuration:
+
+**Step 1:** In VS Code, click on the Cline icon in the sidebar to open the Cline panel.<br />
+**Step 2:** Under the **MCP Servers** section, click **Remote Servers**.
+<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/vs-code-config.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+**Step 3:** Add Server Name as **LambdaTest-MCP**.<br />
+**Step 4:** Enter the following URL in the server URL field: `http://mcp-api.lambdatest.com/automation?&LT_USERNAME=[your-lt-username]&LT_ACCESS_KEY=[your-lt-access-key]` <br />
+**Step 5:** Replace [your-lt-username] and [your-lt-access-key] with your LambdaTest credentials. <br />
+**Step 6:** Click on **Add Server**. 
+
 ### Interacting with Automation MCP Server
 
 Once connected, you can begin using Cline to interact with the Automation MCP Server. A typical workflow:
@@ -100,7 +113,9 @@ Once connected, you can begin using Cline to interact with the Automation MCP Se
 **Step 3:** Type the following prompt: 
 
 
-> “Analyze the LambdaTest TestID. Review the command logs, network logs, and console logs to identify the cause of the test failure. Suggest a code fix based on your findings.”
+```
+Analyze the LambdaTest TestID. Review the command logs, network logs, and console logs to identify the cause of the test failure. Suggest a code fix based on your findings.
+```
 
 **Step 4:** Cline will:
 

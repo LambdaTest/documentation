@@ -1,6 +1,6 @@
 ---
 id: kane-ai-modules
-title: 'Utilizing KaneAI Modules Feature: A Step-by-Step Guide'
+title: 'Utilizing Modules Feature in KaneAI: A Step-by-Step Guide'
 hide_title: false
 sidebar_label: Modules
 description: Learn how to use custom modules while executing your tests using the Kane AI

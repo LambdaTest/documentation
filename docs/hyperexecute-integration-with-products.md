@@ -75,6 +75,13 @@ LambdaTest now offers you the chance to integrate HyperExecute with products lik
   </div>
   </a>
 
+  <a href = "/support/docs/hyperexecute-postman-collection-integration/">
+  <div className="support_inners">
+    <h3>Postman</h3>
+    <p>Execute your Postman Collection on HyperExecute.</p>
+  </div>
+  </a>
+
   <a href = "/support/docs/hyperexecute-provar-integration/">
   <div className="support_inners">
     <h3>Provar</h3>

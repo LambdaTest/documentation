@@ -495,6 +495,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Postman",
+                id: "hyperexecute-postman-collection-integration",
+              },
+              {
+                type: "doc",
                 label: "Provar",
                 id: "hyperexecute-provar-integration",
               },
@@ -1111,6 +1116,8 @@ module.exports = {
           "kane-ai-test-plan",
           "kaneai-hyperexecute-test-run-execution",
           "kaneai-ci-cd-automation",
+          "test-runs-configurations",
+
         ],
       },
       {
@@ -1124,6 +1131,7 @@ module.exports = {
           "kane-ai-scroll-in-feature",
           "kane-ai-jira-integration",
           "kane-ai-api-testing",
+          "kaneai-network-throttling",
           {
             type: "category",
             collapsed: true,
@@ -1683,6 +1691,13 @@ module.exports = {
                 ],
               },
             ],
+
+          },
+          {
+            type: "doc",
+            label: "Android",
+            id: "accessibility-android-test",
+
           },
           {
             type: "doc",
@@ -1703,6 +1718,12 @@ module.exports = {
           "accessibility-test-scheduling-scan",
           "accessibility-test-scheduling-edit",
         ],
+      },
+      {
+        type: "doc",
+        label: "Accessibility MCP Server",
+        id: "accessibility-mcp-server",
+
       },
       {
         type: "doc",
@@ -1816,10 +1837,23 @@ module.exports = {
         items: [
           "manual-test-case-creation",
           "manual-test-cases-with-ai",
-          "copy-and-move-support-for-test-cases",
-          "export-test-cases",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Bulk Actions",
+            items: [
+              "copy-and-move-support-for-test-cases",
+              "export-test-cases",
+            ],
+          },
           "test-case-repository",
         ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Modules",
+        items: ["create-modules", "modules-in-manual-testcases"],
       },
       {
         type: "category",
@@ -2930,6 +2964,38 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
+            label: "Branching and Merging",
+            items: [
+              {
+                type: "doc",
+                id: "smartui-cli-git-branching-strategy",
+                label: "Default Git Strategy",
+              },
+              {
+                type: "doc",
+                id: "smartui-smart-git-strategy",
+                label: "Smart Git Strategy",
+              },
+              {
+                type: "doc",
+                id: "smartui-branch-merging",
+                label: "Branch-Level Merging",
+              },
+              {
+                type: "doc",
+                id: "smartui-build-merging",
+                label: "Build-Level Merging",
+              },
+              {
+                type: "doc",
+                id: "smartui-baseline-management",
+                label: "Auto Baseline Management",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
             label: "Advanced CLI Configurations",
             items: [
               "smartui-sdk-build-name",
@@ -2967,6 +3033,11 @@ module.exports = {
                 type: "doc",
                 label: "Figma-Web",
                 id: "smartui-cli-figma-web",
+              },
+              {
+                type: "doc",
+                label: "Figma-App",
+                id: "smartui-cli-figma-app",
               },
               {
                 type: "doc",
@@ -3075,6 +3146,19 @@ module.exports = {
     {
       type: "category",
       collapsed: false,
+      label: "Dashboards",
+      items: [
+        "analytics-dashboard-copilot",
+        "analytics-dashboard-edit-layout",
+        "analytics-dashboard-features",
+        "analytics-widget-drill-down-export",
+        "analytics-widget-filter-by-regex",
+        "analytics-filter-by-custom-data",
+      ],
+    },
+    {
+      type: "category",
+      collapsed: false,
       label: "Widgets",
       link: {
         type: "doc",
@@ -3082,6 +3166,8 @@ module.exports = {
       },
       items: [
         "dashboards-custom-widgets",
+        "analytics-test-case-insights",
+
         "analytics-modules-resource-utilization",
         "analytics-test-time-trends",
         {
@@ -3106,26 +3192,35 @@ module.exports = {
             "analytics-modules-error-insights",
           ],
         },
+        "analytics-allure-api-widgets",
+
         "analytics-modules-groups",
       ],
     },
-    "analytics-build-comparison",
-    "analytics-smart-tags-test-intelligence",
-    "analytics-test-failure-classification",
-    "analytics-modules-test-intelligence-flaky-test-analytics",
-    "analytics-dashboard-copilot",
-    "analytics-allure-api-widgets",
-    "analytics-test-case-insights",
-    "insights-app-profiling",
-    "insights-private-real-devices",
-    "insights-private-desktop",
-    "insights-usage-report",
-    "analytics-sub-organization-widgets",
-    "analytics-dashboard-edit-layout",
-    "analytics-dashboard-features",
-    "analytics-widget-drill-down-export",
-    "analytics-widget-filter-by-regex",
-    "analytics-filter-by-custom-data",
+    {
+      type: "category",
+      collapsed: false,
+      label: "Test Intelligence - AI",
+      items: [
+        "analytics-test-insights",
+        "analytics-modules-test-intelligence-flaky-test-analytics",
+        "analytics-build-comparison",
+        "analytics-smart-tags-test-intelligence",
+        "analytics-test-failure-classification",
+        "insights-app-profiling",
+      ],
+    },
+    {
+      type: "category",
+      collapsed: false,
+      label: "Reports",
+      items: [
+        "insights-usage-report",
+        "insights-private-real-devices",
+        "insights-private-desktop",
+        "analytics-sub-organization-widgets",
+      ],
+    },
     "analytics-faqs",
   ],
 
