@@ -116,7 +116,7 @@ Before you begin editing a test case , you can set up network throttling. This E
 ## Network Throttling in Test Runs
 While executing your Test Cases every Network Throttle step will be honoered. In addition to the Authoring & Editing mode, you can also select the Network setting to initialize your session with :
 
-- Click on `Advanced Configurations` in the `Run with HyperExecute` section, present while executing a Test Run.  
+- Click on `Advanced Configurations` present in the `Run with HyperExecute` section or `Schedule Test Runs` section while executing a Test Run.  
 
 <img loading="lazy" src={require('../assets/images/kane-ai/advanced_configurations_pre_execution.png').default} alt="advanced-configurations-pre-execution" className="doc_img"/>
 
@@ -129,5 +129,5 @@ While executing your Test Cases every Network Throttle step will be honoered. In
 <img loading="lazy" src={require('../assets/images/kane-ai/throttling_command_script.jpeg').default} alt="throttling-command-script" className="doc_img"/>
 
 :::note
- Offline Mode is not supported yet but will be added in future release in the earliest.
+ Offline Mode is not supported yet but it will be added in future release.
 :::
