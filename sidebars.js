@@ -1,5 +1,4 @@
 module.exports = {
-
   HyperExecuteSidebar: [
     {
       type: "link",
@@ -49,7 +48,7 @@ module.exports = {
           "deep-dive-into-hyperexecute-yaml",
           "hyperexecute-snooper",
           "hyperexecute-inherit-config",
-          "hyperexecute-yaml-version0.2"
+          "hyperexecute-yaml-version0.2",
         ],
       },
       {
@@ -126,7 +125,8 @@ module.exports = {
                 type: "doc",
                 label: "Test Artifact Management",
                 id: "hyperexecute-artifacts-url",
-              },              {
+              },
+              {
                 type: "doc",
                 label: "HyperExecute Job Reports ",
                 id: "hyperexecute-reports",
@@ -321,7 +321,7 @@ module.exports = {
               "hyperexecute-appium-testing",
               "hyperexecute-webapp-appium-testing",
               "hyperexecute-appium-virtual-device",
-              "hyperexecute-emu-simu-devices-list"
+              "hyperexecute-emu-simu-devices-list",
             ],
           },
           {
@@ -593,7 +593,10 @@ module.exports = {
                     type: "category",
                     label: "Selenium",
                     collapsed: true,
-                    items: ["hyperexecute-smart-ui-sdk-selenium-javascript", "hyperexecute-smart-ui-sdk-selenium-csharp"],
+                    items: [
+                      "hyperexecute-smart-ui-sdk-selenium-javascript",
+                      "hyperexecute-smart-ui-sdk-selenium-csharp",
+                    ],
                   },
                   {
                     type: "doc",
@@ -704,7 +707,7 @@ module.exports = {
               "hyperexecute-how-to-perform-dependent-test-based-discovery",
               "hyperexecute-how-to-perform-group-based-test-discovery-in-testng",
               "hyperexecute-how-to-resolve-version-conflict",
-              "hyperexecute-org-product-preferences"
+              "hyperexecute-org-product-preferences",
             ],
           },
           {
@@ -721,7 +724,7 @@ module.exports = {
               "hyperexecute-build-mobile-apps-using-tools",
               "hyperexecute-utilizing-custom-libraries",
               "hyperexecute-supported-languages-and-packages",
-              "hyperexecute-test-chains"
+              "hyperexecute-test-chains",
             ],
           },
           {
@@ -761,7 +764,7 @@ module.exports = {
               "error-categorization-report",
               "junit-xml-report",
               "karate-report",
-              "robot-report"
+              "robot-report",
             ],
           },
 
@@ -825,8 +828,8 @@ module.exports = {
           {
             type: "doc",
             label: "Daily Usage Limit",
-            id: "hyperexecute-daily-usage-limit"
-          }
+            id: "hyperexecute-daily-usage-limit",
+          },
         ],
       },
       {
@@ -848,11 +851,9 @@ module.exports = {
                 type: "category",
                 collapsed: true,
                 label: "January, 2025",
-                items: [
-                  'hyperexecute-cli-release-notes-0-2-249',
-                ]
+                items: ["hyperexecute-cli-release-notes-0-2-249"],
               },
-            ]
+            ],
           },
 
           // 2025 releases
@@ -866,38 +867,36 @@ module.exports = {
                 collapsed: true,
                 label: "April, 2025",
                 items: [
-                  'hyperexecute-release-notes-2-8-4',
-                  'hyperexecute-release-notes-2-8-2',
-                  'hyperexecute-release-notes-2-8-1',
-                ]
+                  "hyperexecute-release-notes-2-8-4",
+                  "hyperexecute-release-notes-2-8-2",
+                  "hyperexecute-release-notes-2-8-1",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "March, 2025",
                 items: [
-                  'hyperexecute-release-notes-2-7-8',
-                  'hyperexecute-release-notes-2-7-6',
-                ]
+                  "hyperexecute-release-notes-2-7-8",
+                  "hyperexecute-release-notes-2-7-6",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "February, 2025",
                 items: [
-                  'hyperexecute-release-notes-2-7-3',
-                  'hyperexecute-release-notes-2-7-1',
-                ]
+                  "hyperexecute-release-notes-2-7-3",
+                  "hyperexecute-release-notes-2-7-1",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "January, 2025",
-                items: [
-                  'hyperexecute-release-notes-2-7-0',
-                ]
+                items: ["hyperexecute-release-notes-2-7-0"],
               },
-            ]
+            ],
           },
 
           // 2024 releases
@@ -911,122 +910,120 @@ module.exports = {
                 collapsed: true,
                 label: "December, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-6-5',
-                  'hyperexecute-release-notes-2-6-2',
-                ]
+                  "hyperexecute-release-notes-2-6-5",
+                  "hyperexecute-release-notes-2-6-2",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "November, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-6-0',
-                  'hyperexecute-release-notes-2-5-9',
-                  'hyperexecute-release-notes-2-5-8',
-                ]
+                  "hyperexecute-release-notes-2-6-0",
+                  "hyperexecute-release-notes-2-5-9",
+                  "hyperexecute-release-notes-2-5-8",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "October, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-5-7',
-                  'hyperexecute-release-notes-2-5-6',
-                  'hyperexecute-release-notes-2-5-5',
-                  'hyperexecute-release-notes-2-5-4',
-                ]
+                  "hyperexecute-release-notes-2-5-7",
+                  "hyperexecute-release-notes-2-5-6",
+                  "hyperexecute-release-notes-2-5-5",
+                  "hyperexecute-release-notes-2-5-4",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "September, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-5-3',
-                  'hyperexecute-release-notes-2-5-2',
-                  'hyperexecute-release-notes-2-5-1',
-                  'hyperexecute-release-notes-2-5-0',
-                ]
+                  "hyperexecute-release-notes-2-5-3",
+                  "hyperexecute-release-notes-2-5-2",
+                  "hyperexecute-release-notes-2-5-1",
+                  "hyperexecute-release-notes-2-5-0",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "August, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-4-8',
-                  'hyperexecute-release-notes-2-4-7',
-                  'hyperexecute-release-notes-2-4-6',
-                ]
+                  "hyperexecute-release-notes-2-4-8",
+                  "hyperexecute-release-notes-2-4-7",
+                  "hyperexecute-release-notes-2-4-6",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "July, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-4-5',
-                  'hyperexecute-release-notes-2-4-4',
-                  'hyperexecute-release-notes-2-4-0',
-                ]
+                  "hyperexecute-release-notes-2-4-5",
+                  "hyperexecute-release-notes-2-4-4",
+                  "hyperexecute-release-notes-2-4-0",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "June, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-3-8',
-                  'hyperexecute-release-notes-2-3-7',
-                  'hyperexecute-release-notes-2-3-6'
-                ]
+                  "hyperexecute-release-notes-2-3-8",
+                  "hyperexecute-release-notes-2-3-7",
+                  "hyperexecute-release-notes-2-3-6",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "May, 2024",
-                items: [
-                  'hyperexecute-release-notes-2-3-3',
-                ]
+                items: ["hyperexecute-release-notes-2-3-3"],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "April, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-3-1',
-                  'hyperexecute-release-notes-2-3-0',
-                  'hyperexecute-release-notes-2-2-9',
-                  'hyperexecute-release-notes-2-2-8',
-                  'hyperexecute-release-notes-2-2-7',
-                ]
+                  "hyperexecute-release-notes-2-3-1",
+                  "hyperexecute-release-notes-2-3-0",
+                  "hyperexecute-release-notes-2-2-9",
+                  "hyperexecute-release-notes-2-2-8",
+                  "hyperexecute-release-notes-2-2-7",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "March, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-2-6',
-                  'hyperexecute-release-notes-2-2-5',
-                  'hyperexecute-release-notes-2-2-3'
-                ]
+                  "hyperexecute-release-notes-2-2-6",
+                  "hyperexecute-release-notes-2-2-5",
+                  "hyperexecute-release-notes-2-2-3",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "February, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-2-2',
-                  'hyperexecute-release-notes-2-2-1',
-                  'hyperexecute-release-notes-2-2-0'
-                ]
+                  "hyperexecute-release-notes-2-2-2",
+                  "hyperexecute-release-notes-2-2-1",
+                  "hyperexecute-release-notes-2-2-0",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "January, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-1-6',
-                  'hyperexecute-release-notes-2-1-5',
-                ]
+                  "hyperexecute-release-notes-2-1-6",
+                  "hyperexecute-release-notes-2-1-5",
+                ],
               },
-            ]
+            ],
           },
 
           // 2023 releases
@@ -1040,42 +1037,40 @@ module.exports = {
                 collapsed: true,
                 label: "December, 2023",
                 items: [
-                  'hyperexecute-release-notes-2-1-4',
-                  'hyperexecute-release-notes-2-1-3',
-                  'hyperexecute-release-notes-2-1-1',
-                  'hyperexecute-release-notes-2-1-0',
-                  'hyperexecute-release-notes-1-139-0'
-                ]
+                  "hyperexecute-release-notes-2-1-4",
+                  "hyperexecute-release-notes-2-1-3",
+                  "hyperexecute-release-notes-2-1-1",
+                  "hyperexecute-release-notes-2-1-0",
+                  "hyperexecute-release-notes-1-139-0",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "November, 2023",
                 items: [
-                  'hyperexecute-release-notes-1-138-0',
-                  'hyperexecute-release-notes-1-137-0',
-                ]
+                  "hyperexecute-release-notes-1-138-0",
+                  "hyperexecute-release-notes-1-137-0",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "October, 2023",
                 items: [
-                  'hyperexecute-release-notes-1-136-0',
-                  'hyperexecute-release-notes-1-135-0',
-                  'hyperexecute-release-notes-1-134-0',
-                  'hyperexecute-release-notes-1-133-0'
-                ]
+                  "hyperexecute-release-notes-1-136-0",
+                  "hyperexecute-release-notes-1-135-0",
+                  "hyperexecute-release-notes-1-134-0",
+                  "hyperexecute-release-notes-1-133-0",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "September, 2023",
-                items: [
-                  'hyperexecute-release-notes-1-131-0',
-                ]
+                items: ["hyperexecute-release-notes-1-131-0"],
               },
-            ]
+            ],
           },
         ],
       },
@@ -1105,7 +1100,7 @@ module.exports = {
           "kane-ai-web-test",
           "kane-ai-guided-walkthrough",
           "kane-ai-app-test",
-          "kane-ai-automation-code-generation"
+          "kane-ai-automation-code-generation",
         ],
       },
       {
@@ -1115,8 +1110,8 @@ module.exports = {
         items: [
           "kane-ai-test-plan",
           "kaneai-hyperexecute-test-run-execution",
-          "kaneai-ci-cd-automation"
-        ]
+          "kaneai-ci-cd-automation",
+        ],
       },
       {
         type: "category",
@@ -1137,8 +1132,8 @@ module.exports = {
               "kane-ai-using-variables",
               "kane-ai-using-json-variables",
               "kane-ai-using-parameters",
-              "kane-ai-using-datasets"
-            ]
+              "kane-ai-using-datasets",
+            ],
           },
           "kane-ai-modules",
           "kane-ai-secrets",
@@ -1148,7 +1143,7 @@ module.exports = {
           "kane-ai-assertions",
           "kaneai-dynamic-url-replacement",
           "kaneai-chrome-options",
-          "kaneai-scheduled-test-runs"
+          "kaneai-scheduled-test-runs",
         ],
       },
       {
@@ -1165,12 +1160,7 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Video Tutorials",
-        items: [
-         "kaneai-test",
-         "kaneai-test-manual",
-         "kaneai-edit-test-steps",
-  
-        ],
+        items: ["kaneai-test", "kaneai-test-manual", "kaneai-edit-test-steps"],
       },
       {
         type: "category",
@@ -1185,14 +1175,11 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "September, 2024",
-            items: [
-              'kaneai-release-notes-0-0-2',
-              'kaneai-release-notes-0-0-1',
-            ]
+            items: ["kaneai-release-notes-0-0-2", "kaneai-release-notes-0-0-1"],
           },
-        ]
+        ],
       },
-    ]
+    ],
   ],
 
   RealTimeBrowserTestingSiebar: [
@@ -1210,27 +1197,27 @@ module.exports = {
         collapsed: true,
         label: "Web Browser Testing",
         items: [
-          'getting-started-with-desktop-browser-real-time-testing',
-          'real-time-desktop-browser-testing-tools'
-        ]
+          "getting-started-with-desktop-browser-real-time-testing",
+          "real-time-desktop-browser-testing-tools",
+        ],
       },
       {
         type: "category",
         collapsed: true,
         label: "Mobile Browser Testing",
         items: [
-          'getting-started-with-mobile-browser-real-time-testing',
-          'real-time-mobile-browser-testing-tools'
-        ]
+          "getting-started-with-mobile-browser-real-time-testing",
+          "real-time-mobile-browser-testing-tools",
+        ],
       },
       {
         type: "category",
         collapsed: true,
         label: "Mobile App Testing",
         items: [
-          'getting-started-with-mobile-app-real-time-testing',
-          'real-time-mobile-app-testing-tools'
-        ]
+          "getting-started-with-mobile-app-real-time-testing",
+          "real-time-mobile-app-testing-tools",
+        ],
       },
       {
         type: "category",
@@ -1238,19 +1225,19 @@ module.exports = {
         label: "ChromeOS Testing",
         link: {
           type: "doc",
-          id: 'chrome-os-testing'
+          id: "chrome-os-testing",
         },
         items: [
           {
             type: "doc",
             label: "ChromeOS Web BrowserTesting",
-            id: 'chrome-os-web-browser-testing'
+            id: "chrome-os-web-browser-testing",
           },
           {
             type: "doc",
             label: "ChromeOS App Testing",
-            id: "chrome-os-app-testing"
-          }
+            id: "chrome-os-app-testing",
+          },
         ],
       },
       {
@@ -1266,7 +1253,7 @@ module.exports = {
           "real-time-locally-hosted-pages",
           "real-time-recents-and-favourites",
           "real-time-upload-and-download-files",
-          "real-time-self-signed-certificate"
+          "real-time-self-signed-certificate",
         ],
       },
       "troubleshooting-ios-apps",
@@ -1321,7 +1308,7 @@ module.exports = {
           "zenkit-integration",
           "spirateam-integration",
           "assembla-integration",
-          "taiga-integration"
+          "taiga-integration",
         ],
       },
       {
@@ -1557,7 +1544,7 @@ module.exports = {
       "netlify-integration-with-lambdatest",
       "testim-integration",
       "simplifyqa-integration",
-      "uipath-integration"
+      "uipath-integration",
     ],
     // },
   ],
@@ -1600,7 +1587,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Scanning Alternatives",
+            label: "Scanning Methods",
             items: [
               {
                 type: "doc",
@@ -1622,6 +1609,11 @@ module.exports = {
                 label: "Multi Page Scanner",
                 id: "accessibility-testing-multi-page-scanner",
               },
+              {
+                type: "doc",
+                label: "Keybaord Scan",
+                id: "accessibility-keyboard-scan",
+              },
             ],
           },
           {
@@ -1632,8 +1624,8 @@ module.exports = {
           {
             type: "doc",
             label: "Update DevTools",
-            id: "accessibility-update-devtools-extension"
-          }
+            id: "accessibility-update-devtools-extension",
+          },
         ],
       },
       {
@@ -1652,13 +1644,13 @@ module.exports = {
             items: [
               {
                 type: "doc",
-                label: 'Selenium',
+                label: "Selenium",
                 id: "accessibility-automation-test",
               },
               {
                 type: "category",
                 collapsed: true,
-                label: 'Cypress',
+                label: "Cypress",
                 items: [
                   "cypress-v10-accessibility-test",
                   "cypress-v9-accessibility-test",
@@ -1666,10 +1658,10 @@ module.exports = {
               },
               {
                 type: "doc",
-                label: 'Playwright',
+                label: "Playwright",
                 id: "playwright-accessibility-test",
               },
-            ]
+            ],
           },
           {
             type: "category",
@@ -1678,23 +1670,23 @@ module.exports = {
             items: [
               {
                 type: "doc",
-                label: 'Selenium',
-                id: "selenium-hyprerexecute-accessibility-tests"
+                label: "Selenium",
+                id: "selenium-hyprerexecute-accessibility-tests",
               },
               {
                 type: "category",
                 collapsed: true,
-                label: 'Cypress',
+                label: "Cypress",
                 items: [
                   "cypress-v10-hyprerexecute-accessibility-tests",
                   "cypress-v9-hyprerexecute-accessibility-tests",
                 ],
               },
-            ]
+            ],
           },
           {
-            type: 'doc',
-            label: 'Accessibility Automation Settings',
+            type: "doc",
+            label: "Accessibility Automation Settings",
             id: "accessibility-automation-settings",
           },
         ],
@@ -1705,14 +1697,17 @@ module.exports = {
         label: "Accessibility Test Scheduling",
         link: {
           type: "doc",
-          id: "accessibility-test-scheduling"
+          id: "accessibility-test-scheduling",
         },
-        items: ["accessibility-test-scheduling-scan", "accessibility-test-scheduling-edit"]
+        items: [
+          "accessibility-test-scheduling-scan",
+          "accessibility-test-scheduling-edit",
+        ],
       },
       {
         type: "doc",
         label: "Screen Reader",
-        id: "screen-reader-on-accessibility"
+        id: "screen-reader-on-accessibility",
       },
       {
         type: "category",
@@ -1736,7 +1731,7 @@ module.exports = {
           {
             type: "doc",
             label: "Bug Report",
-            id: "accessibility-report-bug", 
+            id: "accessibility-report-bug",
           },
         ],
       },
@@ -1778,8 +1773,8 @@ module.exports = {
         label: "SCIM",
         id: "scim",
       },
+    ],
   ],
-],
 
   TestManagerSidebar: [
     {
@@ -1800,27 +1795,19 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Projects",
-        items: [
-          "create-projects", 
-          "system-and-custom-fields", 
-        ],
+        items: ["create-projects", "system-and-custom-fields"],
       },
       {
         type: "category",
         collapsed: true,
         label: "Import Test Case Data",
-        items: [
-          "csv-import",
-          "one-click-migration-from-testrail", 
-        ],
+        items: ["csv-import", "one-click-migration-from-testrail"],
       },
       {
         type: "category",
         collapsed: true,
         label: "Insights",
-        items: [
-          "insights-dashboard"
-        ],
+        items: ["insights-dashboard"],
       },
       {
         type: "category",
@@ -1844,18 +1831,18 @@ module.exports = {
         },
         items: [
           "automated-test-cases-linked-using-dashboard",
-          "automated-test-cases-linked-using-capability"
+          "automated-test-cases-linked-using-capability",
         ],
       },
       {
         type: "doc",
         label: "Test Run",
-        id: 'test-run-creation-and-management',
+        id: "test-run-creation-and-management",
       },
       {
         type: "doc",
         label: "Milestones",
-        id: 'milestone-creation-and-management',
+        id: "milestone-creation-and-management",
       },
       {
         type: "category",
@@ -1887,7 +1874,11 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Applications",
-            items: ["upload-apps-on-real-device-cloud", "app-settings", "app-manager"],
+            items: [
+              "upload-apps-on-real-device-cloud",
+              "app-settings",
+              "app-manager",
+            ],
           },
           {
             type: "category",
@@ -1898,14 +1889,24 @@ module.exports = {
               "install-apps-from-test-flight",
               "install-apps-from-app-center",
               "install-apps-from-app-store",
-              "install-apps-from-firebase"
+              "install-apps-from-firebase",
             ],
           },
           {
             type: "category",
             collapsed: true,
             label: "Features",
-            items: ["camera-image-injection-on-real-devices","ip-geolocation-on-real-devices-app", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios","devtools-on-real-devices-app"],
+            items: [
+              "camera-image-injection-on-real-devices",
+              "ip-geolocation-on-real-devices-app",
+              "biometric-authentication-on-real-devices",
+              "contacts-on-real-devices",
+              "real-device-adb-shell",
+              "ui-inspector",
+              "screen-reader-on-real-devices-app",
+              "accessibility-settings-ios",
+              "devtools-on-real-devices-app",
+            ],
           },
         ],
       },
@@ -1919,7 +1920,7 @@ module.exports = {
           "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
           "screen-reader-on-real-devices-browser",
-          "ip-geolocation-on-real-devices-browser"
+          "ip-geolocation-on-real-devices-browser",
         ],
       },
     ],
@@ -1928,7 +1929,11 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Private Cloud",
-        items: ["public-cloud-vs-private-cloud", "select-pre-installed-apps", "private-device-allocation-to-teams"],
+        items: [
+          "public-cloud-vs-private-cloud",
+          "select-pre-installed-apps",
+          "private-device-allocation-to-teams",
+        ],
       },
     ],
   ],
@@ -2083,7 +2088,7 @@ module.exports = {
               "selenium-default-capabilities",
               "selenium-three-capabilities",
               "selenium-four-capabilities",
-              "lambdatest-selenium-advance-capabilities"
+              "lambdatest-selenium-advance-capabilities",
             ],
           },
           {
@@ -2093,7 +2098,7 @@ module.exports = {
             items: [
               "perform-selenium-automation-on-headless-browsers",
               "custom-chrome",
-              "selenium-set-browser-options"
+              "selenium-set-browser-options",
             ],
           },
           {
@@ -2133,14 +2138,21 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Other Capabilities",
-            items: ["auto-heal", "command-annotations", "har-log-viewer", "selenium-geolocation-capabilities", "selenium-mask-your-data", "selenium-add-test-meta-data"],
+            items: [
+              "auto-heal",
+              "command-annotations",
+              "har-log-viewer",
+              "selenium-geolocation-capabilities",
+              "selenium-mask-your-data",
+              "selenium-add-test-meta-data",
+            ],
           },
         ],
       },
       {
         type: "doc",
         label: "Automation MCP Server",
-        id: 'automation-mcp-server',
+        id: "automation-mcp-server",
       },
       {
         type: "category",
@@ -2344,10 +2356,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Java",
-            items: [
-              "java-with-playwright",
-              "junit-with-playwright"
-            ],
+            items: ["java-with-playwright", "junit-with-playwright"],
           },
           {
             type: "category",
@@ -2356,24 +2365,20 @@ module.exports = {
             items: [
               "javascript-with-playwright",
               "jest-with-playwright",
-              "typescript-with-playwright"
+              "typescript-with-playwright",
             ],
           },
           {
             type: "category",
             collapsed: true,
             label: "C#",
-            items: [
-              "csharp-with-playwright",
-            ],
+            items: ["csharp-with-playwright"],
           },
           {
             type: "category",
             collapsed: true,
             label: "Python",
-            items: [
-              "python-with-playwright",
-            ],
+            items: ["python-with-playwright"],
           },
         ],
       },
@@ -2458,7 +2463,7 @@ module.exports = {
     [
       "app-automation-app-sim",
       "virtual-device-flutter-apps",
-      "emulator-simulator-avaiable-devices"
+      "emulator-simulator-avaiable-devices",
     ],
   ],
 
@@ -2571,8 +2576,11 @@ module.exports = {
               {
                 type: "category",
                 collapsed: true,
-                label: 'Application',
-                items: ['application-setup-via-api','application-setup-via-gui'],
+                label: "Application",
+                items: [
+                  "application-setup-via-api",
+                  "application-setup-via-gui",
+                ],
               },
               "desired-capabilities-in-appium",
               "supported-appium-versions",
@@ -2608,7 +2616,6 @@ module.exports = {
               "appium-custom-header",
               "basic-authentication-for-web-automation",
               "live-debug-in-app-automation",
-              
             ],
           },
           {
@@ -2658,9 +2665,7 @@ module.exports = {
           type: "doc",
           id: "espresso-supported-capabilities",
         },
-        items: [
-          "espresso-env-variables-settings",
-        ],
+        items: ["espresso-env-variables-settings"],
       },
       {
         type: "doc",
@@ -2703,8 +2708,8 @@ module.exports = {
       {
         type: "doc",
         label: "Espresso Mock Server",
-        id: "espresso-mock-server"
-      }
+        id: "espresso-mock-server",
+      },
     ],
   ],
 
@@ -2764,9 +2769,9 @@ module.exports = {
 
   FlutterTestingSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/',
+      type: "link",
+      label: "Back",
+      href: "/docs/",
       customProps: {
         className: "back-to-main-menu",
       },
@@ -2808,7 +2813,12 @@ module.exports = {
           type: "doc",
           id: "smart-visual-regression-testing",
         },
-        items: ["smartui-running-your-first-project", "smartui-guided-walkthrough", "smartui-cli-git-branching-strategy", "smartui-cli-env-variables"],
+        items: [
+          "smartui-running-your-first-project",
+          "smartui-guided-walkthrough",
+          "smartui-cli-git-branching-strategy",
+          "smartui-cli-env-variables",
+        ],
       },
       {
         type: "doc",
@@ -2890,7 +2900,7 @@ module.exports = {
                   "smartui-cypress-sdk",
                   "smartui-appium-sdk",
                   "smartui-wdio-sdk",
-                ]
+                ],
               },
               {
                 type: "category",
@@ -2901,8 +2911,8 @@ module.exports = {
                   "smart-ui-cypress",
                   "playwright-visual-regression",
                   "puppeteer-visual-regression",
-                  "smartui-k6-setup"
-                ]
+                  "smartui-k6-setup",
+                ],
               },
               {
                 type: "category",
@@ -2913,9 +2923,9 @@ module.exports = {
                   "smartui-app-sdk",
                   "espresso-visual-regression",
                   "xcui-visual-regression",
-                ]
+                ],
               },
-            ]
+            ],
           },
           {
             type: "category",
@@ -2932,7 +2942,7 @@ module.exports = {
               "smartui-shadow-dom",
               "smartui-cli-exec",
               "smartui-sdk-capabilities",
-              
+
               {
                 type: "category",
                 collapsed: true,
@@ -2942,8 +2952,8 @@ module.exports = {
                   "smartui-handle-dynamic-data",
                   "smartui-handle-videos",
                   "smartui-handle-lazy-loading",
-                  "smartui-handle-sticky-elements"
-                ]
+                  "smartui-handle-sticky-elements",
+                ],
               },
             ],
           },
@@ -2986,20 +2996,17 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Component Testing",
-            items: [
-              "smart-ui-storybook",
-              "smartui-git-branching-strategy"
-            ]
+            items: ["smart-ui-storybook", "smartui-git-branching-strategy"],
           },
           "smartui-pdf-comparison",
           "smartui-draw-on-ui",
-        ]
+        ],
       },
       {
         type: "category",
         collapsed: true,
         label: "Difference Options",
-        items: ["smartui-smartignore","smartui-layout-testing"]
+        items: ["smartui-smartignore", "smartui-layout-testing"],
       },
       {
         type: "category",
@@ -3010,9 +3017,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Run Visual Tests on PRs",
-            items: [
-              "smartui-github-app-integration",
-            ],
+            items: ["smartui-github-app-integration"],
           },
           "smartui-slack-integration",
           {
@@ -3027,10 +3032,10 @@ module.exports = {
               "smartui-with-azure",
               "smartui-with-buildkite",
               "smartui-with-circle-ci",
-              "smartui-with-travis-ci"
+              "smartui-with-travis-ci",
             ],
           },
-        ]
+        ],
       },
       {
         type: "category",
@@ -3041,8 +3046,8 @@ module.exports = {
           "test-settings-options",
           "html-dom-smartui-options",
           "smart-ui-build-options",
-          "smartui-multiple-projects-per-repo"
-        ]
+          "smartui-multiple-projects-per-repo",
+        ],
       },
     ],
   ],
@@ -3089,7 +3094,7 @@ module.exports = {
             "analytics-modules-manual-test-overview",
             "analytics-modules-smartui-analytics",
             "analytics-modules-accessibility-widgets",
-            "analytics-modules-test-manager-widgets"
+            "analytics-modules-test-manager-widgets",
           ],
         },
         {
@@ -3316,7 +3321,7 @@ module.exports = {
       "dedicated-proxy",
       "charles-proxy",
       "tunnel-allowHost-wildcard-support",
-      "tunel-release-notes"
+      "tunel-release-notes",
     ],
   ],
 
@@ -3414,10 +3419,10 @@ module.exports = {
         id: "tunnel-security",
       },
       {
-        type: 'doc',
+        type: "doc",
         label: "Access Management - KaneAI <> Test Manager",
-        id: "kaneai-test-manager-access-management"
-      }
+        id: "kaneai-test-manager-access-management",
+      },
     ],
   ],
 
