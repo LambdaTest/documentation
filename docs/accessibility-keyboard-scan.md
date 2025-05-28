@@ -2,7 +2,7 @@
 id: accessibility-keyboard-scan
 title: Keyboard Accessibility Scan (Beta)
 hide_title: false
-sidebar_label: Keybaord Scan
+sidebar_label: Keyboard Scan
 description: Keyboard Accessibility Scanning tools highlight tab stops sequentially, making tab order identification effortless. Users can review the results, mark any overlooked interactive elements, and generate detailed keyboard accessibility reports.
 keywords:
   - LambdaTest
@@ -55,7 +55,7 @@ The Assistive Keyboard Accessibility Test combines automated tab simulation with
 
 1. Navigate to the web page you want to test
 2. Open the Accessibility Devtools from your chrome devtools option
-3. Under Assitive Tests, select Keyboard Scan
+3. Under Assistive Tests, select Keyboard Scan
 
 **Step 2: Select Test Scope**
 
