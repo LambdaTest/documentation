@@ -1117,6 +1117,7 @@ module.exports = {
           "kaneai-hyperexecute-test-run-execution",
           "kaneai-ci-cd-automation",
           "test-runs-configurations",
+
         ],
       },
       {
@@ -1594,7 +1595,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Scanning Alternatives",
+            label: "Scanning Methods",
             items: [
               {
                 type: "doc",
@@ -1615,6 +1616,11 @@ module.exports = {
                 type: "doc",
                 label: "Multi Page Scanner",
                 id: "accessibility-testing-multi-page-scanner",
+              },
+              {
+                type: "doc",
+                label: "Keybaord Scan",
+                id: "accessibility-keyboard-scan",
               },
             ],
           },
@@ -1685,11 +1691,13 @@ module.exports = {
                 ],
               },
             ],
+
           },
           {
             type: "doc",
             label: "Android",
             id: "accessibility-android-test",
+
           },
           {
             type: "doc",
@@ -1715,6 +1723,7 @@ module.exports = {
         type: "doc",
         label: "Accessibility MCP Server",
         id: "accessibility-mcp-server",
+
       },
       {
         type: "doc",
@@ -2841,6 +2850,7 @@ module.exports = {
         items: [
           "smartui-running-your-first-project",
           "smartui-guided-walkthrough",
+          "smartui-cli-git-branching-strategy",
           "smartui-cli-env-variables",
         ],
       },
