@@ -1609,6 +1609,11 @@ module.exports = {
                 label: "Multi Page Scanner",
                 id: "accessibility-testing-multi-page-scanner",
               },
+              {
+                type: "doc",
+                label: "Keybaord Scan",
+                id: "accessibility-keyboard-scan",
+              },
             ],
           },
           {
