@@ -856,6 +856,21 @@ module.exports = {
               },
             ]
           },
+          {
+            type: "category",
+            collapsed: true,
+            label: "MCP Releases",
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "May, 2025",
+                items: [
+                  'hyperexecute-mcp-server-release-notes',
+                ]
+              },
+            ]
+          },
 
           // 2025 releases
           {
