@@ -1834,6 +1834,7 @@ module.exports = {
             label: "Bulk Actions",
             items: [
               "copy-and-move-support-for-test-cases",
+              "update-fields",
               "export-test-cases",
             ],
           },
