@@ -43,6 +43,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ></script>
 
 # Getting Started with HyperExecute MCP Server
+
 HyperExecute MCP Server is an AI-native test orchestration platform that dramatically simplifies and accelerates your automated testing workflow. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your testing environment, reducing setup time from hours to minutes.
 
 ## Watch HyperExecute MCP in Action​
@@ -74,6 +75,7 @@ Here are the key benefits of using HyperExecute MCP Server:
 ## Connecting to HyperExecute MCP Server
 
 ### Connecting with Cline
+
 Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant that integrates directly into your development workflow. It provides intelligent code suggestions and documentation assistance, and now, with MCP support, you can interface with external tools like HyperExecute to enhance your testing capabilities. Cline offers natural language interactions with your codebase, allowing you to simply describe what you need rather than manually configuring everything.
 
 #### Installing Cline in VS Code:
@@ -82,7 +84,7 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 **Step 2:** Click on the Extensions icon in the Activity Bar on the side of the window (or press `Ctrl+Shift+X`).<br />
 **Step 3:** Search for **Cline** in the Extensions Marketplace.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/installing-cline.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/installing-cline.webp').default} alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
 
 **Step 4:** Click **Install** on the Cline – The Collaborative AI Coder extension.<br />
 **Step 5:** Once installed, you'll see the Cline icon in your VS Code sidebar.<br />
@@ -95,14 +97,36 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 
 **Step 1:** In VS Code, click on the Cline icon in the sidebar to open the Cline panel.<br />
 **Step 2:** Under the **MCP Servers** section, click **Remote Servers**.
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/vs-code-config.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/vs-code-config.webp').default} alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
 
-**Step 3:** Add Server Name as **MCP-HyperExecute**.<br />
-**Step 4:** Enter the following URL in the server URL field: `http://mcp.lambdatest.com/hyperexecute?&username=[your-lt-username]&accessKey=[your-lt-access-key]` <br />
+**Step 3:** Click on **Edit Configuration**.<br />
+**Step 4:** Enter the following server configiration
+
+```json
+{
+  "mcpServers": {
+    "mcp-hyper-stage": {
+      "disabled": false,
+      "timeout": 60,
+      "command": "npx",
+      "args": [
+        "mcp-remote@latest",
+        "https://mcp.lambdatest.com/mcp",
+        "--header",
+        "username:<LT_USERNAME>",
+        "--header",
+        "accessKey:<LT_ACCESSKEY>"
+      ],
+      "transportType": "streamableHTTP"
+    }
+  }
+}
+```
+
 **Step 5:** Replace [your-lt-username] and [your-lt-access-key] with your LambdaTest credentials. <br />
-**Step 6:** Click on **Add Server**. 
+**Step 6:** Click on **Add Server**.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/mcp-add-server.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/mcp-add-server.webp').default} alt="automation-dashboard" width="1920" height="868" className="doc_img"/>
 
 ### Interacting with HyperExecute MCP Server
 
@@ -112,6 +136,7 @@ Once connected, you can start using Cline to interact with the HyperExecute MCP 
 **Step 2:** Open the Cline panel.<br />
 **Step 3:** Type the following prompt: `Analyze the project and create a HyperExecute YAML file using MCP HyperExecute server.`<br />
 **Step 4:** Cline will:
+
 - analyze your project structure.
 - Identify your testing framework and test files.
 - Generate appropriate test runner commands.
