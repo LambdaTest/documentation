@@ -1317,6 +1317,7 @@ module.exports = {
           "spirateam-integration",
           "assembla-integration",
           "taiga-integration",
+          "servicenow-integration",
         ],
       },
       {
