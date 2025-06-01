@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-mcp-server-release-notes
-title: Version 1.131.0
+title: Version 1.0.0
 hide_title: false
-sidebar_label: Version 1.131.0
-description: Version 1.131.0
+sidebar_label: Version 1.0.0
+description: Version 1.0.0
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
