@@ -49,17 +49,8 @@ LambdaTest provides you with the Command Logs Analytics feature to analyze your 
 
 ## How does the Command Error Logs Analytics work?
 
-#### Selenium Automation Tests <NewTag value="BETA" bgColor="#ffec02" color="#000" />
+#### Selenium Automation Tests
 Command Logs Analytics uses the WebDriver command logs to analyze your failed commands or steps. The WebDriver commands logs are the steps which are executed by the test script during the test execution. To know more about the WebDriver command logs, you can refer to the [W3C Command Logs](https://www.w3.org/TR/webdriver2/#endpoints).
-
-<a 
-href="https://www.lambdatest.com/test-intelligence" 
-target="_blank" 
-style={{background: "#1E8287", color: "#fff", fonWeight:"bolder", padding: "8px", borderRadius:"5px", marginBottom:"32px"}} 
-type="button" 
-> 
-Click here to Join Waitlist 
-</a>
 
 :::note Command Logs Analytics
 To read more about the Command Logs Analytics, you can refer to the [documentation](/docs/analytics-modules-test-intelligence-command-logs-analytics/) here.
