@@ -49,6 +49,12 @@ HyperExecute is an AI Native Test Orchestration Cloud Platform, enabling test au
 |----------------|--------------|
 | [Version 0.2.249](/support/docs/hyperexecute-cli-release-notes-0-2-249) | January 13, 2025|
 
+### MCP releases
+#### May, 2025
+| Release Number | Release Date |
+|----------------|--------------|
+| [Version 1.0.0](/support/docs/hyperexecute-mcp-server-release-notes-1-0-0) | May 28, 2025|
+
 ### 2025 releases
 #### April, 2025
 | Release Number | Release Date |
