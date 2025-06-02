@@ -861,6 +861,21 @@ module.exports = {
             ],
           },
 
+          // MCP Server Release Notes
+          {
+            type: "category",
+            collapsed: true,
+            label: "MCP Releases",
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "May, 2025",
+                items: ["hyperexecute-mcp-server-release-notes-1-0-0"],
+              },
+            ],
+          },
+
           // 2025 releases
           {
             type: "category",
@@ -1317,6 +1332,7 @@ module.exports = {
           "spirateam-integration",
           "assembla-integration",
           "taiga-integration",
+          "servicenow-integration",
         ],
       },
       {
@@ -2498,6 +2514,7 @@ module.exports = {
       "app-automation-app-sim",
       "virtual-device-flutter-apps",
       "emulator-simulator-avaiable-devices",
+      "camera-image-injection-vd",
     ],
   ],
 
@@ -3395,29 +3412,81 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Testing Locally Hosted Pages",
+        label: "Getting started with Tunnel",
+        link: {
+          type: "doc",
+          id: "lambdatest-tunnel"
+        },
         items: [
           "testing-locally-hosted-pages",
-          "local-testing-macos",
-          "local-testing-windows",
           "local-testing-linux",
-          "lambda-tunnel-modifiers",
-          "underpass-tunnel-application",
-          "advanced-tunnel-features",
-          "environment-variables-supported-by-lambda-tunnel",
-          "maven-tunnel-for-locally-hosted-web-applications",
+          "local-testing-windows",
+          "local-testing-macos",
+          "real-time-locally-hosted-pages",
+          "testing-apps-locally",
         ],
       },
-      "sharing-lambda-tunnel",
-      "docker-tunnel",
-      "troubleshooting-lambda-tunnel",
-      "set-open-file-limit-while-using-proxy",
-      "load-balancing-in-lambda-tunnel",
-      "dedicated-proxy",
-      "charles-proxy",
-      "tunnel-allowHost-wildcard-support",
-      "tunel-release-notes",
-    ],
+      {
+        type: "category",
+        collapsed: true,
+        label: "Configuration and Modifiers",
+        items: [
+          "lambda-tunnel-modifiers",
+          "advanced-tunnel-features",
+          "environment-variables-supported-by-lambda-tunnel",
+        ],
+      },
+      {
+        type: "doc",
+        label: "GUI Application: Underpass",
+        id: "underpass-tunnel-application",
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Integration and Automation",
+        items: [
+          "hyperexecute-how-to-configure-tunnel",
+          "smartui-sdk-tunnel",
+          "maven-tunnel-for-locally-hosted-web-applications",
+          "integrate-lambdatest-extension-with-azure-pipelines"
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Docker Integration",
+        items: [
+          "docker-tunnel",
+          "docker-tunnel-extension",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Advanced Features",
+        items: [
+          "sharing-lambda-tunnel",
+          "load-balancing-in-lambda-tunnel",
+          "charles-proxy",
+          "dedicated-proxy",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Troubleshooting",
+        items: [
+          "troubleshooting-lambda-tunnel",
+          "set-open-file-limit-while-using-proxy",
+        ],
+      },
+      {
+        type: "doc",
+        label: "Release Notes",
+        id: "tunel-release-notes",
+      }
+    ], 
   ],
 
   TestManagementSidebar: [

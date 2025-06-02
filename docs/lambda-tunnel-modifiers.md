@@ -48,13 +48,13 @@ LambdaTest Tunnel provides several command-line arguments that you can leverage 
 
 This document will help you understand all the modifiers/arguments used with LambdaTest Tunnel to help you test your locally hosted web pages.
 
-| FLAG (SHORT) | FLAG (LONG)     | DESCRIPTION                                                                                                                                         | TYPE    |
-| :----------- | :-------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------- | :------ |
-|            | --allowHosts        |   Comma separated list of hosts to route via tunnel. Everything else will be routed via Internet. <br /> Learn how to use the [wildcard expressions](https://www.lambdatest.com/support/docs/tunnel-allowHost-wildcard-support/) in the `--allowHosts` flag  | String  |
-|              | --bypassHosts   | Comma separated list of hosts to bypass from tunnel. These will be routed via internet.                                                             | String  |
+| FLAG (SHORT) | FLAG (LONG) | DESCRIPTION | TYPE |
+|--------------|-------------|-------------|------|
+|| --allowHosts | Comma separated list of hosts to route via tunnel. Everything else will be routed via Internet. <br /> Learn how to use the [wildcard expressions](https://www.lambdatest.com/support/docs/tunnel-allowHost-wildcard-support/) in the `--allowHosts` flag  | String  |
+| | --bypassHosts | Comma separated list of hosts to bypass from tunnel. These will be routed via internet.                                                             | String  |
 |              | --callbackURL   | Callback URL for tunnel status.                                                                                                                     | String  |
 | -c           | --config        | Path of the config file to use                                                                                                                      | String  |
-|            | --clientCert        |  mTLS Client Certificate filepath.  | String  |
+|            | --clientCert      |  mTLS Client Certificate filepath.  Only `pfx` file type is supported| String  |
 |            | --clientKey       |  mTLS Client Key filepath.  | String  |
 |            | --mTLSHosts       | Comma separated list of mTLS hosts.  | String  |
 | -d           | --dir           | Specify the Local Directory that will be server by a file server on port 33000                                                                      | String  |
