@@ -53,18 +53,21 @@ Manual accessibility testing is crucial to ensure that your mobile apps and webs
 
 LambdaTest's Live Screen Reader feature empowers you to perform manual accessibility testing on real Android devices, allowing you to navigate through app elements with spoken descriptions of the UI—similar to the [Google TalkBack](https://support.google.com/accessibility/android/topic/3529932?hl=en&ref_topic=9078845) functionality. This feature enables comprehensive accessibility testing to ensure compliance with WCAG standards.
 
-> This feature is currently in **Beta**
 
 
 ## Accessing Screen Reader in Real Device App Testing
 
-**Step 1:** Click on the **Real Devices** > **App Testing**
+**Step 1:** Navigate to **Real Devices** > **App Testing**.
 
-**Step 2:** Select your required device and upload your application and click on Start button.
+**Step 2:** Select the app you want to test and choose a device. Once selected, click on the **Start button** to launch the session.
 
-**Step 3:** Click on the **screen reader** option from toolbar and use toggle to enable and disable talkBack feature on your device.
+> Make sure the device supports accessibility features — look for the **Accessibility icon** next to the device name.
 
-<img loading="lazy" src={require('../assets/images/real-device-app-testing/talkback.png').default} className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/Acessiblity_Phone_selection.png').default} className="doc_img"/>
+
+**Step 3:** After the session starts, open the **Screen Reader** option from the sidebar and use the **toggle to enable or disable the TalkBack** functionality.
+
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/Accessiblity_TalkBack_toggle.png').default} className="doc_img"/>
 
 ## Supported Devices
 
