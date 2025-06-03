@@ -1,5 +1,5 @@
 ---
-id: tunel-release-notes
+id: tunnel-release-notes
 title: Tunnel Client Release Notes
 hide_title: false
 sidebar_label: Release Notes
@@ -9,9 +9,9 @@ keywords:
   - LambdaTest Tunnel help
   - LambdaTest Tunnel documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/tunel-release-notes/
+url: https://www.lambdatest.com/support/docs/tunnel-release-notes/
 site_name: LambdaTest
-slug: tunel-release-notes/
+slug: tunnel-release-notes/
 ---
 
 <script type="application/ld+json"
@@ -38,7 +38,7 @@ slug: tunel-release-notes/
     }}
 ></script>
 
-## Version 3.2.11 (2nd February 2024)
+## Version 3.2.11 (2nd February 2025)
 - **Support for Wildcard in `allowHosts` and `bypassHosts`**
   - Added the ability to use wildcards in the `allowHosts` and `bypassHosts` configurations, providing more flexibility in defining tunnel access rules.
 
