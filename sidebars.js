@@ -3492,7 +3492,7 @@ module.exports = {
       {
         type: "doc",
         label: "Release Notes",
-        id: "tunel-release-notes",
+        id: "tunnel-release-notes",
       }
     ], 
   ],
