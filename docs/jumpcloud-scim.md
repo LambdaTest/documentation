@@ -30,7 +30,7 @@ slug: jumpcloud-scim
           "@type": "ListItem",
           "position": 3,
           "name": "Scim",
-          "item": "https://www.lambdatest.com/support/docs/jumpcloud-scim"
+          "item": "https://www.lambdatest.com/support/docs/jumpcloud-scim/"
         }]
       })
     }}

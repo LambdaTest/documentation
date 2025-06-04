@@ -37,7 +37,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "Languages and Framework",
-          "item": "https://www.lambdatest.com/support/docs/smartui-mcp-server"
+          "item": "https://www.lambdatest.com/support/docs/smartui-mcp-server/"
         }]
       })
     }}
