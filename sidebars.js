@@ -1742,8 +1742,13 @@ module.exports = {
         items: [
           {
             type: "doc",
-            label: "Automation",
+            label: "Manual",
             id: "accessibility-android-test",
+          },
+          {
+            type: "doc",
+            label: "Automation",
+            id: "accessibility-android-automation-test",
           },
         ]
       },
