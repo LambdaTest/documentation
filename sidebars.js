@@ -1785,9 +1785,14 @@ module.exports = {
             ],
 =======
             type: "doc",
-            label: "Automation",
+            label: "Manual",
             id: "accessibility-android-test",
 >>>>>>> 8e84543e (accessibility sidebar)
+          },
+          {
+            type: "doc",
+            label: "Automation",
+            id: "accessibility-android-automation-test",
           },
         ]
       },
