@@ -3179,6 +3179,7 @@ module.exports = {
         "analytics-widget-drill-down-export",
         "analytics-widget-filter-by-regex",
         "analytics-filter-by-custom-data",
+        "analytics-dashboard-settings"
       ],
     },
     {
