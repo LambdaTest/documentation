@@ -55,9 +55,9 @@ LambdaTest offers a powerful Accessibility Scanner for native Android apps, inte
 - From the left-hand menu, click on Accessibility.
 - Select the **App Scanner** tab under the Accessibility tab.
 
-### Step 2: Uplaod your Application
-- To start accessibility testing, you need to uplaod your application first.
-- Click on the **Uplaod** button to upload it from your local system.
+### Step 2: Upload your Application
+- To start accessibility testing, you need to upload your application first.
+- Click on the **Upload** button to upload it from your local system.
 - You can also install via Playstore or Firebase or upload via URL.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/app-upload.png').default} alt="Image" className="doc_img img_center"/>
@@ -69,13 +69,13 @@ LambdaTest offers a powerful Accessibility Scanner for native Android apps, inte
 ### Step 4: Scan the App Screens
 - Once the session is started and your app is launched on the device, click on the **Start Scanning** button to start the scanning of current page.
 <img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/1.png').default} alt="Image" className="doc_img img_center"/>
-
+<br />
 - Interact with your app just like a real user — navigate through different screens, buttons, and views.
 - The scanner will analyze the current screen and return a list of detected accessibility issues.
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/2.png').default} alt="Image" className="doc_img img_center"/>
 
-### Step 4: Review Accessibility Issues
+### Step 5: Review Accessibility Issues
 After scanning, you’ll see a categorized list of issues based on severity (Critical, Serious, Moderate, Minor). Each issue includes:
 - Description of the accessibility problem.
 - List of affected element.
@@ -85,7 +85,7 @@ Continue testing by navigating to additional screens in the app and scanning the
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/3.png').default} alt="Image" className="doc_img img_center"/>
 
-### Step 5: Accessibility Report
+### Step 6: Accessibility Report
 After completion of your scanning, click on the **Save Test** button.
 - Go to the **Manual Reports** tab under the Accessibility tab.
 - Select your desired report
