@@ -3,7 +3,7 @@ id: hyperexecute-mcp-server-release-notes-1-0-0
 title: Version 1.0.0
 hide_title: false
 sidebar_label: Version 1.0.0
-description: Version 1.0.0
+description: Check out the release notes for HyperExecute MCP Server 1.0.0, introducing new features, improvements, and bug fixes for streamlined testing.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help

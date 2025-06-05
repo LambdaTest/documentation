@@ -3,7 +3,7 @@ id: tunnel-release-notes
 title: Tunnel Client Release Notes
 hide_title: false
 sidebar_label: Release Notes
-description: Stay updated on the latest HyperExecute releases. View detailed release notes, including new features, bug fixes, and improvements for our AI Native test orchestration platform.
+description: Get the latest release notes for LambdaTest Tunnel, detailing the latest features, fixes, and improvements for secure and seamless testing.
 keywords:
   - LambdaTest Tunnel
   - LambdaTest Tunnel help
