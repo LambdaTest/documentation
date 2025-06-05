@@ -1750,6 +1750,23 @@ module.exports = {
             label: "Automation",
             id: "accessibility-android-automation-test",
           },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Native App Accessibility Rules",
+            items: [
+              {
+                type: "doc",
+                label: "Android",
+                id: "accessibility-android-rules",
+              },
+              {
+                type: "doc",
+                label: "iOS",
+                id: "accessibility-ios-rules",
+              },
+            ]
+          },
         ]
       },
       {
