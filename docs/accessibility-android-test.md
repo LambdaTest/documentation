@@ -55,21 +55,25 @@ LambdaTest offers a powerful Accessibility Scanner for native Android apps, inte
 - From the left-hand menu, click on Accessibility.
 - Select the **App Scanner** tab under the Accessibility tab.
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/app-scanner.gif').default} alt="Image" className="doc_img"/>
+### Step 2: Uplaod your Application
+- To start accessibility testing, you need to uplaod your application first.
+- Click on the **Uplaod** button to upload it from your local system.
+- You can also install via Playstore or Firebase or upload via URL.
 
-### Step 2: Launch Manual App Testing
-- Choose the target Android device and upload/select your application.
-- Click Start to launch the manual testing session on the selected device.
+<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/app-upload.png').default} alt="Image" className="doc_img img_center"/>
 
-### Step 3: Scan the App Screens
-Once inside the manual testing environment:
+### Step 3: Launch Manual App Testing
+- Choose the target Android device and select your application.
+- Click on the **Start** button to launch the manual testing session on the selected device.
+
+### Step 4: Scan the App Screens
+- Once the session is started and your app is launched on the device, click on the **Start Scanning** button to start the scanning of current page.
+<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/1.png').default} alt="Image" className="doc_img img_center"/>
 
 - Interact with your app just like a real user — navigate through different screens, buttons, and views.
-- As you reach a screen you want to test for accessibility:
-- Open the Accessibility tab from the left control panel.
-- Click on Scan Page.
+- The scanner will analyze the current screen and return a list of detected accessibility issues.
 
-The scanner will analyze the current screen and return a list of detected accessibility issues.
+<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/2.png').default} alt="Image" className="doc_img img_center"/>
 
 ### Step 4: Review Accessibility Issues
 After scanning, you’ll see a categorized list of issues based on severity (Critical, Serious, Moderate, Minor). Each issue includes:
@@ -79,9 +83,7 @@ After scanning, you’ll see a categorized list of issues based on severity (Cri
 
 Continue testing by navigating to additional screens in the app and scanning them one-by-one. This helps ensure that your entire app meets accessibility standards across all flows and use cases.
 
-<video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/images/accessibility-testing/app-automation/maunal-app-accessiblity.mp4').default} type="video/mp4" />
-</video>
+<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/3.png').default} alt="Image" className="doc_img img_center"/>
 
 ### Step 5: Accessibility Report
 After completion of your scanning, click on the **Save Test** button.
@@ -89,6 +91,4 @@ After completion of your scanning, click on the **Save Test** button.
 - Select your desired report
 - You can also share the report over email, export it in JSON, CSV and PDF format, and also you create an issue as well for that report.
 
-<video class="right-side" width="100%" controls id="vid">
-<source src= {require('../assets/images/accessibility-testing/app-automation/manual-app-accessibility-report.mp4').default} type="video/mp4" />
-</video>
+<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/4.png').default} alt="Image" className="doc_img img_center"/>
