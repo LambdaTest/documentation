@@ -3,7 +3,7 @@ id: hyperexecute-release-notes
 title: HyperExecute Release Notes
 hide_title: false
 sidebar_label: Release Notes
-description: Stay updated on the latest HyperExecute releases. View detailed release notes, including new features, bug fixes, and improvements for our AI Native test orchestration platform.
+description: See the release notes for HyperExecute to stay informed about new features, fixes, and enhancements that improve your testing performance.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help

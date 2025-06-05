@@ -2,7 +2,7 @@
 id: analytics-test-case-insights
 title: Test Case Insights
 sidebar_label: Test Case Insights
-description: Analyze the test case level insights of your test automation execution on LambdaTest.
+description: Gain insights into test case execution and performance with LambdaTest's analytics to optimize your testing strategy and enhance software quality.
 keywords:
   - analytics
 url: https://www.lambdatest.com/support/docs/analytics-test-case-insights/
