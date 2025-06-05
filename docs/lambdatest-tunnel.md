@@ -3,7 +3,7 @@ id: lambdatest-tunnel
 title: Getting started with LambdaTest-Tunnel
 hide_title: false
 sidebar_label: Getting started with LambdaTest-Tunnel
-description: Test your locally hosted web applications for cross browser compatibility across 3000+ browser and OS combinations with LambdaTest.
+description: LambdaTest Tunnel enables secure testing of locally hosted web apps on cloud-based real machines, providing access to various browsers and devices for seamless testing.
 keywords:
   - test locally hosted web apps online
   - free cross browser testing tool
