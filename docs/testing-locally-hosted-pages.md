@@ -3,7 +3,7 @@ id: testing-locally-hosted-pages
 title: Test Locally Hosted Web Pages
 hide_title: false
 sidebar_label: Testing Locally Hosted Pages
-description: Test your locally hosted web applications for cross browser compatibility across 3000+ browser and OS combinations with LambdaTest.
+description: LambdaTest Tunnel securely connects your local machine to cloud-based real devices for testing locally hosted web apps, with multiple connectivity options like SSH and TCP.
 keywords:
   - test locally hosted web apps online
   - free cross browser testing tool

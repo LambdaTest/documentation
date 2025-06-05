@@ -3,7 +3,7 @@ id: daily-usage-limit
 title: Daily Usage Limit Per Organization | LambdaTest
 hide_title: true
 sidebar_label: Daily Usage Limit Per Organization
-description: To avoid over-exploitation of LambdaTest and promote best practices, we have added a capacity constraint on the total test time that can be used by an organization in a day.
+description: To ensure fair usage and best practices, LambdaTest enforces a daily capacity limit on the total test time for each organization.
 keywords:
   - over-exploitation
   - lambdatest best practices

@@ -3,7 +3,7 @@ id: kane-ai-assertions
 title: KaneAI - Assertions
 hide_title: false
 sidebar_label: Assertions
-description: Learn how to define and apply soft and hard assertions on your test code executed via KaneAI
+description: KaneAI's assertion feature enables hard assertions to stop tests on failure, with detailed logs, while allowing soft assertions for selective test continuation.
 keywords:
   - lambdatest automation
   - lambdatest kaneai
