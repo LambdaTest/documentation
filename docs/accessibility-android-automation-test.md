@@ -56,6 +56,8 @@ Before getting started, ensure the following:
 - Appium-Python-Client installed
 - Access to a valid Android device on LambdaTest (real or virtual).
 
+> This will work for both Android and iOS applications.
+
 ## Step 1: Setup the Environment Variables
 
 You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [LambdaTest Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
@@ -197,4 +199,8 @@ Run the following command in the directory where your project has been saved to 
 python3 test.py
 ```
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/5.png').default} alt="automation-dashboard" className="doc_img"/>
+## Accessibility Dashboard and Reporting
+You can check the complete detailed report on the [Accessibility Dashboard](https://accessibility.lambdatest.com/automation)
+
+<img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/6.png').default} alt="automation-dashboard" className="doc_img"/>
+

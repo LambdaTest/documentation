@@ -84,7 +84,7 @@ Accessibility testing ensures that your product is usable by people with disabil
   </a>
     <a href="/support/docs/accessibility-test-scheduling">
     <div className="support_inners">
-      <h3>Test Scheduling</h3>
+      <h3>Sitemap Scheduling</h3>
       <p>Streamline your accessibility testing by automating checks and generating comprehensive reports.</p>
     </div>
   </a>
