@@ -3,7 +3,7 @@ id: kane-ai-supported-assertions
 title: KaneAI - Supported Assertions
 hide_title: false
 sidebar_label: Supported Assertions
-description: Learn how to define and apply soft and hard assertions on your test code executed via KaneAI
+description: KaneAI supports a wide range of assertions to validate test cases efficiently. Here's an overview of the supported and unsupported assertions.
 keywords:
   - lambdatest automation
   - lambdatest kaneai

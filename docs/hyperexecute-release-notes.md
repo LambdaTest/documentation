@@ -3,7 +3,7 @@ id: hyperexecute-release-notes
 title: HyperExecute Release Notes
 hide_title: false
 sidebar_label: Release Notes
-description: Stay updated on the latest HyperExecute releases. View detailed release notes, including new features, bug fixes, and improvements for our AI Native test orchestration platform.
+description: See the release notes for HyperExecute to stay informed about new features, fixes, and enhancements that improve your testing performance.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -48,6 +48,12 @@ HyperExecute is an AI Native Test Orchestration Cloud Platform, enabling test au
 | Release Number | Release Date |
 |----------------|--------------|
 | [Version 0.2.249](/support/docs/hyperexecute-cli-release-notes-0-2-249) | January 13, 2025|
+
+### MCP releases
+#### May, 2025
+| Release Number | Release Date |
+|----------------|--------------|
+| [Version 1.0.0](/support/docs/hyperexecute-mcp-server-release-notes-1-0-0) | May 28, 2025|
 
 ### 2025 releases
 #### April, 2025

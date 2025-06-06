@@ -80,13 +80,8 @@ partialReports:
   - location: reports/json
     type: json
     frameworkName: extent-native
-    email:
-        to:
-          - johndoe@example.com
+    
   - location: target/surefire-reports
     type: html
     frameworkName: testng
-    email:
-        to:
-          - johndoe@example.com
 ```

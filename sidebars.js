@@ -1,5 +1,4 @@
 module.exports = {
-
   HyperExecuteSidebar: [
     {
       type: "link",
@@ -49,7 +48,7 @@ module.exports = {
           "deep-dive-into-hyperexecute-yaml",
           "hyperexecute-snooper",
           "hyperexecute-inherit-config",
-          "hyperexecute-yaml-version0.2"
+          "hyperexecute-yaml-version0.2",
         ],
       },
       {
@@ -126,7 +125,8 @@ module.exports = {
                 type: "doc",
                 label: "Test Artifact Management",
                 id: "hyperexecute-artifacts-url",
-              },              {
+              },
+              {
                 type: "doc",
                 label: "HyperExecute Job Reports ",
                 id: "hyperexecute-reports",
@@ -321,7 +321,7 @@ module.exports = {
               "hyperexecute-appium-testing",
               "hyperexecute-webapp-appium-testing",
               "hyperexecute-appium-virtual-device",
-              "hyperexecute-emu-simu-devices-list"
+              "hyperexecute-emu-simu-devices-list",
             ],
           },
           {
@@ -495,6 +495,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "Postman",
+                id: "hyperexecute-postman-collection-integration",
+              },
+              {
+                type: "doc",
                 label: "Provar",
                 id: "hyperexecute-provar-integration",
               },
@@ -593,7 +598,10 @@ module.exports = {
                     type: "category",
                     label: "Selenium",
                     collapsed: true,
-                    items: ["hyperexecute-smart-ui-sdk-selenium-javascript", "hyperexecute-smart-ui-sdk-selenium-csharp"],
+                    items: [
+                      "hyperexecute-smart-ui-sdk-selenium-javascript",
+                      "hyperexecute-smart-ui-sdk-selenium-csharp",
+                    ],
                   },
                   {
                     type: "doc",
@@ -704,7 +712,7 @@ module.exports = {
               "hyperexecute-how-to-perform-dependent-test-based-discovery",
               "hyperexecute-how-to-perform-group-based-test-discovery-in-testng",
               "hyperexecute-how-to-resolve-version-conflict",
-              "hyperexecute-org-product-preferences"
+              "hyperexecute-org-product-preferences",
             ],
           },
           {
@@ -721,7 +729,7 @@ module.exports = {
               "hyperexecute-build-mobile-apps-using-tools",
               "hyperexecute-utilizing-custom-libraries",
               "hyperexecute-supported-languages-and-packages",
-              "hyperexecute-test-chains"
+              "hyperexecute-test-chains",
             ],
           },
           {
@@ -761,7 +769,7 @@ module.exports = {
               "error-categorization-report",
               "junit-xml-report",
               "karate-report",
-              "robot-report"
+              "robot-report",
             ],
           },
 
@@ -825,8 +833,8 @@ module.exports = {
           {
             type: "doc",
             label: "Daily Usage Limit",
-            id: "hyperexecute-daily-usage-limit"
-          }
+            id: "hyperexecute-daily-usage-limit",
+          },
         ],
       },
       {
@@ -848,11 +856,24 @@ module.exports = {
                 type: "category",
                 collapsed: true,
                 label: "January, 2025",
-                items: [
-                  'hyperexecute-cli-release-notes-0-2-249',
-                ]
+                items: ["hyperexecute-cli-release-notes-0-2-249"],
               },
-            ]
+            ],
+          },
+
+          // MCP Server Release Notes
+          {
+            type: "category",
+            collapsed: true,
+            label: "MCP Releases",
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "May, 2025",
+                items: ["hyperexecute-mcp-server-release-notes-1-0-0"],
+              },
+            ],
           },
 
           // 2025 releases
@@ -866,38 +887,36 @@ module.exports = {
                 collapsed: true,
                 label: "April, 2025",
                 items: [
-                  'hyperexecute-release-notes-2-8-4',
-                  'hyperexecute-release-notes-2-8-2',
-                  'hyperexecute-release-notes-2-8-1',
-                ]
+                  "hyperexecute-release-notes-2-8-4",
+                  "hyperexecute-release-notes-2-8-2",
+                  "hyperexecute-release-notes-2-8-1",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "March, 2025",
                 items: [
-                  'hyperexecute-release-notes-2-7-8',
-                  'hyperexecute-release-notes-2-7-6',
-                ]
+                  "hyperexecute-release-notes-2-7-8",
+                  "hyperexecute-release-notes-2-7-6",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "February, 2025",
                 items: [
-                  'hyperexecute-release-notes-2-7-3',
-                  'hyperexecute-release-notes-2-7-1',
-                ]
+                  "hyperexecute-release-notes-2-7-3",
+                  "hyperexecute-release-notes-2-7-1",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "January, 2025",
-                items: [
-                  'hyperexecute-release-notes-2-7-0',
-                ]
+                items: ["hyperexecute-release-notes-2-7-0"],
               },
-            ]
+            ],
           },
 
           // 2024 releases
@@ -911,122 +930,120 @@ module.exports = {
                 collapsed: true,
                 label: "December, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-6-5',
-                  'hyperexecute-release-notes-2-6-2',
-                ]
+                  "hyperexecute-release-notes-2-6-5",
+                  "hyperexecute-release-notes-2-6-2",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "November, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-6-0',
-                  'hyperexecute-release-notes-2-5-9',
-                  'hyperexecute-release-notes-2-5-8',
-                ]
+                  "hyperexecute-release-notes-2-6-0",
+                  "hyperexecute-release-notes-2-5-9",
+                  "hyperexecute-release-notes-2-5-8",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "October, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-5-7',
-                  'hyperexecute-release-notes-2-5-6',
-                  'hyperexecute-release-notes-2-5-5',
-                  'hyperexecute-release-notes-2-5-4',
-                ]
+                  "hyperexecute-release-notes-2-5-7",
+                  "hyperexecute-release-notes-2-5-6",
+                  "hyperexecute-release-notes-2-5-5",
+                  "hyperexecute-release-notes-2-5-4",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "September, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-5-3',
-                  'hyperexecute-release-notes-2-5-2',
-                  'hyperexecute-release-notes-2-5-1',
-                  'hyperexecute-release-notes-2-5-0',
-                ]
+                  "hyperexecute-release-notes-2-5-3",
+                  "hyperexecute-release-notes-2-5-2",
+                  "hyperexecute-release-notes-2-5-1",
+                  "hyperexecute-release-notes-2-5-0",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "August, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-4-8',
-                  'hyperexecute-release-notes-2-4-7',
-                  'hyperexecute-release-notes-2-4-6',
-                ]
+                  "hyperexecute-release-notes-2-4-8",
+                  "hyperexecute-release-notes-2-4-7",
+                  "hyperexecute-release-notes-2-4-6",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "July, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-4-5',
-                  'hyperexecute-release-notes-2-4-4',
-                  'hyperexecute-release-notes-2-4-0',
-                ]
+                  "hyperexecute-release-notes-2-4-5",
+                  "hyperexecute-release-notes-2-4-4",
+                  "hyperexecute-release-notes-2-4-0",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "June, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-3-8',
-                  'hyperexecute-release-notes-2-3-7',
-                  'hyperexecute-release-notes-2-3-6'
-                ]
+                  "hyperexecute-release-notes-2-3-8",
+                  "hyperexecute-release-notes-2-3-7",
+                  "hyperexecute-release-notes-2-3-6",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "May, 2024",
-                items: [
-                  'hyperexecute-release-notes-2-3-3',
-                ]
+                items: ["hyperexecute-release-notes-2-3-3"],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "April, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-3-1',
-                  'hyperexecute-release-notes-2-3-0',
-                  'hyperexecute-release-notes-2-2-9',
-                  'hyperexecute-release-notes-2-2-8',
-                  'hyperexecute-release-notes-2-2-7',
-                ]
+                  "hyperexecute-release-notes-2-3-1",
+                  "hyperexecute-release-notes-2-3-0",
+                  "hyperexecute-release-notes-2-2-9",
+                  "hyperexecute-release-notes-2-2-8",
+                  "hyperexecute-release-notes-2-2-7",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "March, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-2-6',
-                  'hyperexecute-release-notes-2-2-5',
-                  'hyperexecute-release-notes-2-2-3'
-                ]
+                  "hyperexecute-release-notes-2-2-6",
+                  "hyperexecute-release-notes-2-2-5",
+                  "hyperexecute-release-notes-2-2-3",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "February, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-2-2',
-                  'hyperexecute-release-notes-2-2-1',
-                  'hyperexecute-release-notes-2-2-0'
-                ]
+                  "hyperexecute-release-notes-2-2-2",
+                  "hyperexecute-release-notes-2-2-1",
+                  "hyperexecute-release-notes-2-2-0",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "January, 2024",
                 items: [
-                  'hyperexecute-release-notes-2-1-6',
-                  'hyperexecute-release-notes-2-1-5',
-                ]
+                  "hyperexecute-release-notes-2-1-6",
+                  "hyperexecute-release-notes-2-1-5",
+                ],
               },
-            ]
+            ],
           },
 
           // 2023 releases
@@ -1040,42 +1057,40 @@ module.exports = {
                 collapsed: true,
                 label: "December, 2023",
                 items: [
-                  'hyperexecute-release-notes-2-1-4',
-                  'hyperexecute-release-notes-2-1-3',
-                  'hyperexecute-release-notes-2-1-1',
-                  'hyperexecute-release-notes-2-1-0',
-                  'hyperexecute-release-notes-1-139-0'
-                ]
+                  "hyperexecute-release-notes-2-1-4",
+                  "hyperexecute-release-notes-2-1-3",
+                  "hyperexecute-release-notes-2-1-1",
+                  "hyperexecute-release-notes-2-1-0",
+                  "hyperexecute-release-notes-1-139-0",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "November, 2023",
                 items: [
-                  'hyperexecute-release-notes-1-138-0',
-                  'hyperexecute-release-notes-1-137-0',
-                ]
+                  "hyperexecute-release-notes-1-138-0",
+                  "hyperexecute-release-notes-1-137-0",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "October, 2023",
                 items: [
-                  'hyperexecute-release-notes-1-136-0',
-                  'hyperexecute-release-notes-1-135-0',
-                  'hyperexecute-release-notes-1-134-0',
-                  'hyperexecute-release-notes-1-133-0'
-                ]
+                  "hyperexecute-release-notes-1-136-0",
+                  "hyperexecute-release-notes-1-135-0",
+                  "hyperexecute-release-notes-1-134-0",
+                  "hyperexecute-release-notes-1-133-0",
+                ],
               },
               {
                 type: "category",
                 collapsed: true,
                 label: "September, 2023",
-                items: [
-                  'hyperexecute-release-notes-1-131-0',
-                ]
+                items: ["hyperexecute-release-notes-1-131-0"],
               },
-            ]
+            ],
           },
         ],
       },
@@ -1105,7 +1120,7 @@ module.exports = {
           "kane-ai-web-test",
           "kane-ai-guided-walkthrough",
           "kane-ai-app-test",
-          "kane-ai-automation-code-generation"
+          "kane-ai-automation-code-generation",
         ],
       },
       {
@@ -1115,8 +1130,10 @@ module.exports = {
         items: [
           "kane-ai-test-plan",
           "kaneai-hyperexecute-test-run-execution",
-          "kaneai-ci-cd-automation"
-        ]
+          "kaneai-ci-cd-automation",
+          "test-runs-configurations",
+
+        ],
       },
       {
         type: "category",
@@ -1129,6 +1146,7 @@ module.exports = {
           "kane-ai-scroll-in-feature",
           "kane-ai-jira-integration",
           "kane-ai-api-testing",
+          "kaneai-network-throttling",
           {
             type: "category",
             collapsed: true,
@@ -1137,17 +1155,18 @@ module.exports = {
               "kane-ai-using-variables",
               "kane-ai-using-json-variables",
               "kane-ai-using-parameters",
-              "kane-ai-using-datasets"
-            ]
+              "kane-ai-using-datasets",
+            ],
           },
           "kane-ai-modules",
           "kane-ai-secrets",
+          "kane-ai-smart-variables",
           "kaneai-upload-and-download-files",
           "kaneai-modules-versions-and-enhancement",
           "kane-ai-assertions",
           "kaneai-dynamic-url-replacement",
           "kaneai-chrome-options",
-          "kaneai-scheduled-test-runs"
+          "kaneai-scheduled-test-runs",
         ],
       },
       {
@@ -1164,12 +1183,7 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Video Tutorials",
-        items: [
-         "kaneai-test",
-         "kaneai-test-manual",
-         "kaneai-edit-test-steps",
-  
-        ],
+        items: ["kaneai-test", "kaneai-test-manual", "kaneai-edit-test-steps"],
       },
       {
         type: "category",
@@ -1184,14 +1198,11 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "September, 2024",
-            items: [
-              'kaneai-release-notes-0-0-2',
-              'kaneai-release-notes-0-0-1',
-            ]
+            items: ["kaneai-release-notes-0-0-2", "kaneai-release-notes-0-0-1"],
           },
-        ]
+        ],
       },
-    ]
+    ],
   ],
 
   RealTimeBrowserTestingSiebar: [
@@ -1209,27 +1220,27 @@ module.exports = {
         collapsed: true,
         label: "Web Browser Testing",
         items: [
-          'getting-started-with-desktop-browser-real-time-testing',
-          'real-time-desktop-browser-testing-tools'
-        ]
+          "getting-started-with-desktop-browser-real-time-testing",
+          "real-time-desktop-browser-testing-tools",
+        ],
       },
       {
         type: "category",
         collapsed: true,
         label: "Mobile Browser Testing",
         items: [
-          'getting-started-with-mobile-browser-real-time-testing',
-          'real-time-mobile-browser-testing-tools'
-        ]
+          "getting-started-with-mobile-browser-real-time-testing",
+          "real-time-mobile-browser-testing-tools",
+        ],
       },
       {
         type: "category",
         collapsed: true,
         label: "Mobile App Testing",
         items: [
-          'getting-started-with-mobile-app-real-time-testing',
-          'real-time-mobile-app-testing-tools'
-        ]
+          "getting-started-with-mobile-app-real-time-testing",
+          "real-time-mobile-app-testing-tools",
+        ],
       },
       {
         type: "category",
@@ -1237,19 +1248,19 @@ module.exports = {
         label: "ChromeOS Testing",
         link: {
           type: "doc",
-          id: 'chrome-os-testing'
+          id: "chrome-os-testing",
         },
         items: [
           {
             type: "doc",
             label: "ChromeOS Web BrowserTesting",
-            id: 'chrome-os-web-browser-testing'
+            id: "chrome-os-web-browser-testing",
           },
           {
             type: "doc",
             label: "ChromeOS App Testing",
-            id: "chrome-os-app-testing"
-          }
+            id: "chrome-os-app-testing",
+          },
         ],
       },
       {
@@ -1265,7 +1276,7 @@ module.exports = {
           "real-time-locally-hosted-pages",
           "real-time-recents-and-favourites",
           "real-time-upload-and-download-files",
-          "real-time-self-signed-certificate"
+          "real-time-self-signed-certificate",
         ],
       },
       "troubleshooting-ios-apps",
@@ -1320,7 +1331,8 @@ module.exports = {
           "zenkit-integration",
           "spirateam-integration",
           "assembla-integration",
-          "taiga-integration"
+          "taiga-integration",
+          "servicenow-integration",
         ],
       },
       {
@@ -1556,7 +1568,7 @@ module.exports = {
       "netlify-integration-with-lambdatest",
       "testim-integration",
       "simplifyqa-integration",
-      "uipath-integration"
+      "uipath-integration",
     ],
     // },
   ],
@@ -1579,139 +1591,194 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Accessibility DevTools",
-        link: {
-          type: "doc",
-          id: "accessibility-devtools",
-        },
+        label: "Accessibility Web",
         items: [
-          {
-            type: "doc",
-            label: "Install Accessibility Toolkit",
-            id: "accessibility-testing-install-devtools",
-          },
-          {
-            type: "doc",
-            label: "Run a Quck Scan",
-            id: "accessibility-testing-run-quick-scan",
-          },
-
           {
             type: "category",
             collapsed: true,
-            label: "Scanning Alternatives",
+            label: "DevTools",
+            link: {
+              type: "doc",
+              id: "accessibility-devtools",
+            },
             items: [
               {
                 type: "doc",
-                label: "Workflow Scanner",
-                id: "accessibility-testing-workflow-scanner",
+                label: "Install Accessibility Toolkit",
+                id: "accessibility-testing-install-devtools",
               },
               {
                 type: "doc",
-                label: "Full Page Scanner",
-                id: "accessibility-testing-full-page-scanner",
+                label: "Run a Quck Scan",
+                id: "accessibility-testing-run-quick-scan",
+              },
+    
+              {
+                type: "category",
+                collapsed: true,
+                label: "Scanning Methods",
+                items: [
+                  {
+                    type: "doc",
+                    label: "Workflow Scanner",
+                    id: "accessibility-testing-workflow-scanner",
+                  },
+                  {
+                    type: "doc",
+                    label: "Full Page Scanner",
+                    id: "accessibility-testing-full-page-scanner",
+                  },
+                  {
+                    type: "doc",
+                    label: "Partial Page Scanner",
+                    id: "accessibility-testing-partial-page-scanner",
+                  },
+                  {
+                    type: "doc",
+                    label: "Multi Page Scanner",
+                    id: "accessibility-testing-multi-page-scanner",
+                  },
+                  {
+                    type: "doc",
+                    label: "Keybaord Scan",
+                    id: "accessibility-keyboard-scan",
+                  },
+                ],
               },
               {
                 type: "doc",
-                label: "Partial Page Scanner",
-                id: "accessibility-testing-partial-page-scanner",
+                label: "Configure Settings",
+                id: "accessibility-devtools-settings",
               },
               {
                 type: "doc",
-                label: "Multi Page Scanner",
-                id: "accessibility-testing-multi-page-scanner",
+                label: "Update DevTools",
+                id: "accessibility-update-devtools-extension",
               },
             ],
           },
           {
-            type: "doc",
-            label: "Configure Settings",
-            id: "accessibility-devtools-settings",
+            type: "category",
+            collapsed: true,
+            label: "Automation",
+            link: {
+              type: "doc",
+              id: "accessibility-automation",
+            },
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "Standard Grid",
+                items: [
+                  {
+                    type: "doc",
+                    label: "Selenium",
+                    id: "accessibility-automation-test",
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Cypress",
+                    items: [
+                      "cypress-v10-accessibility-test",
+                      "cypress-v9-accessibility-test",
+                    ],
+                  },
+                  {
+                    type: "doc",
+                    label: "Playwright",
+                    id: "playwright-accessibility-test",
+                  },
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "HyperExecute",
+                items: [
+                  {
+                    type: "doc",
+                    label: "Selenium",
+                    id: "selenium-hyprerexecute-accessibility-tests",
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Cypress",
+                    items: [
+                      "cypress-v10-hyprerexecute-accessibility-tests",
+                      "cypress-v9-hyprerexecute-accessibility-tests",
+                    ],
+                  },
+                ],
+              },
+              {
+                type: "doc",
+                label: "Accessibility Automation Settings",
+                id: "accessibility-automation-settings",
+              },
+            ],
           },
           {
-            type: "doc",
-            label: "Update DevTools",
-            id: "accessibility-update-devtools-extension"
-          }
-        ],
+            type: "category",
+            collapsed: true,
+            label: "Test Scheduling",
+            link: {
+              type: "doc",
+              id: "accessibility-test-scheduling",
+            },
+            items: [
+              "accessibility-test-scheduling-scan",
+              "accessibility-test-scheduling-edit",
+            ],
+          },
+        ]
       },
       {
         type: "category",
         collapsed: true,
-        label: "Accessibility Automation",
-        link: {
-          type: "doc",
-          id: "accessibility-automation",
-        },
+        label: "Accessibility App",
         items: [
           {
-            type: "category",
-            collapsed: true,
-            label: "Standard Grid",
-            items: [
-              {
-                type: "doc",
-                label: 'Selenium',
-                id: "accessibility-automation-test",
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: 'Cypress',
-                items: [
-                  "cypress-v10-accessibility-test",
-                  "cypress-v9-accessibility-test",
-                ],
-              },
-              {
-                type: "doc",
-                label: 'Playwright',
-                id: "playwright-accessibility-test",
-              },
-            ]
+            type: "doc",
+            label: "Manual",
+            id: "accessibility-android-test",
+          },
+          {
+            type: "doc",
+            label: "Automation",
+            id: "accessibility-android-automation-test",
           },
           {
             type: "category",
             collapsed: true,
-            label: "HyperExecute",
+            label: "Rules Engine",
             items: [
               {
                 type: "doc",
-                label: 'Selenium',
-                id: "selenium-hyprerexecute-accessibility-tests"
+                label: "Android",
+                id: "accessibility-android-rules",
               },
               {
-                type: "category",
-                collapsed: true,
-                label: 'Cypress',
-                items: [
-                  "cypress-v10-hyprerexecute-accessibility-tests",
-                  "cypress-v9-hyprerexecute-accessibility-tests",
-                ],
+                type: "doc",
+                label: "iOS",
+                id: "accessibility-ios-rules",
               },
             ]
           },
-          {
-            type: 'doc',
-            label: 'Accessibility Automation Settings',
-            id: "accessibility-automation-settings",
-          },
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Accessibility Test Scheduling",
-        link: {
-          type: "doc",
-          id: "accessibility-test-scheduling"
-        },
-        items: ["accessibility-test-scheduling-scan", "accessibility-test-scheduling-edit"]
+        ]
       },
       {
         type: "doc",
         label: "Screen Reader",
-        id: "screen-reader-on-accessibility"
+        id: "screen-reader-on-accessibility",
+      },
+      {
+        type: "doc",
+        label: "Accessibility MCP Server",
+        id: "accessibility-mcp-server",
+
       },
       {
         type: "category",
@@ -1735,7 +1802,7 @@ module.exports = {
           {
             type: "doc",
             label: "Bug Report",
-            id: "accessibility-report-bug", 
+            id: "accessibility-report-bug",
           },
         ],
       },
@@ -1777,8 +1844,8 @@ module.exports = {
         label: "SCIM",
         id: "scim",
       },
+    ],
   ],
-],
 
   TestManagerSidebar: [
     {
@@ -1799,27 +1866,19 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Projects",
-        items: [
-          "create-projects", 
-          "system-and-custom-fields", 
-        ],
+        items: ["create-projects", "system-and-custom-fields"],
       },
       {
         type: "category",
         collapsed: true,
         label: "Import Test Case Data",
-        items: [
-          "csv-import",
-          "one-click-migration-from-testrail", 
-        ],
+        items: ["csv-import", "one-click-migration-from-testrail"],
       },
       {
         type: "category",
         collapsed: true,
         label: "Insights",
-        items: [
-          "insights-dashboard"
-        ],
+        items: ["insights-dashboard"],
       },
       {
         type: "category",
@@ -1828,10 +1887,23 @@ module.exports = {
         items: [
           "manual-test-case-creation",
           "manual-test-cases-with-ai",
-          "copy-and-move-support-for-test-cases",
-          "export-test-cases",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Bulk Actions",
+            items: [
+              "copy-and-move-support-for-test-cases",
+              "export-test-cases",
+            ],
+          },
           "test-case-repository",
         ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Modules",
+        items: ["create-modules", "modules-in-manual-testcases"],
       },
       {
         type: "category",
@@ -1843,18 +1915,18 @@ module.exports = {
         },
         items: [
           "automated-test-cases-linked-using-dashboard",
-          "automated-test-cases-linked-using-capability"
+          "automated-test-cases-linked-using-capability",
         ],
       },
       {
         type: "doc",
         label: "Test Run",
-        id: 'test-run-creation-and-management',
+        id: "test-run-creation-and-management",
       },
       {
         type: "doc",
         label: "Milestones",
-        id: 'milestone-creation-and-management',
+        id: "milestone-creation-and-management",
       },
       {
         type: "category",
@@ -1886,7 +1958,11 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Applications",
-            items: ["upload-apps-on-real-device-cloud", "app-settings", "app-manager"],
+            items: [
+              "upload-apps-on-real-device-cloud",
+              "app-settings",
+              "app-manager",
+            ],
           },
           {
             type: "category",
@@ -1897,14 +1973,24 @@ module.exports = {
               "install-apps-from-test-flight",
               "install-apps-from-app-center",
               "install-apps-from-app-store",
-              "install-apps-from-firebase"
+              "install-apps-from-firebase",
             ],
           },
           {
             type: "category",
             collapsed: true,
             label: "Features",
-            items: ["camera-image-injection-on-real-devices","ip-geolocation-on-real-devices-app", "biometric-authentication-on-real-devices", "contacts-on-real-devices", "real-device-adb-shell", "ui-inspector", "screen-reader-on-real-devices-app", "accessibility-settings-ios","devtools-on-real-devices-app"],
+            items: [
+              "camera-image-injection-on-real-devices",
+              "ip-geolocation-on-real-devices-app",
+              "biometric-authentication-on-real-devices",
+              "contacts-on-real-devices",
+              "real-device-adb-shell",
+              "ui-inspector",
+              "screen-reader-on-real-devices-app",
+              "accessibility-settings-ios",
+              "devtools-on-real-devices-app",
+            ],
           },
         ],
       },
@@ -1918,7 +2004,7 @@ module.exports = {
           "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
           "screen-reader-on-real-devices-browser",
-          "ip-geolocation-on-real-devices-browser"
+          "ip-geolocation-on-real-devices-browser",
         ],
       },
     ],
@@ -1927,7 +2013,11 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Private Cloud",
-        items: ["public-cloud-vs-private-cloud", "select-pre-installed-apps", "private-device-allocation-to-teams"],
+        items: [
+          "public-cloud-vs-private-cloud",
+          "select-pre-installed-apps",
+          "private-device-allocation-to-teams",
+        ],
       },
     ],
   ],
@@ -2082,7 +2172,7 @@ module.exports = {
               "selenium-default-capabilities",
               "selenium-three-capabilities",
               "selenium-four-capabilities",
-              "lambdatest-selenium-advance-capabilities"
+              "lambdatest-selenium-advance-capabilities",
             ],
           },
           {
@@ -2092,7 +2182,7 @@ module.exports = {
             items: [
               "perform-selenium-automation-on-headless-browsers",
               "custom-chrome",
-              "selenium-set-browser-options"
+              "selenium-set-browser-options",
             ],
           },
           {
@@ -2132,9 +2222,21 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Other Capabilities",
-            items: ["auto-heal", "command-annotations", "har-log-viewer", "selenium-geolocation-capabilities", "selenium-mask-your-data", "selenium-add-test-meta-data"],
+            items: [
+              "auto-heal",
+              "command-annotations",
+              "har-log-viewer",
+              "selenium-geolocation-capabilities",
+              "selenium-mask-your-data",
+              "selenium-add-test-meta-data",
+            ],
           },
         ],
+      },
+      {
+        type: "doc",
+        label: "Automation MCP Server",
+        id: "automation-mcp-server",
       },
       {
         type: "category",
@@ -2338,10 +2440,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Java",
-            items: [
-              "java-with-playwright",
-              "junit-with-playwright"
-            ],
+            items: ["java-with-playwright", "junit-with-playwright"],
           },
           {
             type: "category",
@@ -2350,24 +2449,20 @@ module.exports = {
             items: [
               "javascript-with-playwright",
               "jest-with-playwright",
-              "typescript-with-playwright"
+              "typescript-with-playwright",
             ],
           },
           {
             type: "category",
             collapsed: true,
             label: "C#",
-            items: [
-              "csharp-with-playwright",
-            ],
+            items: ["csharp-with-playwright"],
           },
           {
             type: "category",
             collapsed: true,
             label: "Python",
-            items: [
-              "python-with-playwright",
-            ],
+            items: ["python-with-playwright"],
           },
         ],
       },
@@ -2452,7 +2547,8 @@ module.exports = {
     [
       "app-automation-app-sim",
       "virtual-device-flutter-apps",
-      "emulator-simulator-avaiable-devices"
+      "emulator-simulator-avaiable-devices",
+      "camera-image-injection-vd",
     ],
   ],
 
@@ -2565,8 +2661,11 @@ module.exports = {
               {
                 type: "category",
                 collapsed: true,
-                label: 'Application',
-                items: ['application-setup-via-api','application-setup-via-gui'],
+                label: "Application",
+                items: [
+                  "application-setup-via-api",
+                  "application-setup-via-gui",
+                ],
               },
               "desired-capabilities-in-appium",
               "supported-appium-versions",
@@ -2602,7 +2701,6 @@ module.exports = {
               "appium-custom-header",
               "basic-authentication-for-web-automation",
               "live-debug-in-app-automation",
-              
             ],
           },
           {
@@ -2652,9 +2750,7 @@ module.exports = {
           type: "doc",
           id: "espresso-supported-capabilities",
         },
-        items: [
-          "espresso-env-variables-settings",
-        ],
+        items: ["espresso-env-variables-settings"],
       },
       {
         type: "doc",
@@ -2697,8 +2793,8 @@ module.exports = {
       {
         type: "doc",
         label: "Espresso Mock Server",
-        id: "espresso-mock-server"
-      }
+        id: "espresso-mock-server",
+      },
     ],
   ],
 
@@ -2758,9 +2854,9 @@ module.exports = {
 
   FlutterTestingSidebar: [
     {
-      type: 'link',
-      label: 'Back',
-      href: '/docs/',
+      type: "link",
+      label: "Back",
+      href: "/docs/",
       customProps: {
         className: "back-to-main-menu",
       },
@@ -2802,7 +2898,17 @@ module.exports = {
           type: "doc",
           id: "smart-visual-regression-testing",
         },
-        items: ["smartui-running-your-first-project", "smartui-guided-walkthrough", "smartui-cli-git-branching-strategy", "smartui-cli-env-variables"],
+        items: [
+          "smartui-running-your-first-project",
+          "smartui-guided-walkthrough",
+          "smartui-cli-git-branching-strategy",
+          "smartui-cli-env-variables",
+        ],
+      },
+      {
+        type: "doc",
+        label: "SmartUI MCP Server",
+        id: "smartui-mcp-server",
       },
       {
         type: "category",
@@ -2879,7 +2985,7 @@ module.exports = {
                   "smartui-cypress-sdk",
                   "smartui-appium-sdk",
                   "smartui-wdio-sdk",
-                ]
+                ],
               },
               {
                 type: "category",
@@ -2890,8 +2996,8 @@ module.exports = {
                   "smart-ui-cypress",
                   "playwright-visual-regression",
                   "puppeteer-visual-regression",
-                  "smartui-k6-setup"
-                ]
+                  "smartui-k6-setup",
+                ],
               },
               {
                 type: "category",
@@ -2902,9 +3008,41 @@ module.exports = {
                   "smartui-app-sdk",
                   "espresso-visual-regression",
                   "xcui-visual-regression",
-                ]
+                ],
               },
-            ]
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Branching and Merging",
+            items: [
+              {
+                type: "doc",
+                id: "smartui-cli-git-branching-strategy",
+                label: "Default Git Strategy",
+              },
+              {
+                type: "doc",
+                id: "smartui-smart-git-strategy",
+                label: "Smart Git Strategy",
+              },
+              {
+                type: "doc",
+                id: "smartui-branch-merging",
+                label: "Branch-Level Merging",
+              },
+              {
+                type: "doc",
+                id: "smartui-build-merging",
+                label: "Build-Level Merging",
+              },
+              {
+                type: "doc",
+                id: "smartui-baseline-management",
+                label: "Auto Baseline Management",
+              },
+            ],
           },
           {
             type: "category",
@@ -2921,7 +3059,7 @@ module.exports = {
               "smartui-shadow-dom",
               "smartui-cli-exec",
               "smartui-sdk-capabilities",
-              
+
               {
                 type: "category",
                 collapsed: true,
@@ -2931,8 +3069,8 @@ module.exports = {
                   "smartui-handle-dynamic-data",
                   "smartui-handle-videos",
                   "smartui-handle-lazy-loading",
-                  "smartui-handle-sticky-elements"
-                ]
+                  "smartui-handle-sticky-elements",
+                ],
               },
             ],
           },
@@ -2946,6 +3084,11 @@ module.exports = {
                 type: "doc",
                 label: "Figma-Web",
                 id: "smartui-cli-figma-web",
+              },
+              {
+                type: "doc",
+                label: "Figma-App",
+                id: "smartui-cli-figma-app",
               },
               {
                 type: "doc",
@@ -2975,20 +3118,17 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Component Testing",
-            items: [
-              "smart-ui-storybook",
-              "smartui-git-branching-strategy"
-            ]
+            items: ["smart-ui-storybook", "smartui-git-branching-strategy"],
           },
           "smartui-pdf-comparison",
           "smartui-draw-on-ui",
-        ]
+        ],
       },
       {
         type: "category",
         collapsed: true,
         label: "Difference Options",
-        items: ["smartui-smartignore","smartui-layout-testing"]
+        items: ["smartui-smartignore", "smartui-layout-testing"],
       },
       {
         type: "category",
@@ -2999,9 +3139,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Run Visual Tests on PRs",
-            items: [
-              "smartui-github-app-integration",
-            ],
+            items: ["smartui-github-app-integration"],
           },
           "smartui-slack-integration",
           {
@@ -3016,10 +3154,10 @@ module.exports = {
               "smartui-with-azure",
               "smartui-with-buildkite",
               "smartui-with-circle-ci",
-              "smartui-with-travis-ci"
+              "smartui-with-travis-ci",
             ],
           },
-        ]
+        ],
       },
       {
         type: "category",
@@ -3030,8 +3168,8 @@ module.exports = {
           "test-settings-options",
           "html-dom-smartui-options",
           "smart-ui-build-options",
-          "smartui-multiple-projects-per-repo"
-        ]
+          "smartui-multiple-projects-per-repo",
+        ],
       },
     ],
   ],
@@ -3059,6 +3197,20 @@ module.exports = {
     {
       type: "category",
       collapsed: false,
+      label: "Dashboards",
+      items: [
+        "analytics-dashboard-copilot",
+        "analytics-dashboard-edit-layout",
+        "analytics-dashboard-features",
+        "analytics-widget-drill-down-export",
+        "analytics-widget-filter-by-regex",
+        "analytics-filter-by-custom-data",
+        "analytics-dashboard-settings"
+      ],
+    },
+    {
+      type: "category",
+      collapsed: false,
       label: "Widgets",
       link: {
         type: "doc",
@@ -3066,6 +3218,8 @@ module.exports = {
       },
       items: [
         "dashboards-custom-widgets",
+        "analytics-test-case-insights",
+
         "analytics-modules-resource-utilization",
         "analytics-test-time-trends",
         {
@@ -3078,7 +3232,7 @@ module.exports = {
             "analytics-modules-manual-test-overview",
             "analytics-modules-smartui-analytics",
             "analytics-modules-accessibility-widgets",
-            "analytics-modules-test-manager-widgets"
+            "analytics-modules-test-manager-widgets",
           ],
         },
         {
@@ -3090,26 +3244,35 @@ module.exports = {
             "analytics-modules-error-insights",
           ],
         },
+        "analytics-allure-api-widgets",
+
         "analytics-modules-groups",
       ],
     },
-    "analytics-build-comparison",
-    "analytics-smart-tags-test-intelligence",
-    "analytics-test-failure-classification",
-    "analytics-modules-test-intelligence-flaky-test-analytics",
-    "analytics-dashboard-copilot",
-    "analytics-allure-api-widgets",
-    "analytics-test-case-insights",
-    "insights-app-profiling",
-    "insights-private-real-devices",
-    "insights-private-desktop",
-    "insights-usage-report",
-    "analytics-sub-organization-widgets",
-    "analytics-dashboard-edit-layout",
-    "analytics-dashboard-features",
-    "analytics-widget-drill-down-export",
-    "analytics-widget-filter-by-regex",
-    "analytics-filter-by-custom-data",
+    {
+      type: "category",
+      collapsed: false,
+      label: "Test Intelligence - AI",
+      items: [
+        "analytics-test-insights",
+        "analytics-modules-test-intelligence-flaky-test-analytics",
+        "analytics-build-comparison",
+        "analytics-smart-tags-test-intelligence",
+        "analytics-test-failure-classification",
+        "insights-app-profiling",
+      ],
+    },
+    {
+      type: "category",
+      collapsed: false,
+      label: "Reports",
+      items: [
+        "insights-usage-report",
+        "insights-private-real-devices",
+        "insights-private-desktop",
+        "analytics-sub-organization-widgets",
+      ],
+    },
     "analytics-faqs",
   ],
 
@@ -3284,29 +3447,81 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Testing Locally Hosted Pages",
+        label: "Getting started with Tunnel",
+        link: {
+          type: "doc",
+          id: "lambdatest-tunnel"
+        },
         items: [
           "testing-locally-hosted-pages",
-          "local-testing-macos",
-          "local-testing-windows",
           "local-testing-linux",
-          "lambda-tunnel-modifiers",
-          "underpass-tunnel-application",
-          "advanced-tunnel-features",
-          "environment-variables-supported-by-lambda-tunnel",
-          "maven-tunnel-for-locally-hosted-web-applications",
+          "local-testing-windows",
+          "local-testing-macos",
+          "real-time-locally-hosted-pages",
+          "testing-apps-locally",
         ],
       },
-      "sharing-lambda-tunnel",
-      "docker-tunnel",
-      "troubleshooting-lambda-tunnel",
-      "set-open-file-limit-while-using-proxy",
-      "load-balancing-in-lambda-tunnel",
-      "dedicated-proxy",
-      "charles-proxy",
-      "tunnel-allowHost-wildcard-support",
-      "tunel-release-notes"
-    ],
+      {
+        type: "category",
+        collapsed: true,
+        label: "Configuration and Modifiers",
+        items: [
+          "lambda-tunnel-modifiers",
+          "advanced-tunnel-features",
+          "environment-variables-supported-by-lambda-tunnel",
+        ],
+      },
+      {
+        type: "doc",
+        label: "GUI Application: Underpass",
+        id: "underpass-tunnel-application",
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Integration and Automation",
+        items: [
+          "hyperexecute-how-to-configure-tunnel",
+          "smartui-sdk-tunnel",
+          "maven-tunnel-for-locally-hosted-web-applications",
+          "integrate-lambdatest-extension-with-azure-pipelines"
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Docker Integration",
+        items: [
+          "docker-tunnel",
+          "docker-tunnel-extension",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Advanced Features",
+        items: [
+          "sharing-lambda-tunnel",
+          "load-balancing-in-lambda-tunnel",
+          "charles-proxy",
+          "dedicated-proxy",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Troubleshooting",
+        items: [
+          "troubleshooting-lambda-tunnel",
+          "set-open-file-limit-while-using-proxy",
+        ],
+      },
+      {
+        type: "doc",
+        label: "Release Notes",
+        id: "tunnel-release-notes",
+      }
+    ], 
   ],
 
   TestManagementSidebar: [
@@ -3403,10 +3618,10 @@ module.exports = {
         id: "tunnel-security",
       },
       {
-        type: 'doc',
+        type: "doc",
         label: "Access Management - KaneAI <> Test Manager",
-        id: "kaneai-test-manager-access-management"
-      }
+        id: "kaneai-test-manager-access-management",
+      },
     ],
   ],
 

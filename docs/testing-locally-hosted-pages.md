@@ -3,7 +3,7 @@ id: testing-locally-hosted-pages
 title: Test Locally Hosted Web Pages
 hide_title: false
 sidebar_label: Testing Locally Hosted Pages
-description: Test your locally hosted web applications for cross browser compatibility across 3000+ browser and OS combinations with LambdaTest.
+description: LambdaTest Tunnel securely connects your local machine to cloud-based real devices for testing locally hosted web apps, with multiple connectivity options like SSH and TCP.
 keywords:
   - test locally hosted web apps online
   - free cross browser testing tool
@@ -44,9 +44,7 @@ slug: testing-locally-hosted-pages/
       })
     }}
 ></script>
-**LambdaTest Tunnel** is a secure and encrypted tunneling feature that allows devs and QAs to test their locally hosted web applications or websites on the cloud-based real machines. It establishes a secure connection between the user’s local machine and the real machine in the cloud.
-
-There are multiple connectivity options like **SSH (port 22 or 443)**, **TCP- port 443**. Tunnel Binary performs network scanning and selects the best mode if not explicitly specified.
+**LambdaTest Tunnel** is a secure and encrypted tunneling feature that allows devs and QAs to test their locally hosted web applications or websites on the cloud-based real machines. It establishes a secure connection between the user’s local machine and the real machine in the cloud. There are multiple connectivity options like **SSH (port 22 or 443)**, **TCP- port 443**. Tunnel Binary performs network scanning and selects the best mode if not explicitly specified.
 
 <img loading="lazy" src={require('../assets/images/tunnel/tunnel.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
@@ -76,63 +74,3 @@ You can download the Tunnel Binary as per your respective machine architecture f
 | FreeBSD/A386 | https://downloads.lambdatest.com/tunnel/v3/freebsd/386/LT |
 | Solaris/AMD64 | https://downloads.lambdatest.com/tunnel/v3/solaris/amd64/LT |
 
-## How to Connect LambdaTest Tunnel?
-
-<div className="ytframe"> 
-<div className="youtube" data-embed="1B27vRreyKU">
-    <div className="play-button"></div>
-</div>
-</div>
-
-## LambdaTest Tunnel Guide
-
-<div className="download_btn mb-10"> <a href="/support/docs/local-testing-windows/">How To Connect LambdaTest Tunnel For Windows?</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/local-testing-macos/">How To Connect LambdaTest Tunnel For Mac?</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/local-testing-linux/">How To Connect LambdaTest Tunnel For Linux?</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/underpass-tunnel-application/">Underpass - GUI Application for LambdaTest tunnel</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/advanced-tunnel-features/">Advanced LambdaTest Tunnel Features</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/environment-variables-supported-by-lambda-tunnel/">Environment Variables Supported By LambdaTest tunnel</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/maven-tunnel-for-locally-hosted-web-applications/">Maven Tunnel For Locally Hosted Web Applications</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/sharing-lambda-tunnel/">Sharing LambdaTest Tunnel</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/lambda-tunnel-modifiers/">LambdaTest Tunnel Modifiers</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/docker-tunnel/">Docker Tunnel</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/troubleshooting-lambda-tunnel/">Troubleshooting LambdaTest Tunnel</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/how-to-set-the-open-file-limit-while-using-tunnel/">Setting Up The Open File Limit While Using Tunnel</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/load-balancing-in-lambda-tunnel/">Load Balancing In LambdaTest Tunnel</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/dedicated-proxy/">Dedicated Proxy For IP Whitelisting</a></div>
-
-<div className="download_btn mb-10"> <a href="/support/docs/charles-proxy/">Setting Up Charles Proxy</a></div>
-
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Testing Locally Hosted Pages
-      </span>
-    </li>
-  </ul>
-</nav>

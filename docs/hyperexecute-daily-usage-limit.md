@@ -3,7 +3,7 @@ id: hyperexecute-daily-usage-limit
 title: Daily Usage Limit Per Organization | HyperExecute
 hide_title: false
 sidebar_label: Daily Usage Limit Per Organization
-description: To avoid over-exploitation of LambdaTest and promote best practices, we have added a capacity constraint on the total test time that can be used by an organization in a day.
+description: LambdaTest enforces a daily test execution time limit at the organization level, based on the number of concurrent sessions, to ensure fair usage and system stability.
 keywords:
   - over-exploitation
   - lambdatest best practices

@@ -51,7 +51,7 @@ The Support Access feature allows LambdaTest to take access to your LambdaTest a
 
 <img loading="lazy" src={require('../assets/images/support-access/lambdatest-dashboard.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 2:** Head to **Settings** and select **Organization Settings** from the dropdown. 
+**Step 2:**  Click on **Profile Icon** and go to **Organization Settings** as shown in the image below. 
 
 <img loading="lazy" src={require('../assets/images/support-access/organization-settings.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 

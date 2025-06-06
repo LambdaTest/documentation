@@ -516,15 +516,10 @@ partialReports:
   - location: reports/json
     type: json
     frameworkName: extent-native
-    email:
-        to:
-          - johndoe@example.com
+
   - location: target/surefire-reports
     type: html
     frameworkName: testng
-    email:
-        to:
-          - johndoe@example.com
 ```
 :::
 
@@ -778,7 +773,7 @@ failFast:
 ```
 :::
 
-> **NOTE :** You can specify `failFast` at either the test level or scenario level, depending on your requirements. Both configurations will work, but only one should be used at a time.
+> **NOTE :** You can specify `failFast` at either the test level or scenario level, depending on your requirements. Both configurations will work, but can lead to unexpected results, only one should be used at a time.
 
 ***
 

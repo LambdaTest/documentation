@@ -40,7 +40,7 @@ import NewTag from '../src/component/newTag';
 
 :::note Explore AI Dashboard CoPilot
 
-We have recently launched an AI Dashboard CoPilot <NewTag value="BETA" bgColor="#ffec02" color="#000" /> feature that provides intelligent recommendations, insights, and predictions tailored to your specific data.
+We have recently launched an AI Dashboard CoPilot feature that provides intelligent recommendations, insights, and predictions tailored to your specific data.
 
 To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analytics-dashboard-copilot/) documentation.
 
@@ -93,19 +93,19 @@ Insights effectively allows these managers to track and improve the tests at one
   </a>
   <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/">
     <div className="support_inners">
-      <h3>Flaky Tests AI &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+      <h3>Flaky Tests AI</h3>
       <p>Monitor all the Flaky tests run on the platform and review the quality of the feature on your SMOKE and Regression Jobs.</p>
     </div>
   </a>
   <a href="/support/docs/analytics-test-case-insights/">
     <div className="support_inners">
-      <h3>Test Case Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+      <h3>Test Case Insights</h3>
       <p>Get insights for `describe()` block level for your test frameworks in HyperExecute. Monitor the quality metrics at each test case.</p>
     </div>
   </a>
     <a href="/support/docs/analytics-allure-api-widgets/">
     <div className="support_inners">
-      <h3>API Test Insights &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /></h3>
+      <h3>API Test Insights</h3>
       <p>Get API test time-series insights using Allure report integration with your test suite and run it on HyperExecute.</p>
     </div>
   </a>

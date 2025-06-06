@@ -221,11 +221,11 @@ import NewTag from '../src/component/newTag';
       <div className="home_inners">
         <a href="/support/docs/accessibility-testing/"><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/accessibility-devtools/"><p className="p_home_inners">Accessibility DevTools</p></a>
-        <a href="/support/docs/accessibility-automation/"><p className="p_home_inners">Accessibility Automation</p></a>
-        <a href="/support/docs/accessibility-test-scheduling/"><p className="p_home_inners">Accessibility Scheduling &nbsp; <NewTag value="BETA" bgColor="#ffec02" color="#000" /> </p></a>
+        <a href="/support/docs/accessibility-automation/"><p className="p_home_inners">Accessibility Web Automation</p></a>
+        <a href="/support/docs/accessibility-test-scheduling/"><p className="p_home_inners">Sitemap Scheduling</p></a>
+        <a href="/support/docs//accessibility-android-test/"><p className="p_home_inners">Native App Scanner &nbsp; <NewTag  value="BETA" /> </p></a> 
+        <a href="/support/docs/accessibility-android-automation-test/"><p className="p_home_inners">Native App Automation &nbsp; <NewTag  value="BETA" /> </p></a>
         <a href="/support/docs/screen-reader-on-accessibility/"><p className="p_home_inners">Screen Reader</p></a>
-        <a href="/support/docs/accessibility-testing-navigating-dashboard/"><p className="p_home_inners">Navigating Dashboard</p></a>
-        <a href="/support/docs/accessibility-faq/"><p className="p_home_inners">FAQ</p></a>
       </div>
     </div>
     <div className="home_inners_box">
