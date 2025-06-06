@@ -41,15 +41,15 @@ slug: copy-and-move-support-for-test-cases/
 
 The Copy and Move feature for test cases helps streamline the organization of test cases. It allows you to easily transfer test cases between different folders or projects, making it simple to keep everything organized. This feature enhances team collaboration and ensures that test cases are always accessible where needed.
 
-**How to Copy Multiple Test Cases to Other Folders**
+**How to Copy Multiple Test Cases to other Projects & Folders**
 
 1. Navigate to the list of test cases in your project. Multi-select the test cases you wish to move or copy to specific folders. Click on the **Bulk Actions** button at the top right of the screen. In the dropdown menu, select **Copy**.
 
 :::tip
- You can also **select all test cases** in one step by clicking on the top most Tick box, highlighted below :
+ You can also **select all test cases** in one step by clicking on the top most Tickbox, highlighted below :
 :::
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/bulk_action_testcases.jpeg').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/bulk_copy_testcases.jpeg').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 2. In the dropdown menu, select **Project** and **Target Folder** of your choice where you want to copy the selected test cases. 
 
@@ -78,7 +78,7 @@ The Copy and Move feature for test cases helps streamline the organization of te
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/bulk_copy_res.jpeg').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-**How to Move Multiple Test Cases to Other Folders**
+**How to Move Multiple Test Cases to other Projects & Folders**
 
 1. Select multiple test cases of your choice, Click on the **Bulk Actions** button located at the top right of the screen. From the dropdown menu, choose **Move**.  
 
