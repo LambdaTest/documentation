@@ -3,7 +3,7 @@ id: testcomplete-integration
 title: TestComplete
 hide_title: false
 sidebar_label: TestComplete
-description: LambdaTest offers integration with TestComplete to help you perform web and app automation testing on 3000+ real browsers, devices, and operating systems combinations.
+description: LambdaTest offers integration with TestComplete to help you perform web and app automation testing on 10000+ real browsers, devices, and operating systems combinations.
 keywords:
 - lambdatest integrations
 - lambdatest integrations with testcomplete
@@ -46,7 +46,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ></script>
 TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicks—build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
 
-LambdaTest integration with TestComplete lets you perform web and app automation testing across 3000+ real browsers, devices, and OS combinations.
+LambdaTest integration with TestComplete lets you perform web and app automation testing across 10000+ real browsers, devices, and OS combinations.
 
 > The TestComplete application will only work on the **Windows** operating system.
 

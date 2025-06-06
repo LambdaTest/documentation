@@ -60,6 +60,8 @@ Below is a list of the supported Appium plugins on LambdaTest:
 | `images`| Enables image comparison features in tests. Allows for verification of visual elements through images. | "appiumPlugins": ["images"] |
 | `element-wait`| Provides enhanced wait capabilities for elements, allowing tests to wait for elements to be in a certain state.For further details, please check [this documentation](https://github.com/AppiumTestDistribution/appium-wait-plugin). | "appiumPlugins": ["element-wait"] |
 | `gestures` | Adds support for gesture-based interactions, enabling tests to perform complex gestures like swipe, pinch, and zoom. For further details, please check [this documentation](https://github.com/AppiumTestDistribution/appium-gestures-plugin). | "appiumPlugins": ["gestures"]
+| `ocr`| Enables Optical Character Recognition (OCR) capabilities for detecting and interacting with on-screen text in images or video frames during tests. | "appiumPlugins": ["ocr"] |
+| `execute-driver`| Allows the execution of custom scripts within the Appium driver context, giving enhanced flexibility and control during test execution. For more details, check [this documentation](https://www.npmjs.com/package/@appium/execute-driver-plugin) | "appiumPlugins": ["execute-driver"] |
 
 **Python Example:**
 
@@ -67,7 +69,7 @@ Below is a list of the supported Appium plugins on LambdaTest:
 capabilities = {
     "appiumVersion": "2.2.1",
     "platformName": "iOS",
-    "appiumPlugins": ["images", "element-wait", "gestures"],
+    "appiumPlugins": ["images", "element-wait", "gestures","ocr","execute-driver"],
     # Add other capabilities as needed
 }
 ```

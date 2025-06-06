@@ -18,7 +18,7 @@ slug: record-and-replay-tests/
 # Record and Replay Tests using LT Debug 2.0
 ---
 
-With LT Debug 2.0, you now have the ability to record user interactions through the Chrome Recorder Panel and replay or retest them as automated tests on a cloud grid on over 3000+ real browsers and operating system combinations. This eliminates the need to download code or manually run tests on your local machine, thus streamlining and optimizing your testing process.
+With LT Debug 2.0, you now have the ability to record user interactions through the Chrome Recorder Panel and replay or retest them as automated tests on a cloud grid on over 10000+ real browsers and operating system combinations. This eliminates the need to download code or manually run tests on your local machine, thus streamlining and optimizing your testing process.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="vSpgplIYSUQ">

@@ -56,7 +56,7 @@ In this guide,  we will look at how to migrate from legacy test execution platfo
 
 Developers and testers require a robust test execution platform that is reliable, secure, scalable, fast, and affordable. On the other hand, enterprises seek innovation that orchestrates tests and bring in much-needed intelligence to provide faster developer feedback and quicker time-to-market. This is exactly where LambdaTest steps in to help you in meeting these requirements.
 
-*LambdaTest is an AI-based test orchestration and execution platform that allows you to perform manual and automated tests at scale on over 3000+ real browsers, devices, and operating systems combinations.*
+*LambdaTest is an AI-based test orchestration and execution platform that allows you to perform manual and automated tests at scale on over 10000+ real browsers, devices, and operating systems combinations.*
 
 Here's why you should shift from legacy test execution platform to LambdaTest.
 

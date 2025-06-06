@@ -2,7 +2,7 @@
 id: appium-csharp
 title: Appium with C#
 sidebar_label: C#
-description: Now you can run your automation scripts using Appium with CSharp on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Appium with CSharp on LambdaTest online grid of 10000+ real desktop browsers and real operating systems.
 keywords:
   - appium
   - csharp

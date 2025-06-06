@@ -45,7 +45,7 @@ slug: real-time-testing-troubleshooting/
     }}
 ></script>
 
-Real-Time Testing allows you to perform live-interactive cross browser testing of your website on more than 3000+ real browsers & browser versions running on various operating systems in the cloud. LambdaTest provides you real-time testing experience by virtual machines hosted on our cloud servers.
+Real-Time Testing allows you to perform live-interactive cross browser testing of your website on more than 10000+ real browsers & browser versions running on various operating systems in the cloud. LambdaTest provides you real-time testing experience by virtual machines hosted on our cloud servers.
 
 Click here to know more about [Real Time Testing at LambdaTest](/support/docs/getting-started-with-desktop-browser-real-time-testing/)
 

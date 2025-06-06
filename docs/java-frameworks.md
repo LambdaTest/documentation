@@ -2,7 +2,7 @@
 id: java-framework
 title: Run your Selenium Java tests on LambdaTest
 sidebar_label: Java
-description: Your guide to running tests using Java on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
+description: Your guide to running tests using Java on LambdaTest's Selenium Grid of 10000+ real devices and desktop browsers.
 keywords:
   - java selenium
   - java selenium tutorial

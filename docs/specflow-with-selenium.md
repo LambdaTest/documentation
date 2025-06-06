@@ -3,7 +3,7 @@ id: specflow-with-selenium
 title: SpecFlow With Selenium Grid
 hide_title: true
 sidebar_label: SpecFlow
-description: Now you can run your automation scripts using Selenium with SpecFlow on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with SpecFlow on LambdaTest online grid of 10000+ real desktop browsers and real operating systems.
 keywords:
   - specflow
   - specflow selenium

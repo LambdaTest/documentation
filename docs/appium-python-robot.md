@@ -2,7 +2,7 @@
 id: appium-python-robot
 title:  Appium with Robot
 sidebar_label: Robot
-description: Now you can run your Appium automation scripts using with Robot on LambdaTest Real Device Cloud Platform of 3000+ real mobile devices.
+description: Now you can run your Appium automation scripts using with Robot on LambdaTest Real Device Cloud Platform of 10000+ real mobile devices.
 keywords:
   - appium
   - lambdatest python

@@ -3,7 +3,7 @@ id: Selenium-Grid-Configuration
 title: Selenium Grid Configuration Guide | How to Configure Lambdatest Automation Grid
 hide_title: true
 sidebar_label: LambdaTest Selenium Grid Configuration
-description: This support guide tells you how can you configure LambdaTest Online Selenium Grid of 3000+ real desktop and mobile browsers.
+description: This support guide tells you how can you configure LambdaTest Online Selenium Grid of 10000+ real desktop and mobile browsers.
 keywords:
   - lambdatest automation
   - selenium automation grid

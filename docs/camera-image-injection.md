@@ -3,6 +3,7 @@ id: camera-image-injection
 title: Camera Image Injection
 sidebar_label: Camera Image Injection
 description: Simulate camera input to test camera-based features like QR scanning and document capture without needing physical devices.
+
 keywords:
   - image injection
   - app test automation
@@ -48,7 +49,7 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-Camera Image Injection feature allows you to test **image capturing, QR code scanning**, and **barcode scanning** functionalities in your app across **3000+ real devices** on the LambdaTest Real Device Cloud platform.
+Camera Image Injection feature allows you to test **image capturing, QR code scanning**, and **barcode scanning** functionalities in your app across **10000+ real devices** on the LambdaTest Real Device Cloud platform.
 
 This tool is ideal for testing features such as:
 
@@ -62,7 +63,7 @@ LambdaTest utilizes **Sensor Instrumentation** to integrate with various mobile 
 
 ### Key Features
 
-- Compatible with 3000+ real mobile devices
+- Compatible with 10000+ real mobile devices
 - Supports image capturing, QR code scanning, and barcode scanning
 - Seamless integration with your existing app testing workflow
 

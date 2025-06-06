@@ -41,7 +41,7 @@ slug: selenium-with-xunit/
 # Run Selenium Tests With xUnit
 ---
 
-Learn how to run your xUnit automation testing scripts on LambdaTest online Selenium Grid of 3000+ real browsers and operating systems.
+Learn how to run your xUnit automation testing scripts on LambdaTest online Selenium Grid of 10000+ real browsers and operating systems.
 
 ## Prerequisites
 ---

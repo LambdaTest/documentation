@@ -2,7 +2,7 @@
 id: appium-appletv
 title: Apple TV With Appium
 sidebar_label: Apple TV
-description: Complete guide to running your first AppleTV Appium automated test script on LambdaTest Real Device Cloud Platform. Test on 3000+ Real Devices.
+description: Complete guide to running your first AppleTV Appium automated test script on LambdaTest Real Device Cloud Platform. Test on 10000+ Real Devices.
 keywords:
   - python appium
   - appletv

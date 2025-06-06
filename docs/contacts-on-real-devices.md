@@ -2,7 +2,7 @@
 id: contacts-on-real-devices
 title: Access your Contacts
 sidebar_label: Contacts
-description: Now you can test your contacts in your app on LambdaTest Real Device Cloud Platform with 3000+ real mobile devices.
+description: Now you can test your contacts in your app on LambdaTest Real Device Cloud Platform with 10000+ real mobile devices.
 keywords:
   - image injection
   - app test automation
