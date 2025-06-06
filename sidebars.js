@@ -1588,15 +1588,11 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-<<<<<<< HEAD
-            label: "Scanning Alternatives",
-=======
             label: "DevTools",
             link: {
               type: "doc",
               id: "accessibility-devtools",
             },
->>>>>>> 8e84543e (accessibility sidebar)
             items: [
               {
                 type: "doc",
@@ -1737,57 +1733,9 @@ module.exports = {
         label: "Accessibility App",
         items: [
           {
-<<<<<<< HEAD
-            type: "category",
-            collapsed: true,
-            label: "Standard Grid",
-            items: [
-              {
-                type: "doc",
-                label: "Selenium",
-                id: "accessibility-automation-test",
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Cypress",
-                items: [
-                  "cypress-v10-accessibility-test",
-                  "cypress-v9-accessibility-test",
-                ],
-              },
-              {
-                type: "doc",
-                label: "Playwright",
-                id: "playwright-accessibility-test",
-              },
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "HyperExecute",
-            items: [
-              {
-                type: "doc",
-                label: "Selenium",
-                id: "selenium-hyprerexecute-accessibility-tests",
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Cypress",
-                items: [
-                  "cypress-v10-hyprerexecute-accessibility-tests",
-                  "cypress-v9-hyprerexecute-accessibility-tests",
-                ],
-              },
-            ],
-=======
             type: "doc",
             label: "Manual",
             id: "accessibility-android-test",
->>>>>>> 8e84543e (accessibility sidebar)
           },
           {
             type: "doc",
