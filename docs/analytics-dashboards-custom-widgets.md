@@ -100,6 +100,12 @@ To create a custom widget, follow these steps:
 
 ## Configuration Widget Options
 
+- **Sources**: Choose the data source that powers your custom widget. The source determines what kind of data will be visualized and what insights you can extract. The currently supported sources are:
+  1. **Tests**: This source provides access to all your test execution data, including test results, execution times, pass/fail rates, and other key metrics. Selecting this source allows you to build widgets that focus on test performance, trends, and outcomes. You can filter and visualize data such as the number of tests run, success/failure rates, test durations, and more.
+  2. **Auto Heal**: This source enables you to visualize data related to LambdaTest's Auto Heal feature, which automatically detects and fixes broken test steps. By selecting Auto Heal as your source, you can create widgets that track the number of auto-healed steps, success rates of healing, impacted test cases, and trends over time. This helps you monitor the effectiveness of Auto Heal and identify areas where your tests benefit from automated healing.
+
+  > **Note:** These sources are currently available for **Web Automation** and **HyperExecute** products only. When you select a source, the widget will render data specific to that source, ensuring that your visualizations are relevant and actionable. For example, if you select "Tests" as the source, your widget will display test execution metrics; if you select "Auto Heal," it will show auto-healing statistics and trends. You can switch between sources to compare different aspects of your testing process within the same dashboard.
+
 - **Custom Axis**: Customize the keys and values displayed on the x-axis and y-axis of your widget. This allows you to create a more meaningful visualization of your data.
 - **Custom Labels**: Provide custom labels for your widget to make it easier to understand. This is useful for providing context for your data and helping users interpret the results.
 - **Custom Grouping**: Group your data by specific keys or values to create a more focused view of your data. This is useful for comparing different test results or device usage across different categories.
