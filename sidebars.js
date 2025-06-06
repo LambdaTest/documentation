@@ -861,6 +861,21 @@ module.exports = {
             ],
           },
 
+          // MCP Server Release Notes
+          {
+            type: "category",
+            collapsed: true,
+            label: "MCP Releases",
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "May, 2025",
+                items: ["hyperexecute-mcp-server-release-notes-1-0-0"],
+              },
+            ],
+          },
+
           // 2025 releases
           {
             type: "category",
@@ -1317,6 +1332,7 @@ module.exports = {
           "spirateam-integration",
           "assembla-integration",
           "taiga-integration",
+          "servicenow-integration",
         ],
       },
       {
@@ -1575,160 +1591,194 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Accessibility DevTools",
-        link: {
-          type: "doc",
-          id: "accessibility-devtools",
-        },
+        label: "Accessibility Web",
         items: [
-          {
-            type: "doc",
-            label: "Install Accessibility Toolkit",
-            id: "accessibility-testing-install-devtools",
-          },
-          {
-            type: "doc",
-            label: "Run a Quck Scan",
-            id: "accessibility-testing-run-quick-scan",
-          },
-
           {
             type: "category",
             collapsed: true,
-            label: "Scanning Methods",
+            label: "DevTools",
+            link: {
+              type: "doc",
+              id: "accessibility-devtools",
+            },
             items: [
               {
                 type: "doc",
-                label: "Workflow Scanner",
-                id: "accessibility-testing-workflow-scanner",
+                label: "Install Accessibility Toolkit",
+                id: "accessibility-testing-install-devtools",
               },
               {
                 type: "doc",
-                label: "Full Page Scanner",
-                id: "accessibility-testing-full-page-scanner",
+                label: "Run a Quck Scan",
+                id: "accessibility-testing-run-quick-scan",
+              },
+    
+              {
+                type: "category",
+                collapsed: true,
+                label: "Scanning Methods",
+                items: [
+                  {
+                    type: "doc",
+                    label: "Workflow Scanner",
+                    id: "accessibility-testing-workflow-scanner",
+                  },
+                  {
+                    type: "doc",
+                    label: "Full Page Scanner",
+                    id: "accessibility-testing-full-page-scanner",
+                  },
+                  {
+                    type: "doc",
+                    label: "Partial Page Scanner",
+                    id: "accessibility-testing-partial-page-scanner",
+                  },
+                  {
+                    type: "doc",
+                    label: "Multi Page Scanner",
+                    id: "accessibility-testing-multi-page-scanner",
+                  },
+                  {
+                    type: "doc",
+                    label: "Keybaord Scan",
+                    id: "accessibility-keyboard-scan",
+                  },
+                ],
               },
               {
                 type: "doc",
-                label: "Partial Page Scanner",
-                id: "accessibility-testing-partial-page-scanner",
+                label: "Configure Settings",
+                id: "accessibility-devtools-settings",
               },
               {
                 type: "doc",
-                label: "Multi Page Scanner",
-                id: "accessibility-testing-multi-page-scanner",
-              },
-              {
-                type: "doc",
-                label: "Keybaord Scan",
-                id: "accessibility-keyboard-scan",
+                label: "Update DevTools",
+                id: "accessibility-update-devtools-extension",
               },
             ],
           },
           {
-            type: "doc",
-            label: "Configure Settings",
-            id: "accessibility-devtools-settings",
+            type: "category",
+            collapsed: true,
+            label: "Automation",
+            link: {
+              type: "doc",
+              id: "accessibility-automation",
+            },
+            items: [
+              {
+                type: "category",
+                collapsed: true,
+                label: "Standard Grid",
+                items: [
+                  {
+                    type: "doc",
+                    label: "Selenium",
+                    id: "accessibility-automation-test",
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Cypress",
+                    items: [
+                      "cypress-v10-accessibility-test",
+                      "cypress-v9-accessibility-test",
+                    ],
+                  },
+                  {
+                    type: "doc",
+                    label: "Playwright",
+                    id: "playwright-accessibility-test",
+                  },
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "HyperExecute",
+                items: [
+                  {
+                    type: "doc",
+                    label: "Selenium",
+                    id: "selenium-hyprerexecute-accessibility-tests",
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "Cypress",
+                    items: [
+                      "cypress-v10-hyprerexecute-accessibility-tests",
+                      "cypress-v9-hyprerexecute-accessibility-tests",
+                    ],
+                  },
+                ],
+              },
+              {
+                type: "doc",
+                label: "Accessibility Automation Settings",
+                id: "accessibility-automation-settings",
+              },
+            ],
           },
           {
-            type: "doc",
-            label: "Update DevTools",
-            id: "accessibility-update-devtools-extension",
+            type: "category",
+            collapsed: true,
+            label: "Test Scheduling",
+            link: {
+              type: "doc",
+              id: "accessibility-test-scheduling",
+            },
+            items: [
+              "accessibility-test-scheduling-scan",
+              "accessibility-test-scheduling-edit",
+            ],
           },
-        ],
+        ]
       },
       {
         type: "category",
         collapsed: true,
-        label: "Accessibility Automation",
-        link: {
-          type: "doc",
-          id: "accessibility-automation",
-        },
+        label: "Accessibility App",
         items: [
           {
-            type: "category",
-            collapsed: true,
-            label: "Standard Grid",
-            items: [
-              {
-                type: "doc",
-                label: "Selenium",
-                id: "accessibility-automation-test",
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Cypress",
-                items: [
-                  "cypress-v10-accessibility-test",
-                  "cypress-v9-accessibility-test",
-                ],
-              },
-              {
-                type: "doc",
-                label: "Playwright",
-                id: "playwright-accessibility-test",
-              },
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "HyperExecute",
-            items: [
-              {
-                type: "doc",
-                label: "Selenium",
-                id: "selenium-hyprerexecute-accessibility-tests",
-              },
-              {
-                type: "category",
-                collapsed: true,
-                label: "Cypress",
-                items: [
-                  "cypress-v10-hyprerexecute-accessibility-tests",
-                  "cypress-v9-hyprerexecute-accessibility-tests",
-                ],
-              },
-            ],
-
-          },
-          {
             type: "doc",
-            label: "Android",
+            label: "Manual",
             id: "accessibility-android-test",
-
           },
           {
             type: "doc",
-            label: "Accessibility Automation Settings",
-            id: "accessibility-automation-settings",
+            label: "Automation",
+            id: "accessibility-android-automation-test",
           },
-        ],
+          {
+            type: "category",
+            collapsed: true,
+            label: "Rules Engine",
+            items: [
+              {
+                type: "doc",
+                label: "Android",
+                id: "accessibility-android-rules",
+              },
+              {
+                type: "doc",
+                label: "iOS",
+                id: "accessibility-ios-rules",
+              },
+            ]
+          },
+        ]
       },
       {
-        type: "category",
-        collapsed: true,
-        label: "Accessibility Test Scheduling",
-        link: {
-          type: "doc",
-          id: "accessibility-test-scheduling",
-        },
-        items: [
-          "accessibility-test-scheduling-scan",
-          "accessibility-test-scheduling-edit",
-        ],
+        type: "doc",
+        label: "Screen Reader",
+        id: "screen-reader-on-accessibility",
       },
       {
         type: "doc",
         label: "Accessibility MCP Server",
         id: "accessibility-mcp-server",
 
-      },
-      {
-        type: "doc",
-        label: "Screen Reader",
-        id: "screen-reader-on-accessibility",
       },
       {
         type: "category",
@@ -2499,6 +2549,7 @@ module.exports = {
       "app-automation-app-sim",
       "virtual-device-flutter-apps",
       "emulator-simulator-avaiable-devices",
+      "camera-image-injection-vd",
     ],
   ],
 
@@ -3155,6 +3206,7 @@ module.exports = {
         "analytics-widget-drill-down-export",
         "analytics-widget-filter-by-regex",
         "analytics-filter-by-custom-data",
+        "analytics-dashboard-settings"
       ],
     },
     {
@@ -3396,29 +3448,81 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Testing Locally Hosted Pages",
+        label: "Getting started with Tunnel",
+        link: {
+          type: "doc",
+          id: "lambdatest-tunnel"
+        },
         items: [
           "testing-locally-hosted-pages",
-          "local-testing-macos",
-          "local-testing-windows",
           "local-testing-linux",
-          "lambda-tunnel-modifiers",
-          "underpass-tunnel-application",
-          "advanced-tunnel-features",
-          "environment-variables-supported-by-lambda-tunnel",
-          "maven-tunnel-for-locally-hosted-web-applications",
+          "local-testing-windows",
+          "local-testing-macos",
+          "real-time-locally-hosted-pages",
+          "testing-apps-locally",
         ],
       },
-      "sharing-lambda-tunnel",
-      "docker-tunnel",
-      "troubleshooting-lambda-tunnel",
-      "set-open-file-limit-while-using-proxy",
-      "load-balancing-in-lambda-tunnel",
-      "dedicated-proxy",
-      "charles-proxy",
-      "tunnel-allowHost-wildcard-support",
-      "tunel-release-notes",
-    ],
+      {
+        type: "category",
+        collapsed: true,
+        label: "Configuration and Modifiers",
+        items: [
+          "lambda-tunnel-modifiers",
+          "advanced-tunnel-features",
+          "environment-variables-supported-by-lambda-tunnel",
+        ],
+      },
+      {
+        type: "doc",
+        label: "GUI Application: Underpass",
+        id: "underpass-tunnel-application",
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Integration and Automation",
+        items: [
+          "hyperexecute-how-to-configure-tunnel",
+          "smartui-sdk-tunnel",
+          "maven-tunnel-for-locally-hosted-web-applications",
+          "integrate-lambdatest-extension-with-azure-pipelines"
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Docker Integration",
+        items: [
+          "docker-tunnel",
+          "docker-tunnel-extension",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Advanced Features",
+        items: [
+          "sharing-lambda-tunnel",
+          "load-balancing-in-lambda-tunnel",
+          "charles-proxy",
+          "dedicated-proxy",
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Troubleshooting",
+        items: [
+          "troubleshooting-lambda-tunnel",
+          "set-open-file-limit-while-using-proxy",
+        ],
+      },
+      {
+        type: "doc",
+        label: "Release Notes",
+        id: "tunnel-release-notes",
+      }
+    ], 
   ],
 
   TestManagementSidebar: [

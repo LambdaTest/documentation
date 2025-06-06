@@ -3,7 +3,7 @@ id: testrigor-integration
 title: testRigor Integration
 hide_title: true
 sidebar_label: testRigor
-description: Integrate LambdaTest with testRigor to perform desktop web, mobile web and native app testing across 3000+ real browsers, devices, and operating systems.
+description: Integrate LambdaTest with testRigor to perform desktop web, mobile web and native app testing across 10000+ real browsers, devices, and operating systems.
 keywords:
   - lambdatest integration with testrigor
   - lambdatest and testrigor integration 
@@ -40,7 +40,7 @@ slug: testrigor-integration/
 # testRigor Integration
 testRigor is a Generative AI-based codeless test automation tool that helps companies empower manual testers to create test automation through executable specifications in plain English. This innovative system enables your team to easily build and maintain tests, while its AI Native features significantly reduce the effort required for test maintenance.
 
-LambdaTest integration with testRigor enables you to perform desktop web, mobile web and native app testing across 3000+ real browsers, devices, and operating systems.
+LambdaTest integration with testRigor enables you to perform desktop web, mobile web and native app testing across 10000+ real browsers, devices, and operating systems.
 
 ## Prerequisites
 ---

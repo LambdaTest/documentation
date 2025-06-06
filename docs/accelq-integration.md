@@ -42,7 +42,7 @@ slug: accelq-integration/
 
 ACCELQ is an AI Native Codeless automation testing and management platform. It enables you automate web, mobile, API, database, and packaged applications.
 
-By integrating LambdaTest with ACCELQ, you can perform web and mobile app automation on an online device farm of 3000+ real browsers, devices, and OS combinations, and accelerate your end-to-end digital testing efforts.
+By integrating LambdaTest with ACCELQ, you can perform web and mobile app automation on an online device farm of 10000+ real browsers, devices, and OS combinations, and accelerate your end-to-end digital testing efforts.
 
 ## Prerequisites
 ---

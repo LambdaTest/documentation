@@ -2,7 +2,7 @@
 id: appium-ruby
 title:  Appium with Ruby
 sidebar_label: Ruby
-description: Complete guide to running your first Ruby Appium automated test script on LambdaTest Real Device Cloud Platform. Test on 3000+ Real Devices.
+description: Complete guide to running your first Ruby Appium automated test script on LambdaTest Real Device Cloud Platform. Test on 10000+ Real Devices.
 keywords:
   - ruby appium
   - ruby appium tutorial

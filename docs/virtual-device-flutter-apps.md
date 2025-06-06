@@ -40,7 +40,7 @@ slug: virtual-device-flutter-apps/
 ></script>
 Google's Flutter is an open-source tool for developing native mobile apps. It enables developers to create cross-platform apps for both Android and iOS using a single codebase and programming language.
 
-You can now test Flutter apps on the LambdaTest Appium testing platform across 3000+ real Android and iOS devices. LambdaTest supports Appium’s Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on LambdaTest cloud servers and then run your automated tests. 
+You can now test Flutter apps on the LambdaTest Appium testing platform across 10000+ real Android and iOS devices. LambdaTest supports Appium’s Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on LambdaTest cloud servers and then run your automated tests. 
 
 ## Prerequisites
 

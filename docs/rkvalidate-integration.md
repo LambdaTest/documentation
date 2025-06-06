@@ -3,7 +3,7 @@ id: rktracer-integration
 title: RKTracer Integration
 hide_title: true
 sidebar_label: RKTracer
-description: LambdaTest and RKTracer integration allows you to generate Code coverage for your web and mobile apps across 3000+ real browsers, devices, and operating system combinations.
+description: LambdaTest and RKTracer integration allows you to generate Code coverage for your web and mobile apps across 10000+ real browsers, devices, and operating system combinations.
 keywords:
 - rktracer lambdatest
 - rktracer integration
@@ -43,7 +43,7 @@ slug: rktracer-integration/
 
 Developed by RKValidate, RKTracer is a Code coverage tool capable of generating coverage data for different programming languages like C, C++, C#, Java, Kotlin, JavaScript, Python, etc; regardless of what compiler, cross compiler, embedded targets, or servers you use to test your apps.
 
-With LambdaTest and RKTracer, you can generate Code coverage for your web and mobile apps across 3000+ real browsers, devices, and operating system combinations.
+With LambdaTest and RKTracer, you can generate Code coverage for your web and mobile apps across 10000+ real browsers, devices, and operating system combinations.
 
 ## RKTracer With Web Automation On LambdaTest
 ***

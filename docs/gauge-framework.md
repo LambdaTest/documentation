@@ -2,7 +2,7 @@
 id: gauge-frameworks
 title: Execute Selenium Tests With Gauge
 sidebar_label: Gauge
-description: Your guide to running tests using Gauge on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
+description: Your guide to running tests using Gauge on LambdaTest's Selenium Grid of 10000+ real devices and desktop browsers.
 keywords:
   - gauge automation testing
   - gauge scripts

@@ -2,7 +2,7 @@
 id: appium-nodejs-mocha
 title: Appium With Mocha
 sidebar_label: Mocha
-description: Now you can run your automation scripts using JavaScript Mocha on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using JavaScript Mocha on LambdaTest online grid of 10000+ real desktop browsers and real operating systems.
 keywords:
   - appium
   - javascript

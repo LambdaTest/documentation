@@ -2,7 +2,7 @@
 id: selenide-frameworks
 title: Execute Selenium Tests With Selenide
 sidebar_label: Selenide
-description: Your guide to running tests using Selenide on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
+description: Your guide to running tests using Selenide on LambdaTest's Selenium Grid of 10000+ real devices and desktop browsers.
 keywords:
   - Selenide
   - Selenium

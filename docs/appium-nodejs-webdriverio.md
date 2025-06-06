@@ -2,7 +2,7 @@
 id: appium-nodejs-webdriverio
 title: Appium With WebDriverIO
 sidebar_label: WebDriverIO
-description: Now you can run your Appium automation scripts using with WebDriverIO on LambdaTest Real Device Cloud Platform  of 3000+ real mobile devices.
+description: Now you can run your Appium automation scripts using with WebDriverIO on LambdaTest Real Device Cloud Platform  of 10000+ real mobile devices.
 keywords:
   - appium
   - java

@@ -1,17 +1,17 @@
 ---
-id: tunel-release-notes
+id: tunnel-release-notes
 title: Tunnel Client Release Notes
 hide_title: false
 sidebar_label: Release Notes
-description: Stay updated on the latest HyperExecute releases. View detailed release notes, including new features, bug fixes, and improvements for our AI Native test orchestration platform.
+description: Get the latest release notes for LambdaTest Tunnel, detailing the latest features, fixes, and improvements for secure and seamless testing.
 keywords:
   - LambdaTest Tunnel
   - LambdaTest Tunnel help
   - LambdaTest Tunnel documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/tunel-release-notes/
+url: https://www.lambdatest.com/support/docs/tunnel-release-notes/
 site_name: LambdaTest
-slug: tunel-release-notes/
+slug: tunnel-release-notes/
 ---
 
 <script type="application/ld+json"
@@ -38,7 +38,7 @@ slug: tunel-release-notes/
     }}
 ></script>
 
-## Version 3.2.11 (2nd February 2024)
+## Version 3.2.11 (2nd February 2025)
 - **Support for Wildcard in `allowHosts` and `bypassHosts`**
   - Added the ability to use wildcards in the `allowHosts` and `bypassHosts` configurations, providing more flexibility in defining tunnel access rules.
 

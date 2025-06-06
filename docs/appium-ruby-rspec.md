@@ -2,7 +2,7 @@
 id: appium-ruby-rspec
 title:  Appium with Rspec
 sidebar_label: Rspec
-description: Now you can run your Appium automation scripts using Rspec on LambdaTest Real Device Cloud Platform of 3000+ real mobile devices.
+description: Now you can run your Appium automation scripts using Rspec on LambdaTest Real Device Cloud Platform of 10000+ real mobile devices.
 keywords:
   - appium
   - Rspec

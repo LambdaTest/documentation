@@ -2,7 +2,7 @@
 id: appium-php-behat
 title:  Appium with Behat
 sidebar_label: Behat
-description: Now you can run your automation scripts using Appium with PHP Behat on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Appium with PHP Behat on LambdaTest online grid of 10000+ real desktop browsers and real operating systems.
 keywords:
   - appium
   - php

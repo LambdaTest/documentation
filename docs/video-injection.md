@@ -2,7 +2,8 @@
 id: video-injection
 title: Video Injection
 sidebar_label: Video Injection
-description: Now you can test image capturing and QR code or Barcode scanning in your app on LambdaTest Real Device Cloud Platform with 3000+ real mobile devices.
+description: Inject video content in your tests with LambdaTest to simulate video inputs for automated testing, enhancing your app's multimedia capabilities.
+
 keywords:
   - image injection
   - app test automation

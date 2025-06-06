@@ -63,25 +63,57 @@ There are following Prerequisites to use Flaky Test Detection:
 :::info
 ### What are Flaky Tests?
 
-Flaky tests, refer to tests that exhibit inconsistent behavior when executed multiple times under the same conditions. These tests may produce varying results (pass or fail) when run repeatedly, even without any changes to the application or test script.
+Flaky tests refer to tests that exhibit inconsistent behavior when executed multiple times under the same conditions. These tests may produce varying results (pass or fail) when run repeatedly, even without any changes to the application or test script.
 :::
 
-### Selenium Tests of Automation and HyperExecute
+### Flaky Test Detection Logics Supported
 
-Flaky Test Detection uses the WebDriver command logs to identify the flaky <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" /> tests. The WebDriver commands logs are the steps which are executed by the test script during the test execution. To know more about the WebDriver command logs, you can refer to the [W3C Command Logs](https://www.w3.org/TR/webdriver2/#endpoints).
+**Summary:**
 
-It uses the following algorithm to identify the flaky tests:
+Flaky Test Detection on the platform supports two complementary methods for identifying genuinely flaky tests. However, only one logic can be active at a time, based on user selection in the configuration. The detection of flaky tests will be performed exclusively using the selected logic:
 
-- Tests marked as Flaky <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" />  have shown inconsistent behavior. The inconsistent behaviour is characterized by the transitions in the `status` of the test considered in the [sliding window of tests](/support/docs/test-intelligence-flakiness-test-detection/#how-to-use-the-custom-flaky-test-detection-settings).
-- We utilize our in-house algorithm to map transitioning tests in accordance to the configurations specified by the user. A `test transition` occurs when the status of a test switches from  Passed->Failed or Failed->Passed
-- For instance, when analyzing a test's status sequence, Passed -> Failed -> Passed, signifies that the test's status has undergone two transitions within the most recent three executions and the transitions are spotted accordingly.
-- Similarly the algorithm identifies the tests where the commands are showing a different behavior than the previous runs. This analysis examines individual test commands and their statuses, offering a granular view of potential sources of flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" /> at the command level.
+1. **Command Logs Mapping:**
+   - Detects flakiness by analyzing transitions in test status and mapping command logs across test runs.
+   - Useful for identifying inconsistencies at the command level, such as when specific steps within a test behave differently across executions.
 
+2. **Error Message Comparison:**
+   - Detects flakiness by comparing error messages (custom remark messages set by the user) between consecutive test runs.
+   - A test is classified as flaky only if it fails with *different* error messages across runs. If a test fails consistently with the *same* error message, it is not considered flaky.
+   - Reduces false positives by focusing on genuinely unstable tests.
 
-  
+**Configuration:**
+- Users can select either Command Logs Mapping or Error Message Comparison as the active logic for flaky test detection in their settings.
+- Only the selected logic will be applied for the detection of flaky tests. The other logic will not be considered until selected.
+
+**How it works:**
+
+- The system captures and stores both command logs and error messages from each test run.
+- Flakiness is detected using only the logic chosen by the user:
+  - If Command Logs Mapping is selected, only command log inconsistencies are analyzed.
+  - If Error Message Comparison is selected, only error message differences are analyzed.
+- Tests are marked as flaky if the selected method identifies inconsistent behavior or error messages.
+
+**Examples:**
+- If Command Logs Mapping is active: A test's command logs show different outcomes for the same command across runs → flaky.
+- If Error Message Comparison is active: A test fails with "TimeoutError" in one run and "ElementNotFound" in another → flaky.
+- If a test fails with the same error message and consistent command logs, it is not considered flaky under either logic.
+
+**Technical Details:**
+- The test result processing pipeline extracts and stores both command logs and error messages for each test run.
+- Flakiness detection logic applies only the selected method.
+- The database schema supports storage for both command logs and error messages.
+- Logging is added to track the decision-making process for the active detection method.
+- The UI reflects the detection mechanism, showing command log history or error message history based on the selected logic.
+- Backward compatibility is maintained with existing test history data.
+
+**Business Value:**
+- Offers flexibility and precision in flaky test detection.
+- Reduces false positives and helps teams focus on genuinely unstable tests.
+- Improves the reliability of the test insights dashboard.
+- Enables more targeted test stabilization efforts.
 
 :::caution Supported Frameworks
-Currently, this feature only support `Selenium` based tests for Web Automation and HyperExecute subscribers.
+Currently, these features only support `Selenium` based tests for Web Automation and HyperExecute subscribers. Integration with Playwright reporter infrastructure is ensured. Support for additional frameworks is upcoming.
 :::
 
 
@@ -97,31 +129,31 @@ To view the Flaky Test Detection report, you can follow the below steps:
 
 <img loading="lazy" src={require('../assets/images/test-intelligence/drawer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-## Exploring different metrics in Flaky Test Detection
+## Exploring Different Metrics in Flaky Test Detection
 
-In Flaky Test Detection , some metrics play a crucial role in assessing and categorizing test results. Understanding these metrics is essential for identifying and addressing inconsistencies in automated testing.
+In Flaky Test Detection, several metrics play a crucial role in assessing and categorizing test results. Understanding these metrics is essential for identifying and addressing inconsistencies in automated testing. Please note that some metrics are only relevant when the **Command Logs Mapping** logic is selected.
 
 1. **Flake Rate**
-The Flake Rate is a metric that measures the current flake rate within a specific group of tests. In Flaky Test Detection, tests are grouped based on criteria such as test name, browser, operating system (OS), and resolution. This metric assesses the inconsistency across test runs of the same name by quantifying transitions in test status and provides valuable insights into the collective performance of similar tests under varying conditions.
+   The Flake Rate is a metric that measures the current flake rate within a specific group of tests. In Flaky Test Detection, tests are grouped based on criteria such as test name, browser, operating system (OS), and resolution. This metric assesses the inconsistency across test runs of the same name by quantifying transitions in test status and provides valuable insights into the collective performance of similar tests under varying conditions.
 
-  **Use Case:** Picture a group of tests. The Flake Rate serves as a measure of the degree of consistency or inconsistency observed in the test status, when these tests are executed repeatedly
+   **Use Case:** Picture a group of tests. The Flake Rate serves as a measure of the degree of consistency or inconsistency observed in the test status when these tests are executed repeatedly.
 
-1. **Flaky Commands**
-The No. of Flaky Commands is a metric used to define the order of flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" /> of an individual test. It signifies the inconsistency of different commands within the same test.
+2. **Flaky Commands** *(Available only with Command Logs Mapping logic)*
+   The Number of Flaky Commands is a metric used to define the order of flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" /> of an individual test. It signifies the inconsistency of different commands within the same test.
 
-  **Use Case:** Consider a single test that performs a series of commands. The number of flaky commands will let the user know how many commands have inconsistencies in a single test.
+   **Use Case:** Consider a single test that performs a series of commands. The number of flaky commands will let the user know how many commands have inconsistencies in a single test.
 
-3. **Command Flakiness Percentage**
-The Command Flakiness Percentage is a metric employed to define the order of flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" /> of a specific command within a test. It assesses the inconsistency of the same command executed across different test runs within the same group. This level of granularity helps pinpoint potential sources of flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" /> at the command level.
+3. **Command Flakiness Percentage** *(Available only with Command Logs Mapping logic)*
+   The Command Flakiness Percentage is a metric employed to define the order of flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" /> of a specific command within a test. It assesses the inconsistency of the same command executed across different test runs within the same group. This level of granularity helps pinpoint potential sources of flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" /> at the command level.
 
-  **Use Case:** Within a test, individual commands may produce inconsistent results. The Command Flakiness Percentage identifies the fluctuations in each command, aiding in precise root cause analysis.
+   **Use Case:** Within a test, individual commands may produce inconsistent results. The Command Flakiness Percentage identifies the fluctuations in each command, aiding in precise root cause analysis.
 
 :::info
 Understanding these metrics allows you to:
 
 - Assess the overall consistency of tests within a group.
 - Identify specific tests that exhibit inconsistent behavior.
-- Drill down to individual commands to pinpoint sources of flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" />.
+- Drill down to individual commands to pinpoint sources of flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" /> (when Command Logs Mapping is active).
 - Prioritize improvements and optimizations based on the level of inconsistency revealed by these metrics.
 ::: 
 
@@ -174,15 +206,3 @@ Flakiness is characterized by the inconsistency observed in prior executions of 
 ## Support for Cypress, Playwright, Puppeteer and Appium <NewTag value="UPCOMING" bgColor="#7c39ff" color="#fff" />
 
 We are actively working on extending its Flaky Test Detection capabilities to include popular testing frameworks like `Cypress, Playwright, Puppeteer, and Appium`. This expansion will empower users to assess and manage test reliability across a broader spectrum of testing scenarios in both web and app based tests, enhancing the overall testing experience. Stay tuned for updates on the availability of Flaky Test Detection support for these frameworks.
-
-:::note Join Waitlist
-Are you looking interested in getting the Flaky Test Detection for your test suite? 
-<a 
-href="https://www.lambdatest.com/test-intelligence" 
-target="_blank" 
-style={{background: "#1E8287", color: "#fff", fonWeight:"bolder", padding: "8px", borderRadius:"5px"}} 
-type="button" 
-> 
-Click here to Join Waitlist 
-</a>
-:::

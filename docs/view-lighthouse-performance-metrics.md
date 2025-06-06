@@ -70,7 +70,7 @@ LambdaTest now integrates [**Lighthouse**](https://developers.google.com/web/too
 *   **SEO**
 *   **Progressive Web App**
 
-metrics with the help of LambdaTest. LambdaTest also allows you to perform cross-browser testing on 3000+ combinations of real devices, browsers and operating systems.
+metrics with the help of LambdaTest. LambdaTest also allows you to perform cross-browser testing on 10000+ combinations of real devices, browsers and operating systems.
 
 > **Note:** As of now, LambdaTest supports **Lighthouse** on Chrome browsers for all Windows OS, macOS BigSur, macOS Mojave, and macOS Catalina.
 

@@ -43,7 +43,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
-Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. LambdaTest lets you perform automated app testing of your iOS apps using XCUITest across 3000+ real devices and OS combinations.
+Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. LambdaTest lets you perform automated app testing of your iOS apps using XCUITest across 10000+ real devices and OS combinations.
 
 ## Prerequisites
 

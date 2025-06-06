@@ -51,7 +51,7 @@ slug: leapwork-integration-with-lambdatest/
 * * *
 [LEAPWORK](https://www.leapwork.com/) is a test automation platform that provides easy and completely visual codeless automation. With LEAPWORK, you can build test automation cases without writing a single line of code, transform those test cases into an automation flow for faster and greater coverage. It also provides seamless integration to various CI/CD and DevOps tools.
 
-LambdaTest has integrated with LEAPWORK to make your test automation more seamless than before. Now, you will be able to perform cross browser testing for over 3000+ browsers, devices, and operating systems at the click of a few buttons. Test automation was never so easy!
+LambdaTest has integrated with LEAPWORK to make your test automation more seamless than before. Now, you will be able to perform cross browser testing for over 10000+ browsers, devices, and operating systems at the click of a few buttons. Test automation was never so easy!
 
 ## How To Integrate LambdaTest With LEAPWORK?
 -----------------------------------------------------------------------------------------------------------------------------

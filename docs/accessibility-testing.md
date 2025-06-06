@@ -64,10 +64,28 @@ Accessibility testing ensures that your product is usable by people with disabil
       <p>Get a comprehensive accessibility analysis via browser extension.</p>
     </div>
   </a>
-  <a href="/support/docs/accessibility-automation">
+    <a href="/support/docs/accessibility-android-test">
     <div className="support_inners">
-      <h3>Accessibility Automation</h3>
-      <p>Get the accessibility check for automated tests and scripts.</p>
+      <h3>Accessibility Manual App</h3>
+      <p>Get a comprehensive accessibility analysis for your app.</p>
+    </div>
+  </a>
+    <a href="/support/docs/accessibility-automation">
+    <div className="support_inners">
+      <h3>Accessibility Web Automation</h3>
+      <p>Get the accessibility check for automated webapp tests and scripts.</p>
+    </div>
+  </a>
+  <a href="/support/docs/accessibility-android-automation-test">
+    <div className="support_inners">
+      <h3>Accessibility App Automation</h3>
+      <p>Get the accessibility check for your automated app tests and scripts.</p>
+    </div>
+  </a>
+    <a href="/support/docs/accessibility-test-scheduling">
+    <div className="support_inners">
+      <h3>Sitemap Scheduling</h3>
+      <p>Streamline your accessibility testing by automating checks and generating comprehensive reports.</p>
     </div>
   </a>
 </div>

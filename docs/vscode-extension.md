@@ -3,7 +3,7 @@ id: vscode-extension
 title: LambdaTest VS Code Extension For Cross Browser Testing
 hide_title: true
 sidebar_label: VS Code Extension
-description: With LambdaTest VS Code Extension, perform real-time cross browser testing of your public and locally hosted web applications across 3000+ real, browsers, devices and OS combinations right from the VS Code Editor. 
+description: With LambdaTest VS Code Extension, perform real-time cross browser testing of your public and locally hosted web applications across 10000+ real, browsers, devices and OS combinations right from the VS Code Editor. 
 keywords:
   - lambdatest extension for vs code
   - how to add lambdatest extension in vs code
@@ -43,7 +43,7 @@ slug: vs-code-extension/
 # LambdaTest VS Code Extension
 ---
 
-LambdaTest VS Code Extension enables you to perform real-time cross browser testing of your public and locally hosted websites and web applications right from VS Code. Using this extension, you can trigger real-time cross-browser testing from within VS Code Editor to test your web apps across 3000+ browsers, real devices, and operating systems.
+LambdaTest VS Code Extension enables you to perform real-time cross browser testing of your public and locally hosted websites and web applications right from VS Code. Using this extension, you can trigger real-time cross-browser testing from within VS Code Editor to test your web apps across 10000+ browsers, real devices, and operating systems.
 
 In this guide, learn how to configure LambdaTest VS Code Extension for real-time cross browser testing.
 
