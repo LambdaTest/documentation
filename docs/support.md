@@ -223,7 +223,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/accessibility-devtools/"><p className="p_home_inners">Accessibility DevTools</p></a>
         <a href="/support/docs/accessibility-automation/"><p className="p_home_inners">Accessibility Web Automation</p></a>
         <a href="/support/docs/accessibility-test-scheduling/"><p className="p_home_inners">Sitemap Scheduling</p></a>
-        <a href="/support/docs//accessibility-android-test/"><p className="p_home_inners">Native App Scanner &nbsp; <NewTag  value="BETA" /> </p></a> 
+        <a href="/support/docs/accessibility-android-test/"><p className="p_home_inners">Native App Scanner &nbsp; <NewTag  value="BETA" /> </p></a> 
         <a href="/support/docs/accessibility-android-automation-test/"><p className="p_home_inners">Native App Automation &nbsp; <NewTag  value="BETA" /> </p></a>
         <a href="/support/docs/screen-reader-on-accessibility/"><p className="p_home_inners">Screen Reader</p></a>
       </div>
