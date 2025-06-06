@@ -3,7 +3,7 @@ id: gocd-integration
 title: How to integrate GoCD With LambdaTest
 sidebar_label: GoCD
 hide_title: true
-description: LambdaTest integration with GoCD will help your perform Selenium test automation for your code changes on more than 3000+ real browsers for both mobile and desktop. You can trigger your Selenium testing scripts directly from GoCD instance and they would be executed over your LambdaTest automation dashboard.
+description: LambdaTest integration with GoCD will help your perform Selenium test automation for your code changes on more than 10000+ real browsers for both mobile and desktop. You can trigger your Selenium testing scripts directly from GoCD instance and they would be executed over your LambdaTest automation dashboard.
 keywords:
   - gocd
   - lambdatest
@@ -46,7 +46,7 @@ slug: gocd-integration-with-lambdatest/
 
 GoCD offers a free and open-source platform to help you configure robust CI/CD pipelines with ease. The intuitive UI offers an end-to-end view wherein you can visualize the entire migration path to production in a collective view. That way, you can easily pinpoint the inefficient areas to optimize the CI/CD process. By leveraging GoCD, you can achieve faster feedback loops through its modelling constructs which makes your complex CI/CD pipeline looks a lot simpler. You also get features like dependency management & parallel execution to help you deliver better products quicker.
 
-LambdaTest integration with GoCD will help your perform Selenium test automation for your code changes on more than 3000+ real browsers for both mobile and desktop. You can trigger your Selenium testing scripts directly from GoCD instance and they would be executed over your LambdaTest automation dashboard.
+LambdaTest integration with GoCD will help your perform Selenium test automation for your code changes on more than 10000+ real browsers for both mobile and desktop. You can trigger your Selenium testing scripts directly from GoCD instance and they would be executed over your LambdaTest automation dashboard.
 
 ## Prerequisites
 ***

@@ -46,7 +46,7 @@ The LambdaTest Slack App allows you to initiate real-time tests and screenshot t
 
 By integrating LambdaTest with Slack App,
 
-* Perform Real time testing with access to 3000+ browser and operating systems on the LambdaTest cloud.
+* Perform Real time testing with access to 10000+ browser and operating systems on the LambdaTest cloud.
 * Run Screenshot testing to capture bulk screenshots of websites and web apps from the saved list. 
 * Reuse the generated test cards and relaunch the test with the same configuration.
 

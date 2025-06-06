@@ -3,7 +3,7 @@ id: upload-files-using-lambdatest
 title: Upload Files Using LambdaTest Selenium Grid
 hide_title: true
 sidebar_label: Upload Files Using LambdaTest Selenium Grid
-description: LambdaTest Selenium Grid allows you to upload any file inside your Selenium test scripts, to ensure cross-browser compatibility on over 3000+ browsers and OS. 
+description: LambdaTest Selenium Grid allows you to upload any file inside your Selenium test scripts, to ensure cross-browser compatibility on over 10000+ browsers and OS. 
 keywords:
   - upload files
   - upload files inside selenium scripts
@@ -41,7 +41,7 @@ slug: upload-files-using-lambdatest/
 
 # Upload Files Using LambdaTest Selenium Grid
 
-In Selenium automation testing, you might have come across the need to test the upload functionality on a web app or a website. LambdaTest now allows you to work with upload file functionality on the cloud-based Selenium Grid and test the upload feature on 3000+ browser and OS combinations.
+In Selenium automation testing, you might have come across the need to test the upload functionality on a web app or a website. LambdaTest now allows you to work with upload file functionality on the cloud-based Selenium Grid and test the upload feature on 10000+ browser and OS combinations.
 
 In this document, you will see how you can upload a file on the LambdaTest platform and access it via an automation test script.
 

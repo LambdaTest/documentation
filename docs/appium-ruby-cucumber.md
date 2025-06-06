@@ -2,7 +2,7 @@
 id: appium-ruby-cucumber
 title: Appium with Cucumber
 sidebar_label: Cucumber
-description: Complete guide to running your first Cucumber Appium automated test script on LambdaTest Real Device Cloud Platform. Test on 3000+ Real Devices.
+description: Complete guide to running your first Cucumber Appium automated test script on LambdaTest Real Device Cloud Platform. Test on 10000+ Real Devices.
 keywords:
   - cucumber appium
   - cucumber appium tutorial

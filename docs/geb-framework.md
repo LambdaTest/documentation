@@ -2,7 +2,7 @@
 id: geb-frameworks
 title: Execute Selenium Tests With Geb
 sidebar_label: Geb
-description: Your guide to running tests using Geb on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
+description: Your guide to running tests using Geb on LambdaTest's Selenium Grid of 10000+ real devices and desktop browsers.
 keywords:
   - geb
   - groovy

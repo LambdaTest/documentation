@@ -3,7 +3,7 @@ id: local-testing-windows
 title: Local Testing For Windows
 hide_title: true
 sidebar_label: Local Testing For Windows
-description: This documentation will help you perform Localhost testing on Windows OS via LambdaTest tunnel .Test private server URLs, locally hosted web-apps and websites on 3000+ real browsers on secure LambdaTest cloud infrastructure.
+description: This documentation will help you perform Localhost testing on Windows OS via LambdaTest tunnel .Test private server URLs, locally hosted web-apps and websites on 10000+ real browsers on secure LambdaTest cloud infrastructure.
 keywords:
   - local testing
   - LambdaTest tunnel Features
@@ -43,9 +43,9 @@ slug: local-testing-windows/
 
 ***
 
-LambdaTest tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites on 3000+ real browsers through LambdaTest. You can test plain HTML, CSS, PHP, Python, or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on LambdaTest. You can leverage the new LambdaTest tunnel binary for corporate firewalls and proxy settings without any restrictions. LambdaTest tunnel follows various protocols such as Web Socket, HTTPS, SSH(Secure Shell), etc. to help you establish a secure and unique tunnel connection through corporate firewalls between your system and LambdaTest cloud servers.
+LambdaTest tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites on 10000+ real browsers through LambdaTest. You can test plain HTML, CSS, PHP, Python, or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on LambdaTest. You can leverage the new LambdaTest tunnel binary for corporate firewalls and proxy settings without any restrictions. LambdaTest tunnel follows various protocols such as Web Socket, HTTPS, SSH(Secure Shell), etc. to help you establish a secure and unique tunnel connection through corporate firewalls between your system and LambdaTest cloud servers.
 
-Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with LambdaTest tunnel and experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross-platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over the Production environment.
+Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with LambdaTest tunnel and experience the flexibility to securely test your website on 10000+ browsers and their assorted versions, running on real OS code for cross-platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over the Production environment.
 
 > Here is all you need to know about LambdaTest tunnel from configuring a secure connection to executing test cases on your locally hosted web-apps.
 

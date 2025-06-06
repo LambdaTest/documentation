@@ -47,7 +47,7 @@ Microsoft Teams or MS Teams is a cloud-based collaboration application that help
 The LambdaTest-Microsoft Teams App integration helps you in,
 
 * Quickly launch your real-time tests and screenshot tests directly inside from any conversation or channel in a single click.
-* Performing the real-time tests and screenshot tests across 3000+ browser versions on LambdaTest cloud.
+* Performing the real-time tests and screenshot tests across 10000+ browser versions on LambdaTest cloud.
 * Reuse the test cards and launch the test again with the same configurations.
 
 ## How To Add LambdaTest From Microsoft Teams App?
@@ -86,7 +86,7 @@ You can also pin the LambdaTest app to your left navigation menu by right-clicki
 
 * * *
 
-With LambdaTest+Microsoft Teams App integration, you can now perform Real-time testing of your websites over 3000+ browsers directly from inside your any personal chat or team channel in a single click. You can share the UI bugs, screenshots, and videos directly to your personal chat or team channel.
+With LambdaTest+Microsoft Teams App integration, you can now perform Real-time testing of your websites over 10000+ browsers directly from inside your any personal chat or team channel in a single click. You can share the UI bugs, screenshots, and videos directly to your personal chat or team channel.
 
 **Step 1**: Click on the ‘LambdaTest bot‘ from the chat option and select ‘Real-time testing‘.
 
@@ -132,7 +132,7 @@ For further information on the Real-time Testing, refer to our documentation [Re
 
 > Note: If you already logged in and executed the Realtime tests, you won’t be asked to login again.
 
-With LambdaTest+Microsoft Teams App integration, you can now perform Screenshot testing of your websites over 3000+ browsers directly from inside your any personal chat or team channel in a single click. You can view and share your screenshots directly to your personal chat or team channel.
+With LambdaTest+Microsoft Teams App integration, you can now perform Screenshot testing of your websites over 10000+ browsers directly from inside your any personal chat or team channel in a single click. You can view and share your screenshots directly to your personal chat or team channel.
 
 **Step 1**: Click on the ‘LambdaTest bot‘ from the chat option and select ‘Screenshot testing‘.
 

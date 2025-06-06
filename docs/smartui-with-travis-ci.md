@@ -2,7 +2,7 @@
 id: smartui-with-travis-ci
 title: Travis CI Pipeline Integration with SmartUI
 sidebar_label: Travis CI
-description: SmartUI now integrates with Travis CI Pipeline to boost pipeline delivery. Perform automated cross browser testing with SmartUI to seamlessly providing 3000+ real browsers running through machines.
+description: SmartUI now integrates with Travis CI Pipeline to boost pipeline delivery. Perform automated cross browser testing with SmartUI to seamlessly providing 10000+ real browsers running through machines.
 keywords:
   - lambdatest integrations
   - smart ui integration

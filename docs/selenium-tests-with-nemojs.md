@@ -3,7 +3,7 @@ id: selenium-tests-with-nemojs
 title: Run Selenium Tests With NemoJS | LambdaTest
 hide_title: true
 sidebar_label: NemoJS
-description: This document will help you run Selenium automated tests with NemoJS across 3000+ browsers and operating systems on LambdaTest cloud Selenium Grid.
+description: This document will help you run Selenium automated tests with NemoJS across 10000+ browsers and operating systems on LambdaTest cloud Selenium Grid.
 keywords:
 - nemo selenium
 - nemojs selenium
@@ -44,7 +44,7 @@ slug: selenium-tests-with-nemojs/
 
 NemoJS is an open-source NodeJS automation framework developed by PayPal. Nemo makes it easy to integrate Selenium automation into your NodeJS web projects.
 
-This document will help you run Selenium automated tests with NemoJS on LambdaTest cloud [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). You can run NemoJS automated test cases across 3000+ different browsers and operating systems.
+This document will help you run Selenium automated tests with NemoJS on LambdaTest cloud [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). You can run NemoJS automated test cases across 10000+ different browsers and operating systems.
 
 ## Prerequisites
 * * *
@@ -141,7 +141,7 @@ npx nemo -P chrome
 ## Running The Parallel Tests With NemoJS
 * * *
 
-LambdaTest Selenium Grid allows you to perform parallel testing across 3000+ browsers and OS to automate your several test cases simultaneously. You can execute a single test case across various browsers, or you can run multiple test case scenarios across the same browser but with different browser versions.
+LambdaTest Selenium Grid allows you to perform parallel testing across 10000+ browsers and OS to automate your several test cases simultaneously. You can execute a single test case across various browsers, or you can run multiple test case scenarios across the same browser but with different browser versions.
 
 Below is the code sample for the Parallel tests. In this code, we will test our Sample to-do app in three browser versions and operating systems.
 

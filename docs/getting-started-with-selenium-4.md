@@ -2,7 +2,7 @@
 id: getting-started-with-selenium-4
 title: Getting Started With Selenium 4 On LambdaTest Platform
 sidebar_label: Getting Started
-description: Now run automated tests with Selenium 4 using the LambdaTest Selenium Grid across 3000+ browsers and operating systems. 
+description: Now run automated tests with Selenium 4 using the LambdaTest Selenium Grid across 10000+ browsers and operating systems. 
 keywords:
 - Selenium 4 
 - Selenium 4 Relative Locators
@@ -17,7 +17,7 @@ slug: getting-started-with-selenium-4/
 
 * * *
 
-Now run automated tests with Selenium 4 using the LambdaTest Selenium Grid across 3000+ browsers and operating systems. With this LambdaTest and Selenium 4 integration, LambdaTest not only allows you to perform Selenium 4 testing on an online automation cloud, but also allows you to perform cross-browser testing at scale.
+Now run automated tests with Selenium 4 using the LambdaTest Selenium Grid across 10000+ browsers and operating systems. With this LambdaTest and Selenium 4 integration, LambdaTest not only allows you to perform Selenium 4 testing on an online automation cloud, but also allows you to perform cross-browser testing at scale.
 
 This Selenium 4 documentation will act as your step-by-step guide on your journey to test using Selenium 4 on LambdaTest. 
 

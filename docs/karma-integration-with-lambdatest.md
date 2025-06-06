@@ -45,7 +45,7 @@ slug: karma-integration-with-lambdatest/
 
 Designed for rapid development, Karma testing framework is an open-source test runner for JavaScript that runs on Node.js. It was earlier termed as Testacular. Karma test runner increases web developers daily-basis productivity & ensures their web app stays more robust by offering quick and easy automated testing. Karma is highly favored in the web developer community due to its outstanding plugin support and integrations with numerous renowned CI packages such as Jenkins, Travis, and Semaphore. It is highly configurable to provide web developers a testing environment where they can receive feedback, instantly from their piece of code.
 
-LambdaTest now integrates with Karma testing framework to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) providing 3000+ real browsers running through machines, on cloud. Perform automation testing in parallel using LambdaTest’s Selenium Grid to drastically trim down your test cycles.
+LambdaTest now integrates with Karma testing framework to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) providing 10000+ real browsers running through machines, on cloud. Perform automation testing in parallel using LambdaTest’s Selenium Grid to drastically trim down your test cycles.
 
 ## Prerequisites
 * * *

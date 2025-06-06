@@ -42,7 +42,7 @@ slug: local-testing-with-puppeteer/
 # Local Testing Using Puppeteer
 * * *
 
-LambdaTest tunnel feature lets you test private server URLs, locally hosted web apps, and websites on 3000+ real browsers and operating systems. On LambdaTest, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting to corporate firewalls or proxy settings, no restrictions apply to the new LambdaTest tunnel binary. To establish a secure and unique tunnel connection between your system and LambdaTest cloud servers, the LambdaTest tunnel utilizes various protocols like Web Sockets, HTTPS, SSH(Secure Shell), etc.
+LambdaTest tunnel feature lets you test private server URLs, locally hosted web apps, and websites on 10000+ real browsers and operating systems. On LambdaTest, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting to corporate firewalls or proxy settings, no restrictions apply to the new LambdaTest tunnel binary. To establish a secure and unique tunnel connection between your system and LambdaTest cloud servers, the LambdaTest tunnel utilizes various protocols like Web Sockets, HTTPS, SSH(Secure Shell), etc.
 
 Learn how to perform local testing using Puppeteer across 40+ real browsers and operating systems.
 

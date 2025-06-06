@@ -43,7 +43,7 @@ slug: aws-codepipeline-integration-with-lambdatest/
 
 AWS CodePipeline is a cloud-based continuous delivery platform for fully automating your release pipelines. Provides an intuitive interface for configuring & modeling different stages of release cycles, so you can envision how your code changes would look when pushed across these different changes. You can also track your pipeline in real-time, and look into the pipeline history to understand the timestamps involved in the execution of various pipelines.
 
-LambdaTest integration with AWS CodePipeline will help you perform automated cross browser testing through a Selenium Grid offering 3000+ real browsers, browser versions. Now, not only can you commit changes to your code using AWS CodePipeline, but you can also validate any UI/UX anomalies of your web application through a wide variety of browsers using LambdaTest, a cloud-based cross browser testing tool.
+LambdaTest integration with AWS CodePipeline will help you perform automated cross browser testing through a Selenium Grid offering 10000+ real browsers, browser versions. Now, not only can you commit changes to your code using AWS CodePipeline, but you can also validate any UI/UX anomalies of your web application through a wide variety of browsers using LambdaTest, a cloud-based cross browser testing tool.
 
 ## Prerequisite
 ***

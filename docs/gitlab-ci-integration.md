@@ -44,7 +44,7 @@ slug: gitlab-ci-integration-with-lambdatest/
 * * *
 GitLab is one of the finest tools which facilitates continuous integration for Git projects from small to enterprise level clients. Now, deploy your code rapidly and test it thoroughly for a robust delivery in your go-to-market launch.
 
-LambdaTest now integrates with GitLab CI to boost your go-to-market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on our cloud servers. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down your test cycles.
+LambdaTest now integrates with GitLab CI to boost your go-to-market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 10000+ real browsers running through machines, on our cloud servers. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down your test cycles.
 
 This topic will demonstrate how you can leverage LambdaTest Integration with GitLab CI. We will be running our automation script using the Protractor framework.
 

@@ -3,7 +3,7 @@ id: php-framework
 title: PHP Automated Testing:Run PHP Web Automation Scripts On Online Selenium Grid
 hide_title: true
 sidebar_label: PHP
-description: Complete guide to running your first PHP Selenium automation test scripts on LambdaTest Selenium Grid cloud. Test on 3000+ different desktop and mobile browsers.
+description: Complete guide to running your first PHP Selenium automation test scripts on LambdaTest Selenium Grid cloud. Test on 10000+ different desktop and mobile browsers.
 keywords:
   - php selenium
   - php selenium tutorial

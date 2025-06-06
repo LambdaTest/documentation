@@ -3,7 +3,7 @@ id: testim-integration
 title: Testim Integration
 hide_title: false
 sidebar_label: Testim
-description: LambdaTest offers integration with Testim to help you perform automated browser testing on 3000+ real browsers and OS.
+description: LambdaTest offers integration with Testim to help you perform automated browser testing on 10000+ real browsers and OS.
 keywords:
 - lambdatest integrations
 - lambdatest integrations with testim
@@ -41,7 +41,7 @@ slug: testim-integration/
 ></script>
 Testim provides an automated testing platform to create stable tests using AI Native capabilities, along with tools that facilitate scaling quality across your software development process.
 
-Integrating LambdaTest with Testim lets you run Testim automated tests on LambdaTest cloud-based grid across 3000+ real browsers and OS.
+Integrating LambdaTest with Testim lets you run Testim automated tests on LambdaTest cloud-based grid across 10000+ real browsers and OS.
 
 ## Prerequisites
 - Create an account on Testim.

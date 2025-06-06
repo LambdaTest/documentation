@@ -49,7 +49,7 @@ import TabItem from '@theme/TabItem';
 
 ***
 
-While you perform Selenium test automation, you may want to test the download functionality of your web-application or website. With LambdaTest Selenium Grid, you can test the download feature of your web-application on 3000+ real browsers for mobile and desktop. You can download a file inside the test machine through your Selenium test automation script by Base64 encryption & decryption.
+While you perform Selenium test automation, you may want to test the download functionality of your web-application or website. With LambdaTest Selenium Grid, you can test the download feature of your web-application on 10000+ real browsers for mobile and desktop. You can download a file inside the test machine through your Selenium test automation script by Base64 encryption & decryption.
 
 LambdaTest Selenium Grid will provide you with an encoded string of base64 which you can leverage to download any file inside the virtual machine triggered through your Selenium testing scripts. For this, LambdaTest has provided three main flags using JavascriptExecutor to:
 

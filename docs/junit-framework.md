@@ -2,7 +2,7 @@
 id: junit-frameworks
 title: Run your Selenium JUnit tests on LambdaTest
 sidebar_label: JUnit
-description: Your guide to running tests using JUnit on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
+description: Your guide to running tests using JUnit on LambdaTest's Selenium Grid of 10000+ real devices and desktop browsers.
 keywords:
   - java selenium
   - java selenium tutorial

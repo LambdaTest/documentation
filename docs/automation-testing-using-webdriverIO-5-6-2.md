@@ -3,7 +3,7 @@ id: automation-testing-using-webdriverIO-5-6-2
 title: Run Automation Scripts on Cloud Selenium Grid using WebDriverIO 5.6.2 Framework | LambdaTest
 hide_title: true
 sidebar_label: WebDriverIO 5.6.2
-description: Now you can run your automation scripts using Selenium with WebDriverIO 5.6.2 on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with WebDriverIO 5.6.2 on LambdaTest online grid of 10000+ real desktop browsers and real operating systems.
 keywords:
   - webdriverio selenium grid
   - selenium webdriver tutorial
@@ -45,7 +45,7 @@ slug: webdriverio-5-6-2-with-selenium-running-automation-scripts-on-lambdatest-s
 
 # Run Automation Scripts on Cloud Selenium Grid using WebDriverIO 5.6.2 Framework
 * * *
-LambdaTest Selenium Automation Grid is a cloud-based scalable Selenium testing platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can now run your JavaScript Selenium automated test cases on a scalable Selenium infrastructure that is running real browsers and real operating systems.
+LambdaTest Selenium Automation Grid is a cloud-based scalable Selenium testing platform which enables you to run your automation scripts on 10000+ different browsers and operating systems. You can now run your JavaScript Selenium automated test cases on a scalable Selenium infrastructure that is running real browsers and real operating systems.
 
 This guide will help you in getting started with configuring and running your JavaScript based automation test scripts on LambdaTest Selenium cloud platform using WebDriverIO 5.6.2 framework. This doc will help you to:
 

@@ -54,7 +54,7 @@ With features like real-time navigation, detailed UI element inspection, and the
 
 ---
 
-**Step 1:** Run your app automation test on the LambdaTest platform. You can perform app automation testing across 3000+ devices, OS and browser combinations. Using debug mode to run the test is preferred as you can inspect applications at debug points.
+**Step 1:** Run your app automation test on the LambdaTest platform. You can perform app automation testing across 10000+ devices, OS and browser combinations. Using debug mode to run the test is preferred as you can inspect applications at debug points.
 
 <img loading="lazy" src={require('../assets/images/live-debug/automation-dashboard.webp').default} alt="Live Debug App Automation" width="1365" height="632" className="doc_img"/>
 

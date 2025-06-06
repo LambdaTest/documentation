@@ -2,7 +2,7 @@
 id: flutter-supported-capabilities
 title: Flutter Supported Capabilities
 sidebar_label: Supported Capabilities
-description: Now you can run your Flutter framework on LambdaTest online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.
+description: Now you can run your Flutter framework on LambdaTest online grid of 10000+ real desktop browsers and real operating systems with its supported capabilities.
 keywords:
   - flutter
   - java

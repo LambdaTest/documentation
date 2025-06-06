@@ -3,7 +3,7 @@ id: guide-to-php
 title: Running PHP Tests on Online Selenium Grid | LambdaTest
 hide_title: true
 sidebar_label: Quick Guide To Run PHP
-description: Guide to running PHP and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and PHP on 3000+ browsers on cloud
+description: Guide to running PHP and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and PHP on 10000+ browsers on cloud
 keywords:
   - LambdaTest automation using php
   - php and Selenium automation
@@ -40,7 +40,7 @@ slug: quick-guide-to-run-php-tests-on-lambdatest-selenium-grid/
     }}
 ></script>
 
-LambdaTest's cloud-based Selenium grid can be leveraged to run your automation test scripts on 3000+ different browser and operating system environments. It’s a scalable, reliable, and secure online [Selenium grid](https://www.lambdatest.com/selenium-automation) infrastructure that not only helps you in increasing test coverage, but also cut down execution of your test automation builds by significant margin. This post will help you get started with running your PHP based Selenium automation scripts on LambdaTest Selenium grid.
+LambdaTest's cloud-based Selenium grid can be leveraged to run your automation test scripts on 10000+ different browser and operating system environments. It’s a scalable, reliable, and secure online [Selenium grid](https://www.lambdatest.com/selenium-automation) infrastructure that not only helps you in increasing test coverage, but also cut down execution of your test automation builds by significant margin. This post will help you get started with running your PHP based Selenium automation scripts on LambdaTest Selenium grid.
 
 ## Prerequisites
 ***

@@ -3,7 +3,7 @@ id: bitbucket-pipelines-integration
 title: Bitbucket Pipelines Integration With LambdaTest
 hide_title: true
 sidebar_label: Bitbucket Pipelines 
-description: LambdaTest integration with Bitbucket Pipelines will help you perform cross-browser testing on 3000+ real browsers &amp; browser versions, through a Selenium Grid hosted on LambdaTest cloud servers.
+description: LambdaTest integration with Bitbucket Pipelines will help you perform cross-browser testing on 10000+ real browsers &amp; browser versions, through a Selenium Grid hosted on LambdaTest cloud servers.
 keywords:
   - bitbucket pipelines
   - bitbucket integration with lambdatest
@@ -42,7 +42,7 @@ slug: bitbucket-pipelines-integration-with-lambdatest/
 
 Bitbucket Pipelines offers a free, automated continuous integration service through Bitbucket cloud servers. With Bitbucket Pipelines, teams can ship their product faster as they could rapidly test their code as soon as they commit. Once the code is tested, Bitbucket Pipeline deploys it into the Production environment automatically. It does so with the help of containers that can be fully customized according to your project requirements.
 
-LambdaTest integration with Bitbucket Pipelines will help you perform cross browser testing on 3000+ real browsers & browser versions through a Selenium Grid hosted on LambdaTest cloud servers. All you need is to set up your Bitbucket Pipelines with your LambdaTest account & you can trigger tests onto LambdaTest, directly from your Bitbucket Pipelines.
+LambdaTest integration with Bitbucket Pipelines will help you perform cross browser testing on 10000+ real browsers & browser versions through a Selenium Grid hosted on LambdaTest cloud servers. All you need is to set up your Bitbucket Pipelines with your LambdaTest account & you can trigger tests onto LambdaTest, directly from your Bitbucket Pipelines.
 
 In this topic, you will learn about the:
 

@@ -2,7 +2,7 @@
 id: appium-python-behave
 title: Appium with Behave
 sidebar_label: Behave
-description: Now you can run your Appium automation scripts using with Behave on LambdaTest Real Device Cloud Platform of 3000+ real mobile devices.
+description: Now you can run your Appium automation scripts using with Behave on LambdaTest Real Device Cloud Platform of 10000+ real mobile devices.
 keywords:
   - appium
   - lambdatest python

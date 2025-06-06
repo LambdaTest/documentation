@@ -3,7 +3,7 @@ id: katalon-integration-with-lambdatest
 title: Step By Step Guide to Integrate Lambdatest With Katalon
 hide_title: true
 sidebar_label: Katalon
-description: LambdaTest offers integration with Katalon Studio to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.
+description: LambdaTest offers integration with Katalon Studio to ease your automated cross browser testing process through their Selenium grid consisting more than 10000+ browsers.
 keywords:
   - lambdatest integrations
   - katalon

@@ -3,7 +3,7 @@ id: unit-testing-in-python
 title: Python Unittest with Selenium:Tutorial to run your first test on Lambdatest
 hide_title: true
 sidebar_label: Unittest
-description: Learn how to run unittest Selenium automated test scripts (with examples) using Python on LambdaTest Selenium Grid having 3000+ browsers and OS combinations.
+description: Learn how to run unittest Selenium automated test scripts (with examples) using Python on LambdaTest Selenium Grid having 10000+ browsers and OS combinations.
 
 keywords:
   - unittest

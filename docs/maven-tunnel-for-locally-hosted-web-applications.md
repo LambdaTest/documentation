@@ -40,7 +40,7 @@ slug: maven-tunnel-for-locally-hosted-web-applications/
     }}
 ></script>
 
-Maven is a renowned build automation tool for orchestrating project builds by automatically handling Selenium dependencies, compiling source code to binary & then packaging of the binary. LambdaTest offers an SSH (Secure Shell) tunnel which allows you to test your locally hosted websites over 3000+ browsers for both mobile and desktop through LambdaTest Selenium Grid.
+Maven is a renowned build automation tool for orchestrating project builds by automatically handling Selenium dependencies, compiling source code to binary & then packaging of the binary. LambdaTest offers an SSH (Secure Shell) tunnel which allows you to test your locally hosted websites over 10000+ browsers for both mobile and desktop through LambdaTest Selenium Grid.
 
 This document will help you configure a secure LambdaTest Tunnel to execute your [Selenium test automation](https://www.lambdatest.com/selenium-automation) scripts through your Maven project on our online Selenium Grid.
 

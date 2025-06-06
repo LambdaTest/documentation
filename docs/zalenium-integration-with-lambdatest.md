@@ -2,7 +2,7 @@
 id: zalenium-integration-with-lambdatest
 title: Zalenium Integration With LambdaTest
 sidebar_label: Zalenium 
-description: LambdaTest integration with Zalenium will allow you perform automated cross browser testing for your locally hosted web pages for over 3000+ real browser and browser versions, installed and hosted on-cloud.
+description: LambdaTest integration with Zalenium will allow you perform automated cross browser testing for your locally hosted web pages for over 10000+ real browser and browser versions, installed and hosted on-cloud.
 keywords:
   - Zelenium
   - lambdatest intigration with zelenium
@@ -18,7 +18,7 @@ Brought up by Zalando, Zalenium is open-source with the vision to eliminate the 
 
 Zalenium offers capabilities to help you define your Desired Capabilities in your test automation suite. Zalenium also provides an intuitive dashboard representing all the detailed logs of your test script execution. Using Zalenium, you can even perform automation testing over your locally hosted web pages. However, you would only be able to perform automated cross browser testing over the browsers installed on your machine.
 
-LambdaTest integration with Zalenium will help you perform automated cross browser testing for your locally hosted web pages for over 3000+ real browser and browser versions, installed, and hosted on-cloud.
+LambdaTest integration with Zalenium will help you perform automated cross browser testing for your locally hosted web pages for over 10000+ real browser and browser versions, installed, and hosted on-cloud.
 
 ## Prerequisites
 -----------------------------------------------------------------------------------------------------------------------------

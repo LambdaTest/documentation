@@ -41,7 +41,7 @@ slug: testmo-integration/
 
 TestMo is a unified test management software that helps teams manage and track all their testing activity and efforts in one place. It combines manual testing, exploratory & ad-hoc testing and test automation in one platform, so teams can work smarter and more productively.
 
-TestMo also offers integration with LambdaTest to help you perform automated cross browser testing through an on-cloud Selenium Grid offering 3000+ browsers. **LambdaTest integration to TestMo**  will help you run your automation scripts from TestMo instance to our cloud-based Grid.
+TestMo also offers integration with LambdaTest to help you perform automated cross browser testing through an on-cloud Selenium Grid offering 10000+ browsers. **LambdaTest integration to TestMo**  will help you run your automation scripts from TestMo instance to our cloud-based Grid.
 
 ## Steps to Integrate your Project
 ***

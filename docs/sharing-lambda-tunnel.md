@@ -46,7 +46,7 @@ slug: sharing-lambda-tunnel/
 # Sharing LambdaTest Tunnel
 
 * * *
-LambdaTest is a [cross browser testing](https://www.lambdatest.com/) tool which allows you to test your locally hosted website or web application on 3000+ real browsers. It does so with the help of an SSH(Secure Shell) tunnel which establishes a secure and unique connection from your local system to LambdaTest cloud servers.
+LambdaTest is a [cross browser testing](https://www.lambdatest.com/) tool which allows you to test your locally hosted website or web application on 10000+ real browsers. It does so with the help of an SSH(Secure Shell) tunnel which establishes a secure and unique connection from your local system to LambdaTest cloud servers.
 
 Earlier with LambdaTest Tunnel, users belonging to the same organization were able to choose any tunnel they want. So if a team had 5 members and all of them had configured their own tunnels, then they were able to shuffle their SSH tunnel connection with any of the 5 connections. However, that is not the case anymore!
 

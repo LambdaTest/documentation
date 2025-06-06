@@ -2,7 +2,7 @@
 id: cucumber-script-testng-selenium
 title: Run your Selenium Cucumber tests on LambdaTest
 sidebar_label: Cucumber
-description: Your guide to running tests using Cucumber on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
+description: Your guide to running tests using Cucumber on LambdaTest's Selenium Grid of 10000+ real devices and desktop browsers.
 keywords:
   - cucumber scripts
   - cucumber

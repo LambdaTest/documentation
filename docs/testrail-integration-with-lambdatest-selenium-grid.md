@@ -41,7 +41,7 @@ slug: testrail-integration-with-lambdatest-selenium-grid/
 ***
 TestRail is a modern test case management tool which offers a comprehensive web-platform for software testers and developers. Offering a JIRA add-on for cloud-based integration, TestRail helps you to track, manage, and hasten software release cycle.
 
-TestRail also offers integration with LambdaTest to help you perform automated cross browser testing through an on-cloud Selenium Grid offering 3000+ browsers. **LambdaTest Selenium Grid integration to TestRail**  will help you run your Selenium automation scripts from TestRail instance to our cloud-based Selenium Grid.
+TestRail also offers integration with LambdaTest to help you perform automated cross browser testing through an on-cloud Selenium Grid offering 10000+ browsers. **LambdaTest Selenium Grid integration to TestRail**  will help you run your Selenium automation scripts from TestRail instance to our cloud-based Selenium Grid.
 
 ## Prerequisites
 

@@ -3,7 +3,7 @@ id: algoshack-integration
 title: algoQA Integration
 hide_title: true
 sidebar_label: algoQA
-description: Integrate LambdaTest with algoQA and automate your browser testing on an online browser farm of 3000+ real browsers and operating system combinations.
+description: Integrate LambdaTest with algoQA and automate your browser testing on an online browser farm of 10000+ real browsers and operating system combinations.
 keywords:
   - lambdatest integration with algoqa
   - lambdatest and algoqa integration 
@@ -42,7 +42,7 @@ slug: algoqa-integration/
 
 algoQA is an end-to-end automation testing platform powered by artificial intelligence. It lets you generate test cases, executable automation scripts and datasets in a jiffy, thereby saving your testing and test maintenance cost and enhance your overall test coverage.
 
-By integrating LambdaTest with algoQA, you can perform automated browser testing on an online browser farm of 3000+ real browsers and operating system combinations, and achieve greater test coverage.
+By integrating LambdaTest with algoQA, you can perform automated browser testing on an online browser farm of 10000+ real browsers and operating system combinations, and achieve greater test coverage.
 
 ## Prerequisites
 ---

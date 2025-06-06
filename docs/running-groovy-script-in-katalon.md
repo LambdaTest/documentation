@@ -3,7 +3,7 @@ id: running-groovy-script-in-katalon
 title: How to Run Groovy Script In Katalon With LambdaTest Selenium Grid?
 hide_title: true
 sidebar_label: Running Groovy Script In Katalon With LambdaTest Selenium Grid
-description: Run your Groovy script in Katalon with LambdaTest Selenium Grid. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
+description: Run your Groovy script in Katalon with LambdaTest Selenium Grid. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 10000+ real browsers running through machines.
 keywords:
 - Katalon Groovy Script
 - Running Groovy Script

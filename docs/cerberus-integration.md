@@ -3,7 +3,7 @@ id: cerberus-integration
 title: Running Cerberus Automation Tests Using LambdaTest
 hide_title: true
 sidebar_label: Cerberus
-description: Now perform cross-browser testing of your website or web app on 3000+ desktop & mobile browser and OS combinations, using LambdaTest and Cerberus integration
+description: Now perform cross-browser testing of your website or web app on 10000+ desktop & mobile browser and OS combinations, using LambdaTest and Cerberus integration
 keywords:
  - LambdaTest integrations
  - Cerberus
@@ -89,7 +89,7 @@ Once the test is complete, you can view the result of the test on LambdaTest, wi
 
 * * *
 
-> Congrats! You have successfully executed your Cerberus test case on the LambdaTest platform, which provides you 3000+ browser and operating system combinations to perform cross-browser testing. If you have any doubt or face any issues, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can also mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!! 🙂
+> Congrats! You have successfully executed your Cerberus test case on the LambdaTest platform, which provides you 10000+ browser and operating system combinations to perform cross-browser testing. If you have any doubt or face any issues, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can also mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

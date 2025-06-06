@@ -52,7 +52,7 @@ slug: drone-ci-integration-with-lambdatest/
 
 Drone CI is one of the most popular modern open-source CI/CD tools. It not only provides a continuous integration with your projects but also provides a distributed CI/CD pipeline, which is not possible with some other tools like Jenkins. So Drone is the first choice for many teams as it is a purely distributed, cloud-native, DevOps friendly, team-oriented, and highly scalable open-source CI/CD tool.
 
-LambdaTest now integrates with Drone CI to boost your go-to-market delivery. You can perform automated cross-browser testing with LambdaTest to ensure seamless code render through an online Selenium grid. LambdaTest provides 3000+ real browsers running through machines, on the cloud. You can perform automation testing in parallel with LambdaTest’s Selenium grid which in turn can help you to drastically trim down your test cycles.
+LambdaTest now integrates with Drone CI to boost your go-to-market delivery. You can perform automated cross-browser testing with LambdaTest to ensure seamless code render through an online Selenium grid. LambdaTest provides 10000+ real browsers running through machines, on the cloud. You can perform automation testing in parallel with LambdaTest’s Selenium grid which in turn can help you to drastically trim down your test cycles.
 
 ## Prerequisites For Integrating Drone CI With Our Online Selenium Grid
 

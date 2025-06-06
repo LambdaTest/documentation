@@ -56,7 +56,7 @@ slug: mark-as-bug-in-screenshot-testing/
 - **Smart UI Testing:** Automated visual regression testing that performs a pixel-to-pixel comparison between multiple images & highlights any UI deviations such as padding, icon, text, etc., concerning the baseline images.
 
 > **Did You Know?**
-LambdaTest offers more than 3000+ real browsers and browser versions on every type of testing so you could maximize test coverage of your cross browser testing.
+LambdaTest offers more than 10000+ real browsers and browser versions on every type of testing so you could maximize test coverage of your cross browser testing.
 
 ## How Can I Mark As Bug While Screenshot Testing?
 

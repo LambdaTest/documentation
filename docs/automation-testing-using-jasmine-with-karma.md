@@ -3,7 +3,7 @@ id: automation-testing-using-jasmine-with-karma
 title: Jasmine Test Runner:Run Jasmine Testing on LambdaTest Selenium Grid | LambdaTest
 hide_title: true
 sidebar_label: Jasmine for BDD
-description: Now you can run your automation scripts using Jasmine with Karma on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Jasmine with Karma on LambdaTest online grid of 10000+ real desktop browsers and real operating systems.
 keywords:
   - jasmine selenium
   - karma selenium
@@ -45,7 +45,7 @@ slug: jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/
 # Jasmine Test Runner: Run Jasmine Testing on LambdaTest Selenium Grid
 * * *
 
-LambdaTest Selenium Automation Grid is a cloud-based, scalable Selenium testing platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can now run your java Selenium automated test cases on a scalable Selenium infrastructure that is running real browsers and real operating systems.
+LambdaTest Selenium Automation Grid is a cloud-based, scalable Selenium testing platform which enables you to run your automation scripts on 10000+ different browsers and operating systems. You can now run your java Selenium automated test cases on a scalable Selenium infrastructure that is running real browsers and real operating systems.
 
 This topic will help you demonstrate:
 
