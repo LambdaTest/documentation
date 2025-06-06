@@ -2,7 +2,7 @@
 id: espresso-mock-server
 title: Espresso Mock Server
 sidebar_label: Mock Server
-description: Now you can run your Espresso mock server on LambdaTest online grid of 10000+ real desktop browsers and real operating systems with its supported capabilities.
+description: Now you can run your Espresso mock server on LambdaTest online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.
 keywords:
   - espresso
   - java

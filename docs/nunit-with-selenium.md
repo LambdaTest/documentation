@@ -3,7 +3,7 @@ id: nunit-with-selenium
 title: NUnit with Selenium:Tutorial to run your first test on Lambdatest
 hide_title: true
 sidebar_label: NUnit
-description: Now you can run your automation scripts using Selenium with NUnit on LambdaTest online grid of 10000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with NUnit on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - c# selenium
   - c# selenium tutorial

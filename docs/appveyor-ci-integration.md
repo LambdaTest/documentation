@@ -3,7 +3,7 @@ id: appveyor-ci-integration
 title:  How to integrate AppVeyor CI with LambdaTest
 hide_title: true
 sidebar_label: AppVeyor CI
-description: LambdaTest now integrates with AppVeyor CI to boost your go-to-market delivery. Perform automated cross-browser testing on 10000+ browser environment combinations.
+description: LambdaTest now integrates with AppVeyor CI to boost your go-to-market delivery. Perform automated cross-browser testing on 3000+ browser environment combinations.
 keywords:
  - lambdatest integrations
  - lambdatest integrations with ci/cd tools
@@ -45,7 +45,7 @@ slug: appveyor-ci-integration/
 
 **AppVeyor CI** is a very popular continuous integration and deployment platform based on .NET applications. It can also be easily integrated with GitHub and BitBucket projects for CI/CD. It makes testing, deployment, and monitoring builds very easy for developers. It is free for open-source projects.
 
-**LambdaTest** now integrates with AppVeyor CI to boost your go-to-market delivery. You can perform automated cross-browser testing with LambdaTest to ensure seamless code render through an online Selenium grid. LambdaTest provides 10000+ real browsers running through machines, on the cloud. You can perform automation testing in parallel with LambdaTest’s Selenium grid, which can help you trim down your test cycles drastically.
+**LambdaTest** now integrates with AppVeyor CI to boost your go-to-market delivery. You can perform automated cross-browser testing with LambdaTest to ensure seamless code render through an online Selenium grid. LambdaTest provides 3000+ real browsers running through machines, on the cloud. You can perform automation testing in parallel with LambdaTest’s Selenium grid, which can help you trim down your test cycles drastically.
 
 ## Prerequisites For Integrating AppVeyor CI With Our Online Selenium Grid
 

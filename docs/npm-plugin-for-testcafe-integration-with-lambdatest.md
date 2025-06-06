@@ -3,7 +3,7 @@ id: npm-plugin-for-testcafe-integration-with-lambdatest
 title: npm Plugin For TestCafe Integration With LambdaTest | LambdaTest
 hide_title: true
 sidebar_label: npm Plugin For TestCafe
-description: LambdaTest with an npm plugin would allow you to integrate TestCafe with your LambdaTest account. That way, you can expand your test coverage using LambdaTest Selenium Grid of 10000+ real browsers, and browser versions running across various operating systems for mobile, desktop, and tablets. Similar to TestCafe, LambdaTest Selenium Grid also allows you to perform parallel testing.
+description: LambdaTest with an npm plugin would allow you to integrate TestCafe with your LambdaTest account. That way, you can expand your test coverage using LambdaTest Selenium Grid of 3000+ real browsers, and browser versions running across various operating systems for mobile, desktop, and tablets. Similar to TestCafe, LambdaTest Selenium Grid also allows you to perform parallel testing.
 keywords:
   - testcafe
   - testcafe integration
@@ -48,7 +48,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ***
 TestCafe offers a comprehensive and extensive platform to perform end-to-end tests for node.js applications. It supports both JavaScript and Typescript so that you can write tests in either one of the two. With TestCafe, you can create stable tests that are easy to integrate with your continuous integration process. You can also execute multiple test cases in parallel.
 
-LambdaTest, a cloud-based, cross browser testing platform, is out with an npm plugin that would allow you to integrate TestCafe with your LambdaTest account. That way, you can expand your test coverage using LambdaTest [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on 10000+ real browsers and browser versions running across various operating systems for mobile, desktop, and tablets. Similar to TestCafe, LambdaTest Selenium Grid also allows you to perform parallel testing.
+LambdaTest, a cloud-based, cross browser testing platform, is out with an npm plugin that would allow you to integrate TestCafe with your LambdaTest account. That way, you can expand your test coverage using LambdaTest [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on 3000+ real browsers and browser versions running across various operating systems for mobile, desktop, and tablets. Similar to TestCafe, LambdaTest Selenium Grid also allows you to perform parallel testing.
 
 ## Prerequisites
 ***

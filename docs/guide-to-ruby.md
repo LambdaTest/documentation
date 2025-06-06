@@ -3,7 +3,7 @@ id: guide-to-ruby
 title: How To Run Ruby Tests On Online Selenium Grid
 hide_title: true
 sidebar_label: Quick Guide To Run Ruby
-description: Guide to running Ruby and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and Ruby on 10000+ browsers on cloud.
+description: Guide to running Ruby and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and Ruby on 3000+ browsers on cloud.
 keywords:
   - lambdatest automation using ruby
   - ruby and selenium automation
@@ -48,7 +48,7 @@ slug: quick-guide-to-run-ruby-tests-on-lambdatest-selenium-grid/
 # Quick Guide To Run Ruby Tests On LambdaTest Selenium Grid
 ***
 
-LambdaTest Selenium Automation Grid is a secure, scalable, and reliable [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on cloud that can help you run your Ruby automation scripts on 10000+ different browsers and operating system environments. The grid is specifically built for high performance and gives you not only a greater browser coverage but also an ability to run automation tests in parallel. This helps you reduce your automation test execution time significantly. This post will help you quickly get started with running Ruby test scripts on LambdaTest Selenium Grid.
+LambdaTest Selenium Automation Grid is a secure, scalable, and reliable [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) on cloud that can help you run your Ruby automation scripts on 3000+ different browsers and operating system environments. The grid is specifically built for high performance and gives you not only a greater browser coverage but also an ability to run automation tests in parallel. This helps you reduce your automation test execution time significantly. This post will help you quickly get started with running Ruby test scripts on LambdaTest Selenium Grid.
 
 ## Prerequisites
 ***

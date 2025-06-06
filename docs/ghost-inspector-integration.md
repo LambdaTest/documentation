@@ -3,7 +3,7 @@ id: ghost-inspector-integration
 title: Ghost Inspector Integration With LambdaTest’s Cloud 
 hide_title: true
 sidebar_label: Ghost Inspector
-description: LambdaTest now integrates with Ghost Inspector to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 10000+ real browsers running through machines.
+description: LambdaTest now integrates with Ghost Inspector to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools
@@ -44,7 +44,7 @@ slug: ghost-inspector-integration-with-lambdatest/
 # Ghost Inspector Integration With LambdaTest’s Cloud
 ***
 
-LambdaTest provides support with Selenium WebDriver for pacing the execution of your automation test scripts. LambdaTest is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.lambdatest.com/selenium-automation/) of 10000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Ghost Inspector on LambdaTest.
+LambdaTest provides support with Selenium WebDriver for pacing the execution of your automation test scripts. LambdaTest is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.lambdatest.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Ghost Inspector on LambdaTest.
 
 
 ## What is Ghost Inspector?

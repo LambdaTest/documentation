@@ -3,7 +3,7 @@ id: oxygen-integration
 title: How to Run Oxygen Automation Scripts Using LambdaTest?
 hide_title: true
 sidebar_label: Oxygen
-description: Run Oxygen test automation scripts on the LambdaTest Selenium Grid, and perform cross browser testing on 10000+ real browser, on-cloud, for a seamless UI.
+description: Run Oxygen test automation scripts on the LambdaTest Selenium Grid, and perform cross browser testing on 3000+ real browser, on-cloud, for a seamless UI.
 keywords:
   - lambdatest
   - oxygen test automation
@@ -45,7 +45,7 @@ slug: run-oxygen-automation-scripts-on-lambdatest/
 * * *
 Oxygen is an open-source test automation framework offering a low code approach for Selenium and Appium tests. The scripts are based on JavaScript and look almost as plain as English, making them intuitive.
 
-Oxygen supports LambdaTest Selenium Grid, meaning you can configure your LambdaTest account on your Oxygen instance to perform cross browser testing on 10000+ real browser running on real operating systems, on-cloud. That way, you can eliminate the need for configuring in-house Selenium Grid infrastructure and run your Oxygen IDE test over a wider test coverage.
+Oxygen supports LambdaTest Selenium Grid, meaning you can configure your LambdaTest account on your Oxygen instance to perform cross browser testing on 3000+ real browser running on real operating systems, on-cloud. That way, you can eliminate the need for configuring in-house Selenium Grid infrastructure and run your Oxygen IDE test over a wider test coverage.
 
 ## Prerequisites
 -----------------------------------------------------------------------------------------------------------------------------
@@ -60,7 +60,7 @@ Oxygen supports LambdaTest Selenium Grid, meaning you can configure your LambdaT
 
 <img loading="lazy" src={require('../assets/images/Oxygen/1-1.webp').default} alt="oxygen integration" width="1365" height="384" className="doc_img"/>
 
-**Step 2:** Turn on the toggle for LambdaTest to run your Oxygen automation scripts on LambdaTest Selenium Grid of 10000+ real browsers.
+**Step 2:** Turn on the toggle for LambdaTest to run your Oxygen automation scripts on LambdaTest Selenium Grid of 3000+ real browsers.
 
 <img loading="lazy" src={require('../assets/images/Oxygen/oxygen-2.webp').default} alt="oxygen integration" width="1363" height="714" className="doc_img"/>
 

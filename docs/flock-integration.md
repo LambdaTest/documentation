@@ -3,7 +3,7 @@ id: flock-integration
 title: Flock Integration
 hide_title: true
 sidebar_label: Flock
-description: LambdaTest's integration with Flock lets you log bugs directly into Flock team channels with just one click while running cross browser testing of websites across 10000+ browser and OS combinations.
+description: LambdaTest's integration with Flock lets you log bugs directly into Flock team channels with just one click while running cross browser testing of websites across 3000+ browser and OS combinations.
 keywords:
   - lambdatest integrations
   - push issues to flock

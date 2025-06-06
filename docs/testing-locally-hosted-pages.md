@@ -3,7 +3,7 @@ id: testing-locally-hosted-pages
 title: Test Locally Hosted Web Pages
 hide_title: false
 sidebar_label: Testing Locally Hosted Pages
-description: Test your locally hosted web applications for cross browser compatibility across 10000+ browser and OS combinations with LambdaTest.
+description: Test your locally hosted web applications for cross browser compatibility across 3000+ browser and OS combinations with LambdaTest.
 keywords:
   - test locally hosted web apps online
   - free cross browser testing tool

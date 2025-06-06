@@ -3,7 +3,7 @@ id: run-nightwatch-tests-on-lambdatest-selenium-grid
 title: Nightwatch Automation Testing:Run Nightwatch Tests on Online Selenium Grid | LambdaTest
 hide_title: true
 sidebar_label: Nightwatch
-description: Run your automation scripts using Selenium with Nightwatch on LambdaTest online grid of 10000+ real desktop browsers and real operating systems.
+description: Run your automation scripts using Selenium with Nightwatch on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - nightwatch selenium
   - nightwatch js

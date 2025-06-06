@@ -2,7 +2,7 @@
 id: testng-framework
 title: Run your Selenium TestNG tests on LambdaTest
 sidebar_label: TestNG
-description: Your guide to running tests using TestNG on LambdaTest's Selenium Grid of 10000+ real devices and desktop browsers.
+description: Your guide to running tests using TestNG on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
 keywords:
   - java selenium
   - testng selenium

@@ -39,7 +39,7 @@ slug: bamboo-integration-with-lambdatest/
 ***
 Launched on 20 February 2007, Bamboo by Atlassian has become a worldwide adopted CI/CD tool. With Bamboo Server, you can generate multi-level build plans with the ease of defining triggers to specific builds post commits. You could also assign crucial builds or deployments to a colleague. Bamboo is free for open-source projects.
 
-LambdaTest provides an integration with Bamboo, using which you can perform cross browser testing on a cloud-based Selenium Grid consisting 10000+ real browsers, for both desktop & mobile. You can perform tests directly from your respective Bamboo server. It helps you to perform browser compatibility testing as soon as you commit changes to your build. If you are running short on the release window, you can scale your tests according to your need. LambdaTest offers parallel testing to help you run multiple test cases simultaneously. You can now chop down your release cycles and ship faster by integrating your LambdaTest account with your Bamboo CI/CD server.
+LambdaTest provides an integration with Bamboo, using which you can perform cross browser testing on a cloud-based Selenium Grid consisting 3000+ real browsers, for both desktop & mobile. You can perform tests directly from your respective Bamboo server. It helps you to perform browser compatibility testing as soon as you commit changes to your build. If you are running short on the release window, you can scale your tests according to your need. LambdaTest offers parallel testing to help you run multiple test cases simultaneously. You can now chop down your release cycles and ship faster by integrating your LambdaTest account with your Bamboo CI/CD server.
 
 ## Prerequisites
 ***

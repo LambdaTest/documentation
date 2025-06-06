@@ -3,7 +3,7 @@ id: jenkins-plugin
 title: LambdaTest Integration With Jenkins
 hide_title: true
 sidebar_label: Jenkins Plugin
-description: LambdaTest now integrates with Jenkins to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 10000+ real browsers running through machines. 
+description: LambdaTest now integrates with Jenkins to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines. 
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools
@@ -46,7 +46,7 @@ slug: jenkins-with-lambdatest/
 
 * * *
 
-Jenkins is a widely popular Continuous Integration (CI) tool. It is free to use, open-source software written in Java. Jenkins helps to boost your release agility by providing Continuous Integration services. You can trigger these services by a web application server or merely using a command line to hasten the deployment pipeline & release migration activities. Jenkins's popularity offers thousands of plugins to fast track your productivity. One such plugin to help you pace up automated cross browser testing is the LambdaTest Jenkins plugin. With LambdaTest Jenkins plugin, you will easily automate your Selenium test scripts by connecting your Jenkins CI instance to LambdaTest [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). LambdaTest Selenium grid will offer you a comprehensive library of 10000+ browsers and browser versions so you could achieve a higher test coverage while performing automation testing using the Selenium test suite.
+Jenkins is a widely popular Continuous Integration (CI) tool. It is free to use, open-source software written in Java. Jenkins helps to boost your release agility by providing Continuous Integration services. You can trigger these services by a web application server or merely using a command line to hasten the deployment pipeline & release migration activities. Jenkins's popularity offers thousands of plugins to fast track your productivity. One such plugin to help you pace up automated cross browser testing is the LambdaTest Jenkins plugin. With LambdaTest Jenkins plugin, you will easily automate your Selenium test scripts by connecting your Jenkins CI instance to LambdaTest [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). LambdaTest Selenium grid will offer you a comprehensive library of 3000+ browsers and browser versions so you could achieve a higher test coverage while performing automation testing using the Selenium test suite.
 
 > LambdaTest Jenkins plugin will help you to:
 >

@@ -37,7 +37,7 @@ slug: troubleshooting-lambda-tunnel/
       })
     }}
 ></script>
-LambdaTest Tunnel helps in establishing an SSH connection between your local machine and our cloud servers to help you perform tests on locally hosted websites and web-apps. With LambdaTest Tunnel, you can ensure how robust your website rendering is across 10000+ real browsers, even before you make it live on the internet.
+LambdaTest Tunnel helps in establishing an SSH connection between your local machine and our cloud servers to help you perform tests on locally hosted websites and web-apps. With LambdaTest Tunnel, you can ensure how robust your website rendering is across 3000+ real browsers, even before you make it live on the internet.
 
 If due to some unfortunate reason, you are unable to perform [cross browser testing](https://www.lambdatest.com) using LambdaTest Tunnel then this document will help you troubleshoot the most common challenges.
 

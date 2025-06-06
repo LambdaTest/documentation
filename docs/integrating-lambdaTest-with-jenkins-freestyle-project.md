@@ -2,7 +2,7 @@
 id: integrating-lambdaTest-with-jenkins-freestyle-project
 title: Integrate LambdaTest With Jenkins Freestyle Project
 sidebar_label: Integrate LambdaTest With Jenkins Freestyle Project
-description: This document will help you integrate your Jenkins freestyle project with LambdaTest to ensure your Selenium testing scripts are executed on a cloud-based Grid of 10000+ real browsers.
+description: This document will help you integrate your Jenkins freestyle project with LambdaTest to ensure your Selenium testing scripts are executed on a cloud-based Grid of 3000+ real browsers.
 keywords:
   - jenkins 
   - freestyle project 

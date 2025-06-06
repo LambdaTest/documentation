@@ -3,7 +3,7 @@ id: record-and-replay
 title: How to Record and Replay Tests using LT Debug
 hide_title: true
 sidebar_label: LT Debug
-description: Learn how to use LT Debug to replay or retest user flow as an automated test on 10000+ browser and OS combinations.
+description: Learn how to use LT Debug to replay or retest user flow as an automated test on 3000+ browser and OS combinations.
 keywords:
   - lt debug
   - record replay tests

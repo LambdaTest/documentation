@@ -3,7 +3,7 @@ id: integrate-lambdatest-extension-with-azure-pipelines
 hide_title: true
 title: Integrate LambdaTest Extension With Azure Pipelines
 sidebar_label: LambdaTest Extension With Azure Pipelines 
-description: Now integrate your Azure Pipelines with LambdaTest extension plugin to automate your test scripts. Perform live interactive and automated cross-browser testing on 10000+ real browsers and operating systems online using LambdaTest.
+description: Now integrate your Azure Pipelines with LambdaTest extension plugin to automate your test scripts. Perform live interactive and automated cross-browser testing on 3000+ real browsers and operating systems online using LambdaTest.
 keywords:
     - azure pipelines extensions
     - azure pipelines add extension
@@ -49,7 +49,7 @@ slug: integrate-lambdatest-extension-with-azure-pipelines/
 
 * * *
 
-Azure Pipelines, by Microsoft, is a feature of Azure DevOps. It helps to automatically build, test, and deploy your projects, with Continuous Integration or CI, upon various production environments. So your Selenium automation test scripts can run successfully on Azure Pipeline. However, sometimes running your scripts can be a bit tedious. This is where the LambdaTest plugin can be used in the Azure Pipeline to ease the workflow and automate the tests. LambdaTest allows you to perform live interactive and automated cross-browser testing on 10000+ real browsers and operating systems online.
+Azure Pipelines, by Microsoft, is a feature of Azure DevOps. It helps to automatically build, test, and deploy your projects, with Continuous Integration or CI, upon various production environments. So your Selenium automation test scripts can run successfully on Azure Pipeline. However, sometimes running your scripts can be a bit tedious. This is where the LambdaTest plugin can be used in the Azure Pipeline to ease the workflow and automate the tests. LambdaTest allows you to perform live interactive and automated cross-browser testing on 3000+ real browsers and operating systems online.
 
 
 <div className="download_btn mb-10">
@@ -209,7 +209,7 @@ The output of the tests executed above can be seen in your authenticated LambdaT
 
 <img loading="lazy" src={require('../assets/images/uploads/Step-17.webp').default} alt="azure pipeline" width="768" height="345" className="doc_img"/>
 
-Not only this, but you can also use this automation dashboard to obtain Test logs, Analytics, Mark Bugs, Integrate apps from our diverse app store, fetch build details, and much more. LambdaTest Selenium Automation Grid enables you to perform end-to-end automation tests on a secure, reliable, and scalable Selenium infrastructure. You can perform automated cross-browser testing with Selenium scripts on 10000+ browsers and operating systems environments giving you higher test coverage and at significantly less built times. LambdaTest will help you evaluate how well your web application renders when accessed through a variety of different browsers. You can perform automated cross-browser testing of your locally hosted web pages using LambdaTest Tunnel. You could also run a single test across multiple browser/OS configurations, simultaneously.
+Not only this, but you can also use this automation dashboard to obtain Test logs, Analytics, Mark Bugs, Integrate apps from our diverse app store, fetch build details, and much more. LambdaTest Selenium Automation Grid enables you to perform end-to-end automation tests on a secure, reliable, and scalable Selenium infrastructure. You can perform automated cross-browser testing with Selenium scripts on 3000+ browsers and operating systems environments giving you higher test coverage and at significantly less built times. LambdaTest will help you evaluate how well your web application renders when accessed through a variety of different browsers. You can perform automated cross-browser testing of your locally hosted web pages using LambdaTest Tunnel. You could also run a single test across multiple browser/OS configurations, simultaneously.
 
 ## LocalHost Testing Using LambdaTest Extension
 

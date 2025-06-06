@@ -3,7 +3,7 @@ id: cucumberjs-testing-using-lambdatest-selenium-grid
 title: Cucumber JS Testing:Run Automation Scripts using Cucumber JS Framework | LambdaTest
 hide_title: true
 sidebar_label: Cucumberjs for BDD
-description: Now you can run your automation scripts using Selenium with Cucumberjs on LambdaTest online grid of 10000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with Cucumberjs on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - cucumber framework
   - cucumber selenium

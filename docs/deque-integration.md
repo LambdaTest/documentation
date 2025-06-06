@@ -3,7 +3,7 @@ id: deque-integration
 title: How to perform Accessibility testing using Deque's axe
 hide_title: true
 sidebar_label: Deque axe
-description: A quick guide to perform Automated Accessibility testing using Deque's axe across 10000+ browsers and OS combinations.
+description: A quick guide to perform Automated Accessibility testing using Deque's axe across 3000+ browsers and OS combinations.
 keywords:
   - accessibility testing with axe
   - lambdatest deque integration

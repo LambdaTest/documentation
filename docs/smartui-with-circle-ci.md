@@ -2,7 +2,7 @@
 id: smartui-with-circle-ci
 title: Circle CI Pipeline Integration with SmartUI
 sidebar_label: Circle CI
-description: SmartUI now integrates with Circle CI Pipeline to boost pipeline delivery. Perform automated cross browser testing with SmartUI to seamlessly providing 10000+ real browsers running through machines.
+description: SmartUI now integrates with Circle CI Pipeline to boost pipeline delivery. Perform automated cross browser testing with SmartUI to seamlessly providing 3000+ real browsers running through machines.
 keywords:
   - lambdatest integrations
   - smart ui integration

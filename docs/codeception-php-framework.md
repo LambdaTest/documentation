@@ -3,7 +3,7 @@ id: codeception-php-framework
 title: Codeception Framework Integration to Run Codeception Selenium Tests on Online Grid
 hide_title: true
 sidebar_label: Codeception
-description: Using Codeception selenium framework with LambdaTest, you can execute automated cross browser testing across 10000+ browsers through our on-cloud Selenium Grid.
+description: Using Codeception selenium framework with LambdaTest, you can execute automated cross browser testing across 3000+ browsers through our on-cloud Selenium Grid.
 keywords:
   - codeception
   - codeception selenium    

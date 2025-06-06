@@ -3,7 +3,7 @@ id: lambdatest-running-your-first-selenium-test
 title: Run Your First Test on LambdaTest using Selenium
 hide_title: false
 sidebar_label: Running Your First Job
-description: Learn how to run your first Selenium test on LambdaTest's cross-browser testing platform. Step-by-step guide for setup and execution on 10000+ browsers.
+description: Learn how to run your first Selenium test on LambdaTest's cross-browser testing platform. Step-by-step guide for setup and execution on 3000+ browsers.
 keywords:
   - Automation Platform
   - Dashboard
@@ -43,7 +43,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
-LambdaTest provides a powerful Selenium Grid that allows you to perform automated cross-browser testing on over **10000+ real browsers** and operating systems. This guide will walk you through the process of setting up and running your first Selenium test on the LambdaTest platform.
+LambdaTest provides a powerful Selenium Grid that allows you to perform automated cross-browser testing on over **3000+ real browsers** and operating systems. This guide will walk you through the process of setting up and running your first Selenium test on the LambdaTest platform.
 
 ## Prerequisites
 Before you begin, ensure you have the following:

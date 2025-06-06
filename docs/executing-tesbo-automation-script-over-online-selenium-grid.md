@@ -53,7 +53,7 @@ slug: executing-tesbo-automation-script-over-online-selenium-grid/
 
 [Tesbo][1]is a hybrid framework for test automation that works on a keyword-driven approach. It allows you to write automation scripts in plain English like you'd do with a BDD framework. Built on top of Selenium, Tesbo helps you to perform [cross browser testing][2] over a Selenium Grid in parallel.
 
-This document will help you run Tesbo automation scripts over online [Selenium Grid][3] offered by LambdaTest. That way, you could execute your Tesbo test builds on 10000+ real browsers for desktop & mobile over a cloud-based Selenium infrastructure.
+This document will help you run Tesbo automation scripts over online [Selenium Grid][3] offered by LambdaTest. That way, you could execute your Tesbo test builds on 3000+ real browsers for desktop & mobile over a cloud-based Selenium infrastructure.
 
 Tesbo can help you run automation testing through all programming languages that supports Selenium. All you need to do is write your test files in plain english and define the capabilities in a `config.json` file. Let's get started.
 

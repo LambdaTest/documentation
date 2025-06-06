@@ -3,7 +3,7 @@ id: azure-pipeline
 title: Integrate Azure Pipelines With LambdaTest
 hide_title: true
 sidebar_label: Azure Pipeline Extension
-description: LambdaTest now integrates with Azure to boost your go-to-market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 10000+ real browsers running through machines.
+description: LambdaTest now integrates with Azure to boost your go-to-market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools
@@ -45,7 +45,7 @@ slug: integrate-azure-pipelines-with-lambdatest/
 * * *
 Azure Pipelines is a service presented by Azure DevOps to help projects ship faster with the help of a robust pipeline. With Azure Pipelines you can easily generate a build, test it before deploying the changes live in any language you are comfortable with i.e. Node.js, Python, Java, PHP, Ruby, C/C++, .NET etc. The platform offers unlimited CI/CD minutes for open-source projects, along with 10 free parallel jobs. Azure pipelines offers great cross-platform support using which you can run jobs in parallel across Windows, macOS, Linux.
 
-LambdaTest now integrates with Azure to boost your go-to-market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 10000+ real browsers running through machines, on the cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down your test cycles.
+LambdaTest now integrates with Azure to boost your go-to-market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on the cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down your test cycles.
 
 ## Pre-requisite
 * * *

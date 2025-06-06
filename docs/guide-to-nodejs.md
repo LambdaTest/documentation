@@ -3,7 +3,7 @@ id: guide-to-nodejs
 title: Guide:Running NodeJS Tests On Cloud Selenium Grid
 hide_title: true
 sidebar_label: Quick Guide To Run Node.js
-description: Guide to running Node.js and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and Node.js on 10000+ browsers on cloud.
+description: Guide to running Node.js and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and Node.js on 3000+ browsers on cloud.
 keywords:
   - lambdatest automation using Node.js
   - Node.js and Selenium automation
@@ -47,7 +47,7 @@ slug: quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/
 # Quick Guide To Run Node.js Tests On Cloud Selenium Grid
 ***
 
-LambdaTest’s [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) enables you to perform end-to-end automation tests on a secure, reliable, and scalable Selenium cloud infrastructure. You can run your Node.js automation test scripts on 10000+ browser and operating system environments giving you higher test coverage and significantly less built times. This document will help you quickly get started with running your Node.js test scripts on the LambdaTest Selenium automation grid.
+LambdaTest’s [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) enables you to perform end-to-end automation tests on a secure, reliable, and scalable Selenium cloud infrastructure. You can run your Node.js automation test scripts on 3000+ browser and operating system environments giving you higher test coverage and significantly less built times. This document will help you quickly get started with running your Node.js test scripts on the LambdaTest Selenium automation grid.
 
 ## Prerequisites
 ***

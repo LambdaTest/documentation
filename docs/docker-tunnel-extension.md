@@ -3,7 +3,7 @@ id: docker-tunnel-extension
 title: LambdaTest Docker Tunnel Extension For Local Testing
 hide_title: true
 sidebar_label: Docker Tunnel Extension
-description: Avoid the hassle of launching tunnels via the CLI. LambdaTest Docker Tunnel Extension lets you test locally hosted web applications across 10000+ browsers, devices, and operating systems.
+description: Avoid the hassle of launching tunnels via the CLI. LambdaTest Docker Tunnel Extension lets you test locally hosted web applications across 3000+ browsers, devices, and operating systems.
 keywords:
   - lambdatest tunnel extension for docker
   - lambdatest docker tunnel
@@ -42,7 +42,7 @@ slug: docker-tunnel-extension/
 # LambdaTest Docker Tunnel Extension
 ---
 
-LambdaTest Docker Tunnel Extension allows you to perform cross browser testing of locally hosted websites and web applications across 10000+ browser and OS environments, thereby eliminating the need to manually launch the tunnel through the CLI. This allows for a seamless and hassle-free experience when establishing a secure connection for testing locally hosted websites on the LambdaTest platform.
+LambdaTest Docker Tunnel Extension allows you to perform cross browser testing of locally hosted websites and web applications across 3000+ browser and OS environments, thereby eliminating the need to manually launch the tunnel through the CLI. This allows for a seamless and hassle-free experience when establishing a secure connection for testing locally hosted websites on the LambdaTest platform.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="6_bIrOkb4aY">

@@ -3,7 +3,7 @@ id: guide-to-python
 title: Guide - Running Python Tests On LambdaTest Selenium Grid
 hide_title: true
 sidebar_label: Quick Guide To Run Python
-description: Guide to running Python and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and Python on 10000+ browsers on cloud
+description: Guide to running Python and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and Python on 3000+ browsers on cloud
 keywords:
   - LambdaTest automation using python
   - python and Selenium automation
@@ -41,7 +41,7 @@ slug: run-python-tests-on-selenium-grid/
 # Quick Guide To Run Python Tests On LambdaTest Selenium Grid
 * * *
 
-LambdaTest Selenium Automation Grid is a cloud based scalable [Selenium testing](https://www.lambdatest.com/selenium-automation) platform which enables you to run your automation scripts on 10000+ different browsers and operating systems. You can leverage LambdaTest Selenium grid to not only decrease the build time of Python automation scripts, but also increase your test coverage and check for more range of browsers for cross browser compatibility. This post will help you in getting started with configuring and running your Python based automation test scripts on LambdaTest Selenium cloud platform.
+LambdaTest Selenium Automation Grid is a cloud based scalable [Selenium testing](https://www.lambdatest.com/selenium-automation) platform which enables you to run your automation scripts on 3000+ different browsers and operating systems. You can leverage LambdaTest Selenium grid to not only decrease the build time of Python automation scripts, but also increase your test coverage and check for more range of browsers for cross browser compatibility. This post will help you in getting started with configuring and running your Python based automation test scripts on LambdaTest Selenium cloud platform.
 
 ## Prerequisites
 ***

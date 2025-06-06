@@ -3,7 +3,7 @@ id: codeless-automation-tools
 title: Integrations For Codeless Automation Tools
 hide_title: true
 sidebar_label: Codeless Automation Tools
-description: LambdaTest integrations to your favorite codeless automation tool can help you perform automated browser testing on 10000+ real browsers and operating systems.
+description: LambdaTest integrations to your favorite codeless automation tool can help you perform automated browser testing on 3000+ real browsers and operating systems.
 keywords:
   - codeless automation
   - katalon integration
@@ -46,7 +46,7 @@ slug: integrations-with-codeless-automation-tools/
 
 ---
 
-LambdaTest offers integration with codeless automation tools to help you expand your cross browser testing coverage. Using the integration with your favorite codeless automation tool, you can perform automated browser testing on 10000+ real browsers and operating systems.
+LambdaTest offers integration with codeless automation tools to help you expand your cross browser testing coverage. Using the integration with your favorite codeless automation tool, you can perform automated browser testing on 3000+ real browsers and operating systems.
 
 <div className="download_btn mb-10">
 <a href="https://www.lambdatest.com/support/docs/run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid/">Run Selenium IDE Tests With LambdaTest</a>

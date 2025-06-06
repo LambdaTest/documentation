@@ -45,11 +45,11 @@ slug: chrome-extension/
 
 * * *
 
-The [LambdaTest Chrome Extension](https://chrome.google.com/webstore/detail/lambdatest/fjcjehbiabkhkdbpkenkhaahhopildlh) enables you to perform cross-browser testing across 10000+ browser environments on the cloud more quickly and easily. Pick your favorite configurations, frequently used lists, and launch tests directly from your browser tab to save time. 
+The [LambdaTest Chrome Extension](https://chrome.google.com/webstore/detail/lambdatest/fjcjehbiabkhkdbpkenkhaahhopildlh) enables you to perform cross-browser testing across 3000+ browser environments on the cloud more quickly and easily. Pick your favorite configurations, frequently used lists, and launch tests directly from your browser tab to save time. 
 
 LambdaTest Chrome Extension provides the following features:
 
-*   **Real Time Testing**: Perform Real-time tests of websites & web apps across 10000+ browsers & operating systems.
+*   **Real Time Testing**: Perform Real-time tests of websites & web apps across 3000+ browsers & operating systems.
 *   **Screenshot Testing**: [Run Screenshot tests](https://www.lambdatest.com/support/docs/automated-screenshot-testing/) of websites & web apps across 25 different browsers & operating systems.
 *   **Schedule Screenshots**: Schedule screenshots with preferred date, time and configurations and capture screenshots automatically.
 *   **Geolocation Testing**: Test websites and web apps to check how it renders across different geographies.

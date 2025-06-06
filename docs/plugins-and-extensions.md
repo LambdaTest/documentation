@@ -3,7 +3,7 @@ id: plugins-and-extensions
 title: Plugins and Extensions
 hide_title: true
 sidebar_label: Plugins and Extensions
-description: LambdaTest offers you plugins with various third-party application to help you perform cross browser testing on 10000+ real browsers with pace and convenience. 
+description: LambdaTest offers you plugins with various third-party application to help you perform cross browser testing on 3000+ real browsers with pace and convenience. 
 keywords:
   - plugins 
   - extensions 
@@ -49,7 +49,7 @@ slug: plugins-and-extensions/
 
 ***
 
-LambdaTest offers you plugins with various third-party application to help you perform cross browser testing on 10000+ real browsers with pace and convenience. Here are all the plugins and extensions available to integrate LambdaTest and perform testing in a jiffy.
+LambdaTest offers you plugins with various third-party application to help you perform cross browser testing on 3000+ real browsers with pace and convenience. Here are all the plugins and extensions available to integrate LambdaTest and perform testing in a jiffy.
 
 <div className="download_btn mb-10">
 <a href="/support/docs/chrome-extension/">Chrome Extension</a>

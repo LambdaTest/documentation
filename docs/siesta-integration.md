@@ -3,7 +3,7 @@ id: siesta-integration
 title: Siesta Integration
 hide_title: true
 sidebar_label: Siesta
-description: Integrate LambdaTest with Siesta to perform automated browser testing of your locally hosted websites and web pages across 10000+ real browsers and operating systems.
+description: Integrate LambdaTest with Siesta to perform automated browser testing of your locally hosted websites and web pages across 3000+ real browsers and operating systems.
 keywords:
   - lambdatest integration with siesta
   - lambdatest and siesta integration 
@@ -42,7 +42,7 @@ slug: siesta-integration/
 
 Siesta is a JavaScript and UI testing tool for web pages and Node.js processes. You can run tests in browsers, Node.js, and Deno on Linux, macOS, and Windows.
 
-LambdaTest and Siesta integration lets you perform automated browser testing of your locally hosted websites or web apps across 10000+ real browsers and OS combinations.
+LambdaTest and Siesta integration lets you perform automated browser testing of your locally hosted websites or web apps across 3000+ real browsers and OS combinations.
 
 ## Prerequisites
 ***
@@ -87,7 +87,7 @@ To generate desired capabilities for your test script, head over to our [Desired
 ## Parallel Testing With Siesta
 ***
 
-LambdaTest lets you to perform parallel testing with Siesta across 10000+ browsers and OS. You can run one test case across multiple browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
+LambdaTest lets you to perform parallel testing with Siesta across 3000+ browsers and OS. You can run one test case across multiple browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
 
 
 To run your tests in parallel, pass the below command in the CMD terminal-

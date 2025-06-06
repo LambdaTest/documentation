@@ -48,7 +48,7 @@ slug: docker-tunnel/
 # Docker Tunnel
 
 ***
-With the help of the Docker Tunnel, i.e., Docker and LambdaTest Tunnel, you can perform live interactive and automated cross-browser testing of your locally hosted webpage on the LambdaTest platform, with the help of 10000+ real browsers (desktop and mobile) and operating systems.
+With the help of the Docker Tunnel, i.e., Docker and LambdaTest Tunnel, you can perform live interactive and automated cross-browser testing of your locally hosted webpage on the LambdaTest platform, with the help of 3000+ real browsers (desktop and mobile) and operating systems.
 
 With Docker Tunnel, you will also be able to create multiple instances of LambdaTest Tunnel.
 

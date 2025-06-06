@@ -3,7 +3,7 @@ id: load-balancing-in-lambda-tunnel
 title: How To Use Load Balancing In LambdaTest Tunnel
 hide_title: true
 sidebar_label: Load Balancing In LambdaTest Tunnel
-description: Load Balancing feature allows you to perform parallel testing of your local or private website on 10000+ LambdaTest's real browsers through LambdaTest Tunnel.
+description: Load Balancing feature allows you to perform parallel testing of your local or private website on 3000+ LambdaTest's real browsers through LambdaTest Tunnel.
 keywords:
 - load balancing
 - what is load balancing
@@ -45,7 +45,7 @@ slug: load-balancing-in-lambda-tunnel/
 # Parallel Testing Of Locally Hosted Pages Using Load Balancing In LambdaTest Tunnel
 
 ***
-Load Balancing feature allows you to perform parallel testing of your locally hosted or privately hosted website or web app on 10000+ real browsers through LambdaTest Tunnel. The Tunnels created under this feature will act as a single pool for the tests and thereby will help in performing parallel testing on the LambdaTest platform.
+Load Balancing feature allows you to perform parallel testing of your locally hosted or privately hosted website or web app on 3000+ real browsers through LambdaTest Tunnel. The Tunnels created under this feature will act as a single pool for the tests and thereby will help in performing parallel testing on the LambdaTest platform.
 
 ## How To Activate Load Balancing In LambdaTest Tunnel?
 

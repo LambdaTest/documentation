@@ -3,7 +3,7 @@ id: ranorex-integration-with-lambdatest
 title: How to Perform Automation Testing with Ranorex Using LambdaTest
 hide_title: true
 sidebar_label: Ranorex
-description: LambdaTest offers integration with Ranorex to help you perform automated cross browser testing of your web app on over 10000+ real browsers & browser versions through an on-cloud Selenium Grid. You could perform tests on your locally hosted files and can execute parallel testing to trim down your test cycles drastically.
+description: LambdaTest offers integration with Ranorex to help you perform automated cross browser testing of your web app on over 3000+ real browsers & browser versions through an on-cloud Selenium Grid. You could perform tests on your locally hosted files and can execute parallel testing to trim down your test cycles drastically.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature
@@ -52,7 +52,7 @@ Ranorex is a GUI test automation framework which helps to execute E2E(End-to-End
 
 Selenium, as we know, has 4 variants, RC, IDE, WebDriver, & Grid. [Selenium IDE](https://www.lambdatest.com/blog/selenium-ide-what-is-it-why-is-it-must-for-every-qa/) is built with the purpose of facilitating automated record-and-replay testing over Mozilla Firefox browsers. However, ever since Mozilla Firefox released its version 55, the IDE’s compatibility got disrupted and isn’t replaced till now. Ranorex helps you to overcome this scenario by optimizing their Core API in such manner that users of Selenium WebDriver could get to unleash the full potential of all Selenium variants irrespective of browser updates.
 
-LambdaTest offers integration with Ranorex to help you perform automated cross browser testing of your web app on over 10000+ real browsers & browser versions through an on-cloud Selenium Grid. You could perform tests on your locally hosted files and can execute parallel testing to trim down your test cycles drastically.
+LambdaTest offers integration with Ranorex to help you perform automated cross browser testing of your web app on over 3000+ real browsers & browser versions through an on-cloud Selenium Grid. You could perform tests on your locally hosted files and can execute parallel testing to trim down your test cycles drastically.
 
 In this documentation, we will demonstrate how to set up your Selenium Server using Ranorex, and how to connect it to LambdaTest cloud-based [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). You will be going through the below sections:
 
@@ -102,7 +102,7 @@ In this documentation, we will demonstrate how to set up your Selenium Server us
 
 <img loading="lazy" src={require('../assets/images/ranorex-integration-with-lambdatest/12.webp').default} alt="setup WebDriver endpoint" width="1365" height="730" className="doc_img"/>
 
->**Note:** You need to select this WebDriver endpoint to perform automated cross browser testing on 10000+ real browsers & browser versions using the LambdaTest Selenium Grid.
+>**Note:** You need to select this WebDriver endpoint to perform automated cross browser testing on 3000+ real browsers & browser versions using the LambdaTest Selenium Grid.
 
 ## Performing Cross Browser Testing On LambdaTest Selenium Grid Through Ranorex
 ***

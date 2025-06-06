@@ -2,7 +2,7 @@
 id: tricentis-tosca-integration
 title: Tricentis Tosca Integration With LambdaTest’s Cloud Based Selenium Grid
 sidebar_label: Tricentis Tosca
-description: Now you can run your Tosca  automation tests  on LambdaTest online grid of 10000+ real desktop browsers and real operating systems.
+description: Now you can run your Tosca  automation tests  on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - tricentis tosca
   - lambdatest integrations
@@ -15,7 +15,7 @@ site_name: LambdaTest
 slug: tricentis-tosca-integration-lambdatest-selenium-grid/
 ---
 
-LambdaTest provides support with Selenium WebDriver for pacing the execution of your automation test scripts. LambdaTest is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.lambdatest.com/selenium-automation/) of 10000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Tricentis Tosca on LambdaTest.
+LambdaTest provides support with Selenium WebDriver for pacing the execution of your automation test scripts. LambdaTest is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.lambdatest.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Tricentis Tosca on LambdaTest.
 
 This topic will be focusing on:
 

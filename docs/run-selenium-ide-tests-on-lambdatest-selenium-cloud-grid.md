@@ -3,7 +3,7 @@ id: run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid
 title: Guide to Run Selenium IDE Tests Using LambdaTest
 hide_title: true
 sidebar_label:  Selenium IDE
-description: Guide on how to run Selenium IDE tests with LambdaTest online Selenium automation grid, for testing on 10000+ real browsers & browser versions hosted on LambdaTest cloud servers.
+description: Guide on how to run Selenium IDE tests with LambdaTest online Selenium automation grid, for testing on 3000+ real browsers & browser versions hosted on LambdaTest cloud servers.
 keywords:
  - lamdatest
  - selenium ide

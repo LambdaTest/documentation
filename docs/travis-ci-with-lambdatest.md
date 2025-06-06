@@ -3,7 +3,7 @@ id: travis-ci-with-lambdatest
 title: How to integrate Travis CI with LambdaTest
 hide_title: true
 sidebar_label: Travis CI
-description: LambdaTest now integrates with Travis CI to boost go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 10000+ real browsers running through machines, on cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down test cycles.
+description: LambdaTest now integrates with Travis CI to boost go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down test cycles.
 keywords:
     - lambdatest integrations
     - lambdatest integrations with ci/cd tools
@@ -46,7 +46,7 @@ slug: travis-ci-with-lambdatest/
 
 Travis CI is one of the most popular tool which facilitates continuous integration for GitHub projects. Open source projects can use Travis CI without having to pay anything from their pocket. Now, deploy your code rapidly and test it thoroughly for a robust delivery in your go-to market launch.
 
-LambdaTest now integrates with Travis CI to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 10000+ real browsers running through machines, on cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down your test cycles.
+LambdaTest now integrates with Travis CI to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down your test cycles.
 
 ## Prerequisites For Integrating Travis CI With Our Online Selenium Grid
 ***

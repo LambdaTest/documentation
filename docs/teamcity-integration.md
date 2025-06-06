@@ -3,7 +3,7 @@ id: teamcity-integration
 title: TeamCity Integration With LambdaTest
 hide_title: true
 sidebar_label: TeamCity
-description: LambdaTest now integrates with TeamCity to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 10000+ real browsers running through machines.
+description: LambdaTest now integrates with TeamCity to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools
@@ -46,7 +46,7 @@ slug: teamcity-integration-with-lambdatest/
 
 Developed by JetBrains, TeamCity is Java-based build management to help you with continuous integration and continuous deployment. With TeamCity, you can deploy your automated pipeline quicker, pacing your go-to-market launch.
 
-LambdaTest now integrates with TeamCity to boost your go-to-market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 10000+ real browsers running through machines, on the cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down your test cycles.
+LambdaTest now integrates with TeamCity to boost your go-to-market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on the cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down your test cycles.
 
 ## Prerequisites
 * * *

@@ -3,7 +3,7 @@ id: qmetry-integration
 title: How to Run QMetry Automation Tests using LambdaTest?
 hide_title: true
 sidebar_label: QMetry
-description: With this integration, run your tests from QMetry app, directly on LambdaTest's cloud-based Selenium Grid, on 10000+ desktop & mobile browser and OS combinations
+description: With this integration, run your tests from QMetry app, directly on LambdaTest's cloud-based Selenium Grid, on 3000+ desktop & mobile browser and OS combinations
 keywords:
  - LambdaTest integrations
  - QMetry
@@ -44,7 +44,7 @@ slug: qmetry-integration/
 
 * * *
 QMetry is a codeless platform tailored for DevOps and Agile testing teams. It can be used to prepare and execute test scenarios on multiple platforms very easily. Not only that, but QMetry also allows you to record test cases in almost all major languages and frameworks, including the QMetry framework.
-LambdaTest now integrates with the QMetry platform to help you execute cross-browser testing of your website, web app, or your mobile website, over 10000+ real desktop devices, mobile viewports, and operating system combinations on its cloud-based selenium grid. This document is a comprehensive guide to help you understand how to integrate QMetry with your LambdaTest account.
+LambdaTest now integrates with the QMetry platform to help you execute cross-browser testing of your website, web app, or your mobile website, over 3000+ real desktop devices, mobile viewports, and operating system combinations on its cloud-based selenium grid. This document is a comprehensive guide to help you understand how to integrate QMetry with your LambdaTest account.
 ## How To Setup Your LambdaTest Account With QMetry?
 * * *
 Once you have your project set up in the QMetry app and test suite ready, you need to specify and activate your LambdaTest account in the QMetry app to execute it over the LambdaTest's cloud-based Selenium Grid. Below is the step by step guide to help you do just that:

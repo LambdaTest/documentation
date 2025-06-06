@@ -3,7 +3,7 @@ id: virtual-device-flutter-apps
 title: How to test flutter apps using Appium framework on Virtual Devices
 hide_title: false
 sidebar_label: Flutter Apps
-description: Learn how to test flutter apps for Appium testing across 10000+ real Android and iOS devices for virtual devices
+description: Learn how to test flutter apps for Appium testing across 3000+ real Android and iOS devices for virtual devices
 keywords:
 - how to test flutter apps
 - how to test flutter apps on android
