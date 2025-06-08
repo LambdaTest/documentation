@@ -120,7 +120,6 @@ We support multiple input formats, including:
 ### Step 4: Review Test Cases Across Scenarios
 - Test cases are grouped into high-level, logical test scenarios.
 - Each scenario represents a theme or functional area for easier navigation and categorization.
-- This structure helps QA teams understand **how different test cases connect** to business goals.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/ai_suggested_testcases.jpeg').default} alt="ai_suggested_testcases" width="1347" height="616"  className="doc_img"/>
 
