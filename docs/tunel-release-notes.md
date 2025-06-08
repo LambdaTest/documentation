@@ -38,6 +38,20 @@ slug: tunnel-release-notes/
     }}
 ></script>
 
+## Version 3.2.16 (8th June 2025)
+- **Support for forceLocal, contextual Logging**
+  - Added the ability to forcelocal, all traffic is resolved at local.
+  - Public websites will be resolved at Data center in selenium automation.
+  - Contextual Logging is enabled in selenium automation.
+
+## Version 3.2.14 (30th March 2025)
+- **Support for WildCard in `ntlm-domains`**
+  - Added the ability to use wildcards in the `ntlm-domains`.
+
+## Version 3.2.13 (2nd March 2025)
+- **Auto Downloading and Restarting the binary for new Updates**
+  - Added the ability to restarting the binary itself after downloading the update.
+
 ## Version 3.2.11 (2nd February 2025)
 - **Support for Wildcard in `allowHosts` and `bypassHosts`**
   - Added the ability to use wildcards in the `allowHosts` and `bypassHosts` configurations, providing more flexibility in defining tunnel access rules.
