@@ -1885,6 +1885,7 @@ module.exports = {
         collapsed: true,
         label: "Test cases",
         items: [
+          "generate-test-cases",
           "manual-test-case-creation",
           "manual-test-cases-with-ai",
           {
