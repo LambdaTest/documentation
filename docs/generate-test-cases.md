@@ -1,5 +1,5 @@
 ---
-id: generate-test-cases
+id: generate-test-cases-with-ai
 title: Generate Test Cases with AI
 hide_title: true
 sidebar_label: Generate Test Cases with AI
@@ -9,9 +9,9 @@ keywords:
   - test case
   - test cases
   - generate test cases
-url: https://www.lambdatest.com/support/docs/generate-test-cases/
+url: https://www.lambdatest.com/support/docs/generate-test-cases-with-ai/
 site_name: LambdaTest
-slug: generate-test-cases/
+slug: generate-test-cases-with-ai/
 ---
 
 <script type="application/ld+json"
@@ -76,6 +76,10 @@ We support multiple input formats, including:
 #### Record Audio:
 - Click the mic icon to begin recording, as shown in the picture.
 
+:::note 
+ Audio recording is not supported in Firefox, ARC and Opera browsers.
+:::
+
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/recording_button_test_cases_generation.jpeg').default} alt="recording_button_test_cases_generation" width="1347" height="616"  className="doc_img"/>
 
 - Click the tick icon to confirm, or the cross to discard.
@@ -83,7 +87,7 @@ We support multiple input formats, including:
 
 #### Upload Files: 
 - Click the '**+**' icon, then select 'Upload from device'.
-- You select a maximum of 10 files from your device.
+- You can select a maximum of 10 files from your device.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/upload_from_device_test_cases_generation.jpeg').default} alt="upload_from_device_test_cases_generation" width="1347" height="616"  className="doc_img"/>
 
