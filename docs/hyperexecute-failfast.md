@@ -58,6 +58,21 @@ failFast:
     maxNumberOfTests: 2
 ```
 
+
+:::info
+To apply `failFast` at the **scenario** level instead of the default test level, set the `level: scenario` in the YAML configuration.
+
+```yaml
+failFast:
+  maxNumberOfTests: 2
+  level: scenario
+```
+:::
+
+> **NOTE :** You can specify `failFast` at either the test level or scenario level, depending on your requirements. Both configurations will work, but can lead to unexpected results, only one should be used at a time.
+
+***
+
 For a deeper understanding of the HyperExecute YAML and its versatile features, we invite you to explore our dedicated [HyperExecute YAML documentation](/support/docs/deep-dive-into-hyperexecute-yaml/) page. This resource-rich section provides valuable insights to empower your testing endeavors.
 
 ***
