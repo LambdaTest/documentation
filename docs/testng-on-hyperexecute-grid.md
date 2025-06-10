@@ -103,7 +103,7 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 | Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 
-### Step 2: Setup Hub Endpoints and Capabilites
+### Step 2: Setup Hub Endpoints and Capabilities
 Update your TestNG test configuration to point to the LambdaTest hub and set capabilities as needed:
 
 ```java title="test.java"
@@ -165,7 +165,7 @@ Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexec
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ## Navigation in Automation Dashboard
-Every test run on the HyperExecute has a unique *jobId* associated with it. Each *jobId* can in turn constitute single (or multiple) *groupId*(s). You can visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/build) for checking the status of the test execution. You can seamlessly navigate between JobId's and taskId's. You need to click on the *testID* to navigate from the HyperExecute logs to the Automation Dashboard.
+Click on the *testID* to navigate from the HyperExecute logs to the Automation Dashboard.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/dashboard2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
@@ -181,6 +181,12 @@ Optimize your test pipeline using the following advanced features:
 - ⚡ [Fail Fast](/support/docs/hyperexecute-failfast/) – Stop test runs on the first failure
 - 📊 [Detailed Reports](/support/docs/hyperexecute-reports/) – Real-time terminal logs & rich test reports
 - 🔄 [Auto-Healing](/support/docs/hyperexecute-auto-healing/) – Automatically recover from certain failures
+
+## Frequently Asked Questions
+
+<details><summary>How to discover Feature Files on HyperExecute</summary> HyperExecute supports intelligent discovery of test scenarios through a built-in utility called <b>[Snooper](/support/docs/hyperexecute-snooper/).</b> It is a discovery tool that identifies and lists Cucumber feature file scenarios to be executed. It works in coordination with the <b>[testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand)</b>, dynamically filtering test cases before execution. </details>
+
+<details><summary>Java Version Setup on HyperExecute</summary> Ensure your tests run with the correct Java version on HyperExecute VMs—matching your local development environment or your project's framework requirements. To install a specific Java version at runtime on a HyperExecute VM, you can use the <b>[runtime](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime)</b> YAML flag.</details>
 
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
 
