@@ -2541,7 +2541,6 @@ module.exports = {
     [
       "app-automation-app-sim",
       "virtual-device-flutter-apps",
-      "camera-image-injection-vd",
     ],
   ],
 
