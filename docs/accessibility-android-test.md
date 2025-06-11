@@ -2,7 +2,7 @@
 id: accessibility-android-test
 title: Accessibility Testing Using App Manual Testing
 sidebar_label: Manual
-description: Use LambdaTest Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines.
+description: LambdaTest Accessibility DevTools help automate detection and reporting of accessibility issues based on WCAG guidelines.
 keywords:
     - LambdaTest
     - Accessibility
