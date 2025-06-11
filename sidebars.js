@@ -2186,16 +2186,20 @@ module.exports = {
               "selenium-set-browser-options",
             ],
           },
-          {
+           {
             type: "category",
             collapsed: true,
-            label: "Network",
-            items: ["network-throttling", "custom-dns-map"],
+            label: "Organize Tests",
+            items: [
+             "command-annotations",
+             "build-split",
+            "selenium-add-test-meta-data",
+            ],
           },
           {
             type: "category",
             collapsed: true,
-            label: "Performance",
+            label: "Web Performance",
             items: [
               "view-lighthouse-performance-metrics",
               "lighthouse-reports-hooks",
@@ -2210,26 +2214,19 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Test Execution",
-            items: ["smart-wait"],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Security",
-            items: ["custom-header"],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Other Capabilities",
+            label: "Advance Use Cases",
             items: [
               "auto-heal",
-              "command-annotations",
-              "har-log-viewer",
               "selenium-geolocation-capabilities",
               "selenium-mask-your-data",
-              "selenium-add-test-meta-data",
+              "custom-header",
+              "smart-wait",
+              "network-throttling",
+               "custom-dns-map",
+               "upload-files-using-lambdatest",
+          "setup-pre-run-executable",
+            "har-log-viewer",
+             "daily-usage-limit",
             ],
           },
         ],
@@ -3506,6 +3503,8 @@ module.exports = {
           "load-balancing-in-lambda-tunnel",
           "charles-proxy",
           "dedicated-proxy",
+          "socks5-proxy-support",
+          "http2-support", // Added HTTP/2 support doc
         ],
       },
       {
