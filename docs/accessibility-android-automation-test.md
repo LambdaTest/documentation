@@ -192,7 +192,7 @@ driver.execute_script("lambda-accessibility-scan")
 driver.quit()
 ```
 
-> For iOS accessibility tests make sure you to add this capability `g `
+> For iOS accessibility tests make sure you to add this capability `"iosLiveInteraction": True`
 
 ## Step 4: Execute and Monitor your Tests
 Run the following command in the directory where your project has been saved to execute your build.
