@@ -3275,6 +3275,7 @@ module.exports = {
         "analytics-sub-organization-widgets",
       ],
     },
+    "insights-best-practices",
     "analytics-faqs",
   ],
 
