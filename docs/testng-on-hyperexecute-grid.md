@@ -76,7 +76,7 @@ From the project root directory, execute the below CLI command in your terminal:
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
-    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config hyperexecute.yaml`}
   </CodeBlock>
 </div>
 
@@ -95,7 +95,7 @@ From the project root directory, execute the below CLI command in your terminal:
 ## Configure your own Project
 
 ### Step 1: Download the CLI in your Project
-Download the HyperExecute CLI and copy it into the root folder of the downloaded sample repository.
+Download the HyperExecute CLI and copy it into the root folder  .
 
 | Platform | HyperExecute CLI |
 | ---------| ---------------- |
