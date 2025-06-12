@@ -336,6 +336,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Detox Testing",
+            id: "detox-testing-on-hyperexecute",
+          },
+          {
+            type: "doc",
             label: "XCUI",
             id: "hyperexecute-xcui-testing",
           },
