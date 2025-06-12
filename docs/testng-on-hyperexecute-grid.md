@@ -89,7 +89,37 @@ If you are using your own project, make sure you update the **Hub endpoint** in 
 By setting up the Hub endpoint, you establish the communication channel between your tests and the browser nodes, enabling effective test distribution and execution.
 
 
-Configure the desired capabilities based on your test requirements. For example:
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config hyperexecute.yaml`}
+  </CodeBlock>
+</div>
+
+> **NOTE :** In case of macOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_1.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/cmd_2.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+
+<br /><br />
+
+🎉 Congratulations! You've successfully triggered the TestNG tests on HyperExecute. Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/selenium/testng/testng_autosplit_1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+## Configure your own Project
+
+### Step 1: Download the CLI in your Project
+Download the HyperExecute CLI and copy it into the root folder  .
+
+| Platform | HyperExecute CLI |
+| ---------| ---------------- |
+| Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
+| Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
+| macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
+
+### Step 2: Setup Hub Endpoints and Capabilities
+Update your TestNG test configuration to point to the LambdaTest hub and set capabilities as needed:
 
 ```java title="test.java"
 DesiredCapabilities capabilities = new DesiredCapabilities();
