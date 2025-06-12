@@ -56,7 +56,7 @@ Detox is a popular end-to-end testing framework for React Native applications. T
 :::tip Detox repo
 Download or Clone the Detox sample from LambdaTest’s GitHub Repository
 
-<a href="https://github.com/rishirajs123/LT-Detox" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/LT-detox" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 ### Step 2: Download the CLI in your Project
