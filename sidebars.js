@@ -2714,6 +2714,7 @@ module.exports = {
               "appium-custom-header",
               "basic-authentication-for-web-automation",
               "live-debug-in-app-automation",
+              "appium-date-and-time",
             ],
           },
           {

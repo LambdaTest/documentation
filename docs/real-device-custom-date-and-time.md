@@ -109,29 +109,6 @@ The modal includes four options to simulate various datetime-related behaviors:
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/set-date-and-time-pic-5.png').default} className="doc_img"/>
 
----
-
-## Configure Date & Time via Appium
-
-You can configure date, time, time format (12h/24h), and toggle automatic syncing via a LambdaTest custom Appium executor hook.
-
-### Appium Hook:
-
-```js
-lambda_executor: { "action": "updateDeviceSettings", "arguments": { "customDate": "Jun 20 2025", "customTime": "15:05", "twelveHourTime": "On", "setAutomatically": "On" } } 
-```
-
-
-### Appium Hook:
-
-| Argument           | Format        | Description                                                                  |
-| ------------------ | ------------- | ---------------------------------------------------------------------------- |
-| `customDate`       | `MMM DD YYYY` | Future-only date. Max 7 days from current date.                              |
-| `customTime`       | `HH:MM`       | Time in 24-hour format. Interpreted based on selected hour format.           |
-| `twelveHourTime`   | `On` / `Off`  | Toggles between 12-hour (`On`) and 24-hour (`Off`) formats.                  |
-| `setAutomatically` | `On` / `Off`  | Enables or disables syncing time with network. Disabling allows manual edit. |
-
----
 
 ## Supported Platforms: 
 
