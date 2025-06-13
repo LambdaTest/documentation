@@ -141,6 +141,13 @@ With the **iOS settings**, you can access the crash logs as well as the app sett
 - **App Settings :** This will open the settings of the application in your mobile device.
 - **Accessibility :** Accessibility testing on iOS devices focuses on ensuring that applications and web content are usable by individuals with different abilities. Learn in detailed way about [Accessibility in iOS devices.](/support/docs/accessibility-settings-ios)
 
+- **Select Date and Time :** Opens a modal where you can:
+  - Toggle **Set Automatically** to sync with network time.
+  - Manually select a **Date** (up to 7 days ahead).
+  - Enter a **Time** in **HH:MM:SS** format.
+  - Choose between **12-hour** or **24-hour** time formats.
+  - Once configured, click **Update**  to apply the changes to the device.
+
 ### Device Controls
 
 With the **Device Controls** feature, you can easily manage various settings on your device, such as adjusting the volume and changing its orientation.
