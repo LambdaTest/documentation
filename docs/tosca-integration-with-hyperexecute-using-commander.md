@@ -96,7 +96,7 @@ To Integrate Tosca with HyperExecute using YAML, follow the below mentioned step
 
 **Step 1:** Create an Execution List:
 
-- Go to the execution tab in your Tosca commander to [create an execution list](https://documentation.tricentis.com/tosca/1510/en/content/tosca_commander/execution_lists_section.htm).
+- Go to the execution tab in your Tosca commander to create an execution list.
     
 - You can drag and drop test cases from the **Test Cases** tab to the execution list. In the example given below, the execution list is called LT.
 
