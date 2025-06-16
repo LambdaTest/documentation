@@ -63,7 +63,7 @@ Teams often need to test SSO or MFA‑protected applications where the second fa
 2. Choose **Add TOTP Authentication Key**.
 3. Enter the Base32 secret directly or user LambdaTest Secrets using {{ syntax.
 4. Click **Save**.
-5. A **smart variable** gets generated which provides the 6-digit code based on above secret ket when invoked.
+5. A **smart variable** gets generated which provides the 6-digit code based on above secret key when invoked.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/TOTPKey.jpg').default} alt="Add TOTP secret modal" className="doc\_img"/>
 
