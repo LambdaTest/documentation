@@ -1190,6 +1190,7 @@ module.exports = {
           "kane-ai-assertions",
           "kaneai-dynamic-url-replacement",
           "kaneai-chrome-options",
+          "kaneai-totp",
           "kaneai-scheduled-test-runs",
         ],
       },
