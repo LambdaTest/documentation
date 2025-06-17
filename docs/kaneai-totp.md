@@ -59,7 +59,7 @@ Teams often need to test SSO or MFA‑protected applications where the second fa
 
 ### Add a TOTP Secret Key
 
-1. Start a web authoring session on [https://www.kaneai.lambdatest.com/objective](https://www.kaneai.lambdatest.com/objective) and press **/**.
+1. Start a web authoring session from [here](https://www.kaneai.lambdatest.com/objective) and press **/**.
 2. Choose **Add TOTP Authentication Key**.
 3. Enter the Base32 secret directly or user LambdaTest Secrets using `{{` syntax.
 4. Click **Save**.
@@ -77,7 +77,7 @@ Teams often need to test SSO or MFA‑protected applications where the second fa
 
 ## Video Explanation
 
-\<iframe src="[https://app.trupeer.ai/embed?slug=XmOVbgvrd](https://app.trupeer.ai/embed?slug=XmOVbgvrd)" width="640" height="360" frameborder="0" allowfullscreen="true" style="border-radius: 10px; overflow: hidden;">\</iframe>
+<iframe src="https://app.trupeer.ai/embed?slug=XmOVbgvrd" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen height="400" width="800"></iframe>
 
 ## FAQ
 
@@ -87,4 +87,4 @@ Yes. Secrets are encrypted, stored in Vault and never exposed in logs or generat
 
 ### Do mobile tests support TOTP?
 
-Yes. The smart variable generated via secret key `{{totp0}}` is available in both Web and Mobile test steps.
+Yes. The smart variable generated via secret key `{{totp}}` is available in both Web and Mobile test steps.
