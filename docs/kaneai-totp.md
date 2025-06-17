@@ -70,7 +70,7 @@ Teams often need to test SSO or MFA‑protected applications where the second fa
 ### Insert the TOTP into your test
 
 1. Navigate to the OTP input field in your application.
-2. Use the smart variable generated to add your instruction such as "Enter {{totp0}} in verify field"
+2. Use the smart variable generated to add your instruction such as "Enter {{totp}} in verify field"
 3. KaneAI fetches and inserts the 6-digit code.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/InsertTOTP.jpg').default} alt="Insert OTP variable" className="doc\_img"/>
