@@ -61,7 +61,7 @@ Teams often need to test SSO or MFA‑protected applications where the second fa
 
 1. Start a web authoring session on [https://www.kaneai.lambdatest.com/objective](https://www.kaneai.lambdatest.com/objective) and press **/**.
 2. Choose **Add TOTP Authentication Key**.
-3. Enter the Base32 secret directly or user LambdaTest Secrets using {{ syntax.
+3. Enter the Base32 secret directly or user LambdaTest Secrets using `{{` syntax.
 4. Click **Save**.
 5. A **smart variable** gets generated which provides the 6-digit code based on above secret key when invoked.
 
