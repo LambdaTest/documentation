@@ -1,17 +1,19 @@
 ---
-id: accessibility-android-automation-test
-title: Automation Tests with Accessibility Tool using Android
+id: accessibility-native-app-automation-test
+title: Native App Accessibility Automation
 sidebar_label: Automation
-description: Detect and report accessibility issues automatically using LambdaTest Accessibility DevTools, aligned with WCAG guidelines.
+description: Detect and report accessibility issues automatically using LambdaTest Accessibility Native App Automationv, aligned with WCAG guidelines.
 keywords:
     - LambdaTest
     - Accessibility
     - Testing
     - Automation
     - Accessibility Testing Settings
+    - Android Accessibility 
+    - iOS Accessibility
 url: https://www.lambdatest.com/support/docs/accessibility-android-automation-test/
 site_name: LambdaTest
-slug: accessibility-android-automation-test/
+slug: accessibility-native-app-automation-test/
 ---
  
 import CodeBlock from '@theme/CodeBlock';
@@ -42,7 +44,7 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-LambdaTest now enables native Accessibility Automation Testing for Android apps using HyperExecute and Appium. This feature helps developers and QA teams to validate the accessibility of their mobile apps programmatically by leveraging LambdaTest's device cloud.
+LambdaTest now enables native Accessibility Automation Testing for Android and iOS apps using Appium. This feature helps developers and QA teams to validate the accessibility of their mobile apps programmatically by leveraging LambdaTest's device cloud.
 
 With built-in support for `lambda-accessibility-scan`, this integration ensures that your apps are tested for compliance with accessibility standards and best practices like WCAG (Web Content Accessibility Guidelines).
 
@@ -51,12 +53,12 @@ Before getting started, ensure the following:
 
 - You have a LambdaTest account.
 - LambdaTest credentials (username & access key).
-- Android app uploaded to LambdaTest App Storage (lt://APP_ID).
+- App uploaded to LambdaTest App Storage (lt://APP_ID).
 - Python 3 installed locally.
 - Appium-Python-Client installed
 - Access to a valid Android device on LambdaTest (real or virtual).
 
-> This will work for both Android and iOS applications.
+> Native app accessibility automation supports both Android and iOS applications.
 
 ## Step 1: Setup the Environment Variables
 
@@ -182,8 +184,6 @@ driver = webdriver.Remote(client_config.remote_server_addr, options = options, c
 driver.implicitly_wait(2)
 
 time.sleep(10)
-
-time.sleep(10)
 driver.execute_script("lambda-accessibility-scan")
 time.sleep(10)
 driver.find_element(By.CSS_SELECTOR, '#username').send_keys("Pbtest1") # Example CSS selector
@@ -192,7 +192,8 @@ driver.execute_script("lambda-accessibility-scan")
 driver.quit()
 ```
 
-> For iOS accessibility tests make sure you to add this capability `"iosLiveInteraction": True`
+> For iOS accessibility automation, ensure you're targeting **iOS 15** or later and include the `"iosLiveInteraction": true` capability in your configuration.
+> 
 
 ## Step 4: Execute and Monitor your Tests
 Run the following command in the directory where your project has been saved to execute your build.
