@@ -891,9 +891,7 @@ module.exports = {
                 type: "category",
                 collapsed: true,
                 label: "June, 2025",
-                items: [
-                  "hyperexecute-release-notes-2-8-9",
-                ],
+                items: ["hyperexecute-release-notes-2-8-9"],
               },
               {
                 type: "category",
@@ -1156,7 +1154,6 @@ module.exports = {
           "kaneai-hyperexecute-test-run-execution",
           "kaneai-ci-cd-automation",
           "test-runs-configurations",
-
         ],
       },
       {
@@ -1637,7 +1634,7 @@ module.exports = {
                 label: "Run a Quck Scan",
                 id: "accessibility-testing-run-quick-scan",
               },
-    
+
               {
                 type: "category",
                 collapsed: true,
@@ -1758,7 +1755,7 @@ module.exports = {
               "accessibility-test-scheduling-edit",
             ],
           },
-        ]
+        ],
       },
       {
         type: "category",
@@ -1768,12 +1765,12 @@ module.exports = {
           {
             type: "doc",
             label: "Manual",
-            id: "accessibility-android-test",
+            id: "accessibility-app-scanner",
           },
           {
             type: "doc",
             label: "Automation",
-            id: "accessibility-android-automation-test",
+            id: "accessibility-native-app-automation-test",
           },
           {
             type: "category",
@@ -1790,9 +1787,9 @@ module.exports = {
                 label: "iOS",
                 id: "accessibility-ios-rules",
               },
-            ]
+            ],
           },
-        ]
+        ],
       },
       {
         type: "doc",
@@ -1803,7 +1800,6 @@ module.exports = {
         type: "doc",
         label: "Accessibility MCP Server",
         id: "accessibility-mcp-server",
-
       },
       {
         type: "category",
@@ -2212,14 +2208,14 @@ module.exports = {
               "selenium-set-browser-options",
             ],
           },
-           {
+          {
             type: "category",
             collapsed: true,
             label: "Organize Tests",
             items: [
-             "command-annotations",
-             "build-split",
-            "selenium-add-test-meta-data",
+              "command-annotations",
+              "build-split",
+              "selenium-add-test-meta-data",
             ],
           },
           {
@@ -2248,11 +2244,11 @@ module.exports = {
               "custom-header",
               "smart-wait",
               "network-throttling",
-               "custom-dns-map",
-               "upload-files-using-lambdatest",
-          "setup-pre-run-executable",
-            "har-log-viewer",
-             "daily-usage-limit",
+              "custom-dns-map",
+              "upload-files-using-lambdatest",
+              "setup-pre-run-executable",
+              "har-log-viewer",
+              "daily-usage-limit",
             ],
           },
         ],
@@ -3230,7 +3226,7 @@ module.exports = {
         "analytics-widget-drill-down-export",
         "analytics-widget-filter-by-regex",
         "analytics-filter-by-custom-data",
-        "analytics-dashboard-settings"
+        "analytics-dashboard-settings",
       ],
     },
     {
@@ -3476,7 +3472,7 @@ module.exports = {
         label: "Getting started with Tunnel",
         link: {
           type: "doc",
-          id: "lambdatest-tunnel"
+          id: "lambdatest-tunnel",
         },
         items: [
           "testing-locally-hosted-pages",
@@ -3510,17 +3506,14 @@ module.exports = {
           "hyperexecute-how-to-configure-tunnel",
           "smartui-sdk-tunnel",
           "maven-tunnel-for-locally-hosted-web-applications",
-          "integrate-lambdatest-extension-with-azure-pipelines"
+          "integrate-lambdatest-extension-with-azure-pipelines",
         ],
       },
       {
         type: "category",
         collapsed: true,
         label: "Docker Integration",
-        items: [
-          "docker-tunnel",
-          "docker-tunnel-extension",
-        ],
+        items: ["docker-tunnel", "docker-tunnel-extension"],
       },
       {
         type: "category",
@@ -3548,8 +3541,8 @@ module.exports = {
         type: "doc",
         label: "Release Notes",
         id: "tunnel-release-notes",
-      }
-    ], 
+      },
+    ],
   ],
 
   TestManagementSidebar: [
