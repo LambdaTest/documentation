@@ -3199,7 +3199,7 @@ module.exports = {
     },
     {
       type: "category",
-      collapsed: false,
+      collapsed: true,
       label: "Dashboards",
       items: [
         "analytics-dashboard-copilot",
@@ -3271,6 +3271,7 @@ module.exports = {
       label: "Reports",
       items: [
         "insights-usage-report",
+        "analytics-project-report",
         "insights-private-real-devices",
         "insights-private-desktop",
         "analytics-sub-organization-widgets",
