@@ -58,7 +58,7 @@ Before getting started, ensure the following:
 - Appium-Python-Client installed
 - Access to a valid Android device on LambdaTest (real or virtual).
 
-> Native app accessibility automation supports both Android and iOS applications.RetryClaude can make mistakes. Please double-check responses.
+> Native app accessibility automation supports both Android and iOS applications.
 
 ## Step 1: Setup the Environment Variables
 
