@@ -294,7 +294,7 @@ testSuites: - mvn test -Dtest=$files
 `parallelism` defines the number of virtual machines [('tasks')](/support/docs/hyperexecute-status/#2-task-level-status) to be spawned in the case of hybrid mode. If you are not defining the parallelism, then you must define operating system-specific parallelism (win, mac, and  Linux). If both are defined, then preference will be given to OS-based parallelism.
 
 ```yaml
-runson: {matrix.os}
+runson: ${matrix.os}
 parallelism: 2
 
 matrix:
