@@ -71,7 +71,7 @@ You can use the following curl command to upload any video of your choice to the
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://mobile-mgm.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/video.mp4"" -F "type="video"" -F "custom_id="SampleVideo""`}
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload" -F "media_file=@"/Users/macuser/Downloads/video.mp4"" -F "type="video"" -F "custom_id="SampleVideo""`}
 </CodeBlock>
 </div>
 
