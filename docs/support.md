@@ -125,7 +125,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/analytics-dashboard-templates/"><p className="p_home_inners">Pre-built Dashboards</p></a>
         <a href="/support/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboards</p></a>
         <a href="/support/docs/analytics-widgets/"><p className="p_home_inners">Widgets</p></a>
-        <a href="/support/docs/analytics-dashboard-copilot/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA" /></p></a>
+        <a href="/support/docs/analytics-dashboard-copilot/"><p className="p_home_inners">Dashboard CoPilot AI</p></a>
         <a href="/support/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
         <a href="/support/docs/analytics-build-comparison/"><p className="p_home_inners">Build Insights</p></a>
         <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
