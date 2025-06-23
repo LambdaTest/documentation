@@ -67,20 +67,54 @@ The integration of Android Debug Bridge (ADB) shell support within the LambdaTes
 ## Supported ADB Commands
 To ensure security and compatibility, we have a list of ADB commands that can be executed within our Real Device Cloud. Please refer to the following list of supported commands:
 
-| **ADB Command**                                  | **Description**                                                  |
-|--------------------------------------------------|------------------------------------------------------------------|
-| am start                                         | Launches an activity specified by an intent.                     |
-| am force-stop                                    | Stops the specified application package.   |
-| pm clear                                         | Deletes all data associated with a package. |
-| input                                            | Sends touch or key events to the device.                         |
-| ls                                               | Lists directory contents on the device.                          |
-| echo                                             | Displays messages on the device.                                 |
-| grep                                             | Searches for patterns in files on the device.                    |
-| pwd                                              | Prints the current working directory on the device.              |
-| dumpsys                                          | Dumps system information from the device.                        |
-| getprop                                          | Retrieves device properties.                                     |
-| cat                                         | Helps in compatibility checks, debugging and system diagnostics.                  |
+### Supported ADB Commands - Public Device
 
+| Command                               |Description                                                                       |
+| --------------------------------------| -------------------------------------------------------------------------        |
+| `am start`                      | Launches an activity on the device. Useful for opening apps or specific screens.       |
+| `am force-stop`                 | Force-stops an application by its package name.                                        |
+| `pm clear`                      | Clears all data associated with a package (app).                                       |
+| `input`                         | Simulates user input like taps, swipes, or key events.                                 |
+| `ls`                            | Lists files and directories. Commonly used to inspect folders like `/sdcard/Download`. |
+| `echo`                          | Prints text to the terminal. Useful for testing output or scripting.                   |
+| `grep`                          | Searches for text patterns. Useful for filtering logs or command output.               |
+| `pwd`                           | Displays the current working directory.                                                |
+| `dumpsys`                       | Dumps system service information (battery, activity, memory, etc.).                    |
+| `getprop`                       | Gets system properties. Often used for device diagnostics.                             |
+| `am compat enable`              | Enables app compatibility options.                                                     |
+| `cmd connectivity airplane-mode`| Toggles airplane mode on/off (requires permissions).                                   |
+| `setprop debug.firebase.analytics.app`| Enables Firebase Analytics debug mode for a specific app.                        |
+| `log.tag.FA`                    | Firebase Analytics SDK logs (e.g., event recording, session start).                    |
+| `log.tag.FA-SVC`                | Firebase background service logs (e.g., data uploads, scheduled jobs).                 |
+| `wm fixed-to-user-rotation`     | Controls screen rotation policy.                                                       |
+| `setprop`                       | Sets system properties (admin/debug use cases).                                        |
+| `logcat`                        | Outputs system logs in real-time. Crucial for debugging.                               |
+| `am instrument`                 | Starts Android test instrumentation (e.g., Espresso/UI tests).                         |
+| `am broadcast`                  | Sends a broadcast intent. Useful for triggering specific events.                       |
+| `ls /sdcard/Download`           | Lists all files and folders located in the device's Download folder.                   |
+| `ls /sdcard/Pictures`           | Lists all files and folders located in the device's Pictures folder.                   |
+| `ls /sdcard/Movies`             | Lists all files and folders located in the device's Movies folder.                     |
+| `cat /sdcard/Download/` | Displays the content of a specific file inside the Download folder.                            |
+| `cat /sdcard/Pictures/` | Displays the content of a specific file inside the Pictures folder.                            |
+| `cat /sdcard/Movies/`   | Displays the content of a specific file inside the Movies folder.                              |
+| `cat /proc/version`                               | Displays kernel version and build info.                              |
+| `pm list packages`                                | Lists all installed apps on the device.                              |
+
+### Supported ADB Commands - Private Device
+
+| Command                                           | Description                                                  |
+| ------------------------------------------------- | ------------------------------------------------------------ |
+| `setprop`                         | Sets custom system properties (e.g., for debugging frameworks).         |
+| `logcat`                          | Streams real-time logs from device, including app logs.                 |
+| `am instrument`                   | Executes instrumented tests. Often used in automated testing pipelines. |
+| `am broadcast`                    | Sends custom broadcast messages for triggering in-app actions.       |
+| `ls /sdcard/Download`             | Lists all files and folders located in the device's Download folder. |
+| `ls /sdcard/Pictures`             | Lists all files and folders located in the device's Pictures folder. |
+| `ls /sdcard/Movies`               | Lists all files and folders located in the device's Movies folder.   |
+| `cat /sdcard/Download/`           | Displays the content of a specific file inside the Download folder.  |
+| `cat /sdcard/Pictures/`           | Displays the content of a specific file inside the Pictures folder.  |
+| `cat /sdcard/Movies/`             | Displays the content of a specific file inside the Movies folder.    |
+| `pm list packages`                | Lists installed app packages for inspection or automation logic.     |
 
 
 > If the command you require is not listed, please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24x7 Chat Support</span> or you could also mail us at support@lambdatest.com.
