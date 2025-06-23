@@ -107,7 +107,7 @@ To modify the date and time settings programmatically, use the `lambda_executor`
 - Test 12-hour vs. 24-hour format layout rendering.
 
 
-> **Note:** For configuring device date and time during **manual testing** on real devices, please refer to our [Set Date & Time on Real Devices (Manual)](support/docs/set-date-time-hour-format-real-devices/) guide.
+> **Note:** For configuring device date and time during **manual testing** on real devices, please refer to our [Set Date & Time on Real Devices (Manual)](/support/docs/set-date-time-hour-format-real-devices/) guide.
 
 
 
