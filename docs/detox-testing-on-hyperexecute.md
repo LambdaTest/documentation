@@ -2,7 +2,7 @@
 id: detox-testing-on-hyperexecute
 title: Detox Testing on HyperExecute
 hide_title: false
-sidebar_label: Detox Testing
+sidebar_label: Detox
 description: Learn how to run Detox automation tests on HyperExecute for React Native apps
 keywords:
   - Detox
@@ -165,6 +165,10 @@ version: "0.2"
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/Detox/Detox_dashboard.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+
+
+
+You can click on **View Test** from the HyperExecute logs, which will take you to the [App Automation dashboard](https://appautomation.lambdatest.com/build). There, you can access detailed device logs, crash logs, and metadata for your test. You’ll also be able to watch a video recording of the test session for better debugging and analysis.
 
 
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
