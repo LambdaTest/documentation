@@ -114,7 +114,7 @@ This feature is currently not supported on Android. Support for Android is plann
 - Test 12-hour vs. 24-hour format layout rendering.
 
 
-> For Configuring Device **Date and Time** during **Manual Testing** on Real Devices, please refer to our [Set Date & Time on Real Devices (Manual)](support/docs/set-date-time-hour-format-real-devices/) guide.
+> For Configuring Device **Date and Time** during **Manual Testing** on Real Devices, please refer to our [Set Date & Time on Real Devices (Manual)](/support/docs/set-date-time-hour-format-real-devices/) guide.
 
 
 
