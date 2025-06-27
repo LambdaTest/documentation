@@ -99,7 +99,7 @@ Cline allows natural language interaction with your codebase—just describe wha
 <img loading="lazy" src={require('../assets/images/hyperexecute-mcp/vs-code-config.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 **Step 3:** Add Server Name as **LambdaTest-MCP**.<br />
-**Step 4:** Enter the following URL in the server URL field: `http://mcp-api.lambdatest.com/automation?&LT_USERNAME=[your-lt-username]&LT_ACCESS_KEY=[your-lt-access-key]` <br />
+**Step 4:** Enter the following URL in the server URL field: `https://mcp-api.lambdatest.com/automation?&LT_USERNAME=[your-lt-username]&LT_ACCESS_KEY=[your-lt-access-key]` <br />
 **Step 5:** Replace [your-lt-username] and [your-lt-access-key] with your LambdaTest credentials. <br />
 **Step 6:** Click on **Add Server**. 
 
