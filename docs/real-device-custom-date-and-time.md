@@ -115,8 +115,10 @@ The modal includes four options to simulate various datetime-related behaviors:
 | Platform | Configuration Methods       | OS Versions Supported |
 | -------- | --------------------------- | --------------------- |
 | iOS      | Manual + Appium Executor    | iOS 14 and above      |
-| Android  | Manual Only (No automation) | Android 10 and above  |
 
+:::note
+This feature is currently not supported on Android. Support for Android is planned in a future update.
+:::
 
 ---
 

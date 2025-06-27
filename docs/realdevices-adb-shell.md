@@ -116,7 +116,9 @@ To ensure security and compatibility, we have a list of ADB commands that can be
 | `cat /sdcard/Movies/`             | Displays the content of a specific file inside the Movies folder.    |
 | `pm list packages`                | Lists installed app packages for inspection or automation logic.     |
 
-
+:::note
+`adb shell` is already pre-applied in our **terminal environment**. Rewriting it explicitly may prevent the command from executing properly.
+:::
 > If the command you require is not listed, please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24x7 Chat Support</span> or you could also mail us at support@lambdatest.com.
 
 
