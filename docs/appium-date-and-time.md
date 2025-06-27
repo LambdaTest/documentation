@@ -63,6 +63,21 @@ By the end of this document, you will be able to:
 
 To modify the date and time settings programmatically, use the `lambda_executor` Appium hook with the `updateDeviceSettings` action. You can provide multiple arguments including custom date, time, format toggle, and auto-time setting.
 
+
+---
+## Supported Arguments
+
+| Argument           | Format        | Description                                                                 |
+| ------------------ | ------------- | --------------------------------------------------------------------------- |
+| `customDate`       | `MMM DD YYYY` | Sets the device date. You can select a date up to **7 days** from today.    |
+| `customTime`       | `HH:MM`       |  Sets time in 24-hour format `(e.g., 13:30)`. Display adapts based on `twelveHourTime` (shown as `1:30 PM` if enabled).|
+| `twelveHourTime`   | `On` / `Off`  | `On` for 12-hour, `Off` for 24-hour format.                                 |
+| `setAutomatically` | `On` / `Off`  | Enables or disables syncing with network time.                              |
+
+> 💡 **Note:** When `setAutomatically` is turned **On**, all Other Arguments for  **Date and Time**  are automatically disabled on the device.
+
+
+---
 ### Appium Hook Example
 
 <CodeBlock language="js">
@@ -78,25 +93,17 @@ To modify the date and time settings programmatically, use the `lambda_executor`
 </CodeBlock>
 
 
----
-## Supported Arguments
-
-| Argument           | Format        | Description                                                                 |
-| ------------------ | ------------- | --------------------------------------------------------------------------- |
-| `customDate`       | `MMM DD YYYY` | Sets device date. Max 7 days from today.                                    |
-| `customTime`       | `HH:MM`       | Time in 24-hour format (e.g., 13:30). Interpreted based on `twelveHourTime`.|
-| `twelveHourTime`   | `On` / `Off`  | `On` for 12-hour, `Off` for 24-hour format.                                 |
-| `setAutomatically` | `On` / `Off`  | Enables or disables syncing with network time.                              |
-
-> 💡 **Note:** When `setAutomatically` is turned **On**, manual inputs for date and time are disabled on the device.
 
 ---
 ## Supported Platforms
 
 | Platform  | OS Version    | Support Status                  |
 | --------- | ------------- | ------------------------------- |
-| iOS       | 14 and above  | ✅ Fully Supported               |
-| Android   | 10 and above  | ⚠️ Manual: Supported🔧 Automation: In Progress |
+| iOS       | 14 and above  |  Fully Supported               |
+
+:::note
+This feature is currently not supported on Android. Support for Android is planned in a future update.
+:::
 
 ---
 
@@ -107,7 +114,7 @@ To modify the date and time settings programmatically, use the `lambda_executor`
 - Test 12-hour vs. 24-hour format layout rendering.
 
 
-> **Note:** For configuring device date and time during **manual testing** on real devices, please refer to our [Set Date & Time on Real Devices (Manual)](support/docs/set-date-time-hour-format-real-devices/) guide.
+> For Configuring Device **Date and Time** during **Manual Testing** on Real Devices, please refer to our [Set Date & Time on Real Devices (Manual)](support/docs/set-date-time-hour-format-real-devices/) guide.
 
 
 

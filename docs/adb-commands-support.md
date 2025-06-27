@@ -217,7 +217,7 @@ LambdaTest allows execution of ADB shell commands during automated test runs.
 
 - **adb shell getprop** <RealDeviceTag value="Real Device" />
 
- The `abd shell getprop` command retrieves system-level properties in the form of key-value pairs. These properties include internal runtime details such as device model, manufacturer, OS version, network state, security patch level, and debug flags.  The following is a Python sample using the adb command:
+ The `adb shell getprop` command retrieves system-level properties in the form of key-value pairs. These properties include internal runtime details such as device model, manufacturer, OS version, network state, security patch level, and debug flags.  The following is a Python sample using the adb command:
 
   ```python
   params = {"command": "shell", "text": "getprop"}
