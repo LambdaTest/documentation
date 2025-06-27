@@ -1,8 +1,8 @@
 ---
-id: accessibility-android-test
-title: Accessibility Testing Using App Manual Testing
+id: accessibility-app-scanner
+title: Accessibility App Scanner
 sidebar_label: Manual
-description: Use LambdaTest Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines.
+description: LambdaTest Accessibility DevTools help automate detection and reporting of accessibility issues based on WCAG guidelines.
 keywords:
     - LambdaTest
     - Accessibility
@@ -11,7 +11,7 @@ keywords:
     - Accessibility Testing Settings
 url: https://www.lambdatest.com/support/docs/accessibility-android-test/
 site_name: LambdaTest
-slug: accessibility-android-test/
+slug: accessibility-app-scanner/
 ---
  
 import CodeBlock from '@theme/CodeBlock';

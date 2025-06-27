@@ -2,7 +2,7 @@
 id: accessibility-automation-test
 title: Automation Tests with Accessibility Tool using Selenium
 sidebar_label: Selenium
-description: Use LambdaTest Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines.
+description: Identify and log accessibility issues with LambdaTest Accessibility DevTools, ensuring automated compliance with WCAG accessibility standards.
 keywords:
     - LambdaTest
     - Accessibility

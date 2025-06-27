@@ -132,7 +132,7 @@ Enter your `APP_ID` in the YAML file that you have fetched in the above step.
 <TabItem value="android-rd" label="Android-Real Device" default>
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/maestro.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android-realdevice.yaml
 ```
 </TabItem>
 
@@ -141,7 +141,7 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/yaml/ma
 > To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@lambdatest.com](mailto:support@lambdatest.com).
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/android-emulator/yaml/maestro.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android-emulator.yaml
 ```
 </TabItem>
 
@@ -150,7 +150,7 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/android-emul
 
 
 ```yaml reference title="hyperexecute.yaml"
-https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/ios-simulator/maestro.yaml
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/ios-simulator.yaml
 ```
 </TabItem>
 

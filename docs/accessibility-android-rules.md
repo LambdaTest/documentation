@@ -2,7 +2,7 @@
 id: accessibility-android-rules
 title: Android Accessibility Rules - Quick Reference
 sidebar_label: Android
-description: Use LambdaTest Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines.
+description: Use LambdaTest Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines.
 keywords:
     - LambdaTest
     - Accessibility
@@ -62,3 +62,6 @@ import TabItem from '@theme/TabItem';
 | Fixed Orientation Lock | 1.3.4 | AA | Moderate | App restricts viewing to only portrait or landscape orientation without accessibility justification. Support both orientations or provide alternative access methods for users who cannot rotate their devices due to physical constraints. |
 | Undersized Touch Target | 2.5.5 | AAA | Moderate | Interactive elements are smaller than the recommended minimum touch target size, making them difficult to activate for users with motor impairments. Ensure all touch targets are at least 48dp x 48dp. |
 | Insufficient Target Spacing | 2.5.5 | AAA | Moderate | Interactive elements are placed too close together without adequate spacing, increasing risk of accidental activation. Provide sufficient spacing between adjacent touch targets to prevent targeting errors for users with limited dexterity. |
+
+
+> We are continuously expanding our App Accessibility guidelines. Visit this page for the latest updates and new requirements.

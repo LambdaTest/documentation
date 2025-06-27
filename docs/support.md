@@ -125,7 +125,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/analytics-dashboard-templates/"><p className="p_home_inners">Pre-built Dashboards</p></a>
         <a href="/support/docs/analytics-create-dashboard/"><p className="p_home_inners">Custom Dashboards</p></a>
         <a href="/support/docs/analytics-widgets/"><p className="p_home_inners">Widgets</p></a>
-        <a href="/support/docs/analytics-dashboard-copilot/"><p className="p_home_inners">Dashboard AI CoPilot &nbsp; <NewTag  value="BETA" /></p></a>
+        <a href="/support/docs/analytics-dashboard-copilot/"><p className="p_home_inners">Dashboard CoPilot AI</p></a>
         <a href="/support/docs/analytics-test-case-insights/"><p className="p_home_inners">Test Case Insights</p></a>
         <a href="/support/docs/analytics-build-comparison/"><p className="p_home_inners">Build Insights</p></a>
         <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/"><p className="p_home_inners">Flaky Test Insights</p></a>
@@ -223,8 +223,8 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/accessibility-devtools/"><p className="p_home_inners">Accessibility DevTools</p></a>
         <a href="/support/docs/accessibility-automation/"><p className="p_home_inners">Accessibility Web Automation</p></a>
         <a href="/support/docs/accessibility-test-scheduling/"><p className="p_home_inners">Sitemap Scheduling</p></a>
-        <a href="/support/docs/accessibility-android-test/"><p className="p_home_inners">Native App Scanner &nbsp; <NewTag  value="BETA" /> </p></a> 
-        <a href="/support/docs/accessibility-android-automation-test/"><p className="p_home_inners">Native App Automation &nbsp; <NewTag  value="BETA" /> </p></a>
+        <a href="/support/docs/accessibility-app-scanner/"><p className="p_home_inners">Native App Scanner &nbsp; <NewTag  value="BETA" /> </p></a> 
+        <a href="/support/docs/accessibility-native-app-automation-test/"><p className="p_home_inners">Native App Automation &nbsp; <NewTag  value="BETA" /> </p></a>
         <a href="/support/docs/screen-reader-on-accessibility/"><p className="p_home_inners">Screen Reader</p></a>
       </div>
     </div>

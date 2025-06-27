@@ -890,6 +890,23 @@ module.exports = {
               {
                 type: "category",
                 collapsed: true,
+                label: "June, 2025",
+                items: ["hyperexecute-release-notes-2-8-9"],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "May, 2025",
+                items: [
+                  "hyperexecute-release-notes-2-8-8",
+                  "hyperexecute-release-notes-2-8-7",
+                  "hyperexecute-release-notes-2-8-6",
+                  "hyperexecute-release-notes-2-8-5",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
                 label: "April, 2025",
                 items: [
                   "hyperexecute-release-notes-2-8-4",
@@ -1137,7 +1154,6 @@ module.exports = {
           "kaneai-hyperexecute-test-run-execution",
           "kaneai-ci-cd-automation",
           "test-runs-configurations",
-
         ],
       },
       {
@@ -1171,6 +1187,7 @@ module.exports = {
           "kane-ai-assertions",
           "kaneai-dynamic-url-replacement",
           "kaneai-chrome-options",
+          "kaneai-totp",
           "kaneai-scheduled-test-runs",
         ],
       },
@@ -1617,7 +1634,7 @@ module.exports = {
                 label: "Run a Quck Scan",
                 id: "accessibility-testing-run-quick-scan",
               },
-    
+
               {
                 type: "category",
                 collapsed: true,
@@ -1738,7 +1755,7 @@ module.exports = {
               "accessibility-test-scheduling-edit",
             ],
           },
-        ]
+        ],
       },
       {
         type: "category",
@@ -1748,12 +1765,12 @@ module.exports = {
           {
             type: "doc",
             label: "Manual",
-            id: "accessibility-android-test",
+            id: "accessibility-app-scanner",
           },
           {
             type: "doc",
             label: "Automation",
-            id: "accessibility-android-automation-test",
+            id: "accessibility-native-app-automation-test",
           },
           {
             type: "category",
@@ -1770,9 +1787,9 @@ module.exports = {
                 label: "iOS",
                 id: "accessibility-ios-rules",
               },
-            ]
+            ],
           },
-        ]
+        ],
       },
       {
         type: "doc",
@@ -1783,7 +1800,6 @@ module.exports = {
         type: "doc",
         label: "Accessibility MCP Server",
         id: "accessibility-mcp-server",
-
       },
       {
         type: "category",
@@ -1890,8 +1906,8 @@ module.exports = {
         collapsed: true,
         label: "Test cases",
         items: [
+          "generate-test-cases-with-ai",
           "manual-test-case-creation",
-          "manual-test-cases-with-ai",
           {
             type: "category",
             collapsed: true,
@@ -2195,13 +2211,17 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Network",
-            items: ["network-throttling", "custom-dns-map"],
+            label: "Organize Tests",
+            items: [
+              "command-annotations",
+              "build-split",
+              "selenium-add-test-meta-data",
+            ],
           },
           {
             type: "category",
             collapsed: true,
-            label: "Performance",
+            label: "Web Performance",
             items: [
               "view-lighthouse-performance-metrics",
               "lighthouse-reports-hooks",
@@ -2216,26 +2236,19 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Test Execution",
-            items: ["smart-wait"],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Security",
-            items: ["custom-header"],
-          },
-          {
-            type: "category",
-            collapsed: true,
-            label: "Other Capabilities",
+            label: "Advance Use Cases",
             items: [
               "auto-heal",
-              "command-annotations",
-              "har-log-viewer",
               "selenium-geolocation-capabilities",
               "selenium-mask-your-data",
-              "selenium-add-test-meta-data",
+              "custom-header",
+              "smart-wait",
+              "network-throttling",
+              "custom-dns-map",
+              "upload-files-using-lambdatest",
+              "setup-pre-run-executable",
+              "har-log-viewer",
+              "daily-usage-limit",
             ],
           },
         ],
@@ -3204,7 +3217,7 @@ module.exports = {
     },
     {
       type: "category",
-      collapsed: false,
+      collapsed: true,
       label: "Dashboards",
       items: [
         "analytics-dashboard-copilot",
@@ -3213,7 +3226,7 @@ module.exports = {
         "analytics-widget-drill-down-export",
         "analytics-widget-filter-by-regex",
         "analytics-filter-by-custom-data",
-        "analytics-dashboard-settings"
+        "analytics-dashboard-settings",
       ],
     },
     {
@@ -3276,11 +3289,13 @@ module.exports = {
       label: "Reports",
       items: [
         "insights-usage-report",
+        "analytics-project-report",
         "insights-private-real-devices",
         "insights-private-desktop",
         "analytics-sub-organization-widgets",
       ],
     },
+    "insights-best-practices",
     "analytics-faqs",
   ],
 
@@ -3458,7 +3473,7 @@ module.exports = {
         label: "Getting started with Tunnel",
         link: {
           type: "doc",
-          id: "lambdatest-tunnel"
+          id: "lambdatest-tunnel",
         },
         items: [
           "testing-locally-hosted-pages",
@@ -3492,17 +3507,14 @@ module.exports = {
           "hyperexecute-how-to-configure-tunnel",
           "smartui-sdk-tunnel",
           "maven-tunnel-for-locally-hosted-web-applications",
-          "integrate-lambdatest-extension-with-azure-pipelines"
+          "integrate-lambdatest-extension-with-azure-pipelines",
         ],
       },
       {
         type: "category",
         collapsed: true,
         label: "Docker Integration",
-        items: [
-          "docker-tunnel",
-          "docker-tunnel-extension",
-        ],
+        items: ["docker-tunnel", "docker-tunnel-extension"],
       },
       {
         type: "category",
@@ -3513,6 +3525,8 @@ module.exports = {
           "load-balancing-in-lambda-tunnel",
           "charles-proxy",
           "dedicated-proxy",
+          "socks5-proxy-support",
+          "http2-support", // Added HTTP/2 support doc
         ],
       },
       {
@@ -3528,8 +3542,8 @@ module.exports = {
         type: "doc",
         label: "Release Notes",
         id: "tunnel-release-notes",
-      }
-    ], 
+      },
+    ],
   ],
 
   TestManagementSidebar: [

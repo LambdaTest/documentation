@@ -68,6 +68,20 @@ Integrate your dashboard with Slack to receive instant updates and foster real-t
 
 ---
 
+### MS Teams Notification Settings
+
+Integrate your dashboard with Microsoft Teams to receive timely updates and enhance team collaboration.
+
+- **Enable/Disable Notifications:** Toggle MS Teams notifications on or off as needed. When enabled, updates will be sent directly to your selected Teams channel.
+- **Notification Frequency:** Set how often notifications are sent to MS Teams (e.g., Daily, Weekly). This helps ensure your team stays informed without overwhelming them with messages.
+- **Date Range:** Choose the default or set a custom range (number of days) to define the scope of data included in each notification.
+- **View Selection:** Select the specific dashboard view or analytics channel for which notifications should be sent. This allows you to target relevant information to the right Teams channels or groups.
+- **Update & Save Preferences:** Click **Update** to apply your MS Teams notification settings.
+
+> **Best Practice:** Use MS Teams notifications for dashboards that require broad visibility or to alert teams about important trends, regressions, or test failures.
+
+---
+
 ### Share Link Settings
 
 Easily share your dashboard with colleagues, clients, or external stakeholders while maintaining control over access and privacy.
