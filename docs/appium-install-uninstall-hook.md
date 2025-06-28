@@ -47,15 +47,15 @@ import TabItem from '@theme/TabItem';
 
 ## Introduction
 
-LambdaTest has introduced features that allow users to install and uninstall specified applications within app automation scripts. This document outlines the usage and provides examples of these features.
+LambdaTest now allows you to install and uninstall apps in the middle of your automated tests. This means you don’t need to restart the session every time you want to switch apps, upgrade them, or clean up the device.
 
 ## Installing and Uninstalling Apps
 
-LambdaTest supports commands that allow you to install or uninstall apps during the execution of an automation test. These commands can be executed using the script execution functionality of the WebDriver.
+LambdaTest enables you to install and uninstall applications during automation test execution by using commands that can be run through WebDriver's script execution functionality.
 
 ### Install App
 
-You can install apps that have been uploaded to the LambdaTest platform within your automation scripts. To install an app, use the command `lambda-install-app` followed by the app's ID. The ID can either be the LambdaTest-generated app ID or a custom ID provided while uploading the app.
+You can install apps uploaded to the LambdaTest platform directly within your automation scripts using the `lambda-install-app` command followed by the app’s ID. This ID can be either the LambdaTest-generated ID or a custom ID assigned during upload.
 
 **Python example:**
 ```python
@@ -74,7 +74,7 @@ driver.execute_script("lambda-uninstall-app=com.apple.myApp")
 ```
 ### Test App Upgrades with Hooks
 
-Testing app upgrades is vital because new app versions are frequently delivered to users. Users upgrade to the latest app version rather than performing a fresh installation. During these upgrades, existing user data may need to be migrated to ensure the app functions correctly.You can use the below hooks for the same : 
+Testing app upgrades is important because users often update to the latest version instead of reinstalling the app. To ensure existing user data is preserved and the app continues to function properly after an upgrade, you can use the following hooks:
 
 **Python example:**
 
@@ -137,37 +137,26 @@ data = {
 </Tabs>
 
 
-
-
 ## Validation Errors
 
 You might encounter some errors while using these features. The following are some common validation errors and their meaning:
 
-- **App URL is empty while using the install app command:**
+| Error Message                                  | Meaning                                                        |
+| --------------------------------------------------- | -------------------------------------------------------------- |
+| `No app_url has been provided for lambda-install-app. Please check and try again.`| The install command is missing the app URL or ID.              |
+| `The app provided for lambda-install-app is not accessible. Please check and try again.`| The app ID does not belong to your account or is inaccessible. |
+| `Failed to fetch app details.`                      | The app ID is invalid or app is not found.                     |
+| `Failed to install the app using lambda-install-app.`  | Installation failed due to compatibility or other issues.      |
+| `No app package or app bundle id has been provided for lambda-uninstall-app. Please check and try again.` | The uninstall command is missing the app package or bundle ID. |
+| `Failed to uninstall the app using lambda-uninstall-app.`| Uninstallation failed; app may not be installed or wrong ID.|
 
-  `No app_url has been provided for lambda-install-app. Please check and try again.`
 
-- **App URL does not belong to the user while using the install app command:**
 
-  `The app provided for lambda-install-app is not accessible. Please check and try again.`
+Multiple errors may occur based on the scenario. Understanding these errors will help you identify and resolve issues more efficiently, ensuring smooth test execution. Once the code snippets are added, the tests can be executed and will appear on the[LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
-- **App details are not found while using the install app command:**
 
-  `Failed to fetch app details.`
+> **Note:** If the user had enabled any of the following capabilities in the previously installed app, they will remain available and functional in the upgraded app as well : `EnableScreenshotUnblock`,`EnableImageInjection`,`EnableVideoInjection`,`Network`,`AppProfiling`,`EnableWebContentsDebugging`,`EnableBiometricInjection`.This ensures that key testing features continue to work seamlessly after the app is updated, without requiring additional configuration.
 
-- **App installation fails:**
-
-  `Failed to install the app using lambda-install-app.`
-
-- **App package is empty while using the uninstall app command:**
-
-  `No app package or app bundle id has been provided for lambda-uninstall-app. Please check and try again.`
-
-- **App package uninstallation fails:**
-
-  `Failed to uninstall the app using lambda-uninstall-app.`
-
-Multiple options can be selected. By understanding these errors, you can debug issues faster and ensure smooth execution of your tests. Once you have added the code snippet, the tests can be executed and will be visible on the [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
