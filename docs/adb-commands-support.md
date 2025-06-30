@@ -103,9 +103,13 @@ result = driver.execute_script("lambda-adb",params)
 
 ### ADB Shell Command
 
+LambdaTest allows execution of ADB shell commands during automated test runs. 
+
+#### ADB Shell Command - Public 
+
 - **adb shell dumpsys** <RealDeviceTag value="Real Device" />
 
-  This command is used to obtain detailed information about installed packages on device. When you run this command, it provides a list of information for each package installed on the device. The output includes various details about each package.The following is a Python sample using the adb command:
+  The `adb shell dumpsys` command is used to obtain detailed information about installed packages on device. When you run this command, it provides a list of information for each package installed on the device. The output includes various details about each package.The following is a Python sample using the adb command:
 
   ```python
   params = {"command": "shell", "text": "dumpsys package <package_info>"}
@@ -119,7 +123,7 @@ result = driver.execute_script("lambda-adb",params)
 
 - **adb shell getprop** <VirtualDeviceTag value="Virtual Device" /> <RealDeviceTag value="Real Device" />
 
-  This command is used to retrieve system properties from an Android device. When executed, it provides a list of key-value pairs representing various system settings and configurations. These properties include information about the device's build, hardware, and other system-related details. The output can be useful for debugging, development or understanding the device's current state. The following is a Python sample using the adb command:
+  The command `adb shell getprop` is used to retrieve system properties from an Android device. When executed, it provides a list of key-value pairs representing various system settings and configurations. These properties include information about the device's build, hardware, and other system-related details. The output can be useful for debugging, development or understanding the device's current state. The following is a Python sample using the adb command:
 
   ```python
   params = {"command": "shell", "text": "getprop"}
@@ -131,6 +135,165 @@ result = driver.execute_script("lambda-adb",params)
   result = driver.execute_script("lambda-adb",params)
   ```
 
+- **adb shell cat /proc/version** <RealDeviceTag value="Real Device" />
+
+  The `adb shell cat /proc/version` command outputs detailed information about the Linux kernel version running on the Android device, including the build date and compiler details. This information is essential for debugging compatibility issues and understanding the device’s operating system internals.The following is a Python sample using the adb command:
+
+  ```python
+  params = {"command": "shell", "text": "cat /proc/version"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+
+#### ADB Shell Command - Private
+
+- **adb shell pm** <RealDeviceTag value="Real Device" />
+
+  The `adb shell pm` command enables management of Android apps programmatically. It supports installing, uninstalling, clearing data, and querying installed packages. The following is a Python sample using the adb command:
+
+  ```python
+  params = {"command": "shell", "text": "pm list packages"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+
+- **adb shell rm** <RealDeviceTag value="Real Device" />
+
+  The `adb shell rm` command is used to delete files or directories from the Android device's filesystem directly from your terminal or during automated test execution. It helps in clearing residual data, removing temporary test files, or resetting the test environment by deleting specific logs, APKs, screenshots, or other generated data. The following is a Python sample using the adb command:
+
+  ```python
+  params = {"command": "shell", "text": "rm /sdcard/Download/tempfile.txt"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+
+
+- **adb shell mkdir** <RealDeviceTag value="Real Device" />
+
+  The `adb shell mkdir` command is used to create new directories on an Android device’s filesystem. It is especially useful when preparing the device environment before automated test runs—ensuring that the required folder structure exists for storing screenshots, logs, or other test-related files. The following is a Python sample using the adb command:
+
+  ```python
+  params = {"command": "shell", "text": "mkdir /sdcard/TestResults"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+
+- **adb shell screencap** <RealDeviceTag value="Real Device" />
+
+  The `adb shell screencap` command captures the current screen on a real device and saves it as an image file. It’s useful for debugging UI issues or validating visual test results during automation. The following is a Python sample using the adb command:
+
+  ```python
+  params = {"command": "shell", "text": "screencap /sdcard/screen.png"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+
+- **adb shell content** <RealDeviceTag value="Real Device" />
+
+  The `adb shell content` command interacts with Android’s content providers to query, insert, update, or delete shared data like contacts, SMS, or calendar entries. It's commonly used in tests to read data, insert test entries, or reset content to a known state. The following is a Python sample using the adb command:
+
+  ```python
+  params = {"command": "shell", "text": "content query --uri content://contacts/phones"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+
+
+- **adb shell am** <RealDeviceTag value="Real Device" />
+
+  The `adb shell am command` uses the Activity Manager to control app components on a real device. It’s useful for launching activities, restarting apps, or sending broadcast intents—commonly done during tests to simulate user actions or reset app state. The following is a Python sample using the adb command:
+
+  ```python
+  params = {"command": "shell", "text": "am start -n com.example/.MainActivity"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+- **adb shell dumpsys** <RealDeviceTag value="Real Device" />
+
+  The `adb shell dumpsys` command is used to obtain detailed information about installed packages on device. When you run this command, it provides a list of information for each package installed on the device. The output includes various details about each package.The following is a Python sample using the adb command:
+
+  ```python
+  params = {"command": "shell", "text": "dumpsys package <package_info>"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+  Example -
+   ```python
+  params = {"command": "shell", "text": "dumpsys package dumpsys input_method"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+
+- **adb shell getprop** <RealDeviceTag value="Real Device" />
+
+ The `adb shell getprop` command retrieves system-level properties in the form of key-value pairs. These properties include internal runtime details such as device model, manufacturer, OS version, network state, security patch level, and debug flags.  The following is a Python sample using the adb command:
+
+  ```python
+  params = {"command": "shell", "text": "getprop"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+
+
+- **adb shell setprop** <RealDeviceTag value="Real Device" />
+
+  The `adb shell setprop` command sets system properties on a real device, allowing you to modify device behavior. It’s often used to change debug flags, adjust logging levels, or simulate different configurations and network conditions during testing. The following is a Python sample using the adb command:
+
+  ```python
+  params = {"command": "shell", "text": "setprop debug.test true"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+- **adb shell cat /proc/version** <RealDeviceTag value="Real Device" />
+
+  The `adb shell cat /proc/version` command outputs detailed information about the Linux kernel version running on the Android device, including the build date and compiler details. This information is essential for debugging compatibility issues and understanding the device’s operating system internals.The following is a Python sample using the adb command:
+
+  ```python
+  params = {"command": "shell", "text": "cat /proc/version"}
+  result = driver.execute_script("lambda-adb",params)
+  ```
+
+- **adb shell ls** <RealDeviceTag value="Real Device" />
+
+  The `adb shell ls` command lists files and directories within a specified folder on the Android device. It is commonly used during automated tests to verify the presence and contents of files created, modified, or downloaded by the app. This helps ensure test artifacts are correctly generated and stored on the device. 
+  
+  #### These are the `ls` commands that can are enabled:
+
+  - `ls /sdcard/Download` — Lists all files and directories inside the Downloads folder. Typically used to check if test downloads or app-generated files exist, and to validate proper file creation or cleanup.
+
+  - `ls /sdcard/Pictures` — Lists all files in the Pictures directory, which usually stores photos and screenshots. Useful for confirming screenshots are saved correctly or for accessing images created during tests.
+
+  - `ls /sdcard/Movies` — Lists media files in the Movies folder. Commonly used to validate recorded or downloaded videos and manage video artifacts from test executions.
+
+  ```python
+  # List files in the Downloads folder
+  params = {"command": "shell", "text": "ls /sdcard/Download"}
+  result = driver.execute_script("lambda-adb", params)
+  # List files in the Pictures folder
+  params = {"command": "shell", "text": "ls /sdcard/Pictures"}
+  result = driver.execute_script("lambda-adb", params)
+  # List files in the Movies folder
+  params = {"command": "shell", "text": "ls /sdcard/Movies"}
+  result = driver.execute_script("lambda-adb", params)
+  ```
+
+- **adb shell cat** <RealDeviceTag value="Real Device" />
+
+  The `adb shell cat` command in Android's shell outputs a file’s contents to the console, allowing quick access to text or binary data on the device. Short for “concatenate,” it’s a common Linux command used to read files. In automation, cat helps inspect logs, reports, images, or videos without manual device access. Text files show readable content, while binary files output raw data that may need special handling. 
+  
+  #### These are the cat commands that can are enabled:
+    - `cat /sdcard/Download/<filename>` — Outputs the contents of a file in the Downloads folder. Typically used to read logs, reports, or downloaded test artifacts.
+
+    - `cat /sdcard/Pictures/<filename>` — Outputs the raw binary data of an image file in the Pictures folder, useful for verifying screenshots or photos.
+
+    - `cat /sdcard/Movies/<filename>` — Outputs raw binary content of video files in the Movies folder, helpful for validating recorded or downloaded videos.
+
+  ```python
+  params = {"command": "shell", "text": "cat /proc/version"}
+  result = driver.execute_script("lambda-adb", params)
+  # Read a log or report from Downloads
+  params = {"command": "shell", "text": "cat /sdcard/Download/test_log.txt"}
+  result = driver.execute_script("lambda-adb", params)
+  # Read an image file (raw binary) from Pictures
+  params = {"command": "shell", "text": "cat /sdcard/Pictures/screenshot.png"}
+  result = driver.execute_script("lambda-adb", params)
+  # Read a video file (raw binary) from Movies
+  params = {"command": "shell", "text": "cat /sdcard/Movies/test_video.mp4"}
+  result = driver.execute_script("lambda-adb", params)
+  ```
+<img loading="lazy" src={require('../assets/images/appium-app/adb-commands.png').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
+
+
+### Additional ADB Shell Commands
 
 - **adb shell ping -c 4 YOUR_URL** <VirtualDeviceTag value="Virtual Device" />
 
@@ -142,15 +305,6 @@ result = driver.execute_script("lambda-adb",params)
   result = driver.execute_script("lambda-adb",params)
   ```
 
-- **adb shell cat** <RealDeviceTag value="Real Device" />
-
-  This command provides detailed information about the system’s kernel version and build information. It outputs the Linux kernel version, along with build information such as the GCC version used to compile the kernel. This command is useful when you need to check the underlying kernel version of the Android device, typically for compatibility checks, debugging, or ensuring that a device meets specific requirements for apps or tests. The following is a Python sample using the adb command:
-
-  ```python
-  params = {"command": "shell", "text": "cat /proc/version"}
-  result = driver.execute_script("lambda-adb",params)
-  ```
-<img loading="lazy" src={require('../assets/images/appium-app/adb-commands.png').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
 ### Enable/Disable Notification
 
