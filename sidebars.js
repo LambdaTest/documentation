@@ -1351,6 +1351,7 @@ module.exports = {
           "assembla-integration",
           "taiga-integration",
           "servicenow-integration",
+          "zohoproject-integration",
         ],
       },
       {
