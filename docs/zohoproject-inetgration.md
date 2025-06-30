@@ -1,6 +1,6 @@
 ---
 id: zohoproject-integration
-title: ZohoProject Integration with LambdaTest
+title: Zoho Project Integration with LambdaTest
 hide_title: false
 sidebar_label: Zoho Project
 description: LambdaTest provides integration with Zoho Project to help you log bugs directly from your test session on LambdaTest to Zoho Projects.

@@ -127,7 +127,7 @@ import TabItem from '@theme/TabItem';
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/zohoproject-integration/">ZohoProject Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/zohoproject-integration/">Zoho Project Integration With LambdaTest</a>
 </div>
 :::info Note
 
