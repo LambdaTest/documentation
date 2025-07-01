@@ -1186,6 +1186,7 @@ module.exports = {
           "kaneai-chrome-options",
           "kaneai-totp",
           "kaneai-scheduled-test-runs",
+          "kaneai-database",
         ],
       },
       {
