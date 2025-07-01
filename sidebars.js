@@ -2014,7 +2014,7 @@ module.exports = {
               "accessibility-settings-ios",
               "devtools-on-real-devices-app",
               "set-date-time-hour-format-real-devices",
-              "set-device-dark-mode",
+              
             ],
           },
         ],
@@ -2246,7 +2246,7 @@ module.exports = {
               "custom-header",
               "smart-wait",
               "network-throttling",
-              "custom-dns-map",
+              "network-data-masking",
               "upload-files-using-lambdatest",
               "setup-pre-run-executable",
               "har-log-viewer",
