@@ -87,7 +87,7 @@ Once you Run or Add query, your query will be recorded as a test step within Kan
 
 ## Video explanation
 
-<iframe src="https://app.trupeer.ai/embed?slug=sMHMyK6dl" width="640" height="360" frameborder="0" allowfullscreen="true" style="border-radius: 10px; overflow: hidden;"></iframe>
+<iframe src="https://app.trupeer.ai/embed?slug=sMHMyK6dl" width="640" height="360" frameborder="0" allowfullscreen="true"></iframe>
 
 
 Have any feedback or request? Reach out to us via [support@lambdatest.com](mailto:support@lambdatest.com) and we would be happy to hear from you.
