@@ -2247,6 +2247,7 @@ module.exports = {
               "custom-header",
               "smart-wait",
               "network-throttling",
+              "custom-dns-map",
               "network-data-masking",
               "upload-files-using-lambdatest",
               "setup-pre-run-executable",
@@ -2725,6 +2726,7 @@ module.exports = {
               "basic-authentication-for-web-automation",
               "live-debug-in-app-automation",
               "appium-date-and-time",
+              "set-device-dark-mode"
             ],
           },
           {
