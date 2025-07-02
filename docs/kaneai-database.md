@@ -13,6 +13,9 @@ site_name: LambdaTest
 slug: kaneai-database/
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -67,6 +70,16 @@ Support for NoSQL databases such as MongoDB and DynamoDB will be added soon.
 ### Connecting local databases
 
 For local or private databases, select a tunnel if your tunnel is active. The tunnel can be activated easily by following the details available [here](https://www.lambdatest.com/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support). Test the connection and create it to see the sample database added.
+
+
+Following flag will be additionally required here: `- --expose service_name:host:port`
+
+So, you command will look like:
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`./LT --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()} --expose mysql:0.0.0.0:3306 --verbose --env ht-stage`}
+</CodeBlock>
+</div>
 
 
 ## Using Database queries within KaneAI session
