@@ -42,7 +42,7 @@ slug: playwright-ios-device/
 
 # Getting Started With Playwright Testing on iOS Real Devices
 * * *
-Playwright test automation on real iOS devices is now supported on LambdaTest. Test on lastest iPhone and iPad safari combinations to catch device-specific issues that mobile emulation may miss. Integrate with your existing CI pipeline, and access logs and debugging artifacts for each test run.
+Playwright test automation on real iOS devices is now supported on LambdaTest. Test on latest iPhone and iPad safari combinations to catch device-specific issues that mobile emulation may miss. Integrate with your existing CI pipeline, and access logs and debugging artifacts for each test run.
 
 This guide will cover the basics of getting started with Playwright testing on iOS devices on the LambdaTest platform.
 
