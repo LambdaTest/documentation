@@ -1,13 +1,13 @@
 ---
 id: custom-dns-map
 title: Custom DNS Mapping
-hide_title: true
+hide_title: false
 sidebar_label: Custom DNS Mapping
 description: Learn how to provide Custom IP for Domains.
 keywords:
     - custom dns mapping
     - lambdatest custom dns map
-  
+
 url: https://www.lambdatest.com/support/docs/custom-dns-map/
 site_name: LambdaTest
 slug: custom-dns-map/
@@ -35,9 +35,6 @@ slug: custom-dns-map/
       })
     }}
 ></script>
-
-# Custom DNS Mapping
-
 ## Overview
 
 The `customDnsMap` capability allows users to define custom IP addresses for specific domains. This is useful when you need to redirect domain requests to different IP addresses for testing purposes, without altering the global or browser-specific configurations.
