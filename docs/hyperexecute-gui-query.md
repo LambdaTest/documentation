@@ -57,7 +57,7 @@ Think of a query as a smart search filter that automatically finds and selects t
 - **Precise test selection:** Combine multiple criteria like annotations, file locations and names to pinpoint exactly the tests you need for any given configuration.
 - **Cleaner workspace:** Only the relevant tests show up, keeping your test view streamlined and easy to navigate. Also, it helps decrease the manual errors.
 
-## Understanding the Query Structure
+## Understand the Query Structure
 Every query follows this simple pattern:  `<what-to-look-at>.<which-property> <how-to-compare> "<value>"`
 
 For example: `suiteTest.name = "LoginTest"` where, 
@@ -66,7 +66,7 @@ For example: `suiteTest.name = "LoginTest"` where,
 - `=` : how to compare (exactly equals)
 - `"LoginTest"` : what value (the specific name)
 
-## Writing Your First Query
+## Write Your First Query
 
 1. Navigate to your configuration details screen
 2. Click on the **"Test List"** tab
@@ -77,7 +77,9 @@ For example: `suiteTest.name = "LoginTest"` where,
 <source src= {require('../assets/videos/hyperexecute/cli-gui/writing_query.mp4').default} type="video/mp4" />
 </video>
 
-### Step-by-Step Query Building
+<!-- ### Step-by-Step Query Building -->
+
+<br />  <br />
 
 Let's build a query to find all the Suite (XML) Tests which have **login** in their name.
 
@@ -118,7 +120,7 @@ Type the value you’re looking for in quotes, like `"login"`. The app suggests 
 
 Press Enter and all the Suite Tests which contain the word "login" in their name will be listed down in a tree-like format. **This tree-like format** shows you the complete structure with the lowest entity showing the runnable test (`methods`, in case of TestNG).
 
-### Adding Multiple Conditions
+### Add Multiple Conditions
 
 Want to be more specific? Add logical operators to combine conditions. After your first condition, you'll see a dropdown:
 
@@ -130,7 +132,7 @@ Want to be more specific? Add logical operators to combine conditions. After you
 
 `suiteTest.name ~ "login" AND suiteTest.annotation_name ~ "Smoke"`
 
-## Saving the Query
+## Save the Query
 
 You can save your query in order to dynamically select tests whenever you come back to that specific Configuration. Queries are saved at **Configuration level** so that you can keep unique Configurations for different types of testing scenarios. For example, A configuration for smoke tests may have a saved query like `suiteTest.name ~ "Smoke"`. 
 

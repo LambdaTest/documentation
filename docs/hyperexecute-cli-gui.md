@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-cli-gui
-title: "HyperExecute GUI App (Beta)"
+title: "HyperExecute GUI App"
 hide_title: false
 sidebar_label: HyperExecute GUI App
 description: This documentation outlines the steps on how to trigger a job on hyperexecute using the underpass app - gui app for hyperexecute cli.
@@ -45,7 +45,7 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-**HyperExecute Graphical User Interface (GUI)** is designed to streamline your test automation workflow and bring HyperExecute's power of test orchestration with the most intuitive way to interact. HyperExecute GUI makes testing simple, fast, and powerful. It abstracts all technical complexity to make **high-performance test execution available to everyone**. 
+**HyperExecute Graphical User Interface (GUI)** streamlines your test automation workflow and brings HyperExecute's power of test orchestration with the most intuitive way to interact. HyperExecute GUI makes testing simple, fast, and powerful. It abstracts all technical complexity to make **high-performance test execution available to everyone**. 
 
 <!-- The goal is to save your valuable time and effort to enable a more efficient testing process. -->
 
@@ -55,7 +55,7 @@ import TabItem from '@theme/TabItem';
 
 <img src={require('../assets/images/hyperexecute/gui/guilanding.png').default} />
 
-## Pre-Requisites
+## Prerequisites
 ---
 :::info BETA
 
@@ -88,7 +88,7 @@ For those who prefer a visual approach, we’ve created a comprehensive video tu
 ---
 
 ### Step 1: Select and Analyze Your Project
-Launch the application, log in with your LambdaTest credentials, and select your test project folder. The GUI will automatically analyze your project i.e. the framework and language, network connectivity etc. Once the analysis completes, click **"Proceed"** to continue to the next step.
+Launch the application, log in with your LambdaTest credentials, and select your test project folder. The GUI analyzes your project i.e. the framework and language, network connectivity etc. Once the analysis completes, click **"Proceed"** to continue to the next step.
 
 <!-- - Detect your testing framework and language
 - Verifies network connectivity (enabling a tunnel if needed) and checks LambdaTest URL access (prompting for proxy settings if required)
@@ -114,7 +114,7 @@ The GUI will check the system and your project to ensure everything is ready. If
 **A "Configuration"** is a saved combination of selected tests and execution settings that helps you create different run-profiles for easy management and operation.
 
 - **For new users:** A default configuration will be created to help you get started quickly. You can select the tests and run config settings as per your requirements.
-- **For existing users:** If you have existing configurations (v0.2 YAML files) in the project, they'll be automatically imported, preserving all your settings. This ensures a smooth transition for existing HyperExecute users while providing a more intuitive interface.
+- **For existing users:** If you have existing configurations (version 0.2 YAML files) in the project, they'll be automatically imported, preserving all your settings. This ensures a smooth transition for existing HyperExecute users while providing a more intuitive interface.
 
 #### Quick Edit and Run
 At the configuration listing page you can find basic details and tags for each configuration. You can also **make quick changes and run the configuration** without going inside the configuration. There are a few other operations which you can access from this page like **Duplicate, Rename, Delete or Download the configuration as YAML.**
@@ -155,7 +155,7 @@ Search within tests is not yet available on the GUI. We are working to make it a
 The **Run Config tab** in HyperExecute GUI offers an intuitive visual interface to configure your test environment and execution settings.
 You’ll find the basic preset configurations displayed just below your project name. If you need to modify or customize these settings, simply navigate to the Run Config tab and adjust your execution environment effortlessly — _no YAML editing required_.
 
-To learn about any configuration in detail, please search for the keyword in the **[HyperExecute YAML Documentation](/support/docs/deep-dive-into-hyperexecute-yaml)**. Please note that the GUI follows 0.2 YAML parameters instead of discovery and runner commands as in 0.1 YAML which you can find [here](/support/docs/hyperexecute-yaml-version0.2).
+To learn about any configuration in detail, please search for the keyword in the **[HyperExecute YAML Documentation](/support/docs/deep-dive-into-hyperexecute-yaml)**. Please note that the GUI follows version 0.2 YAML parameters instead of discovery and runner commands as in version 0.1 YAML which you can find [here](/support/docs/hyperexecute-yaml-version0.2).
 
 ---
 
@@ -171,7 +171,7 @@ A sidebar panel with job status and creation logs will appear with option to nav
 
 ## Already Using HyperExecute via YAML?
 ---
-If you’re a HyperExecute 0.2 YAML user, you can easily import your existing 0.2 YAML configurations into the GUI. Here’s how:
+If you’re a HyperExecute version 0.2 YAML user, you can easily import your existing version 0.2 YAML configurations into the GUI. Here’s how:
 
 <!-- #### 1. Pop-Up on First Upload:
   When you upload a project with YAML files, a **pop-up will automatically appear listing the existing YAMLs** in your project. Select a YAML file, and the app will import its settings for run config in the GUI.
@@ -190,18 +190,14 @@ Once your project is set up and you want to import a configuration using an exis
 ## FAQs
 ---
 
-**1. Are Appium tests supported on GUI as of now?**
+<details><summary> 1. Are Appium tests supported on GUI as of now? </summary>No, Appium test support will be coming soon. Currently, the GUI is in beta and primarily supports TestNG framework with Selenium only.</details>
 
-    No, Appium test support will be coming soon. Currently, the GUI is in beta and primarily supports TestNG framework with Selenium only.
+<details><summary> 2. If my tests are written using Chrome Driver or any other local driver, can I use that project? </summary>Yes, you can use the project, but the associated test IDs will not be created. You would need to enable the "Screen Recording For Scenarios" key to record the entire scenario execution, with the video accessible from the HyperExecute dashboard. (This is applicable for non-Selenium based tests)</details>  
 
-**2. If my tests are written using Chrome Driver or any other local driver, can I use that project?**
+<details><summary> 3. If I have a scenario where the project has two folders - one which creates the test dependencies and another which uses those dependencies to run the tests, how can I use that? </summary>You would not be able to use such a project. Please ensure that each project is created from one folder only. We will be supporting this feature in the future.</details>
+
+<details><summary> 4. My test discovery failed on the HyperExecute GUI. What may be the most possible cause, and how do I fix it? </summary>Test discovery failures often stem from misconfigured environment variables or discovery flags when you may have private dependencies in your project. Here’s how to troubleshoot. You can try adding environment variables or discovery flags in the GUI itself which may be required to resolve the dependencies. You will find two types of Environment Variables - Local and Remote. Local environment variables are used for local discovery and it is advisable to add these without any secret values since these are stored on local environment only.</details>
+
+
     
-    Yes, you can use the project, but the associated test IDs will not be created. You would need to enable the "Screen Recording For Scenarios" key to record the entire scenario execution, with the video accessible from the HyperExecute dashboard. (This is applicable for non-Selenium based tests)
-
-**3. If I have a scenario where the project has two folders - one which creates the test dependencies and another which uses those dependencies to run the tests, how can I use that?**
     
-    You would not be able to use such a project. Please ensure that each project is created from one folder only. We will be supporting this feature in the future.
-
-**4. My test discovery failed on the HyperExecute GUI. What may be the most possible cause, and how do I fix it?**
-    
-    Test discovery failures often stem from misconfigured environment variables or discovery flags when you may have private dependencies in your project. Here’s how to troubleshoot. You can try adding environment variables or discovery flags in the GUI itself which may be required to resolve the dependencies. You will find two types of Environment Variables - Local and Remote. Local environment variables are used for local discovery and it is advisable to add these without any secret values since these are stored on local environment only.
