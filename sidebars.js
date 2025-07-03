@@ -2511,6 +2511,7 @@ module.exports = {
         },
         items: ["playwright-android-caps", "playwright-webview-test"],
       },
+      "playwright-ios-guide",
       "parallel-playwright-test",
       "migrate-playwright-tests",
       "playwright-test-execution-setup",
