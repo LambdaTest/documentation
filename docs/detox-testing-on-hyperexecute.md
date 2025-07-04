@@ -1,5 +1,5 @@
 ---
-id: detox-testing-on-hyperexecute
+id: hyperexecute-detox-testing
 title: Detox Testing on HyperExecute
 hide_title: false
 sidebar_label: Detox
@@ -16,9 +16,9 @@ keywords:
   - detox tests on hyperexecute
   - hyperexecute automation testing
   - HyperExecute React Native automation
-url: https://www.lambdatest.com/support/docs/detox-testing-on-hyperexecute/
+url: https://www.lambdatest.com/support/docs/hyperexecute-detox-testing/
 site_name: LambdaTest
-slug: detox-testing-on-hyperexecute/
+slug: hyperexecute-detox-testing/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
@@ -42,7 +42,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "How to run Detox automation tests on HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/detox-testing-on-hyperexecute/"
+          "item": "https://www.lambdatest.com/support/docs/hyperexecute-detox-testing/"
         }]
       })
     }}
