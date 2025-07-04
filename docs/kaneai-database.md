@@ -50,14 +50,14 @@ This document provides a step-by-step process to connect databases within the Ka
 
 ## Creating a database connection
 
-To begin, you need to access the [database connections](https://www.kaneai.lambdatest.com/databases "database connections") page within KaneAI from and initiate the creation of a new connection.
+To begin, you need to access the [database connections](https://kaneai.lambdatest.com/databases "database connections") page within KaneAI from and initiate the creation of a new connection.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/create_database.jpg').default} alt="create-database" className="doc_img"/>
 
 
 ### Add connection details
 
-Select the connection type as either TCP/IP or over SSH. Enter the database name and choose from available database types, including MySQL, PostgreSQL, MSSQL, or Oracle DB.
+Select the connection type as either TCP/IP or over SSH. Enter the database name and choose from available database types, including MySQL, PostgreSQL & MSSQL DB.
 
 Provide a description and input your host name, port, username, and other relevant details. You can enter the password using an **organisation-level secret** or directly entering the password. For PostgreSQL, ensure you select the database name.&#x20;
 
@@ -74,7 +74,7 @@ For local or private databases, select a tunnel if your tunnel is active. The tu
 
 Following flag will be additionally required here: `--expose database_type:host:port`. 
 
-So, you command will look like:
+So, your command will look like:
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`./LT --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()} --expose mysql:0.0.0.0:3306 --verbose --env ht-prod`}
