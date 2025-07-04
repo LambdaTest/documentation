@@ -72,11 +72,17 @@ A list of test instances with various configurations will be displayed for each 
 ### Step 3: Configure the API Call
 Replace `<TestRunID>` with the actual ID from the URL and set additional optional parameters:
 
-- **concurrency :** Defaults to 1 if not specified.
-- **title :** Assign a unique job title; a random one will be generated if omitted.
-- **region :** Choose a region such as eastus or centralindia.
-- **tunnel :** Add the parameter and tunnel name if you want to run using LambdaTest Tunnel.
-- **accessibility :** Set as true if you want to run accessibility test on all your tests in the test run. (Could potentially slow the execution down if set as true)
+- **concurrency**: Select the concurrency you want to set for this test run. Defaults to 1 if not specified.
+- **title**: Assign a unique job title; a random one will be generated if omitted.
+- **region**: Choose a region for web tests such as _eastus_ or _centralindia_ to select the region from where the VM is allocated.
+- **mobile_region**: Choose a region for mobile app tests such as _us_,_ap_ or _eu_ to select the region from where the device is allocated.
+- **tunnel**: Add the parameter and tunnel name if you want to run using LambdaTest Tunnel for private applications. See more details for tunnel [here](https://www.lambdatest.com/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support).
+- **dedicated_proxy**: Add the region of the dedicated proxy such as _us_ or _eu_, #Optional, either tunnel or dedicated proxy or geolocation can be used in a single API call.
+- **geolocation**: Add the resgion of the geolocation that you want to run your tests from. You can find the list of support geolocations [here](https://www.lambdatest.com/support/docs/selenium-geolocation-capabilities/).
+- **app_profiling**: Add true if you want to track app profiling metrics in your test. You can find more details [here](https://www.lambdatest.com/support/docs/appium-app-performance-analytics/).
+- **performance**: Add true if you want generate Lighthouse report for your web tests. Supported on limited OS browser combinations. Additionally, Setting this as true could potentially slow down the execution time. You can find more details [here](https://www.lambdatest.com/support/docs/view-lighthouse-performance-metrics/).
+- **accessibility**: Set as true if you want to run accessibility test on all your tests in the test run. Setting this as true could potentially slow down the execution time.
+- **network_throttle**: Set the label and value based on details available [here](https://www.lambdatest.com/support/docs/app-auto-network-throttling/).
 - **replaced_url :** To be used to dynamically replace any pattern URL in test cases with the replacement URL for entire test run.
 
 #### Example API Call:
@@ -89,9 +95,17 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
     "test_run_id": "YOUR_TEST_RUN_ID", #enter test run id
     "concurrency": 1, # Optional, Default 1
     "title": "UNIQUE_BUILD_NAME", #Optional
-    "region": "YOUR_DESIRED_REGION", #eastus, centralindia
-    "tunnel": "tunnel-name", #Optional to be used if running via tunnel
-    "accessibility": false, #Optional
+    "console_logs": "false", #Optional for web tests, options - false, error, warn, info, true
+    "network_logs": "false", #Optional to capture network requests during the test
+    "region": "YOUR_DESIRED_REGION", #Optional for web tests, options - eastus, centralindia
+    "mobile_region": "YOUR_DESIRED_REGION", #Optional for mobile tests, options - us,eu,ap
+    "tunnel": "tunnel-name", #Optional, either tunnel or dedicated proxy or geolocation can be used
+    "dedicated_proxy": "region", #Optional, either tunnel or dedicated proxy or geolocation can be used
+    "geolocation": "region", #Optional, either tunnel or dedicated proxy or geolocation can be used.
+    "app_profiling": "boolean", #Optional for performance metrics for native mobile apps
+    "performance": "boolean", #Optional for lighthouse report for web tests
+    "accessibility": false, #Optional only for web tests
+    "network_throttle": [ {label: "custom", value: "2g-gprs-good", download_speed: 30, upload_speed: 1, latency: 500}, # optional only for mobile app tests
     "replaced_url": [
       {
           "pattern_url": "TEST_URL_1",
@@ -100,10 +114,6 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
       {
           "pattern_url": "TEST_URL_2",
           "replacement_url": "REPLACED_TEST_URL_2"
-      },
-      {
-          "pattern_url": "TEST_URL_3",
-          "replacement_url": "REPLACED_TEST_URL_3"
       }
     ] #Optional to be used to dynamically replace any pattern URL in test cases with the replacement URL
 }'
