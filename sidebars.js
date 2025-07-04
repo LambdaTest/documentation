@@ -351,7 +351,7 @@ module.exports = {
           {
             type: "doc",
             label: "Detox",
-            id: "detox-testing-on-hyperexecute",
+            id: "hyperexecute-detox-testing",
           },
           {
             type: "doc",
