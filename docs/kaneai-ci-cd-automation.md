@@ -82,7 +82,6 @@ Replace `<TestRunID>` with the actual ID from the URL and set additional optiona
 - **app_profiling**: Add true if you want to track app profiling metrics in your test. You can find more details [here](https://www.lambdatest.com/support/docs/appium-app-performance-analytics/).
 - **performance**: Add true if you want generate Lighthouse report for your web tests. Supported on limited OS browser combinations. Additionally, Setting this as true could potentially slow down the execution time. You can find more details [here](https://www.lambdatest.com/support/docs/view-lighthouse-performance-metrics/).
 - **accessibility**: Set as true if you want to run accessibility test on all your tests in the test run. Setting this as true could potentially slow down the execution time.
-- **network_throttle**: Set the label and value based on details available [here](https://www.lambdatest.com/support/docs/app-auto-network-throttling/).
 - **replaced_url :** To be used to dynamically replace any pattern URL in test cases with the replacement URL for entire test run.
 
 #### Example API Call:
@@ -102,10 +101,9 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
     "tunnel": "tunnel-name", #Optional, either tunnel or dedicated proxy or geolocation can be used
     "dedicated_proxy": "region", #Optional, either tunnel or dedicated proxy or geolocation can be used
     "geolocation": "region", #Optional, either tunnel or dedicated proxy or geolocation can be used.
-    "app_profiling": "boolean", #Optional for performance metrics for native mobile apps
-    "performance": "boolean", #Optional for lighthouse report for web tests
-    "accessibility": false, #Optional only for web tests
-    "network_throttle": [ {label: "custom", value: "2g-gprs-good", download_speed: 30, upload_speed: 1, latency: 500}, # optional only for mobile app tests
+    "app_profiling": "false", #Optional for performance metrics for native mobile apps
+    "performance": "false", #Optional for lighthouse report for web tests
+    "accessibility": "false", #Optional only for web tests
     "replaced_url": [
       {
           "pattern_url": "TEST_URL_1",
