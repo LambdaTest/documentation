@@ -363,12 +363,12 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "JMeter-Performance Testing",
+            label: "Performance Testing",
             link: {
               type: "doc",
               id: "hyperexecute-performance-testing",
             },
-            items: ["hyperexecute-run-jmeter-tests"],
+            items: ["hyperexecute-run-jmeter-tests", "hyperexecute-gattling-testing"],
           },
           {
             type: "doc",
