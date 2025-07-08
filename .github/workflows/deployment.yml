@@ -8,7 +8,7 @@ on:
 jobs:
   Docusaurus:
     name: 'Deployment'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu
     environment: stage
 
     steps:
