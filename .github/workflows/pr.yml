@@ -9,7 +9,7 @@ on:
 
 jobs:
     sonarqube-analysis:
-      runs-on: ubuntu
+      runs-on: ubuntu-latest
       steps:
         - name: Checkout repo
           uses: actions/checkout@v4
@@ -43,7 +43,7 @@ jobs:
             NODE_OPTIONS: "--max-old-space-size=8192"
           run: npm run build
     spellcheck:
-      runs-on: ubuntu
+      runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v4
       - uses: codespell-project/actions-codespell@master
