@@ -76,7 +76,7 @@ Accessibility testing ensures that your product is usable by people with disabil
       <p>Get the accessibility check for automated webapp tests and scripts.</p>
     </div>
   </a>
-  <a href="/support/docs/accessibility-android-automation-test">
+  <a href="/support/docs/accessibility-native-app-automation-test/">
     <div className="support_inners">
       <h3>Accessibility App Automation</h3>
       <p>Get the accessibility check for your automated app tests and scripts.</p>
