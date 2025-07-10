@@ -62,7 +62,6 @@ Think of it like putting your app through a rigorous training regime. We throw v
 
 HyperExecute offers a comprehensive platform for performance testing, providing users with the following benefits:
 
-- **Seamless Integration with JMeter:** HyperExecute seamlessly integrates with Apache JMeter, a popular open-source tool for performance testing, allowing users to leverage their existing JMeter test plans in the cloud environment effortlessly.
 - **Real-Time Monitoring and Reporting:** HyperExecute provides real-time monitoring and reporting capabilities, enabling users to track performance metrics, identify bottlenecks, and analyze results as tests are running. This empowers users to make informed decisions and take immediate action to optimize performance.
 
 - **Customizable Load Distribution:** HyperExecute enables users to configure load distribution, specifying different data center names and percentages of load to be generated from them. This flexibility ensures efficient utilization of resources and accurate simulation of real-world scenarios.

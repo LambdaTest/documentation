@@ -90,7 +90,8 @@ LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelN
 
 >**Note:**  After you execute the command, Windows may ask for user permission. Make sure you have administrator access to **‘Allow’** the file to run successfully.   
 In a few seconds, after you execute the command, a tunnel connection will be established. You will receive a message inside your command prompt mentioning **‘You can start testing now’**.
-<img loading="lazy" src={require('../assets/images/local-testing-windows/local-windows-4.webp').default} alt="start localhost testing on Windows" width="970" height="313"  className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/local-testing-windows/tunnel_launched.webp').default} alt="start localhost testing on Windows" width="970" height="313"  className="doc_img"/>
 
 ## Testing Locally Hosted Web Pages Using LambdaTest tunnel
 ***
@@ -167,11 +168,11 @@ A secure tunnel connection is maintained unless you explicitly disconnect it. Yo
 **Option 1:**  You can kill the process by using **‘Ctrl+C’**  in Windows command prompt.
 You will receive the below highlighted message **‘Tunnel stopped successfully’**  indicating the termination on Tunnel Connection.
 
-<img loading="lazy" src={require('../assets/images/local-testing-windows/local-windows-17.webp').default} alt="Stopping tunnel" width="977" height="292" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/local-testing-windows/tunnel_stopped.webp').default} alt="Stopping tunnel" width="977" height="292" className="doc_img"/>
 
-**Option 2:**  You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button that's says **"Tunnel active"**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an **‘x’**  button. Press the **‘x’**  button to terminate the LambdaTest tunnel.
+**Option 2:**  You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a tunnel icon. Click on this icon and then click **x**  to terminate the LambdaTest tunnel.
 
-<img loading="lazy" src={require('../assets/images/local-testing-windows/local-windows-18.webp').default} alt="disconnecting LambdaTest tunnel" width="1349" height="622" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/local-testing-windows/close tunnel.webp').default} alt="disconnecting LambdaTest tunnel" width="1349" height="622" className="doc_img"/> 
 
 ## Geolocation Testing through VPN with LambdaTest tunnel
 ***
@@ -228,11 +229,11 @@ Following is the list of command arguments which can be used as modifiers while 
 >**What is an Access Key?**   
 >An Access Key is a unique string used for the identification of your account.    
 As we offer a cloud-based platform to host a testing ecosystem to everyone around the globe. Access key plays a crucial role in authenticating your LambdaTest account while mapping a secure tunnel connection for hosting your locally stored web pages online. They work as your IDs when you gain access to our cloud servers.   
-If you ever misplace your Access key into the hands of someone you don’t trust. You can always regenerate it by clicking the tilt arrow button.
+If you ever misplace your Access key into the hands of someone you don’t trust. You can always regenerate it by navigating to your LambdaTest Profile > Account Settings > [Password & Security](https://accounts.lambdatest.com/security/username-accesskey).
 
-Find your Access Key while performing any type of testing, from the left navigation menu. You will find a button that says **‘Configure Tunnel’**. Click on that button & a string containing your access key will be presented.
+You can find your Access Key while performing any type of testing. Go to **Credentials** in the left sidebar and click the copy icon next to Access Key to retrieve it.
 
-<img loading="lazy" src={require('../assets/images/local-testing-windows/local-windows-19.webp').default} alt="Finding access key" width="1344" height="617" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/local-testing-windows/creds.webp').default} alt="Finding access key" width="1344" height="617" className="doc_img"/> 
 
 For instance, if you go to **‘Real Time Test’**, you will observe a button that says **‘Configure Tunnel’**  on the top-right area of the page. Click on that button and a form would open up through it, providing you with a string containing your access key. You will find the access key in the area underlined below.
 
