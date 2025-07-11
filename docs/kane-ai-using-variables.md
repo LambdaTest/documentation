@@ -73,7 +73,7 @@ Variables can be created using the following three methods:
 You can define variables directly by using the `/` command in the step input and select "Add a variable" option. You are allowed to create _global_ and _environment_ variables using this approach and define their values. 
 The value of variables can be edited by clicking on the variables listing icon on the top right.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/environment.jpg').default} alt="Image" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/environment.png').default} alt="Image" className="doc_img img_center"/>
 
 ### Using Natural Language in authoring session
 KaneAI allows you to create variables using natural language. For instance, you can write:
@@ -95,7 +95,7 @@ Variables can be used to enhance your test cases, making them more dynamic.
 ### Syntax for Assertions
 Variable usage can be done using the `{{` prefix to list all existing variables in the KaneAI session input box. When making assertions in your test case, you can use variables for inputing a value or as part of the assertion logic.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/syntax.jpg').default} alt="Image" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/syntax.png').default} alt="Image" className="doc_img img_center"/>
 
 #### String variables example:
 
@@ -128,14 +128,14 @@ Persist value check is a mechanism used to ensure that variables retain their va
 The persist check option becomes available only when you change a variable's scope from local to global.
 :::
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/variable-listing-in-session.jpg').default} alt="Image" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/variable-listing-in-session.png').default} alt="Image" className="doc_img img_center"/>
 
 ## Environments
 
 ### What are Environments?
 Environments in KaneAI refer to the different configurations under which the tests are executed. Environments typically represent different stages of deployment (e.g., development, staging, production). Each environment can have its own set of variables tailored to the respective deployment scenario.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/persist-value.jpg').default} alt="Image" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/persist-value.png').default} alt="Image" className="doc_img img_center"/>
 
 ### How to Use Environments During Test Runs
 Once a test case is authored using environment variables, it can then be executed in any environment as long as the variables used in the test case, exist in the requested environment.
@@ -143,7 +143,7 @@ Once a test case is authored using environment variables, it can then be execute
 #### Leveraging UI
 While executing a test run or scheduling one, you can choose which environment they want to execute a test run on. All the test cases inside a test run can be executed on a single environment only at a point of time.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/test-run-environment.jpg').default} alt="Image" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/test-run-environment.png').default} alt="Image" className="doc_img img_center"/>
 
 #### Leveraging API
 You can pass environment name programmatically when initiating test runs via the API. This allows you to automate the execution of tests in different environments without manual intervention. For instance,
