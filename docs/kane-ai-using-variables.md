@@ -73,7 +73,7 @@ Variables can be created using the following three methods:
 You can define variables directly by using the `/` command in the step input and select "Add a variable" option. You are allowed to create _global_ and _environment_ variables using this approach and define their values. 
 The value of variables can be edited by clicking on the variables listing icon on the top right.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/variable-listing-in-session.jpg').default} alt="Image" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/environment.jpg').default} alt="Image" className="doc_img img_center"/>
 
 ### Using Natural Language in authoring session
 KaneAI allows you to create variables using natural language. For instance, you can write:
@@ -81,7 +81,7 @@ KaneAI allows you to create variables using natural language. For instance, you 
 ```bash
 Set username as John
 ```
-This will automatically create a _local_ variable {{username}} with the value "John".
+This will automatically create a _local_ variable `{{username}}` with the value "John".
 For such _local_ variables, only the scope of the variable can be changed to a global with an option to enable the persist check which ensures that the value when updated in one session or test execution gets persistes across sessions and test executions.
 
 
@@ -128,23 +128,25 @@ Persist value check is a mechanism used to ensure that variables retain their va
 The persist check option becomes available only when you change a variable's scope from local to global.
 :::
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/persist-value.jpg').default} alt="Image" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/variable-listing-in-session.jpg').default} alt="Image" className="doc_img img_center"/>
 
 ## Environments
 
 ### What are Environments?
 Environments in KaneAI refer to the different configurations under which the tests are executed. Environments typically represent different stages of deployment (e.g., development, staging, production). Each environment can have its own set of variables tailored to the respective deployment scenario.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/environment.jpg').default} alt="Image" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/persist-value.jpg').default} alt="Image" className="doc_img img_center"/>
 
 ### How to Use Environments During Test Runs
 Once a test case is authored using environment variables, it can then be executed in any environment as long as the variables used in the test case, exist in the requested environment.
 
-**UI**: While executing a test run or scheduling one, you can choose which environment they want to execute a test run on. All the test cases inside a test run can be executed on a single environment only at a point of time.
+#### Leveraging UI
+While executing a test run or scheduling one, you can choose which environment they want to execute a test run on. All the test cases inside a test run can be executed on a single environment only at a point of time.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/variables/test-run-environment.jpg').default} alt="Image" className="doc_img img_center"/>
 
-**API**: You can pass environment name programmatically when initiating test runs via the API. This allows you to automate the execution of tests in different environments without manual intervention. For instance,
+#### Leveraging API
+You can pass environment name programmatically when initiating test runs via the API. This allows you to automate the execution of tests in different environments without manual intervention. For instance,
 
 ```bash
 curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute' \
@@ -157,5 +159,7 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
 ```
 
 This will run the test case in the "staging" environment.
+
+If you have any feedback or suggestions, feel free to reach out at support@lambdatest.com with your comments.
 
 
