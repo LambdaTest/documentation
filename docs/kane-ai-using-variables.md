@@ -58,7 +58,7 @@ Using variables enables you to:
 ## Scope of variables
 
 ### Local Variables
-Local variables can only be defined using natural language or used as a part of an operation when an instrcution is provided by the user. They are only accessible within the specific test case where they are defined. They help ensure that values are isolated and can be used temporarily within a specific context. A local variable can be converted to a global or an environment variable within the authoring session of KaneAI.
+Local variables can only be defined using natural language or used as a part of an operation when an instruction is provided by the user. They are only accessible within the specific test case where they are defined. They help ensure that values are isolated and can be used temporarily within a specific context. A local variable can be converted to a global or an environment variable within the authoring session of KaneAI.
 
 ### Global Variables
 Global variables are accessible across multiple test cases within the entire organisation. They allow values to be reused in multiple places, enhancing consistency and reducing redundancy. Any variable which is converted from local to global has an option to persist value across sessions if the value changes within a session. More details about persist check are added below.
