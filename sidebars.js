@@ -1168,6 +1168,22 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
+        label: "Variables and Parameters",
+        link: {
+          type: "doc",
+          id: "kaneai-variables-and-parameters",
+        },
+        items: [
+          "kane-ai-using-variables",
+          "kane-ai-secrets",
+          "kane-ai-smart-variables",
+          "kane-ai-using-parameters",
+          "kane-ai-using-datasets",          
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
         label: "Features",
         items: [
           "kane-ai-javascript-execution",
@@ -1176,22 +1192,10 @@ module.exports = {
           "kane-ai-scroll-in-feature",
           "kane-ai-jira-integration",
           "kane-ai-api-testing",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Variables and Parameters",
-            items: [
-              "kane-ai-using-variables",
-              "kane-ai-using-json-variables",
-              "kane-ai-using-parameters",
-              "kane-ai-using-datasets",
-            ],
-          },
+          "kaneai-network-throttling",          
           "kane-ai-modules",
-          "kane-ai-secrets",
-          "kane-ai-smart-variables",
-          "kaneai-upload-and-download-files",
           "kaneai-modules-versions-and-enhancement",
+          "kaneai-upload-and-download-files",
           "kane-ai-assertions",
           "kaneai-dynamic-url-replacement",
           "kaneai-chrome-options",
