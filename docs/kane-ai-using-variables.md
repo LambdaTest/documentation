@@ -81,7 +81,7 @@ KaneAI allows you to create variables using natural language. For instance, you 
 ```bash
 Set username as John
 ```
-This will automatically create a _local_ variable {{username}} with the value "John".
+This will automatically create a _local_ variable `{{username}}` with the value "John".
 For such _local_ variables, only the scope of the variable can be changed to a global with an option to enable the persist check which ensures that the value when updated in one session or test execution gets persistes across sessions and test executions.
 
 
