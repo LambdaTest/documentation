@@ -458,14 +458,28 @@ runtime:
 
 ***
 
-### `retryOnFailure`
+<!-- ### `retryOnFailure`
 This allows you to configure automatic retries for failed test scenarios. When set to true (`retryOnFailure: true`), tests will be retried based on the [`maxRetries`](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) value specified. The default setting is **false**.
 
 This feature eliminates the need to rerun the entire job to verify if a test scenario is genuinely failing or encountering an intermittent issue. By enabling `retryOnFailure`, you can promptly retry tests upon failure, helping determine if the test consistently fails or passes in subsequent attempts."
 
 ```yaml
 retryOnFailure: true
+``` -->
+
+### `retryOnFailure`
+The `retryOnFailure` enables automatic retries for failed test scenarios only when the [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) itself fails. When set to `true`, the system will retry failed commands based on the [`maxRetries`](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) value defined. The default setting is `false`.
+
+```yaml
+retryOnFailure: true
 ```
+
+#### 🔍 Important Behavior Notes:
+- Retries are triggered only if the test command fails.
+- Retries are not triggered if the command exits successfully but the test results are marked as failed by the user.
+
+#### ✅ Use Case:
+This feature helps avoid re-running the entire job to determine if a test failure is due to a genuine issue or a transient problem (e.g., flaky tests, network hiccups). By enabling `retryOnFailure`, only the failing command is retried, allowing for quicker feedback and more efficient test execution.
 
 ***
 
