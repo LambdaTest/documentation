@@ -55,15 +55,15 @@ You can upload the files on the LambdaTest cloud based Selenium Grid, using our 
 *   Click on the Lock icon to authorize your account. <img loading="lazy" src={require('../assets/images/uploads/upload-files-1.webp').default} alt="lock icon" width="1281" height="721" className="doc_img"/>]
 *   Enter your LambdaTest username and access key, in the box that appears, to validate your credentials. Once done, click on the "Authorise button to verify the credentials, and click on Close to close the window. <img loading="lazy" src={require('../assets/images/uploads/upload-files-2.webp').default} alt="authorize button" width="1281" height="722" className="doc_img"/>
 
->
-To get your LambdaTest Username and Access Key, visite your [LambdaTest automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon, present on the top right corner.
+
+> To get your LambdaTest Username and Access Key, visite your [LambdaTest automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon, present on the top right corner.
 <img loading="lazy" src={require('../assets/images/uploads/access-key.webp').default} alt="automation key" width="1281" height="721" className="doc_img"/>
 
 *   Then click on the "Try it out" button. <img loading="lazy" src={require('../assets/images/uploads/upload-files-3.webp').default} alt="choose file" width="1281" height="721" className="doc_img"/>
 *   Once your authorization is successful and you click on the Try it out button, an option to select the file will appear on your screen. Choose the file to be uploaded using the "Choose File" button and click on Execute to upload it on the LambdaTest platform. <img loading="lazy" src={require('../assets/images/uploads/upload-files-4.webp').default} alt="200 status code" width="1281" height="721" className="doc_img"/>
    
->
-**Note**: You can upload multiple files to our lambda storage. A maximum of 150 files can be uploaded per organization. We have limit of 20 MB files size per API. So if you are total file sizes reach the limit, please upload your files in multiple API calls.
+
+> **Note**: You can upload multiple files to our lambda storage. A maximum of 150 files can be uploaded per organization. We have limit of 20 MB files size per API. So if you are total file sizes reach the limit, please upload your files in multiple API calls.
 
 Once the file is successfully uploaded, you will see a response body with 200 response code, as shown in the image below: <img loading="lazy" src={require('../assets/images/uploads/upload-files-5.webp').default} alt="upload file" width="1281" height="721" className="doc_img"/>
 
@@ -169,7 +169,30 @@ For example, let's say you want to upload a file on a web page via test script, 
 ```
 
 * * *
->
+
+# Download Files from LambdaTest Storage while test execution
+
+During Selenium automation testing, there are scenarios where you need to retrieve files from LambdaTest's cloud storage directly to the machine running your test. LambdaTest provides a download hook that enables you to fetch files from lambda storage seamlessly during test execution.
+
+
+Before using the download hook, ensure that:
+- Files are already uploaded to LambdaTest storage using the [file upload API](https://www.lambdatest.com/support/api-doc/)
+- You have the exact file names stored in lambda storage
+
+## Download Hook Implementation
+
+### Basic Syntax
+
+The download hook uses a simple executeScript command to fetch files from lambda storage:
+
+```
+driver.executeScript("lambda-files-download=file_name")
+```
+
+
+
+* * *
+
 That's it! You can now successfully upload files and use them with Selenium Automation testing on LambdaTest's cloud server. If you face any issues, please feel free to reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can even mail us at [support@lambdatest.com](mailto:support@lambdatest.com) <br />Happy Testing!
 
 <nav aria-label="breadcrumbs">

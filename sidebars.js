@@ -375,6 +375,11 @@ module.exports = {
             label: "API Testing",
             id: "hyperexecute-api-testing",
           },
+          {
+            type: "doc",
+            label: "Karate",
+            id: "hyperexecute-karate-testing",
+          },
         ],
       },
       {
