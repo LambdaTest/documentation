@@ -1381,6 +1381,7 @@ module.exports = {
         items: [
           "clickup-integration",
           "project-management-tools-github-integration",
+          "github-repo-based-oauth",
           "clubhouse-integration",
           "project-management-tools-gitlab-integration",
           "redmine-integration",
