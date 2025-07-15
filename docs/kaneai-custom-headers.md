@@ -72,12 +72,11 @@ X-Session-ID: 1234567890
 ```
 
 :::note
-<<<<<<< HEAD
-<<<<<<< HEAD
+
  If you provide a Default Header in the Custom Header section your Default header will get overridden. 
 ::: 
 
-<<<<<<< HEAD
+
 ***
 
 ### Authoring with Custom Headers
@@ -110,9 +109,9 @@ If you provide a Default Header in the Custom Header section your Default header
 ::: 
 
 ### Step 2: Authoring with Custom Headers
-=======
+
 ### Authoring with Custom Headers
->>>>>>> 9b3083ca (KaneAI Custom Headers Doc Updates)
+
 After configuring the custom headers, initiate the Web Authoring session. The headers you added will be applied during the test session, allowing you to test under the configured conditions.
 
 Custom Headers will be applied to all the API call you make in the session like 'Go to https://lambdatest.com' or doing API testing like shown below:
