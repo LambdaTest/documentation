@@ -46,7 +46,7 @@ This guide explains how to configure and use custom headers in the KaneAI Web Ag
 
 Follow the steps below to add and manage custom headers for your Web tests:
 
-### Step 1: Configure & Add Custom Headers for a Section
+### Configure & Add Custom Headers for a Section
 Start by creating a Web session by going on the [KaneAI page](https://kaneai.lambdatest.com/objective) and clicking on the **Create a Web Test** button. You will find the **Custom Headers** section there. 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/create_web_test_custom_headers.jpeg').default} alt="objective-page" className="doc_img"/>
@@ -75,7 +75,7 @@ X-Session-ID: 1234567890
  If you provide a Default Header in the Custom Header section your Default header will get overridden. 
 ::: 
 
-### Step 2: Authoring with Custom Headers
+### Authoring with Custom Headers
 After configuring the custom headers, initiate the Web Authoring session. The headers you added will be applied during the test session, allowing you to test under the configured conditions.
 
 Custom Headers will be applied to all the API call you make in the session like 'Go to https://lambdatest.com' or doing API testing like shown below:
@@ -90,7 +90,7 @@ You will see the list of applied Custom Headers.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/custom_headers_modal.jpeg').default} alt="objective-page" className="doc_img"/>
 
-### Step 3: View the Custom Headers in the Summary Page
+### View the Custom Headers in the Summary Page
 Once the session completes, the custom headers used during the session will be displayed on the summary page, similar to how Chrome options are shown.
 
 You can click on `view details` to see the value of Custom Headers. 
