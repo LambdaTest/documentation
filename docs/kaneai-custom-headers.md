@@ -72,13 +72,13 @@ X-Session-ID: 1234567890
 ```
 
 :::note
- If you provide a Default Header in the Custom Header section your Deafult header will get overrided. 
+ If you provide a Default Header in the Custom Header section your Default header will get overridden. 
 ::: 
 
 ### Step 2: Authoring with Custom Headers
 After configuring the custom headers, initiate the Web Authoring session. The headers you added will be applied during the test session, allowing you to test under the configured conditions.
 
-Custom Heders will be applied to all the API call you make in the session like 'Go to https://lambdatest.com' or doing API testing like shown below:
+Custom Headers will be applied to all the API call you make in the session like 'Go to https://lambdatest.com' or doing API testing like shown below:
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/custom_headers_appliend.jpeg').default} alt="objective-page" className="doc_img"/>
 
@@ -93,7 +93,7 @@ You will see the list of applied Custom Headers.
 ### Step 3: View the Custom Headers in the Summary Page
 Once the session completes, the custom headers used during the session will be displayed on the summary page, similar to how Chrome options are shown.
 
-You can click on `view deatils` to see the value of Custom Headers. 
+You can click on `view details` to see the value of Custom Headers. 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/view_custom_headers_in_testcase.jpeg').default} alt="objective-page" className="doc_img"/>
 <img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/custom_headers_testcase_modal.jpeg').default} alt="objective-page" className="doc_img"/>
