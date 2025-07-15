@@ -49,6 +49,7 @@ module.exports = {
           "hyperexecute-snooper",
           "hyperexecute-inherit-config",
           "hyperexecute-yaml-version0.2",
+          "hyperexecute-yaml-capability-overrides"
         ],
       },
       {
