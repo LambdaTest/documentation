@@ -49,7 +49,7 @@ Follow the steps below to add and manage custom headers for your Web tests:
 ### Configure & Add Custom Headers for a Section
 Start by creating a Web session by going on the [KaneAI page](https://kaneai.lambdatest.com/objective) and clicking on the **Create a Web Test** button. You will find the **Custom Headers** section there. 
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/create_web_test_custom_headers.jpeg').default} alt="objective-page" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/create_web_test_custom_headers.png').default} alt="objective-page" className="doc_img"/>
 
 Enable the **Custom Headers** toggle to add custom HTTP headers for the test session.
 
@@ -60,7 +60,7 @@ You can add new header rows by clicking the **+** button. Each row will have two
 You can add up to 10 custom headers.
 :::
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/add_custom_headers.jpeg').default} alt="objective-page" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/add_custom_headers.png').default} alt="objective-page" className="doc_img"/>
 
 #### Example Use-case:
 **User Identification and Session Management**: Used to send tokens, session IDs to authenticate and identify users. This helps in managing user sessions, implement stateless authentication mechanisms, track user behavior.
@@ -72,10 +72,8 @@ X-Session-ID: 1234567890
 ```
 
 :::note
-
  If you provide a Default Header in the Custom Header section your Default header will get overridden. 
 ::: 
-
 
 ***
 
@@ -103,34 +101,3 @@ You can click on `view details` to see the value of Custom Headers.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/view_custom_headers_in_testcase.png').default} alt="objective-page" className="doc_img"/>
 <img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/custom_headers_testcase_modal.png').default} alt="objective-page" className="doc_img"/>
-
-If you provide a Default Header in the Custom Header section your Default header will get overridden. 
-
-::: 
-
-### Step 2: Authoring with Custom Headers
-
-### Authoring with Custom Headers
-
-After configuring the custom headers, initiate the Web Authoring session. The headers you added will be applied during the test session, allowing you to test under the configured conditions.
-
-Custom Headers will be applied to all the API call you make in the session like 'Go to https://lambdatest.com' or doing API testing like shown below:
-
-<img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/custom_headers_appliend.jpeg').default} alt="objective-page" className="doc_img"/>
-
-To see the list of Custom Headers applied in the Authoring session click on the `Custom Headers` option present on the top left side in the navbar. 
-
-<img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/view_custom_headers_while_authoring.jpeg').default} alt="objective-page" className="doc_img"/>
-
-You will see the list of applied Custom Headers.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/custom_headers_modal.jpeg').default} alt="objective-page" className="doc_img"/>
-
-### View the Custom Headers in the Summary Page
-Once the session completes, the custom headers used during the session will be displayed on the summary page, similar to how Chrome options are shown.
-
-You can click on `view details` to see the value of Custom Headers. 
-
-<img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/view_custom_headers_in_testcase.jpeg').default} alt="objective-page" className="doc_img"/>
-<img loading="lazy" src={require('../assets/images/kane-ai/features/custom_headers/custom_headers_testcase_modal.jpeg').default} alt="objective-page" className="doc_img"/>
-
