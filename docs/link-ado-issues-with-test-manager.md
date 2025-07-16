@@ -11,7 +11,7 @@ keywords:
   - link ADO issues with test manager
 url: https://www.lambdatest.com/support/docs/link-ado-issues-with-test-manager/
 site_name: LambdaTest
-slug: link-ado-issues-with-test-manage/
+slug: link-ado-issues-with-test-manager/
 ---
 
 <script type="application/ld+json"
