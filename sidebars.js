@@ -1976,8 +1976,12 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Jira Integration",
-        items: ["link-jira-issues-with-test-manager", "lambdatest-jira-app"],
+        label: "Issue Tracker Integration",
+        items: [
+          "link-jira-issues-with-test-manager",
+          "lambdatest-jira-app",
+          "link-ado-issues-with-test-manager"
+        ],
       },
     ],
   ],
