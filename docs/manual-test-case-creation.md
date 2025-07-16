@@ -40,11 +40,11 @@ slug: manual-test-case-creation/
 
 # Manual Test Case Creation
 
-Test Manager streamlines the process of creating, managing, and editing test cases. It enables users to develop manual test cases, facilitating efficient management of all testing activities from a single platform.
+Test Manager streamlines the process of creating, managing, and editing test cases. It enables users to develop manual test cases, allowing efficient management of all testing activities from a single platform.
 
 ## Creating a Test Case
 
-After selecting your project, type your test case title to create a new test case. You can also create a folder to  organize and store the test cases.
+After selecting your project, type your test case title to create a new test case. You can also create a folder to organize and store the test cases.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/empty_project.png').default} alt=" "  className="doc_img"/>
 
@@ -66,7 +66,7 @@ After test case is created you will be redirected to a screen listing all the te
 
 ### Test Case Summary Section
 
-Upon selecting a test case, you will be redirected to Test Case Summary page where you can view Test Case details such as: **Test Name**, **Description**, **Precondition** , **Attachments**, **System Fields**: **Type**, **Status**, **Priority**, **Tag(s)** & **Custom Fields** 
+When you select a test case, you’ll be redirected to the Test Case Summary page, where you can view Test Case details such as: **Test Name**, **Description**, **Precondition** , **Attachments**, **System Fields**: **Type**, **Status**, **Priority**, **Tag(s)** & **Custom Fields** 
 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/test_case_summary_page.png').default} alt=" "  className="doc_img"/>
@@ -75,11 +75,11 @@ Upon selecting a test case, you will be redirected to Test Case Summary page whe
 
 ### Test Case Runs Section
 
-**Test Case Runs Section** provides an overview of a test case's executions & plannings, whether manual or through automated. It includes detailed information of Test Instances of the Test case such as **applied configuration**, **executed by**, **Test Run name**, **Test Instance Execution Status**, **Execution time** and helpful filters according to available fields. 
+**Test Case Runs Section** provides an overview of a test case's executions & plannings, whether manual or through automated. It includes detailed information of Test Instances of the Test case such as **applied configuration**, **executed by**, **Test Run name**, **Test Instance Execution Status**, **Execution time** and filters based on available fields. 
 
 #### Executed Test Instances of Test Case
 
-- This section shows Executed Instances having following statuses: `Passed`, `Failed`, `Skipped`. You can filter Test Instances based on who has executed the Instances & Status.  
+- This section displays test instances that have been executed. You can filter the test instances based on the **executor** and the **current status**.   
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/executed_runs.png').default} alt=" "  className="doc_img"/>
 
@@ -88,7 +88,7 @@ Upon selecting a test case, you will be redirected to Test Case Summary page whe
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/planned_runs.png').default} alt=" "  className="doc_img"/>
 
-- On clicking on that Test Case's execution you will be redirected to `Automation Dashboard` if its a Automation execution, the `Test Instance Page` if its Manual Instance or `Test Runs Page` if its a unexecuted Autoamtion Instance. 
+- On clicking on that Test Case's execution you will be redirected to `Automation Dashboard` if its a Automation execution, the `Test Instance Page` if its Manual Instance or `Test Runs Page` if its a unexecuted Automation Instance. 
 
 ***
 
@@ -112,7 +112,7 @@ Test steps can be modified by clicking the **Edit** option on the right-hand sid
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/edit_test_step.png').default} alt=" "  className="doc_img"/>
 
-You can optional user the Generate with AI option to ask AI to generate more Steps. 
+You can optional use the Generate with AI option to ask AI to generate more Steps. 
 
 :::tip
  The more data your Test Case is having, including the details in **Summary page** & **Test Steps** the more accurate the AIs suggestion will be.
