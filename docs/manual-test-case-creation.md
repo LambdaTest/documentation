@@ -42,64 +42,83 @@ slug: manual-test-case-creation/
 
 Test Manager streamlines the process of creating, managing, and editing test cases. It enables users to develop manual test cases, facilitating efficient management of all testing activities from a single platform.
 
-**Steps for Creating Manual Test Cases**
+## Creating a Test Case
 
-1. After selecting your project, type your test case title to create a new test case. You can also create a folder to organize and store the test cases.
+After selecting your project, type your test case title to create a new test case. You can also create a folder to  organize and store the test cases.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-title.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/empty_project.png').default} alt=" "  className="doc_img"/>
 
-2. The test case is then created, and you will be redirected to a screen listing all the  test cases created. 
+To add a new test case, click on the **Add Test Case** button on the right side. Use `Command + \` for Mac and `Control + \` for Windows to create a new test case.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/created-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
-
-3. To add a new test case, click on the **Add Test Case** button on the right side. Use **Command + \ for Mac** and **Control + \ for Windows** to create a new test case.
-
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/new-test-case.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
-
-4. Press **shift + Enter** to create multiple test cases simultaneously. 
+Press `shift + Enter` to create multiple test cases simultaneously. 
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/multiple-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+After test case is created you will be redirected to a screen listing all the test cases. 
 
-5. Organize your test cases efficiently by creating folders. Add existing test cases to the folders, or create new folders and subfolders to meet your specific needs. 
+:::tip
+ By default test cases having no parent folder are stored under **Untitled** folder. 
+:::
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/new_test_case.png').default} alt=" "  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/add-test-cases-to-folders.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+***
 
-6. Upon selecting a test case, you will be able to view a section where **Test Details**, **Execution History** and **Issues** are displayed. Enter the test case details screen, add information such as **Test Name**, **Description**, **Precondition**, **Type**, **Status**, **Priority**, **Tag(s)**, and add attachments if necessary. 
+## View Test Case Details
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-details-information.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+### Test Case Summary Section
 
-7. **Execution History** provides an overview of all test cases executed, whether manually or through automation. It includes detailed information such as resolution, assignee name, date, and the duration of each test case run.  
+Upon selecting a test case, you will be redirected to Test Case Summary page where you can view Test Case details such as: **Test Name**, **Description**, **Precondition** , **Attachments**, **System Fields**: **Type**, **Status**, **Priority**, **Tag(s)** & **Custom Fields** 
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/execution-history.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-8. Click on any test run to redirect to its execution detail page.
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/test_case_summary_page.png').default} alt=" "  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/execution-detail-page.webp').default} alt="Real "  className="doc_img" width="1600" height="723"/>
+***
 
-9. For manually executed test cases, click on the desired test case which will redirect to the build page, where you can review the **Test Steps** and **Details**.
+### Test Case Runs Section
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/build-page.webp').default} alt="Real "  className="doc_img" width="1600" height="724"/>
+**Test Case Runs Section** provides an overview of a test case's executions & plannings, whether manual or through automated. It includes detailed information of Test Instances of the Test case such as **applied configuration**, **executed by**, **Test Run name**, **Test Instance Execution Status**, **Execution time** and helpful filters according to available fields. 
 
-10. For automated test cases, click on the test case to be directed to the automation dashboard,  where the particular test case has been executed.
+#### Executed Test Instances of Test Case
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/automation-dashboard.webp').default} alt="Real "  className="doc_img" width="1600" height="732"/>
+- This section shows Executed Instances having following statuses: `Passed`, `Failed`, `Skipped`. You can filter Test Instances based on who has executed the Instances & Status.  
 
-11. Test cases typically consist of multiple steps. You can add these steps using the **Manual Test Steps**.
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/executed_runs.png').default} alt=" "  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/test-case-templates.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+#### Planned Test Instances of Test Case
+- This section shows Planned Instances that are included in a Test Run but their execution is not yet started. You can filter Test Instances based on the **Assignee** of the Test Instance. 
 
-12. Add steps to your test cases, each with a title, and an optional outcome field. Attachments can be added to any step if required.
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/planned_runs.png').default} alt=" "  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/test-steps.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+- On clicking on that Test Case's execution you will be redirected to `Automation Dashboard` if its a Automation execution, the `Test Instance Page` if its Manual Instance or `Test Runs Page` if its a unexecuted Autoamtion Instance. 
 
-13. Test steps can be modified by clicking the **Edit** option on the right-hand side and deleted by selecting the **Delete** option.
+***
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/edit-or-delete.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+### Issues section
 
-14. Click on **Save Test Case** to create your test steps and update your test case. 
+This section lists the linked Jira/ADO Issues with the Test Case. For more information refer [this page](https://www.lambdatest.com/support/docs/link-jira-issues-with-test-manager/)
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/save-test-case.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+***
 
+### Test Case Steps Section
+
+Test cases typically consist of multiple steps. You can add these steps using the **Manual Test Steps**.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/manual_test_steps.png').default} alt=" "  className="doc_img"/>
+
+Add steps to your test cases, each with a **Steps**, and an optional **outcome** field. Attachments can be added to any step if required.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/add_test_step.png').default} alt=" "  className="doc_img"/>
+
+Test steps can be modified by clicking the **Edit** option on the right-hand side and deleted by selecting the **Delete** option.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/edit_test_step.png').default} alt=" "  className="doc_img"/>
+
+You can optional user the Generate with AI option to ask AI to generate more Steps. 
+
+:::tip
+ The more data your Test Case is having, including the details in **Summary page** & **Test Steps** the more accurate the AIs suggestion will be.
+:::
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/manual_test_case_creation/generate_test_step.png').default} alt=" "  className="doc_img"/>
 
 
 
