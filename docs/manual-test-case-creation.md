@@ -75,7 +75,7 @@ When you select a test case, you’ll be redirected to the Test Case Summary pag
 
 ### Test Case Runs Section
 
-**Test Case Runs Section** provides an overview of a test case's executions & plannings, whether manual or through automated. It includes detailed information of Test Instances of the Test case such as **applied configuration**, **executed by**, **Test Run name**, **Test Instance Execution Status**, **Execution time** and filters based on available fields. 
+**Test Case Runs Section** provides an overview of a test case's executions & plannings, whether are manual or automated. It includes detailed information of Test Instances of the Test case such as **applied configuration**, **executed by**, **Test Run name**, **Test Instance Execution Status**, **Execution time** and filters based on available fields. 
 
 #### Executed Test Instances of Test Case
 
