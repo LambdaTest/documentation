@@ -1200,6 +1200,7 @@ module.exports = {
           "kane-ai-assertions",
           "kaneai-dynamic-url-replacement",
           "kaneai-chrome-options",
+          "kaneai-custom-headers",
           "kaneai-totp",
           "kaneai-scheduled-test-runs",
           "kaneai-database",
