@@ -170,7 +170,7 @@ For example, let's say you want to upload a file on a web page via test script, 
 
 * * *
 
-# Download Files from LambdaTest Storage while test execution
+## Download Files from LambdaTest Storage while test execution
 
 During Selenium automation testing, there are scenarios where you need to retrieve files from LambdaTest's cloud storage directly to the machine running your test. LambdaTest provides a download hook that enables you to fetch files from lambda storage seamlessly during test execution.
 
