@@ -45,7 +45,7 @@ The LambdaTest Rocket.Chat Integration enables users to share or push bugs to th
 
 > Rocket.Chat Integration with LambdaTest is available for freemium as well as premium plan.
 
-## Integrate BugHerd from your LambdaTest Account
+## Integrate Rocket.Chat from your LambdaTest Account
 
 **Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
 
@@ -110,24 +110,4 @@ The LambdaTest Rocket.Chat Integration enables users to share or push bugs to th
 </video>
 
 >That was all you need to know for LambdaTest + Rocket.Chat Integration. Increase your productivity multifold with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing! 
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Rocket.Chat Integration
-      </span>
-    </li>
-  </ul>
-</nav>
 

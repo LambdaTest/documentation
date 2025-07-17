@@ -40,13 +40,15 @@ slug: link-jira-issues-with-test-manager/
 
 Test Manager enhances its functionality by seamlessly linking test cases with Jira issues. This integration ensures a reliable connection between your testing activities and Jira tasks, optimizing project management and collaboration across teams.
 
-**Steps for Linking Jira Issues with Test Manager**
+### Initial Setup and Configuration
 
-1. Navigate to the 'Issues' tab within the test case you wish to link and click on **Connect Jira**.
+> **Note:** If you have already integrated Jira with your LambdaTest account, you can skip this section and proceed directly to [Linking Jira Issues](#linking-jira-issues-in-test-manager)
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/connect-jira.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+1. Navigate to the [Integration page](https://integrations.lambdatest.com/) to integrate your LambdaTest account with Jira. Search for Jira and click on **Connect**.
 
-2. You will be directed to the dashboard where you can integrate with Jira. Click on **Install**. 
+<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-Connect.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+
+2. A side drawer will open to initiate Jira integration. Click on **Install** to proceed.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/install-jira.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
@@ -54,21 +56,28 @@ Test Manager enhances its functionality by seamlessly linking test cases with Ji
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/accept-the-request.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-4. Choose LambdaTest as the site, click on **Select Site & Proceed**, then select your preferred project and click **Integrate Projects & Install**.
+4. Select your Jira instance site, click on **Select Site & Proceed**, then select your preferred project and click **Integrate Projects & Install**.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/integrate-projects-and-install.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+### Linking Jira Issues in Test Manager
 
-5. Head back to the issues section under test cases, click on **Link Issue** and enter the jira issue key or issue url. 
+Once the integration is complete, follow these steps to link issues with your test cases or test runs:
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/link-issue.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+1. Head to the issues section in Test Manager, click on **Link Issue** and go to Jira.
+> Note: Issue linking is supported in both Test Cases and Test Runs. To link issues, go to the Issues tab within a Test Case or a Test Run.
 
-6. View the issue name, ID, type, status, priority, and assignee. To link additional issues, use the **Link Issue** button on the right side. 
+<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/4.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/link-additional-issues.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+2. Enter the Jira Issue ID or URL in the input field and click on **Link Issue**.
 
-7. **Unlink Issue** by clicking on the toggle that is present on the right side of the created issue. 
+<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-linkIssue-enterId.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/unlink-issues.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+3. The Jira issue from your integrated Jira Project is successfully linked and listed. You can view the Issue summary, ID, type, status, priority, and creator.
+
+<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-Issue-Listed.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
+
+4. To **unlink an issue**, click on the unlink button located on the right side of the Jira Issue.
+
+<img loading="lazy" src={require('../assets/images/ado-linking-test-manager/Jira-Unlink-Issue.png').default} alt="Link Azure DevOps Issue" className="doc_img" width="1366" height="629"/>
 
 
 

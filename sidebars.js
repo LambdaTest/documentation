@@ -49,6 +49,7 @@ module.exports = {
           "hyperexecute-snooper",
           "hyperexecute-inherit-config",
           "hyperexecute-yaml-version0.2",
+          "hyperexecute-yaml-capability-overrides"
         ],
       },
       {
@@ -374,6 +375,11 @@ module.exports = {
             type: "doc",
             label: "API Testing",
             id: "hyperexecute-api-testing",
+          },
+          {
+            type: "doc",
+            label: "Karate",
+            id: "hyperexecute-karate-testing",
           },
         ],
       },
@@ -1170,6 +1176,22 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
+        label: "Variables and Parameters",
+        link: {
+          type: "doc",
+          id: "kaneai-variables-and-parameters",
+        },
+        items: [
+          "kane-ai-using-variables",
+          "kane-ai-secrets",
+          "kane-ai-smart-variables",
+          "kane-ai-using-parameters",
+          "kane-ai-using-datasets",          
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
         label: "Features",
         items: [
           "kane-ai-javascript-execution",
@@ -1178,26 +1200,14 @@ module.exports = {
           "kane-ai-scroll-in-feature",
           "kane-ai-jira-integration",
           "kane-ai-api-testing",
-          "kaneai-network-throttling",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Variables and Parameters",
-            items: [
-              "kane-ai-using-variables",
-              "kane-ai-using-json-variables",
-              "kane-ai-using-parameters",
-              "kane-ai-using-datasets",
-            ],
-          },
+          "kaneai-network-throttling",          
           "kane-ai-modules",
-          "kane-ai-secrets",
-          "kane-ai-smart-variables",
-          "kaneai-upload-and-download-files",
           "kaneai-modules-versions-and-enhancement",
+          "kaneai-upload-and-download-files",
           "kane-ai-assertions",
           "kaneai-dynamic-url-replacement",
           "kaneai-chrome-options",
+          "kaneai-custom-headers",
           "kaneai-totp",
           "kaneai-scheduled-test-runs",
           "kaneai-database",
@@ -1966,8 +1976,12 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Jira Integration",
-        items: ["link-jira-issues-with-test-manager", "lambdatest-jira-app"],
+        label: "Issue Tracker Integration",
+        items: [
+          "link-jira-issues-with-test-manager",
+          "lambdatest-jira-app",
+          "link-ado-issues-with-test-manager"
+        ],
       },
     ],
   ],
