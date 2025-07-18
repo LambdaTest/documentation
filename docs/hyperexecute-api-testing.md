@@ -154,53 +154,8 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 ### Step 3: Configure YAML in your Test Suite
 
-```yaml
----
-version: 0.1
-globalTimeout: 90
-testSuiteTimeout: 90
-testSuiteStep: 90
-
-runson: win
-
-autosplit: true
-
-retryOnFailure: true
-maxRetries: 1
-
-concurrency: 1
-
-env:
-  CACHE_DIR: m2_cache_dir
-
-cacheKey: '{{ checksum "pom.xml" }}'
-cacheDirectories:
-  - $CACHE_DIR
-
-pre:
-  - mkdir m2_cache_dir
-  - mvn -Dmaven.repo.local=$CACHE_DIR -Dmaven.test.skip=true clean install
-  # pre step api testing
-  - mvn -Dtest=apitestingsample -Dbrowser=chrome -Dversion=latest -Dplatform=win10 -DsuiteXmlFile=testing.xml
-  - curl -v ipinfo.io
-
-post:
-  - mvn -Dtest=postapi -DsuiteXmlFile=testing.xml
-
-mergeArtifacts: true
-uploadArtefacts:
-  - name: Report
-    path:
-      - target/surefire-reports/**
-
-testDiscovery:
-  type: raw
-  mode: dynamic
-  command: grep 'class name' src/test/java/testing.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
-
-testRunnerCommand: mvn `-Dtest=webtest `-Dbrowser=chrome `-Dversion=latest `-Dplatform=win10 `-DsuiteXmlFile=web.xml
-
-jobLabel: ['HYP', 'API Testing']
+```yaml reference title="hyperexecute.yaml"
+https://github.com/LambdaTest/hyp-api-testing/blob/master/hyperexecute.yaml
 ```
 
 ### Step 4: Execute your Test Suite
