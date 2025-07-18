@@ -42,20 +42,18 @@ Efficient test management is crucial for successful project execution. One of th
 
 **Let’s look at the steps involved:**
 
-1. Navigate to the Test Cases section and select multiple test cases within a folder. 
+1. Bulk select Test cases you want to include in the export file & click on the `Bulk Action` button. 
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/select-test-cases.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/bulk_export_testcases.jpeg').default} alt="export test cases "  className="doc_img" width="1366" height="629"/>
 
-2. Click on **Bulk Actions** and select **Export to CSV** to export test cases.
-
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/export-to-csv.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+2. Click `Export to CSV` present on the appeared dropdown.
 
 3. Once you click on Export to CSV, the file will automatically download in CSV format. 
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/download-csv.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+This is how your exported CSV file would look like :
 
-By following these steps, you can easily export your test cases. The file will be available in the download folder on your system.
-
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/exported_csv.jpeg').default} alt="exported CSV "  className="doc_img" width="1366" height="629"/>
+This file includes all the metadata regarding test cases like system & custom fields, test steps & BDD scenarios.
 
 
 
