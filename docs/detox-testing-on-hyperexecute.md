@@ -81,11 +81,9 @@ From the project root directory, execute the below CLI command in your terminal:
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/Detox/Detox_cmd.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-
 <br /><br />
 
 You've successfully triggered the Detox tests on HyperExecute. Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
-
 
 ## Configure your own Project
 
@@ -101,61 +99,8 @@ Download the HyperExecute CLI and copy it into the root folder.
 ### Step 2: Configure YAML in your Test Suite
 Use the sample YAML below to configure your execution:
 
-```yaml
----
-autosplit: true
-
-# Set the concurrency level for test execution (2 devices in parallel)
-concurrency: 2
-
-framework:
-    # Name of the test framework (raw in this case)
-    name: raw
-    args:
-        buildName: test_demo_1
-        deviceLogs: true
-        devices:
-            - Galaxy S23
-        disableReleaseDevice: true
-        env:
-            DETOX: true
-        isRealMobile: true
-        mobileDC: true
-        platformName: android
-        privateCloud: true
-        queueTimeout: 600
-
-        # Enable or disable video recording support
-        video: true
-
-
-# Make test status as HyperExecute job's status
-frameworkStatusOnly: true
-
-# job label for hyperexecute job
-jobLabel: ['raw','detox','public']
-
-# Pre-install required dependencies from pre-setup scripts
-pre:
-    - bash ./lambdatest/scripts/pre-setup.sh
-
-# Specify the target platform for test execution (Android in this case)
-runson: android
-
-# Test discovery configuration
-testDiscovery:
-    # Command to discover tests from the discovery.txt file
-    command: cat ./lambdatest/discovery.txt 
-    # Test discovery mode is static
-    mode: static 
-    # Test type is raw (custom test implementation)
-    type: raw
-
-# Command to run the tests using the testRunnerCommand
-testRunnerCommand: bash ./lambdatest/scripts/execute.sh $test
-
-# Define the version of the configuration file
-version: "0.2"
+```yaml reference title="hyperexecute.yaml"
+https://github.com/LambdaTest/LT-detox/blob/main/yaml/hyperexecute.yaml
 ```
 
 > 📘 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/).
@@ -166,11 +111,6 @@ Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexec
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/Detox/Detox_dashboard.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-
-
 You can click on **View Test** from the **HyperExecute logs**, which will take you to the [App Automation dashboard](https://appautomation.lambdatest.com/build). There, you can access detailed **device logs**, **crash logs**, and **Metadata** for your test. You’ll also be able to watch a **video recording** of the Test sessions for better **debugging** and **analysis**.
 
-
 > For any query or doubt, please feel free to contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
-
-
