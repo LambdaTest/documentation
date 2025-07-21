@@ -48,12 +48,14 @@ Efficient test management is crucial for successful project execution. One of th
 
 2. Click `Export to CSV` present on the appeared dropdown.
 
-3. Once you click on Export to CSV, the file will automatically download in CSV format. 
+3. When you click Export to CSV, you’ll see options to choose which test case fields to include in the export. Select the desired fields and click **Export to CSV** to download the file.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/select-specifc-fields-export.png').default} alt="export test cases "  className="doc_img" width="1366" height="629"/>
 
 This is how your exported CSV file would look like :
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/exported_csv.jpeg').default} alt="exported CSV "  className="doc_img" width="1366" height="629"/>
-This file includes all the metadata regarding test cases like system & custom fields, test steps & BDD scenarios.
+This file includes all the metadata fields that were selected during export.
 
 
 
