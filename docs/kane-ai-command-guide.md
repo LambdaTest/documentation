@@ -93,7 +93,7 @@ You may also define explicit wait timeouts using natural language such as below.
 #### Custom Wait Timeouts
 You can assign a custom timeout to any specific step, waiting for that element based on visibility or clickibility.
 
-Follow these steps to set timouts on test steps:
+Follow these steps to set timeouts on test steps:
 
 - Click on three dots on step & select the `Step Timeout` option.
 - Set the max time (in seconds) you want to wait for a particular element. 
