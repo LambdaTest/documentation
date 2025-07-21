@@ -8,7 +8,7 @@ keywords:
   - lambdatest automation
   - lambdatest kaneai
   - kaneai guided walkthrough
-  - kane ai prompts
+  - kane ai instructions
   - kane ai commands
 url: https://www.lambdatest.com/support/docs/kane-ai-command-guide
 site_name: LambdaTest
@@ -41,18 +41,15 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-KaneAI offers a range of commands to perform various actions on web pages. These commands, called prompts, guide KaneAI in executing specific tasks during your test cases. By using prompts along with descriptive instructions, you can create clear, human-readable test cases.
+KaneAI offers a range of commands to perform various actions on web pages. These commands, called instructions, guide KaneAI in executing specific tasks during your test cases. By using instructions along with descriptive instructions, you can create clear, human-readable test cases.
 
-This document provides an overview of the different prompts available in KaneAI, allowing you to write test cases in plain English with ease.
+This document provides an overview of the different instructions available in KaneAI, allowing you to write test cases in plain English with ease.
 
 ## Navigation and Page Interaction
 
 ### Open a website
 - `go to https://www.lambdatest.com`
 - `open https://www.lambdatest.com`
-
-### Wait
-- `wait for 5 seconds`
 
 ### Click
 - `click on login button`
@@ -84,6 +81,32 @@ This document provides an overview of the different prompts available in KaneAI,
 - `go forward`
 - `navigate forward`
 
+### Wait
+
+#### Default wait for element
+For all instructions which require an element to interact with in web, wait for element is added in the generated code with a default timeout of 10 seconds.
+
+#### Explicit Waits
+You may also define explicit wait timeouts using natural language such as below.
+- `wait for 5 seconds`
+
+#### Custom Wait Timeouts
+You can assign a custom timeout to any specific step, waiting for that element based on visibility or clickibility.
+
+Follow these steps to set timeouts on test steps:
+
+- Click on three dots on step & select the `Step Timeout` option.
+- Set the max time (in seconds) you want to wait for a particular element. 
+
+:::note
+You can add maximum of 300 seconds timeout for an operation. 
+:::
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/commands/select_set_timeout.png').default} alt="" className="doc_img"/>
+
+:::note
+ Custom Waits can only be added on instruction involving element based interactions. 
+:::
+
 ## Tab Management
 
 ### Open New Tab
@@ -99,12 +122,16 @@ This document provides an overview of the different prompts available in KaneAI,
 
 ## Page Interaction
 ### Scroll
+- `scroll until the button is visible`
+- `scroll until xyz option is visible inside a section`
 - `scroll once`
 - `scroll by 100px`
 - `scroll to the bottom`
 - `scroll to the top`
 - `scroll 3 times`
 - `scroll by 20 percent`
+
+If your element is not visible in the viewport, you can use the `scroll until` command to go to that particular element if that is present currently in the DOM. This can be used in vertical scrollable pages & even on the scrollable sub-sections. 
 
 ## Assertions and Queries
 ### Assert Element Text
