@@ -1980,7 +1980,8 @@ module.exports = {
         items: [
           "link-jira-issues-with-test-manager",
           "lambdatest-jira-app",
-          "link-ado-issues-with-test-manager"
+          "link-ado-issues-with-test-manager",
+          "lambdatest-azure-devops-app"
         ],
       },
     ],
