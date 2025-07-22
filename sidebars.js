@@ -911,7 +911,6 @@ module.exports = {
                 collapsed: true,
                 label: "June, 2025",
                 items: [
-                  "hyperexecute-release-notes-2-9-2",
                   "hyperexecute-release-notes-2-9-1",
                   "hyperexecute-release-notes-2-9-0",
                   "hyperexecute-release-notes-2-8-9"

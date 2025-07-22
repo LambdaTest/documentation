@@ -43,3 +43,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
+## Support for `customHeaders` in HyperExecute
+You can now inject custom HTTP headers into your test sessions using the `customHeaders` capability. This gives you more control over outbound requests made during test execution, especially when working around network security controls like firewalls or header-based access restrictions.
+
+```java
+caps.setCapability("customHeaders", new HashMap<String, String>() {{
+  put("x-px-access-token", "testuil");
+}});
+```
+
+These headers are attached to your outbound HTTP requests and can help:
+- Authenticate against secured endpoints
+- Pass custom metadata
+- Work around network/firewall restrictions
+
+> 📘 Refer to our detailed documentation, [Custom Headers](https://www.lambdatest.com/support/docs/custom-headers/) for detailed explanation and examples.
