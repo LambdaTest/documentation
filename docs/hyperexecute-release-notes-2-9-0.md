@@ -43,3 +43,12 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
+## Git Token Support & Git Validation Improvements in HyperExecute Projects
+We’ve enhanced Projects in HyperExecute to streamline Git integration. You can now also provide a `git_token` instead of PAT Token during project creation for GitHub authentication. If a token isn’t provided at request time, HyperExecute will resolve it in the following order:
+- Request-level token
+- User-level secret
+- Organization-level secret
+
+You can now integrate Enterprise GitHub accounts seamlessly into Projects.
+
+> 📘 Refer to our detailed documentation for [`Projects`](https://www.lambdatest.com/support/docs/hyperexecute-projects/).
