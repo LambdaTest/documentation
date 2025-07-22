@@ -91,3 +91,5 @@ This feature significantly improves user experience by streamlining test result 
 
 ### 📌 Accessing the Feature
 This feature is enabled by default for all Cypress-based test executions on HyperExecute. Simply navigate to your Automation Dashboard , select a Cypress build, and view the enhanced left-side test list in the Build Summary or individual Test Run views.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/cypress.png').default} alt="HyperExecute" className="doc_img"/>
