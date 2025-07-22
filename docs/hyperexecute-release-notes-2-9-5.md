@@ -43,3 +43,21 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
+## Playwright Real Device iOS Support on HyperExecute
+You can now run Playwright tests on real iOS devices using HyperExecute. This unlocks the power of native device testing with the speed and flexibility of Playwright on our real device cloud.
+
+### To enable this mode:
+- Set `runson: ios` in your YAML.
+- Use the following under `framework` flag:
+
+```yaml title="hyperexecute.yaml"
+runson: ios
+
+framework:
+  name: appium
+  args:
+    playwrightRD: true
+    mobileDC: true
+```
+
+> **Note:** Currently supported on Safari for iOS real devices.

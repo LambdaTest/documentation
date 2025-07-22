@@ -46,7 +46,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ## YAML-Based Capability Overrides for Selenium Tests
 You can now override Selenium capabilities directly from your `hyperexecute.yaml` file using the new `ltOptions` flag. This enhancement allows you to define key-value pairs—like browser type, version, logs, video, tunnel, and more without changing your test scripts.
 
-## Why it matters?
+### Why it matters?
 - Avoid code changes for environment-specific needs.
 - Reuse the same script across different setups.
 - Keep test code clean and capability-agnostic.
@@ -66,3 +66,13 @@ ltOptions:
 
 > 📘 Refer to our detailed documentation for [`ltOptions`](https://www.lambdatest.com/support/docs/hyperexecute-yaml-capability-overrides/) flag.
 
+
+## Network Logs & Tunnel Support for Maestro Framework
+HyperExecute now supports `network logs` and `tunnel` capabilities for Maestro tests running on both virtual devices and real devices using the Raw Framework configuration.
+
+### Feature Highlights
+- **Network Logs:** Capture detailed request/response data during test execution for enhanced debugging and visibility.
+- **Tunnel Support:** Access internal or staging environments securely using LambdaTest Tunnel.
+- Supported across both virtual and real mobile devices.
+
+> 📘 Refer to our detailed documentation for [`Maestro`](https://www.lambdatest.com/support/docs/hyperexecute-maestro-testing/).
