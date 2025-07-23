@@ -1232,8 +1232,9 @@ module.exports = {
         label: "Knowledge Base",
         items: [
           "kane-ai-command-guide",
-          "kane-ai-web-test-writing-guidelines",
           "kane-ai-supported-assertions",
+          "kaneai-failure-conditions",
+          "kane-ai-web-test-writing-guidelines",
         ],
       },
       {
