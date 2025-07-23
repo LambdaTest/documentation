@@ -630,6 +630,11 @@ module.exports = {
                     label: "Hyperexecute Smart UI Testing - Cypress",
                     id: "hyperexecute-smart-ui-sdk-using-cypress",
                   },
+                   {
+                    type: "doc",
+                    label: "Hyperexecute Smart UI Testing - Maestro",
+                    id: "hyperexecute-smart-ui-maestro",
+                  },
                   {
                     type: "doc",
                     label: "Hyperexecute Smart UI Testing - Playwright",
