@@ -2982,6 +2982,12 @@ module.exports = {
         id: "smartui-mcp-server",
       },
       {
+        type: "doc",
+        label: "SmartUI RCA",
+        id: "smartui-root-cause-analysis",
+      },
+
+      {
         type: "category",
         collapsed: false,
         label: "Visual Testing Configurations",
