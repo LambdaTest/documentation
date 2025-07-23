@@ -52,8 +52,7 @@ This document guides you on how to perform visual regression testing for your An
 
 Before you begin, ensure you have the following prerequisites in place:
 
-* A LambdaTest account. If you don't have one, [sign up for free](https://accounts.lambdatest.com/register).
-* Your LambdaTest Username and Access Key. You can find these on your [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+* Your LambdaTest Username and Access Key. You can find these on your dashboard -> left side bar -> credentials.
 * The [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) downloaded to your local machine.
 * An existing Android application file (`.apk`).
 * Node.js and npm installed on your system.
@@ -64,7 +63,7 @@ First, you need to create a project in SmartUI. All your visual regression test 
 
 1.  Navigate to the [SmartUI Projects page](https://smartui.lambdatest.com/).
 2.  Click on **New Project**.
-3.  Select **Native App** as the platform.
+3.  Select **CLI** as the platform.
 4.  Provide a **Project Name**, select approvers, and add any relevant tags.
 5.  Click **Submit**.
 
@@ -84,7 +83,7 @@ cd smartui-maestro-sample
 :::tip Sample Repo
 You can find the complete code for this example in the following LambdaTest GitHub repository.
 
-\<a href="https://www.google.com/search?q=https://github.com/LambdaTest/smartui-maestro-sample" className="github\_\_anchor"\>\<img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc\_img"/\> View on GitHub\</a\>
+<a href="https://www.google.com/search?q=https://github.com/LambdaTest/smartui-maestro-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"> View on GitHub</a>
 :::
 
 ## Step 3: Upload Your Application
@@ -94,9 +93,9 @@ To run your tests on LambdaTest real devices or emulators, you need to upload yo
 Run the following `cURL` command in your terminal. Ensure you have set your `LT_USERNAME` and `LT_ACCESS_KEY` as environment variables.
 
 ```bash
-curl -u "$LT_USERNAME:$LT_ACCESS_KEY" \
- -X POST "[https://manual-api.lambdatest.com/app/upload/realDevice](https://manual-api.lambdatest.com/app/upload/realDevice)" \
- -F "appFile=@/path/to/your/app.apk" \
+curl -u "$LT_USERNAME:$LT_ACCESS_KEY" 
+ -X POST "[https://manual-api.lambdatest.com/app/upload/realDevice](https://manual-api.lambdatest.com/app/upload/realDevice)" 
+ -F "appFile=@/path/to/your/app.apk" 
  -F "name=YourAppName"
 ```
 
@@ -131,18 +130,18 @@ In your Maestro test YAML files (e.g., `maestro-test/test.yaml`), add the `takeS
 
 To authenticate with the LambdaTest platform, export your LambdaTest credentials as environment variables.
 
-\<Tabs className="docs\_\_val"\>
-\<TabItem value="bash" label="Linux / MacOS" default\>
-\<CodeBlock className="language-bash"\>
+<Tabs className="docs__val">
+<TabItem value="bash" label="Linux / MacOS" default>
+<CodeBlock className="language-bash"\>
 {`export LT_USERNAME=&quot;${YOUR_LAMBDATEST_USERNAME()}&quot; export LT_ACCESS_KEY=&quot;${YOUR_LAMBDATEST_ACCESS_KEY()}&quot;`}
-\</CodeBlock\>
-\</TabItem\>
-\<TabItem value="powershell" label="Windows"\>
-\<CodeBlock className="language-powershell"\>
+</CodeBlock>
+</TabItem>
+<TabItem value="powershell" label="Windows">
+<CodeBlock className="language-powershell">
 {`$env:LT_USERNAME=&quot;${YOUR_LAMBDATEST_USERNAME()}&quot; $env:LT_ACCESS_KEY=&quot;${YOUR_LAMBDATEST_ACCESS_KEY()}&quot;`}
-\</CodeBlock\>
-\</TabItem\>
-\</Tabs\>
+</CodeBlock>
+</TabItem>
+</Tabs>
 
 ## Step 5: Configure the HyperExecute YAML
 
@@ -216,19 +215,17 @@ Once your configuration is complete, you are ready to run the tests on HyperExec
 
 ```bash
 # For MacOS/Linux, make the CLI executable first
-chmod +x ./hyperexecute
+chmod u+x ./hyperexecute
 
 # Execute the tests using your YAML file
 ./hyperexecute --config yaml/maestro_Real_Devices.yaml
 ```
 
-> **NOTE:** On macOS, you might need to grant permission to the `hyperexecute` binary via **System Settings** → **Privacy & Security** if a security warning appears.
-
 Alternatively, if you haven't set your credentials as environment variables, you can pass them as arguments:
 
-\<CodeBlock className="language-bash"\>
+<CodeBlock className="language-bash">
 {`./hyperexecute --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()} --config yaml/maestro_Real_Devices.yaml`}
-\</CodeBlock\>
+</CodeBlock>
 
 ## Step 7: View Your Visual Test Results on SmartUI
 
