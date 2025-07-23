@@ -63,7 +63,7 @@ The Assertion Feature in KaneAI enhances test execution control by transitioning
 
 ### Step 3: Configure Hard Assertion
 
->**NOTE:** From **28 July** onwards we are introducing **Failure Conditions** which will change the test step execution behavior. This change will not affect your existing test cases or the generated code where you’ve used hard/soft assertions. However, when you edit these tests, the new failure conditions will be applied. Refer [Failure Conditions doc](https://www.lambdatest.com/support/docs/kaneai-failure-conditions)
+>**NOTE:** From **28 July 2025** onwards we are introducing **Failure Conditions** which will change the test step execution behavior. This change will not affect your existing test cases or the generated code where you’ve used hard/soft assertions. However, when you edit these tests, the new failure conditions will be applied. Refer [Failure Conditions doc](https://www.lambdatest.com/support/docs/kaneai-failure-conditions)
 
 - Click on the assertion step where the test failed.
 - Toggle the button to enable or disable the **Hard assertion**:
