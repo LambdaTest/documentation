@@ -3125,6 +3125,7 @@ module.exports = {
               "smartui-cli-responsive-dom",
               "smartui-sdk-config-options",
               "smartui-multiple-assets-hosts",
+              "smartui-cli-request-headers",
               "smartui-cli-basic-auth",
               "smartui-sdk-tunnel",
               "smartui-shadow-dom",
