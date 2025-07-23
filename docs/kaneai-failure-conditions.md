@@ -64,7 +64,7 @@ By default, the failure condition for each step is set to **Fail test immediatel
 :::
 
 :::tip
-If you are transitioning from a Hard & Soft Assertions approach, think of **Fail test immediately** as your **Hard Assertion**, which halts on assertion failure, and **Warn but continue execution** as your **Soft Assertion**, which logs the failure but continues execution as the step itself passes.
+If you are transitioning from a Hard & Soft Assertions approach, think of **Fail test immediately** as your **Hard Assertion**, which halts on assertion failure, and **Warn but continue execution** as your **Soft Assertion**, which logs the failure but continues execution.
 :::
 
 You can set the failure condition in the Authoring mode by clicking on the three-dots on the step:
