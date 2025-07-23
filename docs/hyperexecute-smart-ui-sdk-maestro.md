@@ -234,5 +234,3 @@ After the HyperExecute job is finished, all screenshots captured using the `take
 1.  Navigate to the [SmartUI Dashboard](https://smartui.lambdatest.com/).
 2.  Select your project and the most recent build.
 3.  Here, you can compare screenshots against the baseline, highlight differences, and approve or reject changes. You can use features like Smart Ignore to mask dynamic areas for more stable comparisons.
-
-```
