@@ -42,8 +42,6 @@ import CodeBlock from '@theme/CodeBlock';
    }}
 ></script>
 
-## Overview
-
 The SmartUI CLI includes a `requestHeaders` configuration option, allowing you to specify custom HTTP headers for fetching web assets during your visual testing workflow. This feature is essential for scenarios where resources like images, CSS, or scripts are located behind a protected environment that requires authentication via custom headers (e.g., a staging environment).
 
 By including these headers in the SmartUI CLI configuration, you can seamlessly access protected resources, enhancing the flexibility and security of your automated visual testing process.
