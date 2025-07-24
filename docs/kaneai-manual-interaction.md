@@ -45,7 +45,7 @@ Manual Interaction is only supported in Web Browser on desktop & Mobile App test
 
 ### Guide for using Manual Interaction:
 
-While in Authoring mode, simply interact with the app yourself, after enabling manual iteraction by clicking on `Manual Interaction` button - the Agent will record your actions and turn them into test steps automatically.
+While in Authoring mode, simply interact with the app yourself, after enabling manual interaction by clicking on `Manual Interaction` button - the Agent will record your actions and turn them into test steps automatically.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/manual-interaction/switch_to_manual_interaction.png').default} alt="" className="doc_img"/>
 
