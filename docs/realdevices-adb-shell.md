@@ -69,43 +69,46 @@ To ensure security and compatibility, we have a list of ADB commands that can be
 
 ### Supported ADB Commands - Public Device
 
-| Command                               |Description                                                                       |
-| --------------------------------------| -------------------------------------------------------------------------        |
-| `am start`                      | Launches an activity on the device. Useful for opening apps or specific screens.       |
-| `am force-stop`                 | Force-stops an application by its package name.                                        |
-| `pm clear`                      | Clears all data associated with a package (app).                                       |
-| `input`                         | Simulates user input like taps, swipes, or key events.                                 |
-| `ls`                            | Lists files and directories. Commonly used to inspect folders like `/sdcard/Download`. |
-| `echo`                          | Prints text to the terminal. Useful for testing output or scripting.                   |
-| `grep`                          | Searches for text patterns. Useful for filtering logs or command output.               |
-| `pwd`                           | Displays the current working directory.                                                |
-| `dumpsys`                       | Dumps system service information (battery, activity, memory, etc.).                    |
-| `getprop`                       | Gets system properties. Often used for device diagnostics.                             |
-| `am compat enable`              | Enables app compatibility options.                                                     |
-| `cmd connectivity airplane-mode`| Toggles airplane mode on/off (requires permissions).                                   |
-| `setprop debug.firebase.analytics.app`| Enables Firebase Analytics debug mode for a specific app.                        |
-| `log.tag.FA`                    | Firebase Analytics SDK logs (e.g., event recording, session start).                    |
-| `log.tag.FA-SVC`                | Firebase background service logs (e.g., data uploads, scheduled jobs).                 |
-| `wm fixed-to-user-rotation`     | Controls screen rotation policy.                                                       |
-| `cat /proc/version`             | Displays kernel version and build info.                                                |
+| Command                               | Description                                                                       |
+| -------------------------------------- | --------------------------------------------------------------------------------- |
+| `am start`                            | Launches an activity on the device. Useful for opening apps or specific screens. |
+| `am force-stop`                       | Force-stops an application by its package name.       |
+| `am compat enable`                    | Enables app compatibility options.                    |
+| `cat /sdcard/Download/`               | Displays the content of a specific file inside the Download folder.                |
+| `cat /sdcard/Pictures/`               | Displays the content of a specific file inside the Pictures folder.                |
+| `cat /sdcard/Movies/`                 | Displays the content of a specific file inside the Movies folder.                  |
+| `cat /proc/version`                   | Displays kernel version and build info.                                            |
+| `dumpsys`                             | Dumps system service information (battery, activity, memory, etc.).                |
+| `echo`                                | Prints text to the terminal. Useful for testing output or scripting.               |
+| `getprop`                             | Gets system properties. Often used for device diagnostics.                         |
+| `grep`                                | Searches for text patterns. Useful for filtering logs or command output.           |
+| `input`                               | Simulates user input like taps, swipes, or key events.                             |
+| `log.tag.FA`                          | Firebase Analytics SDK logs (e.g., event recording, session start).                |
+| `log.tag.FA-SVC`                      | Firebase background service logs (e.g., data uploads, scheduled jobs).             |
+| `ls /sdcard/Download`                 | Lists all files and folders located in the device's Download folder.               |
+| `ls /sdcard/Pictures`                 | Lists all files and folders located in the device's Pictures folder.               |
+| `ls /sdcard/Movies`                   | Lists all files and folders located in the device's Movies folder.                 |
+| `pm clear`                            | Clears all data associated with a package (app).       |
+| `pwd`                                 | Displays the current working directory.                                            |
+| `setprop debug.firebase.analytics.app` | Enables Firebase Analytics debug mode for a specific app.                          |
+| `wm fixed-to-user-rotation`           | Controls screen rotation policy.                                                   |
 
 ### Supported ADB Commands - Private Device
 
-All the public commands alongwith the following:
-| Command                                           | Description                                                  |
-| ------------------------------------------------- | ------------------------------------------------------------ |
-| `setprop`                         | Sets custom system properties (e.g., for debugging frameworks).         |
-| `logcat`                          | Streams real-time logs from device, including app logs.                 |
-| `am instrument`                   | Executes instrumented tests. Often used in automated testing pipelines. |
-| `am broadcast`                    | Sends custom broadcast messages for triggering in-app actions.       |
-| `ls /sdcard/Download`             | Lists all files and folders located in the device's Download folder. |
-| `ls /sdcard/Pictures`             | Lists all files and folders located in the device's Pictures folder. |
-| `ls /sdcard/Movies`               | Lists all files and folders located in the device's Movies folder.   |
-| `cat /sdcard/Download/`           | Displays the content of a specific file inside the Download folder.  |
-| `cat /sdcard/Pictures/`           | Displays the content of a specific file inside the Pictures folder.  |
-| `cat /sdcard/Movies/`             | Displays the content of a specific file inside the Movies folder.    |
-| `pm grant`                        | Grants specific permissions to a package
-| `pm list packages`                | Lists installed app packages for inspection or automation logic.     |
+All the public commands along with the following:
+
+| Command                               | Description                                                                       |
+| -------------------------------------- | --------------------------------------------------------------------------------- |
+| `am instrument`                       | Executes instrumented tests. Often used in automated testing pipelines.  |
+| `am broadcast`                        | Sends custom broadcast messages for triggering in-app actions.  |
+| `am`                                  | All other app manager commands.   |
+| `cmd connectivity airplane-mode`       | Toggles airplane mode on/off (requires permissions).  |
+| `logcat`                              | Streams real-time logs from device, including app logs.  |
+| `ls`                                  | Lists files and directories. Commonly used to inspect folders like `/sdcard/Download`.  |
+| `mkdir`                               | Creates a new directory.                             |
+| `pm`                                  | All other package manager commands.                   |
+| `rm`                                  | Removes files or directories.                         |
+| `setprop`                             | Sets custom system properties (e.g., for debugging frameworks).  |
 
 :::note
 `adb shell` is already pre-applied in our **terminal environment**. Rewriting it explicitly may prevent the command from executing properly.
