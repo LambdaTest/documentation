@@ -1,5 +1,5 @@
 ---
-id: kaneai-test-manual
+id: kaneai-test-manual-interaction-video
 title: Manual Interaction Using KaneAI
 hide_title: false
 sidebar_label: Manual Interaction
@@ -8,9 +8,9 @@ keywords:
   - lambdatest automation
   - lambdatest kaneai
   - kaneai manual interaction
-url: https://www.lambdatest.com/support/docs/kaneai-manual-interaction
+url: https://www.lambdatest.com/support/docs/kaneai-manual-interaction-video
 site_name: LambdaTest
-slug: kaneai-manual-interaction/
+slug: kaneai-manual-interaction-video/
 ---
 
 import Tabs from '@theme/Tabs';
@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Manual Interaction Using KaneAI",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-manual-interaction/"
+          "item": "https://www.lambdatest.com/support/docs/kaneai-manual-interaction-video/"
         }]
       })
     }}
