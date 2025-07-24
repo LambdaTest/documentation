@@ -57,22 +57,22 @@ To begin, you need to access the [database connections](https://kaneai.lambdates
 
 ### Add connection details
 
-Select the connection type as either TCP/IP or over SSH. Enter the database name and choose from available database types, including MySQL, PostgreSQL & MSSQL DB.
+Select the connection type as either TCP/IP or over SSH. Enter the database name and choose from available database types, including MySQL, PostgreSQL, MSSQL, Oracle and Mongo DB.
 
-Provide a description and input your host name, port, username, and other relevant details. You can enter the password using an **organisation-level secret** or directly entering the password. For PostgreSQL, ensure you select the database name.&#x20;
+Provide a description and input your host name, port, username, and other relevant details. You can enter the password using an **organisation-level secret** or directly entering the password. For PostgreSQL, ensure you select the database name.
 
 :::tip
-Support for NoSQL databases such as MongoDB and DynamoDB will be added soon.
+KaneAI supports both SQL and NoSQL database connections.
 :::
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/create_database_list.jpg').default} alt="create-database-list" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/create_database_list.png').default} alt="create-database-list" className="doc_img"/>
 
 ### Connecting local databases
 
 For local or private databases, select a tunnel if your tunnel is active. The tunnel can be activated easily by following the details available [here](https://www.lambdatest.com/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support). Test the connection and create it to see the sample database added.
 
 
-Following flag will be additionally required here: `--expose database_type:host:port`. 
+Following flag will be additionally required for database connections: `--expose database_type:host:port`. 
 
 So, your command will look like:
 <div className="lambdatest__codeblock">
