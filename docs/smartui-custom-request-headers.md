@@ -81,7 +81,7 @@ Below is an example of how to configure custom headers in your `smartui.json` fi
       * **Key**: The name of the HTTP header (e.g., `Authorization`, `X-Custom-Header-1`).
       * **Value**: The corresponding value for the header (e.g., `Bearer your-access-token`, `custom-value-1`).
 
-## Steps to Implement
+### Steps to Implement
 
 1.  **Locate Your Configuration File**: Open your `smartui.json` file, which should be in the root directory of your project.
 2.  **Add the `requestHeaders` Array**: If the array does not already exist, add it to the JSON structure.
@@ -93,6 +93,4 @@ Below is an example of how to configure custom headers in your `smartui.json` fi
   * You can define multiple headers by adding more objects to the `requestHeaders` array.
   * The headers defined in this configuration will be sent with every page load and asset request made by the SmartUI CLI during the test.
   * This feature is particularly useful for testing web applications in staging or development environments that are protected from public access.
-    :::
-
-<!-- end list -->
+:::

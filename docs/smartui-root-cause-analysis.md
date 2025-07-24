@@ -1,9 +1,9 @@
 ---
 id: smartui-root-cause-analysis
-title: Smart Root Cause Analysis in SmartUI
+title: Root Cause Analysis in SmartUI
 hide_title: false
-sidebar_label: Smart Root Cause Analysis (RCA)
-description: Learn how to use SmartUI's Root Cause Analysis (RCA) to debug visual regressions by inspecting the exact DOM and CSS changes behind them.
+sidebar_label: Smart RCA
+description: Learn how to use SmartUI's RCA to debug visual regressions by inspecting the exact DOM and CSS changes behind them.
 keywords:
     - smartui
     - root cause analysis
@@ -51,7 +51,7 @@ SmartUI’s **Root Cause Analysis (RCA)** provides a deep inspection into *why* 
 ## What Problems Does Smart RCA Solve?
 
 Visual testing often tells you that something is wrong but not what caused it. Smart RCA eliminates the guesswork and manual debugging by providing immediate, actionable insights.
-
+<p align="center">
 | Problem | Smart RCA Solution |
 |---|---|
 | The UI looks broken, but you don’t know why. | Click to inspect the exact HTML, CSS, and Text changes. |
@@ -59,6 +59,7 @@ Visual testing often tells you that something is wrong but not what caused it. S
 | The team wastes time on manual debugging. | RCA provides an instant root cause, saving time. |
 | The layout shifted because of a small style change. | RCA pinpoints the exact CSS properties that changed. |
 | Invisible elements are affecting the layout. | RCA highlights changes to all elements, even invisible ones. |
+</p>
 
 ---
 
@@ -67,16 +68,16 @@ Visual testing often tells you that something is wrong but not what caused it. S
 ### Prerequisites
 
 :::info
-Before you begin, please ensure the following:
-* The build was generated using a **LambdaTest CLI (exec)** project.
+Before you begin, please ensure the build was generated using a **LambdaTest CLI (exec)** command.
 :::
 
 ### Step 1: Activate RCA Mode
 
 1.  Open a visual build from your [SmartUI dashboard](https://smartui.lambdatest.com/).
 2.  In the comparison toolbar, click the **RCA** icon.
-
+<p align="center">
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAicon.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/>
+</p>
 
 When RCA is activated, DOM diff boxes are automatically enabled. There's nothing manual to configure—you're ready to investigate immediately.
 
@@ -84,18 +85,24 @@ When RCA is activated, DOM diff boxes are automatically enabled. There's nothing
 
 As soon as RCA mode is on, you can interact with the highlighted differences to see the underlying code changes. The selection is visually precise, with overlays that follow the true element boundaries, not just approximate pixel areas.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAmain.png').default} alt="RCA Icon in Toolbar" width="400" height="800" className="doc_img"/>
-
 | User Interaction | Visual Feedback & Result |
 |---|---|
-| **Default View** <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAdefault.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/> | A dark blue highlight box appears by default, pinpointing the exact DOM element where the primary issue is detected. |
-| **Hover** on a diff region <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAhover.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/> | A yellow bounding box appears, indicating the element is ready for selection. |
-| **Click** a diff region <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAselected.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/> | A red box locks onto the selected DOM region, and the RCA panel opens on the right. |
-| **Hover** while selected <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAhighlight.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/> | A blue highlight box appears over the element, helping to transition focus between the screenshot and the RCA panel. |
+| **Default View** <br /> <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAdefault.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/> | A dark blue highlight box appears by default, pinpointing the exact DOM element where the primary issue is detected. |
+| **Hover** on a diff region <br /> <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAhover.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/> | A yellow bounding box appears, indicating the element is ready for selection. |
+| **Click** a diff region <br /> <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAselected.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/> | A red box locks onto the selected DOM region, and the RCA panel opens on the right. |
+| **Hover** while selected <br /> <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAhighlight.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/> | A blue highlight box appears over the element, helping to transition focus between the screenshot and the RCA panel. |
+
+
 
 ### Step 3: Understand Detailed Changes in the RCA Panel
 
 Once an element is selected, the RCA panel opens on the right sidebar. It displays structured diff breakdowns across several categories:
+
+
+<p align="center">
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAmain.png').default} alt="RCA Icon in Toolbar" width="200" height="400" className="doc_img"/>
+</p>
+
 
 | Category | What You'll See |
 |---|---|

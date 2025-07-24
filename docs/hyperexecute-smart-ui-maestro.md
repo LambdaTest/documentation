@@ -130,7 +130,7 @@ In your Maestro test YAML files (e.g., `maestro-test/test.yaml`), add the `takeS
 
 #### 4.3. Set Up Environment Variables
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Username and Access Key Page](https://accounts.lambdatest.com/security/username-accesskey).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
