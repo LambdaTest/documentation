@@ -633,7 +633,7 @@ module.exports = {
                    {
                     type: "doc",
                     label: "Hyperexecute Smart UI Testing - Maestro",
-                    id: "hyperexecute-smart-ui-maestro",
+                    id: "hyperexecute-smart-ui-sdk-maestro",
                   },
                   {
                     type: "doc",

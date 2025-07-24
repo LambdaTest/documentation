@@ -1,5 +1,5 @@
 ---
-id: hyperexecute-smart-ui-maestro
+id: hyperexecute-smart-ui-sdk-maestro
 title: UI Testing with Maestro using HyperExecute and SmartUI SDK
 hide_title: false
 sidebar_label: Maestro
@@ -12,9 +12,9 @@ keywords:
     - visual testing android emulator
     - smartui app screenshots
     - hyperexecute yaml mobile
-url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-maestro/
+url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-sdk-maestro/
 site_name: LambdaTest
-slug: hyperexecute-smart-ui-maestro/
+slug: hyperexecute-smart-ui-sdk-maestro/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
