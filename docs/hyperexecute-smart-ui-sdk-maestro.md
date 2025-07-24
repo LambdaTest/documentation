@@ -130,7 +130,9 @@ In your Maestro test YAML files (e.g., `maestro-test/test.yaml`), add the `takeS
 
 #### 4.3. Set Up Environment Variables
 
-To authenticate with the LambdaTest platform, export your LambdaTest credentials as environment variables.
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+
+Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
@@ -155,6 +157,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 </TabItem>
 </Tabs>
+
 
 ## Step 5: Configure the HyperExecute YAML
 
