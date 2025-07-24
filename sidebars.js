@@ -1207,6 +1207,7 @@ module.exports = {
         collapsed: true,
         label: "Features",
         items: [
+          "kaneai-manual-interaction",
           "kane-ai-javascript-execution",
           "kane-ai-geolocation-tunnel-proxy",
           "kaneai-auto-heal",
@@ -1241,7 +1242,7 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Video Tutorials",
-        items: ["kaneai-test", "kaneai-test-manual", "kaneai-edit-test-steps"],
+        items: ["kaneai-test", "kaneai-test-manual-interaction-video", "kaneai-edit-test-steps"],
       },
       {
         type: "category",
