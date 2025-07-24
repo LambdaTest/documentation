@@ -64,6 +64,25 @@ At each step performed, it is highlighted if the instruction was recorded using 
 - Navigating to a screen accessible only through an long tap sequence.
 - Working with dynamic UI elements such as infinite-scroll lists or carousels which render items on demand.
 
+** Note** that following operations are not present in the Manual Interaction for now:
+
+#### Web Browser on Desktop:
+- Drag and drop on canvas elements
+- Double click
+- Right click
+- Hover
+
+#### Mobile App:
+- Two fingers scroll
+- Click and hold 
+- Double click
+- Copy paste 
+- Recent apps 
+- Mobile keyboard support 
+- Using backspace
+- Typed characters will be considered in the instruction even if they didn't get typed in the input box. eg: In an Input box where only numbers are allowed if you try to type alphabets then those will get included in the instruction but not in the input box. 
+- System popups 
+
 ### Tutorial:  
 
 <iframe src="https://app.trupeer.ai/embed?slug=vrSqRvouk" width="640" height="360" frameborder="0" allowfullscreen="true" className="KaneIframe"></iframe>
