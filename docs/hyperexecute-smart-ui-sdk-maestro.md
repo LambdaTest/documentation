@@ -162,7 +162,6 @@ The HyperExecute YAML file is the blueprint for your test execution. It tells Hy
 
 You need to add your `PROJECT_TOKEN` (from Step 1) and your `appId` (from Step 3) to the YAML file. Below are example configurations for running Maestro tests on Emulators and Real Devices.
 
-## new tab
 <Tabs className="docs__val">
 <TabItem value="android-rd" label="Android-Real Device" default>
 
