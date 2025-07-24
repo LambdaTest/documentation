@@ -76,14 +76,15 @@ Once the project is created, you will get a unique `PROJECT_TOKEN`. Copy this to
 You can configure your own existing Maestro project or get started quickly by cloning our sample repository.
 
 ```bash
-git clone [https://github.com/LambdaTest/smartui-maestro-sample.git](https://github.com/LambdaTest/smartui-maestro-sample.git)
+git clone https://github.com/LambdaTest/smartui-maestro-sample
 cd smartui-maestro-sample
-````
+```
 
 :::tip Sample Repo
 You can find the complete code for this example in the following LambdaTest GitHub repository.
 
-<a href="https://www.google.com/search?q=https://github.com/LambdaTest/smartui-maestro-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"> View on GitHub</a>
+<a href="https://github.com/LambdaTest/smartui-maestro-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+
 :::
 
 ## Step 3: Upload Your Application
@@ -92,12 +93,13 @@ To run your tests on LambdaTest real devices or emulators, you need to upload yo
 
 Run the following `cURL` command in your terminal. Ensure you have set your `LT_USERNAME` and `LT_ACCESS_KEY` as environment variables.
 
-```bash
-curl -u "$LT_USERNAME:$LT_ACCESS_KEY" 
- -X POST "[https://manual-api.lambdatest.com/app/upload/realDevice](https://manual-api.lambdatest.com/app/upload/realDevice)" 
- -F "appFile=@/path/to/your/app.apk" 
- -F "name=YourAppName"
-```
+
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"<YOUR_LOCAL_APP_PATH>"" -F "name="sampleApp""
+`}
+</CodeBlock>
+</div>
 
 From the JSON response, copy the value of `app_url`. It will be in the format `lt://...`. This is your `appId`.
 
@@ -132,14 +134,25 @@ To authenticate with the LambdaTest platform, export your LambdaTest credentials
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
-<CodeBlock className="language-bash"\>
-{`export LT_USERNAME=&quot;${YOUR_LAMBDATEST_USERNAME()}&quot; export LT_ACCESS_KEY=&quot;${YOUR_LAMBDATEST_ACCESS_KEY()}&quot;`}
-</CodeBlock>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
 </TabItem>
-<TabItem value="powershell" label="Windows">
-<CodeBlock className="language-powershell">
-{`$env:LT_USERNAME=&quot;${YOUR_LAMBDATEST_USERNAME()}&quot; $env:LT_ACCESS_KEY=&quot;${YOUR_LAMBDATEST_ACCESS_KEY()}&quot;`}
-</CodeBlock>
+
+<TabItem value="powershell" label="Windows" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+
 </TabItem>
 </Tabs>
 
@@ -149,61 +162,26 @@ The HyperExecute YAML file is the blueprint for your test execution. It tells Hy
 
 You need to add your `PROJECT_TOKEN` (from Step 1) and your `appId` (from Step 3) to the YAML file. Below are example configurations for running Maestro tests on Emulators and Real Devices.
 
-#### Example for Emulators
+## new tab
+<Tabs className="docs__val">
+<TabItem value="android-rd" label="Android-Real Device" default>
 
-```yaml
-version: 0.1
-runson: android
-concurrency: 2
-
-jobLabel: [Maestro, Emulator, SmartUI]
-
-env:
-  # Add your Project Token from SmartUI
-  PROJECT_TOKEN: "<YOUR_PROJECT_TOKEN>"
-  # Enable Maestro test execution
-  MAESTRO: true
-
-pre:
-  # Scripts to set up Maestro and dependencies
-  - chmod +x maestro-test/setup-script.sh
-  - maestro-test/setup-script.sh
-  - npm i @lambdatest/smartui-cli
-
-testDiscovery:
-  # Discovers the Maestro test files to run
-  command: cat ./maestro-test/discover.txt
-
-testRunnerCommand:
-  # Command to execute each test file
-  ./maestro-test/runTest.sh $test
+```yaml reference title="maestro_Real_Devices.yaml"
+https://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Real_Devices.yaml
 ```
+</TabItem>
 
-#### Example for Real Devices
+<TabItem value="android-emu" label="Android-Emulator" default>
 
-```yaml
-version: 0.1
-runson: android
-concurrency: 2
+> To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@lambdatest.com](mailto:support@lambdatest.com).
 
-jobLabel: [Maestro, RealDevice, SmartUI]
-
-env:
-  # Add your Project Token from SmartUI
-  PROJECT_TOKEN: "<YOUR_PROJECT_TOKEN>"
-  # Enable Maestro test execution
-  MAESTRO: true
-
-# Framework-specific arguments for real devices
-framework:
-  name: maestro # Specifying the framework name
-  args:
-    # Select specific devices or use regex
-    devices: [".*"]
-    isRealMobile: true
-    # Add your App ID from the upload step
-    appId: "lt://<YOUR_APP_ID>"
+```yaml reference title="maestro_Emulator_HyperEx.yaml"
+https://github.com/LambdaTest/smartui-maestro-sample/blob/main/yaml/maestro_Emulator_HyperEx.yaml
 ```
+</TabItem>
+
+</Tabs>
+
 
 :::info
 In the real device configuration, the `testDiscovery` and `testRunnerCommand` are handled internally by the `maestro` framework integration on HyperExecute. You just need to specify the `framework` block.
@@ -211,26 +189,48 @@ In the real device configuration, the `testDiscovery` and `testRunnerCommand` ar
 
 ## Step 6: Execute Your Test Suite
 
-Once your configuration is complete, you are ready to run the tests on HyperExecute. In your terminal, from the root directory of your project, run the following command:
+Run the below command in your terminal at the root folder of the project:
 
 ```bash
-# For MacOS/Linux, make the CLI executable first
-chmod u+x ./hyperexecute
-
-# Execute the tests using your YAML file
-./hyperexecute --config yaml/maestro_Real_Devices.yaml
+./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
 ```
 
-Alternatively, if you haven't set your credentials as environment variables, you can pass them as arguments:
+OR use this command if you have not exported your username and access key in the step 2.
 
-<CodeBlock className="language-bash">
-{`./hyperexecute --user ${YOUR_LAMBDATEST_USERNAME()} --key ${YOUR_LAMBDATEST_ACCESS_KEY()} --config yaml/maestro_Real_Devices.yaml`}
-</CodeBlock>
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/1.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
+
 
 ## Step 7: View Your Visual Test Results on SmartUI
 
 After the HyperExecute job is finished, all screenshots captured using the `takeScreenshot` command will be available in your SmartUI project for review.
 
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="SmartUI Results" width="768" height="373" className="doc_img"/>
+
 1.  Navigate to the [SmartUI Dashboard](https://smartui.lambdatest.com/).
 2.  Select your project and the most recent build.
 3.  Here, you can compare screenshots against the baseline, highlight differences, and approve or reject changes. You can use features like Smart Ignore to mask dynamic areas for more stable comparisons.
+
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">SmartUI App SDK</span>
+    </li>
+  </ul>
+</nav>
