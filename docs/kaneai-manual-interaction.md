@@ -37,7 +37,7 @@ slug: kaneai-manual-interaction/
     }}
 ></script>
 ### Overview
-Manual Interaction support in KaneAI enables users to manually interact with the applications in real-time during authoring or playground session tp record test steps. This mode lets you momentarily pause the agent, take full control of the application under test, and reach an exact UI state before resuming automated authoring. Whether you're testing Web or Mobile apps, Manual Interaction allows for actions like clicking, typing, scrolling and navigating through the application, simulating real user behaviors.
+Manual Interaction support in KaneAI enables users to manually interact with the applications in real-time during authoring or playground session to record test steps. This mode lets you momentarily pause the agent, take full control of the application under test, and reach an exact UI state before resuming automated authoring. Whether you're testing Web or Mobile apps, Manual Interaction allows for actions like clicking, typing, scrolling and navigating through the application, simulating real user behaviors.
 
 :::note
 Manual Interaction is only supported in Web Browser on desktop & Mobile App testing (Android). Support for manual interaction on iOS app testing will be coming soon. 
