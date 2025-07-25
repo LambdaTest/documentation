@@ -3,7 +3,7 @@ id: kaneai-test-manual-interaction-video
 title: Manual Interaction Using KaneAI
 hide_title: false
 sidebar_label: Manual Interaction
-description: Learn how to KaneAI simplifies test automation by allowing manual interaction to create prompts in natural language, analyzing test steps, generating code in various languages. 
+description: Discover how KaneAI streamlines test automation by enabling manual interactions to create natural language prompts, analyze test steps, and generate code in multiple programming languages. 
 keywords:
   - lambdatest automation
   - lambdatest kaneai
