@@ -46,6 +46,14 @@ The SmartUI CLI includes a `requestHeaders` configuration option, allowing you t
 
 By including these headers in the SmartUI CLI configuration, you can seamlessly access protected resources, enhancing the flexibility and security of your automated visual testing process.
 
+### Steps to Implement
+
+1.  **Locate Your Configuration File**: Open your `smartui.json` file, which should be in the root directory of your project.
+2.  **Add the `requestHeaders` Array**: If the array does not already exist, add it to the JSON structure.
+3.  **Define Your Headers**: Inside the `requestHeaders` array, add a new object for each header you need to send. Each object must contain a single key-value pair representing the header's name and its value.
+4.  **Save the File**: Once you save the changes, the SmartUI CLI will use this configuration for the next test run.
+
+
 ## Configuration in `smartui.json`
 
 To use this feature, you need to add the `requestHeaders` array to your `smartui.json` configuration file. This array contains objects, where each object represents a key-value pair for a custom header. The CLI will automatically include these headers in all HTTP requests it makes to fetch assets for rendering the webpage.
@@ -81,12 +89,6 @@ Below is an example of how to configure custom headers in your `smartui.json` fi
       * **Key**: The name of the HTTP header (e.g., `Authorization`, `X-Custom-Header-1`).
       * **Value**: The corresponding value for the header (e.g., `Bearer your-access-token`, `custom-value-1`).
 
-### Steps to Implement
-
-1.  **Locate Your Configuration File**: Open your `smartui.json` file, which should be in the root directory of your project.
-2.  **Add the `requestHeaders` Array**: If the array does not already exist, add it to the JSON structure.
-3.  **Define Your Headers**: Inside the `requestHeaders` array, add a new object for each header you need to send. Each object must contain a single key-value pair representing the header's name and its value.
-4.  **Save the File**: Once you save the changes, the SmartUI CLI will use this configuration for the next test run.
 
 :::note
 
