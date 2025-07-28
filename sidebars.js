@@ -630,6 +630,11 @@ module.exports = {
                     label: "Hyperexecute Smart UI Testing - Cypress",
                     id: "hyperexecute-smart-ui-sdk-using-cypress",
                   },
+                   {
+                    type: "doc",
+                    label: "Hyperexecute Smart UI Testing - Maestro",
+                    id: "hyperexecute-smart-ui-sdk-maestro",
+                  },
                   {
                     type: "doc",
                     label: "Hyperexecute Smart UI Testing - Playwright",
@@ -2980,6 +2985,12 @@ module.exports = {
         id: "smartui-mcp-server",
       },
       {
+        type: "doc",
+        label: "SmartUI RCA",
+        id: "smartui-root-cause-analysis",
+      },
+
+      {
         type: "category",
         collapsed: false,
         label: "Visual Testing Configurations",
@@ -3123,6 +3134,7 @@ module.exports = {
               "smartui-cli-responsive-dom",
               "smartui-sdk-config-options",
               "smartui-multiple-assets-hosts",
+              "smartui-cli-request-headers",
               "smartui-cli-basic-auth",
               "smartui-sdk-tunnel",
               "smartui-shadow-dom",
