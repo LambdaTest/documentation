@@ -1234,6 +1234,7 @@ module.exports = {
           "kane-ai-supported-assertions",
           "kaneai-failure-conditions",
           "kane-ai-web-test-writing-guidelines",
+          "kane-ai-app-test-writing-guidelines"
         ],
       },
       {
