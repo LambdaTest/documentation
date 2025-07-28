@@ -72,7 +72,7 @@ Use instruction:
 
 If issues arise:
 
-- Use Appium Inspector or RD App Live UI Inspector to verify if the element class is supported.
+- Use LambdaTest App Live (UI Inspector)[https://www.lambdatest.com/support/docs/ui-inspector/] to verify if the element class is supported.
 
 ## Dismissing Popups
 
