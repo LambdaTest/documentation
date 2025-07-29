@@ -546,6 +546,27 @@ framework:
 ```
 :::
 
+#### Regex Support for Dynamic Report Paths
+You can now use **glob-style wildcards `(**)`** in the location field of `partialReports` to dynamically match nested folders and custom report paths. This is especially useful when your test reports are generated inside directories that include date stamps, environment names, or other runtime variables.
+
+Example:
+```yaml title="hyperexecute.yaml"
+partialReports:
+  location: reports/**/cucumber/
+  # location: target/abc/**/pqr/**/cucumber-reports
+  frameworkName: cucumber
+  type: json
+```
+
+Ensure that your Testrunner.java file should have the complete path from where partial reports will be added. Example:
+
+```java title="Testrunner.java"
+plugin = {
+    "json:target/abc/mno/pqr/xyz/cucumber-reports/CucumberTestReport.json",
+    "json:target/abc/its/pqr/abc/cucumber-reports/CucumberTestReport.json"
+}
+```
+
 :::tip
 
 - 📕 Take a closer look at the [HyperExecute Reports](/support/docs/hyperexecute-reports/)
