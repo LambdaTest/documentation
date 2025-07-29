@@ -2299,9 +2299,7 @@ module.exports = {
               "network-data-masking",
               "upload-files-using-lambdatest",
               "setup-pre-run-executable",
-              "har-log-viewer",
-              "daily-usage-limit",
-            ],
+              "har-log-viewer",            ],
           },
         ],
       },
@@ -2329,7 +2327,6 @@ module.exports = {
           "upload-files-using-lambdatest",
           "setup-pre-run-executable",
           "build-split",
-          "daily-usage-limit",
         ],
       },
       {
