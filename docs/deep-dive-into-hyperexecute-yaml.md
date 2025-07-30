@@ -948,7 +948,7 @@ alwaysRunPostSteps: true
 
 ### `project`
 
-This flag is used to set the Name of your Projects which would later allow you to see all jobs of that Project at one place.
+This flag is used to set the Name of your Projects which would later allow you to see all jobs of that Project at one place. To know more about Projects [click here](/support/docs/hyperexecute-projects).
 
 ```yaml
 project:
