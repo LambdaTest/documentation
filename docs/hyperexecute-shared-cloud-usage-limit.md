@@ -1,5 +1,5 @@
 ---
-id: hyperexecute-daily-usage-limit
+id: hyperexecute-shared-cloud-usage-limit
 title: Daily Usage Limit Per Organization | HyperExecute
 hide_title: false
 sidebar_label: Daily Usage Limit Per Organization
@@ -12,9 +12,9 @@ keywords:
   - parallel sessions
   - automation
 image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/hyperexecute-daily-usage-limit/
+url: https://www.lambdatest.com/support/docs/hyperexecute-shared-cloud-usage-limit/
 site_name: LambdaTest
-slug: hyperexecute-daily-usage-limit/
+slug: hyperexecute-shared-cloud-usage-limit/
 ---
 
 <script type="application/ld+json"
