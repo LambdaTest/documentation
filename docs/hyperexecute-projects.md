@@ -116,6 +116,46 @@ In addition to custom projects, HyperExecute supports integration with specializ
   </a>
 </div>
 
+## Link Jobs to Projects Using YAML
+When you run jobs on HyperExecute, connecting them to projects helps you track performance trends, compare results over time, and get valuable insights from your test history. You can link jobs to projects in two ways using your YAML configuration file.
+
+### Method 1: Use an Existing Project
+If you already have a project in HyperExecute, follow these steps to connect your jobs to it:
+
+1. Go to [Projects List](https://hyperexecute.lambdatest.com/hyperexecute/projects) tab on HyperExecute Dashboard.
+2. Select and open the project you want to link your jobs to.
+3. Click the copy icon next to the project name. This copies the project configuration you'll need for your YAML file.
+4. Paste the copied details into your YAML file before running your job.
+5. All jobs using this YAML will automatically appear in your selected project. 
+
+The copied project detail which you need to add to the YAML will look like this:
+```yaml
+ project:
+    name: 'demo-project' #project name
+    id: '1abc2345-56de-7890-f1cg-h2ij34k56789' #project id
+```
+
+<video class="right-side" width="100%" controls id="vid">
+<source src= {require('../assets/videos/hyperexecute/projects/copy-project.mp4').default} type="video/mp4" />
+</video>
+
+### Method 2: Create a New Project Automatically
+
+Want to start fresh or organize jobs under a new project? You can create one directly from your YAML file. To create a new project for your job run, follow the steps given below.
+
+1. Think of a unique name that clearly identifies what you're testing.
+2. Include the project name in your YAML file in the following format.
+
+```yaml
+ project:
+    name: 'unique_project_name'
+```
+
+3. All jobs using this YAML will automatically appear in your new project.
+
+:::note
+If a project with your chosen name already exists, HyperExecute will link your jobs to the existing project instead of creating new.
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
