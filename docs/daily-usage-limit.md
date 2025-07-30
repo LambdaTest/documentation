@@ -1,20 +1,15 @@
 ---
-id: daily-usage-limit
+id: shared-cloud-usage
 title: Daily Usage Limit Per Organization | LambdaTest
 hide_title: true
 sidebar_label: Daily Usage Limit Per Organization
 description: To ensure fair usage and best practices, LambdaTest enforces a daily capacity limit on the total test time for each organization.
 keywords:
   - over-exploitation
-  - lambdatest best practices
-  - automation testing
-  - concurrency
-  - parallel sessions
-  - automation
 image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/daily-usage-limit/
+url: https://www.lambdatest.com/support/docs/shared-cloud-usage/
 site_name: LambdaTest
-slug: daily-usage-limit/
+slug: shared-cloud-usage/
 ---
 
 <script type="application/ld+json"
@@ -35,7 +30,7 @@ slug: daily-usage-limit/
           "@type": "ListItem",
           "position": 3,
           "name": "Daily Usage Limit",
-          "item": "https://www.lambdatest.com/support/docs/daily-usage-limit/"
+          "item": "https://www.lambdatest.com/support/docs/shared-cloud-usage/"
         }]
       })
     }}
