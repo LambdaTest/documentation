@@ -12,9 +12,9 @@ keywords:
   - lambdatest
   - MCP
   - MCP server
-url: https://www.lambdatest.com/support/docs/automation-mcp-server
+url: https://www.lambdatest.com/support/docs/automation-mcp-server/
 site_name: LambdaTest
-slug: automation-mcp-server
+slug: automation-mcp-server/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
