@@ -12,7 +12,7 @@ const DemoPopup = ({ show, open_modal }) => {
     const [userEmail, setUserEmail] = useState("");
     const [isLoading, setLoading] = useState(false);
     const [country, setCountry] = useState([]);
-    const [error, setError] = useState([]);
+    const [error, setError] = useState(null);
 
     const [showModal, setShowModal] = useState(false);
     let modalOpen = open_modal && open_modal == true ? true : false;
@@ -54,8 +54,7 @@ const DemoPopup = ({ show, open_modal }) => {
                     setCountry(result)
                 },
                 (error) => {
-                    setError(error);
-
+                    setError("Failed to load country data");
                 }
             )
     }, [])
@@ -63,17 +62,23 @@ const DemoPopup = ({ show, open_modal }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true)
+        setError(null); // Clear any previous errors
         // setIsRevenueHeroLoading(true);
+        
+        
         let utmJsonTemp = getCookie("utm");
         const { email, mobile_no, isd_code, first_name, last_name, product_interested_in, message } = form.current;
+        
+        
+        
         let formdata = {
-            email: email.value,
-            mobile_no: mobile_no.value,
-            first_name: first_name.value,
-            product_interested_in: product_interested_in.value,
-            last_name: last_name.value,
-            isd_code: isd_code.value,
-            message: message.value,
+            email: email.value || '',
+            mobile_no: mobile_no.value || '',
+            first_name: first_name.value || '',
+            product_interested_in: product_interested_in ? product_interested_in.value : '',
+            last_name: last_name.value || '',
+            isd_code: isd_code.value || '',
+            message: message ? message.value || '' : '',
             source_page_url: window.location.href,
             source_page_title: document.title,
             query_type: "Schedule a Demo",
@@ -93,7 +98,7 @@ const DemoPopup = ({ show, open_modal }) => {
             const res = response.data;
             form.current.reset();
             // getDemoFormResponse(true);
-            if (formdata.email.toLowerCase().endsWith('gmail.com')) {
+            if (formdata.email && formdata.email.toLowerCase().endsWith('gmail.com')) {
                 window.location.href = `https://www.lambdatest.com/thank-you`;
                 return;
             }
