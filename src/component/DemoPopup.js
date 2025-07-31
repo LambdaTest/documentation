@@ -1,7 +1,7 @@
 // Modal.js
-// import axios from 'axios';
+import axios from 'axios';
 import React, { useEffect, useRef, useState } from 'react';
-import { getProductType, injectRevenueHero, parseJwt } from './utilities';
+import { getCookie, getProductType, injectRevenueHero, parseJwt } from './utilities';
 
 const DemoPopup = ({ show, open_modal }) => {
     // if (!show) {
@@ -12,6 +12,7 @@ const DemoPopup = ({ show, open_modal }) => {
     const [userEmail, setUserEmail] = useState("");
     const [isLoading, setLoading] = useState(false);
     const [country, setCountry] = useState([]);
+    const [error, setError] = useState([]);
 
     const [showModal, setShowModal] = useState(false);
     let modalOpen = open_modal && open_modal == true ? true : false;
