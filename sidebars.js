@@ -729,7 +729,15 @@ module.exports = {
             items: [
               "hyperexecute-how-to-get-my-username-and-access-key",
               "hyperexecute-environment-variable-setup",
-              "hyperexecute-how-to-save-and-manage-secrets",
+              {
+                type: "category",
+                collapsed: true,
+                label: "Secrets Management",
+                items: [
+                  "hyperexecute-how-to-save-and-manage-secrets",
+                  "hyperexecute-how-to-manage-project-level-secrets"
+                ],
+              },
               "hyperexecute-how-to-configure-tunnel",
               "hyperexecute-how-to-configure-os-and-browser",
               "hyperexecute-how-to-find-correct-concurrency",
@@ -740,6 +748,15 @@ module.exports = {
               "hyperexecute-how-to-perform-group-based-test-discovery-in-testng",
               "hyperexecute-how-to-resolve-version-conflict",
               "hyperexecute-org-product-preferences",
+            ],
+          },
+           {
+            type: "category",
+            collapsed: true,
+            label: "Secrets Management",
+            items: [
+              "hyperexecute-how-to-save-and-manage-secrets",
+              "hyperexecute-how-to-manage-project-level-secrets"
             ],
           },
           {
