@@ -77,7 +77,7 @@ project: your-project-name
 
 # highlight-start
 env:
-  SECRET_KEY: ${{LT_SECRET_KEY}}
+  LT_SECRET_KEY: ${{.secrets.token}}
 # highlight-end
 ```
 
