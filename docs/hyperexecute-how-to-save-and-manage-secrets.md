@@ -115,21 +115,17 @@ During HyperExecute test execution, you might need to access sensitive informati
 
 Consider these secret key names: `secretKey1` and `secretKey2`.
 
-```bash
+```yaml
 version: 0.1
 env:
-  MyKey1: ${{.secrets.secretKey1}}
-
-vars:
- MyKey2: ${{.secrets.secretKey2}}
- Path: /java/files*.feature
+  MyKey1: ${{.secrets.token}}
  
- runson: win
- testDiscovery:
-   type: raw
-   mode: dynamic
-   args:
-     featureFilePath: ${Path}
+runson: win
+testDiscovery:
+  type: raw
+  mode: dynamic
+  args:
+    featureFilePath: ${Path}
      
 testRunnerCommand: npm run --username abc --password ${{.secrets.SecretKey2}}
 ```
