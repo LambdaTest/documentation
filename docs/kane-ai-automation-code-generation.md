@@ -53,7 +53,10 @@ Click the `Generate New Code` button to go to code generation page where you can
 Selenium is your go-to tool for cross-browser testing, enabling automated testing across different web browsers like Chrome, Firefox, Safari, and Edge. It's perfect for end-to-end testing of web applications. With Kane AI, you can generate Selenium code in:
 
 - **Python:** PyTest is used to generate Selenium Python code.
-- **Java:** TestNG is used to generate Selenium Java code.
+
+:::info
+Support for Java language in Selenium has been restricted for major improvements and will be made available soon.
+:::
 
 :::tip
  By default all KaneAI authored tests automation scripts for Web are generated in Selenium Python.
@@ -62,31 +65,39 @@ Selenium is your go-to tool for cross-browser testing, enabling automated testin
 ### Playwright
 Playwright is a fast and reliable end-to-end testing for complex modern web applications it uses a single API to automate Chromium, Firefox, and WebKit. You can generate Playwright code in:
 
-- **Javascript**
+- **JavaScript**
 - **Python** 
+
+:::info
+Support for Playwright framework has been restricted for major improvements and will be made available soon.
+:::
 
 ### Cypress
 Cypress is a modern web front-end testing tool built with JavaScript Mocha. It operates directly on the browsers without the need for Selenium. Its unique DOM manipulation technique makes it a very developer and QA friendly tool. You can generate Cypress code in:
 
-- **Javascript**
+- **JavaScript**
 
-:::note 
-Cypress won't be available for test cases where **Switching Tabs** or **File Upload** is present as its not inherently supported by the tool.
+:::info 
+Support for Cypress framework has been restricted for major improvements and will be made available soon. Additionally, Cypress won't be available for test cases where **Switching Tabs** or **File Upload** is present as it's not inherently supported by the framework.
 :::
 
 ### WebdriverIO
 WebdriverIO is a popular automation testing framework for web and mobile applications. It is built on top of the WebDriver protocol and provides a simple and flexible API for writing tests. You can generate WebdriverIO code in:
 
-- **Javascript**
+- **JavaScript**
+
+:::info 
+Support for WebdriverIO framework has been restricted for major improvements and will be made available soon.
+:::
 
 ## App Frameworks
 
 ### Appium
-Appium is an open-source automation tool for running scripts and testing native applications and mobile web apps on different platforms like IOS and Android. You can generate Appium code in:
+Appium is an open-source automation tool for running scripts and testing native applications and mobile web apps on different platforms like iOS and Android. You can generate Appium code in:
 
 - **Python:**  PyTest is used to generate Appium Python script. 
 - **Java:** TestNG is used to generate Appium Java scripts.
-- **Javascript** : The code generation for the Appium framework in JavaScript is being rolled out gradually and is not yet generally available.
+- **JavaScript** : The code generation for the Appium framework in JavaScript is being rolled out gradually and is not yet generally available.
 
 :::tip
 By default all KaneAI authored tests automation scripts for App are generated in Appium Python.
