@@ -2509,6 +2509,11 @@ module.exports = {
         items: ["playwright-testing-guide"],
       },
       {
+        type: "doc",
+        id: "playwright-sdk",
+        label: "Playwright SDK",
+      },
+      {
         type: "category",
         collapsed: true,
         label: "Languages and Frameworks",
@@ -2527,6 +2532,7 @@ module.exports = {
               "javascript-with-playwright",
               "jest-with-playwright",
               "typescript-with-playwright",
+              "playwright-sdk"
             ],
           },
           {
