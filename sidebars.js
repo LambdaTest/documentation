@@ -1190,6 +1190,7 @@ module.exports = {
           "kane-ai-web-test",
           "kane-ai-guided-walkthrough",
           "kane-ai-app-test",
+          "kaneai-mobile-browser-test",
           "kane-ai-automation-code-generation",
         ],
       },
