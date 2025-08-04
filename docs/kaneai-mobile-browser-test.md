@@ -74,7 +74,7 @@ For example:
 Keep adding tests in plain English as you go; KaneAI will automatically queue them up for execution, so you don't have to wait for one test to finish before writing the next. Click on the **Finish Test** button.
 > **Remember:** The more specific you are, the more accurate KaneAI's generated test cases will be.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/Android-Img2.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> <br /> <br />
+<img loading="lazy" src={require('../assets/images/kane-ai/Android-Img2_compressed.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> <br /> <br />
 
 ### Step 3: Save your Test Case
 Now, save your test cases that you have generated till now.
@@ -82,7 +82,7 @@ Now, save your test cases that you have generated till now.
 Select your Project, and the folder in which you want to store your test cases. The **Test Name** and the **Description** will be generated automatically, and you can also edit it. Select the **Type** of your test, and the status, and define the necessary tags which will help you to search your tests later.
 
 
-<img loading="lazy" src={require('../assets/images/kane-ai/Android-Img3.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> <br /> <br />
+<img loading="lazy" src={require('../assets/images/kane-ai/Android-Img3_compressed.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> <br /> <br />
 
 ### Step 4: Execute your test
 
@@ -142,14 +142,14 @@ Keep adding tests in plain English as you go; KaneAI will automatically queue th
 > **Remember:** The more specific you are, the more accurate KaneAI's generated test cases will be.
 
 
-<img loading="lazy" src={require('../assets/images/kane-ai/iOSbrowser-img2.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> <br /> <br />
+<img loading="lazy" src={require('../assets/images/kane-ai/iOSbrowser-img2_compressed.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> <br /> <br />
 
 ### Step 3: Save your Test Case
 Now, save your test cases that you have generated till now.
 
 Select your Project, and the folder in which you want to store your test cases. The **Test Name** and the **Description** will be generated automatically, and you can also edit it. Select the **Type** of your test, and the status, and define the necessary tags which will help you to search your tests later.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/iOSbrowserimg3.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> <br /> <br />
+<img loading="lazy" src={require('../assets/images/kane-ai/iOSbrowserimg3_compressed.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> <br /> <br />
 
 ### Step 4: Execute your test
 
