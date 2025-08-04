@@ -2,7 +2,7 @@
 id: kane-ai-app-test
 title: Automate your App Testing with KaneAI
 hide_title: false
-sidebar_label: App Test
+sidebar_label: Author your First App Test
 description: Learn how to automate app testing with KaneAI. Generate and execute tests in plain English, save cases, and run them seamlessly
 keywords:
   - lambdatest automation

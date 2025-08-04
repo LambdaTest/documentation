@@ -1188,8 +1188,9 @@ module.exports = {
         items: [
           "why-we-need-kane-ai",
           "kane-ai-web-test",
-          "kane-ai-guided-walkthrough",
           "kane-ai-app-test",
+          "kaneai-mobile-browser-test",
+          "kane-ai-guided-walkthrough",
           "kane-ai-automation-code-generation",
         ],
       },
