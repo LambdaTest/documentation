@@ -43,6 +43,8 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+skfgkjsjre
+
 | Rule Name | WCAG | Level | Impact | Description |
 |-----------|------|-------|--------|-------------|
 | Missing Image Alt | 1.1.1 | A | Critical | Images lack alternative text descriptions that screen readers can announce to users. Add `android:contentDescription` to meaningful images or set to empty string for decorative images to ensure proper accessibility support. |
