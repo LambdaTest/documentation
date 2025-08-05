@@ -149,6 +149,7 @@
         });
       }
      }
+    window.sendAmplitudeEvents = sendAmplitudeEvents;
     window.addEventListener('click', function (event) {
       if(event.target.matches(".menu__link")){
         let params = window.location.href.split('/');
