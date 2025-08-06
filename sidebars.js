@@ -753,15 +753,6 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Secrets Management",
-            items: [
-              "hyperexecute-how-to-save-and-manage-secrets",
-              "hyperexecute-how-to-manage-project-level-secrets"
-            ],
-          },
-          {
-            type: "category",
-            collapsed: true,
             label: "Use Cases",
             link: {
               type: "doc",
