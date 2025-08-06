@@ -68,11 +68,6 @@ Here is the link to the documentation for the remark capability:
 
 The test failure categorization AI is a machine learning model that classifies test failures into different categories. The AI model uses various parameters such as environment, browser, OS, and failure type to categorize the failures. This helps in identifying the root cause of failures and improving test automation efficiency.
 
-<VideoEmbed 
-  src="https://share.synthesia.io/embeds/videos/4a1bbc2e-6a78-4a31-86e8-1c7d3649d3b1" 
-  title="Exploring Custom Widgets for Dashboards in Lambdatest Insights"
-/>
-
 For the first failure as a user you will need to select the type of failure from the list of categories available. The categories are as follows:
 - **Product Bug:** This category is used when the failure is due to a bug in the product being tested. This could be a UI issue, a functional issue, or any other type of bug that affects the product's functionality.
 - **Test Automation Bug:** This category is used when the failure is due to a bug in the test automation code. This could be a script issue, a framework issue, or any other type of bug that affects the test automation process.
