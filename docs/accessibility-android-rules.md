@@ -43,7 +43,7 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-skfgkjsjre
+
 
 | Rule Name | WCAG | Level | Impact | Description |
 |-----------|------|-------|--------|-------------|
