@@ -75,7 +75,7 @@ Below are some key areas where accessibility testing can make an impact:
 
 ## The European Accessibility Act (EAA)
 
->  The European Accessibility Act (EAA), effective from June 2025, is a groundbreaking regulation made to improve accessibility across the European Union. This act guarantees the accessibility of digital products and services to all individuals, including the 135 million people living with disabilities in the EU. It gives businesses a clear requirement to design products and services that are accessible to everyone, breaking down digital barriers and inclusivity.
+>  The [European Accessibility Act (EAA)](https://accessible-eu-centre.ec.europa.eu/content-corner/news/eaa-comes-effect-june-2025-are-you-ready-2025-01-31_en), effective from June 2025, is a groundbreaking regulation made to improve accessibility across the European Union. This act guarantees the accessibility of digital products and services to all individuals, including the 135 million people living with disabilities in the EU. It gives businesses a clear requirement to design products and services that are accessible to everyone, breaking down digital barriers and inclusivity.
 
 ### Scope of the EAA
 
