@@ -628,7 +628,7 @@ module.exports = {
                     label: "Hyperexecute Smart UI Testing - Cypress",
                     id: "hyperexecute-smart-ui-sdk-using-cypress",
                   },
-                   {
+                  {
                     type: "doc",
                     label: "Hyperexecute Smart UI Testing - Maestro",
                     id: "hyperexecute-smart-ui-sdk-maestro",
@@ -748,7 +748,7 @@ module.exports = {
               "hyperexecute-org-product-preferences",
             ],
           },
-           {
+          {
             type: "category",
             collapsed: true,
             label: "Use Cases",
@@ -1176,12 +1176,33 @@ module.exports = {
         },
         items: [
           "why-we-need-kane-ai",
-          "kane-ai-web-test",
-          "kane-ai-guided-walkthrough",
-          "kane-ai-app-test",
-          "kane-ai-automation-code-generation",
         ],
       },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Author Your First Test",
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "Author Browser Tests with Interactive Mode",
+            items: [
+              "author-your-first-desktop-browser-test",
+              "author-your-first-mobile-browser-test",
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Author App Tests with Interactive Mode",
+            items: [
+              "author-your-first-mobile-app-test",
+            ],
+          },
+        ],
+      },
+
       {
         type: "category",
         collapsed: true,
@@ -1206,7 +1227,7 @@ module.exports = {
           "kane-ai-secrets",
           "kane-ai-smart-variables",
           "kane-ai-using-parameters",
-          "kane-ai-using-datasets",          
+          "kane-ai-using-datasets",
         ],
       },
       {
@@ -1221,7 +1242,7 @@ module.exports = {
           "kane-ai-scroll-in-feature",
           "kane-ai-jira-integration",
           "kane-ai-api-testing",
-          // "kaneai-network-throttling",          
+          "kaneai-network-throttling",
           "kane-ai-modules",
           "kaneai-modules-versions-and-enhancement",
           "kaneai-upload-and-download-files",
@@ -1245,8 +1266,9 @@ module.exports = {
           "kane-ai-web-test-writing-guidelines",
           "kane-ai-app-test-writing-guidelines",
           "error-handling-kaneai",
+          "kane-ai-automation-code-generation",
         ],
-      },  
+      },
       {
         type: "category",
         collapsed: true,
@@ -2062,7 +2084,7 @@ module.exports = {
               "accessibility-settings-ios",
               "devtools-on-real-devices-app",
               "set-date-time-hour-format-real-devices",
-              
+
             ],
           },
         ],
@@ -2298,7 +2320,7 @@ module.exports = {
               "network-data-masking",
               "upload-files-using-lambdatest",
               "setup-pre-run-executable",
-              "har-log-viewer",            ],
+              "har-log-viewer",],
           },
         ],
       },
