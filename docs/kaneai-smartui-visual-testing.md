@@ -49,20 +49,20 @@ This guide provides a detailed walkthrough on how to leverage KaneAI to create, 
 
 ## Creating Your First Visual Test
 
-### Step 1: Initiate a Web Test
-To begin, navigate to the [KaneAI dashboard](https://kaneai.lambdatest.com/dashboard) and click **Create a Web Test**. You can configure network settings before clicking **Start Testing** to launch the test authoring environment.
+### Initiate a Web Test
+To begin, navigate to the [KaneAI dashboard](https://kaneai.lambdatest.com/dashboard) and click **Author Browser Test**. You can configure network settings before clicking **Start Testing** to launch the test authoring environment.
 
 
-<img loading="lazy" src={require('../assets/images/kane-ai/smartui/initiate-web-test.png').default} alt="Initiate a Web Test in KaneAI" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/initiate-web-test.jpeg').default} alt="Initiate a Web Test in KaneAI" className="doc_img"/>
 
-### Step 2: Add a Visual Comparison Step
+### Add a Visual Comparison Step
 Author your test by writing steps in plain language, such as `go to lambdatest`.
 
  To add a visual test step, type `/` in the "Write a step" editor and select **Visual Comparison** from the command menu.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/add-visual-comparison-step.jpeg').default} alt="Add Visual Comparison Step" className="doc_img"/>
 
-### Step 3: Configure Your Screenshot
+### Configure Your Screenshot
 A configuration modal will appear for your screenshot.
 * **Screenshot Name (Required):** You must provide a descriptive name for the screenshot.
 * **Mis-Match Threshold (Optional):** Set an acceptable percentage of difference below which changes are auto-approved. The default is 0%.
@@ -74,17 +74,17 @@ Click **Create** to add the step to your test flow.
 
 ## Analyzing Baselines and Regressions
 
-### Step 4: Establish the Baseline
+### Establish the Baseline
 The first time the test is executed, it captures an initial screenshot that becomes the **Baseline** for all future comparisons. You can view this image by clicking **Show Baseline**.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/establish-baseline.jpeg').default} alt="Baseline screenshot created" className="doc_img"/>
 
-### Step 5: Rerun and Analyze the Comparison
-When you rerun the test, a new screenshot is captured and compared against the baseline. Click **Show Comparison** to open the SmartUI view. This interface highlights any visual differences found between the two images.
+### Rerun and Analyze the Comparison
+When the test case is replayed or re-run during authoring, a new screenshot is captured and compared against the baseline. Click **Show Comparison** to open the SmartUI view. This interface highlights any visual differences found between the two images.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/analyze-comparison.png').default} alt="Analyze the visual comparison between baseline and new screenshot" className="doc_img"/>
 
-### Step 6: Approve or Reject Changes
+### Approve or Reject Changes
 Within the comparison view, you can review the changes and decide on a verdict.
 * **Reject Screenshot:** If the changes are unintended defects, you may reject the comparison.
 * **Approve Screenshot:** If the changes are intentional, you may accept the comparison. This will update the baseline with the new image.
@@ -95,21 +95,57 @@ You can also adjust project settings like **Compare Type** and **Mis-Match Thres
 
 ## Saving and Automating Your Visual Test
 
-### Step 7: Save Your Test Case
+### Save Your Test Case
 Once your test flow is complete, click **Finish test**. You will be prompted to save the session, where you can define the **Project**, **Folder**, **Test Name**, and **Description**.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/save-test-case.png').default} alt="Save the test case session" className="doc_img"/>
 
-### Step 8: Schedule the Test for Automation
-You can access your saved tests via the **Test Manager**. To automate execution, navigate to **Test Runs** and schedule the finalized test[cite: 225]. When creating the run, provide a name and select **KaneAI Generated** as the `Type`. You can then set a recurring schedule for execution. Scheduled runs will automatically capture screenshots and store them in the SmartUI project for continuous comparison.
+### Configure Test Case
+After test run creation, make sure to **"Add a Configuration"**:
+* **Configuration Name**
+* **Desktop Configuration** - Choose and configure among options:
+    * Operating Systems (3) 
+    * OS Versions (6)
+    * Browsers (4)
+    * Browser Versions (from 2023 to Latest)
+    * Resolutions (11)
+
+And after creating the configuration make sure to apply this configuration to the test run.
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/test-run-config.jpeg').default} alt="Save the test case session" className="doc_img"/>
+
+### Run or Schedule the Test for Automation
+You can now simply run your tests by selecting **Run on HyperExecute** and either "Run Instance Now" (for quick run) or "Schedule Test Run" (for scheduled visual regression) 
+
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/run-test.jpeg').default} alt="Schedule the Test Run for automation" className="doc_img"/>
+
+You may also access your saved tests via the **<a href="https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-run-execution/" rel="nofollow">Test Manager</a>**. To automate execution, navigate to **<a href="https://www.lambdatest.com/support/docs/kaneai-scheduled-test-runs/" rel="nofollow">Test Runs</a>** and schedule the finalized test. When creating the run, provide a name and select **KaneAI Generated** as the `Type`. You can then set a recurring schedule for execution. Scheduled runs will automatically capture screenshots and store them in the SmartUI project for continuous comparison.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/schedule-test-run.png').default} alt="Schedule the Test Run for automation" className="doc_img"/>
 
-## Step 9: View Your Visual Test Results on SmartUI
 
-After the HyperExecute job is finished, all screenshots captured using the `takeScreenshot` command will be available in your SmartUI project for review.
+### Using Advanced Configurations for Visual Regression
+While running **Run Instances Now** user can access **Visual Regression** settings via **Advanced Configurations** 
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="SmartUI Results" width="768" height="373" className="doc_img"/>
+
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/advanced_config.jpeg').default} alt="Schedule the Test Run for automation" className="doc_img"/>
+
+Here users can enable **Visual Regression** settings to use the advanced configurations:
+* Custom Browsers (upto 4)
+* Custom Viewports (upto 5)
+* Custom Devices (upto 2) with Orientation (Portrait and Landscape)
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/visual_config.jpeg').default} alt="Schedule the Test Run for automation" className="doc_img"/>
+
+For a more flexible usage they may use the **JSON** tab where you may set your own parameters and configuration.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/visual_configs_json.jpeg').default} alt="Schedule the Test Run for automation" className="doc_img"/>
+
+
+## View Your Visual Test Results on SmartUI
+
+After the HyperExecute job is finished, all screenshots captured using the `/Visual Comparison` command via KaneAI will be available in your SmartUI project for review.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/smartui_dashboard.jpeg').default} alt="Schedule the Test Run for automation" className="doc_img"/>
+
 
 1.  Navigate to the [SmartUI Dashboard](https://smartui.lambdatest.com/).
 2.  Select your project and the most recent build.
