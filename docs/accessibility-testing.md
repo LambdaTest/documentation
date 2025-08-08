@@ -90,8 +90,10 @@ The EAA applies to a wide range of digital products and services, including:
 
 Ensuring accessibility compliance is not just good practice but a legal necessity. Several laws mandate accessibility standards to protect the rights of individuals with disabilities:
 
+- **Web Content Accessibility Guidelines (WCAG):** These guidelines are internationally recognized and provide recommendations to make web content more accessible. They are often referenced by many laws and set the standard for compliance.
 - **American Disabilities Act (ADA):** Ensures U.S. websites and digital platforms are accessible to people with disabilities. Non-compliance can result in legal actions, fines, and reputational damage.
-- **Section 508:** Mandates that federal agencies and contractors provide accessible electronic information technology, including websites and apps, to individuals with disabilities.
+- **Section 508 (Rehabilitation Act):** Mandates that federal agencies and contractors provide accessible electronic information technology, including websites and apps, to individuals with disabilities.
+- **Accessibility for Ontarians with Disabilities Act (AODA):** A Canadian law that requires businesses in Ontario to ensure that their websites and online services are accessible to individuals with disabilities.
 
 ## Benefits of Accessibility Testing 
 
