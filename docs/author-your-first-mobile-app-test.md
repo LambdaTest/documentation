@@ -49,50 +49,33 @@ In this guide, we'll walk you through how you can author your mobile app tests u
 
 **Step 1:** From the KaneAI dashboard, click on **Author App Test**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kane-omni-web-test.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/kaneai-app-dash.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-**Step 2:** A modal would appear from the side. Select the preferred OS (Android or iOS)
+**Step 2:** A modal would appear from the side. Select the preferred OS (Android or iOS). Upload the app you want to test. 
 
-**Step 3:** To enhance your authoring, KaneAI offers a few network configurations for you to choose from:
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/kaneai-app-upload.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-- **Tunnel:** Seamlessly test websites hosted locally or behind a firewall.
-- **Geolocation:** Simulate user interactions from different regions to ensure your website works as expected worldwide.
-- **Dedicated Proxy:** Exclusively available for enterprise accounts with dedicated proxy enabled
+**Step 3:** Choose your preferred device and the OS version.
 
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/kaneai-app-devices.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/app-network-config.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+**Step 4:** You can also select advanced configurations from the dropdown. 
 
-**Step 4:** Now upload the application that you want to author test cases for and select the device and OS version. 
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/kaneai-app-advanced-config.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/upload-application.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+**Step 5:** Now tell KaneAI what you want to author using natural language without the need for coding or scripting knowledge required. KaneAI translates your instructions into executable test steps automatically. 
 
-**Step 5:** Choose your preferred device and the OS version.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/select-device-os.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
-
-**Step 6:** You can also toggle on advanced settings as per your device.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/android-settings.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/ios-settings.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
-
-**Step 7:** Once done, click on **Author Test**.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/author-app-test.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
-
-**Step 8:** Now tell KaneAI what you want to author using natural language without the need for coding or scripting knowledge required. KaneAI translates your instructions into executable test steps automatically. 
-
-<img loading="lazy" src={require('../assets/images/kane-ai/write-web-test.gif').default} alt="Image" width="1347" height="616"  className="doc_img"/> 
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-app-test/kaneai-app-test-authoring.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> 
 
 As you add each instruction, KaneAI queues them in real-time without waiting for completion. This allows you to build comprehensive test flows quickly and efficiently. Once you've outlined all your test steps, click Finish Test to finalize your automated test case.
 
-**Step 9:** Now, select your **Project** and the folder where you want to save your test cases. The **Test Name** and **Description** will be generated automatically, but you can also edit them. Select your test's **Type** and **Status**, as well as the necessary tags that will allow you to search for it later.
+**Step 6:** Now, select your **Project** and the folder where you want to save your test cases. The **Test Name** and **Description** will be generated automatically, but you can also edit them. Select your test's **Type** and **Status**, as well as the necessary tags that will allow you to search for it later.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/save-test.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-browser-save.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-**Step 10:** To execute your test, click on the **Run on HyperExecute** button and you will be redirected to the HyperExecute dashboard where your tests will be executed.
+**Step 7:** To execute your test, click on the **Run on HyperExecute** button and you will be redirected to the HyperExecute dashboard where your tests will be executed.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/run-on-hye.png').default}  alt="Image" width="1347" height="616"  className="doc_img"/>
-
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-browser-test-case-manager.png').default}  alt="Image" width="1347" height="616"  className="doc_img"/>
 
 
 
