@@ -41,9 +41,9 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
-LambdaTest’s Accessibility Testing Suite ensures digital experiences are accessible to everyone. Whether it's a website, web app, or mobile app, the suite simplifies the process of testing and improving accessibility. It offers various types of accessibility testing to make seamless, user-friendly experiences available for every user, irrespective of their abilities, while also promoting adherence to fundamental accessibility standards.
+LambdaTest’s Accessibility Testing Suite ensures digital experiences are accessible to everyone. Whether it's a website, web app, or mobile app, the suite simplifies the process of testing and improving accessibility. It offers various types of accessibility testing, including support for NVDA, VoiceOver, and TalkBack, ensuring seamless experiences for users with visual, motor, and hearing impairments. It helps businesses adhere to global accessibility standards while enhancing usability across platforms. Additionally, automated accessibility checks for both web and mobile apps streamline the testing process, ensuring compliance with global standards like WCAG.
 
-## What is Accessibility Testing
+## What is Accessibility Testing?
 
 Accessibility testing is the process of evaluating and improving web apps, websites, and mobile apps to ensure they are usable by everyone, including individuals with disabilities.
 
@@ -54,24 +54,19 @@ This includes people with:
 - **Hearing impairments:** Deafness, hearing loss, relying on captions and transcripts.
 - **Cognitive impairments:** Difficulty focusing, understanding complex information, needing simpler interfaces.
 
-## Why Accessibility Testing is Important
+## Why Accessibility Testing is Important?
 
-Based on [WebAIM’s research](https://webaim.org/projects/million/), there is a significant disparity in digital inclusivity, with 95.9% of the top 1 million websites not meeting basic accessible standards. This disparity highlights the importance of accessibility testing to ensure digital spaces are accessible to all. The following explains the importance of accessibility testing:
+:::info
+Based on [**WebAIM's research**](https://webaim.org/projects/million/), there is a significant disparity in digital inclusivity, with **95.9%** of the top 1 million websites not meeting basic accessible standards. This disparity highlights the importance of accessibility testing to ensure digital spaces are accessible to all.
+:::
 
+The following explains why accessibility testing is essential:
+
+- **Meeting Accessibility Standards:** Ensuring your platform meets essential accessibility guidelines such as WCAG, ADA, and Section 508 not only reduces legal risks but also supports inclusivity and provides equal access for all users.
 - **Digital Inclusivity:** Users with disabilities can access content, eliminating barriers for those with visual, auditory, or motor impairments.
 - **Wider Audience Reach:** Over 2 billion people worldwide live with impairments. By using accessibility testing, you can reach this untapped market and grow your clientele.
 - **Improved Usability for All Users:** Features like enhanced colour contrast, keyboard navigation, and alternate text make your website easier to use for all users.
 - **Future-Proofing Your Digital Presence:** Using inclusive design now guarantees that your platform will remain ahead of the curve and relevant as accessibility standards change.
-
-## Use Cases of Accessibility Testing
-
-Below are some key areas where accessibility testing can make an impact:
-
-- **E-commerce Websites:** All users can seamlessly browse products, add items to their cart, and complete the checkout process.
-- **Government Websites:** Public services are accessible to all citizens, including those with disabilities.
-- **Mobile Apps:** Mobile apps offer a smooth and navigable experience for all users.
-- **Educational Platforms:** Helps students access learning materials, participate in discussions, and complete assignments without barriers.
-- **Financial Services:** Ensures accessibility for managing accounts, completing transactions, and accessing services.
 
 ## The European Accessibility Act (EAA)
 
@@ -86,7 +81,7 @@ The EAA applies to a wide range of digital products and services, including:
 - **Public Services:** ATMs, ticketing machines, and other self-service terminals.
 - **Financial Services:** Online banking platforms, investment services, and related digital processes.
 
-## Accessibility Laws and Compliance
+## Accessibility Laws and Compliances
 
 Ensuring accessibility compliance is not just good practice but a legal necessity. Several laws mandate accessibility standards to protect the rights of individuals with disabilities:
 
@@ -95,16 +90,17 @@ Ensuring accessibility compliance is not just good practice but a legal necessit
 - **Section 508 (Rehabilitation Act):** Mandates that federal agencies and contractors provide accessible electronic information technology, including websites and apps, to individuals with disabilities.
 - **Accessibility for Ontarians with Disabilities Act (AODA):** A Canadian law that requires businesses in Ontario to ensure that their websites and online services are accessible to individuals with disabilities.
 
-## Benefits of Accessibility Testing 
+## Use Cases of Accessibility Testing
 
-Not focusing on accessibility can be risky but when you make your platform accessible, it brings plenty of benefits for both users and business. Below are a few benefits:
+Accessibility testing is essential for all businesses striving to create inclusive digital experiences. Below are some key areas where accessibility testing can make a significant impact:
 
-- **Revenue Impact:** According to the [World Health Organization](https://www.who.int/news-room/fact-sheets/detail/disability-and-health), you're potentially excluding 2 billion users from your customer base.
-- **Competitive Disadvantage:** While your competitors turn a blind eye to accessibility, early adoption helps you gain first-mover advantage in an underserved market valued at $13 trillion according to [Return on Disability](https://www.returnonDisability.org/).
-- **Loss of Trust:** Ignoring accessibility can harm your brand’s reputation, particularly among disability communities who expect more from brands that claim inclusivity.
-- **Negative Publicity:** Social media backlash and advocacy groups pushing for better accessibility can tarnish your image.
+- **E-commerce Websites:** All users can seamlessly browse products, add items to their cart, and complete the checkout process.
+- **Government Websites:** Public services are accessible to all citizens, including those with disabilities.
+- **Mobile Apps:** Mobile apps offer a smooth and navigable experience for all users.
+- **Educational Platforms:** Helps students access learning materials, participate in discussions, and complete assignments without barriers.
+- **Financial Services:** Ensures accessibility for managing accounts, completing transactions, and accessing services.
 
-## How LambdaTest Helps Ensure Accessibility Compliance
+## How LambdaTest Helps Ensure Accessibility Compliance?
 
 LambdaTest’s Accessibility Testing Suite simplifies the process of identifying accessibility issues across websites, web apps, and mobile apps, enabling users to make improvements quickly. Below are the different types of accessibility testing that LambdaTest offers to help achieve compliance, create seamless and inclusive user experiences.
 
