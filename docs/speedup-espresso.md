@@ -75,9 +75,14 @@ POST   /framework/v1/espresso/build
 You can not use the following filters simultaneously. 
 - `class` and `package`
 - `class` and `skipClass`
-- `annotation` and `skipAnnotation`
 - `package` and `skipPackage`
 :::
+
+:::info Note
+You can use the following filters simultaneously.
+- `annotation` and `skipAnnotation`
+:::
+
 
 ## Some Examples
 
