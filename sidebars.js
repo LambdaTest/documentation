@@ -1183,7 +1183,6 @@ module.exports = {
         collapsed: true,
         label: "Author Your First Test",
         items: [
-          "generate-multiple-tests-with-ai",
           {
             type: "category",
             collapsed: true,
