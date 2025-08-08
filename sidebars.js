@@ -1255,6 +1255,7 @@ module.exports = {
           "kaneai-custom-headers",
           "kaneai-totp",
           "kaneai-scheduled-test-runs",
+          "kaneai-smartui-visual-testing",
           "kaneai-database",
         ],
       },
