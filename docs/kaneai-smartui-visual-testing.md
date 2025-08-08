@@ -45,6 +45,8 @@ import TabItem from '@theme/TabItem';
 
 This guide provides a detailed walkthrough on how to leverage KaneAI to create, manage, and automate visual regression tests. By integrating with SmartUI, you can capture screenshots, compare visual changes, and maintain UI consistency throughout your development lifecycle.
 
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/kane-dashboard.jpeg').default} alt="KaneAI Dashboard" className="doc_img"/>
+
 ## Creating Your First Visual Test
 
 ### Step 1: Initiate a Web Test
@@ -55,8 +57,6 @@ To begin, navigate to the [KaneAI dashboard](https://kaneai.lambdatest.com/dashb
 
 ### Step 2: Add a Visual Comparison Step
 Author your test by writing steps in plain language, such as `go to lambdatest`.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/smartui/kane-dashboard.jpeg').default} alt="KaneAI Dashboard" className="doc_img"/>
 
  To add a visual test step, type `/` in the "Write a step" editor and select **Visual Comparison** from the command menu.
 
