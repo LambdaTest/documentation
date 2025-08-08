@@ -2099,7 +2099,7 @@ module.exports = {
               "accessibility-settings-ios",
               "devtools-on-real-devices-app",
               "set-date-time-hour-format-real-devices",
-
+              "assistive-touch-on-real-ios-devices"
             ],
           },
         ],
@@ -2115,6 +2115,7 @@ module.exports = {
           "how-to-use-in-session-testing-tools",
           "screen-reader-on-real-devices-browser",
           "ip-geolocation-on-real-devices-browser",
+          "assistive-touch-on-real-ios-browser"
         ],
       },
     ],
