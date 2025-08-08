@@ -98,11 +98,11 @@ When triggered, each action behaves exactly as it would on a physical device, al
 
 **Step 2:** From the session toolbar, open the Settings panel and toggle Assistive Actions ON.
 
-![Assistive Touch Settings](../assets/images/real-device-app-testing/Assistive_Touch/Assistive-touch-on.png)
+![Assistive Touch Settings](../assets/images/real-device-app-testing/Assistive_Touch/Assistive-touch-on.jpeg)
 
 **Step 3:** Tap Assistive Actions to view the available system gestures.
 
-![Gesture Functions](../assets/images/real-device-app-testing/Assistive_Touch/Gesture_Functions.png)
+![Gesture Functions](../assets/images/real-device-app-testing/Assistive_Touch/Gesture_Functions.jpeg)
 
 **Step 4:** Choose the desired action icon to trigger:
 - 🏠 Home  
