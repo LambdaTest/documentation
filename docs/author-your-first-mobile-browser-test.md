@@ -49,7 +49,7 @@ In this guide, we'll walk you through how you can author your mobile browser tes
 
 **Step 1:** From the KaneAI dashboard, click on **Author Browser Test**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kane-omni-web-test.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kaneai-mobile-browser-select.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 **Step 2:** A modal would appear from the side. Select **Mobile** from the sidebar. 
 
@@ -61,40 +61,43 @@ In this guide, we'll walk you through how you can author your mobile browser tes
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-device-os.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-**Step 4:** KaneAI offers a few network configurations for you to choose from:
+**Step 4:** You can also toggle on advanced settings such as network throttling or auto-login through Google from the dropdown. 
 
-- **Tunnel:** Seamlessly test websites hosted locally or behind a firewall.
-- **Geolocation:** Simulate user interactions from different regions to ensure your website works as expected worldwide.
-- **Dedicated Proxy:** Exclusively available for enterprise accounts with dedicated proxy enabled.
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-browser-advanced-settings.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
+**Step 6:** Once done, click on **Start Testing**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-configurations.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
-
-
-
-**Step 5:** You can also toggle on advanced settings as per your operating system. 
-
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-advanced-settings.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
-
-**Step 6:** Once done, click on **Author Test**.
-
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-author.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-browser-start-testing.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 **Step 7:** Now tell KaneAI what you want to author using natural language without the need for coding or scripting knowledge required. KaneAI translates your instructions into executable test steps automatically. 
 
-<img loading="lazy" src={require('../assets/images/kane-ai/write-web-test.gif').default} alt="Image" width="1347" height="616"  className="doc_img"/> 
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-browser-test-authoring.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> 
 
 As you add each instruction, KaneAI queues them in real-time without waiting for completion. This allows you to build comprehensive test flows quickly and efficiently. Once you've outlined all your test steps, click Finish Test to finalize your automated test case.
 
 **Step 8:** Now, select your **Project** and the folder where you want to save your test cases. The **Test Name** and **Description** will be generated automatically, but you can also edit them. Select your test's **Type** and **Status**, as well as the necessary tags that will allow you to search for it later.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/save-test.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-browser-save.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 **Step 9:** To execute your test, click on the **Run on HyperExecute** button and you will be redirected to the HyperExecute dashboard where your tests will be executed.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/run-on-hye.png').default}  alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-browser-test-case-manager.png').default}  alt="Image" width="1347" height="616"  className="doc_img"/>
 
+## Feature Support Matrix
+| Feature / Action                                                        | Support Status         | Notes                                                                                   |
+|-------------------------------------------------------------------------|-----------------------|-----------------------------------------------------------------------------------------|
+| Element Scroll                                                          | Supported             |                                                                                         |
+| Key Events (e.g. Enter, Space, Tab)                                     | Not Supported         |                                                                                         |
+| Clear Input Fields                                                      | Supported             |                                                                                         |
+| App Instructions (e.g. background, hide keyboard, show notifications)   | Not Supported         |                                                                                         |
+| Textual & Visual Queries                                                | Supported             | Includes driver-based queries.                                                          |
+| Sites with Permission Popups (notifications, cookies, location)         | Supported (Android only) | Popups are auto-accepted on Android. iOS not supported currently.                    |
+| Cookies & Local Storage                                                 | Supported             |                                                                                         |
+| DOM Elements Not Exposed (Qwen Use Cases)                               | Not Supported         | Qwen is not supported for browser-based tests.                                          |
+| Network Assertions                                                      | Not Supported         | Not yet available for mobile web; only supported on web.                                |
+| Negative Scenarios from App UX (e.g. switch app, go to home, go back)   | Not Supported         | These are app-specific and not currently available in browser testing mode.             |
 
+> _Have any feedback or request? Reach out to us via support@lambdatest.com and we would be happy to hear from you._
 
 
 
