@@ -38,6 +38,15 @@ slug: tunnel-release-notes/
     }}
 ></script>
 
+## Version 3.2.19 (10th August 2025)
+- **Security Updates and Stability Fixes**
+  - Support SHA-256 signed certificates within PFX files for mTLS authentication
+
+## Version 3.2.17 (13th July 2025)
+- **Security Updates and Stability Fixes**
+  - Added fix for unsecure websocket connection handling affecting locally hosted applications
+  - Implemented critical security updates
+
 ## Version 3.2.16 (8th June 2025)
 - **Support for forceLocal, contextual Logging**
   - Added the ability to forcelocal, all traffic is resolved at local.
