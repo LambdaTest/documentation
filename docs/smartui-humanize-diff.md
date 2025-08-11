@@ -57,13 +57,13 @@ Traditional pixel-to-pixel comparison can be noisy and time-consuming. Humanize 
 
 ## How to Use Humanize Diff
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/humanize-diff/smartui-comparison-page.png').default} alt="SmartUI Comparison Page" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/smartui-comparison-page.png').default} alt="SmartUI Comparison Page" className="doc_img"/>
 
 ### Step 1: Activate Visual AI Mode
 
 Navigate to any SmartUI comparison build. In the toolbar above the screenshots, locate and click the **Visual AI** toggle. This activates the "Human eyes simulation AI agent."
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/humanize-diff/visual-ai-toggle.png').default} alt="Visual AI Toggle Button" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/visual-ai-toggle.png').default} alt="Visual AI Toggle Button" className="doc_img"/>
 
 ---
 
@@ -83,7 +83,7 @@ Once Visual AI is active, the system automatically draws boxes around what it ha
 
 When you click on a diff box, a panel appears with a concise, human-readable explanation of the change. This summary describes the full scope of the difference, allowing for quick recognition and understanding. For example, it might summarize a complex visual change as "Content Grid Replaced with Placeholders."
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/humanize-diff/ai-summary-popup.png').default} alt="AI-Generated Summary Pop-up" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/ai-summary-popup.png').default} alt="AI-Generated Summary Pop-up" className="doc_img"/>
 
 ---
 
