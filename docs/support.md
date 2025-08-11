@@ -186,7 +186,13 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>     
       </div>
     </div>
+    </div>
 
+<!-- end of second section -->
+
+<!-- start of third section -->
+
+<div className="home_main">
 <div className="home_inners_box">
        <h2 className='homeMain_h2'><RealDeviceLightIcon className="home_icons home_light_icon" role="presentation"/> <RealDeviceDarkIcon className="home_icons home_dark_icon" role="presentation"/>Real Device</h2>
       <div className="home_inners">
@@ -199,13 +205,6 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/public-cloud-vs-private-cloud/" ><p className="p_home_inners">Private Cloud</p></a>
       </div>
     </div>
-    </div>
-
-<!-- end of second section -->
-
-<!-- start of third section -->
-
-<div className="home_main">
  <div className="home_inners_box">
        <h2 className='homeMain_h2'><TestManagerLightIcon className="home_icons home_light_icon" role="presentation"/> <TestManagerDarkIcon className="home_icons home_dark_icon" role="presentation"/>Test Manager &nbsp; <NewTag  value="NEW" /></h2>
       <div className="home_inners"> 
@@ -241,7 +240,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/screen-reader-on-accessibility/"><p className="p_home_inners">Screen Reader</p></a>
       </div>
     </div>
-    <div className="home_inners_box">
+        <div className="home_inners_box">
        <h2 className='homeMain_h2'><TestingLocallyLightIcon className="home_icons home_light_icon" role="presentation"/> <TestingLocallyDarkIcon className="home_icons home_dark_icon" role="presentation"/>Testing Locally</h2>
       <div className="home_inners">
         <a href="/support/docs/testing-locally-hosted-pages/"><p className="p_home_inners">Testing Locally Hosted Pages</p></a>
