@@ -63,7 +63,10 @@ Traditional pixel-to-pixel comparison can be noisy and time-consuming. Humanize 
 
 Navigate to any SmartUI comparison build. In the toolbar above the screenshots, locate and click the **Visual AI** toggle. This activates the "Human eyes simulation AI agent."
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/visual-ai-toggle.png').default} alt="Visual AI Toggle Button" className="doc_img"/>
+<p align="center">
+    <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/visual-ai-toggle.png').default} alt="Visual AI Toggle Button" className="doc_img"/>
+</p>
+
 
 ---
 
