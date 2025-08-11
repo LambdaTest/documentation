@@ -48,8 +48,10 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
+
 LambdaTest's **Assistive Touch** feature enables you to perform key system-level actions directly from the testing toolbar during manual sessions on real iPhones and iPads.  
-This allows you to replicate gestures such as going to the Home Screen, opening the Notification Center, taking screenshots, and more without pressing physical device buttons.
+This allows you to replicate gestures such as going to the Home Screen, opening the Notification Center, taking screenshots, and more without relying on physical device buttons or gestures.
 
 ## Use Cases
 
@@ -59,17 +61,13 @@ This allows you to replicate gestures such as going to the Home Screen, opening 
 - Capture screenshots for UI validation or bug reporting.
 - Simulate a shake gesture to test motion-based features.
 
-## How It Works
-Assistive Touch uses LambdaTest’s on-device instrumentation to emulate native iOS gestures via a simple **Assistive Actions** panel.  
-When triggered, each action behaves exactly as it would on a physical device, allowing accurate test scenarios without manual button presses.
+## Supported Devices
 
-### Key Features
+| Device Type | Supported OS Version |
+|-------------|----------------------|
+| iPhone      | iOS 14 and above     |
+| iPad        | iPadOS 14 and above  |
 
-- Works on **iPhones and iPads running iOS/iPadOS 14 and above**.
-- Five pre-set system actions: Home, Notification Center, App Switcher, Screenshot, Shake Gesture.
-- One-click trigger from the **App Live** toolbar.
-- Hover tooltips (desktop) and toast confirmations for every action.
-- Auto-disable unsupported actions with a “Not supported on this device” message.
 
 ## Supported Actions
 
@@ -85,23 +83,11 @@ When triggered, each action behaves exactly as it would on a physical device, al
 
 **Step 1:** Start a manual testing session on a real iOS device in **App Live** or **Browser Live**.
 
-**Step 2:** From the session toolbar, open the Settings panel and toggle Assistive Actions ON.
+**Step 2:** From the session toolbar, open the **iOS Settings** panel and toggle **Assistive Touch on** .
 
-![Assistive Touch Settings](../assets/images/real-device-app-testing/Assistive_Touch/Assistive-touch-on.jpeg)
+![Assistive Touch Settings](../assets/images/real-device-app-testing/Assistive_Touch/Assistive-touch-on.png)
 
-**Step 3:** Tap Assistive Actions to view the available system gestures.
+**Step 3:** Tap the Assistive Actions icon to open the gesture menu, then select the desired action to simulate it on the device
 
-![Gesture Functions](../assets/images/real-device-app-testing/Assistive_Touch/Gesture_Functions.jpeg)
+![Gesture Functions](../assets/images/real-device-app-testing/Assistive_Touch/Gesture_Functions.png)
 
-**Step 4:** Choose the desired action icon to trigger:
-- 🏠 Home  
-- 🔔 Notification Center  
-- 🔄 App Switcher  
-- 📸 Screenshot  
-- 📳 Shake Gesture  
-
-**Step 5:** Look for the **toast notification** confirming the action.
-
-:::info
-If an action isn’t supported on your OS version, it will appear disabled with the message *"Not supported on this device."*
-:::

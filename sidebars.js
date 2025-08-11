@@ -2104,9 +2104,18 @@ module.exports = {
         items: [
           "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
-          "screen-reader-on-real-devices-browser",
-          "ip-geolocation-on-real-devices-browser",
-          "assistive-touch-on-real-ios-browser"
+        {
+          type: "category",
+          collapsed: true,
+          label: "Features",
+          items: [
+            "screen-reader-on-real-devices-browser",
+            "ip-geolocation-on-real-devices-browser",
+            "assistive-touch-on-real-ios-browser",
+            "contacts-on-real-devices-browser",
+            "set-date-time-hour-format-real-devices-browser",
+          ]
+        }
         ],
       },
     ],
