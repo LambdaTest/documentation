@@ -34,12 +34,12 @@ import CodeBlock from '@theme/CodeBlock';
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started with Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-web-scanner"
+          "item": "https://www.lambdatest.com/support/docs/web-scanner-getting-started"
         },{
           "@type": "ListItem",
           "position": 4,
           "name": "Starting a Visual UI Scan",
-          "item": "https://www.lambdatest.com/support/docs/starting-a-visual-ui-scan"
+          "item": "https://www.lambdatest.com/support/docs/web-scanner-visual-scan"
         }]
       })
     }}

@@ -32,12 +32,12 @@ slug: web-scanner-scheduling-options/
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started with Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-web-scanner"
+          "item": "https://www.lambdatest.com/support/docs/web-scanner-getting-started"
         },{
           "@type": "ListItem",
           "position": 4,
           "name": "Scheduling Options in Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/scheduling-options-in-web-scanner"
+          "item": "https://www.lambdatest.com/support/docs/web-scanner-scheduling-options"
         }]
       })
     }}
@@ -92,12 +92,3 @@ You're scheduling a scan for every Monday. With "Run Initial Scan" enabled, a ba
 * Navigate to the **Scheduled Accessibility** section.
 * **Options:** Rename, Delete.
 * For advanced options like issue filtering and exporting, open the report in the Accessibility Dashboard.
-
-## Use Cases by Role
-
-| Role | Schedule Strategy Example |
-|---|---|
-| **QA Engineer** | Run a visual scan every weekday at 9 PM on the staging site. |
-| **Accessibility Lead** | Run a weekly compliance scan on the production site (WCAG 2.1). |
-| **Product Manager** | Run a one-time accessibility scan for a new feature launch. |
-| **DevOps Engineer** | Run a daily visual scan at 2 AM using a SmartUI config and LambdaTest Tunnel. |

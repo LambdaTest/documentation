@@ -35,7 +35,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started with Web Scanner",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-web-scanner"
+          "item": "https://www.lambdatest.com/support/docs/web-scanner-getting-started"
         }]
       })
     }}
