@@ -17,7 +17,6 @@ url: https://www.lambdatest.com/support/docs/assistive-touch-on-real-ios-devices
 site_name: LambdaTest
 slug: assistive-touch-on-real-ios-devices/
 ---
-
 import CodeBlock from '@theme/CodeBlock';
 import { YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY } from "@site/src/component/keys";
 
@@ -51,8 +50,6 @@ import TabItem from '@theme/TabItem';
 LambdaTest's **Assistive Touch** feature enables you to perform key system-level actions directly from the testing toolbar during manual sessions on real iPhones and iPads.  
 This allows you to replicate gestures such as going to the Home Screen, opening the Notification Center, taking screenshots, and more without pressing physical device buttons.
 
----
-
 ## Use Cases
 
 - Navigate to the Home Screen after completing a flow (e.g., logout, relaunch).
@@ -61,14 +58,10 @@ This allows you to replicate gestures such as going to the Home Screen, opening 
 - Capture screenshots for UI validation or bug reporting.
 - Simulate a shake gesture to test motion-based features.
 
----
-
 ## How It Works
 
 Assistive Touch uses LambdaTest’s on-device instrumentation to emulate native iOS gestures via a simple **Assistive Actions** panel.  
 When triggered, each action behaves exactly as it would on a physical device, allowing accurate test scenarios without manual button presses.
-
----
 
 ### Key Features
 
@@ -77,8 +70,6 @@ When triggered, each action behaves exactly as it would on a physical device, al
 - One-click trigger from the **App Live** toolbar.
 - Hover tooltips (desktop) and toast confirmations for every action.
 - Auto-disable unsupported actions with a “Not supported on this device” message.
-
----
 
 ## Supported Actions
 
@@ -89,8 +80,6 @@ When triggered, each action behaves exactly as it would on a physical device, al
 | **App Switcher** | Opens multitasking to switch or close apps. |
 | **Screenshot** | Captures the current screen. |
 | **Shake Gesture** | Simulates device shake for undo or motion triggers. |
-
----
 
 ## Using Assistive Touch in Manual Testing
 
