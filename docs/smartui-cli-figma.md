@@ -64,6 +64,22 @@ With SmartUI Figma CLI, you can seamlessly perform visual regression testing of 
 
 The following steps will guide you in running your visual tests for Figma files on LambdaTest platform using SmartUI CLI.
 
+## Understanding Figma Tokens
+
+| Token                | Where It’s Used | Description                                                                 |
+|----------------------|------------------|-----------------------------------------------------------------------------|
+| `FIGMA_TOKEN`        | Env Variable     | Your Figma **Personal Access Token** to authenticate with the Figma API    |
+| `figma_file_token`   | `designs.json`   | Figma **file ID**, extracted from the Figma file URL                       |
+| `figma_ids`          | `designs.json`   | List of **frame or node IDs** you want to compare visually                 |
+
+> Example Figma URL:  
+> `https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`  
+> - `figma_file_token`: `abc12345`  
+> - `figma_ids`: `2417-58969`
+
+---
+
+
 ## Create a SmartUI CLI Project
 
 The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
@@ -73,6 +89,7 @@ The first step is to create a project with the application in which we will comb
 3. Select the platform as <b>CLI</b> for executing your `CLI` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
+
 
 ## Steps to run your first test
 
