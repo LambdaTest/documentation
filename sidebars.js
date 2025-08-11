@@ -1189,7 +1189,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Author Browser Tests with Interactive Mode",
+            label: "Author Web Tests",
             items: [
               "author-your-first-desktop-browser-test",
               "author-your-first-mobile-browser-test",
@@ -1198,7 +1198,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "Author App Tests with Interactive Mode",
+            label: "Author App Tests",
             items: [
               "author-your-first-mobile-app-test",
             ],
