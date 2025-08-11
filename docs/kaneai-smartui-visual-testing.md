@@ -103,18 +103,14 @@ Once your test flow is complete, click **Finish test**. You will be prompted to 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/saved_test.png').default} alt="Save the test case session" className="doc_img"/>
 ### Run or Schedule the Test for Automation
 
-Now access the **Test Runs** tab under the **Test Manager** and "Create Test Run"
-and schedule the finalized test. When creating the run, provide a name and select **KaneAI Generated** as the `Type`. Add the Visual Test Case and save Test Run.
+* Now access the **Test Runs**. And create a new test run you may refer  <a href="https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-run-execution/" rel="nofollow">here</a> for more details.
 
-You can now simply run your tests by selecting **Run on HyperExecute** and either "Run Instance Now" (for quick run) or "Schedule Test Run" (for scheduled visual regression) 
+You can now simply run your tests via **Run on HyperExecute**:
+* "Run Instance Now" (for quick run)
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/run-test.jpeg').default} alt="Schedule the Test Run for automation" className="doc_img"/>
 
-
-You can then set a recurring schedule for execution. Scheduled runs will automatically capture screenshots and store them in the SmartUI project for continuous comparison.
-You may also refer to:
-*  <a href="https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-run-execution/" rel="nofollow">Test Runs\ Execution</a> 
-* <a href="https://www.lambdatest.com/support/docs/kaneai-scheduled-test-runs/" rel="nofollow">Scheduled Test Runs</a> 
+* "Schedule Test Run" (for scheduled visual regression).You may refer <a href="https://www.lambdatest.com/support/docs/kaneai-scheduled-test-runs/" rel="nofollow">here</a> for more details.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/schedule-test-run.png').default} alt="Schedule the Test Run for automation" className="doc_img"/>
 
