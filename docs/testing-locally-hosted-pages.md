@@ -48,6 +48,8 @@ slug: testing-locally-hosted-pages/
 
 <img loading="lazy" src={require('../assets/images/tunnel/tunnel.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
+> All Tunnel credentials (access keys, API tokens, etc.) are personal to you and must be kept secure at all times. Do not share, expose, or store them in publicly accessible code, repositories, or environments. If compromised, you are responsible for revoking and regenerating them immediately.
+
 ## Why to Use LambdaTest Tunnel?
 
 LambdaTest Tunnel offers numerous benefits for web developers, testers, and QA professionals. These include secure and encrypted connection, cross-browser compatibility testing, localhost testing, etc.
