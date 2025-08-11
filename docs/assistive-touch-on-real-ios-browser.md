@@ -85,9 +85,9 @@ This allows you to replicate gestures such as going to the Home Screen, opening 
 
 **Step 2:** From the session toolbar, open the **iOS Settings** panel and toggle **Assistive Touch on** .
 
-![Assistive Touch Settings](../assets/images/real-device-app-testing/Assistive_Touch/Assistive-touch-on.png)
+![Assistive Touch Settings](../assets/images/real-device-app-testing/Assistive_Touch/Assistive-touch-on.jpeg)
 
 **Step 3:** Tap the Assistive Actions icon to open the gesture menu, then select the desired action to simulate it on the device
 
-![Gesture Functions](../assets/images/real-device-app-testing/Assistive_Touch/Gesture_Functions.png)
+![Gesture Functions](../assets/images/real-device-app-testing/Assistive_Touch/Gesture_Functions.jpeg)
 
