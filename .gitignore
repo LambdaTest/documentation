@@ -7,6 +7,9 @@
 # Generated files
 .docusaurus
 .cache-loader
+node_modules
+build
+sonar-project.properties
 
 # Misc
 .DS_Store
