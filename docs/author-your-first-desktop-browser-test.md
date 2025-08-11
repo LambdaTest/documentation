@@ -57,7 +57,7 @@ In this guide, we'll walk you through how you can author your desktop browser te
 
 
 
-**Step 4:** You can also do additional customization with some advanced features such as:
+**Step 3:** You can also do additional customization with some advanced features such as:
 
 - **Chrome Options:** Command-line switches that alter the default behavior of the Chrome browser. 
 - **Custom Headers:**  Kееp crucial information about thе rеquеst or rеsponsе, such as thе mеthod, URL, and body contеnt.
@@ -66,17 +66,21 @@ Once done, click **Start Testing.**
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kaneai-desktop-start-testing.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-**Step 5:** Now tell KaneAI what you want to author using natural language without the need for coding or scripting knowledge required. KaneAI translates your instructions into executable test steps automatically. 
+**Step 4:** Now tell KaneAI what you want to author using natural language without the need for coding or scripting knowledge required. KaneAI translates your instructions into executable test steps automatically. 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kaneai-desktop-authoring-min.png').default} alt="Image" width="1347" height="616"  className="doc_img"/> 
 
+**Step 5:** You can also leverage the **Manual Interaction Mode** to perform any particular step or action directly in the instance window and KaneAI would record it and create an automation step for the same. 
+
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/desktop-manual-interaction.webp').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+
 As you add each instruction, KaneAI queues them in real-time without waiting for completion. This allows you to build comprehensive test flows quickly and efficiently. Once you've outlined all your test steps, click Finish Test to finalize your automated test case.
 
-**Step 7:** Now, select your **Project** and the folder where you want to save your test cases. The **Test Name** and **Description** will be generated automatically, but you can also edit them. Select your test's **Type** and **Status**, as well as the necessary tags that will allow you to search for it later.
+**Step 6:** Now, select your **Project** and the folder where you want to save your test cases. The **Test Name** and **Description** will be generated automatically, but you can also edit them. Select your test's **Type** and **Status**, as well as the necessary tags that will allow you to search for it later.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kaneai-desktop-save.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-**Step 8:** To execute your test, click on the **Run on HyperExecute** button and you will be redirected to the HyperExecute dashboard where your tests will be executed.
+**Step 7:** To execute your test, click on the **Run on HyperExecute** button and you will be redirected to the HyperExecute dashboard where your tests will be executed.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kaneai-desktop-hye.png').default}  alt="Image" width="1347" height="616"  className="doc_img"/>
 

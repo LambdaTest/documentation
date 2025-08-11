@@ -84,18 +84,17 @@ As you add each instruction, KaneAI queues them in real-time without waiting for
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/mobile-browser-test-case-manager.png').default}  alt="Image" width="1347" height="616"  className="doc_img"/>
 
 ## Feature Support Matrix
-| Feature / Action                                                        | Support Status         | Notes                                                                                   |
-|-------------------------------------------------------------------------|-----------------------|-----------------------------------------------------------------------------------------|
-| Element Scroll                                                          | Supported             |                                                                                         |
-| Key Events (e.g. Enter, Space, Tab)                                     | Not Supported         |                                                                                         |
-| Clear Input Fields                                                      | Supported             |                                                                                         |
-| App Instructions (e.g. background, hide keyboard, show notifications)   | Not Supported         |                                                                                         |
-| Textual & Visual Queries                                                | Supported             | Includes driver-based queries.                                                          |
-| Sites with Permission Popups (notifications, cookies, location)         | Supported (Android only) | Popups are auto-accepted on Android. iOS not supported currently.                    |
-| Cookies & Local Storage                                                 | Supported             |                                                                                         |
-| DOM Elements Not Exposed (Qwen Use Cases)                               | Not Supported         | Qwen is not supported for browser-based tests.                                          |
-| Network Assertions                                                      | Not Supported         | Not yet available for mobile web; only supported on web.                                |
-| Negative Scenarios from App UX (e.g. switch app, go to home, go back)   | Not Supported         | These are app-specific and not currently available in browser testing mode.             |
+| Feature / Action                                                      | Support Status         | Notes                                                                                   |
+|-----------------------------------------------------------------------|-----------------------|-----------------------------------------------------------------------------------------|
+| Element Scroll                                                        | Supported             |                                                                                         |
+| Key Events (e.g. Enter, Space, Tab)                                   | Not Supported         |                                                                                         |
+| Clear Input Fields                                                    | Supported             |                                                                                         |
+| App Instructions (e.g. background, hide keyboard, show notifications) | Not Supported         |                                                                                         |
+| Textual & Visual Queries                                              | Supported             | Includes driver-based queries.                                                          |
+| Sites with Permission Popups (notifications, cookies, location)       | Supported (Android only) | Popups are auto-accepted on Android. iOS not supported currently.                    |
+| Cookies & Local Storage                                               | Supported             |                                                                                         |
+| Network Assertions                                                    | Not Supported         | Not yet available for mobile web; only supported on web.                                |
+| Negative Scenarios from App UX (e.g. switch app, go to home, go back) | Not Supported         | These are app-specific and not currently available in browser testing mode.             |        |
 
 > _Have any feedback or request? Reach out to us via support@lambdatest.com and we would be happy to hear from you._
 
