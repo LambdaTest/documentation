@@ -108,7 +108,7 @@ Once your test flow is complete, click **Finish test**. You will be prompted to 
 You can now simply run your tests via **Run on HyperExecute**:
 * "Run Instance Now" (for quick run)
 
-<img loading="lazy" src={require('../assets/images/kane-ai/smartui/run-test.jpeg').default} alt="Schedule the Test Run for automation" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/run-test.jpeg').default} alt="Run Test for automation" className="doc_img"/>
 
 * "Schedule Test Run" (for scheduled visual regression).You may refer <a href="https://www.lambdatest.com/support/docs/kaneai-scheduled-test-runs/" rel="nofollow">here</a> for more details.
 
