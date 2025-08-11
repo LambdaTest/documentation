@@ -12,7 +12,6 @@ export const getProductType = (return_arr = false) => {
         { value: 9, type: 'Appium', label: 'Appium' },
         { value: 10, type: 'Enterprise', label: 'Enterprise' },
         { value: 11, type: 'Test-Manager', label: 'Test Manager' },
-        { value: 12, type: 'Web-Scanner', label: 'Web Scanner' },
         { value: 'Other', type: 'Other', label: 'Other', }
     ]
     if (return_arr) {

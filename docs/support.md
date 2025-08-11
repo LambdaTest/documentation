@@ -48,6 +48,8 @@ import TestManagerLightIcon from '../assets/images/support/testManager-light.svg
 import TestManagerDarkIcon from '../assets/images/support/testManager-dark.svg';
 import AccessibilityDarkIcon from '../assets/images/support/accessibility-dark.svg';
 import AccessibilityLightIcon from '../assets/images/support/accessibility-light.svg';
+import WebscannerLightIcon from '../assets/images/support/webscanner-light-icon.svg';
+import WebscannerDarkIcon from '../assets/images/support/webscanner-dark-icon.svg';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -152,6 +154,17 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/html-dom-smartui-options/"><p className="p_home_inners">Handling Dynamic Data</p></a>
       </div>
     </div>
+    <div className="home_inners_box">
+    <h2 className='homeMain_h2'><WebscannerLightIcon className="home_icons home_light_icon" role="presentation"/> <WebscannerDarkIcon className="home_icons home_dark_icon" role="presentation"/>Web Scanner &nbsp; <NewTag  value="NEW" /></h2>
+  <div className="home_inners">
+    <a href="/support/docs/web-scanner-overview/"><p className="p_home_inners">Overview</p></a>
+    <a href="/support/docs/web-scanner-getting-started/"><p className="p_home_inners">Getting Started</p></a>
+    <a href="/support/docs/web-scanner-visual-scan/"><p className="p_home_inners">Visual UI Scans</p></a>
+    <a href="/support/docs/web-scanner-accessibility-scan/"><p className="p_home_inners">Accessibility Scans</p></a>
+    <a href="/support/docs/web-scanner-adding-urls/"><p className="p_home_inners">Adding URLs</p></a>
+    <a href="/support/docs/web-scanner-scheduling-options/"><p className="p_home_inners">Scheduling Options</p></a>
+  </div>
+</div>
     <div className="home_inners_box">
        <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>KaneAI &nbsp; <NewTag  value="BETA" /> </h2>
       <div className="home_inners">
