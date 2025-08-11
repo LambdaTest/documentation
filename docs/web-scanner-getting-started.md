@@ -92,8 +92,8 @@ Click the **Schedule Scan** button to launch the 4-step wizard. This process app
 
 Depending on the selected platform, you’ll either see Visual UI configuration or Accessibility configuration. You may use “Default“ settings or for more information follow the details provided:
 
-* [Starting a Visual Scan](/support/docs/starting-a-visual-ui-scan)
-* [Starting an Accessibility Scan](/support/docs/starting-an-accessibility-scan)
+* [Starting a Visual Scan](/support/docs/web-scanner-visual-scan)
+* [Starting an Accessibility Scan](/support/docs/web-scanner-accessibility-scan)
 
 ### Step 3: Add URLs
 
@@ -107,7 +107,7 @@ The maximum limit is 1,000 URLs per scan.
 <img loading="lazy" src={require('../assets/images/web-scanner/wizard-step-3-manual-url.png').default} alt="Add URLs Manually" className="doc_img"/>
 <img loading="lazy" src={require('../assets/images/web-scanner/wizard-step-3-sitemap-url.png').default} alt="Add URLs via Sitemap" className="doc_img"/>
 
-For more details you may refer to our guide on [Adding URLs for Web Scanner](/support/docs/adding-urls-for-web-scanner).
+For more details you may refer to our guide on [Adding URLs for Web Scanner](/support/docs/web-scanner-adding-urls).
 
 ### Step 4: Schedule the Scan
 
