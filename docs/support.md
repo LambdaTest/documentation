@@ -48,6 +48,8 @@ import TestManagerLightIcon from '../assets/images/support/testManager-light.svg
 import TestManagerDarkIcon from '../assets/images/support/testManager-dark.svg';
 import AccessibilityDarkIcon from '../assets/images/support/accessibility-dark.svg';
 import AccessibilityLightIcon from '../assets/images/support/accessibility-light.svg';
+import WebscannerLightIcon from '../assets/images/support/webscanner-light-icon.svg';
+import WebscannerDarkIcon from '../assets/images/support/webscanner-dark-icon.svg';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -153,6 +155,17 @@ import NewTag from '../src/component/newTag';
       </div>
     </div>
     <div className="home_inners_box">
+    <h2 className='homeMain_h2'><WebscannerLightIcon className="home_icons home_light_icon" role="presentation"/> <WebscannerDarkIcon className="home_icons home_dark_icon" role="presentation"/>Web Scanner &nbsp; <NewTag  value="NEW" /></h2>
+  <div className="home_inners">
+    <a href="/support/docs/web-scanner-overview/"><p className="p_home_inners">Overview</p></a>
+    <a href="/support/docs/web-scanner-getting-started/"><p className="p_home_inners">Getting Started</p></a>
+    <a href="/support/docs/web-scanner-visual-scan/"><p className="p_home_inners">Visual UI Scans</p></a>
+    <a href="/support/docs/web-scanner-accessibility-scan/"><p className="p_home_inners">Accessibility Scans</p></a>
+    <a href="/support/docs/web-scanner-adding-urls/"><p className="p_home_inners">Adding URLs</p></a>
+    <a href="/support/docs/web-scanner-scheduling-options/"><p className="p_home_inners">Scheduling Options</p></a>
+  </div>
+</div>
+    <div className="home_inners_box">
        <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>KaneAI &nbsp; <NewTag  value="BETA" /> </h2>
       <div className="home_inners">
         <a href="/support/docs/getting-started-with-kane-ai/" ><p className="p_home_inners">Getting Started</p></a>
@@ -173,7 +186,13 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/developer-tools/"><p className="p_home_inners">Key Features</p></a>     
       </div>
     </div>
+    </div>
 
+<!-- end of second section -->
+
+<!-- start of third section -->
+
+<div className="home_main">
 <div className="home_inners_box">
        <h2 className='homeMain_h2'><RealDeviceLightIcon className="home_icons home_light_icon" role="presentation"/> <RealDeviceDarkIcon className="home_icons home_dark_icon" role="presentation"/>Real Device</h2>
       <div className="home_inners">
@@ -186,13 +205,6 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/public-cloud-vs-private-cloud/" ><p className="p_home_inners">Private Cloud</p></a>
       </div>
     </div>
-    </div>
-
-<!-- end of second section -->
-
-<!-- start of third section -->
-
-<div className="home_main">
  <div className="home_inners_box">
        <h2 className='homeMain_h2'><TestManagerLightIcon className="home_icons home_light_icon" role="presentation"/> <TestManagerDarkIcon className="home_icons home_dark_icon" role="presentation"/>Test Manager &nbsp; <NewTag  value="NEW" /></h2>
       <div className="home_inners"> 
@@ -228,7 +240,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/screen-reader-on-accessibility/"><p className="p_home_inners">Screen Reader</p></a>
       </div>
     </div>
-    <div className="home_inners_box">
+        <div className="home_inners_box">
        <h2 className='homeMain_h2'><TestingLocallyLightIcon className="home_icons home_light_icon" role="presentation"/> <TestingLocallyDarkIcon className="home_icons home_dark_icon" role="presentation"/>Testing Locally</h2>
       <div className="home_inners">
         <a href="/support/docs/testing-locally-hosted-pages/"><p className="p_home_inners">Testing Locally Hosted Pages</p></a>
