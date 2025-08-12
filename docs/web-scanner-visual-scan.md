@@ -166,4 +166,4 @@ Access additional functions for your build:
 **Access your SmartUI Dashboard**:
 SmartUI detects pixel-based layout changes, design mismatches, missing elements, or unintended visual regressions by comparing screenshots taken at scheduled intervals.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/smartui/smartui_dashboard.jpeg').default} alt="smartui dashboard" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/smartui_dashboard.png').default} alt="smartui dashboard" className="doc_img"/>
