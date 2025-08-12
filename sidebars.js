@@ -3031,7 +3031,11 @@ module.exports = {
         label: "SmartUI RCA",
         id: "smartui-root-cause-analysis",
       },
-
+      {
+        type: "doc",
+        label: "SmartUI RCA",
+        id: "smartui-humanize-diff",
+      },
       {
         type: "category",
         collapsed: false,
