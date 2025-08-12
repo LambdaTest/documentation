@@ -103,4 +103,18 @@ When you click on a diff box, a panel appears with a concise, human-readable exp
 - ✅ CI/CD pipelines that need fast, trustworthy visual QA
 - ✅ Product teams that care about real user experience impact
 
-> **A Note on AI:** Please be aware that while the Visual AI is highly advanced, it can occasionally make mistakes. It's a powerful assistant designed to guide your attention to the most important areas.
+## Provide Feedback
+
+All members can give feedback on AI-generated differences and summaries. Following are the available feedback options:
+
+*   **Thumbs up/down.**
+*   **Comment (optional):** Enter up to 120 characters. This option is only available when a thumbs-up or thumbs-down is given.
+
+## Things to Keep in Mind
+
+*   Visual AI Agent is currently available for comparisons with vertical lengths under **5000px**.
+*   If the Visual AI agent is active and you open the **RCA panel**, the panel will still display all differences from the standard Smart RCA comparison.
+> **Visual AI Agent can make mistakes. Please visually verify the results.**
+
+
+
