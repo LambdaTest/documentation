@@ -113,7 +113,7 @@ LambdaTest’s Accessibility Testing Suite simplifies the process of identifying
       <p>Get a comprehensive accessibility analysis via browser extension.</p>
     </div>
   </a>
-    <a href="/support/docs/accessibility-android-test">
+    <a href="/support/docs/accessibility-app-scanner">
     <div className="support_inners">
       <h3>Accessibility Manual App</h3>
       <p>Get a comprehensive accessibility analysis for your app.</p>
