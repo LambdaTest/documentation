@@ -1,18 +1,18 @@
 ---
-id: smartui-humanize-diff
-title: Humanize Diff - AI-Powered Visual Analysis
+id: smartui-visual-ai
+title: Visual AI – AI-Powered Visual Change Detection Like Humans Do
 hide_title: false
-sidebar_label: Humanize Diff (Visual AI)
-description: A guide on using Humanize Diff, the Visual AI agent in SmartUI that identifies and summarizes meaningful, human-relevant visual changes to accelerate reviews.
+sidebar_label: Visual AI Agent
+description: Learn how Visual AI Agent uses AI to detect and report only the visual changes that matter to users, reducing false positives and accelerating reviews.
 keywords:
   - smartui
   - visual ai
   - humanize diff
   - visual testing
   - ai in testing
-url: https://www.lambdatest.com/support/docs/smartui-humanize-diff
+url: https://www.lambdatest.com/support/docs/smartui-visual-ai-agent
 site_name: LambdaTest
-slug: smartui-humanize-diff/
+slug: smartui-visual-ai/
 ---
 
 <script type="application/ld+json"
@@ -39,15 +39,15 @@ slug: smartui-humanize-diff/
     }}
 ></script>
 
-Humanize Diff introduces a **Visual AI** agent that revolutionizes visual regression testing by simulating human perception. Instead of just highlighting every pixel difference, this AI-powered feature identifies and summarizes only the meaningful, human-relevant changes between your baseline and captured screenshots. This allows you to instantly focus on significant UI shifts and understand the context of the changes without getting lost in minor, irrelevant noise.
+LambdaTest SmartUI introduces a **Visual AI** agent that revolutionizes visual regression testing by simulating human perception. Instead of just highlighting every pixel difference, this AI-powered feature identifies and summarizes only the meaningful, human-relevant changes between your baseline and captured screenshots. This allows you to instantly focus on significant UI shifts and understand the context of the changes without getting lost in minor, irrelevant noise.
 
 ---
 
-## What Problems Does Humanize Diff Solve?
+## What Problems Does SmartUI Visual Agent Solve?
 
-Traditional pixel-to-pixel comparison can be noisy and time-consuming. Humanize Diff eliminates the guesswork by providing context-aware, intelligent analysis.
+Traditional pixel-to-pixel comparison can be noisy and time-consuming. SmartUI Visual Agent eliminates the guesswork by providing context-aware, intelligent analysis.
 
-| Problem | Humanize Diff Solution |
+| Problem | SmartUI Visual Agent Solution |
 | :--- | :--- |
 | Pixel diffs are cluttered with noise from anti-aliasing or rendering glitches. | The AI agent filters out irrelevant diffs and only highlights changes a human user would notice. |
 | It's hard to understand the scope or meaning of a change from a simple highlighted area. | Get a plain-English summary that explains the entire change in context. |
@@ -55,13 +55,13 @@ Traditional pixel-to-pixel comparison can be noisy and time-consuming. Humanize 
 
 ---
 
-## How to Use Humanize Diff
+## How to Use SmartUI Visual Agent
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/smartui-comparison-page.png').default} alt="SmartUI Comparison Page" className="doc_img"/>
 
 ### Step 1: Activate Visual AI Mode
 
-Navigate to any SmartUI comparison build. In the toolbar above the screenshots, locate and click the **Visual AI** toggle. This activates the "Human eyes simulation AI agent."
+Navigate to any SmartUI comparison build. In the toolbar above the screenshots, locate and click the **Visual AI** toggle. This activates the "Human Intelligence AI Agent."
 
 <p align="center">
     <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/visual-ai-toggle.png').default} alt="Visual AI Toggle Button" className="doc_img"/>
@@ -90,11 +90,17 @@ When you click on a diff box, a panel appears with a concise, human-readable exp
 
 ---
 
-## Key Advantages of Humanize Diff
+## Benefits for Your Team
 
-* **Accelerated Reviews:** Drastically reduce review time by focusing only on UI changes that matter to your users.
-* **Reduced Noise:** Automatically ignore distracting, pixel-level differences caused by rendering, anti-aliasing, or other insignificant factors.
-* **Clearer Communication:** Use the AI-generated summaries to write precise and easy-to-understand bug reports and team communications.
-* **Intuitive Analysis:** Understand the "what" and "why" of a visual regression almost instantly, without needing to manually inspect the changes.
+- ✅ **Fewer False Positives:** Only see changes that a human would notice.
+- ✅ **Faster Approvals:** Review fewer screenshots without missing real defects.
+- ✅ **Actionable Insights:** Get change location, type, and a human-readable summary.
+- ✅ **Works at Scale:** Designed for high-volume regression testing pipelines.
+
+## Perfect For
+
+- ✅ Teams tired of noisy traditional visual testing tools
+- ✅ CI/CD pipelines that need fast, trustworthy visual QA
+- ✅ Product teams that care about real user experience impact
 
 > **A Note on AI:** Please be aware that while the Visual AI is highly advanced, it can occasionally make mistakes. It's a powerful assistant designed to guide your attention to the most important areas.
