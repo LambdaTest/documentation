@@ -3015,7 +3015,11 @@ module.exports = {
         label: "SmartUI RCA",
         id: "smartui-root-cause-analysis",
       },
-
+      {
+        type: "doc",
+        label: "Visual AI Agent",
+        id: "smartui-visual-ai",
+      },
       {
         type: "category",
         collapsed: false,
