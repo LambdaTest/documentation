@@ -50,7 +50,7 @@ This guide provides a detailed walkthrough on how to leverage KaneAI to create, 
 ## Creating Your First Visual Test
 
 ### Initiate a Web Test
-To begin, navigate to the [KaneAI dashboard](https://kaneai.lambdatest.com/dashboard) and click **Author Browser Test**. You can configure network settings before clicking **Start Testing** to launch the test authoring environment.
+To begin, navigate to the [KaneAI dashboard](https://kaneai.lambdatest.com/objective) and click **Author Browser Test**. You can configure network settings before clicking **Start Testing** to launch the test authoring environment.
 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/initiate-web-test.jpeg').default} alt="Initiate a Web Test in KaneAI" className="doc_img"/>
@@ -101,16 +101,20 @@ Once your test flow is complete, click **Finish test**. You will be prompted to 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/save-test-case.png').default} alt="Save the test case session" className="doc_img"/>
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/saved_test.png').default} alt="Save the test case session" className="doc_img"/>
-### Run or Schedule the Test for Automation
 
-* Now access the **Test Runs**. And create a new test run you may refer  <a href="https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-run-execution/" rel="nofollow">here</a> for more details.
+### Execution and Scheduling
 
-You can now simply run your tests via **Run on HyperExecute**:
-* "Run Instance Now" (for quick run)
+Once your test case is saved, navigate to the **Test Runs** tab to configure and launch its execution. For a complete guide on the initial setup, refer to our documentation on [Test Run Execution](https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-run-execution/).
 
-<img loading="lazy" src={require('../assets/images/kane-ai/smartui/run-test.jpeg').default} alt="Run Test for automation" className="doc_img"/>
+You can execute your test using one of two methods:
 
-* "Schedule Test Run" (for scheduled visual regression).You may refer <a href="https://www.lambdatest.com/support/docs/kaneai-scheduled-test-runs/" rel="nofollow">here</a> for more details.
+* **Run Instance Now**
+    This option triggers an immediate, one-time execution of your test. It is ideal for quick validations or debugging a specific change.
+
+    <img loading="lazy" src={require('../assets/images/kane-ai/smartui/run-test.jpeg').default} alt="Run Test for automation" className="doc_img"/>
+
+* **Schedule Test Run**
+    This option allows you to automate your visual regression testing by setting up a recurring schedule. Learn more in our guide to [Scheduled Test Runs](https://www.lambdatest.com/support/docs/kaneai-scheduled-test-runs/).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/schedule-test-run.png').default} alt="Schedule the Test Run for automation" className="doc_img"/>
 
@@ -134,7 +138,7 @@ For a more flexible usage they may use the **JSON** tab where you may set your o
 
 ## View Your Visual Test Results on SmartUI
 
-After the HyperExecute job is finished, all screenshots captured using the `/Visual Comparison` command via KaneAI will be available in your SmartUI project for review.
+After the Test Run job is finished, all screenshots captured using the `/Visual Comparison` command via KaneAI will be available in your SmartUI project for review.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/smartui_dashboard.jpeg').default} alt="Schedule the Test Run for automation" className="doc_img"/>
 
