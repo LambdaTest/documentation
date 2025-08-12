@@ -83,3 +83,33 @@ Once you select **Accessibility** in Step 1 of the scan wizard, the following co
 ### More options:
 * **Review Issues (Needs Review):** Enable this to include issues that require human verification (e.g., `aria-label` usage). These may not be violations but need manual inspection.
 * **Best Practices Issues:** Enable this to detect suggestions that improve UX but do not violate accessibility rules. Examples include adding landmark roles or enhancing keyboard support.
+
+
+## Dashboard Overview
+
+<img loading="lazy" src={require('../assets/images/web-scanner/accessibility-build.png').default} alt="Visual Build" className="doc_img"/>
+After running your tests, your **Accessibility Build** becomes available in the dashboard.  
+
+#### Build Status
+Easily track the state of each scan — **Critical**, **Serious**, **Moderate**, **Minor**.
+
+#### Build Options
+Access additional functions for your build:
+1. **Share Scan**  
+   Browse older builds with complete stats for quick comparison.
+2. **Raise an Issue**  
+   Integrate with any of the major platforms and directly raise issues from the dashboard.
+3. **Download Accessibility Report**  
+   You can download the results report in PDF, CSV or JSON formats.
+4. **Delete Scan**  
+   Delete any scheduled recurring scans.
+
+**Analyze the Scan Report**:
+After selecting a scan, A detailed scan report will open, as shown in the provided screenshot. The report will display the following key components:
+- **Total Issues :** A graph summarizing the trend of detected issues over the last few runs.
+- **Severity Trend :** A chart categorizing issues by severity (e.g., Critical, Serious, Moderate, Minor).
+- **Pages Scanned :** A list of scanned pages with their corresponding issue counts categorized by severity.
+
+You can drill down into individual page URLs to view the number of issues found on that specific page using filters provided. From the scan report page, you can also edit, share and stop recurring scan if its no longer required.
+
+<img loading="lazy" src={require('../assets/images/accessibility-testing/schedule-scan/6.png').default} className="doc_img"/>

@@ -66,14 +66,17 @@ Manual testing of large web applications for layout shifts, broken UI, or WCAG n
 
 Visual scans detect pixel-based layout changes, design mismatches, missing elements, or unintended visual regressions by comparing screenshots taken at scheduled intervals.
 
-<img loading="lazy" src={require('../assets/images/web-scanner/visual-ui-scan-example.png').default} alt="Visual UI Scan Example" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/smartui_dashboard.jpeg').default} alt="smartui dashboard" className="doc_img"/>
 
-**Key Features:**
-* 4 Browsers (Chrome, Firefox, Safari, Edge)
-* 8 Standard Desktop and 205 Mobile Devices across Android and iOS viewports
-* SmartUI JSON config override
-* Delay customization for screenshot stability (timeout)
-* View History of all the previous run scans
+Of course. Here is a more apt and concise version in Markdown, focusing on benefits and using stronger keywords.
+
+#### Key Capabilities
+
+- **Cross-Browser Validation**: Test UI across Chrome, Firefox, Edge, and Safari.
+- **Responsive Testing**: Check layouts on 8 desktop sizes and 200+ mobile viewports (Android & iOS).
+- **Custom Configurations**: Override defaults with your own SmartUI JSON settings.
+- **Accurate Screenshots**: Use delays to capture pages with animations or dynamic content.
+- **History & Comparison**: Access past scans to track changes, compare builds, and spot regressions.
 
 ### 2. Accessibility Scan
 

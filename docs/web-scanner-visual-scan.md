@@ -123,3 +123,47 @@ You can create your own `.smartui.json` file for full control over:
 </CodeBlock>
 
 > **Note:** Using a SmartUI config bypasses manual browser, resolution, and delay selections, even in the "Edit Config" mode.
+
+
+#### Navigating Results for your Visual Scan
+
+
+## Dashboard Overview
+
+After running your tests, the **Visual Build** becomes available in the dashboard.  
+
+<img loading="lazy" src={require('../assets/images/web-scanner/visual-build.png').default} alt="Visual Build" className="doc_img"/>
+
+### Build Status
+Easily track the state of each screenshot — **Approved**, **Changes Found**, **New**, **Under Review**, and more.
+
+<p align="center">
+  <img loading="lazy" src={require('../assets/images/web-scanner/threedot-visual.png').default} alt="Build Status View" className="doc_img"/>
+</p>
+
+### Three-Dot Menu Options
+Access additional functions for your build:
+
+<img loading="lazy" src={require('../assets/images/web-scanner/history-page.png').default} alt="Three Dot Menu" className="doc_img"/>
+
+1. **View History**  
+   Browse older builds with complete stats for quick comparison.
+
+2. **Edit Scan Config**  
+   Modify scan settings such as **schedule** and **viewports**.  
+
+   <img loading="lazy" src={require('../assets/images/web-scanner/editscan-visual.png').default} alt="Edit Scan Config" className="doc_img"/>
+
+   <img loading="lazy" src={require('../assets/images/web-scanner/editscan-schedule.png').default} alt="Edit Scan Schedule" className="doc_img"/>
+
+3. **Delete Scan**  
+   Remove a scan from the dashboard.
+
+4. **Stop Recurring Scan**  
+   Halt any scheduled recurring scans instantly.
+
+
+**Access your SmartUI Dashboard**:
+SmartUI detects pixel-based layout changes, design mismatches, missing elements, or unintended visual regressions by comparing screenshots taken at scheduled intervals.
+
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/smartui_dashboard.jpeg').default} alt="smartui dashboard" className="doc_img"/>
