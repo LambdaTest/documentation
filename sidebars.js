@@ -1251,6 +1251,7 @@ module.exports = {
           "kaneai-custom-headers",
           "kaneai-totp",
           "kaneai-scheduled-test-runs",
+          "kaneai-smartui-visual-testing",
           "kaneai-database",
         ],
       },
@@ -3018,8 +3019,8 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Visual AI Agent",
-        id: "smartui-visual-ai",
+        label: "SmartUI RCA",
+        id: "smartui-humanize-diff",
       },
       {
         type: "category",
@@ -3494,6 +3495,41 @@ module.exports = {
     ],
     // },
   ],
+
+  
+WebScannerSidebar: [
+  {
+    type: "link",
+    label: "Back",
+    href: "/docs/",
+    customProps: {
+      className: "back-to-main-menu",
+    },
+  },
+  [
+    {
+      type: "doc",
+      id: "web-scanner-overview",
+      label: "Web Scanner Overview",
+    },
+    {
+      type: "category",
+      collapsed: false,
+      label: "Getting Started",
+      link: {
+        type: "doc",
+        id: "web-scanner-getting-started",
+      },
+      items: [
+        "web-scanner-visual-scan",
+        "web-scanner-accessibility-scan",
+        "web-scanner-adding-urls",
+        "web-scanner-scheduling-options",
+      ],
+    },
+  ],
+],
+
 
   LTBrowserSidebar: [
     {
