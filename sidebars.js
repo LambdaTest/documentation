@@ -2792,6 +2792,7 @@ module.exports = {
               "appium-install-uninstall-lambdatest-hooks",
               "appium-uploading-retrieving-files",
               "appium-firebase-app-upload",
+              "appium-flutter-integration"
             ],
           },
           {
