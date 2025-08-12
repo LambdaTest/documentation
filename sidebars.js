@@ -3019,8 +3019,8 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "SmartUI RCA",
-        id: "smartui-humanize-diff",
+        label: "Visual AI Agent",
+        id: "smartui-visual-ai",
       },
       {
         type: "category",
