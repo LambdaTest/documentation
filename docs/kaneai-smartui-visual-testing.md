@@ -58,7 +58,7 @@ To begin, navigate to the [KaneAI dashboard](https://kaneai.lambdatest.com/objec
 ### Add a Visual Comparison Step
 Author your test by writing steps in plain language, such as `go to lambdatest`.
 
- To add a visual test step, type `/` in the "Write a step" editor and select **Visual Comparison** from the command menu.
+To add a visual test step, type `/` in the "Write a step" editor and select **Visual Comparison** from the command menu. You may also use the **Eye Icon** on the dashboard for quick access.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/add-visual-comparison-step.jpeg').default} alt="Add Visual Comparison Step" className="doc_img"/>
 
@@ -109,12 +109,12 @@ Once your test case is saved, navigate to the **Test Runs** tab to configure and
 You can execute your test using one of two methods:
 
 * **Run Instance Now**
-    This option triggers an immediate, one-time execution of your test. It is ideal for quick validations or debugging a specific change.
+This option triggers an immediate, one-time execution of your test. It is ideal for quick validations or debugging a specific change.
 
-    <img loading="lazy" src={require('../assets/images/kane-ai/smartui/run-test.jpeg').default} alt="Run Test for automation" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/run-test.jpeg').default} alt="Run Test for automation" className="doc_img"/>
 
 * **Schedule Test Run**
-    This option allows you to automate your visual regression testing by setting up a recurring schedule. Learn more in our guide to [Scheduled Test Runs](https://www.lambdatest.com/support/docs/kaneai-scheduled-test-runs/).
+This option allows you to automate your visual regression testing by setting up a recurring schedule. Learn more in our guide to [Scheduled Test Runs](https://www.lambdatest.com/support/docs/kaneai-scheduled-test-runs/).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/schedule-test-run.png').default} alt="Schedule the Test Run for automation" className="doc_img"/>
 
@@ -131,16 +131,15 @@ Here users can enable **Visual Regression** settings to use the advanced configu
 * Custom Devices (upto 2) with Orientation (Portrait and Landscape)
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/visual_config.jpeg').default} alt="Schedule the Test Run for automation" className="doc_img"/>
 
-For a more flexible usage they may use the **JSON** tab where you may set your own parameters and configuration.
+For a more flexible usage you may use the **JSON** tab where you can set your own parameters and configuration.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/visual_configs_json.jpeg').default} alt="Schedule the Test Run for automation" className="doc_img"/>
-
 
 ## View Your Visual Test Results on SmartUI
 
 After the Test Run job is finished, all screenshots captured using the `/Visual Comparison` command via KaneAI will be available in your SmartUI project for review.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/smartui/smartui_dashboard.jpeg').default} alt="Schedule the Test Run for automation" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/smartui/smartui_dashboard.jpeg').default} alt="smartui dashboard" className="doc_img"/>
 
 
 1.  Navigate to the [SmartUI Dashboard](https://smartui.lambdatest.com/).
