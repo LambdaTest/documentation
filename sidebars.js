@@ -1249,7 +1249,6 @@ module.exports = {
           "kane-ai-modules",
           "kaneai-modules-versions-and-enhancement",
           "kaneai-upload-and-download-files",
-          "kane-ai-assertions",
           "kaneai-dynamic-url-replacement",
           "kaneai-chrome-options",
           "kaneai-custom-headers",
@@ -1265,7 +1264,6 @@ module.exports = {
         label: "Knowledge Base",
         items: [
           "kane-ai-command-guide",
-          "kane-ai-supported-assertions",
           "kaneai-failure-conditions",
           "kane-ai-web-test-writing-guidelines",
           "kane-ai-app-test-writing-guidelines",
