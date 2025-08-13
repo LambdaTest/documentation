@@ -50,7 +50,7 @@ To access the System & Custom Fields settings, click on **Settings** in the top 
 You can manage your **System** and **Custom Fields** in this Fields page.
 
 ### System Fields
-Are defalut fields present in the Test Manager. These fields help organize and track your test cases, test runs or instances. They can be seamlessly integrated into your test management process and customized by adding values. Test Cases & Test Runs have their separate System Fields. 
+Are default fields present in the Test Manager. These fields help organize and track your test cases, test runs or instances. They can be seamlessly integrated into your test management process and customized by adding values. Test Cases & Test Runs have their separate System Fields. 
 
 - Test Cases have these pre defined fields: **Priority**, **Status**, and **Type**. 
 - Test Runs can have only one System Field that is the `Status`. 
