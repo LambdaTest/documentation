@@ -171,7 +171,7 @@ Mathematical assertions verify numerical operations or calculations.
 - Verify if the sum of 3 and 4 equals 7.
 
 :::note
- KaneAI has replaced the Hard assertions feature with [Failure Conditions](https://www.lambdatest.com/support/docs/kaneai-failure-conditions). Existing test cases that use Hard assertions will continue to work as they always have. However, any new or edited test cases will use the new Failure Conditions approach.
+ By default any assertion used has a failure condition set to fail test immediately if assertion fails. This change has been implemented since July, 20, 2025. Any tests which were authored or edited before this date, would have a failure condition set to warn, but continue by default. Existing tests would keep running as it is until you edit in KaneAI agent, post which the new failure conditions will get set. More details about failure conditions are available [here](https://www.lambdatest.com/support/docs/kaneai-failure-conditions)
 :::
 
 ## Unsupported Assertions
