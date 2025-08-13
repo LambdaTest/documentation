@@ -170,6 +170,10 @@ Mathematical assertions verify numerical operations or calculations.
 **Examples:**
 - Verify if the sum of 3 and 4 equals 7.
 
+:::note
+ KaneAI has replaced the Hard assertions feature with [Failure Conditions](https://www.lambdatest.com/support/docs/kaneai-failure-conditions). Existing test cases that use Hard assertions will continue to work as they always have. However, any new or edited test cases will use the new Failure Conditions approach.
+:::
+
 ## Unsupported Assertions
 There are some assertions that KaneAI does not support at this moment. However the support for these kind of assertions is currently under development.
 Below are examples of unsupported assertions along with examples.
