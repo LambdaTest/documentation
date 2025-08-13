@@ -133,14 +133,94 @@ You can add maximum of 300 seconds timeout for an operation.
 
 If your element is not visible in the viewport, you can use the `scroll until` command to go to that particular element if that is present currently in the DOM. This can be used in vertical scrollable pages & even on the scrollable sub-sections. 
 
-## Assertions and Queries
-### Assert Element Text
-- `assert if red button text is "subscribe"`
+## Assertions
+KaneAI supports a range of assertions to make test validations more seamless and effective. Here are the types of assertions currently supported:
 
-### Assert Element Presence
-- `assert if KaneAI is present on the "viewport"`
+### Driver Assertions
+Driver assertions rely on the web driver to validate browser url, page & window properties and dimensions. 
 
-### Query Information
+**Examples:**
+- Assert if the current browser URL is "https://example.com".
+- Validate if the client height and width match the expected values.
+
+### Text Assertions
+Text assertions validate the presence or absence of specific text on the screen.
+
+**Examples:**
+- Assert if the text "Welcome Back!" is visible.
+- Check if the error message "Invalid password" appears on failed login.
+
+### Visual Assertions
+Visual assertions ensure the visibility of images on the screen.
+
+**Examples:**
+- Assert if the company logo is displayed in the header.
+- Verify the visibility of a product image on the product page.
+
+### Relative Assertions
+Relative assertions check the visibility of one element in relation to another.
+
+**Examples:**
+- Assert if the login button is in same column as the username field.
+- Check if the submit button and cancel button are in the same row.
+
+### Mathematical Assertions
+Mathematical assertions verify numerical operations or calculations.
+
+**Examples:**
+- Verify if the sum of 3 and 4 equals 7.
+
+:::note
+ KaneAI has replaced the Hard assertions feature with [Failure Conditions](https://www.lambdatest.com/support/docs/kaneai-failure-conditions). Existing test cases that use Hard assertions will continue to work as they always have. However, any new or edited test cases will use the new Failure Conditions approach.
+:::
+
+## Unsupported Assertions
+There are some assertions that KaneAI does not support at this moment. However the support for these kind of assertions is currently under development.
+Below are examples of unsupported assertions along with examples.
+
+### Element State Assertions (To be available soon)
+These assertions check for state of elements like being disabled or enabled.
+
+**Examples:**
+- Assert if the submit button is disabled.
+- Assert if text input field is enabled.
+- Assert if a dropdown is expanded.
+
+### Element Property Assertions (To be available soon)
+Property assertions involve checking styles or attributes of an element.
+
+**Examples:**
+- Assert if the font size of a header is "16px".
+- Assert if the padding of a button is "10px".
+
+### Spatial Assertions (To be available soon)
+Spatial assertions validate the position or arrangement of elements.
+
+**Examples:**
+- Assert that the 5th column of a table contains "Jordan.Mathews".
+
+### Logical Assertions (To be available soon)
+Logical assertions are used to combine multiple conditions.
+
+**Examples:**
+- Assert if the user is an admin **and** is logged in.
+- Assert if either username or email is filled.
+
+### Assertions for Actions Being Performed (To be available soon)
+These assertions aim to check the state after an action, which is not supported directly.
+
+**Examples:**
+- Assert if the page is scrolled to the bottom.
+- Assert if a tooltip appears after hovering over an info icon.
+  - Currently, you can break this into two steps: Hover on the info icon, then assert if the tooltip is visible.
+
+### Nested Assertions (To be available soon)
+Nested assertions involve multiple layers of validation within a single assertion.
+
+**Examples:**
+- Assert if both the login button is enabled and the welcome message is visible.
+
+## Query Information
 - `query the current url`
 - `query the time mentioned in the poster`
 
