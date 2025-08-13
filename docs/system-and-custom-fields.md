@@ -45,20 +45,23 @@ Explore the structured organization of your test projects through the use of Fie
 
 To access the System & Custom Fields settings, click on **Settings** in the top right hand side in the Project's dashboard.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/project-dashboard.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/field-settings.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 You can manage your **System** and **Custom Fields** in this Fields page.
 
 ### System Fields
-Is a default feature provided by LambdaTest that includes standard fields like **Priority**, **Status**, and **Type**. These fields help organize and track your test cases, test runs or instances. They can be seamlessly integrated into your test management process and customized by adding values. To do so, simply click on any field and select **Add Value**.
+Are default fields present in the Test Manager. These fields help organize and track your test cases, test runs or instances. They can be seamlessly integrated into your test management process and customized by adding values. Test Cases & Test Runs have their separate System Fields. 
 
-:::note
- Custom field values can be set for System Field but for Test Runs this customization is only applicatble for the `Status` field.
-:::
+- Test Cases have these pre defined fields: **Priority**, **Status**, and **Type**. 
+- Test Runs can have only one System Field that is the `Status`. 
+
+To manage these fields, navigate to the System Fields tab, where you'll see dedicated sections for both Test Case and Test Runs fields.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/system-fields.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/edit-system-fields.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+These System Fields can have Custom Values which can be added by simply selecting any field and clicking on **Add Value**.
+
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/edit-system-fields.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 :::tip
  Every new Status value of Test Runs will have a unique random color defined to it on creation. 
