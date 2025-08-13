@@ -60,6 +60,10 @@ Is a default feature provided by LambdaTest that includes standard fields like *
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/edit-system-fields.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
+:::tip
+ Every new Status value of Test Runs will have a unique random color defined to it on creation. 
+:::
+
 ### Custom Fields 
 Allow you to store additional information beyond what System Fields offer. To create a new field, enter the required details and choose the appropriate data type from the **Type** function. Available types include String, Textarea, Number, Dropdown (Single Select), Dropdown (Multi Select), Boolean (Checkbox), Date, User, and URL.
 
