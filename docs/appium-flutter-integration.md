@@ -54,7 +54,7 @@ After preparing your Flutter app with this integration (refer to the setup docum
 
 ---
 
-## Getting Your Flutter App Ready for Tessting 
+## Getting Your Flutter App Ready for Testing 
 
 ### 1. Add the Flutter Integration Server dependency
 
