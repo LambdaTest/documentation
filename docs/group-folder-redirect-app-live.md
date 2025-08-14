@@ -34,7 +34,7 @@ This feature ensures your app uses its **private container directory** instead o
 
 **Step 2**: Upload your application. Open the **App Settings** to enable the **Group Folder Redirect** toggle.
 
-![Group-Folder-Redirect](../assets/images/real-device-app-testing/Group-folder-redirect/Group-Folder-Redirect.png)
+![Group-Folder-Redirect](../assets/images/real-device-app-testing/Group-folder-redirect/Group-Folder-redirects.png)
 
 
 **Step 4**: Select your device and start your Real Device testing session.  
