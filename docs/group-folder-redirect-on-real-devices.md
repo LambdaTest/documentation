@@ -1,5 +1,5 @@
 ---
-id: group-folder-redirect-app-live
+id: group-folder-redirect-on-real-devices
 title: Group Folder Redirect for iOS Apps in App Live
 sidebar_label: Group Folder Redirect
 description: Enable Group Folder Redirect support for iOS apps on LambdaTest Real Devices.
@@ -9,6 +9,9 @@ keywords:
   - group folder redirect
   - ios file system testing
   - private app container testing
+url: https://www.lambdatest.com/support/docs/group-folder-redirect-on-real-devices/
+site_name: LambdaTest
+slug: group-folder-redirect-on-real-devices/
 ---
 
 # Group Folder Redirect On Real Devices  
