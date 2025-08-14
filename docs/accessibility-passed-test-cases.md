@@ -51,10 +51,7 @@ Pass Audits Visibility shows accessibility checks that pass WCAG compliance alon
 
 ## Enable Pass Audits
 
-
-
 ### Manual Testing
----
 
 1. Navigate to **Accessibility Tool** → **Settings** → **Other Settings**
 2. Enable **Show Pass Audits**
@@ -62,12 +59,9 @@ Pass Audits Visibility shows accessibility checks that pass WCAG compliance alon
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/features/accessibility-passed-test-cases.png').default} alt="Accessibility Passed Test Cases" className="doc_img" style={{ width: "650px", height: "auto"}}/>
 
-
-
 ### Automation Testing
----
 
-Add the `accessibility.passedTestCases: true`  capability to your test configuration:
+Add the `accessibility.passedTestCases` capability to your test configuration:
 
 ```javascript
 'LT:Options': {
@@ -80,19 +74,8 @@ Add the `accessibility.passedTestCases: true`  capability to your test configura
 }
 ```
 
-
-
-## Results and Dashboard
----
-When enabled, passed test cases will appear in the Accessibility tab of your Automation Dashboard:
-
-<img loading="lazy" src={require('../assets/images/accessibility-testing/features/accessibility-passed-test-cases-example.png').default} alt="Accessibility Passed Test Cases Example" className="doc_img" />
-
-
-
-
 ## Use Cases
----
+
 **Regression Testing**
 
 Verify that code changes don't break previously passing accessibility checks:
