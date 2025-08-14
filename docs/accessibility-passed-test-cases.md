@@ -61,7 +61,7 @@ Pass Audits Visibility shows accessibility checks that pass WCAG compliance alon
 
 ### Automation Testing
 
-Add the `accessibility.passedTestCases` capability to your test configuration:
+Add the `accessibility.passedTestCases: true`  capability to your test configuration:
 
 ```javascript
 'LT:Options': {
@@ -73,6 +73,12 @@ Add the `accessibility.passedTestCases` capability to your test configuration:
     "accessibility.passedTestCases": true
 }
 ```
+
+## Results and Dashboard
+When enabled, passed test cases will appear in the Accessibility tab of your Automation Dashboard:
+
+<img loading="lazy" src={require('../assets/images/accessibility-testing/features/accessibility-passed-test-cases-example.png').default} alt="Accessibility Passed Test Cases Example" className="doc_img" />
+
 
 ## Use Cases
 

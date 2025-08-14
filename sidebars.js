@@ -1868,8 +1868,9 @@ module.exports = {
         collapsed: true,
         label: "Features",
         items: [
-          "accessibility-fragment-identifier",
           "accessibility-passed-test-cases",
+          "accessibility-capture-screenshot",
+          "accessibility-fragment-identifier",
         ],
       },
       {
