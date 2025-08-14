@@ -2817,7 +2817,6 @@ module.exports = {
               "appium-app-performance",
               "appium-ios-app-settings",
               "ios-keychain-cleanup",
-              "group-folder-redirect-appium",
               "adb-commands-support",
               "login-google-android",
               "disable-screenshot-block",
