@@ -1861,6 +1861,16 @@ module.exports = {
         id: "screen-reader-on-accessibility",
       },
       {
+        type: "category",
+        collapsed: true,
+        label: "Features",
+        items: [
+          "accessibility-passed-test-cases",
+          "accessibility-capture-screenshot",
+          "accessibility-fragment-identifier",
+        ],
+      },
+      {
         type: "doc",
         label: "Accessibility MCP Server",
         id: "accessibility-mcp-server",
@@ -2084,7 +2094,7 @@ module.exports = {
               "devtools-on-real-devices-app",
               "set-date-time-hour-format-real-devices",
               "assistive-touch-on-real-ios-devices",
-              "dark-mode-on-real-devices"
+              "dark-mode-on-real-devices",
             ],
           },
         ],
