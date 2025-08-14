@@ -18,6 +18,8 @@ slug: set-device-dark-mode/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
@@ -44,81 +46,121 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
+
+
+LambdaTest now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
+
 ---
 
-LambdaTest now supports configuring dark mode settings via Appium during automation testing sessions on Virtual Devices. This allows developers and testers to validate user interface behavior, theme switching, and visual consistency across light and dark mode environments for both mobile apps and web applications.
-
-By the end of this document, you will be able to:
-
-- Enable or disable dark mode on iOS and Android devices
-- Test dark mode behavior in web browsers
-- Validate app UI consistency across different theme modes
-
-## Testing Scenarios
+## Use Cases
 
 ### Mobile App Testing
 
-- Validate app UI elements render correctly in dark mode
-- Test color contrast and readability in dark themes
+- Ensure UI elements render correctly in dark mode
+- Check text contrast and readability
 - Verify icon and image visibility in dark backgrounds
-- Ensure proper theme inheritance across app screens
+- Confirm theme consistency across screens
 
 ### Web Testing
 
 - Test CSS media queries for `prefers-color-scheme: dark`
-- Validate web application dark theme implementations
-- Verify browser-level dark mode support
-- Test responsive design across light and dark modes
+- Validate dark theme implementations in your app
+- Check browser-level dark mode support
+- Review responsiveness across both themes
 
-## Support for Automation
-
-To modify the dark mode settings programmatically, use the `lambdatest_executor` Appium hook with the `updateDeviceSettings` action. You can toggle dark mode on or off for comprehensive theme testing across your applications.
-
-:::info
-
-💡 **Note:** This feature is currently supported on Virtual Devices only.
+:::info 
+ This feature works for both Virtual and Real Devices.
 :::
-
-## Appium Hook Example
-
-### Java Implementation
-
-```java
-JavascriptExecutor jse = (JavascriptExecutor)driver;
-jse.executeScript("lambdatest_executor: {
-    \"action\":\"updateDeviceSettings\", 
-    \"arguments\": {
-       \"DarkMode\" : \"true\"
-   }
-}");
-```
-
-### Python Implementation
-
-```python
-driver.execute_script('lambdatest_executor: {
-    "action": "updateDeviceSettings",
-    "arguments": {
-        "DarkMode": "true"
-    }
-}')
-```
-
-## Supported Arguments
-
-| Argument | Format | Description |
-|----------|--------|-------------|
-| DarkMode | true / false | Enables or disables system-wide dark mode. True activates dark mode, False activates light mode. |
-
-💡 **Note:** Dark mode changes apply system-wide and will affect both native apps and web browsers. Some applications may require a restart or refresh to fully reflect the theme changes.
 
 ## Supported Platforms
 
-- **iOS:** 13 and above
-- **Android:** 10 and above
+| Platform | Version        |
+|----------|----------------|
+| iOS      | 13 and above   |
+| Android  | 11 and above   |
 
-## Limitations
 
+### Enabling Dark Mode via Capabilities 
+
+You can enable the dark mode setting through `darkMode` capability before the session starts. This ensures the device starts in the dark   theme without additional steps during test execution.
+
+<Tabs>
+<TabItem value="ios" label="iOS" default>
+
+```json
+{
+    "deviceName":"iPhone 16",
+    "platformName":"ios",
+    "platformVersion":"18",
+    "isRealMobile":True,
+    "app":"YOUR_APP_URL",
+    #highlight-next-line
+    "darkMode": true
+}
+```
+
+</TabItem>
+<TabItem value="android" label="Android">
+
+```json
+{
+    "deviceName":"Galaxy S20",
+    "platformName":"Android",
+    "platformVersion":"10",
+    "isRealMobile":True,
+    "app":"YOUR_APP_URL",
+    #highlight-next-line
+    "darkMode": true
+}
+```
+
+</TabItem>
+</Tabs>
+
+:::info
+
+- You must add the generated **APP_URL** to the `app` capability in the config file.
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+
+:::
+
+---
+
+### Enabling Dark Mode via Hooks
+
+To change dark mode settings during test execution, use the hook with the `updateDeviceSettings` action. The example below demonstrates this using **Python**.
+
+<Tabs>
+<TabItem value="real-devices" label="Real Devices" default>
+
+```python
+driver.execute_script('lambda_executor: { 
+      "action": "updateDeviceSettings", 
+      "arguments": { 
+        "darkMode" : "on" 
+        } 
+}')
+```
+
+</TabItem>
+<TabItem value="virtual-devices" label="Virtual Devices">
+
+```python
+driver.execute_script('lambdatest_executor: {
+      "action": "updateDeviceSettings",
+      "arguments": {
+        "DarkMode": "true"
+       }
+}')
+```
+
+</TabItem>
+</Tabs>
+
+
+:::tip
 - Dark mode changes are applied at the system level and may require app restarts for full effect
 - Some legacy applications may not fully support dark mode theming
 - Web applications must implement their own dark mode CSS for the setting to take effect beyond browser UI
+:::
+
