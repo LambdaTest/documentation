@@ -2820,6 +2820,7 @@ module.exports = {
               "camera-image-injection",
               "video-injection",
               "biometric-authentication",
+              "audio-injection",
               "regular-expression-appium",
               "appium-upload-media",
               "app-auto-network-throttling",
