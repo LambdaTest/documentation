@@ -2594,6 +2594,7 @@ module.exports = {
       "playwright-cucumberjs",
       "playwright-cicd",
       "playwright-lighthouse-library",
+      "playwright-auto-heal",
     ],
   ],
 
