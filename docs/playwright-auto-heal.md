@@ -175,6 +175,8 @@ Browser browser = playwright.chromium().connect("wss://cdp.lambdatest.com/playwr
 
 ---
 
+<img loading="lazy" src={require('../assets/images/selenium/auto-heal.png').default} alt="add" width="1346" height="647" className="doc_img"/>
+
 Playwright Locator's auto-healing is a sophisticated method in test automation designed to address the instability of inconsistent tests. This system smartly adjusts locators by merging attributes and context, ensuring robustness and adaptability. During runtime, it consistently monitors the web page to identify DOM (Document Object Model) alterations.
 
 When an element is successfully located on the page using Playwright's locator methods (`page.locator('#username').click()`, etc.), its DOM path is recorded for subsequent use. If that same element is later referenced on the same page and is missing, the system evaluates the current page and formulates new locators for altered elements based on previous benchmarks.

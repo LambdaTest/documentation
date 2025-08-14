@@ -1,6 +1,6 @@
 ---
 id: accessibility-fragment-identifier
-title: Accessibility Fragment Identifer
+title: Accessibility Fragment Identifier
 sidebar_label: Fragment Identifier
 description: The Fragment Identifier feature in the Accessibility Tool allows you to treat URLs with different fragment identifiers.
 keywords:
@@ -62,7 +62,7 @@ To enable the Fragment Identifier feature:
 3. Locate the **Fragment Identifier** option
 4. Toggle the setting to **enabled**
 
-<img loading="lazy" src={require('../assets/images/accessibility-testing/features/accessibility-fragment-identifier.png').default} alt="Native Mobile App Testing" className="doc_img" />
+<img loading="lazy" src={require('../assets/images/accessibility-testing/features/accessibility-fragment-identifier.png').default} alt="Native Mobile App Testing" className="doc_img" style={{ width: "650px", height: "auto"}}/>
 
 > **Note:** This feature is **disabled by default**. When disabled, URLs with different fragment identifiers are treated as the same URL for issue tracking.
 
