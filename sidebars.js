@@ -1874,7 +1874,10 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Features",
-        items: ["accessibility-fragment-identifier"],
+        items: [
+          "accessibility-fragment-identifier",
+          "accessibility-passed-test-cases",
+        ],
       },
       {
         type: "doc",
