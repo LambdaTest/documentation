@@ -2105,7 +2105,6 @@ module.exports = {
               "set-date-time-hour-format-real-devices",
               "assistive-touch-on-real-ios-devices",
               "dark-mode-on-real-devices",
-              "group-folder-redirect-app-live",
               "group-folder-redirect-on-real-devices",
             ],
           },
