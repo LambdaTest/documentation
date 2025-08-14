@@ -1,7 +1,7 @@
 ---
 id: audio-injection
 title: Audio Injection on iOS Real Devices
-sidebar_label: Video Injection
+sidebar_label: Audio Injection
 description: Inject audio content in your tests with LambdaTest to simulate microphone inputs for automated testing, enhancing your app's audio capabilities.
 
 keywords:
@@ -73,7 +73,7 @@ Use it to test audio-driven flows such as audio verification and in-app recordin
 
 ## Step 1: Upload Audio File
 **Supported formats:** `.mp3`, `.wav`  
-**Max size:** 15 MB  
+**Max size:** 15 MB  , 100 MB respectively
 
 ```bash
 curl -u "LT_USERNAME:LT_ACCESS_KEY"   -X POST "https://api.lambdatest.com/mfs/v1.0/media/upload"   -F "media_file=@/path/to/test.wav"   -F "type=audio"   -F "custom_id=SampleAudio"
