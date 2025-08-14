@@ -2091,7 +2091,8 @@ module.exports = {
               "devtools-on-real-devices-app",
               "set-date-time-hour-format-real-devices",
               "assistive-touch-on-real-ios-devices",
-              "dark-mode-on-real-devices"
+              "dark-mode-on-real-devices",
+              "group-folder-redirect-app-live"
             ],
           },
         ],
@@ -2811,6 +2812,7 @@ module.exports = {
               "appium-app-performance",
               "appium-ios-app-settings",
               "ios-keychain-cleanup",
+              "group-folder-redirect-appium",
               "adb-commands-support",
               "login-google-android",
               "disable-screenshot-block",
