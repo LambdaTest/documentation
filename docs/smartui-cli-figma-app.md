@@ -1,6 +1,6 @@
 ---
 id: smartui-cli-figma-app
-title: Getting started with LambdaTest's SmartUI Figma-App CLI 
+title: Getting Started with LambdaTest's SmartUI Figma-App CLI
 sidebar_label: Figma-App CLI
 description: Learn how to compare your Figma mobile designs with native app screenshots on real devices using SmartUI CLI.
 keywords:
@@ -20,17 +20,31 @@ import CodeBlock from '@theme/CodeBlock';
 
 ---
 
-
-SmartUI Figma-App CLI allows you to validate your mobile app's implementation against Figma designs by comparing screenshots from real devices with your design files. This guide walks you through setting up and using the CLI to ensure design fidelity in your mobile app development.
+SmartUI Figma-App CLI lets you compare **mobile app screenshots captured on real devices** with your **Figma design frames** to detect visual mismatches and ensure accurate implementation of mobile UI.
 
 ---
 
 ## Prerequisites
 
-- [ ] Node.js and npm installed
-- [ ] LambdaTest SmartUI account with App Automation Plan
-- [ ] Knowledge of [visual testing Native Apps](https://www.lambdatest.com/support/docs/appium-visual-regression/) with SmartUI 
-- [ ] Figma Personal Access Token ([how to get one](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens))
+- Node.js and npm installed
+- LambdaTest SmartUI account with App Automation plan
+- Real device screenshots captured via Appium, SDK, or SmartUI platform
+- Figma Personal Access Token ([how to get one](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens))
+
+---
+
+## Understanding Figma Tokens
+
+| Token                | Where It’s Used | Description                                                                 |
+|----------------------|------------------|-----------------------------------------------------------------------------|
+| `FIGMA_TOKEN`        | Env Variable     | Your Figma **Personal Access Token** to authenticate with the Figma API    |
+| `figma_file_token`   | `designs.json`   | Figma **file ID**, extracted from the Figma file URL                       |
+| `figma_ids`          | `designs.json`   | List of **frame or node IDs** you want to compare visually                 |
+
+> Example Figma URL:  
+> `https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`  
+> - `figma_file_token`: `abc12345`  
+> - `figma_ids`: `2417-58969`
 
 ---
 
@@ -38,134 +52,100 @@ SmartUI Figma-App CLI allows you to validate your mobile app's implementation ag
 
 ### 1. Create a SmartUI Project
 
-The first step is to create a project with the application in which we will combine all your builds run on the project. To create a SmartUI Project, follow these steps:
+1. Visit [smartui.lambdatest.com](https://smartui.lambdatest.com)
+2. Click **New Project**
+3. Select **Real Devices** as the platform
+4. Enter:
+   - Project Name
+   - Approvers (optional)
+   - Tags (optional)
+5. Click **Submit**
 
-1. Go to [Projects page](https://smartui.lambdatest.com/)
-2. Click on the `new project` button
-3. Select the platform as <b>Real Devices</b> for executing your `App` tests.
-4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
-5. Click on the **Submit**.
-
+---
 
 ### 2. Install SmartUI CLI
 
 ```bash
 npm install @lambdatest/smartui-cli
-```
+````
+
 ---
 
-### 3. Create the Figma-App Configuration File
+### 3. Generate and Edit Configuration
 
-Generate a starter config:
+Run the following to create your initial design file:
 
 ```bash
 npx smartui config:create-figma-app designs.json
 ```
-**Sample `designs.json`:**
 
-```json title="/smartui-cli-figma-app/designs.json"
+#### Sample `designs.json`
+
+```json title="designs.json"
 {
   "mobile": [
     {
       "name": "Pixel 8",
       "platform": ["Android 14"],
       "orientation": "portrait"
-    },
-    {
-      "name": "iPhone 15",
-      "platform": ["iOS 16"],
-      "orientation": "landscape"
     }
   ],
   "figma": {
     "depth": 2,
     "configs": [
       {
-        "figma_file_token": "<token>",
-        "figma_ids": ["id-1", "id-2"],
-        "screenshot_names": ["homepage", "about"]
-      },
-      {
-        "figma_file_token": "<token>",
-        "figma_ids": ["id-3", "id-4"],
-        "screenshot_names": ["xyz", "abc"]
+        "figma_file_token": "abc12345",
+        "figma_ids": ["2417-58969"],
+        "screenshot_names": ["homepage"]
       }
     ]
   }
 }
 ```
-
-#### Config Options:
-
-| Key                | Description                                                                                  | Required |
-|--------------------|----------------------------------------------------------------------------------------------|----------|
-| name               | Device name                                                  | Yes      |
-| platform           | OS and version (e.g., `["Android 14"]`, `["iOS 16"]`)                                    | Yes      |
-| orientation        | `portrait` or `landscape` (default: portrait)                                                | No       |
-| figma_file_token   | Figma file token                                                                             | Yes      |
-| figma_ids          | Array of Figma frame/artboard IDs to compare                                                 | Yes      |
-| screenshot_names   | Custom names for screenshots (must be unique within a build)                                 | Yes      |
-| depth              | Figma tree depth (optional, default: all nodes)                                              | No       |
-
----
-:::note
-Please ensure that the platform and device name in your configuration matches the platform and device name in your App Automation tests for accurate comparisons. In case you are using regex `.*` to run tests in App Automation, the comparisons will not run correctly as random device allocation will not work in sync with Figma App CLI
-:::
-### 4. Set Up Environment Variables
-
-#### Project Token
-
-```bash
-export PROJECT_TOKEN="your_project_token"
-```
-
-#### Figma Token
-
-```bash
-export FIGMA_TOKEN="your_figma_token"
-```
 ---
 
-### 5. Run the Figma-to-App Comparison
+### 4. Set Environment Variables
+
+```bash
+export PROJECT_TOKEN="your_smartui_project_token"
+export FIGMA_TOKEN="your_figma_personal_token"
+```
+
+---
+
+### 5. Run the Comparison
 
 ```bash
 npx smartui upload-figma-app designs.json
 ```
 
-**Optional flags:**
+#### Optional Flags
 
-- `--markBaseline` : Mark this build as the baseline for future comparisons
-- `--buildName "<Build_Name>"` : Assign a custom name to the build
+| Flag             | Description                                       |
+| ---------------- | ------------------------------------------------- |
+| `--markBaseline` | Mark this build as a new baseline for future runs |
+| `--buildName`    | Assign a custom name to this comparison build     |
 
-**Example:**
+#### Example
 
 ```bash
-npx smartui upload-figma-app designs.json --buildName "v1.0.0-beta" --markBaseline
+npx smartui upload-figma-app designs.json --buildName "v1.0.0" --markBaseline
 ```
 
 ---
-## Best Practices
 
-- Use descriptive screenshot names for easy result navigation
-- Ensure Figma designs match device and platform for accurate comparison.
-- Validate device/OS availability in LambdaTest before running tests
-- Keep Figma frame IDs and tokens secure
+### View SmartUI Results
 
----
+You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-## Advanced Usage
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-- **Multiple Devices:** Add as many device objects as needed in the `mobile` array
-- **Orientation:** Specify `orientation` per device for portrait/landscape testing
-- **CI Integration:** Add CLI commands to your CI pipeline for automated validation
+### Additional Resources
+
+* [How to generate a Figma token](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)
+* [SmartUI CLI Docs](https://www.lambdatest.com/support/docs/smartui-cli/)
+* [Appium + SmartUI Node Sample](https://github.com/LambdaTest/smartui-appium-nodejs)
 
 ---
 
-## Additional Resources
-
-- [Figma Personal Access Tokens](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)
-- [SmartUI CLI Documentation](https://www.lambdatest.com/support/docs/smartui-cli/)
----
-
-
-**Ready to ensure your mobile app matches your Figma designs? Try SmartUI Figma-App CLI today!** 
+**Run seamless visual comparisons between real device screenshots and Figma designs with SmartUI CLI. Start validating your mobile UI today!**

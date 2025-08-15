@@ -49,7 +49,7 @@ module.exports = {
           "hyperexecute-snooper",
           "hyperexecute-inherit-config",
           "hyperexecute-yaml-version0.2",
-          "hyperexecute-yaml-capability-overrides"
+          "hyperexecute-yaml-capability-overrides",
         ],
       },
       {
@@ -369,7 +369,10 @@ module.exports = {
               type: "doc",
               id: "hyperexecute-performance-testing",
             },
-            items: ["hyperexecute-run-jmeter-tests", "hyperexecute-gattling-testing"],
+            items: [
+              "hyperexecute-run-jmeter-tests",
+              "hyperexecute-gattling-testing",
+            ],
           },
           {
             type: "doc",
@@ -735,7 +738,7 @@ module.exports = {
                 label: "Secrets Management",
                 items: [
                   "hyperexecute-how-to-save-and-manage-secrets",
-                  "hyperexecute-how-to-manage-project-level-secrets"
+                  "hyperexecute-how-to-manage-project-level-secrets",
                 ],
               },
               "hyperexecute-how-to-configure-tunnel",
@@ -919,7 +922,7 @@ module.exports = {
                 items: [
                   "hyperexecute-release-notes-2-9-6",
                   "hyperexecute-release-notes-2-9-5",
-                  "hyperexecute-release-notes-2-9-4"
+                  "hyperexecute-release-notes-2-9-4",
                 ],
               },
               {
@@ -929,7 +932,7 @@ module.exports = {
                 items: [
                   "hyperexecute-release-notes-2-9-1",
                   "hyperexecute-release-notes-2-9-0",
-                  "hyperexecute-release-notes-2-8-9"
+                  "hyperexecute-release-notes-2-8-9",
                 ],
               },
               {
@@ -1176,9 +1179,7 @@ module.exports = {
           type: "doc",
           id: "getting-started-with-kane-ai",
         },
-        items: [
-          "why-we-need-kane-ai",
-        ],
+        items: ["why-we-need-kane-ai"],
       },
       {
         type: "category",
@@ -1199,9 +1200,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Author App Tests",
-            items: [
-              "author-your-first-mobile-app-test",
-            ],
+            items: ["author-your-first-mobile-app-test"],
           },
         ],
       },
@@ -1249,12 +1248,12 @@ module.exports = {
           "kane-ai-modules",
           "kaneai-modules-versions-and-enhancement",
           "kaneai-upload-and-download-files",
-          "kane-ai-assertions",
           "kaneai-dynamic-url-replacement",
           "kaneai-chrome-options",
           "kaneai-custom-headers",
           "kaneai-totp",
           "kaneai-scheduled-test-runs",
+          "kaneai-smartui-visual-testing",
           "kaneai-database",
         ],
       },
@@ -1264,7 +1263,6 @@ module.exports = {
         label: "Knowledge Base",
         items: [
           "kane-ai-command-guide",
-          "kane-ai-supported-assertions",
           "kaneai-failure-conditions",
           "kane-ai-web-test-writing-guidelines",
           "kane-ai-app-test-writing-guidelines",
@@ -1276,7 +1274,11 @@ module.exports = {
         type: "category",
         collapsed: true,
         label: "Video Tutorials",
-        items: ["kaneai-test", "kaneai-test-manual-interaction-video", "kaneai-edit-test-steps"],
+        items: [
+          "kaneai-test",
+          "kaneai-test-manual-interaction-video",
+          "kaneai-edit-test-steps",
+        ],
       },
       {
         type: "category",
@@ -1869,6 +1871,16 @@ module.exports = {
         id: "screen-reader-on-accessibility",
       },
       {
+        type: "category",
+        collapsed: true,
+        label: "Features",
+        items: [
+          "accessibility-passed-test-cases",
+          "accessibility-capture-screenshot",
+          "accessibility-fragment-identifier",
+        ],
+      },
+      {
         type: "doc",
         label: "Accessibility MCP Server",
         id: "accessibility-mcp-server",
@@ -2013,9 +2025,10 @@ module.exports = {
         ],
       },
       {
-        type: "doc",
-        label: "Test Run",
-        id: "test-run-creation-and-management",
+        type: "category",
+        collapsed: true,
+        label: "Test Run & Instances",
+        items: ["test-run-creation-and-management", "test-instance-audit-logs"],
       },
       {
         type: "doc",
@@ -2030,7 +2043,7 @@ module.exports = {
           "link-jira-issues-with-test-manager",
           "lambdatest-jira-app",
           "link-ado-issues-with-test-manager",
-          "lambdatest-azure-devops-app"
+          "lambdatest-azure-devops-app",
         ],
       },
     ],
@@ -2106,19 +2119,19 @@ module.exports = {
         items: [
           "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
-        {
-          type: "category",
-          collapsed: true,
-          label: "Features",
-          items: [
-            "screen-reader-on-real-devices-browser",
-            "ip-geolocation-on-real-devices-browser",
-            "assistive-touch-on-real-ios-browser",
-            "dark-mode-on-browser",
-            "contacts-on-real-devices-browser",
-            "set-date-time-hour-format-real-devices-browser",
-          ]
-        }
+          {
+            type: "category",
+            collapsed: true,
+            label: "Features",
+            items: [
+              "screen-reader-on-real-devices-browser",
+              "ip-geolocation-on-real-devices-browser",
+              "assistive-touch-on-real-ios-browser",
+              "dark-mode-on-browser",
+              "contacts-on-real-devices-browser",
+              "set-date-time-hour-format-real-devices-browser",
+            ],
+          },
         ],
       },
     ],
@@ -2339,7 +2352,8 @@ module.exports = {
               "network-data-masking",
               "upload-files-using-lambdatest",
               "setup-pre-run-executable",
-              "har-log-viewer",],
+              "har-log-viewer",
+            ],
           },
         ],
       },
@@ -2564,7 +2578,7 @@ module.exports = {
               "javascript-with-playwright",
               "jest-with-playwright",
               "typescript-with-playwright",
-              "playwright-sdk"
+              "playwright-sdk",
             ],
           },
           {
@@ -2602,6 +2616,7 @@ module.exports = {
       "playwright-cucumberjs",
       "playwright-cicd",
       "playwright-lighthouse-library",
+      "playwright-auto-heal",
     ],
   ],
 
@@ -2794,7 +2809,7 @@ module.exports = {
               "appium-install-uninstall-lambdatest-hooks",
               "appium-uploading-retrieving-files",
               "appium-firebase-app-upload",
-              "appium-flutter-integration"
+              "appium-flutter-integration",
             ],
           },
           {
@@ -2805,6 +2820,7 @@ module.exports = {
               "camera-image-injection",
               "video-injection",
               "biometric-authentication",
+              "audio-injection",
               "regular-expression-appium",
               "appium-upload-media",
               "app-auto-network-throttling",
@@ -2820,7 +2836,7 @@ module.exports = {
               "basic-authentication-for-web-automation",
               "live-debug-in-app-automation",
               "appium-date-and-time",
-              "set-device-dark-mode"
+              "set-device-dark-mode",
             ],
           },
           {
@@ -3035,7 +3051,11 @@ module.exports = {
         label: "SmartUI RCA",
         id: "smartui-root-cause-analysis",
       },
-
+      {
+        type: "doc",
+        label: "Visual AI Agent",
+        id: "smartui-visual-ai",
+      },
       {
         type: "category",
         collapsed: false,
@@ -3508,6 +3528,39 @@ module.exports = {
       "smart-visual-testing",
     ],
     // },
+  ],
+
+  WebScannerSidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "doc",
+        id: "web-scanner-overview",
+        label: "Web Scanner Overview",
+      },
+      {
+        type: "category",
+        collapsed: false,
+        label: "Getting Started",
+        link: {
+          type: "doc",
+          id: "web-scanner-getting-started",
+        },
+        items: [
+          "web-scanner-visual-scan",
+          "web-scanner-accessibility-scan",
+          "web-scanner-adding-urls",
+          "web-scanner-scheduling-options",
+        ],
+      },
+    ],
   ],
 
   LTBrowserSidebar: [

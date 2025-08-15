@@ -54,6 +54,8 @@ import TabItem from '@theme/TabItem';
 ></script>
 `HyperExecute CLI` is a command line interface that is required to run tests on HyperExecute. This page outlines all you need to know about the CLI and also explains about the different flags & functionalities supported by the HyperExecute CLI.
 
+> HyperExecute CLI credentials (access keys, API tokens, etc.) are personal to you and must be kept secure at all times. Do not share, expose, or store them in publicly accessible code, repositories, or environments. If compromised, you are responsible for revoking and regenerating them immediately.
+
 ## Download the HyperExecute CLI
 
 You can download the `HyperExecute CLI` for your OS from the links given below :
