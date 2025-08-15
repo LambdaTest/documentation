@@ -2096,6 +2096,7 @@ module.exports = {
               "camera-image-injection-on-real-devices",
               "ip-geolocation-on-real-devices-app",
               "biometric-authentication-on-real-devices",
+              "network-configurations-in-real-devices",
               "contacts-on-real-devices",
               "real-device-adb-shell",
               "ui-inspector",
@@ -2119,19 +2120,20 @@ module.exports = {
         items: [
           "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Features",
-            items: [
-              "screen-reader-on-real-devices-browser",
-              "ip-geolocation-on-real-devices-browser",
-              "assistive-touch-on-real-ios-browser",
-              "dark-mode-on-browser",
-              "contacts-on-real-devices-browser",
-              "set-date-time-hour-format-real-devices-browser",
-            ],
-          },
+        {
+          type: "category",
+          collapsed: true,
+          label: "Features",
+          items: [
+            "screen-reader-on-real-devices-browser",
+            "ip-geolocation-on-real-devices-browser",
+            "assistive-touch-on-real-ios-browser",
+            "dark-mode-on-browser",
+            "network-configurations-in-browser",
+            "contacts-on-real-devices-browser",
+            "set-date-time-hour-format-real-devices-browser",
+          ]
+        }
         ],
       },
     ],
@@ -2823,6 +2825,7 @@ module.exports = {
               "audio-injection",
               "regular-expression-appium",
               "appium-upload-media",
+              "network-configurations",
               "app-auto-network-throttling",
               "appium-ip-geolocation",
               "appium-app-performance",
