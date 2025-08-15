@@ -156,7 +156,43 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/ios-sim
 
 </Tabs>
 
-## Step 5: Execute your Test Suite
+## Step 5: Generate JUnit XML Report
+1. Update the `runTest.sh` file to include the `--format junit` flag in the maestro test command:
+
+```yaml
+/home/ltuser/.maestro/bin/maestro test $1 --debug-output ./MaestroLogs --format junit
+```
+
+The above command will generate a `report.xml` file in the root directory after each test execution. Here is the complete reference of the `runTest.sh` file:
+
+```yaml reference
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/maestro-test/runTest.sh
+```
+
+2. Update your HyperExecute YAML file to enable the native reporting in HyperExecute using the generated JUnit XML files.
+
+```yaml title="hyperexecute.yaml"
+report: true
+partialReports:
+  - location: .
+    type: xml
+    frameworkName: junit
+```
+
+### 📘 Use Cases
+#### Use Case 1: One Test per Task
+If you're executing one test per task, a single `report.xml` will be generated per job. These individual reports can then be merged later for a consolidated result.
+
+#### Use Case 2: Multiple Tests on the same Task
+In this case, the `report.xml` file gets overwritten after each test execution. This results in only the last test's results being preserved. To prevent overwriting, update your `testRunnerCommand` in the `hyperexecute.yaml` file to rename the report after each test:
+
+```yaml title="hyperexecute.yaml"
+testRunnerCommand: ./maestro-test/runTest.sh $test && mv report.xml $test.xml 
+```
+
+This ensures that each test result is saved with a unique name like test1.xml, test2.xml, etc.
+
+## Step 6: Execute your Test Suite
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
 Run the below command in your terminal at the root folder of the project:
@@ -175,7 +211,7 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/1.png').default} alt="JUnit HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-## Step 6: Monitor the Test Execution
+## Step 7: Monitor the Test Execution
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
