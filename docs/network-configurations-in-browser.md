@@ -50,8 +50,8 @@ Choose a real Android or iOS device, upload your app (APK/IPA), or open a browse
 
 ### Step 3: Configure network log options
 
-Run your app. In the network logs for your device, open the **Configuration Options** slider and select the options you want to apply for your current session.  
-![Enable network logs](../assets/images/real-device-app-testing/Network-RD/Network-window-ope.png)
+Run your app. In the network logs for your device, open the **Configuration Options** slider and select the options you want to apply for your current session.   
+![Enable network logs](../assets/images/real-device-app-testing/Network-RD/Network-window-op.png)
 
 ---
 
@@ -70,15 +70,15 @@ Run your app. In the network logs for your device, open the **Configuration Opti
 
 ### **Include specific domains**:
  Use this to capture logs only for network requests to specified domains. Enable the toggle and add the domains separated by commas, as shown below.  
-![Include hosts for network logs](../assets/images/real-device-app-testing/Network-RD/Network_Include_Host.png)
+![Include hosts for network logs](../assets/images/real-device-app-testing/Network-RD/Network_Include_Hos.png)
 
 ### **Capture content**: 
 Use this option to capture or exclude response content. This is off by default but can be enabled if needed, as shown below.  
-![Disable content capture](../assets/images/real-device-app-testing/Network-RD/Network_disable_conten.png)
+![Disable content capture](../assets/images/real-device-app-testing/Network-RD/Network_disable_conte.png)
 
 ### **Exclude specific domains**: 
 Use this to exclude certain domains from network logs. This works similarly to **Include specific domains**. If both options are enabled, **Exclude specific domains** takes precedence.  
-![Exclude hosts from network logs](../assets/images/real-device-app-testing/Network-RD/Network_Log_exclud.png)
+![Exclude hosts from network logs](../assets/images/real-device-app-testing/Network-RD/Network_Log_exclu.png)
 
 
 ---
