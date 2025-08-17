@@ -2097,6 +2097,7 @@ module.exports = {
               "accessibility-settings-ios",
               "devtools-on-real-devices-app",
               "set-date-time-hour-format-real-devices",
+              "device-passcode-on-realdevice",
               "assistive-touch-on-real-ios-devices",
               "dark-mode-on-real-devices",
               "group-folder-redirect-on-real-device"
@@ -2830,6 +2831,7 @@ module.exports = {
               "basic-authentication-for-web-automation",
               "live-debug-in-app-automation",
               "appium-date-and-time",
+              "device-passcode-appautomation",
               "set-device-dark-mode",
             ],
           },
