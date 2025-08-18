@@ -1159,6 +1159,32 @@ module.exports = {
     ],
   ],
 
+  AgentToAgentSidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "doc",
+        label: "Getting Started",
+      id: "getting-started-with-agent-to-agent-testing",
+
+      },
+      {
+        type: "doc",
+        label: "Test Your First AI Agent",
+        id: "testing-your-first-ai-agent",
+     }
+      
+
+    ],
+  ],
+
   KaneAISidebar: [
     {
       type: "link",
@@ -2114,20 +2140,20 @@ module.exports = {
         items: [
           "browser-testing-on-real-devices",
           "how-to-use-in-session-testing-tools",
-        {
-          type: "category",
-          collapsed: true,
-          label: "Features",
-          items: [
-            "screen-reader-on-real-devices-browser",
-            "ip-geolocation-on-real-devices-browser",
-            "assistive-touch-on-real-ios-browser",
-            "dark-mode-on-browser",
-            "network-configurations-in-browser",
-            "contacts-on-real-devices-browser",
-            "set-date-time-hour-format-real-devices-browser",
-          ]
-        }
+          {
+            type: "category",
+            collapsed: true,
+            label: "Features",
+            items: [
+              "screen-reader-on-real-devices-browser",
+              "ip-geolocation-on-real-devices-browser",
+              "assistive-touch-on-real-ios-browser",
+              "dark-mode-on-browser",
+              "network-configurations-in-browser",
+              "contacts-on-real-devices-browser",
+              "set-date-time-hour-format-real-devices-browser",
+            ]
+          }
         ],
       },
     ],
