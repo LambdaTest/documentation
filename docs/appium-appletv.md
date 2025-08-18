@@ -52,7 +52,10 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-In this topic, you will learn how to configure and run your **Apple TV** automation testing scripts with **Appium** on **LambdaTest Real Device Cloud platform**.
+As smart TVs continue to grow in popularity, relying solely on manual testing is no longer sufficient. Automating Apple TV testing provides broader device coverage, enhances user experience by validating remote-based navigation, and eliminates repetitive manual tasks. It also helps uncover issues earlier in the development cycle, ensuring a smooth and consistent experience across different Apple TV models. 
+In this guide, you will learn how to set up and run your **Apple TV** automation testing scripts with **Appium** on the **LambdaTest Real Device Cloud platform**.
+
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br /> 
 
 ## Objective
 
@@ -80,6 +83,15 @@ Before you can start performing App automation testing with Appium, you would ne
 - Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
 - Make sure **pip** is installed in your system. You can install **pip** from [pip documentation](https://pip.pypa.io/en/stable/installation/).
 
+---
+
+## Supported Models ##
+
+| Device                      | OS Version             |
+|-----------------------------|------------------------|
+|        Apple TV             | 18                     |
+|        Apple TV 4K          | 18                     |
+
 ## Run your first test
 
 ---
@@ -106,7 +118,7 @@ Upload your **Apple TV** application (.ipa file) to the LambdaTest servers using
 
 :::tip
 
-- If you do not have any **.apk** file, you can run your sample tests on LambdaTest by using our sample :link: [AppleTV app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/apple-tv-sample-app.ipa).
+- If you do not have any **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [AppleTV app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/apple-tv-sample-app.ipa).
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
 
 :::
@@ -160,19 +172,20 @@ import time
 from appium.webdriver.common.appiumby import AppiumBy
 
 def getCaps():
-    desired_caps = {
+    ltOPtions = {
         "deviceName" : "Apple TV",
-        "platformVersion" :  "16",
+        "platformVersion" :  "18",
         "platform" : "tvos",
-        "isRealMobile":True,
+        "isRealMobile": True,
         "build": "Apple TV Testing",
         "video": True,
-        "app":"APP_URL",     #Enter app url here
-        "network": False,
-        "geoLocation": "FR",
+        "app":"APP_URL",   #Enter app url here
+        "network": True,
         "devicelog": True,
         "visual" : True
     }
+    
+    desired_caps = {"lt:options": ltOPtions}
 
     return desired_caps
 
@@ -189,13 +202,13 @@ def runTest():
         accesskey = os.environ.get("LT_ACCESS_KEY")
 
     # grid url
-    gridUrl = "mobile-hub-internal.lambdatest.com/wd/hub"
+    gridUrl = "mobile-hub.lambdatest.com/wd/hub"
 
     # capabilities
     desired_cap = getCaps()
     url = "https://"+username+":"+accesskey+"@"+gridUrl
 
-    print("Initiating remote driver on platform: "+desired_cap["deviceName"]+" browser: "+" version: "+desired_cap["platformVersion"])
+    print("Initiating remote driver on platform: "+desired_cap["lt:options"]["deviceName"])
     driver = webdriver.Remote(
         desired_capabilities=desired_cap,
         command_executor= url
@@ -241,7 +254,7 @@ def runTest():
     element = driver.switch_to.active_element
     element.click()
     time.sleep(3)   
-
+    driver.execute_script("lambda-status=passed")
     driver.quit()   
 
 if __name__ == "__main__":
@@ -252,9 +265,6 @@ if __name__ == "__main__":
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as:
 
-**Supported Model:**
-- Device: `"Apple TV"` ; OS Version:`"16"`
-
 **Supported Capabilities:**
 Same as iOS
 
@@ -263,19 +273,20 @@ Same as iOS
 
 ```python title="appletv.py"
 def getCaps():
-    desired_caps = {
+    ltOPtions = {
         "deviceName" : "Apple TV",
-        "platformVersion" :  "16",
+        "platformVersion" :  "18",
         "platform" : "tvos",
-        "isRealMobile":True,
+        "isRealMobile": True,
         "build": "Apple TV Testing",
         "video": True,
-        "app":"APP_URL",     #Enter app url here
-        "network": False,
-        "geoLocation": "FR",
+        "app":"APP_URL",   #Enter app url here
+        "network": True,
         "devicelog": True,
         "visual" : True
     }
+    
+    desired_caps = {"lt:options": ltOPtions}
 ```
 
 :::info Note
