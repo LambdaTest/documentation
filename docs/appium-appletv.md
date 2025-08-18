@@ -52,7 +52,10 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-In this topic, you will learn how to configure and run your **Apple TV** automation testing scripts with **Appium** on **LambdaTest Real Device Cloud platform**.
+As smart TVs continue to grow in popularity, relying solely on manual testing is no longer sufficient. Automating Apple TV testing provides broader device coverage, enhances user experience by validating remote-based navigation, and eliminates repetitive manual tasks. It also helps uncover issues earlier in the development cycle, ensuring a smooth and consistent experience across different Apple TV models. 
+In this guide, you will learn how to set up and run your **Apple TV** automation testing scripts with **Appium** on the **LambdaTest Real Device Cloud platform**.
+
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br /> 
 
 ## Objective
 
@@ -79,6 +82,15 @@ Before you can start performing App automation testing with Appium, you would ne
 - You have access to LambdaTest username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials in the [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile)
 - Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
 - Make sure **pip** is installed in your system. You can install **pip** from [pip documentation](https://pip.pypa.io/en/stable/installation/).
+
+---
+
+## Supported Models ##
+
+| Device                      | OS Version             |
+|-----------------------------|------------------------|
+|        Apple TV             | 18                     |
+|        Apple TV 4K          | 18                     |
 
 ## Run your first test
 
@@ -252,9 +264,6 @@ if __name__ == "__main__":
 ### Configure the test capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as:
-
-**Supported Model:**
-- Device: `"Apple TV"` ; OS Version:`"16"`
 
 **Supported Capabilities:**
 Same as iOS
