@@ -2840,7 +2840,7 @@ module.exports = {
               "live-debug-in-app-automation",
               "appium-date-and-time",
               "set-device-dark-mode",
-              "auto-heal-appium"
+              "smart-heal-appium"
             ],
           },
           {
