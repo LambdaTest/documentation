@@ -54,7 +54,7 @@ import TabItem from '@theme/TabItem';
 ></script>
 `HyperExecute CLI` is a command line interface that is required to run tests on HyperExecute. This page outlines all you need to know about the CLI and also explains about the different flags & functionalities supported by the HyperExecute CLI.
 
-> HyperExecute CLI credentials (access keys, API tokens, etc.) are personal to you and must be kept secure at all times. Do not share, expose, or store them in publicly accessible code, repositories, or environments. If compromised, you are responsible for revoking and regenerating them immediately.
+> HyperExecute CLI credentials (access keys, API tokens, etc.) are private and confidential. A system compromise may result in their unauthorized disclosure; therefore, you must secure the machine running the LambdaTest-HyperExecute CLI. Do not share or expose credentials in public code, repositories, or environments. In the event of a compromise, you are solely responsible for immediately revoking and regenerating the credentials. LambdaTest assumes no liability for any losses arising from failure to comply.
 
 ## Download the HyperExecute CLI
 
