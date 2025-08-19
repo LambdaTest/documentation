@@ -151,19 +151,19 @@ Your test results are displayed on the [LambdaTest App Automation Dashboard](htt
 To display only healed builds, click on the **Configure** option at the top of the dashboard.  
 
 - The following image shows the **Configure box**, with the **Features** tab highlighted:  
-![Smart Heal - Configure](../assets/images/real-device-app-testing/Auto-heal/SmartHeal-.png)
+![Smart Heal - Configure](../assets/images/real-device-app-testing/Auto-heal/SmartHeal1.png)
 
 - When you open the **Features** tab, a pop-up appears where you can enable **Auto-Heal** to filter and display only executions where Smart Heal was applied:  
-![Smart Heal - Features Popup](../assets/images/real-device-app-testing/Auto-heal/SmartHeal--2.png)
+![Smart Heal - Features Popup](../assets/images/real-device-app-testing/Auto-heal/SmartHeal2.png)
 
 - Once filtering is applied, the dashboard highlights all healed elements in your tests. In this view, healed elements are marked clearly, while those that could not be healed are highlighted in red:  
-![Smart Heal - Highlighted Elements](../assets/images/real-device-app-testing/Auto-heal/SmartHeal--4.png)
+![Smart Heal - Highlighted Elements](../assets/images/real-device-app-testing/Auto-heal/SmartHeal4.png)
 
 
 ### Hovering Over Healed Builds
 Each healed build has an associated icon. Hovering over this icon provides a tooltip that shows a brief summary of the session and the healing actions performed.  
 
-![Smart Heal-2](../assets/images/real-device-app-testing/Auto-heal/SmartHeal--5.png)
+![Smart Heal-2](../assets/images/real-device-app-testing/Auto-heal/SmartHeal5.png)
 
 ### Session Details
 Access detailed execution logs that clearly differentiate between **original and healed selectors**, along with AI suggestions, and compare before-and-after screenshots. These insights help you understand how the Auto-Heal mechanism worked during execution and guide you in refining locators over time.
