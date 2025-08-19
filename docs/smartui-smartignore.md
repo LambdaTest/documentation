@@ -1,6 +1,6 @@
 ---
 id: smartui-smartignore
-title: Smart Ignore (Beta)
+title: Smart Ignore
 hide_title: true
 sidebar_label: Smart Ignore
 description: Learn how to use our new comparison engine Smart Ignore to efficiently ignore noise, layout shifts and displacement differences in your visual tests
@@ -74,9 +74,6 @@ This allows you to selectively apply Smart Ignore to specific screenshots, makin
   width="300" 
   height="200" 
   className="doc_img" 
-/>
-> **NOTE :** <b>Smart Ignore</b> Engine is in `Beta` phase right now, please contact us to get it enabled for your organization without any additional costs.
-
 
 ## Use Cases of Smart Ignore
 
