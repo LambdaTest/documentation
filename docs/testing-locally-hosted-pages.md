@@ -48,7 +48,7 @@ slug: testing-locally-hosted-pages/
 
 <img loading="lazy" src={require('../assets/images/tunnel/tunnel.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-> All Tunnel credentials (access keys, API tokens, etc.) are personal to you and must be kept secure at all times. Do not share, expose, or store them in publicly accessible code, repositories, or environments. If compromised, you are responsible for revoking and regenerating them immediately.
+> All Tunnel credentials (access keys, API tokens, etc.) are private and confidential. A system compromise may result in their unauthorized disclosure; therefore, you must secure the machine running the LambdaTest tunnel. Do not share or expose credentials in public code, repositories, or environments. In the event of a compromise, you are solely responsible for immediately revoking and regenerating the credentials. LambdaTest assumes no liability for any losses arising from failure to comply.
 
 ## Why to Use LambdaTest Tunnel?
 
