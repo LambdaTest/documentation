@@ -74,7 +74,7 @@ This allows you to selectively apply Smart Ignore to specific screenshots, makin
   width="300" 
   height="200" 
   className="doc_img" 
-
+/>
 ## Use Cases of Smart Ignore
 
 #### Content Management Systems
