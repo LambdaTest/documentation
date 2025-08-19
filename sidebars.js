@@ -2859,6 +2859,7 @@ module.exports = {
               "appium-date-and-time",
               "device-passcode-appautomation",
               "set-device-dark-mode",
+              "smart-heal-appium"
             ],
           },
           {
