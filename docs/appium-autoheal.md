@@ -1,8 +1,8 @@
 ---
 id: smart-heal-appium
-title: Smart Heal in Appium Tests
+title: Smart Heal in Automation
 sidebar_label: Smart Heal
-description: Learn how to enable Smart Heal, LambdaTest’s Auto-Heal capability, for Appium tests to reduce flakiness by automatically recovering from locator failures during execution.
+description: Learn how to enable Smart Heal, LambdaTest’s Auto-Heal capability, for real device automation tests to reduce flakiness by automatically recovering from locator failures during execution.
 keywords:
   - appium smart-heal
   - self-healing tests
@@ -42,14 +42,15 @@ LambdaTest now lets you enable **Smart Heal** for automation testing. This featu
 ## Smart Heal Workflow
 
 1. **Baseline Creation**  
-- For Smart Heal to work, you must first have at least one successful baseline (**Passed Test**) run—so make sure to include the LambdaTest hook in your tests to explicitly mark them as passed (lambda-status=passed). With a baseline in place, the Auto-Heal engine can detect changes and attempt locator recovery. Since Smart Heal uses AI-driven analysis, expect executions to take slightly longer than usual.
-5:47
+- For Smart Heal to work, you must first have at least one successful (**Passed Test**) as baseline, so make sure to include the [LambdaTest  Hook](https://www.lambdatest.com/support/docs/appium-lambdatest-hooks/#adding-custom-status--remark) in your tests to explicitly mark them as passed during execution. With a baseline in place, the Auto-Heal engine can detect changes and attempt locator recovery. Since Smart Heal uses AI-driven analysis, expect executions to take slightly longer than usual.
+- For every user the **project name** and **test name** must remain the same across runs for Smart Heal to keep baseline applied successfully.
 
 
 - On the initial successful test run with Smart Heal enabled, LambdaTest captures a **baseline snapshot** of all element locators in your script. This baseline serves as the foundational reference for future healing attempts, ensuring that any changes to the UI can be intelligently detected and addressed.  
 
 2. **Baseline Updation**  
    After each successful test run, Smart Heal can automatically update your baseline to reflect the latest fully passed build. This ensures that the most recent valid UI state is used as the reference for future healing attempts. Keeping the baseline updated helps maintain accurate detection of element changes and reduces unnecessary healing actions.
+   
 
 2. **Detection and Healing**  
    In subsequent runs, if an element cannot be found due to **UI or DOM changes**, Smart Heal triggers automatically, leveraging **AI-driven analysis** of element attributes, hierarchy, and **visual cues** to find the closest valid match in the updated UI.
@@ -60,9 +61,7 @@ LambdaTest now lets you enable **Smart Heal** for automation testing. This featu
 4. **Fallback and Suggestions**  
    If Smart Heal cannot confidently identify an alternative, it records **AI-driven suggestions** in the dashboard. These insights help you quickly update or strengthen your locators to avoid repeated failures in future runs.
 
-:::tip
-For every user the **project name** and **test name** must remain the same across runs for Smart Heal to be applied successfully.
-:::
+
 ---
 
 ## Smart Heal in Automation Tests
