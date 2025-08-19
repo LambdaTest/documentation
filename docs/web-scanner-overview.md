@@ -68,8 +68,6 @@ Visual scans detect pixel-based layout changes, design mismatches, missing eleme
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/smartui_dashboard.png').default} alt="smartui dashboard" className="doc_img"/>
 
-Of course. Here is a more apt and concise version in Markdown, focusing on benefits and using stronger keywords.
-
 #### Key Capabilities
 
 - **Cross-Browser Validation**: Test UI across Chrome, Firefox, Edge, and Safari.
