@@ -1,7 +1,7 @@
 ---
 id: smartui-layout-testing
 title: Layout Comparison in SmartUI SDK
-sidebar_label: Layout Testing (Beta)
+sidebar_label: Layout Testing
 description: Learn how to use SmartUI SDK's layout testing feature to verify only the layout structure of your pages while ignoring content and style changes
 keywords:
   - layout comparison
@@ -64,9 +64,6 @@ In the example below, you can see the layout differences between the baseline an
 SmartUI's layout comparison feature allows you to focus specifically on layout differences while ignoring content changes, giving you more precise control over your visual testing process.
 
 # Layout Comparison in SmartUI SDK
-
-> **Beta Feature Notice**: The Layout Comparison feature is currently in beta and is a work in progress based on user feedback. To use this feature, you need to get it enabled by contacting our support team at support@lambdatest.com. Using this feature without getting it enabled will not work.
-
 
 ## Prerequisites
 
