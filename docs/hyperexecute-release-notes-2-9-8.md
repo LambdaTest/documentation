@@ -43,12 +43,15 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-## HyperExecute Performance Improvement
+## SmartWait Support on HyperExecute
+We are pleased to announce that the SmartWait functionality is now supported on HyperExecute.
 
-This release introduces significant performance optimizations to HyperExecute, designed to enhance speed and reliability for your test runs. Key improvements include:
+SmartWait intelligently manages wait times by performing actionability checks before executing actions on webpage elements. This ensures that actions are only carried out when elements are ready, improving both accuracy and efficiency in Selenium automation.
 
-- Reduced job startup latency, resulting in faster test execution.
-- Optimized resource allocation for better concurrency handling.
-- Optimized job scheduling for smoother execution during peak workloads.
+With SmartWait on HyperExecute, you can:
 
-With these improvements, you can expect quicker execution times, improved responsiveness, and higher overall throughput during large-scale testing.
+- Reduce reliance on explicit and implicit waits.
+- Optimize test scripts for readability and maintainability.
+- Execute tests with improved reliability in parallel and distributed environments.
+
+> 📌 Learn more about configuring SmartWait: [SmartWait Documentation](https://www.lambdatest.com/support/docs/smart-wait/)
