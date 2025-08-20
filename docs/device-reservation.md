@@ -91,7 +91,7 @@ You can easily track your device bookings:
 ## Calendar View and Permissions
 The **calendar** view works differently for users and admins:
 - **Users:**
-  - The user view consists of a calender showcasing blocks along with devices
+  - The user view consists of a calendar showcasing blocks along with devices
   - The `blue blocks` are the user own reserved slots and have edit/delete access
   - The `grey blocks` are other team members slot and user does not have any access to edit/delete the same
      ![Device-Reservation-6](../assets/images/real-device-app-testing/Device-Reservations/Device-reservation-6.jpeg)
