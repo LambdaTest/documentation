@@ -44,7 +44,7 @@ slug: tunnel-release-notes/
 
 ## Version 3.2.17 (13th July 2025)
 - **Security Updates and Stability Fixes**
-  - Added fix for unsecure websocket connection handling affecting locally hosted applications
+  - Added fix for insecure websocket connection handling affecting locally hosted applications
   - Implemented critical security updates
 
 ## Version 3.2.16 (8th June 2025)
