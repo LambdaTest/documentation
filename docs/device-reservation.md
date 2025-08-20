@@ -63,11 +63,11 @@ Device Reservation in LambdaTest allows you to **reserve private cloud devices a
 ## Accessing the App Live Dashboard
 1. Open the [App Live Dashboard](https://applive.lambdatest.com/app).
 2. Enable the toggle for Private Devices (**Available only for private cloud devices**).
-3. You will see two buttons which are **My Reservations** and **Go to Reservations**
+3. You will see two buttons which are `My Reservations` and `Go to Reservations`
 ![Device-Reservation-1](../assets/images/real-device-app-testing/Device-Reservations/Device-Reservation1.png)
 :::tip
-- My reservations is used for View all your ongoing and upcoming reservations, with filter options to refine the list
-- Go to Reservations is used for Opening the calendar view where you can explore and manage device bookings.
+- **My reservations** is used for View all your ongoing and upcoming reservations, with filter options to refine the list
+- **Go to Reservations** is used for Opening the calendar view where you can explore and manage device bookings.
 :::
 
 ## Checking Your Reservations
@@ -79,7 +79,7 @@ You can easily track your device bookings:
 ![Device-Reservation-2](../assets/images/real-device-app-testing/Device-Reservations/.Device-Reservation2.png)
 
 ## Making a Reservation
-1. Click Reserve Device.
+1. Click `Reserve Device`.
 2. In the reservation window, choose the type of reservation:
    - **Immediate Reservation** – Reserve a device instantly for 1 to 12 hours.
       ![Device-Reservation-4](../assets/images/real-device-app-testing/Device-Reservations/Device-Reservation4.png)
@@ -94,7 +94,7 @@ The **calendar** view works differently for users and admins:
   - The user view consists of a calendar showcasing blocks along with devices
   - The `blue blocks` are the user own reserved slots and have edit/delete access
   - The `grey blocks` are other team members slot and user does not have any access to edit/delete the same
-     ![Device-Reservation-6](../assets/images/real-device-app-testing/Device-Reservations/Device-reservation-6.jpeg)
+     ![Device-Reservation-6](../assets/images/real-device-app-testing/Device-Reservations/Device-reservations-User.jpeg)
 - **Admins:**
   - In addition to the User view, Admins have access to a settings tab
   - Which have access to additional policy controls, such as:
@@ -165,6 +165,6 @@ This ensures that your automation run is executed on the reserved private cloud 
 - Once the reserved time ends, the device session is automatically closed and released.
 
 ## Special Scenarios
-- If an admin edits your reservation timeline, your current session will not be interrupted.
-- If an admin deletes your reservation, it is canceled immediately.
+- If an **admin** edits your reservation timeline, your current session will not be interrupted.
+- If an **admin** deletes your reservation, it is **canceled** immediately.
 - In automation, reservations cannot be extended automatically in the last 15 minutes. Extensions must be handled manually.
