@@ -1,5 +1,5 @@
 ---
-id: Device-reservation
+id: device-reservation
 title: Device Reservation on Private Cloud Devices
 sidebar_label: Device Reservation
 description: Learn how to reserve private cloud devices in LambdaTest to ensure uninterrupted testing, fair access, and conflict-free usage across your team.
@@ -11,7 +11,7 @@ keywords:
 - test scheduling
 url: https://www.lambdatest.com/support/docs/device-reservation/
 site_name: LambdaTest
-slug: Device-reservation/
+slug: device-reservation/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
