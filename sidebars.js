@@ -916,8 +916,18 @@ module.exports = {
               {
                 type: "category",
                 collapsed: true,
+                label: "August, 2025",
+                items: [
+                  "hyperexecute-release-notes-2-9-9",
+                  "hyperexecute-release-notes-2-9-8",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
                 label: "July, 2025",
                 items: [
+                  "hyperexecute-release-notes-2-9-7",
                   "hyperexecute-release-notes-2-9-6",
                   "hyperexecute-release-notes-2-9-5",
                   "hyperexecute-release-notes-2-9-4",
