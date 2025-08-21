@@ -1,5 +1,5 @@
 ---
-id: sim-esim-automation
+id: sim-support
 title: SIM & eSIM Automation on Real Devices
 sidebar_label: Enable SIM
 description: Learn how to automate SIM and eSIM scenarios on real mobile devices using Appium, including capabilities, SMS validation, and supported devices.
@@ -11,6 +11,7 @@ keywords:
   - automation
   - testing
 slug: sim-support/
+url: https://www.lambdatest.com/support/docs/sim-support/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
