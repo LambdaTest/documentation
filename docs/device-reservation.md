@@ -1,7 +1,6 @@
 ---
 id: device-reservation
 title: Device Reservation on Private Cloud Devices
-sidebar_label: Device Reservation
 description: Learn how to reserve private cloud devices in LambdaTest to ensure uninterrupted testing, fair access, and conflict-free usage across your team.
 keywords: 
 - device reservation
@@ -49,6 +48,7 @@ import TabItem from '@theme/TabItem';
 
 Beyond preventing scheduling conflicts, Device Reservation also helps organizations **optimize resource utilization**, enforce fair usage policies, and gain clearer visibility into device allocation across teams, leading to more efficient and predictable testing operations.
 
+> Device Reservation feature is currently in **closed beta** and continuously improving based on user feedback. please reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat**</span> or email us at **support@lambdatest.com** to enable it for your organization and try it out.
 ---
 
 ## Use Cases 
@@ -60,115 +60,75 @@ Beyond preventing scheduling conflicts, Device Reservation also helps organizati
 - **Optimized Resource Utilization**: Track and manage reservations to avoid idle devices and maximize the ROI of your private cloud setup.
 
 ---
-# Device Reservation Workflow 
+## Device Reservation Workflow 
 
-## Accessing the App Live Dashboard
+### Accessing the App Live Dashboard
 1. Open the [App Live Dashboard](https://applive.lambdatest.com/app).
-2. Enable the toggle for Private Devices (**Available only for private cloud devices**).
+2. Enable the toggle for Private Devices (**Available only for private device customers**).
 3. You will see two buttons:
         - **My reservations** – View all ongoing and upcoming reservations with filter options.
         - **Go to Reservations** – Open the calendar view to explore and manage bookings.
- 
+
+First-time visitors will see an empty calendar and must create a reservation to begin scheduling devices.
+
 ![Device-Reservation-1](../assets/images/real-device-app-testing/Device-Reservations/Device-Reservation1.png)
 
 :::
 
-## Checking Your Reservations
+### Admin Privilege
 
-You can easily track your device bookings:
-- Click **My Reservations** on the App Live Dashboard.
-- View all your upcoming and ongoing reservations.
-- Apply filters to quickly locate specific bookings.
+Admins have additional controls to manage device reservations, accessible inside **Go to Reservations** under the settings button (as shown below):
+
+- **Advance Booking Window** – Define how far in advance members can schedule reservations.
+- **Max Reservation Duration** – Set the maximum duration allowed for a reservation (1–48 hours).
+- **Active Reservations per Member** – Limit the number of active reservations per member (1–99).
+- **Devices per Reservation** – Define how many devices can be booked in one reservation.
+
+![Device-Reservation-5](../assets/images/real-device-app-testing/Device-Reservations/Device-Reservation5.png)
+
+### Calendar View and Permissions
+
+The **calendar** view differs for members and admins:
+
+- **Members:**
+  - The member view shows a calendar with reservation blocks for devices.
+  - `Blue blocks` represent the member’s own reservations, which can be edited or deleted.
+  - `Grey blocks` represent reservations made by other team members. Members cannot edit or delete these.
+
+     ![Device-Reservation-6](../assets/images/real-device-app-testing/Device-Reservations/Device-reservations-User.png)
+
+- **Admins:**
+  - Admins can view and manage all reservations on the calendar.
+  - They have full control to create, edit, or delete any reservation.
+
+### Creating a Reservation
+
+To create a reservation, click **Reserve Device** from the calendar view. Then choose the type of reservation:
+
+- **Immediate Reservation** – Reserve a device instantly for 1 to 12 hours.
+   ![Device-Reservation-4](../assets/images/real-device-app-testing/Device-Reservations/Device-Reservation4.png)
+- **Future Reservation** – Schedule a reservation for a later date/time within the allowed scheduling window.
+   ![Device-Reservation-3](../assets/images/real-device-app-testing/Device-Reservations/Device-Reservation3.png)
+
+Select **one or multiple devices** based on availability and confirm your reservation.
+
+### Viewing and Editing Reservations
+
+After adding reservation slots, you can view them under **My Reservations** and make edits or cancellations if required.
 
 ![Device-Reservation-2](../assets/images/real-device-app-testing/Device-Reservations/.Device-Reservation2.png)
 
-## Making a Reservation
-1. Click `Reserve Device`.
-2. In the reservation window, choose the type of reservation:
-   - **Immediate Reservation** – Reserve a device instantly for 1 to 12 hours.
-      ![Device-Reservation-4](../assets/images/real-device-app-testing/Device-Reservations/Device-Reservation4.png)
-   - **Future Reservation** – Schedule a reservation for a later date/time within the allowed scheduling window.
-   ![Device-Reservation-3](../assets/images/real-device-app-testing/Device-Reservations/Device-Reservation3.png)
-3. Select **one or multiple devices** based on availability.
-4. Confirm your reservation.
+### Session Expiry and Extensions
 
-## Calendar View and Permissions
-The **calendar** view works differently for users and admins:
-- **Users:**
-  - The user view shows a calendar with reservation blocks for devices.
-  - `blue blocks` represent the user’s own reservations, which can be edited or deleted.
-  - `grey blocks` represent reservations made by other team members. Users cannot edit or delete these.
-     ![Device-Reservation-6](../assets/images/real-device-app-testing/Device-Reservations/Device-reservations-User.png)
-- **Admins:**
-  - In addition to the User view, Admins can access a **Settings** tab with the following controls:
-    - **Advance Booking Window** – Define how far in advance users can schedule reservations.
-    - **Max Reservation Duration** – Set the maximum duration allowed for a reservation (1–48 hours).
-    - **Active Reservations per User** – Limit the number of active reservations per user (1–99).
-    - **Devices per Reservation** – Define how many devices can be booked in one reservation.
-   ![Device-Reservation-5](../assets/images/real-device-app-testing/Device-Reservations/Device-Reservation5.png)
-  - Also Admin can create, edit, and delete any reservation.
+These rules apply to both admins and members, except admins can still override reservations.
 
-:::info
-For Admins, all blocks appear blue since they can edit or delete any reservation
-:::
-## Using Reservations in Automated Testing
-
-To use a reserved device in automation:
-1. Create a reservation for your device and note its UUID.
-2. In your automation script, add the following capabilities 
-        - **fixedIP**: This field accepts the UUID of the reserved device, guaranteeing that your automation session is executed on that specific device rather than any random match.
-        - **privateCloud**: Set this to `true` to ensure the session is executed only on your private cloud devices, preventing it from falling back to shared public devices.
-<Tabs className="docs__val">
-<TabItem value="ios" label="iOS" default>
-
-```python
-desired_caps = {
-    "deviceName": "iPhone 16",
-    "platformName": "iOS",
-    "platformVersion": "18",
-    "isRealMobile": True,
-    "app": "YOUR_APP_URL",
-    "build": "Sample Build",
-    "name": "Sample Name",
-    # highlight-next-line
-    "fixedIP": "<your-device-uuid>",  # Replace with the device UUID
-    # highlight-next-line
-    "privateCloud": true
-}
-```
-
-</TabItem>
-
-<TabItem value="android" label="Android" default>
-
-```python
-desired_caps = {
-    "deviceName": "Galaxy S25",
-    "platformName": "Android",
-    "platformVersion": "16",
-    "isRealMobile": True,
-    "app": "YOUR_APP_URL",
-    "build": "Sample Build",
-    "name": "Sample Name",
-    # highlight-next-line
-    "fixedIP": "<your-device-uuid>",  # Replace with the device UUID
-    # highlight-next-line
-    "privateCloud": true
-}
-```
-
-</TabItem>
-</Tabs>
-This ensures that your automation run is executed on the reserved private cloud device.
-
-## Session Expiry and Extensions
 - In the last **15 minutes** of a reservation, a pop-up appears notifying you that the session is about to end.
 - If no pre-booked reservation exists for the device, you will have the option to extend your session.
 - If another booking is already scheduled for the device, the extension option will still appear, but the request will **fail**.
 - Once the reserved time ends, the device session is automatically closed and released.
 
 :::tip
-- If an **admin** edits your reservation timeline, your current session will not be interrupted.
+- Reservation cannot be edited after the slot has been started.
 - If an **admin** deletes your reservation, it is **canceled** immediately.
 - In automation, reservations cannot be extended automatically in the last 15 minutes. Extensions must be handled manually.
 :::
