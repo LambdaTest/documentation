@@ -50,17 +50,19 @@ import TabItem from '@theme/TabItem';
 
 ## Tutorial To Run Your First Test On LambdaTest
 
----
 
-In this topic, you will learn how to configure and run your **Roku TV** automation testing scripts with **Roku WebDriver** on **LambdaTest Real Device Cloud platform**.
+As smart TVs continue to grow in popularity, relying solely on manual testing is no longer sufficient. Automating Roku TV testing provides broader device coverage, enhances user experience by validating remote-based navigation, and eliminates repetitive manual tasks. It also helps uncover issues earlier in the development cycle, ensuring a smooth and consistent experience across different Roku TV models. 
+In this guide, you will learn how to configure and run your **Roku TV** automation testing scripts with **Appium Roku WebDriver** on **LambdaTest Real Device Cloud platform**.
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br /> 
+---
 
 ## Objective
 
----
+
 
 By the end of this topic, you will be able to:
 
-1.  Set up an environment for testing your Apps using **Roku TV** with **Roku WebDriver**.
+1.  Set up an environment for testing your Apps using **Roku TV** with [**Appium Roku WebDriver**](https://github.com/headspinio/appium-roku-driver).
 2.  Understand and configure the core capabilities required for your Roku WebDriver test suite.
 3.  Explore the advanced features of LambdaTest.
 
@@ -70,19 +72,24 @@ All the code samples in this documentation can be found on **LambdaTest's Github
 
 :::
 
-## Prerequisites
-
 ---
+## Prerequisites
 
 Before you can start performing App automation testing with Appium, you would need to follow these steps:
 
 - You have access to LambdaTest username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials in the [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile)
 - Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
 - Make sure **pip** is installed in your system. You can install **pip** from [pip documentation](https://pip.pypa.io/en/stable/installation/).
+---
+## Supported Models ##
 
+| Device                      | OS Version             |
+|-----------------------------|------------------------|
+|        Roku Ultra           | 11                     |
+|        Roku Express         | 11                     |
+---
 ## Run your first test
 
----
 
 ### 1. Upload your application
 Upload your **Roku TV** application (.zip file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
@@ -119,11 +126,6 @@ Upload your **Roku TV** application (.zip file) to the LambdaTest servers using 
 git clone https://github.com/LambdaTest/LT-appium-rokutv
 cd LT-appium-rokutv
 ```
-:::tip NOTE
-
-You can find LambdaTest's python Roku client for your reference at [lt-python-roku-client](https://github.com/LambdaTest/lt-python-roku-client) 
-
-:::
 
 ### 3. Set up your authentication
 
@@ -161,73 +163,80 @@ An automation script for the sample application available above has been provide
 Before running the script, please make sure that the file webDriver.py from Step 2, is in the same directory as this file.
 
 ```python title="main.py"
-from webDriver import WebDriver
+from appium import webdriver
+import os
 import time
-
-def run(hub_url: str, caps: dict):
-    try:
-        web_driver = WebDriver(hub_url, caps)
+from appium.options.android import UiAutomator2Options
 
 
-        web_driver.apps()
-        time.sleep(5)
-        web_driver.launch_the_channel("dev")
+def getCaps():
+    desired_caps = {
+        "automationName": "Roku",
+        "deviceName": "Roku Ultra",
+        "platformVersion": "11",
+        "platformName": "roku",
+        "isRealMobile": True,
+        "build": "Roku Testing",
+        "app": "APP_URL",   # Enter app url here
+        "network": False,
+        "devicelog": True,
+        "privateCloud": True,
+        "visual": True,
+        "idleTimeout": 1800,
+    }
+    return desired_caps
 
-        for i in range(5):
-            t = time.time()
-            web_driver.press_btn("select")
-            t2 = time.time()
-            print("select time :",t2-t)
-            time.sleep(2)
 
-
-        web_driver.quiet()
-        print("Test passed")
-    except  Exception as e:
-        print(f"Error: {e}")
-        print("Test failed")
-    
-if __name__ == "__main__":
-
+def runTest():
     if os.environ.get("LT_USERNAME") is None:
-        # Enter LT username here if environment variables have not been added
-        username = "username"
+        # Enter LT username below if environment variables have not been added
+        username = "<YOUR_LT_USERNAME>"
     else:
         username = os.environ.get("LT_USERNAME")
+
     if os.environ.get("LT_ACCESS_KEY") is None:
-        # Enter LT accesskey here if environment variables have not been added
-        accessToken = "accessToken"
+        # Enter LT accesskey below if environment variables have not been added
+        accesskey = "<YOUR_LT_ACCESS_KEY>"
     else:
-        accessToken = os.environ.get("LT_ACCESS_KEY")
+        accesskey = os.environ.get("LT_ACCESS_KEY")
 
-    hub_url = "mobile-hub-internal.lambdatest.com/wd/hub/session"
+    # grid url
+    gridUrl = "mobile-hub.lambdatest.com/wd/hub"
 
-    url = "https://"+username+":"+accessToken+"@"+hub_url
-    
-    caps = {
-        "deviceName": "Roku Express",      #We also support "Roku Ultra"
-        "platformVersion": "11",
-        "isRealMobile": True,
-        "platformName": "roku",
-        "build": "Roku Sample Test",
-        "app": "APP_URL"          #Add app url here
-        "video": True,
-        "visual": True,
-        "devicelog": True
-    }
-    t1 = time.time()
-    run(url, caps)
-    t2 = time.time()
-    print("sec:",t2-t1)
+    # capabilities
+    desired_cap = getCaps()
+    url = "https://" + username + ":" + accesskey + "@" + gridUrl
+
+    print("Initiating remote driver:")
+    driver = webdriver.Remote(
+        options=UiAutomator2Options().load_capabilities(desired_cap),
+        command_executor=url
+    )
+
+    # run test
+    print(driver.session_id)
+
+    # Simulate remote control actions
+    driver.execute_script("roku: pressKey", {"key": "Down"})
+    driver.execute_script("roku: pressKey", {"key": "Down"})
+    time.sleep(1)
+    driver.execute_script("roku: pressKey", {"key": "Right"})
+    driver.execute_script("roku: pressKey", {"key": "Up"})
+    driver.execute_script("roku: deviceInfo")
+    time.sleep(1)
+    driver.execute_script("roku: getApps")
+    driver.execute_script("roku: pressKey", {"key": "Right"})
+
+    driver.quit()
+
+
+if __name__ == "__main__":
+    runTest()
 ```
 
 ### Configure the test capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as:
-
-**Supported Model:**
-- Device: `"Roku Ultra"` ; OS Version:`"11"`
-- Device: `"Roku Express"` ; OS Version:`"11"`
 
 **Supported Capabilities:**
 Please check at the end of the doc.
@@ -237,16 +246,17 @@ Please check at the end of the doc.
 
 ```python title="main.py"
     caps = {
-        "deviceName": "Roku Express",     #We also support "Roku Ultra"
-        "platformVersion": "11",
-        "isRealMobile": True,
-        "platformName": "roku",
-        "build": "Roku Sample Test",
-        "app": "APP_URL"          #Add app url here
-        "video": True,
-        "visual": True,
-        "devicelog": True
-    }
+       "automationName": "Roku",
+       "deviceName": "Roku Express",     #We also support "Roku Ultra"
+       "platformVersion": "11",
+       "isRealMobile": True,
+       "platformName": "roku",
+       "build": "Roku Sample Test",
+       "app": "APP_URL"          #Add app id here
+       "visual": True,
+       "devicelog": True
+   }
+
 ```
 
 :::info Note
@@ -276,17 +286,18 @@ If you are unable to run the automation script with the above mentioned commands
 
 ### List of Capabilities supported by Roku:
 
-| KEY                  | VALUES                                                                                                                                                                   | CAPABILITY DESCRIPTION                                                                                                                                                                                                                                                                                                                                                        |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*deviceName         | TYPE: STRING <br/> `iPhone 13`                                                                                                                                           | Name of the device.                                                                                                                                                                                                                                                                                                                                                           |
-| isRealDevice                | TYPE: BOOLEAN <br/> DEFAULT: TRUE <br/> `video=TRUE` <br/> OR <br/> `video=FALSE`                                                                                        | It makes sure that the device being allocated is a Real device.                                                                                                                                                                                                                                                                                                                                      |
-| \*platformName       | TYPE: STRING <br/> `ios`                                                                                                                                                 | Name of the OS.                                                                                                                                                                                                                                                                                                                                                               |
-| \*platformVersion    | TYPE: STRING <br/> `14`                                                                                                                                                  | OS version.                                                                                                                                                                                                                                                                                                                                                                   |
-| build                | TYPE: STRING <br/> DEFAULT: Untitled <br/> `build=iOS Small Run`                                                                                                         | You can group your tests like a job containing multiple tests.                                                                                                                                                                                                                                                                                                                |
-| \*app                | TYPE: STRING <br/> `app=lt://APP100201061631704657918380`                                                                                                                | Accepts App URL returned after uploading an app on the LambdaTest servers.                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                                                                                                    |
-| visual               | TYPE: BOOLEAN <br/> DEFAULT: FALSE <br/> `visual=TRUE` <br/> OR <br/> `visual=FALSE`                                                                                     | Command by command screenshots will be recorded at each test step. By default the flag is set as off. Note: test execution time will increase if it’s set as ‘true’.                                                                                                                                                                                                          |
-| video                | TYPE: BOOLEAN <br/> DEFAULT: TRUE <br/> `video=TRUE` <br/> OR <br/> `video=FALSE`                                                                                        | Video recording of the complete screen.                                                                                                                                                                                                                                                                                                                                       |
-| devicelog            | TYPE: BOOLEAN <br/> DEFAULT: FALSE <br/> `devicelog=TRUE` <br/> OR <br/> `devicelog=FALSE`                                                                                | Enable Device logs.                                                                                                                                                                                                                                                                                                                                                           |
+| KEY              | VALUES                                                                 | CAPABILITY DESCRIPTION                                                                 |
+| ---------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| automationName   | TYPE: STRING <br/> `roku`                                              | Tells Appium to use the Roku Appium Driver.                                           |
+| *deviceName      | TYPE: STRING <br/> `Roku Ultra`                                        | Name of the device.                                                                   |
+| isRealDevice     | TYPE: BOOLEAN <br/> DEFAULT: TRUE <br/> `video=TRUE` <br/> OR <br/> `video=FALSE` | It makes sure that the device being allocated is a Real device.                       |
+| *platformName    | TYPE: STRING <br/> `roku`                                              | Name of the OS.                                                                       |
+| *platformVersion | TYPE: STRING <br/> `11`                                                | OS version.                                                                           |
+| build            | TYPE: STRING <br/> DEFAULT: Untitled <br/> `build=iOS Small Run`       | You can group your tests like a job containing multiple tests.                        |
+| *app             | TYPE: STRING <br/> `app=lt://APP100201061631704657918380`              | Accepts App URL returned after uploading an app on the LambdaTest servers.            |
+| visual           | TYPE: BOOLEAN <br/> DEFAULT: FALSE <br/> `visual=TRUE` <br/> OR <br/> `visual=FALSE` | Command by command screenshots will be recorded at each test step. By default off.    |
+| video            | TYPE: BOOLEAN <br/> DEFAULT: TRUE <br/> `video=TRUE` <br/> OR <br/> `video=FALSE`  | Video recording of the complete screen.                                               |
+| devicelog        | TYPE: BOOLEAN <br/> DEFAULT: FALSE <br/> `devicelog=TRUE` <br/> OR <br/> `devicelog=FALSE` | Enable Device logs.                                                                   |
 
 Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
