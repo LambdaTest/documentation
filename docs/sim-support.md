@@ -11,6 +11,7 @@ keywords:
   - automation
   - testing
 slug: sim-support/
+site_name: LambdaTest
 url: https://www.lambdatest.com/support/docs/sim-support/
 ---
 import CodeBlock from '@theme/CodeBlock';

@@ -11,6 +11,7 @@ keywords:
   - Real Devices
   - testing
 slug: sim-support-realdevices/
+site_name: LambdaTest
 url: https://www.lambdatest.com/support/docs/sim-support-realdevices/
 ---
 import CodeBlock from '@theme/CodeBlock';
