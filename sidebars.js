@@ -3088,6 +3088,11 @@ module.exports = {
         label: "Visual AI Agent",
         id: "smartui-visual-ai",
       },
+       {
+        type: "doc",
+        label: "Visual Test Creation with KaneAI",
+        id: "kaneai-smartui-visual-testing",
+      },
       {
         type: "category",
         collapsed: false,
