@@ -51,8 +51,8 @@ import TabItem from '@theme/TabItem';
 ## Tutorial To Run Your First Test On LambdaTest
 
 
-In this topic, you will learn how to configure and run your **Roku TV** automation testing scripts with **Roku WebDriver** on **LambdaTest Real Device Cloud platform**.
-
+In this topic, you will learn how to configure and run your **Roku TV** automation testing scripts with **Appium Roku WebDriver** on **LambdaTest Real Device Cloud platform**.
+> To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br /> 
 ---
 
 ## Objective
@@ -61,7 +61,7 @@ In this topic, you will learn how to configure and run your **Roku TV** automati
 
 By the end of this topic, you will be able to:
 
-1.  Set up an environment for testing your Apps using **Roku TV** with **Roku WebDriver**.
+1.  Set up an environment for testing your Apps using **Roku TV** with [**Appium Roku WebDriver**](https://github.com/headspinio/appium-roku-driver).
 2.  Understand and configure the core capabilities required for your Roku WebDriver test suite.
 3.  Explore the advanced features of LambdaTest.
 
@@ -79,7 +79,13 @@ Before you can start performing App automation testing with Appium, you would ne
 - You have access to LambdaTest username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials in the [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile)
 - Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
 - Make sure **pip** is installed in your system. You can install **pip** from [pip documentation](https://pip.pypa.io/en/stable/installation/).
+---
+## Supported Models ##
 
+| Device                      | OS Version             |
+|-----------------------------|------------------------|
+|        Roku Ultra           | 11                     |
+|        Roku Express         | 11                     |
 ---
 ## Run your first test
 
@@ -119,11 +125,6 @@ Upload your **Roku TV** application (.zip file) to the LambdaTest servers using 
 git clone https://github.com/LambdaTest/LT-appium-rokutv
 cd LT-appium-rokutv
 ```
-:::tip NOTE
-
-You can find LambdaTest's python Roku client for your reference at [lt-python-roku-client](https://github.com/LambdaTest/lt-python-roku-client) 
-
-:::
 
 ### 3. Set up your authentication
 
@@ -235,10 +236,6 @@ if __name__ == "__main__":
 ### Configure the test capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code are defined as:
-
-**Supported Model:**
-- Device: `"Roku Ultra"` ; OS Version:`"11"`
-- Device: `"Roku Express"` ; OS Version:`"11"`
 
 **Supported Capabilities:**
 Please check at the end of the doc.
