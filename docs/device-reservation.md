@@ -44,7 +44,7 @@ import TabItem from '@theme/TabItem';
 
 # Device Reservation on Private Device Cloud
 
-**LambdaTest Device Reservation** enables you to reserve private cloud devices in **advance**, ensuring uninterrupted access during critical testing windows. By scheduling devices ahead of time, teams can **prevent conflicts**, eliminate last-minute delays, and run both manual and automated tests with greater reliability. This becomes particularly valuable for time-sensitive releases, large-scale regression cycles, and continuous integration pipelines, where guaranteed device availability is essential.
+**LambdaTest Device Reservation** enables users to reserve private cloud devices in **advance**, ensuring uninterrupted access during critical testing windows. By scheduling devices ahead of time, teams can **prevent conflicts**, eliminate last-minute delays, and run both manual and automated tests with greater reliability. This becomes particularly valuable for time-sensitive releases, large-scale regression cycles, and continuous integration pipelines, where guaranteed device availability is essential.
 
 Beyond preventing scheduling conflicts, Device Reservation also helps organizations **optimize resource utilization**, enforce fair usage policies, and gain clearer visibility into device allocation across teams, leading to more efficient and predictable testing operations.
 
@@ -65,7 +65,7 @@ Beyond preventing scheduling conflicts, Device Reservation also helps organizati
 ### Accessing the App Live Dashboard
 1. Open the [App Live Dashboard](https://applive.lambdatest.com/app).
 2. Enable the toggle for Private Devices (**Available only for private device customers**).
-3. You will see two buttons:
+3. The User will see two buttons:
         - **My reservations** – View all ongoing and upcoming reservations with filter options.
         - **Go to Reservations** – Open the calendar view to explore and manage bookings.
 
@@ -110,11 +110,11 @@ To create a reservation, click **Reserve Device** from the calendar view. Then c
 - **Future Reservation** – Schedule a reservation for a later date/time within the allowed scheduling window.
    ![Device-Reservation-3](../assets/images/real-device-app-testing/Device-Reservations/Device-Reservation3.png)
 
-Select **one or multiple devices** based on availability and confirm your reservation.
+Select **one or multiple devices** based on availability and confirm the reservation.
 
 ### Viewing and Editing Reservations
 
-After adding reservation slots, you can view them under **My Reservations** and make edits or cancellations if required.
+After adding reservation slots, the user can view them under **My Reservations** and make edits or cancellations if required.
 
 ![Device-Reservation-2](../assets/images/real-device-app-testing/Device-Reservations/.Device-Reservation2.png)
 
@@ -122,13 +122,13 @@ After adding reservation slots, you can view them under **My Reservations** and 
 
 These rules apply to both admins and members, except admins can still override reservations.
 
-- In the last **15 minutes** of a reservation, a pop-up appears notifying you that the session is about to end.
-- If no pre-booked reservation exists for the device, you will have the option to extend your session.
+- In the last **15 minutes** of a reservation, a pop-up appears notifying the user that the session is about to end.
+- If no pre-booked reservation exists for the device, the user will have the option to extend the session.
 - If another booking is already scheduled for the device, the extension option will still appear, but the request will **fail**.
 - Once the reserved time ends, the device session is automatically closed and released.
 
 :::tip
 - Reservation cannot be edited after the slot has been started.
-- If an **admin** deletes your reservation, it is **canceled** immediately.
+- If an **admin** deletes any reservation, it is **cancelled** immediately.
 - In automation, reservations cannot be extended automatically in the last 15 minutes. Extensions must be handled manually.
 :::
