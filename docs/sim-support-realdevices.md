@@ -40,7 +40,7 @@ With **LambdaTest**, you can manually test SIM and eSIM scenarios on **Real Devi
 
 ---
 
-## Configuring SIM & eSIM Support for Manual Testing
+## Configuring SIM Support for Manual Testing
 
 ### Step 1: Enable SIM Support
 On the App Testing Dashboard, click **Advanced Settings** and enable the **SIM Enabled** toggle. This will unlock additional options for configuring SIM and eSIM.  
@@ -59,7 +59,7 @@ Choose your **Country**, **Carrier**, and **SIM Type**. The availability of SIM 
 
 
 :::info
-- For some customers with a **region filter** enabled, the country option will not be available for selection. In such cases, the country is automatically determined by the chosen region.  
+- For customers with the **region filter** enabled, the country option will not be available for selection. In such cases, the country is automatically determined by the chosen region.  
 - Currently, **eSIM support is limited to selected iPhone models only**. Android devices support **physical SIM** at this time.  
 :::
 
@@ -76,34 +76,20 @@ With the device configured and details verified, you can now proceed to test you
 
 ## Supported Devices
 
-| Device                  | OS Version        |
-|--------------------------|------------------|
-| Samsung Galaxy S25 Ultra | Android 15       |
-| Samsung Galaxy S25       | Android 15       |
-| Samsung Galaxy S24 Ultra | Android 14       |
-| Samsung Galaxy S24       | Android 14       |
-| Samsung Galaxy S23 Ultra | Android 13       |
-| Samsung Galaxy S23       | Android 13       |
-| Samsung Galaxy S22 Plus  | Android 12       |
-| Samsung Galaxy S22 Ultra | Android 12       |
-| Samsung Galaxy S22       | Android 12       |
-| Samsung Galaxy S21       | Android 12       |
-| Google Pixel 9 Pro       | Android 15       |
-| Google Pixel 9           | Android 15       |
-| Google Pixel 8 Pro       | Android 14       |
-| Google Pixel 8           | Android 14       |
-| Google Pixel 7           | Android 13       |
-| Google Pixel 6 Pro       | Android 13       |
-| Google Pixel 6           | Android 12       |
-| iPhone 16 Pro            | iOS 18           |
-| iPhone 15 Pro            | iOS 17           |
-| iPhone 14                | iOS 16           |
-| iPhone 14 Pro            | iOS 16           |
-| iPhone 13                | iOS 15           |
-| iPhone 13 Pro            | iOS 15           |
-| iPhone 13 Mini           | iOS 15           |
-| iPhone 12 Series         | iOS 14           |
-| iPhone 11 Series         | iOS 13           |
-| iPhone XS                | iOS 15           |
+| Device                  | OS Version  |
+|--------------------------|-------------|
+| Samsung Galaxy S25 Ultra | Android 15  |
+| Samsung Galaxy S25       | Android 15  |
+| Samsung Galaxy S24       | Android 14  |
+| Samsung Galaxy S23       | Android 13  |
+| Google Pixel 9           | Android 15  |
+| Google Pixel 7           | Android 13  |
+| Google Pixel 6           | Android 12  |
+| iPhone 16 Pro            | iOS 18      |
+| iPhone 15 Pro            | iOS 17      |
+| iPhone 14                | iOS 16      |
+| iPhone 14 Pro            | iOS 16      |
+| iPhone 13                | iOS 15      |
+| iPhone 13 Mini           | iOS 15      |
 
 ---
