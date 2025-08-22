@@ -114,11 +114,11 @@ module.exports = {
           position: 'left',
           value: '<a role="button" tabindex="0" href="https://github.com/LambdaTest" target="_blank" class="navbar__item navbar__link">GitHub<img src="https://www.lambdatest.com/support/img/Github.svg" alt="" role="presentation" title="LambdaTest GitHub" width="12" height="12" class="head_gitimg no-zoom" style="margin-left:5px;"/></a>',
         },
-                {
-          type: 'html',
-          position: 'left',
-          value: '<a role="button" tabindex="0" href="https://www.lambdatest.com/testmuconf-2025/" target="_blank" class="navbar__item navbar__link" style="padding-left:0;padding-right:0;" onclick="sendAmplitudeEvents(\'click CTA - web pages\', {cta_text: \'Register Now - Testmu\', cta_type: \'NavbarCTA\', page_category: \'Document header\'})">TestMu Conf 2025<img loading="lazy" src="https://www.lambdatest.com/resources/images/fire.svg" class="ml-5 " alt="TestMu Conference 2025" width="15" height="15" style="margin-left:5px;"></a>',
-        }
+        //         {
+        //   type: 'html',
+        //   position: 'left',
+        //   value: '<a role="button" tabindex="0" href="https://www.lambdatest.com/testmuconf-2025/" target="_blank" class="navbar__item navbar__link" style="padding-left:0;padding-right:0;" onclick="sendAmplitudeEvents(\'click CTA - web pages\', {cta_text: \'Register Now - Testmu\', cta_type: \'NavbarCTA\', page_category: \'Document header\'})">TestMu Conf 2025<img loading="lazy" src="https://www.lambdatest.com/resources/images/fire.svg" class="ml-5 " alt="TestMu Conference 2025" width="15" height="15" style="margin-left:5px;"></a>',
+        // }
       ],
     },
   },
