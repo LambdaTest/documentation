@@ -65,7 +65,7 @@ When automating SIM or eSIM scenarios on real devices, you can **customize** you
 | Configuration | Type       | Example                  | Description |
 |-----------|------------|--------------------------|-------------|
 | region    | String     | "IND", "USA" ,"IRL"            | ISO country code for SIM region. |
-| carrier   | String / List | "airtel" or ["jio","vodafone"] | Select preferred carrier(s). |
+| carrier   | String  | ["airtel"] or ["jio","vodafone"] | Select preferred carrier(s). |
 | esim      | Boolean    | true                     | Request an eSIM-enabled device (iOS only). |
 
 :::info
@@ -73,7 +73,7 @@ Region and carrier values are case-sensitive. Make sure to enter them exactly as
 ::::
 ---
 
-## SIM & eSIM support Workflow in Automation Test
+## SIM support Workflow in Automation Test
 
 
 ### Step 1: Add SIM Capabilities
@@ -93,7 +93,7 @@ To enable SIM & eSIM support, include the following capability in your automatio
     'enableSim': True,
     'simOptions': {
         'region': 'IND',
-        'carrier': ['Airtel', 'Vodafone'],
+        'carrier': ['airtel', 'vodafone'],
         'esim': True
     }
 }
@@ -111,7 +111,7 @@ desired_caps = {
     'enableSim': True,
     'simOptions': {
         'region': 'IND',
-        'carrier': ['Airtel', 'Vodafone']
+        'carrier': ['airtel', 'vodafone']
     }
 }
 ```
@@ -151,34 +151,20 @@ If SIM-enabled devices matching your preferences are unavailable, sessions may f
 
 ## Supported Devices
 
-| Device                  | OS Version        |
-|--------------------------|------------------|
-| Samsung Galaxy S25 Ultra | Android 15       |
-| Samsung Galaxy S25       | Android 15       |
-| Samsung Galaxy S24 Ultra | Android 14       |
-| Samsung Galaxy S24       | Android 14       |
-| Samsung Galaxy S23 Ultra | Android 13       |
-| Samsung Galaxy S23       | Android 13       |
-| Samsung Galaxy S22 Plus  | Android 12       |
-| Samsung Galaxy S22 Ultra | Android 12       |
-| Samsung Galaxy S22       | Android 12       |
-| Samsung Galaxy S21       | Android 12       |
-| Google Pixel 9 Pro       | Android 15       |
-| Google Pixel 9           | Android 15       |
-| Google Pixel 8 Pro       | Android 14       |
-| Google Pixel 8           | Android 14       |
-| Google Pixel 7           | Android 13       |
-| Google Pixel 6 Pro       | Android 13       |
-| Google Pixel 6           | Android 12       |
-| iPhone 16 Pro            | iOS 18           |
-| iPhone 15 Pro            | iOS 17           |
-| iPhone 14                | iOS 16           |
-| iPhone 14 Pro            | iOS 16           |
-| iPhone 13                | iOS 15           |
-| iPhone 13 Pro            | iOS 15           |
-| iPhone 13 Mini           | iOS 15           |
-| iPhone 12 Series         | iOS 14           |
-| iPhone 11 Series         | iOS 13           |
-| iPhone XS                | iOS 15           |
+| Device                  | OS Version  |
+|--------------------------|-------------|
+| Samsung Galaxy S25 Ultra | Android 15  |
+| Samsung Galaxy S25       | Android 15  |
+| Samsung Galaxy S24       | Android 14  |
+| Samsung Galaxy S23       | Android 13  |
+| Google Pixel 9           | Android 15  |
+| Google Pixel 7           | Android 13  |
+| Google Pixel 6           | Android 12  |
+| iPhone 16 Pro            | iOS 18      |
+| iPhone 15 Pro            | iOS 17      |
+| iPhone 14                | iOS 16      |
+| iPhone 14 Pro            | iOS 16      |
+| iPhone 13                | iOS 15      |
+| iPhone 13 Mini           | iOS 15      |
 
 ---
