@@ -46,5 +46,5 @@ jobs:
         name: Check spelling
         with:
           skip: "*.svg,*.js,*.map,*.css,*.scss,*.webp"
-          ignore_words_list: aks,atleast,cros,ddress,fiel,ist,nd,ot,pullrequest,ser,shttp,wast,fo,tht,extention,seldomly,delt,cruzer,plack,secur,te,testng,TestNG,FLE,fle,afterAll,afterall,Nome,nome,lod,pressEnter,pressenter,softwares,iif,IIF,BY,BE,BUT,BUG,BUN,BUD,BUY,BUM
+          ignore_words_list: aks,atleast,cros,ddress,fiel,ist,nd,ot,pullrequest,ser,shttp,wast,fo,tht,extention,seldomly,delt,cruzer,plack,secur,te,testng,TestNG,FLE,fle,afterAll,afterall,Nome,nome,lod,pressEnter,pressenter,softwares,iif,IIF,BY,BE,BUT,BUG,BUN,BUD,BUY,BUM,Mis-Match,BU
           path: docs
