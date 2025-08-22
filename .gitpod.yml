@@ -5,7 +5,7 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - init: nvm install 16; nvm use 16;
-    command: npm install --force && npm i react-scripts@latest && npm run build && npm run start
+  - init: nvm install 18; nvm use 18;
+    command: npm install --force && npm i react-scripts@latest --force && npm run build && npm run start
 
 

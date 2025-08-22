@@ -3028,6 +3028,11 @@ module.exports = {
     [
       {
         type: "doc",
+        label: "Getting Started with Flutter Integration Driver",
+        id: "appium-flutter-integration",
+      },
+      {
+        type: "doc",
         label: "Getting Started with Flutter Android",
         id: "getting-started-with-flutter-dart-android-automation",
       },
