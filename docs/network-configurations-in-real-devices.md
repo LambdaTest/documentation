@@ -77,6 +77,7 @@ Use this option to capture or exclude response content. This is off by default b
 ### **Exclude specific domains**: 
 Use this to exclude certain domains from network logs. This works similarly to **Include specific domains**. If both options are enabled, **Exclude specific domains** takes precedence.  
 ![Exclude hosts from network logs](../assets/images/real-device-app-testing/Network-RD/Network_Log_excl.png)
+
 ---
 
 ## Best practices & tips
