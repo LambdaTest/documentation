@@ -52,7 +52,7 @@ email:
     - <another_email_id@example.com>
 ```
 
-You can also use the `currentUser` and `org` tag to send the reports to the email ID of your choice.
+You can also use the `currentUser` tag to send the reports to the email ID of your choice.
 
 - **currentUser**: This tag will allow you to send the report to the email ID associated with your LambdaTest account.
 
@@ -60,14 +60,6 @@ You can also use the `currentUser` and `org` tag to send the reports to the emai
 email:
   to: 
     - currentUser
-```
-
-- **org**: This tag will allow you to send the report to all the email IDs associated with your organization on LambdaTest.
-
-```yaml
-email:
-  to:
-    - org 
 ```
 
 ## How to receive your Artifacts via Email?
@@ -96,14 +88,6 @@ uploadArtifacts:
     email:
       to: 
         - currentUser
-        
-  - name: Reports 3
-    path:
-      - ProtractorTestReport.html
-      - xmlresults.xml
-    email:
-      to: 
-        - org
 ```
 
 ## How to receive your Job Report via Email?
