@@ -21,6 +21,8 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,9 +47,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
-
-
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 LambdaTest now allows you to **enable or disable dark mode** for automation testing as well. This helps developers and testers validate UI behavior across light and dark themes, theme switching without manual intervention, and visual consistency for mobile apps and web applications.
 
 ---

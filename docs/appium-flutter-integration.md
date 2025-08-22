@@ -19,9 +19,11 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
 
-
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 LambdaTest supports testing Flutter applications on real Android and iOS devices using the [**Appium Flutter Integration Driver**](https://github.com/AppiumTestDistribution/appium-flutter-integration-driver/). This driver enables you to automate Flutter app testing in multiple programming languages, providing a powerful and flexible way to validate your Flutter apps on real devices in the cloud.
 
 Testing Flutter apps requires embedding the **Flutter Integration Server** inside your app to enable communication between Appium and Flutter UI elements.
@@ -30,7 +32,7 @@ After preparing your Flutter app with this integration (refer to the setup docum
 
 ---
 
-## Native Flutter Integration Driver vs Appium Flutter Integration Driver
+## Native Flutter Integration Driver vs Appium Flutter Integration Driver <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 | Feature / Use Case                                   | Native Flutter Driver | Appium Flutter Integration Driver |
 |----------------------------------------------------|----------------------|----------------------------------|
@@ -129,7 +131,7 @@ void main() {
 
 ---
 
-## Sample Desired Capabilities 
+## Sample Desired Capabilities <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 <Tabs>
   <TabItem value="android" label="Android" default>
@@ -138,7 +140,7 @@ void main() {
     "deviceName":"Galaxy S20",
     "platformName":"Android",
     "platformVersion":"15",
-    "isRealMobile":True,
+    "isRealMobile":True,  // Use False for Virtual Devices
     "app":"YOUR_APP_URL",
     "build":"Sample Build",
     "name":"Sample Test",
@@ -155,7 +157,7 @@ void main() {
     "deviceName":"iPhone 16",
     "platformName":"ios",
     "platformVersion":"18",
-    "isRealMobile":True,
+    "isRealMobile":True, // Use False for Virtual Devices
     "app":"YOUR_APP_URL",
     "build":"Sample Build",
     "name":"Sample Test",
@@ -170,6 +172,7 @@ void main() {
 :::tip
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
 
 :::

@@ -117,7 +117,7 @@ playwrightConfigOptions:
 # Refer to the capability generator for detailed configurations: https://www.lambdatest.com/capabilities-generator/
 platforms:
   - platform: "macOS Sequoia" # Or "Windows 11", "android", "ios"
-    browserName: "chrome" # Or "firefox", "safari"
+    browserName: "chrome" # Or pw-firefox, pw-webkit
     # You can specify an exact browser version or use "latest", "latest-1", etc.
     browserVersion: "latest"
     # For mobile testing
