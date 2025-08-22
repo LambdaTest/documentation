@@ -16,6 +16,8 @@ slug: getting-started-with-flutter-dart-android-automation/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -42,6 +44,7 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 Flutter, an open-source UI toolkit created by Google, is a popular choice among developers to build natively compiled applications for mobile, web, and desktop from a single codebase. With Dart as its programming language, Flutter enables fast development of beautiful apps with a highly productive, extensible and open-source set of features.
 
 In this guide, we will explore how to run your first Flutter Dart test on an Android device using the LambdaTest Real Device Cloud. By combining the capabilities of Flutter Dart and LambdaTest, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.

@@ -237,6 +237,115 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 
 > You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
 
+:::
+## How to use Sharding
+
+---
+
+1. Firstly, create a folder on your local.
+2. Download the HyperExecute CLI file and put it under this folder. You may download HyperExecute CLI from either of the following ways:
+- Download it from our HyperExecute documentation page [here](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/), or
+- "Get Started" through HyperExecute [onboarding](https://hyperexecute.lambdatest.com/quickstart) and download the CLI.
+3. Refer to the sample `.ipa` files and `.yaml` file given below. Put all of them under this folder.
+- [ProverbialTest.ipa](https://prod-mobile-artefacts.lambdatest.com/assets/docs/ProverbialTest.ipa)
+- [LambdaUiKitIOS.ipa](https://prod-mobile-artefacts.lambdatest.com/assets/docs/LambdaUiKitIOS.ipa) 
+
+Refer to the sample `.yaml` file here
+
+```bash title="SampleYamlFile.yaml"
+version: "0.2"
+concurrency: 2
+runson: ios
+autosplit: true
+maxRetries: 2
+retryOnFailure: true
+globalTimeout: 180    #MAXQUEUETIMEOUT
+
+framework:
+  name: "ios/xcui"
+  args:
+    buildName: "XCUIT"
+    video: true
+    networkLog: true
+    deviceLog: true
+    
+    # You can use either the appId (APP1234567) or provide the path of the application using appPath.
+
+    #highlight-next-line
+    appPath: LambdaUiKitIOS.ipa
+    # We have used the appPath here instead of appId
+
+    # You can use either the APP ID (APP1234567) or provide the path of the application.
+
+    #highlight-next-line
+    testSuiteAppId: lt://APP10160202521675167637685231
+    # We have used the testSuiteAppID here instead of testSuitePath
+
+    deviceSelectionStrategy: all
+    devices: ["iPhone 12 Pro-14", "iPad Air (2019)-16"]
+
+    smartUI:
+      project: "Espresso-SmartUI-Project"
+
+    shards:
+      mappings:
+      - name: shard1
+        strategy: "only-testing/skip-testing"
+        values: ["<className>/<className/testName>"]
+     - name: shard2
+       strategy: "only-testing/skip-testing"
+       values: ["<className>/<className/testName>", "<className>/<className/testName>"]
+```
+
+:::tip When shards are added
+
+If you are using the `deviceSelectionStrategy: all`, then in that case all the mentioned shards will be executed on all the devices.<br/>
+**For example:** There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on 2 devices (2 Shards * 2 Devices).
+
+If you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned shards will be executed on any one device from the list provided.<br/>
+**For example:** There are 2 shards and 2 devices mentioned, then the 2 shards will be executed on any device (2 shards * any device mentioned).
+
+:::
+
+:::caution When shards aren't added
+
+If you are using the `deviceSelectionStrategy: all`, then in that case all the tests will be executed on all the devices based on the concurrency. <br/>
+**For example:** There are 6 tests and 10 devices mentioned, then the 6 tests will be auto distributed on the devices based on the max concurrency.
+
+
+If you are using the `deviceSelectionStrategy: any`, then in that case all the mentioned tests will be executed on any one device from the list provided. <br/>
+**For example:** There are 6 tests and 10 devices mentioned, then the 6 tests will be executed on any one device.
+
+:::
+
+## Filters in Sharding
+You can filter the Classes / Tests that you'd like to execute using filters.
+Here's an example of the same.
+
+```java
+filters:
+      attributes:
+      - type: className
+        values: ["LambdaUiKitIOSUITests","LambdaUiKitIOSUITestsLaunchTests"]
+      - type: testName
+        values: ["LambdaUiKitIOSUITests/testverifyAppLaunch"]
+```
+This example will run only the 2 classes & one test as mentioned from the TestSuite.
+
+## XCTestPlan in Sharding
+To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](https://www.lambdatest.com/support/docs/hyperexecute-yaml-version0.2/#framework) flag as shown below:
+
+```yaml
+framework:
+  name: "ios/xcui"
+  args:
+    "app" : "lt://APP_ID",
+    "testSuite": "lt://TEST_SUITE_ID",
+    "xctestplan" : "lt://YOUR_XC_TEST_PLAN_ID" #only when you want to use XCTestPlan
+```
+
+> Refer the documentation to learn how to use [XCTestPlan feature](/support/docs/xctestplan/).
+
 ## Smart Crop With SmartUI
 
 The all-new **Real Device mobile notification status bar and navigation bar crop** feature in SmartUI allows you to take your visual regression testing workflows to the next level. With Smart Crop, you can crop the status bar and navigation bar or footer from screenshots, enabling them to focus solely on the core UI elements during visual comparisons.
