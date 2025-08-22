@@ -1,5 +1,5 @@
 ---
-id: sim-esim-realdevices
+id: sim-support-realdevices
 title: SIM & eSIM on Real Devices
 sidebar_label: Enable SIM
 description: Learn how to manually test SIM and eSIM scenarios on real mobile devices using LambdaTest, including configurations, SMS validation, and supported devices.
@@ -10,7 +10,9 @@ keywords:
   - Android
   - Real Devices
   - testing
-slug: sim-support-for-public-real-devices/
+slug: sim-support-realdevices/
+site_name: LambdaTest
+url: https://www.lambdatest.com/support/docs/sim-support-realdevices/
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
