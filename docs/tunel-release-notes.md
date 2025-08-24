@@ -38,6 +38,10 @@ slug: tunnel-release-notes/
     }}
 ></script>
 
+## Version 3.2.20 (24th August 2025)
+- **Security Updates and Stability Fixes**
+  - Implemented critical security updates
+
 ## Version 3.2.19 (10th August 2025)
 - **Security Updates and Stability Fixes**
   - Support SHA-256 signed certificates within PFX files for mTLS authentication
