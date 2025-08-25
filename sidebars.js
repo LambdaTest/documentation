@@ -3940,4 +3940,21 @@ module.exports = {
       },
     ],
   ],
+  ConcurrencyWidgetSidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "doc",
+        label: "Concurrency Widget",
+        id: "concurrency-widget",
+      },
+    ],
+  ],
 };
