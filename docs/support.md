@@ -283,6 +283,7 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/test-intelligence-overview/"><p className="p_home_inners">Test Intelligence</p></a>
         <a href="/support/docs/automated-screenshot-testing/"><p className="p_home_inners">Screenshot Testing</p></a>
         <a href="/support/docs/responsive-testing/"><p className="p_home_inners">Responsive Testing</p></a>
+        <a href="/support/docs/concurrency-widget/"><p className="p_home_inners">Concurrency Widget</p></a>
       </div>
     </div>
 </div>   
