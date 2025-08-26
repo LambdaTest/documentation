@@ -100,9 +100,9 @@ Before enabling network configurations, ensure your app is uploaded to LambdaTes
     "network": True,
     #highlight-next-line
     "networkLogsOptions": {
-        "captureContent": True,
-        "networkLogsIncludeHosts": "api.example.com, login.example.com",
-        "networkLogsExcludeHosts": "analytics.example.com, *.facebook.com"
+        "captureContent": False,
+        "excludeHosts": ["lambdatest"],
+        "includeHosts": ["youtube", "facebook"]
     },
 }`}
     </CodeBlock>
@@ -121,9 +121,9 @@ Before enabling network configurations, ensure your app is uploaded to LambdaTes
     "network": True,
     #highlight-next-line
     "networkLogsOptions": {
-        "captureContent": True,
-        "networkLogsIncludeHosts": "api.example.com, login.example.com",
-        "networkLogsExcludeHosts": "analytics.example.com, *.facebook.com"
+        "captureContent": False,
+        "excludeHosts": ["lambdatest"],
+        "includeHosts": ["youtube", "facebook"]
     },
 }`}
     </CodeBlock>
