@@ -65,6 +65,8 @@ The ```framework``` field in Hyperexecute YAML Version 0.2 allows you to configu
 | [defaultReports](#defaultReports) | Boolean | No | Specifies whether to create default reports for the specified framework.|
 | [region](#region) | String | No | Specifies in which region you want to spin your appium tests.|
 | [artifacts](#artifacts) | Boolean | No | Specifies whether to generate artifacts or not |
+| [language](#language) | String | No | Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed. |
+| [locale](#locale) | String | No | Defines the regional format settings such as date, time, currency, and number conventions. |
 
 ### `name`
 Specifies the testing framework used in your repository.
@@ -180,6 +182,28 @@ framework:
 
 > 📕 Learn [how to perform group-based test discovery in TestNG](/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng)
 
+
+### `language`
+
+Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed.
+
+```yaml
+framework:
+  args:
+    language: es
+```
+
+### `locale`
+
+Defines the regional format settings such as date, time, currency, and number conventions.
+
+```yaml
+framework:
+  args:
+    locale: ES
+```
+
+
 ## Sample Yaml Version 0.2
 
 ```yaml
@@ -204,7 +228,9 @@ framework:
   workingDirectory: src/main
   defaultReports: false
   args:
-    region: us
+    region: ap
+    language: es
+    locale: es
 
 retryOnFailure: true
 maxRetries: 1
@@ -218,23 +244,3 @@ uploadArtefacts:
    path:
     - target/surefire-reports/html/**
 ```
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Hyperexecute Yaml Version 0.2
-      </span>
-    </li>
-  </ul>
-</nav>
