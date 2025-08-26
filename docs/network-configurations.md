@@ -61,7 +61,7 @@ To enable the following you would need to pass them under `networkLogsOptions` C
 
 
 :::info
-- `networkLogsExcludeHosts` and `networkLogsIncludeHosts` are mutually exclusive. If both are set, **IncludeHosts** takes precedence.
+- `excludeHosts` and `includeHosts` are mutually exclusive. If both are set, **IncludeHosts** takes precedence.
 :::
 
 ---
@@ -69,7 +69,7 @@ To enable the following you would need to pass them under `networkLogsOptions` C
 
 Some mobile apps add an extra layer of security by using **certificate pinning** — a process where the app is hard-coded to trust only a specific certificate or public key for certain hosts. This means that whenever the app communicates with those hosts, it **verifies the server’s certificate** against its pinned copy before allowing the connection.
 
-When you enable **network logging** on LambdaTest, traffic passes through a **secure proxy** so requests and responses can be captured. For **certificate-pinned hosts**, this interception may cause the connection to fail because the certificate no longer matches exactly. To avoid such issues, you can exclude pinned hosts from being proxied by adding them to the `networkLogsExcludeHosts` capability. This ensures your tests run smoothly without breaking **secure connections**.
+When you enable **network logging** on LambdaTest, traffic passes through a **secure proxy** so requests and responses can be captured. For **certificate-pinned hosts**, this interception may cause the connection to fail because the certificate no longer matches exactly. To avoid such issues, you can exclude pinned hosts from being proxied by adding them to the `excludeHosts` capability. This ensures your tests run smoothly without breaking **secure connections**.
 
 ---
 ## Network Configurations in Automation Test
@@ -142,8 +142,8 @@ Execute your test script using your preferred automation framework with the abov
 ## Best Practices
 
 - **Exclude analytics/tracking domains** to reduce log noise.
-- For **certificate-pinned apps**, always add pinned hosts to `networkLogsExcludeHosts`.
-- Use **networkLogsIncludeHosts** for focused debugging when investigating specific endpoints.
+- For **certificate-pinned apps**, always add pinned hosts to `excludeHosts`.
+- Use **includeHosts** for focused debugging when investigating specific endpoints.
 - Keep `captureContent: false` if you only need headers for performance gains.
 
 ---
