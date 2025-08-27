@@ -270,6 +270,7 @@ import NewTag from '../src/component/newTag';
   <h2 className='homeMain_h2'><SettingsLightIcon className="home_icons home_light_icon" role="presentation"/> <SettingsDarkIcon className="home_icons home_dark_icon" role="presentation"/>Settings and Security</h2>
   <div className="home_inners">
     <a href="/support/docs/account-management/"><p className="p_home_inners">Account Management</p></a>
+    <a href="/support/docs/network-whitelisting-and-tunnel-guide/"><p className="p_home_inners">Network Whitelisting Guide</p></a>
     <a href="/support/docs/lambdatest-public-ip/"><p className="p_home_inners">LambdaTest Public IP</p></a>
     <a href="/support/docs/single-sign-on/"><p className="p_home_inners">Single Sign On</p></a>
     <a href="/support/docs/scim/"><p className="p_home_inners">SCIM</p></a>

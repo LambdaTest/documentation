@@ -1974,6 +1974,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "Network Whitelisting Guide",
+        id: "network-whitelisting-and-tunnel-guide",
+      },
+      {
+        type: "doc",
         label: "LambdaTest Public IP Ranges",
         id: "lambdatest-public-ip",
       },
