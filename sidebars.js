@@ -230,6 +230,7 @@ module.exports = {
                   "webdriverio-on-hyperexecute-grid",
                   "protractor-on-hyperexecute-grid",
                   "nightwatch-on-hyperexecute-grid",
+                  "hyperexecute-bidi-testing"
                 ],
               },
               {
@@ -1963,6 +1964,11 @@ module.exports = {
         type: "doc",
         label: "Account Management",
         id: "account-management",
+      },
+      {
+        type: "doc",
+        label: "Network Whitelisting Guide",
+        id: "network-whitelisting-and-tunnel-guide",
       },
       {
         type: "doc",

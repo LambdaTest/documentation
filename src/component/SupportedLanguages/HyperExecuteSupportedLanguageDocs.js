@@ -37,6 +37,7 @@ export default function HyperExecuteSupportedLanguageDocs() {
                     <li><a href="/support/docs/webdriverio-on-hyperexecute-grid/">WebdriverIO</a></li>
                     <li><a href="/support/docs/protractor-on-hyperexecute-grid/">Protractor</a></li>
                     <li><a href="/support/docs/nightwatch-on-hyperexecute-grid/">Nightwatch</a></li>
+                    <li><a href="/support/docs/hyperexecute-bidi-testing/">BiDi</a></li>
                   </ul>
                 </div>
                 <div className="lt_col lt_framework_wrapper">

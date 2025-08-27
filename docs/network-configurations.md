@@ -56,8 +56,8 @@ To enable the following you would need to pass them under `networkLogsOptions` C
 | Network Configurations Capability | Type                   | Default | Description                                                  |
 |-----------------------------|------------------------|---------|--------------------------------------------------------------|
 | **captureContent**          | Boolean                | true    | Captures the response body in network logs.                  |
-| **networkLogsExcludeHosts** | String                 | None    | Hosts to exclude from network logs.                          |
-| **networkLogsIncludeHosts** | String                 | None    | Only capture network logs for these hosts; all others will be excluded. |
+| **excludeHosts** | List                 | None    | Hosts to exclude from network logs.                          |
+| **includeHosts** | List                 | None    | Only capture network logs for these hosts; all others will be excluded. |
 
 
 :::info
@@ -100,9 +100,9 @@ Before enabling network configurations, ensure your app is uploaded to LambdaTes
     "network": True,
     #highlight-next-line
     "networkLogsOptions": {
-        "captureContent": True,
-        "networkLogsIncludeHosts": "api.example.com, login.example.com",
-        "networkLogsExcludeHosts": "analytics.example.com, *.facebook.com"
+        "captureContent": False,
+        "excludeHosts": ["lambdatest"],
+        "includeHosts": ["youtube", "facebook"]
     },
 }`}
     </CodeBlock>
@@ -121,9 +121,9 @@ Before enabling network configurations, ensure your app is uploaded to LambdaTes
     "network": True,
     #highlight-next-line
     "networkLogsOptions": {
-        "captureContent": True,
-        "networkLogsIncludeHosts": "api.example.com, login.example.com",
-        "networkLogsExcludeHosts": "analytics.example.com, *.facebook.com"
+        "captureContent": False,
+        "excludeHosts": ["lambdatest"],
+        "includeHosts": ["youtube", "facebook"]
     },
 }`}
     </CodeBlock>

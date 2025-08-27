@@ -35,6 +35,7 @@ export default function HyperExecuteSupportedLanguageRepos() {
                     <li><a href="https://github.com/LambdaTest/WebdriverIO-HyperExecute-Sample.git" target="_blank">WebdriverIO</a></li>
                     <li><a href="https://github.com/LambdaTest/Protractor-HyperExecute-Sample.git" target="_blank">Protractor</a></li>
                     <li><a href="https://github.com/LambdaTest/Hyperexecute-Nightwatch-Sample.git" target="_blank">Nightwatch</a></li>
+                    <li><a href="https://github.com/LambdaTest/hyperexecute-bidi-sample.git" target="_blank">BiDi</a></li>
                   </ul>
                 </div>
                 <div className="lt_col lt_framework_wrapper">
