@@ -56,3 +56,8 @@ framework:
     language: es
     locale: ES
 ```
+
+## BiDi Testing Support with Selenium WebDriver
+HyperExecute now supports BiDi (Bi-Directional) Testing with Selenium WebDriver. BiDi provides a two-way communication channel between the client and the browser, allowing you to go beyond traditional WebDriver commands. With BiDi enabled, you can interact with real-time browser events such as console logs, network traffic, JavaScript exceptions, and more, all directly from your test scripts.
+
+> To learn more about BiDi testing with Selenium WebDriver on HyperExecute, refer to our [detailed documentation](https://www.lambdatest.com/support/docs/hyperexecute-bidi-testing/)
