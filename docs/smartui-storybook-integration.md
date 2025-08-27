@@ -152,7 +152,7 @@ Once, the configuration file will be created, you will be seeing the default con
     ],
     "waitForTimeout": 0, // (Optional) Add wait time for the page to load
     "include": [],       // (Optional) Only compare limited stories
-    "exclude": []        // (Optional) Don't compare the stories
+    "exclude": []        // (Optional) Don't compare the stories // Apply exclusions/inclusions at directory, sub-directory, or individual story level
   }
 }
 ```
@@ -209,10 +209,18 @@ To configure custom viewports for your stories, you can update the `.smartui.jso
         "stories": [
           "<name of the stories/components>"
         ],
+      {
         "styles": {
-          "width": 320, //Small mobile view
-          "height": 568
-        },
+            "width": 322,
+            "height": 321
+          },
+        "exclude": [ // Example: Excluding stories for a specific viewport
+          "/directory1",
+          "/directory2/subdirectory1",
+          "/directory2/subdirectory2",
+          "/directory3/subdirectory3/item1",
+        ]
+      },
       },
       {
         "stories": [
