@@ -230,6 +230,7 @@ module.exports = {
                   "webdriverio-on-hyperexecute-grid",
                   "protractor-on-hyperexecute-grid",
                   "nightwatch-on-hyperexecute-grid",
+                  "hyperexecute-bidi-testing"
                 ],
               },
               {
