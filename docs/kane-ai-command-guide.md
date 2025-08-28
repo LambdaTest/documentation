@@ -132,9 +132,9 @@ The following assertion types are not yet available:
 
 | Category | Example | Description |
 | :--- | :--- | :--- |
-| **Element State** | Assert if submit button is disabled | Directly acessing the element state is not supported. | 
-| **Element Property** | Assert if font size is 16px | Directly acessing the element properties is not supported. |
-| **Spatial** | Assert the 5th column of the table contains "Jordan.Mathews" | This requires to deep knowledge of DOM to understand the possitions & arrangements of the elements. 
+| **Element State** | Assert if submit button is disabled | Directly accessing the element state is not supported. | 
+| **Element Property** | Assert if font size is 16px | Directly accessing the element properties is not supported. |
+| **Spatial** | Assert the 5th column of the table contains "Jordan.Mathews" | This requires to deep knowledge of DOM to understand the positions & arrangements of the elements. 
 | **Logical** | Assert user is admin AND logged in | Assertions combining multiple conditions. | 
 | **Action-based** | Assert tooltip appears after hover | Assertion after an action is performed. *These types of instructions can be broken into multiple steps & executed as for now.* |
 | **Nested Assertions** | Assert login button enabled AND welcome message visible | Nested assertions involve multiple layers of validation within a single assertion. |
