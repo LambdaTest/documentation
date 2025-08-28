@@ -1,7 +1,6 @@
 ---
 id: kane-ai-command-guide
 title: KaneAI - Command Guide
-hide_title: false
 sidebar_label: Command Types
 description: Master KaneAI commands to automate web actions like navigation, clicking, typing, and more. Create dynamic, readable test cases with ease
 keywords:
@@ -42,13 +41,11 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-# KaneAI Command Guide
-
 KaneAI offers a **natural language interface** for authoring test steps. Each step is expressed as an instruction that KaneAI translates into executable automation. With KaneAAI supported commands you can build **clear, dynamic, and human-readable test cases**.
 
 ---
 
-## 🔗 Navigation & Page Interaction
+## Navigation & Page Interaction
 
 
 | Action       | Example Commands                               |
@@ -64,7 +61,7 @@ KaneAI offers a **natural language interface** for authoring test steps. Each st
 | Navigation   | `go back`  ,   `navigate back`  ,  `go forward`  ,  `navigate forward` |
 
 
-## ⏱ Waits & Timeouts
+## Waits & Timeouts
 
 ### Default Wait
 Every element interaction automatically includes a **default wait of 10 seconds** for the element to become interactable.
@@ -84,7 +81,7 @@ Custom waits apply only to element-based interactions.
 
 ---
 
-## 📑 Tab Management
+## Tab Management
 
 - `open new lambdatest tab`  
 - `switch to 2nd tab` / `switch to lambdatest tab`  
@@ -92,7 +89,7 @@ Custom waits apply only to element-based interactions.
 
 ---
 
-## 📜 Scrolling
+## Scrolling
 
 - `scroll until the button is visible`
 - `scroll by 100px`
@@ -106,7 +103,7 @@ Use `scroll until` for elements not yet visible in the viewport. Works for entir
 
 ---
 
-## ✅ Assertions
+## Assertions
 
 Assertions validate expected outcomes. KaneAI supports several categories:
 
@@ -126,7 +123,7 @@ More info: [Failure Conditions](https://www.lambdatest.com/support/docs/kaneai-f
 
 ---
 
-## 🚧 Unsupported (Coming Soon)
+## Unsupported (Coming Soon)
 
 The following assertion types are not yet available:
 
@@ -141,13 +138,13 @@ The following assertion types are not yet available:
 
 ---
 
-## 🔍 Query Information
+## Query Information
 - `query the current url`
 - `query the time mentioned in the poster`
 
 ---
 
-## 🔄 Conditional Actions
+## Conditional Actions
 
 ### Conditional Click
 `if pop up is present in the viewport then click on it`
@@ -170,7 +167,7 @@ The following assertion types are not yet available:
 
 ***
 
-## 🌟 Best Practices
+## Best Practices
 - Write **clear, specific** commands
 - Combine command types for richer tests
 - Use **conditional logic** for dynamic flows
