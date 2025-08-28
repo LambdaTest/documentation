@@ -2,7 +2,7 @@
 id: update-fields
 title: Bulk Update Fields
 hide_title: true
-sidebar_label: Update Fields
+sidebar_label: Bulk Update Test Case Fields
 description: Learn how to Bulk update system & custom fields.
 keywords:
   - bulk action
