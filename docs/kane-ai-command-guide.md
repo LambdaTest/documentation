@@ -41,200 +41,138 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-KaneAI offers a range of commands to perform various actions on web pages. These commands, called instructions, guide KaneAI in executing specific tasks during your test cases. By using instructions along with descriptive instructions, you can create clear, human-readable test cases.
 
-This document provides an overview of the different instructions available in KaneAI, allowing you to write test cases in plain English with ease.
+# KaneAI Command Guide
 
-## Navigation and Page Interaction
+KaneAI offers a **natural language interface** for authoring test steps. Each step is expressed as an instruction that KaneAI translates into executable automation. With KaneAAI supported commands you can build **clear, dynamic, and human-readable test cases**.
 
-### Open a website
-- `go to https://www.lambdatest.com`
-- `open https://www.lambdatest.com`
+---
 
-### Click
-- `click on login button`
+## 🔗 Navigation & Page Interaction
 
-### Type or Enter Text
-- `enter "random@gmail.com"`
-- `type "random@gmail.com"`
-- `send keys "random@gmail.com"`
 
-### Clear Input
-- `clear email input field`
-- `clear the password field`
+| Action       | Example Commands                               |
+|--------------|------------------------------------------------|
+| Open URL     | `go to https://example.com`  ,  `open https://example.com` |
+| Click        | `click on login button`                        |
+| Type Text    | `enter "user@example.com"`  ,  `type "password123"` |
+| Clear Field  | `clear email input field`                      |
+| Select Date  | `select 21st september date`                   |
+| Hover        | `hover on shop by category option`             |
+| Search       | `search for "laptop"`                          |
+| Refresh      | `refresh the page`                             |
+| Navigation   | `go back`  ,   `navigate back`  ,  `go forward`  ,  `navigate forward` |
 
-### Select Date
-- `select 21st september date`
 
-### Hover
-- `hover on shop by category option`
+## ⏱ Waits & Timeouts
 
-### Search
-- `search for iphone`
+### Default Wait
+Every element interaction automatically includes a **default wait of 10 seconds** for the element to become interactable.
 
-### Refresh Page
-- `refresh the page`
+### Explicit Waits
+Define timeouts explicitly using natural language instruction like  ` wait for 5 seconds `
 
-### Navigate Back/Forward
-- `go back`
-- `navigate back`
-- `go forward`
-- `navigate forward`
-
-### Wait
-
-#### Default wait for element
-For all instructions which require an element to interact with in web, wait for element is added in the generated code with a default timeout of 10 seconds.
-
-#### Explicit Waits
-You may also define explicit wait timeouts using natural language such as below.
-- `wait for 5 seconds`
-
-#### Custom Wait Timeouts
-You can assign a custom timeout to any specific step, waiting for that element based on visibility or clickibility.
-
-Follow these steps to set timeouts on test steps:
-
-- Click on three dots on step & select the `Step Timeout` option.
-- Set the max time (in seconds) you want to wait for a particular element. 
+### Custom Timeouts
+You can override waits per step via the UI:
+1. Click step menu (⋮) → **Step Timeout**
+2. Enter timeout value **(seconds, max 300)**
 
 :::note
-You can add maximum of 300 seconds timeout for an operation. 
+Custom waits apply only to element-based interactions.  
 :::
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/commands/select_set_timeout.png').default} alt="" className="doc_img"/>
 
-:::note
- Custom Waits can only be added on instruction involving element based interactions. 
-:::
+---
 
-## Tab Management
+## 📑 Tab Management
 
-### Open New Tab
-- `open new lambdatest tab`
+- `open new lambdatest tab`  
+- `switch to 2nd tab` / `switch to lambdatest tab`  
+- `close lambdatest tab` / `close 2nd tab`
 
-### Switch Tabs
-- `switch to 2nd tab`
-- `switch to lambdatest tab`
+---
 
-### Close Tab
-- `close lambdatest tab`
-- `close 2nd tab`
+## 📜 Scrolling
 
-## Page Interaction
-### Scroll
 - `scroll until the button is visible`
-- `scroll until xyz option is visible inside a section`
-- `scroll once`
 - `scroll by 100px`
-- `scroll to the bottom`
-- `scroll to the top`
+- `scroll to the bottom` / `scroll to the top`
 - `scroll 3 times`
 - `scroll by 20 percent`
 
-If your element is not visible in the viewport, you can use the `scroll until` command to go to that particular element if that is present currently in the DOM. This can be used in vertical scrollable pages & even on the scrollable sub-sections. 
-
-## Assertions
-KaneAI supports a range of assertions to make test validations more seamless and effective. Here are the types of assertions currently supported:
-
-### Driver Assertions
-Driver assertions rely on the web driver to validate browser url, page & window properties and dimensions. 
-
-**Examples:**
-- Assert if the current browser URL is "https://example.com".
-- Validate if the client height and width match the expected values.
-
-### Text Assertions
-Text assertions validate the presence or absence of specific text on the screen.
-
-**Examples:**
-- Assert if the text "Welcome Back!" is visible.
-- Check if the error message "Invalid password" appears on failed login.
-
-### Visual Assertions
-Visual assertions ensure the visibility of images on the screen.
-
-**Examples:**
-- Assert if the company logo is displayed in the header.
-- Verify the visibility of a product image on the product page.
-
-### Relative Assertions
-Relative assertions check the visibility of one element in relation to another.
-
-**Examples:**
-- Assert if the login button is in same column as the username field.
-- Check if the submit button and cancel button are in the same row.
-
-### Mathematical Assertions
-Mathematical assertions verify numerical operations or calculations.
-
-**Examples:**
-- Verify if the sum of 3 and 4 equals 7.
-
-:::note
- By default any assertion used has a failure condition set to fail test immediately if assertion fails. This change has been implemented since July, 20, 2025. Any tests which were authored or edited before this date, would have a failure condition set to warn, but continue by default. Existing tests would keep running as it is until you edit in KaneAI agent, post which the new failure conditions will get set. More details about failure conditions are available [here](https://www.lambdatest.com/support/docs/kaneai-failure-conditions)
+:::tip
+Use `scroll until` for elements not yet visible in the viewport. Works for entire pages and scrollable subsections.  
 :::
 
-## Unsupported Assertions
-There are some assertions that KaneAI does not support at this moment. However the support for these kind of assertions is currently under development.
-Below are examples of unsupported assertions along with examples.
+---
 
-### Element State Assertions (To be available soon)
-These assertions check for state of elements like being disabled or enabled.
+## ✅ Assertions
 
-**Examples:**
-- Assert if the submit button is disabled.
-- Assert if text input field is enabled.
-- Assert if a dropdown is expanded.
+Assertions validate expected outcomes. KaneAI supports several categories:
 
-### Element Property Assertions (To be available soon)
-Property assertions involve checking styles or attributes of an element.
+| Category | Example |
+| :--- | :--- |
+| **Driver Assertions** | Validate **browser state** (URL, dimensions).<ul><li>Assert if current URL is `https://example.com`</li><li>Validate window height and width</li></ul> |
+| **Text Assertions** | Check for **presence/absence of text**.<ul><li>Assert “Welcome Back!” is visible</li><li>Assert error message “Invalid password” is displayed</li></ul> |
+| **Visual Assertions** | Confirm **image or logo visibility**.<ul><li>Assert company logo appears in header</li><li>Assert product image is visible</li></ul> |
+| **Relative Assertions** | Validate **element relationships**.<ul><li>Assert login button is in same column as username</li><li>Assert submit & cancel buttons are in same row</li></ul> |
+| **Mathematical Assertions** | Check **numeric calculations**.<ul><li>Assert `3 + 4 = 7`</li></ul> |
 
-**Examples:**
-- Assert if the font size of a header is "16px".
-- Assert if the padding of a button is "10px".
+:::note
+Since **July 20, 2025**, all assertions fail tests immediately by default.  
+Older tests may still use *warn-and-continue* until edited.  
+More info: [Failure Conditions](https://www.lambdatest.com/support/docs/kaneai-failure-conditions)  
+:::
 
-### Spatial Assertions (To be available soon)
-Spatial assertions validate the position or arrangement of elements.
+---
 
-**Examples:**
-- Assert that the 5th column of a table contains "Jordan.Mathews".
+## 🚧 Unsupported (Coming Soon)
 
-### Logical Assertions (To be available soon)
-Logical assertions are used to combine multiple conditions.
+The following assertion types are not yet available:
 
-**Examples:**
-- Assert if the user is an admin **and** is logged in.
-- Assert if either username or email is filled.
+| Category | Example | Description |
+| :--- | :--- | :--- |
+| **Element State** | Assert if submit button is disabled | Directly acessing the element state is not supported. | 
+| **Element Property** | Assert if font size is 16px | Directly acessing the element properties is not supported. |
+| **Spatial** | Assert the 5th column of the table contains "Jordan.Mathews" | This requires to deep knowledge of DOM to understand the possitions & arrangements of the elements. 
+| **Logical** | Assert user is admin AND logged in | Assertions combining multiple conditions. | 
+| **Action-based** | Assert tooltip appears after hover | Assertion after an action is performed. *These types of instructions can be broken into multiple steps & executed as for now.* |
+| **Nested Assertions** | Assert login button enabled AND welcome message visible | Nested assertions involve multiple layers of validation within a single assertion. |
 
-### Assertions for Actions Being Performed (To be available soon)
-These assertions aim to check the state after an action, which is not supported directly.
+---
 
-**Examples:**
-- Assert if the page is scrolled to the bottom.
-- Assert if a tooltip appears after hovering over an info icon.
-  - Currently, you can break this into two steps: Hover on the info icon, then assert if the tooltip is visible.
-
-### Nested Assertions (To be available soon)
-Nested assertions involve multiple layers of validation within a single assertion.
-
-**Examples:**
-- Assert if both the login button is enabled and the welcome message is visible.
-
-## Query Information
+## 🔍 Query Information
 - `query the current url`
 - `query the time mentioned in the poster`
 
-## Conditional Actions
+---
+
+## 🔄 Conditional Actions
+
 ### Conditional Click
-- `if pop up is present in the viewport then click on it`
+`if pop up is present in the viewport then click on it`
 
 ### Conditional Selection
-- `if price of the product is less than 200 then click on add to cart else select second product`
+`if price < 200 then click add to cart else select second product`
 
-## Best Practices
+***
 
-- Use clear and specific commands to ensure accurate execution.
-- Combine different command types to create comprehensive test scenarios.
-- Utilize conditional statements for more dynamic and robust testing.
-- Always include appropriate wait times to account for page load and element visibility.
-- Use assertions to verify the expected state of the page or elements.
+## Do's and Don'ts
+
+| **Do (Good Example)**                                             | **Don’t (Bad Example)**                                                                |
+| ----------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `Assert text "Submit" on form footer is visible`                  | `Assert that the submit button works and the layout is correct`                        |
+| `Assert textbox contains the exact value 'heading1'`              | `Assert the textbox has heading` (vague, unclear what “heading” refers to)             |
+| `Assert logo is visible`  `Assert 3 search results are shown` | `Assert logo is visible and 3 results are shown` (too many assertions in one)          |
+| Use: `Assert search results appear` after a wait step             | `Wait for search results and then assert they are visible` (assertion contains action) |
+| `Assert the divider looks red`                                    | `Assert divider color is #ff5733` (too detail‑specific, fragile visual check)          |
+| `Assert no text in table overflows its cell`                      | `Assert the page looks well designed` (subjective, unclear)                            |
+
+***
+
+## 🌟 Best Practices
+- Write **clear, specific** commands
+- Combine command types for richer tests
+- Use **conditional logic** for dynamic flows
+- Apply waits thoughtfully for stability
+- Always add assertions to validate outcomes

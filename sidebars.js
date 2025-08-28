@@ -2019,64 +2019,59 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "Import Test Case Data",
-        items: ["csv-import", "one-click-migration-from-testrail"],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Insights",
-        items: ["insights-dashboard"],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Test cases",
+        label: "Test Cases",
         items: [
-          "generate-test-cases-with-ai",
-          "manual-test-case-creation",
           {
             type: "category",
             collapsed: true,
-            label: "Bulk Actions",
+            label: "Import Test Cases",
+            items: [ "csv-import", "one-click-migration-from-testrail" ],
+          },
+          "generate-test-cases-with-ai",
+          // "create-manage-test-cases",
+          "manual-test-case-creation",
+          "test-case-versioning",
+          "create-modules",
+          "copy-and-move-support-for-test-cases",
+          "update-fields",
+          "export-test-cases",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Linking Automated Test Cases",
+            link: {
+              type: "doc",
+              id: "automated-test-cases-with-ai",
+            },
             items: [
-              "copy-and-move-support-for-test-cases",
-              "update-fields",
-              "export-test-cases",
+              "automated-test-cases-linked-using-dashboard",
+              "automated-test-cases-linked-using-capability",
             ],
           },
-          "test-case-repository",
         ],
       },
       {
         type: "category",
         collapsed: true,
-        label: "Modules",
-        items: ["create-modules", "modules-in-manual-testcases"],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Linking Automated Test Cases",
-        link: {
-          type: "doc",
-          id: "automated-test-cases-with-ai",
-        },
+        label: "Test Runs",
         items: [
-          "automated-test-cases-linked-using-dashboard",
-          "automated-test-cases-linked-using-capability",
+          "test-run-creation-and-management", 
+          "test-instance-audit-logs"
         ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Test Run & Instances",
-        items: ["test-run-creation-and-management", "test-instance-audit-logs"],
       },
       {
         type: "doc",
         label: "Milestones",
         id: "milestone-creation-and-management",
+      },
+      {
+        type: "category",
+        collapsed: true,
+        label: "Insights & Reports",
+        items: [
+          "insights-dashboard", 
+          "tms-reports"
+        ],
       },
       {
         type: "category",
