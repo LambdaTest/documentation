@@ -72,7 +72,7 @@ This option allows you to see all test results that were generated within a spec
 You can optionally add **Description** for the Report too but adding **Name** is mandatory to proceed here. 
 
 **Recurring Reports:**
-You can select the `Recurring` option, add **Reciepients** & **Frequency** to automatically get the mail notification with the reports timely. 
+You can select the `Recurring` option, add **Recipients** & **Frequency** to automatically get the mail notification with the reports timely. 
 
 This is how the execution reports will look like:
 
@@ -88,11 +88,11 @@ This is how the execution reports will look like:
 
 Traceability reports provide end-to-end visibility into how your test cases align with business requirements and defects.  
 
-The Traceability reports show the Issues based test-execution report allowing you ti see the Issues coverage in tests:
+The Traceability reports show the Issues based test-execution report allowing you to see the Issues coverage in tests:
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traciability-report.png').default} alt="Reports Overview" className="doc_img"/>
 
-You can filter the Report data with Test, Issues & Runs meta data. using the filters:
+The report data can be filtered using Test, Issue, and Run metadata.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traciablity-filters.png').default} alt="Reports Overview" className="doc_img"/>
 
