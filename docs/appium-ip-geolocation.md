@@ -22,6 +22,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -48,6 +50,7 @@ import TabItem from '@theme/TabItem';
 ></script>
 
 # IP Geolocation 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 Lambdatest's IP Geolocation feature empowers users to test their websites and mobile applications from various geographical locations worldwide. This feature enables users to simulate traffic originating from different countries and regions, allowing for comprehensive testing of platform functionalities across diverse global markets.
 

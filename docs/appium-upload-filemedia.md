@@ -23,6 +23,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -49,6 +51,8 @@ import TabItem from '@theme/TabItem';
 ></script>
 
 # Uploading Files and Media on Real Devices
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 
 LambdaTest's file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to LambdaTest's cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use `uploadMedia` capability while running your test scripts.
 
