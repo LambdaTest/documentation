@@ -25,6 +25,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -49,6 +51,7 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 Camera Image Injection feature allows you to test **image capturing, QR code scanning**, and **barcode scanning** functionalities in your app across **10000+ real devices** on the LambdaTest Real Device Cloud platform.
 
 This tool is ideal for testing features such as:
@@ -69,6 +72,8 @@ LambdaTest utilizes **Sensor Instrumentation** to integrate with various mobile 
 
 :::warning note
 - For iOS apps signed with Enterprise Certificates, app resigning (a prerequisite for using the Image Injection tool) is not available.
+- For virtual devices this feature is available on Android App Automation Testing.
+
 :::
 
 ## Supported Camera APIs
