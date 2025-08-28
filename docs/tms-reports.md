@@ -88,7 +88,7 @@ This is how the execution reports will look like:
 
 Traceability reports provide end-to-end visibility into how your test cases align with business requirements and defects.  
 
-The Traceability reports show the Issues based test-execution report allowing you ti see the Issues coverage in tests:
+The Traceability reports show the Issues based test-execution report allowing you to see the Issues coverage in tests:
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/Reports/traciability-report.png').default} alt="Reports Overview" className="doc_img"/>
 
