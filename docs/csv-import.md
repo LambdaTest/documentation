@@ -2,7 +2,7 @@
 id: csv-import
 title: Import Test Cases from CSV
 hide_title: false
-sidebar_label: CSV Import
+sidebar_label: Import CSV
 description: Simplify your csv import with LambdaTest's Test Manager. Easily upload and manage test cases to enhance testing efficiency and productivity.
 keywords:
   - test case import

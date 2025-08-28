@@ -59,15 +59,23 @@ If the step fails, the test execution continues with the remaining steps, but th
 3. **Warn but continue execution:**
 If the step fails, the test execution continues with the remaining steps and the overall test result remains `unaffected`. This is particularly useful for non-critical validations where failure should not impact the test outcome.
 
-:::note
-By default, the failure condition for each step is set to **Fail test immediately**, ensuring that the execution stops as soon as a step fails.
-:::
-
-:::tip
-If you are transitioning from a Hard & Soft Assertions approach, think of **Fail test immediately** as your **Hard Assertion**, which halts on assertion failure, and **Warn but continue execution** as your **Soft Assertion**, which logs the failure but continues execution.
-:::
-
 You can set the failure condition in the Authoring mode by clicking on the three-dots on the step:
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/failure-conditions/failure_conditions.png').default} alt="failure_conditions" className="doc_img"/>
 
 >This change will not affect your existing test cases or the generated code where you’ve used hard/soft assertions. However, when you edit these tests, the new failure conditions will be applied.
+ 
+## Default Failure Condition Setting
+
+By default, the failure condition for each step is set to **Fail test immediately**, ensuring that the execution stops as soon as a step fails.
+
+The default failure condition can be configured at the Organization level within the **Org Product Preferences** section of **Organization settings**, [here](https://accounts.lambdatest.com/org-settings/kane-ai/failure-conditions).
+
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/failure-conditions/failure-conditions-org-settings.png').default} alt="failure_conditions_default_settings" className="doc_img"/>
+
+:::note
+ These settings will be applied to all the **new tests** being created in that Organization & can only be edited by the **Admins** of the Organization. 
+:::
+
+:::info
+If you are transitioning from a Hard & Soft Assertions approach, think of **Fail test immediately** as your **Hard Assertion**, which halts on assertion failure, and **Warn but continue execution** as your **Soft Assertion**, which logs the failure but continues execution.
+:::
