@@ -3,7 +3,7 @@ id: tms-reports
 title: Reports
 hide_title: true
 sidebar_label: Reports
-description: View & Download the Execution & Traceability reports for Test Isntances execution.
+description: View & Download the Execution & Traceability reports for Test Instances execution.
 keywords:
   - reports
   - execution 
