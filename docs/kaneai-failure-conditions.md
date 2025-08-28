@@ -40,7 +40,6 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-## Failure Conditions
 Failure conditions in KaneAI allow you to define how the test execution in a Test Run should behave when a particular test step fails. These conditions give you fine-grained control over how failures are handled at the step level and how they impact the overall execution result.
 
 Failure conditions are configurable for every type of command or step in KaneAI Authoring mode and are essential for aligning your tests with your quality and failure tolerance.
@@ -69,7 +68,7 @@ You can set the failure condition in the Authoring mode by clicking on the three
 
 By default, the failure condition for each step is set to **Fail test immediately**, ensuring that the execution stops as soon as a step fails.
 
-The default condition can be changed at the Organization level from the **Org Preferences page** in the Org settings section, [here](https://test-manager.lambdatest.com/org-settings/kane-ai/failure-conditions). 
+The default failure condition can be configured at the Organization level within the **Org Product Preferences** section of **Organization settings**, [here](https://accounts.lambdatest.com/org-settings/kane-ai/failure-conditions).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/failure-conditions/failure-conditions-org-settings.png').default} alt="failure_conditions_default_settings" className="doc_img"/>
 
