@@ -113,7 +113,7 @@ From the project root directory, execute the below CLI command in your terminal:
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
-    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config hyperexecute.yaml`}
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config yaml/hyperexecute-linux.yaml`}
   </CodeBlock>
 </div>
 
