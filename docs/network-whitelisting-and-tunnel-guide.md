@@ -45,7 +45,9 @@ import TabItem from '@theme/TabItem';
 ></script>
 When testing private or restricted environments on LambdaTest, your team may need to configure network access controls. Depending on how your applications are hosted and secured, LambdaTest supports multiple approaches **Inbound Whitelisting, Dedicated Proxy, Outbound Whitelisting, STUN/TURN Whitelisting, and Tunnel configurations (including Site-to-Site tunnels)**.
 
-This guide helps you decide which option to use for your infrastructure setup.
+> These are Inbound and Outbound with respect to user's network.
+
+This guide helps you decide which option to use for your infrastructure setup. 
 
 ## 1. When Inbound Whitelisting Has to Be Done (Shared IP)
 Inbound IP whitelisting allows LambdaTest cloud browsers and devices to directly access your IP-restricted web applications without using a tunnel.
