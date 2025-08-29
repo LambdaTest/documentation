@@ -26,6 +26,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -50,6 +52,9 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 In Appium testing, assessing your app's performance under diverse network conditions (2G/3G/LTE) and offline scenarios, is crucial. Fluctuating upload and download speeds can significantly impact your app's behavior across different devices.
 
 LambdaTest simplifies testing by enabling simulation of diverse network conditions. Whether starting with defaults or custom profiles, these features replicate real-world scenarios, proving invaluable for Appium tests. The device maintains uninterrupted internet connectivity throughout, ensuring a reliable testing experience for your mobile applications.

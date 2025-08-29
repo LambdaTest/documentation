@@ -11,6 +11,14 @@ url: https://www.lambdatest.com/support/docs/regular-expression-appium/
 site_name: LambdaTest
 slug: regular-expression-appium/
 ---
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,6 +43,9 @@ slug: regular-expression-appium/
       })
     }}
 ></script>
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 Regular Expressions (RegEx) are powerful tools for searching and manipulating strings. When running tests on LambdaTest with a specific device, there may be times when the exact device you selected isn't available. In such cases, RegEx will help you widen your search criteria to find any available device that matches your requirements.
 
 LambdaTest provides RegEx support for both **deviceName** and **platformVersion**, making it easier to find the right devices for your tests.
