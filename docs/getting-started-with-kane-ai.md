@@ -104,7 +104,7 @@ If you are new to KaneAI, you can learn more about how to use KaneAI by followin
 </nav>
 
 ## How to Instruct KaneAI
-Learn whats the best way to tell KaneAI what it needs to do:
+Learn what is the best way to tell KaneAI what it needs to do:
 
 <nav class="pagination-nav" aria-label="Docs pages">
   <a class="pagination-nav__link" href="/support/docs/kane-ai-command-guide/">
