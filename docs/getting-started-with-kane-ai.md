@@ -1,8 +1,8 @@
 ---
 id: getting-started-with-kane-ai
-title: Getting started with KaneAI
+title: Introduction to KaneAI
 hide_title: false
-sidebar_label: Getting Started 
+sidebar_label: Introduction to KaneAI
 description: World's first GenAI-Native testing assistant that simplifies end-to-end automation testing for web, mobile, and cloud apps, using natural language.
 keywords:
   - ai testing tool
@@ -18,6 +18,10 @@ slug: getting-started-with-kane-ai/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import VideoEmbed from '../src/component/videoEmbed';
+
+<!-- <style>
+  .pagination-nav__label{font-size: 200px}
+</style> -->
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -42,20 +46,85 @@ import VideoEmbed from '../src/component/videoEmbed';
       })
     }}
 ></script>
-KaneAI by LambdaTest is a GenAI-Native Test Agent designed to help teams plan, author, and evolve tests using natural language. Built from the ground up for high-performance quality engineering teams, KaneAI intelligently creates structured and contextual test cases by transforming various input formats such as text, JIRA tickets, PDFs, images, audio, videos, and spreadsheets.
+Testing shouldn’t slow innovation. KaneAI makes test automation as natural as writing a To Do list with no steep learning curves, no endless script maintenance.
 
-Combining deterministic precision with generative flexibility, KaneAI ensures reliable, consistent test execution while adapting intelligently to evolving requirements and discovering test cases that traditional approaches might miss. This dual approach integrates seamlessly with LambdaTest's suite of solutions for test execution, orchestration, and analysis, streamlining both manual and automated testing by saving time, enhancing test coverage, and improving overall quality.
+Which KaneAI you can:
 
-Supporting API, UI, functional, and end-to-end testing, KaneAI streamlines test automation at scale, driving efficiency across modern CI/CD workflows and accelerating the pace of software delivery.
+- **Go from ideas to scripts in seconds** – Turn Jira tickets, PRDs, or plain text into ready-to-run test cases.
 
-- **Planning:** Effortlessly generate structured & detailed test cases from various format files including PRDs or Jira or ADO work items.
-- **Authoring:**  Empower KaneAI to autonomously generate test cases for you, or take full control and write them yourself. In either case, you'll receive automation scripts in a range of open-source frameworks and languages, tailored to your needs.
-- **Execution & Scheduling:** Run tests across a range of LambdaTest clouds such as Real Device Cloud, Browser Testing Cloud, Visual Testing Cloud, all via our test orchestration platform - HyperExecute.
-- **Maintenance:** Resolve test case updates in natural language or by recording test steps manually, simplifying test maintenance.
-- **Reporting:** Leverage detailed test reports for any test run powered by LambdaTest Test Intelligence and Analytics.
+- **Remove coding barrier** – Author tests with natural language, or let KaneAI write automation scripts for you.
 
+- **Scale without friction** – Run tests across browsers, devices, and environments with LambdaTest’s cloud.
 
-<VideoEmbed 
+- **Make testing Adaptive & intelligent** – KaneAI auto-heals tests when your UI changes, so your team keeps moving.
+
+**KaneAI isn’t just a tool it’s how modern teams test smarter and ship faster.**
+
+<!-- <VideoEmbed 
   src="https://www.youtube.com/embed/jYcGcl_MGiw?si=rbFCX1yataN9clRn" 
   title="Integrate Allure Test Insights with HyperExecute"
-/>
+/> -->
+
+***
+
+## Getting Started
+If you are new to KaneAI, you can learn more about how to use KaneAI by following guides:
+
+<nav class="pagination-nav" aria-label="Docs pages">
+  <a class="pagination-nav__link" href="/support/docs/author-your-first-desktop-browser-test/">
+    <div class="pagination-nav__item">
+      <div style={{size: '200px', color: '#2f81f7'}}>
+        Desktop Browser Testing
+      </div>
+      <div class="pagination-nav__sublabel">
+        Author your first Browser test on Desktop device. 
+      </div>
+    </div>
+  </a>
+    <a class="pagination-nav__link" href="/support/docs/author-your-first-mobile-browser-test/">
+    <div class="pagination-nav__item">
+      <div class="pagination-nav__label" style={{color: '#2f81f7'}}>
+        Mobile Browser Testing
+      </div>
+      <div class="pagination-nav__sublabel">
+        Author your first Browser test on Mobile device. 
+      </div>
+    </div>
+  </a>
+  <a class="pagination-nav__link" href="/support/docs/author-your-first-mobile-app-test/">
+    <div class="pagination-nav__item">
+      <div class="pagination-nav__label" style={{color: '#2f81f7'}}>
+        App Testing
+      </div>
+      <div class="pagination-nav__sublabel" >
+        Author your first Mobile App test. 
+      </div>
+    </div>
+  </a>
+</nav>
+
+## How to Instruct KaneAI
+Learn what is the best way to tell KaneAI what it needs to do:
+
+<nav class="pagination-nav" aria-label="Docs pages">
+  <a class="pagination-nav__link" href="/support/docs/kane-ai-command-guide/">
+    <div class="pagination-nav__item">
+      <div class="pagination-nav__label" style={{color: '#2f81f7'}}>
+        Commands Guide
+      </div>
+      <div class="pagination-nav__sublabel">
+        KaneAI works best with specific types of commands. Learn which commands are supported and how to use them effectively.
+      </div>
+    </div>
+  </a>
+  <a class="pagination-nav__link" href="/support/docs/kane-ai-command-guide/#assertions">
+    <div class="pagination-nav__item">
+      <div class="pagination-nav__label" style={{ color: '#2f81f7'}}>
+        Assertions
+      </div>
+      <div class="pagination-nav__sublabel" >
+        Assertion make your test validations more seamless and effective, learn how to use assertions with KaneAI.
+      </div>
+    </div>
+  </a>
+</nav>
