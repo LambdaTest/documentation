@@ -89,7 +89,7 @@ cd smartui-csharp-sample/LambdaTest.Selenium.Driver.Test
 
 ```cs
 <ItemGroup>
-    <PackageReference Include="LambdaTest.Selenium.Driver" Version="1.0.1" />
+    <PackageReference Include="LambdaTest.Selenium.Driver" Version="1.0.4" />
 </ItemGroup>
 ```
 
@@ -191,42 +191,95 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ### **Step 6:** Adding SmartUI function to take screenshot
 
-- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
-  
+- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which you would like to take the screenshot, as shown below:
 
-```java
+```csharp
 using System;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using LambdaTest.Selenium.Driver;
 
-
 namespace LambdaTest.Selenium.TestProject
 {
-    public static class LocalTest
-    {
-        public static async Task Run()
+        public static class LocalTest
         {
-            using IWebDriver driver = new ChromeDriver();
-            try
-            {   
-                Console.WriteLine("Driver started");
-                driver.Navigate().GoToUrl("Required URL");
-                await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name"); //utilize this function to take the dom snapshot of your test
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
-            finally
-            {
-                driver.Quit();
-            }
+                public static async Task Run()
+                {
+                        using IWebDriver driver = new ChromeDriver();
+                        try
+                        {
+                                Console.WriteLine("Driver started");
+                                driver.Navigate().GoToUrl("Required URL");
+                                await SmartUISnapshot.CaptureSnapshot(driver, "Screenshot Name"); //utilize this function to take the dom snapshot of your test
+                        }
+                        catch (Exception ex)
+                        {
+                                Console.WriteLine(ex);
+                        }
+                        finally
+                        {
+                                driver.Quit();
+                        }
+                }
         }
-    }
 }
+```
 
+#### **Additional Functionality: Using `sync` Option in SmartUI C# SDK**
+
+You can enable synchronous snapshot status response by setting the `sync` option to `true` in the options dictionary. This allows you to wait for the snapshot status and receive the result directly in your test script.
+
+:::info
+- The `sync` functionality is supported only in LambdaTest.Selenium.Driver version **1.0.4 and above**.
+:::
+
+**Set the sync value in options:**
+
+     ```csharp
+     var optionsForSync = new Dictionary<string, object>
+     {
+             { "sync", true },
+             { "timeout", 100 } // timeout in seconds (30-900, default 600)
+     };
+
+     Console.WriteLine("Driver started");
+     driver.Navigate().GoToUrl("https://www.lambdatest.com");
+     var result = await SmartUISnapshot.CaptureSnapshot(driver, "NYC", optionsForSync);
+     Console.WriteLine(result);
+     ```
+
+**Notes:**
+- The default value of `sync` is `false` if not specified.
+- The `timeout` option defines how long to wait for the snapshot status response (in seconds). Allowed range: 30-900, default is 600.
+- When `sync` is `true`, the `result` variable will hold the value of the snapshot status response.
+
+
+**Sample response:**
+```json
+{
+    "snapshotName": "Sync-True",
+    "snapshotUUID": "95226130-72b6-4d45-ad6d-4ad8ddsa1",
+    "buildId": "8e0c078d-e85a-41ae-a8d5-4a0dsdf8bbd5",
+    "snapshotStatus": "failed",
+    "startedProcessingAt": "2025-08-26 09:58:21",
+    "finishedProcessingAt": "2025-08-26 10:03:12",
+    "screenshots": [
+        {
+            "captured_image": "<URL>",
+            "baseline_image": "<URL>",
+            "browser_name": "firefox",
+            "viewport": "1028",
+            "mismatch_percentage": 89.58,
+            "status": "Changes found",
+            "captured_image_timestamp": "2025-08-26 10:00:40",
+            "compared_image_timestamp": "2025-08-26 10:00:58",
+            "captured_diff": "<URL>",
+            "baseline_diff": "<URL>",
+        },
+        // ... more screenshots in the same format
+    ]
+}
 ```
 
 ### **Step 7:** Execute the Tests on SmartUI Cloud
