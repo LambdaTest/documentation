@@ -127,11 +127,11 @@ You can generate capabilities for your test requirements with the help of our in
 You can also control Smart Heal dynamically during test execution using runtime hooks. This is useful when you want healing active in specific phases or after major UI changes.
 
 ```java
-// Start Smart Heal
-driver.executeScript("lambda-heal-start");
-
 // Stop Smart Heal
 driver.executeScript("lambda-heal-stop");
+
+// Start Smart Heal
+driver.executeScript("lambda-heal-start");
 
 ```
 
