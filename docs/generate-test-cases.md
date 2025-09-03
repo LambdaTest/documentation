@@ -47,7 +47,7 @@ This feature is designed to save time, improve test coverage, and streamline the
 ## How It Works: Step-by-Step
 
 ### Step 1: Open the AI Test Case Generator
-Go to the Test Case Listing page and click on 'Generate With AI'. An input box will appear where you can provide your requirements.
+Go to the Test Case Listing page and click on `Generate With AI`. An input box will appear where you can provide your requirements.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/generate_with_ai_button.png').default} alt="generate-with-ai" width="1347" height="616"  className="doc_img"/>
 
@@ -86,7 +86,7 @@ We support multiple input formats, including:
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/test_cases_generation_through_recording.png').default} alt="test_cases_generation_through_recording" width="1347" height="616"  className="doc_img"/>
 
 #### Upload Files: 
-- Click the '**+**' icon, then select 'Upload from device'.
+- Click on the **pin** icon 📎, then select `Upload from device`.
 - You can select a maximum of 10 files from your device.
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/upload_from_device_test_cases_generation.png').default} alt="upload_from_device_test_cases_generation" width="1347" height="616"  className="doc_img"/>
@@ -97,7 +97,7 @@ We support multiple input formats, including:
 
 #### Add Issue Links:
 - Integrate your LambdaTest account with Jira/Azure DevOps. Follow the steps described in the following link to integrate Jira/Azure DevOps:
-[LambdaTest Jira Integration](https://www.lambdatest.com/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account)
+[LambdaTest Jira Integration](https://www.lambdatest.com/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) / [LambdaTest Azure DevOps Integration](https://www.lambdatest.com/support/docs/link-ado-issues-with-test-manager/)
 
 - After integration is completed, select `Link Jira Issues` / `Link Azure DevOps Issues`.
 
