@@ -78,7 +78,7 @@ When you enable **network logging** on LambdaTest, traffic passes through a **se
 
 Before enabling network configurations, ensure your app is uploaded to LambdaTest.
 
-1. **Uploading Your App** – Follow the detailed steps in our [Upload Your Application](https://www.lambdatest.com/support/docs/upload-your-application/) guide.
+1. **Uploading Your App** – Follow the detailed steps in our [Upload Your Application](https://www.lambdatest.com/support/docs/upload-apps-on-real-device-cloud/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 
