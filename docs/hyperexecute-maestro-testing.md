@@ -234,6 +234,8 @@ pressKey: Enter
 assertVisible: "Mobile UI testing"
 ```
 
+<img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/3.png').default} alt="Image"  className="doc_img"/>
+
 **Explanation:**
 
 - **launchApp:**  Opens the Wikipedia app.
