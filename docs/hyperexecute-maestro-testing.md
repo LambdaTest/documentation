@@ -80,35 +80,6 @@ You can download the CLI for your desired platform from the below mentioned link
 | MacOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
-### Setup Environment Variable
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
-
-Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
-
-<Tabs className="docs__val">
-<TabItem value="bash" label="Linux / MacOS" default>
-
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-  </CodeBlock>
-</div>
-
-</TabItem>
-
-<TabItem value="powershell" label="Windows" default>
-
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-powershell">
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
-  </CodeBlock>
-</div>
-
-</TabItem>
-</Tabs>
-
 ## Step 3: Upload your Application
 Upload your <b>_android_</b> application (.apk file) or <b>iOS</b> application (.ipa file) to the LambdaTest servers using our <b>REST API</b>. You need to provide your <b>Username</b> and <b>AccessKey</b> in the format `Username:AccessKey` in the <b>cURL</b> command for authentication.
 
@@ -195,14 +166,6 @@ This ensures that each test result is saved with a unique name like test1.xml, t
 ## Step 6: Execute your Test Suite
 > **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
 
-Run the below command in your terminal at the root folder of the project:
-
-```bash
-./hyperexecute --config RELATIVE_PATH_OF_YOUR_YAML_FILE
-```
-
-OR use this command if you have not exported your username and access key in the step 2.
-
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
@@ -215,3 +178,71 @@ OR use this command if you have not exported your username and access key in the
 Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/frameworks/maestro/2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+
+
+## Additional Information: Launching Pre-Installed Apps with Maestro
+In some cases, you may want to test against a pre-installed application on the device (instead of uploading and installing a new APK/IPA). Maestro supports this by allowing you to specify the app’s package identifier (Android) or bundle identifier (iOS) in your test configuration.
+
+### Step 1: Identify the App ID (Package Name / Bundle ID)
+#### For Android:
+  - Visit the app’s page on the Google Play Store.
+  - The id parameter in the URL is the package name.
+  - Example: For the Wikipedia app → `org.wikipedia`.
+
+#### For iOS:
+  - Identify the bundle identifier (e.g., com.apple.Preferences for Settings).
+
+### Step 2: Update Your HyperExecute Configuration
+You can configure your YAML files to launch the pre-installed app instead of uploading a new one.
+
+```yaml title="hyperexecute.yaml"
+...//
+framework:
+  name: raw
+  args:
+    #highlight-next-line
+    appId: stock
+```
+
+and the launcher yaml file to tells maestro to use the pre-installed Wikipedia app.
+
+```yaml reference title="android-launch.yaml"
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android-launch.yaml
+```
+
+### Step 3: Execute your Test Suite
+> **NOTE :** In case of MacOS, if you get a permission denied warning while executing CLI, simply run **`chmod u+x ./hyperexecute`** to allow permission. In case you get a security popup, allow it from your **System Preferences** → **Security & Privacy** → **General tab**.
+
+<div className="lambdatest__codeblock">
+  <CodeBlock className="language-bash">
+    {`./hyperexecute --user ${ YOUR_LAMBDATEST_USERNAME()} --key ${ YOUR_LAMBDATEST_ACCESS_KEY()} --config RELATIVE_PATH_OF_YOUR_YAML_FILE `}
+  </CodeBlock>
+</div>
+
+The Wikipedia app will open directly on the device, and your Maestro test steps will execute against it.
+
+**Example: Wikipedia Search Flow**
+
+```yaml title="android-launch.yaml"
+appId: org.wikipedia
+----
+launchApp
+
+tapOn: "Search Wikipedia"
+inputText: "Maestro framework"
+pressKey: Enter
+assertVisible: "Mobile UI testing"
+```
+
+**Explanation:**
+
+- **launchApp:**  Opens the Wikipedia app.
+- **tapOn:** "Search Wikipedia" → Focuses the search bar.
+- **inputText:** "Maestro framework" → Enters the text.
+- **pressKey:** Enter → Submits the search.
+- **assertVisible:** "Mobile UI testing" → Validates results.
+
+### Best Practices
+- Make sure the app is already installed on the device; otherwise, Maestro cannot launch it.
+- The same approach works for iOS using the bundle identifier.
+- You can also switch between multiple apps in a single flow by providing different appId values in separate steps.
