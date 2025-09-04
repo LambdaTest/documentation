@@ -301,6 +301,21 @@ If you are unable to run the automation script with the above mentioned commands
 
 Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on the [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
+## Supported Commands
+We utilise the Appium Roku Driver to run tests on Roku via Appium, here's a list of all the commands the driver supports from the project's [README](https://github.com/headspinio/appium-roku-driver?tab=readme-ov-file#roku-commands):
+
+|Command|Parameters|Description|
+|-------|----------|-----------|
+|`roku: pressKey`|`key`|Press the remote key whose value matches `key` (must be one of the [supported key values](https://developer.roku.com/en-ca/docs/developer-program/debugging/external-control-api.md#keypress-key-values) from the Roku documentation). As addressed in the documentation, Roku TVs also support additional keys such as `PowerOff` and `PowerOn`. |
+|`roku: deviceInfo`||Get information about the Roku device|
+|`roku: getApps`||Get a list of apps installed on the device. The response will be a list of objects with the following keys: `id`, `type`, `subtype`, `version`, and `name`.|
+|`roku: activeApp`||Get information about the active app, in the same format as `roku: getApps`.|
+|`roku: activateApp`|`appId` (required), `contentId`, `mediaType`|Launch an app with the corresponding `appId`. Optionally include `contentId` and `mediaType` information (with the same properties as described above for the `activateApp` command)|
+|`roku: selectElement`|`elementId` (required) |Moves the focus on an element having locator XPath as `elementId`. If it is unable to focus on the element, the driver will respond with an error.|
+|`roku: playerState`||Get the state of the media player. The data will be returned as a JSON object, corresponding to the information included in the [query/media-player ECP result](https://developer.roku.com/en-ca/docs/developer-program/dev-tools/external-control-api.md#querymedia-player-example)
+|`roku: deepLink`|`contentId`, `mediaType`|As described in the [Roku dev docs](https://developer.roku.com/en-ca/docs/developer-program/discovery/implementing-deep-linking.md#using-ecp-commands-for-testing-deep-linking), you can deep link into content in the running application using a content ID and media type. For this command, `contentId` is required, and `mediaType` defaults to `movie` and must be one of the [valid media types](https://developer.roku.com/en-ca/docs/developer-program/discovery/implementing-deep-linking.md#mediatype-behavior). Note that this command acts on the currently-running app. If you want to test deep-linking into an app that is not launched, use `activateApp` instead.|
+|`roku: ecpInput`|`params`|This command allows calling the `/input` ECP command directly. An arbitrary set of key/value pairs can be sent in as a JSON object. No url-encoding of the values needs to be done. For example, to represent the parameters in the ECP command `POST /input?acceleration.x=0.0&acceleration.y=0.0&acceleration.z=9.8` from the ECP docs, you would construct a `params` of `{"acceleration.x": "0.0", "acceleration.y": "0.0", "acceleration.z": "9.8"}`|
+
 ## Additional Links
 
 ---
