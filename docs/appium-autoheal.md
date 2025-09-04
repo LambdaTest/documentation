@@ -70,7 +70,7 @@ LambdaTest now lets you enable **Smart Heal** for automation testing. This featu
 
 Before enabling Smart Heal, ensure your app is uploaded to LambdaTest.
 
-1. Follow the [Upload Your Application](https://www.lambdatest.com/support/docs/upload-your-application/) guide.
+1. Follow the [Upload Your Application](https://www.lambdatest.com/support/docs/upload-apps-on-real-device-cloud/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 
