@@ -111,6 +111,29 @@ Within each HyperExecute Project, you can set up one or more workflows. These wo
 
 > 📘 Gain a Comprehensive Understanding of how to use connected workflows to create [Test Chains](/support/docs/hyperexecute-test-chains/).
 
+**Workflow Variables(Optional) -** Workflow Variables allow you to customize a workflow’s behavior without modifying the underlying YAML configuration. This makes it easy to reuse the same workflow across multiple environments or scenarios by simply providing different values at runtime.
+
+#### Key Capabilities:
+- **Define variables at workflow level:** You can add variables when creating or editing a workflow. Each variable requires a key, while the value is optional.
+- **Multiple values per variable:** A key can hold multiple values. The first value is marked as the default, and all values are stored as comma-separated options.
+- **Runtime overrides:** When you run a workflow, a pop-up displays the workflow’s default variables. You can edit them or provide values for empty variables before execution. These runtime changes apply only to the current run and do not overwrite saved defaults.
+- **Case sensitivity:** Variable keys are case-sensitive.
+- **Priority:** Runtime values override workflow-level defaults during execution.
+
+#### Example Use Cases:
+- Set `ENVIRONMENT=staging` or `ENVIRONMENT=production` without maintaining separate YAML files.
+- Define `BROWSER=chrome,firefox,safari` at the workflow level, then select or override a browser at runtime.
+- Leave `API_KEY` empty by default and provide it securely at runtime.
+
+#### Limits:
+- Up to **100 variables per workflow**.
+- Each variable supports up to **25 values**.
+- Maximum size per workflow’s variable set: **512 KB**.
+- Each value can be up to **500 characters** (excluding commas/spaces).
+
+**Access Control:** Permissions for editing workflow variables follow the same role-based access model as secrets.
+
+
 Click on the **Finish** button and your job will be triggered on the defined day and time.
 
 <div className="storylane-iframe">
@@ -153,23 +176,3 @@ In addition to custom projects, HyperExecute supports integration with specializ
   </div>
   </a>
 </div>
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-        Hyperexecute Projects
-      </span>
-    </li>
-  </ul>
-</nav>
