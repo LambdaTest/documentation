@@ -1,5 +1,5 @@
 ---
-id: appium-visual-regression
+id: smartui-appium-hooks
 title: Getting Started With Visual Regression Testing Using Appium On SmartUI Real Devices (NodeJS)
 sidebar_label: Appium Hooks
 description: Explore our Appium Visual Regression support documentation for step-by-step guidance! Conduct visual testing, manage apps, and ensure your mobile apps are flawless before launch.
@@ -15,9 +15,9 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/appium-visual-regression/
+url: https://www.lambdatest.com/support/docs/smartui-appium-hooks/
 site_name: LambdaTest
-slug: appium-visual-regression/
+slug: smartui-appium-hooks
 ---
 
 import Tabs from '@theme/Tabs';

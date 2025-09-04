@@ -3211,8 +3211,8 @@ module.exports = {
                 collapsed: true,
                 label: "Visually Test Your Native Apps",
                 items: [
-                  "appium-visual-regression",
-                  "smartui-app-sdk",
+                  "smartui-appium-hooks",
+                  "smartui-appium-java-sdk",
                   "espresso-visual-regression",
                   "xcui-visual-regression",
                 ],
