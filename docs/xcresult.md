@@ -148,7 +148,8 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 Result bundles are generated at the Build level. To download the `.xcresult` bundle for a specific session, use the following GET endpoint:
 
 :::note
-In case of sharding, each shard execution is treated as a separate shards and generates its own `.xcresult` bundle. You will need to retrieve each shard's bundle individually. For more information, see [Sharding in HyperExecute](https://www.lambdatest.com/support/docs/sharding-rd-hyperexec/).
+- In case of sharding, each shard execution is treated as a separate shards and generates its own `.xcresult` bundle. You will need to retrieve each shard's bundle individually. For more information, see [Sharding in HyperExecute](https://www.lambdatest.com/support/docs/sharding-rd-hyperexec/).
+- To view the `.xcresult` for a specific shard, you must pass the `shard:shardId` as a query parameter in your request.
 :::
 
 ```
