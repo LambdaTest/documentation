@@ -1,5 +1,5 @@
 ---
-id: smartui-app-sdk
+id: smartui-appium-java-sdk
 title: SmartUI App SDK Integration Guide
 sidebar_label: Appium Java SDK
 description: Learn how to integrate SmartUI App SDK with your existing mobile app testing framework to perform visual regression testing on any cloud provider.
@@ -17,8 +17,8 @@ keywords:
   - Mobile App Testing
   - App Visual Testing
 
-url: https://www.lambdatest.com/support/docs/smartui-app-sdk/
-slug: smartui-app-sdk/
+url: https://www.lambdatest.com/support/docs/smartui-appium-java-sdk
+slug: smartui-appium-java-sdk
 ---
 
 import Tabs from '@theme/Tabs';
