@@ -3031,6 +3031,11 @@ module.exports = {
         label: "Xml Report",
         id: "xcui-xml-report",
       },
+      {
+        type: "doc",
+        label: "XCResult",
+        id: "xcresult",
+      },
     ],
   ],
 
