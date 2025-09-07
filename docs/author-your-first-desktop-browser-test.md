@@ -47,13 +47,13 @@ In this guide, we'll walk you through how you can author your desktop browser te
 
 ## Steps to Author Your Desktop Browser Test
 
-**Step 1:** From the KaneAI dashboard, click on **Author Web Test**.
+**Step 1:** From the KaneAI dashboard, click on **Author Browser Test**.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kaneai-desktop-browser-select-min.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/author-desktop-one.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 **Step 2:** A modal would appear from the side. Select **Desktop** from the sidebar. 
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kaneai-desktop-tab-min.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/author-desktop-two.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 
 
@@ -62,9 +62,9 @@ In this guide, we'll walk you through how you can author your desktop browser te
 - **Chrome Options:** Command-line switches that alter the default behavior of the Chrome browser. 
 - **Custom Headers:**  Kееp crucial information about thе rеquеst or rеsponsе, such as thе mеthod, URL, and body contеnt.
 
-Once done, click **Start Testing.**
+Once done, click **Author Test.**
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kaneai-desktop-start-testing.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/author-desktop-select.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
 **Step 4:** Now tell KaneAI what you want to author using natural language without the need for coding or scripting knowledge required. KaneAI translates your instructions into executable test steps automatically. 
 
@@ -80,9 +80,9 @@ As you add each instruction, KaneAI queues them in real-time without waiting for
 
 <img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kaneai-desktop-save.png').default} alt="Image" width="1347" height="616"  className="doc_img"/>
 
-**Step 7:** To execute your test, click on the **Run on HyperExecute** button and you will be redirected to the HyperExecute dashboard where your tests will be executed.
+**Step 7:** To execute your test, click on the **Execute test case** button and you will be redirected to the HyperExecute dashboard where your tests will be executed.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/kaneai-desktop-hye.png').default}  alt="Image" width="1347" height="616"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/kaneai-author-browser-tests/test-summary-desktop.png').default}  alt="Image" width="1347" height="616"  className="doc_img"/>
 
 
 
