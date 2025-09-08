@@ -7,7 +7,7 @@ description: This documentation will help you to understand how to create a sche
 keywords:
 - users management lambdatest
 - manage user
-url: https://www.lambdatest.com/support/docs/kaneai-test-manager-access-management/
+url: https://www.lambdatest.com/support/docs/kaneai-scheduled-test-runs/
 site_name: LambdaTest
 slug: kaneai-scheduled-test-runs/
 ---
@@ -39,7 +39,7 @@ In this documentation, you will learn how to create a scheduled test run using p
 
 **Step 1:** Navigate to **Test Manager** >> select your desired project >> **Test Runs** section.
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/schedule-tests/1.png').default} alt="testing"  className="doc_img" />
+<img loading="lazy" src={require('../assets/images/kane-ai/features/schedule-tests/test-run-one.png').default} alt="testing"  className="doc_img" />
 
 **Step 2:** Here, you will see the details of your existing test runs. To create a schedule, click on the three dots next to a test run and select **Create Schedule**. Alternatively, you can go to the **Scheduled runs** section to view all existing schedules. If you don't have any existing schedule, click on **Create a Scheduled Run** button to create a scheduled run.
 
