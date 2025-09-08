@@ -52,35 +52,35 @@ The LambdaTest SmartUI SDK supports multiple programming languages for running A
   <div className="lt_col lt_framework_wrapper"> 
     <img loading="lazy" src={require('../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon no-zoom"/>
     <ul className="lt_framework_list">
-      <li><a href="/support/docs/smartui-selenium-java-sdk/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}} >Java</a></li>
+      <li><a href="/support/docs/smartui-appium-java-sdk/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}} >Java</a></li>
     </ul>
   </div>
   
   <div className="lt_col lt_framework_wrapper">
     <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="Javascript" width="181" height="200" className="language-icon no-zoom"/>
     <ul className="lt_framework_list">
-      <li><a href="/support/docs/smartui-selenium-js-sdk/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>JavaScript</a></li>
+      <li><a href="/support/docs/smartui-appium-hooks/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>JavaScript</a></li>
     </ul>
   </div>
 
   <div className="lt_col lt_framework_wrapper">
     <img loading="lazy" src={require('../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon no-zoom"/>
     <ul className="lt_framework_list">
-      <li><a href="/support/docs/smartui-selenium-python-sdk/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>Python</a></li>
+      <li><a href="/support/docs/smartui-appium-hooks/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>Python</a></li>
     </ul>
   </div>
 
   <div className="lt_col lt_framework_wrapper">
      <img loading="lazy" src={require('../assets/images/getting-started/ruby-icon.webp').default} alt="Ruby" width="200" height="200" className="language-icon no-zoom"/>
       <ul className="lt_framework_list">
-        <li><a href="/support/docs/smartui-selenium-ruby-sdk/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>Ruby</a></li>
+        <li><a href="/support/docs/smartui-appium-hooks/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>Ruby</a></li>
     </ul>
   </div>
   
   <div className="lt_col lt_framework_wrapper">
     <img loading="lazy" src={require('../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon no-zoom"/>
     <ul className="lt_framework_list">
-      <li><a href="/support/docs/smartui-selenium-csharp-sdk/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>C#</a></li>
+      <li><a href="/support/docs/smartui-appium-hooks/" target="_blank" style={{color: '#0a69da', textDecoration: 'underline'}}>C#</a></li>
     </ul>
   </div>
 </div>
