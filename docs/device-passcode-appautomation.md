@@ -52,7 +52,7 @@ import TabItem from '@theme/TabItem';
 
 For certain use cases, you may need to perform tests on devices that are **passcode-protected**. Apps handling sensitive data (for example, **banking apps**, **enterprise apps**, or apps distributed through **MDM**) often enforce device passcodes for enhanced security.  
 
-LambdaTest’s **Device Passcode in Automation** enables you to run such automated tests seamlessly on real iOS devices.
+LambdaTest’s **Device Passcode in Automation** enables you to run such automated tests seamlessly on real devices.
 
 ---
 
@@ -66,28 +66,39 @@ LambdaTest’s **Device Passcode in Automation** enables you to run such automat
 
 ## Supported Devices
 
-Currently, the Device Passcode feature in **App Automation** is enabled on the following iOS real devices:  
+### iOS Devices
 
 | Device Model          | iOS Version |
 |-----------------------|-------------|
-| iPhone 16            | 18        |
-| iPhone 16 Pro        | 18        |
-| iPad Air 11 (2024)   | 18        |
-| iPhone 15            | 17        |
-| iPhone 14            | 16        |
-| iPhone 13            | 15        |
+| iPhone 16            | 18 |
+| iPhone 16 Pro        | 18 |
+| iPhone 15            | 17 |
+| iPhone 14            | 16 |
+| iPhone 13            | 15 |
+| iPad Air 11 (2024)   | 18 |
 
-> We are actively working on expanding coverage to **all supported iOS devices** on LambdaTest Real Device Cloud.  
+> We are actively working on expanding coverage to all supported iOS devices on LambdaTest Real Device Cloud.
+
 ---
+
+### Android Devices
+Available on **all real devices** running on **version 11 and above**.
+
+## Default Passcode
+- **iOS:**  `123456`  
+- **Android:**  `1234`  
+
 
 ## Capability to Enable Passcode
 
-Use the `enablePasscode` capability to enable passcode-protected devices for automation testing.  
+Use the `enablePasscode` capability to configure passcode-protected devices during automation testing.  
 
-| Capability      | Type    | Default | Description |
-|-----------------|---------|---------|-------------|
-| **enablePasscode** | Boolean | `false` | Enable passcode devices for running tests. Use `true` to start the session with a system passcode configured (default passcode: `123456`). |
+| Capability        | Type    | Default | Description |
+|-------------------|---------|---------|-------------|
+| **enablePasscode** | Boolean | `false` | Enable passcode devices for running tests. Use `true` to start the session with a system passcode configured. |
 
+<Tabs>
+  <TabItem value="ios" label="iOS">
 
 
 ```python
@@ -100,15 +111,28 @@ Use the `enablePasscode` capability to enable passcode-protected devices for aut
     "enablePasscode": True
 }
 ```
-## Unlock Device with Default Passcode
 
-For iOS devices, the default passcode is **123456**.  
-In your test script, write automation code that taps and sets the passcode accordingly.
+  </TabItem>
+  <TabItem value="android" label="Android">
+
+
+
+```python
+{
+    "platformName": "android",
+    "deviceName": "Samsung Galaxy S25",
+    "platformVersion": "15",
+    "isRealMobile": True,
+    #highlight-next-line
+    "enablePasscode": True
+}
+```
+
+  </TabItem>
+</Tabs>
 
 :::note
 - Passcode entry screens are **not visible** in the stream for security reasons — you may see a blank screen briefly during automation.  
-- The default passcode for iOS real devices is **123456**.  
 - Enabling passcode may increase the setup time of your test by **25–30 seconds** compared to regular sessions.  
-- Passcode support is currently available for **iOS real devices** only. Support for **Android devices** is **Coming Soon**.  
 :::
 
