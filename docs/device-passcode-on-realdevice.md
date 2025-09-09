@@ -1,6 +1,6 @@
 ---
 id: device-passcode-on-realdevice
-title: Device Passcode on Real iOS Devices
+title: Device Passcode on Real Devices
 sidebar_label: Device Passcode
 description: Enable and test iOS app flows that require a device passcode during manual sessions on real iPhones and iPads.
 keywords:
@@ -63,42 +63,48 @@ This is especially useful for apps in **Banking/Finance**, **Enterprise**, or th
 
 ## Supported Devices
 
-Currently, the Device Passcode feature in **App Automation** is enabled on the following iOS real devices:  
+### iOS Devices
 
 | Device Model          | iOS Version |
 |-----------------------|-------------|
-| iPhone 16            | 18        |
-| iPhone 16 Pro        | 18        |
-| iPad Air 11 (2024)   | 18        |
-| iPhone 15            | 17        |
-| iPhone 14            | 16        |
-| iPhone 13            | 15        |
+| iPhone 16            | 18 |
+| iPhone 16 Pro        | 18 |
+| iPhone 15            | 17 |
+| iPhone 14            | 16 |
+| iPhone 13            | 15 |
+| iPad Air 11 (2024)   | 18 |
 
-> We are actively working on expanding coverage to **all supported iOS devices** on LambdaTest Real Device Cloud.  
-> Support for Android devices with passcode testing is **Coming Soon**.
+> We are actively working on expanding coverage to all supported iOS devices on LambdaTest Real Device Cloud.
+
+---
+
+### Android Devices
+Available on **all real devices** running on **version 11 and above**.
+
 
 ## Default Passcode
-
-- The default passcode for LambdaTest iOS real devices is **123456**.  
-- Use your system keyboard to input this passcode when prompted during testing.
+- **iOS:**  `123456`  
+- **Android:**  `1234`   
 
 ## Accessing Device Passcode in Manual Testing
 
-**Step 1:** On the App Testing Dashboard, click on **Advanced Settings** and enable the **Device Passcode** filter. This will refine the device list to show only those devices where the passcode feature is available.  
+**Step 1:** (**iOS only**) On the App Testing Dashboard, click **Advanced Settings** and enable the **Device Passcode** filter. This will refine the iOS device list to show only those with passcode support.   
 
 ![Passcode Entry](../assets/images/real-device-app-testing/passcodetoggle.png)  
 
-**Step 2:** Start a manual testing session on a real iOS device.
-
-**Step 3:** From the session toolbar, open the **iOS Settings** panel and toggle **Passcode** on. Once enabled, the device will take **20–25 seconds** to complete the passcode setup. Please wait for confirmation.
-
-![Enable Device Passcode](../assets/images/real-device-app-testing/passcodeenabled.png) 
+**Step 2:** Start a manual testing session on your selected device (iOS or Android).  
+- On **iOS** → Open the **iOS Settings** panel and toggle **Passcode** on.  
+  ![Enable Device Passcode](../assets/images/real-device-app-testing/passcodeenabled.png) 
+- On **Android** → Open the **Device Controls** panel and toggle **Passcode** on.  
+  ![Enable Device Passcode](../assets/images/real-device-app-testing/Android-Passcode.png) 
+Setup may take **15–30 seconds** depending on the platform.
 
 **Step 4:** Trigger the workflow inside your app that requires the device passcode.  
-
 - A system passcode screen will appear.  
 - Since passcode entry is sensitive, the keypad or the screen may not be streamed and could appear as black in your session view.  
-- Use your **system keyboard** to type the passcode (**123456**) and press **Enter**.  
+- Use your system keyboard to enter the default passcode:  
+  - iOS: `123456`  
+  - Android: `1234`   
 
 **Step 5:** Continue your app testing once the **passcode** is validated.
 
