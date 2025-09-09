@@ -1,6 +1,6 @@
 ---
 id: device-passcode-appautomation
-title: Device Passcode in App Automation on Real iOS Devices
+title: Device Passcode in App Automation on Real Devices
 sidebar_label: Device Passcode
 description: Run automated tests on iOS apps that require a device passcode during execution on real devices.
 keywords:
@@ -133,6 +133,6 @@ Use the `enablePasscode` capability to configure passcode-protected devices duri
 
 :::note
 - Passcode entry screens are **not visible** in the stream for security reasons — you may see a blank screen briefly during automation.  
-- Enabling passcode may increase the setup time of your test by **25–30 seconds** compared to regular sessions.  
+- Enabling passcode for iOS Devices may increase the setup time of your test by **25–30 seconds** compared to regular sessions.  
 :::
 
