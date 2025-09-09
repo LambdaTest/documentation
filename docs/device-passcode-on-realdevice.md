@@ -1,6 +1,6 @@
 ---
 id: device-passcode-on-realdevice
-title: Device Passcode on Real iOS Devices
+title: Device Passcode on Real Devices
 sidebar_label: Device Passcode
 description: Enable and test iOS app flows that require a device passcode during manual sessions on real iPhones and iPads.
 keywords:
