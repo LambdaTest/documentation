@@ -312,11 +312,9 @@ app_ios_desired_caps = {
 }
 ```
 
-:::note
 
+:::tip
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
-
 :::
 
 </TabItem>
@@ -340,11 +338,9 @@ app_android_desired_caps = {
 }
 ```
 
-:::note
 
+:::tip
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
-
 :::
 
 </TabItem>

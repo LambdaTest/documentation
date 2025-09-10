@@ -348,11 +348,9 @@ public class iOSApp {
 }
 ```
 
-:::note
 
+:::tip
 - You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
-
 :::
 
 </TabItem>
@@ -409,6 +407,9 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 </TabItem>
 </Tabs>
 
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
 :::info
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.

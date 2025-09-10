@@ -24,6 +24,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -343,6 +345,9 @@ namespace NUnitSelenium
 }
 
 ```
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
 
 ### Step 5: Configure the Test Capabilities
 
@@ -362,6 +367,10 @@ capabilities.AddAdditionalCapability("build", "Csharp NUnit");
 capabilities.AddAdditionalCapability("name", "NUnit Test");
 capabilities.AddAdditionalCapability("isRealMobile", true);
 ```
+
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
 
 :::info
 
