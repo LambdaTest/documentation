@@ -15,7 +15,7 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-appium-hooks/
+url: https://www.lambdatest.com/support/docs/smartui-appium-hooks/  
 site_name: LambdaTest
 slug: smartui-appium-hooks
 ---
@@ -255,6 +255,129 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt="Profile" width="1360" height="603" className="doc_img"/>
 
+## Region-Based Ignore/Select for Dynamic Content (Advanced)
+
+To handle dynamic content like timestamps, user names, ads, or banners that cause false positives in visual comparisons, SmartUI supports region-based ignore and select functionality using **XPath locators**.
+
+You can either:
+- **Ignore specific regions** during comparison using `ignoreBoxes`
+- **Compare only specific regions** using `selectBoxes`
+
+This is especially useful for enterprise applications where certain UI elements change dynamically between test runs.
+
+### Usage in Node.js (Primary Example)
+
+```javascript title="Example: Ignoring Dynamic Elements in Node.js"
+let config = {
+  screenshotName: 'Home Screen',
+  ignoreBoxes: JSON.stringify({
+    xpath: [
+      "//*[@text='Backpack']",
+      "//*[@text='Onesie']",
+      "//*[@text='PRODUCTS']",
+      "//*[@text='Terms of Service | Privacy Policy']"
+    ]
+  })
+};
+
+await driver.execute("smartui.takeScreenshot", config);
+```
+
+```javascript title="Example: Selecting Only Critical Regions in Node.js"
+let config = {
+  screenshotName: 'Checkout Form',
+  selectBoxes: JSON.stringify({
+    xpath: [
+      "//*[@resource-id='checkout-form']",
+      "//*[@resource-id='total-amount']"
+    ]
+  })
+};
+
+await driver.execute("smartui.takeScreenshot", config);
+```
+
+### Cross-Framework Examples
+
+<Tabs className="docs__val" groupId="language">
+<TabItem value="nodejs" label="NodeJS" default>
+
+```javascript
+let config = {
+  screenshotName: '<Your Screenshot Name>',
+  ignoreBoxes: JSON.stringify({
+    xpath: ["//*[@text='Dynamic Ad']", "//*[@id='timestamp']"]
+  })
+};
+await driver.execute("smartui.takeScreenshot", config);
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+
+```python
+config = {
+  'screenshotName': '<Your Screenshot Name>',
+  'ignoreBoxes': '{"xpath": ["//*[@text=\'Dynamic Ad\']", "//*[@id=\'timestamp\']"]}'
+}
+driver.execute("smartui.takeScreenshot", config)
+```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+
+```java
+Map<String, Object> config = new HashMap<>();
+config.put("screenshotName", "<Your Screenshot Name>");
+config.put("ignoreBoxes", "{\"xpath\": [\"//*[@text='Dynamic Ad']\", \"//*[@id='timestamp']\"]}");
+
+((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", config);
+```
+
+</TabItem>
+
+<TabItem value="csharp" label="C#">
+
+```csharp
+var config = new Dictionary<string, object> {
+  {"screenshotName", "<Your Screenshot Name>"},
+  {"ignoreBoxes", "{\"xpath\": [\"//*[@text='Dynamic Ad']\", \"//*[@id='timestamp']\"]}"}
+};
+driver.ExecuteScript("smartui.takeScreenshot", config);
+```
+
+</TabItem>
+
+<TabItem value="ruby" label="Ruby">
+
+```ruby
+config = {
+  'screenshotName' => '<Your Screenshot Name>',
+  'ignoreBoxes' => '{"xpath": ["//*[@text=\'Dynamic Ad\']", "//*[@id=\'timestamp\']"]}'
+}
+driver.execute_script("smartui.takeScreenshot", config)
+```
+
+</TabItem>
+</Tabs>
+
+### Configuration Keys
+
+| Key | Type | Description | Required |
+|-----|------|-------------|----------|
+| `ignoreBoxes` | JSON String | Defines regions to ignore during visual comparison. Accepts XPath locators. | No |
+| `selectBoxes` | JSON String | Defines regions to include in visual comparison. Accepts XPath locators. | No |
+
+:::note Best Practices
+- Use `ignoreBoxes` for elements that change frequently (e.g., ads, timestamps, user avatars).
+- Use `selectBoxes` when you want to focus comparison only on critical UI sections.
+- Avoid using both `ignoreBoxes` and `selectBoxes` in the same config — they are mutually exclusive.
+- Ensure XPath expressions are unique and stable across test runs.
+- Test your XPath locators using Appium Inspector or similar tools before integrating.
+:::
+
 ## Running Tests on Other Languages and Frameworks
 
 ---
@@ -285,7 +408,7 @@ driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 </TabItem>
 <TabItem value="ruby" label="Ruby" default>
 
-```python
+```ruby
 driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
@@ -300,7 +423,7 @@ driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 <TabItem value="java" label="Java" default>
 
 ```java
-((JavascriptExecutor)driver).execute("smartui.takeScreenshot=<Your Screenshot Name>");
+((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
 </TabItem>
@@ -367,7 +490,7 @@ Map<String, Object> config = new HashMap<>();
 config.put("screenshotName", "<Your Screenshot Name>");
 config.put("fullPage", true);
 config.put("pageCount", 15); // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
-((JavascriptExecutor)driver).execute("smartui.takeScreenshot", config);
+((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
 ```
 
 </TabItem>
@@ -377,7 +500,7 @@ config.put("pageCount", 15); // Enter the number of pages for the Full Page scre
 Please note that this webhook is only applicable to <b>native app screenshots</b> and has known limitations. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.
 :::
 
-For additional information about appium framework please explore the documentation [here](https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/)
+For additional information about appium framework please explore the documentation [here](https://www.lambdatest.com/support/docs/appium-nodejs/)
 
 
 <nav aria-label="breadcrumbs">
