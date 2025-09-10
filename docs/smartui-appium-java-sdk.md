@@ -17,7 +17,7 @@ keywords:
   - Mobile App Testing
   - App Visual Testing
 
-url: https://www.lambdatest.com/support/docs/smartui-appium-java-sdk
+url: https://www.lambdatest.com/support/docs/smartui-appium-java-sdk  
 slug: smartui-appium-java-sdk
 ---
 
@@ -212,6 +212,79 @@ ssConfig.put("platform", "iOS/Android"); // Use the actual platform
 
 :::note
 The device name and platform you specify here are used only for screenshot organization and comparison. The actual device selection is handled by your cloud provider's capabilities configuration.
+:::
+
+## Region-Based Ignore/Select Functionality for Dynamic Content
+
+To handle dynamic content like timestamps, usernames, or ads that cause false positives in visual comparisons, SmartUI App SDK supports region-based ignore and select functionality using XPath locators.
+
+You can either:
+- **Ignore specific regions** during comparison using `ignoreBoxes`
+- **Compare only specific regions** using `selectBoxes`
+
+This feature requires the `Gson` library for JSON serialization. Add it to your `pom.xml` if not already present:
+
+```xml
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.10.1</version>
+</dependency>
+```
+
+### Usage Examples
+
+#### 1. Ignoring Regions (Recommended for Dynamic Content)
+
+```java
+SmartUIAppSnapshot smartUI = new SmartUIAppSnapshot();
+
+Map<String, String> config = new HashMap<>();
+config.put("projectToken", "your-project-token-here");
+config.put("deviceName", "Pixel 6");
+config.put("fullPage", "true");
+
+// Define XPaths of elements to ignore
+List<String> ignoreXpath = Arrays.asList(
+    "//*[@text=\"Backpack\"]",
+    "//*[@text=\"Onesie\"]",
+    "//*[@text=\"PRODUCTS\"]",
+    "//*[@text=\"Terms of Service | Privacy Policy\"]"
+);
+
+Map<String, Object> ignoreBoxesMap = new HashMap<>();
+ignoreBoxesMap.put("xpath", ignoreXpath);
+
+Gson gson = new Gson();
+config.put("ignoreBoxes", gson.toJson(ignoreBoxesMap));
+
+smartUI.start(config);
+smartUI.smartuiAppSnapshot(driver, "SmartUIAndroid", config);
+smartUI.stop();
+```
+
+#### 2. Selecting Specific Regions for Comparison
+
+```java
+// Replace "ignoreBoxes" with "selectBoxes" to compare only specified regions
+Map<String, Object> selectBoxesMap = new HashMap<>();
+selectBoxesMap.put("xpath", Arrays.asList("//*[@resource-id='primary-content']"));
+
+config.put("selectBoxes", gson.toJson(selectBoxesMap));
+```
+
+### Configuration Keys
+
+| Key | Type | Description | Required |
+|-----|------|-------------|----------|
+| `ignoreBoxes` | JSON String | Defines regions to ignore during visual comparison. Accepts XPath locators. | No |
+| `selectBoxes` | JSON String | Defines regions to include in visual comparison. Accepts XPath locators. | No |
+
+:::note Best Practices
+- Use `ignoreBoxes` for elements that change frequently (e.g., ads, timestamps, user avatars).
+- Use `selectBoxes` when you want to focus comparison only on critical UI sections.
+- Avoid using both `ignoreBoxes` and `selectBoxes` in the same config — they are mutually exclusive.
+- Ensure XPath expressions are unique and stable across test runs.
 :::
 
 ## View SmartUI Results
