@@ -16,11 +16,15 @@ site_name: LambdaTest
 slug: appium-java-cucumber/
 ---
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
+import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -45,6 +49,8 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
+
+
 
 
 In this documentation, you will learn how to trigger a automation script of **Cucumber** for application testing with **Appium** on LambdaTest, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of LambdaTest.
@@ -204,6 +210,10 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 }
 ```
 
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
+
 ### Step 5: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
@@ -263,6 +273,10 @@ The capabilities object in the sample code are defined as:
 
 </TabItem>
 </Tabs>
+
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
 
 :::info
 

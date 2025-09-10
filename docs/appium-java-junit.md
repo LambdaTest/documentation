@@ -17,11 +17,15 @@ site_name: LambdaTest
 slug: appium-java-junit/
 ---
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
+import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -226,6 +230,11 @@ public class android {
 }
 ```
 
+
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
+
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
@@ -329,6 +338,11 @@ public class ios {
 }
 ```
 
+
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
+
 </TabItem>
 
 </Tabs>
@@ -380,6 +394,11 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 
 </TabItem>
 </Tabs>
+
+
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
 
 :::info
 - You must add the generated **APP_URL** to the `app` capability in the config file.
