@@ -25,6 +25,11 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -187,10 +192,13 @@ caps['deviceName'] = 'Galaxy S21 Ultra 5G'
 #highlight-next-line
 caps['app'] = 'APP_URL'   #add app url here
 }
+
+
 ```
 
 :::info
 - You must add the generated **APP_URL** to the `app` capability in the config file.
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
 :::
 
