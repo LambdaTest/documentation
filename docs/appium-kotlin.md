@@ -17,10 +17,13 @@ slug: appium-kotlin/
 ---
 
 import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -211,7 +214,6 @@ class android {
     }
 }
 ```
-
 </TabItem>
 
 <TabItem value="ios" label="iOS" default>
@@ -293,6 +295,14 @@ class iOS {
     }
 }
 ```
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
+
+
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
 </TabItem>
 </Tabs>
 
@@ -346,6 +356,9 @@ caps.setCapability("device log", true)
 
 </TabItem>
 </Tabs>
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
 
 :::info
 

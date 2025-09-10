@@ -18,11 +18,15 @@ site_name: LambdaTest
 slug: appium-python-behave/
 ---
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
+import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -308,6 +312,11 @@ app_ios_desired_caps = {
 }
 ```
 
+
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
+
 </TabItem>
 <TabItem value="android-config" label="Android" default>
 
@@ -329,6 +338,11 @@ app_android_desired_caps = {
 }
 ```
 
+
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
+
 </TabItem>
 
 </Tabs>
@@ -336,6 +350,7 @@ app_android_desired_caps = {
 :::info
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
 
 :::

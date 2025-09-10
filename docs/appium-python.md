@@ -17,11 +17,15 @@ site_name: LambdaTest
 slug: appium-python/
 ---
 
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
+import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -302,8 +306,13 @@ startingTest()
 ```
 
 </TabItem>
+
+
 </Tabs>
 
+:::tip
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
+:::
 ### Step 5: Configure the Test Capabilities
 
 You can update your custom capabilities in test scripts. In this sample project, we are passing platform name, platform version, device name and app url _(generated earlier)_ along with other capabilities like build name and test name via capabilities object.
@@ -356,6 +365,7 @@ desired_caps = {
 :::info
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
+- You must set **isRealMobile** capability to `False` in the config file to run on **Virtual Devices**
 - You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/).For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
 
 :::
