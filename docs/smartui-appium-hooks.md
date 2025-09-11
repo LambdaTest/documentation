@@ -44,7 +44,7 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI-Hooks",
-          "item": "https://www.lambdatest.com/support/docs/appium-visual-regression/"
+          "item": "https://www.lambdatest.com/support/docs/smartui-appium-hooks/"
         }]
       })
     }}
