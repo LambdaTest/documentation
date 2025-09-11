@@ -58,10 +58,13 @@
 .bugFixTagColor{color: #ffffff; background-color: var(--bugFix-tag-color); font-weight:bold; margin: -2px 3px; font-size: 12px; padding: 5px 10px; border-radius: 20px; border:1px solid var(--bugFix-tag-color)}
 .newReleaseColor{color: #ffffff; background-color: var(--newReleaseColor-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--newReleaseColor-tag-color)}
 .featureColor{color: #ffffff; background-color: var(--featureColor-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--featureColor-tag-color)}
-.realDeviceColor{color: #ffffff; background-color: var(--realDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--realDevice-tag-color)}
-.virtualDeviceColor{color: #ffffff; background-color: var(--virtualDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--virtualDevice-tag-color)}
+.realDeviceColor{color: #ffffff; background-color: var(--realDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--realDevice-tag-color);width: 100px;text-align: center;display: block;}
+.virtualDeviceColor{color: #ffffff; background-color: var(--virtualDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--virtualDevice-tag-color);width: 100px;text-align: center;display: block;}
 .androidDeviceColor{color: #ffffff; background-color: var(--androidDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--androidDevice-tag-color)}
 .iosDeviceColor{color: #ffffff; background-color: var(--iosDevice-tag-color); font-weight:bold; font-size: 12px; padding: 2px 6px; border-radius: 20px; border:1px solid var(--iosDevice-tag-color)}
+.virtualDeviceColor + span.realDeviceColor{margin-top: 10px;}
+.virtualDeviceColor + span.virtualDeviceColor{margin-top: 10px;}
+.realDeviceColor + span.virtualDeviceColor{margin-top: 10px;}
  
  [data-theme=dark] .footer__title {
    color: #CAD1D9;
