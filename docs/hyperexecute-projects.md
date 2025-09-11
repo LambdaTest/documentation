@@ -99,49 +99,9 @@ Click on **Save** button to finish the setup of your project.
 </div>
 
 ## Schedule your Workflows
-Within each HyperExecute Project, you can set up one or more workflows. These workflows allow for scheduled execution of your tests, providing you with the flexibility to automate your testing process according to your development and release cycles.
+Within each HyperExecute Project, you can set up one or more workflows. These workflows allow for scheduled execution of your tests, providing you with the flexibility to automate your testing process according to your development and release cycles. 
 
-> **NOTE :** Currently, it works only in the [dynamic mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
-
-**Step 1:** Click on the **Setup Workflow**. Enter your workflow name, provide your branch name and then enter the path of your YAML file you want to execute. Click on **Next**.
-
-**Step 2:** Configure the schedule of your workflow. Select the **days** and **time** at which you want to trigger your tests. Click on **Next**.
-
-**Step 3: Workflow Linking (Optional)-** You can connect this workflow to other existing workflows in this project or others that you own. When this workflow is completed successfully, it can automatically activate the linked workflows. To configure this, select the workflows you want to trigger from the list of existing workflows. This feature enables you to create automated workflow chains for more complex testing and deployment processes.
-
-> 📘 Gain a Comprehensive Understanding of how to use connected workflows to create [Test Chains](/support/docs/hyperexecute-test-chains/).
-
-**Workflow Variables(Optional) -** Workflow Variables allow you to customize a workflow’s behavior without modifying the underlying YAML configuration. This makes it easy to reuse the same workflow across multiple environments or scenarios by simply providing different values at runtime.
-
-#### Key Capabilities:
-- **Define variables at workflow level:** You can add variables when creating or editing a workflow. Each variable requires a key, while the value is optional.
-- **Multiple values per variable:** A key can hold multiple values. The first value is marked as the default, and all values are stored as comma-separated options.
-- **Runtime overrides:** When you run a workflow, a pop-up displays the workflow’s default variables. You can edit them or provide values for empty variables before execution. These runtime changes apply only to the current run and do not overwrite saved defaults.
-- **Case sensitivity:** Variable keys are case-sensitive.
-- **Priority:** Runtime values override workflow-level defaults during execution.
-
-#### Example Use Cases:
-- Set `ENVIRONMENT=staging` or `ENVIRONMENT=production` without maintaining separate YAML files.
-- Define `BROWSER=chrome,firefox,safari` at the workflow level, then select or override a browser at runtime.
-- Leave `API_KEY` empty by default and provide it securely at runtime.
-
-#### Limits:
-- Up to **100 variables per workflow**.
-- Each variable supports up to **25 values**.
-- Maximum size per workflow’s variable set: **512 KB**.
-- Each value can be up to **500 characters** (excluding commas/spaces).
-
-**Access Control:** Permissions for editing workflow variables follow the same role-based access model as secrets.
-
-
-Click on the **Finish** button and your job will be triggered on the defined day and time.
-
-<div className="storylane-iframe">
-  <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
-  <div className="sl-embed">
-    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/mm0v54k4vzmb?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
-  </div>
-</div>
+> To learn more about Workflows in HyperExecute, refer to our [detailed documentation](/support/docs/hyperexecute-workflows)
 
 ## Setting Up Specialized Projects
 In addition to custom projects, HyperExecute supports integration with specialized testing tools such as Tosca, Tosca DEX, and Performance testing with JMeter. For detailed instructions on setting up these specific projects, please refer to their dedicated documentation pages:
