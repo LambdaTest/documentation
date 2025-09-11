@@ -183,6 +183,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Workflows",
+            id: "hyperexecute-workflows",
+          },
+          {
+            type: "doc",
             label: "Jobs Archiving",
             id: "hyperexecute-jobs-archiving",
           },
