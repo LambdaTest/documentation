@@ -63,10 +63,10 @@ By setting these parameters, QAs can ensure that the Appium server accurately ta
 |-----|------- | ---------------------- |--------------|
 | user | TYPE: STRING | Your `LT_USERNAME` | <VirtualDeviceTag value="Virtual-Device" />  <RealDeviceTag value="Real-Device" /> |
 | accessKey | TYPE: STRING | Your `LT_Access_Key`| <VirtualDeviceTag value="Virtual Device" />  <RealDeviceTag value="Real Device" /> |
-| isRealMobile | TYPE: BOOLEAN <br/>DEFAULT: FALSE<br/>`isRealMobile=TRUE` <br/>OR<br/>`isRealMobile=FALSE` | This capability is used to run the test on Real Device  with True value. | <VirtualDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /> |
-| deviceName | TYPE: STRING <br/> `iPhone 13` | Name of the device. | <VirtualDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /> |
-| platformName | TYPE: STRING <br/> `ios` | Name of the OS. | <VirtualDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /> |
-| platformVersion    | TYPE: STRING <br/> `14` | OS version. | <VirtualDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /> |
+| isRealMobile | TYPE: BOOLEAN <br/>DEFAULT: FALSE<br/>`isRealMobile=TRUE` <br/>OR<br/>`isRealMobile=FALSE` | This capability is used to run the test on Real Device  with True value. | <VirtualDeviceTag value="Virtual Device" /> <RealDeviceTag value="Real Device" />  |
+| deviceName | TYPE: STRING <br/> `iPhone 13` | Name of the device. | <VirtualDeviceTag value="Virtual Device" /> <RealDeviceTag value="Real Device" /> |
+| platformName | TYPE: STRING <br/> `ios` | Name of the OS. |  <VirtualDeviceTag value="Virtual Device" /> <RealDeviceTag value="Real Device" /> |
+| platformVersion    | TYPE: STRING <br/> `14` | OS version. | <VirtualDeviceTag value="Virtual Device" /> <RealDeviceTag value="Real Device" />  |
 
 ## Debugging Options
 | KEY | VALUES | CAPABILITY DESCRIPTION | SUPPORTED ON |
