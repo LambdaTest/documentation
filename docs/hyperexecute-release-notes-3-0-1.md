@@ -44,11 +44,10 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 ## Workflow Variables on HyperExecute
-With Workflow Variables, you can now customize your workflow execution. This makes it easier to reuse the same workflow across multiple environments and scenarios.
+With Workflow Variables, you can now customize your workflow execution. This makes it easier to reuse the same workflow across multiple scenarios without editing YAML or creating duplicate workflows.
 
 - **Workflow-level Variables :** Define reusable variables (e.g., ENVIRONMENT, BROWSER) while creating or editing workflows.
 - **Default & Multiple Values :** Assign defaults or provide multiple values per variable.
 - **Runtime Overrides :** Update variable values at run time without changing saved defaults.
-- **Case-sensitive Keys with clear priority order :** Workflow-level < Runtime-level.
 
-> To learn more about Workflow Variables on HyperExecute, refer to our [detailed documentation](/support/docs/hyperexecute-projects/#schedule-your-workflows)
+> To learn more about Workflow Variables on HyperExecute, refer to our [detailed documentation](/support/docs/hyperexecute-workflows/#workflow-variables)
