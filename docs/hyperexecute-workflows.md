@@ -105,10 +105,10 @@ vars:
 ```
 :::
 
-<video class="right-side" width="80%" controls id="vid">
+<br />
+<video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/hyperexecute/workflow/workflow_vars.mp4').default} style={{ height: '300px' }} type="video/mp4" />
 </video>
-
 
 **Maximum Limits:**
 - Up to **100 variables per workflow**.
@@ -120,16 +120,3 @@ vars:
 - **Is dynamic test discovery required?** Yes, Workflows currently work with the [dynamic mode of test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery).
 - **Can I trigger other workflows automatically?** Yes, via Workflow Linking to build [Test Chains](/support/docs/hyperexecute-test-chains/).
 - **Among runtime and workflow variables, what takes precedence?** Runtime value > Workflow‑level defaults.
-
----
-
-## Release Note — Workflow Variables
-
-- Date: September 2025
-- Summary: Introduced Workflow Variables to parameterize scheduled and manual workflow runs without editing YAML or creating duplicate workflows.
-- Availability: All HyperExecute cloud users. Works with dynamic test discovery.
-- Highlights:
-  - Define key–value pairs at the workflow level with optional multiple values and a default.
-  - Override values at runtime when triggering manually; runtime values take precedence.
-  - Keep YAML generic and use `${KEY}` substitutions via the `vars` section.
-- Learn more: See “Workflow Variables” above and the YAML [Deep Dive](/support/docs/deep-dive-into-hyperexecute-yaml/#vars).
