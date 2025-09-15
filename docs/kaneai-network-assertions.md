@@ -46,7 +46,7 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 
 # Let's see how to add Network Assertions in a Test
 
-- Start a Desktop/Mobile Web Test. 
+- **Start a test session** (Desktop or Mobile Web). 
 
 - To add Network Assertions you have to make some API calls. After going to your desired site or hitting API request, you can see the Network calls made so far through the **Assert Network Logs** option available in the " / " commands. 
 
@@ -54,24 +54,24 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-assertion-button.png').default} alt="Image" className="doc_img img_center"/>
 
-- Here you will find all the Network requests made in this session so far, you can filter the requests on basis of **Statuses** or **Methods**:
+- Here you will find all the Network requests made in this session so far, you can filter the requests on basis of **Status Code** or **HTTP Methods**:
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-logs.png').default} alt="Image" className="doc_img img_center"/>
 
-- You can select specific keys from the Request Headers or add entire Request or Response block in the Assertion by clicking on the `Add Assertion`. All the specified values will be asserted in a single step. 
+- You can select specific keys from the **Request Headers**, or add entire **Request** or **Response blocks** in the assertion by clicking on `Add Assertion`. All chosen values are validated in a single step.  
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-log-headers.png').default} alt="Image" className="doc_img img_center"/>
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-log-headers.png').default} alt="Image" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-log-response.png').default} alt="Image" className="doc_img img_center"/>
 
-- The Request will be stored as an variable & assertions will be made using that. 
+- Once added, the request will be stored as a **variable**. KaneAI then makes assertions based on this variable. 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-assertion-block.png').default} alt="Image" className="doc_img img_center"/>
 
-- You can re-use that particular request again through the `{{` syntax. 
+- You can re-use the request later in your test using the familiar `{{variable}}` syntax.  
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-req-variable.png').default} alt="Image" className="doc_img img_center"/>
 
-- Variable will be stored in Json format so you can use `header.status` type syntax to get the nested values/objects. 
+- The stored variable is in **JSON format**, so you can easily access nested values with dot-notation (e.g., `header.status`).  
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/child-variables.png').default} alt="Image" className="doc_img img_center"/>
