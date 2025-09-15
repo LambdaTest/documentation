@@ -128,6 +128,23 @@ Once your apps are uploaded, you can easily search and filter them using the too
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/APP_MANAGER_VERSION_CONTROL.png').default} className="doc_img"/>
 ---
 
+### Release Notes for Versions
+For each app version, you can add multiline release notes to help differentiate between multiple builds.
+- To add release notes, open the three dots menu on the desired version in the App Card and click Version Details.
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/App_Manager_r1.png').default} className="doc_img"/>
+- Inside Version Details, you’ll see an option to enter release notes.
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/App_Manager_r2.png').default} className="doc_img"/>
+- Once added, a notes icon appears on the version. On hover, the release note is shown directly from the App Card. 
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/App_Manager_r3.png').default} className="doc_img"/>
+
+:::info
+- Maximum release notes length is upto 500 characters.
+- On hover, only the first 100 characters are displayed, followed by ... if the text is longer.
+- Only the owner of the version has permission to add or edit release notes, Other users can only view them.
+:::
+
+---
+
 ## Launching an App on a Real Device  
 Once a specific version is selected:
 
