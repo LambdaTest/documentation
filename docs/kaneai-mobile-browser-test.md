@@ -52,7 +52,7 @@ In this guide, we'll walk you through the process of generating, and executing a
 ## Steps to generate the test cases - Android
 
 
-## Step 1: Author a Browser Test
+### Step 1: Author a Browser Test
 
 Navigate to the [KaneAI homepage](https://kaneai.lambdatest.com/objective) and click on the **Author Browser Test** button to initiate the process of generating test cases for your web app. In the right side, a window will open with which you can navigate to your platform to perform the testing.
 
@@ -119,10 +119,10 @@ To execute your test, click on the HyperExecute button and you will be redirecte
 
   <div className="lambdatest__codeblock">
    
-   ## Steps to generate the test cases - iOS
+## Steps to generate the test cases - iOS
 
 
-## Step 1: Author a Browser Test
+### Step 1: Author a Browser Test
 
 Navigate to the [KaneAI homepage](https://kaneai.lambdatest.com/objective) and click on the **Author Browser Test** button to initiate the process of generating test cases for your web app. In the right side, a window will open with which you can navigate to your platform to perform the testing.
 
