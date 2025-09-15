@@ -118,8 +118,8 @@ Use this guide to quickly identify, understand, and correct authoring issues to 
 
 ---
 
-
-### Error categories for Mobile Authoring
+<br />
+> _Have any feedback or request? Reach out to us via support@lambdatest.com and we would be happy to hear from you._
 
 | Category              | Description                                                              | Common Authoring Error                                          | Suggested Instruction                                                             |
 |-----------------------|---------------------------------------------------------------------------|------------------------------------------------------------------|-----------------------------------------------------------------------------------|
