@@ -129,6 +129,10 @@ import TabItem from '@theme/TabItem';
 <div className="download_btn mb-10">
 <a href="https://www.lambdatest.com/support/docs/zohoproject-integration/">Zoho Project Integration With LambdaTest</a>
 </div>
+
+<div className="download_btn mb-10">
+<a href="https://www.lambdatest.com/support/docs/rally-integration/">Rally Integration With LambdaTest</a>
+</div>
 :::info Note
 
 If your favourite Bug Tracking tool is not in the list above mentioned, you can just give us a <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**shout**</span> and we will have it ready shortly for you.
