@@ -1282,6 +1282,7 @@ module.exports = {
           "kane-ai-scroll-in-feature",
           "kane-ai-jira-integration",
           "kane-ai-api-testing",
+          "kane-ai-network-assertions",
           "kaneai-network-throttling",
           "kane-ai-modules",
           "kaneai-modules-versions-and-enhancement",
