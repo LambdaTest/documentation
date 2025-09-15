@@ -1473,6 +1473,7 @@ module.exports = {
           "taiga-integration",
           "servicenow-integration",
           "zohoproject-integration",
+          "rally-integration",
         ],
       },
       {
