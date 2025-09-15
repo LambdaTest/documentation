@@ -1294,7 +1294,7 @@ module.exports = {
           "kane-ai-jira-integration",
           "kane-ai-api-testing",
           "kane-ai-network-assertions",
-          // "kaneai-network-throttling",
+          "kaneai-network-throttling",
           "kane-ai-modules",
           "kaneai-modules-versions-and-enhancement",
           "kaneai-upload-and-download-files",
