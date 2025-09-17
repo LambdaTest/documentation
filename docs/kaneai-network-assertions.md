@@ -70,7 +70,7 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 
 #### How to validate a specific object in request or response of an API?
 
-- You can re-use the request later in your test using the familiar `{{variable}}` syntax.  
+- You can reuse the request later in your test using the familiar `{{variable}}` syntax.  
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-req-variable.png').default} alt="Image" className="doc_img img_center"/>
 
