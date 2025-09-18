@@ -52,15 +52,15 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/hit-network-req.png').default} alt="Image" className="doc_img img_center"/>
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-assertion-button.png').default} alt="Image" className="doc_img img_center"/>
-
 - Here you will find all the Network requests made in this session so far and **having the Json data format**, you can filter the requests on basis of **Status Code** or **HTTP Methods**:
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-logs.png').default} alt="Image" className="doc_img img_center"/>
 
-- You can select specific keys from the **Request Headers**, or add entire **Request** or **Response blocks** in the assertion by clicking on `Add Assertion`. All chosen values are validated in a single step.  
+- Select the specific key's that you want to add in the assertion from the **Request Headers**. 
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-log-headers.png').default} alt="Image" className="doc_img img_center"/>
+
+- To add **Request** or **Response blocks** in assertions click on the `Add Assertion` button. All the chosen values will be validated in a single step.  
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/network-log-response.png').default} alt="Image" className="doc_img img_center"/>
 
@@ -76,7 +76,7 @@ This is useful when you need to ensure that API calls, response codes, payloads,
 
 - The stored variable is in **JSON format**, so you can easily access nested values with dot-notation (e.g., `header.status`).  
 
-<img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/child-variables.png').default} alt="Image" className="doc_img img_center"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/features/network-assertions/child-variables.png').default} alt="Image" className="doc_img img_center" style={{width: '60%'}}/>
 
 :::note
 This feature is not enabled for all users. Please contact our support team to request access.
