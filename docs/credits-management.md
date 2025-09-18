@@ -50,6 +50,7 @@ LambdaTest supports a **credit management system** as an add‑on over your acti
 
 :::tip
 Once free credits are exhausted, AI features will be unavailable until you **upgrade or purchase credits** from the Billing page. Use this link to buy credits directly: [Upgrade / Buy Credits](https://billing.lambdatest.com/billing/subscriptions?addCredits=true).
+:::
 
 ---
 
@@ -84,6 +85,7 @@ Admins can define **org‑wide controls** to prevent unexpected consumption:
 
 :::tip
 **Recommendation:** Start with a soft limit (e.g., 70–80% of your monthly plan) and a hard limit (e.g., 90%).
+:::
 
 ---
 
@@ -93,7 +95,7 @@ Below are the currently supported features and how they consume credits.
 
 ### SmartUI Visual AI
 
-LambdaTest **SmartUI Visual AI** simulates human perception for visual regression. Rather than flagging every pixel change, it highlights **meaningful, human‑relevant** differences between baseline and new screenshots.[Learn more](https://www.lambdatest.com/support/docs/smartui-visual-ai/)
+LambdaTest **SmartUI Visual AI** simulates human perception for visual regression. Rather than flagging every pixel change, it highlights **meaningful, human‑relevant** differences between baseline and new screenshots. [Learn more](https://www.lambdatest.com/support/docs/smartui-visual-ai/).
 
 #### How credits are consumed?
 
@@ -104,12 +106,10 @@ LambdaTest **SmartUI Visual AI** simulates human perception for visual regressio
 * **Consumes \~1–4 credits** (most common)
 
 **Large Screenshot**
-
 * A long or content‑heavy page beyond the standard viewport (full‑page scroll, data‑heavy dashboards)
 * Examples: full home page, long reports, multi‑section dashboards
 * **Consumes \~5–8 credits** (less common)
 
-:::note
 **In summary:** The bigger and more content‑heavy the screenshot, the more credits it consumes.
 
 ---
@@ -126,9 +126,7 @@ The **AI Test Case Generator** converts diverse inputs (text, PDFs, audio, video
 * If fewer scenarios are produced (e.g., **4**), **10 credits are credited back**, so you only pay for what’s actually generated.
 * **Regeneration** also consumes credits at **10 credits per scenario**.
 
-:::note
-This ensures fair usage—you are charged only for **actual output** produced by the AI.
-
+>This ensures fair usage—you are charged only for **actual output** produced by the AI.
 ---
 
 ## FAQs
