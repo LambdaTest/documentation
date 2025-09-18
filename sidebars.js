@@ -3822,6 +3822,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "Credits Management",
+        id: "credits-management",
+      },
+      {
+        type: "doc",
         label: "Service Accounts",
         id: "service-accounts",
       },
