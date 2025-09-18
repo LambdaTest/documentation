@@ -2043,7 +2043,7 @@ module.exports = {
             label: "Import Test Cases",
             items: [ "csv-import", "one-click-migration-from-testrail" ],
           },
-          "generate-test-cases-with-ai",
+          // "generate-test-cases-with-ai",
           // "create-manage-test-cases",
           "manual-test-case-creation",
           "test-case-versioning",
