@@ -1,7 +1,7 @@
 ---
 id: credits-management
 title: Credits Usage & Management in LambdaTest
-hide_title: true
+hide_title: false
 sidebar_label: Credits Management
 description: Guide for usage of credits for AI features in LambdaTest
 keywords:
