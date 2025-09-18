@@ -140,7 +140,7 @@ AI features that require credits will be disabled. You can **purchase credits** 
 Users with the **Admin** role in your LambdaTest organization.
 
 **Q: Do unused credits expire?**
-For free users, complimentary credits are provided for one-time usage and do not expire. While for users subscribed to LambdaTest products, the complimentary credits get reset at the beginning of each month. Any credits explicity purchased, do not expire.
+For free users, complimentary credits are provided for one-time usage and do not expire. While for users subscribed to LambdaTest products, the complimentary credits get reset at the beginning of each month. Any credits explicitly purchased, do not expire.
 
 **Q: Why were credits refunded after generation?**
 When fewer scenarios than the selected Max Scenarios are generated, the difference is **credited back automatically**.
