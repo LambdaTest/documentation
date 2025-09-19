@@ -3746,6 +3746,7 @@ module.exports = {
           "load-balancing-in-lambda-tunnel",
           "charles-proxy",
           "dedicated-proxy",
+          "bypass-proxy-domains",
           "socks5-proxy-support",
           "http2-support", // Added HTTP/2 support doc
         ],
