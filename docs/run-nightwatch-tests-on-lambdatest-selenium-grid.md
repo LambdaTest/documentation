@@ -21,6 +21,8 @@ slug: nightwatch-with-selenium-running-nightwatch-automation-scripts-on-lambdate
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -88,95 +90,39 @@ npm i
 Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest Selenium Grid. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) or through [LambdaTest Profile](https://accounts.lambdatest.com/login).
 
 **Step 3:** Set LambdaTest `Username` and `Access Key` in environment variables.
-  * For **Linux/macOS**:
-  ```bash
-  export LT_USERNAME="YOUR_USERNAME" export LT_ACCESS_KEY="YOUR ACCESS KEY"
-  ```
-  * For **Windows**:
-  ```bash
-  set LT_USERNAME="YOUR_USERNAME" set LT_ACCESS_KEY="YOUR ACCESS KEY"
-  ```
+<Tabs className="docs__val">
+<TabItem value="bash" label="Linux / MacOS" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
+  </CodeBlock>
+</div>
+</TabItem>
+</Tabs>
 
 ## Run Your First Test
 ***
 ### Sample Test with NightwatchJS
 Let’s check out a sample **Nightwatch** framework code running on LambdaTest Selenium Grid. This is a simple Nightwatch automation script that tests a sample to-do list app. The code marks two list items as done, adds a list item and then finally gives the total number of pending items as output.
-```js
-//googleTest.js
 
-var https = require("https");
-var lambdaRestClient = require("@lambdatest/node-rest-client");
-var lambdaCredentials = {
-  username: process.env.LT_USERNAME,
-  accessKey: process.env.LT_ACCESS_KEY
-};
-var lambdaAutomationClient = lambdaRestClient.AutomationClient(
-  lambdaCredentials
-);
-module.exports = {
-  "@tags": ["test"],
-  TodoTest: function(client) {    
-    client
-      .url("https://lambdatest.github.io/sample-todo-app/")
-      .waitForElementPresent("body", 1000)
-      .setValue("input[id=sampletodotext]", "Complete LambdaTest tutorial.")
-      .click("input[id=addbutton]")
-      .pause(1000)
-      .end();  
- 
-  },
-  after: function(browser) {
-    console.log("Closing down...");
-  },
-  afterEach: function(client, done) {
-    if (
-      process.env.LT_USERNAME &&
-      process.env.LT_ACCESS_KEY &&
-      client.capabilities &&
-      client.capabilities["webdriver.remote.sessionid"]
-    ) {
-      
-      lambdaAutomationClient.updateSessionById(
-        client.capabilities["webdriver.remote.sessionid"],
-        { status_ind: client.currentTest.results.failed ? "failed" : "passed" },
-        function(error, session) {
-          console.log(error)
-          if (!error) {
-            client.pause(1000)
-            done();
-          }
-        }
-      );
-    } else {
-      console.log("Test Run Successfully!");
-      client.pause(1000)
-      done();
-    }
-  }
-};
+```javascript title="googleTest.js" reference
+https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/tests/googleTest.js
 ```
 ### Configuration of Your Test Capabilities
 **Step 4:** Below is the `nightwatch.conf.js` file where we will be declaring the desired capabilities. Since we are using remote webdriver, we have to define which browser environment we want to run the test. We do that by passing browser environment details to LambdaTest Selenium Grid via desired capabilities class.
 
-```js
-//nightwatch.conf.js
-
-module.exports = (function(settings) {
-  console.log(settings["test_settings"]["default"]["username"])
-  if (process.env.LT_USERNAME) {
-    settings["test_settings"]["default"]["username"] = process.env.LT_USERNAME;
-  }
-  if (process.env.LT_ACCESS_KEY) {
-    settings["test_settings"]["default"]["access_key"] = process.env.LT_ACCESS_KEY;
-  }
-  if (process.env.SELENIUM_HOST) {
-    settings.selenium.host = process.env.SELENIUM_HOST;
-  }
-  if (process.env.SELENIUM_PORT) {
-    settings.selenium.host = process.env.SELENIUM_PORT;
-  }
-  return settings;
-})(require('./nightwatch.json'));
+```javascript title="nightwatch.conf.js" reference
+https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/nightwatch.conf.js
 ```
 > You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.
 
@@ -186,7 +132,13 @@ module.exports = (function(settings) {
 ```bash
 npm run single
 ```
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://automation.lambdatest.com/build). LambdaTest Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://automation.lambdatest.com/build). 
+
+<img loading="lazy" src={require('../assets/images/automation/nightwatch/nightwatch-2.png').default} alt="Image"  className="doc_img"/> <br />
+
+LambdaTest Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
+
+<img loading="lazy" src={require('../assets/images/automation/nightwatch/nightwatch-1.png').default} alt="Image"  className="doc_img"/> <br />
 
 ## Running Your Parallel Tests Using Nightwatch Framework
 ***
