@@ -44,7 +44,7 @@ import TabItem from '@theme/TabItem';
 ></script>
 This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using LambdaTest's Accessibility Tool.
 
-<!-- > Compatible only with Chrome and Edge browser versions >= 90. -->
+> **Note :** Accessibility Testing for Playwright is currently only supported on the Chrome browser (not Chromium-based browsers).
 
 ## Prerequisites
 
