@@ -64,5 +64,3 @@ String bypassProxyDomains[] = { "127.0.0.1", "localhost", "todomvc" };
 capabilities.setCapability("dedicatedProxy", true);
 capabilities.setCapability("bypassProxyDomains", bypassProxyDomains);
 ```
-
-<img loading="lazy" src={require('../assets/images/uploads/bypassproxydomain.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
