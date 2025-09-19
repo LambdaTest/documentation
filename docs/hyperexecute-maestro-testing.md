@@ -125,6 +125,14 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/ios-sim
 ```
 </TabItem>
 
+<TabItem value="iOS-Real Device" label="iOS-Real Device" default>
+> For iOS real devices, install the following [JAR-file](https://prod-mobile-artefacts.lambdatest.com/assets/maestro-cli/1.41.0-beta-1/maestro.jar)
+ and include it in your payload.
+```yaml reference title="hyperexecute.yaml"
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/ios-realdevice.yaml
+```
+</TabItem>
+
 </Tabs>
 
 ## Step 5: Generate JUnit XML Report
