@@ -118,21 +118,19 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 To enable the accessibility testing within your automated test suite, set the `accessibility: true` in your configuration file. You can also define other settings capabilities as described below.
 
 ```javascript
-  const capabilities = {
-    'LT:Options': {
-      ..//
-      "accessibility":true,
-      "accessibility.wcagVersion":"wcag21a",
-      "accessibility.bestPractice":true,
-      "accessibility.needsReview":true
-    }
-  }
+const capabilities = {
+  "accessibility": true,
+  "accessibility.wcagVersion": "wcag21a",
+  "accessibility.bestPractice": false,
+  "accessibility.needsReview": true
+};
 ```
 
 ### Step 4: Add the following add-on Script
-In your `lambdatest-setup.js` file add these three lines after your page creation command as shown below:
+LambdaTest uses an internal Chrome extension that powers accessibility scans and generates accessibility reports. In your `lambdatest-setup.js` file add these three lines after your page creation command as shown below:
 
 ```javascript
+// Load the extension for report generation of the accessibility tests
 await ltPage.goto("chrome://extensions/?id=johgkfjmgfeapgnbkmfkfkaholjbcnah");
 const secondToggleButton = ltPage.locator('#crToggle').nth(0); 
 await secondToggleButton.click();
@@ -143,7 +141,7 @@ await secondToggleButton.click();
 Now execute your tests and visit the [Automation Dashboard](https://accounts.lambdatest.com/dashboard). Click on the Accessibility tab and check the report generated.
 
 ```bash
-node test
+npx playwright test --config=./playwright.config.js
 ```
 
 <img loading="lazy" src={require('../assets/images/accessibility-testing/playwright/playwright-accessibility.png').default} alt="automation-dashboard" className="doc_img"/>
