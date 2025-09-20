@@ -42,50 +42,156 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
+
 HyperExecute supports a wide range of emulator and simulator devices for testing your applications. Below is the categorized list of available devices.
 
 ## Emulators
 <Tabs className="docs__val">
 
-<TabItem value="Android 13" label="Android 13" default>
+<TabItem value="Android 11" label="Android 11" default>
 
-| Device Name            | Category | Notes              |
-|------------------------|----------|--------------------|
-| ASUS ZenFone 8         | Phone    | Compact flagship   |
-| Galaxy A33 5G          | Phone    | Mid-range          |
-| Galaxy S21 Ultra 5G    | Phone    | Premium model      |
-| Galaxy Z Flip3 5G      | Foldable | Compact folding    |
-| Vivo X80 Pro           | Phone    | High performance   |
-| Pixel 6                | Phone    | Flagship device    |
+| Device Name        | Category |
+|--------------------|----------|
+| Galaxy Note10      | Phone    |
+| Galaxy Note10+     | Phone    |
+| Galaxy S10         | Phone    |
+| Galaxy S10 Lite    | Phone    |
+| Galaxy S10+        | Phone    |
+| Galaxy S21 5G      | Phone    |
+| Galaxy Tab S5e     | Tablet   |
+| Galaxy Tab S6      | Tablet   |
+| Galaxy Tab S7      | Tablet   |
+| Galaxy Tab S7+     | Tablet   |
+| LG Q7              | Phone    |
+| Nokia G10          | Phone    |
+| OnePlus 6          | Phone    |
+| OnePlus 7          | Phone    |
+| OnePlus 8          | Phone    |
+| OnePlus 9          | Phone    |
+| Pixel 3            | Phone    |
+| Pixel 3 XL         | Phone    |
+| Pixel 3a           | Phone    |
+| Pixel 3a XL        | Phone    |
+| Pixel 4            | Phone    |
+| Pixel 4 XL         | Phone    |
+| Pixel 4a           | Phone    |
+
+</TabItem>
+
+<TabItem value="Android 12" label="Android 12">
+
+| Device Name        | Category |
+|--------------------|----------|
+| Galaxy Note20      | Phone    |
+| Galaxy Note20 Ultra| Phone    |
+| Galaxy S20         | Phone    |
+| Galaxy S20 FE      | Phone    |
+| Galaxy S20 Ultra   | Phone    |
+| Galaxy S20+        | Phone    |
+| Galaxy S21         | Phone    |
+| Galaxy S22 5G      | Phone    |
+| Galaxy Tab A 10.1  | Tablet   |
+| Pixel 2            | Phone    |
+| Pixel 2 XL         | Phone    |
+| Pixel 3 XL         | Phone    |
+| Pixel 3a           | Phone    |
+| Pixel 3a XL        | Phone    |
+| Pixel 4            | Phone    |
+| Pixel 4 XL         | Phone    |
+| Pixel 4a           | Phone    |
+| Pixel 4a 5G        | Phone    |
+| Pixel 5            | Phone    |
+| Pixel 5a 5G        | Phone    |
 
 </TabItem>
 
-<TabItem value="Android 14" label="Android 14" default>
+<TabItem value="Android 13" label="Android 13">
 
-|   Device Name            |   Category        |   Notes              |
-|--------------------------|-------------------|----------------------|
-| Galaxy Note10 Lite       | Phone             | Lite version         |
-| Galaxy S21 FE 5G         | Phone             | Fan Edition          |
-| Galaxy Tab S8+           | Tablet            | Large screen tablet  |
-| Galaxy Z Flip            | Foldable Phone    | Compact folding phone|
-| Galaxy Z Flip 5G         | Foldable Phone    | 5G support           |
-| Galaxy Tab S8 Ultra      | Tablet            | High-end model       |
+| Device Name            | Category |
+|------------------------|----------|
+| ASUS ZenFone 8         | Phone    |
+| Galaxy A33 5G          | Phone    |
+| Galaxy A51 / A51 5G    | Phone    |
+| Galaxy A53 5G          | Phone    |
+| Galaxy A71 / A71 5G    | Phone    |
+| Galaxy A73 / A73 5G    | Phone    |
+| Galaxy A90 5G          | Phone    |
+| Galaxy Fold / Fold 5G  | Foldable |
+| Galaxy Note10 / Note10 Lite / Note10+ | Phone |
+| Galaxy Note20 / Note20 Ultra | Phone |
+| Galaxy S10 / S10 Lite / S10+ / S10e | Phone |
+| Galaxy S20             | Phone    |
+| Galaxy S21 / S21 FE / S21+ / S21 Ultra | Phone |
+| Galaxy S22 / S22+ / S22 Ultra | Phone |
+| Galaxy Tab S6 / S6 Lite / S6 5G | Tablet |
+| Galaxy Tab S7 / S7+ 5G | Tablet  |
+| Galaxy Tab S8 / S8+ / S8 Ultra | Tablet |
+| Galaxy Z Flip / Z Flip 5G / Z Flip3 5G | Foldable |
+| Galaxy Z Fold2 / Z Fold3 5G | Foldable |
+| LG Velvet (5G / LTE)   | Phone    |
+| LG Wing 5G             | Phone    |
+| OnePlus 10 Pro         | Phone    |
+| OPPO Find X5 Pro       | Phone    |
+| Pixel 4 / 4 XL / 4a / 4a 5G | Phone |
+| Pixel 5 / 5a 5G        | Phone    |
+| Pixel 6 / 6 Pro        | Phone    |
+| Realme GT2 Pro         | Phone    |
+| Vivo X80 Pro           | Phone    |
+| Xiaomi 12 / 12 Pro     | Phone    |
 
 </TabItem>
 
-<TabItem value="Android 15" label="Android 15" default>
+<TabItem value="Android 14" label="Android 14">
 
-|   Device Name    |   Category   |   Notes          |
-|------------------|--------------|------------------|
-| Pixel 6a         | Phone        | Latest support   |
-| Pixel 7          | Phone        | Flagship model   |
-| Pixel 7 Pro      | Phone        | Flagship model   |
-| Pixel 4a         | Phone        | Compact phone    |
-| Pixel 5          | Phone        | Popular choice   |
-| Pixel 5a 5G      | Phone        | 5G ready         |
+| Device Name       | Category |
+|-------------------|----------|
+| ASUS ZenFone 8    | Phone    |
+| Galaxy A33 5G     | Phone    |
+| Galaxy A51 / A51 5G | Phone |
+| Galaxy A53 5G     | Phone    |
+| Galaxy A71 / A71 5G | Phone |
+| Galaxy A73 / A73 5G | Phone |
+| Galaxy A90 5G     | Phone    |
+| Galaxy Fold / Fold 5G | Foldable |
+| Galaxy Note10 / Note10 Lite / Note10+ | Phone |
+| Galaxy Note20 / Note20 Ultra | Phone |
+| Galaxy S10 / S10 Lite / S10+ / S10e | Phone |
+| Galaxy S20        | Phone    |
+| Galaxy S21 / S21 FE / S21+ / S21 Ultra | Phone |
+| Galaxy S22 / S22+ / S22 Ultra | Phone |
+| Galaxy Tab S6 / S6 Lite / S6 5G | Tablet |
+| Galaxy Tab S7 / S7+ 5G | Tablet |
+| Galaxy Tab S8 / S8+ / S8 Ultra | Tablet |
+| Galaxy Z Flip / Z Flip 5G / Z Flip3 5G | Foldable |
+| Galaxy Z Fold2 / Z Fold3 5G | Foldable |
+| LG Velvet (5G / LTE) | Phone |
+| LG Wing 5G        | Phone    |
+| OnePlus 10 Pro    | Phone    |
+| OPPO Find X5 Pro  | Phone    |
+| Pixel 4 / 4 XL / 4a / 4a 5G | Phone |
+| Pixel 5 / 5a 5G  | Phone    |
+| Pixel 6 / 6 Pro  | Phone    |
+| Realme GT2 Pro    | Phone    |
+| Vivo X80 Pro      | Phone    |
+| Xiaomi 12 / 12 Pro | Phone   |
 
 </TabItem>
+
+<TabItem value="Android 15" label="Android 15">
+
+| Device Name       | Category |
+|-------------------|----------|
+| Pixel 6a          | Phone    |
+| Pixel 7           | Phone    |
+| Pixel 7 Pro       | Phone    |
+| Pixel 4a          | Phone    |
+| Pixel 5           | Phone    |
+| Pixel 5a 5G       | Phone    |
+
+</TabItem>
+
 </Tabs>
+
 
 ## Simulators
 <Tabs className="docs__val">
