@@ -9,7 +9,7 @@ keywords:
     - Testing
     - Manual
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/accessibility-android-test/
+url: https://www.lambdatest.com/support/docs/accessibility-app-scanner/
 site_name: LambdaTest
 slug: accessibility-app-scanner/
 ---
@@ -37,16 +37,16 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Android Test",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-android-test/"
+          "item": "https://www.lambdatest.com/support/docs/accessibility-app-scanner/"
         }]
       })
     }}
 ></script>
-LambdaTest offers a powerful Accessibility Scanner for native Android apps, integrated seamlessly with our manual app testing environment. This helps QA teams and developers identify accessibility issues directly during real-time testing sessions. Follow this guide to understand how to perform accessibility scans manually.
+LambdaTest offers a powerful Accessibility Scanner for native Android and iOS apps, integrated seamlessly with our manual app testing environment. This helps QA teams and developers identify accessibility issues directly during real-time testing sessions. Follow this guide to understand how to perform accessibility scans manually.
 
 ## Prerequisites
 - You must have access to the LambdaTest Real Device Cloud.
-- Your Android app (.apk or .aab) should be uploaded to the platform.
+- Your Android app (.apk or .aab) or iOS app should be uploaded to the platform.
 - Ensure you have enabled the Accessibility feature from your account or project settings, if applicable.
 
 ## Steps to perform Accessibility Testing using the App Scanner
@@ -63,7 +63,7 @@ LambdaTest offers a powerful Accessibility Scanner for native Android apps, inte
 <img loading="lazy" src={require('../assets/images/accessibility-testing/app-automation/app-upload.png').default} alt="Image" className="doc_img img_center"/>
 
 ### Step 3: Launch Manual App Testing
-- Choose the target Android device and select your application.
+- Choose the target Android or iOS device and select your application.
 - Click on the **Start** button to launch the manual testing session on the selected device.
 
 ### Step 4: Scan the App Screens

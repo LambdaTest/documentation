@@ -69,7 +69,7 @@ Here are the key benefits of using the Automation MCP Server:
 4. Generate new test cases using execution data from LambdaTest.
 5. Leverage network logs, Selenium logs, and console logs to pinpoint bottlenecks and failures.
 
-## Connecting to SmartUI MCP Server​
+## Connecting to Automation MCP Server​
 
 ### Connecting with Cline
 
@@ -90,7 +90,7 @@ Cline allows natural language interaction with your codebase—just describe wha
 **Step 6:** Click on the Cline icon to open the Cline panel.<br />
 **Step 7:** Complete any authentication steps required during first-time setup.
 
-### Connecting Cline to SmartUI MCP Server
+### Connecting Cline to Automation MCP Server
 
 #### VS Code Configuration:
 
