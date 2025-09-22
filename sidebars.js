@@ -2840,6 +2840,7 @@ module.exports = {
                 items: ["appium-csharp-nunit"],
               },
               "appium-kotlin",
+              "test-flutter-apps",
             ],
           },
           {
