@@ -71,6 +71,7 @@ You can use the `cypress_config_file` key in `run_settings` option to specify th
   {
     "run_settings": {
       "cypress_config_file": "cypress.json",
+      "video": true
     }
   }
   ```
@@ -80,7 +81,7 @@ You can use the `cypress_config_file` key in `run_settings` option to specify th
 
   ```javascript title="lambdatest-config.json"
   // In case of Cypress 10 and above, you can specify your custom config files by using the --cy flag.
-  lambdatest-cypress run --cy="--config-file <file path>"
+  lambdatest-cypress-cli run --env=stage,video=true --verbose --specs "./cypress/integration/examples/*"
   ```
   </TabItem>
 </Tabs>
