@@ -80,11 +80,13 @@ Replace `<TestRunID>` with the actual ID from the URL and set additional optiona
 - **dedicated_proxy**: Add the region of the dedicated proxy such as _us_ or _eu_, #Optional, either tunnel or dedicated proxy or geolocation can be used in a single API call.
 - **geolocation**: Add the resgion of the geolocation that you want to run your tests from. You can find the list of support geolocations [here](https://www.lambdatest.com/support/docs/selenium-geolocation-capabilities/).
 - **environment_id**: Define the environment on which you want to run the test run if required.
-- **retry_on_failure**: Define if you want to retry in case of failure (Boolean). If "retry_on_failure" is false, the default max retries will still be 1.
-- **max_retries**: Define the number of maximum retries you want (Max value 5). Default retries 1.
+- **retry_on_failure**: Define whether to retry if the [testRunnerCommand](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) execution fails. If "retry_on_failure" is false, the default max retries will still be 1. You can find more details [here]( https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure).
+- **max_retries**: Define the number of maximum retries you want (Max value 5). Default retries 1. You can find more details [here](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries). 
 - **timezone**: Define the timezone you want to choose for test run in UTC+01:00 format.
 - **app_profiling**: Add true if you want to track app profiling metrics in your test. You can find more details [here](https://www.lambdatest.com/support/docs/appium-app-performance-analytics/).
 - **performance**: Add true if you want generate Lighthouse report for your web tests. Supported on limited OS browser combinations. Additionally, Setting this as true could potentially slow down the execution time. You can find more details [here](https://www.lambdatest.com/support/docs/view-lighthouse-performance-metrics/).
+- **android_app_id**: Specify an Android app ID to override the existing app in the configuration of the Test instances.
+- **ios_app_id**: Specify an iOS app ID to override the existing app in the configuration of the Test instances.
 - **accessibility**: Set as true if you want to run accessibility test on all your tests in the test run. Setting this as true could potentially slow down the execution time.
 - **replaced_url :** To be used to dynamically replace any pattern URL in test cases with the replacement URL for entire test run.
 
@@ -112,6 +114,8 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
     "timezone": "UTC+01:00", #Optional, Only for web, to define the timezone using which the test runs should run
     "app_profiling": "false", #Optional for performance metrics for native mobile apps
     "performance": "false", #Optional for lighthouse report for web tests
+    "android_app_id": "lt://<YOUR_ANDROID_APP_ID>", #optional 
+    "ios_app_id": "lt://<YOUR_iOS_APP_ID>", #optional 
     "accessibility": "false", #Optional only for web tests
     "network_throttle": {
         "label": "No Throttling",
