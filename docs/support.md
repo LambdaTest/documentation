@@ -169,10 +169,11 @@ import NewTag from '../src/component/newTag';
        <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>KaneAI &nbsp; <NewTag  value="BETA" /> </h2>
       <div className="home_inners">
         <a href="/support/docs/getting-started-with-kane-ai/" ><p className="p_home_inners">Getting Started</p></a>
-        <a href="/support/docs/kane-ai-web-test/" ><p className="p_home_inners">Run your First Test</p></a>
-        <a href="/support/docs/kane-ai-guided-walkthrough/" ><p className="p_home_inners">Guided Walkthrough</p></a>
-        <a href="/support/docs/kane-ai-test-plan/" ><p className="p_home_inners">Test Planner</p></a>
+        <a href="/support/docs/author-your-first-desktop-browser-test/" ><p className="p_home_inners">Author Desktop Browser Test</p></a>
+         <a href="/support/docs/author-your-first-mobile-app-test/" ><p className="p_home_inners">Author Mobile App Test</p></a>
+        <a href="/support/docs/kane-ai-api-testing/" ><p className="p_home_inners">API Testing</p></a>
         <a href="/support/docs/kane-ai-command-guide/" ><p className="p_home_inners">Command Types</p></a>
+         <a href="/support/docs/kaneai-ci-cd-automation/" ><p className="p_home_inners">Test Automation with CI/CD </p></a>
       </div>
     </div>
     <div className="home_inners_box">
