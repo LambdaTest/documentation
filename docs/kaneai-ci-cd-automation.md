@@ -84,9 +84,9 @@ Replace `<TestRunID>` with the actual ID from the URL and set additional optiona
 - **max_retries**: Define the number of maximum retries you want (Max value 5). Default retries 1.
 - **timezone**: Define the timezone you want to choose for test run in UTC+01:00 format.
 - **app_profiling**: Add true if you want to track app profiling metrics in your test. You can find more details [here](https://www.lambdatest.com/support/docs/appium-app-performance-analytics/).
-- **android_app_id**: Specify an Android app ID to override the existing app in the configuration of the Test instances.
-- **ios_app_id**: Specify an app iOS ID to override the existing app in the configuration of the Test instances.
 - **performance**: Add true if you want generate Lighthouse report for your web tests. Supported on limited OS browser combinations. Additionally, Setting this as true could potentially slow down the execution time. You can find more details [here](https://www.lambdatest.com/support/docs/view-lighthouse-performance-metrics/).
+- **android_app_id**: Specify an Android app ID to override the existing app in the configuration of the Test instances.
+- **ios_app_id**: Specify an iOS app ID to override the existing app in the configuration of the Test instances.
 - **accessibility**: Set as true if you want to run accessibility test on all your tests in the test run. Setting this as true could potentially slow down the execution time.
 - **replaced_url :** To be used to dynamically replace any pattern URL in test cases with the replacement URL for entire test run.
 
@@ -100,8 +100,6 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
     "test_run_id": "YOUR_TEST_RUN_ID", #enter test run id
     "concurrency": 1, # Optional, default 1
     "title": "UNIQUE_BUILD_NAME", #Optional
-    "android_app_id": "lt://< YOUR_ANDROD_APP_ID>", #optional 
-    "ios_app_id": "lt://< YOUR_iOS_APP_ID>", #optional 
     "console_logs": "false", #Optional for web tests, options - false, error, warn, info, true
     "network_logs": "false", #Optional to capture network calls during the test
     "network_full_har": "false", #Optional, Only for web, to capture complete network requests & response during the test
@@ -116,6 +114,8 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
     "timezone": "UTC+01:00", #Optional, Only for web, to define the timezone using which the test runs should run
     "app_profiling": "false", #Optional for performance metrics for native mobile apps
     "performance": "false", #Optional for lighthouse report for web tests
+    "android_app_id": "lt://<YOUR_ANDROID_APP_ID>", #optional 
+    "ios_app_id": "lt://<YOUR_iOS_APP_ID>", #optional 
     "accessibility": "false", #Optional only for web tests
     "network_throttle": {
         "label": "No Throttling",
