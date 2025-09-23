@@ -924,6 +924,7 @@ module.exports = {
                 collapsed: true,
                 label: "September, 2025",
                 items: [
+                  "hyperexecute-release-notes-3-0-4",
                   "hyperexecute-release-notes-3-0-3",
                 ],
               },
@@ -3955,6 +3956,7 @@ module.exports = {
       },
     ],
   ],
+  
   ConcurrencyWidgetSidebar: [
     {
       type: "link",
