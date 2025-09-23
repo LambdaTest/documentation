@@ -125,17 +125,14 @@ To utilize the **networkProfile** capability, ensure that you include `network: 
     ```python
     driver.execute_script("updateNetworkProfile=offline")
     ```
+:::note
+Currently, for iOS, we do not support any capability or LambdaHook for offline mode.
+:::
 
-#### iOS
-
-- **LambdaHook:** You can also switch to offline mode during the test execution with the following command:
-    ```python
-    driver.execute_script("updateNetworkProfile=offline")
-    ```
 
 ## Toggle Offline/Online Mode via API
 
-- For both iOS and android devices you can use the offline/online mode API as well within the running test session:
+- For android devices you can use the offline/online mode API as well within the running test session:
 
     ```bash
     curl --location 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/sessions/<session-id>/update_network' \

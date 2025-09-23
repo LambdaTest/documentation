@@ -107,6 +107,14 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/android
 ```
 </TabItem>
 
+<TabItem value="iOS-Real Device" label="iOS-Real Device" default>
+> To enable execution on iOS real devices, install the following [JAR-file](https://prod-mobile-artefacts.lambdatest.com/assets/maestro-cli/1.41.0-beta-1/maestro.jar)
+ and include it in your payload. This JAR acts as a wrapper to facilitate compatibility with Maestro when running on iOS real devices.
+```yaml reference title="hyperexecute.yaml"
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/ios-realdevice.yaml
+```
+</TabItem>
+
 <TabItem value="android-emu" label="Android-Emulator" default>
 
 > To enable this for your organizaton, connect with us through our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or drop us an email to [support@lambdatest.com](mailto:support@lambdatest.com).
@@ -138,6 +146,11 @@ The above command will generate a `report.xml` file in the root directory after 
 
 ```yaml reference
 https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/maestro-test/runTest.sh
+```
+When running on iOS real devices, you need to use a dedicated script since the execution flow differs slightly from iOS simulators and Android.
+
+```yaml reference
+https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/maestro-test/runTest_ios_realdevice.sh
 ```
 
 2. Update your HyperExecute YAML file to enable the native reporting in HyperExecute using the generated JUnit XML files.
