@@ -3136,6 +3136,12 @@ module.exports = {
         id: "kaneai-smartui-visual-testing",
       },
       {
+        type: "doc",
+        label: "Visual Test with Katalon",
+        id: "smartui-katalon-plugin",
+      },
+  
+      {
         type: "category",
         collapsed: false,
         label: "Visual Testing Configurations",
