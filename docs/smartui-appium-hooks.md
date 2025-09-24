@@ -66,6 +66,8 @@ Using the LambdaTest platform, perform regression testing in just one click and 
 - Access your Hub for your appium **remote connection** instance at `@mobile-hub.lambdatest.com/wd/hub`.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
+Below are code examples for taking viewport screenshots using SmartUI with Appium across different programming languages and frameworks:
+
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
 
@@ -300,7 +302,7 @@ await driver.execute("smartui.takeScreenshot", config);
 ### Cross-Framework Examples
 
 <Tabs className="docs__val" groupId="language">
-<TabItem value="nodejs" label="NodeJS" default>
+<TabItem value="nodejs" label="Node.js" default>
 
 ```javascript
 let config = {
@@ -318,10 +320,10 @@ await driver.execute("smartui.takeScreenshot", config);
 
 ```python
 config = {
-  'screenshotName': '<Your Screenshot Name>',
-  'ignoreBoxes': '{"xpath": ["//*[@text=\'Dynamic Ad\']", "//*[@id=\'timestamp\']"]}'
+    'screenshotName': '<Your Screenshot Name>',
+    'ignoreBoxes': '{"xpath": ["//*[@text=\'Dynamic Ad\']", "//*[@id=\'timestamp\']"]}'
 }
-driver.execute("smartui.takeScreenshot", config)
+driver.execute_script("smartui.takeScreenshot", config)
 ```
 
 </TabItem>
@@ -329,13 +331,18 @@ driver.execute("smartui.takeScreenshot", config)
 <TabItem value="java" label="Java">
 
 ```java
-Map<String, Object> config = new HashMap<>();
-config.put("screenshotName", "<Your Screenshot Name>");
-config.put("ignoreBoxes", "{\"xpath\": [\"//*[@text='Dynamic Ad']\", \"//*[@id='timestamp']\"]}");
+Map<String, Object> configIgnore = new HashMap<>();
+configIgnore.put("screenshotName", "Screenshot");
 
-((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", config);
+Map<String, Object> ignoreBoxes = new HashMap<>();
+ignoreBoxes.put("xpath", new String[]{
+    "//*[@name='Toast']"
+});
+
+configIgnore.put("ignoreBoxes", ignoreBoxes);
+((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", configIgnore);
+
 ```
-
 </TabItem>
 
 <TabItem value="csharp" label="C#">
@@ -413,7 +420,7 @@ driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 </TabItem>
-<TabItem value="csharp" label="C#" default>
+<TabItem value="csharp" label="C#">
 
 ```csharp
 driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
