@@ -2,7 +2,7 @@
 id: lambdatest-sso-google
 title: LambdaTest SSO & Google Custom Using SAML
 hide_title: true
-sidebar_label: Google 
+sidebar_label: Google Workspace 
 description: Now integrate your Google Workspace user directory with your LambdaTest organization subscription through an IDP, so that your team could leverage the SSO setup.
 keywords:
   - sso
@@ -41,7 +41,7 @@ slug: lambdatest-sso-google/
     }}
 ></script>
 
-# LambdaTest SSO Integration with Google Workspace
+# LambdaTest SSO & Google Workspace Using SAML
 
 * * *
 
@@ -67,7 +67,7 @@ The SSO integration process involves configuring both Google Workspace and Lambd
 
 ### Step 1: Create SAML App in Google Workspace
 
-1. **Access Google Admin Console**: Sign in to the [Google Admin Console](https://admin.google.com/) using a super administrator account. This level of access is required to create and configure SAML applications.
+1. **Access Google Admin Console**: Sign in to the [Google Admin Console](https://admin.google.com/) using a user account. This level of access is required to create and configure SAML applications.
 
 2. **Navigate to Web and Mobile Apps**: In the Google Admin Console, navigate to **Menu** > **Apps** > **Web and mobile apps** to access the application management section.
 
@@ -77,7 +77,7 @@ The SSO integration process involves configuring both Google Workspace and Lambd
 
 
 4. **Configure Application Details**: 
-   - **App name**: Enter a descriptive name such as "LambdaTest SSO" or "LambdaTest Integration" to easily identify this application in your Google Workspace admin console.
+   - **App name**: Enter a descriptive name such as "LambdaTest SSO" or "LambdaTest SSO App" to easily identify this application in your Google Workspace admin console.
    - Click **Continue** to proceed to the next configuration step.
 
 
@@ -102,7 +102,7 @@ The SSO integration process involves configuring both Google Workspace and Lambd
 
 6. **Access LambdaTest SSO Configuration**: Navigate to the [LambdaTest Authentication & SSO settings](https://accounts.lambdatest.com/auth/sso) page. This dashboard provides comprehensive management of your organization's single sign-on configuration. Click **Setup SSO** to initiate the integration process.
 
-7. **Create New SSO Connection**: In the connection setup wizard, enter a descriptive connection name such as "Google Workspace SSO" or "LambdaTest Google Integration". This name will help you identify and manage this connection in your LambdaTest organization. Click **Add New Connection** to proceed.
+7. **Create New SSO Connection**: In the connection setup wizard, enter a descriptive connection name such as "Google Workspace SSO" or "LambdaTest Google SSO". This name will help you identify and manage this connection in your LambdaTest organization. Click **Add New Connection** to proceed.
 
 <img loading="lazy" src={require('../assets/images/lambdatest-sso-google/sso-setup-lambdatest.png').default} alt="LambdaTest SSO Settings" width="944" height="487" className="doc_img"/>
 
