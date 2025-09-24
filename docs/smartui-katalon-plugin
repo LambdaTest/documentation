@@ -60,14 +60,6 @@ With this plugin, you can:
 
 ---
 
-##  Features
-
-- **Visual Snapshots** — capture UI snapshots during test execution.  
-- **Baseline Comparison** — automatically compare snapshots against stored baselines in SmartUI.  
-- **Visual Regression Detection** — identify unintended UI changes with pixel-level accuracy.  
-- **SmartUI Dashboard** — view diffs, approve/reject changes, and track regressions over time.  
-
----
 
 ## Installation
 
@@ -79,7 +71,7 @@ With this plugin, you can:
 
 ### Option 2: Manual Installation via JAR
 
-1. Download the latest `katalon-studio-smartui-plugin.jar` from the [official release page](https://github.com/LambdaTest/katalon-studio-smartui-plugin/releases) (if available).
+1. Download the latest `katalon-studio-smartui-plugin.jar` from the [official release page](https://github.com/LambdaTest/katalon-studio-smartui-plugin/releases).
 2. In Katalon Studio, go to **Project > Settings > Plugins > Import Plugin**.
 3. Select the downloaded `.jar` file and click **Import**.
 
@@ -99,42 +91,32 @@ With this plugin, you can:
 
 ---
 
-### Step 2: Set Environment Variable
+### Step 2: Start your Katalon Instance from terminal
+
+Run the following command in the terminal to start the Katalon instance.
+
+
+```bash
+/Applications/Katalon\ Studio\ Enterprise.app/Contents/MacOS/katalon
+```
+---
+
+### Step 3: Set Environment Variable
 
 In your Katalon project, set the `PROJECT_TOKEN` environment variable:
 
 #### Via Project Settings:
-1. Go to **Project > Settings > Execution > Profiles**.
-2. Under your active profile, add a new environment variable:
+1. Go to **Project > Settings > Plugins > SmartUI Integration**.
+2. Here you may set your project token
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
 
 ```bash
-export LT_USERNAME="YOUR_USERNAME"
-export LT_ACCESS_KEY="YOUR ACCESS KEY"
-```
-</TabItem>
-<TabItem value="Windows" label="Windows" default>
-
-```bash
-set LT_USERNAME="YOUR_USERNAME"
-set LT_ACCESS_KEY="YOUR ACCESS KEY"
-```
-
-</TabItem>
-</Tabs>
-
-#### Or via Script (Global Variable):
-You can also set it dynamically in your test script:
-
-```groovy
-System.setProperty("PROJECT_TOKEN", "123456#1234abcd-****-****-****-************")
+PROJECT_TOKEN = "project_token..."
 ```
 
 ---
 
-### Step 3: Configure SmartUI in Your Test Case
+### Step 4: Configure SmartUI in Your Test Case
 
 Use the provided custom keywords to start, capture, and stop SmartUI sessions.
 
@@ -162,7 +144,7 @@ WebUI.closeBrowser()
 
 ---
 
-### Step 4: Advanced Configuration (Optional)
+### Step 5: Advanced Configuration (Optional)
 
 You can pass additional configuration via a JSON file or inline parameters.
 
@@ -188,8 +170,8 @@ Then use it in your test:
 CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('Build v1.0', 'config.json', '')
 ```
 
-> 💡 Use `ignoreBoxes` to exclude dynamic elements (ads, timestamps) from comparison.  
-> 💡 Use `selectBoxes` to compare only specific regions (e.g., main content area).
+> Use `ignoreBoxes` to exclude dynamic elements (ads, timestamps) from comparison.  
+> Use `selectBoxes` to compare only specific regions (e.g., main content area).
 
 ---
 
@@ -221,16 +203,6 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 
 ---
 
-## 🌐 Learn More
-
-For detailed API documentation and advanced features, visit:
-
-- [SmartUI Documentation](https://www.lambdatest.com/support/docs/smart-visual-regression-testing/)
-- [Katalon Studio Docs](https://docs.katalon.com/)
-- [Plugin GitHub Repository](https://github.com/LambdaTest/katalon-studio-smartui-plugin)
-
----
-
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
@@ -248,4 +220,3 @@ For detailed API documentation and advanced features, visit:
     </li>
   </ul>
 </nav>
-```
