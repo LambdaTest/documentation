@@ -3946,6 +3946,11 @@ module.exports = {
       },
       {
         type: "doc",
+        label: "Google Custom Integration",
+        id: "lambdatest-sso-google",
+      },
+      {
+        type: "doc",
         label: "Azure AD",
         id: "sso-azure-integration",
       },
