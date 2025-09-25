@@ -2395,6 +2395,7 @@ module.exports = {
             label: "Advance Use Cases",
             items: [
               "auto-heal",
+              "autoheal-with-hooks",
               "selenium-geolocation-capabilities",
               "selenium-mask-your-data",
               "custom-header",
