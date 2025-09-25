@@ -64,3 +64,5 @@ String bypassProxyDomains[] = { "127.0.0.1", "localhost", "todomvc" };
 capabilities.setCapability("dedicatedProxy", true);
 capabilities.setCapability("bypassProxyDomains", bypassProxyDomains);
 ```
+
+> **Note :** Cypress currently does not support bypassing the domains `127.0.0.1` and `localhost` when using the `bypassProxyDomains` capability
