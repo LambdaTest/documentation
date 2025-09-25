@@ -98,6 +98,11 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 - **52.36.84.247**
 - **13.126.37.58**
 - **3.66.78.89**
+- **20.106.137.134**
+- **20.28.8.59**
+- **20.235.62.15**
+- **50.85.251.115**
+- **20.171.1.172**
 
 ## LambdaTest Integration Tools
 - **3.208.126.109**
