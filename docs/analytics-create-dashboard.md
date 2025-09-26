@@ -34,20 +34,13 @@ slug: analytics-create-dashboard/
     }}
 ></script>
 
----
-import VideoEmbed from '../src/component/videoEmbed';
-
-
-### Using Custom Dashboards
+## Using Custom Dashboards
 
 Add widgets of multiple products and various insights to your dashboard. You can create a custom dashboard with the widgets of your choice. You can add widgets of the same type multiple times and also edit the layout of the dashboard according to your configuration.
 
-<VideoEmbed 
-  src="https://share.synthesia.io/embeds/videos/b94567c6-a454-4b85-9d19-46448ccb0e77" 
-  title="Create Customed Dashboard using Lambdatest Analytics"
-/>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/EHHA1z1KB4c?si=pE0tP4ReVgkMIR-_" title="Create Customed Dashboard using Lambdatest Analytics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Prerequisites to use Lambdatest Insights
+### Prerequisites
 
 The following are requirements:
 
@@ -96,24 +89,3 @@ You can add more widgets of the same type to your dashboard multiple times and a
 
 * Share the Dashboard with a public or a private link with your team - [Read More](/docs/analytics-dashboard-features/#expiry-settings-for-dashboard-share-link)
 * Exporting the Dashboard as a PDF - [Read More](/docs/analytics-dashboard-features/#export-dashboard-as-pdf)
-
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Create Your First Dashboard 
-      </span>
-    </li>
-  </ul>
-</nav>
