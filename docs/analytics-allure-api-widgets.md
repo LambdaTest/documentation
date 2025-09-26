@@ -10,6 +10,8 @@ site_name: LambdaTest
 slug: analytics-allure-api-widgets/
 ---
 
+import NewTag from '../src/component/newTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -33,21 +35,9 @@ slug: analytics-allure-api-widgets/
       })
     }}
 ></script>
-
----
-
-import NewTag from '../src/component/newTag';
-import VideoEmbed from '../src/component/videoEmbed';
-
-
-## Understanding The Allure Test Insights Widget
-
 The `Allure Test Insights` module helps you to get an overview of the test execution results using the Allure. This widget provides insights into the test execution results, test status, and test duration.
 
-<VideoEmbed 
-  src="https://share.synthesia.io/embeds/videos/d85c33ca-fd75-47cb-b9d6-77d8071449b5" 
-  title="Integrate Allure Test Insights with HyperExecute"
-/>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/21XtN5PSMNI?si=4oVmKO88mzVlLVW1" title="Integrate Allure Test Insights with HyperExecute" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## How To Use Allure Test Insights?
 

@@ -17,11 +17,6 @@ slug: getting-started-with-kane-ai/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import VideoEmbed from '../src/component/videoEmbed';
-
-<!-- <style>
-  .pagination-nav__label{font-size: 200px}
-</style> -->
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -59,13 +54,6 @@ Which KaneAI you can:
 - **Make testing Adaptive & intelligent** – KaneAI auto-heals tests when your UI changes, so your team keeps moving.
 
 **KaneAI isn’t just a tool it’s how modern teams test smarter and ship faster.**
-
-<!-- <VideoEmbed 
-  src="https://www.youtube.com/embed/jYcGcl_MGiw?si=rbFCX1yataN9clRn" 
-  title="Integrate Allure Test Insights with HyperExecute"
-/> -->
-
-***
 
 ## Getting Started
 If you are new to KaneAI, you can learn more about how to use KaneAI by following guides:

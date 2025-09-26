@@ -1,6 +1,6 @@
 ---
 id: dashboards-custom-widgets
-title: Custom Widgets
+title: Custom Widgets in LambdaTest Analytics Dashboards
 sidebar_label: Create Custom Widgets
 description: A powerful tool to visualize your test data and gain insights into your testing process.
 keywords:
@@ -15,6 +15,8 @@ url: https://www.lambdatest.com/support/docs/dashboards-custom-widgets/
 site_name: LambdaTest
 slug: dashboards-custom-widgets/
 ---
+
+import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -39,20 +41,9 @@ slug: dashboards-custom-widgets/
       })
     }}
 ></script>
-
----
-
-import NewTag from '../src/component/newTag';
-import VideoEmbed from '../src/component/videoEmbed';
-
-# Custom Widgets in LambdaTest Analytics Dashboards
-
 Custom widgets <NewTag value="BETA" bgColor="#ffec02" color="#000" /> &nbsp;in LambdaTest Analytics Dashboards allow you to create personalized visualizations of your test data. This feature enables you to gain insights into your testing process and make data-driven decisions.
 
-<VideoEmbed 
-  src="https://share.synthesia.io/embeds/videos/206929f2-2dcc-41b5-96c8-1b771095fb8a" 
-  title="Exploring Custom Widgets for Dashboards in Lambdatest Insights"
-/>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/DEY1hhEme6Q?si=hBN9X2hK-QHvgHIA" title="Exploring Custom Widgets for Dashboards in Lambdatest Insights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Creating Custom Widgets
 
@@ -70,8 +61,6 @@ To create a custom widget, follow these steps:
 7. **Provide a widget name** and description to help identify the widget later.
 8. **Provide the Dashboard Name** and click on the Create Dashboard button to save your custom widget.
 9. **Once created, you can drag and drop the widget** to rearrange its position on the dashboard or add more widgets.
-
-
 
 ## Features of Custom Widgets
 
@@ -127,7 +116,5 @@ Custom widgets can be used for various purposes, including:
 - **Sharing Insights with Stakeholders**: Use custom widgets to create dashboards that can be shared with stakeholders, providing them with insights into the testing process and results.
 - **Creating Reports**: Use custom widgets to create reports that can be shared with stakeholders, providing them with insights into the testing process and results.
 
-## Support
-
-If you have any questions or need assistance with creating custom widgets, please reach out to our support team at [support@lambdatest.com](mailto:support@lambdatest.com) or visit our [Support Center](https://www.lambdatest.com/support/).
+> If you have any questions or need assistance with creating custom widgets, please reach out to our support team at [support@lambdatest.com](mailto:support@lambdatest.com) or visit our [Support Center](https://www.lambdatest.com/support/).
 
