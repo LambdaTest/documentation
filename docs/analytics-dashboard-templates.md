@@ -5,7 +5,7 @@ sidebar_label: Create with Pre-Built templates
 description: Discover Dashboard Templates for streamlined test analysis. Save time with pre-built widgets tailored to specific testing needs. Learn more
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-overview/
+url: https://www.lambdatest.com/support/docs/analytics-dashboard-templates/
 site_name: LambdaTest
 slug: analytics-dashboard-templates/
 ---
@@ -28,20 +28,13 @@ slug: analytics-dashboard-templates/
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/analytics-overview/"
+          "item": "https://www.lambdatest.com/support/docs/analytics-dashboard-templates/"
         }]
       })
     }}
 ></script>
 
----
-
-import VideoEmbed from '../src/component/videoEmbed';
-
-<VideoEmbed 
-  src="https://share.synthesia.io/embeds/videos/f990e40b-de80-404c-95f9-e446ef8d8ee7" 
-  title="Exploring Pre-Built Templates in Lambdatest Insights"
-/>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/ge8w56jZTWw?si=3EJwrMTH6GC_hDd3" title="Exploring Pre-Built Templates in Lambdatest Insights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## About the Dashboard templates:
 
@@ -223,24 +216,3 @@ The following are the use cases for the template:
 * Scheduling a Email notification of the dashboard - Read More
 * Share the Dashboard with a public or a private link with your team - [Read More](/docs/analytics-dashboard-features/#expiry-settings-for-dashboard-share-link)
 * Exporting the Dashboard as a PDF - [Read More](/docs/analytics-dashboard-features/#export-dashboard-as-pdf)
-
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Analytics 
-      </span>
-    </li>
-  </ul>
-</nav>
