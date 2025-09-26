@@ -9,6 +9,7 @@ url: https://www.lambdatest.com/support/docs/test-intelligence-flakiness-test-de
 site_name: LambdaTest
 slug: test-intelligence-flakiness-test-detection/
 ---
+
 import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
@@ -35,8 +36,6 @@ import NewTag from '../src/component/newTag';
     }}
 >
 </script>
-
-## Introduction
 
 Flaky Test Detection helps you to identify the flaky tests in your test suite. It provides you with the list of tests that are flaky and the reason behind the flakiness <img src={require('../assets/images/test-intelligence/flake-icon.webp').default} alt="flake icon" width="16" /> of the test. You can also view the history of the flaky tests and the number of times the test has failed in the past. This helps you to identify the flaky tests and fix them to improve the quality of your test suite. 
 

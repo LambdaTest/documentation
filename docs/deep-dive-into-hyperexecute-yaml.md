@@ -1725,25 +1725,21 @@ framework:
     - "-Dplatname=win"
 ```
 
+### `syncStart`
+By default, parallel tasks in autosplit or matrix mode begin execution as soon as the VM is allocated. However, in certain situations (e.g., benchmarking or comparative analysis), you may want all VMs to start tasks at the same time.
+
+To support this, HyperExecute provides the `syncStart` directive in the job YAML.
+
+```yaml
+execution:
+  syncStart: true
+```
+
+- When `syncStart` is enabled, the job ensures that all VMs are allocated and ready before starting scenario execution i.e. tests.
+- The system waits for up to 15 minutes for all required VMs to become available.
+  - If all VMs are allocated within this window → tasks start together.
+  - If some VMs are still pending after 15 minutes → the job proceeds with the allocated VMs.
+
+> This feature is supported only in [`autosplit`](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) and [`matrix`](/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) mode and not in hybrid mode
+
 <!-- GENERAL ENDED-->
-
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Deep Dive into HyperExecute YAML
-      </span>
-    </li>
-  </ul>
-</nav>
