@@ -165,6 +165,7 @@ The **HyperExecute YAML** file serves as the foundational component for test exe
 | [project](/support/docs/deep-dive-into-hyperexecute-yaml/#project) | String | Segregate data at a project/repo level |
 | [slackChannel](/support/docs/deep-dive-into-hyperexecute-yaml/#slackchannel) | String | Allows you to receive notifications of your Job updates directly in your preferred Slack channel. |
 | [afterEachScenario](/support/docs/deep-dive-into-hyperexecute-yaml/#aftereachscenario) | List of Strings | Allows you to trigger your define tasks after each test scenario. |
+| [syncStart](/support/docs/deep-dive-into-hyperexecute-yaml/#execution) | Map | Ensures all VMs are ready before starting parallel tasks. |
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
