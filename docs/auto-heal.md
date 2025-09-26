@@ -39,8 +39,11 @@ const capability = {
     }
 }
 ```
+> **Warning:** The `autoHeal` capability will only work when `smartWait` is **disabled**. Both features cannot be enabled together in the same test session.
 
-> **Note:** There are no Prerequisites required for enabling the auto-healing feature. You can enable the auto-healing feature directly via desired capabilities.  
+:::info
+There are no prerequisites required for enabling the auto-healing feature. You can enable the auto-healing feature directly via desired capabilities.
+:::
 
 ### Language Preferences:
 ---
