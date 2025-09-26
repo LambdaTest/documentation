@@ -1201,15 +1201,15 @@ module.exports = {
       {
         type: "doc",
         label: "Getting Started",
-      id: "getting-started-with-agent-to-agent-testing",
+        id: "getting-started-with-agent-to-agent-testing",
 
       },
       {
         type: "doc",
         label: "Test Your First AI Agent",
         id: "testing-your-first-ai-agent",
-     }
-      
+      }
+
 
     ],
   ],
@@ -2042,7 +2042,7 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Import Test Cases",
-            items: [ "csv-import", "one-click-migration-from-testrail" ],
+            items: ["csv-import", "one-click-migration-from-testrail"],
           },
           "generate-test-cases-with-ai",
           // "create-manage-test-cases",
@@ -2072,7 +2072,7 @@ module.exports = {
         collapsed: true,
         label: "Test Runs",
         items: [
-          "test-run-creation-and-management", 
+          "test-run-creation-and-management",
           "test-instance-audit-logs"
         ],
       },
@@ -2086,7 +2086,7 @@ module.exports = {
         collapsed: true,
         label: "Insights & Reports",
         items: [
-          "insights-dashboard", 
+          "insights-dashboard",
           "tms-reports"
         ],
       },
@@ -2377,7 +2377,6 @@ module.exports = {
             label: "Organize Tests",
             items: [
               "command-annotations",
-              "build-split",
               "selenium-add-test-meta-data",
             ],
           },
@@ -2413,6 +2412,8 @@ module.exports = {
               "upload-files-using-lambdatest",
               "setup-pre-run-executable",
               "har-log-viewer",
+              "upload-files-using-lambdatest",
+              "build-split",
             ],
           },
         ],
@@ -2431,16 +2432,6 @@ module.exports = {
           "timeouts-issues-and-resolutions",
           "lambda-exceptions",
           "performance-tips",
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Advanced Features",
-        items: [
-          "upload-files-using-lambdatest",
-          "setup-pre-run-executable",
-          "build-split",
         ],
       },
       {
@@ -3131,7 +3122,7 @@ module.exports = {
         label: "Visual AI Agent",
         id: "smartui-visual-ai",
       },
-       {
+      {
         type: "doc",
         label: "Visual Test Creation with KaneAI",
         id: "kaneai-smartui-visual-testing",
@@ -3141,7 +3132,7 @@ module.exports = {
         label: "Visual Test with Katalon",
         id: "smartui-katalon-plugin",
       },
-  
+
       {
         type: "category",
         collapsed: false,
@@ -3983,7 +3974,7 @@ module.exports = {
       },
     ],
   ],
-  
+
   ConcurrencyWidgetSidebar: [
     {
       type: "link",
