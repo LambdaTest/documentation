@@ -67,6 +67,7 @@ The ```framework``` field in Hyperexecute YAML Version 0.2 allows you to configu
 | [artifacts](#artifacts) | Boolean | No | Specifies whether to generate artifacts or not |
 | [language](#language) | String | No | Specifies the device’s system language for the test session. This determines the language in which your app’s UI and strings will be displayed. |
 | [locale](#locale) | String | No | Defines the regional format settings such as date, time, currency, and number conventions. |
+| [mitmProxy](#mitmProxy) | Boolean | No | Capture network logs directly from emulator sessions using MITM. |
 
 ### `name`
 Specifies the testing framework used in your repository.
@@ -204,6 +205,17 @@ framework:
 ```
 
 
+### `mitmProxy`
+
+You can now capture network logs directly from emulator sessions using MITM. This enhancement enables deeper debugging of API calls, request/response payloads, and overall network traffic during test execution.
+
+```yaml
+framework:
+  args:
+    mitmProxy: true
+```
+
+
 ## Sample Yaml Version 0.2
 
 ```yaml
@@ -231,6 +243,7 @@ framework:
     region: ap
     language: es
     locale: es
+    mitmProxy: true
 
 retryOnFailure: true
 maxRetries: 1
