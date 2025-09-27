@@ -135,6 +135,8 @@ https://github.com/LambdaTest/hyperexecute-maestro-sample-test/blob/main/ios-sim
 
 </Tabs>
 
+> HyperExecute now supports [tunnel capabilities](/support/docs/hyperexecute-how-to-configure-tunnel/) for Maestro tests running on both virtual devices and real devices using the Raw Framework configuration.
+
 ## Step 5: Generate JUnit XML Report
 1. Update the `runTest.sh` file to include the `--format junit` flag in the maestro test command:
 
