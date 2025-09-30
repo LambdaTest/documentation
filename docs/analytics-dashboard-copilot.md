@@ -10,6 +10,8 @@ site_name: LambdaTest
 slug: analytics-dashboard-copilot/
 ---
 
+import NewTag from '../src/component/newTag';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -33,20 +35,11 @@ slug: analytics-dashboard-copilot/
       })
     }}
 ></script>
-
----
-
-import NewTag from '../src/component/newTag';
-import VideoEmbed from '../src/component/videoEmbed';
-
-# Getting Started with AI CoPilot Dashboard <NewTag value="BETA" bgColor="#ffec02" color="#000" />
+# Getting Started with AI CoPilot Dashboard  <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
 The AI CoPilot Dashboard is an innovative feature designed to revolutionize the way you analyze and gain insights from your data. By leveraging the power of artificial intelligence, the dashboard provides intelligent recommendations, insights, and predictions tailored to your specific data, enabling you to make data-driven decisions faster than ever before.
 
-<VideoEmbed 
-  src="https://share.synthesia.io/embeds/videos/8941e178-8b9c-4b04-ac2c-367efeb7d0fc" 
-  title="Exploring the CoPilot"
-/>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/0CwsyCZOzYU?si=3YMIA6hb5mAu50ba" title="Exploring the CoPilot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Prerequisites
 

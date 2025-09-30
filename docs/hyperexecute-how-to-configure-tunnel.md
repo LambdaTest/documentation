@@ -1,7 +1,7 @@
 ---
 id: hyperexecute-how-to-configure-tunnel
-title: How to Configure Tunnel with HyperExecute
-hide_title: true
+title: Tunnel Configuration in HyperExecute
+hide_title: false
 sidebar_label: How to Configure Tunnel with HyperExecute
 description: Learn to set up a Tunnel with HyperExecute effortlessly with our straightforward guide, simplifying the configuration process for you!
 keywords:
@@ -37,37 +37,36 @@ slug: hyperexecute-how-to-configure-tunnel/
       })
     }}
 ></script>
+You can configure a secure tunnel in HyperExecute to test applications that are:
 
-# Tunnel Configuration
+- Hosted locally on your system, or
+- Behind a private network/firewall.
 
-***
+## Prerequisites
+- HyperExecute YAML file -> HyperExecute supports multiple ways of setting up tunnels directly from your YAML configuration. You can use any version of [YAML](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/) to pass the Tunnel parameters. 
+- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) to trigger your tests.
 
-## How to Configure Tunnel with HyperExecute?
-
-> You can use any version of YAML to pass the Tunnel Parameters.
-
-If you want to use a tunnel with HyperExecute, you will have to download the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and configure it.
-
-There are 3 ways to use a tunnel in HyperExecute:
+## Ways to Use Tunnel in HyperExecute
+There are 3 main ways to use a tunnel in HyperExecute:
 
 ### 1. Simple `tunnel` Connection
+Enable tunnel directly by setting the `tunnel` flag to `true` in your HyperExecute YAML file. The HyperExecute CLI will launch a tunnel as sub process for accessing your applications which are locally hosted or behind a firewall. 
 
-Set the `tunnel` flag to `true` to enable it. The cli will launch a tunnel as sub process for accessing your applications which are locally hosted or behind a firewall. 
-
-```bash
+```yaml title="hyperexecute.yaml"
 tunnel: true
 ```
+> Recommended if you want to quickly enable tunnel access for locally hosted apps.
 
 ### 2. Using Existing `tunnel`
+If you already have a running tunnel, you can reuse it by specifying its name to access your applications which are locally hosted or behind a firewall.
 
-Specify the list of already running tunnel names which you want to use for accessing your applications which are locally hosted or behind a firewall.
-
-```bash
+```yaml title="hyperexecute.yaml"
 tunnelNames: ["lambdatest_tunnel"]
 ```
 
-### 3. Advanced `tunnel` Configurations
+> Useful when running multiple jobs and you don’t want to spawn new tunnels each time.
 
+### 3. Advanced `tunnel` Configurations
 These are the parameters you can use to configure your [tunnel](/support/docs/deep-dive-into-hyperexecute-yaml/#tunnel) settings when running it.
 
 | Options | Type | Description |
@@ -79,7 +78,11 @@ These are the parameters you can use to configure your [tunnel](/support/docs/de
 |`systemProxy`| Boolean | Should the tunnel be OS system wide? Default false. |
 |`checkTunnelOnFailure`| Boolean | Check tunnel on failure adds a check on our system to check the tunnel connection if a test fails and the tunnel is set to true. This option will retry the test 2 times if tunnel connection is flaky. |
 
-```bash
+> HyperExecute now supports tunnel capabilities for [Maestro](https://www.lambdatest.com/support/docs/hyperexecute-maestro-testing/) tests running on both virtual devices and real devices using the Raw Framework configuration.
+
+```yaml title="hyperexecute.yaml"
+tunnel: true
+
 tunnelOpts:
   global: true
 ```
