@@ -2163,7 +2163,9 @@ module.exports = {
               "device-passcode-on-realdevice",
               "assistive-touch-on-real-ios-devices",
               "dark-mode-on-real-devices",
-              "group-folder-redirect-on-real-device"
+              "group-folder-redirect-on-real-device",
+              "apple-pay-manual",
+              "upload-files-media"
             ],
           },
         ],
@@ -2892,14 +2894,15 @@ module.exports = {
               "appium-date-and-time",
               "device-passcode-appautomation",
               "set-device-dark-mode",
-              "smart-heal-appium"
+              "smart-heal-appium",
+              "apple-pay-auto"
             ],
           },
           {
             type: "category",
             collapsed: true,
             label: "Smart TV Automation",
-            items: ["appium-appletv", "appium-firetv", "appium-rokutv"],
+            items: ["appium-appletv", "appium-firetv", "appium-rokutv","appium-androidtv"],
           },
           {
             type: "category",
