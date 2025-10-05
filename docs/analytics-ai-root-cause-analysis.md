@@ -128,12 +128,18 @@ Our CRM application has specific failure patterns to watch for:
 | **File Processing** | Upload failures, format validation, processing timeouts | When tests involve file operations (imports, exports, attachments) |
 | **Network Issues** | Connectivity problems, DNS failures, proxy issues | When tests fail due to network-related problems |
 
-### Step 4: Configure Pattern Filtering
+### Step 4: Configure Intelligent Targeting
 
-Use regex patterns to control which tests get RCA analysis:
+Configure intelligent targeting rules to precisely control which tests, builds, tags, or jobs are included in AI-powered analysis:
 
-1. **Add Patterns**: Enter regex patterns in the input field
+1. **Add Targeting Rules**: Enter regex patterns in the input field
 2. **Click Include (+) or Exclude (-)**: Choose whether to include or exclude matching tests
+3. **Configure Multiple Criteria**: Set targeting rules for:
+   - **Test Names**: Target specific test suites or test patterns
+   - **Build Tags**: Include or exclude builds with specific tags
+   - **Test Tags**: Include or exclude tests with specific tags (e.g., playwright_test, atxHyperexecute_test)
+   - **Build Tags**: Include or exclude builds with specific tags (e.g., hourly, nightly)
+   - **Job Labels**: Include tests with specific job labels or tags
 
 #### Example Configuration
 
@@ -145,7 +151,19 @@ Use regex patterns to control which tests get RCA analysis:
 **Build Tag:**
 - **Include**: `^hourly` - Only analyze builds with tag starting with "hourly"
 
-**Result**: RCA analysis will run only on tests with name containing "prod" and not containing "non-critical", from builds with tag starting with "hourly".
+**Failure Type:**
+- **Include**: `ApiError5xx|ResourceLoadFailure` - Focus on API and resource loading failures
+- **Exclude**: `TestScriptError` - Skip script-related errors for this analysis
+
+**Browser/OS:**
+- **Include**: `Chrome.*MacOS|Chrome.*Windows` - Target Chrome on Mac and Windows
+- **Exclude**: `.*Linux.*` - Skip Linux environments
+
+**Test Tags:**
+- **Include**: `playwright_test|atxHyperexecute_test` - Focus on specific test frameworks
+- **Exclude**: `.*smoke.*` - Skip smoke tests
+
+**Result**: AI-powered analysis will run only on production tests (excluding non-critical ones) from hourly builds, focusing on API and resource failures in Chrome browsers on Mac/Windows, using Playwright or HyperExecute test frameworks, while excluding smoke tests.
 :::
 
 
@@ -234,7 +252,7 @@ The RCA Category Trends widget in Insights enables you to:
 
 - **Start with "All failures"** to get comprehensive coverage, then refine based on your needs
 - **Use specific special instructions** to guide the AI toward your most critical issues
-- **Set up pattern filtering** to focus on relevant test suites and exclude noise
+- **Set up intelligent targeting** to focus on relevant test suites and exclude noise
 
 ### 2. Interpreting Results
 
@@ -274,7 +292,7 @@ The RCA Category Trends widget in Insights enables you to:
 <summary><strong>Inaccurate RCA Results</strong></summary>
 
 - **Refine special instructions**: Provide more specific context about your application
-- **Update pattern filtering**: Exclude irrelevant tests that might confuse the analysis
+- **Update intelligent targeting**: Exclude irrelevant tests that might confuse the analysis
 - **Review error categorization**: Ensure test failures are properly categorized
 - **Provide feedback**: Use any available feedback mechanisms to improve accuracy
 
