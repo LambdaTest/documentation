@@ -48,7 +48,7 @@ AI RCA is an intelligent feature that uses advanced machine learning algorithms 
 
 - **Automated failure analysis** that runs immediately when tests fail
 - **Intelligent root cause identification** distinguishing between primary causes and cascading symptoms
-- **Actionable remediation steps** with specific fixes and recommendations
+- **Actionable steps to fix** with specific fixes and recommendations
 - **Historical trend analysis** to identify recurring issues and patterns
 - **Comprehensive error timelines** showing the sequence of events leading to failures
 
@@ -196,9 +196,9 @@ The Error Timeline provides a chronological sequence of events leading to the fa
 5. **Wait timeout** - No connections available (30s)
 6. **Test fails** - "Contact creation timeout"
 
-#### Remediation Steps
+#### Steps to Fix
 
-Each RCA includes specific, actionable remediation steps with clear implementation guidance:
+Each RCA includes specific, actionable steps to fix with clear implementation guidance:
 
 **Database Connection Issues:**
 - **Quick Fix**: Increase connection pool from 10 to 50
@@ -241,7 +241,7 @@ The RCA Category Trends widget in Insights enables you to:
 - **Focus on primary root causes** rather than cascading symptoms
 - **Prioritize high-severity issues** for immediate attention
 - **Use the error timeline** to understand the sequence of events
-- **Apply remediation steps systematically** starting with the most critical fixes
+- **Apply steps to fix systematically** starting with the most critical fixes
 
 ### 3. Continuous Improvement
 
