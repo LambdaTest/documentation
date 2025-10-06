@@ -156,10 +156,13 @@ Access additional functions for your build:
 
    <img loading="lazy" src={require('../assets/images/web-scanner/editscan-schedule.png').default} alt="Edit Scan Schedule" className="doc_img"/>
 
-3. **Delete Scan**  
+3. **Run Scan Now**  
+   Run a new scan on demand and create a new build for comparison. 
+
+4. **Delete Scan**  
    Remove a scan from the dashboard.
 
-4. **Stop Recurring Scan**  
+5. **Stop Recurring Scan**  
    Halt any scheduled recurring scans instantly.
 
 
