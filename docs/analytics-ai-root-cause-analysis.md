@@ -117,16 +117,16 @@ Our CRM application has specific failure patterns to watch for:
 
 **Possible Categories and Descriptions:**
 
-| Category | Description | When to Use |
-|----------|-------------|-------------|
-| **Database Issues** | Connection timeouts, query performance, data integrity problems | When tests fail during data operations (CRUD, reports, imports) |
-| **API Integration** | Third-party service failures, rate limiting, authentication issues | When tests interact with external services (Salesforce, payment gateways) |
-| **UI/UX Problems** | Element not found, timing issues, responsive design failures | When tests fail on user interface interactions |
-| **Performance Issues** | Slow page loads, memory leaks, resource exhaustion | When tests timeout or run very slowly |
-| **Environment Issues** | Test data problems, configuration mismatches, infrastructure failures | When failures are environment-specific rather than code issues |
-| **Authentication/Authorization** | Login failures, permission errors, session timeouts | When tests fail during user authentication or access control |
-| **File Processing** | Upload failures, format validation, processing timeouts | When tests involve file operations (imports, exports, attachments) |
-| **Network Issues** | Connectivity problems, DNS failures, proxy issues | When tests fail due to network-related problems |
+| Category | Description |
+|----------|-------------|
+| **Database Issues** | Connection timeouts, query performance, data integrity problems |
+| **API Integration** | Third-party service failures, rate limiting, authentication issues |
+| **UI/UX Problems** | Element not found, timing issues, responsive design failures |
+| **Performance Issues** | Slow page loads, memory leaks, resource exhaustion |
+| **Environment Issues** | Test data problems, configuration mismatches, infrastructure failures |
+| **Authentication/Authorization** | Login failures, permission errors, session timeouts |
+| **File Processing** | Upload failures, format validation, processing timeouts |
+| **Network Issues** | Connectivity problems, DNS failures, proxy issues |
 
 ### Step 4: Configure Intelligent Targeting
 
@@ -136,34 +136,44 @@ Configure intelligent targeting rules to precisely control which tests, builds, 
 2. **Click Include (+) or Exclude (-)**: Choose whether to include or exclude matching tests
 3. **Configure Multiple Criteria**: Set targeting rules for:
    - **Test Names**: Target specific test suites or test patterns
-   - **Build Tags**: Include or exclude builds with specific tags
+   - **Build Names**: Include or exclude builds with specific names (e.g., hourly, nightly)
    - **Test Tags**: Include or exclude tests with specific tags (e.g., playwright_test, atxHyperexecute_test)
    - **Build Tags**: Include or exclude builds with specific tags (e.g., hourly, nightly)
    - **Job Labels**: Include tests with specific job labels or tags
 
-#### Example Configuration
+#### Rule Logic and Application
+
+The intelligent targeting system applies rules using the following logic:
+
+**Rule Evaluation Process:**
+1. **Include Rules (AND Logic)**: All Include rules within the same category must match for a test to be considered
+2. **Exclude Rules (OR Logic)**: Any Exclude rule that matches will immediately exclude the test from analysis
+3. **Cross-Category Logic**: Include rules across different categories (Test Names, Build Tags, etc.) must ALL match
+4. **Exclusion Precedence**: Exclude rules take priority over Include rules - if any exclude rule matches, the test is excluded regardless of include matches
+
+**Best Practices for Rule Configuration:**
+- **Start Broad**: Begin with general include rules, then add specific exclusions
+- **Use Specific Patterns**: Avoid overly broad regex patterns that might include unintended tests
+- **Test Your Rules**: Verify rule behavior with sample test names and tags before applying
+- **Regular Review**: Periodically review and update rules based on changing test patterns
+
+<!-- #### Example Configuration -->
+#### Example Configuration for Production Test Analysis
 
 :::tip
+
 **Test Name:**
 - **Include**: `.*prod.*` - Only analyze tests with name containing "prod"
 - **Exclude**: `.*non-critical.*` - Skip tests with name containing "non-critical"
 
-**Build Tag:**
+**Build Tags:**
 - **Include**: `^hourly` - Only analyze builds with tag starting with "hourly"
-
-**Failure Type:**
-- **Include**: `ApiError5xx|ResourceLoadFailure` - Focus on API and resource loading failures
-- **Exclude**: `TestScriptError` - Skip script-related errors for this analysis
-
-**Browser/OS:**
-- **Include**: `Chrome.*MacOS|Chrome.*Windows` - Target Chrome on Mac and Windows
-- **Exclude**: `.*Linux.*` - Skip Linux environments
 
 **Test Tags:**
 - **Include**: `playwright_test|atxHyperexecute_test` - Focus on specific test frameworks
 - **Exclude**: `.*smoke.*` - Skip smoke tests
 
-**Result**: AI-powered analysis will run only on production tests (excluding non-critical ones) from hourly builds, focusing on API and resource failures in Chrome browsers on Mac/Windows, using Playwright or HyperExecute test frameworks, while excluding smoke tests.
+**Result**: AI-powered analysis will run only on production tests (excluding non-critical ones) from hourly builds, focusing on Playwright or HyperExecute test tags, while excluding smoke tests. This configuration helps narrow down analysis to the most critical test scenarios.
 :::
 
 
