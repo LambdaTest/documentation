@@ -200,6 +200,161 @@ smartui upload-pdf ./spec.pdf --fetch-results results.json
 
 This CLI method streamlines PDF uploads and result retrieval, making it ideal for CI/CD pipelines and automated workflows.
 
+## Option 3: Uploading PDFs via SmartUI Java SDK
+
+For developers who prefer programmatic control, SmartUI provides a Java SDK to upload PDFs and manage visual regression testing programmatically.
+
+### Step 1: Install the SmartUI Java SDK
+
+Add the SmartUI Java SDK to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>io.github.lambdatest</groupId>
+    <artifactId>lambdatest-java-sdk</artifactId>
+    <version>1.0.18</version>
+</dependency>
+```
+
+### Step 2: Set up your credentials
+
+<Tabs className="docs__val">
+
+<TabItem value="terminal" label="Linux / MacOS" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="cmd" label="Windows-CMD" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows-PS" default>
+
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`$Env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+$Env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+$Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`
+
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+</Tabs>
+
+### Step 3: Upload PDFs using Java SDK
+
+You can upload PDFs in two modes:
+
+<Tabs className="docs__val">
+
+<TabItem value="local" label="Local Mode" default>
+
+Upload pre-existing PDFs from your local machine:
+
+```java
+import io.github.lambdatest.SmartUIConfig;
+import io.github.lambdatest.SmartUIPdf;
+import io.github.lambdatest.models.FormattedResults;
+
+public class SmartuiPdfLocalTest {
+    public void uploadLocalPdf() throws Exception {
+        String projectToken = System.getenv("PROJECT_TOKEN");
+        
+        SmartUIConfig config = new SmartUIConfig()
+            .withProjectToken(projectToken)
+            .withFetchResult(true);
+
+        SmartUIPdf pdfUploader = new SmartUIPdf(config);
+
+        // Upload PDF file
+        String pdfPath = "path/to/your/document.pdf";
+        FormattedResults result = pdfUploader.uploadPDF(pdfPath);
+
+        System.out.println("Upload result: " + result);
+    }
+}
+```
+
+</TabItem>
+
+<TabItem value="cloud" label="Cloud Mode">
+
+Upload PDFs downloaded during LambdaTest cloud test execution:
+
+```java
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.Base64;
+
+public class SmartuiPdfCloudTest {
+    public void uploadCloudPdf(WebDriver driver) throws Exception {
+        String projectToken = System.getenv("PROJECT_TOKEN");
+        
+        // Download PDF from cloud session
+        String base64Content = (String) ((JavascriptExecutor) driver)
+            .executeAsyncScript("lambda-file-content=LambdaTest.pdf");
+        
+        // Convert base64 to PDF file
+        byte[] pdfBytes = Base64.getDecoder().decode(base64Content);
+        File pdfFile = new File("downloaded.pdf");
+        try (FileOutputStream fos = new FileOutputStream(pdfFile)) {
+            fos.write(pdfBytes);
+        }
+
+        // Upload to SmartUI
+        SmartUIConfig config = new SmartUIConfig()
+            .withProjectToken(projectToken)
+            .withFetchResult(true);
+
+        SmartUIPdf pdfUploader = new SmartUIPdf(config);
+        FormattedResults result = pdfUploader.uploadPDF(pdfFile.getAbsolutePath());
+
+        System.out.println("Upload result: " + result);
+    }
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+### Step 4: Configuration Options
+
+| Method | Description |
+|-------|-------------|
+| `.withProjectToken(token)` | Required. Your SmartUI project token. |
+| `.withFetchResult(true)` | Optional. Returns structured test results. |
+| `.withBuildName("v2.1")` | Optional. Assign a custom build name. |
+
+### Step 5: Run your tests
+
+```bash
+mvn test
+```
+
+The SDK method provides programmatic control over PDF uploads and is ideal for integration into existing Java-based test automation frameworks.
+
 ## Use Cases of Smart PDF Comparison
 
 1. **Software Documentation**: In software development, PDF comparison can be utilized to ensure the accuracy and consistency of user manuals, system documentation, and more. It can help in tracking changes made in the document across different software versions or updates.
@@ -213,5 +368,3 @@ This CLI method streamlines PDF uploads and result retrieval, making it ideal fo
 5. **Quality Assurance**: In industries where accuracy is paramount, such as manufacturing or engineering, PDF comparison can be used for quality assurance. Comparing design specs, product blueprints, or operational guidelines can ensure consistency and adherence to quality standards.
 
 6. **Archiving and Record Keeping**: For businesses or organizations that need to maintain records over a long period, PDF comparison can help verify the accuracy and integrity of these archives. It can highlight any alterations or modifications made to a document over time.
-
-In summary, PDF comparison is a versatile tool that can streamline workflows, improve accuracy, and enhance productivity in many different sectors and use cases.
