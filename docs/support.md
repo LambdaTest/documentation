@@ -166,7 +166,7 @@ import NewTag from '../src/component/newTag';
   </div>
 </div>
     <div className="home_inners_box">
-       <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>KaneAI &nbsp; <NewTag  value="BETA" /> </h2>
+       <h2 className='homeMain_h2'><RealtimeLightIcon className="home_icons home_light_icon" role="presentation"/> <RealtimeDarkIcon className="home_icons home_dark_icon" role="presentation"/>KaneAI &nbsp; </h2>
       <div className="home_inners">
         <a href="/support/docs/getting-started-with-kane-ai/" ><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/author-your-first-desktop-browser-test/" ><p className="p_home_inners">Author Desktop Browser Test</p></a>
