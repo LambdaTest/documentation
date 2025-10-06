@@ -3822,6 +3822,7 @@ module.exports = {
         "analytics-build-comparison",
         "analytics-smart-tags-test-intelligence",
         "analytics-test-failure-classification",
+        "analytics-ai-root-cause-analysis",
         "insights-app-profiling",
       ],
     },
