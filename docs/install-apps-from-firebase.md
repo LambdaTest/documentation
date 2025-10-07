@@ -79,7 +79,7 @@ Login to your LambdaTest account. Visit **Real Device** from the left panel and 
 When you click on Add Project, you can integrate your Firebase account with LambdaTest either by uploading a **config file** or connecting **using credentials**. You should have these credentials from the prerequisite step.
 
 **Upload a Config file -**  
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/2photo.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/real-device-app-testing/firebase-application-upload-steps.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 **Connect with credentials -** 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/firebase/Animeshrox.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
