@@ -64,15 +64,15 @@ sourcePayload:
     
 3.  **ref**: The name of the branch that you want to test.
     
-4.  **accessToken**: Your personal access token (PAT), generated on your Git platform. If you want to know how to generate a PAT for GitHub, go through [this](#how-to-generate-a-personal-access-token-on-github) section.  
+4.  **accessToken**: Your personal access token (PAT), generated on your Git platform. If you want to know how to generate a PAT for GitHub, go through [this](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) section.  
 
 > **Note**: You don’t need to use a Personal Access Token if your repository is public. 
 
 5. **commit**: If you want to run a specific commit file other than the **HEAD** commit, then you need to define here the specific commit ID.
 
-> As a best practice, you should not use your PAT directly in the YAML file. Instead of that, you can make use of our [vault](/support/docs/deep-dive-into-hyperexecute-yaml/#12-vault) feature and add the PAT to your secrets. To use the vault feature in the HyperExecute YAML file, you can refer the example given below.
+> As a best practice, you should not use your PAT directly in the YAML file. Instead of that, you can make use of our [vault](https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/) feature and add the PAT to your secrets. To use the vault feature in the HyperExecute YAML file, you can refer the example given below.
 
-```bash
+```yaml title="hyperexecute.yaml"
 sourcePayload:
   platform: git
   link: https://--------
@@ -88,7 +88,7 @@ sourcePayload:
 
 A sample HyperExecute YAML file is added below for your reference.
 
-```yaml
+```yaml title="hyperexecute.yaml"
 ---
 version: "0.1"
 globalTimeout: 90
