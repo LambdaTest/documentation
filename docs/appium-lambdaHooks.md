@@ -158,8 +158,7 @@ Any command logs executed between `lambda-testCase-start` and `lambda-testCase-e
 
 You can also filter the command logs based on these labels.A screenshot has been provided below, demonstrating the use of labels and how to filter command logs based on them.
 
-<img loading="lazy" src={require('../assets/images/appium-lambdaHooks/02.webp').default} alt="Test Case Filter" width="1200" height="550" className="doc_img"/>
-
+![Test Cases](../assets/images/real-device-app-testing/Test-Cases.png)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -180,3 +179,36 @@ You can also filter the command logs based on these labels.A screenshot has been
     </li>
   </ul>
 </nav>
+
+---
+
+## Command Annotations 
+
+Command Annotations allow you to add metadata and debugging information to your test scripts. They work similarly to LambdaHooks by providing structured logs on the **LambdaTest Automation Dashboard**, making it easier to track test execution, debug failures, and navigate specific test sections.
+
+![Command Annotation](../assets/images/real-device-app-testing/command-annotation.png)
+
+### Using Command Annotations
+
+#### Annotation Start
+```java
+driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"youtube\", \"level\": \"debug\"}}");
+```
+
+**Arguments:**
+
+| Argument | Description |
+|----------|-------------|
+| `data` | String value representing the information you want to log. |
+| `level` | Log severity level. Acceptable values: `info` (default), `debug`, `warn`, `error`. |
+
+#### Annotation End
+To close the executor at the end of your script, pass `data` as an empty string:
+
+```java
+driver.execute_script("lambdatest_executor: {\"action\": \"stepcontext\", \"arguments\": {\"data\": \"\"}}");
+```
+
+:::info
+**Mutual exclusivity:** Test case and Command Annotations cannot be used together in the same script. You can only use **one** of them per session.
+:::
