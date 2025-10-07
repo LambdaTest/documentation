@@ -14,6 +14,8 @@ site_name: LambdaTest
 slug: hyperexecute-use-cases/
 ---
 
+import DocCard from '../src/component/DocCard';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -37,8 +39,27 @@ slug: hyperexecute-use-cases/
       })
     }}
 ></script>
-
 <div className="support_main">  
+  <a href="/support/docs/hyperexecute-testng-use-cases/">
+    <div className="support_inners">
+      <h3>TestNG</h3>
+    </div>
+  </a>
+  <a href="/support/docs/hyperexecute-python-use-cases/">
+    <div className="support_inners">
+      <h3>Python + Pytest + Behave</h3>
+    </div>
+  </a>
+    <a href="/support/docs/hyperexecute-csharp-use-cases/">
+    <div className="support_inners">
+      <h3>C# + NUnit + SpecFlow</h3>
+    </div>
+  </a>
+    <a href="/support/docs/hyperexecute-yaml-creation-for-playwright/">
+    <div className="support_inners">
+      <h3>YAML creation for Playwright tests</h3>
+    </div>
+  </a>
   <a href="/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/">
     <div className="support_inners">
       <h3>How you can turbo boost your tests execution with our Smart Caching feature?</h3>
