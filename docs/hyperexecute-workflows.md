@@ -95,15 +95,7 @@ Variables let you customize job runs without the need of creating multiple workf
 3. Once you have added all the keys and their values, save the workflow.
 4. You have the flexibility to edit the values for specific keys at the runtime, whenever you are running the workflow manually.
 
-:::note
-Make sure that you have added `vars` parameter in your YAML file in the given format ([know more](/support/docs/deep-dive-into-hyperexecute-yaml/#vars)):
-```json
-vars:
-    Variable_1: ${key_1}
-    Variable_2: ${key_2}
-    Variable_3: ${key_3}
-```
-:::
+> Please note that the variables added from the workflows dashboard will be automatically added to the YAML file.
 
 <br />
 <video class="right-side" width="100%" controls id="vid">
