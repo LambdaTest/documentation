@@ -43,7 +43,7 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smart-ui-cypress/"
+          "item": "https://www.lambdatest.com/support/docs/smartui-cli-env-variables/"
         }]
       })
     }}
@@ -65,14 +65,25 @@ export LT_USERNAME="YOUR USERNAME"
 export LT_ACCESS_KEY="YOUR ACCESS KEY"
 export PROJECT_NAME="Required Project Name"
 ```
+
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set LT_USERNAME="YOUR USERNAME"
 set LT_ACCESS_KEY="YOUR ACCESS KEY"
 set PROJECT_NAME="Required Project Name"
 ```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env: LT_USERNAME="YOUR USERNAME"
+$env: LT_ACCESS_KEY="YOUR ACCESS KEY"
+$env: PROJECT_NAME="Required Project Name"
+```
+
 </TabItem>
 </Tabs>
 
@@ -91,10 +102,17 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
@@ -114,12 +132,21 @@ Set the baseline branch for `CLI` projects:
 ```bash
 export BASELINE_BRANCH="Required branch"
 ```
+
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set BASELINE_BRANCH="Required branch"
 ```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env: BASELINE_BRANCH="Required branch"
+```
+
 </TabItem>
 </Tabs>
 
@@ -133,12 +160,21 @@ Set the current branch for `CLI` projects:
 ```bash
 export CURRENT_BRANCH="Required branch"
 ```
+
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set CURRENT_BRANCH="Required branch"
 ```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env: CURRENT_BRANCH="Required branch"
+```
+
 </TabItem>
 </Tabs>
 
@@ -154,14 +190,22 @@ In case you are accessing your network using corporate proxies, set the proxies 
 ```bash
 export HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 ```
+
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 ```
-</TabItem>
 
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env: HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
+```
+
+</TabItem>
 </Tabs>
 
 
@@ -173,12 +217,21 @@ set HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 ```bash
 export HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>/"
 ```
+
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>/"
 ```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env: HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>/"
+```
+
 </TabItem>
 </Tabs>
 
@@ -195,12 +248,21 @@ To enable SmartUI CLI Debug mode, use the following environment variable.
 export LT_SDK_DEBUG=true
 ```
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD" default>
 
 ```bash
 set LT_SDK_DEBUG=true
 ```
 </TabItem>
+
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env: LT_SDK_DEBUG="true"
+```
+
+</TabItem>
+
 </Tabs>
 
 ## 7. Ignoring captured cookies
@@ -210,15 +272,23 @@ Set the following variable to true, to stop the use of cookies captured automati
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
 
-```bash
+```shell
 export SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true
 ```
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD" default>
 
-```bash
+```shell
 set SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true
 ```
+</TabItem>
+
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env: SMARTUI_DO_NOT_USE_CAPTURED_COOKIES="true"
+```
+
 </TabItem>
 </Tabs>
 
@@ -235,7 +305,7 @@ set SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
+      <span className="breadcrumbs__link"> SmartUI Environment Variables </span>
     </li>
   </ul>
 </nav>

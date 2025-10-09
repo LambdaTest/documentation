@@ -38,15 +38,20 @@ This documentation will act as your step-by-step guide in to perform Puppteer te
 
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
-export LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
-set LT_ACCESS_KEY="YOUR ACCESS KEY"
+```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>

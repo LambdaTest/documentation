@@ -43,7 +43,7 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smart-ui-cypress/"
+          "item": "https://www.lambdatest.com/support/docs/smartui-sdk-fetch-results/"
         }]
       })
     }}
@@ -88,11 +88,12 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Powershell" label="Windows-PS">
+<TabItem value="PowerShell" label="PowerShell">
 
-```bash
-$Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```powershell
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
+
 </TabItem>
 </Tabs>
 
