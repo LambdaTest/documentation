@@ -3592,11 +3592,11 @@ module.exports = {
                 label: "Travis CI",
                 id: "smartui-with-travis-ci",
               },
-              {
-                type: "doc",
-                label: "Netlify",
-                id: "smartui-with-netlify",
-              },
+              // {
+              //   type: "doc",
+              //   label: "Netlify",
+              //   id: "smartui-with-netlify",
+              // },
             ],
           },
           {
