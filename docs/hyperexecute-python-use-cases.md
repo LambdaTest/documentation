@@ -90,7 +90,7 @@ If your pipeline fails with:
 
 It means that the `requirements.txt` file might be missing or ignored in .gitignore.
 
-**Solution :** Ensure the file exists in the project root. Remove or comment out any requirements.txt entry from .gitignore. For this issue, ther are no YAML change required — this is a file management fix. However, verify that the command below correctly references the existing file name.
+**Solution :** Ensure the file exists in the project root. Remove or comment out any requirements.txt entry from .gitignore. For this issue, there are no YAML change required — this is a file management fix. However, verify that the command below correctly references the existing file name.
 
 ```bash
 pip install -r requirements.txt --cache-dir CacheDir
