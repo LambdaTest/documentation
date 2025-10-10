@@ -3209,18 +3209,47 @@ module.exports = {
               },
               {
                 type: "category",
-                label: "Mobile SDKs",
+                label: "Mobile Testing",
                 collapsed: true,
                 items: [
                   {
-                    type: "doc",
-                    label: "Appium SDK",
-                    id: "smartui-appium-sdk",
+                    type: "category",
+                    label: "Mobile SDKs",
+                    collapsed: true,
+                    items: [
+                      {
+                        type: "doc",
+                        label: "Appium SDK",
+                        id: "smartui-appium-sdk",
+                      },
+                      {
+                        type: "doc",
+                        label: "Appium Java SDK",
+                        id: "smartui-appium-java-sdk",
+                      },
+                    ],
                   },
                   {
-                    type: "doc",
-                    label: "Appium Java SDK",
-                    id: "smartui-appium-java-sdk",
+                    type: "category",
+                    label: "Mobile Hooks",
+                    collapsed: true,
+                    items: [
+                      {
+                        type: "doc",
+                        label: "Appium Hooks",
+                        id: "smartui-appium-hooks",
+                      },
+                      {
+                        type: "doc",
+                        label: "Espresso Hooks",
+                        id: "espresso-visual-regression",
+                      },
+                      {
+                        type: "doc",
+                        label: "XCUI Hooks",
+                        id: "xcui-visual-regression",
+                      },
+                    ],
                   },
                 ],
               },
@@ -3250,21 +3279,6 @@ module.exports = {
                 type: "doc",
                 label: "Puppeteer Hooks",
                 id: "puppeteer-visual-regression",
-              },
-              {
-                type: "doc",
-                label: "Appium Hooks",
-                id: "smartui-appium-hooks",
-              },
-              {
-                type: "doc",
-                label: "Espresso Hooks",
-                id: "espresso-visual-regression",
-              },
-              {
-                type: "doc",
-                label: "XCUI Hooks",
-                id: "xcui-visual-regression",
               },
             ],
           },
