@@ -46,6 +46,13 @@ set LT_USERNAME="YOUR_USERNAME"
 set LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
 </TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:LT_USERNAME="YOUR_USERNAME"
+$env:LT_ACCESS_KEY="YOUR ACCESS KEY"
+```
+</TabItem>
 </Tabs>
 
 The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
@@ -259,9 +266,7 @@ For additional information about Playwright framework please explore the documen
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-      Getting Started with Selenium Visual Regression  
-      </span>
+      <span className="breadcrumbs__link"> Playwright Visual Regression </span>
     </li>
   </ul>
 </nav>

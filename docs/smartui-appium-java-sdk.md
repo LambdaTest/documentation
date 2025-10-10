@@ -104,6 +104,13 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
 </Tabs>
 
 2. **Directly in the Configuration**:
@@ -314,7 +321,7 @@ For additional information about SmartUI APIs, please explore the documentation 
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">SmartUI App SDK</span>
+      <span className="breadcrumbs__link"> SmartUI Appium Java SDK </span>
     </li>
   </ul>
 </nav>

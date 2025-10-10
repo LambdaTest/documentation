@@ -36,7 +36,7 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smart-ui-cypress/"
+          "item": "https://www.lambdatest.com/support/docs/smartui-basic-auth/"
         }]
       })
     }}
@@ -111,15 +111,22 @@ Then set your environment variables:
 
 ```bash
 export AUTH_USERNAME="your-username"
-export AUTH_PASSWORD="your-password"
 ```
+
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set AUTH_USERNAME="your-username"
-set AUTH_PASSWORD="your-password"
 ```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:AUTH_USERNAME="your-username"
+```
+
 </TabItem>
 </Tabs>
 

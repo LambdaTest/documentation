@@ -114,7 +114,7 @@ Resize your viewport according to your framework and take the screenshot. For ex
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smart-ui-cypress/"
+          "item": "https://www.lambdatest.com/support/docs/smartui-cli-responsive-dom/"
         }]
       })
     }}
@@ -145,7 +145,7 @@ Resize your viewport according to your framework and take the screenshot. For ex
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
+      <span className="breadcrumbs__link"> SmartUI Responsive DOM </span>
     </li>
   </ul>
 </nav>

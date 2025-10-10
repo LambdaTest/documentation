@@ -42,7 +42,7 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smart-ui-cypress/"
+          "item": "https://www.lambdatest.com/support/docs/smartui-wdio-sdk/"
         }]
       })
     }}
@@ -112,11 +112,12 @@ set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Powershell" label="Windows-PS">
+<TabItem value="PowerShell" label="PowerShell">
 
-```bash
-$Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```powershell
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
+
 </TabItem>
 </Tabs>
 
@@ -422,7 +423,7 @@ For additional information about SmartUI APIs please explore the documentation [
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
+      <span className="breadcrumbs__link"> SmartUI WebDriverIO SDK </span>
     </li>
   </ul>
 </nav>

@@ -133,12 +133,14 @@ set SMARTUI_SERVER_ADDRESS='http://localhost:49152'
 ```
 
 </TabItem>
-<TabItem value="Powershell" label="Windows-PS">
+<TabItem value="PowerShell" label="PowerShell">
 
-```bash
-$Env:SMARTUI_SERVER_ADDRESS='http://localhost:49152'
+```powershell
+$env:SMARTUI_SERVER_ADDRESS="http://localhost:49152"
 ```
 </TabItem>
+
+
 </Tabs>
 
 ### Step 2: Execute Your Tests

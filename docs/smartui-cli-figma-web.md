@@ -46,7 +46,7 @@ import CodeBlock from '@theme/CodeBlock';
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smart-ui-cypress/"
+          "item": "https://www.lambdatest.com/support/docs/smartui-cli-figma-web/"
         }]
       })
     }}
@@ -164,10 +164,17 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
@@ -183,10 +190,17 @@ export FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
@@ -199,15 +213,20 @@ set FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
-export LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
-set LT_ACCESS_KEY="YOUR ACCESS KEY"
+```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>
@@ -231,7 +250,7 @@ Please read the following table for more information about the configuration fil
 
 You can now execute tests for `Visual Testing for Figma objects` using the following options:.
 
-```bash
+```powershell
 npx smartui upload-figma-web designs.json
 ```
 
@@ -259,10 +278,17 @@ export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
@@ -278,10 +304,17 @@ export FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
@@ -319,7 +352,7 @@ You can see the Smart UI dashboard to view the results. This will help you ident
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
+      <span className="breadcrumbs__link"> SmartUI Figma-Web CLI </span>
     </li>
   </ul>
 </nav>

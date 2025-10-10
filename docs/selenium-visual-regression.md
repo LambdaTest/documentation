@@ -48,13 +48,14 @@ set LT_USERNAME="YOUR_USERNAME"
 set LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
 </TabItem>
-<TabItem value="Powershell" label="Windows-PS">
+<TabItem value="PowerShell" label="PowerShell">
 
-```bash
-$Env:LT_USERNAME="YOUR_USERNAME"
-$Env:LT_ACCESS_KEY="YOUR_ACCESS_KEY"
+```powershell
+$env:LT_USERNAME="YOUR_USERNAME"
+$env:LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
 </TabItem>
+
 </Tabs>
 
 The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
@@ -640,7 +641,7 @@ This may take a few seconds to process the screenshot. Please ensure that you ha
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Getting Started with Selenium Visual Regression  </span>
+      <span className="breadcrumbs__link"> Selenium Visual Regression </span>
     </li>
   </ul>
 </nav>
