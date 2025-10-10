@@ -43,7 +43,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smart-ui-cypress/"
+          "item": "https://www.lambdatest.com/support/docs/smartui-playwright-java-sdk/"
         }]
       })
     }}
@@ -95,45 +95,28 @@ mvn clean compile
 
 ### Step 4: Setup your credentials
 
-<Tabs className="docs__val">
+<Tabs className="docs__val" groupId="language">
+<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
 
-<TabItem value="terminal" label="Linux / MacOS" default>
-
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-bash">
-  {`export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
-export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
-  </CodeBlock>
-</div>
+```bash
+export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+```
 
 </TabItem>
+<TabItem value="Windows" label="Windows - CMD">
 
-<TabItem value="cmd" label="Windows-CMD" default>
-
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-powershell">
-  {`set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
-set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
-  </CodeBlock>
-</div>
+```bash
+set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+```
 
 </TabItem>
+<TabItem value="PowerShell" label="PowerShell">
 
-<TabItem value="powershell" label="Windows-PS" default>
-
-  <div className="lambdatest__codeblock">
-    <CodeBlock className="language-powershell">
-  {`$Env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-$Env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
-$Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
-
-  </CodeBlock>
-</div>
+```powershell
+$env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+```
 
 </TabItem>
-
 </Tabs>
 
 

@@ -2,7 +2,6 @@
 id: kaneai-smartui-visual-testing
 title: Visual Test Creation with KaneAI
 hide_title: false
-sidebar_label: Smart Visual Test Creation
 description: A step-by-step guide on using KaneAI to automate visual regression tests. Learn to capture screenshots, establish baselines, compare visual changes with SmartUI, and schedule automated runs.
 keywords:
   - lambdatest kaneai

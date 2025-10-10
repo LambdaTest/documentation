@@ -42,7 +42,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smart-ui-cypress/"
+          "item": "https://www.lambdatest.com/support/docs/build-options-for-visual-regression-testing/"
         }]
       })
     }}
@@ -214,9 +214,7 @@ We are provide multiple build status options for the project owners to check the
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
-     Smart UI with Cypress  
-     </span>
+      <span className="breadcrumbs__link"> Build Options for Visual Regression Testing </span>
     </li>
   </ul>
 </nav>

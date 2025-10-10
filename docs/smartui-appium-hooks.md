@@ -73,15 +73,20 @@ Below are code examples for taking viewport screenshots using SmartUI with Appiu
 
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
-export LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
-set LT_ACCESS_KEY="YOUR ACCESS KEY"
+```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>
@@ -523,7 +528,7 @@ For additional information about appium framework please explore the documentati
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Getting Started with appium Visual Regression  </span>
+      <span className="breadcrumbs__link"> SmartUI Appium Hooks </span>
     </li>
   </ul>
 </nav>

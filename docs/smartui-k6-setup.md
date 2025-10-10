@@ -38,18 +38,23 @@ This documentation will act as your step-by-step guide in to perform K6 test wit
 
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
-export LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
-</TabItem>
 
-<TabItem value="Windows" label="Windows" default>
+</TabItem>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
-set LT_ACCESS_KEY="YOUR ACCESS KEY"
 ```
-</TabItem>
 
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:LT_USERNAME="YOUR_USERNAME"
+```
+
+</TabItem>
 </Tabs>
 
 The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
@@ -73,7 +78,7 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 
 1. Please clone the following sample Github repo (`https://github.com/LambdaTest/smartui-k6-sample`).
 
-```bash
+```powershell
 git clone https://github.com/LambdaTest/smartui-k6-sample.git
 ```
 
@@ -224,6 +229,8 @@ k6 run k6-smartui.js
 ```
 
 </TabItem>
+
+
 </Tabs>
 
   - You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
@@ -258,7 +265,7 @@ For additional information about K6 framework please explore the documentation [
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Getting Started with Selenium Visual Regression  </span>
+      <span className="breadcrumbs__link"> SmartUI K6 Setup </span>
     </li>
   </ul>
 </nav>
