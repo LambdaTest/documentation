@@ -78,6 +78,13 @@ set SMART_GIT=true
 ```
 
 </TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:SMART_GIT="true"
+```
+</TabItem>
+
 </Tabs>
 
 ## How Smart Git Works

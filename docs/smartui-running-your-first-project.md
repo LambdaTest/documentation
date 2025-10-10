@@ -102,37 +102,27 @@ mvn clean compile
 Setup your project token show in the **SmartUI** app after, creating your project.
 
 <Tabs className="docs__val" groupId="language">
-
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
-export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
-</CodeBlock>
-</div>
-</TabItem>
 
+```bash
+export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
+```
+
+</TabItem>
 <TabItem value="Windows" label="Windows - CMD">
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
-set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
-</CodeBlock>
-</div>
-</TabItem>
 
-<TabItem value="Powershell" label="Windows-PS">
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
-{`$Env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
-$Env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
-$Env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"`}
-</CodeBlock>
-</div>
-</TabItem>
+```bash
+set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
+```
 
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
+```
+
+</TabItem>
 </Tabs>
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/running-first-test/1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>

@@ -99,7 +99,7 @@ npx smartui merge branch --source hotfix/security-patch --target staging
 ```bash
 # 1. Ensure feature branch is approved
 npx smartui merge branch --source feature/new-login --target main
-
+```
 
 ### 2. Hotfix Strategy
 

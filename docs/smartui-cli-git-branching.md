@@ -157,12 +157,21 @@ You can also set the Baseline branch name through your terminal by setting the f
 ```bash
 export BASELINE_BRANCH="Required baseline branch"
 ```
+
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set BASELINE_BRANCH="Required baseline branch"
 ```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:BASELINE_BRANCH="Required baseline branch"
+```
+
 </TabItem>
 </Tabs>
 
@@ -195,7 +204,7 @@ In this workflow, if you are working on the same branch name and want to execute
 
 And, if you have created a project and set your **Baseline** branch name to `master` then executed the following commands:
 
-```bash
+```powershell
 // Your current branch name
 $ git branch
 * <Your Current Active branch>
@@ -233,12 +242,21 @@ You can streamline your workflow by setting the current branch name directly thr
 ```bash
 export CURRENT_BRANCH="Required branch"
 ```
+
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value="Windows" label="Windows - CMD">
 
 ```bash
 set CURRENT_BRANCH="Required branch"
 ```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:CURRENT_BRANCH="Required branch"
+```
+
 </TabItem>
 </Tabs>
 

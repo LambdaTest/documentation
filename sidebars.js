@@ -1311,7 +1311,11 @@ module.exports = {
           "kaneai-custom-headers",
           "kaneai-totp",
           "kaneai-scheduled-test-runs",
-          "kaneai-smartui-visual-testing",
+          {
+            type: "doc",
+            label: "Visual Testing",
+            id: "kaneai-smartui-visual-testing",
+          },
           "kaneai-database",
         ],
       },
@@ -3110,296 +3114,644 @@ module.exports = {
         items: [
           "smartui-running-your-first-project",
           "smartui-guided-walkthrough",
-          "smartui-cli-git-branching-strategy",
           "smartui-cli-env-variables",
         ],
-      },
-      {
-        type: "doc",
-        label: "SmartUI MCP Server",
-        id: "smartui-mcp-server",
-      },
-      {
-        type: "doc",
-        label: "SmartUI RCA",
-        id: "smartui-root-cause-analysis",
-      },
-      {
-        type: "doc",
-        label: "Visual AI Agent",
-        id: "smartui-visual-ai",
-      },
-      {
-        type: "doc",
-        label: "Visual Test Creation with KaneAI",
-        id: "kaneai-smartui-visual-testing",
-      },
-      {
-        type: "doc",
-        label: "Visual Test with Katalon",
-        id: "smartui-katalon-plugin",
       },
 
       {
         type: "category",
         collapsed: false,
-        label: "Visual Testing Configurations",
+        label: "Testing Frameworks",
         items: [
           {
             type: "category",
-            collapsed: false,
-            label: "Languages and Frameworks",
+            label: "SDK Integration",
+            collapsed: true,
             items: [
               {
                 type: "category",
+                label: "Selenium SDKs",
                 collapsed: true,
-                label: "SDK",
                 items: [
                   {
-                    type: "category",
-                    label: "Selenium",
-                    collapsed: true,
-                    items: [
-                      {
-                        type: "doc",
-                        label: "Java",
-                        id: "smartui-selenium-java-sdk",
-                      },
-                      {
-                        type: "doc",
-                        label: "Javascript",
-                        id: "smartui-selenium-js-sdk",
-                      },
-                      {
-                        type: "doc",
-                        label: "C#",
-                        id: "smartui-selenium-csharp-sdk",
-                      },
-                      {
-                        type: "doc",
-                        label: "Python",
-                        id: "smartui-selenium-python-sdk",
-                      },
-                      {
-                        type: "doc",
-                        label: "Ruby",
-                        id: "smartui-selenium-ruby-sdk",
-                      },
-                    ],
+                    type: "doc",
+                    label: "Java SDK",
+                    id: "smartui-selenium-java-sdk",
                   },
                   {
-                    type: "category",
-                    label: "Playwright",
-                    collapsed: true,
-                    // id: "smart-visual-regression-testing",
-                    items: [
-                      {
-                        type: "doc",
-                        label: "Java",
-                        id: "smartui-playwright-java-sdk",
-                      },
-                      {
-                        type: "doc",
-                        label: "Javascript",
-                        id: "smartui-playwright-sdk",
-                      },
-                      {
-                        type: "doc",
-                        label: "Java",
-                        id: "smartui-playwright-python-sdk",
-                      },
-                    ],
+                    type: "doc",
+                    label: "JavaScript SDK",
+                    id: "smartui-selenium-js-sdk",
                   },
-                  "smartui-puppeteer-sdk",
-                  "smartui-testcafe-sdk",
-                  "smartui-cypress-sdk",
-                  "smartui-appium-sdk",
-                  "smartui-wdio-sdk",
+                  {
+                    type: "doc",
+                    label: "C# SDK",
+                    id: "smartui-selenium-csharp-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "Python SDK",
+                    id: "smartui-selenium-python-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "Ruby SDK",
+                    id: "smartui-selenium-ruby-sdk",
+                  },
                 ],
               },
               {
                 type: "category",
+                label: "Playwright SDKs",
                 collapsed: true,
-                label: "Lambda Hooks",
                 items: [
-                  "selenium-visual-regression",
-                  "smart-ui-cypress",
-                  "playwright-visual-regression",
-                  "puppeteer-visual-regression",
-                  "smartui-k6-setup",
+                  {
+                    type: "doc",
+                    label: "Java SDK",
+                    id: "smartui-playwright-java-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "JavaScript SDK",
+                    id: "smartui-playwright-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "Python SDK",
+                    id: "smartui-playwright-python-sdk",
+                  },
                 ],
               },
               {
+                type: "doc",
+                label: "Cypress SDK",
+                id: "smartui-cypress-sdk",
+              },
+              {
+                type: "doc",
+                label: "Puppeteer SDK",
+                id: "smartui-puppeteer-sdk",
+              },
+              {
+                type: "doc",
+                label: "TestCafe SDK",
+                id: "smartui-testcafe-sdk",
+              },
+              {
+                type: "doc",
+                label: "WebdriverIO SDK",
+                id: "smartui-wdio-sdk",
+              },
+              {
+                type: "doc",
+                label: "K6 Setup",
+                id: "smartui-k6-setup",
+              },
+              {
                 type: "category",
+                label: "Mobile SDKs",
                 collapsed: true,
-                label: "Visually Test Your Native Apps",
                 items: [
-                  "smartui-appium-hooks",
-                  "smartui-appium-java-sdk",
-                  "espresso-visual-regression",
-                  "xcui-visual-regression",
+                  {
+                    type: "doc",
+                    label: "Appium SDK",
+                    id: "smartui-appium-sdk",
+                  },
+                  {
+                    type: "doc",
+                    label: "Appium Java SDK",
+                    id: "smartui-appium-java-sdk",
+                  },
                 ],
               },
             ],
           },
           {
             type: "category",
+            label: "Lambda Hooks",
             collapsed: true,
-            label: "Branching and Merging",
             items: [
               {
                 type: "doc",
-                id: "smartui-cli-git-branching-strategy",
-                label: "Default Git Strategy",
+                label: "Selenium Hooks",
+                id: "selenium-visual-regression",
               },
               {
                 type: "doc",
-                id: "smartui-smart-git-strategy",
-                label: "Smart Git Strategy",
+                label: "Playwright Hooks",
+                id: "playwright-visual-regression",
               },
               {
                 type: "doc",
-                id: "smartui-branch-merging",
-                label: "Branch-Level Merging",
+                label: "Cypress Hooks",
+                id: "smart-ui-cypress",
               },
               {
                 type: "doc",
-                id: "smartui-build-merging",
-                label: "Build-Level Merging",
+                label: "Puppeteer Hooks",
+                id: "puppeteer-visual-regression",
               },
               {
                 type: "doc",
-                id: "smartui-baseline-management",
-                label: "Auto Baseline Management",
+                label: "Appium Hooks",
+                id: "smartui-appium-hooks",
+              },
+              {
+                type: "doc",
+                label: "Espresso Hooks",
+                id: "espresso-visual-regression",
+              },
+              {
+                type: "doc",
+                label: "XCUI Hooks",
+                id: "xcui-visual-regression",
               },
             ],
           },
           {
             type: "category",
+            label: "Design & Component Testing",
             collapsed: true,
-            label: "Advanced CLI Configurations",
-            items: [
-              "smartui-sdk-build-name",
-              "smartui-sdk-fetch-results",
-              "smartui-cli-responsive-dom",
-              "smartui-sdk-config-options",
-              "smartui-multiple-assets-hosts",
-              "smartui-cli-request-headers",
-              "smartui-cli-basic-auth",
-              "smartui-sdk-tunnel",
-              "smartui-shadow-dom",
-              "smartui-cli-exec",
-              "smartui-sdk-capabilities",
-
-              {
-                type: "category",
-                collapsed: true,
-                label: "Stabilize Your Screenshots",
-                items: [
-                  "smartui-freeze-animations",
-                  "smartui-handle-dynamic-data",
-                  "smartui-handle-videos",
-                  "smartui-handle-lazy-loading",
-                  "smartui-handle-sticky-elements",
-                ],
-              },
-            ],
-          },
-          "smartui-cli",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Test your Figma Designs",
             items: [
               {
                 type: "doc",
-                label: "Figma-Web",
+                label: "Storybook Integration",
+                id: "smart-ui-storybook",
+              },
+              {
+                type: "doc",
+                label: "Figma Web CLI",
                 id: "smartui-cli-figma-web",
               },
               {
                 type: "doc",
-                label: "Figma-App",
+                label: "Figma App CLI",
                 id: "smartui-cli-figma-app",
               },
               {
                 type: "doc",
-                label: "Figma-Figma",
+                label: "Figma CLI",
                 id: "smartui-cli-figma",
               },
             ],
           },
           {
             type: "category",
-            collapsed: true,
-            label: "Bring your Own Screenshots",
+            collapsed: false,
+            label: "PDF Testing",
+            link: {
+              type: "doc",
+              id: "smartui-pdf-comparison",
+            },
             items: [
               {
                 type: "doc",
-                label: "Upload through CLI",
-                id: "smartui-cli-upload",
+                label: "PDF Upload via API",
+                id: "smartui-pdf-api-upload",
               },
               {
                 type: "doc",
-                label: "Upload through API",
-                id: "smartui-upload-api-v2",
+                label: "PDF Upload via SDK",
+                id: "smartui-pdf-java-sdk",
+              },
+              {
+                type: "doc",
+                label: "PDF Upload via CLI",
+                id: "smartui-pdf-cli-upload",
+              },
+            ],
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Core Features",
+        items: [
+          {
+            type: "doc",
+            label: "Visual AI Agent",
+            id: "smartui-visual-ai",
+          },
+          {
+            type: "doc",
+            label: "Smart RCA (Root Cause Analysis)",
+            id: "smartui-root-cause-analysis",
+          },
+          {
+            type: "doc",
+            label: "Baseline Management",
+            id: "smartui-baseline-management",
+          },
+          {
+            type: "doc",
+            label: "Draw on UI",
+            id: "smartui-draw-on-ui",
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Smart Comparison Options",
+            items: [
+              {
+                type: "doc",
+                label: "Smart Ignore",
+                id: "smartui-smartignore",
+              },
+              {
+                type: "doc",
+                label: "Layout Testing",
+                id: "smartui-layout-testing",
+              },
+            ],
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Upload & Capture",
+        items: [
+          {
+            type: "doc",
+            label: "CLI Upload",
+            id: "smartui-cli-upload",
+          },
+          {
+            type: "doc",
+            label: "API Upload",
+            id: "smartui-upload-api-v2",
+          },
+          {
+            type: "doc",
+            label: "Capture Static URLs via CLI",
+            id: "smartui-cli",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Project Configuration",
+        items: [
+          {
+            type: "doc",
+            label: "Project Settings",
+            id: "smartui-project-settings",
+          },
+          {
+            type: "doc",
+            label: "Test Settings",
+            id: "test-settings-options",
+          },
+          {
+            type: "doc",
+            label: "HTML DOM Options",
+            id: "html-dom-smartui-options",
+          },
+          {
+            type: "doc",
+            label: "Build Config & Options",
+            id: "smart-ui-build-options",
+          },
+          {
+            type: "doc",
+            label: "Multiple Projects per Repo",
+            id: "smartui-multiple-projects-per-repo",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Git & Branching",
+        items: [
+          {
+            type: "doc",
+            label: "Default Branching Strategy",
+            id: "smartui-cli-git-branching-strategy",
+          },
+          {
+            type: "doc",
+            label: "Smart Git Strategy",
+            id: "smartui-smart-git-strategy",
+          },
+          {
+            type: "doc",
+            label: "Merging Branches",
+            id: "smartui-branch-merging",
+          },
+          {
+            type: "doc",
+            label: "Build Merging",
+            id: "smartui-build-merging",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Stabilize Screenshots",
+        items: [
+          {
+            type: "doc",
+            label: "Handling Dynamic Data",
+            id: "smartui-handle-dynamic-data",
+          },
+          {
+            type: "doc",
+            label: "Freezing Animations",
+            id: "smartui-freeze-animations",
+          },
+          {
+            type: "doc",
+            label: "Handle Videos",
+            id: "smartui-handle-videos",
+          },
+          {
+            type: "doc",
+            label: "Handle Lazy Loading",
+            id: "smartui-handle-lazy-loading",
+          },
+          {
+            type: "doc",
+            label: "Handle Sticky Elements",
+            id: "smartui-handle-sticky-elements",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Advanced CLI",
+        items: [
+          {
+            type: "doc",
+            label: "Exec Command",
+            id: "smartui-cli-exec",
+          },
+          {
+            type: "doc",
+            label: "Groups Screenshots by Build Names",
+            id: "smartui-sdk-build-name",
+          },
+          {
+            type: "doc",
+            label: "Fetch Results",
+            id: "smartui-sdk-fetch-results",
+          },
+          {
+            type: "doc",
+            label: "Configuration Options",
+            id: "smartui-sdk-config-options",
+          },
+          {
+            type: "doc",
+            label: "SmartUI SDK Capabilities",
+            id: "smartui-sdk-capabilities",
+          },
+          {
+            type: "doc",
+            label: "Advanced Comparison Settings",
+            id: "smartui-cli-responsive-dom",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Technical Configuration",
+        items: [
+          {
+            type: "doc",
+            label: "Tunnel Configuration",
+            id: "smartui-sdk-tunnel",
+          },
+          {
+            type: "doc",
+            label: "Shadow DOM",
+            id: "smartui-shadow-dom",
+          },
+          {
+            type: "doc",
+            label: "Capturing Multiple Asset Hosts",
+            id: "smartui-multiple-assets-hosts",
+          },
+          {
+            type: "doc",
+            label: "Custom Request Headers",
+            id: "smartui-cli-request-headers",
+          },
+          {
+            type: "doc",
+            label: "Basic Authentication",
+            id: "smartui-cli-basic-auth",
+          },
+          {
+            type: "doc",
+            label: "SmartUI MCP Server",
+            id: "smartui-mcp-server",
+          },
+        ],
+      },
+
+      {
+        type: "category",
+        collapsed: true,
+        label: "Integrations",
+        items: [
+          {
+            type: "category",
+            collapsed: true,
+            label: "CI/CD Tools",
+            items: [
+              {
+                type: "doc",
+                label: "GitHub Actions",
+                id: "smartui-with-github-actions",
+              },
+              {
+                type: "doc",
+                label: "GitLab",
+                id: "smartui-with-gitlab",
+              },
+              {
+                type: "doc",
+                label: "Bitbucket",
+                id: "smartui-with-bitbucket",
+              },
+              {
+                type: "doc",
+                label: "Semaphore",
+                id: "smartui-with-semaphore",
+              },
+              {
+                type: "doc",
+                label: "Azure",
+                id: "smartui-with-azure",
+              },
+              {
+                type: "doc",
+                label: "Buildkite",
+                id: "smartui-with-buildkite",
+              },
+              {
+                type: "doc",
+                label: "Circle CI",
+                id: "smartui-with-circle-ci",
+              },
+              {
+                type: "doc",
+                label: "Travis CI",
+                id: "smartui-with-travis-ci",
+              },
+              {
+                type: "doc",
+                label: "Netlify",
+                id: "smartui-with-netlify",
               },
             ],
           },
           {
             type: "category",
             collapsed: true,
-            label: "Component Testing",
-            items: ["smart-ui-storybook", "smartui-git-branching-strategy"],
-          },
-          "smartui-pdf-comparison",
-          "smartui-draw-on-ui",
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Difference Options",
-        items: ["smartui-smartignore", "smartui-layout-testing"],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Integrations with SmartUI",
-        items: [
-          {
-            type: "category",
-            collapsed: true,
-            label: "Run Visual Tests on PRs",
-            items: ["smartui-github-app-integration"],
-          },
-          "smartui-slack-integration",
-          {
-            type: "category",
-            collapsed: true,
-            label: "Integrate with CI/CD tools",
+            label: "LambdaTest Products",
             items: [
-              "smartui-with-github-actions",
-              "smartui-with-gitlab",
-              "smartui-with-bitbucket",
-              "smartui-with-semaphore",
-              "smartui-with-azure",
-              "smartui-with-buildkite",
-              "smartui-with-circle-ci",
-              "smartui-with-travis-ci",
+              {
+                type: "doc",
+                label: "KaneAI Integration",
+                id: "kaneai-smartui-visual-testing",
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "HyperExecute Integration",
+                items: [
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "SmartUI Hooks",
+                    items: [
+                      {
+                        type: "doc",
+                        label: "Selenium",
+                        id: "hyperexecute-smart-ui-testing-using-selenium",
+                      },
+                      {
+                        type: "doc",
+                        label: "Cypress",
+                        id: "hyperexecute-smart-ui-testing-using-cypress",
+                      },
+                      {
+                        type: "doc",
+                        label: "Playwright",
+                        id: "hyperexecute-smart-ui-test-using-playwright",
+                      },
+                    ],
+                  },
+                  {
+                    type: "category",
+                    collapsed: true,
+                    label: "SmartUI SDK",
+                    items: [
+                      {
+                        type: "category",
+                        collapsed: true,
+                        label: "Selenium",
+                        items: [
+                          {
+                            type: "doc",
+                            label: "JavaScript",
+                            id: "hyperexecute-smart-ui-sdk-selenium-javascript",
+                          },
+                          {
+                            type: "doc",
+                            label: "C#",
+                            id: "hyperexecute-smart-ui-sdk-selenium-csharp",
+                          },
+                        ],
+                      },
+                      {
+                        type: "doc",
+                        label: "Cypress",
+                        id: "hyperexecute-smart-ui-sdk-using-cypress",
+                      },
+                      {
+                        type: "doc",
+                        label: "Maestro",
+                        id: "hyperexecute-smart-ui-sdk-maestro",
+                      },
+                      {
+                        type: "doc",
+                        label: "Playwright",
+                        id: "hyperexecute-smart-ui-sdk-using-playwright",
+                      },
+                      {
+                        type: "doc",
+                        label: "Puppeteer",
+                        id: "hyperexecute-smart-ui-sdk-using-puppeteer",
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
+                label: "WebScanner Integration",
+                items: [
+                  {
+                    type: "doc",
+                    label: "Visual Scan",
+                    id: "web-scanner-visual-scan",
+                  },
+                ],
+              },
             ],
           },
-        ],
-      },
-      {
-        type: "category",
-        collapsed: true,
-        label: "Project Management",
-        items: [
-          "smartui-project-settings",
-          "test-settings-options",
-          "html-dom-smartui-options",
-          "smart-ui-build-options",
-          "smartui-multiple-projects-per-repo",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Third-Party Products",
+            items: [
+              {
+                type: "doc",
+                label: "Katalon Plugin",
+                id: "smartui-katalon-plugin",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Pull Request Testing",
+            items: [
+              {
+                type: "doc",
+                label: "GitHub App",
+                id: "smartui-github-app-integration",
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
+            label: "Communication",
+            items: [
+              {
+                type: "doc",
+                label: "Slack Integration",
+                id: "smartui-slack-integration",
+              },
+            ],
+          },
         ],
       },
     ],

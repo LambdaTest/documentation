@@ -104,7 +104,7 @@ npx smartui --markBaseline exec -- <execution command>
 ```bash
 # 1. Set feature branch baseline
 npx smartui --baselineBranch "feature/new-login" exec -- <execution command>
-
+```
 
 ### 2. Hotfix Management
 
