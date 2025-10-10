@@ -3249,15 +3249,15 @@ module.exports = {
             ],
           },
           {
+            type: "doc",
+            label: "Storybook Integration",
+            id: "smart-ui-storybook",
+          },
+          {
             type: "category",
-            label: "Design & Component Testing",
             collapsed: true,
+            label: "Figma Integration",
             items: [
-              {
-                type: "doc",
-                label: "Storybook Integration",
-                id: "smart-ui-storybook",
-              },
               {
                 type: "doc",
                 label: "Figma Web CLI",
