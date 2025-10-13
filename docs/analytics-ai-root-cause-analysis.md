@@ -62,7 +62,7 @@ AI RCA is an intelligent feature that uses advanced machine learning algorithms 
 
 ## Configuration & Setup
 
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-configuration.png').default} alt="cmd" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-configuration.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
 ### Step 1: Access Organization Settings
 
@@ -192,7 +192,7 @@ AI RCA results are available in multiple locations across the LambdaTest platfor
 2. **HyperExecute Dashboard**: Access detailed RCA analysis for HyperExecute jobs
 3. **Insights Dashboard**: Comprehensive RCA analytics and trend analysis
 
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-insights.png').default} alt="cmd" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-insights.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
 ### Understanding RCA Output
 
@@ -254,7 +254,7 @@ The RCA Category Trends widget in Insights enables you to:
 3. **Identify Recurring Issues**: Spot patterns in failure types to prioritize fixes
 4. **Track Improvement**: Monitor the effectiveness of your remediation efforts
 
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-widget.png').default} alt="cmd" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-widget.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
 ## Best Practices
 
