@@ -45,72 +45,94 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-## What's the latest WCAG version supported?
-We adhere to **WCAG 2.2 AA**, the most recent version of the Web Content Accessibility Guidelines. In addition to this, we support the following versions: WCAG 2.0 A, WCAG 2.0 AA, WCAG 2.1 A, WCAG 2.1 AA, WCAG 2.1 AAA, and WCAG 2.2 A.
 
-## Do you have screen reader support?
-Yes, we provide comprehensive screen reader support:
+## 1. What is the latest WCAG version supported in the Accessibility Web Engine?
+LambdaTest supports **WCAG 2.2 AA**, the latest version of the Web Content Accessibility Guidelines. Additionally, we offer compatibility with the following versions: WCAG 2.0 A, WCAG 2.0 AA, WCAG 2.1 A, WCAG 2.1 AA, WCAG 2.1 AAA, and WCAG 2.2 A.
 
-- **Windows:** Full support for popular screen readers like JAWS and NVDA.
-- **macOS:** Complete support for VoiceOver.
-- **Mobile:** We actively develop support for VoiceOver on Android and TalkBack on iOS. These mobile screen reader supports are expected to be fully implemented soon, enhancing our accessibility testing capabilities across all major platforms.
+## 2. Does LambdaTest offer screen reader support?
+Yes, LambdaTest offers comprehensive support for screen readers across a variety of platforms:
 
-## Which browsers are supported?
-Our accessibility testing tools are optimized for **Chromium-based** browsers, **version 90 and above**. This includes **Google Chrome, Microsoft Edge, and other Chromium-based browsers**. Using the latest version ensures the best compatibility and performance with our tools.
+- **Windows:** Full compatibility with NVDA, ensuring smooth accessibility testing for users relying on this screen reader.
+- **macOS:** Seamless integration with VoiceOver, delivering robust testing for macOS users.
+- **Mobile:** We are actively enhancing support for VoiceOver on Android and TalkBack on iOS. These mobile screen reader features are in development and will soon be fully supported, ensuring an inclusive and smooth accessibility testing experience across all major mobile platforms.
 
-## Do I need to add explicit wait time to scan for accessibility?
-No, you don't need to add explicit wait times. Our advanced tools are designed with built-in intelligence to detect when DOM elements are loaded automatically. They then immediately initiate accessibility scans for these elements. This feature ensures a seamless and efficient testing process without manual intervention for timing.
+## 3. Which browsers are supported for accessibility testing?
+LambdaTest's accessibility testing tools are optimized for **Chromium-based browsers**, **version 90 and above**, including **Google Chrome, Microsoft Edge**, and other Chromium-based browsers. Using the latest browser version ensures optimal compatibility and performance with our tools.
 
-## How can I enable accessibility for my account/organization?
-Accessibility testing is a premium feature that requires activation. To enable it, contact our sales team through our [website](https://www.lambdatest.com/accessibility-automation) or your account manager. They will provide you with pricing details and plan options. Once you've chosen a plan, our team will activate the feature for your account.
+## 4. Do I need to add explicit wait times to scan for accessibility?
+For web accessibility tests, there is no need to add explicit wait times. Our advanced tools automatically detect when DOM elements are fully loaded and trigger accessibility scans immediately. This ensures an efficient, uninterrupted testing process without the need for manual timing adjustments.
 
-## How many accessibility automation scans does one organization get?
-Although there is limitations on the number of parallel tests or threads you can run but there are no restrictions on the number of pages you can scan for thorough accessibility testing.
+For Native App Accessibility testing, the scan is initiated as soon as the user invokes the `lambda-accessibility-scan` hook during the active session.
 
-## Why is it showing a sub-version (e.g. 1.41.3) even though I have selected WCAG 2.1 AA?
-WCAG 2.1 AA is the overall accessibility standard you've selected for testing. The sub-versions (like 1.4.1 or 1.1.1) are specific guidelines within that standard. These sub-versions represent individual success criteria that fall under WCAG 2.1 AA. While you test against the broader WCAG 2.1 AA standard, the results show compliance with these more specific guidelines to provide detailed insights into your site's accessibility.
+## 5. How can I enable accessibility testing for my account/organization?
+Accessibility testing is a premium feature that requires activation. To enable it, please contact our sales team via our [website](https://www.lambdatest.com/accessibility-automation) or reach out to your account manager. They will provide detailed pricing and plan options. Once you select your plan, our team will activate the feature for your account.
 
-## Is it possible to scan private or non-public websites?
-Yes, our system is fully capable of scanning private or non-public websites.
+## 6. How many accessibility automation scans can my organization run?
+There are no limits on the number of pages you can scan for accessibility, enabling you to conduct thorough web accessibility testing across your entire site. However, there are limitations on the number of parallel tests (or threads) you can run, depending on your subscription plan.
 
-- **DevTools:** DevTools runs on your local system, it can directly scan your locally hosted projects.
-- **Accessibility Automation:**  The same way you use a tunnel to access any websites hosted locally, we can do the same for Accessibility Automation.
+For native app accessibility testing, the number of scans is determined by your native app accessibility plan.
 
-## On what basis are the different statuses (e.g., critical, minor) assigned?
-Our system uses a proprietary algorithm to assign severity statuses to accessibility issues. These statuses (such as critical, major, minor) are based on several factors:
+## 7. Why does it show a sub-version (e.g., 1.41.3) even though I selected WCAG 2.1 AA?
+When you select WCAG 2.1 AA as your testing standard, you are targeting the overall accessibility guidelines. The sub-versions (e.g., 1.4.1, 1.1.1) represent specific success criteria within that standard. These sub-versions offer more detailed insights, as they reflect individual guidelines within WCAG 2.1 AA, helping you understand your site's accessibility in a more granular way.
 
-- Impact on user experience for people with disabilities
-- Frequency of the issue across the site
-- Complexity of the fix required
+## 8. Is it possible to scan private or non-public websites?
+Yes, LambdaTest can scan private or non-public websites:
+
+- **DevTools:** When running locally, DevTools can scan your locally hosted projects directly.
+- **Accessibility Automation:** Just like using a tunnel to access locally hosted websites, we support tunneling for Accessibility Automation.
+- **Native App Accessibility:** Both the App Scanner and Native App Automation tools support tunnel functionality, allowing you to scan private applications or web pages securely.
+
+## 9. On what basis are the different statuses (e.g., critical, minor) assigned?
+The severity statuses (e.g., critical, major, minor) are assigned based on several factors determined by a proprietary algorithm:
+
+- The impact on users with disabilities
+- The frequency of the issue across the site
+- The complexity of the fix required
 - Legal compliance implications
-This nuanced approach helps you prioritize your accessibility improvements effectively.
 
-## What frameworks are supported?
-Currently we offer support for Selenium, Cypress and PlayWright.
+This approach ensures that accessibility improvements can be prioritized effectively.
 
-## Can I share the dashboard link with anyone?
-Yes, you can share dashboard links with anyone within your organization. However, for security reasons, access is limited to members of your organization to protect potentially sensitive information about your web applications.
+## 10. What frameworks are supported for accessibility testing?
+Currently, we support **Selenium**, **Cypress**, **Playwright**, and **Appium** for Native Applications on both **Android** and **iOS** platforms.
 
-## What is the accessibility score given by LambdaTest and how should it be interpreted?
-The LambdaTest accessibility score is a proprietary metric designed to give you a quick overview of your site's accessibility. It's calculated based on:
-- Number and severity of issues detected
+## 11. Can I share the dashboard link with others?
+Yes, you can share the dashboard link with members of your organization. However, to protect sensitive information, external sharing is restricted to users within your organization. We also provide a **Share Report** feature, allowing you to generate a time-limited link that can be shared with external stakeholders.
+
+## 12. What is the LambdaTest accessibility score and how should it be interpreted?
+The LambdaTest accessibility score is a proprietary metric designed to provide a quick overview of your site's accessibility. It is calculated based on:
+
+- The number and severity of issues detected
 - Coverage of WCAG success criteria
-- Overall accessibility of key user flows
-> A higher score indicates better accessibility, but it's important to note that this score should be used as a general guide rather than a definitive measure of compliance. Always review the detailed reports alongside the score for a comprehensive understanding of your site's accessibility.
+- Accessibility of key user flows
 
-## How many parallel automated accessibility tests can I run?
-The number of parallel automated accessibility tests you can run depends on the number of parallels included in your automation plan. For example, if your plan includes 2 parallels, you can run 2 concurrent tests.
+> A higher score indicates better accessibility, but it is important to consider the score as a general guide rather than a definitive measure of compliance. Always refer to the detailed reports alongside the score for a comprehensive understanding of your site's accessibility.
 
-## Can I run tests on mobile browsers/apps?
-Currently, our accessibility testing tools are optimized for desktop web environments. Mobile browser and app testing is not supported at this time. However, we recognize the growing importance of mobile accessibility and are actively working on expanding our capabilities to include mobile platforms in future updates.
+## 13. How many parallel automated accessibility tests can I run?
+The number of parallel automated accessibility tests you can run depends on your automation plan's parallel test limits. For instance, if your plan includes 2 parallels, you can run 2 concurrent tests.
 
-## Do you support accessibility testing for PDFs?
-At present, we do not support accessibility testing for PDF documents. Our focus is on web content accessibility. For PDF accessibility, we recommend using specialized PDF accessibility tools or consulting with PDF accessibility experts.
+## 14. Can I run tests on mobile apps?
+Yes, you can test for accessibility issues on Native Mobile Applications using the **App Scanner** or **Native Accessibility Automation** tools. Refer to the documentation for setup instructions.
 
-## How many pages can be scanned for accessibility in a workflow scan?
-There is currently no limitation on the number of pages that can be scanned in a workflow scan. This allows you to:
+## 15. Do you support accessibility testing for PDFs?
+Currently, we do not support accessibility testing for PDF documents. Our focus is primarily on web content accessibility. For PDF accessibility, we recommend using specialized PDF accessibility tools or consulting with PDF accessibility experts.
+
+## 16. How many pages can be scanned in a workflow scan for accessibility?
+There is no limit on the number of pages that can be scanned in a workflow scan. This enables you to:
 
 - Test entire websites or large web applications comprehensively
 - Create custom workflows that cover all critical user journeys
-- Conduct thorough accessibility audits without artificial constraints
-However, for very large sites, we recommend breaking scans into logical segments for more manageable analysis and faster results.
+- Perform detailed accessibility audits without artificial constraints
+
+For very large websites, we recommend dividing scans into smaller, logical segments for easier analysis and faster results.
+
+## 17. Does accessibility testing increase latency in automation tests?
+There may be a slight increase in latency depending on the total number of commands executed, as we ensure all components and DOM elements (for web) and app tree elements (for native applications) are thoroughly scanned.
+
+## 18. Is LambdaTest’s accessibility testing suite supported for GDPR users?
+Yes, all LambdaTest accessibility testing products are fully GDPR-compliant. For more information, please contact your account manager or our support team.
+
+## 19. What engine/tool does LambdaTest use for native app testing?
+We use our proprietary accessibility testing engine for **Android** and **iOS** native applications. We continuously expand our App Accessibility guidelines to ensure comprehensive testing support. Visit our page for the latest updates and new requirements.
+
+## 20. Does LambdaTest’s accessibility engine support shadow elements like pop-ups?
+Yes, our web accessibility engine supports **Shadow DOM** elements, including pop-ups and other shadow-based components.
