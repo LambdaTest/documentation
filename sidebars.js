@@ -1890,6 +1890,7 @@ module.exports = {
             items: [
               "accessibility-test-scheduling-scan",
               "accessibility-test-scheduling-edit",
+              "accessibility-test-crawler",
             ],
           },
         ],
