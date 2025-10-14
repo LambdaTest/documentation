@@ -68,6 +68,7 @@ This document provide details about the features and capabilities supported for 
 | clearPackageData | Boolean | Set this to `true` if you want to clear the app data after each test has completed running. **Default**: `false` |
 | singleRunnerInvocation | Boolean | Set this to `true` if you want to execute test cases together with a `single test runner invocation`.This can help significantly speed up the test execution time. By default, each test case is invoked separately. **Default:** `false` |
 | testRemarks <br /> <br /> | Boolean | Set to `true` to surface failure remarks at the top of the dashboard when a test fails. Has no effect on passing tests. **Default**: `false`. |
+| retries <br /> <br /> | Integer |Defines the number of times a test should automatically retry if it fails. Maximum allowed value: 5.|
 
 :::note
 Ensure that the latitude is between -90 and 90, and the longitude is between -180 and 180. Otherwise, an error will occur like "Invalid GPS location: Latitude must be between -90 and +90, Longitude must be between -180 and +180."
