@@ -140,6 +140,29 @@ Make sure to include your LambdaTest username and access key in the request head
 * `username`: Your LambdaTest username.
 * `accesskey`: Your LambdaTest access key.
 
+Configure the above parameters in your MCP tool configuration file:
+
+```
+{
+  "mcpServers": {
+    "mcp-lambdatest": {
+      "disabled": false,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "mcp-remote@latest",
+        "https://mcp.lambdatest.com/mcp",
+        "--header",
+        "username:<user_name>",
+        "--header",
+        "accessKey:<access_key>"
+      ]
+    }
+  }
+}
+```
+
 
 ## Authentication
 
