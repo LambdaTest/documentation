@@ -4349,6 +4349,11 @@ module.exports = {
         label: "PingIdentity",
         id: "lambdatest-sso-pingidentity-integration",
       },
+      {
+        type: "doc",
+        label: "OIDC",
+        id: "lambdatest-sso-oidc",
+      },
     ],
   ],
 
