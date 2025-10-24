@@ -44,7 +44,7 @@ Maven is a renowned build automation tool for orchestrating project builds by au
 
 This document will help you configure a secure LambdaTest Tunnel to execute your [Selenium test automation](https://www.lambdatest.com/selenium-automation) scripts through your Maven project on our online Selenium Grid.
 
-> LambdaTest Maven Tunnel is now compatible with both **Java 17** and **Java 20**. Additionally, we also rolled out the latest **[Maven Tunnel v2.0.2](https://mvnrepository.com/artifact/com.github.lambdatest/lambdatest-tunnel-binary/2.0.2)**, with various enhancements and optimizations. 
+> LambdaTest Maven Tunnel is now compatible with both **Java 17** and **Java 20**. Additionally, we also rolled out the latest **[Maven Tunnel](https://mvnrepository.com/artifact/com.github.lambdatest/lambdatest-tunnel-binary/4.0.2)**, with various enhancements and optimizations. 
 
 ## Prerequisites
 
@@ -81,7 +81,7 @@ Ensure that you have the Maven Tunnel dependency configured in your `pom.xml`.
 <dependency>
 	<groupId>com.github.lambdatest</groupId>
 	<artifactId>lambdatest-tunnel-binary</artifactId>
-	<version>1.0.8</version>
+	<version>4.0.2</version>
 </dependency>
 ```
 
@@ -310,7 +310,7 @@ In order to trigger parallel test execution with Maven Tunnel using Serenity BDD
 <dependency>
    <groupId>com.github.lambdatest</groupId>
    <artifactId>lambdatest-tunnel-binary</artifactId>
-   <version>2.0.0</version>
+   <version>4.0.2</version>
    <exclusions>
       <exclusion>
          <groupId>org.testng</groupId>
