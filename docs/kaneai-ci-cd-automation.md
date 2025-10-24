@@ -111,7 +111,7 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
     "environment_id": 0, #Optional, default null, to define the environment for test run
     "retry_on_failure": "true", #Optional, default true, to define if retry is needed in case of failure
     "max_retries": 1, #Optional, default 1, to define the number of retries needed if retry_on_failure is enabled
-    "timezone": "UTC+01:00", #Optional, Only for web, to define the timezone using which the test runs should run
+    "timezone": {"region":"Indianapolis"}, #Optional, Only for web, to define the timezone using which the test runs should run
     "app_profiling": "false", #Optional for performance metrics for native mobile apps
     "performance": "false", #Optional for lighthouse report for web tests
     "android_app_id": "lt://<YOUR_ANDROID_APP_ID>", #optional 
