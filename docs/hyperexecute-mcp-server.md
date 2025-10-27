@@ -152,7 +152,53 @@ You can also ask Cline for more specific operations, such as:
 
 The natural language interface allows you to work with HyperExecute without having to remember specific command syntax or configuration details.
 
-**Available Tools:**
+## Connecting With Other MCP-Compatible Tools
+
+For any other MCP-compatible tool, use the following URL format:
+
+```
+https://mcp.lambdatest.com/mcp
+```
+
+Make sure to include your LambdaTest username and access key in the request headers:
+
+* `username`: Your LambdaTest username.
+* `accesskey`: Your LambdaTest access key.
+
+Configure the above parameters in your MCP tool configuration file:
+
+```
+{
+  "mcpServers": {
+    "mcp-lambdatest": {
+      "disabled": false,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "mcp-remote@latest",
+        "https://mcp.lambdatest.com/mcp",
+        "--header",
+        "username:<user_name>",
+        "--header",
+        "accessKey:<access_key>"
+      ]
+    }
+  }
+}
+```
+
+
+## Authentication
+
+The server supports authentication for the HTTP interface and for LambdaTest API calls:
+
+* **HTTP Interface**: Requires a valid LambdaTest username and access key in the request headers.
+* **LambdaTest API Calls**: Can use credentials provided in the request or from environment variables (`LT_USERNAME` and `LT_ACCESS_KEY`).
+
+
+
+## Available HyperExecute MCP Tools
 
 HyperExecute MCP Server provides five main tools:
 
