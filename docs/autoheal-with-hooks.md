@@ -77,50 +77,55 @@ driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
 
 ```python title="Test.py"
 import os
+import sys
 import time
+
 from selenium import webdriver
 
-platform = os.getenv('HYPEREXECUTE_PLATFORM')
+LT_USERNAME = os.getenv('LT_USERNAME')
+LT_ACCESS_KEY = os.getenv('LT_ACCESS_KEY')
 
 desired_cap_chrome = {
- "build": "Lambdatest Build 2",
- "name": "Lambdatest Test",
- "platform": platform,
- "browserName": "Chrome",
- "version": "latest",
- "visual": False,
- "video": True,
+ "build" : "Lambdatest Build 2",
+ "name" : "Autoheal Test via Hooks",
+ "platform" : "Windows 10",
+ "browserName" : "Chrome",
+ "version" : "latest",
+ "visual" : False,
+ "video" : True,
  "network": True,
  "console": True,
  'goog:chromeOptions': {'args': ['--window-size=400x300']},
 }
 
-hub = f"https://{os.getenv('LT_USERNAME')}:{os.getenv('LT_ACCESS_KEY')}@hub.lambdatest.com/wd/hub"
+hub = f"https://{LT_USERNAME}:{LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub"
 
-def test_autoheal(caps, sleep_time=5):
+def OneTest(caps, sleepTime):
+    begin = time.time()
     driver = webdriver.Remote(command_executor=hub, desired_capabilities=caps)
-    
-    # Navigate to page
+    end = time.time()
+    print(f"Startup time for {caps['browserName']} {end - begin} , {begin} , {end}")
     driver.get("https://www.selenium.dev")
-    
-    # ===== Autoheal START =====
-    driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}')
-    
-    # Interact with elements that may change dynamically
+    time.sleep(sleepTime)
+
+    driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}') #start hook for autoheal
+
     driver.find_element_by_id('td-block-1')
-    driver.execute_script('document.getElementById("td-block-1").id="updatedtd-block-1";')
+    driver.execute_script("document.getElementById(\"td-block-1\").id=\"updatedtd-block-1\";")
     driver.find_element_by_id('updatedtd-block-1')
+    driver.find_element_by_id("td-block-1")
+
+    driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')  #stop hook for autoheal
     
-    # ===== Autoheal STOP =====
-    driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')
-    
-    # Continue normal test steps
+    driver.execute_script("console.log('Test started');")
+    driver.execute_script("console.info('Navigated to selenium.dev');")
+    driver.execute_script("console.warn('This is a warning message');")
+    driver.execute_script("console.error('This is an error message');")
+    driver.execute_script("console.debug('Debugging test flow');")
     driver.execute_script("console.log('Test completed successfully');")
-    driver.execute_script("lambda-status=passed")
-    
     driver.quit()
 
-test_autoheal(desired_cap_chrome)
+OneTest(desired_cap_chrome, 5)
 ```
 
 With these steps, you can seamlessly integrate LambdaTest HyperExecute Autoheal into your Selenium tests, reducing flaky tests and improving stability.
