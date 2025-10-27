@@ -772,6 +772,10 @@ module.exports = {
               "hyperexecute-utilizing-custom-libraries",
               "hyperexecute-supported-languages-and-packages",
               "hyperexecute-test-chains",
+              "hyperexecute-testng-use-cases",
+              "hyperexecute-yaml-creation-for-playwright",
+              "hyperexecute-python-use-cases",
+              "hyperexecute-csharp-use-cases"
             ],
           },
           {
