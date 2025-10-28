@@ -1706,7 +1706,6 @@ module.exports = {
           "shopify-integration",
           "vscode-extension",
           "xcode-plugin-lambdamax",
-          "android-studio-plugin-lambdroid",
           "docker-tunnel-extension",
           "gradle-integration-with-lambdatest",
         ],
