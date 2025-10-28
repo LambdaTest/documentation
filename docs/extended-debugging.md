@@ -223,7 +223,7 @@ The `lt:throttle:cpu` method simulates lower or higher CPU usage on the testing 
 **Python:**
 ```python
 driver.execute_script("lt:throttle:cpu", {"rate": 4})
-driver.get("https://jcpenney.com")
+driver.get("https://lambdatest.com")
 ```
 
 **Node.js:**
@@ -272,7 +272,7 @@ driver.execute_script("lambda-throttle-network", {
     "upload": 750,
     "latency": 20
 })
-driver.get("https://jcpenney.com")
+driver.get("https://lambdatest.com")
 ```
 
 **Node.js:**
@@ -298,7 +298,7 @@ await driver.get("https://www.cnn.com");
 **Python:**
 ```python
 driver.execute_script("lambda-throttle-network", "Offline")
-driver.get("https://jcpenney.com")
+driver.get("https://lambdatest.com")
 ```
 
 **Node.js:**
