@@ -2406,7 +2406,11 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Debugging",
-            items: ["debugging-options", "telemetry-logs"],
+            items: [
+              "debugging-options", 
+              "telemetry-logs",
+              "extended-debugging-options"
+            ],
           },
           {
             type: "category",
