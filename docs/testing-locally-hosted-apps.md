@@ -39,7 +39,7 @@ slug: testing-locally-hosted-apps/
 ></script>
 
 
-Using the LambdaTest tunnel, you can test locally and privately hosted apps across various real Android and iOS devices on the LambdaTest Appium test automation platform. LambdaTest tunnel uses protocols like **Web Socket, HTTPS, SSH (Secure Shell)** and more to let you build a secure and unique tunnel connection between your local system and LambdaTest cloud servers.
+Using the LambdaTest tunnel, you can test locally and privately hosted apps across various real Android and iOS devices on the LambdaTest Appium test automation platform. LambdaTest tunnel uses protocols like **Web Socket, HTTPS/TCP** and more to let you build a secure and unique tunnel connection between your local system and LambdaTest cloud servers.
 
 In this documentation, learn how to configure LambdaTest tunnel to test locally or privately hosted apps while performing mobile app automation.
 
