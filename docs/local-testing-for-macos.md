@@ -14,14 +14,14 @@ site_name: LambdaTest
 slug: local-testing-for-macos/
 ---
 ***
-LambdaTest tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through LambdaTest cloud servers. Through our secure shell tunnelling features, you can also test plain HTML, CSS, PHP, Python or other similar web files saved on your local system, on combinations of operating systems, browsers, and screen resolutions that are available on LambdaTest.
+LambdaTest tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through LambdaTest cloud servers. Through our TCP with TLS 1.2 secure connection features, you can also test plain HTML, CSS, PHP, Python or other similar web files saved on your local system, on combinations of operating systems, browsers, and screen resolutions that are available on LambdaTest.
 
-Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with Secure Shell(SSH) network protocol hosted by LambdaTest tunnel. Experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over the production environment.
+Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with TCP with TLS 1.2 secure connection hosted by LambdaTest tunnel. Experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over the production environment.
 
 > **Note**: From November 2, 2020 onwards, we have deprecated our existing tunnel binary. In order to setup the new version, you can refer to [new tunnel binary for macOS](/docs/local-testing-macos/).
 
 
-You can download the binary file responsible for establishing an SSH(Secure Shell) connection between your local device and our testing cloud by clicking on the downloadable link below.
+You can download the binary file responsible for establishing a TCP with TLS 1.2 secure connection between your local device and our testing cloud by clicking on the downloadable link below.
 
 <div className="download_btn mb-10">
 <a href="https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip">Download LambdaTest Tunnel For macOS</a>
@@ -40,7 +40,7 @@ This file is supported for the below listed macOS:
 * OS X Mountain Lion
 * OS X Lion
 
-## Configuring SSH connection with LambdaTest tunnel
+## Configuring TCP with TLS 1.2 Secure Connection with LambdaTest Tunnel
 * * *
 **Step 1**: Click the button "Configure Tunnel". Download the binary zip file by clicking the "Download Link". Also, hit the ‘Copy’ button in the form that opens up to copy the complete string to your system’s clipboard.
 
@@ -48,7 +48,7 @@ This file is supported for the below listed macOS:
 
 **What is this zip file for?**
 
-This zip file will help in establishing a secure connection to LambdaTest cloud servers so you could test your locally hosted web pages in a Secure Shell(SSH) environment.
+This zip file will help in establishing a secure connection to LambdaTest cloud servers so you can test your locally hosted web pages using a TCP with TLS 1.2 secure connection.
 
 **Step 2**: Extract the downloaded zip file. Go to terminal and route your pointer to the same directory where you extracted the zip file.
 
@@ -66,7 +66,7 @@ So for example, if your user login email is `example@lambdatest.com` and your us
 
 **Note:** After you execute the command, you may be asked for user permission. Make sure you have administrator access to allow the file to run successfully.
 
-In a few seconds, after you execute the command, an SSH connection will be established. You will receive a message inside your command prompt mentioning "Secure connection established, you may start your tests now".
+In a few seconds, after you execute the command, a TCP with TLS 1.2 secure connection will be established. You will receive a message inside your command prompt mentioning "Secure connection established, you may start your tests now".
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-macos/For-mac-4.webp').default} alt="Image"  className="doc_img"/>
 
@@ -98,9 +98,9 @@ In a few seconds, after you execute the command, an SSH connection will be estab
 
 * * *
 
->**Note:** If you were already running a test session through tunnel then you will have to terminate the existing SSH connection in cmd before you re-establish it for a new directory.
+>**Note:** If you were already running a test session through tunnel then you will have to terminate the existing TCP with TLS 1.2 secure connection in cmd before you re-establish it for a new directory.
 
-**Step 1**: If you want to test the local folders and files stored in your system, pass an additional argument 'dir' with the directory/folder in double quotes name as you run the command on the terminal to establish a SSH connection with LambdaTest tunnel.
+**Step 1**: If you want to test the local folders and files stored in your system, pass an additional argument 'dir' with the directory/folder in double quotes name as you run the command on the terminal to establish a TCP with TLS 1.2 secure connection with LambdaTest tunnel.
 
 Sample format:
 
@@ -110,7 +110,7 @@ Sample format:
 
 `LT --user example@lambdatest.com --key 123asd123 --dir "/home/lambda/Downloads"`
 
-**Step 2**: After you establish a SSH connection, go to LambdaTest and navigate to Real Time test. Enter "local-folder.lambdatest.com" in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice.
+**Step 2**: After you establish a TCP with TLS 1.2 secure connection, go to LambdaTest and navigate to Real Time test. Enter "local-folder.lambdatest.com" in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-macos/For-mac-9.webp').default} alt="Image"  className="doc_img"/>
 
@@ -122,18 +122,18 @@ Sample format:
 
 **For example**: If you have a file ‘test.html’ in your folder. You need to give URL as "local-folder.lambdatest.com/test.html" to run the same file. In this way, you can run any HTML, PHP, Python or similar web files present in any folder of your system, directly in LambdaTest browser.
 
-## Terminating The SSH Connection
+## Terminating The Secure Connection
 
 * * *
 
 A secure tunnel connection is maintained unless you explicitly disconnect it. You can disconnect the tunnel in following ways:
 
 **Option 1**: You can kill the process by using Ctrl+C in the terminal.  
-You will receive the below highlighted messages indicating the termination on SSH(Secure Shell) Connection.
+You will receive the below highlighted messages indicating the termination of the TCP with TLS 1.2 secure connection.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-macos/For-mac-11.webp').default} alt="Image"  className="doc_img"/>
 
-**Option 2**: You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button that says "Tunnel active:". This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an ‘x’. Hit the ‘x’ to terminate the SSH tunnel.
+**Option 2**: You can also disconnect it using the option provided in the user interface. In the top right corner of LambdaTest interface, you will find a button that says "Tunnel active:". This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an ‘x’. Hit the ‘x’ to terminate the secure tunnel.
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-macos/For-mac-12.webp').default} alt="Image"  className="doc_img"/>
 
@@ -148,7 +148,7 @@ Use the following arguments in your command line.
 | ARGUMENTS | EXAMPLES | DESCRIPTION |
 |---------|-------|-------------|
 | –proxy-host | abc.wonderproxy.com | Full hostname for the proxy you’d like to use. |
-| –key | 123asd123 | Helps Lambdatest to map a secure shell connection with the right user. |
+| –key | 123asd123 | Helps Lambdatest to map a TCP with TLS 1.2 secure connection with the right user. |
 | –proxy-port | 12345 | The port declared by you for fetching the proxy. |
 | –proxy-pass | hijklmnop | WonderProxy password of the user. |
 | –proxy-user | abcdefg | WonderProxy username of the user. |
@@ -206,11 +206,11 @@ Following is the list of command arguments which can be used as modifiers while 
 
 An Access Key is a unique string used for the identification of your account.
 
-As we offer a cloud-based platform to host a testing ecosystem to everyone around the globe. Access key plays a crucial role in mapping a Secure Shell (SSH) environment for hosting your locally stored web pages online. They work as your IDs when you gain access to our cloud servers.
+As we offer a cloud-based platform to host a testing ecosystem to everyone around the globe. Access key plays a crucial role in mapping a TCP with TLS 1.2 secure connection for hosting your locally stored web pages online. They work as your IDs when you gain access to our cloud servers.
 
 If you ever misplace your Access key into the hands of someone you don’t trust. You can always redefine it by clicking the button for "**Regenerate Access Key**".
 
-Access Key is pivotal for establishing a Secure Shell(SSH) through LambdaTest tunnel to test your locally hosted web-pages or web-apps.
+Access Key is pivotal for establishing a TCP with TLS 1.2 secure connection through LambdaTest tunnel to test your locally hosted web-pages or web-apps.
 
 Find your Access Key while performing any type of testing, from the left navigation menu. You will find a button that says "Configure Tunnel". Click on that button & a string containing your access key will be presented.
 
@@ -224,4 +224,4 @@ You can also find your Access Key by going to ‘Settings’ in the left navigat
 
 <img loading="lazy" src={require('../assets/images/local-testing-for-macos/For-mac-15.webp').default} alt="Image"  className="doc_img"/>
 
->**LambdaTest tunnel Update:** Earlier, when our LambdaTest tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted cross browser testing experience of locally hosted web pages. Not anymore! We have now updated the LambdaTest tunnel binary in a way that it auto-updates to the latest version every time you execute the LambdaTest tunnel from cmd/terminal. 
+>**LambdaTest tunnel Update:** Earlier, when our LambdaTest tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted cross browser testing experience of locally hosted web pages. Not anymore! We have now updated the LambdaTest tunnel binary in a way that it auto-updates to the latest version every time you execute the LambdaTest tunnel from cmd/terminal.
