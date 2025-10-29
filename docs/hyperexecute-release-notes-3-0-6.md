@@ -43,8 +43,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-## Feature: HyperExecute Logs Categorization
-Debugging large test executions often generates extensive logs, making it difficult to identify key issues. The new **Logs Categorization** feature enhances log readability by automatically highlighting and grouping critical entries.
+## Feature: HyperExecute Logs Highlights
+Debugging large test executions often generates extensive logs, making it difficult to identify key issues. The new **Logs Highlights** feature enhances log readability by automatically highlighting and grouping critical entries.
 
 HyperExecute categorizes logs into Errors and Warnings using intelligent pattern detection based on regular expressions (regex). This will help you quickly locate and review the most relevant log lines during test analysis.
 
