@@ -86,44 +86,44 @@ LT_USERNAME = os.getenv('LT_USERNAME')
 LT_ACCESS_KEY = os.getenv('LT_ACCESS_KEY')
 
 desired_cap_chrome = {
- "build" : "Lambdatest Build 2",
- "name" : "Autoheal Test via Hooks",
- "platform" : "Windows 10",
- "browserName" : "Chrome",
- "version" : "latest",
- "visual" : False,
- "video" : True,
- "network": True,
- "console": True,
- 'goog:chromeOptions': {'args': ['--window-size=400x300']},
+  "build" : "Lambdatest Build 2",
+  "name" : "Autoheal Test via Hooks",
+  "platform" : "Windows 10",
+  "browserName" : "Chrome",
+  "version" : "latest",
+  "visual" : False,
+  "video" : True,
+  "network": True,
+  "console": True,
+  'goog:chromeOptions': {'args': ['--window-size=400x300']},
 }
 
 hub = f"https://{LT_USERNAME}:{LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub"
 
 def OneTest(caps, sleepTime):
-    begin = time.time()
-    driver = webdriver.Remote(command_executor=hub, desired_capabilities=caps)
-    end = time.time()
-    print(f"Startup time for {caps['browserName']} {end - begin} , {begin} , {end}")
-    driver.get("https://www.selenium.dev")
-    time.sleep(sleepTime)
+  begin = time.time()
+  driver = webdriver.Remote(command_executor=hub, desired_capabilities=caps)
+  end = time.time()
+  print(f"Startup time for {caps['browserName']} {end - begin} , {begin} , {end}")
+  driver.get("https://www.selenium.dev")
+  time.sleep(sleepTime)
 
-    driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}') #start hook for autoheal
+  driver.execute_script('lambdatest_executor:{"action":"lambda-heal-start"}') #start hook for autoheal
 
-    driver.find_element_by_id('td-block-1')
-    driver.execute_script("document.getElementById(\"td-block-1\").id=\"updatedtd-block-1\";")
-    driver.find_element_by_id('updatedtd-block-1')
-    driver.find_element_by_id("td-block-1")
+  driver.find_element_by_id('td-block-1')
+  driver.execute_script("document.getElementById(\"td-block-1\").id=\"updatedtd-block-1\";")
+  driver.find_element_by_id('updatedtd-block-1')
+  driver.find_element_by_id("td-block-1")
 
-    driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')  #stop hook for autoheal
+  driver.execute_script('lambdatest_executor:{"action":"lambda-heal-stop"}')  #stop hook for autoheal
     
-    driver.execute_script("console.log('Test started');")
-    driver.execute_script("console.info('Navigated to selenium.dev');")
-    driver.execute_script("console.warn('This is a warning message');")
-    driver.execute_script("console.error('This is an error message');")
-    driver.execute_script("console.debug('Debugging test flow');")
-    driver.execute_script("console.log('Test completed successfully');")
-    driver.quit()
+  driver.execute_script("console.log('Test started');")
+  driver.execute_script("console.info('Navigated to selenium.dev');")
+  driver.execute_script("console.warn('This is a warning message');")
+  driver.execute_script("console.error('This is an error message');")
+  driver.execute_script("console.debug('Debugging test flow');")
+  driver.execute_script("console.log('Test completed successfully');")
+  driver.quit()
 
 OneTest(desired_cap_chrome, 5)
 ```
