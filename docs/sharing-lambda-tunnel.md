@@ -10,9 +10,9 @@ keywords:
   - lambdatest local tunnel
   - LambdaTest tunnel
   - local app testing for linux
-  - ssh connection
-  - secure shell tunnel
-  - shared ssh
+  - TCP with TLS 1.2 secure connection
+  - TCP with TLS 1.2 secure connection tunnel
+  - shared TCP with TLS 1.2 secure connection
 image: /assets/images/og-images/Sharing-Lambda-Tunnel.jpg
 url: https://www.lambdatest.com/support/docs/sharing-lambda-tunnel/
 site_name: LambdaTest
@@ -46,11 +46,11 @@ slug: sharing-lambda-tunnel/
 # Sharing LambdaTest Tunnel
 
 * * *
-LambdaTest is a [cross browser testing](https://www.lambdatest.com/) tool which allows you to test your locally hosted website or web application on 10000+ real browsers. It does so with the help of an SSH(Secure Shell) tunnel which establishes a secure and unique connection from your local system to LambdaTest cloud servers.
+LambdaTest is a [cross browser testing](https://www.lambdatest.com/) tool which allows you to test your locally hosted website or web application on 3000+ real browsers. It does so with the help of a TCP with TLS 1.2 secure connection tunnel which establishes a secure and unique connection from your local system to LambdaTest cloud servers.
 
-Earlier with LambdaTest Tunnel, users belonging to the same organization were able to choose any tunnel they want. So if a team had 5 members and all of them had configured their own tunnels, then they were able to shuffle their SSH tunnel connection with any of the 5 connections. However, that is not the case anymore!
+Earlier with LambdaTest Tunnel, users belonging to the same organization were able to choose any tunnel they want. So if a team had 5 members and all of them had configured their own tunnels, then they were able to shuffle their TCP with TLS 1.2 secure connection tunnel with any of the 5 connections. However, that is not the case anymore!
 
-Now, a user can only work on a user-specific SSH tunnel connection. In case you wish to keep a common SSH tunnel connection across all your teammates then you will need to establish a shared LambdaTest Tunnel that would work for all of the teammates, listed under your organization at LambdaTest.
+Now, a user can only work on a user-specific TCP with TLS 1.2 secure connection tunnel. In case you wish to keep a common TCP with TLS 1.2 secure connection tunnel across all your teammates then you will need to establish a shared LambdaTest Tunnel that would work for all of the teammates, listed under your organization at LambdaTest.
 
 This document will help you share your LambdaTest Tunnel with colleagues listed as team in your LambdaTest account.
 
@@ -66,13 +66,13 @@ This document will help you share your LambdaTest Tunnel with colleagues listed 
 
 <img loading="lazy" src={require('../assets/images/sharing-lambda-tunnel/localhost-testing-with-shared-tunnel.webp').default} alt="Sharing LambdaTest Tunnel" width="1119" height="195" className="doc_img"/>
 
-**Step 3:** To configure a shared LambdaTest Tunnel you would need to append an argument `--shared-tunnel` to the command used for invoking LambdaTest Tunnel. Syntax to configure a shared SSH LambdaTest Tunnel would be:
+**Step 3:** To configure a shared LambdaTest Tunnel you would need to append an argument `--shared-tunnel` to the command used for invoking LambdaTest Tunnel. Syntax to configure a shared TCP with TLS 1.2 secure connection LambdaTest Tunnel would be:
 
 `LT --user {user's login email} --key {user's access key} --shared-tunnel --tunnelName {string}`
 
 So for example, if your user login email is example@lambdatest.com and your user key is 123asd123, the command would be:
 
-`LT --user example@lambdatest.com --key 123asd123 --shared-tunnel --tunnelName SharedSSH-Example`
+`LT --user example@lambdatest.com --key 123asd123 --shared-tunnel --tunnelName SharedTCP-TLS12-Example`
 
 <img loading="lazy" src={require('../assets/images/sharing-lambda-tunnel/command-line-code-for-local-testing-with-shared-tunnel.webp').default} alt="Sharing LambdaTest Tunnel" width="1090" height="264" className="doc_img"/>
 
@@ -85,7 +85,7 @@ That is it, if your teammates will now open their LambdaTest account then they w
 ## Don't Forget To Name The Shared Tunnel
 
 * * *
-It could be problematic if 2 or more teammates start sharing their tunnels across the organization, as a best practice we recommend you to name the Shared tunnel appropriately so your teammates could easily identify which SSH tunnel is their own and which is the one shared by you.
+It could be problematic if 2 or more teammates start sharing their tunnels across the organization, as a best practice we recommend you to name the Shared tunnel appropriately so your teammates could easily identify which TCP with TLS 1.2 secure connection tunnel is their own and which is the one shared by you.
 
 To name a shared tunnel you will have to append another argument in the command for configuring tunnel. The new argument would be: `-tunnelName {string}`
 
@@ -95,7 +95,7 @@ Syntax:
 
 Example
 
-`LT --user example@lambdatest.com --key 123asd123 --shared-tunnel --tunnelName SharedSSH-example`
+`LT --user example@lambdatest.com --key 123asd123 --shared-tunnel --tunnelName SharedTCP-TLS12-example`
 
 <img loading="lazy" src={require('../assets/images/sharing-lambda-tunnel/configure-shared-tunnel-for-local-testing.webp').default} alt="Sharing LambdaTest Tunnel" width="1334" height="415" className="doc_img"/>
 

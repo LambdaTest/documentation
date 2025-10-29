@@ -9,10 +9,10 @@ keywords:
   - free cross browser testing tool
   - cross browser compatibility tools
   - lambdatest tunnel
-  - ssh tunnel for windows
+  - TCP with TLS 1.2 secure connection for windows
   - testing local web pages
-  - secure-shell-tunnel
-  - ssh tunnel
+  - TCP with TLS 1.2 secure connection tunnel
+  - TCP with TLS 1.2 secure connection
   - tcp
   - websocket
 image: /resources/images/og-images/Testing-Locally-Hosted-Pages-min.jpg
