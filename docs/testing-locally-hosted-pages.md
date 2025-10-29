@@ -3,16 +3,16 @@ id: testing-locally-hosted-pages
 title: Test Locally Hosted Web Pages
 hide_title: false
 sidebar_label: Testing Locally Hosted Pages
-description: LambdaTest Tunnel securely connects your local machine to cloud-based real devices for testing locally hosted web apps, with multiple connectivity options like SSH and TCP.
+description: LambdaTest Tunnel securely connects your local machine to cloud-based real devices for testing locally hosted web apps, with multiple connectivity options like TCP or Websocket.
 keywords:
   - test locally hosted web apps online
   - free cross browser testing tool
   - cross browser compatibility tools
   - lambdatest tunnel
-  - ssh tunnel for windows
+  - TCP tunnel for windows
   - testing local web pages
   - secure-shell-tunnel
-  - ssh tunnel
+  - TCP tunnel
   - tcp
   - websocket
 image: /resources/images/og-images/Testing-Locally-Hosted-Pages-min.jpg
@@ -44,7 +44,7 @@ slug: testing-locally-hosted-pages/
       })
     }}
 ></script>
-**LambdaTest Tunnel** is a secure and encrypted tunneling feature that allows devs and QAs to test their locally hosted web applications or websites on the cloud-based real machines. It establishes a secure connection between the user’s local machine and the real machine in the cloud. There are multiple connectivity options like **SSH (port 22 or 443)**, **TCP- port 443**. Tunnel Binary performs network scanning and selects the best mode if not explicitly specified.
+**LambdaTest Tunnel** is a secure and encrypted tunneling feature that allows devs and QAs to test their locally hosted web applications or websites on the cloud-based real machines. It establishes a secure connection between the user’s local machine and the real machine in the cloud. There are multiple connectivity options like **TCP with TLS 1.2 over port 443**, **Websocket (port 443)**,. Tunnel Binary performs network scanning and selects the best mode if not explicitly specified.
 
 <img loading="lazy" src={require('../assets/images/tunnel/tunnel.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 

@@ -10,9 +10,9 @@ keywords:
   - lambdatest local tunnel
   - LambdaTest tunnel
   - local app testing for linux
-  - ssh connection
-  - secure shell tunnel
-  - shared ssh
+  - TCP with TLS 1.2 secure connection
+  - TCP with TLS 1.2 secure connection tunnel
+  - shared TCP with TLS 1.2 secure connection
 url: https://www.lambdatest.com/support/docs/setup-pre-run-executable/
 site_name: LambdaTest
 slug: setup-pre-run-executable/

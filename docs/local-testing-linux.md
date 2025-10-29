@@ -44,7 +44,7 @@ slug: local-testing-linux/
 
 ***
 
-LambdaTest tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites on 3000+ real browsers through LambdaTest. You can test plain HTML, CSS, PHP, Python, or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on LambdaTest. You can leverage the new LambdaTest tunnel binary for corporate firewalls and proxy settings without any restrictions. LambdaTest tunnel follows various protocols such as Web Socket, HTTPS, SSH(Secure Shell), etc. to help you establish a secure and unique tunnel connection through corporate firewalls between your system and LambdaTest cloud servers.
+LambdaTest tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites on 3000+ real browsers through LambdaTest. You can test plain HTML, CSS, PHP, Python, or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on LambdaTest. You can leverage the new LambdaTest tunnel binary for corporate firewalls and proxy settings without any restrictions. LambdaTest tunnel follows various protocols such as Web Socket, HTTPS, TCP with TLS 1.2 secure connection, etc. to help you establish a secure and unique tunnel connection through corporate firewalls between your system and LambdaTest cloud servers.
 
 Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with LambdaTest tunnel and experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross-platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over the Production environment.
 
@@ -58,7 +58,7 @@ You can download the binary file responsible for establishing a tunnel connectio
 ***
 **Step 1**:  Click the button **‘Configure Tunnel’**. Download the binary zip file by clicking the **‘Download Link’**. Press the **‘Copy’**  button in the form that opens up to copy the complete string to your system’s clipboard.
 
-<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-1.webp').default} alt="ssh tunnel configuration" width="1346" height="622" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-1.webp').default} alt="TCP with TLS 1.2 secure connection tunnel configuration" width="1346" height="622" className="doc_img"/>
 
 >**What is this zip file for?**   
 This zip file contains the tunnel binary which will help in establishing a secure tunnel connection to LambdaTest cloud servers so you could test your locally hosted web pages over thousands of browsers and operating systems for desktop and mobile using LambdaTest.
@@ -109,7 +109,7 @@ Once you press the **‘Start’**  button, your test will start and you will 
 
 **Step 1:**  Navigate to **‘Configure Tunnel’**  button.
 
-<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-8.webp').default} alt="ssh tunnel configuration" width="1342" height="608" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-8.webp').default} alt="TCP with TLS 1.2 secure connection tunnel configuration" width="1342" height="608" className="doc_img"/>
 
 **Step 2:**  Click on **‘Folder’**  button and copy the string on your system’s clipboard.
 
@@ -133,7 +133,7 @@ A secure tunnel connection is maintained unless you explicitly disconnect it. Yo
 
 **Option 1:**  You can kill the process by using **‘Ctrl+C’**  in the terminal. You will receive the below-highlighted message **‘Tunnel stopped successfully’**  indicating the termination of Tunnel Connection.
 
-<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-12.webp').default} alt="Stopping SSH Tunnel" width="1523" height="223" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-12.webp').default} alt="Stopping TCP with TLS 1.2 secure connection Tunnel" width="1523" height="223" className="doc_img"/>
 
 **Option 2:**  You can also disconnect it using the option provided in the user interface. In the top right corner of the LambdaTest interface, you will find a button that says **‘Tunnel active’**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an **‘x’**button. Press the **‘x’**  button to terminate the tunnel connection.
 

@@ -10,10 +10,10 @@ keywords:
   - lambdatest local tunnel
   - LambdaTest tunnel
   - local app testing for linux
-  - ssh connection
-  - shared ssh
-  - secure-shell-tunnel
-  - docker compose ssh tunnel
+  - TCP with TLS 1.2 secure connection
+  - shared TCP with TLS 1.2 secure connection
+  - TCP with TLS 1.2 secure connection tunnel
+  - docker compose TCP with TLS 1.2 secure connection tunnel
   - docker vpn tunnel
 image: /assets/images/og-images/docker-tunnel.png
 url: https://www.lambdatest.com/support/docs/tunnel-allowHost-wildcard-support/

@@ -41,7 +41,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
-**LambdaTest Tunnel** feature allows you to test your **private server URLs** or **locally hosted web-apps** or **websites** on **3000+** real browsers through LambdaTest. However, sometimes corporate firewalls and proxy settings may have restricted you to leverage the LambdaTest Tunnel binary. Not anymore though, as we’ve come up with a new binary for LambdaTest Tunnel. LambdaTest Tunnel follows various protocols such as **Web Socket, HTTPS, SSH(Secure Shell)** etc. to help you establish a secure and unique tunnel connection between your system and LambdaTest cloud servers.
+**LambdaTest Tunnel** feature allows you to test your **private server URLs** or **locally hosted web-apps** or **websites** on **3000+** real browsers through LambdaTest. However, sometimes corporate firewalls and proxy settings may have restricted you to leverage the LambdaTest Tunnel binary. Not anymore though, as we’ve come up with a new binary for LambdaTest Tunnel. LambdaTest Tunnel follows various protocols such as **Web Socket, TCP** etc. to help you establish a secure and unique tunnel connection between your system and LambdaTest cloud servers.
 
 You can download the **LambdaTest Tunnel binary** that will help you establish a secure connection through corporate firewalls between your computer and [LambdaTest](https://www.lambdatest.com/) cloud servers for a testing locally hosted website or web-applications. You can test plain **HTML, CSS, PHP, Python** or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on LambdaTest.
 
