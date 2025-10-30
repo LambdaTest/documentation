@@ -3345,6 +3345,11 @@ module.exports = {
             id: "smartui-draw-on-ui",
           },
           {
+            type: "doc",
+            label: "customCSS",
+            id: "smartui-custom-css",
+          },
+          {
             type: "category",
             collapsed: true,
             label: "Smart Comparison Options",
