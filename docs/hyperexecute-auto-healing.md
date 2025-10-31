@@ -78,6 +78,22 @@ const capability = {
 
 Auto Healing employs a dynamic locator strategy that adapts to DOM (Document Object Model) changes in real-time. When an element is initially located, the system records its DOM path and associated attributes. If subsequent attempts to find the element fail due to application updates, the Auto Healing mechanism activates. It analyzes the current DOM structure, comparing it against the previously recorded state, and generates new, contextually relevant locators by intelligently combining element attributes and hierarchical information. This process occurs seamlessly during test runtime, allowing scripts to continue execution despite locator changes. The system continuously monitors the web page for DOM modifications, ensuring sustained test reliability even in the face of frequent application updates.
 
+## Using AutoHeal with Hooks
+
+In addition to enabling AutoHeal globally through capabilities, HyperExecute also supports **AutoHeal Hooks** for fine-grained control during test execution.  
+
+These hooks allow you to **start or stop the AutoHeal mechanism dynamically** at any point within your Selenium test scripts. This is especially useful when only certain test steps involve dynamic elements or frequently changing locators.
+
+By using these hooks, you can:
+- Start AutoHeal before performing actions on elements likely to change.
+- Stop AutoHeal immediately after those interactions are completed.
+- Ensure the rest of your test executes with standard Selenium behavior.
+
+This provides precise control over when element healing should be applied, improving reliability and reducing flakiness without impacting unrelated steps.  
+
+> To learn how to use AutoHeal hooks in your Selenium scripts, refer to the detailed guide: [How to Use AutoHeal using Hooks](/support/docs/autoheal-with-hooks/)
+
+
 ## Benefits of Auto Healing
 Here are some of the benefits of using HyperExecute's Auto Healing feature:
 
@@ -100,3 +116,4 @@ By following these best practices, you can use auto healing to improve the relia
 - Configure auto healing to retry tests a limited number of times. This will help to prevent infinite loops and resource exhaustion.
 - Log all Auto Healing activity. This will help you understand why tests are failing and to troubleshoot any problems that occur.
 - Monitor the effectiveness of Auto Healing. Track the number of tests that are healed and the number of false positives. This will help you to determine whether or not auto healing is providing a net benefit.
+
