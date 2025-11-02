@@ -1,16 +1,20 @@
 ---
 id: smartui-custom-css
-title: SmartUI customCSS
-sidebar_label: customCSS
-description: Use customCSS to inject test-only CSS via SmartUI CLI using a file path or embedded string in smartui-web.json.
-slug: smartui-custom-css/
+title: Custom CSS Injection in SmartUI
+sidebar_label: Custom CSS
+description: Learn how to use SmartUI's customCSS feature to inject test-only CSS styles during snapshots without modifying your application code
 keywords:
-  - smartui
   - custom css
+  - visual regression testing
+  - css injection
+  - smartui cli
   - visual testing
-  - cli
-  - configuration
-  - percy css
+  - test-only css
+  - css configuration
+  - visual stability
+url: https://www.lambdatest.com/support/docs/smartui-custom-css/
+site_name: LambdaTest
+slug: smartui-custom-css/
 ---
 
 <script type="application/ld+json"
@@ -37,94 +41,147 @@ keywords:
     }}
 ></script>
 
-## SmartUI customCSS
-
-Use customCSS to apply test‑only styles at snapshot time without changing your app. It supports two input styles:
-
-- File path (recommended for maintainability)
-- Embedded CSS string (quick and portable)
-
-## Prerequisites
-- Node.js v20.3+ recommended
-- SmartUI CLI v4.1.40+ (exec and capture supported)
-- PROJECT_TOKEN
-
----
-
-## Why customCSS Matters
-
-1. **Stabilize Visual Diffs**: Hide or normalize volatile UI (ads, rotating banners, counters) to reduce false positives.
-2. **Environment Parity**: Enforce consistent fonts, themes, and spacing across different OS/browsers for predictable rendering.
-3. **Non‑Intrusive**: Avoid modifying application code or injecting styles in tests—keep visual adjustments in one place.
-
----
-
-## 1) Configuration: Two Ways to Provide customCSS
-
-A) File path method (recommended)
-- Put your CSS rules into a file (e.g., `code.css`) at the project root (or any path you prefer).
-- Reference that path in your SmartUI config.
-
-```json
-{
-  "web": { "browsers": ["chrome"], "viewports": [[1440, 900]] },
-  "enableJavaScript": true,
-  "customCSS": "./code.css"
-}
-```
-
-B) Embedded string method (single‑line)
-- Provide the CSS directly as a JSON string. Use a single line (avoids path misdetection) and escape quotes if needed.
-
-```json
-{
-  "web": { "browsers": ["chrome"], "viewports": [[1440, 900]] },
-  "enableJavaScript": true,
-  "customCSS": "body{font-family:'Inter',sans-serif;} .banner,.ad{display:none!important;}"
-}
-```
-
-Notes
-- Place customCSS only at the top level of your config (not inside web).
-- For multi‑line CSS in JSON, either:
-  - keep it compact in one line, or
-  - use the file‑path method to avoid escaping/formatting issues.
-- Paths in customCSS are relative to your project root.
-
----
-
-## 2) Running with SmartUI (production)
-
-Use either exec (wrap your test runner) or capture (static URLs). Ensure CLI is 4.1.40+.
-
-Exec example (generic):
-```bash
-export PROJECT_TOKEN='YOUR_PROJECT_TOKEN'
-npx smartui --config smartui-web.json exec -- <your-test-command>
-```
-
-Capture example (static URLs):
-```bash
-export PROJECT_TOKEN='YOUR_PROJECT_TOKEN'
-npx smartui capture --config smartui-web.json
-```
-
-What you’ll see
-- CLI validates and injects your CSS at snapshot time
-- A CSS Injection Report in logs with the number of rules applied and any selectors with no matches
-
----
-
-## Known Limitations
-
-- Can be overridden by higher‑specificity inline styles; increase selector specificity if needed.
-
----
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## 3) Sample Use Cases
+---
+
+Custom CSS injection is a specialized feature in SmartUI that allows you to apply test-only styles during snapshot capture without modifying your application code. This feature enables you to stabilize visual tests by normalizing dynamic content, enforcing consistent styling across environments, and masking sensitive information—all while keeping your visual testing logic centralized and maintainable.
+
+### Why Custom CSS Matters
+
+1. **Stabilize Visual Diffs**: Hide or normalize volatile UI elements (ads, rotating banners, dynamic counters, time-based content) to reduce false positives in your visual regression tests.
+
+2. **Environment Parity**: Enforce consistent fonts, themes, and spacing across different operating systems, browsers, and devices for predictable rendering and accurate comparisons.
+
+3. **Non-Intrusive Testing**: Avoid modifying application code or injecting styles directly in test scripts. Keep all visual adjustments in a centralized configuration, making it easier to maintain and review.
+
+4. **Enhanced Test Reliability**: Reduce test flakiness by masking dynamic elements that change between test runs, ensuring your visual tests focus on meaningful UI changes rather than transient content.
+
+## Prerequisites
+
+Before using the Custom CSS feature, ensure you meet the following requirements:
+
+- Node.js v20.3+ (recommended)
+- SmartUI CLI v4.1.40+ (supports both `exec` and `capture` commands)
+- Valid PROJECT_TOKEN configured in your environment
+
+---
+
+# Custom CSS Configuration in SmartUI
+
+SmartUI supports two methods for providing custom CSS: file path (recommended for maintainability) and embedded string (quick and portable). Choose the method that best fits your workflow.
+
+## Method 1: File Path (Recommended)
+
+The file path method is recommended for larger stylesheets and team collaboration. Create a separate CSS file in your project and reference it in your SmartUI configuration.
+
+**Steps:**
+
+1. Create a CSS file (e.g., `visual-test-styles.css` or `code.css`) in your project directory.
+
+2. Add your CSS rules to the file:
+
+```css title="visual-test-styles.css"
+/* General samples: pick what suits your use case */
+
+/* 1) Normalize fonts for consistent rendering */
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+
+/* 2) Hide flaky, time-based banners or rotating promos */
+.promo-banner, [data-testid="rotating-banner"] { display: none !important; }
+
+/* 3) Freeze dynamic badges/counters that change every run */
+[data-badge], .cart-count { visibility: hidden; }
+```
+
+3. Reference the file path in your SmartUI configuration:
+
+```json title="smartui-web.json"
+{
+  "web": { 
+    "browsers": ["chrome"], 
+    "viewports": [[1440, 900]] 
+  },
+  "enableJavaScript": true,
+  "customCSS": "./visual-test-styles.css"
+}
+```
+
+## Method 2: Embedded String
+
+The embedded string method is useful for quick edits and single-use CSS rules. Provide the CSS directly as a JSON string value.
+
+**Important Notes:**
+
+- Keep CSS single-line to avoid JSON parsing issues
+- Escape quotes properly (`'` or `\"`)
+- Use `\n` for newlines if needed (though single-line is preferred)
+
+```json title="smartui-web.json"
+{
+  "web": { 
+    "browsers": ["chrome"], 
+    "viewports": [[1440, 900]] 
+  },
+  "enableJavaScript": true,
+  "customCSS": "body{font-family:'Inter',sans-serif!important;} .banner,.ad{display:none!important;}"
+}
+```
+
+## Configuration Guidelines
+
+- **Placement**: The `customCSS` property must be placed at the top level of your configuration file (not inside the `web` object). Placing it inside `web` will result in a "must NOT have additional properties" error.
+
+- **Path Resolution**: File paths are relative to your project root directory. Ensure the CSS file exists at the specified path. Files outside the project directory may not be accessible.
+
+- **CSS Specificity**: Your custom CSS will be injected at snapshot time. Use `!important` declarations if you need to override existing styles. If CSS is overridden by inline styles, increase selector specificity (e.g., `.target-class` → `#specific-id .target-class`).
+
+- **Multi-line CSS**: For multi-line CSS, prefer the file path method to avoid JSON escaping complexity. If using embedded strings, keep rules compact and single-line.
+
+- **Method Selection**: Choose the file path method for larger stylesheets and team collaboration. Use embedded strings only for quick, single-use CSS rules.
+
+- **CSS Organization**: Keep your CSS snapshot-specific—target only elements that need stabilization or normalization. Avoid broad selectors that might affect unintended elements.
+
+- **JSON Escaping**: When using embedded strings, escape quotes properly:
+  - Use single quotes within CSS strings: `"body{font-family:'Inter',sans-serif;}"`
+  - Or escape double quotes: `"body{font-family:\"Inter\",sans-serif;}"`
+
+- **Selector Verification**: If the CSS Injection Report shows "no elements found" or "invalid selector" errors:
+  - Verify the element exists at snapshot time (use browser dev tools)
+  - Check selector specificity—it may need to be more specific or less specific
+  - Consider timing issues—ensure the element is rendered before snapshot capture
+  - Check the CSS Injection Report in logs for detailed feedback
+
+- **CLI Version**: Ensure SmartUI CLI v4.1.40+ is installed. You can verify this by running `npx smartui --version`. Older versions may not support the `customCSS` feature.
+
+- **Waiting for UI Readiness**: If you need to wait for UI elements to be ready before snapshots, add these options to your configuration:
+  ```json
+  {
+    "waitForTimeout": 2000,
+    "waitForPageRender": 5000,
+    "customCSS": "./visual-test-styles.css"
+  }
+  ```
+
+---
+
+
+## Known Limitations
+
+The Custom CSS feature has the following limitations:
+
+- **Specificity Constraints**: Custom CSS can be overridden by higher-specificity inline styles. Increase your selector specificity or use `!important` declarations if needed.
+
+- **Snapshot-Only Application**: CSS is only injected during snapshot capture and does not affect your application's runtime behavior.
+
+- **File Path Resolution**: Ensure CSS file paths are correctly specified relative to your project root. Files outside the project directory may not be accessible.
+
+---
+
+## Use Cases for Custom CSS
+
+The custom CSS feature is particularly valuable in the following scenarios:
 
 <Tabs>
   <TabItem value="stabilize" label="Stabilize Dynamic UI" default>
@@ -206,37 +263,60 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 
 ---
 
-## 4) Tips and Troubleshooting
+## Minimal Configuration Templates
 
-- Prefer file path for larger stylesheets and team reviews.
-- For embedded strings, keep CSS single‑line or very carefully escaped (quotes, no raw newlines).
-- If a selector shows “no elements found” in the report, verify it exists at snapshot time or loosen/tighten the selector.
-- Keep CSS snapshot‑specific: target only what you need for stable and meaningful diffs.
-- If you need to wait for UI readiness, use SmartUI config waits:
-  - `"waitForTimeout": 2000`
-  - `"waitForPageRender": 5000`
+### File Path Template
+
+```json title="smartui-web.json"
+{
+  "web": { 
+    "browsers": ["chrome"], 
+    "viewports": [[1440, 900]] 
+  },
+  "customCSS": "./path/to/visual-test-styles.css"
+}
+```
+
+### Embedded String Template
+
+```json title="smartui-web.json"
+{
+  "web": { 
+    "browsers": ["chrome"], 
+    "viewports": [[1440, 900]] 
+  },
+  "customCSS": "body{font-family:'Inter',sans-serif!important;} .ad,.banner{display:none!important;}"
+}
+```
 
 ---
 
-## 5) Minimal templates
+## Additional Resources
 
-File path template:
-```json
-{
-  "web": { "browsers": ["chrome"], "viewports": [[1440, 900]] },
-  "enableJavaScript": true,
-  "customCSS": "./path/to/visual.css"
-}
-```
+- [SmartUI CLI Documentation](/support/docs/smartui-cli/)
+- [SmartUI Configuration Options](/support/docs/smartui-cli/)
+- [Visual Regression Testing Guide](/support/docs/smart-visual-testing/)
+- [Layout Comparison Documentation](/support/docs/smartui-layout-comparison/)
 
-Embedded string template:
-```json
-{
-  "web": { "browsers": ["chrome"], "viewports": [[1440, 900]] },
-  "enableJavaScript": true,
-  "customCSS": "/* your CSS (single-line) */ body{font-family:'Inter',sans-serif;} .ad{display:none!important;}"
-}
-```
+---
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link">Custom CSS</span>
+    </li>
+  </ul>
+</nav>
 
 
 
