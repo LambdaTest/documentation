@@ -82,7 +82,7 @@ The file path method is recommended for larger stylesheets and team collaboratio
 
 2. Add your CSS rules to the file:
 
-```css title="visual-test-styles.css"
+```css
 /* General samples: pick what suits your use case */
 
 /* 1) Normalize fonts for consistent rendering */
@@ -97,7 +97,7 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
 
 3. Reference the file path in your SmartUI configuration:
 
-```json title="smartui-web.json"
+```json
 {
   "web": { 
     "browsers": ["chrome"], 
@@ -118,7 +118,7 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 - Escape quotes properly (`'` or `\"`)
 - Use `\n` for newlines if needed (though single-line is preferred)
 
-```json title="smartui-web.json"
+```json
 {
   "web": { 
     "browsers": ["chrome"], 
@@ -267,7 +267,7 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 
 ### File Path Template
 
-```json title="smartui-web.json"
+```json
 {
   "web": { 
     "browsers": ["chrome"], 
@@ -279,7 +279,7 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 
 ### Embedded String Template
 
-```json title="smartui-web.json"
+```json
 {
   "web": { 
     "browsers": ["chrome"], 
