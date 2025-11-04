@@ -296,7 +296,7 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 - [SmartUI CLI Documentation](/support/docs/smartui-cli/)
 - [SmartUI Configuration Options](/support/docs/smartui-cli/)
 - [Visual Regression Testing Guide](/support/docs/smart-visual-testing/)
-- [Layout Comparison Documentation](/support/docs/smartui-layout-comparison/)
+- [Layout Comparison Documentation](/support/docs/smartui-layout-testing/)
 
 ---
 
