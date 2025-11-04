@@ -76,7 +76,7 @@ AI RCA is an intelligent feature that uses advanced machine learning algorithms 
 2. **Configure Analysis Scope**: Choose which types of test failures to analyze:
    - **All failures**: Analyze every failed test, regardless of previous status
    - **New failures**: Analyze only tests that have failed recently after having passed at least 10 consecutive times previously.
-   - **Always failing**: Analyze only tests that have failed in all of their previous 5 runs to identify persistent issues.
+   - **Consistent Failures**: Analyze only tests that have failed in all of their previous 5 runs to identify persistent issues.
 
 ### Step 3: Set Special Instructions (Optional)
 
@@ -130,7 +130,7 @@ Our CRM application has specific failure patterns to watch for:
 
 ### Step 4: Configure Intelligent Targeting
 
-Configure intelligent targeting rules to precisely control which tests, builds, tags, or jobs are included in AI-powered analysis:
+Configure intelligent targeting rules to precisely control which tests, builds, tags, projects, or jobs are included in AI-powered analysis:
 
 1. **Add Targeting Rules**: Enter regex patterns in the input field
 2. **Click Include (+) or Exclude (-)**: Choose whether to include or exclude matching tests
@@ -139,6 +139,7 @@ Configure intelligent targeting rules to precisely control which tests, builds, 
    - **Build Names**: Include or exclude builds with specific names (e.g., hourly, nightly)
    - **Test Tags**: Include or exclude tests with specific tags (e.g., playwright_test, atxHyperexecute_test)
    - **Build Tags**: Include or exclude builds with specific tags (e.g., hourly, nightly)
+   - **Project Names**: Include or exclude tests from specific projects using regex patterns
    - **Job Labels**: Include tests with specific job labels or tags
 
 #### Rule Logic and Application
@@ -148,7 +149,7 @@ The intelligent targeting system applies rules using the following logic:
 **Rule Evaluation Process:**
 1. **Include Rules (AND Logic)**: All Include rules within the same category must match for a test to be considered
 2. **Exclude Rules (OR Logic)**: Any Exclude rule that matches will immediately exclude the test from analysis
-3. **Cross-Category Logic**: Include rules across different categories (Test Names, Build Tags, etc.) must ALL match
+3. **Cross-Category Logic**: Include rules across different categories (Test Names, Build Tags, Project Names, etc.) must ALL match
 4. **Exclusion Precedence**: Exclude rules take priority over Include rules - if any exclude rule matches, the test is excluded regardless of include matches
 
 **Best Practices for Rule Configuration:**
@@ -173,7 +174,11 @@ The intelligent targeting system applies rules using the following logic:
 - **Include**: `playwright_test|atxHyperexecute_test` - Focus on specific test frameworks
 - **Exclude**: `.*smoke.*` - Skip smoke tests
 
-**Result**: AI-powered analysis will run only on production tests (excluding non-critical ones) from hourly builds, focusing on Playwright or HyperExecute test tags, while excluding smoke tests. This configuration helps narrow down analysis to the most critical test scenarios.
+**Project Names:**
+- **Include**: `^ecommerce|^payment` - Only analyze tests from projects starting with "ecommerce" or "payment"
+- **Exclude**: `.*staging.*` - Skip tests from staging projects
+
+**Result**: AI-powered analysis will run only on production tests (excluding non-critical ones) from hourly builds, focusing on Playwright or HyperExecute test tags, while excluding smoke tests. The analysis will target ecommerce and payment projects, excluding staging projects. This configuration helps narrow down analysis to the most critical test scenarios.
 :::
 
 
