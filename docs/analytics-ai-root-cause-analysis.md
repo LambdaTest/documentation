@@ -76,7 +76,7 @@ AI RCA is an intelligent feature that uses advanced machine learning algorithms 
 2. **Configure Analysis Scope**: Choose which types of test failures to analyze:
    - **All failures**: Analyze every failed test, regardless of previous status
    - **New failures**: Analyze only tests that have failed recently after having passed at least 10 consecutive times previously.
-   - **Always failing**: Analyze only tests that have failed in all of their previous 5 runs to identify persistent issues.
+   - **Consistent Failures**: Analyze only tests that have failed in all of their previous 5 runs to identify persistent issues.
 
 ### Step 3: Set Special Instructions (Optional)
 
