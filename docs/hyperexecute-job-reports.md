@@ -108,3 +108,9 @@ The [JUnit XML Report](/support/docs/junit-xml-report/) provides a summary of te
 
 ## Karate Report
 [Karate Reports](/support/docs/karate-report/) provide a comprehensive overview of your test execution results, offering detailed insights into test performance, coverage, and failures. With visually appealing and interactive HTML reports, you can quickly analyze test outcomes, debug issues, and share results across teams. These reports are seamlessly integrated into Karate's powerful testing framework, ensuring clarity and efficiency in your test automation journey.
+
+## Robot Report
+[Robot Reports](/support/docs/robot-report/) provides a detailed summary of automated test execution using Robot Framework, including test case results, execution time, logs, and captured output. It helps analyze pass/fail trends, identify failures, and validate system functionality across environments.
+
+## Katalon Report
+[Katalon Reports](/support/docs/hyperexecute-katalon-report/) summarizes the results of automated test executions in Katalon Studio, including test status, execution time, environment details, and error logs. It provides clear insights into test coverage, performance, and overall build quality.
