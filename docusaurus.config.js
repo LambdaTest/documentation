@@ -59,7 +59,9 @@ module.exports = {
         ],
         apiKey: process.env.API,
       },
-      typesenseSearchParameters: {},
+      typesenseSearchParameters: {
+        enable_analytics: true,
+      },
       contextualSearch: true,
     },
 
