@@ -1331,6 +1331,11 @@ module.exports = {
         ],
       },
       {
+        type: "doc",
+        label: "GitHub App Integration",
+        id: "github-app-integration",
+      },
+      {
         type: "category",
         collapsed: true,
         label: "Knowledge Base",
