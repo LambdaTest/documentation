@@ -816,6 +816,7 @@ module.exports = {
               "junit-xml-report",
               "karate-report",
               "robot-report",
+              "hyperexecute-katalon-report"
             ],
           },
 
@@ -928,6 +929,7 @@ module.exports = {
                 collapsed: true,
                 label: "October, 2025",
                 items: [
+                  "hyperexecute-release-notes-3-1-0",
                   "hyperexecute-release-notes-3-0-8",
                 ],
               },
