@@ -75,8 +75,6 @@ module.exports = {
       // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
       typesenseSearchParameters: {
         enable_analytics: true,
-        query_by: 'q',
-        sort_by: 'count:desc' 
       },
 
       // Optional
