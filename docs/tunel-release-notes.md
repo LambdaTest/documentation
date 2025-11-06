@@ -37,6 +37,11 @@ slug: tunnel-release-notes/
       })
     }}
 ></script>
+## Version 3.2.22 (2nd Nov 2025)
+- **Security Updates and Stability Fixes**
+  - Implemented critical security updates
+  - Fixes in Tunnel Auto Upgrade process.
+  - Enhancement in tunnel connection process.
 
 ## Version 3.2.20 (24th August 2025)
 - **Security Updates and Stability Fixes**
