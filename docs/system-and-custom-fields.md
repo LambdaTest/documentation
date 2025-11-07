@@ -45,7 +45,7 @@ Explore the structured organization of your test projects through the use of Fie
 
 To access the System & Custom Fields settings, click on **Settings** in the top right hand side in the Project's dashboard.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/field-settings.png').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/system-and-customs-step-one.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 You can manage your **System** and **Custom Fields** in this Fields page.
 
