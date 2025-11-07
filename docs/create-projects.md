@@ -49,11 +49,11 @@ Creating projects within Test Manager is the foundational step in organizing and
 
 2. Click on the **Create Project** button.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/create-project.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/create-project-one.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 3. Enter the **Project name**, **Description**, and **Tag(s)**. Be descriptive to ensure clarity for all team members. Click on **Create** to complete the project creation.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/enter-descriptive-details.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/create-project-two.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 
 
