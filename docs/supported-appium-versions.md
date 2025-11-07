@@ -23,6 +23,11 @@ slug: supported-appium-versions/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
+<RealDeviceTag value="Real Device" /> 
+<VirtualDeviceTag value="Virtual Device" />
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -54,13 +59,22 @@ To configure the Appium version for your tests on LambdaTest, use the `appiumVer
 
 | Platform Versions | Supported Versions | Default Version | Latest Version |
 |-------------------|--------------------|-----------------|----------------|
-| Android (All) | 1.21.0, 1.22.0, 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2, 2.11.4, 2.12.1 | 2.2.1 | 2.3.0 |
+| Android (All) | 1.21.0, 1.22.0, 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2, 2.11.4, 2.12.1, 3.0.2 | 2.2.1 | 2.3.0 |
 | iOS (12, 13, 14) | 1.22.3, 2.0.0, 2.1.3, 2.2.1 | 2.2.1 | 2.2.1 |
-| iOS (15, 16, 17, 18) | 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2, 2.11.4, 2.12.1 | 2.2.1 | 2.3.0 |
+| iOS (15, 16, 17, 18) | 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0, 2.4.1, 2.5.4, 2.6.0, 2.10.3, 2.11.2, 2.11.4, 2.12.1, 3.0.2 | 2.2.1 | 2.3.0 |
 | fireos | 1.21.0, 1.22.0, 1.22.3, 2.0.0, 2.1.3, 2.2.1, 2.3.0 | 2.2.1 | 2.3.0 |
 | tvos | 1.22.3, 2.2.1 | 1.22.3 | 1.22.3 |
 
+:::info
 
+**For Virtual Devices:**
+- LambdaTest currently supports the following Appium versions:
+  - **Android Devices:** `1.21.0`, `1.22.3`, `2.0.0`, `2.1.3`, `2.16.2`
+  - **iOS Devices:** `1.22.3`, `2.0.0`, `2.1.3`, `2.16.2`
+- We also provide Support for Appium 3.0.2 
+  - **Android Devices:** `13`, `15`, `16`
+  - **iOS Devices:** `16`, `17`, `18`, `26`
+:::
 **Java Example:** 
 ```java
 // Java code for configuring Appium version in tests on LambdaTest
