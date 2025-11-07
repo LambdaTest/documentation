@@ -4048,11 +4048,6 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Mouse Pointer",
-        id: "mouse-pointer-for-touch-mode",
-      },
-      {
-        type: "doc",
         label: "JavaScript Error Reports",
         id: "error-reports",
       },
