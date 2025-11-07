@@ -62,7 +62,7 @@ AI RCA is an intelligent feature that uses advanced machine learning algorithms 
 
 ## Configuration & Setup
 
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-configuration.png').default} alt="cmd" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-configuration.webp').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
 ### Step 1: Access Organization Settings
 
