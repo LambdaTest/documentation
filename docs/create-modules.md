@@ -53,11 +53,11 @@ To export test steps as a module,
  Only **sequential** steps can be clubbed to create a module.
 :::
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/select_manual_steps_to_create_module.png').default} alt="select-test-steps" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/existing-modules-one.webp').default} alt="select-test-steps" className="doc_img"/>
 
 - Clearly define your new module by entering a concise name and a detailed description. This will help you easily identify and understand its purpose later on.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/create_module_from_manual_teststeps.png').default} alt="create-modules-from-test-steps" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/existing-modules-two.webp').default} alt="create-modules-from-test-steps" className="doc_img"/>
 
 ## 1.2 Create Module from Modules section
 

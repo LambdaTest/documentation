@@ -42,18 +42,18 @@ Test Manager enables the creation and management of automated test cases directl
 
 1. Initiate the automation script and once it completes, proceed to the automation dashboard. The automation test run will be visible.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/automation-test-run.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/automation-one.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 2. Open the Test Manager dashboard, and in the **Projects** section, you will find the **LambdaTest Automation** project automatically created.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/lambdatest-automation-project.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/automation-project-two.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 3. Upon opening the newly created project, the automatically generated test case title from the automation process will be visible. 
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/newly-created-project.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/automation-project-three.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 4. In the Test Case section, **BDD Scenarios** will be automatically visible in the Test Case that is created from the command logs of the linked automated test run.
 
 > Currently, this feature is supported for Selenium Web frameworks.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/bdd-scenarios.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/select-bdd-scenarios.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
