@@ -138,6 +138,8 @@ The intelligent targeting system applies rules using the following logic:
 
 Custom RCA Categories allow you to define intelligent classification categories that automatically categorize and organize test failure analysis results. This helps you group similar failures together, track trends, and prioritize fixes more effectively.
 
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-category.webp').default} alt="Custom RCA Categories Management" width="800" height="400" className="doc_img"/>
+
 #### Managing Categories
 
 1. In the **Automatic AI RCA** configuration page, locate the **Custom RCA Categories** section
