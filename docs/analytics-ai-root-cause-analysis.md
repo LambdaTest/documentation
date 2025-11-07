@@ -72,61 +72,14 @@ AI RCA is an intelligent feature that uses advanced machine learning algorithms 
 
 ### Step 2: Enable AI RCA
 
-1. **Toggle the Feature**: Use the blue toggle switch to enable "Automatic AI RCA"
-2. **Configure Analysis Scope**: Choose which types of test failures to analyze:
-   - **All failures**: Analyze every failed test, regardless of previous status
-   - **New failures**: Analyze only tests that have failed recently after having passed at least 10 consecutive times previously.
-   - **Consistent Failures**: Analyze only tests that have failed in all of their previous 5 runs to identify persistent issues.
+**Toggle the Feature**: Use the blue toggle switch to enable "Automatic AI RCA"
 
-### Step 3: Set Special Instructions (Optional)
+### Step 3: Configure Analysis Scope
 
-Provide context or specific guidance for the AI to consider during analysis:
-
-1. Click on the **Special Instructions** section
-2. Enter any special instructions or context that should be considered during AI root cause analysis
-3. Use the "Show examples" link for guidance on effective instruction writing
-
-**Example Instructions:**
-
-:::tip
-Our CRM application has specific failure patterns to watch for:
-
-**PRIORITY CATEGORIES**
-1. **Database Connection Issues** - Our PostgreSQL connection pool is limited to 20 connections. Look for connection timeouts, pool exhaustion, or slow query performance.
-
-2. **Third-party API Failures** - We integrate with Salesforce, HubSpot, and Mailchimp. These external APIs often have rate limits and intermittent failures that cause our tests to fail.
-
-3. **File Upload/Processing Issues** - Contact import via CSV files often fails due to file size limits (10MB max) or malformed data. Check for upload timeouts and validation errors.
-
-4. **Authentication/Authorization** - We use OAuth 2.0 with multiple providers. Token expiration and permission changes frequently cause test failures.
-
-5. **UI Element Timing Issues** - Our CRM uses dynamic loading for contact lists and reports. Elements may not be ready when tests try to interact with them.
-
-**SPECIFIC CONTEXT**
-- Our test environment has limited resources compared to production
-- We run tests during business hours when external APIs are under heavy load
-- Focus on identifying whether failures are environment-specific or application bugs
-- Prioritize failures that affect core CRM functionality (contact management, lead tracking, reporting)
-- Consider our custom error handling - we log all errors to Sentry and show user-friendly messages
-
-**IGNORE THESE COMMON FALSE POSITIVES**
-- Browser console warnings that don't affect functionality
-- Network requests to analytics services (Google Analytics, Hotjar)
-- Minor UI layout shifts that don't break functionality
-:::
-
-**Possible Categories and Descriptions:**
-
-| Category | Description |
-|----------|-------------|
-| **Database Issues** | Connection timeouts, query performance, data integrity problems |
-| **API Integration** | Third-party service failures, rate limiting, authentication issues |
-| **UI/UX Problems** | Element not found, timing issues, responsive design failures |
-| **Performance Issues** | Slow page loads, memory leaks, resource exhaustion |
-| **Environment Issues** | Test data problems, configuration mismatches, infrastructure failures |
-| **Authentication/Authorization** | Login failures, permission errors, session timeouts |
-| **File Processing** | Upload failures, format validation, processing timeouts |
-| **Network Issues** | Connectivity problems, DNS failures, proxy issues |
+In the **Analysis Scope** section, choose which types of test failures to analyze:
+- **All failures**: Analyze every failed test, regardless of previous status
+- **New failures**: Analyze only tests that have failed recently after having passed at least 10 consecutive times previously.
+- **Consistent Failures**: Analyze only tests that have failed in all of their previous 5 runs to identify persistent issues.
 
 ### Step 4: Configure Intelligent Targeting
 
@@ -181,8 +134,94 @@ The intelligent targeting system applies rules using the following logic:
 **Result**: AI-powered analysis will run only on production tests (excluding non-critical ones) from hourly builds, focusing on Playwright or HyperExecute test tags, while excluding smoke tests. The analysis will target ecommerce and payment projects, excluding staging projects. This configuration helps narrow down analysis to the most critical test scenarios.
 :::
 
+### Step 5: Manage Custom RCA Categories (Optional)
 
-### Step 5: Save Configuration
+Custom RCA Categories allow you to define intelligent classification categories that automatically categorize and organize test failure analysis results. This helps you group similar failures together, track trends, and prioritize fixes more effectively.
+
+#### Managing Categories
+
+1. In the **Automatic AI RCA** configuration page, locate the **Custom RCA Categories** section
+2. Click the **Manage** button to open the category management drawer
+3. **Create**: Click **Add Category**, enter a name and description, select **Active** or **Inactive** status, then click **Create RCA Category**
+4. **Edit**: Click the edit icon on any category card to modify its details
+5. **Delete**: Click the delete icon and confirm to remove a category
+6. **Search**: Use the search box to filter categories by name or description
+
+**Category Status:**
+- **Active**: Used by AI for automatic classification and appears in RCA results
+- **Inactive**: Saved but not used for classification; can be reactivated later
+
+**Best Practices:**
+
+:::tip
+- **Be Specific**: Create distinct categories (e.g., "Database Connection Timeouts" vs "Database Issues")
+- **Use Clear Names**: Choose names your team understands immediately
+- **Start Small**: Begin with 5-10 active categories for your most common failure types
+- **Review Regularly**: Periodically refine categories based on your failure patterns
+:::
+
+**Example Custom RCA Categories:**
+
+| Category Name | Description |
+|--------------|-------------|
+| **UI Element Not Found** | Failures where tests cannot locate expected UI elements due to timing issues, selector changes, or DOM modifications |
+| **API Timeout Errors** | Failures caused by API requests exceeding timeout thresholds, often related to third-party service reliability |
+| **Database Connection Issues** | Failures due to database connection pool exhaustion, connection timeouts, or query performance problems |
+| **Authentication Token Expiration** | Failures related to expired or invalid authentication tokens, session timeouts, or OAuth refresh issues |
+| **Network Connectivity Issues** | Failures caused by network interruptions, DNS failures, proxy issues, or unstable network connections |
+
+### Step 6: Set Special Instructions (Optional)
+
+Provide context or specific guidance for the AI to consider during analysis:
+
+1. Click on the **Special Instructions** section
+2. Enter any special instructions or context that should be considered during AI root cause analysis
+3. Use the "Show examples" link for guidance on effective instruction writing
+
+**Example Instructions:**
+
+:::tip
+**Environment-Specific Context:**
+- Running on Staging environment with test data
+- Database may have lag issues during peak hours (9 AM - 5 PM EST)
+- Test environment has limited resources compared to production (2GB RAM vs 8GB)
+- Network latency is higher in test environment (average 150ms vs 50ms in production)
+
+**Known Issues & Patterns:**
+- Payment gateway timeouts during high traffic periods (especially between 2-4 PM)
+- Cache invalidation issues occur immediately after deployments
+- Third-party API rate limits: Salesforce (1000 requests/hour), HubSpot (500 requests/hour)
+- Database connection pool is limited to 20 connections - look for pool exhaustion patterns
+- OAuth token expiration happens every 24 hours - failures around token refresh time are expected
+
+**Analysis Preferences:**
+- Focus on recent failures over recurring issues when prioritizing
+- Consider browser compatibility differences (Chrome vs Firefox behavior variations)
+- Check for timing-related failures (elements loading asynchronously)
+- Distinguish between environment-specific issues vs application bugs
+- Prioritize failures affecting core user journeys: Login, Checkout, Dashboard, Profile Management
+
+**Business Context:**
+- Critical user journeys: Login, Checkout, Dashboard, Profile Management
+- Performance thresholds: Page load < 3s, API response < 500ms
+- Peak usage hours: 10 AM - 2 PM and 6 PM - 9 PM EST
+- High-value features: Payment processing, Order management, Customer support portal
+
+**Technical Constraints:**
+- Flaky network connections in mobile tests (use retry logic)
+- Third-party service dependencies may be unstable (payment gateway, email service)
+- Custom error handling: All errors logged to Sentry, user-friendly messages displayed
+- Test data cleanup runs nightly - some data may be stale during day
+
+**Ignore These Common False Positives:**
+- Browser console warnings that don't affect functionality
+- Network requests to analytics services (Google Analytics, Hotjar, Mixpanel)
+- Minor UI layout shifts that don't break functionality (< 5px)
+- Expected 404s for optional resources (favicon, tracking pixels)
+- Third-party script loading delays that don't impact core functionality
+:::
+
+### Step 7: Save Configuration
 
 1. Click **Save Configuration** to apply your settings
 2. The settings will be applied to all users in your organization and cannot be modified by individual users or need admin level privileges.
@@ -268,6 +307,7 @@ The RCA Category Trends widget in Insights enables you to:
 - **Start with "All failures"** to get comprehensive coverage, then refine based on your needs
 - **Use specific special instructions** to guide the AI toward your most critical issues
 - **Set up intelligent targeting** to focus on relevant test suites and exclude noise
+- **Create custom RCA categories** to organize and track failure patterns systematically
 
 ### 2. Interpreting Results
 
@@ -281,6 +321,7 @@ The RCA Category Trends widget in Insights enables you to:
 - **Review RCA accuracy** and provide feedback when possible
 - **Monitor trend analysis** to identify recurring patterns
 - **Update special instructions** based on new insights and requirements
+- **Refine custom RCA categories** to better match your failure patterns and organizational needs
 - **Share RCA results** with your team to improve collective understanding
 
 <!-- ### 4. Integration with Workflow
@@ -309,6 +350,7 @@ The RCA Category Trends widget in Insights enables you to:
 - **Refine special instructions**: Provide more specific context about your application
 - **Update intelligent targeting**: Exclude irrelevant tests that might confuse the analysis
 - **Review error categorization**: Ensure test failures are properly categorized
+- **Refine custom RCA categories**: Update category descriptions to better match your failure patterns
 - **Provide feedback**: Use any available feedback mechanisms to improve accuracy
 
 </details>
