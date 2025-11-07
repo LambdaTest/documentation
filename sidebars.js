@@ -198,6 +198,7 @@ module.exports = {
             label: "Test Metrics",
             id: "hyperexecute-task-metrics",
           },
+          "hyperexecute-rerun-failed-tests"
         ],
       },
       {
