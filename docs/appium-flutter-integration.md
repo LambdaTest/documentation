@@ -32,7 +32,7 @@ After preparing your Flutter app with this integration (refer to the setup docum
 
 ---
 
-## Native Flutter Integration Driver vs Appium Flutter Integration Driver <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+## Native Flutter Integration Driver vs Appium Flutter Integration Driver 
 
 | Feature / Use Case                                   | Native Flutter Driver | Appium Flutter Integration Driver |
 |----------------------------------------------------|----------------------|----------------------------------|
