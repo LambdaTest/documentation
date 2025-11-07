@@ -19,6 +19,11 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import CodeBlock from '@theme/CodeBlock';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
+<RealDeviceTag value="Real Device" /> 
+<VirtualDeviceTag value="Virtual Device" />
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -64,20 +69,47 @@ The maximum size for application should not exceed 1GB.
 
 ### Using App File
 
+<Tabs className="docs__val">
+
+<TabItem value="real" label="Real Device" default>
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""
-`}
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""`}
 </CodeBlock>
 </div>
+</TabItem>
+
+<TabItem value="virtual" label="Virtual Device">
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "appFile=@"/Users/macuser/Downloads/Appname.apk"" -F "name="appname""`}
+</CodeBlock>
+</div>
+</TabItem>
+
+</Tabs>
 
 ### Using App URL
 
+<Tabs className="docs__val">
+
+<TabItem value="real" label="Real Device" default>
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"`}
 </CodeBlock>
 </div>
+</TabItem>
+
+<TabItem value="virtual" label="Virtual Device">
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/virtualDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"`}
+</CodeBlock>
+</div>
+</TabItem>
+
+</Tabs>
 
 - Response of above cURL will be a **JSON** object containing the `App URL` of the format - ``lt://APP123456789123456789``
 
@@ -131,8 +163,9 @@ Shown below is the response to the above cURL request.
 
 ## Deleting your Application
 
-To delete your uploaded apps, run the below cURL command. 
+<Tabs className="docs__val">
 
+<TabItem value="real" label="Real Device" default>
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request DELETE "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/delete" \
@@ -143,6 +176,22 @@ To delete your uploaded apps, run the below cURL command.
 `}
 </CodeBlock>
 </div>
+</TabItem>
+
+<TabItem value="virtual" label="Virtual Device">
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`curl --location --request DELETE "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/delete" \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "appIds" : "APPID1,APPID2"
+}'
+`}
+</CodeBlock>
+</div>
+</TabItem>
+
+</Tabs>
 
 Shown below is the response to the above cURL request.
 
@@ -154,13 +203,14 @@ Shown below is the response to the above cURL request.
 
 ## Processing check for your Application
 
-To unlock features such as network logs, image injection, and screenshotunblock feature for your application, app needs to undergo a processing phase. This processing takes a few minutes after the application is uploaded. You can verify if the processing is complete before running your automation script using the following API.
+<Tabs className="docs__val">
 
+<TabItem value="real" label="Real Device" default>
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">
 {`curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl' \
 --header 'Authorization: Basic c2hhbnRhbnV3OkFPOEh3NHJtV2hxUlJZSVl3OEk1elMzajhCS0c2ZHl3SVBZeXNNSDJPakdtbFVheXZC' \
---header 'Content-Type: application/json' \y
+--header 'Content-Type: application/json' \
 --data-raw '{
     "appId": "APP10160161171698993659206876",
     "networkLogsEnabled": true,
@@ -169,6 +219,25 @@ To unlock features such as network logs, image injection, and screenshotunblock 
 }'`}
 </CodeBlock>
 </div>
+</TabItem>
+
+<TabItem value="virtual" label="Virtual Device">
+<div className="lambdatest__codeblock">
+<CodeBlock className="language-bash">
+{`curl --location --request POST 'https://mobile-api.lambdatest.com/mobile-automation/api/v1/fetchpatchedapkurl/virtualDevice' \
+--header 'Authorization: Basic c2hhbnRhbnV3OkFPOEh3NHJtV2hxUlJZSVl3OEk1elMzajhCS0c2ZHl3SVBZeXNNSDJPakdtbFVheXZC' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "appId": "APP10160161171698993659206876",
+    "networkLogsEnabled": true,
+    "imageInjectionEnabled": true,
+    "screenshotUnblockEnabled": true
+}'`}
+</CodeBlock>
+</div>
+</TabItem>
+
+</Tabs>
 
 The payload allows you to check the processing status for specific features. If the **patched_url** is empty, the processing is still in progress. To check if the processing for image injection or screenshot unblock is complete, pass either **imageInjectionEnabled** or **screenshotUnblockEnabled** as `true` based on the feature you are testing.
 
