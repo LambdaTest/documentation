@@ -1333,7 +1333,7 @@ module.exports = {
             label: "Desktop Browser",
             items: [
               "kane-ai-network-assertions",
-              "kane-ai-drag-drop.md",
+              "kane-ai-drag-drop",
               "kaneai-dynamic-url-replacement",
               "kaneai-chrome-options",
               "kaneai-custom-headers",
