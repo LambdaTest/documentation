@@ -55,7 +55,8 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 
 LambdaTest now allows you to install and uninstall apps in the middle of your automated tests. This means you don’t need to restart the session every time you want to switch apps, upgrade them, or clean up the device.
 
-## Installing and Uninstalling Apps
+## Installing and Uninstalling Apps  
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 LambdaTest enables you to install and uninstall applications during automation test execution by using commands that can be run through WebDriver's script execution functionality.
 

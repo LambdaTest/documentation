@@ -48,7 +48,7 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
     }}
 ></script>
 
-# Setting up timezone on Real Devices
+# Setting up timezone 
 <RealDeviceTag value="Real Device" /> 
 <VirtualDeviceTag value="Virtual Device" />
 In automated testing with Appium on LambdaTest, configuring the timezone accurately is crucial for precise testing scenarios. LambdaTest provides support for various timezones, allowing users to customize their testing environments to meet specific requirements.
