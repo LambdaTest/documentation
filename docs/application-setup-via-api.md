@@ -117,7 +117,7 @@ The maximum size for application should not exceed 1GB.
 The upload time of your application can range from a few seconds to a minute, depending on the size of your application. Therefore, do not interrupt the cURL command request until you receive the response.
 :::
 
-## Fetch your Applications
+## Fetch your Applications for Real Devices
 
 <Tabs className="docs__val">
 
@@ -160,6 +160,30 @@ Shown below is the response to the above cURL request.
   ]
 }
 ```
+
+## Fetch your Applications for Virtual Devices
+
+<Tabs className="docs__val">
+
+<TabItem value="android" label="Android" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-bash">
+  {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=emulator&level=user"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+
+<TabItem value="ios" label="iOS" default>
+  <div className="lambdatest__codeblock">
+    <CodeBlock className="language-powershell">
+  {`curl --location --request GET "https://${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}@manual-api.lambdatest.com/app/data?type=simulator&level=user"`}
+  </CodeBlock>
+</div>
+
+</TabItem>
+</Tabs>
+
 
 ## Deleting your Application
 
