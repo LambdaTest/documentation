@@ -53,6 +53,8 @@ import TabItem from '@theme/TabItem';
 
 In this topic, you will learn how to configure and run your JavaScript automation testing scripts on [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using **JavaScript** framework **Nightwatch**.
 
+<iframe width="800" height="450" src="https://www.youtube.com/embed/gYfRDCCFTZI" title="How to Run NightwatchJS Browser Automation Tests on LambdaTest" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Objective
 ***
 By the end of this topic, you will be able to:
