@@ -17,9 +17,10 @@ slug: group-folder-redirects/
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
 
 # Group Folder Redirect for iOS Apps
-
+<RealDeviceTag value="Real Device" /> 
 LambdaTest now supports **Group Folder Redirect** for iOS apps during automation testing with Appium.  
 This feature ensures your app uses its **private container directory** instead of the **shared app group container**, which becomes inaccessible after **app resigning** on Real Devices.
 
