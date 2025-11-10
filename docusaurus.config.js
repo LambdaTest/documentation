@@ -73,7 +73,9 @@ module.exports = {
       },
 
       // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
-      typesenseSearchParameters: {},
+      typesenseSearchParameters: {
+        enable_analytics: true,
+      },
 
       // Optional
       contextualSearch: true,

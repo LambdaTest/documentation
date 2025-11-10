@@ -60,15 +60,15 @@ LambdaTest Test Manager integrates directly with the Jira App, allowing you to m
 
 5. Go to any Jira issue and click on the LambdaTest icon located just below the issue name. This will display the Test Cases linked to that issue.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/test-cases-linked.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/click-on-issue-name.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 6. Select **Execution History** to have a look at all the executions of the test cases that are linked to the Jira Issue.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/test-cases-linked-to-jira-issue.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/select-execution.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 7. Click on **Link Issue**, after which an instance will appear enabling you to link an issue to the test case. 
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/link-issue-to-test-case.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/link-jira-issue.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 8. Enter the test case name and select any of the test cases for which you want to link an issue. All test cases created in your Test Manager dashboard will be available in this list. 
 

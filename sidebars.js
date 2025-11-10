@@ -198,6 +198,7 @@ module.exports = {
             label: "Test Metrics",
             id: "hyperexecute-task-metrics",
           },
+          "hyperexecute-rerun-failed-tests"
         ],
       },
       {
@@ -818,6 +819,7 @@ module.exports = {
               "junit-xml-report",
               "karate-report",
               "robot-report",
+              "hyperexecute-katalon-report"
             ],
           },
 
@@ -930,6 +932,7 @@ module.exports = {
                 collapsed: true,
                 label: "October, 2025",
                 items: [
+                  "hyperexecute-release-notes-3-1-0",
                   "hyperexecute-release-notes-3-0-8",
                 ],
               },
@@ -1281,6 +1284,7 @@ module.exports = {
           "kaneai-hyperexecute-test-run-execution",
           "kaneai-ci-cd-automation",
           "test-runs-configurations",
+          "kaneai-scheduled-test-runs",
         ],
       },
       {
@@ -1304,31 +1308,54 @@ module.exports = {
         collapsed: true,
         label: "Features",
         items: [
-          "kaneai-manual-interaction",
-          "kane-ai-javascript-execution",
-          "kane-ai-geolocation-tunnel-proxy",
-          "kaneai-auto-heal",
-          "kane-ai-scroll-in-feature",
-          "kane-ai-jira-integration",
-          "kane-ai-api-testing",
-          "kane-ai-network-assertions",
-          "kane-ai-mobile-app-capabilities",
-          "kaneai-network-throttling",
-          "kane-ai-modules",
-          "kaneai-modules-versions-and-enhancement",
-          "kaneai-upload-and-download-files",
-          "kaneai-dynamic-url-replacement",
-          "kaneai-chrome-options",
-          "kaneai-custom-headers",
-          "kaneai-totp",
-          "kaneai-scheduled-test-runs",
           {
-            type: "doc",
-            label: "Visual Testing",
-            id: "kaneai-smartui-visual-testing",
+            type: "category",
+            collapsed: true,
+            label: "Common",
+            items: [
+                "kaneai-manual-interaction",
+                "kane-ai-javascript-execution",
+                "kane-ai-geolocation-tunnel-proxy",
+                "kaneai-auto-heal",
+                "kane-ai-scroll-in-feature",
+                "kane-ai-jira-integration",
+                "kane-ai-api-testing",
+                "kane-ai-modules",
+                "kaneai-modules-versions-and-enhancement",
+                "kaneai-upload-and-download-files",
+                "kaneai-totp",
+                "kaneai-database",
+            ],
+          },          
+          {
+            type: "category",
+            collapsed: true,
+            label: "Desktop Browser",
+            items: [
+              "kane-ai-network-assertions",
+              "kane-ai-drag-drop",
+              "kaneai-dynamic-url-replacement",
+              "kaneai-chrome-options",
+              "kaneai-custom-headers",
+              "kaneai-smartui-visual-testing",
+            ],
           },
-          "kaneai-database",
+          {
+            type: "category",
+            collapsed: true,
+            label: "Mobile",
+            items: [
+              "kane-ai-mobile-app-capabilities",
+              "kane-ai-deeplink-support",
+              "kaneai-network-throttling",
+            ],
+          },
         ],
+      },
+      {
+        type: "doc",
+        label: "GitHub App Integration",
+        id: "github-app-integration",
       },
       {
         type: "category",
@@ -1952,6 +1979,7 @@ module.exports = {
           "accessibility-passed-test-cases",
           "accessibility-capture-screenshot",
           "accessibility-fragment-identifier",
+          "accessibility-web-score"
         ],
       },
       {
@@ -4074,11 +4102,6 @@ module.exports = {
         type: "doc",
         label: "Full Page Screenshots",
         id: "full-page-screenshots",
-      },
-      {
-        type: "doc",
-        label: "Mouse Pointer",
-        id: "mouse-pointer-for-touch-mode",
       },
       {
         type: "doc",

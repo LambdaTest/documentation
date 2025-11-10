@@ -46,7 +46,7 @@ This guide outlines the steps required to create, configure, and manage test run
 Use descriptive names to easily identify test runs later.
 :::
 
-<img loading="lazy" src={require('../assets/images/test-run/1.png').default} alt="Real "  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/test-runs-one.webp').default} alt="Real "  className="doc_img"/>
 
 ### Step 2: Add Tags
 - Assign relevant Tags to categorize the test run.

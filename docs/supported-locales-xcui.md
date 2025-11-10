@@ -179,7 +179,13 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 ```
 
 :::note
-- Ensure that both the **language** and **locale** parameters are passed simultaneously in the API request.
-- App should support the language and locale mentioned in the API request to work.
-- For XCUI sharding tests, you have to mention this in the `.yaml` file.
+- When setting language or locale parameters, make sure your tests use the `ProcessInfo` object to pass these arguments correctly. This ensures the app launches with the specified language and locale settings.
+ ```swift
+    let app = XCUIApplication()
+    app.launchArguments += ProcessInfo().arguments
+    app.launch() 
+```
+-	The language and locale settings are applied at the app level.
+-	To ensure your application under test displays the correct localized strings, dates, times, and calendar formats, include both language and locale in your desired capabilities.
+- For XCUI sharding tests, you have to mention this in the  `.yaml` file.
 :::

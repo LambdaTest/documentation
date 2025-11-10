@@ -43,7 +43,7 @@ Efficiently importing data from TestRail streamlines your test management proces
 
 1. To perform a Quick Import from TestRail, navigate to the **Projects** section and select the **Import Data** option.
 
-<img loading="lazy" src={require('../assets/images/mobile-app-testing/import-data.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
+<img loading="lazy" src={require('../assets/images/mobile-app-testing/csv-import/import-testrail-one.webp').default} alt="Real "  className="doc_img" width="1366" height="629"/>
 
 2. Fill in the necessary details such as **TestRail Email Address**, **TestRail Host Name**, and **TestRail API Key**, then click **Continue**. 
 
