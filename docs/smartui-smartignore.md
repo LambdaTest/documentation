@@ -202,7 +202,7 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 ## Additional Resources
 
 - [Project Settings](/support/docs/smartui-project-settings)
-- [Layout Comparison](/support/docs/smartui-layout-comparison)
+- [Layout Comparison](/support/docs/smartui-layout-testing)
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 
