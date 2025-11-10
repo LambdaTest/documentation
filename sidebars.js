@@ -3376,11 +3376,6 @@ module.exports = {
             id: "smartui-custom-css",
           },
           {
-            type: "doc",
-            label: "Troubleshooting Guide",
-            id: "smartui-troubleshooting-guide",
-          },
-          {
             type: "category",
             collapsed: true,
             label: "Smart Comparison Options",
@@ -3782,6 +3777,11 @@ module.exports = {
                 id: "smartui-slack-integration",
               },
             ],
+          },
+          {
+            type: "doc",
+            label: "Troubleshooting Guide",
+            id: "smartui-troubleshooting-guide",
           },
         ],
       },
