@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-smart-ui-sdk-using-puppeteer
-title: UI Testing with Puppeteer using HyperExecute and Smart UI SDK
+title: UI Testing with Puppeteer using HyperExecute and SmartUI SDK
 hide_title: false
 sidebar_label: Puppeteer
-description: Streamline Hyperexecute UI testing with Smart UI SDK and Puppeteer. Write robust, end-to-end tests effortlessly. 
+description: Streamline Hyperexecute UI testing with SmartUI SDK and Puppeteer. Write robust, end-to-end tests effortlessly. 
 keywords:
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
@@ -41,13 +41,13 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Smart UI Testing",
+          "name": "SmartUI Testing",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-using-puppeteer/"
         }]
       })
     }}
 ></script>
-This documentation will guide you step-by-step to execute the Smart UI tests on the HyperExecute platform using **Puppeteer**
+This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using **Puppeteer**
 
 ## Prerequisites
 

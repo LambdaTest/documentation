@@ -1,6 +1,6 @@
 ---
 id: playwright-visual-regression
-title: Getting started with Smart UI using Playwright
+title: Getting started with SmartUI using Playwright
 sidebar_label: Playwright
 description: Master Playwright Visual Regression with our step-by-step guide. Seamlessly integrate SmartUI, enhance your testing skills, and unlock a world of possibilities.
 keywords:
@@ -123,7 +123,7 @@ const { expect } = require('@playwright/test');
       'network': true,
       'video': true,
       'console': true,
-      "smartUIProjectName": "<projectName>" //Add the required Smart UI Project name
+      "smartUIProjectName": "<projectName>" //Add the required SmartUI Project name
     }
   }
 

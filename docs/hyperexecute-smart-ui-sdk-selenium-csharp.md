@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-smart-ui-sdk-selenium-csharp
-title: UI Testing with C# using HyperExecute and Smart UI SDK
+title: UI Testing with C# using HyperExecute and SmartUI SDK
 hide_title: false
 sidebar_label: C#
-description: Automate Hyperexecute tests seamlessly! Integrate Smart UI SDK with CSharp for efficient & reliable UI testing. 
+description: Automate Hyperexecute tests seamlessly! Integrate SmartUI SDK with CSharp for efficient & reliable UI testing. 
 keywords:
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
@@ -40,14 +40,14 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Smart UI Testing",
+          "name": "SmartUI Testing",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-sdk-selenium-csharp/"
         }]
       })
     }}
 ></script>
 
-This documentation will guide you step-by-step to execute the Smart UI SDK tests on the HyperExecute platform using **Selenium - C Sharp**
+This documentation will guide you step-by-step to execute the SmartUI SDK tests on the HyperExecute platform using **Selenium - C Sharp**
 
 ## Prerequisites
 

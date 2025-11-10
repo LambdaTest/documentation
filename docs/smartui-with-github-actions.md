@@ -74,7 +74,7 @@ To run the new pipeline that you just created, click the **Run workflow** button
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/ci-cd-integration/github-actions/github-actions.png').default} alt="Create New Project" width="" height=""/>
 
-> Check your output in the [Smart UI Dashboard](https://smartui.lambdatest.com/projects)
+> Check your output in the [SmartUI Dashboard](https://smartui.lambdatest.com/projects)
 
 ## Best Practices
 

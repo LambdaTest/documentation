@@ -1,6 +1,6 @@
 ---
 id: smartui-cli-figma
-title: Getting started with Lambdatest's Smart UI Figma CLI 
+title: Getting started with Lambdatest's SmartUI Figma CLI 
 sidebar_label: Figma CLI
 description: In this documentation, learn how to perform Visual Testing of your Figma files using command line interface using SmartUI CLI.
 keywords:
@@ -96,7 +96,7 @@ The first step is to create a project with the application in which we will comb
 
 ### **Step 1**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI CLI` in your repository/folder.
+Install required NPM modules for `LambdaTest SmartUI CLI` in your repository/folder.
 
 ```bash
 npm install @lambdatest/smartui-cli
@@ -274,7 +274,7 @@ steps:
 
 ### View SmartUI Results
 
-You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
+You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

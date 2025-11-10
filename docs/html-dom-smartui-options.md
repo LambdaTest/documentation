@@ -372,7 +372,7 @@ await page.evaluate((_) => {},
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-     Smart UI with Cypress  
+     SmartUI with Cypress  
      </span>
     </li>
   </ul>

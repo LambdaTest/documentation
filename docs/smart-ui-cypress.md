@@ -1,6 +1,6 @@
 ---
 id: smart-ui-cypress
-title: Getting started with Smart UI using Cypress On LambdaTest
+title: Getting started with SmartUI using Cypress On LambdaTest
 sidebar_label: Cypress
 description: Master Visual UI Testing with Cypress on LambdaTest Automation Cloud across 40+ browser versions through this comprehensive documentation.
 keywords:
@@ -82,7 +82,7 @@ npm install -g lambdatest-cypress-cli
 lambdatest-cypress init
 ```
 
-**Step 3:** Define Smart UI configuration in the `lambdatest-config.json` file of your Cypress project as shown in the below code snippet.
+**Step 3:** Define SmartUI configuration in the `lambdatest-config.json` file of your Cypress project as shown in the below code snippet.
 
 ```json title="/cypress-project/lambdatest-config.json"
 {
@@ -117,7 +117,7 @@ lambdatest-cypress init
     },
     "smart_ui": {
       // highlight-start
-      "project": "<Your Project Name>", // Add your Smart UI Project Name here
+      "project": "<Your Project Name>", // Add your SmartUI Project Name here
       "build": "<Your_Build_Name>", // Please add your build name of choice here
       "baseline": false,// Enable if you want to update to a new baseline build
       // highlight-end
@@ -148,7 +148,7 @@ describe("Cypress test with Visual Regression", () => {
 lambdatest-cypress run
 ```
 
-**Step 6:** You can now see the Smart UI dashboard to view the results.
+**Step 6:** You can now see the SmartUI dashboard to view the results.
 
 For additional information about Cypress framework please explore the documentation [here](https://www.lambdatest.com/support/docs/getting-started-with-cypress-testing/)
 
@@ -178,7 +178,7 @@ For additional information about Cypress framework please explore the documentat
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
+      <span className="breadcrumbs__link"> SmartUI with Cypress  </span>
     </li>
   </ul>
 </nav>
