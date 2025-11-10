@@ -208,3 +208,21 @@ You may use the `npx smartui --help` command in case you are facing issues durin
 You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
+## Next Steps
+
+Now that you've run your first project, explore these resources to enhance your visual testing:
+
+- **Configure Your Project**: Learn about [Project Settings](/support/docs/smartui-project-settings) to customize comparison parameters
+- **Handle Dynamic Content**: See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for pages with changing content
+- **Manage Baselines**: Understand [Baseline Management](/support/docs/smartui-baseline-management) for effective test comparisons
+- **Troubleshooting**: If you encounter issues, check the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) - Solutions for common issues
+- [Project Settings](/support/docs/smartui-project-settings) - Configure your project settings
+- [Configuration Options](/support/docs/smartui-sdk-config-options) - Learn about all available configuration options
+- [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) - Handle pages with dynamic content
+- [Baseline Management](/support/docs/smartui-baseline-management) - Manage your test baselines
+- [SDK Documentation](/support/docs/smartui-selenium-java-sdk) - Framework-specific integration guides

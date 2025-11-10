@@ -92,3 +92,224 @@ script:
 - After triggering the workflow, check your results in the [Smart UI Dashboard](https://smartui.lambdatest.com/projects)
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png').default} alt="Create New Project" width="" height=""/>
+
+## Best Practices
+
+### 1. Secret Management
+
+- Never commit credentials to repository
+- Use Travis CI Environment Variables for all sensitive data
+- Mark variables as secret to hide values in logs
+- Rotate secrets regularly
+- Use different secrets for different environments
+
+### 2. Pipeline Optimization
+
+- Use matrix builds for parallel execution
+- Cache dependencies to speed up pipelines
+- Only run visual tests on relevant branches
+- Set up pipeline conditions to avoid unnecessary runs
+
+**Example:**
+```yaml
+branches:
+  only:
+    - main
+    - develop
+```
+
+### 3. Build Naming
+
+- Use meaningful build names that include branch/commit info
+- Include commit SHA for traceability
+- Use consistent naming conventions
+
+**Example:**
+```yaml
+env:
+  global:
+    - BUILD_NAME="${TRAVIS_BRANCH}-${TRAVIS_COMMIT:0:7}"
+```
+
+### 4. Error Handling
+
+- Set up proper error handling in pipelines
+- Use pipeline status checks
+- Configure notifications for failures
+- Add retry logic for flaky tests
+
+### 5. Resource Management
+
+- Limit concurrent pipeline runs
+- Clean up old builds regularly
+- Monitor pipeline execution time
+- Optimize test execution order
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: Pipeline Fails with "Variable Not Found"
+
+**Symptoms**: Pipeline fails with error about missing environment variables
+
+**Possible Causes**:
+- Variables not created in Travis CI project
+- Variable names don't match
+- Variables not accessible to build
+- Variable scope issues
+
+**Solutions**:
+1. Verify variables exist in repository settings:
+   - Go to Repository Settings → Environment Variables
+   - Check `LT_USERNAME`, `LT_ACCESS_KEY`, and `PROJECT_TOKEN` exist
+
+2. Ensure variable names match exactly (case-sensitive)
+
+3. Check variable scope (public or private)
+
+4. Verify variables are not displayed in logs if marked as secret
+
+#### Issue: PROJECT_TOKEN Not Available
+
+**Symptoms**: Pipeline prompts for PROJECT_TOKEN or token not found
+
+**Possible Causes**:
+- PROJECT_TOKEN not set as environment variable
+- Variable not passed to build
+- Variable marked as secret incorrectly
+
+**Solutions**:
+1. Add PROJECT_TOKEN as Travis CI Environment Variable
+
+2. Pass variable to build:
+   ```yaml
+   env:
+     global:
+       - PROJECT_TOKEN=$PROJECT_TOKEN
+   ```
+
+3. Check variable is accessible to the build
+
+4. Verify variable scope includes your repository
+
+#### Issue: Tests Run But No Results in Dashboard
+
+**Symptoms**: Pipeline completes but screenshots don't appear in SmartUI
+
+**Possible Causes**:
+- Incorrect PROJECT_TOKEN
+- Project name mismatch
+- Network issues
+- Pipeline build failure
+
+**Solutions**:
+1. Verify PROJECT_TOKEN is correct:
+   - Check token in SmartUI Project Settings
+   - Ensure token includes project ID prefix
+
+2. Check build logs for errors:
+   ```yaml
+   after_failure:
+     - cat /tmp/*.log || true
+   ```
+
+3. Verify network connectivity in build
+
+4. Check if SmartUI CLI step completed successfully
+
+#### Issue: Pipeline Times Out
+
+**Symptoms**: Pipeline execution exceeds time limit
+
+**Possible Causes**:
+- Too many tests running
+- Slow test execution
+- Network latency
+- Resource constraints
+
+**Solutions**:
+1. Increase build timeout in Travis CI settings
+
+2. Run tests in parallel using matrix:
+   ```yaml
+   matrix:
+     include:
+       - env: TEST_GROUP=1
+       - env: TEST_GROUP=2
+   ```
+
+3. Optimize test execution
+4. Split tests across multiple build jobs
+
+#### Issue: Dependencies Installation Fails
+
+**Symptoms**: npm install or dependency installation fails
+
+**Possible Causes**:
+- Network issues
+- Package registry problems
+- Version conflicts
+- Node version mismatch
+
+**Solutions**:
+1. Use specific Node version:
+   ```yaml
+   node_js:
+     - "18"
+   ```
+
+2. Clear npm cache:
+   ```yaml
+   before_install:
+     - npm cache clean --force
+   ```
+
+3. Use package-lock.json for consistent installs
+
+4. Check for version conflicts in package.json
+
+#### Issue: SmartUI CLI Not Found
+
+**Symptoms**: `npx smartui` command fails with "command not found"
+
+**Possible Causes**:
+- Node.js not installed
+- npm not available
+- PATH issues
+
+**Solutions**:
+1. Ensure Node.js is specified:
+   ```yaml
+   node_js:
+     - "18"
+   ```
+
+2. Verify npm is available:
+   ```yaml
+   before_script:
+     - npm --version
+   ```
+
+3. Install SmartUI CLI explicitly:
+   ```yaml
+   before_script:
+     - npm install -g @lambdatest/smartui-cli
+   ```
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review [Travis CI Documentation](https://docs.travis-ci.com/)
+- Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli)
+- [Travis CI Documentation](https://docs.travis-ci.com/)
+- [Project Settings](/support/docs/smartui-project-settings)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
