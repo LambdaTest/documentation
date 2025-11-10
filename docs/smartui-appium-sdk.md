@@ -88,3 +88,17 @@ The LambdaTest SmartUI SDK supports multiple programming languages for running A
 <div className="lt-framework-list-footer">
   <p>We support all languages and frameworks that are compatible with Appium, so in case your favorite isn't in the table.<br/>Don't worry, you can still run the test. <span className="doc__lt" onClick={() => window.openLTChatWidget()}>Contact Us</span> for any help.</p>
 </div>
+
+## Next Steps
+
+After selecting your preferred language, refer to the specific documentation for detailed integration steps:
+
+- **[Java SDK](/support/docs/smartui-appium-java-sdk)** - Complete guide with best practices and troubleshooting
+- **[Appium Hooks](/support/docs/smartui-appium-hooks)** - For JavaScript, Python, Ruby, and C# implementations
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) - Solutions for common issues
+- [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) - Handle dynamic content in mobile apps
+- [Baseline Management](/support/docs/smartui-baseline-management) - Manage your test baselines
+- [Running Your First Project](/support/docs/smartui-running-your-first-project) - Get started with SmartUI

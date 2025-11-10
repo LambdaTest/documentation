@@ -355,3 +355,176 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 | Original Screenshot | Cropped Screenshot |
 |---------------------|--------------------|
 | <img loading="lazy" src={require('../assets/images/smart-visual-testing/screenshot.webp').default} alt="Profile" width="1360" height="603" className="doc_img"/> | <img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt="Profile" width="1360" height="603" className="doc_img"/> |
+
+## Best Practices
+
+### 1. Project and Build Naming
+
+- Use descriptive, consistent names for projects and builds
+- Include app version or release info in build names
+- Avoid special characters that might cause issues
+- Use consistent naming conventions across test runs
+
+**Example:**
+```json
+{
+  "smartUI.project": "MyApp-iOS-VisualTests",
+  "smartUI.build": "Release-1.0.0"
+}
+```
+
+### 2. Device Selection
+
+- Test on devices that match your user base
+- Include multiple device configurations for comprehensive coverage
+- Use device patterns for consistent testing (e.g., `iPhone 13-16`, `iPad Air (2019)-16`)
+
+### 3. Smart Crop Configuration
+
+- Enable `cropStatusBar` to focus on core UI elements
+- Enable `cropNavigationBar` for iOS devices
+- Test cropped screenshots to ensure important content isn't removed
+
+### 4. Test Organization
+
+- Use sharding for parallel test execution
+- Group related tests in same build
+- Use meaningful test names for better organization
+
+### 5. App and Test Suite Management
+
+- Upload apps and test suites before execution
+- Use app IDs (`lt://APP...`) for faster execution
+- Keep app and test suite versions synchronized
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: Screenshots Not Captured
+
+**Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
+
+**Possible Causes**:
+- `visual: true` not set in request
+- Incorrect project name
+- Network connectivity issues
+- Authentication issues
+
+**Solutions**:
+1. Verify `visual: true` is set in API request (implicit for SmartUI)
+2. Check project name matches exactly (case-sensitive):
+   ```json
+   {
+     "smartUI.project": "ExactProjectName"
+   }
+   ```
+
+3. Verify authentication token is correct:
+   - Generate base64 encoded token from username:accesskey
+   - Ensure token is included in Authorization header
+
+4. Check network connectivity to LambdaTest
+
+#### Issue: "Project Not Found" Error
+
+**Symptoms**: Error indicating SmartUI project cannot be found
+
+**Possible Causes**:
+- Project name typo or mismatch
+- Project deleted
+- Wrong account credentials
+
+**Solutions**:
+1. Verify project exists in SmartUI dashboard
+2. Copy project name directly from dashboard
+3. Check credentials match the account with the project
+4. Ensure project name is in API request
+
+#### Issue: App Upload Fails
+
+**Symptoms**: App upload returns error or fails
+
+**Possible Causes**:
+- Invalid IPA file
+- File size too large
+- Network issues
+- Authentication problems
+
+**Solutions**:
+1. Verify IPA file is valid and not corrupted
+2. Check file size limits
+3. Retry upload with stable network connection
+4. Verify authentication credentials
+
+#### Issue: Test Execution Fails
+
+**Symptoms**: Test suite execution fails or times out
+
+**Possible Causes**:
+- Invalid test suite IPA
+- Device not available
+- Timeout settings too low
+- Test suite errors
+
+**Solutions**:
+1. Verify test suite IPA is valid
+2. Check device availability
+3. Increase `queueTimeout` and `idleTimeout`:
+   ```json
+   {
+     "queueTimeout": 10800,
+     "idleTimeout": 150
+   }
+   ```
+
+4. Review device logs for test errors
+
+#### Issue: Screenshots Show Incorrect Content
+
+**Symptoms**: Screenshots captured but show wrong screen or state
+
+**Possible Causes**:
+- App state issues
+- Timing problems
+- Navigation issues
+
+**Solutions**:
+1. Ensure app is in correct state before test execution
+2. Add appropriate waits in test code
+3. Verify test navigation flow
+
+#### Issue: Sharding Not Working
+
+**Symptoms**: Shards not executing as expected
+
+**Possible Causes**:
+- Incorrect shard configuration
+- Device selection strategy mismatch
+- Test class/name typos
+
+**Solutions**:
+1. Verify shard configuration in YAML file
+2. Check device selection strategy matches requirements
+3. Verify test class names and test names are correct
+4. Review HyperExecute logs for shard execution details
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
+- See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options)
+- [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [Appium Hooks Documentation](/support/docs/smartui-appium-hooks)
+- [Espresso Visual Regression](/support/docs/espresso-visual-regression)

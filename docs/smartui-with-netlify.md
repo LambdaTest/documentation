@@ -95,3 +95,186 @@ Your changes will be triggered and deployed.
 - Go on that project. Click on the latest build. You can now compare the changes done to your project with-respect-to the provious build.
 
 <img loading="lazy" src={require('../assets/images/netlify-integration/n6.png').default} alt="Image" className="doc_img"/>
+
+## Best Practices
+
+### 1. Project Naming
+
+- Use descriptive, consistent names for SmartUI projects
+- Match project names with your Netlify site names for easy identification
+- Avoid special characters that might cause issues
+- Use consistent naming conventions across deployments
+
+### 2. Baseline Management
+
+- Establish baseline from stable deployment
+- Review baseline before using for comparisons
+- Update baseline when intentional changes are made
+- Document baseline deployment for reference
+
+### 3. Deployment Strategy
+
+- Deploy baseline before making changes
+- Test changes in staging before production
+- Use meaningful deployment messages
+- Tag important deployments
+
+### 4. Integration Configuration
+
+- Keep LambdaTest credentials secure
+- Use Netlify's environment variables for credentials
+- Rotate credentials regularly
+- Use different projects for different environments
+
+### 5. Comparison Workflow
+
+- Review visual differences carefully
+- Approve intentional changes promptly
+- Document reasons for baseline updates
+- Use SmartUI dashboard for detailed analysis
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: Screenshots Not Appearing in Dashboard
+
+**Symptoms**: Deployments complete but no screenshots appear in SmartUI dashboard
+
+**Possible Causes**:
+- Incorrect project name in Netlify integration
+- LambdaTest credentials incorrect
+- Integration not enabled
+- Network connectivity issues
+
+**Solutions**:
+1. Verify project name matches exactly (case-sensitive) in Netlify integration settings
+
+2. Check LambdaTest credentials:
+   - Go to Netlify Dashboard → Integrations → LambdaTest
+   - Verify username and access key are correct
+   - Re-enter credentials if needed
+
+3. Ensure integration is enabled:
+   - Check integration status in Netlify dashboard
+   - Re-enable if disabled
+
+4. Check network connectivity to LambdaTest servers
+
+5. Review Netlify deployment logs for errors
+
+#### Issue: "Project Not Found" Error
+
+**Symptoms**: Error indicating SmartUI project cannot be found
+
+**Possible Causes**:
+- Project name typo in Netlify integration
+- Project doesn't exist in SmartUI dashboard
+- Wrong account credentials
+
+**Solutions**:
+1. Verify project exists in SmartUI dashboard:
+   - Log into [SmartUI Dashboard](https://smartui.lambdatest.com/)
+   - Check if project with specified name exists
+   - Create project if it doesn't exist
+
+2. Copy project name directly from SmartUI dashboard
+
+3. Update project name in Netlify integration settings
+
+4. Check credentials match the account with the project
+
+#### Issue: Integration Not Triggering
+
+**Symptoms**: Deployments don't trigger SmartUI comparisons
+
+**Possible Causes**:
+- Integration not properly configured
+- Integration disabled
+- Deployment not triggering integration
+- Configuration errors
+
+**Solutions**:
+1. Verify integration is enabled:
+   - Go to Netlify Dashboard → Integrations → LambdaTest
+   - Ensure integration shows as "Enabled"
+
+2. Check integration configuration:
+   - Verify all required fields are filled
+   - Check for any error messages
+   - Re-save configuration if needed
+
+3. Test with a new deployment:
+   - Make a small change to trigger deployment
+   - Check if integration triggers
+
+4. Review Netlify deployment logs for integration errors
+
+#### Issue: Baseline Not Set Correctly
+
+**Symptoms**: Comparisons show unexpected differences or baseline issues
+
+**Possible Causes**:
+- Baseline deployment not completed
+- Wrong deployment used as baseline
+- Baseline not approved
+- Deployment state issues
+
+**Solutions**:
+1. Verify baseline deployment:
+   - Check SmartUI dashboard for baseline build
+   - Ensure baseline was from stable deployment
+   - Verify baseline shows as approved
+
+2. Set new baseline if needed:
+   - Use stable deployment as baseline
+   - Approve baseline in SmartUI dashboard
+
+3. Review deployment history:
+   - Check which deployment was used as baseline
+   - Verify deployment was successful
+
+#### Issue: Comparison Results Unexpected
+
+**Symptoms**: Visual differences don't match expected changes
+
+**Possible Causes**:
+- Dynamic content causing false positives
+- Deployment timing issues
+- Content not fully loaded
+- Configuration issues
+
+**Solutions**:
+1. Review comparison in SmartUI dashboard:
+   - Check diff view for actual differences
+   - Verify differences are expected
+
+2. Handle dynamic content:
+   - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
+   - Configure ignoreDOM/selectDOM if needed
+
+3. Check deployment timing:
+   - Ensure deployment completed fully
+   - Wait for all assets to load
+
+4. Review project settings:
+   - Check pixel threshold settings
+   - Adjust comparison settings if needed
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
+- See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [Project Settings](/support/docs/smartui-project-settings) - Configure comparison settings
+- [Baseline Management](/support/docs/smartui-baseline-management) - Learn how to manage baselines
+- [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) - Handle dynamic content
+- [Running Your First Project](/support/docs/smartui-running-your-first-project) - Get started with SmartUI

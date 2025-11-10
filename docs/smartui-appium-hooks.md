@@ -512,6 +512,191 @@ config.put("pageCount", 15); // Enter the number of pages for the Full Page scre
 Please note that this webhook is only applicable to <b>native app screenshots</b> and has known limitations. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.
 :::
 
+## Best Practices
+
+### 1. Screenshot Naming
+
+- Use descriptive, consistent names for screenshots
+- Include screen/component name in screenshot names
+- Avoid special characters that might cause issues
+- Use consistent naming conventions across your test suite
+
+**Example:**
+```javascript
+await driver.execute("smartui.takeScreenshot=HomeScreen-Header");
+await driver.execute("smartui.takeScreenshot=CheckoutScreen-PaymentForm");
+```
+
+### 2. Wait for Screen Load
+
+- Always wait for screens to fully load before taking screenshots
+- Use Appium's wait methods for dynamic content
+- Consider device-specific loading times
+
+**Example:**
+```javascript
+const { until, By } = require('selenium-webdriver');
+await driver.wait(until.elementLocated(By.id('main-content')), 10000);
+await driver.execute("smartui.takeScreenshot=Screen Loaded");
+```
+
+### 3. Handle Dynamic Content
+
+- Use `ignoreBoxes` for elements that change between runs (ads, timestamps, user avatars)
+- Use `selectBoxes` when you only need to compare specific regions
+- Test XPath locators using Appium Inspector before integrating
+
+### 4. Smart Crop Configuration
+
+- Enable `cropStatusBar` to focus on core UI elements
+- Enable `cropNavigationBar` for Android devices
+- Test cropped screenshots to ensure important content isn't removed
+
+### 5. Test Organization
+
+- Group related screenshots in the same build
+- Use meaningful build names
+- Run tests on consistent device configurations
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: Screenshots Not Captured
+
+**Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
+
+**Possible Causes**:
+- `visual: true` not set in capabilities
+- Incorrect project name
+- Network connectivity issues
+- Credentials not set correctly
+
+**Solutions**:
+1. Verify `visual: true` is set in capabilities:
+   ```javascript
+   let capabilities = {
+     visual: true, // Must be set
+     // ... other capabilities
+   };
+   ```
+
+2. Check project name matches exactly (case-sensitive):
+   ```javascript
+   "smartUI.project": "ExactProjectName"
+   ```
+
+3. Verify credentials are set:
+   ```bash
+   echo $LT_USERNAME
+   echo $LT_ACCESS_KEY
+   ```
+
+4. Check network connectivity to LambdaTest
+
+#### Issue: "Project Not Found" Error
+
+**Symptoms**: Error indicating SmartUI project cannot be found
+
+**Possible Causes**:
+- Project name typo or mismatch
+- Project deleted
+- Wrong account credentials
+
+**Solutions**:
+1. Verify project exists in SmartUI dashboard
+2. Copy project name directly from dashboard
+3. Check credentials match the account with the project
+4. Ensure project name is in capabilities, not just in dashboard
+
+#### Issue: Screenshots Show Blank or Incorrect Content
+
+**Symptoms**: Screenshots captured but show blank screens or incorrect content
+
+**Possible Causes**:
+- Screen not fully loaded
+- App state issues
+- Timing issues
+- Device-specific rendering
+
+**Solutions**:
+1. Add explicit waits before screenshots:
+   ```javascript
+   await driver.wait(until.elementLocated(By.id('content')), 10000);
+   ```
+
+2. Wait for specific elements to be visible:
+   ```javascript
+   await driver.wait(until.elementIsVisible(By.id('main-content')), 10000);
+   ```
+
+3. Increase wait time for slow-loading screens
+
+4. Verify app is in correct state before screenshot
+
+#### Issue: Full Page Screenshot Issues
+
+**Symptoms**: Full page screenshots incomplete or incorrect
+
+**Possible Causes**:
+- `pageCount` value too low
+- App doesn't support scrolling
+- Content not loading properly
+
+**Solutions**:
+1. Increase `pageCount` value (between 1-20):
+   ```javascript
+   let config = {
+     screenshotName: 'Full Page',
+     fullPage: true,
+     pageCount: 15  // Increase if needed
+   };
+   ```
+
+2. Verify app supports scrolling functionality
+
+3. Test with different `pageCount` values to find optimal setting
+
+#### Issue: ignoreBoxes/selectBoxes Not Working
+
+**Symptoms**: Dynamic content still causing false positives
+
+**Possible Causes**:
+- XPath locators incorrect
+- Elements not found at screenshot time
+- JSON string formatting issues
+
+**Solutions**:
+1. Verify XPath locators using Appium Inspector
+2. Ensure elements exist at screenshot time
+3. Check JSON string formatting:
+   ```javascript
+   ignoreBoxes: JSON.stringify({
+     xpath: ["//*[@text='Dynamic Ad']"]
+   })
+   ```
+
+4. Test XPath locators in isolation before using in config
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
+- See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options)
+- [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [Appium Documentation](https://www.lambdatest.com/support/docs/appium-nodejs/)
+
 For additional information about appium framework please explore the documentation [here](https://www.lambdatest.com/support/docs/appium-nodejs/)
 
 
