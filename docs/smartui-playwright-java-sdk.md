@@ -86,7 +86,7 @@ Download or Clone the code sample for the Java from the LambdaTest GitHub reposi
 
 ### Step 3: Install the Dependencies
 
-Update your dependencies in `pom.xml` file Install required modules for LambdaTest Smart UI SDK in your frontend project.
+Update your dependencies in `pom.xml` file Install required modules for LambdaTest SmartUI SDK in your frontend project.
 
 ```bash
 npm i @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
@@ -197,7 +197,7 @@ You may use the `npx smartui --help` command in case you are facing issues durin
 
 You have successfully integrated SmartUI SDK with your Playwright tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
 
-You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
+You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>

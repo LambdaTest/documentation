@@ -76,6 +76,6 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 
 ### Step 3: Check the output
 
-- After triggering the workflow, check your results in the [Smart UI Dashboard](https://smartui.lambdatest.com/projects)
+- After triggering the workflow, check your results in the [SmartUI Dashboard](https://smartui.lambdatest.com/projects)
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png').default} alt="Create New Project" width="" height=""/>

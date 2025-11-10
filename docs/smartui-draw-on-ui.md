@@ -76,7 +76,7 @@ By utilizing ignored/selected regions, you can keep your test results focused on
 
 - **Applicable for Every Project Type:** This feature is compatible with every project type, efficiently handling dynamic data where code-based ignore/select is not supported.
 
-## Steps to Implement Smart UI Annotation Tool
+## Steps to Implement SmartUI Annotation Tool
 
 **Step 1:** Click on the **Actions** button to configure areas.
 

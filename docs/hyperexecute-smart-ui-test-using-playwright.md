@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-smart-ui-test-using-playwright
-title: Smart UI Testing in HyperExecute using Playwright
+title: SmartUI Testing in HyperExecute using Playwright
 hide_title: false
 sidebar_label: Playwright
 description: Boost bug detection speed using HyperExecute smart UI testing with Playwright. Perform Visual UI Regression Testing for perfect app delivery.
@@ -41,14 +41,14 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Smart UI Testing",
+          "name": "SmartUI Testing",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-test-using-playwright/"
         }]
       })
     }}
 ></script>
 
-This documentation will guide you step-by-step to execute the Smart UI tests on the HyperExecute platform using Playwright.
+This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Playwright.
 
 ## Prerequisites
 
@@ -56,7 +56,7 @@ This documentation will guide you step-by-step to execute the Smart UI tests on 
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the [Environment Variable](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-- To run Smart UI tests, you need to have a **Baseline Image** and a **Comparison Image**. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser.
+- To run SmartUI tests, you need to have a **Baseline Image** and a **Comparison Image**. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser.
 
 :::info
 After creating the project, you will get your `PROJECT_TOKEN`. You need to keep this project token safe as it will be used in the further steps below.
@@ -224,7 +224,7 @@ OR use this command if you have not exported your username and access key in the
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/1.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
-- This will redirect you the Smart UI dashboard where you can see all the images you have pushed for the testing.
+- This will redirect you the SmartUI dashboard where you can see all the images you have pushed for the testing.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/playwright/2.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 

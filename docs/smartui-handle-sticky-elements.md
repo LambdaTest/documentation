@@ -2,7 +2,7 @@
 id: smartui-handle-sticky-elements
 title: Handle Pages with Sticky Elements
 sidebar_label: Handle Sticky Elements
-description: Ensure accurate visual testing with LambdaTest Smart UI by effectively handling sticky elements. Prevent false positives and maintain consistency across visual snapshots.
+description: Ensure accurate visual testing with LambdaTest SmartUI by effectively handling sticky elements. Prevent false positives and maintain consistency across visual snapshots.
 keywords:
   - lambdatest
   - smart ui
@@ -36,13 +36,13 @@ slug: smartui-handle-sticky-elements/
       })
     }}
 ></script>
-When conducting visual testing on web pages that contain sticky elements (such as headers, footers, or navigation bars), it's crucial to ensure that these elements do not cause false positives or inconsistencies in test results. Sticky elements, which remain fixed while scrolling through a page, can overlap or repeat in snapshots, leading to discrepancies in visual comparisons. LambdaTest Smart UI provides a solution to handle sticky elements effectively, ensuring consistent and accurate visual testing.
+When conducting visual testing on web pages that contain sticky elements (such as headers, footers, or navigation bars), it's crucial to ensure that these elements do not cause false positives or inconsistencies in test results. Sticky elements, which remain fixed while scrolling through a page, can overlap or repeat in snapshots, leading to discrepancies in visual comparisons. LambdaTest SmartUI provides a solution to handle sticky elements effectively, ensuring consistent and accurate visual testing.
 
-## How LambdaTest Smart UI Handles Sticky Elements
+## How LambdaTest SmartUI Handles Sticky Elements
 - **Modifying Sticky Elements in the DOM:**
-LambdaTest Smart UI automatically adjusts the positions of sticky elements in the Document Object Model (DOM) before capturing a screenshot. This modification ensures that sticky elements are displayed only once in the visual snapshots, typically at their original position (like the top of the page) where they first appear.
+LambdaTest SmartUI automatically adjusts the positions of sticky elements in the Document Object Model (DOM) before capturing a screenshot. This modification ensures that sticky elements are displayed only once in the visual snapshots, typically at their original position (like the top of the page) where they first appear.
 - **Rendering Full-Page Screenshots:**
-When taking full-page screenshots, LambdaTest Smart UI renders the page as it would appear when initially loaded in the browser. In this state, sticky elements (e.g., headers or footers) are positioned only at the top or bottom of the page, and they do not repeat throughout the rest of the page's length.
+When taking full-page screenshots, LambdaTest SmartUI renders the page as it would appear when initially loaded in the browser. In this state, sticky elements (e.g., headers or footers) are positioned only at the top or bottom of the page, and they do not repeat throughout the rest of the page's length.
 
 ## Benefits of Handling Sticky Elements
 - **Consistency Across Snapshots:** Ensures that sticky elements do not create unnecessary discrepancies by appearing multiple times in a single snapshot.

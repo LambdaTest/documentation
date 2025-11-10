@@ -136,7 +136,7 @@ npx smartui upload-figma-app designs.json --buildName "v1.0.0" --markBaseline
 
 ### View SmartUI Results
 
-You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
+You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-smart-ui-testing-using-cypress
-title: Smart UI Testing Using HyperExecute
+title: SmartUI Testing Using HyperExecute
 hide_title: true
 sidebar_label: Cypress
 description: Boost bug detection speed using HyperExecute smart UI testing with Cypress. Perform Visual UI Regression Testing for perfect app delivery.
@@ -38,16 +38,16 @@ slug: hyperexecute-smart-ui-testing-using-cypress/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Smart UI Testing",
+          "name": "SmartUI Testing",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-testing-using-cypress/"
         }]
       })
     }}
 ></script>
 
-# Smart UI Tests in HyperExecute using Cypress
+# SmartUI Tests in HyperExecute using Cypress
 
-This documentation will guide you step-by-step to execute the Smart UI tests on the HyperExecute platform using Cypress
+This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Cypress
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ This documentation will guide you step-by-step to execute the Smart UI tests on 
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the Environment Variable
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-- To run Smart UI tests, you need to have a **Baseline Image** and a **Comparison** image. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser.
+- To run SmartUI tests, you need to have a **Baseline Image** and a **Comparison** image. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser.
 
 ## Step 1: Setup your Project
 
@@ -136,7 +136,7 @@ To execute the project run the below command in your terminal at the root folder
 ```
 - Now, visit to the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) to check the status of your project.
 
-- Click on the **Smart UI Tests** button.
+- Click on the **SmartUI Tests** button.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui/cypress/1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

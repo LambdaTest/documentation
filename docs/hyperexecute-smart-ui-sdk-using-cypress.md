@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-smart-ui-sdk-using-cypress
-title: UI Testing with Cypress using HyperExecute and Smart UI SDK
+title: UI Testing with Cypress using HyperExecute and SmartUI SDK
 hide_title: false
 sidebar_label: Cypress
-description: Automate Hyperexecute tests seamlessly! Integrate Smart UI SDK with Cypress for efficient & reliable UI testing. 
+description: Automate Hyperexecute tests seamlessly! Integrate SmartUI SDK with Cypress for efficient & reliable UI testing. 
 keywords:
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
@@ -40,13 +40,13 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Smart UI Testing",
+          "name": "SmartUI Testing",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-using-cypress/"
         }]
       })
     }}
 ></script>
-This documentation will guide you step-by-step to execute the Smart UI tests on the HyperExecute platform using Selenium
+This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Selenium
 
 > **Note :** SmartUI SDK only supports Cypress versions >= 10.0.0
 
