@@ -3814,6 +3814,11 @@ module.exports = {
               },
             ],
           },
+          {
+            type: "doc",
+            label: "Troubleshooting Guide",
+            id: "smartui-troubleshooting-guide",
+          },
         ],
       },
     ],

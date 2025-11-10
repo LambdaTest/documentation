@@ -104,3 +104,234 @@ jobs:
 - After triggering the workflow, check your results in the [SmartUI Dashboard](https://smartui.lambdatest.com/projects)
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png').default} alt="Create New Project" width="" height=""/>
+
+## Best Practices
+
+### 1. Secret Management
+
+- Never commit credentials to repository
+- Use Azure Pipeline Variables for all sensitive data
+- Mark variables as secret to hide values in logs
+- Rotate secrets regularly
+- Use different secrets for different environments
+
+### 2. Pipeline Optimization
+
+- Use parallel jobs for faster execution
+- Cache dependencies to speed up pipelines
+- Only run visual tests on relevant branches
+- Set up pipeline conditions to avoid unnecessary runs
+
+**Example:**
+```yaml
+trigger:
+  branches:
+    include:
+      - main
+      - develop
+```
+
+### 3. Build Naming
+
+- Use meaningful build names that include branch/commit info
+- Include commit SHA for traceability
+- Use consistent naming conventions
+
+**Example:**
+```yaml
+variables:
+  BUILD_NAME: "$(Build.SourceBranchName)-$(Build.SourceVersion)"
+```
+
+### 4. Error Handling
+
+- Set up proper error handling in pipelines
+- Use pipeline status checks
+- Configure notifications for failures
+- Add retry logic for flaky tests
+
+### 5. Resource Management
+
+- Limit concurrent pipeline runs
+- Clean up old builds regularly
+- Monitor pipeline execution time
+- Optimize test execution order
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: Pipeline Fails with "Variable Not Found"
+
+**Symptoms**: Pipeline fails with error about missing variables
+
+**Possible Causes**:
+- Variables not created in Azure DevOps
+- Variable names don't match
+- Variables not accessible to pipeline
+- Variable scope issues
+
+**Solutions**:
+1. Verify variables exist in pipeline settings:
+   - Go to Pipelines → Edit → Variables
+   - Check `LT_USERNAME`, `LT_ACCESS_KEY`, and `PROJECT_TOKEN` exist
+
+2. Ensure variable names match exactly (case-sensitive)
+
+3. Check variable scope (pipeline, stage, or job level)
+
+4. Verify variables are marked as secret if needed
+
+#### Issue: PROJECT_TOKEN Not Available
+
+**Symptoms**: Pipeline prompts for PROJECT_TOKEN or token not found
+
+**Possible Causes**:
+- PROJECT_TOKEN not set as pipeline variable
+- Variable not passed to job
+- Variable marked as secret incorrectly
+
+**Solutions**:
+1. Add PROJECT_TOKEN as Azure Pipeline Variable
+
+2. Pass variable to job:
+   ```yaml
+   variables:
+     PROJECT_TOKEN: $(PROJECT_TOKEN)
+   ```
+
+3. Check variable is accessible to the job
+
+4. Verify variable scope includes your pipeline
+
+#### Issue: Tests Run But No Results in Dashboard
+
+**Symptoms**: Pipeline completes but screenshots don't appear in SmartUI
+
+**Possible Causes**:
+- Incorrect PROJECT_TOKEN
+- Project name mismatch
+- Network issues
+- Pipeline job failure
+
+**Solutions**:
+1. Verify PROJECT_TOKEN is correct:
+   - Check token in SmartUI Project Settings
+   - Ensure token includes project ID prefix
+
+2. Check pipeline logs for errors:
+   ```yaml
+   - task: PowerShell@2
+     displayName: 'Check Logs'
+     condition: failed()
+     inputs:
+       script: |
+         Get-Content $(Agent.TempDirectory)/*.log
+   ```
+
+3. Verify network connectivity in pipeline
+
+4. Check if SmartUI CLI step completed successfully
+
+#### Issue: Pipeline Times Out
+
+**Symptoms**: Pipeline execution exceeds time limit
+
+**Possible Causes**:
+- Too many tests running
+- Slow test execution
+- Network latency
+- Resource constraints
+
+**Solutions**:
+1. Increase pipeline timeout:
+   ```yaml
+   timeoutInMinutes: 60
+   ```
+
+2. Run tests in parallel using matrix:
+   ```yaml
+   strategy:
+     matrix:
+       TestGroup1:
+         TEST_GROUP: 1
+       TestGroup2:
+         TEST_GROUP: 2
+   ```
+
+3. Optimize test execution
+4. Split tests across multiple pipeline stages
+
+#### Issue: Dependencies Installation Fails
+
+**Symptoms**: npm install or dependency installation fails
+
+**Possible Causes**:
+- Network issues
+- Package registry problems
+- Version conflicts
+- Node version mismatch
+
+**Solutions**:
+1. Use specific Node version:
+   ```yaml
+   - task: UseNode@2
+     inputs:
+       version: '18.x'
+   ```
+
+2. Clear npm cache:
+   ```yaml
+   - script: |
+       npm cache clean --force
+       npm install
+   ```
+
+3. Use package-lock.json for consistent installs
+
+4. Check for version conflicts in package.json
+
+#### Issue: SmartUI CLI Not Found
+
+**Symptoms**: `npx smartui` command fails with "command not found"
+
+**Possible Causes**:
+- Node.js not installed
+- npm not available
+- PATH issues
+
+**Solutions**:
+1. Ensure Node.js setup task is included:
+   ```yaml
+   - task: UseNode@2
+     inputs:
+       version: '18.x'
+   ```
+
+2. Verify npm is available:
+   ```yaml
+   - script: npm --version
+   ```
+
+3. Install SmartUI CLI explicitly:
+   ```yaml
+   - script: |
+       npm install -g @lambdatest/smartui-cli
+   ```
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review [Azure Pipelines Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/)
+- Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [SmartUI CLI Documentation](/support/docs/smartui-cli)
+- [Azure Pipelines Documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/)
+- [Project Settings](/support/docs/smartui-project-settings)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)

@@ -179,3 +179,176 @@ Example for GitHub Actions:
 - **Batch Processing**: Upload multiple PDFs efficiently from command line
 - **Automated Testing**: Schedule PDF uploads as part of automated test suites
 - **Developer Workflows**: Quick PDF testing during development and debugging
+
+## Best Practices
+
+### 1. PDF File Management
+
+- Use consistent naming conventions for PDF files
+- Organize PDFs in logical directory structures
+- Verify PDF files are valid and not corrupted before upload
+- Keep PDF files in version control when appropriate
+
+### 2. Project Token Management
+
+- Store project token as environment variable
+- Never commit tokens to version control
+- Use different tokens for different environments
+- Rotate tokens regularly
+
+### 3. Build Naming
+
+- Use meaningful build names that include version info
+- Include date or version in build names
+- Use consistent naming conventions
+
+**Example:**
+```bash
+smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
+```
+
+### 4. Error Handling
+
+- Always check CLI exit codes
+- Handle network failures gracefully
+- Implement retry logic for transient failures
+- Log errors for debugging
+
+### 5. Batch Processing
+
+- Process PDFs in batches for efficiency
+- Monitor upload progress
+- Handle partial failures in batch operations
+- Use appropriate batch sizes
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: PDF Upload Fails
+
+**Symptoms**: CLI command fails or returns error
+
+**Possible Causes**:
+- Invalid PDF file
+- File path incorrect
+- File size too large
+- Network connectivity issues
+- Project token incorrect
+- CLI not installed
+
+**Solutions**:
+1. Verify PDF file is valid and not corrupted:
+   ```bash
+   file document.pdf
+   ```
+
+2. Check file path is correct:
+   ```bash
+   ls -la ./pdfs/
+   ```
+
+3. Verify file size is within limits
+
+4. Check network connectivity to LambdaTest servers
+
+5. Verify PROJECT_TOKEN is set correctly:
+   ```bash
+   echo $PROJECT_TOKEN
+   ```
+
+6. Verify SmartUI CLI is installed:
+   ```bash
+   smartui --version
+   ```
+
+#### Issue: "Project Not Found" Error
+
+**Symptoms**: Error message indicating project cannot be found
+
+**Possible Causes**:
+- Incorrect project token
+- Project deleted or renamed
+- Token from wrong project
+
+**Solutions**:
+1. Verify project exists in SmartUI dashboard
+2. Copy project token directly from Project Settings
+3. Ensure token includes the project ID prefix (e.g., `123456#...`)
+4. Check for extra spaces or quotes in token
+
+#### Issue: CLI Command Not Found
+
+**Symptoms**: `smartui` command not recognized
+
+**Possible Causes**:
+- CLI not installed
+- npm not available
+- PATH issues
+
+**Solutions**:
+1. Install SmartUI CLI:
+   ```bash
+   npm install -g @lambdatest/smartui-cli
+   ```
+
+2. Verify npm is available:
+   ```bash
+   npm --version
+   ```
+
+3. Check PATH includes npm global bin directory
+
+#### Issue: Upload Returns Error
+
+**Symptoms**: CLI returns error status or failure message
+
+**Possible Causes**:
+- Invalid command syntax
+- Missing required parameters
+- Authentication issues
+- Server-side processing error
+
+**Solutions**:
+1. Verify command syntax matches documentation
+2. Check all required parameters are included
+3. Verify authentication credentials
+4. Review error message for specific details
+5. Retry upload if transient error
+
+#### Issue: PDFs Not Appearing in Dashboard
+
+**Symptoms**: Uploads complete but PDFs don't appear in SmartUI dashboard
+
+**Possible Causes**:
+- Incorrect project token
+- Project name mismatch
+- Upload not completed
+- Dashboard refresh needed
+
+**Solutions**:
+1. Verify PROJECT_TOKEN is correct
+2. Check project name matches exactly (case-sensitive)
+3. Wait a few moments and refresh dashboard
+4. Check CLI output for errors
+5. Use `--fetch-results` to verify upload status
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [PDF Comparison Overview](/support/docs/smartui-pdf-comparison) for PDF-specific information
+- See [PDF API Upload](/support/docs/smartui-pdf-api-upload) for alternative upload methods
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [PDF Comparison Overview](/support/docs/smartui-pdf-comparison)
+- [PDF API Upload](/support/docs/smartui-pdf-api-upload)
+- [PDF Java SDK Upload](/support/docs/smartui-pdf-java-sdk)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
