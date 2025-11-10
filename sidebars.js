@@ -3638,11 +3638,11 @@ module.exports = {
                 label: "Travis CI",
                 id: "smartui-with-travis-ci",
               },
-              // {
-              //   type: "doc",
-              //   label: "Netlify",
-              //   id: "smartui-with-netlify",
-              // },
+              {
+                type: "doc",
+                label: "Netlify",
+                id: "smartui-with-netlify",
+              },
             ],
           },
           {
@@ -3777,6 +3777,11 @@ module.exports = {
                 id: "smartui-slack-integration",
               },
             ],
+          },
+          {
+            type: "doc",
+            label: "Troubleshooting Guide",
+            id: "smartui-troubleshooting-guide",
           },
         ],
       },
@@ -4021,6 +4026,7 @@ module.exports = {
           "web-scanner-accessibility-scan",
           "web-scanner-adding-urls",
           "web-scanner-scheduling-options",
+          "web-scanner-advanced-features",
         ],
       },
     ],

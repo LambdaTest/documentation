@@ -56,6 +56,50 @@ To access the Project Settings in SmartUI, you must meet the following requireme
 2. Ensure you have an active [subscription plan](https://www.lambdatest.com/pricing) with a valid screenshots limit.
 3. You must have created a project within the SmartUI web app.
 
+## Project Token
+
+The Project Token is a unique identifier that authenticates your SmartUI project for executing tests locally with CLI and APIs. You'll find your Project Token in the Project Settings after creating a project.
+
+### Setting Up Project Token
+
+Use this key to authenticate your SmartUI project for executing locally with CLI and APIs.
+
+<Tabs className="docs__val" groupId="platform">
+<TabItem value="macos-linux" label="MacOS/Linux" default>
+
+```bash
+export PROJECT_TOKEN='project#token'
+```
+
+</TabItem>
+<TabItem value="windows-cmd" label="Windows - CMD">
+
+```bash
+set PROJECT_TOKEN='project#token'
+```
+
+</TabItem>
+<TabItem value="powershell" label="PowerShell">
+
+```powershell
+$env:PROJECT_TOKEN='project#token'
+```
+
+</TabItem>
+</Tabs>
+
+### Using Project Token
+
+The Project Token is required for:
+- CLI executions (`npx smartui exec`, `npx smartui capture`)
+- API uploads
+- Local test execution
+- CI/CD pipeline integrations
+
+:::info
+Keep your Project Token secure and never commit it to version control. Use environment variables or secret management tools in CI/CD pipelines.
+:::
+
 ## Navigating to Project Settings
 
 To access the Project Settings, follow these simple steps:
@@ -88,33 +132,130 @@ Altering Approvers will impact email notifications, which will be sent to the la
 
 ### Comparison Settings
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/comparison.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/comparison.png').default} alt="Comparison Settings" width="768" height="373" className="doc_img"/>
 
-- **Pixel Threshold:** Define the pixel threshold, specifying the level of granularity for image comparisons.
+Comparison settings allow you to fine-tune how SmartUI compares screenshots, balancing between highlighting important changes and ignoring noise.
+
+#### Pixel Threshold
+
+Strike a balance between highlighting important changes and ignoring noise. The pixel threshold determines the sensitivity of the comparison algorithm.
+
+**Options:**
+- **Relaxed**: Higher threshold, fewer differences detected (good for pages with minor rendering variations)
+- **Recommended**: Balanced threshold (default, suitable for most use cases)
+- **Strict**: Lower threshold, more differences detected (good for precise comparisons)
+- **Custom**: Set a custom threshold value (0-10000)
+
+**Example:**
+- Custom value: `5000` - Higher value means more tolerance for pixel differences
 
 :::info
 Adjusting the Pixel Threshold in Comparison Settings will only affect new builds/screenshots captured after the update.
 :::
 
-- **Custom Mismatch Options:** Configure custom mismatch options to fine-tune the comparison process.
+#### Error Highlight Color
 
-- **Error Highlight Color:** Select a color for highlighting differences in images.
+Set the color to show/highlight the changes in the pixel differences on your test output.
 
-- **Bounding Boxes:** Define specific regions within images for comparison, narrowing down the area of interest.
-  
-- **Ignore Pixel Scaling:** Configure settings related to pixel scaling during comparisons.
+**Available Colors:**
+- Red (default)
+- Blue
+- Orange
+- Green
+- Pink
+- Gray
+- Custom: Enter a hex color code (e.g., `#f687b3`)
 
-- **Error Type Identifier:** Choose the type of error identifier for pinpointing differences between images.
+**Use Case**: Choose a color that provides good contrast against your page background for easier visual identification of differences.
 
-- **Transparency:** Adjust image transparency settings to balance visibility during comparisons.
+#### Custom Mismatch Acceptance
 
-- **Resizing Options:** Customize resizing options for images used in comparisons.
+Configure pixel-to-pixel acceptance percentage for auto-approval.
 
+**Settings:**
+- **Accept**: Percentage threshold for auto-approval (0-100)
+- **Reject**: Percentage threshold for auto-rejection (0-100)
+
+**Example:**
+- Accept: `0%` - No auto-approval
+- Reject: `100%` - Auto-reject all differences
+
+**Use Case**: Automatically approve screenshots with differences below the acceptance threshold, reducing manual review time.
+
+#### Smart Ignore
+
+Highlight content changes while smartly ignoring layout shifts and displacement differences.
+
+**Toggle**: Enable/disable Smart Ignore for the project
+
+**Benefits:**
+- Reduces false positives from layout shifts
+- Focuses on actual content changes
+- Improves test reliability
+
+For detailed information, refer to [Smart Ignore Documentation](/support/docs/smartui-smartignore).
+
+#### Bounding Boxes
+
+Configure your areas to which needs to be ignored or select a specific area for comparison.
+
+**Use Cases:**
+- Ignore specific regions (ads, dynamic content)
+- Focus comparison on specific areas (main content, critical UI)
+- Define regions of interest for comparison
+
+#### Advanced Comparison Settings
+
+Manage your Pixel to Pixel false positives and comparison view types.
+
+##### Ignore Pixel Scaling Options
+
+Choose options to remove the Pixel to Pixel false-positive rate in identifying the screenshot.
+
+**Options:**
+- **Ignore Antialiasing**: Ignore differences caused by antialiasing rendering
+- **Ignore Less**: Minimal pixel difference tolerance
+- **Ignore Nothing**: No pixel difference tolerance (strictest)
+- **Ignore Alpha**: Ignore alpha channel differences
+- **Ignore Colors**: Ignore color differences, focus on structure
+
+**Use Case**: Reduce false positives from rendering differences, browser-specific rendering, or minor pixel variations.
+
+##### Error Type Identifier
+
+Show the differences in the output screen by identifying the pixel changes type and capture the intended view.
+
+**Options:**
+- **Flat**: Simple difference highlighting
+- **Movement**: Highlight elements that moved
+- **Movement with Diff Intensity**: Show movement with intensity levels
+- **Diff portion from the Input**: Show only the different portions
+- **Flat with Diff Intensity**: Flat view with intensity levels
+
+**Use Case**: Choose the view that best helps you identify and understand the differences in your screenshots.
+
+##### Transparency
+
+Strike a balance between highlighting differences and maintaining visibility of the underlying content.
+
+**Options:**
+- **Opaque**: Full opacity, clear difference highlighting
+- **Transparent**: Lower opacity, see underlying content
+
+**Use Case**: Adjust transparency to see both the differences and the original content for better context.
+
+##### Resize Image
+
+Ability to scale the test screenshot according to baseline.
+
+**Options:**
+- **Use Original Image**: Compare at original size
+- **Scale to same size**: Scale screenshots to match baseline size
+
+**Use Case**: Handle cases where screenshots are captured at different resolutions or viewport sizes.
 
 :::info
-
 Changes to Project Settings will impact builds/comparisons executed after the changes and the previous builds/comparisons remain unaffected.
-
 :::
 
 #### Additional Information:
@@ -160,13 +301,46 @@ For detailed information on these options, refer to our [Git Baseline Branching 
 
 ### Notifications
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/notif_ss.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/notif_ss.png').default} alt="Notifications Settings" width="768" height="373" className="doc_img"/>
 
-- **Email Notification Settings:** Set up and customize email notifications for build runs when changes are found and when there are changes to the list of project approvers.
+Configure how you receive alerts and updates about your SmartUI project.
+
+#### Email Notifications
+
+Receive email notifications whenever there are changes found in your build or the project baseline changes.
+
+**Settings:**
+- **Build Changes**: Get notified when visual differences are found in builds
+- **Baseline Changes**: Get notified when project baseline is updated
+- **Approver Changes**: Get notified when project approvers list is modified
+
+**Use Case**: Stay informed about visual changes without constantly checking the dashboard.
+
+#### Slack Alerts
+
+Receive Slack alerts whenever there are changes found in your build.
+
+**Setup:**
+1. Connect your Slack workspace in Project Settings
+2. Configure which events trigger Slack notifications
+3. Choose the Slack channel for notifications
+
+**Use Case**: Integrate visual testing alerts into your team's communication workflow.
 
 :::note
 We are continually adding more notification channels for SmartUI.
 :::
+
+### LambdaTest Badge
+
+Show the world that you are using LambdaTest for your visual regression testing.
+
+**Badge Code:**
+```markdown
+[![This project is using Lambda test for visual regression testing.](https://smartui.lambdatest.com/static/media/LTBadge.64a05e73.svg)](https://lambdatest.com)
+```
+
+**Use Case**: Add to your README or documentation to showcase your testing setup.
 
 ### Delete Project
 
@@ -178,3 +352,13 @@ The "Delete Project" option allows administrators or project creators to permane
 :::info
 Only the **Admin** or **Creator** of the project can delete a project. Once deleted, a project cannot be retrieved.
 :::
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) - Solutions for project configuration issues
+- [Baseline Management](/support/docs/smartui-baseline-management) - Learn how to manage baselines effectively
+- [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) - Configure ignoreDOM/selectDOM for dynamic content
+- [Smart Ignore Feature](/support/docs/smartui-smartignore) - Automatically ignore layout shifts
+- [Configuration Options](/support/docs/smartui-sdk-config-options) - SDK configuration file options
+- [Running Your First Project](/support/docs/smartui-running-your-first-project) - Get started with SmartUI
+- [Test Settings Options](https://www.lambdatest.com/support/docs/test-settings-options/) - Advanced comparison settings

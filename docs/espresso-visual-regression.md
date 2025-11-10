@@ -381,6 +381,165 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 |---------------------|--------------------|
 | <img loading="lazy" src={require('../assets/images/smart-visual-testing/screenshot.webp').default} alt="Profile" width="1360" height="603" className="doc_img"/> | <img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt="Profile" width="1360" height="603" className="doc_img"/> |
 
+## Best Practices
+
+### 1. Project and Build Naming
+
+- Use descriptive, consistent names for projects and builds
+- Include app version or release info in build names
+- Avoid special characters that might cause issues
+- Use consistent naming conventions across test runs
+
+**Example:**
+```json
+{
+  "smartUI.project": "MyApp-VisualTests",
+  "smartUI.build": "Release-1.0.0"
+}
+```
+
+### 2. Device Selection
+
+- Test on devices that match your user base
+- Include multiple device configurations for comprehensive coverage
+- Use device patterns for consistent testing (e.g., `Galaxy.*`, `Pixel.*`)
+
+### 3. Smart Crop Configuration
+
+- Enable `cropStatusBar` to focus on core UI elements
+- Enable `cropNavigationBar` for Android devices
+- Test cropped screenshots to ensure important content isn't removed
+
+### 4. Test Organization
+
+- Use sharding for parallel test execution
+- Group related tests in same build
+- Use meaningful test names for better organization
+
+### 5. App and Test Suite Management
+
+- Upload apps and test suites before execution
+- Use app IDs (`lt://APP...`) for faster execution
+- Keep app and test suite versions synchronized
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: Screenshots Not Captured
+
+**Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
+
+**Possible Causes**:
+- `visual: true` not set in request
+- Incorrect project name
+- Network connectivity issues
+- Authentication issues
+
+**Solutions**:
+1. Verify `visual: true` is set in API request:
+   ```json
+   {
+     "visual": true,
+     "smartUI.project": "ProjectName"
+   }
+   ```
+
+2. Check project name matches exactly (case-sensitive)
+
+3. Verify authentication token is correct:
+   - Generate base64 encoded token from username:accesskey
+   - Ensure token is included in Authorization header
+
+4. Check network connectivity to LambdaTest
+
+#### Issue: "Project Not Found" Error
+
+**Symptoms**: Error indicating SmartUI project cannot be found
+
+**Possible Causes**:
+- Project name typo or mismatch
+- Project deleted
+- Wrong account credentials
+
+**Solutions**:
+1. Verify project exists in SmartUI dashboard
+2. Copy project name directly from dashboard
+3. Check credentials match the account with the project
+4. Ensure project name is in API request
+
+#### Issue: App Upload Fails
+
+**Symptoms**: App upload returns error or fails
+
+**Possible Causes**:
+- Invalid APK file
+- File size too large
+- Network issues
+- Authentication problems
+
+**Solutions**:
+1. Verify APK file is valid and not corrupted
+2. Check file size limits
+3. Retry upload with stable network connection
+4. Verify authentication credentials
+
+#### Issue: Test Execution Fails
+
+**Symptoms**: Test suite execution fails or times out
+
+**Possible Causes**:
+- Invalid test suite APK
+- Device not available
+- Timeout settings too low
+- Test suite errors
+
+**Solutions**:
+1. Verify test suite APK is valid
+2. Check device availability
+3. Increase `queueTimeout` and `IdleTimeout`:
+   ```json
+   {
+     "queueTimeout": 600,
+     "IdleTimeout": 60
+   }
+   ```
+
+4. Review device logs for test errors
+
+#### Issue: Screenshots Show Incorrect Content
+
+**Symptoms**: Screenshots captured but show wrong screen or state
+
+**Possible Causes**:
+- App state issues
+- Timing problems
+- Navigation issues
+
+**Solutions**:
+1. Ensure app is in correct state before test execution
+2. Add appropriate waits in test code
+3. Verify test navigation flow
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
+- See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options)
+- [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [Appium Hooks Documentation](/support/docs/smartui-appium-hooks)
+
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
