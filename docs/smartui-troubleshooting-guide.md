@@ -56,7 +56,12 @@ Before diving into specific issues, run through this quick checklist:
 - [ ] Credentials (for Hooks) are set correctly (`LT_USERNAME`, `LT_ACCESS_KEY`)
 - [ ] Project name matches exactly (case-sensitive)
 
-## Authentication & Project Setup Issues
+---
+
+## Troubleshooting by Category
+
+<Tabs className="docs__val" groupId="troubleshooting-category">
+<TabItem value="authentication" label="Authentication & Setup" default>
 
 ### Issue: Screenshots Not Appearing in Dashboard
 
@@ -254,9 +259,9 @@ Before diving into specific issues, run through this quick checklist:
 
 **Related Documentation**: [Selenium Visual Regression](/support/docs/selenium-visual-regression), [Playwright Visual Regression](/support/docs/playwright-visual-regression)
 
----
+</TabItem>
 
-## Screenshot & Content Issues
+<TabItem value="screenshot" label="Screenshot & Content">
 
 ### Issue: Screenshots Show Blank or Incorrect Content
 
@@ -429,9 +434,9 @@ Before diving into specific issues, run through this quick checklist:
 
 **Related Documentation**: [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data), [Project Settings](/support/docs/smartui-project-settings), [Smart Ignore](/support/docs/smartui-smartignore)
 
----
+</TabItem>
 
-## Build & Execution Issues
+<TabItem value="build" label="Build & Execution">
 
 ### Issue: Build Execution Fails
 
@@ -564,9 +569,9 @@ Before diving into specific issues, run through this quick checklist:
 
 **Related Documentation**: [SDK Documentation](/support/docs/smartui-selenium-java-sdk), [CLI Documentation](/support/docs/smartui-cli)
 
----
+</TabItem>
 
-## CI/CD Integration Issues
+<TabItem value="cicd" label="CI/CD Integration">
 
 ### Issue: Pipeline/Workflow Fails with "Secret/Variable Not Found"
 
@@ -662,9 +667,9 @@ Before diving into specific issues, run through this quick checklist:
 
 **Related Documentation**: [CI/CD Integration Guides](/support/docs/smartui-with-github-actions)
 
----
+</TabItem>
 
-## Configuration Issues
+<TabItem value="configuration" label="Configuration">
 
 ### Issue: Configuration File Errors
 
@@ -702,9 +707,9 @@ Before diving into specific issues, run through this quick checklist:
 
 **Related Documentation**: [Configuration Options](/support/docs/smartui-sdk-config-options), [Custom CSS](/support/docs/smartui-custom-css)
 
----
+</TabItem>
 
-## Advanced Issues
+<TabItem value="advanced" label="Advanced Issues">
 
 ### Issue: Proxy Configuration Not Working
 
@@ -773,6 +778,10 @@ Before diving into specific issues, run through this quick checklist:
 
 **Related Documentation**: [Tunnel Documentation](/support/docs/testing-locally-hosted-pages), [SDK Tunnel](/support/docs/smartui-sdk-tunnel)
 
+</TabItem>
+
+</Tabs>
+
 ---
 
 ## Getting Additional Help
@@ -808,4 +817,3 @@ If you encounter issues not covered in this guide:
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [CLI Documentation](/support/docs/smartui-cli)
-
