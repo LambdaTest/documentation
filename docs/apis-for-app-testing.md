@@ -17,6 +17,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -41,15 +43,11 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-
-## Overview
-***
-
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 In this documentation, we look at some APIs that will help you optimize your mobile app testing workflow. If you are performing live or automated app testing, you can use these APIs in your scripts to perform various actions.
 
 ## Fetching The Devices Available for Testing
-***
-
+<RealDeviceTag value="Real Device" />
 To fetch the Devices that are available for running Tests.
 
 <div className="lambdatest__codeblock">
@@ -237,8 +235,8 @@ Shown below is the response to the above cURL request.
 </div>
 
 ## Generate publicly shareable build and test links
-***
-
+<RealDeviceTag value="Real Device" />
+<VirtualDeviceTag value="Virtual Device" />
 To generate public **shareable build link**, run the below cURL command. 
 
 <div className="lambdatest__codeblock">

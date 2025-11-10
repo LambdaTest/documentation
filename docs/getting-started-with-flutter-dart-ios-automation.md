@@ -45,7 +45,7 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
     }}
 ></script>
 
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+<RealDeviceTag value="Real Device" /> 
 Flutter, an open-source UI toolkit created by Google, is a popular choice among developers to build natively compiled applications for mobile, web, and desktop from a single codebase. With Dart as its programming language, Flutter enables fast development of beautiful apps with a highly productive, extensible and open-source set of features.
 
 In this guide, we will explore how to run your first Flutter Dart test on an iOS device using the LambdaTest Real Device Cloud. By combining the capabilities of Flutter Dart and LambdaTest, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.

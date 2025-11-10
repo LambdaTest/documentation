@@ -20,6 +20,11 @@ import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import CodeBlock from '@theme/CodeBlock';
 import NewTag from '../src/component/newTag';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
+<RealDeviceTag value="Real Device" /> 
+<VirtualDeviceTag value="Virtual Device" />
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -57,7 +62,14 @@ Wait for the file to upload and process. A success message will indicate when yo
 
 <img loading="lazy" src={require('../assets/images/appium-app/application/real-device-upload.gif').default} alt="Image" className="doc_img"/>
 
+
 > Learn how to [Upload Apps on LambdaTest’s Real Device Cloud](/support/docs/upload-apps-on-real-device-cloud/) in detail.
+
+:::info
+- You can access the [**Virtual Device Dashboard**](https://app.lambdatest.com/console/realtime/app).
+- For **Virtual Devices**, the steps remain identical to those for Real Devices.  
+- The only difference is that for **iOS applications**, you must upload a **.zip** file instead of an `.ipa` file, as simulators accept `.zip` format.  
+:::
 
 ## Automation Dashboard
 - **Access the App Automation Dashboard :** Log in to your LambdaTest account and navigate to the [App Automation Dashboard](https://appautomation.lambdatest.com/build).
@@ -67,3 +79,9 @@ Wait for the file to upload and process. A success message will indicate when yo
 - **Copy the App URL :** After uploading, an `app_url` will be generated (format: `"lt://<app_url>"`). Copy this app_url and use it in your test scripts to identify your application.
 
 <img loading="lazy" src={require('../assets/images/appium-app/application/automation-upload.gif').default} alt="Image" className="doc_img"/>
+
+
+:::info
+- The **App Automation Dashboard** supports both **Real** and **Virtual Devices**.  
+- To perform testing on Virtual Devices, simply select the **Virtual Device** option during upload — the rest of the flow remains identical.
+:::

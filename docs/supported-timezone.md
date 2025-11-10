@@ -21,6 +21,8 @@ slug: supported-timezone/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -46,8 +48,9 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-# Setting up timezone on Real Devices
-
+# Setting up timezone 
+<RealDeviceTag value="Real Device" /> 
+<VirtualDeviceTag value="Virtual Device" />
 In automated testing with Appium on LambdaTest, configuring the timezone accurately is crucial for precise testing scenarios. LambdaTest provides support for various timezones, allowing users to customize their testing environments to meet specific requirements.
 
 By default, the timezone for Appium testing on LambdaTest is selected based on the device's default settings. However, users have the flexibility to explicitly specify the timezone using the **timezone** capability in their desired capabilities.
