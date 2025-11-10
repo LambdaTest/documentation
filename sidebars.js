@@ -4021,6 +4021,7 @@ module.exports = {
           "web-scanner-accessibility-scan",
           "web-scanner-adding-urls",
           "web-scanner-scheduling-options",
+          "web-scanner-advanced-features",
         ],
       },
     ],
