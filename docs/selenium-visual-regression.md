@@ -104,7 +104,7 @@ let capabilities = {
   //highlight-end
 };
 
-// Connecting to the Lambdatest Selenium Cloud Grid with Smart UI
+// Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
 let gridUrl =
   "https://" +
   "<Your Username>" +
@@ -141,7 +141,7 @@ options.set_capability('LT:Options', lt_options);
 
 options.set_capability('LT:Options', lt_options);
 
-#Connecting to the Lambdatest Selenium Cloud Grid with Smart UI
+#Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
 self.driver = webdriver.Remote(
 command_executor=  "https://" +"<Your Username>" +":" +"<Your Access Key>" + `hub.lambdatest.com/wd/hub`.format(username, access_key),options=options)
 ```
@@ -166,7 +166,7 @@ lt_options[:'smartUI.project']="SmartUI_Project_Name"
 
 options.set_capability('LT:Options', lt_options);
 
-#Connecting to the Lambdatest Selenium Cloud Grid with Smart UI
+#Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
 self.driver = webdriver.Remote(
 command_executor=  "https://" +"<Your Username>" +":" +"<Your Access Key>" + `hub.lambdatest.com/wd/hub`.format(username, access_key),options=options)
 ```
@@ -194,7 +194,7 @@ ltOptions.Add("w3c", true);
 ltOptions.Add("plugin", "c#-c#");
 capabilities.AddAdditionalOption("LT:Options", ltOptions);
 
-// Connecting to the Lambdatest Selenium Cloud Grid with Smart UI
+// Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
 driver = new RemoteWebDriver(new Uri("https://hub.lambdatest.com/wd/hub/"), capabilities);
 ```
 
@@ -216,7 +216,7 @@ ltOptions.put("w3c", true);
 ltOptions.put("plugin", "java-java");
 browserOptions.setCapability("LT:Options", ltOptions);
 
-// Connecting to the Lambdatest Selenium Cloud Grid with Smart UI
+// Connecting to the Lambdatest Selenium Cloud Grid with SmartUI
 driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), capabilities);
 ```
 
@@ -485,7 +485,7 @@ config.put("element", "<Required Element>");                    //Add your requi
 
 You have successfully integrated SmartUI with your Selenium tests. Visit your [SmartUI project](https://smartui.lambdatest.com/projects) to view builds and compare snapshots between different test runs.
 
-You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
+You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 ## Fetching Screenshot Status and Results using WebHook
 

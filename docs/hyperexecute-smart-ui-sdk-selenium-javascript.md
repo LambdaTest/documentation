@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-smart-ui-sdk-selenium-javascript
-title: UI Testing with Node.js using HyperExecute and Smart UI SDK
+title: UI Testing with Node.js using HyperExecute and SmartUI SDK
 hide_title: false
 sidebar_label: JavaScript
-description: Effortlessly automate Hyperexecute UIs with Smart UI SDK & Selenium JavaScript. Write modular, cross-browser tests.
+description: Effortlessly automate Hyperexecute UIs with SmartUI SDK & Selenium JavaScript. Write modular, cross-browser tests.
 keywords:
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
@@ -41,13 +41,13 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Smart UI Testing",
+          "name": "SmartUI Testing",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-selenium-javascript/"
         }]
       })
     }}
 ></script>
-This documentation will guide you step-by-step to execute the Smart UI SDK tests on the HyperExecute platform using **Selenium - JavaScript**
+This documentation will guide you step-by-step to execute the SmartUI SDK tests on the HyperExecute platform using **Selenium - JavaScript**
 
 ## Prerequisites
 

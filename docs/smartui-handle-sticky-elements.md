@@ -2,7 +2,7 @@
 id: smartui-handle-sticky-elements
 title: Handle Pages with Sticky Elements
 sidebar_label: Handle Sticky Elements
-description: Ensure accurate visual testing with LambdaTest Smart UI by effectively handling sticky elements. Prevent false positives and maintain consistency across visual snapshots.
+description: Ensure accurate visual testing with LambdaTest SmartUI by effectively handling sticky elements. Prevent false positives and maintain consistency across visual snapshots.
 keywords:
   - lambdatest
   - smart ui

@@ -1,6 +1,6 @@
 ---
 id: smartui-cli-figma-web
-title: Getting started with LambdaTest's Smart UI Figma-Web CLI 
+title: Getting started with LambdaTest's SmartUI Figma-Web CLI 
 sidebar_label: Figma-Web CLI
 description: In this documentation, learn how to compare your figma designs to live production websites and web applications.
 keywords:
@@ -97,7 +97,7 @@ The first step is to create a project with the application in which we will comb
 
 ### **Step 1**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI CLI` in your repository/folder.
+Install required NPM modules for `LambdaTest SmartUI CLI` in your repository/folder.
 
 ```bash
 npm install @lambdatest/smartui-cli
@@ -335,7 +335,7 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
 
 ### View SmartUI Results
 
-You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
+You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

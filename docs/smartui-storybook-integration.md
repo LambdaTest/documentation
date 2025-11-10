@@ -1,6 +1,6 @@
 ---
 id: smart-ui-storybook
-title: Getting started with Smart UI using Storybook On LambdaTest
+title: Getting started with SmartUI using Storybook On LambdaTest
 description: In this documentation, learn how to perform Visual UI Testing with Storybook on the LambdaTest Automation Cloud across 40+ browser versions.
 keywords:
   - Visual Regression
@@ -85,7 +85,7 @@ git clone https://github.com/LambdaTest/smartui-storybook-sample.git
 
 ### **Step 1**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI StoryBook CLI` in your **Frontend** project.
+Install required NPM modules for `LambdaTest SmartUI StoryBook CLI` in your **Frontend** project.
 
 ```bash
 npm install @lambdatest/smartui-storybook -g
@@ -331,7 +331,7 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 
 ### **Step 6:** View SmartUI Results
 
-You can now see the Smart UI dashboard to view the results. Can also identify the mis-matches from the existing `Baseline` build.
+You can now see the SmartUI dashboard to view the results. Can also identify the mis-matches from the existing `Baseline` build.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-storybook-results.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -351,7 +351,7 @@ For additional information about SmartUI APIs please explore the documentation [
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
+      <span className="breadcrumbs__link"> SmartUI with Cypress  </span>
     </li>
   </ul>
 </nav>

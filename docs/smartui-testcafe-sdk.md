@@ -84,7 +84,7 @@ cd smartui-testcafe-sample
 ```
 ### **Step 2**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI Testcafe SDK` in your **Frontend** project.
+Install required NPM modules for `LambdaTest SmartUI Testcafe SDK` in your **Frontend** project.
 
 ```bash
 npm i @lambdatest/smartui-cli @lambdatest/testcafe-driver testcafe
@@ -208,7 +208,7 @@ You may use the `npx smartui --help` command in case you are facing issues durin
 
 You have successfully integrated SmartUI SDK with your Testcafe tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
 
-You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
+You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>

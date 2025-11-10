@@ -92,7 +92,7 @@ You can perform following Visual Regression tests using SmartUI:
   <a href="/support/docs/smart-ui-storybook/">
     <div className="support_inners">
       <h3>Storybook</h3>
-      <p>Perform Visual UI Testing using Storybook on Smart UI.</p>
+      <p>Perform Visual UI Testing using Storybook on SmartUI.</p>
     </div>
   </a>
     <a href="/support/docs/smartui-git-branching-strategy/">

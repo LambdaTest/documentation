@@ -69,7 +69,7 @@ The first step is to create a project with the application in which we will comb
 
 ## Step 1: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI CLI` in your **Frontend** project.
+Install required NPM modules for `LambdaTest SmartUI CLI` in your **Frontend** project.
 
 ```bash
 npm install @lambdatest/smartui-cli
@@ -162,7 +162,7 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 
 ## View SmartUI Results
 
-You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
+You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 
 ## Fetch results
