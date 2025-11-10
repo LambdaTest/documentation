@@ -24,6 +24,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -48,6 +49,7 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
+<RealDeviceTag value="Real Device" /> 
 Video Injection feature enables you to test video-based functionalities such as **live streaming, real-time video capture,** and **video processing** in your app across 10000+ real devices on the LambdaTest Real Device Cloud platform.
 
 This tool is ideal for testing features such as:

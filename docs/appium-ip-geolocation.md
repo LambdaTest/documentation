@@ -56,14 +56,6 @@ Lambdatest's IP Geolocation feature empowers users to test their websites and mo
 
 By the end of this document, you'll learn how to use this feature in both manual and automation tests. Additionally, this document will provide a list of all supported IP geolocations on Lambdatest.
 
-
-## Support for Manual Testing on Real Devices
-
-Once a session starts , navigate to the toolbar and select **IP Geolocation** followed by any location from the list to change the geolocation of the device.
-
-
-<img loading="lazy" src={require('../assets/images/app-automation/ipgeolocation.png').default} alt="Image" width="100" height="100" className="doc_img"/>
-
 ## Support for Automation on Real Devices
 
 To harness the **IP Geolocation** feature in your automated tests, employ the `geoLocation` capability along with a two-letter country code from the list of supported countries provided below. This capability enables you to modify the device's geolocation to the specified location. If this capability is not added, the device will automatically update its geolocation based on its physical location.

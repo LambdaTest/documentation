@@ -17,9 +17,10 @@ url: https://www.lambdatest.com/support/docs/sim-support/
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
 
 # SIM Support On Public Real Devices
-
+<RealDeviceTag value="Real Device" /> 
 SIM & eSIM support enables testing of SMS-driven use cases on real mobile devices, such as **OTP verification** and **two-factor authentication** workflows. By automating SIM interactions, teams can validate SMS handling, **verify phone numbers**, and confirm secure onboarding processes without relying on physical test phones.
 
 **SMS-based authentication** is one of the most widely used security and identity verification methods. Automating these flows ensures consistent validation, reduces manual effort, and helps uncover edge cases early in the testing cycle.

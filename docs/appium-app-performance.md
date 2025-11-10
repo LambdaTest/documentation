@@ -15,6 +15,7 @@ slug: appium-app-performance-analytics/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -39,7 +40,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
+<RealDeviceTag value="Real Device" /> 
 App performance is critical factor for user satisfaction and adoption. Identifying and resolving bottlenecks early is essential for delivering a high-quality experience but it requires constant monitoring and optimization across various device metrics. LambdaTest’s App Profiling feature helps you to detect and optimize performance issues before release by providing real-time insights into key metrics like CPU usage, memory consumption, and network activity on real devices.
 
 You can enable performance tracking in your existing automation tests with the following capability:
