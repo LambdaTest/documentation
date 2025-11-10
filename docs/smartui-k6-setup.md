@@ -235,22 +235,218 @@ k6 run k6-smartui.js
 
   - You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
 
+## Best Practices
+
+### 1. Screenshot Naming
+
+- Use descriptive, consistent names for screenshots
+- Include page/component name in screenshot names
+- Avoid special characters that might cause issues
+- Use consistent naming conventions across your test suite
+
+**Example:**
+```javascript
+await smartuiSnapshot(page, "HomePage-Header");
+await smartuiSnapshot(page, "ProductPage-MainContent");
+```
+
+### 2. Wait for Page Load
+
+- Always wait for pages to fully load before taking screenshots
+- Use K6's built-in wait methods for dynamic content
+- Consider using `waitForTimeout` in configuration for lazy-loaded content
+
+**Example:**
+```javascript
+await page.goto('https://example.com');
+await page.waitForSelector('#main-content');
+await page.waitForLoadState('networkidle');
+await smartuiSnapshot(page, "Page Loaded");
+```
+
+### 3. Handle Dynamic Content
+
+- Use `ignoreDOM` for elements that change between runs
+- Use `selectDOM` when you only need to compare specific areas
+- Document why elements are ignored for future reference
+
+### 4. Configuration Management
+
+- Keep SmartUI configuration in version control
+- Use environment variables for sensitive data
+- Document custom configuration choices
+
+### 5. Test Organization
+
+- Group related screenshots in the same build
+- Use meaningful build names
+- Run tests in consistent environments
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: Screenshots Not Appearing in Dashboard
+
+**Symptoms**: Tests run successfully but no screenshots appear in SmartUI dashboard
+
+**Possible Causes**:
+- Project token not set or incorrect
+- Project name mismatch
+- Network connectivity issues
+- K6 browser not enabled
+
+**Solutions**:
+1. Verify `PROJECT_TOKEN` is set correctly:
+   ```bash
+   echo $PROJECT_TOKEN
+   ```
+
+2. Check project name matches exactly (case-sensitive)
+
+3. Ensure K6 browser is enabled:
+   ```bash
+   K6_BROWSER_ENABLED=true k6 run k6-smartui.js
+   ```
+
+4. Check network connectivity to LambdaTest servers
+
+5. Review test execution logs for error messages
+
+#### Issue: "Project Not Found" Error
+
+**Symptoms**: Error message indicating project cannot be found
+
+**Possible Causes**:
+- Incorrect project token
+- Project deleted or renamed
+- Token from wrong project
+
+**Solutions**:
+1. Verify project exists in SmartUI dashboard
+2. Copy project token directly from Project Settings
+3. Ensure token includes the project ID prefix (e.g., `123456#...`)
+4. Check for extra spaces or quotes in token
+
+#### Issue: Screenshots Show Blank or Incorrect Content
+
+**Symptoms**: Screenshots captured but show blank pages or incorrect content
+
+**Possible Causes**:
+- Page not fully loaded
+- JavaScript not executed
+- Viewport size issues
+- Timing issues
+
+**Solutions**:
+1. Add explicit waits before screenshots:
+   ```javascript
+   await page.waitForSelector('#content');
+   await page.waitForSelector('.main-content');
+   await page.waitForLoadState('networkidle');
+   ```
+
+2. Enable JavaScript in configuration:
+   ```json
+   {
+     "enableJavaScript": true
+   }
+   ```
+
+3. Increase `waitForTimeout` in configuration
+
+4. Verify viewport size matches expected dimensions
+
+#### Issue: K6 Browser Not Enabled
+
+**Symptoms**: Tests fail with "browser not enabled" error
+
+**Possible Causes**:
+- `K6_BROWSER_ENABLED` environment variable not set
+- K6 browser extension not installed
+- K6 version doesn't support browser
+
+**Solutions**:
+1. Set environment variable:
+   ```bash
+   export K6_BROWSER_ENABLED=true
+   ```
+
+2. Or run with environment variable:
+   ```bash
+   K6_BROWSER_ENABLED=true k6 run k6-smartui.js
+   ```
+
+3. Verify K6 version supports browser:
+   ```bash
+   k6 version
+   ```
+
+4. Install K6 browser extension if needed
+
+#### Issue: Screenshot Status Not Approved
+
+**Symptoms**: Screenshots appear but status is not "Approved"
+
+**Possible Causes**:
+- Screenshot comparison failed
+- Baseline doesn't exist
+- Mismatch threshold exceeded
+
+**Solutions**:
+1. Check screenshot status in response:
+   ```javascript
+   if (screenshot.screenshotStatus !== "Approved") {
+       // Handle non-approved status
+   }
+   ```
+
+2. Review comparison results in SmartUI dashboard
+3. Verify baseline exists and is correct
+4. Adjust pixel threshold if needed
+
+#### Issue: Screenshot Names Not Matching Baseline
+
+**Symptoms**: Screenshots appear as "New" instead of comparing with baseline
+
+**Possible Causes**:
+- Screenshot name changed
+- Baseline doesn't exist
+- Name contains special characters
+
+**Solutions**:
+1. Ensure screenshot names are consistent across test runs
+2. Verify baseline exists in project
+3. Avoid special characters in screenshot names
+4. Check for case sensitivity issues
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
+- See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
+- Visit [K6 Browser Testing Documentation](https://www.lambdatest.com/support/docs/k6-browser-testing/) for K6-specific issues
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options)
+- [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
+- [Handling Lazy Loading](/support/docs/smartui-handle-lazy-loading)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [K6 Browser Testing Documentation](https://www.lambdatest.com/support/docs/k6-browser-testing/)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+
 For additional information about K6 framework please explore the documentation [here](https://www.lambdatest.com/support/docs/k6-browser-testing/)
 
 ## Advanced Options for Screenshot Comparison
 
-
-  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
-<!-- 
-:::note
-
-- For accessing more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
-- For accessing the Advanced Test Settings, click [here](https://www.lambdatest.com/support/docs/test-settings-options/).
-- For accessing more HTML DOM Config and Options, click [here](https://www.lambdatest.com/support/docs/html-dom-smartui-options/).
-
-::: -->
-
-<!-- <img loading="lazy" src={require('../assets/images/uploads/smart-ui-2.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
+**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

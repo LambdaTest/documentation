@@ -168,6 +168,148 @@ npx smartui --markBaseline capture urls.json
    - Check branch protection
    - Review access settings
 
+### Error Handling
+
+#### Baseline Not Found
+
+**Error**: Baseline branch or build does not exist
+
+**Solutions**:
+1. Verify the baseline branch/build name is correct
+2. Ensure the baseline has at least one approved build
+3. Check branch/build exists in your project
+
+```bash
+# Verify baseline exists before using
+npx smartui --baselineBranch "main" exec -- <command>
+```
+
+#### Permission Denied
+
+**Error**: Insufficient permissions to set baseline
+
+**Solutions**:
+1. Verify you have admin or approver permissions
+2. Check project settings for baseline management permissions
+3. Contact project admin for access
+
+#### Baseline Mismatch
+
+**Error**: Screenshot names don't match between baseline and current build
+
+**Solutions**:
+1. Ensure screenshot names are consistent
+2. Check if screenshot names changed between builds
+3. Review screenshot naming conventions
+
+## Visual Examples
+
+### Setting Baseline via Dashboard
+
+1. Navigate to your project in SmartUI dashboard
+2. Open the build you want to set as baseline
+3. Click on the "Mark as Baseline" button
+4. Confirm the action
+
+### Baseline Branch Configuration
+
+In Project Settings → Build Settings → Git Settings:
+- Set your baseline branch name (e.g., "main", "production")
+- Configure auto-approval branches
+- Link your Git repository
+
+### Dynamic Baseline in CLI
+
+```bash
+# Use specific branch as baseline
+npx smartui --baselineBranch "staging" exec -- npm test
+
+# Use specific build as baseline
+npx smartui --baselineBuild "Release-1.0" exec -- npm test
+
+# Mark current build as baseline
+npx smartui --markBaseline exec -- npm test
+```
+
+## Advanced Scenarios
+
+### Scenario 1: Multi-Branch Baseline Strategy
+
+**Use Case**: Different baselines for different branches
+
+```bash
+# Feature branch compares against develop
+npx smartui --baselineBranch "develop" exec -- npm test
+
+# Release branch compares against staging
+npx smartui --baselineBranch "staging" exec -- npm test
+```
+
+### Scenario 2: Version-Based Baselines
+
+**Use Case**: Compare against specific version builds
+
+```bash
+# Compare against v1.0.0 build
+npx smartui --baselineBuild "v1.0.0" exec -- npm test
+
+# Compare against v2.0.0 build
+npx smartui --baselineBuild "v2.0.0" exec -- npm test
+```
+
+### Scenario 3: Hotfix Baseline Management
+
+**Use Case**: Hotfix needs to compare against production
+
+```bash
+# Hotfix branch compares against production
+npx smartui --baselineBranch "production" exec -- npm test
+
+# After approval, mark hotfix as new baseline
+npx smartui --markBaseline exec -- npm test
+```
+
+## Integration with Git
+
+### Git-Based Projects
+
+For projects integrated with Git:
+
+1. Baseline is automatically managed via Git branches
+2. Baseline branch is set in Project Settings → Git Settings
+3. Non-baseline branches compare against baseline branch
+4. Smart Baseline feature is not available for Git projects
+
+### Git Branching Strategy
+
+```bash
+# Main branch is baseline
+Baseline: main
+
+# Feature branches compare against main
+Feature: feature/login → compares against main
+
+# Release branches compare against main
+Release: release/1.0 → compares against main
+```
+
+## Monitoring and Maintenance
+
+### Baseline Health Checks
+
+Regularly monitor:
+- Baseline build age (update stale baselines)
+- Baseline screenshot count (ensure completeness)
+- Baseline approval status (verify all screenshots approved)
+
+### Baseline Updates
+
+Best practices for updating baselines:
+1. Update after major releases
+2. Update after UI framework changes
+3. Update after design system updates
+4. Document baseline update reasons
+
 ### Getting Help
 
-If you encounter any issues with baseline management in SmartUI, please contact our support team at support@lambdatest.com. 
+If you encounter any issues with baseline management in SmartUI, please contact our support team at support@lambdatest.com or use the [24/7 Chat Support](https://www.lambdatest.com/support). 
