@@ -49,9 +49,9 @@ import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 
 ---
-
-## Tutorial to test an app uploaded on Firebase
 <RealDeviceTag value="Real Device" /> 
+## Tutorial to test an app uploaded on Firebase
+
 **Firebase** is a platform developed by **Google** for creating mobile and web applications. **LambdaTest cloud platform** provides you various methods to upload your files on a real device like from playstore and appstore. Uploading an app through Firebase is one such method.
 
 ## How to Start with Firebase
