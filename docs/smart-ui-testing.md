@@ -1,8 +1,8 @@
 ---
 id: smart-ui-testing
-title: Smart UI Testing Using HyperExecute
+title: SmartUI Testing Using HyperExecute
 hide_title: false
-sidebar_label: HyperExecute Smart UI Testing
+sidebar_label: HyperExecute SmartUI Testing
 description: Improve bug discovery using LambdaTest's Advanced Visual UI Regression Testing. Effortlessly pinpoint visual discrepancies and regression issues in recent builds to ensure impeccable app deployment.
 keywords:
   - smart ui testing in lambdatest
@@ -38,44 +38,44 @@ slug: smart-ui-testing/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Smart UI Testing",
+          "name": "SmartUI Testing",
           "item": "https://www.lambdatest.com/support/docs/smart-ui-testing/"
         }]
       })
     }}
 ></script>
-Smart UI Testing is a technique used by designers and front-end testers to ensure the visual consistency of web applications by employing a sort of testing called **"Visual Regression"**.
+SmartUI Testing is a technique used by designers and front-end testers to ensure the visual consistency of web applications by employing a sort of testing called **"Visual Regression"**.
 
 In Visual Regression testing, we compare screenshots and identify visual variations in the pixels. It is integrated with Lambdatest's HyperExecute, allowing you to execute **Smart UI** Tests on the platform.
 
-## Features of Smart UI Testing
-HyperExecute's Smart UI Testing offers the following features:
+## Features of SmartUI Testing
+HyperExecute's SmartUITesting offers the following features:
 
 - **Pixel-to-Pixel Comparison:** Perform accurate visual regression testing by comparing screenshots at the pixel level.
 - **Multi-browser and Resolution Tests:** Run tests simultaneously across multiple browsers and resolutions to ensure consistent user experience.
-- **Webhook Integration:** Connect Smart UI Testing with your automation test suite using webhook configurations.
+- **Webhook Integration:** Connect SmartUI Testing with your automation test suite using webhook configurations.
 - **Project Collaboration:** Add up to 5 approvers/tags to a project for streamlined collaboration and easy navigation.
 - **Real-time Notifications:** Approvers are notified of test status changes, enabling prompt action and communication.
 
-To execute Smart UI Testing using HyperExecute, you can opt for the following methods:
+To execute SmartUI Testing using HyperExecute, you can opt for the following methods:
 
 <div className="support_main">
   <a href="/support/docs/hyperexecute-smart-ui-testing-using-selenium/">
     <div className="support_inners mb-5">
       <h3>Using Selenium</h3>
-      <p>HyperExecute allows you to execute your Smart UI Tests in HyperExecute using Selenium.</p>
+      <p>HyperExecute allows you to execute your SmartUI Tests in HyperExecute using Selenium.</p>
     </div>
   </a>
   <a href = "/support/docs/hyperexecute-smart-ui-testing-using-cypress/">
     <div className="support_inners">
       <h3>Using Cypress</h3>
-      <p>HyperExecute allows you to execute your Smart UI Tests in HyperExecute using Cypress.</p>
+      <p>HyperExecute allows you to execute your SmartUI Tests in HyperExecute using Cypress.</p>
     </div>
   </a>
     <a href = "/support/docs/hyperexecute-smart-ui-test-using-playwright/">
     <div className="support_inners">
       <h3>Using Playwright</h3>
-      <p>HyperExecute allows you to execute your Smart UI Tests in HyperExecute using Playwright.</p>
+      <p>HyperExecute allows you to execute your SmartUI Tests in HyperExecute using Playwright.</p>
     </div>
   </a>
 </div>

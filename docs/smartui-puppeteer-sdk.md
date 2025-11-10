@@ -84,7 +84,7 @@ cd smartui-puppeteer-sample/sdk
 ```
 ### **Step 2**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest Smart UI Puppeteer SDK` in your **Frontend** project.
+Install required NPM modules for `LambdaTest SmartUI Puppeteer SDK` in your **Frontend** project.
 
 ```bash
 npm i @lambdatest/smartui-cli @lambdatest/puppeteer-driver puppeteer
@@ -193,7 +193,7 @@ const { smartuiSnapshot } = require('@lambdatest/puppeteer-driver'); // Assuming
   // Navigate to the desired URL
   await page.goto('https://www.lambdatest.com');
 
-  // Take a screenshot with Smart UI. Replace "LT-Home" with a relevant name for your use case
+  // Take a screenshot with SmartUI. Replace "LT-Home" with a relevant name for your use case
   await smartuiSnapshot(page, "LT-Home");
 
   // Close the browser
@@ -217,7 +217,7 @@ You may use the `npx smartui --help` command in case you are facing issues durin
 
 You have successfully integrated SmartUI SDK with your Puppeteer tests. Visit your SmartUI project to view builds and compare snapshots between different test runs.
 
-You can see the Smart UI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
+You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
@@ -455,7 +455,7 @@ const { smartuiSnapshot } = require('@lambdatest/puppeteer-driver');
 
     await quickScrollToBottom(100); // Adjust the wait time as needed
 
-    // Taking a screenshot with Smart UI
+    // Taking a screenshot with SmartUI
     await smartuiSnapshot(page, "Screenshot Name");
 
   } finally {

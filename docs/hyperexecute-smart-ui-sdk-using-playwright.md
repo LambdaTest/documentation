@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-smart-ui-sdk-using-playwright
-title: UI Testing with Playwright using HyperExecute and Smart UI SDK
+title: UI Testing with Playwright using HyperExecute and SmartUI SDK
 hide_title: false
 sidebar_label: Playwright
-description: Supercharge Hyperexecute UI automation with Smart UI SDK & Playwright. Simplify test creation for all browsers.
+description: Supercharge Hyperexecute UI automation with SmartUI SDK & Playwright. Simplify test creation for all browsers.
 keywords:
   - smart ui testing in lambdatest
   - smart ui testing in hyperexecute
@@ -39,13 +39,13 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Smart UI Testing",
+          "name": "SmartUI Testing",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-hooks-using-playwright/"
         }]
       })
     }}
 ></script>
-This documentation will guide you step-by-step to execute the Smart UI tests on the HyperExecute platform using Selenium
+This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Selenium
 
 ## Prerequisites
 

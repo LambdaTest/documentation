@@ -1,6 +1,6 @@
 ---
 id: hyperexecute-smart-ui-testing-using-selenium
-title: Smart UI Tests in HyperExecute using Selenium
+title: SmartUI Tests in HyperExecute using Selenium
 hide_title: false
 sidebar_label: Selenium
 description: Accelerate bug identification with HyperExecute's intelligent UI testing via Selenium. Conduct Visual UI Regression Testing for flawless application deployment.
@@ -41,13 +41,13 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Smart UI Testing",
+          "name": "SmartUI Testing",
           "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-testing-using-selenium/"
         }]
       })
     }}
 ></script>
-This documentation will guide you step-by-step to execute the Smart UI tests on the HyperExecute platform using Selenium
+This documentation will guide you step-by-step to execute the SmartUI tests on the HyperExecute platform using Selenium
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ This documentation will guide you step-by-step to execute the Smart UI tests on 
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the [Environment Variable](/support/docs/hyperexecute-environment-variable-setup/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-- To run Smart UI tests, you need to have a **Baseline Image** and a **Comparison** image. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser.
+- To run SmartUI tests, you need to have a **Baseline Image** and a **Comparison** image. A baseline image is the reference image with which you want to compare. You can either upload this image from your computer or take a screenshot from your browser.
 
 ## Step 1: Configure Your Test Suite
 
