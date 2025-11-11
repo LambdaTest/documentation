@@ -212,6 +212,9 @@ You can combine sticky element handling with other SmartUI features like dynamic
 
 ## Troubleshooting
 
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="sticky-elements-still-causing-false-positives" label="Sticky Elements Still Causing False Positives" default>
+
 ### Issue: Sticky Elements Still Causing False Positives
 
 **Symptoms**: Sticky elements appear to cause differences in comparisons
@@ -231,6 +234,9 @@ let options = {
 await smartuiSnapshot(driver, 'Page', options);
 ```
 
+</TabItem>
+<TabItem value="sticky-elements-not-visible-in-snapshots" label="Sticky Elements Not Visible in Snapshots" >
+
 ### Issue: Sticky Elements Not Visible in Snapshots
 
 **Symptoms**: Sticky elements don't appear in captured screenshots
@@ -246,6 +252,9 @@ await driver.wait(until.elementLocated(By.css('.sticky-header')), 10000);
 await smartuiSnapshot(driver, 'Page');
 ```
 
+</TabItem>
+<TabItem value="sticky-elements-overlapping-content" label="Sticky Elements Overlapping Content" >
+
 ### Issue: Sticky Elements Overlapping Content
 
 **Symptoms**: Sticky elements appear to overlap with page content
@@ -254,6 +263,9 @@ await smartuiSnapshot(driver, 'Page');
 1. This is normal behavior - SmartUI positions elements at their original location
 2. If overlap causes issues, use `ignoreDOM` for the sticky element
 3. Consider using viewport screenshots instead of full-page for specific tests
+
+</TabItem>
+</Tabs>
 
 ## Limitations
 

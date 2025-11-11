@@ -162,6 +162,9 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 
 ## Troubleshooting
 
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="smart-ignore-not-available" label="Smart Ignore Not Available" default>
+
 ### Issue: Smart Ignore Not Available
 
 **Symptoms**: Smart Ignore toggle or option is not visible
@@ -170,6 +173,9 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 1. Verify you're using a supported SmartUI plan
 2. Check if your project type supports Smart Ignore
 3. Contact support if the feature should be available
+
+</TabItem>
+<TabItem value="too-many-differences-still-shown" label="Too Many Differences Still Shown" >
 
 ### Issue: Too Many Differences Still Shown
 
@@ -181,6 +187,9 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 3. Consider using Layout Comparison mode for layout-only testing
 4. Combine with `ignoreDOM` for specific elements
 
+</TabItem>
+<TabItem value="important-changes-hidden" label="Important Changes Hidden" >
+
 ### Issue: Important Changes Hidden
 
 **Symptoms**: Smart Ignore hides changes you want to see
@@ -191,6 +200,9 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 3. Review the baseline to ensure it's correct
 4. Consider if the change is actually a displacement vs content change
 
+</TabItem>
+<TabItem value="inconsistent-results" label="Inconsistent Results" >
+
 ### Issue: Inconsistent Results
 
 **Symptoms**: Smart Ignore shows different results for similar changes
@@ -200,6 +212,9 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 2. Check if page content is loading consistently
 3. Verify Smart Ignore is enabled consistently
 4. Review page structure for dynamic content issues
+
+</TabItem>
+</Tabs>
 
 ## Comparison with Other Modes
 

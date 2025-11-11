@@ -454,7 +454,7 @@ await smartuiSnapshot(t, 'ProductPage-MainContent');
 ```
 
 </TabItem>
-<TabItem value="wait-for-page-load" label="Wait for Page Load" >
+<TabItem value="wait-for-page-load" label="Wait for Page Load">
 
 ### Wait for Page Load
 
@@ -477,7 +477,7 @@ test('Take screenshot after page loads', async t => {
 ```
 
 </TabItem>
-<TabItem value="handle-dynamic-content" label="Handle Dynamic Content" >
+<TabItem value="handle-dynamic-content" label="Handle Dynamic Content">
 
 ### Handle Dynamic Content
 
@@ -486,7 +486,7 @@ test('Take screenshot after page loads', async t => {
 - Document why elements are ignored for future reference
 
 </TabItem>
-<TabItem value="configuration-management" label="Configuration Management" >
+<TabItem value="configuration-management" label="Configuration Management">
 
 ### Configuration Management
 
@@ -495,7 +495,7 @@ test('Take screenshot after page loads', async t => {
 - Document custom configuration choices
 
 </TabItem>
-<TabItem value="test-organization" label="Test Organization" >
+<TabItem value="test-organization" label="Test Organization">
 
 ### Test Organization
 
@@ -505,9 +505,10 @@ test('Take screenshot after page loads', async t => {
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard" default>
 
-#### Issue: Screenshots Not Appearing in Dashboard
+### Issue: Screenshots Not Appearing in Dashboard
 
 **Symptoms**: Tests run successfully but no screenshots appear in SmartUI dashboard
 
@@ -534,7 +535,10 @@ test('Take screenshot after page loads', async t => {
 
 5. Review test execution logs for error messages
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value="project-not-found-error" label="Project Not Found" Error">
+
+### Issue: "Project Not Found" Error
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -549,7 +553,10 @@ test('Take screenshot after page loads', async t => {
 3. Ensure token includes the project ID prefix (e.g., `123456#...`)
 4. Check for extra spaces or quotes in token
 
-#### Issue: Screenshots Show Blank or Incorrect Content
+</TabItem>
+<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content">
+
+### Issue: Screenshots Show Blank or Incorrect Content
 
 **Symptoms**: Screenshots captured but show blank pages or incorrect content
 
@@ -578,7 +585,10 @@ test('Take screenshot after page loads', async t => {
 
 4. Verify viewport size matches expected dimensions
 
-#### Issue: Build Execution Fails
+</TabItem>
+<TabItem value="build-execution-fails" label="Build Execution Fails">
+
+### Issue: Build Execution Fails
 
 **Symptoms**: `npx smartui exec` command fails
 
@@ -597,7 +607,10 @@ test('Take screenshot after page loads', async t => {
    ```
 4. Check file permissions for configuration and project files
 
-#### Issue: npm Dependencies Not Resolving
+</TabItem>
+<TabItem value="npm-dependencies-not-resolving" label="npm Dependencies Not Resolving">
+
+### Issue: npm Dependencies Not Resolving
 
 **Symptoms**: npm cannot find `@lambdatest/testcafe-driver` or `@lambdatest/smartui-cli`
 
@@ -622,7 +635,10 @@ test('Take screenshot after page loads', async t => {
 
 4. Check package.json for version conflicts
 
-#### Issue: Screenshot Names Not Matching Baseline
+</TabItem>
+<TabItem value="screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline">
+
+### Issue: Screenshot Names Not Matching Baseline
 
 **Symptoms**: Screenshots appear as "New" instead of comparing with baseline
 
@@ -646,6 +662,9 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

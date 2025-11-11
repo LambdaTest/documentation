@@ -402,7 +402,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 ```
 
 </TabItem>
-<TabItem value="device-selection" label="Device Selection" >
+<TabItem value="device-selection" label="Device Selection">
 
 ### Device Selection
 
@@ -411,7 +411,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 - Use device patterns for consistent testing (e.g., `Galaxy.*`, `Pixel.*`)
 
 </TabItem>
-<TabItem value="smart-crop-configuration" label="Smart Crop Configuration" >
+<TabItem value="smart-crop-configuration" label="Smart Crop Configuration">
 
 ### Smart Crop Configuration
 
@@ -420,7 +420,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 - Test cropped screenshots to ensure important content isn't removed
 
 </TabItem>
-<TabItem value="test-organization" label="Test Organization" >
+<TabItem value="test-organization" label="Test Organization">
 
 ### Test Organization
 
@@ -429,7 +429,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 - Use meaningful test names for better organization
 
 </TabItem>
-<TabItem value="app-and-test-suite-management" label="App and Test Suite Management" >
+<TabItem value="app-and-test-suite-management" label="App and Test Suite Management">
 
 ### App and Test Suite Management
 
@@ -438,7 +438,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 - Keep app and test suite versions synchronized
 
 </TabItem>
-<TabItem value="app-and-test-suite-management" label="App and Test Suite Management" >
+<TabItem value="app-and-test-suite-management" label="App and Test Suite Management">
 
 ### App and Test Suite Management
 
@@ -451,9 +451,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>
 
-#### Issue: Screenshots Not Captured
+### Issue: Screenshots Not Captured
 
 **Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
 
@@ -480,7 +481,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 4. Check network connectivity to LambdaTest
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value="project-not-found-error" label="Project Not Found" Error">
+
+### Issue: "Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -495,7 +499,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 3. Check credentials match the account with the project
 4. Ensure project name is in API request
 
-#### Issue: App Upload Fails
+</TabItem>
+<TabItem value="app-upload-fails" label="App Upload Fails">
+
+### Issue: App Upload Fails
 
 **Symptoms**: App upload returns error or fails
 
@@ -511,7 +518,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 3. Retry upload with stable network connection
 4. Verify authentication credentials
 
-#### Issue: Test Execution Fails
+</TabItem>
+<TabItem value="test-execution-fails" label="Test Execution Fails">
+
+### Issue: Test Execution Fails
 
 **Symptoms**: Test suite execution fails or times out
 
@@ -534,7 +544,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 4. Review device logs for test errors
 
-#### Issue: Screenshots Show Incorrect Content
+</TabItem>
+<TabItem value="screenshots-show-incorrect-content" label="Screenshots Show Incorrect Content">
+
+### Issue: Screenshots Show Incorrect Content
 
 **Symptoms**: Screenshots captured but show wrong screen or state
 
@@ -557,6 +570,9 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

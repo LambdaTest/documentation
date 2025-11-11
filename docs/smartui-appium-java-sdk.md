@@ -325,7 +325,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 ```
 
 </TabItem>
-<TabItem value="wait-for-screen-load" label="Wait for Screen Load" >
+<TabItem value="wait-for-screen-load" label="Wait for Screen Load">
 
 ### Wait for Screen Load
 
@@ -341,7 +341,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 ```
 
 </TabItem>
-<TabItem value="handle-dynamic-content" label="Handle Dynamic Content" >
+<TabItem value="handle-dynamic-content" label="Handle Dynamic Content">
 
 ### Handle Dynamic Content
 
@@ -350,7 +350,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 - Test XPath locators using Appium Inspector before integrating
 
 </TabItem>
-<TabItem value="device-configuration" label="Device Configuration" >
+<TabItem value="device-configuration" label="Device Configuration">
 
 ### Device Configuration
 
@@ -359,7 +359,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 - Test on devices that match your user base
 
 </TabItem>
-<TabItem value="test-organization" label="Test Organization" >
+<TabItem value="test-organization" label="Test Organization">
 
 ### Test Organization
 
@@ -369,9 +369,10 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>
 
-#### Issue: Screenshots Not Captured
+### Issue: Screenshots Not Captured
 
 **Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
 
@@ -402,7 +403,10 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 
 5. Review test execution logs for error messages
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value="project-not-found-error" label="Project Not Found" Error">
+
+### Issue: "Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -418,7 +422,10 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 3. Ensure token includes the project ID prefix (e.g., `123456#...`)
 4. Check credentials match the account with the project
 
-#### Issue: Screenshots Show Blank or Incorrect Content
+</TabItem>
+<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content">
+
+### Issue: Screenshots Show Blank or Incorrect Content
 
 **Symptoms**: Screenshots captured but show blank screens or incorrect content
 
@@ -444,7 +451,10 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 
 4. Verify app is in correct state before screenshot
 
-#### Issue: ignoreBoxes/selectBoxes Not Working
+</TabItem>
+<TabItem value="ignoreboxes-selectboxes-not-working" label="ignoreBoxes/selectBoxes Not Working">
+
+### Issue: ignoreBoxes/selectBoxes Not Working
 
 **Symptoms**: Dynamic content still causing false positives
 
@@ -464,7 +474,10 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 
 4. Test XPath locators in isolation before using in config
 
-#### Issue: Maven Dependencies Not Resolving
+</TabItem>
+<TabItem value="maven-dependencies-not-resolving" label="Maven Dependencies Not Resolving">
+
+### Issue: Maven Dependencies Not Resolving
 
 **Symptoms**: Maven cannot find `lambdatest-java-sdk` or dependencies fail
 
@@ -482,7 +495,10 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 3. Verify internet connectivity for Maven repository access
 4. Check pom.xml for version conflicts
 
-#### Issue: Screenshot Names Not Matching Baseline
+</TabItem>
+<TabItem value="screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline">
+
+### Issue: Screenshot Names Not Matching Baseline
 
 **Symptoms**: Screenshots appear as "New" instead of comparing with baseline
 
@@ -506,6 +522,9 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

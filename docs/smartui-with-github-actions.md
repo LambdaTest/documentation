@@ -159,9 +159,10 @@ on:
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="workflow-fails-with-secret-not-found" label="Workflow Fails with "Secret Not Found"" default>
 
-#### Issue: Workflow Fails with "Secret Not Found"
+### Issue: Workflow Fails with "Secret Not Found"
 
 **Symptoms**: Workflow fails with error about missing secrets
 
@@ -181,7 +182,10 @@ on:
 
 4. Verify secrets are set for the correct repository/environment
 
-#### Issue: PROJECT_TOKEN Prompt Appears
+</TabItem>
+<TabItem value="project_token-prompt-appears" label="PROJECT_TOKEN Prompt Appears" >
+
+### Issue: PROJECT_TOKEN Prompt Appears
 
 **Symptoms**: Workflow prompts for PROJECT_TOKEN during execution
 
@@ -209,7 +213,10 @@ on:
            type: string
    ```
 
-#### Issue: Tests Run But No Results in Dashboard
+</TabItem>
+<TabItem value="tests-run-but-no-results-in-dashboard" label="Tests Run But No Results in Dashboard" >
+
+### Issue: Tests Run But No Results in Dashboard
 
 **Symptoms**: Workflow completes but screenshots don't appear in SmartUI
 
@@ -236,7 +243,10 @@ on:
 
 4. Check if SmartUI CLI step completed successfully
 
-#### Issue: Workflow Times Out
+</TabItem>
+<TabItem value="workflow-times-out" label="Workflow Times Out" >
+
+### Issue: Workflow Times Out
 
 **Symptoms**: Workflow execution exceeds time limit
 
@@ -262,7 +272,10 @@ on:
 3. Optimize test execution
 4. Split tests across multiple workflows
 
-#### Issue: Dependencies Installation Fails
+</TabItem>
+<TabItem value="dependencies-installation-fails" label="Dependencies Installation Fails" >
+
+### Issue: Dependencies Installation Fails
 
 **Symptoms**: npm install or dependency installation fails
 
@@ -289,7 +302,10 @@ on:
 
 4. Check for version conflicts in package.json
 
-#### Issue: SmartUI CLI Not Found
+</TabItem>
+<TabItem value="smartui-cli-not-found" label="SmartUI CLI Not Found" >
+
+### Issue: SmartUI CLI Not Found
 
 **Symptoms**: `npx smartui` command fails with "command not found"
 
@@ -324,6 +340,9 @@ If you encounter issues not covered here:
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

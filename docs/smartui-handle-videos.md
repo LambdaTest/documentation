@@ -222,6 +222,9 @@ Occasionally review captured first frames to ensure they represent the intended 
 
 ## Troubleshooting
 
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="videos-not-captured-correctly" label="Videos Not Captured Correctly" default>
+
 ### Issue: Videos Not Captured Correctly
 
 **Symptoms**: Video areas appear blank or incorrect in snapshots
@@ -238,6 +241,9 @@ await driver.sleep(2000); // Additional wait for first frame
 await smartuiSnapshot(driver, 'Video Page');
 ```
 
+</TabItem>
+<TabItem value="false-positives-from-video-areas" label="False Positives from Video Areas" >
+
 ### Issue: False Positives from Video Areas
 
 **Symptoms**: Video areas show differences even when page design is unchanged
@@ -247,6 +253,9 @@ await smartuiSnapshot(driver, 'Video Page');
 2. Use `ignoreDOM` to exclude video elements if first frame capture isn't sufficient
 3. Consider using layout comparison mode for pages with many videos
 
+</TabItem>
+<TabItem value="embedded-videos-youtube-vimeo" label="Embedded Videos (YouTube, Vimeo)" >
+
 ### Issue: Embedded Videos (YouTube, Vimeo)
 
 **Symptoms**: Embedded videos via iframe may not be captured correctly
@@ -255,6 +264,9 @@ await smartuiSnapshot(driver, 'Video Page');
 1. Embedded videos in iframes are handled automatically
 2. If issues persist, consider using `ignoreDOM` for iframe areas
 3. Check if iframe content is accessible (CORS policies may affect this)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

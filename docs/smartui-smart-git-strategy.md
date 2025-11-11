@@ -191,25 +191,73 @@ The Smart Git management works consistently across all SmartUI CLI commands (`ex
 
 ## Best Practices
 
-1. **Branch Naming**: Use clear, consistent branch naming conventions
-2. **Regular Updates**: Keep branches up to date with their parent branches
-3. **Approval Process**: Establish clear approval criteria for each branch
-4. **Documentation**: Document branch-specific visual changes
-5. **Cleanup**: Regularly clean up old branches and their builds
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="branch-naming" label="Branch Naming" default>
+
+### Branch Naming
+
+Use clear, consistent branch naming conventions.
+
+</TabItem>
+
+<TabItem value="regular-updates" label="Regular Updates">
+
+### Regular Updates
+
+Keep branches up to date with their parent branches.
+
+</TabItem>
+
+<TabItem value="approval-process" label="Approval Process">
+
+### Approval Process
+
+Establish clear approval criteria for each branch.
+
+</TabItem>
+
+<TabItem value="documentation" label="Documentation">
+
+### Documentation
+
+Document branch-specific visual changes.
+
+</TabItem>
+
+<TabItem value="cleanup" label="Cleanup">
+
+### Cleanup
+
+Regularly clean up old branches and their builds.
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="comparison-issues" label="Comparison Issues" default>
+
+### Comparison Issues
 
 1. **Comparison Issues**:
    - Verify Smart Git is enabled: `echo $SMART_GIT`
    - Check branch name: `git branch --show-current`
    - Ensure previous builds exist in the branch
 
-2. **Approval Issues**:
+</TabItem>
+
+<TabItem value="approval-issues" label="Approval Issues">
+
+### Approval Issues
+
+1. **Approval Issues**:
    - Verify you have necessary permissions
    - Check if the build is in an approvable state
    - Ensure the branch has previous approved builds
+
+</TabItem>
+</Tabs>
 
 ### Getting Help
 

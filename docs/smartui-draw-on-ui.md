@@ -414,6 +414,9 @@ The SmartUI Annotation Tool offers keyboard shortcuts to streamline the resizing
 
 ## Troubleshooting
 
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="annotations-not-applying" label="Annotations Not Applying" default>
+
 ### Annotations Not Applying
 
 **Issue:** Annotations are not being applied to future builds.
@@ -423,6 +426,10 @@ The SmartUI Annotation Tool offers keyboard shortcuts to streamline the resizing
 - Verify you selected the correct annotation type
 - Check that you applied annotations to the correct screenshot variant
 - Refresh the page and verify annotations are visible
+
+</TabItem>
+
+<TabItem value="floating-region-not-working" label="Floating Region Not Working">
 
 ### Floating Region Not Working
 
@@ -434,6 +441,10 @@ The SmartUI Annotation Tool offers keyboard shortcuts to streamline the resizing
 - Check that the element structure hasn't changed significantly
 - Try adjusting the size of both regions
 
+</TabItem>
+
+<TabItem value="ignore-colors-still-showing-differences" label="Ignore Colors Still Showing Differences">
+
 ### Ignore Colors Still Showing Differences
 
 **Issue:** Color differences are still being detected in ignore colors regions.
@@ -444,6 +455,10 @@ The SmartUI Annotation Tool offers keyboard shortcuts to streamline the resizing
 - Check that structural differences aren't being mistaken for color differences
 - Review the comparison settings in project configuration
 
+</TabItem>
+
+<TabItem value="annotations-disappearing" label="Annotations Disappearing">
+
 ### Annotations Disappearing
 
 **Issue:** Annotations are not visible or have disappeared.
@@ -453,6 +468,9 @@ The SmartUI Annotation Tool offers keyboard shortcuts to streamline the resizing
 - Refresh the page
 - Check if annotations were deleted accidentally
 - Verify you're viewing the correct screenshot variant
+
+</TabItem>
+</Tabs>
 
 For more comprehensive troubleshooting, refer to the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide).
 

@@ -534,6 +534,9 @@ await smartuiSnapshot(driver, 'Article Page', options);
 
 ## Troubleshooting
 
+<Tabs className="docs__val" groupId="troubleshooting-inner">
+<TabItem value="elements-not-being-ignored" label="Elements Not Being Ignored" default>
+
 ### Issue: Elements Not Being Ignored
 
 **Possible Causes:**
@@ -557,6 +560,9 @@ let options = {
 await smartuiSnapshot(driver, 'Page', options);
 ```
 
+</TabItem>
+<TabItem value="selectdom-not-working" label="selectDOM Not Working" >
+
 ### Issue: selectDOM Not Working
 
 **Possible Causes:**
@@ -569,6 +575,9 @@ await smartuiSnapshot(driver, 'Page', options);
 2. Use more specific selectors
 3. Ensure elements are in the viewport
 
+</TabItem>
+<TabItem value="false-positives-still-occurring" label="False Positives Still Occurring" >
+
 ### Issue: False Positives Still Occurring
 
 **Possible Causes:**
@@ -580,6 +589,9 @@ await smartuiSnapshot(driver, 'Page', options);
 1. Review the diff to identify missed dynamic elements
 2. Add more selectors to ignoreDOM
 3. Increase wait times or use explicit waits
+
+</TabItem>
+</Tabs>
 
 </TabItem>
 </Tabs>

@@ -350,12 +350,18 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 
 ## Troubleshooting
 
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="content-still-missing-after-scrolling" label="Content Still Missing After Scrolling" default>
+
 ### Issue: Content Still Missing After Scrolling
 
 **Solutions:**
 1. Increase wait times between scrolls
 2. Add explicit waits for lazy-loaded elements
 3. Check if lazy loading uses intersection observer (may need different approach)
+
+</TabItem>
+<TabItem value="test-takes-too-long" label="Test Takes Too Long" >
 
 ### Issue: Test Takes Too Long
 
@@ -364,6 +370,9 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 2. Only scroll to areas that matter for your test
 3. Use `waitForTimeout` instead of scrolling when possible
 
+</TabItem>
+<TabItem value="inconsistent-results" label="Inconsistent Results" >
+
 ### Issue: Inconsistent Results
 
 **Solutions:**
@@ -371,6 +380,9 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 2. Always scroll back to top
 3. Add sufficient wait times
 4. Use fixed viewport sizes
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

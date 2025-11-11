@@ -451,38 +451,42 @@ You can now see the SmartUI dashboard to view the results. Can also identify the
 
 ## Troubleshooting
 
-### Storybook Not Capturing Stories
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="verify-storybook-server" label="Verify Storybook Server" default>
 
-**Symptoms**: 
-- CLI runs but no screenshots appear
-- Stories are skipped
+Verify Storybook Server
 
-**Solutions**:
-
-1. **Verify Storybook Server**:
-   - Ensure Storybook is running on the specified URL/port
+- Ensure Storybook is running on the specified URL/port
    - Check that `buildStoriesJson: true` is set in `.storybook/main.js`
 
-2. **Check Story Inclusion/Exclusion**:
-   - Verify `include` and `exclude` patterns in `.smartui.json`
+</TabItem>
+<TabItem value="check-story-inclusion-exclusion" label="Check Story Inclusion/Exclusion" >
+
+Check Story Inclusion/Exclusion
+
+- Verify `include` and `exclude` patterns in `.smartui.json`
    - Ensure story paths match your Storybook structure
 
-3. **Validate Configuration**:
-   ```bash
+</TabItem>
+<TabItem value="validate-configuration" label="Validate Configuration" >
+
+Validate Configuration
+
+```bash
    cat .smartui.json | python -m json.tool
    ```
    Ensure JSON is valid and configuration is correct
-
-### Play Function Issues
-
 **Symptoms**:
 - Play functions not executing
 - Components not in expected state
-
 **Solutions**:
 
-1. **Increase Wait Timeout**:
-   ```json
+</TabItem>
+<TabItem value="increase-wait-timeout" label="Increase Wait Timeout" >
+
+Increase Wait Timeout
+
+```json
    {
      "storybook": {
        "waitForTimeout": 3000  // Increase if play functions need more time
@@ -490,21 +494,25 @@ You can now see the SmartUI dashboard to view the results. Can also identify the
    }
    ```
 
-2. **Check Play Function Syntax**:
-   - Ensure play functions are properly exported
+</TabItem>
+<TabItem value="check-play-function-syntax" label="Check Play Function Syntax" >
+
+Check Play Function Syntax
+
+- Ensure play functions are properly exported
    - Verify async/await usage is correct
    - Check for errors in browser console
-
-### Theme/Globals Not Working
-
 **Symptoms**:
 - Themes not switching
 - Globals not applied
-
 **Solutions**:
 
-1. **Verify useGlobals Setting**:
-   ```json
+</TabItem>
+<TabItem value="verify-useglobals-setting" label="Verify useGlobals Setting" >
+
+Verify useGlobals Setting
+
+```json
    {
      "storybook": {
        "useGlobals": true  // Must be true to use globals
@@ -512,22 +520,29 @@ You can now see the SmartUI dashboard to view the results. Can also identify the
    }
    ```
 
-2. **Check Storybook Version**:
-   - Ensure Storybook v6.4+ for globals support
+</TabItem>
+<TabItem value="check-storybook-version" label="Check Storybook Version" >
+
+Check Storybook Version
+
+- Ensure Storybook v6.4+ for globals support
    - Verify decorators are properly configured
 
-3. **Validate Theme Configuration**:
-   - Check `backgroundTheme` value is correct (`light`, `dark`, or `both`)
+</TabItem>
+<TabItem value="validate-theme-configuration" label="Validate Theme Configuration" >
+
+Validate Theme Configuration
+
+- Check `backgroundTheme` value is correct (`light`, `dark`, or `both`)
    - Ensure theme decorators are properly set up in stories
-
-### Getting Help
-
 If you encounter issues not covered here:
-
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [Storybook Documentation](https://storybook.js.org/docs) for Storybook-specific issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

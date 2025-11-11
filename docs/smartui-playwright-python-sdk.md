@@ -452,7 +452,7 @@ smartui_snapshot(page, "ProductPage-MainContent")
 ```
 
 </TabItem>
-<TabItem value="wait-for-page-load" label="Wait for Page Load" >
+<TabItem value="wait-for-page-load" label="Wait for Page Load">
 
 ### Wait for Page Load
 
@@ -469,7 +469,7 @@ smartui_snapshot(page, "Page Loaded")
 ```
 
 </TabItem>
-<TabItem value="handle-dynamic-content" label="Handle Dynamic Content" >
+<TabItem value="handle-dynamic-content" label="Handle Dynamic Content">
 
 ### Handle Dynamic Content
 
@@ -478,7 +478,7 @@ smartui_snapshot(page, "Page Loaded")
 - Document why elements are ignored for future reference
 
 </TabItem>
-<TabItem value="configuration-management" label="Configuration Management" >
+<TabItem value="configuration-management" label="Configuration Management">
 
 ### Configuration Management
 
@@ -487,7 +487,7 @@ smartui_snapshot(page, "Page Loaded")
 - Document custom configuration choices
 
 </TabItem>
-<TabItem value="test-organization" label="Test Organization" >
+<TabItem value="test-organization" label="Test Organization">
 
 ### Test Organization
 
@@ -497,9 +497,10 @@ smartui_snapshot(page, "Page Loaded")
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard" default>
 
-#### Issue: Screenshots Not Appearing in Dashboard
+### Issue: Screenshots Not Appearing in Dashboard
 
 **Symptoms**: Tests run successfully but no screenshots appear in SmartUI dashboard
 
@@ -526,7 +527,10 @@ smartui_snapshot(page, "Page Loaded")
 
 5. Review test execution logs for error messages
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value="project-not-found-error" label="Project Not Found" Error">
+
+### Issue: "Project Not Found" Error
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -541,7 +545,10 @@ smartui_snapshot(page, "Page Loaded")
 3. Ensure token includes the project ID prefix (e.g., `123456#...`)
 4. Check for extra spaces or quotes in token
 
-#### Issue: Screenshots Show Blank or Incorrect Content
+</TabItem>
+<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content">
+
+### Issue: Screenshots Show Blank or Incorrect Content
 
 **Symptoms**: Screenshots captured but show blank pages or incorrect content
 
@@ -570,7 +577,10 @@ smartui_snapshot(page, "Page Loaded")
 
 4. Verify viewport size matches expected dimensions
 
-#### Issue: Build Execution Fails
+</TabItem>
+<TabItem value="build-execution-fails" label="Build Execution Fails">
+
+### Issue: Build Execution Fails
 
 **Symptoms**: `npx smartui exec` command fails
 
@@ -589,7 +599,10 @@ smartui_snapshot(page, "Page Loaded")
    ```
 4. Check file permissions for configuration and project files
 
-#### Issue: pip Dependencies Not Resolving
+</TabItem>
+<TabItem value="pip-dependencies-not-resolving" label="pip Dependencies Not Resolving">
+
+### Issue: pip Dependencies Not Resolving
 
 **Symptoms**: pip cannot find `lambdatest-playwright-driver` or package installation fails
 
@@ -624,7 +637,10 @@ smartui_snapshot(page, "Page Loaded")
    pip install lambdatest-playwright-driver
    ```
 
-#### Issue: Screenshot Names Not Matching Baseline
+</TabItem>
+<TabItem value="screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline">
+
+### Issue: Screenshot Names Not Matching Baseline
 
 **Symptoms**: Screenshots appear as "New" instead of comparing with baseline
 
@@ -648,6 +664,9 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 
