@@ -80,6 +80,223 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/3.png').default} alt="Create New Project" width="" height=""/>
 
+## Best Practices
+
+### 1. Secret Management
+
+- Never commit credentials to repository
+- Use GitLab CI/CD Variables for all sensitive data
+- Rotate secrets regularly
+- Use different secrets for different environments
+
+### 2. Pipeline Optimization
+
+- Use parallel jobs for faster execution
+- Cache dependencies to speed up pipelines
+- Only run visual tests on relevant branches
+- Set up pipeline conditions to avoid unnecessary runs
+
+**Example:**
+```yaml
+only:
+  - main
+  - develop
+  - merge_requests
+```
+
+### 3. Build Naming
+
+- Use meaningful build names that include branch/commit info
+- Include commit SHA for traceability
+- Use consistent naming conventions
+
+**Example:**
+```yaml
+variables:
+  BUILD_NAME: "MR-$CI_MERGE_REQUEST_IID-$CI_COMMIT_SHORT_SHA"
+```
+
+### 4. Error Handling
+
+- Set up proper error handling in pipelines
+- Use pipeline status checks
+- Configure notifications for failures
+- Add retry logic for flaky tests
+
+### 5. Resource Management
+
+- Limit concurrent pipeline runs
+- Clean up old builds regularly
+- Monitor pipeline execution time
+- Optimize test execution order
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: Pipeline Fails with "Variable Not Found"
+
+**Symptoms**: Pipeline fails with error about missing CI/CD variables
+
+**Possible Causes**:
+- Variables not created in GitLab project
+- Variable names don't match
+- Variables not accessible to pipeline
+
+**Solutions**:
+1. Verify variables exist in project settings:
+   - Go to Settings → CI/CD → Variables
+   - Check `LT_USERNAME`, `LT_ACCESS_KEY`, and `PROJECT_TOKEN` exist
+
+2. Ensure variable names match exactly (case-sensitive)
+
+3. Check variable scope (project, group, or instance level)
+
+4. Verify variables are not protected if needed for protected branches
+
+#### Issue: PROJECT_TOKEN Not Available
+
+**Symptoms**: Pipeline prompts for PROJECT_TOKEN or token not found
+
+**Possible Causes**:
+- PROJECT_TOKEN not set as CI/CD variable
+- Variable not passed to job
+- Variable masked or protected incorrectly
+
+**Solutions**:
+1. Add PROJECT_TOKEN as GitLab CI/CD Variable
+
+2. Pass variable to job:
+   ```yaml
+   variables:
+     PROJECT_TOKEN: $PROJECT_TOKEN
+   ```
+
+3. Check variable is not masked if you need to see it in logs
+
+4. Verify variable scope includes your branch
+
+#### Issue: Tests Run But No Results in Dashboard
+
+**Symptoms**: Pipeline completes but screenshots don't appear in SmartUI
+
+**Possible Causes**:
+- Incorrect PROJECT_TOKEN
+- Project name mismatch
+- Network issues
+- Pipeline job failure
+
+**Solutions**:
+1. Verify PROJECT_TOKEN is correct:
+   - Check token in SmartUI Project Settings
+   - Ensure token includes project ID prefix
+
+2. Check pipeline logs for errors:
+   ```yaml
+   after_script:
+     - if [ $CI_JOB_STATUS == 'failed' ]; then cat job.log; fi
+   ```
+
+3. Verify network connectivity in pipeline
+
+4. Check if SmartUI CLI step completed successfully
+
+#### Issue: Pipeline Times Out
+
+**Symptoms**: Pipeline execution exceeds time limit
+
+**Possible Causes**:
+- Too many tests running
+- Slow test execution
+- Network latency
+- Resource constraints
+
+**Solutions**:
+1. Increase pipeline timeout:
+   ```yaml
+   default:
+     timeout: 1h
+   ```
+
+2. Run tests in parallel using parallel jobs:
+   ```yaml
+   parallel:
+     matrix:
+       - TEST_GROUP: [1, 2, 3]
+   ```
+
+3. Optimize test execution
+4. Split tests across multiple pipeline stages
+
+#### Issue: Dependencies Installation Fails
+
+**Symptoms**: npm install or dependency installation fails
+
+**Possible Causes**:
+- Network issues
+- Package registry problems
+- Version conflicts
+- Node version mismatch
+
+**Solutions**:
+1. Use specific Node version:
+   ```yaml
+   image: node:18
+   ```
+
+2. Clear npm cache:
+   ```yaml
+   before_script:
+     - npm cache clean --force
+   ```
+
+3. Use package-lock.json for consistent installs
+
+4. Check for version conflicts in package.json
+
+#### Issue: SmartUI CLI Not Found
+
+**Symptoms**: `npx smartui` command fails with "command not found"
+
+**Possible Causes**:
+- Node.js not available in image
+- npm not available
+- PATH issues
+
+**Solutions**:
+1. Ensure Node.js is available:
+   ```yaml
+   image: node:18
+   ```
+
+2. Verify npm is available:
+   ```yaml
+   before_script:
+     - npm --version
+   ```
+
+3. Install SmartUI CLI explicitly:
+   ```yaml
+   before_script:
+     - npm install -g @lambdatest/smartui-cli
+   ```
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
+- Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [SmartUI CLI Documentation](/support/docs/smartui-cli)
+- [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
+- [Project Settings](/support/docs/smartui-project-settings)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">

@@ -251,6 +251,201 @@ For additional information about Playwright framework please explore the documen
 
   **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, click [here](/support/docs/html-dom-smartui-options/#configuration-for-playwright).
 
+## Best Practices
+
+### 1. Capability Configuration
+
+- Always set `visual: true` in your capabilities to enable SmartUI
+- Use consistent project and build names across test runs
+- Set meaningful test names for better organization
+
+**Example:**
+```javascript
+const capabilities = {
+  browserName: 'Chrome',
+  browserVersion: 'latest',
+  platformName: 'Windows 10',
+  'LT:Options': {
+    username: process.env.LT_USERNAME,
+    accessKey: process.env.LT_ACCESS_KEY,
+    visual: true,
+    name: 'Homepage Visual Test',
+    build: 'Release 1.0',
+    'smartUI.project': 'MyProject',
+    'smartUI.build': 'Build-1.0'
+  }
+};
+```
+
+### 2. Screenshot Timing
+
+- Wait for page elements to load before capturing screenshots
+- Use Playwright's wait methods for dynamic content
+- Consider page load time when setting up tests
+
+**Example:**
+```javascript
+await page.goto('https://example.com');
+await page.waitForSelector('.main-content', { state: 'visible' });
+await page.waitForLoadState('networkidle');
+```
+
+### 3. Screenshot Naming
+
+- Use descriptive, consistent names
+- Include context (page, component, state) in names
+- Avoid special characters
+
+### 4. Baseline Management
+
+- Establish baselines from stable builds
+- Review and approve baselines before using
+- Update baselines when intentional changes are made
+
+### 5. Viewport Selection
+
+- Test on viewports that match your user base
+- Include mobile, tablet, and desktop viewports
+- Consider both portrait and landscape orientations
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: Screenshots Not Captured
+
+**Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
+
+**Possible Causes**:
+- `visual: true` not set in capabilities
+- Incorrect project name
+- Network connectivity issues
+- Credentials not set correctly
+
+**Solutions**:
+1. Verify `visual: true` is set in capabilities:
+   ```javascript
+   'LT:Options': {
+     visual: true, // Must be set
+     // ... other options
+   }
+   ```
+
+2. Check project name matches exactly (case-sensitive):
+   ```javascript
+   'smartUI.project': 'ExactProjectName'
+   ```
+
+3. Verify credentials are set:
+   ```bash
+   echo $LT_USERNAME
+   echo $LT_ACCESS_KEY
+   ```
+
+4. Check network connectivity to LambdaTest
+
+#### Issue: "Project Not Found" Error
+
+**Symptoms**: Error indicating SmartUI project cannot be found
+
+**Possible Causes**:
+- Project name typo or mismatch
+- Project deleted
+- Wrong account credentials
+
+**Solutions**:
+1. Verify project exists in SmartUI dashboard
+2. Copy project name directly from dashboard
+3. Check credentials match the account with the project
+4. Ensure project name is in capabilities, not just in dashboard
+
+#### Issue: Screenshots Show Blank Pages
+
+**Symptoms**: Screenshots captured but show blank or incomplete content
+
+**Possible Causes**:
+- Page not fully loaded
+- JavaScript not executed
+- Timing issues
+- Viewport issues
+
+**Solutions**:
+1. Add explicit waits before screenshot:
+   ```javascript
+   await page.waitForSelector('#content', { state: 'visible' });
+   await page.waitForLoadState('networkidle');
+   ```
+
+2. Wait for specific elements to be visible:
+   ```javascript
+   await page.waitForSelector('.main-content', { state: 'visible' });
+   ```
+
+3. Increase wait time for slow-loading pages
+
+4. Check viewport size matches expected dimensions
+
+#### Issue: Build Name Conflicts
+
+**Symptoms**: Screenshots appear in wrong build or build name issues
+
+**Possible Causes**:
+- Build name not set consistently
+- Special characters in build name
+- Build name conflicts
+
+**Solutions**:
+1. Set build name in capabilities:
+   ```javascript
+   'smartUI.build': 'ConsistentBuildName'
+   ```
+
+2. Avoid special characters in build names
+
+3. Use consistent naming convention across team
+
+#### Issue: Mismatch Percentage Unexpected
+
+**Symptoms**: Mismatch percentage higher or lower than expected
+
+**Possible Causes**:
+- Threshold settings
+- Dynamic content not ignored
+- Rendering differences
+- Baseline issues
+
+**Solutions**:
+1. Review threshold settings in project settings
+
+2. Use `ignoreDOM` for dynamic content:
+   ```javascript
+   'smartUI.options': {
+     'ignoreDOM': {
+       'id': ['timestamp', 'user-id']
+     }
+   }
+   ```
+
+3. Check baseline is correct and up-to-date
+
+4. Review comparison settings in project
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
+- Check [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/) for comparison options
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [SmartUI Build Options](/support/docs/smart-ui-build-options)
+- [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/)
+- [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
+- [Project Settings](/support/docs/smartui-project-settings)
+
 <!-- <img loading="lazy" src={require('../assets/images/uploads/smart-ui-2.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
 
 <nav aria-label="breadcrumbs">

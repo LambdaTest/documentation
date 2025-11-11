@@ -44,12 +44,19 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
+
+<RealDeviceTag value="Real Device" /> 
+<VirtualDeviceTag value="Virtual Device" />
 
 ## Introduction
 
 LambdaTest now allows you to install and uninstall apps in the middle of your automated tests. This means you don’t need to restart the session every time you want to switch apps, upgrade them, or clean up the device.
 
-## Installing and Uninstalling Apps
+## Installing and Uninstalling Apps  
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
 LambdaTest enables you to install and uninstall applications during automation test execution by using commands that can be run through WebDriver's script execution functionality.
 

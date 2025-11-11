@@ -96,5 +96,116 @@ This allows you to selectively apply Smart Ignore to specific screenshots, makin
 **Solution:** Apply Smart Ignore to filter out layout shifts, making it easier to identify key differences in the content itself.
 
 
-> **Info :** <b>Smart Ignore</b> currently <b> does not </b> support ignoring elements and the options available in the [Project Settings](https://www.lambdatest.com/support/docs/smartui-project-settings/), both the supports should be releasing soon.
+## Limitations
+
+### Current Limitations
+
+Smart Ignore has the following current limitations:
+
+1. **Element Ignoring Not Supported**: Smart Ignore currently does not support ignoring specific DOM elements using `ignoreDOM` options. If you need to ignore specific elements, use the standard comparison mode with `ignoreDOM` in your test code.
+
+2. **Project Settings Integration**: Smart Ignore does not currently integrate with all comparison options available in Project Settings (such as pixel threshold, custom mismatch options). These settings may not apply when Smart Ignore is enabled.
+
+3. **Layout Comparison Mode**: Smart Ignore works differently from Layout Comparison mode. If you need to compare only layout structure, use Layout Comparison mode instead.
+
+### When Not to Use Smart Ignore
+
+Smart Ignore may not be suitable for:
+
+- **Precise Pixel Comparisons**: When you need exact pixel-by-pixel accuracy
+- **Layout-Only Testing**: When you want to test only layout structure (use Layout Comparison instead)
+- **Element-Specific Ignoring**: When you need to ignore specific elements (use `ignoreDOM` instead)
+- **Very Small Changes**: When you need to detect very minor visual changes
+
+## Best Practices
+
+### 1. Start with Project-Level Toggle
+
+Enable Smart Ignore at the project level for consistent behavior across all tests. You can still switch to other comparison modes per screenshot if needed.
+
+### 2. Combine with Other Features
+
+Smart Ignore works well with:
+- Dynamic data handling for content that changes
+- Layout comparison for structure-focused testing
+- Custom CSS for test-specific styling
+
+### 3. Review Results Regularly
+
+While Smart Ignore reduces false positives, regularly review results to ensure it's not hiding important changes.
+
+### 4. Use Per-Screenshot Mode for Testing
+
+When testing Smart Ignore, use per-screenshot mode to compare results with other comparison modes and find the best approach for each test case.
+
+## Troubleshooting
+
+### Issue: Smart Ignore Not Available
+
+**Symptoms**: Smart Ignore toggle or option is not visible
+
+**Solutions**:
+1. Verify you're using a supported SmartUI plan
+2. Check if your project type supports Smart Ignore
+3. Contact support if the feature should be available
+
+### Issue: Too Many Differences Still Shown
+
+**Symptoms**: Smart Ignore still shows many differences
+
+**Solutions**:
+1. Verify Smart Ignore is actually enabled (check toggle state)
+2. Some differences may be actual content changes, not displacement
+3. Consider using Layout Comparison mode for layout-only testing
+4. Combine with `ignoreDOM` for specific elements
+
+### Issue: Important Changes Hidden
+
+**Symptoms**: Smart Ignore hides changes you want to see
+
+**Solutions**:
+1. Switch to Pixel-to-Pixel mode for that specific screenshot
+2. Use per-screenshot mode to see all comparison types
+3. Review the baseline to ensure it's correct
+4. Consider if the change is actually a displacement vs content change
+
+### Issue: Inconsistent Results
+
+**Symptoms**: Smart Ignore shows different results for similar changes
+
+**Solutions**:
+1. Ensure consistent baseline images
+2. Check if page content is loading consistently
+3. Verify Smart Ignore is enabled consistently
+4. Review page structure for dynamic content issues
+
+## Comparison with Other Modes
+
+### Smart Ignore vs Pixel-to-Pixel
+
+| Feature | Smart Ignore | Pixel-to-Pixel |
+|---------|--------------|----------------|
+| Displacement Handling | ✅ Automatic | ❌ Shows all differences |
+| False Positives | ✅ Reduced | ❌ Higher rate |
+| Precision | Medium | High |
+| Best For | Dynamic content pages | Precise comparisons |
+
+### Smart Ignore vs Layout Comparison
+
+| Feature | Smart Ignore | Layout Comparison |
+|---------|--------------|-------------------|
+| Content Changes | ✅ Detected | ❌ Ignored |
+| Layout Changes | ✅ Detected | ✅ Detected |
+| Displacement | ✅ Ignored | ✅ Ignored |
+| Best For | Content + layout | Layout only |
+
+## Additional Resources
+
+- [Project Settings](/support/docs/smartui-project-settings)
+- [Layout Comparison](/support/docs/smartui-layout-testing)
+- [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+
 ---
+
+> **Note**: Smart Ignore is continuously being improved. Features like element ignoring and enhanced Project Settings integration are planned for future releases. Check the [release notes](https://www.lambdatest.com/support/docs/) for updates.

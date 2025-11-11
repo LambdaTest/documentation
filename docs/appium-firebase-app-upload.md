@@ -17,7 +17,6 @@ url: https://www.lambdatest.com/support/docs/appium-firebase-app-upload/
 site_name: Uploading app via Firebase
 slug: appium-firebase-app-upload/
 ---
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -47,9 +46,10 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
 
 ---
-
+<RealDeviceTag value="Real Device" /> 
 ## Tutorial to test an app uploaded on Firebase
 
 **Firebase** is a platform developed by **Google** for creating mobile and web applications. **LambdaTest cloud platform** provides you various methods to upload your files on a real device like from playstore and appstore. Uploading an app through Firebase is one such method.

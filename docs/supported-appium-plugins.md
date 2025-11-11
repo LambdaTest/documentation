@@ -24,6 +24,9 @@ slug: supported-appium-plugins/
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import RealDeviceTag from '../src/component/realDevice';
+
+<RealDeviceTag value="Real Device" /> 
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
