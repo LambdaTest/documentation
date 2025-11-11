@@ -120,24 +120,24 @@ SmartUI SDK only supports Cypress versions >= 10.0.0
 Setup your project token shown in the **SmartUI** app after creating your project.
 
 <Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<TabItem value="MacOS/Linux" label="MacOS/Linux default>
 
 ```bash
-export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+export PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value="Windows" label="Windows - CMD>
 
 ```bash
-set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+set PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value="PowerShell" label="PowerShell>
 
 ```powershell
-$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+$env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
@@ -256,9 +256,9 @@ When conducting visual tests, you may encounter scenarios where certain elements
 
 
 <Tabs className="docs__val" groupId="framework">
-<TabItem value="IgnoreID" label="Ignore ID" default>
+<TabItem value="IgnoreID" label="Ignore ID default>
 
-```js title="This is a sample for your configuration for Cypress to ignore by ID"
+```js title=This is a sample for your configuration for Cypress to ignore by ID"
 let options = {
             ignoreDOM: {
                 id: ["ID-1", "ID-2"],
@@ -268,9 +268,9 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
 </TabItem>
-<TabItem value="IgoreClass" label="Ignore Class">
+<TabItem value="IgoreClass" label="Ignore Class>
 
-```js title="This is a sample for your configuration for Cypress to ignore by Class"
+```js title=This is a sample for your configuration for Cypress to ignore by Class"
 let options = {
             ignoreDOM: {
                 class: ["Class-1", "Class-2"],
@@ -280,9 +280,9 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
 </TabItem>
-<TabItem value="IgnoreXPath" label="Ignore XPath">
+<TabItem value="IgnoreXPath" label="Ignore XPath>
 
-```js title="This is a sample for your configuration for Cypress to ignore by XPath"
+```js title=This is a sample for your configuration for Cypress to ignore by XPath"
 let options = {
             ignoreDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
@@ -293,9 +293,9 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 
 </TabItem>
 
-<TabItem value="IgnoreSelector" label="Ignore CSS Selector">
+<TabItem value="IgnoreSelector" label="Ignore CSS Selector>
 
-```js title="This is a sample for your configuration for Cypress to ignore by CSS Selector"
+```js title=This is a sample for your configuration for Cypress to ignore by CSS Selector"
 let options = {
             ignoreDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -308,9 +308,9 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 </Tabs>
 
 <Tabs className="docs__val" groupId="framework">
-<TabItem value="SelectID" label="Select ID" default>
+<TabItem value="SelectID" label="Select ID default>
 
-```js title="This is a sample for your configuration for Cypress to select by ID."
+```js title=This is a sample for your configuration for Cypress to select by ID."
 let options = {
             selectDOM: {
                 id: ["ID-1", "ID-2"],
@@ -320,9 +320,9 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
 </TabItem>
-<TabItem value="SelectClass" label="Select Class">
+<TabItem value="SelectClass" label="Select Class>
 
-```js title="This is a sample for your configuration for Cypress to select by Class"
+```js title=This is a sample for your configuration for Cypress to select by Class"
 let options = {
             selectDOM: {
                 class: ["Class-1", "Class-2"],
@@ -332,9 +332,9 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
 </TabItem>
-<TabItem value="SelectXPath" label="Select XPath">
+<TabItem value="SelectXPath" label="Select XPath>
 
-```js title="This is a sample for your configuration for Cypress to select by XPath"
+```js title=This is a sample for your configuration for Cypress to select by XPath"
 let options = {
             selectDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
@@ -345,9 +345,9 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 
 </TabItem>
 
-<TabItem value="SelectSelector" label="Select CSS Selector">
+<TabItem value="SelectSelector" label="Select CSS Selector>
 
-```js title="This is a sample for your webhook configuration for Cypress to select by CSS Selector"
+```js title=This is a sample for your webhook configuration for Cypress to select by CSS Selector"
 let options = {
             selectDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -365,9 +365,9 @@ You can capture screenshots of targeted elements by leveraging various locator m
 
 
 <Tabs className="docs__val" groupId="framework">
-<TabItem value="ElementID" label="Capture Element by ID" default>
+<TabItem value="ElementID" label="Capture Element by ID default>
 
-```js title="This is a sample for your configuration for Cypress to capture an element by ID."
+```js title=This is a sample for your configuration for Cypress to capture an element by ID."
 let options = {
       element: {
           id: 'Required ID',
@@ -377,9 +377,9 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
 </TabItem>
-<TabItem value="ElementClass" label="Capture Element by Class">
+<TabItem value="ElementClass" label="Capture Element by Class>
 
-```js title="This is a sample for your configuration for Cypress to capture an element by Class"
+```js title=This is a sample for your configuration for Cypress to capture an element by Class"
 let options = {
       element: {
           class: 'Required Class',
@@ -389,9 +389,9 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 ```
 
 </TabItem>
-<TabItem value="ElementXPath" label="Capture Element by XPath">
+<TabItem value="ElementXPath" label="Capture Element by XPath>
 
-```js title="This is a sample for your configuration for Cypress to capture an element by XPath"
+```js title=This is a sample for your configuration for Cypress to capture an element by XPath"
 let options = {
       element: {
           xpath: 'Required Xpath',
@@ -403,9 +403,9 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 
 </TabItem>
 
-<TabItem value="ElementSelector" label="Capture Element by Selector">
+<TabItem value="ElementSelector" label="Capture Element by Selector>
 
-```js title="This is a sample for your webhook configuration for Cypress to capture an element by CSS Selector"
+```js title=This is a sample for your webhook configuration for Cypress to capture an element by CSS Selector"
 let options = {
       element: {
           cssSelector: 'Required CSS Selector',
@@ -421,7 +421,7 @@ cy.smartuiSnapshot(‘Screenshot Name’, options);
 ## Best Practices
 
 <Tabs className="docs__val" groupId="best-practices">
-<TabItem value="screenshot-naming" label="Screenshot Naming" default>
+<TabItem value="screenshot-naming" label="Screenshot Naming default>
 
 ### Screenshot Naming
 
@@ -438,7 +438,7 @@ cy.smartuiSnapshot('ProductPage-MainContent');
 
 </TabItem>
 
-<TabItem value="page-load" label="Wait for Page Load">
+<TabItem value=page-load" label="Wait for Page Load>
 
 ### Wait for Page Load
 
@@ -456,7 +456,7 @@ cy.smartuiSnapshot('Page Loaded');
 
 </TabItem>
 
-<TabItem value="dynamic-content" label="Handle Dynamic Content">
+<TabItem value=dynamic-content" label="Handle Dynamic Content>
 
 ### Handle Dynamic Content
 
@@ -466,7 +466,7 @@ cy.smartuiSnapshot('Page Loaded');
 
 </TabItem>
 
-<TabItem value="configuration" label="Configuration Management">
+<TabItem value=configuration" label="Configuration Management>
 
 ### Configuration Management
 
@@ -476,7 +476,7 @@ cy.smartuiSnapshot('Page Loaded');
 
 </TabItem>
 
-<TabItem value="test-organization" label="Test Organization">
+<TabItem value=test-organization" label="Test Organization>
 
 ### Test Organization
 
@@ -490,7 +490,7 @@ cy.smartuiSnapshot('Page Loaded');
 ## Troubleshooting
 
 <Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard" default>
+<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard default>
 
 ### Issue: Screenshots Not Appearing in Dashboard
 
@@ -520,9 +520,9 @@ cy.smartuiSnapshot('Page Loaded');
 5. Review test execution logs for error messages
 
 </TabItem>
-<TabItem value="project-not-found-error" label="Project Not Found" Error">
+<TabItem value=project-not-found-error" label="Project Not Found Error>
 
-### Issue: "Project Not Found" Error
+### Issue: Project Not Found" Error
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -538,7 +538,7 @@ cy.smartuiSnapshot('Page Loaded');
 4. Check for extra spaces or quotes in token
 
 </TabItem>
-<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content">
+<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content>
 
 ### Issue: Screenshots Show Blank or Incorrect Content
 
@@ -562,7 +562,7 @@ cy.smartuiSnapshot('Page Loaded');
 2. Enable JavaScript in configuration:
    ```json
    {
-     "enableJavaScript": true
+     enableJavaScript": true
    }
    ```
 
@@ -571,7 +571,7 @@ cy.smartuiSnapshot('Page Loaded');
 4. Verify viewport size matches expected dimensions
 
 </TabItem>
-<TabItem value="build-execution-fails" label="Build Execution Fails">
+<TabItem value="build-execution-fails" label="Build Execution Fails>
 
 ### Issue: Build Execution Fails
 
@@ -593,7 +593,7 @@ cy.smartuiSnapshot('Page Loaded');
 4. Check file permissions for configuration and project files
 
 </TabItem>
-<TabItem value="npm-dependencies-not-resolving" label="npm Dependencies Not Resolving">
+<TabItem value=npm-dependencies-not-resolving" label="npm Dependencies Not Resolving>
 
 ### Issue: npm Dependencies Not Resolving
 
@@ -621,11 +621,11 @@ cy.smartuiSnapshot('Page Loaded');
 4. Check package.json for version conflicts
 
 </TabItem>
-<TabItem value="screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline">
+<TabItem value=screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline>
 
 ### Issue: Screenshot Names Not Matching Baseline
 
-**Symptoms**: Screenshots appear as "New" instead of comparing with baseline
+**Symptoms**: Screenshots appear as New" instead of comparing with baseline
 
 **Possible Causes**:
 - Screenshot name changed
@@ -662,8 +662,8 @@ If you encounter issues not covered here:
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
+<nav aria-label="breadcrumbs>
+  <ul className=breadcrumbs">
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
         Home

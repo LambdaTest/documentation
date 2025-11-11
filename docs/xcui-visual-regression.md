@@ -455,7 +455,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 4. Check network connectivity to LambdaTest
 
 </TabItem>
-<TabItem value="project-not-found-error" label="Project Not Found" Error">
+<TabItem value="project-not-found-error" label="Project Not Found Error">
 
 ### Issue: "Project Not Found" Error
 

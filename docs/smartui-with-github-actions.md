@@ -79,7 +79,7 @@ To run the new pipeline that you just created, click the **Run workflow** button
 ## Best Practices
 
 <Tabs className="docs__val" groupId="best-practices">
-<TabItem value="secret-management" label="Secret Management" default>
+<TabItem value="secret-management" label="Secret Management default>
 
 ### Secret Management
 
@@ -89,7 +89,7 @@ To run the new pipeline that you just created, click the **Run workflow** button
 - Use different secrets for different environments
 
 </TabItem>
-<TabItem value="workflow-optimization" label="Workflow Optimization" >
+<TabItem value=workflow-optimization" label="Workflow Optimization >
 
 ### Workflow Optimization
 
@@ -108,7 +108,7 @@ on:
 ```
 
 </TabItem>
-<TabItem value="build-naming" label="Build Naming" >
+<TabItem value=build-naming" label="Build Naming >
 
 ### Build Naming
 
@@ -125,7 +125,7 @@ on:
 ```
 
 </TabItem>
-<TabItem value="error-handling" label="Error Handling" >
+<TabItem value="error-handling" label="Error Handling >
 
 ### Error Handling
 
@@ -135,7 +135,7 @@ on:
 - Add retry logic for flaky tests
 
 </TabItem>
-<TabItem value="resource-management" label="Resource Management" >
+<TabItem value=resource-management" label="Resource Management >
 
 ### Resource Management
 
@@ -145,7 +145,7 @@ on:
 - Optimize test execution order
 
 </TabItem>
-<TabItem value="resource-management" label="Resource Management" >
+<TabItem value=resource-management" label="Resource Management >
 
 ### Resource Management
 
@@ -160,7 +160,7 @@ on:
 ## Troubleshooting
 
 <Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="workflow-fails-with-secret-not-found" label="Workflow Fails with "Secret Not Found"" default>
+<TabItem value="workflow-fails-with-secret-not-found" label="Workflow Fails with Secret Not Found" default>
 
 ### Issue: Workflow Fails with "Secret Not Found"
 
@@ -183,7 +183,7 @@ on:
 4. Verify secrets are set for the correct repository/environment
 
 </TabItem>
-<TabItem value="project_token-prompt-appears" label="PROJECT_TOKEN Prompt Appears" >
+<TabItem value="project_token-prompt-appears" label="PROJECT_TOKEN Prompt Appears >
 
 ### Issue: PROJECT_TOKEN Prompt Appears
 
@@ -214,7 +214,7 @@ on:
    ```
 
 </TabItem>
-<TabItem value="tests-run-but-no-results-in-dashboard" label="Tests Run But No Results in Dashboard" >
+<TabItem value=tests-run-but-no-results-in-dashboard" label="Tests Run But No Results in Dashboard >
 
 ### Issue: Tests Run But No Results in Dashboard
 
@@ -244,7 +244,7 @@ on:
 4. Check if SmartUI CLI step completed successfully
 
 </TabItem>
-<TabItem value="workflow-times-out" label="Workflow Times Out" >
+<TabItem value=workflow-times-out" label="Workflow Times Out >
 
 ### Issue: Workflow Times Out
 
@@ -273,7 +273,7 @@ on:
 4. Split tests across multiple workflows
 
 </TabItem>
-<TabItem value="dependencies-installation-fails" label="Dependencies Installation Fails" >
+<TabItem value=dependencies-installation-fails" label="Dependencies Installation Fails >
 
 ### Issue: Dependencies Installation Fails
 
@@ -303,11 +303,11 @@ on:
 4. Check for version conflicts in package.json
 
 </TabItem>
-<TabItem value="smartui-cli-not-found" label="SmartUI CLI Not Found" >
+<TabItem value=smartui-cli-not-found" label="SmartUI CLI Not Found >
 
 ### Issue: SmartUI CLI Not Found
 
-**Symptoms**: `npx smartui` command fails with "command not found"
+**Symptoms**: `npx smartui` command fails with command not found"
 
 **Possible Causes**:
 - Node.js not installed
@@ -351,8 +351,8 @@ If you encounter issues not covered here:
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
+<nav aria-label="breadcrumbs>
+  <ul className=breadcrumbs">
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" href="https://www.lambdatest.com">
         Home

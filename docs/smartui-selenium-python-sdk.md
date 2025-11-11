@@ -573,7 +573,7 @@ smartui_snapshot(driver, "Page Loaded")
 5. Review test execution logs for error messages
 
 </TabItem>
-<TabItem value="project-not-found-error" label="Project Not Found" Error">
+<TabItem value="project-not-found-error" label="Project Not Found Error">
 
 ### Issue: "Project Not Found" Error
 

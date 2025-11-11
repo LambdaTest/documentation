@@ -90,24 +90,24 @@ You can configure your project token in one of two ways:
 1. **Using Environment Variables**:
 
 <Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<TabItem value="MacOS/Linux" label="MacOS/Linux default>
 
 ```bash
-export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+export PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value="Windows" label="Windows - CMD>
 
 ```bash
-set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+set PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value="PowerShell" label="PowerShell>
 
 ```powershell
-$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+$env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
@@ -309,7 +309,7 @@ After test execution, visit your SmartUI project dashboard to:
 ## Best Practices
 
 <Tabs className="docs__val" groupId="best-practices">
-<TabItem value="screenshot-naming" label="Screenshot Naming" default>
+<TabItem value="screenshot-naming" label="Screenshot Naming default>
 
 ### Screenshot Naming
 
@@ -320,12 +320,12 @@ After test execution, visit your SmartUI project dashboard to:
 
 **Example:**
 ```java
-SmartUISnapshot.smartuiSnapshot(driver, "HomeScreen-Header");
+SmartUISnapshot.smartuiSnapshot(driver, HomeScreen-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 ```
 
 </TabItem>
-<TabItem value="wait-for-screen-load" label="Wait for Screen Load">
+<TabItem value="wait-for-screen-load" label="Wait for Screen Load>
 
 ### Wait for Screen Load
 
@@ -336,12 +336,12 @@ SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 **Example:**
 ```java
 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-wait.until(ExpectedConditions.presenceOfElementLocated(By.id("main-content")));
+wait.until(ExpectedConditions.presenceOfElementLocated(By.id(main-content")));
 SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 ```
 
 </TabItem>
-<TabItem value="handle-dynamic-content" label="Handle Dynamic Content">
+<TabItem value="handle-dynamic-content" label="Handle Dynamic Content>
 
 ### Handle Dynamic Content
 
@@ -350,7 +350,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 - Test XPath locators using Appium Inspector before integrating
 
 </TabItem>
-<TabItem value="device-configuration" label="Device Configuration">
+<TabItem value=device-configuration" label="Device Configuration>
 
 ### Device Configuration
 
@@ -359,7 +359,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 - Test on devices that match your user base
 
 </TabItem>
-<TabItem value="test-organization" label="Test Organization">
+<TabItem value=test-organization" label="Test Organization>
 
 ### Test Organization
 
@@ -370,7 +370,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 ## Troubleshooting
 
 <Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>
+<TabItem value="screenshots-not-captured" label="Screenshots Not Captured default>
 
 ### Issue: Screenshots Not Captured
 
@@ -404,9 +404,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 5. Review test execution logs for error messages
 
 </TabItem>
-<TabItem value="project-not-found-error" label="Project Not Found" Error">
+<TabItem value=project-not-found-error" label="Project Not Found Error>
 
-### Issue: "Project Not Found" Error
+### Issue: Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -423,7 +423,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 4. Check credentials match the account with the project
 
 </TabItem>
-<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content">
+<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content>
 
 ### Issue: Screenshots Show Blank or Incorrect Content
 
@@ -439,7 +439,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 1. Add explicit waits before screenshots:
    ```java
    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-   wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
+   wait.until(ExpectedConditions.presenceOfElementLocated(By.id(content")));
    ```
 
 2. Wait for specific elements to be visible:
@@ -452,7 +452,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 4. Verify app is in correct state before screenshot
 
 </TabItem>
-<TabItem value="ignoreboxes-selectboxes-not-working" label="ignoreBoxes/selectBoxes Not Working">
+<TabItem value="ignoreboxes-selectboxes-not-working" label="ignoreBoxes/selectBoxes Not Working>
 
 ### Issue: ignoreBoxes/selectBoxes Not Working
 
@@ -469,13 +469,13 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 3. Check JSON formatting in configuration:
    ```java
    Map<String, Object> ignoreBoxes = new HashMap<>();
-   ignoreBoxes.put("xpath", new String[]{"//*[@text='Dynamic Ad']"});
+   ignoreBoxes.put(xpath", new String[]{"//*[@text='Dynamic Ad']"});
    ```
 
 4. Test XPath locators in isolation before using in config
 
 </TabItem>
-<TabItem value="maven-dependencies-not-resolving" label="Maven Dependencies Not Resolving">
+<TabItem value="maven-dependencies-not-resolving" label="Maven Dependencies Not Resolving>
 
 ### Issue: Maven Dependencies Not Resolving
 
@@ -496,11 +496,11 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 4. Check pom.xml for version conflicts
 
 </TabItem>
-<TabItem value="screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline">
+<TabItem value=screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline>
 
 ### Issue: Screenshot Names Not Matching Baseline
 
-**Symptoms**: Screenshots appear as "New" instead of comparing with baseline
+**Symptoms**: Screenshots appear as New" instead of comparing with baseline
 
 **Possible Causes**:
 - Screenshot name changed
@@ -536,8 +536,8 @@ If you encounter issues not covered here:
 - [Appium Hooks Documentation](/support/docs/smartui-appium-hooks)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
+<nav aria-label="breadcrumbs>
+  <ul className=breadcrumbs">
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
         Home
@@ -707,8 +707,8 @@ If you encounter issues not covered here:
 - [Appium Hooks Documentation](/support/docs/smartui-appium-hooks)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
+<nav aria-label="breadcrumbs>
+  <ul className=breadcrumbs">
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
         Home
