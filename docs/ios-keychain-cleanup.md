@@ -46,6 +46,7 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
     }}
 ></script>
 
+<RealDeviceTag value="Real Device" /> 
 Apple’s [Keychain](https://developer.apple.com/documentation/security/keychain_services) offers a secure system for apps to store sensitive information like passwords, certificates, authentication tokens, and other small data pieces.  
 LambdaTest now offers enhanced Keychain management on real iOS devices, enabling you to test app flows that rely on secure storage and Keychain-specific use cases more effectively.
 

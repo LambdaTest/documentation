@@ -26,6 +26,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -50,6 +51,7 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
+<RealDeviceTag value="Real Device" /> 
 Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience.
 
 LambdaTest now supports Biometric Authentication for real devices (iOS and android). This new feature allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.

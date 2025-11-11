@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -50,10 +51,8 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-
-
 # Audio Injection on iOS Real Devices
-
+<RealDeviceTag value="Real Device" /> 
 Audio Injection allows you to inject microphone input on real iOS devices in the LambdaTest Real Device Cloud.  
 Use it to test audio-driven flows such as audio verification and in-app recording—without manual mic input.
 
