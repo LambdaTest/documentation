@@ -86,8 +86,12 @@ cd smartui-wdio-sample
 Install required NPM modules for `LambdaTest SmartUI WebdriverIO SDK` in your **Frontend** project.
 
 ```bash
-npm i @lambdatest/smartui-cli @lambdatest/wdio-driver webdriverio wdio-lambdatest-service
+npm install @lambdatest/smartui-cli @lambdatest/wdio-driver webdriverio wdio-lambdatest-service
 ```
+
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
 
 :::info
 If you are using Lambdatest automation grid to run webdriverio, please update the required configuration in the `capability configuration (wdio.conf.js) file`.
@@ -95,7 +99,7 @@ If you are using Lambdatest automation grid to run webdriverio, please update th
 
 ### **Step 3:** Configure your Project Token
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+Setup your project token shown in the **SmartUI** app after creating your project.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
@@ -409,7 +413,10 @@ let options = {
 
 ## Best Practices
 
-### 1. Screenshot Naming
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="screenshot-naming" label="Screenshot Naming" default>
+
+### Screenshot Naming
 
 - Use descriptive, consistent names for screenshots
 - Include page/component name in screenshot names
@@ -422,7 +429,10 @@ await smartuiSnapshot(driver, 'HomePage-Header');
 await smartuiSnapshot(driver, 'ProductPage-MainContent');
 ```
 
-### 2. Wait for Page Load
+</TabItem>
+<TabItem value="wait-for-page-load" label="Wait for Page Load" >
+
+### Wait for Page Load
 
 - Always wait for pages to fully load before taking screenshots
 - Use WebdriverIO's built-in wait methods for dynamic content
@@ -435,23 +445,208 @@ await $('#main-content').waitForDisplayed({ timeout: 10000 });
 await smartuiSnapshot(driver, 'Page Loaded');
 ```
 
-### 3. Handle Dynamic Content
+</TabItem>
+<TabItem value="handle-dynamic-content" label="Handle Dynamic Content" >
+
+### Handle Dynamic Content
 
 - Use `ignoreDOM` for elements that change between runs
 - Use `selectDOM` when you only need to compare specific areas
 - Document why elements are ignored for future reference
 
-### 4. Configuration Management
+</TabItem>
+<TabItem value="configuration-management" label="Configuration Management" >
+
+### Configuration Management
 
 - Keep `.smartui.json` in version control
 - Use environment variables for sensitive data
 - Document custom configuration choices
 
-### 5. Test Organization
+</TabItem>
+<TabItem value="test-organization" label="Test Organization" >
+
+### Test Organization
 
 - Group related screenshots in the same build
 - Use meaningful build names
 - Run tests in consistent environments
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: Screenshots Not Appearing in Dashboard
+
+**Symptoms**: Tests run successfully but no screenshots appear in SmartUI dashboard
+
+**Possible Causes**:
+- Project token not set or incorrect
+- Project name mismatch
+- Network connectivity issues
+- CLI not installed or outdated
+
+**Solutions**:
+1. Verify `PROJECT_TOKEN` is set correctly:
+   ```bash
+   echo $PROJECT_TOKEN
+   ```
+
+2. Check project name matches exactly (case-sensitive)
+
+3. Verify SmartUI CLI is installed:
+   ```bash
+   npx smartui --version
+   ```
+
+4. Check network connectivity to LambdaTest servers
+
+5. Review test execution logs for error messages
+
+#### Issue: "Project Not Found" Error
+
+**Symptoms**: Error message indicating project cannot be found
+
+**Possible Causes**:
+- Incorrect project token
+- Project deleted or renamed
+- Token from wrong project
+
+**Solutions**:
+1. Verify project exists in SmartUI dashboard
+2. Copy project token directly from Project Settings
+3. Ensure token includes the project ID prefix (e.g., `123456#...`)
+4. Check for extra spaces or quotes in token
+
+#### Issue: Screenshots Show Blank or Incorrect Content
+
+**Symptoms**: Screenshots captured but show blank pages or incorrect content
+
+**Possible Causes**:
+- Page not fully loaded
+- JavaScript not executed
+- Viewport size issues
+- Timing issues
+
+**Solutions**:
+1. Add explicit waits before screenshots:
+   ```javascript
+   await browser.url('https://example.com');
+   await $('#content').waitForDisplayed({ timeout: 10000 });
+   await $('.main-content').waitForDisplayed({ timeout: 10000 });
+   ```
+
+2. Enable JavaScript in configuration:
+   ```json
+   {
+     "enableJavaScript": true
+   }
+   ```
+
+3. Increase `waitForTimeout` in configuration
+
+4. Verify viewport size matches expected dimensions
+
+#### Issue: Build Execution Fails
+
+**Symptoms**: `npx smartui exec` command fails
+
+**Possible Causes**:
+- Missing or incorrect configuration file
+- Invalid JSON in configuration
+- Port conflicts
+- Permission issues
+
+**Solutions**:
+1. Verify `.smartui.json` exists and is valid JSON
+2. Check configuration file syntax
+3. Try different port if default is in use:
+   ```bash
+   npx smartui exec -P 5000 -- <command>
+   ```
+4. Check file permissions for configuration and project files
+
+#### Issue: npm Dependencies Not Resolving
+
+**Symptoms**: npm cannot find `@lambdatest/wdio-driver` or `@lambdatest/smartui-cli`
+
+**Possible Causes**:
+- Incorrect package version
+- npm registry access issues
+- Network connectivity problems
+
+**Solutions**:
+1. Check latest versions on npm:
+   ```bash
+   npm view @lambdatest/wdio-driver version
+   npm view @lambdatest/smartui-cli version
+   ```
+
+2. Clear npm cache:
+   ```bash
+   npm cache clean --force
+   ```
+
+3. Verify internet connectivity for npm registry access
+
+4. Check package.json for version conflicts
+
+#### Issue: Screenshot Names Not Matching Baseline
+
+**Symptoms**: Screenshots appear as "New" instead of comparing with baseline
+
+**Possible Causes**:
+- Screenshot name changed
+- Baseline doesn't exist
+- Name contains special characters
+
+**Solutions**:
+1. Ensure screenshot names are consistent across test runs
+2. Verify baseline exists in project
+3. Avoid special characters in screenshot names
+4. Check for case sensitivity issues
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
+- See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options)
+- [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
+- [Handling Lazy Loading](/support/docs/smartui-handle-lazy-loading)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+
+
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link"> SmartUI WebDriverIO SDK </span>
+    </li>
+  </ul>
+</nav>
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 

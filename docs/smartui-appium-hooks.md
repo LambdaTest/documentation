@@ -514,7 +514,10 @@ Please note that this webhook is only applicable to <b>native app screenshots</b
 
 ## Best Practices
 
-### 1. Screenshot Naming
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="screenshot-naming" label="Screenshot Naming" default>
+
+### Screenshot Naming
 
 - Use descriptive, consistent names for screenshots
 - Include screen/component name in screenshot names
@@ -527,7 +530,10 @@ await driver.execute("smartui.takeScreenshot=HomeScreen-Header");
 await driver.execute("smartui.takeScreenshot=CheckoutScreen-PaymentForm");
 ```
 
-### 2. Wait for Screen Load
+</TabItem>
+<TabItem value="wait-for-screen-load" label="Wait for Screen Load" >
+
+### Wait for Screen Load
 
 - Always wait for screens to fully load before taking screenshots
 - Use Appium's wait methods for dynamic content
@@ -540,23 +546,44 @@ await driver.wait(until.elementLocated(By.id('main-content')), 10000);
 await driver.execute("smartui.takeScreenshot=Screen Loaded");
 ```
 
-### 3. Handle Dynamic Content
+</TabItem>
+<TabItem value="handle-dynamic-content" label="Handle Dynamic Content" >
+
+### Handle Dynamic Content
 
 - Use `ignoreBoxes` for elements that change between runs (ads, timestamps, user avatars)
 - Use `selectBoxes` when you only need to compare specific regions
 - Test XPath locators using Appium Inspector before integrating
 
-### 4. Smart Crop Configuration
+</TabItem>
+<TabItem value="smart-crop-configuration" label="Smart Crop Configuration" >
+
+### Smart Crop Configuration
 
 - Enable `cropStatusBar` to focus on core UI elements
 - Enable `cropNavigationBar` for Android devices
 - Test cropped screenshots to ensure important content isn't removed
 
-### 5. Test Organization
+</TabItem>
+<TabItem value="test-organization" label="Test Organization" >
+
+### Test Organization
 
 - Group related screenshots in the same build
 - Use meaningful build names
 - Run tests on consistent device configurations
+
+</TabItem>
+<TabItem value="test-organization" label="Test Organization" >
+
+### Test Organization
+
+- Group related screenshots in the same build
+- Use meaningful build names
+- Run tests on consistent device configurations
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 

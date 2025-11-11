@@ -183,7 +183,7 @@ cacheDirectories:
   - cypressCache
 
 pre:
-  - npm i @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
+  - npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
   - npx smartui config:create smartui-web.json
 
 post:
@@ -204,7 +204,7 @@ It is mandatory to mention these commands in the pre flag to download all the ne
 
 ```bash
 pre:
-  - npm i @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
+  - npm install @lambdatest/smartui-cli @lambdatest/cypress-driver cypress@v13
   - npx smartui config:create smartui-web.json
 ```
 :::

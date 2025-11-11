@@ -53,8 +53,12 @@ Using the LambdaTest platform, perform regression testing in just one click and 
 ## Prerequisites for running SmartUI with StoryBook
 
 - Basic understanding of [StoryBook](https://storybook.js.org/docs/react/get-started/introduction) is required.
-- Node version installed should be higher than `14.15.0.` Click [here](https://nodejs.org/en/download/releases/) to know more
+- Node.js v20.3+ installed (required for SmartUI CLI v4.x.x)
 - StoryBook version installed should be higher than `6.4.0.` Click [here](https://github.com/storybookjs/storybook/releases) to know more
+
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
 The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
@@ -103,9 +107,117 @@ module.exports = {
 };
 ```
 
+#### Storybook v9+ Play Function Support
+
+SmartUI supports Storybook's `play` function (available in Storybook v9+) for interactive component testing. The `play` function allows you to interact with components before capturing screenshots.
+
+**Example with Play Function:**
+
+```js title="Button.stories.js"
+import { expect } from '@storybook/jest';
+import { userEvent, within } from '@storybook/testing-library';
+import { Button } from './Button';
+
+export default {
+  title: 'Components/Button',
+  component: Button,
+};
+
+export const InteractiveButton = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button', { name: /click me/i });
+    
+    // Interact with the button before screenshot
+    await userEvent.click(button);
+    await expect(button).toHaveTextContent('Clicked!');
+  },
+};
+```
+
+**Best Practices for Play Functions:**
+
+- Use `play` functions to set up component states before screenshots
+- Wait for async operations to complete using `waitFor` or `findBy` queries
+- Avoid animations or transitions that might cause timing issues
+- Use `waitForTimeout` in SmartUI config if components need additional render time after play functions
+
+#### Storybook Globals (Themes) Configuration
+
+SmartUI supports Storybook's global decorators and parameters, including theme switching. You can configure themes in your `.smartui.json` file.
+
+**Configuration Example:**
+
+```json title=".smartui.json"
+{
+  "storybook": {
+    "browsers": ["chrome", "firefox", "safari", "edge"],
+    "viewports": [[1920, 1080]],
+    "backgroundTheme": "light",  // Options: "light", "dark", or "both"
+    "useGlobals": true,  // Enable global decorators and parameters
+    "waitForTimeout": 0
+  }
+}
+```
+
+**Theme Options:**
+
+- `"light"`: Capture stories in light theme only
+- `"dark"`: Capture stories in dark theme only
+- `"both"`: Capture stories in both light and dark themes (creates separate screenshots)
+
+**Example Story with Theme Globals:**
+
+```js title="Card.stories.js"
+export default {
+  title: 'Components/Card',
+  component: Card,
+  parameters: {
+    backgrounds: {
+      default: 'light',
+      values: [
+        { name: 'light', value: '#ffffff' },
+        { name: 'dark', value: '#1a1a1a' },
+      ],
+    },
+  },
+  globalTypes: {
+    theme: {
+      description: 'Global theme for components',
+      defaultValue: 'light',
+      toolbar: {
+        title: 'Theme',
+        icon: 'circlehollow',
+        items: ['light', 'dark'],
+        dynamicTitle: true,
+      },
+    },
+  },
+};
+
+export const Default = {
+  decorators: [
+    (Story, context) => {
+      const theme = context.globals.theme || 'light';
+      return (
+        <div className={`theme-${theme}`}>
+          <Story />
+        </div>
+      );
+    },
+  ],
+};
+```
+
+**Using Multiple Themes:**
+
+If you set `"backgroundTheme": "both"` in your SmartUI config, each story will be captured twice - once in light theme and once in dark theme. The screenshot names will be automatically suffixed (e.g., `Card-Default-light.png` and `Card-Default-dark.png`).
+
+**Note**: When using `"backgroundTheme": "both"`, ensure your Storybook stories properly handle theme switching via globals or decorators.
+
 ### **Step 3:** Configure your Project Token
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+Setup your project token shown in the **SmartUI** app after creating your project.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
@@ -174,6 +286,8 @@ Please read the following table for more information about the configuration fil
 | waitForTimeout | You can add wait time for the page to load DOM of your StoryBook components. This can be added globally to your configuration and to individual stories as well. <br/> Ex: `3000`                                      | Optional  |
 | include        | Add the stories which should only be included in SmartUI tests <br/> Ex: `"/dashboard/","/features/"`                              | Optional  |
 | exclude        | Don't compare the stories which should be excluded in SmartUI tests <br/> Ex: `"/login/","/marketing/"`                            | Optional  |
+| backgroundTheme | Theme for capturing stories. Options: `"light"`, `"dark"`, or `"both"` (captures both themes) <br/> Ex: `"light"` | Optional (default: `"light"`) |
+| useGlobals     | Enable Storybook global decorators and parameters (required for theme switching) <br/> Ex: `true` | Optional (default: `false`) |
 
 :::note
 SmartUI Storybook testing now supports `Edge` browser. 
@@ -335,7 +449,94 @@ You can now see the SmartUI dashboard to view the results. Can also identify the
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-storybook-results.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
+## Troubleshooting
+
+### Storybook Not Capturing Stories
+
+**Symptoms**: 
+- CLI runs but no screenshots appear
+- Stories are skipped
+
+**Solutions**:
+
+1. **Verify Storybook Server**:
+   - Ensure Storybook is running on the specified URL/port
+   - Check that `buildStoriesJson: true` is set in `.storybook/main.js`
+
+2. **Check Story Inclusion/Exclusion**:
+   - Verify `include` and `exclude` patterns in `.smartui.json`
+   - Ensure story paths match your Storybook structure
+
+3. **Validate Configuration**:
+   ```bash
+   cat .smartui.json | python -m json.tool
+   ```
+   Ensure JSON is valid and configuration is correct
+
+### Play Function Issues
+
+**Symptoms**:
+- Play functions not executing
+- Components not in expected state
+
+**Solutions**:
+
+1. **Increase Wait Timeout**:
+   ```json
+   {
+     "storybook": {
+       "waitForTimeout": 3000  // Increase if play functions need more time
+     }
+   }
+   ```
+
+2. **Check Play Function Syntax**:
+   - Ensure play functions are properly exported
+   - Verify async/await usage is correct
+   - Check for errors in browser console
+
+### Theme/Globals Not Working
+
+**Symptoms**:
+- Themes not switching
+- Globals not applied
+
+**Solutions**:
+
+1. **Verify useGlobals Setting**:
+   ```json
+   {
+     "storybook": {
+       "useGlobals": true  // Must be true to use globals
+     }
+   }
+   ```
+
+2. **Check Storybook Version**:
+   - Ensure Storybook v6.4+ for globals support
+   - Verify decorators are properly configured
+
+3. **Validate Theme Configuration**:
+   - Check `backgroundTheme` value is correct (`light`, `dark`, or `both`)
+   - Ensure theme decorators are properly set up in stories
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [Storybook Documentation](https://storybook.js.org/docs) for Storybook-specific issues
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [CLI Complete Reference](/support/docs/smartui-cli-complete-reference)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [Storybook Documentation](https://storybook.js.org/docs)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
 
 <nav aria-label="breadcrumbs">

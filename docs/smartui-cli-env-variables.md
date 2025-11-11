@@ -79,9 +79,9 @@ set PROJECT_NAME="Required Project Name"
 <TabItem value="PowerShell" label="PowerShell">
 
 ```powershell
-$env: LT_USERNAME="YOUR USERNAME"
-$env: LT_ACCESS_KEY="YOUR ACCESS KEY"
-$env: PROJECT_NAME="Required Project Name"
+$env:LT_USERNAME="YOUR USERNAME"
+$env:LT_ACCESS_KEY="YOUR ACCESS KEY"
+$env:PROJECT_NAME="Required Project Name"
 ```
 
 </TabItem>
@@ -92,7 +92,7 @@ $env: PROJECT_NAME="Required Project Name"
 
 ## 2: Set your Project Token
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+Setup your project token shown in the **SmartUI** app after creating your project.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
@@ -144,7 +144,7 @@ set BASELINE_BRANCH="Required branch"
 <TabItem value="PowerShell" label="PowerShell">
 
 ```powershell
-$env: BASELINE_BRANCH="Required branch"
+$env:BASELINE_BRANCH="Required branch"
 ```
 
 </TabItem>
@@ -172,7 +172,7 @@ set CURRENT_BRANCH="Required branch"
 <TabItem value="PowerShell" label="PowerShell">
 
 ```powershell
-$env: CURRENT_BRANCH="Required branch"
+$env:CURRENT_BRANCH="Required branch"
 ```
 
 </TabItem>
@@ -202,7 +202,7 @@ set HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 <TabItem value="PowerShell" label="PowerShell">
 
 ```powershell
-$env: HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
+$env:HTTP_PROXY="http://<username>:<password>@<domain.com>:<port>/"
 ```
 
 </TabItem>
@@ -229,7 +229,7 @@ set HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>/"
 <TabItem value="PowerShell" label="PowerShell">
 
 ```powershell
-$env: HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>/"
+$env:HTTPS_PROXY="https://<username>:<password>@<domain.com>:<port>/"
 ```
 
 </TabItem>
@@ -258,7 +258,7 @@ set LT_SDK_DEBUG=true
 <TabItem value="PowerShell" label="PowerShell">
 
 ```powershell
-$env: LT_SDK_DEBUG="true"
+$env:LT_SDK_DEBUG="true"
 ```
 
 </TabItem>
@@ -286,11 +286,73 @@ set SMARTUI_DO_NOT_USE_CAPTURED_COOKIES=true
 <TabItem value="PowerShell" label="PowerShell">
 
 ```powershell
-$env: SMARTUI_DO_NOT_USE_CAPTURED_COOKIES="true"
+$env:SMARTUI_DO_NOT_USE_CAPTURED_COOKIES="true"
 ```
 
 </TabItem>
 </Tabs>
+
+## 8. Setting Server Address
+
+For SDK integrations (non-Selenium), set the SmartUI server address:
+
+<Tabs className="docs__val" groupId="language">
+<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+
+```bash
+export SMARTUI_SERVER_ADDRESS="http://localhost:49152"
+```
+
+</TabItem>
+<TabItem value="Windows" label="Windows - CMD">
+
+```bash
+set SMARTUI_SERVER_ADDRESS="http://localhost:49152"
+```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:SMARTUI_SERVER_ADDRESS="http://localhost:49152"
+```
+
+</TabItem>
+</Tabs>
+
+## 9. Additional Environment Variables
+
+The following environment variables are also available for advanced configuration:
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `FIGMA_TOKEN` | Figma API token for Figma integration | - |
+| `NO_PROXY` | Comma-separated hosts to bypass proxy | - |
+| `SMARTUI_HTTP_PROXY` | SmartUI-specific HTTP proxy | - |
+| `SMARTUI_HTTPS_PROXY` | SmartUI-specific HTTPS proxy | - |
+| `SMARTUI_API_PROXY` | API proxy configuration | - |
+| `SMARTUI_CLIENT_API_URL` | Override API URL | `https://api.lambdatest.com/visualui/1.0` |
+| `SMARTUI_UPLOAD_URL` | Override upload URL | `https://api.lambdatest.com` |
+| `SMARTUI_GIT_INFO_FILEPATH` | Custom git info file path | - |
+| `GITHUB_ACTIONS` | GitHub Actions environment flag | - |
+| `SMARTUI_API_SKIP_CERTIFICATES` | Skip SSL certificate validation | `false` |
+| `USE_REMOTE_DISCOVERY` | Use remote discovery mode | `false` |
+| `SMART_GIT` | Enable Smart Git feature | `false` |
+| `SHOW_RENDER_ERRORS` | Show render errors | `false` |
+| `SMARTUI_SSE_URL` | Server-sent events URL | `https://server-events.lambdatest.com` |
+| `LT_SDK_SKIP_EXECUTION_LOGS` | Skip execution logs | `false` |
+| `MAX_CONCURRENT_PROCESSING` | Max concurrent processing threads | `0` (auto) |
+| `DO_NOT_USE_USER_AGENT` | Disable user agent | `false` |
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [CLI Documentation](/support/docs/smartui-cli)
+- [CLI Exec Commands](/support/docs/smartui-cli-exec)
+- [CLI Upload](/support/docs/smartui-cli-upload)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

@@ -102,8 +102,12 @@ You can check the latest version of [lambdatest-java-sdk]( https://mvnrepository
 Install required NPM modules for `LambdaTest SmartUI Selenium SDK` in your **Frontend** project.
 
 ```bash
-npm i @lambdatest/smartui-cli
+npm install @lambdatest/smartui-cli
 ```
+
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
 
 ```bash
 mvn clean compile
@@ -111,7 +115,7 @@ mvn clean compile
 
 ### **Step 4:** Configure your Project Token
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+Setup your project token shown in the **SmartUI** app after creating your project.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
@@ -478,7 +482,10 @@ public void tearDown() {
 
 ## Best Practices
 
-### 1. Screenshot Naming
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="screenshot-naming" label="Screenshot Naming" default>
+
+### Screenshot Naming
 
 - Use descriptive, consistent names for screenshots
 - Include page/component name in screenshot names
@@ -491,7 +498,11 @@ SmartUISnapshot.smartuiSnapshot(driver, "HomePage-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "ProductPage-MainContent");
 ```
 
-### 2. Wait for Page Load
+</TabItem>
+
+<TabItem value="page-load" label="Wait for Page Load">
+
+### Wait for Page Load
 
 - Always wait for pages to fully load before taking screenshots
 - Use explicit waits for dynamic content
@@ -505,23 +516,38 @@ wait.until(ExpectedConditions.presenceOfElementLocated(By.id("main-content")));
 SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 ```
 
-### 3. Handle Dynamic Content
+</TabItem>
+
+<TabItem value="dynamic-content" label="Handle Dynamic Content">
+
+### Handle Dynamic Content
 
 - Use `ignoreDOM` for elements that change between runs
 - Use `selectDOM` when you only need to compare specific areas
 - Document why elements are ignored for future reference
 
-### 4. Configuration Management
+</TabItem>
+
+<TabItem value="configuration" label="Configuration Management">
+
+### Configuration Management
 
 - Keep `.smartui.json` in version control
 - Use environment variables for sensitive data
 - Document custom configuration choices
 
-### 5. Test Organization
+</TabItem>
+
+<TabItem value="test-organization" label="Test Organization">
+
+### Test Organization
 
 - Group related screenshots in the same build
 - Use meaningful build names
 - Run tests in consistent environments
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 

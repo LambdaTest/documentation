@@ -31,9 +31,13 @@ Therefore, if your application adjusts DOM elements between different screen siz
 
 ## Prerequisites 
 
-1. **SmartUI CLI Version:** Ensure you are using `@lambdatest/smartui-cli` version 4.0.7 or higher.
+1. **SmartUI CLI Version:** Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
 2. **SDK Installation:** Install the **SDK** with the specified compatible version.
 3. **Recommended Frameworks:** For optimal performance, use either Playwright or Selenium frameworks.
+
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
 
 ## Steps to Use
 

@@ -98,40 +98,68 @@ Your changes will be triggered and deployed.
 
 ## Best Practices
 
-### 1. Project Naming
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="project-naming" label="Project Naming" default>
+
+### Project Naming
 
 - Use descriptive, consistent names for SmartUI projects
 - Match project names with your Netlify site names for easy identification
 - Avoid special characters that might cause issues
 - Use consistent naming conventions across deployments
 
-### 2. Baseline Management
+</TabItem>
+<TabItem value="baseline-management" label="Baseline Management" >
+
+### Baseline Management
 
 - Establish baseline from stable deployment
 - Review baseline before using for comparisons
 - Update baseline when intentional changes are made
 - Document baseline deployment for reference
 
-### 3. Deployment Strategy
+</TabItem>
+<TabItem value="deployment-strategy" label="Deployment Strategy" >
+
+### Deployment Strategy
 
 - Deploy baseline before making changes
 - Test changes in staging before production
 - Use meaningful deployment messages
 - Tag important deployments
 
-### 4. Integration Configuration
+</TabItem>
+<TabItem value="integration-configuration" label="Integration Configuration" >
+
+### Integration Configuration
 
 - Keep LambdaTest credentials secure
 - Use Netlify's environment variables for credentials
 - Rotate credentials regularly
 - Use different projects for different environments
 
-### 5. Comparison Workflow
+</TabItem>
+<TabItem value="comparison-workflow" label="Comparison Workflow" >
+
+### Comparison Workflow
 
 - Review visual differences carefully
 - Approve intentional changes promptly
 - Document reasons for baseline updates
 - Use SmartUI dashboard for detailed analysis
+
+</TabItem>
+<TabItem value="comparison-workflow" label="Comparison Workflow" >
+
+### Comparison Workflow
+
+- Review visual differences carefully
+- Approve intentional changes promptly
+- Document reasons for baseline updates
+- Use SmartUI dashboard for detailed analysis
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 

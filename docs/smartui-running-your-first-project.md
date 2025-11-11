@@ -93,19 +93,52 @@ You can check the latest version of [lambdatest-java-sdk]( https://mvnrepository
 - Install your CLI and required modules for running SmartUI SDK and compile your defined dependencies in the `pom.xml` file:
 
 ```zsh
-npm i @lambdatest/smartui-cli
+npm install -g @lambdatest/smartui-cli
 mvn clean compile
 ```
 
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
+
 ## Step 3: Setup your Project Token and Environment Variables
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+Setup your project token and credentials shown in the **SmartUI** app after creating your project.
+
+### Setting Project Token
+
+<Tabs className="docs__val" groupId="language">
+<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+
+```bash
+export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+<TabItem value="Windows" label="Windows - CMD">
+
+```bash
+set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+<TabItem value="PowerShell" label="PowerShell">
+
+```powershell
+$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+```
+
+</TabItem>
+</Tabs>
+
+### Setting LambdaTest Credentials (for Hooks)
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
 
 ```bash
 export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
+export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
 ```
 
 </TabItem>
@@ -113,6 +146,7 @@ export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
 
 ```bash
 set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
+set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
 ```
 
 </TabItem>
@@ -120,10 +154,16 @@ set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
 
 ```powershell
 $env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
+$env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
 ```
 
 </TabItem>
 </Tabs>
+
+:::info
+- For CLI projects, use `PROJECT_TOKEN` (no username/access key needed)
+- For Hooks (Selenium, Playwright, etc.), use `LT_USERNAME` and `LT_ACCESS_KEY`
+:::
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/running-first-test/1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

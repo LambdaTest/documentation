@@ -51,20 +51,30 @@ SmartUI CLI allows you to group screenshots in a build name and append new scree
 
 - Basic understanding of Command Line Interface
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
-- Ensure you are using `@lambdatest/smartui-cli` version 4.0.14 or higher.
+- Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
 - A properly configured SmartUI CLI project
+
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
 
 ## Step 1: Install SmartUI CLI
 
 If you haven't already installed SmartUI CLI, install it using npm:
 
+**Global Installation (Recommended):**
 ```bash
-npm i @lambdatest/smartui-cli
+npm install -g @lambdatest/smartui-cli
+```
+
+**Local Installation:**
+```bash
+npm install @lambdatest/smartui-cli
 ```
 
 ## Step 2: Configure your Project Token
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+Setup your project token shown in the **SmartUI** app after creating your project.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
@@ -134,3 +144,12 @@ This approach provides a structured and efficient way to manage visual tests:
 - **New Build for Each HyperExecute Job:** A dedicated build is created for every HyperExecute job, ensuring clear separation and traceability.
 - **Consolidated Screenshot Grouping:** Screenshots from all tests within the same job are appended to a single build for seamless organization.
 - **Uninterrupted Git Workflow:** Git branching strategies remain unaffected, enabling robust baseline management across branches.
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [CLI Documentation](/support/docs/smartui-cli)
+- [CLI Exec Commands](/support/docs/smartui-cli-exec)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)

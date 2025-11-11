@@ -70,6 +70,11 @@ You should use dynamic data handling in the following scenarios:
 7. **Cookie Banners**: Consent banners that appear differently each time
 8. **Notifications**: Unread message counts or notification badges
 
+## Dynamic Data Handling Methods
+
+<Tabs className="docs__val" groupId="dynamic-data-methods">
+<TabItem value="ignore" label="Ignore DOM Elements" default>
+
 ## Ignore DOM Elements
 
 Use `ignoreDOM` to exclude specific elements from visual comparison. This is useful when you want to compare the entire page but ignore certain dynamic elements.
@@ -254,6 +259,10 @@ options = {
 </TabItem>
 </Tabs>
 
+</TabItem>
+
+<TabItem value="select" label="Select DOM Elements">
+
 ## Select DOM Elements
 
 Use `selectDOM` to include only specific elements in visual comparison. This is useful when you want to compare only certain parts of the page, ignoring everything else.
@@ -421,6 +430,10 @@ options = {
 </TabItem>
 </Tabs>
 
+</TabItem>
+
+<TabItem value="combining" label="Combining Methods">
+
 ## Combining ignoreDOM and selectDOM
 
 You can combine both `ignoreDOM` and `selectDOM` in the same options object. When both are specified, `selectDOM` is applied first to include elements, then `ignoreDOM` is applied to exclude specific elements from the selected set.
@@ -437,9 +450,9 @@ let options = {
 await smartuiSnapshot(driver, 'Home Page', options);
 ```
 
-## Use Cases
+### Use Cases
 
-### Use Case 1: E-commerce Product Page
+#### Use Case 1: E-commerce Product Page
 
 **Scenario**: Product pages display prices, stock counts, and user reviews that change frequently.
 
@@ -459,7 +472,7 @@ let options = {
 await smartuiSnapshot(driver, 'Product Page', options);
 ```
 
-### Use Case 2: Dashboard with Real-time Data
+#### Use Case 2: Dashboard with Real-time Data
 
 **Scenario**: Dashboard displays live metrics, timestamps, and user-specific data.
 
@@ -481,7 +494,7 @@ let options = {
 await smartuiSnapshot(driver, 'Dashboard', options);
 ```
 
-### Use Case 3: News Article Page
+#### Use Case 3: News Article Page
 
 **Scenario**: Article pages have timestamps, author info, and related articles that change.
 
@@ -497,6 +510,10 @@ let options = {
 await smartuiSnapshot(driver, 'Article Page', options);
 ```
 
+</TabItem>
+
+<TabItem value="best-practices" label="Best Practices">
+
 ## Best Practices
 
 1. **Use Specific Selectors**: Prefer IDs or data attributes over generic class names for more precise targeting.
@@ -510,6 +527,10 @@ await smartuiSnapshot(driver, 'Article Page', options);
 5. **Avoid Over-ignoring**: Only ignore elements that are truly dynamic. Over-ignoring can hide real UI issues.
 
 6. **Use Data Attributes**: Add `data-testid` attributes to elements you need to target for better test stability.
+
+</TabItem>
+
+<TabItem value="troubleshooting" label="Troubleshooting">
 
 ## Troubleshooting
 
@@ -559,6 +580,9 @@ await smartuiSnapshot(driver, 'Page', options);
 1. Review the diff to identify missed dynamic elements
 2. Add more selectors to ignoreDOM
 3. Increase wait times or use explicit waits
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

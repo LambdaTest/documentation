@@ -76,14 +76,20 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 
 ## Best Practices
 
-### 1. Secret Management
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="secret-management" label="Secret Management" default>
+
+### Secret Management
 
 - Never commit credentials to repository
 - Use Semaphore Secrets for all sensitive data
 - Rotate secrets regularly
 - Use different secrets for different environments
 
-### 2. Pipeline Optimization
+</TabItem>
+<TabItem value="pipeline-optimization" label="Pipeline Optimization" >
+
+### Pipeline Optimization
 
 - Use parallel blocks for faster execution
 - Cache dependencies to speed up pipelines
@@ -97,7 +103,10 @@ auto_cancel:
     when: "branch != 'main'"
 ```
 
-### 3. Build Naming
+</TabItem>
+<TabItem value="build-naming" label="Build Naming" >
+
+### Build Naming
 
 - Use meaningful build names that include branch/commit info
 - Include commit SHA for traceability
@@ -110,19 +119,38 @@ env_vars:
     value: "${SEMAPHORE_GIT_BRANCH}-${SEMAPHORE_GIT_SHA}"
 ```
 
-### 4. Error Handling
+</TabItem>
+<TabItem value="error-handling" label="Error Handling" >
+
+### Error Handling
 
 - Set up proper error handling in pipelines
 - Use pipeline status checks
 - Configure notifications for failures
 - Add retry logic for flaky tests
 
-### 5. Resource Management
+</TabItem>
+<TabItem value="resource-management" label="Resource Management" >
+
+### Resource Management
 
 - Limit concurrent pipeline runs
 - Clean up old builds regularly
 - Monitor pipeline execution time
 - Optimize test execution order
+
+</TabItem>
+<TabItem value="resource-management" label="Resource Management" >
+
+### Resource Management
+
+- Limit concurrent pipeline runs
+- Clean up old builds regularly
+- Monitor pipeline execution time
+- Optimize test execution order
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 

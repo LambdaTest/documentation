@@ -69,15 +69,25 @@ The first step is to create a project with the application in which we will comb
 
 ## Step 1: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI CLI` in your **Frontend** project.
+Install required NPM modules for `LambdaTest SmartUI CLI` globally or in your project:
 
+**Global Installation (Recommended):**
+```bash
+npm install -g @lambdatest/smartui-cli
+```
+
+**Local Installation:**
 ```bash
 npm install @lambdatest/smartui-cli
 ```
 
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
+
 ## Step 2: Configure your Project Token
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+Setup your project token shown in the **SmartUI** app after creating your project.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
@@ -131,7 +141,11 @@ Please read the following table for more information about the options available
 | -F | --files `extensions`            | Comma-separated list of allowed file extensions| `npx smartui upload <directoryName> -F jpg,png`|
 | -E | --removeExtensions          | Strips file extensions from snapshot names| `npx smartui upload <directoryName>  -E` |
 | -i | --ignoreDir `patterns`        | Comma-separated list of directories to ignore | `npx smartui upload <directoryName> -i dir1/dir2,dir3` |
-|    | --fetch-results | Live fetched comparison results in a json file | `npx smartui upload <directoryName> --fetch-results`|
+|    | --fetch-results [filename] | Live fetched comparison results in a json file | `npx smartui upload <directoryName> --fetch-results [custom-results.json]`|
+|    | --buildName <string> | Specify a custom build name | `npx smartui upload <directoryName> --buildName "Build Name"`|
+|    | --userName <string> | Override LambdaTest username | `npx smartui upload <directoryName> --userName "user"`|
+|    | --accessKey <string> | Override LambdaTest access key | `npx smartui upload <directoryName> --accessKey "key"`|
+|    | --config <filepath> | Configuration file path | `npx smartui upload <directoryName> --config .smartui.json`|
 
 :::note 
 You may use the `smartui upload --help` command in case you are facing issues during the execution of SmartUI Upload options in the CLI.
@@ -198,7 +212,15 @@ npx smartui upload <directoryName>  --buildName "Sample Build Name"
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [CLI Documentation](/support/docs/smartui-cli)
+- [CLI Exec Commands](/support/docs/smartui-cli-exec)
+- [Environment Variables](/support/docs/smartui-cli-env-variables)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
 
 <nav aria-label="breadcrumbs">

@@ -56,8 +56,12 @@ SmartUI CLI allows you to fetch detailed build results after executing your visu
 
 - Basic understanding of Command Line Interface
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
-- Ensure you are using `@lambdatest/smartui-cli` version 4.0.8 or higher.
+- Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
 - A properly configured SmartUI CLI project
+
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
 
 ## Steps to Use
 
@@ -65,13 +69,19 @@ SmartUI CLI allows you to fetch detailed build results after executing your visu
 
 If you haven't already installed SmartUI CLI, install it using npm:
 
+**Global Installation (Recommended):**
 ```bash
-npm i @lambdatest/smartui-cli
+npm install -g @lambdatest/smartui-cli
+```
+
+**Local Installation:**
+```bash
+npm install @lambdatest/smartui-cli
 ```
 
 ### **Step 2:** Configure your Project Token
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+Setup your project token shown in the **SmartUI** app after creating your project.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
@@ -233,6 +243,15 @@ The fetched results JSON file contains detailed information about your build and
   }
 }
 ```
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [CLI Documentation](/support/docs/smartui-cli)
+- [CLI Exec Commands](/support/docs/smartui-cli-exec)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

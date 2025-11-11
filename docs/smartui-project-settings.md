@@ -56,6 +56,19 @@ To access the Project Settings in SmartUI, you must meet the following requireme
 2. Ensure you have an active [subscription plan](https://www.lambdatest.com/pricing) with a valid screenshots limit.
 3. You must have created a project within the SmartUI web app.
 
+## Navigating to Project Settings
+
+To access the Project Settings, follow these simple steps:
+
+1. Log in to your SmartUI account and navigate to your desired SmartUI project and click on it.
+
+2. Click on the "Project Settings" section within the SmartUI dashboard to access the settings related to your project.
+
+## Project Settings
+
+<Tabs className="docs__val" groupId="project-settings">
+<TabItem value="token" label="Project Token" default>
+
 ## Project Token
 
 The Project Token is a unique identifier that authenticates your SmartUI project for executing tests locally with CLI and APIs. You'll find your Project Token in the Project Settings after creating a project.
@@ -100,19 +113,11 @@ The Project Token is required for:
 Keep your Project Token secure and never commit it to version control. Use environment variables or secret management tools in CI/CD pipelines.
 :::
 
-## Navigating to Project Settings
+</TabItem>
 
-To access the Project Settings, follow these simple steps:
+<TabItem value="basic" label="Basic Settings">
 
-1. Log in to your SmartUI account and navigate to your desired SmartUI project and click on it.
-
-2. Click on the "Project Settings" section within the SmartUI dashboard to access the settings related to your project.
-
-## Types of Settings
-
-SmartUI's Project Settings are organized into sections to streamline the configuration process. Here are the primary sections you'll find:
-
-### Basic Settings
+## Basic Settings
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/Basic_ss.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -130,13 +135,17 @@ Altering Approvers will impact email notifications, which will be sent to the la
 
 - **Tags:** Add tags to your project for better organization and categorization.
 
-### Comparison Settings
+</TabItem>
+
+<TabItem value="comparison" label="Comparison Settings">
+
+## Comparison Settings
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/comparison.png').default} alt="Comparison Settings" width="768" height="373" className="doc_img"/>
 
 Comparison settings allow you to fine-tune how SmartUI compares screenshots, balancing between highlighting important changes and ignoring noise.
 
-#### Pixel Threshold
+### Pixel Threshold
 
 Strike a balance between highlighting important changes and ignoring noise. The pixel threshold determines the sensitivity of the comparison algorithm.
 
@@ -153,7 +162,7 @@ Strike a balance between highlighting important changes and ignoring noise. The 
 Adjusting the Pixel Threshold in Comparison Settings will only affect new builds/screenshots captured after the update.
 :::
 
-#### Error Highlight Color
+### Error Highlight Color
 
 Set the color to show/highlight the changes in the pixel differences on your test output.
 
@@ -168,7 +177,7 @@ Set the color to show/highlight the changes in the pixel differences on your tes
 
 **Use Case**: Choose a color that provides good contrast against your page background for easier visual identification of differences.
 
-#### Custom Mismatch Acceptance
+### Custom Mismatch Acceptance
 
 Configure pixel-to-pixel acceptance percentage for auto-approval.
 
@@ -182,7 +191,7 @@ Configure pixel-to-pixel acceptance percentage for auto-approval.
 
 **Use Case**: Automatically approve screenshots with differences below the acceptance threshold, reducing manual review time.
 
-#### Smart Ignore
+### Smart Ignore
 
 Highlight content changes while smartly ignoring layout shifts and displacement differences.
 
@@ -195,7 +204,7 @@ Highlight content changes while smartly ignoring layout shifts and displacement 
 
 For detailed information, refer to [Smart Ignore Documentation](/support/docs/smartui-smartignore).
 
-#### Bounding Boxes
+### Bounding Boxes
 
 Configure your areas to which needs to be ignored or select a specific area for comparison.
 
@@ -204,11 +213,11 @@ Configure your areas to which needs to be ignored or select a specific area for 
 - Focus comparison on specific areas (main content, critical UI)
 - Define regions of interest for comparison
 
-#### Advanced Comparison Settings
+### Advanced Comparison Settings
 
 Manage your Pixel to Pixel false positives and comparison view types.
 
-##### Ignore Pixel Scaling Options
+#### Ignore Pixel Scaling Options
 
 Choose options to remove the Pixel to Pixel false-positive rate in identifying the screenshot.
 
@@ -221,7 +230,7 @@ Choose options to remove the Pixel to Pixel false-positive rate in identifying t
 
 **Use Case**: Reduce false positives from rendering differences, browser-specific rendering, or minor pixel variations.
 
-##### Error Type Identifier
+#### Error Type Identifier
 
 Show the differences in the output screen by identifying the pixel changes type and capture the intended view.
 
@@ -234,7 +243,7 @@ Show the differences in the output screen by identifying the pixel changes type 
 
 **Use Case**: Choose the view that best helps you identify and understand the differences in your screenshots.
 
-##### Transparency
+#### Transparency
 
 Strike a balance between highlighting differences and maintaining visibility of the underlying content.
 
@@ -244,7 +253,7 @@ Strike a balance between highlighting differences and maintaining visibility of 
 
 **Use Case**: Adjust transparency to see both the differences and the original content for better context.
 
-##### Resize Image
+#### Resize Image
 
 Ability to scale the test screenshot according to baseline.
 
@@ -261,9 +270,13 @@ Changes to Project Settings will impact builds/comparisons executed after the ch
 #### Additional Information:
 For detailed information on these options, refer to our [Comparison Settings Documentation](https://www.lambdatest.com/support/docs/test-settings-options/).
 
-### Build Settings
+</TabItem>
 
-#### Smart Baseline
+<TabItem value="build" label="Build Settings">
+
+## Build Settings
+
+### Smart Baseline
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smart_baseline_ss.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -283,15 +296,14 @@ When **`Smart Baseline`** is turned on, the system automatically updates the bas
 Please note that this feature is not supported for projects integrated with `Git` as `Git`-based projects follow a [Git branching strategy](https://www.lambdatest.com/support/docs/smartui-github-app-integration/).
 :::
 
-#### Git Settings
+### Git Settings
 
 Configure Git-related settings for your project, including the baseline branch name, auto-approval branches, GitHub repository linkage, and run status checks.
 
 #### Additional Information:
 For detailed information on these options, refer to our [Git Baseline Branching Documentation](https://www.lambdatest.com/support/docs/smartui-github-app-integration/).
 
-
-#### Overwrite Screenshot
+### Overwrite Screenshot
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/overwrite_ss.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -299,13 +311,17 @@ For detailed information on these options, refer to our [Git Baseline Branching 
 
 - This capability provides users with more control over the management of screenshots with identical names, enabling them to maintain accurate visual records and efficiently track changes in their application's user interface over time.
 
-### Notifications
+</TabItem>
+
+<TabItem value="notifications" label="Notifications">
+
+## Notifications
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/notif_ss.png').default} alt="Notifications Settings" width="768" height="373" className="doc_img"/>
 
 Configure how you receive alerts and updates about your SmartUI project.
 
-#### Email Notifications
+### Email Notifications
 
 Receive email notifications whenever there are changes found in your build or the project baseline changes.
 
@@ -316,7 +332,7 @@ Receive email notifications whenever there are changes found in your build or th
 
 **Use Case**: Stay informed about visual changes without constantly checking the dashboard.
 
-#### Slack Alerts
+### Slack Alerts
 
 Receive Slack alerts whenever there are changes found in your build.
 
@@ -331,7 +347,11 @@ Receive Slack alerts whenever there are changes found in your build.
 We are continually adding more notification channels for SmartUI.
 :::
 
-### LambdaTest Badge
+</TabItem>
+
+<TabItem value="other" label="Other Settings">
+
+## LambdaTest Badge
 
 Show the world that you are using LambdaTest for your visual regression testing.
 
@@ -342,16 +362,18 @@ Show the world that you are using LambdaTest for your visual regression testing.
 
 **Use Case**: Add to your README or documentation to showcase your testing setup.
 
-### Delete Project
+## Delete Project
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/delete.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 The "Delete Project" option allows administrators or project creators to permanently delete a project. Once a project is deleted, it cannot be retrieved.
 
-
 :::info
 Only the **Admin** or **Creator** of the project can delete a project. Once deleted, a project cannot be retrieved.
 :::
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

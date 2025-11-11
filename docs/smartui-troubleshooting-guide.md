@@ -259,6 +259,128 @@ Before diving into specific issues, run through this quick checklist:
 
 **Related Documentation**: [Selenium Visual Regression](/support/docs/selenium-visual-regression), [Playwright Visual Regression](/support/docs/playwright-visual-regression)
 
+---
+
+### Issue: CLI Installation and Version Management
+
+**Symptoms**: 
+- "command not found: smartui" error
+- CLI commands not working
+- Using outdated CLI version
+- Inconsistent behavior between terminals
+
+**Possible Causes**:
+- CLI not installed globally
+- CLI installed locally but not accessible
+- Using outdated version
+- Multiple versions installed
+- PATH not configured correctly
+
+**Solutions**:
+
+1. **Understanding Global vs Local Installation**:
+
+   **Global Installation (`-g` flag)**:
+   - Installs CLI system-wide, accessible from any terminal
+   - Command available as `smartui` directly
+   - Requires administrator/sudo privileges
+   - Best for: Single user, consistent environment
+   
+   ```bash
+   npm install -g @lambdatest/smartui-cli
+   ```
+   
+   **Local Installation (without `-g`)**:
+   - Installs CLI in project's `node_modules`
+   - Access via `npx smartui` or `./node_modules/.bin/smartui`
+   - No admin privileges needed
+   - Best for: Project-specific versions, CI/CD pipelines
+   
+   ```bash
+   npm install @lambdatest/smartui-cli
+   npx smartui --version
+   ```
+
+2. **Installing Latest Versions**:
+
+   **SmartUI CLI**:
+   ```bash
+   # Global installation (latest)
+   npm install -g @lambdatest/smartui-cli@latest
+   
+   # Local installation (latest)
+   npm install @lambdatest/smartui-cli@latest
+   
+   # Using npx (always uses latest)
+   npx @lambdatest/smartui-cli@latest --version
+   ```
+
+   **SmartUI Storybook CLI**:
+   ```bash
+   # Global installation (latest)
+   npm install -g @lambdatest/smartui-storybook@latest
+   
+   # Local installation (latest)
+   npm install @lambdatest/smartui-storybook@latest
+   
+   # Using npx (always uses latest)
+   npx @lambdatest/smartui-storybook@latest --version
+   ```
+
+3. **Checking Current Version**:
+   ```bash
+   # If installed globally
+   smartui --version
+   
+   # If installed locally or using npx
+   npx smartui --version
+   ```
+
+4. **Updating to Latest Version**:
+   ```bash
+   # Global update
+   npm update -g @lambdatest/smartui-cli
+   
+   # Local update
+   npm update @lambdatest/smartui-cli
+   
+   # Force reinstall latest
+   npm install -g @lambdatest/smartui-cli@latest --force
+   ```
+
+5. **Resolving "Command Not Found"**:
+
+   **If installed globally**:
+   - Verify npm global bin is in PATH:
+     ```bash
+     echo $PATH | grep -i node
+     npm config get prefix
+     ```
+   - Add to PATH if missing:
+     ```bash
+     # macOS/Linux - Add to ~/.bashrc or ~/.zshrc
+     export PATH="$PATH:$(npm config get prefix)/bin"
+     ```
+
+   **If installed locally**:
+   - Always use `npx` prefix:
+     ```bash
+     npx smartui --version
+     npx smartui exec -- <command>
+     ```
+   - Or use direct path:
+     ```bash
+     ./node_modules/.bin/smartui --version
+     ```
+
+6. **Best Practices**:
+   - **For Development**: Use local installation with `npx` for project-specific versions
+   - **For CI/CD**: Use `npx @lambdatest/smartui-cli@latest` to ensure latest version
+   - **For Global Use**: Install globally with `-g` flag for convenience
+   - **Version Pinning**: Use specific versions in `package.json` for reproducible builds
+
+**Related Documentation**: [CLI Complete Reference](/support/docs/smartui-cli-complete-reference), [Running Your First Project](/support/docs/smartui-running-your-first-project)
+
 </TabItem>
 
 <TabItem value="screenshot" label="Screenshot & Content">
@@ -560,7 +682,7 @@ Before diving into specific issues, run through this quick checklist:
    node --version
    ```
    
-   Ensure Node.js v14+ is installed
+   Ensure Node.js v20.3+ is installed (required for SmartUI CLI v4.x.x)
 
 5. **Use Package Lock Files**:
    - Use `package-lock.json` for npm
@@ -706,6 +828,251 @@ Before diving into specific issues, run through this quick checklist:
    - Use standard line endings
 
 **Related Documentation**: [Configuration Options](/support/docs/smartui-sdk-config-options), [Custom CSS](/support/docs/smartui-custom-css)
+
+---
+
+### Issue: Environment Variables Not Persisting or Not Working
+
+**Symptoms**: 
+- Environment variables work in one terminal but not another
+- Variables reset after closing terminal
+- Variables not available in VS Code terminal
+- Variables not working in CI/CD pipelines
+- "Variable not found" errors
+
+**Possible Causes**:
+- Variables set only in current session
+- Shell startup file not configured
+- VS Code terminal not loading shell config
+- Variables not exported correctly
+- Different shell environments
+
+**Solutions**:
+
+1. **Making Environment Variables Persistent**:
+
+   To keep environment variables consistent across all terminals, configure them in your shell's startup file:
+
+   <Tabs className="docs__val" groupId="platform">
+   <TabItem value="bash" label="Bash (.bashrc)" default>
+   
+   ```bash
+   # Edit ~/.bashrc
+   nano ~/.bashrc
+   
+   # Add your environment variables
+   export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+   export LT_USERNAME="your_username"
+   export LT_ACCESS_KEY="your_access_key"
+   
+   # Reload the configuration
+   source ~/.bashrc
+   ```
+   
+   </TabItem>
+   <TabItem value="zsh" label="Zsh (.zshrc)">
+   
+   ```bash
+   # Edit ~/.zshrc
+   nano ~/.zshrc
+   
+   # Add your environment variables
+   export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+   export LT_USERNAME="your_username"
+   export LT_ACCESS_KEY="your_access_key"
+   
+   # Reload the configuration
+   source ~/.zshrc
+   ```
+   
+   </TabItem>
+   <TabItem value="powershell" label="PowerShell ($PROFILE)">
+   
+   ```powershell
+   # Check if profile exists
+   Test-Path $PROFILE
+   
+   # Create profile if it doesn't exist
+   if (!(Test-Path $PROFILE)) {
+       New-Item -Type File -Path $PROFILE -Force
+   }
+   
+   # Edit profile
+   notepad $PROFILE
+   
+   # Add your environment variables
+   $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+   $env:LT_USERNAME="your_username"
+   $env:LT_ACCESS_KEY="your_access_key"
+   
+   # Reload the profile
+   . $PROFILE
+   ```
+   
+   </TabItem>
+   </Tabs>
+
+2. **Configuring Environment Variables in VS Code**:
+
+   If environment variables don't work in VS Code terminals, configure them in VS Code settings:
+
+   **Option 1: User Settings (settings.json)**
+   
+   Open VS Code settings (`Ctrl+,` or `Cmd+,`) and add:
+   
+   ```json
+   {
+     "terminal.integrated.env.linux": {
+       "PROJECT_TOKEN": "123456#1234abcd-****-****-****-************",
+       "LT_USERNAME": "your_username",
+       "LT_ACCESS_KEY": "your_access_key"
+     },
+     "terminal.integrated.env.osx": {
+       "PROJECT_TOKEN": "123456#1234abcd-****-****-****-************",
+       "LT_USERNAME": "your_username",
+       "LT_ACCESS_KEY": "your_access_key"
+     },
+     "terminal.integrated.env.windows": {
+       "PROJECT_TOKEN": "123456#1234abcd-****-****-****-************",
+       "LT_USERNAME": "your_username",
+       "LT_ACCESS_KEY": "your_access_key"
+     }
+   }
+   ```
+   
+   **Option 2: Workspace Settings (.vscode/settings.json)**
+   
+   Create or edit `.vscode/settings.json` in your project root:
+   
+   ```json
+   {
+     "terminal.integrated.env.linux": {
+       "PROJECT_TOKEN": "123456#1234abcd-****-****-****-************"
+     },
+     "terminal.integrated.env.osx": {
+       "PROJECT_TOKEN": "123456#1234abcd-****-****-****-************"
+     },
+     "terminal.integrated.env.windows": {
+       "PROJECT_TOKEN": "123456#1234abcd-****-****-****-************"
+     }
+   }
+   ```
+   
+   **Note**: Restart VS Code or reload the window after making changes.
+
+3. **Using .env Files**:
+
+   For project-specific environment variables, use a `.env` file:
+
+   **Create `.env` file in project root**:
+   ```bash
+   PROJECT_TOKEN=123456#1234abcd-****-****-****-************
+   LT_USERNAME=your_username
+   LT_ACCESS_KEY=your_access_key
+   ```
+
+   **Load .env file automatically**:
+
+   **For Node.js projects**:
+   - Install `dotenv` package:
+     ```bash
+     npm install dotenv
+     ```
+   - Load in your scripts:
+     ```javascript
+     require('dotenv').config();
+     ```
+   - Or use `dotenv-cli`:
+     ```bash
+     npm install -g dotenv-cli
+     dotenv smartui exec -- <command>
+     ```
+
+   **For Python projects**:
+   - Install `python-dotenv`:
+     ```bash
+     pip install python-dotenv
+     ```
+   - Load in your scripts:
+     ```python
+     from dotenv import load_dotenv
+     load_dotenv()
+     ```
+
+   **For VS Code**:
+   - Install "DotENV" extension
+   - Or use "Python" extension which auto-loads `.env` files
+
+4. **Verifying Environment Variables**:
+
+   <Tabs className="docs__val" groupId="platform">
+   <TabItem value="macos-linux" label="MacOS/Linux" default>
+   
+   ```bash
+   # Check if variable is set
+   echo $PROJECT_TOKEN
+   echo $LT_USERNAME
+   echo $LT_ACCESS_KEY
+   
+   # List all SmartUI-related variables
+   env | grep -E "PROJECT_TOKEN|LT_USERNAME|LT_ACCESS_KEY|SMARTUI"
+   ```
+   
+   </TabItem>
+   <TabItem value="windows-cmd" label="Windows CMD">
+   
+   ```bash
+   # Check if variable is set
+   echo %PROJECT_TOKEN%
+   echo %LT_USERNAME%
+   echo %LT_ACCESS_KEY%
+   
+   # List all environment variables
+   set | findstr /i "PROJECT_TOKEN LT_USERNAME LT_ACCESS_KEY SMARTUI"
+   ```
+   
+   </TabItem>
+   <TabItem value="powershell" label="PowerShell">
+   
+   ```powershell
+   # Check if variable is set
+   echo $env:PROJECT_TOKEN
+   echo $env:LT_USERNAME
+   echo $env:LT_ACCESS_KEY
+   
+   # List all SmartUI-related variables
+   Get-ChildItem Env: | Where-Object { $_.Name -like "*PROJECT_TOKEN*" -or $_.Name -like "*LT_*" -or $_.Name -like "*SMARTUI*" }
+   ```
+   
+   </TabItem>
+   </Tabs>
+
+5. **Troubleshooting Common Issues**:
+
+   **Issue: Variables not available after adding to startup file**
+   - Solution: Restart terminal or run `source ~/.bashrc` / `source ~/.zshrc`
+
+   **Issue: VS Code terminal not picking up variables**
+   - Solution: Add to VS Code settings.json as shown above, then restart VS Code
+
+   **Issue: Variables work in terminal but not in scripts**
+   - Solution: Ensure variables are exported (use `export` in bash/zsh)
+
+   **Issue: Different values in different terminals**
+   - Solution: Use startup file configuration instead of session-only exports
+
+   **Issue: .env file not loading**
+   - Solution: Verify file is in project root, check file permissions, ensure extension/package is installed
+
+6. **Best Practices**:
+
+   - **Never commit sensitive data**: Add `.env` to `.gitignore`
+   - **Use different values per environment**: Development, staging, production
+   - **Document required variables**: List in README or documentation
+   - **Use CI/CD secrets**: Store sensitive values in CI/CD platform secrets/variables
+   - **Validate on startup**: Check if required variables are set before running tests
+
+**Related Documentation**: [CLI Environment Variables](/support/docs/smartui-cli-env-variables), [Running Your First Project](/support/docs/smartui-running-your-first-project)
 
 </TabItem>
 

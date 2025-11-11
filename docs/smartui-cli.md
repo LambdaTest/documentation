@@ -77,11 +77,21 @@ The first step is to create a project with the application in which we will comb
 
 ## Step 1: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI CLI` in your **Frontend** project.
+Install required NPM modules for `LambdaTest SmartUI CLI` globally or in your project:
 
+**Global Installation (Recommended):**
+```bash
+npm install -g @lambdatest/smartui-cli
+```
+
+**Local Installation:**
 ```bash
 npm install @lambdatest/smartui-cli
 ```
+
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
 
 ## Step 2: Create URL file
 
@@ -113,7 +123,7 @@ If you are using any async components, you can add wait time for the page to loa
 
 ## Step 3: Configure your Project Token
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+Setup your project token shown in the **SmartUI** app after creating your project.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
@@ -224,6 +234,21 @@ You can now execute tests for `Visual Regression Testing` using the following op
 
 ```bash
 npx smartui capture urls.json --config .smartui.json
+```
+
+### Additional Options
+
+You can also use the following options with the capture command:
+
+- `--scheduled <string>` - Specify schedule ID for scheduled test runs
+- `--userName <string>` - Override LambdaTest username
+- `--accessKey <string>` - Override LambdaTest access key
+- `--buildName <string>` - Specify a custom build name
+- `--fetch-results [filename]` - Fetch and save results to JSON file
+
+**Example with additional options:**
+```bash
+npx smartui capture urls.json --config .smartui.json --buildName "Release-v1.0" --fetch-results results.json
 ```
 
 ## Executing browser scripts using the Capture Command
@@ -337,12 +362,18 @@ You can reduce the build time by executing parallel URLs in the following way.
 npx smartui capture urls.json --config .smartui.json --parallel <number-of-parallels> --fetch-results   
 ```
 
-- The `--parallel` flag determines how many URLs will be processed simultaneously
+- The `--parallel` flag determines how many URLs will be processed simultaneously per browser
 - Each thread captures screenshots independently, maximizing throughput
+- Use `--force` flag to forcefully apply parallel instances even if not optimal
 
 >**Example:**
 >```bash
 >npx smartui capture urls.json --config .smartui.json --parallel 3 --fetch-results   
+>```
+
+>**Example with force flag:**
+>```bash
+>npx smartui capture urls.json --config .smartui.json --parallel 5 --force --fetch-results   
 >```
 
 ### Determining Optimal Thread Count
@@ -360,7 +391,15 @@ The maximum number of parallel threads is calculated using the formula: log<sub>
 - Ensure stable internet connection for reliable parallel processing
 
 
-For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [CLI Exec Commands](/support/docs/smartui-cli-exec)
+- [CLI Upload](/support/docs/smartui-cli-upload)
+- [Environment Variables](/support/docs/smartui-cli-env-variables)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
 
 <nav aria-label="breadcrumbs">

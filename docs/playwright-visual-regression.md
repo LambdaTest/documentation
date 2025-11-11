@@ -253,7 +253,10 @@ For additional information about Playwright framework please explore the documen
 
 ## Best Practices
 
-### 1. Capability Configuration
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="capability-configuration" label="Capability Configuration" default>
+
+### Capability Configuration
 
 - Always set `visual: true` in your capabilities to enable SmartUI
 - Use consistent project and build names across test runs
@@ -277,7 +280,10 @@ const capabilities = {
 };
 ```
 
-### 2. Screenshot Timing
+</TabItem>
+<TabItem value="screenshot-timing" label="Screenshot Timing" >
+
+### Screenshot Timing
 
 - Wait for page elements to load before capturing screenshots
 - Use Playwright's wait methods for dynamic content
@@ -290,23 +296,44 @@ await page.waitForSelector('.main-content', { state: 'visible' });
 await page.waitForLoadState('networkidle');
 ```
 
-### 3. Screenshot Naming
+</TabItem>
+<TabItem value="screenshot-naming" label="Screenshot Naming" >
+
+### Screenshot Naming
 
 - Use descriptive, consistent names
 - Include context (page, component, state) in names
 - Avoid special characters
 
-### 4. Baseline Management
+</TabItem>
+<TabItem value="baseline-management" label="Baseline Management" >
+
+### Baseline Management
 
 - Establish baselines from stable builds
 - Review and approve baselines before using
 - Update baselines when intentional changes are made
 
-### 5. Viewport Selection
+</TabItem>
+<TabItem value="viewport-selection" label="Viewport Selection" >
+
+### Viewport Selection
 
 - Test on viewports that match your user base
 - Include mobile, tablet, and desktop viewports
 - Consider both portrait and landscape orientations
+
+</TabItem>
+<TabItem value="viewport-selection" label="Viewport Selection" >
+
+### Viewport Selection
+
+- Test on viewports that match your user base
+- Include mobile, tablet, and desktop viewports
+- Consider both portrait and landscape orientations
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 
