@@ -625,7 +625,7 @@ This may take a few seconds to process the screenshot. Please ensure that you ha
   **Advanced Test Settings** - We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites. To know more about our advanced P2P comparison options, click [here](https://www.lambdatest.com/support/docs/test-settings-options/).
   
 
-  **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, click [here](/support/docs/html-dom-smartui-options/#configuration-for-selenium).
+  **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
 
 ## Best Practices
 
@@ -650,7 +650,7 @@ let capabilities = {
 ```
 
 </TabItem>
-<TabItem value="screenshot-timing" label="Screenshot Timing" >
+<TabItem value="screenshot-timing" label="Screenshot Timing">
 
 ### Screenshot Timing
 
@@ -659,7 +659,7 @@ let capabilities = {
 - Consider page load time when setting up tests
 
 </TabItem>
-<TabItem value="screenshot-naming" label="Screenshot Naming" >
+<TabItem value="screenshot-naming" label="Screenshot Naming">
 
 ### Screenshot Naming
 
@@ -668,7 +668,7 @@ let capabilities = {
 - Avoid special characters
 
 </TabItem>
-<TabItem value="baseline-management" label="Baseline Management" >
+<TabItem value="baseline-management" label="Baseline Management">
 
 ### Baseline Management
 
@@ -677,7 +677,7 @@ let capabilities = {
 - Update baselines when intentional changes are made
 
 </TabItem>
-<TabItem value="viewport-selection" label="Viewport Selection" >
+<TabItem value="viewport-selection" label="Viewport Selection">
 
 ### Viewport Selection
 
@@ -686,7 +686,7 @@ let capabilities = {
 - Consider both portrait and landscape orientations
 
 </TabItem>
-<TabItem value="viewport-selection" label="Viewport Selection" >
+<TabItem value="viewport-selection" label="Viewport Selection">
 
 ### Viewport Selection
 
@@ -699,9 +699,10 @@ let capabilities = {
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>
 
-#### Issue: Screenshots Not Captured
+### Issue: Screenshots Not Captured
 
 **Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
 
@@ -733,7 +734,10 @@ let capabilities = {
 
 4. Check network connectivity to LambdaTest
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value="project-not-found-error" label="Project Not Found" Error">
+
+### Issue: "Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -748,7 +752,10 @@ let capabilities = {
 3. Check credentials match the account with the project
 4. Ensure project name is in capabilities, not just in dashboard
 
-#### Issue: Screenshots Show Blank Pages
+</TabItem>
+<TabItem value="screenshots-show-blank-pages" label="Screenshots Show Blank Pages">
+
+### Issue: Screenshots Show Blank Pages
 
 **Symptoms**: Screenshots captured but show blank or incomplete content
 
@@ -773,7 +780,10 @@ let capabilities = {
 
 4. Check viewport size matches expected dimensions
 
-#### Issue: Build Name Conflicts
+</TabItem>
+<TabItem value="build-name-conflicts" label="Build Name Conflicts">
+
+### Issue: Build Name Conflicts
 
 **Symptoms**: Screenshots appear in wrong build or build name issues
 
@@ -792,7 +802,10 @@ let capabilities = {
 
 3. Use consistent naming convention across team
 
-#### Issue: Webhook Not Receiving Results
+</TabItem>
+<TabItem value="webhook-not-receiving-results" label="Webhook Not Receiving Results">
+
+### Issue: Webhook Not Receiving Results
 
 **Symptoms**: Webhook configured but not receiving screenshot results
 
@@ -814,7 +827,10 @@ let capabilities = {
 
 4. Verify webhook is receiving requests (check server logs)
 
-#### Issue: Mismatch Percentage Unexpected
+</TabItem>
+<TabItem value="mismatch-percentage-unexpected" label="Mismatch Percentage Unexpected">
+
+### Issue: Mismatch Percentage Unexpected
 
 **Symptoms**: Mismatch percentage higher or lower than expected
 
@@ -848,6 +864,9 @@ If you encounter issues not covered here:
 - Check [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/) for comparison options
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

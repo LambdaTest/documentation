@@ -434,74 +434,89 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 
 ## Troubleshooting
 
-### Figma Upload Fails
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="verify-figma-token" label="Verify Figma Token" default>
 
-**Symptoms**: 
-- Error message: "Failed to upload Figma designs"
-- Upload command returns error
+Verify Figma Token
 
-**Solutions**:
-
-1. **Verify Figma Token**:
-   ```bash
+```bash
    echo $FIGMA_TOKEN
    ```
    Ensure the token is valid and has not expired. Generate a new token from [Figma Settings](https://www.figma.com/settings).
 
-2. **Check File Token**:
-   - Verify the `figma_file_token` in your `designs.json` matches the file ID from the Figma URL
+</TabItem>
+<TabItem value="check-file-token" label="Check File Token" >
+
+Check File Token
+
+- Verify the `figma_file_token` in your `designs.json` matches the file ID from the Figma URL
    - Ensure you have access to the Figma file
 
-3. **Validate Node IDs**:
-   - Confirm `figma_ids` in your configuration are valid
+</TabItem>
+<TabItem value="validate-node-ids" label="Validate Node IDs" >
+
+Validate Node IDs
+
+- Confirm `figma_ids` in your configuration are valid
    - Check that the nodes exist in the Figma file
-
-### Screenshots Not Matching
-
 **Symptoms**:
 - Figma screenshots don't match SDK screenshots
 - Comparison shows mismatches even when designs are identical
-
 **Solutions**:
 
-1. **Check Screenshot Names**:
-   - Ensure SDK screenshots include `.png` extension (e.g., `homepage.png`)
+</TabItem>
+<TabItem value="check-screenshot-names" label="Check Screenshot Names" >
+
+Check Screenshot Names
+
+- Ensure SDK screenshots include `.png` extension (e.g., `homepage.png`)
    - Verify screenshot names match exactly between Figma and SDK
 
-2. **Verify Frame Sizes**:
-   - Ensure frame dimensions are consistent across uploads
+</TabItem>
+<TabItem value="verify-frame-sizes" label="Verify Frame Sizes" >
+
+Verify Frame Sizes
+
+- Ensure frame dimensions are consistent across uploads
    - Check that viewport sizes match between Figma frames and SDK captures
 
-3. **Check Build Names**:
-   - Ensure both Figma and SDK uploads use the same `--buildName`
+</TabItem>
+<TabItem value="check-build-names" label="Check Build Names" >
+
+Check Build Names
+
+- Ensure both Figma and SDK uploads use the same `--buildName`
    - Verify builds are in the same project
-
-### Project Token Issues
-
 **Symptoms**:
 - "Invalid project token" error
 - Uploads fail with authentication errors
-
 **Solutions**:
 
-1. **Verify Project Token**:
-   ```bash
+</TabItem>
+<TabItem value="verify-project-token" label="Verify Project Token" >
+
+Verify Project Token
+
+```bash
    echo $PROJECT_TOKEN
    ```
    Ensure the token is set correctly and matches your SmartUI project.
 
-2. **Check Project Type**:
-   - Ensure project is created as **CLI** type
+</TabItem>
+<TabItem value="check-project-type" label="Check Project Type" >
+
+Check Project Type
+
+- Ensure project is created as **CLI** type
    - Verify project exists in SmartUI dashboard
-
-### Getting Help
-
 If you encounter issues not covered here:
-
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [Figma-Web CLI Documentation](/support/docs/smartui-cli-figma-web) for web comparison workflows
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

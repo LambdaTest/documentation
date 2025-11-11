@@ -109,7 +109,7 @@ Your changes will be triggered and deployed.
 - Use consistent naming conventions across deployments
 
 </TabItem>
-<TabItem value="baseline-management" label="Baseline Management" >
+<TabItem value="baseline-management" label="Baseline Management">
 
 ### Baseline Management
 
@@ -119,7 +119,7 @@ Your changes will be triggered and deployed.
 - Document baseline deployment for reference
 
 </TabItem>
-<TabItem value="deployment-strategy" label="Deployment Strategy" >
+<TabItem value="deployment-strategy" label="Deployment Strategy">
 
 ### Deployment Strategy
 
@@ -129,7 +129,7 @@ Your changes will be triggered and deployed.
 - Tag important deployments
 
 </TabItem>
-<TabItem value="integration-configuration" label="Integration Configuration" >
+<TabItem value="integration-configuration" label="Integration Configuration">
 
 ### Integration Configuration
 
@@ -139,7 +139,7 @@ Your changes will be triggered and deployed.
 - Use different projects for different environments
 
 </TabItem>
-<TabItem value="comparison-workflow" label="Comparison Workflow" >
+<TabItem value="comparison-workflow" label="Comparison Workflow">
 
 ### Comparison Workflow
 
@@ -149,7 +149,7 @@ Your changes will be triggered and deployed.
 - Use SmartUI dashboard for detailed analysis
 
 </TabItem>
-<TabItem value="comparison-workflow" label="Comparison Workflow" >
+<TabItem value="comparison-workflow" label="Comparison Workflow">
 
 ### Comparison Workflow
 
@@ -163,9 +163,10 @@ Your changes will be triggered and deployed.
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard" default>
 
-#### Issue: Screenshots Not Appearing in Dashboard
+### Issue: Screenshots Not Appearing in Dashboard
 
 **Symptoms**: Deployments complete but no screenshots appear in SmartUI dashboard
 
@@ -191,7 +192,10 @@ Your changes will be triggered and deployed.
 
 5. Review Netlify deployment logs for errors
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value="project-not-found-error" label="Project Not Found" Error">
+
+### Issue: "Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -212,7 +216,10 @@ Your changes will be triggered and deployed.
 
 4. Check credentials match the account with the project
 
-#### Issue: Integration Not Triggering
+</TabItem>
+<TabItem value="integration-not-triggering" label="Integration Not Triggering">
+
+### Issue: Integration Not Triggering
 
 **Symptoms**: Deployments don't trigger SmartUI comparisons
 
@@ -238,7 +245,10 @@ Your changes will be triggered and deployed.
 
 4. Review Netlify deployment logs for integration errors
 
-#### Issue: Baseline Not Set Correctly
+</TabItem>
+<TabItem value="baseline-not-set-correctly" label="Baseline Not Set Correctly">
+
+### Issue: Baseline Not Set Correctly
 
 **Symptoms**: Comparisons show unexpected differences or baseline issues
 
@@ -262,7 +272,10 @@ Your changes will be triggered and deployed.
    - Check which deployment was used as baseline
    - Verify deployment was successful
 
-#### Issue: Comparison Results Unexpected
+</TabItem>
+<TabItem value="comparison-results-unexpected" label="Comparison Results Unexpected">
+
+### Issue: Comparison Results Unexpected
 
 **Symptoms**: Visual differences don't match expected changes
 
@@ -298,6 +311,9 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

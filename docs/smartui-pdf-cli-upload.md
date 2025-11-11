@@ -245,9 +245,10 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="pdf-upload-fails" label="PDF Upload Fails" default>
 
-#### Issue: PDF Upload Fails
+### Issue: PDF Upload Fails
 
 **Symptoms**: CLI command fails or returns error
 
@@ -284,7 +285,10 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
    smartui --version
    ```
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value="project-not-found-error" label="Project Not Found" Error">
+
+### Issue: "Project Not Found" Error
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -299,7 +303,10 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 3. Ensure token includes the project ID prefix (e.g., `123456#...`)
 4. Check for extra spaces or quotes in token
 
-#### Issue: CLI Command Not Found
+</TabItem>
+<TabItem value="cli-command-not-found" label="CLI Command Not Found">
+
+### Issue: CLI Command Not Found
 
 **Symptoms**: `smartui` command not recognized
 
@@ -321,7 +328,10 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 
 3. Check PATH includes npm global bin directory
 
-#### Issue: Upload Returns Error
+</TabItem>
+<TabItem value="upload-returns-error" label="Upload Returns Error">
+
+### Issue: Upload Returns Error
 
 **Symptoms**: CLI returns error status or failure message
 
@@ -338,7 +348,10 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 4. Review error message for specific details
 5. Retry upload if transient error
 
-#### Issue: PDFs Not Appearing in Dashboard
+</TabItem>
+<TabItem value="pdfs-not-appearing-in-dashboard" label="PDFs Not Appearing in Dashboard">
+
+### Issue: PDFs Not Appearing in Dashboard
 
 **Symptoms**: Uploads complete but PDFs don't appear in SmartUI dashboard
 
@@ -364,6 +377,9 @@ If you encounter issues not covered here:
 - See [PDF API Upload](/support/docs/smartui-pdf-api-upload) for alternative upload methods
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

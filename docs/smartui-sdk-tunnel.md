@@ -137,6 +137,53 @@ The tunnel configuration automatically uses the following environment variables 
 
 ## Best Practices
 
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="automatic-vs-manual-mode" label="Automatic vs Manual Mode" default>
+
+### Automatic vs Manual Mode
+
+- Use automatic mode for simple setups and quick testing
+   - Use manual mode when you need more control over tunnel lifecycle
+
+</TabItem>
+<TabItem value="credentials-management" label="Credentials Management" >
+
+### Credentials Management
+
+- Prefer environment variables for sensitive information
+   - Use config file for non-sensitive settings
+
+</TabItem>
+<TabItem value="proxy-configuration" label="Proxy Configuration" >
+
+### Proxy Configuration
+
+- Specify proxy settings in config when using corporate networks
+   - Test proxy settings before running full test suite
+
+</TabItem>
+<TabItem value="logging" label="Logging" >
+
+### Logging
+
+- Enable verbose logging (`"v": true`) for troubleshooting
+   - Specify custom log file location for persistent logs
+
+</TabItem>
+<TabItem value="directory-testing" label="Directory Testing" >
+
+### Directory Testing
+
+- Always specify the directory to test when working with local files
+   - Ensure the directory path is accessible and contains the necessary files
+
+:::tip
+For more detailed information about LambdaTest Tunnel features and configurations, refer to our [Advanced Tunnel Features documentation](/support/docs/advanced-tunnel-features).
+:::
+
+</TabItem>
+</Tabs>
+
 1. **Automatic vs Manual Mode**
    - Use automatic mode for simple setups and quick testing
    - Use manual mode when you need more control over tunnel lifecycle
@@ -158,5 +205,5 @@ The tunnel configuration automatically uses the following environment variables 
    - Ensure the directory path is accessible and contains the necessary files
 
 :::tip
-For more detailed information about LambdaTest Tunnel features and configurations, refer to our [Advanced Tunnel Features documentation](/support/docs/advanced-tunnel-features/).
+For more detailed information about LambdaTest Tunnel features and configurations, refer to our [Advanced Tunnel Features documentation](/support/docs/advanced-tunnel-features).
 ::: 

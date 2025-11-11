@@ -254,7 +254,7 @@ await smartuiSnapshot(page, "ProductPage-MainContent");
 ```
 
 </TabItem>
-<TabItem value="wait-for-page-load" label="Wait for Page Load" >
+<TabItem value="wait-for-page-load" label="Wait for Page Load">
 
 ### Wait for Page Load
 
@@ -271,7 +271,7 @@ await smartuiSnapshot(page, "Page Loaded");
 ```
 
 </TabItem>
-<TabItem value="handle-dynamic-content" label="Handle Dynamic Content" >
+<TabItem value="handle-dynamic-content" label="Handle Dynamic Content">
 
 ### Handle Dynamic Content
 
@@ -280,7 +280,7 @@ await smartuiSnapshot(page, "Page Loaded");
 - Document why elements are ignored for future reference
 
 </TabItem>
-<TabItem value="configuration-management" label="Configuration Management" >
+<TabItem value="configuration-management" label="Configuration Management">
 
 ### Configuration Management
 
@@ -289,7 +289,7 @@ await smartuiSnapshot(page, "Page Loaded");
 - Document custom configuration choices
 
 </TabItem>
-<TabItem value="test-organization" label="Test Organization" >
+<TabItem value="test-organization" label="Test Organization">
 
 ### Test Organization
 
@@ -299,9 +299,10 @@ await smartuiSnapshot(page, "Page Loaded");
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard" default>
 
-#### Issue: Screenshots Not Appearing in Dashboard
+### Issue: Screenshots Not Appearing in Dashboard
 
 **Symptoms**: Tests run successfully but no screenshots appear in SmartUI dashboard
 
@@ -328,7 +329,10 @@ await smartuiSnapshot(page, "Page Loaded");
 
 5. Review test execution logs for error messages
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value="project-not-found-error" label="Project Not Found" Error">
+
+### Issue: "Project Not Found" Error
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -343,7 +347,10 @@ await smartuiSnapshot(page, "Page Loaded");
 3. Ensure token includes the project ID prefix (e.g., `123456#...`)
 4. Check for extra spaces or quotes in token
 
-#### Issue: Screenshots Show Blank or Incorrect Content
+</TabItem>
+<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content">
+
+### Issue: Screenshots Show Blank or Incorrect Content
 
 **Symptoms**: Screenshots captured but show blank pages or incorrect content
 
@@ -372,7 +379,10 @@ await smartuiSnapshot(page, "Page Loaded");
 
 4. Verify viewport size matches expected dimensions
 
-#### Issue: K6 Browser Not Enabled
+</TabItem>
+<TabItem value="k6-browser-not-enabled" label="K6 Browser Not Enabled">
+
+### Issue: K6 Browser Not Enabled
 
 **Symptoms**: Tests fail with "browser not enabled" error
 
@@ -399,7 +409,10 @@ await smartuiSnapshot(page, "Page Loaded");
 
 4. Install K6 browser extension if needed
 
-#### Issue: Screenshot Status Not Approved
+</TabItem>
+<TabItem value="screenshot-status-not-approved" label="Screenshot Status Not Approved">
+
+### Issue: Screenshot Status Not Approved
 
 **Symptoms**: Screenshots appear but status is not "Approved"
 
@@ -420,7 +433,10 @@ await smartuiSnapshot(page, "Page Loaded");
 3. Verify baseline exists and is correct
 4. Adjust pixel threshold if needed
 
-#### Issue: Screenshot Names Not Matching Baseline
+</TabItem>
+<TabItem value="screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline">
+
+### Issue: Screenshot Names Not Matching Baseline
 
 **Symptoms**: Screenshots appear as "New" instead of comparing with baseline
 
@@ -445,6 +461,9 @@ If you encounter issues not covered here:
 - Visit [K6 Browser Testing Documentation](https://www.lambdatest.com/support/docs/k6-browser-testing/) for K6-specific issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

@@ -310,7 +310,7 @@ String[] pdfPaths = {
 ```
 
 </TabItem>
-<TabItem value="project-token-management" label="Project Token Management" >
+<TabItem value="project-token-management" label="Project Token Management">
 
 ### Project Token Management
 
@@ -320,7 +320,7 @@ String[] pdfPaths = {
 - Rotate tokens regularly
 
 </TabItem>
-<TabItem value="build-naming" label="Build Naming" >
+<TabItem value="build-naming" label="Build Naming">
 
 ### Build Naming
 
@@ -334,7 +334,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 ```
 
 </TabItem>
-<TabItem value="error-handling" label="Error Handling" >
+<TabItem value="error-handling" label="Error Handling">
 
 ### Error Handling
 
@@ -344,7 +344,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 - Implement retry logic for transient failures
 
 </TabItem>
-<TabItem value="batch-processing" label="Batch Processing" >
+<TabItem value="batch-processing" label="Batch Processing">
 
 ### Batch Processing
 
@@ -354,7 +354,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 - Use appropriate batch sizes
 
 </TabItem>
-<TabItem value="batch-processing" label="Batch Processing" >
+<TabItem value="batch-processing" label="Batch Processing">
 
 ### Batch Processing
 
@@ -368,9 +368,10 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="pdf-upload-fails" label="PDF Upload Fails" default>
 
-#### Issue: PDF Upload Fails
+### Issue: PDF Upload Fails
 
 **Symptoms**: PDF upload returns error or fails silently
 
@@ -404,7 +405,10 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
    echo $PROJECT_TOKEN
    ```
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value="project-not-found-error" label="Project Not Found" Error">
+
+### Issue: "Project Not Found" Error
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -419,7 +423,10 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 3. Ensure token includes the project ID prefix (e.g., `123456#...`)
 4. Check for extra spaces or quotes in token
 
-#### Issue: Upload Returns Null or Empty Result
+</TabItem>
+<TabItem value="upload-returns-null-or-empty-result" label="Upload Returns Null or Empty Result">
+
+### Issue: Upload Returns Null or Empty Result
 
 **Symptoms**: Upload completes but result is null or empty
 
@@ -446,7 +453,10 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 
 4. Retry upload if transient error
 
-#### Issue: Maven Dependencies Not Resolving
+</TabItem>
+<TabItem value="maven-dependencies-not-resolving" label="Maven Dependencies Not Resolving">
+
+### Issue: Maven Dependencies Not Resolving
 
 **Symptoms**: Maven cannot find `lambdatest-java-sdk` or dependencies fail
 
@@ -464,7 +474,10 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 3. Verify internet connectivity for Maven repository access
 4. Check pom.xml for version conflicts
 
-#### Issue: Batch Upload Partially Fails
+</TabItem>
+<TabItem value="batch-upload-partially-fails" label="Batch Upload Partially Fails">
+
+### Issue: Batch Upload Partially Fails
 
 **Symptoms**: Some PDFs upload successfully, others fail
 
@@ -491,7 +504,10 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 3. Check file sizes and formats
 4. Implement retry logic for failed uploads
 
-#### Issue: PDFs Not Appearing in Dashboard
+</TabItem>
+<TabItem value="pdfs-not-appearing-in-dashboard" label="PDFs Not Appearing in Dashboard">
+
+### Issue: PDFs Not Appearing in Dashboard
 
 **Symptoms**: Uploads complete but PDFs don't appear in SmartUI dashboard
 
@@ -517,6 +533,9 @@ If you encounter issues not covered here:
 - See [PDF API Upload](/support/docs/smartui-pdf-api-upload) for alternative upload methods
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

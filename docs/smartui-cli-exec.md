@@ -195,29 +195,94 @@ When running tests from IDEs like IntelliJ:
 
 ## Best Practices
 
-1. Always use `exec:stop` to properly terminate the server
-2. Set appropriate timeouts for your tests
-3. Use meaningful names for your snapshots
-4. Configure environment variables before starting your IDE
-5. Consider using configuration files for complex setups
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="server-termination" label="Server Termination" default>
+
+### Server Termination
+
+Always use `exec:stop` to properly terminate the server.
+
+</TabItem>
+
+<TabItem value="timeouts" label="Timeouts">
+
+### Timeouts
+
+Set appropriate timeouts for your tests.
+
+</TabItem>
+
+<TabItem value="snapshot-naming" label="Snapshot Naming">
+
+### Snapshot Naming
+
+Use meaningful names for your snapshots.
+
+</TabItem>
+
+<TabItem value="environment-variables" label="Environment Variables">
+
+### Environment Variables
+
+Configure environment variables before starting your IDE.
+
+</TabItem>
+
+<TabItem value="configuration-files" label="Configuration Files">
+
+### Configuration Files
+
+Consider using configuration files for complex setups.
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 
-If you encounter issues:
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="server-status" label="Server Status" default>
 
-1. Verify the server is running using `exec:ping`
-2. Check if the server address is correctly configured
-3. Ensure no other process is using the default port
-4. Review the server logs for error messages
+### Server Status
+
+Verify the server is running using `exec:ping`.
+
+</TabItem>
+
+<TabItem value="server-address" label="Server Address">
+
+### Server Address
+
+Check if the server address is correctly configured.
+
+</TabItem>
+
+<TabItem value="port-conflicts" label="Port Conflicts">
+
+### Port Conflicts
+
+Ensure no other process is using the default port.
+
+</TabItem>
+
+<TabItem value="server-logs" label="Server Logs">
+
+### Server Logs
+
+Review the server logs for error messages.
+
+</TabItem>
+</Tabs>
 
 ### Getting Help
 
 If you encounter issues not covered here:
-
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [CLI Documentation](/support/docs/smartui-cli) for general CLI usage
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

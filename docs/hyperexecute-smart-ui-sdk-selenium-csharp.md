@@ -263,4 +263,4 @@ Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexec
 <!-- <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/smart-ui-sdk/selenium-js.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/> -->
 
 :::tip discover more
-📕 Learn more about the other [supported arguments](/support/docs/smartui-selenium-csharp-sdk/#arguments-supported-in-the-smartuisnapshot-function), how you can [handle the dynamic data](/support/docs/smartui-selenium-csharp-sdk/#handling-dynamic-data-in-smartui-sdk--) and how to [capture the screenshot of a specific element](/support/docs/smartui-selenium-csharp-sdk/#for-capturing-the-screenshot-of-a-specific-element)
+📕 Learn more about the other [supported arguments](/support/docs/smartui-selenium-csharp-sdk), how you can [handle the dynamic data](/support/docs/smartui-selenium-csharp-sdk), and how to [capture the screenshot of a specific element](/support/docs/smartui-selenium-csharp-sdk)

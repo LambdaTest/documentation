@@ -172,9 +172,10 @@ env:
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="pipeline-fails-with-variable-not-found" label="Pipeline Fails with "Variable Not Found"" default>
 
-#### Issue: Pipeline Fails with "Variable Not Found"
+### Issue: Pipeline Fails with "Variable Not Found"
 
 **Symptoms**: Pipeline fails with error about missing environment variables
 
@@ -195,7 +196,10 @@ env:
 
 4. Verify variables are marked as secret if needed
 
-#### Issue: PROJECT_TOKEN Not Available
+</TabItem>
+<TabItem value="project_token-not-available" label="PROJECT_TOKEN Not Available" >
+
+### Issue: PROJECT_TOKEN Not Available
 
 **Symptoms**: Pipeline prompts for PROJECT_TOKEN or token not found
 
@@ -217,7 +221,10 @@ env:
 
 4. Verify variable scope includes your project
 
-#### Issue: Tests Run But No Results in Dashboard
+</TabItem>
+<TabItem value="tests-run-but-no-results-in-dashboard" label="Tests Run But No Results in Dashboard" >
+
+### Issue: Tests Run But No Results in Dashboard
 
 **Symptoms**: Pipeline completes but screenshots don't appear in SmartUI
 
@@ -244,7 +251,10 @@ env:
 
 4. Check if SmartUI CLI step completed successfully
 
-#### Issue: Pipeline Times Out
+</TabItem>
+<TabItem value="pipeline-times-out" label="Pipeline Times Out" >
+
+### Issue: Pipeline Times Out
 
 **Symptoms**: Pipeline execution exceeds time limit
 
@@ -272,7 +282,10 @@ env:
 3. Optimize test execution
 4. Split tests across multiple pipeline steps
 
-#### Issue: Dependencies Installation Fails
+</TabItem>
+<TabItem value="dependencies-installation-fails" label="Dependencies Installation Fails" >
+
+### Issue: Dependencies Installation Fails
 
 **Symptoms**: npm install or dependency installation fails
 
@@ -300,7 +313,10 @@ env:
 
 4. Check for version conflicts in package.json
 
-#### Issue: SmartUI CLI Not Found
+</TabItem>
+<TabItem value="smartui-cli-not-found" label="SmartUI CLI Not Found" >
+
+### Issue: SmartUI CLI Not Found
 
 **Symptoms**: `npx smartui` command fails with "command not found"
 
@@ -336,6 +352,9 @@ If you encounter issues not covered here:
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

@@ -130,38 +130,59 @@ npx smartui merge branch --source release/v1.0.0 --target main
 
 ## Best Practices
 
-1. **Merge Planning**:
-   - Plan merges in advance
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="merge-planning" label="Merge Planning" default>
+
+### Merge Planning
+
+- Plan merges in advance
    - Document merge strategies
    - Establish approval processes
 
-2. **Branch Management**:
-   - Keep branches up to date
+</TabItem>
+<TabItem value="branch-management" label="Branch Management" >
+
+### Branch Management
+
+- Keep branches up to date
    - Clean up merged branches
    - Maintain clear branch naming
 
-3. **Approval Process**:
-   - Establish clear approval criteria
+</TabItem>
+<TabItem value="approval-process" label="Approval Process" >
+
+### Approval Process
+
+- Establish clear approval criteria
    - Document approval decisions
    - Maintain audit trail
 
+</TabItem>
+</Tabs>
+
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="merge-conflicts" label="Merge Conflicts" default>
 
-1. **Merge Conflicts**:
-   - Check build compatibility
+Merge Conflicts
+
+- Check build compatibility
    - Verify branch status
    - Review merge history
 
-2. **Status Issues**:
-   - Verify build status
+</TabItem>
+<TabItem value="status-issues" label="Status Issues" >
+
+Status Issues
+
+- Verify build status
    - Check permissions
    - Review approval history
-
-### Getting Help
-
 If you encounter any issues with branch merging in SmartUI, please contact our support team at support@lambdatest.com.
+
+</TabItem>
+</Tabs>
 
 ## Pull Request Workflow with Branch Merging
 

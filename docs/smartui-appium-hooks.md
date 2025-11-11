@@ -531,7 +531,7 @@ await driver.execute("smartui.takeScreenshot=CheckoutScreen-PaymentForm");
 ```
 
 </TabItem>
-<TabItem value="wait-for-screen-load" label="Wait for Screen Load" >
+<TabItem value="wait-for-screen-load" label="Wait for Screen Load">
 
 ### Wait for Screen Load
 
@@ -547,7 +547,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 ```
 
 </TabItem>
-<TabItem value="handle-dynamic-content" label="Handle Dynamic Content" >
+<TabItem value="handle-dynamic-content" label="Handle Dynamic Content">
 
 ### Handle Dynamic Content
 
@@ -556,7 +556,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Test XPath locators using Appium Inspector before integrating
 
 </TabItem>
-<TabItem value="smart-crop-configuration" label="Smart Crop Configuration" >
+<TabItem value="smart-crop-configuration" label="Smart Crop Configuration">
 
 ### Smart Crop Configuration
 
@@ -565,7 +565,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Test cropped screenshots to ensure important content isn't removed
 
 </TabItem>
-<TabItem value="test-organization" label="Test Organization" >
+<TabItem value="test-organization" label="Test Organization">
 
 ### Test Organization
 
@@ -574,7 +574,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Run tests on consistent device configurations
 
 </TabItem>
-<TabItem value="test-organization" label="Test Organization" >
+<TabItem value="test-organization" label="Test Organization">
 
 ### Test Organization
 
@@ -587,9 +587,10 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>
 
-#### Issue: Screenshots Not Captured
+### Issue: Screenshots Not Captured
 
 **Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
 
@@ -621,7 +622,10 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 
 4. Check network connectivity to LambdaTest
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value="project-not-found-error" label="Project Not Found" Error">
+
+### Issue: "Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -636,7 +640,10 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 3. Check credentials match the account with the project
 4. Ensure project name is in capabilities, not just in dashboard
 
-#### Issue: Screenshots Show Blank or Incorrect Content
+</TabItem>
+<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content">
+
+### Issue: Screenshots Show Blank or Incorrect Content
 
 **Symptoms**: Screenshots captured but show blank screens or incorrect content
 
@@ -661,7 +668,10 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 
 4. Verify app is in correct state before screenshot
 
-#### Issue: Full Page Screenshot Issues
+</TabItem>
+<TabItem value="full-page-screenshot-issues" label="Full Page Screenshot Issues">
+
+### Issue: Full Page Screenshot Issues
 
 **Symptoms**: Full page screenshots incomplete or incorrect
 
@@ -684,7 +694,10 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 
 3. Test with different `pageCount` values to find optimal setting
 
-#### Issue: ignoreBoxes/selectBoxes Not Working
+</TabItem>
+<TabItem value="ignoreboxes-selectboxes-not-working" label="ignoreBoxes/selectBoxes Not Working">
+
+### Issue: ignoreBoxes/selectBoxes Not Working
 
 **Symptoms**: Dynamic content still causing false positives
 
@@ -714,6 +727,9 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 
