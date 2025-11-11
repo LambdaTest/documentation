@@ -178,15 +178,47 @@ SmartUI handles standard HTML5 video elements:
 
 ## Best Practices
 
-1. **Allow Video Loading**: Use appropriate `waitForTimeout` values to ensure videos are loaded before snapshots
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="allow-video-loading" label="Allow Video Loading" default>
 
-2. **Test Video Pages**: Verify that video pages work correctly with SmartUI before running full test suites
+### Allow Video Loading
 
-3. **Combine with Other Features**: Use `ignoreDOM` to exclude video controls if needed
+Use appropriate `waitForTimeout` values to ensure videos are loaded before snapshots.
 
-4. **Document Video Content**: Note which pages contain videos for better test planning
+</TabItem>
 
-5. **Review First Frames**: Occasionally review captured first frames to ensure they represent the intended baseline
+<TabItem value="test-video-pages" label="Test Video Pages">
+
+### Test Video Pages
+
+Verify that video pages work correctly with SmartUI before running full test suites.
+
+</TabItem>
+
+<TabItem value="combine-with-other-features" label="Combine with Other Features">
+
+### Combine with Other Features
+
+Use `ignoreDOM` to exclude video controls if needed.
+
+</TabItem>
+
+<TabItem value="document-video-content" label="Document Video Content">
+
+### Document Video Content
+
+Note which pages contain videos for better test planning.
+
+</TabItem>
+
+<TabItem value="review-first-frames" label="Review First Frames">
+
+### Review First Frames
+
+Occasionally review captured first frames to ensure they represent the intended baseline.
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 

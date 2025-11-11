@@ -383,7 +383,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 ## Best Practices
 
-### 1. Project and Build Naming
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="project-and-build-naming" label="Project and Build Naming" default>
+
+### Project and Build Naming
 
 - Use descriptive, consistent names for projects and builds
 - Include app version or release info in build names
@@ -398,29 +401,53 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 }
 ```
 
-### 2. Device Selection
+</TabItem>
+<TabItem value="device-selection" label="Device Selection" >
+
+### Device Selection
 
 - Test on devices that match your user base
 - Include multiple device configurations for comprehensive coverage
 - Use device patterns for consistent testing (e.g., `Galaxy.*`, `Pixel.*`)
 
-### 3. Smart Crop Configuration
+</TabItem>
+<TabItem value="smart-crop-configuration" label="Smart Crop Configuration" >
+
+### Smart Crop Configuration
 
 - Enable `cropStatusBar` to focus on core UI elements
 - Enable `cropNavigationBar` for Android devices
 - Test cropped screenshots to ensure important content isn't removed
 
-### 4. Test Organization
+</TabItem>
+<TabItem value="test-organization" label="Test Organization" >
+
+### Test Organization
 
 - Use sharding for parallel test execution
 - Group related tests in same build
 - Use meaningful test names for better organization
 
-### 5. App and Test Suite Management
+</TabItem>
+<TabItem value="app-and-test-suite-management" label="App and Test Suite Management" >
+
+### App and Test Suite Management
 
 - Upload apps and test suites before execution
 - Use app IDs (`lt://APP...`) for faster execution
 - Keep app and test suite versions synchronized
+
+</TabItem>
+<TabItem value="app-and-test-suite-management" label="App and Test Suite Management" >
+
+### App and Test Suite Management
+
+- Upload apps and test suites before execution
+- Use app IDs (`lt://APP...`) for faster execution
+- Keep app and test suite versions synchronized
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 

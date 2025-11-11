@@ -271,35 +271,62 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 
 ## Best Practices
 
-### 1. Choose the Right Method
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="choose-the-right-method" label="Choose the Right Method" default>
+
+### Choose the Right Method
 
 - **Simple lazy loading**: Use `waitForTimeout` in configuration
 - **Complex lazy loading**: Use programmatic scrolling
 - **Known lazy elements**: Wait for specific elements
 
-### 2. Optimize Wait Times
+</TabItem>
+<TabItem value="optimize-wait-times" label="Optimize Wait Times" >
+
+### Optimize Wait Times
 
 - Start with shorter wait times and increase if needed
 - Balance between thorough loading and test execution time
 - Monitor test execution times to optimize
 
-### 3. Scroll Incrementally
+</TabItem>
+<TabItem value="scroll-incrementally" label="Scroll Incrementally" >
+
+### Scroll Incrementally
 
 - Use smaller scroll steps (200-500px) for better coverage
 - Wait between scrolls to allow content to load
 - Recalculate page height for infinite scroll scenarios
 
-### 4. Return to Top
+</TabItem>
+<TabItem value="return-to-top" label="Return to Top" >
+
+### Return to Top
 
 - Always scroll back to top after loading lazy content
 - Ensures consistent baseline for comparison
 - Prevents viewport-dependent differences
 
-### 5. Combine Methods
+</TabItem>
+<TabItem value="combine-methods" label="Combine Methods" >
+
+### Combine Methods
 
 - Use `waitForTimeout` for initial page load
 - Add programmatic scrolling for lazy content
 - Wait for specific critical elements
+
+</TabItem>
+<TabItem value="combine-methods" label="Combine Methods" >
+
+### Combine Methods
+
+- Use `waitForTimeout` for initial page load
+- Add programmatic scrolling for lazy content
+- Wait for specific critical elements
+
+</TabItem>
+</Tabs>
 
 ## Use Cases
 

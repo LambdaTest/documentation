@@ -129,25 +129,47 @@ npx smartui --markBaseline capture urls.json
 
 ## Best Practices
 
-1. **Baseline Selection**:
-   - Choose stable builds as baselines
-   - Document baseline selection criteria
-   - Regular baseline updates
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="baseline-selection" label="Baseline Selection" default>
 
-2. **Branch Management**:
-   - Clear branch naming conventions
-   - Document branch purposes
-   - Regular branch cleanup
+### Baseline Selection
 
-3. **Build Management**:
-   - Meaningful build names
-   - Document build purposes
-   - Regular build cleanup
+- Choose stable builds as baselines
+- Document baseline selection criteria
+- Regular baseline updates
 
-4. **Approval Process**:
-   - Clear approval criteria
-   - Document approval decisions
-   - Maintain audit trail
+</TabItem>
+
+<TabItem value="branch-management" label="Branch Management">
+
+### Branch Management
+
+- Clear branch naming conventions
+- Document branch purposes
+- Regular branch cleanup
+
+</TabItem>
+
+<TabItem value="build-management" label="Build Management">
+
+### Build Management
+
+- Meaningful build names
+- Document build purposes
+- Regular build cleanup
+
+</TabItem>
+
+<TabItem value="approval-process" label="Approval Process">
+
+### Approval Process
+
+- Clear approval criteria
+- Document approval decisions
+- Maintain audit trail
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 

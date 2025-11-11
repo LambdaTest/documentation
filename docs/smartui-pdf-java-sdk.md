@@ -291,7 +291,10 @@ public class SmartuiPdfErrorHandling {
 
 ## Best Practices
 
-### 1. PDF File Management
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="pdf-file-management" label="PDF File Management" default>
+
+### PDF File Management
 
 - Use consistent naming conventions for PDF files
 - Organize PDFs in logical directory structures
@@ -306,14 +309,20 @@ String[] pdfPaths = {
 };
 ```
 
-### 2. Project Token Management
+</TabItem>
+<TabItem value="project-token-management" label="Project Token Management" >
+
+### Project Token Management
 
 - Store project token as environment variable
 - Never commit tokens to version control
 - Use different tokens for different environments
 - Rotate tokens regularly
 
-### 3. Build Naming
+</TabItem>
+<TabItem value="build-naming" label="Build Naming" >
+
+### Build Naming
 
 - Use meaningful build names that include version info
 - Include date or version in build names
@@ -324,19 +333,38 @@ String[] pdfPaths = {
 config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 ```
 
-### 4. Error Handling
+</TabItem>
+<TabItem value="error-handling" label="Error Handling" >
+
+### Error Handling
 
 - Always wrap upload calls in try-catch blocks
 - Log errors for debugging
 - Handle network failures gracefully
 - Implement retry logic for transient failures
 
-### 5. Batch Processing
+</TabItem>
+<TabItem value="batch-processing" label="Batch Processing" >
+
+### Batch Processing
 
 - Process PDFs in batches for efficiency
 - Monitor upload progress
 - Handle partial failures in batch operations
 - Use appropriate batch sizes
+
+</TabItem>
+<TabItem value="batch-processing" label="Batch Processing" >
+
+### Batch Processing
+
+- Process PDFs in batches for efficiency
+- Monitor upload progress
+- Handle partial failures in batch operations
+- Use appropriate batch sizes
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 

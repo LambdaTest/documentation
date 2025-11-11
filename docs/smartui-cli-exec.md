@@ -27,7 +27,7 @@ SmartUI CLI exec command offers you various options to manage snapshot server an
 ## Prerequisites
 
 - Basic understanding of Command Line Interface
-- SmartUI CLI version 4.0.21 or higher installed for the start, stop and ping commands
+- SmartUI CLI version 4.1.43 or higher installed for the start, stop and ping commands
 - A properly configured SmartUI CLI project
 
 ## Available Commands
@@ -37,7 +37,8 @@ SmartUI CLI offers the following exec commands:
 - `npx smartui exec` - Execute a command with SmartUI server running
 - `npx smartui exec:start` - Start the SmartUI snapshot server
 - `npx smartui exec:stop` - Stop the SmartUI snapshot server
-- `npx smartui exec:ping` - Check if the SmartUI server is running
+- `npx smartui exec:ping` - Check if the SmartUI server is running (uses custom HTTP client)
+- `npx smartui exec:pingTest` - Check if the SmartUI server is running (uses default HTTP client)
 
 ## Using the Exec Command
 
@@ -54,6 +55,10 @@ npx smartui exec [options] -- <command>
 | `-P, --port <number>` | Specify a custom port number for the server (default: 49152) |
 | `--fetch-results [filename]` | Fetch test results and save to a JSON file (default: results.json) |
 | `--buildName <string>` | Specify a custom build name for the test run |
+| `--scheduled <string>` | Specify the schedule ID for scheduled test runs |
+| `--show-render-errors` | Show render errors from SmartUI build |
+| `--userName <string>` | Override LambdaTest username (overrides environment variable) |
+| `--accessKey <string>` | Override LambdaTest access key (overrides environment variable) |
 | `--config <file>` | Specify a configuration file to use |
 | `-h, --help` | Display help information |
 
@@ -84,6 +89,21 @@ npx smartui exec --config smartui-config.json -- npm test
 npx smartui exec -P 5000 --buildName "Release-1.0" --config smartui-config.json --fetch-results -- npm test
 ```
 
+6. Running scheduled tests:
+```bash
+npx smartui exec --scheduled "schedule-123" -- npm test
+```
+
+7. Showing render errors:
+```bash
+npx smartui exec --show-render-errors -- npm test
+```
+
+8. Overriding credentials:
+```bash
+npx smartui exec --userName "user" --accessKey "key" -- npm test
+```
+
 ## Starting the Server
 
 To start the SmartUI snapshot server:
@@ -106,11 +126,19 @@ npx smartui exec:stop
 
 ## Checking Server Status
 
-To verify if the SmartUI server is running:
+To verify if the SmartUI server is running, you can use either of these commands:
 
+**Using exec:ping (custom HTTP client):**
 ```bash
 npx smartui exec:ping
 ```
+
+**Using exec:pingTest (default HTTP client):**
+```bash
+npx smartui exec:pingTest
+```
+
+Both commands check if the server is running at the address specified in `SMARTUI_SERVER_ADDRESS` environment variable (default: `http://localhost:49152`).
 
 ## Running Tests with the Server
 
@@ -181,6 +209,24 @@ If you encounter issues:
 2. Check if the server address is correctly configured
 3. Ensure no other process is using the default port
 4. Review the server logs for error messages
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [CLI Documentation](/support/docs/smartui-cli) for general CLI usage
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [CLI Documentation](/support/docs/smartui-cli)
+- [CLI Upload](/support/docs/smartui-cli-upload)
+- [Environment Variables](/support/docs/smartui-cli-env-variables)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

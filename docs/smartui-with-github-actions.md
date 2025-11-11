@@ -78,14 +78,20 @@ To run the new pipeline that you just created, click the **Run workflow** button
 
 ## Best Practices
 
-### 1. Secret Management
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="secret-management" label="Secret Management" default>
+
+### Secret Management
 
 - Never commit credentials to repository
 - Use GitHub Secrets for all sensitive data
 - Rotate secrets regularly
 - Use different secrets for different environments
 
-### 2. Workflow Optimization
+</TabItem>
+<TabItem value="workflow-optimization" label="Workflow Optimization" >
+
+### Workflow Optimization
 
 - Use matrix strategies for parallel execution
 - Cache dependencies to speed up workflows
@@ -101,7 +107,10 @@ on:
     branches: [ main ]
 ```
 
-### 3. Build Naming
+</TabItem>
+<TabItem value="build-naming" label="Build Naming" >
+
+### Build Naming
 
 - Use meaningful build names that include branch/PR info
 - Include commit SHA for traceability
@@ -115,19 +124,38 @@ on:
     echo "BUILD_NAME=$BUILD_NAME" >> $GITHUB_ENV
 ```
 
-### 4. Error Handling
+</TabItem>
+<TabItem value="error-handling" label="Error Handling" >
+
+### Error Handling
 
 - Set up proper error handling in workflows
 - Use workflow status checks
 - Configure notifications for failures
 - Add retry logic for flaky tests
 
-### 5. Resource Management
+</TabItem>
+<TabItem value="resource-management" label="Resource Management" >
+
+### Resource Management
 
 - Limit concurrent workflow runs
 - Clean up old builds regularly
 - Monitor workflow execution time
 - Optimize test execution order
+
+</TabItem>
+<TabItem value="resource-management" label="Resource Management" >
+
+### Resource Management
+
+- Limit concurrent workflow runs
+- Clean up old builds regularly
+- Monitor workflow execution time
+- Optimize test execution order
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 

@@ -96,11 +96,21 @@ The first step is to create a project with the application in which we will comb
 
 ### **Step 1**: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI CLI` in your repository/folder.
+Install required NPM modules for `LambdaTest SmartUI CLI` globally or in your project:
 
+**Global Installation (Recommended):**
+```bash
+npm install -g @lambdatest/smartui-cli
+```
+
+**Local Installation:**
 ```bash
 npm install @lambdatest/smartui-cli
 ```
+
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
 
 ### **Step 2:** Create the design info file
 
@@ -131,7 +141,7 @@ Once, the `designs` file will be created, you will be seeing the sample pre-fill
 
 ### **Step 3:** Configure your Project Token and Figma Token
 
-1. Setup your project token show in the **SmartUI** app after, creating your project.
+1. Setup your project token shown in the **SmartUI** app after creating your project.
 
 <Tabs className="docs__val" groupId="language">
 <TabItem value="MacOS/Linux" label="MacOS/Linux" default>
@@ -258,6 +268,76 @@ If `buildName` is not specified, a random build name is generated for every run.
 You can add more screenshots in a build by specifying the particular build name in the runner command
 :::
 
+## Best Practices
+
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="build-names" label="Build Names" default>
+
+### Build Names
+
+```bash
+   npx smartui upload-figma designs.json --buildName "v1.0.0"
+   ```
+
+</TabItem>
+<TabItem value="screenshot-names" label="Screenshot Names" >
+
+### Screenshot Names
+
+- Good: `homepage-hero`, `login-form`, `dashboard-sidebar`
+   - Avoid: `test1`, `screenshot`, `design-1`
+
+</TabItem>
+<TabItem value="branch-names" label="Branch Names" >
+
+### Branch Names
+
+### Screenshot Naming for SDK Comparisons
+
+**Important**: When comparing Figma designs with live implementations captured via SDKs, add `.png` extension to your SDK screenshot names.
+
+Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
+
+**In your SDK code:**
+```javascript
+// ❌ Wrong - will not match Figma screenshot
+smartuiSnapshot(driver, "homepage");
+
+// ✅ Correct - matches Figma screenshot name
+smartuiSnapshot(driver, "homepage.png");
+```
+
+**Example for different frameworks:**
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="selenium" label="Selenium" default>
+
+```java
+// Java
+SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
+```
+
+</TabItem>
+<TabItem value="playwright" label="Playwright">
+
+```javascript
+// JavaScript
+await smartuiSnapshot(page, "homepage.png");
+```
+
+</TabItem>
+<TabItem value="cypress" label="Cypress">
+
+```javascript
+// JavaScript
+cy.smartuiSnapshot("homepage.png");
+```
+
+</TabItem>
+</Tabs>
+
+This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots (e.g., `homepage.png`) in the same build.
+
 ### Setup with Continuous Integration (CI)
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI Figma CLI` execution then the following are the steps needs to be added to your `.yaml` file:
@@ -278,7 +358,159 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
+</TabItem>
+<TabItem value="branch-names" label="Branch Names" >
+
+### Branch Names
+
+### Screenshot Naming for SDK Comparisons
+
+**Important**: When comparing Figma designs with live implementations captured via SDKs, add `.png` extension to your SDK screenshot names.
+
+Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
+
+**In your SDK code:**
+```javascript
+// ❌ Wrong - will not match Figma screenshot
+smartuiSnapshot(driver, "homepage");
+
+// ✅ Correct - matches Figma screenshot name
+smartuiSnapshot(driver, "homepage.png");
+```
+
+**Example for different frameworks:**
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="selenium" label="Selenium" default>
+
+```java
+// Java
+SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
+```
+
+</TabItem>
+<TabItem value="playwright" label="Playwright">
+
+```javascript
+// JavaScript
+await smartuiSnapshot(page, "homepage.png");
+```
+
+</TabItem>
+<TabItem value="cypress" label="Cypress">
+
+```javascript
+// JavaScript
+cy.smartuiSnapshot("homepage.png");
+```
+
+</TabItem>
+</Tabs>
+
+This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots (e.g., `homepage.png`) in the same build.
+
+### Setup with Continuous Integration (CI)
+
+If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI Figma CLI` execution then the following are the steps needs to be added to your `.yaml` file:
+
+
+```yaml
+steps:
+  - name: Running SmartUI Figma CLI Tests
+    - run: |
+       npm install @lambdatest/smartui-cli
+       npx playwright install-deps
+       npx smartui upload-figma designs.json
+```
+
+### View SmartUI Results
+
+You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+
+</TabItem>
+</Tabs>
+
+## Troubleshooting
+
+### Figma Upload Fails
+
+**Symptoms**: 
+- Error message: "Failed to upload Figma designs"
+- Upload command returns error
+
+**Solutions**:
+
+1. **Verify Figma Token**:
+   ```bash
+   echo $FIGMA_TOKEN
+   ```
+   Ensure the token is valid and has not expired. Generate a new token from [Figma Settings](https://www.figma.com/settings).
+
+2. **Check File Token**:
+   - Verify the `figma_file_token` in your `designs.json` matches the file ID from the Figma URL
+   - Ensure you have access to the Figma file
+
+3. **Validate Node IDs**:
+   - Confirm `figma_ids` in your configuration are valid
+   - Check that the nodes exist in the Figma file
+
+### Screenshots Not Matching
+
+**Symptoms**:
+- Figma screenshots don't match SDK screenshots
+- Comparison shows mismatches even when designs are identical
+
+**Solutions**:
+
+1. **Check Screenshot Names**:
+   - Ensure SDK screenshots include `.png` extension (e.g., `homepage.png`)
+   - Verify screenshot names match exactly between Figma and SDK
+
+2. **Verify Frame Sizes**:
+   - Ensure frame dimensions are consistent across uploads
+   - Check that viewport sizes match between Figma frames and SDK captures
+
+3. **Check Build Names**:
+   - Ensure both Figma and SDK uploads use the same `--buildName`
+   - Verify builds are in the same project
+
+### Project Token Issues
+
+**Symptoms**:
+- "Invalid project token" error
+- Uploads fail with authentication errors
+
+**Solutions**:
+
+1. **Verify Project Token**:
+   ```bash
+   echo $PROJECT_TOKEN
+   ```
+   Ensure the token is set correctly and matches your SmartUI project.
+
+2. **Check Project Type**:
+   - Ensure project is created as **CLI** type
+   - Verify project exists in SmartUI dashboard
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [Figma-Web CLI Documentation](/support/docs/smartui-cli-figma-web) for web comparison workflows
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [Figma-Web CLI Documentation](/support/docs/smartui-cli-figma-web)
+- [Figma-App CLI Documentation](/support/docs/smartui-cli-figma-app)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
 
 <nav aria-label="breadcrumbs">

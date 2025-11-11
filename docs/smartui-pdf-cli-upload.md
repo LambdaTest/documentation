@@ -182,21 +182,32 @@ Example for GitHub Actions:
 
 ## Best Practices
 
-### 1. PDF File Management
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="file-management" label="PDF File Management" default>
+
+### PDF File Management
 
 - Use consistent naming conventions for PDF files
 - Organize PDFs in logical directory structures
 - Verify PDF files are valid and not corrupted before upload
 - Keep PDF files in version control when appropriate
 
-### 2. Project Token Management
+</TabItem>
+
+<TabItem value="token-management" label="Project Token Management">
+
+### Project Token Management
 
 - Store project token as environment variable
 - Never commit tokens to version control
 - Use different tokens for different environments
 - Rotate tokens regularly
 
-### 3. Build Naming
+</TabItem>
+
+<TabItem value="build-naming" label="Build Naming">
+
+### Build Naming
 
 - Use meaningful build names that include version info
 - Include date or version in build names
@@ -207,19 +218,30 @@ Example for GitHub Actions:
 smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 ```
 
-### 4. Error Handling
+</TabItem>
+
+<TabItem value="error-handling" label="Error Handling">
+
+### Error Handling
 
 - Always check CLI exit codes
 - Handle network failures gracefully
 - Implement retry logic for transient failures
 - Log errors for debugging
 
-### 5. Batch Processing
+</TabItem>
+
+<TabItem value="batch-processing" label="Batch Processing">
+
+### Batch Processing
 
 - Process PDFs in batches for efficiency
 - Monitor upload progress
 - Handle partial failures in batch operations
 - Use appropriate batch sizes
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 

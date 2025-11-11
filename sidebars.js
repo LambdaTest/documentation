@@ -3451,6 +3451,11 @@ module.exports = {
             label: "Capture Static URLs via CLI",
             id: "smartui-cli",
           },
+          {
+            type: "doc",
+            label: "CLI Complete Reference",
+            id: "smartui-cli-complete-reference",
+          },
         ],
       },
 
@@ -3814,12 +3819,13 @@ module.exports = {
               },
             ],
           },
-          {
-            type: "doc",
-            label: "Troubleshooting Guide",
-            id: "smartui-troubleshooting-guide",
-          },
         ],
+      },
+
+      {
+        type: "doc",
+        label: "Troubleshooting Guide",
+        id: "smartui-troubleshooting-guide",
       },
     ],
   ],

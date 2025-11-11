@@ -119,24 +119,46 @@ Smart Ignore may not be suitable for:
 
 ## Best Practices
 
-### 1. Start with Project-Level Toggle
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="start-with-project-level-toggle" label="Start with Project-Level Toggle" default>
+
+### Start with Project-Level Toggle
 
 Enable Smart Ignore at the project level for consistent behavior across all tests. You can still switch to other comparison modes per screenshot if needed.
 
-### 2. Combine with Other Features
+</TabItem>
+<TabItem value="combine-with-other-features" label="Combine with Other Features" >
+
+### Combine with Other Features
 
 Smart Ignore works well with:
 - Dynamic data handling for content that changes
 - Layout comparison for structure-focused testing
 - Custom CSS for test-specific styling
 
-### 3. Review Results Regularly
+</TabItem>
+<TabItem value="review-results-regularly" label="Review Results Regularly" >
+
+### Review Results Regularly
 
 While Smart Ignore reduces false positives, regularly review results to ensure it's not hiding important changes.
 
-### 4. Use Per-Screenshot Mode for Testing
+</TabItem>
+<TabItem value="use-per-screenshot-mode-for-testing" label="Use Per-Screenshot Mode for Testing" >
+
+### Use Per-Screenshot Mode for Testing
 
 When testing Smart Ignore, use per-screenshot mode to compare results with other comparison modes and find the best approach for each test case.
+
+</TabItem>
+<TabItem value="use-per-screenshot-mode-for-testing" label="Use Per-Screenshot Mode for Testing" >
+
+### Use Per-Screenshot Mode for Testing
+
+When testing Smart Ignore, use per-screenshot mode to compare results with other comparison modes and find the best approach for each test case.
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 

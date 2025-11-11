@@ -140,11 +140,205 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-### Additional Resources
+## Best Practices
 
-* [How to generate a Figma token](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)
-* [SmartUI CLI Docs](https://www.lambdatest.com/support/docs/smartui-cli/)
-* [Appium + SmartUI Node Sample](https://github.com/LambdaTest/smartui-appium-nodejs)
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="build-names" label="Build Names" default>
+
+### Build Names
+
+```bash
+   npx smartui upload-figma-app designs.json --buildName "v1.0.0"
+   ```
+
+</TabItem>
+<TabItem value="screenshot-names" label="Screenshot Names" >
+
+### Screenshot Names
+
+- Good: `homepage-screen`, `login-form`, `dashboard-tab`
+   - Avoid: `test1`, `screenshot`, `design-1`
+   - Ensure `screenshot_names` in your config match the order of `figma_ids`
+
+</TabItem>
+<TabItem value="device-names" label="Device Names" >
+
+### Device Names
+
+### Screenshot Naming for SDK Comparisons
+
+**Critical**: When comparing Figma designs with app screenshots captured via SDKs, add `.png` extension to your SDK screenshot names.
+
+Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
+
+**In your Appium/SDK code:**
+```javascript
+// ❌ Wrong - will not match Figma screenshot
+driver.execute("smartui.takeScreenshot", {name: "homepage"});
+
+// ✅ Correct - matches Figma screenshot name
+driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
+```
+
+**Example for different frameworks:**
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="appium" label="Appium" default>
+
+```javascript
+// JavaScript
+await driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
+```
+
+</TabItem>
+<TabItem value="appium-java" label="Appium Java">
+
+```java
+// Java
+driver.execute("smartui.takeScreenshot", Map.of("name", "homepage.png"));
+```
+
+</TabItem>
+</Tabs>
+
+This ensures that Figma screenshots (e.g., `homepage.png`) match app screenshots (e.g., `homepage.png`) in the same build.
+
+</TabItem>
+<TabItem value="device-names" label="Device Names" >
+
+### Device Names
+
+### Screenshot Naming for SDK Comparisons
+
+**Critical**: When comparing Figma designs with app screenshots captured via SDKs, add `.png` extension to your SDK screenshot names.
+
+Figma-uploaded screenshots automatically have `.png` appended (e.g., `homepage.png`), so your SDK screenshots must match:
+
+**In your Appium/SDK code:**
+```javascript
+// ❌ Wrong - will not match Figma screenshot
+driver.execute("smartui.takeScreenshot", {name: "homepage"});
+
+// ✅ Correct - matches Figma screenshot name
+driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
+```
+
+**Example for different frameworks:**
+
+<Tabs className="docs__val" groupId="framework">
+<TabItem value="appium" label="Appium" default>
+
+```javascript
+// JavaScript
+await driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
+```
+
+</TabItem>
+<TabItem value="appium-java" label="Appium Java">
+
+```java
+// Java
+driver.execute("smartui.takeScreenshot", Map.of("name", "homepage.png"));
+```
+
+</TabItem>
+</Tabs>
+
+This ensures that Figma screenshots (e.g., `homepage.png`) match app screenshots (e.g., `homepage.png`) in the same build.
+
+</TabItem>
+</Tabs>
+
+## Troubleshooting
+
+### Figma Upload Fails
+
+**Symptoms**: 
+- Error message: "Failed to upload Figma designs"
+- Upload command returns error
+
+**Solutions**:
+
+1. **Verify Figma Token**:
+   ```bash
+   echo $FIGMA_TOKEN
+   ```
+   Ensure the token is valid and has not expired. Generate a new token from [Figma Settings](https://www.figma.com/settings).
+
+2. **Check File Token**:
+   - Verify the `figma_file_token` in your `designs.json` matches the file ID from the Figma URL
+   - Ensure you have access to the Figma file
+
+3. **Validate Node IDs**:
+   - Confirm `figma_ids` in your configuration are valid
+   - Check that the nodes exist in the Figma file
+
+### Screenshots Not Matching Between Figma and App
+
+**Symptoms**:
+- Figma screenshots don't match app screenshots
+- Comparison shows mismatches even when designs are identical
+
+**Solutions**:
+
+1. **Check Screenshot Names**:
+   - Ensure SDK screenshots include `.png` extension (e.g., `homepage.png`)
+   - Verify screenshot names match exactly between Figma config and SDK code
+   - Ensure `screenshot_names` array matches the order of `figma_ids`
+
+2. **Verify Device Sizes**:
+   - Ensure device dimensions match Figma frame sizes
+   - Check that device names in config match actual device capabilities
+   - Verify orientation (portrait/landscape) matches between Figma and device
+
+3. **Check Build Names**:
+   - Ensure both Figma and SDK uploads use the same `--buildName`
+   - Verify builds are in the same project
+
+4. **Project Type**:
+   - Ensure project is created as **Real Devices** type (not CLI)
+   - Verify project exists in SmartUI dashboard
+
+### Project Token Issues
+
+**Symptoms**:
+- "Invalid project token" error
+- Uploads fail with authentication errors
+
+**Solutions**:
+
+1. **Verify Project Token**:
+   ```bash
+   echo $PROJECT_TOKEN
+   ```
+   Ensure the token is set correctly and matches your SmartUI project.
+
+2. **Check Project Type**:
+   - Ensure project is created as **Real Devices** type
+   - Verify project exists in SmartUI dashboard
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [Figma CLI Documentation](/support/docs/smartui-cli-figma) for basic Figma workflows
+- Check [Figma-Web CLI Documentation](/support/docs/smartui-cli-figma-web) for web comparison workflows
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [Figma CLI Documentation](/support/docs/smartui-cli-figma)
+- [Figma-Web CLI Documentation](/support/docs/smartui-cli-figma-web)
+- [Appium Hooks Documentation](/support/docs/smartui-appium-hooks)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+- [How to generate a Figma token](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)
+- [SmartUI CLI Docs](https://www.lambdatest.com/support/docs/smartui-cli/)
+- [Appium + SmartUI Node Sample](https://github.com/LambdaTest/smartui-appium-nodejs)
 
 ---
 

@@ -308,7 +308,10 @@ After test execution, visit your SmartUI project dashboard to:
 
 ## Best Practices
 
-### 1. Screenshot Naming
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="screenshot-naming" label="Screenshot Naming" default>
+
+### Screenshot Naming
 
 - Use descriptive, consistent names for screenshots
 - Include screen/component name in screenshot names
@@ -321,7 +324,10 @@ SmartUISnapshot.smartuiSnapshot(driver, "HomeScreen-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 ```
 
-### 2. Wait for Screen Load
+</TabItem>
+<TabItem value="wait-for-screen-load" label="Wait for Screen Load" >
+
+### Wait for Screen Load
 
 - Always wait for screens to fully load before taking screenshots
 - Use Appium's wait methods for dynamic content
@@ -334,19 +340,28 @@ wait.until(ExpectedConditions.presenceOfElementLocated(By.id("main-content")));
 SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 ```
 
-### 3. Handle Dynamic Content
+</TabItem>
+<TabItem value="handle-dynamic-content" label="Handle Dynamic Content" >
+
+### Handle Dynamic Content
 
 - Use `ignoreBoxes` for elements that change between runs (ads, timestamps, user avatars)
 - Use `selectBoxes` when you only need to compare specific regions
 - Test XPath locators using Appium Inspector before integrating
 
-### 4. Device Configuration
+</TabItem>
+<TabItem value="device-configuration" label="Device Configuration" >
+
+### Device Configuration
 
 - Use consistent `deviceName` and `platform` combinations across builds
 - Document device configurations for reference
 - Test on devices that match your user base
 
-### 5. Test Organization
+</TabItem>
+<TabItem value="test-organization" label="Test Organization" >
+
+### Test Organization
 
 - Group related screenshots in the same build
 - Use meaningful build names
@@ -502,7 +517,176 @@ If you encounter issues not covered here:
 - [Appium Hooks Documentation](/support/docs/smartui-appium-hooks)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-For additional information about SmartUI APIs, please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
+<nav aria-label="breadcrumbs">
+  <ul className="breadcrumbs">
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+        Home
+      </a>
+    </li>
+    <li className="breadcrumbs__item">
+      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+        Support
+      </a>
+    </li>
+    <li className="breadcrumbs__item breadcrumbs__item--active">
+      <span className="breadcrumbs__link"> SmartUI Appium Java SDK </span>
+    </li>
+  </ul>
+</nav>
+
+</TabItem>
+</Tabs>
+
+## Troubleshooting
+
+### Common Issues
+
+#### Issue: Screenshots Not Captured
+
+**Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
+
+**Possible Causes**:
+- Project token not set or incorrect
+- Incorrect project name
+- Network connectivity issues
+- SDK not properly integrated
+
+**Solutions**:
+1. Verify `PROJECT_TOKEN` is set correctly:
+   ```bash
+   echo $PROJECT_TOKEN
+   ```
+
+2. Check project name matches exactly (case-sensitive)
+
+3. Verify SDK dependency is added to pom.xml:
+   ```xml
+   <dependency>
+       <groupId>io.github.lambdatest</groupId>
+       <artifactId>lambdatest-java-sdk</artifactId>
+       <version>1.0.2</version>
+   </dependency>
+   ```
+
+4. Check network connectivity to LambdaTest servers
+
+5. Review test execution logs for error messages
+
+#### Issue: "Project Not Found" Error
+
+**Symptoms**: Error indicating SmartUI project cannot be found
+
+**Possible Causes**:
+- Project name typo or mismatch
+- Project deleted
+- Wrong account credentials
+- Token from wrong project
+
+**Solutions**:
+1. Verify project exists in SmartUI dashboard
+2. Copy project token directly from Project Settings
+3. Ensure token includes the project ID prefix (e.g., `123456#...`)
+4. Check credentials match the account with the project
+
+#### Issue: Screenshots Show Blank or Incorrect Content
+
+**Symptoms**: Screenshots captured but show blank screens or incorrect content
+
+**Possible Causes**:
+- Screen not fully loaded
+- App state issues
+- Timing issues
+- Device-specific rendering
+
+**Solutions**:
+1. Add explicit waits before screenshots:
+   ```java
+   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+   wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
+   ```
+
+2. Wait for specific elements to be visible:
+   ```java
+   wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("main-content")));
+   ```
+
+3. Increase wait time for slow-loading screens
+
+4. Verify app is in correct state before screenshot
+
+#### Issue: ignoreBoxes/selectBoxes Not Working
+
+**Symptoms**: Dynamic content still causing false positives
+
+**Possible Causes**:
+- XPath locators incorrect
+- Elements not found at screenshot time
+- JSON formatting issues
+
+**Solutions**:
+1. Verify XPath locators using Appium Inspector
+2. Ensure elements exist at screenshot time
+3. Check JSON formatting in configuration:
+   ```java
+   Map<String, Object> ignoreBoxes = new HashMap<>();
+   ignoreBoxes.put("xpath", new String[]{"//*[@text='Dynamic Ad']"});
+   ```
+
+4. Test XPath locators in isolation before using in config
+
+#### Issue: Maven Dependencies Not Resolving
+
+**Symptoms**: Maven cannot find `lambdatest-java-sdk` or dependencies fail
+
+**Possible Causes**:
+- Incorrect dependency version
+- Maven repository access issues
+- Network connectivity problems
+
+**Solutions**:
+1. Check latest version on [Maven Central](https://mvnrepository.com/artifact/io.github.lambdatest/lambdatest-java-sdk)
+2. Clear Maven cache:
+   ```bash
+   mvn clean
+   ```
+3. Verify internet connectivity for Maven repository access
+4. Check pom.xml for version conflicts
+
+#### Issue: Screenshot Names Not Matching Baseline
+
+**Symptoms**: Screenshots appear as "New" instead of comparing with baseline
+
+**Possible Causes**:
+- Screenshot name changed
+- Baseline doesn't exist
+- Name contains special characters
+
+**Solutions**:
+1. Ensure screenshot names are consistent across test runs
+2. Verify baseline exists in project
+3. Avoid special characters in screenshot names
+4. Check for case sensitivity issues
+
+### Getting Help
+
+If you encounter issues not covered here:
+
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
+- See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options)
+- [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [Appium Hooks Documentation](/support/docs/smartui-appium-hooks)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
