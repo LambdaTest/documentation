@@ -118,24 +118,24 @@ mvn clean compile
 Setup your project token shown in the **SmartUI** app after creating your project.
 
 <Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<TabItem value="MacOS/Linux" label="MacOS/Linux default>
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value="Windows" label="Windows - CMD>
 
 ```bash
-set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+set PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value="PowerShell" label="PowerShell>
 
 ```powershell
-$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+$env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
@@ -261,9 +261,9 @@ When conducting visual tests, you may encounter scenarios where certain elements
 
 
 <Tabs className="docs__val" groupId="framework">
-<TabItem value="IgnoreID" label="Ignore ID" default>
+<TabItem value="IgnoreID" label="Ignore ID default>
 
-```java title="This is a sample for your configuration for Java to ignore by ID"
+```java title=This is a sample for your configuration for Java to ignore by ID"
 List<String> cssID = Arrays.asList("<required ID>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -275,9 +275,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
-<TabItem value="IgoreClass" label="Ignore Class">
+<TabItem value="IgoreClass" label="Ignore Class>
 
-```java title="This is a sample for your configuration for Java to ignore by Class"
+```java title=This is a sample for your configuration for Java to ignore by Class"
 List<String> cssclass = Arrays.asList("<required class>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -289,9 +289,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
-<TabItem value="IgnoreXPath" label="Ignore XPath">
+<TabItem value="IgnoreXPath" label="Ignore XPath>
 
-```java title="This is a sample for your configuration for Java to ignore by XPath"
+```java title=This is a sample for your configuration for Java to ignore by XPath"
 List<String> path = Arrays.asList("<required xpath>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -304,9 +304,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 </TabItem>
 
-<TabItem value="IgnoreSelector" label="Ignore CSS Selector">
+<TabItem value="IgnoreSelector" label="Ignore CSS Selector>
 
-```java title="This is a sample for your configuration for Java to ignore by CSS Selector"
+```java title=This is a sample for your configuration for Java to ignore by CSS Selector"
 List<String> selector = Arrays.asList("<required selector>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -321,9 +321,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 </Tabs>
 
 <Tabs className="docs__val" groupId="framework">
-<TabItem value="SelectID" label="Select ID" default>
+<TabItem value="SelectID" label="Select ID default>
 
-```java title="This is a sample for your configuration for Java to select by ID."
+```java title=This is a sample for your configuration for Java to select by ID."
 List<String> cssID = Arrays.asList("<required ID>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -335,9 +335,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
-<TabItem value="SelectClass" label="Select Class">
+<TabItem value="SelectClass" label="Select Class>
 
-```java title="This is a sample for your configuration for Java to select by Class"
+```java title=This is a sample for your configuration for Java to select by Class"
 List<String> cssclass = Arrays.asList("<required class>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -349,9 +349,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
-<TabItem value="SelectXPath" label="Select XPath">
+<TabItem value="SelectXPath" label="Select XPath>
 
-```java title="This is a sample for your configuration for Java to select by XPath"
+```java title=This is a sample for your configuration for Java to select by XPath"
 List<String> path = Arrays.asList("<required xpath>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -364,9 +364,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 </TabItem>
 
-<TabItem value="SelectSelector" label="Select CSS Selector">
+<TabItem value="SelectSelector" label="Select CSS Selector>
 
-```java title="This is a sample for your webhook configuration for Java to select by CSS Selector"
+```java title=This is a sample for your webhook configuration for Java to select by CSS Selector"
 List<String> selector = Arrays.asList("<required selector>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -386,9 +386,9 @@ You can capture screenshots of targeted elements by leveraging various locator m
 
 
 <Tabs className="docs__val" groupId="framework">
-<TabItem value="ElementID" label="Capture Element by ID" default>
+<TabItem value="ElementID" label="Capture Element by ID default>
 
-```java title="This is a sample for your configuration for Javas to capture an element by ID."
+```java title=This is a sample for your configuration for Javas to capture an element by ID."
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -398,9 +398,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
-<TabItem value="ElementClass" label="Capture Element by Class">
+<TabItem value="ElementClass" label="Capture Element by Class>
 
-```java title="This is a sample for your configuration for Java to capture an element by Class"
+```java title=This is a sample for your configuration for Java to capture an element by Class"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -410,9 +410,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
-<TabItem value="ElementXPath" label="Capture Element by XPath">
+<TabItem value="ElementXPath" label="Capture Element by XPath>
 
-```java title="This is a sample for your configuration for Java to capture an element by XPath"
+```java title=This is a sample for your configuration for Java to capture an element by XPath"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -423,9 +423,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 </TabItem>
 
-<TabItem value="ElementSelector" label="Capture Element by Selector">
+<TabItem value="ElementSelector" label="Capture Element by Selector>
 
-```java title="This is a sample for your configuration for Java to capture an element by CSS Selector"
+```java title=This is a sample for your configuration for Java to capture an element by CSS Selector"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -483,7 +483,7 @@ public void tearDown() {
 ## Best Practices
 
 <Tabs className="docs__val" groupId="best-practices">
-<TabItem value="screenshot-naming" label="Screenshot Naming" default>
+<TabItem value="screenshot-naming" label="Screenshot Naming default>
 
 ### Screenshot Naming
 
@@ -494,13 +494,13 @@ public void tearDown() {
 
 **Example:**
 ```java
-SmartUISnapshot.smartuiSnapshot(driver, "HomePage-Header");
+SmartUISnapshot.smartuiSnapshot(driver, HomePage-Header");
 SmartUISnapshot.smartuiSnapshot(driver, "ProductPage-MainContent");
 ```
 
 </TabItem>
 
-<TabItem value="page-load" label="Wait for Page Load">
+<TabItem value="page-load" label="Wait for Page Load>
 
 ### Wait for Page Load
 
@@ -510,7 +510,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "ProductPage-MainContent");
 
 **Example:**
 ```java
-driver.get("https://example.com");
+driver.get(https://example.com");
 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 wait.until(ExpectedConditions.presenceOfElementLocated(By.id("main-content")));
 SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
@@ -518,7 +518,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 
 </TabItem>
 
-<TabItem value="dynamic-content" label="Handle Dynamic Content">
+<TabItem value="dynamic-content" label="Handle Dynamic Content>
 
 ### Handle Dynamic Content
 
@@ -528,7 +528,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 
 </TabItem>
 
-<TabItem value="configuration" label="Configuration Management">
+<TabItem value=configuration" label="Configuration Management>
 
 ### Configuration Management
 
@@ -538,7 +538,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 
 </TabItem>
 
-<TabItem value="test-organization" label="Test Organization">
+<TabItem value=test-organization" label="Test Organization>
 
 ### Test Organization
 
@@ -552,7 +552,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 ## Troubleshooting
 
 <Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard" default>
+<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard default>
 
 ### Issue: Screenshots Not Appearing in Dashboard
 
@@ -582,9 +582,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 5. Review test execution logs for error messages
 
 </TabItem>
-<TabItem value="project-not-found-error" label="Project Not Found Error">
+<TabItem value=project-not-found-error" label="Project Not Found Error>
 
-### Issue: "Project Not Found" Error
+### Issue: Project Not Found" Error
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -600,7 +600,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 4. Check for extra spaces or quotes in token
 
 </TabItem>
-<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content" >
+<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content >
 
 ### Issue: Screenshots Show Blank or Incorrect Content
 
@@ -616,7 +616,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 1. Add explicit waits before screenshots:
    ```java
    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-   wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
+   wait.until(ExpectedConditions.presenceOfElementLocated(By.id(content")));
    ```
 
 2. Enable JavaScript in configuration:
@@ -631,7 +631,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 4. Verify viewport size matches expected dimensions
 
 </TabItem>
-<TabItem value="build-execution-fails" label="Build Execution Fails" >
+<TabItem value="build-execution-fails" label="Build Execution Fails >
 
 ### Issue: Build Execution Fails
 
@@ -653,7 +653,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 4. Check file permissions for configuration and project files
 
 </TabItem>
-<TabItem value="maven-dependencies-not-resolving" label="Maven Dependencies Not Resolving" >
+<TabItem value=maven-dependencies-not-resolving" label="Maven Dependencies Not Resolving >
 
 ### Issue: Maven Dependencies Not Resolving
 
@@ -674,11 +674,11 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 4. Verify internet connectivity for Maven repository access
 
 </TabItem>
-<TabItem value="screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline" >
+<TabItem value=screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline >
 
 ### Issue: Screenshot Names Not Matching Baseline
 
-**Symptoms**: Screenshots appear as "New" instead of comparing with baseline
+**Symptoms**: Screenshots appear as New" instead of comparing with baseline
 
 **Possible Causes**:
 - Screenshot name changed
@@ -715,8 +715,8 @@ If you encounter issues not covered here:
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
+<nav aria-label="breadcrumbs>
+  <ul className=breadcrumbs">
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
         Home

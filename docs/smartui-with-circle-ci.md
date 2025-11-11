@@ -105,7 +105,7 @@ workflows:
 ## Best Practices
 
 <Tabs className="docs__val" groupId="best-practices">
-<TabItem value="secret-management" label="Secret Management" default>
+<TabItem value="secret-management" label="Secret Management default>
 
 ### Secret Management
 
@@ -116,7 +116,7 @@ workflows:
 - Use different secrets for different environments
 
 </TabItem>
-<TabItem value="pipeline-optimization" label="Pipeline Optimization" >
+<TabItem value=pipeline-optimization" label="Pipeline Optimization >
 
 ### Pipeline Optimization
 
@@ -140,7 +140,7 @@ workflows:
 ```
 
 </TabItem>
-<TabItem value="build-naming" label="Build Naming" >
+<TabItem value=build-naming" label="Build Naming >
 
 ### Build Naming
 
@@ -151,11 +151,11 @@ workflows:
 **Example:**
 ```yaml
 environment:
-  BUILD_NAME: "${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:7}"
+  BUILD_NAME: ${CIRCLE_BRANCH}-${CIRCLE_SHA1:0:7}"
 ```
 
 </TabItem>
-<TabItem value="error-handling" label="Error Handling" >
+<TabItem value="error-handling" label="Error Handling >
 
 ### Error Handling
 
@@ -165,7 +165,7 @@ environment:
 - Add retry logic for flaky tests
 
 </TabItem>
-<TabItem value="resource-management" label="Resource Management" >
+<TabItem value=resource-management" label="Resource Management >
 
 ### Resource Management
 
@@ -175,7 +175,7 @@ environment:
 - Optimize test execution order
 
 </TabItem>
-<TabItem value="resource-management" label="Resource Management" >
+<TabItem value=resource-management" label="Resource Management >
 
 ### Resource Management
 
@@ -190,7 +190,7 @@ environment:
 ## Troubleshooting
 
 <Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="pipeline-fails-with-variable-not-found" label="Pipeline Fails with "Variable Not Found"" default>
+<TabItem value="pipeline-fails-with-variable-not-found" label="Pipeline Fails with Variable Not Found" default>
 
 ### Issue: Pipeline Fails with "Variable Not Found"
 
@@ -214,7 +214,7 @@ environment:
 4. Verify variables are not masked if you need to see them in logs
 
 </TabItem>
-<TabItem value="project_token-not-available" label="PROJECT_TOKEN Not Available" >
+<TabItem value="project_token-not-available" label="PROJECT_TOKEN Not Available >
 
 ### Issue: PROJECT_TOKEN Not Available
 
@@ -239,7 +239,7 @@ environment:
 4. Verify variable scope includes your project
 
 </TabItem>
-<TabItem value="tests-run-but-no-results-in-dashboard" label="Tests Run But No Results in Dashboard" >
+<TabItem value=tests-run-but-no-results-in-dashboard" label="Tests Run But No Results in Dashboard >
 
 ### Issue: Tests Run But No Results in Dashboard
 
@@ -270,7 +270,7 @@ environment:
 4. Check if SmartUI CLI step completed successfully
 
 </TabItem>
-<TabItem value="pipeline-times-out" label="Pipeline Times Out" >
+<TabItem value=pipeline-times-out" label="Pipeline Times Out >
 
 ### Issue: Pipeline Times Out
 
@@ -303,7 +303,7 @@ environment:
 4. Split tests across multiple pipeline jobs
 
 </TabItem>
-<TabItem value="dependencies-installation-fails" label="Dependencies Installation Fails" >
+<TabItem value=dependencies-installation-fails" label="Dependencies Installation Fails >
 
 ### Issue: Dependencies Installation Fails
 
@@ -336,11 +336,11 @@ environment:
 4. Check for version conflicts in package.json
 
 </TabItem>
-<TabItem value="smartui-cli-not-found" label="SmartUI CLI Not Found" >
+<TabItem value=smartui-cli-not-found" label="SmartUI CLI Not Found >
 
 ### Issue: SmartUI CLI Not Found
 
-**Symptoms**: `npx smartui` command fails with "command not found"
+**Symptoms**: `npx smartui` command fails with command not found"
 
 **Possible Causes**:
 - Node.js not installed

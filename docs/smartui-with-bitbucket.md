@@ -83,7 +83,7 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 ## Best Practices
 
 <Tabs className="docs__val" groupId="best-practices">
-<TabItem value="secret-management" label="Secret Management" default>
+<TabItem value="secret-management" label="Secret Management default>
 
 ### Secret Management
 
@@ -93,7 +93,7 @@ You can also store your *LT_USERNAME*, *LT_ACCESS_KEY* and *PROJECT_TOKEN* as se
 - Use different secrets for different environments
 
 </TabItem>
-<TabItem value="pipeline-optimization" label="Pipeline Optimization" >
+<TabItem value=pipeline-optimization" label="Pipeline Optimization >
 
 ### Pipeline Optimization
 
@@ -111,7 +111,7 @@ branches:
 ```
 
 </TabItem>
-<TabItem value="build-naming" label="Build Naming" >
+<TabItem value=build-naming" label="Build Naming >
 
 ### Build Naming
 
@@ -122,11 +122,11 @@ branches:
 **Example:**
 ```yaml
 variables:
-  BUILD_NAME: "$BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
+  BUILD_NAME: $BITBUCKET_BRANCH-$BITBUCKET_COMMIT"
 ```
 
 </TabItem>
-<TabItem value="error-handling" label="Error Handling" >
+<TabItem value="error-handling" label="Error Handling >
 
 ### Error Handling
 
@@ -136,7 +136,7 @@ variables:
 - Add retry logic for flaky tests
 
 </TabItem>
-<TabItem value="resource-management" label="Resource Management" >
+<TabItem value=resource-management" label="Resource Management >
 
 ### Resource Management
 
@@ -146,7 +146,7 @@ variables:
 - Optimize test execution order
 
 </TabItem>
-<TabItem value="resource-management" label="Resource Management" >
+<TabItem value=resource-management" label="Resource Management >
 
 ### Resource Management
 
@@ -161,7 +161,7 @@ variables:
 ## Troubleshooting
 
 <Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="pipeline-fails-with-variable-not-found" label="Pipeline Fails with "Variable Not Found"" default>
+<TabItem value="pipeline-fails-with-variable-not-found" label="Pipeline Fails with Variable Not Found" default>
 
 ### Issue: Pipeline Fails with "Variable Not Found"
 
@@ -184,7 +184,7 @@ variables:
 4. Verify variables are secured if needed
 
 </TabItem>
-<TabItem value="project_token-not-available" label="PROJECT_TOKEN Not Available" >
+<TabItem value="project_token-not-available" label="PROJECT_TOKEN Not Available >
 
 ### Issue: PROJECT_TOKEN Not Available
 
@@ -209,7 +209,7 @@ variables:
 4. Verify variable scope includes your branch
 
 </TabItem>
-<TabItem value="tests-run-but-no-results-in-dashboard" label="Tests Run But No Results in Dashboard" >
+<TabItem value=tests-run-but-no-results-in-dashboard" label="Tests Run But No Results in Dashboard >
 
 ### Issue: Tests Run But No Results in Dashboard
 
@@ -229,7 +229,7 @@ variables:
 2. Check pipeline logs for errors:
    ```yaml
    after-script:
-     - echo "Checking logs..."
+     - echo Checking logs..."
    ```
 
 3. Verify network connectivity in pipeline
@@ -237,7 +237,7 @@ variables:
 4. Check if SmartUI CLI step completed successfully
 
 </TabItem>
-<TabItem value="pipeline-times-out" label="Pipeline Times Out" >
+<TabItem value="pipeline-times-out" label="Pipeline Times Out >
 
 ### Issue: Pipeline Times Out
 
@@ -265,7 +265,7 @@ variables:
 4. Split tests across multiple pipeline steps
 
 </TabItem>
-<TabItem value="dependencies-installation-fails" label="Dependencies Installation Fails" >
+<TabItem value=dependencies-installation-fails" label="Dependencies Installation Fails >
 
 ### Issue: Dependencies Installation Fails
 
@@ -295,11 +295,11 @@ variables:
 4. Check for version conflicts in package.json
 
 </TabItem>
-<TabItem value="smartui-cli-not-found" label="SmartUI CLI Not Found" >
+<TabItem value=smartui-cli-not-found" label="SmartUI CLI Not Found >
 
 ### Issue: SmartUI CLI Not Found
 
-**Symptoms**: `npx smartui` command fails with "command not found"
+**Symptoms**: `npx smartui` command fails with command not found"
 
 **Possible Causes**:
 - Node.js not available in image

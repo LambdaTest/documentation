@@ -100,28 +100,28 @@ mvn clean compile
 ## Step 3: Set up your credentials
 
 <Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<TabItem value="MacOS/Linux" label="MacOS/Linux default>
 
 ```bash
-export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}"
 export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value="Windows" label="Windows - CMD>
 
 ```bash
-set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}"
 set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value="PowerShell" label="PowerShell>
 
 ```powershell
-$env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
+$env:LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}"
 $env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
@@ -135,7 +135,7 @@ You can upload PDFs in two modes:
 
 <Tabs className="docs__val">
 
-<TabItem value="local" label="Local Mode" default>
+<TabItem value="local" label="Local Mode default>
 
 Upload pre-existing PDFs from your local machine:
 
@@ -148,7 +148,7 @@ import io.github.lambdatest.models.FormattedResults;
 
 public class SmartuiPdfLocalTest {
     public void uploadLocalPdf() throws Exception {
-        String projectToken = System.getenv("PROJECT_TOKEN");
+        String projectToken = System.getenv(PROJECT_TOKEN");
         
         SmartUIConfig config = new SmartUIConfig()
             .withProjectToken(projectToken)
@@ -167,7 +167,7 @@ public class SmartuiPdfLocalTest {
 
 </TabItem>
 
-<TabItem value="cloud" label="Cloud Mode">
+<TabItem value="cloud" label="Cloud Mode>
 
 Upload PDFs downloaded during LambdaTest cloud test execution:
 
@@ -183,7 +183,7 @@ import java.util.Base64;
 
 public class SmartuiPdfCloudTest {
     public void uploadCloudPdf(WebDriver driver) throws Exception {
-        String projectToken = System.getenv("PROJECT_TOKEN");
+        String projectToken = System.getenv(PROJECT_TOKEN");
         
         // Download PDF from cloud session
         String base64Content = (String) ((JavascriptExecutor) driver)
@@ -292,7 +292,7 @@ public class SmartuiPdfErrorHandling {
 ## Best Practices
 
 <Tabs className="docs__val" groupId="best-practices">
-<TabItem value="pdf-file-management" label="PDF File Management" default>
+<TabItem value="pdf-file-management" label="PDF File Management default>
 
 ### PDF File Management
 
@@ -304,13 +304,13 @@ public class SmartuiPdfErrorHandling {
 **Example:**
 ```java
 String[] pdfPaths = {
-    "documents/reports/report-v1.0.pdf",
+    documents/reports/report-v1.0.pdf",
     "documents/specs/spec-v2.1.pdf"
 };
 ```
 
 </TabItem>
-<TabItem value="project-token-management" label="Project Token Management">
+<TabItem value="project-token-management" label="Project Token Management>
 
 ### Project Token Management
 
@@ -320,7 +320,7 @@ String[] pdfPaths = {
 - Rotate tokens regularly
 
 </TabItem>
-<TabItem value="build-naming" label="Build Naming">
+<TabItem value=build-naming" label="Build Naming>
 
 ### Build Naming
 
@@ -330,11 +330,11 @@ String[] pdfPaths = {
 
 **Example:**
 ```java
-config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
+config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 ```
 
 </TabItem>
-<TabItem value="error-handling" label="Error Handling">
+<TabItem value="error-handling" label="Error Handling>
 
 ### Error Handling
 
@@ -344,7 +344,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 - Implement retry logic for transient failures
 
 </TabItem>
-<TabItem value="batch-processing" label="Batch Processing">
+<TabItem value=batch-processing" label="Batch Processing>
 
 ### Batch Processing
 
@@ -354,7 +354,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 - Use appropriate batch sizes
 
 </TabItem>
-<TabItem value="batch-processing" label="Batch Processing">
+<TabItem value=batch-processing" label="Batch Processing>
 
 ### Batch Processing
 
@@ -369,7 +369,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 ## Troubleshooting
 
 <Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="pdf-upload-fails" label="PDF Upload Fails" default>
+<TabItem value="pdf-upload-fails" label="PDF Upload Fails default>
 
 ### Issue: PDF Upload Fails
 
@@ -390,7 +390,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 
 2. Check file path is correct:
    ```java
-   File pdfFile = new File("path/to/document.pdf");
+   File pdfFile = new File(path/to/document.pdf");
    if (!pdfFile.exists()) {
        throw new FileNotFoundException("PDF file not found");
    }
@@ -406,9 +406,9 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
    ```
 
 </TabItem>
-<TabItem value="project-not-found-error" label="Project Not Found" Error">
+<TabItem value="project-not-found-error" label="Project Not Found Error>
 
-### Issue: "Project Not Found" Error
+### Issue: Project Not Found" Error
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -424,7 +424,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 4. Check for extra spaces or quotes in token
 
 </TabItem>
-<TabItem value="upload-returns-null-or-empty-result" label="Upload Returns Null or Empty Result">
+<TabItem value="upload-returns-null-or-empty-result" label="Upload Returns Null or Empty Result>
 
 ### Issue: Upload Returns Null or Empty Result
 
@@ -454,7 +454,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 4. Retry upload if transient error
 
 </TabItem>
-<TabItem value="maven-dependencies-not-resolving" label="Maven Dependencies Not Resolving">
+<TabItem value=maven-dependencies-not-resolving" label="Maven Dependencies Not Resolving>
 
 ### Issue: Maven Dependencies Not Resolving
 
@@ -475,7 +475,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 4. Check pom.xml for version conflicts
 
 </TabItem>
-<TabItem value="batch-upload-partially-fails" label="Batch Upload Partially Fails">
+<TabItem value=batch-upload-partially-fails" label="Batch Upload Partially Fails>
 
 ### Issue: Batch Upload Partially Fails
 
@@ -493,7 +493,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
    for (String pdfPath : pdfPaths) {
        try {
            FormattedResults result = pdfUploader.uploadPDF(pdfPath);
-           System.out.println("Uploaded: " + pdfPath);
+           System.out.println(Uploaded: " + pdfPath);
        } catch (Exception e) {
            System.err.println("Failed: " + pdfPath + " - " + e.getMessage());
        }

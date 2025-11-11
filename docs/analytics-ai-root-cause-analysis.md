@@ -300,7 +300,7 @@ The RCA Category Trends widget in Insights enables you to:
 3. **Identify Recurring Issues**: Spot patterns in failure types to prioritize fixes
 4. **Track Improvement**: Monitor the effectiveness of your remediation efforts
 
-<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-widget.png').default} alt="cmd" width="800" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/test-intelligence-ai-test-rca-insights.png').default} alt="cmd" width="800" height="400" className="doc_img"/>
 
 ## Best Practices
 

@@ -34,24 +34,24 @@ This documentation will act as your step-by-step guide in to perform K6 test wit
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
 <Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<TabItem value="MacOS/Linux" label="MacOS/Linux default>
 
 ```bash
-export LT_USERNAME="YOUR_USERNAME"
+export LT_USERNAME=YOUR_USERNAME"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value="Windows" label="Windows - CMD>
 
 ```bash
-set LT_USERNAME="YOUR_USERNAME"
+set LT_USERNAME=YOUR_USERNAME"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value="PowerShell" label="PowerShell>
 
 ```powershell
-$env:LT_USERNAME="YOUR_USERNAME"
+$env:LT_USERNAME=YOUR_USERNAME"
 ```
 
 </TabItem>
@@ -85,14 +85,14 @@ git clone https://github.com/LambdaTest/smartui-k6-sample.git
 2.  Install k6 by referring to the installation guide `https://k6.io/docs/get-started/installation/`:
    
 <Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS" label="MacOS" default>
+<TabItem value="MacOS" label="MacOS default>
 
 ```bash
 brew install k6
 ```
 </TabItem>
 
-<TabItem value="Windows" label="Windows" default>
+<TabItem value=Windows" label="Windows default>
 
 ```bash
 winget install k6
@@ -121,7 +121,7 @@ set LT_ACCESS_KEY=LT_ACCESS_KEY
    
 4.  Edit the required capabilities in your test file `k6-smartui.js`.
 
-```javascript title="Add the following code snippet to run SmartUI with K6 in ./navigation.js"
+```javascript title=Add the following code snippet to run SmartUI with K6 in ./navigation.js"
 import { chromium } from 'k6/experimental/browser';
 import { expect } from 'https://jslib.k6.io/k6chaijs/4.3.4.3/index.js';
 
@@ -214,14 +214,14 @@ const validateSmartUIScreenshots = async (page, screenshotName) => {
 Execute the test using the following command to run the test suite using `K6` 
 
 <Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<TabItem value="MacOS/Linux" label="MacOS/Linux default>
 
 ```bash
 K6_BROWSER_ENABLED=true k6 run k6-smartui.js
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value=Windows" label="Windows default>
 
 ```bash
 set K6_BROWSER_ENABLED=true
@@ -238,7 +238,7 @@ k6 run k6-smartui.js
 ## Best Practices
 
 <Tabs className="docs__val" groupId="best-practices">
-<TabItem value="screenshot-naming" label="Screenshot Naming" default>
+<TabItem value="screenshot-naming" label="Screenshot Naming default>
 
 ### Screenshot Naming
 
@@ -249,12 +249,12 @@ k6 run k6-smartui.js
 
 **Example:**
 ```javascript
-await smartuiSnapshot(page, "HomePage-Header");
+await smartuiSnapshot(page, HomePage-Header");
 await smartuiSnapshot(page, "ProductPage-MainContent");
 ```
 
 </TabItem>
-<TabItem value="wait-for-page-load" label="Wait for Page Load">
+<TabItem value="wait-for-page-load" label="Wait for Page Load>
 
 ### Wait for Page Load
 
@@ -267,11 +267,11 @@ await smartuiSnapshot(page, "ProductPage-MainContent");
 await page.goto('https://example.com');
 await page.waitForSelector('#main-content');
 await page.waitForLoadState('networkidle');
-await smartuiSnapshot(page, "Page Loaded");
+await smartuiSnapshot(page, Page Loaded");
 ```
 
 </TabItem>
-<TabItem value="handle-dynamic-content" label="Handle Dynamic Content">
+<TabItem value="handle-dynamic-content" label="Handle Dynamic Content>
 
 ### Handle Dynamic Content
 
@@ -280,7 +280,7 @@ await smartuiSnapshot(page, "Page Loaded");
 - Document why elements are ignored for future reference
 
 </TabItem>
-<TabItem value="configuration-management" label="Configuration Management">
+<TabItem value=configuration-management" label="Configuration Management>
 
 ### Configuration Management
 
@@ -289,7 +289,7 @@ await smartuiSnapshot(page, "Page Loaded");
 - Document custom configuration choices
 
 </TabItem>
-<TabItem value="test-organization" label="Test Organization">
+<TabItem value=test-organization" label="Test Organization>
 
 ### Test Organization
 
@@ -300,7 +300,7 @@ await smartuiSnapshot(page, "Page Loaded");
 ## Troubleshooting
 
 <Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard" default>
+<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard default>
 
 ### Issue: Screenshots Not Appearing in Dashboard
 
@@ -330,9 +330,9 @@ await smartuiSnapshot(page, "Page Loaded");
 5. Review test execution logs for error messages
 
 </TabItem>
-<TabItem value="project-not-found-error" label="Project Not Found" Error">
+<TabItem value=project-not-found-error" label="Project Not Found Error>
 
-### Issue: "Project Not Found" Error
+### Issue: Project Not Found" Error
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -348,7 +348,7 @@ await smartuiSnapshot(page, "Page Loaded");
 4. Check for extra spaces or quotes in token
 
 </TabItem>
-<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content">
+<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content>
 
 ### Issue: Screenshots Show Blank or Incorrect Content
 
@@ -371,7 +371,7 @@ await smartuiSnapshot(page, "Page Loaded");
 2. Enable JavaScript in configuration:
    ```json
    {
-     "enableJavaScript": true
+     enableJavaScript": true
    }
    ```
 
@@ -380,11 +380,11 @@ await smartuiSnapshot(page, "Page Loaded");
 4. Verify viewport size matches expected dimensions
 
 </TabItem>
-<TabItem value="k6-browser-not-enabled" label="K6 Browser Not Enabled">
+<TabItem value="k6-browser-not-enabled" label="K6 Browser Not Enabled>
 
 ### Issue: K6 Browser Not Enabled
 
-**Symptoms**: Tests fail with "browser not enabled" error
+**Symptoms**: Tests fail with browser not enabled" error
 
 **Possible Causes**:
 - `K6_BROWSER_ENABLED` environment variable not set
@@ -410,11 +410,11 @@ await smartuiSnapshot(page, "Page Loaded");
 4. Install K6 browser extension if needed
 
 </TabItem>
-<TabItem value="screenshot-status-not-approved" label="Screenshot Status Not Approved">
+<TabItem value="screenshot-status-not-approved" label="Screenshot Status Not Approved>
 
 ### Issue: Screenshot Status Not Approved
 
-**Symptoms**: Screenshots appear but status is not "Approved"
+**Symptoms**: Screenshots appear but status is not Approved"
 
 **Possible Causes**:
 - Screenshot comparison failed
@@ -434,11 +434,11 @@ await smartuiSnapshot(page, "Page Loaded");
 4. Adjust pixel threshold if needed
 
 </TabItem>
-<TabItem value="screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline">
+<TabItem value="screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline>
 
 ### Issue: Screenshot Names Not Matching Baseline
 
-**Symptoms**: Screenshots appear as "New" instead of comparing with baseline
+**Symptoms**: Screenshots appear as New" instead of comparing with baseline
 
 **Possible Causes**:
 - Screenshot name changed
@@ -482,8 +482,8 @@ For additional information about K6 framework please explore the documentation [
 
 **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
+<nav aria-label="breadcrumbs>
+  <ul className=breadcrumbs">
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
         Home
@@ -669,8 +669,8 @@ For additional information about K6 framework please explore the documentation [
 
 **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
+<nav aria-label="breadcrumbs>
+  <ul className=breadcrumbs">
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
         Home

@@ -142,10 +142,10 @@ Please read the following table for more information about the options available
 | -E | --removeExtensions          | Strips file extensions from snapshot names| `npx smartui upload <directoryName>  -E` |
 | -i | --ignoreDir `patterns`        | Comma-separated list of directories to ignore | `npx smartui upload <directoryName> -i dir1/dir2,dir3` |
 |    | --fetch-results [filename] | Live fetched comparison results in a json file | `npx smartui upload <directoryName> --fetch-results [custom-results.json]`|
-|    | --buildName <string> | Specify a custom build name | `npx smartui upload <directoryName> --buildName "Build Name"`|
-|    | --userName <string> | Override LambdaTest username | `npx smartui upload <directoryName> --userName "user"`|
-|    | --accessKey <string> | Override LambdaTest access key | `npx smartui upload <directoryName> --accessKey "key"`|
-|    | --config <filepath> | Configuration file path | `npx smartui upload <directoryName> --config .smartui.json`|
+|    | --buildName &lt;string&gt; | Specify a custom build name | `npx smartui upload <directoryName> --buildName "Build Name"`|
+|    | --userName &lt;string&gt; | Override LambdaTest username | `npx smartui upload <directoryName> --userName "user"`|
+|    | --accessKey &lt;string&gt; | Override LambdaTest access key | `npx smartui upload <directoryName> --accessKey "key"`|
+|    | --config &lt;filepath&gt; | Configuration file path | `npx smartui upload <directoryName> --config .smartui.json`|
 
 :::note 
 You may use the `smartui upload --help` command in case you are facing issues during the execution of SmartUI Upload options in the CLI.

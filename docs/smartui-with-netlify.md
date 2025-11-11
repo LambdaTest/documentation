@@ -99,7 +99,7 @@ Your changes will be triggered and deployed.
 ## Best Practices
 
 <Tabs className="docs__val" groupId="best-practices">
-<TabItem value="project-naming" label="Project Naming" default>
+<TabItem value="project-naming" label="Project Naming default>
 
 ### Project Naming
 
@@ -109,7 +109,7 @@ Your changes will be triggered and deployed.
 - Use consistent naming conventions across deployments
 
 </TabItem>
-<TabItem value="baseline-management" label="Baseline Management">
+<TabItem value=baseline-management" label="Baseline Management>
 
 ### Baseline Management
 
@@ -119,7 +119,7 @@ Your changes will be triggered and deployed.
 - Document baseline deployment for reference
 
 </TabItem>
-<TabItem value="deployment-strategy" label="Deployment Strategy">
+<TabItem value=deployment-strategy" label="Deployment Strategy>
 
 ### Deployment Strategy
 
@@ -129,7 +129,7 @@ Your changes will be triggered and deployed.
 - Tag important deployments
 
 </TabItem>
-<TabItem value="integration-configuration" label="Integration Configuration">
+<TabItem value=integration-configuration" label="Integration Configuration>
 
 ### Integration Configuration
 
@@ -139,7 +139,7 @@ Your changes will be triggered and deployed.
 - Use different projects for different environments
 
 </TabItem>
-<TabItem value="comparison-workflow" label="Comparison Workflow">
+<TabItem value=comparison-workflow" label="Comparison Workflow>
 
 ### Comparison Workflow
 
@@ -149,7 +149,7 @@ Your changes will be triggered and deployed.
 - Use SmartUI dashboard for detailed analysis
 
 </TabItem>
-<TabItem value="comparison-workflow" label="Comparison Workflow">
+<TabItem value=comparison-workflow" label="Comparison Workflow>
 
 ### Comparison Workflow
 
@@ -193,9 +193,9 @@ Your changes will be triggered and deployed.
 5. Review Netlify deployment logs for errors
 
 </TabItem>
-<TabItem value="project-not-found-error" label="Project Not Found" Error">
+<TabItem value=project-not-found-error" label="Project Not Found Error>
 
-### Issue: "Project Not Found" Error
+### Issue: Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -217,7 +217,7 @@ Your changes will be triggered and deployed.
 4. Check credentials match the account with the project
 
 </TabItem>
-<TabItem value="integration-not-triggering" label="Integration Not Triggering">
+<TabItem value="integration-not-triggering" label="Integration Not Triggering>
 
 ### Issue: Integration Not Triggering
 
@@ -232,7 +232,7 @@ Your changes will be triggered and deployed.
 **Solutions**:
 1. Verify integration is enabled:
    - Go to Netlify Dashboard → Integrations → LambdaTest
-   - Ensure integration shows as "Enabled"
+   - Ensure integration shows as Enabled"
 
 2. Check integration configuration:
    - Verify all required fields are filled
@@ -246,7 +246,7 @@ Your changes will be triggered and deployed.
 4. Review Netlify deployment logs for integration errors
 
 </TabItem>
-<TabItem value="baseline-not-set-correctly" label="Baseline Not Set Correctly">
+<TabItem value="baseline-not-set-correctly" label="Baseline Not Set Correctly>
 
 ### Issue: Baseline Not Set Correctly
 
@@ -273,7 +273,7 @@ Your changes will be triggered and deployed.
    - Verify deployment was successful
 
 </TabItem>
-<TabItem value="comparison-results-unexpected" label="Comparison Results Unexpected">
+<TabItem value=comparison-results-unexpected" label="Comparison Results Unexpected">
 
 ### Issue: Comparison Results Unexpected
 
