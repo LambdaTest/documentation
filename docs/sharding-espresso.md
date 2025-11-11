@@ -302,7 +302,23 @@ filters:
         values: ["com.lambdatest.proverbial"]
 ```
 
+
 This example will fetch all the test cases from 2 classes and 1 package as defined above and divide them with respect to concurrency given in the yaml file.
+
+## Annotations in Sharding
+
+You can also filter your Espresso tests based on annotations while using sharding. This helps you execute only the test cases marked with specific annotations.
+
+```yaml
+filters:
+      attributes:
+      - type: annotation
+        values: ["com.lambdatest.proverbial.demo1", "com.lambdatest.proverbial.demo2"]
+```
+
+:::info 
+This configuration will run tests annotated with multiple annotations, i.e., only the intersection of all mentioned annotations will be considered.
+:::
 
 ## Generate Reports and Artifacts
 To generate artifacts for your Espresso tests, add the `artifacts: true`, and `report: true` flag in your YAML file:
