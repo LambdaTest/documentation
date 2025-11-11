@@ -94,7 +94,7 @@ const capabilities: {
   platform: "Windows 10",
   browserName: "chrome",
   version: "latest",
-  "smartUI.project": "Smart UI sample test",
+  "smartUI.project": "SmartUI sample test",
   // highlight-start
    github: {
     

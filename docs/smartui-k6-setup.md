@@ -1,6 +1,6 @@
 ---
 id: smartui-k6-setup
-title: Getting started with Smart UI using K6
+title: Getting started with SmartUI using K6
 sidebar_label: K6
 description: In this documentation, learn how to perform Visual Regression testing with K6 on the LambdaTest Automation Cloud across 40+ browser versions.
 keywords:
@@ -141,7 +141,7 @@ export default async function () {
       'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
       'tunnelName': '', // Optional
       'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-      'smartUIProjectName': 'K6_Test_Sample', // Add the required Smart UI Project name
+      'smartUIProjectName': 'K6_Test_Sample', // Add the required SmartUI Project name
     },
   };
 

@@ -247,7 +247,7 @@ The fetched results JSON file contains detailed information about your build and
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Smart UI with Cypress  </span>
+      <span className="breadcrumbs__link"> SmartUI with Cypress  </span>
     </li>
   </ul>
 </nav>

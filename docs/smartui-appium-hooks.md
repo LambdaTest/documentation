@@ -208,7 +208,7 @@ let capabilities = {
   //highlight-end
 };
 
-// Connecting to the Lambdatest appium Cloud Grid with Smart UI
+// Connecting to the Lambdatest appium Cloud Grid with SmartUI
 let gridUrl =
   "https://" +
   "<Your Username>" +
