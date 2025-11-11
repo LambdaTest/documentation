@@ -45,7 +45,7 @@ HyperExecute provides seamless integration with Katalon Studio, enabling you to 
 - Environment and browser details
 - Stack traces for failed tests
 
-> Ensure your project is configured with the Katalon framework and all test scripts are in place.
+> Ensure your project is configured with the [Katalon framework]( https://www.lambdatest.com/support/docs/katalon-integration-with-hyperexecute/) and all test scripts are in place.
 
 ## Steps to Generate Katalon Reports on HyperExecute
 
@@ -64,5 +64,7 @@ partialReports:
 ```
 
 **Step 3:** Now execute your job by triggering the HyperExecute CLI. You can visit the HyperExecute dashboard to download the report after job completion.
+
+> This image shows consolidated report of katalon 10+ versions
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/katalon-report.png').default} alt="Image"  className="doc_img"/>
