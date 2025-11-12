@@ -47,6 +47,10 @@ For example, the following command will discover the list of Feature file scenar
 snooper --featureFilePaths=features/ --frameWork=java
 ```
 
+:::info
+Snooper is **not compatible** with **Alpine-based** Docker images, as Alpine uses **musl libc** instead of **glibc**, which Snooper depends on. To ensure proper functionality, use a non-Alpine base image that includes glibc.
+:::
+
 ## How to implement Snooper on HyperExecute
 
 > `snooper` command works only with HyperExecute YAML 0.1
