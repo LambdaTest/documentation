@@ -67,34 +67,38 @@ By utilizing ignored/selected regions, you can keep your test results focused on
   </div>
 </div>
 
-## Key Features of Annotation Tool
+## Quick Start
 
-- **Drawing Over Screenshots:** Easily draw on compared screenshots to ignore/select specific elements, enhancing clarity and focus.
+### Accessing the Annotation Tool
 
-- **Multiple Annotation Types:** Support for Ignore Region, Select Region, Select Ignore, Ignore Colors, and Floating Regions to handle various dynamic content scenarios.
+1. Navigate to your SmartUI project dashboard
+2. Open a screenshot comparison that shows differences
+3. Click on the **Actions** button (annotation icon) in the comparison view
 
-- **Drawing Boxes:** Use the 'Draw Cursor' option and 'Add Region' button to draw and manage multiple boxes. Each box's size is indicated, ensuring precise and informative annotations.
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/annotationsicon.png').default} alt="Annotations icon" width="1366" height="636" className='doc_img'/>
 
-- **Saving Changes:** After drawing, a dialogue popup will allow you to apply your annotations to the current screenshot or all browser variants of this screenshot.
+### Basic Workflow
 
-- **Updating Compared Screenshots:** Annotations on compared screenshots will trigger a re-run of the comparison, ensuring that specified regions are reflected in both current and future builds.
+1. **Click the annotation icon** to open the annotation tool
+2. **Click "Add Region"** and draw a box around the area you want to annotate
+3. **Select the annotation type** (Ignore Region, Select Region, Floating Region, or Ignore Colors)
+4. **Click "Save"** to apply the annotation
+5. **Choose application scope**: Apply to current screenshot only or all browser variants
 
-- **Visibility of Annotations:** Control the visibility of your annotations in both parallel and landscape views with a new toggle, default set to off, ensuring a clean visual field when not needed.
-
-- **Tooltip Information:** When the 'Annotations' toggle is on, hovering over a box displays a tooltip with detailed information, including the box dimensions and its status as an ignored or selected area.
-
-- **Applicable for Every Project Type:** This feature is compatible with every project type, efficiently handling dynamic data where code-based ignore/select is not supported.
+> **Tip:** Start with **Ignore Region** for simple dynamic content like timestamps or notification counters. It's the most straightforward annotation type.
 
 ## Annotation Methods
 
-<Tabs>
+All four annotation methods are accessible from the same **Actions** button (annotation icon). Click on the annotation icon to open the annotation tool, then select your desired annotation type from the available options.
+
+<Tabs className='docs__val' groupId='annotation-methods'>
 <TabItem value='ignore-region' label='Ignore Region' default>
 
-### Ignore Region
+### What is Ignore Region?
 
-**Ignore Region** allows you to exclude specific areas from visual comparison. This is ideal for dynamic content that changes frequently but isn't critical to your visual tests, such as timestamps, notification badges, or advertisements.
+**Ignore Region** excludes specific areas from visual comparison. Ideal for dynamic content that changes frequently but isn't critical to your visual tests, such as timestamps, notification badges, or advertisements.
 
-### Use Cases
+### When to Use
 
 - Ignoring notification counters that change frequently
 - Excluding advertisement banners
@@ -104,7 +108,7 @@ By utilizing ignored/selected regions, you can keep your test results focused on
 
 ### How to Use
 
-**Step 1:** Click on the **Actions** button to configure areas.
+**Step 1:** Click on the **Actions** button (annotation icon) to open the annotation tool.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/annotationsicon.png').default} alt="Annotations icon" width="1366" height="636" className='doc_img'/>
 
@@ -112,43 +116,29 @@ By utilizing ignored/selected regions, you can keep your test results focused on
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/ignore_region.png').default} alt="Ignore region annotation" width="1366" height="636" className='doc_img'/>
 
-**Step 3:** After drawing, select **Ignore Region** from the annotation type options and click **Save**.
+**Step 3:** Select **Ignore Region** from the annotation type dropdown and click **Save**.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/applyannotationmodal.png').default} alt="Apply annotation modal" width="1366" height="636" className='doc_img'/>
 
-**Step 4:** Choose whether to apply the annotation to the current screenshot only or all browser variants of the selected viewport.
+**Step 4:** Choose whether to apply to the current screenshot only or all browser variants.
 
-**Result:** The configured area will be ignored in every consecutive build for the same screenshot test case.
+**What Happens:** The configured area will be ignored in every consecutive build for the same screenshot test case.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultofignoreregion.png').default} alt="Result of ignore region" width="1366" height="636" className='doc_img'/>
 
-### Best Practices
+### Example
 
-- Use Ignore Region for simple dynamic content that changes frequently
-- Start with Ignore Region as it's the most straightforward annotation type
-- Verify ignored regions work correctly across different browsers and viewports
-- Document why you ignored certain regions for future reference
-- Review ignored regions periodically to ensure they're still relevant
-
-### When to Use
-
-Use **Ignore Region** when:
-- You have dynamic content that changes frequently (notifications, timestamps)
-- The content is not critical to your visual tests
-- You want to exclude entire sections from comparison
-- The content is user-generated or time-sensitive
-
-**Example:** Ignoring a "Last updated" timestamp in a dashboard.
+Ignoring a "Last updated" timestamp in a dashboard that changes with each page load.
 
 </TabItem>
 
 <TabItem value='select-region' label='Select Region'>
 
-### Select Region
+### What is Select Region?
 
-**Select Region** allows you to focus visual comparison on specific areas of your screenshot. Only the selected regions will be compared, while everything else is ignored. This is useful when you want to test only critical UI components.
+**Select Region** focuses visual comparison on specific areas of your screenshot. Only the selected regions will be compared, while everything else is automatically ignored. This is useful when you want to test only critical UI components.
 
-### Use Cases
+### When to Use
 
 - Testing only the main content area
 - Focusing on specific form fields
@@ -158,150 +148,35 @@ Use **Ignore Region** when:
 
 ### How to Use
 
-**Step 1:** Click on the **Actions** button to configure areas.
+**Step 1:** Click on the **Actions** button (annotation icon) to open the annotation tool.
 
 **Step 2:** Click on the **Add Region** button and draw a box around the area you want to select for comparison.
 
-**Step 3:** After drawing, select **Select Region** from the annotation type options and click **Save**.
+**Step 3:** Select **Select Region** from the annotation type dropdown and click **Save**.
 
-**Step 4:** Choose whether to apply the annotation to the current screenshot only or all browser variants of the selected viewport.
+**Step 4:** Choose whether to apply to the current screenshot only or all browser variants.
 
-**Result:** Only the selected regions will be compared in future builds, while all other areas are automatically ignored.
+**What Happens:** Only the selected regions will be compared in future builds, while all other areas are automatically ignored.
 
 > **Note:** You can define multiple select regions. All selected regions will be compared, and everything outside these regions will be ignored.
 
-### Best Practices
+### Example
 
-- Use Select Region when you only care about specific UI components
-- Focus testing on critical areas that matter most to your application
-- Combine multiple select regions to test different parts of the same screenshot
-- Verify selected regions work correctly across different browsers and viewports
-- Keep selected regions focused on what's truly important to avoid missing issues
-
-### When to Use
-
-Use **Select Region** when:
-- You only care about specific UI components
-- You want to focus testing on critical areas
-- The rest of the page is not relevant to your tests
-- You're testing isolated components
-
-**Example:** Testing only the checkout form while ignoring the rest of the page.
+Testing only the checkout form while ignoring the rest of the page, including header, footer, and sidebar elements.
 
 </TabItem>
 
-<TabItem value='select-ignore' label='Select Ignore'>
+<TabItem value='floating-region' label='Floating Region'>
 
-### Select Ignore
+### What is Floating Region?
 
-**Select Ignore** is a powerful feature that combines selection and ignoring. You first select a region to focus on, then within that selected region, you can ignore specific sub-regions. This is perfect for scenarios where you want to test most of a component but ignore certain dynamic elements within it.
-
-### Use Cases
-
-- Testing a product card but ignoring the price (which may change)
-- Comparing a user profile section but ignoring the avatar (which may be different)
-- Testing a dashboard widget but ignoring specific metrics that change frequently
-- Focusing on a form while ignoring dynamic validation messages
-- Testing a navigation menu but ignoring the active state indicator
-
-### How to Use
-
-**Step 1:** Click on the **Actions** button to configure areas.
-
-**Step 2:** First, draw a **Select Region** box around the main area you want to test.
-
-**Step 3:** Then, within that selected region, draw an **Ignore Region** box around the sub-area you want to ignore.
-
-**Step 4:** Select **Select Ignore** as the annotation type and click **Save**.
-
-**Step 5:** Choose whether to apply the annotation to the current screenshot only or all browser variants of the selected viewport.
-
-**Result:** The outer selected region will be compared, but the inner ignored sub-region will be excluded from comparison, giving you precise control over what gets tested.
-
-> **Best Practice:** Use Select Ignore when you need granular control over comparison areas within a larger component.
-
-### Best Practices
-
-- Use Select Ignore when you need granular control over comparison areas
-- First define the outer select region, then add ignore regions within it
-- Ensure the ignore region is completely within the select region
-- Test the configuration to verify it works as expected
-- Document the reasoning for using Select Ignore for future reference
-
-### When to Use
-
-Use **Select Ignore** when:
-- You want to test a component but ignore specific parts within it
-- You need granular control over comparison areas
-- The component has both static and dynamic elements
-- You want to focus on structure while ignoring content
-
-**Example:** Testing a product card but ignoring the price and rating that may change.
-
-</TabItem>
-
-<TabItem value='ignore-colors' label='Ignore Colors'>
-
-### Ignore Colors
-
-**Ignore Colors** allows you to ignore color differences in specific regions while still comparing the structure and layout. This is particularly useful when colors may vary due to themes, user preferences, or A/B testing, but the structure should remain consistent.
-
-### Use Cases
-
-- Ignoring color changes in themed applications
-- Handling A/B testing color variations
-- Ignoring user-customizable color schemes
-- Testing structure while ignoring color differences in specific regions
-- Comparing layouts across different theme configurations
-
-### How to Use
-
-**Step 1:** Click on the **Actions** button to configure areas.
-
-**Step 2:** Click on the **Add Region** button and draw a box around the area where you want to ignore color differences.
-
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/ignorecolor_region.png').default} alt="Ignore colors region annotation" width="1366" height="636" className='doc_img'/>
-
-**Step 3:** After drawing, select **Ignore Colors** from the annotation type options and click **Save**.
-
-**Step 4:** Choose whether to apply the annotation to the current screenshot only or all browser variants of the selected viewport.
-
-**Result:** The region will be compared for structure and layout, but color differences will be ignored, reducing false positives from color variations.
-
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultofignorecolors.png').default} alt="Result of ignore colors" width="1366" height="636" className='doc_img'/>
-
-> **Note:** Ignore Colors is particularly effective when combined with other annotation types for comprehensive visual testing.
-
-### Best Practices
-
-- Use Ignore Colors when structure matters more than color
-- Ensure the region covers the entire area where colors may vary
-- Combine with other annotation types for comprehensive coverage
-- Verify that structural differences aren't being mistaken for color differences
-- Test across different theme configurations to ensure consistency
-
-### When to Use
-
-Use **Ignore Colors** when:
-- Your application supports themes or color customization
-- You're running A/B tests with different color schemes
-- Colors may vary but structure should remain consistent
-- You want to test layout without color sensitivity
-
-**Example:** Ignoring color differences in a themed navigation bar while testing its structure.
-
-</TabItem>
-</Tabs>
-
-## Floating Region (Advanced)
-
-**Floating Region** is designed to handle elements that move or shift position within a defined boundary. This feature uses two regions:
+**Floating Region** handles elements that move or shift position within a defined boundary. This feature uses two regions:
 - **Blue Region:** Defines the boundary where the element might move to (the floating area)
 - **Yellow Region:** Defines which element to test within the floating region
 
-This is perfect for handling dynamic elements that may appear in different positions but should be tested for content consistency.
+Perfect for handling dynamic elements that may appear in different positions but should be tested for content consistency.
 
-### Use Cases
+### When to Use
 
 - Testing notification badges that may appear in different positions
 - Handling tooltips or popovers that can move
@@ -311,39 +186,104 @@ This is perfect for handling dynamic elements that may appear in different posit
 
 ### How to Use
 
-**Step 1:** Click on the **Actions** button to configure areas.
+**Step 1:** Click on the **Actions** button (annotation icon) to open the annotation tool.
 
-**Step 2:** First, draw a **Blue Region** (Floating Area) that defines the boundary where the element might move to. This is the area where SmartUI will look for the element.
+**Step 2:** First, draw a **Blue Region** (Floating Area) that defines the boundary where the element might move to. Make it large enough to encompass all possible positions.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/floating_region.png').default} alt="Floating region annotation" width="1366" height="636" className='doc_img'/>
 
-**Step 3:** Then, within the blue region, draw a **Yellow Region** (Element to Test) that defines the specific element you want to test. This element will be compared regardless of its position within the blue floating area.
+**Step 3:** Then, within the blue region, draw a **Yellow Region** (Element to Test) that defines the specific element you want to test.
 
-**Step 4:** Select **Floating Region** as the annotation type and click **Save**.
+**Step 4:** Select **Floating Region** from the annotation type dropdown and click **Save**.
 
-**Step 5:** Choose whether to apply the annotation to the current screenshot only or all browser variants of the selected viewport.
+**Step 5:** Choose whether to apply to the current screenshot only or all browser variants.
 
-**Result:** SmartUI will compare the yellow region element, allowing it to move anywhere within the blue floating area without triggering false positives. This effectively handles dynamic element positioning issues.
+**What Happens:** SmartUI will compare the yellow region element, allowing it to move anywhere within the blue floating area without triggering false positives.
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultoffloatingregion.png').default} alt="Result of floating region" width="1366" height="636" className='doc_img'/>
 
-> **Best Practice:**
-> - Make the blue region large enough to encompass all possible positions of the element
-> - Keep the yellow region focused on the specific element you want to test
-> - Use Floating Region when elements shift due to content changes, responsive behavior, or dynamic layouts
+> **Tip:** Make the blue region large enough to encompass all possible positions of the element, and keep the yellow region focused on the specific element you want to test.
 
-### When to Use Floating Region
+### Example
 
-Use **Floating Region** when:
-- Elements move or shift position within a boundary
-- You have dynamic layouts that cause element displacement
-- Tooltips, popovers, or modals appear in different positions
-- Content length causes elements to shift
-- You need to handle responsive behavior variations
+Testing a notification badge that may appear in different positions based on content length or screen size.
 
-**Example:** Testing a notification badge that may appear in different positions based on content.
+</TabItem>
 
-## Viewing and Managing Annotations
+<TabItem value='ignore-colors' label='Ignore Colors'>
+
+### What is Ignore Colors?
+
+**Ignore Colors** ignores color differences in specific regions while still comparing the structure and layout. Particularly useful when colors may vary due to themes, user preferences, or A/B testing, but the structure should remain consistent.
+
+### When to Use
+
+- Ignoring color changes in themed applications
+- Handling A/B testing color variations
+- Ignoring user-customizable color schemes
+- Testing structure while ignoring color differences in specific regions
+- Comparing layouts across different theme configurations
+
+### How to Use
+
+**Step 1:** Click on the **Actions** button (annotation icon) to open the annotation tool.
+
+**Step 2:** Click on the **Add Region** button and draw a box around the area where you want to ignore color differences.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/ignorecolor_region.png').default} alt="Ignore colors region annotation" width="1366" height="636" className='doc_img'/>
+
+**Step 3:** Select **Ignore Colors** from the annotation type dropdown and click **Save**.
+
+**Step 4:** Choose whether to apply to the current screenshot only or all browser variants.
+
+**What Happens:** The region will be compared for structure and layout, but color differences will be ignored, reducing false positives from color variations.
+
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultofignorecolors.png').default} alt="Result of ignore colors" width="1366" height="636" className='doc_img'/>
+
+> **Note:** Ignore Colors is particularly effective when combined with other annotation types for comprehensive visual testing.
+
+### Example
+
+Ignoring color differences in a themed navigation bar while testing its structure and layout across different theme configurations.
+
+</TabItem>
+</Tabs>
+
+## Advanced: Select Ignore
+
+**Select Ignore** is an advanced feature that combines selection and ignoring. You first select a region to focus on, then within that selected region, you can ignore specific sub-regions. This is perfect for scenarios where you want to test most of a component but ignore certain dynamic elements within it.
+
+### When to Use
+
+- Testing a product card but ignoring the price (which may change)
+- Comparing a user profile section but ignoring the avatar (which may be different)
+- Testing a dashboard widget but ignoring specific metrics that change frequently
+- Focusing on a form while ignoring dynamic validation messages
+- Testing a navigation menu but ignoring the active state indicator
+
+### How to Use
+
+**Step 1:** Click on the **Actions** button (annotation icon) to open the annotation tool.
+
+**Step 2:** First, draw a **Select Region** box around the main area you want to test.
+
+**Step 3:** Then, within that selected region, draw an **Ignore Region** box around the sub-area you want to ignore.
+
+**Step 4:** Select **Select Ignore** from the annotation type dropdown and click **Save**.
+
+**Step 5:** Choose whether to apply to the current screenshot only or all browser variants.
+
+**What Happens:** The outer selected region will be compared, but the inner ignored sub-region will be excluded from comparison, giving you precise control over what gets tested.
+
+> **Tip:** Use Select Ignore when you need granular control over comparison areas within a larger component. Ensure the ignore region is completely within the select region.
+
+### Example
+
+Testing a product card but ignoring the price and rating that may change, while still comparing the product image, title, and description.
+
+## Managing Annotations
+
+Once you've created annotations, you can view, edit, and delete them as needed.
 
 ### Viewing Annotations
 
@@ -351,12 +291,7 @@ Use **Floating Region** when:
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/changes_found.png').default} alt="Viewing annotations" width="1366" height="636" className='doc_img'/>
 
-**Step 2:** When the toggle is on, you'll see all your annotation boxes with different colors indicating their type:
-- **Red boxes:** Ignore regions
-- **Green boxes:** Select regions
-- **Blue boxes:** Floating area boundaries
-- **Yellow boxes:** Elements within floating regions
-- **Purple boxes:** Ignore colors regions
+**Step 2:** When the toggle is on, you'll see all your annotation boxes with color coding (see [Annotation Color Coding](#annotation-color-coding) below).
 
 **Step 3:** Hover over any annotation box to see a tooltip with detailed information, including:
 - Box dimensions (width × height)
@@ -369,7 +304,7 @@ You can always edit or delete pre-configured areas or add new ones according to 
 
 **To Edit an Annotation:**
 
-**Step 1:** Click on the **Actions** button.
+**Step 1:** Click on the **Actions** button (annotation icon).
 
 **Step 2:** Click on the annotation box you want to edit.
 
@@ -379,7 +314,7 @@ You can always edit or delete pre-configured areas or add new ones according to 
 
 ### Deleting Annotations
 
-**Step 1:** Click on the **Actions** button.
+**Step 1:** Click on the **Actions** button (annotation icon).
 
 **Step 2:** Click on the annotation box you want to delete, or click **Delete All** to remove all annotations.
 
@@ -387,7 +322,7 @@ You can always edit or delete pre-configured areas or add new ones according to 
 
 > **Note:** Deleting annotations will trigger a re-run of the comparison, and the previously ignored/selected areas will be included in future comparisons.
 
-## Applying Annotations
+### Applying Annotations
 
 After creating your annotations, you'll see a modal dialog with options:
 
@@ -401,18 +336,55 @@ After creating your annotations, you'll see a modal dialog with options:
 
 > **Best Practice:** While you can apply annotations to all browser variants, it's recommended to manually verify that these areas are configured correctly for each browser. Certain browsers may render elements differently, potentially causing inconsistencies in your annotations.
 
-## Keyboard Shortcuts for Precise Control
+### Annotation Color Coding
 
-The SmartUI Annotation Tool offers keyboard shortcuts to streamline the resizing and removal of defined areas:
+When viewing annotations, different colors indicate their type:
+- **Red boxes:** Ignore regions
+- **Green boxes:** Select regions
+- **Blue boxes:** Floating area boundaries
+- **Yellow boxes:** Elements within floating regions
+- **Purple boxes:** Ignore colors regions
 
-- `Shift + A:` Resize left
-- `Shift + S:` Resize down
-- `Shift + D:` Resize right
-- `Shift + W:` Resize up
+## Keyboard Shortcuts
+
+Speed up your annotation workflow with these keyboard shortcuts:
+
+- `Shift + A:` Resize annotation box left
+- `Shift + S:` Resize annotation box down
+- `Shift + D:` Resize annotation box right
+- `Shift + W:` Resize annotation box up
 - `Shift + T:` Define a region encompassing the entire screenshot
-- `Delete or Backspace:` Remove the currently selected area
+- `Delete or Backspace:` Remove the currently selected annotation
 
-> By effectively utilizing these keyboard shortcuts, you can significantly enhance the accuracy and efficiency of your annotation workflow.
+> **Tip:** Use keyboard shortcuts for precise control when resizing annotation boxes, especially for small or complex regions.
+
+## Best Practices
+
+Follow these best practices to get the most out of the annotation tool:
+
+### Choosing the Right Annotation Type
+
+- **Start with Ignore Region** for simple dynamic content (timestamps, counters, ads)
+- **Use Select Region** when you only care about specific UI components
+- **Use Floating Region** for elements that move within a boundary
+- **Use Ignore Colors** when structure matters more than color variations
+- **Use Select Ignore** for granular control within larger components
+
+### General Guidelines
+
+- **Verify across browsers:** Test annotations on different browsers to ensure consistency
+- **Document your decisions:** Note why you ignored/selected certain regions for future reference
+- **Review periodically:** Regularly review annotations to ensure they're still relevant
+- **Start simple:** Begin with basic Ignore Region before moving to advanced features
+- **Test thoroughly:** Verify annotations work correctly before applying to all browser variants
+
+### Workflow Tips
+
+- Create annotations after reviewing initial comparison results
+- Use the annotation toggle to hide/show annotations for a cleaner view
+- Leverage keyboard shortcuts for faster annotation creation
+- Apply to current screenshot first, then verify before applying to all variants
+- Combine multiple annotation types for comprehensive coverage
 
 ## Troubleshooting
 
