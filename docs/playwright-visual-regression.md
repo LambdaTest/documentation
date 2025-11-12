@@ -315,7 +315,7 @@ await page.waitForLoadState('networkidle');
 - Update baselines when intentional changes are made
 
 </TabItem>
-<TabItem value="viewport-selection" label="Viewport Selection">
+<TabItem value="viewport-selection-1" label="Viewport Selection">
 
 ### Viewport Selection
 
@@ -324,7 +324,7 @@ await page.waitForLoadState('networkidle');
 - Consider both portrait and landscape orientations
 
 </TabItem>
-<TabItem value="viewport-selection" label="Viewport Selection">
+<TabItem value="viewport-selection-2" label="Viewport Selection">
 
 ### Viewport Selection
 
