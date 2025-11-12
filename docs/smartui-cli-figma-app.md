@@ -12,11 +12,13 @@ keywords:
   - Design to Production Validation
 url: https://www.lambdatest.com/support/docs/smartui-cli/
 slug: smartui-cli-figma-app/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -41,9 +43,9 @@ SmartUI Figma-App CLI lets you compare **mobile app screenshots captured on real
 | `figma_file_token`   | `designs.json`   | Figma **file ID**, extracted from the Figma file URL                       |
 | `figma_ids`          | `designs.json`   | List of **frame or node IDs** you want to compare visually                 |
 
-> Example Figma URL:  
-> `https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`  
-> - `figma_file_token`: `abc12345`  
+> Example Figma URL:
+> `https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`
+> - `figma_file_token`: `abc12345`
 > - `figma_ids`: `2417-58969`
 
 ---
@@ -138,12 +140,12 @@ npx smartui upload-figma-app designs.json --buildName "v1.0.0" --markBaseline
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="build-names" label="Build Names" default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='build-names' label='Build Names' default>
 
 ### Build Names
 
@@ -152,7 +154,7 @@ You can see the SmartUI dashboard to view the results. This will help you identi
    ```
 
 </TabItem>
-<TabItem value="screenshot-names" label="Screenshot Names" >
+<TabItem value='screenshot-names' label='Screenshot Names' >
 
 ### Screenshot Names
 
@@ -161,7 +163,7 @@ You can see the SmartUI dashboard to view the results. This will help you identi
    - Ensure `screenshot_names` in your config match the order of `figma_ids`
 
 </TabItem>
-<TabItem value="device-names" label="Device Names" >
+<TabItem value='device-names' label='Device Names' >
 
 ### Device Names
 
@@ -182,8 +184,8 @@ driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
 
 **Example for different frameworks:**
 
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="appium" label="Appium" default>
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='appium' label='Appium' default>
 
 ```javascript
 // JavaScript
@@ -191,7 +193,7 @@ await driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
 ```
 
 </TabItem>
-<TabItem value="appium-java" label="Appium Java">
+<TabItem value='appium-java' label='Appium Java'>
 
 ```java
 // Java
@@ -204,7 +206,7 @@ driver.execute("smartui.takeScreenshot", Map.of("name", "homepage.png"));
 This ensures that Figma screenshots (e.g., `homepage.png`) match app screenshots (e.g., `homepage.png`) in the same build.
 
 </TabItem>
-<TabItem value="device-names" label="Device Names" >
+<TabItem value='device-names-1' label='Device Names' >
 
 ### Device Names
 
@@ -225,8 +227,8 @@ driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
 
 **Example for different frameworks:**
 
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="appium" label="Appium" default>
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='appium-1' label='Appium' default>
 
 ```javascript
 // JavaScript
@@ -234,7 +236,7 @@ await driver.execute("smartui.takeScreenshot", {name: "homepage.png"});
 ```
 
 </TabItem>
-<TabItem value="appium-java" label="Appium Java">
+<TabItem value="appium-java-1" label='Appium Java'>
 
 ```java
 // Java
@@ -251,8 +253,8 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match app screenshots
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="verify-figma-token" label="Verify Figma Token" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='verify-figma-token' label='Verify Figma Token' default>
 
 Verify Figma Token
 
@@ -262,7 +264,7 @@ Verify Figma Token
    Ensure the token is valid and has not expired. Generate a new token from [Figma Settings](https://www.figma.com/settings).
 
 </TabItem>
-<TabItem value="check-file-token" label="Check File Token" >
+<TabItem value='check-file-token' label='Check File Token' >
 
 Check File Token
 
@@ -270,7 +272,7 @@ Check File Token
    - Ensure you have access to the Figma file
 
 </TabItem>
-<TabItem value="validate-node-ids" label="Validate Node IDs" >
+<TabItem value='validate-node-ids' label='Validate Node IDs' >
 
 Validate Node IDs
 
@@ -282,7 +284,7 @@ Validate Node IDs
 **Solutions**:
 
 </TabItem>
-<TabItem value="check-screenshot-names" label="Check Screenshot Names" >
+<TabItem value='check-screenshot-names' label='Check Screenshot Names' >
 
 Check Screenshot Names
 
@@ -291,7 +293,7 @@ Check Screenshot Names
    - Ensure `screenshot_names` array matches the order of `figma_ids`
 
 </TabItem>
-<TabItem value="verify-device-sizes" label="Verify Device Sizes" >
+<TabItem value='verify-device-sizes' label='Verify Device Sizes' >
 
 Verify Device Sizes
 
@@ -300,7 +302,7 @@ Verify Device Sizes
    - Verify orientation (portrait/landscape) matches between Figma and device
 
 </TabItem>
-<TabItem value="check-build-names" label="Check Build Names" >
+<TabItem value='check-build-names' label='Check Build Names' >
 
 Check Build Names
 
@@ -308,7 +310,7 @@ Check Build Names
    - Verify builds are in the same project
 
 </TabItem>
-<TabItem value="project-type" label="Project Type" >
+<TabItem value='project-type' label='Project Type' >
 
 Project Type
 
@@ -320,7 +322,7 @@ Project Type
 **Solutions**:
 
 </TabItem>
-<TabItem value="verify-project-token" label="Verify Project Token" >
+<TabItem value='verify-project-token' label='Verify Project Token' >
 
 Verify Project Token
 
@@ -330,7 +332,7 @@ Verify Project Token
    Ensure the token is set correctly and matches your SmartUI project.
 
 </TabItem>
-<TabItem value="check-project-type" label="Check Project Type" >
+<TabItem value='check-project-type' label='Check Project Type' >
 
 Check Project Type
 

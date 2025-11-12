@@ -17,15 +17,16 @@ keywords:
   - Katalon Studio
   - Katalon SmartUI Integration
 
-url: https://www.lambdatest.com/support/docs/smartui-katalon-plugin/  
+url: https://www.lambdatest.com/support/docs/smartui-katalon-plugin/
 site_name: LambdaTest
 slug: smartui-katalon-plugin
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -54,12 +55,11 @@ import CodeBlock from '@theme/CodeBlock';
 The **Katalon Studio SmartUI Plugin** integrates [Katalon Studio](https://www.katalon.com/) with [LambdaTest SmartUI](https://www.lambdatest.com/support/docs/smart-visual-regression-testing/), enabling **visual regression testing** directly inside your test automation workflows.
 
 With this plugin, you can:
-- Capture screenshots at any point in your test flow  
-- Compare them with visual baselines  
-- Detect UI changes early in your CI/CD pipeline  
+- Capture screenshots at any point in your test flow
+- Compare them with visual baselines
+- Detect UI changes early in your CI/CD pipeline
 
 ---
-
 
 ## Installation
 
@@ -95,7 +95,6 @@ With this plugin, you can:
 
 Run the following command in the terminal to start the Katalon instance.
 
-
 ```bash
 /Applications/Katalon\ Studio\ Enterprise.app/Contents/MacOS/katalon
 ```
@@ -108,7 +107,6 @@ In your Katalon project, set the `PROJECT_TOKEN` environment variable:
 #### Via Project Settings:
 1. Go to **Project > Settings > Plugins > SmartUI Integration**.
 2. Here you may set your project token
-
 
 ```bash
 PROJECT_TOKEN = "project_token..."
@@ -170,7 +168,7 @@ Then use it in your test:
 CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('Build v1.0', 'config.json', '')
 ```
 
-> Use `ignoreBoxes` to exclude dynamic elements (ads, timestamps) from comparison.  
+> Use `ignoreBoxes` to exclude dynamic elements (ads, timestamps) from comparison.
 > Use `selectBoxes` to compare only specific regions (e.g., main content area).
 
 ---
@@ -188,8 +186,8 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="server-management" label="Server Management" default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='server-management' label='Server Management' default>
 
 ### Server Management
 
@@ -197,7 +195,7 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 
 </TabItem>
 
-<TabItem value="snapshot-naming" label="Snapshot Naming">
+<TabItem value='snapshot-naming' label='Snapshot Naming'>
 
 ### Snapshot Naming
 
@@ -205,7 +203,7 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 
 </TabItem>
 
-<TabItem value="ci-cd-integration" label="CI/CD Integration">
+<TabItem value='ci-cd-integration' label='CI/CD Integration'>
 
 ### CI/CD Integration
 
@@ -213,7 +211,7 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 
 </TabItem>
 
-<TabItem value="reporting" label="Reporting">
+<TabItem value='reporting' label='Reporting'>
 
 ### Reporting
 
@@ -232,20 +230,20 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 
 ---
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">SmartUI Katalon Plugin</span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'>SmartUI Katalon Plugin</span>
     </li>
   </ul>
 </nav>

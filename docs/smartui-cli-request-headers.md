@@ -14,9 +14,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-cli-request-headers/
 site_name: LambdaTest
 slug: smartui-cli-request-headers/
----
 
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -53,7 +57,6 @@ By including these headers in the SmartUI CLI configuration, you can seamlessly 
 3.  **Define Your Headers**: Inside the `requestHeaders` array, add a new object for each header you need to send. Each object must contain a single key-value pair representing the header's name and its value.
 4.  **Save the File**: Once you save the changes, the SmartUI CLI will use this configuration for the next test run.
 
-
 ## Configuration in `smartui.json`
 
 To use this feature, you need to add the `requestHeaders` array to your `smartui.json` configuration file. This array contains objects, where each object represents a key-value pair for a custom header. The CLI will automatically include these headers in all HTTP requests it makes to fetch assets for rendering the webpage.
@@ -84,7 +87,6 @@ Below is an example of how to configure custom headers in your `smartui.json` fi
   * **Header Object**: Each object in the array defines a single HTTP header.
       * **Key**: The name of the HTTP header (e.g., `Authorization`, `X-Custom-Header-1`).
       * **Value**: The corresponding value for the header (e.g., `Bearer your-access-token`, `custom-value-1`).
-
 
 :::note
 

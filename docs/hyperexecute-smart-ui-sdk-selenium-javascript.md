@@ -16,13 +16,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-sdk-selenium-javascript/
 site_name: LambdaTest
 slug: hyperexecute-smart-ui-sdk-selenium-javascript/
+
 ---
-
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

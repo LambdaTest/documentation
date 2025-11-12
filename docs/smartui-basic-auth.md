@@ -11,11 +11,13 @@ keywords:
   - Authentication Headers
 url: https://www.lambdatest.com/support/docs/smartui-basic-auth/
 slug: smartui-cli-basic-auth/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 <script type="application/ld+json"
@@ -41,7 +43,6 @@ import NewTag from '../src/component/newTag';
       })
     }}
 ></script>
-
 
 When capturing screenshots of applications or websites that are protected with authentication, you need to configure SmartUI to pass the necessary authentication headers. This ensures that SmartUI can access and properly render all assets on the page.
 
@@ -106,22 +107,22 @@ For better security, you can use environment variables for your authentication c
 
 Then set your environment variables:
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export AUTH_USERNAME="your-username"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
 set AUTH_USERNAME="your-username"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:AUTH_USERNAME="your-username"
@@ -146,4 +147,4 @@ When using basic authentication:
 2. Ensure all required assets are accessible with the provided credentials
 3. Use secure methods to manage your authentication credentials
 4. Consider implementing a test user specifically for visual testing
-::: 
+:::

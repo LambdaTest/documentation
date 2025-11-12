@@ -17,11 +17,13 @@ keywords:
 
 url: https://www.lambdatest.com/support/docs/smartui-selenium-python-sdk/
 slug: smartui-selenium-python-sdk/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -48,7 +50,7 @@ import NewTag from '../src/component/newTag';
       })
     }}
 ></script>
-Welcome to the world of simplified visual testing with the SmartUI SDK. 
+Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
 
@@ -57,7 +59,7 @@ Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK re
 - Basic understanding of Command Line Interface and Selenium is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
 - Install **virtualenv** which is the recommended way to run your tests. It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules.
-  
+
 ```bash
 pip install virtualenv
 ```
@@ -88,13 +90,13 @@ cd smartui-python-sample
 ```
 
 - Create a virtual environment in your project folder (the environment name is arbitrary).
-  
+
 ```bash
 virtualenv venv
 ```
 
 - Activate the environment.
-  
+
 ```bash
 source venv/bin/activate
 ```
@@ -118,22 +120,22 @@ pip install lambdatest-selenium-driver
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -142,7 +144,7 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 </Tabs>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ### **Step 4:** Create and Configure SmartUI Config
 
@@ -197,13 +199,11 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ### **Step 5:** Adding SmartUI function to take screenshot
 
-- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
-  
+- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
 
 ```python
 from lambdatest_selenium_driver import smartui_snapshot
 from selenium import webdriver
-
 
 driver = webdriver.Chrome()
 try:
@@ -211,7 +211,7 @@ try:
     smartui_snapshot(driver,"<Screenshot Name>")
 except Exception as err:
     print(err)
-finally: 
+finally:
     driver.close()
 ```
 
@@ -223,7 +223,7 @@ Execute `visual regression tests` on SmartUI using the following commands
 npx smartui exec python SmartUI_SDK_LT_hub.py --config .smartui.json
 ```
 
-:::note 
+:::note
 You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
 :::
 
@@ -233,10 +233,7 @@ You have successfully integrated SmartUI SDK with your Selenium tests. Visit you
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
-
-
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ## Arguments supported in the `smartUISnapshot` function
 
@@ -248,14 +245,12 @@ The following are the different options which are currently supported:
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
 
-
-## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />** 
+## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />**
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
 
-
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="IgnoreID" label="Ignore ID" default>
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='IgnoreID' label='Ignore ID' default>
 
 ```rb title="This is a sample for your configuration for Python to ignore by ID"
 options = {
@@ -268,7 +263,7 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 </TabItem>
-<TabItem value="IgoreClass" label="Ignore Class">
+<TabItem value='IgoreClass' label='Ignore Class'>
 
 ```py title="This is a sample for your configuration for Python to ignore by Class"
 options = {
@@ -281,7 +276,7 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 </TabItem>
-<TabItem value="IgnoreXPath" label="Ignore XPath">
+<TabItem value='IgnoreXPath' label='Ignore XPath'>
 
 ```py title="This is a sample for your configuration for Python to ignore by XPath"
 options = {
@@ -295,7 +290,7 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 </TabItem>
 
-<TabItem value="IgnoreSelector" label="Ignore CSS Selector">
+<TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
 
 ```py title="This is a sample for your configuration for Python to ignore by CSS Selector"
 options = {
@@ -310,8 +305,8 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 </Tabs>
 
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="SelectID" label="Select ID" default>
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='SelectID' label='Select ID' default>
 
 ```py title="This is a sample for your configuration for Python to select by ID."
 options = {
@@ -324,7 +319,7 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 </TabItem>
-<TabItem value="SelectClass" label="Select Class">
+<TabItem value='SelectClass' label='Select Class'>
 
 ```py title="This is a sample for your configuration for Python to select by Class"
 options = {
@@ -337,7 +332,7 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 </TabItem>
-<TabItem value="SelectXPath" label="Select XPath">
+<TabItem value='SelectXPath' label='Select XPath'>
 
 ```py title="This is a sample for your configuration for Python to select by XPath"
 options = {
@@ -351,7 +346,7 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 </TabItem>
 
-<TabItem value="SelectSelector" label="Select CSS Selector">
+<TabItem value='SelectSelector' label='Select CSS Selector'>
 
 ```py title="This is a sample for your webhook configuration for Python to select by CSS Selector"
 options = {
@@ -370,9 +365,8 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
 
-
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="ElementID" label="Capture Element by ID" default>
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='ElementID' label='Capture Element by ID' default>
 
 ```py title="This is a sample for your configuration for Python to capture an element by ID."
 options = {
@@ -385,7 +379,7 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 </TabItem>
-<TabItem value="ElementClass" label="Capture Element by Class">
+<TabItem value='ElementClass' label='Capture Element by Class'>
 
 ```py title="This is a sample for your configuration for Python to capture an element by Class"
 options = {
@@ -398,7 +392,7 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 ```
 
 </TabItem>
-<TabItem value="ElementXPath" label="Capture Element by XPath">
+<TabItem value='ElementXPath' label='Capture Element by XPath'>
 
 ```py title="This is a sample for your configuration for Python to capture an element by XPath"
 options = {
@@ -412,7 +406,7 @@ smartui_snapshot(driver,"<Screenshot Name>", options)
 
 </TabItem>
 
-<TabItem value="ElementSelector" label="Capture Element by Selector">
+<TabItem value='ElementSelector' label='Capture Element by Selector'>
 
 ```py title="This is a sample for your webhook configuration for Python to capture an element by CSS Selector"
 options = {
@@ -469,8 +463,8 @@ if __name__ == "__main__":
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="screenshot-naming" label="Screenshot Naming" default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='screenshot-naming' label='Screenshot Naming' default>
 
 ### Screenshot Naming
 
@@ -487,7 +481,7 @@ smartui_snapshot(driver, "ProductPage-MainContent")
 
 </TabItem>
 
-<TabItem value="page-load" label="Wait for Page Load">
+<TabItem value='page-load' label='Wait for Page Load'>
 
 ### Wait for Page Load
 
@@ -509,7 +503,7 @@ smartui_snapshot(driver, "Page Loaded")
 
 </TabItem>
 
-<TabItem value="dynamic-content" label="Handle Dynamic Content">
+<TabItem value='dynamic-content' label='Handle Dynamic Content'>
 
 ### Handle Dynamic Content
 
@@ -519,7 +513,7 @@ smartui_snapshot(driver, "Page Loaded")
 
 </TabItem>
 
-<TabItem value="configuration" label="Configuration Management">
+<TabItem value='configuration' label='Configuration Management'>
 
 ### Configuration Management
 
@@ -529,7 +523,7 @@ smartui_snapshot(driver, "Page Loaded")
 
 </TabItem>
 
-<TabItem value="test-organization" label="Test Organization">
+<TabItem value='test-organization' label='Test Organization'>
 
 ### Test Organization
 
@@ -542,8 +536,8 @@ smartui_snapshot(driver, "Page Loaded")
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>
 
 ### Issue: Screenshots Not Appearing in Dashboard
 
@@ -573,7 +567,7 @@ smartui_snapshot(driver, "Page Loaded")
 5. Review test execution logs for error messages
 
 </TabItem>
-<TabItem value="project-not-found-error" label="Project Not Found Error">
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
 
 ### Issue: "Project Not Found" Error
 
@@ -591,7 +585,7 @@ smartui_snapshot(driver, "Page Loaded")
 4. Check for extra spaces or quotes in token
 
 </TabItem>
-<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content">
+<TabItem value='screenshots-show-blank-or-incorrect-content' label='Screenshots Show Blank or Incorrect Content'>
 
 ### Issue: Screenshots Show Blank or Incorrect Content
 
@@ -609,7 +603,7 @@ smartui_snapshot(driver, "Page Loaded")
    from selenium.webdriver.support.ui import WebDriverWait
    from selenium.webdriver.support import expected_conditions as EC
    from selenium.webdriver.common.by import By
-   
+
    wait = WebDriverWait(driver, 10)
    wait.until(EC.presence_of_element_located((By.ID, 'content')))
    wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, '.main-content')))
@@ -627,7 +621,7 @@ smartui_snapshot(driver, "Page Loaded")
 4. Verify viewport size matches expected dimensions
 
 </TabItem>
-<TabItem value="build-execution-fails" label="Build Execution Fails">
+<TabItem value='build-execution-fails' label='Build Execution Fails'>
 
 ### Issue: Build Execution Fails
 
@@ -649,7 +643,7 @@ smartui_snapshot(driver, "Page Loaded")
 4. Check file permissions for configuration and project files
 
 </TabItem>
-<TabItem value="pip-dependencies-not-resolving" label="pip Dependencies Not Resolving">
+<TabItem value='pip-dependencies-not-resolving' label='pip Dependencies Not Resolving'>
 
 ### Issue: pip Dependencies Not Resolving
 
@@ -687,7 +681,7 @@ smartui_snapshot(driver, "Page Loaded")
    ```
 
 </TabItem>
-<TabItem value="screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline">
+<TabItem value='screenshot-names-not-matching-baseline' label='Screenshot Names Not Matching Baseline'>
 
 ### Issue: Screenshot Names Not Matching Baseline
 
@@ -727,20 +721,20 @@ If you encounter issues not covered here:
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> SmartUI Selenium Python SDK </span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'> SmartUI Selenium Python SDK </span>
     </li>
   </ul>
 </nav>

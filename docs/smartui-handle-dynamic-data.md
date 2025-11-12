@@ -14,11 +14,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-handle-dynamic-data/
 site_name: LambdaTest
 slug: smartui-handle-dynamic-data/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -72,8 +74,8 @@ You should use dynamic data handling in the following scenarios:
 
 ## Dynamic Data Handling Methods
 
-<Tabs className="docs__val" groupId="dynamic-data-methods">
-<TabItem value="ignore" label="Ignore DOM Elements" default>
+<Tabs className='docs__val' groupId='dynamic-data-methods'>
+<TabItem value='ignore' label='Ignore DOM Elements' default>
 
 ## Ignore DOM Elements
 
@@ -95,8 +97,8 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 
 ### Examples by Selector Type
 
-<Tabs className="docs__val" groupId="selector">
-<TabItem value="id" label="By ID" default>
+<Tabs className='docs__val' groupId='selector'>
+<TabItem value='id' label='By ID' default>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -116,9 +118,6 @@ await smartuiSnapshot(driver, 'Home Page', options);
 
 **Java (Selenium)**
 ```java
-import io.github.lambdatest.SmartUISnapshot;
-import java.util.HashMap;
-import java.util.ArrayList;
 
 HashMap<String, ArrayList<String>> ignoreDOM = new HashMap<>();
 ArrayList<String> ids = new ArrayList<>();
@@ -146,7 +145,7 @@ smartui_snapshot(driver, "Home Page", options)
 ```
 
 </TabItem>
-<TabItem value="class" label="By Class">
+<TabItem value='class' label='By Class'>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -177,7 +176,7 @@ options = {
 ```
 
 </TabItem>
-<TabItem value="css" label="By CSS Selector">
+<TabItem value='css' label='By CSS Selector'>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -218,7 +217,7 @@ options = {
 ```
 
 </TabItem>
-<TabItem value="xpath" label="By XPath">
+<TabItem value='xpath' label='By XPath'>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -261,7 +260,7 @@ options = {
 
 </TabItem>
 
-<TabItem value="select" label="Select DOM Elements">
+<TabItem value='select' label='Select DOM Elements'>
 
 ## Select DOM Elements
 
@@ -283,8 +282,8 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 
 ### Examples by Selector Type
 
-<Tabs className="docs__val" groupId="selector">
-<TabItem value="select-id" label="By ID" default>
+<Tabs className='docs__val' groupId='selector'>
+<TabItem value='select-id' label='By ID' default>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -319,7 +318,7 @@ options = {
 ```
 
 </TabItem>
-<TabItem value="select-class" label="By Class">
+<TabItem value='select-class' label='By Class'>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -350,7 +349,7 @@ options = {
 ```
 
 </TabItem>
-<TabItem value="select-css" label="By CSS Selector">
+<TabItem value='select-css' label='By CSS Selector'>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -389,7 +388,7 @@ options = {
 ```
 
 </TabItem>
-<TabItem value="select-xpath" label="By XPath">
+<TabItem value='select-xpath' label='By XPath'>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -432,7 +431,7 @@ options = {
 
 </TabItem>
 
-<TabItem value="combining" label="Combining Methods">
+<TabItem value='combining' label='Combining Methods'>
 
 ## Combining ignoreDOM and selectDOM
 
@@ -512,7 +511,7 @@ await smartuiSnapshot(driver, 'Article Page', options);
 
 </TabItem>
 
-<TabItem value="best-practices" label="Best Practices">
+<TabItem value='best-practices' label='Best Practices'>
 
 ## Best Practices
 
@@ -530,12 +529,12 @@ await smartuiSnapshot(driver, 'Article Page', options);
 
 </TabItem>
 
-<TabItem value="troubleshooting" label="Troubleshooting">
+<TabItem value='troubleshooting' label='Troubleshooting'>
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting-inner">
-<TabItem value="elements-not-being-ignored" label="Elements Not Being Ignored" default>
+<Tabs className='docs__val' groupId='troubleshooting-inner'>
+<TabItem value='elements-not-being-ignored' label='Elements Not Being Ignored' default>
 
 ### Issue: Elements Not Being Ignored
 
@@ -561,7 +560,7 @@ await smartuiSnapshot(driver, 'Page', options);
 ```
 
 </TabItem>
-<TabItem value="selectdom-not-working" label="selectDOM Not Working" >
+<TabItem value='selectdom-not-working' label='selectDOM Not Working' >
 
 ### Issue: selectDOM Not Working
 
@@ -576,7 +575,7 @@ await smartuiSnapshot(driver, 'Page', options);
 3. Ensure elements are in the viewport
 
 </TabItem>
-<TabItem value="false-positives-still-occurring" label="False Positives Still Occurring" >
+<TabItem value='false-positives-still-occurring' label='False Positives Still Occurring' >
 
 ### Issue: False Positives Still Occurring
 

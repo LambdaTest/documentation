@@ -14,8 +14,11 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-mcp-server/
 site_name: LambdaTest
 slug: smartui-mcp-server/
----
 
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
@@ -47,12 +50,11 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ***
 The SmartUI  MCP Server allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis. It is built on [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) and connects to the LambdaTest SmartUI infrastructure via `comparisonId`.
 
-
 <!-- Get a comprehensive overview of HyperExecute's capabilities by watching our introductory video.
 
-<div className="ytframe"> 
-<div className="youtube" data-embed="tLe5VPcGDxs">
-    <div className="play-button"></div>
+<div className='ytframe'>
+<div className='youtube' data-embed="tLe5VPcGDxs">
+    <div className='play-button'></div>
 </div>
 </div> -->
 
@@ -97,7 +99,7 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 **Step 2:** Click on the Extensions icon in the Activity Bar on the side of the window (or press `Ctrl+Shift+X`).<br />
 **Step 3:** Search for **Cline** in the Extensions Marketplace.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/installing-cline.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/installing-cline.webp').default} alt="automation-dashboard"  width="1920" height="868" className='doc_img'/>
 
 **Step 4:** Click **Install** on the Cline – The Collaborative AI Coder extension.<br />
 **Step 5:** Once installed, you'll see the Cline icon in your VS Code sidebar.<br />
@@ -110,16 +112,14 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 
 **Step 1:** In VS Code, click on the Cline icon in the sidebar to open the Cline panel.<br />
 **Step 2:** Under the **MCP Servers** section, click **Remote Servers**.
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/vs-code-config.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/vs-code-config.webp').default} alt="automation-dashboard"  width="1920" height="868" className='doc_img'/>
 
 **Step 3:** Add Server Name as **LambdaTest-MCP**.<br />
 **Step 4:** Enter the following URL in the server URL field: `http://mcp-api.lambdatest.com/automation?&LT_USERNAME=[your-lt-username]&LT_ACCESS_KEY=[your-lt-access-key]` <br />
 **Step 5:** Replace [your-lt-username] and [your-lt-access-key] with your LambdaTest credentials. <br />
-**Step 6:** Click on **Add Server**. 
+**Step 6:** Click on **Add Server**.
 
-
-
-## Supported Tools 
+## Supported Tools
 
 The following tools return human-readable summaries and require only a comparisonId as input.
 
@@ -184,21 +184,20 @@ If the `comparisonId` is invalid or resources are missing, a message like the fo
 
 > "Error analyzing SmartUI run: comparisonId not found or visual resources are incomplete."
 
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'>
         SmartUI MCP Server
       </span>
     </li>

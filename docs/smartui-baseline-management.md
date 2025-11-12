@@ -13,10 +13,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-baseline-management/
 site_name: LambdaTest
 slug: smartui-baseline-management/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -129,8 +132,8 @@ npx smartui --markBaseline capture urls.json
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="baseline-selection" label="Baseline Selection" default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='baseline-selection' label='Baseline Selection' default>
 
 ### Baseline Selection
 
@@ -140,7 +143,7 @@ npx smartui --markBaseline capture urls.json
 
 </TabItem>
 
-<TabItem value="branch-management" label="Branch Management">
+<TabItem value='branch-management' label='Branch Management'>
 
 ### Branch Management
 
@@ -150,7 +153,7 @@ npx smartui --markBaseline capture urls.json
 
 </TabItem>
 
-<TabItem value="build-management" label="Build Management">
+<TabItem value='build-management' label='Build Management'>
 
 ### Build Management
 
@@ -160,7 +163,7 @@ npx smartui --markBaseline capture urls.json
 
 </TabItem>
 
-<TabItem value="approval-process" label="Approval Process">
+<TabItem value='approval-process' label='Approval Process'>
 
 ### Approval Process
 
@@ -173,8 +176,8 @@ npx smartui --markBaseline capture urls.json
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="common-issues" label="Common Issues" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='common-issues' label='Common Issues' default>
 
 ### Common Issues
 
@@ -195,7 +198,7 @@ npx smartui --markBaseline capture urls.json
 
 </TabItem>
 
-<TabItem value="baseline-not-found" label="Baseline Not Found">
+<TabItem value='baseline-not-found' label='Baseline Not Found'>
 
 ### Baseline Not Found
 
@@ -213,7 +216,7 @@ npx smartui --baselineBranch "main" exec -- <command>
 
 </TabItem>
 
-<TabItem value="permission-denied" label="Permission Denied">
+<TabItem value='permission-denied' label='Permission Denied'>
 
 ### Permission Denied
 
@@ -226,7 +229,7 @@ npx smartui --baselineBranch "main" exec -- <command>
 
 </TabItem>
 
-<TabItem value="baseline-mismatch" label="Baseline Mismatch">
+<TabItem value='baseline-mismatch' label='Baseline Mismatch'>
 
 ### Baseline Mismatch
 
@@ -350,4 +353,4 @@ Best practices for updating baselines:
 
 ### Getting Help
 
-If you encounter any issues with baseline management in SmartUI, please contact our support team at support@lambdatest.com or use the [24/7 Chat Support](https://www.lambdatest.com/support). 
+If you encounter any issues with baseline management in SmartUI, please contact our support team at support@lambdatest.com or use the [24/7 Chat Support](https://www.lambdatest.com/support).

@@ -14,11 +14,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-handle-lazy-loading/
 site_name: LambdaTest
 slug: smartui-handle-lazy-loading/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -109,47 +111,47 @@ const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 
   try {
     await driver.get("https://example.com");
-    
+
     // Function to scroll through the entire page
     async function scrollToLoadLazyContent() {
       // Get the total page height
       let totalHeight = await driver.executeScript("return document.body.scrollHeight");
       let viewportHeight = await driver.executeScript("return window.innerHeight");
-      
+
       // Scroll in increments
       let scrollStep = 500;
       let currentPosition = 0;
-      
+
       while (currentPosition < totalHeight) {
         // Scroll down
         await driver.executeScript(`window.scrollTo(0, ${currentPosition})`);
-        
+
         // Wait for lazy content to load
         await new Promise(resolve => setTimeout(resolve, 1000));
-        
+
         // Update position
         currentPosition += scrollStep;
-        
+
         // Recalculate total height (in case of infinite scroll)
         let newHeight = await driver.executeScript("return document.body.scrollHeight");
         if (newHeight > totalHeight) {
           totalHeight = newHeight;
         }
       }
-      
+
       // Scroll back to top
       await driver.executeScript("window.scrollTo(0, 0)");
-      
+
       // Final wait for any remaining content
       await new Promise(resolve => setTimeout(resolve, 2000));
     }
-    
+
     // Scroll to load all lazy content
     await scrollToLoadLazyContent();
-    
+
     // Take snapshot
     await smartuiSnapshot(driver, "Lazy Loaded Page");
-    
+
   } finally {
     await driver.quit();
   }
@@ -159,40 +161,37 @@ const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 #### Java (Selenium) Example
 
 ```java
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import io.github.lambdatest.SmartUISnapshot;
 
 public void handleLazyLoading(WebDriver driver) throws InterruptedException {
     driver.get("https://example.com");
-    
+
     JavascriptExecutor js = (JavascriptExecutor) driver;
-    
+
     // Get total page height
     Long totalHeight = (Long) js.executeScript("return document.body.scrollHeight");
     Long viewportHeight = (Long) js.executeScript("return window.innerHeight");
-    
+
     int scrollStep = 500;
     long currentPosition = 0;
-    
+
     // Scroll through the page
     while (currentPosition < totalHeight) {
         js.executeScript("window.scrollTo(0, " + currentPosition + ")");
         Thread.sleep(1000); // Wait for lazy content
-        
+
         currentPosition += scrollStep;
-        
+
         // Recalculate height for infinite scroll
         Long newHeight = (Long) js.executeScript("return document.body.scrollHeight");
         if (newHeight > totalHeight) {
             totalHeight = newHeight;
         }
     }
-    
+
     // Scroll back to top
     js.executeScript("window.scrollTo(0, 0)");
     Thread.sleep(2000);
-    
+
     // Take snapshot
     SmartUISnapshot.smartuiSnapshot(driver, "Lazy Loaded Page");
 }
@@ -213,22 +212,22 @@ def scroll_to_load_lazy_content(driver):
     # Get total page height
     total_height = driver.execute_script("return document.body.scrollHeight")
     viewport_height = driver.execute_script("return window.innerHeight")
-    
+
     scroll_step = 500
     current_position = 0
-    
+
     # Scroll through the page
     while current_position < total_height:
         driver.execute_script(f"window.scrollTo(0, {current_position})")
         time.sleep(1)  # Wait for lazy content
-        
+
         current_position += scroll_step
-        
+
         # Recalculate height for infinite scroll
         new_height = driver.execute_script("return document.body.scrollHeight")
         if new_height > total_height:
             total_height = new_height
-    
+
     # Scroll back to top
     driver.execute_script("window.scrollTo(0, 0)")
     time.sleep(2)
@@ -271,8 +270,8 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="choose-the-right-method" label="Choose the Right Method" default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='choose-the-right-method' label='Choose the Right Method' default>
 
 ### Choose the Right Method
 
@@ -281,7 +280,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 - **Known lazy elements**: Wait for specific elements
 
 </TabItem>
-<TabItem value="optimize-wait-times" label="Optimize Wait Times" >
+<TabItem value='optimize-wait-times' label='Optimize Wait Times' >
 
 ### Optimize Wait Times
 
@@ -290,7 +289,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 - Monitor test execution times to optimize
 
 </TabItem>
-<TabItem value="scroll-incrementally" label="Scroll Incrementally" >
+<TabItem value='scroll-incrementally' label='Scroll Incrementally' >
 
 ### Scroll Incrementally
 
@@ -299,7 +298,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 - Recalculate page height for infinite scroll scenarios
 
 </TabItem>
-<TabItem value="return-to-top" label="Return to Top" >
+<TabItem value='return-to-top' label='Return to Top' >
 
 ### Return to Top
 
@@ -308,7 +307,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 - Prevents viewport-dependent differences
 
 </TabItem>
-<TabItem value="combine-methods" label="Combine Methods" >
+<TabItem value='combine-methods' label='Combine Methods' >
 
 ### Combine Methods
 
@@ -317,7 +316,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 - Wait for specific critical elements
 
 </TabItem>
-<TabItem value="combine-methods" label="Combine Methods" >
+<TabItem value='combine-methods-1' label='Combine Methods' >
 
 ### Combine Methods
 
@@ -350,8 +349,8 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="content-still-missing-after-scrolling" label="Content Still Missing After Scrolling" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='content-still-missing-after-scrolling' label='Content Still Missing After Scrolling' default>
 
 ### Issue: Content Still Missing After Scrolling
 
@@ -361,7 +360,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 3. Check if lazy loading uses intersection observer (may need different approach)
 
 </TabItem>
-<TabItem value="test-takes-too-long" label="Test Takes Too Long" >
+<TabItem value='test-takes-too-long' label='Test Takes Too Long' >
 
 ### Issue: Test Takes Too Long
 
@@ -371,7 +370,7 @@ await smartuiSnapshot(driver, "Lazy Loaded Images");
 3. Use `waitForTimeout` instead of scrolling when possible
 
 </TabItem>
-<TabItem value="inconsistent-results" label="Inconsistent Results" >
+<TabItem value='inconsistent-results' label='Inconsistent Results' >
 
 ### Issue: Inconsistent Results
 

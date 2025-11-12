@@ -12,10 +12,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-pdf-api-upload/
 site_name: LambdaTest
 slug: smartui-pdf-api-upload/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -83,7 +86,7 @@ Here's how you can upload your PDFs:
 | pathToFiles  | array  | Add the path to the PDFs that will be uploaded. <br/> Example: `pathToFiles : [ "path/to/pdf-1", "path/to/pdf-2"]`                                | Yes       |
 | buildName    | string | Assign a name of your choice to the build comprising the uploaded PDFs. <br/> Example: `buildName : #<Build_Name>`                                | No        |
 
-:::note 
+:::note
 Only files in `.pdf` format are compatible with this feature.
 :::
 
@@ -118,8 +121,8 @@ The API will return a JSON response containing:
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="file-management" label="PDF File Management" default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='file-management' label='PDF File Management' default>
 
 ### PDF File Management
 
@@ -130,7 +133,7 @@ The API will return a JSON response containing:
 
 </TabItem>
 
-<TabItem value="token-management" label="Project Token Management">
+<TabItem value='token-management' label='Project Token Management'>
 
 ### Project Token Management
 
@@ -141,7 +144,7 @@ The API will return a JSON response containing:
 
 </TabItem>
 
-<TabItem value="build-naming" label="Build Naming">
+<TabItem value='build-naming' label='Build Naming'>
 
 ### Build Naming
 
@@ -156,7 +159,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 
 </TabItem>
 
-<TabItem value="error-handling" label="Error Handling">
+<TabItem value='error-handling' label='Error Handling'>
 
 ### Error Handling
 
@@ -167,7 +170,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 
 </TabItem>
 
-<TabItem value="batch-processing" label="Batch Processing">
+<TabItem value='batch-processing' label='Batch Processing'>
 
 ### Batch Processing
 
@@ -181,8 +184,8 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="pdf-upload-fails" label="PDF Upload Fails" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>
 
 ### Issue: PDF Upload Fails
 
@@ -205,7 +208,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 6. Confirm API endpoint URL is correct
 
 </TabItem>
-<TabItem value="project-not-found-error" label="Project Not Found Error">
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
 
 ### Issue: "Project Not Found" Error
 
@@ -223,7 +226,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 4. Check for extra spaces or quotes in token
 
 </TabItem>
-<TabItem value="upload-returns-error-response" label="Upload Returns Error Response">
+<TabItem value='upload-returns-error-response' label='Upload Returns Error Response'>
 
 ### Issue: Upload Returns Error Response
 
@@ -243,7 +246,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 5. Retry upload if transient error
 
 </TabItem>
-<TabItem value="pdfs-not-appearing-in-dashboard" label="PDFs Not Appearing in Dashboard">
+<TabItem value='pdfs-not-appearing-in-dashboard' label='PDFs Not Appearing in Dashboard'>
 
 ### Issue: PDFs Not Appearing in Dashboard
 

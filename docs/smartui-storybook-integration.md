@@ -16,11 +16,13 @@ keywords:
 
 url: https://www.lambdatest.com/support/docs/smart-ui-storybook/
 slug: smart-ui-storybook/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -114,9 +116,6 @@ SmartUI supports Storybook's `play` function (available in Storybook v9+) for in
 **Example with Play Function:**
 
 ```js title="Button.stories.js"
-import { expect } from '@storybook/jest';
-import { userEvent, within } from '@storybook/testing-library';
-import { Button } from './Button';
 
 export default {
   title: 'Components/Button',
@@ -127,7 +126,7 @@ export const InteractiveButton = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const button = canvas.getByRole('button', { name: /click me/i });
-    
+
     // Interact with the button before screenshot
     await userEvent.click(button);
     await expect(button).toHaveTextContent('Clicked!');
@@ -219,22 +218,22 @@ If you set `"backgroundTheme": "both"` in your SmartUI config, each story will b
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -243,7 +242,7 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 </Tabs>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-project-token.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-project-token.png').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ### **Step 4:** Create and Configure SmartUI Config
 
@@ -259,7 +258,7 @@ Once, the configuration file will be created, you will be seeing the default con
 {
   "storybook": {
     "browsers": [
-      "chrome", 
+      "chrome",
       "firefox",
       "safari",
       "edge",
@@ -290,7 +289,7 @@ Please read the following table for more information about the configuration fil
 | useGlobals     | Enable Storybook global decorators and parameters (required for theme switching) <br/> Ex: `true` | Optional (default: `false`) |
 
 :::note
-SmartUI Storybook testing now supports `Edge` browser. 
+SmartUI Storybook testing now supports `Edge` browser.
 :::
 
 :::caution Please Note
@@ -302,7 +301,7 @@ This will help you to avoid any false-positive results for your tests. You can a
 
 :::
 
-:::info 
+:::info
 
 For capturing the stories in **full page** without limiting the height to the viewport then in the `viewports` array, you can change the following configuration:
 
@@ -354,7 +353,7 @@ To configure custom viewports for your stories, you can update the `.smartui.jso
       }
       {
         "stories": [
-          "<name of the stories/components>" 
+          "<name of the stories/components>"
         ],
         "waitForTimeout": 3000 //Story-level waitForTimeout (Applied to all the combinations of the mentioned stories)
         }
@@ -367,7 +366,7 @@ To configure custom viewports for your stories, you can update the `.smartui.jso
 ```
 
 :::info
-The `waitForTimeout` setting at the story level takes precedence over the global `waitForTimeout` configuration and only applies to the specific stories to which it is assigned. 
+The `waitForTimeout` setting at the story level takes precedence over the global `waitForTimeout` configuration and only applies to the specific stories to which it is assigned.
 
 For instance, if `Story-1` has a story-level `waitForTimeout` value (T1) set within custom viewport settings, and there exists a global `waitForTimeout` value (T2) defined in the configuration, all browser and viewport combinations of `Story-1` will render with T1. Conversely, all other stories will be rendered with T2 across all combinations.
 :::
@@ -376,8 +375,8 @@ For instance, if `Story-1` has a story-level `waitForTimeout` value (T1) set wit
 
 You can now execute your `StoryBook` components for `Visual Regression Testing` using the following options:.
 
-<Tabs className="docs__val" groupId="execution_type">
-<TabItem value="locally-hosted" label="For Locally Hosted Server" default>
+<Tabs className='docs__val' groupId='execution_type'>
+<TabItem value='locally-hosted' label='For Locally Hosted Server' default>
 
 ```bash
 npm run storybook                                                 // Starts your local StoryBook server
@@ -385,7 +384,7 @@ smartui storybook http://localhost:6006 --config .smartui.json    // Captures al
 ```
 
 </TabItem>
-<TabItem value="static-build-or-ci" label="For Static Build">
+<TabItem value='static-build-or-ci' label='For Static Build'>
 
 ```bash
 npm run build-storybook                                           // Creates a Static Build Folder of StoryBook Stories
@@ -393,7 +392,7 @@ smartui storybook ./storybook-static --config .smartui.json       // Captures al
 ```
 
 </TabItem>
-<TabItem value="public-hosted" label="For Public Hosted URL">
+<TabItem value='public-hosted' label='For Public Hosted URL'>
 
 ```bash
 smartui storybook https://<your_public_hosted_url> --config .smartui.json    // Captures all the stories running on local server
@@ -406,8 +405,8 @@ smartui storybook https://<your_public_hosted_url> --config .smartui.json    // 
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI StoryBook` execution then the following are the steps needs to be added to your `.yaml` file:
 
-<Tabs className="docs__val" groupId="ci_execution_type">
-<TabItem value="static-build-or-ci" label="For Static Builds" default>
+<Tabs className='docs__val' groupId='ci_execution_type'>
+<TabItem value='static-build-or-ci-1' label='For Static Builds' default>
 
 ```yaml
 steps:
@@ -419,7 +418,7 @@ steps:
 ```
 
 </TabItem>
-<TabItem value="public-hosted" label="For Public Hosted URL">
+<TabItem value="public-hosted-1" label='For Public Hosted URL'>
 
 ```yaml
 steps:
@@ -447,12 +446,12 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 
 You can now see the SmartUI dashboard to view the results. Can also identify the mis-matches from the existing `Baseline` build.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-storybook-results.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-storybook-results.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="verify-storybook-server" label="Verify Storybook Server" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='verify-storybook-server' label='Verify Storybook Server' default>
 
 Verify Storybook Server
 
@@ -460,7 +459,7 @@ Verify Storybook Server
    - Check that `buildStoriesJson: true` is set in `.storybook/main.js`
 
 </TabItem>
-<TabItem value="check-story-inclusion-exclusion" label="Check Story Inclusion/Exclusion" >
+<TabItem value='check-story-inclusion-exclusion' label='Check Story Inclusion/Exclusion' >
 
 Check Story Inclusion/Exclusion
 
@@ -468,7 +467,7 @@ Check Story Inclusion/Exclusion
    - Ensure story paths match your Storybook structure
 
 </TabItem>
-<TabItem value="validate-configuration" label="Validate Configuration" >
+<TabItem value='validate-configuration' label='Validate Configuration' >
 
 Validate Configuration
 
@@ -482,7 +481,7 @@ Validate Configuration
 **Solutions**:
 
 </TabItem>
-<TabItem value="increase-wait-timeout" label="Increase Wait Timeout" >
+<TabItem value='increase-wait-timeout' label='Increase Wait Timeout' >
 
 Increase Wait Timeout
 
@@ -495,7 +494,7 @@ Increase Wait Timeout
    ```
 
 </TabItem>
-<TabItem value="check-play-function-syntax" label="Check Play Function Syntax" >
+<TabItem value='check-play-function-syntax' label='Check Play Function Syntax' >
 
 Check Play Function Syntax
 
@@ -508,7 +507,7 @@ Check Play Function Syntax
 **Solutions**:
 
 </TabItem>
-<TabItem value="verify-useglobals-setting" label="Verify useGlobals Setting" >
+<TabItem value='verify-useglobals-setting' label='Verify useGlobals Setting' >
 
 Verify useGlobals Setting
 
@@ -521,7 +520,7 @@ Verify useGlobals Setting
    ```
 
 </TabItem>
-<TabItem value="check-storybook-version" label="Check Storybook Version" >
+<TabItem value='check-storybook-version' label='Check Storybook Version' >
 
 Check Storybook Version
 
@@ -529,7 +528,7 @@ Check Storybook Version
    - Verify decorators are properly configured
 
 </TabItem>
-<TabItem value="validate-theme-configuration" label="Validate Theme Configuration" >
+<TabItem value='validate-theme-configuration' label='Validate Theme Configuration' >
 
 Validate Theme Configuration
 
@@ -553,21 +552,20 @@ If you encounter issues not covered here:
 - [Storybook Documentation](https://storybook.js.org/docs)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> SmartUI with Cypress  </span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'> SmartUI with Cypress  </span>
     </li>
   </ul>
 </nav>

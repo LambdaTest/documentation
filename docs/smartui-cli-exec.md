@@ -17,10 +17,13 @@ keywords:
 
 url: https://www.lambdatest.com/support/docs/smartui-cli-exec/
 slug: smartui-cli-exec/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 SmartUI CLI exec command offers you various options to manage snapshot server and execute your visual testing scripts. This guide will walk you through the available commands and their usage.
 
@@ -146,28 +149,27 @@ Both commands check if the server is running at the address specified in `SMARTU
 
 For most test frameworks (except Selenium SDKs), you'll need to set the server address:
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export SMARTUI_SERVER_ADDRESS='http://localhost:49152'
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
 set SMARTUI_SERVER_ADDRESS='http://localhost:49152'
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:SMARTUI_SERVER_ADDRESS="http://localhost:49152"
 ```
 </TabItem>
-
 
 </Tabs>
 
@@ -192,11 +194,10 @@ When running tests from IDEs like IntelliJ:
 1. Ensure the `SMARTUI_SERVER_ADDRESS` environment variable is set in your IDE's run configuration
 2. Configure the run configuration to use the appropriate test command
 
-
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="server-termination" label="Server Termination" default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='server-termination' label='Server Termination' default>
 
 ### Server Termination
 
@@ -204,7 +205,7 @@ Always use `exec:stop` to properly terminate the server.
 
 </TabItem>
 
-<TabItem value="timeouts" label="Timeouts">
+<TabItem value='timeouts' label='Timeouts'>
 
 ### Timeouts
 
@@ -212,7 +213,7 @@ Set appropriate timeouts for your tests.
 
 </TabItem>
 
-<TabItem value="snapshot-naming" label="Snapshot Naming">
+<TabItem value='snapshot-naming' label='Snapshot Naming'>
 
 ### Snapshot Naming
 
@@ -220,7 +221,7 @@ Use meaningful names for your snapshots.
 
 </TabItem>
 
-<TabItem value="environment-variables" label="Environment Variables">
+<TabItem value='environment-variables' label='Environment Variables'>
 
 ### Environment Variables
 
@@ -228,7 +229,7 @@ Configure environment variables before starting your IDE.
 
 </TabItem>
 
-<TabItem value="configuration-files" label="Configuration Files">
+<TabItem value='configuration-files' label='Configuration Files'>
 
 ### Configuration Files
 
@@ -239,8 +240,8 @@ Consider using configuration files for complex setups.
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="server-status" label="Server Status" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='server-status' label='Server Status' default>
 
 ### Server Status
 
@@ -248,7 +249,7 @@ Verify the server is running using `exec:ping`.
 
 </TabItem>
 
-<TabItem value="server-address" label="Server Address">
+<TabItem value='server-address' label='Server Address'>
 
 ### Server Address
 
@@ -256,7 +257,7 @@ Check if the server address is correctly configured.
 
 </TabItem>
 
-<TabItem value="port-conflicts" label="Port Conflicts">
+<TabItem value='port-conflicts' label='Port Conflicts'>
 
 ### Port Conflicts
 
@@ -264,7 +265,7 @@ Ensure no other process is using the default port.
 
 </TabItem>
 
-<TabItem value="server-logs" label="Server Logs">
+<TabItem value='server-logs' label='Server Logs'>
 
 ### Server Logs
 
@@ -290,20 +291,20 @@ If you encounter issues not covered here:
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">SmartUI CLI Exec Commands</span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'>SmartUI CLI Exec Commands</span>
     </li>
   </ul>
-</nav> 
+</nav>

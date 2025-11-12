@@ -22,11 +22,13 @@ keywords:
 
 url: https://www.lambdatest.com/support/docs/smartui-ignore-regions/
 slug: smartui-draw-on-ui/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -58,10 +60,10 @@ The SmartUI Annotation tool allows you to interact directly with your screenshot
 
 By utilizing ignored/selected regions, you can keep your test results focused on the truly important changes, streamlining your workflow and saving you time from chasing irrelevant discrepancies.
 
-<div className="storylane-iframe">
+<div className='storylane-iframe'>
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
-  <div className="sl-embed">
-    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/j5uyv2ol9axz?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  <div className='sl-embed'>
+    <iframe loading="lazy" className='sl-demo' src="https://app.storylane.io/demo/j5uyv2ol9axz?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -86,7 +88,7 @@ By utilizing ignored/selected regions, you can keep your test results focused on
 ## Annotation Methods
 
 <Tabs>
-<TabItem value="ignore-region" label="Ignore Region" default>
+<TabItem value='ignore-region' label='Ignore Region' default>
 
 ### Ignore Region
 
@@ -104,21 +106,21 @@ By utilizing ignored/selected regions, you can keep your test results focused on
 
 **Step 1:** Click on the **Actions** button to configure areas.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/annotationsicon.png').default} alt="Annotations icon" width="1366" height="636" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/annotationsicon.png').default} alt="Annotations icon" width="1366" height="636" className='doc_img'/>
 
 **Step 2:** Click on the **Add Region** button and draw a box around the area you want to ignore.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/ignore_region.png').default} alt="Ignore region annotation" width="1366" height="636" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/ignore_region.png').default} alt="Ignore region annotation" width="1366" height="636" className='doc_img'/>
 
 **Step 3:** After drawing, select **Ignore Region** from the annotation type options and click **Save**.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/applyannotationmodal.png').default} alt="Apply annotation modal" width="1366" height="636" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/applyannotationmodal.png').default} alt="Apply annotation modal" width="1366" height="636" className='doc_img'/>
 
 **Step 4:** Choose whether to apply the annotation to the current screenshot only or all browser variants of the selected viewport.
 
 **Result:** The configured area will be ignored in every consecutive build for the same screenshot test case.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultofignoreregion.png').default} alt="Result of ignore region" width="1366" height="636" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultofignoreregion.png').default} alt="Result of ignore region" width="1366" height="636" className='doc_img'/>
 
 ### Best Practices
 
@@ -140,7 +142,7 @@ Use **Ignore Region** when:
 
 </TabItem>
 
-<TabItem value="select-region" label="Select Region">
+<TabItem value='select-region' label='Select Region'>
 
 ### Select Region
 
@@ -188,7 +190,7 @@ Use **Select Region** when:
 
 </TabItem>
 
-<TabItem value="select-ignore" label="Select Ignore">
+<TabItem value='select-ignore' label='Select Ignore'>
 
 ### Select Ignore
 
@@ -238,7 +240,7 @@ Use **Select Ignore** when:
 
 </TabItem>
 
-<TabItem value="ignore-colors" label="Ignore Colors">
+<TabItem value='ignore-colors' label='Ignore Colors'>
 
 ### Ignore Colors
 
@@ -258,7 +260,7 @@ Use **Select Ignore** when:
 
 **Step 2:** Click on the **Add Region** button and draw a box around the area where you want to ignore color differences.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/ignorecolor_region.png').default} alt="Ignore colors region annotation" width="1366" height="636" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/ignorecolor_region.png').default} alt="Ignore colors region annotation" width="1366" height="636" className='doc_img'/>
 
 **Step 3:** After drawing, select **Ignore Colors** from the annotation type options and click **Save**.
 
@@ -266,7 +268,7 @@ Use **Select Ignore** when:
 
 **Result:** The region will be compared for structure and layout, but color differences will be ignored, reducing false positives from color variations.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultofignorecolors.png').default} alt="Result of ignore colors" width="1366" height="636" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultofignorecolors.png').default} alt="Result of ignore colors" width="1366" height="636" className='doc_img'/>
 
 > **Note:** Ignore Colors is particularly effective when combined with other annotation types for comprehensive visual testing.
 
@@ -313,7 +315,7 @@ This is perfect for handling dynamic elements that may appear in different posit
 
 **Step 2:** First, draw a **Blue Region** (Floating Area) that defines the boundary where the element might move to. This is the area where SmartUI will look for the element.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/floating_region.png').default} alt="Floating region annotation" width="1366" height="636" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/floating_region.png').default} alt="Floating region annotation" width="1366" height="636" className='doc_img'/>
 
 **Step 3:** Then, within the blue region, draw a **Yellow Region** (Element to Test) that defines the specific element you want to test. This element will be compared regardless of its position within the blue floating area.
 
@@ -323,9 +325,9 @@ This is perfect for handling dynamic elements that may appear in different posit
 
 **Result:** SmartUI will compare the yellow region element, allowing it to move anywhere within the blue floating area without triggering false positives. This effectively handles dynamic element positioning issues.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultoffloatingregion.png').default} alt="Result of floating region" width="1366" height="636" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultoffloatingregion.png').default} alt="Result of floating region" width="1366" height="636" className='doc_img'/>
 
-> **Best Practice:** 
+> **Best Practice:**
 > - Make the blue region large enough to encompass all possible positions of the element
 > - Keep the yellow region focused on the specific element you want to test
 > - Use Floating Region when elements shift due to content changes, responsive behavior, or dynamic layouts
@@ -347,7 +349,7 @@ Use **Floating Region** when:
 
 **Step 1:** Toggle the **Annotations** switch to view/analyze your ignored/selected areas.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/changes_found.png').default} alt="Viewing annotations" width="1366" height="636" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/changes_found.png').default} alt="Viewing annotations" width="1366" height="636" className='doc_img'/>
 
 **Step 2:** When the toggle is on, you'll see all your annotation boxes with different colors indicating their type:
 - **Red boxes:** Ignore regions
@@ -389,7 +391,7 @@ You can always edit or delete pre-configured areas or add new ones according to 
 
 After creating your annotations, you'll see a modal dialog with options:
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/applyannotationmodal.png').default} alt="Apply annotation modal" width="1366" height="636" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/applyannotationmodal.png').default} alt="Apply annotation modal" width="1366" height="636" className='doc_img'/>
 
 **Options:**
 
@@ -414,8 +416,8 @@ The SmartUI Annotation Tool offers keyboard shortcuts to streamline the resizing
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="annotations-not-applying" label="Annotations Not Applying" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='annotations-not-applying' label='Annotations Not Applying' default>
 
 ### Annotations Not Applying
 
@@ -429,7 +431,7 @@ The SmartUI Annotation Tool offers keyboard shortcuts to streamline the resizing
 
 </TabItem>
 
-<TabItem value="floating-region-not-working" label="Floating Region Not Working">
+<TabItem value='floating-region-not-working' label='Floating Region Not Working'>
 
 ### Floating Region Not Working
 
@@ -443,7 +445,7 @@ The SmartUI Annotation Tool offers keyboard shortcuts to streamline the resizing
 
 </TabItem>
 
-<TabItem value="ignore-colors-still-showing-differences" label="Ignore Colors Still Showing Differences">
+<TabItem value='ignore-colors-still-showing-differences' label='Ignore Colors Still Showing Differences'>
 
 ### Ignore Colors Still Showing Differences
 
@@ -457,7 +459,7 @@ The SmartUI Annotation Tool offers keyboard shortcuts to streamline the resizing
 
 </TabItem>
 
-<TabItem value="annotations-disappearing" label="Annotations Disappearing">
+<TabItem value='annotations-disappearing' label='Annotations Disappearing'>
 
 ### Annotations Disappearing
 

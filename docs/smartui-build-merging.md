@@ -13,10 +13,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-build-merging/
 site_name: LambdaTest
 slug: smartui-build-merging/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -81,10 +84,9 @@ npx smartui merge build --source build-123 --target build-456
 2. **Status Updates**: Updates the new merged build status to "approved"
 3. **Content Updates**: Updates target build with merged content
 4. **Confirmation**: Provides detailed merge confirmation
-5. **Build Naming**: 
+5. **Build Naming**:
    - For branch merges: `merged-branch/<source>-<target>`
    - For build merges: `merged-build/<sourcebuildname>-<targetbuildname>`
-
 
 ## Build Merge Strategies
 
@@ -96,7 +98,6 @@ npx smartui merge build --source build-123 --target build-456
 # 1. Merge staging build to production
 npx smartui merge build --source staging-build-123 --target prod-build-456
 
-
 ### 2. Feature Build Strategy
 
 **Scenario**: Managing feature-specific builds
@@ -104,7 +105,6 @@ npx smartui merge build --source staging-build-123 --target prod-build-456
 ```bash
 # 1. Merge feature build into main build
 npx smartui merge build --source feature-build-789 --target main-build-101
-
 
 ### 3. Hotfix Build Strategy
 
@@ -120,8 +120,8 @@ npx smartui merge build --source hotfix-build-202 --target prod-build-456
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="build-management" label="Build Management" default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='build-management' label='Build Management' default>
 
 ### Build Management
 
@@ -130,7 +130,7 @@ npx smartui merge build --source hotfix-build-202 --target prod-build-456
    - Regular cleanup of old builds
 
 </TabItem>
-<TabItem value="merge-planning" label="Merge Planning" >
+<TabItem value='merge-planning' label='Merge Planning' >
 
 ### Merge Planning
 
@@ -157,4 +157,4 @@ If you encounter any issues with build merging in SmartUI, please contact our su
 
 ### Getting Help
 
-If you encounter any issues with build merging in SmartUI, please contact our support team at support@lambdatest.com. 
+If you encounter any issues with build merging in SmartUI, please contact our support team at support@lambdatest.com.

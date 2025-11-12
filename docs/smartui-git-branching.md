@@ -17,10 +17,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-github-app-integration/
 site_name: LambdaTest
 slug: smartui-git-branching-strategy/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -48,7 +51,7 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-doc-header.webp').default} alt="Smart Visual Testing" width="1600" height="803" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-doc-header.webp').default} alt="Smart Visual Testing" width="1600" height="803" className='doc_img'/>
 
 :::info
 This is the guide to understand our Git Branching with SmartUI projects which can detect the commit history and execute the appropriate actions for your visual regression testing.
@@ -73,7 +76,7 @@ The following steps will guide you in running your Git branching Visual Regressi
 
 :::
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-baseline-non-baseline-diff.webp').default} alt="Smart Visual Testing" width="1600" height="803" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-baseline-non-baseline-diff.webp').default} alt="Smart Visual Testing" width="1600" height="803" className='doc_img'/>
 
 ### **Step 1**: Setup your Git Baseline branch in the Project Settings
 
@@ -83,7 +86,7 @@ The following are the steps to add **Baseline** branch to your `StoryBook projec
 2. Search for **Git Settings** and add your required **Baseline** branch in the input box.
 3. Click on **Update Settings** button to update the project settings and set your **Baseline** Git branch.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-settings.webp').default} alt="Smart Visual Testing" width="1600" height="803" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-settings.webp').default} alt="Smart Visual Testing" width="1600" height="803" className='doc_img'/>
 
 Now, after the successful setup of your **Baseline** branch of your project.
 
@@ -109,8 +112,8 @@ git commit -m "Your commit message"
 
 3. Execute your **SmartUI StoryBook CLI** command to execute the Visual Regression tests for your `.stories` files:
 
-<Tabs className="docs__val" groupId="execution_type">
-<TabItem value="locally-hosted" label="For Locally Hosted Server" default>
+<Tabs className='docs__val' groupId='execution_type'>
+<TabItem value='locally-hosted' label='For Locally Hosted Server' default>
 
 ```bash
 npm run storybook                                                 // Starts your local StoryBook server
@@ -118,7 +121,7 @@ smartui storybook http://localhost:6006 --config .smartui.json    // Captures al
 ```
 
 </TabItem>
-<TabItem value="static-build-or-ci" label="For Static Build">
+<TabItem value='static-build-or-ci' label='For Static Build'>
 
 ```bash
 npm run build-storybook                                           // Creates a Static Build Folder of StoryBook Stories
@@ -128,7 +131,7 @@ smartui storybook ./storybook-static --config .smartui.json       // Captures al
 </TabItem>
 </Tabs>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-basic-setup.webp').default} alt="Smart Visual Testing" width="1600" height="803" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-basic-setup.webp').default} alt="Smart Visual Testing" width="1600" height="803" className='doc_img'/>
 
 ## Git Branching Workflows and Strategies
 
@@ -157,7 +160,7 @@ If you are using the `Git` based workflow with `SmartUI StoryBook CLI` then the 
 - The **commit message** of the Git commit of the `commit ID` to the current repository.
 - The commit author **username** of the Git commit to the current repository.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-git-build-meta-data.webp').default} alt="Smart Visual Testing" width="1600" height="803" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-git-build-meta-data.webp').default} alt="Smart Visual Testing" width="1600" height="803" className='doc_img'/>
 
 :::note
 
@@ -201,7 +204,7 @@ $ git commit -m "Second Build Changes"
 $ smartui storybook http://localhost:6006 --config .smartui.json
 ```
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-working-on-same-branch.webp').default} alt="Smart Visual Testing" width="1600" height="803" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-working-on-same-branch.webp').default} alt="Smart Visual Testing" width="1600" height="803" className='doc_img'/>
 
 ### Updating the Baseline Branch Name
 
@@ -223,10 +226,10 @@ In this case, the latest build run on the SmartUI project build history will be 
 In this case, the new build run with the `development` git branch name will be set to the current **Baseline** build for the SmartUI project.
 
 :::caution Note
-For the first build generated for the **Baseline branch build** in the SmartUI Projects will be automatically set to **SYSTEM APPROVED** status by default.  
+For the first build generated for the **Baseline branch build** in the SmartUI Projects will be automatically set to **SYSTEM APPROVED** status by default.
 :::
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-updating-baseline-branch.webp').default} alt="Smart Visual Testing" width="1600" height="803" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-updating-baseline-branch.webp').default} alt="Smart Visual Testing" width="1600" height="803" className='doc_img'/>
 
 ### Detect changes for Git commit added to **Baseline Branch**
 
@@ -234,7 +237,7 @@ In this workflow, if I make changes in the set Baseline branch in the Smart UI p
 
 Execute `SmartUI Storybook CLI` commands to execute the `.stories` tests will compare the results with the latest **APPROVED** build run for **Baseline Branch** build in the SmartUI project.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-compare-with-latest-build.webp').default} alt="Smart Visual Testing" width="1600" height="803" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-compare-with-latest-build.webp').default} alt="Smart Visual Testing" width="1600" height="803" className='doc_img'/>
 
 :::note
 On approval of the all the screenshots then the new build will be updated as Baseline build for the baseline branch.
@@ -275,13 +278,13 @@ $ git checkout -b develop
 $ smartui storybook http://localhost:6006 --config .smartui.json
 ```
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-baseline-non-baseline.webp').default} alt="Smart Visual Testing" width="1600" height="803" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-baseline-non-baseline.webp').default} alt="Smart Visual Testing" width="1600" height="803" className='doc_img'/>
 
 ### Auto Updating **Baseline** build for the **Baseline** branch
 
 In this workflow, once all the `Changes Found` are approved by the `approver` for the screenshots in the **Baseline** branch's **Non-Baseline** build then the `latest` approved **Baseline Branch** build will be updated to the `Baseline`.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-auto-update-baseline-build.webp').default} alt="Smart Visual Testing" width="1600" height="803" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/git-auto-update-baseline-build.webp').default} alt="Smart Visual Testing" width="1600" height="803" className='doc_img'/>
 
 :::note
 In case if the **Baseline** branch does not have an existing build then by default the new build run will be set as Baseline build.

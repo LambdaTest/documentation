@@ -18,10 +18,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-project-settings/
 site_name: LambdaTest
 slug: smartui-project-settings/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -66,8 +69,8 @@ To access the Project Settings, follow these simple steps:
 
 ## Project Settings
 
-<Tabs className="docs__val" groupId="project-settings">
-<TabItem value="token" label="Project Token" default>
+<Tabs className='docs__val' groupId='project-settings'>
+<TabItem value='token' label='Project Token' default>
 
 ## Project Token
 
@@ -77,22 +80,22 @@ The Project Token is a unique identifier that authenticates your SmartUI project
 
 Use this key to authenticate your SmartUI project for executing locally with CLI and APIs.
 
-<Tabs className="docs__val" groupId="platform">
-<TabItem value="macos-linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='platform'>
+<TabItem value='macos-linux' label='MacOS/Linux' default>
 
 ```bash
 export PROJECT_TOKEN='project#token'
 ```
 
 </TabItem>
-<TabItem value="windows-cmd" label="Windows - CMD">
+<TabItem value='windows-cmd' label='Windows - CMD'>
 
 ```bash
 set PROJECT_TOKEN='project#token'
 ```
 
 </TabItem>
-<TabItem value="powershell" label="PowerShell">
+<TabItem value='powershell' label='PowerShell'>
 
 ```powershell
 $env:PROJECT_TOKEN='project#token'
@@ -115,11 +118,11 @@ Keep your Project Token secure and never commit it to version control. Use envir
 
 </TabItem>
 
-<TabItem value="basic" label="Basic Settings">
+<TabItem value='basic' label='Basic Settings'>
 
 ## Basic Settings
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/Basic_ss.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/Basic_ss.png').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 - **Project Name:** Customize the name of your project to enhance its identification.
 
@@ -137,11 +140,11 @@ Altering Approvers will impact email notifications, which will be sent to the la
 
 </TabItem>
 
-<TabItem value="comparison" label="Comparison Settings">
+<TabItem value='comparison' label='Comparison Settings'>
 
 ## Comparison Settings
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/comparison.png').default} alt="Comparison Settings" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/comparison.png').default} alt="Comparison Settings" width="768" height="373" className='doc_img'/>
 
 Comparison settings allow you to fine-tune how SmartUI compares screenshots, balancing between highlighting important changes and ignoring noise.
 
@@ -272,17 +275,17 @@ For detailed information on these options, refer to our [Comparison Settings Doc
 
 </TabItem>
 
-<TabItem value="build" label="Build Settings">
+<TabItem value='build' label='Build Settings'>
 
 ## Build Settings
 
 ### Smart Baseline
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart_baseline_ss.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart_baseline_ss.png').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 Smart Baseline is a feature that simplifies and automates the process of updating the baseline for approved screenshots in your baseline build. This feature provides convenience and efficiency by ensuring your baseline remains in sync with approved changes without manual intervention.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart_baseline.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smart_baseline.png').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 - **Baseline Branch:** A baseline branch build consists of screenshots captured using SmartUI. All screenshots in this build are compared against non-baseline branch builds.
 
@@ -305,19 +308,19 @@ For detailed information on these options, refer to our [Git Baseline Branching 
 
 ### Overwrite Screenshot
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/overwrite_ss.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/overwrite_ss.png').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
-- This feature allows to update and overwrite screenshots with the same name, ensuring that the latest version is updated for that screenshot. 
+- This feature allows to update and overwrite screenshots with the same name, ensuring that the latest version is updated for that screenshot.
 
 - This capability provides users with more control over the management of screenshots with identical names, enabling them to maintain accurate visual records and efficiently track changes in their application's user interface over time.
 
 </TabItem>
 
-<TabItem value="notifications" label="Notifications">
+<TabItem value='notifications' label='Notifications'>
 
 ## Notifications
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/notif_ss.png').default} alt="Notifications Settings" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/notif_ss.png').default} alt="Notifications Settings" width="768" height="373" className='doc_img'/>
 
 Configure how you receive alerts and updates about your SmartUI project.
 
@@ -349,7 +352,7 @@ We are continually adding more notification channels for SmartUI.
 
 </TabItem>
 
-<TabItem value="other" label="Other Settings">
+<TabItem value='other' label='Other Settings'>
 
 ## LambdaTest Badge
 
@@ -364,7 +367,7 @@ Show the world that you are using LambdaTest for your visual regression testing.
 
 ## Delete Project
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/delete.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/delete.png').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 The "Delete Project" option allows administrators or project creators to permanently delete a project. Once a project is deleted, it cannot be retrieved.
 

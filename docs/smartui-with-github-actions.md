@@ -14,7 +14,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-with-github-actions/
 site_name: LambdaTest
 slug: smartui-with-github-actions/
+
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -49,7 +55,7 @@ To integrate GitHub Actions Pipeline with SmartUI, follow the below steps. You c
 :::tip Sample repo
 Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
 
-<a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations" target="_blank" className='github__anchor'><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className='doc_img'/> View on GitHub</a>
 :::
 
 ### Step 1: Create your Secrets
@@ -60,7 +66,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 ### Step 2: Create a New Workflow
 -  Navigate to the main page of the repository.
 -  Under your repository name, click  **Actions**.
--  In the left sidebar, click the **New workflow** button. 
+-  In the left sidebar, click the **New workflow** button.
 
 ### Step 3: Create the GitHub Actions workflow YAML file
 To create the GitHub Actions pipeline YAML file, follow the sample command below:
@@ -78,8 +84,8 @@ To run the new pipeline that you just created, click the **Run workflow** button
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="secret-management" label="Secret Management default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='secret-management' label='Secret Management' default>
 
 ### Secret Management
 
@@ -89,7 +95,7 @@ To run the new pipeline that you just created, click the **Run workflow** button
 - Use different secrets for different environments
 
 </TabItem>
-<TabItem value=workflow-optimization" label="Workflow Optimization >
+<TabItem value='workflow-optimization' label='Workflow Optimization'>
 
 ### Workflow Optimization
 
@@ -108,7 +114,7 @@ on:
 ```
 
 </TabItem>
-<TabItem value=build-naming" label="Build Naming >
+<TabItem value='build-naming' label='Build Naming'>
 
 ### Build Naming
 
@@ -125,7 +131,7 @@ on:
 ```
 
 </TabItem>
-<TabItem value="error-handling" label="Error Handling >
+<TabItem value='error-handling' label='Error Handling'>
 
 ### Error Handling
 
@@ -135,7 +141,7 @@ on:
 - Add retry logic for flaky tests
 
 </TabItem>
-<TabItem value=resource-management" label="Resource Management >
+<TabItem value='resource-management' label='Resource Management'>
 
 ### Resource Management
 
@@ -145,7 +151,7 @@ on:
 - Optimize test execution order
 
 </TabItem>
-<TabItem value=resource-management" label="Resource Management >
+<TabItem value='resource-management-1' label='Resource Management'>
 
 ### Resource Management
 
@@ -159,8 +165,8 @@ on:
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="workflow-fails-with-secret-not-found" label="Workflow Fails with Secret Not Found" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='workflow-fails-with-secret-not-found' label='Workflow Fails with Secret Not Found' default>
 
 ### Issue: Workflow Fails with "Secret Not Found"
 
@@ -183,7 +189,7 @@ on:
 4. Verify secrets are set for the correct repository/environment
 
 </TabItem>
-<TabItem value="project_token-prompt-appears" label="PROJECT_TOKEN Prompt Appears >
+<TabItem value='project_token-prompt-appears' label='PROJECT_TOKEN Prompt Appears'>
 
 ### Issue: PROJECT_TOKEN Prompt Appears
 
@@ -214,7 +220,7 @@ on:
    ```
 
 </TabItem>
-<TabItem value=tests-run-but-no-results-in-dashboard" label="Tests Run But No Results in Dashboard >
+<TabItem value='tests-run-but-no-results-in-dashboard' label='Tests Run But No Results in Dashboard'>
 
 ### Issue: Tests Run But No Results in Dashboard
 
@@ -244,7 +250,7 @@ on:
 4. Check if SmartUI CLI step completed successfully
 
 </TabItem>
-<TabItem value=workflow-times-out" label="Workflow Times Out >
+<TabItem value='workflow-times-out' label='Workflow Times Out'>
 
 ### Issue: Workflow Times Out
 
@@ -273,7 +279,7 @@ on:
 4. Split tests across multiple workflows
 
 </TabItem>
-<TabItem value=dependencies-installation-fails" label="Dependencies Installation Fails >
+<TabItem value='dependencies-installation-fails' label='Dependencies Installation Fails'>
 
 ### Issue: Dependencies Installation Fails
 
@@ -303,7 +309,7 @@ on:
 4. Check for version conflicts in package.json
 
 </TabItem>
-<TabItem value=smartui-cli-not-found" label="SmartUI CLI Not Found >
+<TabItem value='smartui-cli-not-found' label='SmartUI CLI Not Found'>
 
 ### Issue: SmartUI CLI Not Found
 
@@ -351,20 +357,20 @@ If you encounter issues not covered here:
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 
-<nav aria-label="breadcrumbs>
-  <ul className=breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'>
         GitHub Integration
       </span>
     </li>

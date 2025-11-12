@@ -14,7 +14,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-with-netlify/
 site_name: LambdaTest
 slug: smartui-with-netlify/
+
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
     dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -56,7 +62,7 @@ This document will show you how to integrate Netlify Pipeline with SmartUI.
 - Go to your Netlify Dashboard.
 - Click on the Integrations tab, search for **LambdaTest** and click on the **Enable** button.
 
-<img loading="lazy" src={require('../assets/images/netlify-integration/n1.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/netlify-integration/n1.png').default} alt="Image" className='doc_img'/>
 
 - You need to provide your configuration details
     - Enter your **Username** and **Access Key** from the **LambdaTest Dashboard**.
@@ -70,13 +76,13 @@ You can also enter your already-existing smart-UI project name.
 
 - Click on the **Save** button
 
-<img loading="lazy" src={require('../assets/images/netlify-integration/n2.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/netlify-integration/n2.png').default} alt="Image" className='doc_img'/>
 
 ### Step 2: Deploy the Site for which you want to compare the results
 
 - Go to the **Deploys** section, click on **Deploy site** button and deploy your project. 
 
-<img loading="lazy" src={require('../assets/images/netlify-integration/n3.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/netlify-integration/n3.png').default} alt="Image" className='doc_img'/>
 
 - This deployment is before any changes you have made and will be your **Baseline** image.
 - Now you need to make the required changes in your project and push the changes.
@@ -84,22 +90,22 @@ You can also enter your already-existing smart-UI project name.
 
 Your changes will be triggered and deployed.
 
-<img loading="lazy" src={require('../assets/images/netlify-integration/n4.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/netlify-integration/n4.png').default} alt="Image" className='doc_img'/>
 
 ### Step 4: Compare the Changes Smart-UI Dashboard
 
 - Go to your Smart-UI Dashbard. You will notice there is already a project with the same name you entered while configuring in **Step 1**
 
-<img loading="lazy" src={require('../assets/images/netlify-integration/n5.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/netlify-integration/n5.png').default} alt="Image" className='doc_img'/>
 
 - Go on that project. Click on the latest build. You can now compare the changes done to your project with-respect-to the provious build.
 
-<img loading="lazy" src={require('../assets/images/netlify-integration/n6.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/netlify-integration/n6.png').default} alt="Image" className='doc_img'/>
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="project-naming" label="Project Naming default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='project-naming' label='Project Naming' default>
 
 ### Project Naming
 
@@ -109,7 +115,7 @@ Your changes will be triggered and deployed.
 - Use consistent naming conventions across deployments
 
 </TabItem>
-<TabItem value=baseline-management" label="Baseline Management>
+<TabItem value='baseline-management' label='Baseline Management'>
 
 ### Baseline Management
 
@@ -119,7 +125,7 @@ Your changes will be triggered and deployed.
 - Document baseline deployment for reference
 
 </TabItem>
-<TabItem value=deployment-strategy" label="Deployment Strategy>
+<TabItem value='deployment-strategy' label='Deployment Strategy'>
 
 ### Deployment Strategy
 
@@ -129,7 +135,7 @@ Your changes will be triggered and deployed.
 - Tag important deployments
 
 </TabItem>
-<TabItem value=integration-configuration" label="Integration Configuration>
+<TabItem value='integration-configuration' label='Integration Configuration'>
 
 ### Integration Configuration
 
@@ -139,7 +145,7 @@ Your changes will be triggered and deployed.
 - Use different projects for different environments
 
 </TabItem>
-<TabItem value=comparison-workflow" label="Comparison Workflow>
+<TabItem value='comparison-workflow' label='Comparison Workflow'>
 
 ### Comparison Workflow
 
@@ -149,7 +155,7 @@ Your changes will be triggered and deployed.
 - Use SmartUI dashboard for detailed analysis
 
 </TabItem>
-<TabItem value=comparison-workflow" label="Comparison Workflow>
+<TabItem value='comparison-workflow-1' label='Comparison Workflow'>
 
 ### Comparison Workflow
 
@@ -163,8 +169,8 @@ Your changes will be triggered and deployed.
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>
 
 ### Issue: Screenshots Not Appearing in Dashboard
 
@@ -193,7 +199,7 @@ Your changes will be triggered and deployed.
 5. Review Netlify deployment logs for errors
 
 </TabItem>
-<TabItem value=project-not-found-error" label="Project Not Found Error>
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
 
 ### Issue: Project Not Found" Error
 
@@ -217,7 +223,7 @@ Your changes will be triggered and deployed.
 4. Check credentials match the account with the project
 
 </TabItem>
-<TabItem value="integration-not-triggering" label="Integration Not Triggering>
+<TabItem value='integration-not-triggering' label='Integration Not Triggering'>
 
 ### Issue: Integration Not Triggering
 
@@ -246,7 +252,7 @@ Your changes will be triggered and deployed.
 4. Review Netlify deployment logs for integration errors
 
 </TabItem>
-<TabItem value="baseline-not-set-correctly" label="Baseline Not Set Correctly>
+<TabItem value='baseline-not-set-correctly' label='Baseline Not Set Correctly'>
 
 ### Issue: Baseline Not Set Correctly
 
@@ -273,7 +279,7 @@ Your changes will be triggered and deployed.
    - Verify deployment was successful
 
 </TabItem>
-<TabItem value=comparison-results-unexpected" label="Comparison Results Unexpected">
+<TabItem value='comparison-results-unexpected' label='Comparison Results Unexpected'>
 
 ### Issue: Comparison Results Unexpected
 
