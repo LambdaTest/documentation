@@ -1312,17 +1312,17 @@ module.exports = {
             type: "category",
             collapsed: true,
             label: "Common",
-            items: [
-                "kaneai-manual-interaction",
-                "kane-ai-javascript-execution",
-                "kane-ai-geolocation-tunnel-proxy",
-                "kaneai-auto-heal",
-                "kane-ai-scroll-in-feature",
-                "kane-ai-jira-integration",
-                "kane-ai-api-testing",
-                "kane-ai-modules",
-                "kaneai-modules-versions-and-enhancement",
-                "kaneai-upload-and-download-files",
+        items: [
+          "kaneai-manual-interaction",
+          "kane-ai-javascript-execution",
+          "kane-ai-geolocation-tunnel-proxy",
+          "kaneai-auto-heal",
+          "kane-ai-scroll-in-feature",
+          "kane-ai-jira-integration",
+          "kane-ai-api-testing",
+          "kane-ai-modules",
+          "kaneai-modules-versions-and-enhancement",
+          "kaneai-upload-and-download-files",
                 "kaneai-totp",
                 "kaneai-database",
             ],
@@ -1334,10 +1334,10 @@ module.exports = {
             items: [
               "kane-ai-network-assertions",
               "kane-ai-drag-drop",
-              "kaneai-dynamic-url-replacement",
-              "kaneai-chrome-options",
-              "kaneai-custom-headers",
-              "kaneai-smartui-visual-testing",
+          "kaneai-dynamic-url-replacement",
+          "kaneai-chrome-options",
+          "kaneai-custom-headers",
+          "kaneai-smartui-visual-testing",
             ],
           },
           {
@@ -1348,7 +1348,7 @@ module.exports = {
               "kane-ai-mobile-app-capabilities",
               "kane-ai-deeplink-support",
               "kaneai-network-throttling",
-            ],
+        ],
           },
         ],
       },
@@ -3176,38 +3176,38 @@ module.exports = {
                 label: "Selenium SDKs",
                 collapsed: true,
                 items: [
-                  {
-                    type: "doc",
+      {
+        type: "doc",
                     label: "Java SDK",
                     id: "smartui-selenium-java-sdk",
-                  },
-                  {
-                    type: "doc",
+      },
+      {
+        type: "doc",
                     label: "JavaScript SDK",
                     id: "smartui-selenium-js-sdk",
-                  },
-                  {
-                    type: "doc",
+      },
+      {
+        type: "doc",
                     label: "C# SDK",
                     id: "smartui-selenium-csharp-sdk",
-                  },
-                  {
-                    type: "doc",
+      },
+      {
+        type: "doc",
                     label: "Python SDK",
                     id: "smartui-selenium-python-sdk",
-                  },
-                  {
-                    type: "doc",
+      },
+      {
+        type: "doc",
                     label: "Ruby SDK",
                     id: "smartui-selenium-ruby-sdk",
-                  },
+      },
                 ],
               },
-              {
-                type: "category",
+      {
+        type: "category",
                 label: "Playwright SDKs",
                 collapsed: true,
-                items: [
+        items: [
                   {
                     type: "doc",
                     label: "Java SDK",
@@ -3250,16 +3250,16 @@ module.exports = {
                 label: "K6 Setup",
                 id: "smartui-k6-setup",
               },
-              {
-                type: "category",
+          {
+            type: "category",
                 label: "Mobile Testing",
                 collapsed: true,
-                items: [
-                  {
-                    type: "category",
+            items: [
+              {
+                type: "category",
                     label: "Mobile SDKs",
-                    collapsed: true,
-                    items: [
+                collapsed: true,
+                items: [
                       {
                         type: "doc",
                         label: "Appium SDK",
@@ -3303,13 +3303,13 @@ module.exports = {
             label: "Lambda Hooks",
             collapsed: true,
             items: [
-              {
-                type: "doc",
+                      {
+                        type: "doc",
                 label: "Selenium Hooks",
                 id: "selenium-visual-regression",
-              },
-              {
-                type: "doc",
+                      },
+                      {
+                        type: "doc",
                 label: "Playwright Hooks",
                 id: "playwright-visual-regression",
               },
@@ -3322,36 +3322,36 @@ module.exports = {
                 type: "doc",
                 label: "Puppeteer Hooks",
                 id: "puppeteer-visual-regression",
-              },
-            ],
-          },
+                      },
+                    ],
+                  },
           {
             type: "doc",
             label: "Storybook Integration",
             id: "smart-ui-storybook",
           },
-          {
-            type: "category",
-            collapsed: true,
+                  {
+                    type: "category",
+                    collapsed: true,
             label: "Figma Integration",
-            items: [
-              {
-                type: "doc",
+                    items: [
+                      {
+                        type: "doc",
                 label: "Figma Web CLI",
                 id: "smartui-cli-figma-web",
-              },
-              {
-                type: "doc",
+                      },
+                      {
+                        type: "doc",
                 label: "Figma App CLI",
                 id: "smartui-cli-figma-app",
-              },
-              {
-                type: "doc",
+                      },
+                      {
+                        type: "doc",
                 label: "Figma CLI",
                 id: "smartui-cli-figma",
-              },
-            ],
-          },
+                      },
+                    ],
+                  },
           {
             type: "category",
             collapsed: false,
@@ -3378,14 +3378,14 @@ module.exports = {
               },
             ],
           },
-        ],
-      },
+                ],
+              },
 
-      {
-        type: "category",
-        collapsed: true,
+              {
+                type: "category",
+                collapsed: true,
         label: "Core Features",
-        items: [
+                items: [
           {
             type: "doc",
             label: "Visual AI Agent",
@@ -3426,16 +3426,16 @@ module.exports = {
                 label: "Layout Testing",
                 id: "smartui-layout-testing",
               },
-            ],
-          },
+                ],
+              },
         ],
       },
 
-      {
-        type: "category",
-        collapsed: true,
+              {
+                type: "category",
+                collapsed: true,
         label: "Upload & Capture",
-        items: [
+                items: [
           {
             type: "doc",
             label: "CLI Upload",
@@ -3488,34 +3488,34 @@ module.exports = {
             type: "doc",
             label: "Multiple Projects per Repo",
             id: "smartui-multiple-projects-per-repo",
+              },
+            ],
           },
-        ],
-      },
 
-      {
-        type: "category",
-        collapsed: true,
+          {
+            type: "category",
+            collapsed: true,
         label: "Git & Branching",
-        items: [
-          {
-            type: "doc",
+            items: [
+              {
+                type: "doc",
             label: "Default Branching Strategy",
-            id: "smartui-cli-git-branching-strategy",
-          },
-          {
-            type: "doc",
-            label: "Smart Git Strategy",
+                id: "smartui-cli-git-branching-strategy",
+              },
+              {
+                type: "doc",
+                label: "Smart Git Strategy",
             id: "smartui-smart-git-strategy",
-          },
-          {
-            type: "doc",
+              },
+              {
+                type: "doc",
             label: "Merging Branches",
-            id: "smartui-branch-merging",
-          },
-          {
-            type: "doc",
+                id: "smartui-branch-merging",
+              },
+              {
+                type: "doc",
             label: "Build Merging",
-            id: "smartui-build-merging",
+                id: "smartui-build-merging",
           },
         ],
       },
@@ -3525,8 +3525,8 @@ module.exports = {
         collapsed: true,
         label: "Stabilize Screenshots",
         items: [
-          {
-            type: "doc",
+              {
+                type: "doc",
             label: "Handling Dynamic Data",
             id: "smartui-handle-dynamic-data",
           },
@@ -3549,15 +3549,15 @@ module.exports = {
             type: "doc",
             label: "Handle Sticky Elements",
             id: "smartui-handle-sticky-elements",
+              },
+            ],
           },
-        ],
-      },
 
-      {
-        type: "category",
-        collapsed: true,
+          {
+            type: "category",
+            collapsed: true,
         label: "Advanced CLI",
-        items: [
+            items: [
           {
             type: "doc",
             label: "Exec Command",
@@ -3591,11 +3591,11 @@ module.exports = {
         ],
       },
 
-      {
-        type: "category",
-        collapsed: true,
+              {
+                type: "category",
+                collapsed: true,
         label: "Technical Configuration",
-        items: [
+                items: [
           {
             type: "doc",
             label: "Tunnel Configuration",
@@ -3625,13 +3625,13 @@ module.exports = {
             type: "doc",
             label: "SmartUI MCP Server",
             id: "smartui-mcp-server",
+              },
+            ],
           },
-        ],
-      },
 
-      {
-        type: "category",
-        collapsed: true,
+          {
+            type: "category",
+            collapsed: true,
         label: "Integrations",
         items: [
           {
@@ -3706,8 +3706,8 @@ module.exports = {
                     collapsed: true,
                     label: "SmartUI Hooks",
                     items: [
-                      {
-                        type: "doc",
+              {
+                type: "doc",
                         label: "Selenium",
                         id: "hyperexecute-smart-ui-testing-using-selenium",
                       },
@@ -3720,12 +3720,12 @@ module.exports = {
                         type: "doc",
                         label: "Playwright",
                         id: "hyperexecute-smart-ui-test-using-playwright",
-                      },
-                    ],
-                  },
-                  {
-                    type: "category",
-                    collapsed: true,
+              },
+            ],
+          },
+          {
+            type: "category",
+            collapsed: true,
                     label: "SmartUI SDK",
                     items: [
                       {
@@ -3737,15 +3737,15 @@ module.exports = {
                             type: "doc",
                             label: "JavaScript",
                             id: "hyperexecute-smart-ui-sdk-selenium-javascript",
-                          },
+          },
                           {
                             type: "doc",
                             label: "C#",
                             id: "hyperexecute-smart-ui-sdk-selenium-csharp",
                           },
-                        ],
-                      },
-                      {
+        ],
+      },
+      {
                         type: "doc",
                         label: "Cypress",
                         id: "hyperexecute-smart-ui-sdk-using-cypress",
@@ -3768,12 +3768,12 @@ module.exports = {
                     ],
                   },
                 ],
-              },
-              {
-                type: "category",
-                collapsed: true,
+      },
+      {
+        type: "category",
+        collapsed: true,
                 label: "WebScanner Integration",
-                items: [
+        items: [
                   {
                     type: "doc",
                     label: "Visual Scan",
@@ -3804,14 +3804,14 @@ module.exports = {
                 type: "doc",
                 label: "GitHub App",
                 id: "smartui-github-app-integration",
-              },
-            ],
           },
-          {
-            type: "category",
-            collapsed: true,
+        ],
+      },
+      {
+        type: "category",
+        collapsed: true,
             label: "Communication",
-            items: [
+        items: [
               {
                 type: "doc",
                 label: "Slack Integration",

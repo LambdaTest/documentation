@@ -404,7 +404,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 - Use meaningful test names for better organization
 
 </TabItem>
-<TabItem value="app-and-test-suite-management" label="App and Test Suite Management">
+<TabItem value="app-and-test-suite-management-1" label="App and Test Suite Management">
 
 ### App and Test Suite Management
 
@@ -413,7 +413,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 - Keep app and test suite versions synchronized
 
 </TabItem>
-<TabItem value="app-and-test-suite-management" label="App and Test Suite Management">
+<TabItem value="app-and-test-suite-management-2" label="App and Test Suite Management">
 
 ### App and Test Suite Management
 

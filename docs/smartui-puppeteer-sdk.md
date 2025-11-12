@@ -51,7 +51,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
-Welcome to the world of simplified visual testing with the SmartUI SDK.
+Welcome to the world of simplified visual testing with the SmartUI SDK. 
 
 Integrating seamlessly into your existing Puppeteer testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
 
@@ -179,7 +179,7 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ### **Step 5:** Adding SmartUI function to take screenshot
 
-- You can incorporate SmartUI into your custom `Puppeteer` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of Puppeteer script of which we would like to take the screenshot, as shown below:
+- You can incorporate SmartUI into your custom `Puppeteer` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of Puppeteer script of which we would like to take the screenshot, as shown below: 
 
 ```js
 const puppeteer = require("puppeteer");
@@ -213,7 +213,7 @@ Execute `visual regression tests` on SmartUI using the following commands
 npx smartui exec node puppeteerCloud.js --config .smartui.json
 ```
 
-:::note
+:::note 
 You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
 :::
 
@@ -235,7 +235,7 @@ The following are the different options which are currently supported:
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
 
-## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />**
+## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />** 
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
 
