@@ -107,7 +107,7 @@ Inject the uploaded audio file from LambdaTest into the recorder or app when you
 
 **Inject File**
 ```python
-driver.execute_script('lambda-audio-injection: {"action":"inject","arguments":{"media_url":"lt://MEDIA123..."}}')
+driver.execute_script("lambda-audio-injection=lt://MEDIA123...")
 ```
 
 :::note
