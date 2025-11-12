@@ -66,6 +66,48 @@ You can download the `HyperExecute CLI` for your OS from the links given below :
 | Windows | https://downloads.lambdatest.com/hyperexecute/windows/hyperexecute.exe |
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 
+## Verifying the Authenticity of the CLI
+To ensure the binary you’ve downloaded is genuine and has not been tampered with, you can verify its digital signature or code signing certificate. LambdaTest signs all official HyperExecute CLI releases for security and integrity assurance.
+
+<Tabs className="docs__val">
+
+<TabItem value="zsh" label="Linux" default>
+You can verify the code signature of the binary using the `openssh` command. Download the [Signature](https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute.sig) and [Public Key](https://downloads.lambdatest.com/hyperexecute/linux/public_key.pem), keep it with your CLI, and paste the location in the below command:
+
+```bash
+openssl dgst -sha256 -verify <PUBLIC_KEY_PATH> -signature <SIGNATURE_PATH> <CLI_BINARY_PATH>
+```
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/cli/linux-verification.png').default} alt="Image"  className="doc_img"/>
+
+</TabItem>
+
+<TabItem value="bash" label="macOS" default>
+You can verify the code signature of the binary using the `codesign` command. In your terminal run the following command:
+
+```bash
+codesign -dvvv <PATH_TO_CLI>
+```
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/cli/mac-verification.png').default} alt="Image"  className="doc_img"/>
+
+</TabItem>
+
+<TabItem value="powershell" label="Windows" default>
+
+**Step 1:** Locate the downloaded CLI binary (e.g., hyperexecute.exe). <br />
+**Step 2:** Right-click on the file and select Properties. <br />
+**Step 3:** Go to the Digital Signatures tab. <br />
+**Step 4:** Select the listed signature and click Details. <br />
+**Step 5:** Click View Certificate → Details to inspect the certificate information. <br />
+
+This certificate should display LambdaTest, Inc. as the verified publisher.
+
+<img loading="lazy" src={require('../assets/images/hyperexecute/cli/windows-verification.png').default} alt="Image"  className="doc_img"/>
+
+</TabItem>
+</Tabs>
+
 ## HyperExecute CLI Supported Flags 
 
 HyperExecute CLI provides different command-line flags that let you control the HyperExecute platform as per your customised requirements. You can run `hyperexecute.exe --help` on your terminal to explore the different flags.
