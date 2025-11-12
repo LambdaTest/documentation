@@ -11,7 +11,14 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-multiple-projects-per-repo/
 site_name: LambdaTest
 slug: smartui-multiple-projects-per-repo/
+
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -49,7 +56,7 @@ Create a repository where you can organize your projects into various directorie
 
 :::tip Sample repo
 Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
-<a href="https://github.com/LambdaTest/smartui-monorepo-sample/" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/smartui-monorepo-sample/" className='github__anchor'><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className='doc_img'/> View on GitHub</a>
 :::
 
 ### Step 2: Create your Secrets

@@ -17,11 +17,13 @@ keywords:
 
 url: https://www.lambdatest.com/support/docs/smartui-selenium-java-sdk/
 slug: smartui-selenium-java-sdk/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -49,7 +51,7 @@ import NewTag from '../src/component/newTag';
     }}
 ></script>
 
-Welcome to the world of simplified visual testing with the SmartUI SDK. 
+Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
 
@@ -77,7 +79,7 @@ Once you have created a SmartUI Project, you can generate screenshots by running
 ### **Step 1:** Create/Update your test
 
 You can clone the sample repository to run `LambdaTest` automation tests with `SmartUI` and use `SmartUISDKCloud.java` file located in the `src/test/java/com/lambdatest/sdk` directory.
-  
+
 ```bash
 git clone https://github.com/LambdaTest/smartui-java-testng-sample
 ```
@@ -117,22 +119,22 @@ mvn clean compile
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD>
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
-set PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
+set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell>
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
@@ -141,8 +143,7 @@ $env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 </TabItem>
 </Tabs>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
-
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ### **Step 5:** Create and Configure SmartUI Config
 
@@ -197,12 +198,10 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ### **Step 6:** Adding SmartUI function to take screenshot
 
-- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
-  
+- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
 
 ```java
-import io.github.lambdatest.*; //Importing the lambdatest-java SDK
-
+ //Importing the lambdatest-java SDK
 
 //Rest of your code here
 
@@ -211,9 +210,8 @@ import io.github.lambdatest.*; //Importing the lambdatest-java SDK
         String spanText;
         System.out.println("Loading URL");
 
-
         driver.get("<Required URL>");
-    
+
         SmartUISnapshot.smartuiSnapshot(driver, "<Screenshot Name>");
 
         Thread.sleep(5000);
@@ -229,9 +227,9 @@ import io.github.lambdatest.*; //Importing the lambdatest-java SDK
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui --config .smartui.json exec -- mvn test -D suite=sdk-cloud.xml
+npx smartui --config .smartui.json exec -- mvn test -D suite="sdk-cloud.xml
 ```
-:::note 
+:::note
 You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
 :::
 
@@ -241,8 +239,7 @@ You have successfully integrated SmartUI SDK with your Selenium tests. Visit you
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ## Arguments supported in the `smartUISnapshot` function
 
@@ -254,16 +251,14 @@ The following are the different options which are currently supported:
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
 
-
-## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />** 
+## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />**
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
 
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='IgnoreID' label='Ignore ID' default>
 
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="IgnoreID" label="Ignore ID default>
-
-```java title=This is a sample for your configuration for Java to ignore by ID"
+```java title="This is a sample for your configuration for Java to ignore by" ID"
 List<String> cssID = Arrays.asList("<required ID>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -275,9 +270,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
-<TabItem value="IgoreClass" label="Ignore Class>
+<TabItem value='IgoreClass' label='Ignore Class'>
 
-```java title=This is a sample for your configuration for Java to ignore by Class"
+```java title="This is a sample for your configuration for Java to ignore by" Class"
 List<String> cssclass = Arrays.asList("<required class>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -289,9 +284,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
-<TabItem value="IgnoreXPath" label="Ignore XPath>
+<TabItem value='IgnoreXPath' label='Ignore XPath'>
 
-```java title=This is a sample for your configuration for Java to ignore by XPath"
+```java title="This is a sample for your configuration for Java to ignore by" XPath"
 List<String> path = Arrays.asList("<required xpath>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -304,9 +299,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 </TabItem>
 
-<TabItem value="IgnoreSelector" label="Ignore CSS Selector>
+<TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
 
-```java title=This is a sample for your configuration for Java to ignore by CSS Selector"
+```java title="This is a sample for your configuration for Java to ignore by CSS" Selector"
 List<String> selector = Arrays.asList("<required selector>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> ignore = new HashMap<>();
@@ -320,10 +315,10 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 </Tabs>
 
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="SelectID" label="Select ID default>
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='SelectID' label='Select ID' default>
 
-```java title=This is a sample for your configuration for Java to select by ID."
+```java title="This is a sample for your configuration for Java to select by" ID."
 List<String> cssID = Arrays.asList("<required ID>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -335,9 +330,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
-<TabItem value="SelectClass" label="Select Class>
+<TabItem value='SelectClass' label='Select Class'>
 
-```java title=This is a sample for your configuration for Java to select by Class"
+```java title="This is a sample for your configuration for Java to select by" Class"
 List<String> cssclass = Arrays.asList("<required class>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -349,9 +344,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
-<TabItem value="SelectXPath" label="Select XPath>
+<TabItem value='SelectXPath' label='Select XPath'>
 
-```java title=This is a sample for your configuration for Java to select by XPath"
+```java title="This is a sample for your configuration for Java to select by" XPath"
 List<String> path = Arrays.asList("<required xpath>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -364,9 +359,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 </TabItem>
 
-<TabItem value="SelectSelector" label="Select CSS Selector>
+<TabItem value='SelectSelector' label='Select CSS Selector'>
 
-```java title=This is a sample for your webhook configuration for Java to select by CSS Selector"
+```java title="This is a sample for your webhook configuration for Java to select by CSS" Selector"
 List<String> selector = Arrays.asList("<required selector>");
 Map<String, Object> options = new HashMap<>();
 Map<String, List<String>> select = new HashMap<>();
@@ -384,11 +379,10 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
 
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='ElementID' label='Capture Element by ID' default>
 
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="ElementID" label="Capture Element by ID default>
-
-```java title=This is a sample for your configuration for Javas to capture an element by ID."
+```java title="This is a sample for your configuration for Javas to capture an element by" ID."
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -398,9 +392,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
-<TabItem value="ElementClass" label="Capture Element by Class>
+<TabItem value='ElementClass' label='Capture Element by Class'>
 
-```java title=This is a sample for your configuration for Java to capture an element by Class"
+```java title="This is a sample for your configuration for Java to capture an element by" Class"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -410,9 +404,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 ```
 
 </TabItem>
-<TabItem value="ElementXPath" label="Capture Element by XPath>
+<TabItem value='ElementXPath' label='Capture Element by XPath'>
 
-```java title=This is a sample for your configuration for Java to capture an element by XPath"
+```java title="This is a sample for your configuration for Java to capture an element by" XPath"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -423,9 +417,9 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screenshot Name", options);
 
 </TabItem>
 
-<TabItem value="ElementSelector" label="Capture Element by Selector>
+<TabItem value='ElementSelector' label='Capture Element by Selector'>
 
-```java title=This is a sample for your configuration for Java to capture an element by CSS Selector"
+```java title="This is a sample for your configuration for Java to capture an element by CSS" Selector"
 HashMap<String, Object> options = new HashMap<>();
 HashMap<String, String> locator = new HashMap<>();
 options.put("element", locator);
@@ -460,7 +454,7 @@ public void quickScrollToBottom() throws InterruptedException {
     while (true) {
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
         Thread.sleep(2000);
-        
+
         long newHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
         if (newHeight == lastHeight) {
             break;
@@ -482,8 +476,8 @@ public void tearDown() {
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="screenshot-naming" label="Screenshot Naming default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='screenshot-naming' label='Screenshot Naming' default>
 
 ### Screenshot Naming
 
@@ -500,7 +494,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "ProductPage-MainContent");
 
 </TabItem>
 
-<TabItem value="page-load" label="Wait for Page Load>
+<TabItem value='page-load' label='Wait for Page Load'>
 
 ### Wait for Page Load
 
@@ -518,7 +512,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 
 </TabItem>
 
-<TabItem value="dynamic-content" label="Handle Dynamic Content>
+<TabItem value='dynamic-content' label='Handle Dynamic Content'>
 
 ### Handle Dynamic Content
 
@@ -528,7 +522,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 
 </TabItem>
 
-<TabItem value=configuration" label="Configuration Management>
+<TabItem value='configuration' label='Configuration Management'>
 
 ### Configuration Management
 
@@ -538,7 +532,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 
 </TabItem>
 
-<TabItem value=test-organization" label="Test Organization>
+<TabItem value='test-organization' label='Test Organization'>
 
 ### Test Organization
 
@@ -551,8 +545,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="screenshots-not-appearing-in-dashboard" label="Screenshots Not Appearing in Dashboard default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>
 
 ### Issue: Screenshots Not Appearing in Dashboard
 
@@ -582,7 +576,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 5. Review test execution logs for error messages
 
 </TabItem>
-<TabItem value=project-not-found-error" label="Project Not Found Error>
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
 
 ### Issue: Project Not Found" Error
 
@@ -600,7 +594,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 4. Check for extra spaces or quotes in token
 
 </TabItem>
-<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content >
+<TabItem value='screenshots-show-blank-or-incorrect-content' label='Screenshots Show Blank or Incorrect Content'>
 
 ### Issue: Screenshots Show Blank or Incorrect Content
 
@@ -631,7 +625,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 4. Verify viewport size matches expected dimensions
 
 </TabItem>
-<TabItem value="build-execution-fails" label="Build Execution Fails >
+<TabItem value='build-execution-fails' label='Build Execution Fails '>
 
 ### Issue: Build Execution Fails
 
@@ -648,12 +642,12 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 2. Check configuration file syntax
 3. Try different port if default is in use:
    ```bash
-   npx smartui exec -P 5000 -- <command>
+   npx smartui exec -P 5000 -- <command">
    ```
 4. Check file permissions for configuration and project files
 
 </TabItem>
-<TabItem value=maven-dependencies-not-resolving" label="Maven Dependencies Not Resolving >
+<TabItem value='maven-dependencies-not-resolving' label='Maven Dependencies Not Resolving'>
 
 ### Issue: Maven Dependencies Not Resolving
 
@@ -674,7 +668,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
 4. Verify internet connectivity for Maven repository access
 
 </TabItem>
-<TabItem value=screenshot-names-not-matching-baseline" label="Screenshot Names Not Matching Baseline >
+<TabItem value='screenshot-names-not-matching-baseline' label='Screenshot Names Not Matching Baseline'>
 
 ### Issue: Screenshot Names Not Matching Baseline
 
@@ -714,21 +708,20 @@ If you encounter issues not covered here:
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-
-<nav aria-label="breadcrumbs>
-  <ul className=breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> SmartUI Selenium Java SDK </span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'> SmartUI Selenium Java SDK </span>
     </li>
   </ul>
 </nav>

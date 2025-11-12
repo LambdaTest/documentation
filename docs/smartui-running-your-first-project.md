@@ -18,10 +18,11 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-running-your-first-project/
 site_name: LambdaTest
 slug: smartui-running-your-first-project/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
@@ -48,6 +49,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
+
 This guide will walk you through the process of running your first visual regression test using SmartUI, a powerful feature of LambdaTest that ensures your web applications look flawless across all browsers and devices.
 ## Prerequisites
 
@@ -73,7 +75,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 :::tip Sample repo
 Download or Clone the code sample code repository from the LambdaTest GitHub repository to run the project on the SmartUI.
 
-<a href="https://github.com/LambdaTest/smartui-java-testng-sample" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/smartui-java-testng-sample" target="_blank" className='github__anchor'><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className='doc_img'/> View on GitHub</a>
 :::
 
 - Add the following dependency in your `pom.xml` file
@@ -107,22 +109,22 @@ Setup your project token and credentials shown in the **SmartUI** app after crea
 
 ### Setting Project Token
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -133,28 +135,28 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 ### Setting LambdaTest Credentials (for Hooks)
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
 
 ```bash
-export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
+export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value="Windows-1" label='Windows - CMD'>
 
 ```bash
-set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
+set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value="PowerShell-1" label='PowerShell'>
 
 ```powershell
-$env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME()}"
-$env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
+$env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+$env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 ```
 
 </TabItem>
@@ -165,7 +167,7 @@ $env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY()}"
 - For Hooks (Selenium, Playwright, etc.), use `LT_USERNAME` and `LT_ACCESS_KEY`
 :::
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/running-first-test/1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/running-first-test/1.png').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ## Step 4: Create and Configure SmartUI Config
 You can now configure your project configurations on using various available options to run your project with the SmartUI integration. To generate the configuration file, please execute the following command:
@@ -217,10 +219,10 @@ Once, the configuration file will be created, you will be seeing the default con
 :::
 
 ## Step 5: Adding SmartUI function to take screenshot
-You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
+You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
 
 ```java
-import io.github.lambdatest.*; //Importing the lambdatest-java SDK
+ //Importing the lambdatest-java SDK
 //Rest of your code here
 
 @Test
@@ -239,15 +241,15 @@ import io.github.lambdatest.*; //Importing the lambdatest-java SDK
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui --config .smartui.json exec -- mvn test -D suite=sdk-cloud.xml
+npx smartui --config .smartui.json exec -- mvn test -D suite="sdk-cloud.xml"
 ```
-:::note 
+:::note
 You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
 :::
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ## Next Steps
 

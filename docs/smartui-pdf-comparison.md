@@ -14,7 +14,7 @@ keywords:
   - Visual Regression Run Specific Test
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
-url: https://www.lambdatest.com/support/docs/smartui-pdf-comparison/  
+url: https://www.lambdatest.com/support/docs/smartui-pdf-comparison/
 site_name: LambdaTest
 slug: smartui-pdf-comparison/
 ---
@@ -61,18 +61,18 @@ This functionality is exclusive to our enterprise plan subscribers on SmartUI. F
 
 In the following section, we will walk you through the process of conducting your first Visual Regression test using LambdaTest's SmartUI platform.
 
-<div className="ytframe"> 
-<div className="youtube" data-embed="H91z4j5_JvQ">
-    <div className="play-button"></div>
+<div className='ytframe'>
+<div className='youtube' data-embed="H91z4j5_JvQ">
+    <div className='play-button'></div>
 </div>
 </div>
 
 ## Getting Started with PDF Comparison
 
-<div className="storylane-iframe">
+<div className='storylane-iframe'>
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
-  <div className="sl-embed">
-    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/czorj4fbzohf?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  <div className='sl-embed'>
+    <iframe loading="lazy" className='sl-demo' src="https://app.storylane.io/demo/czorj4fbzohf?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -96,28 +96,28 @@ projectToken = "123456#1234abcd-****-****-****-************"
 
 SmartUI provides three different methods to upload PDFs for visual regression testing. Choose the method that best fits your workflow:
 
-<div className="support_main">  
+<div className='support_main'>
   <a href="/support/docs/smartui-pdf-api-upload/">
-    <div className="support_inners">
+    <div className='support_inners'>
       <h3>API Upload</h3>
       <p>Upload PDFs using REST API for programmatic integration and automation.</p>
     </div>
   </a>
   <a href="/support/docs/smartui-pdf-cli-upload/">
-    <div className="support_inners">
+    <div className='support_inners'>
       <h3>CLI Upload</h3>
       <p>Upload PDFs using command-line interface for quick testing and CI/CD integration.</p>
     </div>
   </a>
   <a href="/support/docs/smartui-pdf-java-sdk/">
-    <div className="support_inners">
+    <div className='support_inners'>
       <h3>Java SDK Upload</h3>
       <p>Upload PDFs using Java SDK for enterprise applications and test automation frameworks.</p>
     </div>
   </a>
 </div>
 
-:::note 
+:::note
 Only files in `.pdf` format are compatible with this feature.
 :::
 

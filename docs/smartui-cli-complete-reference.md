@@ -14,10 +14,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-cli-complete-reference/
 site_name: LambdaTest
 slug: smartui-cli-complete-reference/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -58,22 +61,18 @@ If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, 
 
 ## Installation
 
-<Tabs className="docs__val" groupId="cli-install">
-<TabItem value="smartui" label="SmartUI CLI" default>
-
+<Tabs className='docs__val' groupId='cli-install'>
+<TabItem value='smartui' label='SmartUI CLI' default>
 ```bash
 npm install -g @lambdatest/smartui-cli@latest
 ```
-
 **Current Version**: v4.1.43+
 
 </TabItem>
-<TabItem value="storybook" label="Storybook CLI">
-
+<TabItem value='storybook' label='Storybook CLI'>
 ```bash
 npm install -g @lambdatest/smartui-storybook@latest
 ```
-
 **Current Version**: v1.1.29+
 
 </TabItem>
@@ -85,9 +84,8 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 ### Main Commands Overview
 
-<Tabs className="docs__val" groupId="command-category">
-<TabItem value="core" label="Core Commands" default>
-
+<Tabs className='docs__val' groupId='command-category'>
+<TabItem value='core' label='Core Commands' default>
 | Command | Description | Usage |
 |---------|------------|-------|
 | `exec` | Execute test commands with SmartUI server | `smartui exec [options] -- <command>` |
@@ -97,8 +95,7 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 </TabItem>
 
-<TabItem value="server" label="Server Management">
-
+<TabItem value='server' label='Server Management'>
 | Command | Description | Usage |
 |---------|------------|-------|
 | `exec:start` | Start SmartUI snapshot server | `smartui exec:start [options]` |
@@ -108,8 +105,7 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 </TabItem>
 
-<TabItem value="config" label="Configuration">
-
+<TabItem value='config' label='Configuration'>
 | Command | Description | Usage |
 |---------|------------|-------|
 | `config:create` | Create SmartUI config file | `smartui config:create [filepath]` |
@@ -120,8 +116,7 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 </TabItem>
 
-<TabItem value="figma" label="Figma Integration">
-
+<TabItem value='figma' label='Figma Integration'>
 | Command | Description | Usage |
 |---------|------------|-------|
 | `upload-figma` | Capture Figma screenshots | `smartui upload-figma [options] <file>` |
@@ -130,8 +125,7 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 </TabItem>
 
-<TabItem value="merge" label="Branch & Build Management">
-
+<TabItem value='merge' label='Branch & Build Management'>
 | Command | Description | Usage |
 |---------|------------|-------|
 | `merge branch` | Merge source branch into target | `smartui merge branch [options]` |
@@ -145,9 +139,8 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 ## Command Details
 
-<Tabs className="docs__val" groupId="command-details">
-<TabItem value="exec" label="exec" default>
-
+<Tabs className='docs__val' groupId='command-details'>
+<TabItem value='exec' label='exec' default>
 ### Execute Tests
 
 Execute test commands with SmartUI server running.
@@ -156,7 +149,6 @@ Execute test commands with SmartUI server running.
 ```bash
 smartui exec [options] -- <command>
 ```
-
 **Arguments:**
 
 | Argument | Description | Example |
@@ -176,7 +168,6 @@ smartui exec [options] -- <command>
 | `--config <file>` | `-c` | Configuration file path | `.smartui.json` |
 
 **Examples:**
-
 ```bash
 # Basic execution
 smartui exec -- npm test
@@ -193,11 +184,9 @@ smartui exec --config custom-config.json -- npm test
 # Override credentials
 smartui exec --userName "user" --accessKey "key" -- npm test
 ```
-
 </TabItem>
 
-<TabItem value="capture" label="capture">
-
+<TabItem value='capture' label='capture'>
 ### Capture Static URLs
 
 Capture screenshots of static URLs from a configuration file.
@@ -206,7 +195,6 @@ Capture screenshots of static URLs from a configuration file.
 ```bash
 smartui capture [options] <file>
 ```
-
 **Arguments:**
 
 | Argument | Description | Example |
@@ -227,7 +215,6 @@ smartui capture [options] <file>
 | `--config <file>` | `-c` | Configuration file path | `.smartui.json` |
 
 **Examples:**
-
 ```bash
 # Basic capture
 smartui capture urls.json --config .smartui.json
@@ -241,15 +228,13 @@ smartui capture urls.json --parallel 5 --force --config .smartui.json
 # With build name and results
 smartui capture urls.json --buildName "Daily-Run" --fetch-results daily-results.json
 ```
-
 **Parallel Execution:**
 - Maximum parallel threads: `log₂(N)` where N = total URLs
 - Example: 100 URLs = max 6 threads, 50 URLs = max 5 threads
 
 </TabItem>
 
-<TabItem value="upload" label="upload">
-
+<TabItem value='upload' label='upload'>
 ### Upload Screenshots
 
 Upload screenshots from a directory for comparison.
@@ -258,7 +243,6 @@ Upload screenshots from a directory for comparison.
 ```bash
 smartui upload [options] <directory>
 ```
-
 **Arguments:**
 
 | Argument | Description | Example |
@@ -279,7 +263,6 @@ smartui upload [options] <directory>
 | `--accessKey <string>` | | LambdaTest access key | - |
 
 **Examples:**
-
 ```bash
 # Basic upload
 smartui upload ./screenshots
@@ -299,11 +282,9 @@ smartui upload ./screenshots --ignoreDir temp,old
 # Combined options
 smartui upload ./screenshots -R -E --buildName "Test-Run"
 ```
-
 </TabItem>
 
-<TabItem value="upload-pdf" label="upload-pdf">
-
+<TabItem value='upload-pdf' label='upload-pdf'>
 ### Upload PDFs
 
 Upload PDF files for visual comparison.
@@ -312,7 +293,6 @@ Upload PDF files for visual comparison.
 ```bash
 smartui upload-pdf [options] <directory>
 ```
-
 **Arguments:**
 
 | Argument | Description | Example |
@@ -329,7 +309,6 @@ smartui upload-pdf [options] <directory>
 | `--projectToken <token>` | Project token (if not in env) | - |
 
 **Examples:**
-
 ```bash
 # Upload directory of PDFs
 smartui upload-pdf ./pdfs --buildName "Release-v2.1"
@@ -343,11 +322,9 @@ smartui upload-pdf ./pdfs --markBaseline --buildName "Baseline-v1.0"
 # With results
 smartui upload-pdf ./pdfs --fetch-results pdf-results.json
 ```
-
 </TabItem>
 
-<TabItem value="exec-start" label="exec:start">
-
+<TabItem value='exec-start' label='exec:start'>
 ### Start Server
 
 Start the SmartUI snapshot server.
@@ -356,7 +333,6 @@ Start the SmartUI snapshot server.
 ```bash
 smartui exec:start [options]
 ```
-
 **Options:**
 
 | Option | Short | Description | Default |
@@ -366,7 +342,6 @@ smartui exec:start [options]
 | `--buildName <string>` | | Custom build name | Random |
 
 **Examples:**
-
 ```bash
 # Start on default port
 smartui exec:start
@@ -377,33 +352,27 @@ smartui exec:start -P 5000
 # With build name
 smartui exec:start --buildName "Server-Build"
 ```
-
 **Usage Workflow:**
 
 1. Start server:
    ```bash
    smartui exec:start
    ```
-
 2. Set server address (for non-Selenium SDKs):
    ```bash
    export SMARTUI_SERVER_ADDRESS='http://localhost:49152'
    ```
-
 3. Run tests:
    ```bash
    npm test
    ```
-
 4. Stop server:
    ```bash
    smartui exec:stop
    ```
-
 </TabItem>
 
-<TabItem value="exec-stop" label="exec:stop">
-
+<TabItem value='exec-stop' label='exec:stop'>
 ### Stop Server
 
 Stop the SmartUI snapshot server.
@@ -412,13 +381,11 @@ Stop the SmartUI snapshot server.
 ```bash
 smartui exec:stop
 ```
-
 **Important:** Always use `exec:stop` instead of Ctrl+C. Using Ctrl+C will cause the build to stop after 12 minutes.
 
 </TabItem>
 
-<TabItem value="exec-ping" label="exec:ping / exec:pingTest">
-
+<TabItem value='exec-ping' label='exec:ping / exec:pingTest'>
 ### Check Server Status
 
 Check if the SmartUI server is running.
@@ -429,7 +396,6 @@ smartui exec:ping
 # or
 smartui exec:pingTest
 ```
-
 **Command Comparison:**
 
 | Command | Description | HTTP Client |
@@ -439,8 +405,7 @@ smartui exec:pingTest
 
 </TabItem>
 
-<TabItem value="merge" label="merge">
-
+<TabItem value='merge-1' label='merge'>
 ### Merge Branches/Builds
 
 Merge source branch or build into target.
@@ -449,7 +414,6 @@ Merge source branch or build into target.
 ```bash
 smartui merge branch [options]
 ```
-
 **Merge Branch Options:**
 
 | Option | Description | Required |
@@ -461,7 +425,6 @@ smartui merge branch [options]
 ```bash
 smartui merge build [options]
 ```
-
 **Merge Build Options:**
 
 | Option | Description | Required |
@@ -470,7 +433,6 @@ smartui merge build [options]
 | `--target <string>` | Target build to merge into | Yes |
 
 **Examples:**
-
 ```bash
 # Merge feature branch into main
 smartui merge branch --source feature/new-ui --target main
@@ -478,23 +440,19 @@ smartui merge branch --source feature/new-ui --target main
 # Merge build
 smartui merge build --source "Build-123" --target "Baseline-Build"
 ```
-
 </TabItem>
 
-<TabItem value="figma" label="Figma Commands">
-
+<TabItem value='figma-1' label='Figma Commands'>
 ### Figma Integration Commands
 
-<Tabs className="docs__val" groupId="figma-commands">
-<TabItem value="upload-figma" label="upload-figma" default>
-
+<Tabs className='docs__val' groupId='figma-commands'>
+<TabItem value='upload-figma' label='upload-figma' default>
 Upload Figma designs for visual comparison.
 
 **Syntax:**
 ```bash
 smartui upload-figma [options] <file>
 ```
-
 **Arguments:**
 
 | Argument | Description | Example |
@@ -510,15 +468,13 @@ smartui upload-figma [options] <file>
 
 </TabItem>
 
-<TabItem value="upload-figma-web" label="upload-figma-web">
-
+<TabItem value='upload-figma-web' label='upload-figma-web'>
 Capture Figma screenshots into CLI build.
 
 **Syntax:**
 ```bash
 smartui upload-figma-web [options] <file>
 ```
-
 **Arguments:**
 
 | Argument | Description | Example |
@@ -535,15 +491,13 @@ smartui upload-figma-web [options] <file>
 
 </TabItem>
 
-<TabItem value="upload-figma-app" label="upload-figma-app">
-
+<TabItem value='upload-figma-app' label='upload-figma-app'>
 Capture Figma screenshots into App build.
 
 **Syntax:**
 ```bash
 smartui upload-figma-app [options] <file>
 ```
-
 **Arguments:**
 
 | Argument | Description | Example |
@@ -585,16 +539,14 @@ These options can be used with most commands:
 
 ## Storybook CLI Commands
 
-<Tabs className="docs__val" groupId="storybook-cli">
-<TabItem value="storybook" label="storybook Command" default>
-
+<Tabs className='docs__val' groupId='storybook-cli'>
+<TabItem value='storybook-1' label='storybook Command' default>
 ### Main Command
 
 **Syntax:**
 ```bash
 smartui storybook [options] <url|directory>
 ```
-
 **Arguments:**
 
 | Argument | Description | Example |
@@ -611,7 +563,6 @@ smartui storybook [options] <url|directory>
 | `--env <prod\|stage>` | | Runtime environment | `prod` |
 
 **Examples:**
-
 ```bash
 # Local Storybook server
 smartui storybook http://localhost:6006 --config .smartui.json
@@ -628,18 +579,15 @@ smartui storybook ./storybook-static --force-rebuild
 # Stage environment
 smartui storybook http://localhost:6006 --env stage
 ```
-
 </TabItem>
 
-<TabItem value="config" label="config Command">
-
+<TabItem value='config-1' label='config Command'>
 ### Config Command
 
 **Syntax:**
 ```bash
 smartui config create [filepath]
 ```
-
 **Arguments:**
 
 | Argument | Description | Default |
@@ -676,7 +624,6 @@ These options are available but may not be prominently documented:
 | `--force-rebuild` | `storybook` | Force rebuild of an already existing Storybook build | `smartui storybook ./storybook-static --force-rebuild` |
 
 **Usage Examples:**
-
 ```bash
 # Scheduled test runs
 smartui capture urls.json --scheduled "schedule-123"
@@ -696,14 +643,12 @@ smartui capture urls.json --parallel 10 --force
 # Force rebuild (Storybook)
 smartui storybook ./storybook-static --force-rebuild
 ```
-
 ---
 
 ## Environment Variables
 
-<Tabs className="docs__val" groupId="env-vars">
-<TabItem value="authentication" label="Authentication" default>
-
+<Tabs className='docs__val' groupId='env-vars'>
+<TabItem value='authentication' label='Authentication' default>
 | Variable | Description | Required |
 |----------|-------------|----------|
 | `PROJECT_TOKEN` | SmartUI project token | Yes (for CLI projects) |
@@ -712,8 +657,7 @@ smartui storybook ./storybook-static --force-rebuild
 
 </TabItem>
 
-<TabItem value="project" label="Project Configuration">
-
+<TabItem value='project' label='Project Configuration'>
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `PROJECT_NAME` | Project name (creates if doesn't exist) | - |
@@ -722,8 +666,7 @@ smartui storybook ./storybook-static --force-rebuild
 
 </TabItem>
 
-<TabItem value="proxy" label="Proxy Configuration">
-
+<TabItem value='proxy' label='Proxy Configuration'>
 | Variable | Description | Format |
 |----------|-------------|--------|
 | `HTTP_PROXY` | HTTP proxy URL | `http://[user:pass@]host:port/` |
@@ -732,16 +675,14 @@ smartui storybook ./storybook-static --force-rebuild
 
 </TabItem>
 
-<TabItem value="server" label="Server Configuration">
-
+<TabItem value='server-1' label='Server Configuration'>
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `SMARTUI_SERVER_ADDRESS` | Server address for SDKs | `http://localhost:49152` |
 
 </TabItem>
 
-<TabItem value="debug" label="Debug & Advanced">
-
+<TabItem value='debug' label='Debug & Advanced'>
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `LT_SDK_DEBUG` | Enable debug mode | `false` |
@@ -752,9 +693,8 @@ smartui storybook ./storybook-static --force-rebuild
 
 **Setting Environment Variables:**
 
-<Tabs className="docs__val" groupId="platform">
-<TabItem value="macos-linux" label="MacOS/Linux" default>
-
+<Tabs className='docs__val' groupId='platform'>
+<TabItem value='macos-linux' label='MacOS/Linux' default>
 ```bash
 export PROJECT_TOKEN="123456#token"
 export LT_USERNAME="username"
@@ -762,10 +702,8 @@ export LT_ACCESS_KEY="access_key"
 export HTTP_PROXY="http://proxy:8080"
 export LT_SDK_DEBUG=true
 ```
-
 </TabItem>
-<TabItem value="windows-cmd" label="Windows CMD">
-
+<TabItem value='windows-cmd' label='Windows CMD'>
 ```bash
 set PROJECT_TOKEN="123456#token"
 set LT_USERNAME="username"
@@ -773,10 +711,8 @@ set LT_ACCESS_KEY="access_key"
 set HTTP_PROXY="http://proxy:8080"
 set LT_SDK_DEBUG=true
 ```
-
 </TabItem>
-<TabItem value="powershell" label="PowerShell">
-
+<TabItem value='powershell' label='PowerShell'>
 ```powershell
 $env:PROJECT_TOKEN="123456#token"
 $env:LT_USERNAME="username"
@@ -784,7 +720,6 @@ $env:LT_ACCESS_KEY="access_key"
 $env:HTTP_PROXY="http://proxy:8080"
 $env:LT_SDK_DEBUG="true"
 ```
-
 </TabItem>
 </Tabs>
 
@@ -792,11 +727,9 @@ $env:LT_SDK_DEBUG="true"
 
 ## End-to-End Workflows
 
-<Tabs className="docs__val" groupId="workflows">
-<TabItem value="static-capture" label="Static URL Capture" default>
-
+<Tabs className='docs__val' groupId='workflows'>
+<TabItem value='static-capture' label='Static URL Capture' default>
 ### Basic Static URL Capture
-
 ```bash
 # 1. Install CLI
 npm install -g @lambdatest/smartui-cli
@@ -814,13 +747,10 @@ npx smartui capture urls.json --config .smartui.json
 # 6. Fetch results
 npx smartui capture urls.json --fetch-results results.json
 ```
-
 </TabItem>
 
-<TabItem value="sdk-execution" label="SDK Test Execution">
-
+<TabItem value='sdk-execution' label='SDK Test Execution'>
 ### SDK Test Execution
-
 ```bash
 # 1. Set project token
 export PROJECT_TOKEN="123456#token"
@@ -837,13 +767,10 @@ npm test
 # 5. Stop server
 npx smartui exec:stop
 ```
-
 </TabItem>
 
-<TabItem value="upload-screenshots" label="Upload Screenshots">
-
+<TabItem value='upload-screenshots' label='Upload Screenshots'>
 ### Upload Existing Screenshots
-
 ```bash
 # 1. Set project token
 export PROJECT_TOKEN="123456#token"
@@ -858,13 +785,9 @@ npx smartui upload ./screenshots \
   --buildName "Test-Run" \
   --fetch-results results.json
 ```
-
 </TabItem>
-
-<TabItem value="storybook" label="Storybook Testing">
-
+<TabItem value="storybook-2" label='Storybook Testing'>
 ### Storybook Testing
-
 ```bash
 # 1. Install Storybook CLI
 npm install -g @lambdatest/smartui-storybook
@@ -882,13 +805,10 @@ smartui storybook http://localhost:6006 --config .smartui.json
 npm run build-storybook
 smartui storybook ./storybook-static --config .smartui.json
 ```
-
 </TabItem>
 
-<TabItem value="pdf-testing" label="PDF Testing">
-
+<TabItem value='pdf-testing' label='PDF Testing'>
 ### PDF Testing
-
 ```bash
 # 1. Set project token
 export PROJECT_TOKEN="123456#token"
@@ -899,15 +819,12 @@ npx smartui upload-pdf ./pdfs --buildName "PDF-Release-v1.0"
 # 3. Mark as baseline
 npx smartui upload-pdf ./pdfs --markBaseline --buildName "PDF-Baseline"
 ```
-
 </TabItem>
 
-<TabItem value="cicd" label="CI/CD Integration">
-
+<TabItem value='cicd' label='CI/CD Integration'>
 ### CI/CD Integration
 
 **GitHub Actions Example:**
-
 ```yaml
 - name: Run SmartUI Tests
   env:
@@ -916,9 +833,7 @@ npx smartui upload-pdf ./pdfs --markBaseline --buildName "PDF-Baseline"
     npm install -g @lambdatest/smartui-cli
     npx smartui exec --buildName "${{ github.sha }}" -- npm test
 ```
-
 **GitLab CI Example:**
-
 ```yaml
 test:
   variables:
@@ -927,7 +842,6 @@ test:
     - npm install -g @lambdatest/smartui-cli
     - npx smartui exec --buildName "$CI_COMMIT_SHA" -- npm test
 ```
-
 </TabItem>
 </Tabs>
 
@@ -935,16 +849,14 @@ test:
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="naming" label="Build Naming" default>
-
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='naming' label='Build Naming' default>
 ### Build Naming
 
 - Use meaningful, consistent names
 - Include version or commit info
 - Avoid special characters
 - Use environment variables for dynamic names
-
 ```bash
 # Good
 --buildName "Release-v1.0.0"
@@ -957,9 +869,7 @@ test:
 ```
 
 </TabItem>
-
-<TabItem value="config" label="Configuration Management">
-
+<TabItem value='config-2' label='Configuration Management'>
 ### Configuration Management
 
 - Keep config files in version control
@@ -969,8 +879,7 @@ test:
 
 </TabItem>
 
-<TabItem value="parallel" label="Parallel Execution">
-
+<TabItem value='parallel' label='Parallel Execution'>
 ### Parallel Execution
 
 - Start with lower thread counts
@@ -979,9 +888,7 @@ test:
 - Calculate optimal threads: `log₂(N)`
 
 </TabItem>
-
-<TabItem value="server" label="Server Management">
-
+<TabItem value='server-2' label='Server Management'>
 ### Server Management
 
 - Always use `exec:stop` to terminate server
@@ -991,8 +898,7 @@ test:
 
 </TabItem>
 
-<TabItem value="error-handling" label="Error Handling">
-
+<TabItem value='error-handling' label='Error Handling'>
 ### Error Handling
 
 - Always use `--fetch-results` for CI/CD
@@ -1007,11 +913,9 @@ test:
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="server" label="Server Not Running" default>
-
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='server-3' label='Server Not Running' default>
 ### Server Not Running
-
 ```bash
 # Check status
 npx smartui exec:ping
@@ -1022,25 +926,19 @@ npx smartui exec:start
 # Verify address
 echo $SMARTUI_SERVER_ADDRESS
 ```
-
 </TabItem>
 
-<TabItem value="port" label="Port Conflicts">
-
+<TabItem value='port' label='Port Conflicts'>
 ### Port Conflicts
-
 ```bash
 # Use custom port
 npx smartui exec:start -P 5000
 npx smartui exec -P 5000 -- npm test
 ```
-
 </TabItem>
 
-<TabItem value="auth" label="Authentication Issues">
-
+<TabItem value='auth' label='Authentication Issues'>
 ### Authentication Issues
-
 ```bash
 # Verify credentials
 echo $PROJECT_TOKEN
@@ -1050,13 +948,9 @@ echo $LT_ACCESS_KEY
 # Override with command options
 npx smartui capture urls.json --userName "user" --accessKey "key"
 ```
-
 </TabItem>
-
-<TabItem value="config" label="Configuration Errors">
-
+<TabItem value='config-3' label='Configuration Errors'>
 ### Configuration Errors
-
 ```bash
 # Validate JSON
 cat .smartui.json | python -m json.tool
@@ -1064,7 +958,6 @@ cat .smartui.json | python -m json.tool
 # Check config path
 npx smartui capture urls.json --config .smartui.json
 ```
-
 </TabItem>
 </Tabs>
 

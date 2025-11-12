@@ -12,10 +12,12 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-pdf-cli-upload/
 site_name: LambdaTest
 slug: smartui-pdf-cli-upload/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
@@ -78,37 +80,37 @@ npm install -g @lambdatest/smartui-cli
 
 ## Step 2: Setup your credentials
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
-export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD>
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
-set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell>
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
-$env:LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}"
-$env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+$env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+$env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 </Tabs>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ## Step 3: Upload PDFs Using CLI
 
@@ -182,8 +184,8 @@ Example for GitHub Actions:
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="file-management" label="PDF File Management default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='file-management' label='PDF File Management' default>
 
 ### PDF File Management
 
@@ -194,7 +196,7 @@ Example for GitHub Actions:
 
 </TabItem>
 
-<TabItem value=token-management" label="Project Token Management>
+<TabItem value='token-management' label='Project Token Management'>
 
 ### Project Token Management
 
@@ -205,7 +207,7 @@ Example for GitHub Actions:
 
 </TabItem>
 
-<TabItem value=build-naming" label="Build Naming>
+<TabItem value='build-naming' label='Build Naming'>
 
 ### Build Naming
 
@@ -220,7 +222,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 
 </TabItem>
 
-<TabItem value="error-handling" label="Error Handling>
+<TabItem value='error-handling' label='Error Handling'>
 
 ### Error Handling
 
@@ -231,7 +233,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 
 </TabItem>
 
-<TabItem value=batch-processing" label="Batch Processing>
+<TabItem value='batch-processing' label='Batch Processing'>
 
 ### Batch Processing
 
@@ -245,8 +247,8 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="pdf-upload-fails" label="PDF Upload Fails default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>
 
 ### Issue: PDF Upload Fails
 
@@ -286,7 +288,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
    ```
 
 </TabItem>
-<TabItem value=project-not-found-error" label="Project Not Found Error>
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
 
 ### Issue: Project Not Found" Error
 
@@ -304,7 +306,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 4. Check for extra spaces or quotes in token
 
 </TabItem>
-<TabItem value="cli-command-not-found" label="CLI Command Not Found>
+<TabItem value='cli-command-not-found' label='CLI Command Not Found'>
 
 ### Issue: CLI Command Not Found
 
@@ -329,7 +331,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 3. Check PATH includes npm global bin directory
 
 </TabItem>
-<TabItem value=upload-returns-error" label="Upload Returns Error>
+<TabItem value='upload-returns-error' label='Upload Returns Error'>
 
 ### Issue: Upload Returns Error
 
@@ -349,7 +351,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 5. Retry upload if transient error
 
 </TabItem>
-<TabItem value=pdfs-not-appearing-in-dashboard" label="PDFs Not Appearing in Dashboard">
+<TabItem value='pdfs-not-appearing-in-dashboard' label='PDFs Not Appearing in Dashboard'>
 
 ### Issue: PDFs Not Appearing in Dashboard
 

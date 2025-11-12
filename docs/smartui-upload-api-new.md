@@ -1,7 +1,7 @@
 ---
 id: smartui-upload-api-v2
 title: Getting Started With Uploading Screenshots through API for Visual Regression Testing
-sidebar_label: Upload through API 
+sidebar_label: Upload through API
 description: Discover how to leverage LambdaTest's SmartUI upload API v2 for seamless Visual Regression Testing. Learn the prerequisites, create projects.
 keywords:
   - Visual Regression
@@ -17,7 +17,14 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-upload-api-v2/
 site_name: LambdaTest
 slug: smartui-upload-api-v2/
+
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,7 +51,7 @@ slug: smartui-upload-api-v2/
 ></script>
 
 :::info
-This is the guide to setup the **version 2** of the SmartUI upload API. 
+This is the guide to setup the **version 2** of the SmartUI upload API.
 :::
 
 ### Prerequisites for running Smart UI
@@ -102,9 +109,6 @@ We only support the following formats: `.png` `.jpeg` `.jpg`
 
 Please see the below screenshot for adding your screenshots which needs to be uploaded for your project to generate a build.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/upload-images-api-3.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/upload-images-api-2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
-
-
-
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/upload-images-api-3.png').default} alt="cmd" width="768" height="373" className='doc_img'/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/upload-images-api-2.png').default} alt="cmd" width="768" height="373" className='doc_img'/>
 

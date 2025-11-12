@@ -16,11 +16,13 @@ description: In this documentation, learn how to group screenshots in a single b
 
 url: https://www.lambdatest.com/support/docs/smartui-cli/
 slug: smartui-cli-build-name/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -76,22 +78,22 @@ npm install @lambdatest/smartui-cli
 
 Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -111,7 +113,7 @@ Specify a custom build name to group your screenshots in the following way:
 npx smartui --config .smartui.json exec --buildName "Sample Build Name" -- <execution-command>
 ```
 >**Example:**
- For a `Node.js` test script : 
+ For a `Node.js` test script :
 >```bash
 >npx smartui --config .smartui.json exec --buildName "Sample Build Name" -- node test.js
 >```

@@ -16,9 +16,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-root-cause-analysis/
 site_name: LambdaTest
 slug: smartui-root-cause-analysis/
----
 
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -76,7 +80,7 @@ Before you begin, please ensure the build was generated using a **LambdaTest CLI
 1.  Open a visual build from your [SmartUI dashboard](https://smartui.lambdatest.com/).
 2.  In the comparison toolbar, click the **RCA** icon.
 <p align="center">
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAicon.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAicon.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className='doc_img'/>
 </p>
 
 When RCA is activated, DOM diff boxes are automatically enabled. There's nothing manual to configure—you're ready to investigate immediately.
@@ -87,22 +91,18 @@ As soon as RCA mode is on, you can interact with the highlighted differences to 
 
 | User Interaction | Visual Feedback & Result |
 |---|---|
-| **Default View** <br /> <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAdefault.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/> | A dark blue highlight box appears by default, pinpointing the exact DOM element where the primary issue is detected. |
-| **Hover** on a diff region <br /> <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAhover.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/> | A yellow bounding box appears, indicating the element is ready for selection. |
-| **Click** a diff region <br /> <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAselected.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/> | A red box locks onto the selected DOM region, and the RCA panel opens on the right. |
-| **Hover** while selected <br /> <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAhighlight.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className="doc_img"/> | A blue highlight box appears over the element, helping to transition focus between the screenshot and the RCA panel. |
-
-
+| **Default View** <br /> <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAdefault.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className='doc_img'/> | A dark blue highlight box appears by default, pinpointing the exact DOM element where the primary issue is detected. |
+| **Hover** on a diff region <br /> <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAhover.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className='doc_img'/> | A yellow bounding box appears, indicating the element is ready for selection. |
+| **Click** a diff region <br /> <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAselected.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className='doc_img'/> | A red box locks onto the selected DOM region, and the RCA panel opens on the right. |
+| **Hover** while selected <br /> <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAhighlight.png').default} alt="RCA Icon in Toolbar" width="200" height="200" className='doc_img'/> | A blue highlight box appears over the element, helping to transition focus between the screenshot and the RCA panel. |
 
 ### Step 3: Understand Detailed Changes in the RCA Panel
 
 Once an element is selected, the RCA panel opens on the right sidebar. It displays structured diff breakdowns across several categories:
 
-
 <p align="center">
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAmain.png').default} alt="RCA Icon in Toolbar" width="200" height="400" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/RCAmain.png').default} alt="RCA Icon in Toolbar" width="200" height="400" className='doc_img'/>
 </p>
-
 
 | Category | What You'll See |
 |---|---|

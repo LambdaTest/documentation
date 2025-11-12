@@ -11,7 +11,14 @@ keywords:
   - Visual Testing
 url: https://www.lambdatest.com/support/docs/smartui-sdk-capabilities/
 slug: smartui-sdk-capabilities/
+
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 # SmartUI SDK Capabilities
 
@@ -46,11 +53,11 @@ let capabilities = {
     name: "Test Name", // name of the test
     build: "Automation Build Name", // name of the build
     // highlight-next-line
-    "smartUI.project": "YOUR_PROJECT_NAME", 
+    "smartUI.project": "YOUR_PROJECT_NAME",
     // highlight-next-line
     "smartUI.build": "YOUR_BUILD_NAME",
     // highlight-next-line
-    "smartUI.baseline": true, 
+    "smartUI.baseline": true,
   },
 };
 ```
@@ -70,7 +77,7 @@ ltOptions.put("w3c", true);
 ltOptions.put("name", "Test Name");
 ltOptions.put("build", "Automation Build Name");
 // highlight-next-line
-ltOptions.put("smartUI.project", "YOUR_PROJECT_NAME");  
+ltOptions.put("smartUI.project", "YOUR_PROJECT_NAME");
 // highlight-next-line
 ltOptions.put("smartUI.build", "SmartUI_BUILD_NAME");
 // highlight-next-line

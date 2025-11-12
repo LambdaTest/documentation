@@ -1,6 +1,6 @@
 ---
 id: smartui-cli-figma
-title: Getting started with Lambdatest's SmartUI Figma CLI 
+title: Getting started with Lambdatest's SmartUI Figma CLI
 sidebar_label: Figma CLI
 description: In this documentation, learn how to perform Visual Testing of your Figma files using command line interface using SmartUI CLI.
 keywords:
@@ -17,14 +17,13 @@ keywords:
 
 url: https://www.lambdatest.com/support/docs/smartui-cli/
 slug: smartui-cli-figma/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY}
-from "@site/src/component/keys";
 import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -52,11 +51,11 @@ import CodeBlock from '@theme/CodeBlock';
     }}
 ></script>
 
-Welcome to the LambdaTest SmartUI Figma CLI documentation! 
+Welcome to the LambdaTest SmartUI Figma CLI documentation!
 
 With SmartUI Figma CLI, you can seamlessly perform visual regression testing of your Figma designs on SmartUI using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Figma Visual tests using SmartUI CLI.
 
-## Prerequisites for running SmartUI Figma CLI 
+## Prerequisites for running SmartUI Figma CLI
 
 - Basic understanding of Command Line Interface is required.
 - Basic understanding of Figma file structuring is required.
@@ -72,13 +71,12 @@ The following steps will guide you in running your visual tests for Figma files 
 | `figma_file_token`   | `designs.json`   | Figma **file ID**, extracted from the Figma file URL                       |
 | `figma_ids`          | `designs.json`   | List of **frame or node IDs** you want to compare visually                 |
 
-> Example Figma URL:  
-> `https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`  
-> - `figma_file_token`: `abc12345`  
+> Example Figma URL:
+> `https://www.figma.com/file/abc12345/file-name?node-id=2417-58969`
+> - `figma_file_token`: `abc12345`
 > - `figma_ids`: `2417-58969`
 
 ---
-
 
 ## Create a SmartUI CLI Project
 
@@ -90,9 +88,7 @@ The first step is to create a project with the application in which we will comb
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
-
 ## Steps to run your first test
-
 
 ### **Step 1**: Install the Dependencies
 
@@ -143,22 +139,22 @@ Once, the `designs` file will be created, you will be seeing the sample pre-fill
 
 1. Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -169,22 +165,22 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 2. Setup your [personal access token for Figma](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens) to authenticate Figma with SmartUI.
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
 
 ```bash
 export FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value="Windows-1" label='Windows - CMD'>
 
 ```bash
 set FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value="PowerShell-1" label='PowerShell'>
 
 ```powershell
 $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
@@ -195,22 +191,22 @@ $env:FIGMA_TOKEN="123456#1234abcd-****-****-****-************"
 
 ### **Step 4:** Configure your LambdaTest Credentials
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux-2' label='MacOS/Linux' default>
 
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value="Windows-2" label='Windows - CMD'>
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value="PowerShell-2" label='PowerShell'>
 
 ```powershell
 $env:LT_USERNAME="YOUR_USERNAME"
@@ -219,8 +215,7 @@ $env:LT_USERNAME="YOUR_USERNAME"
 </TabItem>
 </Tabs>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
-
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 #### SmartUI CLI Design Config Options
 
@@ -232,7 +227,6 @@ Please read the following table for more information about the configuration fil
 | figma_ids  | Comma separated list of nodes that you care about in the document. If specified, only a subset of the document will be returned corresponding to the nodes listed, their children, and everything between the root node and the listed nodes. | Optional |
 | depth (int)    | Positive integer (>1) representing how deep into the document tree to traverse. For example, setting it to 2 returns Pages and all top level objects on each page. Not setting this parameter returns all nodes | Optional |
 
-
 ### **Step 5:** Uploading the Figma files on SmartUI Cloud using CLI
 
 You can now execute tests for `Visual Testing for Figma objects` using the following options:.
@@ -243,7 +237,7 @@ npx smartui upload-figma designs.json
 
 ### Advanced options for baseline management
 
-1. `markBaseline` - You can mark a specific build as a baseline through the runner command 
+1. `markBaseline` - You can mark a specific build as a baseline through the runner command
 
 ```bash
 npx smartui upload-figma designs.json --markBaseline
@@ -256,22 +250,21 @@ npx smartui upload-figma designs.json --buildName "<Build_Name>"
 
 <b> You can use these options in a nested way as well, as shown below </b>
 
-
 ```bash
 npx smartui upload-figma designs.json --buildName "<Build_Name>" --markBaseline
 ```
 
 :::note
 
-If `buildName` is not specified, a random build name is generated for every run. 
+If `buildName` is not specified, a random build name is generated for every run.
 
 You can add more screenshots in a build by specifying the particular build name in the runner command
 :::
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="build-names" label="Build Names" default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='build-names' label='Build Names' default>
 
 ### Build Names
 
@@ -280,7 +273,7 @@ You can add more screenshots in a build by specifying the particular build name 
    ```
 
 </TabItem>
-<TabItem value="screenshot-names" label="Screenshot Names" >
+<TabItem value='screenshot-names' label='Screenshot Names' >
 
 ### Screenshot Names
 
@@ -288,7 +281,10 @@ You can add more screenshots in a build by specifying the particular build name 
    - Avoid: `test1`, `screenshot`, `design-1`
 
 </TabItem>
-<TabItem value="branch-names" label="Branch Names" >
+</Tabs>
+
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='branch-names' label='Branch Names' >
 
 ### Branch Names
 
@@ -309,8 +305,8 @@ smartuiSnapshot(driver, "homepage.png");
 
 **Example for different frameworks:**
 
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="selenium" label="Selenium" default>
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='selenium' label='Selenium' default>
 
 ```java
 // Java
@@ -318,7 +314,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
 ```
 
 </TabItem>
-<TabItem value="playwright" label="Playwright">
+<TabItem value='playwright' label='Playwright'>
 
 ```javascript
 // JavaScript
@@ -326,7 +322,7 @@ await smartuiSnapshot(page, "homepage.png");
 ```
 
 </TabItem>
-<TabItem value="cypress" label="Cypress">
+<TabItem value='cypress' label='Cypress'>
 
 ```javascript
 // JavaScript
@@ -338,10 +334,12 @@ cy.smartuiSnapshot("homepage.png");
 
 This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots (e.g., `homepage.png`) in the same build.
 
+</TabItem>
+</Tabs>
+
 ### Setup with Continuous Integration (CI)
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI Figma CLI` execution then the following are the steps needs to be added to your `.yaml` file:
-
 
 ```yaml
 steps:
@@ -356,10 +354,10 @@ steps:
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
-</TabItem>
-<TabItem value="branch-names" label="Branch Names" >
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='branch-names-1' label='Branch Names' >
 
 ### Branch Names
 
@@ -380,8 +378,8 @@ smartuiSnapshot(driver, "homepage.png");
 
 **Example for different frameworks:**
 
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="selenium" label="Selenium" default>
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='selenium-1' label='Selenium' default>
 
 ```java
 // Java
@@ -389,7 +387,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "homepage.png");
 ```
 
 </TabItem>
-<TabItem value="playwright" label="Playwright">
+<TabItem value='playwright-1' label='Playwright'>
 
 ```javascript
 // JavaScript
@@ -397,7 +395,7 @@ await smartuiSnapshot(page, "homepage.png");
 ```
 
 </TabItem>
-<TabItem value="cypress" label="Cypress">
+<TabItem value='cypress-1' label='Cypress'>
 
 ```javascript
 // JavaScript
@@ -413,7 +411,6 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match SDK screenshots
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI Figma CLI` execution then the following are the steps needs to be added to your `.yaml` file:
 
-
 ```yaml
 steps:
   - name: Running SmartUI Figma CLI Tests
@@ -427,15 +424,15 @@ steps:
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 </TabItem>
 </Tabs>
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="verify-figma-token" label="Verify Figma Token" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='verify-figma-token' label='Verify Figma Token' default>
 
 Verify Figma Token
 
@@ -445,7 +442,7 @@ Verify Figma Token
    Ensure the token is valid and has not expired. Generate a new token from [Figma Settings](https://www.figma.com/settings).
 
 </TabItem>
-<TabItem value="check-file-token" label="Check File Token" >
+<TabItem value='check-file-token' label='Check File Token' >
 
 Check File Token
 
@@ -453,7 +450,7 @@ Check File Token
    - Ensure you have access to the Figma file
 
 </TabItem>
-<TabItem value="validate-node-ids" label="Validate Node IDs" >
+<TabItem value='validate-node-ids' label='Validate Node IDs' >
 
 Validate Node IDs
 
@@ -465,7 +462,7 @@ Validate Node IDs
 **Solutions**:
 
 </TabItem>
-<TabItem value="check-screenshot-names" label="Check Screenshot Names" >
+<TabItem value='check-screenshot-names' label='Check Screenshot Names' >
 
 Check Screenshot Names
 
@@ -473,7 +470,7 @@ Check Screenshot Names
    - Verify screenshot names match exactly between Figma and SDK
 
 </TabItem>
-<TabItem value="verify-frame-sizes" label="Verify Frame Sizes" >
+<TabItem value='verify-frame-sizes' label='Verify Frame Sizes' >
 
 Verify Frame Sizes
 
@@ -481,7 +478,7 @@ Verify Frame Sizes
    - Check that viewport sizes match between Figma frames and SDK captures
 
 </TabItem>
-<TabItem value="check-build-names" label="Check Build Names" >
+<TabItem value='check-build-names' label='Check Build Names' >
 
 Check Build Names
 
@@ -493,7 +490,7 @@ Check Build Names
 **Solutions**:
 
 </TabItem>
-<TabItem value="verify-project-token" label="Verify Project Token" >
+<TabItem value='verify-project-token' label='Verify Project Token' >
 
 Verify Project Token
 
@@ -503,7 +500,7 @@ Verify Project Token
    Ensure the token is set correctly and matches your SmartUI project.
 
 </TabItem>
-<TabItem value="check-project-type" label="Check Project Type" >
+<TabItem value='check-project-type' label='Check Project Type' >
 
 Check Project Type
 
@@ -527,21 +524,20 @@ If you encounter issues not covered here:
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> SmartUI Figma CLI </span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'> SmartUI Figma CLI </span>
     </li>
   </ul>
 </nav>

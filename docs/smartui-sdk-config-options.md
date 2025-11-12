@@ -17,11 +17,13 @@ keywords:
 
 url: https://www.lambdatest.com/support/docs/smartui-cli/
 slug: smartui-sdk-config-options/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -51,7 +53,7 @@ import NewTag from '../src/component/newTag';
 
 Welcome to the world of simplified visual testing with the SmartUI SDK.
 
-This guide is designed to provide you with comprehensive information about the various configuration options available within the SmartUI SDK. Whether you're a new user seeking to customize your SmartUI integration or an experienced developer looking to optimize your testing workflows, this documentation will serve as your go-to resource for understanding and utilizing the configuration options effectively. 
+This guide is designed to provide you with comprehensive information about the various configuration options available within the SmartUI SDK. Whether you're a new user seeking to customize your SmartUI integration or an experienced developer looking to optimize your testing workflows, this documentation will serve as your go-to resource for understanding and utilizing the configuration options effectively.
 
 To generate the SmartUI SDK configuration file, please execute the following command:
 
@@ -95,8 +97,8 @@ The SmartUI configuration file follows a JSON structure. Below is a sample confi
 
 ## Configuration Options
 
-<Tabs className="docs__val" groupId="config-options">
-<TabItem value="web" label="Web Configuration" default>
+<Tabs className='docs__val' groupId='config-options'>
+<TabItem value='web' label='Web Configuration' default>
 
 ### browsers
 
@@ -147,11 +149,11 @@ To capture a screenshot of the content currently visible in your viewport, rathe
 
 </TabItem>
 
-<TabItem value="mobile" label="Mobile Configuration">
+<TabItem value='mobile' label='Mobile Configuration'>
 
 ### devices
 
-An array of mobile devices to capture screenshots from. List of supported device names can be found [here](#list-of-supported-device-viewports). 
+An array of mobile devices to capture screenshots from. List of supported device names can be found [here](#list-of-supported-device-viewports).
 
 :::note
  Mobile viewports are emulated in desktop environments.Android devices will have the screenshots rendered in Chrome, while iOS devices in Safari.
@@ -168,7 +170,7 @@ Specifies the orientation of the mobile device. You can choose from `portrait` o
 
 </TabItem>
 
-<TabItem value="global" label="Global Options">
+<TabItem value='global' label='Global Options'>
 
 ### waitForPageRender
 
@@ -188,7 +190,7 @@ The `allowedHostnames` option controls the capture of assets from specific hostn
 
 </TabItem>
 
-<TabItem value="devices" label="Supported Devices">
+<TabItem value='devices' label='Supported Devices'>
 
 ## List of supported Device viewports
 

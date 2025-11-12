@@ -15,7 +15,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-custom-css/
 site_name: LambdaTest
 slug: smartui-custom-css/
+
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -40,9 +46,6 @@ slug: smartui-custom-css/
       })
     }}
 ></script>
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 ---
 
@@ -99,9 +102,9 @@ body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
 
 ```json
 {
-  "web": { 
-    "browsers": ["chrome"], 
-    "viewports": [[1440, 900]] 
+  "web": {
+    "browsers": ["chrome"],
+    "viewports": [[1440, 900]]
   },
   "enableJavaScript": true,
   "customCSS": "./visual-test-styles.css"
@@ -120,9 +123,9 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 
 ```json
 {
-  "web": { 
-    "browsers": ["chrome"], 
-    "viewports": [[1440, 900]] 
+  "web": {
+    "browsers": ["chrome"],
+    "viewports": [[1440, 900]]
   },
   "enableJavaScript": true,
   "customCSS": "body{font-family:'Inter',sans-serif!important;} .banner,.ad{display:none!important;}"
@@ -166,7 +169,6 @@ The embedded string method is useful for quick edits and single-use CSS rules. P
 
 ---
 
-
 ## Known Limitations
 
 The Custom CSS feature has the following limitations:
@@ -184,7 +186,7 @@ The Custom CSS feature has the following limitations:
 The custom CSS feature is particularly valuable in the following scenarios:
 
 <Tabs>
-  <TabItem value="stabilize" label="Stabilize Dynamic UI" default>
+  <TabItem value='stabilize' label='Stabilize Dynamic UI' default>
 
 ```css
 /* Hide elements that change between runs */
@@ -196,7 +198,7 @@ The custom CSS feature is particularly valuable in the following scenarios:
 ```
 
   </TabItem>
-  <TabItem value="typography" label="Normalize Typography/Theme">
+  <TabItem value='typography' label='Normalize Typography/Theme'>
 
 ```css
 /* Force consistent light theme */
@@ -209,7 +211,7 @@ body { background: #0f172a !important; color: #e5e7eb !important; } */
 ```
 
   </TabItem>
-  <TabItem value="layout" label="Layout Harmonization">
+  <TabItem value='layout' label='Layout Harmonization'>
 
 ```css
 /* Center content and unify spacing (use carefully) */
@@ -218,7 +220,7 @@ body { background: #0f172a !important; color: #e5e7eb !important; } */
 ```
 
   </TabItem>
-  <TabItem value="pii" label="Mask PII/Identifiers">
+  <TabItem value='pii' label='Mask PII/Identifiers'>
 
 ```css
 /* Hide IPs, locations, or IDs */
@@ -228,7 +230,7 @@ body { background: #0f172a !important; color: #e5e7eb !important; } */
 ```
 
   </TabItem>
-  <TabItem value="stress" label="Visual Stress Testing">
+  <TabItem value='stress' label='Visual Stress Testing'>
 
 ```css
 /* Deliberately apply a very different theme */
@@ -242,7 +244,7 @@ body {
 ```
 
   </TabItem>
-  <TabItem value="flakiness" label="Reduce Flakiness">
+  <TabItem value='flakiness' label='Reduce Flakiness'>
 
 ```css
 /* Disable transitions/animations */
@@ -250,7 +252,7 @@ body {
 ```
 
   </TabItem>
-  <TabItem value="brand" label="Mask Brand Cues">
+  <TabItem value='brand' label='Mask Brand Cues'>
 
 ```css
 /* Override brand cues (colors, shadows, shapes) */
@@ -269,9 +271,9 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 
 ```json
 {
-  "web": { 
-    "browsers": ["chrome"], 
-    "viewports": [[1440, 900]] 
+  "web": {
+    "browsers": ["chrome"],
+    "viewports": [[1440, 900]]
   },
   "customCSS": "./path/to/visual-test-styles.css"
 }
@@ -281,9 +283,9 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 
 ```json
 {
-  "web": { 
-    "browsers": ["chrome"], 
-    "viewports": [[1440, 900]] 
+  "web": {
+    "browsers": ["chrome"],
+    "viewports": [[1440, 900]]
   },
   "customCSS": "body{font-family:'Inter',sans-serif!important;} .ad,.banner{display:none!important;}"
 }
@@ -300,22 +302,21 @@ header, footer, nav { background: rgba(0,0,0,.45) !important; box-shadow: none !
 
 ---
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Custom CSS</span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'>Custom CSS</span>
     </li>
   </ul>
 </nav>
-
 

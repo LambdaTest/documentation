@@ -14,7 +14,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-with-circle-ci/
 site_name: LambdaTest
 slug: smartui-with-circle-ci/
+
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -49,7 +55,7 @@ To integrate CircleCI Pipeline with SmartUI, follow the below steps. You can use
 :::tip Sample repo
 Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
 
-<a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations" target="_blank" className='github__anchor'><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className='doc_img'/> View on GitHub</a>
 :::
 
 ### Step 1: Set Up Your Repository
@@ -104,8 +110,8 @@ workflows:
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="secret-management" label="Secret Management default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='secret-management' label='Secret Management' default>
 
 ### Secret Management
 
@@ -116,7 +122,7 @@ workflows:
 - Use different secrets for different environments
 
 </TabItem>
-<TabItem value=pipeline-optimization" label="Pipeline Optimization >
+<TabItem value='pipeline-optimization' label='Pipeline Optimization'>
 
 ### Pipeline Optimization
 
@@ -140,7 +146,7 @@ workflows:
 ```
 
 </TabItem>
-<TabItem value=build-naming" label="Build Naming >
+<TabItem value='build-naming' label='Build Naming'>
 
 ### Build Naming
 
@@ -155,7 +161,7 @@ environment:
 ```
 
 </TabItem>
-<TabItem value="error-handling" label="Error Handling >
+<TabItem value='error-handling' label='Error Handling'>
 
 ### Error Handling
 
@@ -165,7 +171,7 @@ environment:
 - Add retry logic for flaky tests
 
 </TabItem>
-<TabItem value=resource-management" label="Resource Management >
+<TabItem value='resource-management' label='Resource Management'>
 
 ### Resource Management
 
@@ -175,7 +181,7 @@ environment:
 - Optimize test execution order
 
 </TabItem>
-<TabItem value=resource-management" label="Resource Management >
+<TabItem value='resource-management-1' label='Resource Management'>
 
 ### Resource Management
 
@@ -189,8 +195,8 @@ environment:
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="pipeline-fails-with-variable-not-found" label="Pipeline Fails with Variable Not Found" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='pipeline-fails-with-variable-not-found' label='Pipeline Fails with Variable Not Found' default>
 
 ### Issue: Pipeline Fails with "Variable Not Found"
 
@@ -214,7 +220,7 @@ environment:
 4. Verify variables are not masked if you need to see them in logs
 
 </TabItem>
-<TabItem value="project_token-not-available" label="PROJECT_TOKEN Not Available >
+<TabItem value='project_token-not-available' label='PROJECT_TOKEN Not Available'>
 
 ### Issue: PROJECT_TOKEN Not Available
 
@@ -239,7 +245,7 @@ environment:
 4. Verify variable scope includes your project
 
 </TabItem>
-<TabItem value=tests-run-but-no-results-in-dashboard" label="Tests Run But No Results in Dashboard >
+<TabItem value='tests-run-but-no-results-in-dashboard' label='Tests Run But No Results in Dashboard'>
 
 ### Issue: Tests Run But No Results in Dashboard
 
@@ -270,7 +276,7 @@ environment:
 4. Check if SmartUI CLI step completed successfully
 
 </TabItem>
-<TabItem value=pipeline-times-out" label="Pipeline Times Out >
+<TabItem value='pipeline-times-out' label='Pipeline Times Out'>
 
 ### Issue: Pipeline Times Out
 
@@ -303,7 +309,7 @@ environment:
 4. Split tests across multiple pipeline jobs
 
 </TabItem>
-<TabItem value=dependencies-installation-fails" label="Dependencies Installation Fails >
+<TabItem value='dependencies-installation-fails' label='Dependencies Installation Fails'>
 
 ### Issue: Dependencies Installation Fails
 
@@ -336,7 +342,7 @@ environment:
 4. Check for version conflicts in package.json
 
 </TabItem>
-<TabItem value=smartui-cli-not-found" label="SmartUI CLI Not Found >
+<TabItem value='smartui-cli-not-found' label='SmartUI CLI Not Found'>
 
 ### Issue: SmartUI CLI Not Found
 

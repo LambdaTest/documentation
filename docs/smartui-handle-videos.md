@@ -14,10 +14,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-handle-videos/
 site_name: LambdaTest
 slug: smartui-handle-videos/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -178,8 +181,8 @@ SmartUI handles standard HTML5 video elements:
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="allow-video-loading" label="Allow Video Loading" default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='allow-video-loading' label='Allow Video Loading' default>
 
 ### Allow Video Loading
 
@@ -187,7 +190,7 @@ Use appropriate `waitForTimeout` values to ensure videos are loaded before snaps
 
 </TabItem>
 
-<TabItem value="test-video-pages" label="Test Video Pages">
+<TabItem value='test-video-pages' label='Test Video Pages'>
 
 ### Test Video Pages
 
@@ -195,7 +198,7 @@ Verify that video pages work correctly with SmartUI before running full test sui
 
 </TabItem>
 
-<TabItem value="combine-with-other-features" label="Combine with Other Features">
+<TabItem value='combine-with-other-features' label='Combine with Other Features'>
 
 ### Combine with Other Features
 
@@ -203,7 +206,7 @@ Use `ignoreDOM` to exclude video controls if needed.
 
 </TabItem>
 
-<TabItem value="document-video-content" label="Document Video Content">
+<TabItem value='document-video-content' label='Document Video Content'>
 
 ### Document Video Content
 
@@ -211,7 +214,7 @@ Note which pages contain videos for better test planning.
 
 </TabItem>
 
-<TabItem value="review-first-frames" label="Review First Frames">
+<TabItem value='review-first-frames' label='Review First Frames'>
 
 ### Review First Frames
 
@@ -222,8 +225,8 @@ Occasionally review captured first frames to ensure they represent the intended 
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="videos-not-captured-correctly" label="Videos Not Captured Correctly" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='videos-not-captured-correctly' label='Videos Not Captured Correctly' default>
 
 ### Issue: Videos Not Captured Correctly
 
@@ -242,7 +245,7 @@ await smartuiSnapshot(driver, 'Video Page');
 ```
 
 </TabItem>
-<TabItem value="false-positives-from-video-areas" label="False Positives from Video Areas" >
+<TabItem value='false-positives-from-video-areas' label='False Positives from Video Areas' >
 
 ### Issue: False Positives from Video Areas
 
@@ -254,7 +257,7 @@ await smartuiSnapshot(driver, 'Video Page');
 3. Consider using layout comparison mode for pages with many videos
 
 </TabItem>
-<TabItem value="embedded-videos-youtube-vimeo" label="Embedded Videos (YouTube, Vimeo)" >
+<TabItem value='embedded-videos-youtube-vimeo' label='Embedded Videos (YouTube, Vimeo)' >
 
 ### Issue: Embedded Videos (YouTube, Vimeo)
 

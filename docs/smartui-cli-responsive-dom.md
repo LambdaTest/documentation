@@ -17,11 +17,13 @@ keywords:
 
 url: https://www.lambdatest.com/support/docs/smartui-cli-responsive-dom/
 slug: smartui-cli-responsive-dom/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -29,7 +31,7 @@ If your application dynamically changes the DOM based on viewport size or specif
 
 Therefore, if your application adjusts DOM elements between different screen sizes, ensure that you resize the viewport of your test browser and capture a snapshot at each required width.
 
-## Prerequisites 
+## Prerequisites
 
 1. **SmartUI CLI Version:** Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
 2. **SDK Installation:** Install the **SDK** with the specified compatible version.
@@ -48,10 +50,9 @@ Specify `delayedUpload` to true in your configuration file.
 "delayedUpload" : true
 ```
 
-
 ### Step-2
 
-Resize your viewport according to your framework and take the screenshot. For example in **Selenium NodeJs**, you can do it as follows:  
+Resize your viewport according to your framework and take the screenshot. For example in **Selenium NodeJs**, you can do it as follows:
 
 ```js
 
@@ -71,7 +72,6 @@ Resize your viewport according to your framework and take the screenshot. For ex
         };
   await driver.manage().window().setSize(768, 1024);
   await smartuiSnapshot(driver, 'Screenshot Name', options);
-
 
   let mobileOptions=
         {
@@ -93,8 +93,7 @@ Resize your viewport according to your framework and take the screenshot. For ex
 
 >Note :: Any existing screenshots with same screenshot name,browser and resolution will get over-written.
 
-
-## Things to keep in mind: 
+## Things to keep in mind:
 
 1. **Viewport and Browser Configuration:** You can set the viewport size or specify browsers for individual snapshots either globally in the configuration file or at the snapshot level based on your needs.
 2. **Firefox Limitation:** Firefox can only capture snapshots at DOM widths of `450px` or larger due to resizing limitations.
@@ -124,32 +123,20 @@ Resize your viewport according to your framework and take the screenshot. For ex
     }}
 ></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> SmartUI Responsive DOM </span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'> SmartUI Responsive DOM </span>
     </li>
   </ul>
 </nav>

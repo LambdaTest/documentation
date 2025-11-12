@@ -15,7 +15,7 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-appium-hooks/  
+url: https://www.lambdatest.com/support/docs/smartui-appium-hooks/
 site_name: LambdaTest
 slug: smartui-appium-hooks
 ---
@@ -52,10 +52,10 @@ import NewTag from '../src/component/newTag';
 
 Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
-<div className="storylane-iframe">
+<div className='storylane-iframe'>
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
-  <div className="sl-embed">
-    <iframe loading="lazy" className="sl-demo" src="https://app.storylane.io/demo/pmuhutnb9ixb?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
+  <div className='sl-embed'>
+    <iframe loading="lazy" className='sl-demo' src="https://app.storylane.io/demo/pmuhutnb9ixb?embed=inline" name="sl-embed" allow="fullscreen" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -68,22 +68,22 @@ Using the LambdaTest platform, perform regression testing in just one click and 
 
 Below are code examples for taking viewport screenshots using SmartUI with Appium across different programming languages and frameworks:
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:LT_USERNAME="YOUR_USERNAME"
@@ -105,27 +105,27 @@ To create a SmartUI Project, follow these steps:
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
-<!-- <img loading="lazy" src={require('../assets/images/uploads/smart-ui-1.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
+<!-- <img loading="lazy" src={require('../assets/images/uploads/smart-ui-1.webp').default} alt="cmd" width="768" height="373" className='doc_img'/> -->
 
 ## Step 2: Upload your application
 
 Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="App File" label="App File" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='App File' label='App File' default>
 
- <div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+ <div className='lambdatest__codeblock'>
+<CodeBlock className='language-bash'>
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "appFile=@"/Users/macuser/Downloads/proverbial_android.apk"" -F "name="proverbial_app""
 `}
 </CodeBlock>
 </div>
 
 </TabItem>
-<TabItem value="App URL" label="App URL" default>
+<TabItem value='App URL' label='App URL' default>
 
-<div className="lambdatest__codeblock">
-<CodeBlock className="language-bash">
+<div className='lambdatest__codeblock'>
+<CodeBlock className='language-bash'>
 {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=:https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=Proverbial_App"
 `}
 </CodeBlock>
@@ -154,11 +154,11 @@ cd LT-appium-nodejs
 
 Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set LambdaTest `Username` and `Access Key` in environment variables with following commands.
 
-<Tabs className="docs__val">
+<Tabs className='docs__val'>
 
-<TabItem value="bash" label="Linux / MacOS" default>
-  <div className="lambdatest__codeblock">
-  <CodeBlock className="language-bash">
+<TabItem value='bash' label='Linux / MacOS' default>
+  <div className='lambdatest__codeblock'>
+  <CodeBlock className='language-bash'>
   {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \\
 export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </CodeBlock>
@@ -166,10 +166,10 @@ export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 </TabItem>
 
-<TabItem value="powershell" label="Windows" default>
+<TabItem value='powershell' label='Windows' default>
 
-  <div className="lambdatest__codeblock">
-  <CodeBlock className="language-powershell">
+  <div className='lambdatest__codeblock'>
+  <CodeBlock className='language-powershell'>
   {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()} \`
 set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 </CodeBlock>
@@ -224,7 +224,7 @@ let driver = await new webdriver.Builder()
 ```
 :::caution Important
 
-It is important that the `visual:true` is set your capabilities configuration for capturing the screenshots to SmartUI - Visual Regression tests and add into the build for comparison. If this capability is not added then the build status will be shown as `Error`. 
+It is important that the `visual:true` is set your capabilities configuration for capturing the screenshots to SmartUI - Visual Regression tests and add into the build for comparison. If this capability is not added then the build status will be shown as `Error`.
 
 :::
 
@@ -252,15 +252,15 @@ npm i && node your_test_script.js
 
 The all-new **Real Device mobile notification status bar and navigation bar crop** feature in SmartUI allows you to take your visual regression testing workflows to the next level. With Smart Crop, you can crop the status bar and navigation bar or footer from screenshots, enabling them to focus solely on the core UI elements during visual comparisons.
 
-By leveraging machine learning algorithms, it accurately detects and crops the status bar and navigation bar from screenshots. With precise image processing techniques, SmartUI precisely identifies the location of status bar elements. By excluding it from visual comparisons, the focus is solely on critical UI elements. 
+By leveraging machine learning algorithms, it accurately detects and crops the status bar and navigation bar from screenshots. With precise image processing techniques, SmartUI precisely identifies the location of status bar elements. By excluding it from visual comparisons, the focus is solely on critical UI elements.
 
 ### Original Screenshot:
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/screenshot.webp').default} alt="Profile" width="1360" height="603" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/screenshot.webp').default} alt="Profile" width="1360" height="603" className='doc_img'/>
 
 ### Cropped Screenshot
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt="Profile" width="1360" height="603" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/cropped_ss.jpg').default} alt="Profile" width="1360" height="603" className='doc_img'/>
 
 ## Region-Based Ignore/Select for Dynamic Content (Advanced)
 
@@ -306,8 +306,8 @@ await driver.execute("smartui.takeScreenshot", config);
 
 ### Cross-Framework Examples
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="nodejs" label="Node.js" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='nodejs' label='Node.js' default>
 
 ```javascript
 let config = {
@@ -321,7 +321,7 @@ await driver.execute("smartui.takeScreenshot", config);
 
 </TabItem>
 
-<TabItem value="python" label="Python">
+<TabItem value='python' label='Python'>
 
 ```python
 config = {
@@ -333,7 +333,7 @@ driver.execute_script("smartui.takeScreenshot", config)
 
 </TabItem>
 
-<TabItem value="java" label="Java">
+<TabItem value='java' label='Java'>
 
 ```java
 Map<String, Object> configIgnore = new HashMap<>();
@@ -350,7 +350,7 @@ configIgnore.put("ignoreBoxes", ignoreBoxes);
 ```
 </TabItem>
 
-<TabItem value="csharp" label="C#">
+<TabItem value='csharp' label='C#'>
 
 ```csharp
 var config = new Dictionary<string, object> {
@@ -362,7 +362,7 @@ driver.ExecuteScript("smartui.takeScreenshot", config);
 
 </TabItem>
 
-<TabItem value="ruby" label="Ruby">
+<TabItem value='ruby' label='Ruby'>
 
 ```ruby
 config = {
@@ -394,7 +394,7 @@ driver.execute_script("smartui.takeScreenshot", config)
 
 ---
 
-In this module we discussed about running smart visual tests on **NodeJS**, here we will know more about running those tests for any language or framework with appium. 
+In this module we discussed about running smart visual tests on **NodeJS**, here we will know more about running those tests for any language or framework with appium.
 
 In a similar way, we can run visual tests for other languages and frameworks using their corresponding script executing commands. To understand better, we provided the commands for some of the popular languages and frameworks:
 
@@ -402,37 +402,35 @@ In a similar way, we can run visual tests for other languages and frameworks usi
 
 This part of the code needs to be attached below the required segment of selenium script of which we would like to take the screenshot to test on.
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="nodejs" label="NodeJS" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='nodejs-1' label='NodeJS' default>
 
 ```javascript
 driver.execute("smartui.takeScreenshot=<Name of your screenshot>");
 ```
 
-</TabItem>
-
-<TabItem value="python" label="Python" default>
+</TabItem><TabItem value='python-1' label='Python' default>
 
 ```python
 driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 </TabItem>
-<TabItem value="ruby" label="Ruby" default>
+<TabItem value='ruby-1' label='Ruby' default>
 
 ```ruby
 driver.execute("smartui.takeScreenshot=<Your Screenshot Name>")
 ```
 
 </TabItem>
-<TabItem value="csharp" label="C#">
+<TabItem value="csharp-1" label='C#'>
 
 ```csharp
 driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
 </TabItem>
-<TabItem value="java" label="Java" default>
+<TabItem value='java-1' label='Java' default>
 
 ```java
 ((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
@@ -447,8 +445,8 @@ You can capture the full page screenshot for apps which have a scrolling functio
 
 Add the following **Webhook** to your test cases where we need to capture the screenshot of your application.
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="nodejs" label="NodeJS" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='nodejs-2' label='NodeJS' default>
 
 ```javascript
 let config = {
@@ -459,8 +457,7 @@ let config = {
 await driver.execute("smartui.takeScreenshot", config);
 ```
 </TabItem>
-
-<TabItem value="python" label="Python" default>
+<TabItem value="python-2" label='Python' default>
 
 ```python
 config = {
@@ -469,9 +466,7 @@ config = {
   'pageCount': 15 # Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
 }
 driver.execute("smartui.takeScreenshot", config)
-```
-</TabItem>
-<TabItem value="ruby" label="Ruby" default>
+<TabItem value='ruby-2' label='Ruby' default>
 
 ```ruby
 config = {
@@ -481,9 +476,9 @@ config = {
 }
 driver.execute("smartui.takeScreenshot", config)
 ```
-</TabItem>
 
-<TabItem value="csharp" label="C#" default>
+</TabItem>
+<TabItem value='csharp-2' label='C#' default>
 
 ```csharp
 var config = new Dictionary<string, string> {
@@ -495,7 +490,7 @@ driver.Execute("smartui.takeScreenshot", config);
 ```
 
 </TabItem>
-<TabItem value="java" label="Java" default>
+<TabItem value='java-2' label='Java' default>
 
 ```java
 Map<String, Object> config = new HashMap<>();
@@ -508,14 +503,14 @@ config.put("pageCount", 15); // Enter the number of pages for the Full Page scre
 </TabItem>
 </Tabs>
 
-:::note 
+:::note
 Please note that this webhook is only applicable to <b>native app screenshots</b> and has known limitations. You can use an optimized value of page count (between 1 and 20) to get the best results of your full page screenshots, according to your use case.
 :::
 
 ## Best Practices
 
-<Tabs className="docs__val" groupId="best-practices">
-<TabItem value="screenshot-naming" label="Screenshot Naming" default>
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='screenshot-naming' label='Screenshot Naming' default>
 
 ### Screenshot Naming
 
@@ -531,7 +526,7 @@ await driver.execute("smartui.takeScreenshot=CheckoutScreen-PaymentForm");
 ```
 
 </TabItem>
-<TabItem value="wait-for-screen-load" label="Wait for Screen Load">
+<TabItem value='wait-for-screen-load' label='Wait for Screen Load'>
 
 ### Wait for Screen Load
 
@@ -547,7 +542,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 ```
 
 </TabItem>
-<TabItem value="handle-dynamic-content" label="Handle Dynamic Content">
+<TabItem value='handle-dynamic-content' label='Handle Dynamic Content'>
 
 ### Handle Dynamic Content
 
@@ -556,7 +551,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Test XPath locators using Appium Inspector before integrating
 
 </TabItem>
-<TabItem value="smart-crop-configuration" label="Smart Crop Configuration">
+<TabItem value='smart-crop-configuration' label='Smart Crop Configuration'>
 
 ### Smart Crop Configuration
 
@@ -565,7 +560,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Test cropped screenshots to ensure important content isn't removed
 
 </TabItem>
-<TabItem value="test-organization" label="Test Organization">
+<TabItem value='test-organization' label='Test Organization'>
 
 ### Test Organization
 
@@ -574,7 +569,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 - Run tests on consistent device configurations
 
 </TabItem>
-<TabItem value="test-organization" label="Test Organization">
+<TabItem value='test-organization-1' label='Test Organization'>
 
 ### Test Organization
 
@@ -587,8 +582,8 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 
 ## Troubleshooting
 
-<Tabs className="docs__val" groupId="troubleshooting">
-<TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>
 
 ### Issue: Screenshots Not Captured
 
@@ -623,7 +618,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 4. Check network connectivity to LambdaTest
 
 </TabItem>
-<TabItem value="project-not-found-error" label="Project Not Found Error">
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
 
 ### Issue: "Project Not Found" Error
 
@@ -641,7 +636,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 4. Ensure project name is in capabilities, not just in dashboard
 
 </TabItem>
-<TabItem value="screenshots-show-blank-or-incorrect-content" label="Screenshots Show Blank or Incorrect Content">
+<TabItem value='screenshots-show-blank-or-incorrect-content' label='Screenshots Show Blank or Incorrect Content'>
 
 ### Issue: Screenshots Show Blank or Incorrect Content
 
@@ -669,7 +664,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 4. Verify app is in correct state before screenshot
 
 </TabItem>
-<TabItem value="full-page-screenshot-issues" label="Full Page Screenshot Issues">
+<TabItem value='full-page-screenshot-issues' label='Full Page Screenshot Issues'>
 
 ### Issue: Full Page Screenshot Issues
 
@@ -695,7 +690,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 3. Test with different `pageCount` values to find optimal setting
 
 </TabItem>
-<TabItem value="ignoreboxes-selectboxes-not-working" label="ignoreBoxes/selectBoxes Not Working">
+<TabItem value='ignoreboxes-selectboxes-not-working' label='ignoreBoxes/selectBoxes Not Working'>
 
 ### Issue: ignoreBoxes/selectBoxes Not Working
 
@@ -742,21 +737,20 @@ If you encounter issues not covered here:
 
 For additional information about appium framework please explore the documentation [here](https://www.lambdatest.com/support/docs/appium-nodejs/)
 
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> SmartUI Appium Hooks </span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'> SmartUI Appium Hooks </span>
     </li>
   </ul>
 </nav>

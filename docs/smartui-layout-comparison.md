@@ -15,14 +15,19 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-layout-comparison/
 site_name: LambdaTest
 slug: smartui-layout-testing/
----
 
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 Layout testing is a specialized approach to visual testing that focuses on verifying the structural integrity and arrangement of UI elements rather than their specific content or styling. It ensures that your application's visual hierarchy and element positioning remain consistent across different environments and updates.
 
 The example below demonstrates localisation testing, one of the major use cases of layout testing, where a webpage is tested across languages and locales.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/layout/localisation-netflix.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/layout/localisation-netflix.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ### Why Layout Testing Matters
 
@@ -48,18 +53,17 @@ When using layout comparison, the following aspects are ignored:
 
 ## Visual Diffs vs. Layout Diffs
 
-
 Understanding the difference between content and layout is crucial for effective visual testing:
 
-- **Visual Diffs** refer to the actual information that users interact with on a webpage, such as text, images, videos, and other elements that convey your message. 
+- **Visual Diffs** refer to the actual information that users interact with on a webpage, such as text, images, videos, and other elements that convey your message.
 In the example below, you can see the visual differences between the baseline and comparison screenshot using  Smart Ignore Diff Option.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/layout/smartignore-amazon.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/layout/smartignore-amazon.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
-- **Layout** pertains to the arrangement and presentation of this content, including the positioning, styling, and structuring of elements. The goal of layout design is to ensure that content is visually appealing and well-organized. 
+- **Layout** pertains to the arrangement and presentation of this content, including the positioning, styling, and structuring of elements. The goal of layout design is to ensure that content is visually appealing and well-organized.
 In the example below, you can see the layout differences between the baseline and comparison screenshot using  Layout Diff Option.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/layout/layout-amazon.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/layout/layout-amazon.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 SmartUI's layout comparison feature allows you to focus specifically on layout differences while ignoring content changes, giving you more precise control over your visual testing process.
 
@@ -77,11 +81,8 @@ Before using the Layout Comparison feature, ensure you meet the following requir
 
 To use the layout comparison feature, you need to set the `ignoreType` option to `"layout"` when taking a screenshot:
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 <Tabs>
-  <TabItem value="javascript" label="JavaScript" default>
+  <TabItem value='javascript' label='JavaScript' default>
     ```javascript
     // Set options to focus only on layout structure
     let options = {
@@ -92,7 +93,7 @@ import TabItem from '@theme/TabItem';
     await smartuiSnapshot(driver, "ScreenshotName", options);
     ```
   </TabItem>
-  <TabItem value="java" label="Java">
+  <TabItem value='java' label='Java'>
     ```java
     // Set options to focus only on layout structure
     Map<String, Object> options = new HashMap<>();
@@ -102,7 +103,7 @@ import TabItem from '@theme/TabItem';
     smartuiSnapshot(driver, "ScreenshotName", options);
     ```
   </TabItem>
-  <TabItem value="python" label="Python">
+  <TabItem value='python' label='Python'>
     ```python
     # Set options to focus only on layout structure
     options = {
@@ -113,7 +114,7 @@ import TabItem from '@theme/TabItem';
     smartui_snapshot(driver, "ScreenshotName", options)
     ```
   </TabItem>
-  <TabItem value="csharp" label="C#">
+  <TabItem value='csharp' label='C#'>
     ```csharp
     // Set options to focus only on layout structure
     var options = new Dictionary<string, object>
@@ -125,7 +126,7 @@ import TabItem from '@theme/TabItem';
     await SmartUI.Snapshot(driver, "ScreenshotName", options);
     ```
   </TabItem>
-  <TabItem value="ruby" label="Ruby">
+  <TabItem value='ruby' label='Ruby'>
     ```ruby
     # Set options to focus only on layout structure
     options = {
@@ -146,7 +147,6 @@ The Layout Comparison feature has the following limitations:
 - Not supported with Slack, Email, and GitHub integrations
 - Performance may vary based on the complexity of the page structure
 
-
 ## Use Cases for Layout Comparison
 
 The layout comparison feature is particularly valuable in the following scenarios:
@@ -163,7 +163,6 @@ The layout comparison feature is particularly valuable in the following scenario
 
 6. **Cross-Environment Testing**: Ensure that your page structure remains intact across different operating systems, browsers, devices, viewport sizes, and orientations.
 
-
 ## Example Implementation
 
 Here's a complete example showing how to implement layout comparison in a test:
@@ -173,15 +172,15 @@ describe('Layout Structure Test', () => {
   it('should verify layout structure while ignoring content and style changes', async () => {
     // Navigate to the page
     await driver.get('https://example.com');
-    
+
     // Wait for layout to stabilize (important for dynamic content)
     await driver.wait(until.elementLocated(By.cssSelector('.main-content')), 5000);
-    
+
     // Configure options to focus only on layout structure
     let options = {
       ignoreType: ["layout"]
     };
-    
+
     // Take screenshot with layout comparison
     await smartuiSnapshot(driver, "HomePageLayout", options);
   });
@@ -192,4 +191,4 @@ describe('Layout Structure Test', () => {
 
 - [SmartUI SDK Documentation](/docs/smartui-sdk-config-options)
 - [Visual Regression Testing Guide](/docs/smart-visual-testing)
-- [Comparison Settings Documentation](/docs/test-settings-options) 
+- [Comparison Settings Documentation](/docs/test-settings-options)
