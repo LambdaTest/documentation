@@ -12,10 +12,12 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-pdf-java-sdk/
 site_name: LambdaTest
 slug: smartui-pdf-java-sdk/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
@@ -99,30 +101,30 @@ mvn clean compile
 
 ## Step 3: Set up your credentials
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
-export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
-set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
-$env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-$env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+$env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+$env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
@@ -133,23 +135,20 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 
 You can upload PDFs in two modes:
 
-<Tabs className="docs__val">
+<Tabs className='docs__val'>
 
-<TabItem value="local" label="Local Mode" default>
+<TabItem value='local' label='Local Mode' default>
 
 Upload pre-existing PDFs from your local machine:
 
-> 📁 **Sample File**: [`SmartuiPdfLocalTest.java`](https://github.com/LambdaTest/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfLocalTest.java)
+"> 📁 **Sample File**: [`SmartuiPdfLocalTest.java`](https://github.com/LambdaTest/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfLocalTest.java)
 
 ```java
-import io.github.lambdatest.SmartUIConfig;
-import io.github.lambdatest.SmartUIPdf;
-import io.github.lambdatest.models.FormattedResults;
 
 public class SmartuiPdfLocalTest {
     public void uploadLocalPdf() throws Exception {
-        String projectToken = System.getenv("PROJECT_TOKEN");
-        
+        String projectToken = System.getenv(PROJECT_TOKEN");
+
         SmartUIConfig config = new SmartUIConfig()
             .withProjectToken(projectToken)
             .withFetchResult(true);
@@ -167,28 +166,22 @@ public class SmartuiPdfLocalTest {
 
 </TabItem>
 
-<TabItem value="cloud" label="Cloud Mode">
+<TabItem value='cloud' label='Cloud Mode'>
 
 Upload PDFs downloaded during LambdaTest cloud test execution:
 
-> 📁 **Sample File**: [`SmartuiPdfCloudTest.java`](https://github.com/LambdaTest/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfCloudTest.java)
+"> 📁 **Sample File**: [`SmartuiPdfCloudTest.java`](https://github.com/LambdaTest/junit-selenium-sample/blob/master/src/test/java/com/smartuiPdf/SmartuiPdfCloudTest.java)
 
 ```java
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.util.Base64;
 
 public class SmartuiPdfCloudTest {
     public void uploadCloudPdf(WebDriver driver) throws Exception {
-        String projectToken = System.getenv("PROJECT_TOKEN");
-        
+        String projectToken = System.getenv(PROJECT_TOKEN");
+
         // Download PDF from cloud session
         String base64Content = (String) ((JavascriptExecutor) driver)
             .executeAsyncScript("lambda-file-content=LambdaTest.pdf");
-        
+
         // Convert base64 to PDF file
         byte[] pdfBytes = Base64.getDecoder().decode(base64Content);
         File pdfFile = new File("downloaded.pdf");
@@ -235,7 +228,7 @@ mvn test
 public class SmartuiPdfBatchTest {
     public void uploadMultiplePdfs() throws Exception {
         String projectToken = System.getenv("PROJECT_TOKEN");
-        
+
         SmartUIConfig config = new SmartUIConfig()
             .withProjectToken(projectToken)
             .withFetchResult(true)
@@ -264,16 +257,16 @@ public class SmartuiPdfErrorHandling {
     public void uploadWithErrorHandling() {
         try {
             String projectToken = System.getenv("PROJECT_TOKEN");
-            
+
             SmartUIConfig config = new SmartUIConfig()
                 .withProjectToken(projectToken)
                 .withFetchResult(true);
 
             SmartUIPdf pdfUploader = new SmartUIPdf(config);
             FormattedResults result = pdfUploader.uploadPDF("document.pdf");
-            
+
             System.out.println("Upload successful: " + result);
-            
+
         } catch (Exception e) {
             System.err.println("Upload failed: " + e.getMessage());
             e.printStackTrace();
@@ -291,7 +284,10 @@ public class SmartuiPdfErrorHandling {
 
 ## Best Practices
 
-### 1. PDF File Management
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='pdf-file-management' label='PDF File Management' default>
+
+### PDF File Management
 
 - Use consistent naming conventions for PDF files
 - Organize PDFs in logical directory structures
@@ -301,19 +297,25 @@ public class SmartuiPdfErrorHandling {
 **Example:**
 ```java
 String[] pdfPaths = {
-    "documents/reports/report-v1.0.pdf",
+    documents/reports/report-v1.0.pdf",
     "documents/specs/spec-v2.1.pdf"
 };
 ```
 
-### 2. Project Token Management
+</TabItem>
+<TabItem value='project-token-management' label='Project Token Management'>
+
+### Project Token Management
 
 - Store project token as environment variable
 - Never commit tokens to version control
 - Use different tokens for different environments
 - Rotate tokens regularly
 
-### 3. Build Naming
+</TabItem>
+<TabItem value='build-naming' label='Build Naming'>
+
+### Build Naming
 
 - Use meaningful build names that include version info
 - Include date or version in build names
@@ -321,28 +323,48 @@ String[] pdfPaths = {
 
 **Example:**
 ```java
-config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
+config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 ```
 
-### 4. Error Handling
+</TabItem>
+<TabItem value='error-handling' label='Error Handling'>
+
+### Error Handling
 
 - Always wrap upload calls in try-catch blocks
 - Log errors for debugging
 - Handle network failures gracefully
 - Implement retry logic for transient failures
 
-### 5. Batch Processing
+</TabItem>
+<TabItem value='batch-processing' label='Batch Processing'>
+
+### Batch Processing
 
 - Process PDFs in batches for efficiency
 - Monitor upload progress
 - Handle partial failures in batch operations
 - Use appropriate batch sizes
 
+</TabItem>
+<TabItem value='batch-processing-1' label='Batch Processing'>
+
+### Batch Processing
+
+- Process PDFs in batches for efficiency
+- Monitor upload progress
+- Handle partial failures in batch operations
+- Use appropriate batch sizes
+
+</TabItem>
+</Tabs>
+
 ## Troubleshooting
 
-### Common Issues
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>
 
-#### Issue: PDF Upload Fails
+### Issue: PDF Upload Fails
 
 **Symptoms**: PDF upload returns error or fails silently
 
@@ -361,7 +383,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 
 2. Check file path is correct:
    ```java
-   File pdfFile = new File("path/to/document.pdf");
+   File pdfFile = new File(path/to/document.pdf");
    if (!pdfFile.exists()) {
        throw new FileNotFoundException("PDF file not found");
    }
@@ -376,7 +398,10 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
    echo $PROJECT_TOKEN
    ```
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
+
+### Issue: Project Not Found" Error
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -391,7 +416,10 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 3. Ensure token includes the project ID prefix (e.g., `123456#...`)
 4. Check for extra spaces or quotes in token
 
-#### Issue: Upload Returns Null or Empty Result
+</TabItem>
+<TabItem value='upload-returns-null-or-empty-result' label='Upload Returns Null or Empty Result'>
+
+### Issue: Upload Returns Null or Empty Result
 
 **Symptoms**: Upload completes but result is null or empty
 
@@ -418,7 +446,10 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 
 4. Retry upload if transient error
 
-#### Issue: Maven Dependencies Not Resolving
+</TabItem>
+<TabItem value='maven-dependencies-not-resolving' label='Maven Dependencies Not Resolving'>
+
+### Issue: Maven Dependencies Not Resolving
 
 **Symptoms**: Maven cannot find `lambdatest-java-sdk` or dependencies fail
 
@@ -436,7 +467,10 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 3. Verify internet connectivity for Maven repository access
 4. Check pom.xml for version conflicts
 
-#### Issue: Batch Upload Partially Fails
+</TabItem>
+<TabItem value='batch-upload-partially-fails' label='Batch Upload Partially Fails'>
+
+### Issue: Batch Upload Partially Fails
 
 **Symptoms**: Some PDFs upload successfully, others fail
 
@@ -452,7 +486,7 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
    for (String pdfPath : pdfPaths) {
        try {
            FormattedResults result = pdfUploader.uploadPDF(pdfPath);
-           System.out.println("Uploaded: " + pdfPath);
+           System.out.println(Uploaded: " + pdfPath);
        } catch (Exception e) {
            System.err.println("Failed: " + pdfPath + " - " + e.getMessage());
        }
@@ -463,7 +497,10 @@ config.withBuildName("PDF-Comparison-v1.0-" + LocalDate.now());
 3. Check file sizes and formats
 4. Implement retry logic for failed uploads
 
-#### Issue: PDFs Not Appearing in Dashboard
+</TabItem>
+<TabItem value='pdfs-not-appearing-in-dashboard' label='PDFs Not Appearing in Dashboard'>
+
+### Issue: PDFs Not Appearing in Dashboard
 
 **Symptoms**: Uploads complete but PDFs don't appear in SmartUI dashboard
 
@@ -489,6 +526,9 @@ If you encounter issues not covered here:
 - See [PDF API Upload](/support/docs/smartui-pdf-api-upload) for alternative upload methods
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

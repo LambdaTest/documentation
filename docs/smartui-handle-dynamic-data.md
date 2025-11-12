@@ -14,11 +14,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-handle-dynamic-data/
 site_name: LambdaTest
 slug: smartui-handle-dynamic-data/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -70,6 +72,11 @@ You should use dynamic data handling in the following scenarios:
 7. **Cookie Banners**: Consent banners that appear differently each time
 8. **Notifications**: Unread message counts or notification badges
 
+## Dynamic Data Handling Methods
+
+<Tabs className='docs__val' groupId='dynamic-data-methods'>
+<TabItem value='ignore' label='Ignore DOM Elements' default>
+
 ## Ignore DOM Elements
 
 Use `ignoreDOM` to exclude specific elements from visual comparison. This is useful when you want to compare the entire page but ignore certain dynamic elements.
@@ -90,8 +97,8 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 
 ### Examples by Selector Type
 
-<Tabs className="docs__val" groupId="selector">
-<TabItem value="id" label="By ID" default>
+<Tabs className='docs__val' groupId='selector'>
+<TabItem value='id' label='By ID' default>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -111,9 +118,6 @@ await smartuiSnapshot(driver, 'Home Page', options);
 
 **Java (Selenium)**
 ```java
-import io.github.lambdatest.SmartUISnapshot;
-import java.util.HashMap;
-import java.util.ArrayList;
 
 HashMap<String, ArrayList<String>> ignoreDOM = new HashMap<>();
 ArrayList<String> ids = new ArrayList<>();
@@ -141,7 +145,7 @@ smartui_snapshot(driver, "Home Page", options)
 ```
 
 </TabItem>
-<TabItem value="class" label="By Class">
+<TabItem value='class' label='By Class'>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -172,7 +176,7 @@ options = {
 ```
 
 </TabItem>
-<TabItem value="css" label="By CSS Selector">
+<TabItem value='css' label='By CSS Selector'>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -213,7 +217,7 @@ options = {
 ```
 
 </TabItem>
-<TabItem value="xpath" label="By XPath">
+<TabItem value='xpath' label='By XPath'>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -254,6 +258,10 @@ options = {
 </TabItem>
 </Tabs>
 
+</TabItem>
+
+<TabItem value='select' label='Select DOM Elements'>
+
 ## Select DOM Elements
 
 Use `selectDOM` to include only specific elements in visual comparison. This is useful when you want to compare only certain parts of the page, ignoring everything else.
@@ -274,8 +282,8 @@ smartuiSnapshot(driver, 'Screenshot Name', options);
 
 ### Examples by Selector Type
 
-<Tabs className="docs__val" groupId="selector">
-<TabItem value="select-id" label="By ID" default>
+<Tabs className='docs__val' groupId='selector'>
+<TabItem value='select-id' label='By ID' default>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -310,7 +318,7 @@ options = {
 ```
 
 </TabItem>
-<TabItem value="select-class" label="By Class">
+<TabItem value='select-class' label='By Class'>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -341,7 +349,7 @@ options = {
 ```
 
 </TabItem>
-<TabItem value="select-css" label="By CSS Selector">
+<TabItem value='select-css' label='By CSS Selector'>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -380,7 +388,7 @@ options = {
 ```
 
 </TabItem>
-<TabItem value="select-xpath" label="By XPath">
+<TabItem value='select-xpath' label='By XPath'>
 
 **JavaScript (Selenium)**
 ```javascript
@@ -421,6 +429,10 @@ options = {
 </TabItem>
 </Tabs>
 
+</TabItem>
+
+<TabItem value='combining' label='Combining Methods'>
+
 ## Combining ignoreDOM and selectDOM
 
 You can combine both `ignoreDOM` and `selectDOM` in the same options object. When both are specified, `selectDOM` is applied first to include elements, then `ignoreDOM` is applied to exclude specific elements from the selected set.
@@ -437,9 +449,9 @@ let options = {
 await smartuiSnapshot(driver, 'Home Page', options);
 ```
 
-## Use Cases
+### Use Cases
 
-### Use Case 1: E-commerce Product Page
+#### Use Case 1: E-commerce Product Page
 
 **Scenario**: Product pages display prices, stock counts, and user reviews that change frequently.
 
@@ -459,7 +471,7 @@ let options = {
 await smartuiSnapshot(driver, 'Product Page', options);
 ```
 
-### Use Case 2: Dashboard with Real-time Data
+#### Use Case 2: Dashboard with Real-time Data
 
 **Scenario**: Dashboard displays live metrics, timestamps, and user-specific data.
 
@@ -481,7 +493,7 @@ let options = {
 await smartuiSnapshot(driver, 'Dashboard', options);
 ```
 
-### Use Case 3: News Article Page
+#### Use Case 3: News Article Page
 
 **Scenario**: Article pages have timestamps, author info, and related articles that change.
 
@@ -497,6 +509,10 @@ let options = {
 await smartuiSnapshot(driver, 'Article Page', options);
 ```
 
+</TabItem>
+
+<TabItem value='best-practices' label='Best Practices'>
+
 ## Best Practices
 
 1. **Use Specific Selectors**: Prefer IDs or data attributes over generic class names for more precise targeting.
@@ -511,7 +527,14 @@ await smartuiSnapshot(driver, 'Article Page', options);
 
 6. **Use Data Attributes**: Add `data-testid` attributes to elements you need to target for better test stability.
 
+</TabItem>
+
+<TabItem value='troubleshooting' label='Troubleshooting'>
+
 ## Troubleshooting
+
+<Tabs className='docs__val' groupId='troubleshooting-inner'>
+<TabItem value='elements-not-being-ignored' label='Elements Not Being Ignored' default>
 
 ### Issue: Elements Not Being Ignored
 
@@ -536,6 +559,9 @@ let options = {
 await smartuiSnapshot(driver, 'Page', options);
 ```
 
+</TabItem>
+<TabItem value='selectdom-not-working' label='selectDOM Not Working' >
+
 ### Issue: selectDOM Not Working
 
 **Possible Causes:**
@@ -548,6 +574,9 @@ await smartuiSnapshot(driver, 'Page', options);
 2. Use more specific selectors
 3. Ensure elements are in the viewport
 
+</TabItem>
+<TabItem value='false-positives-still-occurring' label='False Positives Still Occurring' >
+
 ### Issue: False Positives Still Occurring
 
 **Possible Causes:**
@@ -559,6 +588,12 @@ await smartuiSnapshot(driver, 'Page', options);
 1. Review the diff to identify missed dynamic elements
 2. Add more selectors to ignoreDOM
 3. Increase wait times or use explicit waits
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

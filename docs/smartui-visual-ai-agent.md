@@ -13,7 +13,14 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-visual-ai-agent
 site_name: LambdaTest
 slug: smartui-visual-ai/
+
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -57,16 +64,15 @@ Traditional pixel-to-pixel comparison can be noisy and time-consuming. SmartUI V
 
 ## How to Use SmartUI Visual Agent
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/smartui-comparison-page.png').default} alt="SmartUI Comparison Page" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/smartui-comparison-page.png').default} alt="SmartUI Comparison Page" className='doc_img'/>
 
 ### Step 1: Activate Visual AI Mode
 
 Navigate to any SmartUI comparison build. In the toolbar above the screenshots, locate and click the **Visual AI** toggle. This activates the "Human Intelligence AI Agent."
 
 <p align="center">
-    <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/visual-ai-toggle.png').default} alt="Visual AI Toggle Button" className="doc_img"/>
+    <img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/visual-ai-toggle.png').default} alt="Visual AI Toggle Button" className='doc_img'/>
 </p>
-
 
 ---
 
@@ -86,7 +92,7 @@ Once Visual AI is active, the system automatically draws boxes around what it ha
 
 When you click on a diff box, a panel appears with a concise, human-readable explanation of the change. This summary describes the full scope of the difference, allowing for quick recognition and understanding. For example, it might summarize a complex visual change as "Content Grid Replaced with Placeholders."
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/ai-summary-popup.png').default} alt="AI-Generated Summary Pop-up" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/RCA/ai-summary-popup.png').default} alt="AI-Generated Summary Pop-up" className='doc_img'/>
 
 ---
 
@@ -115,6 +121,4 @@ All members can give feedback on AI-generated differences and summaries. Followi
 *   Visual AI Agent is currently available for comparisons with vertical lengths under **5000px**.
 *   If the Visual AI agent is active and you open the **RCA panel**, the panel will still display all differences from the standard Smart RCA comparison.
 > **Visual AI Agent can make mistakes. Please visually verify the results.**
-
-
 

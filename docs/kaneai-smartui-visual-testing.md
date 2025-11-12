@@ -13,10 +13,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/kaneai-smartui-visual-testing
 site_name: LambdaTest
 slug: kaneai-smartui-visual-testing/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

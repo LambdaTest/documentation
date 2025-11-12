@@ -17,11 +17,13 @@ keywords:
 
 url: https://www.lambdatest.com/support/docs/smartui-cli-upload/
 slug: smartui-cli-upload/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -69,32 +71,42 @@ The first step is to create a project with the application in which we will comb
 
 ## Step 1: Install the Dependencies
 
-Install required NPM modules for `LambdaTest SmartUI CLI` in your **Frontend** project.
+Install required NPM modules for `LambdaTest SmartUI CLI` globally or in your project:
 
+**Global Installation (Recommended):**
+```bash
+npm install -g @lambdatest/smartui-cli
+```
+
+**Local Installation:**
 ```bash
 npm install @lambdatest/smartui-cli
 ```
 
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
+
 ## Step 2: Configure your Project Token
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -103,15 +115,14 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </TabItem>
 </Tabs>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ## Step 3: Upload the required directory of images
 
 ```
-npx smartui upload <directoryName> 
+npx smartui upload <directoryName>
 ```
 The screenshots in the directory name will be uploaded to SmartUI.
-
 
 ### For ignoring the resolutions of the images
 
@@ -131,16 +142,19 @@ Please read the following table for more information about the options available
 | -F | --files `extensions`            | Comma-separated list of allowed file extensions| `npx smartui upload <directoryName> -F jpg,png`|
 | -E | --removeExtensions          | Strips file extensions from snapshot names| `npx smartui upload <directoryName>  -E` |
 | -i | --ignoreDir `patterns`        | Comma-separated list of directories to ignore | `npx smartui upload <directoryName> -i dir1/dir2,dir3` |
-|    | --fetch-results | Live fetched comparison results in a json file | `npx smartui upload <directoryName> --fetch-results`|
+|    | --fetch-results [filename] | Live fetched comparison results in a json file | `npx smartui upload <directoryName> --fetch-results [custom-results.json]`|
+|    | --buildName &lt;string&gt; | Specify a custom build name | `npx smartui upload <directoryName> --buildName "Build Name"`|
+|    | --userName &lt;string&gt; | Override LambdaTest username | `npx smartui upload <directoryName> --userName "user"`|
+|    | --accessKey &lt;string&gt; | Override LambdaTest access key | `npx smartui upload <directoryName> --accessKey "key"`|
+|    | --config &lt;filepath&gt; | Configuration file path | `npx smartui upload <directoryName> --config .smartui.json`|
 
-:::note 
+:::note
 You may use the `smartui upload --help` command in case you are facing issues during the execution of SmartUI Upload options in the CLI.
 :::
 
 ## Setup with Continuous Integration (CI)
 
 If you are using the Continuous Integration (CI) pipeline for your application and want to integrate `SmartUI CLI` execution then the following are the steps needs to be added to your `.yaml` file:
-
 
 ```yaml
 steps:
@@ -164,7 +178,6 @@ The following are supported `CLI (Command Line Interface)` options for Visual Re
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-
 ## Fetch results
 
 You can fetch build results by adding the `--fetch-results` flag to your test execution command. Here are different ways to use this feature:
@@ -180,7 +193,7 @@ npx smartui upload <directoryName> --fetch-results
 Specify a custom filename for your results:
 
 ```bash
-npx smartui upload <directoryName> --fetch-results custom-results.json 
+npx smartui upload <directoryName> --fetch-results custom-results.json
 ```
 ## Adding a custom build name
 You can add a custom build name by adding the `--buildName` flag to your test execution command. Here is how you can utilise this feature:
@@ -191,30 +204,37 @@ Specify a custom build name to group your screenshots in the following way:
 npx smartui upload <directoryName>  --buildName "Sample Build Name"
 ```
 
-> Note: 
+> Note:
 > - If no build name is provided, a random name will be automatically assigned to the build.
 > - Specifying the name of an existing build within the project will append the screenshots to that build.
 > - Existing screenshots with the same name and configuration in the build will be overwritten during a re-run.
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
-For additional information about SmartUI APIs please explore the documentation [here](https://www.lambdatest.com/support/api-doc/)
+## Additional Resources
 
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [CLI Documentation](/support/docs/smartui-cli)
+- [CLI Exec Commands](/support/docs/smartui-cli-exec)
+- [Environment Variables](/support/docs/smartui-cli-env-variables)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> SmartUI Upload Screenshots </span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'> SmartUI Upload Screenshots </span>
     </li>
   </ul>
 </nav>

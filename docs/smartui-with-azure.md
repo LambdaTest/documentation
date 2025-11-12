@@ -14,7 +14,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-with-azure/
 site_name: LambdaTest
 slug: smartui-with-azure/
+
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -49,9 +55,8 @@ To integrate Azure Pipeline with SmartUI, follow the below steps. You can use yo
 :::tip Sample repo
 Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
 
-<a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations" target="_blank" className='github__anchor'><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className='doc_img'/> View on GitHub</a>
 :::
-
 
 ### Step 1: Set Up Your Repository
 Ensure your project is hosted in Azure Repos, GitHub, or any supported repository.
@@ -107,7 +112,10 @@ jobs:
 
 ## Best Practices
 
-### 1. Secret Management
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='secret-management' label='Secret Management' default>
+
+### Secret Management
 
 - Never commit credentials to repository
 - Use Azure Pipeline Variables for all sensitive data
@@ -115,7 +123,10 @@ jobs:
 - Rotate secrets regularly
 - Use different secrets for different environments
 
-### 2. Pipeline Optimization
+</TabItem>
+<TabItem value='pipeline-optimization' label='Pipeline Optimization'>
+
+### Pipeline Optimization
 
 - Use parallel jobs for faster execution
 - Cache dependencies to speed up pipelines
@@ -131,7 +142,10 @@ trigger:
       - develop
 ```
 
-### 3. Build Naming
+</TabItem>
+<TabItem value='build-naming' label='Build Naming'>
+
+### Build Naming
 
 - Use meaningful build names that include branch/commit info
 - Include commit SHA for traceability
@@ -140,28 +154,48 @@ trigger:
 **Example:**
 ```yaml
 variables:
-  BUILD_NAME: "$(Build.SourceBranchName)-$(Build.SourceVersion)"
+  BUILD_NAME: $(Build.SourceBranchName)-$(Build.SourceVersion)"
 ```
 
-### 4. Error Handling
+</TabItem>
+<TabItem value='error-handling' label='Error Handling'>
+
+### Error Handling
 
 - Set up proper error handling in pipelines
 - Use pipeline status checks
 - Configure notifications for failures
 - Add retry logic for flaky tests
 
-### 5. Resource Management
+</TabItem>
+<TabItem value='resource-management' label='Resource Management'>
+
+### Resource Management
 
 - Limit concurrent pipeline runs
 - Clean up old builds regularly
 - Monitor pipeline execution time
 - Optimize test execution order
 
+</TabItem>
+<TabItem value='resource-management-1' label='Resource Management'>
+
+### Resource Management
+
+- Limit concurrent pipeline runs
+- Clean up old builds regularly
+- Monitor pipeline execution time
+- Optimize test execution order
+
+</TabItem>
+</Tabs>
+
 ## Troubleshooting
 
-### Common Issues
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='pipeline-fails-with-variable-not-found' label='Pipeline Fails with Variable Not Found' default>
 
-#### Issue: Pipeline Fails with "Variable Not Found"
+### Issue: Pipeline Fails with "Variable Not Found"
 
 **Symptoms**: Pipeline fails with error about missing variables
 
@@ -182,7 +216,10 @@ variables:
 
 4. Verify variables are marked as secret if needed
 
-#### Issue: PROJECT_TOKEN Not Available
+</TabItem>
+<TabItem value='project_token-not-available' label='PROJECT_TOKEN Not Available'>
+
+### Issue: PROJECT_TOKEN Not Available
 
 **Symptoms**: Pipeline prompts for PROJECT_TOKEN or token not found
 
@@ -204,7 +241,10 @@ variables:
 
 4. Verify variable scope includes your pipeline
 
-#### Issue: Tests Run But No Results in Dashboard
+</TabItem>
+<TabItem value='tests-run-but-no-results-in-dashboard' label='Tests Run But No Results in Dashboard'>
+
+### Issue: Tests Run But No Results in Dashboard
 
 **Symptoms**: Pipeline completes but screenshots don't appear in SmartUI
 
@@ -233,7 +273,10 @@ variables:
 
 4. Check if SmartUI CLI step completed successfully
 
-#### Issue: Pipeline Times Out
+</TabItem>
+<TabItem value='pipeline-times-out' label='Pipeline Times Out'>
+
+### Issue: Pipeline Times Out
 
 **Symptoms**: Pipeline execution exceeds time limit
 
@@ -262,7 +305,10 @@ variables:
 3. Optimize test execution
 4. Split tests across multiple pipeline stages
 
-#### Issue: Dependencies Installation Fails
+</TabItem>
+<TabItem value='dependencies-installation-fails' label='Dependencies Installation Fails'>
+
+### Issue: Dependencies Installation Fails
 
 **Symptoms**: npm install or dependency installation fails
 
@@ -291,9 +337,12 @@ variables:
 
 4. Check for version conflicts in package.json
 
-#### Issue: SmartUI CLI Not Found
+</TabItem>
+<TabItem value='smartui-cli-not-found' label='SmartUI CLI Not Found'>
 
-**Symptoms**: `npx smartui` command fails with "command not found"
+### Issue: SmartUI CLI Not Found
+
+**Symptoms**: `npx smartui` command fails with command not found"
 
 **Possible Causes**:
 - Node.js not installed
@@ -327,6 +376,9 @@ If you encounter issues not covered here:
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

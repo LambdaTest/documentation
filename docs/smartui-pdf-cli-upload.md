@@ -12,10 +12,12 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-pdf-cli-upload/
 site_name: LambdaTest
 slug: smartui-pdf-cli-upload/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
@@ -78,37 +80,37 @@ npm install -g @lambdatest/smartui-cli
 
 ## Step 2: Setup your credentials
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
-export LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-export LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
-set LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
-$env:LT_USERNAME="${ YOUR_LAMBDATEST_USERNAME()}"
-$env:LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"
+$env:LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+$env:LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 </Tabs>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ## Step 3: Upload PDFs Using CLI
 
@@ -182,21 +184,32 @@ Example for GitHub Actions:
 
 ## Best Practices
 
-### 1. PDF File Management
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='file-management' label='PDF File Management' default>
+
+### PDF File Management
 
 - Use consistent naming conventions for PDF files
 - Organize PDFs in logical directory structures
 - Verify PDF files are valid and not corrupted before upload
 - Keep PDF files in version control when appropriate
 
-### 2. Project Token Management
+</TabItem>
+
+<TabItem value='token-management' label='Project Token Management'>
+
+### Project Token Management
 
 - Store project token as environment variable
 - Never commit tokens to version control
 - Use different tokens for different environments
 - Rotate tokens regularly
 
-### 3. Build Naming
+</TabItem>
+
+<TabItem value='build-naming' label='Build Naming'>
+
+### Build Naming
 
 - Use meaningful build names that include version info
 - Include date or version in build names
@@ -204,28 +217,40 @@ Example for GitHub Actions:
 
 **Example:**
 ```bash
-smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
+smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 ```
 
-### 4. Error Handling
+</TabItem>
+
+<TabItem value='error-handling' label='Error Handling'>
+
+### Error Handling
 
 - Always check CLI exit codes
 - Handle network failures gracefully
 - Implement retry logic for transient failures
 - Log errors for debugging
 
-### 5. Batch Processing
+</TabItem>
+
+<TabItem value='batch-processing' label='Batch Processing'>
+
+### Batch Processing
 
 - Process PDFs in batches for efficiency
 - Monitor upload progress
 - Handle partial failures in batch operations
 - Use appropriate batch sizes
 
+</TabItem>
+</Tabs>
+
 ## Troubleshooting
 
-### Common Issues
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>
 
-#### Issue: PDF Upload Fails
+### Issue: PDF Upload Fails
 
 **Symptoms**: CLI command fails or returns error
 
@@ -262,7 +287,10 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
    smartui --version
    ```
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
+
+### Issue: Project Not Found" Error
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -277,7 +305,10 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 3. Ensure token includes the project ID prefix (e.g., `123456#...`)
 4. Check for extra spaces or quotes in token
 
-#### Issue: CLI Command Not Found
+</TabItem>
+<TabItem value='cli-command-not-found' label='CLI Command Not Found'>
+
+### Issue: CLI Command Not Found
 
 **Symptoms**: `smartui` command not recognized
 
@@ -299,7 +330,10 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 
 3. Check PATH includes npm global bin directory
 
-#### Issue: Upload Returns Error
+</TabItem>
+<TabItem value='upload-returns-error' label='Upload Returns Error'>
+
+### Issue: Upload Returns Error
 
 **Symptoms**: CLI returns error status or failure message
 
@@ -316,7 +350,10 @@ smartui upload-pdf ./pdfs/ --buildName "Release-v1.0-$(date +%Y%m%d)"
 4. Review error message for specific details
 5. Retry upload if transient error
 
-#### Issue: PDFs Not Appearing in Dashboard
+</TabItem>
+<TabItem value='pdfs-not-appearing-in-dashboard' label='PDFs Not Appearing in Dashboard'>
+
+### Issue: PDFs Not Appearing in Dashboard
 
 **Symptoms**: Uploads complete but PDFs don't appear in SmartUI dashboard
 
@@ -342,6 +379,9 @@ If you encounter issues not covered here:
 - See [PDF API Upload](/support/docs/smartui-pdf-api-upload) for alternative upload methods
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

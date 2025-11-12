@@ -17,7 +17,14 @@ keywords:
 url: https://www.lambdatest.com/support/docs/ssmartui-slack-integration/
 site_name: LambdaTest
 slug: smartui-slack-integration/
+
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -47,7 +54,7 @@ This document will guide you to integrate your SmartUI jobs and Slack, allowing 
 
 ## Prerequisite
 
-- An active LambdaTest account with Admin or User-level access. 
+- An active LambdaTest account with Admin or User-level access.
 - Set up a dedicated Slack channel where you want to receive notifications from SmartUI.
 - Should have setup the SmartUI suite.
 
@@ -91,7 +98,7 @@ Once you integrate Slack, you need to configure notification settings to get tes
 
 - Once you save that configuration, you will start receiving the custom notifications in Slack!
 
-<img loading="lazy" src={require('../assets/videos/smart-ui/slack-integration/slack-notification.png').default} alt="add slack-notification"  className="doc_img" width="1347" height="648"/>
+<img loading="lazy" src={require('../assets/videos/smart-ui/slack-integration/slack-notification.png').default} alt="add slack-notification"  className='doc_img' width="1347" height="648"/>
 
 ## Remove the Slack Integration
 

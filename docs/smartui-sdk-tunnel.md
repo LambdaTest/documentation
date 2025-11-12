@@ -11,15 +11,21 @@ keywords:
   - Internal Testing
 url: https://www.lambdatest.com/support/docs/smartui-sdk-tunnel/
 slug: smartui-sdk-tunnel/
+
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 # Using LambdaTest Tunnel with SmartUI SDK
 
 LambdaTest Tunnel enables secure testing of your local, development, or privately hosted environments using SmartUI SDK. This guide explains how to configure and use LambdaTest Tunnel with SmartUI SDK.
 
 :::warning Important
-Tunnel configuration is only supported with the `exec` mode of SmartUI SDK. It is not compatible with 
-`capture`, `upload`, or `figma` commands. For more information about exec mode, refer to our [SmartUI CLI Exec 
+Tunnel configuration is only supported with the `exec` mode of SmartUI SDK. It is not compatible with
+`capture`, `upload`, or `figma` commands. For more information about exec mode, refer to our [SmartUI CLI Exec
 documentation](/support/docs/smartui-cli-exec/).
 :::
 
@@ -65,7 +71,7 @@ For manual tunnel setup, add the following configuration:
 {
   "tunnel": {
     "type": "manual",
-    "tunnelName": "my-tunnel-name"  // Required for manual mode 
+    "tunnelName": "my-tunnel-name"  // Required for manual mode
     //Add user and key in case LT_USERNAME and LT_ACCESSKEY not provided in env variables
   }
 }
@@ -134,8 +140,54 @@ The tunnel configuration automatically uses the following environment variables 
 }
 ```
 
-
 ## Best Practices
+
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='automatic-vs-manual-mode' label='Automatic vs Manual Mode' default>
+
+### Automatic vs Manual Mode
+
+- Use automatic mode for simple setups and quick testing
+   - Use manual mode when you need more control over tunnel lifecycle
+
+</TabItem>
+<TabItem value='credentials-management' label='Credentials Management' >
+
+### Credentials Management
+
+- Prefer environment variables for sensitive information
+   - Use config file for non-sensitive settings
+
+</TabItem>
+<TabItem value='proxy-configuration' label='Proxy Configuration' >
+
+### Proxy Configuration
+
+- Specify proxy settings in config when using corporate networks
+   - Test proxy settings before running full test suite
+
+</TabItem>
+<TabItem value='logging' label='Logging' >
+
+### Logging
+
+- Enable verbose logging (`"v": true`) for troubleshooting
+   - Specify custom log file location for persistent logs
+
+</TabItem>
+<TabItem value='directory-testing' label='Directory Testing' >
+
+### Directory Testing
+
+- Always specify the directory to test when working with local files
+   - Ensure the directory path is accessible and contains the necessary files
+
+:::tip
+For more detailed information about LambdaTest Tunnel features and configurations, refer to our [Advanced Tunnel Features documentation](/support/docs/advanced-tunnel-features).
+:::
+
+</TabItem>
+</Tabs>
 
 1. **Automatic vs Manual Mode**
    - Use automatic mode for simple setups and quick testing
@@ -158,5 +210,5 @@ The tunnel configuration automatically uses the following environment variables 
    - Ensure the directory path is accessible and contains the necessary files
 
 :::tip
-For more detailed information about LambdaTest Tunnel features and configurations, refer to our [Advanced Tunnel Features documentation](/support/docs/advanced-tunnel-features/).
-::: 
+For more detailed information about LambdaTest Tunnel features and configurations, refer to our [Advanced Tunnel Features documentation](/support/docs/advanced-tunnel-features).
+:::

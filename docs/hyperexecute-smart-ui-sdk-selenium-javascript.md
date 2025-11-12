@@ -16,13 +16,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-sdk-selenium-javascript/
 site_name: LambdaTest
 slug: hyperexecute-smart-ui-sdk-selenium-javascript/
+
 ---
-
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -173,7 +173,7 @@ cacheDirectories:
   - node_modules
 
 pre:
-  - npm i @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+  - npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
   - npx smartui config:create smartui-web.json
 
 post:
@@ -194,7 +194,7 @@ It is mandatory to mention these commands in the pre flag to download all the ne
 
 ```bash
 pre:
-  - npm i @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
+  - npm install @lambdatest/smartui-cli @lambdatest/selenium-driver selenium-webdriver
   - npx smartui config:create smartui-web.json
 ```
 :::

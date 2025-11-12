@@ -13,10 +13,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-smart-git-strategy/
 site_name: LambdaTest
 slug: smartui-smart-git-strategy/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -63,22 +66,22 @@ Smart Git is a feature that enhances the default Git branching strategy in Smart
 
 Smart Git can be enabled using an environment variable:
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export SMART_GIT=true
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows" default>
+<TabItem value='Windows' label='Windows' default>
 
 ```bash
 set SMART_GIT=true
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:SMART_GIT="true"
@@ -108,7 +111,7 @@ $env:SMART_GIT="true"
    ```bash
    # Enable Smart Git
    export SMART_GIT=true
-   
+
    # Run your tests
    npx smartui --config .smartui.json exec -- <Your execution command>
    ```
@@ -138,7 +141,7 @@ npx smartui upload-figma-web designs.json --buildName "feature-login-designs"
 npx smartui capture urls.json --buildName "feature-login-capture"
 ```
 
-**Result**: 
+**Result**:
 - Builds are compared against the latest approved version in `feature/new-login`
 - Changes can be approved without affecting the main branch
 - Independent visual regression tracking for the feature
@@ -191,26 +194,74 @@ The Smart Git management works consistently across all SmartUI CLI commands (`ex
 
 ## Best Practices
 
-1. **Branch Naming**: Use clear, consistent branch naming conventions
-2. **Regular Updates**: Keep branches up to date with their parent branches
-3. **Approval Process**: Establish clear approval criteria for each branch
-4. **Documentation**: Document branch-specific visual changes
-5. **Cleanup**: Regularly clean up old branches and their builds
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='branch-naming' label='Branch Naming' default>
+
+### Branch Naming
+
+Use clear, consistent branch naming conventions.
+
+</TabItem>
+
+<TabItem value='regular-updates' label='Regular Updates'>
+
+### Regular Updates
+
+Keep branches up to date with their parent branches.
+
+</TabItem>
+
+<TabItem value='approval-process' label='Approval Process'>
+
+### Approval Process
+
+Establish clear approval criteria for each branch.
+
+</TabItem>
+
+<TabItem value='documentation' label='Documentation'>
+
+### Documentation
+
+Document branch-specific visual changes.
+
+</TabItem>
+
+<TabItem value='cleanup' label='Cleanup'>
+
+### Cleanup
+
+Regularly clean up old branches and their builds.
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='comparison-issues' label='Comparison Issues' default>
+
+### Comparison Issues
 
 1. **Comparison Issues**:
    - Verify Smart Git is enabled: `echo $SMART_GIT`
    - Check branch name: `git branch --show-current`
    - Ensure previous builds exist in the branch
 
-2. **Approval Issues**:
+</TabItem>
+
+<TabItem value='approval-issues' label='Approval Issues'>
+
+### Approval Issues
+
+1. **Approval Issues**:
    - Verify you have necessary permissions
    - Check if the build is in an approvable state
    - Ensure the branch has previous approved builds
 
+</TabItem>
+</Tabs>
+
 ### Getting Help
 
-If you encounter any issues with Smart Git, please contact our support team at support@lambdatest.com. 
+If you encounter any issues with Smart Git, please contact our support team at support@lambdatest.com.

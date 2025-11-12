@@ -16,11 +16,13 @@ keywords:
   - How to Run Visual Regression Tests
 url: https://www.lambdatest.com/support/docs/smartui-shadow-dom/
 slug: smartui-shadow-dom/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

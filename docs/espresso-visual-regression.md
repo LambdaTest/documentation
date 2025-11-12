@@ -83,25 +83,25 @@ Now, you need to export your environment variables LT_USERNAME and LT_ACCESS_KEY
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-<Tabs className="docs__val">
+<Tabs className='docs__val'>
 
-<TabItem value="bash" label="Linux / MacOS" default>
+<TabItem value='bash' label='Linux / MacOS' default>
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-  {`export LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-export LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+{`export LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+export LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"`}
   </CodeBlock>
 </div>
 
 </TabItem>
 
-<TabItem value="powershell" label="Windows" default>
+<TabItem value='powershell' label='Windows' default>
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-  {`set LT_USERNAME=${ YOUR_LAMBDATEST_USERNAME()}
-set LT_ACCESS_KEY=${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+{`set LT_USERNAME="${YOUR_LAMBDATEST_USERNAME}"
+set LT_ACCESS_KEY="${YOUR_LAMBDATEST_ACCESS_KEY}"`}
   </CodeBlock>
 </div>
 
@@ -142,23 +142,23 @@ To begin testing, upload your Android application (.apk file) to LambdaTest's se
 - **Authentication :** You'll need your LambdaTest Username and AccessKey. Combine them in the format `Username:AccessKey`.
 - **Uploading the App :** Use **cURL command** to send a request to our API. The request should include the path to your application file (**appFile**).
 
-<Tabs className="docs__val">
+<Tabs className='docs__val'>
 
-<TabItem value="bash" label="Linux / MacOS" default>
+<TabItem value='bash' label='Linux / MacOS' default>
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_ANDROID_APP>"' --form 'type="espresso-android"'`}
+{`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_ANDROID_APP>"' --form 'type="espresso-android"'`}
   </CodeBlock>
 </div>
 
 </TabItem>
 
-<TabItem value="powershell" label="Windows" default>
+<TabItem value='powershell' label='Windows' default>
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"<PATH_OF_YOUR_ANDROID_APP>"" --form "type=\"espresso-android\""`}
+{`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"<PATH_OF_YOUR_ANDROID_APP>"" --form "type=\"espresso-android\""`}
   </CodeBlock>
 </div>
 
@@ -176,23 +176,23 @@ Upload your Espresso test suite (.apk) file to LambdaTest servers using our REST
 
 The following sample cURL command shows how to upload a test suite:
 
-<Tabs className="docs__val">
+<Tabs className='docs__val'>
 
-<TabItem value="bash" label="Linux / MacOS" default>
+<TabItem value='bash' label='Linux / MacOS' default>
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-bash">
-  {`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="espresso-android"'`}
+{`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST 'https://manual-api.lambdatest.com/app/uploadFramework' --form 'appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"' --form 'type="espresso-android"'`}
   </CodeBlock>
 </div>
 
 </TabItem>
 
-<TabItem value="powershell" label="Windows" default>
+<TabItem value='powershell' label='Windows' default>
 
   <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-{`curl -u "${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"" --form "type=\"espresso-android\""`}
+{`curl -u "${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}" --location --request POST "https://manual-api.lambdatest.com/app/uploadFramework" --form "appFile=@"<PATH_OF_YOUR_TEST_SUITE_APP>"" --form "type=\"espresso-android\""`}
   </CodeBlock>
 </div>
 
@@ -212,7 +212,7 @@ Take note of the base64 encoded authentication which needs to be added in the 
 
 <div className="lambdatest__codeblock">
     <CodeBlock className="language-powershell">
-{`${ YOUR_LAMBDATEST_USERNAME()}:${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
+{`${YOUR_LAMBDATEST_USERNAME}:${YOUR_LAMBDATEST_ACCESS_KEY}`}
   </CodeBlock>
 </div>
 
@@ -383,7 +383,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 ## Best Practices
 
-### 1. Project and Build Naming
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='project-and-build-naming' label='Project and Build Naming' default>
+
+### Project and Build Naming
 
 - Use descriptive, consistent names for projects and builds
 - Include app version or release info in build names
@@ -398,35 +401,60 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 }
 ```
 
-### 2. Device Selection
+</TabItem>
+<TabItem value='device-selection' label='Device Selection'>
+
+### Device Selection
 
 - Test on devices that match your user base
 - Include multiple device configurations for comprehensive coverage
 - Use device patterns for consistent testing (e.g., `Galaxy.*`, `Pixel.*`)
 
-### 3. Smart Crop Configuration
+</TabItem>
+<TabItem value='smart-crop-configuration' label='Smart Crop Configuration'>
+
+### Smart Crop Configuration
 
 - Enable `cropStatusBar` to focus on core UI elements
 - Enable `cropNavigationBar` for Android devices
 - Test cropped screenshots to ensure important content isn't removed
 
-### 4. Test Organization
+</TabItem>
+<TabItem value='test-organization' label='Test Organization'>
+
+### Test Organization
 
 - Use sharding for parallel test execution
 - Group related tests in same build
 - Use meaningful test names for better organization
 
-### 5. App and Test Suite Management
+</TabItem>
+<TabItem value='app-and-test-suite-management-1' label='App and Test Suite Management'>
+
+### App and Test Suite Management
 
 - Upload apps and test suites before execution
 - Use app IDs (`lt://APP...`) for faster execution
 - Keep app and test suite versions synchronized
 
+</TabItem>
+<TabItem value='app-and-test-suite-management-2' label='App and Test Suite Management'>
+
+### App and Test Suite Management
+
+- Upload apps and test suites before execution
+- Use app IDs (`lt://APP...`) for faster execution
+- Keep app and test suite versions synchronized
+
+</TabItem>
+</Tabs>
+
 ## Troubleshooting
 
-### Common Issues
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>
 
-#### Issue: Screenshots Not Captured
+### Issue: Screenshots Not Captured
 
 **Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
 
@@ -440,7 +468,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 1. Verify `visual: true` is set in API request:
    ```json
    {
-     "visual": true,
+     visual": true,
      "smartUI.project": "ProjectName"
    }
    ```
@@ -453,7 +481,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 4. Check network connectivity to LambdaTest
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
+
+### Issue: Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -468,7 +499,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 3. Check credentials match the account with the project
 4. Ensure project name is in API request
 
-#### Issue: App Upload Fails
+</TabItem>
+<TabItem value='app-upload-fails' label='App Upload Fails'>
+
+### Issue: App Upload Fails
 
 **Symptoms**: App upload returns error or fails
 
@@ -484,7 +518,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 3. Retry upload with stable network connection
 4. Verify authentication credentials
 
-#### Issue: Test Execution Fails
+</TabItem>
+<TabItem value='test-execution-fails' label='Test Execution Fails'>
+
+### Issue: Test Execution Fails
 
 **Symptoms**: Test suite execution fails or times out
 
@@ -500,14 +537,17 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 3. Increase `queueTimeout` and `IdleTimeout`:
    ```json
    {
-     "queueTimeout": 600,
-     "IdleTimeout": 60
+     queueTimeout: 600,
+     IdleTimeout: 60
    }
    ```
 
 4. Review device logs for test errors
 
-#### Issue: Screenshots Show Incorrect Content
+</TabItem>
+<TabItem value='screenshots-show-incorrect-content' label='Screenshots Show Incorrect Content'>
+
+### Issue: Screenshots Show Incorrect Content
 
 **Symptoms**: Screenshots captured but show wrong screen or state
 
@@ -531,6 +571,9 @@ If you encounter issues not covered here:
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
+</TabItem>
+</Tabs>
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
@@ -541,7 +584,7 @@ If you encounter issues not covered here:
 - [Appium Hooks Documentation](/support/docs/smartui-appium-hooks)
 
 
-<nav aria-label="breadcrumbs">
+<nav aria-label='breadcrumbs'>
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
