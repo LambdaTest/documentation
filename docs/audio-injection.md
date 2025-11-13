@@ -25,6 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -50,10 +51,8 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-
-
 # Audio Injection on iOS Real Devices
-
+<RealDeviceTag value="Real Device" /> 
 Audio Injection allows you to inject microphone input on real iOS devices in the LambdaTest Real Device Cloud.  
 Use it to test audio-driven flows such as audio verification and in-app recording—without manual mic input.
 
@@ -106,20 +105,11 @@ desired_caps = {
 ## Step 3: Control Audio in Test
 Inject the uploaded audio file from LambdaTest into the recorder or app when you are at the dedicated space for microphone input.
 
-**Inject / Replace File**
+**Inject File**
 ```python
-driver.execute_script('lambda-audio: {"action":"inject","arguments":{"media_url":"lt://MEDIA123..."}}')
+driver.execute_script("lambda-audio-injection=lt://MEDIA123...")
 ```
 
-**Start Audio**
-```python
-driver.execute_script('lambda-audio: {"action":"start"}')
-```
-
-**Stop Audio**
-```python
-driver.execute_script('lambda-audio: {"action":"stop"}')
-```
 :::note
 The injected audio can come from a standalone audio file **or** from the audio track of a recorded video.
 :::

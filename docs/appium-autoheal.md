@@ -21,8 +21,10 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import RealDeviceTag from '../src/component/realDevice';
 
 # AI-Powered Smart Heal for Automation Tests
+<RealDeviceTag value="Real Device" /> 
 
 Locator failures can make tests brittle and cause frequent failures, slowing down development and testing. LambdaTest’s **Smart Heal** uses **AI/ML-powered algorithms** to automatically detect and recover from locator issues during test execution, ensuring smoother and more reliable automation.
 

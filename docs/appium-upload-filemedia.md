@@ -24,7 +24,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
-import VirtualDeviceTag from '../src/component/virtualDevice';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -51,9 +51,7 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 ></script>
 
 # Uploading Files and Media on Real Devices
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-
-
+<RealDeviceTag value="Real Device" />
 LambdaTest's file upload feature provides a convenient way to enhance your testing scenarios by allowing you to upload various media and non-media files directly to LambdaTest's cloud devices. In this section, we'll guide you through the process of uploading files, highlight the supported file types, and explain how to use `uploadMedia` capability while running your test scripts.
 
 ## Objectives
@@ -63,24 +61,6 @@ By the end of this topic, you will be able to:
 2. Use Upload File and Media feature in App Automation.
 
 -----
-
-## Upload File and Media in Real Devices App Testing
-
-Easily upload media or non-media files onto real devices during active sessions, enhancing your testing capabilities on LambdaTest's platform.
-
-### Steps to Upload Files and Media Feature
-
-1. Go to **App Testing** under the **Real Devices** section provided in the sidebar of your LambdaTest console.
-
-2. Once the session is started, locate the toolbar and find the **Files and Media** option. 
-
-<img loading="lazy" src={require('../assets/images/app-automation/uploadmedia.png').default} alt="Image" width="1200" height="550" className="doc_img"/>
-
-  
-3. You can now upload images, videos and files from your local on the device by clicking on the **Upload** button.
-
-4. After the upload is completed, you can find the uploaded file or media in the specified `paths` mentioned below.
-
 
 ## File Storage Paths on Devices
 
@@ -97,7 +77,7 @@ Easily upload media or non-media files onto real devices during active sessions,
 
 LambdaTest supports various file types for upload, ensuring flexibility in your testing scenarios. Below are the supported file types:
 
-- **Images**: JPG, JPEG, PNG, GIF (Maximum size: 10 MB)
+- **Images**: JPG, JPEG, PNG, GIF, BMP, HEIC (Maximum size: 10 MB)
 - **Videos**: MP4  (Maximum size: 50 MB)
 - **Files**: XLS, XLSX, DOC, DOCX, PDF, CSV, TXT (Maximum size: 15 MB)
 

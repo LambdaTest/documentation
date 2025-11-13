@@ -172,18 +172,22 @@ Please refer to the example `cURL` requests given below for your reference.
   <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
     {`curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/espresso/build' \\
-        --header 'Authorization: Basic <Enter_Basic_Auth>' \\
-        --header 'Content-Type: application/json' \\
-        --data-raw '{
-            "app" : "lt://APP_ID",
-            "testSuite": "lt://TestSuite_ID",
-            "device" :  ["Pixel 6-12"],
-            "queueTimeout": 360,
-            "IdleTimeout": 150,
-            "deviceLog": true,
-            "build" : "Proverbial-Espresso"
-            "annotation" : "com.example.proverbial.annotation" 
-            }'`}
+      --header 'Authorization: Basic <Enter_Basic_Auth>' \\
+      --header 'Content-Type: application/json' \\
+      --data-raw '{
+          "app": "lt://APP_ID",
+          "testSuite": "lt://TestSuite_ID",
+          "device": ["Pixel 6-12"],
+          "queueTimeout": 360,
+          "IdleTimeout": 150,
+          "deviceLog": true,
+          "build": "Proverbial-Espresso",
+          "filters": {
+              "annotation": [
+                  "com.lambdatest.proverbial.demo1","com.lambdatest.proverbial.demo2"
+              ]
+          }
+      }'`}
   </CodeBlock>
   </div>
 </TabItem>
@@ -194,7 +198,7 @@ Please refer to the example `cURL` requests given below for your reference.
   <CodeBlock className="language-powershell">
 
   ```
-  {`curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Content-Type: application/json" --header "Authorization: Basic <Enter the Auth here>" --data-raw "{\"app\" : \"lt://APP_ID\",\"testSuite\": \"lt://APP_ID\",\"device\" :  [\"Pixel 6-12\"],\"queueTimeout\": 360,\"IdleTimeout\": 150,\"deviceLog\": true,\"network\": false,\"build\" : \"Proverbial-Espresso\",\"geoLocation\" : \"FR\", \"annotation\" : \"com.example.proverbial.annotation\"}"`}
+  {`curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/espresso/build" --header "Authorization: Basic <Enter the Auth here>" --header "Content-Type: application/json" --data-raw "{\"app\": \"lt://APP_ID\", \"testSuite\": \"lt://APP_ID\", \"device\": [\"Pixel 6-12\"], \"queueTimeout\": 360, \"IdleTimeout\": 150, \"deviceLog\": true, \"network\": false, \"build\": \"Proverbial-Espresso\", \"geoLocation\": \"FR\", \"filters\": {\"annotation\": [\"com.lambdatest.proverbial.demo1\", \"com.lambdatest.proverbial.demo2\"]}}"`}
   ```
 
   </CodeBlock>
@@ -202,7 +206,9 @@ Please refer to the example `cURL` requests given below for your reference.
 </TabItem>
 </Tabs>
 
-
+:::info 
+This configuration will run tests annotated with multiple annotations, i.e., only the intersection of all mentioned annotations will be considered.
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
