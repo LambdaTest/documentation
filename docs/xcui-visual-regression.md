@@ -358,7 +358,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 ## Best Practices
 
-### 1. Project and Build Naming
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="project-and-build-naming" label="Project and Build Naming" default>
+
+### Project and Build Naming
 
 - Use descriptive, consistent names for projects and builds
 - Include app version or release info in build names
@@ -373,35 +376,60 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 }
 ```
 
-### 2. Device Selection
+</TabItem>
+<TabItem value="device-selection" label="Device Selection">
+
+### Device Selection
 
 - Test on devices that match your user base
 - Include multiple device configurations for comprehensive coverage
 - Use device patterns for consistent testing (e.g., `iPhone 13-16`, `iPad Air (2019)-16`)
 
-### 3. Smart Crop Configuration
+</TabItem>
+<TabItem value="smart-crop-configuration" label="Smart Crop Configuration">
+
+### Smart Crop Configuration
 
 - Enable `cropStatusBar` to focus on core UI elements
 - Enable `cropNavigationBar` for iOS devices
 - Test cropped screenshots to ensure important content isn't removed
 
-### 4. Test Organization
+</TabItem>
+<TabItem value="test-organization" label="Test Organization">
+
+### Test Organization
 
 - Use sharding for parallel test execution
 - Group related tests in same build
 - Use meaningful test names for better organization
 
-### 5. App and Test Suite Management
+</TabItem>
+<TabItem value="app-and-test-suite-management-1" label="App and Test Suite Management">
+
+### App and Test Suite Management
 
 - Upload apps and test suites before execution
 - Use app IDs (`lt://APP...`) for faster execution
 - Keep app and test suite versions synchronized
 
+</TabItem>
+<TabItem value="app-and-test-suite-management-2" label="App and Test Suite Management">
+
+### App and Test Suite Management
+
+- Upload apps and test suites before execution
+- Use app IDs (`lt://APP...`) for faster execution
+- Keep app and test suite versions synchronized
+
+</TabItem>
+</Tabs>
+
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>
 
-#### Issue: Screenshots Not Captured
+### Issue: Screenshots Not Captured
 
 **Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
 
@@ -426,7 +454,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 4. Check network connectivity to LambdaTest
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value="project-not-found-error" label="Project Not Found Error">
+
+### Issue: "Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -441,7 +472,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 3. Check credentials match the account with the project
 4. Ensure project name is in API request
 
-#### Issue: App Upload Fails
+</TabItem>
+<TabItem value="app-upload-fails" label="App Upload Fails">
+
+### Issue: App Upload Fails
 
 **Symptoms**: App upload returns error or fails
 
@@ -457,7 +491,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 3. Retry upload with stable network connection
 4. Verify authentication credentials
 
-#### Issue: Test Execution Fails
+</TabItem>
+<TabItem value="test-execution-fails" label="Test Execution Fails">
+
+### Issue: Test Execution Fails
 
 **Symptoms**: Test suite execution fails or times out
 
@@ -480,7 +517,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 
 4. Review device logs for test errors
 
-#### Issue: Screenshots Show Incorrect Content
+</TabItem>
+<TabItem value="screenshots-show-incorrect-content" label="Screenshots Show Incorrect Content">
+
+### Issue: Screenshots Show Incorrect Content
 
 **Symptoms**: Screenshots captured but show wrong screen or state
 
@@ -494,7 +534,10 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
 2. Add appropriate waits in test code
 3. Verify test navigation flow
 
-#### Issue: Sharding Not Working
+</TabItem>
+<TabItem value="sharding-not-working" label="Sharding Not Working">
+
+### Issue: Sharding Not Working
 
 **Symptoms**: Shards not executing as expected
 
@@ -518,6 +561,9 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

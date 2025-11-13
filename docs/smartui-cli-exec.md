@@ -17,17 +17,20 @@ keywords:
 
 url: https://www.lambdatest.com/support/docs/smartui-cli-exec/
 slug: smartui-cli-exec/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 SmartUI CLI exec command offers you various options to manage snapshot server and execute your visual testing scripts. This guide will walk you through the available commands and their usage.
 
 ## Prerequisites
 
 - Basic understanding of Command Line Interface
-- SmartUI CLI version 4.0.21 or higher installed for the start, stop and ping commands
+- SmartUI CLI version 4.1.43 or higher installed for the start, stop and ping commands
 - A properly configured SmartUI CLI project
 
 ## Available Commands
@@ -37,7 +40,8 @@ SmartUI CLI offers the following exec commands:
 - `npx smartui exec` - Execute a command with SmartUI server running
 - `npx smartui exec:start` - Start the SmartUI snapshot server
 - `npx smartui exec:stop` - Stop the SmartUI snapshot server
-- `npx smartui exec:ping` - Check if the SmartUI server is running
+- `npx smartui exec:ping` - Check if the SmartUI server is running (uses custom HTTP client)
+- `npx smartui exec:pingTest` - Check if the SmartUI server is running (uses default HTTP client)
 
 ## Using the Exec Command
 
@@ -54,6 +58,10 @@ npx smartui exec [options] -- <command>
 | `-P, --port <number>` | Specify a custom port number for the server (default: 49152) |
 | `--fetch-results [filename]` | Fetch test results and save to a JSON file (default: results.json) |
 | `--buildName <string>` | Specify a custom build name for the test run |
+| `--scheduled <string>` | Specify the schedule ID for scheduled test runs |
+| `--show-render-errors` | Show render errors from SmartUI build |
+| `--userName <string>` | Override LambdaTest username (overrides environment variable) |
+| `--accessKey <string>` | Override LambdaTest access key (overrides environment variable) |
 | `--config <file>` | Specify a configuration file to use |
 | `-h, --help` | Display help information |
 
@@ -84,6 +92,21 @@ npx smartui exec --config smartui-config.json -- npm test
 npx smartui exec -P 5000 --buildName "Release-1.0" --config smartui-config.json --fetch-results -- npm test
 ```
 
+6. Running scheduled tests:
+```bash
+npx smartui exec --scheduled "schedule-123" -- npm test
+```
+
+7. Showing render errors:
+```bash
+npx smartui exec --show-render-errors -- npm test
+```
+
+8. Overriding credentials:
+```bash
+npx smartui exec --userName "user" --accessKey "key" -- npm test
+```
+
 ## Starting the Server
 
 To start the SmartUI snapshot server:
@@ -106,11 +129,19 @@ npx smartui exec:stop
 
 ## Checking Server Status
 
-To verify if the SmartUI server is running:
+To verify if the SmartUI server is running, you can use either of these commands:
 
+**Using exec:ping (custom HTTP client):**
 ```bash
 npx smartui exec:ping
 ```
+
+**Using exec:pingTest (default HTTP client):**
+```bash
+npx smartui exec:pingTest
+```
+
+Both commands check if the server is running at the address specified in `SMARTUI_SERVER_ADDRESS` environment variable (default: `http://localhost:49152`).
 
 ## Running Tests with the Server
 
@@ -118,28 +149,27 @@ npx smartui exec:ping
 
 For most test frameworks (except Selenium Java and JavaScript), you'll need to set the server address:
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export SMARTUI_SERVER_ADDRESS='http://localhost:49152'
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
 set SMARTUI_SERVER_ADDRESS='http://localhost:49152'
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:SMARTUI_SERVER_ADDRESS="http://localhost:49152"
 ```
 </TabItem>
-
 
 </Tabs>
 
@@ -164,53 +194,117 @@ When running tests from IDEs like IntelliJ:
 1. Ensure the `SMARTUI_SERVER_ADDRESS` environment variable is set in your IDE's run configuration
 2. Configure the run configuration to use the appropriate test command
 
-## Taking Snapshots in Scripts
-
-You can capture snapshots in your test scripts using the SmartUI snapshot method. Here's a basic example:
-
-```javascript
-// JavaScript example
-smartui.takeScreenshot("homepage");
-
-// With options
-smartui.takeScreenshot("homepage", {
-  fullPage: true,
-  screenshotName: "custom-name"
-});
-```
-
-
 ## Best Practices
 
-1. Always use `exec:stop` to properly terminate the server
-2. Set appropriate timeouts for your tests
-3. Use meaningful names for your snapshots
-4. Configure environment variables before starting your IDE
-5. Consider using configuration files for complex setups
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='server-termination' label='Server Termination' default>
+
+### Server Termination
+
+Always use `exec:stop` to properly terminate the server.
+
+</TabItem>
+
+<TabItem value='timeouts' label='Timeouts'>
+
+### Timeouts
+
+Set appropriate timeouts for your tests.
+
+</TabItem>
+
+<TabItem value='snapshot-naming' label='Snapshot Naming'>
+
+### Snapshot Naming
+
+Use meaningful names for your snapshots.
+
+</TabItem>
+
+<TabItem value='environment-variables' label='Environment Variables'>
+
+### Environment Variables
+
+Configure environment variables before starting your IDE.
+
+</TabItem>
+
+<TabItem value='configuration-files' label='Configuration Files'>
+
+### Configuration Files
+
+Consider using configuration files for complex setups.
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
 
-If you encounter issues:
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='server-status' label='Server Status' default>
 
-1. Verify the server is running using `exec:ping`
-2. Check if the server address is correctly configured
-3. Ensure no other process is using the default port
-4. Review the server logs for error messages
+### Server Status
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+Verify the server is running using `exec:ping`.
+
+</TabItem>
+
+<TabItem value='server-address' label='Server Address'>
+
+### Server Address
+
+Check if the server address is correctly configured.
+
+</TabItem>
+
+<TabItem value='port-conflicts' label='Port Conflicts'>
+
+### Port Conflicts
+
+Ensure no other process is using the default port.
+
+</TabItem>
+
+<TabItem value='server-logs' label='Server Logs'>
+
+### Server Logs
+
+Review the server logs for error messages.
+
+</TabItem>
+</Tabs>
+
+### Getting Help
+
+If you encounter issues not covered here:
+- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
+- Check [CLI Documentation](/support/docs/smartui-cli) for general CLI usage
+- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [CLI Documentation](/support/docs/smartui-cli)
+- [CLI Upload](/support/docs/smartui-cli-upload)
+- [Environment Variables](/support/docs/smartui-cli-env-variables)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">SmartUI CLI Exec Commands</span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'>SmartUI CLI Exec Commands</span>
     </li>
   </ul>
-</nav> 
+</nav>

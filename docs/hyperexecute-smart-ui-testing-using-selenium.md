@@ -19,8 +19,11 @@ keywords:
 url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-testing-using-selenium/
 site_name: LambdaTest
 slug: hyperexecute-smart-ui-testing-using-selenium/
----
 
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
@@ -115,8 +118,6 @@ Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 <Tabs className="docs__val">
 

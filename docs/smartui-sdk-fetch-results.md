@@ -17,11 +17,13 @@ keywords:
 
 url: https://www.lambdatest.com/support/docs/smartui-cli/
 slug: smartui-sdk-fetch-results/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -51,13 +53,16 @@ import NewTag from '../src/component/newTag';
 
 SmartUI CLI allows you to fetch detailed build results after executing your visual tests. This feature enables you to access comprehensive information about your build and screenshots in a JSON file, making it easier to integrate with your CI/CD pipelines and automation workflows.
 
-
 ## Prerequisites
 
 - Basic understanding of Command Line Interface
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
-- Ensure you are using `@lambdatest/smartui-cli` version 4.0.8 or higher.
+- Ensure you are using `@lambdatest/smartui-cli` version 4.1.43 or higher
 - A properly configured SmartUI CLI project
+
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
 
 ## Steps to Use
 
@@ -65,30 +70,36 @@ SmartUI CLI allows you to fetch detailed build results after executing your visu
 
 If you haven't already installed SmartUI CLI, install it using npm:
 
+**Global Installation (Recommended):**
 ```bash
-npm i @lambdatest/smartui-cli
+npm install -g @lambdatest/smartui-cli
+```
+
+**Local Installation:**
+```bash
+npm install @lambdatest/smartui-cli
 ```
 
 ### **Step 2:** Configure your Project Token
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
 set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
@@ -108,7 +119,7 @@ If no filename is specified, results will be stored in `results.json`:
 npx smartui --config .smartui.json exec --fetch-results -- <execution-command>
 ```
 >**Example:**
- For a `Node.js` test script : 
+ For a `Node.js` test script :
 >```bash
 >npx smartui --config .smartui.json exec --fetch-results -- node test.js
 >```
@@ -234,20 +245,29 @@ The fetched results JSON file contains detailed information about your build and
 }
 ```
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+## Additional Resources
+
+- [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
+- [CLI Documentation](/support/docs/smartui-cli)
+- [CLI Exec Commands](/support/docs/smartui-cli-exec)
+- [Baseline Management](/support/docs/smartui-baseline-management)
+- [Running Your First Project](/support/docs/smartui-running-your-first-project)
+- [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
+
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> SmartUI with Cypress  </span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'> SmartUI with Cypress  </span>
     </li>
   </ul>
 </nav>

@@ -13,10 +13,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-branch-merging/
 site_name: LambdaTest
 slug: smartui-branch-merging/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -64,7 +67,7 @@ npx smartui merge branch --source <source-branch> --target <target-branch>
 2. **Target Branch Update**: Updates the target branch with the approved changes
 3. **Status Updates**: Updates build statuses in both branches
 4. **Audit Trail**: Creates a merge commit with detailed information
-5. **Build Naming**: 
+5. **Build Naming**:
    - For branch merges: `merged-branch/<source>-<target>`
    - For build merges: `merged-build/<sourcebuildname>-<targetbuildname>`
 
@@ -130,38 +133,59 @@ npx smartui merge branch --source release/v1.0.0 --target main
 
 ## Best Practices
 
-1. **Merge Planning**:
-   - Plan merges in advance
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='merge-planning' label='Merge Planning' default>
+
+### Merge Planning
+
+- Plan merges in advance
    - Document merge strategies
    - Establish approval processes
 
-2. **Branch Management**:
-   - Keep branches up to date
+</TabItem>
+<TabItem value='branch-management' label='Branch Management' >
+
+### Branch Management
+
+- Keep branches up to date
    - Clean up merged branches
    - Maintain clear branch naming
 
-3. **Approval Process**:
-   - Establish clear approval criteria
+</TabItem>
+<TabItem value='approval-process' label='Approval Process' >
+
+### Approval Process
+
+- Establish clear approval criteria
    - Document approval decisions
    - Maintain audit trail
 
+</TabItem>
+</Tabs>
+
 ## Troubleshooting
 
-### Common Issues
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='merge-conflicts' label='Merge Conflicts' default>
 
-1. **Merge Conflicts**:
-   - Check build compatibility
+Merge Conflicts
+
+- Check build compatibility
    - Verify branch status
    - Review merge history
 
-2. **Status Issues**:
-   - Verify build status
+</TabItem>
+<TabItem value='status-issues' label='Status Issues' >
+
+Status Issues
+
+- Verify build status
    - Check permissions
    - Review approval history
-
-### Getting Help
-
 If you encounter any issues with branch merging in SmartUI, please contact our support team at support@lambdatest.com.
+
+</TabItem>
+</Tabs>
 
 ## Pull Request Workflow with Branch Merging
 
@@ -213,15 +237,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '16'
-          
+
       - name: Install dependencies
         run: npm install
-        
+
       - name: Run SmartUI tests
         env:
           PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
@@ -235,15 +259,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '16'
-          
+
       - name: Install dependencies
         run: npm install
-        
+
       - name: Merge visual changes
         env:
           PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
@@ -277,4 +301,4 @@ jobs:
 
 :::note
 The branch merging process works consistently across all SmartUI CLI commands (`exec`, `capture`, `upload`, `upload-figma-web`, `upload-figma-app`), ensuring a unified experience whether you're executing tests, capturing screenshots, uploading images, or comparing Figma designs with web pages or mobile apps. Each command supports the `--buildName` flag to provide custom names for your builds.
-::: 
+:::

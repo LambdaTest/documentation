@@ -249,11 +249,14 @@ For additional information about Playwright framework please explore the documen
 
   **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
 
-  **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, click [here](/support/docs/html-dom-smartui-options/#configuration-for-playwright).
+  **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
 
 ## Best Practices
 
-### 1. Capability Configuration
+<Tabs className="docs__val" groupId="best-practices">
+<TabItem value="capability-configuration" label="Capability Configuration" default>
+
+### Capability Configuration
 
 - Always set `visual: true` in your capabilities to enable SmartUI
 - Use consistent project and build names across test runs
@@ -277,7 +280,10 @@ const capabilities = {
 };
 ```
 
-### 2. Screenshot Timing
+</TabItem>
+<TabItem value="screenshot-timing" label="Screenshot Timing">
+
+### Screenshot Timing
 
 - Wait for page elements to load before capturing screenshots
 - Use Playwright's wait methods for dynamic content
@@ -290,29 +296,51 @@ await page.waitForSelector('.main-content', { state: 'visible' });
 await page.waitForLoadState('networkidle');
 ```
 
-### 3. Screenshot Naming
+</TabItem>
+<TabItem value="screenshot-naming" label="Screenshot Naming">
+
+### Screenshot Naming
 
 - Use descriptive, consistent names
 - Include context (page, component, state) in names
 - Avoid special characters
 
-### 4. Baseline Management
+</TabItem>
+<TabItem value="baseline-management" label="Baseline Management">
+
+### Baseline Management
 
 - Establish baselines from stable builds
 - Review and approve baselines before using
 - Update baselines when intentional changes are made
 
-### 5. Viewport Selection
+</TabItem>
+<TabItem value="viewport-selection-1" label="Viewport Selection">
+
+### Viewport Selection
 
 - Test on viewports that match your user base
 - Include mobile, tablet, and desktop viewports
 - Consider both portrait and landscape orientations
 
+</TabItem>
+<TabItem value="viewport-selection-2" label="Viewport Selection">
+
+### Viewport Selection
+
+- Test on viewports that match your user base
+- Include mobile, tablet, and desktop viewports
+- Consider both portrait and landscape orientations
+
+</TabItem>
+</Tabs>
+
 ## Troubleshooting
 
-### Common Issues
+<Tabs className="docs__val" groupId="troubleshooting">
+<TabItem value="screenshots-not-captured" label="Screenshots Not Captured" default>
 
-#### Issue: Screenshots Not Captured
+### Issue: Screenshots Not Captured
 
 **Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
 
@@ -344,7 +372,10 @@ await page.waitForLoadState('networkidle');
 
 4. Check network connectivity to LambdaTest
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value="project-not-found-error" label="Project Not Found Error">
+
+### Issue: "Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -359,7 +390,10 @@ await page.waitForLoadState('networkidle');
 3. Check credentials match the account with the project
 4. Ensure project name is in capabilities, not just in dashboard
 
-#### Issue: Screenshots Show Blank Pages
+</TabItem>
+<TabItem value="screenshots-show-blank-pages" label="Screenshots Show Blank Pages">
+
+### Issue: Screenshots Show Blank Pages
 
 **Symptoms**: Screenshots captured but show blank or incomplete content
 
@@ -385,7 +419,10 @@ await page.waitForLoadState('networkidle');
 
 4. Check viewport size matches expected dimensions
 
-#### Issue: Build Name Conflicts
+</TabItem>
+<TabItem value="build-name-conflicts" label="Build Name Conflicts">
+
+### Issue: Build Name Conflicts
 
 **Symptoms**: Screenshots appear in wrong build or build name issues
 
@@ -404,7 +441,10 @@ await page.waitForLoadState('networkidle');
 
 3. Use consistent naming convention across team
 
-#### Issue: Mismatch Percentage Unexpected
+</TabItem>
+<TabItem value="mismatch-percentage-unexpected" label="Mismatch Percentage Unexpected">
+
+### Issue: Mismatch Percentage Unexpected
 
 **Symptoms**: Mismatch percentage higher or lower than expected
 
@@ -438,6 +478,9 @@ If you encounter issues not covered here:
 - Check [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/) for comparison options
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

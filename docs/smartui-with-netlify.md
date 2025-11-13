@@ -14,7 +14,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-with-netlify/
 site_name: LambdaTest
 slug: smartui-with-netlify/
+
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
     dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -56,7 +62,7 @@ This document will show you how to integrate Netlify Pipeline with SmartUI.
 - Go to your Netlify Dashboard.
 - Click on the Integrations tab, search for **LambdaTest** and click on the **Enable** button.
 
-<img loading="lazy" src={require('../assets/images/netlify-integration/n1.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/netlify-integration/n1.png').default} alt="Image" className='doc_img'/>
 
 - You need to provide your configuration details
     - Enter your **Username** and **Access Key** from the **LambdaTest Dashboard**.
@@ -70,13 +76,13 @@ You can also enter your already-existing smart-UI project name.
 
 - Click on the **Save** button
 
-<img loading="lazy" src={require('../assets/images/netlify-integration/n2.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/netlify-integration/n2.png').default} alt="Image" className='doc_img'/>
 
 ### Step 2: Deploy the Site for which you want to compare the results
 
 - Go to the **Deploys** section, click on **Deploy site** button and deploy your project. 
 
-<img loading="lazy" src={require('../assets/images/netlify-integration/n3.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/netlify-integration/n3.png').default} alt="Image" className='doc_img'/>
 
 - This deployment is before any changes you have made and will be your **Baseline** image.
 - Now you need to make the required changes in your project and push the changes.
@@ -84,60 +90,89 @@ You can also enter your already-existing smart-UI project name.
 
 Your changes will be triggered and deployed.
 
-<img loading="lazy" src={require('../assets/images/netlify-integration/n4.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/netlify-integration/n4.png').default} alt="Image" className='doc_img'/>
 
 ### Step 4: Compare the Changes Smart-UI Dashboard
 
 - Go to your Smart-UI Dashbard. You will notice there is already a project with the same name you entered while configuring in **Step 1**
 
-<img loading="lazy" src={require('../assets/images/netlify-integration/n5.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/netlify-integration/n5.png').default} alt="Image" className='doc_img'/>
 
 - Go on that project. Click on the latest build. You can now compare the changes done to your project with-respect-to the provious build.
 
-<img loading="lazy" src={require('../assets/images/netlify-integration/n6.png').default} alt="Image" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/netlify-integration/n6.png').default} alt="Image" className='doc_img'/>
 
 ## Best Practices
 
-### 1. Project Naming
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='project-naming' label='Project Naming' default>
+
+### Project Naming
 
 - Use descriptive, consistent names for SmartUI projects
 - Match project names with your Netlify site names for easy identification
 - Avoid special characters that might cause issues
 - Use consistent naming conventions across deployments
 
-### 2. Baseline Management
+</TabItem>
+<TabItem value='baseline-management' label='Baseline Management'>
+
+### Baseline Management
 
 - Establish baseline from stable deployment
 - Review baseline before using for comparisons
 - Update baseline when intentional changes are made
 - Document baseline deployment for reference
 
-### 3. Deployment Strategy
+</TabItem>
+<TabItem value='deployment-strategy' label='Deployment Strategy'>
+
+### Deployment Strategy
 
 - Deploy baseline before making changes
 - Test changes in staging before production
 - Use meaningful deployment messages
 - Tag important deployments
 
-### 4. Integration Configuration
+</TabItem>
+<TabItem value='integration-configuration' label='Integration Configuration'>
+
+### Integration Configuration
 
 - Keep LambdaTest credentials secure
 - Use Netlify's environment variables for credentials
 - Rotate credentials regularly
 - Use different projects for different environments
 
-### 5. Comparison Workflow
+</TabItem>
+<TabItem value='comparison-workflow' label='Comparison Workflow'>
+
+### Comparison Workflow
 
 - Review visual differences carefully
 - Approve intentional changes promptly
 - Document reasons for baseline updates
 - Use SmartUI dashboard for detailed analysis
 
+</TabItem>
+<TabItem value='comparison-workflow-1' label='Comparison Workflow'>
+
+### Comparison Workflow
+
+- Review visual differences carefully
+- Approve intentional changes promptly
+- Document reasons for baseline updates
+- Use SmartUI dashboard for detailed analysis
+
+</TabItem>
+</Tabs>
+
 ## Troubleshooting
 
-### Common Issues
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>
 
-#### Issue: Screenshots Not Appearing in Dashboard
+### Issue: Screenshots Not Appearing in Dashboard
 
 **Symptoms**: Deployments complete but no screenshots appear in SmartUI dashboard
 
@@ -163,7 +198,10 @@ Your changes will be triggered and deployed.
 
 5. Review Netlify deployment logs for errors
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
+
+### Issue: Project Not Found" Error
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -184,7 +222,10 @@ Your changes will be triggered and deployed.
 
 4. Check credentials match the account with the project
 
-#### Issue: Integration Not Triggering
+</TabItem>
+<TabItem value='integration-not-triggering' label='Integration Not Triggering'>
+
+### Issue: Integration Not Triggering
 
 **Symptoms**: Deployments don't trigger SmartUI comparisons
 
@@ -197,7 +238,7 @@ Your changes will be triggered and deployed.
 **Solutions**:
 1. Verify integration is enabled:
    - Go to Netlify Dashboard → Integrations → LambdaTest
-   - Ensure integration shows as "Enabled"
+   - Ensure integration shows as Enabled"
 
 2. Check integration configuration:
    - Verify all required fields are filled
@@ -210,7 +251,10 @@ Your changes will be triggered and deployed.
 
 4. Review Netlify deployment logs for integration errors
 
-#### Issue: Baseline Not Set Correctly
+</TabItem>
+<TabItem value='baseline-not-set-correctly' label='Baseline Not Set Correctly'>
+
+### Issue: Baseline Not Set Correctly
 
 **Symptoms**: Comparisons show unexpected differences or baseline issues
 
@@ -234,7 +278,10 @@ Your changes will be triggered and deployed.
    - Check which deployment was used as baseline
    - Verify deployment was successful
 
-#### Issue: Comparison Results Unexpected
+</TabItem>
+<TabItem value='comparison-results-unexpected' label='Comparison Results Unexpected'>
+
+### Issue: Comparison Results Unexpected
 
 **Symptoms**: Visual differences don't match expected changes
 
@@ -270,6 +317,9 @@ If you encounter issues not covered here:
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
+
+</TabItem>
+</Tabs>
 
 ## Additional Resources
 

@@ -18,10 +18,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/puppteer-visual-regression/
 site_name: LambdaTest
 slug: puppeteer-visual-regression/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -33,22 +36,22 @@ This documentation will act as your step-by-step guide in to perform Puppteer te
 - Go to [SmartUI](https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
 set LT_USERNAME="YOUR_USERNAME"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
 $env:LT_USERNAME="YOUR_USERNAME"
@@ -66,11 +69,11 @@ To create a SmartUI Project, follow these steps:
 
 1. Go to [Projects page](https://smartui.lambdatest.com/)
 2. Click on the `new project` button
-3. Select the platform as <b>Web</b> for executing your `Puppeteer` tests. 
+3. Select the platform as <b>Web</b> for executing your `Puppeteer` tests.
 4. Add name of the project, approvers for the changes found, tags for any filter or easy navigation.
 5. Click on the **Submit**.
 
-<!-- <img loading="lazy" src={require('../assets/images/uploads/smart-ui-1.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
+<!-- <img loading="lazy" src={require('../assets/images/uploads/smart-ui-1.webp').default} alt="cmd" width="768" height="373" className='doc_img'/> -->
 
 ### **Step 2:** Configure your test with Puppeteer Desired Capabilities
 
@@ -151,7 +154,7 @@ const expect = require("chai").expect;
 
 ### **Step 3:** Executing the SmartUI Test Suite on Cloud
 
-Execute the test using the following command to run the test suite using `puppeteer` 
+Execute the test using the following command to run the test suite using `puppeteer`
 
 ```bash
 node navigation.js
@@ -163,27 +166,26 @@ For additional information about Puppteer framework please explore the documenta
 
 ## Advanced Options for Screenshot Comparison
 
-
   **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
 
-  **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, click [here](/support/docs/html-dom-smartui-options/#configuration-for-puppeteer).
-  
-<!-- <img loading="lazy" src={require('../assets/images/uploads/smart-ui-2.webp').default} alt="cmd" width="768" height="373" className="doc_img"/> -->
+  **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+<!-- <img loading="lazy" src={require('../assets/images/uploads/smart-ui-2.webp').default} alt="cmd" width="768" height="373" className='doc_img'/> -->
+
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> Getting Started with Selenium Visual Regression  </span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'> Getting Started with Selenium Visual Regression  </span>
     </li>
   </ul>
 </nav>

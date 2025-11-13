@@ -14,7 +14,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-with-github-actions/
 site_name: LambdaTest
 slug: smartui-with-github-actions/
+
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -49,7 +55,7 @@ To integrate GitHub Actions Pipeline with SmartUI, follow the below steps. You c
 :::tip Sample repo
 Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
 
-<a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations" target="_blank" className='github__anchor'><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className='doc_img'/> View on GitHub</a>
 :::
 
 ### Step 1: Create your Secrets
@@ -60,7 +66,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 ### Step 2: Create a New Workflow
 -  Navigate to the main page of the repository.
 -  Under your repository name, click  **Actions**.
--  In the left sidebar, click the **New workflow** button. 
+-  In the left sidebar, click the **New workflow** button.
 
 ### Step 3: Create the GitHub Actions workflow YAML file
 To create the GitHub Actions pipeline YAML file, follow the sample command below:
@@ -78,14 +84,20 @@ To run the new pipeline that you just created, click the **Run workflow** button
 
 ## Best Practices
 
-### 1. Secret Management
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='secret-management' label='Secret Management' default>
+
+### Secret Management
 
 - Never commit credentials to repository
 - Use GitHub Secrets for all sensitive data
 - Rotate secrets regularly
 - Use different secrets for different environments
 
-### 2. Workflow Optimization
+</TabItem>
+<TabItem value='workflow-optimization' label='Workflow Optimization'>
+
+### Workflow Optimization
 
 - Use matrix strategies for parallel execution
 - Cache dependencies to speed up workflows
@@ -101,7 +113,10 @@ on:
     branches: [ main ]
 ```
 
-### 3. Build Naming
+</TabItem>
+<TabItem value='build-naming' label='Build Naming'>
+
+### Build Naming
 
 - Use meaningful build names that include branch/PR info
 - Include commit SHA for traceability
@@ -115,25 +130,45 @@ on:
     echo "BUILD_NAME=$BUILD_NAME" >> $GITHUB_ENV
 ```
 
-### 4. Error Handling
+</TabItem>
+<TabItem value='error-handling' label='Error Handling'>
+
+### Error Handling
 
 - Set up proper error handling in workflows
 - Use workflow status checks
 - Configure notifications for failures
 - Add retry logic for flaky tests
 
-### 5. Resource Management
+</TabItem>
+<TabItem value='resource-management' label='Resource Management'>
+
+### Resource Management
 
 - Limit concurrent workflow runs
 - Clean up old builds regularly
 - Monitor workflow execution time
 - Optimize test execution order
 
+</TabItem>
+<TabItem value='resource-management-1' label='Resource Management'>
+
+### Resource Management
+
+- Limit concurrent workflow runs
+- Clean up old builds regularly
+- Monitor workflow execution time
+- Optimize test execution order
+
+</TabItem>
+</Tabs>
+
 ## Troubleshooting
 
-### Common Issues
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='workflow-fails-with-secret-not-found' label='Workflow Fails with Secret Not Found' default>
 
-#### Issue: Workflow Fails with "Secret Not Found"
+### Issue: Workflow Fails with "Secret Not Found"
 
 **Symptoms**: Workflow fails with error about missing secrets
 
@@ -153,7 +188,10 @@ on:
 
 4. Verify secrets are set for the correct repository/environment
 
-#### Issue: PROJECT_TOKEN Prompt Appears
+</TabItem>
+<TabItem value='project_token-prompt-appears' label='PROJECT_TOKEN Prompt Appears'>
+
+### Issue: PROJECT_TOKEN Prompt Appears
 
 **Symptoms**: Workflow prompts for PROJECT_TOKEN during execution
 
@@ -181,7 +219,10 @@ on:
            type: string
    ```
 
-#### Issue: Tests Run But No Results in Dashboard
+</TabItem>
+<TabItem value='tests-run-but-no-results-in-dashboard' label='Tests Run But No Results in Dashboard'>
+
+### Issue: Tests Run But No Results in Dashboard
 
 **Symptoms**: Workflow completes but screenshots don't appear in SmartUI
 
@@ -208,7 +249,10 @@ on:
 
 4. Check if SmartUI CLI step completed successfully
 
-#### Issue: Workflow Times Out
+</TabItem>
+<TabItem value='workflow-times-out' label='Workflow Times Out'>
+
+### Issue: Workflow Times Out
 
 **Symptoms**: Workflow execution exceeds time limit
 
@@ -234,7 +278,10 @@ on:
 3. Optimize test execution
 4. Split tests across multiple workflows
 
-#### Issue: Dependencies Installation Fails
+</TabItem>
+<TabItem value='dependencies-installation-fails' label='Dependencies Installation Fails'>
+
+### Issue: Dependencies Installation Fails
 
 **Symptoms**: npm install or dependency installation fails
 
@@ -261,9 +308,12 @@ on:
 
 4. Check for version conflicts in package.json
 
-#### Issue: SmartUI CLI Not Found
+</TabItem>
+<TabItem value='smartui-cli-not-found' label='SmartUI CLI Not Found'>
 
-**Symptoms**: `npx smartui` command fails with "command not found"
+### Issue: SmartUI CLI Not Found
+
+**Symptoms**: `npx smartui` command fails with command not found"
 
 **Possible Causes**:
 - Node.js not installed
@@ -297,6 +347,9 @@ If you encounter issues not covered here:
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
+</TabItem>
+</Tabs>
+
 ## Additional Resources
 
 - [SmartUI CLI Documentation](/support/docs/smartui-cli)
@@ -304,20 +357,20 @@ If you encounter issues not covered here:
 - [Project Settings](/support/docs/smartui-project-settings)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'>
         GitHub Integration
       </span>
     </li>

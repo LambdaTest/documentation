@@ -15,12 +15,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-sdk-maestro/
 site_name: LambdaTest
 slug: hyperexecute-smart-ui-sdk-maestro/
----
 
-import CodeBlock from '@theme/CodeBlock';
-import { YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY } from "@site/src/component/keys";
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -112,8 +113,12 @@ Now, let's set up the test suite to integrate with SmartUI.
 The SmartUI CLI is required to capture and upload screenshots. Install it in your project directory:
 
 ```bash
-npm i @lambdatest/smartui-cli
+npm install @lambdatest/smartui-cli
 ```
+
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
 
 #### 4.2. Add SmartUI Screenshots to Your Maestro Flow
 

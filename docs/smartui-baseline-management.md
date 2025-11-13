@@ -13,10 +13,13 @@ keywords:
 url: https://www.lambdatest.com/support/docs/smartui-baseline-management/
 site_name: LambdaTest
 slug: smartui-baseline-management/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -129,27 +132,52 @@ npx smartui --markBaseline capture urls.json
 
 ## Best Practices
 
-1. **Baseline Selection**:
-   - Choose stable builds as baselines
-   - Document baseline selection criteria
-   - Regular baseline updates
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='baseline-selection' label='Baseline Selection' default>
 
-2. **Branch Management**:
-   - Clear branch naming conventions
-   - Document branch purposes
-   - Regular branch cleanup
+### Baseline Selection
 
-3. **Build Management**:
-   - Meaningful build names
-   - Document build purposes
-   - Regular build cleanup
+- Choose stable builds as baselines
+- Document baseline selection criteria
+- Regular baseline updates
 
-4. **Approval Process**:
-   - Clear approval criteria
-   - Document approval decisions
-   - Maintain audit trail
+</TabItem>
+
+<TabItem value='branch-management' label='Branch Management'>
+
+### Branch Management
+
+- Clear branch naming conventions
+- Document branch purposes
+- Regular branch cleanup
+
+</TabItem>
+
+<TabItem value='build-management' label='Build Management'>
+
+### Build Management
+
+- Meaningful build names
+- Document build purposes
+- Regular build cleanup
+
+</TabItem>
+
+<TabItem value='approval-process' label='Approval Process'>
+
+### Approval Process
+
+- Clear approval criteria
+- Document approval decisions
+- Maintain audit trail
+
+</TabItem>
+</Tabs>
 
 ## Troubleshooting
+
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='common-issues' label='Common Issues' default>
 
 ### Common Issues
 
@@ -168,9 +196,11 @@ npx smartui --markBaseline capture urls.json
    - Check branch protection
    - Review access settings
 
-### Error Handling
+</TabItem>
 
-#### Baseline Not Found
+<TabItem value='baseline-not-found' label='Baseline Not Found'>
+
+### Baseline Not Found
 
 **Error**: Baseline branch or build does not exist
 
@@ -184,7 +214,11 @@ npx smartui --markBaseline capture urls.json
 npx smartui --baselineBranch "main" exec -- <command>
 ```
 
-#### Permission Denied
+</TabItem>
+
+<TabItem value='permission-denied' label='Permission Denied'>
+
+### Permission Denied
 
 **Error**: Insufficient permissions to set baseline
 
@@ -193,7 +227,11 @@ npx smartui --baselineBranch "main" exec -- <command>
 2. Check project settings for baseline management permissions
 3. Contact project admin for access
 
-#### Baseline Mismatch
+</TabItem>
+
+<TabItem value='baseline-mismatch' label='Baseline Mismatch'>
+
+### Baseline Mismatch
 
 **Error**: Screenshot names don't match between baseline and current build
 
@@ -201,6 +239,9 @@ npx smartui --baselineBranch "main" exec -- <command>
 1. Ensure screenshot names are consistent
 2. Check if screenshot names changed between builds
 3. Review screenshot naming conventions
+
+</TabItem>
+</Tabs>
 
 ## Visual Examples
 
@@ -312,4 +353,4 @@ Best practices for updating baselines:
 
 ### Getting Help
 
-If you encounter any issues with baseline management in SmartUI, please contact our support team at support@lambdatest.com or use the [24/7 Chat Support](https://www.lambdatest.com/support). 
+If you encounter any issues with baseline management in SmartUI, please contact our support team at support@lambdatest.com or use the [24/7 Chat Support](https://www.lambdatest.com/support).

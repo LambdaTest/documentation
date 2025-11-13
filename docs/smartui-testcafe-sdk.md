@@ -17,11 +17,13 @@ keywords:
 
 url: https://www.lambdatest.com/support/docs/smartui-testcafe-sdk/
 slug: smartui-testcafe-sdk/
----
 
+---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
 
@@ -49,7 +51,7 @@ import NewTag from '../src/component/newTag';
     }}
 ></script>
 
-Welcome to the world of simplified visual testing with the SmartUI SDK. 
+Welcome to the world of simplified visual testing with the SmartUI SDK.
 
 Integrating seamlessly into your existing Testcafe testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
 
@@ -87,39 +89,42 @@ cd smartui-testcafe-sample
 Install required NPM modules for `LambdaTest SmartUI Testcafe SDK` in your **Frontend** project.
 
 ```bash
-npm i @lambdatest/smartui-cli @lambdatest/testcafe-driver testcafe
+npm install @lambdatest/smartui-cli @lambdatest/testcafe-driver testcafe
 ```
+
+:::note
+If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
+:::
 
 ### **Step 3:** Configure your Project Token
 
-Setup your project token show in the **SmartUI** app after, creating your project.
+Setup your project token shown in the **SmartUI** app after creating your project.
 
-<Tabs className="docs__val" groupId="language">
-<TabItem value="MacOS/Linux" label="MacOS/Linux" default>
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
 export PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="Windows" label="Windows - CMD">
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
-set PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+set PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
-<TabItem value="PowerShell" label="PowerShell">
+<TabItem value='PowerShell' label='PowerShell'>
 
 ```powershell
-$env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
+$env:PROJECT_TOKEN=123456#1234abcd-****-****-****-************"
 ```
 
 </TabItem>
 </Tabs>
 
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
-
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/project-token-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ### **Step 4:** Create and Configure SmartUI Config
 
@@ -172,15 +177,11 @@ Once, the configuration file will be created, you will be seeing the default con
 - For more information about SmartUI config global options, please refer to this [documentation](/docs/smartui-sdk-config-options/#3-global-options-optional).
 :::
 
-
 ### **Step 5:** Adding SmartUI function to take screenshot
 
-- You can incorporate SmartUI into your custom `Testcafe` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of testcafe script of which we would like to take the screenshot, as shown below: 
-  
+- You can incorporate SmartUI into your custom `Testcafe` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of testcafe script of which we would like to take the screenshot, as shown below:
 
 ```js
-import { Selector } from 'testcafe';
-import { smartuiSnapshot } from '@lambdatest/testcafe-driver';
 
 fixture('Amazon Test')
   .page('https://www.lambdatest.com');
@@ -200,7 +201,7 @@ Execute `visual regression tests` on SmartUI using the following commands
 npx smartui exec testcafe chrome testcafeSDKLocal.js --config .smartui.json
 ```
 
-:::note 
+:::note
 You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
 :::
 
@@ -210,8 +211,7 @@ You have successfully integrated SmartUI SDK with your Testcafe tests. Visit you
 
 You can see the SmartUI dashboard to view the results. This will help you identify the Mismatches from the existing `Baseline` build and do the required visual testing.
 
-
-<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-sdk-results-primer.webp').default} alt="cmd" width="768" height="373" className='doc_img'/>
 
 ## Arguments supported in the `smartUISnapshot` function
 
@@ -223,15 +223,14 @@ The following are the different options which are currently supported:
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
 
-## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />** 
+## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />**
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
 
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='IgnoreID' label='Ignore ID' default>
 
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="IgnoreID" label="Ignore ID" default>
-
-```js title="This is a sample for your configuration for Testcafe to ignore by ID"
+```js title="This is a sample for your configuration for Testcafe to ignore by" ID"
 let options = {
             ignoreDOM: {
                 id: ["ID-1", "ID-2"],
@@ -241,9 +240,9 @@ let options = {
 ```
 
 </TabItem>
-<TabItem value="IgoreClass" label="Ignore Class">
+<TabItem value='IgoreClass' label='Ignore Class'>
 
-```js title="This is a sample for your configuration for Testcafe to ignore by Class"
+```js title="This is a sample for your configuration for Testcafe to ignore by" Class"
 let options = {
             ignoreDOM: {
                 class: ["Class-1", "Class-2"],
@@ -253,9 +252,9 @@ let options = {
 ```
 
 </TabItem>
-<TabItem value="IgnoreXPath" label="Ignore XPath">
+<TabItem value='IgnoreXPath' label='Ignore XPath'>
 
-```js title="This is a sample for your configuration for Testcafe to ignore by XPath"
+```js title="This is a sample for your configuration for Testcafe to ignore by" XPath"
 let options = {
             ignoreDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
@@ -266,9 +265,9 @@ let options = {
 
 </TabItem>
 
-<TabItem value="IgnoreSelector" label="Ignore CSS Selector">
+<TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
 
-```js title="This is a sample for your configuration for Testcafe to ignore by CSS Selector"
+```js title="This is a sample for your configuration for Testcafe to ignore by CSS" Selector"
 let options = {
             ignoreDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -280,10 +279,10 @@ let options = {
 
 </Tabs>
 
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="SelectID" label="Select ID" default>
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='SelectID' label='Select ID' default>
 
-```js title="This is a sample for your configuration for Testcafe to select by ID."
+```js title="This is a sample for your configuration for Testcafe to select by" ID."
 let options = {
             selectDOM: {
                 id: ["ID-1", "ID-2"],
@@ -293,9 +292,9 @@ let options = {
 ```
 
 </TabItem>
-<TabItem value="SelectClass" label="Select Class">
+<TabItem value='SelectClass' label='Select Class'>
 
-```js title="This is a sample for your configuration for Testcafe to select by Class"
+```js title="This is a sample for your configuration for Testcafe to select by" Class"
 let options = {
             selectDOM: {
                 class: ["Class-1", "Class-2"],
@@ -305,9 +304,9 @@ let options = {
 ```
 
 </TabItem>
-<TabItem value="SelectXPath" label="Select XPath">
+<TabItem value='SelectXPath' label='Select XPath'>
 
-```js title="This is a sample for your configuration for Testcafe to select by XPath"
+```js title="This is a sample for your configuration for Testcafe to select by" XPath"
 let options = {
             selectDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
@@ -318,9 +317,9 @@ let options = {
 
 </TabItem>
 
-<TabItem value="SelectSelector" label="Select CSS Selector">
+<TabItem value='SelectSelector' label='Select CSS Selector'>
 
-```js title="This is a sample for your webhook configuration for Testcafe to select by CSS Selector"
+```js title="This is a sample for your webhook configuration for Testcafe to select by CSS" Selector"
 let options = {
             selectDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -336,11 +335,10 @@ let options = {
 
 You can capture screenshots of targeted elements by leveraging various locator mechanisms such as XPath, CSS ID, class, and selectors. This precision-driven approach ensures accurate and specific visual regression testing for your web application's components.
 
+<Tabs className='docs__val' groupId='framework'>
+<TabItem value='ElementID' label='Capture Element by ID' default>
 
-<Tabs className="docs__val" groupId="framework">
-<TabItem value="ElementID" label="Capture Element by ID" default>
-
-```js title="This is a sample for your configuration for Testcafe to capture an element by ID."
+```js title="This is a sample for your configuration for Testcafe to capture an element by" ID."
 let options = {
       element: {
           id: 'Required ID',
@@ -350,9 +348,9 @@ let options = {
 ```
 
 </TabItem>
-<TabItem value="ElementClass" label="Capture Element by Class">
+<TabItem value='ElementClass' label='Capture Element by Class'>
 
-```js title="This is a sample for your configuration for Testcafe to capture an element by Class"
+```js title="This is a sample for your configuration for Testcafe to capture an element by" Class"
 let options = {
       element: {
           class: 'Required Class',
@@ -362,9 +360,9 @@ let options = {
 ```
 
 </TabItem>
-<TabItem value="ElementXPath" label="Capture Element by XPath">
+<TabItem value='ElementXPath' label='Capture Element by XPath'>
 
-```js title="This is a sample for your configuration for Testcafe to capture an element by XPath"
+```js title="This is a sample for your configuration for Testcafe to capture an element by" XPath"
 let options = {
       element: {
           xpath: 'Required Xpath',
@@ -375,9 +373,9 @@ let options = {
 
 </TabItem>
 
-<TabItem value="ElementSelector" label="Capture Element by Selector">
+<TabItem value='ElementSelector' label='Capture Element by Selector'>
 
-```js title="This is a sample for your webhook configuration for Testcafe to capture an element by CSS Selector"
+```js title="This is a sample for your webhook configuration for Testcafe to capture an element by CSS" Selector"
 let options = {
       element: {
           cssSelector: 'Required CSS Selector',
@@ -389,14 +387,11 @@ let options = {
 
 </Tabs>
 
-
 ## For capturing interactive lazy loading elements
 
 If you encounter difficulties loading interactive elements that appear on scroll in full-page screenshots, consider functionally incorporating a full-page scroll into your script before capturing the screenshot. This approach ensures the elements load first, facilitating the screenshot processing.
 
 ```js Example for scrolling to bottom for lazy elements
-import { Selector } from 'testcafe';
-import { smartuiSnapshot } from '@lambdatest/testcafe-driver';
 
 // Function to scroll through the page and then back to the top
 async function scrollToBottomAndTop(t, lastPageWait = 100) {
@@ -430,10 +425,12 @@ test('Scroll through the page, then take a smartUI Snapshot', async t => {
 
 ```
 
-
 ## Best Practices
 
-### 1. Screenshot Naming
+<Tabs className='docs__val' groupId='best-practices'>
+<TabItem value='screenshot-naming' label='Screenshot Naming' default>
+
+### Screenshot Naming
 
 - Use descriptive, consistent names for screenshots
 - Include page/component name in screenshot names
@@ -446,7 +443,10 @@ await smartuiSnapshot(t, 'HomePage-Header');
 await smartuiSnapshot(t, 'ProductPage-MainContent');
 ```
 
-### 2. Wait for Page Load
+</TabItem>
+<TabItem value='wait-for-page-load' label='Wait for Page Load'>
+
+### Wait for Page Load
 
 - Always wait for pages to fully load before taking screenshots
 - Use TestCafe's built-in wait methods for dynamic content
@@ -454,31 +454,39 @@ await smartuiSnapshot(t, 'ProductPage-MainContent');
 
 **Example:**
 ```javascript
-import { Selector } from 'testcafe';
 
 fixture `Page Test`
     .page `https://example.com`;
 
-test('Take screenshot after page loads', async t => {
+test('Take screenshot after page loads', async t ="> {
     await t.expect(Selector('#main-content').exists).ok();
     await t.wait(1000); // Wait for animations
     await smartuiSnapshot(t, 'Page Loaded');
 });
 ```
 
-### 3. Handle Dynamic Content
+</TabItem>
+<TabItem value='handle-dynamic-content' label='Handle Dynamic Content'>
+
+### Handle Dynamic Content
 
 - Use `ignoreDOM` for elements that change between runs
 - Use `selectDOM` when you only need to compare specific areas
 - Document why elements are ignored for future reference
 
-### 4. Configuration Management
+</TabItem>
+<TabItem value='configuration-management' label='Configuration Management'>
+
+### Configuration Management
 
 - Keep `.smartui.json` in version control
 - Use environment variables for sensitive data
 - Document custom configuration choices
 
-### 5. Test Organization
+</TabItem>
+<TabItem value='test-organization' label='Test Organization'>
+
+### Test Organization
 
 - Group related screenshots in the same build
 - Use meaningful build names
@@ -486,9 +494,10 @@ test('Take screenshot after page loads', async t => {
 
 ## Troubleshooting
 
-### Common Issues
+<Tabs className='docs__val' groupId='troubleshooting'>
+<TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>
 
-#### Issue: Screenshots Not Appearing in Dashboard
+### Issue: Screenshots Not Appearing in Dashboard
 
 **Symptoms**: Tests run successfully but no screenshots appear in SmartUI dashboard
 
@@ -515,7 +524,10 @@ test('Take screenshot after page loads', async t => {
 
 5. Review test execution logs for error messages
 
-#### Issue: "Project Not Found" Error
+</TabItem>
+<TabItem value='project-not-found-error' label='Project Not Found Error'>
+
+### Issue: Project Not Found" Error
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -530,7 +542,10 @@ test('Take screenshot after page loads', async t => {
 3. Ensure token includes the project ID prefix (e.g., `123456#...`)
 4. Check for extra spaces or quotes in token
 
-#### Issue: Screenshots Show Blank or Incorrect Content
+</TabItem>
+<TabItem value='screenshots-show-blank-or-incorrect-content' label='Screenshots Show Blank or Incorrect Content'>
+
+### Issue: Screenshots Show Blank or Incorrect Content
 
 **Symptoms**: Screenshots captured but show blank pages or incorrect content
 
@@ -551,7 +566,7 @@ test('Take screenshot after page loads', async t => {
 2. Enable JavaScript in configuration:
    ```json
    {
-     "enableJavaScript": true
+     enableJavaScript": true
    }
    ```
 
@@ -559,7 +574,10 @@ test('Take screenshot after page loads', async t => {
 
 4. Verify viewport size matches expected dimensions
 
-#### Issue: Build Execution Fails
+</TabItem>
+<TabItem value='build-execution-fails' label='Build Execution Fails'>
+
+### Issue: Build Execution Fails
 
 **Symptoms**: `npx smartui exec` command fails
 
@@ -574,11 +592,14 @@ test('Take screenshot after page loads', async t => {
 2. Check configuration file syntax
 3. Try different port if default is in use:
    ```bash
-   npx smartui exec -P 5000 -- <command>
+   npx smartui exec -P 5000 -- <command">
    ```
 4. Check file permissions for configuration and project files
 
-#### Issue: npm Dependencies Not Resolving
+</TabItem>
+<TabItem value='npm-dependencies-not-resolving' label='npm Dependencies Not Resolving'>
+
+### Issue: npm Dependencies Not Resolving
 
 **Symptoms**: npm cannot find `@lambdatest/testcafe-driver` or `@lambdatest/smartui-cli`
 
@@ -603,9 +624,12 @@ test('Take screenshot after page loads', async t => {
 
 4. Check package.json for version conflicts
 
-#### Issue: Screenshot Names Not Matching Baseline
+</TabItem>
+<TabItem value='screenshot-names-not-matching-baseline' label='Screenshot Names Not Matching Baseline'>
 
-**Symptoms**: Screenshots appear as "New" instead of comparing with baseline
+### Issue: Screenshot Names Not Matching Baseline
+
+**Symptoms**: Screenshots appear as New" instead of comparing with baseline
 
 **Possible Causes**:
 - Screenshot name changed
@@ -628,6 +652,9 @@ If you encounter issues not covered here:
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
+</TabItem>
+</Tabs>
+
 ## Additional Resources
 
 - [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide)
@@ -638,21 +665,41 @@ If you encounter issues not covered here:
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-
-<nav aria-label="breadcrumbs">
-  <ul className="breadcrumbs">
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
         Home
       </a>
     </li>
-    <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
         Support
       </a>
     </li>
-    <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link"> SmartUI TestCafe SDK </span>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'> SmartUI TestCafe SDK </span>
+    </li>
+  </ul>
+</nav>
+
+</TabItem>
+</Tabs>
+
+<nav aria-label='breadcrumbs'>
+  <ul className='breadcrumbs'>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+        Home
+      </a>
+    </li>
+    <li className='breadcrumbs__item'>
+      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+        Support
+      </a>
+    </li>
+    <li className='breadcrumbs__item breadcrumbs__item--active'>
+      <span className='breadcrumbs__link'> SmartUI TestCafe SDK </span>
     </li>
   </ul>
 </nav>
