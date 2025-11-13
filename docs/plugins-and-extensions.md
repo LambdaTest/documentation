@@ -92,9 +92,6 @@ LambdaTest offers you plugins with various third-party application to help you p
 <a href="/support/docs/xcode-plugin-lambdatest/">LambdaMax XCode Plugin</a>
 </div>
 
-<div className="download_btn mb-10">
-<a href="/support/docs/android-studio-plugin-lambdroid/">LambDroid Espresso Plugin</a>
-</div>
 
 <div className="download_btn mb-10">
 <a href="/support/docs/docker-tunnel-extension/">LambdaTest Docker Tunnel Extension</a>
