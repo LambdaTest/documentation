@@ -105,20 +105,11 @@ desired_caps = {
 ## Step 3: Control Audio in Test
 Inject the uploaded audio file from LambdaTest into the recorder or app when you are at the dedicated space for microphone input.
 
-**Inject / Replace File**
+**Inject File**
 ```python
-driver.execute_script('lambda-audio: {"action":"inject","arguments":{"media_url":"lt://MEDIA123..."}}')
+driver.execute_script("lambda-audio-injection=lt://MEDIA123...")
 ```
 
-**Start Audio**
-```python
-driver.execute_script('lambda-audio: {"action":"start"}')
-```
-
-**Stop Audio**
-```python
-driver.execute_script('lambda-audio: {"action":"stop"}')
-```
 :::note
 The injected audio can come from a standalone audio file **or** from the audio track of a recorded video.
 :::

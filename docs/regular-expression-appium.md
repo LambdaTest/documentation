@@ -44,11 +44,17 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
     }}
 ></script>
 
-<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
+<RealDeviceTag value="Real Device" /> 
 
 Regular Expressions (RegEx) are powerful tools for searching and manipulating strings. When running tests on LambdaTest with a specific device, there may be times when the exact device you selected isn't available. In such cases, RegEx will help you widen your search criteria to find any available device that matches your requirements.
 
+
 LambdaTest provides RegEx support for both **deviceName** and **platformVersion**, making it easier to find the right devices for your tests.
+
+:::info
+**Note:** Regular Expression support is currently available **only for App Automation**.  
+It is **not supported for Web Automation on Virtual Devices** at this time.
+:::
 
 ## Why Use RegEx?
 
