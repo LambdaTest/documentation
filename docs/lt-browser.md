@@ -117,7 +117,7 @@ To get started, you need to download the executable file from here.
 >*   [Network Throttling To Test Website Responsiveness](https://www.lambdatest.com/support/docs/network-throttling-for-responsive-testing/)
 >*   [What Is Scroll Sync In LT Browser?](https://www.lambdatest.com/support/docs/scroll-sync/)
 >*   [Capturing Full-Page Screenshots Of Your Websites](https://www.lambdatest.com/support/docs/full-page-screenshots/)
->*   [Using Mouse Pointer For Touch Mode](https://www.lambdatest.com/support/docs/mouse-pointer-for-touch-mode/)
+>*   Using Mouse Pointer For Touch Mode
 >*   [Getting The JavaScript Error Report Of Your Website](https://www.lambdatest.com/support/docs/error-reports/)
 >*   What Is LT Browser Feedback Board?
 >*   Keyboard Shortcuts
