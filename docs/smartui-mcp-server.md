@@ -50,13 +50,11 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ***
 The SmartUI  MCP Server allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis. It is built on [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) and connects to the LambdaTest SmartUI infrastructure via `comparisonId`.
 
-<!-- Get a comprehensive overview of HyperExecute's capabilities by watching our introductory video.
-
-<div className='ytframe'>
-<div className='youtube' data-embed="tLe5VPcGDxs">
-    <div className='play-button'></div>
+<div className="ytframe"> 
+<div className="youtube" data-embed="2Z5F52XxSxQ" data-loading-attribute="eager">
+  <div className="play-button"></div>
 </div>
-</div> -->
+</div>
 
 ## How Does It Work?​
 
