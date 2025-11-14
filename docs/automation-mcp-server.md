@@ -48,13 +48,11 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 Automation MCP Server simplifies test failure triaging for all automation test cases executed on LambdaTest. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your test execution data on LambdaTest—significantly reducing triage and troubleshooting time.
 
 
-<!-- Get a comprehensive overview of HyperExecute's capabilities by watching our introductory video.
-
 <div className="ytframe"> 
-<div className="youtube" data-embed="tLe5VPcGDxs">
+<div className="youtube" data-embed="AZMoC_DqUZE" data-loading-attribute="eager">
     <div className="play-button"></div>
 </div>
-</div> -->
+</div>
 
 ## What is Model Context Protocol (MCP)?
 The Model Context Protocol (MCP) acts like a “USB-C for AI integrations,” creating a universal language between AI models and applications. This standardized interface allows AI assistants to connect with diverse software tools, making it much easier to expand capabilities across your digital workflow.
