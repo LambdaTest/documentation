@@ -37,6 +37,12 @@ slug: tunnel-release-notes/
       })
     }}
 ></script>
+## Version 3.2.23 (16th Nov 2025)
+- **Security Updates and Stability Fixes**
+  - Implemented critical security updates
+  - TCP connection mode improvements
+  - TCP mode(with TLS 1.2+) is now the default connection mode.
+
 ## Version 3.2.22 (2nd Nov 2025)
 - **Security Updates and Stability Fixes**
   - Implemented critical security updates
