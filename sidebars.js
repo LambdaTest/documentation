@@ -71,7 +71,7 @@ module.exports = {
       {
         type: "category",
         collapsed: true,
-        label: "HyperExecute GUI App",
+        label: "HyperExecute CLI Web View",
         link: {
           type: "doc",
           id: "hyperexecute-cli-gui",
