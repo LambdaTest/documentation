@@ -145,7 +145,7 @@ The tunnel configuration automatically uses the following environment variables 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='automatic-vs-manual-mode' label='Automatic vs Manual Mode' default>
 
-### Automatic vs Manual Mode
+**Automatic vs Manual Mode**
 
 - Use automatic mode for simple setups and quick testing
    - Use manual mode when you need more control over tunnel lifecycle
@@ -153,7 +153,7 @@ The tunnel configuration automatically uses the following environment variables 
 </TabItem>
 <TabItem value='credentials-management' label='Credentials Management' >
 
-### Credentials Management
+**Credentials Management**
 
 - Prefer environment variables for sensitive information
    - Use config file for non-sensitive settings
@@ -161,7 +161,7 @@ The tunnel configuration automatically uses the following environment variables 
 </TabItem>
 <TabItem value='proxy-configuration' label='Proxy Configuration' >
 
-### Proxy Configuration
+**Proxy Configuration**
 
 - Specify proxy settings in config when using corporate networks
    - Test proxy settings before running full test suite
@@ -169,7 +169,7 @@ The tunnel configuration automatically uses the following environment variables 
 </TabItem>
 <TabItem value='logging' label='Logging' >
 
-### Logging
+**Logging**
 
 - Enable verbose logging (`"v": true`) for troubleshooting
    - Specify custom log file location for persistent logs
@@ -177,7 +177,7 @@ The tunnel configuration automatically uses the following environment variables 
 </TabItem>
 <TabItem value='directory-testing' label='Directory Testing' >
 
-### Directory Testing
+**Directory Testing**
 
 - Always specify the directory to test when working with local files
    - Ensure the directory path is accessible and contains the necessary files

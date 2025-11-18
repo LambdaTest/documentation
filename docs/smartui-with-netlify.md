@@ -107,7 +107,7 @@ Your changes will be triggered and deployed.
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='project-naming' label='Project Naming' default>
 
-### Project Naming
+**Project Naming**
 
 - Use descriptive, consistent names for SmartUI projects
 - Match project names with your Netlify site names for easy identification
@@ -117,7 +117,7 @@ Your changes will be triggered and deployed.
 </TabItem>
 <TabItem value='baseline-management' label='Baseline Management'>
 
-### Baseline Management
+**Baseline Management**
 
 - Establish baseline from stable deployment
 - Review baseline before using for comparisons
@@ -127,7 +127,7 @@ Your changes will be triggered and deployed.
 </TabItem>
 <TabItem value='deployment-strategy' label='Deployment Strategy'>
 
-### Deployment Strategy
+**Deployment Strategy**
 
 - Deploy baseline before making changes
 - Test changes in staging before production
@@ -137,7 +137,7 @@ Your changes will be triggered and deployed.
 </TabItem>
 <TabItem value='integration-configuration' label='Integration Configuration'>
 
-### Integration Configuration
+**Integration Configuration**
 
 - Keep LambdaTest credentials secure
 - Use Netlify's environment variables for credentials
@@ -147,7 +147,7 @@ Your changes will be triggered and deployed.
 </TabItem>
 <TabItem value='comparison-workflow' label='Comparison Workflow'>
 
-### Comparison Workflow
+**Comparison Workflow**
 
 - Review visual differences carefully
 - Approve intentional changes promptly
@@ -157,7 +157,7 @@ Your changes will be triggered and deployed.
 </TabItem>
 <TabItem value='comparison-workflow-1' label='Comparison Workflow'>
 
-### Comparison Workflow
+**Comparison Workflow**
 
 - Review visual differences carefully
 - Approve intentional changes promptly
@@ -172,7 +172,7 @@ Your changes will be triggered and deployed.
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>
 
-### Issue: Screenshots Not Appearing in Dashboard
+**Issue: Screenshots Not Appearing in Dashboard**
 
 **Symptoms**: Deployments complete but no screenshots appear in SmartUI dashboard
 
@@ -201,7 +201,7 @@ Your changes will be triggered and deployed.
 </TabItem>
 <TabItem value='project-not-found-error' label='Project Not Found Error'>
 
-### Issue: Project Not Found" Error
+**Issue: Project Not Found" Error**
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -225,7 +225,7 @@ Your changes will be triggered and deployed.
 </TabItem>
 <TabItem value='integration-not-triggering' label='Integration Not Triggering'>
 
-### Issue: Integration Not Triggering
+**Issue: Integration Not Triggering**
 
 **Symptoms**: Deployments don't trigger SmartUI comparisons
 
@@ -254,7 +254,7 @@ Your changes will be triggered and deployed.
 </TabItem>
 <TabItem value='baseline-not-set-correctly' label='Baseline Not Set Correctly'>
 
-### Issue: Baseline Not Set Correctly
+**Issue: Baseline Not Set Correctly**
 
 **Symptoms**: Comparisons show unexpected differences or baseline issues
 
@@ -281,7 +281,7 @@ Your changes will be triggered and deployed.
 </TabItem>
 <TabItem value='comparison-results-unexpected' label='Comparison Results Unexpected'>
 
-### Issue: Comparison Results Unexpected
+**Issue: Comparison Results Unexpected**
 
 **Symptoms**: Visual differences don't match expected changes
 
@@ -308,7 +308,7 @@ Your changes will be triggered and deployed.
    - Check pixel threshold settings
    - Adjust comparison settings if needed
 
-### Getting Help
+**Getting Help**
 
 If you encounter issues not covered here:
 

@@ -184,7 +184,7 @@ SmartUI handles standard HTML5 video elements:
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='allow-video-loading' label='Allow Video Loading' default>
 
-### Allow Video Loading
+**Allow Video Loading**
 
 Use appropriate `waitForTimeout` values to ensure videos are loaded before snapshots.
 
@@ -192,7 +192,7 @@ Use appropriate `waitForTimeout` values to ensure videos are loaded before snaps
 
 <TabItem value='test-video-pages' label='Test Video Pages'>
 
-### Test Video Pages
+**Test Video Pages**
 
 Verify that video pages work correctly with SmartUI before running full test suites.
 
@@ -200,7 +200,7 @@ Verify that video pages work correctly with SmartUI before running full test sui
 
 <TabItem value='combine-with-other-features' label='Combine with Other Features'>
 
-### Combine with Other Features
+**Combine with Other Features**
 
 Use `ignoreDOM` to exclude video controls if needed.
 
@@ -208,7 +208,7 @@ Use `ignoreDOM` to exclude video controls if needed.
 
 <TabItem value='document-video-content' label='Document Video Content'>
 
-### Document Video Content
+**Document Video Content**
 
 Note which pages contain videos for better test planning.
 
@@ -216,7 +216,7 @@ Note which pages contain videos for better test planning.
 
 <TabItem value='review-first-frames' label='Review First Frames'>
 
-### Review First Frames
+**Review First Frames**
 
 Occasionally review captured first frames to ensure they represent the intended baseline.
 
@@ -228,7 +228,7 @@ Occasionally review captured first frames to ensure they represent the intended 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='videos-not-captured-correctly' label='Videos Not Captured Correctly' default>
 
-### Issue: Videos Not Captured Correctly
+**Issue: Videos Not Captured Correctly**
 
 **Symptoms**: Video areas appear blank or incorrect in snapshots
 
@@ -247,7 +247,7 @@ await smartuiSnapshot(driver, 'Video Page');
 </TabItem>
 <TabItem value='false-positives-from-video-areas' label='False Positives from Video Areas' >
 
-### Issue: False Positives from Video Areas
+**Issue: False Positives from Video Areas**
 
 **Symptoms**: Video areas show differences even when page design is unchanged
 
@@ -259,7 +259,7 @@ await smartuiSnapshot(driver, 'Video Page');
 </TabItem>
 <TabItem value='embedded-videos-youtube-vimeo' label='Embedded Videos (YouTube, Vimeo)' >
 
-### Issue: Embedded Videos (YouTube, Vimeo)
+**Issue: Embedded Videos (YouTube, Vimeo)**
 
 **Symptoms**: Embedded videos via iframe may not be captured correctly
 

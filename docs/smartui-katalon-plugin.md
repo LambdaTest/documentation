@@ -189,7 +189,7 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='server-management' label='Server Management' default>
 
-### Server Management
+**Server Management**
 
 - Always include `startServer()` before taking screenshots and `stopServer()` after.
 
@@ -197,7 +197,7 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 
 <TabItem value='snapshot-naming' label='Snapshot Naming'>
 
-### Snapshot Naming
+**Snapshot Naming**
 
 - Use descriptive snapshot names for easy identification in SmartUI.
 
@@ -205,7 +205,7 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 
 <TabItem value='ci-cd-integration' label='CI/CD Integration'>
 
-### CI/CD Integration
+**CI/CD Integration**
 
 - For CI/CD pipelines, set `PROJECT_TOKEN` as an environment variable in your CI tool (Jenkins, GitHub Actions, etc.).
 
@@ -213,7 +213,7 @@ CustomKeywords.'com.katalon.plugin.keyword.smartui.SmartKeywords.startServer'('B
 
 <TabItem value='reporting' label='Reporting'>
 
-### Reporting
+**Reporting**
 
 - Combine with Katalon's built-in reporting for comprehensive test insights.
 

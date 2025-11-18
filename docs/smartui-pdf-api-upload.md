@@ -124,7 +124,7 @@ The API will return a JSON response containing:
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='file-management' label='PDF File Management' default>
 
-### PDF File Management
+**PDF File Management**
 
 - Use consistent naming conventions for PDF files
 - Organize PDFs in logical directory structures
@@ -135,7 +135,7 @@ The API will return a JSON response containing:
 
 <TabItem value='token-management' label='Project Token Management'>
 
-### Project Token Management
+**Project Token Management**
 
 - Store project token as environment variable
 - Never commit tokens to version control
@@ -146,7 +146,7 @@ The API will return a JSON response containing:
 
 <TabItem value='build-naming' label='Build Naming'>
 
-### Build Naming
+**Build Naming**
 
 - Use meaningful build names that include version info
 - Include date or version in build names
@@ -161,7 +161,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 
 <TabItem value='error-handling' label='Error Handling'>
 
-### Error Handling
+**Error Handling**
 
 - Always check API response status
 - Handle network failures gracefully
@@ -172,7 +172,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 
 <TabItem value='batch-processing' label='Batch Processing'>
 
-### Batch Processing
+**Batch Processing**
 
 - Process PDFs in batches for efficiency
 - Monitor upload progress
@@ -187,7 +187,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>
 
-### Issue: PDF Upload Fails
+**Issue: PDF Upload Fails**
 
 **Symptoms**: PDF upload returns error or fails silently
 
@@ -210,7 +210,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 </TabItem>
 <TabItem value='project-not-found-error' label='Project Not Found Error'>
 
-### Issue: "Project Not Found" Error
+**Issue: "Project Not Found" Error**
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -228,7 +228,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 </TabItem>
 <TabItem value='upload-returns-error-response' label='Upload Returns Error Response'>
 
-### Issue: Upload Returns Error Response
+**Issue: Upload Returns Error Response**
 
 **Symptoms**: API returns error status or failure message
 
@@ -248,7 +248,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 </TabItem>
 <TabItem value='pdfs-not-appearing-in-dashboard' label='PDFs Not Appearing in Dashboard'>
 
-### Issue: PDFs Not Appearing in Dashboard
+**Issue: PDFs Not Appearing in Dashboard**
 
 **Symptoms**: Uploads complete but PDFs don't appear in SmartUI dashboard
 
@@ -265,7 +265,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 4. Check upload response for errors
 5. Review API response for upload status
 
-### Getting Help
+**Getting Help**
 
 If you encounter issues not covered here:
 

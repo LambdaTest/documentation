@@ -466,7 +466,7 @@ if __name__ == "__main__":
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
 
-### Screenshot Naming
+**Screenshot Naming**
 
 - Use descriptive, consistent names for screenshots
 - Include page/component name in screenshot names
@@ -483,7 +483,7 @@ smartui_snapshot(driver, "ProductPage-MainContent")
 
 <TabItem value='page-load' label='Wait for Page Load'>
 
-### Wait for Page Load
+**Wait for Page Load**
 
 - Always wait for pages to fully load before taking screenshots
 - Use Selenium's WebDriverWait for dynamic content
@@ -505,7 +505,7 @@ smartui_snapshot(driver, "Page Loaded")
 
 <TabItem value='dynamic-content' label='Handle Dynamic Content'>
 
-### Handle Dynamic Content
+**Handle Dynamic Content**
 
 - Use `ignoreDOM` for elements that change between runs
 - Use `selectDOM` when you only need to compare specific areas
@@ -515,7 +515,7 @@ smartui_snapshot(driver, "Page Loaded")
 
 <TabItem value='configuration' label='Configuration Management'>
 
-### Configuration Management
+**Configuration Management**
 
 - Keep `.smartui.json` in version control
 - Use environment variables for sensitive data
@@ -525,7 +525,7 @@ smartui_snapshot(driver, "Page Loaded")
 
 <TabItem value='test-organization' label='Test Organization'>
 
-### Test Organization
+**Test Organization**
 
 - Group related screenshots in the same build
 - Use meaningful build names
@@ -539,7 +539,7 @@ smartui_snapshot(driver, "Page Loaded")
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>
 
-### Issue: Screenshots Not Appearing in Dashboard
+**Issue: Screenshots Not Appearing in Dashboard**
 
 **Symptoms**: Tests run successfully but no screenshots appear in SmartUI dashboard
 
@@ -569,7 +569,7 @@ smartui_snapshot(driver, "Page Loaded")
 </TabItem>
 <TabItem value='project-not-found-error' label='Project Not Found Error'>
 
-### Issue: "Project Not Found" Error
+**Issue: "Project Not Found" Error**
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -587,7 +587,7 @@ smartui_snapshot(driver, "Page Loaded")
 </TabItem>
 <TabItem value='screenshots-show-blank-or-incorrect-content' label='Screenshots Show Blank or Incorrect Content'>
 
-### Issue: Screenshots Show Blank or Incorrect Content
+**Issue: Screenshots Show Blank or Incorrect Content**
 
 **Symptoms**: Screenshots captured but show blank pages or incorrect content
 
@@ -623,7 +623,7 @@ smartui_snapshot(driver, "Page Loaded")
 </TabItem>
 <TabItem value='build-execution-fails' label='Build Execution Fails'>
 
-### Issue: Build Execution Fails
+**Issue: Build Execution Fails**
 
 **Symptoms**: `npx smartui exec` command fails
 
@@ -645,7 +645,7 @@ smartui_snapshot(driver, "Page Loaded")
 </TabItem>
 <TabItem value='pip-dependencies-not-resolving' label='pip Dependencies Not Resolving'>
 
-### Issue: pip Dependencies Not Resolving
+**Issue: pip Dependencies Not Resolving**
 
 **Symptoms**: pip cannot find `lambdatest-selenium-driver` or package installation fails
 
@@ -683,7 +683,7 @@ smartui_snapshot(driver, "Page Loaded")
 </TabItem>
 <TabItem value='screenshot-names-not-matching-baseline' label='Screenshot Names Not Matching Baseline'>
 
-### Issue: Screenshot Names Not Matching Baseline
+**Issue: Screenshot Names Not Matching Baseline**
 
 **Symptoms**: Screenshots appear as "New" instead of comparing with baseline
 
@@ -698,7 +698,7 @@ smartui_snapshot(driver, "Page Loaded")
 3. Avoid special characters in screenshot names
 4. Check for case sensitivity issues
 
-### Getting Help
+**Getting Help**
 
 If you encounter issues not covered here:
 

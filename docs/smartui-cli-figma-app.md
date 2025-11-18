@@ -147,7 +147,7 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='build-names' label='Build Names' default>
 
-### Build Names
+**Build Names**
 
 ```bash
    npx smartui upload-figma-app designs.json --buildName "v1.0.0"
@@ -156,7 +156,7 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 </TabItem>
 <TabItem value='screenshot-names' label='Screenshot Names' >
 
-### Screenshot Names
+**Screenshot Names**
 
 - Good: `homepage-screen`, `login-form`, `dashboard-tab`
    - Avoid: `test1`, `screenshot`, `design-1`
@@ -165,9 +165,9 @@ You can see the SmartUI dashboard to view the results. This will help you identi
 </TabItem>
 <TabItem value='device-names' label='Device Names' >
 
-### Device Names
+**Device Names**
 
-### Screenshot Naming for SDK Comparisons
+**Screenshot Naming for SDK Comparisons**
 
 **Critical**: When comparing Figma designs with app screenshots captured via SDKs, add `.png` extension to your SDK screenshot names.
 
@@ -208,9 +208,9 @@ This ensures that Figma screenshots (e.g., `homepage.png`) match app screenshots
 </TabItem>
 <TabItem value='device-names-1' label='Device Names' >
 
-### Device Names
+**Device Names**
 
-### Screenshot Naming for SDK Comparisons
+**Screenshot Naming for SDK Comparisons**
 
 **Critical**: When comparing Figma designs with app screenshots captured via SDKs, add `.png` extension to your SDK screenshot names.
 
