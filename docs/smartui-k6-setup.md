@@ -297,7 +297,10 @@ await smartuiSnapshot(page, Page Loaded");
 - Use meaningful build names
 - Run tests in consistent environments
 
-**Troubleshooting**
+</TabItem>
+</Tabs>
+
+## Troubleshooting
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>
@@ -499,9 +502,6 @@ For additional information about K6 framework please explore the documentation [
     </li>
   </ul>
 </nav>
-
-</TabItem>
-</Tabs>
 
 ## Advanced Options for Screenshot Comparison
 

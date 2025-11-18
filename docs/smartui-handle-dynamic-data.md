@@ -528,12 +528,11 @@ await smartuiSnapshot(driver, 'Article Page', options);
 6. **Use Data Attributes**: Add `data-testid` attributes to elements you need to target for better test stability.
 
 </TabItem>
+</Tabs>
 
-<TabItem value='troubleshooting' label='Troubleshooting'>
+## Troubleshooting
 
-**Troubleshooting**
-
-<Tabs className='docs__val' groupId='troubleshooting-inner'>
+<Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='elements-not-being-ignored' label='Elements Not Being Ignored' default>
 
 **Issue: Elements Not Being Ignored**
@@ -588,9 +587,6 @@ await smartuiSnapshot(driver, 'Page', options);
 1. Review the diff to identify missed dynamic elements
 2. Add more selectors to ignoreDOM
 3. Increase wait times or use explicit waits
-
-</TabItem>
-</Tabs>
 
 </TabItem>
 </Tabs>
