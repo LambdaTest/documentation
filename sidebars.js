@@ -3246,11 +3246,6 @@ module.exports = {
                 items: [
                       {
                         type: "doc",
-                        label: "Appium SDK",
-                        id: "smartui-appium-sdk",
-                      },
-                      {
-                        type: "doc",
                         label: "Appium Java SDK",
                         id: "smartui-appium-java-sdk",
                       },
