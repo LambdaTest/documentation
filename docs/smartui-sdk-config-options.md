@@ -100,15 +100,15 @@ The SmartUI configuration file follows a JSON structure. Below is a sample confi
 <Tabs className='docs__val' groupId='config-options'>
 <TabItem value='web' label='Web Configuration' default>
 
-### browsers
+**browsers**
 
 An array of browsers to capture screenshots from. Supported browsers include `chrome`, `firefox`, `safari`, and `edge`.
 
-### viewports
+**viewports**
 
 An array of arrays representing different screen resolutions for web browsers. Each inner array contains viewport sizes. Each web viewport is automatically rendered for each of the browser mentioned in the config.
 
-#### For capturing fullpage screenshots
+**For capturing fullpage screenshots**
 
 To capture a screenshot of the entire page, you only need to define the viewport width in your configuration settings. Specify the desired width parameters as demonstrated in the following example to ensure a fullpage capture.
 
@@ -126,7 +126,7 @@ To capture a screenshot of the entire page, you only need to define the viewport
     ],
 ```
 
-#### For capturing viewport screenshots
+**For capturing viewport screenshots**
 
 To capture a screenshot of the content currently visible in your viewport, rather than the entire page, it's important to define the viewport's width and height in your configuration settings. Specify the desired width and height parameters as demonstrated in the following example to ensure that the screenshot encompasses only the viewport area.
 
@@ -151,7 +151,7 @@ To capture a screenshot of the content currently visible in your viewport, rathe
 
 <TabItem value='mobile' label='Mobile Configuration'>
 
-### devices
+**devices**
 
 An array of mobile devices to capture screenshots from. List of supported device names can be found [here](#list-of-supported-device-viewports).
 
@@ -160,11 +160,11 @@ An array of mobile devices to capture screenshots from. List of supported device
  SmartUI SDK will soon be supported simulation in case of iOS devices.
 :::
 
-### fullPage
+**fullPage**
 
 Specifies whether to capture full-page screenshots for mobile devices. <b>By default</b>, `fullPage` is taken as <b>true</b>; set it to `false` in order to take a viewport screenshot on a mobile viewport.
 
-### orientation
+**orientation**
 
 Specifies the orientation of the mobile device. You can choose from `portrait` or `landscape` according to your usecase. <b>By default</b>, the orientation is taken as <b>portrait</b>.
 
@@ -172,19 +172,19 @@ Specifies the orientation of the mobile device. You can choose from `portrait` o
 
 <TabItem value='global' label='Global Options'>
 
-### waitForPageRender
+**waitForPageRender**
 
 If one or more URLs in your script require a relatively higher amount of time to load, you may use the `waitForPageRender` key in the config file to make sure the screenshots are rendered correctly. Avoid using the same in case your websites render in less than 30 seconds as it might increase the execution time of your tests.
 
-### waitForTimeout
+**waitForTimeout**
 
 If you are using any async components, you can add wait time for the page to load the DOM of your components. This can help avoid false-positive results for your tests. You can add the wait time in milliseconds, which might increase the execution time of your tests.
 
-### enableJavaScript
+**enableJavaScript**
 
 The `enableJavaScript` option is a boolean parameter that determines whether JavaScript is enabled for all snapshots within the project. Enabling JavaScript may lead to side-effects such as animations or redirects, potentially affecting the reliability of your snapshots.  <b>By default</b>, this option is set to <b>false.</b>
 
-### allowedHostnames
+**allowedHostnames**
 
 The `allowedHostnames` option controls the capture of assets from specific hostnames. By default, the SmartUI SDK only captures assets that match the hostname of the snapshot location. For instance, if snapshots are taken on `https://xyz.com`, assets hosted on `https://cdn.xyz.com` will not be captured. To include assets from other hostnames, each additional hostname needs to be added to the allowedHostnames configuration.
 
@@ -192,7 +192,7 @@ The `allowedHostnames` option controls the capture of assets from specific hostn
 
 <TabItem value='devices' label='Supported Devices'>
 
-## List of supported Device viewports
+**List of supported Device viewports**
 
 | IOS Devices            | Android Devices             |
 |------------------|------------------------|

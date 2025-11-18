@@ -94,11 +94,11 @@ All four annotation methods are accessible from the same **Actions** button (ann
 <Tabs className='docs__val' groupId='annotation-methods'>
 <TabItem value='ignore-region' label='Ignore Region' default>
 
-### What is Ignore Region?
+**What is Ignore Region?**
 
 **Ignore Region** excludes specific areas from visual comparison. Ideal for dynamic content that changes frequently but isn't critical to your visual tests, such as timestamps, notification badges, or advertisements.
 
-### When to Use
+**When to Use**
 
 - Ignoring notification counters that change frequently
 - Excluding advertisement banners
@@ -106,7 +106,7 @@ All four annotation methods are accessible from the same **Actions** button (ann
 - Hiding dynamic user-generated content
 - Excluding non-critical UI elements that vary between builds
 
-### How to Use
+**How to Use**
 
 **Step 1:** Click on the **Actions** button (annotation icon) to open the annotation tool.
 
@@ -126,7 +126,7 @@ All four annotation methods are accessible from the same **Actions** button (ann
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/annotation-tool/resultofignoreregion.png').default} alt="Result of ignore region" width="1366" height="636" className='doc_img'/>
 
-### Example
+**Example**
 
 Ignoring a "Last updated" timestamp in a dashboard that changes with each page load.
 
@@ -134,11 +134,11 @@ Ignoring a "Last updated" timestamp in a dashboard that changes with each page l
 
 <TabItem value='select-region' label='Select Region'>
 
-### What is Select Region?
+**What is Select Region?**
 
 **Select Region** focuses visual comparison on specific areas of your screenshot. Only the selected regions will be compared, while everything else is automatically ignored. This is useful when you want to test only critical UI components.
 
-### When to Use
+**When to Use**
 
 - Testing only the main content area
 - Focusing on specific form fields
@@ -146,7 +146,7 @@ Ignoring a "Last updated" timestamp in a dashboard that changes with each page l
 - Isolating header or footer sections
 - Testing specific widgets or components in isolation
 
-### How to Use
+**How to Use**
 
 **Step 1:** Click on the **Actions** button (annotation icon) to open the annotation tool.
 
@@ -160,7 +160,7 @@ Ignoring a "Last updated" timestamp in a dashboard that changes with each page l
 
 > **Note:** You can define multiple select regions. All selected regions will be compared, and everything outside these regions will be ignored.
 
-### Example
+**Example**
 
 Testing only the checkout form while ignoring the rest of the page, including header, footer, and sidebar elements.
 
@@ -168,7 +168,7 @@ Testing only the checkout form while ignoring the rest of the page, including he
 
 <TabItem value='floating-region' label='Floating Region'>
 
-### What is Floating Region?
+**What is Floating Region?**
 
 **Floating Region** handles elements that move or shift position within a defined boundary. This feature uses two regions:
 - **Blue Region:** Defines the boundary where the element might move to (the floating area)
@@ -176,7 +176,7 @@ Testing only the checkout form while ignoring the rest of the page, including he
 
 Perfect for handling dynamic elements that may appear in different positions but should be tested for content consistency.
 
-### When to Use
+**When to Use**
 
 - Testing notification badges that may appear in different positions
 - Handling tooltips or popovers that can move
@@ -184,7 +184,7 @@ Perfect for handling dynamic elements that may appear in different positions but
 - Comparing elements that shift based on content length
 - Handling dropdown menus or modals that may appear in different locations
 
-### How to Use
+**How to Use**
 
 **Step 1:** Click on the **Actions** button (annotation icon) to open the annotation tool.
 
@@ -204,7 +204,7 @@ Perfect for handling dynamic elements that may appear in different positions but
 
 > **Tip:** Make the blue region large enough to encompass all possible positions of the element, and keep the yellow region focused on the specific element you want to test.
 
-### Example
+**Example**
 
 Testing a notification badge that may appear in different positions based on content length or screen size.
 
@@ -212,11 +212,11 @@ Testing a notification badge that may appear in different positions based on con
 
 <TabItem value='ignore-colors' label='Ignore Colors'>
 
-### What is Ignore Colors?
+**What is Ignore Colors?**
 
 **Ignore Colors** ignores color differences in specific regions while still comparing the structure and layout. Particularly useful when colors may vary due to themes, user preferences, or A/B testing, but the structure should remain consistent.
 
-### When to Use
+**When to Use**
 
 - Ignoring color changes in themed applications
 - Handling A/B testing color variations
@@ -224,7 +224,7 @@ Testing a notification badge that may appear in different positions based on con
 - Testing structure while ignoring color differences in specific regions
 - Comparing layouts across different theme configurations
 
-### How to Use
+**How to Use**
 
 **Step 1:** Click on the **Actions** button (annotation icon) to open the annotation tool.
 
@@ -242,7 +242,7 @@ Testing a notification badge that may appear in different positions based on con
 
 > **Note:** Ignore Colors is particularly effective when combined with other annotation types for comprehensive visual testing.
 
-### Example
+**Example**
 
 Ignoring color differences in a themed navigation bar while testing its structure and layout across different theme configurations.
 
@@ -391,7 +391,7 @@ Follow these best practices to get the most out of the annotation tool:
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='annotations-not-applying' label='Annotations Not Applying' default>
 
-### Annotations Not Applying
+**Annotations Not Applying**
 
 **Issue:** Annotations are not being applied to future builds.
 
@@ -405,7 +405,7 @@ Follow these best practices to get the most out of the annotation tool:
 
 <TabItem value='floating-region-not-working' label='Floating Region Not Working'>
 
-### Floating Region Not Working
+**Floating Region Not Working**
 
 **Issue:** Floating region is still showing false positives.
 
@@ -419,7 +419,7 @@ Follow these best practices to get the most out of the annotation tool:
 
 <TabItem value='ignore-colors-still-showing-differences' label='Ignore Colors Still Showing Differences'>
 
-### Ignore Colors Still Showing Differences
+**Ignore Colors Still Showing Differences**
 
 **Issue:** Color differences are still being detected in ignore colors regions.
 
@@ -433,7 +433,7 @@ Follow these best practices to get the most out of the annotation tool:
 
 <TabItem value='annotations-disappearing' label='Annotations Disappearing'>
 
-### Annotations Disappearing
+**Annotations Disappearing**
 
 **Issue:** Annotations are not visible or have disappeared.
 

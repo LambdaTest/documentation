@@ -77,11 +77,11 @@ You should use dynamic data handling in the following scenarios:
 <Tabs className='docs__val' groupId='dynamic-data-methods'>
 <TabItem value='ignore' label='Ignore DOM Elements' default>
 
-## Ignore DOM Elements
+**Ignore DOM Elements**
 
 Use `ignoreDOM` to exclude specific elements from visual comparison. This is useful when you want to compare the entire page but ignore certain dynamic elements.
 
-### Syntax
+**Syntax**
 
 ```javascript
 let options = {
@@ -95,7 +95,7 @@ let options = {
 smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
-### Examples by Selector Type
+**Examples by Selector Type**
 
 <Tabs className='docs__val' groupId='selector'>
 <TabItem value='id' label='By ID' default>
@@ -262,11 +262,11 @@ options = {
 
 <TabItem value='select' label='Select DOM Elements'>
 
-## Select DOM Elements
+**Select DOM Elements**
 
 Use `selectDOM` to include only specific elements in visual comparison. This is useful when you want to compare only certain parts of the page, ignoring everything else.
 
-### Syntax
+**Syntax**
 
 ```javascript
 let options = {
@@ -280,7 +280,7 @@ let options = {
 smartuiSnapshot(driver, 'Screenshot Name', options);
 ```
 
-### Examples by Selector Type
+**Examples by Selector Type**
 
 <Tabs className='docs__val' groupId='selector'>
 <TabItem value='select-id' label='By ID' default>
@@ -433,7 +433,7 @@ options = {
 
 <TabItem value='combining' label='Combining Methods'>
 
-## Combining ignoreDOM and selectDOM
+**Combining ignoreDOM and selectDOM**
 
 You can combine both `ignoreDOM` and `selectDOM` in the same options object. When both are specified, `selectDOM` is applied first to include elements, then `ignoreDOM` is applied to exclude specific elements from the selected set.
 
@@ -449,9 +449,9 @@ let options = {
 await smartuiSnapshot(driver, 'Home Page', options);
 ```
 
-### Use Cases
+**Use Cases**
 
-#### Use Case 1: E-commerce Product Page
+**Use Case 1: E-commerce Product Page**
 
 **Scenario**: Product pages display prices, stock counts, and user reviews that change frequently.
 
@@ -471,7 +471,7 @@ let options = {
 await smartuiSnapshot(driver, 'Product Page', options);
 ```
 
-#### Use Case 2: Dashboard with Real-time Data
+**Use Case 2: Dashboard with Real-time Data**
 
 **Scenario**: Dashboard displays live metrics, timestamps, and user-specific data.
 
@@ -493,7 +493,7 @@ let options = {
 await smartuiSnapshot(driver, 'Dashboard', options);
 ```
 
-#### Use Case 3: News Article Page
+**Use Case 3: News Article Page**
 
 **Scenario**: Article pages have timestamps, author info, and related articles that change.
 
@@ -513,7 +513,7 @@ await smartuiSnapshot(driver, 'Article Page', options);
 
 <TabItem value='best-practices' label='Best Practices'>
 
-## Best Practices
+**Best Practices**
 
 1. **Use Specific Selectors**: Prefer IDs or data attributes over generic class names for more precise targeting.
 
@@ -531,12 +531,12 @@ await smartuiSnapshot(driver, 'Article Page', options);
 
 <TabItem value='troubleshooting' label='Troubleshooting'>
 
-## Troubleshooting
+**Troubleshooting**
 
 <Tabs className='docs__val' groupId='troubleshooting-inner'>
 <TabItem value='elements-not-being-ignored' label='Elements Not Being Ignored' default>
 
-### Issue: Elements Not Being Ignored
+**Issue: Elements Not Being Ignored**
 
 **Possible Causes:**
 - Selector is incorrect or doesn't match any elements
@@ -562,7 +562,7 @@ await smartuiSnapshot(driver, 'Page', options);
 </TabItem>
 <TabItem value='selectdom-not-working' label='selectDOM Not Working' >
 
-### Issue: selectDOM Not Working
+**Issue: selectDOM Not Working**
 
 **Possible Causes:**
 - No elements match the selectors
@@ -577,7 +577,7 @@ await smartuiSnapshot(driver, 'Page', options);
 </TabItem>
 <TabItem value='false-positives-still-occurring' label='False Positives Still Occurring' >
 
-### Issue: False Positives Still Occurring
+**Issue: False Positives Still Occurring**
 
 **Possible Causes:**
 - Not all dynamic elements are ignored

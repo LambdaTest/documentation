@@ -125,14 +125,14 @@ Smart Ignore may not be suitable for:
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='start-with-project-level-toggle' label='Start with Project-Level Toggle' default>
 
-### Start with Project-Level Toggle
+**Start with Project-Level Toggle**
 
 Enable Smart Ignore at the project level for consistent behavior across all tests. You can still switch to other comparison modes per screenshot if needed.
 
 </TabItem>
 <TabItem value='combine-with-other-features' label='Combine with Other Features' >
 
-### Combine with Other Features
+**Combine with Other Features**
 
 Smart Ignore works well with:
 - Dynamic data handling for content that changes
@@ -142,21 +142,21 @@ Smart Ignore works well with:
 </TabItem>
 <TabItem value='review-results-regularly' label='Review Results Regularly' >
 
-### Review Results Regularly
+**Review Results Regularly**
 
 While Smart Ignore reduces false positives, regularly review results to ensure it's not hiding important changes.
 
 </TabItem>
 <TabItem value='use-per-screenshot-mode-for-testing' label='Use Per-Screenshot Mode for Testing' >
 
-### Use Per-Screenshot Mode for Testing
+**Use Per-Screenshot Mode for Testing**
 
 When testing Smart Ignore, use per-screenshot mode to compare results with other comparison modes and find the best approach for each test case.
 
 </TabItem>
 <TabItem value='use-per-screenshot-mode-for-testing-1' label='Use Per-Screenshot Mode for Testing' >
 
-### Use Per-Screenshot Mode for Testing
+**Use Per-Screenshot Mode for Testing**
 
 When testing Smart Ignore, use per-screenshot mode to compare results with other comparison modes and find the best approach for each test case.
 
@@ -168,7 +168,7 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='smart-ignore-not-available' label='Smart Ignore Not Available' default>
 
-### Issue: Smart Ignore Not Available
+**Issue: Smart Ignore Not Available**
 
 **Symptoms**: Smart Ignore toggle or option is not visible
 
@@ -180,7 +180,7 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 </TabItem>
 <TabItem value='too-many-differences-still-shown' label='Too Many Differences Still Shown' >
 
-### Issue: Too Many Differences Still Shown
+**Issue: Too Many Differences Still Shown**
 
 **Symptoms**: Smart Ignore still shows many differences
 
@@ -193,7 +193,7 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 </TabItem>
 <TabItem value='important-changes-hidden' label='Important Changes Hidden' >
 
-### Issue: Important Changes Hidden
+**Issue: Important Changes Hidden**
 
 **Symptoms**: Smart Ignore hides changes you want to see
 
@@ -206,7 +206,7 @@ When testing Smart Ignore, use per-screenshot mode to compare results with other
 </TabItem>
 <TabItem value='inconsistent-results' label='Inconsistent Results' >
 
-### Issue: Inconsistent Results
+**Issue: Inconsistent Results**
 
 **Symptoms**: Smart Ignore shows different results for similar changes
 

@@ -136,7 +136,7 @@ npx smartui merge branch --source release/v1.0.0 --target main
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='merge-planning' label='Merge Planning' default>
 
-### Merge Planning
+**Merge Planning**
 
 - Plan merges in advance
    - Document merge strategies
@@ -145,7 +145,7 @@ npx smartui merge branch --source release/v1.0.0 --target main
 </TabItem>
 <TabItem value='branch-management' label='Branch Management' >
 
-### Branch Management
+**Branch Management**
 
 - Keep branches up to date
    - Clean up merged branches
@@ -154,7 +154,7 @@ npx smartui merge branch --source release/v1.0.0 --target main
 </TabItem>
 <TabItem value='approval-process' label='Approval Process' >
 
-### Approval Process
+**Approval Process**
 
 - Establish clear approval criteria
    - Document approval decisions
