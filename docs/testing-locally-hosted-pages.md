@@ -89,4 +89,4 @@ To ensure optimal performance and reliability when running LambdaTest Tunnel, yo
 - **Memory (RAM):** 2 GB minimum
 - **Disk Space:** 200 MB available
 - **Network:** Stable broadband connection (100 Mbps or higher recommended); must allow outbound connections to LambdaTest servers over port 443 (TCP/WebSocket)
-**Permissions:** User must have permission to execute the LambdaTest Tunnel binary
+- **Permissions:** User must have permission to execute the LambdaTest Tunnel binary
