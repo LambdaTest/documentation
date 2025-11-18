@@ -199,7 +199,7 @@ When running tests from IDEs like IntelliJ:
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='server-termination' label='Server Termination' default>
 
-### Server Termination
+**Server Termination**
 
 Always use `exec:stop` to properly terminate the server.
 
@@ -207,7 +207,7 @@ Always use `exec:stop` to properly terminate the server.
 
 <TabItem value='timeouts' label='Timeouts'>
 
-### Timeouts
+**Timeouts**
 
 Set appropriate timeouts for your tests.
 
@@ -215,7 +215,7 @@ Set appropriate timeouts for your tests.
 
 <TabItem value='snapshot-naming' label='Snapshot Naming'>
 
-### Snapshot Naming
+**Snapshot Naming**
 
 Use meaningful names for your snapshots.
 
@@ -223,7 +223,7 @@ Use meaningful names for your snapshots.
 
 <TabItem value='environment-variables' label='Environment Variables'>
 
-### Environment Variables
+**Environment Variables**
 
 Configure environment variables before starting your IDE.
 
@@ -231,7 +231,7 @@ Configure environment variables before starting your IDE.
 
 <TabItem value='configuration-files' label='Configuration Files'>
 
-### Configuration Files
+**Configuration Files**
 
 Consider using configuration files for complex setups.
 
@@ -243,7 +243,7 @@ Consider using configuration files for complex setups.
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='server-status' label='Server Status' default>
 
-### Server Status
+**Server Status**
 
 Verify the server is running using `exec:ping`.
 
@@ -251,7 +251,7 @@ Verify the server is running using `exec:ping`.
 
 <TabItem value='server-address' label='Server Address'>
 
-### Server Address
+**Server Address**
 
 Check if the server address is correctly configured.
 
@@ -259,7 +259,7 @@ Check if the server address is correctly configured.
 
 <TabItem value='port-conflicts' label='Port Conflicts'>
 
-### Port Conflicts
+**Port Conflicts**
 
 Ensure no other process is using the default port.
 
@@ -267,7 +267,7 @@ Ensure no other process is using the default port.
 
 <TabItem value='server-logs' label='Server Logs'>
 
-### Server Logs
+**Server Logs**
 
 Review the server logs for error messages.
 

@@ -341,7 +341,7 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='build-names' label='Build Names' default>
 
-### Build Names
+**Build Names**
 
 ```bash
    npx smartui upload-figma-web designs.json --buildName "v1.0.0"
@@ -350,7 +350,7 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
 </TabItem>
 <TabItem value='screenshot-names' label='Screenshot Names' >
 
-### Screenshot Names
+**Screenshot Names**
 
 - Good: `homepage-hero`, `login-form`, `dashboard-sidebar`
    - Avoid: `test1`, `screenshot`, `design-1`
@@ -359,9 +359,9 @@ npx smartui --config web-config.json exec --buildName=web-build -- node figma-we
 </TabItem>
 <TabItem value='branch-names' label='Branch Names' >
 
-### Branch Names
+**Branch Names**
 
-### Screenshot Naming for SDK Comparisons
+**Screenshot Naming for SDK Comparisons**
 
 **Critical**: When comparing Figma designs with live implementations captured via SDKs, add `.png` extension to your SDK screenshot names.
 

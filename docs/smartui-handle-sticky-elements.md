@@ -178,35 +178,35 @@ await smartuiSnapshot(driver, 'Content Only', options);
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='trust-automatic-handling' label='Trust Automatic Handling' default>
 
-### Trust Automatic Handling
+**Trust Automatic Handling**
 
 SmartUI's automatic handling works for most cases. Only use manual configuration if you encounter specific issues.
 
 </TabItem>
 <TabItem value='test-sticky-element-pages' label='Test Sticky Element Pages' >
 
-### Test Sticky Element Pages
+**Test Sticky Element Pages**
 
 Verify that pages with sticky elements work correctly with SmartUI before running full test suites.
 
 </TabItem>
 <TabItem value='review-snapshots' label='Review Snapshots' >
 
-### Review Snapshots
+**Review Snapshots**
 
 Occasionally review captured snapshots to ensure sticky elements are handled correctly.
 
 </TabItem>
 <TabItem value='combine-with-other-features' label='Combine with Other Features' >
 
-### Combine with Other Features
+**Combine with Other Features**
 
 You can combine sticky element handling with other SmartUI features like dynamic data handling.
 
 </TabItem>
 <TabItem value='combine-with-other-features-1' label='Combine with Other Features' >
 
-### Combine with Other Features
+**Combine with Other Features**
 
 You can combine sticky element handling with other SmartUI features like dynamic data handling.
 
@@ -218,7 +218,7 @@ You can combine sticky element handling with other SmartUI features like dynamic
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='sticky-elements-still-causing-false-positives' label='Sticky Elements Still Causing False Positives' default>
 
-### Issue: Sticky Elements Still Causing False Positives
+**Issue: Sticky Elements Still Causing False Positives**
 
 **Symptoms**: Sticky elements appear to cause differences in comparisons
 
@@ -240,7 +240,7 @@ await smartuiSnapshot(driver, 'Page', options);
 </TabItem>
 <TabItem value='sticky-elements-not-visible-in-snapshots' label='Sticky Elements Not Visible in Snapshots' >
 
-### Issue: Sticky Elements Not Visible in Snapshots
+**Issue: Sticky Elements Not Visible in Snapshots**
 
 **Symptoms**: Sticky elements don't appear in captured screenshots
 
@@ -258,7 +258,7 @@ await smartuiSnapshot(driver, 'Page');
 </TabItem>
 <TabItem value='sticky-elements-overlapping-content' label='Sticky Elements Overlapping Content' >
 
-### Issue: Sticky Elements Overlapping Content
+**Issue: Sticky Elements Overlapping Content**
 
 **Symptoms**: Sticky elements appear to overlap with page content
 

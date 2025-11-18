@@ -87,7 +87,7 @@ To run the new pipeline that you just created, click the **Run workflow** button
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='secret-management' label='Secret Management' default>
 
-### Secret Management
+**Secret Management**
 
 - Never commit credentials to repository
 - Use GitHub Secrets for all sensitive data
@@ -97,7 +97,7 @@ To run the new pipeline that you just created, click the **Run workflow** button
 </TabItem>
 <TabItem value='workflow-optimization' label='Workflow Optimization'>
 
-### Workflow Optimization
+**Workflow Optimization**
 
 - Use matrix strategies for parallel execution
 - Cache dependencies to speed up workflows
@@ -116,7 +116,7 @@ on:
 </TabItem>
 <TabItem value='build-naming' label='Build Naming'>
 
-### Build Naming
+**Build Naming**
 
 - Use meaningful build names that include branch/PR info
 - Include commit SHA for traceability
@@ -133,7 +133,7 @@ on:
 </TabItem>
 <TabItem value='error-handling' label='Error Handling'>
 
-### Error Handling
+**Error Handling**
 
 - Set up proper error handling in workflows
 - Use workflow status checks
@@ -143,7 +143,7 @@ on:
 </TabItem>
 <TabItem value='resource-management' label='Resource Management'>
 
-### Resource Management
+**Resource Management**
 
 - Limit concurrent workflow runs
 - Clean up old builds regularly
@@ -153,7 +153,7 @@ on:
 </TabItem>
 <TabItem value='resource-management-1' label='Resource Management'>
 
-### Resource Management
+**Resource Management**
 
 - Limit concurrent workflow runs
 - Clean up old builds regularly
@@ -168,7 +168,7 @@ on:
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='workflow-fails-with-secret-not-found' label='Workflow Fails with Secret Not Found' default>
 
-### Issue: Workflow Fails with "Secret Not Found"
+**Issue: Workflow Fails with "Secret Not Found"**
 
 **Symptoms**: Workflow fails with error about missing secrets
 
@@ -191,7 +191,7 @@ on:
 </TabItem>
 <TabItem value='project_token-prompt-appears' label='PROJECT_TOKEN Prompt Appears'>
 
-### Issue: PROJECT_TOKEN Prompt Appears
+**Issue: PROJECT_TOKEN Prompt Appears**
 
 **Symptoms**: Workflow prompts for PROJECT_TOKEN during execution
 
@@ -222,7 +222,7 @@ on:
 </TabItem>
 <TabItem value='tests-run-but-no-results-in-dashboard' label='Tests Run But No Results in Dashboard'>
 
-### Issue: Tests Run But No Results in Dashboard
+**Issue: Tests Run But No Results in Dashboard**
 
 **Symptoms**: Workflow completes but screenshots don't appear in SmartUI
 
@@ -252,7 +252,7 @@ on:
 </TabItem>
 <TabItem value='workflow-times-out' label='Workflow Times Out'>
 
-### Issue: Workflow Times Out
+**Issue: Workflow Times Out**
 
 **Symptoms**: Workflow execution exceeds time limit
 
@@ -281,7 +281,7 @@ on:
 </TabItem>
 <TabItem value='dependencies-installation-fails' label='Dependencies Installation Fails'>
 
-### Issue: Dependencies Installation Fails
+**Issue: Dependencies Installation Fails**
 
 **Symptoms**: npm install or dependency installation fails
 
@@ -311,7 +311,7 @@ on:
 </TabItem>
 <TabItem value='smartui-cli-not-found' label='SmartUI CLI Not Found'>
 
-### Issue: SmartUI CLI Not Found
+**Issue: SmartUI CLI Not Found**
 
 **Symptoms**: `npx smartui` command fails with command not found"
 
@@ -338,7 +338,7 @@ on:
    - run: npm install -g @lambdatest/smartui-cli
    ```
 
-### Getting Help
+**Getting Help**
 
 If you encounter issues not covered here:
 

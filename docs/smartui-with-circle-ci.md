@@ -113,7 +113,7 @@ workflows:
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='secret-management' label='Secret Management' default>
 
-### Secret Management
+**Secret Management**
 
 - Never commit credentials to repository
 - Use CircleCI Environment Variables for all sensitive data
@@ -124,7 +124,7 @@ workflows:
 </TabItem>
 <TabItem value='pipeline-optimization' label='Pipeline Optimization'>
 
-### Pipeline Optimization
+**Pipeline Optimization**
 
 - Use parallel jobs for faster execution
 - Cache dependencies to speed up pipelines
@@ -148,7 +148,7 @@ workflows:
 </TabItem>
 <TabItem value='build-naming' label='Build Naming'>
 
-### Build Naming
+**Build Naming**
 
 - Use meaningful build names that include branch/commit info
 - Include commit SHA for traceability
@@ -163,7 +163,7 @@ environment:
 </TabItem>
 <TabItem value='error-handling' label='Error Handling'>
 
-### Error Handling
+**Error Handling**
 
 - Set up proper error handling in pipelines
 - Use pipeline status checks
@@ -173,7 +173,7 @@ environment:
 </TabItem>
 <TabItem value='resource-management' label='Resource Management'>
 
-### Resource Management
+**Resource Management**
 
 - Limit concurrent pipeline runs
 - Clean up old builds regularly
@@ -183,7 +183,7 @@ environment:
 </TabItem>
 <TabItem value='resource-management-1' label='Resource Management'>
 
-### Resource Management
+**Resource Management**
 
 - Limit concurrent pipeline runs
 - Clean up old builds regularly
@@ -198,7 +198,7 @@ environment:
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='pipeline-fails-with-variable-not-found' label='Pipeline Fails with Variable Not Found' default>
 
-### Issue: Pipeline Fails with "Variable Not Found"
+**Issue: Pipeline Fails with "Variable Not Found"**
 
 **Symptoms**: Pipeline fails with error about missing environment variables
 
@@ -222,7 +222,7 @@ environment:
 </TabItem>
 <TabItem value='project_token-not-available' label='PROJECT_TOKEN Not Available'>
 
-### Issue: PROJECT_TOKEN Not Available
+**Issue: PROJECT_TOKEN Not Available**
 
 **Symptoms**: Pipeline prompts for PROJECT_TOKEN or token not found
 
@@ -247,7 +247,7 @@ environment:
 </TabItem>
 <TabItem value='tests-run-but-no-results-in-dashboard' label='Tests Run But No Results in Dashboard'>
 
-### Issue: Tests Run But No Results in Dashboard
+**Issue: Tests Run But No Results in Dashboard**
 
 **Symptoms**: Pipeline completes but screenshots don't appear in SmartUI
 
@@ -278,7 +278,7 @@ environment:
 </TabItem>
 <TabItem value='pipeline-times-out' label='Pipeline Times Out'>
 
-### Issue: Pipeline Times Out
+**Issue: Pipeline Times Out**
 
 **Symptoms**: Pipeline execution exceeds time limit
 
@@ -311,7 +311,7 @@ environment:
 </TabItem>
 <TabItem value='dependencies-installation-fails' label='Dependencies Installation Fails'>
 
-### Issue: Dependencies Installation Fails
+**Issue: Dependencies Installation Fails**
 
 **Symptoms**: npm install or dependency installation fails
 
@@ -344,7 +344,7 @@ environment:
 </TabItem>
 <TabItem value='smartui-cli-not-found' label='SmartUI CLI Not Found'>
 
-### Issue: SmartUI CLI Not Found
+**Issue: SmartUI CLI Not Found**
 
 **Symptoms**: `npx smartui` command fails with command not found"
 
@@ -374,7 +374,7 @@ environment:
        command: npm install -g @lambdatest/smartui-cli
    ```
 
-### Getting Help
+**Getting Help**
 
 If you encounter issues not covered here:
 

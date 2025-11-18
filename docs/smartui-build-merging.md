@@ -123,7 +123,7 @@ npx smartui merge build --source hotfix-build-202 --target prod-build-456
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='build-management' label='Build Management' default>
 
-### Build Management
+**Build Management**
 
 - Use meaningful build names
    - Document build purposes
@@ -132,13 +132,13 @@ npx smartui merge build --source hotfix-build-202 --target prod-build-456
 </TabItem>
 <TabItem value='merge-planning' label='Merge Planning' >
 
-### Merge Planning
+**Merge Planning**
 
 - Plan merges in advance
    - Document merge strategies
    - Establish approval processes
 
-### Getting Help
+**Getting Help**
 
 If you encounter any issues with build merging in SmartUI, please contact our support team at support@lambdatest.com.
 

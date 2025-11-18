@@ -512,7 +512,7 @@ Please note that this webhook is only applicable to <b>native app screenshots</b
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
 
-### Screenshot Naming
+**Screenshot Naming**
 
 - Use descriptive, consistent names for screenshots
 - Include screen/component name in screenshot names
@@ -528,7 +528,7 @@ await driver.execute("smartui.takeScreenshot=CheckoutScreen-PaymentForm");
 </TabItem>
 <TabItem value='wait-for-screen-load' label='Wait for Screen Load'>
 
-### Wait for Screen Load
+**Wait for Screen Load**
 
 - Always wait for screens to fully load before taking screenshots
 - Use Appium's wait methods for dynamic content
@@ -544,7 +544,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 </TabItem>
 <TabItem value='handle-dynamic-content' label='Handle Dynamic Content'>
 
-### Handle Dynamic Content
+**Handle Dynamic Content**
 
 - Use `ignoreBoxes` for elements that change between runs (ads, timestamps, user avatars)
 - Use `selectBoxes` when you only need to compare specific regions
@@ -553,7 +553,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 </TabItem>
 <TabItem value='smart-crop-configuration' label='Smart Crop Configuration'>
 
-### Smart Crop Configuration
+**Smart Crop Configuration**
 
 - Enable `cropStatusBar` to focus on core UI elements
 - Enable `cropNavigationBar` for Android devices
@@ -562,7 +562,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 </TabItem>
 <TabItem value='test-organization' label='Test Organization'>
 
-### Test Organization
+**Test Organization**
 
 - Group related screenshots in the same build
 - Use meaningful build names
@@ -571,7 +571,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 </TabItem>
 <TabItem value='test-organization-1' label='Test Organization'>
 
-### Test Organization
+**Test Organization**
 
 - Group related screenshots in the same build
 - Use meaningful build names
@@ -585,7 +585,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>
 
-### Issue: Screenshots Not Captured
+**Issue: Screenshots Not Captured**
 
 **Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
 
@@ -620,7 +620,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 </TabItem>
 <TabItem value='project-not-found-error' label='Project Not Found Error'>
 
-### Issue: "Project Not Found" Error
+**Issue: "Project Not Found" Error**
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -638,7 +638,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 </TabItem>
 <TabItem value='screenshots-show-blank-or-incorrect-content' label='Screenshots Show Blank or Incorrect Content'>
 
-### Issue: Screenshots Show Blank or Incorrect Content
+**Issue: Screenshots Show Blank or Incorrect Content**
 
 **Symptoms**: Screenshots captured but show blank screens or incorrect content
 
@@ -666,7 +666,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 </TabItem>
 <TabItem value='full-page-screenshot-issues' label='Full Page Screenshot Issues'>
 
-### Issue: Full Page Screenshot Issues
+**Issue: Full Page Screenshot Issues**
 
 **Symptoms**: Full page screenshots incomplete or incorrect
 
@@ -692,7 +692,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 </TabItem>
 <TabItem value='ignoreboxes-selectboxes-not-working' label='ignoreBoxes/selectBoxes Not Working'>
 
-### Issue: ignoreBoxes/selectBoxes Not Working
+**Issue: ignoreBoxes/selectBoxes Not Working**
 
 **Symptoms**: Dynamic content still causing false positives
 
@@ -713,7 +713,7 @@ await driver.execute("smartui.takeScreenshot=Screen Loaded");
 
 4. Test XPath locators in isolation before using in config
 
-### Getting Help
+**Getting Help**
 
 If you encounter issues not covered here:
 

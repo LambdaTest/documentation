@@ -187,7 +187,7 @@ Example for GitHub Actions:
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='file-management' label='PDF File Management' default>
 
-### PDF File Management
+**PDF File Management**
 
 - Use consistent naming conventions for PDF files
 - Organize PDFs in logical directory structures
@@ -198,7 +198,7 @@ Example for GitHub Actions:
 
 <TabItem value='token-management' label='Project Token Management'>
 
-### Project Token Management
+**Project Token Management**
 
 - Store project token as environment variable
 - Never commit tokens to version control
@@ -209,7 +209,7 @@ Example for GitHub Actions:
 
 <TabItem value='build-naming' label='Build Naming'>
 
-### Build Naming
+**Build Naming**
 
 - Use meaningful build names that include version info
 - Include date or version in build names
@@ -224,7 +224,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 
 <TabItem value='error-handling' label='Error Handling'>
 
-### Error Handling
+**Error Handling**
 
 - Always check CLI exit codes
 - Handle network failures gracefully
@@ -235,7 +235,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 
 <TabItem value='batch-processing' label='Batch Processing'>
 
-### Batch Processing
+**Batch Processing**
 
 - Process PDFs in batches for efficiency
 - Monitor upload progress
@@ -250,7 +250,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>
 
-### Issue: PDF Upload Fails
+**Issue: PDF Upload Fails**
 
 **Symptoms**: CLI command fails or returns error
 
@@ -290,7 +290,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 </TabItem>
 <TabItem value='project-not-found-error' label='Project Not Found Error'>
 
-### Issue: Project Not Found" Error
+**Issue: Project Not Found" Error**
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -308,7 +308,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 </TabItem>
 <TabItem value='cli-command-not-found' label='CLI Command Not Found'>
 
-### Issue: CLI Command Not Found
+**Issue: CLI Command Not Found**
 
 **Symptoms**: `smartui` command not recognized
 
@@ -333,7 +333,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 </TabItem>
 <TabItem value='upload-returns-error' label='Upload Returns Error'>
 
-### Issue: Upload Returns Error
+**Issue: Upload Returns Error**
 
 **Symptoms**: CLI returns error status or failure message
 
@@ -353,7 +353,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 </TabItem>
 <TabItem value='pdfs-not-appearing-in-dashboard' label='PDFs Not Appearing in Dashboard'>
 
-### Issue: PDFs Not Appearing in Dashboard
+**Issue: PDFs Not Appearing in Dashboard**
 
 **Symptoms**: Uploads complete but PDFs don't appear in SmartUI dashboard
 
@@ -370,7 +370,7 @@ smartui upload-pdf ./pdfs/ --buildName Release-v1.0-$(date +%Y%m%d)"
 4. Check CLI output for errors
 5. Use `--fetch-results` to verify upload status
 
-### Getting Help
+**Getting Help**
 
 If you encounter issues not covered here:
 
