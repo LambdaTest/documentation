@@ -77,3 +77,16 @@ You can download the Tunnel Binary as per your respective machine architecture f
 | FreeBSD/ARM64 | https://downloads.lambdatest.com/tunnel/v3/freebsd/arm64/LT| 
 | FreeBSD/A386 | https://downloads.lambdatest.com/tunnel/v3/freebsd/386/LT |
 | Solaris/AMD64 | https://downloads.lambdatest.com/tunnel/v3/solaris/amd64/LT |
+
+## Minimum System Requirements for LambdaTest Tunnel
+
+
+To ensure optimal performance and reliability when running LambdaTest Tunnel, your system should meet or exceed the following requirements:
+
+- **Operating System:** Windows 7 or later, macOS 10.12 or later, Linux (modern distributions), FreeBSD, Solaris
+- **CPU Architecture:** x86_64 (AMD64), ARM64
+- **CPU Cores:** 1 physical cores or higher
+- **Memory (RAM):** 2 GB minimum
+- **Disk Space:** 200 MB available
+- **Network:** Stable broadband connection (100 Mbps or higher recommended); must allow outbound connections to LambdaTest servers over port 443 (TCP/WebSocket)
+**Permissions:** User must have permission to execute the LambdaTest Tunnel binary
