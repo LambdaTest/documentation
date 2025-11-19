@@ -17,7 +17,7 @@ keywords:
   - Mobile App Testing
   - App Visual Testing
 
-url: https://www.lambdatest.com/support/docs/smartui-appium-java-sdk
+url: https://www.lambdatest.com/support/docs/smartui-appium-java-sdk  
 slug: smartui-appium-java-sdk
 
 ---
@@ -133,10 +133,10 @@ public class YourTestClass {
         // Configure screenshot settings
         Map<String, String> ssConfig = new HashMap<>();
         // Either use environment variable
-        ssConfig.put("projectToken", "your-project-token-here"); // Use this if you are not setting the project token in environment variable
-        // ssConfig.put("buildName", "First Build"); // Optional
+        ssConfig.put("projectToken", "your-project-token-here"); // Use this if you are not setting the project token in environment variable      
+        // ssConfig.put("buildName", "First Build"); // Optional 
         ssConfig.put("deviceName", "iPhone 15"); // Required, you can use the variables that you are setting in the cloud capabilities
-
+    
         ssConfig.put("platform", "iOS"); // Optional,you can use the variables that you are setting in the cloud capabilities
 
         try {
@@ -147,16 +147,16 @@ public class YourTestClass {
 // Your test code here - Example of native app interactions
             driver.findElement(MobileBy.AccessibilityId("username-input")).sendKeys("test@example.com");
             driver.findElement(MobileBy.AccessibilityId("password-input")).sendKeys("password123");
-
+            
             // Take screenshot of login form
             SmartUI.smartuiAppSnapshot(driver, "Login Form", ssConfig);
-
+            
             driver.findElement(MobileBy.AccessibilityId("login-button")).click();
-
+            
             // Wait for home screen to load
             WebDriverWait wait = new WebDriverWait(driver, 10);
             wait.until(ExpectedConditions.presenceOfElementLocated(MobileBy.AccessibilityId("home-screen")));
-
+            
             // Take screenshot of home screen
             SmartUI.smartuiAppSnapshot(driver, "Home Screen", ssConfig);
 
@@ -199,7 +199,7 @@ ssConfig.put("platform", "iOS");
 ```
 
 #### Important Notes:
-- It is advised to use the same `deviceName` and `platform` combination across builds to compare screenshots of the same device
+- It is advised to use the same `deviceName` and `platform` combination across builds to compare screenshots of the same device 
 - These parameters are metadata tags and don't affect the actual device selection on your cloud provider
 
 Example configurations for different cloud providers:
@@ -368,7 +368,10 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 - Use meaningful build names
 - Run tests on consistent device configurations
 
-**Troubleshooting**
+</TabItem>
+</Tabs>
+
+## Troubleshooting
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>
@@ -407,7 +410,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 </TabItem>
 <TabItem value='project-not-found-error' label='Project Not Found Error'>
 
-**Issue: Project Not Found" Error**
+**Issue: Project Not Found Error**
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -440,7 +443,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 1. Add explicit waits before screenshots:
    ```java
    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-   wait.until(ExpectedConditions.presenceOfElementLocated(By.id(content")));
+   wait.until(ExpectedConditions.presenceOfElementLocated(By.id("content")));
    ```
 
 2. Wait for specific elements to be visible:
@@ -469,8 +472,8 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 2. Ensure elements exist at screenshot time
 3. Check JSON formatting in configuration:
    ```java
-   Map<String, Object"> ignoreBoxes = new HashMap<">();
-   ignoreBoxes.put(xpath", new String[]{"//*[@text="'Dynamic" Ad']"});
+   Map<String, Object> ignoreBoxes = new HashMap<>();
+   ignoreBoxes.put("xpath", new String[]{"//*[@text='Dynamic Ad']"});
    ```
 
 4. Test XPath locators in isolation before using in config
@@ -501,7 +504,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 
 **Issue: Screenshot Names Not Matching Baseline**
 
-**Symptoms**: Screenshots appear as New" instead of comparing with baseline
+**Symptoms**: Screenshots appear as New instead of comparing with baseline
 
 **Possible Causes**:
 - Screenshot name changed
@@ -513,16 +516,6 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 2. Verify baseline exists in project
 3. Avoid special characters in screenshot names
 4. Check for case sensitivity issues
-
-**Getting Help**
-
-If you encounter issues not covered here:
-
-- Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
-- Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
-- See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
-- Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
 </Tabs>
@@ -536,27 +529,6 @@ If you encounter issues not covered here:
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [Appium Hooks Documentation](/support/docs/smartui-appium-hooks)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
-
-<nav aria-label='breadcrumbs'>
-  <ul className='breadcrumbs'>
-    <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
-        Home
-      </a>
-    </li>
-    <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
-        Support
-      </a>
-    </li>
-    <li className='breadcrumbs__item breadcrumbs__item--active'>
-      <span className='breadcrumbs__link'> SmartUI Appium Java SDK </span>
-    </li>
-  </ul>
-</nav>
-
-</TabItem>
-</Tabs>
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

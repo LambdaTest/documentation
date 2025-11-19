@@ -3253,6 +3253,10 @@ module.exports = {
           {
             type: "category",
                 label: "Mobile Testing",
+                link: {
+                  type: "doc",
+                  id: "smartui-appium-sdk",
+                },
                 collapsed: true,
             items: [
               {
