@@ -3365,6 +3365,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Multiselect & Bulk Operations",
+            id: "smartui-multiselect-bulkops",
+          },
+          {
+            type: "doc",
             label: "Draw on UI",
             id: "smartui-draw-on-ui",
           },
