@@ -287,7 +287,7 @@ public class SmartuiPdfErrorHandling {
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='pdf-file-management' label='PDF File Management' default>
 
-### PDF File Management
+**PDF File Management**
 
 - Use consistent naming conventions for PDF files
 - Organize PDFs in logical directory structures
@@ -305,7 +305,7 @@ String[] pdfPaths = {
 </TabItem>
 <TabItem value='project-token-management' label='Project Token Management'>
 
-### Project Token Management
+**Project Token Management**
 
 - Store project token as environment variable
 - Never commit tokens to version control
@@ -315,7 +315,7 @@ String[] pdfPaths = {
 </TabItem>
 <TabItem value='build-naming' label='Build Naming'>
 
-### Build Naming
+**Build Naming**
 
 - Use meaningful build names that include version info
 - Include date or version in build names
@@ -329,7 +329,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 </TabItem>
 <TabItem value='error-handling' label='Error Handling'>
 
-### Error Handling
+**Error Handling**
 
 - Always wrap upload calls in try-catch blocks
 - Log errors for debugging
@@ -339,7 +339,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 </TabItem>
 <TabItem value='batch-processing' label='Batch Processing'>
 
-### Batch Processing
+**Batch Processing**
 
 - Process PDFs in batches for efficiency
 - Monitor upload progress
@@ -349,7 +349,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 </TabItem>
 <TabItem value='batch-processing-1' label='Batch Processing'>
 
-### Batch Processing
+**Batch Processing**
 
 - Process PDFs in batches for efficiency
 - Monitor upload progress
@@ -364,7 +364,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='pdf-upload-fails' label='PDF Upload Fails' default>
 
-### Issue: PDF Upload Fails
+**Issue: PDF Upload Fails**
 
 **Symptoms**: PDF upload returns error or fails silently
 
@@ -401,7 +401,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 </TabItem>
 <TabItem value='project-not-found-error' label='Project Not Found Error'>
 
-### Issue: Project Not Found" Error
+**Issue: Project Not Found" Error**
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -419,7 +419,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 </TabItem>
 <TabItem value='upload-returns-null-or-empty-result' label='Upload Returns Null or Empty Result'>
 
-### Issue: Upload Returns Null or Empty Result
+**Issue: Upload Returns Null or Empty Result**
 
 **Symptoms**: Upload completes but result is null or empty
 
@@ -449,7 +449,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 </TabItem>
 <TabItem value='maven-dependencies-not-resolving' label='Maven Dependencies Not Resolving'>
 
-### Issue: Maven Dependencies Not Resolving
+**Issue: Maven Dependencies Not Resolving**
 
 **Symptoms**: Maven cannot find `lambdatest-java-sdk` or dependencies fail
 
@@ -470,7 +470,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 </TabItem>
 <TabItem value='batch-upload-partially-fails' label='Batch Upload Partially Fails'>
 
-### Issue: Batch Upload Partially Fails
+**Issue: Batch Upload Partially Fails**
 
 **Symptoms**: Some PDFs upload successfully, others fail
 
@@ -500,7 +500,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 </TabItem>
 <TabItem value='pdfs-not-appearing-in-dashboard' label='PDFs Not Appearing in Dashboard'>
 
-### Issue: PDFs Not Appearing in Dashboard
+**Issue: PDFs Not Appearing in Dashboard**
 
 **Symptoms**: Uploads complete but PDFs don't appear in SmartUI dashboard
 
@@ -517,7 +517,7 @@ config.withBuildName(PDF-Comparison-v1.0-" + LocalDate.now());
 4. Check upload response for errors
 5. Review test execution logs
 
-### Getting Help
+**Getting Help**
 
 If you encounter issues not covered here:
 

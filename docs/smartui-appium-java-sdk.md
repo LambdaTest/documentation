@@ -312,7 +312,7 @@ After test execution, visit your SmartUI project dashboard to:
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
 
-### Screenshot Naming
+**Screenshot Naming**
 
 - Use descriptive, consistent names for screenshots
 - Include screen/component name in screenshot names
@@ -328,7 +328,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "CheckoutScreen-PaymentForm");
 </TabItem>
 <TabItem value='wait-for-screen-load' label='Wait for Screen Load'>
 
-### Wait for Screen Load
+**Wait for Screen Load**
 
 - Always wait for screens to fully load before taking screenshots
 - Use Appium's wait methods for dynamic content
@@ -344,7 +344,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 </TabItem>
 <TabItem value='handle-dynamic-content' label='Handle Dynamic Content'>
 
-### Handle Dynamic Content
+**Handle Dynamic Content**
 
 - Use `ignoreBoxes` for elements that change between runs (ads, timestamps, user avatars)
 - Use `selectBoxes` when you only need to compare specific regions
@@ -353,7 +353,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 </TabItem>
 <TabItem value='device-configuration' label='Device Configuration'>
 
-### Device Configuration
+**Device Configuration**
 
 - Use consistent `deviceName` and `platform` combinations across builds
 - Document device configurations for reference
@@ -362,18 +362,18 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 </TabItem>
 <TabItem value='test-organization' label='Test Organization'>
 
-### Test Organization
+**Test Organization**
 
 - Group related screenshots in the same build
 - Use meaningful build names
 - Run tests on consistent device configurations
 
-## Troubleshooting
+**Troubleshooting**
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-captured' label='Screenshots Not Captured' default>
 
-### Issue: Screenshots Not Captured
+**Issue: Screenshots Not Captured**
 
 **Symptoms**: Tests run but no screenshots appear in SmartUI dashboard
 
@@ -407,7 +407,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 </TabItem>
 <TabItem value='project-not-found-error' label='Project Not Found Error'>
 
-### Issue: Project Not Found" Error
+**Issue: Project Not Found" Error**
 
 **Symptoms**: Error indicating SmartUI project cannot be found
 
@@ -426,7 +426,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 </TabItem>
 <TabItem value='screenshots-show-blank-or-incorrect-content' label='Screenshots Show Blank or Incorrect Content'>
 
-### Issue: Screenshots Show Blank or Incorrect Content
+**Issue: Screenshots Show Blank or Incorrect Content**
 
 **Symptoms**: Screenshots captured but show blank screens or incorrect content
 
@@ -455,7 +455,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 </TabItem>
 <TabItem value='ignoreboxes-selectboxes-not-working' label='ignoreBoxes/selectBoxes Not Working'>
 
-### Issue: ignoreBoxes/selectBoxes Not Working
+**Issue: ignoreBoxes/selectBoxes Not Working**
 
 **Symptoms**: Dynamic content still causing false positives
 
@@ -478,7 +478,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 </TabItem>
 <TabItem value='maven-dependencies-not-resolving' label='Maven Dependencies Not Resolving'>
 
-### Issue: Maven Dependencies Not Resolving
+**Issue: Maven Dependencies Not Resolving**
 
 **Symptoms**: Maven cannot find `lambdatest-java-sdk` or dependencies fail
 
@@ -499,7 +499,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 </TabItem>
 <TabItem value='screenshot-names-not-matching-baseline' label='Screenshot Names Not Matching Baseline'>
 
-### Issue: Screenshot Names Not Matching Baseline
+**Issue: Screenshot Names Not Matching Baseline**
 
 **Symptoms**: Screenshots appear as New" instead of comparing with baseline
 
@@ -514,7 +514,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Screen Loaded");
 3. Avoid special characters in screenshot names
 4. Check for case sensitivity issues
 
-### Getting Help
+**Getting Help**
 
 If you encounter issues not covered here:
 

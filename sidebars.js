@@ -3246,11 +3246,6 @@ module.exports = {
                 items: [
                       {
                         type: "doc",
-                        label: "Appium SDK",
-                        id: "smartui-appium-sdk",
-                      },
-                      {
-                        type: "doc",
                         label: "Appium Java SDK",
                         id: "smartui-appium-java-sdk",
                       },
@@ -3367,6 +3362,11 @@ module.exports = {
             type: "doc",
             label: "Baseline Management",
             id: "smartui-baseline-management",
+          },
+          {
+            type: "doc",
+            label: "Multiselect & Bulk Operations",
+            id: "smartui-multiselect-bulkops",
           },
           {
             type: "doc",

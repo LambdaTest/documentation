@@ -135,7 +135,7 @@ npx smartui --markBaseline capture urls.json
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='baseline-selection' label='Baseline Selection' default>
 
-### Baseline Selection
+**Baseline Selection**
 
 - Choose stable builds as baselines
 - Document baseline selection criteria
@@ -145,7 +145,7 @@ npx smartui --markBaseline capture urls.json
 
 <TabItem value='branch-management' label='Branch Management'>
 
-### Branch Management
+**Branch Management**
 
 - Clear branch naming conventions
 - Document branch purposes
@@ -155,7 +155,7 @@ npx smartui --markBaseline capture urls.json
 
 <TabItem value='build-management' label='Build Management'>
 
-### Build Management
+**Build Management**
 
 - Meaningful build names
 - Document build purposes
@@ -165,7 +165,7 @@ npx smartui --markBaseline capture urls.json
 
 <TabItem value='approval-process' label='Approval Process'>
 
-### Approval Process
+**Approval Process**
 
 - Clear approval criteria
 - Document approval decisions
@@ -179,7 +179,7 @@ npx smartui --markBaseline capture urls.json
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='common-issues' label='Common Issues' default>
 
-### Common Issues
+**Common Issues**
 
 1. **Baseline Issues**:
    - Verify baseline exists
@@ -200,7 +200,7 @@ npx smartui --markBaseline capture urls.json
 
 <TabItem value='baseline-not-found' label='Baseline Not Found'>
 
-### Baseline Not Found
+**Baseline Not Found**
 
 **Error**: Baseline branch or build does not exist
 
@@ -218,7 +218,7 @@ npx smartui --baselineBranch "main" exec -- <command>
 
 <TabItem value='permission-denied' label='Permission Denied'>
 
-### Permission Denied
+**Permission Denied**
 
 **Error**: Insufficient permissions to set baseline
 
@@ -231,7 +231,7 @@ npx smartui --baselineBranch "main" exec -- <command>
 
 <TabItem value='baseline-mismatch' label='Baseline Mismatch'>
 
-### Baseline Mismatch
+**Baseline Mismatch**
 
 **Error**: Screenshot names don't match between baseline and current build
 

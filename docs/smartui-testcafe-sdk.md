@@ -430,7 +430,7 @@ test('Scroll through the page, then take a smartUI Snapshot', async t => {
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='screenshot-naming' label='Screenshot Naming' default>
 
-### Screenshot Naming
+**Screenshot Naming**
 
 - Use descriptive, consistent names for screenshots
 - Include page/component name in screenshot names
@@ -446,7 +446,7 @@ await smartuiSnapshot(t, 'ProductPage-MainContent');
 </TabItem>
 <TabItem value='wait-for-page-load' label='Wait for Page Load'>
 
-### Wait for Page Load
+**Wait for Page Load**
 
 - Always wait for pages to fully load before taking screenshots
 - Use TestCafe's built-in wait methods for dynamic content
@@ -468,7 +468,7 @@ test('Take screenshot after page loads', async t ="> {
 </TabItem>
 <TabItem value='handle-dynamic-content' label='Handle Dynamic Content'>
 
-### Handle Dynamic Content
+**Handle Dynamic Content**
 
 - Use `ignoreDOM` for elements that change between runs
 - Use `selectDOM` when you only need to compare specific areas
@@ -477,7 +477,7 @@ test('Take screenshot after page loads', async t ="> {
 </TabItem>
 <TabItem value='configuration-management' label='Configuration Management'>
 
-### Configuration Management
+**Configuration Management**
 
 - Keep `.smartui.json` in version control
 - Use environment variables for sensitive data
@@ -486,18 +486,18 @@ test('Take screenshot after page loads', async t ="> {
 </TabItem>
 <TabItem value='test-organization' label='Test Organization'>
 
-### Test Organization
+**Test Organization**
 
 - Group related screenshots in the same build
 - Use meaningful build names
 - Run tests in consistent environments
 
-## Troubleshooting
+**Troubleshooting**
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='screenshots-not-appearing-in-dashboard' label='Screenshots Not Appearing in Dashboard' default>
 
-### Issue: Screenshots Not Appearing in Dashboard
+**Issue: Screenshots Not Appearing in Dashboard**
 
 **Symptoms**: Tests run successfully but no screenshots appear in SmartUI dashboard
 
@@ -527,7 +527,7 @@ test('Take screenshot after page loads', async t ="> {
 </TabItem>
 <TabItem value='project-not-found-error' label='Project Not Found Error'>
 
-### Issue: Project Not Found" Error
+**Issue: Project Not Found" Error**
 
 **Symptoms**: Error message indicating project cannot be found
 
@@ -545,7 +545,7 @@ test('Take screenshot after page loads', async t ="> {
 </TabItem>
 <TabItem value='screenshots-show-blank-or-incorrect-content' label='Screenshots Show Blank or Incorrect Content'>
 
-### Issue: Screenshots Show Blank or Incorrect Content
+**Issue: Screenshots Show Blank or Incorrect Content**
 
 **Symptoms**: Screenshots captured but show blank pages or incorrect content
 
@@ -577,7 +577,7 @@ test('Take screenshot after page loads', async t ="> {
 </TabItem>
 <TabItem value='build-execution-fails' label='Build Execution Fails'>
 
-### Issue: Build Execution Fails
+**Issue: Build Execution Fails**
 
 **Symptoms**: `npx smartui exec` command fails
 
@@ -599,7 +599,7 @@ test('Take screenshot after page loads', async t ="> {
 </TabItem>
 <TabItem value='npm-dependencies-not-resolving' label='npm Dependencies Not Resolving'>
 
-### Issue: npm Dependencies Not Resolving
+**Issue: npm Dependencies Not Resolving**
 
 **Symptoms**: npm cannot find `@lambdatest/testcafe-driver` or `@lambdatest/smartui-cli`
 
@@ -627,7 +627,7 @@ test('Take screenshot after page loads', async t ="> {
 </TabItem>
 <TabItem value='screenshot-names-not-matching-baseline' label='Screenshot Names Not Matching Baseline'>
 
-### Issue: Screenshot Names Not Matching Baseline
+**Issue: Screenshot Names Not Matching Baseline**
 
 **Symptoms**: Screenshots appear as New" instead of comparing with baseline
 
@@ -642,7 +642,7 @@ test('Take screenshot after page loads', async t ="> {
 3. Avoid special characters in screenshot names
 4. Check for case sensitivity issues
 
-### Getting Help
+**Getting Help**
 
 If you encounter issues not covered here:
 

@@ -65,7 +65,7 @@ Before diving into specific issues, run through this quick checklist:
 
 <Tabs className='docs__val' groupId='troubleshooting-category'>
 <TabItem value='authentication' label='Authentication & Setup' default>
-### Issue: Screenshots Not Appearing in Dashboard
+**Issue: Screenshots Not Appearing in Dashboard**
 
 **Symptoms**:
 - Tests run successfully but no screenshots appear in SmartUI dashboard
@@ -352,7 +352,7 @@ Before diving into specific issues, run through this quick checklist:
 </TabItem>
 
 <TabItem value='screenshot' label='Screenshot & Content'>
-### Issue: Screenshots Show Blank or Incorrect Content
+**Issue: Screenshots Show Blank or Incorrect Content**
 
 **Symptoms**:
 - Screenshots captured but show blank pages
@@ -420,7 +420,7 @@ Before diving into specific issues, run through this quick checklist:
 
 ---
 
-### Issue: Screenshot Names Not Matching Baseline
+**Issue: Screenshot Names Not Matching Baseline**
 
 **Symptoms**:
 - Screenshots appear as "New" instead of comparing with baseline
@@ -469,7 +469,7 @@ Before diving into specific issues, run through this quick checklist:
 
 ---
 
-### Issue: High Mismatch Percentage or False Positives
+**Issue: High Mismatch Percentage or False Positives**
 
 **Symptoms**:
 - Mismatch percentage higher than expected
@@ -519,7 +519,7 @@ Before diving into specific issues, run through this quick checklist:
 </TabItem>
 
 <TabItem value='build' label='Build & Execution'>
-### Issue: Build Execution Fails
+**Issue: Build Execution Fails**
 
 **Symptoms**:
 - `npx smartui exec` command fails
@@ -575,7 +575,7 @@ Before diving into specific issues, run through this quick checklist:
 
 ---
 
-### Issue: Dependencies Not Resolving
+**Issue: Dependencies Not Resolving**
 
 **Symptoms**:
 - Package manager cannot find dependencies
@@ -638,7 +638,7 @@ Before diving into specific issues, run through this quick checklist:
 </TabItem>
 
 <TabItem value='cicd' label='CI/CD Integration'>
-### Issue: Pipeline/Workflow Fails with "Secret/Variable Not Found"
+**Issue: Pipeline/Workflow Fails with "Secret/Variable Not Found"**
 
 **Symptoms**:
 - CI/CD pipeline fails
@@ -693,7 +693,7 @@ Before diving into specific issues, run through this quick checklist:
 
 ---
 
-### Issue: Tests Run But No Results in Dashboard (CI/CD)
+**Issue: Tests Run But No Results in Dashboard (CI/CD)**
 
 **Symptoms**:
 - Pipeline completes successfully
@@ -733,7 +733,7 @@ Before diving into specific issues, run through this quick checklist:
 </TabItem>
 
 <TabItem value='configuration' label='Configuration'>
-### Issue: Configuration File Errors
+**Issue: Configuration File Errors**
 
 **Symptoms**:
 - "must NOT have additional properties" error
@@ -770,7 +770,7 @@ Before diving into specific issues, run through this quick checklist:
 
 ---
 
-### Issue: Environment Variables Not Persisting or Not Working
+**Issue: Environment Variables Not Persisting or Not Working**
 
 **Symptoms**:
 - Environment variables work in one terminal but not another
@@ -998,7 +998,7 @@ Before diving into specific issues, run through this quick checklist:
 </TabItem>
 
 <TabItem value='advanced' label='Advanced Issues'>
-### Issue: Proxy Configuration Not Working
+**Issue: Proxy Configuration Not Working**
 
 **Symptoms**:
 - Tests fail behind proxy
@@ -1033,7 +1033,7 @@ Before diving into specific issues, run through this quick checklist:
 
 ---
 
-### Issue: Tunnel Connection Issues
+**Issue: Tunnel Connection Issues**
 
 **Symptoms**:
 - Tunnel connection fails

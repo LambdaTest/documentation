@@ -197,7 +197,7 @@ The Smart Git management works consistently across all SmartUI CLI commands (`ex
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='branch-naming' label='Branch Naming' default>
 
-### Branch Naming
+**Branch Naming**
 
 Use clear, consistent branch naming conventions.
 
@@ -205,7 +205,7 @@ Use clear, consistent branch naming conventions.
 
 <TabItem value='regular-updates' label='Regular Updates'>
 
-### Regular Updates
+**Regular Updates**
 
 Keep branches up to date with their parent branches.
 
@@ -213,7 +213,7 @@ Keep branches up to date with their parent branches.
 
 <TabItem value='approval-process' label='Approval Process'>
 
-### Approval Process
+**Approval Process**
 
 Establish clear approval criteria for each branch.
 
@@ -221,7 +221,7 @@ Establish clear approval criteria for each branch.
 
 <TabItem value='documentation' label='Documentation'>
 
-### Documentation
+**Documentation**
 
 Document branch-specific visual changes.
 
@@ -229,7 +229,7 @@ Document branch-specific visual changes.
 
 <TabItem value='cleanup' label='Cleanup'>
 
-### Cleanup
+**Cleanup**
 
 Regularly clean up old branches and their builds.
 
@@ -241,7 +241,7 @@ Regularly clean up old branches and their builds.
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='comparison-issues' label='Comparison Issues' default>
 
-### Comparison Issues
+**Comparison Issues**
 
 1. **Comparison Issues**:
    - Verify Smart Git is enabled: `echo $SMART_GIT`
@@ -252,7 +252,7 @@ Regularly clean up old branches and their builds.
 
 <TabItem value='approval-issues' label='Approval Issues'>
 
-### Approval Issues
+**Approval Issues**
 
 1. **Approval Issues**:
    - Verify you have necessary permissions

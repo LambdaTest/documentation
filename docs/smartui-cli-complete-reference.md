@@ -141,7 +141,7 @@ npm install -g @lambdatest/smartui-storybook@latest
 
 <Tabs className='docs__val' groupId='command-details'>
 <TabItem value='exec' label='exec' default>
-### Execute Tests
+**Execute Tests**
 
 Execute test commands with SmartUI server running.
 
@@ -187,7 +187,7 @@ smartui exec --userName "user" --accessKey "key" -- npm test
 </TabItem>
 
 <TabItem value='capture' label='capture'>
-### Capture Static URLs
+**Capture Static URLs**
 
 Capture screenshots of static URLs from a configuration file.
 
@@ -235,7 +235,7 @@ smartui capture urls.json --buildName "Daily-Run" --fetch-results daily-results.
 </TabItem>
 
 <TabItem value='upload' label='upload'>
-### Upload Screenshots
+**Upload Screenshots**
 
 Upload screenshots from a directory for comparison.
 
@@ -285,7 +285,7 @@ smartui upload ./screenshots -R -E --buildName "Test-Run"
 </TabItem>
 
 <TabItem value='upload-pdf' label='upload-pdf'>
-### Upload PDFs
+**Upload PDFs**
 
 Upload PDF files for visual comparison.
 
@@ -325,7 +325,7 @@ smartui upload-pdf ./pdfs --fetch-results pdf-results.json
 </TabItem>
 
 <TabItem value='exec-start' label='exec:start'>
-### Start Server
+**Start Server**
 
 Start the SmartUI snapshot server.
 
@@ -373,7 +373,7 @@ smartui exec:start --buildName "Server-Build"
 </TabItem>
 
 <TabItem value='exec-stop' label='exec:stop'>
-### Stop Server
+**Stop Server**
 
 Stop the SmartUI snapshot server.
 
@@ -386,7 +386,7 @@ smartui exec:stop
 </TabItem>
 
 <TabItem value='exec-ping' label='exec:ping / exec:pingTest'>
-### Check Server Status
+**Check Server Status**
 
 Check if the SmartUI server is running.
 
@@ -406,7 +406,7 @@ smartui exec:pingTest
 </TabItem>
 
 <TabItem value='merge-1' label='merge'>
-### Merge Branches/Builds
+**Merge Branches/Builds**
 
 Merge source branch or build into target.
 
@@ -443,7 +443,7 @@ smartui merge build --source "Build-123" --target "Baseline-Build"
 </TabItem>
 
 <TabItem value='figma-1' label='Figma Commands'>
-### Figma Integration Commands
+**Figma Integration Commands**
 
 <Tabs className='docs__val' groupId='figma-commands'>
 <TabItem value='upload-figma' label='upload-figma' default>
@@ -541,7 +541,7 @@ These options can be used with most commands:
 
 <Tabs className='docs__val' groupId='storybook-cli'>
 <TabItem value='storybook-1' label='storybook Command' default>
-### Main Command
+**Main Command**
 
 **Syntax:**
 ```bash
@@ -582,7 +582,7 @@ smartui storybook http://localhost:6006 --env stage
 </TabItem>
 
 <TabItem value='config-1' label='config Command'>
-### Config Command
+**Config Command**
 
 **Syntax:**
 ```bash
@@ -729,7 +729,7 @@ $env:LT_SDK_DEBUG="true"
 
 <Tabs className='docs__val' groupId='workflows'>
 <TabItem value='static-capture' label='Static URL Capture' default>
-### Basic Static URL Capture
+**Basic Static URL Capture**
 ```bash
 # 1. Install CLI
 npm install -g @lambdatest/smartui-cli
@@ -750,7 +750,7 @@ npx smartui capture urls.json --fetch-results results.json
 </TabItem>
 
 <TabItem value='sdk-execution' label='SDK Test Execution'>
-### SDK Test Execution
+**SDK Test Execution**
 ```bash
 # 1. Set project token
 export PROJECT_TOKEN="123456#token"
@@ -770,7 +770,7 @@ npx smartui exec:stop
 </TabItem>
 
 <TabItem value='upload-screenshots' label='Upload Screenshots'>
-### Upload Existing Screenshots
+**Upload Existing Screenshots**
 ```bash
 # 1. Set project token
 export PROJECT_TOKEN="123456#token"
@@ -787,7 +787,7 @@ npx smartui upload ./screenshots \
 ```
 </TabItem>
 <TabItem value="storybook-2" label='Storybook Testing'>
-### Storybook Testing
+**Storybook Testing**
 ```bash
 # 1. Install Storybook CLI
 npm install -g @lambdatest/smartui-storybook
@@ -808,7 +808,7 @@ smartui storybook ./storybook-static --config .smartui.json
 </TabItem>
 
 <TabItem value='pdf-testing' label='PDF Testing'>
-### PDF Testing
+**PDF Testing**
 ```bash
 # 1. Set project token
 export PROJECT_TOKEN="123456#token"
@@ -822,7 +822,7 @@ npx smartui upload-pdf ./pdfs --markBaseline --buildName "PDF-Baseline"
 </TabItem>
 
 <TabItem value='cicd' label='CI/CD Integration'>
-### CI/CD Integration
+**CI/CD Integration**
 
 **GitHub Actions Example:**
 ```yaml
@@ -851,7 +851,7 @@ test:
 
 <Tabs className='docs__val' groupId='best-practices'>
 <TabItem value='naming' label='Build Naming' default>
-### Build Naming
+**Build Naming**
 
 - Use meaningful, consistent names
 - Include version or commit info
@@ -870,7 +870,7 @@ test:
 
 </TabItem>
 <TabItem value='config-2' label='Configuration Management'>
-### Configuration Management
+**Configuration Management**
 
 - Keep config files in version control
 - Use environment variables for sensitive data
@@ -880,7 +880,7 @@ test:
 </TabItem>
 
 <TabItem value='parallel' label='Parallel Execution'>
-### Parallel Execution
+**Parallel Execution**
 
 - Start with lower thread counts
 - Monitor system resources
@@ -889,7 +889,7 @@ test:
 
 </TabItem>
 <TabItem value='server-2' label='Server Management'>
-### Server Management
+**Server Management**
 
 - Always use `exec:stop` to terminate server
 - Check server status with `exec:ping`
@@ -899,7 +899,7 @@ test:
 </TabItem>
 
 <TabItem value='error-handling' label='Error Handling'>
-### Error Handling
+**Error Handling**
 
 - Always use `--fetch-results` for CI/CD
 - Check exit codes in scripts
@@ -915,7 +915,7 @@ test:
 
 <Tabs className='docs__val' groupId='troubleshooting'>
 <TabItem value='server-3' label='Server Not Running' default>
-### Server Not Running
+**Server Not Running**
 ```bash
 # Check status
 npx smartui exec:ping
@@ -929,7 +929,7 @@ echo $SMARTUI_SERVER_ADDRESS
 </TabItem>
 
 <TabItem value='port' label='Port Conflicts'>
-### Port Conflicts
+**Port Conflicts**
 ```bash
 # Use custom port
 npx smartui exec:start -P 5000
@@ -938,7 +938,7 @@ npx smartui exec -P 5000 -- npm test
 </TabItem>
 
 <TabItem value='auth' label='Authentication Issues'>
-### Authentication Issues
+**Authentication Issues**
 ```bash
 # Verify credentials
 echo $PROJECT_TOKEN
@@ -950,7 +950,7 @@ npx smartui capture urls.json --userName "user" --accessKey "key"
 ```
 </TabItem>
 <TabItem value='config-3' label='Configuration Errors'>
-### Configuration Errors
+**Configuration Errors**
 ```bash
 # Validate JSON
 cat .smartui.json | python -m json.tool
