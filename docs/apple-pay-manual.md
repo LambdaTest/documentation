@@ -77,7 +77,9 @@ Currently, Apple Pay manual testing in App Live is supported on these iOS real d
 
 Within the App Live session, you can use Apple Pay via the **Assistive Touch** option. Simply click on Apple Pay, and you will be prompted to enter the device passcode (default is `123456`). Once the passcode is entered, you can complete a payment through Apple Pay, simulating a real user transaction.
 
-
+:::info
+- If the **Wallet** is not set up on the device, the **Apple Pay** option will not appear through **Assistive Touch**. Please ensure Wallet is configured before attempting to access Apple Pay.
+:::
 ---
 
 ## Additional Links
