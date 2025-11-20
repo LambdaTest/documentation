@@ -79,13 +79,20 @@ To create a SmartUI Project, follow these steps:
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots -
 
-1. Please clone the following sample Github repo (`https://github.com/LambdaTest/smartui-k6-sample`).
+1. Clone the sample Github repository:
 
-```powershell
-git clone https://github.com/LambdaTest/smartui-k6-sample.git
+```bash
+git clone https://github.com/LambdaTest/smartui-k6-sample
+cd smartui-k6-sample
 ```
 
-2.  Install k6 by referring to the installation guide `https://k6.io/docs/get-started/installation/`:
+2. Install the required dependencies:
+
+```bash
+npm install @lambdatest/smartui-cli @lambdatest/k6-driver
+```
+
+3. Install k6 by referring to the installation guide `https://k6.io/docs/get-started/installation/`:
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS' label='MacOS' default>
@@ -104,134 +111,66 @@ winget install k6
 </TabItem>
 </Tabs>
 
-1.  Set up the LambdaTest credentials by using the commands below in the terminal.The account details are available on your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile) page.
-
-For macOS:
-```bash
-export LT_USERNAME="LT_USERNAME"
-export LT_ACCESS_KEY="LT_ACCESS_KEY"
-```
-For Linux:
-```bash
-export LT_USERNAME="LT_USERNAME"
-export LT_ACCESS_KEY="LT_ACCESS_KEY"
-```
-For Windows:
-```bash
-set LT_USERNAME="LT_USERNAME"
-set LT_ACCESS_KEY="LT_ACCESS_KEY"
-```
-
-4.  Edit the required capabilities in your test file `k6-smartui.js`.
-
-```javascript title="Add" the following code snippet to run SmartUI with K6 in ./navigation.js"
-
-export default async function () {
-  const capabilities = {
-    "browserName": "Chrome",
-    "browserVersion": "latest",
-    "LT:Options": {
-      "platform": "MacOS Ventura",
-      "build": "K6 Build",
-      "name": "K6 SmartUI test",
-      "user": __ENV.LT_USERNAME,
-      "accessKey": __ENV.LT_ACCESS_KEY,
-      "network": true,
-      "video": true,
-      "console": true,
-      'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-      'tunnelName': '', // Optional
-      'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-      'smartUIProjectName': 'K6_Test_Sample', // Add the required SmartUI Project name
-    },
-  };
-
-  const wsURL = `wss://cdp.lambdatest.com/k6?capabilities="${encodeURIComponent(JSON.stringify(capabilities))}`"
-  const browser = chromium.connect(wsURL);
-
-  const page = browser.newPage();
-
-  try {
-    await page.goto("https://duckduckgo.com");
-
-    // Add the following command in order to take screenshot in SmartUI
-    await captureSmartUIScreenshot(page, "Homepage")
-
-    let element = await page.$("[name=\"q\"]");
-    await element.click();
-    await element.type("K6");
-    await element.press("Enter");
-    let title = await page.title();
-
-    expect(title).to.equal("K6 at DuckDuckGo");
-
-    // Pass the `page` object. Add `screennshotName` if you want to fetch response for a specific screenshot
-    await validateSmartUIScreenshots(page)
-
-    // Mark the test as passed or failed
-    await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: "setTestStatus", arguments: { status: "passed", remark: "Assertions passed" },})}`);
-    await teardown(page, browser)
-  } catch (e) {
-      console.log('Error:: ', JSON.stringify(e))
-      await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'failed', remark: JSON.stringify(e) } })}`)
-
-    await teardown(page, browser)
-    throw e
-  }
-};
-
-async function captureSmartUIScreenshot(page, screenshotName) {
-  await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: "smartui.takeScreenshot", arguments: { screenshotName: screenshotName } })}`);
-}
-
-async function teardown(page, browser) {
-  await page.close();
-  await browser.close();
-}
-
-const validateSmartUIScreenshots = async (page, screenshotName) => {
-  try {
-    await page.waitForTimeout(10000) // Added delay to get reports of all screenshots captured
-
-    let screenshotResponse = JSON.parse(await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'smartui.fetchScreenshotStatus', arguments: { screenshotName }})}`))
-    console.log('screenshotStatus response: ', screenshotResponse)
-
-    if (screenshotResponse.screenshotsData && Array.isArray(screenshotResponse.screenshotsData)) {
-      for (let i = 0; i < screenshotResponse.screenshotsData.length; i++) {
-        let screenshot = screenshotResponse.screenshotsData[i];
-        if (screenshot.screenshotStatus !== "Approved") {
-          throw new Error(`Screenshot status is not approved for the screenshot ${screenshot.screenshotName}`);
-        }
-      }
-    }
-  } catch (error) {
-    throw new Error(error);
-  }
-}
-```
-
-### **Step 3:** Executing the SmartUI Test Suite on Cloud
-
-Execute the test using the following command to run the test suite using `K6`
+4. Set up the LambdaTest credentials by using the commands below in the terminal. The account details are available on your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile) page.
 
 <Tabs className='docs__val' groupId='language'>
-<TabItem value='MacOS/Linux-1' label='MacOS/Linux' default>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
 
 ```bash
-K6_BROWSER_ENABLED="true" k6 run k6-smartui.js
+export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+export PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 ```
 
 </TabItem>
-<TabItem value='Windows-2' label='Windows' default>
+<TabItem value='Windows' label='Windows - CMD'>
 
 ```bash
-set K6_BROWSER_ENABLED="true"
-k6 run k6-smartui.js
+set LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+set LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+set PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
 ```
 
 </TabItem>
+<TabItem value='PowerShell' label='PowerShell'>
 
+```powershell
+$env:LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
+$env:LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
+$env:PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
+```
+
+</TabItem>
 </Tabs>
+
+5. Create and configure SmartUI config file:
+
+```bash
+npx smartui config:create smartui-web.json
+```
+
+6. Add the SmartUI snapshot function to your test file. Create or edit `test.js`:
+
+```javascript title="test.js"
+import http from 'k6/http';
+import { smartuiSnapshot } from '@lambdatest/k6-driver';
+
+export default function () {
+  const response = http.get('https://www.lambdatest.com'); // Enter your desired URL here
+  smartuiSnapshot(response, 'Homepage-Screenshot');
+  // Please specify your response and the screenshot name in this function
+  // response - k6 http response instance (required)
+  // Screenshot_Name - Name of the screenshot; unique to each screenshot (required)
+}
+```
+
+### **Step 3:** Executing the SmartUI Test Suite
+
+Execute the test using the following command:
+
+```bash
+npx smartui exec k6 run test.js
+```
 
   - You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
 
@@ -249,8 +188,11 @@ k6 run k6-smartui.js
 
 **Example:**
 ```javascript
-await smartuiSnapshot(page, HomePage-Header");
-await smartuiSnapshot(page, "ProductPage-MainContent");
+const response1 = http.get('https://example.com');
+smartuiSnapshot(response1, "HomePage-Header");
+
+const response2 = http.get('https://example.com/products');
+smartuiSnapshot(response2, "ProductPage-MainContent");
 ```
 
 </TabItem>
@@ -259,15 +201,21 @@ await smartuiSnapshot(page, "ProductPage-MainContent");
 **Wait for Page Load**
 
 - Always wait for pages to fully load before taking screenshots
-- Use K6's built-in wait methods for dynamic content
-- Consider using `waitForTimeout` in configuration for lazy-loaded content
+- Use K6's built-in check and sleep methods for timing control
+- Consider adding delays for lazy-loaded content
 
 **Example:**
 ```javascript
-await page.goto('https://example.com');
-await page.waitForSelector('#main-content');
-await page.waitForLoadState('networkidle');
-await smartuiSnapshot(page, Page Loaded");
+import { sleep, check } from 'k6';
+import http from 'k6/http';
+import { smartuiSnapshot } from '@lambdatest/k6-driver';
+
+const response = http.get('https://example.com');
+check(response, {
+  'status is 200': (r) => r.status === 200,
+});
+sleep(2); // Wait for dynamic content
+smartuiSnapshot(response, "Page-Loaded");
 ```
 
 </TabItem>
@@ -323,9 +271,9 @@ await smartuiSnapshot(page, Page Loaded");
 
 2. Check project name matches exactly (case-sensitive)
 
-3. Ensure K6 browser is enabled:
+3. Ensure you're using the SmartUI CLI wrapper:
    ```bash
-   K6_BROWSER_ENABLED="true" k6 run k6-smartui.js
+   npx smartui exec k6 run test.js
    ```
 
 4. Check network connectivity to LambdaTest servers
@@ -366,51 +314,60 @@ await smartuiSnapshot(page, Page Loaded");
 **Solutions**:
 1. Add explicit waits before screenshots:
    ```javascript
-   await page.waitForSelector('#content');
-   await page.waitForSelector('.main-content');
-   await page.waitForLoadState('networkidle');
+   import { sleep } from 'k6';
+   import http from 'k6/http';
+   import { smartuiSnapshot } from '@lambdatest/k6-driver';
+   
+   const response = http.get('https://example.com');
+   sleep(2); // Wait for content to load
+   smartuiSnapshot(response, 'Screenshot-Name');
    ```
 
-2. Enable JavaScript in configuration:
-   ```json
-   {
-     enableJavaScript": true
-   }
+2. Check response status before taking screenshot:
+   ```javascript
+   import { check } from 'k6';
+   
+   const response = http.get('https://example.com');
+   check(response, {
+     'status is 200': (r) => r.status === 200,
+   });
+   smartuiSnapshot(response, 'Screenshot-Name');
    ```
 
-3. Increase `waitForTimeout` in configuration
-
-4. Verify viewport size matches expected dimensions
+3. Verify viewport size in smartui-web.json configuration file
 
 </TabItem>
 <TabItem value='k6-browser-not-enabled' label='K6 Browser Not Enabled'>
 
-**Issue: K6 Browser Not Enabled**
+**Issue: SmartUI CLI Not Working**
 
-**Symptoms**: Tests fail with browser not enabled" error
+**Symptoms**: Tests fail with SmartUI-related errors
 
 **Possible Causes**:
-- `K6_BROWSER_ENABLED` environment variable not set
-- K6 browser extension not installed
-- K6 version doesn't support browser
+- `@lambdatest/smartui-cli` not installed
+- `@lambdatest/k6-driver` not installed
+- PROJECT_TOKEN not set
 
 **Solutions**:
-1. Set environment variable:
+1. Install required dependencies:
    ```bash
-   export K6_BROWSER_ENABLED="true"
+   npm install @lambdatest/smartui-cli @lambdatest/k6-driver
    ```
 
-2. Or run with environment variable:
+2. Set PROJECT_TOKEN environment variable:
    ```bash
-   K6_BROWSER_ENABLED="true" k6 run k6-smartui.js
+   export PROJECT_TOKEN="YOUR_PROJECT_TOKEN"
    ```
 
-3. Verify K6 version supports browser:
+3. Verify K6 is installed:
    ```bash
    k6 version
    ```
 
-4. Install K6 browser extension if needed
+4. Run tests using the SmartUI CLI wrapper:
+   ```bash
+   npx smartui exec k6 run test.js
+   ```
 
 </TabItem>
 <TabItem value='screenshot-status-not-approved' label='Screenshot Status Not Approved'>
