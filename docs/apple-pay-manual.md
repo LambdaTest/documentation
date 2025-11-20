@@ -90,6 +90,6 @@ Within the App Live session, you can use Apple Pay via the **Assistive Touch** o
 
 ---
 
-:::info
+:::tip
 Within a single session, only one card can be selected. To switch cards, you’ll need to start a new session with the desired card. 
 :::
