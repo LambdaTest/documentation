@@ -100,23 +100,23 @@ curl --location 'https://test-manager-api.lambdatest.com/api/atm/v1/hyperexecute
     "test_run_id": "YOUR_TEST_RUN_ID", #enter test run id
     "concurrency": 1, # Optional, default 1
     "title": "UNIQUE_BUILD_NAME", #Optional
-    "console_logs": "false", #Optional for web tests, options - false, error, warn, info, true
-    "network_logs": "false", #Optional to capture network calls during the test
-    "network_full_har": "false", #Optional, Only for web, to capture complete network requests & response during the test
+    "console_log": false, #Optional for web tests, options - false, error, warn, info, true
+    "network_logs": false, #Optional to capture network calls during the test
+    "network_full_har": false, #Optional, Only for web, to capture complete network requests & response during the test
     "region": "YOUR_DESIRED_REGION", #Optional for web tests, options - eastus, centralindia
     "mobile_region": "YOUR_DESIRED_REGION", #Optional for mobile tests, options - us,eu,ap
     "tunnel": "tunnel-name", #Optional, either tunnel or dedicated proxy or geolocation can be used
     "dedicated_proxy": "region", #Optional, either tunnel or dedicated proxy or geolocation can be used
     "geolocation": "region", #Optional, either tunnel or dedicated proxy or geolocation can be used
     "environment_id": 0, #Optional, default null, to define the environment for test run
-    "retry_on_failure": "true", #Optional, default true, to define if retry is needed in case of failure
+    "retry_on_failure": true, #Optional, default true, to define if retry is needed in case of failure
     "max_retries": 1, #Optional, default 1, to define the number of retries needed if retry_on_failure is enabled
     "timezone": {"region":"Indianapolis"}, #Optional, Only for web, to define the timezone using which the test runs should run
-    "app_profiling": "false", #Optional for performance metrics for native mobile apps
-    "performance": "false", #Optional for lighthouse report for web tests
+    "app_profiling": false, #Optional for performance metrics for native mobile apps
+    "performance": false, #Optional for lighthouse report for web tests
     "android_app_id": "lt://<YOUR_ANDROID_APP_ID>", #optional 
     "ios_app_id": "lt://<YOUR_iOS_APP_ID>", #optional 
-    "accessibility": "false", #Optional only for web tests
+    "accessibility": false, #Optional only for web tests
     "network_throttle": {
         "label": "No Throttling",
         "value": "default",
