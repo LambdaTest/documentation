@@ -50,7 +50,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-Welcome to the world of simplified visual testing with the SmartUI SDK.
+Welcome to the world of simplified visual testing with the SmartUI SDK. 
 
 Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK revolutionizes the way you approach visual regression testing. Our robust solution empowers you to effortlessly capture, compare, and analyze screenshots across a multitude of browsers and resolutions, ensuring comprehensive coverage and accuracy in your visual testing endeavors.
 
@@ -59,7 +59,7 @@ Integrating seamlessly into your existing Selenium testing suite, SmartUI SDK re
 - Basic understanding of Command Line Interface and Selenium is required.
 - Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
 - Install **virtualenv** which is the recommended way to run your tests. It will isolate the build from other setups you may have running and ensure that the tests run with the specified versions of the modules.
-
+  
 ```bash
 pip install virtualenv
 ```
@@ -90,13 +90,13 @@ cd smartui-python-sample
 ```
 
 - Create a virtual environment in your project folder (the environment name is arbitrary).
-
+  
 ```bash
 virtualenv venv
 ```
 
 - Activate the environment.
-
+  
 ```bash
 source venv/bin/activate
 ```
@@ -199,7 +199,7 @@ Once, the configuration file will be created, you will be seeing the default con
 
 ### **Step 5:** Adding SmartUI function to take screenshot
 
-- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below:
+- You can incorporate SmartUI into your custom `Selenium` automation test (any platform) script by adding the `smartuiSnapshot` function in the required segment of selenium script of which we would like to take the screenshot, as shown below: 
 
 ```python
 from lambdatest_selenium_driver import smartui_snapshot
@@ -211,7 +211,7 @@ try:
     smartui_snapshot(driver,"<Screenshot Name>")
 except Exception as err:
     print(err)
-finally:
+finally: 
     driver.close()
 ```
 
@@ -223,7 +223,7 @@ Execute `visual regression tests` on SmartUI using the following commands
 npx smartui exec python SmartUI_SDK_LT_hub.py --config .smartui.json
 ```
 
-:::note
+:::note 
 You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
 :::
 
@@ -245,7 +245,7 @@ The following are the different options which are currently supported:
 | `"Screenshot Name"` (string)    | Specify a name for the screenshot in your tests to match the same screenshot with the name from your baseline. |
 | `options` (object)    | Specify one or a combination of selectors in the `ignoreDOM` or `selectDOM` objects. These selectors can be based on `HTML DOM IDs, CSS classes, CSS selectors, or XPaths` used by your webpage. They define elements that should be excluded from or included in the visual comparison.|
 
-## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />**
+## Handling Dynamic Data in SmartUI SDK  **<NewTag value='New' color='#000' bgColor='#ffec02' />** 
 
 When conducting visual tests, you may encounter scenarios where certain elements within your application change between test runs. These changes  might introduce inconsistencies in your test results.You can ignore / select specific element(s) to be removed from the comparison by parsing the options in the `smartuiSnapshot` function in the following way
 

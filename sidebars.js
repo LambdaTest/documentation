@@ -3370,6 +3370,11 @@ module.exports = {
           },
           {
             type: "doc",
+            label: "Smart Comments",
+            id: "smartui-smart-comments",
+          },
+          {
+            type: "doc",
             label: "Draw on UI",
             id: "smartui-draw-on-ui",
           },
