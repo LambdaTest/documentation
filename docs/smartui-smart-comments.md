@@ -533,6 +533,5 @@ The following features are planned for future releases:
 ## Next Steps
 
 - Learn about [SmartUI Multiselect & Bulk Operations](/support/docs/smartui-multiselect-bulkops/) to combine comments with bulk actions
-- Explore [SmartUI Best Practices](/support/docs/smartui-best-practices/) for efficient visual testing workflows
 - Check the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) for common issues
 
