@@ -89,6 +89,12 @@ tunnelOpts:
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/secrets/12.png').default} alt="Image"  style={{width: '500px',}} className="doc_img"/>
 
+:::info 
+
+In case you want to access a common tunnel across team, please use the shared tunnel. To learn how to use shared tunnel, please follow the steps mentioned in [Sharing LambdaTest Tunnel](/support/docs/sharing-lambda-tunnel). 
+
+:::
+
 ## Clone a Repository via Tunnel
 
 Cloning a repository using a tunnel can help secure the transfer of data between the repository and your local machine.
