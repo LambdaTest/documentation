@@ -54,8 +54,6 @@ Before getting started, ensure the following:
 - You have a LambdaTest account.
 - LambdaTest credentials (username & access key).
 - App uploaded to LambdaTest App Storage (lt://APP_ID).
-- Python 3 installed locally.
-- Appium-Python-Client installed
 - Access to a valid Android device on LambdaTest (real or virtual).
 
 > Native app accessibility automation supports both Android and iOS applications.
