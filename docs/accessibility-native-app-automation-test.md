@@ -54,7 +54,7 @@ Before getting started, ensure the following:
 - You have a LambdaTest account.
 - LambdaTest credentials (username & access key).
 - App uploaded to LambdaTest App Storage (lt://APP_ID).
-- Access to a valid Android device on LambdaTest (real or virtual).
+- Access to a valid Android or iOS device on LambdaTest.
 
 > Native app accessibility automation supports both Android and iOS applications.
 
@@ -190,8 +190,8 @@ driver.execute_script("lambda-accessibility-scan")
 driver.quit()
 ```
 
-> For iOS accessibility automation, ensure you're targeting **iOS 15** or later and include the `"iosLiveInteraction": true` capability in your configuration.
-> 
+> App Accessibility automation is available for iOS 16.5 and later versions.
+
 
 ## Step 4: Execute and Monitor your Tests
 Run the following command in the directory where your project has been saved to execute your build.

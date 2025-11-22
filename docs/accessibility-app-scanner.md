@@ -47,7 +47,7 @@ LambdaTest offers a powerful Accessibility Scanner for native Android and iOS ap
 ## Prerequisites
 - You must have access to the LambdaTest Real Device Cloud.
 - Your Android app (.apk or .aab) or iOS app should be uploaded to the platform.
-- Ensure you have enabled the Accessibility feature from your account or project settings, if applicable.
+
 
 ## Steps to perform Accessibility Testing using the App Scanner
 ### Step 1: Navigate to the Accessibility Section
