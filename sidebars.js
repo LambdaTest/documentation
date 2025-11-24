@@ -4131,6 +4131,25 @@ module.exports = {
     ],
   ],
 
+  LTMCPServerSidebar: [
+    {
+      type: "link",
+      label: "Back",
+      href: "/docs/",
+      customProps: {
+        className: "back-to-main-menu",
+      },
+    },
+    [
+      {
+        type: "doc",
+        label: "Setting up LambdaTest MCP Server",
+        id: "lambdatest-mcp-server",
+      },
+    ],
+  ],
+
+
   TestingLocalPagesSidebar: [
     {
       type: "link",
