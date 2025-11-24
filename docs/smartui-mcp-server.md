@@ -78,45 +78,6 @@ Here are the key benefits of using the SmartUI  MCP Server:
 - **MCP-Native Integration:** Seamlessly works with LambdaTest’s MCP-enabled environments and SmartUI workflows.
 - **Developer-Ready Summaries:** Outputs are designed for frontend teams—easy to read, act, and commit to code.
 
-## Prerequisites
-
-To use the SmartUI  MCP Server:
-
-1. Run SmartUI visual tests via LambdaTest and obtain the comparisonId.
-2. Use an MCP-compatible client (e.g., cline) to call the tools.
-
-## Connecting to SmartUI MCP Server​
-
-### Connecting with Cline
-
-Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant that integrates directly into your development workflow. It provides intelligent code suggestions and documentation assistance, and now, with MCP support, you can interface with external tools like SmartUI to enhance your testing capabilities. Cline offers natural language interactions with your codebase, allowing you to simply describe what you need rather than manually configuring everything.
-
-#### Installing Cline in VS Code:
-
-**Step 1:** Open VS Code.<br />
-**Step 2:** Click on the Extensions icon in the Activity Bar on the side of the window (or press `Ctrl+Shift+X`).<br />
-**Step 3:** Search for **Cline** in the Extensions Marketplace.
-
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/installing-cline.webp').default} alt="automation-dashboard"  width="1920" height="868" className='doc_img'/>
-
-**Step 4:** Click **Install** on the Cline – The Collaborative AI Coder extension.<br />
-**Step 5:** Once installed, you'll see the Cline icon in your VS Code sidebar.<br />
-**Step 6:** Click on the Cline icon to open the Cline panel.<br />
-**Step 7:** Complete any authentication steps required during first-time setup.
-
-### Connecting Cline to SmartUI MCP Server
-
-#### VS Code Configuration:
-
-**Step 1:** In VS Code, click on the Cline icon in the sidebar to open the Cline panel.<br />
-**Step 2:** Under the **MCP Servers** section, click **Remote Servers**.
-<img loading="lazy" src={require('../assets/images/hyperexecute-mcp/vs-code-config.webp').default} alt="automation-dashboard"  width="1920" height="868" className='doc_img'/>
-
-**Step 3:** Add Server Name as **LambdaTest-MCP**.<br />
-**Step 4:** Enter the following URL in the server URL field: `http://mcp-api.lambdatest.com/automation?&LT_USERNAME=[your-lt-username]&LT_ACCESS_KEY=[your-lt-access-key]` <br />
-**Step 5:** Replace [your-lt-username] and [your-lt-access-key] with your LambdaTest credentials. <br />
-**Step 6:** Click on **Add Server**.
-
 ## Supported Tools
 
 The following tools return human-readable summaries and require only a comparisonId as input.

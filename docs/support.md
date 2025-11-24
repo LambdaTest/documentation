@@ -228,6 +228,13 @@ import NewTag from '../src/component/newTag';
         <a href="/support/docs/link-jira-issues-with-test-manager/"><p className="p_home_inners">Issue Tracker Integration</p></a>
       </div>
     </div>
+
+<div className="home_inners_box">
+       <h2 className='homeMain_h2'><TestManagerLightIcon className="home_icons home_light_icon" role="presentation"/> <TestManagerDarkIcon className="home_icons home_dark_icon" role="presentation"/>LambdaTest MCP Server &nbsp; <NewTag  value="NEW" /></h2>
+      <div className="home_inners"> 
+        <a href="/support/docs/lambdatest-mcp-server/"><p className="p_home_inners">Setting up LambdaTest MCP Server</p></a>
+      </div>
+    </div>
     <div className="home_inners_box">
       <h2 className='homeMain_h2'><IntegrationsLightIcon className="home_icons home_light_icon" role="presentation"/> <IntegrationsDarkIcon className="home_icons home_dark_icon" role="presentation"/>Integrations</h2>
       <div className="home_inners">
