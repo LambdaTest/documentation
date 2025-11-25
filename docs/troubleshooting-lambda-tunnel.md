@@ -116,7 +116,7 @@ By applying the above changes, you would find the CSS loading issue as resolved.
 
 If you are testing a server that requires IP whitelisting, then you just have to set up a Local Testing connection and whitelist the below few IP’s for the respective domain:
 
-`http://ts.lambdatest.com/`<br />
+`https://ts.lambdatest.com/`<br />
 
 - 199.58.84.59
 - 23.82.88.184
