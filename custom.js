@@ -125,6 +125,10 @@
     });
 
     function selectText(htmlelement) {
+      if (!htmlelement || !htmlelement.nodeType) {
+        console.log("Invalid element provided to selectText");
+        return;
+      }
       var node = htmlelement;
       if (document.body.createTextRange) {
         const range = document.body.createTextRange();
@@ -138,6 +142,7 @@
         selection.addRange(range);
       } else {
         console.log("Could not select text in node: Unsupported browser.");
+        return;
       }
       document.execCommand('copy')
     }
@@ -163,7 +168,9 @@
       if (event.target.matches(".clean-btn")) {
         let target = event.target || event.srcElement;
         let codeblock = target.closest('.lambdatest__codeblock');
-        selectText(codeblock)
+        if (codeblock) {
+          selectText(codeblock)
+        }
       }
     });
 

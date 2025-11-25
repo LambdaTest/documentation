@@ -2299,6 +2299,7 @@ module.exports = {
               id: "java-framework",
             },
             items: [
+              "selenium-java-sdk",
               "testng-framework",
               "junit-frameworks",
               "cucumber-script-testng-selenium",
