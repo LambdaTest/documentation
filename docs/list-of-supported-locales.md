@@ -247,4 +247,25 @@ Locale to be passed in the capability - locale: 'fr_FR' where fr is language cod
 | Mexico                 | es-MX                      |
 | South Africa           | en-ZA                      |
 
+
+### Enabling Locales and Language via Hook
+To **dynamically change** the language and locale of a device during test execution use the `updateLanguageLocale` action inside `lambda_executor`.The example below demonstrates how to use the following.
+
+```python
+driver.execute_script('lambda_executor: { 
+      "action": "updateLanguageLocale", 
+      "arguments": { 
+        "language" : "<language-code>" ,
+        "locale" : "<locale-code>" ,
+        } 
+}')
+```
+:::info
+- **iOS**: Supported on devices running iOS 14 and above.
+- **Android**: Supported on devices running Android 11 and above.
+- Both language and locale are required parameters. If either one is missing, the hook will return an error
+:::
+
+
+
 > That's all! In case you come across any doubts or have any questions for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24x7 Chat Support**</span> or you could also mail us directly at **[support@lambdatest.com](mailto:support@lambdatest.com)**.
