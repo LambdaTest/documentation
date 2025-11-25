@@ -64,12 +64,12 @@ module.exports = {
       typesenseServerConfig: {
         nodes: [
           {
-            host: process.env.HOST,
-            port: 443,
-            protocol: 'https',
+            host: process.env.HOST || 'localhost',
+            port: parseInt(process.env.PORT) || 443,
+            protocol: (process.env.PROTOCOL || 'https'),
           },
         ],
-        apiKey: process.env.API,
+        apiKey: process.env.API || 'dummy-api-key-for-build',
       },
 
       // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters

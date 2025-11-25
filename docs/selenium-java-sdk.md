@@ -272,6 +272,39 @@ public class BasicTest {
 - [GitHub Repository](https://github.com/Lambdatest/lambdatest-java-selenium-sdk)
 - [LambdaTest Support](https://www.lambdatest.com/support)
 
+## Changelog
+
+---
+
+### Version 1.0.1 (Latest)
+
+**New Features:**
+- **Enhanced Thread Safety:** Improved driver instance management to ensure thread-safe operations during parallel test execution
+- **Tunnel Support**: Added support for LambdaTest Tunnel configuration in `lambdatest.yml`
+  - Configure tunnel settings directly in YAML configuration
+  - Automatic tunnel lifecycle management
+- **Enhanced Configuration**: Improved YAML configuration parsing and validation
+- **Better Error Handling**: More descriptive error messages for configuration issues
+
+**Improvements:**
+- Optimized SDK initialization and configuration loading
+- Improved compatibility with TestNG execution
+
+
+### Version 1.0.0 (Initial Release)
+
+**Core Features:**
+- Zero code changes approach for running Selenium tests on LambdaTest
+- YAML-based configuration (`lambdatest.yml`)
+- Two TestNG listener integration for automatic test status updates
+- Integration with LambdaTest Selenium Grid
+
+**Supported Features:**
+- Video recording
+- Network logging
+- Console logging
+- Visual debugging
+- Test metadata (build, project, name)
 
 ---
 
