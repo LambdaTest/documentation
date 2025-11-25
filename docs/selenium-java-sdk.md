@@ -275,8 +275,6 @@ public class BasicTest {
 
 ---
 
-Made with ❤️ by LambdaTest
-
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
