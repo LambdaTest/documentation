@@ -2,7 +2,7 @@
 id: selenium-java-sdk
 title: LambdaTest Selenium Java SDK - Zero Code Changes
 sidebar_label: Selenium Java SDK
-description: Run your Selenium Java tests on LambdaTest with zero code changes. Simple YAML configuration, Maven dependencies, and a single listener is all you need.
+description: Run your Selenium TestNG tests on LambdaTest with zero code changes. Simple YAML configuration, Maven dependencies, and a single listener is all you need.
 keywords:
   - selenium java sdk
   - lambdatest java sdk
@@ -48,7 +48,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-The LambdaTest Selenium Java SDK enables you to run your existing Selenium Java tests on LambdaTest's cloud grid with **zero code changes**. Simply configure a YAML file, add a Maven dependency, and include a single listener - that's all you need to get started.
+The LambdaTest Selenium Java SDK enables you to run your existing Selenium TestNG tests on LambdaTest's cloud grid with **zero code changes**. Simply configure a YAML file, add a Maven dependency, and include a single listener - that's all you need to get started.
 
 ## Key Features
 
