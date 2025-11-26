@@ -80,14 +80,82 @@ Getting started with the LambdaTest Selenium Java SDK requires only three simple
 
 ### Step 1: Add Maven Dependency
 
-Add the LambdaTest Selenium Java SDK dependency to your `pom.xml` file:
+To get started, add the LambdaTest Selenium Java SDK dependency to your `pom.xml`. Make sure to also configure the agent to start automatically during your build process:
 
 ```xml
-<dependency>
-    <groupId>io.github.lambdatest</groupId>
-    <artifactId>lambdatest-selenium-java-sdk</artifactId>
-    <version>1.0.1</version>
-</dependency>
+<dependencies>
+  ....
+    <dependency>
+        <groupId>io.github.lambdatest</groupId>
+        <artifactId>lambdatest-selenium-java-sdk</artifactId>
+        <version>1.0.1</version>
+    </dependency>
+</dependencies>
+
+<build>
+   ....
+    <plugins>
+        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.7.0</version>
+            <configuration>
+                <release>10</release>
+            </configuration>
+        </plugin>
+
+        <plugin>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+                <execution>
+                    <id>getClasspathFilenames</id>
+                    <goals>
+                        <goal>properties</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>copy-lambdatest-agent</id>
+                    <phase>generate-test-resources</phase>
+                    <goals>
+                        <goal>copy</goal>
+                    </goals>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>io.github.lambdatest</groupId>
+                                <artifactId>lambdatest-selenium-java-sdk</artifactId>
+                                <version>1.0.1</version>
+                                <destFileName>lambdatest-agent.jar</destFileName>
+                                <outputDirectory>${project.build.directory}/agents</outputDirectory>
+                            </artifactItem>
+                        </artifactItems>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.19.1</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>test</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <suiteXmlFiles>
+                    <suiteXmlFile>${suite}</suiteXmlFile>
+                </suiteXmlFiles>
+                <argLine>
+                    -javaagent:${project.build.directory}/agents/lambdatest-agent.jar
+                </argLine>
+            </configuration>
+        </plugin>
+    </plugins>   
+</build>
+
 ```
 
 :::note
@@ -121,7 +189,7 @@ network: false
 console: true
 visual: false
 
-# Additional capabilities
+# Advanced capabilities (optional)
 resolution: 1920x1080
 tunnel: true
 ```
@@ -135,9 +203,10 @@ accesskey: ${LT_ACCESS_KEY}
 ```
 
 Set these environment variables before running your tests:
+
 - `LT_USERNAME` - Your LambdaTest username
 - `LT_ACCESS_KEY` - Your LambdaTest access key
-:::
+  :::
 
 ### Step 3: Add TestNG Listener
 
@@ -148,9 +217,9 @@ Add the LambdaTest status listener to your TestNG configuration:
 ```xml
 <suite name="LambdaTest Suite">
     <listeners>
-        <listener class-name="com.lambdatest.selenium.LambdaTestStatusListener"/>
+         <listener class-name="com.lambdatest.selenium.testng.TestNgTestListener"/>
     </listeners>
-    
+
     <test name="My Tests">
         <classes>
             <class name="com.example.MyTest"/>
@@ -159,10 +228,7 @@ Add the LambdaTest status listener to your TestNG configuration:
 </suite>
 ```
 
-
 That's it! Your tests are now configured to run on LambdaTest. No code changes required in your existing test methods.
-
-
 
 ## Thread Safety
 
@@ -209,20 +275,20 @@ import java.net.URL;
 
 public class BasicTest {
     WebDriver driver;
-    
+
     @BeforeMethod
     public void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
         options.setCapability("platformName", "Windows 10");
         options.setCapability("browserVersion", "latest");
-        
+
         // SDK automatically injects LambdaTest capabilities from lambdatest.yml
         driver = new RemoteWebDriver(
-            new URL("https://hub.lambdatest.com/wd/hub"), 
+            new URL("https://hub.lambdatest.com/wd/hub"),
             options
         );
     }
-    
+
     @Test
     public void testExample() {
         driver.get("https://www.example.com");
@@ -230,7 +296,7 @@ public class BasicTest {
         System.out.println("Page title: " + title);
         assert title.contains("Example");
     }
-    
+
     @AfterMethod
     public void teardown() {
         if (driver != null) {
@@ -262,7 +328,6 @@ public class BasicTest {
 - Ensure `lambdatest.yml` is in the project root directory
 - Verify YAML syntax is correct
 
-
 ## Additional Resources
 
 ---
@@ -279,6 +344,7 @@ public class BasicTest {
 ### Version 1.0.1 (Latest)
 
 **New Features:**
+
 - **Enhanced Thread Safety:** Improved driver instance management to ensure thread-safe operations during parallel test execution
 - **Tunnel Support**: Added support for LambdaTest Tunnel configuration in `lambdatest.yml`
   - Configure tunnel settings directly in YAML configuration
@@ -287,19 +353,21 @@ public class BasicTest {
 - **Better Error Handling**: More descriptive error messages for configuration issues
 
 **Improvements:**
+
 - Optimized SDK initialization and configuration loading
 - Improved compatibility with TestNG execution
-
 
 ### Version 1.0.0 (Initial Release)
 
 **Core Features:**
+
 - Zero code changes approach for running Selenium tests on LambdaTest
 - YAML-based configuration (`lambdatest.yml`)
 - Two TestNG listener integration for automatic test status updates
 - Integration with LambdaTest Selenium Grid
 
 **Supported Features:**
+
 - Video recording
 - Network logging
 - Console logging
@@ -325,4 +393,3 @@ public class BasicTest {
     </li>
   </ul>
 </nav>
-
