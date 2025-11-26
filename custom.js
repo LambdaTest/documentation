@@ -125,10 +125,6 @@
     });
 
     function selectText(htmlelement) {
-      if (!htmlelement || !htmlelement.nodeType) {
-        console.log("Invalid element provided to selectText");
-        return;
-      }
       var node = htmlelement;
       if (document.body.createTextRange) {
         const range = document.body.createTextRange();
