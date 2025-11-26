@@ -138,6 +138,7 @@
         selection.addRange(range);
       } else {
         console.log("Could not select text in node: Unsupported browser.");
+        return;
       }
       document.execCommand('copy')
     }
@@ -162,7 +163,9 @@
       if (event.target.matches(".clean-btn")) {
         let target = event.target || event.srcElement;
         let codeblock = target.closest('.lambdatest__codeblock');
-        selectText(codeblock)
+        if (codeblock) {
+          selectText(codeblock)
+        }
       }
     });
 

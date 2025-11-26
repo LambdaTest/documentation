@@ -80,6 +80,7 @@ Getting started with the LambdaTest Selenium Java SDK requires only three simple
 
 ### Step 1: Add Maven Dependency
 
+<<<<<<< HEAD
 To get started, add the LambdaTest Selenium Java SDK dependency to your `pom.xml`. Make sure to also configure the agent to start automatically during your build process:
 
 ```xml
@@ -156,6 +157,16 @@ To get started, add the LambdaTest Selenium Java SDK dependency to your `pom.xml
     </plugins>   
 </build>
 
+=======
+Add the LambdaTest Selenium Java SDK dependency to your `pom.xml` file:
+
+```xml
+<dependency>
+    <groupId>io.github.lambdatest</groupId>
+    <artifactId>lambdatest-selenium-java-sdk</artifactId>
+    <version>1.0.1</version>
+</dependency>
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)
 ```
 
 :::note
@@ -189,7 +200,11 @@ network: false
 console: true
 visual: false
 
+<<<<<<< HEAD
 # Advanced capabilities (optional)
+=======
+# Additional capabilities
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)
 resolution: 1920x1080
 tunnel: true
 ```
@@ -203,10 +218,16 @@ accesskey: ${LT_ACCESS_KEY}
 ```
 
 Set these environment variables before running your tests:
+<<<<<<< HEAD
 
 - `LT_USERNAME` - Your LambdaTest username
 - `LT_ACCESS_KEY` - Your LambdaTest access key
   :::
+=======
+- `LT_USERNAME` - Your LambdaTest username
+- `LT_ACCESS_KEY` - Your LambdaTest access key
+:::
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)
 
 ### Step 3: Add TestNG Listener
 
@@ -217,9 +238,15 @@ Add the LambdaTest status listener to your TestNG configuration:
 ```xml
 <suite name="LambdaTest Suite">
     <listeners>
+<<<<<<< HEAD
          <listener class-name="com.lambdatest.selenium.testng.TestNgTestListener"/>
     </listeners>
 
+=======
+        <listener class-name="com.lambdatest.selenium.LambdaTestStatusListener"/>
+    </listeners>
+    
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)
     <test name="My Tests">
         <classes>
             <class name="com.example.MyTest"/>
@@ -228,8 +255,16 @@ Add the LambdaTest status listener to your TestNG configuration:
 </suite>
 ```
 
+<<<<<<< HEAD
 That's it! Your tests are now configured to run on LambdaTest. No code changes required in your existing test methods.
 
+=======
+
+That's it! Your tests are now configured to run on LambdaTest. No code changes required in your existing test methods.
+
+
+
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)
 ## Thread Safety
 
 ---
@@ -275,12 +310,17 @@ import java.net.URL;
 
 public class BasicTest {
     WebDriver driver;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)
     @BeforeMethod
     public void setup() throws Exception {
         ChromeOptions options = new ChromeOptions();
         options.setCapability("platformName", "Windows 10");
         options.setCapability("browserVersion", "latest");
+<<<<<<< HEAD
 
         // SDK automatically injects LambdaTest capabilities from lambdatest.yml
         driver = new RemoteWebDriver(
@@ -289,6 +329,16 @@ public class BasicTest {
         );
     }
 
+=======
+        
+        // SDK automatically injects LambdaTest capabilities from lambdatest.yml
+        driver = new RemoteWebDriver(
+            new URL("https://hub.lambdatest.com/wd/hub"), 
+            options
+        );
+    }
+    
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)
     @Test
     public void testExample() {
         driver.get("https://www.example.com");
@@ -296,7 +346,11 @@ public class BasicTest {
         System.out.println("Page title: " + title);
         assert title.contains("Example");
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)
     @AfterMethod
     public void teardown() {
         if (driver != null) {
@@ -328,6 +382,10 @@ public class BasicTest {
 - Ensure `lambdatest.yml` is in the project root directory
 - Verify YAML syntax is correct
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)
 ## Additional Resources
 
 ---
@@ -344,7 +402,10 @@ public class BasicTest {
 ### Version 1.0.1 (Latest)
 
 **New Features:**
+<<<<<<< HEAD
 
+=======
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)
 - **Enhanced Thread Safety:** Improved driver instance management to ensure thread-safe operations during parallel test execution
 - **Tunnel Support**: Added support for LambdaTest Tunnel configuration in `lambdatest.yml`
   - Configure tunnel settings directly in YAML configuration
@@ -353,6 +414,7 @@ public class BasicTest {
 - **Better Error Handling**: More descriptive error messages for configuration issues
 
 **Improvements:**
+<<<<<<< HEAD
 
 - Optimized SDK initialization and configuration loading
 - Improved compatibility with TestNG execution
@@ -361,13 +423,25 @@ public class BasicTest {
 
 **Core Features:**
 
+=======
+- Optimized SDK initialization and configuration loading
+- Improved compatibility with TestNG execution
+
+
+### Version 1.0.0 (Initial Release)
+
+**Core Features:**
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)
 - Zero code changes approach for running Selenium tests on LambdaTest
 - YAML-based configuration (`lambdatest.yml`)
 - Two TestNG listener integration for automatic test status updates
 - Integration with LambdaTest Selenium Grid
 
 **Supported Features:**
+<<<<<<< HEAD
 
+=======
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)
 - Video recording
 - Network logging
 - Console logging
@@ -393,3 +467,7 @@ public class BasicTest {
     </li>
   </ul>
 </nav>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a12aac19 (Merge pull request #2309 from abhishek-lambda/stage)

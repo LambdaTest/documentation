@@ -52,7 +52,7 @@ module.exports = {
       typesenseServerConfig: {
         nodes: [
           {
-            host: process.env.HOST,
+            host: process.env.HOST ,
             port: 443,
             protocol: 'https',
           },
