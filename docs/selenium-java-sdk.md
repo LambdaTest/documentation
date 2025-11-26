@@ -291,10 +291,10 @@ public class BasicTest {
 
     @Test
     public void testExample() {
-        driver.get("https://www.example.com");
+        driver.get("https://www.lambdatest.com");
         String title = driver.getTitle();
         System.out.println("Page title: " + title);
-        assert title.contains("Example");
+        assert title.contains("LambdaTest");
     }
 
     @AfterMethod
