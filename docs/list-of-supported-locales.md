@@ -256,7 +256,7 @@ driver.execute_script('lambda_executor: {
       "action": "updateLanguageLocale", 
       "arguments": { 
         "language" : "<language-code>" ,
-        "locale" : "<locale-code>" ,
+        "locale" : "<locale-code>"
         } 
 }')
 ```
