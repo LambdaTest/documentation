@@ -89,7 +89,7 @@ Cline (The Collaborative AI Coder) is an advanced AI-powered coding assistant th
 <img loading="lazy" src={require('../assets/images/hyperexecute-mcp/vs-code-config.webp').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
 **Step 3:** Add Server Name as **MCP-LambdaTest**.<br />
-**Step 4:** Enter the following server configuration and save it: `http://mcp.lambdatest.com/mcp` <br />
+**Step 4:** Enter the following server configiration and save it: `http://mcp.lambdatest.com/mcp` <br />
 **Step 5:** Click on Authenticate and you will be redirected to lambdatest.com for authentication. 
 <img loading="lazy" src={require('../assets/images/hyperexecute-mcp/lt-mcp-auth.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 **Step 6:** Provide valid credentials and authorise client to use LambdaTest MCP server. 

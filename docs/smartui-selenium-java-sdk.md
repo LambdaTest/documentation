@@ -227,7 +227,7 @@ Once, the configuration file will be created, you will be seeing the default con
 Execute `visual regression tests` on SmartUI using the following commands
 
 ```bash
-npx smartui --config .smartui.json exec -- mvn test -D suite="sdk-cloud.xml"
+npx smartui --config .smartui.json exec -- mvn test -D suite="sdk-cloud.xml
 ```
 :::note
 You may use the `npx smartui --help` command in case you are facing issues during the execution of SmartUI commands in the CLI.
