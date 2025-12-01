@@ -1217,7 +1217,6 @@ public class BaseClassWebhook {
 
 - Learn about [SmartUI Appium Hooks](/support/docs/smartui-appium-hooks) for detailed mobile testing guide
 - Learn about [SmartUI Selenium Hooks](/support/docs/smartui-selenium-hooks) for web testing guide
-- Explore [SmartUI Best Practices](/support/docs/smartui-best-practices) for efficient visual testing workflows
 - Check the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) for common issues
 - Review [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/) for advanced pipeline configuration
 
