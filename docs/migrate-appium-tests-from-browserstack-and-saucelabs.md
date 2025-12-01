@@ -1,8 +1,8 @@
 ---
 id: migrate-appium-tests-from-browserstack-and-saucelabs
-title: Migrate Appium Tests
-sidebar_label: Migrate From BrowserStack And SauceLabs
-description: This documentation will guide you through the process of migrating your Appium test suites from BrowserStack and SauceLabs to LambdaTest.
+title: How to Migrate Appium Tests From BrowserStack, Sauce Labs, and Local Grid
+sidebar_label: Migrate From BrowserStack And Sauce Labs
+description: This documentation will guide you through the process of migrating your Appium test suites from BrowserStack and Sauce Labs to LambdaTest.
 keywords:
   - migrate appium tests from browserstack
   - migrate appium tests from saucelabs
@@ -31,116 +31,70 @@ slug: migrate-appium-tests-from-browserstack-and-saucelabs/
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Migration",
+          "name": "Migrate Appium Tests From BrowserStack, Sauce Labs, or Local Grid",
           "item": "https://www.lambdatest.com/support/docs/migrate-appium-tests-from-browserstack-and-saucelabs/"
         }]
       })
     }}
 ></script>
 
-## From Local Grid, BrowserStack Or SauceLabs To LambdaTest
+---
+
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+LambdaTest offers an online Appium automation grid to perform app automation. The online Appium Grid is available on  BrowserStack, Sauce Labs and LambdaTest. Therefore, you can effortlessly migrate your current Appium automation scripts (or suites) from local grid, Sauce Labs or BrowserStack to LambdaTest.
+
+You can check out this guide to know about the [supported Appium versions on LambdaTest](https://www.lambdatest.com/support/docs/supported-appium-versions/).
+
+
+## Migrating Tests From BrowserStack and Sauce Labs
 
 ---
 
-LambdaTest offers an online Appium automation grid to perform App automation. The online Appium Grid is available on local grid, BrowserStack, SauceLabs and LambdaTest. Therefore, you can effortlessly migrate your current Appium automation scripts (or suites) from local grid, Sauce Labs or BrowserStack to LambdaTest.
+## Changes in the Test Script
 
-In this documentation, we look at how to leverage LambdaTest cloud for App automation and migrate your test scripts (or test suites) from your local grid, Sauce labs or BrowserStack. You can use LambdaTest's desired capabilities in your tests, authenticate your test session, and execute tests on the cloud.
+To move from BrowserStack or Sauce Labs to LambdaTest, you need to make some changes to your test suites such as authentication, desired capabilities etc.
 
-## Introduction
 
----
-
-Migrating your current local grid, BroweseStack or Sauce Labs tests to LambdaTest requires a few tweaks in your code. In this guide, we'll look at how to leverage LambdaTest's desired capabilities in your tests, authenticate your test session, and execute tests on our cloud browsers.
-
-## Migration From BrowserStack And SauceLabs
+### Step 1: Authentication
 
 ---
 
-## Changes In The Test Script
-
-To move from the local grid, BroweseStack or Sauce Labs to LambdaTest, you need to make some changes to your test suites such as authentication, desired capabilities etc.
-
-
-### Authentication
-
----
-
-Firstly, you need to change the authentication in the configuration settings of your test suite. For running tests on LambdaTest Appium Grid, you need to have a valid `user_name` and `access_key` to perform tests on our cloud Grid. In case you don’t have an account on LambdaTest, visit the LambdaTest **signup** page and create a new account.
+Firstly, you need to change the authentication in the configuration settings of your test suite. For running tests on LambdaTest Appium Grid, you need to have a valid Username and Access Key to run tests. In case you don’t have an account on LambdaTest, you can [sign up on LambdaTest](https://accounts.lambdatest.com/register).
 
 The following are the changes in the parameters:
 
 - Username
 - Access Key
 
-You can find the `Username` and `Access Key` in the **LambdaTest Profile Section** of the **Automation Dashboard**.
+You can find the `Username` and `Access Key` from your LambdaTest Account Settings under [Password & Security](https://accounts.lambdatest.com/security/username-accesskey).
 
-<img loading="lazy" src={require('../assets/images/getting-started-app-automation/lt-creds.webp').default} alt="Image" width="1366" height="625" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/getting-started-app-automation/username-accesskey.png').default} alt="Image" width="1366" height="625" className="doc_img"/>
 
-When migrating from BrowserStack or SauceLabs to LambdaTest, you need to make the following changes in the existing code:
+When migrating from BrowserStack or Sauce Labs to LambdaTest, you need to make the following changes in the existing code:
 
-1. UserName
-2. AccessKey
+1. User name
+2. Access Key
 3. Hub URL
 4. Desired Capabilities
 
 Here is a side-by-side comparison of each of the fields that we have highlighted above:
 
-| Property  | Type   | BrowserStack                                    | SauceLabs                                     | LambdaTest                                    |
+| Property  | Type   | BrowserStack                                    | Sauce Labs                                     | LambdaTest                                    |
 | --------- | ------ | ----------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| UserName  | String | UserName to access Appium Grid on BrowserStack  | UserName to access Appium Grid on Sauce Labs  | UserName to access Appium Grid on LambdaTest  |
-| AccessKey | String | AccessKey to access Appium Grid on BrowserStack | AccessKey to access Appium Grid on Sauce Labs | AccessKey to access Appium Grid on LambdaTest |
+| Username  | String | UserName to access Appium Grid on BrowserStack  | UserName to access Appium Grid on Sauce Labs  | UserName to access Appium Grid on LambdaTest  |
+| Access Key | String | AccessKey to access Appium Grid on BrowserStack | AccessKey to access Appium Grid on Sauce Labs | AccessKey to access Appium Grid on LambdaTest |
 | Hub URL   | String | @hub-cloud.browserstack.com/wd/hub              | ondemand.us-west-1.saucelabs.com/wd/hub       | @hub.lambdatest.com/wd/hub                    |
 
-For a Python-based implementation, here are the changes in the script for the authentication process.
 
-**BrowserStack**
 
-```python
-userName = "BrowserStack_UserName"
-accessKey = "BrowserStack_AccessKey"
-```
 
-**SauceLabs**
 
-```python
-userName = "SAUCE_USERNAME"
-accessKey = "SAUCE_ACCESS_KEY"
-```
-
-**LambdaTest**
-
-```python
-userName = "LambdaTest_UserName"
-accessKey = "LambdaTest_AccessKey"
-```
-
-### Changes To The Hub URL
-
----
-
-Now you have to modify the hub URL in your test suite's configuration settings. The Hub URL is of the String type and specifies the Hub location to which the Appium tests will be routed for execution.
-
-For a Python-based implementation, here are the changes in the script for Hub URL.
-
-**BrowserStack**
-
-```
-@hub-cloud.browserstack.com/wd/hub
-```
-
-**SauceLabs**
-
-```
-@ondemand.us-west-1.saucelabs.com/wd/hub
-```
-
-**LambdaTest**
-
-```
-@mobile-hub.lambdatest.com/wd/hub
-```
-
-### Desired Capability Generator
+### Step 2: Specifying Desired Capabilities
 
 ---
 
@@ -149,487 +103,189 @@ Capabilities generator allows you to specify the desired capabilities (or capabi
 1. Device
 2. Operating system
 
-You can also select other advanced options available in the LambdaTest Capabilities Generator.
+You can also select other advanced options available in the LambdaTest [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
-For the migration, we have taken Java-based Appium tests. Below are the screenshots of the capability generator of BrowserStack and LambdaTest.
 
-#### **BrowserStack**
+<Tabs className="docs__val">
 
----
-
-<img loading="lazy" src={require('../assets/images/getting-started-app-automation/bs-caps.webp').default} alt="Image" width="1366" height="625" className="doc_img"/>
-
-#### **Sauce Labs**
-
----
-
-<img loading="lazy" src={require('../assets/images/getting-started-app-automation/sl-caps.webp').default} alt="Image" width="1366" height="625" className="doc_img"/>
-
-#### **LambdaTest**
-
----
-
-<img loading="lazy" src={require('../assets/images/getting-started-app-automation/lt-caps.webp').default} alt="Image" width="1366" height="625" className="doc_img"/>
-
-The comparison of the capabilities generated by BrowserStack and LambdaTest capabilities generator:
-
-| Capabilities     | BrowserStack | SauceLabs       | LambdaTest      |
-| ---------------- | ------------ | --------------- | --------------- |
-| Device           | device       | deviceName      | deviceName      |
-| Operating System | os_version   | platformVersion | platformVersion |
-
-The following is an overview of the comparison of Desired Capabilities for the Java language:
-
-**BrowserStack**
-
-```js
-//demo.java
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("os_version", "9.0");
-capabilities.setCapability("device", "Google Pixel 3");
-capabilities.setCapability("browserstack.appium_version", "1.21.0");
-```
-
-**SauceLabs**
+<TabItem value="appium1" label="Appium v1" default>
 
 ```java
-//demo.java
-MutableCapabilities caps = new MutableCapabilities();
-caps.setCapability("platformName", "Android");
-caps.setCapability("browserName", "Chrome");
-caps.setCapability("appium:deviceName", "Google Pixel 3 GoogleAPI Emulator");
-caps.setCapability("appium:platformVersion", "12.0");
-MutableCapabilities sauceOptions = new MutableCapabilities();
-sauceOptions.setCapability("appiumVersion", "1.21.0");
-caps.setCapability("sauce:options", sauceOptions);
-```
-
-**LambdaTest**
-
-```js
-//demo.java
 DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("build", "your build name");
-capabilities.setCapability("name", "your test name");
-capabilities.setCapability("platformName", "Android");
-capabilities.setCapability("deviceName", "Google Pixel 3");
-capabilities.setCapability("isRealMobile", true);
-capabilities.setCapability("platformVersion","9");
+capabilities.setCapability("platformName", "android");
+capabilities.setCapability("deviceName", "ASUS ZenFone 8");
+capabilities.setCapability("appiumVersion", "1.21.0");
+capabilities.setCapability("platformVersion", "13");
 ```
 
-### Example: Migration To LambdaTest
+</TabItem>
+
+<TabItem value="appium2" label="Appium v2" default>
+
+```java
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setCapability("platformName", "android");
+capabilities.setCapability("deviceName", "ASUS ZenFone 8");
+capabilities.setCapability("appiumVersion", "2.16.2");
+capabilities.setCapability("platformVersion", "13");
+```
+
+</TabItem>
+
+<TabItem value="appium3" label="Appium v3" default>
+
+```java
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setCapability("platformName", "android");
+capabilities.setCapability("deviceName", "ASUS ZenFone 8");
+capabilities.setCapability("appiumVersion", "3.0.2");
+capabilities.setCapability("platformVersion", "13");
+```
+
+</TabItem>
+
+</Tabs>
+
+>**Note**: Currently, Appium v3 on LambdaTest is supported on virtual devices for Android 15+ and iOS 16+.
+
+### Step 3: Migrating Tests
 
 ---
 
-Let's look an example that shows the entire migration process. The test scenario is to open a Wikipedia app that search the term ‘lambdatest’. The following test runs on Google Pixel 3 running Android 11.
+Let's look an example that shows the entire migration process.
 
-#### **BrowserStack**
+The test script below launches the Android app on a real device via LambdaTest using Appium and sets the required capabilities.
 
----
+It then clicks through color change, text update, toast, and notification. After that it opens geo location, runs the speed test, launches the browser, visits a website, and ends the session.
 
-```python
 
-from appium import webdriver
-from appium.webdriver.common.mobileby import MobileBy
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
 
-userName = "BrowserStack_UserName"
-accessKey = "BrowserStack_AccessKey"
+```java
+public class AndroidApp {
 
-desired_caps = {
-    "build": "Python Android",
-    "device": "Google Pixel 3",
-    "app": "<app_url>"
+    String userName = System.getenv("LT_USERNAME") == null ?
+            "username" : System.getenv("LT_USERNAME"); //Add username here
+    String accessKey = System.getenv("LT_ACCESS_KEY") == null ?
+            "accessKey" : System.getenv("LT_ACCESS_KEY"); //Add accessKey here
+
+    public String gridURL = "@mobile-hub.lambdatest.com/wd/hub";
+
+    AppiumDriver driver;
+
+    @Test
+    @org.testng.annotations.Parameters(value = {"device", "version", "platform"})
+    public void AndroidApp1(String device, String version, String platform) {
+        try {
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("build","Java TestNG Android");
+            capabilities.setCapability("name",platform+" "+device+" "+version);
+            capabilities.setCapability("deviceName", device);
+            capabilities.setCapability("platformVersion",version);
+            capabilities.setCapability("platformName", platform);
+            capabilities.setCapability("isRealMobile", true);
+            capabilities.setCapability("app", "APP_URL"); //Enter your app (.apk) url
+            capabilities.setCapability("deviceOrientation", "PORTRAIT");
+            capabilities.setCapability("console", true);
+            capabilities.setCapability("network", false);
+            capabilities.setCapability("visual", true);
+            capabilities.setCapability("devicelog", true);
+
+            String hub = "https://" + userName + ":" + accessKey + gridURL;
+            driver = new AppiumDriver(new URL(hub), capabilities);
+
+            MobileElement color = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/color");
+            //Changes color to pink
+            color.click();
+            Thread.sleep(1000);
+            //Back to original color
+            color.click();
+
+            MobileElement text = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/Text");
+            //Changes the text to "Proverbial"
+            text.click();
+
+            //toast will be visible
+            MobileElement toast = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/toast");
+            toast.click();
+
+            //notification will be visible
+            MobileElement notification = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/notification");
+            notification.click();
+            Thread.sleep(2000);
+
+            //Opens the geolocation page
+            MobileElement geo = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/geoLocation");
+            geo.click();
+            Thread.sleep(5000);
+
+            //takes back to home page
+            MobileElement home = (MobileElement) driver.findElementByAccessibilityId("Home");
+            home.click();
+
+            //Takes to speed test page
+            MobileElement speedtest = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/speedTest");
+            speedtest.click();
+            Thread.sleep(5000);
+
+            MobileElement Home = (MobileElement) driver.findElementByAccessibilityId("Home");
+            Home.click();
+
+            //Opens the browser
+            MobileElement browser = (MobileElement) driver.findElementByAccessibilityId("Browser");
+            browser.click();
+
+            MobileElement url = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/url");
+            url.sendKeys("https://www.lambdatest.com");
+
+            MobileElement find = (MobileElement) driver.findElementById("com.lambdatest.proverbial:id/find");
+            find.click();
+
+            driver.quit();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            try{
+                driver.quit();
+            }catch(Exception e1){
+                e.printStackTrace();
+            }
+        }
+    }
 }
-
-driver = webdriver.Remote("https://" + userName + ":" + accessKey + "@hub-cloud.browserstack.com/wd/hub", desired_caps)
-
-search_element = WebDriverWait(driver, 30).until(
-    EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Search Wikipedia"))
-)
-search_element.click()
-
-search_input = WebDriverWait(driver, 30).until(
-    EC.element_to_be_clickable((MobileBy.ID, "org.wikipedia.alpha:id/search_src_text"))
-)
-search_input.send_keys("BrowserStack")
-time.sleep(5)
-
-search_results = driver.find_elements_by_class_name("android.widget.TextView")
-assert(len(search_results) > 0)
-
-driver.quit()
 ```
 
-#### **SauceLabs**
+The majority of the implementation, as shown above, remains unchanged. Only changes to the infrastructure are made (i.e. instead of BrowserStack or Sauce Labs, the app automation tests would be run on LambdaTest).
 
+
+## Migrating From Local Grid
 ---
 
-```python
-#samplewikipedia.py
-import ssl
-
-try:
-    _create_unverified_https_context = ssl._create_unverified_context
-except AttributeError:
-    # Legacy Python that doesn't verify HTTPS certificates by default
-    pass
-else:
-    # Handle target environment that doesn't support HTTPS verification
-    ssl._create_default_https_context = _create_unverified_https_context
-
-from threading import Thread
-import time
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from appium.webdriver.common.mobileby import MobileBy
-from appium import webdriver
-
-# This array 'caps' defines the capabilities browser, device and OS combinations where the test will run
-
-caps = {
-    caps['platformName'] = 'Android'
-    caps['browserName'] = 'Chrome'
-    caps['appium:deviceName'] = 'Google Pixel 3a GoogleAPI Emulator'
-    caps['appium:platformVersion'] = '11.0'
-    caps['sauce:options'] = {}
-    caps['sauce:options']['appiumVersion'] = '1.20.2'
-}
-
-# run_session function searches for 'saucelabs' on google.com
-
-def run_session(desired_cap):
-    driver = webdriver.Remote(
-
-        command_executor="https://SAUCE_USERNAME:SAUCE_ACCESS_KEY@ondemand.us-west-1.saucelabs.com/wd/hub",
-        desired_capabilities=desired_cap)
-
-    # driver.get("https://www.ifconfig.me")
-    # time.sleep(10)
-    # Test case for the saucelabs sample Android app.
-# If you have uploaded your app, update the test case here.
-    search_element = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable(
-            (MobileBy.ACCESSIBILITY_ID, "Search Wikipedia"))
-    )
-    search_element.click()
-    search_input = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable(
-            (MobileBy.ID, "org.wikipedia.alpha:id/search_src_text"))
-    )
-    search_input.send_keys("saucelabs")
-    time.sleep(5)
-    search_results = driver.find_elements_by_class_name(
-        "android.widget.TextView")
-    assert(len(search_results) > 0)
-
-# Invoke driver.quit() after the test is done to indicate that the test is completed.
-    driver.quit()
-
-# The Thread function takes run_session function and each set of capability from the caps array as an argument to run each session in parallel
-for cap in caps:
-    Thread(target=run_session, args=(cap,)).start()
-```
-
-#### **LambdaTest**
-
----
-
-```python
-#samplewikipedia.py
-
-import ssl
-
-try:
-    _create_unverified_https_context = ssl._create_unverified_context
-except AttributeError:
-    # Legacy Python that doesn't verify HTTPS certificates by default
-    pass
-else:
-    # Handle target environment that doesn't support HTTPS verification
-    ssl._create_default_https_context = _create_unverified_https_context
-
-from threading import Thread
-import time
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from appium.webdriver.common.mobileby import MobileBy
-from appium import webdriver
-
-
-# This array 'caps' defines the capabilities browser, device and OS combinations where the test will run
-caps = [
-
-    {
-        "deviceName": "Google Pixel 3",
-        "platformName": "Android",
-        "platformVersion": "11",
-        "app": "<lt_app_url>",
-        "isRealMobile": True,
-        "deviceOrientation": "PORTRAIT",
-        "build": "Demo",
-           },
-]
-# run_session function searches for 'lambtest' on google.com
-
-
-def run_session(desired_cap):
-    driver = webdriver.Remote(
-        # hub.mobile-dev-1.dev.lambdatest.io/wd/hub",
-        command_executor="https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub",
-        desired_capabilities=desired_cap)
-
-    # driver.get("https://www.ifconfig.me")
-    # time.sleep(10)
-    # Test case for the lambdatest sample Android app.
-# If you have uploaded your app, update the test case here.
-    search_element = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable(
-            (MobileBy.ACCESSIBILITY_ID, "Search Wikipedia"))
-    )
-    search_element.click()
-    search_input = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable(
-            (MobileBy.ID, "org.wikipedia.alpha:id/search_src_text"))
-    )
-    search_input.send_keys("lambdatest")
-    time.sleep(5)
-    search_results = driver.find_elements_by_class_name(
-        "android.widget.TextView")
-    assert(len(search_results) > 0)
-
-# Invoke driver.quit() after the test is done to indicate that the test is completed.
-    driver.quit()
-
-
-# The Thread function takes run_session function and each set of capability from the caps array as an argument to run each session in parallel
-for cap in caps:
-    Thread(target=run_session, args=(cap,)).start()
-```
-
-The majority of the implementation, as shown above, remains unchanged. Only changes to the infrastructure are made (i.e. instead of BrowserStack, the app automation tests would be run on LambdaTest).
-
-Let's analyze what has changed from the implementation point of view.
-
-**BrowserStack**
-
----
-
-```python
-
-from appium import webdriver
-from appium.webdriver.common.mobileby import MobileBy
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
-
-userName = "BrowserStack_UserName"
-accessKey = "BrowserStack_AccessKey"
-
-desired_caps = {
-    "build": "Python Android",
-    "device": "Google Pixel 3",
-    "app": "<app_url>"
-}
-
-driver = webdriver.Remote("https://" + userName + ":" + accessKey + "@hub-cloud.browserstack.com/wd/hub", desired_caps)
-```
-
-**SauceLabs**
-
----
-
-```python
-
-from threading import Thread
-import time
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from appium.webdriver.common.mobileby import MobileBy
-from appium import webdriver
-
-
-# This array 'caps' defines the capabilities browser, device and OS combinations where the test will run
-
-caps = {
-    caps['platformName'] = 'Android'
-    caps['browserName'] = 'Chrome'
-    caps['appium:deviceName'] = 'Google Pixel 3a GoogleAPI Emulator'
-    caps['appium:platformVersion'] = '11.0'
-    caps['sauce:options'] = {}
-    caps['sauce:options']['appiumVersion'] = '1.20.2'
-}
-
-
-# run_session function searches for 'saucelabs' on google.com
-
-
-def run_session(desired_cap):
-    driver = webdriver.Remote(
-
-        command_executor="https://SAUCE_USERNAME:SAUCE_ACCESS_KEY@ondemand.us-west-1.saucelabs.com/wd/hub",
-        desired_capabilities=desired_cap)
-
-```
-
-**LambdaTest**
-
----
-
-```python
-from threading import Thread
-import time
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from appium.webdriver.common.mobileby import MobileBy
-from appium import webdriver
-
-caps = [
-
-    {
-        "deviceName": "Google Pixel 3",
-        "platformName": "Android",
-        "platformVersion": "11",
-        "app": "<lt_app_url>",
-        "build": "Demo",
-           },
-]
-
-def run_session(desired_cap):
-    driver = webdriver.Remote(command_executor="https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub", desired_capabilities=desired_cap)
-
-```
-
-We have discussed how to migrate from Sauce Labs or BrowserStack to LambdaTest. Let’s explore how to migrate from the local grid to the cloud-based Appium grid.
-
-## Migration From Local Grid
-
----
-
-### Desired Capabilities In Appium
+### Step 1: Define Desired Capabilities
 
 Appium's Desired Capabilities are a collection of key-value pairs wrapped inside a JSON object. These key-value pairs request the Appium server for the required test automation session.
 
-Let’s say you want to run an app test in Python on SAMSUNG GALAXY TAB S4 running ANDROID 10. You can define the same in the form of capability as given below.
+Let’s say you want to run an Appium 3 tests in Java on ASUS ZenFone 8 running Android 13. You can define the same in the form of capability as given below.
 
-```python
-caps = [
-
-    {
-        "deviceName": "Galaxy Tab S4",
-        "platformName": "Android",
-        "platformVersion": "10",
-        "build": "Demo",
-    },
-]
+```java
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setCapability("platformName", "android");
+capabilities.setCapability("deviceName", "ASUS ZenFone 8");
+capabilities.setCapability("appiumVersion", "3.0.2");
+capabilities.setCapability("platformVersion", "13");
 ```
 
-### Running Tests On LambdaTest Appium Grid
+### Step 2: Authentication and Running Tests
 
 ---
 
 To begin, change the authentication in your test suite's configuration settings. To run the tests on LambdaTest Appium Grid, you need a valid user name and access key. If you were already performing tests on your local grid, you will need to modify your test script to initialize an Appium driver along with your desired capabilities.
 
-Pass the capabilities to `@hub.lambdatest.com/wd/hub` with your LambdaTest authentication details, and you are done. Here is the sample Python test script.
+Pass the capabilities to `@hub.lambdatest.com/wd/hub` with your LambdaTest authentication details, and you are done. 
 
-```python
-#samplewikipedia.py
-
-import ssl
-
-try:
-    _create_unverified_https_context = ssl._create_unverified_context
-except AttributeError:
-    # Legacy Python that doesn't verify HTTPS certificates by default
-    pass
-else:
-    # Handle target environment that doesn't support HTTPS verification
-    ssl._create_default_https_context = _create_unverified_https_context
-
-from threading import Thread
-import time
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from appium.webdriver.common.mobileby import MobileBy
-from appium import webdriver
-
-
-# This array 'caps' defines the capabilities of the browser, device, and OS combinations where the test will run
-caps = [
-
-    {
-        "deviceName": "Galaxy Tab S4",
-        "platformName": "Android",
-        "platformVersion": "10",
-        "app": "lt://APP10051525539885437397",
-        "isRealMobile": True,
-        "deviceOrientation": "PORTRAIT",
-        "visual": True,
-        "console": True,
-        "build": "Demo",
-           },
-]
-# run_session function searches for 'lambdatest' on google.com
-
-
-def run_session(desired_cap):
-    driver = webdriver.Remote(
-        # hub.mobile-dev-1.dev.lambdatest.io/wd/hub",
-        command_executor="https://LT_USERNAME:LT_ACCESS_KEY@mobile-hub.lambdatest.com/wd/hub",
-        desired_capabilities=desired_cap)
-
-    # driver.get("https://www.ifconfig.me")
-    # time.sleep(10)
-    # Test case for the lambdatest sample Android app.
-# If you have uploaded your app, update the test case here.
-    search_element = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable(
-            (MobileBy.ACCESSIBILITY_ID, "Search Wikipedia"))
-    )
-    search_element.click()
-    search_input = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable(
-            (MobileBy.ID, "org.wikipedia.alpha:id/search_src_text"))
-    )
-    search_input.send_keys("lambdatest")
-    time.sleep(5)
-    search_results = driver.find_elements_by_class_name(
-        "android.widget.TextView")
-    assert(len(search_results) > 0)
-
-# Invoke driver.quit() after the test is done to indicate that the test is completed.
-    driver.quit()
-
-
-# The Thread function takes run_session function and each set of capability from the caps array as an argument to run each session in parallel
-for cap in caps:
-    Thread(target=run_session, args=(cap,)).start()
-
-```
 
 > That’s all! In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
+
+----
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
@@ -645,7 +301,7 @@ for cap in caps:
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-      Migrate Appium Tests From Local Grid, BrowserStack Or SauceLabs
+      Migrate Appium Tests From BrowserStack, Sauce Labs, or Local Grid
       </span>
     </li>
   </ul>
