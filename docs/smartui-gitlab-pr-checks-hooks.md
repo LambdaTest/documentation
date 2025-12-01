@@ -86,41 +86,31 @@ Configure your test suite with SmartUI capabilities. Since you're using the **Ho
 <Tabs className='docs__val' groupId='web-language'>
 <TabItem value='typescript-web' label='TypeScript/JavaScript' default>
 
-```typescript title="Example: TypeScript Selenium Configuration with SmartUI Hooks and GitLab"
-import { Builder, Capabilities } from 'selenium-webdriver';
+```typescript title="Example: TypeScript/WebdriverIO Configuration with SmartUI Hooks and GitLab"
+import { remote, RemoteOptions } from 'webdriverio';
 
-const capabilities = {
-  browserName: 'Chrome',
-  browserVersion: 'latest',
-  platformName: 'Windows 10',
-  'LT:Options': {
-    username: process.env.LT_USERNAME,
-    accessKey: process.env.LT_ACCESS_KEY,
-    project: 'Your Project Name',
-    w3c: true,
-    name: 'Web Test Session',
-    build: process.env.CI 
-      ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-      : `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
-    
-    // SmartUI Hooks Configuration
-    "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
-    "smartUI.build": process.env.CI 
-      ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-      : `smartui-local-build-${new Date().toISOString().split('T')[0]}`,
-    "smartUI.baseline": false,
-    
-    // GitLab Integration Capability
-    github: {
-      url: process.env.GIT_URL // GitLab API URL for status updates
-    }
+const capabilities: RemoteOptions['capabilities'] = {
+  // ... your existing capabilities (browserName, browserVersion, platformName, etc.)
+  
+  // SmartUI Hooks Configuration
+  "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
+  "visual": true, // Mandatory for SmartUI
+  
+  // GitLab Integration Capability
+  github: {
+    url: process.env.GITLAB_URL // This variable will be set in your CI pipeline
   }
 };
 
-const driver = await new Builder()
-  .usingServer(`https://${process.env.LT_USERNAME}:${process.env.LT_ACCESS_KEY}@hub.lambdatest.com/wd/hub`)
-  .withCapabilities(capabilities)
-  .build();
+const driver = await remote({
+  hostname: 'hub.lambdatest.com',
+  port: 443,
+  path: '/wd/hub',
+  protocol: 'https',
+  user: process.env.LT_USERNAME,
+  key: process.env.LT_ACCESS_KEY,
+  capabilities: capabilities as any,
+});
 ```
 
 </TabItem>
@@ -141,7 +131,7 @@ import java.util.Map;
 public class BaseClassWebhook {
     
     public RemoteWebDriver driver;
-    public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
+    public String githubURL = System.getenv("GITLAB_URL"); // GitLab URL from CI/CD
     
     @BeforeClass
     public void setup() throws MalformedURLException {
@@ -201,7 +191,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import os
 
 # Get GitLab URL from environment
-github_url = os.getenv("GITHUB_URL")
+github_url = os.getenv("GITLAB_URL")
 
 capabilities = {
     "browserName": "Chrome",
@@ -268,7 +258,7 @@ const capabilities: RemoteOptions['capabilities'] = {
   
   // GitLab Integration Capability
   github: {
-    url: process.env.GITHUB_URL // GitLab API URL for status updates
+    url: process.env.GITLAB_URL // GitLab API URL for status updates
     // GitLab URL format: https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}
   }
 };
@@ -302,7 +292,7 @@ import java.util.Map;
 public class BaseClassWebhook {
     
     public RemoteWebDriver driver;
-    public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
+    public String githubURL = System.getenv("GITLAB_URL"); // GitLab URL from CI/CD
     
     @BeforeClass
     public void setup() throws MalformedURLException {
@@ -365,7 +355,7 @@ from appium import webdriver
 import os
 
 # Get GitLab URL from environment
-github_url = os.getenv("GITHUB_URL")
+github_url = os.getenv("GITLAB_URL")
 
 capabilities = {
     "deviceName": "iPhone 12",
@@ -403,7 +393,7 @@ driver = webdriver.Remote(
 
 :::info GitLab Capability Note
 
-The capability is named `github` (legacy name) but works with GitLab's API endpoint. Use the `GIT_URL` environment variable to pass the GitLab API URL. This is the same capability used for GitHub integration and supports both GitHub and GitLab status APIs.
+The capability is named `github` (legacy name) but works with GitLab's API endpoint. Use the `GITLAB_URL` environment variable to pass the GitLab API URL. This is the same capability used for GitHub integration and supports both GitHub and GitLab status APIs.
 
 :::
 
@@ -535,30 +525,19 @@ visual_regression_tests:
     - npm ci
   
   script:
-    # Get GitLab project ID and commit SHA
+    # Construct the GitLab API URL
+    - export GITLAB_URL="https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/statuses/${CI_COMMIT_SHA}"
+    
+    # For merge requests, use the merge request commit SHA
     - |
-      PROJECT_ID=${CI_PROJECT_ID}
-      COMMIT_SHA=${CI_COMMIT_SHA}
-      
-      # For merge requests, use the merge request commit SHA
       if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+        export GITLAB_URL="https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/statuses/${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}"
       fi
-      
-      # Construct GitLab API URL for status updates
-      GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
-      
-      echo "GitLab Project ID: ${PROJECT_ID}"
-      echo "Commit SHA: ${COMMIT_SHA}"
-      echo "GitLab Status URL: ${GITHUB_URL}"
-      
-      # Export GITHUB_URL as environment variable for use in test capabilities
-      export GITHUB_URL="${GITHUB_URL}"
-      
-      # Run your tests normally - SmartUI Hooks work automatically through capabilities
-      npm test
-      # Or: npx wdio run wdio.conf.ts
-      # Or: npm run test:mobile
+    
+    # Run your tests as usual (SmartUI Hooks will detect the env var automatically)
+    - npx wdio run wdio.conf.ts
+    # Or: npm test
+    # Or: npm run test:mobile
       
   only:
     - merge_requests
@@ -594,29 +573,18 @@ visual_regression_tests:
     - mvn clean install -DskipTests
   
   script:
-    # Get GitLab project ID and commit SHA
+    # Construct the GitLab API URL
+    - export GITLAB_URL="https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/statuses/${CI_COMMIT_SHA}"
+    
+    # For merge requests, use the merge request commit SHA
     - |
-      PROJECT_ID=${CI_PROJECT_ID}
-      COMMIT_SHA=${CI_COMMIT_SHA}
-      
-      # For merge requests, use the merge request commit SHA
       if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+        export GITLAB_URL="https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/statuses/${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}"
       fi
-      
-      # Construct GitLab API URL for status updates
-      GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
-      
-      echo "GitLab Project ID: ${PROJECT_ID}"
-      echo "Commit SHA: ${COMMIT_SHA}"
-      echo "GitLab Status URL: ${GITHUB_URL}"
-      
-      # Export GITHUB_URL as environment variable for use in test capabilities
-      export GITHUB_URL="${GITHUB_URL}"
-      
-      # Run your tests normally - SmartUI Hooks work automatically through capabilities
-      mvn test
-      # Or: ./gradlew test (for Gradle)
+    
+    # Run your tests as usual (SmartUI Hooks will detect the env var automatically)
+    - mvn test
+    # Or: ./gradlew test (for Gradle)
       
   only:
     - merge_requests
@@ -648,30 +616,19 @@ visual_regression_tests:
     - pip install -r requirements.txt
   
   script:
-    # Get GitLab project ID and commit SHA
+    # Construct the GitLab API URL
+    - export GITLAB_URL="https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/statuses/${CI_COMMIT_SHA}"
+    
+    # For merge requests, use the merge request commit SHA
     - |
-      PROJECT_ID=${CI_PROJECT_ID}
-      COMMIT_SHA=${CI_COMMIT_SHA}
-      
-      # For merge requests, use the merge request commit SHA
       if [ -n "$CI_MERGE_REQUEST_IID" ]; then
-        COMMIT_SHA=${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}
+        export GITLAB_URL="https://gitlab.com/api/v4/projects/${CI_PROJECT_ID}/statuses/${CI_MERGE_REQUEST_SHA:-${CI_COMMIT_SHA}}"
       fi
-      
-      # Construct GitLab API URL for status updates
-      GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
-      
-      echo "GitLab Project ID: ${PROJECT_ID}"
-      echo "Commit SHA: ${COMMIT_SHA}"
-      echo "GitLab Status URL: ${GITHUB_URL}"
-      
-      # Export GITHUB_URL as environment variable for use in test capabilities
-      export GITHUB_URL="${GITHUB_URL}"
-      
-      # Run your tests normally - SmartUI Hooks work automatically through capabilities
-      pytest
-      # Or: python -m unittest discover
-      # Or: behave
+    
+    # Run your tests as usual (SmartUI Hooks will detect the env var automatically)
+    - pytest
+    # Or: python -m unittest discover
+    # Or: behave
       
   only:
     - merge_requests
@@ -714,14 +671,14 @@ visual_regression_tests:
       fi
       
       # Construct GitLab API URL for status updates
-      GITHUB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
+      GITLAB_URL="https://gitlab.com/api/v4/projects/${PROJECT_ID}/statuses/${COMMIT_SHA}"
       
       echo "GitLab Project ID: ${PROJECT_ID}"
       echo "Commit SHA: ${COMMIT_SHA}"
-      echo "GitLab Status URL: ${GITHUB_URL}"
+      echo "GitLab Status URL: ${GITLAB_URL}"
       
-      # Export GITHUB_URL as environment variable for use in test capabilities
-      export GITHUB_URL="${GITHUB_URL}"
+      # Export GITLAB_URL as environment variable for use in test capabilities
+      export GITLAB_URL="${GITLAB_URL}"
       
       # Run your tests normally - SmartUI Hooks work automatically through capabilities
       bundle exec rspec
@@ -741,19 +698,24 @@ visual_regression_tests:
 
 ### Key Configuration Points
 
-1. **No SmartUI CLI exec needed**: With Hooks, you run your tests normally (e.g., `npm test`, `mvn test`, `pytest`)
+1. **No `npx smartui exec` needed**: With Hooks, you run your tests normally (e.g., `npx wdio run wdio.conf.ts`, `npm test`, `mvn test`, `pytest`)
 2. **GitLab Project ID**: Automatically available as `CI_PROJECT_ID` in GitLab CI/CD
 3. **Commit SHA**: Use `CI_COMMIT_SHA` for regular commits, or `CI_MERGE_REQUEST_SHA` for merge requests
-4. **GitLab API URL**: Export as `GIT_URL` environment variable, which your test capabilities will use
+4. **GitLab API URL**: Export as `GITLAB_URL` environment variable, which your test capabilities will use
 5. **GitLab API URL Format**: `https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}`
 
 :::info How Hooks Work
 
 With SmartUI Hooks:
-- You pass SmartUI capabilities (including `github.url` with `GIT_URL` for GitLab) in your test configuration
+- You pass SmartUI capabilities (including `github.url` with `GITLAB_URL` for GitLab) in your test configuration
 - Run your tests normally (no `npx smartui exec` command)
 - SmartUI integration happens automatically through the capabilities
 - GitLab PR checks are updated automatically when tests complete
+
+**Summary:**
+- ✅ No `npx smartui exec` needed
+- ✅ Pass the GitLab URL via capabilities
+- ✅ Run your standard test command (e.g., `npx wdio run wdio.conf.ts`)
 
 :::
 
@@ -827,7 +789,7 @@ describe('Web Visual Regression Tests', () => {
 
   before(async () => {
     // Construct GitLab URL (in CI/CD, this would come from environment variable)
-    const gitUrl = process.env.GIT_URL || 
+    const gitUrl = process.env.GITLAB_URL || 
       `https://gitlab.com/api/v4/projects/${process.env.CI_PROJECT_ID}/statuses/${process.env.CI_COMMIT_SHA}`;
 
     const capabilities = {
@@ -840,16 +802,16 @@ describe('Web Visual Regression Tests', () => {
         project: 'Your Project Name',
         w3c: true,
         name: 'Web Visual Tests',
-      build: process.env.CI 
-        ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-        : `local-build-${Date.now()}`,
-      "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
-      "smartUI.build": process.env.CI 
-        ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
-        : `local-build-${Date.now()}`,
-      "smartUI.baseline": false,
-      // GitLab integration capability
-      github: {
+        build: process.env.CI 
+          ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
+          : `local-build-${Date.now()}`,
+        "smartUI.project": `${process.env.SMARTUI_PROJECT_NAME}-visual`,
+        "smartUI.build": process.env.CI 
+          ? `${process.env.CI_PROJECT_NAME}-${process.env.CI_PIPELINE_ID}`
+          : `local-build-${Date.now()}`,
+        "smartUI.baseline": false,
+        // GitLab integration capability
+        github: {
           url: gitUrl
         }
       }
@@ -900,7 +862,7 @@ import java.util.Map;
 public class BaseClassWebhook {
     
     public RemoteWebDriver driver;
-    public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
+    public String githubURL = System.getenv("GITLAB_URL"); // GitLab URL from CI/CD
     
     @BeforeClass
     public void setup() throws MalformedURLException {
@@ -987,7 +949,7 @@ describe('Mobile App Visual Regression Tests', () => {
 
   before(async () => {
     // Construct GitLab URL (in CI/CD, this would come from environment variable)
-    const gitUrl = process.env.GIT_URL || 
+    const gitUrl = process.env.GITLAB_URL || 
       `https://gitlab.com/api/v4/projects/${process.env.CI_PROJECT_ID}/statuses/${process.env.CI_COMMIT_SHA}`;
 
     const capabilities: RemoteOptions['capabilities'] = {
@@ -1009,7 +971,7 @@ describe('Mobile App Visual Regression Tests', () => {
       "smartUI.cropStatusBar": true,
       // GitLab integration capability
       github: {
-        url: gitlabUrl
+        url: gitUrl
       }
     };
 
@@ -1063,7 +1025,7 @@ import java.util.Map;
 public class BaseClassWebhook {
     
     public RemoteWebDriver driver;
-    public String githubURL = System.getenv("GITHUB_URL"); // GitLab URL from CI/CD
+    public String githubURL = System.getenv("GITLAB_URL"); // GitLab URL from CI/CD
     
     @BeforeClass
     public void setup() throws MalformedURLException {
@@ -1157,7 +1119,7 @@ public class BaseClassWebhook {
 **Solutions**:
 1. Verify GitLab integration is active in [LambdaTest Integrations](https://integrations.lambdatest.com/)
 2. Check that `github.url` capability is correctly set in your test configuration
-3. Verify `GIT_URL` environment variable is exported in CI/CD pipeline
+3. Verify `GITLAB_URL` environment variable is exported in CI/CD pipeline
 4. Ensure `CI_PROJECT_ID` and `CI_COMMIT_SHA` are correctly set
 5. For merge requests, use `CI_MERGE_REQUEST_SHA` instead of `CI_COMMIT_SHA`
 6. Check test logs to ensure tests completed successfully
@@ -1189,8 +1151,8 @@ public class BaseClassWebhook {
 **Symptoms**: Tests run but GitLab PR check doesn't update.
 
 **Solutions**:
-1. Verify `GIT_URL` is exported in CI/CD pipeline before test execution
-2. Check that `github.url` capability is reading from `GIT_URL` environment variable
+1. Verify `GITLAB_URL` is exported in CI/CD pipeline before test execution
+2. Check that `github.url` capability is reading from `GITLAB_URL` environment variable
 3. Add debug logging to verify URL is set
 4. Ensure URL format is correct: `https://gitlab.com/api/v4/projects/{projectId}/statuses/{commitId}`
 5. Verify the URL is set in the same script block that runs tests
@@ -1207,7 +1169,7 @@ public class BaseClassWebhook {
 | **Command** | Run tests normally (`npm test`, `mvn test`, `pytest`) | Use `npx smartui exec -- <command>` |
 | **Integration** | Automatic via capabilities | Requires CLI wrapper |
 | **Setup** | Add capabilities to test config | Configure CLI and run with exec |
-| **GitLab Integration** | Add `github.url` capability with `GIT_URL` | Use `--gitURL` parameter with exec |
+| **GitLab Integration** | Add `github.url` capability with `GITLAB_URL` | Use `--githubURL` parameter with exec |
 | **Languages** | TypeScript/JS/Java/Python/Ruby/C#/WebdriverIO/Appium | Java SDK, CLI projects |
 | **Java Support** | ✅ Yes - Use capabilities with `github` capability | ✅ Yes - Use `npx smartui exec -- mvn test` |
 
@@ -1216,10 +1178,8 @@ public class BaseClassWebhook {
 ## Next Steps
 
 - Learn about [SmartUI Appium Hooks](/support/docs/smartui-appium-hooks) for detailed mobile testing guide
-- Learn about [SmartUI Selenium Hooks](/support/docs/smartui-selenium-hooks) for web testing guide
-- Explore [SmartUI Best Practices](/support/docs/smartui-best-practices) for efficient visual testing workflows
 - Check the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) for common issues
-- Review [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/) for advanced pipeline configuration
+- Review [GitLab CI/CD Documentation](https://docs.gitlab.com/ci/) for advanced pipeline configuration
 
 ---
 
