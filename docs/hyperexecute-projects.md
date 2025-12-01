@@ -83,11 +83,10 @@ If a project with your chosen name already exists, HyperExecute will link your j
 
 **Step 2:** Select **Custom Project** as the **Type of Project**. Provide a unique **Project Name** (required) and select your desired framework and language used in your project. Click on the **Continue**.
 
-
-**Step 3:** Provide your **GitHub URL** and the **[Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)** / **Bitbucket URL** and the **[Repository Access Tokens](https://support.atlassian.com/bitbucket-cloud/docs/repository-access-tokens/)** of your repository. You can also add your team members as **Co-Owners** to allow them to edit or delete the project alongside you.
+**Step 3:** Provide your **GitHub URL** and the **[Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)** / **Bitbucket URL** and the **[Repository Access Tokens](https://support.atlassian.com/bitbucket-cloud/docs/repository-access-tokens/)** / **Azure Repo URL** and the **[Access Token](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows)** of your repository. You can also add your team members as **Co-Owners** to allow them to edit or delete the project alongside you.
 
 :::info important
-Currently, only **GitHub** and **Bitbucket** repositories are supported.
+Currently, only **GitHub**, **Bitbucket** and **Azure** repositories are supported.
 :::
 
 Click on **Save** button to finish the setup of your project.

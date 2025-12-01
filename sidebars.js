@@ -925,6 +925,14 @@ module.exports = {
             collapsed: true,
             label: "2025 Releases",
             items: [
+                            {
+                type: "category",
+                collapsed: true,
+                label: "November, 2025",
+                items: [
+                  "hyperexecute-release-notes-3-1-2",
+                ],
+              },
               {
                 type: "category",
                 collapsed: true,
