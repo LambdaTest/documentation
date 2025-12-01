@@ -522,6 +522,11 @@ module.exports = {
               },
               {
                 type: "doc",
+                label: "GitHub App",
+                id: "hyperexecute-github-app-integration",
+              },
+              {
+                type: "doc",
                 label: "Katalon",
                 id: "katalon-integration-with-hyperexecute",
               },
