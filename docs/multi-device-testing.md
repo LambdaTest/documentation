@@ -44,13 +44,13 @@ Log in to your [App Live Dashboard](https://accounts.lambdatest.com/dashboard), 
 
 Once the session is open, click on the **add device** option to add more devices. You can set  **up to 6 devices** per session and select the **device and application** for each.  
 
-![Multi-Device Selection Placeholder](../assets/images/real-device-app-testing/Multi-device-selector.jpg)  
+![Multi-Device Selection Placeholder](../assets/images/real-device-app-testing/Multi-device-selector.png)  
 
 ### Step 3: Apply Multi Device Control Settings
 
 Once devices have been added to the session, you will see an option called **Multi-Device Control**. This feature allows you to apply common actions and settings across all connected devices simultaneously, reducing repetitive steps and ensuring consistent configurations.
 
-![Multi-Device-control-2 Selection Placeholder](../assets/images/real-device-app-testing/Multi-device-2.jpeg) 
+![Multi-Device-control-2 Selection Placeholder](../assets/images/real-device-app-testing/Multi-device-2.png) 
 
 **Supported Multi-Device Controls**
 
