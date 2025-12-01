@@ -104,10 +104,13 @@ Add the following to your .storybook/main.js. You can read more about this here 
 ```js title=".storybook/main.js"
 module.exports = {
   features: {
+    // Required for Storybook > v9
     buildStoriesJson: true,
   },
 };
 ```
+
+>**Note**: `buildStoriesJson` is available for Storybook versions below v9.
 
 #### Storybook v9+ Play Function Support
 
@@ -457,6 +460,9 @@ Verify Storybook Server
 
 - Ensure Storybook is running on the specified URL/port
    - Check that `buildStoriesJson: true` is set in `.storybook/main.js`
+
+
+>**Note**: `buildStoriesJson` is available for Storybook versions below v9.
 
 </TabItem>
 <TabItem value='check-story-inclusion-exclusion' label='Check Story Inclusion/Exclusion' >
