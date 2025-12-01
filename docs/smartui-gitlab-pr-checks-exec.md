@@ -671,7 +671,6 @@ visual_regression_tests:
 ## Next Steps
 
 - Learn about [SmartUI CLI Exec Commands](/support/docs/smartui-cli-exec) for detailed exec usage
-- Explore [SmartUI Best Practices](/support/docs/smartui-best-practices) for efficient visual testing workflows
 - Check the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/) for common issues
 - Review [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/) for advanced pipeline configuration
 
