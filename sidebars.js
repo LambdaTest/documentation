@@ -2215,7 +2215,8 @@ module.exports = {
               "dark-mode-on-real-devices",
               "group-folder-redirect-on-real-device",
               "apple-pay-manual",
-              "upload-files-media"
+              "upload-files-media",
+              "multi-device-testing"
             ],
           },
         ],
