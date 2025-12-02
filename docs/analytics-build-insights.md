@@ -47,10 +47,6 @@ import NewTag from '../src/component/newTag';
 
 Build Insights is your build-level health dashboard. It shows how stable each build is, how long it took, and which tests are causing problems so you can decide quickly whether a build is safe to promote or needs more work.
 
-:::note
-Build Insights is available for Enterprise and Premium plan users. If you don't see this feature in your account, contact your account manager or reach out to our support team to learn more about upgrading your plan.
-:::
-
 With Build Insights, you can view all your unique builds in a centralized list, then drill down into individual build details to explore comprehensive metrics and test-level insights. The feature is designed to be intuitive and accessible, whether you're a QA engineer analyzing test results or a team lead tracking overall build health.
 
 ## Build Insights Flow
