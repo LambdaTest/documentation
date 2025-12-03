@@ -46,7 +46,7 @@ To address this, HyperExecute supports Rerun Job functionality, a feature that a
 ## Prerequisites
 To rerun a job, the following requirements must be fulfilled. 
 
-- Your test suite should be available on **Git** (Github and Bitbucket are supported) and linked to a [Project](/support/docs/hyperexecute-projects). This is required because each time a job is rerun, HyperExecute needs access to your test suite.
+- Your test suite should be available on **Git** (Github, Azure Repos and Bitbucket are supported) and linked to a [Project](/support/docs/hyperexecute-projects). This is required because each time a job is rerun, HyperExecute needs access to your test suite.
 - Make sure you are using **YAML version 0.1** with auto-split mode and discovery mode as local only. 
 
 > Support for YAML version 0.2 and other modes will be added soon.
