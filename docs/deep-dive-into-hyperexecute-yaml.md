@@ -780,9 +780,10 @@ skipArtifactStageIfNoTest: true
 
 ### `globalTimeout` 
 
-The `globalTimeout` value determines the maximum duration (in minutes) of a Job . It can be set between 1 and 150 minutes, and has a default value of 90 minutes. 
+The `globalTimeout` value determines the maximum duration (in minutes) of a Task(VM) . It can be set between 1 and 150 minutes, and has a default value of 90 minutes. 
 
-For example, if you set the `globalTimeout` to 120 minutes, a Job  that exceed this duration will be automatically terminated. If you’re expecting that running all your test-cases despite parallelism is going to take more than 90 mins, set it to an appropriate value, for example, 120. If you have tests that run for longer than the maximum limit of 150 minutes, you need to get in touch with our support team.
+For example, if you set the `globalTimeout` to 120 minutes, a Task(VM) that exceed this duration will be automatically terminated. If you’re expecting that running all your test-cases despite parallelism is going to take more than 90 mins, set it to an appropriate value, for example, 120. If you have tests that run for longer than the maximum limit of 150 minutes, you need to get in touch with our support team.
+
 ```yaml
 globalTimeout: 90   
 ```
