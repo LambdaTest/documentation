@@ -46,40 +46,42 @@ The LambdaTest Group Management will help you in creating the different Groups a
 
 **Step 1:** Login to your [LambdaTest](https://accounts.lambdatest.com/dashboard) account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
 
-<img loading="lazy" src={require('../assets/images/group-management/step201.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/group-management/step-1.png').default} alt="Navigate to Organization Settings"  className="doc_img"/>
 
-**Step 2:** Select the <b>'Groups'</b> tab and click on <b>'Create Group'</b>.
+**Step 2:** Select the <b>'Groups'</b> tab and click on <b>'+ Create'</b>.
 
-<img loading="lazy" src={require('../assets/images/group-management/step202.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/group-management/step-2.png').default} alt="Select Groups tab and click Create"  className="doc_img"/>
 
-**Step 3:** Fill in the group name of your choice, allot the maximum concurrency. After providing the details, click on <b>'Next'</b>.
+**Step 3:** Fill in the group name of your choice, allot the maximum concurrency using the sliders. After providing the details, click on <b>'Next'</b>.
 
-<img loading="lazy" src={require('../assets/images/group-management/step203.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/group-management/step-3.png').default} alt="Define group name and manage concurrency"  className="doc_img"/>
 
-**Step 4:** Select user’s you wants to add in the group, click on <b>‘Next’</b>.
+**Step 4:** Select users you want to add to the group, click on <b>'Next'</b>.
 
-<img loading="lazy" src={require('../assets/images/group-management/step204.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/group-management/step-4.png').default} alt="Select users to add to the group"  className="doc_img"/>
 
-**Step 5:** You can see the list of the user’s you have selected to add in the group, click on <b>‘Create Group’</b>. Your new group will be created successfully
+**Step 5:** Review the list of users you have selected to add to the group, then click on <b>'Finish'</b>. Your new group will be created successfully.
 
-<img loading="lazy" src={require('../assets/images/group-management/step205.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/group-management/step-5.png').default} alt="Review added users and finish creating group"  className="doc_img"/>
 
 ## How to View and Edit a Group?
 ***
 
-**Step 1:** Login to your LambdaTest account and navigate to Profile icon on the top-right. Click on ***Organizational Settings***.
+**Step 1:** Login to your LambdaTest account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
 
-<img loading="lazy" src={require('../assets/images/group-management/step201.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/group-management/step-1.png').default} alt="Navigate to Organization Settings"  className="doc_img"/>
 
 **Step 2:** Click on the <b>'Groups'</b> tab, select the desired group you want to view and edit. Click on the 3 dots and then select <b>'Edit'</b> button.
 
-<img loading="lazy" src={require('../assets/images/group-management/step302.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/group-management/step-6.png').default} alt="Select group and click Edit from context menu"  className="doc_img"/>
 
-**Step 3:** You can view and edit the Group Name, Concurrency, add or delete Users. After editing, click on <b>'Save Changes'</b>.
+**Step 3:** You can view and edit the Group Name and Concurrency settings. After making changes, click on <b>'Next'</b> to proceed.
 
-<img loading="lazy" src={require('../assets/images/group-management/step303.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/group-management/step-7.png').default} alt="Edit group name and manage concurrency"  className="doc_img"/>
 
-<img loading="lazy" src={require('../assets/images/group-management/step304.webp').default} alt="Image"  className="doc_img"/>
+**Step 4:** You can add or remove users from the group. Select or deselect users as needed, then click on <b>'Add Users'</b> or <b>'Save Changes'</b> to save your modifications.
+
+<img loading="lazy" src={require('../assets/images/group-management/step-8.png').default} alt="Add or remove users from the group"  className="doc_img"/>
 
 
 <!-- ## How to Edit a Group?
@@ -92,17 +94,17 @@ The LambdaTest Group Management will help you in creating the different Groups a
 ## How to Delete a Group?
 ***
 
-**Step 1:** Login to your LambdaTest account and navigate to Profile icon on the top-right. Click on ***Organizational Settings***.
+**Step 1:** Login to your LambdaTest account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
 
-<img loading="lazy" src={require('../assets/images/group-management/step201.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/group-management/step-1.png').default} alt="Navigate to Organization Settings"  className="doc_img"/>
 
-**Step 2:** Click on the <b>'Groups'</b> tab, select the desired group you want to view and edit. Click on the 3 dots and then select <b>'Delete'</b> button.
+**Step 2:** Click on the <b>'Groups'</b> tab, select the desired group you want to delete. Click on the 3 dots and then select <b>'Delete'</b> button.
 
-<img loading="lazy" src={require('../assets/images/group-management/step402.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/group-management/step-9.png').default} alt="Select group and click Delete from context menu"  className="doc_img"/>
 
-**Step 3:** Click on the <b>Delete</b> button.Your selected group will be deleted.
+**Step 3:** A confirmation dialog will appear. Click on the <b>'Delete'</b> button to confirm. Your selected group will be deleted.
 
-<img loading="lazy" src={require('../assets/images/group-management/step403.webp').default} alt="Image"  className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/group-management/step-10.png').default} alt="Confirm deletion of the group"  className="doc_img"/>
 
 <br />
 
