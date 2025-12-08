@@ -24,6 +24,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import RealDeviceTag from '../src/component/realDevice';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -47,6 +49,7 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
+<RealDeviceTag value="Real Device" />
 XCTestPlan is a feature within Xcode used for building iOS, iPadOS, macOS, watchOS, tvOS, and audioOS applications. XCTestPlan helps manage how you run automated tests written with the XCTest framework.
 
 XCTestPlan improves the organization and efficiency of running automated tests within Xcode. It allows you to create targeted test runs and manage various testing scenarios effectively.
