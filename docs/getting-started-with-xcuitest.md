@@ -18,6 +18,8 @@ slug: getting-started-with-xcuitest/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -42,7 +44,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. LambdaTest lets you perform automated app testing of your iOS apps using XCUITest across 10000+ real devices and OS combinations.
 
 ## Prerequisites
@@ -226,6 +228,11 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
   "build" : "Proverbial-XCUITest"
 }'
 ```
+
+:::info
+- For Virtual Devices, both the App file and Test-suite should be in the `Zip format`.
+- We need to pass the following capability `isvirtualdevice:true` as well when we are running test for Virtual Devices.
+:::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
