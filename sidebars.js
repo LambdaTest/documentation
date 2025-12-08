@@ -1992,7 +1992,8 @@ module.exports = {
           "accessibility-passed-test-cases",
           "accessibility-capture-screenshot",
           "accessibility-fragment-identifier",
-          "accessibility-web-score"
+          "accessibility-web-score",
+          "accessibility-web-runtime-control"
         ],
       },
       {
