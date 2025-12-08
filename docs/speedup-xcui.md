@@ -24,6 +24,9 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import RealDeviceTag from '../src/component/realDevice';
+import VirtualDeviceTag from '../src/component/virtualDevice';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -47,7 +50,7 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-
+<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 Usually, all the test cases of your XCUI test suite are executed, but there is a way to filter these. You can specify some selected classes or tests, which provides you with options to filter the test cases which you want to execute.
 
 To filter the test cases, you just need to pass the suitable parameters in LambdaTest’s REST API request. Refer to the table below to understand how to use various filters provided by LambdaTest.
@@ -73,8 +76,8 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 
 | Parameters | Description | Values | Datatype | 
 |----------- | ----------- | ------ | -------- |
-| `only-testing` | Allows the user to run only those tests/classes provided in the list | Values can be of the following format: className or className/testName. E.g. `["Class1/Test1", "Class2"]` | Array |
-| `skip-testing`| Allows the user to run all the tests/classes except the ones provided in the list | Values can be of the following format: className or className/testName. E.g. `["Class1/Test1", "Class2"]` | Array |
+| `only-testing` <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />| Allows the user to run only those tests/classes provided in the list | Values can be of the following format: className or className/testName. E.g. `["Class1/Test1", "Class2"]` | Array |
+| `skip-testing`<RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" /> | Allows the user to run all the tests/classes except the ones provided in the list | Values can be of the following format: className or className/testName. E.g. `["Class1/Test1", "Class2"]` | Array |
 
 :::info Note
 You can not use the following filters simultaneously. 
