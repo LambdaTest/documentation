@@ -41,7 +41,7 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-KaneAI offers a **natural language interface** for authoring test steps. Each step is expressed as an instruction that KaneAI translates into executable automation. With KaneAAI supported commands you can build **clear, dynamic, and human-readable test cases**.
+KaneAI offers a **natural language interface** for authoring test steps. Each step is expressed as an instruction that KaneAI translates into executable automation. With KaneAI supported commands you can build **clear, dynamic, and human-readable test cases**.
 
 ---
 
