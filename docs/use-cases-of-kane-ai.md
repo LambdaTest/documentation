@@ -89,10 +89,6 @@ KaneAI validates procurement workflows by testing vendor onboarding, purchase ap
 
 KaneAI tests supply chain platforms by simulating demand spikes, inventory fluctuations, logistics delays, supplier failures, and integration accuracy to ensure system resilience and real-time visibility.
 
-### Translation Services Enabled by AI
-
-KaneAI validates AI translation systems by testing linguistic accuracy, contextual consistency, language-pair performance, latency, and bias detection to ensure enterprise-grade multilingual reliability.
-
 ### Workplace & Digital Workplace
 
 KaneAI strengthens digital workplace platforms by testing collaboration tools, access controls, identity flows, remote work scenarios, and performance across devices to ensure secure and seamless employee experiences.
