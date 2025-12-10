@@ -92,6 +92,12 @@ Migration is simple, tests running on a local grid can be executed on LambdaTest
 
 You can run your script locally by executing it directly on your machine with your preferred browser setup. This allows you to quickly test functionality, debug issues, and verify results without relying on external environments. It's an efficient way to validate tests during development.
 
+
+
+<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/local-test-script.png').default} alt="Lambdatest text validation result" width="1024" height="667" />
+
+
+<!-- 
 ```Java
 // TextValidationTest.java
 import org.openqa.selenium.By;
@@ -123,7 +129,7 @@ public class TextValidationTest {
     }
 }
 
-```
+``` -->
 
 ## Connect Your Local Script to LambdaTest
 
@@ -150,8 +156,8 @@ LT_ACCESS_KEY="<your_access_key>"
 Once the .env file is set up, ensure your test framework correctly reads these variables at runtime. This helps keep your authentication secure and avoids hard-coding credentials within your scripts. With the credentials in place, you’re now ready to update your Hub URL for LambdaTest execution.
 
 
-### Changes in Hub URL
-You need to now change the hub URL in the configuration settings of your test suite. Hub URL is of type String and it defines the Hub location to which the Selenium tests would be submitted for execution.
+### Add LambdaTest Hub URL
+You need to now add the hub URL in the configuration settings of your test suite. Hub URL is of type String and it defines the Hub location to which the Selenium tests would be submitted for execution.
 
 ```js
 @hub.lambdatest.com/wd/hub
@@ -165,7 +171,21 @@ Add your capabilities using the [LambdaTest Capabilities Generator](https://www.
 
 <Tabs className="docs__val">
 
-<TabItem value="ios" label="Selenium 3 LambdaTest Capabilities" default>
+<TabItem value="android" label="Selenium 4 LambdaTest Capablities" default>
+
+```js
+SafariOptions browserOptions = new SafariOptions();
+browserOptions.setPlatformName("MacOS Tahoe");
+browserOptions.setBrowserVersion("26");
+HashMap<String, Object> ltOptions = new HashMap<String, Object>();
+ltOptions.put("username", "<your_username>");
+ltOptions.put("accessKey", "<your_access_key>");
+ltOptions.put("w3c", true);
+browserOptions.setCapability("LT:Options", ltOptions);
+```
+</TabItem>
+
+<TabItem value="ios" label="Selenium 3 LambdaTest Capablities" default>
 
 ```js
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -174,9 +194,9 @@ capabilities.setCapability("browserVersion", "26");
 HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 ltOptions.put("username", "<your_username>");
 ltOptions.put("accessKey", "<your_access_key>");
+ltOptions.put("platformName", "MacOS Tahoe");
 ltOptions.put("visual", true);
 ltOptions.put("video", true);
-ltOptions.put("platformName", "MacOS Tahoe");
 capabilities.setCapability("LT:Options", ltOptions);
 ```
 
@@ -184,18 +204,6 @@ capabilities.setCapability("LT:Options", ltOptions);
 
 <TabItem value="android" label="Selenium 4 LambdaTest Capabilities" default>
 
-```js
-ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName("Windows 10");
-browserOptions.setBrowserVersion("dev");
-HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-ltOptions.put("username", "<your_username>");
-ltOptions.put("accessKey", "<your_access_key>");
-ltOptions.put("project", "Untitled");
-ltOptions.put("w3c", true);
-browserOptions.setCapability("LT:Options", ltOptions);
-```
-</TabItem>
 
 </Tabs>
 
@@ -216,59 +224,62 @@ This test script performs a basic text validation on the website [LambdaTest eCo
 
 ```java
 // TextValidationTest.java
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.safari.SafariOptions;
 
 import java.net.URL;
 import java.util.HashMap;
 
 public class TextValidationTest {
 
+
     public static void main(String[] args) throws Exception {
 
-        // ---------------- Authentication using Environment Variables ----------------
-        String username = System.getenv("LT_USERNAME") == null ? "Your LT Username" : System.getenv("LT_USERNAME");  // If env variables are unavailable, you may hard-code credentials here.
-        String authkey = System.getenv("LT_ACCESS_KEY") == null ? "Your LT AccessKey" : System.getenv("LT_ACCESS_KEY"); // If env variables are unavailable, you may hard-code credentials here.
+        String username = System.getenv("LT_USERNAME") == null ? 
+        "Your LT Username" : System.getenv("LT_USERNAME");
+
+        String authkey = System.getenv("LT_ACCESS_KEY") == null ? 
+        "Your LT AccessKey\n"  : System.getenv("LT_ACCESS_KEY");
 
         String GRID_URL = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
 
-        // ---------------- Selenium 4 Browser Options (Runs on LambdaTest Cloud) ----------------
-        ChromeOptions browserOptions = new ChromeOptions();
-        browserOptions.setPlatformName("Windows 10");
-        browserOptions.setBrowserVersion("latest");
 
+        SafariOptions browserOptions = new SafariOptions();
+        browserOptions.setPlatformName("MacOS Tahoe");
+        browserOptions.setBrowserVersion("26");
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-        ltOptions.put("username", username);
-        ltOptions.put("accessKey", authkey);
+        ltOptions.put("username", "<your_username>");
+        ltOptions.put("accessKey", "<your_access_key>");
         ltOptions.put("project", "Text Validation Test");
         ltOptions.put("build", "Text Validation Test Build");
-        ltOptions.put("selenium_version", "4.0.0");
         ltOptions.put("w3c", true);
-
         browserOptions.setCapability("LT:Options", ltOptions);
 
-        // ---------------- Start Remote WebDriver Session ----------------
         WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), browserOptions);
 
-        // 1. Visit Page
-        driver.get("https://ecommerce-playground.lambdatest.io/");
+        try {
 
-        // 2. Text Validation
-        String expectedText = "This is a dummy website for Web Automation Testing";
-        boolean isTextPresent = driver.getPageSource().contains(expectedText);
+            driver.get("https://ecommerce-playground.lambdatest.io/");
 
-        if (isTextPresent) {
-            System.out.println("✔ Text validation PASSED");
-            System.out.println("Found: " + expectedText);
-        } else {
-            System.out.println("✘ Text validation FAILED");
+            String expectedText = "This is a dummy website for Web Automation Testing";
+            boolean isTextPresent = driver.getPageSource().contains(expectedText);
+
+            if (isTextPresent) {
+                ((JavascriptExecutor) driver).executeScript("lambda-status=passed");
+                System.out.println("✔ Text validation PASSED");
+            } else {
+                ((JavascriptExecutor) driver).executeScript("lambda-status=failed");
+                System.out.println("✘ Text validation FAILED");
+            }
+
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=pass");
+            e.printStackTrace();
+        } finally {
+            driver.quit();   // 🔹 Correctly placed – runs even if test fails
         }
-
-        // ---------------- End Session ----------------
-        driver.quit();
     }
 }
 ```
@@ -279,60 +290,63 @@ public class TextValidationTest {
 
 ```java
 // TextValidationTest.java – Selenium 3 Configuration
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.JavascriptExecutor;
 
 import java.net.URL;
 import java.util.HashMap;
 
 public class TextValidationTest {
 
+
     public static void main(String[] args) throws Exception {
 
-        // ================== LambdaTest Authentication via ENV Vars ==================
-        String username = System.getenv("LT_USERNAME") == null ? "Your LT Username" : System.getenv("LT_USERNAME"); // If env variables are unavailable, you may hard-code credentials here.
-        String authkey = System.getenv("LT_ACCESS_KEY") == null ? "Your LT AccessKey" : System.getenv("LT_ACCESS_KEY"); // If env variables are unavailable, you may hard-code credentials here.
-        String GRID_URL = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
+        String username = System.getenv("LT_USERNAME") == null ? 
+        "Your LT Username" : System.getenv("LT_USERNAME");
 
-        // ================== Selenium 3 LambdaTest Capabilities ==================
+        String authkey = System.getenv("LT_ACCESS_KEY") == null ? 
+        "Your LT AccessKey" : System.getenv("LT_ACCESS_KEY");
+
+        String GRID_URL = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
+        
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", "Safari");
         capabilities.setCapability("browserVersion", "26");
-
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-        ltOptions.put("username", username);            // pulled dynamically
-        ltOptions.put("accessKey", authkey);            // pulled dynamically
+        ltOptions.put("username", "<your_username>");
+        ltOptions.put("accessKey", "<your_access_key>");
+        ltOptions.put("platformName", "MacOS Tahoe");
         ltOptions.put("visual", true);
         ltOptions.put("video", true);
-        ltOptions.put("platformName", "MacOS Tahoe");
-     
-
         capabilities.setCapability("LT:Options", ltOptions);
 
-        // ================== Start Selenium 3 Remote WebDriver ==================
         WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), capabilities);
 
-        // 1. Open Website
-        driver.get("https://ecommerce-playground.lambdatest.io/");
+        try {
 
-        // 2. Validate expected UI text
-        String expectedText = "This is a dummy website for Web Automation Testing";
-        boolean isTextPresent = driver.getPageSource().contains(expectedText);
+            driver.get("https://ecommerce-playground.lambdatest.io/");
 
-        if (isTextPresent) {
-            System.out.println("✔ Text validation PASSED");
-            System.out.println("Found: " + expectedText);
-        } else {
-            System.out.println("✘ Text validation FAILED");
+            String expectedText = "This is a dummy website for Web Automation Testing";
+            boolean isTextPresent = driver.getPageSource().contains(expectedText);
+
+            if (isTextPresent) {
+                ((JavascriptExecutor) driver).executeScript("lambda-status=passed");
+                System.out.println("✔ Text validation PASSED");
+            } else {
+                ((JavascriptExecutor) driver).executeScript("lambda-status=failed");
+                System.out.println("✘ Text validation FAILED");
+            }
+
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=pass");
+            e.printStackTrace();
+        } finally {
+            driver.quit();   // 🔹 Correctly placed – runs even if test fails
         }
-
-        driver.quit();
     }
 }
-
 ```
 
 </TabItem>
@@ -344,7 +358,7 @@ public class TextValidationTest {
 
 Visit LambdaTest Web Automation dashboard to view your test execution result.
 
-<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/Lambdatest-text-validation-result.png').default} alt="Lambdatest text validation result" width="1024" height="667" />
+<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/lambdatest-safar-execution.png').default} alt="Lambdatest text validation result" width="1024" height="667" />
 
 
 ## Contact Us for Support

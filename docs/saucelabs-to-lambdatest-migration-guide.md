@@ -126,6 +126,9 @@ Capabilities generator let you configure the desired capabilities (or capabiliti
 
 Optionally, you can also choose the Selenium version and other advanced options present in the Selenium Capabilities Generator. For this migration guide, we have only restricted to the three capabilities listed above.
 
+To generate capabilities use [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
+
+
 For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of Sauce Labs and LambdaTest:
 
 
@@ -134,14 +137,15 @@ For the migration, we have considered Java-based Selenium automation tests. Show
 <TabItem value="ios" label="Sauce Labs Capabilities" default>
 
 ```js
-ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName("Windows 11");
+SafariOptions browserOptions = new SafariOptions();
+browserOptions.setPlatformName("macOS 15");
 browserOptions.setBrowserVersion("latest");
 Map<String, Object> sauceOptions = new HashMap<>();
 sauceOptions.put("username", "YOUR_USERNAME");
 sauceOptions.put("accessKey", "YOUR_ACCESS_KEY");
 sauceOptions.put("build", "<your build id>");
 sauceOptions.put("name", "<your test name>");
+sauceOptions.put("armRequired", true);
 browserOptions.setCapability("sauce:options", sauceOptions);
 ```
 
@@ -150,9 +154,9 @@ browserOptions.setCapability("sauce:options", sauceOptions);
 <TabItem value="android" label="LambdaTest Capabilities" default>
 
 ```js
-ChromeOptions browserOptions = new ChromeOptions();
-browserOptions.setPlatformName("Windows 10");
-browserOptions.setBrowserVersion("dev");
+SafariOptions browserOptions = new SafariOptions();
+browserOptions.setPlatformName("MacOS Tahoe");
+browserOptions.setBrowserVersion("26");
 HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 ltOptions.put("username", "<your_username>");
 ltOptions.put("accessKey", "<your_access_key>");
@@ -162,9 +166,6 @@ browserOptions.setCapability("LT:Options", ltOptions);
 </TabItem>
 
 </Tabs>
-
-
-To generate capabilities use [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
 
 
 
@@ -181,6 +182,9 @@ Capabilities generator let you configure the desired capabilities (or capabiliti
 
 Optionally, you can also choose the Selenium version and other advanced options present in the Selenium Capabilities Generator. For this migration guide, we have only restricted to the three capabilities listed above.
 
+To generate capabilities use [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
+
+
 For the migration, we have considered Java-based Selenium automation tests. Shown below are the screenshots of capabilities generator of Sauce Labs and LambdaTest:
 
 <Tabs className="docs__val">
@@ -188,14 +192,16 @@ For the migration, we have considered Java-based Selenium automation tests. Show
 <TabItem value="ios" label="Sauce Labs Capabilities" default>
 
 ```js
-DesiredCapabilities caps = new DesiredCapabilities();
-caps.setCapability("browserName", "chrome");
-caps.setCapability("platform", "Windows 11");
-caps.setCapability("version", "latest");
-caps.setCapability("build", "<your build id>");
-caps.setCapability("name", "<your test name>");
-caps.setCapability("username", "YOUR_USERNAME");
-caps.setCapability("accessKey", "YOUR_ACCESS_KEY");
+SafariOptions browserOptions = new SafariOptions();
+browserOptions.setCapability("platformName", "macOS 15");
+browserOptions.setCapability("browserVersion", "latest");
+Map<String, Object> sauceOptions = new HashMap<>();
+sauceOptions.put("build", "<your build id>");
+sauceOptions.put("name", "<your test name>");
+sauceOptions.put("username", "YOUR_USERNAME");
+sauceOptions.put("accessKey", "YOUR_ACCESS_KEY");
+sauceOptions.put("armRequired", true);
+browserOptions.setCapability("sauce:options", sauceOptions);
 ```
 
 </TabItem>
@@ -209,9 +215,9 @@ capabilities.setCapability("browserVersion", "26");
 HashMap<String, Object> ltOptions = new HashMap<String, Object>();
 ltOptions.put("username", "<your_username>");
 ltOptions.put("accessKey", "<your_access_key>");
+ltOptions.put("platformName", "MacOS Tahoe");
 ltOptions.put("visual", true);
 ltOptions.put("video", true);
-ltOptions.put("platformName", "MacOS Tahoe");
 capabilities.setCapability("LT:Options", ltOptions);
 ```
 </TabItem>
@@ -219,7 +225,6 @@ capabilities.setCapability("LT:Options", ltOptions);
 </Tabs>
 
 
-To generate capabilities use [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.
 
 ## Hands On Guide -  LambdaTest Migration
 ***
@@ -238,59 +243,62 @@ This test script performs a basic text validation on the website [LambdaTest eCo
 
 ```java
 // TextValidationTest.java
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.safari.SafariOptions;
 
 import java.net.URL;
 import java.util.HashMap;
 
 public class TextValidationTest {
 
+
     public static void main(String[] args) throws Exception {
 
-        // ---------------- Authentication using Environment Variables ----------------
-        String username = System.getenv("LT_USERNAME") == null ? "Your LT Username" : System.getenv("LT_USERNAME");  // If env variables are unavailable, you may hard-code credentials here.
-        String authkey = System.getenv("LT_ACCESS_KEY") == null ? "Your LT AccessKey" : System.getenv("LT_ACCESS_KEY"); // If env variables are unavailable, you may hard-code credentials here.
+        String username = System.getenv("LT_USERNAME") == null ? 
+        "Your LT Username" : System.getenv("LT_USERNAME");
+
+        String authkey = System.getenv("LT_ACCESS_KEY") == null ? 
+        "Your LT AccessKey\n"  : System.getenv("LT_ACCESS_KEY");
 
         String GRID_URL = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
 
-        // ---------------- Selenium 4 Browser Options (Runs on LambdaTest Cloud) ----------------
-        ChromeOptions browserOptions = new ChromeOptions();
-        browserOptions.setPlatformName("Windows 10");
-        browserOptions.setBrowserVersion("latest");
 
+        SafariOptions browserOptions = new SafariOptions();
+        browserOptions.setPlatformName("MacOS Tahoe");
+        browserOptions.setBrowserVersion("26");
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-        ltOptions.put("username", username);
-        ltOptions.put("accessKey", authkey);
+        ltOptions.put("username", "<your_username>");
+        ltOptions.put("accessKey", "<your_access_key>");
         ltOptions.put("project", "Text Validation Test");
         ltOptions.put("build", "Text Validation Test Build");
-        ltOptions.put("selenium_version", "4.0.0");
         ltOptions.put("w3c", true);
-
         browserOptions.setCapability("LT:Options", ltOptions);
 
-        // ---------------- Start Remote WebDriver Session ----------------
         WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), browserOptions);
 
-        // 1. Visit Page
-        driver.get("https://ecommerce-playground.lambdatest.io/");
+        try {
 
-        // 2. Text Validation
-        String expectedText = "This is a dummy website for Web Automation Testing";
-        boolean isTextPresent = driver.getPageSource().contains(expectedText);
+            driver.get("https://ecommerce-playground.lambdatest.io/");
 
-        if (isTextPresent) {
-            System.out.println("✔ Text validation PASSED");
-            System.out.println("Found: " + expectedText);
-        } else {
-            System.out.println("✘ Text validation FAILED");
+            String expectedText = "This is a dummy website for Web Automation Testing";
+            boolean isTextPresent = driver.getPageSource().contains(expectedText);
+
+            if (isTextPresent) {
+                ((JavascriptExecutor) driver).executeScript("lambda-status=passed");
+                System.out.println("✔ Text validation PASSED");
+            } else {
+                ((JavascriptExecutor) driver).executeScript("lambda-status=failed");
+                System.out.println("✘ Text validation FAILED");
+            }
+
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=pass");
+            e.printStackTrace();
+        } finally {
+            driver.quit();   // 🔹 Correctly placed – runs even if test fails
         }
-
-        // ---------------- End Session ----------------
-        driver.quit();
     }
 }
 ```
@@ -301,57 +309,61 @@ public class TextValidationTest {
 
 ```java
 // TextValidationTest.java – Selenium 3 Configuration
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.JavascriptExecutor;
 
 import java.net.URL;
 import java.util.HashMap;
 
 public class TextValidationTest {
 
+
     public static void main(String[] args) throws Exception {
 
-        // ================== LambdaTest Authentication via ENV Vars ==================
-        String username = System.getenv("LT_USERNAME") == null ? "Your LT Username" : System.getenv("LT_USERNAME"); // If env variables are unavailable, you may hard-code credentials here.
-        String authkey = System.getenv("LT_ACCESS_KEY") == null ? "Your LT AccessKey" : System.getenv("LT_ACCESS_KEY"); // If env variables are unavailable, you may hard-code credentials here.
-        String GRID_URL = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
+        String username = System.getenv("LT_USERNAME") == null ? 
+        "Your LT Username" : System.getenv("LT_USERNAME");
 
-        // ================== Selenium 3 LambdaTest Capabilities ==================
+        String authkey = System.getenv("LT_ACCESS_KEY") == null ? 
+        "Your LT AccessKey" : System.getenv("LT_ACCESS_KEY");
+
+        String GRID_URL = "https://" + username + ":" + authkey + "@hub.lambdatest.com/wd/hub";
+        
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", "Safari");
         capabilities.setCapability("browserVersion", "26");
-
         HashMap<String, Object> ltOptions = new HashMap<String, Object>();
-        ltOptions.put("username", username);            // pulled dynamically
-        ltOptions.put("accessKey", authkey);            // pulled dynamically
+        ltOptions.put("username", "<your_username>");
+        ltOptions.put("accessKey", "<your_access_key>");
+        ltOptions.put("platformName", "MacOS Tahoe");
         ltOptions.put("visual", true);
         ltOptions.put("video", true);
-        ltOptions.put("platformName", "MacOS Tahoe");
-     
-
         capabilities.setCapability("LT:Options", ltOptions);
 
-        // ================== Start Selenium 3 Remote WebDriver ==================
         WebDriver driver = new RemoteWebDriver(new URL(GRID_URL), capabilities);
 
-        // 1. Open Website
-        driver.get("https://ecommerce-playground.lambdatest.io/");
+        try {
 
-        // 2. Validate expected UI text
-        String expectedText = "This is a dummy website for Web Automation Testing";
-        boolean isTextPresent = driver.getPageSource().contains(expectedText);
+            driver.get("https://ecommerce-playground.lambdatest.io/");
 
-        if (isTextPresent) {
-            System.out.println("✔ Text validation PASSED");
-            System.out.println("Found: " + expectedText);
-        } else {
-            System.out.println("✘ Text validation FAILED");
+            String expectedText = "This is a dummy website for Web Automation Testing";
+            boolean isTextPresent = driver.getPageSource().contains(expectedText);
+
+            if (isTextPresent) {
+                ((JavascriptExecutor) driver).executeScript("lambda-status=passed");
+                System.out.println("✔ Text validation PASSED");
+            } else {
+                ((JavascriptExecutor) driver).executeScript("lambda-status=failed");
+                System.out.println("✘ Text validation FAILED");
+            }
+
+        } catch (Exception e) {
+            ((JavascriptExecutor) driver).executeScript("lambda-status=pass");
+            e.printStackTrace();
+        } finally {
+            driver.quit();   // 🔹 Correctly placed – runs even if test fails
         }
-
-        driver.quit();
     }
 }
 
@@ -367,110 +379,7 @@ public class TextValidationTest {
 
 Visit LambdaTest Web Automation dashboard to view your test execution result.
 
-<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/Lambdatest-text-validation-result.png').default} alt="Lambdatest text validation result" width="1024" height="667" />
-
-<!-- 
-
-### Sauce Labs
-``` js
-// test.java
-import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import java.net.URL;
-
-public class SauceLabsSampleTest
-{
-  public static final String user_name = "SauceLabs_user_name";
-  public static final String access_key = "SauceLabs_access_key";
-  public static final String grid_url = "https://" + user_name + ":" + access_key + "@ondemand.us-west-1.saucelabs.com:443/wd/hub";
-  public static void main(String[] args) throws Exception
-   {
-       DesiredCapabilities caps = new DesiredCapabilities();
-       caps.setCapability("build", "Build #1");
-       caps.setCapability("name", "Sample Project");
-       caps.setCapability("platform", "Windows 10");
-       caps.setCapability("browserName", "chrome");
-       caps.setCapability("version", "92.0");
-      
-       WebDriver driver = new RemoteWebDriver(new URL(grid_url), caps);
-       driver.get("http://www.google.com");
-       driver.quit();
-   }
-}
-```
-
-### LambdaTest
-``` js
-// test.java
-import org.openqa.selenium.By;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import java.net.URL;
-public class LambdaTestSampleTest
-{
-    public static final String user_name = "LambdaTest_user_name";
-    public static final String access_key = "LambdaTest_access_key";
-    public static final String grid_url = "https://" + user_name + ":" + access_key + "@hub.lambdatest.com/wd/hub";
-    public static void main(String[] args) throws Exception
-    {
-        DesiredCapabilities caps = new DesiredCapabilities();
-        capabilities.setCapability("build", "Build #1");
-        capabilities.setCapability("name","Sample project");
-        capabilities.setCapability("platform", "Windows 10 ");
-        capabilities.setCapability("browserName", "Chrome");
-        capabilities.setCapability("version", "92.0");
-        WebDriver driver = new RemoteWebDriver(new URL(grid_url), caps);
-        driver.get("http://www.google.com");
-        driver.quit();
-    }
-}
-```
-
-As seen above, the majority of the implementation is unchanged. Changes are only made on the infrastructure side (i.e. instead of Sauce Labs, the tests would be run on LambdaTest).
-
-Here is a side-by-side comparison of what has changed from the implementation point of view:
-
-**Sauce Labs**
-``` js
-// test.java
-
-public static final String user_name = "SauceLabs_user_name";
-public static final String access_key = "SauceLabs_access_key";
-public static final String grid_url = "https://" + user_name + ":" + access_key + "@ondemand.us-west-1.saucelabs.com:443/wd/hub";
-public static void main(String[] args) throws Exception
-{
-   DesiredCapabilities caps = new DesiredCapabilities();
- 
-   caps.setCapability("build", "Build #1");
-   caps.setCapability("name", "Sample Project");
-   caps.setCapability("platform", "Windows 10");
-   caps.setCapability("browserName", "chrome");
-   caps.setCapability("version", "92.0");
-```
-
-**LambdaTest**
-``` js
-// test.java
-public static final String user_name = "LambdaTest_user_name";
-public static final String access_key = "LambdaTest_access_key";
-public static final String grid_url = "https://" + user_name + ":" + access_key + "@hub.lambdatest.com/wd/hub";
-public static void main(String[] args) throws Exception
-{
-   DesiredCapabilities caps = new DesiredCapabilities();
- 
-   capabilities.setCapability("build", "Build #1");
-   capabilities.setCapability("name","Sample project");
-   capabilities.setCapability("platform", "Windows 10 ");
-   capabilities.setCapability("browserName", "Chrome");
-   capabilities.setCapability("version", "92.0");        
-``` -->
+<img loading="lazy" className="doc_img" src={require('../assets/images/browserstack-lambdatest-migration/lambdatest-safar-execution.png').default} alt="Lambdatest text validation result" width="1024" height="667" />
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
