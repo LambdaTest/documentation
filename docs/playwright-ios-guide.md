@@ -46,7 +46,7 @@ Playwright test automation on real iOS devices is now supported on LambdaTest. T
 
 This guide will cover the basics of getting started with Playwright testing on iOS devices on the LambdaTest platform.
 
-> **Beta release**: Playwright support for real iOS devices is currently under beta.
+> Testing with Playwright on real iOS and Android devices is currently supported with Playwright **v1.53.2**
 
 ## Prerequisites
 ***
