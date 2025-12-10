@@ -202,7 +202,6 @@ capabilities.setCapability("LT:Options", ltOptions);
 
 </TabItem>
 
-<TabItem value="android" label="Selenium 4 LambdaTest Capabilities" default>
 
 
 </Tabs>
