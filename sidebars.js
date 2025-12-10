@@ -1255,7 +1255,7 @@ module.exports = {
           type: "doc",
           id: "getting-started-with-kane-ai",
         },
-        items: ["why-we-need-kane-ai"],
+        items: ["why-we-need-kane-ai","use-cases-of-kane-ai"],
       },
       {
         type: "category",
