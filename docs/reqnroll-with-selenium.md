@@ -163,7 +163,7 @@ Navigate to the [LambdaTest Automation Dashboard](https://automation.lambdatest.
 <img loading="lazy" src={require('../assets/images/uploads/reqnroll-cloud-execution.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 </p>
 
-As seen below, all the scenarios that are a part of respective *.feature(s)* files successfuly executed on LambdaTest.
+As seen below, all the scenarios that are a part of respective *.feature(s)* files successfully executed on LambdaTest.
 
 <p align="center">
 <img loading="lazy" src={require('../assets/images/uploads/reqnroll-step7.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
@@ -226,7 +226,7 @@ set LT_ACCESS_KEY=LT_ACCESS_KEY
 
 For the testing, we are using the [Proverbial App (apk)](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) from LambdaTest. The app needs to be uploaded to the LambdaTest cloud storage. Run the below command for uploading the app to the cloud:
 
-Note: Please replace the LT_USERNAME and LT_ACCESS_KEY with the actual LambdaTest crendentials that are available in the [LambdaTest Profile Section](https://accounts.lambdatest.com/security/username-accesskey) section.
+Note: Please replace the LT_USERNAME and LT_ACCESS_KEY with the actual LambdaTest credentials that are available in the [LambdaTest Profile Section](https://accounts.lambdatest.com/security/username-accesskey) section.
 
 ```bash
 curl -u "LT_USERNAME:LT_ACCESS_KEY" -X POST "https://manual-api.lambdatest.com/app/upload/realDevice" -F "url=https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk" -F "name=proverbial-android" -F "custom_id=sampleName" -F "storage=url" -F "visibility=individual"
@@ -288,7 +288,7 @@ Trigger the command make `reqnroll-automation-test` to run the Reqnroll tests on
 
 **Step 8**
 
-Navigate to the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/) to check the status of the test execution. As seen below, all the scenarios that are a part of respective .feature(s) files successfuly executed on LambdaTest.
+Navigate to the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/) to check the status of the test execution. As seen below, all the scenarios that are a part of respective .feature(s) files successfully executed on LambdaTest.
 
 <p align="center">
 <img loading="lazy" src={require('../assets/images/uploads/reqnroll-mobile-step8.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
