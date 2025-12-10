@@ -125,7 +125,7 @@ For the migration, we have considered Java-based Selenium automation tests. Show
 
 <Tabs className="docs__val">
 
-<TabItem value="ios" label="BrowserStack Capablities" default>
+<TabItem value="ios" label="BrowserStack Capabilities" default>
 
 ```js
 MutableCapabilities capabilities = new MutableCapabilities();
@@ -185,7 +185,7 @@ Below are example capability representations from BrowserStack and LambdaTest to
 
 <Tabs className="docs__val">
 
-<TabItem value="ios" label="BrowserStack Capablities" default>
+<TabItem value="ios" label="BrowserStack Capabilities" default>
 
 ```js
 DesiredCapabilities caps = new DesiredCapabilities();
