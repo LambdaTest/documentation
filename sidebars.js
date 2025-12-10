@@ -1263,7 +1263,9 @@ module.exports = {
           type: "doc",
           id: "getting-started-with-kane-ai",
         },
-        items: ["why-we-need-kane-ai"],
+        items: ["why-we-need-kane-ai",
+          "use-cases-of-kane-ai"
+        ],
       },
       {
         type: "category",
@@ -1295,10 +1297,10 @@ module.exports = {
         label: "Test Manager",
         items: [
           "kane-ai-test-plan",
-          "kaneai-hyperexecute-test-run-execution",
-          "kaneai-ci-cd-automation",
+          "Use Cases of KaneAI-hyperexecute-test-run-execution",
+          "Use Cases of KaneAI-ci-cd-automation",
           "test-runs-configurations",
-          "kaneai-scheduled-test-runs",
+          "Use Cases of KaneAI-scheduled-test-runs",
         ],
       },
       {
@@ -1307,7 +1309,7 @@ module.exports = {
         label: "Variables and Parameters",
         link: {
           type: "doc",
-          id: "kaneai-variables-and-parameters",
+          id: "Use Cases of KaneAI-variables-and-parameters",
         },
         items: [
           "kane-ai-using-variables",
@@ -1327,18 +1329,18 @@ module.exports = {
             collapsed: true,
             label: "Common",
         items: [
-          "kaneai-manual-interaction",
+          "Use Cases of KaneAI-manual-interaction",
           "kane-ai-javascript-execution",
           "kane-ai-geolocation-tunnel-proxy",
-          "kaneai-auto-heal",
+          "Use Cases of KaneAI-auto-heal",
           "kane-ai-scroll-in-feature",
           "kane-ai-jira-integration",
           "kane-ai-api-testing",
           "kane-ai-modules",
-          "kaneai-modules-versions-and-enhancement",
-          "kaneai-upload-and-download-files",
-                "kaneai-totp",
-                "kaneai-database",
+          "Use Cases of KaneAI-modules-versions-and-enhancement",
+          "Use Cases of KaneAI-upload-and-download-files",
+                "Use Cases of KaneAI-totp",
+                "Use Cases of KaneAI-database",
             ],
           },          
           {
@@ -3721,7 +3723,7 @@ module.exports = {
               {
                 type: "doc",
                 label: "KaneAI Integration",
-                id: "kaneai-smartui-visual-testing",
+                id: "Use Cases of KaneAI-smartui-visual-testing",
               },
               {
                 type: "category",
@@ -4369,7 +4371,7 @@ module.exports = {
       {
         type: "doc",
         label: "Access Management - KaneAI <> Test Manager",
-        id: "kaneai-test-manager-access-management",
+        id: "Use Cases of KaneAI-test-manager-access-management",
       },
     ],
   ],
