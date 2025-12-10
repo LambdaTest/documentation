@@ -1,9 +1,9 @@
 ---
 id: hyperexecute-github-app-integration
-title: GitHub Apps Integration Support for HyperExecute
+title: GitHub App Integration Support for HyperExecute
 hide_title: false
 sidebar_label: GitHub App
-description:  GitHub Apps Integration Support for HyperExecute 
+description:  GitHub App Integration Support for HyperExecute 
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help
@@ -44,9 +44,11 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
       })
     }}
 ></script>
-HyperExecute supports integration with GitHub Apps, enabling secure, fine-grained, and scalable access to your GitHub repositories without relying on long-lived Personal Access Tokens (PATs).
+> This is currently in the **Beta** version.
 
-With this integration, HyperExecute automatically generates short-lived installation access tokens via GitHub Apps for all Git-related operations in Projects and Workflows, enhancing security, compliance, and maintainability.
+HyperExecute supports integration with GitHub App, enabling secure, fine-grained, and scalable access to your GitHub repositories without relying on long-lived Personal Access Tokens (PATs).
+
+With this integration, HyperExecute automatically generates short-lived installation access tokens via GitHub App for all Git-related operations in Projects and Workflows, enhancing security, compliance, and maintainability.
 
 This integration supports three onboarding paths:
 - **LambdaTest's Marketplace GitHub App** (Public Cloud)
@@ -57,7 +59,7 @@ This integration supports three onboarding paths:
 1. Install a GitHub App using one of the three supported approaches. <br />
 2. Complete the post-installation registration within the LambdaTest platform. <br />
 3. HyperExecute backend (Logistics) sends data to Sentinel to persist details in the `github_app_integration` table. <br />
-4. For customer-managed GitHub Apps, create an org-level secret using the Logistics Secrets API: `github_app_private_key_{{git_tenant}}`. <br />
+4. For customer-managed GitHub App, create an org-level secret using the Logistics Secrets API: `github_app_private_key_{{git_tenant}}`. <br />
 
 Once setup is complete, all HyperExecute Project and Workflow Git operations use short-lived installation tokens instead of PAT tokens. The PAT-based flow is used only as a fallback when no GitHub App is configured.
 
