@@ -131,7 +131,7 @@ For the migration, we have considered Java-based Selenium automation tests. Show
 
 <Tabs className="docs__val">
 
-<TabItem value="ios" label="Sauce Labs Capablities" default>
+<TabItem value="ios" label="Sauce Labs Capabilities" default>
 
 ```js
 ChromeOptions browserOptions = new ChromeOptions();
@@ -185,7 +185,7 @@ For the migration, we have considered Java-based Selenium automation tests. Show
 
 <Tabs className="docs__val">
 
-<TabItem value="ios" label="Sauce Labs Capablities" default>
+<TabItem value="ios" label="Sauce Labs Capabilities" default>
 
 ```js
 DesiredCapabilities caps = new DesiredCapabilities();
