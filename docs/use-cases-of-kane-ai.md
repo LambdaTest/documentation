@@ -39,9 +39,7 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-# KaneAI Use Cases Across Business Domains
-
-KaneAI bridges this gap by making automation effortless, adaptable, and accessible.
+# Use Cases of KaneAI Across Business Domains
 
 ### Application Suites
 
