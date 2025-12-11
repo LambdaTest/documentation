@@ -13,7 +13,7 @@ keywords:
   - playwright android
 
 url: https://www.lambdatest.com/support/docs/playwright-android/
-site_name: LambdaTestc
+site_name: LambdaTest
 slug: playwright-android/
 ---
 <script type="application/ld+json"
