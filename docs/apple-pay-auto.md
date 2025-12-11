@@ -55,7 +55,7 @@ Currently, the Device Passcode feature in App Automation is enabled on the follo
 | Capability                  | Type       | Default | Required / Optional | Description                                                                                 |
 |----------------------------|------------|---------|---------------------|---------------------------------------------------------------------------------------------|
 | **applePay**                | Boolean    | true    | Mandatory           | Enables Apple Pay provisioning including Wallet, Sandbox card, AssistiveTouch, and Passcode on supported real iOS devices. |
-| **applePayCardType**        | Array      | None    | Optional           | Specify preferred payment networks. Currently, you can choose from four supported cards: ["American Express", "Visa", "MasterCard", "Discover Global Network"].|
+| **applePayCardType**        | Array      | None    | Optional           | Specify preferred payment networks. Currently, you can choose from four supported cards: ["amex", "visa", "master", "discover"].|
 
 ---
 
@@ -88,7 +88,7 @@ To enable Apple Pay automation, include the following capability in your automat
     // highlight-next-line
     "applePay": true,
     // highlight-next-line
-    "applePayCardType": ["Visa", "Mastercard"],
+    "applePayCardType": ["visa", "master"],
 }`}
     </CodeBlock>
   </TabItem>
