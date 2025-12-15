@@ -86,6 +86,7 @@ These are the list of the IP ranges that you need to whitelist with respect to t
 |**20.204.184.92/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 |**52.224.184.10/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 |**20.204.224.62/31**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
+|**172.199.71.240/28**|<p align="center"> ❌ </p>|<p align="center"> ❌ </p>|<p align="center"> ✅ </p>|
 
 
 ## Tunnel IP ranges
