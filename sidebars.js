@@ -3950,6 +3950,7 @@ module.exports = {
         "analytics-test-insights",
         "analytics-modules-test-intelligence-flaky-test-analytics",
         "analytics-build-insights",
+        "analytics-build-comparison",
         "analytics-smart-tags-test-intelligence",
         "analytics-test-failure-classification",
         "analytics-ai-root-cause-analysis",
