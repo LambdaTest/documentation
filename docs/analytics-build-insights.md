@@ -198,6 +198,10 @@ Each metric points you directly to tests that need attention (for example, focus
 
 Use the **Tests** tab when you are ready to debug at the individual test level.
 
+:::tip Build Comparison
+Want to compare two builds side by side? Use the **Compare** tab to identify new failures, fixed tests, and stability changes between any two builds. This is especially useful for release validation and regression detection. Learn more in the [Build Comparison](/support/docs/analytics-build-comparison/) documentation.
+:::
+
 <img loading="lazy" src={require('../assets/images/analytics/build-insights-page-2-tab-2-tests.png').default} alt="Build Insights - Tests Tab" className="doc_img"/>
 
 ### Search Functionality
