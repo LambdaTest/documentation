@@ -49,6 +49,8 @@ Build Insights is your build-level health dashboard. It shows how stable each bu
 
 With Build Insights, you can view all your unique builds in a centralized list, then drill down into individual build details to explore comprehensive metrics and test-level insights. The feature is designed to be intuitive and accessible, whether you're a QA engineer analyzing test results or a team lead tracking overall build health.
 
+Build Insights also supports **Unique Instances** view, which consolidates retry runs by grouping tests by name and environment (browser + OS + device + resolution), showing only the final run result for cleaner, more accurate reporting.
+
 ## Build Insights Flow
 
 Build Insights organizes your test data into two main views:
@@ -138,7 +140,7 @@ Use filters to narrow analysis to exactly the slice you care about (for example,
 
 Use the **Insights** tab to understand the overall health and performance of the selected build before you dive into individual tests.
 
-<img loading="lazy" src={require('../assets/images/analytics/build-insights-page-2-tab-1-insights.png').default} alt="Build Insights - Insights Tab" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/build-insights-page-2-tab-1-insights.webp').default} alt="Build Insights - Insights Tab" className="doc_img"/>
 
 ### Key Metrics Summary
 
@@ -198,11 +200,24 @@ Each metric points you directly to tests that need attention (for example, focus
 
 Use the **Tests** tab when you are ready to debug at the individual test level.
 
+### Show Unique Instances Toggle
+
+The **Show Unique Instances** toggle consolidates retry runs to give you a cleaner view of your test results.
+
+**How it works:**
+
+- When **ON**: Tests are grouped by **test name + environment** (browser + OS + device + resolution) as a single instance. Only the **final run** of each instance is considered in reporting, eliminating noise from intermediate retry attempts.
+- When **OFF**: All individual test executions are shown, including every retry attempt.
+
+:::note Processing Time
+Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished a build, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
+:::
+
 :::tip Build Comparison
 Want to compare two builds side by side? Use the **Compare** tab to identify new failures, fixed tests, and stability changes between any two builds. This is especially useful for release validation and regression detection. Learn more in the [Build Comparison](/support/docs/analytics-build-comparison/) documentation.
 :::
 
-<img loading="lazy" src={require('../assets/images/analytics/build-insights-page-2-tab-2-tests.png').default} alt="Build Insights - Tests Tab" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/analytics/build-insights-page-2-tab-2-tests.webp').default} alt="Build Insights - Tests Tab" className="doc_img"/>
 
 ### Search Functionality
 
@@ -291,8 +306,9 @@ This approach ensures that Build Insights can provide you with meaningful histor
 ## Best Practices
 
 1. **Check builds early and often**: Start your day on the Build Insights page to spot risky builds before they block releases.
-2. **Filter with intent**: Use filters to answer specific questions (for example, “Are failures only on Windows?”) instead of browsing everything at once.
+2. **Filter with intent**: Use filters to answer specific questions (for example, "Are failures only on Windows?") instead of browsing everything at once.
 3. **Trust history, not one run**: Use Result History, Duration History, and the test History column to judge stability over time, not just a single execution.
-4. **Share context, not just failures**: When sharing a build, also mention which metrics you looked at (for example, “pass rate dropped from 98% to 90% in the last 3 runs”).
+4. **Share context, not just failures**: When sharing a build, also mention which metrics you looked at (for example, "pass rate dropped from 98% to 90% in the last 3 runs").
 5. **Standardize build names**: Maintain common build names so histories stay meaningful and easy to compare across days and weeks.
+6. **Use Unique Instances for accurate reporting**: Toggle on "Show Unique Instances" to consolidate retry runs and see the true pass/fail state of each test-environment combination, especially when your pipeline uses automatic retries.
 
