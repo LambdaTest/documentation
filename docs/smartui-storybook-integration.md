@@ -101,10 +101,10 @@ npm install @lambdatest/smartui-storybook -g
 
 Add the following to your .storybook/main.js. You can read more about this here Storybook [Feature flags](https://storybook.js.org/docs/react/configure/overview#feature-flags)
 
-```js title=".storybook/main.js"
+```js
 module.exports = {
   features: {
-    // Required for Storybook > v9
+    // Required for Storybook < v9
     buildStoriesJson: true,
   },
 };

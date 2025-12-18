@@ -30,6 +30,13 @@ Testing Flutter apps requires embedding the **Flutter Integration Server** insid
 
 After preparing your Flutter app with this integration (refer to the setup documentation below), you can build, upload, and execute your tests on LambdaTest real devices using the Appium Flutter Integration Driver.
 
+
+<div className="ytframe"> 
+<div className="youtube" data-embed="_MPp7DDueUI" data-loading-attribute="eager">
+  <div className="play-button"></div>
+</div>
+</div>
+
 ---
 
 ## Native Flutter Integration Driver vs Appium Flutter Integration Driver 

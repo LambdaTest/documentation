@@ -937,6 +937,7 @@ module.exports = {
                 collapsed: true,
                 label: "November, 2025",
                 items: [
+                  "hyperexecute-release-notes-3-1-4",
                   "hyperexecute-release-notes-3-1-2",
                 ],
               },
@@ -1262,7 +1263,7 @@ module.exports = {
           type: "doc",
           id: "getting-started-with-kane-ai",
         },
-        items: ["why-we-need-kane-ai"],
+        items: ["why-we-need-kane-ai","use-cases-of-kane-ai"],
       },
       {
         type: "category",
@@ -1992,7 +1993,8 @@ module.exports = {
           "accessibility-passed-test-cases",
           "accessibility-capture-screenshot",
           "accessibility-fragment-identifier",
-          "accessibility-web-score"
+          "accessibility-web-score",
+          "accessibility-web-runtime-control"
         ],
       },
       {
@@ -2226,7 +2228,8 @@ module.exports = {
               "dark-mode-on-real-devices",
               "group-folder-redirect-on-real-device",
               "apple-pay-manual",
-              "upload-files-media"
+              "upload-files-media",
+              "multi-device-testing"
             ],
           },
         ],
@@ -3946,7 +3949,7 @@ module.exports = {
       items: [
         "analytics-test-insights",
         "analytics-modules-test-intelligence-flaky-test-analytics",
-        "analytics-build-comparison",
+        "analytics-build-insights",
         "analytics-smart-tags-test-intelligence",
         "analytics-test-failure-classification",
         "analytics-ai-root-cause-analysis",

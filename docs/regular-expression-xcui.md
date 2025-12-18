@@ -12,6 +12,8 @@ site_name: LambdaTest
 slug: regular-expression-xcui/
 ---
 
+import RealDeviceTag from '../src/component/realDevice';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -35,6 +37,7 @@ slug: regular-expression-xcui/
       })
     }}
 ></script>
+<RealDeviceTag value="Real Device" />
 Regular Expression or REGEX is widely used to make searching/find characters in a string.
 
 When you run a test on LambdaTest using a specific device, there may be scenarios, in which the particular device that you selected isn’t available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.

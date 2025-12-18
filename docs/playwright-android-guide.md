@@ -46,8 +46,11 @@ Playwright is a Node.js library that uses a single API to automate Chromium, Fir
 
 LambdaTest allows you to run Playwright tests across 100+ different android devices. This guide will cover the basics of getting started with Playwright testing on android devices on the LambdaTest platform.
 
+:::tip 
+- To run test using Playwright android, we currently support versions from `1.20.0` to `1.56.1`
+-  excluding `1.54.0` which is not supported.
+:::
 
-*You can run tests using Playwright versions **1.20.0** to **1.53.2**.*
 
 ## Prerequisites
 ***

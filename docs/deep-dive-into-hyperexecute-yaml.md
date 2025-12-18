@@ -457,15 +457,6 @@ runtime:
 
 ***
 
-<!-- ### `retryOnFailure`
-This allows you to configure automatic retries for failed test scenarios. When set to true (`retryOnFailure: true`), tests will be retried based on the [`maxRetries`](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) value specified. The default setting is **false**.
-
-This feature eliminates the need to rerun the entire job to verify if a test scenario is genuinely failing or encountering an intermittent issue. By enabling `retryOnFailure`, you can promptly retry tests upon failure, helping determine if the test consistently fails or passes in subsequent attempts."
-
-```yaml
-retryOnFailure: true
-``` -->
-
 ### `retryOnFailure`
 The `retryOnFailure` enables automatic retries for failed test scenarios only when the [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) itself fails. When set to `true`, the system will retry failed commands based on the [`maxRetries`](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries) value defined. The default setting is `false`.
 
@@ -479,6 +470,14 @@ retryOnFailure: true
 
 #### ✅ Use Case:
 This feature helps avoid re-running the entire job to determine if a test failure is due to a genuine issue or a transient problem (e.g., flaky tests, network hiccups). By enabling `retryOnFailure`, only the failing command is retried, allowing for quicker feedback and more efficient test execution.
+
+:::tip
+If you are using Maven, ensure that the `testFailureIgnore` flag in your `pom.xml` is set to `false`. When `testFailureIgnore` is set to `true`, Maven treats test failures as ignored, causing HyperExecute’s retry mechanism to not trigger, even if `retryOnFailure` is enabled.
+
+```java
+<testFailureIgnore>false</testFailureIgnore>
+```
+:::
 
 ***
 
@@ -780,9 +779,10 @@ skipArtifactStageIfNoTest: true
 
 ### `globalTimeout` 
 
-The `globalTimeout` value determines the maximum duration (in minutes) of a Job . It can be set between 1 and 150 minutes, and has a default value of 90 minutes. 
+The `globalTimeout` value determines the maximum duration (in minutes) of a Task(VM) . It can be set between 1 and 150 minutes, and has a default value of 90 minutes. 
 
-For example, if you set the `globalTimeout` to 120 minutes, a Job  that exceed this duration will be automatically terminated. If you’re expecting that running all your test-cases despite parallelism is going to take more than 90 mins, set it to an appropriate value, for example, 120. If you have tests that run for longer than the maximum limit of 150 minutes, you need to get in touch with our support team.
+For example, if you set the `globalTimeout` to 120 minutes, a Task(VM) that exceed this duration will be automatically terminated. If you’re expecting that running all your test-cases despite parallelism is going to take more than 90 mins, set it to an appropriate value, for example, 120. If you have tests that run for longer than the maximum limit of 150 minutes, you need to get in touch with our support team.
+
 ```yaml
 globalTimeout: 90   
 ```
