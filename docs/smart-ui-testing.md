@@ -53,7 +53,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ></script>
 SmartUI Testing is a technique used by designers and front-end testers to ensure the visual consistency of web applications by employing a sort of testing called **"Visual Regression"**.
 
-In Visual Regression testing, we compare screenshots and identify visual variations in the pixels. It is integrated with Lambdatest's HyperExecute, allowing you to execute **Smart UI** Tests on the platform.
+In Visual Regression testing, we compare screenshots and identify visual variations in the pixels. It is integrated with LambdaTest's HyperExecute, allowing you to execute **SmartUI** Tests on the platform.
 
 ## Features of SmartUI Testing
 HyperExecute's SmartUITesting offers the following features:

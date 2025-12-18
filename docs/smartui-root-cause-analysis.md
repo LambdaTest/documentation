@@ -1,56 +1,58 @@
 ---
 id: smartui-root-cause-analysis
-title: Root Cause Analysis in SmartUI
-hide_title: false
-sidebar_label: Smart RCA
-description: Learn how to use SmartUI's RCA to debug visual regressions by inspecting the exact DOM and CSS changes behind them.
+title: SmartUI Root Cause Analysis (RCA)
+sidebar_label: Smart RCA (Root Cause Analysis)
+description: Identify and resolve visual regression issues quickly with SmartUI Root Cause Analysis (RCA). Understand the underlying causes of visual mismatches.
 keywords:
-    - smartui
-    - root cause analysis
-    - rca
-    - visual testing
-    - dom diff
-    - css changes
-    - debug visual bugs
-    - visual regression
+  - SmartUI RCA
+  - Root Cause Analysis
+  - Visual Regression Debugging
+  - LambdaTest SmartUI
+  - Visual Testing Troubleshooting
 url: https://www.lambdatest.com/support/docs/smartui-root-cause-analysis/
 site_name: LambdaTest
 slug: smartui-root-cause-analysis/
-
 ---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
-       "@type": "BreadcrumbList",
-       "itemListElement": [{
-         "@type": "ListItem",
-         "position": 1,
-         "name": "LambdaTest",
-         "item": "https://www.lambdatest.com"
-       },{
-         "@type": "ListItem",
-         "position": 2,
-         "name": "Support",
-         "item": "https://www.lambdatest.com/support/docs/"
-       },{
-         "@type": "ListItem",
-         "position": 3,
-         "name": "Smart Root Cause Analysis",
-         "item": "https://www.lambdatest.com/support/docs/smartui-root-cause-analysis/"
-       }]
-     })
-   }}
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lambdatest.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://www.lambdatest.com/support/docs/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SmartUI Root Cause Analysis",
+          "item": "https://www.lambdatest.com/support/docs/smartui-root-cause-analysis/"
+        }]
+      })
+    }}
 ></script>
 
-## Overview
+# Smart Root Cause Analysis (RCA)
 
-SmartUI’s **Root Cause Analysis (RCA)** provides a deep inspection into *why* visual differences occur—not just where. It reveals the exact DOM and CSS changes between your baseline and captured screenshots in a clear, visual, and interactive format. This ensures you can debug visually failing tests with speed and confidence.
+<NewTag value="Beta" color="#000" bgColor="#ffec02" />
+
+Smart Root Cause Analysis (RCA) in SmartUI helps you instantly identify the underlying reasons for visual mismatches. By analyzing the DOM differences between the baseline and the comparison screenshot, RCA pinpoints exactly what changed—whether it's a style update, content change, or layout shift.
+
+## Why use Smart RCA?
+- **Speed**: Instantly find why a pixel-level mismatch occurred.
+- **Precision**: Distinguish between actual bugs and intended changes.
+- **Actionable Insights**: Get direct info on CSS property changes or DOM structure modifications. visually failing tests with speed and confidence.
 
 ## What Problems Does Smart RCA Solve?
 

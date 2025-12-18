@@ -69,7 +69,7 @@ This document will show you how to integrate Netlify Pipeline with SmartUI.
     - Enter your **Smart-UI Project Name**
 
 :::info
-For the Smart-UI Project Name, you can enter any project name. Even if you have not set up any projects in the Smart UI Dashboard.
+For the Smart-UI Project Name, you can enter any project name. Even if you have not set up any projects in the SmartUI Dashboard.
 
 You can also enter your already-existing smart-UI project name.
 :::

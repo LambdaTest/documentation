@@ -79,7 +79,7 @@ To create a SmartUI Project, follow these steps:
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots -
 
-1. Clone the sample Github repository:
+1. Clone the sample GitHub repository:
 
 ```bash
 git clone https://github.com/LambdaTest/smartui-k6-sample
