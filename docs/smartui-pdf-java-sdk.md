@@ -179,7 +179,7 @@ public class SmartuiPdfCloudTest {
         String projectToken = System.getenv(PROJECT_TOKEN");
 
         // Download PDF from cloud session
-        String base64Content = (String) ((JavascriptExecutor) driver)
+        String base64Content = (String) ((JavaScriptExecutor) driver)
             .executeAsyncScript("lambda-file-content=LambdaTest.pdf");
 
         // Convert base64 to PDF file

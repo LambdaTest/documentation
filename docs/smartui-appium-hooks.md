@@ -208,7 +208,7 @@ let capabilities = {
   //highlight-end
 };
 
-// Connecting to the Lambdatest appium Cloud Grid with SmartUI
+// Connecting to the LambdaTest appium Cloud Grid with SmartUI
 let gridUrl =
   "https://" +
   "<Your Username>" +
@@ -345,7 +345,7 @@ ignoreBoxes.put("xpath", new String[]{
 });
 
 configIgnore.put("ignoreBoxes", ignoreBoxes);
-((JavascriptExecutor) driver).executeScript("smartui.takeScreenshot", configIgnore);
+((JavaScriptExecutor) driver).executeScript("smartui.takeScreenshot", configIgnore);
 
 ```
 </TabItem>
@@ -433,7 +433,7 @@ driver.Execute("smartui.takeScreenshot=<Your Screenshot Name>");
 <TabItem value='java-1' label='Java' default>
 
 ```java
-((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
+((JavaScriptExecutor)driver).executeScript("smartui.takeScreenshot=<Your Screenshot Name>");
 ```
 
 </TabItem>
@@ -497,7 +497,7 @@ Map<String, Object> config = new HashMap<>();
 config.put("screenshotName", "<Your Screenshot Name>");
 config.put("fullPage", true);
 config.put("pageCount", 15); // Enter the number of pages for the Full Page screenshot (Minimum 1, Maximum 20)
-((JavascriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
+((JavaScriptExecutor)driver).executeScript("smartui.takeScreenshot", config);
 ```
 
 </TabItem>

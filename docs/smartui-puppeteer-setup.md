@@ -1,8 +1,8 @@
 ---
 id: puppeteer-visual-regression
-title: Getting started with Smart UI using Puppeteer
+title: Getting started with SmartUI using Puppeteer
 sidebar_label: Puppeteer
-description: Learn Puppeteer Visual Regression Set up Smart UI, run tests on LambdaTest Cloud across 40+ browsers. Step-by-step guide for seamless testing.
+description: Learn Puppeteer Visual Regression Set up SmartUI, run tests on LambdaTest Cloud across 40+ browsers. Step-by-step guide for seamless testing.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -79,7 +79,7 @@ To create a SmartUI Project, follow these steps:
 
 Once you have created a SmartUI Project, you can generate screenshots by running automation scripts. Follow the below steps to successfully generate screenshots -
 
-1. Please clone the following sample Github repo (`https://github.com/LambdaTest/puppeteer-sample`).
+1. Please clone the following sample GitHub repo (`https://github.com/LambdaTest/puppeteer-sample`).
 
 ```bash
 git clone https://github.com/LambdaTest/puppeteer-sample.git

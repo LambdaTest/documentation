@@ -72,7 +72,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 :::tip Sample repo
 Download or Clone the code sample for the Playwright JavaScript from the LambdaTest GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/LambdaTest/HyperExecute-Playwright-Vanilla-Javascript/tree/smart-ui" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/LambdaTest/HyperExecute-Playwright-Vanilla-JavaScript/tree/smart-ui" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 If you are using your own project, make sure you update the **CDP endpoint** in your tests file.

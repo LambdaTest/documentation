@@ -54,7 +54,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 This is the guide to setup the **version 2** of the SmartUI upload API.
 :::
 
-### Prerequisites for running Smart UI
+### Prerequisites for running SmartUI
 
 - Basic understanding of HTTP APIs is required.
 - Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.

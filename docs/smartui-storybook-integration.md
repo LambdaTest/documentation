@@ -79,9 +79,9 @@ The first step is to create a project with the application in which we will comb
 
 ---
 
-:::tip Github Sample
+:::tip GitHub Sample
 
-Please try our **StoryBook SmartUI** Github sample repository for trying an example.
+Please try our **StoryBook SmartUI** GitHub sample repository for trying an example.
 
 ```bash
 git clone https://github.com/LambdaTest/smartui-storybook-sample.git
@@ -246,6 +246,29 @@ $env:PROJECT_TOKEN="123456#1234abcd-****-****-****-************"
 </Tabs>
 
 <img loading="lazy" src={require('../assets/images/smart-visual-testing/smartui-project-token.png').default} alt="cmd" width="768" height="373" className='doc_img'/>
+
+### **Step 3.1:** Configure Proxy (Optional)
+
+If you are behind a proxy, you can configure the `SMARTUI_API_PROXY` environment variable.
+
+<Tabs className='docs__val' groupId='language'>
+<TabItem value='MacOS/Linux' label='MacOS/Linux' default>
+
+```bash
+export SMARTUI_API_PROXY=http://172.17.0.1:3128
+```
+
+</TabItem>
+<TabItem value='Windows' label='Windows - CMD'>
+
+```bash
+set SMARTUI_API_PROXY=http://172.17.0.1:3128
+```
+
+</TabItem>
+</Tabs>
+
+> **Note**: Replace the IP address and port with the appropriate values for your environment.
 
 ### **Step 4:** Create and Configure SmartUI Config
 
