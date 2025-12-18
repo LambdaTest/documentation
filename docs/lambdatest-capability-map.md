@@ -103,7 +103,7 @@ Below are the capabilities of BrowserStack and LambdaTest to help teams map Brow
 
 <Tabs className="docs__val">
 
-<TabItem value="ios" label="BrowserStack Capablities" default>
+<TabItem value="ios" label="BrowserStack Capabilities" default>
 
 ```js
 MutableCapabilities capabilities = new MutableCapabilities();
@@ -151,7 +151,7 @@ Below are the capabilities of Sauce Labs and LambdaTest to help teams map Sauce 
 
 <Tabs className="docs__val">
 
-<TabItem value="ios" label="Sauce Labs Capablities" default>
+<TabItem value="ios" label="Sauce Labs Capabilities" default>
 
 ```js
 SafariOptions browserOptions = new SafariOptions();

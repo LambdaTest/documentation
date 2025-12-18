@@ -171,7 +171,7 @@ Add your capabilities using the [LambdaTest Capabilities Generator](https://www.
 
 <Tabs className="docs__val">
 
-<TabItem value="android" label="Selenium 4 LambdaTest Capablities" default>
+<TabItem value="android" label="Selenium 4 LambdaTest Capabilities" default>
 
 ```js
 SafariOptions browserOptions = new SafariOptions();
@@ -185,7 +185,7 @@ browserOptions.setCapability("LT:Options", ltOptions);
 ```
 </TabItem>
 
-<TabItem value="ios" label="Selenium 3 LambdaTest Capablities" default>
+<TabItem value="ios" label="Selenium 3 LambdaTest Capabilities" default>
 
 ```js
 DesiredCapabilities capabilities = new DesiredCapabilities();
