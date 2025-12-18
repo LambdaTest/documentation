@@ -1,8 +1,8 @@
 ---
 id: smartui-selenium-js-sdk
 title: Integrate SmartUI SDK with Selenium-JavaScript
-sidebar_label: Javascript
-description: In this documentation, learn how integrate your Selenium Javascript automated tests with LambdaTest's SmartUI.
+sidebar_label: JavaScript
+description: In this documentation, learn how integrate your Selenium JavaScript automated tests with LambdaTest's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide
@@ -190,7 +190,7 @@ const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 
   try {
     await driver.get("https://www.lambdatest.com");
-    await smartuiSnapshot(driver, "Lambdatest");
+    await smartuiSnapshot(driver, "LambdaTest");
     await driver.get("https://www.pinterest.com/pin/112801165652823604/");
     await smartuiSnapshot(driver, "NYC");
   } finally {
@@ -236,7 +236,7 @@ When conducting visual tests, you may encounter scenarios where certain elements
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='IgnoreID' label='Ignore ID' default>
 
-```js title="This is a sample for your configuration for Javascript to ignore by" ID"
+```js title="This is a sample for your configuration for JavaScript to ignore by" ID"
 let options = {
             ignoreDOM: {
                 id: ["ID-1", "ID-2"],
@@ -249,7 +249,7 @@ let options = {
 </TabItem>
 <TabItem value='IgoreClass' label='Ignore Class'>
 
-```js title="This is a sample for your configuration for Javascript to ignore by" Class"
+```js title="This is a sample for your configuration for JavaScript to ignore by" Class"
 let options = {
             ignoreDOM: {
                 class: ["Class-1", "Class-2"],
@@ -262,7 +262,7 @@ let options = {
 </TabItem>
 <TabItem value='IgnoreXPath' label='Ignore XPath'>
 
-```js title="This is a sample for your configuration for Javascript to ignore by" XPath"
+```js title="This is a sample for your configuration for JavaScript to ignore by" XPath"
 let options = {
             ignoreDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
@@ -276,7 +276,7 @@ let options = {
 
 <TabItem value='IgnoreSelector' label='Ignore CSS Selector'>
 
-```js title="This is a sample for your configuration for Javascript to ignore by CSS" Selector"
+```js title="This is a sample for your configuration for JavaScript to ignore by CSS" Selector"
 let options = {
             ignoreDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -292,7 +292,7 @@ let options = {
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='SelectID' label='Select ID' default>
 
-```js title="This is a sample for your configuration for Javascript to select by" ID"
+```js title="This is a sample for your configuration for JavaScript to select by" ID"
 let options = {
             selectDOM: {
                 id: ["ID-1", "ID-2"],
@@ -305,7 +305,7 @@ let options = {
 </TabItem>
 <TabItem value='SelectClass' label='Select Class'>
 
-```js title="This is a sample for your configuration for Javascript to select by" Class"
+```js title="This is a sample for your configuration for JavaScript to select by" Class"
 let options = {
             selectDOM: {
                 class: ["Class-1", "Class-2"],
@@ -318,7 +318,7 @@ let options = {
 </TabItem>
 <TabItem value='SelectXPath' label='Select XPath'>
 
-```js title="This is a sample for your configuration for Javascript to select by" XPath"
+```js title="This is a sample for your configuration for JavaScript to select by" XPath"
 let options = {
             selectDOM: {
                 xpath: ["Xpath-1", "Xpath-2"],
@@ -332,7 +332,7 @@ let options = {
 
 <TabItem value='SelectSelector' label='Select CSS Selector'>
 
-```js title="This is a sample for your webhook configuration for Javascript to select by CSS" Selector"
+```js title="This is a sample for your webhook configuration for JavaScript to select by CSS" Selector"
 let options = {
             selectDOM: {
                 cssSelector: ["CSS-Selector-1", "CSS-Selector-2"],
@@ -352,7 +352,7 @@ You can capture screenshots of targeted elements by leveraging various locator m
 <Tabs className='docs__val' groupId='framework'>
 <TabItem value='ElementID' label='Capture Element by ID' default>
 
-```js title="This is a sample for your configuration for Javascript to capture an element by" ID."
+```js title="This is a sample for your configuration for JavaScript to capture an element by" ID."
 let options = {
       element: {
           id: 'Required ID',
@@ -365,7 +365,7 @@ let options = {
 </TabItem>
 <TabItem value='ElementClass' label='Capture Element by Class'>
 
-```js title="This is a sample for your configuration for Javascript to capture an element by" Class"
+```js title="This is a sample for your configuration for JavaScript to capture an element by" Class"
 let options = {
       element: {
           class: 'Required Class',
@@ -378,7 +378,7 @@ let options = {
 </TabItem>
 <TabItem value='ElementXPath' label='Capture Element by XPath'>
 
-```js title="This is a sample for your configuration for Javascript to capture an element by" XPath"
+```js title="This is a sample for your configuration for JavaScript to capture an element by" XPath"
 let options = {
       element: {
           xpath: 'Required Xpath',
@@ -392,7 +392,7 @@ let options = {
 
 <TabItem value='ElementSelector' label='Capture Element by Selector'>
 
-```js title="This is a sample for your webhook configuration for Javascript to capture an element by CSS" Selector"
+```js title="This is a sample for your webhook configuration for JavaScript to capture an element by CSS" Selector"
 let options = {
       element: {
           cssSelector: 'Required CSS Selector',

@@ -1,30 +1,57 @@
 ---
 id: smartui-multiselect-bulkops
 title: SmartUI Multiselect & Bulk Operations
-description: Learn how to quickly approve, reject, or move multiple SmartUI screenshots to baseline using the multiselect workflow on the Builds dashboard.
-slug: smartui-multiselect-bulkops/
+sidebar_label: Multiselect & Bulk Operations
+description: Streamline your visual testing workflow with SmartUI Multiselect & Bulk Operations. Approve or reject multiple screenshots simultaneously.
 keywords:
-  - SmartUI multiselect
-  - SmartUI bulk approval
-  - SmartUI dashboard actions
-  - SmartUI baseline move
-  - Visual regression maintenance
+  - SmartUI Multiselect
+  - Bulk Operations
+  - Visual Testing Workflow
+  - Batch Approval
+  - LambdaTest SmartUI
+url: https://www.lambdatest.com/support/docs/smartui-multiselect-bulkops/
+site_name: LambdaTest
+slug: smartui-multiselect-bulkops/
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
-The SmartUI dashboard now supports **multiselect** across every build tab (New, Changes Found, Under Screening, Approved, Rejected, Baseline). You can review screenshots faster by selecting:
+<script type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({
+       "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lambdatest.com"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://www.lambdatest.com/support/docs/"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SmartUI Multiselect & Bulk Operations",
+          "item": "https://www.lambdatest.com/support/docs/smartui-multiselect-bulkops/"
+        }]
+      })
+    }}
+></script>
 
-- A single screenshot for a quick action.
-- Multiple targeted screenshots across the visible tab.
-- **Select All** to apply the same action to every screenshot currently filtered tab.
+# Multiselect & Bulk Operations
+
+Managing large visual regression builds can be time-consuming. **Multiselect & Bulk Operations** allow you to perform actions on multiple screenshots at once, significantly speeding up the review process.
+
+## Key Capabilities
+- **Batch Approval**: Select multiple "mismatch" screenshots and approve them as new baselines in one click.
+- **Batch Rejection**: Quickly reject multiple incorrect screenshots.
+- **Bulk Status Update**: Change the status of multiple tests simultaneously.
 
 This guide explains the end-to-end workflow, supported actions, and best practices to avoid accidental approvals or baseline edits.
-
-> Need help diagnosing CLI, dashboard, or baseline issues? Jump to the [SmartUI Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide/).
 
 ---
 

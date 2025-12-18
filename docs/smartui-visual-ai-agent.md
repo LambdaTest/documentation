@@ -1,26 +1,23 @@
 ---
 id: smartui-visual-ai
-title: Visual AI – AI-Powered Visual Change Detection Like Humans Do
-hide_title: false
+title: Visual AI Agent for SmartUI
 sidebar_label: Visual AI Agent
-description: Learn how Visual AI Agent uses AI to detect and report only the visual changes that matter to users, reducing false positives and accelerating reviews.
+description: Revolutionize your visual testing with SmartUI's Visual AI Agent. Detect changes that matter and ignore false positives with intelligent analysis.
 keywords:
-  - smartui
-  - visual ai
-  - humanize diff
-  - visual testing
-  - ai in testing
-url: https://www.lambdatest.com/support/docs/smartui-visual-ai-agent
+  - Visual AI Agent
+  - SmartUI AI
+  - Intelligent Visual Testing
+  - LambdaTest SmartUI
+  - Visual Regression AI
+url: https://www.lambdatest.com/support/docs/smartui-visual-ai/
 site_name: LambdaTest
 slug: smartui-visual-ai/
-
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import NewTag from '../src/component/newTag';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -39,14 +36,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Humanize Diff: AI-Powered Visual Analysis",
-          "item": "https://www.lambdatest.com/support/docs/smartui-humanize-diff"
+          "name": "SmartUI Visual AI Agent",
+          "item": "https://www.lambdatest.com/support/docs/smartui-visual-ai/"
         }]
       })
     }}
 ></script>
 
-LambdaTest SmartUI introduces a **Visual AI** agent that revolutionizes visual regression testing by simulating human perception. Instead of just highlighting every pixel difference, this AI-powered feature identifies and summarizes only the meaningful, human-relevant changes between your baseline and captured screenshots. This allows you to instantly focus on significant UI shifts and understand the context of the changes without getting lost in minor, irrelevant noise.
+# Visual AI Agent
+
+<NewTag value="Beta" color="#000" bgColor="#ffec02" />
+
+The **Visual AI Agent** is an intelligent layer on top of SmartUI that reduces noise in visual testing. Unlike traditional pixel-by-pixel comparison, the AI Agent understands the context of visual elements, allowing it to distinguish between critical visual defects and insignificant rendering differences between your baseline and captured screenshots. This allows you to instantly focus on significant UI shifts and understand the context of the changes without getting lost in minor, irrelevant noise.
 
 ---
 

@@ -57,9 +57,9 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 This is the guide to understand our Git Branching with SmartUI projects which can detect the commit history and execute the appropriate actions for your visual regression testing.
 :::
 
-### Prerequisites for running Git with Smart UI
+### Prerequisites for running Git with SmartUI
 
-- You have an account with [Lambdatest](https://accounts.lambdatest.com).
+- You have an account with [LambdaTest](https://accounts.lambdatest.com).
 - You must have an active [subscription](https://www.lambdatest.com/pricing) plan with valid screenshots limit.
 - You must have created an Project on the SmartUI web app.
 
@@ -233,7 +233,7 @@ For the first build generated for the **Baseline branch build** in the SmartUI P
 
 ### Detect changes for Git commit added to **Baseline Branch**
 
-In this workflow, if I make changes in the set Baseline branch in the Smart UI project that is master and make an commit to the Git then,
+In this workflow, if I make changes in the set Baseline branch in the SmartUI project that is master and make an commit to the Git then,
 
 Execute `SmartUI Storybook CLI` commands to execute the `.stories` tests will compare the results with the latest **APPROVED** build run for **Baseline Branch** build in the SmartUI project.
 

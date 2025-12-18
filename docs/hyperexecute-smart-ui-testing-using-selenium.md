@@ -248,7 +248,7 @@ Here you can see the difference.
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="IgnoreID" label="Ignore ID" default>
 
-```js title="This is a sample for your webhook configuration for Javascript to ignore by ID"
+```js title="This is a sample for your webhook configuration for JavaScript to ignore by ID"
 let config = {
   screenshotName: "Ignore-ID",
   fullPage: false, //You can make this property as true in case of Chrome browser
@@ -262,7 +262,7 @@ await driver.executeScript("smartui.takeScreenshot", config);
 </TabItem>
 <TabItem value="IgoreClass" label="Ignore Class">
 
-```js title="This is a sample for your webhook configuration for Javascript to ignore by Class"
+```js title="This is a sample for your webhook configuration for JavaScript to ignore by Class"
 let config = {
   screenshotName: "Ignore-Class",
   fullPage: false, //You can make this property as true in case of Chrome browser
@@ -276,7 +276,7 @@ await driver.executeScript("smartui.takeScreenshot", config);
 </TabItem>
 <TabItem value="IgnoreXPath" label="Ignore XPath">
 
-```js title="This is a sample for your webhook configuration for Javascript to ignore by XPath"
+```js title="This is a sample for your webhook configuration for JavaScript to ignore by XPath"
 let config = {
   screenshotName: "Ignore-XPath",
   fullPage: false, //You can make this property as true in case of Chrome browser
@@ -291,7 +291,7 @@ await driver.executeScript("smartui.takeScreenshot", config);
 
 <TabItem value="IgnoreSelector" label="Ignore CSS Selector">
 
-```js title="This is a sample for your webhook configuration for Javascript to ignore by CSS Selector"
+```js title="This is a sample for your webhook configuration for JavaScript to ignore by CSS Selector"
 let config = {
   screenshotName: "Ignore-cssSelector",
   fullPage: false, //You can make this property as true in case of Chrome browser
@@ -308,7 +308,7 @@ await driver.executeScript("smartui.takeScreenshot", config);
 <Tabs className="docs__val" groupId="framework">
 <TabItem value="SelectID" label="Select ID" default>
 
-```js title="This is a sample for your webhook configuration for Javascript to select by ID."
+```js title="This is a sample for your webhook configuration for JavaScript to select by ID."
 let config = {
   screenshotName: "Select-ID",
   fullPage: false, //You can make this property as true in case of Chrome browser
@@ -322,7 +322,7 @@ await driver.executeScript("smartui.takeScreenshot", config);
 </TabItem>
 <TabItem value="SelectClass" label="Select Class">
 
-```js title="This is a sample for your webhook configuration for Javascript to select by Class"
+```js title="This is a sample for your webhook configuration for JavaScript to select by Class"
 let config = {
   screenshotName: "Select-Class",
   fullPage: false, //You can make this property as true in case of Chrome browser
@@ -336,7 +336,7 @@ await driver.executeScript("smartui.takeScreenshot", config);
 </TabItem>
 <TabItem value="SelectXPath" label="Select XPath">
 
-```js title="This is a sample for your webhook configuration for Javascript to select by XPath"
+```js title="This is a sample for your webhook configuration for JavaScript to select by XPath"
 let config = {
   screenshotName: "Select-XPath",
   fullPage: false, //You can make this property as true in case of Chrome browser
@@ -351,7 +351,7 @@ await driver.executeScript("smartui.takeScreenshot", config);
 
 <TabItem value="SelectSelector" label="Select CSS Selector">
 
-```js title="This is a sample for your webhook configuration for Javascript to select by CSS Selector"
+```js title="This is a sample for your webhook configuration for JavaScript to select by CSS Selector"
 let config = {
   screenshotName: "Select-cssSelector",
   fullPage: false, //You can make this property as true in case of Chrome browser

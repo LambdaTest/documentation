@@ -53,7 +53,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 This functionality is exclusive to our enterprise plan subscribers on SmartUI. For additional details or inquiries, please [contact us](https://www.lambdatest.com/demo).
 :::
 
-## Prerequisites for Using Smart UI
+## Prerequisites for Using SmartUI
 
 - Familiarity with HTTP APIs is essential.
 - Visit the [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.

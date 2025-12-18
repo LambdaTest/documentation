@@ -165,7 +165,7 @@ const { smartuiSnapshot } = require('@lambdatest/selenium-driver');
 public void handleLazyLoading(WebDriver driver) throws InterruptedException {
     driver.get("https://example.com");
 
-    JavascriptExecutor js = (JavascriptExecutor) driver;
+    JavaScriptExecutor js = (JavaScriptExecutor) driver;
 
     // Get total page height
     Long totalHeight = (Long) js.executeScript("return document.body.scrollHeight");
