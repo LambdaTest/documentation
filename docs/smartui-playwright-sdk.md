@@ -195,7 +195,7 @@ const smartuiSnapshot = require("@lambdatest/playwright-driver");
   await page.goto("https://www.lambdatest.com");
 
   // Use smartuiSnapshot to take a visual snapshot locally
-  await smartuiSnapshot.smartuiSnapshot(page, "Lambdatest");
+  await smartuiSnapshot.smartuiSnapshot(page, "LambdaTest");
 
   // Close the browser
   await browser.close();

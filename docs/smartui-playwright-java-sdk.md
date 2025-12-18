@@ -412,18 +412,18 @@ public void basicTest() throws Exception {
 }
 
 public void quickScrollToBottom() throws InterruptedException {
-    long lastHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
+    long lastHeight = ((Number) ((JavaScriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
     while (true) {
-        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+        ((JavaScriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
         Thread.sleep(2000);
 
-        long newHeight = ((Number) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
+        long newHeight = ((Number) ((JavaScriptExecutor) driver).executeScript("return document.body.scrollHeight")).longValue();
         if (newHeight == lastHeight) {
             break;
         }
         lastHeight = newHeight;
     }
-    ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+    ((JavaScriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
     Thread.sleep(1000); // wait for 1 second
 }
 

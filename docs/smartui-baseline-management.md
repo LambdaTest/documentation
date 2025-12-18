@@ -2,26 +2,21 @@
 id: smartui-baseline-management
 title: Baseline Management in SmartUI
 sidebar_label: Baseline Management
-description: Learn how to effectively manage baselines in SmartUI for visual regression testing, including dynamic baseline specification and baseline marking.
+description: Learn how to manage baselines effectively in LambdaTest SmartUI. Understand baseline creation, updating, and versioning for reliable visual regression testing.
 keywords:
+  - SmartUI Baseline
+  - Visual Regression Baseline
   - Baseline Management
-  - Dynamic Baseline
-  - Baseline Marking
-  - SmartUI Git
-  - Visual Regression Testing
-  - Git Integration
+  - LambdaTest SmartUI
+  - Visual Testing
+  - Automatic Baseline
 url: https://www.lambdatest.com/support/docs/smartui-baseline-management/
 site_name: LambdaTest
 slug: smartui-baseline-management/
-
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-
----
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -47,11 +42,12 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
-:::info
-This guide explains how to effectively manage baselines in SmartUI for your visual regression testing workflow.
-:::
+# Baseline Management
 
-## Understanding Baselines
+In SmartUI, a **Baseline** is the reference image used for comparison against future test runs. Effective baseline management is crucial for accurate visual regression testing. This guide explains how baselines are created, updated, and maintained.
+
+## What is a Baseline?
+A baseline represents the "expected" state of your application's UI. When you run a SmartUI test, the new screenshots are compared against this baseline to detect unauthorized visual changes.
 
 A baseline in SmartUI represents the reference point for visual regression testing. It's the set of screenshots against which all future builds are compared.
 
