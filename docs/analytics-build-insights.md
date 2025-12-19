@@ -136,6 +136,24 @@ Use filters to narrow analysis to exactly the slice you care about (for example,
 - Click the share icon next to the filters to share the current view with your team
 - Generate shareable links to the build details page (note: filter settings are not preserved in shared links)
 
+### Unique Test Instances
+
+The **Show Unique Instances** toggle consolidates retry runs to give you a cleaner, more accurate view of your test results. This feature applies to both the **Insights** and **Tests** tabs.
+
+**How it works:**
+
+- When **ON**: Within the current build, tests are grouped by **test name + environment** (browser + OS + device + resolution) as a single instance. Only the **final run** of each instance is considered in reporting, eliminating noise from intermediate retry attempts. This affects:
+  - **Insights tab**: Key metrics, charts, and Smart Tags reflect deduplicated counts based on final run results
+  - **Tests tab**: The test list shows only the final execution per unique test-environment combination
+
+- When **OFF**: All individual test executions are shown, including every retry attempt.
+
+The grouping is scoped to the individual build ID, meaning each build's metrics reflect only the deduplicated results within that specific build run.
+
+:::note Processing Time
+Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished a build, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
+:::
+
 ## Tab 1: Insights
 
 Use the **Insights** tab to understand the overall health and performance of the selected build before you dive into individual tests.
@@ -199,19 +217,6 @@ Each metric points you directly to tests that need attention (for example, focus
 ## Tab 2: Tests
 
 Use the **Tests** tab when you are ready to debug at the individual test level.
-
-### Show Unique Instances Toggle
-
-The **Show Unique Instances** toggle consolidates retry runs to give you a cleaner view of your test results.
-
-**How it works:**
-
-- When **ON**: Tests are grouped by **test name + environment** (browser + OS + device + resolution) as a single instance. Only the **final run** of each instance is considered in reporting, eliminating noise from intermediate retry attempts.
-- When **OFF**: All individual test executions are shown, including every retry attempt.
-
-:::note Processing Time
-Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished a build, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
-:::
 
 :::tip Build Comparison
 Want to compare two builds side by side? Use the **Compare** tab to identify new failures, fixed tests, and stability changes between any two builds. This is especially useful for release validation and regression detection. Learn more in the [Build Comparison](/support/docs/analytics-build-comparison/) documentation.

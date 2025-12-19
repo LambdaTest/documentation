@@ -68,6 +68,24 @@ To get started with Test Insights, follow these steps:
 - **Actionable Analytics**: Gain actionable insights from your test data to make informed decisions and improve the overall quality of your software.
 - **Historical Data Comparison**: Compare your current test runs with historical data to identify regressions and improvements over time.
 
+## Unique Test Instances
+
+The **Show Unique Instances** toggle consolidates retry runs to give you a cleaner, more accurate view of your test results.
+
+**How it works:**
+
+- When **ON**: Within a single build run, tests are grouped by **test name + environment** (browser + OS + device + resolution) as a single instance. Only the **final run** of each instance is considered in reporting, eliminating noise from intermediate retry attempts.
+
+- When **OFF**: All individual test executions are shown, including every retry attempt.
+
+The grouping is scoped to individual build IDs, meaning each build's metrics reflect only the deduplicated results within that specific build run.
+
+This feature is especially useful when your test pipeline uses automatic retries, as it shows the true pass/fail state of each test-environment combination rather than inflating counts with intermediate failures.
+
+:::note Processing Time
+Retry run consolidation requires a small amount of processing time after test execution completes. If you've just finished running tests, wait a moment before toggling on Unique Instances to ensure all data is consolidated.
+:::
+
 ## Use Cases for Test Insights
 
 - **Test Optimization**: Use Test Insights to identify slow-running tests and optimize them for better performance.
