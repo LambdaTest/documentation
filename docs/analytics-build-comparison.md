@@ -75,12 +75,12 @@ The dialog provides options to find builds:
 | **Search** | Search bar to find builds by name |
 
 Each build in the list displays:
-- **Build name** - Full build identifier
+- **Build Name** - Full build identifier
 - **Duration** - Total execution time (e.g., 52m 53s)
-- **Test count** - Number of tests executed
-- **Timestamp** - Execution date and time
-- **Tag** - Associated project tag (e.g., atxSmoke)
-- **Results summary** - Quick pass/fail/other counts (🟢 passed, 🔴 failed, ⚫ other)
+- **Test Count** - Number of tests executed
+- **Execution Timestamp** - Execution date and time
+- **User** - Associated username who executed the build (e.g., atxSmoke)
+- **Results Summary** - Quick pass/fail/other counts (🟢 passed, 🔴 failed, ⚫ other)
 
 Select a build and click **Compare Builds** to run the comparison. The selected build becomes the **Compare** build, while the current build you navigated from becomes the **Base** build.
 
