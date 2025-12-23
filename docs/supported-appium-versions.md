@@ -52,7 +52,15 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 # Supported Appium Versions
 <RealDeviceTag value="Real Device" /> 
 <VirtualDeviceTag value="Virtual Device" />
+
 Customize your testing experience on LambdaTest by selecting the appropriate Appium version for your tests on real devices. LambdaTest offers flexibility in choosing the Appium version to meet your testing requirements. By default, the suitable Appium version is selected based on the operating system (OS) when running tests. However, you can explicitly specify the  version using the `appiumVersion` capability in your test scripts.
+
+:::info
+- We also provide Support for Appium 3.0.2 on following versions
+  - **Android Devices:** 13, 15, 16
+  - **iOS Devices:** 16, 17, 18, 26
+:::
+
 
 ## Appium Version Configuration for Real Devices
 To configure the Appium version for your tests on LambdaTest, use the `appiumVersion` capability in your test scripts. Below is a table of supported Appium versions for different platforms:
@@ -97,7 +105,6 @@ capabilities.setCapability("platformName", "ios");
 | 2.11.2         | appium-xcuitest-driver@7.23.1  | appium-uiautomator2-driver@3.7.2      |
 | 2.11.4         | appium-xcuitest-driver@7.26.4  | appium-uiautomator2-driver@3.7.11     |
 | 2.12.1         | appium-xcuitest-driver@7.28.3  | appium-uiautomator2-driver@3.8.0      |
-| 3.0.2          | appium-xcuit-driver@9.3.2      | appium-uiautomator2-driver@5.0.1      |
 
 :::note 
 - If a user passes any Appium version other than the mentioned versions, appropriate error will be thrown.
@@ -113,8 +120,3 @@ capabilities.setCapability("platformName", "ios");
 | iOS |1.22.3, 2.0.0, 2.1.3, 2.16.2 |
 
 
-:::info
-- We also provide Support for Appium 3.0.2 on following versions
-  - **Android Devices:** 13, 15, 16
-  - **iOS Devices:** 16, 17, 18, 26
-:::
