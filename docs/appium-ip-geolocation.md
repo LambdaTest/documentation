@@ -176,7 +176,6 @@ Below is the list of supported countries along with their respective country cod
 | Memphis, Tennessee (US)           | W4    |
 | Mexico                            | MX       |
 | Miami, Florida (US)               | US/MI    |
-| Milan (Italy)                     | IT/MIL   |
 | Moldova                           | MD       |
 | Mongolia                          | MN       |
 | Montana (US)                      | US/MT   |
