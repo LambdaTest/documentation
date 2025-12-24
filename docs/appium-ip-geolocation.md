@@ -78,20 +78,15 @@ Below is the list of supported countries along with their respective country cod
 | Albania                           | AL       |
 | Alberta (Canada)                  | CA/AB    |
 | Albuquerque, New Mexico (US)      | US/ABQ   |
-| Andorra                           | AD       |
-| Andhra Pradesh (India)            | IN/AP    |
-| Ankara (Turkey)                   | TR/ANK   |
 | Argentina                         | AR       |
 | Armenia                           | AM       |
 | Ashburn, Virginia (US)            | US/AB    |
 | Atlanta, Georgia (US)             | US/AT    |
-| Auckland (New Zealand)            | NZ/AU    |
 | Australia                         | AU       |
 | Austria                           | AT       |
 | Azerbaijan                        | AZ       |
 | Bahrain                           | BH       |
 | Bangladesh                        | BD       |
-| Barcelona (Spain)                 | ES/BCN   |
 | Belarus                           | BY       |
 | Belgium                           | BE       |
 | Berlin                            | V2       |
@@ -129,7 +124,6 @@ Below is the list of supported countries along with their respective country cod
 | Des Moines, Iowa (US)             | US/DM    |
 | Detroit, Michigan (US)            | US/DET   |
 | Dominican Republic                | DO       |
-| Dublin (Ireland)                  | IE/DU    |
 | Ecuador                           | EC       |
 | Egypt                             | EG       |
 | El Salvador                       | SV       |
@@ -175,7 +169,6 @@ Below is the list of supported countries along with their respective country cod
 | London                            | W8       |
 | Los Angeles, California (US)      | US/LA    |
 | Luxembourg                        | LU       |
-| Madrid (Spain)                    | ES/MAD   |
 | Manhattan, New York (US)          | US/MHT   |
 | Maryland (US)                     |  US/ML   |
 | Malta                             | MT       |
@@ -183,17 +176,11 @@ Below is the list of supported countries along with their respective country cod
 | Memphis, Tennessee (US)           | W4    |
 | Mexico                            | MX       |
 | Miami, Florida (US)               | US/MI    |
-| Milan (Italy)                     | IT/MIL   |
-| Minneapolis, Minnesota (US)       | US/MIN   |
-| Minnesota (US)                    | US/MN   |
 | Moldova                           | MD       |
 | Mongolia                          | MN       |
 | Montana (US)                      | US/MT   |
 | Monticello, Illinois (US)         | US/MO    |
 | Morocco                           | MA       |
-| Mumbai (India)                    | IN/MU    |
-| Munich (Germany)                  | DE/MUN   |
-| Nairobi (Kenya)                   | KE/NAI   |
 | Nebraska (US)                     | US/NB    |
 | New Hamisphere (US)               | US/NH   |
 | New Jersey, New Jersey            | X4       |
@@ -211,7 +198,6 @@ Below is the list of supported countries along with their respective country cod
 | Pakistan                          | PK       |
 | Panama                            | PA       |
 | Paraguay                          | PY       |
-| Paris (France)                    | FR/PA    |
 | Perth (Australia)                 | AU/PT    |
 | Peru                              | PE       |
 | Philippines                       | PH       |
@@ -223,12 +209,10 @@ Below is the list of supported countries along with their respective country cod
 | Qatar                             | QA       |
 | Raleigh, North Carolina (US)      | US/RA    |
 | Reston, Virginia (US)             | US/RT    |
-| Reykjavik (Iceland)               | IS/REK   |
 | Richmond, Virginia (US)           | US/RM    |
 | Romania                           | RO       |
 | Russian Federation                | RU       |
 | Sacramento, California (US)       | US/SAC   |
-| Saint Petersburg (Russia)         | RU/SP    |
 | Salem, New Hampshire (US)         | US/SLE   |
 | Salem, NH                         | U5       |
 | Salt Lake City, Utah (US)         | US/SLC   |
