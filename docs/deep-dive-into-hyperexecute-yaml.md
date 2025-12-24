@@ -55,10 +55,9 @@ version: 0.1
 
 ### `runson`
 In this flag, you will define your required Operating System on which you want to run your tests.
-> Currently we support linux, mac (macOS Monterey), mac13 (macOS Ventura), win (Windows 10) and win11 (Windows 11). 
 
 ```yaml
-runson: linux # mac, mac13, win, win11
+runson: linux # win, win11, mac, mac12, mac13, mac14, mac15
 ```
 
 If you want to run a multi OS job, you can use [matrix method](/support/docs/hyperexecute-matrix-multiplexing-strategy/) as shown below
@@ -66,8 +65,21 @@ If you want to run a multi OS job, you can use [matrix method](/support/docs/hyp
 ```yaml
 runson: ${matrix.os}
 matrix:
-  os: [linux, mac, mac13, win, win11]
+  os: [linux, mac12, mac13, mac14, mac15, win, win11]
 ```
+
+#### Supported Values for `runson`
+
+| runson | Operating System |
+|--------|------------------|
+| linux  | Linux            |
+| win  (default)  | Windows 10       |
+| win11  | Windows 11       |
+| mac  (default)  | macOS Monterey   |
+| mac12  | macOS Monterey   |
+| mac13  | macOS Ventura    |
+| mac14  | macOS Sonoma     |
+| mac15  | macOS Sequoia    |
 
 ***
 
