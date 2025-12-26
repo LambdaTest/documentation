@@ -21,6 +21,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,30 +31,30 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Semaphore Integration",
-          "item": "https://www.lambdatest.com/support/docs/smartui-with-semaphore/"
+          "item": `${BRAND_URL}/support/docs/smartui-with-semaphore/`
         }]
       })
     }}
 ></script>
 Semaphore is a modern CI/CD (Continuous Integration and Continuous Delivery) platform designed for developers to automate the process of building, testing, and deploying software.
 
-This guide explains how to integrate your project with the Semaphore CI/CD pipeline to trigger visual regression testing with LambdaTest SmartUI whenever changes are made to your repository.
+This guide explains how to integrate your project with the Semaphore CI/CD pipeline to trigger visual regression testing with <BrandName /> SmartUI whenever changes are made to your repository.
 
 ## Steps to Integrate Semaphore Pipeline with SmartUI
 To integrate Semaphore Pipeline with SmartUI, follow the below steps. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the SmartUI.
 
 <a href="https://github.com/amanchopra1905/smartui-ci-cd-integrations/tree/semaphore" target="_blank" className='github__anchor'><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className='doc_img'/> View on GitHub</a>
 :::
@@ -345,7 +346,7 @@ If you encounter issues not covered here:
 
 - Review [Semaphore Documentation](https://docs.semaphoreci.com/)
 - Check [SmartUI CLI Documentation](/support/docs/smartui-cli) for CLI-specific issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>

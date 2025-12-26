@@ -28,6 +28,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -37,17 +38,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to run automation tests on HyperExecute using Karate framework",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-karate-testing/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-karate-testing/`
         }]
       })
     }}
@@ -112,7 +113,7 @@ Track unstable tests using built-in analytics that detect patterns of failure ac
 ### Prerequisites
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your LambdaTest [Username and Access key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your <BrandName /> [Username and Access key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute YAML](https://www.lambdatest.com/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - [HyperExecute CLI](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the [Environmental Variable](https://www.lambdatest.com/support/docs/hyperexecute-environment-variable-setup/)
@@ -121,9 +122,9 @@ To run the Tests on HyperExecute from your Local System, you are required:
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the Karate from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the Karate from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
-<a href="https://github.com/LambdaTest/hyperexecute-karate-sample/" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/lambdatest/hyperexecute-karate-sample/" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 ### Step 2: Download the CLI in your Project
@@ -136,7 +137,7 @@ Download the HyperExecute CLI and copy it into the root folder of the downloaded
 | macOS | https://downloads.lambdatest.com/hyperexecute/darwin/hyperexecute |
 
 ### Step 3: Configyure `karate-config.js` file
-This file defines runtime behaviors and integrates Karate with LambdaTest status reporting.
+This file defines runtime behaviors and integrates Karate with <BrandName /> status reporting.
 
 ```javascript title="karate-config.js"
 function fn() {
@@ -225,7 +226,7 @@ testDiscovery:
   command: snooper --targetOs=win --featureFilePaths=src/test/java/app --frameWork=java | sed 's/:.*//' | uniq
 ```
 
-- **snooper:** A built-in utility provided by LambdaTest to list relevant test files.
+- **snooper:** A built-in utility provided by <BrandName /> to list relevant test files.
 - **--targetOs=win:** Targets Windows OS runners.
 - **--featureFilePaths=src/test/java/app:** Points to where Karate .feature files are located.
 - **--frameWork=java:** Indicates framework type for parsing.

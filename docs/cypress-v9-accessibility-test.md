@@ -21,6 +21,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,29 +31,29 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Cypress Accessibility Testing",
-          "item": "https://www.lambdatest.com/support/docs/cypress-v9-accessibility-test/"
+          "item": `${BRAND_URL}/support/docs/cypress-v9-accessibility-test/`
         }]
       })
     }}
 ></script>
 
-This document walks you through the step by step guide for executing the automation tests of your website with LambdaTest's Accessibility Tool using Cypress v9 and below.
+This document walks you through the step by step guide for executing the automation tests of your website with <BrandName />'s Accessibility Tool using Cypress v9 and below.
 
 > **NOTE:** This documentation is applicable for **Cypress v9** and **previous versions**.
 
 ## Prerequisites
 
-- Your [LambdaTest Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
+- Your [<BrandName /> Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
 - Setup your local machine as per your testing framework.
 
 ## Step-by-Step Guide to Trigger Your Test
@@ -62,9 +63,9 @@ This document walks you through the step by step guide for executing the automat
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run your tests.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run your tests.
 
-<a href="https://github.com/LambdaTest/lambdatest-accessibility-cypress-v9" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+<a href="https://github.com/lambdatest/<BrandName />-accessibility-cypress-v9" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 Configure the desired capabilities based on your test requirements. For example:
@@ -75,7 +76,7 @@ Configure the desired capabilities based on your test requirements. For example:
 
 ### Step 2: Establish User Authentication
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
@@ -119,7 +120,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 },
 ```
 
-- If you are using **lambdatest-config.json** to pass the dependency, then pass the given line there:
+- If you are using **<BrandName />-config.json** to pass the dependency, then pass the given line there:
 
 ```javascript title="lambdatest-config.json"
 "run_settings": {
@@ -132,7 +133,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 }
 ```
 
-- if you are not passing npm dependency in **lambdatest-config.json** you can run
+- if you are not passing npm dependency in **<BrandName />-config.json** you can run
 
 ```bash
 npm i lambdatest-cypress-cli   
