@@ -20,6 +20,7 @@ slug: appium-appletv/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -293,7 +294,7 @@ def getCaps():
 :::info Note
 
 - You must add the generated **APP_URL** to the `"app"` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.For more details, please refer to our guide on [Desired Capabilities in Appium](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt **<a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>**.For more details, please refer to our guide on [Desired Capabilities in Appium](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
 
 :::
 

@@ -22,6 +22,8 @@ site_name: LambdaTest
 slug: codeception-integration-with-lambdatest/
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -159,7 +161,7 @@ modules:
             version: '71.0'
             tunnel: false # sets tunnel value to true for routing traffic through your local machine
 ```
-> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>.
 
 ### Executing the Test
 **Step 5:** The tests can be executed in the terminal using the following command:

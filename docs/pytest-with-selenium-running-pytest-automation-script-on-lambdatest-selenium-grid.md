@@ -21,6 +21,7 @@ slug: pytest-with-selenium-running-pytest-automation-script-on-lambdatest-seleni
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -158,7 +159,7 @@ capabilities = {
         "browserVersion": "latest",
 }
 ```
-> You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.
+> You can generate capabilities for your test requirements with the help of our inbuilt **<a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>**.
 
 ### Executing the Test
 

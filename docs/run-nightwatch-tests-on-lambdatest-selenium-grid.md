@@ -23,6 +23,7 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -126,7 +127,7 @@ https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/tests/googl
 ```javascript title="nightwatch.conf.js" reference
 https://github.com/LambdaTest/nightwatch-selenium-sample/blob/master/nightwatch.conf.js
 ```
-> You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.
+> You can generate capabilities for your test requirements with the help of our inbuilt **<a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>**.
 
 ### Executing the Test
 

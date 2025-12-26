@@ -213,7 +213,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("build", "<BrandName />SampleApp");
         capabilities.setCapability("name", "<BrandName />JavaSample");
 ```
-> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
+> You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 <a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>.
 
 ### Executing the Test
 
