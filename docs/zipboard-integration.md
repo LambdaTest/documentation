@@ -27,34 +27,37 @@ slug: zipboard-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Zipboard Integration",
-          "item": "https://www.lambdatest.com/support/docs/zipboard-integration/"
+          "item": `${BRAND_URL}/support/docs/zipboard-integration/`
         }]
       })
     }}
 ></script>
-ZipBoard is a visual feedback and bug tracking tool designed to streamline collaboration across teams during the web development process. By integrating LambdaTest with ZipBoard, teams can enhance their testing workflows, enabling seamless communication between developers, testers, and stakeholders.
 
-This integration allows you to capture real-time feedback and track issues directly within your test environments on LambdaTest’s cloud platform, ensuring faster bug resolution and better product quality. In this documentation, we’ll guide you through the steps to integrate ZipBoard with LambdaTest and optimize your test management workflow.
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
-## Integrate zipBoard from your LambdaTest Account
+ZipBoard is a visual feedback and bug tracking tool designed to streamline collaboration across teams during the web development process. By integrating <BrandName /> with ZipBoard, teams can enhance their testing workflows, enabling seamless communication between developers, testers, and stakeholders.
 
-**Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
+This integration allows you to capture real-time feedback and track issues directly within your test environments on <BrandName />'s cloud platform, ensuring faster bug resolution and better product quality. In this documentation, we'll guide you through the steps to integrate ZipBoard with <BrandName /> and optimize your test management workflow.
+
+## Integrate zipBoard from your <BrandName /> Account
+
+**Step 1:** Login to your <BrandName /> account. You should have Admin or User level access to see and install integrations.
 
 **Step 2:** Click on Settings -> Integrations -> Bug Tracker.
 
 **Step 3:** Click on **Connect** button of zipBoard block.
 
-**Step 4:** Now, provide your zipBoard API Token to establish integration with LambdaTest and click on **install** button.
+**Step 4:** Now, provide your zipBoard API Token to establish integration with <BrandName /> and click on **install** button.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/integration/bug-tracking/zipboard/zipboard-integration.mp4').default} type="video/mp4" />
@@ -62,7 +65,7 @@ This integration allows you to capture real-time feedback and track issues direc
 
 :::info Fetch your Bugherd API Token
 - Visit your zipBoard account -> **Edit Profile** tab.
-- Click on the **+** icon to generate your API. Copy your API token to use it for authenticate it with LambdaTest integration.
+- Click on the **+** icon to generate your API. Copy your API token to use it for authenticate it with <BrandName /> integration.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/integration/bug-tracking/zipboard/zipbaord-api-token.mp4').default} type="video/mp4" />
@@ -75,7 +78,7 @@ This integration allows you to capture real-time feedback and track issues direc
 
 **Step 1:** Create a new projects on zipBoard if you haven't already.
 
-**Step 2:** Now, while testing your webapp or application at LambdaTest, click on the **mark as bug** button if you detect any bug.
+**Step 2:** Now, while testing your webapp or application at <BrandName />, click on the **mark as bug** button if you detect any bug.
 
 **Step 3:** Now update the comments of the bug and other details and click on Create Task button.
 
@@ -83,7 +86,7 @@ This integration allows you to capture real-time feedback and track issues direc
 
 ## Uninstall zipBoard Integration
 
-**Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You should have Admin or User level access to see and install integrations.
 
 **Step 2:** Click on Settings -> Integrations -> Bug Tracker.
 
@@ -93,17 +96,17 @@ This integration allows you to capture real-time feedback and track issues direc
 <source src= {require('../assets/videos/integration/bug-tracking/zipboard/remove-zipboard.mp4').default} type="video/mp4" />
 </video>
 
-> That was all you need to know for LambdaTest + zipBoard Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing! 🙂
+> That was all you need to know for <BrandName /> + zipBoard Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
