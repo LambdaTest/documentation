@@ -76,7 +76,7 @@ Download or Clone the code sample from the LambdaTest GitHub repository to run t
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/semaphore/4.png').default} alt="Image"  className="doc_img"/>
 
-**Step 6:** In the #Job1 add the below mentioned script. Make sure to replace the `username` and `key` with your LambdaTest [UserName and Access Key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+**Step 6:** In the #Job1 add the below mentioned script. Make sure to replace the `username` and `key` with your LambdaTest [UserName and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
 ```bash
 curl -O https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute

@@ -44,7 +44,7 @@ LambdaTest now lets you enable **Smart Heal** for automation testing. This featu
 ## Smart Heal Workflow
 
 1. **Baseline Creation**  
-- For Smart Heal to work, you must first have at least one successful (**Passed Test**) as baseline, so make sure to include the [LambdaTest  Hook](https://www.lambdatest.com/support/docs/appium-lambdatest-hooks/#adding-custom-status--remark) in your tests to explicitly mark them as passed during execution. With a baseline in place, the Auto-Heal engine can detect changes and attempt locator recovery. Since Smart Heal uses AI-driven analysis, expect executions to take slightly longer than usual.
+- For Smart Heal to work, you must first have at least one successful (**Passed Test**) as baseline, so make sure to include the [LambdaTest  Hook](/support/docs/appium-lambdatest-hooks/#adding-custom-status--remark) in your tests to explicitly mark them as passed during execution. With a baseline in place, the Auto-Heal engine can detect changes and attempt locator recovery. Since Smart Heal uses AI-driven analysis, expect executions to take slightly longer than usual.
 - For every user the **project name** and **test name** must remain the same across runs for Smart Heal to keep baseline applied successfully.
 
 
@@ -72,7 +72,7 @@ LambdaTest now lets you enable **Smart Heal** for automation testing. This featu
 
 Before enabling Smart Heal, ensure your app is uploaded to LambdaTest.
 
-1. Follow the [Upload Your Application](https://www.lambdatest.com/support/docs/upload-apps-on-real-device-cloud/) guide.
+1. Follow the [Upload Your Application](/support/docs/upload-apps-on-real-device-cloud/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 
@@ -121,7 +121,7 @@ desired_caps = {
 </Tabs>
 
 :::tip
-You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 :::
 
 ### 3. Enable Smart Heal with Runtime Hooks

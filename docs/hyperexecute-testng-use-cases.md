@@ -41,7 +41,7 @@ This guide outlines common **Java + TestNG** scenarios for running tests on [Hyp
 
 ## Q: How can I ensure my tests operate with the appropriate Java version on HyperExecute?
 
-By default, HyperExecute VMs are provisioned with **Java 8**. If your project requires another version (e.g., **11, 15, 18, 22**), you can use the [`runtime`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) feature and specify the compatible version in the `hyperexecute.yaml`.
+By default, HyperExecute VMs are provisioned with **Java 8**. If your project requires another version (e.g., **11, 15, 18, 22**), you can use the [`runtime`](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) feature and specify the compatible version in the `hyperexecute.yaml`.
 
 **YAML Example for Java 11**
 
@@ -52,7 +52,7 @@ runtime:
 ```
 
 ## Q: What is test discovery in HyperExecute, and how does it help?
-[Test discovery](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) is the process of pre-identifying the tests (classes, scenarios, or feature files) to be executed.
+[Test discovery](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery) is the process of pre-identifying the tests (classes, scenarios, or feature files) to be executed.
 
 #### Why Use Test Discovery?
 - **Selective Execution →** Run only the tests you need.
@@ -89,8 +89,8 @@ testDiscovery:
 ```
 
 #### Discovery Modes
-- [local](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery:~:text=mode%3A%20remote-,mode%3A%20local,-Purpose%3A%20Test) → Runs discovery on your machine (useful for small/simple projects).
-- [remote](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery:~:text=locally%2C%20limiting%20visibility.-,mode%3A%20remote,-NEW) → Runs discovery on HyperExecute VM (recommended for large projects).
+- [local](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery:~:text=mode%3A%20remote-,mode%3A%20local,-Purpose%3A%20Test) → Runs discovery on your machine (useful for small/simple projects).
+- [remote](/support/docs/deep-dive-into-hyperexecute-yaml/#testdiscovery:~:text=locally%2C%20limiting%20visibility.-,mode%3A%20remote,-NEW) → Runs discovery on HyperExecute VM (recommended for large projects).
 
 ## Q: How do I include/exclude tests using tags?
 You can pass logical tag expressions in testDiscovery or use the ignoredTags parameter.

@@ -358,7 +358,7 @@ If you encounter issues not covered here:
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 - [How to generate a Figma token](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens)
-- [SmartUI CLI Docs](https://www.lambdatest.com/support/docs/smartui-cli/)
+- [SmartUI CLI Docs](/support/docs/smartui-cli/)
 - [Appium + SmartUI Node Sample](https://github.com/LambdaTest/smartui-appium-nodejs)
 
 ---

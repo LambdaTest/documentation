@@ -88,7 +88,7 @@ The **IP Geolocation** feature allows you to emulate website and mobile experien
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/ip-geolocation-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the [IP Geolocation](https://www.lambdatest.com/support/docs/list-of-supported-locales/) feature.
+Check out our detailed support documentation to know more about the [IP Geolocation](/support/docs/list-of-supported-locales/) feature.
 
 ### GPS Location
 
@@ -107,7 +107,7 @@ You can simulate these network environments using either pre-defined profiles or
 
 <img loading="lazy" src={require('../assets/images/real-device-browser-testing/network-throttling-browser-testing.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the [Network Throttling](https://www.lambdatest.com/support/docs/app-auto-network-throttling/) feature.
+Check out our detailed support documentation to know more about the [Network Throttling](/support/docs/app-auto-network-throttling/) feature.
 
 
 ### iOS Settings

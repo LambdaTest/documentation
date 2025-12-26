@@ -50,8 +50,8 @@ LambdaTest Analytics uses Failure Categorization AI to classify test failures in
 3. You should add the `remark` capability in your test script to enable the Failure Categorization AI. The `remark` capability is used to add comments or notes to the test execution data. This helps in providing additional context to the AI model and improves the accuracy of the failure categorization.
 
 Here is the link to the documentation for the remark capability: 
-* [Web Automation](https://www.lambdatest.com/support/docs/appium-lambdatest-hooks/#adding-custom-status--remark)
-* [App Automation](https://www.lambdatest.com/support/docs/appium-lambdatest-hooks/#adding-custom-status--remark)
+* [Web Automation](/support/docs/appium-lambdatest-hooks/#adding-custom-status--remark)
+* [App Automation](/support/docs/appium-lambdatest-hooks/#adding-custom-status--remark)
 
 4. You should have at least one test failure in your test execution data. The AI model requires a minimum of one test failure to categorize the failures. If there are no test failures, the AI model will not be able to categorize the failures.
 5. You should have access to the LambdaTest Insights platform.

@@ -56,7 +56,7 @@ You can see in the screenshot mentioned below that the Pre Step of the Task has 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/debug/hyp-pre-logs.png').default} alt="Image"  className="doc_img"/>
 
-> **NOTE :** During the execution of pre-commands, you might come across different issues. To troubleshoot and resolve these issues, please refer to the relevant solutions provided on [this](https://www.lambdatest.com/support/docs/hyperexecute-pre-steps-error/) page.
+> **NOTE :** During the execution of pre-commands, you might come across different issues. To troubleshoot and resolve these issues, please refer to the relevant solutions provided on [this](/support/docs/hyperexecute-pre-steps-error/) page.
 
 ## Scenarios
 To check the issues caused in the Scenario Step, there are multiple ways to find the issue. Let's explore each way:
@@ -82,16 +82,16 @@ Here you can check which part of your test case is causing an error in the video
 
 #### Command Logs
 
-- You can view all kinds of logs as well like [**Network Logs**](https://www.lambdatest.com/support/docs/debugging-options/#network-logs). You can toggle between the [**Console Logs**](https://www.lambdatest.com/support/docs/debugging-options/#console-logs), [**Terminal Logs**](https://www.lambdatest.com/support/docs/debugging-options/#terminal-logs) and the **Test Framework Logs**.
+- You can view all kinds of logs as well like [**Network Logs**](/support/docs/debugging-options/#network-logs). You can toggle between the [**Console Logs**](/support/docs/debugging-options/#console-logs), [**Terminal Logs**](/support/docs/debugging-options/#terminal-logs) and the **Test Framework Logs**.
 
-> To enable these logs, you need to explicitly mention the required flag in your [Test Capability Configuration](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/).
+> To enable these logs, you need to explicitly mention the required flag in your [Test Capability Configuration](/support/docs/selenium-automation-capabilities/).
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/debug/hyp-scenario-view-log2.png').default} alt="Image"  className="doc_img"/>
 
-> **NOTE :** During the execution of scenario, you might come across different issues. To troubleshoot and resolve these issues, please refer to the relevant solutions provided on [this](https://www.lambdatest.com/support/docs/hyperexecute-scenario-steps-error/) page.
+> **NOTE :** During the execution of scenario, you might come across different issues. To troubleshoot and resolve these issues, please refer to the relevant solutions provided on [this](/support/docs/hyperexecute-scenario-steps-error/) page.
 
 ## Root Cause Analysis Report
-You can also check out our AI Native [RCA Report](https://www.lambdatest.com/support/docs/ai-powered-test-failure-analysis/), which will help you to quickly identify various error categories and also offer a comprehensive overview of the underlying causes.
+You can also check out our AI Native [RCA Report](/support/docs/ai-powered-test-failure-analysis/), which will help you to quickly identify various error categories and also offer a comprehensive overview of the underlying causes.
 
 To generate the RCA, simply click on the **Errors** icon, where you can also see the **type of error**, and then click on the **See Details** button to go through the detailed logs.
 
@@ -101,7 +101,7 @@ Here you can check the detailed log for the cause of failure as well as the **Li
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/debug/hyp-scenario-rca-log2.png').default} alt="Image"  className="doc_img"/>
 
-If you are still facing an issue, then scroll down and click on the [**Generate RCA**](https://www.lambdatest.com/support/docs/ai-powered-test-failure-analysis/#generate-the-rca-of-your-failed-jobs) button, which will offer a structured approach to addressing each failure type. You can efficiently get to the precise corrective measures or Remedies recommended, along with Additional suggestions for the particular error.
+If you are still facing an issue, then scroll down and click on the [**Generate RCA**](/support/docs/ai-powered-test-failure-analysis/#generate-the-rca-of-your-failed-jobs) button, which will offer a structured approach to addressing each failure type. You can efficiently get to the precise corrective measures or Remedies recommended, along with Additional suggestions for the particular error.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/debug/hyp-scenario-rca-log3.png').default} alt="Image"  className="doc_img"/>
 
@@ -111,4 +111,4 @@ In the below screenshot, we can clearly see that there is some issue in fetching
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/knowledge-base/debugging-guide/debug/hyp-post-logs.png').default} alt="Image"  className="doc_img"/>
 
-> You can also check the complete [Detailed Job Report](https://www.lambdatest.com/support/docs/hyperexecute-reports/) which can help you to analyze the outcome of your tests based on your framework.
+> You can also check the complete [Detailed Job Report](/support/docs/hyperexecute-reports/) which can help you to analyze the outcome of your tests based on your framework.

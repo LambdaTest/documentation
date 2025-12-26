@@ -46,7 +46,7 @@ HyperExecute facilitate the development of mobile applications using various too
 
 ## Building Apps with `runtime` Flag
 
-HyperExecute provides a [`runtime`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) flag feature that dynamically downloads and installs required language and framework versions based on your needs. This removes the need for pre-installed environments on the execution machines.
+HyperExecute provides a [`runtime`](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) flag feature that dynamically downloads and installs required language and framework versions based on your needs. This removes the need for pre-installed environments on the execution machines.
 
 ```bash
 runtime:
@@ -61,7 +61,7 @@ runtime:
 
 ## Leveraging DataJsonPaths for Dependency Management
 
-[`DataJsonPaths`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#datajsonpath) helps to distribute data/configs over the VMs. In this you can create a json files and put configurations/data required for your suite as json array inside the file.
+[`DataJsonPaths`](/support/docs/deep-dive-into-hyperexecute-yaml/#datajsonpath) helps to distribute data/configs over the VMs. In this you can create a json files and put configurations/data required for your suite as json array inside the file.
 
 This is useful when you have the project and you have to build it across different java, gradle and android-sdk versions.
 

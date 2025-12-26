@@ -42,18 +42,18 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ></script>
 [k6](https://grafana.com/docs/k6/latest/) is an open-source tool designed to make load testing easy and accessible for developers and QA engineers. It's specifically built for testing the performance of APIs, microservices, and websites.
 
-[HyperExecute](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/) is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+[HyperExecute](/support/docs/getting-started-with-hyperexecute/) is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
-This guide details how to execute your **k6** tests on **HyperExecute** using [YAML 0.1](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/)
+This guide details how to execute your **k6** tests on **HyperExecute** using [YAML 0.1](/support/docs/hyperexecute-yaml-parameters/)
 
 ### Prerequisites
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your LambdaTest [Username and Access key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
-- [HyperExecute YAML](https://www.lambdatest.com/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-- [HyperExecute CLI](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Setup the [Environmental Variable](https://www.lambdatest.com/support/docs/hyperexecute-environment-variable-setup/)
+- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
+- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
+- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
 
 ### Step 1: Configure Your Test Suite
 
@@ -119,7 +119,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 
 You will have to add these flags mandatorily in your YAML file to execute the k6 tests:
 
-- [runtime flag](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) to download and install the k6 of that respective version.
+- [runtime flag](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime) to download and install the k6 of that respective version.
 
 ```yaml
 runtime:
@@ -128,7 +128,7 @@ runtime:
         version: "v0.52.0"
 ```
 
-- [env flag](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#env) is used to install certain dependencies to run your test cases
+- [env flag](/support/docs/deep-dive-into-hyperexecute-yaml/#env) is used to install certain dependencies to run your test cases
 
 ```yaml
 env: 

@@ -147,7 +147,7 @@ Enter in your UserName & Access Key. You may find the credentials available on [
 
 ### Step 4: Configure Desired Capabilities & Start the Session
 
-Configure LambdaTest capabilities in the desired capabilities tab on Appium inspector. Use the unique app URL obtained in Step 1 to set the app capability Value.For more details, please refer to our guide on [Desired Capabilities in Appium](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+Configure LambdaTest capabilities in the desired capabilities tab on Appium inspector. Use the unique app URL obtained in Step 1 to set the app capability Value.For more details, please refer to our guide on [Desired Capabilities in Appium](/support/docs/desired-capabilities-in-appium/).
 
 Alternatively, we can also go to our [capabilities generator](https://www.lambdatest.com/capabilities-generator/) and generate the Capability Representation using GUI.
 
@@ -160,7 +160,7 @@ Once this is complete, you can now run the test by clicking on start session. On
 ## Attaching to a running session in Appium Inspector
 
 ### Step 1: Configure your Credentials
-After you have added your credentials from [Step 2 of Starting an Appium Session](https://www.lambdatest.com/support/docs/appium-inspector-integration/#attaching-to-a-running-session-in-appium-inspector), click on Attach to Session.
+After you have added your credentials from [Step 2 of Starting an Appium Session](/support/docs/appium-inspector-integration/#attaching-to-a-running-session-in-appium-inspector), click on Attach to Session.
 
 <img loading="lazy" src={require('../assets/images/appium-inspector/appium_inspector3.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 

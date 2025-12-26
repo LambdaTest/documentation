@@ -66,7 +66,7 @@ Following entities can be mapped & imported:
 
 #### Prerequisites:
 - To map Custom Fields, ensure the custom fields are created and linked to the project before beginning the import process.
-- To import Jira Tickets, ensure your Jira instance is connected to Test Manager (refer [here](https://www.lambdatest.com/support/docs/link-jira-issues-with-test-manager/)). If you forget to connect it before starting the import, don't worry, the test cases will automatically link to the appropriate Jira tickets once the integration is set up.
+- To import Jira Tickets, ensure your Jira instance is connected to Test Manager (refer [here](/support/docs/link-jira-issues-with-test-manager/)). If you forget to connect it before starting the import, don't worry, the test cases will automatically link to the appropriate Jira tickets once the integration is set up.
 
 **Following format of Test Cases are supported for Importing:**
 1. **Test cases use a single row:** Use this option when your steps, outcomes, or BDDs are combined in one row per test case & indexed like: 

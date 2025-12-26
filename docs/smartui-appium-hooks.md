@@ -733,9 +733,9 @@ If you encounter issues not covered here:
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [Appium Documentation](https://www.lambdatest.com/support/docs/appium-nodejs/)
+- [Appium Documentation](/support/docs/appium-nodejs/)
 
-For additional information about appium framework please explore the documentation [here](https://www.lambdatest.com/support/docs/appium-nodejs/)
+For additional information about appium framework please explore the documentation [here](/support/docs/appium-nodejs/)
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

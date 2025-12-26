@@ -134,7 +134,7 @@ You can download the CLI for your desired platform from the below mentioned link
   </CodeBlock>
 </div>
 
-> Refer the documentation to understand how to get your [Username and Access key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+> Refer the documentation to understand how to get your [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
 ## Step 3: Setup the Automation
 

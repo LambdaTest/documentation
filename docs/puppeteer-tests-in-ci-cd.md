@@ -55,7 +55,7 @@ Running Puppeteer tests through CI/CD pipeline involves three stages:
 ## Running Puppeteer Tests Via CI/CD
 ***
 
-LambdaTest offers [integration with CI/CD tools](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/) like Jenkins, Bamboo, AWS CodePipeline, and more. In order to run Puppeteer tests in CI/CD, you need to perform few steps in the **Test** stage of your CI/CD pipeline.
+LambdaTest offers [integration with CI/CD tools](/support/docs/integrations-with-ci-cd-tools/) like Jenkins, Bamboo, AWS CodePipeline, and more. In order to run Puppeteer tests in CI/CD, you need to perform few steps in the **Test** stage of your CI/CD pipeline.
 
 1. Ensure the website (or code) is hosted on staging environment.
 

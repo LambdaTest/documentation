@@ -163,7 +163,7 @@ Once the CloudFormation template is successfully deployed, you can access HyperE
 
 **Step 6:** If the emailID you used to setup this deployment is not an existing user on LambdaTest then check your Email, there should be a email titled `Create Password - LambdaTest`, generate a new password using the link provided in the email.
 
-**Step 7:** Login using your email and password and run jobs using the HyperExecute CLI. For further details about HyperExecute, refer to the [documentation](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/).
+**Step 7:** Login using your email and password and run jobs using the HyperExecute CLI. For further details about HyperExecute, refer to the [documentation](/support/docs/getting-started-with-hyperexecute/).
 
 ## Cleanup the Environment
 

@@ -166,7 +166,7 @@ As you execute, you will find the Server response presented below.
 ## Fetch Details Of An Executed Test Session
 ***
 
-In case you wish to fetch all the details from an already executed screenshot test session. These details will help you analyze the results of your [screenshot test session](https://www.lambdatest.com/support/docs/automated-screenshot-testing/) at LambdaTest. You would get the below details:
+In case you wish to fetch all the details from an already executed screenshot test session. These details will help you analyze the results of your [screenshot test session](/support/docs/automated-screenshot-testing/) at LambdaTest. You would get the below details:
 
 * **Test Details**:
   * Test ID

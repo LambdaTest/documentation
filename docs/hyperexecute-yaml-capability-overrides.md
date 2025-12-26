@@ -38,7 +38,7 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-In Selenium-based testing, [capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/) are key-value pairs that define how and where your tests should run—such as browser type, version, OS, console logs, video recording, and more.
+In Selenium-based testing, [capabilities](/support/docs/selenium-automation-capabilities/) are key-value pairs that define how and where your tests should run—such as browser type, version, OS, console logs, video recording, and more.
 
 Previously, these capabilities were typically defined within the test script. With this new feature, you can now override or inject these directly from your **HyperExecute YAML** file. This gives you greater flexibility and eliminates the need to modify test scripts every time you change execution parameters.
 

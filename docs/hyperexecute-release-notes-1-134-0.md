@@ -48,7 +48,7 @@ The new integration between Semaphore CI/CD and HyperExecute will allow teams to
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/semaphore.png').default} alt="Image"  className="doc_img"/>
 
-> Refer to the detailed documentation on how to integrate [Semaphore CI/CD](https://www.lambdatest.com/support/docs/semaphore-integration-with-hyperexecute/) with HyperExecute.
+> Refer to the detailed documentation on how to integrate [Semaphore CI/CD](/support/docs/semaphore-integration-with-hyperexecute/) with HyperExecute.
 
 ## Smart UI Tests for Cypress Framework
 
@@ -58,4 +58,4 @@ HyperExecute now supports the Cypress framework, allowing teams to run their Cyp
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/cyp-hyp-smartui.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-> To understand the step-by-step guide, follow the documentation to run your [Cypress Tests on Smart UI](https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-testing-using-cypress/) using HyperExecute.
+> To understand the step-by-step guide, follow the documentation to run your [Cypress Tests on Smart UI](/support/docs/hyperexecute-smart-ui-testing-using-cypress/) using HyperExecute.

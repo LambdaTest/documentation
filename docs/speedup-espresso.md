@@ -52,7 +52,7 @@ import TabItem from '@theme/TabItem';
 
 Usually, all the test cases of your Espresso test suite are executed, but there is a way to filter these. You can use Espresso test runner (typically `AndroidJUnitRunner`), which provides you with multiple options to filter the test cases which you want to execute.
 
-To filter the test cases, you just need to pass the suitable parameters in LambdaTest’s [REST API](https://www.lambdatest.com/support/docs/getting-started-with-espresso-testing/) request. Refer to the table below to understand how to use various filters provided by LambdaTest.
+To filter the test cases, you just need to pass the suitable parameters in LambdaTest’s [REST API](/support/docs/getting-started-with-espresso-testing/) request. Refer to the table below to understand how to use various filters provided by LambdaTest.
 
 Given below is the REST API endpoint:
 

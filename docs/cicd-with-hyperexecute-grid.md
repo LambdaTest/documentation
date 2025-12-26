@@ -136,7 +136,7 @@ Below are detailed instructions for CI/CD tool integrations to help you get the 
 
 ***
 
-Want to know more about Hyperexecute? Here’s a [link](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/) to our Documentation.
+Want to know more about Hyperexecute? Here’s a [link](/support/docs/getting-started-with-hyperexecute/) to our Documentation.
 
 >If your favourite CI/CD tool is not in the list mentioned above, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have it ready shortly for you.
 

@@ -56,7 +56,7 @@ It also comes with a built-in interface for codeless automation testing and vali
 
 ## Prerequisites
 
--   Ensure that you have integrated Katalon Studio with LambdaTest. Follow the steps on this [page](https://www.lambdatest.com/support/docs/katalon-integration-with-lambdatest/) to do so.
+-   Ensure that you have integrated Katalon Studio with LambdaTest. Follow the steps on this [page](/support/docs/katalon-integration-with-lambdatest/) to do so.
     
 -   Ensure that you have the necessary licenses required to use Katalon Studio. You need the Katalon Runtime License to integrate Katalon with HyperExecute.
 

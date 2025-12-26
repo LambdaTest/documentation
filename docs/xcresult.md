@@ -67,7 +67,7 @@ On LambdaTest, you can now **generate and download `.xcresult` bundles** for you
 
 To begin testing, you need to upload both your iOS application (.ipa) file and your XCUI test suite (.ipa) file to LambdaTest. These files are required before executing tests.
 
-Detailed upload steps are available here: [Getting Started with XCUI Testing – Running Your First Test](https://www.lambdatest.com/support/docs/getting-started-with-xcuitest/#running-your-first-test-a-step-by-step-guide)
+Detailed upload steps are available here: [Getting Started with XCUI Testing – Running Your First Test](/support/docs/getting-started-with-xcuitest/#running-your-first-test-a-step-by-step-guide)
 
 ### Step 2: Execute Your Tests with Result Bundles
 
@@ -148,7 +148,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 Result bundles are generated at the Build level. To download the `.xcresult` bundle for a specific session, use the following GET endpoint:
 
 :::note
-- In case of sharding, each shard execution is treated as a separate shards and generates its own `.xcresult` bundle. You will need to retrieve each shard's bundle individually. For more information, see [Sharding in HyperExecute](https://www.lambdatest.com/support/docs/sharding-rd-hyperexec/).
+- In case of sharding, each shard execution is treated as a separate shards and generates its own `.xcresult` bundle. You will need to retrieve each shard's bundle individually. For more information, see [Sharding in HyperExecute](/support/docs/sharding-rd-hyperexec/).
 - To view the `.xcresult` for a specific shard, you must pass the `shard:shardId` as a query parameter in your request.
 :::
 
@@ -171,7 +171,7 @@ Example cURL command to download the result bundle:
 
 :::tip
 You will need your **BASIC_AUTH_TOKEN** (Base64 encoded `username:accesskey`) in the request header.  
-If you’re unsure how to generate it, follow the instructions here: [Executing the Test](https://www.lambdatest.com/support/docs/getting-started-with-xcuitest/#step-3-executing-the-test).
+If you’re unsure how to generate it, follow the instructions here: [Executing the Test](/support/docs/getting-started-with-xcuitest/#step-3-executing-the-test).
 :::
 
 The response is a binary ZIP file containing the `.xcresult` bundle, which you can unzip and open directly in Xcode for detailed analysis.

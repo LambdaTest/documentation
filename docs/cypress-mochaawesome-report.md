@@ -69,7 +69,7 @@ In your Cypress configuration file `cypress.config.js`, add the following code t
 :::
 
 ### Step 2: Configure the HyperExecute YAML File
-In your HyperExecute YAML configuration, define the [`report`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
+In your HyperExecute YAML configuration, define the [`report`](/support/docs/deep-dive-into-hyperexecute-yaml/#report) parameters like this:
 
 ```yaml title="hyperexecute.yaml"
 report: true

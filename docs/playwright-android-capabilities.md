@@ -77,7 +77,7 @@ When you run a test on LambdaTest using a specific device, there may be scenario
 
 To quote an example, consider you want to run the test on an Pixel. It doesn’t matter which one, but it’s got to be an Pixel. In these cases, we can use REGEX to specify exactly that. You’ll now be allotted any Pixel device that’s available which widens the search of devices considerably.
 
-Refer [REGEX for App/Browser Automation](https://www.lambdatest.com/support/docs/regular-expression-appium/) to read more on this.
+Refer [REGEX for App/Browser Automation](/support/docs/regular-expression-appium/) to read more on this.
 
 
 <nav aria-label="breadcrumbs">

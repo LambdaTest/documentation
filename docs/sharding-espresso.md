@@ -360,15 +360,15 @@ framework:
 
 To download these artifacts in your local machine, you can pass the `--download-artifacts` and `--download-report` flag with the CLI command to execute the tests as shown in the next step.
 
-> Learn more about it in the [HyperExecute Espresso Documentation](https://www.lambdatest.com/support/docs/hyperexecute-espresso-testing/)
+> Learn more about it in the [HyperExecute Espresso Documentation](/support/docs/hyperexecute-espresso-testing/)
 
 ## Additional Links
 
 ---
 
-- [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)
-- [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+- [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
+- [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
+- [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

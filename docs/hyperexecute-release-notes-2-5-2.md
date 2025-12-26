@@ -47,12 +47,12 @@ import BugFixTag from '../src/component/bugFixTag';
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/detailed-cypress-logs.png').default} style={{width: '600px'}}  alt="HyperExecute" className="doc_img"/> <br /><br />
 
-> 📕 Learn how to enable [Detailed Command Logs](https://www.lambdatest.com/support/docs/cypress-detailed-command-logs/) for your Cypress tests.
+> 📕 Learn how to enable [Detailed Command Logs](/support/docs/cypress-detailed-command-logs/) for your Cypress tests.
 
 ## 2. Parameterized Report Email Handling in YAML <EnhancementTag value="Enhancement" /> 
 HyperExecute now supports an enhanced approach for managing multiple email addresses within the YAML configuration file. Previously, you needed to define multiple variables for email addresses (`${email1}`, `${email2}`, etc.). With this update, a single variable can now hold multiple email addresses, separated by commas or underscores, simplifying report sharing. This enhancement eliminates the need for multiple variables, making maintaining and modifying email configurations easier.
 
-> 📕 Check the [Reports documentation](https://www.lambdatest.com/support/docs/hyperexecute-email-reports/#how-to-dynamically-set-your-email-address) to learn more about it.
+> 📕 Check the [Reports documentation](/support/docs/hyperexecute-email-reports/#how-to-dynamically-set-your-email-address) to learn more about it.
 
 ## 3. Browser and Selenium Updates for Linux, Windows, and macOS <NewReleaseTag value="New Release" /> 
 Updated the browser versions across multiple platforms and upgraded the Selenium jars. This ensures compatibility with the latest features and security updates, improving test stability across different environments.

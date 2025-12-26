@@ -619,10 +619,10 @@ This may take a few seconds to process the screenshot. Please ensure that you ha
 ## Advanced Options for Screenshot Comparison
 
 
-  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+  **Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
   
 
-  **Advanced Test Settings** - We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites. To know more about our advanced P2P comparison options, click [here](https://www.lambdatest.com/support/docs/test-settings-options/).
+  **Advanced Test Settings** - We offer multiple options for comparing the **Baseline** and the **Test Output** screenshots captured during your automation testing suites. To know more about our advanced P2P comparison options, click [here](/support/docs/test-settings-options/).
   
 
   **Handling Dynamic Data** - In case if you have any dynamic elements that are not in the same position across test runs, you can ignore or select a specific area to be removed from the comparison. For accessing such HTML DOM Config and Options, see [Handling Dynamic Data with DOM Configuration](/support/docs/html-dom-smartui-options).
@@ -861,7 +861,7 @@ let capabilities = {
 If you encounter issues not covered here:
 
 - Review [SmartUI Build Options](/support/docs/smart-ui-build-options) documentation
-- Check [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/) for comparison options
+- Check [Advanced Test Settings](/support/docs/test-settings-options/) for comparison options
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
@@ -871,7 +871,7 @@ If you encounter issues not covered here:
 ## Additional Resources
 
 - [SmartUI Build Options](/support/docs/smart-ui-build-options)
-- [Advanced Test Settings](https://www.lambdatest.com/support/docs/test-settings-options/)
+- [Advanced Test Settings](/support/docs/test-settings-options/)
 - [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data)
 - [Project Settings](/support/docs/smartui-project-settings)
 

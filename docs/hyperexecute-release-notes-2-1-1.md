@@ -39,7 +39,7 @@ slug: hyperexecute-release-notes-2-1-1/
 ></script>
 ## Email Delivery of HyperExecute Job Artifacts
 
-You can now receive [Job Artifacts](https://www.lambdatest.com/support/docs/hyperexecute-artifacts/) directly via email, streamlining the process of accessing and managing your execution results.
+You can now receive [Job Artifacts](/support/docs/hyperexecute-artifacts/) directly via email, streamlining the process of accessing and managing your execution results.
 
 To receive the Artifacts via mail, you simply need to pass a `email` flag in your YAML file.
 
@@ -52,4 +52,4 @@ uploadArtifacts:
         - <another_email_id@example.com>
 ```
 
-> Refer to the detailed documentation on [how to receive artifacts via email](https://www.lambdatest.com/support/docs/hyperexecute-email-reports/#how-to-receive-your-artifacts-via-email)
+> Refer to the detailed documentation on [how to receive artifacts via email](/support/docs/hyperexecute-email-reports/#how-to-receive-your-artifacts-via-email)

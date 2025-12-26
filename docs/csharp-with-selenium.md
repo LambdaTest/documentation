@@ -222,7 +222,7 @@ dotnet run parallel
 ***
 You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = true` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
 
->Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) for more information.
+>Refer our [LambdaTest Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
 
 Here’s how you can establish LambdaTest Tunnel.
 
@@ -250,9 +250,9 @@ ltOptions.Add("tunnel", true);
 
 ## Additional Links
 ***
-* [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/)
-* [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-* [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+* [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
+* [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
+* [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 
 <nav aria-label="breadcrumbs">

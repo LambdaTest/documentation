@@ -47,7 +47,7 @@ slug: mark-as-bug-in-screenshot-testing/
 
 - **Real Time Testing:** To help you test your web-app with live interaction by running it on VMs hosted by LambdaTest cloud server.
 
-- **Screenshot Testing:** Automated bulk [screenshot testing](https://www.lambdatest.com/support/docs/automated-screenshot-testing/) on 25(browsers + OS) combinations in a single test session.
+- **Screenshot Testing:** Automated bulk [screenshot testing](/support/docs/automated-screenshot-testing/) on 25(browsers + OS) combinations in a single test session.
 
 - **Responsive Testing:** Perform cross browser testing across various mobile & desktop devices to ensure your website renders well across different view-ports. Run responsive testing on 46 devices in a single test session.
 

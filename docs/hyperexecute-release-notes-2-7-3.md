@@ -43,7 +43,7 @@ import BugFixTag from '../src/component/bugFixTag';
 ></script>
 
 ## `globalPre` and `globalPost` flag in HyperExecute YAML
-The [`globalPre`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) and [`globalPost`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) flags in the HyperExecute YAML configuration allow for global setup and teardown operations for test execution. These flags enable users to define commands that run before any tests begin (globalPre) and after all tests have completed (globalPost), providing greater control over test executions.
+The [`globalPre`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) and [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) flags in the HyperExecute YAML configuration allow for global setup and teardown operations for test execution. These flags enable users to define commands that run before any tests begin (globalPre) and after all tests have completed (globalPost), providing greater control over test executions.
 
 ```yaml title="hyperexecute.yaml"
 # globalPre
@@ -67,4 +67,4 @@ globalPost:
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/globalPre-globalPost.png').default} alt="cmd" className="doc_img"/>
 
-> 📘 Refer to our detailed documentation for [`globalPre`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) and [`globalPost`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) flags.
+> 📘 Refer to our detailed documentation for [`globalPre`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpre) and [`globalPost`](/support/docs/deep-dive-into-hyperexecute-yaml/#globalpost) flags.

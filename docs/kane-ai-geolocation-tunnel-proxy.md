@@ -67,7 +67,7 @@ KaneAI also supports tunneling to allow you to test websites hosted locally or b
 
 ### Steps to Use Tunnel
 
-**Step 1 :** Configure the tunnel using the [LT tunnel binary](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/#lambdatest-tunnel-guide) with `--env ht-prod` mode enabled. You can use the following command to trigger your tunnel:
+**Step 1 :** Configure the tunnel using the [LT tunnel binary](/support/docs/testing-locally-hosted-pages/#lambdatest-tunnel-guide) with `--env ht-prod` mode enabled. You can use the following command to trigger your tunnel:
 
 <div className="lambdatest__codeblock">
 <CodeBlock className="language-bash">

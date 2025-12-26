@@ -285,7 +285,7 @@ Follow the below steps to run Test using Gitpod:
 
 :::tip
 
-You can also implement [Secret Keys](https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
+You can also implement [Secret Keys](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) in your YAML file.
 :::
 
 ## Navigation in Automation Dashboard

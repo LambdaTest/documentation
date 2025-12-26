@@ -67,7 +67,7 @@ Upload the .ipa files of your app from your system or from a public URL and ensu
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/upload-through-url.webp').default} alt="Native Mobile App Testing"  className="doc_img" width="1366" height="629"/>
 
-**Via API:** Upload apps via API onto the real device dashboard. Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/app-testing-apis/#uploading-your-application) to learn how to upload apps via API. 
+**Via API:** Upload apps via API onto the real device dashboard. Check out our detailed [support documentation](/support/docs/app-testing-apis/#uploading-your-application) to learn how to upload apps via API. 
 
 ## Sharing Apps
 

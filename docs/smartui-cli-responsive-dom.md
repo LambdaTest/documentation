@@ -28,7 +28,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 
-If your application dynamically changes the DOM based on viewport size or specific breakpoints, SmartUI SDKs can be configured to adapt accordingly. When using the SmartUI CLI, the SDK captures the DOM state at the specified viewport size within the test browser, then renders it across the browsers and resolutions defined in your [configuration file](https://www.lambdatest.com/support/docs/smartui-sdk-config-options/).
+If your application dynamically changes the DOM based on viewport size or specific breakpoints, SmartUI SDKs can be configured to adapt accordingly. When using the SmartUI CLI, the SDK captures the DOM state at the specified viewport size within the test browser, then renders it across the browsers and resolutions defined in your [configuration file](/support/docs/smartui-sdk-config-options/).
 
 Therefore, if your application adjusts DOM elements between different screen sizes, ensure that you resize the viewport of your test browser and capture a snapshot at each required width.
 

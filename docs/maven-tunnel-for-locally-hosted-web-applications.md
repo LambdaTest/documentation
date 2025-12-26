@@ -333,7 +333,7 @@ In order to trigger parallel test execution with Maven Tunnel using Serenity BDD
 | basicAuth | `tunnelArgs.put("basicAuth", "<YOUR BASIC AUTH>")` | Basic Auth. |
 | mitm | `tunnelArgs.put("mitm", "true")` | MITM only if basicAuth is provided. |
 
-> For more arguments, refer to our document of [LambdaTest Tunnel Modifiers](https://www.lambdatest.com/support/docs/lambda-tunnel-modifiers/).
+> For more arguments, refer to our document of [LambdaTest Tunnel Modifiers](/support/docs/lambda-tunnel-modifiers/).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

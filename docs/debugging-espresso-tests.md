@@ -128,7 +128,7 @@ KEY|VALUE|DESCRIPTION
 --|--|--
 | video            | TYPE: BOOLEAN <br/> DEFAULT: TRUE <br/> `video= TRUE`<br/> OR `video = FALSE` | Video recording of the complete screen |
 
-Refer to our [Espresso testing documentation](https://www.lambdatest.com/support/docs/getting-started-with-espresso-testing/#capabilities-supported) for more capabilities.
+Refer to our [Espresso testing documentation](/support/docs/getting-started-with-espresso-testing/#capabilities-supported) for more capabilities.
 
 >
 If you still have any questions for us, please feel free to let us know via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Portal**</span> or mail us to support@lambdatest.com

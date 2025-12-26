@@ -56,7 +56,7 @@ afterEachScenario:
   - pwsh run.test
 ```
 
-> 📘 Refer to our detailed documentation for [`afterEachScenario`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#aftereachscenario) flag
+> 📘 Refer to our detailed documentation for [`afterEachScenario`](/support/docs/deep-dive-into-hyperexecute-yaml/#aftereachscenario) flag
 
 ## Role-Based Access Control (RBAC) for Projects
 

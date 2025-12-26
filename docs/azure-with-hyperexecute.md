@@ -117,7 +117,7 @@ Here, the **main** branch is selected as the test repository to commit the Azure
 - **Steps:** In the **steps** section, declare the flow of the pipeline execution. 
 - **Script:** In the **script** section, state the command that you would like to execute in the following steps: 
     - Download a fresh version of the HyperExecute CLI binary
-    - Execute the Hyperexecute CLI binary. (The Hyperexecute CLI binary contains LambdaTest username, access key and path   of the Yaml created for Hyperexecute. You can find more information on this [here.](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid))
+    - Execute the Hyperexecute CLI binary. (The Hyperexecute CLI binary contains LambdaTest username, access key and path   of the Yaml created for Hyperexecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid))
 
 > **Note**: Ensure that your username and access key for your LambdaTest account is visible in the script. 
 

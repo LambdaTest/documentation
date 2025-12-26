@@ -63,7 +63,7 @@ Currently, the Device Passcode feature in App Automation is enabled on the follo
 
 ### Step 1: Upload Your App to LambdaTest
 
-1. **Uploading Your App** – Follow the detailed steps in our [Upload Your Application](https://www.lambdatest.com/support/docs/application-setup-via-api/) guide.
+1. **Uploading Your App** – Follow the detailed steps in our [Upload Your Application](/support/docs/application-setup-via-api/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
 3. Use this **App ID** in the `"app"` capability in your automation script.
 
@@ -97,7 +97,7 @@ To enable Apple Pay automation, include the following capability in your automat
 :::info
 
 - You must add the generated **APP_URL** to the `app` capability in the config file.
-- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+- You can generate capabilities for your test requirements with the help of our inbuilt [**Capabilities Generator tool**](https://www.lambdatest.com/capabilities-generator/). For more details, please refer to our guide on [**Desired Capabilities in Appium**](/support/docs/desired-capabilities-in-appium/).
 
 :::
 

@@ -181,7 +181,7 @@ mode: dynamic #or -->
 
 The `remote` discovery mode addresses the limitations of `local` modes. Instead of running test discovery on your local machine (local), this mode centralizes the process by using a dedicated remote Virtual Machines. 
 
-This setup helps to ease the discovery process and makes it more efficient, especially for complex test setups. Additionally, it fully supports [matrix-based testing](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/), which allows you to discover and manage tests across different configurations more effectively.
+This setup helps to ease the discovery process and makes it more efficient, especially for complex test setups. Additionally, it fully supports [matrix-based testing](/support/docs/hyperexecute-matrix-multiplexing-strategy/), which allows you to discover and manage tests across different configurations more effectively.
 
 > **NOTE :** [`type`](/support/docs/deep-dive-into-hyperexecute-yaml/#type) is not required with remote discovery.
 
@@ -236,7 +236,7 @@ matrix:
 ***
 
 ### `exclusionMatrix`
-The [exclusion matrix](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/#exclusion-in-matrix-strategy) allows you to omit specific combinations of parameters from being tested. For instance, if Safari on Windows is not a valid combination, you can exclude it using the exclusionMatrix parameter, ensuring that invalid or irrelevant test combinations are skipped.
+The [exclusion matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/#exclusion-in-matrix-strategy) allows you to omit specific combinations of parameters from being tested. For instance, if Safari on Windows is not a valid combination, you can exclude it using the exclusionMatrix parameter, ensuring that invalid or irrelevant test combinations are skipped.
 
 ```yaml
 #runson defines the OS of your test execution node.
@@ -597,7 +597,7 @@ errorCategorizedReport:
   enabled: true
 ```
 
-> Refer to the [Error Categorized Report documentation](https://www.lambdatest.com/support/docs/error-categorization-report/) for detailed instructions on generating this RCA report.
+> Refer to the [Error Categorized Report documentation](/support/docs/error-categorization-report/) for detailed instructions on generating this RCA report.
 
 ***
 
@@ -1612,7 +1612,7 @@ background:
   - mysql-server
 ```
 
-> To learn more about it, refer to the [Background Service](https://www.lambdatest.com/support/docs/hyperexecute-background-services/) page.
+> To learn more about it, refer to the [Background Service](/support/docs/hyperexecute-background-services/) page.
 
 ***
 
@@ -1631,7 +1631,7 @@ preDirectives:
   - echo ${framework}
 ```
 
-> You can also use the vars method using the [CLI](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars).
+> You can also use the vars method using the [CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--vars).
 
 ***
 

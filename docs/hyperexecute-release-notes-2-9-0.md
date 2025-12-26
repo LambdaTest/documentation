@@ -51,4 +51,4 @@ We’ve enhanced Projects in HyperExecute to streamline Git integration. You can
 
 You can now integrate Enterprise GitHub accounts seamlessly into Projects.
 
-> 📘 Refer to our detailed documentation for [`Projects`](https://www.lambdatest.com/support/docs/hyperexecute-projects/).
+> 📘 Refer to our detailed documentation for [`Projects`](/support/docs/hyperexecute-projects/).

@@ -98,7 +98,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </Tabs>
 
 ### Steps to Run Your Test
-**Step 1:** Write your Automation Script in the client language of your choice from the ones supported by [Appium](https://www.lambdatest.com/support/docs/appium-languages-and-frameworks/). An automation script for the sample applications have been provided below.
+**Step 1:** Write your Automation Script in the client language of your choice from the ones supported by [Appium](/support/docs/appium-languages-and-frameworks/). An automation script for the sample applications have been provided below.
 
 Here is a sample automation script in Java. Ensure to update the `username` and `accesskey` in the below code.
 

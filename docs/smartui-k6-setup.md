@@ -418,7 +418,7 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [K6 Browser Testing Documentation](https://www.lambdatest.com/support/docs/k6-browser-testing/) for K6-specific issues
+- Visit [K6 Browser Testing Documentation](/support/docs/k6-browser-testing/) for K6-specific issues
 - Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
@@ -433,14 +433,14 @@ If you encounter issues not covered here:
 - [Handling Lazy Loading](/support/docs/smartui-handle-lazy-loading)
 - [Baseline Management](/support/docs/smartui-baseline-management)
 - [Running Your First Project](/support/docs/smartui-running-your-first-project)
-- [K6 Browser Testing Documentation](https://www.lambdatest.com/support/docs/k6-browser-testing/)
+- [K6 Browser Testing Documentation](/support/docs/k6-browser-testing/)
 - [SmartUI API Documentation](https://www.lambdatest.com/support/api-doc/)
 
-For additional information about K6 framework please explore the documentation [here](https://www.lambdatest.com/support/docs/k6-browser-testing/)
+For additional information about K6 framework please explore the documentation [here](/support/docs/k6-browser-testing/)
 
 ## Advanced Options for Screenshot Comparison
 
-**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
@@ -462,7 +462,7 @@ For additional information about K6 framework please explore the documentation [
 
 ## Advanced Options for Screenshot Comparison
 
-**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](https://www.lambdatest.com/support/docs/smart-ui-build-options/).
+**Build Configuration** - If you have multiple screenshots running the same test suite and want to run the comparison for the same test suite, want to add a build as a baseline from your test suite or need to access more SmartUI Build Config Options, click [here](/support/docs/smart-ui-build-options/).
 
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>

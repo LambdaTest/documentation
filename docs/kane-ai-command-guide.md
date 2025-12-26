@@ -118,7 +118,7 @@ Assertions validate expected outcomes. KaneAI supports several categories:
 :::note
 Since **July 20, 2025**, all assertions fail tests immediately by default.  
 Older tests may still use *warn-and-continue* until edited.  
-More info: [Failure Conditions](https://www.lambdatest.com/support/docs/kaneai-failure-conditions)  
+More info: [Failure Conditions](/support/docs/kaneai-failure-conditions)  
 :::
 
 ---

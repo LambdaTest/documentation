@@ -38,7 +38,7 @@ This feature ensures your app uses its **private container directory** instead o
 
 ### 1. Upload Your Application
 - Upload your iOS app to LambdaTest following standard procedures.  
-- Refer to the [**Upload your Application**](https://www.lambdatest.com/support/docs/application-setup-via-api/#upload-your-application) documentation for detailed instructions.  
+- Refer to the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-your-application) documentation for detailed instructions.  
 - Note the **App ID** returned after uploading — you will use this in your automation scripts.
 
 ---

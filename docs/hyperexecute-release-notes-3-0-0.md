@@ -45,7 +45,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 ></script>
 ## Language Support for Android Real Device Maestro Framework
 
-We have introduced language support for Maestro tests on Android devices in HyperExecute. Now, you can configure the language parameter directly in your HyperExecute YAML under the [framework](https://www.lambdatest.com/support/docs/hyperexecute-yaml-version0.2/#framework) flag.
+We have introduced language support for Maestro tests on Android devices in HyperExecute. Now, you can configure the language parameter directly in your HyperExecute YAML under the [framework](/support/docs/hyperexecute-yaml-version0.2/#framework) flag.
 
 This enhancement is particularly useful when your testing applications in non-English environments. For example, you can now run tests in Spanish by setting:
 
@@ -60,4 +60,4 @@ framework:
 ## BiDi Testing Support with Selenium WebDriver
 HyperExecute now supports BiDi (Bi-Directional) Testing with Selenium WebDriver. BiDi provides a two-way communication channel between the client and the browser, allowing you to go beyond traditional WebDriver commands. With BiDi enabled, you can interact with real-time browser events such as console logs, network traffic, JavaScript exceptions, and more, all directly from your test scripts.
 
-> To learn more about BiDi testing with Selenium WebDriver on HyperExecute, refer to our [detailed documentation](https://www.lambdatest.com/support/docs/hyperexecute-bidi-testing/)
+> To learn more about BiDi testing with Selenium WebDriver on HyperExecute, refer to our [detailed documentation](/support/docs/hyperexecute-bidi-testing/)

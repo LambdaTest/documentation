@@ -57,7 +57,7 @@ Using LambdaTest with Bitrise, you can effortlessly perform [XCUI testing](https
 3. A GitHub / BitBucket / GitLab or other repository to connect with Bitrise.
 
 :::important Note
-If you are getting started with Bitrise CI, please refer to our documentation on [running Appium tests in Bitrise CI](https://www.lambdatest.com/support/docs/bitrise-integration/). 
+If you are getting started with Bitrise CI, please refer to our documentation on [running Appium tests in Bitrise CI](/support/docs/bitrise-integration/). 
 :::
 
 ## Configuring The LambdaTest App Automate - XCUI Step In Bitrise
@@ -106,7 +106,7 @@ Other options:
 
 :::info
 
-[XCUI Testing On LambdaTest](https://www.lambdatest.com/support/docs/getting-started-with-xcuitest/#capabilities-supported)
+[XCUI Testing On LambdaTest](/support/docs/getting-started-with-xcuitest/#capabilities-supported)
 
 [Automation Capabilities Generator For Selenium and Appium](https://www.lambdatest.com/capabilities-generator/)
 :::

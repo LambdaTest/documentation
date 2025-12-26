@@ -45,7 +45,7 @@ The new integration between Bamboo CI and HyperExecute will allow teams to execu
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/bamboo.png').default} alt="Image"  className="doc_img"/>
 
-> Refer to the detailed documentation on how to integrate [Bamboo CI](https://www.lambdatest.com/support/docs/bamboo-integration-with-hyperexecute/) with HyperExecute.
+> Refer to the detailed documentation on how to integrate [Bamboo CI](/support/docs/bamboo-integration-with-hyperexecute/) with HyperExecute.
 
 ## GoCD Integration
 
@@ -55,4 +55,4 @@ The integration between GoCD and HyperExecute will allow teams to execute their 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/release-notes/gocd.png').default} alt="Image"  className="doc_img"/>
 
-> Refer to the detailed documentation on how to integrate [GoCD](https://www.lambdatest.com/support/docs/gocd-integration-with-hyperexecute/) with HyperExecute.
+> Refer to the detailed documentation on how to integrate [GoCD](/support/docs/gocd-integration-with-hyperexecute/) with HyperExecute.

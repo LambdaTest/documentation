@@ -50,7 +50,7 @@ LambdaTest provides a robust and versatile Selenium Automation Grid, designed to
 - Access to **3000+ browsers** and **operating systems**.
 - Secure and reliable infrastructure
 - Faster build times and higher test coverage
-- **Local testing support** via [LambdaTest Tunnel](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
+- **Local testing support** via [LambdaTest Tunnel](/support/docs/testing-locally-hosted-pages/)
 - Simultaneous testing across multiple configurations
 
 ## Supported Languages and Frameworks

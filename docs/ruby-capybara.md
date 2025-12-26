@@ -204,7 +204,7 @@ bundle exec rake parallel
 ***
 You can test your locally hosted or privately hosted projects with [<BrandName /> Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using <BrandName /> Tunnel app. All you would have to do is set up an SSH tunnel using <BrandName /> Tunnel app and pass toggle `tunnel = True` via desired capabilities. <BrandName /> Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
 
->Refer our [<BrandName /> Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) for more information.
+>Refer our [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
 
 Here’s how you can establish <BrandName /> Tunnel.
 
@@ -235,9 +235,9 @@ caps = {
 ```
 ## Additional Links
 ***
-* [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/)
-* [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-* [How to integrate <BrandName /> with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+* [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
+* [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
+* [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

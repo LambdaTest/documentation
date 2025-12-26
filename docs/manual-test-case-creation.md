@@ -97,7 +97,7 @@ The Test Manager offers a comprehensive Steps section with a rich text editor an
 
 - Import existing Modules by clicking on the Modules button. 
 
-To know more about how to use Modules refer the [Modules doc](https://www.lambdatest.com/support/docs/create-modules/).
+To know more about how to use Modules refer the [Modules doc](/support/docs/create-modules/).
 
 #### Add New Step:
 
@@ -115,7 +115,7 @@ You can use the **Generate with AI** option to ask agent to analyse your test ca
 To save the changes made in the Test Case click on the `Save Changes` button OR use the `Command + /` for Mac & `Ctrl + /` shortcut. 
 
 :::note
- Any change in the Test Case, on **saving** will create a new version for that Test Case. You can add a commit message to note the reason for changes. To know more about how versioning works checkout the [Versioning doc](https://www.lambdatest.com/support/docs/test-case-versioning/). 
+ Any change in the Test Case, on **saving** will create a new version for that Test Case. You can add a commit message to note the reason for changes. To know more about how versioning works checkout the [Versioning doc](/support/docs/test-case-versioning/). 
 :::
 
 ***
@@ -141,13 +141,13 @@ To save the changes made in the Test Case click on the `Save Changes` button OR 
 
 ### Issues section
 
-This section lists the linked Jira/ADO Issues with the Test Case. For more information refer [this page](https://www.lambdatest.com/support/docs/link-jira-issues-with-test-manager/)
+This section lists the linked Jira/ADO Issues with the Test Case. For more information refer [this page](/support/docs/link-jira-issues-with-test-manager/)
 
 ***
 
 ### Version History
 
-This section allows you to manage the Version History of the test caase by comparing Versions, Viewing or Reverting to them. For more information refer [this page](https://www.lambdatest.com/support/docs/test-case-versioning). 
+This section allows you to manage the Version History of the test caase by comparing Versions, Viewing or Reverting to them. For more information refer [this page](/support/docs/test-case-versioning). 
 
 ***
 

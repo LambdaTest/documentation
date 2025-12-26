@@ -52,7 +52,7 @@ Project-level secrets are bound to a specific HyperExecute project instead of a 
 ## How to Add Project Level Secrets?
 ### Step 1: Create a Project
 
-To begin, create a new project on the LambdaTest platform. Follow the instructions to [Create a Project](https://www.lambdatest.com/support/docs/hyperexecute-projects/#setup-your-project)
+To begin, create a new project on the LambdaTest platform. Follow the instructions to [Create a Project](/support/docs/hyperexecute-projects/#setup-your-project)
 
 ### Step 2: Add Secrets to the Project
 Once your project is created:

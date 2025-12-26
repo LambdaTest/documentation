@@ -94,7 +94,7 @@ Available for organisations with a private cloud real device plan with LambdaTes
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/UpdateApp.png').default} alt="kaneai-update-app-config" className="doc_img"/>
 
-* **Custom ID** – In case you are using [API](https://www.lambdatest.com/support/docs/application-setup-via-api/#upload-your-application) to upload your application and using the custom_id parameter, you can choose to add a custom ID while creating a configuration, so  that the application gets updated automatically each time you upload a new app with the same custom_id.
+* **Custom ID** – In case you are using [API](/support/docs/application-setup-via-api/#upload-your-application) to upload your application and using the custom_id parameter, you can choose to add a custom ID while creating a configuration, so  that the application gets updated automatically each time you upload a new app with the same custom_id.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/app-test/CustomID.png').default} alt="kaneai-custom-id-app" className="doc_img"/>
 

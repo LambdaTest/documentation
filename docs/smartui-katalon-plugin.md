@@ -52,7 +52,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
     }}
 ></script>
 
-The **Katalon Studio SmartUI Plugin** integrates [Katalon Studio](https://www.katalon.com/) with [LambdaTest SmartUI](https://www.lambdatest.com/support/docs/smart-visual-regression-testing/), enabling **visual regression testing** directly inside your test automation workflows.
+The **Katalon Studio SmartUI Plugin** integrates [Katalon Studio](https://www.katalon.com/) with [LambdaTest SmartUI](/support/docs/smart-visual-regression-testing/), enabling **visual regression testing** directly inside your test automation workflows.
 
 With this plugin, you can:
 - Capture screenshots at any point in your test flow

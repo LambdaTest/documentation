@@ -291,7 +291,7 @@ Sample Capabilities for both android and iOS are mentioned below -
 </TabItem>
 </Tabs>
 
-> For more details, please refer to our guide on [Desired Capabilities in Appium](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/).
+> For more details, please refer to our guide on [Desired Capabilities in Appium](/support/docs/desired-capabilities-in-appium/).
 
 ## Navigation in Automation Dashboard
 

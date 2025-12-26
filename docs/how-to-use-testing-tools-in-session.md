@@ -101,7 +101,7 @@ The **IP Geolocation** feature allows you to emulate website and mobile experien
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/ip-geolocation.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the [IP Geolocation](https://www.lambdatest.com/support/docs/list-of-supported-locales/) feature.
+Check out our detailed support documentation to know more about the [IP Geolocation](/support/docs/list-of-supported-locales/) feature.
 
 ### GPS Location
 
@@ -120,7 +120,7 @@ You can simulate these network environments using either pre-defined profiles or
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/network-throttling-real-device.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the [Network Throttling](https://www.lambdatest.com/support/docs/app-auto-network-throttling/) feature.
+Check out our detailed support documentation to know more about the [Network Throttling](/support/docs/app-auto-network-throttling/) feature.
 
 
 ### Files Upload
@@ -129,7 +129,7 @@ Real device app testing on LambdaTest comes with preloaded media files on remote
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/upload-files-real-device.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Check out our detailed support documentation to know more about the [Files Upload](https://www.lambdatest.com/support/docs/upload-media/) feature.
+Check out our detailed support documentation to know more about the [Files Upload](/support/docs/upload-media/) feature.
 
 ### iOS Settings
 

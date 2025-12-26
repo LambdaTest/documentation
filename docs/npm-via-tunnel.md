@@ -77,7 +77,7 @@ If you are using `npm_via_tunnel` for the first time, here are a few things you 
 
 - Once you have followed these steps, npm will automatically route all of its traffic through the tunnel and you will be able to install npm packages from the specified registry.
 
-> To download private dependencies follow this [documentation](https://www.lambdatest.com/support/docs/private-dependencies-cypress/).
+> To download private dependencies follow this [documentation](/support/docs/private-dependencies-cypress/).
 
 ## Troubleshooting
 

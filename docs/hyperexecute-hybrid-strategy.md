@@ -36,7 +36,7 @@ slug: hyperexecute-hybrid-strategy/
       })
     }}
 ></script>
-HyperExecute’s Hybrid Strategy is a combination of AutoSplit and Matrix Strategy. You can run all of the combinations of [Matrix Strategy](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/), and use the [AutoSplit Strategy](https://www.lambdatest.com/support/docs/hyperexecute-auto-split-strategy/) to run them in parallel on our virtual machines.
+HyperExecute’s Hybrid Strategy is a combination of AutoSplit and Matrix Strategy. You can run all of the combinations of [Matrix Strategy](/support/docs/hyperexecute-matrix-multiplexing-strategy/), and use the [AutoSplit Strategy](/support/docs/hyperexecute-auto-split-strategy/) to run them in parallel on our virtual machines.
 
 ## Why do you need the Hybrid Strategy?
 
@@ -63,7 +63,7 @@ Now the given `parallelism` is 2, hence it will create the same set of the above
 -   The version of the YAML file that you are using is `0.1`.    
 -   The test discovery mode has to be dynamic.
 
-> You can run your tests in Hybrid Strategy by configuring the following flags in your [YAML file](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/).
+> You can run your tests in Hybrid Strategy by configuring the following flags in your [YAML file](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
 
 - **autosplit**: To use HyperExecute’s AutoSplit Strategy, you need to set this flag to `true`. Similarly, this flag should be set to `true` in Hybrid Strategy too.

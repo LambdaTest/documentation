@@ -63,7 +63,7 @@ In the case of **iOS** devices, you can enter the website URL once the session h
  
 **Step 5**: Select the **Tunnel** option in the top right corner to test your locally hosted and privately hosted websites. 
 
-Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) to learn how to activate the LT Tunnel.
+Check out our detailed [support documentation](/support/docs/testing-locally-hosted-pages/) to learn how to activate the LT Tunnel.
 
 **Step 6**: Click on Start to run your test session.
 

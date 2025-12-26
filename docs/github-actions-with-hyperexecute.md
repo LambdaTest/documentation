@@ -117,7 +117,7 @@ jobs:
 In the steps section, you should declare the execution commands.  
   - The first step in the above sample YAML changes the path of the root directory.
   - In the second step it downloads the HyperExecute CLI binary. 
-  - The third step is the execution command which executes The Hyperexecute CLI binary. This contains LambdaTest username, access key, and path of the Yaml created for Hyperexecute. You can find more information on this [here.](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
+  - The third step is the execution command which executes The Hyperexecute CLI binary. This contains LambdaTest username, access key, and path of the Yaml created for Hyperexecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/)
 
 
 

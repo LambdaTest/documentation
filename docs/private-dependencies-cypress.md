@@ -29,7 +29,7 @@ Earlier if your project includes any private dependency, the tests will error ou
 
 ---
 
-Assuming that you have run a Cypress test on lambdatest platform ( if not, this article [here](https://www.lambdatest.com/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on LambdaTest), you need to follow these steps below:
+Assuming that you have run a Cypress test on lambdatest platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on LambdaTest), you need to follow these steps below:
 
 ### Update LambdaTest Cypress CLI
 
@@ -87,7 +87,7 @@ You can either add private dependency in the `package.json` file or in the `lamb
 
 After doing this setup, run your tests on the **LambdaTest platform** and now the test will execute perfectly with the **private dependencies**.
 
-> To download private dependencies over tunnel follow this [documentation](https://www.lambdatest.com/support/docs/npm-via-tunnel/).
+> To download private dependencies over tunnel follow this [documentation](/support/docs/npm-via-tunnel/).
 
 ---
 

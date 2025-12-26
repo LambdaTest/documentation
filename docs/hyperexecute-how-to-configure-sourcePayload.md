@@ -70,7 +70,7 @@ sourcePayload:
 
 5. **commit**: If you want to run a specific commit file other than the **HEAD** commit, then you need to define here the specific commit ID.
 
-> As a best practice, you should not use your PAT directly in the YAML file. Instead of that, you can make use of our [vault](https://www.lambdatest.com/support/docs/hyperexecute-how-to-save-and-manage-secrets/) feature and add the PAT to your secrets. To use the vault feature in the HyperExecute YAML file, you can refer the example given below.
+> As a best practice, you should not use your PAT directly in the YAML file. Instead of that, you can make use of our [vault](/support/docs/hyperexecute-how-to-save-and-manage-secrets/) feature and add the PAT to your secrets. To use the vault feature in the HyperExecute YAML file, you can refer the example given below.
 
 ```yaml title="hyperexecute.yaml"
 sourcePayload:

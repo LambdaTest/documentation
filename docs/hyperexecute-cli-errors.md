@@ -43,7 +43,7 @@ slug: hyperexecute-cli-error/
 This document will help you debug your failed job if you are facing any CLI issues. 
 
 :::tip
-If you are encountering any error which is properly not detailed, it is recommend to use [**`verbose`**](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--verbose) mode in HyperExecute CLI command.
+If you are encountering any error which is properly not detailed, it is recommend to use [**`verbose`**](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/#--verbose) mode in HyperExecute CLI command.
 :::
 
 

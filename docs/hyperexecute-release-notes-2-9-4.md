@@ -64,7 +64,7 @@ ltOptions:
   video: false
 ```
 
-> 📘 Refer to our detailed documentation for [`ltOptions`](https://www.lambdatest.com/support/docs/hyperexecute-yaml-capability-overrides/) flag.
+> 📘 Refer to our detailed documentation for [`ltOptions`](/support/docs/hyperexecute-yaml-capability-overrides/) flag.
 
 
 ## Network Logs & Tunnel Support for Maestro Framework
@@ -75,4 +75,4 @@ HyperExecute now supports `network logs` and `tunnel` capabilities for Maestro t
 - **Tunnel Support:** Access internal or staging environments securely using LambdaTest Tunnel.
 - Supported across both virtual and real mobile devices.
 
-> 📘 Refer to our detailed documentation for [`Maestro`](https://www.lambdatest.com/support/docs/hyperexecute-maestro-testing/).
+> 📘 Refer to our detailed documentation for [`Maestro`](/support/docs/hyperexecute-maestro-testing/).

@@ -54,7 +54,7 @@ TestComplete, from SmartBear, streamlines automated testing across desktop, web,
 ## Prerequisites
 
 - <BrandName /> account. You can [sign up for free.](https://accounts.lambdatest.com/login)
-- <BrandName /> [Username and Access Key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+- <BrandName /> [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 - Download TestComplete from its official website and complete the signup process.
 - Generate your App Id by uploading it to the <BrandName /> Server.
 

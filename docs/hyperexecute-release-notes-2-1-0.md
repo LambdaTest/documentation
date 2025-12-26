@@ -49,4 +49,4 @@ tunnelOpts:
 ## this flag is mandatory to pass to enable cloning via tunnel
 ```
 
-> Refer to the detailed documentation on [how to clone your private repositories via tunnel](https://www.lambdatest.com/support/docs/hyperexecute-how-to-configure-tunnel/#clone-a-repository-via-tunnel)
+> Refer to the detailed documentation on [how to clone your private repositories via tunnel](/support/docs/hyperexecute-how-to-configure-tunnel/#clone-a-repository-via-tunnel)
