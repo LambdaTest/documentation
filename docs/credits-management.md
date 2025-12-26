@@ -132,21 +132,27 @@ The **AI Test Case Generator** converts diverse inputs (text, PDFs, audio, video
 ## FAQs
 
 **Q: What happens when my credits run out?**
+
 AI features that require credits will be disabled. You can **purchase credits** or **upgrade** [here](https://billing.lambdatest.com/billing/subscriptions?addCredits=true).
 
 **Q: Who can view balances and transactions?**
+
 Users with the **Admin** role in your LambdaTest organization.
 
 **Q: Do unused credits expire?**
+
 For free users, complimentary credits are provided for one-time usage and do not expire. While for users subscribed to LambdaTest products, the complimentary credits get reset at the beginning of each month. Any credits explicitly purchased, do not expire.
 
 **Q: Why were credits refunded after generation?**
+
 When fewer scenarios than the selected Max Scenarios are generated, the difference is **credited back automatically**.
 
 **Q: Can I cap my organization’s usage?**
-Yes—set **Soft** and **Hard** limits (Admins only).
+
+Yes, set **Soft** and **Hard** limits (Admins only).
 
 **Q: Does the platform offer AI FinOps tools to control and manage AI testing costs?**
+
 Yes, it provides AI FinOps capabilities for cost control and spend management, enabling organizations to monitor, manage, and optimize costs across AI-driven testing workflows. This includes pre-execution credit controls, operation-level cost tracking, and detailed cost analytics to prevent overspending and ensure financial visibility.
 
 **Key capabilities include:**
