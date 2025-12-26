@@ -25,6 +25,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <RealDeviceTag value="Real Device" /> 
 
@@ -36,17 +37,17 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Languages and Frameworks Supported on HyperExecute ",
-          "item": "https://www.lambdatest.com/support/docs/supported-appium-plugins/"
+          "item": `${BRAND_URL}/support/docs/supported-appium-plugins/`
         }]
       })
     }}
@@ -55,12 +56,12 @@ import RealDeviceTag from '../src/component/realDevice';
 
 # Appium Plugins 
 
-Enhance your testing experience on LambdaTest by leveraging a variety of Appium plugins. Plugins offer various ways to extend or modify Appium's behavior. They are completely optional and are not needed for standard automation functionality, but you may find them useful for more specialized automation workflows.
+Enhance your testing experience on <BrandName /> by leveraging a variety of Appium plugins. Plugins offer various ways to extend or modify Appium's behavior. They are completely optional and are not needed for standard automation functionality, but you may find them useful for more specialized automation workflows.
 By using these plugins, you can tailor your testing environment to better suit your project's specific needs, leading to more efficient and effective test automation.
 
 ## Supported Plugins
 
-Below is a list of the supported Appium plugins on LambdaTest:
+Below is a list of the supported Appium plugins on <BrandName />:
 
 | Plugin Name       |  Description                                                                                  | Example                    |
 |-------------------|-------------------------------------------------------------------------------------------------------|---------------------------------------------------|

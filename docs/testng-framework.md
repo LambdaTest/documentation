@@ -21,6 +21,7 @@ slug: testng-with-selenium-running-java-automation-scripts-on-lambdatest-seleniu
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +31,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Running Java Automation Scripts On Selenium Grid Using TestNG Framework",
-          "item": "https://www.lambdatest.com/support/docs/testng-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": `${BRAND_URL}/support/docs/testng-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/`
         }]
       })
     }}
@@ -53,7 +54,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-In this topic, you will learn how to configure and run tests using **TestNG** on LambdaTest's [Selenium testing cloud platform](https://www.lambdatest.com/selenium-automation).
+In this topic, you will learn how to configure and run tests using **TestNG** on <BrandName />'s <a href={`${BRAND_URL}/selenium-automation`}>Selenium testing cloud platform</a>.
 
 ## Objectives
 
@@ -64,12 +65,12 @@ By the end of this topic, you will be able to:
 1. Set up an environment for testing your hosted web pages using **TestNG** framework with **Selenium**.
 2. Understand and configure the core capabilities required for your Selenium test suite.
 3. Run test cases in parallel using **TestNG** with Selenium to reduce build times.
-4. Test your locally hosted pages on LambdaTest platform.
-5. Explore advanced features of LambdaTest.
+4. Test your locally hosted pages on <BrandName /> platform.
+5. Explore advanced features of <BrandName />.
 
 :::tip Sample repo
 
-All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/Java-TestNG-Selenium" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/Java-TestNG-Selenium" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
 
@@ -102,9 +103,9 @@ mvn versions:display-dependency-updates
 
 ### Setting up your Authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest Selenium Grid. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) or through [LambdaTest Profile](https://accounts.lambdatest.com/login).
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) or through [<BrandName /> Profile](https://accounts.lambdatest.com/login).
 
-**Step 2:** Set LambdaTest **Username** and **Access Key** in environment variables.
+**Step 2:** Set <BrandName /> **Username** and **Access Key** in environment variables.
 
 <Tabs className="docs__val">
 
@@ -161,8 +162,8 @@ public class TestNGTodo{
         capabilities.setCapability("browserName", "chrome");
         capabilities.setCapability("version", "70.0");
         capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get the any available one
-        capabilities.setCapability("build", "LambdaTestSampleApp");
-        capabilities.setCapability("name", "LambdaTestJavaSample");
+        capabilities.setCapability("build", "<BrandName />SampleApp");
+        capabilities.setCapability("name", "<BrandName />JavaSample");
         try {
             driver = new RemoteWebDriver(new URL("https://" + username + ":" + accesskey + gridURL), capabilities);
         } catch (MalformedURLException e) {
@@ -202,15 +203,15 @@ public class TestNGTodo{
 
 ### Configuring your Test Capabilities
 
-**Step 3:** In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with LambdaTest Selenium grid capabilities via capabilities object. The capabilities object in the above code are defined as:
+**Step 3:** In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with <BrandName /> Selenium grid capabilities via capabilities object. The capabilities object in the above code are defined as:
 
 ```java
 DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", "chrome");
         capabilities.setCapability("version", "70.0");
         capabilities.setCapability("platform", "win10"); // If this cap isn't specified, it will just get the any available one
-        capabilities.setCapability("build", "LambdaTestSampleApp");
-        capabilities.setCapability("name", "LambdaTestJavaSample");
+        capabilities.setCapability("build", "<BrandName />SampleApp");
+        capabilities.setCapability("name", "<BrandName />JavaSample");
 ```
 > You can also use **dev** and **beta** browser versions. To generate capabilities for your test requirements, you can use our inbuilt 🔗 [Capabilities Generator Tool](https://www.lambdatest.com/capabilities-generator/).
 
@@ -224,7 +225,7 @@ mvn test -D suite=single.xml
 
 :::info
 
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://accounts.lambdatest.com/login). LambdaTest Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [<BrandName /> automation dashboard](https://accounts.lambdatest.com/login). <BrandName /> Automation Dashboard will help you view all your text logs, screenshots and video recording for your entire automation tests.
 
 :::
 
@@ -285,7 +286,7 @@ To run parallel tests using **TestNG**, we would have to execute the below comma
 
 :::info
 
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [LambdaTest automation dashboard](https://accounts.lambdatest.com/login).
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on [<BrandName /> automation dashboard](https://accounts.lambdatest.com/login).
 
 :::
 
@@ -293,21 +294,21 @@ Your test results would be displayed on the test console (or command-line interf
 
 ---
 
-You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+You can test your locally hosted or privately hosted projects with <a href={`${BRAND_URL}/selenium-automation`}><BrandName /> Selenium grid cloud</a> using <BrandName /> Tunnel app. All you would have to do is set up an SSH tunnel using <BrandName /> Tunnel app and pass toggle `tunnel = True` via desired capabilities. <BrandName /> Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
 
 :::tip Tunnel Help
 
-Refer our :link: [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) for more information.
+Refer our :link: [<BrandName /> Tunnel documentation]({`${BRAND_URL}/support/docs/testing-locally-hosted-pages/`}) for more information.
 
 :::
 
-Here’s how you can establish LambdaTest Tunnel.
+Here's how you can establish <BrandName /> Tunnel.
 
 :::info Download the binary file
 
-- [LambdaTest Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-- [LambdaTest Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-- [LambdaTest Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+- [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+- [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+- [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 
 :::
 
@@ -327,7 +328,7 @@ So if your user name is **lambdatest@example.com**, the command would be:
   </CodeBlock>
 </div>
 
-Once you are able to connect **LambdaTest Tunnel** successfully, you would just have to pass on tunnel capabilities in the code as shown:
+Once you are able to connect **<BrandName /> Tunnel** successfully, you would just have to pass on tunnel capabilities in the code as shown:
 
 ```java title="Tunnel Capability"
 DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -340,7 +341,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 
 - [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/)
 - [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+- [How to integrate <BrandName /> with CI/CD]({`${BRAND_URL}/support/docs/integrations-with-ci-cd-tools/`})
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

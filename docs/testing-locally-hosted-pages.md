@@ -29,36 +29,39 @@ slug: testing-locally-hosted-pages/
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Docker Tunnel",
-          "item": "https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/"
+          "item": `${BRAND_URL}/support/docs/testing-locally-hosted-pages/`
         }]
       })
     }}
 ></script>
-**LambdaTest Tunnel** is a secure and encrypted tunneling feature that allows devs and QAs to test their locally hosted web applications or websites on the cloud-based real machines. It establishes a secure connection between the user’s local machine and the real machine in the cloud. There are multiple connectivity options like **TCP with TLS 1.2 over port 443**, **Websocket (port 443)**,. Tunnel Binary performs network scanning and selects the best mode if not explicitly specified.
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+**<BrandName /> Tunnel** is a secure and encrypted tunneling feature that allows devs and QAs to test their locally hosted web applications or websites on the cloud-based real machines. It establishes a secure connection between the user's local machine and the real machine in the cloud. There are multiple connectivity options like **TCP with TLS 1.2 over port 443**, **Websocket (port 443)**,. Tunnel Binary performs network scanning and selects the best mode if not explicitly specified.
 
 <img loading="lazy" src={require('../assets/images/tunnel/tunnel.png').default} alt="TestNG HyperExecute Terminal Logs"  width="1920" height="868" className="doc_img"/>
 
-> All Tunnel credentials (access keys, API tokens, etc.) are private and confidential. A system compromise may result in their unauthorized disclosure; therefore, you must secure the machine running the LambdaTest tunnel. Do not share or expose credentials in public code, repositories, or environments. In the event of a compromise, you are solely responsible for immediately revoking and regenerating the credentials. LambdaTest assumes no liability for any losses arising from failure to comply. 
+> All Tunnel credentials (access keys, API tokens, etc.) are private and confidential. A system compromise may result in their unauthorized disclosure; therefore, you must secure the machine running the <BrandName /> tunnel. Do not share or expose credentials in public code, repositories, or environments. In the event of a compromise, you are solely responsible for immediately revoking and regenerating the credentials. <BrandName /> assumes no liability for any losses arising from failure to comply. 
 
-## Why to Use LambdaTest Tunnel?
+## Why to Use <BrandName /> Tunnel?
 
-LambdaTest Tunnel offers numerous benefits for web developers, testers, and QA professionals. These include secure and encrypted connection, cross-browser compatibility testing, localhost testing, etc.
+<BrandName /> Tunnel offers numerous benefits for web developers, testers, and QA professionals. These include secure and encrypted connection, cross-browser compatibility testing, localhost testing, etc.
 
 - **Secured and Encrypted :** It provides a secure and encrypted connection between your local machine and the virtual machines in the cloud, thereby ensuring the privacy of your test data and online communications.
-- **Cost Effective :** With LambdaTest Tunnel, you can test your web applications or websites, local folder, and files across a wide range of browsers and operating systems without setting up complex and expensive local testing environments.
+- **Cost Effective :** With <BrandName /> Tunnel, you can test your web applications or websites, local folder, and files across a wide range of browsers and operating systems without setting up complex and expensive local testing environments.
 - **Test on Real Environment :** It lets you test your locally hosted web applications or websites on cloud-based real OS machines. You can even run accessibility tests on desktop browsers while testing locally hosted web applications and pages.
 
-> Please note that the LambdaTest tunnel client does not include any AI or ML capabilities, and none of the data it proxies is used for AI or ML training.
+> Please note that the <BrandName /> tunnel client does not include any AI or ML capabilities, and none of the data it proxies is used for AI or ML training.
 
 ## Download the Tunnel Binary
 You can download the Tunnel Binary as per your respective machine architecture from the links given below :
@@ -78,15 +81,15 @@ You can download the Tunnel Binary as per your respective machine architecture f
 | FreeBSD/A386 | https://downloads.lambdatest.com/tunnel/v3/freebsd/386/LT |
 | Solaris/AMD64 | https://downloads.lambdatest.com/tunnel/v3/solaris/amd64/LT |
 
-## Minimum System Requirements for LambdaTest Tunnel
+## Minimum System Requirements for <BrandName /> Tunnel
 
 
-To ensure optimal performance and reliability when running LambdaTest Tunnel, your system should meet or exceed the following requirements:
+To ensure optimal performance and reliability when running <BrandName /> Tunnel, your system should meet or exceed the following requirements:
 
 - **Operating System:** Windows 7 or later, macOS 10.12 or later, Linux (modern distributions), FreeBSD, Solaris
 - **CPU Architecture:** x86_64 (AMD64), ARM64
 - **CPU Cores:** 1 physical cores or higher
 - **Memory (RAM):** 2 GB minimum
 - **Disk Space:** 200 MB available
-- **Network:** Stable broadband connection (100 Mbps or higher recommended); must allow outbound connections to LambdaTest servers over port 443 (TCP/WebSocket)
-- **Permissions:** User must have permission to execute the LambdaTest Tunnel binary
+- **Network:** Stable broadband connection (100 Mbps or higher recommended); must allow outbound connections to <BrandName /> servers over port 443 (TCP/WebSocket)
+- **Permissions:** User must have permission to execute the <BrandName /> Tunnel binary
