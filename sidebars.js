@@ -1231,6 +1231,11 @@ module.exports = {
         type: "doc",
         label: "Test Your First AI Agent",
         id: "testing-your-first-ai-agent",
+      },
+      {
+        type: "doc",
+        label: "FAQs",
+        id: "agent-to-agent-faqs",
       }
 
 
