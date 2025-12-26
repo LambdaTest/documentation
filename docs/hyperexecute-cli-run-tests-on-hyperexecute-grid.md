@@ -358,15 +358,15 @@ This flag allows you to preserve the job payload after the job is completed succ
 ***
 
 ### `--runson`
-This flag overrides the defined OS value in your YAML file's [`runson`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runson) flag. You can also define multiple values for OS (comma separated) in the case of [Matrix](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/) and [Hybrid](https://www.lambdatest.com/support/docs/hyperexecute-hybrid-strategy/) mode execution.
+This flag overrides the defined OS value in your YAML file's [`runson`](/support/docs/deep-dive-into-hyperexecute-yaml/#runson) flag. You can also define multiple values for OS (comma separated) in the case of [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) and [Hybrid](/support/docs/hyperexecute-hybrid-strategy/) mode execution.
 
-In case of [AutoSplit](https://www.lambdatest.com/support/docs/hyperexecute-auto-split-strategy/) mode:
+In case of [AutoSplit](/support/docs/hyperexecute-auto-split-strategy/) mode:
 
 ```bash
 --runson linux
 ```
 
-In case of [Matrix](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid](https://www.lambdatest.com/support/docs/hyperexecute-hybrid-strategy/) mode:
+In case of [Matrix](/support/docs/hyperexecute-matrix-multiplexing-strategy/) or [Hybrid](/support/docs/hyperexecute-hybrid-strategy/) mode:
 
 ```bash
 --runson linux,win,win11,mac,mac13

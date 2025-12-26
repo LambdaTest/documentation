@@ -13,6 +13,8 @@ url: https://www.lambdatest.com/support/docs/testing-locally-hosted-apps/
 site_name: LambdaTest
 slug: testing-locally-hosted-apps/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,38 +24,38 @@ slug: testing-locally-hosted-apps/
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Local Testing",
-          "item": "https://www.lambdatest.com/support/docs/testing-locally-hosted-apps/"
+          "item": `${BRAND_URL}/support/docs/testing-locally-hosted-apps/`
         }]
       })
     }}
 ></script>
 
 
-Using the LambdaTest tunnel, you can test locally and privately hosted apps across various real Android and iOS devices on the LambdaTest Appium test automation platform. LambdaTest tunnel uses protocols like **Web Socket, HTTPS/TCP** and more to let you build a secure and unique tunnel connection between your local system and LambdaTest cloud servers.
+Using the <BrandName /> tunnel, you can test locally and privately hosted apps across various real Android and iOS devices on the <BrandName /> Appium test automation platform. <BrandName /> tunnel uses protocols like **Web Socket, HTTPS/TCP** and more to let you build a secure and unique tunnel connection between your local system and <BrandName /> cloud servers.
 
-In this documentation, learn how to configure LambdaTest tunnel to test locally or privately hosted apps while performing mobile app automation.
+In this documentation, learn how to configure <BrandName /> tunnel to test locally or privately hosted apps while performing mobile app automation.
 
 To test apps locally, you will need to configure:
 
-1. Connection with LambdaTest tunnel.
+1. Connection with <BrandName /> tunnel.
 
-2. Test scripts to run via LambdaTest tunnel.
+2. Test scripts to run via <BrandName /> tunnel.
 
-## Setting Up Connection With LambdaTest Tunnel
+## Setting Up Connection With <BrandName /> Tunnel
 
 ---
 
-Shown below are the steps to configure the connection with LambdaTest tunnel.
+Shown below are the steps to configure the connection with <BrandName /> tunnel.
 
 1. Download the binary file based on your operating system.
 
@@ -75,25 +77,25 @@ Shown below are the steps to configure the connection with LambdaTest tunnel.
 
 ---
 
-After configuring the connection with LambdaTest tunnel, you will need to set the capability `tunnel` to `True`.
+After configuring the connection with <BrandName /> tunnel, you will need to set the capability `tunnel` to `True`.
 
 | Key    | Values     | Description          | Desired Capability |
 | ------ | ---------- | -------------------- | ------------------ |
 | tunnel | true/false | Configure the tunnel | `"tunnel" : True,` |
 
-You can also add the `tunnel` capability using LambdaTest Capability Generator.
+You can also add the `tunnel` capability using <BrandName /> Capability Generator.
 
 > In case you have any questions or need any additional information, drop them at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

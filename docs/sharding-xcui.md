@@ -161,7 +161,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 1. Firstly, create a folder on your local.
 2. Download the HyperExecute CLI file and put it under this folder. You may download HyperExecute CLI from either of the following ways:
-- Download it from our HyperExecute documentation page [here](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/), or
+- Download it from our HyperExecute documentation page [here](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/), or
 - "Get Started" through HyperExecute [onboarding](https://hyperexecute.lambdatest.com/quickstart) and download the CLI.
 3. Refer to the sample `.ipa` files and `.yaml` file given below. Put all of them under this folder.
 - [ProverbialTest.ipa](https://prod-mobile-artefacts.lambdatest.com/assets/docs/ProverbialTest.ipa)
@@ -272,7 +272,7 @@ filters:
 This example will run only the 2 classes & one test as mentioned from the TestSuite.
 
 ## XCTestPlan in Sharding
-To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](https://www.lambdatest.com/support/docs/hyperexecute-yaml-version0.2/#framework) flag as shown below:
+To implement the XCTestPlan in Sharding, add the `xctestplan` flag along with `app` and `testSuite` in the [framework](/support/docs/hyperexecute-yaml-version0.2/#framework) flag as shown below:
 
 ```yaml
 framework:
@@ -286,6 +286,6 @@ framework:
 > Refer the documentation to learn how to use [XCTestPlan feature](/support/docs/xctestplan/).
 
 ## Additional Links
-- [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)
-- [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+- [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
+- [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
+- [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)

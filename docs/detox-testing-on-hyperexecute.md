@@ -103,7 +103,7 @@ Use the sample YAML below to configure your execution:
 https://github.com/LambdaTest/LT-detox/blob/main/yaml/hyperexecute.yaml
 ```
 
-> 📘 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/).
+> 📘 To explore more configuration options and tailor settings to your project needs, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
 
 ### Step 3: Monitor the Test Execution
 

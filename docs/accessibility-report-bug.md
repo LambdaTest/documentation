@@ -50,7 +50,7 @@ The Bug Reporting feature in LambdaTest Accessibility Testing helps you to effic
 
 ## Steps to Report a Bug
 ### Prerequisite
-- Integrate your LambdaTest account with your required [Bug Tracker platform](https://www.lambdatest.com/support/docs/bug-tracking-tools/).
+- Integrate your LambdaTest account with your required [Bug Tracker platform](/support/docs/bug-tracking-tools/).
 
 ### Step 1. Navigating to Accessibility Test Report
 - Navigate to **Accessibility** section in your LambdaTest dashboard.

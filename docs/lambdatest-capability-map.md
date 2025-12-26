@@ -136,7 +136,7 @@ browserOptions.setCapability("LT:Options", ltOptions);
 </Tabs>
 
 
-To migrate your test suites from BrowserStack, checkout this guide on [Migrating from BrowserStack to LambdaTest](https://www.lambdatest.com/support/docs/browserstack-to-lambdatest-migration-guide/).
+To migrate your test suites from BrowserStack, checkout this guide on [Migrating from BrowserStack to LambdaTest](/support/docs/browserstack-to-lambdatest-migration-guide/).
 
 ## Migrating from Sauce Labs to LambdaTest
 
@@ -184,7 +184,7 @@ browserOptions.setCapability("LT:Options", ltOptions);
 
 </Tabs>
 
-To migrate your test suites from Sauce Labs, checkout this guide on [Migrating from Sauce Labs to LambdaTest](https://www.lambdatest.com/support/docs/saucelabs-to-lambdatest-migration-guide/).
+To migrate your test suites from Sauce Labs, checkout this guide on [Migrating from Sauce Labs to LambdaTest](/support/docs/saucelabs-to-lambdatest-migration-guide/).
 
 :::tip 
 To generate capabilities use [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to define key automation testing parameters, such as browser, version, operating system, and additional test settings.

@@ -72,7 +72,7 @@ Use instruction:
 
 If issues arise:
 
-- Use LambdaTest App Live [UI Inspector](https://www.lambdatest.com/support/docs/ui-inspector/) to verify if the element class is supported.
+- Use LambdaTest App Live [UI Inspector](/support/docs/ui-inspector/) to verify if the element class is supported.
 
 ## Dismissing Popups
 

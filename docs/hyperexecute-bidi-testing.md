@@ -57,9 +57,9 @@ BiDi brings modern automation capabilities that were missing in Selenium until n
 - DOM and page lifecycle tracking
 - Ensures your tests are aligned with the latest W3C standards.
 
-[HyperExecute](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/) is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
+[HyperExecute](/support/docs/getting-started-with-hyperexecute/) is an AI Native Test Orchestration Cloud Platform that empowers you to run **end-to-end** tests **quickly** and **efficiently**. It provides Just-in-Time (JIT) testing infrastructure with fast execution **speeds**, **smart orchestration**, and **detailed logs**.
 
-This guide details how to execute your **BiDi** tests on **HyperExecute** using [YAML 0.1](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/)
+This guide details how to execute your **BiDi** tests on **HyperExecute** using [YAML 0.1](/support/docs/hyperexecute-yaml-parameters/)
 
 ## Run a Sample Project
 ### Step 1: Clone Sample Repository

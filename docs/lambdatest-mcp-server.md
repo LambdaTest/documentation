@@ -153,7 +153,7 @@ In your MCP tool, use the following configuration file:
 
 LambdaTest MCP Server provides five main tools:
 
-1. **[HyperExecute MCP Server:](https://www.lambdatest.com/support/docs/hyperexecute-mcp-server/)** HyperExecute MCP Server is an AI-native test orchestration platform that dramatically simplifies and accelerates your automated testing workflow
-2. **[Automation MCP Server:](https://www.lambdatest.com/support/docs/automation-mcp-server/)** Automation MCP Server simplifies test failure triaging for all automation test cases executed on LambdaTest. 
-3. **[SmartUI MCP Server:](https://www.lambdatest.com/support/docs/smartui-mcp-server/)** The SmartUI MCP Server allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis.
-4. **[Accessibility MCP Server:](https://www.lambdatest.com/support/docs/accessibility-mcp-server/)** LambdaTest’s Accessibility MCP Server enables comprehensive accessibility testing for both publicly hosted URLs and still-in-development front-end React applications. It delivers detailed accessibility reports that identify issues and provide guidance on remediation.
+1. **[HyperExecute MCP Server:](/support/docs/hyperexecute-mcp-server/)** HyperExecute MCP Server is an AI-native test orchestration platform that dramatically simplifies and accelerates your automated testing workflow
+2. **[Automation MCP Server:](/support/docs/automation-mcp-server/)** Automation MCP Server simplifies test failure triaging for all automation test cases executed on LambdaTest. 
+3. **[SmartUI MCP Server:](/support/docs/smartui-mcp-server/)** The SmartUI MCP Server allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis.
+4. **[Accessibility MCP Server:](/support/docs/accessibility-mcp-server/)** LambdaTest’s Accessibility MCP Server enables comprehensive accessibility testing for both publicly hosted URLs and still-in-development front-end React applications. It delivers detailed accessibility reports that identify issues and provide guidance on remediation.

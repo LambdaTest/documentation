@@ -249,7 +249,7 @@ Once you have run your tests, you can view the test execution along with logs. Y
 
 ---
 
-- [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/)
+- [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [Automation Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)
 
 <nav aria-label="breadcrumbs">

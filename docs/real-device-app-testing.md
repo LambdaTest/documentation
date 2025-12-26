@@ -64,7 +64,7 @@ In the case of **iOS**, you can install from the App Store, install from Test Fl
 
 **Step 5**: Select the **Tunnel** option in the top right corner (optional) to test your locally hosted and privately hosted websites.
 
-For detailed instructions on how to activate the tunnel, please refer to the detailed [support documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/).
+For detailed instructions on how to activate the tunnel, please refer to the detailed [support documentation](/support/docs/testing-locally-hosted-pages/).
 
 <img loading="lazy" src={require('../assets/images/mobile-app-testing/real-device-tunnel.webp').default} alt="Real Device Tunnel"  className="doc_img" width="1366" height="629"/>
 

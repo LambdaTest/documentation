@@ -131,11 +131,11 @@ Till now you have learnt how to set up your generators on GenRocket. Now, in ord
 ## Running Your First Test With Data From GenRocket on HyperExecute
 ---
 
-**Step 1:** In order to run your tests in HyperExecute, you need a basic settings file, known as **HyperExecute YAML** configuration file. This file contains a list of settings and commands that one can execute on HyperExecute. [Learn more](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/).
+**Step 1:** In order to run your tests in HyperExecute, you need a basic settings file, known as **HyperExecute YAML** configuration file. This file contains a list of settings and commands that one can execute on HyperExecute. [Learn more](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
 >**Note:** The HyperExecute YAML configuration file is already present in the sample project that you have downloaded.
 
-Following two commands have been already added in the "[pre](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre)" section of this HyperExecute Yaml.
+Following two commands have been already added in the "[pre](/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre)" section of this HyperExecute Yaml.
 
 * In Hyperexecute, every time the tests are run, a new environment is created, and gets destroyed as soon as the tests are completed. 
 
@@ -151,11 +151,11 @@ mkdir /home/ltuser/.genrocket
 cp ******Profile.grp /home/ltuser/.genrocket
 ```
 
-* Once done, the [pre section](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre) inside the HyperExecute YAML will look like as shown below (already present inside the sample project).
+* Once done, the [pre section](/support/docs/deep-dive-into-hyperexecute-yaml/#14-predirectives-or-pre) inside the HyperExecute YAML will look like as shown below (already present inside the sample project).
 
 <img loading="lazy" src={require('../assets/images/genrocket-integration/gen-eight.webp').default} alt="Integrating LambdaTest With genrocket" width="1366" height="625" className="doc_img"/>
 
->**Note:** You will need to create a HyperExecute YAML configuration file specific to your project if you are not using the given sample project. In that case, the pre-section would remain the same however, other commands will need relevant changes. [Learn More](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/).
+>**Note:** You will need to create a HyperExecute YAML configuration file specific to your project if you are not using the given sample project. In that case, the pre-section would remain the same however, other commands will need relevant changes. [Learn More](/support/docs/deep-dive-into-hyperexecute-yaml/).
 
 **Step 2:** Once you have the HyperExecute YAML ready, you just need to execute the HyperExecute CLI command. This command would trigger the CLI which will initiate a Job on HyperExecute Platform to run your test cases.
 
@@ -170,7 +170,7 @@ cp ******Profile.grp /home/ltuser/.genrocket
 
 <img loading="lazy" src={require('../assets/images/genrocket-integration/gen-nine.webp').default} alt="Integrating LambdaTest With genrocket" width="1366" height="625" className="doc_img"/>
 
-To learn more about HyperExecute visit our [documentation](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/) or contact our support team from the in app support section.
+To learn more about HyperExecute visit our [documentation](/support/docs/getting-started-with-hyperexecute/) or contact our support team from the in app support section.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

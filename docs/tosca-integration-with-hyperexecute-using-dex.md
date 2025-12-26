@@ -23,21 +23,23 @@ slug: tosca-integration-with-hyperexecute-using-dex/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Tosca Integration with HyperExecute using DEX",
-          "item": "https://www.lambdatest.com/support/docs/tosca-integration-with-hyperexecute-using-dex/"
+          "item": `${BRAND_URL}/support/docs/tosca-integration-with-hyperexecute-using-dex/`
         }]
       })
     }}
 ></script>
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Tosca Integration using DEX
 

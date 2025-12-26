@@ -85,8 +85,8 @@ To make this easier, LambdaTest provides keyboard shortcuts that simulate these 
 ---
 ## Additional Links
 
-- [Manual Testing on Real Devices](https://www.lambdatest.com/support/docs/app-testing-on-real-devices/)
-- [Apple Pay Manual Testing Guide](https://www.lambdatest.com/support/docs/apple-pay-manual/)
-- [Assistive Touch](https://www.lambdatest.com/support/docs/assistive-touch-on-real-ios-devices/)
+- [Manual Testing on Real Devices](/support/docs/app-testing-on-real-devices/)
+- [Apple Pay Manual Testing Guide](/support/docs/apple-pay-manual/)
+- [Assistive Touch](/support/docs/assistive-touch-on-real-ios-devices/)
 
 

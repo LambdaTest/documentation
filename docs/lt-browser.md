@@ -113,12 +113,12 @@ To get started, you need to download the executable file from here.
 >*   Test Locally Hosted Web-Apps or Websites
 >*   Test Web Pages Behind Login
 >*   Debug Your Website Using LT Browser
->*   [View Performance Report Of Your Website Using LT Browser](https://www.lambdatest.com/support/docs/performance-report/)
->*   [Network Throttling To Test Website Responsiveness](https://www.lambdatest.com/support/docs/network-throttling-for-responsive-testing/)
->*   [What Is Scroll Sync In LT Browser?](https://www.lambdatest.com/support/docs/scroll-sync/)
->*   [Capturing Full-Page Screenshots Of Your Websites](https://www.lambdatest.com/support/docs/full-page-screenshots/)
+>*   [View Performance Report Of Your Website Using LT Browser](/support/docs/performance-report/)
+>*   [Network Throttling To Test Website Responsiveness](/support/docs/network-throttling-for-responsive-testing/)
+>*   [What Is Scroll Sync In LT Browser?](/support/docs/scroll-sync/)
+>*   [Capturing Full-Page Screenshots Of Your Websites](/support/docs/full-page-screenshots/)
 >*   Using Mouse Pointer For Touch Mode
->*   [Getting The JavaScript Error Report Of Your Website](https://www.lambdatest.com/support/docs/error-reports/)
+>*   [Getting The JavaScript Error Report Of Your Website](/support/docs/error-reports/)
 >*   What Is LT Browser Feedback Board?
 >*   Keyboard Shortcuts
 

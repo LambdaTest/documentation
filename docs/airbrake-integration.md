@@ -21,6 +21,8 @@ url: https://www.lambdatest.com/support/docs/airbrake-integration/
 site_name: LambdaTest
 slug: airbrake-integration/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ slug: airbrake-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Airbrake Integration",
-          "item": "https://www.lambdatest.com/support/docs/airbrake-integration/"
+          "item": `${BRAND_URL}/support/docs/airbrake-integration/`
         }]
       })
     }}
@@ -57,7 +59,7 @@ Airbrake is a software tool and service designed to assist developers in trackin
 </div>
 </div>
 
-LambdaTest's integration with Airbrake provides a seamless solution for tracking and managing bugs and issues encountered during [cross-browser testing](https://www.lambdatest.com). With this integration, developers can effortlessly log bugs directly from the LambdaTest platform to their Airbrake instance, eliminating the need for manual maintenance of tasks and issues.
+<BrandName />'s integration with Airbrake provides a seamless solution for tracking and managing bugs and issues encountered during [cross-browser testing]({BRAND_URL}). With this integration, developers can effortlessly log bugs directly from the <BrandName /> platform to their Airbrake instance, eliminating the need for manual maintenance of tasks and issues.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="_amxJrEiMyA">
@@ -66,10 +68,10 @@ LambdaTest's integration with Airbrake provides a seamless solution for tracking
 </div>
 
 
-## Integrating Airbrake With LambdaTest
+## Integrating Airbrake With <BrandName />
 ***
 
-**Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
 
 **Step 2:** Select **Integrations** from the left sidebar and head to **Airbrake**.
 
@@ -114,7 +116,7 @@ Copy and paste the required credentials from your Airbrake account and click **I
 
 <img loading="lazy" src={require('../assets/images/airbrake-integration/click-install.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-Now you have successfully integrated your LambdaTest account with Airbrake. 
+Now you have successfully integrated your <BrandName /> account with Airbrake. 
 
 <img loading="lazy" src={require('../assets/images/airbrake-integration/success-install.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -122,7 +124,7 @@ Now you have successfully integrated your LambdaTest account with Airbrake.
 ## One-Click Bug Logging With Airbrake
 ***
 
-**Step 1:** In your LambdaTest Dashboard, head to **Real-Time Testing > Browser Testing** from the left navigation menu.
+**Step 1:** In your <BrandName /> Dashboard, head to **Real-Time Testing > Browser Testing** from the left navigation menu.
 
 **Step 2:** To perform **live-interactive testing** of your website or a web app, enter the web URL, select the testing type (Desktop/Mobile), select the browser version, OS, and resolution, and click **Start**.
 
@@ -142,7 +144,7 @@ Upon clicking, a cloud-based virtual machine will fire up, running real browsers
 
 <img loading="lazy" src={require('../assets/images/airbrake-integration/airbrake-mark-as-bug.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 6:** To view the logged issues, visit LambdaTest Dashboard and head to **Manage > Issue Tracker** from the left navigation bar.
+**Step 6:** To view the logged issues, visit <BrandName /> Dashboard and head to **Manage > Issue Tracker** from the left navigation bar.
 
 
 **Step 7:** Inside the **Issue Tracker**, you'll notice the logged bugs and their test environment details. Click on the **upper right arrow** in the square button to view your logged bugs in Airbrake instance.  
@@ -158,24 +160,24 @@ Upon clicking, a cloud-based virtual machine will fire up, running real browsers
 
 ***
 
-**Step 1:** Sign in to your LambdaTest account and visit **Integrations** from the left sidebar menu.
+**Step 1:** Sign in to your <BrandName /> account and visit **Integrations** from the left sidebar menu.
 
 **Step 2:** From My Integrations, click **Remove** under the **Airbrake** block.
 
 <img loading="lazy" src={require('../assets/images/airbrake-integration/uninstall-airbrake.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
 
-> That was all you need to know for LambdaTest + Airbrake Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + Airbrake Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

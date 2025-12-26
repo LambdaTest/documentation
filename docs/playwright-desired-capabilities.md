@@ -16,6 +16,8 @@ url: https://www.lambdatest.com/support/docs/capabilities-for-playwright/
 site_name: LambdaTest
 slug: capabilities-for-playwright/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,23 +27,23 @@ slug: capabilities-for-playwright/
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Execution Setup",
-          "item": "https://www.lambdatest.com/support/docs/capabilities-for-playwright/"
+          "item": `${BRAND_URL}/support/docs/capabilities-for-playwright/`
         }]
       })
     }}
 ></script>
-The LambdaTest Capability Generator allows you to automatically create the capabilities class needed to run your
-Playwright automation scripts on LambdaTest. Here are a few capabilities that you can configure to run your Playwright
+The <BrandName /> Capability Generator allows you to automatically create the capabilities class needed to run your
+Playwright automation scripts on <BrandName />. Here are a few capabilities that you can configure to run your Playwright
 tests.
 
 | Key | Expected Values | Description |Capability|

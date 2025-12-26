@@ -271,7 +271,7 @@ Changes to Project Settings will impact builds/comparisons executed after the ch
 :::
 
 **Additional Information:**
-For detailed information on these options, refer to our [Comparison Settings Documentation](https://www.lambdatest.com/support/docs/test-settings-options/).
+For detailed information on these options, refer to our [Comparison Settings Documentation](/support/docs/test-settings-options/).
 
 </TabItem>
 
@@ -296,7 +296,7 @@ When **`Smart Baseline`** is turned on, the system automatically updates the bas
 :::
 
 :::caution Warning
-Please note that this feature is not supported for projects integrated with `Git` as `Git`-based projects follow a [Git branching strategy](https://www.lambdatest.com/support/docs/smartui-github-app-integration/).
+Please note that this feature is not supported for projects integrated with `Git` as `Git`-based projects follow a [Git branching strategy](/support/docs/smartui-github-app-integration/).
 :::
 
 **Git Settings**
@@ -304,7 +304,7 @@ Please note that this feature is not supported for projects integrated with `Git
 Configure Git-related settings for your project, including the baseline branch name, auto-approval branches, GitHub repository linkage, and run status checks.
 
 **Additional Information:**
-For detailed information on these options, refer to our [Git Baseline Branching Documentation](https://www.lambdatest.com/support/docs/smartui-github-app-integration/).
+For detailed information on these options, refer to our [Git Baseline Branching Documentation](/support/docs/smartui-github-app-integration/).
 
 **Overwrite Screenshot**
 
@@ -386,4 +386,4 @@ Only the **Admin** or **Creator** of the project can delete a project. Once dele
 - [Smart Ignore Feature](/support/docs/smartui-smartignore) - Automatically ignore layout shifts
 - [Configuration Options](/support/docs/smartui-sdk-config-options) - SDK configuration file options
 - [Running Your First Project](/support/docs/smartui-running-your-first-project) - Get started with SmartUI
-- [Test Settings Options](https://www.lambdatest.com/support/docs/test-settings-options/) - Advanced comparison settings
+- [Test Settings Options](/support/docs/test-settings-options/) - Advanced comparison settings

@@ -132,7 +132,7 @@ Cypress Tests can be executed on HyperExecute using 2 methods:
 
 The Auto-Split mechanism enables you to run tests at predefined concurrency levels and distribute them across available infrastructure. Concurrency can be achieved at various levels, including file, module, test suite, test, and scenario.
 
-> To learn more about Auto-Split, refer to the [Auto-Split Getting Started Guide](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/#smart-auto-test-splitting)
+> To learn more about Auto-Split, refer to the [Auto-Split Getting Started Guide](/support/docs/getting-started-with-hyperexecute/#smart-auto-test-splitting)
 
 #### Core
 
@@ -482,7 +482,7 @@ HAR logs offer a comprehensive view of your application's network activity durin
 - Analyzing performance bottlenecks
 - Diagnosing Load Order Issues
 
-Network Logs are disabled by default. To enable it, pass the `Network` and `FullHar` capability to `true` in the [`cypressOps`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag.
+Network Logs are disabled by default. To enable it, pass the `Network` and `FullHar` capability to `true` in the [`cypressOps`](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops) flag.
 
 ```yaml
 cypressOps:
@@ -507,7 +507,7 @@ pre:
 ```
 
 :::tip
-For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](https://www.lambdatest.com/support/docs/cypress-detailed-command-logs/#for-cypress-v10-and-later-versions) documentation.
+For in detailed information on how to configure it properly, visit [Cypress Detailed Command Logs](/support/docs/cypress-detailed-command-logs/#for-cypress-v10-and-later-versions) documentation.
 :::
 
 <nav aria-label="breadcrumbs">

@@ -37,17 +37,17 @@ slug: webview-testing-in-android/
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Webview Testing",
-          "item": "https://www.lambdatest.com/support/docs/webview-testing-in-android/"
+          "item": `${BRAND_URL}/support/docs/webview-testing-in-android/`
         }]
       })
     }}
@@ -59,17 +59,19 @@ slug: webview-testing-in-android/
 
 WebView, in Android, is the feature which allows any app to display a webpage as a part of its own activity, instead of opening it on a separate browser. This not only allows the app to retain the users within itself but also increases the user-experience multifold. As a result, WebView Testing is one of the most widely in-demand testing techniques around the world as of today.
 
-LambdaTest now allows you to perform your WebView Testing using its online cloud-based Selenium Grid, which gives you 3000+ combinations of browsers, operating systems, and mobile devices. You will be able to test WebViews of your app, interact with it in realtime, mark bugs, and much more, with just a click, on the LambdaTest platform. In this article, we will see how to perform WebView Testing in Android using Selenium Grid on LambdaTest.
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<BrandName /> now allows you to perform your WebView Testing using its online cloud-based Selenium Grid, which gives you 3000+ combinations of browsers, operating systems, and mobile devices. You will be able to test WebViews of your app, interact with it in realtime, mark bugs, and much more, with just a click, on the <BrandName /> platform. In this article, we will see how to perform WebView Testing in Android using Selenium Grid on <BrandName />.
 
 >Note: This is not our primary offering, as of now. Hence you need to launch WebView manually, using the steps mentioned in this doc.
 
-## How To Perform WebView Testing On LambdaTest
+## How To Perform WebView Testing On <BrandName />
 
 * * *
 
-**Step 1:** You will need an account on LambdaTest. If you already have an account on LambdaTest, you can directly skip to the next step. If you don't have an account yet, you can [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** You will need an account on <BrandName />. If you already have an account on <BrandName />, you can directly skip to the next step. If you don't have an account yet, you can [register for free](https://accounts.lambdatest.com/register).
 
-**Step 2:** Login to your LambdaTest account using [this link](https://accounts.lambdatest.com/login).
+**Step 2:** Login to your <BrandName /> account using [this link](https://accounts.lambdatest.com/login).
 
 
 **Step 3:** Navigate to "Real Time Testing" from the left navigation menu. <img loading="lazy" src={require('../assets/images/uploads/1-1.webp').default} alt="real time testing" width="1922" height="870" className="doc_img"/>
@@ -90,7 +92,7 @@ LambdaTest now allows you to perform your WebView Testing using its online cloud
 
 **Step 10:** Once the **WebView Browser Tester** is open, you can perform your WebView Testing as per your requirement. <img loading="lazy" src={require('../assets/images/uploads/8-1.webp').default} alt="WebView Browser Tester" width="1018" height="780" className="doc_img"/>
 
-## How To Mark Bug While Performing WebView Testing On LambdaTest
+## How To Mark Bug While Performing WebView Testing On <BrandName />
 
 * * *
 
@@ -116,21 +118,21 @@ For this demo purpose, we have set the required details as shown in the image be
 
 These steps will mark the bug successfully. You can a message appearing on your top right screen showing you that the bug has been marked successfully. <img loading="lazy" src={require('../assets/images/uploads/14-1.webp').default} alt="bug mark" width="500" height="103" className="doc_img"/>
 
-To know more about the bug marking in LambdaTest, you can refer to [this article](/docs/mark-as-bug/).
+To know more about the bug marking in <BrandName />, you can refer to [this article](/docs/mark-as-bug/).
 
-You can even integrate 3rd party apps in your account from our vast [list of integrations](https://www.lambdatest.com/integrations) to send the bug directly on your desired workspace. You can also track your issues using our [Issue Tracker](https://issues.lambdatest.com/) directly, and much more.
+You can even integrate 3rd party apps in your account from our vast <a href={`${BRAND_URL}/integrations`}>list of integrations</a> to send the bug directly on your desired workspace. You can also track your issues using our [Issue Tracker](https://issues.lambdatest.com/) directly, and much more.
 
->That's all to get started for performing WebView Testing in Android on LambdaTest. We are constantly adding more features and integrations to increase your productivity through our testing environment. If you still have any doubts or questions, please don't hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at **[support@lambdatest.com](mailto:support@lambdatest.com)**.
+>That's all to get started for performing WebView Testing in Android on <BrandName />. We are constantly adding more features and integrations to increase your productivity through our testing environment. If you still have any doubts or questions, please don't hesitate to contact us. Our experts are available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at **[support@lambdatest.com](mailto:support@lambdatest.com)**.
 >
 >Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href="https://www.lambdatest.com/support/docs/">Support</a>
+      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Webview Testing</span>

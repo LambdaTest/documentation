@@ -46,14 +46,14 @@ slug: real-devices-integration-with-hyperexecute/
 
 # Real Devices Integration with HyperExecute
 
-Till now you have executed your test scripts on the [Real Device Automation](https://www.lambdatest.com/support/docs/appium-python-pytest/). This Document will not only explain to you about how to use Real Devices on HyperExecute but also the superpower you just unlocked with HyperExecute - Test Orchestration and Intelligence.
+Till now you have executed your test scripts on the [Real Device Automation](/support/docs/appium-python-pytest/). This Document will not only explain to you about how to use Real Devices on HyperExecute but also the superpower you just unlocked with HyperExecute - Test Orchestration and Intelligence.
 
 HyperExecute is a smart test orchestration platform to run end-to-end tests at the fastest speed possible. HyperExecute lets you achieve an accelerated time to market by providing a test infrastructure that offers optimal speed, test orchestration, and detailed execution logs.
 
 **Let's first take a look at the different ways of executing tests on HyperExecute:**
 
 ## 1. Triggering a job on HyperExecute  
-In order to trigger a job on HyperExecute, it requires the [HyperExecute CLI](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and a set of instructions inside the [HyperExecute Yaml](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/) file. When you trigger the CLI command, it connects with the HyperExecute APIs which then distributes the tests across different machines/nodes for parallel execution as shown in the diagram below:
+In order to trigger a job on HyperExecute, it requires the [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and a set of instructions inside the [HyperExecute Yaml](/support/docs/deep-dive-into-hyperexecute-yaml/) file. When you trigger the CLI command, it connects with the HyperExecute APIs which then distributes the tests across different machines/nodes for parallel execution as shown in the diagram below:
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd1.png').default} alt="Image"  className="doc_img"/>
 
 
@@ -70,7 +70,7 @@ In order to execute a job on HyperExecute via Jenkins, you would need to perform
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd4.png').default} alt="Image"  className="doc_img"/>   
 
 
-You can read more about it [here](https://www.lambdatest.com/support/docs/hyperexecute-integration-with-ci-cd-tools/).  When you want the job to be initiated from the Jenkins Pipeline, it would look as shown in the diagram below: 
+You can read more about it [here](/support/docs/hyperexecute-integration-with-ci-cd-tools/).  When you want the job to be initiated from the Jenkins Pipeline, it would look as shown in the diagram below: 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/real-devices/rd5.png').default} alt="Image"  className="doc_img"/>  
 
 ## 5. How to Trigger Real Device tests on HyperExecute ?

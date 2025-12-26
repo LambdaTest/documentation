@@ -68,7 +68,7 @@ slug: hyperexecute-general-faqs/
 
 #### 5. **How to use HyperExecute?**
 
-  Tests are triggered on HyperExecute using [HyperExecute CLI](https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute/) using a YAML file to configure the executing settings including target OS, concurrency and other CI level information. This YAML file can be generated easily using a web based YAML generator that supports multiple [languages and frameworks](https://www.lambdatest.com/support/docs/hyperexecute-supported-languages-and-frameworks/). As a user you need to focus on writing tests and running the CLI with YAML, everything else is taken care of by the orchestration platform.
+  Tests are triggered on HyperExecute using [HyperExecute CLI](/support/docs/getting-started-with-hyperexecute/) using a YAML file to configure the executing settings including target OS, concurrency and other CI level information. This YAML file can be generated easily using a web based YAML generator that supports multiple [languages and frameworks](/support/docs/hyperexecute-supported-languages-and-frameworks/). As a user you need to focus on writing tests and running the CLI with YAML, everything else is taken care of by the orchestration platform.
 
 ***
 

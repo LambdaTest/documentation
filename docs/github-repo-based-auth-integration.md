@@ -89,7 +89,7 @@ After selecting the installation location, click **Request** to get the approval
 
 You can now start testing your website or mobile app testing and log bugs directly from the LambdaTest platform to your GitHub repository.
 
-Looking to get started? Check out this documentation on [real-time testing on desktop browsers](https://www.lambdatest.com/support/docs/getting-started-with-desktop-browser-real-time-testing/).
+Looking to get started? Check out this documentation on [real-time testing on desktop browsers](/support/docs/getting-started-with-desktop-browser-real-time-testing/).
 
 
 

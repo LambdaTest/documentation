@@ -45,7 +45,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 ## Overview
 
-Sauce Labs and HyperExecute are both cloud-based testing platforms that provide a wide range of browsers and devices for running automated tests. However, HyperExecute provides you with a variety of [features](https://www.lambdatest.com/support/docs/key-features-of-hyperexecute) to help you manage and analyze your test results more easily and efficiently.
+Sauce Labs and HyperExecute are both cloud-based testing platforms that provide a wide range of browsers and devices for running automated tests. However, HyperExecute provides you with a variety of [features](/support/docs/key-features-of-hyperexecute) to help you manage and analyze your test results more easily and efficiently.
 
 By making the switch to HyperExecute, you're not just migrating; you're upgrading your entire testing experience. This document ensures that you have all the information required for a successful migration. Whether you're driven by cost-efficiency, scalability, performance, or advanced features, HyperExecute is the perfect choice for your automated testing needs.
 
@@ -59,11 +59,11 @@ There are several benefits to migrating your tests from Sauce Labs to HyperExecu
 
 - **Test Orchestration :** HyperExecute is a cloud-based Test Orchestration platform that enables teams to run tests efficiently across multiple devices and browsers, featuring parallel execution, smart test distribution, automatic test reordering, retry logic, and real-time reporting and analytics.
 
-- **Cost-Efficiency :** HyperExecute doesn't just offer superior [features](https://www.lambdatest.com/support/docs/key-features-of-hyperexecute); it's also cost-effective. By reducing testing time and enhancing productivity, you can optimize your testing budget, allocating resources to other critical areas of your project.
+- **Cost-Efficiency :** HyperExecute doesn't just offer superior [features](/support/docs/key-features-of-hyperexecute); it's also cost-effective. By reducing testing time and enhancing productivity, you can optimize your testing budget, allocating resources to other critical areas of your project.
 
-- **Seamless Integration :** HyperExecute provides out-of-the-box support for popular tools such as [Tosca](https://www.lambdatest.com/support/docs/tosca-integration-with-hyperexecute/), [Katalon](https://www.lambdatest.com/support/docs/katalon-integration-with-hyperexecute/), and [Accelq](https://www.lambdatest.com/support/docs/hyperexecute-accelq-integration/). This means you can effortlessly integrate your testing workflow with your preferred tools, streamlining your testing processes.
+- **Seamless Integration :** HyperExecute provides out-of-the-box support for popular tools such as [Tosca](/support/docs/tosca-integration-with-hyperexecute/), [Katalon](/support/docs/katalon-integration-with-hyperexecute/), and [Accelq](/support/docs/hyperexecute-accelq-integration/). This means you can effortlessly integrate your testing workflow with your preferred tools, streamlining your testing processes.
 
-- **CI/CD Tools :** We offer robust support for [CI/CD](https://www.lambdatest.com/support/docs/hyperexecute-integration-with-ci-cd-tools/) tools, allowing you to automate testing and release processes seamlessly, resulting in faster software delivery.
+- **CI/CD Tools :** We offer robust support for [CI/CD](/support/docs/hyperexecute-integration-with-ci-cd-tools/) tools, allowing you to automate testing and release processes seamlessly, resulting in faster software delivery.
 
 ## Steps to Migrate
 
@@ -73,11 +73,11 @@ To migrate your Test from SauceLabs to HyperExecute, you need to follow the belo
 
 ### Step 1: Create your account in HyperExecute
 
-Before starting the migration process, make sure you have created your account in [HyperExecute](https://hyperexecute.lambdatest.com/) and that you have also configured your HyperExecute [UserName and Access Key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+Before starting the migration process, make sure you have created your account in [HyperExecute](https://hyperexecute.lambdatest.com/) and that you have also configured your HyperExecute [UserName and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 
 ### Step 2: Configure CLI and Environment Variables
 
-Since we will be performing the test from our local system, thus in order to initiate a test execution Job, you are required to download HyperExecute [CLI](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and set the environment variable.
+Since we will be performing the test from our local system, thus in order to initiate a test execution Job, you are required to download HyperExecute [CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) and set the environment variable.
 
 The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recommended to download the CLI binary on the host system to perform the tests on HyperExecute. The CLI download site for various platforms is displayed below:
 
@@ -105,7 +105,7 @@ set LT_ACCESS_KEY=YOUR_LT_ACCESS_KEY
 
 ### Step 3: Configure and Update your Test Scripts
 
-- Add the [HyperExecute YAML](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/) file in the root folder of your test code repository.
+- Add the [HyperExecute YAML](/support/docs/deep-dive-into-hyperexecute-yaml/) file in the root folder of your test code repository.
 
 **Sample YAML File**
 
@@ -163,7 +163,7 @@ jobLabel: [selenium-testng, mac, autosplit, migration]
 
 ```
 
-- Replace the SauceLabs Hooks with [LambdaTest Hooks](https://www.lambdatest.com/support/docs/lambda-hooks/) (if required). 
+- Replace the SauceLabs Hooks with [LambdaTest Hooks](/support/docs/lambda-hooks/) (if required). 
 - Update the SauceLabs Dependencies and Capabilities.
 
 **Sauce Labs** 
@@ -250,6 +250,6 @@ If you are having trouble migrating your tests from Sauce Labs to HyperExecute, 
 
 - #### Your Job is executed, but you are getting an error in the HyperExecute Dashboard.
 
-  To fix this, you can check the [documentation](https://www.lambdatest.com/support/docs/hyperexecute-how-to-debug-job/) explaining how you can debug a failed job on your own.
+  To fix this, you can check the [documentation](/support/docs/hyperexecute-how-to-debug-job/) explaining how you can debug a failed job on your own.
 
 > If you are still having trouble migrating your tests, you can contact <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**HyperExecute 24×7 Chat Support**</span>  or you can also drop a mail to **support@lambdatest.com**.<br /> for assistance.

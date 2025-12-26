@@ -69,18 +69,18 @@ The HyperExecute YAML configuration file is the blueprint for running your tests
 
 <Tabs className="docs__val" queryString="test-method">
   <TabItem value="autosplit" label="AutoSplit" default>
-    [AutoSplit mode](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) automatically splits your scenarios among the concurrent number of tasks and executes them parallelly. This ensures optimal utilization of resources and significantly reduces the overall execution time of your test suite.
+    [AutoSplit mode](/support/docs/deep-dive-into-hyperexecute-yaml/#autosplit) automatically splits your scenarios among the concurrent number of tasks and executes them parallelly. This ensures optimal utilization of resources and significantly reduces the overall execution time of your test suite.
 
-    In this method, you simply set the [`runson`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runson) flag to specify the Operating System for running your tests.
+    In this method, you simply set the [`runson`](/support/docs/deep-dive-into-hyperexecute-yaml/#runson) flag to specify the Operating System for running your tests.
 
     ```yaml title="hyperexecute_autosplit.yaml"
     runson: linux #linux, win, win11, mac, mac13
     ```
-    > 📕 Learn more about [AutoSplit Test Method](https://www.lambdatest.com/support/docs/hyperexecute-auto-split-strategy/)
+    > 📕 Learn more about [AutoSplit Test Method](/support/docs/hyperexecute-auto-split-strategy/)
   </TabItem>
 
   <TabItem value="matrix" label="Matrix">
-    [Matrix mode](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) allows you to run the same set of tests across multiple combinations of environments, configurations, or parameters. This is particularly useful for ensuring that your software works correctly under different conditions, such as various operating systems, browser versions, or dependency files.
+    [Matrix mode](/support/docs/deep-dive-into-hyperexecute-yaml/#matrix) allows you to run the same set of tests across multiple combinations of environments, configurations, or parameters. This is particularly useful for ensuring that your software works correctly under different conditions, such as various operating systems, browser versions, or dependency files.
 
     - **`runson: ${matrix.os}` :** Dynamically selects the operating system from the matrix.os list (Windows, macOS, Linux) for each test job.
     - **`os` :** Lists the operating systems for testing: `win`, `win11`, `mac`, `mac13`, and `linux`.
@@ -91,6 +91,6 @@ The HyperExecute YAML configuration file is the blueprint for running your tests
     matrix:
       os: ["win", "mac", "linux"] #linux, win, win11, mac, mac13
     ```
-    > 📕 Learn more about [Matrix Test Method](https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/)
+    > 📕 Learn more about [Matrix Test Method](/support/docs/hyperexecute-matrix-multiplexing-strategy/)
   </TabItem>
 </Tabs>

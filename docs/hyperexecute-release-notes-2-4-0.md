@@ -50,4 +50,4 @@ Benefits of Network HAR Logs:
 - **Performance Optimization:** Identify performance bottlenecks by pinpointing slow requests and optimizing network interactions.
 - **Improved Load Order Diagnosis:** Gain insights into load order issues that might affect your application's functionality.
 
-📕 Check the [Cypress documentation](https://www.lambdatest.com/support/docs/cypressv10-on-hyperexecute/#har-logs) to learn more about it.
+📕 Check the [Cypress documentation](/support/docs/cypressv10-on-hyperexecute/#har-logs) to learn more about it.

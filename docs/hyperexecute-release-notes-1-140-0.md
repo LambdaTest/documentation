@@ -55,4 +55,4 @@ Test Muting is a new feature designed to enhance test efficiency and effectivene
 
 - **Manual Mute/Unmute of Specific Test Cases:** Users retain complete control over Test Muting, with the ability to manually mute or unmute specific test cases as needed.
 
-> For detailed instructions on utilizing Test Muting, including automatic and manual muting and unmuting of test cases, please refer to the comprehensive [Test Muting documentation](https://www.lambdatest.com/support/docs/hyperexecute-test-muting/).
+> For detailed instructions on utilizing Test Muting, including automatic and manual muting and unmuting of test cases, please refer to the comprehensive [Test Muting documentation](/support/docs/hyperexecute-test-muting/).

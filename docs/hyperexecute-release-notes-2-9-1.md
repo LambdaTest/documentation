@@ -57,4 +57,4 @@ These headers are attached to your outbound HTTP requests and can help:
 - Pass custom metadata
 - Work around network/firewall restrictions
 
-> 📘 Refer to our detailed documentation, [Custom Headers](https://www.lambdatest.com/support/docs/custom-headers/) for detailed explanation and examples.
+> 📘 Refer to our detailed documentation, [Custom Headers](/support/docs/custom-headers/) for detailed explanation and examples.

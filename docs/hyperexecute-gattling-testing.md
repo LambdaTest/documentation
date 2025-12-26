@@ -78,10 +78,10 @@ By integrating Gatling with HyperExecute, you can move beyond traditional limita
 ## Prerequisites
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your LambdaTest [Username and Access key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
-- [HyperExecute YAML](https://www.lambdatest.com/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
-- [HyperExecute CLI](https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Setup the [Environmental Variable](https://www.lambdatest.com/support/docs/hyperexecute-environment-variable-setup/)
+- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
+- [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
+- Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
 
 ## Run a Sample Project
 ### Step 1: Download Project
@@ -178,7 +178,7 @@ Here is a complete working YAML configuration that runs Gatling performance test
 https://github.com/prateekLambda/Gatling-performance-hyperexecute/blob/main/HYE.yaml
 ```
 
-> 📘 For a deeper understanding and project-specific configurations, check out the [YAML documentation](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/).
+> 📘 For a deeper understanding and project-specific configurations, check out the [YAML documentation](/support/docs/hyperexecute-yaml-parameters/).
 
 ### Step 4: Execute your Test Suite
 From the project root directory, execute the below CLI command in your terminal:

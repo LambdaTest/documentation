@@ -29,13 +29,13 @@ KaneAI's mobile app authoring support various advanced capabilities for authorin
 
 If your app doesn't allow screenshot to be taken of the app and you want to test your app's performance without any hindrance, you can use this capability. It will disable the screenshot block check added in the application to allow authoring test cases in LambdaTest.
 
-You need to ensure to enable it from advanced settings before authoring your test on KaneAI. You can find more details about this capability [here](https://www.lambdatest.com/support/docs/disable-screenshot-block/).
+You need to ensure to enable it from advanced settings before authoring your test on KaneAI. You can find more details about this capability [here](/support/docs/disable-screenshot-block/).
 
 ## Biometrics Authentication
 
 Biometric Authentication is a security process that leverages the unique biological characteristics of individuals to verify their identities. In native applications, it is often used to provide a seamless, secure, and efficient user experience. This capability allows you to test your application's biometric authentication functionality more accurately and ensures your app provides an optimal user experience across a range of devices and platforms.
 
-You can find more details about this capability [here](https://www.lambdatest.com/support/docs/biometric-authentication/).&#x20;
+You can find more details about this capability [here](/support/docs/biometric-authentication/).&#x20;
 
 ## Image Injection
 
@@ -43,7 +43,7 @@ Camera Image Injection feature allows you to author tests withÂ **image capturin
 
 You need to ensure to enable it from advanced settings before authoring your test on KaneAI. Once enabled, you will get an option to inject image in "slash" commands in-session which needs to be used before you select the option to trigger camera API in your application workflow.
 
-You can find more details about this capability [here](https://www.lambdatest.com/support/docs/camera-image-injection/).
+You can find more details about this capability [here](/support/docs/camera-image-injection/).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/mobile-app-features/image2.jpg').default} alt="Image" className="doc_img img_center"/>
 
@@ -53,7 +53,7 @@ Video Injection feature enables you to test video-based functionalities such asÂ
 
 You need to ensure to enable it from advanced settings before authoring your test on KaneAI. Once enabled, you will get an option to inject video in "slash" commands in-session which needs to be used before you select the option to trigger camera API in your application workflow.
 
-You can find more details about this capability [here](https://www.lambdatest.com/support/docs/video-injection/).
+You can find more details about this capability [here](/support/docs/video-injection/).
 
 ## Video Explanation
 

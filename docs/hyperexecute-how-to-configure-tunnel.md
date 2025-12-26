@@ -43,7 +43,7 @@ You can configure a secure tunnel in HyperExecute to test applications that are:
 - Behind a private network/firewall.
 
 ## Prerequisites
-- HyperExecute YAML file -> HyperExecute supports multiple ways of setting up tunnels directly from your YAML configuration. You can use any version of [YAML](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/) to pass the Tunnel parameters. 
+- HyperExecute YAML file -> HyperExecute supports multiple ways of setting up tunnels directly from your YAML configuration. You can use any version of [YAML](/support/docs/hyperexecute-yaml-parameters/) to pass the Tunnel parameters. 
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) to trigger your tests.
 
 ## Ways to Use Tunnel in HyperExecute
@@ -78,7 +78,7 @@ These are the parameters you can use to configure your [tunnel](/support/docs/de
 |`systemProxy`| Boolean | Should the tunnel be OS system wide? Default false. |
 |`checkTunnelOnFailure`| Boolean | Check tunnel on failure adds a check on our system to check the tunnel connection if a test fails and the tunnel is set to true. This option will retry the test 2 times if tunnel connection is flaky. |
 
-> HyperExecute now supports tunnel capabilities for [Maestro](https://www.lambdatest.com/support/docs/hyperexecute-maestro-testing/) tests running on both virtual devices and real devices using the Raw Framework configuration.
+> HyperExecute now supports tunnel capabilities for [Maestro](/support/docs/hyperexecute-maestro-testing/) tests running on both virtual devices and real devices using the Raw Framework configuration.
 
 ```yaml title="hyperexecute.yaml"
 tunnel: true

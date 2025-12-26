@@ -52,7 +52,7 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 ### Prerequisites
 ---
 - Sample scripts in Accelq
-- Ensure that you have integrated [Accelq with LambdaTest](https://www.lambdatest.com/support/docs/accelq-integration/) Cloud Selenium Grid 
+- Ensure that you have integrated [Accelq with LambdaTest](/support/docs/accelq-integration/) Cloud Selenium Grid 
 - Parameters- accelq url, userId, apiKey, tenant code, Job Id
 - Agent.properties file for you configured agent with LambdaTest
 
@@ -96,7 +96,7 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 ### Agent.properties file
 Agent.property file is a type of file that gets generated when you configures the agents from the Accelq to the LambdaTest.
 
-- You can configure your [LambdaTest from Accelq Agent Dashboard](https://www.lambdatest.com/support/docs/accelq-integration/#integrating-lambdatest-from-accelq-agent-dashboard)
+- You can configure your [LambdaTest from Accelq Agent Dashboard](/support/docs/accelq-integration/#integrating-lambdatest-from-accelq-agent-dashboard)
 - You can also find the same at the location `(ACCELQAgent/AgentInstances/<agent folder>/agent.properties)` in your local system.
 
 #### Sample File

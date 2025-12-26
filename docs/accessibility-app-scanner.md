@@ -27,31 +27,34 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Android Test",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-app-scanner/"
+          "item": `${BRAND_URL}/support/docs/accessibility-app-scanner/`
         }]
       })
     }}
 ></script>
-LambdaTest offers a powerful Accessibility Scanner for native Android and iOS apps, integrated seamlessly with our manual app testing environment. This helps QA teams and developers identify accessibility issues directly during real-time testing sessions. Follow this guide to understand how to perform accessibility scans manually.
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+<BrandName /> offers a powerful Accessibility Scanner for native Android and iOS apps, integrated seamlessly with our manual app testing environment. This helps QA teams and developers identify accessibility issues directly during real-time testing sessions. Follow this guide to understand how to perform accessibility scans manually.
 
 ## Prerequisites
-- You must have access to the LambdaTest Real Device Cloud.
+- You must have access to the <BrandName /> Real Device Cloud.
 - Your Android app (.apk or .aab) or iOS app should be uploaded to the platform.
 
 
 ## Steps to perform Accessibility Testing using the App Scanner
 ### Step 1: Navigate to the Accessibility Section
-- Log in to your LambdaTest dashboard.
+- Log in to your <BrandName /> dashboard.
 - From the left-hand menu, click on Accessibility.
 - Select the **App Scanner** tab under the Accessibility tab.
 

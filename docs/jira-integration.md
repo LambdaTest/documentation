@@ -58,7 +58,7 @@ The LambdaTest Jira integration helps you create issues in Jira directly from th
 
 <img loading="lazy" src={require('../assets/images/jira-integration/1.png').default} alt="jira"  className="doc_img" width="1346" height="610"/>
 
-**Step 4:** Once you click on **Connect**, you will be redirected to the below screen. Where You have to select Instance type. If you have a **Self Hosted Jira** instance, you can prefer this document [Self-hosted](https://www.lambdatest.com/support/docs/jira-self-hosted-integration/).
+**Step 4:** Once you click on **Connect**, you will be redirected to the below screen. Where You have to select Instance type. If you have a **Self Hosted Jira** instance, you can prefer this document [Self-hosted](/support/docs/jira-self-hosted-integration/).
 
 <img loading="lazy" src={require('../assets/images/jira-integration/2.png').default} alt="jira"  className="doc_img" width="1365" height="624"/>
 

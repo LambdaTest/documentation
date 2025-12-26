@@ -37,7 +37,7 @@ cd Cypress-Cloud
 lambdatest-cypress init
 ```
 
-Here, we have used the below configuration as default and generated it in the `lambdatest-config.json` file. You need to set up the authentication by using LambdaTest credentials. You can check [here](https://www.lambdatest.com/support/docs/authentication/) for more details about authentication.
+Here, we have used the below configuration as default and generated it in the `lambdatest-config.json` file. You need to set up the authentication by using LambdaTest credentials. You can check [here](/support/docs/authentication/) for more details about authentication.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -93,7 +93,7 @@ Also in `run-settings` section you need to specify the path of your `spec.js` fi
 ```
 
 :::info Note
-In this demo, all occurrences of ``http://localhost:8080`` have been replaced with [https://example.cypress.io](https://example.cypress.io) to prevent running the Cypress tests locally. Alternatively, if you want to run your tests locally, refer to the [**Run locally**](https://www.lambdatest.com/support/docs/running-your-first-cypress-test/#running-your-cypress-tests-locally-on-lambdatest-platform) section below.
+In this demo, all occurrences of ``http://localhost:8080`` have been replaced with [https://example.cypress.io](https://example.cypress.io) to prevent running the Cypress tests locally. Alternatively, if you want to run your tests locally, refer to the [**Run locally**](/support/docs/running-your-first-cypress-test/#running-your-cypress-tests-locally-on-lambdatest-platform) section below.
 :::
 
 **Step-3:** Execute your tests using the following command in the terminal:

@@ -167,7 +167,7 @@ dotnet test --filter "profile=parallel"
 ## Testing Locally Hosted Or Privately Hosted Web Projects
 ---
 
-For testing locally hosted or privately hosted projects with LambdaTest Selenium Grid using LambdaTest Tunnel, follow the [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/).
+For testing locally hosted or privately hosted projects with LambdaTest Selenium Grid using LambdaTest Tunnel, follow the [LambdaTest Tunnel documentation](/support/docs/testing-locally-hosted-pages/).
 
 Download the LambdaTest Tunnel binary for your OS and run the following command:
 

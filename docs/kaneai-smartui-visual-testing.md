@@ -106,7 +106,7 @@ Once your test flow is complete, click **Finish test**. You will be prompted to 
 
 ### Execution and Scheduling
 
-Once your test case is saved, navigate to the **Test Runs** tab to configure and launch its execution. For a complete guide on the initial setup, refer to our documentation on [Test Run Execution](https://www.lambdatest.com/support/docs/kaneai-hyperexecute-test-run-execution/).
+Once your test case is saved, navigate to the **Test Runs** tab to configure and launch its execution. For a complete guide on the initial setup, refer to our documentation on [Test Run Execution](/support/docs/kaneai-hyperexecute-test-run-execution/).
 
 You can execute your test using one of two methods:
 
@@ -116,7 +116,7 @@ This option triggers an immediate, one-time execution of your test. It is ideal 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/run-test.png').default} alt="Run Test for automation" className="doc_img"/>
 
 * **Schedule Test Run**
-This option allows you to automate your visual regression testing by setting up a recurring schedule. Learn more in our guide to [Scheduled Test Runs](https://www.lambdatest.com/support/docs/kaneai-scheduled-test-runs/).
+This option allows you to automate your visual regression testing by setting up a recurring schedule. Learn more in our guide to [Scheduled Test Runs](/support/docs/kaneai-scheduled-test-runs/).
 
 <img loading="lazy" src={require('../assets/images/kane-ai/smartui/schedule-test-run.png').default} alt="Schedule the Test Run for automation" className="doc_img"/>
 

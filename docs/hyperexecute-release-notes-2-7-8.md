@@ -42,7 +42,7 @@ import BugFixTag from '../src/component/bugFixTag';
     }}
 ></script>
 ## Default Reporter Configuration in CypressOps
-You can now explicitly specify a custom reporter setup using the new `reporterConfigFile` option in [`cypressOps`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops). If your Cypress project does not have a custom reporter configured, `cypressOps` will automatically enable command logs using the mochawesome reporter by default. This ensures that test results are always captured in a readable format, without requiring manual setup.
+You can now explicitly specify a custom reporter setup using the new `reporterConfigFile` option in [`cypressOps`](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops). If your Cypress project does not have a custom reporter configured, `cypressOps` will automatically enable command logs using the mochawesome reporter by default. This ensures that test results are always captured in a readable format, without requiring manual setup.
 
 ```yaml
 cypressOps:
@@ -68,7 +68,7 @@ Value of this JSON:
 ```
 
 ## Setup Runtime Updates
-HyperExecute expands its support for the dotnet by introducing the versions `4.7` and `4.8` in the [runtime](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runtime).
+HyperExecute expands its support for the dotnet by introducing the versions `4.7` and `4.8` in the [runtime](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime).
 
 ```yaml
 runtime:
@@ -77,7 +77,7 @@ runtime:
 ```
 
 ## Support for Project Capability in CypressOps
-You can now define your [Project](https://www.lambdatest.com/support/docs/hyperexecute-projects/) name and autocreate your project via `ProjectName` capability defined in [`cypressOps`](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops).
+You can now define your [Project](/support/docs/hyperexecute-projects/) name and autocreate your project via `ProjectName` capability defined in [`cypressOps`](/support/docs/deep-dive-into-hyperexecute-yaml/#cypressops).
 
 ```yaml
 cypressOps:

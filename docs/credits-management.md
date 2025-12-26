@@ -95,7 +95,7 @@ Below are the currently supported features and how they consume credits.
 
 ### SmartUI Visual AI
 
-LambdaTest **SmartUI Visual AI** simulates human perception for visual regression. Rather than flagging every pixel change, it highlights **meaningful, human‑relevant** differences between baseline and new screenshots. [Learn more](https://www.lambdatest.com/support/docs/smartui-visual-ai/).
+LambdaTest **SmartUI Visual AI** simulates human perception for visual regression. Rather than flagging every pixel change, it highlights **meaningful, human‑relevant** differences between baseline and new screenshots. [Learn more](/support/docs/smartui-visual-ai/).
 
 #### How credits are consumed?
 
@@ -116,7 +116,7 @@ LambdaTest **SmartUI Visual AI** simulates human perception for visual regressio
 
 ### AI Test Case Generator
 
-The **AI Test Case Generator** converts diverse inputs (text, PDFs, audio, videos, images, Jira tickets, and more) into **structured, contextual test cases**, accelerating authoring while improving coverage. [Learn more](https://www.lambdatest.com/support/docs/generate-test-cases-with-ai/).
+The **AI Test Case Generator** converts diverse inputs (text, PDFs, audio, videos, images, Jira tickets, and more) into **structured, contextual test cases**, accelerating authoring while improving coverage. [Learn more](/support/docs/generate-test-cases-with-ai/).
 
 #### How credits are consumed
 

@@ -45,19 +45,19 @@ App settings play a crucial role in testing the environment for mobile applicati
 
 Enable the Image Injection feature to capture images, QR codes, and barcode scans seamlessly within your app using LambdaTest devices. Our approach utilizes Sensor Instrumentation to seamlessly integrate your app with various mobile sensors, such as the camera. By enabling Image Injection for a specific session, LambdaTest seamlessly injects camera code modules into your app, effectively mocking or overriding the Android or iOS SDK used in your app.
 
-Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/camera-image-injection/) to learn in detail about the image injection feature.
+Check out our detailed [support documentation](/support/docs/camera-image-injection/) to learn in detail about the image injection feature.
 
 ## Biometric Authentication
 
 Enable this setting to effortlessly test your biometric authentication-reliant applications on designated remote Lambdatest devices. This functionality enables the emulation of diverse biometric authentication techniques such as fingerprint scanning, facial recognition and others. Leveraging this feature ensures thorough validation of your applications' security and functionality across a spectrum of realistic usage scenarios.
 
-Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/biometric-authentication/) to learn in detail about the Biometric supported APIs and much more.
+Check out our detailed [support documentation](/support/docs/biometric-authentication/) to learn in detail about the Biometric supported APIs and much more.
 
 ## Disable Screenshot Block (only Android)
 
 Enable this setting to conduct uninterrupted testing of your application's performance, even when screenshot capture is restricted within your app. This tool facilitates testing in both app-live and app automation scenarios, ensuring seamless evaluation of your applications.
 
-Check out our detailed [support documentation](https://www.lambdatest.com/support/docs/disable-screenshot-block/) to learn in detail about disable screenshot block feature.
+Check out our detailed [support documentation](/support/docs/disable-screenshot-block/) to learn in detail about disable screenshot block feature.
 
 ## Default Network Logs
 

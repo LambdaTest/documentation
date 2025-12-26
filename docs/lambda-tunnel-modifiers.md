@@ -50,7 +50,7 @@ This document will help you understand all the modifiers/arguments used with Lam
 
 | FLAG (SHORT) | FLAG (LONG) | DESCRIPTION | TYPE |
 |--------------|-------------|-------------|------|
-|| --allowHosts | Comma separated list of hosts to route via tunnel. Everything else will be routed via Internet. <br /> Learn how to use the [wildcard expressions](https://www.lambdatest.com/support/docs/tunnel-allowHost-wildcard-support/) in the `--allowHosts` flag  | String  |
+|| --allowHosts | Comma separated list of hosts to route via tunnel. Everything else will be routed via Internet. <br /> Learn how to use the [wildcard expressions](/support/docs/tunnel-allowHost-wildcard-support/) in the `--allowHosts` flag  | String  |
 | | --bypassHosts | Comma separated list of hosts to bypass from tunnel. These will be routed via internet.                                                             | String  |
 |              | --callbackURL   | Callback URL for tunnel status.                                                                                                                     | String  |
 | -c           | --config        | Path of the config file to use                                                                                                                      | String  |
@@ -62,12 +62,12 @@ This document will help you understand all the modifiers/arguments used with Lam
 |              | --egress-only   | Uses proxy settings only for outbound requests.                                                                                                     | N/A     |
 | -e           | --env           | The environment on which the LambdaTest Tunnel will run.                                                                                            | String  |
 | -h           | --help          | Help for the LambdaTest Tunnel                                                                                                                      | N/A     |
-|              | --infoAPIPort   | Exposes [Tunnel Info API](https://www.lambdatest.com/support/docs/advanced-tunnel-features/#tunnelinfoapis) At The Specified Port                   | Integer |
+|              | --infoAPIPort   | Exposes [Tunnel Info API](/support/docs/advanced-tunnel-features/#tunnelinfoapis) At The Specified Port                   | Integer |
 |              | --ingress-only  | Routes Only Incoming Traffic Via The Proxy Specified                                                                                                | N/A     |
 | -k           | --key           | LambdaTest Access Key.                                                                                                                              | String  |
-| -l           | --load-balanced | Activates [Load Balancing](https://www.lambdatest.com/support/docs/load-balancing-in-lambda-tunnel/) for LambdaTest Tunnel                          | N/A     |
+| -l           | --load-balanced | Activates [Load Balancing](/support/docs/load-balancing-in-lambda-tunnel/) for LambdaTest Tunnel                          | N/A     |
 |              | --logFile       | Location of the LambdaTest Tunnel Log File                                                                                                          | String  |
-| -m           | --mitm          | Enable the [MITM(Man-in-the-middle)](https://www.lambdatest.com/support/docs/advanced-tunnel-features/#mitmlocaltesting) mode for LambdaTest Tunnel | N/A     |
+| -m           | --mitm          | Enable the [MITM(Man-in-the-middle)](/support/docs/advanced-tunnel-features/#mitmlocaltesting) mode for LambdaTest Tunnel | N/A     |
 |              | --mode          | Specifies in which mode tunnel should run [ssh,tcp,ws]. (default "ssh")                                                                             | String  |
 |              | --ntlm          | To use Microsoft NTLM (Windows NT LAN Manager) authentication for communication or transport purposes.                                              | Boolean |
 |              | --pidfile       | Path Of Pidfile, Where Process ID will Be Written                                                                                                   | String  |

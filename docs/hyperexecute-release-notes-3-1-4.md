@@ -44,4 +44,4 @@ We have introduced an enhancement to the HyperExecute [Custom Project feature](/
 
 With this update, you can now configure Azure Repos in the same intuitive manner as GitHub, or Bitbucket. Simply provide the repository details and Personal Access Token (PAT), and HyperExecute will fetch the code and trigger workflows seamlessly.
 
-> 📘 **Read More:** Learn more about configuring Azure Repos, project setup, workflows, and job triggers in the [HyperExecute documentation](https://www.lambdatest.com/support/docs/hyperexecute-projects/).
+> 📘 **Read More:** Learn more about configuring Azure Repos, project setup, workflows, and job triggers in the [HyperExecute documentation](/support/docs/hyperexecute-projects/).

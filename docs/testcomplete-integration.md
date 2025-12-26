@@ -20,6 +20,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,33 +30,33 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "TestComplete",
-          "item": "https://www.lambdatest.com/support/docs/testcomplete-integration/"
+          "item": `${BRAND_URL}/support/docs/testcomplete-integration/`
         }]
       })
     }}
 ></script>
 TestComplete, from SmartBear, streamlines automated testing across desktop, web, and mobile applications. It goes beyond recording clicks—build readable tests with keywords, identify UI elements for reliability, and leverage data-driven testing for comprehensive coverage.
 
-LambdaTest integration with TestComplete lets you perform web and app automation testing across 3000+ real browsers, devices, and OS combinations.
+<BrandName /> integration with TestComplete lets you perform web and app automation testing across 3000+ real browsers, devices, and OS combinations.
 
 > The TestComplete application will only work on the **Windows** operating system.
 
 ## Prerequisites
 
-- LambdaTest account. You can [sign up for free.](https://accounts.lambdatest.com/login)
-- LambdaTest [Username and Access Key](https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
+- <BrandName /> account. You can [sign up for free.](https://accounts.lambdatest.com/login)
+- <BrandName /> [Username and Access Key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/).
 - Download TestComplete from its official website and complete the signup process.
-- Generate your App Id by uploading it to the LambdaTest Server.
+- Generate your App Id by uploading it to the <BrandName /> Server.
 
 <!-- ## Web Automation Using TestComplete And LambdaTest
 ---
@@ -100,7 +101,7 @@ You can also see the video recording and logs for individual test session in the
 
 ## Steps to Automate your Application
 
-**Step 1:** Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
+**Step 1:** Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
 
 Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
@@ -170,7 +171,7 @@ Click on the run button to check your script.
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/11.png').default} alt="configuration" className="doc_img"/>
 
-Your test results would be displayed on on the [**LambdaTest App Automation Dashboard**](https://appautomation.lambdatest.com/build).
+Your test results would be displayed on on the [**<BrandName /> App Automation Dashboard**](https://appautomation.lambdatest.com/build).
 
 
 > In case you have any questions, feel free to share them with us through our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or by mailing to us on [**support@lambdatest.com**](mailto:support@lambdatest.com). <br />
@@ -178,7 +179,7 @@ Your test results would be displayed on on the [**LambdaTest App Automation Dash
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" href="/support/docs/">Support</a>

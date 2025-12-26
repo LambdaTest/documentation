@@ -22,6 +22,8 @@ site_name: LambdaTest
 slug: phpunit-with-selenium-running-phpunit-automation-scripts-on-lambdatest-selenium-grid/
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -201,7 +203,7 @@ class LambdaTestSetup extends PHPUnit\Framework\TestCase{
 }
 ?>
 ```
-> **Note:** You can generate capabilities for your test requirements with the help of our inbuilt **[Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)**.
+> **Note:** You can generate capabilities for your test requirements with the help of our inbuilt **<a href={`${BRAND_URL}/capabilities-generator/`}>Capabilities Generator Tool</a>**.
 
 ### Executing the Test
 **Step 5:** The tests can be executed in the terminal using the following command:
@@ -321,7 +323,7 @@ Your test results would be displayed on the test console (or command-line interf
 ***
 You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
 
->Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/) for more information.
+>Refer our [LambdaTest Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
 
 Here’s how you can establish LambdaTest Tunnel.
 
@@ -349,9 +351,9 @@ Once you are able to connect **LambdaTest Tunnel** successfully, you would just 
 
 ## Additional Links
 ***
-* [Advanced Configuration for Capabilities](https://www.lambdatest.com/support/docs/selenium-automation-capabilities/)
-* [How to test locally hosted apps](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/)
-* [How to integrate LambdaTest with CI/CD](https://www.lambdatest.com/support/docs/integrations-with-ci-cd-tools/)
+* [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
+* [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
+* [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">

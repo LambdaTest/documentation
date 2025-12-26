@@ -51,11 +51,11 @@ The new regions are:
 - **Argentina** - South America (Brazil South)
 - **Mexico** - Mexico Central
 
-> 📕 Visit our [Performance Testing Documentation](https://www.lambdatest.com/support/docs/hyperexecute-run-jmeter-tests/) for step-by-step instructions on configuring your tests and making the most of HyperExecute's enhanced regional coverage.
+> 📕 Visit our [Performance Testing Documentation](/support/docs/hyperexecute-run-jmeter-tests/) for step-by-step instructions on configuring your tests and making the most of HyperExecute's enhanced regional coverage.
 
 ## Download Reports for XCUI Framework
-Now, you can download the [JUnit XML report](https://www.lambdatest.com/support/docs/junit-xml-report/) for your test runs on the XCUI framework.
+Now, you can download the [JUnit XML report](/support/docs/junit-xml-report/) for your test runs on the XCUI framework.
 
-To generate reports for your XCUI tests, add the `reports: true` flag in your [HyperExecute YAML](https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/) file and pass the `--download-report` flag with the CLI command.
+To generate reports for your XCUI tests, add the `reports: true` flag in your [HyperExecute YAML](/support/docs/hyperexecute-yaml-parameters/) file and pass the `--download-report` flag with the CLI command.
 
 > 📕 Refer to our detailed documentation to [Generate XCUI Reports](/support/docs/hyperexecute-xcui-testing/#step-5-generate-reports-and-artifacts)

@@ -43,10 +43,10 @@ slug: hyperexecute-release-notes-1-131-0/
 Boost your testing capabilities with Snooper's advanced features for in-depth analysis and debugging.
 About Snooper: A snooper command helps you discover the list of feature file scenarios based on the arguments provided.
 
-> For more details, check the documentation on [Snooper Command](https://www.lambdatest.com/support/docs/hyperexecute-snooper/).
+> For more details, check the documentation on [Snooper Command](/support/docs/hyperexecute-snooper/).
 
 ## Android-SDK Runtime Support! 
 
 Simplify your validation process, enhance adaptability, and elevate your testing with Android-SDK runtime support.
 
-> For more details, Check the [documentation](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#runtime).
+> For more details, Check the [documentation](/support/docs/deep-dive-into-hyperexecute-yaml/#runtime).

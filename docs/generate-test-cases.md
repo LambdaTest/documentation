@@ -97,7 +97,7 @@ We support multiple input formats, including:
 
 #### Add Issue Links:
 - Integrate your LambdaTest account with Jira/Azure DevOps. Follow the steps described in the following link to integrate Jira/Azure DevOps:
-[LambdaTest Jira Integration](https://www.lambdatest.com/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) / [LambdaTest Azure DevOps Integration](https://www.lambdatest.com/support/docs/link-ado-issues-with-test-manager/)
+[LambdaTest Jira Integration](/support/docs/jira-integration/#how-to-establish-integration-with-jira-from-your-lambdatest-account) / [LambdaTest Azure DevOps Integration](/support/docs/link-ado-issues-with-test-manager/)
 
 - After integration is completed, select `Link Jira Issues` / `Link Azure DevOps Issues`.
 

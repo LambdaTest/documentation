@@ -54,4 +54,4 @@ With SmartWait on HyperExecute, you can:
 - Optimize test scripts for readability and maintainability.
 - Execute tests with improved reliability in parallel and distributed environments.
 
-> 📌 Learn more about configuring SmartWait: [SmartWait Documentation](https://www.lambdatest.com/support/docs/smart-wait/)
+> 📌 Learn more about configuring SmartWait: [SmartWait Documentation](/support/docs/smart-wait/)

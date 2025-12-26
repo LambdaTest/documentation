@@ -51,7 +51,7 @@ LambdaTest supports the following screen readers during Accessibility Testing:
 - **NVDA (NonVisual Desktop Access)** – Windows
 - **VoiceOver** – macOS
 - **TalkBack** – Android
-> 📕 To learn more about using TalkBack for Android devices, refer to the [TalkBack Documentation](https://www.lambdatest.com/support/docs/screen-reader-on-real-devices-app/).
+> 📕 To learn more about using TalkBack for Android devices, refer to the [TalkBack Documentation](/support/docs/screen-reader-on-real-devices-app/).
 
 These tools allow developers and testers to evaluate how well their applications or websites perform for visually impaired users, ensuring accessibility compliance and usability.
 

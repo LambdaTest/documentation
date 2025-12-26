@@ -77,7 +77,7 @@ On running the above command, it will generate `base_reporter_config.json`,`cust
 ## `run` command
 
 :::info Note
-For detailed examples of each Cypress flag, please visit our guide [Configuring Cypress Test Execution](https://www.lambdatest.com/support/docs/run-settings/).
+For detailed examples of each Cypress flag, please visit our guide [Configuring Cypress Test Execution](/support/docs/run-settings/).
 :::
 
 To start running the test build, you can use the given-below command.

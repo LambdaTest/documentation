@@ -50,7 +50,7 @@ The [LambdaTest Chrome Extension](https://chrome.google.com/webstore/detail/lamb
 LambdaTest Chrome Extension provides the following features:
 
 *   **Real Time Testing**: Perform Real-time tests of websites & web apps across 3000+ browsers & operating systems.
-*   **Screenshot Testing**: [Run Screenshot tests](https://www.lambdatest.com/support/docs/automated-screenshot-testing/) of websites & web apps across 25 different browsers & operating systems.
+*   **Screenshot Testing**: [Run Screenshot tests](/support/docs/automated-screenshot-testing/) of websites & web apps across 25 different browsers & operating systems.
 *   **Schedule Screenshots**: Schedule screenshots with preferred date, time and configurations and capture screenshots automatically.
 *   **Geolocation Testing**: Test websites and web apps to check how it renders across different geographies.
 *   **Favorites**: Save your favorites configurations in favorites section and launch tests faster & easily.

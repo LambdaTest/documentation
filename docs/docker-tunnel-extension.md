@@ -104,7 +104,7 @@ Visit the [LambdaTest Dashboard](https://automation.lambdatest.com/build), you'l
 <img loading="lazy" src={require('../assets/images/docker-tunnel-extension/7.png').default} alt="Extensions" width="698" height="320" className="doc_img "/><br/><br/>
 
 :::info
-Head over to our documentation to get started: [Testing Locally Hosted Pages](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/).
+Head over to our documentation to get started: [Testing Locally Hosted Pages](/support/docs/testing-locally-hosted-pages/).
 :::
 
 ## Advanced Configurations in LambdaTest Docker Tunnel Extension

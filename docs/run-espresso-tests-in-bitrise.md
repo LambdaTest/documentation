@@ -57,7 +57,7 @@ Using LambdaTest with Bitrise, you can effortlessly perform [Espresso testing](h
 3. A GitHub / BitBucket / GitLab or other repository to connect with Bitrise.
 
 :::important Note
-If you are getting started with Bitrise CI, please refer to our documentation on [running Appium tests in Bitrise CI](https://www.lambdatest.com/support/docs/bitrise-integration/). 
+If you are getting started with Bitrise CI, please refer to our documentation on [running Appium tests in Bitrise CI](/support/docs/bitrise-integration/). 
 :::
 
 
@@ -117,7 +117,7 @@ Other options:
 
 :::info
 
-[Espresso Testing On LambdaTest](https://www.lambdatest.com/support/docs/getting-started-with-espresso-testing/)
+[Espresso Testing On LambdaTest](/support/docs/getting-started-with-espresso-testing/)
 
 [Automation Capabilities Generator For Selenium and Appium](https://www.lambdatest.com/capabilities-generator/)
 :::

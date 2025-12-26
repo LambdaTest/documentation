@@ -152,7 +152,7 @@ You need to run the above command from the terminal in the directory where you h
 
 ---
 
-Before you can configure and setup the tunnel, you need to download the Underpass application as mentioned in the Prerequisites before. For more details about Underpass, refer to our guide on [getting started with Underpass application](https://www.lambdatest.com/support/docs/underpass-tunnel-application/). Once you install Underpass, you need to pass your **LambdaTest authentication credentials** as shown below.
+Before you can configure and setup the tunnel, you need to download the Underpass application as mentioned in the Prerequisites before. For more details about Underpass, refer to our guide on [getting started with Underpass application](/support/docs/underpass-tunnel-application/). Once you install Underpass, you need to pass your **LambdaTest authentication credentials** as shown below.
 
 
 

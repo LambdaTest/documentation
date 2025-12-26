@@ -182,6 +182,6 @@ installLogsCollector()
 ## View Generated Logs
 Once the Cypress tests are executed, you can view the detailed command logs in the **"Detailed Command Logs"** tab on the test details page.
 
-For more information, visit [Artefacts For A Cypress Project](https://www.lambdatest.com/support/docs/download-artefacts-cypress/)
+For more information, visit [Artefacts For A Cypress Project](/support/docs/download-artefacts-cypress/)
 
 <img loading="lazy" src={require('../assets/images/cypress/detailed-cypress-logs.png').default} alt="Image" className="doc_img"/>

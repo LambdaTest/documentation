@@ -191,7 +191,7 @@ Kudos, you have successfully configured the Login profile. This profile will be 
 
 ## Running Automated Screenshot After The Login Page
 ***
-**Step 1:** Login to LambdaTest and go to [Screenshot Testing](https://www.lambdatest.com/support/docs/automated-screenshot-testing/). Enable the flag for the profile you wish to test.
+**Step 1:** Login to LambdaTest and go to [Screenshot Testing](/support/docs/automated-screenshot-testing/). Enable the flag for the profile you wish to test.
 
 <img loading="lazy" src={require('../assets/images/screenshots_of_pages_behind_login/final/screenshot-pages-behind-19.webp').default} alt="Image" width="1344" height="644" className="doc_img"/>
 

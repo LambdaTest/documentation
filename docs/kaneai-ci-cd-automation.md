@@ -76,15 +76,15 @@ Replace `<TestRunID>` with the actual ID from the URL and set additional optiona
 - **title**: Assign a unique job title; a random one will be generated if omitted.
 - **region**: Choose a region for web tests such as _eastus_ or _centralindia_ to select the region from where the VM is allocated.
 - **mobile_region**: Choose a region for mobile app tests such as _us_,_ap_ or _eu_ to select the region from where the device is allocated.
-- **tunnel**: Add the parameter and tunnel name if you want to run using LambdaTest Tunnel for private applications. See more details for tunnel [here](https://www.lambdatest.com/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support).
+- **tunnel**: Add the parameter and tunnel name if you want to run using LambdaTest Tunnel for private applications. See more details for tunnel [here](/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support).
 - **dedicated_proxy**: Add the region of the dedicated proxy such as _us_ or _eu_, #Optional, either tunnel or dedicated proxy or geolocation can be used in a single API call.
-- **geolocation**: Add the resgion of the geolocation that you want to run your tests from. You can find the list of support geolocations [here](https://www.lambdatest.com/support/docs/selenium-geolocation-capabilities/).
+- **geolocation**: Add the resgion of the geolocation that you want to run your tests from. You can find the list of support geolocations [here](/support/docs/selenium-geolocation-capabilities/).
 - **environment_id**: Define the environment on which you want to run the test run if required.
-- **retry_on_failure**: Define whether to retry if the [testRunnerCommand](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) execution fails. If "retry_on_failure" is false, the default max retries will still be 1. You can find more details [here]( https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure).
-- **max_retries**: Define the number of maximum retries you want (Max value 5). Default retries 1. You can find more details [here](https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries). 
+- **retry_on_failure**: Define whether to retry if the [testRunnerCommand](/support/docs/deep-dive-into-hyperexecute-yaml/#testrunnercommand) execution fails. If "retry_on_failure" is false, the default max retries will still be 1. You can find more details [here]( https://www.lambdatest.com/support/docs/deep-dive-into-hyperexecute-yaml/#retryonfailure).
+- **max_retries**: Define the number of maximum retries you want (Max value 5). Default retries 1. You can find more details [here](/support/docs/deep-dive-into-hyperexecute-yaml/#maxretries). 
 - **timezone**: Define the timezone you want to choose for test run in UTC+01:00 format.
-- **app_profiling**: Add true if you want to track app profiling metrics in your test. You can find more details [here](https://www.lambdatest.com/support/docs/appium-app-performance-analytics/).
-- **performance**: Add true if you want generate Lighthouse report for your web tests. Supported on limited OS browser combinations. Additionally, Setting this as true could potentially slow down the execution time. You can find more details [here](https://www.lambdatest.com/support/docs/view-lighthouse-performance-metrics/).
+- **app_profiling**: Add true if you want to track app profiling metrics in your test. You can find more details [here](/support/docs/appium-app-performance-analytics/).
+- **performance**: Add true if you want generate Lighthouse report for your web tests. Supported on limited OS browser combinations. Additionally, Setting this as true could potentially slow down the execution time. You can find more details [here](/support/docs/view-lighthouse-performance-metrics/).
 - **android_app_id**: Specify an Android app ID to override the existing app in the configuration of the Test instances.
 - **ios_app_id**: Specify an iOS app ID to override the existing app in the configuration of the Test instances.
 - **accessibility**: Set as true if you want to run accessibility test on all your tests in the test run. Setting this as true could potentially slow down the execution time.

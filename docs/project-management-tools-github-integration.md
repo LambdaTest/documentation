@@ -13,6 +13,8 @@ url: https://www.lambdatest.com/support/docs/github-integration/
 site_name: LambdaTest
 slug: github-integration/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: github-integration/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "GitHub Integration",
-          "item": "https://www.lambdatest.com/support/docs/github-integration/"
+          "item": `${BRAND_URL}/support/docs/github-integration/`
         }]
       })
     }}
@@ -43,16 +45,16 @@ slug: github-integration/
 
 GitHub is one of the most popular community among software developers. It helps you with version control by providing a code hosting platform for all. From open source to business, one can share their codes, discover new ideas and discuss about roadblocks, all in order to deliver a better software. GitHub also serves as a project management tool. It allows a team to collaborate from all around the globe.
 
-The LambdaTest GitHub Integration allows you to create a card directly in your repository from LambdaTest platform. Push an issue to your respective repository anytime, even in the middle of your test session. The fields populated by you when marking as bug through LambdaTest are displayed as information on the bug in GitHub repository for that testing instance.
+The <BrandName /> GitHub Integration allows you to create a card directly in your repository from <BrandName /> platform. Push an issue to your respective repository anytime, even in the middle of your test session. The fields populated by you when marking as bug through <BrandName /> are displayed as information on the bug in GitHub repository for that testing instance.
 
-**GitHub Integration with LambdaTest, like all of our other integrations to 3rd party applications, is available as freemium as well as premium plan.**
+**GitHub Integration with <BrandName />, like all of our other integrations to 3rd party applications, is available as freemium as well as premium plan.**
 
-## How To Integrate GitHub With Your LambdaTest Account?
+## How To Integrate GitHub With Your <BrandName /> Account?
 ***
 
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select **‘Integrations’** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **‘Integrations’** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on **‘ADD’** under the block that says ‘Github’.
 
@@ -60,7 +62,7 @@ The LambdaTest GitHub Integration allows you to create a card directly in your r
 
 **Step 4:** Step 4: Once you click on install, you’ll be redirected to a screen. There would be three options available for you to choose from in order to authenticate GitHub.
 
-### How To Integrate GitHub With Your LambdaTest Account Via OAuth?
+### How To Integrate GitHub With Your <BrandName /> Account Via OAuth?
 ***
 **Step 1**: Select the radio button on **‘OAuth’** and click on **‘Install’**.
 
@@ -74,7 +76,7 @@ You will be redirected to GitHub login page where you need to provide your login
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/image8.webp').default} alt="github-integration" width="1339" height="613" className="image8"/>
 
-**Step 3**: You’ll be redirected to the OAuth permission page. Click on **‘Authorize LambdaTest’**.
+**Step 3**: You’ll be redirected to the OAuth permission page. Click on **‘Authorize <BrandName />’**.
 
 >
 **What is OAuth?**<br />
@@ -82,12 +84,12 @@ The purpose of OAuth is to bypass the authentication when two different applicat
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/Screenshot-74.webp').default} alt="github-integration" width="1331" height="614" className="image8"/>
 
-That’s it! Go to Integrations again and you will be able to notice a green tick indicating that GitHub is successfully installed. You can now experience bug logging in a fly from any of your running test sessions in LambdaTest to your repository directly with a single click.
+That’s it! Go to Integrations again and you will be able to notice a green tick indicating that GitHub is successfully installed. You can now experience bug logging in a fly from any of your running test sessions in <BrandName /> to your repository directly with a single click.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/image-7.webp').default} alt="github-integration" width="1341" height="616" className="image8"/>
 
 
-### How To Integrate GitHub With Your LambdaTest Account Via Cloud?
+### How To Integrate GitHub With Your <BrandName /> Account Via Cloud?
 ***
 
 **Step 1**: Select the radio button on **‘Cloud’**. This will ask you to enter your API token.
@@ -119,11 +121,11 @@ Access tokens are strings with an authorization key required to access an API. T
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/image3-1.webp').default} alt="github-integration" width="1359" height="469" className="doc_img"/>
 
-**Step 7**: Paste the copied token into LambdaTest GitHub Authentication and click on **‘Install’**.
+**Step 7**: Paste the copied token into <BrandName /> GitHub Authentication and click on **‘Install’**.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/image12.webp').default} alt="github-integration" width="1342" height="617" className="doc_img"/>
 
-Go to Integrations again and you will be able to notice a green tick indicating that GitHub is successfully installed. You can now experience one-click bug logging from any of your running test sessions in Lambdatest to your GitHub repository directly with a single click.
+Go to Integrations again and you will be able to notice a green tick indicating that GitHub is successfully installed. You can now experience one-click bug logging from any of your running test sessions in <BrandName /> to your GitHub repository directly with a single click.
 
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/image-7.webp').default} alt="github-integration" width="1341" height="616" className="doc_img"/>
@@ -165,7 +167,7 @@ Go to Integrations again and you will be able to notice a green tick indicating 
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/image.webp').default} alt="github-integration" width="1581" height="747" className="doc_img"/>
 
-Click on the **description** of bug and you will be redirected to the detail page of the bug. You will find all the data that you provided through LambdaTest already presented in the bug. LambdaTest automatically includes test environment details and related screenshots in the GitHub repository as attachments.
+Click on the **description** of bug and you will be redirected to the detail page of the bug. You will find all the data that you provided through <BrandName /> already presented in the bug. <BrandName /> automatically includes test environment details and related screenshots in the GitHub repository as attachments.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/image1-1.webp').default} alt="github-integration" width="1576" height="780" className="doc_img"/>
 
@@ -174,26 +176,26 @@ Click on the **description** of bug and you will be redirected to the detail pag
 
 You can work with one integration at a time. So if you would want to integrate to some 3rd party application of the similar type, other than the GitHub then you would have to remove your present integration. Here is how you can do it.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
-**Step 2:** Select **‘Integrations’** from the left navigation menu bar. This will guide you to the same screen from where you initiated GitHub installation. You will also find other third party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **‘Integrations’** from the left navigation menu bar. This will guide you to the same screen from where you initiated GitHub installation. You will also find other third party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** To remove the GitHub integration, click on **‘REMOVE’** under the category My Integrations.
 
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-github-integration/Screenshot-111.webp').default} alt="github-integration" width="1366" height="564" className="doc_img"/>
 
-That was all you need to know for LambdaTest + GitHub Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. **Happy testing!**
+That was all you need to know for <BrandName /> + GitHub Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. **Happy testing!**
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

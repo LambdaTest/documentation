@@ -72,7 +72,7 @@ Using the Session API, you can upload the terminal logs, i.e., logs printed on t
 
 Selenium 4 and OpenTelemetry support lets you view the tracing of requests and event logs for each request, which helps you troubleshoot sessions, especially from the Selenium internals perspective. It collects all the events inside the Selenium services to triage the issue with Selenium servers.
 
-For more details, visit [Debugging in Selenium using Telemetry Logs](https://www.lambdatest.com/support/docs/selenium-telemetry-logs/)
+For more details, visit [Debugging in Selenium using Telemetry Logs](/support/docs/selenium-telemetry-logs/)
 
 
 ## Enhanced Analytics
@@ -117,7 +117,7 @@ The Concurrency Trends widget allows the user to know the tests kept in the queu
 ## HyperExecute
 ---
 
-For details about HyperExecute Analytics, please refer to our tutorial - [HyperExecute Analytics Modules](https://www.lambdatest.com/support/docs/analytics-modules-hyperexecute/).
+For details about HyperExecute Analytics, please refer to our tutorial - [HyperExecute Analytics Modules](/support/docs/analytics-modules-hyperexecute/).
 
 
 

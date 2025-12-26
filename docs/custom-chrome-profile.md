@@ -13,18 +13,20 @@ url: https://www.lambdatest.com/support/docs/upload-custom-chrome-profile/
 site_name: LambdaTest
 slug: upload-custom-chrome-profile/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 # How to Upload Custom Chrome Profile?
 ***
 
-Custom Chrome profiles allow you to simulate a real-user environment with specific browser settings. Learn how to upload a custom Chrome profile to run your automated tests on LambdaTest. 
+Custom Chrome profiles allow you to simulate a real-user environment with specific browser settings. Learn how to upload a custom Chrome profile to run your automated tests on <BrandName />. 
 
 ## Uploading Your Custom Chrome Profile
 ***
 
-Below are the steps to upload custom Chrome profile on LambdaTest:
+Below are the steps to upload custom Chrome profile on <BrandName />:
 
-1. Zip the custom Chrome profile folder and upload it to LambdaTest cloud servers using the API below:
+1. Zip the custom Chrome profile folder and upload it to <BrandName /> cloud servers using the API below:
 
 ```bash
 curl --location --request POST 'https://api.lambdatest.com/automation/api/v1/files/profile/chrome' \

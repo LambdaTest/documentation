@@ -23,24 +23,26 @@ slug: virtual-device-flutter-apps/
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Virtual Devices Flutter Apps With Appium",
-          "item": "https://www.lambdatest.com/support/docs/virtual-device-flutter-apps/"
+          "item": `${BRAND_URL}/support/docs/virtual-device-flutter-apps/`
         }]
       })
     }}
 ></script>
 Google's Flutter is an open-source tool for developing native mobile apps. It enables developers to create cross-platform apps for both Android and iOS using a single codebase and programming language.
 
-You can now test Flutter apps on the LambdaTest Appium testing platform across 3000+ real Android and iOS devices. LambdaTest supports Appium’s Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on LambdaTest cloud servers and then run your automated tests. 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+You can now test Flutter apps on the <BrandName /> Appium testing platform across 3000+ real Android and iOS devices. <BrandName /> supports Appium's Flutter driver that lets you test Flutter apps using the Appium framework. To test Flutter apps, you will need to upload apps on <BrandName /> cloud servers and then run your automated tests. 
 
 ## Prerequisites
 
@@ -73,7 +75,7 @@ void main() {
 desiredCapabilities.setCapability("automationName", "flutter");
 ```
 
-Shown below is the test script for automating Flutter apps on LambdaTest platform.
+Shown below is the test script for automating Flutter apps on <BrandName /> platform.
 
 ```javascript
 import os

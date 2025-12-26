@@ -298,7 +298,7 @@ Using the `app_url` obtained in the response, you can execute your Appium tests 
 ## Step - 6 Executing Your Tests
 ***
 
-Once your app is successfully uploaded, you can refer to [Getting Started With Appium Testing](https://www.lambdatest.com/support/docs/getting-started-with-appium-testing/) for more information on executing Appium tests on LambdaTest.
+Once your app is successfully uploaded, you can refer to [Getting Started With Appium Testing](/support/docs/getting-started-with-appium-testing/) for more information on executing Appium tests on LambdaTest.
 
 ***
 

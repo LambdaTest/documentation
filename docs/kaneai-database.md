@@ -69,7 +69,7 @@ KaneAI supports both SQL and NoSQL database connections.
 
 ### Connecting local databases
 
-For local or private databases, select a tunnel if your tunnel is active. The tunnel can be activated easily by following the details available [here](https://www.lambdatest.com/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support). Test the connection and create it to see the sample database added.
+For local or private databases, select a tunnel if your tunnel is active. The tunnel can be activated easily by following the details available [here](/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support). Test the connection and create it to see the sample database added.
 
 
 Following flag will be additionally required for database connections: `--expose database_type:host:port`. 

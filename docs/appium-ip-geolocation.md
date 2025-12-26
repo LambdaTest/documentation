@@ -19,6 +19,7 @@ slug: appium-ip-geolocation/
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -33,17 +34,17 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "IP Geolocation",
-          "item": "https://www.lambdatest.com/support/docs/appium-ip-geolocation/"
+          "item": `${BRAND_URL}/support/docs/appium-ip-geolocation/`
         }]
       })
     }}
@@ -52,9 +53,9 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 # IP Geolocation 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
-Lambdatest's IP Geolocation feature empowers users to test their websites and mobile applications from various geographical locations worldwide. This feature enables users to simulate traffic originating from different countries and regions, allowing for comprehensive testing of platform functionalities across diverse global markets.
+<BrandName />'s IP Geolocation feature empowers users to test their websites and mobile applications from various geographical locations worldwide. This feature enables users to simulate traffic originating from different countries and regions, allowing for comprehensive testing of platform functionalities across diverse global markets.
 
-By the end of this document, you'll learn how to use this feature in both manual and automation tests. Additionally, this document will provide a list of all supported IP geolocations on Lambdatest.
+By the end of this document, you'll learn how to use this feature in both manual and automation tests. Additionally, this document will provide a list of all supported IP geolocations on <BrandName />.
 
 ## Support for Automation on Real Devices
 
@@ -62,7 +63,7 @@ To harness the **IP Geolocation** feature in your automated tests, employ the `g
 
 **Java Example:** 
 ```java
-// Java code for configuring IP Geolcation in tests on LambdaTest
+// Java code for configuring IP Geolcation in tests on <BrandName />
 DesiredCapabilities capabilities = new DesiredCapabilities();
 capabilities.setCapability("geoLocation", "FR");
 // Add other capabilities as needed
@@ -260,12 +261,12 @@ Below is the list of supported countries along with their respective country cod
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
