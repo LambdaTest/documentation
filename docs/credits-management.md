@@ -146,6 +146,19 @@ When fewer scenarios than the selected Max Scenarios are generated, the differen
 **Q: Can I cap my organization’s usage?**
 Yes—set **Soft** and **Hard** limits (Admins only).
 
+**Q: Does the platform offer AI FinOps tools to control and manage AI testing costs?**
+Yes, it provides AI FinOps capabilities for cost control and spend management, enabling organizations to monitor, manage, and optimize costs across AI-driven testing workflows. This includes pre-execution credit controls, operation-level cost tracking, and detailed cost analytics to prevent overspending and ensure financial visibility.
+
+**Key capabilities include:**
+
+- Credit reservation system with pre-operation credit checks, reservation IDs per operation, and automatic blocking when credits are insufficient
+
+- Cost tracking per operation type, including phone scenario generation, phone call execution, chat scenario generation, chat evaluation, and image analysis
+
+- Credit balance management with real-time credit monitoring, consumption tracking, and organization-level cost summaries
+
+- Cost metrics and analytics covering operation-level breakdowns, project-level aggregation, and historical cost analysis
+
 ---
 
 ## What’s next
