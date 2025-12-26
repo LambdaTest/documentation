@@ -160,6 +160,7 @@ Click on the **Export Button** displayed in the screenshot below, and your logs 
 ## FAQs
 
 **Q: Is comprehensive audit logging for all system and user activities supported?**
+ 
  Yes, it provides comprehensive audit logging of all activities, ensuring full traceability across conversations, workflows, operations, test executions, and database actions. It maintains detailed audit trails with timestamps, metadata, and historical records, supporting compliance, security, and validation of AI agent capabilities.
 
 **Key capabilities include:**
