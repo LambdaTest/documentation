@@ -1,9 +1,9 @@
----
+﻿---
 id: lambdatest-sso-google
-title: LambdaTest SSO & Google Custom Using SAML
+title: TestMu AI SSO & Google Custom Using SAML
 hide_title: true
 sidebar_label: Google Workspace 
-description: Now integrate your Google Workspace user directory with your LambdaTest organization subscription through an IDP, so that your team could leverage the SSO setup.
+description: Now integrate your Google Workspace user directory with your TestMu AI organization subscription through an IDP, so that your team could leverage the SSO setup.
 keywords:
   - sso
   - lambdatest sso

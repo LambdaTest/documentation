@@ -1,9 +1,9 @@
----
+﻿---
 id: real-time-recents-and-favourites
 title: Recents and Favourites
 hide_title: false
 sidebar_label: Recents and Favourites
-description: Discover how to use the Recents and Favourites feature under Quick Links in LambdaTest. Quickly access recently used items and mark important resources for faster navigation.
+description: Discover how to use the Recents and Favourites feature under Quick Links in TestMu AI. Quickly access recently used items and mark important resources for faster navigation.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature

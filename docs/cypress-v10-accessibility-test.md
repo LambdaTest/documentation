@@ -1,9 +1,9 @@
----
+﻿---
 id: cypress-v10-accessibility-test
 title: Automation Tests with Accessibility Tool using Cypress v10
 hide_title: false
 sidebar_label:  Cypress v10 
-description: Use LambdaTest Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines, in your cypress tests for version 10 and above
+description: Use TestMu AI Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines, in your cypress tests for version 10 and above
 keywords:
     - LambdaTest
     - Accessibility

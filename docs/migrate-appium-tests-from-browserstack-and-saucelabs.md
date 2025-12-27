@@ -1,8 +1,8 @@
----
+﻿---
 id: migrate-appium-tests-from-browserstack-and-saucelabs
 title: Migrate Appium Tests
 sidebar_label: Migrate From BrowserStack And SauceLabs
-description: This documentation will guide you through the process of migrating your Appium test suites from BrowserStack and SauceLabs to LambdaTest.
+description: This documentation will guide you through the process of migrating your Appium test suites from BrowserStack and SauceLabs to TestMu AI.
 keywords:
   - migrate appium tests from browserstack
   - migrate appium tests from saucelabs

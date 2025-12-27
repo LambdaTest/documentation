@@ -1,9 +1,9 @@
----
+﻿---
 id: concurrency-widget
-title: Understanding Your LambdaTest Concurrency
+title: Understanding Your TestMu AI Concurrency
 hide_title: true
 sidebar_label: Concurrency Widget
-description: Learn how your LambdaTest concurrency works and how to understand the concurrency widget that shows your parallel test usage across different plans and test types.
+description: Learn how your TestMu AI concurrency works and how to understand the concurrency widget that shows your parallel test usage across different plans and test types.
 keywords:
   - lambdatest concurrency
   - parallel tests

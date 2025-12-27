@@ -1,9 +1,9 @@
----
+﻿---
 id: public-cloud-vs-private-cloud
 title: Public Cloud VS Private Cloud
 hide_title: false
 sidebar_label: Public Cloud VS Private Cloud
-description: Discover how LambdaTest's private real device cloud ensures seamless app and website functionality across devices with tailored, robust testing solutions for accuracy and flexibility.
+description: Discover how TestMu AI's private real device cloud ensures seamless app and website functionality across devices with tailored, robust testing solutions for accuracy and flexibility.
 keywords:
   - real device app testing
   - real device browser testing

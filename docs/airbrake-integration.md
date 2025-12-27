@@ -1,9 +1,9 @@
----
+﻿---
 id: airbrake-integration
 title: Airbrake Integration
 hide_title: true
 sidebar_label: Airbrake 
-description: Streamline Your Error Monitoring with LambdaTest's Airbrake Integration Documentation. Discover how to seamlessly integrate Airbrake with LambdaTest for efficient bug management and error tracking. Get step-by-step instructions and insights for optimizing your development workflow.
+description: Streamline Your Error Monitoring with TestMu AI's Airbrake Integration Documentation. Discover how to seamlessly integrate Airbrake with TestMu AI for efficient bug management and error tracking. Get step-by-step instructions and insights for optimizing your development workflow.
 keywords:
   - lambdatest integrations
   - push issues to airbrake

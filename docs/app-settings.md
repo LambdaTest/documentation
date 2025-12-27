@@ -1,9 +1,9 @@
----
+﻿---
 id: app-settings
 title: App Settings in Real Device Cloud
 hide_title: true
 sidebar_label: App Settings
-description: Explore App Settings in LambdaTest's Real Device Cloud to enhance testing functionality and ensure comprehensive app validation.
+description: Explore App Settings in TestMu AI's Real Device Cloud to enhance testing functionality and ensure comprehensive app validation.
 keywords:
 - app settings 
 url: https://www.lambdatest.com/support/docs/app-settings/

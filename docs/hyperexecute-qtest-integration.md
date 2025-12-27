@@ -1,9 +1,9 @@
----
+﻿---
 id: hyperexecute-qtest-integration
 title: Integrate qTest with HyperExecute
 hide_title: false
 sidebar_label: qTest
-description:  Unleash the power of QTest & LambdaTest HyperExecute! Streamline test management & experience blazing-fast execution.
+description:  Unleash the power of QTest & TestMu AI HyperExecute! Streamline test management & experience blazing-fast execution.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help

@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-csharp-nunit
 title:  Appium with NUnit
 sidebar_label: NUnit
-description: Now you can run your Appium automation scripts using NUnit on LambdaTest Real Device Cloud Platform of 3000+ real mobile devices.
+description: Now you can run your Appium automation scripts using NUnit on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.
 keywords:
   - appium
   - csharp

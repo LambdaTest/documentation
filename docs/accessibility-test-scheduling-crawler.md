@@ -1,8 +1,8 @@
----
+﻿---
 id: accessibility-test-crawler
 title: Accessibility Crawler
 sidebar_label: URL Crawler
-description: Learn how to use LambdaTest’s Crawler to automate URL extraction for accessibility testing. Configure crawl settings, include/exclude URL patterns, and analyze scan results.
+description: Learn how to use TestMu AI’s Crawler to automate URL extraction for accessibility testing. Configure crawl settings, include/exclude URL patterns, and analyze scan results.
 keywords:
     - LambdaTest
     - Accessibility

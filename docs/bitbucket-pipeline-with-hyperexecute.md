@@ -1,9 +1,9 @@
----
+﻿---
 id: bitbucket-pipeline-with-hyperexecute
 title: Bitbucket Pipeline Integration
 hide_title: true
 sidebar_label: Bitbucket
-description: HyperExecute now integrates with Bitbucket CI to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
+description: HyperExecute now integrates with Bitbucket CI to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools

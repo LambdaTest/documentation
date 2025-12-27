@@ -1,9 +1,9 @@
----
+﻿---
 id: lambdatest-jira-app
-title: LambdaTest Jira App
+title: TestMu AI Jira App
 hide_title: true
 sidebar_label: LambdaTest Jira App
-description: Efficiently manage your tests with LambdaTest Jira App, seamlessly integrating Test Manager capabilities into your Jira environment to enhance collaboration.
+description: Efficiently manage your tests with TestMu AI Jira App, seamlessly integrating Test Manager capabilities into your Jira environment to enhance collaboration.
 keywords:
   - Jira app
   - LambdaTest Jira App

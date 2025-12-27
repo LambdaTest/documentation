@@ -1,9 +1,9 @@
----
+﻿---
 id: dedicated-proxy
 title: Dedicated Proxy - IP Whitelisting
 hide_title: true
 sidebar_label: Dedicated Proxy for IP whitelisting
-description: This article will guide you on how does Lambdatest Cloud access network restricted resources using a dedicated proxy server.
+description: This article will guide you on how does TestMu AI Cloud access network restricted resources using a dedicated proxy server.
 keywords:
   - dedicated proxy
   - inbound ip whitelisting

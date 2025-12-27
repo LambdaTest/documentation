@@ -1,9 +1,9 @@
----
+﻿---
 id: github-app-integration
-title: LambdaTest AI Cloud GitHub App Integration
+title: TestMu AI Cloud GitHub App Integration
 hide_title: true
 sidebar_label: KaneAI GitHub App Integration
-description: Step-by-step guide to install, configure, and use the LambdaTest AI Cloud GitHub App for automated AI-powered test case generation.
+description: Step-by-step guide to install, configure, and use the TestMu AI Cloud GitHub App for automated AI-powered test case generation.
 keywords:
   - github app
   - lambdatest integration

@@ -1,9 +1,9 @@
----
+﻿---
 id: migrate-legacy-lambdatest
-title: How to Migrate From Legacy Test Execution Platform to LambdaTest
+title: How to Migrate From Legacy Test Execution Platform to TestMu AI
 hide_title: true
 sidebar_label: Legacy Platform To LambdaTest Migration
-description: Learn how to migrate from legacy test execution platform to LambdaTest cloud platform.
+description: Learn how to migrate from legacy test execution platform to TestMu AI cloud platform.
 keywords:
 - migrate from legacy platform to lambdatest
 - transition to lambdatest from legacy testing

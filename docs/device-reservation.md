@@ -1,7 +1,7 @@
----
+﻿---
 id: Device-reservation
 title: Device Reservation on Private Cloud Devices
-description: Learn how to reserve private cloud devices in LambdaTest to ensure uninterrupted testing, fair access, and conflict-free usage across your team.
+description: Learn how to reserve private cloud devices in TestMu AI to ensure uninterrupted testing, fair access, and conflict-free usage across your team.
 keywords: 
 - device reservation
 - private cloud

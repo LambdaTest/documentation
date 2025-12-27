@@ -1,9 +1,9 @@
----
+﻿---
 id: getting-started-with-mobile-app-real-time-testing
 title: Getting started with Mobile App Real Time Testing
 hide_title: false
 sidebar_label: Getting Started
-description: Test your mobile apps on real devices in real-time with LambdaTest. Easily launch virtual machines and test across various OS and versions.
+description: Test your mobile apps on real devices in real-time with TestMu AI. Easily launch virtual machines and test across various OS and versions.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature

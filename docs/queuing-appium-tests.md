@@ -1,9 +1,9 @@
----
+﻿---
 id: queuing-appium-tests
 hide_title: true
 title:  Queuing Appium Automated Tests
 sidebar_label: Queuing Appium Tests
-description: To avoid overuse of LambdaTest , we have put a capacity limit on the number of tests queued on our platform. Here's a brief guide on queuing your Appium automated tests.
+description: To avoid overuse of TestMu AI , we have put a capacity limit on the number of tests queued on our platform. Here's a brief guide on queuing your Appium automated tests.
 keywords:
   - appium test session queuing
   - queuing

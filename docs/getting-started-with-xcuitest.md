@@ -1,8 +1,8 @@
----
+﻿---
 id: getting-started-with-xcui-testing
-title: XCUI Testing on LambdaTest
+title: XCUI Testing on TestMu AI
 sidebar_label: XCUI Testing
-description: Master XCUITest automation with LambdaTest! Learn to run scripts, utilize capabilities, and execute tests on real iOS devices effortlessly. Get started now!
+description: Master XCUITest automation with TestMu AI! Learn to run scripts, utilize capabilities, and execute tests on real iOS devices effortlessly. Get started now!
 keywords:
   - xcuitest
   - app test automation

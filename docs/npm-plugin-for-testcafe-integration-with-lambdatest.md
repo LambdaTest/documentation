@@ -1,9 +1,9 @@
----
+﻿---
 id: npm-plugin-for-testcafe-integration-with-lambdatest
-title: npm Plugin For TestCafe Integration With LambdaTest | LambdaTest
+title: npm Plugin For TestCafe Integration With TestMu AI | TestMu AI
 hide_title: true
 sidebar_label: npm Plugin For TestCafe
-description: LambdaTest with an npm plugin would allow you to integrate TestCafe with your LambdaTest account. That way, you can expand your test coverage using LambdaTest Selenium Grid of 3000+ real browsers, and browser versions running across various operating systems for mobile, desktop, and tablets. Similar to TestCafe, LambdaTest Selenium Grid also allows you to perform parallel testing.
+description: TestMu AI with an npm plugin would allow you to integrate TestCafe with your TestMu AI account. That way, you can expand your test coverage using TestMu AI Selenium Grid of 3000+ real browsers, and browser versions running across various operating systems for mobile, desktop, and tablets. Similar to TestCafe, TestMu AI Selenium Grid also allows you to perform parallel testing.
 keywords:
   - testcafe
   - testcafe integration

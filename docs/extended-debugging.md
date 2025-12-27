@@ -1,9 +1,9 @@
----
+﻿---
 id: extended-debugging-options
 title: Extended Debugging Options for Selenium Testing
 hide_title: false
 sidebar_label: Extended Debugging Options
-description: Learn how to use Extended Debugging Options on LambdaTest to intercept network requests, throttle CPU and network conditions, and download HAR files for advanced test debugging and performance analysis.
+description: Learn how to use Extended Debugging Options on TestMu AI to intercept network requests, throttle CPU and network conditions, and download HAR files for advanced test debugging and performance analysis.
 keywords:
 - extended debugging options
 - selenium debugging

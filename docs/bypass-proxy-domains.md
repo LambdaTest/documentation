@@ -1,9 +1,9 @@
----
+﻿---
 id: bypass-proxy-domains
 title: How to Bypass Proxy Domains
 hide_title: false
 sidebar_label: Bypass Proxy Domains
-description: Learn how to use LambdaTest bypassProxyDomains capability to specify domains that should bypass the dedicated proxy.
+description: Learn how to use TestMu AI bypassProxyDomains capability to specify domains that should bypass the dedicated proxy.
 keywords:
 - custom headers lambdatest
 - bypass firewalls restrictions

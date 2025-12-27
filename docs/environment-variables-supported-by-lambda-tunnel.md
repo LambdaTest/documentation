@@ -1,9 +1,9 @@
----
+﻿---
 id: environment-variables-supported-by-lambda-tunnel
-title: Environment Variables Supported By LambdaTest Tunnel
+title: Environment Variables Supported By TestMu AI Tunnel
 hide_title: true
 sidebar_label: Environment Variables Supported By LambdaTest Tunnel
-description: Now you can access the LambdaTest tunnel through a proxy tunnel and leverage the environment variables to define your proxy settings. If these proxy environment variables are set then the tunnel will automatically detect them.
+description: Now you can access the TestMu AI tunnel through a proxy tunnel and leverage the environment variables to define your proxy settings. If these proxy environment variables are set then the tunnel will automatically detect them.
 keywords:
   - LambdaTest automation
   - LambdaTest environment variables

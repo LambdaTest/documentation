@@ -1,9 +1,9 @@
----
+﻿---
 id: lambda-exceptions
-title: View Assertion Errors On LambdaTest
+title: View Assertion Errors On TestMu AI
 hide_title: true
 sidebar_label: View Assertion Errors Using Lambda Exceptions
-description: Learn how to manage and handle GET request errors in your Selenium automation scripts using the Lambda Exceptions features of LambdaTest.
+description: Learn how to manage and handle GET request errors in your Selenium automation scripts using the Lambda Exceptions features of TestMu AI.
 keywords:
 - AssertionError
 - Assertion Errors

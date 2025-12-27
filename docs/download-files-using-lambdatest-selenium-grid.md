@@ -1,9 +1,9 @@
----
+﻿---
 id: download-files-using-lambdatest-selenium-grid
-title: Download Files Using LambdaTest Selenium Grid
+title: Download Files Using TestMu AI Selenium Grid
 hide_title: true
 sidebar_label: Download Files Inside Test Machine
-description: LambdaTest Selenium Grid will provide you with an encoded string of base64 which you can leverage to download any file inside the virtual machine triggered through your Selenium testing scripts.
+description: TestMu AI Selenium Grid will provide you with an encoded string of base64 which you can leverage to download any file inside the virtual machine triggered through your Selenium testing scripts.
 keywords:
   - Selenium grid
   - download test

@@ -1,8 +1,8 @@
----
+﻿---
 id: accessibility-automation-test
 title: Automating Accessibility Testing with Selenium
 sidebar_label: Selenium
-description: Identify and log accessibility issues with LambdaTest Accessibility Automation, ensuring automated compliance with WCAG accessibility standards.
+description: Identify and log accessibility issues with TestMu AI Accessibility Automation, ensuring automated compliance with WCAG accessibility standards.
 keywords:
     - LambdaTest
     - Accessibility

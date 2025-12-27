@@ -1,9 +1,9 @@
----
+﻿---
 id: appium-date-and-time
 title: Set Custom Date, Time & Hour Format on Real Devices
 hide_title: true
 sidebar_label: Set Date and Time 
-description: This document provides information about configuring date, time, and hour-format on Real Devices using Appium automation on LambdaTest.
+description: This document provides information about configuring date, time, and hour-format on Real Devices using Appium automation on TestMu AI.
 keywords:
  - Appium
  - LambdaTest

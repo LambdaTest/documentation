@@ -1,9 +1,9 @@
----
+﻿---
 id: install-apps-from-play-store
 title: How to Test Apps Installed via Play Store?
 hide_title: true
 sidebar_label: Play Store
-description: Learn how to test apps installed via Play Store on LambdaTest, ensuring optimal performance on real Android devices.
+description: Learn how to test apps installed via Play Store on TestMu AI, ensuring optimal performance on real Android devices.
 keywords:
 - install apps from play store
 - play store

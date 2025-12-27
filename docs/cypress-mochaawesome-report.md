@@ -1,9 +1,9 @@
----
+﻿---
 id: cypress-mochaawesome-report
 title: Consolidated Mochawesome Report for Cypress
 hide_title: false
 sidebar_label: Cypress Mochawesome
-description: Discover how to create MochaAwesome test reports for Cypress framework testing on LambdaTest and how to download these reports from the dashboard
+description: Discover how to create MochaAwesome test reports for Cypress framework testing on TestMu AI and how to download these reports from the dashboard
 keywords:
     - cypress testing
     - cypress automation testing

@@ -1,9 +1,9 @@
----
+﻿---
 id: accessibility-update-devtools-extension
 title: Update your Accessibility DevTools Chrome Extension
 hide_title: false
 sidebar_label: Update DevTools Chrome Extension
-description: This document guides you step by step n=on how to update the lambdatest accessibility devtools chrome extension.
+description: This document guides you step by step n=on how to update the TestMu AI accessibility devtools chrome extension.
 keywords:
     - LambdaTest
     - Accessibility

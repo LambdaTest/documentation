@@ -1,9 +1,9 @@
----
+﻿---
 id: reqnroll-with-selenium-appium
 title: Reqnroll With Selenium Grid
 hide_title: true
 sidebar_label: Reqnroll
-description: Now you can run your automation scripts using Selenium with Reqnroll on LambdaTest online grid of 10000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with Reqnroll on TestMu AI online grid of 10000+ real desktop browsers and real operating systems.
 keywords:
   - reqnroll
   - reqnroll selenium

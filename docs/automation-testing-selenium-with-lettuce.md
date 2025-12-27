@@ -1,9 +1,9 @@
----
+﻿---
 id: automation-testing-selenium-with-lettuce
 title: Lettuce Automation:Run Lettuce Automation Testing on Selenium Grid Cloud
 hide_title: true
 sidebar_label: Lettuce
-description: Learn how to run Lettuce Selenium automated test scripts (with examples) on LambdaTest Selenium Grid having 3000+ different desktop and mobile browsers on cloud.
+description: Learn how to run Lettuce Selenium automated test scripts (with examples) on TestMu AI Selenium Grid having 3000+ different desktop and mobile browsers on cloud.
 keywords:
   - lettuce
   - lettuce selenium

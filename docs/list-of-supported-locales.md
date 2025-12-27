@@ -1,9 +1,9 @@
----
+﻿---
 id: list-of-supported-locales
 title: Supported Locales And Languages - Appium
 hide_title: false
 sidebar_label: Supported Locales And Languages
-description: Checkout the list of all supported locales by LambdaTest.
+description: Checkout the list of all supported locales by TestMu AI.
 keywords:
   - Supported locales
   - Locales

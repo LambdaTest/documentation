@@ -1,9 +1,9 @@
----
+﻿---
 id: lambdatest-sso-pingidentity-integration
-title: LambdaTest SSO & PingIdentity Integration
+title: TestMu AI SSO & PingIdentity Integration
 hide_title: false
 sidebar_label: PingIdentity
-description: Integrate LambdaTest with Ping Identity for secure SSO using SAML. Follow step-by-step instructions to configure SP-initiated, IdP-initiated SSO, and group management.
+description: Integrate TestMu AI with Ping Identity for secure SSO using SAML. Follow step-by-step instructions to configure SP-initiated, IdP-initiated SSO, and group management.
 keywords:
   - sso
   - lambdatest sso

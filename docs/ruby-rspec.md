@@ -1,9 +1,9 @@
----
+﻿---
 id: ruby-rspec
-title: RSpec With Selenium – Run RSpec Tests On LambdaTest Selenium Grid
+title: RSpec With Selenium – Run RSpec Tests On TestMu AI Selenium Grid
 hide_title: true
 sidebar_label: RSpec
-description: Now you can run your automation scripts using Selenium with RSpec on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with RSpec on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - rspec
   - rspec selenium

@@ -1,8 +1,8 @@
----
+﻿---
 id: insights-private-desktop
 title: Private Desktop Insights
 sidebar_label: Private Desktop
-description: Discover LambdaTest's Private Desktop Insights for comprehensive test cases insights. Optimize your testing efforts today.
+description: Discover TestMu AI's Private Desktop Insights for comprehensive test cases insights. Optimize your testing efforts today.
 keywords:
   - analytics
   - test insights

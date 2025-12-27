@@ -1,9 +1,9 @@
----
+﻿---
 id: qtest-integration
-title: How to integrate qTest With LambdaTest
+title: How to integrate qTest With TestMu AI
 hide_title: true
 sidebar_label: qTest
-description: Run your tests using qTest Launch on LambdaTest.
+description: Run your tests using qTest Launch on TestMu AI.
 keywords:
   - LambdaTest integration
   - lambdatest integration with qTest

@@ -1,9 +1,9 @@
----
+﻿---
 id: devrev-integration
 title: DevRev Integration
 hide_title: true
 sidebar_label: DevRev
-description: Integrate LambdaTest with DevRev for efficient one-click bug logging of your web applications and eliminate the painpoint of maintaining bugs and tasks manually.
+description: Integrate TestMu AI with DevRev for efficient one-click bug logging of your web applications and eliminate the painpoint of maintaining bugs and tasks manually.
 keywords:
   - lambdatest integration with devrev
   - lambdatest and devrev integration 

@@ -1,9 +1,9 @@
----
+﻿---
 id: hyperexecute-shared-cloud-usage-limit
 title: Daily Usage Limit Per Organization | HyperExecute
 hide_title: false
 sidebar_label: Daily Usage Limit Per Organization
-description: LambdaTest enforces a daily test execution time limit at the organization level, based on the number of concurrent sessions, to ensure fair usage and system stability.
+description: TestMu AI enforces a daily test execution time limit at the organization level, based on the number of concurrent sessions, to ensure fair usage and system stability.
 keywords:
   - over-exploitation
   - lambdatest best practices

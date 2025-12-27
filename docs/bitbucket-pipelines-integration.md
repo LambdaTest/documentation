@@ -1,9 +1,9 @@
----
+﻿---
 id: bitbucket-pipelines-integration
-title: Bitbucket Pipelines Integration With LambdaTest
+title: Bitbucket Pipelines Integration With TestMu AI
 hide_title: true
 sidebar_label: Bitbucket Pipelines 
-description: LambdaTest integration with Bitbucket Pipelines will help you perform cross-browser testing on 3000+ real browsers &amp; browser versions, through a Selenium Grid hosted on LambdaTest cloud servers.
+description: TestMu AI integration with Bitbucket Pipelines will help you perform cross-browser testing on 3000+ real browsers &amp; browser versions, through a Selenium Grid hosted on TestMu AI cloud servers.
 keywords:
   - bitbucket pipelines
   - bitbucket integration with lambdatest

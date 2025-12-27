@@ -1,9 +1,9 @@
----
+﻿---
 id: extent-report
 title: Extent Report
 hide_title: false
 sidebar_label: Extent
-description: Learn how to generate Extent Report on lambdatest and download the reports from the dashboard
+description: Learn how to generate Extent Report on TestMu AI and download the reports from the dashboard
 keywords:
   - extent testing reports
   - extent testing lambdatest 

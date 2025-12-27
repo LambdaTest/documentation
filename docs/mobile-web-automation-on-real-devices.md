@@ -1,9 +1,9 @@
----
+﻿---
 id: mobile-web-automation-on-real-devices
 title: Mobile Web Automation Testing On Real Devices
 hide_title: true
 sidebar_label: Mobile Web Automation On Real Devices
-description: Perform mobile web automation via Appium on LambdaTest real device cloud. Test on real Android and iOS devices like iPhone, Samsung Galaxy, and Google Pixel.
+description: Perform mobile web automation via Appium on TestMu AI real device cloud. Test on real Android and iOS devices like iPhone, Samsung Galaxy, and Google Pixel.
 keywords:
 - mobile web automation
 - appium mobile web automation

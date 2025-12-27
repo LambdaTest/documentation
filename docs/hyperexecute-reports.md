@@ -1,9 +1,9 @@
----
+﻿---
 id: hyperexecute-reports
 title: Job Reports
 hide_title: false
 sidebar_label: HyperExecute Job Reports
-description: Effortlessly explore HyperExecute Reports! Gain a deeper understanding of your test outcomes with the comprehensive insights and analytics offered by LambdaTest.
+description: Effortlessly explore HyperExecute Reports! Gain a deeper understanding of your test outcomes with the comprehensive insights and analytics offered by TestMu AI.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help

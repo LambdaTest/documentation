@@ -1,9 +1,9 @@
----
+﻿---
 id: gitlab-integration-with-hyperexecute
 title: GitLab Integration:HyperExecute
 hide_title: true
 sidebar_label: GitLab
-description: LambdaTest integrates with GitLab Pipeline to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
+description: TestMu AI integrates with GitLab Pipeline to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools

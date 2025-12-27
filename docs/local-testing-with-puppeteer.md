@@ -1,9 +1,9 @@
----
+﻿---
 id: local-testing-puppeteer
 title: Run Local Tests Using Puppeteer
 hide_title: true
 sidebar_label:  Local Testing
-description: Learn how to perform local testing with Puppeteer across 40+ browser versions on the LambdaTest platform.
+description: Learn how to perform local testing with Puppeteer across 40+ browser versions on the TestMu AI platform.
 keywords:
   - local testing
   - lambdatest tunnel features

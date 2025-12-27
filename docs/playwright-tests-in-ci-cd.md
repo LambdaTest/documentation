@@ -1,9 +1,9 @@
----
+﻿---
 id: playwright-cicd
 title: Running Playwright Tests In CI/CD
 hide_title: true
 sidebar_label: Playwright Testing In CI/CD
-description: Learn how to perform Playwright testing through CI/CD across 40+ browser versions on the LambdaTest platform.
+description: Learn how to perform Playwright testing through CI/CD across 40+ browser versions on the TestMu AI platform.
 keywords:
  -  playwright testing 
   - playwright e2e testing 

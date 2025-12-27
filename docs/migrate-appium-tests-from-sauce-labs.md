@@ -1,9 +1,9 @@
----
+﻿---
 id: migrate-appium-test-suites-from-sauce-labs
 title:  Migrate Appium Tests From Sauce Labs
 hide_title: true
 sidebar_label: Migrate From Sauce Labs
-description: This documentation will guide you through the process of migrating your Appium test suites from Sauce Labs to LambdaTest.
+description: This documentation will guide you through the process of migrating your Appium test suites from Sauce Labs to TestMu AI.
 keywords:
 - migrate appium tests from sauce labs 
 - migrate appium tests from sauce labs to lambdatest

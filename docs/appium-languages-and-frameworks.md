@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-languages-and-frameworks
 title: Supported Languages And Frameworks
 sidebar_label: Languages and Frameworks
-description: Here is a list of languages and frameworks that are supported by the LambdaTest to run Appium automation tests on LambdaTest Real Device Cloud Platform.
+description: Here is a list of languages and frameworks that are supported by the TestMu AI to run Appium automation tests on TestMu AI Real Device Cloud Platform.
 keywords:
   - supported languages
   - supported frameworks

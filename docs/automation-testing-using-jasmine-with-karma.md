@@ -1,9 +1,9 @@
----
+﻿---
 id: automation-testing-using-jasmine-with-karma
-title: Jasmine Test Runner:Run Jasmine Testing on LambdaTest Selenium Grid | LambdaTest
+title: Jasmine Test Runner:Run Jasmine Testing on TestMu AI Selenium Grid | TestMu AI
 hide_title: true
 sidebar_label: Jasmine for BDD
-description: Now you can run your automation scripts using Jasmine with Karma on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Jasmine with Karma on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - jasmine selenium
   - karma selenium

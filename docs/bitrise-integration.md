@@ -1,9 +1,9 @@
----
+﻿---
 id: appium-bitrise
 title: How to integrate your Appium tests with Bitrise 
 hide_title: true
 sidebar_label: Bitrise - Appium
-description: Integrate LambdaTest with Bitrise CI to get started with Appium app automation across a wide range of real Android and iOS devices.
+description: Integrate TestMu AI with Bitrise CI to get started with Appium app automation across a wide range of real Android and iOS devices.
 keywords:
 - lambdatest bitrise
 - bitrise with lambdatest

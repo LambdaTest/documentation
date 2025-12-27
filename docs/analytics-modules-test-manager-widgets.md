@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-modules-test-manager-widgets
 title: Test Manager Dashboard Widgets
 sidebar_label: Test Manager
-description: Discover LambdaTest's Test Manager Analytics widgets for comprehensive test cases insights. Optimize your testing efforts today.
+description: Discover TestMu AI's Test Manager Analytics widgets for comprehensive test cases insights. Optimize your testing efforts today.
 keywords:
  - analytics
  - Test cases management

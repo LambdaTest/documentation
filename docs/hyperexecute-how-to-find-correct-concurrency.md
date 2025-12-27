@@ -1,9 +1,9 @@
----
+﻿---
 id: hyperexecute-how-to-find-correct-concurrency
 title: How to Find the Correct Concurrency for my Job
 hide_title: true
 sidebar_label: How to Find the Correct Concurrency 
-description: Discover the right concurrency levels with HyperExecute using LambdaTest's guide for effective automation testing.
+description: Discover the right concurrency levels with HyperExecute using TestMu AI's guide for effective automation testing.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help

@@ -1,9 +1,9 @@
----
+﻿---
 id: hyperexecute-testsigma-integration
 title: Testsigma Integration With HyperExecute
 hide_title: false
 sidebar_label: Testsigma
-description:  Explore seamless integrations with popular tools at LambdaTest. Enhance your testing workflow for faster, efficient cross-browser testing.
+description:  Explore seamless integrations with popular tools at TestMu AI. Enhance your testing workflow for faster, efficient cross-browser testing.
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help

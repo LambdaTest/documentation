@@ -1,9 +1,9 @@
----
+﻿---
 id: puppeteer-jest
 title: Run Puppeteer Tests With Jest
 hide_title: true
 sidebar_label: Integrate With Jest
-description: Learn how to integrate and run your Puppeteer tests with Jest across 40+ browser versions on the LambdaTest platform.
+description: Learn how to integrate and run your Puppeteer tests with Jest across 40+ browser versions on the TestMu AI platform.
 keywords:
   - puppeteer testing with jest
   - automation testing with puppeteer

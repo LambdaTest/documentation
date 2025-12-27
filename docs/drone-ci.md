@@ -1,6 +1,6 @@
----
+﻿---
 id: drone-ci
-title: How to integrate Drone CI with LambdaTest
+title: How to integrate Drone CI with TestMu AI
 hide_title: true
 sidebar_label: Drone CI
 description: This document will help you understand how you can integrate your Drone CI pipeline with cloud Selenium Grid for continuous testing.

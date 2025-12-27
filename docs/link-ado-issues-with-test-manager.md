@@ -1,9 +1,9 @@
----
+﻿---
 id: link-ado-issues-with-test-manager
 title: Link Azure DevOps Issues with Test Manager
 hide_title: true
 sidebar_label: Link Azure DevOps Issues with Test Manager
-description: Effortlessly link Azure DevOps issues with Test Manager using LambdaTest to streamline workflows and enhance project management efficiency.
+description: Effortlessly link Azure DevOps issues with Test Manager using TestMu AI to streamline workflows and enhance project management efficiency.
 keywords:
   - link Azure DevOps issues
   - link Azure DevOps issues with test manager

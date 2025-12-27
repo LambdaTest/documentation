@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-lambdatest-hooks
 title: Lambda Hooks For Appium Automation
 sidebar_label: Lambda Hooks For Appium 
-description: Now you can add custom status & remark to your App Automation scripts that you run on LambdaTest.
+description: Now you can add custom status & remark to your App Automation scripts that you run on TestMu AI.
 keywords:
   - appium
   - lambdatest hooks

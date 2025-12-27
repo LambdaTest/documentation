@@ -1,9 +1,9 @@
----
+﻿---
 id: real-time-mobile-app-testing-tools
 title: How to use Testing Tools for Mobile Applications?
 hide_title: false
 sidebar_label: Testing Tools
-description: Enhance mobile app testing with LambdaTest's comprehensive tools. Simulate actions, capture screenshots, record sessions, and more. Test across devices, locations, and network conditions for optimal results.
+description: Enhance mobile app testing with TestMu AI's comprehensive tools. Simulate actions, capture screenshots, record sessions, and more. Test across devices, locations, and network conditions for optimal results.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature

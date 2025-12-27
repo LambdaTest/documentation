@@ -1,9 +1,9 @@
----
+﻿---
 id: axosoft-integration
 title: Axosoft Integration
 hide_title: true
 sidebar_label: Axosoft
-description: With LambdaTest - Axosoft integration, now you can mark your bug to Axosoft dashboard directly from LambdaTest while performing testing.
+description: With TestMu AI - Axosoft integration, now you can mark your bug to Axosoft dashboard directly from TestMu AI while performing testing.
 keywords:
   - lambdatest integrations
   - push issues to axosoft

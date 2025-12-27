@@ -1,9 +1,9 @@
----
+﻿---
 id: getting-started-with-appium-testing
 title: Getting Started with Appium Testing
 hide_title: false
 sidebar_label: Appium Testing
-description: Getting Started with Appium Testing on LambdaTest Upload, Script, Execute, View - Run your automation scripts seamlessly on 3000+ real browsers and operating systems.
+description: Getting Started with Appium Testing on TestMu AI Upload, Script, Execute, View - Run your automation scripts seamlessly on 3000+ real browsers and operating systems.
 keywords:
   - appium
   - java

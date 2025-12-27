@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-java-testng
 title: Appium With TestNG
 sidebar_label: TestNG
-description: Appium Testing with Java and TestNG at LambdaTest:Master Mobile Automation.
+description: Appium Testing with Java and TestNG at TestMu AI:Master Mobile Automation.
 keywords:
   - appium
   - java

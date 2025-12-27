@@ -1,9 +1,9 @@
----
+﻿---
 id: lambdatest-tunnel
-title: Getting started with LambdaTest-Tunnel
+title: Getting started with TestMu AI-Tunnel
 hide_title: false
 sidebar_label: Getting started with LambdaTest-Tunnel
-description: LambdaTest Tunnel enables secure testing of locally hosted web apps on cloud-based real machines, providing access to various browsers and devices for seamless testing.
+description: TestMu AI Tunnel enables secure testing of locally hosted web apps on cloud-based real machines, providing access to various browsers and devices for seamless testing.
 keywords:
   - test locally hosted web apps online
   - free cross browser testing tool

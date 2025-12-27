@@ -1,9 +1,9 @@
----
+﻿---
 id: mantis-integration
 title: Mantis Integration
 hide_title: true
 sidebar_label: Mantis
-description: LambdaTest helps you manage your bugs in Mantis by moving them to project in a single click. All the details you provide in LambdaTest like projects, severity, priority, summary and description would automatically be presented in the project on Mantis.
+description: TestMu AI helps you manage your bugs in Mantis by moving them to project in a single click. All the details you provide in TestMu AI like projects, severity, priority, summary and description would automatically be presented in the project on Mantis.
 keywords:
   - lambdatest integrations
   - push issues to clubhouse

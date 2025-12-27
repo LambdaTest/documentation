@@ -1,6 +1,6 @@
----
+﻿---
 id: app-center-automation
-title: How to automate apps using App Center on LambdaTest
+title: How to automate apps using App Center on TestMu AI
 hide_title: true
 sidebar_label: App Center For Automation
 description: Learn App Test Automation with App Center & how to install apps for testing in this guide.

@@ -1,9 +1,9 @@
----
+﻿---
 id: fastlane-plugin
 title: Integration With fastlane Plugin
 hide_title: true
 sidebar_label: fastlane Plugin
-description: Upload Android and iOS apps using the LambdaTest fastlane plugin and test your app on LambdaTest real devices.
+description: Upload Android and iOS apps using the TestMu AI fastlane plugin and test your app on TestMu AI real devices.
 keywords:
   - fastlane plugin
   - lambdatest integrations with ci/cd tools

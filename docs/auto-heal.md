@@ -1,9 +1,9 @@
----
+﻿---
 id: auto-heal
 title: How to use Auto Healing for your Selenium test suites
 hide_title: true
 sidebar_label: Auto Healing
-description: Learn how to use LambdaTest Auto Healing feature in your Selenium tests to avoid test flakiness and increase reliability of your test suites.
+description: Learn how to use TestMu AI Auto Healing feature in your Selenium tests to avoid test flakiness and increase reliability of your test suites.
 keywords:
 - auto heal lambdatest
 - auto heal test flakiness restrictions

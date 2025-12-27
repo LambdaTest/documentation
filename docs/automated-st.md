@@ -1,9 +1,9 @@
----
+﻿---
 id: automated-st
 title: Perform Automated Screenshot Testing
 hide_title: true
 sidebar_label: Automated Screenshot Testing
-description: Effortlessly Master Automated Screenshot Testing with LambdaTest | Step-by-Step Instructions for Screenshot Testing, Downloads, and More!
+description: Effortlessly Master Automated Screenshot Testing with TestMu AI | Step-by-Step Instructions for Screenshot Testing, Downloads, and More!
 keywords:
 - automated screenshot testing in lambdatest
 - lambdatest automated screenshot testing

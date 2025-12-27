@@ -1,9 +1,9 @@
----
+﻿---
 id: docker-tunnel
 title: Localhost Testing With Docker Tunnel
 hide_title: true
 sidebar_label: Docker Tunnel
-description: Now you can use Docker image to perform live interactive and automated cross-browser testing of your locally hosted webpage on the LambdaTest platform.
+description: Now you can use Docker image to perform live interactive and automated cross-browser testing of your locally hosted webpage on the TestMu AI platform.
 keywords:
   - local app testing
   - lambdatest local testing

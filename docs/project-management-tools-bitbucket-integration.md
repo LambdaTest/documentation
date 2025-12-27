@@ -1,9 +1,9 @@
----
+﻿---
 id: project-management-tools-bitbucket-integration
 title: Bitbucket Integration
 hide_title: true
 sidebar_label: Bitbucket
-description: LambdaTest provides integrations with Bitbucket to help you log bugs directly from the middle of your test session on LambdaTest to your Bitbucket repository.
+description: TestMu AI provides integrations with Bitbucket to help you log bugs directly from the middle of your test session on TestMu AI to your Bitbucket repository.
 keywords:
   - lambdatest integrations
   - push issues to bitbucket

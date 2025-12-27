@@ -1,9 +1,9 @@
----
+﻿---
 id: perform-selenium-automation-on-headless-browsers
 title: How To Perform Headless Browser Testing
 hide_title: true
 sidebar_label: Headless Browser Testing
-description: Learn how to perform Headless browser testing on the LambdaTest platform, to perform cross-browser testing on 3000+ combinations of real devices, browsers, and OS.
+description: Learn how to perform Headless browser testing on the TestMu AI platform, to perform cross-browser testing on 3000+ combinations of real devices, browsers, and OS.
 keywords:
 - Headless Browser Testing
 - Headless Testing Selenium

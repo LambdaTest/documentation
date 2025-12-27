@@ -1,9 +1,9 @@
----
+﻿---
 id: okta-scim
 title: Okta Scim User Provisioning
 hide_title: false
 sidebar_label: Okta
-description: Integrating LambdaTest SCIM with Okta 
+description: Integrating TestMu AI SCIM with Okta 
 keywords:
     - LambdaTest SCIM
 url: https://www.lambdatest.com/support/docs/scim/okta/

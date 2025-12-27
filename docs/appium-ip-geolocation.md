@@ -1,9 +1,9 @@
----
+﻿---
 id: appium-ip-geolocation
 title: IP Geolocation 
 hide_title: true
 sidebar_label: IP Geolocation 
-description: This document provides information about configuring IP Geolocation for tests on the LambdaTest platform and also provides a list of supported geolocations on Real Devices.
+description: This document provides information about configuring IP Geolocation for tests on the TestMu AI platform and also provides a list of supported geolocations on Real Devices.
 keywords:
  - IP Geolocation
  - geolocation testing

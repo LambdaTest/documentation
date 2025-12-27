@@ -1,8 +1,8 @@
----
+﻿---
 id: espresso-env-variables-settings
 title: Setting Up Espresso Environment Variables
 sidebar_label: Environment Variable Settings
-description: Now you can run your Espresso framework on LambdaTest and this particular feature allows users to pass and retrieve environment variables (like STAGE, PROD, or DEV) during automated Android tests.
+description: Now you can run your Espresso framework on TestMu AI and this particular feature allows users to pass and retrieve environment variables (like STAGE, PROD, or DEV) during automated Android tests.
 keywords:
   - espresso
   - environment

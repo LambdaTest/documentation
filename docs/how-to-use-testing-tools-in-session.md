@@ -1,9 +1,9 @@
----
+﻿---
 id: how-to-use-testing-tools-in-session
 title: How to use testing tools in-session?
 hide_title: true
 sidebar_label: Testing Tools
-description: Mobile app testing is the process of testing a mobile application to ensure that their functionality and usability is not compromised when installed across multiple Android and iOS devices. With LambdaTest, you can test mobile applications manually to ensure they perform seamlessly across all Android and iOS real devices.
+description: Mobile app testing is the process of testing a mobile application to ensure that their functionality and usability is not compromised when installed across multiple Android and iOS devices. With TestMu AI, you can test mobile applications manually to ensure they perform seamlessly across all Android and iOS real devices.
 keywords:
   - real device app testing
   - real device browser testing

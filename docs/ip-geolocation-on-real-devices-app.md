@@ -1,8 +1,8 @@
----
+﻿---
 id: ip-geolocation-on-real-devices-app
 title: IP Geolocation on Real Devices App
 sidebar_label: IP Geolocation
-description: Test your app and website across real devices with LambdaTest.
+description: Test your app and website across real devices with TestMu AI.
 
 keywords:
   - change geolocation on real device

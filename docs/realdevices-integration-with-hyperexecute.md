@@ -1,9 +1,9 @@
----
+﻿---
 id: real-devices-integration-with-hyperexecute
 title: Real Devices
 hide_title: true
 sidebar_label: HyperExecute Real Devices Testing
-description: Maximize real device testing with HyperExecute! Accelerate test orchestration and intelligence on real devices with LambdaTest's support. 
+description: Maximize real device testing with HyperExecute! Accelerate test orchestration and intelligence on real devices with TestMu AI's support. 
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products

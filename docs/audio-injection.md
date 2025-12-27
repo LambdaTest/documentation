@@ -1,8 +1,8 @@
----
+﻿---
 id: audio-injection
 title: Audio Injection on iOS Real Devices
 sidebar_label: Audio Injection
-description: Inject audio content in your tests with LambdaTest to simulate microphone inputs for automated testing, enhancing your app's audio capabilities.
+description: Inject audio content in your tests with TestMu AI to simulate microphone inputs for automated testing, enhancing your app's audio capabilities.
 
 keywords:
   - audio injection

@@ -1,9 +1,9 @@
----
+﻿---
 id: har-log-viewer
 title: HAR Log Viewer With Waterfall for Selenium Testing
 hide_title: true
 sidebar_label: HAR Log Viewer With Waterfall
-description: Learn how to use HAR Log Viewer With Waterfall for Selenium automation testing on LambdaTest.
+description: Learn how to use HAR Log Viewer With Waterfall for Selenium automation testing on TestMu AI.
 keywords:
 - har log viewer with waterfall
 - har log viewer

@@ -1,9 +1,9 @@
----
+﻿---
 id: lambdatest-sso-manage-connection
 title: Manage SSO Connection
 hide_title: true
 sidebar_label: Manage SSO Connection
-description: This document will help you set up and manage your LambdaTest SSO connection. 
+description: This document will help you set up and manage your TestMu AI SSO connection. 
 keywords:
 - sso
 - LambdaTest SSO

@@ -1,8 +1,8 @@
----
+﻿---
 id: insights-app-profiling
 title: App Profiling Insights
 sidebar_label: App Profiling
-description: Discover LambdaTest's App Profiling Insights for comprehensive test cases insights. Optimize your testing efforts today.
+description: Discover TestMu AI's App Profiling Insights for comprehensive test cases insights. Optimize your testing efforts today.
 keywords:
   - analytics
   - test insights

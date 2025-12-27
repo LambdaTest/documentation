@@ -1,8 +1,8 @@
----
+﻿---
 id: playwright-sdk
 title: Playwright SDK
 sidebar_label: Playwright SDK
-description: A guide to getting started with the Playwright-Node.js SDK by LambdaTest.
+description: A guide to getting started with the Playwright-Node.js SDK by TestMu AI.
 keywords:
   - playwright
   - nodejs

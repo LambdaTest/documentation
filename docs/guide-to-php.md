@@ -1,9 +1,9 @@
----
+﻿---
 id: guide-to-php
-title: Running PHP Tests on Online Selenium Grid | LambdaTest
+title: Running PHP Tests on Online Selenium Grid | TestMu AI
 hide_title: true
 sidebar_label: Quick Guide To Run PHP
-description: Guide to running PHP and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and PHP on 3000+ browsers on cloud
+description: Guide to running PHP and Selenium test scripts on TestMu AI Selenium automation grid online. Automated cross browser testing online using Selenium and PHP on 3000+ browsers on cloud
 keywords:
   - LambdaTest automation using php
   - php and Selenium automation

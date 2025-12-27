@@ -1,9 +1,9 @@
----
+﻿---
 id: docker-tunnel-extension
-title: LambdaTest Docker Tunnel Extension For Local Testing
+title: TestMu AI Docker Tunnel Extension For Local Testing
 hide_title: true
 sidebar_label: Docker Tunnel Extension
-description: Avoid the hassle of launching tunnels via the CLI. LambdaTest Docker Tunnel Extension lets you test locally hosted web applications across 3000+ browsers, devices, and operating systems.
+description: Avoid the hassle of launching tunnels via the CLI. TestMu AI Docker Tunnel Extension lets you test locally hosted web applications across 3000+ browsers, devices, and operating systems.
 keywords:
   - lambdatest tunnel extension for docker
   - lambdatest docker tunnel

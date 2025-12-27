@@ -1,8 +1,8 @@
----
+﻿---
 id: getting-started-with-espresso-testing
-title: Espresso Testing On LambdaTest
+title: Espresso Testing On TestMu AI
 sidebar_label: Espresso Testing
-description: Now you can run your automation scripts using Espresso framework on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Espresso framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - espresso
   - java

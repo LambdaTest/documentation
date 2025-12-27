@@ -1,9 +1,9 @@
----
+﻿---
 id: guide-to-ruby
 title: How To Run Ruby Tests On Online Selenium Grid
 hide_title: true
 sidebar_label: Quick Guide To Run Ruby
-description: Guide to running Ruby and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and Ruby on 3000+ browsers on cloud.
+description: Guide to running Ruby and Selenium test scripts on TestMu AI Selenium automation grid online. Automated cross browser testing online using Selenium and Ruby on 3000+ browsers on cloud.
 keywords:
   - lambdatest automation using ruby
   - ruby and selenium automation

@@ -1,9 +1,9 @@
----
+﻿---
 id: new-relic-integration
-title: New Relic Integration With LambdaTest
+title: New Relic Integration With TestMu AI
 hide_title: true
 sidebar_label: New Relic
-description: View your LambdaTest test results in a custom New Relic dashboard. Gain deep insights into your automation scripts and identify gaps to ship quality products at light speed.
+description: View your TestMu AI test results in a custom New Relic dashboard. Gain deep insights into your automation scripts and identify gaps to ship quality products at light speed.
 keywords:
   - lambdatest integrations
   - lambdatest integration with new relic

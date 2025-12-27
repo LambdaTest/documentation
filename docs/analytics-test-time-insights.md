@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-test-time-trends
 title: Time Insights
 sidebar_label: Setup Time Insights
-description: Monitor and optimize test environment setup times with LambdaTest's Setup Time Insights module. Analyze trends, compare across platforms, and receive AI-driven optimization recommendations
+description: Monitor and optimize test environment setup times with TestMu AI's Setup Time Insights module. Analyze trends, compare across platforms, and receive AI-driven optimization recommendations
 keywords:
   - analytics
 url: https://www.lambdatest.com/support/docs/analytics-test-time-trends/

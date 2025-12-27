@@ -1,9 +1,9 @@
----
+﻿---
 id: hyperexecute-integration-with-virtual-devices
 title: Virtual Devices
 hide_title: true
 sidebar_label: HyperExecute Virtual Devices Testing
-description: Maximize virtual device testing with HyperExecute! Accelerate test orchestration and intelligence on real devices with LambdaTest's support. 
+description: Maximize virtual device testing with HyperExecute! Accelerate test orchestration and intelligence on real devices with TestMu AI's support. 
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products

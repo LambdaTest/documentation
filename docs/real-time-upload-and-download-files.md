@@ -1,9 +1,9 @@
----
+﻿---
 id: real-time-upload-and-download-files
 title: Upload and Download Files
 hide_title: false
 sidebar_label: Upload and Download Files
-description: Easily upload and download files during remote testing with LambdaTest. Manage cross-platform file transfers for seamless workflows across desktop and mobile devices.
+description: Easily upload and download files during remote testing with TestMu AI. Manage cross-platform file transfers for seamless workflows across desktop and mobile devices.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature

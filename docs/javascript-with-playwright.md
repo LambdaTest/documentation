@@ -1,9 +1,9 @@
----
+﻿---
 id: javascript-with-playwright
-title: Run your JavaScript automation scripts with Playwright on LambdaTest
+title: Run your JavaScript automation scripts with Playwright on TestMu AI
 hide_title: true
 sidebar_label: JavaScript
-description: Run your JavaScript automation scripts with Playwright on LambdaTest scalable cloud grid of 50+ real desktop browsers and operating systems.
+description: Run your JavaScript automation scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.
 keywords:
   - javascript playwright
   - javascript automation testing

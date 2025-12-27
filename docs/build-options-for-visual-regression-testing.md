@@ -1,8 +1,8 @@
----
+﻿---
 id: smart-ui-build-options
 title: Build Configuration and Options for Smart UI
 sidebar_label: Build Config & Options
-description: Navigate through our support doc to adeptly build Configuration & Options for Smart UI using LambdaTest!
+description: Navigate through our support doc to adeptly build Configuration & Options for Smart UI using TestMu AI!
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

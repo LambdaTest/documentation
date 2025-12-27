@@ -1,9 +1,9 @@
----
+﻿---
 id: azure-scim
 title: Azure AD Scim User Provisioning
 hide_title: false
 sidebar_label: Azure AD
-description: Integrating LambdaTest SCIM with Azure AD 
+description: Integrating TestMu AI SCIM with Azure AD 
 keywords:
     - LambdaTest SCIM
 url: https://www.lambdatest.com/support/docs/scim/azure/

@@ -1,9 +1,9 @@
----
+﻿---
 id: accessibility-testing
-title: LambdaTest Accessibility Testing
+title: TestMu AI Accessibility Testing
 hide_title: false
 sidebar_label: Accessibility Testing
-description: Make your digital products usable for people with disabilities through comprehensive testing and improvement using LambdaTest Accessibility DevTools
+description: Make your digital products usable for people with disabilities through comprehensive testing and improvement using TestMu AI Accessibility DevTools
 keywords:
     - LambdaTest
     - Accessibility

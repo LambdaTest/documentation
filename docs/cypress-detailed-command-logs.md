@@ -1,9 +1,9 @@
----
+﻿---
 id: cypress-detailed-command-logs
 title: Detailed Command Logs for Cypress
 hide_title: true
 sidebar_label: Cypress Detailed Command Logs
-description: Learn how to generate detailed command logs for the test reports of cypress framework testing on lambdatest and download the reports from the dashboard.
+description: Learn how to generate detailed command logs for the test reports of cypress framework testing on TestMu AI and download the reports from the dashboard.
 keywords:
     - cypress testing
     - cypress automation testing

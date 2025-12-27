@@ -1,9 +1,9 @@
----
+﻿---
 id: delete-lambdatest-account
-title: Deleting Your LambdaTest Account
+title: Deleting Your TestMu AI Account
 hide_title: true
 sidebar_label: Deleting LambdaTest Account
-description: This documentation will help in deleting the LambdaTest account for freemium users, premium users, and team members.
+description: This documentation will help in deleting the TestMu AI account for freemium users, premium users, and team members.
 keywords:
 - how to delete lambdatest account 
 - how can I delete my lambdatest account

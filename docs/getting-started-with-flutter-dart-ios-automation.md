@@ -1,8 +1,8 @@
----
+﻿---
 id: getting-started-with-flutter-dart-ios-automation
-title: Flutter Dart Testing On LambdaTest - iOS
+title: Flutter Dart Testing On TestMu AI - iOS
 sidebar_label: Flutter Dart iOS
-description: This guide details running your first Flutter Dart test on real iPhones using LambdaTest's Real Device Cloud.
+description: This guide details running your first Flutter Dart test on real iPhones using TestMu AI's Real Device Cloud.
 keywords:
 - flutter
 - lambdatest

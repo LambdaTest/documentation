@@ -1,9 +1,9 @@
----
+﻿---
 id: automation-testing-using-webdriverIO-5-6-2
-title: Run Automation Scripts on Cloud Selenium Grid using WebDriverIO 5.6.2 Framework | LambdaTest
+title: Run Automation Scripts on Cloud Selenium Grid using WebDriverIO 5.6.2 Framework | TestMu AI
 hide_title: true
 sidebar_label: WebDriverIO 5.6.2
-description: Now you can run your automation scripts using Selenium with WebDriverIO 5.6.2 on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with WebDriverIO 5.6.2 on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - webdriverio selenium grid
   - selenium webdriver tutorial

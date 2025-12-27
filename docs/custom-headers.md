@@ -1,9 +1,9 @@
----
+﻿---
 id: custom-header
 title: How to Bypass Firewalls using CustomHeaders Capability
 hide_title: true
 sidebar_label: CustomHeaders
-description: Learn how to use LambdaTest CustomHeaders capability to add custom headers to your tests and bypass firewalls restrictions.
+description: Learn how to use TestMu AI CustomHeaders capability to add custom headers to your tests and bypass firewalls restrictions.
 keywords:
 - custom headers lambdatest
 - bypass firewalls restrictions

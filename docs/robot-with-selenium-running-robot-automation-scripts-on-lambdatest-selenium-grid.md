@@ -1,9 +1,9 @@
----
+﻿---
 id: robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid
-title: Robot framework:Run automation scripts on LambdaTest-Selenium Grid
+title: Robot framework:Run automation scripts on TestMu AI-Selenium Grid
 hide_title: true
 sidebar_label: Robot
-description: Now you can run your automation scripts using Selenium with Robot on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with Robot on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - robot
   - robot selenium

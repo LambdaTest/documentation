@@ -1,8 +1,8 @@
----
+﻿---
 id: ip-geolocation-on-real-devices-browser
 title: IP Geolocation on Real Devices Browser
 sidebar_label: IP Geolocation
-description: Test your app and website across real devices and browsers with LambdaTest. 
+description: Test your app and website across real devices and browsers with TestMu AI. 
 
 keywords:
   - change geolocation on real device

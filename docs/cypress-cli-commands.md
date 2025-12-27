@@ -1,9 +1,9 @@
----
+﻿---
 id: cypress-cli-commands
-title: List of LambdaTest Cypress CLI Commands
+title: List of TestMu AI Cypress CLI Commands
 hide_title: false
 sidebar_label: Cypress CLI Commands
-description: List of all the commands and arguments supported by LambdaTest-Cypress CLI.
+description: List of all the commands and arguments supported by TestMu AI-Cypress CLI.
 keywords:
   - cypress cli commands
   - lambdatest cypress cli commands

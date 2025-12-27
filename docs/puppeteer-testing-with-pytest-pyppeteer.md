@@ -1,9 +1,9 @@
----
+﻿---
 id: puppeteer-pytest-pyppeteer
 title: Run Puppeteer Tests Using Pytest-Pyppeteer
 hide_title: true
 sidebar_label: Integrate With Pytest-Pyppeteer
-description: Learn how to integrate and run your Puppeteer tests using Pytest-Pyppeteer across 40+ browser versions on the LambdaTest platform.
+description: Learn how to integrate and run your Puppeteer tests using Pytest-Pyppeteer across 40+ browser versions on the TestMu AI platform.
 keywords:
   - puppeteer testing with pyppeteer
   - pyppeteer

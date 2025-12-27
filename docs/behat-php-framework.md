@@ -1,9 +1,9 @@
----
+﻿---
 id: behat-php-framework
 title: Behat Selenium Testing:Running Behat Automation Scripts on Selenium Grid Cloud
 hide_title: true
 sidebar_label: Behat
-description: Now you can run your automation scripts using Selenium with Behat on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with Behat on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - behat
   - behat selenium

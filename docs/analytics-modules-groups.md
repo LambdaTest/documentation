@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-modules-groups
 title: Usage insights for Groups
 sidebar_label: Groups Insights
-description: Explore LambdaTest's powerful Analytics Modules for comprehensive test intelligence and groups insights. Elevate your testing efficiency today.
+description: Explore TestMu AI's powerful Analytics Modules for comprehensive test intelligence and groups insights. Elevate your testing efficiency today.
 keywords:
   - analytics
   - groups

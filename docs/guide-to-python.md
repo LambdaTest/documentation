@@ -1,9 +1,9 @@
----
+﻿---
 id: guide-to-python
-title: Guide - Running Python Tests On LambdaTest Selenium Grid
+title: Guide - Running Python Tests On TestMu AI Selenium Grid
 hide_title: true
 sidebar_label: Quick Guide To Run Python
-description: Guide to running Python and Selenium test scripts on LambdaTest Selenium automation grid online. Automated cross browser testing online using Selenium and Python on 3000+ browsers on cloud
+description: Guide to running Python and Selenium test scripts on TestMu AI Selenium automation grid online. Automated cross browser testing online using Selenium and Python on 3000+ browsers on cloud
 keywords:
   - LambdaTest automation using python
   - python and Selenium automation

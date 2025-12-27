@@ -1,9 +1,9 @@
----
+﻿---
 id: jenkins-plugin
-title: LambdaTest Integration With Jenkins
+title: TestMu AI Integration With Jenkins
 hide_title: true
 sidebar_label: Jenkins Plugin
-description: LambdaTest now integrates with Jenkins to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines. 
+description: TestMu AI now integrates with Jenkins to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines. 
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools

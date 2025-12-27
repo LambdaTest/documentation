@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-firetv
 title: Fire TV With Appium
 sidebar_label: Fire TV Stick
-description: Complete guide to running your first FireTV Appium automated test script on LambdaTest Real Device Cloud Platform. Test on 3000+ Real Devices.
+description: Complete guide to running your first FireTV Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 3000+ Real Devices.
 keywords:
   - python appium
   - firetv

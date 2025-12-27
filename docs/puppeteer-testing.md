@@ -1,9 +1,9 @@
----
+﻿---
 id: puppeteer-testing-guide
-title: How To Run Puppeteer Tests On LambdaTest Platform
+title: How To Run Puppeteer Tests On TestMu AI Platform
 hide_title: true
 sidebar_label: Puppeteer Testing
-description: Learn how to run your Puppeteer tests across 40+ browsers and operating systems on the LambdaTest automation platform
+description: Learn how to run your Puppeteer tests across 40+ browsers and operating systems on the TestMu AI automation platform
 keywords:
   - puppeteer testing
   - automation testing with puppeteer

@@ -1,9 +1,9 @@
----
+﻿---
 id: k6-browser-testing
-title: How To Run k6 Browser Tests On LambdaTest Platform
+title: How To Run k6 Browser Tests On TestMu AI Platform
 hide_title: true
 sidebar_label: k6 Browser Testing
-description: Learn how to run your k6 Browser tests across 40+ browsers and operating systems on the LambdaTest automation platform
+description: Learn how to run your k6 Browser tests across 40+ browsers and operating systems on the TestMu AI automation platform
 keywords:
   - k6 browser testing
   - grafana browser testing

@@ -1,8 +1,8 @@
----
+﻿---
 id: ios-ipa-files-xcui
 title: Creating iOS Applications
 sidebar_label: Creating iOS Applications
-description: Effortlessly test iOS IPA files with XCUi on LambdaTest. Ensure your apps run smoothly on all iOS devices with comprehensive testing support.
+description: Effortlessly test iOS IPA files with XCUi on TestMu AI. Ensure your apps run smoothly on all iOS devices with comprehensive testing support.
 keywords:
   - xcuitest
   - app test automation

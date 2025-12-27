@@ -1,8 +1,8 @@
----
+﻿---
 id: junit-frameworks
 title: Execute Selenium Tests With JUnit
 sidebar_label: JUnit
-description: Your guide to running tests using JUnit on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
+description: Your guide to running tests using JUnit on TestMu AI's Selenium Grid of 3000+ real devices and desktop browsers.
 keywords:
   - java selenium
   - java selenium tutorial

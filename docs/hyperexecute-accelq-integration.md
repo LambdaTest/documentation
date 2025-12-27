@@ -1,9 +1,9 @@
----
+﻿---
 id: hyperexecute-accelq-integration
 title: Accelq Integration with HyperExecute
 hide_title: true
 sidebar_label: Accelq Integration
-description: Leverage LambdaTest's cloud mobile devices to run automation testing using Accelq Studio.
+description: Leverage TestMu AI's cloud mobile devices to run automation testing using Accelq Studio.
 keywords:
   - accelq studio
   - integraion

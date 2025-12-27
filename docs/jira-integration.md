@@ -1,9 +1,9 @@
----
+﻿---
 id: jira-integration
-title: Integrate LambdaTest with Jira | LambdaTest
+title: Integrate TestMu AI with Jira | TestMu AI
 hide_title: true
 sidebar_label: Jira
-description: LambdaTest provides integrations with JIRA to help you log bugs directly from the middle of your test session on LambdaTest to JIRA platform.
+description: TestMu AI provides integrations with JIRA to help you log bugs directly from the middle of your test session on TestMu AI to JIRA platform.
 keywords:
   - LambdaTest integrations
   - Push issues to Jira

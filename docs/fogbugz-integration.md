@@ -1,9 +1,9 @@
----
+﻿---
 id: fogbugz-integration
 title: FogBugz Integration
 hide_title: true
 sidebar_label: FogBugz
-description: LambdaTest helps you manage your bugs in FogBugz by moving them to project in a single click. All the details you provide in LambdaTest like task list, assignee, title and description would automatically be presented in the project in your FogBugz dashboard.
+description: TestMu AI helps you manage your bugs in FogBugz by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project in your FogBugz dashboard.
 keywords:
   - lambdatest integrations
   - push issues to fogbugz

@@ -1,9 +1,9 @@
----
+﻿---
 id: puppeteer-codecept
 title: Run Puppeteer Tests Using CodeceptJS
 hide_title: true
 sidebar_label: Integrate With CodeceptJS
-description: Learn how to integrate and run your Puppeteer tests using CodeceptJS across 40+ browser versions on the LambdaTest platform.
+description: Learn how to integrate and run your Puppeteer tests using CodeceptJS across 40+ browser versions on the TestMu AI platform.
 keywords:
   - puppeteer testing with codeceptjs
   - puppeteer codecept

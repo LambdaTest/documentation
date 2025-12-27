@@ -1,9 +1,9 @@
----
+﻿---
 id: getting-started-with-hyperexecute
 title: Getting Started with HyperExecute
 hide_title: false
 sidebar_label: HyperExecute 
-description: Get started with HyperExecute on LambdaTest for faster web automation tests using Matrix and Auto-Split strategies. Test with Selenium languages at high speeds.
+description: Get started with HyperExecute on TestMu AI for faster web automation tests using Matrix and Auto-Split strategies. Test with Selenium languages at high speeds.
 keywords:
   - lambdatest automation
   - lambdatest hyperexecute

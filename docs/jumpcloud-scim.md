@@ -1,9 +1,9 @@
----
+﻿---
 id: jumpcloud-scim
 title: JumpCloud User Provisioning
 hide_title: false
 sidebar_label: JumpCloud 
-description: Integrating LambdaTest SCIM with JumpCloud
+description: Integrating TestMu AI SCIM with JumpCloud
 keywords:
     - LambdaTest SCIM
     - JumpCloud

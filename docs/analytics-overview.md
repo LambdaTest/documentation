@@ -1,6 +1,6 @@
----
+﻿---
 id: analytics-overview
-title: Lambdatest - Test Insights for visualizing your tests runs
+title: TestMu AI - Test Insights for visualizing your tests runs
 sidebar_label: Insights
 description: Optimize test management with Test Insights. Visualize test runs, track progress, and improve quality with actionable analytics. Enhance testing efficiency.
 keywords:

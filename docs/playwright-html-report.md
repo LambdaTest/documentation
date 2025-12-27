@@ -1,9 +1,9 @@
----
+﻿---
 id: playwright-html-report
 title: Consolidated Playwright HTML Report
 hide_title: false
 sidebar_label: Playwright HTML
-description: Learn how to generate html test report for playwright framework testing on lambdatest and download the reports from the dashboard
+description: Learn how to generate html test report for playwright framework testing on TestMu AI and download the reports from the dashboard
 keywords:
  -  playwright testing with Playwright test runner
   - playwright e2e testing with Playwright test runner

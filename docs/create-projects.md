@@ -1,9 +1,9 @@
----
+﻿---
 id: create-projects
 title: Create Projects
 hide_title: true
 sidebar_label: Create Projects
-description: Create projects seamlessly with LambdaTest's Test Manager, streamlining your testing processes and ensuring efficient management of all your test activities.
+description: Create projects seamlessly with TestMu AI's Test Manager, streamlining your testing processes and ensuring efficient management of all your test activities.
 keywords:
   - test manager
   - create projects

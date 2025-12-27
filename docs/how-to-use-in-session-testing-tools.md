@@ -1,9 +1,9 @@
----
+﻿---
 id: how-to-use-in-session-testing-tools
 title: How to use in-session testing tools?
 hide_title: true
 sidebar_label: Testing Tools
-description: With LambdaTest, perform live interactive testing of websites and web applications on real Android and iOS devices to ensure seamless user experience.
+description: With TestMu AI, perform live interactive testing of websites and web applications on real Android and iOS devices to ensure seamless user experience.
 keywords:
   - real device app testing
   - real device browser testing

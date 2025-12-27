@@ -1,9 +1,9 @@
----
+﻿---
 id: mark-as-bug-responsive-testing
-title: How To Mark As Bug In Responsive Testing | LambdaTest
+title: How To Mark As Bug In Responsive Testing | TestMu AI
 hide_title: true
 sidebar_label: Mark As Bug In Responsive Testing
-description: Perform responsive testing with LambdaTest and mark your UI bugs in just a single click. Share them with your colleagues on respective project management tool such as Jira, Trello, Paymo, and more.
+description: Perform responsive testing with TestMu AI and mark your UI bugs in just a single click. Share them with your colleagues on respective project management tool such as Jira, Trello, Paymo, and more.
 keywords:
   - bug reporting
   - mark as bug

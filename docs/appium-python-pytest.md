@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-python-pytest
 title: Appium with Pytest
 sidebar_label: Pytest
-description: Complete guide to running your first Pytest Appium automated test script on LambdaTest Real Device Cloud Platform. Test on 3000+ Real Devices.
+description: Complete guide to running your first Pytest Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 3000+ Real Devices.
 keywords:
   - python appium
   - pytest

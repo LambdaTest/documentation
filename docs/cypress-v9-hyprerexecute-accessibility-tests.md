@@ -1,9 +1,9 @@
----
+﻿---
 id: cypress-v9-hyprerexecute-accessibility-tests
 title: Accessibility Testing on HyperExecute using Cypress v9
 hide_title: false
 sidebar_label:  Cypress v9
-description: Use LambdaTest Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines, in your cypress tests for version 9 and below
+description: Use TestMu AI Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines, in your cypress tests for version 9 and below
 keywords:
     - LambdaTest
     - Accessibility

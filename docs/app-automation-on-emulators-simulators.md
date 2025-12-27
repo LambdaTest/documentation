@@ -1,8 +1,8 @@
----
+﻿---
 id: app-automation-app-sim
-title: App Automation Using Emulators and Simulators on LambdaTest
+title: App Automation Using Emulators and Simulators on TestMu AI
 sidebar_label: App Automation (Emu/Sim)
-description: Learn how to run app automated tests on using Emulators and Simulators on LambdaTest.
+description: Learn how to run app automated tests on using Emulators and Simulators on TestMu AI.
 keywords:
   - app automation emulators simulators
   - app automation emulators 

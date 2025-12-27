@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-smart-tags-test-intelligence
 title: Smart Tags - Test Intelligence
 sidebar_label: Smart Tags
-description: Analyze tests faster with Smart Tags in LambdaTest Analytics. Get insights on your test automation execution with Smart Tags.
+description: Analyze tests faster with Smart Tags in TestMu AI Analytics. Get insights on your test automation execution with Smart Tags.
 keywords:
   - analytics
   - smart tags

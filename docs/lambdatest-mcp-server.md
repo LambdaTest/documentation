@@ -1,9 +1,9 @@
----
+﻿---
 id: lambdatest-mcp-server
-title: Introducing LambdaTest MCP Server
+title: Introducing TestMu AI MCP Server
 hide_title: False
 sidebar_label: Setting up LambdaTest MCP Server
-description: With LambdaTest MCP Server, explore all LambdaTest MCP Server tools in one place, from setup to usage.
+description: With TestMu AI MCP Server, explore all TestMu AI MCP Server tools in one place, from setup to usage.
 keywords:
   - hyperexecute performance testing
   - hyperexecute

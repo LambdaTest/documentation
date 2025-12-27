@@ -1,9 +1,9 @@
----
+﻿---
 id: plugins-and-extensions
 title: Plugins and Extensions
 hide_title: true
 sidebar_label: Plugins and Extensions
-description: LambdaTest offers you plugins with various third-party application to help you perform cross browser testing on 3000+ real browsers with pace and convenience. 
+description: TestMu AI offers you plugins with various third-party application to help you perform cross browser testing on 3000+ real browsers with pace and convenience. 
 keywords:
   - plugins 
   - extensions 

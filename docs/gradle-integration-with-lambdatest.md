@@ -1,9 +1,9 @@
----
+﻿---
 id: gradle-integration-with-lambdatest
-title: Gradle Plugin Integration With LambdaTest
+title: Gradle Plugin Integration With TestMu AI
 hide_title: false
 sidebar_label: Gradle Plugin
-description: Automate testing at scale! Integrate LambdaTest with Gradle for seamless CI/CD & lightning-fast execution.
+description: Automate testing at scale! Integrate TestMu AI with Gradle for seamless CI/CD & lightning-fast execution.
 keywords:
   - lambdatest integrations
   - push issues to localstack

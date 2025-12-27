@@ -1,9 +1,9 @@
----
+﻿---
 id: accessibility-test-scheduling-scan
 title: Steps to Schedule an Accessibility Scan
 hide_title: false
 sidebar_label: Schedule a Scan
-description: Learn how to schedule accessibility scans with LambdaTest. Configure scans, automate WCAG compliance checks, and analyze detailed reports with ease.
+description: Learn how to schedule accessibility scans with TestMu AI. Configure scans, automate WCAG compliance checks, and analyze detailed reports with ease.
 keywords:
     - LambdaTest
     - Accessibility

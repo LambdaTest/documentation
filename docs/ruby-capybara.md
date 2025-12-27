@@ -1,9 +1,9 @@
----
+﻿---
 id: ruby-capybara
 title: Running Automation Scripts on Selenium Grid Cloud Using Capybara Ruby
 hide_title: true
 sidebar_label: Capybara
-description: Now you can run your automation scripts using Selenium with CapyBara on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with CapyBara on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - capybara
   - capybara selenium

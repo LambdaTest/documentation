@@ -1,9 +1,9 @@
----
+﻿---
 id: codeship-integration
-title: Codeship Integration With LambdaTest
+title: Codeship Integration With TestMu AI
 hide_title: true
 sidebar_label: Codeship
-description: LambdaTest offers continuous integration with Codeship to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.
+description: TestMu AI offers continuous integration with Codeship to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.
 keywords:
   - lambdatest integrations
   - continuous integration

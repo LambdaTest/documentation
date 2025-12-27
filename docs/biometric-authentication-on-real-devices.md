@@ -1,8 +1,8 @@
----
+﻿---
 id: biometric-authentication-on-real-devices
 title: Biometric Authentication on Real Devices
 sidebar_label: Biometric Authentication
-description: Learn how to test biometric authentication in iOS and Android apps using LambdaTest's real device testing platform. Enhance app security and user experience.
+description: Learn how to test biometric authentication in iOS and Android apps using TestMu AI's real device testing platform. Enhance app security and user experience.
 keywords:
   - biometric authentication
   - Fingerprint authentication

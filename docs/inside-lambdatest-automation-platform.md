@@ -1,9 +1,9 @@
----
+﻿---
 id: inside-lambdatest-automation-platform
 title: Guided Walkthrough of Web Automation Platform
 hide_title: false
 sidebar_label: Guided Walkthrough
-description: You can view the Timelines, Analytics, and Automation Log of all the tests and builds run on the LambdaTest.
+description: You can view the Timelines, Analytics, and Automation Log of all the tests and builds run on the TestMu AI.
 keywords:
   - Automation Platform
   - Dashboard

@@ -1,9 +1,9 @@
----
+﻿---
 id: live-interactive-mobile-app-testing
 title: Realtime Native Mobile App Testing
 hide_title: true
 sidebar_label: Realtime Native Mobile App Testing
-description: With LambdaTest, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
+description: With TestMu AI, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
 keywords:
 - mobile app testing 
 - lambdatest manual app testing 

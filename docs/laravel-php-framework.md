@@ -1,9 +1,9 @@
----
+﻿---
 id: laravel-php-framework
 title: Laravel Dusk Selenium:Running Laravel Dusk Testing Scripts on Online Selenium Grid
 hide_title: true
 sidebar_label: Laravel
-description: Now you can run your automation scripts using Selenium with Laravel Dusk on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with Laravel Dusk on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - laravel dusk
   - laravel dusk selenium

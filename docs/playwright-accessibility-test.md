@@ -1,8 +1,8 @@
----
+﻿---
 id: playwright-accessibility-test
 title: Automation Tests with Accessibility Tool using Playwright
 sidebar_label: Playwright
-description: Use LambdaTest Accessibility DevTools with Playwright to detect and report accessibility issues with automation, following WCAG guidelines.
+description: Use TestMu AI Accessibility DevTools with Playwright to detect and report accessibility issues with automation, following WCAG guidelines.
 keywords:
     - LambdaTest
     - Accessibility

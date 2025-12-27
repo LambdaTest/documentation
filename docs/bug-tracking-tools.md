@@ -1,8 +1,8 @@
----
+﻿---
 id: bug-tracking-tools
 title: Bug Tracking Tools
 sidebar_label: Integrations
-description: LambdaTest offers integrations with numerous Bug Tracking tools to help you mark and track bugs for pacing up your debugging.
+description: TestMu AI offers integrations with numerous Bug Tracking tools to help you mark and track bugs for pacing up your debugging.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with bug tracking tools

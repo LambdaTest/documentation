@@ -1,9 +1,9 @@
----
+﻿---
 id: integrate-test-reporting-test-management-tools
 title:  How to integrate test reporting & test management tools
 hide_title: true
 sidebar_label: Test Reporting & Test Management Tools
-description: Using the integration with your favourite test reporting and test management tools, you can view and analyze the results of your automated browser testing on 3000+ real browsers and operating systems, executed over LambdaTest.
+description: Using the integration with your favourite test reporting and test management tools, you can view and analyze the results of your automated browser testing on 3000+ real browsers and operating systems, executed over TestMu AI.
 keywords:
   - LambdaTest integration
   - lambdatest integration with test management tools

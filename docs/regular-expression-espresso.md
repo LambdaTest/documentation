@@ -1,9 +1,9 @@
----
+﻿---
 id: regular-expression-espresso
 title: Regular Expression - Espresso
 # hide_title: true
 sidebar_label: Regular Expression
-description: If your chosen device for testing on LambdaTest is unavailable, use REGEX to broaden the search for alternative devices to run espresso test.
+description: If your chosen device for testing on TestMu AI is unavailable, use REGEX to broaden the search for alternative devices to run espresso test.
 keywords:
 - regular expression lambdatest
 - regular expression app automation

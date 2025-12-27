@@ -1,6 +1,6 @@
----
+﻿---
 id: performance-tips
-title: How To Maximize Test Execution Performance on Automation Platform | LambdaTest
+title: How To Maximize Test Execution Performance on Automation Platform | TestMu AI
 hide_title: true
 sidebar_label: Performance Tips
 description: This page will help you tom maximize test execution in a minimum time period.

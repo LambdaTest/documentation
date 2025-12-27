@@ -1,9 +1,9 @@
----
+﻿---
 id: mstest-with-selenium
 title: MSTest With Selenium Grid
 hide_title: true
 sidebar_label: MSTest
-description: Now you can run your automation scripts using Selenium with MSTest on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with MSTest on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - mstest
   - mstest selenium

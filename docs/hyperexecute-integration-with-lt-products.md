@@ -1,9 +1,9 @@
----
+﻿---
 id: integration-lt-products
-title: Integration With LambdaTest Products
+title: Integration With TestMu AI Products
 hide_title: true
 sidebar_label: Integration With Lambdatest Products
-description: Learn to seamlessly integrate HyperExecute with LambdaTest products like Smart UI Testing for enhanced and efficient testing experiences!
+description: Learn to seamlessly integrate HyperExecute with TestMu AI products like Smart UI Testing for enhanced and efficient testing experiences!
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help

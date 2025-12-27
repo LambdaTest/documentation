@@ -1,8 +1,8 @@
----
+﻿---
 id: private-dependencies-cypress
 title: Execute Cypress Tests Including Private Dependencies
 sidebar_label: Execute Including Private Dependencies
-description: This article guides you on how to execute your Cypress tests including the private dependencies on LambdaTest platform.
+description: This article guides you on how to execute your Cypress tests including the private dependencies on TestMu AI platform.
 keywords:
   - Cypress Automation
   - Cypress With LambdaTest

@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-install-uninstall-lambdatest-hooks
 title: Ability to Install and Uninstall Apps in App Automation Scripts
 sidebar_label: Install/Uninstall app
-description: Now you can install or uninstall applications using hooks in your App Automation scripts that you run on LambdaTest.
+description: Now you can install or uninstall applications using hooks in your App Automation scripts that you run on TestMu AI.
 keywords:
 - appium
 - lambdatest hooks
