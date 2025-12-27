@@ -1,9 +1,9 @@
----
+﻿---
 id: accessibility-devtools-settings
 title: Configure Accessibility DevTools
 hide_title: false
 sidebar_label: Configure Accessibility DevTools
-description: Customize your testing experience with LambdaTest Accessibility DevTools' comprehensive settings to meet your specific needs and preferences.
+description: Customize your testing experience with TestMu AI Accessibility DevTools' comprehensive settings to meet your specific needs and preferences.
 keywords:
     - LambdaTest
     - Accessibility

@@ -1,9 +1,9 @@
----
+﻿---
 id: real-device-app-testing
 title: Getting started with Real Device App Testing
 hide_title: true
 sidebar_label: Getting Started
-description: With LambdaTest, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
+description: With TestMu AI, perform live interactive testing of mobile applications on Android emulators and iOS simulators and ensure your apps work seamlessly across multiple versions of Android emulators and iOS simulators.
 keywords:
 - real device app testing 
 - lambdatest real device app testing 

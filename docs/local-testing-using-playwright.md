@@ -1,9 +1,9 @@
----
+﻿---
 id: local-testing-playwright
 title: Run Local Tests Using Playwright
 hide_title: true
 sidebar_label:  Local Testing
-description: Learn how to perform local testing with Playwright across 40+ browser versions on the LambdaTest platform.
+description: Learn how to perform local testing with Playwright across 40+ browser versions on the TestMu AI platform.
 keywords:
   - local testing
   - lambdatest tunnel features

@@ -1,9 +1,9 @@
----
+﻿---
 id: mark-as-bug-in-automation-testing
 title: Mark As Bug In Automation Testing
 hide_title: true
 sidebar_label: Mark As Bug In Automation Testing
-description: Mark your bugs while performing Automation testing on LambdaTest. Just a single click and you can share bugs to your favourite project management tools like Jira, Asana, Trello etc.
+description: Mark your bugs while performing Automation testing on TestMu AI. Just a single click and you can share bugs to your favourite project management tools like Jira, Asana, Trello etc.
 keywords:
   - bug reporting
   - mark as bug

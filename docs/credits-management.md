@@ -1,9 +1,9 @@
----
+﻿---
 id: credits-management
-title: Credits Usage & Management in LambdaTest
+title: Credits Usage & Management in TestMu AI
 hide_title: false
 sidebar_label: Credits Management
-description: Guide for usage of credits for AI features in LambdaTest
+description: Guide for usage of credits for AI features in TestMu AI
 keywords:
   - credits
   - AI

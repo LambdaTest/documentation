@@ -1,9 +1,9 @@
----
+﻿---
 id: rktracer-integration
 title: RKTracer Integration
 hide_title: true
 sidebar_label: RKTracer
-description: LambdaTest and RKTracer integration allows you to generate Code coverage for your web and mobile apps across 3000+ real browsers, devices, and operating system combinations.
+description: TestMu AI and RKTracer integration allows you to generate Code coverage for your web and mobile apps across 3000+ real browsers, devices, and operating system combinations.
 keywords:
 - rktracer lambdatest
 - rktracer integration

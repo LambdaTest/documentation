@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-widgets-tests-overview-landing
 title: Test Overview Widgets
 sidebar_label: Tests Overview
-description: Unlock valuable insights with LambdaTest Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes.
+description: Unlock valuable insights with TestMu AI Analytics Overview, providing a detailed analysis of your testing data to optimize and improve your testing processes.
 keywords:
   - analytics
 url: https://www.lambdatest.com/support/docs/analytics-widgets-tests-overview-landing/

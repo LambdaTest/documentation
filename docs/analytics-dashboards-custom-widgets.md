@@ -1,6 +1,6 @@
----
+﻿---
 id: dashboards-custom-widgets
-title: Custom Widgets in LambdaTest Analytics Dashboards
+title: Custom Widgets in TestMu AI Analytics Dashboards
 sidebar_label: Create Custom Widgets
 description: A powerful tool to visualize your test data and gain insights into your testing process.
 keywords:

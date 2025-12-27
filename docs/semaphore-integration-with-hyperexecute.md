@@ -1,9 +1,9 @@
----
+﻿---
 id: semaphore-integration-with-hyperexecute
 title: Semaphore CI Integration With HyperExecute
 hide_title: true
 sidebar_label: Semaphore
-description: Semaphore CI/CD, a cloud-based platform, now seamlessly integrates with LambdaTest HyperExecute for enhanced testing performance.
+description: Semaphore CI/CD, a cloud-based platform, now seamlessly integrates with TestMu AI HyperExecute for enhanced testing performance.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools

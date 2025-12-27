@@ -1,9 +1,9 @@
----
+﻿---
 id: allure-reports
 title: Allure Reports on HyperExecute
 hide_title: false
 sidebar_label: Allure
-description: Learn how to generate Allure test report for HyperExecute on lambdatest and download the reports from the dashboard
+description: Learn how to generate Allure test report for HyperExecute on TestMu AI and download the reports from the dashboard
 keywords:
     - allure reports
     - hyperexecute allure reports

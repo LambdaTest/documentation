@@ -1,9 +1,9 @@
----
+﻿---
 id: lambdatest-sso-oidc
-title: LambdaTest SSO Integration Using OIDC
+title: TestMu AI SSO Integration Using OIDC
 hide_title: true
 sidebar_label: OIDC Integration
-description: Integrate your identity provider with your LambdaTest organization through OIDC (OpenID Connect) for seamless single sign-on authentication.
+description: Integrate your identity provider with your TestMu AI organization through OIDC (OpenID Connect) for seamless single sign-on authentication.
 keywords:
   - sso
   - lambdatest sso

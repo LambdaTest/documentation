@@ -1,9 +1,9 @@
----
+﻿---
 id: playwright-ios-guide
-title: How To Run Playwright Tests On LambdaTest iOS Devices
+title: How To Run Playwright Tests On TestMu AI iOS Devices
 hide_title: true
 sidebar_label: Test on iOS Device
-description: Here you can learn how to run Playwright tests on the LambdaTest iOS real devices.
+description: Here you can learn how to run Playwright tests on the TestMu AI iOS real devices.
 keywords:
   - playwright testing
   - playwright ios

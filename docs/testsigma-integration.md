@@ -1,9 +1,9 @@
----
+﻿---
 id: testsigma-integration
-title: Running Automation Tests Using Testsigma LambdaTest Integration
+title: Running Automation Tests Using Testsigma TestMu AI Integration
 hide_title: true
 sidebar_label: Testsigma
-description: LambdaTest now offers integration with Testsigma to help you perform automated cross-browser testing on 3000+ real browsers of its cloud-based Selenium Grid.
+description: TestMu AI now offers integration with Testsigma to help you perform automated cross-browser testing on 3000+ real browsers of its cloud-based Selenium Grid.
 keywords:
 - lambdatest integrations
 - lambdatest integrations with codeless testing tools

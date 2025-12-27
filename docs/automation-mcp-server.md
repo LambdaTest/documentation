@@ -1,9 +1,9 @@
----
+﻿---
 id: automation-mcp-server
 title: Introducing Automation MCP Server
 hide_title: false
 sidebar_label: Automation MCP Server
-description: Simplify test failure triaging with Automation MCP Server on LambdaTest. Powered by Model Context Protocol (MCP), it connects AI assistants to your test data for faster, smarter debugging.
+description: Simplify test failure triaging with Automation MCP Server on TestMu AI. Powered by Model Context Protocol (MCP), it connects AI assistants to your test data for faster, smarter debugging.
 
 keywords:
   - automation testing

@@ -1,9 +1,9 @@
----
+﻿---
 id: lambdatest-public-ip
-title: LambdaTest Public IP Ranges
+title: TestMu AI Public IP Ranges
 hide_title: false
 sidebar_label: LambdaTest Public IP
-description: Learn which IP addresses needs to be whitelisted before running your tests on lambdatest grid and its other products
+description: Learn which IP addresses needs to be whitelisted before running your tests on TestMu AI grid and its other products
 keywords:
   - LambdaTest Public IP address
   - LambdaTest IP whitelist

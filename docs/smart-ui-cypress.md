@@ -1,8 +1,8 @@
----
+﻿---
 id: smart-ui-cypress
-title: Getting started with SmartUI using Cypress On LambdaTest
+title: Getting started with SmartUI using Cypress On TestMu AI
 sidebar_label: Cypress
-description: Master Visual UI Testing with Cypress on LambdaTest Automation Cloud across 40+ browser versions through this comprehensive documentation.
+description: Master Visual UI Testing with Cypress on TestMu AI Automation Cloud across 40+ browser versions through this comprehensive documentation.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

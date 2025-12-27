@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-nodejs
 title: Appium with Nodejs
 sidebar_label: NodeJS
-description: Optimize your Appium automation with Node.js using LambdaTest's comprehensive support documentation.
+description: Optimize your Appium automation with Node.js using TestMu AI's comprehensive support documentation.
 keywords:
   - appium
   - java

@@ -1,9 +1,9 @@
----
+﻿---
 id: automation-testing-with-selenium-and-jest
-title: Jest Automated Testing With Selenium Jest Integration | LambdaTest
+title: Jest Automated Testing With Selenium Jest Integration | TestMu AI
 hide_title: true
 sidebar_label: Jest Library
-description: LambdaTest now integrates with Jest to boost your go-to market delivery. Jest is a JavaScript testing library for React web-applications with which you can perform snapshot testing.
+description: TestMu AI now integrates with Jest to boost your go-to market delivery. Jest is a JavaScript testing library for React web-applications with which you can perform snapshot testing.
 keywords:
   - lambdatest integrations
   - lambdatest app marketplace

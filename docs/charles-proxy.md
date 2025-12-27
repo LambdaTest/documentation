@@ -1,9 +1,9 @@
----
+﻿---
 id: charles-proxy
 title: Setting Up Charles Proxy
 hide_title: true
 sidebar_label: Setting Up Charles Proxy
-description: This article will guide you on how to setup Charles Proxy for the tests run on LambdaTest platform through LambdaTest Tunnel.
+description: This article will guide you on how to setup Charles Proxy for the tests run on TestMu AI platform through TestMu AI Tunnel.
 keywords:
   - Charles Proxy
   - Network Logs With Charles Proxy

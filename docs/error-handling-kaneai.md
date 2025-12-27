@@ -1,8 +1,8 @@
----
+﻿---
 id: error-handling-kaneai
 title: Error Handling in Authoring
 sidebar_label: Error Handling
-description: Use LambdaTest Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines.
+description: Use TestMu AI Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines.
 keywords:
     - LambdaTest
     - Accessibility

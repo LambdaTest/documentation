@@ -1,9 +1,9 @@
----
+﻿---
 id: python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid
 title: Selenium Python:Running Python Automation Testing Scripts on Cloud Selenium Grid
 hide_title: true
 sidebar_label: Python
-description: Learn how to run Python Selenium automated test scripts (with examples) on LambdaTest Selenium Grid cloud of 3000+ desktop and mobile browsers.
+description: Learn how to run Python Selenium automated test scripts (with examples) on TestMu AI Selenium Grid cloud of 3000+ desktop and mobile browsers.
 keywords:
 - python selenium
 - python selenium tutorial

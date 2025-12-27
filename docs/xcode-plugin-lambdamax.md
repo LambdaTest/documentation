@@ -1,8 +1,8 @@
----
+﻿---
 id: xcode-plugin-lambdamax
 title: LambdaMax XCode Plugin
 sidebar_label: LambdaMax XCode Plugin
-description: LambdaTest XCode plugin to run automated tests directly on the LambdaTest grid. 
+description: TestMu AI XCode plugin to run automated tests directly on the TestMu AI grid. 
 keywords:
   - xcode
   - lambdamax

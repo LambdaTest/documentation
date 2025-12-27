@@ -1,9 +1,9 @@
----
+﻿---
 id: circle-ci-with-hyperexecute
 title: CircleCI Integration with Hyperexecute
 hide_title: false
 sidebar_label: CircleCI
-description: HyperExecute integrates with CircleCI to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
+description: HyperExecute integrates with CircleCI to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools

@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-flutter-integration
 title: Appium Flutter Integration Driver Testing
 sidebar_label: Flutter Integration Driver
-description: Guide to testing Flutter apps using Appium Flutter Integration Driver on LambdaTest real device cloud.
+description: Guide to testing Flutter apps using Appium Flutter Integration Driver on TestMu AI real device cloud.
 keywords:
   - flutter app testing
   - appium flutter integration

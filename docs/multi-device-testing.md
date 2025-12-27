@@ -1,8 +1,8 @@
----
+﻿---
 id: multi-device-testing
 title: Multi-Device Testing on Real Devices
 sidebar_label: Multi-Device Testing
-description: Learn how to test multiple devices simultaneously in a single session on LambdaTest App Live, including setup, workflow, and best practices.
+description: Learn how to test multiple devices simultaneously in a single session on TestMu AI App Live, including setup, workflow, and best practices.
 keywords:
   - Multi-Device Testing
   - App Live

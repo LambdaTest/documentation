@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-selenium-java-sdk
 title: Integrate SmartUI SDK with Selenium-Java
 sidebar_label: Java
-description: In this documentation, learn how integrate your Selenium Java automated tests with LambdaTest's SmartUI.
+description: In this documentation, learn how integrate your Selenium Java automated tests with TestMu AI's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

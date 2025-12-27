@@ -1,9 +1,9 @@
----
+﻿---
 id: install-apps-from-test-flight
 title: How to Test Apps Installed via Test flight?
 hide_title: true
 sidebar_label: Test Flight
-description: Learn how to test apps via Test Flight on LambdaTest, optimizing performance on real iOS devices before App Store release.
+description: Learn how to test apps via Test Flight on TestMu AI, optimizing performance on real iOS devices before App Store release.
 keywords:
 - install apps from test flight
 - test flight

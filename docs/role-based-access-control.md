@@ -1,6 +1,6 @@
----
+﻿---
 id: role-based-access-control
-title: LambdaTest Role-Based Access Control (RBAC)
+title: TestMu AI Role-Based Access Control (RBAC)
 sidebar_label: LambdaTest RBAC
 description: This documentation will help you in creating the different teams and allot concurrency to those teams to perform test automation easily.
 keywords:

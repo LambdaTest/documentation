@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-modules-smartui-analytics
 title: SmartUI Analytics - Visual Regression Testing Insights
 sidebar_label: SmartUI
-description: Discover LambdaTest's SmartUI Analytics widgets for comprehensive visual regression testing insights. Optimize your visual testing efforts today.
+description: Discover TestMu AI's SmartUI Analytics widgets for comprehensive visual regression testing insights. Optimize your visual testing efforts today.
 keywords:
  - analytics
  - visual regression testing

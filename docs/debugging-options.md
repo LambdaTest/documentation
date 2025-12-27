@@ -1,6 +1,6 @@
----
+﻿---
 id: debugging-options
-title: Debugging Options for Automation Testing on LambdaTest
+title: Debugging Options for Automation Testing on TestMu AI
 hide_title: true
 sidebar_label: Debugging Options
 description: This documentation explains how to use various debugging logs options for your failed tests and fix them easily.

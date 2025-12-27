@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-modules-resource-utilization
 title: Resource Utilization
 sidebar_label: Concurrency Usage Insights
-description: Optimize resource use with LambdaTest's Resource Utilization module. Monitor concurrency trends to manage parallel test sessions, reduce queuing times, and enhance efficiency.
+description: Optimize resource use with TestMu AI's Resource Utilization module. Monitor concurrency trends to manage parallel test sessions, reduce queuing times, and enhance efficiency.
 keywords:
   - analytics
 url: https://www.lambdatest.com/support/docs/analytics-modules-resource-utilization/

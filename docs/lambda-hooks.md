@@ -1,9 +1,9 @@
----
+﻿---
 id: lambda-hooks
-title: Lambda Hooks For Selenium Automation | LambdaTest
+title: Lambda Hooks For Selenium Automation | TestMu AI
 sidebar_label: Lambda Hooks
 hide_title: true
-description: LambdaTest offers a set of Lambda Hooks that you can leverage to modify your automation test cases and perform multiple operations in your selenium testing scripts.
+description: TestMu AI offers a set of Lambda Hooks that you can leverage to modify your automation test cases and perform multiple operations in your selenium testing scripts.
 keywords:
   - lambda hooks for selenium automation
   - lambda hooks

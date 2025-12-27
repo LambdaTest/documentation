@@ -1,9 +1,9 @@
----
+﻿---
 id: project-management-tools-github-integration
-title: Integrate LambdaTest with GitHub | LambdaTest
+title: Integrate TestMu AI with GitHub | TestMu AI
 hide_title: true
 sidebar_label: GitHub
-description: LambdaTest provides integrations with GitHub to help you log bugs directly from the middle of your test session on LambdaTest to your GitHub repository.
+description: TestMu AI provides integrations with GitHub to help you log bugs directly from the middle of your test session on TestMu AI to your GitHub repository.
 keywords:
   - lambdatest integrations
   - push issues to github

@@ -1,9 +1,9 @@
----
+﻿---
 id: ranorex-integration-with-lambdatest
-title: How to Perform Automation Testing with Ranorex Using LambdaTest
+title: How to Perform Automation Testing with Ranorex Using TestMu AI
 hide_title: true
 sidebar_label: Ranorex
-description: LambdaTest offers integration with Ranorex to help you perform automated cross browser testing of your web app on over 3000+ real browsers & browser versions through an on-cloud Selenium Grid. You could perform tests on your locally hosted files and can execute parallel testing to trim down your test cycles drastically.
+description: TestMu AI offers integration with Ranorex to help you perform automated cross browser testing of your web app on over 3000+ real browsers & browser versions through an on-cloud Selenium Grid. You could perform tests on your locally hosted files and can execute parallel testing to trim down your test cycles drastically.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature

@@ -1,9 +1,9 @@
----
+﻿---
 id: group-tests-using-custom-tags
 title: How To Create Custom Automation Tags
 hide_title: true
 sidebar_label: Group Tests Using Custom Tags
-description: Now group your tests and organize them efficiently with the help of Custom Tags. LambdaTest allows you to create custom tags and filter them with a click.
+description: Now group your tests and organize them efficiently with the help of Custom Tags. TestMu AI allows you to create custom tags and filter them with a click.
 keywords:
     - LambdaTest automation
     - selenium automation grid

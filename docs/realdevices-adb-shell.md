@@ -1,9 +1,9 @@
----
+﻿---
 id: real-device-adb-shell
 title: ADB Shell
 hide_title: true
 sidebar_label: ADB Shell
-description: ADB shell support in LambdaTest for direct command execution on Android devices during manual testing.
+description: ADB shell support in TestMu AI for direct command execution on Android devices during manual testing.
 keywords:
 - real device app testing 
 - adb shell

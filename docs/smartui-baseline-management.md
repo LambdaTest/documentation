@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-baseline-management
 title: Baseline Management in SmartUI
 sidebar_label: Baseline Management
-description: Learn how to manage baselines effectively in LambdaTest SmartUI. Understand baseline creation, updating, and versioning for reliable visual regression testing.
+description: Learn how to manage baselines effectively in TestMu AI SmartUI. Understand baseline creation, updating, and versioning for reliable visual regression testing.
 keywords:
   - SmartUI Baseline
   - Visual Regression Baseline

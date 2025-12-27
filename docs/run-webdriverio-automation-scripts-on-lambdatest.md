@@ -1,9 +1,9 @@
----
+﻿---
 id: run-webdriverio-automation-scripts-on-lambdatest
-title: Selenium WebDriver IO:Run WebDriverIO Automation Scripts on Selenium Grid | LambdaTest
+title: Selenium WebDriver IO:Run WebDriverIO Automation Scripts on Selenium Grid | TestMu AI
 hide_title: true
 sidebar_label: WebDriverIO
-description: Now you can run your automation scripts using Selenium with WebDriverIO on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with WebDriverIO on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - webdriverio selenium grid
   - selenium webdriver tutorial

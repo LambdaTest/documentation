@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-php
 title:  Appium with PHP
 sidebar_label: PHP
-description: Now you can run your automation scripts using Appium with PHP on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Appium with PHP on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - appium
   - java

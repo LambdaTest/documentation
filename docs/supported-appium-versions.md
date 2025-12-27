@@ -1,9 +1,9 @@
----
+﻿---
 id: supported-appium-versions
 title: Supported Appium Versions - Real Devices
 hide_title: false
 sidebar_label: Supported Appium Versions
-description: This document provides information about configuring Appium versions for tests on the LambdaTest platform and also provides list of supported versions.
+description: This document provides information about configuring Appium versions for tests on the TestMu AI platform and also provides list of supported versions.
 keywords:
  - appium
  - appium languages

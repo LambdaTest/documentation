@@ -1,9 +1,9 @@
----
+﻿---
 id: app-manager
 title: "App Manager on Real Devices"
 hide_title: false
 sidebar_label: App Manager
-description: Manage and test multiple app versions on real devices using LambdaTest App Manager. Supports .apk, .aab, and .ipa uploads with version control and live testing.
+description: Manage and test multiple app versions on real devices using TestMu AI App Manager. Supports .apk, .aab, and .ipa uploads with version control and live testing.
 
 keywords:
     - lambdaTest

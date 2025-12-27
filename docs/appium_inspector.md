@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-inspector
-title: Appium Inspector Integration on LambdaTest
+title: Appium Inspector Integration on TestMu AI
 sidebar_label: Appium Inspector
-description: This documentation will help you integrate Appium Inspector with LambdaTest to interact with LambdaTest's Real Devices. With LambdaTest mobile testing cloud, you can test your mobile applications on wide range of real Android and iOS devices.
+description: This documentation will help you integrate Appium Inspector with TestMu AI to interact with TestMu AI's Real Devices. With TestMu AI mobile testing cloud, you can test your mobile applications on wide range of real Android and iOS devices.
 keywords:
   - mobile app testing
   - realtime mobile testing on real devices

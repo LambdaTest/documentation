@@ -1,8 +1,8 @@
----
+﻿---
 id: hyperexecute-xcui-testing
 title: Execute XCUI Framework Tests on HyperExecute
 sidebar_label: XCUI
-description: Follow the instructions in this documentation, so that you can seamlessly execute XCUI tests on HyperExecute via LambdaTest.
+description: Follow the instructions in this documentation, so that you can seamlessly execute XCUI tests on HyperExecute via TestMu AI.
 keywords:
   - xcui
   - iOS

@@ -1,9 +1,9 @@
----
+﻿---
 id: custom-chrome
-title: How to Upload Custom Chrome Profile on LambdaTest
+title: How to Upload Custom Chrome Profile on TestMu AI
 hide_title: true
 sidebar_label: Custom Chrome Profile
-description: Learn how to upload custom Chrome profile to run your automated tests on LambdaTest.
+description: Learn how to upload custom Chrome profile to run your automated tests on TestMu AI.
 keywords:
 - custom chrome profile
 - upload custom chrome profile

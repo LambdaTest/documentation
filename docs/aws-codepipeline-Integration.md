@@ -1,9 +1,9 @@
----
+﻿---
 id: aws-codepipeline-Integration
-title: How to integrate AWS CodePipeline with LambdaTest
+title: How to integrate AWS CodePipeline with TestMu AI
 hide_title: true
 sidebar_label: AWS CodePipeline
-description: Rapidly commit changes in CI CD pipeline and validate them for UI/UX anomalies by integrating your AWS CodePipeline instance with LambdaTest Selenium Grid.
+description: Rapidly commit changes in CI CD pipeline and validate them for UI/UX anomalies by integrating your AWS CodePipeline instance with TestMu AI Selenium Grid.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools

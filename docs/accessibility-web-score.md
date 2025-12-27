@@ -1,9 +1,9 @@
----
+﻿---
 id: accessibility-web-score
 title: Accessibility Web Score
 hide_title: false
 sidebar_label: Accessibility Web Score
-description: Learn about LambdaTest's Accessibility Score - a unified metric that measures the accessibility health of your website or application workflow through severity-weighted calculations.
+description: Learn about TestMu AI's Accessibility Score - a unified metric that measures the accessibility health of your website or application workflow through severity-weighted calculations.
 keywords:
 - accessibility score
 - accessibility testing

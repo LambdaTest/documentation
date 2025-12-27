@@ -1,9 +1,9 @@
----
+﻿---
 id: appveyor-ci-integration
-title:  How to integrate AppVeyor CI with LambdaTest
+title:  How to integrate AppVeyor CI with TestMu AI
 hide_title: true
 sidebar_label: AppVeyor CI
-description: LambdaTest now integrates with AppVeyor CI to boost your go-to-market delivery. Perform automated cross-browser testing on 3000+ browser environment combinations.
+description: TestMu AI now integrates with AppVeyor CI to boost your go-to-market delivery. Perform automated cross-browser testing on 3000+ browser environment combinations.
 keywords:
  - lambdatest integrations
  - lambdatest integrations with ci/cd tools

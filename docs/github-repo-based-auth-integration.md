@@ -1,9 +1,9 @@
----
+﻿---
 id: github-repo-based-oauth
-title: Integrate LambdaTest With GitHub Using Repo-Based OAuth
+title: Integrate TestMu AI With GitHub Using Repo-Based OAuth
 hide_title: true
 sidebar_label: GitHub Repo-based OAuth
-description: Easily integrate LambdaTest with GitHub using repo-based OAuth to log bugs directly from the LambdaTest platform to your GitHub repositories.
+description: Easily integrate TestMu AI with GitHub using repo-based OAuth to log bugs directly from the TestMu AI platform to your GitHub repositories.
 keywords:
 - lambdatest github integration
 - github repo oauth lambdatest

@@ -1,9 +1,9 @@
----
+﻿---
 id: testcomplete-integration
 title: TestComplete
 hide_title: false
 sidebar_label: TestComplete
-description: LambdaTest offers integration with TestComplete to help you perform web and app automation testing on 3000+ real browsers, devices, and operating systems combinations.
+description: TestMu AI offers integration with TestComplete to help you perform web and app automation testing on 3000+ real browsers, devices, and operating systems combinations.
 keywords:
 - lambdatest integrations
 - lambdatest integrations with testcomplete

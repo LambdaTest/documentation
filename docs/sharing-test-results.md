@@ -1,9 +1,9 @@
----
+﻿---
 id: sharing-test-results
-title: Sharing Test Results on LambdaTest
+title: Sharing Test Results on TestMu AI
 hide_title: true
 sidebar_label: Sharing Test Results on LambdaTest
-description: This documentation will help you in sharing test results while performing automation testing on LambdaTest. You can share an instance of a single test result with a team member of your organization by retrieving the Session ID and appending it into the URL of automation logs.
+description: This documentation will help you in sharing test results while performing automation testing on TestMu AI. You can share an instance of a single test result with a team member of your organization by retrieving the Session ID and appending it into the URL of automation logs.
 keywords:
   - Share test results
   - test results

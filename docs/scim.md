@@ -1,9 +1,9 @@
----
+﻿---
 id: scim
 title: Getting Started With Scim User Provisioning
 hide_title: false
 sidebar_label: SCIM
-description: The SCIM specification is designed to make managing user identities easier. SCIM allows your Identity Provider (IdP) to manage users within your LambdaTest workspace  
+description: The SCIM specification is designed to make managing user identities easier. SCIM allows your Identity Provider (IdP) to manage users within your TestMu AI workspace  
 keywords:
     - LambdaTest SCIM
 url: https://www.lambdatest.com/support/docs/scim/

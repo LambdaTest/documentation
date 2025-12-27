@@ -1,9 +1,9 @@
----
+﻿---
 id: asana-integration
-title: Asana Integration For Easy Browser Testing | LambdaTest
+title: Asana Integration For Easy Browser Testing | TestMu AI
 hide_title: true
 sidebar_label: Asana
-description: With LambdaTest - Asana integration, now you can mark your bug to Asana dashboard directly from LambdaTest while performing testing.
+description: With TestMu AI - Asana integration, now you can mark your bug to Asana dashboard directly from TestMu AI while performing testing.
 keywords:
   - LambdaTest Asana integration
   - How to integrate Asana with LambdaTest

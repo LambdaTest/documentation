@@ -1,8 +1,8 @@
----
+﻿---
 id: basic-authentication-for-web-automation
 title: Basic Authentication for Safari Web Automation
 sidebar_label: Basic Authentication for Safari Web Automation
-description: Now you can Basic Authentication during your Safari web automation sessions on iOS real devices with LambdaTest Real Device Cloud Platform with 3000+ real mobile devices.
+description: Now you can Basic Authentication during your Safari web automation sessions on iOS real devices with TestMu AI Real Device Cloud Platform with 3000+ real mobile devices.
 keywords:
   - basic authentication
   - safari web automation

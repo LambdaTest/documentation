@@ -1,9 +1,9 @@
----
+﻿---
 id: chrome-extensions
-title: LambdaTest Chrome Extension
+title: TestMu AI Chrome Extension
 hide_title: true
 sidebar_label: Chrome Extension
-description: This documentation will help you in configuring LambdaTest Chrome Extension to perform live-interactive, screenshot tests, geolocation tests and even more. 
+description: This documentation will help you in configuring TestMu AI Chrome Extension to perform live-interactive, screenshot tests, geolocation tests and even more. 
 keywords:
   - LambdaTest Chrome Extension
   - How to add LambdaTest Chrome Extension

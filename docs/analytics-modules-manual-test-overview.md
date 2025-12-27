@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-modules-manual-test-overview
 title: Realtime & Real-Device Modules
 sidebar_label: Realtime & Real-Device
-description: A complete guide to understanding LambdaTest Analytics! Optimize your testing process with widgets for Browser & App Testing - OS, Browser, Device, and Trends.
+description: A complete guide to understanding TestMu AI Analytics! Optimize your testing process with widgets for Browser & App Testing - OS, Browser, Device, and Trends.
 keywords:
  - analytics
  - test overview

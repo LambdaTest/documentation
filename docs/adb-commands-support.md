@@ -1,8 +1,8 @@
----
+﻿---
 id: adb-commands-support
 title: ADB Commands Support
 sidebar_label: ADB Commands Support
-description: LambdaTest provides support for limited commands which can be executed in your app automation test scripts via javascript executors. 
+description: TestMu AI provides support for limited commands which can be executed in your app automation test scripts via javascript executors. 
 keywords:
   - appium
   - java

@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-modules-test-intelligence-command-logs-analytics
 title: Command Logs Analytics with Test Intelligence
 sidebar_label: Command Errors
-description: A Explore LambdaTest's powerful Analytics Modules for comprehensive test intelligence and command logs analytics. Elevate your testing efficiency today.
+description: A Explore TestMu AI's powerful Analytics Modules for comprehensive test intelligence and command logs analytics. Elevate your testing efficiency today.
 keywords:
   - analytics
 url: https://www.lambdatest.com/support/docs/analytics-modules-command-logs/

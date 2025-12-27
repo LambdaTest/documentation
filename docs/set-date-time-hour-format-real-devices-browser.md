@@ -1,8 +1,8 @@
----
+﻿---
 id: set-date-time-hour-format-real-devices-browser
 title: Set Custom Date, Time & Hour Format on Real Devices
 sidebar_label: Date & Time Settings
-description: Configure date, time, and hour-format on iOS and Android devices during manual and Appium-based automation testing on LambdaTest.
+description: Configure date, time, and hour-format on iOS and Android devices during manual and Appium-based automation testing on TestMu AI.
 
 keywords:
   - set device time iOS

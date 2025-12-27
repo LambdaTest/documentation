@@ -1,8 +1,8 @@
----
+﻿---
 id: local-testing-for-windows
 title: Legacy Binary For Windows
 sidebar_label: Legacy Binary For Windows
-description: LambdaTest Tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through LambdaTest cloud servers.
+description: TestMu AI Tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through TestMu AI cloud servers.
 keywords:
   - local app testing
   - lambdatest local testing

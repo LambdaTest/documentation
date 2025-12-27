@@ -1,9 +1,9 @@
----
+﻿---
 id: run-your-cypress-tests-in-parallel
-title: Run Your Cypress Tests In Parallel On LambdaTest Platform
+title: Run Your Cypress Tests In Parallel On TestMu AI Platform
 hide_title: true
 sidebar_label: Parallel Testing
-description: Run multiple Cypress tests on the LambdaTest cloud simultaneously across 40+ browser versions. This documentation will help you in running Cypress tests in parallel.
+description: Run multiple Cypress tests on the TestMu AI cloud simultaneously across 40+ browser versions. This documentation will help you in running Cypress tests in parallel.
 keywords:
   - Cypress Automation
   - Cypress Testing Guide

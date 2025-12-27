@@ -1,9 +1,9 @@
----
+﻿---
 id: link-jira-issues-with-test-manager
 title: Link Jira Issues with Test Manager
 hide_title: true
 sidebar_label: Link Jira Issues with Test Manager
-description: Effortlessly link Jira issues with Test Manager using LambdaTest to streamline workflows and enhance project management efficiency.
+description: Effortlessly link Jira issues with Test Manager using TestMu AI to streamline workflows and enhance project management efficiency.
 keywords:
   - link jira issues
   - link jira issues with test manager

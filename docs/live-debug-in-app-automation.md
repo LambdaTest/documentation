@@ -1,8 +1,8 @@
----
+﻿---
 id: live-debug-in-app-automation
 title: Live Debug Your App Automation Tests
 sidebar_label: Live Inspect
-description: Optimize your app automation with LambdaTest's Live Debugger. Enjoy live debugging and direct interaction with real devices from the app automation dashboard.
+description: Optimize your app automation with TestMu AI's Live Debugger. Enjoy live debugging and direct interaction with real devices from the app automation dashboard.
 keywords:
   - app automation
   - live debugging

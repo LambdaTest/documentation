@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-uploading-retrieving-files
 title: Uploading/Retrieving files on Real Devices 
 sidebar_label: Uploading/Retrieving files on Real Devices
-description: You can use sample data provided by LambdaTest in case you need to check uploading files, contacts etc. to your application. This document also shows how to retrieve files from LambdaTest rela devices to local and vice-versa.
+description: You can use sample data provided by TestMu AI in case you need to check uploading files, contacts etc. to your application. This document also shows how to retrieve files from TestMu AI rela devices to local and vice-versa.
 keywords:
   - upload a file
   - app test automation

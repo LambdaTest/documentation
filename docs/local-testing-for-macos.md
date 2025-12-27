@@ -1,8 +1,8 @@
----
+﻿---
 id: local-testing-for-macos
 title: Legacy Binary For macOS
 sidebar_label: Legacy Binary For macOS
-description: This document will help you modify your open file limit temporarily or permanently while using a proxy with LambdaTest for seamless cross browser testing.
+description: This document will help you modify your open file limit temporarily or permanently while using a proxy with TestMu AI for seamless cross browser testing.
 keywords:
   - proxy settings
   - set open file limit

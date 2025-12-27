@@ -1,8 +1,8 @@
----
+﻿---
 id: screen-reader-on-accessibility
 title: Screen Reader
 sidebar_label: Screen Reader
-description: Test your app's accessibility with LambdaTest's Screen Reader as per the WCAG standards.
+description: Test your app's accessibility with TestMu AI's Screen Reader as per the WCAG standards.
 keywords:
   - screen reader
   - framework on lambdatest

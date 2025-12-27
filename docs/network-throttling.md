@@ -1,9 +1,9 @@
----
+﻿---
 id: network-throttling
 title: Network Throttling
 hide_title: true
 sidebar_label: Network Throttling
-description: Now test the functionality of your website over low latency networks ( 2G/3G/LTE) or even offline with different upload and download speeds. LambdaTest allows you to validate your website by simulating these network conditions by using its desired capabilities.
+description: Now test the functionality of your website over low latency networks ( 2G/3G/LTE) or even offline with different upload and download speeds. TestMu AI allows you to validate your website by simulating these network conditions by using its desired capabilities.
 keywords:
   - cross browser testing
   - network throttling

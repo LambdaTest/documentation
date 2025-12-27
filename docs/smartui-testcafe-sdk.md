@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-testcafe-sdk
 title: Integrate SmartUI SDK with Testcafe Tests
 sidebar_label: Testcafe
-description: In this documentation, learn how integrate your Testcafe automated tests with LambdaTest's SmartUI.
+description: In this documentation, learn how integrate your Testcafe automated tests with TestMu AI's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

@@ -1,6 +1,6 @@
----
+﻿---
 id: web-scanner-getting-started
-title: Getting Started with LambdaTest Web Scanner
+title: Getting Started with TestMu AI Web Scanner
 hide_title: false
 sidebar_label: Getting Started
 description: A guide to accessing the Web Scanner dashboard and using the 4-step wizard to create and schedule your first Visual or Accessibility scan.

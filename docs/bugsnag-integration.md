@@ -1,9 +1,9 @@
----
+﻿---
 id: bugsnag-integration
 title: Bugsnag Integration
 hide_title: true
 sidebar_label: Bugsnag 
-description: With LambdaTest and Bugsnag integration, you can easily mark your bugs, keep a track of them, share, and collaborate with your team on your Bugsnag projects.
+description: With TestMu AI and Bugsnag integration, you can easily mark your bugs, keep a track of them, share, and collaborate with your team on your Bugsnag projects.
 keywords:
   - LambdaTest integration with Bugsnag
   - LambdaTest and Bugsnag Integration

@@ -1,9 +1,9 @@
----
+﻿---
 id: google-chat-integration
 title: Google Chat Integration
 hide_title: true
 sidebar_label: Google Chat
-description: LambdaTest helps you manage your bugs in Google Chat by moving them to project in a single click. All the details you provide in LambdaTest like task list, assignee, title and description would automatically be presented in the project in your Google Chat Space.
+description: TestMu AI helps you manage your bugs in Google Chat by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project in your Google Chat Space.
 keywords:
   - lambdatest integrations
   - push issues to Google Chat

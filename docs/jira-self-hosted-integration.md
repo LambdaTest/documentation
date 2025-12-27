@@ -1,9 +1,9 @@
----
+﻿---
 id: jira-self-hosted-integration
-title: Self-Hosted Jira Integration | LambdaTest
+title: Self-Hosted Jira Integration | TestMu AI
 hide_title: true
 sidebar_label: Self-Hosted Jira
-description: LambdaTest and Self-hosted Jira integration allow you to integrate your self-hosted Jira instance and create the issues directly from the LambdaTest platform to your Jira dashboard. 
+description: TestMu AI and Self-hosted Jira integration allow you to integrate your self-hosted Jira instance and create the issues directly from the TestMu AI platform to your Jira dashboard. 
 keywords:
     - LambdaTest integrations
     - Push issues to Jira

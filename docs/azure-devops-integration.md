@@ -1,9 +1,9 @@
----
+﻿---
 id: azure-devops-integration
-title: Integrate LambdaTest with Azure DevOps | LambdaTest
+title: Integrate TestMu AI with Azure DevOps | TestMu AI
 hide_title: true
 sidebar_label: Azure DevOps
-description: LambdaTest provides integrations with Azure DevOps to help you log bugs directly from the middle of your test session on LambdaTest to your Azure DevOps project.
+description: TestMu AI provides integrations with Azure DevOps to help you log bugs directly from the middle of your test session on TestMu AI to your Azure DevOps project.
 keywords:
   - LambdaTest integrations
   - LambdaTest Azure DevOps integration

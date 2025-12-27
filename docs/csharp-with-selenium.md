@@ -1,9 +1,9 @@
----
+﻿---
 id: csharp-with-selenium
-title: C# with Selenium:Tutorial to run your first test on Lambdatest
+title: C# with Selenium:Tutorial to run your first test on TestMu AI
 hide_title: true
 sidebar_label: C#
-description: You can now run C# Selenium automated test cases on online scalable LambdaTest Selenium grid of 3000+ real desktop browsers and real operating systems.
+description: You can now run C# Selenium automated test cases on online scalable TestMu AI Selenium grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - c# selenium
   - c# selenium tutorial

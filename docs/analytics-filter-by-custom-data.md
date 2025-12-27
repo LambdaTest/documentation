@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-filter-by-custom-data
 title: Filter by Custom Data
 sidebar_label: Filter by Custom Data
-description: Learn how to filter analytics data by custom attributes on LambdaTest to track and analyze your testing metrics more effectively.
+description: Learn how to filter analytics data by custom attributes on TestMu AI to track and analyze your testing metrics more effectively.
 keywords:
   - analytics
 url: https://www.lambdatest.com/support/docs/analytics-filter-by-custom-data/

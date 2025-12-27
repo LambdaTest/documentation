@@ -1,8 +1,8 @@
----
+﻿---
 id: manual-test-case-creation
 title: Create & Manage Test Cases
 sidebar_label: Create & Manage Test Cases
-description: Learn efficient manual test case creation with LambdaTest's Test Manager, streamlining testing processes and enhancing test execution.
+description: Learn efficient manual test case creation with TestMu AI's Test Manager, streamlining testing processes and enhancing test execution.
 keywords:
   - test case creation
   - test case

@@ -1,9 +1,9 @@
----
+﻿---
 id: hyperexecute-algoqa-integration
 title: Integrate algoQA with HyperExecute
 hide_title: false
 sidebar_label: algoQA
-description:  Unleash the power of algoQA & LambdaTest HyperExecute! Streamline test management & experience fast execution.
+description:  Unleash the power of algoQA & TestMu AI HyperExecute! Streamline test management & experience fast execution.
 keywords:
   - LambdaTest HyperExecute
   - LambdaTest HyperExecute help

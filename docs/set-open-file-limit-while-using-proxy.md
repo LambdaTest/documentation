@@ -1,9 +1,9 @@
----
+﻿---
 id: set-open-file-limit-while-using-proxy
-title: Setting The Open File Limit While Using LambdaTest Tunnel
+title: Setting The Open File Limit While Using TestMu AI Tunnel
 hide_title: true
 sidebar_label: Setting The Open File Limit While Using LambdaTest Tunnel
-description: This document will help you modify your open file limit temporarily or permanently while using a proxy with LambdaTest tunnel for seamless cross browser testing.
+description: This document will help you modify your open file limit temporarily or permanently while using a proxy with TestMu AI tunnel for seamless cross browser testing.
 keywords:
   - proxy settings
   - set open file limit

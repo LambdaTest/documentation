@@ -1,8 +1,8 @@
----
+﻿---
 id: group-folder-redirects
 title: Group Folder Redirect for iOS Apps in Appium Tests
 sidebar_label: Group Folder Redirect
-description: Learn how to enable Group Folder Redirect for iOS apps during Appium testing on LambdaTest Real Device Cloud.
+description: Learn how to enable Group Folder Redirect for iOS apps during Appium testing on TestMu AI Real Device Cloud.
 keywords:
   - lambdatest automation
   - ios app automation

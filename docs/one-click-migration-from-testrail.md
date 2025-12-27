@@ -1,9 +1,9 @@
----
+﻿---
 id: one-click-migration-from-testrail
 title: One Click Migration from TestRail
 hide_title: true
 sidebar_label: One Click Migration from TestRail
-description: Effortlessly migrate from TestRail to LambdaTest with our one-click migration guide. Simplify the process and enhance your testing capabilities in minutes.
+description: Effortlessly migrate from TestRail to TestMu AI with our one-click migration guide. Simplify the process and enhance your testing capabilities in minutes.
 keywords:
   - testrail
   - import data from testrail

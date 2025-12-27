@@ -1,9 +1,9 @@
----
+﻿---
 id: hyperexecute-environment-variable-setup
 title: HyperExecute Environment Variable Setup
 hide_title: true
 sidebar_label: HyperExecute Environment Variable Setup
-description: Find out how to get access to Hyperexecute authentication credentials, fetching them from the Automation tab in your LambdaTest profile, and configuring them on Mac OSX/Linux, Windows systems.
+description: Find out how to get access to Hyperexecute authentication credentials, fetching them from the Automation tab in your TestMu AI profile, and configuring them on Mac OSX/Linux, Windows systems.
 keywords:
 - LambdaTest automation
 - LambdaTest environment variables

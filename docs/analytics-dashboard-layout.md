@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-dashboard-edit-layout
-title: Lambdatest Analytics - Customizing Your Dashboard with the New Widget Management Feature
+title: TestMu AI Analytics - Customizing Your Dashboard with the New Widget Management Feature
 sidebar_label: Edit Dashboard Layout
-description: Enhance Your Analytics Dashboard Edit Layout with Lambdatest's Widget Management Feature Customizing Layout for Improved Insights 
+description: Enhance Your Analytics Dashboard Edit Layout with TestMu AI's Widget Management Feature Customizing Layout for Improved Insights 
 keywords:
   - analytics
 url: https://www.lambdatest.com/support/docs/analytics-overview/

@@ -1,9 +1,9 @@
----
+﻿---
 id: hyperexecute-katalon-report
 title: Katalon Reports on HyperExecute
 hide_title: false
 sidebar_label: Katalon
-description: Learn how to generate Katalon test report for HyperExecute on lambdatest and download the reports from the dashboard
+description: Learn how to generate Katalon test report for HyperExecute on TestMu AI and download the reports from the dashboard
 keywords:
     - Katalon reports
     - hyperexecute Katalon reports

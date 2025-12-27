@@ -1,9 +1,9 @@
----
+﻿---
 id: lambdatest-report-with-jenkins-pipeline
-title: Integrate LambdaTest Report With Jenkins Pipeline
+title: Integrate TestMu AI Report With Jenkins Pipeline
 hide_title: true
 sidebar_label: Integrate LambdaTest Report
-description: Learn how to integrate LambdaTest Report with Jenkins Pipeline.
+description: Learn how to integrate TestMu AI Report with Jenkins Pipeline.
 keywords:
   - jenkins 
   - freestyle project 

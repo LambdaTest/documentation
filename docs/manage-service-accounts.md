@@ -1,9 +1,9 @@
----
+﻿---
 id: service-accounts
 title: How to Create and Manage Service Accounts
 hide_title: true
 sidebar_label: Service Accounts
-description: This documentation will help you create and manage service accounts on LambdaTest.
+description: This documentation will help you create and manage service accounts on TestMu AI.
 keywords:
 - service account lambdatest
 - manage service account

@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-selenium-csharp-sdk
 title: Integrate SmartUI SDK with Selenium-CSharp
 sidebar_label: C#
-description: In this documentation, learn how integrate your Selenium C# automated tests with LambdaTest's SmartUI.
+description: In this documentation, learn how integrate your Selenium C# automated tests with TestMu AI's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

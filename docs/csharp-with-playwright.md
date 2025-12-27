@@ -1,9 +1,9 @@
----
+﻿---
 id: csharp-with-playwright
-title: Run your C# automation scripts with Playwright on LambdaTest
+title: Run your C# automation scripts with Playwright on TestMu AI
 hide_title: true
 sidebar_label: C#
-description: Run your C# automation scripts with Playwright on LambdaTest scalable cloud grid of 50+ real desktop browsers and operating systems.
+description: Run your C# automation scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.
 keywords:
   - csharp playwright
   - csharp automation testing

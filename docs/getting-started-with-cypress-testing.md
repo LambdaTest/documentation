@@ -1,9 +1,9 @@
----
+﻿---
 id: getting-started-with-cypress-testing
-title: Getting Started With Cypress Testing On LambdaTest Platform
+title: Getting Started With Cypress Testing On TestMu AI Platform
 sidebar_label: Cypress Testing
 hide_title: true
-description: In this documentation, learn how to perform end-to-end Cypress testing on the LambdaTest Automation Cloud across 40+ browser versions.
+description: In this documentation, learn how to perform end-to-end Cypress testing on the TestMu AI Automation Cloud across 40+ browser versions.
 keywords:
   - Cypress Automation
   - Cypress Testing Guide

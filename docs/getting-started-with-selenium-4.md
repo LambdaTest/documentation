@@ -1,8 +1,8 @@
----
+﻿---
 id: getting-started-with-selenium-4
-title: Getting Started With Selenium 4 On LambdaTest Platform
+title: Getting Started With Selenium 4 On TestMu AI Platform
 sidebar_label: Getting Started
-description: Now run automated tests with Selenium 4 using the LambdaTest Selenium Grid across 3000+ browsers and operating systems. 
+description: Now run automated tests with Selenium 4 using the TestMu AI Selenium Grid across 3000+ browsers and operating systems. 
 keywords:
 - Selenium 4 
 - Selenium 4 Relative Locators

@@ -1,9 +1,9 @@
----
+﻿---
 id: selenium-three-capabilities
 title: Selenium Capabilities for version <= 3
 hide_title: false
 sidebar_label: Selenium Capabilities v3
-description: This document list down all the desired capabilities that are supported by LambdaTest for Selenium version 3 and less
+description: This document list down all the desired capabilities that are supported by TestMu AI for Selenium version 3 and less
 keywords:
   - lambdatest automation
   - selenium capabilities

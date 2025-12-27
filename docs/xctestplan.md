@@ -1,8 +1,8 @@
----
+﻿---
 id: xctestplan
 title: XCTestPlan
 sidebar_label: XCTestPlan
-description: Manage iOS, iPadOS, macOS, watchOS, and tvOS tests with XCTestPlan on LambdaTest. Learn how to upload apps, configure tests, and view execution logs efficiently.
+description: Manage iOS, iPadOS, macOS, watchOS, and tvOS tests with XCTestPlan on TestMu AI. Learn how to upload apps, configure tests, and view execution logs efficiently.
 keywords:
   - XCUI test filters
   - app test automation

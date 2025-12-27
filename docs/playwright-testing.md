@@ -1,9 +1,9 @@
----
+﻿---
 id: playwright-testing-guide
-title: How To Run Playwright Tests On LambdaTest Platform
+title: How To Run Playwright Tests On TestMu AI Platform
 hide_title: true
 sidebar_label: Playwright Testing
-description: Here you can learn how to run Playwright tests on the LambdaTest test automation platform on over 40+ browsers and operating systems.
+description: Here you can learn how to run Playwright tests on the TestMu AI test automation platform on over 40+ browsers and operating systems.
 keywords:
   - playwright testing
   - playwright e2e testing 

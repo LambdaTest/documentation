@@ -1,8 +1,8 @@
----
+﻿---
 id: appium-python-gauge
 title: Appium with Gauge
 sidebar_label: Gauge
-description: Complete guide to running your first Gauge Appium automated test script on LambdaTest Real Device Cloud Platform. Test on 3000+ Real Devices.
+description: Complete guide to running your first Gauge Appium automated test script on TestMu AI Real Device Cloud Platform. Test on 3000+ Real Devices.
 keywords:
   - python gauge
   - appium

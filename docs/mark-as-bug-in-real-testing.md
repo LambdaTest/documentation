@@ -1,9 +1,9 @@
----
+﻿---
 id: mark-as-bug-in-real-time-testing
 title: Mark As Bug In Real Time Testing
 hide_title: true
 sidebar_label: Mark As Bug
-description: Mark your bugs while performing Real Time testing on LambdaTest. Just a single click and you can share bugs to your favourite project management tools like Jira, Asana, Trello etc.
+description: Mark your bugs while performing Real Time testing on TestMu AI. Just a single click and you can share bugs to your favourite project management tools like Jira, Asana, Trello etc.
 keywords:
   - bug reporting
   - mark as bug

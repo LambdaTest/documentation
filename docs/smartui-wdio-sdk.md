@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-wdio-sdk
 title: Integrate SmartUI SDK with WebdriverIO Tests
 sidebar_label: WebdriverIO
-description: In this documentation, learn how integrate your WebdriverIO automated tests with LambdaTest's SmartUI.
+description: In this documentation, learn how integrate your WebdriverIO automated tests with TestMu AI's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

@@ -1,9 +1,9 @@
----
+﻿---
 id: goodday-integration
 title: GoodDay Integration
 hide_title: true
 sidebar_label: GoodDay 
-description: LambdaTest helps you manage your bugs in GoodDay by moving them to project in a single click. All the details you provide in LambdaTest like task list, assignee, title and description would automatically be presented in the project on GoodDay.
+description: TestMu AI helps you manage your bugs in GoodDay by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project on GoodDay.
 keywords:
   - lambdatest integrations
   - push issues to GoodDay

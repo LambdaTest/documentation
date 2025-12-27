@@ -1,9 +1,9 @@
----
+﻿---
 id: change-individual-test-details
 title: Changing Individual Test Details
 hide_title: true
 sidebar_label: Changing Individual Test Details
-description: LambdaTest Selenium Automation Grid enables you to perform end-to-end
+description: TestMu AI Selenium Automation Grid enables you to perform end-to-end
 keywords:
   - lambdatest automation
   - selenium automation grid

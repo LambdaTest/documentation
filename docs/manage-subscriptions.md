@@ -1,9 +1,9 @@
----
+﻿---
 id: manage-subscriptions
 title: Manage Subscriptions
 hide_title: true
 sidebar_label: Manage Subscriptions
-description: Learn how to manage your subscriptions by successfully upgrading to a new plan, switching between plans, and switching from Monthly to Annual plan on LambdaTest.
+description: Learn how to manage your subscriptions by successfully upgrading to a new plan, switching between plans, and switching from Monthly to Annual plan on TestMu AI.
 keywords:
   - lambdatest automation
   - Selenium automation grid

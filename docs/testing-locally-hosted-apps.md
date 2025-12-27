@@ -1,8 +1,8 @@
----
+﻿---
 id: testing-apps-locally
 title: Testing Locally Hosted Apps For App Automation
 sidebar_label: Testing Locally Hosted Apps
-description: LambdaTest tunnel allows you to test locally and privately hosted apps across various real Android and iOS devices. In this documentation, learn how to configure LambdaTest tunnel to test locally or privately hosted apps while running app automation.
+description: TestMu AI tunnel allows you to test locally and privately hosted apps across various real Android and iOS devices. In this documentation, learn how to configure TestMu AI tunnel to test locally or privately hosted apps while running app automation.
 keywords:
   - local testing
   - lambdatest tunnel features

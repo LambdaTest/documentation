@@ -1,8 +1,8 @@
----
+﻿---
 id: espresso-automation-on-emulators-simulators
-title: Espresso Automation using Emulators and Simulators on LambdaTest
+title: Espresso Automation using Emulators and Simulators on TestMu AI
 sidebar_label: Espresso - Emulator and Simulator
-description: Learn how to run espresso app automated tests on using Emulators and Simulators on LambdaTest.
+description: Learn how to run espresso app automated tests on using Emulators and Simulators on TestMu AI.
 keywords:
   - app automation emulators simulators
   - app automation emulators 

@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-k6-setup
 title: Getting started with SmartUI using K6
 sidebar_label: K6
-description: In this documentation, learn how to perform Visual Regression testing with K6 on the LambdaTest Automation Cloud across 40+ browser versions.
+description: In this documentation, learn how to perform Visual Regression testing with K6 on the TestMu AI Automation Cloud across 40+ browser versions.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

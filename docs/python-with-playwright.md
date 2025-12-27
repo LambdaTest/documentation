@@ -1,9 +1,9 @@
----
+﻿---
 id: python-with-playwright
-title: Run your Python automation scripts with Playwright on LambdaTest
+title: Run your Python automation scripts with Playwright on TestMu AI
 hide_title: true
 sidebar_label: Python
-description: Run your Python automation scripts with Playwright on LambdaTest scalable cloud grid of 50+ real desktop browsers and operating systems.
+description: Run your Python automation scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.
 keywords:
   - python playwright
   - python automation testing

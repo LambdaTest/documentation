@@ -1,8 +1,8 @@
----
+﻿---
 id: insights-usage-report
 title: Usage Report
 sidebar_label: Usage Report
-description: Discover LambdaTest's Usage Report for comprehensive test cases insights. Optimize your testing efforts today.
+description: Discover TestMu AI's Usage Report for comprehensive test cases insights. Optimize your testing efforts today.
 keywords:
   - usage report
   - usage insights

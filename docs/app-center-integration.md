@@ -1,9 +1,9 @@
----
+﻿---
 id: app-center-integration
-title: Configuring App Center on LambdaTest
+title: Configuring App Center on TestMu AI
 hide_title: true
 sidebar_label: Configuring App Center
-description: This article will guide you on how to configure App Center on LambdaTest platform so you can run tests directly without uploading apps manually.
+description: This article will guide you on how to configure App Center on TestMu AI platform so you can run tests directly without uploading apps manually.
 keywords:
   - App Center
   - Microsoft App Center

@@ -1,9 +1,9 @@
----
+﻿---
 id: browserstack-to-lambdatest-migration-guide
-title: How to migrate from BrowserStack to LambdaTest
+title: How to migrate from BrowserStack to TestMu AI
 hide_title: true
 sidebar_label: BrowserStack To LambdaTest Migration
-description: Using this guide, you can seamlessly migrate from BrowserStack to LambdaTest. It showcases a hands-on implementation using which you can run tests on LambdaTest (within few minutes)
+description: Using this guide, you can seamlessly migrate from BrowserStack to TestMu AI. It showcases a hands-on implementation using which you can run tests on TestMu AI (within few minutes)
 keywords:
   - browserstack lambdatest migration
   - browserstack lambdatest porting

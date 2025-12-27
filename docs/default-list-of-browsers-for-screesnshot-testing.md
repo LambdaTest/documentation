@@ -1,9 +1,9 @@
----
+﻿---
 id: default-list-of-browsers-for-screesnshot-testing
 title: Default List Of Browsers For Screenshot Testing
 hide_title: true
 sidebar_label: Default List Of Browsers For Automated Screenshot Testing
-description: The default list of Mobile and Desktop browsers for Automated Screenshot Testing on LambdaTest platform.
+description: The default list of Mobile and Desktop browsers for Automated Screenshot Testing on TestMu AI platform.
 keywords: 
 - Automated Screenshot Testing
 - Browser Screenshots

@@ -1,9 +1,9 @@
----
+﻿---
 id: siesta-integration
 title: Siesta Integration
 hide_title: true
 sidebar_label: Siesta
-description: Integrate LambdaTest with Siesta to perform automated browser testing of your locally hosted websites and web pages across 3000+ real browsers and operating systems.
+description: Integrate TestMu AI with Siesta to perform automated browser testing of your locally hosted websites and web pages across 3000+ real browsers and operating systems.
 keywords:
   - lambdatest integration with siesta
   - lambdatest and siesta integration 

@@ -1,6 +1,6 @@
----
+﻿---
 id: run-selenium-test-behind-the-proxy
-title: Run Selenium Tests Behind The Proxy | LambdaTest
+title: Run Selenium Tests Behind The Proxy | TestMu AI
 hide_title: true
 sidebar_label: Run Selenium Tests Behind The Proxy
 description: This documentation will help you run Selenium test scripts if your system is behind a proxy or have a firewall configuration.

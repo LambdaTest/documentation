@@ -1,9 +1,9 @@
----
+﻿---
 id: supported-languages-and-frameworks
 title: Selenium Grid Supported Languages & Frameworks
 hide_title: true
 sidebar_label: Languages and Frameworks
-description: LambdaTest Selenium Grid supports all the programming languages & testing frameworks that are compatible with Selenium. 
+description: TestMu AI Selenium Grid supports all the programming languages & testing frameworks that are compatible with Selenium. 
 keywords:
  - Selenium
  - selenium languages

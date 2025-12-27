@@ -1,8 +1,8 @@
----
+﻿---
 id: running-your-first-cypress-test
-title: Running Your First Cypress Test On LambdaTest Platform
+title: Running Your First Cypress Test On TestMu AI Platform
 sidebar_label: Run Your First Test
-description: LambdaTest enables you to run Cypress automated tests across 40+ browser versions on cloud. This documentation will help you get started with your first test.
+description: TestMu AI enables you to run Cypress automated tests across 40+ browser versions on cloud. This documentation will help you get started with your first test.
 keywords:
   - Cypress Automation
   - Cypress Testing Guide

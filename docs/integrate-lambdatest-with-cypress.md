@@ -1,8 +1,8 @@
----
+﻿---
 id: integrate-lambdatest-with-cypress
-title: Integrate LambdaTest with Cypress Dashboard
+title: Integrate TestMu AI with Cypress Dashboard
 sidebar_label: Integrate LambdaTest with Cypress Dashboard
-description: This article guides you on how to integrate LambdaTest platform with Cypress Dashboard.
+description: This article guides you on how to integrate TestMu AI platform with Cypress Dashboard.
 keywords:
   - Cypress Automation
   - Cypress With LambdaTest

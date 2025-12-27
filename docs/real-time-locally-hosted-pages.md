@@ -1,9 +1,9 @@
----
+﻿---
 id: real-time-locally-hosted-pages
 title: Locally Hosted Pages
 hide_title: false
 sidebar_label: Locally Hosted Pages
-description: Securely test your locally hosted websites and application using the real time testing feature of lambdatest with over 3000+ browsers and different OS.
+description: Securely test your locally hosted websites and application using the real time testing feature of TestMu AI with over 3000+ browsers and different OS.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature

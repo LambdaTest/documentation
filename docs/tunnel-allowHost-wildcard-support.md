@@ -1,9 +1,9 @@
----
+﻿---
 id: tunnel-allowHost-wildcard-support
 title: Support for Wildcard in --allowHosts Flag
 hide_title: false
 sidebar_label: Wildcard Support
-description: Now you can use wildcard values for the -allow-Host flag for setting up the tunnel at lambdatest.
+description: Now you can use wildcard values for the -allow-Host flag for setting up the tunnel at TestMu AI.
 keywords:
   - local app testing
   - lambdatest local testing

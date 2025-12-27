@@ -1,9 +1,9 @@
----
+﻿---
 id: sub-organizations
 title: Sub Organizations
 hide_title: true
 sidebar_label: Sub Organizations
-description: This documentation will help you create and manage sub-organizations on LambdaTest.
+description: This documentation will help you create and manage sub-organizations on TestMu AI.
 keywords:
 - sub organizations lambdatest
 - manage sub organizations

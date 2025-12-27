@@ -1,9 +1,9 @@
----
+﻿---
 id: backlog-integration
-title: LambdaTest Integration With Backlog
+title: TestMu AI Integration With Backlog
 hide_title: true
 sidebar_label: Backlog
-description: LambdaTest integration with Backlog will help you file any UI bug on your Backlog project instance, directly from LambdaTest. If you ever come across a browser compatibility bug while cross browser testing on LambdaTest, all you need to do is hit a single click and the bug will be logged into your Backlog project.
+description: TestMu AI integration with Backlog will help you file any UI bug on your Backlog project instance, directly from TestMu AI. If you ever come across a browser compatibility bug while cross browser testing on TestMu AI, all you need to do is hit a single click and the bug will be logged into your Backlog project.
 keywords:
   - lambdatest integrations
   - push issues to backlog

@@ -1,9 +1,9 @@
----
+﻿---
 id: accessibility-test-scheduling
 title: Accessibility Test Scheduling
 hide_title: false
 sidebar_label: Accessibility Test Scheduling
-description: Automate accessibility testing with LambdaTest's Accessibility Scheduler. Schedule scans, ensure WCAG compliance, and get detailed reports effortlessly.
+description: Automate accessibility testing with TestMu AI's Accessibility Scheduler. Schedule scans, ensure WCAG compliance, and get detailed reports effortlessly.
 keywords:
     - LambdaTest
     - Accessibility

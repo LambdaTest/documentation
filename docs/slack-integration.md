@@ -1,9 +1,9 @@
----
+﻿---
 id: slack-integration
-title: Slack Integration With LambdaTest
+title: Slack Integration With TestMu AI
 hide_title: false
 sidebar_label: Slack
-description: The LambdaTest Integration with Slack allows you to push a bug directly to your specified Slack channel from LambdaTest platform. 
+description: The TestMu AI Integration with Slack allows you to push a bug directly to your specified Slack channel from TestMu AI platform. 
 keywords:
   - slack integration
   - lambdatest integration

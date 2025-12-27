@@ -1,9 +1,9 @@
----
+﻿---
 id: lambdatest-sso-okta-integration
-title: LambdaTest SSO & Okta Integration
+title: TestMu AI SSO & Okta Integration
 hide_title: false
 sidebar_label: Okta
-description: LambdaTest allows you to integrate an external user directory with your LambdaTest Organization through an IDP so your team could leverage the Single Sign-on setup. This document will help you integrate your LambdaTest organization with your Okta directory.
+description: TestMu AI allows you to integrate an external user directory with your TestMu AI Organization through an IDP so your team could leverage the Single Sign-on setup. This document will help you integrate your TestMu AI organization with your Okta directory.
 keywords:
   - sso
   - lambdatest sso

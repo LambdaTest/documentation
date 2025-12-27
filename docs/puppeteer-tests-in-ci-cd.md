@@ -1,9 +1,9 @@
----
+﻿---
 id: puppeteer-cicd
 title: Running Puppeteer Tests In CI/CD
 hide_title: true
 sidebar_label: Puppeteer Testing In CI/CD
-description: Learn how to perform Puppeteer testing through CI/CD across 40+ browser versions on the LambdaTest platform.
+description: Learn how to perform Puppeteer testing through CI/CD across 40+ browser versions on the TestMu AI platform.
 keywords:
   - puppeteer testing ci cd
   - automation testing with puppeteer

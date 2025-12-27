@@ -1,9 +1,9 @@
----
+﻿---
 id: selenium-bidi-integration
-title: BiDi Testing with Selenium WebDriver on LambdaTest
+title: BiDi Testing with Selenium WebDriver on TestMu AI
 hide_title: false
 sidebar_label: BiDi Testing
-description: Discover BiDi testing with Selenium WebDriver on LambdaTest. Enjoy enhanced automation, seamless cross-browser support, fine-grained control, and future-proof your test suite
+description: Discover BiDi testing with Selenium WebDriver on TestMu AI. Enjoy enhanced automation, seamless cross-browser support, fine-grained control, and future-proof your test suite
 keywords:
   - lambdatest automation
   - selenium automation grid

@@ -1,9 +1,9 @@
----
+﻿---
 id: web-testing-on-real-devices
 title: Web Testing On Real Devices
 hide_title: true
 sidebar_label: Web Testing On Real Devices (Beta)
-description: LambdaTest mobile testing cloud offers a wide range of real Android and iOS devices to test on.This documentation will help you perform mobile web testing of your websites and web apps on LambdaTest real device cloud. 
+description: TestMu AI mobile testing cloud offers a wide range of real Android and iOS devices to test on.This documentation will help you perform mobile web testing of your websites and web apps on TestMu AI real device cloud. 
 keywords:
 - live mobile web testing
 - live mobile testing

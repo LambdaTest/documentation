@@ -1,9 +1,9 @@
----
+﻿---
 id: developer-tools
-title: Easy Debug With LambdaTest Developer Tools
+title: Easy Debug With TestMu AI Developer Tools
 hide_title: true
 sidebar_label: Developer Tools
-description: Now you can easily debug with developer tools while testing in mobile and desktop browsers at LambdaTest platform.
+description: Now you can easily debug with developer tools while testing in mobile and desktop browsers at TestMu AI platform.
 keywords:
   - free cross browser testing tool
   - virtual browser online

@@ -1,9 +1,9 @@
----
+﻿---
 id: zoho-cliq-integration
 title: Zoho Cliq Integration
 hide_title: true
 sidebar_label: Zoho Cliq
-description: Seamless Zoho Cliq Integration with LambdaTest Streamline Bug Management Effortlessly. Get real-time bug notifications in your Zoho Cliq Channels.
+description: Seamless Zoho Cliq Integration with TestMu AI Streamline Bug Management Effortlessly. Get real-time bug notifications in your Zoho Cliq Channels.
 keywords:
   - lambdatest integrations
   - push issues to zoho cliq

@@ -1,9 +1,9 @@
----
+﻿---
 id: migrate-playwright-tests
-title: Migrate Existing Playwright Test Suites On LambdaTest
+title: Migrate Existing Playwright Test Suites On TestMu AI
 hide_title: true
 sidebar_label: Migrate Playwright Tests
-description: Learn how to run migrate existing Playwright test scripts or suitesfrom your local grid on the LambdaTest platform.
+description: Learn how to run migrate existing Playwright test scripts or suitesfrom your local grid on the TestMu AI platform.
 keywords:
   - playwright testing
   - playwright e2e testing 

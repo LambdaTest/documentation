@@ -1,9 +1,9 @@
----
+﻿---
 id: gocd-integration
-title: How to integrate GoCD With LambdaTest
+title: How to integrate GoCD With TestMu AI
 sidebar_label: GoCD
 hide_title: true
-description: LambdaTest integration with GoCD will help your perform Selenium test automation for your code changes on more than 3000+ real browsers for both mobile and desktop. You can trigger your Selenium testing scripts directly from GoCD instance and they would be executed over your LambdaTest automation dashboard.
+description: TestMu AI integration with GoCD will help your perform Selenium test automation for your code changes on more than 3000+ real browsers for both mobile and desktop. You can trigger your Selenium testing scripts directly from GoCD instance and they would be executed over your TestMu AI automation dashboard.
 keywords:
   - gocd
   - lambdatest

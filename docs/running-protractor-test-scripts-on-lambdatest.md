@@ -1,9 +1,9 @@
----
+﻿---
 id: running-protractor-test-scripts-on-lambdatest
-title: Protractor Selenium Guide:Run Protractor Test Automation Scripts on Selenium Grid | LambdaTest
+title: Protractor Selenium Guide:Run Protractor Test Automation Scripts on Selenium Grid | TestMu AI
 hide_title: true
 sidebar_label: Protractor
-description: Now you can run your automation scripts using Selenium with Protractor on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using Selenium with Protractor on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - protractor selenium
   - protractor selenium grid

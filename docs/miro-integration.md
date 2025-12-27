@@ -1,9 +1,9 @@
----
+﻿---
 id: miro-integration
-title: Miro Integration with LambdaTest
+title: Miro Integration with TestMu AI
 hide_title: true
 sidebar_label: Miro
-description: LambdaTest’s integration with Miro will help you to log bugs to boards on Miro. You can easily find and report any cross browser compatibility issues to your team instantly.
+description: TestMu AI’s integration with Miro will help you to log bugs to boards on Miro. You can easily find and report any cross browser compatibility issues to your team instantly.
 keywords:
   - lambdatest integrations
   - miro whiteboard

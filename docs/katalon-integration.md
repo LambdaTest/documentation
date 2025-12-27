@@ -1,8 +1,8 @@
----
+﻿---
 id: katalon-integration
-title: Katalon Integration with LambdaTest
+title: Katalon Integration with TestMu AI
 sidebar_label: Katalon - Real Devices
-description: Leverage LambdaTest's cloud mobile devices to run automation testing using Katalon Studio.
+description: Leverage TestMu AI's cloud mobile devices to run automation testing using Katalon Studio.
 keywords:
   - katalon studio
   - integraion

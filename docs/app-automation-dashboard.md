@@ -1,9 +1,9 @@
----
+﻿---
 id: app-automation-dashboard
 title: Accessing Test Results From App Automation Dashboard
 hide_title: true
 sidebar_label: App Automation Dashboard
-description: LambdaTest App Automation dashboard allows you to access test results, debug and fix failed test cases. This documentation guides you how to configure the desired capability for debugging test cases.
+description: TestMu AI App Automation dashboard allows you to access test results, debug and fix failed test cases. This documentation guides you how to configure the desired capability for debugging test cases.
 keywords:
 - desired capability for app automation
 - app automation dashboard lambdatest

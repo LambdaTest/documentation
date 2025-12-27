@@ -1,9 +1,9 @@
----
+﻿---
 id: http2-support
-title: HTTP/2 Support in LambdaTest Tunnel
+title: HTTP/2 Support in TestMu AI Tunnel
 hide_title: false
 sidebar_label: HTTP/2 Support
-description: Learn how LambdaTest Tunnel supports HTTP/2 for modern, high-performance web application testing.
+description: Learn how TestMu AI Tunnel supports HTTP/2 for modern, high-performance web application testing.
 keywords:
   - http2
   - lambdatest tunnel

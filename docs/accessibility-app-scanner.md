@@ -1,8 +1,8 @@
----
+﻿---
 id: accessibility-app-scanner
 title: Accessibility App Scanner
 sidebar_label: Manual
-description: LambdaTest Accessibility DevTools help automate detection and reporting of accessibility issues based on WCAG guidelines.
+description: TestMu AI Accessibility DevTools help automate detection and reporting of accessibility issues based on WCAG guidelines.
 keywords:
     - LambdaTest
     - Accessibility

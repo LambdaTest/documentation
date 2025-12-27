@@ -1,9 +1,9 @@
----
+﻿---
 id: oxygen-integration
-title: How to Run Oxygen Automation Scripts Using LambdaTest?
+title: How to Run Oxygen Automation Scripts Using TestMu AI?
 hide_title: true
 sidebar_label: Oxygen
-description: Run Oxygen test automation scripts on the LambdaTest Selenium Grid, and perform cross browser testing on 3000+ real browser, on-cloud, for a seamless UI.
+description: Run Oxygen test automation scripts on the TestMu AI Selenium Grid, and perform cross browser testing on 3000+ real browser, on-cloud, for a seamless UI.
 keywords:
   - lambdatest
   - oxygen test automation

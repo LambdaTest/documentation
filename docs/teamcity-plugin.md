@@ -1,9 +1,9 @@
----
+﻿---
 id: teamcity-plugin
 title: TeamCity Plugin Integration
 hide_title: true
 sidebar_label: TeamCity Plugin
-description: Learn how to execute tests directly on the LambdaTest platform, and test your local, dev, or stage environments securely using the LambdaTest TeamCity plugin.
+description: Learn how to execute tests directly on the TestMu AI platform, and test your local, dev, or stage environments securely using the TestMu AI TeamCity plugin.
 keywords:
 - TeamCity Plugin
 - TeamCity Integration with Selenium

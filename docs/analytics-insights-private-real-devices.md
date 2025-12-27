@@ -1,8 +1,8 @@
----
+﻿---
 id: insights-private-real-devices
 title: Private Real Devices Insights
 sidebar_label: Private Real Devices
-description: Discover LambdaTest's Private Real Devices Insights for comprehensive test cases insights. Optimize your testing efforts today.
+description: Discover TestMu AI's Private Real Devices Insights for comprehensive test cases insights. Optimize your testing efforts today.
 keywords:
   - analytics
   - test insights

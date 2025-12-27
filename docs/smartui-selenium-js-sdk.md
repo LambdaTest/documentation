@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-selenium-js-sdk
 title: Integrate SmartUI SDK with Selenium-JavaScript
 sidebar_label: JavaScript
-description: In this documentation, learn how integrate your Selenium JavaScript automated tests with LambdaTest's SmartUI.
+description: In this documentation, learn how integrate your Selenium JavaScript automated tests with TestMu AI's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

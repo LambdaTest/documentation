@@ -1,9 +1,9 @@
----
+﻿---
 id: install-apps-from-app-center
 title: How to Test Apps Installed via App Center?
 hide_title: true
 sidebar_label: App Center (Deprecating)
-description: Learn how to test apps installed from App Center on LambdaTest for optimal performance on real Android and iOS devices.
+description: Learn how to test apps installed from App Center on TestMu AI for optimal performance on real Android and iOS devices.
 keywords:
 - install apps from app center
 - app center

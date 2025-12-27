@@ -1,9 +1,9 @@
----
+﻿---
 id: testrigor-integration
 title: testRigor Integration
 hide_title: true
 sidebar_label: testRigor
-description: Integrate LambdaTest with testRigor to perform desktop web, mobile web and native app testing across 3000+ real browsers, devices, and operating systems.
+description: Integrate TestMu AI with testRigor to perform desktop web, mobile web and native app testing across 3000+ real browsers, devices, and operating systems.
 keywords:
   - lambdatest integration with testrigor
   - lambdatest and testrigor integration 

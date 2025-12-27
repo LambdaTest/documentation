@@ -1,8 +1,8 @@
----
+﻿---
 id: video-injection
 title: Video Injection
 sidebar_label: Video Injection
-description: Inject video content in your tests with LambdaTest to simulate video inputs for automated testing, enhancing your app's multimedia capabilities.
+description: Inject video content in your tests with TestMu AI to simulate video inputs for automated testing, enhancing your app's multimedia capabilities.
 keywords:
   - image injection
   - app test automation

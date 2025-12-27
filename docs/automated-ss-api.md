@@ -1,9 +1,9 @@
----
+﻿---
 id: automated-ss-api
 title: Automated Screenshot API For Cross Browser Testing
 hide_title: true
 sidebar_label: Automated Screenshot API
-description: Automated Screenshot API will help you capture full-page screenshots of any URL by invoking an API call to LambdaTest cloud servers. You can ensure cross browser compatibility of your website stays in check by performing bulk screenshot testing on a regular basis.
+description: Automated Screenshot API will help you capture full-page screenshots of any URL by invoking an API call to TestMu AI cloud servers. You can ensure cross browser compatibility of your website stays in check by performing bulk screenshot testing on a regular basis.
 keywords:
   - automated screenshot api
   - automated screenshot generation

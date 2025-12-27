@@ -1,9 +1,9 @@
----
+﻿---
 id: install-apps-from-app-store
 title: How to Test Apps Installed via App Store?
 hide_title: true
 sidebar_label: App Store
-description: Learn how to test apps installed from the App Store on LambdaTest for optimal performance on real iOS devices.
+description: Learn how to test apps installed from the App Store on TestMu AI for optimal performance on real iOS devices.
 keywords:
 - install apps from app store
 - app store

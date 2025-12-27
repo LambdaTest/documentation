@@ -1,9 +1,9 @@
----
+﻿---
 id: app-testing-on-real-devices
 title: Getting started with Real Device App Testing
 hide_title: true
 sidebar_label: Getting Started
-description: Test mobile apps on 3000+ real devices with LambdaTest. Upload, choose devices, regions, and OS versions, and start seamless manual app testing today!!
+description: Test mobile apps on 3000+ real devices with TestMu AI. Upload, choose devices, regions, and OS versions, and start seamless manual app testing today!!
 keywords:
 - real device app testing 
 - lambdatest real device app testing 

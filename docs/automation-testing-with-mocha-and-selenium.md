@@ -1,6 +1,6 @@
----
+﻿---
 id: automation-testing-with-mocha-and-selenium
-title: Automation Testing With Mocha And Selenium | LambdaTest
+title: Automation Testing With Mocha And Selenium | TestMu AI
 hide_title: true
 sidebar_label: Mocha
 description: Run your automation test scripts using Mocha and Selenium Grid cloud on 3000+ real browsers. Leverage parallel testing and test your locally hosted web pages on hundreds of mobile and desktop browsers.

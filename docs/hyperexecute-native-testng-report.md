@@ -1,9 +1,9 @@
----
+﻿---
 id: hyperexecute-native-testng-report
 title: Native TestNG Reports on HyperExecute
 hide_title: false
 sidebar_label: Native TestNG
-description: Learn how to generate Native TestNG test report for HyperExecute on lambdatest and download the reports from the dashboard
+description: Learn how to generate Native TestNG test report for HyperExecute on TestMu AI and download the reports from the dashboard
 keywords:
     - native testng reports
     - hyperexecute testng reports

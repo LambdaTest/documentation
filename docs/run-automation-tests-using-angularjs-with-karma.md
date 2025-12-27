@@ -1,9 +1,9 @@
----
+﻿---
 id: run-automation-tests-using-angularjs-with-karma
-title: AngularJS Test Automation:Perform AngularJS Automated Testing using Cloud Selenium Grid | LambdaTest
+title: AngularJS Test Automation:Perform AngularJS Automated Testing using Cloud Selenium Grid | TestMu AI
 hide_title: true
 sidebar_label: AngularJS with Karma
-description: Now you can run your automation scripts using AngularJS with Karma on LambdaTest online Selenium Grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using AngularJS with Karma on TestMu AI online Selenium Grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - angularjs selenium testing
   - angularjs automated testing

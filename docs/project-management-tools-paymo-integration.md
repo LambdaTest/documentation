@@ -1,9 +1,9 @@
----
+﻿---
 id: project-management-tools-paymo-integration
 title: Paymo Integration
 hide_title: true
 sidebar_label: Paymo
-description: LambdaTest helps you manage your bugs in Paymo by moving them to project in a single click with details like task list, assignee, title and description in Paymo project.
+description: TestMu AI helps you manage your bugs in Paymo by moving them to project in a single click with details like task list, assignee, title and description in Paymo project.
 keywords:
   - lambdatest integrations
   - push issues to paymo

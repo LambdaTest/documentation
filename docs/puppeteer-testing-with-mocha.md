@@ -1,9 +1,9 @@
----
+﻿---
 id: puppeteer-mocha
 title: Run Puppeteer Tests Using Mocha
 hide_title: true
 sidebar_label: Integrate With Mocha
-description: Learn how to integrate and run your Puppeteer tests using Mocha across 40+ browser versions on the LambdaTest platform.
+description: Learn how to integrate and run your Puppeteer tests using Mocha across 40+ browser versions on the TestMu AI platform.
 keywords:
   - puppeteer testing with mocha test runner
   - puppeteer testing with mocha test runner

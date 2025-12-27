@@ -1,9 +1,9 @@
----
+﻿---
 id: install-apps-from-firebase
 title: How to Test Apps Installed via Firebase?
 hide_title: true
 sidebar_label: Firebase
-description: Learn how to test apps installed from the firebase on LambdaTest for optimal performance on real iOS devices.
+description: Learn how to test apps installed from the firebase on TestMu AI for optimal performance on real iOS devices.
 keywords:
 - install apps from firebase
 url: https://www.lambdatest.com/support/docs/install-apps-from-firebase/

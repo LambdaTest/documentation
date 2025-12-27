@@ -1,9 +1,9 @@
----
+﻿---
 id: ruby
 title: Ruby with Selenium:Run Ruby Automation Testing Scripts on Online Selenium Grid
 hide_title: true
 sidebar_label: Ruby
-description: You can now run Ruby Selenium automated test cases on online scalable LambdaTest Selenium grid of 3000+ real desktop browsers and real operating systems.
+description: You can now run Ruby Selenium automated test cases on online scalable TestMu AI Selenium grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - ruby selenium
   - Automation Testing Scripts

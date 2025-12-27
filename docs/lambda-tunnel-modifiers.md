@@ -1,9 +1,9 @@
----
+﻿---
 id: lambda-tunnel-modifiers
-title: LambdaTest Tunnel Modifiers
+title: TestMu AI Tunnel Modifiers
 hide_title: true
 sidebar_label: LambdaTest Tunnel Modifiers
-description: This document will help you understand all the modifiers/arguments used with LambdaTest Tunnel to help you test your locally hosted web pages.
+description: This document will help you understand all the modifiers/arguments used with TestMu AI Tunnel to help you test your locally hosted web pages.
 keywords:
   - lambdatest tunnel modifiers
   - lambdatest help

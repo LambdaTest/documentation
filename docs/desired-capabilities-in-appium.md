@@ -1,8 +1,8 @@
----
+﻿---
 id: desired-capabilities-in-appium
 title: Desired Capabilities 
 sidebar_label: Desired Capabilities
-description: This document will teach you how to leverage LambdaTest Capability Generator to easily for declaring desired capabilities in Appium to run your App Automation leveraging Appium Desktop.
+description: This document will teach you how to leverage TestMu AI Capability Generator to easily for declaring desired capabilities in Appium to run your App Automation leveraging Appium Desktop.
 keywords:
   - cross browser testing
   - appium capabilities generator

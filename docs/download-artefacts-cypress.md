@@ -1,8 +1,8 @@
----
+﻿---
 id: download-artefacts-cypress
 title: Downloading Artefacts For A Cypress Project
 sidebar_label: Download Artefacts For Cypress Project
-description: This article guides you on how to download the artefacts for a cypress project from LambdaTest Cloud machine.
+description: This article guides you on how to download the artefacts for a cypress project from TestMu AI Cloud machine.
 keywords:
   - Cypress Automation
   - Cypress Testing Guide

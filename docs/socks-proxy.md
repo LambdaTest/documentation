@@ -1,9 +1,9 @@
----
+﻿---
 id: socks5-proxy-support
-title: SOCKS5 Proxy Support in LambdaTest Tunnel
+title: SOCKS5 Proxy Support in TestMu AI Tunnel
 hide_title: false
 sidebar_label: SOCKS5 Proxy Support
-description: Learn how to use LambdaTest Tunnel with SOCKS5 proxy for secure, private, and flexible local testing.
+description: Learn how to use TestMu AI Tunnel with SOCKS5 proxy for secure, private, and flexible local testing.
 keywords:
   - socks5 proxy
   - lambdatest tunnel

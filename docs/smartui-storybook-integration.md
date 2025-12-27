@@ -1,7 +1,7 @@
----
+﻿---
 id: smart-ui-storybook
-title: Getting started with SmartUI using Storybook On LambdaTest
-description: In this documentation, learn how to perform Visual UI Testing with Storybook on the LambdaTest Automation Cloud across 40+ browser versions.
+title: Getting started with SmartUI using Storybook On TestMu AI
+description: In this documentation, learn how to perform Visual UI Testing with Storybook on the TestMu AI Automation Cloud across 40+ browser versions.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

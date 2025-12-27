@@ -1,9 +1,9 @@
----
+﻿---
 id: insights-dashboard
 title: Insights Dashboard
 hide_title: true
 sidebar_label: Insights Dashboard
-description: Manage system and custom fields in LambdaTest's Test Manager, enhancing test case organization and streamlining processes with detailed fields and values.
+description: Manage system and custom fields in TestMu AI's Test Manager, enhancing test case organization and streamlining processes with detailed fields and values.
 keywords:
   - insights
   - insights dashboard

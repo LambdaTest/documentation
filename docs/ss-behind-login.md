@@ -1,9 +1,9 @@
----
+﻿---
 id: ss-behind-login
 title: Taking Screenshots of Pages Behind Login
 hide_title: true
 sidebar_label: Taking Screenshots Behind Login
-description: With LambdaTest, now you can capture bulk screenshots of your web app or webpages, whether they behind a sign-in form or on a private staging server, for different browsers to measure the cross-browser compatibility.
+description: With TestMu AI, now you can capture bulk screenshots of your web app or webpages, whether they behind a sign-in form or on a private staging server, for different browsers to measure the cross-browser compatibility.
 keywords:
   - screenshot behind login
   - screenshot after login

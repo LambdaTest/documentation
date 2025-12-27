@@ -1,9 +1,9 @@
----
+﻿---
 id: appium-custom-header
 title: How to Use CustomHeaders Capability
 hide_title: true
 sidebar_label: CustomHeaders
-description: Learn how to use LambdaTest CustomHeaders capability to add custom headers to your tests and bypass firewalls restrictions in app automation tests.
+description: Learn how to use TestMu AI CustomHeaders capability to add custom headers to your tests and bypass firewalls restrictions in app automation tests.
 keywords:
 - custom headers lambdatest
 - bypass firewalls restrictions

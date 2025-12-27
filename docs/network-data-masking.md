@@ -1,9 +1,9 @@
----
+﻿---
 id: network-data-masking
 title: Network Data Masking
 hide_title: true
 sidebar_label: Network Data Masking
-description: LambdaTest provides network data masking capability to protect sensitive information during automation testing sessions.
+description: TestMu AI provides network data masking capability to protect sensitive information during automation testing sessions.
 keywords:
 - Network logs
 - Network Data Masking

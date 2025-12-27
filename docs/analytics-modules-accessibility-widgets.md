@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-modules-accessibility-widgets
 title: Accessibility Dashboard Widgets
 sidebar_label: Accessibility
-description: Discover LambdaTest's Accessibility Dashboard widgets for comprehensive accessibility testing insights. Optimize your accessibility testing efforts today.
+description: Discover TestMu AI's Accessibility Dashboard widgets for comprehensive accessibility testing insights. Optimize your accessibility testing efforts today.
 keywords:
  - analytics
  - test insights

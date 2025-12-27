@@ -1,6 +1,6 @@
----
+﻿---
 id: accessibility-report-bug
-title: Report Bugs on your Integration tools from LambdaTest Accessibility Testing
+title: Report Bugs on your Integration tools from TestMu AI Accessibility Testing
 hide_title: false
 sidebar_label: Report Bugs
 description: Report the bugs that you are expereinceing

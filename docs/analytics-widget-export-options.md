@@ -1,8 +1,8 @@
----
+﻿---
 id: analytics-widget-drill-down-export
 title: Analytics Drill-Down Widgets - Export Data Options
 sidebar_label: Export Data Options
-description: Export detailed testing analytics from LambdaTest's Drill-Down widgets to CSV, Excel, or PDF. Share insights, collaborate, and optimize testing processes effectively.
+description: Export detailed testing analytics from TestMu AI's Drill-Down widgets to CSV, Excel, or PDF. Share insights, collaborate, and optimize testing processes effectively.
 keywords:
   - analytics
 url: https://www.lambdatest.com/support/docs/analytics-widget-drill-down-export/

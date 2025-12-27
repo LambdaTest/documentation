@@ -1,9 +1,9 @@
----
+﻿---
 id: generate-test-cases-with-ai
 title: Generate Test Cases with AI
 hide_title: true
 sidebar_label: Generate Test Cases with AI
-description: Learn efficient test case generation with in LambdaTest's Test Manager using AI.
+description: Learn efficient test case generation with in TestMu AI's Test Manager using AI.
 keywords:
   - test case creation
   - test case

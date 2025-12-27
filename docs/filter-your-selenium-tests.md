@@ -1,9 +1,9 @@
----
+﻿---
 id: filter-your-selenium-tests
 title: How To Filter Your Selenium Automation Tests
 hide_title: true
 sidebar_label: Filtering Your Selenium Tests
-description: Guide to help you filter your tests on LambdaTest, a platform to perform cross-browser testing on a scalable, secure, and reliable online Selenium grid.
+description: Guide to help you filter your tests on TestMu AI, a platform to perform cross-browser testing on a scalable, secure, and reliable online Selenium grid.
 keywords:
     - LambdaTest automation
     - selenium automation grid

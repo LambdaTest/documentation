@@ -1,9 +1,9 @@
----
+﻿---
 id: aws-codepipeline-with-hyperexecute
 title: How to integrate AWS CodePipeline with HyperExecute
 hide_title: true
 sidebar_label: AWS CodePipeline
-description: Optimize AWS CodePipeline with HyperExecute for seamless, efficient testing. Streamline your CI/CD workflow with LambdaTest's comprehensive guide.
+description: Optimize AWS CodePipeline with HyperExecute for seamless, efficient testing. Streamline your CI/CD workflow with TestMu AI's comprehensive guide.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools

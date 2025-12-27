@@ -1,9 +1,9 @@
----
+﻿---
 id: accessibility-automation
-title: LambdaTest Accessibility Automation
+title: TestMu AI Accessibility Automation
 hide_title: false
 sidebar_label: Accessibility Automation
-description: Use Automation tools like LambdaTest Accessibility DevTools' to detect and report accessibility issues using WCAG Guidelines.
+description: Use Automation tools like TestMu AI Accessibility DevTools' to detect and report accessibility issues using WCAG Guidelines.
 keywords:
     - LambdaTest
     - Accessibility

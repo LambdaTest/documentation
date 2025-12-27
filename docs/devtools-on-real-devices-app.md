@@ -1,8 +1,8 @@
----
+﻿---
 id: devtools-on-real-devices-app
 title: DevTools On Real Devices
 sidebar_label: DevTools
-description: Inspect and debug embedded web views in real mobile devices using LambdaTest's DevTools.
+description: Inspect and debug embedded web views in real mobile devices using TestMu AI's DevTools.
 
 keywords:
   - webview debugging on real device

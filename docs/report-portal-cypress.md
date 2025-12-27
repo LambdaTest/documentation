@@ -1,6 +1,6 @@
----
+﻿---
 id: report-portal-cypress
-title: ReportPortal.io Integration With LambdaTest For Cypress
+title: ReportPortal.io Integration With TestMu AI For Cypress
 sidebar_label: Report Portal IO Integration For Cypress
 description: This article will guide you on how to integrate the LambdatTest platform with Report Portal platform for running your Cypress automation tests.
 keywords:

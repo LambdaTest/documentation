@@ -1,8 +1,8 @@
----
+﻿---
 id: network-configurations
 title: Network Configurations in Automation Tests
 sidebar_label: Network Configurations
-description: Learn how to configure and capture HTTP/S traffic during automation testing on LambdaTest Real Devices.
+description: Learn how to configure and capture HTTP/S traffic during automation testing on TestMu AI Real Devices.
 keywords:
   - lambdatest automation
   - appium network logs

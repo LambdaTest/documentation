@@ -1,9 +1,9 @@
----
+﻿---
 id: rocketchat-integration-with-lambdatest
-title: Rocket.Chat Integration With LambdaTest
+title: Rocket.Chat Integration With TestMu AI
 hide_title: false
 sidebar_label: Rocket.Chat
-description: The LambdaTest Rocket.Chat Integration allows you to share or push a bug to your specified Rocket.Chat channel from the LambdaTest platform in a single click. You can share any UI observations and input with your team on Rocket.Chat anytime, by just capturing a screenshot in the middle of your test session through LambdaTest. You can also annotate the screenshot or highlight your issue or input. The fields populated by you while marking as bug through LambdaTest gets displayed as information on Rocket.Chat for that testing instance.
+description: The TestMu AI Rocket.Chat Integration allows you to share or push a bug to your specified Rocket.Chat channel from the TestMu AI platform in a single click. You can share any UI observations and input with your team on Rocket.Chat anytime, by just capturing a screenshot in the middle of your test session through TestMu AI. You can also annotate the screenshot or highlight your issue or input. The fields populated by you while marking as bug through TestMu AI gets displayed as information on Rocket.Chat for that testing instance.
 keywords:
   - rocket.chat integration
   - lambdatest integration

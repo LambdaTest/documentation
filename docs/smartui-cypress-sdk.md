@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-cypress-sdk
 title: Integrate SmartUI SDK with Cypress Tests
 sidebar_label: Cypress
-description: In this documentation, learn how integrate your Cypress automated tests with LambdaTest's SmartUI.
+description: In this documentation, learn how integrate your Cypress automated tests with TestMu AI's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

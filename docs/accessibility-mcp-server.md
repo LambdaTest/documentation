@@ -1,9 +1,9 @@
----
+﻿---
 id: accessibility-mcp-server
 title: Introducing Accessibility MCP Server
 hide_title: false
 sidebar_label: Accessibility MCP Server
-description: LambdaTest’s Accessibility MCP Server tests public URLs and React apps, providing detailed reports and AI-driven insights to quickly identify and fix accessibility issues.
+description: TestMu AI’s Accessibility MCP Server tests public URLs and React apps, providing detailed reports and AI-driven insights to quickly identify and fix accessibility issues.
 
 keywords:
   - accessibility testing

@@ -1,9 +1,9 @@
----
+﻿---
 id: trello-integration
-title: Integrate LambdaTest with Trello | LambdaTest
+title: Integrate TestMu AI with Trello | TestMu AI
 hide_title: true
 sidebar_label: Trello
-description: LambdaTest provides integrations with Trello to help you log bugs directly from the middle of your test session on LambdaTest to your Trello card.
+description: TestMu AI provides integrations with Trello to help you log bugs directly from the middle of your test session on TestMu AI to your Trello card.
 keywords:
   - LambdaTest integrations
   - LambdaTest Trello integration

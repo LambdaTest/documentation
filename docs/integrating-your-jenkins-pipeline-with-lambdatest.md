@@ -1,9 +1,9 @@
----
+﻿---
 id: integrating-your-jenkins-pipeline-with-lambdatest
-title: Integrating Your Jenkins Pipeline With LambdaTest
+title: Integrating Your Jenkins Pipeline With TestMu AI
 hide_title: true
 sidebar_label: Integrating Your Jenkins Pipeline With LambdaTest 
-description: LambdaTest now integrates with Jenkins pipeline to boost your go-to market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
+description: TestMu AI now integrates with Jenkins pipeline to boost your go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
     - lambdatest integrations
     - lambdatest integrations with ci/cd tools

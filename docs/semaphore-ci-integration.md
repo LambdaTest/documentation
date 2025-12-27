@@ -1,9 +1,9 @@
----
+﻿---
 id: semaphore-ci-integration
-title: Semaphore CI Integration With LambdaTest
+title: Semaphore CI Integration With TestMu AI
 hide_title: true
 sidebar_label: Semaphore
-description: Boost market delivery with LambdaTest's integration with Semaphore CI and automate tests on a cloud grid with 3000+ real browsers seamlessly.
+description: Boost market delivery with TestMu AI's integration with Semaphore CI and automate tests on a cloud grid with 3000+ real browsers seamlessly.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools

@@ -1,8 +1,8 @@
----
+﻿---
 id: screen-reader-on-real-devices-app
 title: Screen Reader (TalkBack) for Android Application
 sidebar_label: Screen Reader
-description: Test your app's accessibility with LambdaTest's Screen Reader. Navigate through app elements with spoken descriptions on real Android devices, ensuring compliance with WCAG standards.
+description: Test your app's accessibility with TestMu AI's Screen Reader. Navigate through app elements with spoken descriptions on real Android devices, ensuring compliance with WCAG standards.
 keywords:
   - image injection
   - app test automation

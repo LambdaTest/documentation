@@ -1,9 +1,9 @@
----
+﻿---
 id: appium-firebase-app-upload
 title: Uploading app via Firebase
 hide_title: false
 sidebar_label: Uploading app via Firebase
-description: Discover how to test an app uploaded on Firebase seamlessly through Appium at LambdaTest! Our guide simplifies your Appium Firebase app upload process for efficient testing!
+description: Discover how to test an app uploaded on Firebase seamlessly through Appium at TestMu AI! Our guide simplifies your Appium Firebase app upload process for efficient testing!
 keywords:
   - lambdatest automation
   - lambdatest appium

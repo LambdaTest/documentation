@@ -1,9 +1,9 @@
----
+﻿---
 id: parallel-playwright-test
 title: How To Run Playwright Tests In Parallel
 hide_title: true
 sidebar_label: Parallel Testing
-description: Here you can learn how to run parallel tests with Playwright across 40+ browser versions on the LambdaTest automation platform.
+description: Here you can learn how to run parallel tests with Playwright across 40+ browser versions on the TestMu AI automation platform.
 keywords:
  -  playwright testing
   - playwright e2e testing 

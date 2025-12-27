@@ -1,9 +1,9 @@
----
+﻿---
 id: pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid
 title: PyTest Automation:Run PyTest Automation Testing on Selenium Grid Cloud
 hide_title: true
 sidebar_label: pytest
-description: Learn how to run PyTest Selenium automated test scripts (with examples) on LambdaTest Selenium Grid having 3000+ different desktop and mobile browsers on cloud.
+description: Learn how to run PyTest Selenium automated test scripts (with examples) on TestMu AI Selenium Grid having 3000+ different desktop and mobile browsers on cloud.
 keywords:
   - pytest
   - pytest selenium

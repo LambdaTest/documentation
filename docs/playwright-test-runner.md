@@ -1,9 +1,9 @@
----
+﻿---
 id: playwright-playwrighttest
 title: Running Playwright Tests With Playwright Test Runner
 hide_title: true
 sidebar_label: Integrate With Playwright Test Runner
-description: Learn how to perform Playwright testing using Playwright test runner across 40+ browser versions on the LambdaTest platform.
+description: Learn how to perform Playwright testing using Playwright test runner across 40+ browser versions on the TestMu AI platform.
 keywords:
  -  playwright testing with Playwright test runner
   - playwright e2e testing with Playwright test runner

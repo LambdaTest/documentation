@@ -1,9 +1,9 @@
----
+﻿---
 id: hyperexecute-slack-integration
 title: Receive Instant Notification on your Jobs Directly in your Slack
 hide_title: false
 sidebar_label: Slack
-description:  Streamline testing & communication! Integrate LambdaTest HyperExecute with Slack for real-time test notifications & updates. 
+description:  Streamline testing & communication! Integrate TestMu AI HyperExecute with Slack for real-time test notifications & updates. 
 keywords:
   - LambdaTest Hyperexecute
   - LambdaTest Hyperexecute help

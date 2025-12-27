@@ -1,9 +1,9 @@
----
+﻿---
 id: test-case-repository
 title: Test Case Repository
 hide_title: true
 sidebar_label: Test Case Repository
-description: Manage your test case repository with LambdaTest's Test Manager, ensuring organized, accessible, and efficient handling of all your test cases.
+description: Manage your test case repository with TestMu AI's Test Manager, ensuring organized, accessible, and efficient handling of all your test cases.
 keywords:
   - test case repository
   - test cases

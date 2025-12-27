@@ -1,8 +1,8 @@
----
+﻿---
 id: hyperexecute-appium-testing
 title: Appium Testing - Real Device On HyperExecute
 sidebar_label: Appium - Real Device
-description: Maximize Appium test execution with HyperExecute – Explore LambdaTest's support documentation for seamless automation testing.
+description: Maximize Appium test execution with HyperExecute – Explore TestMu AI's support documentation for seamless automation testing.
 keywords:
   - appium
   - java

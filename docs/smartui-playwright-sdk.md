@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-playwright-sdk
 title: Integrate SmartUI SDK with Playwright-JavaScript
 sidebar_label: JavaScript
-description: In this documentation, learn how integrate your Playwright automated tests with LambdaTest's SmartUI.
+description: In this documentation, learn how integrate your Playwright automated tests with TestMu AI's SmartUI.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

@@ -1,9 +1,9 @@
----
+﻿---
 id: manual-test-cases-with-ai
 title: Manual Test Cases with AI
 hide_title: true
 sidebar_label: Manual Test Cases with AI
-description: Enhance your manual test cases with AI from LambdaTest's Test Manager, facilitating efficient management of all testing activities on a single platform.
+description: Enhance your manual test cases with AI from TestMu AI's Test Manager, facilitating efficient management of all testing activities on a single platform.
 keywords:
   - manual test cases with ai 
   - manual test cases

@@ -1,8 +1,8 @@
----
+﻿---
 id: camera-image-injection-on-real-devices
 title: Media Injection on Real Devices
 sidebar_label: Media Injection
-description: Test camera features on real devices with LambdaTest's Image Injection. Easily inject custom images for QR codes, photos, and more.
+description: Test camera features on real devices with TestMu AI's Image Injection. Easily inject custom images for QR codes, photos, and more.
 keywords:
   - image injection
   - app test automation

@@ -1,9 +1,9 @@
----
+﻿---
 id: tunnel-release-notes
 title: Tunnel Client Release Notes
 hide_title: false
 sidebar_label: Release Notes
-description: Get the latest release notes for LambdaTest Tunnel, detailing the latest features, fixes, and improvements for secure and seamless testing.
+description: Get the latest release notes for TestMu AI Tunnel, detailing the latest features, fixes, and improvements for secure and seamless testing.
 keywords:
   - LambdaTest Tunnel
   - LambdaTest Tunnel help

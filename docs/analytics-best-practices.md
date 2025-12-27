@@ -1,7 +1,7 @@
----
+﻿---
 id: insights-best-practices
 title: Insights Best Practices
-description: Best practices for using LambdaTest Insights dashboards, widgets, and insights modules to maximize value and drive data-driven testing decisions.
+description: Best practices for using TestMu AI Insights dashboards, widgets, and insights modules to maximize value and drive data-driven testing decisions.
 keywords:
   - insights
   - dashboards

@@ -1,8 +1,8 @@
----
+﻿---
 id: accessibility-native-app-automation-test
 title: Native App Accessibility Automation
 sidebar_label: Automation
-description: Detect and report accessibility issues automatically using LambdaTest Accessibility Native App Automationv, aligned with WCAG guidelines.
+description: Detect and report accessibility issues automatically using TestMu AI Accessibility Native App Automationv, aligned with WCAG guidelines.
 keywords:
     - LambdaTest
     - Accessibility

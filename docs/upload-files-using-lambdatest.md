@@ -1,9 +1,9 @@
----
+﻿---
 id: upload-files-using-lambdatest
-title: Upload Files Using LambdaTest Selenium Grid
+title: Upload Files Using TestMu AI Selenium Grid
 hide_title: true
 sidebar_label: Upload Files Using LambdaTest Selenium Grid
-description: LambdaTest Selenium Grid allows you to upload any file inside your Selenium test scripts, to ensure cross-browser compatibility on over 3000+ browsers and OS. 
+description: TestMu AI Selenium Grid allows you to upload any file inside your Selenium test scripts, to ensure cross-browser compatibility on over 3000+ browsers and OS. 
 keywords:
   - upload files
   - upload files inside selenium scripts

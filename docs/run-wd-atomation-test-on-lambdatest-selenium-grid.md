@@ -1,9 +1,9 @@
----
+﻿---
 id: run-wd-atomation-test-on-lambdatest-selenium-grid
-title: Running Selenium WD Automation Scripts on Selenium Grid Cloud | LambdaTest
+title: Running Selenium WD Automation Scripts on Selenium Grid Cloud | TestMu AI
 hide_title: true
 sidebar_label: WD
-description: Now you can run your automation scripts using WD with Selenium on LambdaTest online grid of 3000+ real desktop browsers and real operating systems.
+description: Now you can run your automation scripts using WD with Selenium on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - wd framework
   - wd docs

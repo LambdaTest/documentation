@@ -1,9 +1,9 @@
----
+﻿---
 id: playwright-android-guide
-title: How To Run Playwright Tests On LambdaTest Android Devices
+title: How To Run Playwright Tests On TestMu AI Android Devices
 hide_title: true
 sidebar_label: Getting Started
-description: Here you can learn how to run Playwright tests on the LambdaTest android devices.
+description: Here you can learn how to run Playwright tests on the TestMu AI android devices.
 keywords:
   - playwright testing
   - playwright mobile testing

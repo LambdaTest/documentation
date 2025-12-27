@@ -1,8 +1,8 @@
----
+﻿---
 id: smart-heal-appium
 title: Smart Heal in Automation
 sidebar_label: Smart Heal
-description: Learn how to enable Smart Heal, LambdaTest’s Auto-Heal capability, for real device automation tests to reduce flakiness by automatically recovering from locator failures during execution.
+description: Learn how to enable Smart Heal, TestMu AI’s Auto-Heal capability, for real device automation tests to reduce flakiness by automatically recovering from locator failures during execution.
 keywords:
   - appium smart-heal
   - self-healing tests

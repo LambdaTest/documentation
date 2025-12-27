@@ -1,9 +1,9 @@
----
+﻿---
 id: jenkins-with-hyperexecute
 title: Jenkins Integration
 hide_title: true
 sidebar_label: Jenkins
-description: Streamline automation with Jenkins and HyperExecute by exploring LambdaTest's comprehensive support documentation.
+description: Streamline automation with Jenkins and HyperExecute by exploring TestMu AI's comprehensive support documentation.
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools

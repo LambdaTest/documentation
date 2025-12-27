@@ -1,9 +1,9 @@
----
+﻿---
 id: real-time-testing-troubleshooting
 title: Real Time Testing Troubleshooting
 hide_title: false
 sidebar_label: Real Time Testing Troubleshooting
-description: Perform real time live interactive cross browser compatibility testing of your website or web application with LambdaTest.
+description: Perform real time live interactive cross browser compatibility testing of your website or web application with TestMu AI.
 keywords:
   - real time testing in lambdatest
   - lambdatest real time testing feature
