@@ -1,9 +1,9 @@
----
+﻿---
 id: servicenow-integration
-title: ServiceNow Integration with LambdaTest
+title: ServiceNow Integration with TestMu AI
 hide_title: false
 sidebar_label: ServiceNow
-description: LambdaTest helps you manage your incidents in ServiceNow by moving them to your project in a single click. All the details you provide in LambdaTest like task list, assignee, title, and description would automatically be presented in the project on ServiceNow.
+description: TestMu AI helps you manage your incidents in ServiceNow by moving them to your project in a single click. All the details you provide in TestMu AI like task list, assignee, title, and description would automatically be presented in the project on ServiceNow.
 keywords:
   - lambdatest integrations
   - push issues to servicenow

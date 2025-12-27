@@ -1,9 +1,9 @@
----
+﻿---
 id: typescript-with-playwright
-title: Run your TypeScript automation scripts with Playwright on LambdaTest
+title: Run your TypeScript automation scripts with Playwright on TestMu AI
 hide_title: true
 sidebar_label: TypeScript
-description: Run your TypeScript automation scripts with Playwright on LambdaTest scalable cloud grid of 50+ real desktop browsers and operating systems.
+description: Run your TypeScript automation scripts with Playwright on TestMu AI scalable cloud grid of 50+ real desktop browsers and operating systems.
 keywords:
   - typescript playwright
   - typescript automation testing

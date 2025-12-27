@@ -1,9 +1,9 @@
----
+﻿---
 id: vscode-extension
-title: LambdaTest VS Code Extension For Cross Browser Testing
+title: TestMu AI VS Code Extension For Cross Browser Testing
 hide_title: true
 sidebar_label: VS Code Extension
-description: With LambdaTest VS Code Extension, perform real-time cross browser testing of your public and locally hosted web applications across 3000+ real, browsers, devices and OS combinations right from the VS Code Editor. 
+description: With TestMu AI VS Code Extension, perform real-time cross browser testing of your public and locally hosted web applications across 3000+ real, browsers, devices and OS combinations right from the VS Code Editor. 
 keywords:
   - lambdatest extension for vs code
   - how to add lambdatest extension in vs code

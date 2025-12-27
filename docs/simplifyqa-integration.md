@@ -1,9 +1,9 @@
----
+﻿---
 id: simplifyqa-integration
-title: How to integrate SimplyfyQA With LambdaTest
+title: How to integrate SimplyfyQA With TestMu AI
 hide_title: false
 sidebar_label: SimplifyQA
-description: This guide walk you through how you can run your tests using simplifyqa after integrating on LambdaTest's real device.
+description: This guide walk you through how you can run your tests using simplifyqa after integrating on TestMu AI's real device.
 keywords:
   - LambdaTest integration
   - lambdatest integration with simplifyqa

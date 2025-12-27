@@ -1,6 +1,6 @@
----
+﻿---
 id: smartui-cli-figma-app
-title: Getting Started with LambdaTest's SmartUI Figma-App CLI
+title: Getting Started with TestMu AI's SmartUI Figma-App CLI
 sidebar_label: Figma-App CLI
 description: Learn how to compare your Figma mobile designs with native app screenshots on real devices using SmartUI CLI.
 keywords:

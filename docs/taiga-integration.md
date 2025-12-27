@@ -1,9 +1,9 @@
----
+﻿---
 id: taiga-integration
-title: Taiga Integration with LambdaTest
+title: Taiga Integration with TestMu AI
 hide_title: false
 sidebar_label: Taiga
-description: LambdaTest helps you manage your bugs in Taiga by moving them to your project in a single click. All the details you provide in LambdaTest like task list, assignee, title, and description would automatically be presented in the project on Taiga.
+description: TestMu AI helps you manage your bugs in Taiga by moving them to your project in a single click. All the details you provide in TestMu AI like task list, assignee, title, and description would automatically be presented in the project on Taiga.
 keywords:
   - lambdatest integrations
   - push issues to taiga

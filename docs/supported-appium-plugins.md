@@ -1,9 +1,9 @@
----
+﻿---
 id: supported-appium-plugins
 title: Supported Appium Plugins
 hide_title: true
 sidebar_label: Supported Appium Plugins
-description: This document provides information about configuring Appium plugins for tests on the LambdaTest platform and also provides a list of supported plugins.
+description: This document provides information about configuring Appium plugins for tests on the TestMu AI platform and also provides a list of supported plugins.
 
 keywords:
  - appium

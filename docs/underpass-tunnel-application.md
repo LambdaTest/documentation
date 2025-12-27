@@ -1,9 +1,9 @@
----
+﻿---
 id: underpass-tunnel-application
-title: Using LambdaTest Underpass | A Desktop Application For Localhost Testing
+title: Using TestMu AI Underpass | A Desktop Application For Localhost Testing
 hide_title: true
 sidebar_label: Underpass Application For Secure Tunnel
-description: With LambdaTest Underpass, you can perform cross browser testing of locally hosted web applications on 3000+ browsers for both mobile &amp; desktop, without executing any command from your terminal.
+description: With TestMu AI Underpass, you can perform cross browser testing of locally hosted web applications on 3000+ browsers for both mobile &amp; desktop, without executing any command from your terminal.
 keywords:
   - local app testing
   - lambdatest local testing

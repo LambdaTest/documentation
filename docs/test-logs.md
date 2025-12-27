@@ -1,9 +1,9 @@
----
+﻿---
 id: test-logs
 title: Test Logs
 hide_title: true
 sidebar_label: Test Logs
-description: Test Logs is a library where you can find logs of all cross browser testing performed by you on LambdaTest.
+description: Test Logs is a library where you can find logs of all cross browser testing performed by you on TestMu AI.
 keywords:
   - lambdatest test logs
   - test logs

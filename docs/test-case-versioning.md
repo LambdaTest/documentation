@@ -1,8 +1,8 @@
----
+﻿---
 id: test-case-versioning
 title: Test Case Versioning
 sidebar_label: Manage Versions
-description: Learn efficient manual test case versioning with LambdaTest's Test Manager. 
+description: Learn efficient manual test case versioning with TestMu AI's Test Manager. 
 keywords:
   - test case creation
   - test case update

@@ -1,9 +1,9 @@
----
+﻿---
 id: tosca-integration-hyperexecute
 title: Tosca
 hide_title: true
 sidebar_label: Tosca
-description: Integrate Tricentis Tosca with LambdaTest HyperExecute for efficient, no-code testing. Seamlessly connect Tosca Commander, DEX, and SAP for an optimized testing workflow.
+description: Integrate Tricentis Tosca with TestMu AI HyperExecute for efficient, no-code testing. Seamlessly connect Tosca Commander, DEX, and SAP for an optimized testing workflow.
 keywords:
     - hyperexecute integrations
     - hyperexecute integrations with products

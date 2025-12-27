@@ -1,8 +1,8 @@
----
+﻿---
 id: xcui-supported-capabilities
 title: XCUI Supported Capabilities
 sidebar_label: Supported Capabilities
-description: Now you can run your XCUI framework on LambdaTest online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.
+description: Now you can run your XCUI framework on TestMu AI online grid of 3000+ real desktop browsers and real operating systems with its supported capabilities.
 keywords:
   - espresso
   - java

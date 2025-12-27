@@ -1,8 +1,8 @@
----
+﻿---
 id: xcui-automation-on-emulators-simulators
-title: XCUI Automation using Emulators and Simulators on LambdaTest
+title: XCUI Automation using Emulators and Simulators on TestMu AI
 sidebar_label: XCUI - Emulator and Simulator
-description: Learn how to run xcui app automated tests on using Emulators and Simulators on LambdaTest.
+description: Learn how to run xcui app automated tests on using Emulators and Simulators on TestMu AI.
 keywords:
   - app automation emulators simulators
   - app automation emulators 

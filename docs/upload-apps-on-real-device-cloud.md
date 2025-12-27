@@ -1,9 +1,9 @@
----
+﻿---
 id: upload-apps-on-real-device-cloud
-title: Upload Apps on LambdaTest’s Real Device Cloud
+title: Upload Apps on TestMu AI’s Real Device Cloud
 hide_title: true
 sidebar_label: Upload Apps
-description: Learn how to upload apps to LambdaTest's Real Device Cloud from your system or a URL for testing on Android and iOS devices.
+description: Learn how to upload apps to TestMu AI's Real Device Cloud from your system or a URL for testing on Android and iOS devices.
 keywords:
 - upload apps on real device cloud 
 - real device cloud

@@ -1,8 +1,8 @@
----
+﻿---
 id: screen-reader-voiceover-real-devices-app
 title: Screen Reader (VoiceOver) on iOS Devices
 sidebar_label: Screen Reader (VoiceOver)
-description: Test your app's and website's accessibility with LambdaTest's Screen Reader (VoiceOver) on iOS devices across multiple browsers. Navigate through app elements with spoken descriptions, ensuring compliance with WCAG standards.
+description: Test your app's and website's accessibility with TestMu AI's Screen Reader (VoiceOver) on iOS devices across multiple browsers. Navigate through app elements with spoken descriptions, ensuring compliance with WCAG standards.
 keywords:
   - screen reader
   - voiceover

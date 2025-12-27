@@ -1,9 +1,9 @@
----
+﻿---
 id: selenium-tests-with-nemojs
-title: Run Selenium Tests With NemoJS | LambdaTest
+title: Run Selenium Tests With NemoJS | TestMu AI
 hide_title: true
 sidebar_label: NemoJS
-description: This document will help you run Selenium automated tests with NemoJS across 3000+ browsers and operating systems on LambdaTest cloud Selenium Grid.
+description: This document will help you run Selenium automated tests with NemoJS across 3000+ browsers and operating systems on TestMu AI cloud Selenium Grid.
 keywords:
 - nemo selenium
 - nemojs selenium

@@ -1,9 +1,9 @@
----
+﻿---
 id: selenium-automation-capabilities
 title: Desired Capabilities in Selenium 
 hide_title: false
 sidebar_label: Desired Capabilities In Selenium
-description: This document will teach you how to leverage LambdaTest Capability Generator to easily for declaring desired capabilities in selenium for both desktop and mobile browsers.
+description: This document will teach you how to leverage TestMu AI Capability Generator to easily for declaring desired capabilities in selenium for both desktop and mobile browsers.
 keywords:
 - cross browser testing
 - selenium capabilities generator

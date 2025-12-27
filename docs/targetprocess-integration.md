@@ -1,9 +1,9 @@
----
+﻿---
 id: targetprocess-integration
 title: TargetProcess Integration
 hide_title: true
 sidebar_label: TargetProcess 
-description: Using LambdaTest integration with TargetProcess, you&#039;ll be able to log bugs over your project in TargetProcess from LambdaTest in just a single click.
+description: Using TestMu AI integration with TargetProcess, you&#039;ll be able to log bugs over your project in TargetProcess from TestMu AI in just a single click.
 keywords:
   - targetprocess integration
   - lambdatest integration

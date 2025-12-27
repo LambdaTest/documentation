@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-katalon-plugin
 title: SmartUI Plugin for Katalon Studio
 sidebar_label: Katalon Plugin
-description: Integrate LambdaTest SmartUI with Katalon Studio to perform visual regression testing directly in your test automation workflows.
+description: Integrate TestMu AI SmartUI with Katalon Studio to perform visual regression testing directly in your test automation workflows.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

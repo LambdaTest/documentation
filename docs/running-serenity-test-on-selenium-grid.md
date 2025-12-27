@@ -1,8 +1,8 @@
----
+﻿---
 id: running-serenity-test-on-selenium-grid
 title: Execute Selenium Tests With Serenity BDD
 sidebar_label: Serenity BDD
-description: Your guide to running tests using Serenity BDD on LambdaTest's Selenium Grid of 3000+ real devices and desktop browsers.
+description: Your guide to running tests using Serenity BDD on TestMu AI's Selenium Grid of 3000+ real devices and desktop browsers.
 keywords:
   - serenity selenium
   - serenity bdd

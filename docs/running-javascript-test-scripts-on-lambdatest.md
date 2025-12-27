@@ -1,9 +1,9 @@
----
+﻿---
 id: running-javascript-test-scripts-on-lambdatest
-title: JavaScript With Selenium – Running JavaScript Automation Scripts On LambdaTest Selenium Grid
+title: JavaScript With Selenium – Running JavaScript Automation Scripts On TestMu AI Selenium Grid
 hide_title: true
 sidebar_label: JavaScript
-description: You can now run JavaScript Selenium automated test cases on online scalable LambdaTest Selenium Grid of 3000+ real desktop browsers and real operating systems.
+description: You can now run JavaScript Selenium automated test cases on online scalable TestMu AI Selenium Grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - javascript selenium
   - javascript automation testing

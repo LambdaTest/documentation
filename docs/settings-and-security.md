@@ -1,9 +1,9 @@
----
+﻿---
 id: settings-and-security
 title: Settings and Security
 hide_title: true
 sidebar_label: Settings and Security
-description: Discover how to protect your data with LambdaTest- Manage security settings & ensure data confidentiality and integrity efficiently.
+description: Discover how to protect your data with TestMu AI- Manage security settings & ensure data confidentiality and integrity efficiently.
 keywords:
   - SCIM
   - SSO

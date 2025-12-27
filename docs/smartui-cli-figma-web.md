@@ -1,6 +1,6 @@
----
+﻿---
 id: smartui-cli-figma-web
-title: Getting started with LambdaTest's SmartUI Figma-Web CLI
+title: Getting started with TestMu AI's SmartUI Figma-Web CLI
 sidebar_label: Figma-Web CLI
 description: In this documentation, learn how to compare your figma designs to live production websites and web applications.
 keywords:

@@ -1,9 +1,9 @@
----
+﻿---
 id: test-run-creation-and-management
 title: Test Run - Creation and Management
 hide_title: false
 sidebar_label: Create & Manage Test Run
-description: Gain insights into effective Test Run Creation with LambdaTest, designed to streamline your workflow.
+description: Gain insights into effective Test Run Creation with TestMu AI, designed to streamline your workflow.
 keywords:
   - test run
   - test run creation 

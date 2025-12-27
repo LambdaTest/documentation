@@ -1,9 +1,9 @@
----
+﻿---
 id: testim-integration
 title: Testim Integration
 hide_title: false
 sidebar_label: Testim
-description: LambdaTest offers integration with Testim to help you perform automated browser testing on 3000+ real browsers and OS.
+description: TestMu AI offers integration with Testim to help you perform automated browser testing on 3000+ real browsers and OS.
 keywords:
 - lambdatest integrations
 - lambdatest integrations with testim

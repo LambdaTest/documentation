@@ -1,8 +1,8 @@
----
+﻿---
 id: xcresult
 title: XCResult
 sidebar_label: XCResult
-description: Learn how to generate and download Xcode Result Bundles (.xcresult) for XCUI test executions on LambdaTest. Debug smarter with detailed reports directly in Xcode.
+description: Learn how to generate and download Xcode Result Bundles (.xcresult) for XCUI test executions on TestMu AI. Debug smarter with detailed reports directly in Xcode.
 keywords:
   - xcuitest
   - xcui result bundle

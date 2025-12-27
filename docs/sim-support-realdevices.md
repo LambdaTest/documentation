@@ -1,8 +1,8 @@
----
+﻿---
 id: sim-support-realdevices
 title: SIM & eSIM on Real Devices
 sidebar_label: Enable SIM
-description: Learn how to manually test SIM and eSIM scenarios on real mobile devices using LambdaTest, including configurations, SMS validation, and supported devices.
+description: Learn how to manually test SIM and eSIM scenarios on real mobile devices using TestMu AI, including configurations, SMS validation, and supported devices.
 keywords:
   - SIM
   - eSIM

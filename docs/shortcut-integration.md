@@ -1,9 +1,9 @@
----
+﻿---
 id: clubhouse-integration
 title: Shortcut Integration
 hide_title: true
 sidebar_label: Shortcut 
-description: LambdaTest helps you manage your bugs in Shortcut by moving them to project in a single click. All the details you provide in LambdaTest like task list, assignee, title and description would automatically be presented in the project on Shortcut.
+description: TestMu AI helps you manage your bugs in Shortcut by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project on Shortcut.
 keywords:
   - lambdatest integrations
   - push issues to Shortcut

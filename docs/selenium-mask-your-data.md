@@ -1,9 +1,9 @@
----
+﻿---
 id: selenium-mask-your-data
 title: Mask your Sensitive Data
 hide_title: false
 sidebar_label: Masking Sensitive Data
-description: This capability allows you to mask your sensitive data such as username and acceskey while showing in the logs of the lambdatest platform
+description: This capability allows you to mask your sensitive data such as username and acceskey while showing in the logs of the TestMu AI platform
 keywords:
   - lambdatest automation
   - selenium automation grid

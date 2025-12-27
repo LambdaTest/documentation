@@ -1,9 +1,9 @@
----
+﻿---
 id: smartui-with-netlify
-title: Netlify Integration With LambdaTest
+title: Netlify Integration With TestMu AI
 hide_title: false
 sidebar_label: Netlify
-description: Simplify DevOps! Run blazing-fast Cypress tests on LambdaTest directly from your Netlify builds.
+description: Simplify DevOps! Run blazing-fast Cypress tests on TestMu AI directly from your Netlify builds.
 keywords:
   - lambdatest integrations
   - lambdatest netlify integration

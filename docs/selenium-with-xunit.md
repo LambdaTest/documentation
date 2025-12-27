@@ -1,9 +1,9 @@
----
+﻿---
 id: selenium-xunit
 title: How to Run Selenium Tests With xUnit
 hide_title: true
 sidebar_label: xUnit
-description: Learn how to run your first Selenium test with xUnit on LambdaTest.
+description: Learn how to run your first Selenium test with xUnit on TestMu AI.
 keywords:
 - selenium xunit
 - selenium with xunit

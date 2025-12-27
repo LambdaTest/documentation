@@ -1,9 +1,9 @@
----
+﻿---
 id: support-access
 title: Support Access
 hide_title: true
 sidebar_label: Support Access
-description: Grant backend access to LambdaTest for efficient debugging & delegated tasks, with the ability to revoke anytime.
+description: Grant backend access to TestMu AI for efficient debugging & delegated tasks, with the ability to revoke anytime.
 keywords:
   - lambdatest support access
   - free cross browser testing tool

@@ -1,8 +1,8 @@
----
+﻿---
 id: support-start
-title: LambdaTest Support and Knowledge Base
+title: TestMu AI Support and Knowledge Base
 sidebar_label: Introduction
-description: Discover answers, explore products, and connect with our team for assistance with the help of LambdaTest Support documentation.
+description: Discover answers, explore products, and connect with our team for assistance with the help of TestMu AI Support documentation.
 hide_table_of_contents: true
 hide_title: true
 keywords:

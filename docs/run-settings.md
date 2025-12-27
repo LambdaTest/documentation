@@ -1,9 +1,9 @@
----
+﻿---
 id: run-settings
 title: Configuring Cypress Test Execution
 hide_title: false
 sidebar_label: Configure Cypress Test Execution
-description: Explore LambdaTest's comprehensive guide on configuring run settings for seamless cross-browser testing. Optimize your testing workflow today.
+description: Explore TestMu AI's comprehensive guide on configuring run settings for seamless cross-browser testing. Optimize your testing workflow today.
 keywords:
   - Cypress Automation
   - Cypress Testing Guide

@@ -1,9 +1,9 @@
----
+﻿---
 id: user-management
 title: User Management
 hide_title: true
 sidebar_label: User Management
-description: This documentation will help you create and manage users on LambdaTest.
+description: This documentation will help you create and manage users on TestMu AI.
 keywords:
 - users management lambdatest
 - manage user

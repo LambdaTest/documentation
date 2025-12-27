@@ -1,9 +1,9 @@
----
+﻿---
 id: upload-files-media
 title: Files and Media
 hide_title: true
 sidebar_label: Files and Media
-description: Learn how to upload and download files and media on real Android and iOS devices during app testing on LambdaTest.
+description: Learn how to upload and download files and media on real Android and iOS devices during app testing on TestMu AI.
 keywords:
   - files upload
   - media upload

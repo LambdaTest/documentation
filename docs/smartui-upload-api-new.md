@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-upload-api-v2
 title: Getting Started With Uploading Screenshots through API for Visual Regression Testing
 sidebar_label: Upload through API
-description: Discover how to leverage LambdaTest's SmartUI upload API v2 for seamless Visual Regression Testing. Learn the prerequisites, create projects.
+description: Discover how to leverage TestMu AI's SmartUI upload API v2 for seamless Visual Regression Testing. Learn the prerequisites, create projects.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

@@ -1,8 +1,8 @@
----
+﻿---
 id: supported-browsers-and-os
 title: Supported Browsers and Operating Systems
 sidebar_label: Specify Browsers and OS
-description: Check out the list of supported browsers and operating systems for Cypress testing on the LambdaTest platform.
+description: Check out the list of supported browsers and operating systems for Cypress testing on the TestMu AI platform.
 keywords:
   - Cypress Automation
   - Cypress Testing Guide

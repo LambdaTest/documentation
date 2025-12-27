@@ -1,9 +1,9 @@
----
+﻿---
 id: system-and-custom-fields
 title: System and Custom Fields
 hide_title: true
 sidebar_label: System and Custom Fields
-description: Learn about LambdaTest's system and custom Fields feature for test project organization. Explore System Fields and create Custom Fields to enhance your testing workflows.
+description: Learn about TestMu AI's system and custom Fields feature for test project organization. Explore System Fields and create Custom Fields to enhance your testing workflows.
 keywords:
   - test manager
   - fields and values

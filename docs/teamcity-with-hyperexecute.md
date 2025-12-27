@@ -1,9 +1,9 @@
----
+﻿---
 id: teamcity-with-hyperexecute
 title: How to integrate TeamCity with HyperExecute
 hide_title: true
 sidebar_label: TeamCity
-description: Integrate TeamCity with HyperExecute effortlessly! Speed up your CI/CD pipeline while ensuring UI/UX consistency with LambdaTest’s reliable testing platform
+description: Integrate TeamCity with HyperExecute effortlessly! Speed up your CI/CD pipeline while ensuring UI/UX consistency with TestMu AI’s reliable testing platform
 keywords:
   - lambdatest integrations
   - lambdatest integrations with ci/cd tools

@@ -1,9 +1,9 @@
----
+﻿---
 id: smart-visual-testing
-title: Smart Visual Regression Testing Using LambdaTest
+title: Smart Visual Regression Testing Using TestMu AI
 hide_title: true
 sidebar_label: Smart Visual Testing
-description: Discover visual deviations and regression bugs with LambdaTest's Smart Visual Testing. Upload, compare, and ensure top-quality UI
+description: Discover visual deviations and regression bugs with TestMu AI's Smart Visual Testing. Upload, compare, and ensure top-quality UI
 keywords:
   - smart visual testing in lambdatest
   - visual  ui testing,image to image comparison

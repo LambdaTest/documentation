@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-appium-sdk
 title: Integrate SmartUI with Appium Tests
 sidebar_label: Appium
-description: Learn how to integrate your Appium automated tests with LambdaTest's SmartUI. Java uses both SDK and hooks integration, while JavaScript, Python, Ruby, and C# use Hooks integration.
+description: Learn how to integrate your Appium automated tests with TestMu AI's SmartUI. Java uses both SDK and hooks integration, while JavaScript, Python, Ruby, and C# use Hooks integration.
 keywords:
   - Visual Regression
   - Visual Regression Testing Guide

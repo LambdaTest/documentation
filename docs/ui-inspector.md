@@ -1,9 +1,9 @@
----
+﻿---
 id: ui-inspector
 title: UI Inspector
 hide_title: false
 sidebar_label: UI Inspector
-description: Inspect and interact with mobile app elements using LambdaTest UI Inspector. Visualize the DOM, identify elements, and generate automation Xpaths for efficient testing.
+description: Inspect and interact with mobile app elements using TestMu AI UI Inspector. Visualize the DOM, identify elements, and generate automation Xpaths for efficient testing.
 keywords:
 - ui inspector 
 url: https://www.lambdatest.com/support/docs/ui-inspector/

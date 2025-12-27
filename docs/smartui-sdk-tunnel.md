@@ -1,8 +1,8 @@
----
+﻿---
 id: smartui-sdk-tunnel
-title: Using LambdaTest Tunnel with SmartUI SDK
+title: Using TestMu AI Tunnel with SmartUI SDK
 sidebar_label: Tunnel Configuration
-description: Learn how to use LambdaTest Tunnel with SmartUI SDK for testing internal, development, and staging environments
+description: Learn how to use TestMu AI Tunnel with SmartUI SDK for testing internal, development, and staging environments
 keywords:
   - Visual Regression
   - SmartUI SDK

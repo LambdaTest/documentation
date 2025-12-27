@@ -1,9 +1,9 @@
----
+﻿---
 id: troubleshooting-lambda-tunnel
-title: How to troubleshoot LambdaTest Tunnel
+title: How to troubleshoot TestMu AI Tunnel
 hide_title: true
 sidebar_label: Troubleshooting LambdaTest Tunnel
-description: This document will help you troubleshoot the most common challenges faced during local app testing using LambdaTest Tunnel.
+description: This document will help you troubleshoot the most common challenges faced during local app testing using TestMu AI Tunnel.
 keywords:
   - troubleshooting lambdatest Tunnel
   - tunnel not connecting

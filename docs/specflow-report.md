@@ -1,9 +1,9 @@
----
+﻿---
 id: specflow-report
 title: SpecFlow Report
 hide_title: false
 sidebar_label: SpecFlow
-description: Learn how to generate SpecFlow Report on lambdatest and download the reports from the dashboard
+description: Learn how to generate SpecFlow Report on TestMu AI and download the reports from the dashboard
 keywords:
   - specflow testing reports
   - specflow testing lambdatest 

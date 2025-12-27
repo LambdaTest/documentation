@@ -1,8 +1,8 @@
----
+﻿---
 id: supported-cypress-versions
 title: Supported Cypress Versions
 sidebar_label: Supported Cypress Versions
-description: This documentation will help you learn about the Cypress versions that are supported by LambdaTest.
+description: This documentation will help you learn about the Cypress versions that are supported by TestMu AI.
 keywords:
 - Cypress Automation
 - Cypress Testing Guide

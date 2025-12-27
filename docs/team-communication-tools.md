@@ -1,9 +1,9 @@
----
+﻿---
 id: team-communication-tools
 title: Team Communication Tools
 hide_title: true
 sidebar_label: Team Communication Tools
-description: Integrate your LambdaTest account with communication tools. That way you can instantly share any UI bug that you come across while cross browser testing over 3000+ real browsers hosted by LambdaTest cloud servers. Here are the instant messaging tools that you can integrate with LambdaTest.
+description: Integrate your TestMu AI account with communication tools. That way you can instantly share any UI bug that you come across while cross browser testing over 3000+ real browsers hosted by TestMu AI cloud servers. Here are the instant messaging tools that you can integrate with TestMu AI.
 keywords:
   - selenium testing
   - bug reporting

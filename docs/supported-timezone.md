@@ -1,9 +1,9 @@
----
+﻿---
 id: supported-timezone
-title: Supported Timezones on Lambdatest
+title: Supported Timezones on TestMu AI
 hide_title: true
 sidebar_label: Supported Timezones
-description: This document provides information about configuring timezone for tests on the LambdaTest platform and also provides list of supported timezones.
+description: This document provides information about configuring timezone for tests on the TestMu AI platform and also provides list of supported timezones.
 keywords:   
  - appium
  - appium languages

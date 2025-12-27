@@ -1,9 +1,9 @@
----
+﻿---
 id: testingwhiz-integration
-title: Running Automation Tests Using TestingWhiz LambdaTest
+title: Running Automation Tests Using TestingWhiz TestMu AI
 hide_title: true
 sidebar_label: TestingWhiz
-description: Now perform cross-browser testing of your website or web app on 3000+ desktop & mobile browser and OS combinations, using LambdaTest and TestingWhiz integration
+description: Now perform cross-browser testing of your website or web app on 3000+ desktop & mobile browser and OS combinations, using TestMu AI and TestingWhiz integration
 keywords:
  - LambdaTest integrations
  - Test Automation for GUI Testing

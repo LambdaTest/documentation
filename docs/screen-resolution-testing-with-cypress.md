@@ -1,9 +1,9 @@
----
+﻿---
 id: screen-resolution-cypress
 title: Test On Different Screen Resolutions In Cypress
 hide_title: true
 sidebar_label: Test On Different Screen Resolutions
-description: Run your Cypress automation scripts across different screen resolutions on LambdaTest.
+description: Run your Cypress automation scripts across different screen resolutions on TestMu AI.
 keywords:
   - cypress screen resolution test
   - test on different screen resolution cypress

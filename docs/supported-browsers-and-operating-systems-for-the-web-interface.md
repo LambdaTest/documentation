@@ -1,9 +1,9 @@
----
+﻿---
 id: supported-browsers-and-operating-systems-for-the-web-interface
 title: Supported Browsers & Operating Systems For The Web Interface
 hide_title: true
 sidebar_label: Supported Browsers & Operating Systems
-description: All the browsers and browser version that are supported by LambdaTest Automation with respect to particular operating systems.
+description: All the browsers and browser version that are supported by TestMu AI Automation with respect to particular operating systems.
 keywords:
   - supported browsers
   - lambdatest browsers supported

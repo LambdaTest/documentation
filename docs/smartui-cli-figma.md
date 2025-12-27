@@ -1,6 +1,6 @@
----
+﻿---
 id: smartui-cli-figma
-title: Getting started with LambdaTest's SmartUI Figma CLI
+title: Getting started with TestMu AI's SmartUI Figma CLI
 sidebar_label: Figma CLI
 description: In this documentation, learn how to perform Visual Testing of your Figma files using command line interface using SmartUI CLI.
 keywords:
