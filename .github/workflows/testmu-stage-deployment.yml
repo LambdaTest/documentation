@@ -1,16 +1,13 @@
 name: 'Deployment (Stage - New Bucket)'
 
 on:
-  pull_request:
+  push:
     branches:
       - testmu
-    types:
-      - closed 
 
 jobs:
   Docusaurus:
     name: 'Deployment'
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
   
 
