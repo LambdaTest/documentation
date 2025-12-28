@@ -24,6 +24,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_MKT }}
           aws-region: us-east-1
 
+      - name: 'Create env file'
+        run: |
+          touch .env
+          echo "HOST=${{ secrets.TYPESENSE_HOST }}" >> .env
+          echo "API=${{ secrets.PUBLIC_APY_TYPESENSE }}" >> .env
+
      
 
       - name: Use Node.js 20.10.x
