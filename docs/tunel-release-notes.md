@@ -37,6 +37,10 @@ slug: tunnel-release-notes/
       })
     }}
 ></script>
+## Version 3.2.25 (28th Dec 2025)
+- **Security Updates and Stability Fixes**
+  - Security Fixes for CVE
+  - 
 ## Version 3.2.24 (7th Dec 2025)
 - **Security Updates and Stability Fixes**
   - Security Fixes for CVE
