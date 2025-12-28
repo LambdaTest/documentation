@@ -5,7 +5,7 @@ on:
     branches:
       - testmu
     types:
-      - closed
+      - closed 
 
 jobs:
   Docusaurus:
