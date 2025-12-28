@@ -15,8 +15,9 @@ jobs:
   
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
+          ref: testmu
           fetch-depth: 0
 
       - name: Configure AWS Credentials
@@ -26,11 +27,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_MKT }}
           aws-region: us-east-1
 
-      - name: Create env file
-        run: |
-          touch .env
-          echo "HOST=${{ secrets.TYPESENSE_HOST }}" >> .env
-          echo "API=${{ secrets.PUBLIC_APY_TYPESENSE }}" >> .env
+     
 
       - name: Use Node.js 20.10.x
         uses: actions/setup-node@v3
