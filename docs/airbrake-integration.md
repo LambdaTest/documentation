@@ -59,7 +59,7 @@ Airbrake is a software tool and service designed to assist developers in trackin
 </div>
 </div>
 
-<BrandName />'s integration with Airbrake provides a seamless solution for tracking and managing bugs and issues encountered during [cross-browser testing]({BRAND_URL}). With this integration, developers can effortlessly log bugs directly from the <BrandName /> platform to their Airbrake instance, eliminating the need for manual maintenance of tasks and issues.
+<BrandName />'s integration with Airbrake provides a seamless solution for tracking and managing bugs and issues encountered during <a href={`${BRAND_URL}`}>cross-browser testing</a>. With this integration, developers can effortlessly log bugs directly from the <BrandName /> platform to their Airbrake instance, eliminating the need for manual maintenance of tasks and issues.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="_amxJrEiMyA">

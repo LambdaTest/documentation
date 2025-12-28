@@ -298,7 +298,7 @@ You can test your locally hosted or privately hosted projects with <a href={`${B
 
 :::tip Tunnel Help
 
-Refer our :link: [<BrandName /> Tunnel documentation]({`${BRAND_URL}/support/docs/testing-locally-hosted-pages/`}) for more information.
+Refer our :link: [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
 
 :::
 
@@ -341,7 +341,7 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 
 - [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate <BrandName /> with CI/CD]({`${BRAND_URL}/support/docs/integrations-with-ci-cd-tools/`})
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
