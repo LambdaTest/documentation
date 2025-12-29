@@ -1,4 +1,4 @@
----
+﻿---
 id: key-features-of-hyperexecute
 title: Key Features of HyperExecute
 hide_title: false
@@ -156,7 +156,7 @@ To ensure that your testing environment can be optimised, HyperExecute provides 
   </div>
   </a>
 
-  <a href="/support/docs/he-integration-with-lambdatest-products/">
+  <a href="/support/docs/he-integration-with-testmu-products/">
   <div className="support_inners">
     <h3>Integration with LambdaTest Products</h3>
     <p>Integrate seamlessly with other LambdaTest products sucha as Smart UI or Real Device and enhance your testing environment's efficiency.</p>

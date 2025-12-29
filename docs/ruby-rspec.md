@@ -36,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "RSpec Test",
-          "item": "https://www.lambdatest.com/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

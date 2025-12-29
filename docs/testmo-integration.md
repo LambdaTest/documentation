@@ -54,7 +54,7 @@ TestMo also offers integration with LambdaTest to help you perform automated cro
 Firstly, you need to run the build command as per your desired framework. You can choose any test automation framework and programming language you are familiar with. Selenium is one of the most common one used with JavaScript/Node.js, Java, C#, Python, Ruby or PHP, and other languages
 
 :::tip
-You can take the reference from [here](/support/docs/getting-started-with-lambdatest-automation/#supported-languages-and-frameworks) on all the languages and frameworks supported by LambdaTest online Selenium Grid.
+You can take the reference from [here](/support/docs/getting-started-with-testmu-automation/#supported-languages-and-frameworks) on all the languages and frameworks supported by LambdaTest online Selenium Grid.
 :::
 
 <img loading="lazy" src={require('../assets/images/testmo-integration/dashboard.webp').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>

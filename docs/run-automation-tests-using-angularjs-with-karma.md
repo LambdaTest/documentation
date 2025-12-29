@@ -36,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "AngularJS with Karma and Selenium",
-          "item": "https://www.lambdatest.com/support/docs/angularjs-with-karma-running-angular-tests-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/"
         }]
       })
     }}

@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "JavaScript WD with Selenium",
-          "item": "https://www.lambdatest.com/support/docs/wd-with-selenium-running-wd-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

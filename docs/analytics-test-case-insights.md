@@ -100,7 +100,7 @@ To end a test case, use the `lambda-testCase-end` hook:
 
 ```
 
-To know more about the hooks and how to use them, you can refer to the [LambdaHooks for Appium](/support/docs/appium-lambdatest-hooks/#differentiating-test-cases-in-single-session) documentation.
+To know more about the hooks and how to use them, you can refer to the [LambdaHooks for Appium](/support/docs/appium-testmu-hooks/#differentiating-test-cases-in-single-session) documentation.
 
 ## Capture Test Case Insights for HyperExecute
 

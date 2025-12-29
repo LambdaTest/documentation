@@ -38,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "JavaScript with Selenium",
-          "item": "https://www.lambdatest.com/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

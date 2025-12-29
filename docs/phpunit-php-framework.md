@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "PHPUnit Test",
-          "item": "https://www.lambdatest.com/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

@@ -39,7 +39,7 @@ slug: gradle-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Gradle Integration",
-          "item": "https://www.lambdatest.com/support/docs/gradle-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/gradle-integration-with-testmu/"
         }]
       })
     }}

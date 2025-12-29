@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Behat Test",
-          "item": "https://www.lambdatest.com/support/docs/behat-with-selenium-running-behat-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/behat-with-selenium-running-behat-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

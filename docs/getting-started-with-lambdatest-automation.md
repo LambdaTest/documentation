@@ -38,7 +38,7 @@ import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/Selen
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started With Selenium Automation Testing Using LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/"
+          "item": "https://www.lambdatest.com/support/docs/getting-started-with-testmu-automation/"
         }]
       })
     }}

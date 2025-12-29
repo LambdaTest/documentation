@@ -32,7 +32,7 @@ slug: circleci-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "CircleCI Integration",
-          "item": "https://www.lambdatest.com/support/docs/circleci-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/circleci-integration-with-testmu/"
         }]
       })
     }}

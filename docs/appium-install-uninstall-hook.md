@@ -33,7 +33,7 @@ slug: appium-install-uninstall-testmu-hooks
           "@type": "ListItem",
           "position": 3,
           "name": "LambdaTest Hooks for install or uninstall application",
-          "item": "https://www.lambdatest.com/support/docs/appium-install-uninstall-lambdatest-hooks/"
+          "item": "https://www.lambdatest.com/support/docs/appium-install-uninstall-testmu-hooks/"
         }]
       })
     }}

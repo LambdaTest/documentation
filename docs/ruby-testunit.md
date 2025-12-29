@@ -36,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Test::Unit Test",
-          "item": "https://www.lambdatest.com/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

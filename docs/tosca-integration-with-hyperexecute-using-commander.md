@@ -1,4 +1,4 @@
----
+﻿---
 id: tosca-integration-with-hyperexecute-using-commander
 title: Tosca Integration using Commander
 hide_title: true
@@ -93,7 +93,7 @@ To Integrate Tosca with HyperExecute using YAML, follow the below mentioned step
 
 #### Prerequisite
 
--  Ensure that you have integrated Tosca with [LambdaTest’s cloud-based Selenium Grid](/support/docs/tricentis-tosca-integration-lambdatest-selenium-grid/).
+-  Ensure that you have integrated Tosca with [LambdaTest’s cloud-based Selenium Grid](/support/docs/tricentis-tosca-integration-testmu-selenium-grid/).
 
 **Step 1:** Create an Execution List:
 

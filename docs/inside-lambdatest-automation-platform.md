@@ -32,7 +32,7 @@ slug: inside-testmu-platform
           "@type": "ListItem",
           "position": 3,
           "name": "Guided Walkthrough",
-          "item": "https://www.lambdatest.com/support/docs/inside-lambdatest-platform/"
+          "item": "https://www.lambdatest.com/support/docs/inside-testmu-platform/"
         }]
       })
     }}

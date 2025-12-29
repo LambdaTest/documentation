@@ -34,7 +34,7 @@ slug: netlify-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Netlify Integration",
-          "item": "https://www.lambdatest.com/support/docs/netlify-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/netlify-integration-with-testmu/"
         }]
       })
     }}

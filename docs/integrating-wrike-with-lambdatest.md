@@ -39,7 +39,7 @@ slug: integrating-wrike-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Wrike Integration",
-          "item": "https://www.lambdatest.com/support/docs/integrating-wrike-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/integrating-wrike-with-testmu/"
         }]
       })
     }}

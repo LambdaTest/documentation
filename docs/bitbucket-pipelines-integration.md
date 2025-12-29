@@ -27,7 +27,7 @@ slug: bitbucket-pipelines-integration-with-testmu
           "@type": "ListItem",
           "position": 2,
           "name": "Bitbucket Pipelines Integration With LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/bitbucket-pipelines-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/bitbucket-pipelines-integration-with-testmu/"
         },{
           "@type": "ListItem",
           "position": 4,

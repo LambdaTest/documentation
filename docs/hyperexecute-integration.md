@@ -1,4 +1,4 @@
----
+﻿---
 id: integration-he
 title: Integrations
 hide_title: true
@@ -52,7 +52,7 @@ Integrate HyperExecute with your favourite CI/CD tools, products and LambdaTest 
 </div>
 
 <div className="download_btn mb-10">
-<a href="/support/docs/he-integration-with-lambdatest-products/">Integration With LambdaTest Products</a>
+<a href="/support/docs/he-integration-with-testmu-products/">Integration With LambdaTest Products</a>
 </div>
 
 ***

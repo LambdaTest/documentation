@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Selenium Python:Run Python Automation Testing Scripts on Cloud Selenium Grid",
-          "item": "https://www.lambdatest.com/support/docs/python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

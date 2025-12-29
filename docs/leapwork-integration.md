@@ -41,7 +41,7 @@ slug: leapwork-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "LEAPWORK LambdaTest Integration",
-          "item": "https://www.lambdatest.com/support/docs/leapwork-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/leapwork-integration-with-testmu/"
         }]
       })
     }}

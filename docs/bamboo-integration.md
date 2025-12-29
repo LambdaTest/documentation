@@ -30,7 +30,7 @@ slug: bamboo-integration-with-testmu
           "@type": "ListItem",
           "position": 4,
           "name": "Bamboo Integration With LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/bamboo-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/bamboo-integration-with-testmu/"
         }]
       })
     }}

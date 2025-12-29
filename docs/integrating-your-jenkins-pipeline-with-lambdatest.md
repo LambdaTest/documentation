@@ -36,7 +36,7 @@ slug: integrating-your-jenkins-pipeline-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Jenkins Pipeline",
-          "item": "https://www.lambdatest.com/support/docs/integrating-your-jenkins-pipeline-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/integrating-your-jenkins-pipeline-with-testmu/"
         }]
       })
     }}

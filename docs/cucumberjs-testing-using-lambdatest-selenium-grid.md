@@ -41,7 +41,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Cucumber JS with Selenium",
-          "item": "https://www.lambdatest.com/support/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}
@@ -271,7 +271,7 @@ To run all the tests at once using **CucumberJS**, we would have to execute the 
 npm run test
 ```
 
->If you wish to set up your CucumberJS testing through Jenkins, then refer to our [Jenkins documentation](/support/docs/jenkins-with-lambdatest/).
+>If you wish to set up your CucumberJS testing through Jenkins, then refer to our [Jenkins documentation](/support/docs/jenkins-with-testmu/).
 
 
 ## Additional Links

@@ -33,7 +33,7 @@ slug: upload-files-using-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Upload Files Using LambdaTest",
-          "item": `${BRAND_URL}/support/docs/upload-files-using-lambdatest/`
+          "item": `${BRAND_URL}/support/docs/upload-files-using-testmu/`
         }]
       })
     }}

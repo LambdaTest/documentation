@@ -56,7 +56,7 @@ LambdaTest offers you plugins with various third-party application to help you p
 </div>
 
 <div className="download_btn mb-10">
-<a href="/support/docs/jenkins-with-lambdatest/">Jenkins Plugin</a>
+<a href="/support/docs/jenkins-with-testmu/">Jenkins Plugin</a>
 </div>
 
 <div className="download_btn mb-10">
@@ -64,15 +64,15 @@ LambdaTest offers you plugins with various third-party application to help you p
 </div>
 
 <div className="download_btn mb-10">
-<a href="/support/docs/npm-plugin-for-testcafe-integration-with-lambdatest/">npm Plugin For TestCafe</a>
+<a href="/support/docs/npm-plugin-for-testcafe-integration-with-testmu/">npm Plugin For TestCafe</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="/support/docs/fastlane-with-lambdatest/">fastlane Plugin</a>
+<a href="/support/docs/fastlane-with-testmu/">fastlane Plugin</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="/support/docs/integrate-lambdatest-extension-with-azure-pipelines/">Azure Pipeline Extension</a>
+<a href="/support/docs/integrate-testmu-extension-with-azure-pipelines/">Azure Pipeline Extension</a>
 </div>
 
 <div className="download_btn mb-10">
@@ -84,7 +84,7 @@ LambdaTest offers you plugins with various third-party application to help you p
 </div>
 
 <div className="download_btn mb-10">
-<a href="/support/docs/xcode-plugin-lambdatest/">LambdaMax XCode Plugin</a>
+<a href="/support/docs/xcode-plugin-testmu/">LambdaMax XCode Plugin</a>
 </div>
 
 
@@ -93,7 +93,7 @@ LambdaTest offers you plugins with various third-party application to help you p
 </div>
 
 <div className="download_btn mb-10">
-<a href="/support/docs/gradle-integration-with-lambdatest/">Gradle Plugin</a>
+<a href="/support/docs/gradle-integration-with-testmu/">Gradle Plugin</a>
 </div>
 
 **Got something to recommend?**  

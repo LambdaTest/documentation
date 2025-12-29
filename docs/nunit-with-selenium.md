@@ -36,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "NUnit",
-          "item": "https://www.lambdatest.com/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

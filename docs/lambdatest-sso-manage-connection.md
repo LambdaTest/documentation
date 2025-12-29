@@ -35,7 +35,7 @@ slug: testmu-sso-manage-connection
           "@type": "ListItem",
           "position": 3,
           "name": "SSO Self Serve",
-          "item": "https://www.lambdatest.com/support/docs/lambdatest-sso-self-serve"
+          "item": "https://www.lambdatest.com/support/docs/testmu-sso-self-serve"
         }]
       })
     }}

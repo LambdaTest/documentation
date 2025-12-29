@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Robot Selenium :Run Automation Scripts on Selenium Grid using Robot Testing Framework",
-          "item": "https://www.lambdatest.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

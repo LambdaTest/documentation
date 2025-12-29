@@ -87,7 +87,7 @@ slug: account-management
       <p>Learn how to increase the account security by enabling Multi Factor Authentication.</p>
     </div>
   </a>
-  <a href="/support/docs/delete-lambdatest-account/">
+  <a href="/support/docs/delete-testmu-account/">
     <div className="support_inners">
       <h3>Deleting LambdaTest Account</h3>
       <p>This documentation will guide you through the steps to delete your LambdaTest account</p>

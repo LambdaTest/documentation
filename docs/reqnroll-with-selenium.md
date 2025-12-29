@@ -40,7 +40,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "Reqnroll Selenium: Run Automation Scripts on Online Grid Using Reqnroll Testing Framework",
-          "item": "https://www.lambdatest.com/support/docs/reqnroll-automation-with-selenium-appium-on-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/reqnroll-automation-with-selenium-appium-on-testmu/"
         }]
       })
     }}

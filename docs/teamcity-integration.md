@@ -35,7 +35,7 @@ slug: teamcity-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "TeamCity Integration",
-          "item": "https://www.lambdatest.com/support/docs/teamcity-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/teamcity-integration-with-testmu/"
         }]
       })
     }}

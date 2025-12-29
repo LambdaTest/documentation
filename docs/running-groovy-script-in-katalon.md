@@ -42,7 +42,7 @@ slug: running-groovy-script-in-katalon-with-testmu-selenium-grid
           "@type": "ListItem",
           "position": 3,
           "name": "Running Groovy Automation Scripts",
-          "item": "https://www.lambdatest.com/support/docs/running-groovy-script-in-katalon-with-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/"
         }]
       })
     }}

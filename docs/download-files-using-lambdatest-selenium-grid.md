@@ -36,7 +36,7 @@ slug: download-files-using-testmu-selenium-grid
           "@type": "ListItem",
           "position": 3,
           "name": "Download Files",
-          "item": "https://www.lambdatest.com/support/docs/download-files-using-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/download-files-using-testmu-selenium-grid/"
         }]
       })
     }}

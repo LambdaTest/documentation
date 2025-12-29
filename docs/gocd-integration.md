@@ -35,7 +35,7 @@ slug: gocd-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "GoCD Integration",
-          "item": "https://www.lambdatest.com/support/docs/gocd-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/gocd-integration-with-testmu/"
         }]
       })
     }}

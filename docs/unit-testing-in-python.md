@@ -48,7 +48,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "How To Perform Unit Testing In Python On LambdaTest Selenium Grid",
-          "item": "https://www.lambdatest.com/support/docs/running-unit-testing-in-python-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/running-unit-testing-in-python-on-testmu-selenium-grid/"
         }]
       })
     }}

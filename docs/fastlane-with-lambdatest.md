@@ -31,7 +31,7 @@ slug: fastlane-with-testmu
           "@type": "ListItem",
           "position": 4,
           "name": "fastlane Integration With LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/fastlane-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/fastlane-with-testmu/"
         }]
       })
     }}

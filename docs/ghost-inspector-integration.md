@@ -35,7 +35,7 @@ slug: ghost-inspector-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Ghost Inspector Integration",
-          "item": "https://www.lambdatest.com/support/docs/ghost-inspector-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/ghost-inspector-integration-with-testmu/"
         }]
       })
     }}

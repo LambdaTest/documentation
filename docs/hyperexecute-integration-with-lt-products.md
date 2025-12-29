@@ -33,7 +33,7 @@ slug: he-integration-with-testmu-products
           "@type": "ListItem",
           "position": 3,
           "name": "Integration with LambdaTest Products",
-          "item": "https://www.lambdatest.com/support/docs/he-integration-with-lambdatest-products/"
+          "item": "https://www.lambdatest.com/support/docs/he-integration-with-testmu-products/"
         }]
       })
     }}

@@ -35,7 +35,7 @@ slug: travis-ci-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Travis CI integration",
-          "item": "https://www.lambdatest.com/support/docs/travis-ci-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/travis-ci-with-testmu/"
         }]
       })
     }}

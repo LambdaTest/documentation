@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "JavaScript Protractor with Selenium",
-          "item": "https://www.lambdatest.com/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

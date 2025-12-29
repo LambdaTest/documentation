@@ -38,7 +38,7 @@ slug: quick-guide-to-run-node-js-tests-on-testmu-selenium-grid
           "@type": "ListItem",
           "position": 3,
           "name": "Quick Guide To Run Node.js Tests On Cloud Selenium Grid",
-          "item": "https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-testmu-selenium-grid/"
         }]
       })
     }}

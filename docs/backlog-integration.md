@@ -39,7 +39,7 @@ slug: backlog-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Backlog Integration",
-          "item": "https://www.lambdatest.com/support/docs/backlog-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/backlog-integration-with-testmu/"
         }]
       })
     }}

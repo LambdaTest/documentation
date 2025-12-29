@@ -31,7 +31,7 @@ slug: testmu-public-ip
           "@type": "ListItem",
           "position": 3,
           "name": "LambdaTest Public IPs",
-          "item": "https://www.lambdatest.com/support/docs/lambdatest-public-ip/"
+          "item": "https://www.lambdatest.com/support/docs/testmu-public-ip/"
         }]
       })
     }}

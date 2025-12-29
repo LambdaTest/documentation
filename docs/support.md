@@ -91,7 +91,7 @@ import NewTag from '../src/component/newTag';
     <div className="home_inners_box">
       <h2 className='homeMain_h2'><AutomationLightIcon className="home_icons home_light_icon" role="presentation"/> <AutomationDarkIcon className="home_icons home_dark_icon" role="presentation"/>Web Automation</h2>
       <div className="home_inners">
-        <a href="/support/docs/getting-started-with-lambdatest-automation/"><p className="p_home_inners">Selenium Testing</p></a>
+        <a href="/support/docs/getting-started-with-testmu-automation/"><p className="p_home_inners">Selenium Testing</p></a>
         <a href="/support/docs/getting-started-with-cypress-testing/"><p className="p_home_inners">Cypress Testing</p></a>
         <a href="/support/docs/playwright-testing/"><p className="p_home_inners">Playwright Testing</p></a>
         <a href="/support/docs/puppeteer-testing/"><p className="p_home_inners">Puppeteer Testing</p></a>
@@ -280,7 +280,7 @@ import NewTag from '../src/component/newTag';
   <div className="home_inners">
     <a href="/support/docs/account-management/"><p className="p_home_inners">Account Management</p></a>
     <a href="/support/docs/network-whitelisting-and-tunnel-guide/"><p className="p_home_inners">Network Whitelisting Guide</p></a>
-    <a href="/support/docs/lambdatest-public-ip/"><p className="p_home_inners">LambdaTest Public IP</p></a>
+    <a href="/support/docs/testmu-public-ip/"><p className="p_home_inners">LambdaTest Public IP</p></a>
     <a href="/support/docs/single-sign-on/"><p className="p_home_inners">Single Sign On</p></a>
     <a href="/support/docs/scim/"><p className="p_home_inners">SCIM</p></a>
   </div>

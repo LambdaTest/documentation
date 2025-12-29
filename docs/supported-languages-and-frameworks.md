@@ -54,22 +54,22 @@ Although, our [Selenium Grid](https://www.lambdatest.com/selenium-automation/) s
       <img loading="lazy" src={require('../assets/images/getting-started/java-icon.webp').default} alt="Java" width="200" height="200" className="language-icon"/>
       <ul className="lt_framework_list">
         <li>
-          <a className="lt_primary" href="/support/docs/java-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/">Java</a>
+          <a className="lt_primary" href="/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/">Java</a>
         </li>
         <li>
-          <a href="/support/docs/selenide-tests-with-lambdatest-online-selenium-grid-for-automated-cross-browser-testing/">Selenide</a>
+          <a href="/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/">Selenide</a>
         </li>
         <li>
-          <a href="/support/docs/running-gauge-tests-on-lambdatest-selenium-grid/">Gauge</a>
+          <a href="/support/docs/running-gauge-tests-on-testmu-selenium-grid/">Gauge</a>
         </li>
         <li>
-          <a href="/support/docs/testng-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/">TestNG</a>
+          <a href="/support/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/">TestNG</a>
         </li>
         <li>
           <a href="/support/docs/run-geb-tests-on-selenium-grid/">Geb</a>
         </li>
         <li>
-          <a href="/support/docs/junit-with-selenium-running-junit-automation-scripts-on-lambdatest-selenium-grid/">JUnit</a>
+          <a href="/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/">JUnit</a>
         </li>
         <li>
           <a href="/support/docs/running-cucumber-scripts-with-testng-and-selenium/">Cucumber</a>
@@ -83,19 +83,19 @@ Although, our [Selenium Grid](https://www.lambdatest.com/selenium-automation/) s
       <img loading="lazy" src={require('../assets/images/getting-started/php-icon.webp').default} alt="PHP" width="2500" height="1250" className="language-icon"/>
       <ul className="lt_framework_list">
         <li>
-          <a className="lt_primary" href="/support/docs/php-with-selenium-running-php-automation-scripts-on-lambdatest-selenium-grid/">PHP</a>
+          <a className="lt_primary" href="/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/">PHP</a>
         </li>
         <li>
-          <a href="/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-lambdatest-selenium-grid/">Laravel</a>
+          <a href="/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid/">Laravel</a>
         </li>
         <li>
-          <a href="/support/docs/codeception-integration-with-lambdatest/">Codeception</a>
+          <a href="/support/docs/codeception-integration-with-testmu/">Codeception</a>
         </li>
         <li>
-          <a href="/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-lambdatest-selenium-grid/">PHPUnit</a>
+          <a href="/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid/">PHPUnit</a>
         </li>
         <li>
-          <a href="/support/docs/behat-with-selenium-running-behat-automation-scripts-on-lambdatest-selenium-grid/">Behat</a>
+          <a href="/support/docs/behat-with-selenium-running-behat-automation-scripts-on-testmu-selenium-grid/">Behat</a>
         </li>
       </ul>
     </div>
@@ -103,19 +103,19 @@ Although, our [Selenium Grid](https://www.lambdatest.com/selenium-automation/) s
        <img loading="lazy" src={require('../assets/images/getting-started/ruby-icon.webp').default} alt="Ruby" width="200" height="200" className="language-icon"/>
       <ul className="lt_framework_list">
         <li>
-          <a className="lt_primary" href="/support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-lambdatest-selenium-grid/">Ruby</a>
+          <a className="lt_primary" href="/support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid/">Ruby</a>
         </li>
         <li>
-          <a href="/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-lambdatest-selenium-grid/">RSpec</a>
+          <a href="/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid/">RSpec</a>
         </li>
         <li>
-          <a href="/support/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-lambdatest-selenium-grid/">Cucumber</a>
+          <a href="/support/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-testmu-selenium-grid/">Cucumber</a>
         </li>
         <li>
-          <a href="/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-lambdatest-selenium-grid/">Test::Unit</a>
+          <a href="/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/">Test::Unit</a>
         </li>
         <li>
-          <a href="/support/docs/ruby-with-capybara-running-automation-scripts-on-lambdatest-selenium-grid/">Capybara</a>
+          <a href="/support/docs/ruby-with-capybara-running-automation-scripts-on-testmu-selenium-grid/">Capybara</a>
         </li>
       </ul>
     </div>
@@ -123,16 +123,16 @@ Although, our [Selenium Grid](https://www.lambdatest.com/selenium-automation/) s
      <img loading="lazy" src={require('../assets/images/getting-started/c-sharp-icon.webp').default} alt="C#" width="200" height="200" className="language-icon"/>
       <ul className="lt_framework_list">
         <li>
-          <a className="lt_primary" href="/support/docs/c-with-selenium-running-c-automation-scripts-on-lambdatest-selenium-grid/">C#</a>
+          <a className="lt_primary" href="/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid/">C#</a>
         </li>
         <li>
-          <a href="/support/docs/specflow-with-selenium-running-specflow-automation-scripts-on-lambdatest-selenium-grid/">SpecFlow</a>
+          <a href="/support/docs/specflow-with-selenium-running-specflow-automation-scripts-on-testmu-selenium-grid/">SpecFlow</a>
         </li>
         <li>
-          <a href="/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-lambdatest-selenium-grid/">MSTest</a>
+          <a href="/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/">MSTest</a>
         </li>
         <li>
-          <a href="/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-lambdatest-selenium-grid/">NUnit</a>
+          <a href="/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid/">NUnit</a>
         </li>
       </ul>
     </div>
@@ -140,22 +140,22 @@ Although, our [Selenium Grid](https://www.lambdatest.com/selenium-automation/) s
       <img loading="lazy" src={require('../assets/images/getting-started/python-icon.webp').default} alt="Python" width="200" height="200" className="language-icon"/>
       <ul className="lt_framework_list">
          <li>
-          <a className="lt_primary" href="/support/docs/python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid/">Python</a>
+          <a className="lt_primary" href="/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/">Python</a>
         </li>
         <li>
-          <a className="lt_primary" href="/support/docs/python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid/">Python</a>
+          <a className="lt_primary" href="/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid/">Python</a>
         </li>
         <li>
-          <a href="/support/docs/pytest-with-selenium-running-pytest-automation-script-on-lambdatest-selenium-grid/">Pytest</a>
+          <a href="/support/docs/pytest-with-selenium-running-pytest-automation-script-on-testmu-selenium-grid/">Pytest</a>
         </li>
         <li>
-          <a href="/support/docs/behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid/">Behave</a>
+          <a href="/support/docs/behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid/">Behave</a>
         </li>
         <li>
-          <a href="/support/docs/robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid/">Robot</a>
+          <a href="/support/docs/robot-with-selenium-running-robot-automation-scripts-on-testmu-selenium-grid/">Robot</a>
         </li>
         <li>
-          <a href="/support/docs/running-unit-testing-in-python-on-lambdatest-selenium-grid/">Unittest</a>
+          <a href="/support/docs/running-unit-testing-in-python-on-testmu-selenium-grid/">Unittest</a>
         </li> 
       </ul>
     </div>
@@ -163,46 +163,46 @@ Although, our [Selenium Grid](https://www.lambdatest.com/selenium-automation/) s
        <img loading="lazy" src={require('../assets/images/getting-started/color-js.webp').default} alt="Javascript" width="181" height="200" className="language-icon"/>
       <ul className="lt_framework_list">
         <li>
-          <a className="lt_primary" href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-lambdatest-selenium-grid/">JavaScript</a>
+          <a className="lt_primary" href="/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid/">JavaScript</a>
         </li>
         <li>
-          <a href="/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-lambdatest-selenium-grid/">WebDriverIO 5.6.2</a>
+          <a href="/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid/">WebDriverIO 5.6.2</a>
         </li>
         <li>
-          <a href="/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-lambdatest-selenium-grid/">NightwatchJS</a>
+          <a href="/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid/">NightwatchJS</a>
         </li>
         <li>
-          <a href="/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-lambdatest-selenium-grid/">WebDriverIO</a>
+          <a href="/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/">WebDriverIO</a>
         </li>
         <li>
           <a href="/support/docs/automation-testing-with-mocha-and-selenium/">Mocha</a>
         </li>
         <li>
-          <a href="/support/docs/wd-with-selenium-running-wd-automation-scripts-on-lambdatest-selenium-grid/">WD</a>
+          <a href="/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid/">WD</a>
         </li>
         <li>
           <a href="/support/docs/automation-testing-with-selenium-and-jest/">Jest Library</a>
         </li>
         <li>
-          <a href="/support/docs/angularjs-with-karma-running-angular-tests-on-lambdatest-selenium-grid/">AngularJS With Karma</a>
+          <a href="/support/docs/angularjs-with-karma-running-angular-tests-on-testmu-selenium-grid/">AngularJS With Karma</a>
         </li>
         <li>
-          <a href="/support/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-lambdatest-selenium-grid/">CucumberJS For BDD</a>
+          <a href="/support/docs/cucumberjs-with-selenium-running-cucumberjs-automation-scripts-on-testmu-selenium-grid/">CucumberJS For BDD</a>
         </li>
         <li>
-          <a href="/support/docs/jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/">Jasmine For BDD</a>
+          <a href="/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/">Jasmine For BDD</a>
         </li>
         <li>
-          <a href="/support/docs/karma-integration-with-lambdatest/">Karma Test Runner</a>
+          <a href="/support/docs/karma-integration-with-testmu/">Karma Test Runner</a>
         </li>
         <li>
-          <a href="/support/docs/npm-plugin-for-testcafe-integration-with-lambdatest/">TestCafe</a>
+          <a href="/support/docs/npm-plugin-for-testcafe-integration-with-testmu/">TestCafe</a>
         </li>
          <li>
           <a href="/support/docs/selenium-tests-with-nemojs/">NemoJS</a>
         </li>
          <li>
-          <a href="/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-lambdatest-selenium-grid/">Protractor</a>
+          <a href="/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid/">Protractor</a>
         </li>
       </ul>
     </div>

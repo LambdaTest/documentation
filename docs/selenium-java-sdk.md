@@ -332,7 +332,7 @@ public class BasicTest {
 
 ---
 
-- [LambdaTest Selenium Grid Documentation](/support/docs/getting-started-with-lambdatest-automation)
+- [LambdaTest Selenium Grid Documentation](/support/docs/getting-started-with-testmu-automation)
 - [Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)
 - [GitHub Repository](https://github.com/Lambdatest/lambdatest-java-selenium-sdk)
 - [LambdaTest Support](https://www.lambdatest.com/support)

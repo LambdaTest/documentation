@@ -39,7 +39,7 @@ slug: integrate-testmu-extension-with-azure-pipelines
           "@type": "ListItem",
           "position": 3,
           "name": "Azure Pipeline",
-          "item": "https://www.lambdatest.com/support/docs/integrate-lambdatest-extension-with-azure-pipelines/"
+          "item": "https://www.lambdatest.com/support/docs/integrate-testmu-extension-with-azure-pipelines/"
         }]
       })
     }}

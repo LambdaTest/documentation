@@ -41,7 +41,7 @@ In the documentation, we will discuss how to integrate JumpCloud with LambdaTest
 
 ## Prerequisites​
 - You will need an Enterprise plan with LambdaTest.
-- The SSO connection must be already established with LambdaTest. Learn how to [create a SSO Connection with LambdaTest](/support/docs/lambdatest-sso-self-serve/).
+- The SSO connection must be already established with LambdaTest. Learn how to [create a SSO Connection with LambdaTest](/support/docs/testmu-sso-self-serve/).
 
 ## Steps to Integrate SCIM with JumpCloud
 

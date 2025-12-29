@@ -80,7 +80,7 @@ LambdaTest Tunnel is a secure and encrypted tunneling feature that allows develo
 | [Tunnel with HyperExecute](/support/docs/hyperexecute-how-to-configure-tunnel/) | Steps to set up LambdaTest Tunnel in HyperExecute for advanced test executions.|
 | [Tunnel with SmartUI SDK](/support/docs/smartui-sdk-tunnel/) | Best practices and configurations for integrating LambdaTest Tunnel with SmartUI SDK. |
 | [Maven Tunnel Setup](/support/docs/maven-tunnel-for-locally-hosted-web-applications/) | Instructions to integrate LambdaTest Tunnel with Maven projects for Selenium testing. |
-| [Tunnel with Azure Pipelines](/support/docs/integrate-lambdatest-extension-with-azure-pipelines/#localhost-testing-using-lambdatest-extension) | Learn how to configure LambdaTest Tunnel within Azure Pipelines for CI/CD workflows.|
+| [Tunnel with Azure Pipelines](/support/docs/integrate-testmu-extension-with-azure-pipelines/#localhost-testing-using-lambdatest-extension) | Learn how to configure LambdaTest Tunnel within Azure Pipelines for CI/CD workflows.|
 
 ## Docker Integration
 | Title | Description|
