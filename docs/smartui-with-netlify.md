@@ -11,9 +11,9 @@ keywords:
   - netlify integration with testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/smartui-with-netlify/
+url: https://www.testmu.ai/support/docs/smartui-with-netlify
 site_name: LambdaTest
-slug: smartui-with-netlify/
+slug: smartui-with-netlify
 
 ---
 import Tabs from '@theme/Tabs';

@@ -12,9 +12,9 @@ keywords:
   - appium desktop
   - appium inspector
 
-url: https://www.lambdatest.com/support/docs/appium-inspector-integration/
+url: https://www.testmu.ai/support/docs/appium-inspector-integration
 site_name: LambdaTest
-slug: appium-inspector-integration/
+slug: appium-inspector-integration
 ---
 
 import CodeBlock from '@theme/CodeBlock';

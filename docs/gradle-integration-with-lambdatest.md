@@ -16,9 +16,9 @@ keywords:
   - gradle integration with testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/gradle-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/gradle-integration-with-testmu
 site_name: LambdaTest
-slug: gradle-integration-with-lambdatest/
+slug: gradle-integration-with-testmu
 ---
 
 <script type="application/ld+json"

@@ -8,9 +8,9 @@ keywords:
   - junit xml reports
   - report junit xml testmu ai 
   
-url: https://www.lambdatest.com/support/docs/junit-xml-report/
+url: https://www.testmu.ai/support/docs/junit-xml-report
 site_name: LambdaTest
-slug: junit-xml-report/
+slug: junit-xml-report
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

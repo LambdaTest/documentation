@@ -12,9 +12,9 @@ keywords:
   - no code mobile automation
   - gui based mobile automation
   - real devices
-url: https://www.lambdatest.com/support/docs/katalon-integration/
+url: https://www.testmu.ai/support/docs/katalon-integration
 site_name: LambdaTest
-slug: katalon-integration/
+slug: katalon-integration
 ---
 
 <script type="application/ld+json"

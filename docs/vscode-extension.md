@@ -11,9 +11,9 @@ keywords:
   - check browser compatibility online 
   - best vs code extensions for developers
   - best vs code extensions for testers
-url: https://www.lambdatest.com/support/docs/vs-code-extension
+url: https://www.testmu.ai/support/docs/vs-code-extension
 site_name: LambdaTest
-slug: vs-code-extension/
+slug: vs-code-extension
 ---
 
 <script type="application/ld+json"

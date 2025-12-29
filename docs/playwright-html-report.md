@@ -13,9 +13,9 @@ keywords:
   - playwright parallel tests
   - parallel testing with playwright
   
-url: https://www.lambdatest.com/support/docs/playwright-html-report/
+url: https://www.testmu.ai/support/docs/playwright-html-report
 site_name: LambdaTest
-slug: playwright-html-report/
+slug: playwright-html-report
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

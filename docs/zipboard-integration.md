@@ -14,9 +14,9 @@ keywords:
   - create zipboard issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/zipboard-integration/
+url: https://www.testmu.ai/support/docs/zipboard-integration
 site_name: LambdaTest
-slug: zipboard-integration/
+slug: zipboard-integration
 ---
 
 <script type="application/ld+json"

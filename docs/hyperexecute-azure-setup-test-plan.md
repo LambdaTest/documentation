@@ -11,9 +11,9 @@ keywords:
     - azure test plan
     - azure integration
     - azure test-plan setup 
-url: https://www.lambdatest.com/support/docs/hyperexecute-azure-setup-test-plan/
+url: https://www.testmu.ai/support/docs/hyperexecute-azure-setup-test-plan
 site_name: LambdaTest
-slug: hyperexecute-azure-setup-test-plan/
+slug: hyperexecute-azure-setup-test-plan
 ---
 
 <script type="application/ld+json"

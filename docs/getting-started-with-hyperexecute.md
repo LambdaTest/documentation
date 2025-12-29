@@ -19,9 +19,9 @@ keywords:
   - hyperexecute autosplit execution
   - hyperexecute auto-split execution
 image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute
+url: https://www.testmu.ai/support/docs/getting-started-with-hyperexecute
 site_name: LambdaTest
-slug: getting-started-with-hyperexecute/
+slug: getting-started-with-hyperexecute
 ---
 
 import Tabs from '@theme/Tabs';

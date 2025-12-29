@@ -19,9 +19,9 @@ keywords:
     - bug tracking tools
     - project management tools
 image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/jira-self-hosted-integration/
+url: https://www.testmu.ai/support/docs/jira-self-hosted-integration
 site_name: LambdaTest
-slug: jira-self-hosted-integration/
+slug: jira-self-hosted-integration
 ---
 
 <script type="application/ld+json"

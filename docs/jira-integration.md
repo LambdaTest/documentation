@@ -9,9 +9,9 @@ keywords:
   - Push issues to Jira
   - TestMu AI Jira integration
 image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/jira-integration/
+url: https://www.testmu.ai/support/docs/jira-integration
 site_name: LambdaTest
-slug: jira-integration/
+slug: jira-integration
 ---
 
 <script type="application/ld+json"

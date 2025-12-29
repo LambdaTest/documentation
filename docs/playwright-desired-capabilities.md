@@ -12,9 +12,9 @@ keywords:
   - playwright testing on testmu ai
   - playwright testing testmu ai
 
-url: https://www.lambdatest.com/support/docs/capabilities-for-playwright/
+url: https://www.testmu.ai/support/docs/capabilities-for-playwright
 site_name: LambdaTest
-slug: capabilities-for-playwright/
+slug: capabilities-for-playwright
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

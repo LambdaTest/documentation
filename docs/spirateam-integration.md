@@ -9,9 +9,9 @@ keywords:
   - Push issues to SpiraTeam
   - TestMu AI SpiraTeam integration
 image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/spirateam-integration/
+url: https://www.testmu.ai/support/docs/spirateam-integration
 site_name: LambdaTest
-slug: spirateam-integration/
+slug: spirateam-integration
 ---
 
 <script type="application/ld+json"

@@ -10,9 +10,9 @@ keywords:
   - test cases
   - automation
   - hyperexecute
-url: https://www.lambdatest.com/support/docs/automated-test-cases-linked-using-capabilityr/
+url: https://www.testmu.ai/support/docs/automated-test-cases-linked-using-capabilityr
 site_name: LambdaTest
-slug: automated-test-cases-linked-using-capability/
+slug: automated-test-cases-linked-using-capability
 ---
 
 <script type="application/ld+json"

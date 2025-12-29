@@ -10,9 +10,9 @@ keywords:
   - TestMu AI SmartUI
   - Visual Testing
   - Automatic Baseline
-url: https://www.lambdatest.com/support/docs/smartui-baseline-management/
+url: https://www.testmu.ai/support/docs/smartui-baseline-management
 site_name: LambdaTest
-slug: smartui-baseline-management/
+slug: smartui-baseline-management
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

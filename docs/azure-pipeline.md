@@ -12,9 +12,9 @@ keywords:
   - continuous delivery
   - continuous integration tools
   - azure pipelines
-url: https://www.lambdatest.com/support/docs/integrate-azure-pipelines-with-lambdatest/
+url: https://www.testmu.ai/support/docs/integrate-azure-pipelines-with-testmu
 site_name: LambdaTest
-slug: integrate-azure-pipelines-with-lambdatest/
+slug: integrate-azure-pipelines-with-testmu
 ---
 
 <script type="application/ld+json"

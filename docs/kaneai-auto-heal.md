@@ -8,9 +8,9 @@ keywords:
 - auto-heal
 - locators
 - kane ai
-url: https://www.lambdatest.com/support/docs/kaneai-auto-heal/
+url: https://www.testmu.ai/support/docs/kaneai-auto-heal
 site_name: LambdaTest
-slug: kaneai-auto-heal/
+slug: kaneai-auto-heal
 ---
 
 <script type="application/ld+json"

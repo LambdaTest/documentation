@@ -7,9 +7,9 @@ description: Learn how to use Command Annotations to customizе logs that you wi
 keywords:
 - command annotations testmu ai
 - command annotations
-url: https://www.lambdatest.com/support/docs/command-annotations/
+url: https://www.testmu.ai/support/docs/command-annotations
 site_name: LambdaTest
-slug: command-annotations/
+slug: command-annotations
 ---
 
 # Command Annotations

@@ -13,9 +13,9 @@ keywords:
   - selenium javascript testing tutorial
   - javascript selenium framework
 image: /assets/images/og-images/Selenium-WD-Famework.jpg  
-url: https://www.lambdatest.com/support/docs/wd-with-selenium-running-wd-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: wd-with-selenium-running-wd-automation-scripts-on-lambdatest-selenium-grid/
+slug: wd-with-selenium-running-wd-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

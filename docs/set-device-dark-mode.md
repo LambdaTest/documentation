@@ -12,9 +12,9 @@ keywords:
   - dark mode
   - virtual devices
 
-url: https://www.lambdatest.com/support/docs/set-device-dark-mode/
+url: https://www.testmu.ai/support/docs/set-device-dark-mode
 site_name: LambdaTest
-slug: set-device-dark-mode/
+slug: set-device-dark-mode
 ---
 
 import CodeBlock from '@theme/CodeBlock';

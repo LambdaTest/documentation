@@ -13,9 +13,9 @@ keywords:
   - selenium javascript testing tutorial
   - javascript selenium framework
 image: /assets/images/og-images/Protractor-Selenium-1.jpg
-url: https://www.lambdatest.com/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: protractor-with-selenium-running-protractor-automation-scripts-on-lambdatest-selenium-grid/
+slug: protractor-with-selenium-running-protractor-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -9,9 +9,9 @@ keywords:
   - hyperexecute
   - testmu ai
   - k6
-url: https://www.lambdatest.com/support/docs/hyperexecute-k6-testing/
+url: https://www.testmu.ai/support/docs/hyperexecute-k6-testing
 site_name: LambdaTest
-slug: hyperexecute-k6-testing/
+slug: hyperexecute-k6-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';

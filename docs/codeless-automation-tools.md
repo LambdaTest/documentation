@@ -13,9 +13,9 @@ keywords:
   - testmu ai integrations
   - browser testing integrations
   - automation testing tool integrations
-url: https://www.lambdatest.com/support/docs/integrations-with-codeless-automation-tools/
+url: https://www.testmu.ai/support/docs/integrations-with-codeless-automation-tools
 site_name: LambdaTest
-slug: integrations-with-codeless-automation-tools/
+slug: integrations-with-codeless-automation-tools
 ---
 
 <script type="application/ld+json"

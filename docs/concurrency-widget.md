@@ -11,9 +11,9 @@ keywords:
   - test plans
   - license pool
 
-url: https://www.lambdatest.com/support/docs/concurrency-widget/
+url: https://www.testmu.ai/support/docs/concurrency-widget
 site_name: LambdaTest
-slug: concurrency-widget/
+slug: concurrency-widget
 ---
 
 <script type="application/ld+json"

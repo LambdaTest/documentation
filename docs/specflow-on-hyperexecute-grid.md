@@ -18,9 +18,9 @@ keywords:
   - hyperexecute SpecFlow testing
   - hyperexecute python testing
   - hyperexecute automation testing
-url: https://www.lambdatest.com/support/docs/specflow-on-hyperexecute-grid/
+url: https://www.testmu.ai/support/docs/specflow-on-hyperexecute-grid
 site_name: LambdaTest
-slug: specflow-on-hyperexecute-grid/
+slug: specflow-on-hyperexecute-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

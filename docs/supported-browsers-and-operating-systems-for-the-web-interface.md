@@ -14,9 +14,9 @@ keywords:
   - testmu ai supported browsers
   - selenium supported browsers
 
-url: https://www.lambdatest.com/support/docs/supported-browsers-and-operating-systems-for-the-web-interface/
+url: https://www.testmu.ai/support/docs/supported-browsers-and-operating-systems-for-the-web-interface
 site_name: LambdaTest
-slug: supported-browsers-and-operating-systems-for-the-web-interface/
+slug: supported-browsers-and-operating-systems-for-the-web-interface
 ---
 
 <script type="application/ld+json"

@@ -16,9 +16,9 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/real-time-desktop-browser-testing-tools/
+url: https://www.testmu.ai/support/docs/real-time-desktop-browser-testing-tools
 site_name: LambdaTest
-slug: real-time-desktop-browser-testing-tools/
+slug: real-time-desktop-browser-testing-tools
 ---
 
 <script type="application/ld+json"

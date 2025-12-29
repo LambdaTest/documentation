@@ -9,9 +9,9 @@ keywords:
   - live interaction
   - selenium automation
   - debug tests
-url: https://www.lambdatest.com/support/docs/live-interaction/
+url: https://www.testmu.ai/support/docs/live-interaction
 site_name: LambdaTest
-slug: live-interaction/
+slug: live-interaction
 ---
 
 <script type="application/ld+json"

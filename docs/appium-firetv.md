@@ -13,9 +13,9 @@ keywords:
   - real time testing
   - appium automation
 
-url: https://www.lambdatest.com/support/docs/appium-firetv/
+url: https://www.testmu.ai/support/docs/appium-firetv
 site_name: LambdaTest
-slug: appium-firetv/
+slug: appium-firetv
 ---
 
 import CodeBlock from '@theme/CodeBlock';

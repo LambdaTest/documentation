@@ -7,9 +7,9 @@ keywords:
   - testmu ai integrations
   - project management
   - free cross browser testing tool
-url: https://www.lambdatest.com/support/docs/integrations-with-project-management-tools/
+url: https://www.testmu.ai/support/docs/integrations-with-project-management-tools
 site_name: LambdaTest
-slug: integrations-with-project-management-tools/
+slug: integrations-with-project-management-tools
 ---
 LambdaTest offers integration to numerous third-party tools for project management and bug tracking to help you easily collaborate with your colleagues as you encounter a bug while performing cross browser testing. After integrating your LambdaTest account with your favourite project management tool or bug tracking tool, you can send any UI bug that you may encounter on your website, directly to your task management dashboard, in just a single click from LambdaTest.
 

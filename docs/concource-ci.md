@@ -17,9 +17,9 @@ keywords:
   - testmu ai integrations
   - integrations with ci/cd tools
   - ci/cd integrations
-url: https://www.lambdatest.com/support/docs/selenium-testing-with-concourse-ci-and-lambdatest/
+url: https://www.testmu.ai/support/docs/selenium-testing-with-concourse-ci-and-testmu
 site_name: LambdaTest
-slug: selenium-testing-with-concourse-ci-and-lambdatest/
+slug: selenium-testing-with-concourse-ci-and-testmu
 ---
 
 <script type="application/ld+json"

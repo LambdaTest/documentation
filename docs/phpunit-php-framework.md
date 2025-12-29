@@ -17,9 +17,9 @@ keywords:
   - selenium testing tool
   - selenium testing tutorial
 image: /assets/images/og-images/PHPUnit-Test-Framework.jpg
-url: https://www.lambdatest.com/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: phpunit-with-selenium-running-phpunit-automation-scripts-on-lambdatest-selenium-grid/
+slug: phpunit-with-selenium-running-phpunit-automation-scripts-on-testmu-selenium-grid
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

@@ -11,9 +11,9 @@ keywords:
   - Integrations
   - Products
   - Microsoft Excel
-url: https://www.lambdatest.com/support/docs/hyperexecute-winapp-integration/
+url: https://www.testmu.ai/support/docs/hyperexecute-winapp-integration
 site_name: LambdaTest
-slug: hyperexecute-winapp-integration/
+slug: hyperexecute-winapp-integration
 ---
 
 <script type="application/ld+json"

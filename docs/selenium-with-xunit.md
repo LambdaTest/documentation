@@ -9,9 +9,9 @@ keywords:
 - selenium with xunit
 - selenium with xunit on testmu ai
 - xunit testmu ai
-url: https://www.lambdatest.com/support/docs/selenium-with-xunit/
+url: https://www.testmu.ai/support/docs/selenium-with-xunit
 site_name: LambdaTest
-slug: selenium-with-xunit/
+slug: selenium-with-xunit
 ---
 
 <script type="application/ld+json"

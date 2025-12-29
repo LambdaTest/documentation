@@ -13,9 +13,9 @@ keywords:
     - continuous integration tools
     - jenkins pipeline 
 image: /assets/images/og-images/JPG-4.jpg
-url: https://www.lambdatest.com/support/docs/integrating-your-jenkins-pipeline-with-lambdatest/
+url: https://www.testmu.ai/support/docs/integrating-your-jenkins-pipeline-with-testmu
 site_name: LambdaTest
-slug: integrating-your-jenkins-pipeline-with-lambdatest/
+slug: integrating-your-jenkins-pipeline-with-testmu
 ---
 
 <script type="application/ld+json"

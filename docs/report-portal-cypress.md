@@ -12,9 +12,9 @@ keywords:
   - testmu ai integration with report portal
   - cross browser testing
   - free cross browser testing tool
-url: https://www.lambdatest.com/support/docs/applitools-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/applitools-integration-with-testmu
 site_name: LambdaTest
-slug: report-portal-cypress/
+slug: report-portal-cypress
 ---
 
 import CodeBlock from '@theme/CodeBlock';

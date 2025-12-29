@@ -12,9 +12,9 @@ keywords:
     - hyperexecute cypressv10 testing
     - hyperexecute cypress testing
   
-url: https://www.lambdatest.com/support/docs/cypress-detailed-command-logs/
+url: https://www.testmu.ai/support/docs/cypress-detailed-command-logs
 site_name: LambdaTest
-slug: cypress-detailed-command-logs/
+slug: cypress-detailed-command-logs
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -13,9 +13,9 @@ keywords:
   - gocd integration with hyperexecute
   - hyperexecute integration with gocd pipelines
   - ci/cd
-url: https://www.lambdatest.com/support/docs/gocd-integration-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/gocd-integration-with-hyperexecute
 site_name: LambdaTest
-slug: gocd-integration-with-hyperexecute/
+slug: gocd-integration-with-hyperexecute
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

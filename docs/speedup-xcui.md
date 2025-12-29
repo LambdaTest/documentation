@@ -13,9 +13,9 @@ keywords:
   - testing in XCUI
   - XCUI testing
   - real devices
-url: https://www.lambdatest.com/support/docs/speedup-xcui/
+url: https://www.testmu.ai/support/docs/speedup-xcui
 site_name: LambdaTest
-slug: speedup-xcui/
+slug: speedup-xcui
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -12,9 +12,9 @@ keywords:
   - saml
   - testmu ai google integration
   - testmu ai google sso
-url: https://www.lambdatest.com/support/docs/lambdatest-sso-google/
+url: https://www.testmu.ai/support/docs/testmu-sso-google
 site_name: LambdaTest
-slug: lambdatest-sso-google/
+slug: testmu-sso-google
 ---
 
 <script type="application/ld+json"

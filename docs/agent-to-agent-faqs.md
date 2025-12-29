@@ -7,9 +7,9 @@ description: Get quick answers to all your Agent to Agent queries with our compr
 keywords:
   - Agent to Agent FAQs
   - FAQs
-url: https://www.lambdatest.com/support/docs/agent-to-agent-faqs/
+url: https://www.testmu.ai/support/docs/agent-to-agent-faqs
 site_name: LambdaTest
-slug: agent-to-agent-faqs/
+slug: agent-to-agent-faqs
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -9,9 +9,9 @@ keywords:
   - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
-url: https://www.lambdatest.com/support/docs/kane-ai-using-json-variables/
+url: https://www.testmu.ai/support/docs/kane-ai-using-json-variables
 site_name: LambdaTest
-slug: kane-ai-using-json-variables/
+slug: kane-ai-using-json-variables
 ---
 
 <script type="application/ld+json"

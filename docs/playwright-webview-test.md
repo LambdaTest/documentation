@@ -11,9 +11,9 @@ keywords:
   - playwright testing on testmu ai
   - playwright testing testmu ai
   - playwright android
-url: https://www.lambdatest.com/support/docs/playwright-webview-test/
+url: https://www.testmu.ai/support/docs/playwright-webview-test
 site_name: LambdaTest
-slug: playwright-webview-test/
+slug: playwright-webview-test
 ---
 
 import Tabs from '@theme/Tabs';

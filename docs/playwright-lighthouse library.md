@@ -8,9 +8,9 @@ keywords:
 - generate lighthouse reports in playwright
 - generate lighthouse reports with playwright lighthouse library
 - lighthouse reports testmu ai
-url: https://www.lambdatest.com/support/docs/playwright-lighthouse-library/
+url: https://www.testmu.ai/support/docs/playwright-lighthouse-library
 site_name: LambdaTest
-slug: playwright-lighthouse-library/
+slug: playwright-lighthouse-library
 ---
 
 import CodeBlock from '@theme/CodeBlock';

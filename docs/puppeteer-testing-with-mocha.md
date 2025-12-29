@@ -15,9 +15,9 @@ keywords:
   - puppeteer testing tutorial
   - puppeteer testing testmu ai
 
-url: https://www.lambdatest.com/support/docs/puppeteer-testing-with-mocha/
+url: https://www.testmu.ai/support/docs/puppeteer-testing-with-mocha
 site_name: LambdaTest
-slug: puppeteer-testing-with-mocha/
+slug: puppeteer-testing-with-mocha
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

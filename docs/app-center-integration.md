@@ -11,9 +11,9 @@ keywords:
   - Configuring App Center on TestMu AI
   - Auto upload apps on TestMu AI
   - TestMu AI Cloud Platform
-url: https://www.lambdatest.com/support/docs/app-center/
+url: https://www.testmu.ai/support/docs/app-center
 site_name: LambdaTest
-slug: app-center/
+slug: app-center
 ---
 
 <script type="application/ld+json"

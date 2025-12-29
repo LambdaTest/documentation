@@ -9,9 +9,9 @@ keywords:
 - enhancements
 - modules
 - dynamic url
-url: https://www.lambdatest.com/support/docs/kaneai-dynamic-url-replacement/
+url: https://www.testmu.ai/support/docs/kaneai-dynamic-url-replacement
 site_name: LambdaTest
-slug: kaneai-dynamic-url-replacement/
+slug: kaneai-dynamic-url-replacement
 ---
 
 <script type="application/ld+json"

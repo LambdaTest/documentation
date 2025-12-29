@@ -9,9 +9,9 @@ keywords:
   - testmu ai kaneai
   - kaneai smart variables
   - kaneai parameters
-url: https://www.lambdatest.com/support/docs/kane-smart-variables/
+url: https://www.testmu.ai/support/docs/kane-smart-variables
 site_name: LambdaTest
-slug: kane-ai-smart-variables/
+slug: kane-ai-smart-variables
 ---
 
 <script type="application/ld+json"

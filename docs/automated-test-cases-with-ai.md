@@ -8,9 +8,9 @@ keywords:
   - automated test cases
   - automated test cases with ai 
   - test cases
-url: https://www.lambdatest.com/support/docs/automated-test-cases-with-ai/
+url: https://www.testmu.ai/support/docs/automated-test-cases-with-ai
 site_name: LambdaTest
-slug: automated-test-cases-with-ai/
+slug: automated-test-cases-with-ai
 ---
 
 <script type="application/ld+json"

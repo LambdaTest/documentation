@@ -16,9 +16,9 @@ keywords:
 - configure selenium tests with desired capabilities
 - selenium webdriver capabilities for running tests on testmu ai
 image: /assets/images/og-images/Selenium-Capabilities.jpg
-url: https://www.lambdatest.com/support/docs/selenium-automation-capabilities/
+url: https://www.testmu.ai/support/docs/selenium-automation-capabilities
 site_name: LambdaTest
-slug: selenium-automation-capabilities/
+slug: selenium-automation-capabilities
 ---
 
 <script type="application/ld+json"

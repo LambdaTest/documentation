@@ -12,9 +12,9 @@ keywords:
 - espresso bitrise
 - app testing with bitrise 
 - app automation bitrise
-url: https://www.lambdatest.com/support/docs/run-espresso-tests-in-bitrise/
+url: https://www.testmu.ai/support/docs/run-espresso-tests-in-bitrise
 site_name: LambdaTest
-slug: run-espresso-tests-in-bitrise/
+slug: run-espresso-tests-in-bitrise
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

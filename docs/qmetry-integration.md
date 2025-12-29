@@ -11,9 +11,9 @@ keywords:
  - test automation
  - QMetry integration with Lambdatest
  - testmu ai integration with QMetry
-url: https://www.lambdatest.com/support/docs/qmetry-integration/
+url: https://www.testmu.ai/support/docs/qmetry-integration
 site_name: LambdaTest
-slug: qmetry-integration/
+slug: qmetry-integration
 ---
 
 <script type="application/ld+json"

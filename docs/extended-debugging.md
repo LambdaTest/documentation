@@ -11,9 +11,9 @@ keywords:
 - throttle cpu selenium
 - throttle network selenium
 - har file download
-url: https://www.lambdatest.com/support/docs/extended-debugging-options/
+url: https://www.testmu.ai/support/docs/extended-debugging-options
 site_name: LambdaTest
-slug: extended-debugging-options/
+slug: extended-debugging-options
 ---
 
 LambdaTest's Extended Debugging Options provide powerful capabilities to debug and optimize your Selenium tests by giving you granular control over network behavior and system performance. These advanced debugging features allow you to intercept and modify network requests, simulate various CPU and network conditions, and download comprehensive network analysis files—all within your test automation workflow.

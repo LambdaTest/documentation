@@ -11,7 +11,7 @@ keywords:
   - data visualization
   - reporting
   - optimization
-slug: insights-best-practices/
+slug: insights-best-practices
 ---
 
 # Best Practices for LambdaTest Insights

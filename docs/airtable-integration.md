@@ -10,9 +10,9 @@ keywords:
   - bug log
   - free cross browser testing tool
   - Airtable integration
-url: https://www.lambdatest.com/support/docs/airtable-integration/
+url: https://www.testmu.ai/support/docs/airtable-integration
 site_name: LambdaTest
-slug: airtable-integration/
+slug: airtable-integration
 ---
 
 <script type="application/ld+json"

@@ -11,9 +11,9 @@ keywords:
 - test automation
 - vividus integration with testmu ai
 - testmu ai integration with vividus
-url: https://www.lambdatest.com/support/docs/vividus-integration/
+url: https://www.testmu.ai/support/docs/vividus-integration
 site_name: LambdaTest
-slug: vividus-integration/
+slug: vividus-integration
 ---
 
 <script type="application/ld+json"

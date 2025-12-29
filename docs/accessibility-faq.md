@@ -12,9 +12,9 @@ keywords:
     - Automation
     - Accessibility Testing Settings
     - Accessibility FAQa
-url: https://www.lambdatest.com/support/docs/accessibility-faq/
+url: https://www.testmu.ai/support/docs/accessibility-faq
 site_name: LambdaTest
-slug: accessibility-faq/
+slug: accessibility-faq
 ---
 
 import CodeBlock from '@theme/CodeBlock';

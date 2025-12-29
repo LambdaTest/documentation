@@ -19,9 +19,9 @@ keywords:
   - hyperexecute JUnit testing
   - hyperexecute automation testing
   - HyperExecute Selenium automation
-url: https://www.lambdatest.com/support/docs/junit-on-hyperexecute-grid/
+url: https://www.testmu.ai/support/docs/junit-on-hyperexecute-grid
 site_name: LambdaTest
-slug: junit-on-hyperexecute-grid/
+slug: junit-on-hyperexecute-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

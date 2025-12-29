@@ -11,9 +11,9 @@ keywords:
   - dynamic url
   - chrome options
   - chrome arguments
-url: https://www.lambdatest.com/support/docs/kaneai-chrome-options/
+url: https://www.testmu.ai/support/docs/kaneai-chrome-options
 site_name: LambdaTest
-slug: kaneai-chrome-options/
+slug: kaneai-chrome-options
 ---
 
 <script type="application/ld+json"

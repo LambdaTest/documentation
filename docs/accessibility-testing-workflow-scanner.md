@@ -12,9 +12,9 @@ keywords:
     - run quick scan
     - test issues
     - Workflow Scanner
-url: https://www.lambdatest.com/support/docs/accessibility-testing-workflow-scanner/
+url: https://www.testmu.ai/support/docs/accessibility-testing-workflow-scanner
 site_name: LambdaTest
-slug: accessibility-testing-workflow-scanner/
+slug: accessibility-testing-workflow-scanner
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -9,9 +9,9 @@ keywords:
   - Visual Regression Testing
   - PDF Testing
   - REST API
-url: https://www.lambdatest.com/support/docs/smartui-pdf-api-upload/
+url: https://www.testmu.ai/support/docs/smartui-pdf-api-upload
 site_name: LambdaTest
-slug: smartui-pdf-api-upload/
+slug: smartui-pdf-api-upload
 
 ---
 import Tabs from '@theme/Tabs';

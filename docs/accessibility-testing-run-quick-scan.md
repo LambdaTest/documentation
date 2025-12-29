@@ -11,9 +11,9 @@ keywords:
     - DevTools
     - run quick scan
     - test issues
-url: https://www.lambdatest.com/support/docs/accessibility-testing-run-quick-scan/
+url: https://www.testmu.ai/support/docs/accessibility-testing-run-quick-scan
 site_name: LambdaTest
-slug: accessibility-testing-run-quick-scan/
+slug: accessibility-testing-run-quick-scan
 ---
 
 import CodeBlock from '@theme/CodeBlock';

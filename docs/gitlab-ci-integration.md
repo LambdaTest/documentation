@@ -11,9 +11,9 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - gitlab ci
-url: https://www.lambdatest.com/support/docs/gitlab-ci-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/gitlab-ci-integration-with-testmu
 site_name: LambdaTest
-slug: gitlab-ci-integration-with-lambdatest/
+slug: gitlab-ci-integration-with-testmu
 ---
 
 <script type="application/ld+json"

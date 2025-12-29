@@ -10,9 +10,9 @@ keywords:
   - overview
   - visual testing
   - accessibility testing
-url: https://www.lambdatest.com/support/docs/web-scanner-overview
+url: https://www.testmu.ai/support/docs/web-scanner-overview
 site_name: LambdaTest
-slug: web-scanner-overview/
+slug: web-scanner-overview
 ---
 
 import Tabs from '@theme/Tabs';

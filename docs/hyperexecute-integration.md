@@ -10,9 +10,9 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - Integrations
   - Products
-url: https://www.lambdatest.com/support/docs/integration-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/integration-with-hyperexecute
 site_name: LambdaTest
-slug: integration-with-hyperexecute/
+slug: integration-with-hyperexecute
 ---
 
 <script type="application/ld+json"

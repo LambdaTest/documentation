@@ -14,8 +14,8 @@ keywords:
   - Visual Regression Run Specific Test
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
-url: https://www.lambdatest.com/support/docs/smartui-multiple-assets-hosts/
-slug: smartui-multiple-assets-hosts/
+url: https://www.testmu.ai/support/docs/smartui-multiple-assets-hosts
+slug: smartui-multiple-assets-hosts
 
 ---
 import Tabs from '@theme/Tabs';

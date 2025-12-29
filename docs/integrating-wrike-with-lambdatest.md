@@ -16,9 +16,9 @@ keywords:
  - TestMu AI Appstore
  - TestMu AI apps
  - TestMu AI integrations
-url: https://www.lambdatest.com/support/docs/integrating-wrike-with-lambdatest/
+url: https://www.testmu.ai/support/docs/integrating-wrike-with-testmu
 site_name: LambdaTest
-slug: integrating-wrike-with-lambdatest/
+slug: integrating-wrike-with-testmu
 ---
 
 <script type="application/ld+json"

@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/saucelabs-to-hyperexecute-migrate/
+url: https://www.testmu.ai/support/docs/saucelabs-to-hyperexecute-migrate
 site_name: LambdaTest
-slug: saucelabs-to-hyperexecute-migrate/
+slug: saucelabs-to-hyperexecute-migrate
 ---
 
 import CodeBlock from '@theme/CodeBlock';

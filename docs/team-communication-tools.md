@@ -9,9 +9,9 @@ keywords:
   - bug reporting
   - test reporting
   - communication tools
-url: https://www.lambdatest.com/support/docs/team-communication-tools/
+url: https://www.testmu.ai/support/docs/team-communication-tools
 site_name: LambdaTest
-slug: team-communication-tools/
+slug: team-communication-tools
 ---
 
 <script type="application/ld+json"

@@ -12,9 +12,9 @@ keywords:
   - playwright testing on testmu ai
   - playwright testing testmu ai
 
-url: https://www.lambdatest.com/support/docs/playwright-test-execution-setup/
+url: https://www.testmu.ai/support/docs/playwright-test-execution-setup
 site_name: LambdaTest
-slug: playwright-test-execution-setup/
+slug: playwright-test-execution-setup
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -8,9 +8,9 @@ keywords:
   - error categorization reports
   - error testing testmu ai 
   
-url: https://www.lambdatest.com/support/docs/error-categorization-report/
+url: https://www.testmu.ai/support/docs/error-categorization-report
 site_name: LambdaTest
-slug: error-categorization-report/
+slug: error-categorization-report
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

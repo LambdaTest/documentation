@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - How to access and change org product preferences for hyperexecute
-url: https://www.lambdatest.com/support/docs/hyperexecute-org-product-preferences/
+url: https://www.testmu.ai/support/docs/hyperexecute-org-product-preferences
 site_name: LambdaTest
-slug: hyperexecute-org-product-preferences/
+slug: hyperexecute-org-product-preferences
 ---
 
 <script type="application/ld+json"

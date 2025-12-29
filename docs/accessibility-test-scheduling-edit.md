@@ -10,9 +10,9 @@ keywords:
     - Testing
     - DevTools
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/accessibility-test-scheduling-edit/
+url: https://www.testmu.ai/support/docs/accessibility-test-scheduling-edit
 site_name: LambdaTest
-slug: accessibility-test-scheduling-edit/
+slug: accessibility-test-scheduling-edit
 ---
 
 import Tabs from '@theme/Tabs';

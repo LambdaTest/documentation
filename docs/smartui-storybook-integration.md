@@ -14,8 +14,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smart-ui-storybook/
-slug: smart-ui-storybook/
+url: https://www.testmu.ai/support/docs/smart-ui-storybook
+slug: smart-ui-storybook
 
 ---
 import Tabs from '@theme/Tabs';

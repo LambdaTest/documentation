@@ -12,9 +12,9 @@ keywords:
   - app testing
   - real devices
 image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/appium-php/
+url: https://www.testmu.ai/support/docs/appium-php
 site_name: LambdaTest
-slug: appium-php/
+slug: appium-php
 ---
 
 

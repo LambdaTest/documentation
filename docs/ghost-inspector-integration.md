@@ -12,9 +12,9 @@ keywords:
   - continuous integration tools
   - ghost inspector
   - ghost inspector integration
-url: https://www.lambdatest.com/support/docs/ghost-inspector-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/ghost-inspector-integration-with-testmu
 site_name: LambdaTest
-slug: ghost-inspector-integration-with-lambdatest/
+slug: ghost-inspector-integration-with-testmu
 ---
 
 <script type="application/ld+json"

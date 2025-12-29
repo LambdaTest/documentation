@@ -9,9 +9,9 @@ keywords:
   - how to capture full page screenshots
   - capture full page screenshots in lt browser
   - capture full page screenshots
-url: https://www.lambdatest.com/support/docs/full-page-screenshots/
+url: https://www.testmu.ai/support/docs/full-page-screenshots
 site_name: LambdaTest
-slug: full-page-screenshots/
+slug: full-page-screenshots
 ---
 
 

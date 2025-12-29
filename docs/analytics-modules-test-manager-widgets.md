@@ -9,9 +9,9 @@ keywords:
  - Test Manager analytics
  - Test Cases trends
  - Test Case Build Status
-url: https://www.lambdatest.com/support/docs/analytics-modules-test-manager-widgets/
+url: https://www.testmu.ai/support/docs/analytics-modules-test-manager-widgets
 site_name: LambdaTest
-slug: analytics-modules-test-manager-widgets/
+slug: analytics-modules-test-manager-widgets
 ---
 
 import NewTag from '../src/component/newTag';

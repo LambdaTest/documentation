@@ -10,9 +10,9 @@ keywords:
   - testmu ai
   - MCP
   - MCP server
-url: https://www.lambdatest.com/support/docs/lambdatest-mcp-server/
+url: https://www.testmu.ai/support/docs/testmu-mcp-server
 site_name: LambdaTest
-slug: lambdatest-mcp-server/
+slug: testmu-mcp-server
 ---
 
 import CodeBlock from '@theme/CodeBlock';

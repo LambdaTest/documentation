@@ -11,9 +11,9 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - gitlab ci
-url: https://www.lambdatest.com/support/docs/circle-ci-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/circle-ci-with-hyperexecute
 site_name: LambdaTest
-slug: circle-ci-with-hyperexecute/
+slug: circle-ci-with-hyperexecute
 ---
 
 <script type="application/ld+json"

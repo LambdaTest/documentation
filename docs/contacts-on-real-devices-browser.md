@@ -15,9 +15,9 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/contacts-on-real-devices-browser/
+url: https://www.testmu.ai/support/docs/contacts-on-real-devices-browser
 site_name: LambdaTest
-slug: contacts-on-real-devices-browser/
+slug: contacts-on-real-devices-browser
 ---
 
 import CodeBlock from '@theme/CodeBlock';

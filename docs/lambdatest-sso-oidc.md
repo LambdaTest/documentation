@@ -14,9 +14,9 @@ keywords:
   - azure ad
   - google workspace
   - okta
-url: https://www.lambdatest.com/support/docs/lambdatest-sso-oidc/
+url: https://www.testmu.ai/support/docs/testmu-sso-oidc
 site_name: LambdaTest
-slug: lambdatest-sso-oidc/
+slug: testmu-sso-oidc
 ---
 
 <script type="application/ld+json"

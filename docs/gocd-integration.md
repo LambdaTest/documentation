@@ -13,9 +13,9 @@ keywords:
   - gocd integration with testmu ai
   - testmu ai integration with gocd pipelines
   - ci/cd
-url: https://www.lambdatest.com/support/docs/gocd-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/gocd-integration-with-testmu
 site_name: LambdaTest
-slug: gocd-integration-with-lambdatest/
+slug: gocd-integration-with-testmu
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

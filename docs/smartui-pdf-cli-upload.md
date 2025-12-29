@@ -9,9 +9,9 @@ keywords:
   - Visual Regression Testing
   - PDF Testing
   - Command Line
-url: https://www.lambdatest.com/support/docs/smartui-pdf-cli-upload/
+url: https://www.testmu.ai/support/docs/smartui-pdf-cli-upload
 site_name: LambdaTest
-slug: smartui-pdf-cli-upload/
+slug: smartui-pdf-cli-upload
 
 ---
 import Tabs from '@theme/Tabs';

@@ -12,9 +12,9 @@ keywords:
   - app testing
   - virtual devices
 image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-appium-virtual-device/
+url: https://www.testmu.ai/support/docs/hyperexecute-appium-virtual-device
 site_name: LambdaTest
-slug: hyperexecute-appium-virtual-device/
+slug: hyperexecute-appium-virtual-device
 ---
 
 import CodeBlock from '@theme/CodeBlock';

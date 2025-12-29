@@ -9,9 +9,9 @@ keywords:
   - php and Selenium automation
   - php documentation TestMu AI
 image: /assets/images/og-images/runnning-php-tests-on-selenium-grid.jpg
-url: https://www.lambdatest.com/support/docs/quick-guide-to-run-php-tests-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/quick-guide-to-run-php-tests-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: quick-guide-to-run-php-tests-on-lambdatest-selenium-grid/
+slug: quick-guide-to-run-php-tests-on-testmu-selenium-grid
 ---
 # Quick Guide To Run PHP Tests on LambdaTest Selenium Grid
 ***

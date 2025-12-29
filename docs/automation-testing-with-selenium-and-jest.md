@@ -12,9 +12,9 @@ keywords:
   - jest and selenium
   - jest selenium
 image: /assets/images/og-images/automated-testing-with-selenium-jest.jpg  
-url: https://www.lambdatest.com/support/docs/automation-testing-with-selenium-and-jest/
+url: https://www.testmu.ai/support/docs/automation-testing-with-selenium-and-jest
 site_name: LambdaTest
-slug: automation-testing-with-selenium-and-jest/
+slug: automation-testing-with-selenium-and-jest
 ---
 
 import CodeBlock from '@theme/CodeBlock';

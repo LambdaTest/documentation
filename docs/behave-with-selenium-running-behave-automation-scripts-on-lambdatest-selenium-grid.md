@@ -15,9 +15,9 @@ keywords:
   - testmu ai python
   - framework on testmu ai
 image: /assets/images/og-images/Behave-with-Selenium.jpg
-url: https://www.lambdatest.com/support/docs/behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid/
+slug: behave-with-selenium-running-behave-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

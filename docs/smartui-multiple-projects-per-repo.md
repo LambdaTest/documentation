@@ -8,9 +8,9 @@ keywords:
   - smart ui
   - videos
   - storybook
-url: https://www.lambdatest.com/support/docs/smartui-multiple-projects-per-repo/
+url: https://www.testmu.ai/support/docs/smartui-multiple-projects-per-repo
 site_name: LambdaTest
-slug: smartui-multiple-projects-per-repo/
+slug: smartui-multiple-projects-per-repo
 
 ---
 

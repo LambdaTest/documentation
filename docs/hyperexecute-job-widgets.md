@@ -11,9 +11,9 @@ keywords:
   - HyperExecute
   - HyperExecute Widgets
   - HyperExecute Jobs
-url: https://www.lambdatest.com/support/docs/hyperexecute-job-widgets/
+url: https://www.testmu.ai/support/docs/hyperexecute-job-widgets
 site_name: LambdaTest
-slug: hyperexecute-job-widgets/
+slug: hyperexecute-job-widgets
 ---
 
 <script type="application/ld+json"

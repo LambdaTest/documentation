@@ -8,9 +8,9 @@ keywords:
 - upload apps on real device cloud 
 - real device cloud
 - uploading apps 
-url: https://www.lambdatest.com/support/docs/upload-apps-on-real-device-cloud/
+url: https://www.testmu.ai/support/docs/upload-apps-on-real-device-cloud
 site_name: LambdaTest
-slug: upload-apps-on-real-device-cloud/
+slug: upload-apps-on-real-device-cloud
 ---
 
 import Tabs from '@theme/Tabs';

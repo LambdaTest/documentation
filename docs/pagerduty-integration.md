@@ -8,9 +8,9 @@ keywords:
   - TestMu AI integration with PagerDuty
   - TestMu AI and PagerDuty Integration
   - PagerDutyIntegration
-url: https://www.lambdatest.com/support/docs/pagerduty-integration/
+url: https://www.testmu.ai/support/docs/pagerduty-integration
 site_name: LambdaTest
-slug: pagerduty-integration/
+slug: pagerduty-integration
 ---
 
 <script type="application/ld+json"

@@ -19,9 +19,9 @@ keywords:
   - hyperexecute autosplit execution
   - hyperexecute auto-split execution
 image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/account-management/
+url: https://www.testmu.ai/support/docs/account-management
 site_name: LambdaTest
-slug: account-management/
+slug: account-management
 ---
 
 <script type="application/ld+json"

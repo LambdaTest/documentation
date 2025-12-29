@@ -13,9 +13,9 @@ keywords:
   - aws codepipeline
   - continuous integration tools
   
-url: https://www.lambdatest.com/support/docs/aws-codepipeline-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/aws-codepipeline-with-hyperexecute
 site_name: LambdaTest
-slug: aws-codepipeline-with-hyperexecute/
+slug: aws-codepipeline-with-hyperexecute
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

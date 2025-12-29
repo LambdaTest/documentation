@@ -7,9 +7,9 @@ description: This documentation will help you create and manage users on TestMu 
 keywords:
 - users management testmu ai
 - manage user
-url: https://www.lambdatest.com/support/docs/user-management/
+url: https://www.testmu.ai/support/docs/user-management
 site_name: LambdaTest
-slug: user-management/
+slug: user-management
 ---
 
 # User Management

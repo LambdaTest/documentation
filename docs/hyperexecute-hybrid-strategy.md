@@ -8,9 +8,9 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-hybrid-strategy/
+url: https://www.testmu.ai/support/docs/hyperexecute-hybrid-strategy
 site_name: LambdaTest
-slug: hyperexecute-hybrid-strategy/
+slug: hyperexecute-hybrid-strategy
 ---
 
 <script type="application/ld+json"

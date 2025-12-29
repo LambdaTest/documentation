@@ -13,9 +13,9 @@ keywords:
   - playwright testing testmu ai
   - migrate playwright tests on testmu ai
 
-url: https://www.lambdatest.com/support/docs/migrate-existing-playwright-tests/
+url: https://www.testmu.ai/support/docs/migrate-existing-playwright-tests
 site_name: LambdaTest
-slug: migrate-existing-playwright-tests/
+slug: migrate-existing-playwright-tests
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

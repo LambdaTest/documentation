@@ -8,9 +8,9 @@ keywords:
   - TestMu AI integration
   - testmu ai integration with testmo
   - testmu ai selenium grid integration to testmo
-url: https://www.lambdatest.com/support/docs/testmo-integration
+url: https://www.testmu.ai/support/docs/testmo-integration
 site_name: LambdaTest
-slug: testmo-integration/
+slug: testmo-integration
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

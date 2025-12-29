@@ -12,9 +12,9 @@ keywords:
     - azure integration
     - azure associate test case
     - test case
-url: https://www.lambdatest.com/support/docs/hyperexecute-azure-associate-test-case/
+url: https://www.testmu.ai/support/docs/hyperexecute-azure-associate-test-case
 site_name: LambdaTest
-slug: hyperexecute-azure-associate-test-case/
+slug: hyperexecute-azure-associate-test-case
 ---
 
 <script type="application/ld+json"

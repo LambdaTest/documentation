@@ -8,9 +8,9 @@ keywords:
   - database
   - sql
   - nosql
-url: https://www.lambdatest.com/support/docs/kaneai-database/
+url: https://www.testmu.ai/support/docs/kaneai-database
 site_name: LambdaTest
-slug: kaneai-database/
+slug: kaneai-database
 ---
 
 import CodeBlock from '@theme/CodeBlock';

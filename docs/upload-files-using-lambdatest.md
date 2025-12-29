@@ -10,9 +10,9 @@ keywords:
   - upload files using testmu ai
   - testmu ai upload files
   - upload files selenium
-url: https://www.lambdatest.com/support/docs/upload-files-using-lambdatest/
+url: https://www.testmu.ai/support/docs/upload-files-using-testmu
 site_name: LambdaTest
-slug: upload-files-using-lambdatest/
+slug: upload-files-using-testmu
 ---
 
 <script type="application/ld+json"

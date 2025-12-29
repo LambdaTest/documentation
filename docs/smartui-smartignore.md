@@ -9,9 +9,9 @@ keywords:
 - ignore displacement differences
 - smart ignore layout shifts
 - AI based auto ignore
-url: https://www.lambdatest.com/support/docs/smartui-smartignore/
+url: https://www.testmu.ai/support/docs/smartui-smartignore
 site_name: LambdaTest
-slug: smartui-smartignore/
+slug: smartui-smartignore
 
 ---
 import Tabs from '@theme/Tabs';

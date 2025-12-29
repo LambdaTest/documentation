@@ -10,9 +10,9 @@ keywords:
   - browserstack testmu ai selenium testing
   - browserstack testmu ai migration guide
   - how to migrate from browserstack to testmu ai
-url: https://www.lambdatest.com/support/docs/browserstack-to-lambdatest-migration-guide/
+url: https://www.testmu.ai/support/docs/browserstack-to-testmu-migration-guide
 site_name: LambdaTest
-slug: browserstack-to-lambdatest-migration-guide/
+slug: browserstack-to-testmu-migration-guide
 ---
 
 

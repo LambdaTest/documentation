@@ -9,9 +9,9 @@ keywords:
 - testmu ai manual app testing 
 - live-interactive mobile app testing testmu ai
 - geolocation app testing
-url: https://www.lambdatest.com/support/docs/live-interactive-mobile-app-testing/
+url: https://www.testmu.ai/support/docs/live-interactive-mobile-app-testing
 site_name: LambdaTest
-slug: live-interactive-mobile-app-testing/
+slug: live-interactive-mobile-app-testing
 ---
 
 <script type="application/ld+json"

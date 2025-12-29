@@ -10,9 +10,9 @@ keywords:
     - products
     - tosca
     - tricentis
-url: https://www.lambdatest.com/support/docs/tosca-integration-with-hyperexecute-using-dex/
+url: https://www.testmu.ai/support/docs/tosca-integration-with-hyperexecute-using-dex
 site_name: LambdaTest
-slug: tosca-integration-with-hyperexecute-using-dex/
+slug: tosca-integration-with-hyperexecute-using-dex
 ---
 
 <script type="application/ld+json"

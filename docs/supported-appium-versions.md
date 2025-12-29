@@ -15,9 +15,9 @@ keywords:
  - app testing
  - lambdaTest 
  - appium version selection
-url: https://www.lambdatest.com/support/docs/supported-appium-versions/
+url: https://www.testmu.ai/support/docs/supported-appium-versions
 site_name: LambdaTest
-slug: supported-appium-versions/
+slug: supported-appium-versions
 ---
 
 import Tabs from '@theme/Tabs';

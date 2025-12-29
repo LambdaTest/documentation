@@ -12,9 +12,9 @@ keywords:
   - continuous delivery
   - continuous integration tools
   - semaphore ci
-url: https://www.lambdatest.com/support/docs/semaphore-integration-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/semaphore-integration-with-hyperexecute
 site_name: LambdaTest
-slug: semaphore-integration-with-hyperexecute/
+slug: semaphore-integration-with-hyperexecute
 ---
 
 <script type="application/ld+json"

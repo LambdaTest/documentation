@@ -14,9 +14,9 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/camera-image-injection-on-real-devices/
+url: https://www.testmu.ai/support/docs/camera-image-injection-on-real-devices
 site_name: LambdaTest
-slug: camera-image-injection-on-real-devices/
+slug: camera-image-injection-on-real-devices
 ---
 
 import CodeBlock from '@theme/CodeBlock';

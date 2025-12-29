@@ -15,9 +15,9 @@ keywords:
   - Cypress Testing Environment
   - How to Run Cypress Tests
 
-url: https://www.lambdatest.com/support/docs/cyp-environment/
+url: https://www.testmu.ai/support/docs/cyp-environment
 site_name: LambdaTest
-slug: cyp-environment/
+slug: cyp-environment
 ---
 
 import CodeBlock from '@theme/CodeBlock';

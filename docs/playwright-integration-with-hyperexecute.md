@@ -10,9 +10,9 @@ keywords:
     - products
     - playwright integration
     - playwright integration with hyperexecute
-url: https://www.lambdatest.com/support/docs/playwright-integration-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/playwright-integration-with-hyperexecute
 site_name: LambdaTest
-slug: playwright-integration-with-hyperexecute/
+slug: playwright-integration-with-hyperexecute
 ---
 
 <script type="application/ld+json"

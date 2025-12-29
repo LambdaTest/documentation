@@ -9,9 +9,9 @@ keywords:
   - kaneai guided walkthrough
   - kane ai instructions
   - kane ai commands
-url: https://www.lambdatest.com/support/docs/kane-ai-command-guide
+url: https://www.testmu.ai/support/docs/kane-ai-command-guide
 site_name: LambdaTest
-slug: kane-ai-command-guide/
+slug: kane-ai-command-guide
 ---
 
 import Tabs from '@theme/Tabs';

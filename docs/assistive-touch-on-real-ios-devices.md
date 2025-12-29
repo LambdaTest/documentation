@@ -13,9 +13,9 @@ keywords:
   - app switcher
   - testmu ai ios
   - real devices
-url: https://www.lambdatest.com/support/docs/assistive-touch-on-real-ios-devices/
+url: https://www.testmu.ai/support/docs/assistive-touch-on-real-ios-devices
 site_name: LambdaTest
-slug: assistive-touch-on-real-ios-devices/
+slug: assistive-touch-on-real-ios-devices
 ---
 import CodeBlock from '@theme/CodeBlock';
 import { YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY } from "@site/src/component/keys";

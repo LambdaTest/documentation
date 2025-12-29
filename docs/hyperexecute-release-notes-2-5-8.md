@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-5-8/
+url: https://www.testmu.ai/support/docs/hyperexecute-release-notes-2-5-8
 site_name: LambdaTest
-slug: hyperexecute-release-notes-2-5-8/
+slug: hyperexecute-release-notes-2-5-8
 ---
 
 import NewReleaseTag from '../src/component/newRelease.js';

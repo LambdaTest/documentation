@@ -9,9 +9,9 @@ keywords:
   - push issues to github
   - free cross browser testing tool
 image: /assets/images/og-images/default-user-image.webp
-url: https://www.lambdatest.com/support/docs/github-integration/
+url: https://www.testmu.ai/support/docs/github-integration
 site_name: LambdaTest
-slug: github-integration/
+slug: github-integration
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

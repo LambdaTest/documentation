@@ -9,9 +9,9 @@ keywords:
   - debugging using telemetry logs
   - selenium telemetry logs
 
-url: https://www.lambdatest.com/support/docs/selenium-telemetry-logs/
+url: https://www.testmu.ai/support/docs/selenium-telemetry-logs
 site_name: LambdaTest
-slug: selenium-telemetry-logs/
+slug: selenium-telemetry-logs
 ---
 # Debugging in Selenium using Telemetry Logs
 ---

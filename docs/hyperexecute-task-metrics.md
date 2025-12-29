@@ -11,9 +11,9 @@ keywords:
     - HyperExecute
   - HyperExecute Metrics
   - HyperExecute Task
-url: https://www.lambdatest.com/support/docs/hyperexecute-task-metrics/
+url: https://www.testmu.ai/support/docs/hyperexecute-task-metrics
 site_name: LambdaTest
-slug: hyperexecute-task-metrics/
+slug: hyperexecute-task-metrics
 ---
 
 <script type="application/ld+json"

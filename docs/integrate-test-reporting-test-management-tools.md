@@ -8,9 +8,9 @@ keywords:
   - TestMu AI integration
   - testmu ai integration with test management tools
   - testmu ai selenium grid integration
-url: https://www.lambdatest.com/support/docs/integrate-test-reporting-test-management-tools
+url: https://www.testmu.ai/support/docs/integrate-test-reporting-test-management-tools
 site_name: LambdaTest
-slug: integrate-test-reporting-test-management-tools/
+slug: integrate-test-reporting-test-management-tools
 ---
 
 <script type="application/ld+json"

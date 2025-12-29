@@ -12,8 +12,8 @@ keywords:
   - selenium testing
   - testmu ai selenium
 
-url: https://www.lambdatest.com/support/docs/selenium-java-sdk/
-slug: selenium-java-sdk/
+url: https://www.testmu.ai/support/docs/selenium-java-sdk
+slug: selenium-java-sdk
 ---
 
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";

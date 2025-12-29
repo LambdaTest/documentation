@@ -9,9 +9,9 @@ keywords:
   - Dashboard
   - Automation Testing
   - Lambdatest Dashboard
-url: https://www.lambdatest.com/support/docs/lambdatest-running-your-first-selenium-test/
+url: https://www.testmu.ai/support/docs/testmu-running-your-first-selenium-test
 site_name: LambdaTest
-slug: lambdatest-running-your-first-selenium-test/
+slug: testmu-running-your-first-selenium-test
 ---
 
 import Tabs from '@theme/Tabs';

@@ -22,7 +22,7 @@ keywords:
   - simulate GPS location UC Browser Turbo
   - simulate GPS location Opera
   - simulate GPS location Yandex
-url: https://www.lambdatest.com/support/docs/ip-geolocation-on-real-devices-browser/
+url: https://www.testmu.ai/support/docs/ip-geolocation-on-real-devices-browser
 site_name: LambdaTest
 slug: ip-geolocation-on-real-devices-browser/
 ---

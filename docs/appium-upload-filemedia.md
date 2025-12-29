@@ -13,9 +13,9 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/uploadMedia/
+url: https://www.testmu.ai/support/docs/uploadMedia
 site_name: LambdaTest
-slug: upload-media/
+slug: upload-media
 ---
 
 import CodeBlock from '@theme/CodeBlock';

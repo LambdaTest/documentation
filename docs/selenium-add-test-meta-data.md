@@ -12,9 +12,9 @@ keywords:
   - traceability
   - debugging
   - reporting
-url: https://www.lambdatest.com/support/docs/selenium-add-test-meta-data/
+url: https://www.testmu.ai/support/docs/selenium-add-test-meta-data
 site_name: LambdaTest
-slug: selenium-add-test-meta-data/
+slug: selenium-add-test-meta-data
 ---
 
 import Tabs from '@theme/Tabs';

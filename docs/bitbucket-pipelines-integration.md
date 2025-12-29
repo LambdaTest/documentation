@@ -10,9 +10,9 @@ keywords:
   - continuous delivery pipeline
   - bitbucket pipelines for continuous delivery
   
-url: https://www.lambdatest.com/support/docs/bitbucket-pipelines-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/bitbucket-pipelines-integration-with-testmu
 site_name: LambdaTest
-slug: bitbucket-pipelines-integration-with-lambdatest/
+slug: bitbucket-pipelines-integration-with-testmu
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

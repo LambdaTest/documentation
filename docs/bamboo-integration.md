@@ -8,9 +8,9 @@ keywords:
   - bamboo integrations
   - testmu ai integrations with ci/cd tools
   - continuous integration
-url: https://www.lambdatest.com/support/docs/bamboo-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/bamboo-integration-with-testmu
 site_name: LambdaTest
-slug: bamboo-integration-with-lambdatest/
+slug: bamboo-integration-with-testmu
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -9,9 +9,9 @@ keywords:
   - accessibility
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/screen-reader-voiceover-real-devices-app/
+url: https://www.testmu.ai/support/docs/screen-reader-voiceover-real-devices-app
 site_name: LambdaTest
-slug: screen-reader-voiceover-real-devices-app/
+slug: screen-reader-voiceover-real-devices-app
 ---
 
 import CodeBlock from '@theme/CodeBlock';

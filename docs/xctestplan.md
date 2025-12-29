@@ -13,9 +13,9 @@ keywords:
   - testing in XCUI
   - XCUI testing
   - real devices
-url: https://www.lambdatest.com/support/docs/xctestplan/
+url: https://www.testmu.ai/support/docs/xctestplan
 site_name: LambdaTest
-slug: xctestplan/
+slug: xctestplan
 ---
 
 import CodeBlock from '@theme/CodeBlock';

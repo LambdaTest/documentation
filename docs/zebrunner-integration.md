@@ -11,9 +11,9 @@ keywords:
 - zebrunner integration with testmu ai
 - testmu ai integration with zebrunner
 - zebrunner testmu ai
-url: https://www.lambdatest.com/support/docs/zebrunner-integration/
+url: https://www.testmu.ai/support/docs/zebrunner-integration
 site_name: LambdaTest
-slug: zebrunner-integration/
+slug: zebrunner-integration
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

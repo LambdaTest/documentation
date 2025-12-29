@@ -9,9 +9,9 @@ keywords:
   - capybara selenium
   - ruby selenium
 image: /assets/images/og-images/Capybara-Ruby-Automation-Testing.jpg
-url: https://www.lambdatest.com/support/docs/ruby-with-capybara-running-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/ruby-with-capybara-running-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: ruby-with-capybara-running-automation-scripts-on-lambdatest-selenium-grid/
+slug: ruby-with-capybara-running-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

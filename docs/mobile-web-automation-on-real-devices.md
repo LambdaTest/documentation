@@ -11,9 +11,9 @@ keywords:
 - mobile web automation testmu ai
 - mobile web automation real device
 - how to perform mobile web automation
-url: https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/
+url: https://www.testmu.ai/support/docs/mobile-web-automation-on-real-devices
 site_name: LambdaTest
-slug: mobile-web-automation-on-real-devices/
+slug: mobile-web-automation-on-real-devices
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

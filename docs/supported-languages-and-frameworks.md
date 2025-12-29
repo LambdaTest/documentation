@@ -15,9 +15,9 @@ keywords:
  - test automation frameworks
  - selenium frameworks
 image: /assets/images/og-images/selenium-grid-supported-languages-frameworks.jpg
-url: https://www.lambdatest.com/support/docs/supported-languages-and-frameworks/
+url: https://www.testmu.ai/support/docs/supported-languages-and-frameworks
 site_name: LambdaTest
-slug: supported-languages-and-frameworks/
+slug: supported-languages-and-frameworks
 ---
 
 <script type="application/ld+json"

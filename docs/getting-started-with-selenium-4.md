@@ -9,9 +9,9 @@ keywords:
 - Selenium 4 Automation
 - Selenium 4 Documentation
 
-url: https://www.lambdatest.com/support/docs/getting-started-with-selenium-4/
+url: https://www.testmu.ai/support/docs/getting-started-with-selenium-4
 site_name: LambdaTest
-slug: getting-started-with-selenium-4/
+slug: getting-started-with-selenium-4
 ---
 ## Introduction
 

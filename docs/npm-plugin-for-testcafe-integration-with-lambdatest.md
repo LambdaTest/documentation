@@ -12,9 +12,9 @@ keywords:
   - developer tools
   - npm package
 image: /assets/images/og-images/npm-testcafe-integration.jpg
-url: https://www.lambdatest.com/support/docs/npm-plugin-for-testcafe-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/npm-plugin-for-testcafe-integration-with-testmu
 site_name: LambdaTest
-slug: npm-plugin-for-testcafe-integration-with-lambdatest/
+slug: npm-plugin-for-testcafe-integration-with-testmu
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";

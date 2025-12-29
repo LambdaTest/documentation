@@ -9,9 +9,9 @@ keywords:
   - selenium automation grid
   - selenium bidi testing
   - online selenium automation
-url: https://www.lambdatest.com/support/docs/selenium-bidi-integration/
+url: https://www.testmu.ai/support/docs/selenium-bidi-integration
 site_name: LambdaTest
-slug: selenium-bidi-integration/
+slug: selenium-bidi-integration
 ---
 
 <script type="application/ld+json"

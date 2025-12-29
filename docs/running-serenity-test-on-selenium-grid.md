@@ -10,9 +10,9 @@ keywords:
   - serenity automation testing
   - serenity testing tutorial
   - serenity selenium framework
-url: https://www.lambdatest.com/support/docs/serenity-test-on-selenium-grid/
+url: https://www.testmu.ai/support/docs/serenity-test-on-selenium-grid
 site_name: LambdaTest
-slug: serenity-test-on-selenium-grid/
+slug: serenity-test-on-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

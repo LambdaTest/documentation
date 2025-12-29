@@ -10,9 +10,9 @@ keywords:
   - codeship
   - codeship integration
   - testmu ai codeship integration
-url: https://www.lambdatest.com/support/docs/codeship-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/codeship-integration-with-testmu
 site_name: LambdaTest
-slug: codeship-integration-with-lambdatest/
+slug: codeship-integration-with-testmu
 ---
 
 <script type="application/ld+json"

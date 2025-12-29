@@ -9,9 +9,9 @@ keywords:
   - TestMu AI and YouTrack integration 
   - YouTrack integration
   
-url: https://www.lambdatest.com/support/docs/youtrack-integration/
+url: https://www.testmu.ai/support/docs/youtrack-integration
 site_name: LambdaTest
-slug: youtrack-integration/
+slug: youtrack-integration
 ---
 
 <script type="application/ld+json"

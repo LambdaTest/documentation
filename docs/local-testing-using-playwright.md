@@ -11,9 +11,9 @@ keywords:
   - local cross browser testing
   - local testing playwright
   
-url: https://www.lambdatest.com/support/docs/local-testing-using-playwright/
+url: https://www.testmu.ai/support/docs/local-testing-using-playwright
 site_name: LambdaTest
-slug: local-testing-using-playwright/
+slug: local-testing-using-playwright
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

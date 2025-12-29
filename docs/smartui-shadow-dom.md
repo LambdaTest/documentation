@@ -14,8 +14,8 @@ keywords:
   - Visual Regression Run Specific Test
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
-url: https://www.lambdatest.com/support/docs/smartui-shadow-dom/
-slug: smartui-shadow-dom/
+url: https://www.testmu.ai/support/docs/smartui-shadow-dom
+slug: smartui-shadow-dom
 
 ---
 import Tabs from '@theme/Tabs';

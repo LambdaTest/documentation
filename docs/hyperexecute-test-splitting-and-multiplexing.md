@@ -8,9 +8,9 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-test-splitting-and-multiplexing/
+url: https://www.testmu.ai/support/docs/hyperexecute-test-splitting-and-multiplexing
 site_name: LambdaTest
-slug: hyperexecute-test-splitting-and-multiplexing/
+slug: hyperexecute-test-splitting-and-multiplexing
 ---
 
 <script type="application/ld+json"

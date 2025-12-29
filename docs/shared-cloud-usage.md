@@ -7,9 +7,9 @@ description: To ensure fair usage and best practices, TestMu AI enforces a daily
 keywords:
   - over-exploitation
 image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/shared-cloud-usage/
+url: https://www.testmu.ai/support/docs/shared-cloud-usage
 site_name: LambdaTest
-slug: shared-cloud-usage/
+slug: shared-cloud-usage
 ---
 
 <script type="application/ld+json"

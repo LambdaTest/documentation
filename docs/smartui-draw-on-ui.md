@@ -20,8 +20,8 @@ keywords:
   - Floating Regions
   - Ignore Colors
 
-url: https://www.lambdatest.com/support/docs/smartui-ignore-regions/
-slug: smartui-draw-on-ui/
+url: https://www.testmu.ai/support/docs/smartui-ignore-regions
+slug: smartui-draw-on-ui
 
 ---
 import Tabs from '@theme/Tabs';

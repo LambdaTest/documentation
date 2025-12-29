@@ -12,9 +12,9 @@ keywords:
   - mobile test
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/appium-lambdatest-hooks/
+url: https://www.testmu.ai/support/docs/appium-testmu-hooks
 site_name: LambdaTest
-slug: appium-lambdatest-hooks/
+slug: appium-testmu-hooks
 ---
 
 <script type="application/ld+json"

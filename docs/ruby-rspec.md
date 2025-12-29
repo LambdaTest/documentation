@@ -9,9 +9,9 @@ keywords:
   - rspec selenium
   - ruby selenium
 image: /assets/images/og-images/Run-RSpec-Tests.jpg
-url: https://www.lambdatest.com/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: rspec-with-selenium-running-rspec-automation-scripts-on-lambdatest-selenium-grid/
+slug: rspec-with-selenium-running-rspec-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

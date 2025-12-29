@@ -12,9 +12,9 @@ keywords:
   - playwright testing testmu ai
   - playwright android
 
-url: https://www.lambdatest.com/support/docs/playwright-android/
+url: https://www.testmu.ai/support/docs/playwright-android
 site_name: LambdaTest
-slug: playwright-android/
+slug: playwright-android
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

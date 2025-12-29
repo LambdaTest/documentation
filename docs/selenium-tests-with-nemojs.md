@@ -10,9 +10,9 @@ keywords:
 - nemojs automation testing
 - nemojs automation framework
 image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/selenium-tests-with-nemojs/
+url: https://www.testmu.ai/support/docs/selenium-tests-with-nemojs
 site_name: LambdaTest
-slug: selenium-tests-with-nemojs/
+slug: selenium-tests-with-nemojs
 ---
 
 <script type="application/ld+json"

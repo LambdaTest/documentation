@@ -8,9 +8,9 @@ keywords:
   - TestMu AI integration with Bugsnag
   - TestMu AI and Bugsnag Integration
   - Bugsnag Integration
-url: https://www.lambdatest.com/support/docs/bugsnag-integration/
+url: https://www.testmu.ai/support/docs/bugsnag-integration
 site_name: LambdaTest
-slug: bugsnag-integration/
+slug: bugsnag-integration
 ---
 
 <script type="application/ld+json"

@@ -9,9 +9,9 @@ keywords:
   - testmu ai integration
   - bug reporting
   - team communication
-url: https://www.lambdatest.com/support/docs/slack-integration/
+url: https://www.testmu.ai/support/docs/slack-integration
 site_name: LambdaTest
-slug: slack-integration/
+slug: slack-integration
 ---
 
 <script type="application/ld+json"

@@ -13,9 +13,9 @@ keywords:
   - real time testing
   - appium automation
 
-url: https://www.lambdatest.com/support/docs/appium-python-pytest/
+url: https://www.testmu.ai/support/docs/appium-python-pytest
 site_name: LambdaTest
-slug: appium-python-pytest/
+slug: appium-python-pytest
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -20,9 +20,9 @@ keywords:
   - drone ci secrets
   - drone ci setup
   - drone ci trigger
-url: https://www.lambdatest.com/support/docs/drone-ci-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/drone-ci-integration-with-testmu
 site_name: LambdaTest
-slug: drone-ci-integration-with-lambdatest/
+slug: drone-ci-integration-with-testmu
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

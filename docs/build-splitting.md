@@ -10,9 +10,9 @@ keywords:
   - automation build preference
   - build inactivity time
 
-url: https://www.lambdatest.com/support/docs/build-inactivity-time/
+url: https://www.testmu.ai/support/docs/build-inactivity-time
 site_name: LambdaTest
-slug: build-inactivity-time/
+slug: build-inactivity-time
 ---
 
 # Setting Up the Build Inactivity Time [Build Splitting]

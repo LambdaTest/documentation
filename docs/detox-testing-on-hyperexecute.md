@@ -16,9 +16,9 @@ keywords:
   - detox tests on hyperexecute
   - hyperexecute automation testing
   - HyperExecute React Native automation
-url: https://www.lambdatest.com/support/docs/hyperexecute-detox-testing/
+url: https://www.testmu.ai/support/docs/hyperexecute-detox-testing
 site_name: LambdaTest
-slug: hyperexecute-detox-testing/
+slug: hyperexecute-detox-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';

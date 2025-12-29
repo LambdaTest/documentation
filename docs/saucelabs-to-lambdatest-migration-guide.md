@@ -15,9 +15,9 @@ keywords:
   - sauce labs testmu ai selenium testing
   - sauce labs testmu ai migration guide
   - how to migrate from sauce labs to testmu ai
-url: https://www.lambdatest.com/support/docs/saucelabs-to-lambdatest-migration-guide/
+url: https://www.testmu.ai/support/docs/saucelabs-to-testmu-migration-guide
 site_name: LambdaTest
-slug: saucelabs-to-lambdatest-migration-guide/
+slug: saucelabs-to-testmu-migration-guide
 ---
 
 import CodeBlock from '@theme/CodeBlock';

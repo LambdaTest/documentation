@@ -9,9 +9,9 @@ keywords:
   - How to integrate Asana with TestMu AI
   - bug management tools in TestMu AI
 image: /assets/images/og-images/default-user-image.png
-url: https://staging.lambdatest.com/support/docs/asana-integration/
+url: https://testmu.ai/support/docs/asana-integration
 site_name: LambdaTest
-slug: asana-integration/
+slug: asana-integration
 ---
 
 <script type="application/ld+json"

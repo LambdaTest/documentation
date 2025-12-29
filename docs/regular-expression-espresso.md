@@ -7,9 +7,9 @@ description: If your chosen device for testing on TestMu AI is unavailable, use 
 keywords:
 - regular expression testmu ai
 - regular expression app automation
-url: https://www.lambdatest.com/support/docs/regular-expression-espresso/
+url: https://www.testmu.ai/support/docs/regular-expression-espresso
 site_name: LambdaTest
-slug: regular-expression-espresso/
+slug: regular-expression-espresso
 ---
 
 <script type="application/ld+json"

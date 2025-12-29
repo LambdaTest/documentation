@@ -12,9 +12,9 @@ keywords:
 - xcuitest bitrise
 - app testing with bitrise 
 - app automation bitrise
-url: https://www.lambdatest.com/support/docs/bitrise-integration-xcuitest/
+url: https://www.testmu.ai/support/docs/bitrise-integration-xcuitest
 site_name: LambdaTest
-slug: bitrise-integration-xcuitest/
+slug: bitrise-integration-xcuitest
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

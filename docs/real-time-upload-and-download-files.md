@@ -16,9 +16,9 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/real-time-upload-and-download-files/
+url: https://www.testmu.ai/support/docs/real-time-upload-and-download-files
 site_name: LambdaTest
-slug: real-time-upload-and-download-files/
+slug: real-time-upload-and-download-files
 ---
 
 import Tabs from '@theme/Tabs';

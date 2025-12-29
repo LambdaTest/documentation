@@ -8,9 +8,9 @@ keywords:
   - specflow testing reports
   - specflow testing testmu ai 
   
-url: https://www.lambdatest.com/support/docs/specflow-report/
+url: https://www.testmu.ai/support/docs/specflow-report
 site_name: LambdaTest
-slug: specflow-report/
+slug: specflow-report
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

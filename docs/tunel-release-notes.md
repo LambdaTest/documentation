@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Tunnel help
   - TestMu AI Tunnel documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/tunnel-release-notes/
+url: https://www.testmu.ai/support/docs/tunnel-release-notes
 site_name: LambdaTest
-slug: tunnel-release-notes/
+slug: tunnel-release-notes
 ---
 
 <script type="application/ld+json"

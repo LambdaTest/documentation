@@ -11,9 +11,9 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - buildkite ci cd
-url: https://www.lambdatest.com/support/docs/smartui-with-buildkite/
+url: https://www.testmu.ai/support/docs/smartui-with-buildkite
 site_name: LambdaTest
-slug: smartui-with-buildkite/
+slug: smartui-with-buildkite
 
 ---
 import Tabs from '@theme/Tabs';

@@ -13,9 +13,9 @@ keywords:
   - enterprise apps
   - testmu ai ios
   - real devices
-url: https://www.lambdatest.com/support/docs/device-passcode-on-realdevice/
+url: https://www.testmu.ai/support/docs/device-passcode-on-realdevice
 site_name: LambdaTest
-slug: device-passcode-on-realdevice/
+slug: device-passcode-on-realdevice
 
 ---
 

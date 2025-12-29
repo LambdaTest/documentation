@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Trello integration
   - Push issues to Trello
 image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/trello-integration/
+url: https://www.testmu.ai/support/docs/trello-integration
 site_name: LambdaTest
-slug: trello-integration/
+slug: trello-integration
 ---
 
 <script type="application/ld+json"

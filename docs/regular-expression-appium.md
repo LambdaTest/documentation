@@ -7,9 +7,9 @@ description: If your chosen device for testing on TestMu AI is unavailable, use 
 keywords:
 - regular expression testmu ai
 - regular expression app automation
-url: https://www.lambdatest.com/support/docs/regular-expression-appium/
+url: https://www.testmu.ai/support/docs/regular-expression-appium
 site_name: LambdaTest
-slug: regular-expression-appium/
+slug: regular-expression-appium
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";

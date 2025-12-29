@@ -10,9 +10,9 @@ keywords:
   - buildkite
   - buildkite integration
   - testmu ai buildkite integration
-url: https://www.lambdatest.com/support/docs/buildkite-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/buildkite-integration-with-testmu
 site_name: LambdaTest
-slug: buildkite-integration-with-lambdatest/
+slug: buildkite-integration-with-testmu
 ---
 
 <script type="application/ld+json"

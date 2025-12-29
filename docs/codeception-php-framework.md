@@ -17,9 +17,9 @@ keywords:
   - selenium testing tool
   - selenium testing tutorial
 image: /assets/images/og-images/Codeception-Integration-With-LambdaTest.jpg
-url: https://www.lambdatest.com/support/docs/codeception-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/codeception-integration-with-testmu
 site_name: LambdaTest
-slug: codeception-integration-with-lambdatest/
+slug: codeception-integration-with-testmu
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

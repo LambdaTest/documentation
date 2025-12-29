@@ -12,9 +12,9 @@ keywords:
  - packages
  - tools
  - dependencies
-url: https://www.lambdatest.com/support/docs/hyperexecute-supported-languages-and-packages/
+url: https://www.testmu.ai/support/docs/hyperexecute-supported-languages-and-packages
 site_name: LambdaTest
-slug: hyperexecute-supported-languages-and-packages/
+slug: hyperexecute-supported-languages-and-packages
 ---
 
 import Tabs from '@theme/Tabs';

@@ -5,9 +5,9 @@ sidebar_label: Allure Test Insights
 description: Test Insights by executing test cases using the Allure report with HyperExecute
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-allure-api-widgets/
+url: https://www.testmu.ai/support/docs/analytics-allure-api-widgets
 site_name: LambdaTest
-slug: analytics-allure-api-widgets/
+slug: analytics-allure-api-widgets
 ---
 
 import NewTag from '../src/component/newTag';

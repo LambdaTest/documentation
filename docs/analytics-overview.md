@@ -5,9 +5,9 @@ sidebar_label: Insights
 description: Optimize test management with Test Insights. Visualize test runs, track progress, and improve quality with actionable analytics. Enhance testing efficiency.
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-overview/
+url: https://www.testmu.ai/support/docs/analytics-overview
 site_name: LambdaTest
-slug: analytics-overview/
+slug: analytics-overview
 ---
 
 <script type="application/ld+json"

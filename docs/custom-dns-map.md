@@ -8,9 +8,9 @@ keywords:
     - custom dns mapping
     - testmu ai custom dns map
 
-url: https://www.lambdatest.com/support/docs/custom-dns-map/
+url: https://www.testmu.ai/support/docs/custom-dns-map
 site_name: LambdaTest
-slug: custom-dns-map/
+slug: custom-dns-map
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

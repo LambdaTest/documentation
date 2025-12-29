@@ -14,9 +14,9 @@ keywords:
   - Visual Regression Run Specific Test
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
-url: https://www.lambdatest.com/support/docs/smartui-github-app-integration/
+url: https://www.testmu.ai/support/docs/smartui-github-app-integration
 site_name: LambdaTest
-slug: smartui-cli-git-branching-strategy/
+slug: smartui-cli-git-branching-strategy
 
 ---
 import Tabs from '@theme/Tabs';

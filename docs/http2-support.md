@@ -11,9 +11,9 @@ keywords:
   - web protocol
   - automatic proxy
 image: /assets/images/og-images/Sharing-Lambda-Tunnel.jpg
-url: https://www.lambdatest.com/support/docs/http2-support/
+url: https://www.testmu.ai/support/docs/http2-support
 site_name: LambdaTest
-slug: http2-support/
+slug: http2-support
 ---
 
 # HTTP/2 Support in LambdaTest Tunnel

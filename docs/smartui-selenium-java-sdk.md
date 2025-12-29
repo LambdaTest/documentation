@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-selenium-java-sdk/
-slug: smartui-selenium-java-sdk/
+url: https://www.testmu.ai/support/docs/smartui-selenium-java-sdk
+slug: smartui-selenium-java-sdk
 
 ---
 import Tabs from '@theme/Tabs';

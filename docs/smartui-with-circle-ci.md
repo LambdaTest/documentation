@@ -11,9 +11,9 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - circle-ci ci cd
-url: https://www.lambdatest.com/support/docs/smartui-with-circle-ci/
+url: https://www.testmu.ai/support/docs/smartui-with-circle-ci
 site_name: LambdaTest
-slug: smartui-with-circle-ci/
+slug: smartui-with-circle-ci
 
 ---
 import Tabs from '@theme/Tabs';

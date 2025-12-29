@@ -9,9 +9,9 @@ keywords:
   - kaneai
   - test manager
   - configurations
-url: https://www.lambdatest.com/support/docs/test-runs-configurations/
+url: https://www.testmu.ai/support/docs/test-runs-configurations
 site_name: LambdaTest
-slug: test-runs-configurations/
+slug: test-runs-configurations
 ---
 
 <script type="application/ld+json"

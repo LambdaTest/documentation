@@ -13,9 +13,9 @@ keywords:
   - test execute
   - hyperexecute job
   - automation
-url: https://www.lambdatest.com/support/docs/hyperexecute-cli-gui/
+url: https://www.testmu.ai/support/docs/hyperexecute-cli-gui
 site_name: LambdaTest
-slug: hyperexecute-cli-gui/
+slug: hyperexecute-cli-gui
 ---
 
 import Tabs from '@theme/Tabs';

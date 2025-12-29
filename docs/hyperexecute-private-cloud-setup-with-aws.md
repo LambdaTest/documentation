@@ -8,9 +8,9 @@ keywords:
 - hyperexecute aws
 - hyperexecute private cloud
 - hyperexecute private cloud aws
-url: https://www.lambdatest.com/support/docs/hyperexecute-private-cloud-setup-with-aws/
+url: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-setup-with-aws
 site_name: LambdaTest
-slug: hyperexecute-private-cloud-setup-with-aws/
+slug: hyperexecute-private-cloud-setup-with-aws
 ---
 
 <script type="application/ld+json"

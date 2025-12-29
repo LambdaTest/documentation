@@ -15,9 +15,9 @@ keywords:
  - how to run selenium ide tests from command line
  - selenium side runner
  - selenium ide side runner
-url: https://www.lambdatest.com/support/docs/run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid/
+url: https://www.testmu.ai/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid
 site_name: LambdaTest
-slug: run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid/
+slug: run-selenium-ide-tests-on-testmu-selenium-cloud-grid
 ---
 
 <script type="application/ld+json"

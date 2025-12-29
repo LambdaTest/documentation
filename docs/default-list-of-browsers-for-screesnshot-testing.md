@@ -21,7 +21,7 @@ keywords:
 - Safari Screenshot Testing
 - Opera Screenshot Testing
 
-url: https://www.lambdatest.com/support/docs/default-list-of-browsers-for-screesnshot-testing/
+url: https://www.testmu.ai/support/docs/default-list-of-browsers-for-screesnshot-testing
 site_name: LambdaTest
 slug: default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing/
 ---

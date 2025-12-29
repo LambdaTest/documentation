@@ -10,9 +10,9 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - HyperExecute
   - HyperExecute Widgets
-url: https://www.lambdatest.com/support/docs/hyperexecute-resource-widgets/
+url: https://www.testmu.ai/support/docs/hyperexecute-resource-widgets
 site_name: LambdaTest
-slug: hyperexecute-resource-widgets/
+slug: hyperexecute-resource-widgets
 ---
 
 <script type="application/ld+json"

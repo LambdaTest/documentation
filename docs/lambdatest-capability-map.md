@@ -12,9 +12,9 @@ keywords:
   - how to migrate desired capabilities from sauce labs to testmu ai
   - how to migrate desired capabilities from browserstack to testmu ai
 
-url: https://www.lambdatest.com/support/docs/lambdatest-capability-map/
+url: https://www.testmu.ai/support/docs/testmu-capability-map
 site_name: LambdaTest
-slug: lambdatest-capability-map/
+slug: testmu-capability-map
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

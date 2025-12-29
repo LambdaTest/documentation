@@ -10,9 +10,9 @@ keywords:
   - TestMu AI Hyperexecute documentation
   - Test Muting
   - Mute test cases
-url: https://www.lambdatest.com/support/docs/hyperexecute-test-muting/
+url: https://www.testmu.ai/support/docs/hyperexecute-test-muting
 site_name: LambdaTest
-slug: hyperexecute-test-muting/
+slug: hyperexecute-test-muting
 ---
 
 <script type="application/ld+json"

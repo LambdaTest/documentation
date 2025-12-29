@@ -10,9 +10,9 @@ keywords:
 - test flutter apps on ios
 - test flutter apps on iphone
 - flutter test app
-url: https://www.lambdatest.com/support/docs/testing-flutter-apps/
+url: https://www.testmu.ai/support/docs/testing-flutter-apps
 site_name: LambdaTest
-slug: testing-flutter-apps/
+slug: testing-flutter-apps
 ---
 
 <script type="application/ld+json"

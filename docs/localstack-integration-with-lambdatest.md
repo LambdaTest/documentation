@@ -17,9 +17,9 @@ keywords:
   - create localstack issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/localstack-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/localstack-integration-with-testmu
 site_name: LambdaTest
-slug: localstack-integration-with-lambdatest/
+slug: localstack-integration-with-testmu
 ---
 
 <script type="application/ld+json"

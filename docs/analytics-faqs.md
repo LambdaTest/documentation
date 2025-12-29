@@ -5,9 +5,9 @@ sidebar_label: FAQs
 description: Analytics - FAQs
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-faqs/
+url: https://www.testmu.ai/support/docs/analytics-faqs
 site_name: LambdaTest
-slug: analytics-faqs/
+slug: analytics-faqs
 ---
 
 <script type="application/ld+json"

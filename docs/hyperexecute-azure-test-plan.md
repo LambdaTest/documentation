@@ -10,9 +10,9 @@ keywords:
     - products
     - azure test plan
     - azure integration
-url: https://www.lambdatest.com/support/docs/hyperexecute-azure-test-plan/
+url: https://www.testmu.ai/support/docs/hyperexecute-azure-test-plan
 site_name: LambdaTest
-slug: hyperexecute-azure-test-plan/
+slug: hyperexecute-azure-test-plan
 ---
 
 <script type="application/ld+json"

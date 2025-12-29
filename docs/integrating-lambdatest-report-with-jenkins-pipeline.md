@@ -11,9 +11,9 @@ keywords:
   - jenkins integration 
   - testmu ai integration with jenkins 
   - jenkins freestlye
-url: https://www.lambdatest.com/support/docs/integrating-lambdatest-report-with-jenkins-pipeline
+url: https://www.testmu.ai/support/docs/integrating-testmu-report-with-jenkins-pipeline
 site_name: LambdaTest
-slug: integrating-lambdatest-report-with-jenkins-pipeline/
+slug: integrating-testmu-report-with-jenkins-pipeline
 ---
 # Integrating LambdaTest Report With Jenkins Pipeline
 ---

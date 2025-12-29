@@ -8,9 +8,9 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-rerun-failed-tests/
+url: https://www.testmu.ai/support/docs/hyperexecute-rerun-failed-tests
 site_name: LambdaTest
-slug: hyperexecute-rerun-failed-tests/
+slug: hyperexecute-rerun-failed-tests
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -16,9 +16,9 @@ keywords:
   - tcp
   - websocket
 image: /resources/images/og-images/Testing-Locally-Hosted-Pages-min.jpg
-url: https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/
+url: https://www.testmu.ai/support/docs/testing-locally-hosted-pages
 site_name: LambdaTest
-slug: testing-locally-hosted-pages/
+slug: testing-locally-hosted-pages
 ---
 
 <script type="application/ld+json"

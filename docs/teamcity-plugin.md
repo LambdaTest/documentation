@@ -13,9 +13,9 @@ keywords:
 - TeamCity Tutorial
 - Selenium Testing with TeamCity
 
-url: https://www.lambdatest.com/support/docs/teamcity-plugin/
+url: https://www.testmu.ai/support/docs/teamcity-plugin
 site_name: LambdaTest
-slug: teamcity-plugin/
+slug: teamcity-plugin
 ---
 
 <script type="application/ld+json"

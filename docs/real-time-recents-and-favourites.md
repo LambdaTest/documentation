@@ -16,9 +16,9 @@ keywords:
   - test on gionee elfie e7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/real-time-recents-and-favourites/
+url: https://www.testmu.ai/support/docs/real-time-recents-and-favourites
 site_name: LambdaTest
-slug: real-time-recents-and-favourites/
+slug: real-time-recents-and-favourites
 ---
 
 <script type="application/ld+json"

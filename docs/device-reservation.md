@@ -8,9 +8,9 @@ keywords:
 - device booking
 - testmu ai devices
 - test scheduling
-url: https://www.lambdatest.com/support/docs/device-reservation/
+url: https://www.testmu.ai/support/docs/device-reservation
 site_name: LambdaTest
-slug: Device-reservation/
+slug: Device-reservation
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";

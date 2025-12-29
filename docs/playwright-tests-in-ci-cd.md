@@ -13,9 +13,9 @@ keywords:
   - playwright parallel tests
   - parallel testing with playwright
   
-url: https://www.lambdatest.com/support/docs/playwright-tests-in-ci-cd/
+url: https://www.testmu.ai/support/docs/playwright-tests-in-ci-cd
 site_name: LambdaTest
-slug: playwright-tests-in-ci-cd/
+slug: playwright-tests-in-ci-cd
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -10,9 +10,9 @@ keywords:
   - testmu ai
   - jmeter
   - hyperexecute dashboard
-url: https://www.lambdatest.com/support/docs/hyperexecute-run-jmeter-tests/
+url: https://www.testmu.ai/support/docs/hyperexecute-run-jmeter-tests
 site_name: LambdaTest
-slug: hyperexecute-run-jmeter-tests/
+slug: hyperexecute-run-jmeter-tests
 ---
 
 import CodeBlock from '@theme/CodeBlock';

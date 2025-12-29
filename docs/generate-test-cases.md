@@ -9,9 +9,9 @@ keywords:
   - test case
   - test cases
   - generate test cases
-url: https://www.lambdatest.com/support/docs/generate-test-cases-with-ai/
+url: https://www.testmu.ai/support/docs/generate-test-cases-with-ai
 site_name: LambdaTest
-slug: generate-test-cases-with-ai/
+slug: generate-test-cases-with-ai
 ---
 
 <script type="application/ld+json"

@@ -11,9 +11,9 @@ keywords:
   - continuous integration,continuous delivery
   - continuous integration tools
   - github ci cd
-url: https://www.lambdatest.com/support/docs/smartui-with-github-actions/
+url: https://www.testmu.ai/support/docs/smartui-with-github-actions
 site_name: LambdaTest
-slug: smartui-with-github-actions/
+slug: smartui-with-github-actions
 
 ---
 import Tabs from '@theme/Tabs';

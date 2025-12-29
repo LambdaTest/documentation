@@ -7,9 +7,9 @@ description: Learn how to test apps installed from the App Store on TestMu AI fo
 keywords:
 - install apps from app store
 - app store
-url: https://www.lambdatest.com/support/docs/install-apps-from-app-store/
+url: https://www.testmu.ai/support/docs/install-apps-from-app-store
 site_name: LambdaTest
-slug: install-apps-from-app-store/
+slug: install-apps-from-app-store
 ---
 
 <script type="application/ld+json"

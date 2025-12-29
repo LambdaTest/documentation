@@ -9,9 +9,9 @@ keywords:
   - testmu ai integrations with ci/cd tools 
   - continuous integration
   
-url: https://www.lambdatest.com/support/docs/circleci-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/circleci-integration-with-testmu
 site_name: LambdaTest
-slug: circleci-integration-with-lambdatest/
+slug: circleci-integration-with-testmu
 ---
 
 <script type="application/ld+json"

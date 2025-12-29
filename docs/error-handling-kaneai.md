@@ -9,9 +9,9 @@ keywords:
     - Testing
     - Manual
     - Accessibility Testing Settings
-url: https://www.lambdatest.com/support/docs/error-handling-kaneai/
+url: https://www.testmu.ai/support/docs/error-handling-kaneai
 site_name: LambdaTest
-slug: error-handling-kaneai/
+slug: error-handling-kaneai
 ---
  
 import CodeBlock from '@theme/CodeBlock';

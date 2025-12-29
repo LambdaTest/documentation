@@ -10,9 +10,9 @@ keywords:
   - tosca integration
   - cross browser testing
   - free cross browser testing tool
-url: https://www.lambdatest.com/support/docs/tricentis-tosca-integration-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/tricentis-tosca-integration-testmu-selenium-grid
 site_name: LambdaTest
-slug: tricentis-tosca-integration-lambdatest-selenium-grid/
+slug: tricentis-tosca-integration-testmu-selenium-grid
 ---
 
 LambdaTest provides support with Selenium WebDriver for pacing the execution of your automation test scripts. LambdaTest is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.lambdatest.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Tricentis Tosca on LambdaTest.

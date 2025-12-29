@@ -19,9 +19,9 @@ keywords:
 - keyword driven testing
 
 image: /assets/images/og-images/Tesbo-selenium-testing.jpg
-url: https://www.lambdatest.com/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/
+url: https://www.testmu.ai/support/docs/executing-tesbo-automation-script-over-online-selenium-grid
 site_name: LambdaTest
-slug: executing-tesbo-automation-script-over-online-selenium-grid/
+slug: executing-tesbo-automation-script-over-online-selenium-grid
 ---
 
 <script type="application/ld+json"

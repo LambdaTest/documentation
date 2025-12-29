@@ -16,9 +16,9 @@ keywords:
   - automated browser testing
   - selenium grid online
 image: /assets/images/og-images/Running-Geb-Tests-1.jpg
-url: https://www.lambdatest.com/support/docs/run-geb-tests-on-selenium-grid/
+url: https://www.testmu.ai/support/docs/run-geb-tests-on-selenium-grid
 site_name: LambdaTest
-slug: run-geb-tests-on-selenium-grid/
+slug: run-geb-tests-on-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

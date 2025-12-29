@@ -13,9 +13,9 @@ keywords:
 - selenium testing tool
 - selenium testing tutorial
 
-url: https://www.lambdatest.com/support/docs/python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: python-with-selenium-running-python-automation-scripts-on-lambdatest-selenium-grid/
+slug: python-with-selenium-running-python-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

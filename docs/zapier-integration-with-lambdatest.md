@@ -9,9 +9,9 @@ keywords:
   - cross browser testing
   - zapier dashboard
   - automation on zapier 
-url: https://www.lambdatest.com/support/docs/zapier-integration-with-lambdatest
+url: https://www.testmu.ai/support/docs/zapier-integration-with-testmu
 site_name: LambdaTest
-slug: zapier-integration-with-lambdatest/
+slug: zapier-integration-with-testmu
 ---
 -----------------------------------------------------------------------------------------------------------------------------
 Zapier is a cloud-based platform that allows you to easily automate workflows between your apps and your services without having to build this integration yourself or hire someone to do it for you. Zapier works with Zaps, which you can create by combining multiple apps and services. These Zaps help you streamline your workflow and save time and effort.

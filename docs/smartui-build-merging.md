@@ -10,9 +10,9 @@ keywords:
   - Git Integration
   - Build Management
   - Build Promotion
-url: https://www.lambdatest.com/support/docs/smartui-build-merging/
+url: https://www.testmu.ai/support/docs/smartui-build-merging
 site_name: LambdaTest
-slug: smartui-build-merging/
+slug: smartui-build-merging
 
 ---
 import Tabs from '@theme/Tabs';

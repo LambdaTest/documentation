@@ -11,9 +11,9 @@ keywords:
   - java selenium testing
 
 image: /assets/images/og-images/Java-with-Selenium-1-1.jpg
-url: https://www.lambdatest.com/support/docs/java-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: java-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/
+slug: java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

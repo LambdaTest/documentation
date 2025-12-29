@@ -10,9 +10,9 @@ keywords:
   - open file limit testmu ai
   - testmu ai proxy settings
   - testmu ai proxy profile
-url: https://www.lambdatest.com/support/docs/how-to-set-the-open-file-limit-while-using-tunnel/
+url: https://www.testmu.ai/support/docs/how-to-set-the-open-file-limit-while-using-tunnel
 site_name: LambdaTest
-slug: how-to-set-the-open-file-limit-while-using-tunnel/
+slug: how-to-set-the-open-file-limit-while-using-tunnel
 ---
 
 <script type="application/ld+json"

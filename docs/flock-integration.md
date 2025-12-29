@@ -15,9 +15,9 @@ keywords:
   - create issue in flock from testmu ai
   - flock integration with testmu ai
   - communication tools
-url: https://www.lambdatest.com/support/docs/flock-integration/
+url: https://www.testmu.ai/support/docs/flock-integration
 site_name: LambdaTest
-slug: flock-integration/
+slug: flock-integration
 ---
 
 <script type="application/ld+json"

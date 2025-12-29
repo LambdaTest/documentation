@@ -11,9 +11,9 @@ keywords:
   - share the bug
   - session report
 
-url: https://www.lambdatest.com/support/docs/sharing-test-results/
+url: https://www.testmu.ai/support/docs/sharing-test-results
 site_name: LambdaTest
-slug: sharing-test-results/
+slug: sharing-test-results
 ---
 
 <script type="application/ld+json"

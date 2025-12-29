@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-selenium-csharp-sdk/
-slug: smartui-selenium-csharp-sdk/
+url: https://www.testmu.ai/support/docs/smartui-selenium-csharp-sdk
+slug: smartui-selenium-csharp-sdk
 
 ---
 import Tabs from '@theme/Tabs';

@@ -9,9 +9,9 @@ keywords:
   - Dashboard
   - Automation Testing
   - Lambdatest Dashboard
-url: https://www.lambdatest.com/support/docs/inside-lambdatest-platform/
+url: https://www.testmu.ai/support/docs/inside-testmu-platform
 site_name: LambdaTest
-slug: inside-lambdatest-platform/
+slug: inside-testmu-platform
 ---
 
 <script type="application/ld+json"

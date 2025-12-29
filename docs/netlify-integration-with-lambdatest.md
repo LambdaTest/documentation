@@ -11,9 +11,9 @@ keywords:
   - netlify integration with testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/netlify-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/netlify-integration-with-testmu
 site_name: LambdaTest
-slug: netlify-integration-with-lambdatest/
+slug: netlify-integration-with-testmu
 ---
 
 <script type="application/ld+json"

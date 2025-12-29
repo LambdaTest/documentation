@@ -14,9 +14,9 @@ keywords:
   - Test case management
   - Automated testing 
   - Cloud-based testing
-url: https://www.lambdatest.com/support/docs/hyperexecute-provar-integration/
+url: https://www.testmu.ai/support/docs/hyperexecute-provar-integration
 site_name: LambdaTest
-slug: hyperexecute-provar-integration/
+slug: hyperexecute-provar-integration
 ---
 
 import CodeBlock from '@theme/CodeBlock';

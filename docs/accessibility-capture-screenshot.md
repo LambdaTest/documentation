@@ -11,9 +11,9 @@ keywords:
   - Accessibility Testing Settings
   - Fragment identifier
   - wcag
-url: https://www.lambdatest.com/support/docs/accessibility-capture-screenshot/
+url: https://www.testmu.ai/support/docs/accessibility-capture-screenshot
 site_name: LambdaTest
-slug: accessibility-capture-screenshot/
+slug: accessibility-capture-screenshot
 ---
 
 import CodeBlock from '@theme/CodeBlock';

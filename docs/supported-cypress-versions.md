@@ -15,9 +15,9 @@ keywords:
 - Cypress Testing Environment
 - How to Run Cypress Tests
 
-url: https://www.lambdatest.com/support/docs/supported-cypress-versions/
+url: https://www.testmu.ai/support/docs/supported-cypress-versions
 site_name: LambdaTest
-slug: supported-cypress-versions/
+slug: supported-cypress-versions
 ---
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";

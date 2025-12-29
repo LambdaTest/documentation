@@ -12,9 +12,9 @@ keywords:
   - xcui xcresult
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/xcresult/
+url: https://www.testmu.ai/support/docs/xcresult
 site_name: LambdaTest
-slug: xcresult/
+slug: xcresult
 ---
 
 import CodeBlock from '@theme/CodeBlock';

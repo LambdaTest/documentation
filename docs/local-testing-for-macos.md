@@ -9,9 +9,9 @@ keywords:
   - open file limit testmu ai
   - testmu ai proxy settings
   - testmu ai proxy profile
-url: https://www.lambdatest.com/support/docs/local-testing-for-macos/
+url: https://www.testmu.ai/support/docs/local-testing-for-macos
 site_name: LambdaTest
-slug: local-testing-for-macos/
+slug: local-testing-for-macos
 ---
 ***
 LambdaTest tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through LambdaTest cloud servers. Through our TCP with TLS 1.2 secure connection features, you can also test plain HTML, CSS, PHP, Python or other similar web files saved on your local system, on combinations of operating systems, browsers, and screen resolutions that are available on LambdaTest.

@@ -12,9 +12,9 @@ keywords:
   - playwright testing testmu ai
   - playwright real devices
 
-url: https://www.lambdatest.com/support/docs/playwright-ios-device/
+url: https://www.testmu.ai/support/docs/playwright-ios-device
 site_name: LambdaTest
-slug: playwright-ios-device/
+slug: playwright-ios-device
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

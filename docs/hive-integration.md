@@ -17,9 +17,9 @@ keywords:
   - create jira issues from hive
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/hive-integration/
+url: https://www.testmu.ai/support/docs/hive-integration
 site_name: LambdaTest
-slug: hive-integration/
+slug: hive-integration
 ---
 
 <script type="application/ld+json"

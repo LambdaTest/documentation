@@ -12,9 +12,9 @@ keywords:
   - app testing
   - real devices
 image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/flutter-supported-capabilities/
+url: https://www.testmu.ai/support/docs/flutter-supported-capabilities
 site_name: LambdaTest
-slug: flutter-supported-capabilities/
+slug: flutter-supported-capabilities
 ---
 
 import CodeBlock from '@theme/CodeBlock';

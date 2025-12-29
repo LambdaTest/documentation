@@ -8,9 +8,9 @@ keywords:
 - apis for manual app testing
 - api sfor app automation
 - mobile app testing apis
-url: https://www.lambdatest.com/support/docs/app-testing-apis/
+url: https://www.testmu.ai/support/docs/app-testing-apis
 site_name: LambdaTest
-slug: app-testing-apis/
+slug: app-testing-apis
 ---
 
 import CodeBlock from '@theme/CodeBlock';

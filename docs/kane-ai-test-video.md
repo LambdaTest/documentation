@@ -8,9 +8,9 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
   - kaneai Web test
-url: https://www.lambdatest.com/support/docs/kaneai-test
+url: https://www.testmu.ai/support/docs/kaneai-test
 site_name: LambdaTest
-slug: kaneai-test/
+slug: kaneai-test
 ---
 
 import Tabs from '@theme/Tabs';

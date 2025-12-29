@@ -13,9 +13,9 @@ keywords:
     - continuous integration tools
     - Travis CI integration
     - Travis CI integration with testmu ai
-url: https://www.lambdatest.com/support/docs/travis-ci-with-lambdatest/
+url: https://www.testmu.ai/support/docs/travis-ci-with-testmu
 site_name: LambdaTest
-slug: travis-ci-with-lambdatest/
+slug: travis-ci-with-testmu
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

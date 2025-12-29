@@ -10,9 +10,9 @@ keywords:
   - kaneai geolocation support
   - kaneai tunnel support
   - kaneai proxy support
-url: https://www.lambdatest.com/support/docs/kane-ai-modules/
+url: https://www.testmu.ai/support/docs/kane-ai-modules
 site_name: LambdaTest
-slug: kane-ai-modules/
+slug: kane-ai-modules
 ---
 
 import Tabs from '@theme/Tabs';

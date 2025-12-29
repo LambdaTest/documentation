@@ -13,9 +13,9 @@ keywords:
   - continuous integration tools
   - Jenkins 
   - jenkins tutorial 
-url: https://www.lambdatest.com/support/docs/jenkins-with-lambdatest/
+url: https://www.testmu.ai/support/docs/jenkins-with-testmu
 site_name: LambdaTest
-slug: jenkins-with-lambdatest/
+slug: jenkins-with-testmu
 ---
 
 <script type="application/ld+json"

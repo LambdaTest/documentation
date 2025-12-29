@@ -11,9 +11,9 @@ keywords:
   - real devices trends
   - real devices status ratio
 
-url: https://www.lambdatest.com/support/docs/insights-private-real-devices/
+url: https://www.testmu.ai/support/docs/insights-private-real-devices
 site_name: LambdaTest
-slug: insights-private-real-devices/
+slug: insights-private-real-devices
 ---
 
 <script type="application/ld+json"

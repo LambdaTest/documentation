@@ -13,9 +13,9 @@ keywords:
   - k6 testing tutorial
   - k6 testing testmu ai
 
-url: https://www.lambdatest.com/support/docs/k6-browser-testing/
+url: https://www.testmu.ai/support/docs/k6-browser-testing
 site_name: LambdaTest
-slug: k6-browser-testing/
+slug: k6-browser-testing
 ---
 
 <script type="application/ld+json"

@@ -9,9 +9,9 @@ keywords:
   - TestMu AI SSO
   - Create SSO
   - SSO Self Serve
-url: https://www.lambdatest.com/support/docs/lambdatest-sso-self-serve/
+url: https://www.testmu.ai/support/docs/testmu-sso-self-serve
 site_name: LambdaTest
-slug: lambdatest-sso-self-serve/
+slug: testmu-sso-self-serve
 ---
 
 <script type="application/ld+json"

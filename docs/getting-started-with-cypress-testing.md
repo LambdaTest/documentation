@@ -16,9 +16,9 @@ keywords:
   - Cypress Testing Environment
   - How to Run Cypress Tests
 
-url: https://www.lambdatest.com/support/docs/getting-started-with-cypress-testing/
+url: https://www.testmu.ai/support/docs/getting-started-with-cypress-testing
 site_name: LambdaTest
-slug: getting-started-with-cypress-testing/
+slug: getting-started-with-cypress-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';

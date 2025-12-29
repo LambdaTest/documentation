@@ -11,9 +11,9 @@ keywords:
  - test browser
  - test OS
  - test device coverage
-url: https://www.lambdatest.com/support/docs/analytics-modules-automation-test-overview/
+url: https://www.testmu.ai/support/docs/analytics-modules-automation-test-overview
 site_name: LambdaTest
-slug: analytics-modules-automation-test-overview/
+slug: analytics-modules-automation-test-overview
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

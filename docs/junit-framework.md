@@ -14,9 +14,9 @@ keywords:
   - junit test cases
   - selenium junit
 image: /assets/images/og-images/JUnit-automation-testing-with-selenium.jpg
-url: https://www.lambdatest.com/support/docs/junit-with-selenium-running-junit-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: junit-with-selenium-running-junit-automation-scripts-on-lambdatest-selenium-grid/
+slug: junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

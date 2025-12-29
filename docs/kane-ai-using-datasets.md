@@ -9,9 +9,9 @@ keywords:
   - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
-url: https://www.lambdatest.com/support/docs/kane-ai-using-datasets/
+url: https://www.testmu.ai/support/docs/kane-ai-using-datasets
 site_name: LambdaTest
-slug: kane-ai-using-datasets/
+slug: kane-ai-using-datasets
 ---
 
 import Tabs from '@theme/Tabs';

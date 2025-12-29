@@ -8,9 +8,9 @@ keywords:
 - how to upload .app files on ios simulators
 - how to upload .app files on simulators
 - how to upload .app files for ios simulator testing
-url: https://www.lambdatest.com/support/docs/troubleshooting-ios-app-testing/
+url: https://www.testmu.ai/support/docs/troubleshooting-ios-app-testing
 site_name: LambdaTest
-slug: troubleshooting-ios-app-testing/
+slug: troubleshooting-ios-app-testing
 ---
 
 <script type="application/ld+json"

@@ -8,9 +8,9 @@ keywords:
   - testmu ai integration with accelq
   - testmu ai and accelq integration 
   - accelq integration
-url: https://www.lambdatest.com/support/docs/accelq-integration/
+url: https://www.testmu.ai/support/docs/accelq-integration
 site_name: LambdaTest
-slug: accelq-integration/
+slug: accelq-integration
 ---
 
 <script type="application/ld+json"

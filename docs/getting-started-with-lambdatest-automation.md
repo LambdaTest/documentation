@@ -14,9 +14,9 @@ keywords:
   - selenium getting started
   - testmu ai getting started
 image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/
+url: https://www.testmu.ai/support/docs/getting-started-with-testmu-automation
 site_name: LambdaTest
-slug: getting-started-with-lambdatest-automation/
+slug: getting-started-with-testmu-automation
 ---
 import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/SeleniumSupportedLanguage';
 

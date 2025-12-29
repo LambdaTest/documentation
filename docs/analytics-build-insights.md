@@ -10,9 +10,9 @@ keywords:
   - Perfecto test insights alternative 
   - perfecto test insights
   - test observability 
-url: https://www.lambdatest.com/support/docs/analytics-build-insights/
+url: https://www.testmu.ai/support/docs/analytics-build-insights
 site_name: LambdaTest
-slug: analytics-build-insights/
+slug: analytics-build-insights
 ---
 
 <script type="application/ld+json"
