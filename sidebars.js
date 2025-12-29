@@ -928,6 +928,16 @@ module.exports = {
               {
                 type: "category",
                 collapsed: true,
+                label: "December, 2025",
+                items: [
+                  "hyperexecute-release-notes-3-1-7",
+                  "hyperexecute-release-notes-3-1-6",
+                  "hyperexecute-release-notes-3-1-5",
+                ],
+              },
+              {
+                type: "category",
+                collapsed: true,
                 label: "November, 2025",
                 items: [
                   "hyperexecute-release-notes-3-1-4",
