@@ -157,13 +157,13 @@ Yes, it provides AI FinOps capabilities for cost control and spend management, e
 
 **Key capabilities include:**
 
-- Credit reservation system with pre-operation credit checks, reservation IDs per operation, and automatic blocking when credits are insufficient
+- Credit reservation system with pre-operation credit checks, reservation IDs per operation, and automatic blocking when credits are insufficient.
 
-- Cost tracking per operation type, including phone scenario generation, phone call execution, chat scenario generation, chat evaluation, and image analysis
+- Cost tracking per operation type, including phone scenario generation, phone call execution, chat scenario generation, chat evaluation, and image analysis.
 
-- Credit balance management with real-time credit monitoring, consumption tracking, and organization-level cost summaries
+- Credit balance management with real-time credit monitoring, consumption tracking, and organization-level cost summaries.
 
-- Cost metrics and analytics covering operation-level breakdowns, project-level aggregation, and historical cost analysis
+- Cost metrics and analytics covering operation-level breakdowns, project-level aggregation, and historical cost analysis.
 
 ---
 
