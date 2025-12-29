@@ -19,7 +19,7 @@ keywords:
 image: /assets/images/og-images/fb2.jpg
 url: https://www.testmu.ai/support/docs
 site_name: LambdaTest
-slug: 
+slug: /
 ---
 
 import AutomationLightIcon from '../assets/images/support/automation-light-icon.svg';
