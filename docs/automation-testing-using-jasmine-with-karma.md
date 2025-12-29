@@ -13,9 +13,9 @@ keywords:
   - selenium javascript testing tutorial
   - javascript selenium framework
 image: /assets/images/og-images/jasmine-with-karma.jpg
-url: https://www.lambdatest.com/support/docs/jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/
+slug: jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid
 ---
 
 <script type="application/ld+json"

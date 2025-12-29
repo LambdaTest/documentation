@@ -11,9 +11,9 @@ keywords:
   - selenium javascript testing guide
   - javascript selenium framework
 image: /assets/images/og-images/javascript-with-Selenium.jpg 
-url: https://www.lambdatest.com/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: javascript-with-selenium-running-javascript-automation-scripts-on-lambdatest-selenium-grid/
+slug: javascript-with-selenium-running-javascript-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

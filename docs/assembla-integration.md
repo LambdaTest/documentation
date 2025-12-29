@@ -17,9 +17,9 @@ keywords:
   - create assembla issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/assembla-integration/
+url: https://www.testmu.ai/support/docs/assembla-integration
 site_name: LambdaTest
-slug: assembla-integration/
+slug: assembla-integration
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

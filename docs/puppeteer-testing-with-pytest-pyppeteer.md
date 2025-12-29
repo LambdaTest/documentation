@@ -17,9 +17,9 @@ keywords:
   - puppeteer testing tutorial
   - puppeteer testing testmu ai
 
-url: https://www.lambdatest.com/support/docs/puppeteer-testing-with-pytest-pyppeteer/
+url: https://www.testmu.ai/support/docs/puppeteer-testing-with-pytest-pyppeteer
 site_name: LambdaTest
-slug: puppeteer-testing-with-pytest-pyppeteer/
+slug: puppeteer-testing-with-pytest-pyppeteer
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -9,9 +9,9 @@ keywords:
   - applitools integration
   - cross browser testing
   - free cross browser testing tool
-url: https://www.lambdatest.com/support/docs/applitools-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/applitools-integration-with-testmu
 site_name: LambdaTest
-slug: applitools-integration-with-lambdatest/
+slug: applitools-integration-with-testmu
 ---
 
 import CodeBlock from '@theme/CodeBlock';

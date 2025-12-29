@@ -10,9 +10,9 @@ keywords:
 - mobile test
 - app testing
 - real devices
-url: https://www.lambdatest.com/support/docs/appium-install-uninstall-lambdatest-hooks/
+url: https://www.testmu.ai/support/docs/appium-install-uninstall-testmu-hooks
 site_name: LambdaTest
-slug: appium-install-uninstall-lambdatest-hooks/
+slug: appium-install-uninstall-testmu-hooks
 ---
 
 <script type="application/ld+json"

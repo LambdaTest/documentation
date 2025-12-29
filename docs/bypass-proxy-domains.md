@@ -8,9 +8,9 @@ keywords:
 - custom headers testmu ai
 - bypass firewalls restrictions
 - custom headers bypass firewalls
-url: https://www.lambdatest.com/support/docs/bypass-proxy-domains/
+url: https://www.testmu.ai/support/docs/bypass-proxy-domains
 site_name: LambdaTest
-slug: bypass-proxy-domains/
+slug: bypass-proxy-domains
 ---
 
 <script type="application/ld+json"

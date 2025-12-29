@@ -13,9 +13,9 @@ keywords:
   - hyperexecute automation grid online
   - hyperexecute getting started
 image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/password-and-access-key-expiration-policy/
+url: https://www.testmu.ai/support/docs/password-and-access-key-expiration-policy
 site_name: LambdaTest
-slug: password-and-access-key-expiration-policy/
+slug: password-and-access-key-expiration-policy
 ---
 
 <script type="application/ld+json"

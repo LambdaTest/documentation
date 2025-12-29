@@ -8,9 +8,9 @@ keywords:
   - live debugging
   - xpath
   - app automation debugging
-url: https://www.lambdatest.com/support/docs/live-debug-in-app-automation/
+url: https://www.testmu.ai/support/docs/live-debug-in-app-automation
 site_name: LambdaTest
-slug: live-debug-in-app-automation/
+slug: live-debug-in-app-automation
 ---
 
 import CodeBlock from '@theme/CodeBlock';

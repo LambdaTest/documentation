@@ -10,9 +10,9 @@ keywords:
 - mark as a bug in testmu ai
 - one click bug logging
 - one click bug logging in testmu ai
-url: https://www.lambdatest.com/support/docs/mark-as-bug-in-screenshot-testing/
+url: https://www.testmu.ai/support/docs/mark-as-bug-in-screenshot-testing
 site_name: LambdaTest
-slug: mark-as-bug-in-screenshot-testing/
+slug: mark-as-bug-in-screenshot-testing
 ---
 
 <script type="application/ld+json"

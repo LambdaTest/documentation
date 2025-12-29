@@ -10,9 +10,9 @@ keywords:
     - Google lighthouse integration
     - testmu ai reporting
     - lt browser
-url: https://www.lambdatest.com/support/docs/performance-report/
+url: https://www.testmu.ai/support/docs/performance-report
 site_name: LambdaTest
-slug: performance-report/
+slug: performance-report
 ---
 
 <script type="application/ld+json"

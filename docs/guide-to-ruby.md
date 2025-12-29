@@ -16,9 +16,9 @@ keywords:
   - ruby selenium scripts
 
 image: /assets/images/og-images/run-ruby-tests-on-online-Selenium-grid.jpg
-url: https://www.lambdatest.com/support/docs/quick-guide-to-run-ruby-tests-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/quick-guide-to-run-ruby-tests-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: quick-guide-to-run-ruby-tests-on-lambdatest-selenium-grid/
+slug: quick-guide-to-run-ruby-tests-on-testmu-selenium-grid
 ---
 
 <script type="application/ld+json"

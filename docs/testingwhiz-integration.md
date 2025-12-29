@@ -10,9 +10,9 @@ keywords:
  - test automation 
  - integration with Lambdatest
  - testmu ai integration with testingwhiz
-url: https://www.lambdatest.com/support/docs/testingwhiz-integration/
+url: https://www.testmu.ai/support/docs/testingwhiz-integration
 site_name: LambdaTest
-slug: testingwhiz-integration/
+slug: testingwhiz-integration
 ---
 
 <script type="application/ld+json"

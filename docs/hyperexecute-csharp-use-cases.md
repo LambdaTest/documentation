@@ -11,9 +11,9 @@ keywords:
   - C Sharp
   - NUnit
   - Specflow
-url: https://www.lambdatest.com/support/docs/hyperexecute-csharp-use-cases/
+url: https://www.testmu.ai/support/docs/hyperexecute-csharp-use-cases
 site_name: LambdaTest
-slug: hyperexecute-csharp-use-cases/
+slug: hyperexecute-csharp-use-cases
 ---
 
 <script type="application/ld+json"

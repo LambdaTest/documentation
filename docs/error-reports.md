@@ -13,9 +13,9 @@ keywords:
   - website error report
   - lt browser javascript
  
-url: https://www.lambdatest.com/support/docs/error-reports/
+url: https://www.testmu.ai/support/docs/error-reports
 site_name: LambdaTest
-slug: error-reports/
+slug: error-reports
 ---
 
 <script type="application/ld+json"

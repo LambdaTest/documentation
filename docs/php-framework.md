@@ -14,9 +14,9 @@ keywords:
   - selenium testing tool
   - selenium testing tutorial
 image: /assets/images/og-images/PHP-automated-testing.jpg
-url: https://www.lambdatest.com/support/docs/php-with-selenium-running-php-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: php-with-selenium-running-php-automation-scripts-on-lambdatest-selenium-grid/
+slug: php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

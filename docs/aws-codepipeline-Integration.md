@@ -11,9 +11,9 @@ keywords:
   - aws codepipeline
   - continuous integration tools
   
-url: https://www.lambdatest.com/support/docs/aws-codepipeline-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/aws-codepipeline-integration-with-testmu
 site_name: LambdaTest
-slug: aws-codepipeline-integration-with-lambdatest/
+slug: aws-codepipeline-integration-with-testmu
 ---
 ***
 <script type="application/ld+json"

@@ -12,9 +12,9 @@ keywords:
  - continuous delivery
  - continuous integration tools
  - appveyor ci
-url: https://www.lambdatest.com/support/docs/appveyor-ci-integration/
+url: https://www.testmu.ai/support/docs/appveyor-ci-integration
 site_name: LambdaTest
-slug: appveyor-ci-integration/
+slug: appveyor-ci-integration
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

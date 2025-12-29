@@ -11,9 +11,9 @@ keywords:
   - http traffic capture
   - domain filtering
   - network configurations
-url: https://www.lambdatest.com/support/docs/network-configurations-in-browser/
+url: https://www.testmu.ai/support/docs/network-configurations-in-browser
 site_name: LambdaTest
-slug: browser-network-configurations/
+slug: browser-network-configurations
 
 ---
 

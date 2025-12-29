@@ -18,9 +18,9 @@ keywords:
   - hyperexecute Capybara testing
   - hyperexecute automation testing
   - HyperExecute Selenium automation
-url: https://www.lambdatest.com/support/docs/capybara-on-hyperexecute-grid/
+url: https://www.testmu.ai/support/docs/capybara-on-hyperexecute-grid
 site_name: LambdaTest
-slug: capybara-on-hyperexecute-grid/
+slug: capybara-on-hyperexecute-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -8,9 +8,9 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-private-cloud-benefits/
+url: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-benefits
 site_name: LambdaTest
-slug: hyperexecute-private-cloud-benefits/
+slug: hyperexecute-private-cloud-benefits
 ---
 
 <script type="application/ld+json"

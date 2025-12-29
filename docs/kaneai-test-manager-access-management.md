@@ -7,9 +7,9 @@ description: This documentation will help you to understand how to allocate lice
 keywords:
 - users management testmu ai
 - manage user
-url: https://www.lambdatest.com/support/docs/kaneai-test-manager-access-management/
+url: https://www.testmu.ai/support/docs/kaneai-test-manager-access-management
 site_name: LambdaTest
-slug: kaneai-test-manager-access-management/
+slug: kaneai-test-manager-access-management
 ---
 
 <script type="application/ld+json"

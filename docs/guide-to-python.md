@@ -9,9 +9,9 @@ keywords:
   - python and Selenium automation
   - python documentation TestMu AI
 image: /assets/images/og-images/run-python-tests-on-selenium-grid.jpg
-url: https://www.lambdatest.com/support/docs/run-python-tests-on-selenium-grid/
+url: https://www.testmu.ai/support/docs/run-python-tests-on-selenium-grid
 site_name: LambdaTest
-slug: run-python-tests-on-selenium-grid/
+slug: run-python-tests-on-selenium-grid
 ---
 
 <script type="application/ld+json"

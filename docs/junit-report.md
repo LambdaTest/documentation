@@ -13,9 +13,9 @@ keywords:
   - app testing
   - real devices
 
-url: https://www.lambdatest.com/support/docs/espresso-junit-report/
+url: https://www.testmu.ai/support/docs/espresso-junit-report
 site_name: LambdaTest
-slug: espresso-junit-report/
+slug: espresso-junit-report
 ---
 
 import CodeBlock from '@theme/CodeBlock';

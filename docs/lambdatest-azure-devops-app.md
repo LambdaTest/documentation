@@ -8,9 +8,9 @@ keywords:
   - Azure DevOps app
   - TestMu AI Azure DevOps App
   - Azure DevOps marketplace
-url: https://www.lambdatest.com/support/docs/lambdatest-azure-devops-app/
+url: https://www.testmu.ai/support/docs/testmu-azure-devops-app
 site_name: LambdaTest
-slug: lambdatest-azure-devops-app/
+slug: testmu-azure-devops-app
 ---
 
 <script type="application/ld+json"

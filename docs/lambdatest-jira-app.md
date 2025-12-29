@@ -7,9 +7,9 @@ description: Efficiently manage your tests with TestMu AI Jira App, seamlessly i
 keywords:
   - Jira app
   - TestMu AI Jira App
-url: https://www.lambdatest.com/support/docs/lambdatest-jira-app/
+url: https://www.testmu.ai/support/docs/testmu-jira-app
 site_name: LambdaTest
-slug: lambdatest-jira-app/
+slug: testmu-jira-app
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

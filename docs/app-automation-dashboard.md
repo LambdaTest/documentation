@@ -8,7 +8,7 @@ keywords:
 - desired capability for app automation
 - app automation dashboard testmu ai
 - mobile app automation testing using appium
-url: https://www.lambdatest.com/support/docs/app-automation-dashboard/
+url: https://www.testmu.ai/support/docs/app-automation-dashboard
 site_name: LambdaTest
 slug: app-automation-dashboard
 ---

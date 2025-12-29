@@ -12,9 +12,9 @@ keywords:
 - Enforce SSO
 - SSO Self Serve
 - Exempt SSO Login
-url: https://www.lambdatest.com/support/docs/lambdatest-sso-manage-connection/
+url: https://www.testmu.ai/support/docs/testmu-sso-manage-connection
 site_name: LambdaTest
-slug: lambdatest-sso-manage-connection/
+slug: testmu-sso-manage-connection
 ---
 
 <script type="application/ld+json"

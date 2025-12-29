@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - How to Find the Correct Concurrency 
-url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-configure-os-and-browser/
+url: https://www.testmu.ai/support/docs/hyperexecute-how-to-configure-os-and-browser
 site_name: LambdaTest
-slug: hyperexecute-how-to-configure-os-and-browser/
+slug: hyperexecute-how-to-configure-os-and-browser
 ---
 
 import Tabs from '@theme/Tabs';

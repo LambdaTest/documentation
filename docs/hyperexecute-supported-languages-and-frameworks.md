@@ -17,9 +17,9 @@ keywords:
  - TestMu AI HyperExecute
  - Super fast Selenium grid
 image: /assets/images/og-images/selenium-grid-supported-languages-frameworks.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-supported-languages-and-frameworks/
+url: https://www.testmu.ai/support/docs/hyperexecute-supported-languages-and-frameworks
 site_name: LambdaTest
-slug: hyperexecute-supported-languages-and-frameworks/
+slug: hyperexecute-supported-languages-and-frameworks
 ---
 
 import Tabs from '@theme/Tabs';

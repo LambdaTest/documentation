@@ -8,9 +8,9 @@ keywords:
   - audit log
   - test instance logs
   - execution history
-url: https://www.lambdatest.com/support/docs/test-instance-audit-logs/
+url: https://www.testmu.ai/support/docs/test-instance-audit-logs
 site_name: LambdaTest
-slug: test-instance-audit-logs/
+slug: test-instance-audit-logs
 ---
 
 <script type="application/ld+json"

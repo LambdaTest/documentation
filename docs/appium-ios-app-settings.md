@@ -12,9 +12,9 @@ keywords:
   - ios app settings
   - app automation
   - real devices
-url: https://www.lambdatest.com/support/docs/appium-ios-app-settings/
+url: https://www.testmu.ai/support/docs/appium-ios-app-settings
 site_name: LambdaTest
-slug: appium-ios-app-settings/
+slug: appium-ios-app-settings
 ---
 import RealDeviceTag from '../src/component/realDevice';
 

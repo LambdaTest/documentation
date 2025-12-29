@@ -12,9 +12,9 @@ keywords:
   - check browser compatibility online 
   - best chrome extensions for developers 
   - best chrome extensions for testers
-url: https://www.lambdatest.com/support/docs/chrome-extension/
+url: https://www.testmu.ai/support/docs/chrome-extension
 site_name: LambdaTest
-slug: chrome-extension/
+slug: chrome-extension
 ---
 
 <script type="application/ld+json"

@@ -8,9 +8,9 @@ keywords:
   - testmu ai integrations
   - push issues to bitbucket
   - free cross browser testing tool
-url: https://www.lambdatest.com/support/docs/bitbucket-integration/
+url: https://www.testmu.ai/support/docs/bitbucket-integration
 site_name: LambdaTest
-slug: bitbucket-integration/
+slug: bitbucket-integration
 
 ---
 

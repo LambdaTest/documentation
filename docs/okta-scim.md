@@ -6,9 +6,9 @@ sidebar_label: Okta
 description: Integrating TestMu AI SCIM with Okta 
 keywords:
     - TestMu AI SCIM
-url: https://www.lambdatest.com/support/docs/scim/okta/
+url: https://www.testmu.ai/support/docs/scim/okta
 site_name: LambdaTest
-slug: scim/okta/
+slug: scim/okta
 ---
 
 <script type="application/ld+json"

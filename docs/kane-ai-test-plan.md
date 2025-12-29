@@ -9,9 +9,9 @@ keywords:
   - testmu ai kaneai
   - kaneai guided walkthrough
   - kane ai test plan
-url: https://www.lambdatest.com/support/docs/kane-ai-test-plan
+url: https://www.testmu.ai/support/docs/kane-ai-test-plan
 site_name: LambdaTest
-slug: kane-ai-test-plan/
+slug: kane-ai-test-plan
 ---
 
 <script type="application/ld+json"

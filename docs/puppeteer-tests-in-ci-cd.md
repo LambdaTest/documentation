@@ -13,9 +13,9 @@ keywords:
   - puppeteer testing testmu ai
 
   
-url: https://www.lambdatest.com/support/docs/puppeteer-tests-in-ci-cd/
+url: https://www.testmu.ai/support/docs/puppeteer-tests-in-ci-cd
 site_name: LambdaTest
-slug: puppeteer-tests-in-ci-cd/
+slug: puppeteer-tests-in-ci-cd
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

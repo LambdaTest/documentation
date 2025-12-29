@@ -15,9 +15,9 @@ keywords:
   - selenium testing using node.js
   - node.js selenium scripts
 image: /assets/images/og-images/run-nodejs-tests-on-selenium-grid-cloud.jpg
-url: https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/quick-guide-to-run-node-js-tests-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/
+slug: quick-guide-to-run-node-js-tests-on-testmu-selenium-grid
 ---
 
 <script type="application/ld+json"

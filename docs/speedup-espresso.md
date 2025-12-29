@@ -13,9 +13,9 @@ keywords:
   - testing in espresso
   - espresso testing
   - real devices
-url: https://www.lambdatest.com/support/docs/speedup-espresso/
+url: https://www.testmu.ai/support/docs/speedup-espresso
 site_name: LambdaTest
-slug: speedup-espresso/
+slug: speedup-espresso
 ---
 
 import CodeBlock from '@theme/CodeBlock';

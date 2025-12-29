@@ -12,9 +12,9 @@ keywords:
   - playwright android testing on testmu ai
   - playwright android testing testmu ai
 
-url: https://www.lambdatest.com/support/docs/capabilities-for-playwright-android/
+url: https://www.testmu.ai/support/docs/capabilities-for-playwright-android
 site_name: LambdaTest
-slug: capabilities-for-playwright-android/
+slug: capabilities-for-playwright-android
 ---
 
 <script type="application/ld+json"

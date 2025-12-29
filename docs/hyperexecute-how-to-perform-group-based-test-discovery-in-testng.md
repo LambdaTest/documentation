@@ -7,9 +7,9 @@ description: Perform group-based test discovery in TestNG with @BeforeGroups and
 keywords:
     - hyperexecute yaml
     - How to Perform Group-Based Test Discovery in TestNG
-url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
+url: https://www.testmu.ai/support/docs/hyperexecute-how-to-perform-group-based-test-discovery-in-testng
 site_name: LambdaTest
-slug: hyperexecute-how-to-perform-group-based-test-discovery-in-testng/
+slug: hyperexecute-how-to-perform-group-based-test-discovery-in-testng
 ---
 
 <script type="application/ld+json"

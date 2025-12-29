@@ -7,9 +7,9 @@ description: Gain insights into effective Test Run Creation with TestMu AI, desi
 keywords:
   - test run
   - test run creation 
-url: https://www.lambdatest.com/support/docs/test-run-creation-and-management/
+url: https://www.testmu.ai/support/docs/test-run-creation-and-management
 site_name: LambdaTest
-slug: test-run-creation-and-management/
+slug: test-run-creation-and-management
 ---
 
 <script type="application/ld+json"

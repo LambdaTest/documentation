@@ -8,9 +8,9 @@ keywords:
 - multi factor authentication
 - mfa
 - password and security
-url: https://www.lambdatest.com/support/docs/multi-factor-authentication/
+url: https://www.testmu.ai/support/docs/multi-factor-authentication
 site_name: LambdaTest
-slug: multi-factor-authentication/
+slug: multi-factor-authentication
 ---
 
 # Multi Factor Authentication (MFA)

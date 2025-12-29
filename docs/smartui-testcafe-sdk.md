@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smartui-testcafe-sdk/
-slug: smartui-testcafe-sdk/
+url: https://www.testmu.ai/support/docs/smartui-testcafe-sdk
+slug: smartui-testcafe-sdk
 
 ---
 import Tabs from '@theme/Tabs';

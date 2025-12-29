@@ -13,9 +13,9 @@ keywords:
   - debugging tools
   - chrome developer tools
   - google developer tools
-url: https://www.lambdatest.com/support/docs/developer-tools/
+url: https://www.testmu.ai/support/docs/developer-tools
 site_name: LambdaTest
-slug: developer-tools/
+slug: developer-tools
 ---
 
 <script type="application/ld+json"

@@ -9,9 +9,9 @@ keywords:
   - bug reporting
   - issue tracking
   - testmu ai redmine integration
-url: https://www.lambdatest.com/support/docs/redmine-integration/
+url: https://www.testmu.ai/support/docs/redmine-integration
 site_name: LambdaTest
-slug: redmine-integration/
+slug: redmine-integration
 ---
 
 <script type="application/ld+json"

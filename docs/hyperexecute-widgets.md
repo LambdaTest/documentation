@@ -13,9 +13,9 @@ keywords:
   - HyperExecute Jobs
   - HyperExecute Stage
   - HyperExecute Tasks
-url: https://www.lambdatest.com/support/docs/hyperexecute-widgets/
+url: https://www.testmu.ai/support/docs/hyperexecute-widgets
 site_name: LambdaTest
-slug: hyperexecute-widgets/
+slug: hyperexecute-widgets
 ---
 
 <script type="application/ld+json"

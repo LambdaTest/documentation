@@ -10,9 +10,9 @@ keywords:
   - test analytics
   - test performance
   - test failure classification
-url: https://www.lambdatest.com/support/docs/analytics-test-insights/
+url: https://www.testmu.ai/support/docs/analytics-test-insights
 site_name: LambdaTest
-slug: analytics-test-insights/
+slug: analytics-test-insights
 ---
 
 <script type="application/ld+json"

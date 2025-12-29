@@ -8,9 +8,9 @@ keywords:
     - TestMu AI single sign on
     - TestMu AI single sign-on
     - TestMu AI SSO
-url: https://www.lambdatest.com/support/docs/single-sign-on/
+url: https://www.testmu.ai/support/docs/single-sign-on
 site_name: LambdaTest
-slug: single-sign-on/
+slug: single-sign-on
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

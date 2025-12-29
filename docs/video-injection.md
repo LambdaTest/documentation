@@ -14,9 +14,9 @@ keywords:
   - app testing appium
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/video-injection/
+url: https://www.testmu.ai/support/docs/video-injection
 site_name: LambdaTest
-slug: video-injection/
+slug: video-injection
 ---
 
 import CodeBlock from '@theme/CodeBlock';

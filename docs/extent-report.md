@@ -8,9 +8,9 @@ keywords:
   - extent testing reports
   - extent testing testmu ai 
   
-url: https://www.lambdatest.com/support/docs/extent-report/
+url: https://www.testmu.ai/support/docs/extent-report
 site_name: LambdaTest
-slug: extent-report/
+slug: extent-report
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -12,9 +12,9 @@ keywords:
   - continuous delivery
   - continuous integration tools
   - TeamCity Integration 
-url: https://www.lambdatest.com/support/docs/teamcity-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/teamcity-integration-with-testmu
 site_name: LambdaTest
-slug: teamcity-integration-with-lambdatest/
+slug: teamcity-integration-with-testmu
 ---
 
 <script type="application/ld+json"

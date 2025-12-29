@@ -17,9 +17,9 @@ keywords:
   - selenium testing tool
   - selenium testing tutorial
 image: /assets/images/og-images/Laravel-Selenium.jpg
-url: https://www.lambdatest.com/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-lambdatest-selenium-grid/
+slug: laravel-dusk-with-selenium-running-laravel-dusk-automation-scripts-on-testmu-selenium-grid
 ---
 
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';

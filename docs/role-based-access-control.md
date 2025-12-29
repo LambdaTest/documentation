@@ -7,9 +7,9 @@ keywords:
 - role-based access control 
 - testmu ai
 - testmu ai rbac
-url: https://www.lambdatest.com/support/docs/role-based-access-control/
+url: https://www.testmu.ai/support/docs/role-based-access-control
 site_name: LambdaTest
-slug: role-based-access-control/
+slug: role-based-access-control
 ---
 ***
 

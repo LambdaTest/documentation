@@ -14,9 +14,9 @@ keywords:
     - real time
     - application
     - Webapp
-url: https://www.lambdatest.com/support/docs/chrome-os-testing/
+url: https://www.testmu.ai/support/docs/chrome-os-testing
 site_name: LambdaTest
-slug: chrome-os-testing/
+slug: chrome-os-testing
 ---
 
 <script type="application/ld+json"

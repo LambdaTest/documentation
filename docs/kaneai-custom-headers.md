@@ -7,9 +7,9 @@ description: Guide for usage of Database custom headers in KaneAI
 keywords:
   - Custom Headers
   - Headers
-url: https://www.lambdatest.com/support/docs/kaneai-custom-headers/
+url: https://www.testmu.ai/support/docs/kaneai-custom-headers
 site_name: LambdaTest
-slug: kaneai-custom-headers/
+slug: kaneai-custom-headers
 ---
 
 <script type="application/ld+json"

@@ -7,9 +7,9 @@ description: With TestMu AI, perform live interactive testing of mobile applicat
 keywords:
 - real device app testing 
 - testmu ai real device app testing 
-url: https://www.lambdatest.com/support/docs/real-device-app-testing/
+url: https://www.testmu.ai/support/docs/real-device-app-testing
 site_name: LambdaTest
-slug: real-device-app-testing/
+slug: real-device-app-testing
 ---
 
 <script type="application/ld+json"

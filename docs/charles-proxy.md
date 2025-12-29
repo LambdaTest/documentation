@@ -12,9 +12,9 @@ keywords:
   - TestMu AI with Charles Proxy
   - Charles Proxy With TestMu AI
   - TestMu AI Cloud Platform
-url: https://www.lambdatest.com/support/docs/charles-proxy/
+url: https://www.testmu.ai/support/docs/charles-proxy
 site_name: LambdaTest
-slug: charles-proxy/
+slug: charles-proxy
 ---
 
 <script type="application/ld+json"

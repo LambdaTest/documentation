@@ -11,9 +11,9 @@ keywords:
   - biometrics
   - image injection
   - video injection
-url: https://www.lambdatest.com/support/docs/kane-ai-mobile-app-capabilities/
+url: https://www.testmu.ai/support/docs/kane-ai-mobile-app-capabilities
 site_name: LambdaTest
-slug: kane-ai-mobile-app-capabilities/
+slug: kane-ai-mobile-app-capabilities
 ---
 
 

@@ -17,9 +17,9 @@ keywords:
   - Test on Mac 10.9 Mavericks online
   - Apple Mac Mavericks Virtual Machine
 image: /assets/images/og-images/fb2.jpg
-url: https://www.lambdatest.com/support/docs/
+url: https://www.testmu.ai/support/docs
 site_name: LambdaTest
-slug: /
+slug: 
 ---
 
 import AutomationLightIcon from '../assets/images/support/automation-light-icon.svg';

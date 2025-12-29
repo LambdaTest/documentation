@@ -7,9 +7,9 @@ description: Guide for usage of credits for AI features in TestMu AI
 keywords:
   - credits
   - AI
-url: https://www.lambdatest.com/support/docs/credits-management/
+url: https://www.testmu.ai/support/docs/credits-management
 site_name: LambdaTest
-slug: credits-management/
+slug: credits-management
 ---
 
 import CodeBlock from '@theme/CodeBlock';

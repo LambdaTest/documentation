@@ -7,9 +7,9 @@ description: Test mobile apps on 3000+ real devices with TestMu AI. Upload, choo
 keywords:
 - real device app testing 
 - testmu ai real device app testing 
-url: https://www.lambdatest.com/support/docs/app-testing-on-real-devices/
+url: https://www.testmu.ai/support/docs/app-testing-on-real-devices
 site_name: LambdaTest
-slug: app-testing-on-real-devices/
+slug: app-testing-on-real-devices
 ---
 
 <script type="application/ld+json"

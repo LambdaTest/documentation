@@ -11,9 +11,9 @@ keywords:
  - test browser
  - test OS
  - test device coverage
-url: https://www.lambdatest.com/support/docs/analytics-modules-manual-test-overview/
+url: https://www.testmu.ai/support/docs/analytics-modules-manual-test-overview
 site_name: LambdaTest
-slug: analytics-modules-manual-test-overview/
+slug: analytics-modules-manual-test-overview
 ---
 
 <script type="application/ld+json"

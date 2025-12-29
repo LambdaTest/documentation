@@ -9,9 +9,9 @@ keywords:
     - Accessibility
     - Testing
     - DevTools
-url: https://www.lambdatest.com/support/docs/accessibility-settings-ios/
+url: https://www.testmu.ai/support/docs/accessibility-settings-ios
 site_name: LambdaTest
-slug: accessibility-settings-ios/
+slug: accessibility-settings-ios
 ---
 
 import Tabs from '@theme/Tabs';

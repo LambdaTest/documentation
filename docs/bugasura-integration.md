@@ -8,9 +8,9 @@ keywords:
   - testmu ai integration with bugasura
   - testmu ai and bugasura integration 
   - bugasura integration
-url: https://www.lambdatest.com/support/docs/bugasura-integration/
+url: https://www.testmu.ai/support/docs/bugasura-integration
 site_name: LambdaTest
-slug: bugasura-integration/
+slug: bugasura-integration
 ---
 
 <script type="application/ld+json"

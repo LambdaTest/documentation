@@ -16,9 +16,9 @@ keywords:
   - create backlog issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/backlog-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/backlog-integration-with-testmu
 site_name: LambdaTest
-slug: backlog-integration-with-lambdatest/
+slug: backlog-integration-with-testmu
 ---
 
 <script type="application/ld+json"

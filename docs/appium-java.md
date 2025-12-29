@@ -11,9 +11,9 @@ keywords:
   - testng
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/appium-java/
+url: https://www.testmu.ai/support/docs/appium-java
 site_name: LambdaTest
-slug: appium-java/
+slug: appium-java
 ---
 
 import CodeBlock from '@theme/CodeBlock';

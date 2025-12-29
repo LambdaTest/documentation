@@ -12,9 +12,9 @@ keywords:
   - app testing
   - real devices
 # image: /assets/images/og-images/espresso-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-espresso-testing/
+url: https://www.testmu.ai/support/docs/hyperexecute-espresso-testing
 site_name: LambdaTest
-slug: hyperexecute-espresso-testing/
+slug: hyperexecute-espresso-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';

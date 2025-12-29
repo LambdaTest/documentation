@@ -8,9 +8,9 @@ keywords:
   - testmu ai automation
   - testmu ai kaneai
   - kaneai manual interaction
-url: https://www.lambdatest.com/support/docs/kaneai-manual-interaction
+url: https://www.testmu.ai/support/docs/kaneai-manual-interaction
 site_name: LambdaTest
-slug: kaneai-manual-interaction/
+slug: kaneai-manual-interaction
 ---
 
 <script type="application/ld+json"

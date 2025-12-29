@@ -10,9 +10,9 @@ keywords:
   - jenkins integration 
   - testmu ai integration with jenkins 
   - jenkins freestlye
-url: https://www.lambdatest.com/support/docs/integrating-lambdatest-with-jenkins-freestyle-project/
+url: https://www.testmu.ai/support/docs/integrating-testmu-with-jenkins-freestyle-project
 site_name: LambdaTest
-slug: integrating-lambdatest-with-jenkins-freestyle-project/
+slug: integrating-testmu-with-jenkins-freestyle-project
 ---
 ***
 

@@ -8,9 +8,9 @@ keywords:
   - TestMu AI integration with Notion
   - TestMu AI and Notion Integration
   - Notion Integration
-url: https://www.lambdatest.com/support/docs/notion-integration/
+url: https://www.testmu.ai/support/docs/notion-integration
 site_name: LambdaTest
-slug: notion-integration/
+slug: notion-integration
 ---
 
 <script type="application/ld+json"

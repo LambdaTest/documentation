@@ -13,9 +13,9 @@ keywords:
   - app testing
   - real devices
 image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/appium-python-behave/
+url: https://www.testmu.ai/support/docs/appium-python-behave
 site_name: LambdaTest
-slug: appium-python-behave/
+slug: appium-python-behave
 ---
 
 

@@ -10,9 +10,9 @@ keywords:
   - cross platform testing tools
   - check browser compatibility online
 
-url: https://www.lambdatest.com/support/docs/support-access/
+url: https://www.testmu.ai/support/docs/support-access
 site_name: LambdaTest
-slug: support-access/
+slug: support-access
 ---
 
 <script type="application/ld+json"

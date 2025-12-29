@@ -11,9 +11,9 @@ keywords:
   - mitm proxy
   - http traffic capture
   - domain filtering automation
-url: https://www.lambdatest.com/support/docs/network-configurations/
+url: https://www.testmu.ai/support/docs/network-configurations
 site_name: LambdaTest
-slug: network-configurations/
+slug: network-configurations
 ---
 
 import CodeBlock from '@theme/CodeBlock';

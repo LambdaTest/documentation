@@ -15,9 +15,9 @@ keywords:
 
 image: /assets/images/og-images/Selenide-Tests-with-Selenium.jpg
 
-url: https://www.lambdatest.com/support/docs/selenide-tests-with-lambdatest-online-selenium-grid-for-automated-cross-browser-testing/
+url: https://www.testmu.ai/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing
 site_name: LambdaTest
-slug: selenide-tests-with-lambdatest-online-selenium-grid-for-automated-cross-browser-testing/
+slug: selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';

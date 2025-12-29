@@ -8,9 +8,9 @@ keywords:
 - how to delete testmu ai account 
 - how can I delete my testmu ai account
 
-url: https://www.lambdatest.com/support/docs/delete-lambdatest-account/
+url: https://www.testmu.ai/support/docs/delete-testmu-account
 site_name: LambdaTest
-slug: delete-lambdatest-account/
+slug: delete-testmu-account
 ---
 
 <script type="application/ld+json"

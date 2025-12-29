@@ -10,9 +10,9 @@ keywords:
   - bug reporting
   - team communication
 
-url: https://www.lambdatest.com/support/docs/rocketchat-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/rocketchat-integration-with-testmu
 site_name: LambdaTest
-slug: rocketchat-integration-with-lambdatest/
+slug: rocketchat-integration-with-testmu
 ---
 
 <script type="application/ld+json"

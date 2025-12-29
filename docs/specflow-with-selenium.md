@@ -13,9 +13,9 @@ keywords:
   - selenium webdriver c#
   - selenium c# testing tutorial
   - c# selenium framework
-url: https://www.lambdatest.com/support/docs/specflow-with-selenium-running-specflow-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/specflow-with-selenium-running-specflow-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: specflow-with-selenium-running-specflow-automation-scripts-on-lambdatest-selenium-grid/
+slug: specflow-with-selenium-running-specflow-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

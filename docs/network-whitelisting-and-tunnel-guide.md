@@ -10,9 +10,9 @@ keywords:
   - Public IP
   - Outbound Whitelisting
   - Dedicated Proxy
-url: https://www.lambdatest.com/support/docs/network-whitelisting-and-tunnel-guide/
+url: https://www.testmu.ai/support/docs/network-whitelisting-and-tunnel-guide
 site_name: LambdaTest
-slug: network-whitelisting-and-tunnel-guide/
+slug: network-whitelisting-and-tunnel-guide
 ---
 
 import CodeBlock from '@theme/CodeBlock';

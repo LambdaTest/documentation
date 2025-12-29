@@ -7,9 +7,9 @@ keywords:
   - screen reader
   - framework on testmu ai
   - accessibility
-url: https://www.lambdatest.com/support/docs/screen-reader-on-accessibility/
+url: https://www.testmu.ai/support/docs/screen-reader-on-accessibility
 site_name: LambdaTest
-slug: screen-reader-on-accessibility/
+slug: screen-reader-on-accessibility
 ---
 
 <script type="application/ld+json"

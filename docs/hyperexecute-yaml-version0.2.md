@@ -8,9 +8,9 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-yaml-version0.2/
+url: https://www.testmu.ai/support/docs/hyperexecute-yaml-version0.2
 site_name: Hyperexecute Yaml Version 0.2
-slug: hyperexecute-yaml-version0.2/
+slug: hyperexecute-yaml-version0.2
 ---
 
 <script type="application/ld+json"

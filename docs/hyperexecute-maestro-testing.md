@@ -13,9 +13,9 @@ keywords:
   - app testing
   - real devices
 # image: /assets/images/og-images/espresso-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-maestro-testing/
+url: https://www.testmu.ai/support/docs/hyperexecute-maestro-testing
 site_name: LambdaTest
-slug: hyperexecute-maestro-testing/
+slug: hyperexecute-maestro-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -14,9 +14,9 @@ keywords:
   - selenium javascript testing tutorial
   - javascript selenium framework
 image: /assets/images/og-images/nightwatch-automation.jpg 
-url: https://www.lambdatest.com/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: nightwatch-with-selenium-running-nightwatch-automation-scripts-on-lambdatest-selenium-grid/
+slug: nightwatch-with-selenium-running-nightwatch-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -18,9 +18,9 @@ keywords:
 - Leapwork Automation Testing Tool
 - Leapwork Automation Platform
 
-url: https://www.lambdatest.com/support/docs/leapwork-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/leapwork-integration-with-testmu
 site_name: LambdaTest
-slug: leapwork-integration-with-lambdatest/
+slug: leapwork-integration-with-testmu
 ---
 
 <script type="application/ld+json"

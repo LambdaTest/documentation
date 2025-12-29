@@ -13,9 +13,9 @@ keywords:
   - test issues
   - Keyboard Scan
   - Tab Order
-url: https://www.lambdatest.com/support/docs/accessibility-keyboard-scan/
+url: https://www.testmu.ai/support/docs/accessibility-keyboard-scan
 site_name: LambdaTest
-slug: accessibility-keyboard-scan/
+slug: accessibility-keyboard-scan
 ---
 
 import CodeBlock from '@theme/CodeBlock';

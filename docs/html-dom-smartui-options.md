@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/html-dom-smartui-options/
-slug: html-dom-smartui-options/
+url: https://www.testmu.ai/support/docs/html-dom-smartui-options
+slug: html-dom-smartui-options
 ---
 
 import Tabs from '@theme/Tabs';

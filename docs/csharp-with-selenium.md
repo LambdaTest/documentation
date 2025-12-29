@@ -9,9 +9,9 @@ keywords:
   - c# selenium tutorial
   - c# selenium webdriver
   - c# selenium testing
-url: https://www.lambdatest.com/support/docs/c-with-selenium-running-c-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: c-with-selenium-running-c-automation-scripts-on-lambdatest-selenium-grid/
+slug: c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid
 ---
 
 <script type="application/ld+json"

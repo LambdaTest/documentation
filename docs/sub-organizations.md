@@ -8,9 +8,9 @@ keywords:
 - sub organizations testmu ai
 - manage sub organizations
 - create sub organizations
-url: https://www.lambdatest.com/support/docs/sub-organizations/
+url: https://www.testmu.ai/support/docs/sub-organizations
 site_name: LambdaTest
-slug: sub-organizations/
+slug: sub-organizations
 ---
 
 # Sub Organizations

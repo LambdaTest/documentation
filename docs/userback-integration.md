@@ -17,9 +17,9 @@ keywords:
   - create userback issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/userback-integration/
+url: https://www.testmu.ai/support/docs/userback-integration
 site_name: LambdaTest
-slug: userback-integration/
+slug: userback-integration
 ---
 
 <script type="application/ld+json"

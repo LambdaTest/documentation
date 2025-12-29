@@ -12,9 +12,9 @@ keywords:
   - developer tools
   - sequential tests
   - automation tests
-url: https://www.lambdatest.com/support/docs/performance-tips/
+url: https://www.testmu.ai/support/docs/performance-tips
 site_name: LambdaTest
-slug: performance-tips/
+slug: performance-tips
 ---
 # Performance Tips
 * * *

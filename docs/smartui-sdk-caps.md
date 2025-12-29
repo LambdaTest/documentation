@@ -9,8 +9,8 @@ keywords:
   - Capabilities
   - Configuration
   - Visual Testing
-url: https://www.lambdatest.com/support/docs/smartui-sdk-capabilities/
-slug: smartui-sdk-capabilities/
+url: https://www.testmu.ai/support/docs/smartui-sdk-capabilities
+slug: smartui-sdk-capabilities
 
 ---
 

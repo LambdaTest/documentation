@@ -8,9 +8,9 @@ keywords:
   - test case repository
   - test cases
   - test case
-url: https://www.lambdatest.com/support/docs/test-case-repository/
+url: https://www.testmu.ai/support/docs/test-case-repository
 site_name: LambdaTest
-slug: test-case-repository/
+slug: test-case-repository
 ---
 
 <script type="application/ld+json"

@@ -10,9 +10,9 @@ keywords:
   - kaneai drag drop
   - drag and drop testing
   - click and drag
-url: https://www.lambdatest.com/support/docs/kane-ai-drag-drop/
+url: https://www.testmu.ai/support/docs/kane-ai-drag-drop
 site_name: LambdaTest
-slug: kane-ai-drag-drop/
+slug: kane-ai-drag-drop
 ---
 
 import Tabs from '@theme/Tabs';

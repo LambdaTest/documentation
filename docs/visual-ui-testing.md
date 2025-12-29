@@ -12,9 +12,9 @@ keywords:
 - cross browser screenshot generation
 - automated screenshot testing
 - automated screenshot generation
-url: https://www.lambdatest.com/support/docs/visual-ui-testing/
+url: https://www.testmu.ai/support/docs/visual-ui-testing
 site_name: LambdaTest
-slug: visual-ui-testing/
+slug: visual-ui-testing
 ---
 
 <script type="application/ld+json"

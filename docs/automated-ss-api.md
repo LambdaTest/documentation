@@ -14,9 +14,9 @@ keywords:
   - screenshot testing
   - bulk screenshot testing
 
-url: https://www.lambdatest.com/support/docs/automated-screenshot-api-for-cross-browser-testing/
+url: https://www.testmu.ai/support/docs/automated-screenshot-api-for-cross-browser-testing
 site_name: LambdaTest
-slug: automated-screenshot-api-for-cross-browser-testing/
+slug: automated-screenshot-api-for-cross-browser-testing
 ---
 
 <script type="application/ld+json"

@@ -8,9 +8,9 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-private-cloud-setup-with-azure/
+url: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-setup-with-azure
 site_name: LambdaTest
-slug: hyperexecute-private-cloud-setup-with-azure/
+slug: hyperexecute-private-cloud-setup-with-azure
 ---
 
 <script type="application/ld+json"

@@ -11,9 +11,9 @@ keywords:
   - testmu ai tunnel tutorials
   - testmu ai tunnel guide
   - testmu ai tunnel guide
-url: https://www.lambdatest.com/support/docs/lambda-tunnel-modifiers/
+url: https://www.testmu.ai/support/docs/lambda-tunnel-modifiers
 site_name: LambdaTest
-slug: lambda-tunnel-modifiers/
+slug: lambda-tunnel-modifiers
 ---
 
 <script type="application/ld+json"

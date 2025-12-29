@@ -12,9 +12,9 @@ keywords:
   - puppeteer testing tutorial
   - puppeteer testing testmu ai
 
-url: https://www.lambdatest.com/support/docs/puppeteer-testing/
+url: https://www.testmu.ai/support/docs/puppeteer-testing
 site_name: LambdaTest
-slug: puppeteer-testing/
+slug: puppeteer-testing
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

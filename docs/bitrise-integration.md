@@ -12,9 +12,9 @@ keywords:
 - appium bitrise
 - app testing with bitrise 
 - app automation bitrise
-url: https://www.lambdatest.com/support/docs/bitrise-integration/
+url: https://www.testmu.ai/support/docs/bitrise-integration
 site_name: LambdaTest
-slug: bitrise-integration/
+slug: bitrise-integration
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

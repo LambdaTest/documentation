@@ -11,9 +11,9 @@ keywords:
   - secrets
   - smart variables
   - environments
-url: https://www.lambdatest.com/support/docs/kaneai-variables-and-parameters/
+url: https://www.testmu.ai/support/docs/kaneai-variables-and-parameters
 site_name: Variables & Parameters in KaneAI
-slug: kaneai-variables-and-parameters/
+slug: kaneai-variables-and-parameters
 ---
 
 <script type="application/ld+json"

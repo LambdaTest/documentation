@@ -9,9 +9,9 @@ keywords:
   - test:unit selenium
   - ruby selenium
 image: /assets/images/og-images/TestUnit-Automation.jpg
-url: https://www.lambdatest.com/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: testunit-with-selenium-running-testunit-automation-scripts-on-lambdatest-selenium-grid/
+slug: testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

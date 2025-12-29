@@ -8,9 +8,9 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/
+url: https://www.testmu.ai/support/docs/hyperexecute-matrix-multiplexing-strategy
 site_name: LambdaTest
-slug: hyperexecute-matrix-multiplexing-strategy/
+slug: hyperexecute-matrix-multiplexing-strategy
 ---
 
 <script type="application/ld+json"

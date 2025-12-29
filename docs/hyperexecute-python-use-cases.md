@@ -11,9 +11,9 @@ keywords:
   - Python
   - Behave
   - Robot
-url: https://www.lambdatest.com/support/docs/hyperexecute-python-use-cases/
+url: https://www.testmu.ai/support/docs/hyperexecute-python-use-cases
 site_name: LambdaTest
-slug: hyperexecute-python-use-cases/
+slug: hyperexecute-python-use-cases
 ---
 
 <script type="application/ld+json"

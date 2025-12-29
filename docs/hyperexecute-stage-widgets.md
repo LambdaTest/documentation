@@ -11,9 +11,9 @@ keywords:
   - HyperExecute
   - HyperExecute Widgets
   - HyperExecute Stage
-url: https://www.lambdatest.com/support/docs/hyperexecute-stage-widgets/
+url: https://www.testmu.ai/support/docs/hyperexecute-stage-widgets
 site_name: LambdaTest
-slug: hyperexecute-stage-widgets/
+slug: hyperexecute-stage-widgets
 ---
 
 <script type="application/ld+json"

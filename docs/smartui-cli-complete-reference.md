@@ -11,9 +11,9 @@ keywords:
   - storybook cli
   - command line interface
   - visual regression testing
-url: https://www.lambdatest.com/support/docs/smartui-cli-complete-reference/
+url: https://www.testmu.ai/support/docs/smartui-cli-complete-reference
 site_name: LambdaTest
-slug: smartui-cli-complete-reference/
+slug: smartui-cli-complete-reference
 
 ---
 import Tabs from '@theme/Tabs';

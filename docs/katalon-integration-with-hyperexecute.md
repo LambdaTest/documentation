@@ -11,9 +11,9 @@ keywords:
     - katalon
     - katalon studio
 
-url: https://www.lambdatest.com/support/docs/katalon-integration-with-hyperexecute/
+url: https://www.testmu.ai/support/docs/katalon-integration-with-hyperexecute
 site_name: LambdaTest
-slug: katalon-integration-with-hyperexecute/
+slug: katalon-integration-with-hyperexecute
 ---
 
 <script type="application/ld+json"

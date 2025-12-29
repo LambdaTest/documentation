@@ -9,9 +9,9 @@ keywords:
   - Automation Testing Scripts
   - Selenium Grid
 image: /assets/images/og-images/Ruby-with-Selenium.jpg
-url: https://www.lambdatest.com/support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: ruby-with-selenium-running-ruby-automation-scripts-on-lambdatest-selenium-grid/
+slug: ruby-with-selenium-running-ruby-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

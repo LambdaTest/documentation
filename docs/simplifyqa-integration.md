@@ -12,9 +12,9 @@ keywords:
   - testmu ai
   - real device
   - simplifyqa real device
-url: https://www.lambdatest.com/support/docs/simplifyqa-integration/
+url: https://www.testmu.ai/support/docs/simplifyqa-integration
 site_name: LambdaTest
-slug: simplifyqa-integration/
+slug: simplifyqa-integration
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

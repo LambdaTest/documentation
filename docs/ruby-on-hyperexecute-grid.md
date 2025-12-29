@@ -18,9 +18,9 @@ keywords:
   - hyperexecute Ruby testing
   - hyperexecute automation testing
   - HyperExecute Selenium automation
-url: https://www.lambdatest.com/support/docs/ruby-on-hyperexecute-grid/
+url: https://www.testmu.ai/support/docs/ruby-on-hyperexecute-grid
 site_name: LambdaTest
-slug: ruby-on-hyperexecute-grid/
+slug: ruby-on-hyperexecute-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

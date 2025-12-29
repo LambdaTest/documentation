@@ -8,9 +8,9 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-inherit-config/
+url: https://www.testmu.ai/support/docs/hyperexecute-inherit-config
 site_name: LambdaTest
-slug: hyperexecute-inherit-config/
+slug: hyperexecute-inherit-config
 ---
 
 <script type="application/ld+json"

@@ -15,9 +15,9 @@ keywords:
   - test on samsung a7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/smartui-running-your-first-project/
+url: https://www.testmu.ai/support/docs/smartui-running-your-first-project
 site_name: LambdaTest
-slug: smartui-running-your-first-project/
+slug: smartui-running-your-first-project
 
 ---
 import Tabs from '@theme/Tabs';

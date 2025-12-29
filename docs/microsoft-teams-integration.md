@@ -9,9 +9,9 @@ keywords:
   - testmu ai integration
   - bug reporting
   - team communication
-url: https://www.lambdatest.com/support/docs/microsoft-teams-integration/
+url: https://www.testmu.ai/support/docs/microsoft-teams-integration
 site_name: LambdaTest
-slug: microsoft-teams-integration/
+slug: microsoft-teams-integration
 ---
 
 <script type="application/ld+json"

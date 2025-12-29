@@ -10,9 +10,9 @@ keywords:
   - okta
   - testmu ai okta integration
   - testmu ai okta sso
-url: https://www.lambdatest.com/support/docs/lambdatest-sso-okta-integration/
+url: https://www.testmu.ai/support/docs/testmu-sso-okta-integration
 site_name: LambdaTest
-slug: lambdatest-sso-okta-integration/
+slug: testmu-sso-okta-integration
 ---
 
 <script

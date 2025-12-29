@@ -11,9 +11,9 @@ keywords:
   - saml
   - testmu ai onelogin integration
   - testmu ai onelogin sso
-url: https://www.lambdatest.com/support/docs/lambdatest-sso-onelogin-using-saml/
+url: https://www.testmu.ai/support/docs/testmu-sso-onelogin-using-saml
 site_name: LambdaTest
-slug: lambdatest-sso-onelogin-using-saml/
+slug: testmu-sso-onelogin-using-saml
 ---
 
 <script type="application/ld+json"

@@ -19,9 +19,9 @@ keywords:
   - hyperexecute autosplit execution
   - hyperexecute auto-split execution
 image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/
+url: https://www.testmu.ai/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid
 site_name: LambdaTest
-slug: hyperexecute-cli-run-tests-on-hyperexecute-grid/
+slug: hyperexecute-cli-run-tests-on-hyperexecute-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

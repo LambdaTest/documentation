@@ -16,9 +16,9 @@ keywords:
     - check browser compatibility online
     - best Azure Pipelines extensions for developers
     - best Azure Pipelines extensions for testers
-url: https://www.lambdatest.com/support/docs/integrate-lambdatest-extension-with-azure-pipelines/
+url: https://www.testmu.ai/support/docs/integrate-testmu-extension-with-azure-pipelines
 site_name: LambdaTest
-slug: integrate-lambdatest-extension-with-azure-pipelines/
+slug: integrate-testmu-extension-with-azure-pipelines
 ---
 
 <script type="application/ld+json"

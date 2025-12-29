@@ -2,7 +2,7 @@
 id: smartui-smart-comments
 title: SmartUI Smart Comments
 description: Learn how to collaborate on visual test results using Smart Comments. Add comments directly on screenshots and builds, mention teammates, and manage threaded discussions for better team collaboration.
-slug: smartui-smart-comments/
+slug: smartui-smart-comments
 keywords:
   - SmartUI comments
   - Smart Comments

@@ -9,9 +9,9 @@ keywords:
   - web scanner
   - getting started
   - schedule scan
-url: https://www.lambdatest.com/support/docs/web-scanner-getting-started
+url: https://www.testmu.ai/support/docs/web-scanner-getting-started
 site_name: LambdaTest
-slug: web-scanner-getting-started/
+slug: web-scanner-getting-started
 ---
 
 import Tabs from '@theme/Tabs';

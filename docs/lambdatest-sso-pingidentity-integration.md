@@ -10,9 +10,9 @@ keywords:
   - pingidentity
   - testmu ai pingidentity integration
   - testmu ai pingidentity sso
-url: https://www.lambdatest.com/support/docs/lambdatest-sso-pingidentity-integration
+url: https://www.testmu.ai/support/docs/testmu-sso-pingidentity-integration
 site_name: LambdaTest
-slug: lambdatest-sso-pingidentity-integration/
+slug: testmu-sso-pingidentity-integration
 ---
 
 import Tabs from '@theme/Tabs';

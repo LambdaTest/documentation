@@ -8,9 +8,9 @@ keywords:
   - testmu ai integration with devrev
   - testmu ai and devrev integration 
   - devrev integration
-url: https://www.lambdatest.com/support/docs/devrev-integration/
+url: https://www.testmu.ai/support/docs/devrev-integration
 site_name: LambdaTest
-slug: devrev-integration/
+slug: devrev-integration
 ---
 
 <script type="application/ld+json"

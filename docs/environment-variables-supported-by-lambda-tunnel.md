@@ -9,9 +9,9 @@ keywords:
   - TestMu AI environment variables
   - TestMu AI setup
   - TestMu AI tunnel
-url: https://www.lambdatest.com/support/docs/environment-variables-supported-by-lambda-tunnel/
+url: https://www.testmu.ai/support/docs/environment-variables-supported-by-lambda-tunnel
 site_name: LambdaTest
-slug: environment-variables-supported-by-lambda-tunnel/
+slug: environment-variables-supported-by-lambda-tunnel
 ---
 
 <script type="application/ld+json"

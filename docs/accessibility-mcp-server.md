@@ -11,9 +11,9 @@ keywords:
   - testmu ai
   - MCP
   - MCP server
-url: https://www.lambdatest.com/support/docs/accessibility-mcp-server/
+url: https://www.testmu.ai/support/docs/accessibility-mcp-server
 site_name: LambdaTest
-slug: accessibility-mcp-server/
+slug: accessibility-mcp-server
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -9,9 +9,9 @@ keywords:
   - tunnel not connecting
   - localhost not reachable
   - connection refused
-url: https://www.lambdatest.com/support/docs/troubleshooting-lambda-tunnel/
+url: https://www.testmu.ai/support/docs/troubleshooting-lambda-tunnel
 site_name: LambdaTest
-slug: troubleshooting-lambda-tunnel/
+slug: troubleshooting-lambda-tunnel
 ---
 
 <script type="application/ld+json"

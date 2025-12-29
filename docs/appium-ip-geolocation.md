@@ -11,9 +11,9 @@ keywords:
  - TestMu AI 
  - IP geolocation support
 
-url: https://www.lambdatest.com/support/docs/appium-ip-geolocation/
+url: https://www.testmu.ai/support/docs/appium-ip-geolocation
 site_name: LambdaTest
-slug: appium-ip-geolocation/
+slug: appium-ip-geolocation
 ---
 
 

@@ -12,9 +12,9 @@ keywords:
   - parallel sessions
   - automation
 image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/hyperexecute-shared-cloud-usage-limit/
+url: https://www.testmu.ai/support/docs/hyperexecute-shared-cloud-usage-limit
 site_name: LambdaTest
-slug: hyperexecute-shared-cloud-usage-limit/
+slug: hyperexecute-shared-cloud-usage-limit
 ---
 
 <script type="application/ld+json"

@@ -10,9 +10,9 @@ keywords:
   - bug reporting
   - team communication
 
-url: https://www.lambdatest.com/support/docs/integrating-mattermost-with-lambdatest/
+url: https://www.testmu.ai/support/docs/integrating-mattermost-with-testmu
 site_name: LambdaTest
-slug: integrating-mattermost-with-lambdatest/
+slug: integrating-mattermost-with-testmu
 ---
 
 <script type="application/ld+json"

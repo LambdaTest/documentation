@@ -9,9 +9,9 @@ keywords:
   - testmu ai integrations with ci/cd tools
   - continuous integration
   - testmu ai fastlane plugin
-url: https://www.lambdatest.com/support/docs/fastlane-with-lambdatest/
+url: https://www.testmu.ai/support/docs/fastlane-with-testmu
 site_name: LambdaTest
-slug: fastlane-with-lambdatest/
+slug: fastlane-with-testmu
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

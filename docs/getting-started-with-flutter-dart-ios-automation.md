@@ -9,9 +9,9 @@ keywords:
 - framework on testmu ai
 - app testing
 - real devices
-url: https://www.lambdatest.com/support/docs/getting-started-with-flutter-dart-ios-automation/
+url: https://www.testmu.ai/support/docs/getting-started-with-flutter-dart-ios-automation
 site_name: LambdaTest
-slug: getting-started-with-flutter-dart-ios-automation/
+slug: getting-started-with-flutter-dart-ios-automation
 ---
 
 import CodeBlock from '@theme/CodeBlock';

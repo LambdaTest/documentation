@@ -8,9 +8,9 @@ keywords:
 - custom headers testmu ai
 - bypass firewalls restrictions
 - custom headers bypass firewalls
-url: https://www.lambdatest.com/support/docs/custom-headers/
+url: https://www.testmu.ai/support/docs/custom-headers
 site_name: LambdaTest
-slug: custom-headers/
+slug: custom-headers
 ---
 
 # Overcoming Firewalls: A Deep Dive into LambdaTest's customHeaders and customUrlFilters Capabilities

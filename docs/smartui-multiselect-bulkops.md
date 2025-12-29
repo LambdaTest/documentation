@@ -9,9 +9,9 @@ keywords:
   - Visual Testing Workflow
   - Batch Approval
   - TestMu AI SmartUI
-url: https://www.lambdatest.com/support/docs/smartui-multiselect-bulkops/
+url: https://www.testmu.ai/support/docs/smartui-multiselect-bulkops
 site_name: LambdaTest
-slug: smartui-multiselect-bulkops/
+slug: smartui-multiselect-bulkops
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

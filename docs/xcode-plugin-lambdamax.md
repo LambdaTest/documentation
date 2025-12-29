@@ -7,9 +7,9 @@ keywords:
   - xcode
   - lambdamax
   - automation testing 
-url: https://www.lambdatest.com/support/docs/xcode-plugin-lambdatest
+url: https://www.testmu.ai/support/docs/xcode-plugin-testmu
 site_name: LambdaTest
-slug: xcode-plugin-lambdatest/
+slug: xcode-plugin-testmu
 ---
 -----------------------------------------------------------------------------------------------------------------------------
 LambdaTest have developed a new plugin to help developers execute tests on the LambdaTest Grid directly from the XCode (via LambdaMax). The all-new LambdaTest plugin will allow developers and testers to directly run automated tests based on XCUIT (XCode) framework on the LambdaTest real device cloud.

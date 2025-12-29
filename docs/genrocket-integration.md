@@ -8,9 +8,9 @@ keywords:
   - testmu ai integration with GenRocket
   - testmu ai and genrocket integration 
   - testmu ai genrocket
-url: https://www.lambdatest.com/support/docs/genrocket-integration/
+url: https://www.testmu.ai/support/docs/genrocket-integration
 site_name: LambdaTest
-slug: genrocket-integration/
+slug: genrocket-integration
 ---
 
 <script type="application/ld+json"

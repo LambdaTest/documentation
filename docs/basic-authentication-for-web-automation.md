@@ -10,9 +10,9 @@ keywords:
   - basic authentication for web automation
   - app testing
   - real devices
-url: https://www.lambdatest.comsupport/docs/basic-authentication-for-web-automation/
+url: https://www.testmu.ai/support/docs/basic-authentication-for-web-automation
 site_name: LambdaTest
-slug: basic-authentication-for-web-automation/
+slug: basic-authentication-for-web-automation
 ---
 
 import CodeBlock from '@theme/CodeBlock';

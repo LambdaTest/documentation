@@ -11,9 +11,9 @@ keywords:
   - Desktop trends
   - Desktop status ratio
 
-url: https://www.lambdatest.com/support/docs/insights-private-desktop/
+url: https://www.testmu.ai/support/docs/insights-private-desktop
 site_name: LambdaTest
-slug: insights-private-desktop/
+slug: insights-private-desktop
 ---
 
 <script type="application/ld+json"

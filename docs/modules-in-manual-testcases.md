@@ -10,9 +10,9 @@ keywords:
   - test step management 
   - test case
   - test steps
-url: https://www.lambdatest.com/support/docs/modules-in-manual-testcases/
+url: https://www.testmu.ai/support/docs/modules-in-manual-testcases
 site_name: LambdaTest
-slug: modules-in-manual-testcases/
+slug: modules-in-manual-testcases
 ---
 
 <script type="application/ld+json"

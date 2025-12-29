@@ -13,9 +13,9 @@ keywords:
   - firebase app upload
   - app automation
 image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/appium-firebase-app-upload/
+url: https://www.testmu.ai/support/docs/appium-firebase-app-upload
 site_name: Uploading app via Firebase
-slug: appium-firebase-app-upload/
+slug: appium-firebase-app-upload
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

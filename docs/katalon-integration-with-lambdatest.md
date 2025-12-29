@@ -11,9 +11,9 @@ keywords:
   - katalon vs selenium
   - katalon studio tutorial
   - katalon selenium
-url: https://www.lambdatest.com/support/docs/katalon-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/katalon-integration-with-testmu
 site_name: LambdaTest
-slug: katalon-integration-with-lambdatest/
+slug: katalon-integration-with-testmu
 ---
 
 <script type="application/ld+json"

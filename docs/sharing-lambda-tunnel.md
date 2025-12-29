@@ -14,9 +14,9 @@ keywords:
   - TCP with TLS 1.2 secure connection tunnel
   - shared TCP with TLS 1.2 secure connection
 image: /assets/images/og-images/Sharing-Lambda-Tunnel.jpg
-url: https://www.lambdatest.com/support/docs/sharing-lambda-tunnel/
+url: https://www.testmu.ai/support/docs/sharing-lambda-tunnel
 site_name: LambdaTest
-slug: sharing-lambda-tunnel/
+slug: sharing-lambda-tunnel
 ---
 
 <script type="application/ld+json"

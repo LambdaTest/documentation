@@ -8,9 +8,9 @@ keywords:
   - testrail
   - import data from testrail
   - import data
-url: https://www.lambdatest.com/support/docs/one-click-migration-from-testrail/
+url: https://www.testmu.ai/support/docs/one-click-migration-from-testrail
 site_name: LambdaTest
-slug: one-click-migration-from-testrail/
+slug: one-click-migration-from-testrail
 ---
 
 <script type="application/ld+json"

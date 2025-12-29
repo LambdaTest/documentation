@@ -11,9 +11,9 @@ keywords:
  - test browser
  - test OS
  - test device coverage
-url: https://www.lambdatest.com/support/docs/analytics-sub-organization-widgets/
+url: https://www.testmu.ai/support/docs/analytics-sub-organization-widgets
 site_name: LambdaTest
-slug: analytics-sub-organization-widgets/
+slug: analytics-sub-organization-widgets
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

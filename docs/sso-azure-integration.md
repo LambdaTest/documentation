@@ -8,9 +8,9 @@ keywords:
     - TestMu AI single sign on
     - TestMu AI SSO
     - TestMu AI Azure AD Integration
-url: https://www.lambdatest.com/support/docs/sso-azure-integration/
+url: https://www.testmu.ai/support/docs/sso-azure-integration
 site_name: LambdaTest
-slug: sso-azure-integration/
+slug: sso-azure-integration
 ---
 
 <script type="application/ld+json"

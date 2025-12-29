@@ -8,9 +8,9 @@ keywords:
     - allure reports
     - hyperexecute allure reports
     - hyperexecute testing
-url: https://www.lambdatest.com/support/docs/allure-reports/
+url: https://www.testmu.ai/support/docs/allure-reports
 site_name: LambdaTest
-slug: allure-reports/
+slug: allure-reports
 ---
 
 import NewTag from '../src/component/newTag';

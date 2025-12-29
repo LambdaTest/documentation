@@ -16,9 +16,9 @@ keywords:
   - testmu ai extensions 
   - chrome extensions for testers
   - plugins for testers 
-url: https://www.lambdatest.com/support/docs/plugins-and-extensions/
+url: https://www.testmu.ai/support/docs/plugins-and-extensions
 site_name: LambdaTest
-slug: plugins-and-extensions/
+slug: plugins-and-extensions
 ---
 
 <script type="application/ld+json"

@@ -9,9 +9,9 @@ keywords:
   - selenium automation grid
   - selenium geoloction
   - timezone
-url: https://www.lambdatest.com/support/docs/selenium-geolocation-capabilities/
+url: https://www.testmu.ai/support/docs/selenium-geolocation-capabilities
 site_name: LambdaTest
-slug: selenium-geolocation-capabilities/
+slug: selenium-geolocation-capabilities
 ---
 
 <script type="application/ld+json"

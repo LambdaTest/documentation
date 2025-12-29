@@ -13,9 +13,9 @@ keywords:
   - puppeteer testing testmu ai
 
   
-url: https://www.lambdatest.com/support/docs/puppeteer-testing-with-jest/
+url: https://www.testmu.ai/support/docs/puppeteer-testing-with-jest
 site_name: LambdaTest
-slug: puppeteer-testing-with-jest/
+slug: puppeteer-testing-with-jest
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

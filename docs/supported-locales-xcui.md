@@ -8,9 +8,9 @@ keywords:
   - Supported locales
   - Locales
   - Appium supported locales
-url: https://www.lambdatest.com/support/docs/supported-locales-xcui/
+url: https://www.testmu.ai/support/docs/supported-locales-xcui
 site_name: LambdaTest
-slug: supported-locales-xcui/
+slug: supported-locales-xcui
 ---
 
 <script type="application/ld+json"

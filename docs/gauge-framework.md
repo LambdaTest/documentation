@@ -14,9 +14,9 @@ keywords:
   - automation testing
   - cross browser testing with gauge
 image: /assets/images/og-images/Gauge-Automation-Tests.jpg
-url: https://www.lambdatest.com/support/docs/running-gauge-tests-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/running-gauge-tests-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: running-gauge-tests-on-lambdatest-selenium-grid/
+slug: running-gauge-tests-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -19,9 +19,9 @@ keywords:
   - hyperexecute behave testing
   - hyperexecute automation testing
 image: /assets/images/og-images/Behave-with-Selenium.jpg
-url: https://www.lambdatest.com/support/docs/behave-on-hyperexecute-grid/
+url: https://www.testmu.ai/support/docs/behave-on-hyperexecute-grid
 site_name: LambdaTest
-slug: behave-on-hyperexecute-grid/
+slug: behave-on-hyperexecute-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

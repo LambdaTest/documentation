@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - How to Save and Manage Secrets
-url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-manage-project-level-secrets/
+url: https://www.testmu.ai/support/docs/hyperexecute-how-to-manage-project-level-secrets
 site_name: LambdaTest
-slug: hyperexecute-how-to-manage-project-level-secrets/
+slug: hyperexecute-how-to-manage-project-level-secrets
 ---
 
 <script type="application/ld+json"

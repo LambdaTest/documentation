@@ -5,9 +5,9 @@ sidebar_label: Dashboard Features
 description: Analytics - Dashboard Features for managing your data and setting up the dashboard
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-dashboard-features/
+url: https://www.testmu.ai/support/docs/analytics-dashboard-features
 site_name: LambdaTest
-slug: analytics-dashboard-features/
+slug: analytics-dashboard-features
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

@@ -17,9 +17,9 @@ keywords:
   - executing build
   - build history
   - real time testing using test manager
-url: https://www.lambdatest.com/support/docs/test-manager/
+url: https://www.testmu.ai/support/docs/test-manager
 site_name: LambdaTest
-slug: test-manager/
+slug: test-manager
 ---
 
 <script type="application/ld+json"

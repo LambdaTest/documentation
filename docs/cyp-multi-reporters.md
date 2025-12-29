@@ -15,9 +15,9 @@ keywords:
   - Cypress Testing Environment
   - How to Run Cypress Tests
 
-url: https://www.lambdatest.com/support/docs/cyp-multi-reporters/
+url: https://www.testmu.ai/support/docs/cyp-multi-reporters
 site_name: LambdaTest
-slug: cyp-multi-reporters/
+slug: cyp-multi-reporters
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -19,9 +19,9 @@ keywords:
   - hyperexecute Protractor testing
   - hyperexecute automation testing
   - HyperExecute Selenium automation
-url: https://www.lambdatest.com/support/docs/protractor-on-hyperexecute-grid/
+url: https://www.testmu.ai/support/docs/protractor-on-hyperexecute-grid
 site_name: LambdaTest
-slug: protractor-on-hyperexecute-grid/
+slug: protractor-on-hyperexecute-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

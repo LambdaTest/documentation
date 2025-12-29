@@ -8,9 +8,9 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/hyperexecute-reports/
+url: https://www.testmu.ai/support/docs/hyperexecute-reports
 site_name: LambdaTest
-slug: hyperexecute-reports/
+slug: hyperexecute-reports
 ---
 
 <script type="application/ld+json"

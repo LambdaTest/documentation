@@ -12,9 +12,9 @@ keywords:
   - app testing
   - real devices
 image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/espresso-supported-capabilities/
+url: https://www.testmu.ai/support/docs/espresso-supported-capabilities
 site_name: LambdaTest
-slug: espresso-supported-capabilities/
+slug: espresso-supported-capabilities
 ---
 
 import CodeBlock from '@theme/CodeBlock';

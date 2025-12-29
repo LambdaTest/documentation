@@ -14,9 +14,9 @@ keywords:
   - Visual Regression Run Specific Test
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
-url: https://www.lambdatest.com/support/docs/smartui-upload-api-v2/
+url: https://www.testmu.ai/support/docs/smartui-upload-api-v2
 site_name: LambdaTest
-slug: smartui-upload-api-v2/
+slug: smartui-upload-api-v2
 
 ---
 

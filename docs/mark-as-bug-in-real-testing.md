@@ -15,9 +15,9 @@ keywords:
   - smart ui testing
   - screenshot testing
 
-url: https://www.lambdatest.com/support/docs/mark-as-bug/
+url: https://www.testmu.ai/support/docs/mark-as-bug
 site_name: LambdaTest
-slug: mark-as-bug/
+slug: mark-as-bug
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

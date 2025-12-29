@@ -13,9 +13,9 @@ keywords:
   - Products
   - Automated testing alerts
   - DevOps communication
-url: https://www.lambdatest.com/support/docs/hyperexecute-slack-integration/
+url: https://www.testmu.ai/support/docs/hyperexecute-slack-integration
 site_name: LambdaTest
-slug: hyperexecute-slack-integration/
+slug: hyperexecute-slack-integration
 ---
 
 import CodeBlock from '@theme/CodeBlock';

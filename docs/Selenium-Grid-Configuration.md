@@ -9,9 +9,9 @@ keywords:
   - selenium automation grid
   - selenium grid online
   - selenium versions  
-url: https://www.lambdatest.com/support/docs/lambdatest-grid-configuration
+url: https://www.testmu.ai/support/docs/testmu-grid-configuration
 site_name: LambdaTest
-slug: lambdatest-grid-configuration/
+slug: testmu-grid-configuration
 ---
 
 <script type="application/ld+json"

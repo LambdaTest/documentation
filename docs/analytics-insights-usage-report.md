@@ -8,9 +8,9 @@ keywords:
   - usage insights
   - usage trends
 
-url: https://www.lambdatest.com/support/docs/insights-usage-report/
+url: https://www.testmu.ai/support/docs/insights-usage-report
 site_name: LambdaTest
-slug: insights-usage-report/
+slug: insights-usage-report
 ---
 
 <script type="application/ld+json"

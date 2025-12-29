@@ -11,9 +11,9 @@ keywords:
   - app automation
   - appium automation
   - appium testing
-url: https://www.lambdatest.com/support/docs/appium-languages-and-frameworks/
+url: https://www.testmu.ai/support/docs/appium-languages-and-frameworks
 site_name: LambdaTest
-slug: appium-languages-and-frameworks/
+slug: appium-languages-and-frameworks
 ---
 
 import CodeBlock from '@theme/CodeBlock';

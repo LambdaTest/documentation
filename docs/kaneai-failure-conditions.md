@@ -9,9 +9,9 @@ keywords:
   - assertion
   - hard assertion
   - kane ai instructions
-url: https://www.lambdatest.com/support/docs/kane-ai-failure-conditions
+url: https://www.testmu.ai/support/docs/kane-ai-failure-conditions
 site_name: LambdaTest
-slug: kaneai-failure-conditions/
+slug: kaneai-failure-conditions
 ---
 
 import Tabs from '@theme/Tabs';

@@ -10,9 +10,9 @@ keywords:
   - genai qa agent
   - testmu ai automation
   - testmu ai kaneai
-url: https://www.lambdatest.com/support/docs/author-your-first-mobile-app-test
+url: https://www.testmu.ai/support/docs/author-your-first-mobile-app-test
 site_name: LambdaTest
-slug: author-your-first-mobile-app-test/
+slug: author-your-first-mobile-app-test
 ---
 
 import Tabs from '@theme/Tabs';

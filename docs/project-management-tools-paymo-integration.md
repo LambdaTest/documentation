@@ -8,9 +8,9 @@ keywords:
   - testmu ai integrations
   - push issues to paymo
   - free cross browser testing tool
-url: https://www.lambdatest.com/support/docs/paymo-integration/
+url: https://www.testmu.ai/support/docs/paymo-integration
 site_name: LambdaTest
-slug: paymo-integration/
+slug: paymo-integration
 
 ---
 

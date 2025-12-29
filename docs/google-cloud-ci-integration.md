@@ -10,9 +10,9 @@ keywords:
   - google cloud ci selenium
   - google cloud ci
   - testmu ai integration with google cloud ci
-url: https://www.lambdatest.com/support/docs/google-cloud-ci-integration/
+url: https://www.testmu.ai/support/docs/google-cloud-ci-integration
 site_name: LambdaTest
-slug: google-cloud-ci-integration/
+slug: google-cloud-ci-integration
 
 --- 
 <script type="application/ld+json"

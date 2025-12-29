@@ -11,9 +11,9 @@ keywords:
   - AI
   - machine learning
   - test automation
-url: https://www.lambdatest.com/support/docs/analytics-test-failure-classification/
+url: https://www.testmu.ai/support/docs/analytics-test-failure-classification
 site_name: LambdaTest
-slug: analytics-test-failure-classification/
+slug: analytics-test-failure-classification
 ---
 
 <script type="application/ld+json"

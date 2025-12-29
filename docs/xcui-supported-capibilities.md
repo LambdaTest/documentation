@@ -12,9 +12,9 @@ keywords:
   - app testing
   - real devices
 image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/xcui-supported-capabilities/
+url: https://www.testmu.ai/support/docs/xcui-supported-capabilities
 site_name: LambdaTest
-slug: xcui-supported-capabilities/
+slug: xcui-supported-capabilities
 ---
 
 import CodeBlock from '@theme/CodeBlock';

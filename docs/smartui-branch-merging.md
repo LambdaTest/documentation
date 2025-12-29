@@ -10,9 +10,9 @@ keywords:
   - Git Integration
   - Merge Strategy
   - Branch Management
-url: https://www.lambdatest.com/support/docs/smartui-branch-merging/
+url: https://www.testmu.ai/support/docs/smartui-branch-merging
 site_name: LambdaTest
-slug: smartui-branch-merging/
+slug: smartui-branch-merging
 
 ---
 import Tabs from '@theme/Tabs';

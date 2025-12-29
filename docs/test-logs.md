@@ -10,9 +10,9 @@ keywords:
   - cross browser testing
   - test library
 
-url: https://www.lambdatest.com/support/docs/test-logs/
+url: https://www.testmu.ai/support/docs/test-logs
 site_name: LambdaTest
-slug: test-logs/
+slug: test-logs
 ---
 
 <script type="application/ld+json"

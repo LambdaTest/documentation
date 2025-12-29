@@ -10,9 +10,9 @@ keywords:
 - wcag compliance
 - accessibility metrics
 - accessibility health
-url: https://www.lambdatest.com/support/docs/accessibility-web-score/
+url: https://www.testmu.ai/support/docs/accessibility-web-score
 site_name: LambdaTest
-slug: accessibility-web-score/
+slug: accessibility-web-score
 ---
 
 The Accessibility Score is a unified metric that represents the accessibility health of your website or application workflow.

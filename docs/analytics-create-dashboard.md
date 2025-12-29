@@ -5,9 +5,9 @@ sidebar_label: Create your Custom Dashboard
 description: Analytics - Overview
 keywords:
   - analytics
-url: https://www.lambdatest.com/support/docs/analytics-create-dashboard/
+url: https://www.testmu.ai/support/docs/analytics-create-dashboard
 site_name: LambdaTest
-slug: analytics-create-dashboard/
+slug: analytics-create-dashboard
 ---
 
 <script type="application/ld+json"

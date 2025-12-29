@@ -12,9 +12,9 @@ keywords:
     - bundled browser
     - playwright bundled
     - playwright browsers
-url: https://www.lambdatest.com/support/docs/playwright-bundled-browser-support/
+url: https://www.testmu.ai/support/docs/playwright-bundled-browser-support
 site_name: LambdaTest
-slug: playwright-bundled-browser-support/
+slug: playwright-bundled-browser-support
 ---
 
 import CodeBlock from '@theme/CodeBlock';

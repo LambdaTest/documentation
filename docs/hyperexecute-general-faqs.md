@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FAQs
-url: https://www.lambdatest.com/support/docs/hyperexecute-general-faqs/
+url: https://www.testmu.ai/support/docs/hyperexecute-general-faqs
 site_name: LambdaTest
-slug: hyperexecute-general-faqs/
+slug: hyperexecute-general-faqs
 ---
 
 <script type="application/ld+json"

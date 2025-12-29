@@ -11,9 +11,9 @@ keywords:
   - playwright typescript testing guide
   - typescript playwright framework
 
-url: https://www.lambdatest.com/support/docs/typescript-with-playwright/
+url: https://www.testmu.ai/support/docs/typescript-with-playwright
 site_name: LambdaTest
-slug: typescript-with-playwright/
+slug: typescript-with-playwright
 ---
 
 import CodeBlock from '@theme/CodeBlock';

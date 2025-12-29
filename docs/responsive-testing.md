@@ -8,9 +8,9 @@ keywords:
   - responsive testing in testmu ai
   - testmu ai responsive testing
   - online responsive testing
-url: https://www.lambdatest.com/support/docs/responsive-testing/
+url: https://www.testmu.ai/support/docs/responsive-testing
 site_name: LambdaTest
-slug: responsive-testing/
+slug: responsive-testing
 ---
 
 <script type="application/ld+json"

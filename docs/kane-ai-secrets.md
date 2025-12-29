@@ -9,9 +9,9 @@ keywords:
   - testmu ai kaneai
   - kaneai secrets
   - kaneai parameters
-url: https://www.lambdatest.com/support/docs/kane-ai-secrets/
+url: https://www.testmu.ai/support/docs/kane-ai-secrets
 site_name: LambdaTest
-slug: kane-ai-secrets/
+slug: kane-ai-secrets
 ---
 
 <script type="application/ld+json"

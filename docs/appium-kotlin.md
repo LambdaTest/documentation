@@ -11,9 +11,9 @@ keywords:
   - java
   - app testing
   - real devices
-url: https://www.lambdatest.com/support/docs/appium-kotlin/
+url: https://www.testmu.ai/support/docs/appium-kotlin
 site_name: LambdaTest
-slug: appium-kotlin/
+slug: appium-kotlin
 ---
 
 import CodeBlock from '@theme/CodeBlock';

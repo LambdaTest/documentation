@@ -9,9 +9,9 @@ keywords:
  - smartui analytics
  - screenshot trends
  - build status ratio
-url: https://www.lambdatest.com/support/docs/analytics-modules-smartui-analytics/
+url: https://www.testmu.ai/support/docs/analytics-modules-smartui-analytics
 site_name: LambdaTest
-slug: analytics-modules-smartui-analytics/
+slug: analytics-modules-smartui-analytics
 ---
 
 import NewTag from '../src/component/newTag';

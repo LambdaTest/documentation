@@ -13,9 +13,9 @@ keywords:
   - real devices
   - adb commands
 image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/adb-commands-support/
+url: https://www.testmu.ai/support/docs/adb-commands-support
 site_name: LambdaTest
-slug: adb-commands-support/
+slug: adb-commands-support
 ---
 
 import CodeBlock from '@theme/CodeBlock';

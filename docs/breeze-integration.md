@@ -13,9 +13,9 @@ keywords:
   - testmu ai integrations
   - one click bug marking
   - testmu ai 3rd party integration
-url: https://www.lambdatest.com/support/docs/breeze-integration-with-lambdatest/
+url: https://www.testmu.ai/support/docs/breeze-integration-with-testmu
 site_name: LambdaTest
-slug: breeze-integration-with-lambdatest/
+slug: breeze-integration-with-testmu
 ---
 
 <script type="application/ld+json"

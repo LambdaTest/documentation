@@ -10,9 +10,9 @@ keywords:
   - kaneai guided walkthrough
   - kane ai prompts
   - kane ai commands
-url: https://www.lambdatest.com/support/docs/kane-ai-javascript-execution/
+url: https://www.testmu.ai/support/docs/kane-ai-javascript-execution
 site_name: LambdaTest
-slug: kane-ai-javascript-execution/
+slug: kane-ai-javascript-execution
 ---
 
 import Tabs from '@theme/Tabs';

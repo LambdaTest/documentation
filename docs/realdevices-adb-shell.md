@@ -9,9 +9,9 @@ keywords:
 - adb shell
 - adb command
 
-url: https://www.lambdatest.com/support/docs/real-device-adb-shell/
+url: https://www.testmu.ai/support/docs/real-device-adb-shell
 site_name: LambdaTest
-slug: real-device-adb-shell/
+slug: real-device-adb-shell
 ---
 
 <script type="application/ld+json"

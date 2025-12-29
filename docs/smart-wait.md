@@ -8,9 +8,9 @@ keywords:
 - smart wait selenium
 - smart wait selenium testing
 - smart wait automation
-url: https://www.lambdatest.com/support/docs/smart-wait/
+url: https://www.testmu.ai/support/docs/smart-wait
 site_name: LambdaTest
-slug: smart-wait/
+slug: smart-wait
 ---
 With LambdaTest's SmartWait feature, you can increase the efficiency and accuracy of automated test execution. Before performing any action on a webpage element, it conducts a series of actionability checks. By using an intelligent algorithm, SmartWait holds off on performing an action until all relevant checks have been successfully completed. It returns the appropriate Selenium error message if the checks are not passed within a predetermined timeframe.
 

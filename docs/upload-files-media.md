@@ -13,8 +13,8 @@ keywords:
   - real devices
   - app testing
   - TestMu AI
-slug: upload-files-media/
-url: https://www.lambdatest.com/support/docs/upload-files-media/
+slug: upload-files-media
+url: https://www.testmu.ai/support/docs/upload-files-media
 site_name: LambdaTest
 ---
 

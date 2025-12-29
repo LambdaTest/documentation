@@ -9,9 +9,9 @@ keywords:
     - Accessibility
     - Testing
     - DevTools
-url: https://www.lambdatest.com/support/docs/accessibility-testing/
+url: https://www.testmu.ai/support/docs/accessibility-testing
 site_name: LambdaTest
-slug: accessibility-testing/
+slug: accessibility-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';

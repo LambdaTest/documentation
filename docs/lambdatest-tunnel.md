@@ -16,9 +16,9 @@ keywords:
   - tcp
   - websocket
 image: /resources/images/og-images/Testing-Locally-Hosted-Pages-min.jpg
-url: https://www.lambdatest.com/support/docs/lambdatest-tunnel/
+url: https://www.testmu.ai/support/docs/testmu-tunnel
 site_name: LambdaTest
-slug: lambdatest-tunnel/
+slug: testmu-tunnel
 ---
 
 <script type="application/ld+json"

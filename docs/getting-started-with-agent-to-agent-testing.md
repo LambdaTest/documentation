@@ -8,9 +8,9 @@ keywords:
  - agent to agent testing
  - agentic testing
  - ai agent testing
-url: https://www.lambdatest.com/support/docs/getting-started-with-agent-to-agent-testing
+url: https://www.testmu.ai/support/docs/getting-started-with-agent-to-agent-testing
 site_name: LambdaTest
-slug: getting-started-with-agent-to-agent-testing/
+slug: getting-started-with-agent-to-agent-testing
 ---
 
 import Tabs from '@theme/Tabs';

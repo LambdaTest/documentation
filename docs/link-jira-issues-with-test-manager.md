@@ -7,9 +7,9 @@ description: Effortlessly link Jira issues with Test Manager using TestMu AI to 
 keywords:
   - link jira issues
   - link jira issues with test manager
-url: https://www.lambdatest.com/support/docs/link-jira-issues-with-test-manager/
+url: https://www.testmu.ai/support/docs/link-jira-issues-with-test-manager
 site_name: LambdaTest
-slug: link-jira-issues-with-test-manager/
+slug: link-jira-issues-with-test-manager
 ---
 
 <script type="application/ld+json"

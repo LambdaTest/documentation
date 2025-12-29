@@ -12,9 +12,9 @@ keywords:
   - app testing
   - real devices
 image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/hyperexecute-appium-testing/
+url: https://www.testmu.ai/support/docs/hyperexecute-appium-testing
 site_name: LambdaTest
-slug: hyperexecute-appium-testing/
+slug: hyperexecute-appium-testing
 ---
 
 import CodeBlock from '@theme/CodeBlock';

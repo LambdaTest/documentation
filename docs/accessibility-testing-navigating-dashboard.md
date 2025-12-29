@@ -12,9 +12,9 @@ keywords:
     - run quick scan
     - test issues
     - Dashboard
-url: https://www.lambdatest.com/support/docs/accessibility-testing-navigating-dashboard/
+url: https://www.testmu.ai/support/docs/accessibility-testing-navigating-dashboard
 site_name: LambdaTest
-slug: accessibility-testing-navigating-dashboard/
+slug: accessibility-testing-navigating-dashboard
 ---
 
 import CodeBlock from '@theme/CodeBlock';

@@ -9,9 +9,9 @@ keywords:
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
   - FailFast Feature
-url: https://www.lambdatest.com/support/docs/hyperexecute-failfast/
+url: https://www.testmu.ai/support/docs/hyperexecute-failfast
 site_name: LambdaTest
-slug: hyperexecute-failfast/
+slug: hyperexecute-failfast
 ---
 
 <script type="application/ld+json"

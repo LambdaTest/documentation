@@ -11,9 +11,9 @@ keywords:
   - mobile automation
   - automation testing
   - mobile test automation
-url: https://www.lambdatest.com/support/docs/uipath-integration/
+url: https://www.testmu.ai/support/docs/uipath-integration
 site_name: LambdaTest
-slug: uipath-integration/
+slug: uipath-integration
 ---
 
 <script type="application/ld+json"

@@ -7,9 +7,9 @@ keywords:
   - TestMu AI Hyperexecute
   - TestMu AI Hyperexecute help
   - TestMu AI Hyperexecute documentation
-url: https://www.lambdatest.com/support/docs/custom-speclow-report/
+url: https://www.testmu.ai/support/docs/custom-speclow-report
 site_name: LambdaTest
-slug: custom-speclow-report/
+slug: custom-speclow-report
 ---
 
 <script type="application/ld+json"

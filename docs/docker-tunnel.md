@@ -16,9 +16,9 @@ keywords:
   - docker compose ssh tunnel
   - docker vpn tunnel
 image: /assets/images/og-images/docker-tunnel.png
-url: https://www.lambdatest.com/support/docs/docker-tunnel/
+url: https://www.testmu.ai/support/docs/docker-tunnel
 site_name: LambdaTest
-slug: docker-tunnel/
+slug: docker-tunnel
 ---
 import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 

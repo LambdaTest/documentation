@@ -15,9 +15,9 @@ keywords:
   - test on samsung a7 online
   - test on mac 10.11 el capitan online
   - apple mac el capitan virtual machine
-url: https://www.lambdatest.com/support/docs/smart-visual-regression-testing/
+url: https://www.testmu.ai/support/docs/smart-visual-regression-testing
 site_name: LambdaTest
-slug: smart-visual-regression-testing/
+slug: smart-visual-regression-testing
 ---
 
 import Tabs from '@theme/Tabs';

@@ -11,9 +11,9 @@ keywords:
   - Custom Gestures
   - Double tap
   - Triple tap
-slug: gesture-support-ios/
+slug: gesture-support-ios
 site_name: LambdaTest
-url: https://www.lambdatest.com/support/docs/gesture-support-ios/
+url: https://www.testmu.ai/support/docs/gesture-support-ios
 ---
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';

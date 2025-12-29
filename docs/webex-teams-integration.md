@@ -17,9 +17,9 @@ keywords:
   - create webex teams issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/webex-teams-integration/
+url: https://www.testmu.ai/support/docs/webex-teams-integration
 site_name: LambdaTest
-slug: webex-teams-integration/
+slug: webex-teams-integration
 ---
 
 <script type="application/ld+json"

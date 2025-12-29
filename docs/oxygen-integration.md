@@ -12,9 +12,9 @@ keywords:
   - oxygen ide
   - record and playback
   - cross browser testing
-url: https://www.lambdatest.com/support/docs/run-oxygen-automation-scripts-on-lambdatest/
+url: https://www.testmu.ai/support/docs/run-oxygen-automation-scripts-on-testmu
 site_name: LambdaTest
-slug: run-oxygen-automation-scripts-on-lambdatest/
+slug: run-oxygen-automation-scripts-on-testmu
 ---
 
 <script type="application/ld+json"

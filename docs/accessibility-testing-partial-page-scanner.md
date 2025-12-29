@@ -12,9 +12,9 @@ keywords:
     - run quick scan
     - test issues
     - Partial Page Scanner
-url: https://www.lambdatest.com/support/docs/accessibility-testing-partial-page-scanner/
+url: https://www.testmu.ai/support/docs/accessibility-testing-partial-page-scanner
 site_name: LambdaTest
-slug: accessibility-testing-partial-page-scanner/
+slug: accessibility-testing-partial-page-scanner
 ---
 
 import CodeBlock from '@theme/CodeBlock';

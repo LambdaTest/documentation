@@ -12,9 +12,9 @@ keywords:
   - app testing
   - real devices
 image: /assets/images/og-images/appium-testing-og-image.jpg
-url: https://www.lambdatest.com/support/docs/ios-keychain-cleanup/
+url: https://www.testmu.ai/support/docs/ios-keychain-cleanup
 site_name: LambdaTest
-slug: ios-keychain-cleanup/
+slug: ios-keychain-cleanup
 ---
 
 import CodeBlock from '@theme/CodeBlock';

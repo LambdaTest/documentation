@@ -1,7 +1,7 @@
 require('dotenv').config();
 import { themes as prismThemes } from 'prism-react-renderer';
 module.exports = {
-  title: 'LambdaTest',
+  title: 'TestMu AI (Formerly LambdaTest)',
   tagline: 'Ensure your web-apps work seamlessly on every desktop and mobile browsers.',
   url: 'https://www.lambdatest.com',
   baseUrl: '/support/',

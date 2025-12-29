@@ -8,9 +8,9 @@ keywords:
 - generate lighthouse reports in selenium 
 - generate lighthouse reports with lambda hooks
 - lighthouse reports testmu ai
-url: https://www.lambdatest.com/support/docs/generate-multiple-lighthouse-reports/
+url: https://www.testmu.ai/support/docs/generate-multiple-lighthouse-reports
 site_name: LambdaTest
-slug: generate-multiple-lighthouse-reports/
+slug: generate-multiple-lighthouse-reports
 ---
 
 <script type="application/ld+json"

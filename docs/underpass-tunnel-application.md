@@ -13,9 +13,9 @@ keywords:
   - underpass tunnel application
   - tunnel application
   - underpass testmu ai
-url: https://www.lambdatest.com/support/docs/underpass-tunnel-application/
+url: https://www.testmu.ai/support/docs/underpass-tunnel-application
 site_name: LambdaTest
-slug: underpass-tunnel-application/
+slug: underpass-tunnel-application
 ---
 
 <script type="application/ld+json"

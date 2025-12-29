@@ -11,9 +11,9 @@ keywords:
   - lambda hooks automation testing
   - selenium lambda hooks
 image: /assets/images/og-images/default-user-image.png
-url: https://www.lambdatest.com/support/docs/lambda-hooks/
+url: https://www.testmu.ai/support/docs/lambda-hooks
 site_name: LambdaTest
-slug: lambda-hooks/
+slug: lambda-hooks
 ---
 
 <script type="application/ld+json"

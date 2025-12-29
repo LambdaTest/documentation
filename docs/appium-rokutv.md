@@ -13,9 +13,9 @@ keywords:
   - real time testing
   - appium automation
 
-url: https://www.lambdatest.com/support/docs/appium-rokutv/
+url: https://www.testmu.ai/support/docs/appium-rokutv
 site_name: LambdaTest
-slug: appium-rokutv/
+slug: appium-rokutv
 ---
 
 import CodeBlock from '@theme/CodeBlock';

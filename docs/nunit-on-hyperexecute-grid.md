@@ -18,9 +18,9 @@ keywords:
   - hyperexecute NUnit testing
   - hyperexecute NUnit testing
   - hyperexecute automation testing
-url: https://www.lambdatest.com/support/docs/nunit-on-hyperexecute-grid/
+url: https://www.testmu.ai/support/docs/nunit-on-hyperexecute-grid
 site_name: LambdaTest
-slug: nunit-on-hyperexecute-grid/
+slug: nunit-on-hyperexecute-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

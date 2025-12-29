@@ -10,9 +10,9 @@ keywords:
   - MFA
   - 2FA
   - authentication
-url: https://www.lambdatest.com/support/docs/kaneai-totp/
+url: https://www.testmu.ai/support/docs/kaneai-totp
 site_name: LambdaTest
-slug: kaneai-totp/
+slug: kaneai-totp
 ---
 
 <script type="application/ld+json"

@@ -15,8 +15,8 @@ keywords:
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
 
-url: https://www.lambdatest.com/support/docs/smart-ui-cypress/
-slug: smart-ui-build-options/
+url: https://www.testmu.ai/support/docs/smart-ui-cypress
+slug: smart-ui-build-options
 ---
 
 import Tabs from '@theme/Tabs';

@@ -9,9 +9,9 @@ keywords:
   - c# selenium tutorial
   - c# selenium webdriver
   - c# selenium testing
-url: https://www.lambdatest.com/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-lambdatest-selenium-grid/
+url: https://www.testmu.ai/support/docs/nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid
 site_name: LambdaTest
-slug: nunit-with-selenium-running-nunit-automation-scripts-on-lambdatest-selenium-grid/
+slug: nunit-with-selenium-running-nunit-automation-scripts-on-testmu-selenium-grid
 ---
 
 import CodeBlock from '@theme/CodeBlock';

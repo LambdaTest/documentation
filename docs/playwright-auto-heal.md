@@ -8,9 +8,9 @@ keywords:
   - auto heal testmu ai
   - auto heal test flakiness restrictions
   - auto healing testmu ai
-url: https://www.lambdatest.com/support/docs/playwright-auto-healing/
+url: https://www.testmu.ai/support/docs/playwright-auto-healing
 site_name: LambdaTest
-slug: playwright-auto-healing/
+slug: playwright-auto-healing
 ---
 
 import Tabs from '@theme/Tabs';

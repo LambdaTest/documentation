@@ -13,9 +13,9 @@ keywords:
   - hyperexecute automation grid online
   - hyperexecute getting started
 image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
-url: https://www.lambdatest.com/support/docs/audit-logs/
+url: https://www.testmu.ai/support/docs/audit-logs
 site_name: LambdaTest
-slug: audit-logs/
+slug: audit-logs
 ---
 
 <script type="application/ld+json"

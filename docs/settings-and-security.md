@@ -10,9 +10,9 @@ keywords:
   - Account Management
   - Settings
   - Security
-url: https://www.lambdatest.com/support/docs/settings-and-security/
+url: https://www.testmu.ai/support/docs/settings-and-security
 site_name: LambdaTest
-slug: settings-and-security/
+slug: settings-and-security
 ---
 
 <script type="application/ld+json"

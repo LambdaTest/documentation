@@ -17,9 +17,9 @@ keywords:
   - create monday.com issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/monday-com-integration/
+url: https://www.testmu.ai/support/docs/monday-com-integration
 site_name: LambdaTest
-slug: monday-com-integration/
+slug: monday-com-integration
 ---
 
 <script type="application/ld+json"

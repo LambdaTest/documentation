@@ -14,9 +14,9 @@ keywords:
   - selenium automation
   - selenium testing
 image: /assets/images/og-images/Mocha-Selenium.jpg
-url: https://www.lambdatest.com/support/docs/automation-testing-with-mocha-and-selenium/
+url: https://www.testmu.ai/support/docs/automation-testing-with-mocha-and-selenium
 site_name: LambdaTest
-slug: /automation-testing-with-mocha-and-selenium/
+slug: /automation-testing-with-mocha-and-selenium
 ---
 
 import CodeBlock from '@theme/CodeBlock';

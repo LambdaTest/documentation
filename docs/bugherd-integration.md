@@ -17,9 +17,9 @@ keywords:
   - create bugherd issues from testmu ai
   - bug tracking tools
   - project management tools
-url: https://www.lambdatest.com/support/docs/bugherd-integration/
+url: https://www.testmu.ai/support/docs/bugherd-integration
 site_name: LambdaTest
-slug: bugherd-integration/
+slug: bugherd-integration
 ---
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

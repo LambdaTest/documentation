@@ -10,9 +10,9 @@ keywords:
   - local testing for windows
   - push issues to clubhouse
   - local cross browser testing
-url: https://www.lambdatest.com/support/docs/local-testing-windows/
+url: https://www.testmu.ai/support/docs/local-testing-windows
 site_name: LambdaTest
-slug: local-testing-windows/
+slug: local-testing-windows
 ---
 
 <script type="application/ld+json"

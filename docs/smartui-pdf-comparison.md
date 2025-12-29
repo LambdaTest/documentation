@@ -14,9 +14,9 @@ keywords:
   - Visual Regression Run Specific Test
   - Visual Regression Testing Environment
   - How to Run Visual Regression Tests
-url: https://www.lambdatest.com/support/docs/smartui-pdf-comparison/
+url: https://www.testmu.ai/support/docs/smartui-pdf-comparison
 site_name: LambdaTest
-slug: smartui-pdf-comparison/
+slug: smartui-pdf-comparison
 ---
 
 import Tabs from '@theme/Tabs';
