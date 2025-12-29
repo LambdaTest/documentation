@@ -6,8 +6,8 @@ description: Now you can run your Appium automation scripts using Rspec on TestM
 keywords:
   - appium
   - Rspec
-  - lambdatest Rspec
-  - framework on lambdatest
+  - testmu ai Rspec
+  - framework on testmu ai
   - java
   - app testing
   - real devices

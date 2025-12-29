@@ -5,17 +5,17 @@ hide_title: true
 sidebar_label: Wrike 
 description: With TestMu AI + Wrike integration, now you can mark your bug directly to Wrike workspace from TestMu AI even in middle of testing, and effectively track it.
 keywords:
- - LambdaTest Wrike integration
- - How to integrate Wrike with LambdaTest
- - bug management tools in LambdaTest
+ - TestMu AI Wrike integration
+ - How to integrate Wrike with TestMu AI
+ - bug management tools in TestMu AI
  - Free Cross Browser Testing Tool
- - Wrike integration with LambdaTest
- - bug tracking tool in LambdaTest
- - project management tool in LambdaTest
- - LambdaTest marketplace
- - LambdaTest Appstore
- - LambdaTest apps
- - LambdaTest integrations
+ - Wrike integration with TestMu AI
+ - bug tracking tool in TestMu AI
+ - project management tool in TestMu AI
+ - TestMu AI marketplace
+ - TestMu AI Appstore
+ - TestMu AI apps
+ - TestMu AI integrations
 url: https://www.lambdatest.com/support/docs/integrating-wrike-with-lambdatest/
 site_name: LambdaTest
 slug: integrating-wrike-with-lambdatest/

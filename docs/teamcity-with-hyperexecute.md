@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: TeamCity
 description: Integrate TeamCity with HyperExecute effortlessly! Speed up your CI/CD pipeline while ensuring UI/UX consistency with TestMu AI’s reliable testing platform
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - hyperexecute integrations
   - hyperexecute integrations with ci/cd tools
   - continuous integration

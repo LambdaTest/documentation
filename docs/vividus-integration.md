@@ -5,12 +5,12 @@ hide_title: true
 sidebar_label: Vividus
 description: With this integration, run your tests from Vividus tool, directly on TestMu AI cloud-based Selenium Grid, on 3000+ desktop &amp; mobile browser and OS combinations
 keywords:
-- lambdatest integrations
+- testmu ai integrations
 - vividus
 - test automation for gui testing
 - test automation
-- vividus integration with lambdatest
-- lambdatest integration with vividus
+- vividus integration with testmu ai
+- testmu ai integration with vividus
 url: https://www.lambdatest.com/support/docs/vividus-integration/
 site_name: LambdaTest
 slug: vividus-integration/

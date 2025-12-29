@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Selenium Capabilities v4
 description: This document contains all the desired capabilities that are supported by TestMu AI for Selenium version 4 and above
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium capabilities
   - selenium version >=4
 url: https://www.lambdatest.com/support/docs/selenium-four-capabilities/

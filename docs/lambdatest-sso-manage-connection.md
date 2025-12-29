@@ -6,7 +6,7 @@ sidebar_label: Manage SSO Connection
 description: This document will help you set up and manage your TestMu AI SSO connection. 
 keywords:
 - sso
-- LambdaTest SSO
+- TestMu AI SSO
 - Update SSO
 - Manage SSO
 - Enforce SSO

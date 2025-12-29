@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Navigating Dashboard
 description: Access valuable insights and actionable steps for improving your website's accessibility performance with Accessibility Dashboard.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

@@ -7,7 +7,7 @@ keywords:
   - playwright
   - nodejs
   - sdk
-  - lambdatest
+  - testmu ai
   - automation
   - testing
 slug: /playwright-sdk/

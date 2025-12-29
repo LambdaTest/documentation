@@ -8,7 +8,7 @@ description: TestMu AI’s Accessibility MCP Server tests public URLs and React 
 keywords:
   - accessibility testing
   - accessibility
-  - lambdatest
+  - testmu ai
   - MCP
   - MCP server
 url: https://www.lambdatest.com/support/docs/accessibility-mcp-server/

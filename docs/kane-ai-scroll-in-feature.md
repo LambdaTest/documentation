@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Scroll in Element
 description: Learn how to run scroll commands during your web testing.
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
 url: https://www.lambdatest.com/support/docs/kane-ai-scroll-in-feature/

@@ -8,8 +8,8 @@ keywords:
  -  playwright testing with Playwright test runner
   - playwright e2e testing with Playwright test runner
   - playwright mobile testing with Playwright test runner
-  - playwright testing on lambdatest Playwright test runner
-  - playwright testing lambdatest 
+  - playwright testing on testmu ai Playwright test runner
+  - playwright testing testmu ai 
   - playwright parallel tests
   - parallel testing with playwright
   

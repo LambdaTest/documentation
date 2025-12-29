@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Hyperexecute Knowledge Base
 description: Discover the HyperExecute Knowledge Base for insights on concepts, setup, configuration, and more. Get answers to your questions about HyperExecute.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How To?
 url: https://www.lambdatest.com/support/docs/hyperexecute-knowledge-base/
 site_name: LambdaTest

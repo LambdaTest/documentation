@@ -7,8 +7,8 @@ keywords:
   - appium
   - csharp
   - c#
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - NUNit
   - app testing
   - real devices

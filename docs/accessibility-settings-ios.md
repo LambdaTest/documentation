@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Accessibility Settings (iOS)
 description: Ensure iOS app accessibility by testing text size, high-contrast, and reduce motion settings with real-time updates, notifications, and simplified animations.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

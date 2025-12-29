@@ -5,15 +5,15 @@ hide_title: false
 sidebar_label: Teamwork
 description: TestMu AI helps you to push bugs directly in Teamwork project with details like task list, assignee, title and description with a single click.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to clubhouse
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest teamwork integration
-  - integrate teamwork with lambdatest
-  - create issue in teamwork from lambdatest
-  - teamwork integration with lambdatest
+  - testmu ai teamwork integration
+  - integrate teamwork with testmu ai
+  - create issue in teamwork from testmu ai
+  - teamwork integration with testmu ai
   - create teamwork issues from teamwork
   - bug tracking tools
   - project management tools

@@ -6,7 +6,7 @@ sidebar_label: Getting Started
 description: With TestMu AI, conduct live interactive testing of websites and web apps on real Android and iOS devices to ensure a seamless user experience.
 keywords:
 - real device browser testing 
-- lambdatest real device browser testing 
+- testmu ai real device browser testing 
 url: https://www.lambdatest.com/support/docs/browser-testing-on-real-devices/
 site_name: LambdaTest
 slug: browser-testing-on-real-devices/

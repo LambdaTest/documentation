@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Version 3.0.0
 description: Version 3.0.0
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-3-0-0/
 site_name: LambdaTest

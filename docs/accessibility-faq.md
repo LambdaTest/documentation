@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label:  FAQs
 description: This document consists of frequently asked questions related to the accessibility tool of TestMu AI. It will help you to answer some of your common questions.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - selenium

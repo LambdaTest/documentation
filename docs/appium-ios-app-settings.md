@@ -7,8 +7,8 @@ keywords:
   - appium
   - ios
   - app settings
-  - lambdatest ios
-  - automation on lambdatest
+  - testmu ai ios
+  - automation on testmu ai
   - ios app settings
   - app automation
   - real devices

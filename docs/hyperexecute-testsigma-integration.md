@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Testsigma
 description:  Explore seamless integrations with popular tools at TestMu AI. Enhance your testing workflow for faster, efficient cross-browser testing.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - testsigma
   - Integrations
   - Products

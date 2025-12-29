@@ -6,8 +6,8 @@ description: Follow the instructions in this documentation, so that you can seam
 keywords:
   - espresso
   - java
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices

@@ -5,15 +5,15 @@ hide_title: true
 sidebar_label: Backlog
 description: TestMu AI integration with Backlog will help you file any UI bug on your Backlog project instance, directly from TestMu AI. If you ever come across a browser compatibility bug while cross browser testing on TestMu AI, all you need to do is hit a single click and the bug will be logged into your Backlog project.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to backlog
   - free cross browser testing tool
   - check browser compatibility online
-  - lambdatest backlog integration
-  - integrate backlog with lambdatest
-  - create issue in backlog from lambdatest
-  - backlog integration with lambdatest
-  - create backlog issues from lambdatest
+  - testmu ai backlog integration
+  - integrate backlog with testmu ai
+  - create issue in backlog from testmu ai
+  - backlog integration with testmu ai
+  - create backlog issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/backlog-integration-with-lambdatest/

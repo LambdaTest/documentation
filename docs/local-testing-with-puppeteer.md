@@ -6,7 +6,7 @@ sidebar_label:  Local Testing
 description: Learn how to perform local testing with Puppeteer across 40+ browser versions on the TestMu AI platform.
 keywords:
   - local testing
-  - lambdatest tunnel features
+  - testmu ai tunnel features
   - local testing for puppeteer
   - local cross browser testing
   - local testing puppeteer

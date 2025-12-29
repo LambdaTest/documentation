@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Building Mobile Applications Using Tools
 description: Building Mobile Applications Using Tools
 keywords:
-  - LambdaTest HyperExecute
+  - TestMu AI HyperExecute
   - gradle
   - maven
   - sdk

@@ -6,9 +6,9 @@ sidebar_label: Wildcard Support
 description: Now you can use wildcard values for the -allow-Host flag for setting up the tunnel at TestMu AI.
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - LambdaTest tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - TestMu AI tunnel
   - local app testing for linux
   - TCP with TLS 1.2 secure connection
   - shared TCP with TLS 1.2 secure connection

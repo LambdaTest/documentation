@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Full Page Scanner
 description: Full Page Scanner scans multiple elements like HTML/CSS code, images, forms, and multimedia elements, ensuring WCAG compliance and automated issue detection.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

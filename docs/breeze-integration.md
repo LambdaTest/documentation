@@ -5,14 +5,14 @@ hide_title: true
 sidebar_label: Breeze
 description: TestMu AI integration with Breeze will help you log UI bugs or observations in your Breeze project as you perform cross browser testing on TestMu AI.
 keywords:
-  - lambdatest-breeze integration
+  - testmu ai-breeze integration
   - easy bug tracking
   - project management tool
   - issue tracking tool
-  - lambdatest app marketplace
-  - lambdatest integrations
+  - testmu ai app marketplace
+  - testmu ai integrations
   - one click bug marking
-  - lambdatest 3rd party integration
+  - testmu ai 3rd party integration
 url: https://www.lambdatest.com/support/docs/breeze-integration-with-lambdatest/
 site_name: LambdaTest
 slug: breeze-integration-with-lambdatest/

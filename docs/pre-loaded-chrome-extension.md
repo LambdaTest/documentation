@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Pre-Loaded Extension
 description: Learn how to install and manage Chrome extensions during real-time testing on TestMu AI. Enhance your manual testing sessions with ad blockers, debugging tools, and more.
 keywords:
-  - lambdatest pre loaded chrome extension
-  - lambdatest pre loaded extension for chrome 
-  - lambdatest pre loaded extension
+  - testmu ai pre loaded chrome extension
+  - testmu ai pre loaded extension for chrome 
+  - testmu ai pre loaded extension
 url: https://www.lambdatest.com/support/docs/pre-loaded-chrome-extension/
 site_name: LambdaTest
 slug: pre-loaded-chrome-extension/

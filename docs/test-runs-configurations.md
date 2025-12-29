@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Configurations
 description: Learn how to levearge configurations to execute your tests in multiple environments.
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - kaneai
   - test manager
   - configurations

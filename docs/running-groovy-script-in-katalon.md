@@ -2,7 +2,7 @@
 id: running-groovy-script-in-katalon
 title: How to Run Groovy Script In Katalon With TestMu AI Selenium Grid?
 hide_title: true
-sidebar_label: Running Groovy Script In Katalon With LambdaTest Selenium Grid
+sidebar_label: Running Groovy Script In Katalon With TestMu AI Selenium Grid
 description: Run your Groovy script in Katalon with TestMu AI Selenium Grid. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines.
 keywords:
 - Katalon Groovy Script

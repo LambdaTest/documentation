@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Bitbucket
 description: TestMu AI provides integrations with Bitbucket to help you log bugs directly from the middle of your test session on TestMu AI to your Bitbucket repository.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to bitbucket
   - free cross browser testing tool
 url: https://www.lambdatest.com/support/docs/bitbucket-integration/

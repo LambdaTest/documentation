@@ -5,12 +5,12 @@ sidebar_label: YAML
 description: This topic will teach you how you can configure your own YAML through GoCD and then integrate your pipeline with an online Selenium Grid.
 keywords:
   - gocd
-  - lambdatest
+  - testmu ai
   - gocd integrations
   - gocd pipelines
-  - gocd lambdatest
-  - gocd integration with lambdatest
-  - lambdatest integration with gocd pipelines
+  - gocd testmu ai
+  - gocd integration with testmu ai
+  - testmu ai integration with gocd pipelines
   - ci/cd
 url: https://www.lambdatest.com/support/docs/configure-yaml-for-integrating-gocd-pipelines-with-selenium-grid-online/
 site_name: LambdaTest

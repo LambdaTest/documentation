@@ -6,9 +6,9 @@ sidebar_label: Docker Tunnel
 description: Now you can use Docker image to perform live interactive and automated cross-browser testing of your locally hosted webpage on the TestMu AI platform.
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - LambdaTest tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - TestMu AI tunnel
   - local app testing for linux
   - ssh connection
   - shared ssh

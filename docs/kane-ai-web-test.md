@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Author your First Test
 description: Author your first test with KaneAI
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai Web test
 url: https://www.lambdatest.com/support/docs/kane-ai-web-agent
 site_name: LambdaTest

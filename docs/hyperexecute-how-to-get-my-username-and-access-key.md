@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: How to Get my Username and Access key
 description: Find out how to Get my Username and Access key
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to Get my Username and Access key
 url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-get-my-username-and-access-key/
 site_name: LambdaTest

@@ -8,8 +8,8 @@ keywords:
 - TeamCity Plugin
 - TeamCity Integration with Selenium
 - TeamCity Tntegration
-- TeamCity LambdaTest
-- TeamCity LambdaTest Integration
+- TeamCity TestMu AI
+- TeamCity TestMu AI Integration
 - TeamCity Tutorial
 - Selenium Testing with TeamCity
 

@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Parameters
 description: Learn how to use parameters in the KaneAI test cases
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
 url: https://www.lambdatest.com/support/docs/kane-ai-using-parameters/

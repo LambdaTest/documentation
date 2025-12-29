@@ -6,7 +6,7 @@ sidebar_label: Daily Usage Limit Per Organization
 description: TestMu AI enforces a daily test execution time limit at the organization level, based on the number of concurrent sessions, to ensure fair usage and system stability.
 keywords:
   - over-exploitation
-  - lambdatest best practices
+  - testmu ai best practices
   - automation testing
   - concurrency
   - parallel sessions

@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Run Your Quick Scan
 description: Improve your website's accessibility by running a quick scan with TestMu AI Accessibility DevTools and efficiently review and resolve any issues found.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

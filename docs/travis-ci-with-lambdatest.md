@@ -5,14 +5,14 @@ hide_title: true
 sidebar_label: Travis CI
 description: TestMu AI now integrates with Travis CI to boost go-to market delivery. Perform automated cross browser testing with TestMu AI to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on cloud. Perform automation testing in parallel with TestMu AI’s Selenium grid to drastically trim down test cycles.
 keywords:
-    - lambdatest integrations
-    - lambdatest integrations with ci/cd tools
+    - testmu ai integrations
+    - testmu ai integrations with ci/cd tools
     - ci/cd tools
     - continuous integration
     - continuous delivery
     - continuous integration tools
     - Travis CI integration
-    - Travis CI integration with lambdatest
+    - Travis CI integration with testmu ai
 url: https://www.lambdatest.com/support/docs/travis-ci-with-lambdatest/
 site_name: LambdaTest
 slug: travis-ci-with-lambdatest/

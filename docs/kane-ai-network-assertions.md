@@ -8,7 +8,7 @@ keywords:
   - network
   - network logs assertion
   - assertion
-  - lambdatest kaneai
+  - testmu ai kaneai
 url: https://www.lambdatest.com/support/docs/kane-ai-network-assertions
 site_name: LambdaTest
 slug: kane-ai-network-assertions/

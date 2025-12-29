@@ -9,7 +9,7 @@ keywords:
   - gauge
   - python gauge appium tutorial
   - real devices
-  - lambdatest cloud platform
+  - testmu ai cloud platform
   - app automation
   - real time testing
   - appium automation

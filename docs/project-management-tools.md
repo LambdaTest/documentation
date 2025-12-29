@@ -4,7 +4,7 @@ title: Project Management Tools
 sidebar_label: Project Management Tools
 description: TestMu AI offers integration with third-party tools for project management and bug tracking to help you collaborate with your colleagues as you encounter a bug while cross browser testing.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - project management
   - free cross browser testing tool
 url: https://www.lambdatest.com/support/docs/integrations-with-project-management-tools/

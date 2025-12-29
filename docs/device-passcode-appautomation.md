@@ -11,7 +11,7 @@ keywords:
   - security testing
   - mdm apps
   - enterprise apps
-  - lambdatest ios
+  - testmu ai ios
   - real devices
 url: https://www.lambdatest.com/support/docs/device-passcode-appautomation/
 site_name: LambdaTest

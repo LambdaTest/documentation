@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: PractiTest
 description: TestMu AI provides integrations with PractiTest to help you log bugs directly from the middle of your test session on TestMu AI to your PractiTest.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to PractiTest
   - free cross browser testing tool
 url: https://www.lambdatest.com/support/docs/practitest-integration/

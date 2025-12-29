@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Browser Options
 description: This document leverages you to play around your browser options for setting up in the selenium
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
   - selenium browser
   - chrome

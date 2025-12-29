@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label:  Scheduled Test Runs
 description: This documentation will help you to understand how to create a scheduled test runs via KaneAI
 keywords:
-- users management lambdatest
+- users management testmu ai
 - manage user
 url: https://www.lambdatest.com/support/docs/kaneai-scheduled-test-runs/
 site_name: LambdaTest

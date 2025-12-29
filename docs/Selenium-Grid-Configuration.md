@@ -2,10 +2,10 @@
 id: Selenium-Grid-Configuration
 title: Selenium Grid Configuration Guide | How to Configure TestMu AI Automation Grid
 hide_title: true
-sidebar_label: LambdaTest Selenium Grid Configuration
+sidebar_label: TestMu AI Selenium Grid Configuration
 description: This support guide tells you how can you configure TestMu AI Online Selenium Grid of 3000+ real desktop and mobile browsers.
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
   - selenium grid online
   - selenium versions  

@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Password and Access Key Expiration Policy
 description: Guide to Manage your Password and Access Key Expiration Policies.
 keywords:
-  - lambdatest automation
-  - lambdatest hyperexecute
+  - testmu ai automation
+  - testmu ai hyperexecute
   - hyperexecute automation grid
   - hyperexecute online
   - online hyperexecute

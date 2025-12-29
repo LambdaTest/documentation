@@ -11,7 +11,7 @@ keywords:
     - real devices
     - mobile testing
     - mobile testing on HyperExecute
-    - mobile testing on lambdatest
+    - mobile testing on testmu ai
     - fast mobile testing
     - mobile automation
 

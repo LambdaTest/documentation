@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: JavaScript Execution
 description: Learn how to execute your tests on Kane AI using custom javascript snippets
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai guided walkthrough
   - kane ai prompts
   - kane ai commands

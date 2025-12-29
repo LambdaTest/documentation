@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Adding URLs for Web Scanner
 description: A guide on the different methods for adding URLs to your scan, including manual input, CSV file upload, and importing from a sitemap XML.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - add urls
   - csv import

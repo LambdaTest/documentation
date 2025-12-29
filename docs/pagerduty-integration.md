@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: PagerDuty 
 description: You can log defects with a single click when performing cross-browser testing using TestMu AI and PagerDuty integration. Capture screenshots, pinpoint errors, and send them straight to PagerDuty from the TestMu AI platform.
 keywords:
-  - LambdaTest integration with PagerDuty
-  - LambdaTest and PagerDuty Integration
+  - TestMu AI integration with PagerDuty
+  - TestMu AI and PagerDuty Integration
   - PagerDutyIntegration
 url: https://www.lambdatest.com/support/docs/pagerduty-integration/
 site_name: LambdaTest

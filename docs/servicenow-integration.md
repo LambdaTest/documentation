@@ -5,16 +5,16 @@ hide_title: false
 sidebar_label: ServiceNow
 description: TestMu AI helps you manage your incidents in ServiceNow by moving them to your project in a single click. All the details you provide in TestMu AI like task list, assignee, title, and description would automatically be presented in the project on ServiceNow.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to servicenow
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest servicenow integration
-  - integrate servicenow with lambdatest
-  - create issue in servicenow from lambdatest
-  - servicenow integration with lambdatest
-  - create servicenow issues from lambdatest
+  - testmu ai servicenow integration
+  - integrate servicenow with testmu ai
+  - create issue in servicenow from testmu ai
+  - servicenow integration with testmu ai
+  - create servicenow issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/servicenow-integration/

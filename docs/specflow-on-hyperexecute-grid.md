@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver SpecFlow
   - selenium SpecFlow testing tutorial
   - SpecFlow C# Selenium framework
-  - lambdatest SpecFlow
-  - frameworks on lambdatest
+  - testmu ai SpecFlow
+  - frameworks on testmu ai
   - hyperexecute
   - hyperexecute SpecFlow testing
   - hyperexecute python testing

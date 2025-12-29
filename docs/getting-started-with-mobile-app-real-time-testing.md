@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Getting Started
 description: Test your mobile apps on real devices in real-time with TestMu AI. Easily launch virtual machines and test across various OS and versions.
 keywords:
-  - real time testing in lambdatest
-  - lambdatest real time testing feature
+  - real time testing in testmu ai
+  - testmu ai real time testing feature
   - online real time testing
   - free cross browser testing tool
   - cross browser compatibility testing tool

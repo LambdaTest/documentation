@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: YouTrack 
 description: TestMu AI provides YouTrack integration to help you perform one-click bug logging from the TestMu AI to your YouTrack dashboard right away.
 keywords:
-  - LambdaTest integration with YouTrack 
-  - LambdaTest and YouTrack integration 
+  - TestMu AI integration with YouTrack 
+  - TestMu AI and YouTrack integration 
   - YouTrack integration
   
 url: https://www.lambdatest.com/support/docs/youtrack-integration/

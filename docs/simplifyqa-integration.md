@@ -5,11 +5,11 @@ hide_title: false
 sidebar_label: SimplifyQA
 description: This guide walk you through how you can run your tests using simplifyqa after integrating on TestMu AI's real device.
 keywords:
-  - LambdaTest integration
-  - lambdatest integration with simplifyqa
+  - TestMu AI integration
+  - testmu ai integration with simplifyqa
   - simplifyqa
   - simplifyex
-  - lambdatest
+  - testmu ai
   - real device
   - simplifyqa real device
 url: https://www.lambdatest.com/support/docs/simplifyqa-integration/

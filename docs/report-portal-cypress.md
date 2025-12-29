@@ -4,12 +4,12 @@ title: ReportPortal.io Integration With TestMu AI For Cypress
 sidebar_label: Report Portal IO Integration For Cypress
 description: This article will guide you on how to integrate the LambdatTest platform with Report Portal platform for running your Cypress automation tests.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - report portal io
   - reportportal for cypress
-  - lambdatest cypress with report portal io
+  - testmu ai cypress with report portal io
   - cypress automation
-  - lambdatest integration with report portal
+  - testmu ai integration with report portal
   - cross browser testing
   - free cross browser testing tool
 url: https://www.lambdatest.com/support/docs/applitools-integration-with-lambdatest/

@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Katalon
 description: TestMu AI offers integration with Katalon Studio to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - katalon
   - katalon studio
   - katalon vs selenium

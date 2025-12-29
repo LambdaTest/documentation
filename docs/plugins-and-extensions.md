@@ -12,8 +12,8 @@ keywords:
   - wordpress plugin 
   - npm plugin
   - testcafe plugin 
-  - lambdatest plugins 
-  - lambdatest extensions 
+  - testmu ai plugins 
+  - testmu ai extensions 
   - chrome extensions for testers
   - plugins for testers 
 url: https://www.lambdatest.com/support/docs/plugins-and-extensions/

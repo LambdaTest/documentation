@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: GitHub
 description: TestMu AI provides integrations with GitHub to help you log bugs directly from the middle of your test session on TestMu AI to your GitHub repository.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to github
   - free cross browser testing tool
 image: /assets/images/og-images/default-user-image.webp

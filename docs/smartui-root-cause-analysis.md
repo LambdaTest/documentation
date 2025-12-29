@@ -7,7 +7,7 @@ keywords:
   - SmartUI RCA
   - Root Cause Analysis
   - Visual Regression Debugging
-  - LambdaTest SmartUI
+  - TestMu AI SmartUI
   - Visual Testing Troubleshooting
 url: https://www.lambdatest.com/support/docs/smartui-root-cause-analysis/
 site_name: LambdaTest

@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Accessibility Automation
 description: Use Automation tools like TestMu AI Accessibility DevTools' to detect and report accessibility issues using WCAG Guidelines.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Automation

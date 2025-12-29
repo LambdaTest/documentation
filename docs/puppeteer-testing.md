@@ -10,7 +10,7 @@ keywords:
   - how to use puppeteer for testing
   - test puppeteer
   - puppeteer testing tutorial
-  - puppeteer testing lambdatest
+  - puppeteer testing testmu ai
 
 url: https://www.lambdatest.com/support/docs/puppeteer-testing/
 site_name: LambdaTest

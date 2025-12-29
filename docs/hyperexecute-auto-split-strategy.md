@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Auto Split Strategy
 description: Explore HyperExecute Auto Split Strategy | Optimize Testing Efficiency - Discover how HyperExecute revolutionizes testing with auto split strategy for enhanced efficiency.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-auto-split-strategy/
 site_name: LambdaTest
 slug: hyperexecute-auto-split-strategy/

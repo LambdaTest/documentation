@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: monday.com
 description: LTestMu AI helps you manage your bugs in monday.com by moving them to project in a single click. You&#039;ll get all the details like task list, assignee, and title in you monday project.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to clubhouse
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest monday.com integration
-  - integrate monday.com with lambdatest
-  - create issue in monday.com from lambdatest
-  - monday.com integration with lambdatest
-  - create monday.com issues from lambdatest
+  - testmu ai monday.com integration
+  - integrate monday.com with testmu ai
+  - create issue in monday.com from testmu ai
+  - monday.com integration with testmu ai
+  - create monday.com issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/monday-com-integration/

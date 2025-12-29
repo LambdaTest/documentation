@@ -7,7 +7,7 @@ description: Learn how to generate multiple Lighthouse reports in Selenium throu
 keywords:
 - generate lighthouse reports in selenium 
 - generate lighthouse reports with lambda hooks
-- lighthouse reports lambdatest
+- lighthouse reports testmu ai
 url: https://www.lambdatest.com/support/docs/generate-multiple-lighthouse-reports/
 site_name: LambdaTest
 slug: generate-multiple-lighthouse-reports/

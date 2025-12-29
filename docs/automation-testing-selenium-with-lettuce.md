@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver python
   - selenium python testing tutorial
   - python selenium framework
-  - lambdatest python
-  - framework on lambdatest
+  - testmu ai python
+  - framework on testmu ai
 url: https://www.lambdatest.com/support/docs/automation-testing-selenium-with-lettuce/
 site_name: LambdaTest
 slug: automation-testing-selenium-with-lettuce/

@@ -5,7 +5,7 @@ sidebar_label: Testing Locally Hosted Apps
 description: TestMu AI tunnel allows you to test locally and privately hosted apps across various real Android and iOS devices. In this documentation, learn how to configure TestMu AI tunnel to test locally or privately hosted apps while running app automation.
 keywords:
   - local testing
-  - lambdatest tunnel features
+  - testmu ai tunnel features
   - local testing for app automation
   - local mobile app automation
   - local mobile app testing

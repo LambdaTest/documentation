@@ -6,7 +6,7 @@ sidebar_label: Karate
 description: Learn how to configure and generate Karate test execution reports on HyperExecute with step-by-step guidance for seamless test insights and reporting.
 keywords:
   - cucumber testing reports
-  - karate report lambdatest 
+  - karate report testmu ai 
 url: https://www.lambdatest.com/support/docs/karate-report/
 site_name: LambdaTest
 slug: karate-report/

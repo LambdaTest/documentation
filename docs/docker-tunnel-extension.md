@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Docker Tunnel Extension
 description: Avoid the hassle of launching tunnels via the CLI. TestMu AI Docker Tunnel Extension lets you test locally hosted web applications across 3000+ browsers, devices, and operating systems.
 keywords:
-  - lambdatest tunnel extension for docker
-  - lambdatest docker tunnel
+  - testmu ai tunnel extension for docker
+  - testmu ai docker tunnel
   - docker tunnel extension local testing
   - best docker extensions for developers
   - best docker extensions for testers

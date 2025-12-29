@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Notion
 description: Perform one-click bug logging while performing cross browser testing with TestMu AI and Notion integration. Capture screenshots, annotate issues, and share them directly from the TestMu AI platform to your Notion pages.
 keywords:
-  - LambdaTest integration with Notion
-  - LambdaTest and Notion Integration
+  - TestMu AI integration with Notion
+  - TestMu AI and Notion Integration
   - Notion Integration
 url: https://www.lambdatest.com/support/docs/notion-integration/
 site_name: LambdaTest

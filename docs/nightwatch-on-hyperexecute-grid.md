@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver Nightwatch
   - selenium Nightwatch testing tutorial
   - Nightwatch JavaScript Selenium framework
-  - lambdatest Nightwatch
-  - frameworks on lambdatest
+  - testmu ai Nightwatch
+  - frameworks on testmu ai
   - hyperexecute
   - hyperexecute Nightwatch testing
   - hyperexecute Nightwatch testing

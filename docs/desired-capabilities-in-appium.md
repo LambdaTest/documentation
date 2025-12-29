@@ -7,13 +7,13 @@ keywords:
   - cross browser testing
   - appium capabilities generator
   - appium desired capabilities
-  - lambdatest appium grid capabilities
-  - lambdatest automation capabilities generator
+  - testmu ai appium grid capabilities
+  - testmu ai automation capabilities generator
   - appium capability configuration
   - appium automation testing
   - appium automation grid online
   - configure appium tests with desired capabilities
-  - appium webdriver capabilities for running tests on lambdatest
+  - appium webdriver capabilities for running tests on testmu ai
 
 url: https://www.lambdatest.com/support/docs/desired-capabilities-in-appium/
 site_name: LambdaTest

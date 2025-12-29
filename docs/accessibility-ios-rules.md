@@ -4,7 +4,7 @@ title: iOS Accessibility Rules - Quick Reference
 sidebar_label: iOS
 description: Use TestMu AI Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Manual

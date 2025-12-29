@@ -6,8 +6,8 @@ description: Now you can run your automation scripts using Appium with PHP Behat
 keywords:
   - appium
   - php
-  - lambdatest php
-  - framework on lambdatest
+  - testmu ai php
+  - framework on testmu ai
   - Behat
   - app testing
   - real devices

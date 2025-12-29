@@ -5,7 +5,7 @@ sidebar_label: Zalenium
 description: TestMu AI integration with Zalenium will allow you perform automated cross browser testing for your locally hosted web pages for over 3000+ real browser and browser versions, installed and hosted on-cloud.
 keywords:
   - Zelenium
-  - lambdatest intigration with zelenium
+  - testmu ai intigration with zelenium
   - cross browser testing
   - zelenium dashboard
   - automation on zelenium 

@@ -7,8 +7,8 @@ keywords:
   - xcui
   - java
   - xcui junit xml reports
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices

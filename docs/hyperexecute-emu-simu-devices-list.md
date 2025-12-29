@@ -7,7 +7,7 @@ description: List of devices available on HyperExecute for Emulator and Simulato
 keywords:
   - hyperexecute device list
   - hyperexecute
-  - lambdatest
+  - testmu ai
   - emulator
   - simulator
   - hyperexecute dashboard

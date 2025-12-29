@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: WordPress Plugin
 description: With TestMu AI plugin for WordPress, you can generate automated screenshots of your web pages and post directly from your WordPress platform. 
 keywords:
-  - LambdaTest plugin for WordPress
-  - How to add LambdaTest plugin in Wordpress
+  - TestMu AI plugin for WordPress
+  - How to add TestMu AI plugin in Wordpress
   - Free Cross Browser Testing Tool 
   - cross platform testing tool 
   - check browser compatibility online 

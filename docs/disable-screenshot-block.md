@@ -8,8 +8,8 @@ keywords:
   - disable screenshot block
   - app test automation
   - Biometric security
-  - lambdatest capture code
-  - framework on lambdatest
+  - testmu ai capture code
+  - framework on testmu ai
   - screenshot disable
   - app testing appium
   - app testing

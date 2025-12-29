@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Variables
 description: Learn how to use variables in KaneAI test cases
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
 url: https://www.lambdatest.com/support/docs/kane-ai-using-variables/

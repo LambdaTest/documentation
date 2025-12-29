@@ -11,8 +11,8 @@ keywords:
   - selenium webdriver Ruby
   - selenium Ruby testing tutorial
   - Ruby Selenium framework
-  - lambdatest Ruby
-  - frameworks on lambdatest
+  - testmu ai Ruby
+  - frameworks on testmu ai
   - hyperexecute
   - hyperexecute Ruby testing
   - hyperexecute Ruby testing

@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Jenkins
 description: Streamline automation with Jenkins and HyperExecute by exploring TestMu AI's comprehensive support documentation.
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - ci/cd tools
   - continuous integration,continuous delivery
   - continuous integration tools

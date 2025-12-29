@@ -6,7 +6,7 @@ sidebar_label: Local Testing For Windows
 description: This documentation will help you perform Localhost testing on Windows OS via TestMu AI tunnel .Test private server URLs, locally hosted web-apps and websites on 3000+ real browsers on secure TestMu AI cloud infrastructure.
 keywords:
   - local testing
-  - LambdaTest tunnel Features
+  - TestMu AI tunnel Features
   - local testing for windows
   - push issues to clubhouse
   - local cross browser testing

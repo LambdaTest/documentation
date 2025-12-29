@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: FogBugz
 description: TestMu AI helps you manage your bugs in FogBugz by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project in your FogBugz dashboard.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to fogbugz
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest fogbugz integration
-  - integrate fogbugz with lambdatest
-  - create issue in fogbugz from lambdatest
-  - fogbugz integration with lambdatest
-  - create fogbugz issues from lambdatest
+  - testmu ai fogbugz integration
+  - integrate fogbugz with testmu ai
+  - create issue in fogbugz from testmu ai
+  - fogbugz integration with testmu ai
+  - create fogbugz issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/fogbugz-integration/

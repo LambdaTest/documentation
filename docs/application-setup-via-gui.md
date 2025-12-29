@@ -6,7 +6,7 @@ description: Explore how to perform operations with your applications like uploa
 keywords:
   - appium
   - application operations
-  - lambdatest
+  - testmu ai
   - mobile testing
   - apis
   - setup application

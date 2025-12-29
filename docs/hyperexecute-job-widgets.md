@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Job Widgets
 description: Quickly and easily set up Hyperexecute Widgets for efficient analysis of test results.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - HyperExecute
   - HyperExecute Widgets
   - HyperExecute Jobs

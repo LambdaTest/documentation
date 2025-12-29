@@ -7,8 +7,8 @@ description: Learn how to run your first Selenium test with xUnit on TestMu AI.
 keywords:
 - selenium xunit
 - selenium with xunit
-- selenium with xunit on lambdatest
-- xunit lambdatest
+- selenium with xunit on testmu ai
+- xunit testmu ai
 url: https://www.lambdatest.com/support/docs/selenium-with-xunit/
 site_name: LambdaTest
 slug: selenium-with-xunit/

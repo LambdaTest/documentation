@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: App Agent Instruction Guide
 description: Learn how to write instructions for running the kane ai app agent smoothly and without any problem
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai App test
   - kaneai guidelines
   - instructions writings

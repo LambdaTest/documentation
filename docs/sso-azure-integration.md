@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Azure AD Integration
 description: This document will help you integrate your TestMu AI organization with your Azure AD directory to configure a Single sign-on for your organization.  
 keywords:
-    - LambdaTest single sign on
-    - LambdaTest SSO
-    - LambdaTest Azure AD Integration
+    - TestMu AI single sign on
+    - TestMu AI SSO
+    - TestMu AI Azure AD Integration
 url: https://www.lambdatest.com/support/docs/sso-azure-integration/
 site_name: LambdaTest
 slug: sso-azure-integration/

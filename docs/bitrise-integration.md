@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Bitrise - Appium
 description: Integrate TestMu AI with Bitrise CI to get started with Appium app automation across a wide range of real Android and iOS devices.
 keywords:
-- lambdatest bitrise
-- bitrise with lambdatest
+- testmu ai bitrise
+- bitrise with testmu ai
 - manual app testing bitrise
 - appium testing with bitrise ci
 - appium bitrise

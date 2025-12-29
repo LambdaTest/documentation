@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Playwright
 description: Boost bug detection speed using HyperExecute smart UI testing with Playwright. Perform Visual UI Regression Testing for perfect app delivery.
 keywords:
-  - smart ui testing in lambdatest
+  - smart ui testing in testmu ai
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
   - free cross browser testing tool

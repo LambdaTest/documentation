@@ -6,7 +6,7 @@ sidebar_label: Create SSO Connection
 description: TestMu AI allows you to integrate an external user directory with your TestMu AI Organization through an IDP so your team could leverage the Single Sign-on setup. This document will help you set up  your TestMu AI SSO connection.
 keywords:
   - sso
-  - LambdaTest SSO
+  - TestMu AI SSO
   - Create SSO
   - SSO Self Serve
 url: https://www.lambdatest.com/support/docs/lambdatest-sso-self-serve/

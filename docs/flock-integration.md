@@ -5,15 +5,15 @@ hide_title: true
 sidebar_label: Flock
 description: TestMu AI's integration with Flock lets you log bugs directly into Flock team channels with just one click while running cross browser testing of websites across 3000+ browser and OS combinations.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to flock
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest flock integration
-  - integrate flock with lambdatest
-  - create issue in flock from lambdatest
-  - flock integration with lambdatest
+  - testmu ai flock integration
+  - integrate flock with testmu ai
+  - create issue in flock from testmu ai
+  - flock integration with testmu ai
   - communication tools
 url: https://www.lambdatest.com/support/docs/flock-integration/
 site_name: LambdaTest

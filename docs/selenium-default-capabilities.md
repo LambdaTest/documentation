@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Default Capabilities
 description: This document list downs the default Capabilities in selenium that are supported in TestMu AI
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
   - selenium capabilities
 url: https://www.lambdatest.com/support/docs/selenium-default-capabilities/

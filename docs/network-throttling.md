@@ -9,14 +9,14 @@ keywords:
   - network throttling
   - selenium capabilities generator
   - selenium desired capabilities
-  - lambdatest selenium grid capabilities
-  - lambdatest automation capabilities generator
+  - testmu ai selenium grid capabilities
+  - testmu ai automation capabilities generator
   - selenium capability configuration
   - selenium automation testing
   - selenium automation grid online
   - configure selenium tests with network throttling desired capabilities
   - network throttling capabilities
-  - throttling test on lambdatest
+  - throttling test on testmu ai
 url: https://www.lambdatest.com/support/docs/network-throttling/
 site_name: LambdaTest
 slug: network-throttling/

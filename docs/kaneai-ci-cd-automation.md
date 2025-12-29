@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Test Automation with CI/CD
 description: Automate test run execution on KaneAI with CI/CD tools like GitHub Actions and Jenkins. Follow our step-by-step guide for seamless integration.
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai guided walkthrough
   - kane ai test run
   - hyperexecute

@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: KaneAI Free Trial
 description: Here's what your KaneAI free trial plan includes. 
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai Web test
 url: https://www.lambdatest.com/support/docs/kane-ai-free-trial-is-here
 site_name: LambdaTest

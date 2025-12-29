@@ -6,7 +6,7 @@ sidebar_label: Extent
 description: Learn how to generate Extent Report on TestMu AI and download the reports from the dashboard
 keywords:
   - extent testing reports
-  - extent testing lambdatest 
+  - extent testing testmu ai 
   
 url: https://www.lambdatest.com/support/docs/extent-report/
 site_name: LambdaTest

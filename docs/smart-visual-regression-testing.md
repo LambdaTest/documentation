@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Visual Regression
 description: Experience Visual Regression Testing at its finest with SmartUI by TestMu AI. Automate UI changes tracking for precision, collaboration, and scalability on the cloud. Optimize your testing journey now!
 keywords:
-  - smart visual testing in lambdatest
+  - smart visual testing in testmu ai
   - visual  ui testing,image to image comparison
   - free cross browser testing tool
   - regression testing tool

@@ -9,8 +9,8 @@ keywords:
   - puppeteer e2e testing 
   - puppeteer mobile testing
   - puppeteer testing tool
-  - puppeteer testing on lambdatest
-  - puppeteer testing lambdatest
+  - puppeteer testing on testmu ai
+  - puppeteer testing testmu ai
 
 url: https://www.lambdatest.com/support/docs/capabilities-for-puppeteer/
 site_name: LambdaTest

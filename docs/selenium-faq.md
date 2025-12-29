@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: FAQs
 description: Get quick answers to all your Selenium queries with our Frequently Asked Questions documentation.
 keywords:
-  - LambdaTest Selenium
-  - LambdaTest Selenium help
-  - LambdaTest Selenium documentation
+  - TestMu AI Selenium
+  - TestMu AI Selenium help
+  - TestMu AI Selenium documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/selenium-faq/
 site_name: LambdaTest

@@ -9,7 +9,7 @@ keywords:
   - playwright e2e testing 
   - playwright mobile testing 
   - playwright testing 
-  - playwright testing lambdatest 
+  - playwright testing testmu ai 
   - playwright parallel tests
   - parallel testing with playwright
   

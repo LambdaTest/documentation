@@ -6,8 +6,8 @@ description: Run your Appium automation scripts using Java JBehave on TestMu AI 
 keywords:
   - appium
   - jbehave
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices

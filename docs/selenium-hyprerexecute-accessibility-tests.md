@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label:  Selenium
 description: Use TestMu AI Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines, in your selenium tests
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - selenium

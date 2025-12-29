@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: AppVeyor CI
 description: TestMu AI now integrates with AppVeyor CI to boost your go-to-market delivery. Perform automated cross-browser testing on 3000+ browser environment combinations.
 keywords:
- - lambdatest integrations
- - lambdatest integrations with ci/cd tools
+ - testmu ai integrations
+ - testmu ai integrations with ci/cd tools
  - ci/cd tools
  - continuous integration
  - continuous delivery

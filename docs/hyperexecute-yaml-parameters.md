@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: HyperExecute YAML
 description: This document list enumerates the diverse configuration options supported by HyperExecute YAML, providing you with the flexibility to tailor test execution according to the specific requirements of your project.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-yaml-parameters/
 site_name: LambdaTest Deep dive into hyperexecute yaml
 slug: hyperexecute-yaml-parameters/

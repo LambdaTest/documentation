@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Run First KaneAI Test
 description: Learn how to run your first web test using KaneAI.
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai Web test
 url: https://www.lambdatest.com/support/docs/kaneai-test
 site_name: LambdaTest

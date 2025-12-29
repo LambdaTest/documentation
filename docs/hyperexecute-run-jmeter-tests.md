@@ -7,7 +7,7 @@ description: Perform the steps to learn how to do the performance testing on Hyp
 keywords:
   - hyperexecute performance testing
   - hyperexecute
-  - lambdatest
+  - testmu ai
   - jmeter
   - hyperexecute dashboard
 url: https://www.lambdatest.com/support/docs/hyperexecute-run-jmeter-tests/

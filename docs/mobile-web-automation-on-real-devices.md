@@ -8,7 +8,7 @@ keywords:
 - mobile web automation
 - appium mobile web automation
 - mobile web test automation
-- mobile web automation lambdatest
+- mobile web automation testmu ai
 - mobile web automation real device
 - how to perform mobile web automation
 url: https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/

@@ -8,7 +8,7 @@ keywords:
     - performance report
     - LT browesr integration
     - Google lighthouse integration
-    - lambdatest reporting
+    - testmu ai reporting
     - lt browser
 url: https://www.lambdatest.com/support/docs/performance-report/
 site_name: LambdaTest

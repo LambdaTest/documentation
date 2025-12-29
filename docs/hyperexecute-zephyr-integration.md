@@ -4,9 +4,9 @@ title: Integrate Zephyr Scale with HyperExecute
 sidebar_label: Zephyr
 description:  Zephyr, a test case management tool, and HyperExecute, a cloud-based test execution platform streamline your testing process by efficiently managing test cases.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - zephyr
   - Integrations
   - Products

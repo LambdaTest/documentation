@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Linear App 
 description: With TestMu AI and Linear App integration, you can perform one-click bug logging to your Linear App projects and capture screenshots, annotate issues, and share them across your teammates and colleagues.
 keywords:
-  - LambdaTest integration with Linear App 
-  - LambdaTest and Linear App integration 
+  - TestMu AI integration with Linear App 
+  - TestMu AI and Linear App integration 
   - Linear App integration
 url: https://www.lambdatest.com/support/docs/linear-app-integration/
 site_name: LambdaTest

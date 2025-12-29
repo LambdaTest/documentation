@@ -6,11 +6,11 @@ sidebar_label: Maven Tunnel For Locally Hosted Web Apps
 description: Configure a secure TestMu AI Tunnel to execute your Selenium test automation scripts through your Maven project on our online Selenium Grid.
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - LambdaTest Tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - TestMu AI Tunnel
   - local app testing for maven
-  - maven tunnel for lambdatest
+  - maven tunnel for testmu ai
 url: https://www.lambdatest.com/support/docs/maven-tunnel-for-locally-hosted-web-applications/
 site_name: LambdaTest
 slug: maven-tunnel-for-locally-hosted-web-applications/

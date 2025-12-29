@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Stage Widgets
 description: HyperExecute Stage Widgets track and group stages by status (Completed, Skipped, Failed, Aborted, etc.) for efficient monitoring.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - HyperExecute
   - HyperExecute Widgets
   - HyperExecute Stage

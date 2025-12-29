@@ -7,7 +7,7 @@ description: TestMu AI provides a powerful solution for testing apps designed fo
 keywords:
     - ChromeOS
     - ChromeOS App
-    - LambdaTest
+    - TestMu AI
     - Virtual Testing
     - Emulator
     - Simulator

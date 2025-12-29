@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver Cucumber
   - selenium Cucumber testing tutorial
   - Cucumber Java Selenium framework
-  - lambdatest Cucumber
-  - frameworks on lambdatest
+  - testmu ai Cucumber
+  - frameworks on testmu ai
   - hyperexecute
   - hyperexecute Cucumber testing
   - hyperexecute Cucumber testing

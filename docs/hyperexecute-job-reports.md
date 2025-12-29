@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: HyperExecute Job Reports
 description: Effortlessly download your HyperExecute job reports from the UI. Click the Report button on the top right-hand side of your tasks page. .
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-job-reports/
 site_name: LambdaTest
 slug: hyperexecute-job-reports/

@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver robot
   - selenium python testing tutorial
   - python selenium framework
-  - lambdatest python
-  - framework on lambdatest
+  - testmu ai python
+  - framework on testmu ai
   - hyperexecute
   - hyperexecute python robot testing
   - hyperexecute robot testing

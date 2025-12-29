@@ -8,7 +8,7 @@ keywords:
   - redmine integration
   - bug reporting
   - issue tracking
-  - lambdatest redmine integration
+  - testmu ai redmine integration
 url: https://www.lambdatest.com/support/docs/redmine-integration/
 site_name: LambdaTest
 slug: redmine-integration/

@@ -9,8 +9,8 @@ keywords:
   - ipa bundle
   - .app to .ipa
   - Xcode
-  - lambdatest xcuitest
-  - framework on lambdatest
+  - testmu ai xcuitest
+  - framework on testmu ai
   - app testing xcuitest
   - app testing
   - real devices

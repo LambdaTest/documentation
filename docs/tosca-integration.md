@@ -5,8 +5,8 @@ sidebar_label: Tricentis Tosca
 description: Now you can run your Tosca  automation tests  on TestMu AI online grid of 3000+ real desktop browsers and real operating systems.
 keywords:
   - tricentis tosca
-  - lambdatest integrations
-  - lambdatest integration with applitools
+  - testmu ai integrations
+  - testmu ai integration with applitools
   - tosca integration
   - cross browser testing
   - free cross browser testing tool

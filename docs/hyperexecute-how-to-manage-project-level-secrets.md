@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: How to Manage Project Level Secrets in HyperExecute
 description: Find out how to Save and Manage Secrets
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to Save and Manage Secrets
 url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-manage-project-level-secrets/
 site_name: LambdaTest

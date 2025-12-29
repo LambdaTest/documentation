@@ -5,17 +5,17 @@ hide_title: true
 sidebar_label: Self-Hosted Jira
 description: TestMu AI and Self-hosted Jira integration allow you to integrate your self-hosted Jira instance and create the issues directly from the TestMu AI platform to your Jira dashboard. 
 keywords:
-    - LambdaTest integrations
+    - TestMu AI integrations
     - Push issues to Jira
     - Free Cross Browser Testing Tool
     - cross platform testing tools
     - check browser compatibility online
-    - LambdaTest self hosted Jira integration
-    - integrate Jira with LambdaTest
+    - TestMu AI self hosted Jira integration
+    - integrate Jira with TestMu AI
     - Free Cross Browser Testing Tool
-    - Create Issue in Jira from LambdaTest
-    - self hosted Jira integration with LambdaTest
-    - Create Jira Issues from LambdaTest
+    - Create Issue in Jira from TestMu AI
+    - self hosted Jira integration with TestMu AI
+    - Create Jira Issues from TestMu AI
     - bug tracking tools
     - project management tools
 image: /assets/images/og-images/default-user-image.png

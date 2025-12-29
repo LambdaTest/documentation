@@ -8,7 +8,7 @@ keywords:
   - dedicated proxy
   - inbound ip whitelisting
   - ip whitelisting
-  - ip whitelsiting lambdatest
+  - ip whitelsiting testmu ai
 url: https://www.lambdatest.com/support/docs/dedicated-proxy/
 site_name: LambdaTest
 slug: dedicated-proxy/

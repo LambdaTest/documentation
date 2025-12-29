@@ -7,7 +7,7 @@ keywords:
   - flutter app testing
   - appium flutter integration
   - real device testing
-  - lambdatest
+  - testmu ai
   - flutter automation
   - mobile test automation
 url: https://www.lambdatest.com/support/docs/appium-flutter-integration/

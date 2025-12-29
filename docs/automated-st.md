@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Automated Screenshot Testing
 description: Effortlessly Master Automated Screenshot Testing with TestMu AI | Step-by-Step Instructions for Screenshot Testing, Downloads, and More!
 keywords:
-- automated screenshot testing in lambdatest
-- lambdatest automated screenshot testing
+- automated screenshot testing in testmu ai
+- testmu ai automated screenshot testing
 - free cross browser testing tool
 - online automated screenshot generation
 - cross browser screenshot generation

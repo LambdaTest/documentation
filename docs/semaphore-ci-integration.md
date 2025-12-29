@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Semaphore
 description: Boost market delivery with TestMu AI's integration with Semaphore CI and automate tests on a cloud grid with 3000+ real browsers seamlessly.
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - ci/cd tools
   - continuous integration
   - continuous delivery

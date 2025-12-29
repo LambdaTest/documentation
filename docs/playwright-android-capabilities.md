@@ -9,8 +9,8 @@ keywords:
   - playwright android e2e testing
   - playwright android mobile testing
   - playwright android testing tool
-  - playwright android testing on lambdatest
-  - playwright android testing lambdatest
+  - playwright android testing on testmu ai
+  - playwright android testing testmu ai
 
 url: https://www.lambdatest.com/support/docs/capabilities-for-playwright-android/
 site_name: LambdaTest

@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Pivotal Tracker
 description: TestMu AI provides integrations with Pivotal Tracker to help you log bugs directly from the middle of your test session on TestMu AI to your Pivotal Tracker.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to pivotal tracker
   - free cross browser testing tool
 url: https://www.lambdatest.com/support/docs/pivotal-tracker-integration/

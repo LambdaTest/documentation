@@ -9,7 +9,7 @@ keywords:
   - ci cd pipeline google cloud
   - google cloud ci selenium
   - google cloud ci
-  - lambdatest integration with google cloud ci
+  - testmu ai integration with google cloud ci
 url: https://www.lambdatest.com/support/docs/google-cloud-ci-integration/
 site_name: LambdaTest
 slug: google-cloud-ci-integration/

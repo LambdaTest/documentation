@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: Airbrake 
 description: Streamline Your Error Monitoring with TestMu AI's Airbrake Integration Documentation. Discover how to seamlessly integrate Airbrake with TestMu AI for efficient bug management and error tracking. Get step-by-step instructions and insights for optimizing your development workflow.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to airbrake
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest airbrake integration
-  - integrate airbrake with lambdatest
-  - create issue in airbrake from lambdatest
-  - airbrake integration with lambdatest
-  - create airbrake issues from lambdatest
+  - testmu ai airbrake integration
+  - integrate airbrake with testmu ai
+  - create issue in airbrake from testmu ai
+  - airbrake integration with testmu ai
+  - create airbrake issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/airbrake-integration/

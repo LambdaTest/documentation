@@ -6,7 +6,7 @@ sidebar_label: Bamboo
 description: Deploy your code in a reliable manner at scale using Bamboo integration with TestMu AI, and ensure it looks robust across every browser with Selenium Grid on cloud.
 keywords:
   - bamboo integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations with ci/cd tools
   - continuous integration
 url: https://www.lambdatest.com/support/docs/bamboo-integration-with-lambdatest/
 site_name: LambdaTest

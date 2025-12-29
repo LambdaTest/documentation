@@ -4,8 +4,8 @@ title: KaneAI - Command Guide
 sidebar_label: Command Types
 description: Master KaneAI commands to automate web actions like navigation, clicking, typing, and more. Create dynamic, readable test cases with ease
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai guided walkthrough
   - kane ai instructions
   - kane ai commands

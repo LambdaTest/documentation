@@ -21,15 +21,15 @@ keywords:
     - how is lighthouse performance score calculated 
     - lighthouse audit for performance 
     - lighthouse check performance 
-    - LambdaTest automation
+    - TestMu AI automation
     - selenium automation grid
     - selenium grid online
     - online selenium automation
     - selenium automation grid online
-    - LambdaTest selenium automation grid
+    - TestMu AI selenium automation grid
     - selenium tutorial
     - Selenium getting started
-    - lambdatest getting started
+    - testmu ai getting started
 url: https://www.lambdatest.com/support/docs/view-lighthouse-performance-metrics/
 site_name: LambdaTest
 slug: view-lighthouse-performance-metrics/

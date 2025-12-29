@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Test Splitting and Multiplexing
 description: Boost testing efficiency with HyperExecute's test splitting and multiplexing in TestMu AI's documentation.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-test-splitting-and-multiplexing/
 site_name: LambdaTest
 slug: hyperexecute-test-splitting-and-multiplexing/

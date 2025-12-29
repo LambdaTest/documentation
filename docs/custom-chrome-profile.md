@@ -8,7 +8,7 @@ keywords:
 - custom chrome profile
 - upload custom chrome profile
 - create custom chrome profile
-- custom chrome profile lambdatest
+- custom chrome profile testmu ai
 url: https://www.lambdatest.com/support/docs/upload-custom-chrome-profile/
 site_name: LambdaTest
 slug: upload-custom-chrome-profile/

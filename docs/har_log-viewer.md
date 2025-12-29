@@ -7,7 +7,7 @@ description: Learn how to use HAR Log Viewer With Waterfall for Selenium automat
 keywords:
 - har log viewer with waterfall
 - har log viewer
-- har log viewer with waterfall lambdatest
+- har log viewer with waterfall testmu ai
 - har log viewer network logs
 - har log viewer with waterfall selenium
 url: https://www.lambdatest.com/support/docs/har-log-viewer-with-waterfall/

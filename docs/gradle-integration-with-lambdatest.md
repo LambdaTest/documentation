@@ -5,15 +5,15 @@ hide_title: false
 sidebar_label: Gradle Plugin
 description: Automate testing at scale! Integrate TestMu AI with Gradle for seamless CI/CD & lightning-fast execution.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to localstack
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest gradle integration
-  - integrate gradle with lambdatest
-  - create issue in gradle from lambdatest
-  - gradle integration with lambdatest
+  - testmu ai gradle integration
+  - integrate gradle with testmu ai
+  - create issue in gradle from testmu ai
+  - gradle integration with testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/gradle-integration-with-lambdatest/

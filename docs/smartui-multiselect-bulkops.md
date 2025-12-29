@@ -8,7 +8,7 @@ keywords:
   - Bulk Operations
   - Visual Testing Workflow
   - Batch Approval
-  - LambdaTest SmartUI
+  - TestMu AI SmartUI
 url: https://www.lambdatest.com/support/docs/smartui-multiselect-bulkops/
 site_name: LambdaTest
 slug: smartui-multiselect-bulkops/

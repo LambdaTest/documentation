@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: HyperExecute Private Cloud on JumpHost
 description: Deploy & run HyperExecute Private Cloud on Azure with JumpHost! Follow our guide for setup, test triggering, and dashboard viewing for a smooth, customizable testing experience.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-private-cloud-on-jumphost/
 site_name: LambdaTest
 slug: hyperexecute-private-cloud-on-jumphost/

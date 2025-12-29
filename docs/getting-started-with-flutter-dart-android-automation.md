@@ -5,8 +5,8 @@ sidebar_label: Flutter Dart Android
 description: This guide shows you how to run your first Flutter Dart test on 5000+ real Android devices using TestMu AI's Real Device Cloud.
 keywords:
 - flutter
-- lambdatest
-- framework on lambdatest
+- testmu ai
+- framework on testmu ai
 - app testing
 - real devices
 url: https://www.lambdatest.com/support/docs/getting-started-with-flutter-dart-android-automation/

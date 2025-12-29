@@ -7,8 +7,8 @@ keywords:
   - appium
   - java
   - cucumber
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - app testing
   - real devices
 url: https://www.lambdatest.com/support/docs/appium-java-cucumber/

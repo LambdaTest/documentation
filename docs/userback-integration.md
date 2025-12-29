@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: Userback
 description: TestMu AI helps you manage your bugs in your Userback instance in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project in your Userback instance.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to userback
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest userback integration
-  - integrate userback with lambdatest
-  - create issue in userback from lambdatest
-  - userback integration with lambdatest
-  - create userback issues from lambdatest
+  - testmu ai userback integration
+  - integrate userback with testmu ai
+  - create issue in userback from testmu ai
+  - userback integration with testmu ai
+  - create userback issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/userback-integration/

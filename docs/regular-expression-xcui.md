@@ -5,7 +5,7 @@ title: Regular Expression - XCUI
 sidebar_label: Regular Expression
 description: There may be instances when the device you chose for a test on TestMu AI is not available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.
 keywords:
-- regular expression lambdatest
+- regular expression testmu ai
 - regular expression app automation
 url: https://www.lambdatest.com/support/docs/regular-expression-xcui/
 site_name: LambdaTest

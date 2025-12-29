@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Favro
 description: The TestMu AI Favro Integration allows you to create a task directly to your specified Favro dashboard from TestMu AI platform. Share your UI observations and input with your teammates anytime, by capturing a screenshot, even in the middle of your test session.
 keywords:
-  - LambdaTest automation
+  - TestMu AI automation
   - favro integration
   - favro
   - kanban

@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Advanced Mobile Features
 description: Learn how to use advanced capabilities in the KaneAI authoring for mobile app tests
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai mobile app
   - biometrics
   - image injection

@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Modules
 description: Learn how to use custom modules while executing your tests using the Kane AI
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai geolocation support
   - kaneai tunnel support
   - kaneai proxy support

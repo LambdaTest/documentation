@@ -5,12 +5,12 @@ hide_title: true
 sidebar_label: QMetry
 description: With this integration, run your tests from QMetry app, directly on TestMu AI's cloud-based Selenium Grid, on 3000+ desktop & mobile browser and OS combinations
 keywords:
- - LambdaTest integrations
+ - TestMu AI integrations
  - QMetry
  - Test Automation for GUI Testing
  - test automation
  - QMetry integration with Lambdatest
- - lambdatest integration with QMetry
+ - testmu ai integration with QMetry
 url: https://www.lambdatest.com/support/docs/qmetry-integration/
 site_name: LambdaTest
 slug: qmetry-integration/

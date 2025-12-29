@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Guided Walkthrough 
 description: Learn how to manage Jobs, configure tunnels, upgrade subscriptions, and access detailed test and job information. Discover the power of custom report, analytic.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/hyperexecute-guided-walkthrough/
 site_name: LambdaTest

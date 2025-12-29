@@ -5,12 +5,12 @@ hide_title: true
 sidebar_label: Zebrunner
 description: TestMu AI Selenium Grid integration to Zebrunner will help you run your Selenium automation scripts from Zebrunner instance to our cloud-based Selenium Grid.
 keywords:
-- lambdatest integrations
-- lambdatest integrations with test management tools
+- testmu ai integrations
+- testmu ai integrations with test management tools
 - zebrunner integration
-- zebrunner integration with lambdatest
-- lambdatest integration with zebrunner
-- zebrunner lambdatest
+- zebrunner integration with testmu ai
+- testmu ai integration with zebrunner
+- zebrunner testmu ai
 url: https://www.lambdatest.com/support/docs/zebrunner-integration/
 site_name: LambdaTest
 slug: zebrunner-integration/

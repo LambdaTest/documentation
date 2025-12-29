@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver TestNG
   - selenium TestNG testing tutorial
   - TestNG Java Selenium framework
-  - lambdatest TestNG
-  - frameworks on lambdatest
+  - testmu ai TestNG
+  - frameworks on testmu ai
   - hyperexecute
   - hyperexecute TestNG testing
   - hyperexecute TestNG testing

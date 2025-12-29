@@ -7,7 +7,7 @@ description: This documentation explains how to run your Cypress tests using Web
 keywords:
   - cypress test webkit
   - cypress testing webkit
-  - cypress testing webkit lambdatest
+  - cypress testing webkit testmu ai
 
 url: https://www.lambdatest.com/support/docs/cypress-testing-using-webkit/
 site_name: LambdaTest

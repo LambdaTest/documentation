@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Upload and Download Files
 description: Easily upload and download files during remote testing with TestMu AI. Manage cross-platform file transfers for seamless workflows across desktop and mobile devices.
 keywords:
-  - real time testing in lambdatest
-  - lambdatest real time testing feature
+  - real time testing in testmu ai
+  - testmu ai real time testing feature
   - online real time testing
   - free cross browser testing tool
   - cross browser compatibility testing tool

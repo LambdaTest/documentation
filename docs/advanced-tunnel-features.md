@@ -1,13 +1,13 @@
 ﻿---
 id: advanced-tunnel-features
 title: Advanced TestMu AI Tunnel Features
-sidebar_label: Advanced LambdaTest Tunnel Features
+sidebar_label: Advanced TestMu AI Tunnel Features
 description: This provides you with all the Advanced features of the TestMu AI Tunnel.
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - LambdaTest Tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - TestMu AI Tunnel
   - local app testing for macos
 url: https://www.lambdatest.com/support/docs/advanced-tunnel-features/
 site_name: LambdaTest

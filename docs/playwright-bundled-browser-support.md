@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Bundled Browser Support List
 description: List of all the Playwright Bundled Browser Support
 keywords:
-    - lambdatest
+    - testmu ai
     - playwright
     - support
     - browsers

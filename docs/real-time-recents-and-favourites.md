@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Recents and Favourites
 description: Discover how to use the Recents and Favourites feature under Quick Links in TestMu AI. Quickly access recently used items and mark important resources for faster navigation.
 keywords:
-  - real time testing in lambdatest
-  - lambdatest real time testing feature
+  - real time testing in testmu ai
+  - testmu ai real time testing feature
   - online real time testing
   - free cross browser testing tool
   - cross browser compatibility testing tool

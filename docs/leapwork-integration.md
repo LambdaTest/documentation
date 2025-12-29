@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Leapwork
 description: In our latest attempt to make life easy for testers, TestMu AI integrates with LeapWork to make your automation flows more seamless than ever before.
 keywords:
-- LambdaTest Leapwork
+- TestMu AI Leapwork
 - Leapwork Integration
-- LambdaTest Leapwork Integration
+- TestMu AI Leapwork Integration
 - Codeless Automation Testing
 - Codeless Automation Tool
 - Leapwork Test Automation

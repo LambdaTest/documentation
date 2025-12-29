@@ -5,10 +5,10 @@ hide_title: true
 sidebar_label: Microsoft Teams App
 description: This documentation will help you integrate Microsoft Teams App with TestMu AI to run the real-time and screenshot tests directly from any personal chat or team channel.
 keywords:
-- integrate lambdatest with ms teams
-- integrate lambdatest with microsoft teams app
+- integrate testmu ai with ms teams
+- integrate testmu ai with microsoft teams app
 - run realtime and screenshot tests with ms team app
-- how to integrate microsoft teams app with lambdatest
+- how to integrate microsoft teams app with testmu ai
 url: https://www.lambdatest.com/support/docs/microsoft-teams-app/
 site_name: LambdaTest
 slug: microsoft-teams-app/

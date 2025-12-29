@@ -5,13 +5,13 @@ hide_title: false
 sidebar_label: Rally
 description: TestMu AI provides integration with Rally to help you log bugs directly from your test session on TestMu AI to Rally.
 keywords:
-  - LambdaTest integrations
+  - TestMu AI integrations
   - Push issues to Rally
-  - LambdaTest Rally integration
+  - TestMu AI Rally integration
   - bug tracking tools
   - project management tools
-  - integrate rally with lambdatest
-  - create issue in rally from lambdatest
+  - integrate rally with testmu ai
+  - create issue in rally from testmu ai
 image: /assets/images/og-images/default-user-image.png
 url: https://www.lambdatest.com/support/docs/rally-integration/
 site_name: LambdaTest

@@ -586,7 +586,7 @@ module.exports = {
           },
           {
             type: "category",
-            label: "Integration with LambdaTest Products",
+            label: "Integration with TestMu AI Products",
             collapsed: true,
             link: {
               type: "doc",
@@ -2050,7 +2050,7 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "LambdaTest Public IP Ranges",
+        label: "TestMu AI Public IP Ranges",
         id: "lambdatest-public-ip",
       },
       {
@@ -2610,7 +2610,7 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Integrate LambdaTest with Cypress Dashboard",
+        label: "Integrate TestMu AI with Cypress Dashboard",
         id: "integrate-lambdatest-with-cypress",
       },
       {
@@ -3688,7 +3688,7 @@ module.exports = {
           {
             type: "category",
             collapsed: true,
-            label: "LambdaTest Products",
+            label: "TestMu AI Products",
             items: [
               {
                 type: "doc",
@@ -3985,22 +3985,22 @@ module.exports = {
     [
       {
         type: "doc",
-        label: "LambdaTest Migration Guide",
+        label: "TestMu AI Migration Guide",
         id: "capability-map",
       },
       {
         type: "doc",
-        label: "BrowserStack To LambdaTest Migration",
+        label: "BrowserStack To TestMu AI Migration",
         id: "browserstack-to-lambdatest-migration-guide",
       },
       {
         type: "doc",
-        label: "Sauce Labs To LambdaTest Migration",
+        label: "Sauce Labs To TestMu AI Migration",
         id: "saucelabs-to-lambdatest-migration-guide",
       },
       {
         type: "doc",
-        label: "Legacy Platform To LambdaTest Migration",
+        label: "Legacy Platform To TestMu AI Migration",
         id: "migrate-legacy-lambdatest",
       },
     ],
@@ -4144,7 +4144,7 @@ module.exports = {
     [
       {
         type: "doc",
-        label: "Setting up LambdaTest MCP Server",
+        label: "Setting up TestMu AI MCP Server",
         id: "lambdatest-mcp-server",
       },
     ],
@@ -4316,7 +4316,7 @@ module.exports = {
       },
       {
         type: "doc",
-        label: "Deleting LambdaTest Account",
+        label: "Deleting TestMu AI Account",
         id: "delete-lambdatest-account",
       },
       {

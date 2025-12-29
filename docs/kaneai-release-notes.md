@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Release Notes
 description: Keep yourself informed about new releases from KaneAI. View our AI-powered testing assistant's detailed release notes, which include new features and enhancements.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/kaneai-release-notes/
 site_name: LambdaTest

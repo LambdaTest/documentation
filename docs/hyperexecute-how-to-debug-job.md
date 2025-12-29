@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: How to Debug a Failed Job
 description: This document will help you debug failed tests on HyperExecute by finding error logs in different stages using the HyperExecute Dashboard.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to Debug a Failed Job
 url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-debug-job/
 site_name: LambdaTest

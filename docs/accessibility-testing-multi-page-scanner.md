@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Multi Page Scanner
 description: Multi-Page Scanner scans across multiple web pages for a comprehensive overview of potential issues and prioritizes fixes impacting the user experience.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

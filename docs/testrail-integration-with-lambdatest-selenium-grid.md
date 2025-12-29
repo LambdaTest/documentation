@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: TestRail
 description: TestMu AI Selenium Grid integration to TestRail will help you run your Selenium automation scripts from TestRail instance to our cloud-based Selenium Grid.
 keywords:
-  - LambdaTest integration
-  - lambdatest integration with testrail
-  - lambdatest selenium grid integration to testrail
+  - TestMu AI integration
+  - testmu ai integration with testrail
+  - testmu ai selenium grid integration to testrail
 url: https://www.lambdatest.com/support/docs/testrail-integration-with-lambdatest-selenium-grid
 site_name: LambdaTest
 slug: testrail-integration-with-lambdatest-selenium-grid/

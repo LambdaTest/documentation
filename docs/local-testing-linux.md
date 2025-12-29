@@ -6,9 +6,9 @@ sidebar_label: Local Testing For Linux
 description: This documentation will help you perform Localhost testing on Linux machine via TestMu AI tunnel .Test private server URLs, locally hosted web-apps and websites on 3000+ real browsers on secure TestMu AI cloud platform.
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - LambdaTest tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - TestMu AI tunnel
   - local app testing for Linux
 url: https://www.lambdatest.com/support/docs/local-testing-linux/
 image: /assets/images/og-images/local-testing-on-linux.png

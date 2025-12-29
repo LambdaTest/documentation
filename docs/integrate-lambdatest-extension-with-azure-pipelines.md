@@ -2,15 +2,15 @@
 id: integrate-lambdatest-extension-with-azure-pipelines
 hide_title: true
 title: Integrate TestMu AI Extension With Azure Pipelines
-sidebar_label: LambdaTest Extension With Azure Pipelines 
+sidebar_label: TestMu AI Extension With Azure Pipelines
 description: Now integrate your Azure Pipelines with TestMu AI extension plugin to automate your test scripts. Perform live interactive and automated cross-browser testing on 3000+ real browsers and operating systems online using TestMu AI.
 keywords:
     - azure pipelines extensions
     - azure pipelines add extension
     - azure pipelines agent azure vm extension
     - how to create azure pipeline extension
-    - LambdaTest  Azure Pipelines Extension
-    - How to add LambdaTest  Azure Pipelines Extension
+    - TestMu AI  Azure Pipelines Extension
+    - How to add TestMu AI  Azure Pipelines Extension
     - Free Cross Browser Testing Tool
     - cross platform testing tool
     - check browser compatibility online

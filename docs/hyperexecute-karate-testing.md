@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver Karate
   - selenium Karate testing tutorial
   - Karate Java Selenium framework
-  - lambdatest Karate
-  - frameworks on lambdatest
+  - testmu ai Karate
+  - frameworks on testmu ai
   - hyperexecute
   - hyperexecute Karate testing
   - hyperexecute Karate testing

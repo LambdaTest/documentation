@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Version 0.0.1
 description: Beta Version 0.0.1
 keywords:
-  - LambdaTest kaneai
-  - LambdaTest kaneai help
-  - LambdaTest kaneai documentation
+  - TestMu AI kaneai
+  - TestMu AI kaneai help
+  - TestMu AI kaneai documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/kaneai-release-notes-0-0-1/
 site_name: LambdaTest

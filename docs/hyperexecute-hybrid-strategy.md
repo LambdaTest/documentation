@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Hybrid Strategy
 description: Unlock efficient testing with HyperExecute’s Hybrid Strategy! Our guide walks you through combining AutoSplit and Matrix Strategy for parallel test execution, saving time without sacrificing test coverage.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-hybrid-strategy/
 site_name: LambdaTest
 slug: hyperexecute-hybrid-strategy/

@@ -2,13 +2,13 @@
 id: sharing-lambda-tunnel
 title: Localhost Testing With Shared Tunnel
 hide_title: true
-sidebar_label: Sharing LambdaTest Tunnel
+sidebar_label: Sharing TestMu AI Tunnel
 description: Share your SSH connection of TestMu AI Tunnel with teammates belonging to your organization and test your locally hosted web applications or web pages faster.
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - LambdaTest tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - TestMu AI tunnel
   - local app testing for linux
   - TCP with TLS 1.2 secure connection
   - TCP with TLS 1.2 secure connection tunnel

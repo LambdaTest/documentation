@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Playwright
 description: Supercharge Hyperexecute UI automation with SmartUI SDK & Playwright. Simplify test creation for all browsers.
 keywords:
-  - smart ui testing in lambdatest
+  - smart ui testing in testmu ai
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
   - perform visual ui testing online

@@ -11,7 +11,7 @@ keywords:
   - screenshot testing
   - shake gesture
   - app switcher
-  - lambdatest ios
+  - testmu ai ios
   - real devices
 url: https://www.lambdatest.com/support/docs/assistive-touch-on-real-ios-browser/
 site_name: LambdaTest

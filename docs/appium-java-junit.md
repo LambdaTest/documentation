@@ -7,8 +7,8 @@ keywords:
   - appium
   - java
   - junit
-  - lambdatest java junit
-  - framework on lambdatest
+  - testmu ai java junit
+  - framework on testmu ai
   - testng
   - app testing
   - real devices

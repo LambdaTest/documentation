@@ -5,10 +5,10 @@ hide_title: true
 sidebar_label: Oxygen
 description: Run Oxygen test automation scripts on the TestMu AI Selenium Grid, and perform cross browser testing on 3000+ real browser, on-cloud, for a seamless UI.
 keywords:
-  - lambdatest
+  - testmu ai
   - oxygen test automation
   - test automation framework
-  - lambdatest and oxygen
+  - testmu ai and oxygen
   - oxygen ide
   - record and playback
   - cross browser testing

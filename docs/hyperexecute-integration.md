@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Integrations
 description: Learn more about the integrations HyperExecute offers.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - Integrations
   - Products
 url: https://www.lambdatest.com/support/docs/integration-with-hyperexecute/

@@ -2,15 +2,15 @@
 id: capability-map
 title: TestMu AI Capability Map to Migrate from BrowserStack & SauceLabs
 hide_title: true
-sidebar_label: LambdaTest Migration Guide
+sidebar_label: TestMu AI Migration Guide
 description: A quick guide on TestMu AI Capability Map to Migrate from BrowserStack & SauceLabs.
 keywords:
   - migrate desired capabilities from sauce labs
   - migrate desired capabilities from browserstack
-  - migrate desired capabilities from sauce labs to lambdatest
-  - migrate desiredcapabilities from browserstack to lambdatest
-  - how to migrate desired capabilities from sauce labs to lambdatest
-  - how to migrate desired capabilities from browserstack to lambdatest
+  - migrate desired capabilities from sauce labs to testmu ai
+  - migrate desiredcapabilities from browserstack to testmu ai
+  - how to migrate desired capabilities from sauce labs to testmu ai
+  - how to migrate desired capabilities from browserstack to testmu ai
 
 url: https://www.lambdatest.com/support/docs/lambdatest-capability-map/
 site_name: LambdaTest

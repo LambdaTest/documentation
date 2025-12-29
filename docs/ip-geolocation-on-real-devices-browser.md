@@ -6,14 +6,14 @@ description: Test your app and website across real devices and browsers with Tes
 
 keywords:
   - change geolocation on real device
-  - LambdaTest geolocation testing
+  - TestMu AI geolocation testing
   - simulate GPS location Browser
   - simulate GPS location Google Chrome 
   - simulate GPS location Firefox 
   - real device location testing
   - simulate GPS location 
   - test app in different countries
-  - framework on lambdatest
+  - framework on testmu ai
   - Browser testing appium
   - Browser testing
   - real devices

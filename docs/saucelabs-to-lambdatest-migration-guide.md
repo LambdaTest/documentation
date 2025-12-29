@@ -2,19 +2,19 @@
 id: saucelabs-to-lambdatest-migration-guide
 title: How to migrate from Sauce Labs to TestMu AI
 hide_title: true
-sidebar_label: Sauce Labs To LambdaTest Migration
+sidebar_label: Sauce Labs To TestMu AI Migration
 description: Using this guide, you can seamlessly migrate from SauceLabs to TestMu AI. It showcases a hands-on implementation using which you can run tests on TestMu AI (within few minutes)
 keywords:
-  - saucelabs lambdatest migration
-  - saucelabs lambdatest porting
-  - saucelabs lambdatest selenium testing
-  - saucelabs lambdatest migration guide
-  - how to migrate from saucelabs to lambdatest
-  - sauce labs lambdatest migration
-  - sauce labs lambdatest porting
-  - sauce labs lambdatest selenium testing
-  - sauce labs lambdatest migration guide
-  - how to migrate from sauce labs to lambdatest
+  - saucelabs testmu ai migration
+  - saucelabs testmu ai porting
+  - saucelabs testmu ai selenium testing
+  - saucelabs testmu ai migration guide
+  - how to migrate from saucelabs to testmu ai
+  - sauce labs testmu ai migration
+  - sauce labs testmu ai porting
+  - sauce labs testmu ai selenium testing
+  - sauce labs testmu ai migration guide
+  - how to migrate from sauce labs to testmu ai
 url: https://www.lambdatest.com/support/docs/saucelabs-to-lambdatest-migration-guide/
 site_name: LambdaTest
 slug: saucelabs-to-lambdatest-migration-guide/

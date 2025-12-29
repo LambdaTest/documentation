@@ -11,7 +11,7 @@ keywords:
   - how to use k6 for testing
   - test k6
   - k6 testing tutorial
-  - k6 testing lambdatest
+  - k6 testing testmu ai
 
 url: https://www.lambdatest.com/support/docs/k6-browser-testing/
 site_name: LambdaTest

@@ -5,9 +5,9 @@ sidebar_label: Behave
 description: Now you can run your Appium automation scripts using with Behave on TestMu AI Real Device Cloud Platform of 3000+ real mobile devices.
 keywords:
   - appium
-  - lambdatest python
-  - lambdatest
-  - framework on lambdatest
+  - testmu ai python
+  - testmu ai
+  - framework on testmu ai
   - python
   - behave
   - app testing

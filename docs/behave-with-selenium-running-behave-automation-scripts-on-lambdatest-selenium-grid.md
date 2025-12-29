@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver behave
   - selenium python testing tutorial
   - python selenium framework
-  - lambdatest python
-  - framework on lambdatest
+  - testmu ai python
+  - framework on testmu ai
 image: /assets/images/og-images/Behave-with-Selenium.jpg
 url: https://www.lambdatest.com/support/docs/behave-with-selenium-running-behave-automation-scripts-on-lambdatest-selenium-grid/
 site_name: LambdaTest

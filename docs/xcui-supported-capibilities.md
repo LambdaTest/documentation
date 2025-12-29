@@ -6,8 +6,8 @@ description: Now you can run your XCUI framework on TestMu AI online grid of 300
 keywords:
   - espresso
   - java
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices

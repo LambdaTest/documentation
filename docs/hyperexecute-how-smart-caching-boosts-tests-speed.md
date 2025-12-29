@@ -6,8 +6,8 @@ sidebar_label: Turbo Boost Your Tests Execution with Smart Caching
 description: Learn how to turbo boost your tests execution using the smart caching concept in hyperexecute
 keywords:
   - Smart Caching
-  - LambdaTest
-  - LambdaTest HyperExecute documentation
+  - TestMu AI
+  - TestMu AI HyperExecute documentation
   - How Smart Caching turbo boost your tests execution with HyperExecute
 url: https://www.lambdatest.com/support/docs/hyperexecute-how-smart-caching-boosts-tests-speed/
 site_name: LambdaTest

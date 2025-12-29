@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Selenium
 description: Accelerate bug identification with HyperExecute's intelligent UI testing via Selenium. Conduct Visual UI Regression Testing for flawless application deployment.
 keywords:
-  - smart ui testing in lambdatest
+  - smart ui testing in testmu ai
   - smart ui testing in hyperexecute
   - visual  ui testing,image to image comparison
   - free cross browser testing tool

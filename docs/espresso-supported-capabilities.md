@@ -6,8 +6,8 @@ description: Now you can run your Espresso framework on TestMu AI online grid of
 keywords:
   - espresso
   - java
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices

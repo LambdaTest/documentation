@@ -10,7 +10,7 @@ keywords:
   - ranorex integration
   - oxygen ide
   - oxygenhq integration
-  - lambdatest integrations
+  - testmu ai integrations
   - browser testing integrations
   - automation testing tool integrations
 url: https://www.lambdatest.com/support/docs/integrations-with-codeless-automation-tools/

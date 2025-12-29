@@ -6,10 +6,10 @@ sidebar_label: Karma Test Runner
 description: TestMu AI now integrates with Karma to boost your go-to market delivery. Karma is highly favored in the web developer community due to its outstanding plugin support and integrations with numerous renowned CI packages.
 keywords:
   - karma selenium
-  - karma integration with lambdatest
-  - lambdatest integrations
+  - karma integration with testmu ai
+  - testmu ai integrations
   - testacular
-  - lambdatest app marketplace
+  - testmu ai app marketplace
 image: /assets/images/og-images/default-user-image.png
 url: https://www.lambdatest.com/support/docs/karma-integration-with-lambdatest/
 site_name: LambdaTest

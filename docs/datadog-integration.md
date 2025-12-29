@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Datadog
 description: With TestMu AI and Datadog, you can log bugs with a single click while performing cross-browser testing. Capture screenshots, highlight bugs, and send them directly from the TestMu AI platform to Datadog.
 keywords:
-  - LambdaTest integration with Datadog
-  - LambdaTest and Datadog Integration
+  - TestMu AI integration with Datadog
+  - TestMu AI and Datadog Integration
   - Datadog Integration
 url: https://www.lambdatest.com/support/docs/datadog-integration/
 site_name: LambdaTest

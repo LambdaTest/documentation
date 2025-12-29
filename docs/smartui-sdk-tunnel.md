@@ -6,7 +6,7 @@ description: Learn how to use TestMu AI Tunnel with SmartUI SDK for testing inte
 keywords:
   - Visual Regression
   - SmartUI SDK
-  - LambdaTest Tunnel
+  - TestMu AI Tunnel
   - Local Testing
   - Internal Testing
 url: https://www.lambdatest.com/support/docs/smartui-sdk-tunnel/

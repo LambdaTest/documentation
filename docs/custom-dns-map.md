@@ -6,7 +6,7 @@ sidebar_label: Custom DNS Mapping
 description: Learn how to provide Custom IP for Domains.
 keywords:
     - custom dns mapping
-    - lambdatest custom dns map
+    - testmu ai custom dns map
 
 url: https://www.lambdatest.com/support/docs/custom-dns-map/
 site_name: LambdaTest

@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Responsive Testing
 description: Check responsiveness of your website across multiple devices and screensize with TestMu AI with just one click.
 keywords:
-  - responsive testing in lambdatest
-  - lambdatest responsive testing
+  - responsive testing in testmu ai
+  - testmu ai responsive testing
   - online responsive testing
 url: https://www.lambdatest.com/support/docs/responsive-testing/
 site_name: LambdaTest

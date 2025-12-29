@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Command Annotations
 description: Learn how to use Command Annotations to customizе logs that you wish to sеnd to LambdaTеst from within your tеst script for dеbugging or tracking purposеs.  
 keywords:
-- command annotations lambdatest
+- command annotations testmu ai
 - command annotations
 url: https://www.lambdatest.com/support/docs/command-annotations/
 site_name: LambdaTest

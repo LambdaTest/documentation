@@ -6,9 +6,9 @@ sidebar_label: Migrate From Local Grid
 description: This documentation will guide you through the process of migrating your existing Appium test suites from your local grid setup or another cloud testing tools to run on TestMu AI.
 keywords:
 - migrate appium tests from local grid 
-- migrate appium tests from local grid to lambdatest cloud
-- migrate appium tests from local grid to lambdatest
-- how to migrate appium tests from local grid to lambdatest
+- migrate appium tests from local grid to testmu ai cloud
+- migrate appium tests from local grid to testmu ai
+- how to migrate appium tests from local grid to testmu ai
 url: https://www.lambdatest.com/support/docs/migrate-existing-appium-test-suites/
 site_name: LambdaTest
 slug: migrate-existing-appium-test-suites/

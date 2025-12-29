@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Keyboard Scan
 description: Keyboard Accessibility Scanning tools highlight tab stops sequentially, making tab order identification effortless. Users can review the results, mark any overlooked interactive elements, and generate detailed keyboard accessibility reports.
 keywords:
-  - LambdaTest
+  - TestMu AI
   - Accessibility
   - Testing
   - DevTools

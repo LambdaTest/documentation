@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: UiPath 
 description: Discover how TestMu AI and UiPath seamlessly integrate to enhance mobile automation. Dive into our support doc to leverage the power of real device cloud and UiPath.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - Ui path
   - real device cloud
   - mobile automation

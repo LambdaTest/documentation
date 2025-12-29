@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: CLI FAQs
 description: Explore HyperExecute CLI FAQs Downloading Test Artifacts, MacOS Verification, Test Run Steps & More! Get Quick Answers Here.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/hyperexecute-cli-faqs/
 site_name: LambdaTest

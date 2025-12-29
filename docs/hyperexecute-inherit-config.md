@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: YAML Inheritance
 description: Discover the Power of HyperExecute Inherit Config | Learn how to optimize your testing workflow with HyperExecute and inherit configurations seamlessly.!
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-inherit-config/
 site_name: LambdaTest
 slug: hyperexecute-inherit-config/

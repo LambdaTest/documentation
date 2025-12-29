@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: algoQA
 description:  Unleash the power of algoQA & TestMu AI HyperExecute! Streamline test management & experience fast execution.
 keywords:
-  - LambdaTest HyperExecute
-  - LambdaTest HyperExecute help
-  - LambdaTest HyperExecute documentation
+  - TestMu AI HyperExecute
+  - TestMu AI HyperExecute help
+  - TestMu AI HyperExecute documentation
   - algoQA
   - Integrations
   - Products

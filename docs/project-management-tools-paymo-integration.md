@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Paymo
 description: TestMu AI helps you manage your bugs in Paymo by moving them to project in a single click with details like task list, assignee, title and description in Paymo project.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to paymo
   - free cross browser testing tool
 url: https://www.lambdatest.com/support/docs/paymo-integration/

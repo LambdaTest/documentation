@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Visual UI Testing
 description: Discover seamless Visual UI Testing with TestMu AI's Screenshot Feature - automate and compare screenshots across 3000+ browsers for pixel-perfect web experiences. Elevate your testing strategy today!.
 keywords:
-- automated screenshot testing in lambdatest
-- lambdatest automated screenshot testing
+- automated screenshot testing in testmu ai
+- testmu ai automated screenshot testing
 - free cross browser testing tool
 - online automated screenshot generation
 - cross browser screenshot generation

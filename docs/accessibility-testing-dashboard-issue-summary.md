@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Issue Summary
 description: Get a comprehensive guide of your website's test summary, including total issues, their type, affected element groups, best practices, and WCAG guidelines.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: All Issues
 description: Access a detailed breakdown of issues, including type, WCAG guideline violations, and customizable filtering options for a seamless user experience.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

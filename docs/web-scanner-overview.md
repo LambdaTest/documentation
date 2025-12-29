@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Web Scanner Overview
 description: An introduction to TestMu AI Web Scanner, its purpose, core features, supported scan types (Visual UI and Accessibility), and ideal users.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - overview
   - visual testing

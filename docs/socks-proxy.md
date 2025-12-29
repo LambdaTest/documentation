@@ -6,7 +6,7 @@ sidebar_label: SOCKS5 Proxy Support
 description: Learn how to use TestMu AI Tunnel with SOCKS5 proxy for secure, private, and flexible local testing.
 keywords:
   - socks5 proxy
-  - lambdatest tunnel
+  - testmu ai tunnel
   - secure proxy testing
   - local app testing
   - bypass network restrictions

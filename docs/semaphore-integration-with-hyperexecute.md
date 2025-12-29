@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Semaphore
 description: Semaphore CI/CD, a cloud-based platform, now seamlessly integrates with TestMu AI HyperExecute for enhanced testing performance.
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - ci/cd tools
   - continuous integration
   - continuous delivery

@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Pricing FAQs
 description: Explore answers to all your HyperExecute Pricing-related queries with our comprehensive FAQs, designed to clarify all your cost concerns!
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/hyperexecute-pricing-faqs/
 site_name: LambdaTest

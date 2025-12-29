@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: CustomHeaders
 description: Learn how to use TestMu AI CustomHeaders capability to add custom headers to your tests and bypass firewalls restrictions in app automation tests.
 keywords:
-- custom headers lambdatest
+- custom headers testmu ai
 - bypass firewalls restrictions
 - custom headers bypass firewalls
 url: https://www.lambdatest.com/support/docs/appium-custom-headers/

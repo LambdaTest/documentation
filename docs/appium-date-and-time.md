@@ -6,7 +6,7 @@ sidebar_label: Set Date and Time
 description: This document provides information about configuring date, time, and hour-format on Real Devices using Appium automation on TestMu AI.
 keywords:
  - Appium
- - LambdaTest
+ - TestMu AI
  - Set Date and Time
  - Device Time Automation
  - 12-hour format

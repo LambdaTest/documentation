@@ -6,9 +6,9 @@ sidebar_label: Cypress CLI Commands
 description: List of all the commands and arguments supported by TestMu AI-Cypress CLI.
 keywords:
   - cypress cli commands
-  - lambdatest cypress cli commands
-  - lambdatest cypress cli flags
-  - lambdatest cypress cli arguments
+  - testmu ai cypress cli commands
+  - testmu ai cypress cli flags
+  - testmu ai cypress cli arguments
 url: https://www.lambdatest.com/support/docs/cypress-cli-commands/
 site_name: LambdaTest
 slug: cypress-cli-commands/

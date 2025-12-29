@@ -5,15 +5,15 @@ hide_title: true
 sidebar_label: Hive
 description: TestMu AI helps you to push bugs directly in Hive project with details like work space, assignee, title and description with a single click.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to hive
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest hive integration
-  - integrate hive with lambdatest
-  - create issue in hive from lambdatest
-  - hive integration with lambdatest
+  - testmu ai hive integration
+  - integrate hive with testmu ai
+  - create issue in hive from testmu ai
+  - hive integration with testmu ai
   - create jira issues from hive
   - bug tracking tools
   - project management tools

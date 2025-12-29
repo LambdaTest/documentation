@@ -7,9 +7,9 @@ keywords:
   - Cypress Automation
   - Cypress Testing Guide
   - cypress cli commands
-  - lambdatest cypress cli commands
-  - lambdatest cypress cli flags
-  - lambdatest cypress cli arguments
+  - testmu ai cypress cli commands
+  - testmu ai cypress cli flags
+  - testmu ai cypress cli arguments
   - Cypress Test Automation
   - Cypress Automation Testing
   - Running Cypress Tests

@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: Axosoft
 description: With TestMu AI - Axosoft integration, now you can mark your bug to Axosoft dashboard directly from TestMu AI while performing testing.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to axosoft
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest axosoft integration
-  - integrate axosoft with lambdatest
-  - create issue in axosoft from lambdatest
-  - axosoft integration with lambdatest
-  - create axosoft issues from lambdatest
+  - testmu ai axosoft integration
+  - integrate axosoft with testmu ai
+  - create issue in axosoft from testmu ai
+  - axosoft integration with testmu ai
+  - create axosoft issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/axosoft-integration/

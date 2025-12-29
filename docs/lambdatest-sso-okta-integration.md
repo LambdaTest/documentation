@@ -6,10 +6,10 @@ sidebar_label: Okta
 description: TestMu AI allows you to integrate an external user directory with your TestMu AI Organization through an IDP so your team could leverage the Single Sign-on setup. This document will help you integrate your TestMu AI organization with your Okta directory.
 keywords:
   - sso
-  - lambdatest sso
+  - testmu ai sso
   - okta
-  - lambdatest okta integration
-  - lambdatest okta sso
+  - testmu ai okta integration
+  - testmu ai okta sso
 url: https://www.lambdatest.com/support/docs/lambdatest-sso-okta-integration/
 site_name: LambdaTest
 slug: lambdatest-sso-okta-integration/

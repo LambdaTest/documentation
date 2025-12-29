@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Edit the Scan
 description: Easily edit accessibility scan settings in TestMu AI. Update scan names, recurrence schedules, and timings to keep your tests organized and efficient.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

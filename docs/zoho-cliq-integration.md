@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: Zoho Cliq
 description: Seamless Zoho Cliq Integration with TestMu AI Streamline Bug Management Effortlessly. Get real-time bug notifications in your Zoho Cliq Channels.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to zoho cliq
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest zoho cliq integration
-  - integrate zoho cliq with lambdatest
-  - create issue in zoho cliq from lambdatest
-  - zoho cliq integration with lambdatest
-  - create zoho cliq issues from lambdatest
+  - testmu ai zoho cliq integration
+  - integrate zoho cliq with testmu ai
+  - create issue in zoho cliq from testmu ai
+  - zoho cliq integration with testmu ai
+  - create zoho cliq issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/zoho-cliq-integration/

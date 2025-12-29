@@ -10,7 +10,7 @@ keywords:
   - iOS 12-hour format testing
   - real device date time change
   - Appium date override
-  - LambdaTest date configuration
+  - TestMu AI date configuration
   - real device time simulation
   - app testing on real device
   - simulate date time

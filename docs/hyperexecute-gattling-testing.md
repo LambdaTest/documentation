@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver Gattling
   - selenium Gattling testing tutorial
   - Gattling Java Selenium framework
-  - lambdatest Gattling
-  - frameworks on lambdatest
+  - testmu ai Gattling
+  - frameworks on testmu ai
   - hyperexecute
   - hyperexecute Gattling testing
   - hyperexecute Gattling testing

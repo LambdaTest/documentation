@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: FailFast
 description: Learn more about how to use HyperExecute's FailFast feature.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FailFast Feature
 url: https://www.lambdatest.com/support/docs/hyperexecute-failfast/
 site_name: LambdaTest

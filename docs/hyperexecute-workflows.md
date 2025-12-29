@@ -4,7 +4,7 @@ title: Workflows in HyperExecute
 sidebar_label: Workflows
 description: Schedule and orchestrate HyperExecute jobs without a full CI/CD, chain workflows across projects, and parameterize runs with workflow variables.
 keywords:
-  - LambdaTest HyperExecute
+  - TestMu AI HyperExecute
   - HyperExecute Workflows
   - schedule tests
   - connected workflows

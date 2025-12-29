@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Smart Visual Testing
 description: Discover visual deviations and regression bugs with TestMu AI's Smart Visual Testing. Upload, compare, and ensure top-quality UI
 keywords:
-  - smart visual testing in lambdatest
+  - smart visual testing in testmu ai
   - visual  ui testing,image to image comparison
   - free cross browser testing tool
   - regression testing tool

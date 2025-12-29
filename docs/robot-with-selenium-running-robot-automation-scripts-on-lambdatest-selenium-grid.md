@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver robot
   - selenium python testing tutorial
   - python selenium framework
-  - lambdatest python
-  - framework on lambdatest
+  - testmu ai python
+  - framework on testmu ai
 
 url: https://www.lambdatest.com/support/docs/robot-with-selenium-running-robot-automation-scripts-on-lambdatest-selenium-grid/
 site_name: LambdaTest

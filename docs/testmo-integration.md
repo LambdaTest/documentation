@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: TestMo
 description: TestMu AI integration to TestMo will help you run your automation scripts from TestMo instance to our cloud-based Grid.
 keywords:
-  - LambdaTest integration
-  - lambdatest integration with testmo
-  - lambdatest selenium grid integration to testmo
+  - TestMu AI integration
+  - testmu ai integration with testmo
+  - testmu ai selenium grid integration to testmo
 url: https://www.lambdatest.com/support/docs/testmo-integration
 site_name: LambdaTest
 slug: testmo-integration/

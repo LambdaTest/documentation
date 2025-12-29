@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Jobs Prioritization
 description: Learn more about how to prioritize your tests with HyperExecute.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - Prioritize Your Tests 
 url: https://www.lambdatest.com/support/docs/hyperexecute-prioritize-tests/
 site_name: LambdaTest

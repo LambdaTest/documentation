@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Integration With Products
 description:  Boost your testing workflow with TestMu AI's seamless integrations. Achieve efficient cross-browser testing with popular tools for faster, more reliable results.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - Integrations
   - Products
 url: https://www.lambdatest.com/support/docs/hyperexecute-integration-with-products/

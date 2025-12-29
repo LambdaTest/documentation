@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Version 2.2.2
 description: Version 2.2.2
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-2-2/
 site_name: LambdaTest

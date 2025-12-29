@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Partial Page Scanner
 description: Partial Page Scanner scans specific webpage elements, tests components, investigates reported issues and evaluates changes made to a specific area.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

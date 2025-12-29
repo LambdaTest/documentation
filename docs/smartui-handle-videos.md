@@ -4,7 +4,7 @@ title: Handle Pages with Videos
 sidebar_label: Handle Videos
 description: Learn how SmartUI automatically handles video content in visual regression tests by capturing the first frame, preventing false positives from dynamic video playback.
 keywords:
-  - lambdatest
+  - testmu ai
   - smart ui
   - videos
   - video testing

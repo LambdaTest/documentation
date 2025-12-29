@@ -9,7 +9,7 @@ keywords:
   - mark as bug
   - test session
   - test report
-  - lambdatest mark as a bug
+  - testmu ai mark as a bug
   - real time testing
   - responsive testing
   - smart ui testing

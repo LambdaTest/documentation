@@ -5,16 +5,16 @@ hide_title: false
 sidebar_label: Taiga
 description: TestMu AI helps you manage your bugs in Taiga by moving them to your project in a single click. All the details you provide in TestMu AI like task list, assignee, title, and description would automatically be presented in the project on Taiga.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to taiga
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest taiga integration
-  - integrate taiga with lambdatest
-  - create issue in taiga from lambdatest
-  - taiga integration with lambdatest
-  - create taiga issues from lambdatest
+  - testmu ai taiga integration
+  - integrate taiga with testmu ai
+  - create issue in taiga from testmu ai
+  - taiga integration with testmu ai
+  - create taiga issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/taiga-integration/

@@ -10,8 +10,8 @@ keywords:
   - access contacts
   - delete contacts
   - save contacts
-  - lambdatest capture code
-  - framework on lambdatest
+  - testmu ai capture code
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices

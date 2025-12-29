@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Starting an Accessibility Scan
 description: Learn how to configure an Accessibility scan, including WCAG version, handling of review issues, and advanced settings like local testing and authentication.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - accessibility scan
   - wcag

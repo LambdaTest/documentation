@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: HyperExecute Private Cloud Setup with Azure
 description: Discover HyperExecute Private Cloud Setup with Azure and understand how to inherit configurations for optimal performance. Explore the integration of hyperexecute inherit config.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-private-cloud-setup-with-azure/
 site_name: LambdaTest
 slug: hyperexecute-private-cloud-setup-with-azure/
