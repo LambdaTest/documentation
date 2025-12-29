@@ -31,7 +31,7 @@ slug: delete-testmu-account
           "@type": "ListItem",
           "position": 3,
           "name": "Delete LambdaTest Account",
-          "item": "https://www.lambdatest.com/support/docs/delete-lambdatest-account/"
+          "item": "https://www.lambdatest.com/support/docs/delete-testmu-account/"
         }]
       })
     }}

@@ -39,7 +39,7 @@ slug: ranorex-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Ranorex LambdaTest Integration",
-          "item": "https://www.lambdatest.com/support/docs/ranorex-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/ranorex-integration-with-testmu/"
         }]
       })
     }}

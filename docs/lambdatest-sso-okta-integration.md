@@ -38,7 +38,7 @@ slug: testmu-sso-okta-integration
           "@type": "ListItem",
           "position": 3,
           "name": "SSO Okta Integration",
-          "item": "https://www.lambdatest.com/support/docs/lambdatest-sso-okta-integration/"
+          "item": "https://www.lambdatest.com/support/docs/testmu-sso-okta-integration/"
         }
       ]
     })

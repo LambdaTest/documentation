@@ -33,7 +33,7 @@ slug: codefresh-ci-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Codefresh CI Integration",
-          "item": "https://www.lambdatest.com/support/docs/codefresh-ci-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/codefresh-ci-integration-with-testmu/"
         }]
       })
     }}

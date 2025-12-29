@@ -34,7 +34,7 @@ slug: quick-guide-to-run-php-tests-on-testmu-selenium-grid
           "@type": "ListItem",
           "position": 3,
           "name": "Running PHP Tests",
-          "item": "https://www.lambdatest.com/support/docs/quick-guide-to-run-php-tests-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/quick-guide-to-run-php-tests-on-testmu-selenium-grid/"
         }]
       })
     }}
@@ -193,7 +193,7 @@ To setup your own environment for the test you can leverage our Capability Gener
       <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-lambdatest-automation/">Support</a>
+      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-testmu-automation/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Guide To Run PHP Tests on Selenium Grid</span>

@@ -29,7 +29,7 @@ slug: white-listing-proxy-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "White-listing Proxy With LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/white-listing-proxy-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/white-listing-proxy-with-testmu/"
         }]
       })
     }}

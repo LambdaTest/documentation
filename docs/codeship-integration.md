@@ -33,7 +33,7 @@ slug: codeship-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Codeship Integration",
-          "item": "https://www.lambdatest.com/support/docs/codeship-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/codeship-integration-with-testmu/"
         }]
       })
     }}

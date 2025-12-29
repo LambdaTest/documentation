@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "MSTest",
-          "item": "https://www.lambdatest.com/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/mstest-with-selenium-running-mstest-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

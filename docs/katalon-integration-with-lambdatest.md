@@ -34,7 +34,7 @@ slug: katalon-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Katalon LambdaTest Integration",
-          "item": "https://www.lambdatest.com/support/docs/katalon-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/katalon-integration-with-testmu/"
         }]
       })
     }}

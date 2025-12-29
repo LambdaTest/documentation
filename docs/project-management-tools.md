@@ -33,7 +33,7 @@ LambdaTest offers integration to numerous third-party tools for project manageme
 
 <center><a href="/support/docs/monday-com-integration/"><button name="button">monday Integration With LambdaTest</button></a></center>
 
-<center><a href="/support/docs/breeze-integration-with-lambdatest/"><button name="button">Breeze Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/breeze-integration-with-testmu/"><button name="button">Breeze Integration With LambdaTest</button></a></center>
 
 <center><a href="/support/docs/clickup-integration/"><button name="button">Clickup Integration With LambdaTest</button></a></center>
 
@@ -49,7 +49,7 @@ LambdaTest offers integration to numerous third-party tools for project manageme
 
 <center><a href="/support/docs/zipboard-integration/"><button name="button">zipBoard Integration With LambdaTest</button></a></center>
 
-<center><a href="/support/docs/backlog-integration-with-lambdatest/"><button name="button">Backlog Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/backlog-integration-with-testmu/"><button name="button">Backlog Integration With LambdaTest</button></a></center>
 
 <center><a href="/support/docs/pivotal-tracker-integration/"><button name="button">Pivotal Integration With LambdaTest</button></a></center>
 
@@ -59,7 +59,7 @@ LambdaTest offers integration to numerous third-party tools for project manageme
 
 <center><a href="/support/docs/airtable-integration/"><button name="button">Airtable Integration</button></a></center>
 
-<center><a href="/support/docs/integrating-wrike-with-lambdatest/"><button name="button">Wrike Integration</button></a></center>
+<center><a href="/support/docs/integrating-wrike-with-testmu/"><button name="button">Wrike Integration</button></a></center>
 
 <center><a href="/support/docs/target-process-integration/"><button name="button">TargetProcess Integration</button></a></center>
 

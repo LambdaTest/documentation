@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Running Java Automation Testing Scripts On Selenium Grid using TestNG Framework",
-          "item": "https://www.lambdatest.com/support/docs/java-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/java-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

@@ -34,7 +34,7 @@ slug: gitlab-ci-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "GitLab CI Integration",
-          "item": "https://www.lambdatest.com/support/docs/gitlab-ci-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/gitlab-ci-integration-with-testmu/"
         }]
       })
     }}

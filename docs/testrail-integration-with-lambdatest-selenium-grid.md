@@ -30,7 +30,7 @@ slug: testrail-integration-with-testmu-selenium-grid
           "@type": "ListItem",
           "position": 3,
           "name": "TestRail Integration",
-          "item": "https://www.lambdatest.com/support/docs/testrail-integration-with-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/testrail-integration-with-testmu-selenium-grid/"
         }]
       })
     }}

@@ -44,7 +44,7 @@ LambdaTest now lets you enable **Smart Heal** for automation testing. This featu
 ## Smart Heal Workflow
 
 1. **Baseline Creation**  
-- For Smart Heal to work, you must first have at least one successful (**Passed Test**) as baseline, so make sure to include the [LambdaTest  Hook](/support/docs/appium-lambdatest-hooks/#adding-custom-status--remark) in your tests to explicitly mark them as passed during execution. With a baseline in place, the Auto-Heal engine can detect changes and attempt locator recovery. Since Smart Heal uses AI-driven analysis, expect executions to take slightly longer than usual.
+- For Smart Heal to work, you must first have at least one successful (**Passed Test**) as baseline, so make sure to include the [LambdaTest  Hook](/support/docs/appium-testmu-hooks/#adding-custom-status--remark) in your tests to explicitly mark them as passed during execution. With a baseline in place, the Auto-Heal engine can detect changes and attempt locator recovery. Since Smart Heal uses AI-driven analysis, expect executions to take slightly longer than usual.
 - For every user the **project name** and **test name** must remain the same across runs for Smart Heal to keep baseline applied successfully.
 
 

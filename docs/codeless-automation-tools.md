@@ -49,23 +49,23 @@ slug: integrations-with-codeless-automation-tools
 LambdaTest offers integration with codeless automation tools to help you expand your cross browser testing coverage. Using the integration with your favorite codeless automation tool, you can perform automated browser testing on 3000+ real browsers and operating systems.
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid/">Run Selenium IDE Tests With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/">Run Selenium IDE Tests With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/katalon-integration-with-lambdatest/">Katalon Studio Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/katalon-integration-with-testmu/">Katalon Studio Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/ranorex-integration-with-lambdatest/">Ranorex Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/ranorex-integration-with-testmu/">Ranorex Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/run-oxygen-automation-scripts-on-lambdatest/">Oxygen Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/run-oxygen-automation-scripts-on-testmu/">Oxygen Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/leapwork-integration-with-lambdatest/">LEAPWORK Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/leapwork-integration-with-testmu/">LEAPWORK Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
@@ -89,11 +89,11 @@ LambdaTest offers integration with codeless automation tools to help you expand 
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/tricentis-tosca-integration-lambdatest-selenium-grid/">Tricentis Tosca Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/tricentis-tosca-integration-testmu-selenium-grid/">Tricentis Tosca Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/ghost-inspector-integration-with-lambdatest/">Ghost Inspector Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/ghost-inspector-integration-with-testmu/">Ghost Inspector Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">

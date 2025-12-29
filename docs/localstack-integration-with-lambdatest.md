@@ -40,7 +40,7 @@ slug: localstack-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "LocalStack Integration",
-          "item": "https://www.lambdatest.com/support/docs/localstack-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/localstack-integration-with-testmu/"
         }]
       })
     }}

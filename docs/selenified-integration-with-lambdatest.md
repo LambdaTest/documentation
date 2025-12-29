@@ -77,7 +77,7 @@ That is all you need to tweak to run your Selenified tests on LambdaTest Seleniu
       <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-lambdatest-automation/">Automation Testing</a>
+      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-testmu-automation/">Automation Testing</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Selenified Integration With LambdaTest</span>

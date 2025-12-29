@@ -33,7 +33,7 @@ slug: rocketchat-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Rocket.Chat Integration",
-          "item": "https://www.lambdatest.com/support/docs/rocketchat-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/rocketchat-integration-with-testmu/"
         }]
       })
     }}

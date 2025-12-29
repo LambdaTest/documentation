@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Running Gauge Test Automation On LambdaTest Selenium Grid",
-          "item": "https://www.lambdatest.com/support/docs/running-gauge-tests-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/running-gauge-tests-on-testmu-selenium-grid/"
         }]
       })
     }}

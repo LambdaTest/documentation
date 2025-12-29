@@ -37,7 +37,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 3,
           "name": "npm Plugin Testcafe",
-          "item": "https://www.lambdatest.com/support/docs/npm-plugin-for-testcafe-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/npm-plugin-for-testcafe-integration-with-testmu/"
         }]
       })
     }}

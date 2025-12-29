@@ -41,7 +41,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "BrowserStack to LambdaTest migration",
-          "item": "https://www.lambdatest.com/support/docs/browserstack-to-lambdatest-migration-guide/"
+          "item": "https://www.lambdatest.com/support/docs/browserstack-to-testmu-migration-guide/"
         }]
       })
     }}

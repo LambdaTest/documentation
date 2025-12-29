@@ -41,7 +41,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Running Java Automation Scripts On Selenium Grid Using TestNG Framework",
-          "item": `${BRAND_URL}/support/docs/testng-with-selenium-running-java-automation-scripts-on-lambdatest-selenium-grid/`
+          "item": `${BRAND_URL}/support/docs/testng-with-selenium-running-java-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}

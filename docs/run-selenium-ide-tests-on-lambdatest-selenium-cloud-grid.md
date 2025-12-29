@@ -43,7 +43,7 @@ slug: run-selenium-ide-tests-on-testmu-selenium-cloud-grid
           "@type": "ListItem",
           "position": 4,
           "name": "Running Selenium IDE Tests",
-          "item": "https://www.lambdatest.com/support/docs/run-selenium-ide-tests-on-lambdatest-selenium-cloud-grid/"
+          "item": "https://www.lambdatest.com/support/docs/run-selenium-ide-tests-on-testmu-selenium-cloud-grid/"
         }]
       })
     }}

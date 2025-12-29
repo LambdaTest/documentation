@@ -33,7 +33,7 @@ slug: buildkite-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Buildkite Integration",
-          "item": "https://www.lambdatest.com/support/docs/buildkite-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/buildkite-integration-with-testmu/"
         }]
       })
     }}

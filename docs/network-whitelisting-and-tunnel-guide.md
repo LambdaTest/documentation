@@ -1,4 +1,4 @@
----
+﻿---
 id: network-whitelisting-and-tunnel-guide
 title: Network Whitelisting Guide
 sidebar_label: Network Whitelisting Guide
@@ -61,7 +61,7 @@ Inbound IP whitelisting allows LambdaTest cloud browsers and devices to directly
 - A staging environment at staging.company.com is accessible only from a set of static IPs.
 - By whitelisting LambdaTest’s shared public IPs, your QA team can test directly on the cloud grid.
 
-> Refer to [LambdaTest Public IP](/support/docs/lambdatest-public-ip/) for list for the IP addresses.
+> Refer to [LambdaTest Public IP](/support/docs/testmu-public-ip/) for list for the IP addresses.
 
 ## 2. When Dedicated Proxy Whitelisting Has to Be Done
 Dedicated Proxy Whitelisting provides an extra layer of security by assigning a unique static IP exclusively for your organization.

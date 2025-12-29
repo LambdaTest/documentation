@@ -46,63 +46,63 @@ slug: integrations-with-ci-cd-tools
 LambdaTest offers integrations with numerous CI/CD tools to help you fast-track your robust delivery pipeline for pacing up your go-to-market launch. Below are the step-by-step documentation for all our integrations with CI/CD tools to help you leverage the maximum output from LambdaTest Selenium Grid.
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/bitbucket-pipelines-integration-with-lambdatest/">Bitbucket Pipeline Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/bitbucket-pipelines-integration-with-testmu/">Bitbucket Pipeline Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/aws-codepipeline-integration-with-lambdatest/">AWS CodePipeline Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/aws-codepipeline-integration-with-testmu/">AWS CodePipeline Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/bamboo-integration-with-lambdatest/">Bamboo Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/bamboo-integration-with-testmu/">Bamboo Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/jenkins-with-lambdatest/">Jenkins Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/jenkins-with-testmu/">Jenkins Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/circleci-integration-with-lambdatest/">CircleCI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/circleci-integration-with-testmu/">CircleCI Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/travis-ci-with-lambdatest/">Travis CI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/travis-ci-with-testmu/">Travis CI Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/gitlab-ci-integration-with-lambdatest/">GitLab CI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/gitlab-ci-integration-with-testmu/">GitLab CI Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/semaphore-integration-with-lambdatest/">Semaphore Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/semaphore-integration-with-testmu/">Semaphore Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/codeship-integration-with-lambdatest/">Codeship Pipelines Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/codeship-integration-with-testmu/">Codeship Pipelines Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/codefresh-ci-integration-with-lambdatest/">Codefresh CI Pipelines Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/codefresh-ci-integration-with-testmu/">Codefresh CI Pipelines Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/teamcity-integration-with-lambdatest/">TeamCity Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/teamcity-integration-with-testmu/">TeamCity Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/integrate-azure-pipelines-with-lambdatest/">Azure Pipelines Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/integrate-azure-pipelines-with-testmu/">Azure Pipelines Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/selenium-testing-with-concourse-ci-and-lambdatest/">Concourse CI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/selenium-testing-with-concourse-ci-and-testmu/">Concourse CI Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/gocd-integration-with-lambdatest/">GOCD Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/gocd-integration-with-testmu/">GOCD Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/drone-ci-integration-with-lambdatest/">Drone CI Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/drone-ci-integration-with-testmu/">Drone CI Integration With LambdaTest</a>
 </div>
 
 <div className="download_btn mb-10">
@@ -118,7 +118,7 @@ LambdaTest offers integrations with numerous CI/CD tools to help you fast-track 
 </div>
 
 <div className="download_btn mb-10">
-<a href="https://www.lambdatest.com/support/docs/buildkite-integration-with-lambdatest/">Buildkite Integration With LambdaTest</a>
+<a href="https://www.lambdatest.com/support/docs/buildkite-integration-with-testmu/">Buildkite Integration With LambdaTest</a>
 </div>
 
 >If your favourite CI/CD tools is not in the above mentioned, then just give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>shout</span> and we will have it ready shortly for you.

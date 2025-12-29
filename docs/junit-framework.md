@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Selenium Test Behind Proxy",
-          "item": "https://www.lambdatest.com/support/docs/junit-with-selenium-running-junit-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/junit-with-selenium-running-junit-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

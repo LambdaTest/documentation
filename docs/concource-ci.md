@@ -40,7 +40,7 @@ slug: selenium-testing-with-concourse-ci-and-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Concourse CI Integration",
-          "item": "https://www.lambdatest.com/support/docs/selenium-testing-with-concourse-ci-and-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/selenium-testing-with-concourse-ci-and-testmu/"
         }]
       })
     }}

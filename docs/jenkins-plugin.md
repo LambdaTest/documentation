@@ -36,7 +36,7 @@ slug: jenkins-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Jenkins Plugin",
-          "item": "https://www.lambdatest.com/support/docs/jenkins-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/jenkins-with-testmu/"
         }]
       })
     }}

@@ -44,7 +44,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "LambdaTest With Selenide Automation Framework:Perform Automation Testing Faster On Cloud Selenium Grid",
-          "item": "https://www.lambdatest.com/support/docs/selenide-tests-with-lambdatest-online-selenium-grid-for-automated-cross-browser-testing/"
+          "item": "https://www.lambdatest.com/support/docs/selenide-tests-with-testmu-online-selenium-grid-for-automated-cross-browser-testing/"
         }]
       })
     }}

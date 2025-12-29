@@ -34,7 +34,7 @@ slug: aws-codepipeline-integration-with-testmu
           "@type": "ListItem",
           "position": 4,
           "name": "AWS CodePipeline Integration",
-          "item": "https://www.lambdatest.com/support/docs/aws-codepipeline-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/aws-codepipeline-integration-with-testmu/"
         }]
       })
     }}

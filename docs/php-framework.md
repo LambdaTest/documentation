@@ -39,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "PHP Framework",
-          "item": "https://www.lambdatest.com/support/docs/php-with-selenium-running-php-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/php-with-selenium-running-php-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

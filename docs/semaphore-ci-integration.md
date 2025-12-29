@@ -35,7 +35,7 @@ slug: semaphore-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Semaphore Integration",
-          "item": "https://www.lambdatest.com/support/docs/semaphore-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/semaphore-integration-with-testmu/"
         }]
       })
     }}

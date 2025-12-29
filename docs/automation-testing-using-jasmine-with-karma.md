@@ -36,7 +36,7 @@ slug: jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid
           "@type": "ListItem",
           "position": 3,
           "name": "Jasmine for BDD",
-          "item": "https://www.lambdatest.com/support/docs/jasmine-with-karma-running-jasmine-tests-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/jasmine-with-karma-running-jasmine-tests-on-testmu-selenium-grid/"
         }]
       })
     }}

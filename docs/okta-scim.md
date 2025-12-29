@@ -39,7 +39,7 @@ slug: scim/okta
 Integrate SCIM With LambdaTest:
 
 - You will need an Enterprise plan with LambdaTest.
-- SSO must be already integrated. Please complete [LambdaTest SSO & Okta Integration](/support/docs/lambdatest-sso-okta-integration/)
+- SSO must be already integrated. Please complete [LambdaTest SSO & Okta Integration](/support/docs/testmu-sso-okta-integration/)
 
 ## Integrating SCIM with Okta
 **Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).

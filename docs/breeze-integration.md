@@ -36,7 +36,7 @@ slug: breeze-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Breeze Integration",
-          "item": "https://www.lambdatest.com/support/docs/breeze-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/breeze-integration-with-testmu/"
         }]
       })
     }}

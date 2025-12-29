@@ -37,7 +37,7 @@ slug: webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selen
           "@type": "ListItem",
           "position": 3,
           "name": "JavaScript WebDriverIO 5.6.2 with Selenium",
-          "item": "https://www.lambdatest.com/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-lambdatest-selenium-grid/"
+          "item": "https://www.lambdatest.com/support/docs/webdriverio-5-6-2-with-selenium-running-automation-scripts-on-testmu-selenium-grid/"
         }]
       })
     }}

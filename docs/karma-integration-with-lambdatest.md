@@ -34,7 +34,7 @@ slug: karma-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Karma Test Runner",
-          "item": "https://www.lambdatest.com/support/docs/karma-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/karma-integration-with-testmu/"
         }]
       })
     }}

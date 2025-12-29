@@ -1,4 +1,4 @@
----
+﻿---
 id: timeouts-issues-and-resolutions
 title: Timeouts - Errors and Resolutions
 hide_title: false
@@ -84,7 +84,7 @@ Browse `https://hub.lambdatest.com/wd/hub/session` to validate whether your netw
       <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-lambdatest-automation/">Support</a>
+      <a className="breadcrumbs__link" href="/support/docs/getting-started-with-testmu-automation/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Timeouts: Issues and Resolutions</span>

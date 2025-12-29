@@ -42,7 +42,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Codeception Test",
-          "item": "https://www.lambdatest.com/support/docs/codeception-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/codeception-integration-with-testmu/"
         }]
       })
     }}

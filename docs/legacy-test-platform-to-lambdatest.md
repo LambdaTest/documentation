@@ -42,7 +42,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "How to Migrate From Legacy Platform to LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/migrate-from-legacy-platform-to-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/migrate-from-legacy-platform-to-testmu/"
         }]
       })
     }}

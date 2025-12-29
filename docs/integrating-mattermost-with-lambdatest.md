@@ -33,7 +33,7 @@ slug: integrating-mattermost-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Mattermost Integration",
-          "item": "https://www.lambdatest.com/support/docs/integrating-mattermost-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/integrating-mattermost-with-testmu/"
         }]
       })
     }}

@@ -45,7 +45,7 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 3,
           "name": "Sauce Labs to LambdaTest migration",
-          "item": "https://www.lambdatest.com/support/docs/saucelabs-to-lambdatest-migration-guide"
+          "item": "https://www.lambdatest.com/support/docs/saucelabs-to-testmu-migration-guide"
         }]
       })
     }}

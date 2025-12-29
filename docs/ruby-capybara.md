@@ -36,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 3,
           "name": "Capybara Test",
-          "item": `${BRAND_URL}/support/docs/ruby-with-capybara-running-automation-scripts-on-lambdatest-selenium-grid/`
+          "item": `${BRAND_URL}/support/docs/ruby-with-capybara-running-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}

@@ -42,7 +42,7 @@ slug: drone-ci-integration-with-testmu
           "@type": "ListItem",
           "position": 3,
           "name": "Drone CI Integration",
-          "item": "https://www.lambdatest.com/support/docs/drone-ci-integration-with-lambdatest/"
+          "item": "https://www.lambdatest.com/support/docs/drone-ci-integration-with-testmu/"
         }]
       })
     }}
