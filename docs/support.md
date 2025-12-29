@@ -181,6 +181,7 @@ import NewTag from '../src/component/newTag';
       <div className="home_inners">
         <a href="/support/docs/getting-started-with-agent-to-agent-testing" ><p className="p_home_inners">Getting Started</p></a>
         <a href="/support/docs/testing-your-first-ai-agent/"><p className="p_home_inners">Test Your First AI Agent</p></a>
+        <a href="/support/docs/agent-to-agent-faqs/"><p className="p_home_inners">FAQs</p></a>
       </div>
     </div>
     </div>

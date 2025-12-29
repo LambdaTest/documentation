@@ -156,3 +156,22 @@ Based on the given date range, you can review the logs for each individual user 
 Click on the **Export Button** displayed in the screenshot below, and your logs will be downloaded in **.csv** format.
 
 <img loading="lazy" src={require('../assets/images/audit-logs/5.png').default} alt="Image"  className="doc_img"/>
+
+## FAQs
+
+**Q: Is comprehensive audit logging for all system and user activities supported?**
+ 
+ Yes, it provides comprehensive audit logging of all activities, ensuring full traceability across conversations, workflows, operations, test executions, and database actions. It maintains detailed audit trails with timestamps, metadata, and historical records, supporting compliance, security, and validation of AI agent capabilities.
+
+**Key capabilities include:**
+
+- Conversation history tracking, including timestamped conversations, message metadata, file upload and download activity, session tracking, and complete conversation audit trails.
+
+- Workflow state tracking with full state persistence, state change history, metadata preservation, and workflow execution audit trails.
+
+- Operation logging for all API operations, including error tracking, performance metrics logging, and operation-level audit records.
+
+- Test execution logging covering test scenario execution, test result tracking, evaluation result logging, and audit logging as a supported test category for agent validation.
+
+- Database audit trail with timestamped database operations, organization-level data isolation, user-level activity tracking, and long-term historical data preservation.
+---
