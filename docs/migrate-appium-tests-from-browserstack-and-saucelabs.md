@@ -6,9 +6,9 @@ description: This documentation will guide you through the process of migrating 
 keywords:
   - migrate appium tests from browserstack
   - migrate appium tests from saucelabs
-  - migrate appium tests from browserstack and saucelabs to lambdatest
-  - how to migrate appium tests from browserstack to lambdatest
-  - how to migrate appium tests from saucelabs to lambdatest
+  - migrate appium tests from browserstack and saucelabs to testmu ai
+  - how to migrate appium tests from browserstack to testmu ai
+  - how to migrate appium tests from saucelabs to testmu ai
 url: https://www.lambdatest.com/support/docs/migrate-appium-tests-from-browserstack-and-saucelabs/
 site_name: LambdaTest
 slug: migrate-appium-tests-from-browserstack-and-saucelabs/

@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Running Your First Test
 description: Learn how to run your first project on smartui step by step guide for the first time users to help them understand how the platform works
 keywords:
-  - smart visual testing in lambdatest
+  - smart visual testing in testmu ai
   - visual  ui testing,image to image comparison
   - free cross browser testing tool
   - regression testing tool

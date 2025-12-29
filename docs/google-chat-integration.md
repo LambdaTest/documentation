@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: Google Chat
 description: TestMu AI helps you manage your bugs in Google Chat by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project in your Google Chat Space.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to Google Chat
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest Google Chat integration
-  - integrate Google Chat with lambdatest
-  - create issue in Google Chat from lambdatest
-  - Google Chat integration with lambdatest
-  - create Google Chat issues from lambdatest
+  - testmu ai Google Chat integration
+  - integrate Google Chat with testmu ai
+  - create issue in Google Chat from testmu ai
+  - Google Chat integration with testmu ai
+  - create Google Chat issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/google-chat-integration/

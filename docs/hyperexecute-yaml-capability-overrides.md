@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Override Capabilities in YAML
 description: "Easily override test capabilities using YAML in HyperExecute. No script changes needed. Flexible, scalable, and ideal for dynamic test environments."
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-yaml-capability-overrides/
 site_name: LambdaTest Deep dive into hyperexecute yaml
 slug: hyperexecute-yaml-capability-overrides/

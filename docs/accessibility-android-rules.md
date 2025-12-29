@@ -4,7 +4,7 @@ title: Android Accessibility Rules - Quick Reference
 sidebar_label: Android
 description: Use TestMu AI Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Manual

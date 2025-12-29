@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Getting Started
 description: Single sign-on (SSO) is an authentication feature that allows users to authenticate and access to TestMu AI through an identity provider (IdP).  
 keywords:
-    - LambdaTest single sign on
-    - LambdaTest single sign-on
-    - LambdaTest SSO
+    - TestMu AI single sign on
+    - TestMu AI single sign-on
+    - TestMu AI SSO
 url: https://www.lambdatest.com/support/docs/single-sign-on/
 site_name: LambdaTest
 slug: single-sign-on/

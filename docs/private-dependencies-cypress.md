@@ -5,15 +5,15 @@ sidebar_label: Execute Including Private Dependencies
 description: This article guides you on how to execute your Cypress tests including the private dependencies on TestMu AI platform.
 keywords:
   - Cypress Automation
-  - Cypress With LambdaTest
-  - LambdaTest With Cypress
+  - Cypress With TestMu AI
+  - TestMu AI With Cypress
   - Private Dependencies
   - Execute Cypress Tests
   - Cypress Test Automation
   - Cypress Automation Testing
-  - Running Cypress Tests With LambdaTest
+  - Running Cypress Tests With TestMu AI
   - Execute With Private Dependencies
-  - LambdaTest Cloud Platform
+  - TestMu AI Cloud Platform
 
 url: https://www.lambdatest.com/support/docs/private-dependencies-cypress/
 site_name: LambdaTest

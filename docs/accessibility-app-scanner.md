@@ -4,7 +4,7 @@ title: Accessibility App Scanner
 sidebar_label: Manual
 description: TestMu AI Accessibility DevTools help automate detection and reporting of accessibility issues based on WCAG guidelines.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Manual

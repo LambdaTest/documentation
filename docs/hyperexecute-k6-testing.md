@@ -7,7 +7,7 @@ description: Prevent app launch disaster! Test app performance under load with H
 keywords:
   - hyperexecute performance testing
   - hyperexecute
-  - lambdatest
+  - testmu ai
   - k6
 url: https://www.lambdatest.com/support/docs/hyperexecute-k6-testing/
 site_name: LambdaTest

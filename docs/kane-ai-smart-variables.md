@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Smart Variables
 description: Learn how to utilize Smart Variables to dynamically adapt to various environments and conditions
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai smart variables
   - kaneai parameters
 url: https://www.lambdatest.com/support/docs/kane-smart-variables/

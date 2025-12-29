@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Guided Walkthrough
 description: Explore KaneAI’s features and components to efficiently manage automated tests. Learn to navigate projects, edit test cases, and track test history.
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai guided walkthrough
 url: https://www.lambdatest.com/support/docs/kane-ai-guided-walkthrough
 site_name: LambdaTest

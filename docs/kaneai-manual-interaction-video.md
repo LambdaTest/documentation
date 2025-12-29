@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Manual Interaction
 description: Discover how KaneAI streamlines test automation by enabling manual interactions to create natural language prompts, analyze test steps, and generate code in multiple programming languages. 
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai manual interaction
 url: https://www.lambdatest.com/support/docs/kaneai-manual-interaction-video
 site_name: LambdaTest

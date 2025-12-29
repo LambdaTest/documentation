@@ -6,7 +6,7 @@ sidebar_label: Extent Native
 description: Learn how to generate Native Extent Report on TestMu AI and download the reports from the dashboard
 keywords:
   - native testing reports
-  - native testing lambdatest 
+  - native testing testmu ai 
   - playwright parallel tests
   - parallel testing with playwright
   

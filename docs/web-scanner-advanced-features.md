@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Advanced Features
 description: Learn how to configure advanced features in Web Scanner including authentication (Basic Auth and Form Selectors), dedicated proxy, geolocation, and tunnel for testing locally hosted pages.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - advanced features
   - authentication

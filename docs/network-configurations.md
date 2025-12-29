@@ -4,7 +4,7 @@ title: Network Configurations in Automation Tests
 sidebar_label: Network Configurations
 description: Learn how to configure and capture HTTP/S traffic during automation testing on TestMu AI Real Devices.
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - appium network logs
   - espresso network logs
   - xcuitest network logs

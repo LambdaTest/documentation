@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Status
 description: This documentation outlines the status list and the meaning of status used in job, test, task and scenario level at hyperexecute.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - hyperexecute status
   - hyperexecute status list
   - job status

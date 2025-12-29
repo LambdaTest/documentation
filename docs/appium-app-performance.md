@@ -5,7 +5,7 @@ title: Application Performance Analytics
 sidebar_label: App Performance Analytics
 description: Learn more about the metrics that are crucial in tracking the performance of your app. 
 keywords:
-- regular expression lambdatest
+- regular expression testmu ai
 - regular expression app automation
 
 url: https://www.lambdatest.com/support/docs/appium-app-performance-analytics/

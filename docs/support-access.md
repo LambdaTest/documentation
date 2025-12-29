@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Support Access
 description: Grant backend access to TestMu AI for efficient debugging & delegated tasks, with the ability to revoke anytime.
 keywords:
-  - lambdatest support access
+  - testmu ai support access
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online

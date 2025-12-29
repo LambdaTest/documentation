@@ -6,7 +6,7 @@ keywords:
 - device reservation
 - private cloud
 - device booking
-- lambdatest devices
+- testmu ai devices
 - test scheduling
 url: https://www.lambdatest.com/support/docs/device-reservation/
 site_name: LambdaTest

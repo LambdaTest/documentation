@@ -6,7 +6,7 @@ sidebar_label: Test Setup And Execution
 description: This documentation guides you how to configure the desired capability for app, device, group tests, debugging, and mark tests as passed or failed.
 keywords:
 - desired capability for app automation
-- appium capabilities lambdatest
+- appium capabilities testmu ai
 - mobile app automation testing using appium
 url: https://www.lambdatest.com/support/docs/test-setup-and-execution/
 site_name: LambdaTest

@@ -4,7 +4,7 @@ title: Handle Dynamic Data in Visual Tests
 sidebar_label: Dynamic Data
 description: Learn how to handle dynamic data in SmartUI visual regression tests by ignoring or selecting specific DOM elements that change between test runs.
 keywords:
-  - lambdatest
+  - testmu ai
   - smart ui
   - dynamic data
   - ignore elements

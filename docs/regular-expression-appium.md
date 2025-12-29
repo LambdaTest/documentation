@@ -5,7 +5,7 @@ title: Regular Expression - Appium
 sidebar_label: Regular Expression
 description: If your chosen device for testing on TestMu AI is unavailable, use REGEX to broaden the search request for alternative devices to run the test.
 keywords:
-- regular expression lambdatest
+- regular expression testmu ai
 - regular expression app automation
 url: https://www.lambdatest.com/support/docs/regular-expression-appium/
 site_name: LambdaTest

@@ -6,8 +6,8 @@ description: Optimize your Appium automation with Node.js using TestMu AI's comp
 keywords:
   - appium
   - java
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices

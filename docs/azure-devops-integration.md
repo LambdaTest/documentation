@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Azure DevOps
 description: TestMu AI provides integrations with Azure DevOps to help you log bugs directly from the middle of your test session on TestMu AI to your Azure DevOps project.
 keywords:
-  - LambdaTest integrations
-  - LambdaTest Azure DevOps integration
+  - TestMu AI integrations
+  - TestMu AI Azure DevOps integration
   - Push issues to Azure DevOps
 image: /assets/images/og-images/default-user-image.png
 url: https://www.lambdatest.com/support/docs/vsts-integration/

@@ -5,12 +5,12 @@ hide_title: true
 sidebar_label: Testsigma
 description: TestMu AI now offers integration with Testsigma to help you perform automated cross-browser testing on 3000+ real browsers of its cloud-based Selenium Grid.
 keywords:
-- lambdatest integrations
-- lambdatest integrations with codeless testing tools
+- testmu ai integrations
+- testmu ai integrations with codeless testing tools
 - testsigma integration
-- testsigma integration with lambdatest
-- lambdatest integration with testsigma
-- testsigma lambdatest
+- testsigma integration with testmu ai
+- testmu ai integration with testsigma
+- testsigma testmu ai
 url: https://www.lambdatest.com/support/docs/testsigma-integration/
 site_name: LambdaTest
 slug: testsigma-integration/

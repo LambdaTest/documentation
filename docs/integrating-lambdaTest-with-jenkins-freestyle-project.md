@@ -1,14 +1,14 @@
 ﻿---
 id: integrating-lambdaTest-with-jenkins-freestyle-project
 title: Integrate TestMu AI With Jenkins Freestyle Project
-sidebar_label: Integrate LambdaTest With Jenkins Freestyle Project
+sidebar_label: Integrate TestMu AI With Jenkins Freestyle Project
 description: This document will help you integrate your Jenkins freestyle project with TestMu AI to ensure your Selenium testing scripts are executed on a cloud-based Grid of 3000+ real browsers.
 keywords:
   - jenkins 
   - freestyle project 
-  - lambdatest 
+  - testmu ai 
   - jenkins integration 
-  - lambdatest integration with jenkins 
+  - testmu ai integration with jenkins 
   - jenkins freestlye
 url: https://www.lambdatest.com/support/docs/integrating-lambdatest-with-jenkins-freestyle-project/
 site_name: LambdaTest

@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Bugzilla 
 description: Perform one-click bug logging with TestMu AI and Bugzilla integration. Capture screenshots, annotate issues, and share them directly from the TestMu AI platform to your Bugzilla products.
 keywords:
-  - LambdaTest integration with Bugzilla 
-  - LambdaTest and Bugzilla Integration
+  - TestMu AI integration with Bugzilla 
+  - TestMu AI and Bugzilla Integration
   - Bugzilla Integration
 url: https://www.lambdatest.com/support/docs/bugzilla-integration/
 site_name: LambdaTest

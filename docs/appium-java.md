@@ -6,8 +6,8 @@ description: Automate Mobile Apps with ease using Java and Appium
 keywords:
   - appium
   - java
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices

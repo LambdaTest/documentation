@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Azure AD
 description: Integrating TestMu AI SCIM with Azure AD 
 keywords:
-    - LambdaTest SCIM
+    - TestMu AI SCIM
 url: https://www.lambdatest.com/support/docs/scim/azure/
 site_name: LambdaTest
 slug: scim/azure/

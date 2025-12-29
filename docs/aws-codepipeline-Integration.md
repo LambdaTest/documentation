@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: AWS CodePipeline
 description: Rapidly commit changes in CI CD pipeline and validate them for UI/UX anomalies by integrating your AWS CodePipeline instance with TestMu AI Selenium Grid.
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - continuous integration
   - aws codepipeline
   - continuous integration tools

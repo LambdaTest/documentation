@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Search Query in GUI
 description: This documentation outlines the steps on how to use search query in hyperexecute gui app.
 keywords:
-  - LambdaTest
+  - TestMu AI
   - HyperExecute
-  - LambdaTest HyperExecute
+  - TestMu AI HyperExecute
   - CLI
   - Search Query
   - Filter

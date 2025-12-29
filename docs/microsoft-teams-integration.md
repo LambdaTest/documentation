@@ -6,7 +6,7 @@ sidebar_label: Microsoft Teams
 description: TestMu AI integration with Microsoft Teams allows you to push a bug directly to your specified Teams channel from TestMu AI platform. Share your UI observations and input with your teammates on any time, by capturing a screenshot in the middle of your test session through TestMu AI. You can annotate the screenshot & highlight your issue or input. The fields populated by you when marking as a bug through TestMu AI are displayed as information on the respective Teams channel for that testing instance.
 keywords:
   - microsoft teams integration
-  - lambdatest integration
+  - testmu ai integration
   - bug reporting
   - team communication
 url: https://www.lambdatest.com/support/docs/microsoft-teams-integration/

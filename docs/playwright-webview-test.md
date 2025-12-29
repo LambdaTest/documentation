@@ -8,8 +8,8 @@ keywords:
   - playwright testing
   - playwright mobile testing
   - playwright testing tool
-  - playwright testing on lambdatest
-  - playwright testing lambdatest
+  - playwright testing on testmu ai
+  - playwright testing testmu ai
   - playwright android
 url: https://www.lambdatest.com/support/docs/playwright-webview-test/
 site_name: LambdaTest

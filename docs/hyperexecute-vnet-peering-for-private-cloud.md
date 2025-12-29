@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: VNet Peering and VNet Links
 description: Secure your HyperExecute Private setup with VNet Peering & Links! Our guide helps provision resources, deploy ARM templates, and connect VNets for optimal testing.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-vnet-peering-for-private-cloud/
 site_name: LambdaTest
 slug: hyperexecute-vnet-peering-for-private-cloud/

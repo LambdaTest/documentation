@@ -9,8 +9,8 @@ keywords:
   - sample data
   - push pull
   - retrieving files
-  - lambdatest
-  - framework on lambdatest
+  - testmu ai
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices

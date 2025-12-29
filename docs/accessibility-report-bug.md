@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Report Bugs
 description: Report the bugs that you are expereinceing
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Bug Reporting

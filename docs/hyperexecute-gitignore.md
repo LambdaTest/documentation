@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Ignoring Files
 description: Optimize HyperExecute CLI with .gitignore & .hyperexecuteignore files. Exclude unneeded files for efficient test script execution.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-gitignore/
 site_name: LambdaTest
 slug: hyperexecute-gitignore/

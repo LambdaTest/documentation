@@ -4,7 +4,7 @@ title: Configure Multiple Projects per repo
 sidebar_label: Multiple Projects per repo
 description: Learn how to manage multiple SmartUI projects in a single repository with ease using this detailed documentation.
 keywords:
-  - lambdatest
+  - testmu ai
   - smart ui
   - videos
   - storybook

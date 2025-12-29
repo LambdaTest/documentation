@@ -6,7 +6,7 @@ sidebar_label: Robot
 description: Learn how to configure and generate Robot test execution reports on HyperExecute with step-by-step guidance for seamless test insights and reporting.
 keywords:
   - cucumber testing reports
-  - robot report lambdatest 
+  - robot report testmu ai 
 url: https://www.lambdatest.com/support/docs/robot-report/
 site_name: LambdaTest
 slug: robot-report/

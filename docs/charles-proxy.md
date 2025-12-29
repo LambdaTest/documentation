@@ -8,10 +8,10 @@ keywords:
   - Charles Proxy
   - Network Logs With Charles Proxy
   - Network Logs
-  - LambdaTest Tunnel
-  - LambdaTest with Charles Proxy
-  - Charles Proxy With LambdaTest
-  - LambdaTest Cloud Platform
+  - TestMu AI Tunnel
+  - TestMu AI with Charles Proxy
+  - Charles Proxy With TestMu AI
+  - TestMu AI Cloud Platform
 url: https://www.lambdatest.com/support/docs/charles-proxy/
 site_name: LambdaTest
 slug: charles-proxy/

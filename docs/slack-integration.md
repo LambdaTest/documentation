@@ -6,7 +6,7 @@ sidebar_label: Slack
 description: The TestMu AI Integration with Slack allows you to push a bug directly to your specified Slack channel from TestMu AI platform. 
 keywords:
   - slack integration
-  - lambdatest integration
+  - testmu ai integration
   - bug reporting
   - team communication
 url: https://www.lambdatest.com/support/docs/slack-integration/

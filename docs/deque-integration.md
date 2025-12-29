@@ -6,10 +6,10 @@ sidebar_label: Deque axe
 description: A quick guide to perform Automated Accessibility testing using Deque's axe across 3000+ browsers and OS combinations.
 keywords:
   - accessibility testing with axe
-  - lambdatest deque integration
-  - lambdatest deque
-  - lambdatest axe
-  - lambdatest axe integration
+  - testmu ai deque integration
+  - testmu ai deque
+  - testmu ai axe
+  - testmu ai axe integration
   - web accessibility testing with axe
 
 url: https://www.lambdatest.com/support/docs/deque-integration/

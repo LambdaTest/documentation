@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Leveraging Custom Libraries in SikuliX for Advanced Visual Verification
 description: Leveraging Custom Libraries in SikuliX for Advanced Visual Verification
 keywords:
-  - LambdaTest HyperExecute
+  - TestMu AI HyperExecute
   - custom library
   - sikulix
   - visual verification

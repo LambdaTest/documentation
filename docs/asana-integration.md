@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Asana
 description: With TestMu AI - Asana integration, now you can mark your bug to Asana dashboard directly from TestMu AI while performing testing.
 keywords:
-  - LambdaTest Asana integration
-  - How to integrate Asana with LambdaTest
-  - bug management tools in LambdaTest
+  - TestMu AI Asana integration
+  - How to integrate Asana with TestMu AI
+  - bug management tools in TestMu AI
 image: /assets/images/og-images/default-user-image.png
 url: https://staging.lambdatest.com/support/docs/asana-integration/
 site_name: LambdaTest

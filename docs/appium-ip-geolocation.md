@@ -8,7 +8,7 @@ keywords:
  - IP Geolocation
  - geolocation testing
  - testing tools
- - LambdaTest 
+ - TestMu AI 
  - IP geolocation support
 
 url: https://www.lambdatest.com/support/docs/appium-ip-geolocation/

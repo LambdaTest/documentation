@@ -6,8 +6,8 @@ description: Now you can run your automation scripts using JavaScript Mocha on T
 keywords:
   - appium
   - javascript
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - mocha
   - app testing
   - real devices

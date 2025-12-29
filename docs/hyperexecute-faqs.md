@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: FAQs
 description: Get quick answers to all your HyperExecute queries with our comprehensive FAQs! 
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/hyperexecute-faqs/
 site_name: LambdaTest

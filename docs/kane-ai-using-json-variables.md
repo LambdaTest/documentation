@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: JSON Variables
 description: Learn how to use JSON variables in the KaneAI test cases for assertions
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
 url: https://www.lambdatest.com/support/docs/kane-ai-using-json-variables/

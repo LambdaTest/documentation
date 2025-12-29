@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: Zenkit 
 description: Discover how TestMu AI and Zenkit seamlessly integrate to enhance your testing workflows. Dive into our support doc to leverage the power of both platforms for efficient bug tracking and collaboration.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to zenkit
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest zenkit integration
-  - integrate zenkit with lambdatest
-  - create issue in zenkit from lambdatest
-  - zenkit integration with lambdatest
-  - create zenkit issues from lambdatest
+  - testmu ai zenkit integration
+  - integrate zenkit with testmu ai
+  - create issue in zenkit from testmu ai
+  - zenkit integration with testmu ai
+  - create zenkit issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/zenkit-integration/

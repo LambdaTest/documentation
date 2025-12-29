@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: GenRocket
 description: Integrate TestMu AI with GenRocket to perform desktop web, mobile web and native app testing across 3000+ real browsers, devices, and operating systems.
 keywords:
-  - lambdatest integration with GenRocket
-  - lambdatest and genrocket integration 
-  - lambdatest genrocket
+  - testmu ai integration with GenRocket
+  - testmu ai and genrocket integration 
+  - testmu ai genrocket
 url: https://www.lambdatest.com/support/docs/genrocket-integration/
 site_name: LambdaTest
 slug: genrocket-integration/

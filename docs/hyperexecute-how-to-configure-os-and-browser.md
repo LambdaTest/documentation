@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: How to Configure OS and Browser
 description: Discover the correct way to configure the operating system and the browser capabilities in your codebase to execute in the HyperExecute platform.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to Find the Correct Concurrency 
 url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-configure-os-and-browser/
 site_name: LambdaTest

@@ -11,7 +11,7 @@ keywords:
   - ui validation
   - browser dark mode
   - web dark mode
-  - lambdatest real browsers
+  - testmu ai real browsers
   - light mode testing
 url: https://www.lambdatest.com/support/docs/dark-mode-on-browser/
 site_name: LambdaTest

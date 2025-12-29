@@ -9,8 +9,8 @@ keywords:
   - camera image
   - QR code scanning
   - Barcode scanning
-  - lambdatest capture code
-  - framework on lambdatest
+  - testmu ai capture code
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices

@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Access Management - KaneAI <> Test Manager
 description: This documentation will help you to understand how to allocate licence to all the users present in your organization
 keywords:
-- users management lambdatest
+- users management testmu ai
 - manage user
 url: https://www.lambdatest.com/support/docs/kaneai-test-manager-access-management/
 site_name: LambdaTest

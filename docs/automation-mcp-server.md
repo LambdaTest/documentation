@@ -9,7 +9,7 @@ keywords:
   - automation testing
   - automation mcp server
   - automated testing
-  - lambdatest
+  - testmu ai
   - MCP
   - MCP server
 url: https://www.lambdatest.com/support/docs/automation-mcp-server/

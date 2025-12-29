@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: algoQA
 description: Integrate TestMu AI with algoQA and automate your browser testing on an online browser farm of 3000+ real browsers and operating system combinations.
 keywords:
-  - lambdatest integration with algoqa
-  - lambdatest and algoqa integration 
+  - testmu ai integration with algoqa
+  - testmu ai and algoqa integration 
   - algoqA integration
 url: https://www.lambdatest.com/support/docs/algoqa-integration/
 site_name: LambdaTest

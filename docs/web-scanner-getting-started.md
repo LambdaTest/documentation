@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Getting Started
 description: A guide to accessing the Web Scanner dashboard and using the 4-step wizard to create and schedule your first Visual or Accessibility scan.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - getting started
   - schedule scan

@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver NUnit
   - selenium NUnit testing tutorial
   - NUnit C# Selenium framework
-  - lambdatest NUnit
-  - frameworks on lambdatest
+  - testmu ai NUnit
+  - frameworks on testmu ai
   - hyperexecute
   - hyperexecute NUnit testing
   - hyperexecute NUnit testing

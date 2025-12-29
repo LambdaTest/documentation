@@ -6,7 +6,7 @@ sidebar_label: Bitbucket Pipelines
 description: TestMu AI integration with Bitbucket Pipelines will help you perform cross-browser testing on 3000+ real browsers &amp; browser versions, through a Selenium Grid hosted on TestMu AI cloud servers.
 keywords:
   - bitbucket pipelines
-  - bitbucket integration with lambdatest
+  - bitbucket integration with testmu ai
   - continuous delivery pipeline
   - bitbucket pipelines for continuous delivery
   

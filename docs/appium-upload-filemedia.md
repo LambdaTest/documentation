@@ -9,7 +9,7 @@ keywords:
   - app test automation
   - media upload
   - upload automate
-  - framework on lambdatest
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices

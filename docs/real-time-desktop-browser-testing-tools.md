@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Testing Tools
 description: Enhance your web testing with TestMu AI's comprehensive tool suite. Capture screenshots, record sessions, manage files, and more. Test across devices, browsers, and locations for optimal results.
 keywords:
-  - real time testing in lambdatest
-  - lambdatest real time testing feature
+  - real time testing in testmu ai
+  - testmu ai real time testing feature
   - online real time testing
   - free cross browser testing tool
   - cross browser compatibility testing tool

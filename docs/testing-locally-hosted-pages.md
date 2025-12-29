@@ -8,7 +8,7 @@ keywords:
   - test locally hosted web apps online
   - free cross browser testing tool
   - cross browser compatibility tools
-  - lambdatest tunnel
+  - testmu ai tunnel
   - TCP tunnel for windows
   - testing local web pages
   - secure-shell-tunnel

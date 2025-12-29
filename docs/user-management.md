@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: User Management
 description: This documentation will help you create and manage users on TestMu AI.
 keywords:
-- users management lambdatest
+- users management testmu ai
 - manage user
 url: https://www.lambdatest.com/support/docs/user-management/
 site_name: LambdaTest

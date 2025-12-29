@@ -8,8 +8,8 @@ keywords:
   - ai testing tool
   - ai qa agent
   - genai qa agent
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
 url: https://www.lambdatest.com/support/docs/getting-started-with-kane-ai
 site_name: LambdaTest
 slug: getting-started-with-kane-ai/

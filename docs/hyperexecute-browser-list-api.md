@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: How to List Supported Browser in HyperExecute via API
 description: Find out how to list the browser used in hyperexecute using the BrowserList API
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to List Supported Browser in HyperExecute via API
 url: https://www.lambdatest.com/support/docs/hyperexecute-browser-list-api/
 site_name: LambdaTest

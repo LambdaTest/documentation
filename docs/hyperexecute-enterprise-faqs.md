@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Enterprise FAQs
 description: Get answers to all your queries about HyperExecute’s enterprise-level features, including SSO, dedicated support, custom setups, and more, enhancing your testing experience.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/hyperexecute-enterprise-faqs/
 site_name: LambdaTest

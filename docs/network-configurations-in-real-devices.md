@@ -4,7 +4,7 @@ title: Network Configurations in App Live
 sidebar_label: Network Configurations
 description: Learn how to configure and capture HTTP/S traffic on real devices during manual testing in App Live & Browser Live, with options for content capture and domain filtering.
 keywords:
-  - lambdatest manual testing
+  - testmu ai manual testing
   - network logs
   - mitm proxy
   - http traffic capture

@@ -2,10 +2,10 @@
 id: accessibility-testing-install-devtools
 title: Install TestMu AI Accessibility Toolkit
 hide_title: false
-sidebar_label: Install LambdaTest Accessibility Toolkit
+sidebar_label: Install TestMu AI Accessibility Toolkit
 description: Easily install the TestMu AI Accessibility Toolkit extension from the Chrome Web Store to improve website accessibility.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

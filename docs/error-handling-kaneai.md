@@ -4,7 +4,7 @@ title: Error Handling in Authoring
 sidebar_label: Error Handling
 description: Use TestMu AI Accessibility DevTools to automatically find and report accessibility issues as per WCAG guidelines.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Manual

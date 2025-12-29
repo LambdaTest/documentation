@@ -4,8 +4,8 @@ title: Applitools Integration With TestMu AI
 sidebar_label: Applitools
 description: TestMu AI integration with Applitools will allow you perform automated cross browser testing on more than 2000 real browsers running on real operating systems, hosted on a cloud-based Selenium Grid. You can execute your automation test script on TestMu AI Selenium Grid directly from your Applitools instance.
 keywords:
-  - lambdatest integrations
-  - lambdatest integration with applitools
+  - testmu ai integrations
+  - testmu ai integration with applitools
   - applitools integration
   - cross browser testing
   - free cross browser testing tool

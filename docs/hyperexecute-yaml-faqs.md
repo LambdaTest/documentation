@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: YAML FAQs
 description: Get answers to your HyperExecute YAML FAQs. Learn about automation, configurations, integrations, and more for efficient test execution on TestMu AI..
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/hyperexecute-yaml-faqs/
 site_name: LambdaTest

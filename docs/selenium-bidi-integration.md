@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: BiDi Testing
 description: Discover BiDi testing with Selenium WebDriver on TestMu AI. Enjoy enhanced automation, seamless cross-browser support, fine-grained control, and future-proof your test suite
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
   - selenium bidi testing
   - online selenium automation

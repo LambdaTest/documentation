@@ -8,8 +8,8 @@ keywords:
   - app test automation
   - XCUI
   - filter
-  - lambdatest
-  - framework on lambdatest
+  - testmu ai
+  - framework on testmu ai
   - testing in XCUI
   - XCUI testing
   - real devices

@@ -6,7 +6,7 @@ description: This guide will explain how to perform operations with your applica
 keywords:
   - appium
   - application operations
-  - lambdatest
+  - testmu ai
   - mobile testing
   - apis
   - setup application

@@ -6,8 +6,8 @@ description: Now you can run your Appium automation scripts using Kotlin on Test
 keywords:
   - appium
   - Kotlin
-  - lambdatest kotlin
-  - framework on lambdatest
+  - testmu ai kotlin
+  - framework on testmu ai
   - java
   - app testing
   - real devices

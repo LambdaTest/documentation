@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: How to Access and Change Org Product Preferences
 description: Find out how to access and change org product preferences for hyperexecute.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to access and change org product preferences for hyperexecute
 url: https://www.lambdatest.com/support/docs/hyperexecute-org-product-preferences/
 site_name: LambdaTest

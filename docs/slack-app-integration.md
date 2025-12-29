@@ -5,10 +5,10 @@ hide_title: true
 sidebar_label: Slack App
 description: Integrate Slack App with TestMu AI and quickly launch the real-time and screenshot tests directly from Slack. Collaborate faster with your teammates on issues and fasten the feedback cycle.
 keywords:
-- integrate lambdatest with slack
-- integrate lambdatest with slack app
+- integrate testmu ai with slack
+- integrate testmu ai with slack app
 - run realtime and screenshot tests with slack app
-- how to integrate slack app with lambdatest
+- how to integrate slack app with testmu ai
 url: https://www.lambdatest.com/support/docs/slack-app/
 site_name: LambdaTest
 slug: slack-app/

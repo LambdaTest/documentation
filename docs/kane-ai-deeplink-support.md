@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Deeplinks
 description: Learn how to use deeplinks in KaneAI to directly navigate to specific screens in your Android and iOS mobile applications during test authoring.
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai deeplink
   - mobile app testing
   - deeplink navigation

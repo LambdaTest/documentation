@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: qTest
 description:  Unleash the power of QTest & TestMu AI HyperExecute! Streamline test management & experience blazing-fast execution.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - qtest
   - Integrations
   - Products

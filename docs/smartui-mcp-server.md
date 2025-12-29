@@ -8,7 +8,7 @@ keywords:
   - smartui
   - visual testing
   - visual regression testing
-  - lambdatest
+  - testmu ai
   - MCP
   - MCP server
 url: https://www.lambdatest.com/support/docs/smartui-mcp-server/

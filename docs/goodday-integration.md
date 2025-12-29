@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: GoodDay 
 description: TestMu AI helps you manage your bugs in GoodDay by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project on GoodDay.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to GoodDay
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest GoodDay integration
-  - integrate GoodDay with lambdatest
-  - create issue in GoodDay from lambdatest
-  - GoodDay integration with lambdatest
-  - create GoodDay issues from lambdatest
+  - testmu ai GoodDay integration
+  - integrate GoodDay with testmu ai
+  - create issue in GoodDay from testmu ai
+  - GoodDay integration with testmu ai
+  - create GoodDay issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/goodday-integration/

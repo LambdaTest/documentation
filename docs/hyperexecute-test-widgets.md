@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Test Widgets
 description: HyperExecute Test Widgets allow trend analysis of tests over time, providing insights into platform performance.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
     - HyperExecute
   - HyperExecute Widgets
   - HyperExecute Test

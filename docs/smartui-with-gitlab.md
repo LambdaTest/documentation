@@ -4,7 +4,7 @@ title: GitLab Pipeline Integration with SmartUI
 sidebar_label: GitLab
 description: SmartUI now integrates with GitLab Pipeline to boost your go-to market delivery. Perform automated cross browser testing with SmartUI to ensure your development code renders seamlessly providing 3000+ real browsers running through machines.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - smart ui integration
   - smart ui integrations with ci/cd tools
   - ci/cd tools

@@ -10,7 +10,7 @@ keywords:
   - Detox testing
   - detox testing react native
   - detox automation testing
-  - detox lambdatest
+  - detox testmu ai
   - hyperexecute
   - hyperexecute detox testing
   - detox tests on hyperexecute

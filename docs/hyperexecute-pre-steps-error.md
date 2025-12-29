@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Pre Steps Errors
 description: This document will help you debug your failed job if you are facing any errors in the pre-command stage.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How to Debug a Failed Job
 url: https://www.lambdatest.com/support/docs/hyperexecute-pre-steps-error/
 site_name: LambdaTest

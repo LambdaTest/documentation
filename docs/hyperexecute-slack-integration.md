@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Slack
 description:  Streamline testing & communication! Integrate TestMu AI HyperExecute with Slack for real-time test notifications & updates. 
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - slack
   - Integrations
   - Products

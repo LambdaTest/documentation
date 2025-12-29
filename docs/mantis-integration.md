@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: Mantis
 description: TestMu AI helps you manage your bugs in Mantis by moving them to project in a single click. All the details you provide in TestMu AI like projects, severity, priority, summary and description would automatically be presented in the project on Mantis.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to clubhouse
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest mantis integration
-  - integrate mantis with lambdatest
-  - create issue in mantis from lambdatest
-  - mantis integration with lambdatest
-  - create mantis issues from lambdatest
+  - testmu ai mantis integration
+  - integrate mantis with testmu ai
+  - create issue in mantis from testmu ai
+  - mantis integration with testmu ai
+  - create mantis issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/mantis-integration/

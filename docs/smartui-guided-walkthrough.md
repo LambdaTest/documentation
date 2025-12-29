@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Guided Walkthrough
 description: Learn how to manage tests, update the images, compare the images, perform testing using the dashboard.
 keywords:
-  - LambdaTest SmartUI
-  - LambdaTest SmartUI help
-  - LambdaTest SamrtUI documentation
+  - TestMu AI SmartUI
+  - TestMu AI SmartUI help
+  - TestMu AI SamrtUI documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/smartui-guided-walkthrough/
 site_name: LambdaTest

@@ -5,10 +5,10 @@ hide_title: true
 sidebar_label: Jest Library
 description: TestMu AI now integrates with Jest to boost your go-to market delivery. Jest is a JavaScript testing library for React web-applications with which you can perform snapshot testing.
 keywords:
-  - lambdatest integrations
-  - lambdatest app marketplace
+  - testmu ai integrations
+  - testmu ai app marketplace
   - jest integration
-  - lambdatest jest integration
+  - testmu ai jest integration
   - jest and selenium
   - jest selenium
 image: /assets/images/og-images/automated-testing-with-selenium-jest.jpg  

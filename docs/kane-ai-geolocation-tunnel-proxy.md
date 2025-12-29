@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Geolocation, Tunnel, and Proxy
 description: Learn how to run your web tests on KaneAI using geolocation, tunnel, and dedicated proxy configurations.
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai geolocation support
   - kaneai tunnel support
   - kaneai proxy support

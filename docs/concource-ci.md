@@ -6,15 +6,15 @@ sidebar_label: Concourse CI
 description: This document will help you understand how you can integrate your Concourse CI instance with cloud Selenium Grid for continuous testing.
 keywords:
   - concourse ci
-  - lambdatest
+  - testmu ai
   - concourse ci/cd
   - concourse integrations
-  - concourse lambdatest
+  - concourse testmu ai
   - concourse selenium
   - continuous integration
   - continuous testing
   - continuous deployment
-  - lambdatest integrations
+  - testmu ai integrations
   - integrations with ci/cd tools
   - ci/cd integrations
 url: https://www.lambdatest.com/support/docs/selenium-testing-with-concourse-ci-and-lambdatest/

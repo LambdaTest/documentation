@@ -6,9 +6,9 @@ sidebar_label: Setup Pre-run Executable
 description: Pre-run-executables allow you to run your custom scripts before the Selenium test is started. 
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - LambdaTest tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - TestMu AI tunnel
   - local app testing for linux
   - TCP with TLS 1.2 secure connection
   - TCP with TLS 1.2 secure connection tunnel

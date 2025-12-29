@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Automation Code Generation
 description: Explore KaneAI’s features and components to generate automation test code.
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai code gen
 url: https://www.lambdatest.com/support/docs/kane-ai-automation-code-generation
 site_name: LambdaTest

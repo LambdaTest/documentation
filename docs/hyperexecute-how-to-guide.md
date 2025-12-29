@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: How To Guide
 description: Discover the HyperExecute cases 
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - How To guide?
 url: https://www.lambdatest.com/support/docs/hyperexecute-knowledge-base/
 site_name: LambdaTest

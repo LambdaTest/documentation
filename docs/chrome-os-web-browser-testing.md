@@ -7,7 +7,7 @@ description: LChromeOS web browser testing with features like bug marking, IP ge
 keywords:
     - ChromeOS
     - ChromeOS webapp
-    - LambdaTest
+    - TestMu AI
     - Virtual Testing
     - Emulator
     - Simulator

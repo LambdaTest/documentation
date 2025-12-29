@@ -5,11 +5,11 @@ hide_title: true
 sidebar_label: Codefresh CI
 description: TestMu AI offers continuous integration with Codefresh to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - continuous integration
   - codefresh
   - codefresh ci integration
-  - lambdatest codefresh ci integration
+  - testmu ai codefresh ci integration
 url: https://www.lambdatest.com/support/docs/codefresh-ci-integration-with-lambdatest/
 site_name: LambdaTest
 slug: codefresh-ci-integration-with-lambdatest/

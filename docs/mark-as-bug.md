@@ -5,11 +5,11 @@ hide_title: true
 sidebar_label: Mark as Bug
 description: Don't forget to mark your bugs while performing Screenshot testing at TestMu AI. Just a single click and you can share bugs to your favourite project management tools such as Asana, Trello, Jira etc.
 keywords:
-- lambdatest mark as a bug
+- testmu ai mark as a bug
 - push bug while performing testing
-- mark as a bug in lambdatest
+- mark as a bug in testmu ai
 - one click bug logging
-- one click bug logging in lambdatest
+- one click bug logging in testmu ai
 url: https://www.lambdatest.com/support/docs/mark-as-bug-in-screenshot-testing/
 site_name: LambdaTest
 slug: mark-as-bug-in-screenshot-testing/

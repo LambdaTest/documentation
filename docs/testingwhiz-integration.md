@@ -5,11 +5,11 @@ hide_title: true
 sidebar_label: TestingWhiz
 description: Now perform cross-browser testing of your website or web app on 3000+ desktop & mobile browser and OS combinations, using TestMu AI and TestingWhiz integration
 keywords:
- - LambdaTest integrations
+ - TestMu AI integrations
  - Test Automation for GUI Testing
  - test automation 
  - integration with Lambdatest
- - lambdatest integration with testingwhiz
+ - testmu ai integration with testingwhiz
 url: https://www.lambdatest.com/support/docs/testingwhiz-integration/
 site_name: LambdaTest
 slug: testingwhiz-integration/

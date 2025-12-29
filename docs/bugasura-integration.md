@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Bugasura 
 description: Integrate TestMu AI with Bugasura for efficient one-click bug logging of your web applications and avoid the hassle of maintaining bugs and tasks manually.
 keywords:
-  - lambdatest integration with bugasura
-  - lambdatest and bugasura integration 
+  - testmu ai integration with bugasura
+  - testmu ai and bugasura integration 
   - bugasura integration
 url: https://www.lambdatest.com/support/docs/bugasura-integration/
 site_name: LambdaTest

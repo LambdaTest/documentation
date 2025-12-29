@@ -6,9 +6,9 @@ description: This document will help you modify your open file limit temporarily
 keywords:
   - proxy settings
   - set open file limit
-  - open file limit lambdatest
-  - lambdatest proxy settings
-  - lambdatest proxy profile
+  - open file limit testmu ai
+  - testmu ai proxy settings
+  - testmu ai proxy profile
 url: https://www.lambdatest.com/support/docs/local-testing-for-macos/
 site_name: LambdaTest
 slug: local-testing-for-macos/

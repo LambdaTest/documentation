@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Edit and Update Test Steps
 description: Learn how to KaneAI how to efficiently update and edit test steps using automation. 
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai edit test steps
 url: https://www.lambdatest.com/support/docs/kaneai-edit-test-steps
 site_name: LambdaTest

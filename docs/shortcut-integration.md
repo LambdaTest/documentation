@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: Shortcut 
 description: TestMu AI helps you manage your bugs in Shortcut by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project on Shortcut.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to Shortcut
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest Shortcut integration
-  - integrate Shortcut with lambdatest
-  - create issue in Shortcut from lambdatest
-  - Shortcut integration with lambdatest
-  - create Shortcut issues from lambdatest
+  - testmu ai Shortcut integration
+  - integrate Shortcut with testmu ai
+  - create issue in Shortcut from testmu ai
+  - Shortcut integration with testmu ai
+  - create Shortcut issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/shortcut-integration/

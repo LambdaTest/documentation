@@ -11,7 +11,7 @@ keywords:
     - virtual devices
     - mobile testing
     - mobile testing on HyperExecute
-    - mobile testing on lambdatest
+    - mobile testing on testmu ai
     - fast mobile testing
 
 url: https://www.lambdatest.com/support/docs/hyperexecute-integration-with-virtual-devices/

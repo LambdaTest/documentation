@@ -6,12 +6,12 @@ sidebar_label: Supported Browsers & Operating Systems
 description: All the browsers and browser version that are supported by TestMu AI Automation with respect to particular operating systems.
 keywords:
   - supported browsers
-  - lambdatest browsers supported
+  - testmu ai browsers supported
   - chrome
   - firefox
   - edge
   - safari
-  - lambdatest supported browsers
+  - testmu ai supported browsers
   - selenium supported browsers
 
 url: https://www.lambdatest.com/support/docs/supported-browsers-and-operating-systems-for-the-web-interface/

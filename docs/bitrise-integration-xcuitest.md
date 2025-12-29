@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Bitrise - XCUITest
 description: Integrate TestMu AI with Bitrise CI/CD Step [XCUITest] to run your XCUITest workflow successfully on TestMu AI.
 keywords:
-- lambdatest bitrise 
-- bitrise with lambdatest
+- testmu ai bitrise 
+- bitrise with testmu ai
 - manual app testing bitrise
 - xcui testing with bitrise ci
 - xcuitest bitrise

@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Miro
 description: TestMu AI’s integration with Miro will help you to log bugs to boards on Miro. You can easily find and report any cross browser compatibility issues to your team instantly.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - miro whiteboard
   - free cross browser testing tool
   - miro integration

@@ -14,7 +14,7 @@ keywords:
  - automation testing framework
  - test automation frameworks
  - selenium frameworks
- - LambdaTest HyperExecute
+ - TestMu AI HyperExecute
  - Super fast Selenium grid
 image: /assets/images/og-images/selenium-grid-supported-languages-frameworks.jpg
 url: https://www.lambdatest.com/support/docs/selenium-supported-languages-and-frameworks/

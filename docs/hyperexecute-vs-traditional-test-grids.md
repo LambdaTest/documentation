@@ -5,11 +5,11 @@ hide_title: false
 sidebar_label: HyperExecute vs Traditional Test Grids
 description: Discover the nuances in testing efficiency with HyperExecute vs. Traditional Test Grids Explore the comparison and choose the right approach for optimized testing. 
 keywords:
-  - lambdatest automation
-  - lambdatest hyperexecute
-  - lambdatest hypterest tutorial
+  - testmu ai automation
+  - testmu ai hyperexecute
+  - testmu ai hypterest tutorial
   - hyperexecute getting started
-  - lambdatest hyperexecute getting started
+  - testmu ai hyperexecute getting started
   - hyperexecute automation testing
   - hyperexecute vs traditional grids
 image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg

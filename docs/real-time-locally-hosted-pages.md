@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Locally Hosted Pages
 description: Securely test your locally hosted websites and application using the real time testing feature of TestMu AI with over 3000+ browsers and different OS.
 keywords:
-  - real time testing in lambdatest
-  - lambdatest real time testing feature
+  - real time testing in testmu ai
+  - testmu ai real time testing feature
   - online real time testing
   - free cross browser testing tool
   - cross browser compatibility testing tool

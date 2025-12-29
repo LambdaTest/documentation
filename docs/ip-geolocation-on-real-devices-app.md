@@ -6,12 +6,12 @@ description: Test your app and website across real devices with TestMu AI.
 
 keywords:
   - change geolocation on real device
-  - LambdaTest geolocation testing
+  - TestMu AI geolocation testing
   - simulate GPS location Android
   - real device location testing
   - simulate GPS location iOS
   - test app in different countries
-  - framework on lambdatest
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices

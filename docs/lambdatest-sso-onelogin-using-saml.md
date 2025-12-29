@@ -6,11 +6,11 @@ sidebar_label: OneLogin
 description: Now integrate your OneLogin user directory with your TestMu AI organization subscription through an IDP, so that your team could leverage the SSO setup.
 keywords:
   - sso
-  - lambdatest sso
+  - testmu ai sso
   - onelogin
   - saml
-  - lambdatest onelogin integration
-  - lambdatest onelogin sso
+  - testmu ai onelogin integration
+  - testmu ai onelogin sso
 url: https://www.lambdatest.com/support/docs/lambdatest-sso-onelogin-using-saml/
 site_name: LambdaTest
 slug: lambdatest-sso-onelogin-using-saml/

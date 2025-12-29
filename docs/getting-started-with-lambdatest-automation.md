@@ -4,15 +4,15 @@ title: Selenium Automation Testing Using TestMu AI
 sidebar_label: Selenium Testing
 description: Guide to getting started with TestMu AI online Selenium automation grid. Run Selenium scripts on an online Selenium automation grid of 3000+ browsers. Run test on Java, Javascript, and 7 other programming language.
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
   - selenium grid online
   - online selenium automation
   - selenium automation grid online
-  - lambdatest selenium automation grid
+  - testmu ai selenium automation grid
   - selenium tutorial
   - selenium getting started
-  - lambdatest getting started
+  - testmu ai getting started
 image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg
 url: https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/
 site_name: LambdaTest

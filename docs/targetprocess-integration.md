@@ -6,9 +6,9 @@ sidebar_label: TargetProcess
 description: Using TestMu AI integration with TargetProcess, you&#039;ll be able to log bugs over your project in TargetProcess from TestMu AI in just a single click.
 keywords:
   - targetprocess integration
-  - lambdatest integration
-  - targetprocess lambdatest
-  - targetprocess integration with lambdatest
+  - testmu ai integration
+  - targetprocess testmu ai
+  - targetprocess integration with testmu ai
   - mark bugs
   - cross browser testing
   - browser compatibility testing

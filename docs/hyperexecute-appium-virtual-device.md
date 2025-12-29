@@ -6,8 +6,8 @@ description: Execute Appium tests on virtual devices using HyperExecute with Tes
 keywords:
   - appium
   - java
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - virtual devices

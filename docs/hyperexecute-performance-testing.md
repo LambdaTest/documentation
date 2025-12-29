@@ -7,7 +7,7 @@ description: Prevent app launch disaster! Test app performance under load with H
 keywords:
   - hyperexecute performance testing
   - hyperexecute
-  - lambdatest
+  - testmu ai
   - jmeter
   - k6
   - browser

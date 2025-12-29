@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Gitlab CI
 description: Integrate GitLab CI seamlessly with TestMu AI for efficient and automated testing, supported by step-by-step guides and detailed support doc.
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with ci/cd tools
+  - testmu ai integrations
+  - testmu ai integrations with ci/cd tools
   - ci/cd tools
   - continuous integration,continuous delivery
   - continuous integration tools

@@ -7,7 +7,7 @@ keywords:
   - SmartUI Baseline
   - Visual Regression Baseline
   - Baseline Management
-  - LambdaTest SmartUI
+  - TestMu AI SmartUI
   - Visual Testing
   - Automatic Baseline
 url: https://www.lambdatest.com/support/docs/smartui-baseline-management/

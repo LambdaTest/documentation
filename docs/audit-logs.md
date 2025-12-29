@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Audit Logs
 description: Guide to Access, Filter and Download Audit Logs
 keywords:
-  - lambdatest automation
-  - lambdatest hyperexecute
+  - testmu ai automation
+  - testmu ai hyperexecute
   - hyperexecute automation grid
   - hyperexecute online
   - online hyperexecute

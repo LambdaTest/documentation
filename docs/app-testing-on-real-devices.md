@@ -6,7 +6,7 @@ sidebar_label: Getting Started
 description: Test mobile apps on 3000+ real devices with TestMu AI. Upload, choose devices, regions, and OS versions, and start seamless manual app testing today!!
 keywords:
 - real device app testing 
-- lambdatest real device app testing 
+- testmu ai real device app testing 
 url: https://www.lambdatest.com/support/docs/app-testing-on-real-devices/
 site_name: LambdaTest
 slug: app-testing-on-real-devices/

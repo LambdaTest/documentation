@@ -6,9 +6,9 @@ sidebar_label: Local Testing For MacOS
 description: This documentation will help you perform Localhost testing on macOS via TestMu AI tunnel .Test private server URLs, locally hosted web-apps and websites on 3000+ real browsers on secure TestMu AI cloud infrastructure.
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - lambdatest tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - testmu ai tunnel
   - local app testing for MacOS
 image: /assets/images/og-images/local-testing-for-macos-online.jpg
 url: https://www.lambdatest.com/support/docs/local-testing-macos/

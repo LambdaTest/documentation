@@ -5,15 +5,15 @@ hide_title: true
 sidebar_label: Account Management
 description: Guide tpage to access the different components related to Account Management like Managing Subscriptions, Work on Service Accounts, Concurrency distribution in Sub-Organization, Support Access, Team Management, Multi Factor Authentication, hopw to Delete your Account, Group Management, Check Audit logs.
 keywords:
-  - lambdatest automation
-  - lambdatest hyperexecute
+  - testmu ai automation
+  - testmu ai hyperexecute
   - hyperexecute automation grid
   - hyperexecute online
   - online hyperexecute
   - hyperexecute automation grid online
-  - lambdatest hypterest tutorial
+  - testmu ai hypterest tutorial
   - hyperexecute getting started
-  - lambdatest hyperexecute getting started
+  - testmu ai hyperexecute getting started
   - hyperexecute automation testing
   - hyperexecute matrix execution
   - hyperexecute autosplit execution

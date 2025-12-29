@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Configure Accessibility DevTools
 description: Customize your testing experience with TestMu AI Accessibility DevTools' comprehensive settings to meet your specific needs and preferences.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

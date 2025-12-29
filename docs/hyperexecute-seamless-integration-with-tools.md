@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Seamless Integration for Enhanced Test Orchestration
 description: Learn how to integrate your tools with HyperExecute
 keywords:
-  - LambdaTest HyperExecute
+  - TestMu AI HyperExecute
   - HyperExecute Integration
   - Azure Test Plan
   - Katalon

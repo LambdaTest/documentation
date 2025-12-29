@@ -5,16 +5,16 @@ hide_title: false
 sidebar_label: BugHerd 
 description: TestMu AI helps you manage your bugs in BugHerd by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project on BugHerd.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to clubhouse
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest bugherd integration
-  - integrate bugherd with lambdatest
-  - create issue in bugherd from lambdatest
-  - bugherd integration with lambdatest
-  - create bugherd issues from lambdatest
+  - testmu ai bugherd integration
+  - integrate bugherd with testmu ai
+  - create issue in bugherd from testmu ai
+  - bugherd integration with testmu ai
+  - create bugherd issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/bugherd-integration/

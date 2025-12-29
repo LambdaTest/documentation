@@ -5,15 +5,15 @@ hide_title: false
 sidebar_label: HyperExecute 
 description: Get started with HyperExecute on TestMu AI for faster web automation tests using Matrix and Auto-Split strategies. Test with Selenium languages at high speeds.
 keywords:
-  - lambdatest automation
-  - lambdatest hyperexecute
+  - testmu ai automation
+  - testmu ai hyperexecute
   - hyperexecute automation grid
   - hyperexecute online
   - online hyperexecute
   - hyperexecute automation grid online
-  - lambdatest hypterest tutorial
+  - testmu ai hypterest tutorial
   - hyperexecute getting started
-  - lambdatest hyperexecute getting started
+  - testmu ai hyperexecute getting started
   - hyperexecute automation testing
   - hyperexecute matrix execution
   - hyperexecute autosplit execution

@@ -6,9 +6,9 @@ sidebar_label: Zephyr Scale
 description: Integrate Zephyr Scale with TestMu AI to perform automated browser testing, and view test results directly from the TestMu AI platform to your Zephyr Scale instance.
 
 keywords:
-  - lambdatest zephyr scale integration
-  - integrate lambdatest zephyr scale
-  - lambdatest integration with zephyr scale
+  - testmu ai zephyr scale integration
+  - integrate testmu ai zephyr scale
+  - testmu ai integration with zephyr scale
 
 url: https://www.lambdatest.com/support/docs/zephyr-scale-integration
 site_name: LambdaTest

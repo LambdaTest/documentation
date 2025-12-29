@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Matrix Multiplexing Strategy
 description: Discover the power of HyperExecute's Matrix Multiplexing Strategy for efficient cross-browser testing. Optimize test combinations for faster results..
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-matrix-multiplexing-strategy/
 site_name: LambdaTest
 slug: hyperexecute-matrix-multiplexing-strategy/

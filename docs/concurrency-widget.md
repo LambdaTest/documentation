@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: Concurrency Widget
 description: Learn how your TestMu AI concurrency works and how to understand the concurrency widget that shows your parallel test usage across different plans and test types.
 keywords:
-  - lambdatest concurrency
+  - testmu ai concurrency
   - parallel tests
   - concurrency widget
   - test plans

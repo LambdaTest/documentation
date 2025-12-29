@@ -2,17 +2,17 @@
 id: load-balancing-in-lambda-tunnel
 title: How To Use Load Balancing In TestMu AI Tunnel
 hide_title: true
-sidebar_label: Load Balancing In LambdaTest Tunnel
+sidebar_label: Load Balancing In TestMu AI Tunnel
 description: Load Balancing feature allows you to perform parallel testing of your local or private website on 3000+ TestMu AI's real browsers through TestMu AI Tunnel.
 keywords:
 - load balancing
 - what is load balancing
-- lambdatest tunnel load balancing
-- load balancing in lambdatest
+- testmu ai tunnel load balancing
+- load balancing in testmu ai
 - tunnel load balancing
-- load balanced lambdatest tunnel
+- load balanced testmu ai tunnel
 - load balanced tunnel
-- lambdatest load balancing
+- testmu ai load balancing
 url: https://www.lambdatest.com/support/docs/load-balancing-in-lambda-tunnel/
 site_name: LambdaTest
 slug: load-balancing-in-lambda-tunnel/

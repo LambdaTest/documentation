@@ -5,12 +5,12 @@ hide_title: true
 sidebar_label: Quick Guide To Run Node.js
 description: Guide to running Node.js and Selenium test scripts on TestMu AI Selenium automation grid online. Automated cross browser testing online using Selenium and Node.js on 3000+ browsers on cloud.
 keywords:
-  - lambdatest automation using Node.js
+  - testmu ai automation using Node.js
   - Node.js and Selenium automation
-  - Node.js documentation lambdatest
+  - Node.js documentation testmu ai
   - node.js and selenium tutorial
-  - node.js and lambdatest tutorial
-  - node.js on lambdatest selenium grid
+  - node.js and testmu ai tutorial
+  - node.js on testmu ai selenium grid
   - getting started with node.js and selenium
   - selenium testing using node.js
   - node.js selenium scripts

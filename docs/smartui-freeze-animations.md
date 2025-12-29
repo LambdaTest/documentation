@@ -4,7 +4,7 @@ title: Capture Screenshots by Freezing Animations
 sidebar_label: Freezing Animations
 description: SmartUI can now capture the screenshots of your animations running in the browser by freezing it.
 keywords:
-  - lambdatest
+  - testmu ai
   - smart ui
   - freeze animations
   - storybook

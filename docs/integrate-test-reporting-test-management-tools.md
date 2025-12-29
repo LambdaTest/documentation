@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Test Reporting & Test Management Tools
 description: Using the integration with your favourite test reporting and test management tools, you can view and analyze the results of your automated browser testing on 3000+ real browsers and operating systems, executed over TestMu AI.
 keywords:
-  - LambdaTest integration
-  - lambdatest integration with test management tools
-  - lambdatest selenium grid integration
+  - TestMu AI integration
+  - testmu ai integration with test management tools
+  - testmu ai selenium grid integration
 url: https://www.lambdatest.com/support/docs/integrate-test-reporting-test-management-tools
 site_name: LambdaTest
 slug: integrate-test-reporting-test-management-tools/

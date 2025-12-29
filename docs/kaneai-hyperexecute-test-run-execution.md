@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Execute Test Runs on HyperExecute
 description: Learn how to execute KaneAI-generated test runs directly on HyperExecute with this step-by-step guide for efficient and rapid test execution.
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai guided walkthrough
   - kane ai test runs
   - hyperexecute

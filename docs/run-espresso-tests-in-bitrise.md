@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Bitrise - Espresso
 description: Integrate TestMu AI with Bitrise CI to get started with Espresso test automation across a wide range of real Android devices.
 keywords:
-- lambdatest bitrise 
-- bitrise with lambdatest
+- testmu ai bitrise 
+- bitrise with testmu ai
 - manual app testing bitrise
 - espresso testing with bitrise ci
 - espresso bitrise

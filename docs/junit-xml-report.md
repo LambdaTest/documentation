@@ -6,7 +6,7 @@ sidebar_label: JUnit XML
 description: Generate a consolidated JUnit XML report with HyperExecute. Track test results, including pass/fail statuses, with easy-to-follow configuration steps
 keywords:
   - junit xml reports
-  - report junit xml lambdatest 
+  - report junit xml testmu ai 
   
 url: https://www.lambdatest.com/support/docs/junit-xml-report/
 site_name: LambdaTest

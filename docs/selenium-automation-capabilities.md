@@ -8,13 +8,13 @@ keywords:
 - cross browser testing
 - selenium capabilities generator
 - selenium desired capabilities
-- lambdatest selenium grid capabilities
-- lambdatest automation capabilities generator
+- testmu ai selenium grid capabilities
+- testmu ai automation capabilities generator
 - selenium capability configuration
 - selenium automation testing
 - selenium automation grid online
 - configure selenium tests with desired capabilities
-- selenium webdriver capabilities for running tests on lambdatest
+- selenium webdriver capabilities for running tests on testmu ai
 image: /assets/images/og-images/Selenium-Capabilities.jpg
 url: https://www.lambdatest.com/support/docs/selenium-automation-capabilities/
 site_name: LambdaTest

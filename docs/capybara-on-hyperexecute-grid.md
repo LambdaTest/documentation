@@ -11,8 +11,8 @@ keywords:
   - selenium webdriver Capybara
   - selenium Capybara testing tutorial
   - Capybara Selenium framework
-  - lambdatest Capybara
-  - frameworks on lambdatest
+  - testmu ai Capybara
+  - frameworks on testmu ai
   - hyperexecute
   - hyperexecute Capybara testing
   - hyperexecute Capybara testing

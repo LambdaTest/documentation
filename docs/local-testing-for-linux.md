@@ -6,9 +6,9 @@ sidebar_label: Legacy Binary For Linux
 description: This TestMu AI documentation will help you perform Localhost testing of your private web app or websites on your Linux machine through TestMu AI tunnel.
 keywords:
   - local app testing
-  - lambdatest local testing
-  - lambdatest local tunnel
-  - lambdatest tunnel
+  - testmu ai local testing
+  - testmu ai local tunnel
+  - testmu ai tunnel
   - local app testing for Linux
 url: https://www.lambdatest.com/support/docs/local-testing-for-linux/
 site_name: LambdaTest

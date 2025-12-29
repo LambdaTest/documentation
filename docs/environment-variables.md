@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Set Up Environment Variables
 description: Find out how to get access to TestMu AI authentication credentials, fetching them from the Automation tab in your TestMu AI profile, and configuring them on Mac OSX/Linux, Windows systems.
 keywords:
-- LambdaTest automation
-- LambdaTest environment variables
-- LambdaTest setup
+- TestMu AI automation
+- TestMu AI environment variables
+- TestMu AI setup
 url: https://www.lambdatest.com/support/docs/using-environment-variables-for-authentication-credentials/
 site_name: LambdaTest
 slug: using-environment-variables-for-authentication-credentials/

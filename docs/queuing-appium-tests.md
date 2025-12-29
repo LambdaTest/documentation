@@ -7,7 +7,7 @@ description: To avoid overuse of TestMu AI , we have put a capacity limit on the
 keywords:
   - appium test session queuing
   - queuing
-  - lambdatest queuing
+  - testmu ai queuing
 url: https://www.lambdatest.com/support/docs/queuing-appium-tests/
 site_name: LambdaTest
 slug: queuing-appium-tests/

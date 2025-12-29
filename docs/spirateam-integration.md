@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: SpiraTeam
 description: TestMu AI provides integrations with SpiraTeam to help you log bugs directly from the middle of your test session on TestMu AI to SpiraTeam platform.
 keywords:
-  - LambdaTest integrations
+  - TestMu AI integrations
   - Push issues to SpiraTeam
-  - LambdaTest SpiraTeam integration
+  - TestMu AI SpiraTeam integration
 image: /assets/images/og-images/default-user-image.png
 url: https://www.lambdatest.com/support/docs/spirateam-integration/
 site_name: LambdaTest

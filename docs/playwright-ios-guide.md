@@ -8,8 +8,8 @@ keywords:
   - playwright testing
   - playwright ios
   - playwright mobile testing
-  - playwright testing on lambdatest
-  - playwright testing lambdatest
+  - playwright testing on testmu ai
+  - playwright testing testmu ai
   - playwright real devices
 
 url: https://www.lambdatest.com/support/docs/playwright-ios-device/

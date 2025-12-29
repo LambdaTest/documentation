@@ -4,15 +4,15 @@ title: Group and Filter Your Test Builds Using Build Tags
 sidebar_label: Group/Filter Tests Using Build Tags
 description: Now group your tests and organize them efficiently with the help of Build Tags on TestMu AI. Create one or more build tags, and filter them with just a click.
 keywords:
-    - lambdatest automation
+    - testmu ai automation
     - selenium automation grid
     - selenium grid online
     - online selenium automation
     - selenium automation grid online
-    - lambdatest selenium automation grid
+    - testmu ai selenium automation grid
     - selenium tutorial
     - selenium getting started
-    - lambdatest getting started
+    - testmu ai getting started
     - filter tests
     - Build tags
     - group tests

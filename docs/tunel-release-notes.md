@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Release Notes
 description: Get the latest release notes for TestMu AI Tunnel, detailing the latest features, fixes, and improvements for secure and seamless testing.
 keywords:
-  - LambdaTest Tunnel
-  - LambdaTest Tunnel help
-  - LambdaTest Tunnel documentation
+  - TestMu AI Tunnel
+  - TestMu AI Tunnel help
+  - TestMu AI Tunnel documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/tunnel-release-notes/
 site_name: LambdaTest

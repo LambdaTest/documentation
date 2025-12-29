@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: LocalStack
 description: LocalStack is a tool that acts as a drop-in replacement for AWS on your local machine, understand the how LocalStack integration with TestMu AI will help you.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to localstack
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest localstack integration
-  - integrate localstack with lambdatest
-  - create issue in localstack from lambdatest
-  - localstack integration with lambdatest
-  - create localstack issues from lambdatest
+  - testmu ai localstack integration
+  - integrate localstack with testmu ai
+  - create issue in localstack from testmu ai
+  - localstack integration with testmu ai
+  - create localstack issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/localstack-integration-with-lambdatest/

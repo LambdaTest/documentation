@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: IP Geolocation
 description: Selenium Geolocation capabilities documentation provides you the insights about the countries and region with their timezone TestMu AI supports so that you can test your application in that particular timezone.
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
   - selenium geoloction
   - timezone

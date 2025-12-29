@@ -2,10 +2,10 @@
 id: white-listing-proxy-with-lambdatest
 title: White-listing Proxy With TestMu AI
 hide_title: true
-sidebar_label: White Listing Proxy With LambdaTest
+sidebar_label: White Listing Proxy With TestMu AI
 description: This documentation will help you learn how you can white list TestMu AI domain if you are accessing the internet through a firewall-protected network.
 keywords:
- - White-listing Proxy With LambdaTest
+ - White-listing Proxy With TestMu AI
 url: https://www.lambdatest.com/support/docs/white-listing-proxy-with-lambdatest/
 site_name: LambdaTest
 slug: white-listing-proxy-with-lambdatest/

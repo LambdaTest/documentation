@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Features FAQs
 description: Explore HyperExecute Feature FAQs | Get comprehensive answers and insights to enhance your understanding of TestMu AI's HyperExecute feature. Maximize efficiency and effectiveness in your testing processes.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/hyperexecute-feature-faqs/
 site_name: LambdaTest

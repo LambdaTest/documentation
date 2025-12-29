@@ -5,11 +5,11 @@ hide_title: false
 sidebar_label: Uploading app via Firebase
 description: Discover how to test an app uploaded on Firebase seamlessly through Appium at TestMu AI! Our guide simplifies your Appium Firebase app upload process for efficient testing!
 keywords:
-  - lambdatest automation
-  - lambdatest appium
-  - lambdatest real device
+  - testmu ai automation
+  - testmu ai appium
+  - testmu ai real device
   - firebase
-  - lambdatest firebase
+  - testmu ai firebase
   - firebase app upload
   - app automation
 image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg

@@ -9,8 +9,8 @@ keywords:
   - playwright e2e testing 
   - playwright mobile testing
   - playwright testing tool
-  - playwright testing on lambdatest
-  - playwright testing lambdatest
+  - playwright testing on testmu ai
+  - playwright testing testmu ai
 
 url: https://www.lambdatest.com/support/docs/playwright-test-execution-setup/
 site_name: LambdaTest

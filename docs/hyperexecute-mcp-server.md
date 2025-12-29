@@ -7,7 +7,7 @@ description: HyperExecute MCP Server is an AI-native test orchestration platform
 keywords:
   - hyperexecute performance testing
   - hyperexecute
-  - lambdatest
+  - testmu ai
   - MCP
   - MCP server
 url: https://www.lambdatest.com/support/docs/hyperexecute-mcp-server/

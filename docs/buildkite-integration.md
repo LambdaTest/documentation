@@ -5,11 +5,11 @@ hide_title: true
 sidebar_label: Buildkite
 description: TestMu AI offers continuous integration with Buildkite to ease your automated cross browser testing process through their Selenium grid consisting more than 3000+ browsers.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - continuous integration
   - buildkite
   - buildkite integration
-  - lambdatest buildkite integration
+  - testmu ai buildkite integration
 url: https://www.lambdatest.com/support/docs/buildkite-integration-with-lambdatest/
 site_name: LambdaTest
 slug: buildkite-integration-with-lambdatest/

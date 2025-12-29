@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Team Management
 description: This documentation will help you create and manage teams on TestMu AI.
 keywords:
-- teams management lambdatest
+- teams management testmu ai
 - manage teams
 url: https://www.lambdatest.com/support/docs/team-management/
 site_name: LambdaTest

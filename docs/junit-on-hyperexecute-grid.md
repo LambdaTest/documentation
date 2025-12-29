@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver JUnit
   - selenium JUnit testing tutorial
   - JUnit Java Selenium framework
-  - lambdatest JUnit
-  - frameworks on lambdatest
+  - testmu ai JUnit
+  - frameworks on testmu ai
   - hyperexecute
   - hyperexecute JUnit testing
   - hyperexecute JUnit testing

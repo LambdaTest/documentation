@@ -8,8 +8,8 @@ keywords:
   - app test automation
   - espresso
   - filter
-  - lambdatest
-  - framework on lambdatest
+  - testmu ai
+  - framework on testmu ai
   - testing in espresso
   - espresso testing
   - real devices

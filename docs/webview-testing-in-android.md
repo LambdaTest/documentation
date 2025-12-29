@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: WebView Testing
 description: TestMu AI now allows you to perform your WebView Testing in Real-time over 3000+ combinations of browsers, operating systems, and mobile devices.
 keywords:
-    - Real time testing in LambdaTest
-    - LambdaTest real time testing feature
+    - Real time testing in TestMu AI
+    - TestMu AI real time testing feature
     - online real time testing
     - Free Cross Browser Testing Tool
     - cross browser compatibility testing tool

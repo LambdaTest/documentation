@@ -6,8 +6,8 @@ description: Now you can run your automation scripts using Selenium with Behave 
 keywords:
   - appium
   - java
-  - lambdatest java
-  - framework on lambdatest
+  - testmu ai java
+  - framework on testmu ai
   - testng
   - app testing
   - real devices

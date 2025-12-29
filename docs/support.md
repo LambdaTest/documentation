@@ -6,9 +6,9 @@ description: Discover answers, explore products, and connect with our team for a
 hide_table_of_contents: true
 hide_title: true
 keywords:
-  - LambdaTest free cross browser testing tool support
-  - LambdaTest help
-  - LambdaTest documentation
+  - TestMu AI free cross browser testing tool support
+  - TestMu AI help
+  - TestMu AI documentation
   - cross platform website testing tool
   - browser compatibility testing
   - responsive testing online

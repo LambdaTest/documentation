@@ -9,7 +9,7 @@ keywords:
   - smart heal
   - locator healing
   - mobile automation
-  - lambdatest automation
+  - testmu ai automation
 url: https://www.lambdatest.com/support/docs/smart-heal-appium/
 site_name: LambdaTest
 slug: smart-heal-appium/

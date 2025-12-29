@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Sikuli
 description:  Automate the visual testing of any software by integrating Sikuli with HyperExecute.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - sikuli
   - Integrations
   - Products

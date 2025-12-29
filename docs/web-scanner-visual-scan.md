@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Starting a Visual UI Scan
 description: Learn how to configure a Visual UI scan, including default settings for browsers and resolutions, and advanced options using a SmartUI JSON config.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - visual ui scan
   - smartui config

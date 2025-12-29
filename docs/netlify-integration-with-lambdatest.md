@@ -5,10 +5,10 @@ hide_title: true
 sidebar_label: Netlify
 description: Simplify DevOps! Run blazing-fast Cypress tests on TestMu AI directly from your Netlify builds.
 keywords:
-  - lambdatest integrations
-  - lambdatest netlify integration
-  - integrate netlify with lambdatest
-  - netlify integration with lambdatest
+  - testmu ai integrations
+  - testmu ai netlify integration
+  - integrate netlify with testmu ai
+  - netlify integration with testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/netlify-integration-with-lambdatest/

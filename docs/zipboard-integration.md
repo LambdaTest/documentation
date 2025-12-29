@@ -5,13 +5,13 @@ hide_title: false
 sidebar_label: zipBoard 
 description: This document will help you integrate TestMu AI with zipBoard. That way, you can log bugs to your zipBoard project in a single click as you perform cross browser testing with TestMu AI.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to zipboard
   - check browser compatibility online
-  - lambdatest zipboard integration
+  - testmu ai zipboard integration
   - cross browser testing tool
-  - zipboard integration with lambdatest
-  - create zipboard issues from lambdatest
+  - zipboard integration with testmu ai
+  - create zipboard issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/zipboard-integration/

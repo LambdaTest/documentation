@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: Use Cases
 description: Discover the HyperExecute Use cases to understand the real world implementations of it.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - Use cases
 url: https://www.lambdatest.com/support/docs/hyperexecute-use-cases/
 site_name: LambdaTest

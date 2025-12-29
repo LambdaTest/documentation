@@ -6,7 +6,7 @@ sidebar_label: OIDC Integration
 description: Integrate your identity provider with your TestMu AI organization through OIDC (OpenID Connect) for seamless single sign-on authentication.
 keywords:
   - sso
-  - lambdatest sso
+  - testmu ai sso
   - oidc
   - openid connect
   - identity provider

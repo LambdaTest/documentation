@@ -4,11 +4,11 @@ title: Applitools Integration With TestMu AI For Cypress
 sidebar_label: Applitools Integration For Cypress
 description: TestMu AI integration with Applitools will allow you perform automated cross browser testing on more than 2000 real browsers running on real operating systems, hosted on a cloud platform. You can execute your Cypress automation test scripts on TestMu AI directly from your Applitools instance.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - applitools for cypress
-  - lambdatest cypress
+  - testmu ai cypress
   - cypress automation
-  - lambdatest integration with applitools
+  - testmu ai integration with applitools
   - applitools integration
   - cross browser testing
   - free cross browser testing tool

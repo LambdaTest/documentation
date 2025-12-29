@@ -5,15 +5,15 @@ hide_title: true
 sidebar_label: Manage Subscriptions
 description: Learn how to manage your subscriptions by successfully upgrading to a new plan, switching between plans, and switching from Monthly to Annual plan on TestMu AI.
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - Selenium automation grid
   - Selenium grid online
   - Online Selenium automation
   - Selenium automation grid online
-  - lambdatest selenium automation grid
+  - testmu ai selenium automation grid
   - Selenium tutorial
   - Selenium getting started
-  - Switch plan lambdatest
+  - Switch plan testmu ai
 url: https://www.lambdatest.com/support/docs/manage-subscriptions/
 site_name: LambdaTest
 slug: manage-subscriptions/

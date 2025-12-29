@@ -6,7 +6,7 @@ sidebar_label: Group Management
 description: This documentation will help you in creating the different groups and allot concurrency to those groups to perform test automation easily.
 keywords:
 - group-management-control
-- lambdatest
+- testmu ai
 url: https://www.lambdatest.com/support/docs/group-management/
 site_name: LambdaTest
 slug: group-management/

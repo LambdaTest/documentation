@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: AutoHeal using Hooks
 description: Learn how to use TestMu AI Auto Healing feature in your Selenium tests to avoid test flakiness and increase reliability of your test suites.
 keywords:
-- auto heal lambdatest
+- auto heal testmu ai
 - auto heal test flakiness restrictions
-- auto healing lambdatest
+- auto healing testmu ai
 url: https://www.lambdatest.com/support/docs/autoheal-with-hooks/
 site_name: LambdaTest
 slug: autoheal-with-hooks/

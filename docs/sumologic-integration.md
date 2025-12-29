@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Sumo Logic
 description: View your TestMu AI test results in a custom Sumo Logic dashboard. Gain deep insights into your automation scripts and identify gaps to ship quality products at light speed.
 keywords:
-  - lambdatest integrations
-  - lambdatest integration with sumo logic
+  - testmu ai integrations
+  - testmu ai integration with sumo logic
   - sumo logic integration 
 url: https://www.lambdatest.com/support/docs/sumo-logic-integration/
 site_name: LambdaTest

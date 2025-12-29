@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Playwright Auto Healing
 description: Learn how to use TestMu AI Auto Healing feature in your Playwright tests to avoid test flakiness and increase reliability of your test suites.
 keywords:
-  - auto heal lambdatest
+  - auto heal testmu ai
   - auto heal test flakiness restrictions
-  - auto healing lambdatest
+  - auto healing testmu ai
 url: https://www.lambdatest.com/support/docs/playwright-auto-healing/
 site_name: LambdaTest
 slug: playwright-auto-healing/

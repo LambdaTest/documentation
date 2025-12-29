@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Workflow Scanner
 description: Enhance website accessibility with Workflow Scan, a tool that records and analyzes real-time interactions to ensure easy navigation for users with disabilities.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

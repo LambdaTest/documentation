@@ -4,7 +4,7 @@ title: Handle Pages with Lazy Loading
 sidebar_label: Handle Lazy Loading
 description: Learn how to handle lazy-loaded content in SmartUI visual regression tests using scrolling techniques and waitForTimeout configuration.
 keywords:
-  - lambdatest
+  - testmu ai
   - smart ui
   - lazy loading
   - scroll

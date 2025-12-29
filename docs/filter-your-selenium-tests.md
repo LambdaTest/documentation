@@ -5,15 +5,15 @@ hide_title: true
 sidebar_label: Filtering Your Selenium Tests
 description: Guide to help you filter your tests on TestMu AI, a platform to perform cross-browser testing on a scalable, secure, and reliable online Selenium grid.
 keywords:
-    - LambdaTest automation
+    - TestMu AI automation
     - selenium automation grid
     - selenium grid online
     - online selenium automation
     - selenium automation grid online
-    - LambdaTest selenium automation grid
+    - TestMu AI selenium automation grid
     - selenium tutorial
     - Selenium getting started
-    - lambdatest getting started
+    - testmu ai getting started
     - filter tests
     - custom tags
     - group tests

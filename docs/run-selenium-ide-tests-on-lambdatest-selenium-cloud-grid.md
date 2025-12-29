@@ -7,10 +7,10 @@ description: Guide on how to run Selenium IDE tests with TestMu AI online Seleni
 keywords:
  - lamdatest
  - selenium ide
- - selenium ide lambdatest
+ - selenium ide testmu ai
  - selenium ide runner
  - side runner
- - side lambdatest
+ - side testmu ai
  - how to run test cases in selenium ide
  - how to run selenium ide tests from command line
  - selenium side runner

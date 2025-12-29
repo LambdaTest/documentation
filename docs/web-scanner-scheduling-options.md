@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Scheduling Options
 description: A guide to the scheduling options available in Web Scanner, including one-time Quick Scans, recurring scans, and how to manage scheduled jobs.
 keywords:
-  - lambdatest
+  - testmu ai
   - web scanner
   - schedule scan
   - recurring scan

@@ -5,11 +5,11 @@ hide_title: false
 sidebar_label: Key Features of HyperExecute
 description: Various key features of HyperExecute is mentioned in this document
 keywords:
-  - lambdatest automation
-  - lambdatest hyperexecute
-  - lambdatest hypterest tutorial
+  - testmu ai automation
+  - testmu ai hyperexecute
+  - testmu ai hypterest tutorial
   - hyperexecute getting started
-  - lambdatest hyperexecute getting started
+  - testmu ai hyperexecute getting started
   - hyperexecute automation testing
   - hyperexecute key features
 image: /assets/images/og-images/Getting-Started-with-Lambdatest-Automation.jpg

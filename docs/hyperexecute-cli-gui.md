@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: HyperExecute GUI App
 description: This documentation outlines the steps on how to trigger a job on hyperexecute using the underpass app - gui app for hyperexecute cli.
 keywords:
-  - LambdaTest
+  - TestMu AI
   - HyperExecute
-  - LambdaTest HyperExecute
+  - TestMu AI HyperExecute
   - CLI
   - HyperExecute-GUI
   - test execute

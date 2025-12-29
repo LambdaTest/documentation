@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label:  Cypress v10 
 description: Use TestMu AI Accessibility DevTools to detect and report accessibility issues with automation, following WCAG guidelines, in your cypress tests for version 10 and above
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Cypress

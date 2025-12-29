@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver Protractor
   - selenium Protractor testing tutorial
   - Protractor JavaScript Selenium framework
-  - lambdatest Protractor
-  - frameworks on lambdatest
+  - testmu ai Protractor
+  - frameworks on testmu ai
   - hyperexecute
   - hyperexecute Protractor testing
   - hyperexecute Protractor testing

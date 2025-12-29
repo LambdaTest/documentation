@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Test Muting
 description: Understand how to mute tests on scenario level in HyperExecute.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - Test Muting
   - Mute test cases
 url: https://www.lambdatest.com/support/docs/hyperexecute-test-muting/

@@ -5,16 +5,16 @@ hide_title: true
 sidebar_label: Webex Teams
 description: TestMu AI helps you manage your bugs in Webex Teams by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project in your Webex Teams Space.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to webex teams
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest webex teams integration
-  - integrate webex teams with lambdatest
-  - create issue in webex teams from lambdatest
-  - webex teams integration with lambdatest
-  - create webex teams issues from lambdatest
+  - testmu ai webex teams integration
+  - integrate webex teams with testmu ai
+  - create issue in webex teams from testmu ai
+  - webex teams integration with testmu ai
+  - create webex teams issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/webex-teams-integration/

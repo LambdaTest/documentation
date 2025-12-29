@@ -7,7 +7,7 @@ description: This document will help you understand how you can integrate your D
 keywords:
   - lamdatest
   - drone ci
-  - drone lambdatest
+  - drone testmu ai
   - selenium grid
   - drone ci gitlab integration
   - drone ci cd

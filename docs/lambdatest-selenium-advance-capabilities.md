@@ -2,12 +2,12 @@
 id: lambdatest-selenium-advance-capabilities
 title: TestMu AI Advanced Capabilities
 hide_title: false
-sidebar_label: LambdaTest Advanced Capabilities
+sidebar_label: TestMu AI Advanced Capabilities
 description: This document list down the advance TestMu AI 
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
-  - selenium advance lambdatest capbilities
+  - selenium advance testmu ai capbilities
 url: https://www.lambdatest.com/support/docs/lambdatest-selenium-advance-capabilities/
 site_name: LambdaTest
 slug: lambdatest-selenium-advance-capabilities/

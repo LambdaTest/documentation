@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Secrets
 description: Learn how to create, update and use custom secrets from the test manager and while executing your tests using the Kane AI
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai secrets
   - kaneai parameters
 url: https://www.lambdatest.com/support/docs/kane-ai-secrets/

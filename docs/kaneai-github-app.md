@@ -6,7 +6,7 @@ sidebar_label: KaneAI GitHub App Integration
 description: Step-by-step guide to install, configure, and use the TestMu AI Cloud GitHub App for automated AI-powered test case generation.
 keywords:
   - github app
-  - lambdatest integration
+  - testmu ai integration
   - AI test generation
   - PR automation
   - test management

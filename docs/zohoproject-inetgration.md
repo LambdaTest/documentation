@@ -5,13 +5,13 @@ hide_title: false
 sidebar_label: Zoho Project
 description: TestMu AI provides integration with Zoho Project to help you log bugs directly from your test session on TestMu AI to Zoho Projects.
 keywords:
-  - LambdaTest integrations
+  - TestMu AI integrations
   - Push issues to Zoho Project
-  - LambdaTest Zoho Project integration
+  - TestMu AI Zoho Project integration
   - bug tracking tools
   - project management tools
-  - integrate zoho project with lambdatest
-  - create issue in zoho project from lambdatest
+  - integrate zoho project with testmu ai
+  - create issue in zoho project from testmu ai
 image: /assets/images/og-images/default-user-image.png
 url: https://www.lambdatest.com/support/docs/zohoproject-integration/
 site_name: LambdaTest

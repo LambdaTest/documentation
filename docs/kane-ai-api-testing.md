@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: API Testing
 description: Learn how to test api via kane ai
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
 url: https://www.lambdatest.com/support/docs/kane-ai-api-testing/

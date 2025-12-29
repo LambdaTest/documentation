@@ -10,8 +10,8 @@ keywords:
   - microphone input
   - voice commands
   - audio recording
-  - lambdatest audio testing
-  - framework on lambdatest
+  - testmu ai audio testing
+  - framework on testmu ai
   - app testing appium
   - app testing
   - real devices

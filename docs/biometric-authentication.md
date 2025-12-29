@@ -10,8 +10,8 @@ keywords:
   - Biometric security
   - Biometric Authentication Testing
   - Barcode scanning
-  - lambdatest capture code
-  - framework on lambdatest
+  - testmu ai capture code
+  - framework on testmu ai
   - Facial recognition
   - app testing appium
   - app testing

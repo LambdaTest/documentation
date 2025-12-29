@@ -7,7 +7,7 @@ keywords:
   - Visual AI Agent
   - SmartUI AI
   - Intelligent Visual Testing
-  - LambdaTest SmartUI
+  - TestMu AI SmartUI
   - Visual Regression AI
 url: https://www.lambdatest.com/support/docs/smartui-visual-ai/
 site_name: LambdaTest

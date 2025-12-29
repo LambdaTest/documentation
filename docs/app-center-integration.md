@@ -8,9 +8,9 @@ keywords:
   - App Center
   - Microsoft App Center
   - VS App Center
-  - Configuring App Center on LambdaTest
-  - Auto upload apps on LambdaTest
-  - LambdaTest Cloud Platform
+  - Configuring App Center on TestMu AI
+  - Auto upload apps on TestMu AI
+  - TestMu AI Cloud Platform
 url: https://www.lambdatest.com/support/docs/app-center/
 site_name: LambdaTest
 slug: app-center/

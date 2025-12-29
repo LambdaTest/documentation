@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: Integrations With CI/CD Tools 
 description: TestMu AI offers integrations with numerous CI/CD tools to help you fast-track your robust delivery pipeline for pacing up your go-to-market launch. 
 keywords:
-    - lambdatest integrations
-    - lambdatest integrations with ci/cd tools
+    - testmu ai integrations
+    - testmu ai integrations with ci/cd tools
     - ci/cd tools
     - continuous integration
     - continuous delivery

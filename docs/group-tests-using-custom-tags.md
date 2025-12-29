@@ -5,15 +5,15 @@ hide_title: true
 sidebar_label: Group Tests Using Custom Tags
 description: Now group your tests and organize them efficiently with the help of Custom Tags. TestMu AI allows you to create custom tags and filter them with a click.
 keywords:
-    - LambdaTest automation
+    - TestMu AI automation
     - selenium automation grid
     - selenium grid online
     - online selenium automation
     - selenium automation grid online
-    - LambdaTest selenium automation grid
+    - TestMu AI selenium automation grid
     - selenium tutorial
     - Selenium getting started
-    - lambdatest getting started
+    - testmu ai getting started
     - filter tests
     - custom tags
     - group tests

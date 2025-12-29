@@ -4,7 +4,7 @@ title: Native App Accessibility Automation
 sidebar_label: Automation
 description: Detect and report accessibility issues automatically using TestMu AI Accessibility Native App Automationv, aligned with WCAG guidelines.
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - Automation

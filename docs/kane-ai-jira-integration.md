@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Jira Integration
 description: Learn how to integrate your jira tickets with KaneAI and test planner using Atalssian Marketplace
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai scroll elements
   - kaneai sidebar scroll
 url: https://www.lambdatest.com/support/docs/kane-ai-jira-integration/

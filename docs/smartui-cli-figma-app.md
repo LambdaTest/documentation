@@ -8,7 +8,7 @@ keywords:
   - Mobile App Visual Testing
   - Figma to App Comparison
   - SmartUI CLI
-  - LambdaTest Mobile
+  - TestMu AI Mobile
   - Design to Production Validation
 url: https://www.lambdatest.com/support/docs/smartui-cli/
 slug: smartui-cli-figma-app/

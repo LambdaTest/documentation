@@ -5,9 +5,9 @@ hide_title: false
 sidebar_label: GitHub App
 description:  GitHub App Integration Support for HyperExecute 
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - GitHub App
   - Integrations
   - Products

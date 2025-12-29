@@ -7,7 +7,7 @@ description: Run your Cypress automation scripts across different screen resolut
 keywords:
   - cypress screen resolution test
   - test on different screen resolution cypress
-  - lambdatest cypress
+  - testmu ai cypress
 url: https://www.lambdatest.com/support/docs/screen-resolution-testing-with-cypress/
 site_name: LambdaTest
 slug: screen-resolution-testing-with-cypress/

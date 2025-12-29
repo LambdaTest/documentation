@@ -4,7 +4,7 @@ title: Group Folder Redirect for iOS Apps in App Live
 sidebar_label: Group Folder Redirect
 description: Enable Group Folder Redirect support for iOS apps on TestMu AI Real Devices.
 keywords:
-  - lambdatest real devices
+  - testmu ai real devices
   - ios app live
   - group folder redirect
   - ios file system testing

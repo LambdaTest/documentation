@@ -12,8 +12,8 @@ keywords:
   - selenium webdriver WebdriverIO
   - selenium WebdriverIO testing tutorial
   - WebdriverIO JavaScript Selenium framework
-  - lambdatest WebdriverIO
-  - frameworks on lambdatest
+  - testmu ai WebdriverIO
+  - frameworks on testmu ai
   - hyperexecute
   - hyperexecute WebdriverIO testing
   - hyperexecute WebdriverIO testing

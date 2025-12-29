@@ -6,7 +6,7 @@ sidebar_label: HTTP/2 Support
 description: Learn how TestMu AI Tunnel supports HTTP/2 for modern, high-performance web application testing.
 keywords:
   - http2
-  - lambdatest tunnel
+  - testmu ai tunnel
   - performance testing
   - web protocol
   - automatic proxy

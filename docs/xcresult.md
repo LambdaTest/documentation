@@ -8,7 +8,7 @@ keywords:
   - xcui result bundle
   - xcuitest report
   - xcuitest logs
-  - lambdatest xcuitest
+  - testmu ai xcuitest
   - xcui xcresult
   - app testing
   - real devices

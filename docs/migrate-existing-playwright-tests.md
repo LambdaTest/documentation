@@ -9,9 +9,9 @@ keywords:
   - playwright e2e testing 
   - playwright mobile testing
   - playwright testing tool
-  - playwright testing on lambdatest
-  - playwright testing lambdatest
-  - migrate playwright tests on lambdatest
+  - playwright testing on testmu ai
+  - playwright testing testmu ai
+  - migrate playwright tests on testmu ai
 
 url: https://www.lambdatest.com/support/docs/migrate-existing-playwright-tests/
 site_name: LambdaTest

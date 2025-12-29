@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Adding Test Metadata
 description: The customData capability allows users to associate additional metadata with test runs, enabling better traceability, debugging, and reporting.
 keywords:
-  - lambdatest automation
+  - testmu ai automation
   - selenium automation grid
   - metadata
   - custom data

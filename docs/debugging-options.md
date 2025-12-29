@@ -7,7 +7,7 @@ description: This documentation explains how to use various debugging logs optio
 keywords:
   - debug log options
   - debugging options
-  - debugging options lambdatest
+  - debugging options testmu ai
   - debugging options automation testing
   - debugging options selenium testing
   - debugging options appium testing

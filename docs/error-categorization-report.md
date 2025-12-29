@@ -6,7 +6,7 @@ sidebar_label: Error Categorization
 description: Streamline error analysis with the Error Categorization Report. Identify patterns in test failures to enhance quality and efficiency in your testing process.
 keywords:
   - error categorization reports
-  - error testing lambdatest 
+  - error testing testmu ai 
   
 url: https://www.lambdatest.com/support/docs/error-categorization-report/
 site_name: LambdaTest

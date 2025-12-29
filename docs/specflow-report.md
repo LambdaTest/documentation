@@ -6,7 +6,7 @@ sidebar_label: SpecFlow
 description: Learn how to generate SpecFlow Report on TestMu AI and download the reports from the dashboard
 keywords:
   - specflow testing reports
-  - specflow testing lambdatest 
+  - specflow testing testmu ai 
   
 url: https://www.lambdatest.com/support/docs/specflow-report/
 site_name: LambdaTest

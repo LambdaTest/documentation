@@ -6,8 +6,8 @@ description: Now you can run your automation scripts using Appium with CSharp on
 keywords:
   - appium
   - csharp
-  - lambdatest csharp
-  - framework on lambdatest
+  - testmu ai csharp
+  - framework on testmu ai
   - testng
   - app testing
   - real devices

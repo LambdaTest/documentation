@@ -11,7 +11,7 @@ keywords:
   - ui validation
   - mobile app dark mode
   - web dark mode
-  - lambdatest real devices
+  - testmu ai real devices
   - light mode testing
 url: https://www.lambdatest.com/support/docs/dark-mode-on-real-devices/
 site_name: LambdaTest

@@ -6,8 +6,8 @@ description: Follow the instructions in this documentation, so that you can seam
 keywords:
   - xcui
   - iOS
-  - lambdatest 
-  - framework on lambdatest
+  - testmu ai 
+  - framework on testmu ai
   - testng
   - app testing
   - real devices

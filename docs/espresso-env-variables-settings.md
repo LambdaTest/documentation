@@ -6,7 +6,7 @@ description: Now you can run your Espresso framework on TestMu AI and this parti
 keywords:
   - espresso
   - environment
-  - lambdatest java
+  - testmu ai java
   - stage
   - production
   - testng

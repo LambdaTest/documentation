@@ -5,16 +5,16 @@ hide_title: false
 sidebar_label: Assembla 
 description: TestMu AI helps you manage your bugs in Assembla by moving them to project in a single click. All the details you provide in TestMu AI like task list, assignee, title and description would automatically be presented in the project on Assembla.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to clubhouse
   - free cross browser testing tool
   - cross platform testing tools
   - check browser compatibility online
-  - lambdatest assembla integration
-  - integrate assembla with lambdatest
-  - create issue in assembla from lambdatest
-  - assembla integration with lambdatest
-  - create assembla issues from lambdatest
+  - testmu ai assembla integration
+  - integrate assembla with testmu ai
+  - create issue in assembla from testmu ai
+  - assembla integration with testmu ai
+  - create assembla issues from testmu ai
   - bug tracking tools
   - project management tools
 url: https://www.lambdatest.com/support/docs/assembla-integration/

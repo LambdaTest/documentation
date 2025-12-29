@@ -5,12 +5,12 @@ sidebar_label: Selenium Java SDK
 description: Run your Selenium TestNG tests on TestMu AI with zero code changes. Simple YAML configuration, Maven dependencies, and a single listener is all you need.
 keywords:
   - selenium java sdk
-  - lambdatest java sdk
+  - testmu ai java sdk
   - selenium sdk
   - zero code changes
   - java selenium automation
   - selenium testing
-  - lambdatest selenium
+  - testmu ai selenium
 
 url: https://www.lambdatest.com/support/docs/selenium-java-sdk/
 slug: selenium-java-sdk/

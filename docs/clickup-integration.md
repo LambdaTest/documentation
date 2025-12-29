@@ -5,8 +5,8 @@ hide_title: true
 sidebar_label: ClickUp
 description: Mark UI bugs to your ClickUp project directly while performing cross browser testing with TestMu AI. Capture screenshot, annotate and assign it to a colleague.
 keywords:
-  - lambdatest integrations
-  - lambdatest integrations with test management tools
+  - testmu ai integrations
+  - testmu ai integrations with test management tools
   - test management tools
   - clickup
   - clickup integrations

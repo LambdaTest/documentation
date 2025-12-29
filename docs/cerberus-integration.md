@@ -5,12 +5,12 @@ hide_title: true
 sidebar_label: Cerberus
 description: Now perform cross-browser testing of your website or web app on 3000+ desktop & mobile browser and OS combinations, using TestMu AI and Cerberus integration
 keywords:
- - LambdaTest integrations
+ - TestMu AI integrations
  - Cerberus
  - Test Automation for GUI Testing
  - test automation
  - Cerberus integration with Lambdatest
- - lambdatest integration with Cerberus
+ - testmu ai integration with Cerberus
 url: https://www.lambdatest.com/support/docs/cerberus-integration/
 site_name: LambdaTest
 slug: cerberus-integration/

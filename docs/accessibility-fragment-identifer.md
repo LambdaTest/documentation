@@ -4,7 +4,7 @@ title: Accessibility Fragment Identifier
 sidebar_label: Fragment Identifier
 description: The Fragment Identifier feature in the Accessibility Tool allows you to treat URLs with different fragment identifiers.
 keywords:
-  - LambdaTest
+  - TestMu AI
   - Accessibility
   - Testing
   - Manual

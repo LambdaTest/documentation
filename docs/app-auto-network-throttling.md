@@ -9,14 +9,14 @@ keywords:
     - network throttling
     - Appium capabilities generator
     - Appium desired capabilities
-    - LambdaTest Appium grid capabilities
-    - LambdaTest automation capabilities generator for Appium
+    - TestMu AI Appium grid capabilities
+    - TestMu AI automation capabilities generator for Appium
     - Appium capability configuration
     - Appium automation testing
     - Appium automation grid online
     - configure Appium tests with network throttling desired capabilities
     - network throttling capabilities for Appium
-    - throttling test on LambdaTest with Appium
+    - throttling test on TestMu AI with Appium
 url: https://www.lambdatest.com/support/docs/app-auto-network-throttling/
 site_name: LambdaTest
 slug: app-auto-network-throttling/

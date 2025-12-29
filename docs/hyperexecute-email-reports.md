@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Receive Job Reports and Artifacts via Email
 description: Streamline testing with HyperExecute Email Reports! Learn how to effortlessly automate test runs and receive detailed reports. Boost efficiency today.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-email-reports/
 site_name: LambdaTest
 slug: hyperexecute-email-reports/

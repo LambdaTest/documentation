@@ -11,7 +11,7 @@ keywords:
     - mobile app version control
     - manage mobile app builds
     - Accessibility Testing Settings
-    - LambdaTest app storage
+    - TestMu AI app storage
     - test .apk .aab .ipa files
 url: https://www.lambdatest.com/support/docs/app-manager/
 site_name: LambdaTest

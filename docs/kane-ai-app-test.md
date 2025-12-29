@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: App Test
 description: Learn how to automate app testing with KaneAI. Generate and execute tests in plain English, save cases, and run them seamlessly
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai app test
 url: https://www.lambdatest.com/support/docs/kane-ai-app-agent
 site_name: LambdaTest

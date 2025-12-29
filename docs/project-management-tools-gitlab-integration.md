@@ -5,7 +5,7 @@ hide_title: true
 sidebar_label: GitLab
 description: TestMu AI provides integrations with GitLab to help you log bugs directly from the middle of your test session on TestMu AI to your GitLab repository.
 keywords:
-  - lambdatest integrations
+  - testmu ai integrations
   - push issues to gitlab
   - free cross browser testing tool
 url: https://www.lambdatest.com/support/docs/gitlab-integration/

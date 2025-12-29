@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Bypass Proxy Domains
 description: Learn how to use TestMu AI bypassProxyDomains capability to specify domains that should bypass the dedicated proxy.
 keywords:
-- custom headers lambdatest
+- custom headers testmu ai
 - bypass firewalls restrictions
 - custom headers bypass firewalls
 url: https://www.lambdatest.com/support/docs/bypass-proxy-domains/

@@ -5,7 +5,7 @@ hide_title: false
 sidebar_label: Accessibility Testing
 description: Make your digital products usable for people with disabilities through comprehensive testing and improvement using TestMu AI Accessibility DevTools
 keywords:
-    - LambdaTest
+    - TestMu AI
     - Accessibility
     - Testing
     - DevTools

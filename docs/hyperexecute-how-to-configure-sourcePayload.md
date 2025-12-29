@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: How to configure sourcePayload
 description: Learn to configure sourcePayload in HyperExecute with ease, allowing secure and direct sourcing of test scripts from your Git provider for seamless testing integration.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
 url: https://www.lambdatest.com/support/docs/hyperexecute-how-to-configure-sourcePayload/
 site_name: LambdaTest
 slug: hyperexecute-how-to-configure-sourcePayload/

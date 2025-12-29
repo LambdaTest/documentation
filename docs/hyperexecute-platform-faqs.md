@@ -5,9 +5,9 @@ hide_title: true
 sidebar_label: Platform FAQs
 description: Find answers to frequently asked questions about the HyperExecute platform, covering OS support, available browsers, customization options, and more for efficient testing.
 keywords:
-  - LambdaTest Hyperexecute
-  - LambdaTest Hyperexecute help
-  - LambdaTest Hyperexecute documentation
+  - TestMu AI Hyperexecute
+  - TestMu AI Hyperexecute help
+  - TestMu AI Hyperexecute documentation
   - FAQs
 url: https://www.lambdatest.com/support/docs/hyperexecute-platform-faqs/
 site_name: LambdaTest

@@ -7,7 +7,7 @@ description: Inspect and debug embedded web views in real mobile devices using T
 keywords:
   - webview debugging on real device
   - inspect hybrid app webview
-  - LambdaTest webview tools
+  - TestMu AI webview tools
   - real device DevTools
   - simulate GPS location iOS
   - mobile web view inspection
