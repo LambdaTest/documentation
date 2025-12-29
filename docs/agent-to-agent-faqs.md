@@ -1,6 +1,6 @@
 ---
 id: agent-to-agent-faqs
-title: Agent to Agent FAQs !!
+title: Agent to Agent FAQs
 hide_title: false
 sidebar_label: FAQs
 description: Get quick answers to all your Agent to Agent queries with our comprehensive FAQs! 
@@ -33,7 +33,7 @@ import DocCard from '../src/component/DocCard';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Integrations",
+          "name": "Agent to Agent FAQs",
           "item": "https://www.lambdatest.com/support/docs/agent-to-agent-faqs/"
         }]
       })
