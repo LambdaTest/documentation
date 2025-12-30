@@ -58,7 +58,7 @@ HyperExecute, a powerful test automation orchestration platform, boasts seamless
 
 - [**Azure Test Plans**](/docs/hyperexecute-azure-test-plan/): HyperExecute integrates with Azure Test Plans, enabling you to execute tests defined within Azure Pipelines directly from HyperExecute. Manage and orchestrate your Azure test executions efficiently.
 
-- [**LambdaTest Products**](/docs/he-integration-with-lambdatest-products/): HyperExecute integrates with various LambdaTest products, including Smart UI and Real Devices. Execute tests across diverse browsers, devices, and operating systems seamlessly within HyperExecute's orchestration framework.
+- [**LambdaTest Products**](/docs/he-integration-with-testmu-products/): HyperExecute integrates with various LambdaTest products, including Smart UI and Real Devices. Execute tests across diverse browsers, devices, and operating systems seamlessly within HyperExecute's orchestration framework.
 
 ## Benefits of Integration
 

@@ -20,7 +20,7 @@ slug: integrating-testmu-report-with-jenkins-pipeline
 
 This documentation provides a comprehensive guide on how to integrate LambdaTest Report with your Jenkins Pipeline for web and app test automation.
 
-> **Note**: Before you proceed, make sure to integrate [LambdaTest Plugin for Jenkins](/docs/jenkins-with-lambdatest/).
+> **Note**: Before you proceed, make sure to integrate [LambdaTest Plugin for Jenkins](/docs/jenkins-with-testmu/).
 
 1. Login to your Jenkins account. From the left menu, navigate to **New Item**.
 
