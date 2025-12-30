@@ -85,7 +85,7 @@ Since you have the LambdaTest Executor ready, you can now execute your tests fro
 
 Now if you open your [Automation dashboard](https://automation.lambdatest.com/timeline), you can see your Cerberus test case running as per the chosen Robot Executor details. <img loading="lazy" src={require('../assets/images/uploads/cerbeus-9.webp').default} alt="LambdaTest Test Automation Dashboard" width="1281" height="576" className="doc_img"/>
 
-Once the test is complete, you can view the result of the test on LambdaTest, with all its details. You can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more for each executed test from your LambdaTest platform. To explore more about the LambdaTest's Automation Dashboard, refer [inside LambdaTest platform guide](/docs/inside-lambdatest-platform/).
+Once the test is complete, you can view the result of the test on LambdaTest, with all its details. You can view logs, [mark bugs](/docs/mark-as-bug-in-automation-testing/), and do much more for each executed test from your LambdaTest platform. To explore more about the LambdaTest's Automation Dashboard, refer [inside LambdaTest platform guide](/docs/inside-testmu-platform/).
 
 * * *
 

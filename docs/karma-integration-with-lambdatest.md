@@ -196,7 +196,7 @@ karma start karma.conf.js
 
 `karma start karma.conf.js`
 
-If you wish to use Jenkins, then [follow this documentation](/docs/jenkins-with-lambdatest/).
+If you wish to use Jenkins, then [follow this documentation](/docs/jenkins-with-testmu/).
 
 ## Parallel Testing
 * * *

@@ -22,7 +22,7 @@ Integrate LambdaTest Jenkins plugin with your Jenkins Freestyle project for:
 *   Set up and tear down the Lambda Tunnel binary file to perform automated cross browser testing even on your locally hosted web apps.
 *   Embed all the test results such as video logs, network logs, and screenshots of every step performed through LambdaTest with your Jenkins job results.
 
-> Note: Before you proceed, make sure to integrate [LambdaTest plugin for Jenkins](/docs/jenkins-with-lambdatest/).
+> Note: Before you proceed, make sure to integrate [LambdaTest plugin for Jenkins](/docs/jenkins-with-testmu/).
 
 **Step 1:** Create a **New Item** in Jenkins and select **Freestyle Project**. 
 <img loading="lazy" src={require('../assets/images/integrating-lambdaTest-with-jenkins-freestyle-project/1.webp').default} alt="Image" width="1919" height="900" className="doc_img"/> 

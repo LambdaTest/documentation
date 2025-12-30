@@ -59,14 +59,14 @@ LambdaTest allows you to integrate your LambdaTest account with your favourite c
 
 <table align="center"> 
 
-| [Rocket.Chat Integration](/docs/rocketchat-integration-with-lambdatest/) |
+| [Rocket.Chat Integration](/docs/rocketchat-integration-with-testmu/) |
 |:-----------------------------------------------------------:|
 
 </table>
 
 <table align="center"> 
 
-| [Mattermost Integration](/docs/integrating-mattermost-with-lambdatest/) |
+| [Mattermost Integration](/docs/integrating-mattermost-with-testmu/) |
 |:-----------------------------------------------------------:|
 
 </table>

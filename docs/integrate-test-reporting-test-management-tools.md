@@ -45,7 +45,7 @@ LambdaTest offers integration with test reporting and test management tools, all
 | [PractiTest Integration With LambdaTest](/docs/practitest-integration/) |
 |:--------------------------------------------------------------------------------------------:|
 
-| [Test Rail Integration With LambdaTest](/docs/testrail-integration-with-lambdatest-selenium-grid/) |
+| [Test Rail Integration With LambdaTest](/docs/testrail-integration-with-testmu-selenium-grid/) |
 |:--------------------------------------------------------------------------------------------:|
 
 | [Calliope Integration With LambdaTest](https://github.com/LambdaTest/LambdaTest-Calliope-Integration/tree/master) |
