@@ -96,7 +96,7 @@ Use custom wait timeout when dealing with slow page loads or dynamic content.
 Custom waits apply only to element-based interactions.  
 :::
 
-<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/commands/select_set_timeout.png').default} alt="" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/kane-ai/knowledge-base/commands/select_set_timeout.webp').default} alt="" className="doc_img"/>
 
 ---
 
