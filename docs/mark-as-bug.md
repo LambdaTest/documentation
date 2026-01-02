@@ -1,4 +1,4 @@
-﻿---
+---
 id: mark-as-bug
 title: Mark As Bug In Screenshot Testing
 hide_title: true
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/mark-as-bug-in-screenshot-testing
 site_name: LambdaTest
 slug: mark-as-bug-in-screenshot-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +25,17 @@ slug: mark-as-bug-in-screenshot-testing
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Mark As Bug In Screenshot Testing",
-          "item": "https://www.lambdatest.com/support/docs/mark-as-bug-in-screenshot-testing/"
+          "item": `${BRAND_URL}/support/docs/mark-as-bug-in-screenshot-testing/`
         }]
       })
     }}
@@ -41,11 +43,11 @@ slug: mark-as-bug-in-screenshot-testing
 
 # Mark As Bug In Screenshot Testing
 ***
-> You can now avoid the hassle of capturing a screenshot, annotating the same before you finally share it with a teammate by logging onto a respective tool for creating a task. LambdaTest does it all for you. **Mark as Bug** is a feature that would help you highlight any UI observation from your test sessions on LambdaTest. And you can share the same with your colleagues on their favorite project management/ bug tracking tools such as Jira and Trello, Hive, Paymo, etc. You can choose the assignee who handles your reported task, or Bug. You can even mention the description to help them understand your point better. You can do all that while testing on LambdaTest, without having to hop on to any other platform or tool.
+> You can now avoid the hassle of capturing a screenshot, annotating the same before you finally share it with a teammate by logging onto a respective tool for creating a task. <BrandName /> does it all for you. **Mark as Bug** is a feature that would help you highlight any UI observation from your test sessions on <BrandName />. And you can share the same with your colleagues on their favorite project management/ bug tracking tools such as Jira and Trello, Hive, Paymo, etc. You can choose the assignee who handles your reported task, or Bug. You can even mention the description to help them understand your point better. You can do all that while testing on <BrandName />, without having to hop on to any other platform or tool.
 
-**Note:** Mark as Bug feature is not restricted to any particular feature at LambdaTest. In other words, every type of testing that you perform on LambdaTest will have a mark as bug embedded in it. Below are various types of testing that we offer at LambdaTest.
+**Note:** Mark as Bug feature is not restricted to any particular feature at <BrandName />. In other words, every type of testing that you perform on <BrandName /> will have a mark as bug embedded in it. Below are various types of testing that we offer at <BrandName />.
 
-- **Real Time Testing:** To help you test your web-app with live interaction by running it on VMs hosted by LambdaTest cloud server.
+- **Real Time Testing:** To help you test your web-app with live interaction by running it on VMs hosted by <BrandName /> cloud server.
 
 - **Screenshot Testing:** Automated bulk [screenshot testing](/support/docs/automated-screenshot-testing/) on 25(browsers + OS) combinations in a single test session.
 
@@ -56,7 +58,7 @@ slug: mark-as-bug-in-screenshot-testing
 - **Smart UI Testing:** Automated visual regression testing that performs a pixel-to-pixel comparison between multiple images & highlights any UI deviations such as padding, icon, text, etc., concerning the baseline images.
 
 > **Did You Know?**
-LambdaTest offers more than 3000+ real browsers and browser versions on every type of testing so you could maximize test coverage of your cross browser testing.
+<BrandName /> offers more than 3000+ real browsers and browser versions on every type of testing so you could maximize test coverage of your cross browser testing.
 
 ## How Can I Mark As Bug While Screenshot Testing?
 
@@ -103,7 +105,7 @@ LambdaTest offers more than 3000+ real browsers and browser versions on every ty
 
 ## Pushing Bugs To Third Party Tools
 
-LambdaTest provides integration with various 3rd party applications to help you collaborate with your teammates easily as you perform cross browser testing on our cloud-based platform. The "Mark as Bug" button will allow you instantly push your edited screenshot into your integrated workspace. You can integrate with the below mentioned 3rd party tools.
+<BrandName /> provides integration with various 3rd party applications to help you collaborate with your teammates easily as you perform cross browser testing on our cloud-based platform. The "Mark as Bug" button will allow you instantly push your edited screenshot into your integrated workspace. You can integrate with the below mentioned 3rd party tools.
 
 - [JIRA](/docs/jira-integration/)
 - [Slack](/docs/slack-integration/)
@@ -130,7 +132,7 @@ LambdaTest provides integration with various 3rd party applications to help you 
 
 We are continually adding more integration to our platform. If you use some other tool, don’t hesitate to share it with us! Just drop a message through <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> & we’ll bring it here on our platform for you.
 
-As you click on the "**Mark as Bug**" button, an integration specific form would open up. Fill in the fields as per your requirement. For instance, if you have installed LambdaTest + Asana integration, you can fill the below-represented fields.
+As you click on the "**Mark as Bug**" button, an integration specific form would open up. Fill in the fields as per your requirement. For instance, if you have installed <BrandName /> + Asana integration, you can fill the below-represented fields.
 
 - You can select which workspace the task should go under.
 
@@ -144,7 +146,7 @@ As you click on the "**Mark as Bug**" button, an integration specific form would
 
 <img loading="lazy" src={require('../assets/images/mark_as_bug/mark-as-bug-screenshot-10.webp').default} alt="Image"  width="1344" height="653" className="doc_img"/>
 
-All the fields you populate will be directly reflected in your respective project based upon the integration you have configured with your LambdaTest account. In the above case, the changes would reflect on the respective Asana instance.
+All the fields you populate will be directly reflected in your respective project based upon the integration you have configured with your <BrandName /> account. In the above case, the changes would reflect on the respective Asana instance.
 
 >**Got any questions?**
 Feel free to share them with our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>, or you can drop a mail on support@lambdatest.com. Happy testing!
@@ -152,12 +154,12 @@ Feel free to share them with our <span className="doc__lt" onClick={() => win
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

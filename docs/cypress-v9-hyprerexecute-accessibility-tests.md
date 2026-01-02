@@ -1,4 +1,4 @@
-﻿---
+---
 id: cypress-v9-hyprerexecute-accessibility-tests
 title: Accessibility Testing on HyperExecute using Cypress v9
 hide_title: false
@@ -21,6 +21,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,22 +32,22 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Cypress Accessibility Testing",
-          "item": "https://www.lambdatest.com/support/docs/cypress-v9-hyprerexecute-accessibility-tests/"
+          "item": `${BRAND_URL}/support/docs/cypress-v9-hyprerexecute-accessibility-tests/`
         }]
       })
     }}
 ></script>
-This document provides a detailed, step-by-step walkthrough for executing automated accessibility tests using LambdaTest's Accessibility Tool on HyperExecute using Cypress v9 and below.
+This document provides a detailed, step-by-step walkthrough for executing automated accessibility tests using <BrandName />'s Accessibility Tool on HyperExecute using Cypress v9 and below.
 :::note
 This documentation is applicable for **Cypress v9** and **previous versions**.
 
@@ -55,7 +57,7 @@ Please reach out to our <span className="doc__lt" onClick={() => window.openLTCh
 ## Prerequisites
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
-- Your [LambdaTest Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
+- Your [<BrandName /> Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
 - Setup your local machine as per your testing framework.
 
 ## Step-by-Step Guide to Trigger Your Test
@@ -65,7 +67,7 @@ Please reach out to our <span className="doc__lt" onClick={() => window.openLTCh
 To configure and test the system, you may use your existing project. For demonstration purposes, this guide utilizes a sample repository.
 
 :::tip sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run your tests.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run your tests.
 
 <a href="https://github.com/LambdaTest/hyperexecute-cypress-v10-sample" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -81,7 +83,7 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
 #### Setup Environment Variable
-Export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
@@ -114,7 +116,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ### Step 2: Update the Necessary Capabilities and Configurations in your project
 
 #### 1. Install the Cypress CLI
-You will have to pass the `npm i lambdatest-cypress-cli` command in your [pre steps](/support/docs/deep-dive-into-hyperexecute-yaml/#pre) to install the LambdaTest Cypress CLI which will be used to execute your Cypress tests.
+You will have to pass the `npm i lambdatest-cypress-cli` command in your [pre steps](/support/docs/deep-dive-into-hyperexecute-yaml/#pre) to install the <BrandName /> Cypress CLI which will be used to execute your Cypress tests.
 
 ```yaml title="hyperexecute.yaml"
 pre:

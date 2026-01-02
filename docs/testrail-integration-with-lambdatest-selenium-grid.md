@@ -1,4 +1,4 @@
-﻿---
+---
 id: testrail-integration-with-lambdatest-selenium-grid
 title: How to integrate TestRail With TestMu AI Selenium Grid
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/testrail-integration-with-testmu-seleniu
 site_name: LambdaTest
 slug: testrail-integration-with-testmu-selenium-grid
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -20,28 +22,28 @@ slug: testrail-integration-with-testmu-selenium-grid
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "TestRail Integration",
-          "item": "https://www.lambdatest.com/support/docs/testrail-integration-with-testmu-selenium-grid/"
+          "item": `${BRAND_URL}/support/docs/testrail-integration-with-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# TestRail Integration With LambdaTest Selenium Grid
+# TestRail Integration With <BrandName /> Selenium Grid
 
 ***
 TestRail is a modern test case management tool which offers a comprehensive web-platform for software testers and developers. Offering a JIRA add-on for cloud-based integration, TestRail helps you to track, manage, and hasten software release cycle.
 
-TestRail also offers integration with LambdaTest to help you perform automated cross browser testing through an on-cloud Selenium Grid offering 3000+ browsers. **LambdaTest Selenium Grid integration to TestRail**  will help you run your Selenium automation scripts from TestRail instance to our cloud-based Selenium Grid.
+TestRail also offers integration with <BrandName /> to help you perform automated cross browser testing through an on-cloud Selenium Grid offering 3000+ browsers. **<BrandName /> Selenium Grid integration to TestRail**  will help you run your Selenium automation scripts from TestRail instance to our cloud-based Selenium Grid.
 
 ## Prerequisites
 
@@ -67,7 +69,7 @@ TestRail also offers integration with LambdaTest to help you perform automated c
 
     * For authentication purpose, make sure you have your Testrail credentials – URL, Username and Password.
 
-## Integrating LambdaTest With TestRail
+## Integrating <BrandName /> With TestRail
 ***
 **Step 1:**  Clone our [GitHub repository for Selenium & TestRail](https://github.com/LambdaTest/Java-TestNG-Selenium-TestRail).
 
@@ -79,7 +81,7 @@ TestRail also offers integration with LambdaTest to help you perform automated c
 
 **Step 5:**  Once test would get run then find your result logged in Testrail for given test case and run id.
 
-## Running Automation Scripts Using LambdaTest Selenium Grid & TestRail
+## Running Automation Scripts Using <BrandName /> Selenium Grid & TestRail
 ***
 **Step 1:**  Required JAVA files for TestRail integration are inside `package com.library.utils.testrail`.
 
@@ -120,18 +122,18 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 ```
 
-Kudos! Now you can deploy your code in a reliable & faster manner at scale, using LambdaTest integration with TestRail, for automated cross browser testing with Selenium Grid. Happy Testing!
+Kudos! Now you can deploy your code in a reliable & faster manner at scale, using <BrandName /> integration with TestRail, for automated cross browser testing with Selenium Grid. Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href="https://www.lambdatest.com/support/docs/">Support</a>
+      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">TestRail Integration With LambdaTest Selenium Grid</span>
+      <span className="breadcrumbs__link">TestRail Integration With <BrandName /> Selenium Grid</span>
     </li>
   </ul>
 </nav> 

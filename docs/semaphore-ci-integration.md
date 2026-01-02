@@ -1,4 +1,4 @@
-﻿---
+---
 id: semaphore-ci-integration
 title: Semaphore CI Integration With TestMu AI
 hide_title: true
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/semaphore-integration-with-testmu
 site_name: LambdaTest
 slug: semaphore-integration-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,26 +27,26 @@ slug: semaphore-integration-with-testmu
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Semaphore Integration",
-          "item": "https://www.lambdatest.com/support/docs/semaphore-integration-with-testmu/"
+          "item": `${BRAND_URL}/support/docs/semaphore-integration-with-testmu/`
         }]
       })
     }}
 ></script>
 
-# Semaphore CI Integration With LambdaTest
+# Semaphore CI Integration With <BrandName />
 * * *
 Semaphore is a hosted continuous integration and deployment service used to test and deploy software projects hosted on GitHub and BitBucket. While open-source projects can use Semaphore for free in its full capacity, free use for private projects is limited to 100 builds per month.
-LambdaTest now integrates with Semaphore CI to boost your go-to-market delivery. Perform automated cross browser testing hand in hand with your CI/CD pipeline and ensure your web-app renders seamlessly on more than 2000 real browsers and browser versions. Using LambdaTest Selenium Grid, you can fully automate your continuous testing process and trim down your test cycles significantly.
+<BrandName /> now integrates with Semaphore CI to boost your go-to-market delivery. Perform automated cross browser testing hand in hand with your CI/CD pipeline and ensure your web-app renders seamlessly on more than 2000 real browsers and browser versions. Using <BrandName /> Selenium Grid, you can fully automate your continuous testing process and trim down your test cycles significantly.
 
 ## Prerequisites
 ***
@@ -63,19 +65,19 @@ We will be performing a demonstration by using the Protractor framework
     npm install npm@latest -g
     ```
 
-* LambdaTest Authentication Credentials
+* <BrandName /> Authentication Credentials
 
-    * Be aware of your LambdaTest authentication credentials, i.e., your LambdaTest username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your LambdaTest automation dashboard by clicking on the key icon near the help button.
+    * Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your <BrandName /> automation dashboard by clicking on the key icon near the help button.
     ```
     $ export LT_USERNAME=<YOUR_LAMBDATEST_USERNAME>
     $ export LT_ACCESS_KEY=<YOUR_LAMBDATEST_ACCESS_KEY>
     ```
 
-## Integrating LambdaTest With Semaphore CI
+## Integrating <BrandName /> With Semaphore CI
 ***
-A few changes in the .semaphore/semaphore.yml are all you need to integrate LambdaTest With Semaphore CI. According to your test configurations, these changes would include replacing the environment variables such as access key, username, grid config, and so on.
+A few changes in the .semaphore/semaphore.yml are all you need to integrate <BrandName /> With Semaphore CI. According to your test configurations, these changes would include replacing the environment variables such as access key, username, grid config, and so on.
 
-Here is a sample config file for integrating your LambdaTest account with your Semaphore CI instance. You can also find the below code at our [GitHub repository of Semaphore](https://github.com/LambdaTest/protractor-selenium-semaphore-sample).
+Here is a sample config file for integrating your <BrandName /> account with your Semaphore CI instance. You can also find the below code at our [GitHub repository of Semaphore](https://github.com/LambdaTest/protractor-selenium-semaphore-sample).
 
 ```js
 version: v1.0
@@ -107,7 +109,7 @@ blocks:
           - node node_modules/protractor/bin/protractor single.conf.js
 ```
 
-LambdaTest offers a Selenium [Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to fetch coded values for your desired test configurations.
+<BrandName /> offers a Selenium [Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) to fetch coded values for your desired test configurations.
 For Instance, if you select the below configurations:
 
 | FIELDS | SELECTED VALUES |
@@ -118,7 +120,7 @@ For Instance, if you select the below configurations:
 | Resolution | 1280x1024 |
 | Selenium Version | 3.11.0 |
 
-Then Capabilities Generator at LambdaTest will provide you with the below program:
+Then Capabilities Generator at <BrandName /> will provide you with the below program:
 
 ```
 var capabilities = {
@@ -138,7 +140,7 @@ var capabilities = {
 
 ## Testing Locally Hosted or Privately Hosted Projects
 ***
-To help you perform cross browser testing of your locally stored web pages, LambdaTest provides an SSH(Secure Shell) tunnel connection with the name Lambda Tunnel. With Lambda Tunnel, you can execute a test server inside your Semaphore CI build container to perform automated cross browser testing on browsers offered by Selenium grid on LambdaTest. So you make sure how well your changes look, even before your customers. Curious to know more about Lambda Tunnel?
+To help you perform cross browser testing of your locally stored web pages, <BrandName /> provides an SSH(Secure Shell) tunnel connection with the name Lambda Tunnel. With Lambda Tunnel, you can execute a test server inside your Semaphore CI build container to perform automated cross browser testing on browsers offered by Selenium grid on <BrandName />. So you make sure how well your changes look, even before your customers. Curious to know more about Lambda Tunnel?
 
 >Follow our documentation on Lambda Tunnel to know it all. OS-specific instructions to download and set up tunnel binary are at the following links.
 >
@@ -202,7 +204,7 @@ blocks:
 
 ## Parallel Testing
 ***
-Parallel Testing is one of the most demanding features of LambdaTest Selenium Grid. By parallel testing, you can run more than one test case simultaneously. This means that Parallel testing would allow you to execute numerous automation test cases altogether. You perform a single test scenario across different browsers or run different test scenarios across the same browser but with different browser versions.
+Parallel Testing is one of the most demanding features of <BrandName /> Selenium Grid. By parallel testing, you can run more than one test case simultaneously. This means that Parallel testing would allow you to execute numerous automation test cases altogether. You perform a single test scenario across different browsers or run different test scenarios across the same browser but with different browser versions.
 
 To perform automation testing in parallel on Windows, use the below command.
 
@@ -210,17 +212,17 @@ To perform automation testing in parallel on Windows, use the below command.
 node ./node_modules/protractor/bin/protractor parallel.conf.js
 ```
 
-Monitor and analyze your test result on the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/). Reliably deploy your code at scale using Semaphore CI integration with LambdaTest, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
+Monitor and analyze your test result on the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/). Reliably deploy your code at scale using Semaphore CI integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,4 +1,4 @@
-﻿---
+---
 id: test-case-repository
 title: Test Case Repository
 hide_title: true
@@ -21,17 +21,17 @@ slug: test-case-repository
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Case Repository",
-          "item": "https://www.lambdatest.com/support/docs/test-case-repository/"
+          "item": `${BRAND_URL}/support/docs/test-case-repository/`
         }]
       })
     }}
@@ -66,12 +66,12 @@ A test case repository serves as a centralized location for all test cases withi
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

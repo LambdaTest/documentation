@@ -1,4 +1,4 @@
-﻿---
+---
 id: local-testing-playwright
 title: Run Local Tests Using Playwright
 hide_title: true
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/local-testing-using-playwright
 site_name: LambdaTest
 slug: local-testing-using-playwright
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -23,17 +25,17 @@ slug: local-testing-using-playwright
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Local Testing Using Playwright",
-          "item": "https://www.lambdatest.com/support/docs/local-testing-using-playwright/"
+          "item": `${BRAND_URL}/support/docs/local-testing-using-playwright/`
         }]
       })
     }}
@@ -42,16 +44,16 @@ slug: local-testing-using-playwright
 # Local Testing Using Playwright
 * * *
 
-LambdaTest tunnel feature lets you test private server URLs, locally hosted web apps, and websites on 3000+ real browsers and operating systems. On LambdaTest, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting to corporate firewalls or proxy settings, no restrictions apply to the new LambdaTest tunnel binary. To establish a secure and unique tunnel connection between your system and LambdaTest cloud servers, the LambdaTest tunnel utilizes various protocols like Web Sockets, HTTPS, SSH(Secure Shell), etc.
+<BrandName /> tunnel feature lets you test private server URLs, locally hosted web apps, and websites on 3000+ real browsers and operating systems. On <BrandName />, you can test plain HTML, CSS, PHP, Python, and other similar web files saved locally. When connecting to corporate firewalls or proxy settings, no restrictions apply to the new <BrandName /> tunnel binary. To establish a secure and unique tunnel connection between your system and <BrandName /> cloud servers, the <BrandName /> tunnel utilizes various protocols like Web Sockets, HTTPS, SSH(Secure Shell), etc.
 
 Learn how to perform local testing using Playwright across 40+ real browsers and operating systems.
 
 ## Playwright Testing Of Locally Hosted Websites
 ***
 
-You can run Playwright testing of locally hosted websites and web apps via LambdaTest tunnel binary.
+You can run Playwright testing of locally hosted websites and web apps via <BrandName /> tunnel binary.
 
-1. Clone the LambdaTest-Playwright repository on your system.
+1. Clone the <BrandName />-Playwright repository on your system.
 
 2. Install the npm dependencies.
 
@@ -59,7 +61,7 @@ You can run Playwright testing of locally hosted websites and web apps via Lambd
 npm install
 ```
 
-3. In order to run your Playwright tests, you will need to set your LambdaTest username and access key in the environment variables.
+3. In order to run your Playwright tests, you will need to set your <BrandName /> username and access key in the environment variables.
 
 **Windows**
 
@@ -75,7 +77,7 @@ export LT_USERNAME="YOUR_LAMBDATEST_USERNAME"
 export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ```
 
-4. To establish a tunnel connection between your local device and LambdaTest, download the binary file based on your OS.
+4. To establish a tunnel connection between your local device and <BrandName />, download the binary file based on your OS.
 
 - Windows **[64 Bit](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip) | [32 Bit](https://downloads.lambdatest.com/tunnel/v3/windows/32bit/LT_Windows.zip)**
 - macOS **[64 Bit](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip) | [32 Bit](https://downloads.lambdatest.com/tunnel/v3/mac/32bit/LT_Mac.zip)**
@@ -115,17 +117,17 @@ const { expect } = require('@playwright/test');
   }
  ``` 
 
-You can view test reports for your local tests on the LambdaTest automation dashboard.
+You can view test reports for your local tests on the <BrandName /> automation dashboard.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

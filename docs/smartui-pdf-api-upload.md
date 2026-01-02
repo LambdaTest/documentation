@@ -19,6 +19,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +30,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI PDF API Upload",
-          "item": "https://www.lambdatest.com/support/docs/smartui-pdf-api-upload/"
+          "item": `${BRAND_URL}/support/docs/smartui-pdf-api-upload/`
         }]
       })
     }}
@@ -203,7 +205,7 @@ buildName="PDF-Comparison-v1.0-$(date +%Y%m%d)"
 1. Verify PDF file is valid and not corrupted
 2. Check file path is correct and accessible
 3. Verify file size is within limits
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 5. Verify PROJECT_TOKEN is set correctly
 6. Confirm API endpoint URL is correct
 
@@ -272,7 +274,7 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [PDF Comparison Overview](/support/docs/smartui-pdf-comparison) for PDF-specific information
 - See [PDF CLI Upload](/support/docs/smartui-pdf-cli-upload) for alternative upload methods
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>

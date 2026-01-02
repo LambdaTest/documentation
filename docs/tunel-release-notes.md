@@ -1,4 +1,4 @@
-﻿---
+---
 id: tunnel-release-notes
 title: Tunnel Client Release Notes
 hide_title: false
@@ -22,17 +22,17 @@ slug: tunnel-release-notes
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Release Notes",
-          "item": "https://www.lambdatest.com/support/docs/tunel-release-notes/"
+          "item": `${BRAND_URL}/support/docs/tunel-release-notes/`
         }]
       })
     }}

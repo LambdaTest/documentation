@@ -20,20 +20,20 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 -----------------------------------------------------------------------------------------------------------------------------
 Applitools offers a cloud-based platform to help you perform AI Native, end-to-end visual testing and monitoring. The platform is designed to make life easier for automation testers by delivering a flexible way to directly integrate their test scripts without worrying about learning a new language or creating a new automation script.
 
-LambdaTest integration with Applitools will help you perform automated cross browser testing on more than 2000 real browsers running on real operating systems hosted on a cloud-based Selenium Grid. You can execute your automation test script on LambdaTest Selenium Grid directly from your Applitools instance.
+<BrandName /> integration with Applitools will help you perform automated cross browser testing on more than 2000 real browsers running on real operating systems hosted on a cloud-based Selenium Grid. You can execute your automation test script on <BrandName /> Selenium Grid directly from your Applitools instance.
 
 In this topic, you will learn about the:   
-* Prerequisites for integrating LambdaTest with Applitools.
-* Running your first test on LambdaTest Selenium Grid from Applitools.
-* Test your locally hosted applications on LambdaTest from Applitools.
+* Prerequisites for integrating <BrandName /> with Applitools.
+* Running your first test on <BrandName /> Selenium Grid from Applitools.
+* Test your locally hosted applications on <BrandName /> from Applitools.
 
-## Prerequisites To Integrate LambdaTest With Applitools
+## Prerequisites To Integrate <BrandName /> With Applitools
 * * *
->**Important:** Visit LambdaTest  [GitHub repository for LambdaTest Integration with Applitools.](https://github.com/LambdaTest/applitools-lambdatest-integration) 
+>**Important:** Visit <BrandName />  [GitHub repository for <BrandName /> Integration with Applitools.](https://github.com/LambdaTest/applitools-lambdatest-integration) 
 
-* **LambdaTest Authentication Credentials**
+* **<BrandName /> Authentication Credentials**
 
- Be aware of your LambdaTest authentication credentials i.e., your LambdaTest username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com) by clicking on the key icon near the help button. 
+ Be aware of your <BrandName /> authentication credentials i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com) by clicking on the key icon near the help button. 
 * For Linux/Mac:  
 
 <div className="lambdatest__codeblock">
@@ -55,7 +55,7 @@ $ set LT_ACCESS_KEY= ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
 
 * **Applitools API Key**  
 
-  You can find your Applitools API key by logging into your Applitools account and going to your **Profile > My API Key.**   In your terminal or CMD, you need to export the Applitools API key along with LambdaTest Credentials.    
+  You can find your Applitools API key by logging into your Applitools account and going to your **Profile > My API Key.**   In your terminal or CMD, you need to export the Applitools API key along with <BrandName /> Credentials.    
    * For Linux/Mac:  
         ```
         $ export APPLITOOLS_API_KEY=<your applitool api key> 
@@ -74,11 +74,11 @@ $ set LT_ACCESS_KEY= ${ YOUR_LAMBDATEST_ACCESS_KEY()}`}
    ```
 $ mvn install
    ```
-## Run Your First Test On LambdaTest Selenium Grid From Applitools
+## Run Your First Test On <BrandName /> Selenium Grid From Applitools
 -----------------------------------------------------------------------------------------------------------------------------
-Below is a code to run a demo test on LambdaTest Selenium Grid from Applitools.
+Below is a code to run a demo test on <BrandName /> Selenium Grid from Applitools.
 
->**Important:** You can clone the below code from our [GitHub repository for LambdaTest Integration with Applitools](https://github.com/LambdaTest/applitools-lambdatest-integration/blob/master/src/test/java/com/applitools/quickstarts/BasicDemo.java).
+>**Important:** You can clone the below code from our [GitHub repository for <BrandName /> Integration with Applitools](https://github.com/LambdaTest/applitools-lambdatest-integration/blob/master/src/test/java/com/applitools/quickstarts/BasicDemo.java).
 
 
 
@@ -189,27 +189,27 @@ public class BasicDemo {
 </CodeBlock>
 </div>
 
-Once you have cloned the above code, you need to execute the below command to trigger the test on LambdaTest Selenium Grid.
+Once you have cloned the above code, you need to execute the below command to trigger the test on <BrandName /> Selenium Grid.
 
 ```
 $ mvn -Dtest=BasicDemo test
 ```
->Watch the execution of the demo test on the [LambdaTest Automation Dashboard.](https://automation.lambdatest.com/)
+>Watch the execution of the demo test on the [<BrandName /> Automation Dashboard.](https://automation.lambdatest.com/)
 
-## Test Your Locally Hosted Applications On LambdaTest From Applitools
+## Test Your Locally Hosted Applications On <BrandName /> From Applitools
 -----------------------------------------------------------------------------------------------------------------------------
-You can test your locally hosted or privately hosted projects with the LambdaTest Selenium Grid cloud using the Lambda Tunnel app. All you would have to do is set up an SSH tunnel using Lambda Tunnel app and pass toggle tunnel = True via desired capabilities. Lambda Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+You can test your locally hosted or privately hosted projects with the <BrandName /> Selenium Grid cloud using the Lambda Tunnel app. All you would have to do is set up an SSH tunnel using Lambda Tunnel app and pass toggle tunnel = True via desired capabilities. Lambda Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
 
->Refer to our [LambdaTest Tunnel documentation](/docs/testing-locally-hosted-pages/) for more information.
+>Refer to our [<BrandName /> Tunnel documentation](/docs/testing-locally-hosted-pages/) for more information.
 
-Download the latest LambdaTest Tunnel binary file and extract it.
+Download the latest <BrandName /> Tunnel binary file and extract it.
 
 >Download:   
 * [Lambda Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
 * [Lambda Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
 * [Lambda Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 
-To run your Applitools automation script for locally hosted web applications on LambdaTest Selenium Grid, you would need to set the **Tunnel Capability** flag to ```true```.
+To run your Applitools automation script for locally hosted web applications on <BrandName /> Selenium Grid, you would need to set the **Tunnel Capability** flag to ```true```.
 
 ```
  DesiredCapabilities capabilities = new DesiredCapabilities();

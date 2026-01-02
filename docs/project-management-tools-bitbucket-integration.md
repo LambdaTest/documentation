@@ -1,4 +1,4 @@
-﻿---
+---
 id: project-management-tools-bitbucket-integration
 title: Bitbucket Integration
 hide_title: true
@@ -13,6 +13,8 @@ site_name: LambdaTest
 slug: bitbucket-integration
 
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: bitbucket-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Bitbucket Integration",
-          "item": "https://www.lambdatest.com/support/docs/bitbucket-integration/"
+          "item": `${BRAND_URL}/support/docs/bitbucket-integration/`
         }]
       })
     }}
@@ -42,15 +44,15 @@ slug: bitbucket-integration
 ***
 Bitbucket – A web-based repository hosting service owned by Atlassian for facilitating version control in development projects. It supports the project with a revision control system based on either Git or Mercurial. It is free to use, though they also offer a commercial plan. With Bitbucket, you can perform **access control** to your source-code, **workflow control** to impose a project workflow. Easy code revaluation through pull requests offering in-line annotation & Integration with Jira for end-to-end development tracing.
 
-The LambdaTest Bitbucket Integration allows you to create an issue directly in your repository from LambdaTest platform. Push an issue to your respective repository anytime, even in the middle of your test session. The fields populated by you when marking as a bug through LambdaTest are displayed as information on the issue in the repository for a testing instance.
+The <BrandName /> Bitbucket Integration allows you to create an issue directly in your repository from <BrandName /> platform. Push an issue to your respective repository anytime, even in the middle of your test session. The fields populated by you when marking as a bug through <BrandName /> are displayed as information on the issue in the repository for a testing instance.
 
-**Bitbucket Integration with LambdaTest, like all of our other integrations to 3rd party applications, is available for freemium as well as premium plan.**
+**Bitbucket Integration with <BrandName />, like all of our other integrations to 3rd party applications, is available for freemium as well as premium plan.**
 
-## How To Integrate Bitbucket With Your LambdaTest Account?
+## How To Integrate Bitbucket With Your <BrandName /> Account?
 ***
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select **‘Integrations’** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **‘Integrations’** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on **‘Add’** under the block that says ‘Bitbucket’.
 
@@ -64,7 +66,7 @@ The LambdaTest Bitbucket Integration allows you to create an issue directly in y
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-form.webp').default} alt="form"  className="doc_img"  width="1365" height="722"/>
 
-**Step 5.** As you press "ADD" button, you will be directed to an authentication page. Here you will need to grant LambdaTest the access to your user-owned resources on Bitbucket. Hit on the blue button that says **"Grant access".**
+**Step 5.** As you press "ADD" button, you will be directed to an authentication page. Here you will need to grant <BrandName /> the access to your user-owned resources on Bitbucket. Hit on the blue button that says **"Grant access".**
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-grantaccess.webp').default} alt="grant access"  className="doc_img" width="1362" height="585"/>
 
@@ -126,7 +128,7 @@ When marking as bug, make sure that you have a repository already created into y
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-issues.webp').default} alt="issues"  className="doc_img" width="1400" height="733"/>
 
-**Step 8:** Click on the **"Issue title."** All the data you provided through LambdaTest would already be presented in it. LambdaTest automatically includes test environment details and related screenshots under your work in Bitbucket. You will also find a clickable link that will open the screenshot attachment.
+**Step 8:** Click on the **"Issue title."** All the data you provided through <BrandName /> would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots under your work in Bitbucket. You will also find a clickable link that will open the screenshot attachment.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-integrationdemo.webp').default} alt="Integration demo"  className="doc_img" width="1365" height="649"/>
 
@@ -134,25 +136,25 @@ When marking as bug, make sure that you have a repository already created into y
 ***
 You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to **remove** your current integration. Here is how you can do that.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
-**Step 2:** Select ‘Integration’ from the left navigation menu bar. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select ‘Integration’ from the left navigation menu bar. This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on ‘REMOVE’. You can find the remove button right under the **‘Bitbucket’** block which would be highlighted with a green tick.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-bitbucket-integration/bitbucket-remove.webp').default} alt="remove"  className="doc_img" width="1349" height="653"/>
 
-That was all you need to know for LambdaTest + Bitbucket Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+That was all you need to know for <BrandName /> + Bitbucket Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

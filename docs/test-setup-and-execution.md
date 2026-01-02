@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/test-setup-and-execution
 site_name: LambdaTest
 slug: test-setup-and-execution
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -20,17 +22,17 @@ slug: test-setup-and-execution
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "LambdaTest Core Concepts",
-          "item": "https://www.lambdatest.com/support/docs/test-setup-and-execution/"
+          "item": `${BRAND_URL}/support/docs/test-setup-and-execution/`
         }]
       })
     }}
@@ -39,16 +41,16 @@ slug: test-setup-and-execution
 # Test Setup And Execution
 ***
 
-After uploading the app to the LambdaTest cloud through REST API, you need to configure different capabilities for the uploaded app in your Appium test scripts. After that, you can run app automation tests using Appium on LambdaTest. 
+After uploading the app to the <BrandName /> cloud through REST API, you need to configure different capabilities for the uploaded app in your Appium test scripts. After that, you can run app automation tests using Appium on <BrandName />. 
 
-The **LambdaTest Desired Capabilities Generator** will help in auto-generating the capabilities class required to run your app automation scripts on the LambdaTest Appium Grid. The Desired capabilities generator will generate the entire code of the capabilities class for the selected setups and programming languages.
+The **<BrandName /> Desired Capabilities Generator** will help in auto-generating the capabilities class required to run your app automation scripts on the <BrandName /> Appium Grid. The Desired capabilities generator will generate the entire code of the capabilities class for the selected setups and programming languages.
 
 This documentation guides you how to configure the desired capability for app, device, group tests, debugging, and mark tests passed/failed etc.
 
 ## Configure App
 ***
 
-In order to fetch and install apps on LambdaTest cloud, you will need to use the `app` capability to connect with your uploaded apps.
+In order to fetch and install apps on <BrandName /> cloud, you will need to use the `app` capability to connect with your uploaded apps.
 
 | Key | Values | Description | Desired Capability |
 | -------- | -----| ------------ | --------------|
@@ -93,7 +95,7 @@ By specifying the capabilities for the debugging tools, you can debug and fix yo
 ## Viewing Appium Test Results
 ***
 
-You can view the results of your app automation tests on the LambdaTest App Automation dashboard and using the REST API. Configure **build** and **project** capabilities to segregate your test sessions into distinct builds and projects.
+You can view the results of your app automation tests on the <BrandName /> App Automation dashboard and using the REST API. Configure **build** and **project** capabilities to segregate your test sessions into distinct builds and projects.
 
 | Key | Values | Description | Desired Capability |
 | -------- | -----| ------------ | --------------|
@@ -103,11 +105,11 @@ You can view the results of your app automation tests on the LambdaTest App Auto
 ## Mark Tests As Passed Or Failed
 ***
 
-While performing mobile app automation on LambdaTest Appium Grid, you may encounter a scenario in which a test that you labeled as failed in your local instance turns out to be performed successfully on LambdaTest. It's crucial to mark an automated test as **Passed** or **Failed** based on your testing requirements for validating expected behavior.
+While performing mobile app automation on <BrandName /> Appium Grid, you may encounter a scenario in which a test that you labeled as failed in your local instance turns out to be performed successfully on <BrandName />. It's crucial to mark an automated test as **Passed** or **Failed** based on your testing requirements for validating expected behavior.
 
 By default, the Status of each test that runs successfully is marked as **Completed**, and if there are any issues, the Status is marked as **Error**.
 
-You can mark a test status as failed/passed using JavaScript executer on LambdaTest.
+You can mark a test status as failed/passed using JavaScript executer on <BrandName />.
 
 1. To mark test status as **failed**.
 
@@ -123,12 +125,12 @@ You can mark a test status as failed/passed using JavaScript executer on LambdaT
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

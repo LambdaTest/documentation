@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/generate-multiple-lighthouse-reports
 site_name: LambdaTest
 slug: generate-multiple-lighthouse-reports
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: generate-multiple-lighthouse-reports
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Generating Multiple Lighthouse Reports Using Lambda Hooks",
-          "item": "https://www.lambdatest.com/support/docs/generate-multiple-lighthouse-reports/"
+          "item": `${BRAND_URL}/support/docs/generate-multiple-lighthouse-reports/`
         }]
       })
     }}
@@ -41,7 +43,7 @@ slug: generate-multiple-lighthouse-reports
 # Generating Multiple Lighthouse Reports Using Lambda Hooks
 ---
 
-LambdaTest lets you perform Selenium automation while allowing you to generate multiple Lighthouse reports through Lambda Hooks. It includes the hook structure, expected behavior, and conditions under which the reports are generated or errors are thrown.
+<BrandName /> lets you perform Selenium automation while allowing you to generate multiple Lighthouse reports through Lambda Hooks. It includes the hook structure, expected behavior, and conditions under which the reports are generated or errors are thrown.
 
 ## Hook Structure
 ---
@@ -70,6 +72,6 @@ jse.executeScript("lambdatest_executor: {\"action\": \"generateLighthouseReport\
   }
   ```
   
-- Lighthouse reports for all hooks executed will be visible on the LambdaTest Web Automation Dashboard under **Performance** tab.
+- Lighthouse reports for all hooks executed will be visible on the <BrandName /> Web Automation Dashboard under **Performance** tab.
 
 <img loading="lazy" src={require('../assets/images/uploads/lreports_se.png').default} alt="Image" width="1347" height="565" className="doc_img"/>

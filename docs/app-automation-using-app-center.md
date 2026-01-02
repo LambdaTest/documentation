@@ -1,4 +1,4 @@
-﻿---
+---
 id: app-center-automation
 title: How to automate apps using App Center on TestMu AI
 hide_title: true
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/app-automation-using-app-center
 site_name: LambdaTest
 slug: app-automation-using-app-center
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +26,17 @@ slug: app-automation-using-app-center
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Migration",
-          "item": "https://www.lambdatest.com/support/docs/app-automation-using-app-center/"
+          "item": `${BRAND_URL}/support/docs/app-automation-using-app-center/`
         }]
       })
     }}
@@ -52,7 +54,7 @@ In this documentation, learn how to install apps from App Center for automated a
 
 Getting started with the setup requires access to the following:
 
-1. Access to LambdaTest Real Devices.
+1. Access to <BrandName /> Real Devices.
 2. Access to App Center and permissions to generate API tokens on App Center.
 
 ## Step 1 - Generating API Token On App Center
@@ -269,12 +271,12 @@ Shown below is the response of the above API call.
 }
 ```
 
-The download_url (For e.g. `https://appcenter-filemanagement-distrib3ede6f06e.azureedge.net/de-25205f705e63/Wikipedia_v2.7.5393-r-2022-02-10_am.apk?sv=2019-&s ig=i170%2FkTlpX%3D&se=202Z&sp=r`) from the above API response will be used to upload your App Release on LambdaTest.
+The download_url (For e.g. `https://appcenter-filemanagement-distrib3ede6f06e.azureedge.net/de-25205f705e63/Wikipedia_v2.7.5393-r-2022-02-10_am.apk?sv=2019-&s ig=i170%2FkTlpX%3D&se=202Z&sp=r`) from the above API response will be used to upload your App Release on <BrandName />.
 
-## Step 5: Upload the Release Version Of An App On LambdaTest
+## Step 5: Upload the Release Version Of An App On <BrandName />
 ***
 
-You can upload the release version of your app on LambdaTest by using the following API call -
+You can upload the release version of your app on <BrandName /> by using the following API call -
 
 ```js
 curl -u "<username>:<access_key>" \ 
@@ -293,12 +295,12 @@ Below is the response of the above cURL request.
 } 
 ```
 
-Using the `app_url` obtained in the response, you can execute your Appium tests on LambdaTest.
+Using the `app_url` obtained in the response, you can execute your Appium tests on <BrandName />.
 
 ## Step - 6 Executing Your Tests
 ***
 
-Once your app is successfully uploaded, you can refer to [Getting Started With Appium Testing](/support/docs/getting-started-with-appium-testing/) for more information on executing Appium tests on LambdaTest.
+Once your app is successfully uploaded, you can refer to [Getting Started With Appium Testing](/support/docs/getting-started-with-appium-testing/) for more information on executing Appium tests on <BrandName />.
 
 ***
 
@@ -307,12 +309,12 @@ Once your app is successfully uploaded, you can refer to [Getting Started With A
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,4 +1,4 @@
-﻿---
+---
 id: settings-and-security
 title: Settings and Security
 hide_title: true
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/settings-and-security
 site_name: LambdaTest
 slug: settings-and-security
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +25,17 @@ slug: settings-and-security
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Settings and Security",
-          "item": "https://www.lambdatest.com/support/docs/settings-and-security/"
+          "item": `${BRAND_URL}/support/docs/settings-and-security/`
         }]
       })
     }}
@@ -55,7 +57,7 @@ This page empowers you to manage your account's security settings, ensuring the 
 - View active and recent testing sessions.
 - Terminate active sessions remotely if necessary.
 - API Key Management:
-- Generate and manage API keys for programmatic access to LambdaTest features.
+- Generate and manage API keys for programmatic access to <BrandName /> features.
 - Revoke API keys to restrict access.
 - Data Privacy:
 - Access and download your personal data.
@@ -63,15 +65,15 @@ This page empowers you to manage your account's security settings, ensuring the 
 
 ## Additional Information:
 
-> Refer to LambdaTest's Terms of Service and Privacy Policy: for detailed information on data handling and security practices.
+> Refer to <BrandName />'s Terms of Service and Privacy Policy: for detailed information on data handling and security practices.
 
-Contact LambdaTest Support: for assistance with any security-related concerns or inquiries.
+Contact <BrandName /> Support: for assistance with any security-related concerns or inquiries.
 
 ## Best Practices:
 
-- Use strong passwords: that are unique to your LambdaTest account.
+- Use strong passwords: that are unique to your <BrandName /> account.
 - Enable 2FA: for an extra layer of protection.
 - Regularly review your integrations: and revoke access for those that are no longer needed.
 - Monitor active sessions: and terminate any suspicious activity.
 - Securely store API keys: and avoid sharing them with unauthorized individuals.
-- Stay informed: about LambdaTest's security updates and best practices.
+- Stay informed: about <BrandName />'s security updates and best practices.

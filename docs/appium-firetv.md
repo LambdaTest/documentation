@@ -115,7 +115,7 @@ Upload your **Fire TV** application (.apk file) to the <BrandName /> servers usi
 
 ### 2. Clone the sample project
 
-1. Clone the LambdaTest’s [LT-appium-firetv](https://github.com/LambdaTest/LT-appium-firetv) and navigate to the code directory as shown below:
+1. Clone the <BrandName />’s [LT-appium-firetv](https://github.com/LambdaTest/LT-appium-firetv) and navigate to the code directory as shown below:
 
 ```bash
 git clone https://github.com/LambdaTest/LT-appium-firetv
@@ -124,7 +124,7 @@ cd LT-appium-firetv
 
 ### 3. Set up your authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set LambdaTest `Username` and `Access Key` in environment variables with following commands.
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.
 
 <Tabs className="docs__val">
 

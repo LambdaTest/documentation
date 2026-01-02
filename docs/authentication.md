@@ -46,8 +46,8 @@ The following args can be used while running tests using the run command.
 
 | Arg        | Shorthand | Accepted values            |
 | ---------- | --------- | -------------------------- |
-| --username | --user        | Your LambdaTest username   |
-| --access_key      | --ak        | Your LambdaTest access key |
+| --username | --user        | Your <BrandName /> username   |
+| --access_key      | --ak        | Your <BrandName /> access key |
 
 For example -
 
@@ -62,7 +62,7 @@ For example -
 
 ---
 
-The auth option will help you in specifying your username and access key. You can find your username and access key in the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build). Both, the auth credentials set in environment variables and the ones mentioned in the lambdatest-config.json file will get overridden.
+The auth option will help you in specifying your username and access key. You can find your username and access key in the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build). Both, the auth credentials set in environment variables and the ones mentioned in the lambdatest-config.json file will get overridden.
 
 <img loading="lazy" src={require('../assets/images/cypress/cypress3.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -70,8 +70,8 @@ The options supported in the auth are as follows:
 
 | Arg            | Accepted values            |
 | -------------- | -------------------------- |
-| **username**   | Your LambdaTest username   |
-| **access_key** | Your LambdaTest access key |
+| **username**   | Your <BrandName /> username   |
+| **access_key** | Your <BrandName /> access key |
 
 For example -
 
@@ -91,8 +91,8 @@ While utilizing the CLI params, you can set up the following environment variabl
 
 | Env variable      | Accepted values            |
 | ----------------- | -------------------------- |
-| **LT_USERNAME**   | Your LambdaTest username   |
-| **LT_ACCESS_KEY** | Your LambdaTest access key |
+| **LT_USERNAME**   | Your <BrandName /> username   |
+| **LT_ACCESS_KEY** | Your <BrandName /> access key |
 
 Or you can also set environment variables using following commands:
 
@@ -129,12 +129,12 @@ By doing so, the auth credentials you use in your **lambdatest-config.json** fil
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

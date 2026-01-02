@@ -1,4 +1,4 @@
-﻿---
+---
 id: install-apps-from-app-store
 title: How to Test Apps Installed via App Store?
 hide_title: true
@@ -11,6 +11,8 @@ url: https://www.testmu.ai/support/docs/install-apps-from-app-store
 site_name: LambdaTest
 slug: install-apps-from-app-store
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,17 +22,17 @@ slug: install-apps-from-app-store
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to Test Apps Installed via App Center?",
-          "item": "https://www.lambdatest.com/support/docs/install-apps-from-app-store/"
+          "item": `${BRAND_URL}/support/docs/install-apps-from-app-store/`
         }]
       })
     }}
@@ -38,11 +40,11 @@ slug: install-apps-from-app-store
 
 # How to Test Apps Installed via App Store?
 
-The Apple App Store is a digital marketplace for purchasing and downloading mobile applications on iOS devices. LambdaTest allows you to install apps directly from the App Store and test them on real iOS devices, ensuring that they perform well in actual user environments.
+The Apple App Store is a digital marketplace for purchasing and downloading mobile applications on iOS devices. <BrandName /> allows you to install apps directly from the App Store and test them on real iOS devices, ensuring that they perform well in actual user environments.
 
 Let's dive in to learn how to test apps installed from App Store.
 
-**Step 1**: Login to your LambdaTest account. Visit **Real Device** from the left panel and navigate to the **App Testing**.
+**Step 1**: Login to your <BrandName /> account. Visit **Real Device** from the left panel and navigate to the **App Testing**.
 
 **Step 2**: Next, choose the OS version. In this case lets choose **iOS**.
 
@@ -61,12 +63,12 @@ Let's dive in to learn how to test apps installed from App Store.
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

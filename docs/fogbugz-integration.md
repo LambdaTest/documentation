@@ -1,4 +1,4 @@
-﻿---
+---
 id: fogbugz-integration
 title: FogBugz Integration
 hide_title: true
@@ -21,6 +21,8 @@ url: https://www.testmu.ai/support/docs/fogbugz-integration
 site_name: LambdaTest
 slug: fogbugz-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ slug: fogbugz-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "FogBugz Integration",
-          "item": "https://www.lambdatest.com/support/docs/fogbugz-integration/"
+          "item": `${BRAND_URL}/support/docs/fogbugz-integration/`
         }]
       })
     }}
@@ -56,15 +58,15 @@ FogBugz is a web-based project management tool with features like bug and issue 
 </div>
 </div>
 
-LambdaTest's integration with FogBugz allows you to avoid the hassle of maintaining issues and tasks manually and instead log bugs in a single click while performing [cross browser testing](https://www.lambdatest.com) of your website from the LambdaTest platform to your FogBugz instance.
+<BrandName />'s integration with FogBugz allows you to avoid the hassle of maintaining issues and tasks manually and instead log bugs in a single click while performing [cross browser testing](https://www.lambdatest.com) of your website from the <BrandName /> platform to your FogBugz instance.
 
 
-## Integrating FogBugz With LambdaTest
+## Integrating FogBugz With <BrandName />
 ***
 
 > **Note:** Before enabling integrations, ensure you have administrator or user-level access.
 
-**Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
 
 **Step 2:** Select **Integrations** from the left sidebar and then FogBugz.
 
@@ -92,7 +94,7 @@ LambdaTest's integration with FogBugz allows you to avoid the hassle of maintain
 
 <img loading="lazy" src={require('../assets/images/fogbugz-integration/fogbugz-five.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-After installing, **FogBugz will be integrated** with your LambdaTest account.
+After installing, **FogBugz will be integrated** with your <BrandName /> account.
 
 
 ## One-Click Bug Logging With Google Chat
@@ -119,7 +121,7 @@ Upon clicking, a cloud-based virtual machine will fire up, running real browsers
 
 <img loading="lazy" src={require('../assets/images/fogbugz-integration/fogbugz-eight.webp').default} alt="details" width="1365" height="616" className="doc_img"/>
 
-**Step 6:** To view the logged issues, visit LambdaTest Dashboard and head to **Manage > Issue Tracker** from the left navigation bar.
+**Step 6:** To view the logged issues, visit <BrandName /> Dashboard and head to **Manage > Issue Tracker** from the left navigation bar.
 
 **Step 7:** Inside the **Issue Tracker**, you'll notice the logged bugs along with their test environment details. Click on the **upper right arrow** in the square button to view your logged bugs in FogBugz. 
 
@@ -133,23 +135,23 @@ Upon clicking, a cloud-based virtual machine will fire up, running real browsers
 
 ***
 
-**Step 1:** Sign in to your LambdaTest account and visit Integrations from the left sidebar menu.
+**Step 1:** Sign in to your <BrandName /> account and visit Integrations from the left sidebar menu.
 
 **Step 2:** From the My Integrations section, click the remove option under the FogBugz block.
 
 <img loading="lazy" src={require('../assets/images/fogbugz-integration/fogbugz-eleven.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
 
-> That was all you need to know for LambdaTest + Google Chat Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + Google Chat Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

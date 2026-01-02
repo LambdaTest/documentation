@@ -1,4 +1,4 @@
-﻿---
+---
 id: app-automation-dashboard
 title: Accessing Test Results From App Automation Dashboard
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/app-automation-dashboard
 site_name: LambdaTest
 slug: app-automation-dashboard
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -20,30 +22,30 @@ slug: app-automation-dashboard
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "App Automation Dashboard",
-          "item": "https://www.lambdatest.com/support/docs/app-automation-dashboard/"
+          "item": `${BRAND_URL}/support/docs/app-automation-dashboard/`
         }]
       })
     }}
 ></script>
 
-# Inside LambdaTest App Automation Dashboard
+# Inside <BrandName /> App Automation Dashboard
 ***
 
-You can view your App automated test results on LambdaTest App Automation Dashboard. LambdaTest App Automation dashboard enables you to debug failed test sessions utilizing different test logs. The capabilities for a given test session may be specified in the test script and generated using the LambdaTest Capability Generator.
+You can view your App automated test results on <BrandName /> App Automation Dashboard. <BrandName /> App Automation dashboard enables you to debug failed test sessions utilizing different test logs. The capabilities for a given test session may be specified in the test script and generated using the <BrandName /> Capability Generator.
 
 ## Debugging Tests
 ***
-LambdaTest allows you to debug and fix failed test cases using extensive test logs such as Appium logs, device logs, network logs, screenshots, and video logs.
+<BrandName /> allows you to debug and fix failed test cases using extensive test logs such as Appium logs, device logs, network logs, screenshots, and video logs.
 
 1. **Device Logs**
 
@@ -69,7 +71,7 @@ capabilities.setCapability("network", "true")
 
 Appium logs allows you to capture the logs created by the Appium server during test execution, that include a comprehensive session log.
 
->**Note**: On LambdaTest platform, Appium logs are enabled by default.
+>**Note**: On <BrandName /> platform, Appium logs are enabled by default.
 
 4. **Visual Logs**
 
@@ -98,18 +100,18 @@ capabilities.setCapability("video", "true")
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       LambdaTest App Automation Dashboard
+       <BrandName /> App Automation Dashboard
       </span>
     </li>
   </ul>

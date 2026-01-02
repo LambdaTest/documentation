@@ -1,4 +1,4 @@
-﻿---
+---
 id: puppeteer-codecept
 title: Run Puppeteer Tests Using CodeceptJS
 hide_title: true
@@ -18,6 +18,8 @@ url: https://www.testmu.ai/support/docs/puppeteer-testing-with-codecept
 site_name: LambdaTest
 slug: puppeteer-testing-with-codecept
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -26,17 +28,17 @@ slug: puppeteer-testing-with-codecept
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Puppeteer Testing With CodeceptJS",
-          "item": "https://www.lambdatest.com/support/docs/puppeteer-testing-with-codecept/"
+          "item": `${BRAND_URL}/support/docs/puppeteer-testing-with-codecept/`
         }]
       })
     }}
@@ -45,7 +47,7 @@ slug: puppeteer-testing-with-codecept
 # Puppeteer Testing With CodeceptJS
 * * *
 
-Learn how to run your Puppeteer tests with CodeceptJS across 40+ real browsers and operating systems on the LambdaTest platform. 
+Learn how to run your Puppeteer tests with CodeceptJS across 40+ real browsers and operating systems on the <BrandName /> platform. 
 
 ## Prerequisites
 ***
@@ -53,7 +55,7 @@ Learn how to run your Puppeteer tests with CodeceptJS across 40+ real browsers a
 1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or clone the code sample for the Puppeteer Codecept from the LambdaTest GitHub repository to run the tests.
+Download or clone the code sample for the Puppeteer Codecept from the <BrandName /> GitHub repository to run the tests.
 
 <a href="https://github.com/LambdaTest/puppeteer-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -77,7 +79,7 @@ npm install
 npm install codeceptjs puppeteer --save
 ```
 
-4. To run Puppeteer tests with CodeceptJS, set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+4. To run Puppeteer tests with CodeceptJS, set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
 <img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
@@ -99,7 +101,7 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ## Running Tests Using CodeceptJS
 --- 
 
->**Test Scenario**: The below test script searches LambdaTest on DuckDuckGo and verifies the website title.
+>**Test Scenario**: The below test script searches <BrandName /> on DuckDuckGo and verifies the website title.
 
 1. Navigate to the `codecept.conf.js` file in the `puppeteer-codecept` directory.
 
@@ -177,4 +179,4 @@ exports.config = {
 npx codeceptjs run
 ```
 
-3. Visit the [LambdaTest Web Automation Dashboard](https://automation.lambdatest.com/build) to see your test results.
+3. Visit the [<BrandName /> Web Automation Dashboard](https://automation.lambdatest.com/build) to see your test results.

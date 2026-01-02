@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/hyperexecute-cli-error
 site_name: LambdaTest
 slug: hyperexecute-cli-error
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: hyperexecute-cli-error
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Debug Failed Job",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-cli-error/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-cli-error/`
         }]
       })
     }}
@@ -80,4 +82,4 @@ Now, to validate the connectivity and to make sure the **auth.hyperexecute.cloud
 | FQDN | Protocol:Port | Reason |
 |------|---------------|--------|
 |*.hyperexecute.cloud | Https:443 |HyperExecute’s registered wildcard domain to allow access to all HyperExecute’s services|
-|*.lambdatest.com | Https:443 | LambdaTest’s registered wildcard domain to allow access to all LambdaTest’s services (like auth, plan-validation) |
+|*.lambdatest.com | Https:443 | <BrandName />’s registered wildcard domain to allow access to all <BrandName />’s services (like auth, plan-validation) |

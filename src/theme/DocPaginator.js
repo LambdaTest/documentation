@@ -39,8 +39,8 @@ export default function DocPaginator(props) {
       <OriginalComp {...props} />
       <footer>
         <div className="doc_footer">
-          {/* <a role="button" tabindex="0" href='https://www.lambdatest.com/'><img loading="lazy" src="/support/img/logo.svg" className='footer_light_logo' width="147" height="26" alt="LambdaTest" /> <img loading="lazy" src="/support/img/logo_dark.svg" className='footer_dark_logo' width="300" height="51" alt="LambdaTest" /></a> */}
-          <p>&copy; {new Date().getFullYear()} LambdaTest Inc. All rights reserved.</p>
+        
+          <p>&copy; {new Date().getFullYear()} TestMu AI Inc. All rights reserved.</p>
           <div className='side_footer_link'>
             <a role="button" tabIndex="0" href='https://status.lambdatest.io/'>Status</a>
             <a role="button" tabIndex="0" href='https://www.lambdatest.com/legal/terms-of-service'>Terms</a>

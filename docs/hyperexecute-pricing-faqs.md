@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/hyperexecute-pricing-faqs
 site_name: LambdaTest
 slug: hyperexecute-pricing-faqs
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: hyperexecute-pricing-faqs
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-pricing-faqs/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-pricing-faqs/`
         }]
       })
     }}
@@ -60,7 +62,7 @@ slug: hyperexecute-pricing-faqs
 
 ***
 
-#### 4. **Can I use the standard LambdaTest automation platform with the HyperExecute license?**
+#### 4. **Can I use the standard <BrandName /> automation platform with the HyperExecute license?**
 
   Each HyperExecute license provides access to standard automation platforms and features. This makes transitioning to HyperExecute easier and makes sure that the best cross-browser platform features are still available to users purchasing a HyperExecute license.
 
@@ -69,12 +71,12 @@ slug: hyperexecute-pricing-faqs
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

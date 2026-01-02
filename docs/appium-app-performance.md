@@ -16,6 +16,8 @@ slug: appium-app-performance-analytics
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,23 +27,23 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "App Automation: Regular Expression",
-          "item": "https://www.lambdatest.com/support/docs/appium-app-performance-analytics/"
+          "item": `${BRAND_URL}/support/docs/appium-app-performance-analytics/`
         }]
       })
     }}
 ></script>
 <RealDeviceTag value="Real Device" /> 
-App performance is critical factor for user satisfaction and adoption. Identifying and resolving bottlenecks early is essential for delivering a high-quality experience but it requires constant monitoring and optimization across various device metrics. LambdaTest’s App Profiling feature helps you to detect and optimize performance issues before release by providing real-time insights into key metrics like CPU usage, memory consumption, and network activity on real devices.
+App performance is critical factor for user satisfaction and adoption. Identifying and resolving bottlenecks early is essential for delivering a high-quality experience but it requires constant monitoring and optimization across various device metrics. <BrandName />’s App Profiling feature helps you to detect and optimize performance issues before release by providing real-time insights into key metrics like CPU usage, memory consumption, and network activity on real devices.
 
 You can enable performance tracking in your existing automation tests with the following capability:
 
@@ -72,7 +74,7 @@ Here is a description of each metric from the App Profiling summary:
 ## Key Performance Metrics
 
 ### 1. CPU Consumption
-The CPU handles all operations within a mobile device. High CPU usage impacts overall system performance and drains the battery faster. By monitoring CPU consumption, you can pinpoint which features are resource-heavy and optimize them for better performance. LambdaTest provides two CPU metrics in a time-series format:
+The CPU handles all operations within a mobile device. High CPU usage impacts overall system performance and drains the battery faster. By monitoring CPU consumption, you can pinpoint which features are resource-heavy and optimize them for better performance. <BrandName /> provides two CPU metrics in a time-series format:
 
 - **System CPU Usage (%):** Total CPU usage across the system.
 - **App CPU Usage (%):** CPU usage specific to your app.
@@ -84,7 +86,7 @@ Using these insights, you can minimize CPU-intensive operations, delivering a sm
 ### 2. Memory Consumption
 RAM is a critical resource for mobile apps. Excessive memory consumption can lead to memory leaks, degraded performance, and application crashes.
 
-LambdaTest offers three memory metrics:
+<BrandName /> offers three memory metrics:
 - **System Memory Usage (MB):** Overall memory consumption during the session.
 - **App Memory Usage (MB):** Memory consumed by your application.
 - **Available Memory (MB):** Remaining memory available for use.
@@ -103,7 +105,7 @@ The Disk Usage metric provides insights into how much disk space is being utiliz
 ### 4. Rendering (Frame Rate)
 Smooth rendering directly affects how responsive your app feels to users. Rendering performance is a typical performance issue that any app faces. It is measured at different stages in the app’s lifecycle to ensure that users do not have a bad experience with the app. 
 
-LambdaTest measures your app's Frames Per Second (FPS) across its lifecycle, which helps you identify performance bottlenecks in rendering and improve user experience.
+<BrandName /> measures your app's Frames Per Second (FPS) across its lifecycle, which helps you identify performance bottlenecks in rendering and improve user experience.
 
 - **Frames Per Second (FPS):** Real-time measurement of rendering performance throughout the session.
 
@@ -112,7 +114,7 @@ LambdaTest measures your app's Frames Per Second (FPS) across its lifecycle, whi
 ### 5. Network Usage
 Understanding how your app utilizes network resources is essential for optimizing data transfer and ensuring efficient performance.
 
-LambdaTest tracks:
+<BrandName /> tracks:
 - **Download Size (MB):** Amount of data downloaded during the session.
 - **Upload Size (MB):** Amount of data uploaded during the session.
 
@@ -124,7 +126,7 @@ This helps you to monitor:
 <img loading="lazy" src={require('../assets/images/appium-app/network.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 ### 6. Battery Consumption
-Apps that consume excessive battery negatively affect user experience. With LambdaTest, you can monitor how your app impacts battery drain, identify features that are energy hogs, and optimize them. This will help extend battery life for devices running your app.
+Apps that consume excessive battery negatively affect user experience. With <BrandName />, you can monitor how your app impacts battery drain, identify features that are energy hogs, and optimize them. This will help extend battery life for devices running your app.
 
 - **Battery Drain Rate:** Amount of battery consumed while using the app.
 
@@ -135,7 +137,7 @@ Battery consumption data is only displayed for Android applications. This featur
 :::
 
 ### 7. Temperature Monitoring
-High device temperature can degrade performance and harm the user experience. LambdaTest lets you monitor battery temperature during app usage, helping you optimize features causing excessive heat generation and reducing the risk of device overheating.
+High device temperature can degrade performance and harm the user experience. <BrandName /> lets you monitor battery temperature during app usage, helping you optimize features causing excessive heat generation and reducing the risk of device overheating.
 
 - **Temperature:** Temperature of the device battery during app usage.
 
@@ -143,7 +145,7 @@ High device temperature can degrade performance and harm the user experience. La
 
 ### 8. ANR (Application Not Responding)
 
-Sometimes, your application stops responding, and you receive a pop-up to wait or close the app. Application freezes and crashes are frustrating for users. LambdaTest provides detailed logs on ANR events, that helps you diagnose the root causes and eliminate them.
+Sometimes, your application stops responding, and you receive a pop-up to wait or close the app. Application freezes and crashes are frustrating for users. <BrandName /> provides detailed logs on ANR events, that helps you diagnose the root causes and eliminate them.
 
 > Currently, ANR monitoring is available for **Android devices** only.
 
@@ -153,12 +155,12 @@ Metrics Provided:
 - **Log Dumps:** Detailed logs for each ANR event to aid in troubleshooting.
 
 ### 9. Application Start-up Time
-Application start-up time significantly impacts the first impression and overall user experience. Slow startup times create a poor first impression. LambdaTest tracks both cold and hot startup times for Android devices, giving you the data needed to reduce delays and deliver a faster app launch.
+Application start-up time significantly impacts the first impression and overall user experience. Slow startup times create a poor first impression. <BrandName /> tracks both cold and hot startup times for Android devices, giving you the data needed to reduce delays and deliver a faster app launch.
 
 ## Fetch your App Profiling details via API
-LambdaTest provides an API that allows you to programmatically access detailed app profiling metrics captured during your test sessions. By integrating this API into your CI/CD pipelines or automation frameworks, you can fetch real-time data such as CPU usage, memory consumption, disk usage, and network activity for deeper analysis. This enables continuous monitoring and performance optimization without manual intervention.
+<BrandName /> provides an API that allows you to programmatically access detailed app profiling metrics captured during your test sessions. By integrating this API into your CI/CD pipelines or automation frameworks, you can fetch real-time data such as CPU usage, memory consumption, disk usage, and network activity for deeper analysis. This enables continuous monitoring and performance optimization without manual intervention.
 
-To retrieve profiling details, simply make a request to the LambdaTest API using your **authentication token (username and access key)** and the relevant **session ID**. The response will include comprehensive metrics in JSON format, allowing easy integration with other tools or reporting systems for further insights.
+To retrieve profiling details, simply make a request to the <BrandName /> API using your **authentication token (username and access key)** and the relevant **session ID**. The response will include comprehensive metrics in JSON format, allowing easy integration with other tools or reporting systems for further insights.
 
 <div className="lambdatest__codeblock">
   <CodeBlock className="language-bash">
@@ -191,12 +193,12 @@ To retrieve profiling details, simply make a request to the LambdaTest API using
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -16,13 +16,13 @@ site_name: LambdaTest
 slug: extended-debugging-options
 ---
 
-LambdaTest's Extended Debugging Options provide powerful capabilities to debug and optimize your Selenium tests by giving you granular control over network behavior and system performance. These advanced debugging features allow you to intercept and modify network requests, simulate various CPU and network conditions, and download comprehensive network analysis files—all within your test automation workflow.
+<BrandName />'s Extended Debugging Options provide powerful capabilities to debug and optimize your Selenium tests by giving you granular control over network behavior and system performance. These advanced debugging features allow you to intercept and modify network requests, simulate various CPU and network conditions, and download comprehensive network analysis files—all within your test automation workflow.
 
 With Extended Debugging Options, you can replicate real-world scenarios such as slow networks, resource-constrained devices, API failures, and connectivity issues, ensuring your application delivers a robust user experience across diverse conditions and environments.
 
 ## How can Extended Debugging Options help you?
 
-Extended Debugging Options on LambdaTest provide comprehensive capabilities for advanced testing and debugging scenarios:
+Extended Debugging Options on <BrandName /> provide comprehensive capabilities for advanced testing and debugging scenarios:
 
 - **Network Request Control**: Intercept and modify outgoing requests to test API failures, redirects, and mock responses without setting up complex backend infrastructure.
 - **Performance Testing**: Simulate various CPU and network throttling conditions to understand how your application performs on low-end devices or poor network connections.
@@ -31,7 +31,7 @@ Extended Debugging Options on LambdaTest provide comprehensive capabilities for 
 
 ## Available Extended Debugging Methods
 
-LambdaTest supports the following extended debugging methods:
+<BrandName /> supports the following extended debugging methods:
 
 | Method | Description |
 |--------|-------------|
@@ -46,7 +46,7 @@ LambdaTest supports the following extended debugging methods:
 
 ## 1. Intercept Network Requests
 
-LambdaTest provides three specialized methods to intercept and modify network requests, enabling you to test how your application behaves under different network conditions, mock API responses, and simulate error scenarios.
+<BrandName /> provides three specialized methods to intercept and modify network requests, enabling you to test how your application behaves under different network conditions, mock API responses, and simulate error scenarios.
 
 ### Method 1: Redirect Requests (`lt:intercept:redirect`)
 
@@ -309,7 +309,7 @@ await driver.get("https://www.nytimes.com");
 
 ### Predefined Network Profiles
 
-LambdaTest provides predefined network profiles for quick testing across common connection types:
+<BrandName /> provides predefined network profiles for quick testing across common connection types:
 
 | Profile | Download Speed | Upload Speed | Latency (ms) |
 |---------|----------------|--------------|--------------|
@@ -378,7 +378,7 @@ These files contain detailed information about request/response headers, timing 
 
 ## Best Practices
 
-When using Extended Debugging Options on LambdaTest, consider the following best practices:
+When using Extended Debugging Options on <BrandName />, consider the following best practices:
 
 - **Use Wildcards Wisely**: When intercepting requests, use specific URL patterns to avoid unintended interceptions.
 - **Test Incrementally**: Start with mild throttling conditions and gradually increase constraints to identify performance breaking points.

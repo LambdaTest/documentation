@@ -1,4 +1,4 @@
-﻿---
+---
 id: cypress-mochaawesome-report
 title: Consolidated Mochawesome Report for Cypress
 hide_title: false
@@ -24,17 +24,17 @@ slug: cypress-mochaawesome-report
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Cypress Mochawesome Report",
-          "item": "https://www.lambdatest.com/support/docs/cypress-mochaawesome-report/"
+          "item": `${BRAND_URL}/support/docs/cypress-mochaawesome-report/`
         }]
       })
     }}

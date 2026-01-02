@@ -1,4 +1,4 @@
-﻿---
+---
 id: accessibility-testing
 title: TestMu AI Accessibility Testing
 hide_title: false
@@ -16,6 +16,8 @@ slug: accessibility-testing
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,23 +27,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "What is Accessibility Testing",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-testing/"
+          "item": `${BRAND_URL}/support/docs/accessibility-testing/`
         }]
       })
     }}
 ></script>
 
-LambdaTest’s Accessibility Testing Suite ensures digital experiences are accessible to everyone. Whether it's a website, web app, or mobile app, the suite simplifies the process of testing and improving accessibility. It offers various types of accessibility testing, including support for NVDA, VoiceOver, and TalkBack, ensuring seamless experiences for users with visual, motor, and hearing impairments. It helps businesses adhere to global accessibility standards while enhancing usability across platforms. Additionally, automated accessibility checks for both web and mobile apps streamline the testing process, ensuring compliance with global standards like WCAG.
+<BrandName />’s Accessibility Testing Suite ensures digital experiences are accessible to everyone. Whether it's a website, web app, or mobile app, the suite simplifies the process of testing and improving accessibility. It offers various types of accessibility testing, including support for NVDA, VoiceOver, and TalkBack, ensuring seamless experiences for users with visual, motor, and hearing impairments. It helps businesses adhere to global accessibility standards while enhancing usability across platforms. Additionally, automated accessibility checks for both web and mobile apps streamline the testing process, ensuring compliance with global standards like WCAG.
 
 ## What is Accessibility Testing?
 
@@ -100,11 +102,11 @@ Accessibility testing is essential for all businesses striving to create inclusi
 - **Educational Platforms:** Helps students access learning materials, participate in discussions, and complete assignments without barriers.
 - **Financial Services:** Ensures accessibility for managing accounts, completing transactions, and accessing services.
 
-## How LambdaTest Helps Ensure Accessibility Compliance?
+## How <BrandName /> Helps Ensure Accessibility Compliance?
 
-LambdaTest’s Accessibility Testing Suite simplifies the process of identifying accessibility issues across websites, web apps, and mobile apps, enabling users to make improvements quickly. Below are the different types of accessibility testing that LambdaTest offers to help achieve compliance, create seamless and inclusive user experiences.
+<BrandName />’s Accessibility Testing Suite simplifies the process of identifying accessibility issues across websites, web apps, and mobile apps, enabling users to make improvements quickly. Below are the different types of accessibility testing that <BrandName /> offers to help achieve compliance, create seamless and inclusive user experiences.
 
-### Types of LambdaTest Accessibility Testing
+### Types of <BrandName /> Accessibility Testing
 
 <div className="support_main">  
   <a href="/support/docs/accessibility-devtools">

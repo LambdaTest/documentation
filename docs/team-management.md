@@ -1,4 +1,4 @@
-﻿---
+---
 id: team-management
 title: Team Management
 hide_title: false
@@ -11,6 +11,8 @@ url: https://www.testmu.ai/support/docs/team-management
 site_name: LambdaTest
 slug: team-management
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,8 +37,6 @@ slug: team-management
       })
     }}
 ></script>
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 The <BrandName /> Team Management empowers organizations to collaborate effectively on their Web and App Automation testing by creating isolated testing environments.
 

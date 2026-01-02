@@ -1,4 +1,4 @@
-﻿---
+---
 id: selenium-supported-languages-and-frameworks
 title: Languages and Frameworks supported on TestMu AI Selenium
 hide_title: false
@@ -25,6 +25,8 @@ slug: selenium-supported-languages-and-frameworks
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/SeleniumSupportedLanguage';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,22 +36,22 @@ import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/Selen
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Languages and Frameworks Supported",
-          "item": "https://www.lambdatest.com/support/docs/selenium-supported-languages-and-frameworks/"
+          "item": `${BRAND_URL}/support/docs/selenium-supported-languages-and-frameworks/`
         }]
       })
     }}
 ></script>
-Out of the box, LambdaTest supports multiple languages under Selenium testing frameworks 
+Out of the box, <BrandName /> supports multiple languages under Selenium testing frameworks 
 
 <SeleniumSupportedLanguage />
 
@@ -61,12 +63,12 @@ Out of the box, LambdaTest supports multiple languages under Selenium testing fr
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

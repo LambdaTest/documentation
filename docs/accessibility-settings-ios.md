@@ -16,6 +16,8 @@ slug: accessibility-settings-ios
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,24 +27,24 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "What is Accessibility Testing",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-settings-ios/"
+          "item": `${BRAND_URL}/support/docs/accessibility-settings-ios/`
         }]
       })
     }}
 ></script>
 Accessibility testing ensures that mobile applications and web content are accessible to all users, including those with disabilities. On iOS devices, this involves testing various accessibility features like text size adjustments, contrast settings, and motion reduction.
 
-This document provides an overview of the accessibility features available on iOS devices within LambdaTest's Real Devices Cloud. With support for key features like text size adjustments, contrast settings, motion reduction, and more, you can ensure your applications are optimized for users with diverse accessibility needs.
+This document provides an overview of the accessibility features available on iOS devices within <BrandName />'s Real Devices Cloud. With support for key features like text size adjustments, contrast settings, motion reduction, and more, you can ensure your applications are optimized for users with diverse accessibility needs.
 
 ## Accessibility Settings
 iOS devices offer a range of accessibility features that can be enabled or disabled during setup and customized through the settings app, as outlined in [Apple’s documentation](https://support.apple.com/en-in/guide/iphone/iph3e2e4367/ios).
@@ -51,7 +53,7 @@ Both Real Devices App and Browser testing now support these features to enable a
 
 ## Accessing iOS accessibility settings 
 
-**Step 1 :** Login to your LambdaTest account and navigate to **App Testing/Browser Testing** under Real Devices from the sidebar.
+**Step 1 :** Login to your <BrandName /> account and navigate to **App Testing/Browser Testing** under Real Devices from the sidebar.
 
 **Step 2 :** Select the device-browser combination to start your test session. 
 

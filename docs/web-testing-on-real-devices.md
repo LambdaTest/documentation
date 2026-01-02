@@ -1,4 +1,4 @@
-﻿---
+---
 id: web-testing-on-real-devices
 title: Web Testing On Real Devices
 hide_title: true
@@ -19,6 +19,8 @@ url: https://www.testmu.ai/support/docs/web-testing-on-real-devices
 site_name: LambdaTest
 slug: web-testing-on-real-devices
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +30,17 @@ slug: web-testing-on-real-devices
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Web Testing On Real Devices",
-          "item": "https://www.lambdatest.com/support/docs/web-testing-on-real-devices/"
+          "item": `${BRAND_URL}/support/docs/web-testing-on-real-devices/`
         }]
       })
     }}
@@ -46,11 +48,11 @@ slug: web-testing-on-real-devices
 
 # Web Testing On Real Devices
 ***
-Mobile website testing involves testing websites and web apps across numerous mobile browsers like Chrome, Safari, Opera, etc to make sure your websites (and web apps) are rendering seamlessly across different mobile browsers and devices. LambdaTest real device cloud allows you to manually test websites and web apps on the range of real Android and iOS devices.
+Mobile website testing involves testing websites and web apps across numerous mobile browsers like Chrome, Safari, Opera, etc to make sure your websites (and web apps) are rendering seamlessly across different mobile browsers and devices. <BrandName /> real device cloud allows you to manually test websites and web apps on the range of real Android and iOS devices.
 
-This documentation covers how to perform web testing across real Android and iOS devices on the LambdaTest platform.
+This documentation covers how to perform web testing across real Android and iOS devices on the <BrandName /> platform.
 
->**Note**: Currently Web testing on real devices is in the Beta phase. To access this feature, contact <span className="doc__lt" onClick={() => window.openLTChatWidget()}>LambdaTest Support</span>.
+>**Note**: Currently Web testing on real devices is in the Beta phase. To access this feature, contact <span className="doc__lt" onClick={() => window.openLTChatWidget()}><BrandName /> Support</span>.
 
 
 ## Testing Websites And Web Apps On Real Devices
@@ -58,7 +60,7 @@ This documentation covers how to perform web testing across real Android and iOS
 
 For demonstration, we will perform real-time web testing on real Android devices. 
 
-1. Sign into your LambdaTest account. From the left menu, navigate to Real Time Testing and click **Browser Testing** tab.
+1. Sign into your <BrandName /> account. From the left menu, navigate to Real Time Testing and click **Browser Testing** tab.
 
 <img loading="lazy" src={require('../assets/images/mobile-testing-real-devices/browser-testing.webp').default} alt="Image"  width="1366" height="625" className="doc_img"/>
 
@@ -88,7 +90,7 @@ One-click bug logging allows users to capture screenshots for future reference a
 <img loading="lazy" src={require('../assets/images/mobile-testing-real-devices/create-issue.webp').default} alt="Image" width="1366" height="625" className="doc_img"/>
 
 
-*LambdaTest offers 65+ integrations with your favourite tool for Bug tracking, CI/CD, Project Management, Codeless Automation, and more. Check out [LambdaTest integrations](https://www.lambdatest.com/integrations).*
+*<BrandName /> offers 65+ integrations with your favourite tool for Bug tracking, CI/CD, Project Management, Codeless Automation, and more. Check out [<BrandName /> integrations](https://www.lambdatest.com/integrations).*
 
 
 ## Video Recording Of A Test Session
@@ -230,12 +232,12 @@ Your new Project will be created.--->
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

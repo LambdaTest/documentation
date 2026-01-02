@@ -1,4 +1,4 @@
-﻿---
+---
 id: hyperexecute-bidi-testing
 title: Execute BiDi Framework Tests on HyperExecute
 sidebar_label: BiDi
@@ -20,6 +20,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +31,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started With Bidi Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-bidi-testing/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-bidi-testing/`
         }]
       })
     }}
@@ -65,7 +67,7 @@ This guide details how to execute your **BiDi** tests on **HyperExecute** using 
 ### Step 1: Clone Sample Repository
 
 :::tip BiDi repo
-Download or Clone the BiDi sample from LambdaTest’s GitHub Repository
+Download or Clone the BiDi sample from <BrandName />’s GitHub Repository
 
 <a href="https://github.com/LambdaTest/hyperexecute-bidi-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::

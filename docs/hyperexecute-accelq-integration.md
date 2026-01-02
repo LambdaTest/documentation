@@ -1,4 +1,4 @@
-﻿---
+---
 id: hyperexecute-accelq-integration
 title: Accelq Integration with HyperExecute
 hide_title: true
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/hyperexecute-accelq-integration
 site_name: LambdaTest
 slug: hyperexecute-accelq-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +27,17 @@ slug: hyperexecute-accelq-integration
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accelq Integration",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-accelq-integration/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-accelq-integration/`
         }]
       })
     }}
@@ -52,9 +54,9 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 ### Prerequisites
 ---
 - Sample scripts in Accelq
-- Ensure that you have integrated [Accelq with LambdaTest](/support/docs/accelq-integration/) Cloud Selenium Grid 
+- Ensure that you have integrated [Accelq with <BrandName />](/support/docs/accelq-integration/) Cloud Selenium Grid 
 - Parameters- accelq url, userId, apiKey, tenant code, Job Id
-- Agent.properties file for you configured agent with LambdaTest
+- Agent.properties file for you configured agent with <BrandName />
 
 
 ### Steps to Integrate
@@ -86,7 +88,7 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 **Step 1:** Create an LT profile with with the below configuration and save it
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/accelq/accelq-2.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
 
-**Step 2:** Create a [CI job](https://support.accelq.com/hc/en-us/articles/360016077871-How-do-I-create-a-job-that-I-can-invoke-from-CI-tool#:~:text=Step%201%3A%20On%20the%20ACCELQ,Click%20on%20%22Create%20Job%22) with the same profile and agent which has LambdaTest configured with it.
+**Step 2:** Create a [CI job](https://support.accelq.com/hc/en-us/articles/360016077871-How-do-I-create-a-job-that-I-can-invoke-from-CI-tool#:~:text=Step%201%3A%20On%20the%20ACCELQ,Click%20on%20%22Create%20Job%22) with the same profile and agent which has <BrandName /> configured with it.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/accelq/accelq-3.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
 
@@ -94,9 +96,9 @@ Accelq is the most powerful software testing tool to achieve Codeless test autom
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/accelq/accelq-4.webp').default} alt="accelq-dashboard"  width="1920" height="868" className="doc_img"/>
 
 ### Agent.properties file
-Agent.property file is a type of file that gets generated when you configures the agents from the Accelq to the LambdaTest.
+Agent.property file is a type of file that gets generated when you configures the agents from the Accelq to the <BrandName />.
 
-- You can configure your [LambdaTest from Accelq Agent Dashboard](/support/docs/accelq-integration/#integrating-lambdatest-from-accelq-agent-dashboard)
+- You can configure your [<BrandName /> from Accelq Agent Dashboard](/support/docs/accelq-integration/#integrating-lambdatest-from-accelq-agent-dashboard)
 - You can also find the same at the location `(ACCELQAgent/AgentInstances/<agent folder>/agent.properties)` in your local system.
 
 #### Sample File

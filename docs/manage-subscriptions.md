@@ -1,4 +1,4 @@
-﻿---
+---
 id: manage-subscriptions
 title: Manage Subscriptions
 hide_title: true
@@ -18,6 +18,8 @@ url: https://www.testmu.ai/support/docs/manage-subscriptions
 site_name: LambdaTest
 slug: manage-subscriptions
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +29,17 @@ slug: manage-subscriptions
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Manage Subscriptions",
-          "item": "https://www.lambdatest.com/support/docs/manage-subscriptions/"
+          "item": `${BRAND_URL}/support/docs/manage-subscriptions/`
         }]
       })
     }}
@@ -52,7 +54,7 @@ It's easy to manage your subscriptions by upgrading, removing, and switching the
 ## Upgrading From Free Plan
 * * *
 
-1. Login to your LambdaTest account.
+1. Login to your <BrandName /> account.
 
 2. Click **Upgrade** on the top right corner of the dashboard.
 
@@ -86,7 +88,7 @@ You can customize your plans by adding new plans or remove existing ones. Choose
 ### Adding A New Plan
 ***
 
-1. Login to your LambdaTest account.
+1. Login to your <BrandName /> account.
 
 2. Click **Upgrade** on the top right corner of the dashboard.
 
@@ -147,7 +149,7 @@ After few moments, a confirmation screen will appear stating the final status of
 
 If you are using a Monthly plan, you can always switch to Annual Plan and save up to 20%. 
 
-1. Login to your LambdaTest account.
+1. Login to your <BrandName /> account.
 
 2. Click **Upgrade** on the top right corner of the dashboard.
 
@@ -159,7 +161,7 @@ If you are using a Monthly plan, you can always switch to Annual Plan and save u
 
 ## Canceling The Current Plan Subscription
 * * *
-**Step 1**: Login to your LambdaTest account.
+**Step 1**: Login to your <BrandName /> account.
 
 **Step 2**: Navigate to the profile avatar at the top-right corner. Click on **‘Billing’**.
 
@@ -187,12 +189,12 @@ That's it! You can now successfully upgrade to a new plan, switch between plans,
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

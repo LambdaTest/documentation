@@ -1,4 +1,4 @@
-﻿---
+---
 id: real-time-upload-and-download-files
 title: Upload and Download Files
 hide_title: false
@@ -32,17 +32,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Real Time Upload and Download Files",
-          "item": "https://www.lambdatest.com/support/docs/real-time-upload-and-download-files/"
+          "item": `${BRAND_URL}/support/docs/real-time-upload-and-download-files/`
         }]
       })
     }}

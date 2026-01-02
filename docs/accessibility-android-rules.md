@@ -1,4 +1,4 @@
-﻿---
+---
 id: accessibility-android-rules
 title: Android Accessibility Rules - Quick Reference
 sidebar_label: Android
@@ -27,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Android Rules",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-android-rules/"
+          "item": `${BRAND_URL}/support/docs/accessibility-android-rules/`
         }]
       })
     }}

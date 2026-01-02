@@ -28,6 +28,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -37,17 +39,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to run automation tests on HyperExecute using Gattling framework",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-gattling-testing/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-gattling-testing/`
         }]
       })
     }}
@@ -64,7 +66,7 @@ While Gatling is powerful on its own, running large-scale performance tests usin
 - **Debugging Overhead:** Analyzing failures or performance issues often involves sifting through scattered logs and inconsistent outputs.
 
 ### ✅ How HyperExecute Solves These Challenges
-LambdaTest’s HyperExecute platform is purpose-built to streamline and supercharge your Gatling test execution:
+<BrandName />’s HyperExecute platform is purpose-built to streamline and supercharge your Gatling test execution:
 
 - **⚡ Smart Test Distribution:** Automatically splits and runs tests across multiple machines for faster execution and optimal resource utilization.
 - **🧪 Isolated, Reproducible Environments:** Each test job runs in its own isolated environment with managed dependencies for consistent results.
@@ -73,12 +75,12 @@ LambdaTest’s HyperExecute platform is purpose-built to streamline and supercha
 - **🔍 Deep Debugging Insights:** Rich logs, structured output, and centralized monitoring help you trace performance bottlenecks with ease.
 
 ### 🚀 Result: Scalable, Reliable, and Faster Gatling Test Cycles
-By integrating Gatling with HyperExecute, you can move beyond traditional limitations and run large-scale load tests with speed, precision, and confidence. This guide provides a structured approach to integrating the Gatling performance testing framework with the LambdaTest HyperExecute platform.
+By integrating Gatling with HyperExecute, you can move beyond traditional limitations and run large-scale load tests with speed, precision, and confidence. This guide provides a structured approach to integrating the Gatling performance testing framework with the <BrandName /> HyperExecute platform.
 
 ## Prerequisites
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
@@ -88,7 +90,7 @@ To run the Tests on HyperExecute from your Local System, you are required:
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the Gattling Performance Testing from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the Gattling Performance Testing from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/prateekLambda/Gatling-performance-hyperexecute" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::

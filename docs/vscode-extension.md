@@ -1,4 +1,4 @@
-﻿---
+---
 id: vscode-extension
 title: TestMu AI VS Code Extension For Cross Browser Testing
 hide_title: true
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/vs-code-extension
 site_name: LambdaTest
 slug: vs-code-extension
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -40,8 +42,6 @@ slug: vs-code-extension
     }}
 ></script>
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 # <BrandName /> VS Code Extension
 ---
 
@@ -65,28 +65,28 @@ You can also  <a href="https://marketplace.visualstudio.com/items?itemName=Lambd
 
 Once you install the extension, you'll notice a <BrandName /> icon will be added on the left sidebar.
 
-<img loading="lazy" src={require('../assets/images/vscode-extension/3.png').default} alt="LambdaTest icon" width="1366" height="724" className="doc_img"/><br/><br/>
+<img loading="lazy" src={require('../assets/images/vscode-extension/3.png').default} alt="<BrandName /> icon" width="1366" height="724" className="doc_img"/><br/><br/>
 
 ## Authenticating With VS Code Extension
 ---
 
 1. Click the *<BrandName />* icon from the left sidebar and select **Realtime Testing**.
 
-<img loading="lazy" src={require('../assets/images/vscode-extension/4.png').default} alt="activate LambdaTest Screenshot Plugin" width="792" height="342" className="doc_img"/><br/><br/>
+<img loading="lazy" src={require('../assets/images/vscode-extension/4.png').default} alt="activate <BrandName /> Screenshot Plugin" width="792" height="342" className="doc_img"/><br/><br/>
 
 2. It will ask you to enter your <BrandName /> e-mail and an access key. You can get them from your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile) page.
 
 * Enter your <BrandName /> e-mail and press Enter.
 
-<img loading="lazy" src={require('../assets/images/vscode-extension/5.png').default} alt="LambdaTest User Profile" width="766" height="255" className="doc_img"/><br/><br/>
+<img loading="lazy" src={require('../assets/images/vscode-extension/5.png').default} alt="<BrandName /> User Profile" width="766" height="255" className="doc_img"/><br/><br/>
 
 * Enter your <BrandName /> access key and press Enter.
 
-<img loading="lazy" src={require('../assets/images/vscode-extension/6.png').default} alt="LambdaTest User Profile" width="821" height="252" className="doc_img"/><br/><br/>
+<img loading="lazy" src={require('../assets/images/vscode-extension/6.png').default} alt="<BrandName /> User Profile" width="821" height="252" className="doc_img"/><br/><br/>
 
 After entering <BrandName /> credentials, it will show you a Realtime Testing screen. You're all set to start your real-time cross browser testing!
 
-<img loading="lazy" src={require('../assets/images/vscode-extension/7.png').default} alt="LambdaTest User Profile" width="1360" height="700" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/vscode-extension/7.png').default} alt="<BrandName /> User Profile" width="1360" height="700" className="doc_img"/>
 
 ## Realtime Cross Browser Testing Using VS Code Extension
 ---
@@ -130,10 +130,10 @@ It will take you to a cloud-based virtual machine running real browsers and oper
 
 For more details, head over to our guide on <a href={`${BRAND_URL}/support/docs/testing-locally-hosted-pages/`}>Testing Locally Hosted Pages</a>.
 
-## Uninstalling The LambdaTest VS Code Extension
+## Uninstalling The <BrandName /> VS Code Extension
 ---
 
-To remove the LambdaTest VS Code Extension, select the **Extensions** icon from the left sidebar. Navigate to the settings icon and click **Uninstall**.
+To remove the <BrandName /> VS Code Extension, select the **Extensions** icon from the left sidebar. Navigate to the settings icon and click **Uninstall**.
 
 <img loading="lazy" src={require('../assets/images/vscode-extension/11.png').default} alt="activate screenshot testig feature" width="809" height="482" className="doc_img"/>
 

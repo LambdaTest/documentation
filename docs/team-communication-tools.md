@@ -1,4 +1,4 @@
-﻿---
+---
 id: team-communication-tools
 title: Team Communication Tools
 hide_title: true
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/team-communication-tools
 site_name: LambdaTest
 slug: team-communication-tools
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: team-communication-tools
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Team Communication Tools",
-          "item": "https://www.lambdatest.com/support/docs/team-communication-tools/"
+          "item": `${BRAND_URL}/support/docs/team-communication-tools/`
         }]
       })
     }}
@@ -41,7 +43,7 @@ slug: team-communication-tools
 # Team Communication Tools
 ***
 
-LambdaTest allows you to integrate your LambdaTest account with your favourite communication tools. That way you can instantly share any UI bug that you come across while cross browser testing over 3000+ real browsers hosted by LambdaTest cloud servers. Here are the instant messaging tools that you can integrate with LambdaTest.
+<BrandName /> allows you to integrate your <BrandName /> account with your favourite communication tools. That way you can instantly share any UI bug that you come across while cross browser testing over 3000+ real browsers hosted by <BrandName /> cloud servers. Here are the instant messaging tools that you can integrate with <BrandName />.
 
 <table align="center">   
 
@@ -92,12 +94,12 @@ We would love to hear it. Drop the suggestion in the <span className="doc__lt" 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

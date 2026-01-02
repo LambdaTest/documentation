@@ -14,6 +14,8 @@ slug: hyperexecute-yaml-capability-overrides
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +25,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "YAML Based Capability Overrides",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-yaml-capability-overrides/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-yaml-capability-overrides/`
         }]
       })
     }}
@@ -53,7 +55,7 @@ Previously, these capabilities were typically defined within the test script. Wi
 - Define a new `ltOptions` section inside your HyperExecute YAML file.
 - Specify any desired capabilities as key-value pairs under `ltOptions`.
 - During test execution, HyperExecute automatically merges these with the final capabilities passed to the Selenium session.
-> All the capabilities defined under the `ltOptions` section are fully aligned with LambdaTest's standard capability structure. You can use any capability listed in our [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+> All the capabilities defined under the `ltOptions` section are fully aligned with <BrandName />'s standard capability structure. You can use any capability listed in our [<BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
 ## 🔑 Key Behavior Rules
 

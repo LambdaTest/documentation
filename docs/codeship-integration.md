@@ -1,4 +1,4 @@
-﻿---
+---
 id: codeship-integration
 title: Codeship Integration With TestMu AI
 hide_title: true
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/codeship-integration-with-testmu
 site_name: LambdaTest
 slug: codeship-integration-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,34 +25,34 @@ slug: codeship-integration-with-testmu
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Codeship Integration",
-          "item": "https://www.lambdatest.com/support/docs/codeship-integration-with-testmu/"
+          "item": `${BRAND_URL}/support/docs/codeship-integration-with-testmu/`
         }]
       })
     }}
 ></script>
 
-# Selenium Testing With Concourse CI And LambdaTest
+# Selenium Testing With Concourse CI And <BrandName />
 * * *
 Codeship is a scalable, cloud-based platform for continuous integration that offers GitHub, Bitbucket, and GitLab projects support. There are two versions of Codeship, Codeship Basic and Codeship Pro. Codeship Basic instantly provides robust VMs along with technology stacks being preinstalled to help run your CI/CD pipeline faster. Keep in mind, though, the primary purpose of Codeship Basic is to develop applications with general workflows by UI. It doesn’t offer support for dockers.
 
-LambdaTest now integrates with Codeship to boost your go-to-market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) providing 3000+ real browsers running through machines on the cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to trim down your test cycles drastically.
+<BrandName /> now integrates with Codeship to boost your go-to-market delivery. Perform automated cross browser testing with <BrandName /> to ensure your development code renders seamlessly through an online [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) providing 3000+ real browsers running through machines on the cloud. Perform automation testing in parallel with <BrandName />’s Selenium grid to trim down your test cycles drastically.
 
 ## Prerequisites
 ***
 1. Signing details of Codeship
 2. A GitHub repository. Here is our sample GitHub repository for [Codeship Basic](https://github.com/LambdaTest/protractor-selenium-codeship-basic).
-3. **LambdaTest Authentication Credentials**   
-    Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+3. **<BrandName /> Authentication Credentials**   
+    Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
     * **For Linux/Mac:**
 
@@ -70,7 +72,7 @@ LambdaTest now integrates with Codeship to boost your go-to-market delivery. Per
 
     
 
-## Integrating Codeship With LambdaTest
+## Integrating Codeship With <BrandName />
 ***
 **Step 1:** Sign up on Codeship with your GitHub account, and create a **"New Project."**
 
@@ -104,13 +106,13 @@ cd /home/rof/src/github.com/<GitHubOrganization>/<reponame>/conf
 protractor single.conf.js 
 ```
 
-**Step 7:** Provide your LambdaTest authentication credentials in the **Environment Variables** and hit the **"Save and go to Dashboard"** button.
+**Step 7:** Provide your <BrandName /> authentication credentials in the **Environment Variables** and hit the **"Save and go to Dashboard"** button.
 
-That is it! Now, any changes you commit in your GitHub repository will trigger the build in Codeship and run your test on LambdaTest Selenium Grid.
+That is it! Now, any changes you commit in your GitHub repository will trigger the build in Codeship and run your test on <BrandName /> Selenium Grid.
 
 ## Testing Locally Hosted or Privately Hosted Projects
 ***
-To help you perform [cross browser testing](https://www.lambdatest.com) of your locally stored web pages, LambdaTest provides an SSH(Secure Shell) tunnel connection with the name Lambda Tunnel. With Lambda Tunnel, you can execute a test server inside your GitLab CI build a container to perform automated cross browser testing on browsers offered by Selenium grid on LambdaTest. So you make sure how well your changes look, even before your customers.
+To help you perform [cross browser testing](https://www.lambdatest.com) of your locally stored web pages, <BrandName /> provides an SSH(Secure Shell) tunnel connection with the name Lambda Tunnel. With Lambda Tunnel, you can execute a test server inside your GitLab CI build a container to perform automated cross browser testing on browsers offered by Selenium grid on <BrandName />. So you make sure how well your changes look, even before your customers.
 Curious to know more about Lambda Tunnel?
 
 
@@ -126,7 +128,7 @@ Curious to know more about Lambda Tunnel?
 >- [Lambda Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
 >- [Lambda Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 
-The below example of **pipelinecommand** would demonstrate you to leverage LambdaTest Selenium Grid by performing cross browser testing through the test server contained in your Codeship build.
+The below example of **pipelinecommand** would demonstrate you to leverage <BrandName /> Selenium Grid by performing cross browser testing through the test server contained in your Codeship build.
 Create two pipelines with the following commands:
 
 **Pipeline 1**
@@ -154,7 +156,7 @@ cd /home/rof/src/github.com/<GitHubOrganization>/<reponame>/conf
 protractor local.conf.js
 ```
 
-The setup command will be the same as mentioned earlier under the "Integration With Codeship" section. After then commit any changes into the repository and get your test run using LambdaTest Tunnel.
+The setup command will be the same as mentioned earlier under the "Integration With Codeship" section. After then commit any changes into the repository and get your test run using <BrandName /> Tunnel.
 
 ## Parallel Testing
 ***
@@ -165,21 +167,21 @@ cd /home/rof/src/github.com/<GitHubOrganization>/<reponame>/conf
 protractor parallel.conf.js
 ```
 
-Now, any changes commit in your repository will trigger a build and run automation tests in parallel on LambdaTest Selenium Grid.
+Now, any changes commit in your repository will trigger a build and run automation tests in parallel on <BrandName /> Selenium Grid.
 
-Monitor and analyze your test result on the **[LambdaTest automation dashboard](https://automation.lambdatest.com/).**
+Monitor and analyze your test result on the **[<BrandName /> automation dashboard](https://automation.lambdatest.com/).**
 
-Reliably deploy your code at scale using Codeship integration with LambdaTest, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
+Reliably deploy your code at scale using Codeship integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

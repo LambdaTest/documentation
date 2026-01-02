@@ -1,4 +1,4 @@
-﻿---
+---
 id: bugherd-integration
 title: BugHerd Integration with TestMu AI
 hide_title: false 
@@ -21,6 +21,8 @@ url: https://www.testmu.ai/support/docs/bugherd-integration
 site_name: LambdaTest
 slug: bugherd-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -29,17 +31,17 @@ slug: bugherd-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "BugHerd Integration",
-          "item": "https://www.lambdatest.com/support/docs/bugherd-integration/"
+          "item": `${BRAND_URL}/support/docs/bugherd-integration/`
         }]
       })
     }}
@@ -47,19 +49,19 @@ slug: bugherd-integration
 
 [BugHerd](https://bugherd.com/) is a website bug tracker that allows you to easily create bug reports and track feedback, all without leaving your website. Developers can pin notes on the UI right on the element where the bug occurs, and also easily collect bug reports from users and team members.   Along with each bug report, user technical data is automatically captured so there’s no back and forth, and BugHerd channels all feedback into an integrated Kanban board for easy task management.
 
-LambdaTest integrates with BugHerd, allowing users to file issues directly from the platform, assign them to team members, and attach screenshots during a test session, with populated fields displayed on the BugHerd platform for each testing instance.
+<BrandName /> integrates with BugHerd, allowing users to file issues directly from the platform, assign them to team members, and attach screenshots during a test session, with populated fields displayed on the BugHerd platform for each testing instance.
 
-> BugHerd Integration with LambdaTest is available for freemium as well as premium plan.
+> BugHerd Integration with <BrandName /> is available for freemium as well as premium plan.
 
-## Integrate BugHerd from your LambdaTest Account
+## Integrate BugHerd from your <BrandName /> Account
 
-**Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You should have Admin or User level access to see and install integrations.
 
 **Step 2:** Click on Settings -> Integrations -> Bug Tracker.
 
 **Step 3:** Click on **Connect** button of ‘BugHerd’ block.
 
-**Step 4:** Now, provide your BugHerd API Token to establish integration with LambdaTest and click on **install** button.
+**Step 4:** Now, provide your BugHerd API Token to establish integration with <BrandName /> and click on **install** button.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/videos/integration/bug-tracking/bugherd/bugherd-integrate.mp4').default} type="video/mp4" />
@@ -96,7 +98,7 @@ LambdaTest integrates with BugHerd, allowing users to file issues directly from 
 
 ## Uninstall BugHerd Integration
 
-**Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You should have Admin or User level access to see and install integrations.
 
 **Step 2:** Click on Settings -> Integrations -> Bug Tracker.
 
@@ -106,18 +108,18 @@ LambdaTest integrates with BugHerd, allowing users to file issues directly from 
 <source src= {require('../assets/videos/integration/bug-tracking/bugherd/uninstall-bugherd.mp4').default} type="video/mp4" />
 </video>
 
-> That was all you need to know for LambdaTest + BugHerd Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock. 
+> That was all you need to know for <BrandName /> + BugHerd Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock. 
 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -60,7 +60,7 @@ $env:LT_USERNAME="YOUR_USERNAME"
 </TabItem>
 </Tabs>
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ### **Step 1:** Create a SmartUI Project
 
@@ -91,7 +91,7 @@ git clone https://github.com/LambdaTest/puppeteer-sample.git
 npm i
 ```
 
-3. Set up the LambdaTest credentials by following the instructions mentioned in the `README.md` file.
+3. Set up the <BrandName /> credentials by following the instructions mentioned in the `README.md` file.
 4. Edit the required capabilities in your test file `navigation.js`.
 
 ```javascript title="Add the following code snippet to run SmartUI with Puppeteer in ./navigation.js"
@@ -160,7 +160,7 @@ Execute the test using the following command to run the test suite using `puppet
 node navigation.js
 ```
 
-- You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+- You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 
 For additional information about Puppteer framework please explore the documentation [here](/docs/puppeteer-testing/)
 
@@ -175,12 +175,12 @@ For additional information about Puppteer framework please explore the documenta
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

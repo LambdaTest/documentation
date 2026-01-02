@@ -1,4 +1,4 @@
-﻿---
+---
 id: chrome-os-testing
 title: ChromeOS Testing
 hide_title: false
@@ -27,17 +27,17 @@ slug: chrome-os-testing
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "ChromeOS App Testing",
-          "item": "https://www.lambdatest.com/support/docs/chrome-os-testing/"
+          "item": `${BRAND_URL}/support/docs/chrome-os-testing/`
         }]
       })
     }}

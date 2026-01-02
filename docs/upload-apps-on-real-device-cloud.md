@@ -1,4 +1,4 @@
-﻿---
+---
 id: upload-apps-on-real-device-cloud
 title: Upload Apps on TestMu AI’s Real Device Cloud
 hide_title: true
@@ -15,6 +15,8 @@ slug: upload-apps-on-real-device-cloud
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,25 +26,25 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Upload Apps on LambdaTest’s Real Device Cloud",
-          "item": "https://www.lambdatest.com/support/docs/upload-apps-on-real-device-cloud/"
+          "item": `${BRAND_URL}/support/docs/upload-apps-on-real-device-cloud/`
         }]
       })
     }}
 ></script>
 
-# Upload Apps on LambdaTest’s Real Device Cloud
+# Upload Apps on <BrandName />’s Real Device Cloud
 
-LambdaTest allows you to upload applications either from your local system or directly from a public URL for testing on real Android and iOS devices. This ensures that your apps perform optimally across diverse user environments.
+<BrandName /> allows you to upload applications either from your local system or directly from a public URL for testing on real Android and iOS devices. This ensures that your apps perform optimally across diverse user environments.
 
 Let's dive in to learn how to upload apps to the Real Device Cloud.
 
@@ -99,12 +101,12 @@ You can edit the information at any time and save the changes. If an app is no l
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

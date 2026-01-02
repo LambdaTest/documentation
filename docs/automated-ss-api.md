@@ -1,4 +1,4 @@
-﻿---
+---
 id: automated-ss-api
 title: Automated Screenshot API For Cross Browser Testing
 hide_title: true
@@ -18,6 +18,8 @@ url: https://www.testmu.ai/support/docs/automated-screenshot-api-for-cross-brows
 site_name: LambdaTest
 slug: automated-screenshot-api-for-cross-browser-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +29,17 @@ slug: automated-screenshot-api-for-cross-browser-testing
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Automated Screenshot API For Cross Browser Testing",
-          "item": "https://www.lambdatest.com/support/docs/automated-screenshot-api-for-cross-browser-testing/"
+          "item": `${BRAND_URL}/support/docs/automated-screenshot-api-for-cross-browser-testing/`
         }]
       })
     }}
@@ -45,9 +47,9 @@ slug: automated-screenshot-api-for-cross-browser-testing
 
 # Automated Screenshot API For Cross Browser Testing
 ***
-Automated Screenshot API will help you [capture full-page screenshots](https://www.lambdatest.com/full-page-screen-capture) of any URL by invoking an API call to LambdaTest cloud servers. You can ensure cross browser compatibility of your website stays in check by performing bulk screenshot testing regularly. You can do that without logging into LambdaTest, by executing a JSON file in your preferred API development environment such as Postman.
+Automated Screenshot API will help you [capture full-page screenshots](https://www.lambdatest.com/full-page-screen-capture) of any URL by invoking an API call to <BrandName /> cloud servers. You can ensure cross browser compatibility of your website stays in check by performing bulk screenshot testing regularly. You can do that without logging into <BrandName />, by executing a JSON file in your preferred API development environment such as Postman.
 
-This document will help you leverage LambdaTest [Automated Screenshot](https://www.lambdatest.com/automated-screenshot). You would learn how to:
+This document will help you leverage <BrandName /> [Automated Screenshot](https://www.lambdatest.com/automated-screenshot). You would learn how to:
 
 * Fetch all OS + Browser combinations.
 * Fetch all Screen Resolutions.
@@ -61,8 +63,8 @@ This document will help you leverage LambdaTest [Automated Screenshot](https://w
 ## Prerequisites
 ***
 
-- **LambdaTest Authentication Credentials**
-Ensure that you have your LambdaTest authentication credentials, i.e., your LambdaTest username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com) by clicking on the key icon near the help button.
+- **<BrandName /> Authentication Credentials**
+Ensure that you have your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key, and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com) by clicking on the key icon near the help button.
 
 - For Linux/Mac:
 
@@ -84,7 +86,7 @@ $ set LT_ACCESS_KEY= `{YOUR_LAMBDATEST_ACCESS_KEY}`
 ## Fetch All OS + Browser Combinations
 ***
 
-The below **GET** request will help you extract a list of all the combinations for (OS + Browser) offered by LambdaTest. You can download these combinations as a JSON file.
+The below **GET** request will help you extract a list of all the combinations for (OS + Browser) offered by <BrandName />. You can download these combinations as a JSON file.
 
 **Requested URL:**
 
@@ -136,7 +138,7 @@ As you execute, you will find the Server response presented below.
 
 ## Fetch Every Screen Resolutions
 ***
-To get a list of all the available **screen  resolutions** provided by LambdaTest for you to perform cross browser testing, you would need to execute the below **GET** request. The GET request will help you extract the respective response from our cloud servers in a JSON format.
+To get a list of all the available **screen  resolutions** provided by <BrandName /> for you to perform cross browser testing, you would need to execute the below **GET** request. The GET request will help you extract the respective response from our cloud servers in a JSON format.
 
 **Requested URL:**
 
@@ -166,7 +168,7 @@ As you execute, you will find the Server response presented below.
 ## Fetch Details Of An Executed Test Session
 ***
 
-In case you wish to fetch all the details from an already executed screenshot test session. These details will help you analyze the results of your [screenshot test session](/support/docs/automated-screenshot-testing/) at LambdaTest. You would get the below details:
+In case you wish to fetch all the details from an already executed screenshot test session. These details will help you analyze the results of your [screenshot test session](/support/docs/automated-screenshot-testing/) at <BrandName />. You would get the below details:
 
 * **Test Details**:
   * Test ID
@@ -382,12 +384,12 @@ Client URL: curl -X PUT "https://api.lambdatest.com/screenshots/v1/stop/TES10096
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

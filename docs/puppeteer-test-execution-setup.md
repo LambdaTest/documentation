@@ -17,6 +17,8 @@ url: https://www.testmu.ai/support/docs/puppeteer-test-execution-setup
 site_name: LambdaTest
 slug: puppeteer-test-execution-setup
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -25,17 +27,17 @@ slug: puppeteer-test-execution-setup
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Puppeteer Test Execution Setup",
-          "item": "https://www.lambdatest.com/support/docs/puppeteer-test-execution-setup/"
+          "item": `${BRAND_URL}/support/docs/puppeteer-test-execution-setup/`
         }]
       })
     }}
@@ -44,7 +46,7 @@ slug: puppeteer-test-execution-setup
 # Puppeteer - Test Execution Setup
 * * *
 
-Whenever you run a Puppeteer test, you must specify the operating system and the browser you wish to use. The LambdaTest Desired Capabilities Generator allows you to automatically create the capabilities class needed to run your Puppeteer automation scripts on LambdaTest. 
+Whenever you run a Puppeteer test, you must specify the operating system and the browser you wish to use. The <BrandName /> Desired Capabilities Generator allows you to automatically create the capabilities class needed to run your Puppeteer automation scripts on <BrandName />. 
 
 In this guide, learn how to configure the desired capability for selecting browsers and OS, organzing tests, changing desktop resolution, and more for your Puppeteer tests.
 
@@ -52,7 +54,7 @@ In this guide, learn how to configure the desired capability for selecting brows
 ## Choosing Browser And OS
 ***
 
-To perform Puppeteer testing on LambdaTest, you need to define the `browserName`, `browserVersion`, and `platform` capabilities in your automation scripts.
+To perform Puppeteer testing on <BrandName />, you need to define the `browserName`, `browserVersion`, and `platform` capabilities in your automation scripts.
 
 | Key | Expected Values | Description | Example |
 | -------- | -----| ------- | ----------------- |
@@ -127,7 +129,7 @@ const expect = require('chai').expect;
 ## Getting Session Details
 ***
 
-Each Puppeteer test generates a different log on LambdaTest. To get the information relevant to your test session, use the snippet provided below in your Puppeteer test scripts. 
+Each Puppeteer test generates a different log on <BrandName />. To get the information relevant to your test session, use the snippet provided below in your Puppeteer test scripts. 
 
 ```js
 let response = await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'getTestDetails' })}`)
@@ -213,7 +215,7 @@ By specifying the capabilities for the debugging tools, you can debug and fix yo
 ## Mark Tests As Passed Or Failed
 ***
 
-While running Puppeteer tests on the LambdaTest platform, you may come across a scenario in which a test that failed in your local instance turns up to be successful on LambdaTest. For verifying expected behavior, it is critical to identify automated tests as **Passed** or **Failed** based on your testing requirements.
+While running Puppeteer tests on the <BrandName /> platform, you may come across a scenario in which a test that failed in your local instance turns up to be successful on <BrandName />. For verifying expected behavior, it is critical to identify automated tests as **Passed** or **Failed** based on your testing requirements.
 
 By default, the Status of each test that runs successfully is marked as **Completed**, and if there are any issues, the Status is marked as **Failed**.
 
@@ -235,12 +237,12 @@ await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'set
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

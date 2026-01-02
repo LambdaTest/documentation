@@ -1,4 +1,4 @@
-﻿---
+---
 id: getting-started-with-mobile-browser-real-time-testing
 title: Getting started with Mobile Web Browser Real Time Testing
 hide_title: false
@@ -20,6 +20,8 @@ url: https://www.testmu.ai/support/docs/getting-started-with-mobile-browser-real
 site_name: LambdaTest
 slug: getting-started-with-mobile-browser-real-time-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,22 +31,22 @@ slug: getting-started-with-mobile-browser-real-time-testing
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Real Time Desktop Browser Testing",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-mobile-browser-real-time-testing/"
+          "item": `${BRAND_URL}/support/docs/getting-started-with-mobile-browser-real-time-testing/`
         }]
       })
     }}
 ></script>
-Real-Time Mobile Web Browser Testing allows you to test websites and web applications across different mobile browsers and operating systems, such as Android, iOS, and ChromeOS, in real-time. This process helps ensure that your web applications are fully functional, visually consistent, and optimized for various mobile devices, enhancing the user experience across different platforms. Using LambdaTest, developers, testers, and QA professionals can validate their web applications without the need for physical devices, all from a unified, user-friendly interface.
+Real-Time Mobile Web Browser Testing allows you to test websites and web applications across different mobile browsers and operating systems, such as Android, iOS, and ChromeOS, in real-time. This process helps ensure that your web applications are fully functional, visually consistent, and optimized for various mobile devices, enhancing the user experience across different platforms. Using <BrandName />, developers, testers, and QA professionals can validate their web applications without the need for physical devices, all from a unified, user-friendly interface.
 
 ## Launch the Virtual Machine
 
@@ -56,7 +58,7 @@ Real-Time Mobile Web Browser Testing allows you to test websites and web applica
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-browser/getting-started-with-mobile-browser.gif').default} alt="Image" className="doc_img"/>
 
 ## Understanding the Dashboard
-The LambdaTest dashboard is designed to simplify the testing process. Here's a breakdown of its key components:
+The <BrandName /> dashboard is designed to simplify the testing process. Here's a breakdown of its key components:
 
 - **Operating System Tabs :** Located at the top, this section allows you to toggle between different operating systems (Android, iOS, and ChromeOS).
 
@@ -66,7 +68,7 @@ The LambdaTest dashboard is designed to simplify the testing process. Here's a b
 
 - **URL Field :** The top portion of the dashboard provides a field to enter the target URL.
 
-- **Switch to Real Devices :** If you need to perform tests on physical devices, click on the Switch to Real Devices link to access LambdaTest's real device cloud.
+- **Switch to Real Devices :** If you need to perform tests on physical devices, click on the Switch to Real Devices link to access <BrandName />'s real device cloud.
 
 - **Tunnel :** For testing on environments that are not publicly accessible, configure the Tunnel settings to enable testing on staging or local sites.
 

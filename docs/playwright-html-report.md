@@ -1,4 +1,4 @@
-﻿---
+---
 id: playwright-html-report
 title: Consolidated Playwright HTML Report
 hide_title: false
@@ -25,17 +25,17 @@ slug: playwright-html-report
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Playwright Testing With Playwright Test",
-          "item": "https://www.lambdatest.com/support/docs/playwright-html-report/"
+          "item": `${BRAND_URL}/support/docs/playwright-html-report/`
         }]
       })
     }}

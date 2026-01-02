@@ -20,17 +20,17 @@ slug: hyperexecute-how-to-perform-dependent-test-based-discovery
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to Perform Dependent Test Case Discovery",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-how-to-perform-dependent-test-based-discovery/`
         }]
       })
     }}

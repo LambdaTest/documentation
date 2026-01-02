@@ -1,4 +1,4 @@
-﻿---
+---
 id: accessibility-app-scanner
 title: Accessibility App Scanner
 sidebar_label: Manual
@@ -18,6 +18,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -42,8 +44,6 @@ import TabItem from '@theme/TabItem';
       })
     }}
 ></script>
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <BrandName /> offers a powerful Accessibility Scanner for native Android and iOS apps, integrated seamlessly with our manual app testing environment. This helps QA teams and developers identify accessibility issues directly during real-time testing sessions. Follow this guide to understand how to perform accessibility scans manually.
 

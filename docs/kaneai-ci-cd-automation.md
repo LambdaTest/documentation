@@ -21,6 +21,8 @@ url: https://www.testmu.ai/support/docs/kaneai-ci-cd-automation
 site_name: LambdaTest
 slug: kaneai-ci-cd-automation
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ slug: kaneai-ci-cd-automation
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI CI/CD Automation",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-ci-cd-automation"
+          "item": `${BRAND_URL}/support/docs/kaneai-ci-cd-automation`
         }]
       })
     }}
@@ -50,7 +52,7 @@ This guide provides a detailed walkthrough for automating the execution of test 
 ## Prerequisites
 - Access to Test Manager.
 - A project with KaneAI-generated test cases.
-- Credentials for LambdaTest platform.
+- Credentials for <BrandName /> platform.
 
 ## Step-by-Step Guide
 ### Step 1: Navigate to the Test Manager
@@ -76,7 +78,7 @@ Replace `<TestRunID>` with the actual ID from the URL and set additional optiona
 - **title**: Assign a unique job title; a random one will be generated if omitted.
 - **region**: Choose a region for web tests such as _eastus_ or _centralindia_ to select the region from where the VM is allocated.
 - **mobile_region**: Choose a region for mobile app tests such as _us_,_ap_ or _eu_ to select the region from where the device is allocated.
-- **tunnel**: Add the parameter and tunnel name if you want to run using LambdaTest Tunnel for private applications. See more details for tunnel [here](/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support).
+- **tunnel**: Add the parameter and tunnel name if you want to run using <BrandName /> Tunnel for private applications. See more details for tunnel [here](/support/docs/kane-ai-geolocation-tunnel-proxy/#tunnel-support).
 - **dedicated_proxy**: Add the region of the dedicated proxy such as _us_ or _eu_, #Optional, either tunnel or dedicated proxy or geolocation can be used in a single API call.
 - **geolocation**: Add the resgion of the geolocation that you want to run your tests from. You can find the list of support geolocations [here](/support/docs/selenium-geolocation-capabilities/).
 - **environment_id**: Define the environment on which you want to run the test run if required.
@@ -154,7 +156,7 @@ The API response contains the job ID for both jobs created for desktop web tests
 
 
 ### Step 4: Authenticate and Trigger the Job
-- Provide your LambdaTest username and access key for Basic Authentication.
+- Provide your <BrandName /> username and access key for Basic Authentication.
 - Submit the API call to trigger the job. The process will start within seconds.
 
 > **Important :** Keep your credentials secure to maintain platform integrity.

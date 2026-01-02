@@ -24,6 +24,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -33,17 +35,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI PDF Comparison",
-          "item": "https://www.lambdatest.com/support/docs/smartui-pdf-comparison/"
+          "item": `${BRAND_URL}/support/docs/smartui-pdf-comparison/`
         }]
       })
     }}
@@ -59,7 +61,7 @@ This functionality is exclusive to our enterprise plan subscribers on SmartUI. F
 - Visit the [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) page and log in with your credentials.
 - Obtain your `LT_USERNAME` and `LT_ACCESS_KEY` by clicking on the `Access Key` button, located at the top right corner of your dashboard.
 
-In the following section, we will walk you through the process of conducting your first Visual Regression test using LambdaTest's SmartUI platform.
+In the following section, we will walk you through the process of conducting your first Visual Regression test using <BrandName />'s SmartUI platform.
 
 <div className='ytframe'>
 <div className='youtube' data-embed="H91z4j5_JvQ">

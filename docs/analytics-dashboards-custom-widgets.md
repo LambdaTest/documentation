@@ -1,4 +1,4 @@
-﻿---
+---
 id: dashboards-custom-widgets
 title: Custom Widgets in TestMu AI Analytics Dashboards
 sidebar_label: Create Custom Widgets
@@ -17,6 +17,8 @@ slug: dashboards-custom-widgets
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,22 +28,22 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/dashboards-custom-widgets/"
+          "item": `${BRAND_URL}/support/docs/dashboards-custom-widgets/`
         }]
       })
     }}
 ></script>
-Custom widgets <NewTag value="BETA" bgColor="#ffec02" color="#000" /> &nbsp;in LambdaTest Analytics Dashboards allow you to create personalized visualizations of your test data. This feature enables you to gain insights into your testing process and make data-driven decisions.
+Custom widgets <NewTag value="BETA" bgColor="#ffec02" color="#000" /> &nbsp;in <BrandName /> Analytics Dashboards allow you to create personalized visualizations of your test data. This feature enables you to gain insights into your testing process and make data-driven decisions.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/DEY1hhEme6Q?si=hBN9X2hK-QHvgHIA" title="Exploring Custom Widgets for Dashboards in Lambdatest Insights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -52,7 +54,7 @@ The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are availabl
 :::
 
 To create a custom widget, follow these steps:
-1. **Log in to your LambdaTest account** and navigate to the Insights section.
+1. **Log in to your <BrandName /> account** and navigate to the Insights section.
 2. **Select the Dashboards tab** from the left sidebar.
 3. **Click on the Create New Dashboard button** to create a new dashboard or select an existing one.
 4. **Click on the Custom Widget Option** to add a new widget to your dashboard.
@@ -91,7 +93,7 @@ To create a custom widget, follow these steps:
 
 - **Sources**: Choose the data source that powers your custom widget. The source determines what kind of data will be visualized and what insights you can extract. The currently supported sources are:
   1. **Tests**: This source provides access to all your test execution data, including test results, execution times, pass/fail rates, and other key metrics. Selecting this source allows you to build widgets that focus on test performance, trends, and outcomes. You can filter and visualize data such as the number of tests run, success/failure rates, test durations, and more.
-  2. **Auto Heal**: This source enables you to visualize data related to LambdaTest's Auto Heal feature, which automatically detects and fixes broken test steps. By selecting Auto Heal as your source, you can create widgets that track the number of auto-healed steps, success rates of healing, impacted test cases, and trends over time. This helps you monitor the effectiveness of Auto Heal and identify areas where your tests benefit from automated healing.
+  2. **Auto Heal**: This source enables you to visualize data related to <BrandName />'s Auto Heal feature, which automatically detects and fixes broken test steps. By selecting Auto Heal as your source, you can create widgets that track the number of auto-healed steps, success rates of healing, impacted test cases, and trends over time. This helps you monitor the effectiveness of Auto Heal and identify areas where your tests benefit from automated healing.
 
   > **Note:** These sources are currently available for **Web Automation** and **HyperExecute** products only. When you select a source, the widget will render data specific to that source, ensuring that your visualizations are relevant and actionable. For example, if you select "Tests" as the source, your widget will display test execution metrics; if you select "Auto Heal," it will show auto-healing statistics and trends. You can switch between sources to compare different aspects of your testing process within the same dashboard.
 

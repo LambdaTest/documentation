@@ -1,8 +1,10 @@
-# LambdaTest Competitor Analysis
+import TabItem from '@theme/TabItem';
+
+# <BrandName /> Competitor Analysis
 
 ## Executive Summary
 
-LambdaTest operates in the cloud-based cross-browser and mobile testing platform market. The competitive landscape includes established players with strong enterprise presence, as well as specialized and budget-friendly alternatives.
+<BrandName /> operates in the cloud-based cross-browser and mobile testing platform market. The competitive landscape includes established players with strong enterprise presence, as well as specialized and budget-friendly alternatives.
 
 ---
 
@@ -105,7 +107,7 @@ LambdaTest operates in the cloud-based cross-browser and mobile testing platform
 
 ---
 
-## LambdaTest Differentiation
+## <BrandName /> Differentiation
 
 **Key Differentiators:**
 - **AI-Powered Features:** KaneAI for natural language/no-code test generation
@@ -131,7 +133,7 @@ LambdaTest operates in the cloud-based cross-browser and mobile testing platform
 - **DIY Solutions:** Open Source Selenium Grids
 
 ### Market Positioning
-LambdaTest positions itself as a more developer-friendly and cost-effective alternative to enterprise leaders, with AI-powered features as a key differentiator.
+<BrandName /> positions itself as a more developer-friendly and cost-effective alternative to enterprise leaders, with AI-powered features as a key differentiator.
 
 ---
 
@@ -141,7 +143,7 @@ LambdaTest positions itself as a more developer-friendly and cost-effective alte
 2. **Track Sauce Labs** - Strong DevOps/CI/CD positioning
 3. **Watch Perfecto** - Mobile testing specialization
 4. **Consider Pricing Strategies** - TestingBot offers budget alternatives
-5. **Evaluate AI Features** - LambdaTest's KaneAI is a differentiator to maintain
+5. **Evaluate AI Features** - <BrandName />'s KaneAI is a differentiator to maintain
 6. **Assess Visual Testing** - Applitools shows demand for specialized visual testing
 
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 id: selenium-three-capabilities
 title: Selenium Capabilities for version <= 3
 hide_title: false
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/selenium-four-capabilities
 site_name: LambdaTest
 slug: selenium-three-capabilities
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: selenium-three-capabilities
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Selenium Capabilities",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Selenium Capabilities v3",
-          "item": "https://www.lambdatest.com/support/docs/selenium-three-capabilities/"
+          "item": `${BRAND_URL}/support/docs/selenium-three-capabilities/`
         }]
       })
     }}
@@ -41,9 +43,9 @@ slug: selenium-three-capabilities
 |-----|--------|------------------------|---------------|--------|------------|---------|-----------------|
 | `browserName` | <ul><li>Chrome</li><li>Firefox</li><li>Safari</li><li>MS Edge – Microsoft Edge</li><li>Opera</li><li> IE – Internet Explorer</li></ul> | This is a mandatory & case-sensitive capability, which represents the name of the selected browser. <br/> `capabilities.setCapability("browserName", "Chrome");` | Mandatory |browser |String |`capabilities.setCapability("browserName","chrome");` |Case Sensitive   <br/> Invalid browser error |
 | `version` | Example: 101.0 (Beta) | This capability is for the version of the browser mentioned above. This version you provide as a desired capability needs to be a valid one.  <br/> `capabilities.setCapability("version","78.0");`|
-| `latest` | – | The latest keyword will help you run your test cases over the most recent browser version available at LambdaTest. <br/> `capabilities.setCapability("version","latest");` |
+| `latest` | – | The latest keyword will help you run your test cases over the most recent browser version available at <BrandName />. <br/> `capabilities.setCapability("version","latest");` |
 | `latest-N` | latest-5 | This would allow you to execute your test over an older browser version. Here, N represents an integer. So if you wish to test your website over a browser version, which was released 5 versions before the latest one. You can do so using the below capability: <br/>`capabilities.setCapability("version","latest-5");`|
-| `platformName` | **Supported Windows:** <ul><li>Windows 11</li><li>Windows 10</li><li>Windows 8.1</li><li>Windows 8</li><li>Windows 7</li></ul> **Supported macOS:** <ul><li>Monterey</li><li>Big Sur</li><li>Catalina</li><li>Mojave</li><li>High Sierra</li><li>Sierra</li><li>El Capitan</li><li>Mavericks</li><li>Yosemite</li></ul> | If a platform for testing is not declared then LambdaTest will map your test to a relevant operating system for the selected browser. <br/>So, if you wish to perform Selenium automation testing of your web application on Windows 11 then you need to mention the below line of code in your Desired Selenium Capabilities class.   <br/>``` capabilities.setCapability("platformName", "Windows 11"); ``` <br/>Similarly, for macOS, if you wish to perform Selenium automation testing of your web application on macOS Monterey, then you need to mention the below line of code in your Desired Selenium Capabilities class.  <br/>``` capabilities.setCapability("platformName", "macOS Monterey"); ``` |select on the basis of browser.   <br />For web <ol><li>Linux</li><li>win10</li></ol> |platform,OS |String |```capabilities.setCapability("platformName", "Windows 10");``` |Case Sensitive <br />Invalid Platform Error |
+| `platformName` | **Supported Windows:** <ul><li>Windows 11</li><li>Windows 10</li><li>Windows 8.1</li><li>Windows 8</li><li>Windows 7</li></ul> **Supported macOS:** <ul><li>Monterey</li><li>Big Sur</li><li>Catalina</li><li>Mojave</li><li>High Sierra</li><li>Sierra</li><li>El Capitan</li><li>Mavericks</li><li>Yosemite</li></ul> | If a platform for testing is not declared then <BrandName /> will map your test to a relevant operating system for the selected browser. <br/>So, if you wish to perform Selenium automation testing of your web application on Windows 11 then you need to mention the below line of code in your Desired Selenium Capabilities class.   <br/>``` capabilities.setCapability("platformName", "Windows 11"); ``` <br/>Similarly, for macOS, if you wish to perform Selenium automation testing of your web application on macOS Monterey, then you need to mention the below line of code in your Desired Selenium Capabilities class.  <br/>``` capabilities.setCapability("platformName", "macOS Monterey"); ``` |select on the basis of browser.   <br />For web <ol><li>Linux</li><li>win10</li></ol> |platform,OS |String |```capabilities.setCapability("platformName", "Windows 10");``` |Case Sensitive <br />Invalid Platform Error |
 | `resolution` | <ul><li>1024×768</li><li>1280×800</li><li>1280×1024</li><li>1366×768</li><li>1440×900</li><li>1680×1050</li><li>1600×1200</li><li>1920×1200</li><li>1920×1080</li><li>2048×1536</li></ul>These values are OS Dependent, Verify from Capability generator   <br />String: "1920x1200" | This capability would help you to specify a particular screen resolution for your VM(Virtual Machine). By default, the resolution would be 1024×768.   <br/>``` capabilities.setCapability("resolution","1600x1200"); ``` |1920 x1080 |viewport |String |```capabilities.setCapability("resolution","1600x1200");``` |Case Sensitive   <br />Invalid Resolution error |
 | `name` | Example: ToDo Sample Test   <br/>name: "Login testcase"| Represents the name of a test.   <br/>``` capabilities.setCapability("name", "ToDo Sample Test"); ```  | test-id |testname,sessionname,test |String |```capabilities.setCapability("name", "ToDo Sample Test");``` |Case Sensitive > 255 char |
 | `driver_version` | Example: "driver_version" : "99.0" | Used to specify the driver version of the browser you want to run the test on. Make sure to provide a valid driver version corresponding to the browser used.   <br/>``` capabilities.setCapability("driver_version","99.0");|

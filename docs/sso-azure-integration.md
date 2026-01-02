@@ -1,4 +1,4 @@
-﻿---
+---
 id: sso-azure-integration
 title: TestMu AI SSO & Azure AD Integration
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/sso-azure-integration
 site_name: LambdaTest
 slug: sso-azure-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,31 +23,31 @@ slug: sso-azure-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Azure AD Integration",
-          "item": "https://www.lambdatest.com/support/docs/sso-azure-integration/"
+          "item": `${BRAND_URL}/support/docs/sso-azure-integration/`
         }]
       })
     }}
 ></script>
 
-# LambdaTest SSO & Azure AD Integration
+# <BrandName /> SSO & Azure AD Integration
 
 * * *
 
-LambdaTest allows you to integrate an external user directory with your LambdaTest Organization through an IDP so your team could leverage the Single Sign-on setup. This document will help you integrate your LambdaTest organization with your Azure AD directory to configure SSO(Single sign-on). After you integrate your Azure AD instance with your LambdaTest for Single Sign-on, you can benefit from the following features:
+<BrandName /> allows you to integrate an external user directory with your <BrandName /> Organization through an IDP so your team could leverage the Single Sign-on setup. This document will help you integrate your <BrandName /> organization with your Azure AD directory to configure SSO(Single sign-on). After you integrate your Azure AD instance with your <BrandName /> for Single Sign-on, you can benefit from the following features:
 
-*   Monitor who access to LambdaTest
+*   Monitor who access to <BrandName />
 *   Manage your account in Azure Active Directory.
-*   Sign-in directly to the LambdaTest with Azure AD credentials.
+*   Sign-in directly to the <BrandName /> with Azure AD credentials.
 
 To know more, refer [How SSO is implemented in Azure](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis).
 
@@ -53,15 +55,15 @@ To know more, refer [How SSO is implemented in Azure](https://docs.microsoft.com
 
 * * *
 
-To enable LambdaTest SSO through Azure AD integration, you will need:
+To enable <BrandName /> SSO through Azure AD integration, you will need:
 
 *   Azure AD Subscription. If you haven't subscribed, you can subscribe by creating a [free Azure account](https://azure.microsoft.com/en-us/free/).
-*   An Enterprise plan with LambdaTest.
-*   The Admin of your LambdaTest organization needs to raise a request for enabling SSO. They could drop us an email over [support@lambdatest.com](mailto:support@lambdatest.com) or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in-app chat support**</span>.
-*   The Admin level access to your LambdaTest organization.
+*   An Enterprise plan with <BrandName />.
+*   The Admin of your <BrandName /> organization needs to raise a request for enabling SSO. They could drop us an email over [support@lambdatest.com](mailto:support@lambdatest.com) or could reach out to us via our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 in-app chat support**</span>.
+*   The Admin level access to your <BrandName /> organization.
 *   The Admin level access of your organization in Azure AD.
 
-## How To Configure LambdaTest & Azure AD Integration
+## How To Configure <BrandName /> & Azure AD Integration
 
 * * *
 
@@ -87,7 +89,7 @@ To enable LambdaTest SSO through Azure AD integration, you will need:
 
 <img loading="lazy" src={require('../assets/images/sso-azure-integration/set-up-sso-1.webp').default} alt="azure integration with lambdatest"  className="doc_img" width="1173" height="643"/>
 
-**Step 7:** Go to LambdaTest <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
+**Step 7:** Go to <BrandName /> <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a> and click on **Setup SSO**.
    <img loading="lazy" src={require('../assets/images/sso-self-serve/setup-sso.png').default} alt="setup sso button" width="944" height="409" className="doc_img"/>
 
 **Step 8:**  Enter Connection Name and Click on  **Add New Connection**.
@@ -99,11 +101,11 @@ To enable LambdaTest SSO through Azure AD integration, you will need:
 **Step 10:** Now copy the details required for setting up SSO connection in your **Identity Provider**.
    <img loading="lazy" src={require('../assets/images/sso-self-serve/copy-info.png').default} alt="configure IDP details" width="945" height="542" className="doc_img"/>
 
-**Step 11:** Click on **Basic SAML Configuration**. Enter your SSO identifier ID and Reply URL information that you copied from LambdaTest SSO setup page and click on **Save**.
+**Step 11:** Click on **Basic SAML Configuration**. Enter your SSO identifier ID and Reply URL information that you copied from <BrandName /> SSO setup page and click on **Save**.
 
 <img loading="lazy" src={require('../assets/images/sso-azure-integration/basic-saml-1-1.webp').default} alt="azure integration with lambdatest"  className="doc_img" width="1173" height="644"/>
 
-**Step 12:** Copy the App Federation Metadata URL and paste it in the **Metadata URL** field in the LambdaTest SSO setup page.
+**Step 12:** Copy the App Federation Metadata URL and paste it in the **Metadata URL** field in the <BrandName /> SSO setup page.
 
 <img loading="lazy" src={require('../assets/images/uploads/azure-metadata-url.png').default} alt="azure integration with lambdatest"  className="doc_img" width="1173" height="644"/>
 
@@ -119,17 +121,17 @@ To enable LambdaTest SSO through Azure AD integration, you will need:
    <img loading="lazy" src={require('../assets/images/sso-self-serve/edit-connection.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
 
-> That’s all you need to know LambdaTest and Azure AD integration. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
+> That’s all you need to know <BrandName /> and Azure AD integration. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

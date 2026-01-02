@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/capabilities-for-playwright-android
 site_name: LambdaTest
 slug: capabilities-for-playwright-android
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +27,17 @@ slug: capabilities-for-playwright-android
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Playwright Android Capabilities",
-          "item": "https://www.lambdatest.com/support/docs/capabilities-for-playwright-android/"
+          "item": `${BRAND_URL}/support/docs/capabilities-for-playwright-android/`
         }]
       })
     }}
@@ -44,8 +46,8 @@ slug: capabilities-for-playwright-android
 # Capabilities for Playwright Android Testing
 ---
 
-The LambdaTest Capability Generator allows you to automatically create the capabilities class needed to run your
-Playwright automation scripts on LambdaTest. Here are a few capabilities that you can configure to run your Playwright
+The <BrandName /> Capability Generator allows you to automatically create the capabilities class needed to run your
+Playwright automation scripts on <BrandName />. Here are a few capabilities that you can configure to run your Playwright
 Android tests.
 
 :::tip
@@ -73,7 +75,7 @@ You can use the [Playwright Android Capability Generator](https://www.lambdatest
 ## Using REGEX for device name
 Regular Expression or REGEX is widely used to make searching/find characters in a string.
 
-When you run a test on LambdaTest using a specific device, there may be scenarios, in which the particular device that you selected isn’t available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.
+When you run a test on <BrandName /> using a specific device, there may be scenarios, in which the particular device that you selected isn’t available. In these scenarios, REGEX will help you widen the search request for devices to run the test on.
 
 To quote an example, consider you want to run the test on an Pixel. It doesn’t matter which one, but it’s got to be an Pixel. In these cases, we can use REGEX to specify exactly that. You’ll now be allotted any Pixel device that’s available which widens the search of devices considerably.
 
@@ -83,12 +85,12 @@ Refer [REGEX for App/Browser Automation](/support/docs/regular-expression-appium
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

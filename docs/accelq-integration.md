@@ -1,4 +1,4 @@
-﻿---
+---
 id: accelq-integration
 title: ACCELQ Integration
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/accelq-integration
 site_name: LambdaTest
 slug: accelq-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -36,8 +38,6 @@ slug: accelq-integration
       })
     }}
 ></script>
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # ACCELQ Integration
 ***

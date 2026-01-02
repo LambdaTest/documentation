@@ -1,4 +1,4 @@
-﻿---
+---
 id: lambdatest-sso-oidc
 title: TestMu AI SSO Integration Using OIDC
 hide_title: true
@@ -18,6 +18,8 @@ url: https://www.testmu.ai/support/docs/testmu-sso-oidc
 site_name: LambdaTest
 slug: testmu-sso-oidc
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,29 +29,29 @@ slug: testmu-sso-oidc
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "OIDC Integration",
-          "item": "https://www.lambdatest.com/support/docs/lambdatest-sso-oidc/"
+          "item": `${BRAND_URL}/support/docs/lambdatest-sso-oidc/`
         }]
       })
     }}
 ></script>
 
-# LambdaTest SSO Integration Using OIDC
+# <BrandName /> SSO Integration Using OIDC
 
 * * *
 
-LambdaTest provides seamless Single Sign-On (SSO) integration with various identity providers using OpenID Connect (OIDC), enabling your team to access LambdaTest using their existing organizational credentials. This managed SSO solution streamlines user management and enhances security by centralizing authentication through your identity provider.
+<BrandName /> provides seamless Single Sign-On (SSO) integration with various identity providers using OpenID Connect (OIDC), enabling your team to access <BrandName /> using their existing organizational credentials. This managed SSO solution streamlines user management and enhances security by centralizing authentication through your identity provider.
 
-This comprehensive guide will walk you through configuring OIDC-based SSO between your LambdaTest organization and your identity provider, using Azure AD as the example throughout the documentation.
+This comprehensive guide will walk you through configuring OIDC-based SSO between your <BrandName /> organization and your identity provider, using Azure AD as the example throughout the documentation.
 
 
 ## What is OIDC (OpenID Connect)?
@@ -69,14 +71,14 @@ OpenID Connect (OIDC) is a simple identity layer built on top of the OAuth 2.0 p
 
 * * *
 
-To enable LambdaTest SSO through OIDC integration, you will need:
+To enable <BrandName /> SSO through OIDC integration, you will need:
 
 - **Identity Provider Access**: Administrative access to your identity provider
-- **LambdaTest Enterprise Plan**: An active LambdaTest organization subscription
-- **Administrative Access**: Admin-level access to your LambdaTest organization
-- **SSO Request**: Contact LambdaTest support to enable SSO for your organization
+- **<BrandName /> Enterprise Plan**: An active <BrandName /> organization subscription
+- **Administrative Access**: Admin-level access to your <BrandName /> organization
+- **SSO Request**: Contact <BrandName /> support to enable SSO for your organization
 
-> **Note**: If you don't have SSO enabled for your LambdaTest organization, please contact our support team at [support@lambdatest.com](mailto:support@lambdatest.com)
+> **Note**: If you don't have SSO enabled for your <BrandName /> organization, please contact our support team at [support@lambdatest.com](mailto:support@lambdatest.com)
 .
 
 ## Step-by-Step Integration Guide
@@ -95,7 +97,7 @@ The exact steps vary by identity provider, but the general process involves crea
 <img loading="lazy" src={require('../assets/images/lambdatest-sso-oidc/app-registration.png').default} alt="Azure App Registration" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
 
 4. **Configure Application Details**:
-   - **Name**: Enter a descriptive name such as "LambdaTest SSO" or "LambdaTest OIDC Integration"
+   - **Name**: Enter a descriptive name such as "<BrandName /> SSO" or "<BrandName /> OIDC Integration"
    - **Supported account types**: Select "Accounts in this organizational directory only"
    - **Redirect URI**: Leave this blank for now (we'll configure it later)
    - Click **Register** to create the application
@@ -108,7 +110,7 @@ The exact steps vary by identity provider, but the general process involves crea
 1. **Access Application Overview**: After registration, you'll be redirected to the application overview page.
 
 2. **Copy Client ID**: 
-   - Note down the **Client ID** (also called Application ID in Azure AD) - you'll need this for LambdaTest configuration
+   - Note down the **Client ID** (also called Application ID in Azure AD) - you'll need this for <BrandName /> configuration
    - This unique identifier represents your application in your identity provider
 
 3. **Copy Tenant/Domain Information**:
@@ -121,7 +123,7 @@ The exact steps vary by identity provider, but the general process involves crea
 
 2. **Create New Client Secret**:
    - Click **New client secret**
-   - **Description**: Enter a descriptive name like "LambdaTest SSO Secret"
+   - **Description**: Enter a descriptive name like "<BrandName /> SSO Secret"
    - **Expires**: Select your preferred expiration period (recommended: 24 months)
    - Click **Add**
 
@@ -129,11 +131,11 @@ The exact steps vary by identity provider, but the general process involves crea
 
 3. **Copy Secret Value**: 
    - **Important**: Copy the secret value immediately - it won't be shown again
-   - Store this securely as you'll need it for LambdaTest configuration
+   - Store this securely as you'll need it for <BrandName /> configuration
 
 <img loading="lazy" src={require('../assets/images/lambdatest-sso-oidc/app-client-secret.png').default} alt="Azure Client Secret" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
 
-> **Important**: Store the client secret securely as you'll need it for LambdaTest configuration. Most providers only show the secret once.
+> **Important**: Store the client secret securely as you'll need it for <BrandName /> configuration. Most providers only show the secret once.
 
 ### Step 4: Configure Redirect URI
 
@@ -142,7 +144,7 @@ The exact steps vary by identity provider, but the general process involves crea
 2. **Add Redirect URI**:
    - Click **Add a platform**
    - Select **Web**
-   - **Redirect URI**: Enter the redirect URI provided by LambdaTest (typically: `https://lambdatest.auth0.com/login/callback`)
+   - **Redirect URI**: Enter the redirect URI provided by <BrandName /> (typically: `https://lambdatest.auth0.com/login/callback`)
    - Click **Save**
 
 <img loading="lazy" src={require('../assets/images/lambdatest-sso-oidc/app-redirect.png').default} alt="Azure Redirect URI" width="944" height="487" className="doc_img" style={{border: '1px solid #000'}}/>
@@ -167,17 +169,17 @@ The exact steps vary by identity provider, but the general process involves crea
 
 > **Verify Well-Known URL**: Test the URL in your browser to ensure it returns valid JSON configuration.
 
-### Step 6: Contact LambdaTest Support for OIDC Configuration
+### Step 6: Contact <BrandName /> Support for OIDC Configuration
 
-Since OIDC integration requires server-side configuration, you cannot create the connection directly through the LambdaTest interface. Instead, you need to contact our support team to configure the OIDC integration for you.
+Since OIDC integration requires server-side configuration, you cannot create the connection directly through the <BrandName /> interface. Instead, you need to contact our support team to configure the OIDC integration for you.
 
 1. **Gather Required Information**: Collect the following details from your identity provider configuration:
    - **Client ID**: The client ID from Step 2
    - **Client Secret**: The secret value from Step 3
    - **OpenID Connect Metadata URL**: The metadata document URL from Step 5
-   - **Connection Name**: A descriptive name like "Company OIDC" or "LambdaTest SSO"
+   - **Connection Name**: A descriptive name like "Company OIDC" or "<BrandName /> SSO"
 
-2. **Contact LambdaTest Support**: Reach out to our support team with the configuration details:
+2. **Contact <BrandName /> Support**: Reach out to our support team with the configuration details:
    - **Email**: [support@lambdatest.com](mailto:support@lambdatest.com)
 
 3. **Provide Configuration Details**: Include the following information in your support request:
@@ -197,10 +199,10 @@ Since OIDC integration requires server-side configuration, you cannot create the
 
 2. **Assign Users**:
    - Click **Add user/group**
-   - Select the users or groups who should have access to LambdaTest
+   - Select the users or groups who should have access to <BrandName />
    - Click **Assign**
 
-3. **Configure App Roles** (if needed): You can define custom app roles for different access levels within LambdaTest.
+3. **Configure App Roles** (if needed): You can define custom app roles for different access levels within <BrandName />.
 
 
 ## Testing Your OIDC Integration
@@ -209,7 +211,7 @@ Since OIDC integration requires server-side configuration, you cannot create the
 
 ### Method 1: Direct SSO Login
 
-1. **Access LambdaTest SSO**: Navigate to [https://accounts.lambdatest.com/sso](https://accounts.lambdatest.com/sso)
+1. **Access <BrandName /> SSO**: Navigate to [https://accounts.lambdatest.com/sso](https://accounts.lambdatest.com/sso)
 
 2. **Enter Email**: Enter your Azure AD email address
 
@@ -217,7 +219,7 @@ Since OIDC integration requires server-side configuration, you cannot create the
 
 4. **Complete Authentication**: You'll be redirected to Microsoft's login page. Enter your Azure AD credentials.
 
-5. **Verify Success**: After successful authentication, you should be redirected to your LambdaTest organization.
+5. **Verify Success**: After successful authentication, you should be redirected to your <BrandName /> organization.
 
 
 ### Method 2: Direct OIDC Login (For Testing)
@@ -228,7 +230,7 @@ Since OIDC doesn't support classic IDP-based SSO login, you can use this URL to 
 https://accounts.lambdatest.com/auth0/login?connection={connection-name}
 ```
 
-Replace `{connection-name}` with the connection name you created in LambdaTest.
+Replace `{connection-name}` with the connection name you created in <BrandName />.
 
 ## Troubleshooting Common Issues
 
@@ -244,7 +246,7 @@ Replace `{connection-name}` with the connection name you created in LambdaTest.
 
 ### Redirect URI Mismatch
 - **Issue**: "Redirect URI mismatch" error
-- **Solution**: Verify that the redirect URI in Azure AD exactly matches the one provided by LambdaTest
+- **Solution**: Verify that the redirect URI in Azure AD exactly matches the one provided by <BrandName />
 
 ### User Not Assigned
 - **Issue**: "User not assigned to application" error
@@ -255,8 +257,8 @@ Replace `{connection-name}` with the connection name you created in LambdaTest.
 - **Solution**: Verify the OpenID Connect well-known URL is accessible and contains valid JSON configuration
 
 ### Domain Configuration
-- **Issue**: Users from different domains cannot access LambdaTest
-- **Solution**: Ensure all required domains are configured in both Azure AD and LambdaTest settings
+- **Issue**: Users from different domains cannot access <BrandName />
+- **Solution**: Ensure all required domains are configured in both Azure AD and <BrandName /> settings
 
 
 
@@ -264,12 +266,12 @@ Replace `{connection-name}` with the connection name you created in LambdaTest.
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,4 +1,4 @@
-﻿---
+---
 id: automation-mcp-server
 title: Introducing Automation MCP Server
 hide_title: false
@@ -19,6 +19,8 @@ slug: automation-mcp-server
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,24 +30,24 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Languages and Framework",
-          "item": "https://www.lambdatest.com/support/docs/automation-mcp-server/"
+          "item": `${BRAND_URL}/support/docs/automation-mcp-server/`
         }]
       })
     }}
 ></script>
 
 # Getting Started with Automation MCP Server
-Automation MCP Server simplifies test failure triaging for all automation test cases executed on LambdaTest. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your test execution data on LambdaTest—significantly reducing triage and troubleshooting time.
+Automation MCP Server simplifies test failure triaging for all automation test cases executed on <BrandName />. By leveraging the Model Context Protocol (MCP), it enables seamless integration between AI assistants and your test execution data on <BrandName />—significantly reducing triage and troubleshooting time.
 
 
 <div className="ytframe"> 
@@ -61,32 +63,32 @@ The Model Context Protocol (MCP) acts like a “USB-C for AI integrations,” cr
 
 Here are the key benefits of using the Automation MCP Server:
 
-1. Access your test execution data on LambdaTest directly from your IDE/editor.
+1. Access your test execution data on <BrandName /> directly from your IDE/editor.
 2. Triage and troubleshoot test failures to identify the root cause (RCA).
 3. Fix your test code based on the RCA and accelerate your development.
-4. Generate new test cases using execution data from LambdaTest.
+4. Generate new test cases using execution data from <BrandName />.
 5. Leverage network logs, Selenium logs, and console logs to pinpoint bottlenecks and failures.
 
 ## Supported Tools 
 
 Automation MCP Server provides five core tools:
 
-1. **Automation Test Details:** Fetches detailed information about a specific TestID from the LambdaTest cloud.
-2. **Automation Command Logs:** Retrieves execution logs for Selenium commands run on LambdaTest.
+1. **Automation Test Details:** Fetches detailed information about a specific TestID from the <BrandName /> cloud.
+2. **Automation Command Logs:** Retrieves execution logs for Selenium commands run on <BrandName />.
 3. **Automation Network Logs:** Accesses test network logs, offering insights into browser traffic and behavior.
 4. **Automation Console Logs:** Fetches browser console logs, surfacing error-level messages and warnings.
-5. **Automation MCP Server:** Core interface that powers the above tools and connects your AI assistant to LambdaTest data.
+5. **Automation MCP Server:** Core interface that powers the above tools and connects your AI assistant to <BrandName /> data.
 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

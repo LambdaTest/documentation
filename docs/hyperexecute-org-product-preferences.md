@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/hyperexecute-org-product-preferences
 site_name: LambdaTest
 slug: hyperexecute-org-product-preferences
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: hyperexecute-org-product-preferences
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-org-product-preferences/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-org-product-preferences/`
         }]
       })
     }}
@@ -45,7 +47,7 @@ In this detailed documentation, learn how you can access and change organization
 Now, to access your organization product preferences, follow the below mentioned steps:
 
 
-**Step 1:** Go to the [LambdaTest Dashboard](https://accounts.lambdatest.com/dashboard).
+**Step 1:** Go to the [<BrandName /> Dashboard](https://accounts.lambdatest.com/dashboard).
 
 **Step 2:** Click on the **Settings** button.
 
@@ -65,12 +67,12 @@ Now, to access your organization product preferences, follow the below mentioned
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

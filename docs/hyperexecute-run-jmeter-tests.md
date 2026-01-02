@@ -17,6 +17,8 @@ slug: hyperexecute-run-jmeter-tests
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Products Integration",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Performance Testing",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-run-jmeter-tests/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-run-jmeter-tests/`
         }]
       })
     }}
@@ -51,7 +53,7 @@ You can use your own project to configure and test it. For demo purposes, we are
 > By default, HyperExecute supports **standard Thread Group** but you can use other custom thread groups as well.
 
 :::tip Sample repo
-Download or Clone the code sample for the JMeter Performance Testing from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the JMeter Performance Testing from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/hyperexecute-jmeter-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::

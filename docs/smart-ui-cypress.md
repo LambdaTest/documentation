@@ -27,6 +27,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -36,32 +38,32 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smart-ui-cypress/"
+          "item": `${BRAND_URL}/support/docs/smart-ui-cypress/`
         }]
       })
     }}
 ></script>
 
-Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
+Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 ## Prerequisites for running SmartUI with Cypress
 
 - Basic understanding of Cypress is required.
 - Cypress version should be higher than 9.5.0. Click [here](https://docs.cypress.io/guides/references/changelog) to know more
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ## Steps to create a SmartUI Project
 
@@ -149,7 +151,7 @@ describe("Cypress test with Visual Regression", () => {
 });
 ```
 
-**Step 5:** Run the test on the LambdaTest platform by executing the below-run command:
+**Step 5:** Run the test on the <BrandName /> platform by executing the below-run command:
 
 ```bash
 lambdatest-cypress run
@@ -175,12 +177,12 @@ For additional information about Cypress framework please explore the documentat
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

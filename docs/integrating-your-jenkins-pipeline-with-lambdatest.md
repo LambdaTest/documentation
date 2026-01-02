@@ -1,4 +1,4 @@
-﻿---
+---
 id: integrating-your-jenkins-pipeline-with-lambdatest
 title: Integrating Your Jenkins Pipeline With TestMu AI
 hide_title: true
@@ -17,6 +17,8 @@ url: https://www.testmu.ai/support/docs/integrating-your-jenkins-pipeline-with-t
 site_name: LambdaTest
 slug: integrating-your-jenkins-pipeline-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,38 +28,38 @@ slug: integrating-your-jenkins-pipeline-with-testmu
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Jenkins Pipeline",
-          "item": "https://www.lambdatest.com/support/docs/integrating-your-jenkins-pipeline-with-testmu/"
+          "item": `${BRAND_URL}/support/docs/integrating-your-jenkins-pipeline-with-testmu/`
         }]
       })
     }}
 ></script>
 
-# Integrating Your Jenkins Pipeline With LambdaTest 
+# Integrating Your Jenkins Pipeline With <BrandName /> 
 
 * * *
 
 Jenkins Pipeline is also referred to as "Pipeline" offers a suite of plugins to help integrate your continuous delivery pipeline into Jenkins. Jenkins Pipeline does so with the help of Pipeline DSL(Domain Specific Language) syntax that facilitates easy modelling of even the most complex delivery pipeline.
 
-## Prerequisites For Configuring Jenkins Pipeline With LambdaTest
+## Prerequisites For Configuring Jenkins Pipeline With <BrandName />
 
 * * *
 
 1.  Jenkins 2.X or greater version.
 2.  A Jenkins User with root access.
 3.  Ensure you have the Pipeline plugin, although, it is displayed under the "suggested plugins" during the post-installation setup of Jenkins.
-4.  **LambdaTest Authentication Credentials**
+4.  **<BrandName /> Authentication Credentials**
 
-Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[LambdaTest automation dashboard](https://automation.lambdatest.com)** by clicking on the key icon near the help button.
+Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your **[<BrandName /> automation dashboard](https://automation.lambdatest.com)** by clicking on the key icon near the help button.
 
 *   For Linux/Mac:
 
@@ -145,12 +147,12 @@ Refer to our [Github sample repository](https://github.com/LambdaTest/nightwatch
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

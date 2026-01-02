@@ -1,4 +1,4 @@
-﻿---
+---
 id: regular-expression-appium
 title: Regular Expression - Appium
 # hide_title: true
@@ -18,6 +18,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 
 <script type="application/ld+json"
@@ -28,17 +30,17 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "App Automation: Regular Expression",
-          "item": "https://www.lambdatest.com/support/docs/regular-expression-appium/"
+          "item": `${BRAND_URL}/support/docs/regular-expression-appium/`
         }]
       })
     }}
@@ -46,10 +48,10 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 
 <RealDeviceTag value="Real Device" /> 
 
-Regular Expressions (RegEx) are powerful tools for searching and manipulating strings. When running tests on LambdaTest with a specific device, there may be times when the exact device you selected isn't available. In such cases, RegEx will help you widen your search criteria to find any available device that matches your requirements.
+Regular Expressions (RegEx) are powerful tools for searching and manipulating strings. When running tests on <BrandName /> with a specific device, there may be times when the exact device you selected isn't available. In such cases, RegEx will help you widen your search criteria to find any available device that matches your requirements.
 
 
-LambdaTest provides RegEx support for both **deviceName** and **platformVersion**, making it easier to find the right devices for your tests.
+<BrandName /> provides RegEx support for both **deviceName** and **platformVersion**, making it easier to find the right devices for your tests.
 
 :::info
 **Note:** Regular Expression support is currently available **only for App Automation**.  
@@ -58,7 +60,7 @@ It is **not supported for Web Automation on Virtual Devices** at this time.
 
 ## Why Use RegEx?
 
-Imagine you want to run a test on an iPhone. You don't need a specific model, just any iPhone. Using **RegEx**, you can specify this requirement, and LambdaTest will allocate any available iPhone. This flexibility can significantly broaden the search and increase the chances of finding a suitable device quickly.
+Imagine you want to run a test on an iPhone. You don't need a specific model, just any iPhone. Using **RegEx**, you can specify this requirement, and <BrandName /> will allocate any available iPhone. This flexibility can significantly broaden the search and increase the chances of finding a suitable device quickly.
 
 
 ## Regex Characters for `deviceName`
@@ -92,12 +94,12 @@ You can pass both `deviceName` and `platformVersion` regex patterns together or 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -19,6 +19,8 @@ import EnhancementTag from '../src/component/enhancementTag';
 import BugFixTag from '../src/component/bugFixTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +30,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-9-9/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-2-9-9/`
         }]
       })
     }}
@@ -56,4 +58,4 @@ We are excited to announce emulator support for Chrome browser automation on Hyp
 ## Supported Environments
 Currently available on **Android 11** and **Android 12** emulators. More versions and browsers will be supported in future releases.
 
-👉 You can check detailed device support and capabilities at:[ LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)
+👉 You can check detailed device support and capabilities at:[ <BrandName /> Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)

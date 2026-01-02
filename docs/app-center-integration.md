@@ -1,4 +1,4 @@
-﻿---
+---
 id: app-center-integration
 title: Configuring App Center on TestMu AI
 hide_title: true
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/app-center
 site_name: LambdaTest
 slug: app-center
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,27 +26,27 @@ slug: app-center
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Migration",
-          "item": "https://www.lambdatest.com/support/docs/app-center/"
+          "item": `${BRAND_URL}/support/docs/app-center/`
         }]
       })
     }}
 ></script>
 
-# Configuring App Center on LambdaTest
+# Configuring App Center on <BrandName />
 
 ---
 
-This article will guide you on how to configure App Center on LambdaTest & manage your applications.
+This article will guide you on how to configure App Center on <BrandName /> & manage your applications.
 
 ## Objective
 
@@ -52,8 +54,8 @@ This article will guide you on how to configure App Center on LambdaTest & manag
 
 By the end of this article, you will be able to :
 
-- Install apps from App Center by configuring them on LambdaTest.
-- Manage synced apps on LambdaTest.
+- Install apps from App Center by configuring them on <BrandName />.
+- Manage synced apps on <BrandName />.
 
 ## What is App Center?
 
@@ -69,7 +71,7 @@ It can be used to decrease the manual effort of uploading the app & **automate**
 
 Before getting started with the setup, you would need access to the following:
 
-1. Access to LambdaTest [Real Devices](https://www.lambdatest.com/pricing).
+1. Access to <BrandName /> [Real Devices](https://www.lambdatest.com/pricing).
 2. Access to App Center & permissions to be able to generate API Token on App Center.
 
 ## Generating API Token on App Center
@@ -94,13 +96,13 @@ Before getting started with the setup, you would need access to the following:
 
   ***
 
-4. Now, you’ll get the API token, click on the Copy Button & we’ll use it in Step 2 in LambdaTest Steps.
+4. Now, you’ll get the API token, click on the Copy Button & we’ll use it in Step 2 in <BrandName /> Steps.
 
   <img loading="lazy" src={require('../assets/images/app-center-integration/app-center04.webp').default} alt="cmd" className="doc_img"/>
 
 
 
-## LambdaTest Real-Time App Testing
+## <BrandName /> Real-Time App Testing
 
 ---
 
@@ -122,16 +124,16 @@ Before getting started with the setup, you would need access to the following:
 
   ***
 
-4. Click on Sync to sync the Builds with LambdaTest.
-> **Note:** Only the Builds synced will appear on LambdaTest. In case you missed something, Click on 'Configure' to select other Builds later.
+4. Click on Sync to sync the Builds with <BrandName />.
+> **Note:** Only the Builds synced will appear on <BrandName />. In case you missed something, Click on 'Configure' to select other Builds later.
 
   <img loading="lazy" src={require('../assets/images/app-center-integration/app-center08.webp').default} alt="cmd" className="doc_img"/>
 
-App Center is now configured to be used with LambdaTest.
+App Center is now configured to be used with <BrandName />.
   ***
 
 
-5. Selected Builds from App Center will now appear on LambdaTest. Click on them to toggle them & select the Version from the Build that you’d like to run the test on.
+5. Selected Builds from App Center will now appear on <BrandName />. Click on them to toggle them & select the Version from the Build that you’d like to run the test on.
 
   <img loading="lazy" src={require('../assets/images/app-center-integration/app-center09.webp').default} alt="cmd" className="doc_img"/>
 
@@ -142,7 +144,7 @@ App Center is now configured to be used with LambdaTest.
   <img loading="lazy" src={require('../assets/images/app-center-integration/app-center10.webp').default} alt="cmd" className="doc_img"/>
 
 
-## Managing App Center Builds on LambdaTest
+## Managing App Center Builds on <BrandName />
 
 ---
 
@@ -172,12 +174,12 @@ App Center is now configured to be used with LambdaTest.
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -22,7 +22,8 @@ keywords:
 url: https://www.testmu.ai/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid
 site_name: LambdaTest
 slug: running-groovy-script-in-katalon-with-testmu-selenium-grid
-----
+---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,25 +33,25 @@ slug: running-groovy-script-in-katalon-with-testmu-selenium-grid
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Running Groovy Automation Scripts",
-          "item": "https://www.lambdatest.com/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/"
+          "item": `${BRAND_URL}/support/docs/running-groovy-script-in-katalon-with-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# Running Groovy Script In Katalon With LambdaTest Selenium Grid
+# Running Groovy Script In Katalon With <BrandName /> Selenium Grid
 * * *
-As you perform testing with Katalon Studio, you can write or edit test automation scripts in the **Script mode** using Groovy programming language. This tutorial will help you run your Groovy script in Katalon with LambdaTest Selenium Grid.
+As you perform testing with Katalon Studio, you can write or edit test automation scripts in the **Script mode** using Groovy programming language. This tutorial will help you run your Groovy script in Katalon with <BrandName /> Selenium Grid.
 
 **Step 1:** Open your Katalon Studio instance & go to **Tests Explorer** from the left side-bar.
 
@@ -154,18 +155,18 @@ class LambdaListener {
 }
 ```
 
-That is all. Now, you can effortlessly run Groovy Scripts in Katalon for triggering your tests over LambdaTest cloud-based cross browser testing platform. Happy testing! 🙂
+That is all. Now, you can effortlessly run Groovy Scripts in Katalon for triggering your tests over <BrandName /> cloud-based cross browser testing platform. Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" href="/support/docs/">Support</a>
 	  </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Running Groovy Script In Katalon With LambdaTest</span>
+      <span className="breadcrumbs__link">Running Groovy Script In Katalon With <BrandName /></span>
     </li>
   </ul>
 </nav>

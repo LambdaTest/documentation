@@ -1,4 +1,4 @@
-﻿---
+---
 id: Device-reservation
 title: Device Reservation on Private Cloud Devices
 description: Learn how to reserve private cloud devices in TestMu AI to ensure uninterrupted testing, fair access, and conflict-free usage across your team.
@@ -17,6 +17,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Python With Appium",
-          "item": "https://www.lambdatest.com/support/docs/appium-python/"
+          "item": `${BRAND_URL}/support/docs/appium-python/`
         }]
       })
     }}
@@ -44,7 +46,7 @@ import TabItem from '@theme/TabItem';
 
 # Device Reservation on Private Device Cloud
 
-**LambdaTest Device Reservation** enables users to reserve private cloud devices in **advance**, ensuring uninterrupted access during critical testing windows. By scheduling devices ahead of time, teams can **prevent conflicts**, eliminate last-minute delays, and run both manual and automated tests with greater reliability. This becomes particularly valuable for time-sensitive releases, large-scale regression cycles, and continuous integration pipelines, where guaranteed device availability is essential.
+**<BrandName /> Device Reservation** enables users to reserve private cloud devices in **advance**, ensuring uninterrupted access during critical testing windows. By scheduling devices ahead of time, teams can **prevent conflicts**, eliminate last-minute delays, and run both manual and automated tests with greater reliability. This becomes particularly valuable for time-sensitive releases, large-scale regression cycles, and continuous integration pipelines, where guaranteed device availability is essential.
 
 Beyond preventing scheduling conflicts, Device Reservation also helps organizations **optimize resource utilization**, enforce fair usage policies, and gain clearer visibility into device allocation across teams, leading to more efficient and predictable testing operations.
 

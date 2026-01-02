@@ -32,7 +32,7 @@ If you're building digital products that real people use, this score matters.
 
 ## Where to find it
 
-Navigate to any completed accessibility test in your LambdaTest dashboard. The Accessibility Score appears prominently in the test report, giving you an instant read on how that specific scan performed.
+Navigate to any completed accessibility test in your <BrandName /> dashboard. The Accessibility Score appears prominently in the test report, giving you an instant read on how that specific scan performed.
 
 ---
 
@@ -85,7 +85,7 @@ The score scales from 0 to 100, where:
 - **Below 50**: Significant accessibility barriers present
 
 
-**Note:** The Accessibility Score is a proprietary metric developed by LambdaTest. This scoring methodology is unique to our platform and provides a tailored approach to measuring accessibility health.
+**Note:** The Accessibility Score is a proprietary metric developed by <BrandName />. This scoring methodology is unique to our platform and provides a tailored approach to measuring accessibility health.
 
 
 ---

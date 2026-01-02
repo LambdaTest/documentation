@@ -1,4 +1,4 @@
-﻿---
+---
 id: analytics-dashboard-edit-layout
 title: TestMu AI Analytics - Customizing Your Dashboard with the New Widget Management Feature
 sidebar_label: Edit Dashboard Layout
@@ -18,17 +18,17 @@ slug: analytics-dashboard-edit-layout
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/analytics-overview/"
+          "item": `${BRAND_URL}/support/docs/analytics-overview/`
         }]
       })
     }}
@@ -95,12 +95,12 @@ A: Yes, you can revert to the previous state by clicking the 'Cancel' button dur
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,4 +1,4 @@
-﻿---
+---
 id: analytics-widgets
 title: Widgets
 sidebar_label: Widgets
@@ -9,6 +9,8 @@ url: https://www.testmu.ai/support/docs/analytics-widgets
 site_name: LambdaTest
 slug: analytics-widgets
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,17 +20,17 @@ slug: analytics-widgets
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Analytics Widgets",
-          "item": "https://www.lambdatest.com/support/docs/analytics-widgets/"
+          "item": `${BRAND_URL}/support/docs/analytics-widgets/`
         }]
       })
     }}
@@ -37,7 +39,7 @@ slug: analytics-widgets
 import NewTag from '../src/component/newTag';
 
 
-Analytics in LambdaTest allows the QA managers and executives to efficiently track the tests conducted on the platform and get deep-level insights with the numerous widgets that the product provides.
+Analytics in <BrandName /> allows the QA managers and executives to efficiently track the tests conducted on the platform and get deep-level insights with the numerous widgets that the product provides.
 
 ## Insights Modules
 
@@ -53,19 +55,19 @@ To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analy
 <a href="/support/docs/analytics-modules-resource-utilization/">
     <div className="support_inners">
       <h3>Concurrency Usage</h3>
-      <p>Learn how to to get an overview of the LambdaTest resources being utilized by your teams.</p>
+      <p>Learn how to to get an overview of the <BrandName /> resources being utilized by your teams.</p>
     </div>
   </a>
   <a href="/support/docs/analytics-modules-automation-test-overview/">
     <div className="support_inners">
       <h3>Tests Overview</h3>
-      <p>Learn how to get an overview of the tests running on the LambdaTest.</p>
+      <p>Learn how to get an overview of the tests running on the <BrandName />.</p>
     </div>
   </a>
   <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/">
     <div className="support_inners">
       <h3>Error Insights</h3>
-      <p>Learn how to get all the insights into the test errors on the LambdaTest.</p>
+      <p>Learn how to get all the insights into the test errors on the <BrandName />.</p>
     </div>
   </a>
   <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/">

@@ -1,4 +1,4 @@
-﻿---
+---
 id: xcresult
 title: XCResult
 sidebar_label: XCResult
@@ -22,6 +22,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,31 +33,31 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "XCUI Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-xcuitest/"
+          "item": `${BRAND_URL}/support/docs/getting-started-with-xcuitest/`
         }]
       })
     }}
 ></script>
-# XCResult on LambdaTest
+# XCResult on <BrandName />
 <RealDeviceTag value="Real Device" />
 Apple’s **Native XCResult Bundles (`.xcresult`)** are comprehensive test reports generated when you run XCUITest cases. These bundles include **test hierarchy, logs, stack traces, screenshots, and performance data**, which can be directly viewed in Xcode. They provide developers with rich debugging information, making it easier to analyze why a test passed or failed.  
 
-On LambdaTest, you can now **generate and download `.xcresult` bundles** for your XCUI test sessions. You can access them via the **REST API**.
+On <BrandName />, you can now **generate and download `.xcresult` bundles** for your XCUI test sessions. You can access them via the **REST API**.
 
 ---
 ## Prerequisites
 
-- Your LambdaTest [Username and Access Key](https://accounts.lambdatest.com/security).  
+- Your <BrandName /> [Username and Access Key](https://accounts.lambdatest.com/security).  
 - Access to an **iOS app (.ipa)** and an **XCUI Test app (.ipa)**.  
 - Xcode installed locally to view `.xcresult` bundles.  
 
@@ -65,7 +67,7 @@ On LambdaTest, you can now **generate and download `.xcresult` bundles** for you
 
 ### Step 1: Upload Your Application and Test Suite
 
-To begin testing, you need to upload both your iOS application (.ipa) file and your XCUI test suite (.ipa) file to LambdaTest. These files are required before executing tests.
+To begin testing, you need to upload both your iOS application (.ipa) file and your XCUI test suite (.ipa) file to <BrandName />. These files are required before executing tests.
 
 Detailed upload steps are available here: [Getting Started with XCUI Testing – Running Your First Test](/support/docs/getting-started-with-xcuitest/#running-your-first-test-a-step-by-step-guide)
 

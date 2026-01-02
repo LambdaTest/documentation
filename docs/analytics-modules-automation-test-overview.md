@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/analytics-modules-automation-test-overvi
 site_name: LambdaTest
 slug: analytics-modules-automation-test-overview
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -23,28 +25,28 @@ slug: analytics-modules-automation-test-overview
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-automation-test-overview/"
+          "item": `${BRAND_URL}/support/docs/analytics-modules-automation-test-overview/`
         }]
       })
     }}
 ></script>
-The Test Overview module in LambdaTest Analytics is a powerful tool that provides you with a comprehensive view of your test performance across various dimensions. By leveraging this module, you can gain valuable insights into test flakiness, total tests run, and test categorization by status and platform.
+The Test Overview module in <BrandName /> Analytics is a powerful tool that provides you with a comprehensive view of your test performance across various dimensions. By leveraging this module, you can gain valuable insights into test flakiness, total tests run, and test categorization by status and platform.
 
 ## Test Health Snapshot
 
 <img loading="lazy" src={require('../assets/images/analytics/test-overview-1.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-The Test Health Snapshot widget enables you to quickly assess the flakiness or inconsistency of your tests executed on the LambdaTest platform. This widget displays the count of unique test names and their consistency in test status over a specified duration.
+The Test Health Snapshot widget enables you to quickly assess the flakiness or inconsistency of your tests executed on the <BrandName /> platform. This widget displays the count of unique test names and their consistency in test status over a specified duration.
 
 #### How It Works
 - The widget calculates the total number of unique test names executed on the platform.
@@ -58,7 +60,7 @@ By identifying inconsistent tests, you can focus your efforts on stabilizing you
 
 <img loading="lazy" src={require('../assets/images/analytics/test-overview-2.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-The Build Health Snapshot widget provides an overview of the performance and consistency of your builds created on the LambdaTest platform. It displays the count of unique build names and their consistency in build status over a specified duration.
+The Build Health Snapshot widget provides an overview of the performance and consistency of your builds created on the <BrandName /> platform. It displays the count of unique build names and their consistency in build status over a specified duration.
 
 #### How It Works
 - The widget calculates the total number of unique build names created on the platform.
@@ -72,7 +74,7 @@ By monitoring the health of your builds, you can identify and resolve any incons
 
 <img loading="lazy" src={require('../assets/images/analytics/test-overview-3.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-The Test Summary widget provides a high-level overview of the total tests run on the LambdaTest platform, grouped by their status. It also includes information about various test-related errors, such as test case errors, idle timeouts, queue timeouts, and Lambda errors.
+The Test Summary widget provides a high-level overview of the total tests run on the <BrandName /> platform, grouped by their status. It also includes information about various test-related errors, such as test case errors, idle timeouts, queue timeouts, and Lambda errors.
 
 #### How It Works
 - The widget calculates the total number of tests executed on the platform.
@@ -86,7 +88,7 @@ The Test Summary widget allows you to quickly gauge the overall health and perfo
 
 <img loading="lazy" src={require('../assets/images/analytics/test-overview-4.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-The Test Browser Distribution widget provides a breakdown of the tests executed across different browsers on the LambdaTest platform. It displays the distribution of tests by browser and allows you to drill down into specific browser versions.
+The Test Browser Distribution widget provides a breakdown of the tests executed across different browsers on the <BrandName /> platform. It displays the distribution of tests by browser and allows you to drill down into specific browser versions.
 
 #### How It Works
 - The widget calculates the total number of tests executed on each browser.
@@ -100,7 +102,7 @@ By understanding the browser distribution of your tests, you can ensure adequate
 
 <img loading="lazy" src={require('../assets/images/analytics/test-overview-5.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-The Test OS Distribution widget provides an overview of the tests executed across different operating systems on the LambdaTest platform. It displays the distribution of tests by operating system and allows you to drill down into specific OS versions.
+The Test OS Distribution widget provides an overview of the tests executed across different operating systems on the <BrandName /> platform. It displays the distribution of tests by operating system and allows you to drill down into specific OS versions.
 
 #### How It Works
 - The widget calculates the total number of tests executed on each operating system.
@@ -128,7 +130,7 @@ By analyzing test trends, you can identify patterns, spikes, or dips in test exe
 
 <img loading="lazy" src={require('../assets/images/analytics/test-overview-7.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-The Test Device Coverage widget, specifically designed for App Automation, provides an overview of the tests executed across different mobile devices on the LambdaTest platform. It displays the distribution of tests by device and allows you to drill down into specific device models.
+The Test Device Coverage widget, specifically designed for App Automation, provides an overview of the tests executed across different mobile devices on the <BrandName /> platform. It displays the distribution of tests by device and allows you to drill down into specific device models.
 
 #### How It Works
 - The widget calculates the total number of tests executed on each mobile device.
@@ -142,7 +144,7 @@ Understanding the device coverage of your tests is crucial for ensuring the comp
 
 <img loading="lazy" src={require('../assets/images/analytics/test-overview-8.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
-The Test Status Ratio widget provides a breakdown of the test statuses (passed, failed, skipped, etc.) for the tests executed on the LambdaTest platform. It allows you to assess the overall quality and stability of your test cases.
+The Test Status Ratio widget provides a breakdown of the test statuses (passed, failed, skipped, etc.) for the tests executed on the <BrandName /> platform. It allows you to assess the overall quality and stability of your test cases.
 
 #### How It Works
 - The widget calculates the total number of tests executed on the platform.
@@ -154,6 +156,6 @@ By analyzing the test status ratio, you can quickly identify the proportion of p
 
 ---
 
-The Test Overview module in LambdaTest Analytics empowers you to gain comprehensive insights into your test performance, identify trends, and make data-driven decisions to optimize your testing process. By leveraging the various widgets available in this module, you can ensure test reliability, improve test coverage, and deliver high-quality applications across different browsers, operating systems, and devices.
+The Test Overview module in <BrandName /> Analytics empowers you to gain comprehensive insights into your test performance, identify trends, and make data-driven decisions to optimize your testing process. By leveraging the various widgets available in this module, you can ensure test reliability, improve test coverage, and deliver high-quality applications across different browsers, operating systems, and devices.
 
 Start exploring the Test Overview module today and unlock the full potential of your testing data to drive continuous improvement and success in your testing efforts.

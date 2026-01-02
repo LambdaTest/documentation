@@ -13,16 +13,16 @@ slug: role-based-access-control
 ---
 ***
 
-For every enterprise that uses cloud services, access management for those cloud resources is vital. LambdaTest RBAC is an authorization system that allows seamless access management of LambdaTest resources. With LambdaTest role-based access control, you can control who has access to LambdaTest resources, how they can leverage those resources, and what domains they can have access to.
+For every enterprise that uses cloud services, access management for those cloud resources is vital. <BrandName /> RBAC is an authorization system that allows seamless access management of <BrandName /> resources. With <BrandName /> role-based access control, you can control who has access to <BrandName /> resources, how they can leverage those resources, and what domains they can have access to.
 
-The LambdaTest RBAC will help you in creating the different teams and allot concurrency to those teams. In this way, you can perform the test automation by dividing the concurrency among the teams.
+The <BrandName /> RBAC will help you in creating the different teams and allot concurrency to those teams. In this way, you can perform the test automation by dividing the concurrency among the teams.
 
 
 ## How To Add A New Team Member?
 
 * * *
 
-**Step 1**: Login to your LambdaTest account and navigate to Profile icon on the top-right. Click on **'Manage Teams'**.
+**Step 1**: Login to your <BrandName /> account and navigate to Profile icon on the top-right. Click on **'Manage Teams'**.
 
 <img loading="lazy" src={require('../assets/images/role-based-access-control/Screenshot-199.webp').default} alt="Image"  className="doc_img"/>
 
@@ -46,7 +46,7 @@ Invites will be sent to the selected users which they need to accept from their 
 
 * * *
 
-**Step 1**: Login to your LambdaTest account and navigate to Profile icon on the top-right. Click on **'Manage Teams'**.
+**Step 1**: Login to your <BrandName /> account and navigate to Profile icon on the top-right. Click on **'Manage Teams'**.
 
 <img loading="lazy" src={require('../assets/images/role-based-access-control/Screenshot-199.webp').default} alt="Image"  className="doc_img"/>
 
@@ -66,7 +66,7 @@ Your new group will be created successfully.
 
 * * *
 
-**Step 1**: Login to your LambdaTest account and navigate to Profile icon on the top-right. Click on **'Manage Teams'**.
+**Step 1**: Login to your <BrandName /> account and navigate to Profile icon on the top-right. Click on **'Manage Teams'**.
 
 <img loading="lazy" src={require('../assets/images/role-based-access-control/Screenshot-199.webp').default} alt="Image"  className="doc_img"/>
 
@@ -82,7 +82,7 @@ Your group details will be displayed.
 
 * * *
 
-**Step 1**: Login to your LambdaTest account and navigate to Profile icon on the top-right. Click on **'Manage Teams'**.
+**Step 1**: Login to your <BrandName /> account and navigate to Profile icon on the top-right. Click on **'Manage Teams'**.
 
 <img loading="lazy" src={require('../assets/images/role-based-access-control/Screenshot-199.webp').default} alt="Image"  className="doc_img"/>
 
@@ -109,7 +109,7 @@ Then click on **'Edit'**.
 
 * * *
 
-**Step 1**: Login to your LambdaTest account and navigate to Profile icon on the top-right. Click on **'Manage Teams'**.
+**Step 1**: Login to your <BrandName /> account and navigate to Profile icon on the top-right. Click on **'Manage Teams'**.
 
 <img loading="lazy" src={require('../assets/images/role-based-access-control/Screenshot-199.webp').default} alt="Image"  className="doc_img"/>
 
@@ -120,4 +120,4 @@ Then click on **'Edit'**.
  Your selected group will be deleted.
 
 >
-In case you have any queries regarding LambdaTest RBAC or need any additional information, please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or drop us a mail to [**support@lambdatest.com**](mailto:support@lambdatest.com).
+In case you have any queries regarding <BrandName /> RBAC or need any additional information, please reach out at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24*7 Chat Portal**</span> or drop us a mail to [**support@lambdatest.com**](mailto:support@lambdatest.com).

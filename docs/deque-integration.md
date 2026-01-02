@@ -19,6 +19,8 @@ slug: deque-integration
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +30,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Deque axe Integration",
-          "item": "https://www.lambdatest.com/support/docs/deque-integration/"
+          "item": `${BRAND_URL}/support/docs/deque-integration/`
         }]
       })
     }}
@@ -49,7 +51,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 Deque's axe is a world-class digital accessibility toolkit that allows you to integrate functionality into your tests to scan content and generate an a11y score.
 
-Learn how to automate your Web Accessibility tests with LambdaTest and Deque using Webdriver IO framework.
+Learn how to automate your Web Accessibility tests with <BrandName /> and Deque using Webdriver IO framework.
 
 
 1. Ensure you have the below dependency for running accessibility tests.
@@ -59,13 +61,13 @@ Learn how to automate your Web Accessibility tests with LambdaTest and Deque usi
 //**or the latest version
 ```
 
-2. The LambdaTest Service, which you probably have in your project.
+2. The <BrandName /> Service, which you probably have in your project.
 
 ```js
 "@wdio/lambdatest-service"
 ```
 
-3. The next step will be to ensure that our LambdaTest configuration file contains the desired browser configurations and LambdaTest Username and Access Key.
+3. The next step will be to ensure that our <BrandName /> configuration file contains the desired browser configurations and <BrandName /> Username and Access Key.
 
 ```js
 // Specify LambdaTest Username and Access Key.
@@ -110,12 +112,12 @@ before: function (capabilities, specs, browser) {
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

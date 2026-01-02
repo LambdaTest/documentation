@@ -1,4 +1,4 @@
-﻿---
+---
 id: smartui-baseline-management
 title: Baseline Management in SmartUI
 sidebar_label: Baseline Management
@@ -26,17 +26,17 @@ import CodeBlock from '@theme/CodeBlock';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Baseline Management",
-          "item": "https://www.lambdatest.com/support/docs/smartui-baseline-management/"
+          "item": `${BRAND_URL}/support/docs/smartui-baseline-management/`
         }]
       })
     }}

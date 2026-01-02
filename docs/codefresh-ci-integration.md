@@ -1,4 +1,4 @@
-﻿---
+---
 id: codefresh-ci-integration
 title: Codefresh CI Integration With TestMu AI
 hide_title: true
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/codefresh-ci-integration-with-testmu
 site_name: LambdaTest
 slug: codefresh-ci-integration-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,39 +25,39 @@ slug: codefresh-ci-integration-with-testmu
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Codefresh CI Integration",
-          "item": "https://www.lambdatest.com/support/docs/codefresh-ci-integration-with-testmu/"
+          "item": `${BRAND_URL}/support/docs/codefresh-ci-integration-with-testmu/`
         }]
       })
     }}
 ></script>
 
-# Selenium Testing With Codefresh CI And LambdaTest
+# Selenium Testing With Codefresh CI And <BrandName />
 * * *
 Codefresh is a cloud-native continuous integration and delivery platform that enables teams to quickly and efficiently develop, deploy, and manage cloud-native applications.
 
 Teams can quickly and easily build, test, and deploy their applications on any cloud platform, including Kubernetes, Docker, and AWS. Our intuitive, easy-to-use UI helps streamline the development process.
 
-LambdaTest now integrates with Codeship to boost your go-to-market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) providing 3000+ real browsers running through machines on the cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to trim down your test cycles drastically.
+<BrandName /> now integrates with Codeship to boost your go-to-market delivery. Perform automated cross browser testing with <BrandName /> to ensure your development code renders seamlessly through an online [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) providing 3000+ real browsers running through machines on the cloud. Perform automation testing in parallel with <BrandName />’s Selenium grid to trim down your test cycles drastically.
 
 ## Prerequisites
 ***
 1. Signing details of Codefresh CI
 2. A GitHub repository. Here is our sample GitHub repository for [Python Selenium Sample](https://github.com/LambdaTest/python-selenium-sample.git).
-3. **LambdaTest Authentication Credentials**   
-    Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+3. **<BrandName /> Authentication Credentials**   
+    Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
     
 
-## Integrating Codefresh CI With LambdaTest
+## Integrating Codefresh CI With <BrandName />
 ***
 **Step 1:** Sign-in into your codefresh ci account , and create a new pipeline
 
@@ -74,7 +76,7 @@ LambdaTest now integrates with Codeship to boost your go-to-market delivery. Per
   - Choose your runtime image
   - Add your environment variables which needs to be passed to your testscripts.
   - Add your execution command in the commands option of your pipeline YAML.
-  - As the selected repository has scripts which is made to run tests on LambdaTest Selenium Grid, you would need 
+  - As the selected repository has scripts which is made to run tests on <BrandName /> Selenium Grid, you would need 
     set the env variables such as ```LT_USERNAME``` and ```LT_ACCESS_KEY```
   - Then to execute the pipeline, click the ```RUN``` button.
 
@@ -114,7 +116,7 @@ You can see the pipeline running.
 
 <img loading="lazy" src={require('../assets/images/codefresh-integration/pipeline_ruuning.png').default} alt="opt for Codeship Basic" width="798" height="415" className="doc_img"/>
 
-**Step 4:** Login to the LambdaTest Dashboard, Navigate to Automation -> Web Automation. You can see your codefresh pipeline build has been executed on LambdaTest
+**Step 4:** Login to the <BrandName /> Dashboard, Navigate to Automation -> Web Automation. You can see your codefresh pipeline build has been executed on <BrandName />
 
 <img loading="lazy" src={require('../assets/images/codefresh-integration/lt_dash.png').default} alt="opt for Codeship Basic" width="798" height="415" className="doc_img"/>
 
@@ -215,12 +217,12 @@ if __name__ == "__main__":
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

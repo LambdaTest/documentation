@@ -18,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 # Auto Healing for Selenium Web Automation
 ---
-Thе LambdaTest's Auto Hеaling fеaturе for Selenium testing allows you to automatically rеcovеr from cеrtain typеs of failurеs during thе еxеcution of your tеst scripts. Whеn еnablеd,  it can significantly еnhancе thе robustnеss of your tеst suitе by handling unеxpеctеd situations and еrrors,  thеrеby rеducing tеst flakinеss and improving tеst rеliability of your test suites. 
+Thе <BrandName />'s Auto Hеaling fеaturе for Selenium testing allows you to automatically rеcovеr from cеrtain typеs of failurеs during thе еxеcution of your tеst scripts. Whеn еnablеd,  it can significantly еnhancе thе robustnеss of your tеst suitе by handling unеxpеctеd situations and еrrors,  thеrеby rеducing tеst flakinеss and improving tеst rеliability of your test suites. 
 
 
 ## Enabling Auto Hеaling
@@ -235,16 +235,16 @@ To run the test, execute the below command:
 Self-healing plays a vital role in refining the test automation process. Here are its primary advantages:
 
 1. **Increased Test Stability:**
-The auto-healing feature of LambdaTest ensures that tests remain consistent and stable, even when faced with minor changes in the web application's UI. By dynamically adjusting to these changes, the AI Native auto-healing feature overcomes test flakiness, providing stability and reliability to your test suite in no time.
+The auto-healing feature of <BrandName /> ensures that tests remain consistent and stable, even when faced with minor changes in the web application's UI. By dynamically adjusting to these changes, the AI Native auto-healing feature overcomes test flakiness, providing stability and reliability to your test suite in no time.
 
 2. **Reduced Test Maintenance:**
-One of the significant challenges in test automation is the constant need to update and maintain test scripts due to evolving application interfaces. With LambdaTest's auto-healing capability, the system automatically adapts to these changes, reducing the manual effort required to update test scripts, and saving time and resources.
+One of the significant challenges in test automation is the constant need to update and maintain test scripts due to evolving application interfaces. With <BrandName />'s auto-healing capability, the system automatically adapts to these changes, reducing the manual effort required to update test scripts, and saving time and resources.
 
 3. **Intelligent Test Automation:**
- LambdaTest's auto-healing feature is not just about adapting to changes; it's about doing so intelligently. The auto-healing feature adds intelligence to the automated tests and enables them to dynamically adapt to the changes in an application and its environment. It typically involves applying artificial intelligence and machine learning algorithms to the self-healing of tests. 
+ <BrandName />'s auto-healing feature is not just about adapting to changes; it's about doing so intelligently. The auto-healing feature adds intelligence to the automated tests and enables them to dynamically adapt to the changes in an application and its environment. It typically involves applying artificial intelligence and machine learning algorithms to the self-healing of tests. 
 
 4. **Reliable CI pipeline:**
-Continuous Integration (CI) pipelines require reliable and consistent test results to ensure that the software development process is smooth and efficient. With the auto-healing feature, LambdaTest ensures that the tests feeding into the CI pipeline are stable, reducing the chances of unexpected failures and ensuring a smoother development and deployment process.
+Continuous Integration (CI) pipelines require reliable and consistent test results to ensure that the software development process is smooth and efficient. With the auto-healing feature, <BrandName /> ensures that the tests feeding into the CI pipeline are stable, reducing the chances of unexpected failures and ensuring a smoother development and deployment process.
 
 ## Limitations of Auto Healing
 ***
@@ -267,12 +267,12 @@ Thе Auto Hеaling fеaturе is a functionality to еnhancе thе robustnеss of
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

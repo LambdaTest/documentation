@@ -82,13 +82,13 @@ Before you can start performing Java automation testing with Selenium, you would
 
 - Install the latest **Java development environment**. We recommend to use **Java 11** version.
 
-- Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/). Latest versions of Selenium Client and WebDriver are ideal for running your automation script on LambdaTest Selenium cloud grid.
+- Download the latest **Selenium Client** and its **WebDriver bindings** from the [official website](https://www.selenium.dev/downloads/). Latest versions of Selenium Client and WebDriver are ideal for running your automation script on <BrandName /> Selenium cloud grid.
 
 - Install **Maven** which supports **TestNG** framework out of the box. **Maven** can be downloaded and installed following the steps from [the official website](https://maven.apache.org/). Maven can also be installed easily on **Linux/MacOS** using [**Homebrew**](https://brew.sh/) package manager.
 
 ### Cloning Repo and Installing Dependencies
 
-**Step 1:** Clone the LambdaTest’s [Java-TestNG-Selenium](https://github.com/LambdaTest/Java-TestNG-Selenium) repository and navigate to the code directory as shown below:
+**Step 1:** Clone the <BrandName />’s [Java-TestNG-Selenium](https://github.com/LambdaTest/Java-TestNG-Selenium) repository and navigate to the code directory as shown below:
 
 ```bash
 git clone https://github.com/LambdaTest/Java-TestNG-Selenium
@@ -346,12 +346,12 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

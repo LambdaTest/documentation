@@ -1,4 +1,4 @@
-﻿---
+---
 id: one-click-migration-from-testrail
 title: One Click Migration from TestRail
 hide_title: true
@@ -21,17 +21,17 @@ slug: one-click-migration-from-testrail
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "One Click Migration from TestRail",
-          "item": "https://www.lambdatest.com/support/docs/one-click-migration-from-testrail/"
+          "item": `${BRAND_URL}/support/docs/one-click-migration-from-testrail/`
         }]
       })
     }}
@@ -73,12 +73,12 @@ Efficiently importing data from TestRail streamlines your test management proces
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

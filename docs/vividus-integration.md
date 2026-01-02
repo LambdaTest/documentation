@@ -1,4 +1,4 @@
-﻿---
+---
 id: vividus-integration
 title: How to Perform Vividus Automation Tests Using TestMu AI?
 hide_title: true
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/vividus-integration
 site_name: LambdaTest
 slug: vividus-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -39,8 +41,6 @@ slug: vividus-integration
       })
     }}
 ></script>
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Vividus Tests On <BrandName />
 * * *
@@ -137,11 +137,11 @@ configuration.profiles=lambdatest/web,web/desktop/safari
 ./gradlew runStories
 ```
 
-<img loading="lazy" src={require('../assets/images/vividus-integration/vividus.webp').default} alt="Run Tests Using LambdaTest Vividus Integration" width="1242" height="473" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/vividus-integration/vividus.webp').default} alt="Run Tests Using <BrandName /> Vividus Integration" width="1242" height="473" className="doc_img"/>
 
 * The test execution will then start, and you can see the same on the automation dashboard of your <BrandName /> account.
 
-<img loading="lazy" src={require('../assets/images/vividus-integration/vividus-1.webp').default} alt="LambdaTest automation dashboard" width="1281" height="721" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/vividus-integration/vividus-1.webp').default} alt="<BrandName /> automation dashboard" width="1281" height="721" className="doc_img"/>
 
 * Once the test is complete, you can view the test result on the automation dashboard by clicking on the test case. You can see and verify if the test has been passed or failed in the Automation Logs.
 
@@ -168,7 +168,7 @@ Parallel execution is available out of the box and limited only with machine res
       <a className="breadcrumbs__link" href="/support/docs/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Vividus LambdaTest Integration</span>
+      <span className="breadcrumbs__link">Vividus <BrandName /> Integration</span>
     </li>
   </ul>
 </nav>

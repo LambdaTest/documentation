@@ -27,7 +27,7 @@ import TabItem from '@theme/TabItem';
 
 ---
 
-With LambdaTest, you can generate multiple reporters supported by Cypress for your tests. If you want to do so, follow the steps below and download the generated reports automatically.
+With <BrandName />, you can generate multiple reporters supported by Cypress for your tests. If you want to do so, follow the steps below and download the generated reports automatically.
 
 ***
 
@@ -106,12 +106,12 @@ The reports are grouped on the basis of your session_id with a designated _brows
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

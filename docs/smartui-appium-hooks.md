@@ -25,6 +25,8 @@ import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import CodeBlock from '@theme/CodeBlock';
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,23 +36,23 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI-Hooks",
-          "item": "https://www.lambdatest.com/support/docs/smartui-appium-hooks/"
+          "item": `${BRAND_URL}/support/docs/smartui-appium-hooks/`
         }]
       })
     }}
 ></script>
 
-Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
+Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 <div className='storylane-iframe'>
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
@@ -92,7 +94,7 @@ $env:LT_USERNAME="YOUR_USERNAME"
 </TabItem>
 </Tabs>
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ## Step 1: Create a SmartUI Project
 
@@ -109,7 +111,7 @@ To create a SmartUI Project, follow these steps:
 
 ## Step 2: Upload your application
 
-Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='App File' label='App File' default>
@@ -136,14 +138,14 @@ Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk
 
 :::tip
 
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - ```lt://APP123456789123456789``` and will be used in the next step.
 
 :::
 
 ## Step 3: Clone the sample project
 
-Clone the LambdaTest’s :link: [LT-appium-nodejs](https://github.com/LambdaTest/LT-appium-nodejs) repository and navigate to the code directory as shown below:
+Clone the <BrandName />’s :link: [LT-appium-nodejs](https://github.com/LambdaTest/LT-appium-nodejs) repository and navigate to the code directory as shown below:
 
 ```bash
 git clone https://github.com/LambdaTest/LT-appium-nodejs
@@ -152,7 +154,7 @@ cd LT-appium-nodejs
 
 ## Step 4: Set up your authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set LambdaTest `Username` and `Access Key` in environment variables with following commands.
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.
 
 <Tabs className='docs__val'>
 
@@ -740,12 +742,12 @@ For additional information about appium framework please explore the documentati
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

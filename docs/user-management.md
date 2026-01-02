@@ -15,17 +15,17 @@ slug: user-management
 # User Management
 ---
 
-With Organization Settings in LambdaTest, you have the ability to effortlessly invite your team members to your LambdaTest Account. LambdaTest offers a range of roles that can be assigned to users.
+With Organization Settings in <BrandName />, you have the ability to effortlessly invite your team members to your <BrandName /> Account. <BrandName /> offers a range of roles that can be assigned to users.
 
-At present, LambdaTest supports the following roles:
+At present, <BrandName /> supports the following roles:
 
-**Admin:** This role grants full access to all the features and functionalities of LambdaTest, enabling the user to administer the account effectively.
+**Admin:** This role grants full access to all the features and functionalities of <BrandName />, enabling the user to administer the account effectively.
 
 **User:** Users with this role have access to all the subscribed products and are able to execute and stop their own tests. However, certain Organization Settings, such as Team Management, Subscriptions & Invoices, Authentication & SSO, remain inaccessible.
 
 **Guest:** This role provides the ability to view test logs, analytics, and other reports. However, guests do not have the privilege to initiate test runs.
 
-By leveraging the flexibility of Organization Settings, you can seamlessly manage your team members and their respective roles within your LambdaTest Account.
+By leveraging the flexibility of Organization Settings, you can seamlessly manage your team members and their respective roles within your <BrandName /> Account.
 
 
 
@@ -38,14 +38,14 @@ To access the organization settings, head to **Settings** and select **Organizat
 
 This page shows a list of users in your organization with options to invite new users, update an user, change their password etc.
 
-## Invite Users To Your LambdaTest Account
+## Invite Users To Your <BrandName /> Account
 ---
 
-Enter **one or multiple email addresses** along with a **role** for these users and system would send **email invitations** for the invitee to accept invitations to join LambdaTest.
+Enter **one or multiple email addresses** along with a **role** for these users and system would send **email invitations** for the invitee to accept invitations to join <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/sub-organizations/add-user.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
-They would be granted access to LambdaTest with the role you selected while inviting.
+They would be granted access to <BrandName /> with the role you selected while inviting.
 
 
 ## View Sent Invitations
@@ -87,7 +87,7 @@ As an Admin, you can view the **access token** of a user to be used in your CI/C
 ### 3. Change password of a user
 ---
 
-As an Admin, you can change a user's password in your LambdaTest account. Click on the **three dots** and select **Change Password** would open a modal where you can set a new password.
+As an Admin, you can change a user's password in your <BrandName /> account. Click on the **three dots** and select **Change Password** would open a modal where you can set a new password.
 
 <img loading="lazy" src={require('../assets/images/user-management/change-password-one.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -96,7 +96,7 @@ As an Admin, you can change a user's password in your LambdaTest account. Click 
 ### 4. Delete a user
 ---
 
-As an Admin you can **delete** users from your LambdaTest account. Click on the **three dots** and select **Delete User** option which would ask for a reconfirmation. Confirming the same would remove the selected user from your account.
+As an Admin you can **delete** users from your <BrandName /> account. Click on the **three dots** and select **Delete User** option which would ask for a reconfirmation. Confirming the same would remove the selected user from your account.
 
 <img loading="lazy" src={require('../assets/images/user-management/delete-one.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
@@ -105,7 +105,7 @@ As an Admin you can **delete** users from your LambdaTest account. Click on the 
 ### 5. Export
 ---
 
-You can **export** list of **users, service accounts and invitations** sent from your LambdaTest account.
+You can **export** list of **users, service accounts and invitations** sent from your <BrandName /> account.
 
 <img loading="lazy" src={require('../assets/images/user-management/export.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 

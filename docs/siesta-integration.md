@@ -1,4 +1,4 @@
-﻿---
+---
 id: siesta-integration
 title: Siesta Integration
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/siesta-integration
 site_name: LambdaTest
 slug: siesta-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: siesta-integration
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Siesta Integration",
-          "item": "https://www.lambdatest.com/support/docs/siesta-integration/"
+          "item": `${BRAND_URL}/support/docs/siesta-integration/`
         }]
       })
     }}
@@ -42,16 +44,16 @@ slug: siesta-integration
 
 Siesta is a JavaScript and UI testing tool for web pages and Node.js processes. You can run tests in browsers, Node.js, and Deno on Linux, macOS, and Windows.
 
-LambdaTest and Siesta integration lets you perform automated browser testing of your locally hosted websites or web apps across 3000+ real browsers and OS combinations.
+<BrandName /> and Siesta integration lets you perform automated browser testing of your locally hosted websites or web apps across 3000+ real browsers and OS combinations.
 
 ## Prerequisites
 ***
 
-1. A LambdaTest account. In case, you don't have an LambdaTest account, [sign up for free](https://accounts.lambdatest.com/register).
+1. A <BrandName /> account. In case, you don't have an <BrandName /> account, [sign up for free](https://accounts.lambdatest.com/register).
 
 2. Download Siesta from official Bryntum website.
 
-3. In order to run your Siesta tests, you will need to set your LambdaTest username and access key in the environment variables. Click the Access Key button at the top-right of the [Automation Dashboard](https://automation.lambdatest.com/build) to access it.
+3. In order to run your Siesta tests, you will need to set your <BrandName /> username and access key in the environment variables. Click the Access Key button at the top-right of the [Automation Dashboard](https://automation.lambdatest.com/build) to access it.
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="625" height="374"  className="doc_img"/>
 
@@ -87,7 +89,7 @@ To generate desired capabilities for your test script, head over to our [Desired
 ## Parallel Testing With Siesta
 ***
 
-LambdaTest lets you to perform parallel testing with Siesta across 3000+ browsers and OS. You can run one test case across multiple browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
+<BrandName /> lets you to perform parallel testing with Siesta across 3000+ browsers and OS. You can run one test case across multiple browsers, or you can run multiple test case scenarios in the same browser with different browser versions.
 
 
 To run your tests in parallel, pass the below command in the CMD terminal-
@@ -102,10 +104,10 @@ C:\xampp\htdocs\siesta\bin\webdriver http://localhost/siesta/examples/browser/in
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href="https://www.lambdatest.com/support/docs/">Support</a>
+      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Siesta Integration</span>

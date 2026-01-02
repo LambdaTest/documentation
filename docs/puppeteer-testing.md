@@ -1,4 +1,4 @@
-﻿---
+---
 id: puppeteer-testing-guide
 title: How To Run Puppeteer Tests On TestMu AI Platform
 hide_title: true
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/puppeteer-testing
 site_name: LambdaTest
 slug: puppeteer-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -24,17 +26,17 @@ slug: puppeteer-testing
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started With Puppeteer Testing",
-          "item": "https://www.lambdatest.com/support/docs/puppeteer-testing/"
+          "item": `${BRAND_URL}/support/docs/puppeteer-testing/`
         }]
       })
     }}
@@ -44,15 +46,15 @@ slug: puppeteer-testing
 * * *
 Puppeteer is a Node package that automates the Chrome browser for web testing. Over the DevTools Protocol, it provides a high-level API for controlling headless Chrome or Chromium. It may also be set to run full (non-headless) Chrome or Chromium.
 
-LambdaTest allows you to run Puppeteer tests on a browser farm of 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with Puppeteer testing on the LambdaTest platform.
+<BrandName /> allows you to run Puppeteer tests on a browser farm of 40+ real browsers and operating system combinations. This guide will cover the basics of getting started with Puppeteer testing on the <BrandName /> platform.
 
 ## Prerequisites
 ***
 
->Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+>Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
 <a href="https://github.com/LambdaTest/puppeteer-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
 
-1. Clone the LambdaTest-Puppeteer repository on your system.
+1. Clone the <BrandName />-Puppeteer repository on your system.
 
 2. Install the npm dependencies.
 
@@ -66,7 +68,7 @@ npm install
 `wss://cdp.lambdatest.com/puppeteer?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 ```
 
-4. In order to run your Puppeteer tests, you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+4. In order to run your Puppeteer tests, you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
@@ -88,9 +90,9 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ## Run Your First Puppeteer Test
 * * *
 
-Shown below are the steps on running Puppeteer tests on the LambdaTest platform. 
+Shown below are the steps on running Puppeteer tests on the <BrandName /> platform. 
 
-1. Clone the [LambdaTest-Puppeteer GitHub repository](https://github.com/LambdaTest/puppeteer-sample) and switch to the cloned directory.
+1. Clone the [<BrandName />-Puppeteer GitHub repository](https://github.com/LambdaTest/puppeteer-sample) and switch to the cloned directory.
 
 ```js
 git clone https://github.com/LambdaTest/puppeteer-sample.git
@@ -99,11 +101,11 @@ cd puppeteer-sample
 
 2. Ensure you have npm dependencies installed. 
 
-3. Configure your LambdaTest authentication credentials.
+3. Configure your <BrandName /> authentication credentials.
 
-Once you are done with the above-mentioned steps, you can initiate your first Puppeteer test on LambdaTest. 
+Once you are done with the above-mentioned steps, you can initiate your first Puppeteer test on <BrandName />. 
 
->**Test Scenario**: The below test script runs on Chrome browser running Windows 10. It visits the LambdaTest platform, clicks on the Pricing page, and navigates to the Automation Testing page.
+>**Test Scenario**: The below test script runs on Chrome browser running Windows 10. It visits the <BrandName /> platform, clicks on the Pricing page, and navigates to the Automation Testing page.
 
 ```js
 'use strict';
@@ -162,9 +164,9 @@ node navigation.js
 ## View your Puppeteer test results
 ***
 
-The LambdaTest Automation Dashboard is where you can see the results of your Puppeteer tests after running them on the LambdaTest platform. 
+The <BrandName /> Automation Dashboard is where you can see the results of your Puppeteer tests after running them on the <BrandName /> platform. 
 
-The below screenshot of LambdaTest Automation Dashboard shows the Puppeteer build on the left and the build sessions associated with the selected build on the right.
+The below screenshot of <BrandName /> Automation Dashboard shows the Puppeteer build on the left and the build sessions associated with the selected build on the right.
 
 <img loading="lazy" src={require('../assets/images/puppeteer-testing/dashboard.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
@@ -175,12 +177,12 @@ On clicking the session name of the respective test, you can view the details of
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

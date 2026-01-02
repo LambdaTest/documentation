@@ -9,6 +9,8 @@ url: https://www.testmu.ai/support/docs/analytics-faqs
 site_name: LambdaTest
 slug: analytics-faqs
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,17 +20,17 @@ slug: analytics-faqs
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Analytics FAQs",
-          "item": "https://www.lambdatest.com/support/docs/analytics-faqs/"
+          "item": `${BRAND_URL}/support/docs/analytics-faqs/`
         }]
       })
     }}
@@ -42,9 +44,9 @@ slug: analytics-faqs
 
 Getting started with Analytics is simple.
 
-Step 1: Login into your [LambdaTest](https://www.lambdatest.com/) account
+Step 1: Login into your [TestMu AI](https://www.lambdatest.com/) account
 
-Step 2: Visit the [Analytics](https://analytics.lambdatest.com/) page on the LambdaTest dashboard
+Step 2: Visit the [Analytics](https://analytics.lambdatest.com/) page on the <BrandName /> dashboard
 
 Step 3: Get started with creating a dashboard
 
@@ -98,27 +100,27 @@ A new widget can easily be added to a dashboard by clicking on the `Add Widget` 
 
 One can select the widgets they want to add from the variety of widgets available and click on the `Update Dashboard` button to update the dashboard with the new widgets.
 
-### What LambdaTest products does Analytics support?
+### What <BrandName /> products does Analytics support?
 
-Analytics is currently supported by 3 LambdaTest products
+Analytics is currently supported by 3 <BrandName /> products
 
 - Web Automation
 - HyperExecute
 - App Automation
 
 :::info Note
-Other LambdaTest products will be added soon with Analytics support.
+Other <BrandName /> products will be added soon with Analytics support.
 :::
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

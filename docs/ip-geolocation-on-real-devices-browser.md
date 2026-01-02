@@ -1,4 +1,4 @@
-﻿---
+---
 id: ip-geolocation-on-real-devices-browser
 title: IP Geolocation on Real Devices Browser
 sidebar_label: IP Geolocation
@@ -32,6 +32,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -41,17 +43,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Screen Reader on Real Devices App",
-          "item": "https://www.lambdatest.com/support/docs/ip-geolocation-on-real-devices-browser"
+          "item": `${BRAND_URL}/support/docs/ip-geolocation-on-real-devices-browser`
         }]
       })
     }}
@@ -59,9 +61,9 @@ import TabItem from '@theme/TabItem';
 
 Understanding how your website behaves across different geographies is essential for delivering a personalized and compliant user experience. Whether you're targeting region-specific pricing, content, or legal requirements, geolocation simulation is a critical part of cross-border testing.
 
-With LambdaTest’s Geolocation Change feature for Real Device Browsers, you can manually simulate a different country during a live browser testing session—on actual Android devices. This allows you to test how your mobile website responds to users from specific locations without using a VPN or emulator.
+With <BrandName />’s Geolocation Change feature for Real Device Browsers, you can manually simulate a different country during a live browser testing session—on actual Android devices. This allows you to test how your mobile website responds to users from specific locations without using a VPN or emulator.
 
-## Update Geolocation for Real Devices on LambdaTest
+## Update Geolocation for Real Devices on <BrandName />
 
 **Step 1:** Click on the **Real Devices** > **Browser Testing**
 
@@ -93,7 +95,7 @@ With LambdaTest’s Geolocation Change feature for Real Device Browsers, you can
 
 ## Supported Country 
 
-You can simulate geolocation for the following countries in LambdaTest's Real Device Browser Testing. Set the geolocation [country code](/support/docs/appium-ip-geolocation/#supported-ip-geolocations) if you want to enable the same in your test.
+You can simulate geolocation for the following countries in <BrandName />'s Real Device Browser Testing. Set the geolocation [country code](/support/docs/appium-ip-geolocation/#supported-ip-geolocations) if you want to enable the same in your test.
 
 ---
 

@@ -1,4 +1,4 @@
-﻿---
+---
 id: app-automation-app-sim
 title: App Automation Using Emulators and Simulators on TestMu AI
 sidebar_label: App Automation (Emu/Sim)
@@ -14,6 +14,8 @@ slug: app-automation-on-emulators-simulators
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,23 +25,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "App Automation Using Emulators and Simulators on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/app-automation-on-emulators-simulators/"
+          "item": `${BRAND_URL}/support/docs/app-automation-on-emulators-simulators/`
         }]
       })
     }}
 ></script>
 
-LambdaTest enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations. 
+<BrandName /> enables developers and testers to automate mobile app testing using cloud-based emulators and simulators. This eliminates the need for physical devices, streamlining the process of validating app functionality across a wide range of configurations. 
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="ZcgYzi60Nmo" data-loading-attribute="eager">
@@ -49,7 +51,7 @@ LambdaTest enables developers and testers to automate mobile app testing using c
 
 ---
 
-In this documеntation, learn how to run app automated tests on Emulators and Simulators using LambdaTest virtual testing cloud. 
+In this documеntation, learn how to run app automated tests on Emulators and Simulators using <BrandName /> virtual testing cloud. 
 
 :::info Note
 
@@ -65,7 +67,7 @@ Bеforе you gеt startеd with App Automation on LambdaTеst, makе surе you h
 
 2. Install [Appium Java Client](https://github.com/appium/java-client).
 
-3. A LambdaTest Username and Access Key.
+3. A <BrandName /> Username and Access Key.
 
 4. Ensure you have an access to an **Android** app (*.apk* or *.aab* file) or an **iOS** *zip* file (containing *.app* file).
 
@@ -85,7 +87,7 @@ Here are the following steps to run your first app automated test on Emulators a
 
 ### Step 1: Upload Your Application
 
-Upload your **iOS** application (*.app* file) or **Android** application (*.apk* file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **iOS** application (*.app* file) or **Android** application (*.apk* file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -441,7 +443,7 @@ Debug and run your code. Run `iOSApp.java` or `AndroidApp.java` in your editor.
 
 ### Step 4: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at LambdaTest [App Automation Dashboard](https://appautomation.lambdatest.com/build).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at <BrandName /> [App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 ## More About Desired Capabilities
 ---

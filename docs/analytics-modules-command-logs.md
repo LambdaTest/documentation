@@ -1,4 +1,4 @@
-﻿---
+---
 id: analytics-modules-test-intelligence-command-logs-analytics
 title: Command Logs Analytics with Test Intelligence
 sidebar_label: Command Errors
@@ -11,6 +11,8 @@ slug: analytics-modules-test-intelligence-command-logs-analytics
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 
 <script type="application/ld+json"
@@ -21,17 +23,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-flaky-test/"
+          "item": `${BRAND_URL}/support/docs/analytics-modules-flaky-test/`
         }]
       })
     }}
@@ -45,7 +47,7 @@ Lambdatest Analytics help you intelligently analyze your test execution steps on
 
 ### Prerequisites for using Command Logs Analytics
 The following are the steps to use Command Logs Analytics:
-1. You should have a LambdaTest account. If you don't have one, you can sign up [here](https://accounts.lambdatest.com/register).
+1. You should have a <BrandName /> account. If you don't have one, you can sign up [here](https://accounts.lambdatest.com/register).
 2. You should have access to the `Test Intelligence` subscription plan. You can join the waitlist [here](https://www.lambdatest.com/test-intelligence).
 3. Go to `Analytics` from the left navigation menu and create a new Dashboard by clicking on the `Create New Dashboard` button.
 4. Select the `Create Custom Dashboard` option from the `Create New Dashboard` dropdown.
@@ -130,12 +132,12 @@ The following are the steps to use Command Logs Analytics:
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

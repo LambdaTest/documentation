@@ -19,9 +19,9 @@ import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
-# Using LambdaTest Tunnel with SmartUI SDK
+# Using <BrandName /> Tunnel with SmartUI SDK
 
-LambdaTest Tunnel enables secure testing of your local, development, or privately hosted environments using SmartUI SDK. This guide explains how to configure and use LambdaTest Tunnel with SmartUI SDK.
+<BrandName /> Tunnel enables secure testing of your local, development, or privately hosted environments using SmartUI SDK. This guide explains how to configure and use <BrandName /> Tunnel with SmartUI SDK.
 
 :::warning Important
 Tunnel configuration is only supported with the `exec` mode of SmartUI SDK. It is not compatible with
@@ -33,13 +33,13 @@ documentation](/support/docs/smartui-cli-exec/).
 
 - Working knowledge of npm CLI commands
 - Understanding of tunneling concepts for local testing
-- Valid LambdaTest credentials (username and access key)
+- Valid <BrandName /> credentials (username and access key)
 - Familiarity with SmartUI CLI configuration files
 - SmartUI CLI installed and configured
 
 ## Configuration Options
 
-LambdaTest Tunnel supports two configuration modes:
+<BrandName /> Tunnel supports two configuration modes:
 
 ### 1. Automatic Tunnel Configuration
 
@@ -85,8 +85,8 @@ Configuration values take precedence over environment variables when both are pr
 
 The tunnel configuration automatically uses the following environment variables if not specified in the config:
 
-- `LT_USERNAME`: LambdaTest username
-- `LT_ACCESS_KEY`: LambdaTest access key
+- `LT_USERNAME`: <BrandName /> username
+- `LT_ACCESS_KEY`: <BrandName /> access key
 
 ## Example Configurations
 
@@ -183,7 +183,7 @@ The tunnel configuration automatically uses the following environment variables 
    - Ensure the directory path is accessible and contains the necessary files
 
 :::tip
-For more detailed information about LambdaTest Tunnel features and configurations, refer to our [Advanced Tunnel Features documentation](/support/docs/advanced-tunnel-features).
+For more detailed information about <BrandName /> Tunnel features and configurations, refer to our [Advanced Tunnel Features documentation](/support/docs/advanced-tunnel-features).
 :::
 
 </TabItem>
@@ -210,5 +210,5 @@ For more detailed information about LambdaTest Tunnel features and configuration
    - Ensure the directory path is accessible and contains the necessary files
 
 :::tip
-For more detailed information about LambdaTest Tunnel features and configurations, refer to our [Advanced Tunnel Features documentation](/support/docs/advanced-tunnel-features).
+For more detailed information about <BrandName /> Tunnel features and configurations, refer to our [Advanced Tunnel Features documentation](/support/docs/advanced-tunnel-features).
 :::

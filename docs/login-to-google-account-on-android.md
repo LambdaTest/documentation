@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/login-to-google-account-on-android
 site_name: LambdaTest
 slug: login-to-google-account-on-android
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: login-to-google-account-on-android
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Login To Google Account (Android)",
-          "item": "https://www.lambdatest.com/support/docs/login-to-google-account-on-android/"
+          "item": `${BRAND_URL}/support/docs/login-to-google-account-on-android/`
         }]
       })
     }}
@@ -40,7 +42,7 @@ slug: login-to-google-account-on-android
 <!-- # Login to Google Account on Android Device
 --- -->
 
-This documentation will guide you to log in to your Google Account on an Android Device on LambdaTest so you can test features/services that are linked to your Google Account.
+This documentation will guide you to log in to your Google Account on an Android Device on <BrandName /> so you can test features/services that are linked to your Google Account.
 
 
 ## Objective
@@ -51,7 +53,7 @@ To log in to Google Account on Real Devices [Android], and perform testing using
 ## Prerequisites
 ---
 
-1. LambdaTest App Automation Account.
+1. <BrandName /> App Automation Account.
 2. Automation script for testing.
 
 ## Logging into Google Account
@@ -151,12 +153,12 @@ Since we clean the Device after each session, ensure you are logging in to the a
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,4 +1,4 @@
-﻿---
+---
 id: getting-started-with-xcui-testing
 title: XCUI Testing on TestMu AI
 sidebar_label: XCUI Testing
@@ -20,6 +20,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,32 +31,32 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "XCUI Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-xcuitest/"
+          "item": `${BRAND_URL}/support/docs/getting-started-with-xcuitest/`
         }]
       })
     }}
 ></script>
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. LambdaTest lets you perform automated app testing of your iOS apps using XCUITest across 10000+ real devices and OS combinations.
+Developed by Apple, XCUITest is a framework for user-interface (UI) testing for iOS applications. It is built on top of XCTest, an integrated test framework in Apple's Xcode IDE. <BrandName /> lets you perform automated app testing of your iOS apps using XCUITest across 10000+ real devices and OS combinations.
 
 ## Prerequisites
 
-- Your LambdaTest [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
 - Access to an **iOS** app (.ipa) and an **XCUI Test** app (.ipa file).
 
 :::tip
 
-If you do not have any **iOS** app (.ipa) and an **XCUI Test** app (.ipa) file, you can run your sample tests on LambdaTest by using our sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa) and a sample :link: [XCUI Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios_xcuitest.ipa).
+If you do not have any **iOS** app (.ipa) and an **XCUI Test** app (.ipa) file, you can run your sample tests on <BrandName /> by using our sample :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa) and a sample :link: [XCUI Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios_xcuitest.ipa).
 
 :::
 
@@ -62,9 +64,9 @@ If you do not have any **iOS** app (.ipa) and an **XCUI Test** app (.ipa) file, 
 
 ### Step 1: Upload Your Application
 
-To begin testing, upload your iOS application (.ipa file) to LambdaTest's servers. You'll use our **REST API** for this process.
+To begin testing, upload your iOS application (.ipa file) to <BrandName />'s servers. You'll use our **REST API** for this process.
 
-- **Authentication :** You'll need your LambdaTest Username and AccessKey. Combine them in the format `Username:AccessKey`.
+- **Authentication :** You'll need your <BrandName /> Username and AccessKey. Combine them in the format `Username:AccessKey`.
 - **Uploading the App :** Use **cURL command** to send a request to our API. The request should include the path to your application file (**appFile**).
 
 import Tabs from '@theme/Tabs';
@@ -100,7 +102,7 @@ import TabItem from '@theme/TabItem';
 
 ### Step 2: Upload Your Test Suite
 
-Upload your iOS test suite (.ipa) file to LambdaTest servers using our REST API.
+Upload your iOS test suite (.ipa) file to <BrandName /> servers using our REST API.
 
 The following sample cURL command shows how to upload a test suite:
 
@@ -206,7 +208,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/x
 
 ### Step 4: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://accounts.lambdatest.com/login).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://accounts.lambdatest.com/login).
 
 <img loading="lazy" src={require('../assets/images/xcui/xcui-test.jpeg').default} alt="Image" width="521" height="268" className="doc_img"/>
 
@@ -237,12 +239,12 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/x
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -18,7 +18,7 @@ import CodeBlock from '@theme/CodeBlock';
 
 **Multi-Device Testing** enables you to run multiple devices simultaneously in a single App Live session, allowing you to validate your application across different devices and OS versions faster and more efficiently. This approach simplifies **cross-device testing** by bringing multiple devices into a single session.
 
-LambdaTest allows you to run **up to 6 devices at a time** within a single session, depending on your plan’s parallel limit. You can choose different applications for each device or test multiple versions of the same app concurrently, all from a single interface, without the need to start separate sessions.
+<BrandName /> allows you to run **up to 6 devices at a time** within a single session, depending on your plan’s parallel limit. You can choose different applications for each device or test multiple versions of the same app concurrently, all from a single interface, without the need to start separate sessions.
 
 ---
 

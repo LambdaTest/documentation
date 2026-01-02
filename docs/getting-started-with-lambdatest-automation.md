@@ -1,4 +1,4 @@
-﻿---
+---
 id: getting-started-with-lambdatest-automation
 title: Selenium Automation Testing Using TestMu AI
 sidebar_label: Selenium Testing
@@ -19,6 +19,8 @@ site_name: LambdaTest
 slug: getting-started-with-testmu-automation
 ---
 import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/SeleniumSupportedLanguage';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,29 +30,29 @@ import SeleniumSupportedLanguage from '../src/component/SupportedLanguages/Selen
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started With Selenium Automation Testing Using LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-testmu-automation/"
+          "item": `${BRAND_URL}/support/docs/getting-started-with-testmu-automation/`
         }]
       })
     }}
 ></script>
-LambdaTest provides a robust and versatile Selenium Automation Grid, designed to revolutionize your [cross browser testing](https://www.lambdatest.com/) process. This powerful platform enables you to perform comprehensive, efficient, and scalable automated tests across a vast array of browsers and operating systems.
+<BrandName /> provides a robust and versatile Selenium Automation Grid, designed to revolutionize your [cross browser testing](https://www.lambdatest.com/) process. This powerful platform enables you to perform comprehensive, efficient, and scalable automated tests across a vast array of browsers and operating systems.
 
 ## Key Features
 
 - Access to **3000+ browsers** and **operating systems**.
 - Secure and reliable infrastructure
 - Faster build times and higher test coverage
-- **Local testing support** via [LambdaTest Tunnel](/support/docs/testing-locally-hosted-pages/)
+- **Local testing support** via [<BrandName /> Tunnel](/support/docs/testing-locally-hosted-pages/)
 - Simultaneous testing across multiple configurations
 
 ## Supported Languages and Frameworks
@@ -64,18 +66,18 @@ We support all languages and frameworks that are compatible with Selenium, so in
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Getting Started With Selenium Automation Testing Using LambdaTest
+       Getting Started With Selenium Automation Testing Using <BrandName />
       </span>
     </li>
   </ul>

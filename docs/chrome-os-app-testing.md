@@ -1,4 +1,4 @@
-﻿---
+---
 id: chrome-os-app-testing
 title: ChromeOS App Testing
 hide_title: false
@@ -17,6 +17,8 @@ url: https://www.testmu.ai/support/docs/chrome-os-app-testing
 site_name: LambdaTest
 slug: chrome-os-app-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ slug: chrome-os-app-testing
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "ChromeOS App Testing",
-          "item": "https://www.lambdatest.com/support/docs/chrome-os-app-testing/"
+          "item": `${BRAND_URL}/support/docs/chrome-os-app-testing/`
         }]
       })
     }}
@@ -45,9 +47,9 @@ This document outlines how you can leverage the features like mark as bug, chang
 
 ## Steps to start your ChromeOS App Testing
 
-**Step 1:** Click on the Real Time option from your LambdaTest dashboard.<br />
+**Step 1:** Click on the Real Time option from your <BrandName /> dashboard.<br />
 **Step 2:** Click on the **Virtual Mobile** option in **App Testing** section.<br />
-**Step 3:** Select the **ChromeOS** option, and upload your application to the LambdaTest. (We are using the sample application for the demo purpose)<br />
+**Step 3:** Select the **ChromeOS** option, and upload your application to the <BrandName />. (We are using the sample application for the demo purpose)<br />
 **Step 4:** Select your screen resolution and click on **Start** button.
 
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/launch-chrome-app.gif').default} style={{ height: '380px' }} className="doc_img"/>
@@ -95,7 +97,7 @@ It goes beyond simply simulating different network speeds (3G, 4G). It empowers 
  
 
 <!-- ## Projects
-Organizes your testing sessions within the LambdaTest platform by grouping them into projects for better manageability and collaboration.
+Organizes your testing sessions within the <BrandName /> platform by grouping them into projects for better manageability and collaboration.
 
   
 <img loading="lazy" src={require('../assets/videos/real-time/chromeos-app/projects.png').default} style={{ height: '350px' }} className="doc_img"/>

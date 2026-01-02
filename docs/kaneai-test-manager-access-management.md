@@ -11,6 +11,8 @@ url: https://www.testmu.ai/support/docs/kaneai-test-manager-access-management
 site_name: LambdaTest
 slug: kaneai-test-manager-access-management
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,22 +22,22 @@ slug: kaneai-test-manager-access-management
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Access Management",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-test-manager-access-management/"
+          "item": `${BRAND_URL}/support/docs/kaneai-test-manager-access-management/`
         }]
       })
     }}
 ></script>
-This document provides guidelines on managing access to KaneAI and Test Manager within LambdaTest. The access management functionality is exclusive to **organization administrators**, allowing them to allocate licenses to users as per the organization's requirements.
+This document provides guidelines on managing access to KaneAI and Test Manager within <BrandName />. The access management functionality is exclusive to **organization administrators**, allowing them to allocate licenses to users as per the organization's requirements.
 
 ## License Allocation Rules
 - **License Limitation :** Administrators can only allocate as many licenses as they have purchased or gained licenses through trials.
@@ -46,7 +48,7 @@ This document provides guidelines on managing access to KaneAI and Test Manager 
 ## Step-by-Step Guide for Managing Access
 
 ### Accessing the License Management Panel
-**Step 1 :** Log in to your LambdaTest Admin Account. <br />
+**Step 1 :** Log in to your <BrandName /> Admin Account. <br />
 **Step 2 :** Navigate to **Settings** > **Organization Settings** > **Products**. <br />
 **Step 3 :** Select KaneAI or Test Manager tab to allocate the desired product license.
 

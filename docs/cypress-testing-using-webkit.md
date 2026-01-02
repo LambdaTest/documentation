@@ -22,18 +22,18 @@ import TabItem from '@theme/TabItem';
 
 WebKit is a web browser engine based on KHTML that displays and interacts with web pages. It is open-source and used by many web browsers like Apple's Safari and Google's Chrome.
 
-LambdaTest lets you perform Cypress testing using WebKit, Safari's browser engine. By testing your web apps in WebKit, you can get an idea of how your website will run in Safari.
+<BrandName /> lets you perform Cypress testing using WebKit, Safari's browser engine. By testing your web apps in WebKit, you can get an idea of how your website will run in Safari.
 
 ## Prerequisites
 ---
 
 :::tip Sample repo
 
-Before we get started, make sure to clone the **LambdaTest's sample Cypress Cloud repo**, used in this document. <a href="https://github.com/LambdaTest/Cypress-Cloud" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+Before we get started, make sure to clone the **<BrandName />'s sample Cypress Cloud repo**, used in this document. <a href="https://github.com/LambdaTest/Cypress-Cloud" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
 
-You can run Cypress test in WebKit on the LambdaTest platform in a few simple steps:
+You can run Cypress test in WebKit on the <BrandName /> platform in a few simple steps:
 
 1. Clone the `LambdaTest-Cypress-Cloud` GitHub repo and navigate to the cloned directory.
 
@@ -42,7 +42,7 @@ git clone https://github.com/LambdaTest/Cypress-Cloud.git
 cd Cypress-Cloud
 ```
 
-2. To run Cypress tests in WebKit, set your LambdaTest username and access key in the environment variables. You can get them from the LambdaTest Automation Dashboard.
+2. To run Cypress tests in WebKit, set your <BrandName /> username and access key in the environment variables. You can get them from the <BrandName /> Automation Dashboard.
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
@@ -65,9 +65,9 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ## Running Your First Test in WebKit
 ---
 
-Following are the steps to run your first Cypress test in WebKit on the LambdaTest platform.
+Following are the steps to run your first Cypress test in WebKit on the <BrandName /> platform.
 
-1. Install the LambdaTest-Cypress CLI using the below command.
+1. Install the <BrandName />-Cypress CLI using the below command.
 
 ```bash
 npm install -g lambdatest-cypress-cli
@@ -217,13 +217,13 @@ Once you run the above command, below is the project structure for the `lambdate
 lambdatest-cypress run
 ```
 
-6. Visit [LambdaTest Automation dashboard](https://accounts.lambdatest.com/dashboard) to view your test results. The CLI also has a link to view the Cypress test build.
+6. Visit [<BrandName /> Automation dashboard](https://accounts.lambdatest.com/dashboard) to view your test results. The CLI also has a link to view the Cypress test build.
 
 
 ## Testing Locally Hosted or Privately Hosted Projects 
 ---
 
-To tests locally hosted websites on the LambdaTest platform, you need to setup [LambdaTest tunnel](/docs/testing-locally-hosted-pages/), and execute commands using the CLI, or [Download UnderPass](/docs/underpass-tunnel-application/), our GUI based desktop app. Once you have the LambdaTest tunnel or Underpass set up and started, you can use Cypress to test locally hosted websites.
+To tests locally hosted websites on the <BrandName /> platform, you need to setup [<BrandName /> tunnel](/docs/testing-locally-hosted-pages/), and execute commands using the CLI, or [Download UnderPass](/docs/underpass-tunnel-application/), our GUI based desktop app. Once you have the <BrandName /> tunnel or Underpass set up and started, you can use Cypress to test locally hosted websites.
 
 Now you need to activate the tunnel capability in the `lambdatest-config.json` file under the section "tunnel_settings" as shown below:
 
@@ -234,7 +234,7 @@ Now you need to activate the tunnel capability in the `lambdatest-config.json` f
 	}
 ```
 
-You can provide the name of the **LambdaTest tunnel** as per your requirements.
+You can provide the name of the **<BrandName /> tunnel** as per your requirements.
 
 ## Limitations
 ---

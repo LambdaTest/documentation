@@ -1,4 +1,4 @@
-﻿---
+---
 id: hyperexecute-private-cloud-setup
 title: HyperExecute Private Cloud 
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-setup
 site_name: LambdaTest
 slug: hyperexecute-private-cloud-setup
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 
 <script type="application/ld+json"
@@ -22,17 +24,17 @@ slug: hyperexecute-private-cloud-setup
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Concepts",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-private-cloud-setup/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-private-cloud-setup/`
         }]
       })
     }}
@@ -64,13 +66,13 @@ You can learn more about the HyperExecute Private Cloud by going through our doc
   <a href="/support/docs/hyperexecute-private-cloud-setup-with-aws/">
     <div className="support_inners">
       <h3>Setup with AWS</h3>
-      <p>Learn how to take access to your LambdaTest account and log in on your behalf from the backend.</p>
+      <p>Learn how to take access to your <BrandName /> account and log in on your behalf from the backend.</p>
     </div>
   </a>
   <a href="/support/docs/hyperexecute-guided-walkthrough/">
     <div className="support_inners">
       <h3>Guided Walkthrough of the HyperExecute Portal</h3>
-      <p>Learn how to take access to your LambdaTest account and log in on your behalf from the backend.</p>
+      <p>Learn how to take access to your <BrandName /> account and log in on your behalf from the backend.</p>
     </div>
   </a>
 </div>
@@ -97,12 +99,12 @@ You can learn more about the HyperExecute Private Cloud by going through our doc
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

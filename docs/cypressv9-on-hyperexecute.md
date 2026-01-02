@@ -31,6 +31,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -40,17 +42,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to run cypress automation tests on HyperExecute using cypress v9 framework",
-          "item": "https://www.lambdatest.com/support/docs/cypressv9-on-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/cypressv9-on-hyperexecute/`
         }]
       })
     }}
@@ -86,7 +88,7 @@ To run the Tests on HyperExecute from your Local System, you are required:
 - Setup the Environmental Variable
 
 :::tip Sample repo
-You can either download or clone the code samples of Cypress v9 from the **LambdaTest's GitHub Repository** to quickly run your tests. <a href="https://github.com/LambdaTest/hyperexecute-cypress-v9-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+You can either download or clone the code samples of Cypress v9 from the **<BrandName />'s GitHub Repository** to quickly run your tests. <a href="https://github.com/LambdaTest/hyperexecute-cypress-v9-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 #### Download HyperExecute CLI
@@ -100,7 +102,7 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
 #### Setup Environment Variable
-Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
 <Tabs className="docs__val">
@@ -499,12 +501,12 @@ For in detailed information on how to configure it properly, visit [Cypress Deta
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

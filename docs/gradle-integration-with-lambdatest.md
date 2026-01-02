@@ -1,4 +1,4 @@
-﻿---
+---
 id: gradle-integration-with-lambdatest
 title: Gradle Plugin Integration With TestMu AI
 hide_title: false
@@ -20,6 +20,8 @@ url: https://www.testmu.ai/support/docs/gradle-integration-with-testmu
 site_name: LambdaTest
 slug: gradle-integration-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
     dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +31,17 @@ slug: gradle-integration-with-testmu
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Gradle Integration",
-          "item": "https://www.lambdatest.com/support/docs/gradle-integration-with-testmu/"
+          "item": `${BRAND_URL}/support/docs/gradle-integration-with-testmu/`
         }]
       })
     }}
@@ -54,7 +56,7 @@ Gradle is a build automation tool for multi-language software development. It co
 
 ## Steps to Setup the Gradle Plugin
 
-### Step 1: Add LambdaTest Gradle Plugin to the `build.gradle` file
+### Step 1: Add <BrandName /> Gradle Plugin to the `build.gradle` file
 
 ```java title="build.gradle"
 plugins {
@@ -68,7 +70,7 @@ repositories {
 }
 ```
 
-### Step 2: Configure LambdaTest Parameters in `build.gradle` file
+### Step 2: Configure <BrandName /> Parameters in `build.gradle` file
 
 ```java title="build.gradle"
 runLambdaTest {
@@ -84,7 +86,7 @@ runLambdaTest {
 ```
 
 ### Step 3: Configure Upload APK Parameters
-With the release of version **`1.0.7`** of the `lambdatest-gradle-plugin`, users now have the option to upload their APK files directly to LambdaTest. Add the following configuration to build.gradle to enable APK upload:
+With the release of version **`1.0.7`** of the `lambdatest-gradle-plugin`, users now have the option to upload their APK files directly to <BrandName />. Add the following configuration to build.gradle to enable APK upload:
 
 ```java title="build.gradle"
 uploadApkToLambdaTest {
@@ -101,21 +103,21 @@ To run the plugin configured in build.gradle, execute the following command:
 ./gradlew runLambdaTest
 ```
 
-If you only want to upload your APK files to LambdaTest, use the following command:
+If you only want to upload your APK files to <BrandName />, use the following command:
 
 ```bash
 ./gradlew uploadApkToLambdaTest
 ```
 
 ## Post Upload Configuration
-Once the upload process is completed, LambdaTest will return unique IDs for the uploaded files. These IDs can be used in the runLambdaTest configuration to execute your tests seamlessly.
+Once the upload process is completed, <BrandName /> will return unique IDs for the uploaded files. These IDs can be used in the run<BrandName /> configuration to execute your tests seamlessly.
 
 ## Virtual Device Support
-The LambdaTest Gradle plugin now supports virtual devices. To execute tests on a virtual device, set **`isVirtualDevice: true`** in both **`runLambdaTest`** and **`uploadApkToLambdaTest`** configurations. If this flag is not provided, tests will default to running on a real device.
+The <BrandName /> Gradle plugin now supports virtual devices. To execute tests on a virtual device, set **`isVirtualDevice: true`** in both **`runLambdaTest`** and **`uploadApkToLambdaTest`** configurations. If this flag is not provided, tests will default to running on a real device.
 
 ## Supported Capabilities
 
-The LambdaTest Gradle Plugin supports the following capabilities:
+The <BrandName /> Gradle Plugin supports the following capabilities:
 
 | Capability | Description | Example |
 |------------|-------------|---------|

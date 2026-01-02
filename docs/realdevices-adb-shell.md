@@ -1,4 +1,4 @@
-﻿---
+---
 id: real-device-adb-shell
 title: ADB Shell
 hide_title: true
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/real-device-adb-shell
 site_name: LambdaTest
 slug: real-device-adb-shell
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: real-device-adb-shell
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started with Real Device App Testing",
-          "item": "https://www.lambdatest.com/support/docs/real-device-adb-shell/"
+          "item": `${BRAND_URL}/support/docs/real-device-adb-shell/`
         }]
       })
     }}
@@ -40,7 +42,7 @@ slug: real-device-adb-shell
 
 # Execute ADB shell commands
 
-The integration of Android Debug Bridge (ADB) shell support within the LambdaTest Manual Testing platform for app testing on Android devices empowers users to run supported ADB shell commands directly on devices during manual testing sessions, receiving instant output. This feature addresses the challenge of remote device communication, enabling users to interact with devices as if they were physically present.
+The integration of Android Debug Bridge (ADB) shell support within the <BrandName /> Manual Testing platform for app testing on Android devices empowers users to run supported ADB shell commands directly on devices during manual testing sessions, receiving instant output. This feature addresses the challenge of remote device communication, enabling users to interact with devices as if they were physically present.
 
 ---
 
@@ -53,7 +55,7 @@ The integration of Android Debug Bridge (ADB) shell support within the LambdaTes
 
 ## Accessing ADB Shell Terminal
 
-**Step 1:** Login to your LambdaTest account and navigate to **App Testing** under **Real Device** from the left sidebar.
+**Step 1:** Login to your <BrandName /> account and navigate to **App Testing** under **Real Device** from the left sidebar.
 
 **Step 2:** Choose the OS version (Android), select your application and device from the device listing, and start your test session.
 
@@ -122,12 +124,12 @@ All the public commands along with the following:
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

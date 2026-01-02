@@ -19,6 +19,8 @@ import EnhancementTag from '../src/component/enhancementTag';
 import BugFixTag from '../src/component/bugFixTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +30,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Version",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-release-notes-2-9-4/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-release-notes-2-9-4/`
         }]
       })
     }}
@@ -72,7 +74,7 @@ HyperExecute now supports `network logs` and `tunnel` capabilities for Maestro t
 
 ### Feature Highlights
 - **Network Logs:** Capture detailed request/response data during test execution for enhanced debugging and visibility.
-- **Tunnel Support:** Access internal or staging environments securely using LambdaTest Tunnel.
+- **Tunnel Support:** Access internal or staging environments securely using <BrandName /> Tunnel.
 - Supported across both virtual and real mobile devices.
 
 > 📘 Refer to our detailed documentation for [`Maestro`](/support/docs/hyperexecute-maestro-testing/).

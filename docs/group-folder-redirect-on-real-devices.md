@@ -16,7 +16,7 @@ slug: group-folder-redirect-on-real-device
 
 # Group Folder Redirect On Real Devices  
 
-LambdaTest supports **Group Folder Redirect** for iOS apps on Real Devices.  
+<BrandName /> supports **Group Folder Redirect** for iOS apps on Real Devices.  
 This feature ensures your app uses its **private container directory** instead of the **shared app group container**, which becomes inaccessible after **app resigning** on Real Devices.
 
 ---

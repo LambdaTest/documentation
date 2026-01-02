@@ -21,6 +21,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started With Appium Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-appium-virtual-device/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-appium-virtual-device/`
         }]
       })
     }}
@@ -60,9 +62,9 @@ To run the Tests on HyperExecute from your Local System, you are required:
 - Access to an **Android** app (.apk or .aab file)
 
 :::tip Sample repo
-All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/hyperexecute-appium-testng/tree/android-emulator" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/hyperexecute-appium-testng/tree/android-emulator" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
-> If you do not have any **.apk** file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk)
+> If you do not have any **.apk** file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk)
 
 ### Download HyperExecute CLI
 
@@ -75,7 +77,7 @@ The *HyperExecute CLI* is used for triggering tests on HyperExecute. It is recom
 | Linux | https://downloads.lambdatest.com/hyperexecute/linux/hyperexecute |
 
 ### Setup Environment Variable
-Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Export the environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 Run the below mentioned commands in the terminal to setup the CLI and the environment variables.
 
 <Tabs className="docs__val">
@@ -106,7 +108,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 ## Steps to Run Your Test
 
 ### Step 1: Upload your Application
-Upload your <b>_android_</b> application (.apk file) to the LambdaTest servers using our <b>REST API</b>. You need to provide your <b>Username</b> and <b>AccessKey</b> in the format `Username:AccessKey` in the <b>cURL</b> command for authentication. Make sure to add the path of the <b>appFile</b> in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your <b>_android_</b> application (.apk file) to the <BrandName /> servers using our <b>REST API</b>. You need to provide your <b>Username</b> and <b>AccessKey</b> in the format `Username:AccessKey` in the <b>cURL</b> command for authentication. Make sure to add the path of the <b>appFile</b> in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 <Tabs className="docs__val">
   <TabItem value="file" label="App file" default>

@@ -23,6 +23,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,17 +34,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Sharding in Espresso",
-          "item": "https://www.lambdatest.com/support/docs/sharding-espresso-rd-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/sharding-espresso-rd-hyperexecute/`
         }]
       })
     }}
@@ -64,7 +66,7 @@ You can learn more about the HyperExecute portal and UI by going through our [Gu
 By the end of this topic, you will be able to:
 1. Speed up your Espresso tests with sharding
 2. Learn more about HyperExecute
-3. Explore advanced features of LambdaTest
+3. Explore advanced features of <BrandName />
 
 ## Prerequisites
 
@@ -72,7 +74,7 @@ By the end of this topic, you will be able to:
 
 Before you start performing your App automation testing with Espresso, please make sure:
 
-- You have access to LambdaTest username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials at the [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile)
+- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials at the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
 - Make sure you have App Automation Cloud plans on your account.
 
 
@@ -80,7 +82,7 @@ Before you start performing your App automation testing with Espresso, please ma
 
 ### Step 1: Upload Your Application
 
-Upload your **android** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format ```Username:AccessKey``` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request.
+Upload your **android** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format ```Username:AccessKey``` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request.
 
 Here is an example cURL request to upload your app using our REST API:
 
@@ -121,7 +123,7 @@ Here is an example cURL request to upload your app using our REST API:
 
 ### Step 2: Uploading Test Suite
 
-Upload your **test suite** (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **test suite** (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 **Using App File:**
 
@@ -306,9 +308,9 @@ You can refer to this example and screenshot below:
 
 
 5. After the test is started you can follow the test on the below links.
-- [LambdaTest Automation](https://appautomation.lambdatest.com/build)
+- [<BrandName /> Automation](https://appautomation.lambdatest.com/build)
 <img loading="lazy" src={require('../assets/images/app-automation/espresso_sharding.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
-- [LambdaTest HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute)
+- [<BrandName /> HyperExecute](https://hyperexecute.lambdatest.com/hyperexecute)
 <img loading="lazy" src={require('../assets/images/app-automation/espresso_cli.png').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
 :::note
@@ -368,17 +370,17 @@ To download these artifacts in your local machine, you can pass the `--download-
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

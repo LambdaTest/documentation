@@ -34,6 +34,8 @@ url: https://www.lambdatest.com/support/docs/view-lighthouse-performance-metrics
 site_name: LambdaTest
 slug: view-lighthouse-performance-metrics/
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -58,8 +60,6 @@ slug: view-lighthouse-performance-metrics/
       })
     }}
 ></script>
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # View Lighthouse Performance Metrics Using Online Selenium Grid
 * * *

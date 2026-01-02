@@ -12,11 +12,11 @@ site_name: LambdaTest
 slug: xcode-plugin-testmu
 ---
 -----------------------------------------------------------------------------------------------------------------------------
-LambdaTest have developed a new plugin to help developers execute tests on the LambdaTest Grid directly from the XCode (via LambdaMax). The all-new LambdaTest plugin will allow developers and testers to directly run automated tests based on XCUIT (XCode) framework on the LambdaTest real device cloud.
+<BrandName /> have developed a new plugin to help developers execute tests on the <BrandName /> Grid directly from the XCode (via LambdaMax). The all-new <BrandName /> plugin will allow developers and testers to directly run automated tests based on XCUIT (XCode) framework on the <BrandName /> real device cloud.
 
 XCUITest is a testing framework that can be used to automate UI tests for native iOS and macOS applications. The framework uses XCTest, an integrated testing framework developed by Apple. You can write automated UI tests using the XCUITest framework in Swift or Objective-C programming language.
 
-With this new plugin, testers and developers never have to leave XCode to execute a test on LambdaTest’s real device cloud. Follow these steps to install LambdaMax plugin:
+With this new plugin, testers and developers never have to leave XCode to execute a test on <BrandName />’s real device cloud. Follow these steps to install LambdaMax plugin:
 
 ## How to Install LambdaMax Plugin
 -----------------------------------------------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ With this new plugin, testers and developers never have to leave XCode to execut
 
 <img loading="lazy" src={require('../assets/images/lambdamax/lambdamax-build-dropdown.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
-6. Click on **+** icon to add **"New Script Run Action"**. You can change the path and capabilities as per your preference, which will reflect directly on the LambdaTest Grid.
+6. Click on **+** icon to add **"New Script Run Action"**. You can change the path and capabilities as per your preference, which will reflect directly on the <BrandName /> Grid.
 
 <img loading="lazy" src={require('../assets/images/lambdamax/lambdamax-build-code.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
@@ -78,11 +78,11 @@ XCUITTestExecution=$(curl -w --location --request POST 'https://{username}:{acce
 
 echo "$XCUITTestExecution"
 ```
->**Note:** By clicking on the **Play** button in the top left corner, the script will automatically run on the LambdaTest Grid.
+>**Note:** By clicking on the **Play** button in the top left corner, the script will automatically run on the <BrandName /> Grid.
 
 <img loading="lazy" src={require('../assets/images/lambdamax/lambdamax-play.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/><br/>
 
-7. In the above code, update the required LambdaTest credentials - `{Username:AccessKey}`. You can access your credentials under the [profile section](https://accounts.lambdatest.com/detail/profile).
+7. In the above code, update the required <BrandName /> credentials - `{Username:AccessKey}`. You can access your credentials under the [profile section](https://accounts.lambdatest.com/detail/profile).
 
 <img loading="lazy" src={require('../assets/images/lambdamax/lambdamax-profile.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/><br/>
 
@@ -91,18 +91,18 @@ echo "$XCUITTestExecution"
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        LambdaTest XCode Plugin
+        <BrandName /> XCode Plugin
       </span>
     </li>
   </ul>

@@ -20,7 +20,7 @@ site_name: LambdaTest
 slug: supported-browsers-and-os
 ---
 
-LambdaTest supports the below listed browsers, browser versions and Operating Systems for Cypress testing:
+<BrandName /> supports the below listed browsers, browser versions and Operating Systems for Cypress testing:
 
 ```json
 {
@@ -52,7 +52,7 @@ LambdaTest supports the below listed browsers, browser versions and Operating Sy
 | Windows 8        | 66 and above (Except 82) | 60 and above | 80 and above (Except 82) |
 | Windows 7        | 66 and above (Except 82) | 60 and above | 80 and above (Except 82) |
 
->**Note**: LambdaTest Automation also supports Cypress testing on Electron browser and in WebKit.
+>**Note**: <BrandName /> Automation also supports Cypress testing on Electron browser and in WebKit.
 * **Electron**: Supported on all OS.
 * **WebKit**: Supported on - macOS Big Sur and macOS Monterey.
 
@@ -100,12 +100,12 @@ lambdatest-cypress run --browsers "platform:browser:version"
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

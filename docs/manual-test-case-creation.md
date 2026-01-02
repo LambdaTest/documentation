@@ -1,4 +1,4 @@
-﻿---
+---
 id: manual-test-case-creation
 title: Create & Manage Test Cases
 sidebar_label: Create & Manage Test Cases
@@ -21,17 +21,17 @@ slug: manual-test-case-creation
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Manual Test Case Creation",
-          "item": "https://www.lambdatest.com/support/docs/manual-test-case-creation/"
+          "item": `${BRAND_URL}/support/docs/manual-test-case-creation/`
         }]
       })
     }}
@@ -154,12 +154,12 @@ This section allows you to manage the Version History of the test caase by compa
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

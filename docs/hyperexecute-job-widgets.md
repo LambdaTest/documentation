@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/hyperexecute-job-widgets
 site_name: LambdaTest
 slug: hyperexecute-job-widgets
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +26,17 @@ slug: hyperexecute-job-widgets
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Widgets",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-job-widgets/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-job-widgets/`
         }]
       })
     }}
@@ -44,7 +46,7 @@ slug: hyperexecute-job-widgets
 
 ## Job Trends
 
-The `Job Trends` Widget empowers you to analyze the trends of executed Jobs on the LambdaTest platform, categorized as **Failed**, **Aborted**, **Lambda Error**, **Timeout**, and **Completed**.
+The `Job Trends` Widget empowers you to analyze the trends of executed Jobs on the <BrandName /> platform, categorized as **Failed**, **Aborted**, **Lambda Error**, **Timeout**, and **Completed**.
 
 You can leverage the widget to understand the distribution of Job statuses, enabling a comprehensive assessment of your team's application performance. By utilizing legends for seamless filtering, you can quickly identify specific failing Job numbers and troubleshoo
 

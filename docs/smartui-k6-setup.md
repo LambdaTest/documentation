@@ -60,7 +60,7 @@ $env:LT_USERNAME=YOUR_USERNAME"
 </TabItem>
 </Tabs>
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ### **Step 1:** Create a SmartUI Project
 
@@ -111,7 +111,7 @@ winget install k6
 </TabItem>
 </Tabs>
 
-4. Set up the LambdaTest credentials by using the commands below in the terminal. The account details are available on your [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile) page.
+4. Set up the <BrandName /> credentials by using the commands below in the terminal. The account details are available on your [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile) page.
 
 <Tabs className='docs__val' groupId='language'>
 <TabItem value='MacOS/Linux' label='MacOS/Linux' default>
@@ -172,7 +172,7 @@ Execute the test using the following command:
 npx smartui exec k6 run test.js
 ```
 
-  - You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+  - You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 
 ## Best Practices
 
@@ -276,7 +276,7 @@ smartuiSnapshot(response, "Page-Loaded");
    npx smartui exec k6 run test.js
    ```
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Review test execution logs for error messages
 
@@ -419,7 +419,7 @@ If you encounter issues not covered here:
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
 - Visit [K6 Browser Testing Documentation](/support/docs/k6-browser-testing/) for K6-specific issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
@@ -445,12 +445,12 @@ For additional information about K6 framework please explore the documentation [
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
@@ -467,12 +467,12 @@ For additional information about K6 framework please explore the documentation [
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

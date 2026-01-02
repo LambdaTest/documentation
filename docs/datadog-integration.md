@@ -1,4 +1,4 @@
-﻿---
+---
 id: datadog-integration
 title: Datadog Integration
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/datadog-integration
 site_name: LambdaTest
 slug: datadog-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: datadog-integration
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Datadog Integration",
-          "item": "https://www.lambdatest.com/support/docs/datadog-integration/"
+          "item": `${BRAND_URL}/support/docs/datadog-integration/`
         }]
       })
     }}
@@ -40,12 +42,12 @@ slug: datadog-integration
 # Datadog Integration
 ***
 
-Datadog is a cloud application monitoring and analytics tool. You can use it to compute performance metrics and event monitoring for infrastructure and cloud services. In addition, Datadog can monitor services such as servers, databases and tools. With LambdaTest and Datadog integration, you can log bugs while perform [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps) from the LambdaTest platform to Datadog.
+Datadog is a cloud application monitoring and analytics tool. You can use it to compute performance metrics and event monitoring for infrastructure and cloud services. In addition, Datadog can monitor services such as servers, databases and tools. With <BrandName /> and Datadog integration, you can log bugs while perform [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps) from the <BrandName /> platform to Datadog.
 
-## Integrating Datadog With LambdaTest Account
+## Integrating Datadog With <BrandName /> Account
 ***
 
-1. To begin, sign in to your LambdaTest account. To setup integrations, make sure you have admin or user level access.
+1. To begin, sign in to your <BrandName /> account. To setup integrations, make sure you have admin or user level access.
 
 2. Visit **Integrations** from the left menu and select **DATADOG** from the ANALYTICS section.
 
@@ -58,7 +60,7 @@ Datadog is a cloud application monitoring and analytics tool. You can use it to 
 <img loading="lazy" src={require('../assets/images/datadog-integration/oauth.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
 
-The Datadog will be successfully integrated with your LambdaTest account.
+The Datadog will be successfully integrated with your <BrandName /> account.
 
 <img loading="lazy" src={require('../assets/images/datadog-integration/success.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
@@ -85,7 +87,7 @@ The Datadog will be successfully integrated with your LambdaTest account.
 <img loading="lazy" src={require('../assets/images/datadog-integration/create-issue.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
 
-6. To view your marked bugs, visit **Issue Tracker** from the LambdaTest left navigation menu. You'll notice the marked bugs along with the Test environment details.
+6. To view your marked bugs, visit **Issue Tracker** from the <BrandName /> left navigation menu. You'll notice the marked bugs along with the Test environment details.
 
 <img loading="lazy" src={require('../assets/images/datadog-integration/issue-tracker.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
@@ -100,7 +102,7 @@ You'll be taken to the Datadog interface where you can find your marked issues r
 ## Uninstalling The Datadog Integration
 ***
 
-1. Login to your LambdaTest account and visit Integrations from the left menu.
+1. Login to your <BrandName /> account and visit Integrations from the left menu.
 
 2. Navigate to 'My Integrations'and click on **REMOVE** under the Datadog block.
 
@@ -114,12 +116,12 @@ For any queries, feel free to drop them at our <span className="doc__lt" onClic
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

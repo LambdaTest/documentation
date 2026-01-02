@@ -1,4 +1,4 @@
-﻿---
+---
 id: executing-tesbo-automation-script-over-online-selenium-grid
 title: Run Tesbo Automation Script Over Selenium Grid Online
 hide_title: true
@@ -23,6 +23,8 @@ url: https://www.testmu.ai/support/docs/executing-tesbo-automation-script-over-o
 site_name: LambdaTest
 slug: executing-tesbo-automation-script-over-online-selenium-grid
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,17 +34,17 @@ slug: executing-tesbo-automation-script-over-online-selenium-grid
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Executing Tesbo Test Automation Script Over Online Selenium Grid",
-          "item": "https://www.lambdatest.com/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/"
+          "item": `${BRAND_URL}/support/docs/executing-tesbo-automation-script-over-online-selenium-grid/`
         }]
       })
     }}
@@ -53,25 +55,25 @@ slug: executing-tesbo-automation-script-over-online-selenium-grid
 
 [Tesbo][1]is a hybrid framework for test automation that works on a keyword-driven approach. It allows you to write automation scripts in plain English like you'd do with a BDD framework. Built on top of Selenium, Tesbo helps you to perform [cross browser testing][2] over a Selenium Grid in parallel.
 
-This document will help you run Tesbo automation scripts over online [Selenium Grid][3] offered by LambdaTest. That way, you could execute your Tesbo test builds on 3000+ real browsers for desktop & mobile over a cloud-based Selenium infrastructure.
+This document will help you run Tesbo automation scripts over online [Selenium Grid][3] offered by <BrandName />. That way, you could execute your Tesbo test builds on 3000+ real browsers for desktop & mobile over a cloud-based Selenium infrastructure.
 
 Tesbo can help you run automation testing through all programming languages that supports Selenium. All you need to do is write your test files in plain english and define the capabilities in a `config.json` file. Let's get started.
 
 ## Prerequisites
 * * *
->Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+>Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
 <a href="https://github.com/LambdaTest/LamdaTest_Tesbo_Demo" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
 
 * You would need Java development environment i.e. JDK 1.6 or higher. We recommend using the latest version.
 * An IDE(Integrated Development Environment) such as Eclipse or IntelliJ.
-* Clone the GitHub repository for LambdaTest Tesbo Demo.
+* Clone the GitHub repository for <BrandName /> Tesbo Demo.
 
 ## Running The Tesbo Test Automation Script On Online Selenium Grid
 ***
 
 **Test Scenario**: The *CheckBox.tests* file tests Check all button functionality whereas the **FormsAndList.tests** file tests AJAX input forms functionality.
 
-After you download or clone the repository for LambdaTest Tesbo Demo, you will find the test folder which would have your test files by the name `CheckBox.tests` & `FormsAndList.tests`. Here are these test files.
+After you download or clone the repository for <BrandName /> Tesbo Demo, you will find the test folder which would have your test files by the name `CheckBox.tests` & `FormsAndList.tests`. Here are these test files.
 
 ```javascript
  //CheckBox.tests
@@ -169,9 +171,9 @@ End
 
 
 
-Now that you have your test scripts ready with you, a few edits to the `config.json` is all that is required to run your test files over LambdaTest Selenium Grid. Let's have a look at these edits.
+Now that you have your test scripts ready with you, a few edits to the `config.json` is all that is required to run your test files over <BrandName /> Selenium Grid. Let's have a look at these edits.
 
-**Step 1:** You need to specify the Selenium Address in you `config.json` that would point your tests over to the Hub URL of LambdaTest Selenium Grid. Your Selenium Address would be:
+**Step 1:** You need to specify the Selenium Address in you `config.json` that would point your tests over to the Hub URL of <BrandName /> Selenium Grid. Your Selenium Address would be:
 
 ```javascript
 https://{LambdaTest_Username}:{LambdaTest_Access_Key}@hub.lambdatest.com/wd/hub
@@ -181,7 +183,7 @@ https://{LambdaTest_Username}:{LambdaTest_Access_Key}@hub.lambdatest.com/wd/hub
 ```javascript
 "IsGrid": true
 ```
-**Step 3:** Define your desired capabilities. By defining your desired capabilities, you are informing the LambdaTest Selenium Grid about the configurations over which you wish your test automation script to run. You can take help from LambdaTest [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator) to fetch the capabilities class.
+**Step 3:** Define your desired capabilities. By defining your desired capabilities, you are informing the <BrandName /> Selenium Grid about the configurations over which you wish your test automation script to run. You can take help from <BrandName /> [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator) to fetch the capabilities class.
 
 <img loading="lazy" src={require('../assets/images/executing-tesbo-automation-script-over-online-selenium-grid/1.webp').default} alt="Image" width="1346" height="545" className="doc_img"/>
 
@@ -235,7 +237,7 @@ Here is the complete `config.json`.
 }
 ```
 
-That's it. Now just hit the run button and you will find your test automation scripts running over the LambdaTest Selenium Grid.
+That's it. Now just hit the run button and you will find your test automation scripts running over the <BrandName /> Selenium Grid.
 
 ## Performing Parallel Testing With Online Selenium Grid
 
@@ -281,7 +283,7 @@ Now, if you wish to perform cross browser testing using the same script over dif
     },
 ```
 
-Here is the new config.json to run parallel testing with Tesbo & LambdaTest.
+Here is the new config.json to run parallel testing with Tesbo & <BrandName />.
 
 ```javascript
 {
@@ -354,7 +356,7 @@ Here is the new config.json to run parallel testing with Tesbo & LambdaTest.
 </div>
 
 
-That was all you need to know for running Tesbo automation scripts over LambdaTest Selenium Grid. If you have any questions or doubts, feel free to share them with out or by mailing us to [support@lambdatest.com][7]. Happy testing!!! 🙂
+That was all you need to know for running Tesbo automation scripts over <BrandName /> Selenium Grid. If you have any questions or doubts, feel free to share them with out or by mailing us to [support@lambdatest.com][7]. Happy testing!!! 🙂
 
 
 [1]: https://tesbo.io/
@@ -368,12 +370,12 @@ That was all you need to know for running Tesbo automation scripts over LambdaTe
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -25,7 +25,7 @@ SIM & eSIM support enables testing of SMS-driven use cases on real mobile device
 
 **SMS-based authentication** is one of the most widely used security and identity verification methods. Automating these flows ensures consistent validation, reduces manual effort, and helps uncover edge cases early in the testing cycle.
 
-With **LambdaTest**, you can automate SIM and eSIM scenarios on **Real Devices**. From requesting SIM-enabled devices to retrieving phone numbers and polling incoming SMS for OTP validation, LambdaTest provides an end-to-end setup for testing SMS-driven features in your automation suite.
+With **<BrandName />**, you can automate SIM and eSIM scenarios on **Real Devices**. From requesting SIM-enabled devices to retrieving phone numbers and polling incoming SMS for OTP validation, <BrandName /> provides an end-to-end setup for testing SMS-driven features in your automation suite.
 
 > To enable this for your organization, contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or email **support@lambdatest.com**.<br />
 
@@ -42,7 +42,7 @@ With **LambdaTest**, you can automate SIM and eSIM scenarios on **Real Devices**
 
 
 ## Supported Countries & SIM Availability
-LambdaTest provides SIM and eSIM-enabled devices across **specific countries**, allowing you to test SMS-driven workflows under real carrier conditions. The **availability** of physical SIMs or eSIMs varies by region and carrier, ensuring your automation scripts can validate authentication flows, messaging, and phone number handling in environments that closely resemble real-world usage.
+<BrandName /> provides SIM and eSIM-enabled devices across **specific countries**, allowing you to test SMS-driven workflows under real carrier conditions. The **availability** of physical SIMs or eSIMs varies by region and carrier, ensuring your automation scripts can validate authentication flows, messaging, and phone number handling in environments that closely resemble real-world usage.
 
 | Country | Carriers               | SIM Type Availability        |
 |---------|-----------------------|-----------------------------|

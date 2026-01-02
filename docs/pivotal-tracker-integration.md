@@ -1,4 +1,4 @@
-﻿---
+---
 id: pivotal-tracker-integration
 title: TestMu AI Integration with Pivotal Tracker
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/pivotal-tracker-integration
 site_name: LambdaTest
 slug: pivotal-tracker-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: pivotal-tracker-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Pivotal Tracker Integration",
-          "item": "https://www.lambdatest.com/support/docs/pivotal-tracker-integration/"
+          "item": `${BRAND_URL}/support/docs/pivotal-tracker-integration/`
         }]
       })
     }}
@@ -50,15 +52,15 @@ Pivotal Tracker offers a project management platform on cloud. Designed for Agil
 </div>
 </div>
 
-LambdaTest integration with Pivotal Tracker will help you instantly log UI bugs from LambdaTest to your projects on the Pivotal Tracker. That way, you can report any cross browser compatibility issues with your team as soon as you encounter them while cross browser testing with LambdaTest.
+<BrandName /> integration with Pivotal Tracker will help you instantly log UI bugs from <BrandName /> to your projects on the Pivotal Tracker. That way, you can report any cross browser compatibility issues with your team as soon as you encounter them while cross browser testing with <BrandName />.
 
-## How To Integrate Pivotal Tracker With Your LambdaTest Account?
+## How To Integrate Pivotal Tracker With Your <BrandName /> Account?
 
 * * *
 
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select 'Integration' from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select 'Integration' from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Under the category of **Project Management**, click on the block that says **'Pivotal Tracker'**.
 
@@ -76,15 +78,15 @@ LambdaTest integration with Pivotal Tracker will help you instantly log UI bugs 
 
 <img loading="lazy" src={require('../assets/images/pivotal-tracker-integration/pt4.webp').default} alt="Pivotal Tracker Integration" width="992" height="405" className="doc_img"/>
 
-**Step 7:** Copy the API token from your Pivotal Tracker profile and paste it on LambdaTest authentication and hit the **Install** button.
+**Step 7:** Copy the API token from your Pivotal Tracker profile and paste it on <BrandName /> authentication and hit the **Install** button.
 
 <img loading="lazy" src={require('../assets/images/pivotal-tracker-integration/pt5.webp').default} alt="Pivotal Tracker Integration" width="1336" height="540" className="doc_img"/>
 
-**Step 8:** Once you hit the Install button, you will notice that you have successfully integrated Pivotal Tracker with your LambdaTest account. You can find it under the section which says "MY INTEGRATIONS".
+**Step 8:** Once you hit the Install button, you will notice that you have successfully integrated Pivotal Tracker with your <BrandName /> account. You can find it under the section which says "MY INTEGRATIONS".
 
->**Note:** You can leverage the Resync button to synchronize your latest projects of Pivotal Tracker into your LambdaTest accounts.
+>**Note:** You can leverage the Resync button to synchronize your latest projects of Pivotal Tracker into your <BrandName /> accounts.
 
-## Log Your First Bug From LambdaTest Integration With Pivotal Tracker
+## Log Your First Bug From <BrandName /> Integration With Pivotal Tracker
 
 * * *
 
@@ -114,35 +116,35 @@ LambdaTest integration with Pivotal Tracker will help you instantly log UI bugs 
 
 <img loading="lazy" src={require('../assets/images/pivotal-tracker-integration/pt11.webp').default} alt="Pivotal Tracker Integration" width="1340" height="617" className="doc_img"/>
 
-**Step 7:** Click on the task under Icebox and you will find all the details that you shared while logging the bug from LambdaTest.
+**Step 7:** Click on the task under Icebox and you will find all the details that you shared while logging the bug from <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/pivotal-tracker-integration/pt12.webp').default} alt="Pivotal Tracker Integration" width="1340" height="617" className="doc_img"/>
 
-## Remove LambdaTest Integration With Pivotal Tracker
+## Remove <BrandName /> Integration With Pivotal Tracker
 
 * * *
 
 >You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to **remove** your current integration. Here is how you can do that.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
-**Step 2:** Select **'Integrations'** from the left-navigation menu. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **'Integrations'** from the left-navigation menu. This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
-**Step 3:** Under the section of **MY INTEGRATIONS**, you will find the remove button. Click on it to remove LambdaTest integration with Pivotal Tracker.
+**Step 3:** Under the section of **MY INTEGRATIONS**, you will find the remove button. Click on it to remove <BrandName /> integration with Pivotal Tracker.
 
 <img loading="lazy" src={require('../assets/images/pivotal-tracker-integration/pt13.webp').default} alt="Pivotal Tracker Integration" width="1340" height="617" className="doc_img"/>
 
-That was all you need to know for integrating LambdaTest with Pivotal Tracker. In case you have any questions, feel free to share them with out product experts on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Happy testing! 🙂 
+That was all you need to know for integrating <BrandName /> with Pivotal Tracker. In case you have any questions, feel free to share them with out product experts on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. Happy testing! 🙂 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

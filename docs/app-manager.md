@@ -1,4 +1,4 @@
-﻿---
+---
 id: app-manager
 title: "App Manager on Real Devices"
 hide_title: false
@@ -19,6 +19,8 @@ slug: app-manager
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,24 +30,24 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Test Scheduling",
-          "item": "https://www.lambdatest.com/support/docs/app-manager/"
+          "item": `${BRAND_URL}/support/docs/app-manager/`
         }]
       })
     }}
 ></script>
 
 
-The LambdaTest App Manager is a tool within the Real Device App Testing section. It lets you easily upload, manage, and test different versions of your mobile apps. This guide explains how to access the App Manager, upload apps, search and filter them, and run any version on Real Devices.
+The <BrandName /> App Manager is a tool within the Real Device App Testing section. It lets you easily upload, manage, and test different versions of your mobile apps. This guide explains how to access the App Manager, upload apps, search and filter them, and run any version on Real Devices.
 
 :::info Currently in BETA
 
@@ -56,9 +58,9 @@ To enable it for your organization, please contact us via <span className="doc__
 ---
 
 ## Accessing App Manager
-To access the App Manager in LambdaTest:
+To access the App Manager in <BrandName />:
 
-**Step 1:** Navigate to **Real Device** under **App Testing** in the LambdaTest dashboard.
+**Step 1:** Navigate to **Real Device** under **App Testing** in the <BrandName /> dashboard.
 
 
 **Step 2:** Click on the **App Manager** CTA.
@@ -115,7 +117,7 @@ Once your apps are uploaded, you can easily search and filter them using the too
 ---
 ## Version Control
 
-**LambdaTest App Manager** offers a convenient version control system for managing multiple versions of the same application:
+**<BrandName /> App Manager** offers a convenient version control system for managing multiple versions of the same application:
 - When you click on an app name in the file bundle section, a **App Card** opens.
 - This **App Card** displays all versions of the selected app that have been uploaded.
 

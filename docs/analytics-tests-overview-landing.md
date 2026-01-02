@@ -1,4 +1,4 @@
-﻿---
+---
 id: analytics-widgets-tests-overview-landing
 title: Test Overview Widgets
 sidebar_label: Tests Overview
@@ -9,6 +9,8 @@ url: https://www.testmu.ai/support/docs/analytics-widgets-tests-overview-landing
 site_name: LambdaTest
 slug: analytics-widgets-tests-overview-landing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,17 +20,17 @@ slug: analytics-widgets-tests-overview-landing
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Analytics Widgets",
-          "item": "https://www.lambdatest.com/support/docs/analytics-widgets-tests-overview-landing/"
+          "item": `${BRAND_URL}/support/docs/analytics-widgets-tests-overview-landing/`
         }]
       })
     }}
@@ -36,7 +38,7 @@ slug: analytics-widgets-tests-overview-landing
 
 import NewTag from '../src/component/newTag';
 
-Analytics in LambdaTest allows the QA managers and executives to efficiently track the tests conducted on the platform and get deep-level insights with the numerous widgets that the product provides.
+Analytics in <BrandName /> allows the QA managers and executives to efficiently track the tests conducted on the platform and get deep-level insights with the numerous widgets that the product provides.
 
 <div className="support_main">
 

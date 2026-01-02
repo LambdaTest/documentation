@@ -1,4 +1,4 @@
-﻿---
+---
 id: cypress-v10-accessibility-test
 title: Automation Tests with Accessibility Tool using Cypress v10
 hide_title: false
@@ -21,6 +21,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,29 +32,29 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Cypress Accessibility Testing",
-          "item": "https://www.lambdatest.com/support/docs/cypress-v10-accessibility-test/"
+          "item": `${BRAND_URL}/support/docs/cypress-v10-accessibility-test/`
         }]
       })
     }}
 ></script>
 
-This guide takes you step-by-step through the process of using LambdaTest's Accessibility Tool with Cypress v10 and above to run automated tests for your website.
+This guide takes you step-by-step through the process of using <BrandName />'s Accessibility Tool with Cypress v10 and above to run automated tests for your website.
 
 > **NOTE:** This documentation is applicable for **Cypress v10** and **later versions**.
 
 ## Prerequisites
 
-- Your [LambdaTest Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
+- Your [<BrandName /> Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
 - Setup your local machine as per your testing framework.
 
 ## Step-by-Step Guide to Trigger Your Test
@@ -62,7 +64,7 @@ This guide takes you step-by-step through the process of using LambdaTest's Acce
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run your tests.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run your tests.
 
 <a href="https://github.com/LambdaTest/lambdatest-accessibility-cypress-v10" target="_blank" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -75,7 +77,7 @@ https://github.com/LambdaTest/lambdatest-accessibility-cypress-v10/blob/main/lam
 
 ### Step 2: Establish User Authentication
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 

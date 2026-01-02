@@ -17,6 +17,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ import CodeBlock from '@theme/CodeBlock';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Multiselect & Bulk Operations",
-          "item": "https://www.lambdatest.com/support/docs/smartui-multiselect-bulkops/"
+          "item": `${BRAND_URL}/support/docs/smartui-multiselect-bulkops/`
         }]
       })
     }}
@@ -57,7 +59,7 @@ This guide explains the end-to-end workflow, supported actions, and best practic
 
 ## Where multiselect appears
 
-1. Sign in to [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+1. Sign in to [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 2. Open any project → choose a build.
 3. Navigate across tabs (e.g., **New**, **Changes Found**).  
 4. Look for the **selection toolbar** above the screenshot grid.

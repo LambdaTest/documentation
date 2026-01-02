@@ -11,6 +11,8 @@ slug: analytics-dashboard-copilot
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,17 +22,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/analytics-dashboard-copilot/"
+          "item": `${BRAND_URL}/support/docs/analytics-dashboard-copilot/`
         }]
       })
     }}
@@ -45,7 +47,7 @@ The AI CoPilot Dashboard is an innovative feature designed to revolutionize the 
 
 To access and utilize the full potential of the AI CoPilot Dashboard, ensure that you meet the following requirements:
 
-1. **LambdaTest Paid Account**: You must have an active LambdaTest paid account to unlock the AI CoPilot Dashboard feature, please contact our support team at [support@lambdatest.com](mailto:support@lambdatest.com).
+1. **<BrandName /> Paid Account**: You must have an active <BrandName /> paid account to unlock the AI CoPilot Dashboard feature, please contact our support team at [support@lambdatest.com](mailto:support@lambdatest.com).
 
 :::note
 This feature is exclusively available to our valued paid users.
@@ -61,7 +63,7 @@ To know about the widgets and how to create a dashboard, refer to the [Analytics
 
 Follow these step-by-step instructions to access the AI CoPilot Dashboard:
 
-1. **Login**: Sign in to your LambdaTest account using your registered credentials.
+1. **Login**: Sign in to your <BrandName /> account using your registered credentials.
 
 2. **Navigate to Insights**: From the left navigation menu, locate and click on the "Insights" section to access the analytics and dashboard features.
 

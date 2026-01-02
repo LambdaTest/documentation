@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/testing-flutter-apps
 site_name: LambdaTest
 slug: testing-flutter-apps
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -38,8 +40,6 @@ slug: testing-flutter-apps
       })
     }}
 ></script>
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Testing Flutter Apps With Appium
 ***

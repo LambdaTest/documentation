@@ -1,4 +1,4 @@
-﻿---
+---
 id: flutter-supported-capabilities
 title: Flutter Supported Capabilities
 sidebar_label: Supported Capabilities
@@ -19,6 +19,8 @@ slug: flutter-supported-capabilities
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,23 +30,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Espresso Supported Capabilities",
-          "item": "https://www.lambdatest.com/support/docs/flutter-supported-capabilities/"
+          "item": `${BRAND_URL}/support/docs/flutter-supported-capabilities/`
         }]
       })
     }}
 ></script>
 
-This document provide details about the features and capabilities supported for Espresso Framework on LambdaTest.
+This document provide details about the features and capabilities supported for Espresso Framework on <BrandName />.
 
 | Capability Name | Data Type | Description |
 |------|-----------|-------------|

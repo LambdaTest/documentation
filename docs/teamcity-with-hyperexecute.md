@@ -1,4 +1,4 @@
-﻿---
+---
 id: teamcity-with-hyperexecute
 title: How to integrate TeamCity with HyperExecute
 hide_title: true
@@ -17,6 +17,8 @@ url: https://www.testmu.ai/support/docs/teamcity-with-hyperexecute
 site_name: LambdaTest
 slug: teamcity-with-hyperexecute
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -35,7 +37,7 @@ slug: teamcity-with-hyperexecute
           "@type": "ListItem",
           "position": 4,
           "name": "AWS CodePipeline Integration with HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/teamcity-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/teamcity-with-hyperexecute/`
         }]
       })
     }}
@@ -118,6 +120,6 @@ chmod +x hyperexecute
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step7.webp').default} alt="Image"  className="doc_img"/>
 
-- After the build is successful, go to your LambdaTest Dashboard and check the output of the triggered Job.
+- After the build is successful, go to your <BrandName /> Dashboard and check the output of the triggered Job.
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/ci-cd/teamcity/Step8.webp').default} alt="Image"  className="doc_img"/>

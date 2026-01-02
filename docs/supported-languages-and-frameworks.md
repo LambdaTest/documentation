@@ -1,4 +1,4 @@
-﻿---
+---
 id: supported-languages-and-frameworks
 title: Selenium Grid Supported Languages & Frameworks
 hide_title: true
@@ -19,6 +19,8 @@ url: https://www.testmu.ai/support/docs/supported-languages-and-frameworks
 site_name: LambdaTest
 slug: supported-languages-and-frameworks
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,23 +30,23 @@ slug: supported-languages-and-frameworks
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Languages and Frameworks Supported By LambdaTest Selenium Grid",
-          "item": "https://www.lambdatest.com/support/docs/supported-languages-and-frameworks/"
+          "item": `${BRAND_URL}/support/docs/supported-languages-and-frameworks/`
         }]
       })
     }}
 ></script>
 
-# Languages and Frameworks Supported By LambdaTest Selenium Grid
+# Languages and Frameworks Supported By <BrandName /> Selenium Grid
 * * *
 
 Although, our [Selenium Grid](https://www.lambdatest.com/selenium-automation/) supports all the languages & frameworks that are compatible with [Selenium](https://www.lambdatest.com/selenium). Below mentioned are the ones for which we either already have documentation ready or are a work in progress.
@@ -222,27 +224,27 @@ There are [test automation](https://www.lambdatest.com/automation-testing) frame
 
 Tesbo is a hybrid framework for test automation that works on a keyword-driven approach. It allows you to write automation scripts in plain English like you’d do with a BDD framework. Built on top of Selenium, Tesbo helps you to perform cross browser testing over a Selenium Grid in parallel.
 
-Check our support document to run your first [Tesbo script over LambdaTest Selenium Grid](/docs/executing-tesbo-automation-script-over-online-selenium-grid/).
+Check our support document to run your first [Tesbo script over <BrandName /> Selenium Grid](/docs/executing-tesbo-automation-script-over-online-selenium-grid/).
 
-You can run any framework which supports Selenium execution over LambdaTest Selenium Grid.
+You can run any framework which supports Selenium execution over <BrandName /> Selenium Grid.
 
 We are preparing documentation for more frameworks. If you want us to prioritize documentation of your beloved framework then feel free to give us a <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**shout**</span>.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Languages and Frameworks Supported By LambdaTest Selenium Grid
+       Languages and Frameworks Supported By <BrandName /> Selenium Grid
       </span>
     </li>
   </ul>

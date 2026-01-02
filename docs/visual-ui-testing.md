@@ -1,4 +1,4 @@
-﻿---
+---
 id: visual-ui-testing
 title: Visual UI Testing
 hide_title: true
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/visual-ui-testing
 site_name: LambdaTest
 slug: visual-ui-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +27,17 @@ slug: visual-ui-testing
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Automated Screenshot Testing",
-          "item": "https://www.lambdatest.com/support/docs/automated-screenshot-testing/"
+          "item": `${BRAND_URL}/support/docs/automated-screenshot-testing/`
         }]
       })
     }}
@@ -53,13 +55,13 @@ slug: visual-ui-testing
   <a href="/support/docs/mark-as-bug-in-screenshot-testing/">
     <div className="support_inners">
       <h3>Mark As Bug In Screenshot Testing</h3>
-      <p>Mark as Bug is a feature that would help you highlight any UI observation from your test sessions on LambdaTest.</p>
+      <p>Mark as Bug is a feature that would help you highlight any UI observation from your test sessions on <BrandName />.</p>
     </div>
   </a>
   <a href="/support/docs/automated-screenshot-api-for-cross-browser-testing/">
     <div className="support_inners">
       <h3>Automated Screenshot API</h3>
-      <p>Learn how to capture full-page screenshots of any URL by invoking an API call to LambdaTest cloud servers.</p>
+      <p>Learn how to capture full-page screenshots of any URL by invoking an API call to <BrandName /> cloud servers.</p>
     </div>
   </a>
   <a href="/support/docs/taking-screenshots-of-pages-behind-login/">
@@ -83,7 +85,7 @@ slug: visual-ui-testing
   <a href="/support/docs/mark-as-bug-in-responsive-testing/">
     <div className="support_inners">
       <h3>Mark As Bug In Responsive Testing</h3>
-      <p>Mark as Bug is a feature that would help you highlight any UI observation from your test sessions on LambdaTest.</p>
+      <p>Mark as Bug is a feature that would help you highlight any UI observation from your test sessions on <BrandName />.</p>
     </div>
   </a>
   <a href="/support/docs/smart-visual-testing/">
@@ -98,12 +100,12 @@ slug: visual-ui-testing
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

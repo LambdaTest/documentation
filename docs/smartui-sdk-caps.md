@@ -25,7 +25,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 SmartUI SDK provides several capabilities that allow you to configure your visual regression tests. These capabilities can be added to your test configuration to control various aspects of the testing process.
 
 :::warning Important
-These capabilities only work when running tests on the LambdaTest Automation Grid. For local test executions, please refer to the standard authentication methods using project token or project name in the [Running your first project](/support/docs/smartui-running-your-first-project/) documentation.
+These capabilities only work when running tests on the <BrandName /> Automation Grid. For local test executions, please refer to the standard authentication methods using project token or project name in the [Running your first project](/support/docs/smartui-running-your-first-project/) documentation.
 :::
 
 ## Prerequisites

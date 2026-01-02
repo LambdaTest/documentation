@@ -1,4 +1,4 @@
-﻿---
+---
 id: lambdatest-sso-manage-connection
 title: Manage SSO Connection
 hide_title: true
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/testmu-sso-manage-connection
 site_name: LambdaTest
 slug: testmu-sso-manage-connection
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,22 +27,22 @@ slug: testmu-sso-manage-connection
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SSO Self Serve",
-          "item": "https://www.lambdatest.com/support/docs/testmu-sso-self-serve"
+          "item": `${BRAND_URL}/support/docs/testmu-sso-self-serve`
         }]
       })
     }}
 ></script>
-Navigate to LambdaTest <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a>.
+Navigate to <BrandName /> <a href="https://accounts.lambdatest.com/auth/sso">Authentication & SSO settings</a>.
    <img loading="lazy" src={require('../assets/images/sso-self-serve/edit-connection.png').default} alt="setup sso button" width="944" height="409" className="doc_img"/>
 
 
@@ -56,23 +58,23 @@ Navigate to LambdaTest <a href="https://accounts.lambdatest.com/auth/sso">Authen
    <img loading="lazy" src={require('../assets/images/sso-self-serve/enforce-sso.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
 ### Exempt Users From SSO Login
-1. For Exempting users from SSO login (Allows Users to Log in with LambdaTest Credentials and Social Auth), click on **SSO User Settings**.
+1. For Exempting users from SSO login (Allows Users to Log in with <BrandName /> Credentials and Social Auth), click on **SSO User Settings**.
    <img loading="lazy" src={require('../assets/images/sso-self-serve/exempt-users.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
 2. Check the toggle for the users you want to exempt from SSO login
    <img loading="lazy" src={require('../assets/images/sso-self-serve/exempt-users-toggle.png').default} alt="sso-self serve" width="945" height="542" className="doc_img"/>
 
-That's all you need to know for Managing LambdaTest SSO Integration. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
+That's all you need to know for Managing <BrandName /> SSO Integration. In case you have any questions please feel free to reach out to us via the <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span> or email us over [support@lambdatest.com](mailto:support@lambdatest.com).
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

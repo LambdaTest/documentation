@@ -1,4 +1,4 @@
-﻿---
+---
 id: smartui-draw-on-ui
 title: Ignore or Select Annotated Regions
 sidebar_label: Ignore or Select Regions
@@ -38,17 +38,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-draw-on-ui/"
+          "item": `${BRAND_URL}/support/docs/smartui-draw-on-ui/`
         }]
       })
     }}

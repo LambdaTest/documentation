@@ -1,4 +1,4 @@
-﻿---
+---
 id: how-to-use-testing-tools-in-session
 title: How to use testing tools in-session?
 hide_title: true
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/how-to-use-testing-tools-in-session
 site_name: LambdaTest
 slug: how-to-use-testing-tools-in-session
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: how-to-use-testing-tools-in-session
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to use testing tools in-session?",
-          "item": "https://www.lambdatest.com/support/docs/how-to-use-testing-tools-in-session/"
+          "item": `${BRAND_URL}/support/docs/how-to-use-testing-tools-in-session/`
         }]
       })
     }}
@@ -42,7 +44,7 @@ slug: how-to-use-testing-tools-in-session
 
 ***
 
-With LambdaTest Real Device App Testing, you get access to a plethora of features that helps QA ease their app testing process, without the need of leaving the instance window. From mark as bug and changing IP geolocation, to in-depth device logs and network logs, LambdaTest's real device app testing offers it all. 
+With <BrandName /> Real Device App Testing, you get access to a plethora of features that helps QA ease their app testing process, without the need of leaving the instance window. From mark as bug and changing IP geolocation, to in-depth device logs and network logs, <BrandName />'s real device app testing offers it all. 
 
 Let us get an overview of all the features in our real device instance:
 
@@ -114,7 +116,7 @@ However, if your preferred location is not showing, you can specify the exact lo
 
 ### Network Throttling
 
-With LambdaTest’s **Network Throttling**, you can test mobile applications across a range of network conditions, including offline, as well as specific network profiles like 3G, 3G+, 4G LTE, 4G Advanced and even custom network profile with its extensive real mobile device cloud.
+With <BrandName />’s **Network Throttling**, you can test mobile applications across a range of network conditions, including offline, as well as specific network profiles like 3G, 3G+, 4G LTE, 4G Advanced and even custom network profile with its extensive real mobile device cloud.
 
 You can simulate these network environments using either pre-defined profiles or by creating custom network profiles to suit your needs.
 
@@ -125,7 +127,7 @@ Check out our detailed support documentation to know more about the [Network Thr
 
 ### Files Upload
 
-Real device app testing on LambdaTest comes with preloaded media files on remote devices for testing scenarios that need file access. Additionally, you have the option to upload your own media or non-media files to cover your testing scenarios. You can upload files with formats: JPEG, PNG, MP4, 3GP, PDF, CSV, DOC and other major formats.
+Real device app testing on <BrandName /> comes with preloaded media files on remote devices for testing scenarios that need file access. Additionally, you have the option to upload your own media or non-media files to cover your testing scenarios. You can upload files with formats: JPEG, PNG, MP4, 3GP, PDF, CSV, DOC and other major formats.
 
 <img loading="lazy" src={require('../assets/images/real-device-app-testing/upload-files-real-device.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
@@ -228,18 +230,18 @@ Unified **Test Manager** simplifies test authoring, management, triggering, and 
 
 
 
-> **Notes:** The max duration for running manual tests on LambdaTest Real Device Cloud is 2 hours. In order to extend the duration, you can opt for our dedicated real device cloud.
+> **Notes:** The max duration for running manual tests on <BrandName /> Real Device Cloud is 2 hours. In order to extend the duration, you can opt for our dedicated real device cloud.
 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

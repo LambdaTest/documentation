@@ -1,4 +1,4 @@
-﻿---
+---
 id: accessibility-test-scheduling
 title: Accessibility Test Scheduling
 hide_title: false
@@ -17,6 +17,8 @@ slug: accessibility-test-scheduling
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,24 +28,24 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Test Scheduling",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-test-scheduling/"
+          "item": `${BRAND_URL}/support/docs/accessibility-test-scheduling/`
         }]
       })
     }}
 ></script>
 Web Accessibility is crucial for creating inclusive digital experiences. This ensures that all the users, including those with disabilities, can access and interact with web content. However, manually verifying accessibility compliance is often time-intensive and prone to human error.
 
-To address these challenges, LambdaTest introduces the Accessibility Scheduler—an automated solution to help you stay compliant with WCAG (Web Content Accessibility Guidelines). This tool streamlines accessibility testing by automating checks and generating comprehensive reports, ensuring a faster, more reliable process.
+To address these challenges, <BrandName /> introduces the Accessibility Scheduler—an automated solution to help you stay compliant with WCAG (Web Content Accessibility Guidelines). This tool streamlines accessibility testing by automating checks and generating comprehensive reports, ensuring a faster, more reliable process.
 
 The Scheduled Accessibility Scan feature allows you to automate recurring or one-time accessibility scans, significantly reducing manual effort while ensuring high standards of accessibility compliance.
 

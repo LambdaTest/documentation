@@ -1,4 +1,4 @@
-﻿---
+---
 id: bugzilla-integration
 title: Bugzilla Integration
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/bugzilla-integration
 site_name: LambdaTest
 slug: bugzilla-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: bugzilla-integration
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Bugzilla Integration",
-          "item": "https://www.lambdatest.com/support/docs/bugzilla-integration/"
+          "item": `${BRAND_URL}/support/docs/bugzilla-integration/`
         }]
       })
     }}
@@ -42,18 +44,18 @@ slug: bugzilla-integration
 
 Bugzilla is an open-source bug tracking tool that allows you to keep track of software bugs. It is coded in Perl and uses the MYSQL database. By leveraging Bugzilla, users can stay linked with their customers or employees in order to communicate effectively about the product's issues. 
 
-In this documentation, we look at how to integrate Bugzilla with LambdaTest and perform one-click bug logging right away from the LambdaTest platform to your Bugzilla products.
+In this documentation, we look at how to integrate Bugzilla with <BrandName /> and perform one-click bug logging right away from the <BrandName /> platform to your Bugzilla products.
 
-## Integrating Bugzilla With LambdaTest Account
+## Integrating Bugzilla With <BrandName /> Account
 ***
 
-1. Login to your LambdaTest account. To install integrations, make sure you have admin or user level access.
+1. Login to your <BrandName /> account. To install integrations, make sure you have admin or user level access.
 
 2. Visit 'Integrations' from the left menu and select **'Bugzilla'** under the **'BUG TRACKER'** category.
 
 <img loading="lazy" src={require('../assets/images/bugzilla-integration/select-bugzilla.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
->If you already have a LambdaTest integration with any bug tracking tool then you will be asked to uninstall the existing LambdaTest integration.
+>If you already have a <BrandName /> integration with any bug tracking tool then you will be asked to uninstall the existing <BrandName /> integration.
 
 3. You will be asked to enter your **Bugzilla Host**, **Bugzilla Email Address** and **Bugzilla Password**.
 
@@ -76,7 +78,7 @@ Bugzilla password is the password that you provide while creating your Bugzilla 
 
 <img loading="lazy" src={require('../assets/images/bugzilla-integration/install.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
-The Bugzilla will be successfully integrated with your LambdaTest account. You'll also receive the confirmation message and an email of the same. 
+The Bugzilla will be successfully integrated with your <BrandName /> account. You'll also receive the confirmation message and an email of the same. 
 
 ## One-Click Bug Logging Through Bugzilla
 ***
@@ -102,7 +104,7 @@ To demonstrate, we take an example of Real time testing.
 
 Once you click on Create Issue, your bugs will be marked successfully.
 
-6. To view your logged bugs, visit **Issue Tracker** from the LambdaTest left navigation menu. You'll notice the marked bugs along with the Test details.
+6. To view your logged bugs, visit **Issue Tracker** from the <BrandName /> left navigation menu. You'll notice the marked bugs along with the Test details.
 
 <img loading="lazy" src={require('../assets/images/bugzilla-integration/issue-tracker.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
@@ -114,7 +116,7 @@ You'll be routed to the Bugzilla page where you can find the logged issue.
 
 <img loading="lazy" src={require('../assets/images/bugzilla-integration/logged-issue.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
-Scroll down to view the complete details of the marked bugs: Screenshot, Test ID, Reproduce on LambdaTest link, Test URL, OS, Browser and Resolution.
+Scroll down to view the complete details of the marked bugs: Screenshot, Test ID, Reproduce on <BrandName /> link, Test URL, OS, Browser and Resolution.
 
 <img loading="lazy" src={require('../assets/images/bugzilla-integration/my-issues.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
@@ -122,7 +124,7 @@ Scroll down to view the complete details of the marked bugs: Screenshot, Test ID
 ## Uninstalling The Bugzilla Integration
 ***
 
-1. Login to your LambdaTest account and visit Integrations from the left menu.
+1. Login to your <BrandName /> account and visit Integrations from the left menu.
 
 2. Navigate to 'My Integrations'and click on **'REMOVE'**.
 
@@ -136,12 +138,12 @@ That's all! In case you have any doubts or questions for us, feel free to drop t
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

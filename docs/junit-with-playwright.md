@@ -1,4 +1,4 @@
-﻿---
+---
 id: junit-with-playwright
 title: Run your JUnit automation scripts with Playwright on TestMu AI
 hide_title: true
@@ -18,6 +18,8 @@ slug: junit-with-playwright
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +29,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "JUnit with Playwright",
-          "item": "https://www.lambdatest.com/support/docs/junit-with-playwright/"
+          "item": `${BRAND_URL}/support/docs/junit-with-playwright/`
         }]
       })
     }}
@@ -46,7 +48,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 # JUnit with Playwright: Running Your First Test
 * * *
 
-Learn how to use Playwright with JUnit to automate web application testing across 50+ real browsers and operating systems on LambdaTest cloud platform.
+Learn how to use Playwright with JUnit to automate web application testing across 50+ real browsers and operating systems on <BrandName /> cloud platform.
 
 
 ## Prerequisites
@@ -55,7 +57,7 @@ Learn how to use Playwright with JUnit to automate web application testing acros
 1. You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or clone the code sample for the Playwright JUnit from the LambdaTest GitHub repository to run the tests.
+Download or clone the code sample for the Playwright JUnit from the <BrandName /> GitHub repository to run the tests.
 
 <a href="https://github.com/LambdaTest/playwright-sample/tree/main/playwright-java-junit" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -72,14 +74,14 @@ cd playwright-java-junit
 npm install
 ```
 
-3. A LambdaTest Username and Access key. You can get it from your LambdaTest Profile section. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+3. A <BrandName /> Username and Access key. You can get it from your <BrandName /> Profile section. Don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
 
 <img loading="lazy" src={require('../assets/images/auth_lt.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
 ## Run your Playwright tests with JUnit
 ---
 
-Navigate to the `LTCapability.JUnit` file and provide your LambdaTest Username and Access key.
+Navigate to the `LTCapability.JUnit` file and provide your <BrandName /> Username and Access key.
 
 ```java
 import com.google.gson.JsonObject;
@@ -130,7 +132,7 @@ mvn clean test
 ## View your test results
 ---
 
-Go to the [LambdaTest Web Automation Dashboard](https://automation.lambdatest.com/build) to see your Playwright JUnit test results.
+Go to the [<BrandName /> Web Automation Dashboard](https://automation.lambdatest.com/build) to see your Playwright JUnit test results.
 
 
 

@@ -1,4 +1,4 @@
-﻿---
+---
 id: clickup-integration
 title: ClickUp 
 hide_title: true
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/clickup-integration
 site_name: LambdaTest
 slug: clickup-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +25,17 @@ slug: clickup-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Clickup Integration",
-          "item": "https://www.lambdatest.com/support/docs/clickup-integration/"
+          "item": `${BRAND_URL}/support/docs/clickup-integration/`
         }]
       })
     }}
@@ -42,34 +44,34 @@ slug: clickup-integration
 # ClickUp Integration
 
  * * *
-ClickUp offers a highly customizable cloud-based platform to boost your productivity for both professional and personal life by storing all of your tasks, docs, conversations, timelines, spreadsheets, and more in a single place. You can have different views of the project such as Gantt view, board view, and calendar view. You could also chat with your colleagues, and share documents with the team. ClickUp also offers numerous features for time management, task management, project management, along with effective collaboration, reporting, and integrations to third-party tools such as LambdaTest.
+ClickUp offers a highly customizable cloud-based platform to boost your productivity for both professional and personal life by storing all of your tasks, docs, conversations, timelines, spreadsheets, and more in a single place. You can have different views of the project such as Gantt view, board view, and calendar view. You could also chat with your colleagues, and share documents with the team. ClickUp also offers numerous features for time management, task management, project management, along with effective collaboration, reporting, and integrations to third-party tools such as <BrandName />.
 
-LambdaTest integration with ClickUp will help you report bugs and UI anomalies directly in your desired project on ClickUp while performing [cross browser testing](https://www.lambdatest.com/) with LambdaTest. You can capture a screenshot of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title and description to help relay further actions. You can do all that directly from LambdaTest, in just a single click.
+<BrandName /> integration with ClickUp will help you report bugs and UI anomalies directly in your desired project on ClickUp while performing [cross browser testing](https://www.lambdatest.com/) with <BrandName />. You can capture a screenshot of the bug, highlight the anomaly, annotate extra information, choose an assignee, provide a suitable title and description to help relay further actions. You can do all that directly from <BrandName />, in just a single click.
 
-## How To Integrate ClickUp With Your LambdaTest Account?
+## How To Integrate ClickUp With Your <BrandName /> Account?
 ***
 
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select ‘Integration’ from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select ‘Integration’ from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on the block that says ‘ClickUp’.
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/1-2.webp').default} alt="clickup integration" width="1365" height="632" className="doc_img"/>
 
-**Step 4:** After you click on the ClickUp icon, you will need to authenticate LambdaTest API with your ClickUp account. If you are not logged into your ClickUp account, then you will be asked to do so for successfully authenticating you ClickUp account with LambdaTest.
+**Step 4:** After you click on the ClickUp icon, you will need to authenticate <BrandName /> API with your ClickUp account. If you are not logged into your ClickUp account, then you will be asked to do so for successfully authenticating you ClickUp account with <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/3-2.webp').default} alt="clickup integration login" width="1365" height="632" className="doc_img"/>
 
-> Note: If you are already logged into your ClickUp account, you will be redirected to the ClickUp instance for authenticating the LambdaTest APIs to fetch necessary details from your ClickUp account.
+> Note: If you are already logged into your ClickUp account, you will be redirected to the ClickUp instance for authenticating the <BrandName /> APIs to fetch necessary details from your ClickUp account.
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/2-2.webp').default} alt="clickup integration connect" width="1365" height="648" className="doc_img"/>
 
-**Step 5:** After authentication of your ClickUp account, you will be redirected back into LambdaTest application where you will notice a prompt message indicating that you have successfully integrated your LambdaTest account with your ClickUp instance. You will also notice a green tick and a refresh icon. The refresh button will help you synchronize your ClickUp account with LambdaTest in just a single click.
+**Step 5:** After authentication of your ClickUp account, you will be redirected back into <BrandName /> application where you will notice a prompt message indicating that you have successfully integrated your <BrandName /> account with your ClickUp instance. You will also notice a green tick and a refresh icon. The refresh button will help you synchronize your ClickUp account with <BrandName /> in just a single click.
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/4-3.webp').default} alt="clickup integration successfully" width="1349" height="647" className="doc_img"/>
 
-## Log Your First Bug Through LambdaTest Integration With ClickUp
+## Log Your First Bug Through <BrandName /> Integration With ClickUp
 ***
 
 **Step 1:** Go for any of the test from the left navigation menu. For demo, we will be taking **"Real Time Testing"** option.
@@ -106,38 +108,38 @@ LambdaTest integration with ClickUp will help you report bugs and UI anomalies d
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/Capture15.webp').default} alt="clickup integration" width="347" height="75" className="doc_img"/>
 
-**Step 6:** Now, go to your ClickUp project and you will notice your logged task under the specific project that you assigned it through LambdaTest.
+**Step 6:** Now, go to your ClickUp project and you will notice your logged task under the specific project that you assigned it through <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/clickup-8.webp').default} alt="clickup integration api" width="1365" height="651" className="doc_img"/>
 
-**Step 7:** Click on the logged task and you will find all the details about the bug that you stated while marking the bug from LambdaTest. You will also find a URL that would route you to the particular screenshot that was logged while creating the issue from LambdaTest.
+**Step 7:** Click on the logged task and you will find all the details about the bug that you stated while marking the bug from <BrandName />. You will also find a URL that would route you to the particular screenshot that was logged while creating the issue from <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/clickup-9.webp').default} alt="clickup integration demo" width="1365" height="646" className="doc_img"/>
 
-## Remove LambdaTest Integration With ClickUp
+## Remove <BrandName /> Integration With ClickUp
 ***
 
 > You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to **remove** your current integration. Here is how you can do that.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
-**Step 2:** Select **‘Integrations’** from the left-navigation menu. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **‘Integrations’** from the left-navigation menu. This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on **‘REMOVE’**. You can find the remove button under the ‘ClickUp’ block which would be highlighted with a green tick.
 
 <img loading="lazy" src={require('../assets/images/clickup-integration/clickup-10.webp').default} alt="clickup integration remove" width="1348" height="644" className="doc_img"/>
 
-> That was all you need to know for LambdaTest + ClickUp Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing! 🙂
+> That was all you need to know for <BrandName /> + ClickUp Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

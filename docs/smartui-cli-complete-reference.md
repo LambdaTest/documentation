@@ -21,6 +21,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI CLI Complete Reference",
-          "item": "https://www.lambdatest.com/support/docs/smartui-cli-complete-reference/"
+          "item": `${BRAND_URL}/support/docs/smartui-cli-complete-reference/`
         }]
       })
     }}
@@ -52,7 +54,7 @@ This comprehensive reference guide covers all SmartUI CLI and Storybook CLI comm
 
 - Node.js v20.3+ installed (required for SmartUI CLI v4.x.x)
 - npm or yarn package manager
-- LambdaTest account credentials
+- <BrandName /> account credentials
 - SmartUI project created
 
 :::note
@@ -163,8 +165,8 @@ smartui exec [options] -- <command>
 | `--fetch-results [filename]` | | Fetch results and save to JSON file | `results.json` |
 | `--buildName <string>` | | Custom build name for test run | Random |
 | `--scheduled <string>` | | Specify schedule ID | - |
-| `--userName <string>` | | LambdaTest username (overrides env) | - |
-| `--accessKey <string>` | | LambdaTest access key (overrides env) | - |
+| `--userName <string>` | | <BrandName /> username (overrides env) | - |
+| `--accessKey <string>` | | <BrandName /> access key (overrides env) | - |
 | `--config <file>` | `-c` | Configuration file path | `.smartui.json` |
 
 **Examples:**
@@ -210,8 +212,8 @@ smartui capture [options] <file>
 | `--fetch-results [filename]` | | Fetch results and save to JSON | `results.json` |
 | `--buildName <string>` | | Custom build name | Random |
 | `--scheduled <string>` | | Schedule ID | - |
-| `--userName <string>` | | LambdaTest username | - |
-| `--accessKey <string>` | | LambdaTest access key | - |
+| `--userName <string>` | | <BrandName /> username | - |
+| `--accessKey <string>` | | <BrandName /> access key | - |
 | `--config <file>` | `-c` | Configuration file path | `.smartui.json` |
 
 **Examples:**
@@ -259,8 +261,8 @@ smartui upload [options] <directory>
 | `--ignoreDir <patterns>` | `-i` | Comma-separated directories to ignore | - |
 | `--fetch-results [filename]` | | Fetch results and save to JSON | `results.json` |
 | `--buildName <string>` | | Custom build name | Random |
-| `--userName <string>` | | LambdaTest username | - |
-| `--accessKey <string>` | | LambdaTest access key | - |
+| `--userName <string>` | | <BrandName /> username | - |
+| `--accessKey <string>` | | <BrandName /> access key | - |
 
 **Examples:**
 ```bash
@@ -617,8 +619,8 @@ These options are available but may not be prominently documented:
 | Option | Commands | Description | Example |
 |--------|----------|-------------|---------|
 | `--scheduled <string>` | `capture`, `exec` | Specify schedule ID for scheduled test runs | `smartui capture urls.json --scheduled "schedule-123"` |
-| `--userName <string>` | `capture`, `exec`, `upload` | Override LambdaTest username (overrides env) | `smartui capture urls.json --userName "user"` |
-| `--accessKey <string>` | `capture`, `exec`, `upload` | Override LambdaTest access key (overrides env) | `smartui exec --accessKey "key" -- npm test` |
+| `--userName <string>` | `capture`, `exec`, `upload` | Override <BrandName /> username (overrides env) | `smartui capture urls.json --userName "user"` |
+| `--accessKey <string>` | `capture`, `exec`, `upload` | Override <BrandName /> access key (overrides env) | `smartui exec --accessKey "key" -- npm test` |
 | `--env <prod\|stage>` | `storybook` | Switch between production and staging environments | `smartui storybook http://localhost:6006 --env stage` |
 | `--force` | `capture` | Forcefully apply parallel instances even if not optimal | `smartui capture urls.json --parallel 10 --force` |
 | `--force-rebuild` | `storybook` | Force rebuild of an already existing Storybook build | `smartui storybook ./storybook-static --force-rebuild` |
@@ -652,8 +654,8 @@ smartui storybook ./storybook-static --force-rebuild
 | Variable | Description | Required |
 |----------|-------------|----------|
 | `PROJECT_TOKEN` | SmartUI project token | Yes (for CLI projects) |
-| `LT_USERNAME` | LambdaTest username | Yes (for Hooks) |
-| `LT_ACCESS_KEY` | LambdaTest access key | Yes (for Hooks) |
+| `LT_USERNAME` | <BrandName /> username | Yes (for Hooks) |
+| `LT_ACCESS_KEY` | <BrandName /> access key | Yes (for Hooks) |
 
 </TabItem>
 

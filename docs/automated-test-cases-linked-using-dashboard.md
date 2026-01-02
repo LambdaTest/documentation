@@ -21,17 +21,17 @@ slug: automated-test-cases-linked-using-dashboard
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Automated Test Cases with AI",
-          "item": "https://www.lambdatest.com/support/docs/automated-test-cases-linked-using-dashboard/"
+          "item": `${BRAND_URL}/support/docs/automated-test-cases-linked-using-dashboard/`
         }]
       })
     }}>

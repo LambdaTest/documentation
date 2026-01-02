@@ -1,4 +1,4 @@
-﻿---
+---
 id: appium-rokutv
 title: Roku TV With Appium
 sidebar_label: Roku TV
@@ -34,27 +34,27 @@ import RealDeviceTag from '../src/component/realDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Roku TV With Appium",
-          "item": "https://www.lambdatest.com/support/docs/appium-rokutv/"
+          "item": `${BRAND_URL}/support/docs/appium-rokutv/`
         }]
       })
     }}
 ></script>
 <RealDeviceTag value="Real Device" /> 
-## Tutorial To Run Your First Test On LambdaTest
+## Tutorial To Run Your First Test On <BrandName />
 
 
 As smart TVs continue to grow in popularity, relying solely on manual testing is no longer sufficient. Automating Roku TV testing provides broader device coverage, enhances user experience by validating remote-based navigation, and eliminates repetitive manual tasks. It also helps uncover issues earlier in the development cycle, ensuring a smooth and consistent experience across different Roku TV models. 
-In this guide, you will learn how to configure and run your **Roku TV** automation testing scripts with **Appium Roku WebDriver** on **LambdaTest Real Device Cloud platform**.
+In this guide, you will learn how to configure and run your **Roku TV** automation testing scripts with **Appium Roku WebDriver** on **<BrandName /> Real Device Cloud platform**.
 > To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br /> 
 ---
 
@@ -66,11 +66,11 @@ By the end of this topic, you will be able to:
 
 1.  Set up an environment for testing your Apps using **Roku TV** with [**Appium Roku WebDriver**](https://github.com/headspinio/appium-roku-driver).
 2.  Understand and configure the core capabilities required for your Roku WebDriver test suite.
-3.  Explore the advanced features of LambdaTest.
+3.  Explore the advanced features of <BrandName />.
 
 :::tip Sample repo
 
-All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-rokutv" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-rokutv" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
 
@@ -79,7 +79,7 @@ All the code samples in this documentation can be found on **LambdaTest's Github
 
 Before you can start performing App automation testing with Appium, you would need to follow these steps:
 
-- You have access to LambdaTest username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials in the [LambdaTest Profile](https://accounts.lambdatest.com/detail/profile)
+- You have access to <BrandName /> username and accessKey. If you have not registered yet, you can do the same by visiting our [website](https://accounts.lambdatest.com/register). You will be able to access the credentials in the [<BrandName /> Profile](https://accounts.lambdatest.com/detail/profile)
 - Install the latest Python build from the [official website](https://www.python.org/downloads/). We recommend using the latest version.
 - Make sure **pip** is installed in your system. You can install **pip** from [pip documentation](https://pip.pypa.io/en/stable/installation/).
 ---
@@ -94,7 +94,7 @@ Before you can start performing App automation testing with Appium, you would ne
 
 
 ### 1. Upload your application
-Upload your **Roku TV** application (.zip file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **Roku TV** application (.zip file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
  **Using App File from System:**
  <div className="lambdatest__codeblock">
@@ -115,14 +115,14 @@ Upload your **Roku TV** application (.zip file) to the LambdaTest servers using 
 
 :::tip
 
-- If you do not have any **.zip** file, you can run your sample tests on LambdaTest by using our sample :link: [RokuTV app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/roku-sample-app.zip).
+- If you do not have any **.zip** file, you can run your sample tests on <BrandName /> by using our sample :link: [RokuTV app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/roku-sample-app.zip).
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - ``lt://APP123456789123456789`` and will be used in the next step.
 
 :::
 
 ### 2. Clone the sample project
 
-1. Clone the LambdaTest’s [LT-appium-rokutv](https://github.com/LambdaTest/LT-appium-rokutv) and navigate to the code directory as shown below:
+1. Clone the <BrandName />’s [LT-appium-rokutv](https://github.com/LambdaTest/LT-appium-rokutv) and navigate to the code directory as shown below:
 
 ```bash
 git clone https://github.com/LambdaTest/LT-appium-rokutv
@@ -131,7 +131,7 @@ cd LT-appium-rokutv
 
 ### 3. Set up your authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set LambdaTest `Username` and `Access Key` in environment variables with following commands.
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.
 
 <Tabs className="docs__val">
 
@@ -296,7 +296,7 @@ If you are unable to run the automation script with the above mentioned commands
 | *platformName    | TYPE: STRING <br/> `roku`                                              | Name of the OS.                                                                       |
 | *platformVersion | TYPE: STRING <br/> `11`                                                | OS version.                                                                           |
 | build            | TYPE: STRING <br/> DEFAULT: Untitled <br/> `build=iOS Small Run`       | You can group your tests like a job containing multiple tests.                        |
-| *app             | TYPE: STRING <br/> `app=lt://APP100201061631704657918380`              | Accepts App URL returned after uploading an app on the LambdaTest servers.            |
+| *app             | TYPE: STRING <br/> `app=lt://APP100201061631704657918380`              | Accepts App URL returned after uploading an app on the <BrandName /> servers.            |
 | visual           | TYPE: BOOLEAN <br/> DEFAULT: FALSE <br/> `visual=TRUE` <br/> OR <br/> `visual=FALSE` | Command by command screenshots will be recorded at each test step. By default off.    |
 | video            | TYPE: BOOLEAN <br/> DEFAULT: TRUE <br/> `video=TRUE` <br/> OR <br/> `video=FALSE`  | Video recording of the complete screen.                                               |
 | devicelog        | TYPE: BOOLEAN <br/> DEFAULT: FALSE <br/> `devicelog=TRUE` <br/> OR <br/> `devicelog=FALSE` | Enable Device logs.                                                                   |
@@ -324,17 +324,17 @@ We utilise the Appium Roku Driver to run tests on Roku via Appium, here's a list
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

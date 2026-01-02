@@ -1,4 +1,4 @@
-﻿---
+---
 id: accessibility-devtools-settings
 title: Configure Accessibility DevTools
 hide_title: false
@@ -17,6 +17,8 @@ slug: accessibility-devtools-settings
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,23 +28,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Testing Settings",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-devtools-settings/"
+          "item": `${BRAND_URL}/support/docs/accessibility-devtools-settings/`
         }]
       })
     }}
 ></script>
 
-LambdaTest Accessibility DevTools offers a set of settings to configure your Accessibility Tests to ensure comprehensive and effective assessments. Key configuration options include enabling accessibility checks, selecting the appropriate **WCAG version**, and specifying to include **Best Practice** and **Needs Review**.
+<BrandName /> Accessibility DevTools offers a set of settings to configure your Accessibility Tests to ensure comprehensive and effective assessments. Key configuration options include enabling accessibility checks, selecting the appropriate **WCAG version**, and specifying to include **Best Practice** and **Needs Review**.
 
 > Click on your **profile icon** >> **Settings** button.
 

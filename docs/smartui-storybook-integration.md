@@ -25,6 +25,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,23 +36,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-storybook-integration/"
+          "item": `${BRAND_URL}/support/docs/smartui-storybook-integration/`
         }]
       })
     }}
 ></script>
 
-Using the LambdaTest platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
+Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 ## Prerequisites for running SmartUI with StoryBook
 
@@ -61,9 +63,9 @@ Using the LambdaTest platform, perform regression testing in just one click and 
 :::note
 If you face any problems executing tests with SmartUI-CLI `versions >= v4.x.x`, upgrade your Node.js version to `v20.3` or above.
 :::
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform -
 
 ## Steps to create a SmartUI Project
 
@@ -566,7 +568,7 @@ Validate Theme Configuration
 If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [Storybook Documentation](https://storybook.js.org/docs) for Storybook-specific issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>
@@ -584,12 +586,12 @@ If you encounter issues not covered here:
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

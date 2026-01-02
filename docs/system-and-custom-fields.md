@@ -1,4 +1,4 @@
-﻿---
+---
 id: system-and-custom-fields
 title: System and Custom Fields
 hide_title: true
@@ -23,17 +23,17 @@ slug: system-and-custom-fields
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "System and Custom Fields",
-          "item": "https://www.lambdatest.com/support/docs/system-and-custom-fields/"
+          "item": `${BRAND_URL}/support/docs/system-and-custom-fields/`
         }]
       })
     }}
@@ -89,12 +89,12 @@ You can also link a single or multiple projects of your choice to the custom fie
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

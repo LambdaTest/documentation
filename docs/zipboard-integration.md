@@ -1,4 +1,4 @@
-﻿---
+---
 id: zipboard-integration
 title: zipBoard Integration
 hide_title: false
@@ -18,6 +18,8 @@ url: https://www.testmu.ai/support/docs/zipboard-integration
 site_name: LambdaTest
 slug: zipboard-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -42,8 +44,6 @@ slug: zipboard-integration
       })
     }}
 ></script>
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ZipBoard is a visual feedback and bug tracking tool designed to streamline collaboration across teams during the web development process. By integrating <BrandName /> with ZipBoard, teams can enhance their testing workflows, enabling seamless communication between developers, testers, and stakeholders.
 

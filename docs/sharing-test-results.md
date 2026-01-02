@@ -1,4 +1,4 @@
-﻿---
+---
 id: sharing-test-results
 title: Sharing Test Results on TestMu AI
 hide_title: true
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/sharing-test-results
 site_name: LambdaTest
 slug: sharing-test-results
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,27 +26,27 @@ slug: sharing-test-results
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Sharing Test Result",
-          "item": "https://www.lambdatest.com/support/docs/sharing-test-results/"
+          "item": `${BRAND_URL}/support/docs/sharing-test-results/`
         }]
       })
     }}
 ></script>
 
-# Sharing Test Results on LambdaTest
+# Sharing Test Results on <BrandName />
 
 * * *
 
-While performing automation testing with Selenium, the number of test cases that run in a queue or in parallel could be extensive. Finding a particular test case to share with your colleagues out of hundreds of automated test cases could sometimes be as challenging as finding a needle in a haystack. However, at LambdaTest we have made it easier for you to share your test results so you could collaborate faster with convenience.
+While performing automation testing with Selenium, the number of test cases that run in a queue or in parallel could be extensive. Finding a particular test case to share with your colleagues out of hundreds of automated test cases could sometimes be as challenging as finding a needle in a haystack. However, at <BrandName /> we have made it easier for you to share your test results so you could collaborate faster with convenience.
 
 If you wish to share an instance of a single test result with a member of your organization then you can share it by retrieving the Session ID and appending it into the URL of automation logs.
 
@@ -136,17 +138,17 @@ So suppose the generated AUTH_TOKEN is 331k534uf3toef, then the updated URL will
 https://automation.lambdatest.com/public/video?testID=HJKXM-RHZL1-SVPWY-AB8X6&auth=331k534uf3toef
 ```
 
-Make sure you are logged into LambdaTest for accessing the sharing URL. Happy testing!
+Make sure you are logged into <BrandName /> for accessing the sharing URL. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

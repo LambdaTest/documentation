@@ -1,4 +1,4 @@
-﻿---
+---
 id: appium-bitrise
 title: How to integrate your Appium tests with Bitrise 
 hide_title: true
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/bitrise-integration
 site_name: LambdaTest
 slug: bitrise-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -24,17 +26,17 @@ slug: bitrise-integration
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Running Appium Tests In Bitrise CI",
-          "item": "https://www.lambdatest.com/support/docs/bitrise-integration/"
+          "item": `${BRAND_URL}/support/docs/bitrise-integration/`
         }]
       })
     }}
@@ -45,12 +47,12 @@ slug: bitrise-integration
 
 Bitrise offers a mobile CI/CD platform as a service (PaaS) to accelerate the automation of your software development projects. It provides different mobile-first features like exhaustive mobile stack coverage, store code anywhere in cloud or on-premise, and zero hardware setup that make building, testing, and deploying faster and easier.
 
-Using LambdaTest with Bitrise, you can effortlessly perform [Appium testing](https://www.lambdatest.com/appium-mobile-testing) of your mobile apps on an [online device farm](https://www.lambdatest.com/online-device-farm) of 3000+ real devices and OS versions.
+Using <BrandName /> with Bitrise, you can effortlessly perform [Appium testing](https://www.lambdatest.com/appium-mobile-testing) of your mobile apps on an [online device farm](https://www.lambdatest.com/online-device-farm) of 3000+ real devices and OS versions.
 
 ## Prerequisites
 ***
 
-1. Ensure you have access to LambdaTest [real device cloud](https://www.lambdatest.com/real-device-cloud). If not, please [contact sales](https://www.lambdatest.com/contact-us).
+1. Ensure you have access to <BrandName /> [real device cloud](https://www.lambdatest.com/real-device-cloud). If not, please [contact sales](https://www.lambdatest.com/contact-us).
 
 2. A Bitrise account.
 
@@ -136,7 +138,7 @@ Your app build will now trigger and start running.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/android-unit.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
-3. A search steps box will appear. Enter *LambdaTest Upload* and click LambdaTest Upload card.
+3. A search steps box will appear. Enter *<BrandName /> Upload* and click <BrandName /> Upload card.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/lt-upload.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
@@ -146,19 +148,19 @@ Your app build will now trigger and start running.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/apppath.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
-* In **LambdaTest username**, click Select secret variable.
+* In **<BrandName /> username**, click Select secret variable.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/keyuservar.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
-* Enter the key (it can be anything), your LambdaTest username and click **Add new**.
+* Enter the key (it can be anything), your <BrandName /> username and click **Add new**.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/username.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
-* In **LambdaTest access key**, click Select secret variable.
+* In **<BrandName /> access key**, click Select secret variable.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/keysecvar.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
-* Enter the key (it can be anything), your LambdaTest access key and click **Add new**.
+* Enter the key (it can be anything), your <BrandName /> access key and click **Add new**.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
@@ -186,7 +188,7 @@ You'll be taken to the build interface as shown below.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/builddashboard.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
-8. Scroll down and click on three dots adjacent to the LambdaTest icon.
+8. Scroll down and click on three dots adjacent to the <BrandName /> icon.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/threedots.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 

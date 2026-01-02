@@ -1,4 +1,4 @@
-﻿---
+---
 id: real-time-mobile-app-testing-tools
 title: How to use Testing Tools for Mobile Applications?
 hide_title: false
@@ -20,6 +20,8 @@ url: https://www.testmu.ai/support/docs/real-time-mobile-app-testing-tools
 site_name: LambdaTest
 slug: real-time-mobile-app-testing-tools
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,22 +31,22 @@ slug: real-time-mobile-app-testing-tools
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Real Time Mobile App Testing",
-          "item": "https://www.lambdatest.com/support/docs/real-time-mobile-app-testing-tools/"
+          "item": `${BRAND_URL}/support/docs/real-time-mobile-app-testing-tools/`
         }]
       })
     }}
 ></script>
-LambdaTest offers a comprehensive suite of real-time mobile app testing tools designed to enhance the efficiency of your testing process. This guide provides detailed instructions on how to utilize each and every tool.
+<BrandName /> offers a comprehensive suite of real-time mobile app testing tools designed to enhance the efficiency of your testing process. This guide provides detailed instructions on how to utilize each and every tool.
 
 ## Device Controls
 The Device Controls feature allows you to simulate various actions on your test device during a testing session, enabling comprehensive testing of your web applications' behavior in real-world scenarios.
@@ -99,7 +101,7 @@ GPS Geolocation testing allows you to simulate specific device locations using e
 The [Upload and Download Files](/support/docs/real-time-upload-and-download-files/) feature allows to manage files directly within remote testing environments. This functionality streamlines the testing process by allowing seamless file transfers between local and remote environments across desktop and mobile platforms.
 
 ## Network Throttling
-LambdaTest's network throttling feature empowers you to simulate real-world network conditions (2G, 3G, LTE) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
+<BrandName />'s network throttling feature empowers you to simulate real-world network conditions (2G, 3G, LTE) during testing. This allows you to assess your application performance under varying internet speeds, ensuring a seamless user experience across different network environments. You can leverage predefined network profiles or craft custom settings for comprehensive testing.
 
 <img loading="lazy" src={require('../assets/images/real-time-testing/mobile-app/network-throttling.png').default} alt="Image" className="doc_img"/>
 

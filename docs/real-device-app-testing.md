@@ -1,4 +1,4 @@
-﻿---
+---
 id: real-device-app-testing
 title: Getting started with Real Device App Testing
 hide_title: true
@@ -11,6 +11,8 @@ url: https://www.testmu.ai/support/docs/real-device-app-testing
 site_name: LambdaTest
 slug: real-device-app-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,17 +22,17 @@ slug: real-device-app-testing
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Native Mobile App Testing",
-          "item": "https://www.lambdatest.com/support/docs/real-device-app-testing/"
+          "item": `${BRAND_URL}/support/docs/real-device-app-testing/`
         }]
       })
     }}
@@ -38,11 +40,11 @@ slug: real-device-app-testing
 
 # Getting Started with Real Device App Testing
 
-Real device app testing is the process of testing a mobile application to ensure that their functionality and usability is not comprised when installed across multiple Android and iOS devices. With LambdaTest, you can test mobile applications manually to ensure they perform seamlessly across all Android emulators and iOS simulators.
+Real device app testing is the process of testing a mobile application to ensure that their functionality and usability is not comprised when installed across multiple Android and iOS devices. With <BrandName />, you can test mobile applications manually to ensure they perform seamlessly across all Android emulators and iOS simulators.
 
 ***
 
-**Step 1:** Login to your LambdaTest account. Go to "**App Testing**" under “**Real Device**” from the left navigation menu.
+**Step 1:** Login to your <BrandName /> account. Go to "**App Testing**" under “**Real Device**” from the left navigation menu.
 
 **Step 2**: Choose the OS version of your choice. ( Android or iOS )
 
@@ -75,12 +77,12 @@ For detailed instructions on how to activate the tunnel, please refer to the det
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

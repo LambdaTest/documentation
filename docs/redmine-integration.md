@@ -1,4 +1,4 @@
-﻿---
+---
 id: redmine-integration
 title: Redmine Integration
 hide_title: true
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/redmine-integration
 site_name: LambdaTest
 slug: redmine-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: redmine-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Redmine Integration",
-          "item": "https://www.lambdatest.com/support/docs/redmine-integration/"
+          "item": `${BRAND_URL}/support/docs/redmine-integration/`
         }]
       })
     }}
@@ -43,13 +45,13 @@ slug: redmine-integration
 
 >Redmine is an open-source, cross-platform, and cross-database project management tool. It is coded in Ruby on Rails, and it helps in collaboration, bug tracking, managing multiple projects, and allows users to have numerous roles. It has an issue tracking system that enables developers to identify each issue status and prioritize it accordingly. Besides, it has additional features such as email notification, feeds, wikis, forums, and time tracker. 
 
-Using LambdaTest integration with Redmine, you'll be able to log bugs in your Redmine project from LambdaTest in just one click. You can grab a screenshot of a problem, highlight an exception, annotate additional detail, select an assignee, include a fitting title and a summary to help convey further actions. You can do all of this directly from LambdaTest.
+Using <BrandName /> integration with Redmine, you'll be able to log bugs in your Redmine project from <BrandName /> in just one click. You can grab a screenshot of a problem, highlight an exception, annotate additional detail, select an assignee, include a fitting title and a summary to help convey further actions. You can do all of this directly from <BrandName />.
 
-## How to Integrate Redmine with your LambdaTest account?
+## How to Integrate Redmine with your <BrandName /> account?
 ***
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select **'Integration'** from the left navigation menu bar. This will guide you to a screen where you will find a list of third party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **'Integration'** from the left navigation menu bar. This will guide you to a screen where you will find a list of third party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on **'Add'** under the block that says **'Redmine'**.
 
@@ -65,22 +67,22 @@ The domain name is any website's name having unique IP address that the user ent
 >* ** What is an API Token?**   
 When two different applications communicate, a server-to – server connection is established. The API token is used to authenticate user identity from one server to another by extracting user-owned resources accessible on the server from where the communication is initiated. The API token is required to preserve the protection and integrity of any application. They're just as valuable to the end user as they are to the application. API tokens are important if the end user logs to the application via a two step authentication process.   
 >* **Where can I get my API Token?**    
-Make sure you have your Redmine credentials. If not registered, you can register yourself by navigating to the **'Register'** button on the top-left, then login to your Redmine account and click on **'My Account'** on the top-left. Navigate to **'Show'** under **'API access key'** header on the left. Copy this API access token as you will need to provide it on the LambdaTest application to integrate with Redmine. This API token is auto-generated though you can regenerate it as per your need.   
+Make sure you have your Redmine credentials. If not registered, you can register yourself by navigating to the **'Register'** button on the top-left, then login to your Redmine account and click on **'My Account'** on the top-left. Navigate to **'Show'** under **'API access key'** header on the left. Copy this API access token as you will need to provide it on the <BrandName /> application to integrate with Redmine. This API token is auto-generated though you can regenerate it as per your need.   
 ><img loading="lazy" src={require('../assets/images/redmine-integration/Screenshot-307-1.webp').default} alt="api access key"  className="doc_img" width="1352" height="436"/>   
 
-**Step 5:** Then enter your **'Domain'** and paste the **'API Token'** into the field provided at LambdaTest & press the **'Install'** button.   
+**Step 5:** Then enter your **'Domain'** and paste the **'API Token'** into the field provided at <BrandName /> & press the **'Install'** button.   
 
 <img loading="lazy" src={require('../assets/images/redmine-integration/Screenshot-308.webp').default} alt="install"  className="doc_img" width="1331" height="478"/>   
 
-**Step 6:** Go to Integrations again and you will be able to notice a green tick indicating that Redmine is successfully installed. You are all set to experience one-click bug logging to share your issues directly from your LambdaTest account to your teammates on Redmine project.
+**Step 6:** Go to Integrations again and you will be able to notice a green tick indicating that Redmine is successfully installed. You are all set to experience one-click bug logging to share your issues directly from your <BrandName /> account to your teammates on Redmine project.
 
 <img loading="lazy" src={require('../assets/images/redmine-integration/img1.webp').default} alt="bug logging"  className="doc_img" width="1349" height="506"/>
 
 ## How to Mark your First Bug through Redmine Integration?
 ***
-**Step 1:** In order to log bugs from your LambdaTest, firstly you would have to create a Project in the Redmine environment by navigating to **'Projects>New Project>Create'**.
+**Step 1:** In order to log bugs from your <BrandName />, firstly you would have to create a Project in the Redmine environment by navigating to **'Projects>New Project>Create'**.
 
-**Step 2:** Go for any of the test from the LambdaTest's left navigation menu. For demo, we will be taking **'Real Time Testing'** option. After that, enter a URL of the web-app you need to test in the dialog box. Then, select any configuration for browser and operating system of your choice & click on **'Start'**.
+**Step 2:** Go for any of the test from the <BrandName />'s left navigation menu. For demo, we will be taking **'Real Time Testing'** option. After that, enter a URL of the web-app you need to test in the dialog box. Then, select any configuration for browser and operating system of your choice & click on **'Start'**.
 
 <img loading="lazy" src={require('../assets/images/redmine-integration/img2.webp').default} alt="start"  className="doc_img" width="1341" height="486"/>
 
@@ -134,7 +136,7 @@ Make sure you have your Redmine credentials. If not registered, you can register
 
 <img loading="lazy" src={require('../assets/images/redmine-integration/subject.webp').default} alt="subject"  className="doc_img" width="1349" height="415"/>
 
-You will find all the data that you provided through LambdaTest already presented in it. LambdaTest automatically includes test environment details and related screenshots in the card as attachments.
+You will find all the data that you provided through <BrandName /> already presented in it. <BrandName /> automatically includes test environment details and related screenshots in the card as attachments.
 
 <img loading="lazy" src={require('../assets/images/redmine-integration/defect.webp').default} alt="data"  className="doc_img" width="1348" height="583"/>
 
@@ -142,25 +144,25 @@ You will find all the data that you provided through LambdaTest already presente
 ***
 >You can work with one integration at a time. So if you would want to integrate to a similar third party application, then you would have to **remove** your current integration. Here is how you can do that.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
-**Step 2:** Select **'Settings'** from the left navigation menu bar & click on **'Integrations'**. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **'Settings'** from the left navigation menu bar & click on **'Integrations'**. This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on **'REMOVE'**. You can find the remove button right under the **'Redmine'** block which would be highlighted with a green tick.
 
 <img loading="lazy" src={require('../assets/images/redmine-integration/Screenshot-323.webp').default} alt="remove"  className="doc_img" width="1340" height="535"/>
 
->That was all you need to know for LambdaTest + Redmine Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing! 
+>That was all you need to know for <BrandName /> + Redmine Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing! 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/hyperexecute-general-faqs
 site_name: LambdaTest
 slug: hyperexecute-general-faqs
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: hyperexecute-general-faqs
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integrations",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-general-faqs/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-general-faqs/`
         }]
       })
     }}
@@ -145,9 +147,9 @@ slug: hyperexecute-general-faqs
 
 ***
 
-#### 17. **How can I access my LambdaTest Hub URL?**
+#### 17. **How can I access my <BrandName /> Hub URL?**
 
-  Your LambdaTest Hub URL can be accessed from our [automation page](https://automation.lambdatest.com/build), along with your username and access key. Click on the **Access Key** button on the right side of your screen to retrieve your Hub URL. The image below indicates exactly where you can find your Hub URL. 
+  Your <BrandName /> Hub URL can be accessed from our [automation page](https://automation.lambdatest.com/build), along with your username and access key. Click on the **Access Key** button on the right side of your screen to retrieve your Hub URL. The image below indicates exactly where you can find your Hub URL. 
 
   <img loading="lazy" src={require('../assets/images/hyperexecute/faq/hub.png').default} alt="Image"  className="doc_img"/>
 
@@ -159,12 +161,12 @@ slug: hyperexecute-general-faqs
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

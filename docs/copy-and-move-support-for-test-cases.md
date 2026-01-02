@@ -1,4 +1,4 @@
-﻿---
+---
 id: copy-and-move-support-for-test-cases
 title: Copy and Move Support for Test Cases
 hide_title: true
@@ -21,17 +21,17 @@ slug: copy-and-move-support-for-test-cases
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Copy and Move Support for Test Cases",
-          "item": "https://www.lambdatest.com/support/docs/copy-and-move-support-for-test-cases/"
+          "item": `${BRAND_URL}/support/docs/copy-and-move-support-for-test-cases/`
         }]
       })
     }}

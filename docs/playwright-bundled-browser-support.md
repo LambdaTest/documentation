@@ -19,6 +19,8 @@ slug: playwright-bundled-browser-support
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,23 +30,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Playwright Bundled Browser Support",
-          "item": "https://www.lambdatest.com/support/docs/playwright-bundled-browser-support/"
+          "item": `${BRAND_URL}/support/docs/playwright-bundled-browser-support/`
         }]
       })
     }}
 ></script>
 
-When you set the capability [`useSpecificBundleVersion: true`](/support/docs/capabilities-for-playwright/#:~:text=setHTTPCredentials%22%2C%20%22setStorageState%22%2C%20%22setGeolocation%22%5D%7D%7D-,useSpecificBundleVersion,-Boolean), then LambdaTest will select the browser (Chromium, Firefox, Webkit) version as per your local machine's PLaywright version. 
+When you set the capability [`useSpecificBundleVersion: true`](/support/docs/capabilities-for-playwright/#:~:text=setHTTPCredentials%22%2C%20%22setStorageState%22%2C%20%22setGeolocation%22%5D%7D%7D-,useSpecificBundleVersion,-Boolean), then <BrandName /> will select the browser (Chromium, Firefox, Webkit) version as per your local machine's PLaywright version. 
 
 ```yaml
 const capabilities = { "LT:Options": {"useSpecificBundleVersion": true,}}

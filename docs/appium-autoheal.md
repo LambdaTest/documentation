@@ -26,9 +26,9 @@ import RealDeviceTag from '../src/component/realDevice';
 # AI-Powered Smart Heal for Automation Tests
 <RealDeviceTag value="Real Device" /> 
 
-Locator failures can make tests brittle and cause frequent failures, slowing down development and testing. LambdaTest’s **Smart Heal** uses **AI/ML-powered algorithms** to automatically detect and recover from locator issues during test execution, ensuring smoother and more reliable automation.
+Locator failures can make tests brittle and cause frequent failures, slowing down development and testing. <BrandName />’s **Smart Heal** uses **AI/ML-powered algorithms** to automatically detect and recover from locator issues during test execution, ensuring smoother and more reliable automation.
 
-LambdaTest now lets you enable **Smart Heal** for automation testing. This feature helps developers and testers handle locator failures without manual effort by intelligently detecting missing elements, analyzing the UI in real time, and applying the closest valid match. It keeps tests running smoothly despite UI changes and provides full visibility into healing actions, including both the **original and recovered locators** through logs and the LambdaTest dashboard.
+<BrandName /> now lets you enable **Smart Heal** for automation testing. This feature helps developers and testers handle locator failures without manual effort by intelligently detecting missing elements, analyzing the UI in real time, and applying the closest valid match. It keeps tests running smoothly despite UI changes and provides full visibility into healing actions, including both the **original and recovered locators** through logs and the <BrandName /> dashboard.
 
 > Smart Heal feature is currently in **closed beta** and continuously improving based on user feedback. Once publicly released, it will be available as part of AI credits—please reach out via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat**</span> or email us at **support@lambdatest.com** to enable it for your organization and try it out.
 
@@ -44,11 +44,11 @@ LambdaTest now lets you enable **Smart Heal** for automation testing. This featu
 ## Smart Heal Workflow
 
 1. **Baseline Creation**  
-- For Smart Heal to work, you must first have at least one successful (**Passed Test**) as baseline, so make sure to include the [LambdaTest  Hook](/support/docs/appium-testmu-hooks/#adding-custom-status--remark) in your tests to explicitly mark them as passed during execution. With a baseline in place, the Auto-Heal engine can detect changes and attempt locator recovery. Since Smart Heal uses AI-driven analysis, expect executions to take slightly longer than usual.
+- For Smart Heal to work, you must first have at least one successful (**Passed Test**) as baseline, so make sure to include the [<BrandName />  Hook](/support/docs/appium-testmu-hooks/#adding-custom-status--remark) in your tests to explicitly mark them as passed during execution. With a baseline in place, the Auto-Heal engine can detect changes and attempt locator recovery. Since Smart Heal uses AI-driven analysis, expect executions to take slightly longer than usual.
 - For every user the **project name** and **test name** must remain the same across runs for Smart Heal to keep baseline applied successfully.
 
 
-- On the initial successful test run with Smart Heal enabled, LambdaTest captures a **baseline snapshot** of all element locators in your script. This baseline serves as the foundational reference for future healing attempts, ensuring that any changes to the UI can be intelligently detected and addressed.  
+- On the initial successful test run with Smart Heal enabled, <BrandName /> captures a **baseline snapshot** of all element locators in your script. This baseline serves as the foundational reference for future healing attempts, ensuring that any changes to the UI can be intelligently detected and addressed.  
 
 2. **Baseline Updation**  
    After each successful test run, Smart Heal can automatically update your baseline to reflect the latest fully passed build. This ensures that the most recent valid UI state is used as the reference for future healing attempts. Keeping the baseline updated helps maintain accurate detection of element changes and reduces unnecessary healing actions.
@@ -70,7 +70,7 @@ LambdaTest now lets you enable **Smart Heal** for automation testing. This featu
 
 ### 1. Upload Your App
 
-Before enabling Smart Heal, ensure your app is uploaded to LambdaTest.
+Before enabling Smart Heal, ensure your app is uploaded to <BrandName />.
 
 1. Follow the [Upload Your Application](/support/docs/upload-apps-on-real-device-cloud/) guide.
 2. Once uploaded, **note the App ID** returned by the API or dashboard.
@@ -139,14 +139,14 @@ driver.executeScript("lambda-heal-start");
 
 ### 4. Running Your Tests
 
-Once your app is uploaded and Smart Heal is enabled (either via capabilities or runtime hooks), execute your test script as usual with your preferred automation framework. Smart Heal will monitor for locator failures during the run, apply healing when possible, and log all details to the LambdaTest dashboard for review.
+Once your app is uploaded and Smart Heal is enabled (either via capabilities or runtime hooks), execute your test script as usual with your preferred automation framework. Smart Heal will monitor for locator failures during the run, apply healing when possible, and log all details to the <BrandName /> dashboard for review.
 
 ---
 
 # Viewing Results in Dashboard
 
 ### Accessing the Dashboard
-Your test results are displayed on the [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
+Your test results are displayed on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 ### Filtering Healed Builds
 To display only healed builds, click on the **Configure** option at the top of the dashboard.  
