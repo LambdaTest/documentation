@@ -1,4 +1,4 @@
-﻿---
+---
 id: appium-lambdatest-hooks
 title: Lambda Hooks For Appium Automation
 sidebar_label: Lambda Hooks For Appium 
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/appium-testmu-hooks
 site_name: LambdaTest
 slug: appium-testmu-hooks
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +27,17 @@ slug: appium-testmu-hooks
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "LambdaTest Hooks for Appium",
-          "item": "https://www.lambdatest.com/support/docs/appium-testmu-hooks/"
+          "item": `${BRAND_URL}/support/docs/appium-testmu-hooks/`
         }]
       })
     }}
@@ -54,7 +56,7 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 <VirtualDeviceTag value="Virtual Device" />
 
 
-This document will help you provide lambdahooks which can be used to improve your test scripts to easily debug your test cases for **App Automation on Real Devices** on **LambdaTest Cloud**.
+This document will help you provide lambdahooks which can be used to improve your test scripts to easily debug your test cases for **App Automation on Real Devices** on **<BrandName /> Cloud**.
 
 ## Adding custom status & remark
 
@@ -112,7 +114,7 @@ public class vanilla_android {
 }
 ```
 
-Once you have added the code snippet, the status and remark will be visible on the [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build) as shown below:
+Once you have added the code snippet, the status and remark will be visible on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build) as shown below:
 
 
 <img loading="lazy" src={require('../assets/images/appium-lambdaHooks/01.webp').default} alt="Build Page Remark" width="1200" height="550" className="doc_img"/>
@@ -133,7 +135,7 @@ Arguments | Example
 ## Differentiating Test Cases in Single Session
 ---
 
-LambdaTest has introduced a LambdaHook to help automation engineers differentiate between multiple test cases within a single Appium session. This feature aims to improve debugging capabilities, making it easier to identify which test cases may be causing errors or taking longer to execute.
+<BrandName /> has introduced a LambdaHook to help automation engineers differentiate between multiple test cases within a single Appium session. This feature aims to improve debugging capabilities, making it easier to identify which test cases may be causing errors or taking longer to execute.
 
 ### Adding LambdaHooks
 
@@ -168,12 +170,12 @@ You can also filter the command logs based on these labels.A screenshot has been
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
@@ -189,7 +191,7 @@ You can also filter the command logs based on these labels.A screenshot has been
 
 ## Command Annotations 
 
-Command Annotations allow you to add metadata and debugging information to your test scripts. They work similarly to LambdaHooks by providing structured logs on the **LambdaTest Automation Dashboard**, making it easier to track test execution, debug failures, and navigate specific test sections.
+Command Annotations allow you to add metadata and debugging information to your test scripts. They work similarly to LambdaHooks by providing structured logs on the **<BrandName /> Automation Dashboard**, making it easier to track test execution, debug failures, and navigate specific test sections.
 
 ![Command Annotation](../assets/images/real-device-app-testing/command-annotation.png)
 

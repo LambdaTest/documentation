@@ -1,4 +1,4 @@
-﻿---
+---
 id: analytics-test-failure-classification
 title: Failure Categorization AI - Test Intelligence
 sidebar_label: Failure Categorization
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/analytics-test-failure-classification
 site_name: LambdaTest
 slug: analytics-test-failure-classification
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,28 +26,28 @@ slug: analytics-test-failure-classification
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-test-failure-classification/"
+          "item": `${BRAND_URL}/support/docs/analytics-test-failure-classification/`
         }]
       })
     }}
 ></script>
-LambdaTest Analytics uses Failure Categorization AI to classify test failures into different categories. This helps in identifying the root cause of failures and improving test automation efficiency. The AI model analyzes the test execution data and categorizes the failures based on various parameters such as environment, browser, OS, and failure type. This allows you to focus on the most critical issues and prioritize your testing efforts.
+<BrandName /> Analytics uses Failure Categorization AI to classify test failures into different categories. This helps in identifying the root cause of failures and improving test automation efficiency. The AI model analyzes the test execution data and categorizes the failures based on various parameters such as environment, browser, OS, and failure type. This allows you to focus on the most critical issues and prioritize your testing efforts.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/fq78e4cjYuM?si=Pro4bEdFPzsYt5mE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Pre-requisites For Failure Categorization AI
 
-1. You should have an active LambdaTest account.
+1. You should have an active <BrandName /> account.
 2. This feature is available for users with the HyperExecute or App / Web Automation subscription plan.
 3. You should add the `remark` capability in your test script to enable the Failure Categorization AI. The `remark` capability is used to add comments or notes to the test execution data. This helps in providing additional context to the AI model and improves the accuracy of the failure categorization.
 
@@ -54,7 +56,7 @@ Here is the link to the documentation for the remark capability:
 * [App Automation](/support/docs/appium-testmu-hooks/#adding-custom-status--remark)
 
 4. You should have at least one test failure in your test execution data. The AI model requires a minimum of one test failure to categorize the failures. If there are no test failures, the AI model will not be able to categorize the failures.
-5. You should have access to the LambdaTest Insights platform.
+5. You should have access to the <BrandName /> Insights platform.
 6. You can see the failure categorization AI on creating a dashboard in the Insights section.
 7. Click on the `Create New` button to create a new dashboard.
 8. Choose any of the available widgets and add them to the dashboard.

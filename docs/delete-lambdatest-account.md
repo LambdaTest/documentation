@@ -1,4 +1,4 @@
-﻿---
+---
 id: delete-lambdatest-account
 title: Deleting Your TestMu AI Account
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/delete-testmu-account
 site_name: LambdaTest
 slug: delete-testmu-account
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,36 +23,36 @@ slug: delete-testmu-account
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Delete LambdaTest Account",
-          "item": "https://www.lambdatest.com/support/docs/delete-testmu-account/"
+          "item": `${BRAND_URL}/support/docs/delete-testmu-account/`
         }]
       })
     }}
 ></script>
 
-# Deleting Your LambdaTest Account
+# Deleting Your <BrandName /> Account
 
 ***
 
-This documentation will guide you through the steps to delete your LambdaTest account.
+This documentation will guide you through the steps to delete your <BrandName /> account.
 
 
 ## Deleting Freemium Account
 
 * * *
 
-If you are a LambdaTest freemium user, you can follow the below steps to delete your account.
+If you are a <BrandName /> freemium user, you can follow the below steps to delete your account.
 
-**Step 1**: Login to your LambdaTest account. Navigate to the upper-right corner and click on **'Profile'**.
+**Step 1**: Login to your <BrandName /> account. Navigate to the upper-right corner and click on **'Profile'**.
 
 <img loading="lazy" src={require('../assets/images/delete-lambdatest-account/dashboard.webp').default} alt="Profile" width="1360" height="603" className="doc_img"/>
 
@@ -58,20 +60,20 @@ If you are a LambdaTest freemium user, you can follow the below steps to delete 
 
 <img loading="lazy" src={require('../assets/images/delete-lambdatest-account/account-settings.webp').default} alt="Delete account" width="1349" height="612" className="doc_img"/>
 
-**Step 3:** To delete your LambdaTest account, head to the **Click Here** option.
+**Step 3:** To delete your <BrandName /> account, head to the **Click Here** option.
 
 <img loading="lazy" src={require('../assets/images/delete-lambdatest-account/click-here.webp').default} alt="Email Address" width="1353" height="620" className="doc_img"/>
 
-**Step 4**: An email notification will be sent to your registered e-mail address. An email will consist of the further instruction you need to follow for deleting your LambdaTest account.
+**Step 4**: An email notification will be sent to your registered e-mail address. An email will consist of the further instruction you need to follow for deleting your <BrandName /> account.
 
 <img loading="lazy" src={require('../assets/images/delete-lambdatest-account/e-mail-.webp').default} alt="Email Address" width="1353" height="620" className="doc_img"/>
 
 Read the instructions and reply as stated in the e-mail.
 
 >
-I understand that the deletion is irrecoverable and I wish to delete my LambdaTest account.
+I understand that the deletion is irrecoverable and I wish to delete my <BrandName /> account.
 
-**Step 5**: Once your request is processed, your LambdaTest account will be deleted.
+**Step 5**: Once your request is processed, your <BrandName /> account will be deleted.
 
 ## Deleting Premium Account
 
@@ -83,7 +85,7 @@ If you are a premium user and wish to delete your account, you will need to canc
 
 * * *
 
-If you are a member of the LambdaTest organization's team, you will need to seek permission from the team's administrator to remove you from the team. Once removed, you can follow the steps mention in _Deleting Premium Account_ to delete your account.
+If you are a member of the <BrandName /> organization's team, you will need to seek permission from the team's administrator to remove you from the team. Once removed, you can follow the steps mention in _Deleting Premium Account_ to delete your account.
 
 ### Removing Member From The Team
 
@@ -91,7 +93,7 @@ If you are a member of the LambdaTest organization's team, you will need to seek
 
 As an admin, you can remove the members from an organization.
 
-**Step 1**: Login to your LambdaTest account. Navigate to the upper-right corner and click on **'Profile'**.
+**Step 1**: Login to your <BrandName /> account. Navigate to the upper-right corner and click on **'Profile'**.
 
 <img loading="lazy" src={require('../assets/images/delete-lambdatest-account/dashboard.webp').default} alt="Profile" width="1360" height="603" className="doc_img"/>
 
@@ -112,23 +114,23 @@ As an admin, you can remove the members from an organization.
 <img loading="lazy" src={require('../assets/images/delete-lambdatest-account/confirm-delete.webp').default} alt="Delete account" width="1354" height="605" className="doc_img"/> The user will be removed successfully.
 
 >
-In case you have any questions or need any additional information regarding LambdaTest account deletion, you can contact at our **<span className="doc__lt" onClick={() => window.openLTChatWidget()}>24/7 Chat Support</span>** or mail us at [**support@lambdatest.com**](mailto:support@lambdatest.com). 
+In case you have any questions or need any additional information regarding <BrandName /> account deletion, you can contact at our **<span className="doc__lt" onClick={() => window.openLTChatWidget()}>24/7 Chat Support</span>** or mail us at [**support@lambdatest.com**](mailto:support@lambdatest.com). 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Delete LambdaTest Account
+        Delete <BrandName /> Account
       </span>
     </li>
   </ul>

@@ -1,4 +1,4 @@
-﻿---
+---
 id: bamboo-integration-with-hyperexecute
 title: Bamboo CI
 hide_title: true
@@ -24,17 +24,17 @@ slug: bamboo-integration-with-hyperexecute
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Bamboo CI Integration",
-          "item": "https://www.lambdatest.com/support/docs/bamboo-integration-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/bamboo-integration-with-hyperexecute/`
         }]
       })
     }}

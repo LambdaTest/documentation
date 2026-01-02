@@ -1,4 +1,4 @@
-﻿---
+---
 id: developer-tools
 title: Easy Debug With TestMu AI Developer Tools
 hide_title: true
@@ -17,6 +17,8 @@ url: https://www.testmu.ai/support/docs/developer-tools
 site_name: LambdaTest
 slug: developer-tools
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ slug: developer-tools
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Developer Tools",
-          "item": "https://www.lambdatest.com/support/docs/developer-tools/"
+          "item": `${BRAND_URL}/support/docs/developer-tools/`
         }]
       })
     }}
@@ -45,12 +47,12 @@ slug: developer-tools
 # Developer Tools
 
 ***
-> Pace up your cross browser debugging while performing live, interactive testing on mobile and desktop browsers at LambdaTest platform with our native browser tools.
+> Pace up your cross browser debugging while performing live, interactive testing on mobile and desktop browsers at <BrandName /> platform with our native browser tools.
 
 
 ## How To Launch Developer Tools On Desktop?
 ***
-**Step 1:** Login to your LambdaTest account. Go to **"Real Time Test"** from the left navigation menu.
+**Step 1:** Login to your <BrandName /> account. Go to **"Real Time Test"** from the left navigation menu.
 
 <img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-1.webp').default} alt="Image" width="1365" height="654" className="doc_img"/>
 
@@ -75,7 +77,7 @@ slug: developer-tools
 ***
 > **Note:** Developer tools for android devices are not supported for android versions below 7.0.
 
-**Step 1:** Login to your LambdaTest account. Go to **"Real Time Test"** from the left navigation menu.
+**Step 1:** Login to your <BrandName /> account. Go to **"Real Time Test"** from the left navigation menu.
 
 <img loading="lazy" src={require('../assets/images/developer-tools/dev-tools-real-time-5.webp').default} alt="Image" width="1365" height="657" className="doc_img"/>
 
@@ -100,12 +102,12 @@ That was all from us about our native browser developer tools. If you still have
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -23,6 +23,8 @@ url: https://www.testmu.ai/support/docs/account-management
 site_name: LambdaTest
 slug: account-management
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,17 +34,17 @@ slug: account-management
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Account Management",
-          "item": "https://www.lambdatest.com/support/docs/account-management/"
+          "item": `${BRAND_URL}/support/docs/account-management/`
         }]
       })
     }}
@@ -54,7 +56,7 @@ slug: account-management
   <a href="/support/docs/manage-subscriptions/">
     <div className="support_inners">
       <h3>Manage Subscriptions</h3>
-      <p>Learn how to manage your account subscription for the LambdaTest.</p>
+      <p>Learn how to manage your account subscription for the <BrandName />.</p>
     </div>
   </a>
   <a href="/support/docs/service-accounts/">
@@ -72,13 +74,13 @@ slug: account-management
   <a href="/support/docs/support-access/">
     <div className="support_inners">
       <h3>Support Access</h3>
-      <p>Learn how to take access to your LambdaTest account and log in on your behalf from the backend.</p>
+      <p>Learn how to take access to your <BrandName /> account and log in on your behalf from the backend.</p>
     </div>
   </a>
   <a href="/support/docs/team-management/">
     <div className="support_inners">
       <h3>Team Management</h3>
-      <p>Learn how to invite your team members to your organizational LambdaTest Account.</p>
+      <p>Learn how to invite your team members to your organizational <BrandName /> Account.</p>
     </div>
   </a>
   <a href="/support/docs/multi-factor-authentication/">
@@ -89,8 +91,8 @@ slug: account-management
   </a>
   <a href="/support/docs/delete-testmu-account/">
     <div className="support_inners">
-      <h3>Deleting LambdaTest Account</h3>
-      <p>This documentation will guide you through the steps to delete your LambdaTest account</p>
+      <h3>Deleting <BrandName /> Account</h3>
+      <p>This documentation will guide you through the steps to delete your <BrandName /> account</p>
     </div>
   </a>
   <a href="/support/docs/group-management/">
@@ -122,12 +124,12 @@ slug: account-management
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

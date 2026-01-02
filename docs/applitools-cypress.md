@@ -22,9 +22,9 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 ---
 
-**Applitools** provides an end-to-end software testing platform powered by **Visual AI**. This article will guide you on how to integrate your **Cypress** automation tests with **Applitools** and **LambdaTest**.
+**Applitools** provides an end-to-end software testing platform powered by **Visual AI**. This article will guide you on how to integrate your **Cypress** automation tests with **Applitools** and **<BrandName />**.
 
-> Before getting started, make sure you have made accounts in **LambdaTest** and **Applitools** platforms.
+> Before getting started, make sure you have made accounts in **<BrandName />** and **Applitools** platforms.
 
 ## Setting Up Applitools Dependencies And Packages
 
@@ -60,11 +60,11 @@ You can download or clone the sample GitHub project from the following repo - [C
 
   > It will create Applitools Eyes to an Existing Node.js Cypress Project.
 
-## Setting up LambdaTest CLI and Dependencies
+## Setting up <BrandName /> CLI and Dependencies
 
 ---
 
-- Install the LambdaTest CLI using below command:
+- Install the <BrandName /> CLI using below command:
 
   ```bash
   npm install -g lambdatest-cypress-cli
@@ -78,7 +78,7 @@ You can download or clone the sample GitHub project from the following repo - [C
 
   > It will create a **lambdatest-config.json** file in the root directory of your project.
 
-- Add spec file path in the `run_setting` and your **LambdaTest credentials** in the auth section of the `lambdatest-config.json` file as shown in the image below.
+- Add spec file path in the `run_setting` and your **<BrandName /> credentials** in the auth section of the `lambdatest-config.json` file as shown in the image below.
 
   ***
 
@@ -114,17 +114,17 @@ Applitools will compare the base image with this test and highlight the differen
 
 <img loading="lazy" src={require('../assets/images/applitools-cypress/applitools6.webp').default} alt="Image" width="1353" height="622" className="doc_img"/>
 
-> That’s all! you have successfully integrated **Applitools** and **LambdaTest** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
+> That’s all! you have successfully integrated **Applitools** and **<BrandName />** for running your **Cypress** tests. In case you have any questions or need any additional information, you could reach out at our <span className="doc\_\_lt" onClick={() => window.openLTChatWidget()}>**24X7 Chat Support**</span> or mail us directly at support@lambdatest.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

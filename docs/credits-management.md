@@ -1,4 +1,4 @@
-﻿---
+---
 id: credits-management
 title: Credits Usage & Management in TestMu AI
 hide_title: false
@@ -14,6 +14,8 @@ slug: credits-management
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,23 +25,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Network Throttling",
-          "item": "https://www.lambdatest.com/support/docs/credits-management/"
+          "item": `${BRAND_URL}/support/docs/credits-management/`
         }]
       })
     }}
 ></script>
 
-LambdaTest supports a **credit management system** as an add‑on over your active subscriptions for LambdaTest products. Many products include additional **AI features** that are powered by credits. This guide explains how credits work, how to view usage, and how admins can control consumption.
+<BrandName /> supports a **credit management system** as an add‑on over your active subscriptions for <BrandName /> products. Many products include additional **AI features** that are powered by credits. This guide explains how credits work, how to view usage, and how admins can control consumption.
 
 ---
 
@@ -56,7 +58,7 @@ Once free credits are exhausted, AI features will be unavailable until you **upg
 
 ## View your current credit balance
 
-If you are an **admin** in LambdaTest organization, you can see the current credits and subscription details in [Billing & Subscriptions](https://billing.lambdatest.com/billing/subscriptions).
+If you are an **admin** in <BrandName /> organization, you can see the current credits and subscription details in [Billing & Subscriptions](https://billing.lambdatest.com/billing/subscriptions).
 
 ---
 
@@ -95,7 +97,7 @@ Below are the currently supported features and how they consume credits.
 
 ### SmartUI Visual AI
 
-LambdaTest **SmartUI Visual AI** simulates human perception for visual regression. Rather than flagging every pixel change, it highlights **meaningful, human‑relevant** differences between baseline and new screenshots. [Learn more](/support/docs/smartui-visual-ai/).
+<BrandName /> **SmartUI Visual AI** simulates human perception for visual regression. Rather than flagging every pixel change, it highlights **meaningful, human‑relevant** differences between baseline and new screenshots. [Learn more](/support/docs/smartui-visual-ai/).
 
 #### How credits are consumed?
 
@@ -137,11 +139,11 @@ AI features that require credits will be disabled. You can **purchase credits** 
 
 **Q: Who can view balances and transactions?**
 
-Users with the **Admin** role in your LambdaTest organization.
+Users with the **Admin** role in your <BrandName /> organization.
 
 **Q: Do unused credits expire?**
 
-For free users, complimentary credits are provided for one-time usage and do not expire. While for users subscribed to LambdaTest products, the complimentary credits get reset at the beginning of each month. Any credits explicitly purchased, do not expire.
+For free users, complimentary credits are provided for one-time usage and do not expire. While for users subscribed to <BrandName /> products, the complimentary credits get reset at the beginning of each month. Any credits explicitly purchased, do not expire.
 
 **Q: Why were credits refunded after generation?**
 
@@ -169,6 +171,6 @@ Yes, it provides AI FinOps capabilities for cost control and spend management, e
 
 ## What’s next
 
-Additional AI features will join the credit system shortly. Watch the **LambdaTest Changelog** and Support Docs for updates.
+Additional AI features will join the credit system shortly. Watch the **<BrandName /> Changelog** and Support Docs for updates.
 
 If you have questions about credits, billing, or limits, reach out to **[support@lambdatest.com](mailto:support@lambdatest.com)**.

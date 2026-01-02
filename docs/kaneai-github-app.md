@@ -1,4 +1,4 @@
-﻿---
+---
 id: github-app-integration
 title: TestMu AI Cloud GitHub App Integration
 hide_title: true
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/github-app-integration
 site_name: LambdaTest
 slug: github-app-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,29 +25,29 @@ slug: github-app-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "LambdaTest AI Cloud GitHub App Integration",
-          "item": "https://www.lambdatest.com/support/docs/github-app-integration/"
+          "item": `${BRAND_URL}/support/docs/github-app-integration/`
         }]
       })
     }}
 ></script>
 
-# LambdaTest AI Cloud GitHub App Integration
+# <BrandName /> AI Cloud GitHub App Integration
 
 ## 1. Overview
 
-### What is the LambdaTest AI Cloud GitHub App?
+### What is the <BrandName /> AI Cloud GitHub App?
 
-The LambdaTest AI Cloud GitHub App leverages KaneAI, our advanced AI testing agent, to transform how your team approaches quality assurance. Instead of manually writing test cases for every code change, the app intelligently analyzes your pull requests, understands the business logic and technical implementation, and automatically generates relevant end-to-end test scenarios.
+The <BrandName /> AI Cloud GitHub App leverages KaneAI, our advanced AI testing agent, to transform how your team approaches quality assurance. Instead of manually writing test cases for every code change, the app intelligently analyzes your pull requests, understands the business logic and technical implementation, and automatically generates relevant end-to-end test scenarios.
 
 ### How It Works
 
@@ -54,7 +56,7 @@ When a developer creates a pull request, simply add a comment to trigger the AI 
 1. **Analyzes** the code changes, PR content and repository context (including your README)
 2. **Generates** intelligent test cases using KaneAI's AI engine
 3. **Authors** executable test scripts with proper assertions and validations
-4. **Executes** tests on LambdaTest's cloud infrastructure via HyperExecute
+4. **Executes** tests on <BrandName />'s cloud infrastructure via HyperExecute
 5. **Reports** results with AI-powered Root Cause Analysis (RCA) for failures
 
 All of this happens automatically, with real-time progress updates posted directly to your pull request.
@@ -66,19 +68,19 @@ All of this happens automatically, with real-time progress updates posted direct
 - **Seamless Developer Experience**: Native GitHub integration means developers never leave their workflow—all updates, results, and insights appear directly in PR comments
 - **Enterprise Scalability**: Leverages HyperExecute for parallel test execution across multiple browsers, devices, and platforms
 - **Continuous Quality Intelligence**: AI-driven Root Cause Analysis automatically diagnoses test failures, reducing debugging time and accelerating resolution
-- **Unified Test Management**: All generated tests sync with LambdaTest Test Manager, providing centralized visibility and control across your QA operations
+- **Unified Test Management**: All generated tests sync with <BrandName /> Test Manager, providing centralized visibility and control across your QA operations
 
 ---
 
 ## 2. Prerequisites
 
-Before implementing the LambdaTest AI Cloud GitHub App in your development workflow, ensure your organization has the following:
+Before implementing the <BrandName /> AI Cloud GitHub App in your development workflow, ensure your organization has the following:
 
 ### Account Requirements
 
-- **LambdaTest Enterprise Account**: An active LambdaTest account with appropriate licensing. [Sign up now](https://accounts.lambdatest.com/register) if you don't have an account yet.
+- **<BrandName /> Enterprise Account**: An active <BrandName /> account with appropriate licensing. [Sign up now](https://accounts.lambdatest.com/register) if you don't have an account yet.
 
-- **KaneAI Access**: This integration requires KaneAI to be enabled on your LambdaTest account. New signups receive a 14-day free trial of KaneAI with full feature access. 
+- **KaneAI Access**: This integration requires KaneAI to be enabled on your <BrandName /> account. New signups receive a 14-day free trial of KaneAI with full feature access. 
 
 ### Repository Requirements
 
@@ -90,11 +92,11 @@ Before implementing the LambdaTest AI Cloud GitHub App in your development workf
 
 ## 3. Installation
 
-Follow these steps to install and authorize the LambdaTest AI Cloud GitHub App for your organization.
+Follow these steps to install and authorize the <BrandName /> AI Cloud GitHub App for your organization.
 
 ### Step 1: Access GitHub Marketplace
 
-Navigate to the [LambdaTest AI Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace and click **Install** to begin the installation process.
+Navigate to the [<BrandName /> AI Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace and click **Install** to begin the installation process.
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/install-github-app.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
 
@@ -108,7 +110,7 @@ During installation, you'll need to specify which repositories should have acces
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/github-repository-selection.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
 
-After making your selection and clicking the **Install and Authorize** button, you will be redirected to LambdaTest's integration page where under the **My Integrations** section you will be able to see this application.
+After making your selection and clicking the **Install and Authorize** button, you will be redirected to <BrandName />'s integration page where under the **My Integrations** section you will be able to see this application.
 
 <img loading="lazy" src={require('../assets/images/kaneai-github-app/integration-success.png').default} alt="Trigger KaneAI workflow" className="doc_img"/>
 
@@ -124,7 +126,7 @@ Confirm the installation was successful by:
 1. Navigating to your GitHub organization's **Settings** page
 2. In left side menu under **Integrations**, click **Applications**.
 3. Selecting **Installed GitHub Apps** from the left sidebar
-4. Verifying that **LambdaTest AI Cloud** appears in the list of installed applications
+4. Verifying that **<BrandName /> AI Cloud** appears in the list of installed applications
 
 You can also click on the app to review and modify repository access permissions at any time.
 
@@ -134,9 +136,9 @@ You can also click on the app to review and modify repository access permissions
 
 ## 3.1 Uninstalling the GitHub App
 
-If you need to remove the LambdaTest AI Cloud GitHub App from your organization:
+If you need to remove the <BrandName /> AI Cloud GitHub App from your organization:
 
-1. Navigate to the [LambdaTest AI Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace
+1. Navigate to the [<BrandName /> AI Cloud GitHub App](https://github.com/apps/lambdatest-ai-cloud) on GitHub Marketplace
 2. Click on the **Configure** button to access the app settings
 3. Scroll down to the bottom of the page to find the **Danger Zone** section
 4. Click on the **Uninstall** button to remove the app from your organization
@@ -152,7 +154,7 @@ Uninstalling the GitHub App will stop all AI-powered test generation workflows o
 
 ## 4. Repository Configuration
 
-After installing the GitHub App, each repository requires a configuration file to connect your GitHub workflow with your LambdaTest Test Manager environment. This configuration defines where tests should be stored, who should be assigned, and which environment to test against.
+After installing the GitHub App, each repository requires a configuration file to connect your GitHub workflow with your <BrandName /> Test Manager environment. This configuration defines where tests should be stored, who should be assigned, and which environment to test against.
 
 ### Configuration File Setup
 
@@ -171,13 +173,13 @@ test_url: "https://your-deployed-app-url.com/"
 
 | Parameter | Description | How to Obtain |
 |-----------|-------------|---------------|
-| `project_id` | The unique identifier for your LambdaTest Test Manager project | Navigate to your project in Test Manager and copy the ID from the URL |
+| `project_id` | The unique identifier for your <BrandName /> Test Manager project | Navigate to your project in Test Manager and copy the ID from the URL |
 | `folder_id` | The folder where generated test cases will be organized | Create or select a folder in Test Manager and obtain its ID from the URL |
-| `assignee` | The LambdaTest user ID who will be assigned to test runs for executions | Can be referenced from APIs |
+| `assignee` | The <BrandName /> user ID who will be assigned to test runs for executions | Can be referenced from APIs |
 | `environment_id` | The target testing environment (browser, OS, device configurations) | Create environments in Test Manager and reference their IDs |
 | `test_url` | The base URL of your application under test | Your staging or testing environment URL where tests will be executed |
 
-> **Note:** All configuration IDs can be retrieved programmatically from the [LambdaTest Test Manager API Documentation](https://www.lambdatest.com/support/api-doc/?key=test-management).
+> **Note:** All configuration IDs can be retrieved programmatically from the [<BrandName /> Test Manager API Documentation](https://www.lambdatest.com/support/api-doc/?key=test-management).
 
 :::tip Maximize AI Context
 The `README.md` file in your repository is analyzed by KaneAI to understand your application's purpose, architecture, and business logic. A comprehensive README significantly improves the quality and relevance of generated test cases. Include:
@@ -245,7 +247,7 @@ This entire process typically completes within minutes, depending on the complex
 
 ## 6. Automated Workflow and Real-Time Tracking
 
-The LambdaTest AI Cloud GitHub App provides complete transparency throughout the testing lifecycle. From the moment you trigger the workflow, you'll receive real-time updates directly in your pull request—keeping your entire team informed without requiring context switching or dashboard checking.
+The <BrandName /> AI Cloud GitHub App provides complete transparency throughout the testing lifecycle. From the moment you trigger the workflow, you'll receive real-time updates directly in your pull request—keeping your entire team informed without requiring context switching or dashboard checking.
 
 ### Unified Progress Tracking
 
@@ -274,7 +276,7 @@ Once KaneAI completes test generation, a detailed comment lists every test case 
 - **Test Case Names**: Descriptive titles reflecting the functionality being tested
 - **Coverage Areas**: Which features, components, or user flows each test validates
 - **Authoring Status**: Real-time updates as each test case is converted into executable code
-- **Direct Links**: Quick access to view, edit, or customize tests in LambdaTest Test Manager
+- **Direct Links**: Quick access to view, edit, or customize tests in <BrandName /> Test Manager
 
 This comment updates dynamically as test authoring progresses, so you can monitor the transition from conceptual test cases to executable automation.
 
@@ -326,6 +328,6 @@ The GitHub-native workflow provides critical advantages for enterprise teams:
 - **Developer-Centric Experience**: All testing information lives where developers already work—no need to check external dashboards or switch contexts
 - **Stakeholder Transparency**: Product managers, architects, and other stakeholders can follow testing progress by simply monitoring the PR
 - **Audit Trail and Compliance**: Every test run, result, and AI recommendation is permanently documented in your PR history
-- **Deep-Dive Capability**: When detailed analysis is needed, one-click access to LambdaTest Test Manager and HyperExecute provides comprehensive diagnostics
+- **Deep-Dive Capability**: When detailed analysis is needed, one-click access to <BrandName /> Test Manager and HyperExecute provides comprehensive diagnostics
 - **Asynchronous Collaboration**: Team members in different time zones can review testing status and results without requiring synchronous communication  
 

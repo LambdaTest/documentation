@@ -25,6 +25,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,17 +36,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "WebDriverIO With Appium",
-          "item": "https://www.lambdatest.com/support/docs/smartui-upload-api-v2/"
+          "item": `${BRAND_URL}/support/docs/smartui-upload-api-v2/`
         }]
       })
     }}
@@ -354,9 +356,9 @@ We are continually adding more notification channels for SmartUI.
 
 <TabItem value='other' label='Other Settings'>
 
-**LambdaTest Badge**
+**<BrandName /> Badge**
 
-Show the world that you are using LambdaTest for your visual regression testing.
+Show the world that you are using <BrandName /> for your visual regression testing.
 
 **Badge Code:**
 ```markdown

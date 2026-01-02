@@ -15,24 +15,24 @@ site_name: LambdaTest
 slug: tricentis-tosca-integration-testmu-selenium-grid
 ---
 
-LambdaTest provides support with Selenium WebDriver for pacing the execution of your automation test scripts. LambdaTest is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.lambdatest.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Tricentis Tosca on LambdaTest.
+<BrandName /> provides support with Selenium WebDriver for pacing the execution of your automation test scripts. <BrandName /> is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.lambdatest.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Tricentis Tosca on <BrandName />.
 
 This topic will be focusing on:
 
-- Running a sample Tricentis Tosca testcases on LambdaTest Automation.
+- Running a sample Tricentis Tosca testcases on <BrandName /> Automation.
 
 ## Prerequisites For Running Tricentis Tosca Test Cases On Selenium Grid
 ***
-1. Log in to LambdaTest. If you haven’t signed up yet, [click here](https://accounts.lambdatest.com/register).
-2. LambdaTest Authentication Credentials:
-   Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL.You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+1. Log in to <BrandName />. If you haven’t signed up yet, [click here](https://accounts.lambdatest.com/register).
+2. <BrandName /> Authentication Credentials:
+   Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL.You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 3. [Download Tosca](https://www.tricentis.com/software-testing-tool-trial-demo/) by logging in to the Tosca website.
 
 ## Sample Test Scenario
 ***
-For demonstrating Tosca-LambdaTest integration, we would be considering the following test scenario:
+For demonstrating Tosca-<BrandName /> integration, we would be considering the following test scenario:
 
-1. Open [LambdaTest Selenium PlayGround](https://www.lambdatest.com/selenium-playground/).
+1. Open [<BrandName /> Selenium PlayGround](https://www.lambdatest.com/selenium-playground/).
 2. Click the "Simple Form Demo" link. 
 3. Enter the text "Happy Testing" in the text box.
 4. Click the "Get Checked value" button.
@@ -40,7 +40,7 @@ For demonstrating Tosca-LambdaTest integration, we would be considering the foll
    <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_01.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
 
-## Integrating Tricentis Tosca With LambdaTest
+## Integrating Tricentis Tosca With <BrandName />
 
 **Step 1:** Launch the Tosca Commander.
 
@@ -90,7 +90,7 @@ For demonstrating Tosca-LambdaTest integration, we would be considering the foll
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_12.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-**Step 13:**  Go to TESTCASES and create a folder named **LambdaTest_TestCase**.
+**Step 13:**  Go to TESTCASES and create a folder named **<BrandName />_TestCase**.
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_13.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
@@ -158,18 +158,18 @@ Shown below is the final test case view.
  to choose different browser combination.*
 
 
-**Step 23:** Go to the **Details** tab then Right-click on the test case and select **Run in ScratchBook**. This will launch the test on LambdaTest Platform.
+**Step 23:** Go to the **Details** tab then Right-click on the test case and select **Run in ScratchBook**. This will launch the test on <BrandName /> Platform.
 
 Once execution is completed result window populate in Tosca
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_24.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-Monitor and analyze your test result on the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/).
+Monitor and analyze your test result on the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/).
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_25.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-## How To Use LambdaTest  Custom Capabilities in Tosca
-There are few custom capabilities  like network logs,console logs in LambdaTest platform to enable Logs on execution.
+## How To Use <BrandName />  Custom Capabilities in Tosca
+There are few custom capabilities  like network logs,console logs in <BrandName /> platform to enable Logs on execution.
 
 To use a WebDriver capability,
 
@@ -180,24 +180,24 @@ To use a WebDriver capability,
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_26.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
 
-With this enabled log when you execute the test case, you can see logs in LambdaTest Plateform once execution completes.
+With this enabled log when you execute the test case, you can see logs in <BrandName /> Plateform once execution completes.
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_26_1.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-## Geolocation Testing in Tosca with LambdaTest
+## Geolocation Testing in Tosca with <BrandName />
 
 Test the performance of your web-app through different geographic locations by setting LamdaTest Capability "geoLocation". Set this Capability in Tosca as "WebDriver_geoLocation"with Value of "IN"as shows below
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_27.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-In LambdaTest Plateform , You can see check the log to validate the Web Application is launched with given GeoLocation.
+In <BrandName /> Plateform , You can see check the log to validate the Web Application is launched with given GeoLocation.
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_28.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
 
 ## Testing Locally Hosted or Privately Hosted Projects
 ***
-To help you perform [cross browser testing](https://www.lambdatest.com) of your locally stored web pages, LambdaTest provides an SSH(Secure Shell) tunnel connection with the name Lambda Tunnel. With Lambda Tunnel, you can execute a test server inside your GitLab CI build a container to perform automated cross browser testing on browsers offered by Selenium grid on LambdaTest. So you make sure how well your changes look, even before your customers.
+To help you perform [cross browser testing](https://www.lambdatest.com) of your locally stored web pages, <BrandName /> provides an SSH(Secure Shell) tunnel connection with the name Lambda Tunnel. With Lambda Tunnel, you can execute a test server inside your GitLab CI build a container to perform automated cross browser testing on browsers offered by Selenium grid on <BrandName />. So you make sure how well your changes look, even before your customers.
 Curious to know more about Lambda Tunnel?
 
 
@@ -217,7 +217,7 @@ Set the Tunnel Capability in Toasca as shown below
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_29.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
-In LambdaTest logs you can validate whether Tunnel is enaled or not from Tosca as shown below.
+In <BrandName /> logs you can validate whether Tunnel is enaled or not from Tosca as shown below.
 
 <img loading="lazy" src={require('../assets/images/tosca-integration/tosca_int_30.webp').default} alt="Image" width="1365" height="650" className="doc_img"/>
 
@@ -230,13 +230,13 @@ Happy testing!
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href="https://www.lambdatest.com/support/docs/">Support</a>
+      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Tricentis Tosca Integration With LambdaTest</span>
+      <span className="breadcrumbs__link">Tricentis Tosca Integration With <BrandName /></span>
     </li>
   </ul>
 </nav>

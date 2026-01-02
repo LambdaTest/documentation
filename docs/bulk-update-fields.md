@@ -21,17 +21,17 @@ slug: bulk-update-fields
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Bulk Update Fields",
-          "item": "https://www.lambdatest.com/support/docs/bilk-update-fields/"
+          "item": `${BRAND_URL}/support/docs/bilk-update-fields/`
         }]
       })
     }}

@@ -49,24 +49,24 @@ This guide covers the **SmartUI Hooks** approach, where you pass SmartUI capabil
 
 Before you begin, ensure you have:
 
-- LambdaTest account with active subscription
+- <BrandName /> account with active subscription
 - GitLab repository with CI/CD enabled
-- SmartUI project created in [LambdaTest SmartUI Dashboard](https://smartui.lambdatest.com/)
+- SmartUI project created in [<BrandName /> SmartUI Dashboard](https://smartui.lambdatest.com/)
 - Test suite configured (Selenium/Playwright/Cypress/Puppeteer/Appium/WebdriverIO)
 - Test framework configured in your preferred language (TypeScript/JavaScript/Java/Python/Ruby/C#)
-- LambdaTest credentials (`LT_USERNAME` and `LT_ACCESS_KEY`)
+- <BrandName /> credentials (`LT_USERNAME` and `LT_ACCESS_KEY`)
 
 ---
 
-## Step 1: Integrate GitLab with LambdaTest
+## Step 1: Integrate GitLab with <BrandName />
 
-1. Go to [LambdaTest Integrations page](https://integrations.lambdatest.com/)
+1. Go to [<BrandName /> Integrations page](https://integrations.lambdatest.com/)
 2. Search for **GitLab** and select the integration
 3. Click on **OAuth** as your preferred authentication method
 4. Click **Install** and authorize the integration
 5. After successful authentication, refresh the Integrations page to verify GitLab is installed
 
-<img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/1.png').default} alt="GitLab integration setup in LambdaTest" />
+<img loading="lazy" className='doc_img' width="1300" height="776" src={require('../assets/images/smart-visual-testing/ci-cd-integration/gitlab/1.png').default} alt="GitLab integration setup in <BrandName />" />
 
 :::tip Integration Status
 
@@ -770,8 +770,8 @@ Configure the following variables in your GitLab project:
 
 | Variable Name | Description |
 |--------------|-------------|
-| `LT_USERNAME` | Your LambdaTest username |
-| `LT_ACCESS_KEY` | Your LambdaTest access key |
+| `LT_USERNAME` | Your <BrandName /> username |
+| `LT_ACCESS_KEY` | Your <BrandName /> access key |
 | `SMARTUI_PROJECT_NAME` | Your SmartUI project name |
 
 ---
@@ -1155,7 +1155,7 @@ public class BaseClassWebhook {
 **Symptoms**: Pipeline runs but no SmartUI status check appears in merge request.
 
 **Solutions**:
-1. Verify GitLab integration is active in [LambdaTest Integrations](https://integrations.lambdatest.com/)
+1. Verify GitLab integration is active in [<BrandName /> Integrations](https://integrations.lambdatest.com/)
 2. Check that `github.url` capability is correctly set in your test configuration
 3. Verify `GIT_URL` environment variable is exported in CI/CD pipeline
 4. Ensure `CI_PROJECT_ID` and `CI_COMMIT_SHA` are correctly set
@@ -1174,7 +1174,7 @@ public class BaseClassWebhook {
 1. Verify `visual: true` is set in capabilities
 2. Check `smartUI.project` capability matches your SmartUI project name
 3. Ensure `LT_USERNAME` and `LT_ACCESS_KEY` are correctly set
-4. Verify you're using the correct LambdaTest grid URL:
+4. Verify you're using the correct <BrandName /> grid URL:
    - Web testing: `@hub.lambdatest.com/wd/hub`
    - Mobile testing: `@mobile-hub.lambdatest.com/wd/hub`
 5. Check test logs for SmartUI execute command errors

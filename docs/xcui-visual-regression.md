@@ -25,6 +25,8 @@ import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import CodeBlock from '@theme/CodeBlock';
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,17 +36,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI-Hooks",
-          "item": "https://www.lambdatest.com/support/docs/xcui-visual-regression/"
+          "item": `${BRAND_URL}/support/docs/xcui-visual-regression/`
         }]
       })
     }}
@@ -54,14 +56,14 @@ XCUI (XCTest UI) is Apple's native UI testing framework used for testing iOS app
 
 ## Prerequisites
 
-- Your LambdaTest [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
 - Access to an **iOS** app (.ipa) and an **iOS Test** app (.ipa file).
 - Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
 
 :::tip Sample repo
-If you do not have any **iOS** app (.ipa) and an **iOS Test** app (.ipa) file, you can run your sample tests on LambdaTest by using our sample :link: [XCUI app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/prod-ios-app.ipa) and a sample :link: [XCUI Test App](https://prod-mobile-artefacts.lambdatest.com/assets/docs/prod-ios-test-app.ipa).
+If you do not have any **iOS** app (.ipa) and an **iOS Test** app (.ipa) file, you can run your sample tests on <BrandName /> by using our sample :link: [XCUI app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/prod-ios-app.ipa) and a sample :link: [XCUI Test App](https://prod-mobile-artefacts.lambdatest.com/assets/docs/prod-ios-test-app.ipa).
 
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the SmartUI.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the SmartUI.
 <a href="https://github.com/LambdaTest/lambdatest-xcui" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
@@ -78,7 +80,7 @@ To create a SmartUI Project, follow these steps:
 
 ## Step 2: Set up your Authentication
 
-Now, you need to export your environment variables LT_USERNAME and LT_ACCESS_KEY that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/details/profile).
+Now, you need to export your environment variables LT_USERNAME and LT_ACCESS_KEY that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/details/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
@@ -131,9 +133,9 @@ Now build your application.
 
 ## Step 4: Upload your Application
 
-To begin testing, upload your iOS application (.ipa file) to LambdaTest's servers. You'll use our **REST API** for this process.
+To begin testing, upload your iOS application (.ipa file) to <BrandName />'s servers. You'll use our **REST API** for this process.
 
-- **Authentication :** You'll need your LambdaTest Username and AccessKey. Combine them in the format `Username:AccessKey`.
+- **Authentication :** You'll need your <BrandName /> Username and AccessKey. Combine them in the format `Username:AccessKey`.
 - **Uploading the App :** Use **cURL command** to send a request to our API. The request should include the path to your application file (**appFile**).
 
 <Tabs className="docs__val">
@@ -166,7 +168,7 @@ To begin testing, upload your iOS application (.ipa file) to LambdaTest's server
 
 ## Step 5: Upload Your Test Suite
 
-Upload your XCUI test suite (.ipa) file to LambdaTest servers using our REST API.
+Upload your XCUI test suite (.ipa) file to <BrandName /> servers using our REST API.
 
 The following sample cURL command shows how to upload a test suite:
 
@@ -235,7 +237,7 @@ curl --location 'https://mobile-api.lambdatest.com/framework/v1/xcui/build' \
 }'
 ```
 
-> You can check the executed builds over at [LambdaTest SmartUI](https://smartui.lambdatest.com/).
+> You can check the executed builds over at [<BrandName /> SmartUI](https://smartui.lambdatest.com/).
 
 :::
 ## How to use Sharding
@@ -452,7 +454,7 @@ By leveraging machine learning algorithms, it accurately detects and crops the s
    - Generate base64 encoded token from username:accesskey
    - Ensure token is included in Authorization header
 
-4. Check network connectivity to LambdaTest
+4. Check network connectivity to <BrandName />
 
 </TabItem>
 <TabItem value="project-not-found-error" label="Project Not Found Error">
@@ -559,7 +561,7 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>

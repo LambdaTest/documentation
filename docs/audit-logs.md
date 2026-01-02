@@ -17,6 +17,8 @@ url: https://www.testmu.ai/support/docs/audit-logs
 site_name: LambdaTest
 slug: audit-logs
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ slug: audit-logs
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Audit Logs",
-          "item": "https://www.lambdatest.com/support/docs/audit-logs/"
+          "item": `${BRAND_URL}/support/docs/audit-logs/`
         }]
       })
     }}
@@ -44,7 +46,7 @@ slug: audit-logs
 
 # Audit Logs
 
-Audit logs serve as a record of every **User** and **Organization** Level activities in a LambdaTest account.
+Audit logs serve as a record of every **User** and **Organization** Level activities in a <BrandName /> account.
 
 > **Note:** Only organization administrators are able to view and manage the audit logs.
 
@@ -83,8 +85,8 @@ The following table contains the list of activities and their definition:
 |8     |user.profile.deletion-request             |User - Account Deletion Request Raised             |User requested their account deletion         |
 |9     |org.user.deleted                          |Organization - User Removed from Organization      |Admin removed a user from their organization  |
 |10    |user.password.forgot                      |User - Password Reset                              |User password reset                           |
-|11    |org.support-access.granted                |Organization - Support Access Granted              |Admin granted LambdaTest Support Access       |
-|12    |org.support-access.revoked                |Organization - Support Access Revoked              |Admin revoked LambdaTest Support Access       |
+|11    |org.support-access.granted                |Organization - Support Access Granted              |Admin granted <BrandName /> Support Access       |
+|12    |org.support-access.revoked                |Organization - Support Access Revoked              |Admin revoked <BrandName /> Support Access       |
 |13    |org.service-account.created               |Organization - Service Account Created             |Admin created a new Service Account           |
 |14    |org.service-account.deleted               |Organization - Service Account Deleted             |service-account deleted                       |
 |15    |user.profile.updated                      |User - Profile Updated                             |User updated their profile                    |

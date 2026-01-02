@@ -1,4 +1,4 @@
-﻿---
+---
 id: hyperexecute-private-cloud-benefits
 title: HyperExecute Private Cloud Benefits
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/hyperexecute-private-cloud-benefits
 site_name: LambdaTest
 slug: hyperexecute-private-cloud-benefits
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: hyperexecute-private-cloud-benefits
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute Concepts",
-          "item": "https://www.lambdatest.com/support/docs/benefits-of-hyperexecute-private-cloud/"
+          "item": `${BRAND_URL}/support/docs/benefits-of-hyperexecute-private-cloud/`
         }]
       })
     }}
@@ -57,13 +59,13 @@ You can go through the table below to understand exactly why HyperExecute Privat
 | User Workflow Management | <p align="center">✅</p> | <p align="center">✅</p> |
 | Intelligent Test Analytics | <p align="center">✅</p> | <p align="center"> ❌</p> |
 | Integration with major [CI/CD platforms and products](/support/docs/integration-with-hyperexecute/) | <p align="center">✅</p> | <p align="center">✅</p> |
-| Includes all features from LambdaTest's Web + Mobile Automation Plan, along with exclusive HyperExecute benefits | <p align="center">✅</p> | <p align="center"> ❌</p> |
+| Includes all features from <BrandName />'s Web + Mobile Automation Plan, along with exclusive HyperExecute benefits | <p align="center">✅</p> | <p align="center"> ❌</p> |
 | 24/7 dedicated customer support for uninterrupted assistance. | <p align="center">✅</p> | <p align="center">✅</p> |
 | Support for custom testing frameworks | <p align="center"> ❌</p> | <p align="center">✅</p> |
 | Advanced data retention rules | <p align="center"> ❌</p> | <p align="center">✅</p> |
 | Role-Based Access Control (RBAC) support for granular user permissions and security management. | <p align="center">✅</p> | <p align="center">✅</p> |
 | SSO Support | <p align="center">✅</p> | <p align="center">✅</p> |
-| Custom test execution environments that are completely managed by LambdaTest | <p align="center"> ❌</p> | <p align="center">✅</p> |
+| Custom test execution environments that are completely managed by <BrandName /> | <p align="center"> ❌</p> | <p align="center">✅</p> |
 | Access to standard HyperExecute cloud for additional redundancy | <p align="center">NA</p> | <p align="center">✅</p> |
 | Enhanced Performance and Boosted Security | <p align="center"> ❌</p> | <p align="center">✅</p> |
 | Data isolation and region-specific deployment capabilities for enhanced security and compliance. | <p align="center"> ❌</p> | <p align="center">✅</p> |
@@ -78,12 +80,12 @@ You can go through the table below to understand exactly why HyperExecute Privat
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

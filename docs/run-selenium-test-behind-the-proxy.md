@@ -1,4 +1,4 @@
-﻿---
+---
 id: run-selenium-test-behind-the-proxy
 title: Run Selenium Tests Behind The Proxy | TestMu AI
 hide_title: true
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/selenium-tests-behind-proxy
 site_name: LambdaTest
 slug: selenium-tests-behind-proxy
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +25,17 @@ slug: selenium-tests-behind-proxy
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Selenium Test Behind Proxy",
-          "item": "https://www.lambdatest.com/support/docs/selenium-tests-behind-proxy/"
+          "item": `${BRAND_URL}/support/docs/selenium-tests-behind-proxy/`
         }]
       })
     }}
@@ -42,7 +44,7 @@ slug: selenium-tests-behind-proxy
 # Run Selenium Tests Behind The Proxy
 * * *
 
-If your system is behind a proxy or protected by a firewall, you will not be able to run the Selenium test scripts directly on the LambdaTest Selenium grid. You need to define your proxy settings so that the connection goes through as usual.
+If your system is behind a proxy or protected by a firewall, you will not be able to run the Selenium test scripts directly on the <BrandName /> Selenium grid. You need to define your proxy settings so that the connection goes through as usual.
 
 This documentation will help you run your Selenium test behind a proxy server.
 
@@ -123,19 +125,19 @@ namespace TestSelenium3
 }
 ```
 
-Execute the above NUnit test scripts, and you’ll be able to run your Selenium tests directly on the LambdaTest Selenium grid behind the proxy server.
+Execute the above NUnit test scripts, and you’ll be able to run your Selenium tests directly on the <BrandName /> Selenium grid behind the proxy server.
 
 If you have any questions or require an additional information, you can contact us at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24/7 chat support**</span>. You can also drop us a mail at support@lambdatest.com.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

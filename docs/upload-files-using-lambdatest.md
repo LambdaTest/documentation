@@ -1,4 +1,4 @@
-﻿---
+---
 id: upload-files-using-lambdatest
 title: Upload Files Using TestMu AI Selenium Grid
 hide_title: true
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/upload-files-using-testmu
 site_name: LambdaTest
 slug: upload-files-using-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -38,8 +40,6 @@ slug: upload-files-using-testmu
       })
     }}
 ></script>
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Upload Files Using <BrandName /> Selenium Grid
 
@@ -211,7 +211,7 @@ That's it! You can now successfully upload files and use them with Selenium Auto
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-        Upload Files Using LambdaTest
+        Upload Files Using <BrandName />
       </span>
     </li>
   </ul>

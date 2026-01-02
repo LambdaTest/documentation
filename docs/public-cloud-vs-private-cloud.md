@@ -1,4 +1,4 @@
-﻿---
+---
 id: public-cloud-vs-private-cloud
 title: Public Cloud VS Private Cloud
 hide_title: false
@@ -23,17 +23,17 @@ slug: public-cloud-vs-private-cloud
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to use testing tools in-session?",
-          "item": "https://www.lambdatest.com/support/docs/public-cloud-vs-private-cloud/"
+          "item": `${BRAND_URL}/support/docs/public-cloud-vs-private-cloud/`
         }]
       })
     }}
@@ -67,12 +67,12 @@ To conclude, both Public Device Cloud and Private Device Cloud are useful for re
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,4 +1,4 @@
-﻿---
+---
 id: app-auto-network-throttling
 title: Network Throttling for Appium tests
 hide_title: false
@@ -28,6 +28,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -37,17 +39,17 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Network Throttling",
-          "item": "https://www.lambdatest.com/support/docs/app-auto-network-throttling/"
+          "item": `${BRAND_URL}/support/docs/app-auto-network-throttling/`
         }]
       })
     }}
@@ -57,7 +59,7 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 
 In Appium testing, assessing your app's performance under diverse network conditions (2G/3G/LTE) and offline scenarios, is crucial. Fluctuating upload and download speeds can significantly impact your app's behavior across different devices.
 
-LambdaTest simplifies testing by enabling simulation of diverse network conditions. Whether starting with defaults or custom profiles, these features replicate real-world scenarios, proving invaluable for Appium tests. The device maintains uninterrupted internet connectivity throughout, ensuring a reliable testing experience for your mobile applications.
+<BrandName /> simplifies testing by enabling simulation of diverse network conditions. Whether starting with defaults or custom profiles, these features replicate real-world scenarios, proving invaluable for Appium tests. The device maintains uninterrupted internet connectivity throughout, ensuring a reliable testing experience for your mobile applications.
 
 ## Workflow
 ### Initialization
@@ -156,12 +158,12 @@ Currently, for iOS, we do not support any capability or LambdaHook for offline m
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -27,12 +27,12 @@ import TabItem from '@theme/TabItem';
 
 With the newer versions of Cypress releasing, to gain the most from recent improvements and bug fixes, it is recommended that your test scripts use the latest version. 
 
-LambdaTest supports every major, minor and patch versions for:
+<BrandName /> supports every major, minor and patch versions for:
 
 * Cypress 10 & above
 * Cypress 9 & below
 
-## Cypress Versions Supported By LambdaTest
+## Cypress Versions Supported By <BrandName />
 ***
  
 
@@ -93,7 +93,7 @@ In *lambdatest-config.json* file, you can set the Cypress version as shown in th
 
 Following are the different ways to set the Cypress version.
 
-1. Using `package.json`: LambdaTest will pick the Cypress version from `package.json`.
+1. Using `package.json`: <BrandName /> will pick the Cypress version from `package.json`.
 
 Example:
 
@@ -106,7 +106,7 @@ Example:
     "eslint": "7.0.0",
 ```
 
-2. Using `npm_dependencies`: If you are passing `npm_dependencies`, LambdaTest will pick the Cypress version from `npm_dependencies` in `lambdatest-config.json`. 
+2. Using `npm_dependencies`: If you are passing `npm_dependencies`, <BrandName /> will pick the Cypress version from `npm_dependencies` in `lambdatest-config.json`. 
 
 Example:
 
@@ -154,12 +154,12 @@ Example:
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

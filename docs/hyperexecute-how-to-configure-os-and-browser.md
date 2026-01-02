@@ -17,6 +17,8 @@ slug: hyperexecute-how-to-configure-os-and-browser
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import HyperExecuteSupportedLanguageRepos from '../src/component/SupportedLanguages/HyperExecuteSupportedLanguageRepos';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,17 +28,17 @@ import HyperExecuteSupportedLanguageRepos from '../src/component/SupportedLangua
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "HyperExecute How to guides",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-to-configure-os-and-browser/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-how-to-configure-os-and-browser/`
         }]
       })
     }}
@@ -46,8 +48,8 @@ This documentation will guide you through configuring the Operating System and B
 For demonstration purposes, we use the TestNG sample repository. However, you can apply the same concepts to your preferred framework. You can access the sample repositories for your required frameworks:
 <HyperExecuteSupportedLanguageRepos />
 
-## Step 1: Update LambdaTest Capabilities in your test suite
-Configuring the capabilities is the first step to define the environment for your tests. These capabilities allow you to specify parameters such as the Operating System, Browser, and Browser Version on which your tests will run. LambdaTest capabilities serve as a bridge between your test framework and the HyperExecute cloud infrastructure.
+## Step 1: Update <BrandName /> Capabilities in your test suite
+Configuring the capabilities is the first step to define the environment for your tests. These capabilities allow you to specify parameters such as the Operating System, Browser, and Browser Version on which your tests will run. <BrandName /> capabilities serve as a bridge between your test framework and the HyperExecute cloud infrastructure.
 
 ### Key Attributes to Configure
 - **`platform` :** Specifies the operating system (e.g., Windows, macOS, or Linux).

@@ -1,4 +1,4 @@
-﻿---
+---
 id: insights-usage-report
 title: Usage Report
 sidebar_label: Usage Report
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/insights-usage-report
 site_name: LambdaTest
 slug: insights-usage-report
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: insights-usage-report
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/insights-usage-report/"
+          "item": `${BRAND_URL}/support/docs/insights-usage-report/`
         }]
       })
     }}
@@ -43,7 +45,7 @@ import NewTag from '../src/component/newTag';
 
 # Lambdatest products usage insights
 
-LambdaTest Usage Report provides comprehensive insights into your product usage. These insights help you optimize your testing efforts by providing detailed insights into your product usage, test count, and more.
+<BrandName /> Usage Report provides comprehensive insights into your product usage. These insights help you optimize your testing efforts by providing detailed insights into your product usage, test count, and more.
 
 :::note
 The Usage Report is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@lambdatest.com](mailto:support@lambdatest.com).

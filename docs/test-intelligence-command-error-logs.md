@@ -11,6 +11,8 @@ slug: test-intelligence-command-error-logs-analytics
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 
 <script type="application/ld+json"
@@ -21,17 +23,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-flaky-test/"
+          "item": `${BRAND_URL}/support/docs/analytics-modules-flaky-test/`
         }]
       })
     }}
@@ -41,7 +43,7 @@ import NewTag from '../src/component/newTag';
 
 Analyzing your failed tests is a crucial part of your test automation strategy. It helps you to identify the errors that are causing your test runs to fail. This helps you to fix the errors and improve the quality of your test suite.
 
-LambdaTest provides you with the Command Logs Analytics feature to analyze your failed commands or steps. It provides you with the list of errors that are causing your test runs to fail. You can also view the history of the errors and the number of times the error has occurred in the past. This helps you to identify the errors and fix them to improve the quality of your test suite.
+<BrandName /> provides you with the Command Logs Analytics feature to analyze your failed commands or steps. It provides you with the list of errors that are causing your test runs to fail. You can also view the history of the errors and the number of times the error has occurred in the past. This helps you to identify the errors and fix them to improve the quality of your test suite.
 
 
 <img loading="lazy" src="https://www.lambdatest.com/resources/images/commandaifold.webp" alt="cmd" width="768" height="373" className="doc_img"/>

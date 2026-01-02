@@ -20,9 +20,9 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # iOS Gestures on Real Devices
-When testing iOS apps on **LambdaTest Real Devices**, certain native gestures like double‑tap, triple‑tap, or multi‑finger interactions may be required to complete test flows.
+When testing iOS apps on **<BrandName /> Real Devices**, certain native gestures like double‑tap, triple‑tap, or multi‑finger interactions may be required to complete test flows.
 
-To make this easier, LambdaTest provides keyboard shortcuts that simulate these **gestures** without needing physical multi‑touch input. These shortcuts work on both **macOS** and **Windows**, allowing you to trigger gestures instantly during manual sessions.
+To make this easier, <BrandName /> provides keyboard shortcuts that simulate these **gestures** without needing physical multi‑touch input. These shortcuts work on both **macOS** and **Windows**, allowing you to trigger gestures instantly during manual sessions.
 
 ---
 # Supported Gestures & Shortcuts

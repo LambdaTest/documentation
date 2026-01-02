@@ -1,4 +1,4 @@
-﻿---
+---
 id: csharp-with-selenium
 title: C# with Selenium:Tutorial to run your first test on TestMu AI
 hide_title: true
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/c-with-selenium-running-c-automation-scr
 site_name: LambdaTest
 slug: c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,12 +24,12 @@ slug: c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
@@ -40,7 +42,7 @@ slug: c-with-selenium-running-c-automation-scripts-on-testmu-selenium-grid
 
 # C# with Selenium: Tutorial to run your first test on Lambdatest
 ***
-In this topic, you will learn how to configure and run your C# automation testing scripts on [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation).
+In this topic, you will learn how to configure and run your C# automation testing scripts on [<BrandName /> Selenium cloud platform](https://www.lambdatest.com/selenium-automation).
 
 ## Objective
 ***
@@ -48,14 +50,14 @@ By the end of this topic, you will be able to:
 
 1. Set up an environment for testing your hosted web pages using C# with **Selenium**.
 2. Understand and configure the core capabilities required for your Selenium test suite.
-3. Test your locally hosted pages on LambdaTest platform.
-4. Explore advanced features of LambdaTest.
+3. Test your locally hosted pages on <BrandName /> platform.
+4. Explore advanced features of <BrandName />.
 
 
 ## Prerequisites
 ---
 
->Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+>Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
 <a href="https://github.com/LambdaTest/CSharp-Selenium-Sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
 
 Before you can start performing **C#** automation testing with **Selenium**, you would need to:
@@ -68,7 +70,7 @@ Before you can start performing **C#** automation testing with **Selenium**, you
 ## Installing Selenium Dependencies And Tutorial Repo
 ---
 
-Clone the [LambdaTest CSharp Selenium GitHub repository](https://github.com/LambdaTest/CSharp-Selenium-Sample) and navigate to the code directory.
+Clone the [<BrandName /> CSharp Selenium GitHub repository](https://github.com/LambdaTest/CSharp-Selenium-Sample) and navigate to the code directory.
 
 ```
 git clone https://github.com/LambdaTest/CSharp-Selenium-Sample
@@ -78,9 +80,9 @@ cd CSharp-Selenium-Sample
 ## Setting up Your Authentication
 ---
 
-Make sure you have your LambdaTest credentials with you to run C# automation scripts. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/login/) or by your LambdaTest Profile.
+Make sure you have your <BrandName /> credentials with you to run C# automation scripts. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/login/) or by your <BrandName /> Profile.
 
-Set LambdaTest Username and Access Key in environment variables.
+Set <BrandName /> Username and Access Key in environment variables.
 
  **For Linux/macOS**:
  
@@ -176,7 +178,7 @@ The following C# Selenium script tests a sample to-do list app by marking couple
 ## Configuration of Your Test Capabilities
 ---
 
-In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with LambdaTest Selenium grid capabilities via capabilities object. The capabilities object in the above code are defined as:
+In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with <BrandName /> Selenium grid capabilities via capabilities object. The capabilities object in the above code are defined as:
 
 ```csharp
  ChromeOptions capabilities = new ChromeOptions();
@@ -220,16 +222,16 @@ dotnet run parallel
 
 ## Testing Locally Hosted or Privately Hosted Projects
 ***
-You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = true` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+You can test your locally hosted or privately hosted projects with [<BrandName /> Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using <BrandName /> Tunnel app. All you would have to do is set up an SSH tunnel using <BrandName /> Tunnel app and pass toggle `tunnel = true` via desired capabilities. <BrandName /> Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
 
->Refer our [LambdaTest Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
+>Refer our [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
 
-Here’s how you can establish LambdaTest Tunnel.
+Here’s how you can establish <BrandName /> Tunnel.
 
 >Download the binary file of:
->* [LambdaTest Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-* [LambdaTest Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-* [LambdaTest Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+>* [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+* [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+* [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 
 Open command prompt and navigate to the binary folder.
 
@@ -241,7 +243,7 @@ So if your user name is lambdatest@example.com and key is 123456, the command wo
 ```bash
 LT -user lambdatest@example.com -key 123456
 ```
-Once you are able to connect **LambdaTest Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
+Once you are able to connect **<BrandName /> Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
 
 **Tunnel Capability**
 ```bash
@@ -252,18 +254,18 @@ ltOptions.Add("tunnel", true);
 ***
 * [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
 * [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-* [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+* [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

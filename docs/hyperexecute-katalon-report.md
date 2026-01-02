@@ -1,4 +1,4 @@
-﻿---
+---
 id: hyperexecute-katalon-report
 title: Katalon Reports on HyperExecute
 hide_title: false
@@ -23,17 +23,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Katalon Reports",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-katalon-report/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-katalon-report/`
         }]
       })
     }}

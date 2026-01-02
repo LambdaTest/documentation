@@ -24,6 +24,8 @@ import { YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY } from "@site/src/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -33,17 +35,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Device Passcode on Real iOS Devices",
-          "item": "https://www.lambdatest.com/support/docs/device-passcode-on-realdevice/"
+          "item": `${BRAND_URL}/support/docs/device-passcode-on-realdevice/`
         }]
       })
     }}
@@ -51,7 +53,7 @@ import TabItem from '@theme/TabItem';
 
 > To enable it for your organization, please contact us via <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**24×7 chat support**</span> or you can also drop a mail to **support@lambdatest.com**.<br />
 
-LambdaTest’s **Device Passcode** feature allows you to test applications that require a device passcode as part of their security or authentication flow.  
+<BrandName />’s **Device Passcode** feature allows you to test applications that require a device passcode as part of their security or authentication flow.  
 This is especially useful for apps in **Banking/Finance**, **Enterprise**, or those distributed via **MDM (Mobile Device Management)** that mandate passcode entry for sensitive workflows.
 
 ## Use Cases
@@ -74,7 +76,7 @@ This is especially useful for apps in **Banking/Finance**, **Enterprise**, or th
 | iPhone 13            | 15 |
 | iPad Air 11 (2024)   | 18 |
 
-> We are actively working on expanding coverage to all supported iOS devices on LambdaTest Real Device Cloud.
+> We are actively working on expanding coverage to all supported iOS devices on <BrandName /> Real Device Cloud.
 
 ---
 

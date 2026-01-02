@@ -26,17 +26,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to Guides",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-how-to-run-tests-using-local-selenium-drivers/`
         }]
       })
     }}
@@ -59,7 +59,7 @@ To utilize the native Selenium driver support in HyperExecute, you need to incor
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the TestNG from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the TestNG from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/testng-selenium-hyperexecute-sample/tree/localdriver" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::

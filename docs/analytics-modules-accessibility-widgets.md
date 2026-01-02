@@ -1,4 +1,4 @@
-﻿---
+---
 id: analytics-modules-accessibility-widgets
 title: Accessibility Dashboard Widgets
 sidebar_label: Accessibility
@@ -16,6 +16,8 @@ slug: analytics-modules-accessibility-widgets
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,23 +27,23 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-modules-accessibility-widgets/"
+          "item": `${BRAND_URL}/support/docs/analytics-modules-accessibility-widgets/`
         }]
       })
     }}
 ></script>
 
-LambdaTest Accessibility Dashboard widgets provide comprehensive insights into your accessibility testing efforts. These widgets help you optimize your accessibility testing efforts by providing detailed insights into your accessibility testing scans, 
+<BrandName /> Accessibility Dashboard widgets provide comprehensive insights into your accessibility testing efforts. These widgets help you optimize your accessibility testing efforts by providing detailed insights into your accessibility testing scans, 
 Top 10 URLs Issue Criticality, and more.
 
 :::note

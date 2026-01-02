@@ -1,4 +1,4 @@
-﻿---
+---
 id: hyperexecute-qtest-integration
 title: Integrate qTest with HyperExecute
 hide_title: false
@@ -21,6 +21,8 @@ slug: hyperexecute-qtest-integration
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integration with Products",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-qtest-integration/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-qtest-integration/`
         }]
       })
     }}
@@ -48,7 +50,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 qTest is a comprehensive test management tool designed for Project Management, Bug Tracking, and Test Management. It embraces a centralized test management approach, facilitating seamless communication and accelerating task development across QA teams and stakeholders.
 
-This document details the seamless integration between HyperExecute and qTest, enabling you to run your automated tests on a variety of devices and real devices provided by LambdaTest.
+This document details the seamless integration between HyperExecute and qTest, enabling you to run your automated tests on a variety of devices and real devices provided by <BrandName />.
 
 ## Prerequisites
 
@@ -57,7 +59,7 @@ This document details the seamless integration between HyperExecute and qTest, e
 - Login to qTest Manager as an administrator and access the Resources page.
 - Expand the **APIs and SDK** sections.
    
-<img loading="lazy" src={require('../assets/images/qtest-integration/qtest1.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/qtest-integration/qtest1.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 - Navigate to the **agentctl** directory and start the host by running the following command:
 
@@ -72,14 +74,14 @@ This document details the seamless integration between HyperExecute and qTest, e
     - **qTest Token :** Enter the Token you have copied in the above step.
     - **Full Name :** Mention your name here.
 
-<img loading="lazy" src={require('../assets/images/qtest-integration/qtest_img_2.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/qtest-integration/qtest_img_2.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 ## Step 1: Setup your Shell Agent
 
 - This repository is used to pull tests from GitHub, run an Apache Maven build of JUnit tests, parse the results, and automatically upload the test results to qTest Manager.
 
 :::tip Automate JUnit
-Download or Clone the code for the Shell Script Automation Host Feature from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code for the Shell Script Automation Host Feature from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/hyperexecute-xcui-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -88,7 +90,7 @@ Download or Clone the code for the Shell Script Automation Host Feature from the
 
 :::tip Sample repo
 
-Download or Clone the code sample for the JUnit framework from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the JUnit framework from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/junit-selenium-hyperexecute-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
@@ -140,7 +142,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 - Navigate to your Automation Host ``http://localhost:6789/home`` and click on the **Add** button to add a new agent.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/1.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/1.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 - A popup will appear to create an agent, fillup the following details:
 
@@ -151,21 +153,21 @@ You can download the CLI for your desired platform from the below mentioned link
     - **Allocated Execution Time :** Amount of time you expect the script to take to execute in minutes
     - **Kick-off scripts :** The file path to your shell script. This shell scripts takes in two inputs, one for using git and the second for updating your current test cycle.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/2.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/2.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 ## Step 4: Execute the Shell Script
 
 - Click on the **Actions** button > **Kick-off shell scripts now** button to start the shell script. This will upload all of the tests cases to qTest.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/3.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/3.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 ## Step 5: Monitor Your Tests
 
 - Login into qTest Manager, go to the Test Execution tab, and there should be a test cycle under your project called **Junit Automated Tests**
 - Click on the test cycle and it should show all of the tests that were run through the maven build and their statuses.
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/4.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/4.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 - Visit the [HyperExecute Dashboard](https://hyperexecute.lambdatest.com/hyperexecute) and check your Job status. 
 
-<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/5.png').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/hyperexecute/integration/products/qtest/5.png').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>

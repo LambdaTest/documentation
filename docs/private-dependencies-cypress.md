@@ -20,18 +20,18 @@ site_name: LambdaTest
 slug: private-dependencies-cypress
 ---
 
-This article guides you on how to execute your **Cypress** tests including the **private dependencies** on **LambdaTest platform**.
+This article guides you on how to execute your **Cypress** tests including the **private dependencies** on **<BrandName /> platform**.
 Earlier if your project includes any private dependency, the tests will error out with the **LambdaError** on our platform but now we have built the support for handling the private dependencies.
 
-> In this demo we are demonstrating using [LambdaTest's Sample Cypress Cloud Repo](https://github.com/LambdaTest/Cypress-Cloud). You can find all the resources used for this article in the linked repo.
+> In this demo we are demonstrating using [<BrandName />'s Sample Cypress Cloud Repo](https://github.com/LambdaTest/Cypress-Cloud). You can find all the resources used for this article in the linked repo.
 
 ## Steps To Execute Using Private Dependencies
 
 ---
 
-Assuming that you have run a Cypress test on lambdatest platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on LambdaTest), you need to follow these steps below:
+Assuming that you have run a Cypress test on lambdatest platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on <BrandName />), you need to follow these steps below:
 
-### Update LambdaTest Cypress CLI
+### Update <BrandName /> Cypress CLI
 
 ---
 
@@ -85,7 +85,7 @@ You can either add private dependency in the `package.json` file or in the `lamb
 
   > All the keys present in **dep_tokens** will be replaced in the `.npmrc` file and if the key is not present in the environment variable, it will throw an error.
 
-After doing this setup, run your tests on the **LambdaTest platform** and now the test will execute perfectly with the **private dependencies**.
+After doing this setup, run your tests on the **<BrandName /> platform** and now the test will execute perfectly with the **private dependencies**.
 
 > To download private dependencies over tunnel follow this [documentation](/support/docs/npm-via-tunnel/).
 
@@ -96,12 +96,12 @@ After doing this setup, run your tests on the **LambdaTest platform** and now th
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

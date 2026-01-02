@@ -17,6 +17,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,29 +28,29 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Generating Lighthouse Reports With Playwright Lighthouse Library",
-          "item": "https://www.lambdatest.com/support/docs/playwright-lighthouse-library/"
+          "item": `${BRAND_URL}/support/docs/playwright-lighthouse-library/`
         }]
       })
     }}
 ></script>
 A Lighthouse Report is a performance, accessibility, SEO, and best practices evaluation report generated using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse), an open-source, automated tool developed by Google. It is commonly used to assess and optimize the quality of web pages.
 
-LambdaTest lets you perform Playwright automation while allowing you to generate Lighthouse reports with Playwright Lighthouse Library in a single test.
+<BrandName /> lets you perform Playwright automation while allowing you to generate Lighthouse reports with Playwright Lighthouse Library in a single test.
 
 > Lighthouse Report is supported on **Chrome**, **MicrosoftEdge** and **Chromium** browsers.
 
 :::tip Sample repository
-The code sample for generating the Lighthouse Performance Metrics in the Playwright test can be found on **LambdaTest's GitHub Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/playwright-sample/blob/main/playwright-lighthouse-report.js" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+The code sample for generating the Lighthouse Performance Metrics in the Playwright test can be found on **<BrandName />'s GitHub Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/playwright-sample/blob/main/playwright-lighthouse-report.js" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 ## Prerequisites
@@ -108,16 +110,16 @@ await page.evaluate(() => {}, `lambdatest_action: ${JSON.stringify({
 
 ### Sample Test Script
 
-This following script performs web automation testing using the Playwright and Lighthouse libraries on the LambdaTest platform. The script navigates to the DuckDuckGo search engine and searches for the term "Playwright". After that, the script runs a Lighthouse audit on the specified URL (https://duckduckgo.com) with defined performance thresholds and report formats.
+This following script performs web automation testing using the Playwright and Lighthouse libraries on the <BrandName /> platform. The script navigates to the DuckDuckGo search engine and searches for the term "Playwright". After that, the script runs a Lighthouse audit on the specified URL (https://duckduckgo.com) with defined performance thresholds and report formats.
 
 ```javascript reference title="playwright-lighthouse-report.js"
 https://github.com/LambdaTest/playwright-sample/blob/main/playwright-lighthouse-report.js
 ```
 
-## Trigger your Test on LambdaTest
+## Trigger your Test on <BrandName />
 ### Set up your authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set LambdaTest `Username` and `Access Key` in environment variables with following commands.
+Make sure you have your <BrandName /> credentials with you to run test automation scripts on <BrandName />. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [Automation Dashboard](https://appautomation.lambdatest.com/). Then, set <BrandName /> `Username` and `Access Key` in environment variables with following commands.
 
 <Tabs className="docs__val">
 
@@ -150,7 +152,7 @@ node RELATIVE_PATH_OF_YOUR_TEST_FILE
 ```
 
 ### View Your Test Results
-To view your test runs that uses Playwright Lighthouse Library, go to the LambdaTest [Web Automation Dashboard](https://automation.lambdatest.com/).
+To view your test runs that uses Playwright Lighthouse Library, go to the <BrandName /> [Web Automation Dashboard](https://automation.lambdatest.com/).
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/lighthouse-report.png').default} alt="Image" className="doc_img"/>
 

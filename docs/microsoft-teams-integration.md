@@ -1,4 +1,4 @@
-﻿---
+---
 id: microsoft-teams-integration
 title: Microsoft Teams Integration
 hide_title: false
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/microsoft-teams-integration
 site_name: LambdaTest
 slug: microsoft-teams-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,24 +24,24 @@ slug: microsoft-teams-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Microsoft Teams Integration",
-          "item": "https://www.lambdatest.com/support/docs/microsoft-teams-integration/"
+          "item": `${BRAND_URL}/support/docs/microsoft-teams-integration/`
         }]
       })
     }}
 ></script>
 Microsoft Teams is a leading communication and collaboration platform that combines workplace chat, video conferencing, file storage, and app integration. Designed for teamwork, it enables seamless interaction and productivity within organizations, making it an ideal tool for managing projects and workflows.
 
-The Microsoft Teams integration with LambdaTest enables seamless collaboration and real-time updates on your test automation workflows. With this integration, you can:
+The Microsoft Teams integration with <BrandName /> enables seamless collaboration and real-time updates on your test automation workflows. With this integration, you can:
 - Receive instant notifications on test status and results directly in your Microsoft Teams channels.
 - Collaborate efficiently by sharing test execution logs and reports with your team.
 - Stay informed about your test runs without leaving your Teams environment.
@@ -58,15 +60,15 @@ The Microsoft Teams integration with LambdaTest enables seamless collaboration a
 
 <img loading="lazy" src={require('../assets/images/integrations/microsoft-teams/4.png').default} alt="Image" className="doc_img img_center"/>
 
-## Integrate Teams with your LambdaTest Account
+## Integrate Teams with your <BrandName /> Account
 
-**Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You should have Admin or User level access to see and install integrations.
 
 **Step 2:** Click on Settings -> Integrations -> Communication.
 
 **Step 3:** Click on **Connect** button of `Microsoft Teams` block.
 
-**Step 4:** Now, provide your Microsoft Teams Workflow URL to establish integration with LambdaTest and click on **install** button.
+**Step 4:** Now, provide your Microsoft Teams Workflow URL to establish integration with <BrandName /> and click on **install** button.
 
 <video class="right-side" width="100%" controls id="vid">
 <source src= {require('../assets/images/integrations/microsoft-teams/connect-worflow.mp4').default} type="video/mp4" />
@@ -74,7 +76,7 @@ The Microsoft Teams integration with LambdaTest enables seamless collaboration a
 
 ## Lodge your First Bug
 
-> Note: If you are using Rocket.Chat for the first time, then make sure to create a project for yourself. It is a pre-requisite in order to push screenshots from your LambdaTest account.
+> Note: If you are using Rocket.Chat for the first time, then make sure to create a project for yourself. It is a pre-requisite in order to push screenshots from your <BrandName /> account.
 
 **Step 1:** Start with any type of testing, for the demo purpose we are going with the **Real Time Testing**.
 
@@ -92,7 +94,7 @@ The Microsoft Teams integration with LambdaTest enables seamless collaboration a
 
 ## Uninstall Microsoft Teams Integration
 
-**Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You should have Admin or User level access to see and install integrations.
 
 **Step 2:** Click on Settings -> Integrations -> Communication.
 
@@ -102,4 +104,4 @@ The Microsoft Teams integration with LambdaTest enables seamless collaboration a
 <source src= {require('../assets/images/integrations/microsoft-teams/uninstall-workflow.mp4').default} type="video/mp4" />
 </video>
 
-> That was all you need to know for LambdaTest + Teams Integration. Increase your productivity multifold with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + Teams Integration. Increase your productivity multifold with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out with any roadblock regarding our product. Happy testing!

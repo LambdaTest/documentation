@@ -1,4 +1,4 @@
-﻿---
+---
 id: linear-app-integration
 title: Linear App Integration
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/linear-app-integration
 site_name: LambdaTest
 slug: linear-app-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: linear-app-integration
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/linear-app-integration/"
+          "item": `${BRAND_URL}/support/docs/linear-app-integration/`
         }]
       })
     }}
@@ -40,7 +42,7 @@ slug: linear-app-integration
 # Linear App Integration
 ***
 
-Linear App is a bug tracking tool built for high -performance teams. With Linear App, you can perform bug tracking, streamline software projects, sprints, tasks and more. LambdaTest and Linear App integration allows you to perform one-click bug logging from LambdaTest to your Linear App projects. 
+Linear App is a bug tracking tool built for high -performance teams. With Linear App, you can perform bug tracking, streamline software projects, sprints, tasks and more. <BrandName /> and Linear App integration allows you to perform one-click bug logging from <BrandName /> to your Linear App projects. 
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="RS1cITz3W8w">
@@ -49,18 +51,18 @@ Linear App is a bug tracking tool built for high -performance teams. With Linear
 </div>
 
 
-In this documentation, we look at how to integrate Linear App with LambdaTest and mark and share bugs from LambdaTest to Linear App projects.
+In this documentation, we look at how to integrate Linear App with <BrandName /> and mark and share bugs from <BrandName /> to Linear App projects.
 
-## How To Integrate Linear App With Your LambdaTest Account?
+## How To Integrate Linear App With Your <BrandName /> Account?
 ***
 
-1. Login to your LambdaTest account. To install integrations, you need to have admin or user level access.
+1. Login to your <BrandName /> account. To install integrations, you need to have admin or user level access.
 
 2. Visit 'Integrations' from the left menu bar. Once you are in the integration page, select **LINEAR APP** under the **BUG TRACKER** category.
 
 <img loading="lazy" src={require('../assets/images/linear-app-integration/select-app.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
->**Note**: If you already have a LambdaTest integration with any project management tool then you will be asked to uninstall the existing LambdaTest integration.
+>**Note**: If you already have a <BrandName /> integration with any project management tool then you will be asked to uninstall the existing <BrandName /> integration.
 
 3. You will be asked to enter your Linear App **API Token**.
 
@@ -91,7 +93,7 @@ An API token is needed to validate a user's identity from one server to another 
 
 <img loading="lazy" src={require('../assets/images/linear-app-integration/install.png').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
-The Linear App will be successfully integrated with your LambdaTest account. You'll also receive the confirmation message and an email of the same. 
+The Linear App will be successfully integrated with your <BrandName /> account. You'll also receive the confirmation message and an email of the same. 
 
 Visit the Integrations page, under **MY INTEGRATION**, you'll find the installed Linear App.
 
@@ -129,14 +131,14 @@ You will notice the marked issue right away.
 
 <img loading="lazy" src={require('../assets/images/linear-app-integration/marked-issues.png').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
-7. To view the issue's details, click on the issue. You can view the issue's attachments like screenshots, test id, reproduce on LambdaTest link, test URL, OS, browser and browser versions.
+7. To view the issue's details, click on the issue. You can view the issue's attachments like screenshots, test id, reproduce on <BrandName /> link, test URL, OS, browser and browser versions.
 
 <img loading="lazy" src={require('../assets/images/linear-app-integration/issue-linearapp.png').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
 ## Uninstalling The Linear App Integration
 ***
 
-1. Login to your LambdaTest account. Select Integrations and navigate to 'My Integrations'.
+1. Login to your <BrandName /> account. Select Integrations and navigate to 'My Integrations'.
 
 2. Click on **REMOVE** adjacent to Linear App icon.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 id: drone-ci
 title: How to integrate Drone CI with TestMu AI
 hide_title: true
@@ -24,6 +24,8 @@ url: https://www.testmu.ai/support/docs/drone-ci-integration-with-testmu
 site_name: LambdaTest
 slug: drone-ci-integration-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -32,33 +34,33 @@ slug: drone-ci-integration-with-testmu
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Drone CI Integration",
-          "item": "https://www.lambdatest.com/support/docs/drone-ci-integration-with-testmu/"
+          "item": `${BRAND_URL}/support/docs/drone-ci-integration-with-testmu/`
         }]
       })
     }}
 ></script>
 
-# Drone CI Integration with LambdaTest
+# Drone CI Integration with <BrandName />
 
 Drone CI is one of the most popular modern open-source CI/CD tools. It not only provides a continuous integration with your projects but also provides a distributed CI/CD pipeline, which is not possible with some other tools like Jenkins. So Drone is the first choice for many teams as it is a purely distributed, cloud-native, DevOps friendly, team-oriented, and highly scalable open-source CI/CD tool.
 
-LambdaTest now integrates with Drone CI to boost your go-to-market delivery. You can perform automated cross-browser testing with LambdaTest to ensure seamless code render through an online Selenium grid. LambdaTest provides 3000+ real browsers running through machines, on the cloud. You can perform automation testing in parallel with LambdaTest’s Selenium grid which in turn can help you to drastically trim down your test cycles.
+<BrandName /> now integrates with Drone CI to boost your go-to-market delivery. You can perform automated cross-browser testing with <BrandName /> to ensure seamless code render through an online Selenium grid. <BrandName /> provides 3000+ real browsers running through machines, on the cloud. You can perform automation testing in parallel with <BrandName />’s Selenium grid which in turn can help you to drastically trim down your test cycles.
 
 ## Prerequisites For Integrating Drone CI With Our Online Selenium Grid
 
-In order to perform your tests with LambdaTest, you would need the below things to be already set up:
+In order to perform your tests with <BrandName />, you would need the below things to be already set up:
 
-1. You need to get a VPN setup from LambdaTest as Drone is not publicly accessible. Please contact our customer support or mail us at support@LambdaTest.com.
+1. You need to get a VPN setup from <BrandName /> as Drone is not publicly accessible. Please contact our customer support or mail us at support@LambdaTest.com.
 
 2. Some Global Dependencies, such as:
 
@@ -74,13 +76,13 @@ In order to perform your tests with LambdaTest, you would need the below things 
 
 For this article, we have cloned and used this [Github repository](https://github.com/LambdaTest/webdriverio-selenium-sample/blob/master/.drone.yml).
 
-3. You also need your LambdaTest authentication credentials, which includes your LambdaTest username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [LambdaTest automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner.
+3. You also need your <BrandName /> authentication credentials, which includes your <BrandName /> username, and access key. These will be set up as the Secrets for configuring the pipeline. To get your Username and Access Key, go to your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) and click on the "key" icon left to the help button, on the top right corner.
 
 <img loading="lazy" src={require('../assets/images/drone-ci/profile.webp').default} alt="Drone CI Integration" width="462" height="325" className="doc_img"/>
 
 ## Activating A Github Repository For CI/CD
 
-To activate and integrate your Github repository with Drone CI on LambdaTest, you need to first setup your VPN port and activate it, since Drone is not publicly accessible. Once the VPN is activated, here is the stepwise illustration of how to activate your git repo for CI/CD:
+To activate and integrate your Github repository with Drone CI on <BrandName />, you need to first setup your VPN port and activate it, since Drone is not publicly accessible. Once the VPN is activated, here is the stepwise illustration of how to activate your git repo for CI/CD:
 
 **Step 1:** Enter URL `https://drone.lambdatest.io/` on any browser.
 
@@ -127,10 +129,10 @@ To resolve this error, kindly add the robot-lt user as admin of the repository a
 
 Congratulations!! Now you have successfully activated your repository for CI/CD.
 
-## Running Tests Using Drone CI with LambdaTest
+## Running Tests Using Drone CI with <BrandName />
 
 
-Now we will see an example in which we will be creating a LambdaTest Tunnel and install node in it. For this, make a YAML configuration file as see shown below:
+Now we will see an example in which we will be creating a <BrandName /> Tunnel and install node in it. For this, make a YAML configuration file as see shown below:
 
 ```
 kind: pipeline
@@ -219,7 +221,7 @@ Here the pipeline will be triggered when the event will be a push event received
   - /LT -user $USERNAME -key $PASSWORD &
 ```
 
-Here we are giving a name to our step, i.e. "Tunnel". Image is used for builder containers and commands are the steps to be executed to connect to the LambdaTest Tunnel, build our source code, and make it executable. Here the LT_ACCESS_KEY and LT_USERNAME are fetched from Secrets.
+Here we are giving a name to our step, i.e. "Tunnel". Image is used for builder containers and commands are the steps to be executed to connect to the <BrandName /> Tunnel, build our source code, and make it executable. Here the LT_ACCESS_KEY and LT_USERNAME are fetched from Secrets.
 
 **Step II:**
 
@@ -237,7 +239,7 @@ Here we are giving a name to our step, i.e. "Tunnel". Image is used for builder 
   - npm install
 ```
 
-In this step, we are just installing node on our LambdaTest Tunnel.
+In this step, we are just installing node on our <BrandName /> Tunnel.
 
 ---
 Similarly, we can also write a Test to deploy our executable formed in the build step to s3 using the s3 plugin. (To see the full list of supported plugins and their documentation refer to this [link](https://docs.aws.amazon.com/s3/index.html).)
@@ -314,7 +316,7 @@ clone:
 
 ## Parallel Testing
 
-Parallel Testing is one of the most demanding features of LambdaTest Selenium Grid. By parallel testing, you can run more than one test case, simultaneously. This means that Parallel testing would allow you to execute numerous automation test cases altogether. So you execute a single test scenario across different browsers or could run different test scenarios across the same browser but with different browser versions. This would significantly trim down the time taken on your cross-browser testing activities. For running test in parallel, add the below command when you update the pipeline’s yaml file, i.e. `.drone.yml file`.
+Parallel Testing is one of the most demanding features of <BrandName /> Selenium Grid. By parallel testing, you can run more than one test case, simultaneously. This means that Parallel testing would allow you to execute numerous automation test cases altogether. So you execute a single test scenario across different browsers or could run different test scenarios across the same browser but with different browser versions. This would significantly trim down the time taken on your cross-browser testing activities. For running test in parallel, add the below command when you update the pipeline’s yaml file, i.e. `.drone.yml file`.
 
 ```
 npm test
@@ -322,18 +324,18 @@ npm test
 
 <img loading="lazy" src={require('../assets/images/drone-ci/Parallel-Drone-CI.webp').default} alt="Drone CI Integration" width="627" height="241" className="doc_img"/>
 
-Deploy your code in a reliable manner at scale using Drone CI integration with LambdaTest, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
+Deploy your code in a reliable manner at scale using Drone CI integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href="https://www.lambdatest.com/support/docs/">Support</a>
+      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Drone CI Integration with LambdaTest</span>
+      <span className="breadcrumbs__link">Drone CI Integration with <BrandName /></span>
     </li>
   </ul>
 </nav>

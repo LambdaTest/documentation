@@ -1,4 +1,4 @@
-﻿---
+---
 id: goodday-integration
 title: GoodDay Integration
 hide_title: true
@@ -21,6 +21,8 @@ url: https://www.testmu.ai/support/docs/goodday-integration
 site_name: LambdaTest
 slug: goodday-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ slug: goodday-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "GoodDay Integration",
-          "item": "https://www.lambdatest.com/support/docs/goodday-integration/"
+          "item": `${BRAND_URL}/support/docs/goodday-integration/`
         }]
       })
     }}
@@ -50,21 +52,21 @@ slug: goodday-integration
 ***
 > GoodDay is a comprehensive work management platform that offers tools for project management, task organization, and productivity growth with features that boost transparency, agility, and motivation. With GoodDay as the bug tracking tool, project teams can easily avoid the hassle of digging through bug logs for hours. Bugs are a part of the software development process, which is unlikely to change. As software projects grow in features, their complexity also increases, which increases the number of bugs. The GoodDay bug tracker lets users capture, log, and prioritize the bugs that require fixing on priority. GoodDay integrates with the tools you use daily, letting you work faster and deliver more quality software on time. The GoodDay bug tracker template has a Kanban board to represent all the relevant information about each bug. It shows who is responsible for fixing the bug and when, so you can assign the bug to the person responsible. You can even set a deadline or schedule the task to have all the bugs resolved. 
 
-The LambdaTest GoodDay integration helps you in filing bug-related issues to your project in GoodDay directly from the LambdaTest platform. With one-click integration, you can push annotated bug issues to the project of your choice, assign them to the required teammate, and attach necessary screenshots. You can do all that while in the middle of a test session in the LambdaTest platform. The fields populated by you when marking as a bug through LambdaTest are displayed as information on the GoodDay platform for a testing instance.
+The <BrandName /> GoodDay integration helps you in filing bug-related issues to your project in GoodDay directly from the <BrandName /> platform. With one-click integration, you can push annotated bug issues to the project of your choice, assign them to the required teammate, and attach necessary screenshots. You can do all that while in the middle of a test session in the <BrandName /> platform. The fields populated by you when marking as a bug through <BrandName /> are displayed as information on the GoodDay platform for a testing instance.
 
-> GoodDay Integration with LambdaTest, like all of the integrations to 3rd party applications, is available for freemium as well as premium plans.
+> GoodDay Integration with <BrandName />, like all of the integrations to 3rd party applications, is available for freemium as well as premium plans.
 
-## How To Establish Integration With GoodDay From Your LambdaTest Account?
+## How To Establish Integration With GoodDay From Your <BrandName /> Account?
 ***
-**Step 1:** Log in to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Log in to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on ‘ADD’ under the block that says ‘GoodDay’.
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-1.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-**Step 4:** Once you click on Add icon, you will be redirected to the below screen. You will be asked to provide your GoodDay API Token credentials in the highlighted fields to establish integration with LambdaTest.
+**Step 4:** Once you click on Add icon, you will be redirected to the below screen. You will be asked to provide your GoodDay API Token credentials in the highlighted fields to establish integration with <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-2.webp').default} alt="api token" width="1365" height="641" className="doc_img"/>
 
@@ -89,7 +91,7 @@ What is an API token? When two different applications interact with each other, 
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-6.webp').default} alt="hover" width="1365" height="642" className="doc_img"/>
 
-**Step 9:** Paste the API token into the field provided at LambdaTest & hit the ‘Install’ button. You are all set to experience one-click bug logging to share your issues directly from your LambdaTest account to your project on GoodDay.
+**Step 9:** Paste the API token into the field provided at <BrandName /> & hit the ‘Install’ button. You are all set to experience one-click bug logging to share your issues directly from your <BrandName /> account to your project on GoodDay.
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-7.webp').default} alt="next" width="1364" height="646" className="doc_img"/>
 
@@ -128,7 +130,7 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-12.webp').default} alt="story" width="1365" height="644" className="doc_img"/>
 
-**Step 8:** As you click on the recently raised issue under the "Not Started" tab, you will notice that all the data which you provided through LambdaTest would already be presented in it. LambdaTest automatically includes test environment details and related screenshots in the ticket as attachments. 
+**Step 8:** As you click on the recently raised issue under the "Not Started" tab, you will notice that all the data which you provided through <BrandName /> would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the ticket as attachments. 
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-13.webp').default} alt="story" width="1365" height="644" className="doc_img"/>
 
@@ -138,25 +140,25 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 ***
 > You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to `uninstall` your current integration. Here is how you can do that.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
-**Step 2:** Select ‘Integration’ from the left navigation menu bar. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select ‘Integration’ from the left navigation menu bar. This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on ‘REMOVE’. You can find the remove button right under the ‘GoodDay’ block which would be highlighted with a green tick.
 
 <img loading="lazy" src={require('../assets/images/goodday-integration/goodday-integration-14.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
 
-> That was all you need to know for LambdaTest + GoodDay Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + GoodDay Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

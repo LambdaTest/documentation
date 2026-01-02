@@ -15,12 +15,12 @@ url: https://www.testmu.ai/support/docs/integrating-testmu-report-with-jenkins-p
 site_name: LambdaTest
 slug: integrating-testmu-report-with-jenkins-pipeline
 ---
-# Integrating LambdaTest Report With Jenkins Pipeline
+# Integrating <BrandName /> Report With Jenkins Pipeline
 ---
 
-This documentation provides a comprehensive guide on how to integrate LambdaTest Report with your Jenkins Pipeline for web and app test automation.
+This documentation provides a comprehensive guide on how to integrate <BrandName /> Report with your Jenkins Pipeline for web and app test automation.
 
-> **Note**: Before you proceed, make sure to integrate [LambdaTest Plugin for Jenkins](/docs/jenkins-with-testmu/).
+> **Note**: Before you proceed, make sure to integrate [<BrandName /> Plugin for Jenkins](/docs/jenkins-with-testmu/).
 
 1. Login to your Jenkins account. From the left menu, navigate to **New Item**.
 
@@ -52,7 +52,7 @@ It will route you to a Configuration dashboard.
 
 <img loading="lazy" src={require('../assets/images/lambdatestreport-jenkins/generatedsyntax.png').default} alt="Image" width="1919" height="900" className="doc_img img_center"/> <br/>
 
-9. To initiate the steps for LambdaTest Report creation, copy and paste the pipeline syntax in the Stage section of your Jenkins pipeline script. After that, click **Save** or **Apply**.
+9. To initiate the steps for <BrandName /> Report creation, copy and paste the pipeline syntax in the Stage section of your Jenkins pipeline script. After that, click **Save** or **Apply**.
 
 <img loading="lazy" src={require('../assets/images/lambdatestreport-jenkins/save.png').default} alt="Image" width="1919" height="900" className="doc_img img_center"/> <br/>
 
@@ -64,7 +64,7 @@ It will route you to a Configuration dashboard.
 
 <img loading="lazy" src={require('../assets/images/lambdatestreport-jenkins/build.png').default} alt="Image" width="1919" height="900" className="doc_img img_center"/> <br/>
 
-12. To view the test report, click on the **LambdaTest Pipeline Report**.
+12. To view the test report, click on the **<BrandName /> Pipeline Report**.
 
 <img loading="lazy" src={require('../assets/images/lambdatestreport-jenkins/pipelinereport.png').default} alt="Image" width="1919" height="900" className="doc_img img_center"/> <br/>
 

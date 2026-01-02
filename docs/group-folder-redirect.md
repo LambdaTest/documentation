@@ -21,7 +21,7 @@ import RealDeviceTag from '../src/component/realDevice';
 
 # Group Folder Redirect for iOS Apps
 <RealDeviceTag value="Real Device" /> 
-LambdaTest now supports **Group Folder Redirect** for iOS apps during automation testing with Appium.  
+<BrandName /> now supports **Group Folder Redirect** for iOS apps during automation testing with Appium.  
 This feature ensures your app uses its **private container directory** instead of the **shared app group container**, which becomes inaccessible after **app resigning** on Real Devices.
 
 ---
@@ -37,7 +37,7 @@ This feature ensures your app uses its **private container directory** instead o
 ## Steps to Enable Group Folder Redirect
 
 ### 1. Upload Your Application
-- Upload your iOS app to LambdaTest following standard procedures.  
+- Upload your iOS app to <BrandName /> following standard procedures.  
 - Refer to the [**Upload your Application**](/support/docs/application-setup-via-api/#upload-your-application) documentation for detailed instructions.  
 - Note the **App ID** returned after uploading — you will use this in your automation scripts.
 
@@ -72,7 +72,7 @@ Launch your Appium test, the app will automatically use its private container fo
 ---
 
 :::info
-- LambdaTest launches an **instrumented version** of your app with **Group Folder Redirect** support.  
+- <BrandName /> launches an **instrumented version** of your app with **Group Folder Redirect** support.  
 - All file system operations that previously relied on the App Group container now use the **private container**.  
 - Your tests remain compatible and functional, even after app resigning.
 :::

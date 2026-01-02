@@ -36,17 +36,17 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "SmartUI Testing",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-testing-using-selenium/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-smart-ui-testing-using-selenium/`
         }]
       })
     }}
@@ -66,7 +66,7 @@ This documentation will guide you step-by-step to execute the SmartUI tests on t
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the TestNG from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the TestNG from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/cucumber-testNG-smartui-hyperexecute-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -115,7 +115,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 ### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 

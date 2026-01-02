@@ -1,4 +1,4 @@
-﻿---
+---
 id: smartui-appium-sdk
 title: Integrate SmartUI with Appium Tests
 sidebar_label: Appium
@@ -22,6 +22,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,24 +33,24 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-appium-sdk/"
+          "item": `${BRAND_URL}/support/docs/smartui-appium-sdk/`
         }]
       })
     }}
 ></script>
 Appium is an open-source tool for automating mobile application testing. It allows developers and testers to write tests for native, hybrid, and mobile web applications across multiple platforms, such as iOS and Android, using a single codebase.
 
-LambdaTest SmartUI supports Appium automation tests for mobile applications through two integration methods:
+<BrandName /> SmartUI supports Appium automation tests for mobile applications through two integration methods:
 
 - **SDK Integration**: Available for Java
 - **Hooks Integration**: Available for JavaScript, Python, Ruby, and C#
@@ -123,7 +125,7 @@ For languages other than Java, SmartUI uses Hooks integration, which leverages A
 **Prerequisites:**
 - Appium driver instance initialized
 - SmartUI project created with Project Token
-- LambdaTest credentials configured
+- <BrandName /> credentials configured
 
 **Taking Viewport Screenshots:**
 

@@ -27,7 +27,7 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 # Upload & Download Files and Media on Real Devices
 
 
-LambdaTest’s **Files & Media** feature allows you to seamlessly upload files or media from your system to real devices and download app-generated files or media back for verification. This ensures comprehensive validation of workflows such as document generation, media export, and file handling across Android and iOS devices.
+<BrandName />’s **Files & Media** feature allows you to seamlessly upload files or media from your system to real devices and download app-generated files or media back for verification. This ensures comprehensive validation of workflows such as document generation, media export, and file handling across Android and iOS devices.
 
 ---
 

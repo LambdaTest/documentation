@@ -1,4 +1,4 @@
-﻿---
+---
 id: migrate-playwright-tests
 title: Migrate Existing Playwright Test Suites On TestMu AI
 hide_title: true
@@ -17,6 +17,8 @@ url: https://www.testmu.ai/support/docs/migrate-existing-playwright-tests
 site_name: LambdaTest
 slug: migrate-existing-playwright-tests
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -25,17 +27,17 @@ slug: migrate-existing-playwright-tests
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Migrate Existing Playwright Test Suites On LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/migrate-existing-playwright-tests/"
+          "item": `${BRAND_URL}/support/docs/migrate-existing-playwright-tests/`
         }]
       })
     }}
@@ -44,14 +46,14 @@ slug: migrate-existing-playwright-tests
 # Migrate Your Existing Playwright Tests
 * * *
 
-LambdaTest offers an online automation platform for test automation. Therefore you can easily migrate Playwright tests from your local grid to the LambdaTest platform. 
+<BrandName /> offers an online automation platform for test automation. Therefore you can easily migrate Playwright tests from your local grid to the <BrandName /> platform. 
 
-In this documentation, we look at how to migrate your existing Playwright test scripts (or test suites) from your local grid to LambdaTest. This lets you automate Playwright scripts across 40+ browsers and operating systems on LambdaTest cloud platform.
+In this documentation, we look at how to migrate your existing Playwright test scripts (or test suites) from your local grid to <BrandName />. This lets you automate Playwright scripts across 40+ browsers and operating systems on <BrandName /> cloud platform.
 
 ## Sample Playwright Script Running On A Local Machine
 ***
 
-With just a few lines of code tweaks in your test script, you can migrate your Playwright tests running on a local grid to LambdaTest. A sample Playwright script below launches a browser on your local machine and runs the script.
+With just a few lines of code tweaks in your test script, you can migrate your Playwright tests running on a local grid to <BrandName />. A sample Playwright script below launches a browser on your local machine and runs the script.
 
 ```js
 const { chromium } = require('playwright')
@@ -76,10 +78,10 @@ const { expect } = require('@playwright/test');
 })()
 ```
 
-## Changes In Scripts To Run Playwright Tests On LambdaTest
+## Changes In Scripts To Run Playwright Tests On <BrandName />
 ***
 
-The above script shows that `playwright['chromium'].launch` runs in a Chromium browser window. To run the test scripts on LambdaTest platform, you will need to add the following instead of `playwright['chromium'].launch`.
+The above script shows that `playwright['chromium'].launch` runs in a Chromium browser window. To run the test scripts on <BrandName /> platform, you will need to add the following instead of `playwright['chromium'].launch`.
 
 ```js
 const { chromium } = require('playwright')
@@ -108,7 +110,7 @@ const { expect } = require('@playwright/test');
 })()
 ```
 
-In the above code snippet, you need to connect to the CDP endpoint at LambdaTest using `chromium.connect` method. The `capabilities` variable contains additional parameters that enable a specific browser and OS combination to be assigned to your test on LambdaTest.
+In the above code snippet, you need to connect to the CDP endpoint at <BrandName /> using `chromium.connect` method. The `capabilities` variable contains additional parameters that enable a specific browser and OS combination to be assigned to your test on <BrandName />.
 
 ## Selecting Browser-OS Combinations For Test Runs
 ***
@@ -118,12 +120,12 @@ To run your script, you can choose any of the browsers and OS combinations. Just
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

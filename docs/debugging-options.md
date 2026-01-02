@@ -20,12 +20,12 @@ slug: debugging-options
 # Debugging Options for Automation Testing
 ---
 
-LambdaTest platform supports different automation capabilities for enabling different debugging log options. This documentation explains how to use various logging options for your failed tests and fix them quickly and easily.
+<BrandName /> platform supports different automation capabilities for enabling different debugging log options. This documentation explains how to use various logging options for your failed tests and fix them quickly and easily.
 
 ## Command Logs
 ---
 
-Command logs are a comprehensive record of your test. They are used to identify all the steps executed in the test and troubleshoot errors for failed steps. Command logs are accessible from the LambdaTest Automation dashboard as well as via our REST API to access Command logs.
+Command logs are a comprehensive record of your test. They are used to identify all the steps executed in the test and troubleshoot errors for failed steps. Command logs are accessible from the <BrandName /> Automation dashboard as well as via our REST API to access Command logs.
 
 ## Visual Logs
 ---
@@ -35,7 +35,7 @@ Visual logs capture screenshots of web pages automatically generated at every Se
 ## Video Logs
 ---
 
-The LambdaTest Selenium Grid records every test run exactly as executed on the remote machine. This feature is beneficial whenever a browser test fails so that you can see the entire test in action. You can access these videos from the LambdaTest Automation dashboard for each session.
+The <BrandName /> Selenium Grid records every test run exactly as executed on the remote machine. This feature is beneficial whenever a browser test fails so that you can see the entire test in action. You can access these videos from the <BrandName /> Automation dashboard for each session.
 
 You can also navigate the video via command logs to view the step behavior at the time of command execution for the failed command.
 
@@ -49,18 +49,18 @@ It has details about Selenium internals logs and downstream and upstream command
 ## Appium Logs
 ---
 
-The LambdaTest Appium server generates Appium logs, which contain a detailed record of your test session for Mobile Tests. If a test fails, the logs will aid in troubleshooting any errors.
+The <BrandName /> Appium server generates Appium logs, which contain a detailed record of your test session for Mobile Tests. If a test fails, the logs will aid in troubleshooting any errors.
 
 It is similar to Selenium logs, though have a different log structure which is standard to the Appium framework
 
 ## Console Logs
 ---
-Console logs capture browser console output at various steps of the Tests to troubleshoot JavaScript/DOM issues. You can retrieve console logs using both the LambdaTest Automation dashboard and REST API.
+Console logs capture browser console output at various steps of the Tests to troubleshoot JavaScript/DOM issues. You can retrieve console logs using both the <BrandName /> Automation dashboard and REST API.
 
 ## Network Logs
 ---
 
-Network Logs capture the browser’s performance data, such as network traffic, latency, HTTP requests, and responses in the HAR format. You can access network logs using the LambdaTest Automation dashboard and the REST API.
+Network Logs capture the browser’s performance data, such as network traffic, latency, HTTP requests, and responses in the HAR format. You can access network logs using the <BrandName /> Automation dashboard and the REST API.
 
 ## Terminal Logs
 ---
@@ -108,7 +108,7 @@ The Test Status Ratio widget seamlessly provides information about the quality o
 
 ### Error Insights
 
-The Error Stats widget allows the user to quickly analyze the tests categorized by their Status on the LambdaTest platform, including Test Case Errors, Idle Timeout, Queue Timeout, and Lambda Error. The user can even filter the graph by clicking on the relevant legends at the bottom.
+The Error Stats widget allows the user to quickly analyze the tests categorized by their Status on the <BrandName /> platform, including Test Case Errors, Idle Timeout, Queue Timeout, and Lambda Error. The user can even filter the graph by clicking on the relevant legends at the bottom.
 
 ### Concurrency Trends
 

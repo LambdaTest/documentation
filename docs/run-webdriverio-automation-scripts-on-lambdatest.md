@@ -1,4 +1,4 @@
-﻿---
+---
 id: run-webdriverio-automation-scripts-on-lambdatest
 title: Selenium WebDriver IO:Run WebDriverIO Automation Scripts on Selenium Grid | TestMu AI
 hide_title: true
@@ -22,6 +22,8 @@ slug: webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,40 +33,40 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "JavaScript WebDriverIO with Selenium",
-          "item": "https://www.lambdatest.com/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/"
+          "item": `${BRAND_URL}/support/docs/webdriverio-with-selenium-running-webdriverio-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# WebDriverIO with Selenium: Tutorial to Run Your First Test on LambdaTest
+# WebDriverIO with Selenium: Tutorial to Run Your First Test on <BrandName />
 * * *
-In this topic, you will learn how to automate your website testing using Selenium with WebDriverIO Automation on [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation).
+In this topic, you will learn how to automate your website testing using Selenium with WebDriverIO Automation on [<BrandName /> Selenium cloud platform](https://www.lambdatest.com/selenium-automation).
 
 ## Objective
 ***
 By the end of this topic, you will be able to:
 
-1. Run a sample Selenium Webdriver test using JavaScript on LambdaTest Automation.
+1. Run a sample Selenium Webdriver test using JavaScript on <BrandName /> Automation.
 2. Comprehend and configure Selenium test suite with respect to your capabilities.
 3. Select the specific browsers to run your test on.
-4. Explore the advanced features of LambdaTest.
+4. Explore the advanced features of <BrandName />.
 5. Run your test cases in parallel to reduce build times.
 
 
 ## Prerequisites For Running WebDriverIO Selenium Tests
 * * *
-Before getting started with Automated Scripts using WebDriverIO Selenium on LambdaTest Automation, you need to:
+Before getting started with Automated Scripts using WebDriverIO Selenium on <BrandName /> Automation, you need to:
 
 * The first step is to download and install node.js and node package manager or npm. You should be having nodejs v6 or newer. Download it from [official NodeJS website](https://nodejs.org/en/).
 * Make sure to use the latest version of JavaScript.
@@ -104,7 +106,7 @@ describe('Lambdatest Demo Test', function() {
 });
 ```
 ### Configuration of Your Test Capabilities
-You can use **[LambdaTest Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)** to select and pass those browser environment specifications.
+You can use **[<BrandName /> Capabilities Generator tool](https://www.lambdatest.com/capabilities-generator/)** to select and pass those browser environment specifications.
 
 **Step 4:** Go to your `conf/single.conf.js` file where you can set your test capabilities.
 ```
@@ -321,17 +323,17 @@ npm run parallel
 ***
 * [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
 * [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-* [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+* [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

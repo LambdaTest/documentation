@@ -1,4 +1,4 @@
-﻿---
+---
 id: screen-resolution-cypress
 title: Test On Different Screen Resolutions In Cypress
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/screen-resolution-testing-with-cypress
 site_name: LambdaTest
 slug: screen-resolution-testing-with-cypress
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: screen-resolution-testing-with-cypress
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Cypress Testing On Different Screen Resolutions",
-          "item": "https://www.lambdatest.com/support/docs/screen-resolution-testing-with-cypress/"
+          "item": `${BRAND_URL}/support/docs/screen-resolution-testing-with-cypress/`
         }]
       })
     }}
@@ -42,7 +44,7 @@ slug: screen-resolution-testing-with-cypress
 
 As part of a responsive design process, it is important to ensure that websites or web applications under test run properly on different screen sizes. 
 
-LambdaTest lets you test websites with Cypress across different screen resolutions on over 50+ browser versions on cloud.
+<BrandName /> lets you test websites with Cypress across different screen resolutions on over 50+ browser versions on cloud.
 
 Cypress provides website testing on different resolutions using
 

@@ -1,4 +1,4 @@
-﻿---
+---
 id: change-individual-test-details
 title: Changing Individual Test Details
 hide_title: true
@@ -11,6 +11,8 @@ keywords:
 url: https://www.testmu.ai/support/docs/change-individual-test-details
 slug: change-individual-test-details
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,17 +22,17 @@ slug: change-individual-test-details
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Changing Individual Test Details",
-          "item": "https://www.lambdatest.com/support/docs/change-individual-test-details/"
+          "item": `${BRAND_URL}/support/docs/change-individual-test-details/`
         }]
       })
     }}
@@ -40,15 +42,15 @@ slug: change-individual-test-details
 
 * * *
 
-There may be times when you wish to manipulate individual test details from your automation test build while performing automation testing with Selenium Grid on LambdaTest. This document will help you perform basic test operations for a particular test you wish to update.
+There may be times when you wish to manipulate individual test details from your automation test build while performing automation testing with Selenium Grid on <BrandName />. This document will help you perform basic test operations for a particular test you wish to update.
 
 ## Marking Test Status As Pass Or Fail
 
 * * *
 
-While performing automation testing with Selenium on LambdaTest Selenium Grid, you may face a scenario where a test that you declared as fail in your local instance may turn out to be completed successfully at LambdaTest. Don't worry though! We understand how imperative it is to flag an automation test as either **"pass"** or **"fail"** depending upon your testing requirement with respect to the validation of expected behaviour.
+While performing automation testing with Selenium on <BrandName /> Selenium Grid, you may face a scenario where a test that you declared as fail in your local instance may turn out to be completed successfully at <BrandName />. Don't worry though! We understand how imperative it is to flag an automation test as either **"pass"** or **"fail"** depending upon your testing requirement with respect to the validation of expected behaviour.
 
-If you wish to mark a test status as fail/pass at LambdaTest then you can do so by executing the below code:
+If you wish to mark a test status as fail/pass at <BrandName /> then you can do so by executing the below code:
 
 * To mark test status to **fail**.  
 
@@ -71,12 +73,12 @@ Sometimes, you may wish to rename your test, after placing it under execution. Y
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

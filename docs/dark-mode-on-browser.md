@@ -22,6 +22,8 @@ import { YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY } from "@site/src/
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,24 +33,24 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Dark Mode on Browser",
-          "item": "https://www.lambdatest.com/support/docs/dark-mode-on-browser/"
+          "item": `${BRAND_URL}/support/docs/dark-mode-on-browser/`
         }]
       })
     }}
 ></script>
 
 
-LambdaTest’s **Dark Mode** feature allows you to manually toggle between light and dark themes on **real iOS and Android devices** during manual testing sessions.  
+<BrandName />’s **Dark Mode** feature allows you to manually toggle between light and dark themes on **real iOS and Android devices** during manual testing sessions.  
 This enables testers to validate UI appearance, color contrast, and theme switching for both mobile apps and web applications without writing automation scripts.
 
 ## Use Cases

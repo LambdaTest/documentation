@@ -16,6 +16,8 @@ slug: hyperexecute-k6-testing
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,17 +27,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Languages and Framework",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-k6-testing/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-k6-testing/`
         }]
       })
     }}
@@ -50,7 +52,7 @@ This guide details how to execute your **k6** tests on **HyperExecute** using [Y
 
 To run the Tests on HyperExecute from your Local System, you are required:
 
-- Your LambdaTest [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
+- Your <BrandName /> [Username and Access key](/support/docs/hyperexecute-how-to-get-my-username-and-access-key/)
 - [HyperExecute YAML](/support/docs/hyperexecute-yaml-version0.2/) file which contains all the necessary instructions.
 - [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) in order to initiate a test execution Job .
 - Setup the [Environmental Variable](/support/docs/hyperexecute-environment-variable-setup/)
@@ -60,7 +62,7 @@ To run the Tests on HyperExecute from your Local System, you are required:
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the k6 from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample for the k6 from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/HYP-K6-browser-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -83,7 +85,7 @@ You can download the CLI for your desired platform from the below mentioned link
 
 #### Setup Environment Variable
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 

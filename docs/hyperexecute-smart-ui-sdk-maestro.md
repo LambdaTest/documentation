@@ -22,6 +22,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -31,17 +33,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
          "@type": "ListItem",
          "position": 1,
          "name": "LambdaTest",
-         "item": "https://www.lambdatest.com"
+         "item": BRAND_URL
        },{
          "@type": "ListItem",
          "position": 2,
          "name": "Support",
-         "item": "https://www.lambdatest.com/support/docs/"
+         "item": `${BRAND_URL}/support/docs/`
        },{
          "@type": "ListItem",
          "position": 3,
          "name": "UI Testing with Maestro",
-         "item": "https://www.lambdatest.com/support/docs/hyperexecute-smart-ui-maestro/"
+         "item": `${BRAND_URL}/support/docs/hyperexecute-smart-ui-maestro/`
        }]
      })
    }}
@@ -53,7 +55,7 @@ This document guides you on how to perform visual regression testing for your An
 
 Before you begin, ensure you have the following prerequisites in place:
 
-* Your LambdaTest Username and Access Key. You can find these on your dashboard -> left side bar -> credentials.
+* Your <BrandName /> Username and Access Key. You can find these on your dashboard -> left side bar -> credentials.
 * The [HyperExecute CLI](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid/) downloaded to your local machine.
 * An existing Android application file (`.apk`).
 * Node.js and npm installed on your system.
@@ -82,7 +84,7 @@ cd smartui-maestro-sample
 ```
 
 :::tip Sample Repo
-You can find the complete code for this example in the following LambdaTest GitHub repository.
+You can find the complete code for this example in the following <BrandName /> GitHub repository.
 
 <a href="https://github.com/LambdaTest/smartui-maestro-sample" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
@@ -90,7 +92,7 @@ You can find the complete code for this example in the following LambdaTest GitH
 
 ## Step 3: Upload Your Application
 
-To run your tests on LambdaTest real devices or emulators, you need to upload your Android app (`.apk`) and get an `appId`.
+To run your tests on <BrandName /> real devices or emulators, you need to upload your Android app (`.apk`) and get an `appId`.
 
 Run the following `cURL` command in your terminal. Ensure you have set your `LT_USERNAME` and `LT_ACCESS_KEY` as environment variables.
 
@@ -135,7 +137,7 @@ In your Maestro test YAML files (e.g., `maestro-test/test.yaml`), add the `takeS
 
 #### 4.3. Set Up Environment Variables
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Username and Access Key Page](https://accounts.lambdatest.com/security/username-accesskey).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Username and Access Key Page](https://accounts.lambdatest.com/security/username-accesskey).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
@@ -227,12 +229,12 @@ After the HyperExecute job is finished, all screenshots captured using the `take
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

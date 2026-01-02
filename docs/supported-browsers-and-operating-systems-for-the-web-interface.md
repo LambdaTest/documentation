@@ -1,4 +1,4 @@
-﻿---
+---
 id: supported-browsers-and-operating-systems-for-the-web-interface
 title: Supported Browsers & Operating Systems For The Web Interface
 hide_title: true
@@ -18,6 +18,8 @@ url: https://www.testmu.ai/support/docs/supported-browsers-and-operating-systems
 site_name: LambdaTest
 slug: supported-browsers-and-operating-systems-for-the-web-interface
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +29,17 @@ slug: supported-browsers-and-operating-systems-for-the-web-interface
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Supported Browsers & Operating Systems",
-          "item": "https://www.lambdatest.com/support/docs/supported-browsers-and-operating-systems-for-the-web-interface/"
+          "item": `${BRAND_URL}/support/docs/supported-browsers-and-operating-systems-for-the-web-interface/`
         }]
       })
     }}
@@ -46,7 +48,7 @@ slug: supported-browsers-and-operating-systems-for-the-web-interface
 # Supported Browsers & Operating Systems For The Web Interface
 
 ***
-Below is a table representing all the browsers and browser version that are supported by LambdaTest Automation with respect to particular operating systems.
+Below is a table representing all the browsers and browser version that are supported by <BrandName /> Automation with respect to particular operating systems.
 ## Desktop Devices For Selenium & Browser Versions
 ***
 | OPERATING SYSTEM  | CHROME | FIREFOX | SAFARI | IE | EDGE | CHROMIUM EDGE |
@@ -96,12 +98,12 @@ Below is a table representing all the browsers and browser version that are supp
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

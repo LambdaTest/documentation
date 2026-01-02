@@ -1,4 +1,4 @@
-﻿---
+---
 id: appium-ruby
 title:  Appium with Ruby
 sidebar_label: Ruby
@@ -24,6 +24,8 @@ import TabItem from '@theme/TabItem';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 
@@ -35,27 +37,27 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Ruby With Appium",
-          "item": "https://www.lambdatest.com/support/docs/appium-ruby/"
+          "item": `${BRAND_URL}/support/docs/appium-ruby/`
         }]
       })
     }}
 ></script>
 
-In this documentation, you will learn how to trigger a automation script of **Ruby** for application testing with **Appium** on LambdaTest, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of LambdaTest.
+In this documentation, you will learn how to trigger a automation script of **Ruby** for application testing with **Appium** on <BrandName />, set the [**desired capabilities**](/support/docs/desired-capabilities-in-appium/) for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites
 
-- Your LambdaTest [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
 - Install **Ruby** on your local system. Follow these instructions to install on different operating systems.
 
 <Tabs className="docs__val">
@@ -90,12 +92,12 @@ For **Windows**, you can download from the [official website](https://rubyinstal
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-All the code samples in this documentation can be found on **LambdaTest's Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-ruby" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+All the code samples in this documentation can be found on **<BrandName />'s Github Repository**. You can either download or clone the repository to quickly run your tests. <a href="https://github.com/LambdaTest/LT-appium-ruby" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
 
 ### Step 2: Setup the Environment Variables
 
-You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [LambdaTest Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
+You need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in your [<BrandName /> Profile page](https://accounts.lambdatest.com/security). Run the below mentioned commands in your terminal to setup the environment variables.
 
 <Tabs className="docs__val">
 <TabItem value="bash" label="Linux / MacOS" default>
@@ -117,7 +119,7 @@ set LT_ACCESS_KEY="${ YOUR_LAMBDATEST_ACCESS_KEY()}"`}
 </Tabs>
 
 ### Step 3: Upload your Application
-Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
+Upload your **_iOS_** application (.ipa file) or **_android_** application (.apk or .aab file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication.
 
 Make sure to add the path of the **appFile** in the cURL request. Below is an example cURL request to upload your app using our REST API:
 
@@ -143,7 +145,7 @@ Make sure to add the path of the **appFile** in the cURL request. Below is an ex
 
 :::tip
 
-- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on LambdaTest by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
+- If you do not have any **.apk** or **.ipa** file, you can run your sample tests on <BrandName /> by using our sample apps, :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) or :link: [iOS app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa).
 
 - Response of above cURL will be a **JSON** object containing the `APP_URL` of the format - `lt://APP123456789123456789` and will be used in the next step
 
@@ -346,7 +348,7 @@ If you are using an **iOS** app, the cURL command will generate an app URL for t
 cd ios
 ```
 
-- Execute the following command to run your test on LambdaTest platform:
+- Execute the following command to run your test on <BrandName /> platform:
 
 ```bash
 ruby ios-sample.rb
@@ -364,7 +366,7 @@ If you are using an **android** app, the cURL command will generate an app URL f
 cd android
 ```
 
-- Execute the following command to run your test on LambdaTest platform:
+- Execute the following command to run your test on <BrandName /> platform:
 
 ```bash
 ruby android-sample.rb
@@ -405,23 +407,23 @@ ruby android-sample.rb
 ```
 </details>
 
-> Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [LambdaTest App Automation Dashboard](https://appautomation.lambdatest.com/build).
+> Your test results would be displayed on the test console (or CLI if you are using terminal/cmd) and on the [<BrandName /> App Automation Dashboard](https://appautomation.lambdatest.com/build).
 
 ## Reference Guides
 
 - [Advanced Configuration for Capabilities](/support/docs/desired-capabilities-in-appium/)
 - [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-- [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+- [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

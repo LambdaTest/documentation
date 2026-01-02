@@ -10,6 +10,8 @@ url: https://www.testmu.ai/support/docs/milestone-creation-and-management
 site_name: LambdaTest
 slug: milestone-creation-and-management
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -19,28 +21,28 @@ slug: milestone-creation-and-management
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Milestone",
-          "item": "https://www.lambdatest.com/support/docs/milestone-creation-and-management/"
+          "item": `${BRAND_URL}/support/docs/milestone-creation-and-management/`
         }]
       })
     }}
 ></script>
-Milestones in LambdaTest serve as a central organizational tool for grouping test runs. They are particularly useful for tracking progress related to feature releases, ensuring comprehensive oversight of associated testing activities.
+Milestones in <BrandName /> serve as a central organizational tool for grouping test runs. They are particularly useful for tracking progress related to feature releases, ensuring comprehensive oversight of associated testing activities.
 
-This guide provides a comprehensive walkthrough for creating and managing milestones within LambdaTest, enabling efficient organization of test runs and tracking feature releases.
+This guide provides a comprehensive walkthrough for creating and managing milestones within <BrandName />, enabling efficient organization of test runs and tracking feature releases.
 
 ## Creating a Milestone
 ### Step 1: Access the Milestone Section
-- Navigate to the Milestone section in the LambdaTest dashboard.
+- Navigate to the Milestone section in the <BrandName /> dashboard.
 - Click **"Create Milestone**" and locate the Create Milestone button and click it to start the creation process.
 <img loading="lazy" src={require('../assets/images/milestones/1.png').default} alt="Real "  className="doc_img"/>
 

@@ -1,4 +1,4 @@
-﻿---
+---
 id: analytics-widget-drill-down-export
 title: Analytics Drill-Down Widgets - Export Data Options
 sidebar_label: Export Data Options
@@ -9,6 +9,8 @@ url: https://www.testmu.ai/support/docs/analytics-widget-drill-down-export
 site_name: LambdaTest
 slug: analytics-widget-drill-down-export
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,17 +20,17 @@ slug: analytics-widget-drill-down-export
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-widget-drill-down-export/"
+          "item": `${BRAND_URL}/support/docs/analytics-widget-drill-down-export/`
         }]
       })
     }}
@@ -37,7 +39,7 @@ You can export the data from the Analytics Drill-Down widgets in various formats
 
 ## About Widget Drill-Down 
 
-Widgets in LambdaTest Analytics provide a visual representation of your testing data, enabling you to track and analyze your test execution trends. The Drill-Down feature allows you to view detailed insights by breaking down the data into specific categories, helping you identify patterns and make data-driven decisions.
+Widgets in <BrandName /> Analytics provide a visual representation of your testing data, enabling you to track and analyze your test execution trends. The Drill-Down feature allows you to view detailed insights by breaking down the data into specific categories, helping you identify patterns and make data-driven decisions.
 
 <img loading="lazy" src={require('../assets/images/analytics/analytics-widget-export-drill-down.webp').default} alt="cmd" width="768" height="373" className="doc_img"/>
 
@@ -68,12 +70,12 @@ We only allow a limit of maximum **1000** records to be exported at a time. If y
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

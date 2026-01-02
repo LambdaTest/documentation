@@ -1,4 +1,4 @@
-﻿---
+---
 id: testing-locally-hosted-pages
 title: Test Locally Hosted Web Pages
 hide_title: false
@@ -20,6 +20,8 @@ url: https://www.testmu.ai/support/docs/testing-locally-hosted-pages
 site_name: LambdaTest
 slug: testing-locally-hosted-pages
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -44,8 +46,6 @@ slug: testing-locally-hosted-pages
       })
     }}
 ></script>
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 **<BrandName /> Tunnel** is a secure and encrypted tunneling feature that allows devs and QAs to test their locally hosted web applications or websites on the cloud-based real machines. It establishes a secure connection between the user's local machine and the real machine in the cloud. There are multiple connectivity options like **TCP with TLS 1.2 over port 443**, **Websocket (port 443)**,. Tunnel Binary performs network scanning and selects the best mode if not explicitly specified.
 

@@ -29,17 +29,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Android Test",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-passed-test-cases/"
+          "item": `${BRAND_URL}/support/docs/accessibility-passed-test-cases/`
         }]
       })
     }}

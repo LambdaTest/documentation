@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/hyperexecute-guided-walkthrough
 site_name: LambdaTest
 slug: hyperexecute-guided-walkthrough
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: hyperexecute-guided-walkthrough
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Guided Walkthrough of HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-guided-walkthrough/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-guided-walkthrough/`
         }]
       })
     }}
@@ -60,7 +62,7 @@ The top panel contains multiple items:
 - **Configure Tunnel**: Tunnel is used to ensure the security of your data for private websites. 
 - **Announcements**: The latest announcements and updates can be found here.
 - **Settings**: Manage all of your account and organisation details in this section.
-- **Upgrade**: You can upgrade your LambdaTest subscription from here.
+- **Upgrade**: You can upgrade your <BrandName /> subscription from here.
       
 *** 
 
@@ -153,10 +155,10 @@ Additionally, upon redirection, the automation dashboard opens the relevant tab 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">Support</a>
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Guided Walkthrough</span>

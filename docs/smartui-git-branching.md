@@ -26,6 +26,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,17 +37,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "WebDriverIO With Appium",
-          "item": "https://www.lambdatest.com/support/docs/smartui-upload-api-v2/"
+          "item": `${BRAND_URL}/support/docs/smartui-upload-api-v2/`
         }]
       })
     }}
@@ -67,7 +69,7 @@ This is the guide to understand our Git Branching with SmartUI projects which ca
 This feature is currently supported for only [**StoryBook**](/support/docs/smart-ui-storybook/) projects on the SmartUI platform. Please contact support@lambdatest.com for further information or requests.
 :::
 
-The following steps will guide you in running your Git branching Visual Regression test on LambdaTest SmartUI platform:
+The following steps will guide you in running your Git branching Visual Regression test on <BrandName /> SmartUI platform:
 
 :::info
 **Baseline Branch**: A baseline branch build is a set of screenshots which are captured using SmartUI where all the screenshots are compared against for the non-baseline branch builds.

@@ -1,4 +1,4 @@
-﻿---
+---
 id: accessibility-update-devtools-extension
 title: Update your Accessibility DevTools Chrome Extension
 hide_title: false
@@ -16,6 +16,8 @@ slug: accessibility-update-devtools-extension
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,23 +27,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "What is Accessibility Testing",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-update-devtools-extension/"
+          "item": `${BRAND_URL}/support/docs/accessibility-update-devtools-extension/`
         }]
       })
     }}
 ></script>
 
-Keeping your LambdaTest Accessibility DevTools Chrome extension updated ensures you have the latest features, improvements, and security patches. Follow the detailed steps below to update your extension.
+Keeping your <BrandName /> Accessibility DevTools Chrome extension updated ensures you have the latest features, improvements, and security patches. Follow the detailed steps below to update your extension.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="7CuoCS7dX70" data-loading-attribute="eager">
@@ -49,7 +51,7 @@ Keeping your LambdaTest Accessibility DevTools Chrome extension updated ensures 
 </div>
 </div>
 
-## Step-by-Step Guide to Update the LambdaTest Accessibility DevTools Chrome Extension
+## Step-by-Step Guide to Update the <BrandName /> Accessibility DevTools Chrome Extension
 
 ### Step 1: Open the Extensions Page
 - Launch the Google Chrome browser on your computer.
@@ -65,7 +67,7 @@ Keeping your LambdaTest Accessibility DevTools Chrome extension updated ensures 
 - Click on the **Update** button.
 
 ### Step 4: Wait for the Update Process
-- After clicking the **Update** button, Chrome will start checking for updates for all your installed extensions, including the LambdaTest Accessibility DevTools extension.
+- After clicking the **Update** button, Chrome will start checking for updates for all your installed extensions, including the <BrandName /> Accessibility DevTools extension.
 
 This process may take a few moments. Please wait until you see a confirmation message or the progress indicator stops.
 

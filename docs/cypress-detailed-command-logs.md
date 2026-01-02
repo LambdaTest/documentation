@@ -1,4 +1,4 @@
-﻿---
+---
 id: cypress-detailed-command-logs
 title: Detailed Command Logs for Cypress
 hide_title: true
@@ -24,17 +24,17 @@ slug: cypress-detailed-command-logs
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Detailed Command Logs for Cypress",
-          "item": "https://www.lambdatest.com/support/docs/cypress-detailed-command-logs/"
+          "item": `${BRAND_URL}/support/docs/cypress-detailed-command-logs/`
         }]
       })
     }}

@@ -1,4 +1,4 @@
-﻿---
+---
 id: live-interactive-mobile-app-testing
 title: Realtime Native Mobile App Testing
 hide_title: true
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/live-interactive-mobile-app-testing
 site_name: LambdaTest
 slug: live-interactive-mobile-app-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: live-interactive-mobile-app-testing
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Native Mobile App Testing",
-          "item": "https://www.lambdatest.com/support/docs/live-interactive-mobile-app-testing/"
+          "item": `${BRAND_URL}/support/docs/live-interactive-mobile-app-testing/`
         }]
       })
     }}
@@ -42,19 +44,19 @@ slug: live-interactive-mobile-app-testing
 
 ***
 
-Mobile app testing is the process of testing a mobile application to ensure that their functionality and usability is not comprised when installed across multiple Android and iOS devices. With LambdaTest, you can test mobile applications manually to ensure they perform seamlessly across all Android emulators and iOS simulators.
+Mobile app testing is the process of testing a mobile application to ensure that their functionality and usability is not comprised when installed across multiple Android and iOS devices. With <BrandName />, you can test mobile applications manually to ensure they perform seamlessly across all Android emulators and iOS simulators.
 
 ## Uploading An App
 
 * * *
 
-You can upload an app via a browser/finder or a public cloud link. If you don't already have an app, the LambdaTest sample app will help you easily get started with native app testing.
+You can upload an app via a browser/finder or a public cloud link. If you don't already have an app, the <BrandName /> sample app will help you easily get started with native app testing.
 
 ### Uploading An App Via Browser
 
 * * *
 
-**Step 1**: Login to your LambdaTest account. Visit **'Real Time Testing**' from the left panel and navigate to the **'App Testing'**.
+**Step 1**: Login to your <BrandName /> account. Visit **'Real Time Testing**' from the left panel and navigate to the **'App Testing'**.
 
 **Step 2**: Click on **'Upload'**. You can select an application either by drag and drop or browse for and select the application. The uploading process will take few moments depending upon the application'size.
 
@@ -68,7 +70,7 @@ Your application will be uploaded successfully. Currently, you can upload `.apk`
 
 * * *
 
-**Step 1**: Login to your LambdaTest account. Visit **'Real Time Testing**' from the left panel and you'll be routed to the App testing console page.
+**Step 1**: Login to your <BrandName /> account. Visit **'Real Time Testing**' from the left panel and you'll be routed to the App testing console page.
 
 **Step 2**: Click on **'URL'**. Enter the App source URL and press Enter.
 
@@ -319,12 +321,12 @@ That's all about live-interactive mobile application testing. In case you have a
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

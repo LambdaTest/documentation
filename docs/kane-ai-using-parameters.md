@@ -18,6 +18,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -27,17 +29,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "KaneAI Parameters",
-          "item": "https://www.lambdatest.com/support/docs/kane-ai-using-parameters/"
+          "item": `${BRAND_URL}/support/docs/kane-ai-using-parameters/`
         }]
       })
     }}
@@ -106,7 +108,7 @@ Open the Test Project dashboard and go to the **Test Run** section.
 <img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/12.png').default} alt="Image" className="doc_img"/>
 
 ### Step 6: Execute Tests with Parameters
-Utilize the parameters to run your test cases with different data sets and inputs. You can manage and monitor execution using the LambdaTest Test Manager interface.
+Utilize the parameters to run your test cases with different data sets and inputs. You can manage and monitor execution using the <BrandName /> Test Manager interface.
 
 <img loading="lazy" src={require('../assets/images/kane-ai/features/parameters/13.png').default} alt="Image" className="doc_img"/>
 

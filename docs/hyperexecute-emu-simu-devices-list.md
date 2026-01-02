@@ -27,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Appium",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Virtual Devices - HyperExecute",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-run-jmeter-tests/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-run-jmeter-tests/`
         }]
       })
     }}

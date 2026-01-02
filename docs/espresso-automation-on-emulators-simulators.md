@@ -1,4 +1,4 @@
-﻿---
+---
 id: espresso-automation-on-emulators-simulators
 title: Espresso Automation using Emulators and Simulators on TestMu AI
 sidebar_label: Espresso - Emulator and Simulator
@@ -25,17 +25,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Espresso App Automation Using Emulators and Simulators on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/espresso-automation-on-emulators-simulators/"
+          "item": `${BRAND_URL}/support/docs/espresso-automation-on-emulators-simulators/`
         }]
       })
     }}

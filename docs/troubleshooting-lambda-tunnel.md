@@ -1,4 +1,4 @@
-﻿---
+---
 id: troubleshooting-lambda-tunnel
 title: How to troubleshoot TestMu AI Tunnel
 hide_title: true
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/troubleshooting-lambda-tunnel
 site_name: LambdaTest
 slug: troubleshooting-lambda-tunnel
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -37,8 +39,6 @@ slug: troubleshooting-lambda-tunnel
       })
     }}
 ></script>
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Troubleshooting <BrandName /> Tunnel
 ***
@@ -177,10 +177,10 @@ While we are at it, here is a one-time setup workaround. All you need to do is r
       <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href="https://www.lambdatest.com/support/docs/">Support</a>
+      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">Troubleshooting LambdaTest Tunnel</span>
+      <span className="breadcrumbs__link">Troubleshooting <BrandName /> Tunnel</span>
     </li>
   </ul>
 </nav> 

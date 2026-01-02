@@ -11,6 +11,8 @@ url: https://www.testmu.ai/support/docs/group-management
 site_name: LambdaTest
 slug: group-management
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -19,17 +21,17 @@ slug: group-management
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Group Management",
-          "item": "https://www.lambdatest.com/support/docs/group-management/"
+          "item": `${BRAND_URL}/support/docs/group-management/`
         }]
       })
     }}
@@ -37,9 +39,9 @@ slug: group-management
 
 # Group Based Concurrency Distribution
 ***
-<!-- For every enterprise that uses cloud services, access management for those cloud resources is vital. LambdaTest Group Management is an authorization system that allows seamless access management of LambdaTest resources. With LambdaTest group-management, you can control who has access to LambdaTest resources, how they can leverage those resources, and what domains they can have access to. -->
+<!-- For every enterprise that uses cloud services, access management for those cloud resources is vital. <BrandName /> Group Management is an authorization system that allows seamless access management of <BrandName /> resources. With <BrandName /> group-management, you can control who has access to <BrandName /> resources, how they can leverage those resources, and what domains they can have access to. -->
 
-The LambdaTest Group Management will help you in creating the different Groups and allot concurrency to those groups. In this way, you can perform the test automation by dividing the concurrency among the groups.
+The <BrandName /> Group Management will help you in creating the different Groups and allot concurrency to those groups. In this way, you can perform the test automation by dividing the concurrency among the groups.
 
 ## How to Create a New Group?
 ***
@@ -67,7 +69,7 @@ The LambdaTest Group Management will help you in creating the different Groups a
 ## How to View and Edit a Group?
 ***
 
-**Step 1:** Login to your LambdaTest account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
+**Step 1:** Login to your <BrandName /> account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-1.png').default} alt="Navigate to Organization Settings"  className="doc_img"/>
 
@@ -87,14 +89,14 @@ The LambdaTest Group Management will help you in creating the different Groups a
 <!-- ## How to Edit a Group?
 ***
 
-**Step 1:** Login to your LambdaTest account and navigate to Profile icon on the top-right. Click on 'Organizational Settings'.
+**Step 1:** Login to your <BrandName /> account and navigate to Profile icon on the top-right. Click on 'Organizational Settings'.
 
 <img loading="lazy" src={require('../assets/images/group-management/step201.webp').default} alt="Image"  className="doc_img"/> -->
 
 ## How to Delete a Group?
 ***
 
-**Step 1:** Login to your LambdaTest account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
+**Step 1:** Login to your <BrandName /> account and navigate to Profile icon on the top-right. Click on ***Organization Settings***.
 
 <img loading="lazy" src={require('../assets/images/group-management/step-1.png').default} alt="Navigate to Organization Settings"  className="doc_img"/>
 
@@ -108,4 +110,4 @@ The LambdaTest Group Management will help you in creating the different Groups a
 
 <br />
 
-> In case you have any queries regarding LambdaTest Group Management or need any additional information, please reach out at our 24*7 Chat Portal or drop us a mail to support@lambdatest.com.
+> In case you have any queries regarding <BrandName /> Group Management or need any additional information, please reach out at our 24*7 Chat Portal or drop us a mail to support@lambdatest.com.

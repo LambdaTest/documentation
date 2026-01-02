@@ -1,4 +1,4 @@
-﻿---
+---
 id: bitbucket-pipeline-with-hyperexecute
 title: Bitbucket Pipeline Integration
 hide_title: true
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/bitbucket-pipeline-with-hyperexecute
 site_name: LambdaTest
 slug: bitbucket-pipeline-with-hyperexecute
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +26,17 @@ slug: bitbucket-pipeline-with-hyperexecute
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Bitbucket CI Integration",
-          "item": "https://www.lambdatest.com/support/docs/bitbucket-pipeline-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/bitbucket-pipeline-with-hyperexecute/`
         }]
       })
     }}
@@ -57,7 +59,7 @@ This document will show you how to integrate Bitbucket Pipelines with HyperExecu
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/bitbucket" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -148,12 +150,12 @@ pipelines:
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

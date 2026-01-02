@@ -1,4 +1,4 @@
-﻿---
+---
 id: notion-integration
 title: Notion Integration
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/notion-integration
 site_name: LambdaTest
 slug: notion-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: notion-integration
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Bugzilla Integration",
-          "item": "https://www.lambdatest.com/support/docs/notion-integration/"
+          "item": `${BRAND_URL}/support/docs/notion-integration/`
         }]
       })
     }}
@@ -42,14 +44,14 @@ slug: notion-integration
 
 Notion is an all-in-one workspace for the teams where you can write, plan, collaborate, and get organized. You can take notes, assign tasks, manage projects, and much more. Notion has customized markdown support that integrates kanban boards, tasks, wikis, and databases.
 
-The LambdaTest and Notion integration allows you to perform one-click bug logging while perform [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps). You can mark and share bugs directly from the LambdaTest to your Notion pages.
+The <BrandName /> and Notion integration allows you to perform one-click bug logging while perform [cross browser testing](https://www.lambdatest.com/) of your websites (and web apps). You can mark and share bugs directly from the <BrandName /> to your Notion pages.
 
-## Integrating Notion With LambdaTest Account
+## Integrating Notion With <BrandName /> Account
 ***
 
 ### For existing users: Re-Sync your Integration
 
-If you are already an existing user and have integrated Notion with LambdaTest earlier, then you have to re-sync the integration to update the changes.
+If you are already an existing user and have integrated Notion with <BrandName /> earlier, then you have to re-sync the integration to update the changes.
 
 Follow the below-mentioned method to re-sync the changes:
 
@@ -63,9 +65,9 @@ Follow the below-mentioned method to re-sync the changes:
 
 ### For new users: Install the Integration
 
-> If you already have a LambdaTest integration with any third-party tool then you will be asked to uninstall the existing LambdaTest integration.
+> If you already have a <BrandName /> integration with any third-party tool then you will be asked to uninstall the existing <BrandName /> integration.
 
-1. Login to your LambdaTest account. To install integrations, ensure you have admin or user level access.
+1. Login to your <BrandName /> account. To install integrations, ensure you have admin or user level access.
 
 2. Visit 'Integrations' from the left menu and select **'Notion'** from the **'BUG TRACKER'** section.
 
@@ -85,7 +87,7 @@ Follow the below-mentioned method to re-sync the changes:
 
 <img loading="lazy" src={require('../assets/images/notion-integration/allow-access.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
-The Notion will be successfully integrated with your LambdaTest account. You'll also receive the confirmation message and an email of the same. 
+The Notion will be successfully integrated with your <BrandName /> account. You'll also receive the confirmation message and an email of the same. 
 
 ## Creating A Kanban Board
 ***
@@ -128,7 +130,7 @@ We will perform one-click bug looging while perform Real Time Testing.
 
 Once you click on Create Issue, your bugs will be marked successfully.
 
-6. To view your logged issues, visit **Issue Tracker** from the LambdaTest left menu. You'll notice the marked bugs along with the Test environment details on the right.
+6. To view your logged issues, visit **Issue Tracker** from the <BrandName /> left menu. You'll notice the marked bugs along with the Test environment details on the right.
 
 <img loading="lazy" src={require('../assets/images/notion-integration/visit-issuetracker.webp').default} alt="Image" width="1353" height="622"  className="doc_img"/>
 
@@ -145,7 +147,7 @@ You'll be routed to the Notion dashboard where you can find your marked issues a
 ## Uninstalling The Notion Integration
 ***
 
-1. Login to your LambdaTest account and visit Integrations from the left menu.
+1. Login to your <BrandName /> account and visit Integrations from the left menu.
 
 2. Navigate to 'My Integrations'and click on **'REMOVE'** under the Notion block.
 
@@ -159,12 +161,12 @@ In case you have any doubts or questions, feel free to drop them at our <span cl
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,4 +1,4 @@
-﻿---
+---
 id: playwright-accessibility-test
 title: Automation Tests with Accessibility Tool using Playwright
 sidebar_label: Playwright
@@ -28,28 +28,28 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Testing Test",
-          "item": "https://www.lambdatest.com/support/docs/playwright-accessibility-test/"
+          "item": `${BRAND_URL}/support/docs/playwright-accessibility-test/`
         }]
       })
     }}
 ></script>
-This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using LambdaTest's Accessibility Tool.
+This document walks you through the process of evaluating the accessibility of your website through the execution of automated tests using <BrandName />'s Accessibility Tool.
 
 > **Note :** Accessibility Testing for Playwright is currently only supported on the Chrome browser (not Chromium-based browsers).
 
 ## Prerequisites
 
-- Your [LambdaTest Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
+- Your [<BrandName /> Username and Access key](/support/docs/using-environment-variables-for-authentication-credentials/)
 - Setup your local machine as per your testing framework.
 
 ## Step-by-Step Guide to Trigger Your Test
@@ -58,7 +58,7 @@ This document walks you through the process of evaluating the accessibility of y
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run your tests.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run your tests.
 
 <a href="https://github.com/LambdaTest/lambdatest-accessibility-playwright" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -86,7 +86,7 @@ Configure the desired capabilities based on your test requirements. For example:
 
 ### Step 2: Establish User Authentication
 
-Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [LambdaTest Profile page](https://accounts.lambdatest.com/detail/profile).
+Now, you need to export your environment variables *LT_USERNAME* and *LT_ACCESS_KEY* that are available in the [<BrandName /> Profile page](https://accounts.lambdatest.com/detail/profile).
 
 Run the below mentioned commands in your terminal to setup the CLI and the environment variables.
 
@@ -128,7 +128,7 @@ const capabilities = {
 ```
 
 ### Step 4: Add the following add-on Script
-LambdaTest uses an internal Chrome extension that powers accessibility scans and generates accessibility reports. In your `lambdatest-setup.js` file add these three lines after your page creation command as shown below:
+<BrandName /> uses an internal Chrome extension that powers accessibility scans and generates accessibility reports. In your `lambdatest-setup.js` file add these three lines after your page creation command as shown below:
 
 ```javascript
 // Load the extension for report generation of the accessibility tests

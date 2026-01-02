@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/kaneai-auto-heal
 site_name: LambdaTest
 slug: kaneai-auto-heal
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: kaneai-auto-heal
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Auto-Healing",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-auto-heal/"
+          "item": `${BRAND_URL}/support/docs/kaneai-auto-heal/`
         }]
       })
     }}
@@ -39,7 +41,7 @@ slug: kaneai-auto-heal
 
 ## What is Auto-Heal in KaneAI & HyperExecute?
 
-KaneAI, the GenAI Native testing assistant from LambdaTest, generates automation test scripts across multiple languages and frameworks using natural language instructions. When these scripts are executed via **HyperExecute**, LambdaTest’s high-performance test orchestration platform, they come with an added layer of reliability—the **Auto-Heal** feature.
+KaneAI, the GenAI Native testing assistant from <BrandName />, generates automation test scripts across multiple languages and frameworks using natural language instructions. When these scripts are executed via **HyperExecute**, <BrandName />’s high-performance test orchestration platform, they come with an added layer of reliability—the **Auto-Heal** feature.
 
 **Auto-Heal** ensures your automation scripts remain robust, even when the application under test undergoes changes like modified element locators (IDs, XPaths, CSS selectors). Instead of failing the test immediately when locators break, KaneAI dynamically finds new locators at runtime by leveraging the original natural language instruction used to execute the test case.
 

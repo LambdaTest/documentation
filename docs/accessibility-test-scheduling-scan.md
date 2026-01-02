@@ -1,4 +1,4 @@
-﻿---
+---
 id: accessibility-test-scheduling-scan
 title: Steps to Schedule an Accessibility Scan
 hide_title: false
@@ -27,17 +27,17 @@ import NewTag from '../src/component/newTag';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Steps to Schedule an Accessibility Scan",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-test-scheduling-scan/"
+          "item": `${BRAND_URL}/support/docs/accessibility-test-scheduling-scan/`
         }]
       })
     }}

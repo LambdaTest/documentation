@@ -1,4 +1,4 @@
-﻿---
+---
 id: selenium-default-capabilities
 title: Selenium Default Capabilities
 hide_title: false
@@ -21,17 +21,17 @@ slug: selenium-default-capabilities
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Selenium Capabilities",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Selenium Default Capability",
-          "item": "https://www.lambdatest.com/support/docs/selenium-default-capabilities/"
+          "item": `${BRAND_URL}/support/docs/selenium-default-capabilities/`
         }]
       })
     }}

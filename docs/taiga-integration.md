@@ -1,4 +1,4 @@
-﻿---
+---
 id: taiga-integration
 title: Taiga Integration with TestMu AI
 hide_title: false
@@ -21,6 +21,8 @@ url: https://www.testmu.ai/support/docs/taiga-integration
 site_name: LambdaTest
 slug: taiga-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,27 +32,27 @@ slug: taiga-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Taiga Integration",
-          "item": "https://www.lambdatest.com/support/docs/taiga-integration/"
+          "item": `${BRAND_URL}/support/docs/taiga-integration/`
         }]
       })
     }}
 ></script>
 
-Taiga is an open-source project management platform that supports agile methodologies like Scrum and Kanban. Integrating Taiga with LambdaTest enables you to log bugs directly from your testing sessions into Taiga, streamlining your workflow and enhancing team collaboration.
+Taiga is an open-source project management platform that supports agile methodologies like Scrum and Kanban. Integrating Taiga with <BrandName /> enables you to log bugs directly from your testing sessions into Taiga, streamlining your workflow and enhancing team collaboration.
 
-> Taiga Integration with LambdaTest is available for both freemium and premium plans.
+> Taiga Integration with <BrandName /> is available for both freemium and premium plans.
 
-## Integrate Taiga from your LambdaTest Account
+## Integrate Taiga from your <BrandName /> Account
 
 **Step 1:** Log in to your [LambdaTest](https://accounts.lambdatest.com/) account. Ensure you have Admin or User level access to manage integrations.
 
@@ -84,7 +86,7 @@ After filling in the details, click on the **Install** button to establish the i
 
 **Step 1:** Ensure you have an active project set up in your Taiga account.
 
-**Step 2:** While working on LambdaTest, if you encounter a bug, click on the **Mark as Bug** button available on difderent products.
+**Step 2:** While working on <BrandName />, if you encounter a bug, click on the **Mark as Bug** button available on difderent products.
 
 **Step 3:** In the bug logging form, provide the necessary details such as:
 
@@ -102,9 +104,9 @@ After filling in the details, click on the **Install** button to establish the i
 
 ## Resync Taiga Integration
 
-To ensure that the latest projects and users from your Taiga system are available in LambdaTest, you can resync the integration.
+To ensure that the latest projects and users from your Taiga system are available in <BrandName />, you can resync the integration.
 
-**Step 1:** Navigate to `Settings` -> `Integrations` in your LambdaTest account.
+**Step 1:** Navigate to `Settings` -> `Integrations` in your <BrandName /> account.
 
 **Step 2:** Locate the Taiga integration and click on the **Resync** button.
 
@@ -121,8 +123,8 @@ Once resynced, the latest data will be available for use.
 
 ## Uninstall Taiga Integration
 
-**Step 1:** Navigate to `Settings` -> `Integrations` in your LambdaTest account.
+**Step 1:** Navigate to `Settings` -> `Integrations` in your <BrandName /> account.
 
 **Step 2:** Locate the Taiga integration and click on the **Remove** button  to uninstall the integration.
 
-> That was all you need to know for LambdaTest + Taiga Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock.
+> That was all you need to know for <BrandName /> + Taiga Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock.

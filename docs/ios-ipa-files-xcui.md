@@ -1,4 +1,4 @@
-﻿---
+---
 id: ios-ipa-files-xcui
 title: Creating iOS Applications
 sidebar_label: Creating iOS Applications
@@ -21,6 +21,8 @@ slug: ios-ipa-files-xcui
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Creating iOS apps",
-          "item": "https://www.lambdatest.com/support/docs/ios-ipa-files-xcui/"
+          "item": `${BRAND_URL}/support/docs/ios-ipa-files-xcui/`
         }]
       })
     }}
@@ -72,7 +74,7 @@ You can directly create .ipa files using various export methods (**Ad Hoc, Enter
 
 **Step 6:** Once the export is complete, you will be prompted to specify the location where you want to save the **.ipa** file. Choose the desired location for saving the generated .ipa file.
 
-You can use the generated .ipa file for testing on the **LambdaTest** Platform.
+You can use the generated .ipa file for testing on the **<BrandName />** Platform.
 
 ### Method 2: Using .app Bundles
 
@@ -117,7 +119,7 @@ This allow you to transform the generated **.app** bundle into an **.ipa** file,
 
 ## Step 3: Aligning iOS Deployment Target for XCUITest Testing.
 
-Match the iOS version of your app and test runner **iOS Deployment Target**. If they don't match up, the tests will run locally, but won't be able to run on LambdaTest Real Devices.
+Match the iOS version of your app and test runner **iOS Deployment Target**. If they don't match up, the tests will run locally, but won't be able to run on <BrandName /> Real Devices.
 
 To match the version in your Xcode Project: 
 
@@ -136,12 +138,12 @@ This process will overwrite the **Build settings** at the Project Level to the g
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

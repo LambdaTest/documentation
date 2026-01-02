@@ -1,4 +1,4 @@
-﻿---
+---
 id: smartui-playwright-java-sdk
 title: Integrate SmartUI SDK with Playwright - Java
 sidebar_label: Java
@@ -24,6 +24,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -33,17 +35,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-playwright-java-sdk/"
+          "item": `${BRAND_URL}/support/docs/smartui-playwright-java-sdk/`
         }]
       })
     }}
@@ -59,10 +61,10 @@ This documentation provides step-by-step instructions for developers and QA engi
 ## Prerequisites
 
 - Basic understanding of Command Line Interface and Playwright is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
 ## Steps to run your first test
-Follow these steps to successfully run your first visual regression test on the LambdaTest platform with the SmartUI Playwright SDK integration.
+Follow these steps to successfully run your first visual regression test on the <BrandName /> platform with the SmartUI Playwright SDK integration.
 
 ### Step 1: Create a SmartUI Project
 
@@ -79,14 +81,14 @@ The first step is to create a project with the application in which we will comb
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample for the Java from the LambdaTest GitHub repository to run the tests on the SmartUI.
+Download or Clone the code sample for the Java from the <BrandName /> GitHub repository to run the tests on the SmartUI.
 
 <a href="https://github.com/LambdaTest/smartui-java-playwright-sample" className='github__anchor'><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className='doc_img'/> View on GitHub</a>
 :::
 
 ### Step 3: Install the Dependencies
 
-Update your dependencies in `pom.xml` file Install required modules for LambdaTest SmartUI SDK in your frontend project.
+Update your dependencies in `pom.xml` file Install required modules for <BrandName /> SmartUI SDK in your frontend project.
 
 ```bash
 npm install @lambdatest/smartui-cli @lambdatest/playwright-driver playwright
@@ -525,7 +527,7 @@ SmartUISnapshot.smartuiSnapshot(driver, "Page Loaded");
    npx smartui --version
    ```
 
-4. Check network connectivity to LambdaTest servers
+4. Check network connectivity to <BrandName /> servers
 
 5. Review test execution logs for error messages
 
@@ -646,7 +648,7 @@ If you encounter issues not covered here:
 - Review the [Comprehensive Troubleshooting Guide](/support/docs/smartui-troubleshooting-guide) for detailed solutions
 - Check [SmartUI Configuration Options](/support/docs/smartui-sdk-config-options) documentation
 - See [Handling Dynamic Data](/support/docs/smartui-handle-dynamic-data) for dynamic content issues
-- Visit [LambdaTest Support](https://www.lambdatest.com/support) for additional resources
+- Visit [<BrandName /> Support](https://www.lambdatest.com/support) for additional resources
 - Contact support at support@lambdatest.com or use [24/7 Chat Support](https://www.lambdatest.com/support)
 
 </TabItem>

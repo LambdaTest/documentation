@@ -1,4 +1,4 @@
-﻿---
+---
 id: teamcity-integration
 title: TeamCity Integration With TestMu AI
 hide_title: true
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/teamcity-integration-with-testmu
 site_name: LambdaTest
 slug: teamcity-integration-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,28 +27,28 @@ slug: teamcity-integration-with-testmu
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "TeamCity Integration",
-          "item": "https://www.lambdatest.com/support/docs/teamcity-integration-with-testmu/"
+          "item": `${BRAND_URL}/support/docs/teamcity-integration-with-testmu/`
         }]
       })
     }}
 ></script>
 
-# TeamCity Integration With LambdaTest
+# TeamCity Integration With <BrandName />
 * * *
 
 Developed by JetBrains, TeamCity is Java-based build management to help you with continuous integration and continuous deployment. With TeamCity, you can deploy your automated pipeline quicker, pacing your go-to-market launch.
 
-LambdaTest now integrates with TeamCity to boost your go-to-market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on the cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down your test cycles.
+<BrandName /> now integrates with TeamCity to boost your go-to-market delivery. Perform automated cross browser testing with <BrandName /> to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on the cloud. Perform automation testing in parallel with <BrandName />’s Selenium grid to drastically trim down your test cycles.
 
 ## Prerequisites
 * * *
@@ -56,8 +58,8 @@ LambdaTest now integrates with TeamCity to boost your go-to-market delivery. Per
 
 - A GIT repository.
 
-- **LambdaTest Authentication Credentials**
-    Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+- **<BrandName /> Authentication Credentials**
+    Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
     * **For Linux/Mac:**
 
@@ -77,7 +79,7 @@ LambdaTest now integrates with TeamCity to boost your go-to-market delivery. Per
 
     ---
 
-## Integrating LambdaTest with TeamCity
+## Integrating <BrandName /> with TeamCity
 * * *
 **Step 1:** Go to your TeamCity server URL.
 
@@ -101,19 +103,19 @@ LambdaTest now integrates with TeamCity to boost your go-to-market delivery. Per
 
 <img loading="lazy" src={require('../assets/images/teamcity-integration/teamcity-3.webp').default} alt="Go to Build Step page" width="983" height="586" className="doc_img"/>
 
-**Step 8:** Save build step and go to Parameters and create two environment variables as below where LT_USERNAME and LT_ACCESS_KEY will be your authentication credentials for LambdaTest.
+**Step 8:** Save build step and go to Parameters and create two environment variables as below where LT_USERNAME and LT_ACCESS_KEY will be your authentication credentials for <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/teamcity-integration/teamcity-4.webp').default} alt="Create two environment variables"  width="1042" height="446" className="doc_img"/>
 
-**Step 9:** Go to Project Dashboard and Run your project. Now, notice the status of test running successfully on LambdaTest Grid with the below log.
+**Step 9:** Go to Project Dashboard and Run your project. Now, notice the status of test running successfully on <BrandName /> Grid with the below log.
 
 <img loading="lazy" src={require('../assets/images/teamcity-integration/teamcity-5.webp').default} alt="Go to Project Dashboard and Run your project" width="1269" height="258" className="doc_img"/>
 
 ## Running Test in Parallel
 * * *
-Parallel Testing is one of the most demanding features of LambdaTest Selenium Grid. By parallel testing, you can run more than one test case, simultaneously. This means that Parallel testing would allow you to execute numerous automation test cases altogether. So you execute a single test scenario across different browsers or could run different test scenarios across the same browser but with different browser versions.
+Parallel Testing is one of the most demanding features of <BrandName /> Selenium Grid. By parallel testing, you can run more than one test case, simultaneously. This means that Parallel testing would allow you to execute numerous automation test cases altogether. So you execute a single test scenario across different browsers or could run different test scenarios across the same browser but with different browser versions.
 
-> Clone our [GitHub repository for TeamCity](https://github.com/LambdaTest/protractor-selenium-teamcity-sample.git) to execute your first parallel test of TeamCity + LambdaTest Integration.
+> Clone our [GitHub repository for TeamCity](https://github.com/LambdaTest/protractor-selenium-teamcity-sample.git) to execute your first parallel test of TeamCity + <BrandName /> Integration.
 
 After you clone our GitHub repository, execute the below command in cmd/terminal.
 
@@ -121,7 +123,7 @@ After you clone our GitHub repository, execute the below command in cmd/terminal
 npm run parallel
 ```
 
-The above command will trigger the execution of below code for performing parallel testing at LambdaTest Selenium Grid.
+The above command will trigger the execution of below code for performing parallel testing at <BrandName /> Selenium Grid.
 
 ```js
 //parallel.conf.js file
@@ -188,17 +190,17 @@ exports.config.multiCapabilities.forEach(function(caps){
 });
 ```
 
-Kudos! Now you can Deploy your code in a reliable manner at scale using TeamCity integration with LambdaTest, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing! 🙂
+Kudos! Now you can Deploy your code in a reliable manner at scale using TeamCity integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

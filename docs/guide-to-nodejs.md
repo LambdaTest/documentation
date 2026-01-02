@@ -1,4 +1,4 @@
-﻿---
+---
 id: guide-to-nodejs
 title: Guide:Running NodeJS Tests On Cloud Selenium Grid
 hide_title: true
@@ -19,6 +19,8 @@ url: https://www.testmu.ai/support/docs/quick-guide-to-run-node-js-tests-on-test
 site_name: LambdaTest
 slug: quick-guide-to-run-node-js-tests-on-testmu-selenium-grid
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +30,17 @@ slug: quick-guide-to-run-node-js-tests-on-testmu-selenium-grid
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Quick Guide To Run Node.js Tests On Cloud Selenium Grid",
-          "item": "https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-testmu-selenium-grid/"
+          "item": `${BRAND_URL}/support/docs/quick-guide-to-run-node-js-tests-on-testmu-selenium-grid/`
         }]
       })
     }}
@@ -47,7 +49,7 @@ slug: quick-guide-to-run-node-js-tests-on-testmu-selenium-grid
 # Quick Guide To Run Node.js Tests On Cloud Selenium Grid
 ***
 
-LambdaTest’s [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) enables you to perform end-to-end automation tests on a secure, reliable, and scalable Selenium cloud infrastructure. You can run your Node.js automation test scripts on 3000+ browser and operating system environments giving you higher test coverage and significantly less built times. This document will help you quickly get started with running your Node.js test scripts on the LambdaTest Selenium automation grid.
+<BrandName />’s [Selenium grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/) enables you to perform end-to-end automation tests on a secure, reliable, and scalable Selenium cloud infrastructure. You can run your Node.js automation test scripts on 3000+ browser and operating system environments giving you higher test coverage and significantly less built times. This document will help you quickly get started with running your Node.js test scripts on the <BrandName /> Selenium automation grid.
 
 ## Prerequisites
 ***
@@ -70,7 +72,7 @@ The next step is to install Selenium dependencies for Node.js using npm. Here’
 ## Sample Node.js & Selenium Test To Get You Started
 ***
 
-Once you have installed the necessary dependencies, you are all set to run your Node.js automation scripts on the LambdaTest Selenium grid. To get started, you can try out the code below. It’s a simple Node.js script that opens up Google.com, searches LambdaTest in Google search, and then outputs the search result page's title. You can also fork it from our [Node.js GitHub repository](https://github.com/LambdaTest/nodejs-selenium-sample). Make sure to create the JS file in the same folder where you have downloaded Selenium.
+Once you have installed the necessary dependencies, you are all set to run your Node.js automation scripts on the <BrandName /> Selenium grid. To get started, you can try out the code below. It’s a simple Node.js script that opens up Google.com, searches <BrandName /> in Google search, and then outputs the search result page's title. You can also fork it from our [Node.js GitHub repository](https://github.com/LambdaTest/nodejs-selenium-sample). Make sure to create the JS file in the same folder where you have downloaded Selenium.
 
 
 ## Sample Node.js & Selenium Automation Script
@@ -160,17 +162,17 @@ To set up your own choice of environment for the test in the code, you can lever
 <a href="https://www.lambdatest.com/capabilities-generator">LambdaTest Capability Generator Tool</a>
 </div>
 
-> **Tear Down**: The tear down method helps the LambdaTest platform understand when the test’s execution is finished. It’s important to tear down each test, or else it will give timeout errors.
+> **Tear Down**: The tear down method helps the <BrandName /> platform understand when the test’s execution is finished. It’s important to tear down each test, or else it will give timeout errors.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

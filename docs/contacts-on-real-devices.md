@@ -1,4 +1,4 @@
-﻿---
+---
 id: contacts-on-real-devices
 title: Access your Contacts
 sidebar_label: Contacts
@@ -25,6 +25,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,25 +36,25 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Access Contacts on Real Devices",
-          "item": "https://www.lambdatest.com/support/docs/contacts-on-real-devices/"
+          "item": `${BRAND_URL}/support/docs/contacts-on-real-devices/`
         }]
       })
     }}
 ></script>
-With LambdaTest Real Devices, you can interact with the built-in Contacts app on our real devices to test your app's functionality. To support diverse testing, we've included sample contact data for you to use.
+With <BrandName /> Real Devices, you can interact with the built-in Contacts app on our real devices to test your app's functionality. To support diverse testing, we've included sample contact data for you to use.
 
 ## Supported Devices
-LambdaTest supports access to the dummy Contacts on the following devices:
+<BrandName /> supports access to the dummy Contacts on the following devices:
 
 - Devices running Android 10 and higher(Except Tabs).
 - Devices running iOS 13 and higher.

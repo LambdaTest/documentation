@@ -1,4 +1,4 @@
-﻿---
+---
 id: uipath-integration
 title: UiPath Integration
 hide_title: true
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/uipath-integration
 site_name: LambdaTest
 slug: uipath-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +26,17 @@ slug: uipath-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "UiPath Integration",
-          "item": "https://www.lambdatest.com/support/docs/uipath-integration/"
+          "item": `${BRAND_URL}/support/docs/uipath-integration/`
         }]
       })
     }}
@@ -47,10 +49,10 @@ slug: uipath-integration
 
 UiPath is a leading robotic process automation (RPA) platform powered by artificial intelligence (AI), designed to help businesses streamline their operations by automating repetitive, time-consuming tasks. By leveraging AI, UiPath enables organizations to achieve greater efficiency, reduce errors, and focus on more strategic, value-driven activities.
 
-By integrating UiPath with LambdaTest's real device cloud, you can enhance your mobile test automation. 
+By integrating UiPath with <BrandName />'s real device cloud, you can enhance your mobile test automation. 
 
 
-## Integrating UiPath With LambdaTest
+## Integrating UiPath With <BrandName />
 ***
 
 **Step 1:** Log in to your UiPath account. From the right side, click on **Download Studio Desktop**.
@@ -99,18 +101,18 @@ By integrating UiPath with LambdaTest's real device cloud, you can enhance your 
 
 <img loading="lazy" src={require('../assets/images/uipath-integration/uipath-eleven.webp').default} alt="add" width="1346" height="647" className="doc_img"/>
 
-> That was all you need to know for LambdaTest + UiPath Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + UiPath Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

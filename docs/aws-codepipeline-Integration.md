@@ -1,4 +1,4 @@
-﻿---
+---
 id: aws-codepipeline-Integration
 title: How to integrate AWS CodePipeline with TestMu AI
 hide_title: true
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/aws-codepipeline-integration-with-testmu
 site_name: LambdaTest
 slug: aws-codepipeline-integration-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 ***
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,24 +36,24 @@ slug: aws-codepipeline-integration-with-testmu
           "@type": "ListItem",
           "position": 4,
           "name": "AWS CodePipeline Integration",
-          "item": "https://www.lambdatest.com/support/docs/aws-codepipeline-integration-with-testmu/"
+          "item": `${BRAND_URL}/support/docs/aws-codepipeline-integration-with-testmu/`
         }]
       })
     }}
 ></script>
-# AWS CodePipeline Integration With LambdaTest
+# AWS CodePipeline Integration With <BrandName />
 
 AWS CodePipeline is a cloud-based continuous delivery platform for fully automating your release pipelines. Provides an intuitive interface for configuring & modeling different stages of release cycles, so you can envision how your code changes would look when pushed across these different changes. You can also track your pipeline in real-time, and look into the pipeline history to understand the timestamps involved in the execution of various pipelines.
 
-LambdaTest integration with AWS CodePipeline will help you perform automated cross browser testing through a Selenium Grid offering 3000+ real browsers, browser versions. Now, not only can you commit changes to your code using AWS CodePipeline, but you can also validate any UI/UX anomalies of your web application through a wide variety of browsers using LambdaTest, a cloud-based cross browser testing tool.
+<BrandName /> integration with AWS CodePipeline will help you perform automated cross browser testing through a Selenium Grid offering 3000+ real browsers, browser versions. Now, not only can you commit changes to your code using AWS CodePipeline, but you can also validate any UI/UX anomalies of your web application through a wide variety of browsers using <BrandName />, a cloud-based cross browser testing tool.
 
 ## Prerequisite
 ***
 
 * Login details in [AWS CodePipeline CI](https://aws.amazon.com/codepipeline/).
 * A GitHub repository. Here is our sample GitHub repository for [AWS CodePipeline](https://github.com/LambdaTest/protractor-selenium-awscodepipeline-sample.git).
-* **LambdaTest Authentication Credentials**   
-   Be aware of your LambdaTest authentication credentials, i.e., your LambdaTest username, access key,a and HubURL. You need to set them up as your environment variables. You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+* **<BrandName /> Authentication Credentials**   
+   Be aware of your <BrandName /> authentication credentials, i.e., your <BrandName /> username, access key,a and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
    - For Linux/Mac:
     ```
@@ -65,7 +67,7 @@ LambdaTest integration with AWS CodePipeline will help you perform automated cro
      $ set LT_ACCESS_KEY= {YOUR_LAMBDATEST_ACCESS_KEY}
      ```
 
-## Integrating Your LambdaTest Account With AWS CodePipeline
+## Integrating Your <BrandName /> Account With AWS CodePipeline
 ***
 
 **Step 1:** Login to your AWS CodePipeline instance. Visit the Pipelines page and create a new pipeline.
@@ -123,7 +125,7 @@ artifacts:
 discard-paths: yes
 ```
 
-**Step 8:** Monitor your test being triggered on the LambdaTest platform. You will observe the below output generated.
+**Step 8:** Monitor your test being triggered on the <BrandName /> platform. You will observe the below output generated.
 
 ```
 [Container] 2019/07/09 05:43:39 Running command echo Build started on `date` 
@@ -140,18 +142,18 @@ Finished in 15.406 seconds
 [05:44:04] I/launcher - chrome67.0 #01 passed 
 ```
 
-Kudos! Now, you can rapidly commit changes and validate them for UI/UX anomalies by executing automated cross browser testing using LambdaTest Selenium Grid. Happy Testing! 🙂
+Kudos! Now, you can rapidly commit changes and validate them for UI/UX anomalies by executing automated cross browser testing using <BrandName /> Selenium Grid. Happy Testing! 🙂
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
       <a className="breadcrumbs__link" href="/support/docs/">Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
-      <span className="breadcrumbs__link">AWS CodePipeline Integration With LambdaTest</span>
+      <span className="breadcrumbs__link">AWS CodePipeline Integration With <BrandName /></span>
     </li>
   </ul>
 </nav>

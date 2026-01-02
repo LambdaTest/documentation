@@ -1,4 +1,4 @@
-﻿---
+---
 id: mantis-integration
 title: Mantis Integration
 hide_title: true
@@ -21,6 +21,8 @@ url: https://www.testmu.ai/support/docs/mantis-integration
 site_name: LambdaTest
 slug: mantis-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ slug: mantis-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Mantis Integration",
-          "item": "https://www.lambdatest.com/support/docs/mantis-integration/"
+          "item": `${BRAND_URL}/support/docs/mantis-integration/`
         }]
       })
     }}
@@ -50,21 +52,21 @@ slug: mantis-integration
 
 Mantis is a free and an open source bug tracker. Mantis supports multiple OS such as Windows, Linux, and macOS, from the server side. Along with platform compatibility, It also offers cross browser compatibility on Google Chrome, Mozilla Firefox, Opera, Safari and IE10+. Mantis is highly customizable, you can customize your issue fields, workflows and notifications. You can also declare access as per role based in your organization. All these features along with email notifications to keep you updated on everything regarding the project makes Mantis a great choice as a project management tool.
 
-LambdaTest integration with Mantis helps you in filing issues to your project in Mantis directly from LambdaTest platform. With one-click integration you can push annotated issues to the project of your choice, assign it to the required team mate, and attach necessary screenshots. You can do all that while in the middle of a test session in LambdaTest platform. The fields populated by you when marking as bug through LambdaTest are displayed as information on the Mantis for a testing instance.
+<BrandName /> integration with Mantis helps you in filing issues to your project in Mantis directly from <BrandName /> platform. With one-click integration you can push annotated issues to the project of your choice, assign it to the required team mate, and attach necessary screenshots. You can do all that while in the middle of a test session in <BrandName /> platform. The fields populated by you when marking as bug through <BrandName /> are displayed as information on the Mantis for a testing instance.
 
-> Mantis Integration with LambdaTest, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.
+> Mantis Integration with <BrandName />, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.
 
-## How To Establish Integration With Mantis From Your LambdaTest Account?
+## How To Establish Integration With Mantis From Your <BrandName /> Account?
 * * *
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on ‘ADD’ under the block that says ‘Mantis’.
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-1.webp').default} alt="mantis Integration" width="1348" height="640" className="doc_img"/>
 
-**Step 4:** Once you click on install, you will be redirected to the below screen. You will be asked to provide your Mantis API Token & Mantis Site Address in the highlighted fields to establish LambdaTest Integration with Mantis.
+**Step 4:** Once you click on install, you will be redirected to the below screen. You will be asked to provide your Mantis API Token & Mantis Site Address in the highlighted fields to establish <BrandName /> Integration with Mantis.
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-7.webp').default} alt="Mantis integration API" width="1365" height="649" className="doc_img"/>
 
@@ -92,7 +94,7 @@ Your "Mantis Site Address" would be the URL for the instance of your project on 
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-4-2.webp').default} alt="mantis integration account" width="1365" height="649" className="doc_img"/>
 
-Paste this API token into the field provided at LambdaTest & hit the ‘Next’ button. You are all set to experience one-click bug logging to share your issues directly from your LambdaTest account to your project on Mantis.
+Paste this API token into the field provided at <BrandName /> & hit the ‘Next’ button. You are all set to experience one-click bug logging to share your issues directly from your <BrandName /> account to your project on Mantis.
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-9.webp').default} alt="Mantis integration install" width="1365" height="649" className="doc_img"/>
 
@@ -139,7 +141,7 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-14.webp').default} alt="mantis integration issue" width="1365" height="649" className="doc_img"/>
 
-**Step 8:** As you click on the task you will notice all the data you provided in LambdaTest already presented in the task under task details. LambdaTest automatically includes test environment details and related screenshots in the ticket as attachments.
+**Step 8:** As you click on the task you will notice all the data you provided in <BrandName /> already presented in the task under task details. <BrandName /> automatically includes test environment details and related screenshots in the ticket as attachments.
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-15.webp').default} alt="mantis integration issue" width="1350" height="650" className="doc_img"/>
 
@@ -147,25 +149,25 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 * * *
 > You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to `uninstall` your current integration. Here is how you can do that.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
-**Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on ‘REMOVE’. You can find the remove button right under the ‘Mantis’ block which would be highlighted with a green tick.
 
 <img loading="lazy" src={require('../assets/images/mantis-integration/mantis-integration-16.webp').default} alt="mantis integration remove" width="1337" height="647" className="doc_img"/>
 
-> That was all you need to know for LambdaTest + Mantis Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + Mantis Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

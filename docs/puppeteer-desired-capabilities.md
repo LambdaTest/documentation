@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/capabilities-for-puppeteer
 site_name: LambdaTest
 slug: capabilities-for-puppeteer
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -24,17 +26,17 @@ slug: capabilities-for-puppeteer
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Execution Setup",
-          "item": "https://www.lambdatest.com/support/docs/capabilities-for-puppeteer/"
+          "item": `${BRAND_URL}/support/docs/capabilities-for-puppeteer/`
         }]
       })
     }}
@@ -44,7 +46,7 @@ slug: capabilities-for-puppeteer
 
 ***
 
-The LambdaTest Capability Generator allows you to automatically create the capabilities class needed to run your Puppeteer automation scripts on LambdaTest. Here are a few capabilities that you can configure to run your Puppeteer tests. 
+The <BrandName /> Capability Generator allows you to automatically create the capabilities class needed to run your Puppeteer automation scripts on <BrandName />. Here are a few capabilities that you can configure to run your Puppeteer tests. 
 
 | Key | Expected Values | Description | Capability |
 | -------- | -----| ------- | ----------------- |
@@ -71,12 +73,12 @@ The LambdaTest Capability Generator allows you to automatically create the capab
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

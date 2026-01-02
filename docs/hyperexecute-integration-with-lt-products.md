@@ -1,4 +1,4 @@
-﻿---
+---
 id: integration-lt-products
 title: Integration With TestMu AI Products
 hide_title: true
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/he-integration-with-testmu-products
 site_name: LambdaTest
 slug: he-integration-with-testmu-products
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +25,17 @@ slug: he-integration-with-testmu-products
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Integration with LambdaTest Products",
-          "item": "https://www.lambdatest.com/support/docs/he-integration-with-testmu-products/"
+          "item": `${BRAND_URL}/support/docs/he-integration-with-testmu-products/`
         }]
       })
     }}
@@ -41,7 +43,7 @@ slug: he-integration-with-testmu-products
 
 # HyperExecute Integrations with Products
 
-You can now integrate HyperExecute with other LambdaTest products like Smart UI testing. You can go through the links below to see the integrations we offer at the moment. 
+You can now integrate HyperExecute with other <BrandName /> products like Smart UI testing. You can go through the links below to see the integrations we offer at the moment. 
 
 <img loading="lazy" src={require('../assets/images/hyperexecute/integration/lt-products/hyp-lt-products.png').default} alt="automation-dashboard"  width="1920" height="868" className="doc_img"/>
 
@@ -82,18 +84,18 @@ You can now integrate HyperExecute with other LambdaTest products like Smart UI 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">
-       Integration With LambdaTest Products
+       Integration With <BrandName /> Products
       </span>
     </li>
   </ul>

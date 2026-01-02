@@ -27,7 +27,7 @@ KaneAI's mobile app authoring support various advanced capabilities for authorin
 
 ## Disable Screenshot Block
 
-If your app doesn't allow screenshot to be taken of the app and you want to test your app's performance without any hindrance, you can use this capability. It will disable the screenshot block check added in the application to allow authoring test cases in LambdaTest.
+If your app doesn't allow screenshot to be taken of the app and you want to test your app's performance without any hindrance, you can use this capability. It will disable the screenshot block check added in the application to allow authoring test cases in <BrandName />.
 
 You need to ensure to enable it from advanced settings before authoring your test on KaneAI. You can find more details about this capability [here](/support/docs/disable-screenshot-block/).
 
@@ -39,7 +39,7 @@ You can find more details about this capability [here](/support/docs/biometric-a
 
 ## Image Injection
 
-Camera Image Injection feature allows you to author tests with **image capturing, QR code scanning**, and **barcode scanning** functionalities in your app across **real devices** on the LambdaTest.
+Camera Image Injection feature allows you to author tests with **image capturing, QR code scanning**, and **barcode scanning** functionalities in your app across **real devices** on the <BrandName />.
 
 You need to ensure to enable it from advanced settings before authoring your test on KaneAI. Once enabled, you will get an option to inject image in "slash" commands in-session which needs to be used before you select the option to trigger camera API in your application workflow.
 
@@ -49,7 +49,7 @@ You can find more details about this capability [here](/support/docs/camera-imag
 
 ## Video Injection
 
-Video Injection feature enables you to test video-based functionalities such as **live streaming, real-time video capture,** and **video processing** in your app across **real devices** on the LambdaTest.
+Video Injection feature enables you to test video-based functionalities such as **live streaming, real-time video capture,** and **video processing** in your app across **real devices** on the <BrandName />.
 
 You need to ensure to enable it from advanced settings before authoring your test on KaneAI. Once enabled, you will get an option to inject video in "slash" commands in-session which needs to be used before you select the option to trigger camera API in your application workflow.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 id: bitrise-integration-xcuitest
 title: Integrating TestMu AI as a Bitrise CI/CD Step [XCUITest] 
 hide_title: true
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/bitrise-integration-xcuitest
 site_name: LambdaTest
 slug: bitrise-integration-xcuitest
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -24,17 +26,17 @@ slug: bitrise-integration-xcuitest
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Integrating LambdaTest as a Bitrise CI/CD Step [XCUITest]",
-          "item": "https://www.lambdatest.com/support/docs/bitrise-integration-xcuitest/"
+          "name": "Integrating <BrandName /> as a Bitrise CI/CD Step [XCUITest]",
+          "item": `${BRAND_URL}/support/docs/bitrise-integration-xcuitest/`
         }]
       })
     }}
@@ -45,12 +47,12 @@ slug: bitrise-integration-xcuitest
 
 Bitrise offers a mobile CI/CD platform as a service (PaaS) to accelerate the automation of your software development projects. It provides different mobile-first features like exhaustive mobile stack coverage, store code anywhere in cloud or on-premise, and zero hardware setup that make building, testing, and deploying faster and easier.
 
-Using LambdaTest with Bitrise, you can effortlessly perform [XCUI testing](https://www.lambdatest.com/xcuitest-app-testing) of your mobile apps on an [online device farm](https://www.lambdatest.com/online-device-farm) of real Android devices.
+Using <BrandName /> with Bitrise, you can effortlessly perform [XCUI testing](https://www.lambdatest.com/xcuitest-app-testing) of your mobile apps on an [online device farm](https://www.lambdatest.com/online-device-farm) of real Android devices.
 
 ## Prerequisites
 ***
 
-1. Ensure you have access to LambdaTest [real device cloud](https://www.lambdatest.com/real-device-cloud). If not, please [contact sales](https://www.lambdatest.com/contact-us).
+1. Ensure you have access to <BrandName /> [real device cloud](https://www.lambdatest.com/real-device-cloud). If not, please [contact sales](https://www.lambdatest.com/contact-us).
 
 2. A Bitrise account.
 
@@ -60,13 +62,13 @@ Using LambdaTest with Bitrise, you can effortlessly perform [XCUI testing](https
 If you are getting started with Bitrise CI, please refer to our documentation on [running Appium tests in Bitrise CI](/support/docs/bitrise-integration/). 
 :::
 
-## Configuring The LambdaTest App Automate - XCUI Step In Bitrise
+## Configuring The <BrandName /> App Automate - XCUI Step In Bitrise
 ***
-1. Use the search bar to find **LambdaTest App Automate - XCUITest**.
+1. Use the search bar to find **<BrandName /> App Automate - XCUITest**.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/bitrise-integration-cicd.webp').default} alt="Bitrise Integration CI/CD" width="1444" height="703"  className="doc_img"/>
 
-2. Click **LambdaTest App Automate- XCUITest** card.
+2. Click **<BrandName /> App Automate- XCUITest** card.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/bitrise-integration.webp').default} alt="Bitrise Integration CI/CD Dashboard" width="1444" height="703"  className="doc_img"/>
 
@@ -76,13 +78,13 @@ If you are getting started with Bitrise CI, please refer to our documentation on
 
 3. In **Input Variables**, enter **App ipa path** and **Test suite ipa path**.
 
-> You can add a public link if your files are accessible through public link. In case, you don't an apk link handy, you can use LambdaTest’s sample application Proverbial for running your first test.
+> You can add a public link if your files are accessible through public link. In case, you don't an apk link handy, you can use <BrandName />’s sample application Proverbial for running your first test.
 * [Proverbial iOS](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios.ipa)
 * [XCUITest Suite](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_ios_xcuitest.ipa)
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/bitrise-integration-cicd-1.webp').default} alt="Bitrise Integration CI/CD Dashboard" width="1444" height="703"  className="doc_img"/>
 
-* In **LambdaTest username**, click Select secret variable.
+* In **<BrandName /> username**, click Select secret variable.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/bitrise-integration-cicd-2.webp').default} alt="Bitrise Integration CI/CD Dashboard" width="1444" height="703"  className="doc_img"/>
 
@@ -98,7 +100,7 @@ Other options:
 |Build Name  |   TYPE: STRING<br/> DEFAULT: Untitled<br/> `iOS Small Run` |  You can group your tests like a job containing multiple tests. | 
 | Queue Timeout |  TYPE: STRING<br/> DEFAULT: 600<br/> `300` | Enter the time in seconds after which you want your build to timeout from queue.  | 
 | Idle Timeout |  TYPE: STRING<br/> DEFAULT: 120<br/> `120` | Enter the time in seconds for maximum running time on a test in the build. | 
-| Tunnel |  TYPE: BOOLEAN<br/> `True`<br/>OR<br/> `False` | To test local applications with LambdaTest. | 
+| Tunnel |  TYPE: BOOLEAN<br/> `True`<br/>OR<br/> `False` | To test local applications with <BrandName />. | 
 | Tunnel name |  TYPE: STRING<br/> `RabbitHole` | Name of the tunnel. | 
 | Device logs |  TYPE: BOOLEAN<br/> DEFAULT: FALSE<br/>`True`<br/>OR<br/> `False`| Enable Device Logs that will show information on the actions performed by the device. | 
 | Network logs |   TYPE: BOOLEAN<br/> DEFAULT: FALSE<br/>`True`<br/>OR<br/> `False` | Enable Network Logs that will show the information on the data transmitted & received by the device. | 
@@ -106,7 +108,7 @@ Other options:
 
 :::info
 
-[XCUI Testing On LambdaTest](/support/docs/getting-started-with-xcuitest/#capabilities-supported)
+[XCUI Testing On <BrandName />](/support/docs/getting-started-with-xcuitest/#capabilities-supported)
 
 [Automation Capabilities Generator For Selenium and Appium](https://www.lambdatest.com/capabilities-generator/)
 :::
@@ -119,19 +121,19 @@ Other options:
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/bitrise-integration-cicd-build.webp').default} alt="Bitrise Integration CI/CD Dashboard" width="1444" height="703"  className="doc_img"/>
 
-7. Once the build process is complete, visit **LambdaTest App Automation Dashboard** to view your test results.
+7. Once the build process is complete, visit **<BrandName /> App Automation Dashboard** to view your test results.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/lambdatest-xcuitest.webp').default} alt="Bitrise Integration CI/CD Dashboard" width="1444" height="703"  className="doc_img"/>
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

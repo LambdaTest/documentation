@@ -1,4 +1,4 @@
-﻿---
+---
 id: getting-started-with-hyperexecute
 title: Getting Started with HyperExecute
 hide_title: false
@@ -27,6 +27,8 @@ slug: getting-started-with-hyperexecute
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import HyperExecuteSupportedLanguageDocs from '../src/component/SupportedLanguages/HyperExecuteSupportedLanguageDocs';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -36,17 +38,17 @@ import HyperExecuteSupportedLanguageDocs from '../src/component/SupportedLanguag
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started With HyperExecute on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-hyperexecute"
+          "item": `${BRAND_URL}/support/docs/getting-started-with-hyperexecute`
         }]
       })
     }}
@@ -65,7 +67,7 @@ If you want to learn more about HyperExecute and how it can enable your team, th
 
 ## What is HyperExecute?
 
-HyperExecute by LambdaTest is a cutting-edge, AI-powered platform designed for DevOps teams and QA engineers to significantly accelerate software testing pipelines. HyperExecute **replaces traditional hub-and-node test grids** with advanced orchestration techniques, **eliminating network latency and optimizing resource usage**. With HyperExecute:
+HyperExecute by <BrandName /> is a cutting-edge, AI-powered platform designed for DevOps teams and QA engineers to significantly accelerate software testing pipelines. HyperExecute **replaces traditional hub-and-node test grids** with advanced orchestration techniques, **eliminating network latency and optimizing resource usage**. With HyperExecute:
 
   - **Slash your time-to-market** with parallel execution that distributes tests optimally across available resources improving efficiency.
   - **Make data-driven testing decisions** using historical performance trends that reveal patterns and help optimize your testing strategy
@@ -173,7 +175,7 @@ Now that you've set up HyperExecute and run your first test, explore these resou
   <a href="/support/docs/integration-with-hyperexecute/">
     <div className="support_inners">
       <h3>Integrations</h3>
-      <p>Know how to setup with your CI/CD, Project management tools and LambdaTest products.</p>
+      <p>Know how to setup with your CI/CD, Project management tools and <BrandName /> products.</p>
     </div>
   </a>
 </div>
@@ -194,12 +196,12 @@ Deploy our cloud-native test orchestration platform directly from your trusted m
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,4 +1,4 @@
-﻿---
+---
 id: getting-started-with-mobile-app-real-time-testing
 title: Getting started with Mobile App Real Time Testing
 hide_title: false
@@ -20,6 +20,8 @@ url: https://www.testmu.ai/support/docs/getting-started-with-mobile-app-real-tim
 site_name: LambdaTest
 slug: getting-started-with-mobile-app-real-time-testing
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,22 +31,22 @@ slug: getting-started-with-mobile-app-real-time-testing
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Real Time Mobile App Testing",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-mobile-app-real-time-testing/"
+          "item": `${BRAND_URL}/support/docs/getting-started-with-mobile-app-real-time-testing/`
         }]
       })
     }}
 ></script>
-Real-Time Mobile App Testing allows you to test mobile applications directly on real devices in real time. It ensures that your app functions as intended, performs optimally, and provides a seamless user experience across various mobile operating systems such as Android and iOS. With LambdaTest, developers, testers, and QA professionals can interact with their mobile applications as end users would, on actual devices, without needing to manage an in-house device lab.
+Real-Time Mobile App Testing allows you to test mobile applications directly on real devices in real time. It ensures that your app functions as intended, performs optimally, and provides a seamless user experience across various mobile operating systems such as Android and iOS. With <BrandName />, developers, testers, and QA professionals can interact with their mobile applications as end users would, on actual devices, without needing to manage an in-house device lab.
 
 ## Launch the Virtual Machine
 
@@ -68,6 +70,6 @@ The Real-Time Testing dashboard provides an intuitive interface for managing you
 
 - **Tunnel :** For testing on environments that are not publicly accessible, configure the Tunnel settings to enable testing on staging or local sites.
 
-- **Switch to Real Devices :** If you need to perform tests on physical devices, click on the Switch to Real Devices link to access LambdaTest's real device cloud.
+- **Switch to Real Devices :** If you need to perform tests on physical devices, click on the Switch to Real Devices link to access <BrandName />'s real device cloud.
 
 - **Start Button :** Located on the right side of the URL field, this button initializes the testing session once you have chosen your device and browser configuration.

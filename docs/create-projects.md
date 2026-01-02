@@ -1,4 +1,4 @@
-﻿---
+---
 id: create-projects
 title: Create Projects
 hide_title: true
@@ -21,17 +21,17 @@ slug: create-projects
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Create Projects",
-          "item": "https://www.lambdatest.com/support/docs/create-projects/"
+          "item": `${BRAND_URL}/support/docs/create-projects/`
         }]
       })
     }}
@@ -60,12 +60,12 @@ Creating projects within Test Manager is the foundational step in organizing and
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

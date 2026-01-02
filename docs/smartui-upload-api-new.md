@@ -1,4 +1,4 @@
-﻿---
+---
 id: smartui-upload-api-v2
 title: Getting Started With Uploading Screenshots through API for Visual Regression Testing
 sidebar_label: Upload through API
@@ -25,6 +25,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -34,17 +36,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "WebDriverIO With Appium",
-          "item": "https://www.lambdatest.com/support/docs/smartui-upload-api-v2/"
+          "item": `${BRAND_URL}/support/docs/smartui-upload-api-v2/`
         }]
       })
     }}
@@ -60,7 +62,7 @@ This is the guide to setup the **version 2** of the SmartUI upload API.
 - Go to [`LambdaTest SmartUI`](https://smartui.lambdatest.com/) and login along with your credentials.
 - Copy `LT_USERNAME` and `LT_ACCESS_KEY` credentials from `Access Key` button on the top right of the dashboard.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest SmartUI platform -
+The following steps will guide you in running your first Visual Regression test on <BrandName /> SmartUI platform -
 
 ### Create a SmartUI Project
 

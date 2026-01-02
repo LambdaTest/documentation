@@ -24,17 +24,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Testing Your First AI Agent",
-          "item": "https://www.lambdatest.com/support/docs/testing-your-first-ai-agent"
+          "item": `${BRAND_URL}/support/docs/testing-your-first-ai-agent`
         }]
       })
     }}

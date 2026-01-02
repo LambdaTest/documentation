@@ -1,4 +1,4 @@
-﻿---
+---
 id: espresso-bitrise
 title: How to integrate your Espresso tests with Bitrise CI
 hide_title: true
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/run-espresso-tests-in-bitrise
 site_name: LambdaTest
 slug: run-espresso-tests-in-bitrise
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -24,17 +26,17 @@ slug: run-espresso-tests-in-bitrise
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Running Espresso Tests In Bitrise CI",
-          "item": "https://www.lambdatest.com/support/docs/run-espresso-tests-in-bitrise/"
+          "item": `${BRAND_URL}/support/docs/run-espresso-tests-in-bitrise/`
         }]
       })
     }}
@@ -45,12 +47,12 @@ slug: run-espresso-tests-in-bitrise
 
 Bitrise offers a mobile CI/CD platform as a service (PaaS) to accelerate the automation of your software development projects. It provides different mobile-first features like exhaustive mobile stack coverage, store code anywhere in cloud or on-premise, and zero hardware setup that make building, testing, and deploying faster and easier.
 
-Using LambdaTest with Bitrise, you can effortlessly perform [Espresso testing](https://www.lambdatest.com/espresso-automation-testing) of your mobile apps on an [online device farm](https://www.lambdatest.com/online-device-farm) of real Android devices.
+Using <BrandName /> with Bitrise, you can effortlessly perform [Espresso testing](https://www.lambdatest.com/espresso-automation-testing) of your mobile apps on an [online device farm](https://www.lambdatest.com/online-device-farm) of real Android devices.
 
 ## Prerequisites
 ***
 
-1. Ensure you have access to LambdaTest [real device cloud](https://www.lambdatest.com/real-device-cloud). If not, please [contact sales](https://www.lambdatest.com/contact-us).
+1. Ensure you have access to <BrandName /> [real device cloud](https://www.lambdatest.com/real-device-cloud). If not, please [contact sales](https://www.lambdatest.com/contact-us).
 
 2. A Bitrise account.
 
@@ -61,39 +63,39 @@ If you are getting started with Bitrise CI, please refer to our documentation on
 :::
 
 
-## Configuring The LambdaTest App Automate - Espresso Step In Bitrise
+## Configuring The <BrandName /> App Automate - Espresso Step In Bitrise
 ***
 
-1. Use the search bar to find **LambdaTest App Automate - Espresso**. 
+1. Use the search bar to find **<BrandName /> App Automate - Espresso**. 
 
 <img loading="lazy" src={require('../assets/images/bitrise-espresso/espresso-card.webp').default} alt="Image" width="1664" height="1418"  className="doc_img img_center"/>
 
-2. Click **LambdaTest App Automate- Espresso** card. 
+2. Click **<BrandName /> App Automate- Espresso** card. 
 
 <img loading="lazy" src={require('../assets/images/bitrise-espresso/espresso-step.webp').default} alt="Image" width="1654" height="630"  className="doc_img img_center"/>
 
 
 3. In **Input Variables**, enter **App apk path** and **Test suite apk path**.
 
-> You can add a public link if your files are accessible through public link. In case, you don't an apk link handy, you can use LambdaTest’s sample application Proverbial for running your first test.
+> You can add a public link if your files are accessible through public link. In case, you don't an apk link handy, you can use <BrandName />’s sample application Proverbial for running your first test.
 * [Proverbial APK](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk)
 * [Test Suite APK](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android_expressotest.apk)
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/apppath.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
-* In **LambdaTest username**, click Select secret variable.
+* In **<BrandName /> username**, click Select secret variable.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/keyuservar.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
-* Enter the key (it can be anything), your LambdaTest username and click **Add new**.
+* Enter the key (it can be anything), your <BrandName /> username and click **Add new**.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/username.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
-* In **LambdaTest access key**, click Select secret variable.
+* In **<BrandName /> access key**, click Select secret variable.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/keysecvar.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
-* Enter the key (it can be anything), your LambdaTest access key and click **Add new**.
+* Enter the key (it can be anything), your <BrandName /> access key and click **Add new**.
 
 <img loading="lazy" src={require('../assets/images/bitrise-integration/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
@@ -109,7 +111,7 @@ Other options:
 |Build Name  |   TYPE: STRING<br/> DEFAULT: Untitled<br/> `Android Small Run` |  You can group your tests like a job containing multiple tests. | 
 | Queue Timeout |  TYPE: STRING<br/> DEFAULT: 600<br/> `300` | Enter the time in seconds after which you want your build to timeout from queue.  | 
 | Idle Timeout |  TYPE: STRING<br/> DEFAULT: 120<br/> `120` | Enter the time in seconds for maximum running time on a test in the build. | 
-| Tunnel |  TYPE: BOOLEAN<br/> `True`<br/>OR<br/> `False` | To test local applications with LambdaTest. | 
+| Tunnel |  TYPE: BOOLEAN<br/> `True`<br/>OR<br/> `False` | To test local applications with <BrandName />. | 
 | Tunnel name |  TYPE: STRING<br/> `RabbitHole` | Name of the tunnel. | 
 | Device logs |  TYPE: BOOLEAN<br/> DEFAULT: FALSE<br/>`True`<br/>OR<br/> `False`| Enable Device Logs that will show information on the actions performed by the device. | 
 | Network logs |   TYPE: BOOLEAN<br/> DEFAULT: FALSE<br/>`True`<br/>OR<br/> `False` | Enable Network Logs that will show the information on the data transmitted & received by the device. | 
@@ -117,7 +119,7 @@ Other options:
 
 :::info
 
-[Espresso Testing On LambdaTest](/support/docs/getting-started-with-espresso-testing/)
+[Espresso Testing On <BrandName />](/support/docs/getting-started-with-espresso-testing/)
 
 [Automation Capabilities Generator For Selenium and Appium](https://www.lambdatest.com/capabilities-generator/)
 :::
@@ -131,7 +133,7 @@ Other options:
 
 <img loading="lazy" src={require('../assets/images/bitrise-espresso/rebuild.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
-7. Once the build process is complete, visit LambdaTest App Automation Dashboard to view your test results.
+7. Once the build process is complete, visit <BrandName /> App Automation Dashboard to view your test results.
 
 <img loading="lazy" src={require('../assets/images/bitrise-espresso/espresso_results.webp').default} alt="Image" width="1444" height="703"  className="doc_img img_center"/>
 
@@ -140,12 +142,12 @@ Other options:
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

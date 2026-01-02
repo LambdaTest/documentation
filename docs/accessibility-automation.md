@@ -1,4 +1,4 @@
-﻿---
+---
 id: accessibility-automation
 title: TestMu AI Accessibility Automation
 hide_title: false
@@ -17,6 +17,8 @@ slug: accessibility-automation
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,24 +28,24 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility Testing Settings",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-automation/"
+          "item": `${BRAND_URL}/support/docs/accessibility-automation/`
         }]
       })
     }}
 ></script>
-Imagine a world where everyone can access and enjoy the digital content you create. LambdaTest Accessibility Automation empowers you to achieve just that!
+Imagine a world where everyone can access and enjoy the digital content you create. <BrandName /> Accessibility Automation empowers you to achieve just that!
 
-LambdaTest Accessibility Automation  unlocks the power of automated tools and scripts to pinpoint and report accessibility roadblocks within your web applications. This ensures your digital content is inclusive and usable by everyone, including people with disabilities. Think of it as a helping hand in adhering to established guidelines like the Web Content Accessibility Guidelines (WCAG).
+<BrandName /> Accessibility Automation  unlocks the power of automated tools and scripts to pinpoint and report accessibility roadblocks within your web applications. This ensures your digital content is inclusive and usable by everyone, including people with disabilities. Think of it as a helping hand in adhering to established guidelines like the Web Content Accessibility Guidelines (WCAG).
 
 ## Why is it Important?
 
@@ -56,7 +58,7 @@ Our goal is **a web that's accessible to all**.  Accessibility automation helps 
 
 ## How Does it Work?
 
-LambdaTest Accessibility Automation seamlessly integrates with your existing workflows:
+<BrandName /> Accessibility Automation seamlessly integrates with your existing workflows:
 
 - **Integrated Testing:** Works hand-in-hand with popular testing frameworks like Selenium and Cypress.
 - **Issue Detection:** Get clear reports highlighting the specific accessibility roadblocks found, their severity (critical, high, medium, low), and suggestions on how to fix them.
@@ -70,7 +72,7 @@ LambdaTest Accessibility Automation seamlessly integrates with your existing wor
 
 ## Who Benefits?
 
-LambdaTest Accessibility Automation is designed for a wide range of web professionals:
+<BrandName /> Accessibility Automation is designed for a wide range of web professionals:
 
 - **Developers:** Integrate and fix accessibility issues early in the development cycle.
 - **Test Engineers:** Get robust testing tools and detailed reports to ensure a smooth user experience for all.

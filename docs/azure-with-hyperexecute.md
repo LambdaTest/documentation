@@ -1,4 +1,4 @@
-﻿---
+---
 id: azure-with-hyperexecute
 title: Azure DevOps Integration
 hide_title: true
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/azure-with-hyperexecute
 site_name: LambdaTest
 slug: azure-with-hyperexecute
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +26,17 @@ slug: azure-with-hyperexecute
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Azure Devops Integration",
-          "item": "https://www.lambdatest.com/support/docs/azure-with-hyperexecute/"
+          "item": `${BRAND_URL}/support/docs/azure-with-hyperexecute/`
         }]
       })
     }}
@@ -62,7 +64,7 @@ To integrate Azure DevOps Pipeline with HyperExecute, follow the below steps:
 You can use your own project to configure and test it. For demo purposes, we are using the sample repository.
 
 :::tip Sample repo
-Download or Clone the code sample from the LambdaTest GitHub repository to run the tests on the HyperExecute.
+Download or Clone the code sample from the <BrandName /> GitHub repository to run the tests on the HyperExecute.
 
 <a href="https://github.com/LambdaTest/hyp-ci-cd-integration-sample/tree/azure" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 :::
@@ -117,9 +119,9 @@ Here, the **main** branch is selected as the test repository to commit the Azure
 - **Steps:** In the **steps** section, declare the flow of the pipeline execution. 
 - **Script:** In the **script** section, state the command that you would like to execute in the following steps: 
     - Download a fresh version of the HyperExecute CLI binary
-    - Execute the Hyperexecute CLI binary. (The Hyperexecute CLI binary contains LambdaTest username, access key and path   of the Yaml created for Hyperexecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid))
+    - Execute the Hyperexecute CLI binary. (The Hyperexecute CLI binary contains <BrandName /> username, access key and path   of the Yaml created for Hyperexecute. You can find more information on this [here.](/support/docs/hyperexecute-cli-run-tests-on-hyperexecute-grid))
 
-> **Note**: Ensure that your username and access key for your LambdaTest account is visible in the script. 
+> **Note**: Ensure that your username and access key for your <BrandName /> account is visible in the script. 
 
 ***
 
@@ -148,12 +150,12 @@ To run the new pipeline that you just created, click the **Run** or **Save and R
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

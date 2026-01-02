@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/performance-report
 site_name: LambdaTest
 slug: performance-report
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,17 +25,17 @@ slug: performance-report
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Performance Report",
-          "item": "https://www.lambdatest.com/support/docs/performance-report/"
+          "item": `${BRAND_URL}/support/docs/performance-report/`
         }]
       })
     }}
@@ -70,7 +72,7 @@ To get started, you need to download the executable file from here.
 
 ## How To View Performance Report On LT Browser?
 ***
-Make sure you've installed the LT Browser, you will need to login to the LT Browser through your LambdaTest login credentials.
+Make sure you've installed the LT Browser, you will need to login to the LT Browser through your <BrandName /> login credentials.
 
 **Step 1:**  Open the LT Browser. Select a device from the device List. For the demo, we are selecting **'Galaxy Note 9'**  and **'13-inch Macbook Air'**.
 
@@ -109,12 +111,12 @@ That is all about the LT browser Performance Report. Don't forget to share you e
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

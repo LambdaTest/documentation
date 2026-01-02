@@ -21,6 +21,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Languages and Framework",
-          "item": "https://www.lambdatest.com/support/docs/smartui-mcp-server/"
+          "item": `${BRAND_URL}/support/docs/smartui-mcp-server/`
         }]
       })
     }}
@@ -48,7 +50,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 # Getting Started with SmartUI MCP Server
 ***
-The SmartUI  MCP Server allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis. It is built on [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) and connects to the LambdaTest SmartUI infrastructure via `comparisonId`.
+The SmartUI  MCP Server allows you to debug visual regressions using SmartUI comparison runs, returning natural-language insights such as human-like summaries, visual change detection, and root cause analysis. It is built on [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) and connects to the <BrandName /> SmartUI infrastructure via `comparisonId`.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="2Z5F52XxSxQ" data-loading-attribute="eager">
@@ -75,7 +77,7 @@ Here are the key benefits of using the SmartUI  MCP Server:
 - **Context-Aware Fixes:** Suggests accurate UI fixes based on visual evidence (React, HTML, CSS).
 - **Rapid RCA:** Identifies exact UI elements responsible for changes and provides the root cause in plain language.
 - **Layered Visual Analysis:** Run independent or combined analysis: pixel-level, layout, DOM structure, and perceptual.
-- **MCP-Native Integration:** Seamlessly works with LambdaTest’s MCP-enabled environments and SmartUI workflows.
+- **MCP-Native Integration:** Seamlessly works with <BrandName />’s MCP-enabled environments and SmartUI workflows.
 - **Developer-Ready Summaries:** Outputs are designed for frontend teams—easy to read, act, and commit to code.
 
 ## Supported Tools
@@ -146,12 +148,12 @@ If the `comparisonId` is invalid or resources are missing, a message like the fo
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

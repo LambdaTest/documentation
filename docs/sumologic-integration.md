@@ -1,4 +1,4 @@
-﻿---
+---
 id: sumo-logic-integration
 title: Sumo Logic Integration With TestMu AI
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/sumo-logic-integration
 site_name: LambdaTest
 slug: sumo-logic-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: sumo-logic-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Sumo Logic Integration",
-          "item": "https://www.lambdatest.com/support/docs/sumo-logic-integration/"
+          "item": `${BRAND_URL}/support/docs/sumo-logic-integration/`
         }]
       })
     }}
@@ -42,18 +44,18 @@ slug: sumo-logic-integration
 
 Sumo Logic is a cloud-based platform that modernizes your security operations. By analyzing security and operational issues with Sumo Logic, you can make smarter decisions and free up resources for other critical functions.
 
-LambdaTest and Sumo Logic enables you to view LambdaTest results in a custom Sumo Logic dashboard and gain deeper insight into your automation scripts to ship quality products at light speed.
+<BrandName /> and Sumo Logic enables you to view <BrandName /> results in a custom Sumo Logic dashboard and gain deeper insight into your automation scripts to ship quality products at light speed.
 
 ## Prerequisites
 ***
 
-1. A LambdaTest account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
+1. A <BrandName /> account. If you don't have an account, [sign up for free](https://accounts.lambdatest.com/register).
 2. A Sumo Logic account.
 
 ## Configuring A Sumo Logic Collector
 ***
 
-In order to push test data from LambdaTest to Sumo Logic dashboard, you will need to create a collector in Sumo Logic.
+In order to push test data from <BrandName /> to Sumo Logic dashboard, you will need to create a collector in Sumo Logic.
 
 ### Adding A Collector
 
@@ -98,7 +100,7 @@ If you already have an existing collector, please refer to [Adding A Source](#ad
 
 > The **Source Category** field is required. Otherwise, the test data will not get reflected in your Sumo Logic dashboard.
 
-5. A *HTTP Source URL* will be generated that you need to provide while configuring the LambdaTest Sumo Logic webhook. Copy the generated HTTP Source URL.
+5. A *HTTP Source URL* will be generated that you need to provide while configuring the <BrandName /> Sumo Logic webhook. Copy the generated HTTP Source URL.
 
 <img loading="lazy" src={require('../assets/images/sumologic/url.webp').default} alt="Gitpod popup" width="517" height="308" className="doc_img img_center"/><br/>
 
@@ -106,7 +108,7 @@ If you already have an existing collector, please refer to [Adding A Source](#ad
 ## Configuring The Sumo Logic Integration
 ***
 
-1. Login to your LambdaTest account and visit **Integrations** from the left sidebar.
+1. Login to your <BrandName /> account and visit **Integrations** from the left sidebar.
 
 2. From the ANALYTICS category, select **SUMO LOGIC**.
 
@@ -116,24 +118,24 @@ If you already have an existing collector, please refer to [Adding A Source](#ad
 
 <img loading="lazy" src={require('../assets/images/sumologic/install-sl.webp').default} alt="Gitpod popup" width="956" height="437" className="doc_img img_center"/><br/>
 
-The Sumo Logic will be integrated with your LambdaTest account.
+The Sumo Logic will be integrated with your <BrandName /> account.
 
-## Installing the LambdaTest App in Sumo Logic
+## Installing the <BrandName /> App in Sumo Logic
 ---
 
 1. Navigate to Sumo Logic Home and select **App Catalog** from the left navigation panel.
 
 <img loading="lazy" src={require('../assets/images/sumologic/catalog.webp').default} alt="Gitpod popup" width="956" height="444" className="doc_img img_center"/><br/>
 
-2. Find and select the LambdaTest App using the search bar.
+2. Find and select the <BrandName /> App using the search bar.
 
-3. Click **Add Integration** to install the LambdaTest app into your Sumo Logic account. It will then add the LambdaTest dashboards (LambdaTest - Test Overview and LambdaTest - Test Error Overview) to your directory.
+3. Click **Add Integration** to install the <BrandName /> app into your Sumo Logic account. It will then add the <BrandName /> dashboards (<BrandName /> - Test Overview and <BrandName /> - Test Error Overview) to your directory.
 
-4. Click on the LambdaTest **Test Overview** dashboard to get an overall insight about your testing trends.
+4. Click on the <BrandName /> **Test Overview** dashboard to get an overall insight about your testing trends.
 
 <img loading="lazy" src={require('../assets/images/sumologic/test_overview.webp').default} alt="Gitpod popup" width="956" height="444" className="doc_img img_center"/><br/>
 
-5. Click on the LambdaTest **Test Error Overview** dashboard to understand your test error trends.
+5. Click on the <BrandName /> **Test Error Overview** dashboard to understand your test error trends.
 
 <img loading="lazy" src={require('../assets/images/sumologic/error_overview.webp').default} alt="Gitpod popup" width="956" height="444" className="doc_img img_center"/><br/>
 
@@ -141,7 +143,7 @@ The Sumo Logic will be integrated with your LambdaTest account.
 ## Removing The Sumo Logic Integration
 ***
 
-1. Login to your LambdaTest account and visit **Integrations** from the left sidebar.
+1. Login to your <BrandName /> account and visit **Integrations** from the left sidebar.
 
 2. From the MY INTEGRATIONS category, navigate to SUMO LOGIC and click **REMOVE**.
 
@@ -154,12 +156,12 @@ The Sumo Logic integration will be uninstalled.
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

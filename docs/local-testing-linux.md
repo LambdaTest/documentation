@@ -1,4 +1,4 @@
-﻿---
+---
 id: local-testing-linux
 title: Local Testing For Linux
 hide_title: true
@@ -15,6 +15,8 @@ image: /assets/images/og-images/local-testing-on-linux.png
 site_name: LambdaTest
 slug: local-testing-linux
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +26,17 @@ slug: local-testing-linux
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Local Testing Linux",
-          "item": "https://www.lambdatest.com/support/docs/local-testing-linux/"
+          "item": `${BRAND_URL}/support/docs/local-testing-linux/`
         }]
       })
     }}
@@ -44,24 +46,24 @@ slug: local-testing-linux
 
 ***
 
-LambdaTest tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites on 3000+ real browsers through LambdaTest. You can test plain HTML, CSS, PHP, Python, or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on LambdaTest. You can leverage the new LambdaTest tunnel binary for corporate firewalls and proxy settings without any restrictions. LambdaTest tunnel follows various protocols such as Web Socket, HTTPS, TCP with TLS 1.2 secure connection, etc. to help you establish a secure and unique tunnel connection through corporate firewalls between your system and LambdaTest cloud servers.
+<BrandName /> tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites on 3000+ real browsers through <BrandName />. You can test plain HTML, CSS, PHP, Python, or other similar web files saved on your local system, over combinations of operating systems, browsers, and screen resolutions that are available on <BrandName />. You can leverage the new <BrandName /> tunnel binary for corporate firewalls and proxy settings without any restrictions. <BrandName /> tunnel follows various protocols such as Web Socket, HTTPS, TCP with TLS 1.2 secure connection, etc. to help you establish a secure and unique tunnel connection through corporate firewalls between your system and <BrandName /> cloud servers.
 
-Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with LambdaTest tunnel and experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross-platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over the Production environment.
+Feel more confident than ever, before deploying any UI specific change into Production. Test your development thoroughly with <BrandName /> tunnel and experience the flexibility to securely test your website on 3000+ browsers and their assorted versions, running on real OS code for cross-platform and [cross browser compatibility](https://www.lambdatest.com/feature), even before it gets deployed over the Production environment.
 
 You can download the binary file responsible for establishing a tunnel connection between your local device and our testing cloud by clicking on the downloadable link below.
 
-| [DOWNLOAD LambdaTest tunnel ZIP FOR LINUX 64 BIT](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip) |
+| [DOWNLOAD <BrandName /> tunnel ZIP FOR LINUX 64 BIT](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip) |
 |:------------------------------------------------------------------------------------------------------------------:|
 
 
-## Configuring Connection With LambdaTest tunnel
+## Configuring Connection With <BrandName /> tunnel
 ***
 **Step 1**:  Click the button **‘Configure Tunnel’**. Download the binary zip file by clicking the **‘Download Link’**. Press the **‘Copy’**  button in the form that opens up to copy the complete string to your system’s clipboard.
 
 <img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-1.webp').default} alt="TCP with TLS 1.2 secure connection tunnel configuration" width="1346" height="622" className="doc_img"/>
 
 >**What is this zip file for?**   
-This zip file contains the tunnel binary which will help in establishing a secure tunnel connection to LambdaTest cloud servers so you could test your locally hosted web pages over thousands of browsers and operating systems for desktop and mobile using LambdaTest.
+This zip file contains the tunnel binary which will help in establishing a secure tunnel connection to <BrandName /> cloud servers so you could test your locally hosted web pages over thousands of browsers and operating systems for desktop and mobile using <BrandName />.
 
 **Step 2**:  Extract the downloaded zip file. Go to the terminal and route your pointer to the same directory where you extracted the zip file.
 
@@ -72,7 +74,7 @@ This zip file contains the tunnel binary which will help in establishing a secur
 LT --user {user's login email} --key {user's access key} --tunnelName {user's tunnel name}
 ```
 
-So for example, if your user login email is example@lambdatest.com, user key is 123456789abcdefghijklmnopqrstuv and tunnel name is LambdaTest, the command would be:
+So for example, if your user login email is example@lambdatest.com, user key is 123456789abcdefghijklmnopqrstuv and tunnel name is <BrandName />, the command would be:
 ```
 LT --user example@lambdatest.com --key 123456789abcdefghijklmnopqrstuv --tunnelName LambdaTest
 ```
@@ -83,7 +85,7 @@ In a few seconds, after you execute the command, a tunnel connection will be est
 
 <img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-3.webp').default} alt="Start localhost testing on Linux" width="1522" height="167" className="doc_img"/>
 
-## Testing Locally Hosted Web Pages Using LambdaTest tunnel
+## Testing Locally Hosted Web Pages Using <BrandName /> tunnel
 ***
 **Step 1**:  Make sure you turn on XAMPP or any other web hosting tool to provide you an Apache test environment. If you are using XAMPP, Press the **‘Start’**  button for **‘Apache’**  under **‘Actions’**. If you also want to test the back-end functionality for your website then Press the **‘Start’**  button for **‘MySQL’**  as well.
 
@@ -103,7 +105,7 @@ Once you press the **‘Start’**  button, your test will start and you will 
 
 >**Note:** If `http://localhost:{port}`  does not work then try with either `http://localhost.lambdatest.com:{port}`  or your machine’s private IP `http://{IP}:{port}`.
 
-## Testing Local Folder Files Using LambdaTest tunnel
+## Testing Local Folder Files Using <BrandName /> tunnel
 ***
 >**Note:**  If you were already running a test session through tunnel then you will have to terminate the existing tunnel connection in cmd before you re-establish it for a new directory.
 
@@ -115,7 +117,7 @@ Once you press the **‘Start’**  button, your test will start and you will 
 
 <img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-9.webp').default} alt="testing locally hosted folder" width="1343" height="559" className="doc_img"/>
 
-**Step 3:**  After you establish a tunnel connection, go to LambdaTest and navigate to **‘Real Time Test’**. Enter `local-folder.lambdatest.com`  in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice. Click on the **‘Start’**  button.
+**Step 3:**  After you establish a tunnel connection, go to <BrandName /> and navigate to **‘Real Time Test’**. Enter `local-folder.lambdatest.com`  in URL bar. The list of all files/folders present under the selected directory will be displayed in the browser. Select the test configuration(OS, Browser and screen resolution) of your choice. Click on the **‘Start’**  button.
 
 <img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-10.webp').default} alt="test locally hosted website folder" width="1348" height="613" className="doc_img"/>
 
@@ -125,9 +127,9 @@ Once the VM (Virtual Machine) is launched, you will be able to access your local
 
 >**Note:**  Similarly, if you want to run any file in the specified directory, you need to give URL as `local-folder.lambdatest.com/filename`.   
 For example: If you have a file `test.html`  in your folder. You need to give URL as `local-folder.lambdatest.com/test.html`  to run the same file.    
-In this way, you can run any HTML, PHP, Python, or similar web files present in any folder of your system, directly in the LambdaTest browser.
+In this way, you can run any HTML, PHP, Python, or similar web files present in any folder of your system, directly in the <BrandName /> browser.
 
-## Terminating The LambdaTest tunnel Connection
+## Terminating The <BrandName /> tunnel Connection
 ***
 A secure tunnel connection is maintained unless you explicitly disconnect it. You can disconnect the tunnel in the following ways:
 
@@ -135,13 +137,13 @@ A secure tunnel connection is maintained unless you explicitly disconnect it. Yo
 
 <img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-12.webp').default} alt="Stopping TCP with TLS 1.2 secure connection Tunnel" width="1523" height="223" className="doc_img"/>
 
-**Option 2:**  You can also disconnect it using the option provided in the user interface. In the top right corner of the LambdaTest interface, you will find a button that says **‘Tunnel active’**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an **‘x’**button. Press the **‘x’**  button to terminate the tunnel connection.
+**Option 2:**  You can also disconnect it using the option provided in the user interface. In the top right corner of the <BrandName /> interface, you will find a button that says **‘Tunnel active’**. This button displays the number of active tunnels. As you click on it, you will find your tunnel name along with an **‘x’**button. Press the **‘x’**  button to terminate the tunnel connection.
 
 <img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-13.webp').default} alt="Disconnecting tunnel" width="1349" height="622" className="doc_img"/>
 
-## Geolocation Testing Through VPN with LambdaTest tunnel
+## Geolocation Testing Through VPN with <BrandName /> tunnel
 ***
-Test the performance of your web-app through different [geographic locations](https://www.lambdatest.com/blog/geolocation-testing-through-vpn-on-lambdatest/) using VPN in LambdaTest tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
+Test the performance of your web-app through different [geographic locations](https://www.lambdatest.com/blog/geolocation-testing-through-vpn-on-lambdatest/) using VPN in <BrandName /> tunnel. Make sure your website delivers well to your targeted audience from all around the globe.
 
 Use the following arguments in your command line.
 
@@ -203,7 +205,7 @@ Following is the list of command arguments which can be used as modifiers while 
 ***
 >**What is an Access Key?**    
 >An Access Key is a unique string used for the identification of your account.   
-As we offer a cloud-based platform to host a testing ecosystem to everyone around the globe. Access key plays a crucial role in authenticating your LambdaTest account while mapping a secure tunnel connection for hosting your locally stored web pages online. They work as your IDs when you gain access to our cloud servers.   
+As we offer a cloud-based platform to host a testing ecosystem to everyone around the globe. Access key plays a crucial role in authenticating your <BrandName /> account while mapping a secure tunnel connection for hosting your locally stored web pages online. They work as your IDs when you gain access to our cloud servers.   
 If you ever misplace your Access key into the hands of someone you don’t trust. You can always regenerate it by clicking the tilt arrow button.
 
  
@@ -220,17 +222,17 @@ You can also find your Access Key by going to **‘Settings’**  in the left 
 
 <img loading="lazy" src={require('../assets/images/local-testing-linux/local-linux-16.webp').default} alt="Finding access key in profile section" width="1348" height="618" className="doc_img"/>
 
->**LambdaTest tunnel Update:**  Earlier, when our LambdaTest tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted [cross browser testing](https://www.lambdatest.com/) experience of locally hosted web pages. Not anymore! We have now updated the LambdaTest tunnel binary in a way that it auto-updates to the latest version every time you execute the LambdaTest tunnel from cmd/terminal.
+>**<BrandName /> tunnel Update:**  Earlier, when our <BrandName /> tunnel binary was updated with a new version, we requested our users to re-download the binary file for uninterrupted [cross browser testing](https://www.lambdatest.com/) experience of locally hosted web pages. Not anymore! We have now updated the <BrandName /> tunnel binary in a way that it auto-updates to the latest version every time you execute the <BrandName /> tunnel from cmd/terminal.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

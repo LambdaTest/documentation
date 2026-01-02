@@ -1,4 +1,4 @@
-﻿---
+---
 id: playwright-ios-guide
 title: How To Run Playwright Tests On TestMu AI iOS Devices
 hide_title: true
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/playwright-ios-device
 site_name: LambdaTest
 slug: playwright-ios-device
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -24,17 +26,17 @@ slug: playwright-ios-device
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started With Playwright Testing",
-          "item": "https://www.lambdatest.com/support/docs/playwright-ios-device/"
+          "item": `${BRAND_URL}/support/docs/playwright-ios-device/`
         }]
       })
     }}
@@ -42,19 +44,19 @@ slug: playwright-ios-device
 
 # Getting Started With Playwright Testing on iOS Real Devices
 * * *
-Playwright test automation on real iOS devices is now supported on LambdaTest. Test on latest iPhone and iPad safari combinations to catch device-specific issues that mobile emulation may miss. Integrate with your existing CI pipeline, and access logs and debugging artifacts for each test run.
+Playwright test automation on real iOS devices is now supported on <BrandName />. Test on latest iPhone and iPad safari combinations to catch device-specific issues that mobile emulation may miss. Integrate with your existing CI pipeline, and access logs and debugging artifacts for each test run.
 
-This guide will cover the basics of getting started with Playwright testing on iOS devices on the LambdaTest platform.
+This guide will cover the basics of getting started with Playwright testing on iOS devices on the <BrandName /> platform.
 
 > Testing with Playwright on real iOS and Android devices is currently supported with Playwright **v1.53.2**
 
 ## Prerequisites
 ***
 
->Note: All the code samples in this documentation can be found in the LambdaTest's Repository on GitHub. You can either download or clone the repository to quickly run your tests.
+>Note: All the code samples in this documentation can be found in the <BrandName />'s Repository on GitHub. You can either download or clone the repository to quickly run your tests.
 <a href="https://github.com/LambdaTest/playwright-sample/" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image"  className="doc_img"/> View on GitHub</a>
 
-1. Clone the LambdaTest-Playwright repository on your system using the following command.
+1. Clone the <BrandName />-Playwright repository on your system using the following command.
 ```
 git clone https://github.com/LambdaTest/playwright-sample/
 ```
@@ -71,7 +73,7 @@ npm install
 wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
 ```
 
-4. In order to run your Playwright tests on iOS devices , you will need to set your LambdaTest username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
+4. In order to run your Playwright tests on iOS devices , you will need to set your <BrandName /> username and access key in the environment variables. Click the **Access Key** button at the top-right of the Automation Dashboard to access it.
 
 **Windows**
 
@@ -90,7 +92,7 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ## Run Your First Test
 ---
 
-1. Add the below code snippet in your test scripts to initiate your first Playwright test on LambdaTest.
+1. Add the below code snippet in your test scripts to initiate your first Playwright test on <BrandName />.
 
 ```javascript title="lambdatest-sample.js"
 require('dotenv').config();
@@ -236,9 +238,9 @@ node playwright-ios-real-device.js
 ## View your Playwright test results
 ***
 
-The LambdaTest Automation Dashboard is where you can see the results of your Playwright iOS tests after running them on the LambdaTest platform. 
+The <BrandName /> Automation Dashboard is where you can see the results of your Playwright iOS tests after running them on the <BrandName /> platform. 
 
-The below screenshot of LambdaTest Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
+The below screenshot of <BrandName /> Automation Dashboard shows the Playwright build on the left and the build sessions associated with the selected build on the right.
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/playwright-ios-real-device.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 

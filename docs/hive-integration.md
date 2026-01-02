@@ -1,4 +1,4 @@
-﻿---
+---
 id: hive-integration
 title: Hive Integration
 hide_title: true
@@ -21,6 +21,8 @@ url: https://www.testmu.ai/support/docs/hive-integration
 site_name: LambdaTest
 slug: hive-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ slug: hive-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Hive Integration",
-          "item": "https://www.lambdatest.com/support/docs/hive-integration/"
+          "item": `${BRAND_URL}/support/docs/hive-integration/`
         }]
       })
     }}
@@ -48,23 +50,23 @@ slug: hive-integration
 
 # Hive Integration
 ***
-Hive is an online project management application that aims at maximizing your workplace productivity. With Hive you can plan project flexible and organize them in a Gantt chart, kanban board, table, or calendar. You can also keep a check on multiple projects simultaneously using their views and they also offer summary views to help you combine several projects in a single space, so you can visualize where all the teams are headed. LambdaTest integration with Hive helps to manage your bugs in Hive by moving them into a project through a single click effort. All the details you provide in LambdaTest like task list, assignee, title and description would automatically be presented in the project on Hive.
+Hive is an online project management application that aims at maximizing your workplace productivity. With Hive you can plan project flexible and organize them in a Gantt chart, kanban board, table, or calendar. You can also keep a check on multiple projects simultaneously using their views and they also offer summary views to help you combine several projects in a single space, so you can visualize where all the teams are headed. <BrandName /> integration with Hive helps to manage your bugs in Hive by moving them into a project through a single click effort. All the details you provide in <BrandName /> like task list, assignee, title and description would automatically be presented in the project on Hive.
 
-The LambdaTest Hive integration helps you in filing issues to your project in Hive directly from LambdaTest platform. With one-click integration, you can push annotated issues to the project of your choice, assign it to the required teammate, and attach necessary screenshots. You can do all that while in the middle of a test session in LambdaTest platform. The fields populated by you when marking as a bug through LambdaTest are displayed as information on the Hive for a testing instance.
+The <BrandName /> Hive integration helps you in filing issues to your project in Hive directly from <BrandName /> platform. With one-click integration, you can push annotated issues to the project of your choice, assign it to the required teammate, and attach necessary screenshots. You can do all that while in the middle of a test session in <BrandName /> platform. The fields populated by you when marking as a bug through <BrandName /> are displayed as information on the Hive for a testing instance.
 
-> Hive Integration with LambdaTest, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.
+> Hive Integration with <BrandName />, like all of the integrations to 3rd party applications, is available for freemium as well as premium plan.
 
-## How To Establish Integration With Hive From Your LambdaTest Account?
+## How To Establish Integration With Hive From Your <BrandName /> Account?
 ***
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select ‘Integrations’ from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on ‘ADD’ under the block that says **‘Hive’**.
 
 <img loading="lazy" src={require('../assets/images/hive-integration/hive-1.webp').default} alt="add" width="1342" height="643" className="doc_img"/>
 
-**Step 4:** Once you click on install, you will be redirected to the below screen. You will be asked to provide your Hive User ID and your Hive API Key credentials in the highlighted fields to establish integration with LambdaTest.
+**Step 4:** Once you click on install, you will be redirected to the below screen. You will be asked to provide your Hive User ID and your Hive API Key credentials in the highlighted fields to establish integration with <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/hive-integration/hive-2.webp').default} alt="credentials" width="1365" height="649" className="doc_img"/>
 
@@ -85,7 +87,7 @@ When two different applications interact with each other, a server-to-server com
 
 > You can keep a note of this API key with you for future authentication. Although, in case you forget to do so, or you end up neglecting it due to some reason. Then there is no need to panic! You can always regenerate the key.
 
-**Step 8:** Paste the copied strings on the field provided at LambdaTest & hit the ‘Next’ button and you are all set to experience one-click bug logging to share your issues directly from your LambdaTest account to your project on Hive.
+**Step 8:** Paste the copied strings on the field provided at <BrandName /> & hit the ‘Next’ button and you are all set to experience one-click bug logging to share your issues directly from your <BrandName /> account to your project on Hive.
 
 <img loading="lazy" src={require('../assets/images/hive-integration/hive-6.webp').default} alt="bug logging" width="1364" height="637" className="doc_img"/>
 
@@ -131,7 +133,7 @@ That’s it! Go to Integrations again and you will be able to notice a green tic
 
 <img loading="lazy" src={require('../assets/images/hive-integration/hive-10.webp').default} alt="issue logged" width="1365" height="622" className="doc_img"/>
 
-As you click on the task you will notice that all the data you provided through LambdaTest would already be presented in it. LambdaTest automatically includes test environment details and related screenshots in the task as attachments.
+As you click on the task you will notice that all the data you provided through <BrandName /> would already be presented in it. <BrandName /> automatically includes test environment details and related screenshots in the task as attachments.
 
 <img loading="lazy" src={require('../assets/images/hive-integration/hive-11.webp').default} alt="screenshot" width="1365" height="633" className="doc_img"/>
 
@@ -139,25 +141,25 @@ As you click on the task you will notice that all the data you provided through 
 ***
 > You can work with one integration at a time. So if you would want to integrate to a similar 3rd party application, then you would have to `uninstall` your current integration. Here is how you can do that.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
-**Step 2:** Select ‘Integration’ from the left navigation menu bar. This will guide you to a screen where you will find 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select ‘Integration’ from the left navigation menu bar. This will guide you to a screen where you will find 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Click on `‘Remove’`. You can find the remove button right under the ‘Hive’ block which would be highlighted with a green tick.
 
 <img loading="lazy" src={require('../assets/images/hive-integration/hive-12.webp').default} alt="remove" width="1343" height="645" className="doc_img"/>
 
-> That was all you need to know for LambdaTest + Hive Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + Hive Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

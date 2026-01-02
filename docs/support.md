@@ -1,4 +1,4 @@
-﻿---
+---
 id: support-start
 title: TestMu AI Support and Knowledge Base
 sidebar_label: Introduction
@@ -50,6 +50,8 @@ import AccessibilityDarkIcon from '../assets/images/support/accessibility-dark.s
 import AccessibilityLightIcon from '../assets/images/support/accessibility-light.svg';
 import WebscannerLightIcon from '../assets/images/support/webscanner-light-icon.svg';
 import WebscannerDarkIcon from '../assets/images/support/webscanner-dark-icon.svg';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -59,12 +61,12 @@ import WebscannerDarkIcon from '../assets/images/support/webscanner-dark-icon.sv
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Documentation",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         }]
       })
     }}
@@ -74,7 +76,7 @@ import NewTag from '../src/component/newTag';
 
 <div className="Doc_intro_cta">
 <div className="Doc_intro_cta_text">
-<h1>LambdaTest Documentation and Knowledge Hub</h1>
+<h1><BrandName /> Documentation and Knowledge Hub</h1>
 <p>Your Ultimate Resource for Seamless Cross-Browser Testing Across Desktop and Mobile Platforms</p>
 </div>
 <div className="Doc_intro_cta_image">
@@ -231,9 +233,9 @@ import NewTag from '../src/component/newTag';
     </div>
 
 <div className="home_inners_box">
-       <h2 className='homeMain_h2'><TestManagerLightIcon className="home_icons home_light_icon" role="presentation"/> <TestManagerDarkIcon className="home_icons home_dark_icon" role="presentation"/>LambdaTest MCP Server &nbsp; <NewTag  value="NEW" /></h2>
+       <h2 className='homeMain_h2'><TestManagerLightIcon className="home_icons home_light_icon" role="presentation"/> <TestManagerDarkIcon className="home_icons home_dark_icon" role="presentation"/><BrandName /> MCP Server &nbsp; <NewTag  value="NEW" /></h2>
       <div className="home_inners"> 
-        <a href="/support/docs/lambdatest-mcp-server/"><p className="p_home_inners">Setting up LambdaTest MCP Server</p></a>
+        <a href="/support/docs/lambdatest-mcp-server/"><p className="p_home_inners">Setting up <BrandName /> MCP Server</p></a>
       </div>
     </div>
     <div className="home_inners_box">
@@ -263,7 +265,7 @@ import NewTag from '../src/component/newTag';
        <h2 className='homeMain_h2'><TestingLocallyLightIcon className="home_icons home_light_icon" role="presentation"/> <TestingLocallyDarkIcon className="home_icons home_dark_icon" role="presentation"/>Testing Locally</h2>
       <div className="home_inners">
         <a href="/support/docs/testing-locally-hosted-pages/"><p className="p_home_inners">Testing Locally Hosted Pages</p></a>
-        <a href="/support/docs/lambda-tunnel-modifiers/"><p className="p_home_inners">LambdaTest Tunnel Modifiers</p></a>
+        <a href="/support/docs/lambda-tunnel-modifiers/"><p className="p_home_inners"><BrandName /> Tunnel Modifiers</p></a>
         <a href="/support/docs/docker-tunnel/"><p className="p_home_inners">Docker Tunnel</p></a>
         <a href="/support/docs/troubleshooting-lambda-tunnel/"><p className="p_home_inners">Troubleshooting Tunnel</p></a>
         <a href="/support/docs/load-balancing-in-lambda-tunnel/"><p className="p_home_inners">Load Balancing in Tunnel</p></a>
@@ -280,7 +282,7 @@ import NewTag from '../src/component/newTag';
   <div className="home_inners">
     <a href="/support/docs/account-management/"><p className="p_home_inners">Account Management</p></a>
     <a href="/support/docs/network-whitelisting-and-tunnel-guide/"><p className="p_home_inners">Network Whitelisting Guide</p></a>
-    <a href="/support/docs/testmu-public-ip/"><p className="p_home_inners">LambdaTest Public IP</p></a>
+    <a href="/support/docs/testmu-public-ip/"><p className="p_home_inners"><BrandName /> Public IP</p></a>
     <a href="/support/docs/single-sign-on/"><p className="p_home_inners">Single Sign On</p></a>
     <a href="/support/docs/scim/"><p className="p_home_inners">SCIM</p></a>
   </div>

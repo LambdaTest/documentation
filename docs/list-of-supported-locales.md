@@ -1,4 +1,4 @@
-﻿---
+---
 id: list-of-supported-locales
 title: Supported Locales And Languages - Appium
 hide_title: false
@@ -22,17 +22,17 @@ slug: list-of-supported-locales
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "List of Supported Locales",
-          "item": "https://www.lambdatest.com/support/docs/list-of-supported-locales/"
+          "item": `${BRAND_URL}/support/docs/list-of-supported-locales/`
         }]
       })
     }}

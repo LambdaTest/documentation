@@ -26,6 +26,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,23 +37,23 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Smart Visual Testing",
-          "item": "https://www.lambdatest.com/support/docs/smartui-cli/"
+          "item": `${BRAND_URL}/support/docs/smartui-cli/`
         }]
       })
     }}
 ></script>
 
-With SmartUI CLI, you can seamlessly perform visual regression testing on the LambdaTest platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Visual Regression tests using SmartUI CLI.
+With SmartUI CLI, you can seamlessly perform visual regression testing on the <BrandName /> platform using your command line, identifying Visual UI Regression bugs effortlessly. This guide will walk you through the process of running successful Visual Regression tests using SmartUI CLI.
 
 <div className='storylane-iframe'>
   <script async src="https://js.storylane.io/js/v2/storylane.js"></script>
@@ -63,9 +65,9 @@ With SmartUI CLI, you can seamlessly perform visual regression testing on the La
 ## Prerequisites for running SmartUI CLI
 
 - Basic understanding of Command Line Interface is required.
-- Login to [LambdaTest SmartUI](https://smartui.lambdatest.com/) with your credentials.
+- Login to [<BrandName /> SmartUI](https://smartui.lambdatest.com/) with your credentials.
 
-The following steps will guide you in running your first Visual Regression test on LambdaTest platform using SmartUI CLI.
+The following steps will guide you in running your first Visual Regression test on <BrandName /> platform using SmartUI CLI.
 
 ## Create a SmartUI Web-Project
 
@@ -242,8 +244,8 @@ npx smartui capture urls.json --config .smartui.json
 You can also use the following options with the capture command:
 
 - `--scheduled <string>` - Specify schedule ID for scheduled test runs
-- `--userName <string>` - Override LambdaTest username
-- `--accessKey <string>` - Override LambdaTest access key
+- `--userName <string>` - Override <BrandName /> username
+- `--accessKey <string>` - Override <BrandName /> access key
 - `--buildName <string>` - Specify a custom build name
 - `--fetch-results [filename]` - Fetch and save results to JSON file
 
@@ -402,12 +404,12 @@ The maximum number of parallel threads is calculated using the formula: log<sub>
 <nav aria-label='breadcrumbs'>
   <ul className='breadcrumbs'>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com">
+      <a className='breadcrumbs__link' target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className='breadcrumbs__item'>
-      <a className='breadcrumbs__link' target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className='breadcrumbs__link' target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

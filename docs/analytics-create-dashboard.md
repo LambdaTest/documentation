@@ -1,4 +1,4 @@
-﻿---
+---
 id: analytics-create-dashboard
 title: Creating your first Dashboard using TestMu AI Analytics
 sidebar_label: Create your Custom Dashboard
@@ -18,17 +18,17 @@ slug: analytics-create-dashboard
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/analytics-create-dashboard/"
+          "item": `${BRAND_URL}/support/docs/analytics-create-dashboard/`
         }]
       })
     }}

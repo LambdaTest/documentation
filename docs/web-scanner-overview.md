@@ -1,4 +1,4 @@
-﻿---
+---
 id: web-scanner-overview
 title: Web Scanner Overview
 hide_title: false
@@ -17,6 +17,8 @@ slug: web-scanner-overview
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -26,25 +28,25 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Web Scanner Overview",
-          "item": "https://www.lambdatest.com/support/docs/web-scanner-overview"
+          "item": `${BRAND_URL}/support/docs/web-scanner-overview`
         }]
       })
     }}
 ></script>
 
-## What is LambdaTest Web Scanner?
+## What is <BrandName /> Web Scanner?
 
-LambdaTest Web Scanner is an AI-powered, browser-based scanning platform designed to help teams identify and resolve visual and accessibility issues across web applications. It enables both automated Visual UI Regression Testing and WCAG-compliant Accessibility Testing, allowing organizations to proactively catch visual bugs and accessibility violations across thousands of URLs at scale.
+<BrandName /> Web Scanner is an AI-powered, browser-based scanning platform designed to help teams identify and resolve visual and accessibility issues across web applications. It enables both automated Visual UI Regression Testing and WCAG-compliant Accessibility Testing, allowing organizations to proactively catch visual bugs and accessibility violations across thousands of URLs at scale.
 
 This tool empowers QA teams, developers, and compliance managers to perform scheduled scans on public or locally-hosted sites, compare builds visually with pixel-perfect precision, and generate audit-ready accessibility reports.
 
@@ -52,7 +54,7 @@ This tool empowers QA teams, developers, and compliance managers to perform sche
 
 ## Why Web Scanner?
 
-Manual testing of large web applications for layout shifts, broken UI, or WCAG non-compliance is slow and error-prone. LambdaTest Web Scanner solves this by enabling:
+Manual testing of large web applications for layout shifts, broken UI, or WCAG non-compliance is slow and error-prone. <BrandName /> Web Scanner solves this by enabling:
 
 * Automated visual comparisons across multiple browsers and resolutions powered by SmartUI
 * Accessibility audits powered by dynamic WCAG checks

@@ -1,4 +1,4 @@
-﻿---
+---
 id: ruby-testunit
 title: TestUnit with Selenium:Run TestUnit Automation Scripts on Selenium Grid Cloud
 hide_title: true
@@ -26,36 +26,36 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test::Unit Test",
-          "item": "https://www.lambdatest.com/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/"
+          "item": `${BRAND_URL}/support/docs/testunit-with-selenium-running-testunit-automation-scripts-on-testmu-selenium-grid/`
         }]
       })
     }}
 ></script>
 
-# TestUnit with Selenium: Tutorial to Run Your First Test on LambdaTest
+# TestUnit with Selenium: Tutorial to Run Your First Test on <BrandName />
 ***
 
-In this topic, you will learn how to configure and run your Java automation testing scripts on  [LambdaTest Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using Ruby framework TestUnit.
+In this topic, you will learn how to configure and run your Java automation testing scripts on  [<BrandName /> Selenium cloud platform](https://www.lambdatest.com/selenium-automation) using Ruby framework TestUnit.
 
 ## Objective
 ***
 By the end of this topic, you will be able to:
 
 1. Set up an environment for testing your hosted web pages using **TestUnit** framework with **Selenium**.
-2. Run a sample Selenium with **TestUnit Ruby** on LambdaTest Automation.
+2. Run a sample Selenium with **TestUnit Ruby** on <BrandName /> Automation.
 3. Setting up environment for testing your locally hosted web pages or website.
 
->**Note:** All the code samples in this documentation can be found in the [LambdaTest's Repository on GitHub](https://github.com/LambdaTest/Ruby-UnitTest-Selenium). You can either download or clone the repository to quickly run your tests.
+>**Note:** All the code samples in this documentation can be found in the [<BrandName />'s Repository on GitHub](https://github.com/LambdaTest/Ruby-UnitTest-Selenium). You can either download or clone the repository to quickly run your tests.
 
 ## Prerequisites For Running TestUnit With Selenium
 ***
@@ -72,11 +72,11 @@ Before you can start performing Ruby automation testing with Selenium, you would
   brew install ruby
   ```
 * To run tests in parallel you will require the [parallel_tests](https://github.com/grosser/parallel_tests) gem.
-* LambdaTest binary file for running tests on your locally hosted web pages.
+* <BrandName /> binary file for running tests on your locally hosted web pages.
 
 ### Installing Selenium Dependencies and Tutorial Repo
 
-**Step 1:**  Clone the [LambdaTest’s Ruby-UnitTest-Selenium repository](https://github.com/LambdaTest/Ruby-UnitTest-Selenium) and navigate to the code directory as shown below:
+**Step 1:**  Clone the [<BrandName />’s Ruby-UnitTest-Selenium repository](https://github.com/LambdaTest/Ruby-UnitTest-Selenium) and navigate to the code directory as shown below:
 ```bash
 git clone https://github.com/LambdaTest-sample-test-frameworks/Ruby-UnitTest-Selenium.git
 cd Ruby-UnitTest-Selenium
@@ -87,9 +87,9 @@ bundle install
 ```
 
 ### Setting up Your Authentication
-Make sure you have your LambdaTest credentials with you to run test automation scripts with TestUnit on LambdaTest Selenium Grid. You can obtain these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/) or through LambdaTest Profile.
+Make sure you have your <BrandName /> credentials with you to run test automation scripts with TestUnit on <BrandName /> Selenium Grid. You can obtain these credentials from the [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/) or through <BrandName /> Profile.
 
-**Step 3:** Set LambdaTest Username and Access Key in environment variables.
+**Step 3:** Set <BrandName /> Username and Access Key in environment variables.
  * For Linux/macOS:
  `export LT_USERNAME="YOUR_USERNAME" export LT_ACCESS_KEY="YOUR ACCESS KEY"`
  * For Windows:
@@ -181,7 +181,7 @@ class UnitTestLTSample < Test::Unit::TestCase
 end
 ```
 ### Configuration of Your Test Capabilities
-**Step 4:** In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with LambdaTest Selenium grid capabilities via capabilities object. The capabilities in the above code are defined as:
+**Step 4:** In the test script, you need to update your test capabilities. In this code, we are passing browser, browser version, and operating system information, along with <BrandName /> Selenium grid capabilities via capabilities object. The capabilities in the above code are defined as:
 ```ruby
 caps = {						
 			:browserName => lt_browser,			
@@ -199,20 +199,20 @@ caps = {
 ```bash
 ruby LambdaTest.rb
 ```
-Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on LambdaTest automation dashboard. [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) will help you view all your text logs, screenshots and video recording for your entire automation tests.
+Your test results would be displayed on the test console (or command-line interface if you are using terminal/cmd) and on <BrandName /> automation dashboard. [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) will help you view all your text logs, screenshots and video recording for your entire automation tests.
 
 ## Testing Locally Hosted or Privately Hosted Projects
 ***
-You can test your locally hosted or privately hosted projects with [LambdaTest Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using LambdaTest Tunnel app. All you would have to do is set up an SSH tunnel using LambdaTest Tunnel app and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
+You can test your locally hosted or privately hosted projects with [<BrandName /> Selenium grid cloud](https://www.lambdatest.com/selenium-automation) using <BrandName /> Tunnel app. All you would have to do is set up an SSH tunnel using <BrandName /> Tunnel app and pass toggle `tunnel = True` via desired capabilities. <BrandName /> Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are made live.
 
->Refer our [LambdaTest Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
+>Refer our [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/) for more information.
 
-Here’s how you can establish LambdaTest Tunnel.
+Here’s how you can establish <BrandName /> Tunnel.
 
 >Download the binary file of:
->* [LambdaTest Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
-* [LambdaTest Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
-* [LambdaTest Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
+>* [<BrandName /> Tunnel for Windows](https://downloads.lambdatest.com/tunnel/v3/windows/64bit/LT_Windows.zip)
+* [<BrandName /> Tunnel for Mac](https://downloads.lambdatest.com/tunnel/v3/mac/64bit/LT_Mac.zip)
+* [<BrandName /> Tunnel for Linux](https://downloads.lambdatest.com/tunnel/v3/linux/64bit/LT_Linux.zip)
 
 Open command prompt and navigate to the binary folder.
 
@@ -224,7 +224,7 @@ So if your user name is lambdatest@example.com and key is 123456, the command wo
 ```bash
 LT -user lambdatest@example.com -key 123456
 ```
-Once you are able to connect **LambdaTest Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
+Once you are able to connect **<BrandName /> Tunnel** successfully, you would just have to pass on tunnel capabilities in the code shown below :
 
 **Tunnel Capability**
 ```ruby
@@ -238,17 +238,17 @@ caps = {
 ***
 * [Advanced Configuration for Capabilities](/support/docs/selenium-automation-capabilities/)
 * [How to test locally hosted apps](/support/docs/testing-locally-hosted-pages/)
-* [How to integrate LambdaTest with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
+* [How to integrate <BrandName /> with CI/CD](/support/docs/integrations-with-ci-cd-tools/)
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

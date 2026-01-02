@@ -1,4 +1,4 @@
-﻿---
+---
 id: azure-pipeline
 title: Integrate Azure Pipelines With TestMu AI
 hide_title: true
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/integrate-azure-pipelines-with-testmu
 site_name: LambdaTest
 slug: integrate-azure-pipelines-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,27 +27,27 @@ slug: integrate-azure-pipelines-with-testmu
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Azure Pipeline Extension",
-          "item": "https://www.lambdatest.com/support/docs/integrate-azure-pipelines-with-testmu/"
+          "item": `${BRAND_URL}/support/docs/integrate-azure-pipelines-with-testmu/`
         }]
       })
     }}
 ></script>
 
-# Integrate Azure Pipelines With LambdaTest
+# Integrate Azure Pipelines With <BrandName />
 * * *
 Azure Pipelines is a service presented by Azure DevOps to help projects ship faster with the help of a robust pipeline. With Azure Pipelines you can easily generate a build, test it before deploying the changes live in any language you are comfortable with i.e. Node.js, Python, Java, PHP, Ruby, C/C++, .NET etc. The platform offers unlimited CI/CD minutes for open-source projects, along with 10 free parallel jobs. Azure pipelines offers great cross-platform support using which you can run jobs in parallel across Windows, macOS, Linux.
 
-LambdaTest now integrates with Azure to boost your go-to-market delivery. Perform automated cross browser testing with LambdaTest to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on the cloud. Perform automation testing in parallel with LambdaTest’s Selenium grid to drastically trim down your test cycles.
+<BrandName /> now integrates with Azure to boost your go-to-market delivery. Perform automated cross browser testing with <BrandName /> to ensure your development code renders seamlessly through an online Selenium grid providing 3000+ real browsers running through machines, on the cloud. Perform automation testing in parallel with <BrandName />’s Selenium grid to drastically trim down your test cycles.
 
 ## Pre-requisite
 * * *
@@ -53,9 +55,9 @@ LambdaTest now integrates with Azure to boost your go-to-market delivery. Perfor
 
 2. A [Git or GitHub](https://github.com/) repository.
 
-3. **LambdaTest Authentication Credentials**
+3. **<BrandName /> Authentication Credentials**
 
-    Be aware of your LambdaTest authentication credentials i.e. your LambdaTest username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [LambdaTest automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
+    Be aware of your <BrandName /> authentication credentials i.e. your <BrandName /> username, access key and HubURL. You need to set them up as your environment variables. You can retrieve them from your [<BrandName /> automation dashboard](https://automation.lambdatest.com/) by clicking on the key icon near the help button.
 
     * **For Linux/Mac:**
 
@@ -75,7 +77,7 @@ LambdaTest now integrates with Azure to boost your go-to-market delivery. Perfor
 
     ---
 
-## Integrating LambdaTest with Azure Pipelines
+## Integrating <BrandName /> with Azure Pipelines
 * * *
 > First and foremost, you need to clone our GitHub repository for downloading the relevant code needed to integrate [Azure Pipelines with LambdaTest](https://github.com/LambdaTest/protractor-selenium-azure-sample).
 
@@ -119,7 +121,7 @@ steps:
   displayName: 'npm install and build'
 ```
 
-**Step 4:** Executing the above file will run the script in LambdaTest Grid successfully. See the below image of the output.
+**Step 4:** Executing the above file will run the script in <BrandName /> Grid successfully. See the below image of the output.
 
 <img loading="lazy" src={require('../assets/images/azure-pipeline/azure-2.webp').default} alt="Image" width="990" height="590" className="doc_img"/>
 
@@ -157,19 +159,19 @@ steps:
   displayName: 'npm install and build'
 ```
 
-Monitor and analyze your test result on the LambdaTest Automation Dashboard.
+Monitor and analyze your test result on the <BrandName /> Automation Dashboard.
 
-Deploy your code in a reliable manner at scale using Azure integration with LambdaTest, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
+Deploy your code in a reliable manner at scale using Azure integration with <BrandName />, and ensure it looks robust across every browser to provide a seamless user experience to all your visitors. Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

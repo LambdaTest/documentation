@@ -29,7 +29,7 @@ SmartUI Figma-App CLI lets you compare **mobile app screenshots captured on real
 ## Prerequisites
 
 - Node.js and npm installed
-- LambdaTest SmartUI account with App Automation plan
+- <BrandName /> SmartUI account with App Automation plan
 - Real device screenshots captured via Appium, SDK, or SmartUI platform
 - Figma Personal Access Token ([how to get one](https://help.figma.com/hc/en-us/articles/8085703771159-Manage-personal-access-tokens))
 

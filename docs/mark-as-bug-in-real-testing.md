@@ -1,4 +1,4 @@
-﻿---
+---
 id: mark-as-bug-in-real-time-testing
 title: Mark As Bug In Real Time Testing
 hide_title: true
@@ -19,6 +19,8 @@ url: https://www.testmu.ai/support/docs/mark-as-bug
 site_name: LambdaTest
 slug: mark-as-bug
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -27,17 +29,17 @@ slug: mark-as-bug
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Mark As Bug",
-          "item": "https://www.lambdatest.com/support/docs/mark-as-bug/"
+          "item": `${BRAND_URL}/support/docs/mark-as-bug/`
         }]
       })
     }}
@@ -47,8 +49,8 @@ slug: mark-as-bug
 
 * * *
 >
-Now, you can avoid the hassle of capturing a screenshot, annotating the same before you finally share it with a teammate by logging onto a respective tool for creating a task. LambdaTest does it all for you.   
->**Mark as Bug** is a feature that would help you highlight any UI observation from your test sessions on LambdaTest and share the same with your colleagues on their favourite project management/ bug tracking tools like Jira, Trello, Hive, Paymo, etc. You can choose the assignee who handles your reported task or bug. You can even mention the description to help them understand your point better. You can do all that while testing on LambdaTest, without having to hop on to any other platform or tool.
+Now, you can avoid the hassle of capturing a screenshot, annotating the same before you finally share it with a teammate by logging onto a respective tool for creating a task. <BrandName /> does it all for you.   
+>**Mark as Bug** is a feature that would help you highlight any UI observation from your test sessions on <BrandName /> and share the same with your colleagues on their favourite project management/ bug tracking tools like Jira, Trello, Hive, Paymo, etc. You can choose the assignee who handles your reported task or bug. You can even mention the description to help them understand your point better. You can do all that while testing on <BrandName />, without having to hop on to any other platform or tool.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="8jvTrwQD8ek">
@@ -57,8 +59,8 @@ Now, you can avoid the hassle of capturing a screenshot, annotating the same bef
 </div>
 
 
-**Note:** Mark as Bug feature is not restricted to any particular feature at LambdaTest. In other words, every type of testing that you perform on LambdaTest will have **mark as bug** embedded in it. Below are various types of testing that we offer at LambdaTest.
-* **Real Time Testing:** To help you test your web-app with live interaction by running it on VMs hosted by LambdaTest cloud server.
+**Note:** Mark as Bug feature is not restricted to any particular feature at <BrandName />. In other words, every type of testing that you perform on <BrandName /> will have **mark as bug** embedded in it. Below are various types of testing that we offer at <BrandName />.
+* **Real Time Testing:** To help you test your web-app with live interaction by running it on VMs hosted by <BrandName /> cloud server.
 * **Screenshot Testing:** Automated bulk screenshot testing on 25(browsers + OS) combination in a single test session.
 * **Responsive Testing:** Perform cross browser testing across a variety of mobile & desktop devices to ensure your website renders well across different view-ports. Run responsive testing on 46 devices in a single test session.
 * **Automation Testing:** Perform automated cross browser testing with our on-cloud Selenium Grid. You can execute parallel testing to trim down your test cycles drastically. Our Selenium Grid supports is compatible with every test automation framework that supports Selenium.
@@ -66,7 +68,7 @@ Now, you can avoid the hassle of capturing a screenshot, annotating the same bef
 
 >
 **Did You Know?**<br />
-LambdaTest offers more than 2000 real browsers and browser versions on every type of testing so you could maximize test coverage of your cross browser testing.
+<BrandName /> offers more than 2000 real browsers and browser versions on every type of testing so you could maximize test coverage of your cross browser testing.
 
 ## How Can I Mark As Bug ?
 
@@ -115,7 +117,7 @@ You can access the saved screenshot from the below-highlighted gallery button on
 ## Pushing Bugs To Third Party Tools
 ***
 
-LambdaTest provides integration with various 3rd party applications to help you collaborate with your teammates easily as you perform cross browser testing on our cloud-based platform. **“Mark as Bug”** button will help you to instantly push your edited screenshot to your integrated workspace. You can integrate with the below mentioned 3rd party tools.
+<BrandName /> provides integration with various 3rd party applications to help you collaborate with your teammates easily as you perform cross browser testing on our cloud-based platform. **“Mark as Bug”** button will help you to instantly push your edited screenshot to your integrated workspace. You can integrate with the below mentioned 3rd party tools.
 
 ---
 *   [**JIRA**](/support/docs/jira-integration/)
@@ -144,7 +146,7 @@ LambdaTest provides integration with various 3rd party applications to help you 
 
 We are constantly adding more integration to our platform. If you use some other tool, don’t hesitate in sharing it with us! Just drop a message through <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**Chat**</span>  & we’ll bring it here on our platform for you.
 
-As you click on **“Mark as Bug”** button an integration specific form would open up. Fill the fields as per your requirement. For instance, if you have installed LambdaTest + monday.com integration then you can fill the below represented fields.
+As you click on **“Mark as Bug”** button an integration specific form would open up. Fill the fields as per your requirement. For instance, if you have installed <BrandName /> + monday.com integration then you can fill the below represented fields.
 
 ---
 
@@ -157,7 +159,7 @@ As you click on **“Mark as Bug”** button an integration specific form would 
 ---
 <img loading="lazy" src={require('../assets/images/mark-as-bug-in-realtime-testing/mark-as-bug-9.webp').default} alt="mark as bug"  className="doc_img" width="1667" height="629"/>
 
-All the fields you populate, will be directly reflected in your respective project based upon the integration you have configured with your LambdaTest account. In above case, the changes would be reflect on the respective monday.com instance.
+All the fields you populate, will be directly reflected in your respective project based upon the integration you have configured with your <BrandName /> account. In above case, the changes would be reflect on the respective monday.com instance.
 
 >
 **Got any questions?**  
@@ -166,12 +168,12 @@ Feel free to share them with our <span className="doc__lt" onClick={() => win
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

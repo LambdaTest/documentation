@@ -1,4 +1,4 @@
-﻿---
+---
 id: biometric-authentication-on-real-devices
 title: Biometric Authentication on Real Devices
 sidebar_label: Biometric Authentication
@@ -26,6 +26,8 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -35,24 +37,24 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Biometric Authentication",
-          "item": "https://www.lambdatest.com/support/docs/biometric-authentication-on-real-devices/"
+          "item": `${BRAND_URL}/support/docs/biometric-authentication-on-real-devices/`
         }]
       })
     }}
 ></script>
 Biometric Authentication is a security mechanism that utilizes unique biological traits to verify user identities. This feature is commonly implemented in native applications to enhance security while providing a frictionless user experience.
 
-LambdaTest has extended its testing capabilities to include Biometric Authentication support for both iOS and Android real devices. This enhancement enables developers and QA teams to thoroughly evaluate their application's biometric authentication functionality across diverse device ecosystems.
+<BrandName /> has extended its testing capabilities to include Biometric Authentication support for both iOS and Android real devices. This enhancement enables developers and QA teams to thoroughly evaluate their application's biometric authentication functionality across diverse device ecosystems.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="32e7bBHiYKg">

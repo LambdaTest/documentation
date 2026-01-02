@@ -1,4 +1,4 @@
-﻿---
+---
 id: localstack-integration-with-lambdatest
 title: LocalStack Integration With TestMu AI
 hide_title: true
@@ -21,6 +21,8 @@ url: https://www.testmu.ai/support/docs/localstack-integration-with-testmu
 site_name: LambdaTest
 slug: localstack-integration-with-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,39 +32,39 @@ slug: localstack-integration-with-testmu
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "LocalStack Integration",
-          "item": "https://www.lambdatest.com/support/docs/localstack-integration-with-testmu/"
+          "item": `${BRAND_URL}/support/docs/localstack-integration-with-testmu/`
         }]
       })
     }}
 >
 </script>
 
-# LocalStack Integrates With LambdaTest
+# LocalStack Integrates With <BrandName />
 ***
 
 LocalStack is a tool that acts as a drop-in replacement for AWS on your local machine. It works on your laptop or in your CI environment. With LocalStack, you can run your AWS applications or Lambdas on your own computer without needing to connect to a remote cloud provider!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BKjPOhQE2hg?si=Tbd-qeSZvCeqLEdJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-LocalStack and LambdaTest have partnered to create a special combination that makes your tests run faster. Using LocalStack's local cloud emulation abilities and LambdaTest's smart AI solutions, developers and testers can speed up their work and get products out quickly. This collaboration helps you test things faster and bring your products to market sooner.
+LocalStack and <BrandName /> have partnered to create a special combination that makes your tests run faster. Using LocalStack's local cloud emulation abilities and <BrandName />'s smart AI solutions, developers and testers can speed up their work and get products out quickly. This collaboration helps you test things faster and bring your products to market sooner.
 
-With this integration, teams can perform tests at an impressive speed without constant internet connectivity. By leveraging the advanced AI solutions from LambdaTest, teams can enjoy an unmatched experience when it comes to executing tests. This results in enhanced productivity and efficiency throughout the development and testing lifecycle.
+With this integration, teams can perform tests at an impressive speed without constant internet connectivity. By leveraging the advanced AI solutions from <BrandName />, teams can enjoy an unmatched experience when it comes to executing tests. This results in enhanced productivity and efficiency throughout the development and testing lifecycle.
 
 
 ## Prerequisites
 ***
 
-1. A LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+1. A <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
 2. A LocalStack account. Don’t have an account, you can create one [here](https://app.localstack.cloud/sign-in).
 
 
@@ -237,18 +239,18 @@ Below is an example of a **HyperExecute** job that was triggered through the abo
 
 <img loading="lazy" src={require('../assets/images/localstack-integration/localstack-six.webp').default} alt="remove" width="1347" height="644" className="doc_img"/>
 
-> That was all you need to know for LambdaTest + LocalStack Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+> That was all you need to know for <BrandName /> + LocalStack Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

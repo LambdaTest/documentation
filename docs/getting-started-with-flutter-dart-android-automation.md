@@ -1,4 +1,4 @@
-﻿---
+---
 id: getting-started-with-flutter-dart-android-automation
 title: Flutter Dart Testing On TestMu AI - Android
 sidebar_label: Flutter Dart Android
@@ -20,6 +20,8 @@ import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,17 +31,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started With Flutter Tests on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-flutter-dart-android-automation/"
+          "item": `${BRAND_URL}/support/docs/getting-started-with-flutter-dart-android-automation/`
         }]
       })
     }}
@@ -47,17 +49,17 @@ import TabItem from '@theme/TabItem';
 <RealDeviceTag value="Real Device" /> 
 Flutter, an open-source UI toolkit created by Google, is a popular choice among developers to build natively compiled applications for mobile, web, and desktop from a single codebase. With Dart as its programming language, Flutter enables fast development of beautiful apps with a highly productive, extensible and open-source set of features.
 
-In this guide, we will explore how to run your first Flutter Dart test on an Android device using the LambdaTest Real Device Cloud. By combining the capabilities of Flutter Dart and LambdaTest, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
+In this guide, we will explore how to run your first Flutter Dart test on an Android device using the <BrandName /> Real Device Cloud. By combining the capabilities of Flutter Dart and <BrandName />, you can ensure the proper functioning of your app across different devices and make your app more reliable and robust.
 
 ## Prerequisites for Getting Started
 
 1. Flutter SDK installed on your system
-2. You will need a LambdaTest username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://appautomation.lambdatest.com/).
+2. You will need a <BrandName /> username and access key. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans) or access the [automation dashboard](https://appautomation.lambdatest.com/).
 3. Access to an android **Sample** app (.apk) and an **Sample Test Suite** app (.apk file).
 
 :::tip
 
-If you do not have any **Flutter Android** app (.apk) and an **Flutter Test Suite** app (.apk) file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/sample-flutter-app.apk) and a sample :link: [Test Suite](https://prod-mobile-artefacts.lambdatest.com/assets/docs/sample-flutter-testsuite.apk).
+If you do not have any **Flutter Android** app (.apk) and an **Flutter Test Suite** app (.apk) file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/sample-flutter-app.apk) and a sample :link: [Test Suite](https://prod-mobile-artefacts.lambdatest.com/assets/docs/sample-flutter-testsuite.apk).
 
 :::
 
@@ -132,7 +134,7 @@ gradlew --full-stacktrace --info -Pverbose=true -Ptarget-platform=android-arm64 
 
 ### Step 2: Upload Your Application
 
-Upload your **android** application (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **android** application (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 **Using App File:**
 
@@ -170,7 +172,7 @@ Response of above cURL will be a **JSON** object containing the `App URL` of the
 
 ### Step 3: Uploading Test Suite
 
-Upload your **test suite** (.apk file) to the LambdaTest servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
+Upload your **test suite** (.apk file) to the <BrandName /> servers using our **REST API**. You need to provide your **Username** and **AccessKey** in the format `Username:AccessKey` in the **cURL** command for authentication. Make sure to add the path of the **appFile** in the cURL request. Here is an example cURL request to upload your app using our REST API:
 
 **Using App File:**
 
@@ -271,7 +273,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/f
 
 ### Step 5: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://appautomation.lambdatest.com/build).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://appautomation.lambdatest.com/build).
 
 
 ## Running Tests in Parallel
@@ -324,12 +326,12 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/framework/v1/f
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,4 +1,4 @@
-﻿---
+---
 id: analytics-overview
 title: TestMu AI - Test Insights for visualizing your tests runs
 sidebar_label: Insights
@@ -9,6 +9,8 @@ url: https://www.testmu.ai/support/docs/analytics-overview
 site_name: LambdaTest
 slug: analytics-overview
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -18,17 +20,17 @@ slug: analytics-overview
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/analytics-overview/"
+          "item": `${BRAND_URL}/support/docs/analytics-overview/`
         }]
       })
     }}
@@ -50,7 +52,7 @@ To know more about this feature, refer to the [AI Dashboard CoPilot](/docs/analy
 
 ## What is Insights?
 
-Insights in LambdaTest allows the QA managers and executives to efficiently track the tests conducted on the platform and get deep-level insights with the numerous widgets that the product provides.
+Insights in <BrandName /> allows the QA managers and executives to efficiently track the tests conducted on the platform and get deep-level insights with the numerous widgets that the product provides.
 
 <div className="ytframe"> 
 <div className="youtube" data-embed="AFQWaAkLg6o" data-loading-attribute="eager">
@@ -76,19 +78,19 @@ Insights effectively allows these managers to track and improve the tests at one
 <a href="/support/docs/analytics-modules-resource-utilization/">
     <div className="support_inners">
       <h3>Concurrency Usage</h3>
-      <p>Learn how to to get an overview of the LambdaTest resources being utilized by your teams.</p>
+      <p>Learn how to to get an overview of the <BrandName /> resources being utilized by your teams.</p>
     </div>
   </a>
   <a href="/support/docs/analytics-modules-automation-test-overview/">
     <div className="support_inners">
       <h3>Overview</h3>
-      <p>Learn how to get an overview of the tests running on the LambdaTest.</p>
+      <p>Learn how to get an overview of the tests running on the <BrandName />.</p>
     </div>
   </a>
   <a href="/support/docs/analytics-modules-test-intelligence-command-logs-analytics/">
     <div className="support_inners">
       <h3>Error Insights</h3>
-      <p>Learn how to get all the insights into the test errors on the LambdaTest.</p>
+      <p>Learn how to get all the insights into the test errors on the <BrandName />.</p>
     </div>
   </a>
   <a href="/support/docs/analytics-modules-test-intelligence-flaky-test-analytics/">
@@ -197,12 +199,12 @@ The <NewTag value="BETA" bgColor="#ffec02" color="#000" /> features are availabl
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

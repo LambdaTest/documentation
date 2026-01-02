@@ -42,8 +42,6 @@ import TabItem from '@theme/TabItem';
     }}
 ></script>
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 KaneAI transforms the way teams approach test automation by bridging the gap between natural language requirements and executable test code. Built for modern development workflows, KaneAI empowers teams to plan, author, and evolve comprehensive test suites without the traditional barriers of complex scripting or framework expertise.
 
 ## Current Testing Scenario Challenge

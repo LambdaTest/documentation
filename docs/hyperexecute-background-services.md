@@ -19,17 +19,17 @@ slug: hyperexecute-background-services
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Background Services",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-background-services/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-background-services/`
         }]
       })
     }}

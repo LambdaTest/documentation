@@ -1,4 +1,4 @@
-﻿---
+---
 id: insights-private-real-devices
 title: Private Real Devices Insights
 sidebar_label: Private Real Devices
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/insights-private-real-devices
 site_name: LambdaTest
 slug: insights-private-real-devices
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -24,17 +26,17 @@ slug: insights-private-real-devices
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Linear App Integration",
-          "item": "https://www.lambdatest.com/support/docs/insights-private-real-devices/"
+          "item": `${BRAND_URL}/support/docs/insights-private-real-devices/`
         }]
       })
     }}
@@ -45,7 +47,7 @@ slug: insights-private-real-devices
 import NewTag from '../src/component/newTag';
 
 
-LambdaTest Private Real Devices Insights provide comprehensive insights into your private real devices testing efforts. These insights help you optimize your testing efforts by providing detailed insights into your real devices device usage insights, and more.
+<BrandName /> Private Real Devices Insights provide comprehensive insights into your private real devices testing efforts. These insights help you optimize your testing efforts by providing detailed insights into your real devices device usage insights, and more.
 
 :::note
 The Private Real Devices Insights is currently in  <NewTag value="BETA" bgColor="#ffec02" color="#000" />. If you have any feedback or suggestions, please feel free to reach out to us at [support@lambdatest.com](mailto:support@lambdatest.com).

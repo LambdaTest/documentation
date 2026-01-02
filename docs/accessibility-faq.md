@@ -1,4 +1,4 @@
-﻿---
+---
 id: accessibility-faq
 title: Accessibility Tool Frequently Asked Questions!!
 hide_title: false
@@ -21,6 +21,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,17 +32,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Accessibility FAQ",
-          "item": "https://www.lambdatest.com/support/docs/accessibility-faq/"
+          "item": `${BRAND_URL}/support/docs/accessibility-faq/`
         }]
       })
     }}
@@ -91,8 +93,8 @@ Currently we offer support for Selenium, Cypress and PlayWright.
 ## Can I share the dashboard link with anyone?
 Yes, you can share dashboard links with anyone within your organization. However, for security reasons, access is limited to members of your organization to protect potentially sensitive information about your web applications.
 
-## What is the accessibility score given by LambdaTest and how should it be interpreted?
-The LambdaTest accessibility score is a proprietary metric designed to give you a quick overview of your site's accessibility. It's calculated based on:
+## What is the accessibility score given by <BrandName /> and how should it be interpreted?
+The <BrandName /> accessibility score is a proprietary metric designed to give you a quick overview of your site's accessibility. It's calculated based on:
 - Number and severity of issues detected
 - Coverage of WCAG success criteria
 - Overall accessibility of key user flows

@@ -1,4 +1,4 @@
-﻿---
+---
 id: testmo-integration
 title: How to integrate TestMo With TestMu AI
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/testmo-integration
 site_name: LambdaTest
 slug: testmo-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -20,28 +22,28 @@ slug: testmo-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "TestMo Integration",
-          "item": "https://www.lambdatest.com/support/docs/testmo-integration/"
+          "item": `${BRAND_URL}/support/docs/testmo-integration/`
         }]
       })
     }}
 ></script>
 
-# TestMo Integration With LambdaTest Grid
+# TestMo Integration With <BrandName /> Grid
 ***
 
 TestMo is a unified test management software that helps teams manage and track all their testing activity and efforts in one place. It combines manual testing, exploratory & ad-hoc testing and test automation in one platform, so teams can work smarter and more productively.
 
-TestMo also offers integration with LambdaTest to help you perform automated cross browser testing through an on-cloud Selenium Grid offering 3000+ browsers. **LambdaTest integration to TestMo**  will help you run your automation scripts from TestMo instance to our cloud-based Grid.
+TestMo also offers integration with <BrandName /> to help you perform automated cross browser testing through an on-cloud Selenium Grid offering 3000+ browsers. **<BrandName /> integration to TestMo**  will help you run your automation scripts from TestMo instance to our cloud-based Grid.
 
 ## Steps to Integrate your Project
 ***
@@ -54,10 +56,10 @@ TestMo also offers integration with LambdaTest to help you perform automated cro
 Firstly, you need to run the build command as per your desired framework. You can choose any test automation framework and programming language you are familiar with. Selenium is one of the most common one used with JavaScript/Node.js, Java, C#, Python, Ruby or PHP, and other languages
 
 :::tip
-You can take the reference from [here](/support/docs/getting-started-with-testmu-automation/#supported-languages-and-frameworks) on all the languages and frameworks supported by LambdaTest online Selenium Grid.
+You can take the reference from [here](/support/docs/getting-started-with-testmu-automation/#supported-languages-and-frameworks) on all the languages and frameworks supported by <BrandName /> online Selenium Grid.
 :::
 
-<img loading="lazy" src={require('../assets/images/testmo-integration/dashboard.webp').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/testmo-integration/dashboard.webp').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>
 
 ### Step 2: Generate your Testing Result XML Files
 To submit and report your test results to Testmo, execute your automated tests and generate a JUnit-style XML report file. This file format has become a standard format to exchange test results between tools and is supported by practically any testing tool. Testmo also directly supports this format so it's very easy to report your test automation results.
@@ -95,4 +97,4 @@ testmo automation:run:submit --instance <https://<your_testmo_address>.testmo.ne
 
 - Output in the Dashboard
 
-<img loading="lazy" src={require('../assets/images/testmo-integration/testmo-result.webp').default} alt="provide access to LambdaTest account" width="1280" height="684" className="doc_img"/>
+<img loading="lazy" src={require('../assets/images/testmo-integration/testmo-result.webp').default} alt="provide access to <BrandName /> account" width="1280" height="684" className="doc_img"/>

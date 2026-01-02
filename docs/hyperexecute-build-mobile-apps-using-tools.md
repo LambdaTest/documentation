@@ -24,17 +24,17 @@ slug: hyperexecute-build-mobile-apps-using-tools
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Use Cases",
-          "item": "https://www.lambdatest.com/support/docs/hyperexecute-build-mobile-apps-using-tools/"
+          "item": `${BRAND_URL}/support/docs/hyperexecute-build-mobile-apps-using-tools/`
         }]
       })
     }}

@@ -1,4 +1,4 @@
-﻿---
+---
 id: servicenow-integration
 title: ServiceNow Integration with TestMu AI
 hide_title: false
@@ -23,6 +23,8 @@ slug: servicenow-integration
 ---
 
 import CodeBlock from '@theme/CodeBlock';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,37 +34,37 @@ import CodeBlock from '@theme/CodeBlock';
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "ServiceNow Integration",
-          "item": "https://www.lambdatest.com/support/docs/servicenow-integration/"
+          "item": `${BRAND_URL}/support/docs/servicenow-integration/`
         }]
       })
     }}></script>
 
-ServiceNow is a cloud-based platform for IT service management and automating business processes. Integrating ServiceNow with LambdaTest enables you to log incidents directly from your testing sessions into ServiceNow, streamlining your workflow and enhancing team collaboration.
+ServiceNow is a cloud-based platform for IT service management and automating business processes. Integrating ServiceNow with <BrandName /> enables you to log incidents directly from your testing sessions into ServiceNow, streamlining your workflow and enhancing team collaboration.
 
-> ServiceNow Integration with LambdaTest is available for both freemium and premium plans.
+> ServiceNow Integration with <BrandName /> is available for both freemium and premium plans.
 
-### Create an OAuth Application for LambdaTest in ServiceNow
+### Create an OAuth Application for <BrandName /> in ServiceNow
 
 > Only an administrator of your ServiceNow instance can create the OAuth application required for integration.
 
-To enable integration, you need to create an OAuth application in your ServiceNow instance for LambdaTest:
+To enable integration, you need to create an OAuth application in your ServiceNow instance for <BrandName />:
 
 1. **Log in to your ServiceNow instance** as an administrator.
 2. Go to **System OAuth > Application Registry** in the left navigation pane.
 <img loading="lazy" src={require('../assets/images/integrations/servicenow/1.png').default} alt="1" className="doc_img"/>
 3. Click **New** and select **Create an OAuth API endpoint for external clients**.
 4. Fill in the required fields:
-   - **Name:** Enter a name (e.g., LambdaTest Integration).
+   - **Name:** Enter a name (e.g., <BrandName /> Integration).
    - **Client ID:** (Optional) Leave blank to auto-generate or specify your own.
    - **Client Secret:** (Optional) Leave blank to auto-generate or specify your own.
    - **Redirect URL:** <div className="lambdatest__codeblock"><CodeBlock>https://integrations.lambdatest.com/servicenow/auth/callback</CodeBlock></div>
@@ -70,14 +72,14 @@ To enable integration, you need to create an OAuth application in your ServiceNo
   <img loading="lazy" src={require('../assets/images/integrations/servicenow/2.png').default} alt="2" className="doc_img"/>
 
 5. Click **Submit** to create the application.
-6. After creation, copy the **Client ID** and **Client Secret**. You will need these values to complete the integration in LambdaTest.
+6. After creation, copy the **Client ID** and **Client Secret**. You will need these values to complete the integration in <BrandName />.
 
 
 
 
 Once the OAuth application is set up, proceed with the integration steps below.
 
-## Integrate ServiceNow from your LambdaTest Account
+## Integrate ServiceNow from your <BrandName /> Account
 
 **Step 1:** Log in to your [LambdaTest](https://accounts.lambdatest.com/) account. Ensure you have Admin or User level access to manage integrations.
 
@@ -102,7 +104,7 @@ After filling in the details, click on the **Install** button to establish the i
 
 **Step 1:** Ensure you have access to the appropriate ServiceNow instance and the Incident table is available.
 
-**Step 2:** While working on LambdaTest, if you encounter an incident, click on the **Mark as Bug** button available on different products.
+**Step 2:** While working on <BrandName />, if you encounter an incident, click on the **Mark as Bug** button available on different products.
 
 **Step 3:** In the incident logging form, provide the necessary details such as:
 
@@ -120,9 +122,9 @@ After filling in the details, click on the **Install** button to establish the i
 
 ## Resync ServiceNow Integration
 
-To ensure that the latest users from your ServiceNow system are available in LambdaTest, you can resync the integration.
+To ensure that the latest users from your ServiceNow system are available in <BrandName />, you can resync the integration.
 
-**Step 1:** Navigate to `Settings` -> `Integrations` in your LambdaTest account.
+**Step 1:** Navigate to `Settings` -> `Integrations` in your <BrandName /> account.
 
 **Step 2:** Locate the ServiceNow integration and click on the **Resync** button.
 
@@ -135,8 +137,8 @@ Once resynced, the latest data will be available for use.
 
 ## Uninstall ServiceNow Integration
 
-**Step 1:** Navigate to `Settings` -> `Integrations` in your LambdaTest account.
+**Step 1:** Navigate to `Settings` -> `Integrations` in your <BrandName /> account.
 
 **Step 2:** Locate the ServiceNow integration and click on the **Remove** button to uninstall the integration.
 
-> That was all you need to know for LambdaTest + ServiceNow Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock.
+> That was all you need to know for <BrandName /> + ServiceNow Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock.

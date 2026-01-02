@@ -1,4 +1,4 @@
-﻿---
+---
 id: autoheal-with-hooks
 title: How to use AutoHeal using Hooks
 hide_title: false
@@ -15,6 +15,8 @@ slug: autoheal-with-hooks
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 
 <script type="application/ld+json"
@@ -25,17 +27,17 @@ import TabItem from '@theme/TabItem';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "AutoHeal with Hooks",
-          "item": "https://www.lambdatest.com/support/docs/autoheal-with-hooks/"
+          "item": `${BRAND_URL}/support/docs/autoheal-with-hooks/`
         }]
       })
     }}
@@ -125,4 +127,4 @@ def OneTest(caps, sleepTime):
 test_autoheal(desired_cap_chrome)
 ```
 
-With these steps, you can seamlessly integrate LambdaTest HyperExecute Autoheal into your Selenium tests, reducing flaky tests and improving stability.
+With these steps, you can seamlessly integrate <BrandName /> HyperExecute Autoheal into your Selenium tests, reducing flaky tests and improving stability.

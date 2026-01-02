@@ -23,17 +23,17 @@ slug: analytics-build-insights
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Build Insights",
-          "item": "https://www.lambdatest.com/support/docs/analytics-build-insights/"
+          "item": `${BRAND_URL}/support/docs/analytics-build-insights/`
         }]
       })
     }}

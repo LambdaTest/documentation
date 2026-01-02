@@ -1,4 +1,4 @@
-﻿---
+---
 id: selenium-mask-your-data
 title: Mask your Sensitive Data
 hide_title: false
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/selenium-mask-your-data
 site_name: LambdaTest
 slug: selenium-mask-your-data
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,23 +24,23 @@ slug: selenium-mask-your-data
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Other Capabilities",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Mask your Data",
-          "item": "https://www.lambdatest.com/support/docs/selenium-mask-your-data/"
+          "item": `${BRAND_URL}/support/docs/selenium-mask-your-data/`
         }]
       })
     }}
 ></script>
 
-With the help of **maskCommands** capability, you can now hide sensitive and important data, sent to or retrieve from the remote browsers at LambdaTest. When used, this will hide all the keystrokes and other required values, and replace them with **‘*’** in test session logs (both text and raw).
+With the help of **maskCommands** capability, you can now hide sensitive and important data, sent to or retrieve from the remote browsers at <BrandName />. When used, this will hide all the keystrokes and other required values, and replace them with **‘*’** in test session logs (both text and raw).
 
 **Syntax (Java)**:
 

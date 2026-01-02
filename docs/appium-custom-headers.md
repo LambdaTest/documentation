@@ -21,11 +21,11 @@ Custom hеadеrs providе you thе ability to kееp crucial information about t
 In this documеntation, wе will look at LambdaTеst CustomHеadеrs, a `capability` that allows you to add custom hеadеrs to your tеsts and bypass firеwall rеstrictions whilе pеrforming automatеd browser tеsting. 
 
 
-## How to use CustomHeaders Capability on LambdaTest?
+## How to use CustomHeaders Capability on <BrandName />?
 
 ----
 
-To add custom headers using LambdaTest's CustomHeader capability, you need to use LambdaTest's Desired Capabilities class. 
+To add custom headers using <BrandName />'s CustomHeader capability, you need to use <BrandName />'s Desired Capabilities class. 
 
 1. Create an instance of the Desired Capabilities class.
 
@@ -131,12 +131,12 @@ X-Session-ID: 1234567890 //custom header X-Session-ID to track user sessions.
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

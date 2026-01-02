@@ -58,7 +58,7 @@ TestComplete, from SmartBear, streamlines automated testing across desktop, web,
 - Download TestComplete from its official website and complete the signup process.
 - Generate your App Id by uploading it to the <BrandName /> Server.
 
-<!-- ## Web Automation Using TestComplete And LambdaTest
+<!-- ## Web Automation Using TestComplete And <BrandName />
 ---
 
 :::info Note
@@ -71,7 +71,7 @@ TestComplete, from SmartBear, streamlines automated testing across desktop, web,
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/1.png').default} alt="Synapse Architecture" width="1912" height="996" className="doc_img"/>
 
-2. Visit [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build) and copy the LambdaTest Hub URL.
+2. Visit [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/build) and copy the <BrandName /> Hub URL.
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/2.png').default} alt="Synapse Architecture" width="1908" height="846" className="doc_img"/>
 
@@ -79,7 +79,7 @@ TestComplete, from SmartBear, streamlines automated testing across desktop, web,
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/3.png').default} alt="Synapse Architecture" width="1920" height="1080" className="doc_img"/>
 
-4. Visit LambdaTest Automation Capabilities Generator. Select Selenium version, choose desired language, and the select the required browser and OS combinations to run the test on LambdaTest.
+4. Visit <BrandName /> Automation Capabilities Generator. Select Selenium version, choose desired language, and the select the required browser and OS combinations to run the test on <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/web-caps.png').default} alt="Synapse Architecture" width="1225" height="565" className="doc_img"/>
 
@@ -91,7 +91,7 @@ TestComplete, from SmartBear, streamlines automated testing across desktop, web,
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/5.png').default} alt="Synapse Architecture" width="1340" height="617" className="doc_img"/>
 
-7. Go to LambdaTest Automation Dashboard to view your test results.
+7. Go to <BrandName /> Automation Dashboard to view your test results.
 
 <img loading="lazy" src={require('../assets/images/testcomplete-integration/6.png').default} alt="Synapse Architecture" width="1904" height="829" className="doc_img"/>
 

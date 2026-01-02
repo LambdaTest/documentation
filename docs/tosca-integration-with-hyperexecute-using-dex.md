@@ -39,8 +39,6 @@ slug: tosca-integration-with-hyperexecute-using-dex
     }}
 ></script>
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 # Tosca Integration using DEX
 
 This documentation provides a detailed guide on seamlessly integrating Tosca with HyperExecute using DEX.

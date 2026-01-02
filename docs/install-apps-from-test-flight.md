@@ -1,4 +1,4 @@
-﻿---
+---
 id: install-apps-from-test-flight
 title: How to Test Apps Installed via Test flight?
 hide_title: true
@@ -11,6 +11,8 @@ url: https://www.testmu.ai/support/docs/install-apps-from-test-flight
 site_name: LambdaTest
 slug: install-apps-from-test-flight
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -20,17 +22,17 @@ slug: install-apps-from-test-flight
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "How to Test Apps Installed via Test flight?",
-          "item": "https://www.lambdatest.com/support/docs/install-apps-from-test-flight/"
+          "item": `${BRAND_URL}/support/docs/install-apps-from-test-flight/`
         }]
       })
     }}
@@ -38,11 +40,11 @@ slug: install-apps-from-test-flight
 
 # How to Test Apps Installed via Test flight?
 
-LambdaTest provides a seamless testing environment for beta versions of mobile applications on real iOS devices. With TestFlight preinstalled, developers can log into TestFlight, install their beta apps on iOS devices, and test before the apps are released on the App Store. This allows developers to effectively assess and improve app performance and user experience prior to launch.
+<BrandName /> provides a seamless testing environment for beta versions of mobile applications on real iOS devices. With TestFlight preinstalled, developers can log into TestFlight, install their beta apps on iOS devices, and test before the apps are released on the App Store. This allows developers to effectively assess and improve app performance and user experience prior to launch.
 
 Let's dive in to learn how to test apps installed from Test Flight.
 
-**Step 1**: Login to your LambdaTest account. Visit **Real Device** from the left panel and navigate to the **App Testing**.
+**Step 1**: Login to your <BrandName /> account. Visit **Real Device** from the left panel and navigate to the **App Testing**.
 
 **Step 2**: Next, choose the OS version. In this case lets choose **iOS**.
 
@@ -61,12 +63,12 @@ Let's dive in to learn how to test apps installed from Test Flight.
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -1,4 +1,4 @@
-﻿---
+---
 id: selenium-xunit
 title: How to Run Selenium Tests With xUnit
 hide_title: true
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/selenium-with-xunit
 site_name: LambdaTest
 slug: selenium-with-xunit
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: selenium-with-xunit
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Run Selenium Tests With xUnit on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/selenium-with-xunit/"
+          "item": `${BRAND_URL}/support/docs/selenium-with-xunit/`
         }]
       })
     }}
@@ -41,7 +43,7 @@ slug: selenium-with-xunit
 # Run Selenium Tests With xUnit
 ---
 
-Learn how to run your xUnit automation testing scripts on LambdaTest online Selenium Grid of 3000+ real browsers and operating systems.
+Learn how to run your xUnit automation testing scripts on <BrandName /> online Selenium Grid of 3000+ real browsers and operating systems.
 
 ## Prerequisites
 ---
@@ -57,7 +59,7 @@ Before you start performing C# automation testing with Selenium using xUnit, you
 ## Installing Selenium Dependencies
 ---
 
-1. Clone the LambdaTest Selenium xUnit GitHub repository and navigate to the code directory:
+1. Clone the <BrandName /> Selenium xUnit GitHub repository and navigate to the code directory:
 
 ```
 git clone https://github.com/LambdaTest/CSharp-xUnit-Selenium
@@ -67,9 +69,9 @@ cd CSharp-xUnit-Selenium
 ## Setting up Your Authentication
 ---
 
-Ensure you have your LambdaTest credentials to run C# automation scripts. Get these credentials from the LambdaTest Profile by heading to **Account Settings** > **Password & Security** tab.
+Ensure you have your <BrandName /> credentials to run C# automation scripts. Get these credentials from the <BrandName /> Profile by heading to **Account Settings** > **Password & Security** tab.
 
-2. Set your LambdaTest Username and Access Key in environment variables.
+2. Set your <BrandName /> Username and Access Key in environment variables.
 
 **Windows**:
 
@@ -95,7 +97,7 @@ export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
 ## Configuring Test Capabilities
 ---
 
-4.  In the *config.json* file, update your test capabilities. We are passing browser, browser version, and operating system information, along with LambdaTest Selenium Grid capabilities via the capabilities object.
+4.  In the *config.json* file, update your test capabilities. We are passing browser, browser version, and operating system information, along with <BrandName /> Selenium Grid capabilities via the capabilities object.
 
 ```csharp
 {
@@ -167,9 +169,9 @@ dotnet test --filter "profile=parallel"
 ## Testing Locally Hosted Or Privately Hosted Web Projects
 ---
 
-For testing locally hosted or privately hosted projects with LambdaTest Selenium Grid using LambdaTest Tunnel, follow the [LambdaTest Tunnel documentation](/support/docs/testing-locally-hosted-pages/).
+For testing locally hosted or privately hosted projects with <BrandName /> Selenium Grid using <BrandName /> Tunnel, follow the [<BrandName /> Tunnel documentation](/support/docs/testing-locally-hosted-pages/).
 
-Download the LambdaTest Tunnel binary for your OS and run the following command:
+Download the <BrandName /> Tunnel binary for your OS and run the following command:
 
 ```csharp
 LT -user {user’s login email} -key {user’s access key}

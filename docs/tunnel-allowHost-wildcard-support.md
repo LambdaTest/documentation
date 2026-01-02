@@ -1,4 +1,4 @@
-﻿---
+---
 id: tunnel-allowHost-wildcard-support
 title: Support for Wildcard in --allowHosts Flag
 hide_title: false
@@ -20,6 +20,8 @@ url: https://www.testmu.ai/support/docs/tunnel-allowHost-wildcard-support
 site_name: LambdaTest
 slug: tunnel-allowHost-wildcard-support
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,25 +31,25 @@ slug: tunnel-allowHost-wildcard-support
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Docker Tunnel",
-          "item": "https://www.lambdatest.com/support/docs/tunnel-allowHost-wildcard-support/"
+          "item": `${BRAND_URL}/support/docs/tunnel-allowHost-wildcard-support/`
         }]
       })
     }}
 ></script>
-LambdaTest Tunnel now supports wildcard entries in the [`--allowHosts`](https://lambdatest.com/support/docs/lambda-tunnel-modifiers/#:~:text=TYPE-,%2D%2DallowHosts,-Comma%20separated%20list) flag. This enhancement allows users to specify patterns for hostnames instead of listing each subdomain separately, making it more flexible and efficient.
+<BrandName /> Tunnel now supports wildcard entries in the [`--allowHosts`](https://lambdatest.com/support/docs/lambda-tunnel-modifiers/#:~:text=TYPE-,%2D%2DallowHosts,-Comma%20separated%20list) flag. This enhancement allows users to specify patterns for hostnames instead of listing each subdomain separately, making it more flexible and efficient.
 
 ## Usage of `--allowHosts` with Wildcards
-The `--allowHosts` flag enables users to define which domains should be routed through the LambdaTest Tunnel while allowing other traffic to bypass it. With the new wildcard support, you can match multiple subdomains easily.
+The `--allowHosts` flag enables users to define which domains should be routed through the <BrandName /> Tunnel while allowing other traffic to bypass it. With the new wildcard support, you can match multiple subdomains easily.
 
 ### Formatting Domains with Wildcards
 Follow these guidelines when using wildcards in domain names:

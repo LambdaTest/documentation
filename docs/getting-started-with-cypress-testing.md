@@ -32,9 +32,9 @@ import TabItem from '@theme/TabItem';
 
 Cypress is a modern web front-end testing tool built with JavaScript Mocha. It operates directly on the browsers without the need for Selenium. Its unique DOM manipulation technique makes it a very developer and QA-friendly tool.
 
-Integrating LambdaTest with Cypress allows you to perform Cypress testing across 40+ browser versions on cloud.
+Integrating <BrandName /> with Cypress allows you to perform Cypress testing across 40+ browser versions on cloud.
 
-In this guide, learn how to get started with Cypress testing on the LambdaTest platform. We will use Cypress’ kitchen sink sample app to execute our tests. 
+In this guide, learn how to get started with Cypress testing on the <BrandName /> platform. We will use Cypress’ kitchen sink sample app to execute our tests. 
 
 
 
@@ -43,20 +43,20 @@ In this guide, learn how to get started with Cypress testing on the LambdaTest p
 
 :::tip Sample repo
 
-Before we get started, make sure to clone the LambdaTest's sample Cypress Cloud repo, used in this document. <a href="https://github.com/LambdaTest/Cypress-Cloud" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
+Before we get started, make sure to clone the <BrandName />'s sample Cypress Cloud repo, used in this document. <a href="https://github.com/LambdaTest/Cypress-Cloud" className="github__anchor"><img loading="lazy" src={require('../assets/images/icons/github.png').default} alt="Image" className="doc_img"/> View on GitHub</a>
 
 :::
 
-You can run your first Cypress test on the LambdaTest platform in a few simple steps:
+You can run your first Cypress test on the <BrandName /> platform in a few simple steps:
 
-1. Clone the LambdaTest-Cypress-Cloud GitHub repo and navigate to the cloned directory.
+1. Clone the <BrandName />-Cypress-Cloud GitHub repo and navigate to the cloned directory.
 
 ```bash
 git clone https://github.com/LambdaTest/Cypress-Cloud.git
 cd Cypress-Cloud
 ```
 
-2. To run Cypress tests, you will need to set your LambdaTest username and access key in the environment variables. You can get them from the LambdaTest Automation Dashboard.
+2. To run Cypress tests, you will need to set your <BrandName /> username and access key in the environment variables. You can get them from the <BrandName /> Automation Dashboard.
 
 <img loading="lazy" src={require('../assets/images/playwright-testing/key.webp').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
@@ -79,9 +79,9 @@ export LT_ACCESS_KEY="YOUR_LAMBDATEST_ACCESS_KEY"
 ## Running Your First Test
 ---
 
-Following are the steps to run your first Cypress test on the LambdaTest platform.
+Following are the steps to run your first Cypress test on the <BrandName /> platform.
 
-1. Install the LambdaTest-Cypress CLI using the below command.
+1. Install the <BrandName />-Cypress CLI using the below command.
 
 ```bash
 npm install -g lambdatest-cypress-cli
@@ -291,7 +291,7 @@ app
 lambdatest-cypress run
 ```
 
-6. Visit LambdaTest Automation dashboard to view your test results. The CLI also has a link to view the Cypress test build.
+6. Visit <BrandName /> Automation dashboard to view your test results. The CLI also has a link to view the Cypress test build.
 
 <img loading="lazy" src={require('../assets/images/cypressten/cypress_results.png').default} alt="Image" width="1444" height="703"  className="doc_img"/>
 
@@ -299,7 +299,7 @@ lambdatest-cypress run
 ## Testing Locally Hosted or Privately Hosted Projects 
 ---
 
-To tests locally hosted websites on the LambdaTest platform, you need to setup [LambdaTest tunnel](/docs/testing-locally-hosted-pages/), and execute commands using the CLI, or [Download UnderPass](/docs/underpass-tunnel-application/), our GUI based desktop app. Once you have the LambdaTest tunnel or Underpass set up and started, you can use Cypress to test locally hosted websites.
+To tests locally hosted websites on the <BrandName /> platform, you need to setup [<BrandName /> tunnel](/docs/testing-locally-hosted-pages/), and execute commands using the CLI, or [Download UnderPass](/docs/underpass-tunnel-application/), our GUI based desktop app. Once you have the <BrandName /> tunnel or Underpass set up and started, you can use Cypress to test locally hosted websites.
 
 Now you need to activate the tunnel capability in the `lambdatest-config.json` file under the section "tunnel_settings" as shown below:
 
@@ -310,17 +310,17 @@ Now you need to activate the tunnel capability in the `lambdatest-config.json` f
 	}
 ```
 
-You can provide the name of the **LambdaTest tunnel** as per your requirements.
+You can provide the name of the **<BrandName /> tunnel** as per your requirements.
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

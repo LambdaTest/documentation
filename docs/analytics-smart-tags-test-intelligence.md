@@ -1,4 +1,4 @@
-﻿---
+---
 id: analytics-smart-tags-test-intelligence
 title: Smart Tags - Test Intelligence
 sidebar_label: Smart Tags
@@ -10,6 +10,8 @@ url: https://www.testmu.ai/support/docs/analytics-smart-tags-test-intelligence
 site_name: LambdaTest
 slug: analytics-smart-tags-test-intelligence
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -19,30 +21,30 @@ slug: analytics-smart-tags-test-intelligence
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Test Overview",
-          "item": "https://www.lambdatest.com/support/docs/analytics-smart-tags-test-intelligence/"
+          "item": `${BRAND_URL}/support/docs/analytics-smart-tags-test-intelligence/`
         }]
       })
     }}
 ></script>
 
-Smart Tags in LambdaTest Analytics help you analyze your test automation execution faster. With Smart Tags, you can categorize your tests based on different parameters and get insights on your test execution. This feature helps you identify patterns, trends, and anomalies in your test results, making it easier to optimize your test automation strategy.
+Smart Tags in <BrandName /> Analytics help you analyze your test automation execution faster. With Smart Tags, you can categorize your tests based on different parameters and get insights on your test execution. This feature helps you identify patterns, trends, and anomalies in your test results, making it easier to optimize your test automation strategy.
 
 ## Pre-requisites For Smart Tags:
 
-1. You should have an active LambdaTest account.
-2. You should run at least 10 tests on the LambdaTest automation platform.
+1. You should have an active <BrandName /> account.
+2. You should run at least 10 tests on the <BrandName /> automation platform.
 3. This feature is available for users with the HyperExecute or App / Web Automation subscription plan.
-4. You should have access to the LambdaTest Analytics platform.
+4. You should have access to the <BrandName /> Analytics platform.
 5. You can see the smart tags on creating a dashboard in the Insights section.
 6. Click on the `Create New` button to create a new dashboard.
 7. Choose any of the available widgets and add them to the dashboard.

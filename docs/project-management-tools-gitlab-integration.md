@@ -1,4 +1,4 @@
-﻿---
+---
 id: project-management-tools-gitlab-integration
 title: GitLab Integration:TestMu AI
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/gitlab-integration
 site_name: LambdaTest
 slug: gitlab-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: gitlab-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "GitLab Integration",
-          "item": "https://www.lambdatest.com/support/docs/gitlab-integration/"
+          "item": `${BRAND_URL}/support/docs/gitlab-integration/`
         }]
       })
     }}
@@ -41,15 +43,15 @@ slug: gitlab-integration
 ***
 >GitLab is a web-based Git-repository manager with the purpose of facilitating entire DevOps lifecycle. It helps in the collaboration of different teams working on a project. Ensuring Development, QA, Security, Operations and Product team to sync simultaneously on the same project. GitLab helps in bringing your product a lot faster in the market by reducing the time taken to complete a release cycle in a very significant manner.
 
-The LambdaTest GitLab Integration allows you to create a card directly in your repository from LambdaTest platform. Push an issue to your respective repository anytime, even in the middle of your test session. The fields populated by you when marking as a bug through LambdaTest are displayed as information on the bug in GitLab repository for that testing instance.
+The <BrandName /> GitLab Integration allows you to create a card directly in your repository from <BrandName /> platform. Push an issue to your respective repository anytime, even in the middle of your test session. The fields populated by you when marking as a bug through <BrandName /> are displayed as information on the bug in GitLab repository for that testing instance.
 
-**GitLab Integration with LambdaTest, like all of our other integrations to 3rd party applications, is available for freemium as well as premium plan.**
+**GitLab Integration with <BrandName />, like all of our other integrations to 3rd party applications, is available for freemium as well as premium plan.**
 
-## How To Integrate GitLab With Your LambdaTest Account?
+## How To Integrate GitLab With Your <BrandName /> Account?
 ***
-**Step 1:** Login to your LambdaTest account. You would need to have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You would need to have Admin or User level access to see and install integrations.
 
-**Step 2:** Select **‘Integrations’** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your LambdaTest account.
+**Step 2:** Select **‘Integrations’** from the left navigation menu bar. This will guide you to a screen where you will find a list of 3rd party applications, available to integrate with your <BrandName /> account.
 
 **Step 3:** Here under the ‘Project Management’ Section, you’ll find GitLab. Click on Gitlab block.
 
@@ -71,7 +73,7 @@ The LambdaTest GitLab Integration allows you to create a card directly in your r
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-integration.webp').default} alt="gitlab api"  className="doc_img" width="1365" height="675"/>
 
-4. After you login, you will have to authorize LambdaTest to use your account. Click on the green button that says **‘Authorize’.**
+4. After you login, you will have to authorize <BrandName /> to use your account. Click on the green button that says **‘Authorize’.**
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-authorize.webp').default} alt="authorize"  className="doc_img" width="1365" height="725"/>
 
@@ -93,7 +95,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 ### 2. Using Personal Access Token
 ***
-1. Select the radio button on **‘Cloud’** and click **‘Install’**. Here you’ll need to enter your Gitlab API token to validate integration with LambdaTest.
+1. Select the radio button on **‘Cloud’** and click **‘Install’**. Here you’ll need to enter your Gitlab API token to validate integration with <BrandName />.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/Gitlab-Integrations-Project-Management-APIs.webp').default} alt="project management api" className="doc_img" width="1350" height="622"/>
  
@@ -120,7 +122,7 @@ After you click on **"Create personal access token",** you will get a prompt mes
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/Gitlab-Integrations-Project-Management-enter.webp').default} alt="create token"  className="doc_img" width="1348" height="627"/>
 
-Your **API token** is now ready. Copy the token & store it safely with you, as you will not be able to find it again. Paste the copied token into LambdaTest GitLab Authentication.
+Your **API token** is now ready. Copy the token & store it safely with you, as you will not be able to find it again. Paste the copied token into <BrandName /> GitLab Authentication.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-apitoken.webp').default} alt="api token"  className="doc_img" width="1346" height="620"/>
 
@@ -132,7 +134,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 ***
 ---
 
-**NOTE:** You need to have a project created on Gitlab before you perform one click bug logging through LambdaTest. If a project is not created then you will face the below error message when logging a bug.
+**NOTE:** You need to have a project created on Gitlab before you perform one click bug logging through <BrandName />. If a project is not created then you will face the below error message when logging a bug.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-errormessage.webp').default} alt="error message"  className="doc_img" width="370" height="145"/>
 
@@ -173,7 +175,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-issue-list.webp').default} alt="issues list"  className="doc_img" width="1347" height="625"/>
 
-**Step 9.** Click on the description of bug and you will be redirected to the detail page of the bug. You will find all the data that you provided through Lambdatest already presented in the bug. LambdaTest automatically includes test environment details and related screenshots in the repository as attachments.
+**Step 9.** Click on the description of bug and you will be redirected to the detail page of the bug. You will find all the data that you provided through Lambdatest already presented in the bug. <BrandName /> automatically includes test environment details and related screenshots in the repository as attachments.
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/lambda-gitlab.webp').default} alt="screenshot in the repo"  className="doc_img" width="1350 " height="611"/>
 
@@ -181,7 +183,7 @@ That’s it! Go to Integrations again and you will be able to notice a **green t
 ***
 You can work with one integration at a time. So if you would want to integrate to some 3rd party application of the similar type, other than the GitLab then you would have to uninstall your present integration. Here is how you can do it.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
 **Step 2:** Select **‘Settings’** from the left navigation menu bar & click on **‘Integrations’.** This will guide you to the same screen from where you initiated **GitLab installation.** You will find Gitlab in the ‘My Integrations’ section.
 
@@ -189,17 +191,17 @@ You can work with one integration at a time. So if you would want to integrate t
 
 <img loading="lazy" src={require('../assets/images/project-management-tools-gitlab-integration/gitlab-uninstall.webp').default} alt="uninstall"  className="doc_img" width="1348 " height="623 "/>
 
-That was all you need to know for LambdaTest + GitLab Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
+That was all you need to know for <BrandName /> + GitLab Integration. Increase your productivity with our integrations. If you still have any questions for us, please feel free to let us know. Our experts are always available on <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**chat**</span> to help you out with any roadblock regarding our product. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -15,6 +15,8 @@ site_name: LambdaTest
 slug: google-cloud-ci-integration
 
 --- 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -23,17 +25,17 @@ slug: google-cloud-ci-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Google Cloud CI Integration",
-          "item": "https://www.lambdatest.com/support/docs/google-cloud-ci-integration/"
+          "item": `${BRAND_URL}/support/docs/google-cloud-ci-integration/`
         }]
       })
     }}
@@ -49,11 +51,11 @@ Integrate your Selenium test suites with Google Cloud CI and perform automated c
 ## Prerequisites
 ***
 
-Before integrating Google Cloud CI with LambdaTest, make sure you have the following things:
+Before integrating Google Cloud CI with <BrandName />, make sure you have the following things:
 
-1. A GitHub or a BitBucket repository. All the code samples in this documentation can be found at [LambdaTest Google Cloud CI](https://github.com/LambdaTest/Java-TestNG-Selenium) repository on GitHub .
+1. A GitHub or a BitBucket repository. All the code samples in this documentation can be found at [<BrandName /> Google Cloud CI](https://github.com/LambdaTest/Java-TestNG-Selenium) repository on GitHub .
 
-2. To integrate test suites with Google Cloud CI, you would need to set your LambdaTest username and access key in environment variables. You can get them from [Automation Dashboard](https://automation.lambdatest.com/) by clicking on the Key button from the top-right.
+2. To integrate test suites with Google Cloud CI, you would need to set your <BrandName /> username and access key in environment variables. You can get them from [Automation Dashboard](https://automation.lambdatest.com/) by clicking on the Key button from the top-right.
 
 *   **For Windows:**
     ```
@@ -70,7 +72,7 @@ Before integrating Google Cloud CI with LambdaTest, make sure you have the follo
 ## Integrating A GitHub Repository With Google Cloud CI
 ***
 
-To integrate Google Cloud CI with LambdaTest, you will need to fork the above LambdaTest Google Cloud CI repository.
+To integrate Google Cloud CI with <BrandName />, you will need to fork the above <BrandName /> Google Cloud CI repository.
 
 1.  Go to the Google Cloud CI console and select **'Cloud Build'**.
 
@@ -112,7 +114,7 @@ Once you click on Connect Repository, you will need to complete the steps in ord
 
 <img loading="lazy" src={require('../assets/images/uploads/env-var.webp').default} alt="Google Cloud CI Integration" width="1097" height="233" className="doc_img"/>
 
-Enter your LambdaTest Username and Access Key in the provided field and then click on **'Create'**. 
+Enter your <BrandName /> Username and Access Key in the provided field and then click on **'Create'**. 
 
 <img loading="lazy" src={require('../assets/images/uploads/env-var-fill.webp').default} alt="Google Cloud CI Integration" width="1106" height="564" className="doc_img"/>
 
@@ -124,13 +126,13 @@ A new build can be seen in the Google Cloud CI console. The current status of th
 
 <img loading="lazy" src={require('../assets/images/uploads/image-1.webp').default} alt="Google Cloud CI Integration" width="1024" height="508W" className="doc_img"/>
 
-You can also view the detailed insights of your test execution on [LambdaTest Automation dashboard](https://automation.lambdatest.com/timeline/).
+You can also view the detailed insights of your test execution on [<BrandName /> Automation dashboard](https://automation.lambdatest.com/timeline/).
 
 ## Running Parallel Test Via Google Cloud CI
 
 * * *
 
-To run parallel tests on LambdaTest cloud, you will need to make minor tweaks in `cloudbuild.yml` file.
+To run parallel tests on <BrandName /> cloud, you will need to make minor tweaks in `cloudbuild.yml` file.
 
 ```
 steps:
@@ -162,7 +164,7 @@ Below is the screenshot of the above-executed parallel tests.
 
 * * *
 
-To run local tests on LambdaTest cloud, you will need to make minor tweaks in `cloudbuild.yml` file.
+To run local tests on <BrandName /> cloud, you will need to make minor tweaks in `cloudbuild.yml` file.
 
 ```
 steps:
@@ -191,15 +193,15 @@ Below is the screenshot of the above-executed local tests.
 <img loading="lazy" src={require('../assets/images/uploads/image.webp').default} alt="Google Cloud CI Integration" width="102" height="585" className="doc_img"/>
 
 >
-That's all! Ship your quality product faster using LambdaTest and Google Cloud CI integration. In case you have any queries for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24*7 Customer Chat Support</span> or you can also mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!
+That's all! Ship your quality product faster using <BrandName /> and Google Cloud CI integration. In case you have any queries for us, feel free to drop them at our <span className="doc__lt" onClick={() => window.openLTChatWidget()}>24*7 Customer Chat Support</span> or you can also mail us at [support@lambdatest.com](mailto:support@lambdatest.com). Happy Testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">Home</a>
+      <a className="breadcrumbs__link" href={BRAND_URL}>Home</a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_ self" href="https://www.lambdatest.com/support/docs/">Support</a>
+      <a className="breadcrumbs__link" target="_ self" href={`${BRAND_URL}/support/docs/`}>Support</a>
     </li>
     <li className="breadcrumbs__item breadcrumbs__item--active">
       <span className="breadcrumbs__link">Run Selenium Tests With Google Cloud CI</span>

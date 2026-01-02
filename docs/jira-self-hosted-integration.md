@@ -1,4 +1,4 @@
-﻿---
+---
 id: jira-self-hosted-integration
 title: Self-Hosted Jira Integration | TestMu AI
 hide_title: true
@@ -23,6 +23,8 @@ url: https://www.testmu.ai/support/docs/jira-self-hosted-integration
 site_name: LambdaTest
 slug: jira-self-hosted-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,17 +34,17 @@ slug: jira-self-hosted-integration
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Jira Self-Hosted Integration",
-          "item": "https://www.lambdatest.com/support/docs/jira-self-hosted-integration/"
+          "item": `${BRAND_URL}/support/docs/jira-self-hosted-integration/`
         }]
       })
     }}
@@ -53,15 +55,15 @@ slug: jira-self-hosted-integration
 
 Many organizations consistently choose to self host their application as it gives them complete control of almost everything. If you want to place Jira behind your corporate firewall and restrict access to someone who isn't on your private network, you can do the same. 
 
-LambdaTest-Jira integration allows you to integrate your self-hosted Jira instance and create the issues directly from the LambdaTest platform. You can send annotated issues to the project of your choice, assign them to a colleague, and add a screenshot straight from the LambdaTest platform.
+<BrandName />-Jira integration allows you to integrate your self-hosted Jira instance and create the issues directly from the <BrandName /> platform. You can send annotated issues to the project of your choice, assign them to a colleague, and add a screenshot straight from the <BrandName /> platform.
 
-## How To Integrate Self-Hosted Jira With LambdaTest
+## How To Integrate Self-Hosted Jira With <BrandName />
 
 * * *
 
-You can integrate your self-hosted Jira with the LambdaTest platform. To view and install integrations, you would need to have admin or user-level access. 
+You can integrate your self-hosted Jira with the <BrandName /> platform. To view and install integrations, you would need to have admin or user-level access. 
 
-**Step 1**: Login to your LambdaTest account and select **'Integrations'** from the left menu bar. You will be taken to the integration page where you'll find third-party apps available to integrate. Click on **'Jira'** icon under the **'Bug Tracker'** category. 
+**Step 1**: Login to your <BrandName /> account and select **'Integrations'** from the left menu bar. You will be taken to the integration page where you'll find third-party apps available to integrate. Click on **'Jira'** icon under the **'Bug Tracker'** category. 
 
 <img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/self-jira-1.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1346" height="615"/> 
 
@@ -81,7 +83,7 @@ You can integrate your self-hosted Jira with the LambdaTest platform. To view an
 
 * * *
 
-Once you have established LambdaTest-Jira integration, you can directly mark and push your bugs from LambdaTest to your Jira dashboard. 
+Once you have established <BrandName />-Jira integration, you can directly mark and push your bugs from <BrandName /> to your Jira dashboard. 
 
 **Step 1**: Select the test that you want to perform from the left menu bar. For demonstration, we will perform Real-time testing. 
 
@@ -89,7 +91,7 @@ Once you have established LambdaTest-Jira integration, you can directly mark and
 
 <img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/self-jira-5.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1360"  height="614"/> 
 
-**Step 3**: A LambdaTest virtual machine will fire up where you can perform real-time testing of your websites and web-apps to find bugs/issues. If you encounter a bug, you can click on the Spider icon from the left panel for [capturing a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the same. 
+**Step 3**: A <BrandName /> virtual machine will fire up where you can perform real-time testing of your websites and web-apps to find bugs/issues. If you encounter a bug, you can click on the Spider icon from the left panel for [capturing a screenshot](https://www.lambdatest.com/full-page-screen-capture) of the same. 
 
 <img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/self-jira-6.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1344" height="626"/> 
 
@@ -108,7 +110,7 @@ Once you have established LambdaTest-Jira integration, you can directly mark and
 
 Your bugs will get marked successfully to your Jira dashboard. You'll also receive the prompt message confirming the same. 
 
-**Step 6**: Visit the Jira dashboard and you'll find your marked bugs right away. All the data such as test environment details, screenshots that you provided through LambdaTest will be present there.
+**Step 6**: Visit the Jira dashboard and you'll find your marked bugs right away. All the data such as test environment details, screenshots that you provided through <BrandName /> will be present there.
 
  <img loading="lazy" src={require('../assets/images/jira-self-hosted-integration/Step9.webp').default} alt="jira-self-hosted-integration"  className="doc_img" width="1342" height="606"/>
 
@@ -118,7 +120,7 @@ Your bugs will get marked successfully to your Jira dashboard. You'll also recei
 
 > You can integrate one bug-tracking tool at a time. If you want to integrate to a similar third party application, then need to remove your current integration. Here is how to do that.
 
-**Step 1:** Login to your LambdaTest account.
+**Step 1:** Login to your <BrandName /> account.
 
 **Step 2:** Navigate to **'Integrations'** tab from the left menu bar.
 
@@ -128,17 +130,17 @@ Your bugs will get marked successfully to your Jira dashboard. You'll also recei
 
  You will receive the confirmation message upon the successful uninstallation of Jira Self Hosted integration.
 
-> That's all you need to know for LambdaTest + Jira Self Hosted Integration. If you have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out. Happy testing!
+> That's all you need to know for <BrandName /> + Jira Self Hosted Integration. If you have any questions for us, please feel free to let us know. Our experts are always <span className="doc__lt" onClick={() => window.openLTChatWidget()}>**available on chat**</span> to help you out. Happy testing!
 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

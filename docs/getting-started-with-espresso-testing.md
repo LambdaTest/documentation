@@ -1,4 +1,4 @@
-﻿---
+---
 id: getting-started-with-espresso-testing
 title: Espresso Testing On TestMu AI
 sidebar_label: Espresso Testing
@@ -19,6 +19,8 @@ slug: getting-started-with-espresso-testing
 
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -28,17 +30,17 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Getting Started With Espresso Testing on LambdaTest",
-          "item": "https://www.lambdatest.com/support/docs/getting-started-with-espresso-testing/"
+          "item": `${BRAND_URL}/support/docs/getting-started-with-espresso-testing/`
         }]
       })
     }}
@@ -46,16 +48,16 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 Espresso is a widely-used testing framework for Android, designed to simplify the process of writing reliable and efficient UI tests. It allows developers to create automated tests that simulate user interactions within an app, ensuring that the app's UI behaves as expected. With its straightforward API and synchronization capabilities, Espresso provides a robust solution for validating the functionality and performance of Android applications.
 
-In this documentation, you will learn how to trigger a automation script of Java for application testing with Appium on LambdaTest, set the desired capabilities for appium testing, and other advanced features of LambdaTest.
+In this documentation, you will learn how to trigger a automation script of Java for application testing with Appium on <BrandName />, set the desired capabilities for appium testing, and other advanced features of <BrandName />.
 
 ## Prerequisites
 
-- Your LambdaTest [Username and Access key](https://accounts.lambdatest.com/security).
+- Your <BrandName /> [Username and Access key](https://accounts.lambdatest.com/security).
 - Access to an **Android** app (.apk) and an **Espresso Test** app (.apk file).
 
 :::tip
 
-If you do not have any **Android** app (.apk) and an **Espresso Test** app (.apk) file, you can run your sample tests on LambdaTest by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) and a sample :link: [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android_expressotest.apk).
+If you do not have any **Android** app (.apk) and an **Espresso Test** app (.apk) file, you can run your sample tests on <BrandName /> by using our sample :link: [Android app](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android.apk) and a sample :link: [Espresso Test](https://prod-mobile-artefacts.lambdatest.com/assets/docs/proverbial_android_expressotest.apk).
 
 :::
 
@@ -63,9 +65,9 @@ If you do not have any **Android** app (.apk) and an **Espresso Test** app (.apk
 
 ### Step 1: Upload Your Application
 
-To begin testing, upload your Android application (.apk file) to LambdaTest's servers. You'll use our **REST API** for this process.
+To begin testing, upload your Android application (.apk file) to <BrandName />'s servers. You'll use our **REST API** for this process.
 
-- **Authentication :** You'll need your LambdaTest Username and AccessKey. Combine them in the format `Username:AccessKey`.
+- **Authentication :** You'll need your <BrandName /> Username and AccessKey. Combine them in the format `Username:AccessKey`.
 - **Uploading the App :** Use **cURL command** to send a request to our API. The request should include the path to your application file (**appFile**).
 
 import Tabs from '@theme/Tabs';
@@ -101,7 +103,7 @@ import TabItem from '@theme/TabItem';
 
 ### Step 2: Upload Your Test Suite
 
-Upload your Espresso test suite (.apk) file to LambdaTest servers using our REST API.
+Upload your Espresso test suite (.apk) file to <BrandName /> servers using our REST API.
 
 The following sample cURL command shows how to upload a test suite:
 
@@ -206,7 +208,7 @@ curl --location --request POST "https://mobile-api.lambdatest.com/framework/v1/e
 
 ### Step 4: View Test Execution
 
-Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://accounts.lambdatest.com/login).
+Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [<BrandName /> Automation](https://accounts.lambdatest.com/login).
 
 <img loading="lazy" src={require('../assets/images/espresso/espresso-test.jpeg').default} alt="Image" width="521" height="268" className="doc_img"/>
 
@@ -233,12 +235,12 @@ curl --location --request POST 'https://mobile-api.lambdatest.com/espresso/v1/bu
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

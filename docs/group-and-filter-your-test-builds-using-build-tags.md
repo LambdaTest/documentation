@@ -24,7 +24,7 @@ slug: group-and-filter-your-test-builds-using-build-tags
 ---
 * * *
 
-With LambdaTest, now you can group your test builds with Build tags. This document shows how you can create Build tags and use them to group or filter your test builds on the LambdaTest Automation Dashboard.
+With <BrandName />, now you can group your test builds with Build tags. This document shows how you can create Build tags and use them to group or filter your test builds on the <BrandName /> Automation Dashboard.
 
 ## How To Create Build Tags?
 
@@ -63,11 +63,11 @@ While writing your automation tests, you need to just add another capability whe
     driver = new RemoteWebDriver(new URL("https://" + username + ":" + authkey + hub), caps);
     ```
 
-You have successfully created the Build tags. Now when you run your test, and navigate to [LambdaTest Automation Dashboard](https://automation.lambdatest.com/timeline/), you can see the tags being present in that build, as shown below:
+You have successfully created the Build tags. Now when you run your test, and navigate to [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/timeline/), you can see the tags being present in that build, as shown below:
 
 <img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags.webp').default} alt="Group/filter" width="1281" height="721" className="doc_img"/>
 
-## Guildelines To Create Build Tags On LambdaTest?
+## Guildelines To Create Build Tags On <BrandName />?
 
 While creating Build Tags, make sure to follow the below Guidelines:
 
@@ -81,7 +81,7 @@ While creating Build Tags, make sure to follow the below Guidelines:
 
 To group or filter the tests on your automation dashboard with these Build tags:
 
-Navigate to [LambdaTest Automation Dashboard](https://automation.lambdatest.com/timeline/), and you can see a filter by name **Build Tags**, on right corner of the filter toolbar. 
+Navigate to [<BrandName /> Automation Dashboard](https://automation.lambdatest.com/timeline/), and you can see a filter by name **Build Tags**, on right corner of the filter toolbar. 
 <img loading="lazy" src={require('../assets/images/group-and-filter-your-test-builds-using-build-tags/build-tags-2.webp').default} alt="Group/filter" width="1281" height="722" className="doc_img"/>
 
 Select the Build tag by which you want to filter your test. For example, if we choose _Tag1_, as shown below, only the test builds with the tag "Tag1" will be shown:

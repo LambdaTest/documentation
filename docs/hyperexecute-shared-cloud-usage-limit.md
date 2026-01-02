@@ -1,4 +1,4 @@
-﻿---
+---
 id: hyperexecute-shared-cloud-usage-limit
 title: Daily Usage Limit Per Organization | HyperExecute
 hide_title: false
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/hyperexecute-shared-cloud-usage-limit
 site_name: LambdaTest
 slug: hyperexecute-shared-cloud-usage-limit
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -25,22 +27,22 @@ slug: hyperexecute-shared-cloud-usage-limit
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Daily Usage Limit",
-          "item": "https://www.lambdatest.com/support/docs/daily-usage-limit/"
+          "item": `${BRAND_URL}/support/docs/daily-usage-limit/`
         }]
       })
     }}
 ></script>
-To ensure fair usage, maintain system stability, and promote optimal test practices across all our users, LambdaTest enforces a daily usage limit on test execution time at the organization level. Each organization is allocated a maximum allowable test duration per day, calculated based on the number of concurrent (parallel) sessions provisioned to the account. This safeguard helps prevent overutilization and ensures equitable access to resources across the platform.
+To ensure fair usage, maintain system stability, and promote optimal test practices across all our users, <BrandName /> enforces a daily usage limit on test execution time at the organization level. Each organization is allocated a maximum allowable test duration per day, calculated based on the number of concurrent (parallel) sessions provisioned to the account. This safeguard helps prevent overutilization and ensures equitable access to resources across the platform.
 
 ## Why This Matters
 Running long-duration test sessions—especially those exceeding 120 minutes—can cause memory and CPU spikes that impact system performance and reliability. To prevent such disruptions and improve the efficiency of test execution, we encourage users to:
@@ -49,7 +51,7 @@ Running long-duration test sessions—especially those exceeding 120 minutes—c
 - Implement test retries, timeouts, and teardown routines to handle edge cases and resource leaks.
 - Use parallelization effectively to optimize test execution time without extending the runtime of individual sessions.
 
-By adhering to these guidelines, your team not only aligns with industry best practices but also ensures smoother and more reliable test runs on LambdaTest infrastructure.
+By adhering to these guidelines, your team not only aligns with industry best practices but also ensures smoother and more reliable test runs on <BrandName /> infrastructure.
 
 ## Daily Test Time Limits by Parallel Sessions
 The daily usage cap scales linearly based on the number of parallel sessions available to your organization. Below is a reference table:

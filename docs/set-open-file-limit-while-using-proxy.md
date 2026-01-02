@@ -1,4 +1,4 @@
-﻿---
+---
 id: set-open-file-limit-while-using-proxy
 title: Setting The Open File Limit While Using TestMu AI Tunnel
 hide_title: true
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/how-to-set-the-open-file-limit-while-usi
 site_name: LambdaTest
 slug: how-to-set-the-open-file-limit-while-using-tunnel
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -23,31 +25,31 @@ slug: how-to-set-the-open-file-limit-while-using-tunnel
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Set Open File Limit",
-          "item": "https://www.lambdatest.com/support/docs/how-to-set-the-open-file-limit-while-using-tunnel/"
+          "item": `${BRAND_URL}/support/docs/how-to-set-the-open-file-limit-while-using-tunnel/`
         }]
       })
     }}
 ></script>
 
-# How To Set The Open File Limit While Using LambdaTest Tunnel?
+# How To Set The Open File Limit While Using <BrandName /> Tunnel?
 
 ***
-If you are using a tunnel service with LambdaTest for cross browser testing then you may get the following warning.
+If you are using a tunnel service with <BrandName /> for cross browser testing then you may get the following warning.
 
 >
 *File descriptor limit is too low! Increase your limit to at least 2000.*
 
-This warning is sent across to help you avoid a lack of available file handles. If this warning is ignored for a long time then you might have issues connecting your tunnel with LambdaTest. This would also be reflected in the LambdaTest logs if you fail to connect your tunnel with LambdaTest. The logs would be reflecting the below error message.
+This warning is sent across to help you avoid a lack of available file handles. If this warning is ignored for a long time then you might have issues connecting your tunnel with <BrandName />. This would also be reflected in the <BrandName /> logs if you fail to connect your tunnel with <BrandName />. The logs would be reflecting the below error message.
 
 >
 *accept tcp 127.0.0.1:9090: accept: too many open files.*
@@ -95,12 +97,12 @@ You can increase the open file limit either temporarily or permanently for your 
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

@@ -20,6 +20,8 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -29,22 +31,22 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Freezing Animations",
-          "item": "https://www.lambdatest.com/support/docs/smartui-freeze-animations/"
+          "item": `${BRAND_URL}/support/docs/smartui-freeze-animations/`
         }]
       })
     }}
 ></script>
-Animations, while visually appealing, can pose challenges during visual testing by causing false positives in visual diffs. These false positives often arise because animations can create minor variations between screenshots, even when there are no actual changes to the content. To address this, LambdaTest SmartUI provides the capability to automatically freeze animations during visual testing, ensuring consistent and reliable test results.
+Animations, while visually appealing, can pose challenges during visual testing by causing false positives in visual diffs. These false positives often arise because animations can create minor variations between screenshots, even when there are no actual changes to the content. To address this, <BrandName /> SmartUI provides the capability to automatically freeze animations during visual testing, ensuring consistent and reliable test results.
 
 ## Freezing SVG Animations
 Consider an SVG element on your page with a loading animation that spins using the transform attribute. To freeze this animation, you can add the following custom JavaScript to your page before taking a screenshot:

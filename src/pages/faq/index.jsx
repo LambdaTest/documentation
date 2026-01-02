@@ -2,12 +2,13 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
+            import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 export default function index() {
 
   return (
 
-    <Layout title="LambdaTest FAQ Documentation" description="List of frequently asked questions by LambdaTest's users regarding our product offerings. Use them to find instant help on using LambdaTest FAQ Documentation.">
+    <Layout title="TestMu AI FAQ Documentation" description="List of frequently asked questions by TestMu AI's users regarding our product offerings. Use them to find instant help on using TestMu AI FAQ Documentation.">
       <div className="col__faq">
         <Tabs
           className="tabs_main"
@@ -23,11 +24,13 @@ export default function index() {
             { label: 'Data & Security', value: 'security' },
             { label: 'Plans & Billing', value: 'billing' },
           ]}>
+
+
           <TabItem value="realtime">
             <details>
-              <summary>Would I need to install a software or extension to use LambdaTest virtual machines?
+              <summary>Would I need to install a software or extension to use <BrandName /> virtual machines?
               </summary>
-              <p>No. You don't need to install any software or extension or plugin or setting configurations of any type. Just need to login to LambdaTest, open the virtual machine through launcher, and start testing. That's the beauty of cloud. It gets you started super quick.</p>
+              <p>No. You don't need to install any software or extension or plugin or setting configurations of any type. Just need to login to <BrandName />, open the virtual machine through launcher, and start testing. That's the beauty of cloud. It gets you started super quick.</p>
             </details>
             <details>
               <summary>Which operating systems, browsers, and browser versions are you providing for cross browser testing?
@@ -45,7 +48,7 @@ export default function index() {
               <p>Microsoft Windows Desktop Editions licences does not support remote access to users. So we use Windows Server editions and implement Desktop experience in it. It has exactly the same experience as Windows desktop editions and they are running Internet Explorers made for desktop editions.</p>
             </details>
             <details>
-              <summary>How much time it takes LambdaTest to add new browser version when it's released?
+              <summary>How much time it takes <BrandName /> to add new browser version when it's released?
               </summary>
               <p>Whenever a new stable browser version is released we usually implement it in our platform within a week. We also test them ourselves first before providing it to customers to make sure that testing experience is optimum for all users.</p>
             </details>
@@ -88,29 +91,29 @@ export default function index() {
             <details>
               <summary>How many simultaneous sessions can I start using one account?
               </summary>
-              <p>In the free plan you can run only one session at a time. Paid plan users can run multiple sessions depending upon their plan. Visit <a href="https://www.lambdatest.com/pricing">LambdaTest Pricing page</a> to checkout multiple session plans and their pricing.
+              <p>In the free plan you can run only one session at a time. Paid plan users can run multiple sessions depending upon their plan. Visit <a href="https://www.lambdatest.com/pricing"><BrandName /> Pricing page</a> to checkout multiple session plans and their pricing.
 
               </p>
             </details>
             <details>
               <summary>It is showing 'Session Limit reached' error even though I am not running a session.
               </summary>
-              <p>The number of sessions is limited by number of sessions running by a organization, not by user. Therefore it is entirely possible that you reach out of session limit even if only one or two users are using LambdaTest tool. Co-ordinate with your teammates in this case. If you are sure there is session issue from our end, you can raise a ticket at our support portal. Don't worry, we have a very fast turnaround time.</p>
+              <p>The number of sessions is limited by number of sessions running by a organization, not by user. Therefore it is entirely possible that you reach out of session limit even if only one or two users are using <BrandName /> tool. Co-ordinate with your teammates in this case. If you are sure there is session issue from our end, you can raise a ticket at our support portal. Don't worry, we have a very fast turnaround time.</p>
             </details>
             <details>
               <summary>What happens when I leave the session idle?
               </summary>
-              <p>By default, if you leave the Lamdatest Live session idle for 5 minutes, the app will prompt a reminder. If no action is taken then LambdaTest would close the live session. You can change this setting from Live settings options. Checkout this link to understand more about it.</p>
+              <p>By default, if you leave the Lamdatest Live session idle for 5 minutes, the app will prompt a reminder. If no action is taken then <BrandName /> would close the live session. You can change this setting from Live settings options. Checkout this link to understand more about it.</p>
             </details>
             <details>
               <summary>What happens when I switch to another tab in my browser?
               </summary>
-              <p>Switching tab won't stop or pause the Live session. If left idle for 5 minutes or more, LambdaTest will prompt a reminder and if unanswered will close the session.</p>
+              <p>Switching tab won't stop or pause the Live session. If left idle for 5 minutes or more, <BrandName /> will prompt a reminder and if unanswered will close the session.</p>
             </details>
             <details>
               <summary>When you give the machine to somebody else would they be able to access my history and saved passwords?
               </summary>
-              <p>The moment you close the session, LambdaTest automatically sanitize the whole virtual machine. What that means is that we delete all historical data, downloads, installed extensions, saved passwords, etc. We reset the browsers to factory settings. This automatically logs you out of all pages and auto deletes all data that you may have saved. You would still have access to screenshots and issues you may have generated during the session.</p>
+              <p>The moment you close the session, <BrandName /> automatically sanitize the whole virtual machine. What that means is that we delete all historical data, downloads, installed extensions, saved passwords, etc. We reset the browsers to factory settings. This automatically logs you out of all pages and auto deletes all data that you may have saved. You would still have access to screenshots and issues you may have generated during the session.</p>
             </details>
             <details>
               <summary>Would i have to reset and re-configure browser settings everytime I create a new session?
@@ -122,16 +125,16 @@ export default function index() {
               </summary>
               <p>There may be a number of reasons why this happened which include
 
-                LambdaTest test flagged the IP for excessive spam registrations. LambdaTest flagged the IP for violating terms of use or privacy policy To prevent our system from spam or security threats
+                <BrandName /> test flagged the IP for excessive spam registrations. <BrandName /> flagged the IP for violating terms of use or privacy policy To prevent our system from spam or security threats
                 If you think that your IP has been flagged erroneously, raise a ticket at our support centre.</p>
             </details>
             <details>
               <summary>It is showing parallel user limit reached. What does that mean?
               </summary>
-              <p>LambdaTest test system allows only a limited number of concurrent running sessions per organization. This limit is defined by the plan that you have subscribed. If you need more concurrent sessions, you can change your plan, or contact one of our sales executive.</p>
+              <p><BrandName /> test system allows only a limited number of concurrent running sessions per organization. This limit is defined by the plan that you have subscribed. If you need more concurrent sessions, you can change your plan, or contact one of our sales executive.</p>
             </details>
             <details>
-              <summary>I found a bug and now I want to take a screenshot of the webpage running on LambdaTest real time browser. How can I do that? Where are they saved?
+              <summary>I found a bug and now I want to take a screenshot of the webpage running on <BrandName /> real time browser. How can I do that? Where are they saved?
               </summary>
               <p>It's simple. In real time browser, on left side you will find multiple action buttons in the controller. One of them will be a screenshot button with camera icon. Just click that and in no time your screenshot will be recorded. Once recorded, an image editor will pop up where you can edit the screenshot, mark it as a bug and comment about the details. Lastly, you can find them anytime in test logs section of the menu.</p>
             </details>
@@ -143,14 +146,14 @@ export default function index() {
           </TabItem>
           <TabItem value="developer">
             <details>
-              <summary>What developer tools come pre-installed in each LambdaTest Live remote session browser?
+              <summary>What developer tools come pre-installed in each <BrandName /> Live remote session browser?
               </summary>
-              <p>LambdaTest Live has all major developer debugging tools like Firebug, Web Developer, YSlow etc.</p>
+              <p><BrandName /> Live has all major developer debugging tools like Firebug, Web Developer, YSlow etc.</p>
             </details>
             <details>
               <summary>Can I install any additional tool that I like
               </summary>
-              <p>Yes! You have full access to browser extensions and therefore can install any additional tool you like. However that tool be deleted once you close the Live session and you would have to reinstall it again in next session to use. If you are facing any problem around installing a tool on browser, raise an issue in LambdaTest Support portal and we would be glad to help you out.</p>
+              <p>Yes! You have full access to browser extensions and therefore can install any additional tool you like. However that tool be deleted once you close the Live session and you would have to reinstall it again in next session to use. If you are facing any problem around installing a tool on browser, raise an issue in <BrandName /> Support portal and we would be glad to help you out.</p>
             </details>
           </TabItem>
           <TabItem value="automation">
@@ -164,27 +167,27 @@ export default function index() {
             <details>
               <summary>Can I Mark My Test As Pass Or Fail?
               </summary>
-              <p>The LambdaTest Selenium grid doesn’t identify if you test ‘passed’ or ‘failed’. It only identifies whether a test has executed to it’s last command or whether it has stopped/timed-out before it. The user would have to pass on these parameters to LambdaTest platform to make it possible for tracking these values at LambdaTest platform. Make use of LambdaTest API or LambdaTest Annotations, for pushing additional metadata to LambdaTest or to track the pass/fail status of a test.</p>
+              <p>The <BrandName /> Selenium grid doesn’t identify if you test ‘passed’ or ‘failed’. It only identifies whether a test has executed to it’s last command or whether it has stopped/timed-out before it. The user would have to pass on these parameters to <BrandName /> platform to make it possible for tracking these values at <BrandName /> platform. Make use of <BrandName /> API or <BrandName /> Annotations, for pushing additional metadata to <BrandName /> or to track the pass/fail status of a test.</p>
             </details>
 
             <details>
               <summary>Can I Run Parallel Testing using JUnit Framework?
               </summary>
-              <p>Yes! One of the key features of LambdaTest Selenium grid is the ability to run your test cases in parallel. Which means you can execute numerous automation test cases altogether and enable you to cut down on test times. With LambdaTest Selenium grid you can run a single test scenario across different browsers or different test scenarios with the same browser (or any other combinations). Wondering how many parallel test cases can you run? That depends entirely on the number of concurrent sessions under your opted plan.</p>
+              <p>Yes! One of the key features of <BrandName /> Selenium grid is the ability to run your test cases in parallel. Which means you can execute numerous automation test cases altogether and enable you to cut down on test times. With <BrandName /> Selenium grid you can run a single test scenario across different browsers or different test scenarios with the same browser (or any other combinations). Wondering how many parallel test cases can you run? That depends entirely on the number of concurrent sessions under your opted plan.</p>
             </details>
 
             <details>
               <summary>What Is The Maximum Queuing Capacity?
               </summary>
-              <p>Maximum number of test cases that can be queued = n + 150 Here, n = number of concurrent sessions. For instance, if you are opting for pricing where you can avail up to 10 concurrent sessions. Then the maximum number of test cases that can be queued will be equal to 10 + 150 i.e. 160 queued test cases. LambdaTest would automatically schedule and execute test cases for you.
+              <p>Maximum number of test cases that can be queued = n + 150 Here, n = number of concurrent sessions. For instance, if you are opting for pricing where you can avail up to 10 concurrent sessions. Then the maximum number of test cases that can be queued will be equal to 10 + 150 i.e. 160 queued test cases. <BrandName /> would automatically schedule and execute test cases for you.
 
-                We have added a capacity constraint on the number of tests that can be queued to prevent over-exploitation of the platform. Refer LambdaTest Queuing Policy to know more.</p>
+                We have added a capacity constraint on the number of tests that can be queued to prevent over-exploitation of the platform. Refer <BrandName /> Queuing Policy to know more.</p>
             </details>
 
             <details>
               <summary>How Many Parallel Sessions Do I Need?
               </summary>
-              <p><a href="https://www.lambdatest.com/concurrency-calculator/">LambdaTest Concurrency Calculator</a> is here to help you calculate the number of parallel sessions you need for your test coverage. Feed the information to our Concurrency Calculator, and it would suggest to you the appropriate number of parallel sessions.</p>
+              <p><a href="https://www.lambdatest.com/concurrency-calculator/"><BrandName /> Concurrency Calculator</a> is here to help you calculate the number of parallel sessions you need for your test coverage. Feed the information to our Concurrency Calculator, and it would suggest to you the appropriate number of parallel sessions.</p>
             </details>
 
             <details>
@@ -202,7 +205,7 @@ export default function index() {
             <details>
               <summary>How can I access Live interaction while running an automation test?
               </summary>
-              <p>To interact with a browser manually in an automation test, you can visit the LambdaTest Automation dashboard and then click on <b>Click to view live test</b> to take control of the browser.
+              <p>To interact with a browser manually in an automation test, you can visit the <BrandName /> Automation dashboard and then click on <b>Click to view live test</b> to take control of the browser.
               </p>
             </details>
 
@@ -446,7 +449,7 @@ export default function index() {
                   <p>Each parallel test execution consumes a single HyperExecute license. HyperExecute puts no capping on the number of parallel tests that can run simultaneously. We have users running thousands of tests in parallel.</p>
                 </details>
                 <details>
-                  <summary>Can I use the standard LambdaTest automation platform with the HyperExecute license?
+                  <summary>Can I use the standard <BrandName /> automation platform with the HyperExecute license?
                   </summary>
                   <p>Each HyperExecute license provides access to standard automation platforms and features. This makes transitioning to HyperExecute easier and makes sure that the best cross-browser platform features are still available to users purchasing a HyperExecute license.</p>
                 </details>
@@ -492,9 +495,9 @@ export default function index() {
           <TabItem value="automated">
 
             <details>
-              <summary>What resolutions, browsers, operating systems and devices are supported by the LambdaTest Automated Screenshot testing?
+              <summary>What resolutions, browsers, operating systems and devices are supported by the <BrandName /> Automated Screenshot testing?
               </summary>
-              <p>To know more about browsers, OS, and devices supported by LambdaTest Automated Screenshot testinf, checkout <a href="https://www.lambdatest.com/list-of-browsers">list of browsers</a> page.
+              <p>To know more about browsers, OS, and devices supported by <BrandName /> Automated Screenshot testinf, checkout <a href="https://www.lambdatest.com/list-of-browsers">list of browsers</a> page.
               </p>
             </details>
             <details>
@@ -505,18 +508,18 @@ export default function index() {
             <details>
               <summary>Is there anyway I can take screenshot of pages behind firewall or authenticated pages?
               </summary>
-              <p>LambdaTest comes with enterprise level local tunneling features. You can connect your local or production servers with LambdaTest Servers via secure SSH protocols and test your secure pages easily.</p>
+              <p><BrandName /> comes with enterprise level local tunneling features. You can connect your local or production servers with <BrandName /> Servers via secure SSH protocols and test your secure pages easily.</p>
             </details>
             <details>
               <summary>What happens when I switch tabs during when screenshots are being generated?
               </summary>
-              <p>LambdaTest won't stop or pause the screenshot generation process. LambdaTest Automated Screenshot feature will generate screenshots and then will wait for your further actions.</p>
+              <p><BrandName /> won't stop or pause the screenshot generation process. <BrandName /> Automated Screenshot feature will generate screenshots and then will wait for your further actions.</p>
             </details>
           </TabItem>
           <TabItem value="responsive">
 
             <details>
-              <summary>What type of file formats does LambdaTest Realtime Native App testing support??
+              <summary>What type of file formats does <BrandName /> Realtime Native App testing support??
               </summary>
               <p>Currently, we support the following file formats for Realtime Native Mobile App testing:
                 <ul>
@@ -568,14 +571,14 @@ export default function index() {
               <p>You need to install the app being tested and the dependent app (e.g. Google Maps) in the same session.</p>
             </details>
             <details>
-              <summary>How long does my app remain uploaded on LambdaTest cloud?
+              <summary>How long does my app remain uploaded on <BrandName /> cloud?
               </summary>
               <p>As per our data retention policy, all uploaded apps will be deleted after sixty days.</p>
             </details>
             <details>
               <summary>Which architecture do you support for <code>.apk</code> file for App testing?
               </summary>
-              <p>Emulators on which App testing is performed work on the x86 architecture. Hence, your .apk file should be built for x86 architecture to ensure seamless testing on LambdaTest platform.</p>
+              <p>Emulators on which App testing is performed work on the x86 architecture. Hence, your .apk file should be built for x86 architecture to ensure seamless testing on <BrandName /> platform.</p>
             </details>
             <details>
               <summary>Which plan do I need to buy to get access to Realtime Native App testing?
@@ -585,7 +588,7 @@ export default function index() {
             <details>
               <summary>Does On-demand pass covers access to Realtime Native App testing on emulators/simulators?
               </summary>
-              <p>Through On-demand pass you can get 120 minutes of manual testing time on LambdaTest platform at $10 for 30 days. Currently, On-demand pass is not covered for Realtime Native App testing.</p>
+              <p>Through On-demand pass you can get 120 minutes of manual testing time on <BrandName /> platform at $10 for 30 days. Currently, On-demand pass is not covered for Realtime Native App testing.</p>
             </details>
             <details>
               <summary>How does the concurrency for Realtime Native App testing works?
@@ -597,7 +600,7 @@ export default function index() {
           <TabItem value="realdevice">
 
             <details>
-              <summary>What type of file formats does LambdaTest App testing on real devices support?
+              <summary>What type of file formats does <BrandName /> App testing on real devices support?
               </summary>
               <p>Currently, we support the following file formats for App testing on real devices:
                 <ul>
@@ -613,7 +616,7 @@ export default function index() {
             </details>
 
             <details>
-              <summary>What test automation frameworks are supported by LambdaTest for App automation?
+              <summary>What test automation frameworks are supported by <BrandName /> for App automation?
               </summary>
               <p>Currently, we support Appium framework. However, support for other frameworks will be rolled out soon </p>
             </details>
@@ -640,22 +643,22 @@ export default function index() {
             <details>
               <summary>Can I monitor network traffic using Charles Proxy?
               </summary>
-              <p>Currently, the Charles proxy for network traffic monitoring is not supported on LambdaTest.</p>
+              <p>Currently, the Charles proxy for network traffic monitoring is not supported on <BrandName />.</p>
             </details>
             <details>
               <summary>What logs are available for debugging test failures ?
               </summary>
-              <p>For debugging test failures, LambdaTest App testing supports Appium logs, Visual logs, Device logs, Network logs, and Command logs.</p>
+              <p>For debugging test failures, <BrandName /> App testing supports Appium logs, Visual logs, Device logs, Network logs, and Command logs.</p>
             </details>
             <details>
               <summary>How can I test locally hosted or private app URLs?
               </summary>
-              <p>You can test locally hosted and apps behind firewall by performing local testing through LambdaTest tunnel.</p>
+              <p>You can test locally hosted and apps behind firewall by performing local testing through <BrandName /> tunnel.</p>
             </details>
             <details>
               <summary>Do you support Network throttling?
               </summary>
-              <p>Yes. Network throttling is supported on LambdaTest real device cloud platform.</p>
+              <p>Yes. Network throttling is supported on <BrandName /> real device cloud platform.</p>
             </details>
             <details>
               <summary>Can I simulate GPS location while performing Geolocation testing?
@@ -708,7 +711,7 @@ export default function index() {
             <details>
               <summary>Do you support private or dedicated devices for an organzation/account?
               </summary>
-              <p>As of now, the dedicated devices are not supported on the LambdaTest platform.</p>
+              <p>As of now, the dedicated devices are not supported on the <BrandName /> platform.</p>
 
             </details>
 
@@ -776,9 +779,9 @@ export default function index() {
             </details>
 
             <details>
-              <summary>What is ADB? Does LambdaTest support ADB commands execution?
+              <summary>What is ADB? Does <BrandName /> support ADB commands execution?
               </summary>
-              <p>ADB (Android debug bridge) is a command-line tool for communicating with Android devices. The ADB command enables a variety of device actions, like installing apps, granting permissions, copying files, performance profiling, and so on.<br />We do not expose the ADB shell to protect the security of devices and users. However, the same functionality can be achieved by using an equivalent Appium capability or LambdaTest customer capabilities.
+              <p>ADB (Android debug bridge) is a command-line tool for communicating with Android devices. The ADB command enables a variety of device actions, like installing apps, granting permissions, copying files, performance profiling, and so on.<br />We do not expose the ADB shell to protect the security of devices and users. However, the same functionality can be achieved by using an equivalent Appium capability or <BrandName /> customer capabilities.
               </p>
             </details>
 
@@ -797,7 +800,7 @@ export default function index() {
             </details>
 
             <details>
-              <summary>How do I resolve the localhost URL when using the LambdaTest tunnel?
+              <summary>How do I resolve the localhost URL when using the <BrandName /> tunnel?
               </summary>
               <p>For resolving the localhost URL for the real device, you can use <code>localhost.lambdatest.com</code>.
               </p>
@@ -826,7 +829,7 @@ export default function index() {
             </details>
 
             <details>
-              <summary>How do I resolve the localhost URL when using the LambdaTest tunnel?
+              <summary>How do I resolve the localhost URL when using the <BrandName /> tunnel?
               </summary>
               <p>For resolving the localhost URL for the real device, you can use <code>localhost.lambdatest.com</code>.
               </p>
@@ -861,7 +864,7 @@ export default function index() {
             </details>
 
             <details>
-              <summary>How do I resolve the localhost URL when using the LambdaTest tunnel?
+              <summary>How do I resolve the localhost URL when using the <BrandName /> tunnel?
               </summary>
               <p>For resolving the localhost URL for the real device, you can use <code>localhost.lambdatest.com</code>.
               </p>
@@ -928,16 +931,16 @@ export default function index() {
 
 
             <details>
-              <summary>Can I test my smart device (similar to Amazon Alexa) on LambdaTest platform with Real device? Also, I would need to connect this smart device with the Bluetooth of your mobile devices. Is this applicable?
+              <summary>Can I test my smart device (similar to Amazon Alexa) on <BrandName /> platform with Real device? Also, I would need to connect this smart device with the Bluetooth of your mobile devices. Is this applicable?
               </summary>
-              <p>This use case is not feasible at the moment as we do not support testing of Smart devices(Amazon Alexa) on the LambdaTest platform.
+              <p>This use case is not feasible at the moment as we do not support testing of Smart devices(Amazon Alexa) on the <BrandName /> platform.
               </p>
             </details>
 
             <details>
-              <summary>Can I test video calls on LambdaTest real devices?
+              <summary>Can I test video calls on <BrandName /> real devices?
               </summary>
-              <p>Yes, you can test video calling apps on LambdaTest's Real Devices but as the Camera is taped due to security reasons so it will show black image and audio will be blank as well.
+              <p>Yes, you can test video calling apps on <BrandName />'s Real Devices but as the Camera is taped due to security reasons so it will show black image and audio will be blank as well.
               </p>
             </details>
 
@@ -990,27 +993,27 @@ export default function index() {
           <TabItem value="security">
             <details>
               <summary>Briefly describe your security policies.</summary>
-              <p>LambdaTest is a firm believer in secure experience and multifaceted security protocols, to ensure that every aspect including architecture, engineering, testing, and deployment, follows and complies with industry leading standards of security. As first line of defense, LambdaTest application is protected by AWS&#8217;s firewalls which are tasked with countering regular DDoS attacks and malicious network intrusions. The next line of defense is LambdaTest&#8217;s own application firewall protocols which are tasked with protecting the application against spam, ill-intent users, and malicious IP. We have also implemented secure user access policies for accessing LambdaTest platform and only users with valid user credentials can access the application. We have also implemented role based access to the application, each role having different access levels.</p>
-              <p>Whenever a user initiates a test at LambdaTest platform, they are allotted a thoroughly sanitized virtual machine. And as soon as a session ends, all data including cookies, registry, caches, and running processes are deleted and all browser settings are reset to default values. Each virtual machine has to pass a series of automated tests before it is used again. Any machine that fails a test gets redacted from the pool for auditing and manual cleaning. At the time of test only the user has access to machine and not even LambdaTest has access to the user&#8217;s running test session. All machines have strict security protocols that prohibit any user from installing any external software in the machines.</p>
+              <p><BrandName /> is a firm believer in secure experience and multifaceted security protocols, to ensure that every aspect including architecture, engineering, testing, and deployment, follows and complies with industry leading standards of security. As first line of defense, <BrandName /> application is protected by AWS&#8217;s firewalls which are tasked with countering regular DDoS attacks and malicious network intrusions. The next line of defense is <BrandName />&#8217;s own application firewall protocols which are tasked with protecting the application against spam, ill-intent users, and malicious IP. We have also implemented secure user access policies for accessing <BrandName /> platform and only users with valid user credentials can access the application. We have also implemented role based access to the application, each role having different access levels.</p>
+              <p>Whenever a user initiates a test at <BrandName /> platform, they are allotted a thoroughly sanitized virtual machine. And as soon as a session ends, all data including cookies, registry, caches, and running processes are deleted and all browser settings are reset to default values. Each virtual machine has to pass a series of automated tests before it is used again. Any machine that fails a test gets redacted from the pool for auditing and manual cleaning. At the time of test only the user has access to machine and not even <BrandName /> has access to the user&#8217;s running test session. All machines have strict security protocols that prohibit any user from installing any external software in the machines.</p>
               <p>In our application we have implemented HTTPS by default, and use VNC protocols for secure data transfer. This data is also encrypted to ensure that data is not compromised in-transit.</p>
               <p>All our hosting centers are chosen based on their record of established security policies and excellent history. Our selection process is rigorous and we partner with only the best providers across globe that have been certified by major compliance regulators.</p>
               <p>All data saved in our application like login credentials, secure access keys, usage logs, test history, and billing details, are stored in an encrypted format.</p>
-              <p>We have implemented strict 24&#215;7 security protections at our on-premise development centers. Only authorized individuals have access to building and LambdaTest office premises. Our application data is hosted on industry leading hosts like Amazon Web Services, who have been thoroughly tested by multiple third party auditors for security. You can also read more about Amazon Web Service&#8217;s Security <a href="https://aws.amazon.com/security/">AWS Cloud Security</a></p>
+              <p>We have implemented strict 24&#215;7 security protections at our on-premise development centers. Only authorized individuals have access to building and <BrandName /> office premises. Our application data is hosted on industry leading hosts like Amazon Web Services, who have been thoroughly tested by multiple third party auditors for security. You can also read more about Amazon Web Service&#8217;s Security <a href="https://aws.amazon.com/security/">AWS Cloud Security</a></p>
             </details>
             <details>
               <summary>Do you have a disaster recovery (DR) or Business Continuity Plan (BCP) plan? How often is it tested?</summary>
-              <p>LambdaTest has a formal Business Continuity Plan (BCP) and Disaster Recovery Plan (DRP) defined and implemented to enable people, process, and technology support during any crisis or business interruptions. The BC and DR Plan is tested and reviewed on a yearly basis.
+              <p><BrandName /> has a formal Business Continuity Plan (BCP) and Disaster Recovery Plan (DRP) defined and implemented to enable people, process, and technology support during any crisis or business interruptions. The BC and DR Plan is tested and reviewed on a yearly basis.
 
                 And, Disaster Recovery (DR) program ensures that our Services remain available and are easily recoverable in the case of a disaster. This is accomplished through building a robust technical environment and creating Disaster Recovery plans and testing activities. In the event of a disaster, the following objectives apply:</p>
 
               <ol>
-                <li><b>4-hour Recovery Time Objective (RTO)</b>: LambdaTest will aim to restore normal operations for your LambdaTest platform account within four hours from the time a disaster is declared, unless a disaster, or multiple disasters, impacts all of the Availability Zones used on an account.</li>
+                <li><b>4-hour Recovery Time Objective (RTO)</b>: <BrandName /> will aim to restore normal operations for your <BrandName /> platform account within four hours from the time a disaster is declared, unless a disaster, or multiple disasters, impacts all of the Availability Zones used on an account.</li>
 
-                <li> <b>Under 1-hour Recovery Point Objective (RPO)</b>: LambdaTest will target one hour or less of data loss for your account. This is calculated from the point of the disruption, not from LambdaTest’s disaster declaration.</li><br />
+                <li> <b>Under 1-hour Recovery Point Objective (RPO)</b>: <BrandName /> will target one hour or less of data loss for your account. This is calculated from the point of the disruption, not from <BrandName />’s disaster declaration.</li><br />
 
-                <p>Also, LambdaTest employs service clustering and network redundancies to eliminate single points of failure. Our strict backup regime and/or our Disaster Recovery service offering allows us to deliver a high service availability, as customer or test data is replicated across availability zones.
+                <p>Also, <BrandName /> employs service clustering and network redundancies to eliminate single points of failure. Our strict backup regime and/or our Disaster Recovery service offering allows us to deliver a high service availability, as customer or test data is replicated across availability zones.
 
-                  <br /> <br />For more details, please refer to <a href="https://www.lambdatest.com/trust/security#business-continuity-and-disaster-recovery">LambdaTest Trust</a> page.</p>
+                  <br /> <br />For more details, please refer to <a href="https://www.lambdatest.com/trust/security#business-continuity-and-disaster-recovery"><BrandName /> Trust</a> page.</p>
 
               </ol>
 
@@ -1019,7 +1022,7 @@ export default function index() {
             </details>
             <details>
               <summary>Do your employees sign/agree to a confidentiality statement?</summary>
-              <p> Yes. All our employees sign confidentiality agreements which extends to user agreements between LambdaTest and Clients. Also, we have strict user role based access to all our customer data therefore, only most important employees have access to only relevant data.</p>
+              <p> Yes. All our employees sign confidentiality agreements which extends to user agreements between <BrandName /> and Clients. Also, we have strict user role based access to all our customer data therefore, only most important employees have access to only relevant data.</p>
             </details>
             <details>
               <summary>Do you hold any certifications related to information or system security? Can we see the audit reports?</summary>
@@ -1031,7 +1034,7 @@ export default function index() {
             </details>
             <details>
               <summary>Describe your coding, testing, and deployment practices.</summary>
-              <p>We at LambdaTest follow Agile development methodologies with dedicated teams for automated deployment and testing. We use Jenkins as our preferred Continuous integration platform and use Sonar Cube for automated code quality control. We ensure maximum possible code coverage in our automated tests and each release is passed only before it pass all test scenarios.</p>
+              <p>We at <BrandName /> follow Agile development methodologies with dedicated teams for automated deployment and testing. We use Jenkins as our preferred Continuous integration platform and use Sonar Cube for automated code quality control. We ensure maximum possible code coverage in our automated tests and each release is passed only before it pass all test scenarios.</p>
             </details>
             <details>
               <summary>Do you perform web application vulnerability testing or intrusion detection?</summary>
@@ -1039,7 +1042,7 @@ export default function index() {
             </details>
             <details>
               <summary>How do you manage access to production systems? Do you have a staff termination/offboarding policy and process? What is it? Do you log and audit performance of this process?</summary>
-              <p>Access to production system is strictly controlled though role based authentication access. No LambdaTest employee has complete access to all data, each having their relevant role based access to data. Each employee has his/her own email based authentication passwords for accessing applications and after termination we revoke their complete access to the application. In addition we maintain automated logs of each database ingress and regularly monitor the logs to find discrepancies.</p>
+              <p>Access to production system is strictly controlled though role based authentication access. No <BrandName /> employee has complete access to all data, each having their relevant role based access to data. Each employee has his/her own email based authentication passwords for accessing applications and after termination we revoke their complete access to the application. In addition we maintain automated logs of each database ingress and regularly monitor the logs to find discrepancies.</p>
             </details>
             <details>
               <summary>Do you have an enforced password policy for admin accounts? Do you require MFA for admin accounts?</summary>
@@ -1047,7 +1050,7 @@ export default function index() {
             </details>
             <details>
               <summary>What logging do systems perform? How are logs protected? What encryption is used? Do you have BI systems? Do they hold PII?</summary>
-              <p>At LambdaTest, we maintain a variety of logs such as syslog (system logs), auth (authentication) logs, firewall logs, web server logs, application server logs, database server logs, netflows etc. We have an inhouse implementation of ELK stack for logging and business intelligence. Our implementation gathers and consolidates data from all micro-applications into a secure private network. The data is used for product analysis by product team through our custom log processing and BI system. The BI system in turn is secured thorugh a IP based access policy. In addition only authorized LambdaTest employees has access to relevant pieces of data based on their role. All log data is saved in encrypted format private storage volumes that is encrypted usign DM-Crypt disk encryption system</p>
+              <p>At <BrandName />, we maintain a variety of logs such as syslog (system logs), auth (authentication) logs, firewall logs, web server logs, application server logs, database server logs, netflows etc. We have an inhouse implementation of ELK stack for logging and business intelligence. Our implementation gathers and consolidates data from all micro-applications into a secure private network. The data is used for product analysis by product team through our custom log processing and BI system. The BI system in turn is secured thorugh a IP based access policy. In addition only authorized <BrandName /> employees has access to relevant pieces of data based on their role. All log data is saved in encrypted format private storage volumes that is encrypted usign DM-Crypt disk encryption system</p>
             </details>
             <details>
               <summary>What is your system patching regime?</summary>
@@ -1083,7 +1086,7 @@ export default function index() {
             </details>
             <details>
               <summary>Can unprotected user data be accessed by your staff? Is this access audited?</summary>
-              <p>All data such as user credentials are secured in encrypted format and no LambdaTest employee can access it, including administrators. User data such as company details, user contact details, test logs, etc. can be access by only relevant developers. We have strict user role based data access and only relevant developers have access to parts of user data. This security access is audited every month based on development and testing sprint plans.</p>
+              <p>All data such as user credentials are secured in encrypted format and no <BrandName /> employee can access it, including administrators. User data such as company details, user contact details, test logs, etc. can be access by only relevant developers. We have strict user role based data access and only relevant developers have access to parts of user data. This security access is audited every month based on development and testing sprint plans.</p>
             </details>
             <details>
               <summary>How are backups managed? What encryption is used? How are they destroyed when no longer needed?</summary>
@@ -1095,15 +1098,15 @@ export default function index() {
               </details>
             <details>
               <summary>What is your incident response process?</summary>
-              <p>We, here, at LambdaTest follow a 6 step incident reponse process. The various stages of the response proces are prepration, identification, containment, eradication, recovery, and learning. We use industry leading practices for each step and test our response workflow once a month.</p>
+              <p>We, here, at <BrandName /> follow a 6 step incident reponse process. The various stages of the response proces are prepration, identification, containment, eradication, recovery, and learning. We use industry leading practices for each step and test our response workflow once a month.</p>
             </details>
             <details>
               <summary>What are your policies and processes around notification of a security breach?</summary>
               <p>In case of an identified breach, all related users are notified of the breach immediately so that they can take necessary measures to prevent further loss. We share this information with our signup users through our email channels, and also notify users through social media platforms like <a href="https://www.linkedin.com/company/13282763/">LinkedIn</a>, <a href="https://www.facebook.com/lambdatest/">Facebook</a>, and <a href="https://twitter.com/Lambdatesting">Twitter</a>.</p>
             </details>
             <details>
-              <summary>LambdaTest Tunnel connects your servers with my system. How much of our local PC is exposed to your system?</summary>
-              <p>None. Only web requests initiated on LambdaTest platform are transported to your localsystem via SSH tunnel created by our tunnel binary. The data at rest and data at transit are both encrypted. Only web browsing data generated by a  webbrowser selected on LambdaTest platform can send data to your system. As such your system is not exposed to public. In addition, every tunnel created using Lambda Tunnel binary is isolated to users of the same account. All Information of the remote tunnel is secured by accesstoken and we employ latest technology in encrypted tokens. This information is only provided to the browser fired the user. With that said, LambdaTest recommends using test data instead of production data as best practice.</p>
+              <summary><BrandName /> Tunnel connects your servers with my system. How much of our local PC is exposed to your system?</summary>
+              <p>None. Only web requests initiated on <BrandName /> platform are transported to your localsystem via SSH tunnel created by our tunnel binary. The data at rest and data at transit are both encrypted. Only web browsing data generated by a  webbrowser selected on <BrandName /> platform can send data to your system. As such your system is not exposed to public. In addition, every tunnel created using Lambda Tunnel binary is isolated to users of the same account. All Information of the remote tunnel is secured by accesstoken and we employ latest technology in encrypted tokens. This information is only provided to the browser fired the user. With that said, <BrandName /> recommends using test data instead of production data as best practice.</p>
             </details></TabItem>
 
           <TabItem value="billing">
@@ -1112,19 +1115,19 @@ export default function index() {
             <details>
               <summary>What do I get with a Free Trial?
               </summary>
-              <p>When you sign up with LambdaTest, you receive 60 mins/month Realtime Browser Testing (6 Sessions of 10 minutes each), 100 Automation Minutes for 15 days, 10 Screenshot Tests per month, 10 Responsive Tests per month, 24x7 Support, and 3rd Party App Integrations. The Free Trial is the best way to get a feel for LambdaTest and how it works. LambdaTest is ideal for teams, and therefore you can invite any number of users to be part of your LambdaTest Team for testing.</p>
+              <p>When you sign up with <BrandName />, you receive 60 mins/month Realtime Browser Testing (6 Sessions of 10 minutes each), 100 Automation Minutes for 15 days, 10 Screenshot Tests per month, 10 Responsive Tests per month, 24x7 Support, and 3rd Party App Integrations. The Free Trial is the best way to get a feel for <BrandName /> and how it works. <BrandName /> is ideal for teams, and therefore you can invite any number of users to be part of your <BrandName /> Team for testing.</p>
             </details>
 
             <details>
               <summary>How does the FREE trial work?
               </summary>
-              <p>When you sign up, you instantly get access to our Freemium plan. This plan has no trial time limit, it's there for you for Life. In the freemium plan you get 60 minutes of LambdaTest Live testing usage which gets renewed per month. You can anytime upgrade your plan for more robust features and unlimited access to LambdaTest Live Testing machines.</p>
+              <p>When you sign up, you instantly get access to our Freemium plan. This plan has no trial time limit, it's there for you for Life. In the freemium plan you get 60 minutes of <BrandName /> Live testing usage which gets renewed per month. You can anytime upgrade your plan for more robust features and unlimited access to <BrandName /> Live Testing machines.</p>
             </details>
 
             <details>
-              <summary>How can I upgrade my LambdaTest subscription?
+              <summary>How can I upgrade my <BrandName /> subscription?
               </summary>
-              <p>You can add more user accounts to your existing plan, or upgrade to another plan from the <a href="https://www.lambdatest.com/pricing">Pricing page</a>. Upgrades can be done any time, and are charged on a prorated basis. Thus, if your subscription is changed during a billing cycle, your billed amount for the month will be prorated. To know more, visit <a href="https://www.lambdatest.com/support/docs/manage-subscriptions/">LambdaTest Manage Subscription</a> documentation.</p>
+              <p>You can add more user accounts to your existing plan, or upgrade to another plan from the <a href="https://www.lambdatest.com/pricing">Pricing page</a>. Upgrades can be done any time, and are charged on a prorated basis. Thus, if your subscription is changed during a billing cycle, your billed amount for the month will be prorated. To know more, visit <a href="https://www.lambdatest.com/support/docs/manage-subscriptions/"><BrandName /> Manage Subscription</a> documentation.</p>
             </details>
 
             <details>
@@ -1154,13 +1157,13 @@ export default function index() {
             <details>
               <summary>Can I upgrade or downgrade my subscription later?
               </summary>
-              <p>LambdaTest price is based on plan level and the no. of parallel sessions. As per your need you can upgrade and downgrade at any time. However, changes will not take effect until your next billing cycle.</p>
+              <p><BrandName /> price is based on plan level and the no. of parallel sessions. As per your need you can upgrade and downgrade at any time. However, changes will not take effect until your next billing cycle.</p>
             </details>
 
             <details>
               <summary>What is a On Demand Pass and how does it work?
               </summary>
-              <p>An On Demand Pass is a one time payment option for to those who wish to use LambdaTest for a shorter duration. With On Demand Pass, you get 120 Minutes of testing time with full access to LambdaTest features for 30 days at a price of just $10. This is a non recurring payment ,i.e. if you wish to continue this plan you would have to purchase On Demand Pass again.</p>
+              <p>An On Demand Pass is a one time payment option for to those who wish to use <BrandName /> for a shorter duration. With On Demand Pass, you get 120 Minutes of testing time with full access to <BrandName /> features for 30 days at a price of just $10. This is a non recurring payment ,i.e. if you wish to continue this plan you would have to purchase On Demand Pass again.</p>
             </details>
 
           </TabItem>

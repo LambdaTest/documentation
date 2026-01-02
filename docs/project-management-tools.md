@@ -11,49 +11,49 @@ url: https://www.testmu.ai/support/docs/integrations-with-project-management-too
 site_name: LambdaTest
 slug: integrations-with-project-management-tools
 ---
-LambdaTest offers integration to numerous third-party tools for project management and bug tracking to help you easily collaborate with your colleagues as you encounter a bug while performing cross browser testing. After integrating your LambdaTest account with your favourite project management tool or bug tracking tool, you can send any UI bug that you may encounter on your website, directly to your task management dashboard, in just a single click from LambdaTest.
+<BrandName /> offers integration to numerous third-party tools for project management and bug tracking to help you easily collaborate with your colleagues as you encounter a bug while performing cross browser testing. After integrating your <BrandName /> account with your favourite project management tool or bug tracking tool, you can send any UI bug that you may encounter on your website, directly to your task management dashboard, in just a single click from <BrandName />.
 
-<center><a href="/support/docs/asana-integration/"><button name="button">Asana Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/asana-integration/"><button name="button">Asana Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/github-integration/"><button name="button">GitHub Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/github-integration/"><button name="button">GitHub Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/gitlab-integration/"><button name="button">GitLab Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/gitlab-integration/"><button name="button">GitLab Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/trello-integration/"><button name="button">Trello Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/trello-integration/"><button name="button">Trello Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/bitbucket-integration/"><button name="button">Bitbucket Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/bitbucket-integration/"><button name="button">Bitbucket Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/paymo-integration/"><button name="button">Paymo Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/paymo-integration/"><button name="button">Paymo Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/teamwork-integration/"><button name="button">Teamwork Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/teamwork-integration/"><button name="button">Teamwork Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/hive-integration/"><button name="button">Hive Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/hive-integration/"><button name="button">Hive Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/shortcut-integration/"><button name="button">Shortcut Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/shortcut-integration/"><button name="button">Shortcut Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/monday-com-integration/"><button name="button">monday Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/monday-com-integration/"><button name="button">monday Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/breeze-integration-with-testmu/"><button name="button">Breeze Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/breeze-integration-with-testmu/"><button name="button">Breeze Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/clickup-integration/"><button name="button">Clickup Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/clickup-integration/"><button name="button">Clickup Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/jira-integration/"><button name="button">Jira Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/jira-integration/"><button name="button">Jira Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/jira-self-hosted-integration/"><button name="button">Self-Hosted Jira Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/jira-self-hosted-integration/"><button name="button">Self-Hosted Jira Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/vsts-integration/"><button name="button">Azure DevOps Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/vsts-integration/"><button name="button">Azure DevOps Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/bugherd-integration/"><button name="button">BugHerd Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/bugherd-integration/"><button name="button">BugHerd Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/mantis-integration/"><button name="button">Mantis Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/mantis-integration/"><button name="button">Mantis Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/zipboard-integration/"><button name="button">zipBoard Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/zipboard-integration/"><button name="button">zipBoard Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/backlog-integration-with-testmu/"><button name="button">Backlog Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/backlog-integration-with-testmu/"><button name="button">Backlog Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/pivotal-tracker-integration/"><button name="button">Pivotal Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/pivotal-tracker-integration/"><button name="button">Pivotal Integration With <BrandName /></button></a></center>
 
-<center><a href="/support/docs/practitest-integration/"><button name="button">Practitest Integration With LambdaTest</button></a></center>
+<center><a href="/support/docs/practitest-integration/"><button name="button">Practitest Integration With <BrandName /></button></a></center>
 
 <center><a href="/support/docs/miro-integration/"><button name="button">Miro Integration</button></a></center>
 

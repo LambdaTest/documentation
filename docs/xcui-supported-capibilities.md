@@ -1,4 +1,4 @@
-﻿---
+---
 id: xcui-supported-capabilities
 title: XCUI Supported Capabilities
 sidebar_label: Supported Capabilities
@@ -21,6 +21,8 @@ import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -30,23 +32,23 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Espresso Supported Capabilities",
-          "item": "https://www.lambdatest.com/support/docs/xcui-supported-capabilities/"
+          "item": `${BRAND_URL}/support/docs/xcui-supported-capabilities/`
         }]
       })
     }}
 ></script>
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
-This document provide details about the features and capabilities supported for XCUI Framework on LambdaTest.
+This document provide details about the features and capabilities supported for XCUI Framework on <BrandName />.
 
 > The capabilities listed in this document are also supported for [Virtual Devices](/support/docs/app-automation-on-emulators-simulators/)
 

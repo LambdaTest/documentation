@@ -1,4 +1,4 @@
-﻿---
+---
 id: supported-timezone
 title: Supported Timezones on TestMu AI
 hide_title: true
@@ -23,6 +23,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -32,17 +34,17 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Languages and Frameworks Supported on HyperExecute ",
-          "item": "https://www.lambdatest.com/support/docs/supported-appium-versions/"
+          "item": `${BRAND_URL}/support/docs/supported-appium-versions/`
         }]
       })
     }}
@@ -51,13 +53,13 @@ import VirtualDeviceTag from '../src/component/virtualDevice';
 # Setting up timezone 
 <RealDeviceTag value="Real Device" /> 
 <VirtualDeviceTag value="Virtual Device" />
-In automated testing with Appium on LambdaTest, configuring the timezone accurately is crucial for precise testing scenarios. LambdaTest provides support for various timezones, allowing users to customize their testing environments to meet specific requirements.
+In automated testing with Appium on <BrandName />, configuring the timezone accurately is crucial for precise testing scenarios. <BrandName /> provides support for various timezones, allowing users to customize their testing environments to meet specific requirements.
 
-By default, the timezone for Appium testing on LambdaTest is selected based on the device's default settings. However, users have the flexibility to explicitly specify the timezone using the **timezone** capability in their desired capabilities.
+By default, the timezone for Appium testing on <BrandName /> is selected based on the device's default settings. However, users have the flexibility to explicitly specify the timezone using the **timezone** capability in their desired capabilities.
 
 ## Timezone Configuration
 ---
-To specify the timezone for automated tests in Appium on LambdaTest, the **timezone** capability can be utilized. This ensures that tests are executed in the desired timezone, facilitating accurate validation of application behavior across different regions.
+To specify the timezone for automated tests in Appium on <BrandName />, the **timezone** capability can be utilized. This ensures that tests are executed in the desired timezone, facilitating accurate validation of application behavior across different regions.
 
 | Capability | Type | Description                                      |
 |------------|-----------|--------------------------------------------------|
@@ -118,12 +120,12 @@ Below is the list of supported **timezones** supported along with their correspo
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" target="_self" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

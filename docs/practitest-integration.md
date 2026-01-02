@@ -1,4 +1,4 @@
-﻿---
+---
 id: practitest-integration
 title: PractiTest Integration with TestMu AI
 hide_title: false
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/practitest-integration
 site_name: LambdaTest
 slug: practitest-integration
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -21,17 +23,17 @@ slug: practitest-integration
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "PractiTest Integration",
-          "item": "https://www.lambdatest.com/support/docs/practitest-integration/"
+          "item": `${BRAND_URL}/support/docs/practitest-integration/`
         }]
       })
     }}
@@ -39,11 +41,11 @@ slug: practitest-integration
 
 [PractiTest](https://www.practitest.com/) is a QA and test management solution to provide users with better control of their testing and development process. Enabling organizations to guarantee visibility and communication with relevant stakeholders. It also helps project development teams to streamline and manage their testing processes while providing management with a clear and simple view of their project status at all times.
 
-LambdaTest's integration with PractiTest will further help to log bugs to your projects on PractiTest. You can easily find and report any cross browser compatibility issues to your team instantly.
+<BrandName />'s integration with PractiTest will further help to log bugs to your projects on PractiTest. You can easily find and report any cross browser compatibility issues to your team instantly.
 
-## Integrate PractiTest from your LambdaTest Account
+## Integrate PractiTest from your <BrandName /> Account
 
-**Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You should have Admin or User level access to see and install integrations.
 
 **Step 2:** Click on Settings -> Integrations -> Project Management.
 
@@ -53,7 +55,7 @@ LambdaTest's integration with PractiTest will further help to log bugs to your p
 <source src= {require('../assets/images/practitest-integration/1.mp4').default} type="video/mp4" />
 </video>
 
-**Step 4:** Now, provide your PractiTest API Token and Teamwork site address to establish integration with LambdaTest and click on install button.
+**Step 4:** Now, provide your PractiTest API Token and Teamwork site address to establish integration with <BrandName /> and click on install button.
 
 :::tip How to Get your API Token
 
@@ -83,7 +85,7 @@ Visit your PractiTest Dashboard -> Settings -> API Tokens.
 
 ## Uninstall PractiTest Integration
 
-**Step 1:** Login to your LambdaTest account. You should have Admin or User level access to see and install integrations.
+**Step 1:** Login to your <BrandName /> account. You should have Admin or User level access to see and install integrations.
 
 **Step 2:** Click on Settings -> Integrations -> Project Management.
 
@@ -96,12 +98,12 @@ Visit your PractiTest Dashboard -> Settings -> API Tokens.
 <nav aria-label="breadcrumbs">
   <ul className="breadcrumbs">
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" href="https://www.lambdatest.com">
+      <a className="breadcrumbs__link" href={BRAND_URL}>
         Home
       </a>
     </li>
     <li className="breadcrumbs__item">
-      <a className="breadcrumbs__link" target="_self" href="https://www.lambdatest.com/support/docs/">
+      <a className="breadcrumbs__link" target="_self" href={`${BRAND_URL}/support/docs/`}>
         Support
       </a>
     </li>

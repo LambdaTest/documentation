@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/kaneai-dynamic-url-replacement
 site_name: LambdaTest
 slug: kaneai-dynamic-url-replacement
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -22,17 +24,17 @@ slug: kaneai-dynamic-url-replacement
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Dynamic URL",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-dynamic-url-replacement/"
+          "item": `${BRAND_URL}/support/docs/kaneai-dynamic-url-replacement/`
         }]
       })
     }}
@@ -47,7 +49,7 @@ You must have [created a test run for KaneAI Generated Tests](/support/docs/kane
 ## How to Use Dynamic URL Replacement
 
 ### Step 1: Navigate to the Test Runs Page
-- Log in to LambdaTest.
+- Log in to <BrandName />.
 - Go to the Test Manager > Test Runs section.
 - Click on your desired **Test Run**.
 - Click on **Run with HyperExecute** button.

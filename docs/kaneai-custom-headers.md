@@ -20,17 +20,17 @@ slug: kaneai-custom-headers
           "@type": "ListItem",
           "position": 1,
           "name": "LambdaTest",
-          "item": "https://www.lambdatest.com"
+          "item": BRAND_URL
         },{
           "@type": "ListItem",
           "position": 2,
           "name": "Support",
-          "item": "https://www.lambdatest.com/support/docs/"
+          "item": `${BRAND_URL}/support/docs/`
         },{
           "@type": "ListItem",
           "position": 3,
           "name": "Custom Headers",
-          "item": "https://www.lambdatest.com/support/docs/kaneai-custom-headers/"
+          "item": `${BRAND_URL}/support/docs/kaneai-custom-headers/`
         }]
       })
     }}

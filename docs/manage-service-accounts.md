@@ -37,10 +37,10 @@ The service account has the following benefits:
 Service accounts can only be created by Admins.
 :::
 
-To create a service account on LambdaTest, you can follow these steps:
+To create a service account on <BrandName />, you can follow these steps:
 
 
-**Step 1:** Sign in to your LambdaTest account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
+**Step 1:** Sign in to your <BrandName /> account. Don't have an account, [register for free](https://accounts.lambdatest.com/register).
 
 <img loading="lazy" src={require('../assets/images/lambdatest-mfa/dashboard.webp').default} alt="Image" width="404" height="206"  className="doc_img img_center"/><br/>
 
