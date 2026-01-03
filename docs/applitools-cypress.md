@@ -20,6 +20,9 @@ slug: applitools-integration-cypress
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+
 ---
 
 **Applitools** provides an end-to-end software testing platform powered by **Visual AI**. This article will guide you on how to integrate your **Cypress** automation tests with **Applitools** and **<BrandName />**.

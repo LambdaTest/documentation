@@ -17,6 +17,9 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+
 # Apple Pay Testing on Real Devices
 
 **Apple Pay** is Apple’s secure digital wallet and payment system that enables in-app and web purchases with an extra layer of protection. Testing of Apple Pay is essential to validate the user experience, including wallet selection, passcode entry, and transaction confirmation.
