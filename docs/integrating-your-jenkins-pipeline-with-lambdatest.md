@@ -12,7 +12,6 @@ keywords:
     - continuous delivery
     - continuous integration tools
     - jenkins pipeline 
-image: /assets/images/og-images/JPG-4.jpg
 url: https://www.testmu.ai/support/docs/integrating-your-jenkins-pipeline-with-testmu
 site_name: LambdaTest
 slug: integrating-your-jenkins-pipeline-with-testmu

@@ -15,6 +15,9 @@ site_name: LambdaTest
 slug: accessibility-web-score
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+
 The Accessibility Score is a unified metric that represents the accessibility health of your website or application workflow.
 Gone are the days of sifting through lengthy accessibility reports trying to figure out what matters most. The Accessibility Score gives you a clear, actionable number that tells you exactly where your product stands on accessibility compliance.
 Use this score to track your progress over time, compare releases, and demonstrate tangible improvements to stakeholders.
