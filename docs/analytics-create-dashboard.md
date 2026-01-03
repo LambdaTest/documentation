@@ -10,6 +10,9 @@ site_name: LambdaTest
 slug: analytics-create-dashboard
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -33,8 +36,6 @@ slug: analytics-create-dashboard
       })
     }}
 ></script>
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
 ## Using Custom Dashboards

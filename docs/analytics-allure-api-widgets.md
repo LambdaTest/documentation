@@ -38,6 +38,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+
 The `Allure Test Insights` module helps you to get an overview of the test execution results using the Allure. This widget provides insights into the test execution results, test status, and test duration.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/21XtN5PSMNI?si=4oVmKO88mzVlLVW1" title="Integrate Allure Test Insights with HyperExecute" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
