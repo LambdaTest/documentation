@@ -16,6 +16,8 @@ site_name: LambdaTest
 slug: insights-app-profiling
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

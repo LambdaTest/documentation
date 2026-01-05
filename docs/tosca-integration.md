@@ -15,6 +15,8 @@ site_name: LambdaTest
 slug: tricentis-tosca-integration-testmu-selenium-grid
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <BrandName /> provides support with Selenium WebDriver for pacing the execution of your automation test scripts. <BrandName /> is a cloud-based, cross browser testing tool, providing a [Selenium Grid](https://www.lambdatest.com/selenium-automation/) of 3000+ browsers and browser versions running through real operating systems to speed up automation testing of your web-app or website. This topic will help you to automate your website testing using Tricentis Tosca on <BrandName />.
 
 This topic will be focusing on:

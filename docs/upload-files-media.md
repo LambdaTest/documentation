@@ -23,6 +23,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Upload & Download Files and Media on Real Devices
 

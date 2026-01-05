@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/selenium-telemetry-logs
 site_name: LambdaTest
 slug: selenium-telemetry-logs
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Debugging in Selenium using Telemetry Logs
 ---
 

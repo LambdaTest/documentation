@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/selenified-integration-with-testmu
 site_name: LambdaTest
 slug: selenified-integration-with-testmu
 --- 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Selenified Integration With <BrandName />
 Previously known as SecureCI™ Testing Framework, Selenified is an open-source test automation framework as a wrapper to Selenium with extra features such as detailed **traceable reporting**, **custom reporting**, ability to invoke **dynamic waits**, etc. so you could test your web-application across the web and even API level. The framework is built on top of TestNG, making it intuitive for beginners and offers support with multiple build tools such as Maven, Gradle, and Ant, making it easier to integrate with your DevOps build environments.
 

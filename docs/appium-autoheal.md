@@ -22,6 +22,7 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # AI-Powered Smart Heal for Automation Tests
 <RealDeviceTag value="Real Device" /> 

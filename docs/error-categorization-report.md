@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/error-categorization-report
 site_name: LambdaTest
 slug: error-categorization-report
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

@@ -15,6 +15,8 @@ site_name: LambdaTest
 slug: modules-in-manual-testcases
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

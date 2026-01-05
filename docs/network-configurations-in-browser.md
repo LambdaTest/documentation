@@ -17,6 +17,8 @@ slug: browser-network-configurations
 
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 # Network Logs and Configurations in real devices
 
 Network logs record every network interaction during your test session, from API calls and page requests to server responses and load times. These logs are stored in HAR format, giving you a complete snapshot of **network performance** for each run. By reviewing this data, you can identify slow endpoints, troubleshoot failed requests, and validate that your app communicates with the right services—all without leaving your testing workflow.

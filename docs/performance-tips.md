@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/performance-tips
 site_name: LambdaTest
 slug: performance-tips
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Performance Tips
 * * *
 

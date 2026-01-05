@@ -15,6 +15,7 @@ slug: web-scanner-visual-scan
 ---
 
 import CodeBlock from '@theme/CodeBlock';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

@@ -14,6 +14,8 @@ site_name: LambdaTest
 slug: group-folder-redirect-on-real-device
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 # Group Folder Redirect On Real Devices  
 
 <BrandName /> supports **Group Folder Redirect** for iOS apps on Real Devices.  

@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/cypress-mochaawesome-report
 site_name: LambdaTest
 slug: cypress-mochaawesome-report
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

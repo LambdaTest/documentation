@@ -14,6 +14,8 @@ keywords:
 slug: insights-best-practices
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 # Best Practices for <BrandName /> Insights
 
 Unlock the full potential of <BrandName /> Insights by following these best practices for dashboards, widgets, and insights modules. These guidelines are distilled from the current knowledge base and are designed to help you optimize your testing process, improve reporting, and drive actionable insights.

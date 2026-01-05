@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/zalenium-integration-with-testmu
 site_name: LambdaTest
 slug: zalenium-integration-with-testmu
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 -----------------------------------------------------------------------------------------------------------------------------
 Brought up by Zalando, Zalenium is open-source with the vision to eliminate the hassle of maintaining an in-house [Selenium Grid](https://www.lambdatest.com/blog/why-selenium-grid-is-ideal-for-automated-browser-testing/). Zalenium does so by offering a Docker-based Selenium Grid on-cloud that gets auto-updated with the latest browsers and their driver versions.
 

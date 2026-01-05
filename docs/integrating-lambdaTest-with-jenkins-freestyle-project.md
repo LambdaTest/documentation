@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/integrating-testmu-with-jenkins-freestyl
 site_name: LambdaTest
 slug: integrating-testmu-with-jenkins-freestyle-project
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ***
 
 

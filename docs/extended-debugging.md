@@ -16,6 +16,8 @@ site_name: LambdaTest
 slug: extended-debugging-options
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <BrandName />'s Extended Debugging Options provide powerful capabilities to debug and optimize your Selenium tests by giving you granular control over network behavior and system performance. These advanced debugging features allow you to intercept and modify network requests, simulate various CPU and network conditions, and download comprehensive network analysis files—all within your test automation workflow.
 
 With Extended Debugging Options, you can replicate real-world scenarios such as slow networks, resource-constrained devices, API failures, and connectivity issues, ensuring your application delivers a robust user experience across diverse conditions and environments.

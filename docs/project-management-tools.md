@@ -11,6 +11,8 @@ url: https://www.testmu.ai/support/docs/integrations-with-project-management-too
 site_name: LambdaTest
 slug: integrations-with-project-management-tools
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <BrandName /> offers integration to numerous third-party tools for project management and bug tracking to help you easily collaborate with your colleagues as you encounter a bug while performing cross browser testing. After integrating your <BrandName /> account with your favourite project management tool or bug tracking tool, you can send any UI bug that you may encounter on your website, directly to your task management dashboard, in just a single click from <BrandName />.
 
 <center><a href="/support/docs/asana-integration/"><button name="button">Asana Integration With <BrandName /></button></a></center>

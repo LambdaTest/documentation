@@ -15,6 +15,7 @@ slug: playwright-auto-healing
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Auto Healing for Playwright Web Automation
 

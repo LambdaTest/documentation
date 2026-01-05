@@ -29,6 +29,10 @@ site_name: LambdaTest
 slug: codecept-on-hyperexecute/
 ---
 
+import CodeBlock from '@theme/CodeBlock';
+import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -52,10 +56,6 @@ slug: codecept-on-hyperexecute/
       })
     }}
 ></script>
-
-import CodeBlock from '@theme/CodeBlock';
-import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Running Codecept Framework Tests on HyperExecute
 CodeceptJS is a versatile JavaScript testing framework that supports Puppeteer for end-to-end testing of web applications. It introduces a human-readable syntax and a versatile architecture that allows writing tests in a natural language style.

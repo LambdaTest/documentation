@@ -15,6 +15,10 @@ url: https://www.testmu.ai/support/docs/analytics-sub-organization-widgets
 site_name: LambdaTest
 slug: analytics-sub-organization-widgets
 ---
+
+import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -40,10 +44,6 @@ slug: analytics-sub-organization-widgets
 ></script>
 
 ---
-
-import NewTag from '../src/component/newTag';
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
 ## Monitor and Analyze Sub-Organizations with Insights
