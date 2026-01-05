@@ -11,6 +11,9 @@ url: https://www.testmu.ai/support/docs/cucumber-report
 site_name: LambdaTest
 slug: cucumber-report
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

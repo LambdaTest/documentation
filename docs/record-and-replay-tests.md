@@ -15,6 +15,8 @@ site_name: LambdaTest
 slug: record-and-replay-tests
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 # Record and Replay Tests using LT Debug 2.0
 ---
 

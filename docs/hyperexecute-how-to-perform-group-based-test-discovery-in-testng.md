@@ -12,6 +12,8 @@ site_name: LambdaTest
 slug: hyperexecute-how-to-perform-group-based-test-discovery-in-testng
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

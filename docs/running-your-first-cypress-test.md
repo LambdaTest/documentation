@@ -20,6 +20,8 @@ site_name: LambdaTest
 slug: running-your-first-cypress-test
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 ---
 
 To demonstrate Cypress testing on the <BrandName /> platform, we will use the [Cypress Cloud repo](https://github.com/LambdaTest/Cypress-Cloud) in the demo below.

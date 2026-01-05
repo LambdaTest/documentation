@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/ios-entitlements
 site_name: LambdaTest
 slug: ios-entitlements
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

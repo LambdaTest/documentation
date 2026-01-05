@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/zapier-integration-with-testmu
 site_name: LambdaTest
 slug: zapier-integration-with-testmu
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 -----------------------------------------------------------------------------------------------------------------------------
 Zapier is a cloud-based platform that allows you to easily automate workflows between your apps and your services without having to build this integration yourself or hire someone to do it for you. Zapier works with Zaps, which you can create by combining multiple apps and services. These Zaps help you streamline your workflow and save time and effort.
 

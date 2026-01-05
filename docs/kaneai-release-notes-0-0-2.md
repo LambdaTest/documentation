@@ -15,6 +15,7 @@ slug: kaneai-release-notes-0-0-2
 ---
 import FeatureTag from '../src/component/featureTag';
 import BugFixTag from '../src/component/bugFixTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

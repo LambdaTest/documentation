@@ -22,6 +22,8 @@ url: https://www.testmu.ai/support/docs/group-and-filter-your-test-builds-using-
 site_name: LambdaTest
 slug: group-and-filter-your-test-builds-using-build-tags
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 * * *
 
 With <BrandName />, now you can group your test builds with Build tags. This document shows how you can create Build tags and use them to group or filter your test builds on the <BrandName /> Automation Dashboard.

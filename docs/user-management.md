@@ -12,6 +12,8 @@ site_name: LambdaTest
 slug: user-management
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 # User Management
 ---
 

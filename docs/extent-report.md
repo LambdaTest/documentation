@@ -12,6 +12,9 @@ url: https://www.testmu.ai/support/docs/extent-report
 site_name: LambdaTest
 slug: extent-report
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

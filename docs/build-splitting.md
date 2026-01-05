@@ -15,6 +15,8 @@ site_name: LambdaTest
 slug: build-inactivity-time
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 # Setting Up the Build Inactivity Time [Build Splitting]
 ---
 

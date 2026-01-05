@@ -15,6 +15,7 @@ slug: hyperexecute-use-cases
 ---
 
 import DocCard from '../src/component/DocCard';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

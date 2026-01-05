@@ -14,6 +14,8 @@ site_name: LambdaTest
 slug: hyperexecute-how-to-configure-tunnel
 ---
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
