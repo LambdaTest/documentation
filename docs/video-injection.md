@@ -63,6 +63,37 @@ This tool is ideal for testing features such as:
 ## How It Works
 LambdaTest utilizes **Sensor Instrumentation** to integrate with various mobile sensors, including the camera. When you enable Video Injection for a session, LambdaTest injects its camera code module into your app through Sensor Instrumentation. This module then mocks or overrides the iOS SDK used in your app.
 
+## Supported Camera APIs
+
+Below is the list of Camera APIs supported by the LambdaTest Image Injection tool.  
+Please ensure that your app uses only these APIs to enable Image Injection.
+
+<Tabs className="docs__val">
+
+<TabItem value="ios" label="iOS ≥ version 13" default>
+
+<div className="lambdatest__codeblock">
+
+  | Supported APIs |
+    |----------------|
+    | `AVCaptureVideoDataOutput`Used for capturing video frames via the `AVCaptureVideoDataOutputSampleBufferDelegate` protocol. <br /><br /> 📕 For details, please check [Documentation reference](https://developer.apple.com/documentation/avfoundation/avcapturevideodataoutput)|
+</div>
+
+</TabItem>
+
+<TabItem value="android" label="Android ≥ version 9">
+
+<div className="lambdatest__codeblock">
+
+  | Supported APIs |
+    |----------------|
+    |`android.media.ImageReader` Enables retrieval and processing of image data directly from the camera capture pipeline. <br /><br /> 📕 For details, please check [Documentation reference](https://developer.android.com/reference/android/media/ImageReader) |
+</div>
+
+</TabItem>
+
+</Tabs>
+
 ## Video Injection in App Automation
 
 This section explains how to use Video Injection with App automation. This section will also teach you how to use video injection for all the possible test cases for your app along with other useful information.
