@@ -13,11 +13,8 @@ site_name: LambdaTest
 slug: custom-headers
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 # Overcoming Firewalls: A Deep Dive into <BrandName />'s customHeaders and customUrlFilters Capabilities
 ---
-
 
 Every modern software company knows the importance of robust testing. As the development environment becomes increasingly complex, the tools we use for testing have to evolve to keep up. But sometimes, obstacles arise that make testing more difficult—one such obstacle being corporate firewalls. Designed to keep networks secure, these firewalls can occasionally interfere with your testing process.
 

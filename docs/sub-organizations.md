@@ -13,8 +13,6 @@ site_name: LambdaTest
 slug: sub-organizations
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 # Sub Organizations
 ---
 

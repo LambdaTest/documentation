@@ -10,8 +10,6 @@ site_name: LambdaTest
 slug: analytics-dashboard-templates
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -35,6 +33,8 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/ge8w56jZTWw?si=3EJwrMTH6GC_hDd3" title="Exploring Pre-Built Templates in Lambdatest Insights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

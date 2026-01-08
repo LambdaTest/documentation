@@ -16,9 +16,6 @@ site_name: LambdaTest
 slug: http2-support
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-
 # HTTP/2 Support in <BrandName /> Tunnel
 
 ## Overview

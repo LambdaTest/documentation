@@ -20,8 +20,6 @@ site_name: LambdaTest
 slug: supported-browsers-and-os
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 <BrandName /> supports the below listed browsers, browser versions and Operating Systems for Cypress testing:
 
 ```json

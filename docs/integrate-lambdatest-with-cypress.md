@@ -20,8 +20,6 @@ site_name: LambdaTest
 slug: integrate-testmu-with-cypress
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 ---
 
 This article guides you on how to integrate **<BrandName /> platform** with **The Cypress Dashboard**

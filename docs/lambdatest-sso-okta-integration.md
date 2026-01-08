@@ -15,8 +15,6 @@ site_name: LambdaTest
 slug: testmu-sso-okta-integration
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{

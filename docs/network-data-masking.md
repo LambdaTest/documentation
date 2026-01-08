@@ -14,8 +14,6 @@ site_name: LambdaTest
 slug: network-data-masking
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 # Network Data Masking 
 
 <BrandName /> provides network data masking capability to protect sensitive information during automation testing sessions. This feature automatically masks sensitive data in network logs on <BrandName /> platform, ensuring that confidential information like passwords, tokens, and authentication keys are not exposed in test logs and network traffic reports.

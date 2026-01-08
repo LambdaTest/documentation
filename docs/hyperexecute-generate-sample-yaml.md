@@ -13,8 +13,6 @@ site_name: LambdaTest generating hyperexecute yaml
 slug: hyperexecute-generate-sample-yaml
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

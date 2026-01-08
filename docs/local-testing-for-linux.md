@@ -15,8 +15,6 @@ site_name: LambdaTest
 slug: local-testing-for-linux
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 # Legacy Binary For Linux
 
 ***
