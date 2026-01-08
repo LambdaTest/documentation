@@ -25,8 +25,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 ---
 
 Authenticate your Cypress test runs in the following ways -

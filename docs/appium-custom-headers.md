@@ -13,9 +13,6 @@ site_name: LambdaTest
 slug: appium-custom-headers
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-
 
 #  CustomHeaders support for automation 
 

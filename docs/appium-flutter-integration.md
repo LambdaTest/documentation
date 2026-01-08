@@ -22,9 +22,6 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 import RealDeviceTag from '../src/component/realDevice';
 import VirtualDeviceTag from '../src/component/virtualDevice';
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-
 
 <RealDeviceTag value="Real Device" /> <VirtualDeviceTag value="Virtual Device" />
 <BrandName /> supports testing Flutter applications on real Android and iOS devices using the [**Appium Flutter Integration Driver**](https://github.com/AppiumTestDistribution/appium-flutter-integration-driver/). This driver enables you to automate Flutter app testing in multiple programming languages, providing a powerful and flexible way to validate your Flutter apps on real devices in the cloud.

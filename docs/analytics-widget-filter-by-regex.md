@@ -36,9 +36,6 @@ slug: analytics-widget-filter-by-regex
       })
     }}
 ></script>
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 ## About Regex Mode
 
 Our analytics platform now supports regular expressions (Regex) for advanced text searching, pattern matching, and data extraction. This feature enhances your ability to filter and analyze data with greater precision and flexibility.

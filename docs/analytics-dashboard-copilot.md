@@ -37,8 +37,6 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
       })
     }}
 ></script>
-
-
 # Getting Started with AI CoPilot Dashboard  <NewTag value="BETA" bgColor="#ffec02" color="#000" />
 
 The AI CoPilot Dashboard is an innovative feature designed to revolutionize the way you analyze and gain insights from your data. By leveraging the power of artificial intelligence, the dashboard provides intelligent recommendations, insights, and predictions tailored to your specific data, enabling you to make data-driven decisions faster than ever before.

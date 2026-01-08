@@ -34,9 +34,6 @@ slug: analytics-dashboard-settings
     }}
 ></script>
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-
 ## Dashboard Settings Overview
 
 The Analytics Dashboard Settings page provides a comprehensive set of controls to help you manage notifications, sharing, and access for your test analytics dashboards. This guide details each setting and how to use it for optimal collaboration and visibility.
