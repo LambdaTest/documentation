@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Maestro Testing on LambdaTest",
+          "name": "Getting Started With Maestro Testing on TestMu AI",
           "item": `${BRAND_URL}/support/docs/hyperexecute-maestro-testing/`
         }]
       })

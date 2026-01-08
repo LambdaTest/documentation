@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "How to Migrate From Legacy Platform to LambdaTest",
+          "name": "How to Migrate From Legacy Platform to TestMu AI",
           "item": `${BRAND_URL}/support/docs/migrate-from-legacy-platform-to-testmu/`
         }]
       })

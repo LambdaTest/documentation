@@ -13,7 +13,7 @@ keywords:
  - automation testing framework
  - test automation frameworks
  - app testing
- - lambdaTest 
+ - testmu ai 
  - appium version selection
 url: https://www.testmu.ai/support/docs/supported-appium-versions
 site_name: LambdaTest

@@ -25,7 +25,7 @@ slug: testmu-sso-okta-integration
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": "https://www.lambdatest.com"
         },
         {

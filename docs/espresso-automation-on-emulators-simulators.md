@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Espresso App Automation Using Emulators and Simulators on LambdaTest",
+          "name": "Espresso App Automation Using Emulators and Simulators on TestMu AI",
           "item": `${BRAND_URL}/support/docs/espresso-automation-on-emulators-simulators/`
         }]
       })

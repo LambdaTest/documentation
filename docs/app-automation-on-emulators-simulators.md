@@ -34,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "App Automation Using Emulators and Simulators on LambdaTest",
+          "name": "App Automation Using Emulators and Simulators on TestMu AI",
           "item": `${BRAND_URL}/support/docs/app-automation-on-emulators-simulators/`
         }]
       })

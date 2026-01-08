@@ -14,7 +14,7 @@ keywords:
  - images plugin
  - test automation frameworks
  - app testing
- - lambdaTest 
+ - testmu ai 
 
 url: https://www.testmu.ai/support/docs/supported-appium-plugins
 site_name: LambdaTest

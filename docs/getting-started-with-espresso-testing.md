@@ -39,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Espresso Testing on LambdaTest",
+          "name": "Getting Started With Espresso Testing on TestMu AI",
           "item": `${BRAND_URL}/support/docs/getting-started-with-espresso-testing/`
         }]
       })

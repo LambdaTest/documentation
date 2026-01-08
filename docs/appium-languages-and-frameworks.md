@@ -38,7 +38,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Appium Testing on LambdaTest",
+          "name": "Getting Started With Appium Testing on TestMu AI",
           "item": `${BRAND_URL}/support/docs/appium-languages-and-frameworks/`
         }]
       })

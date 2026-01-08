@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Flutter Tests on LambdaTest",
+          "name": "Getting Started With Flutter Tests on TestMu AI",
           "item": `${BRAND_URL}/support/docs/getting-started-with-flutter-dart-android-automation/`
         }]
       })

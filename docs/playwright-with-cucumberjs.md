@@ -26,7 +26,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": BRAND_URL
         },{
           "@type": "ListItem",
@@ -196,7 +196,7 @@ class CustomWorld extends World{
 ```js
 try {
     assert.equal(title,
-        "How to use HyperExecute for scalable and reliable web automation testing | LambdaTest",
+        "How to use HyperExecute for scalable and reliable web automation testing | TestMu AI",
         "Page title does not match");
 
     await this.setTestStatus("passed", "Title matched");

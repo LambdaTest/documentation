@@ -26,7 +26,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": BRAND_URL
         },{
           "@type": "ListItem",
@@ -36,7 +36,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Migrate Existing Playwright Test Suites On LambdaTest",
+          "name": "Migrate Existing Playwright Test Suites On TestMu AI",
           "item": `${BRAND_URL}/support/docs/migrate-existing-playwright-tests/`
         }]
       })

@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Scroll Until Element
 description: Learn how to use Scroll Until Element feature in KaneAI to automate scrolling using natural language commands for mobile app testing
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai mobile app
   - scroll until element
   - natural language commands
@@ -23,7 +23,7 @@ slug: kaneai-scroll-until-mobile/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": "https://www.lambdatest.com"
         },{
           "@type": "ListItem",

@@ -24,7 +24,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": BRAND_URL
         },{
           "@type": "ListItem",
@@ -34,7 +34,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Upload Files Using LambdaTest",
+          "name": "Upload Files Using TestMu AI",
           "item": `${BRAND_URL}/support/docs/upload-files-using-testmu/`
         }]
       })

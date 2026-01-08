@@ -39,7 +39,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Getting Started With Selenium Automation Testing Using LambdaTest",
+          "name": "Getting Started With Selenium Automation Testing Using TestMu AI",
           "item": `${BRAND_URL}/support/docs/getting-started-with-testmu-automation/`
         }]
       })

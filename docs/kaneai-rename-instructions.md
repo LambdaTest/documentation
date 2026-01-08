@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: Rename Steps
 description: Learn how to rename test steps in KaneAI for API, JS, Database, Network Assertion and Visual Comparison instructions
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai test steps
   - rename instructions
   - test step management
@@ -23,7 +23,7 @@ slug: kaneai-rename-instructions/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": "https://www.lambdatest.com"
         },{
           "@type": "ListItem",
