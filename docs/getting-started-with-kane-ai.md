@@ -43,7 +43,7 @@ import TabItem from '@theme/TabItem';
 ></script>
 Testing shouldn’t slow innovation. KaneAI makes test automation as natural as writing a To Do list with no steep learning curves, no endless script maintenance.
 
-Which KaneAI you can:
+With KaneAI you can:
 
 - **Go from ideas to scripts in seconds** – Turn Jira tickets, PRDs, or plain text into ready-to-run test cases.
 
