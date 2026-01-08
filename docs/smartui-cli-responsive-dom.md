@@ -107,7 +107,7 @@ Resize your viewport according to your framework and take the screenshot. For ex
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": BRAND_URL
         },{
           "@type": "ListItem",

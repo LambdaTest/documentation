@@ -30,7 +30,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "White-listing Proxy With LambdaTest",
+          "name": "White-listing Proxy With TestMu AI",
           "item": `${BRAND_URL}/support/docs/white-listing-proxy-with-testmu/`
         }]
       })

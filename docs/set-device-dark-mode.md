@@ -43,7 +43,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Appium Inspector Integration on LambdaTest",
+          "name": "Appium Inspector Integration on TestMu AI",
           "item": `${BRAND_URL}/support/docs/set-device-dark-mode/`
         }]
       })

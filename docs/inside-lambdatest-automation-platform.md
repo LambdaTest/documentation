@@ -8,7 +8,7 @@ keywords:
   - Automation Platform
   - Dashboard
   - Automation Testing
-  - Lambdatest Dashboard
+  - testmu ai Dashboard
 url: https://www.testmu.ai/support/docs/inside-testmu-platform
 site_name: LambdaTest
 slug: inside-testmu-platform

@@ -23,7 +23,7 @@ slug: bamboo-integration-with-hyperexecute
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": BRAND_URL
         },{
           "@type": "ListItem",

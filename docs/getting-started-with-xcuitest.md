@@ -40,7 +40,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "XCUI Testing on LambdaTest",
+          "name": "XCUI Testing on TestMu AI",
           "item": `${BRAND_URL}/support/docs/getting-started-with-xcuitest/`
         }]
       })

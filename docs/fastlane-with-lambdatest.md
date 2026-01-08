@@ -22,7 +22,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": "https://www.lambdatest.com/"
         },{
           "@type": "ListItem",
@@ -32,7 +32,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 4,
-          "name": "fastlane Integration With LambdaTest",
+          "name": "fastlane Integration With TestMu AI",
           "item": `${BRAND_URL}/support/docs/fastlane-with-testmu/`
         }]
       })

@@ -5,8 +5,8 @@ hide_title: false
 sidebar_label: GPS Location
 description: Learn how to use GPS Location Override feature in KaneAI for testing location-based mobile app functionalities
 keywords:
-  - lambdatest automation
-  - lambdatest kaneai
+  - testmu ai automation
+  - testmu ai kaneai
   - kaneai mobile app
   - gps location
   - location override
@@ -23,7 +23,7 @@ slug: kaneai-gps-location/
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": "https://www.lambdatest.com"
         },{
           "@type": "ListItem",

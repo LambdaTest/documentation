@@ -23,7 +23,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
-          "name": "LambdaTest",
+          "name": "TestMu AI",
           "item": BRAND_URL
         },{
           "@type": "ListItem",
@@ -33,7 +33,7 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "Run Selenium Tests With xUnit on LambdaTest",
+          "name": "Run Selenium Tests With xUnit on TestMu AI",
           "item": `${BRAND_URL}/support/docs/selenium-with-xunit/`
         }]
       })

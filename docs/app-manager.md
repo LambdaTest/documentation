@@ -7,7 +7,7 @@ description: Manage and test multiple app versions on real devices using TestMu 
 
 keywords:
     - lambdaTest
-    - lambdaTest app manager
+    - testmu ai app manager
     - mobile app version control
     - manage mobile app builds
     - Accessibility Testing Settings

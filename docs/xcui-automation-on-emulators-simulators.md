@@ -34,7 +34,7 @@ import TabItem from '@theme/TabItem';
         },{
           "@type": "ListItem",
           "position": 3,
-          "name": "XCUI App Automation Using Emulators and Simulators on LambdaTest",
+          "name": "XCUI App Automation Using Emulators and Simulators on TestMu AI",
           "item": `${BRAND_URL}/support/docs/xcui-automation-on-emulators-simulators/`
         }]
       })
