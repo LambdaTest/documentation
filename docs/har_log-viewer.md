@@ -15,9 +15,6 @@ site_name: LambdaTest
 slug: har-log-viewer-with-waterfall
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-
 # HAR Log Viewer With Waterfall for Selenium Testing
 ***
 

@@ -13,8 +13,6 @@ site_name: LambdaTest
 slug: service-accounts
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 # Creating and Managing Service Accounts
 ---
 

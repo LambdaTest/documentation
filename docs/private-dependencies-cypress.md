@@ -20,8 +20,6 @@ site_name: LambdaTest
 slug: private-dependencies-cypress
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 This article guides you on how to execute your **Cypress** tests including the **private dependencies** on **<BrandName /> platform**.
 Earlier if your project includes any private dependency, the tests will error out with the **LambdaError** on our platform but now we have built the support for handling the private dependencies.
 

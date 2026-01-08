@@ -15,9 +15,6 @@ site_name: LambdaTest
 slug: analytics-build-insights
 ---
 
-import NewTag from '../src/component/newTag';
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",
@@ -43,6 +40,9 @@ import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 ></script>
 
 ---
+import NewTag from '../src/component/newTag';
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 
 

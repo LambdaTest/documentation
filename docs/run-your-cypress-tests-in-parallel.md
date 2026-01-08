@@ -20,8 +20,6 @@ url: https://www.testmu.ai/support/docs/run-your-cypress-tests-in-parallel
 site_name: LambdaTest
 slug: run-your-cypress-tests-in-parallel
 ---
-
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 # Run Your Cypress Tests In Parallel
 ---
 

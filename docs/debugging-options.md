@@ -17,8 +17,6 @@ site_name: LambdaTest
 slug: debugging-options
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 # Debugging Options for Automation Testing
 ---
 

@@ -20,8 +20,6 @@ site_name: LambdaTest
 slug: cyp-multi-reporters
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 import Tabs from '@theme/Tabs';

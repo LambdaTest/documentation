@@ -16,8 +16,6 @@ site_name: LambdaTest
 slug: socks5-proxy-support
 ---
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
 # SOCKS5 Proxy Support in <BrandName /> Tunnel
 
 ## Overview

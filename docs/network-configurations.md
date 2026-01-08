@@ -20,7 +20,6 @@ import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import RealDeviceTag from '../src/component/realDevice';
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Network Logs and Configurations
 <RealDeviceTag value="Real Device" />

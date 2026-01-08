@@ -17,7 +17,6 @@ url: https://www.testmu.ai/support/docs/sim-support-realdevices
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # SIM Support On Public Real Devices
 

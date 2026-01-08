@@ -24,7 +24,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import SmartUIHooksSupportedLanguage from '../src/component/SupportedLanguages/SmartUIHooksSupportedLanguage';
 import SmartUISDKSupportedLanguage from '../src/component/SupportedLanguages/SmartUISDKSupportedLanguage';
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

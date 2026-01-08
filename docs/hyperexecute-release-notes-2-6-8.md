@@ -17,7 +17,6 @@ slug: hyperexecute-cli-release-notes-0-2-249
 import NewReleaseTag from '../src/component/newRelease.js';
 import EnhancementTag from '../src/component/enhancementTag';
 import BugFixTag from '../src/component/bugFixTag';
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
