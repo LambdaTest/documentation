@@ -18,9 +18,6 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Admonition from '@theme/Admonition';
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-
 # Project - Reports and C-Suite Insights 
 
 <Admonition title="Executive Summary">

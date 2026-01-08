@@ -11,6 +11,7 @@ keywords:
     - continuous integration
     - continuous delivery
     - continuous integration tools
+image: /assets/images/og-images/JPG-4.jpg
 url: https://www.testmu.ai/support/docs/integrations-with-ci-cd-tools
 site_name: LambdaTest
 slug: integrations-with-ci-cd-tools

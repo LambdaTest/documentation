@@ -17,9 +17,6 @@ slug: applitools-integration-with-testmu
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-
 -----------------------------------------------------------------------------------------------------------------------------
 Applitools offers a cloud-based platform to help you perform AI Native, end-to-end visual testing and monitoring. The platform is designed to make life easier for automation testers by delivering a flexible way to directly integrate their test scripts without worrying about learning a new language or creating a new automation script.
 

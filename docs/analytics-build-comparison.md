@@ -44,9 +44,6 @@ slug: analytics-build-comparison
 
 import NewTag from '../src/component/newTag';
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-
 ## Overview
 
 Build Comparison allows you to compare two builds side by side to instantly see what changed - which tests started failing, which got fixed, and which remain stable. Use it to validate releases, debug regressions, and track test stability.

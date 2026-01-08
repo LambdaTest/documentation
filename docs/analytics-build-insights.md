@@ -42,9 +42,6 @@ slug: analytics-build-insights
 ---
 import NewTag from '../src/component/newTag';
 
-import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
-
-
 
 ## Overview
 
