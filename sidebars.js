@@ -1354,6 +1354,7 @@ module.exports = {
               "kaneai-upload-and-download-files",
               "kaneai-totp",
               "kaneai-database",
+              "kaneai-rename-instructions",
             ],
           },
           {
@@ -1377,6 +1378,8 @@ module.exports = {
               "kane-ai-mobile-app-capabilities",
               "kane-ai-deeplink-support",
               "kaneai-network-throttling",
+              "kaneai-gps-location",
+              "kaneai-scroll-until-mobile",
             ],
           },
         ],
