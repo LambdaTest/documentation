@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/smart-wait
 site_name: LambdaTest
 slug: smart-wait
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 With <BrandName />'s SmartWait feature, you can increase the efficiency and accuracy of automated test execution. Before performing any action on a webpage element, it conducts a series of actionability checks. By using an intelligent algorithm, SmartWait holds off on performing an action until all relevant checks have been successfully completed. It returns the appropriate Selenium error message if the checks are not passed within a predetermined timeframe.
 
 You can use this feature to reduce the amount of code dedicated to explicit/implicit waits in your test suite, making it easier to read and maintain.

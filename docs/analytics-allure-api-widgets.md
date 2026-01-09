@@ -11,6 +11,7 @@ slug: analytics-allure-api-widgets
 ---
 
 import NewTag from '../src/component/newTag';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({

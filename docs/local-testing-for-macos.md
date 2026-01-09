@@ -1,4 +1,4 @@
-﻿---
+---
 id: local-testing-for-macos
 title: Legacy Binary For macOS
 sidebar_label: Legacy Binary For macOS
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/local-testing-for-macos
 site_name: LambdaTest
 slug: local-testing-for-macos
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 ***
 <BrandName /> tunnel feature allows you to test your private server URLs or locally hosted web-apps or websites through <BrandName /> cloud servers. Through our TCP with TLS 1.2 secure connection features, you can also test plain HTML, CSS, PHP, Python or other similar web files saved on your local system, on combinations of operating systems, browsers, and screen resolutions that are available on <BrandName />.
 

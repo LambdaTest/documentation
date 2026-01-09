@@ -22,6 +22,9 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 This article will guide you on how to integrate the **<BrandName />** platform with **ReportPortal.io** platform for running your **Cypress** automation tests. Before you can get started, make sure you have an account on [ReportPortal.io](http://reportportal.io/).
 
 > By default, the <BrandName /> **Cypress-Multi-Reporter** mechanism generates **mochaawesome**. To override it with some other reporting options (report portal in this case), you have to create a different file to define the reporting configuration.

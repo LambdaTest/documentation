@@ -13,6 +13,9 @@ site_name: Hyperexecute Yaml Version 0.2
 slug: hyperexecute-yaml-version0.2
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

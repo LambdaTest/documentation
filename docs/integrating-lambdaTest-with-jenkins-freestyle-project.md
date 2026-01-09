@@ -1,4 +1,4 @@
-﻿---
+---
 id: integrating-lambdaTest-with-jenkins-freestyle-project
 title: Integrate TestMu AI With Jenkins Freestyle Project
 sidebar_label: Integrate TestMu AI With Jenkins Freestyle Project
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/integrating-testmu-with-jenkins-freestyl
 site_name: LambdaTest
 slug: integrating-testmu-with-jenkins-freestyle-project
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 ***
 
 

@@ -1,4 +1,4 @@
-﻿---
+---
 id: playwright-sdk
 title: Playwright SDK
 sidebar_label: Playwright SDK
@@ -15,6 +15,7 @@ slug: /playwright-sdk
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 This document guides you through setting up and using the <BrandName /> Playwright-Node.js SDK to run your Playwright tests on the <BrandName /> platform.
 

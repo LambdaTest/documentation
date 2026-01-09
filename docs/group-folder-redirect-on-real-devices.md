@@ -1,4 +1,4 @@
-﻿---
+---
 id: group-folder-redirect-on-real-device
 title: Group Folder Redirect for iOS Apps in App Live
 sidebar_label: Group Folder Redirect
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/group-folder-redirect-on-real-device
 site_name: LambdaTest
 slug: group-folder-redirect-on-real-device
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Group Folder Redirect On Real Devices  
 

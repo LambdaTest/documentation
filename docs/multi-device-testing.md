@@ -1,4 +1,4 @@
-﻿---
+---
 id: multi-device-testing
 title: Multi-Device Testing on Real Devices
 sidebar_label: Multi-Device Testing
@@ -13,6 +13,7 @@ site_name: LambdaTest
 url: https://www.testmu.ai/support/docs/multi-device-testing
 ---
 import CodeBlock from '@theme/CodeBlock';
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Multi-Device Testing on Real Devices
 

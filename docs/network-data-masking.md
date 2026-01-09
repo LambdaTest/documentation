@@ -1,4 +1,4 @@
-﻿---
+---
 id: network-data-masking
 title: Network Data Masking
 hide_title: true
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/network-data-masking
 site_name: LambdaTest
 slug: network-data-masking
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Network Data Masking 
 

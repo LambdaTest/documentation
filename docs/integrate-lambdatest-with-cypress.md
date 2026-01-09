@@ -22,6 +22,9 @@ slug: integrate-testmu-with-cypress
 
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 This article guides you on how to integrate **<BrandName /> platform** with **The Cypress Dashboard**
 
 > In this demo we are demonstrating using [<BrandName />'s Sample Cypress Cloud Repo](https://github.com/LambdaTest/Cypress-Cloud). You can find all the resources used for this article in the linked repo.

@@ -1,4 +1,4 @@
-﻿---
+---
 id: service-accounts
 title: How to Create and Manage Service Accounts
 hide_title: true
@@ -12,6 +12,8 @@ url: https://www.testmu.ai/support/docs/service-accounts
 site_name: LambdaTest
 slug: service-accounts
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Creating and Managing Service Accounts
 ---

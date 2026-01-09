@@ -1,3 +1,5 @@
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 ﻿---
 id: http2-support
 title: HTTP/2 Support in TestMu AI Tunnel

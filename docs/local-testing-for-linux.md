@@ -1,4 +1,4 @@
-﻿---
+---
 id: local-testing-for-linux
 title: Legacy Binary For Linux
 hide_title: true
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/local-testing-for-linux
 site_name: LambdaTest
 slug: local-testing-for-linux
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Legacy Binary For Linux
 

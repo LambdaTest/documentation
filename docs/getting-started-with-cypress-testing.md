@@ -30,6 +30,9 @@ import TabItem from '@theme/TabItem';
 # Getting Started With Cypress Testing
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 Cypress is a modern web front-end testing tool built with JavaScript Mocha. It operates directly on the browsers without the need for Selenium. Its unique DOM manipulation technique makes it a very developer and QA-friendly tool.
 
 Integrating <BrandName /> with Cypress allows you to perform Cypress testing across 40+ browser versions on cloud.

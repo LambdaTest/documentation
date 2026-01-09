@@ -14,6 +14,9 @@ site_name: LambdaTest
 slug: hyperexecute-release-notes-2-1-3
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

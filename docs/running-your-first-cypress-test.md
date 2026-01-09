@@ -1,4 +1,4 @@
-﻿---
+---
 id: running-your-first-cypress-test
 title: Running Your First Cypress Test On TestMu AI Platform
 sidebar_label: Run Your First Test
@@ -19,6 +19,8 @@ url: https://www.testmu.ai/support/docs/running-your-first-cypress-test
 site_name: LambdaTest
 slug: running-your-first-cypress-test
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 ---
 

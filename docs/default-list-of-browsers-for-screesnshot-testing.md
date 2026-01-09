@@ -26,6 +26,9 @@ site_name: LambdaTest
 slug: default-list-of-mobile-and-desktop-browsers-for-automated-screenshot-testing/
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

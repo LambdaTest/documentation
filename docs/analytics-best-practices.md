@@ -1,4 +1,4 @@
-﻿---
+---
 id: insights-best-practices
 title: Insights Best Practices
 description: Best practices for using TestMu AI Insights dashboards, widgets, and insights modules to maximize value and drive data-driven testing decisions.
@@ -13,6 +13,8 @@ keywords:
   - optimization
 slug: insights-best-practices
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Best Practices for <BrandName /> Insights
 

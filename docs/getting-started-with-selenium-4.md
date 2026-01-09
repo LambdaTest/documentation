@@ -1,4 +1,4 @@
-﻿---
+---
 id: getting-started-with-selenium-4
 title: Getting Started With Selenium 4 On TestMu AI Platform
 sidebar_label: Getting Started
@@ -13,6 +13,8 @@ url: https://www.testmu.ai/support/docs/getting-started-with-selenium-4
 site_name: LambdaTest
 slug: getting-started-with-selenium-4
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 ## Introduction
 
 * * *

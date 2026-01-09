@@ -1,4 +1,4 @@
-﻿---
+---
 id: role-based-access-control
 title: TestMu AI Role-Based Access Control (RBAC)
 sidebar_label: TestMu AI RBAC
@@ -11,6 +11,8 @@ url: https://www.testmu.ai/support/docs/role-based-access-control
 site_name: LambdaTest
 slug: role-based-access-control
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 ***
 
 For every enterprise that uses cloud services, access management for those cloud resources is vital. <BrandName /> RBAC is an authorization system that allows seamless access management of <BrandName /> resources. With <BrandName /> role-based access control, you can control who has access to <BrandName /> resources, how they can leverage those resources, and what domains they can have access to.

@@ -26,6 +26,9 @@ import NewTag from '../src/component/newTag';
 
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 Using the <BrandName /> platform, perform regression testing in just one click and find Visual UI Regression bugs easily with the help of Smart Testing. This documentation will act as your step-by-step guide in performing successful Visual Regression tests.
 
 - Basic understanding of Selenium and WebDriver is required.
