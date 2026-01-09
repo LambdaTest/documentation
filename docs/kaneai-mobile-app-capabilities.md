@@ -17,6 +17,8 @@ slug: kane-ai-mobile-app-capabilities
 ---
 
 
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 > This document provides detailed instructions for utilizing advanced features in KaneAI's mobile app authoring. It covers enabling video and image injections, configuring biometrics, and other advanced settings to enhance test authoring.
 
 ## Introduction

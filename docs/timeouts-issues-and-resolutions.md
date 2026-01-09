@@ -1,4 +1,4 @@
-﻿---
+---
 id: timeouts-issues-and-resolutions
 title: Timeouts - Errors and Resolutions
 hide_title: false
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/timeouts-issues-and-resolutions
 site_name: LambdaTest
 slug: timeouts-issues-and-resolutions
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 To make sure our machines are not held for long due to some incorrect test, we have come up with a restriction on the number of seconds that our machine is kept reserved for you. In cases, where our servers fail to retrieve a request from your local machine for more than 120 seconds, then your tests are aborted from the queue with the error message related to Timeouts. 
 

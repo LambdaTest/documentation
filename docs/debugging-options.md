@@ -1,4 +1,4 @@
-﻿---
+---
 id: debugging-options
 title: Debugging Options for Automation Testing on TestMu AI
 hide_title: true
@@ -16,6 +16,8 @@ url: https://www.testmu.ai/support/docs/debugging-options
 site_name: LambdaTest
 slug: debugging-options
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Debugging Options for Automation Testing
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 id: socks5-proxy-support
 title: SOCKS5 Proxy Support in TestMu AI Tunnel
 hide_title: false
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/socks5-proxy-support
 site_name: LambdaTest
 slug: socks5-proxy-support
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # SOCKS5 Proxy Support in <BrandName /> Tunnel
 

@@ -16,6 +16,9 @@ site_name: Variables & Parameters in KaneAI
 slug: kaneai-variables-and-parameters
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

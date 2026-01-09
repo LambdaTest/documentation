@@ -1,4 +1,4 @@
-﻿---
+---
 id: lambdatest-sso-okta-integration
 title: TestMu AI SSO & Okta Integration
 hide_title: false
@@ -14,6 +14,8 @@ url: https://www.testmu.ai/support/docs/testmu-sso-okta-integration
 site_name: LambdaTest
 slug: testmu-sso-okta-integration
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 <script
   type="application/ld+json"

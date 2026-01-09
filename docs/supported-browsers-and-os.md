@@ -65,6 +65,9 @@ You can run Cypress tests across multiple browsers and OS combinations using the
 ## Configuring The Browser And Platform Keys In lambdatest-config.json
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 To run Cypress tests on multiple browser and OS configurations, add the *browsers* object in the `lambdatest-config.json` file to define a list of browsers, browser versions and platforms.
 
 Below is the syntax for configuring the browser and platform keys in the `lambdatest-config.json` file.

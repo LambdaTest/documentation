@@ -43,6 +43,9 @@ In the above code snippet, you need to replace **headerName** and **headerValue*
 ## CustomHeaders: Use Cases and Examples
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 Custom headers serves different purposes for development and network communications. Here are some of its key use cases:
 
 

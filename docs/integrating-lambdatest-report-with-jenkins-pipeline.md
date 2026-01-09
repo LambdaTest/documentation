@@ -1,4 +1,4 @@
-﻿---
+---
 id: lambdatest-report-with-jenkins-pipeline
 title: Integrate TestMu AI Report With Jenkins Pipeline
 hide_title: true
@@ -15,6 +15,8 @@ url: https://www.testmu.ai/support/docs/integrating-testmu-report-with-jenkins-p
 site_name: LambdaTest
 slug: integrating-testmu-report-with-jenkins-pipeline
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 # Integrating <BrandName /> Report With Jenkins Pipeline
 ---
 

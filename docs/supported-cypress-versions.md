@@ -91,6 +91,9 @@ In *lambdatest-config.json* file, you can set the Cypress version as shown in th
 ## Setting Cypress Version
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 Following are the different ways to set the Cypress version.
 
 1. Using `package.json`: <BrandName /> will pick the Cypress version from `package.json`.

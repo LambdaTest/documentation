@@ -11,6 +11,9 @@ url: https://www.testmu.ai/support/docs/robot-report
 site_name: LambdaTest
 slug: robot-report
 ---
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 <script type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({
        "@context": "https://schema.org",

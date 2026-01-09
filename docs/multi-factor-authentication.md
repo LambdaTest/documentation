@@ -13,6 +13,9 @@ site_name: LambdaTest
 slug: multi-factor-authentication
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 # Multi Factor Authentication (MFA)
 ---
 

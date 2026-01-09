@@ -1,4 +1,4 @@
-﻿---
+---
 id: xcode-plugin-lambdamax
 title: LambdaMax XCode Plugin
 sidebar_label: LambdaMax XCode Plugin
@@ -11,6 +11,8 @@ url: https://www.testmu.ai/support/docs/xcode-plugin-testmu
 site_name: LambdaTest
 slug: xcode-plugin-testmu
 ---
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 -----------------------------------------------------------------------------------------------------------------------------
 <BrandName /> have developed a new plugin to help developers execute tests on the <BrandName /> Grid directly from the XCode (via LambdaMax). The all-new <BrandName /> plugin will allow developers and testers to directly run automated tests based on XCUIT (XCode) framework on the <BrandName /> real device cloud.
 

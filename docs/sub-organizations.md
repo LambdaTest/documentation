@@ -16,6 +16,9 @@ slug: sub-organizations
 # Sub Organizations
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 Sub-Organization helps you segregate test data between 2 different business units. Also, you can distribute concurrency you have purchased to different sub-organizations for them to act as independent organizations with their own administrators.
 
 This feature is currently in private release and can be enabled on request.

@@ -29,6 +29,9 @@ Earlier if your project includes any private dependency, the tests will error ou
 
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 Assuming that you have run a Cypress test on lambdatest platform ( if not, this article [here](/support/docs/getting-started-with-cypress-testing/) will guide you in running your first Cypress test on <BrandName />), you need to follow these steps below:
 
 ### Update <BrandName /> Cypress CLI

@@ -28,6 +28,9 @@ import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/co
 
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 This documentation will act as your step-by-step guide in to perform K6 test with SmartUI.
 
 ### Prerequisites for running SmartUI with K6

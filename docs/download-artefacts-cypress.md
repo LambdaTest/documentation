@@ -26,6 +26,9 @@ import TabItem from '@theme/TabItem';
 
 ---
 
+
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
+
 This article guides you on how to download the artefacts for a Cypress project from <BrandName /> Cloud machine.
 
 :::tip Sample repo

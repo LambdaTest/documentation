@@ -1,4 +1,4 @@
-﻿---
+---
 id: smartui-sdk-tunnel
 title: Using TestMu AI Tunnel with SmartUI SDK
 sidebar_label: Tunnel Configuration
@@ -18,6 +18,7 @@ import TabItem from '@theme/TabItem';
 import NewTag from '../src/component/newTag';
 import CodeBlock from '@theme/CodeBlock';
 import {YOUR_LAMBDATEST_USERNAME, YOUR_LAMBDATEST_ACCESS_KEY} from "@site/src/component/keys";
+import BrandName, { BRAND_URL } from '@site/src/component/BrandName';
 
 # Using <BrandName /> Tunnel with SmartUI SDK
 
