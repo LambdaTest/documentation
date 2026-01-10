@@ -3,12 +3,12 @@ import { themes as prismThemes } from 'prism-react-renderer';
 module.exports = {
   title: 'TestMu AI (Formerly LambdaTest)',
   tagline: 'Ensure your web-apps work seamlessly on every desktop and mobile browsers.',
-  url: 'https://www.lambdatest.com',
+  url: 'https://www.testmu.ai',
   baseUrl: '/support/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'Lambdatest', // Usually your GitHub org/user name.
-  projectName: 'Lambdatest', // Usually your repo name.
+  organizationName: 'TestMu AI', // Usually your GitHub org/user name.
+  projectName: 'TestMu AI', // Usually your repo name.
   clientModules: [
     require.resolve('./custom.js'),
   ],
@@ -18,15 +18,15 @@ module.exports = {
     //   defer: true,
     // },
     {
-      src: 'https://www.lambdatest.com/resources/js/salesforce_chatwidget.js',
+      src: 'https://www.testmu.ai/resources/js/salesforce_chatwidget.js',
       defer: true,
     },
     {
-      src: 'https://www.lambdatest.com/resources/js/lambda_gtm.js',
+      src: 'https://www.testmu.ai/resources/js/lambda_gtm.js',
       defer: true,
     },
     {
-      src: 'https://www.lambdatest.com/resources/js/sf_chat.js',
+      src: 'https://www.testmu.ai/resources/js/sf_chat.js',
       defer: true,
       onload: "sf_messaging()",
     },
