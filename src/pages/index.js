@@ -34,7 +34,7 @@ const features = [
     // imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        How to integrate LambdaTest with Jira, Jenkins, Katalon, Slack and more?        
+        How to integrate TestMu AI with Jira, Jenkins, Katalon, Slack and more?        
       </>
     ),
   },
