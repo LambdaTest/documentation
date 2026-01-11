@@ -60,55 +60,12 @@ A table widget displays data in rows and columns, providing a structured view of
 
 ## Prerequisites
 
-Before creating a table widget, ensure you have:
-
-1. An active LambdaTest account with access to Insights
-2. Executed tests on the LambdaTest platform to generate data
-3. Access to the Custom Widgets feature
+Before creating a table widget, ensure you have completed the [common prerequisites and setup steps](/docs/dashboards-custom-widgets#prerequisites) for custom widgets.
 
 ## Step-by-Step Guide to Creating a Table Widget
 
-### Step 1: Navigate to Insights
-
-1. Log in to your [LambdaTest account](https://accounts.lambdatest.com/login).
-2. Navigate to the **Insights** section from the left sidebar or visit [https://analytics.lambdatest.com/](https://analytics.lambdatest.com/).
-3. Click on the **Dashboards** tab.
-
-### Step 2: Create a New Dashboard or Select Existing
-
-1. Click on the **+ Create New** button located at the top right of the dashboard list.
-2. From the dropdown menu, select **Custom Widgets**.
-
-### Step 3: Choose a Product
-
-Select the product for which you want to create the table widget. Available options include:
-
-- **Web Automation**: Display web testing data in tabular format
-- **App Automation**: Show mobile testing data in tables
-- **HyperExecute**: Present HyperExecute test data in structured tables
-- **Real Time Testing**: Visualize real-time testing data in tables
-- **Real Device Testing**: Display real device testing data
-- **Smart UI Testing**: Show Smart UI testing data in tabular format
-
-### Step 4: Select Data Source
-
-Choose the data source that will power your table:
-
-- **Tests**: Visualize test execution data including pass/fail rates, test counts, and execution times
-- **Auto Heal**: Visualize Auto Heal statistics and trends (available for Web Automation and HyperExecute only)
-
-### Step 5: Configure Filters (Optional)
-
-Use filters to narrow down your data based on specific requirements:
-
-1. Click **+ Add a Filter** to add filter criteria.
-2. Select a **Key** from the dropdown (e.g., browser, OS, resolution, custom data).
-3. Choose an **Operator** (equals, contains, greater than, etc.).
-4. Select or enter the **Value** to filter by.
-5. Add multiple filters as needed to refine your dataset.
-
-:::tip
-Use filters to focus on specific release versions, custom parameters, or other attributes. This helps create more targeted and actionable tables.
+:::info Common Steps
+For prerequisites and common setup steps (Navigate to Insights, Create Dashboard, Choose Product, Select Data Source, Configure Filters), see the [Common Steps for Creating Custom Widgets](/docs/dashboards-custom-widgets#common-steps-for-creating-custom-widgets) section in the main Custom Widgets documentation.
 :::
 
 ### Step 6: Choose Table Visualization
@@ -147,7 +104,7 @@ This is the most critical step for creating meaningful tables. You can add multi
 6. **Add Another**: Click this button to add additional columns to your table.
 
 :::tip
-For a complete list of available keys for each product, see the [Available Keys for Meaningful Insights](#available-keys-for-meaningful-insights) section below.
+For a complete list of available keys for each product, see the [Available Keys for Custom Widgets](/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
 :::
 
 **Example Configuration:**
@@ -310,127 +267,13 @@ The **SubHeader** option allows you to create hierarchical table structures:
 
 **Insight**: Identify which test types take the longest to execute and optimize accordingly.
 
-## Available Keys for Meaningful Insights
+## Available Keys for Table Widgets
 
-The following keys are available for configuring table columns. The availability of specific keys depends on the selected product and data source.
+For a complete list of available keys that can be used for configuring table columns, aggregations, and grouping, see the [Available Keys for Custom Widgets](/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
 
 :::note
 Choose keys that represent categorical dimensions (like browser, OS, project name) for row identifiers, and numeric or countable fields for aggregations. For grouped columns, use fields with a reasonable number of unique values to avoid creating too many sub-columns.
 :::
-
-<details>
-<summary><strong>Web Automation Keys</strong></summary>
-
-The following keys are available for Web Automation tables and can be used for columns, aggregations, or grouping:
-
-| Key | Description | Recommended Use |
-|-----|-------------|-----------------|
-| `browser` | Browser name (Chrome, Firefox, Edge, Safari, etc.) | Column (row identifier) or Group By |
-| `browser_version` | Browser version number | Column or Group By |
-| `build_name` | Build name identifier | Column (row identifier) |
-| `build_status` | Status of the build | Group By |
-| `buildtag_name` | Build tag name | Column or Group By |
-| `create_timestamp` | Test creation timestamp | Column (for time-based rows) |
-| `custom_data.isFlakyTest` | Flaky test indicator from custom data | Group By |
-| `custom_data.product` | Product identifier from custom data | Group By |
-| `device` | Device name/type | Column or Group By |
-| `duration` | Test execution duration | Column (with aggregation: Average, Sum, etc.) |
-| `end_time` | Test end timestamp | Column (for time-based rows) |
-| `failure_category` | Category of test failures | Group By |
-| `os` | Operating system (Windows, macOS, Linux) | Column (row identifier) or Group By |
-| `os_version` | Operating system version | Column or Group By |
-| `product` | Product name | Column or Group By |
-| `project_name` | Project name | Column (row identifier) |
-| `resolution` | Screen resolution | Column or Group By |
-| `start_time` | Test start timestamp | Column (for time-based rows) |
-| `status` | Test status (passed, failed, etc.) | Group By (most common) |
-| `test_id` | Test identifier | Column (with Count aggregation) |
-| `test_name` | Test case name | Column (row identifier) |
-| `test_type` | Type of test | Column or Group By |
-| `testtag_name` | Test tag name | Group By |
-| `username` | User who executed the test | Column or Group By |
-
-**Custom Data Keys**: Any custom data keys you've defined in your test capabilities can also be used.
-
-</details>
-
-<details>
-<summary><strong>App Automation Keys</strong></summary>
-
-The following keys are available for App Automation tables and can be used for columns, aggregations, or grouping:
-
-| Key | Description | Recommended Use |
-|-----|-------------|-----------------|
-| `app_name` | Application name | Column (row identifier) |
-| `app_type` | Type of application | Group By |
-| `brand` | Device brand name | Column or Group By |
-| `build_name` | Build name identifier | Column (row identifier) |
-| `build_status` | Status of the build | Group By |
-| `build_type` | Type of build | Group By |
-| `create_timestamp` | Test creation timestamp | Column (for time-based rows) |
-| `custom_data.isFlakyTest` | Flaky test indicator from custom data | Group By |
-| `device` | Device name/model | Column (row identifier) or Group By |
-| `duration` | Test execution duration | Column (with aggregation: Average, Sum, etc.) |
-| `end_time` | Test end timestamp | Column (for time-based rows) |
-| `failure_category` | Category of test failures | Group By |
-| `os` | Mobile OS (Android, iOS) | Column (row identifier) or Group By |
-| `os_version` | OS version number | Column or Group By |
-| `product` | Product name | Column or Group By |
-| `project_name` | Project name | Column (row identifier) |
-| `start_time` | Test start timestamp | Column (for time-based rows) |
-| `status` | Test status (passed, failed, etc.) | Group By (most common) |
-| `test_id` | Test identifier | Column (with Count aggregation) |
-| `test_name` | Test case name | Column (row identifier) |
-| `test_type` | Type of test | Column or Group By |
-| `username` | User who executed the test | Column or Group By |
-
-**Custom Data Keys**: Any custom data keys you've defined in your test capabilities can also be used.
-
-</details>
-
-<details>
-<summary><strong>HyperExecute Keys</strong></summary>
-
-The following keys are available for HyperExecute tables and can be used for columns, aggregations, or grouping:
-
-| Key | Description | Recommended Use |
-|-----|-------------|-----------------|
-| `app_name` | Application name (for app tests) | Column (row identifier) |
-| `app_type` | Type of application | Group By |
-| `browser` | Browser name | Column or Group By |
-| `browser_version` | Browser version number | Column or Group By |
-| `build_name` | Build name identifier | Column (row identifier) |
-| `build_status` | Status of the build | Group By |
-| `buildtag_name` | Build tag name | Column or Group By |
-| `create_timestamp` | Test creation timestamp | Column (for time-based rows) |
-| `custom_data.product` | Product identifier from custom data | Group By |
-| `device` | Device name/type | Column or Group By |
-| `duration` | Test execution duration | Column (with aggregation: Average, Sum, etc.) |
-| `end_time` | Test end timestamp | Column (for time-based rows) |
-| `failure_category` | Category of test failures | Group By |
-| `job_created_at` | Job creation timestamp | Column (for time-based rows) |
-| `job_labels` | Job labels | Group By |
-| `job_status` | Status of the HyperExecute job | Group By |
-| `job_test_type` | Type of test in the job | Group By |
-| `os` | Operating system | Column or Group By |
-| `os_version` | Operating system version | Column or Group By |
-| `product` | Product name | Column or Group By |
-| `project_name` | Project name | Column (row identifier) |
-| `resolution` | Screen resolution | Column or Group By |
-| `stage_name` | Stage name in the job | Column or Group By |
-| `stage_status` | Status of the stage | Group By |
-| `stage_type` | Type of stage | Group By |
-| `start_time` | Test start timestamp | Column (for time-based rows) |
-| `status` | Test status (passed, failed, etc.) | Group By (most common) |
-| `test_id` | Test identifier | Column (with Count aggregation) |
-| `test_name` | Test case name | Column (row identifier) |
-| `test_type` | Type of test | Column or Group By |
-| `testtag_name` | Test tag name | Group By |
-| `username` | User who executed the test | Column or Group By |
-
-**Custom Data Keys**: Any custom data keys you've defined in your test capabilities can also be used.
-
-</details>
 
 ## Best Practices for Table Widgets
 

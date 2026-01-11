@@ -71,62 +71,19 @@ This dual-encoding visualization is particularly effective for:
 
 ## Prerequisites
 
-Before creating a heatmap widget, ensure you have:
-
-1. An active LambdaTest account with access to Insights
-2. Executed tests on the LambdaTest platform to generate data
-3. Access to the Custom Widgets feature
+Before creating a heatmap widget, ensure you have completed the [common prerequisites and setup steps](/docs/dashboards-custom-widgets#prerequisites) for custom widgets.
 
 ## Step-by-Step Guide to Creating a Heatmap Widget
 
-### Step 1: Navigate to Insights
-
-1. Log in to your [LambdaTest account](https://accounts.lambdatest.com/login).
-2. Navigate to the **Insights** section from the left sidebar or visit [https://analytics.lambdatest.com/](https://analytics.lambdatest.com/).
-3. Click on the **Dashboards** tab.
-
-### Step 2: Create a New Dashboard or Select Existing
-
-1. Click on the **+ Create New** button located at the top right of the dashboard list.
-2. From the dropdown menu, select **Custom Widgets**.
-
-<img loading="lazy" src={require('../assets/images/analytics/custom-widget-heatmap.png').default} alt="Custom Widgets Creation Interface" className="doc_img"/>
-
-### Step 3: Choose a Product
-
-Select the product for which you want to create the heatmap widget. Available options include:
-
-- **Web Automation**: Visualize web testing data across browsers, resolutions, and OS combinations
-- **App Automation**: Analyze mobile testing data across devices, OS versions, and configurations
-- **HyperExecute**: Monitor HyperExecute test runs across different dimensions
-- **Real Time Testing**: Visualize real-time testing data patterns
-- **Real Device Testing**: Analyze real device testing data
-- **Smart UI Testing**: Visualize Smart UI testing data patterns
-
-### Step 4: Select Data Source
-
-Choose the data source that will power your heatmap:
-
-- **Tests**: Visualize test execution data including pass/fail rates, test counts, and execution times
-- **Auto Heal**: Visualize Auto Heal statistics and trends (available for Web Automation and HyperExecute only)
-
-### Step 5: Configure Filters (Optional)
-
-Use filters to narrow down your data based on specific requirements:
-
-1. Click **+ Add a Filter** to add filter criteria.
-2. Select a **Key** from the dropdown (e.g., browser, OS, resolution, custom data).
-3. Choose an **Operator** (equals, contains, greater than, etc.).
-4. Select or enter the **Value** to filter by.
-5. Add multiple filters as needed to refine your dataset.
-
-:::tip
-Use filters to focus on specific release versions, custom parameters, or other attributes. This helps create more targeted and actionable heatmaps.
+:::info Common Steps
+For prerequisites and common setup steps (Navigate to Insights, Create Dashboard, Choose Product, Select Data Source, Configure Filters), see the [Common Steps for Creating Custom Widgets](/docs/dashboards-custom-widgets#common-steps-for-creating-custom-widgets) section in the main Custom Widgets documentation.
 :::
 
 ### Step 6: Choose Heatmap Visualization
 
 1. In the **Choose Visualisation** section, select **Heatmap** from the available options (Line, Bar, Pie, Table, Billboard, Heatmap).
+
+<img loading="lazy" src={require('../assets/images/analytics/custom-widget-heatmap.png').default} alt="Custom Widgets Creation Interface" className="doc_img"/>
 
 ### Step 7: Configure Grouping
 
@@ -143,7 +100,7 @@ This is the most critical step for creating meaningful heatmaps:
    - Custom data keys you've defined
 
    :::tip
-   For a complete list of available keys for each product, see the [Available Keys for Meaningful Insights](#available-keys-for-meaningful-insights) section below.
+   For a complete list of available keys for each product, see the [Available Keys for Custom Widgets](/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
    :::
 
 2. **Then By** (Optional): Select a secondary dimension for nested grouping. This creates a two-dimensional heatmap showing relationships between the two dimensions.
@@ -318,108 +275,13 @@ Heatmaps use size and color to encode information. Refer to the [How Heatmaps Wo
 
 **Insight**: Identify gaps in test coverage and ensure all critical combinations are tested.
 
-## Available Keys for Meaningful Insights
+## Available Keys for Heatmap Widgets
 
-The following keys are available for grouping and filtering in heatmap widgets. The availability of specific keys depends on the selected product and data source. These keys can be used in the **Group By** and **Then By** fields when configuring your heatmap.
+For a complete list of available keys that can be used in the **Group By** and **Then By** fields when configuring your heatmap, see the [Available Keys for Custom Widgets](/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
 
 :::note
-Choose keys that represent categorical dimensions (like browser, OS, project name) rather than numeric or date values for best visualization results.
+For heatmaps, choose keys that represent categorical dimensions (like browser, OS, project name) rather than numeric or date values for best visualization results.
 :::
-
-<details>
-<summary><strong>Web Automation Keys</strong></summary>
-
-The following keys are available for Web Automation heatmaps and can be used for grouping:
-
-| Key | Description | Use Case |
-|-----|-------------|----------|
-| `browser` | Browser name (Chrome, Firefox, Edge, Safari, etc.) | Analyze browser-specific patterns and compatibility |
-| `browser_version` | Browser version number | Identify version-specific issues or trends |
-| `build_name` | Build name identifier | Track performance across different builds |
-| `build_status` | Status of the build | Analyze build status patterns |
-| `buildtag_name` | Build tag name | Group by build tags for organized analysis |
-| `custom_data.isFlakyTest` | Flaky test indicator from custom data | Identify and analyze flaky test patterns |
-| `custom_data.product` | Product identifier from custom data | Track product-specific testing patterns |
-| `device` | Device name/type | Device-specific testing and compatibility |
-| `failure_category` | Category of test failures | Analyze failure patterns by category |
-| `os` | Operating system (Windows, macOS, Linux) | Cross-platform compatibility analysis |
-| `os_version` | Operating system version | OS version-specific analysis |
-| `product` | Product name | Product-level analysis |
-| `project_name` | Project name | Project-specific analysis and tracking |
-| `resolution` | Screen resolution (e.g., 1920x1080, 1366x768) | Responsive design testing and resolution-specific issues |
-| `status` | Test status (passed, failed, etc.) | Status-based analysis |
-| `test_name` | Test case name | Test-specific analysis |
-| `test_type` | Type of test | Analyze different test types |
-| `testtag_name` | Test tag name | Group by test tags for organized analysis |
-| `username` | User who executed the test | User-specific analysis |
-
-
-</details>
-
-<details>
-<summary><strong>App Automation Keys</strong></summary>
-
-The following keys are available for App Automation heatmaps and can be used for grouping:
-
-| Key | Description | Use Case |
-|-----|-------------|----------|
-| `app_name` | Application name | Analyze patterns by application |
-| `app_type` | Type of application | Application type-specific analysis |
-| `brand` | Device brand name | Brand-specific device analysis |
-| `build_name` | Build name identifier | Track performance across different builds |
-| `build_status` | Status of the build | Analyze build status patterns |
-| `build_type` | Type of build | Build type-specific analysis |
-| `custom_data.isFlakyTest` | Flaky test indicator from custom data | Identify and analyze flaky test patterns |
-| `device` | Device name/model | Device-specific testing and compatibility |
-| `failure_category` | Category of test failures | Analyze failure patterns by category |
-| `os` | Mobile OS (Android, iOS) | OS-specific analysis |
-| `os_version` | OS version number | Version compatibility and testing |
-| `product` | Product name | Product-level analysis |
-| `project_name` | Project name | Project-specific analysis and tracking |
-| `status` | Test status (passed, failed, etc.) | Status-based analysis |
-| `test_name` | Test case name | Test-specific analysis |
-| `test_type` | Type of test | Analyze different test types |
-| `username` | User who executed the test | User-specific analysis |
-
-
-</details>
-
-<details>
-<summary><strong>HyperExecute Keys</strong></summary>
-
-The following keys are available for HyperExecute heatmaps and can be used for grouping:
-
-| Key | Description | Use Case |
-|-----|-------------|----------|
-| `app_name` | Application name (for app tests) | Analyze patterns by application |
-| `app_type` | Type of application | Application type-specific analysis |
-| `browser` | Browser name | Browser performance in HyperExecute |
-| `browser_version` | Browser version number | Version-specific browser analysis |
-| `build_name` | Build name identifier | Track performance across different builds |
-| `build_status` | Status of the build | Analyze build status patterns |
-| `buildtag_name` | Build tag name | Group by build tags for organized analysis |
-| `custom_data.product` | Product identifier from custom data | Track product-specific testing patterns |
-| `device` | Device name/type | Device-specific testing and compatibility |
-| `failure_category` | Category of test failures | Analyze failure patterns by category |
-| `job_labels` | Job labels | Group by job labels for organized analysis |
-| `job_status` | Status of the HyperExecute job | Job status-specific analysis |
-| `job_test_type` | Type of test in the job | Test type analysis at job level |
-| `os` | Operating system | OS-specific HyperExecute patterns |
-| `os_version` | Operating system version | OS version-specific analysis |
-| `product` | Product name | Product-level analysis |
-| `project_name` | Project name | Project-specific analysis and tracking |
-| `resolution` | Screen resolution | Resolution-specific analysis |
-| `stage_name` | Stage name in the job | Stage-level analysis |
-| `stage_status` | Status of the stage | Stage status analysis |
-| `stage_type` | Type of stage | Stage type-specific analysis |
-| `status` | Test status (passed, failed, etc.) | Status-based analysis |
-| `test_name` | Test case name | Test-specific analysis |
-| `test_type` | Type of test | Analyze different test types |
-| `testtag_name` | Test tag name | Group by test tags for organized analysis |
-| `username` | User who executed the test | User-specific analysis |
-
-
-</details>
 
 ### Common Metrics for Heatmaps
 

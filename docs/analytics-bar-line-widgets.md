@@ -73,57 +73,12 @@ Line chart widgets display data as a series of points connected by lines. They a
 
 ## Prerequisites
 
-Before creating a bar or line chart widget, ensure you have:
-
-1. An active LambdaTest account with access to Insights
-2. Executed tests on the LambdaTest platform to generate data
-3. Access to the Custom Widgets feature
+Before creating a bar or line chart widget, ensure you have completed the [common prerequisites and setup steps](/docs/dashboards-custom-widgets#prerequisites) for custom widgets.
 
 ## Step-by-Step Guide to Creating Bar and Line Chart Widgets
 
-### Step 1: Navigate to Insights
-
-1. Log in to your [LambdaTest account](https://accounts.lambdatest.com/login).
-2. Navigate to the **Insights** section from the left sidebar or visit [https://analytics.lambdatest.com/](https://analytics.lambdatest.com/).
-3. Click on the **Dashboards** tab.
-
-### Step 2: Create a New Dashboard or Select Existing
-
-1. Click on the **+ Create New** button located at the top right of the dashboard list.
-2. From the dropdown menu, select **Custom Widgets**.
-
-<img loading="lazy" src={require('../assets/images/analytics/custom-widget-bar-chart-config.png').default} alt="Custom Widgets Bar Chart Configuration Interface" className="doc_img"/>
-
-### Step 3: Choose a Product
-
-Select the product for which you want to create the chart widget. Available options include:
-
-- **Web Automation**: Visualize web testing data trends and comparisons
-- **App Automation**: Analyze mobile testing data patterns
-- **HyperExecute**: Monitor HyperExecute test runs and trends
-- **Real Time Testing**: Visualize real-time testing data patterns
-- **Real Device Testing**: Analyze real device testing trends
-- **Smart UI Testing**: Visualize Smart UI testing data patterns
-
-### Step 4: Select Data Source
-
-Choose the data source that will power your chart:
-
-- **Tests**: Visualize test execution data including pass/fail rates, test counts, and execution times
-- **Auto Heal**: Visualize Auto Heal statistics and trends (available for Web Automation and HyperExecute only)
-
-### Step 5: Configure Filters (Optional)
-
-Use filters to narrow down your data based on specific requirements:
-
-1. Click **+ Add a Filter** to add filter criteria.
-2. Select a **Key** from the dropdown (e.g., browser, OS, resolution, custom data).
-3. Choose an **Operator** (equals, contains, greater than, etc.).
-4. Select or enter the **Value** to filter by.
-5. Add multiple filters as needed to refine your dataset.
-
-:::tip
-Use filters to focus on specific release versions, custom parameters, or other attributes. This helps create more targeted and actionable charts.
+:::info Common Steps
+For prerequisites and common setup steps (Navigate to Insights, Create Dashboard, Choose Product, Select Data Source, Configure Filters), see the [Common Steps for Creating Custom Widgets](/docs/dashboards-custom-widgets#common-steps-for-creating-custom-widgets) section in the main Custom Widgets documentation.
 :::
 
 ### Step 6: Choose Visualization Type
@@ -131,6 +86,8 @@ Use filters to focus on specific release versions, custom parameters, or other a
 1. In the **Choose Visualisation** section, select either:
    - **Bar** for bar chart visualization
    - **Line** for line chart visualization
+
+<img loading="lazy" src={require('../assets/images/analytics/custom-widget-bar-chart-config.png').default} alt="Custom Widgets Bar Chart Configuration Interface" className="doc_img"/>
 
 ### Step 7: Configure What to Plot
 
@@ -161,7 +118,7 @@ This is the most critical step for creating meaningful charts:
 3. **Label for Y-Axis** (Optional): Provide a custom label for the Y-axis (e.g., "Number of Tests", "Average Duration (seconds)").
 
 :::tip
-For a complete list of available keys for each product, see the [Available Keys for Meaningful Insights](#available-keys-for-meaningful-insights) section below.
+For a complete list of available keys for each product, see the [Available Keys for Custom Widgets](/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
 :::
 
 ### Step 8: Configure Group By (Optional)
@@ -359,127 +316,13 @@ Bar and line charts provide interactive features to explore your data in detail:
 
 **Insight**: Understand daily testing patterns and identify days with unusual activity.
 
-## Available Keys for Meaningful Insights
+## Available Keys for Bar and Line Chart Widgets
 
-The following keys are available for configuring X-axis, Y-axis, and Group By fields in bar and line chart widgets. The availability of specific keys depends on the selected product and data source.
+For a complete list of available keys that can be used for X-axis, Y-axis, and Group By fields in bar and line chart widgets, see the [Available Keys for Custom Widgets](/docs/dashboards-custom-widgets#available-keys-for-custom-widgets) section in the main Custom Widgets documentation.
 
 :::note
 Choose keys that represent categorical dimensions (like browser, OS, project name) for X-axis, and numeric or countable fields for Y-axis aggregation. For time-based trends, use timestamp fields for the X-axis.
 :::
-
-<details>
-<summary><strong>Web Automation Keys</strong></summary>
-
-The following keys are available for Web Automation charts and can be used for X-axis, Y-axis, or Group By:
-
-| Key | Description | Recommended Use |
-|-----|-------------|-----------------|
-| `browser` | Browser name (Chrome, Firefox, Edge, Safari, etc.) | X-axis (comparison) or Group By |
-| `browser_version` | Browser version number | X-axis (comparison) or Group By |
-| `build_name` | Build name identifier | X-axis (trends) or Group By |
-| `build_status` | Status of the build | Group By |
-| `buildtag_name` | Build tag name | X-axis or Group By |
-| `create_timestamp` | Test creation timestamp | X-axis (time trends) |
-| `custom_data.isFlakyTest` | Flaky test indicator from custom data | Group By |
-| `custom_data.product` | Product identifier from custom data | Group By |
-| `device` | Device name/type | X-axis or Group By |
-| `duration` | Test execution duration | Y-axis (with Average/Sum aggregation) |
-| `end_time` | Test end timestamp | X-axis (time trends) |
-| `failure_category` | Category of test failures | Group By |
-| `os` | Operating system (Windows, macOS, Linux) | X-axis (comparison) or Group By |
-| `os_version` | Operating system version | X-axis or Group By |
-| `product` | Product name | Group By |
-| `project_name` | Project name | X-axis or Group By |
-| `resolution` | Screen resolution | X-axis or Group By |
-| `start_time` | Test start timestamp | X-axis (time trends) |
-| `status` | Test status (passed, failed, etc.) | Group By or X-axis |
-| `test_id` | Test identifier | Y-axis (with Count aggregation) |
-| `test_name` | Test case name | X-axis (for specific test analysis) |
-| `test_type` | Type of test | Group By |
-| `testtag_name` | Test tag name | Group By |
-| `username` | User who executed the test | Group By |
-
-**Custom Data Keys**: Any custom data keys you've defined in your test capabilities can also be used.
-
-</details>
-
-<details>
-<summary><strong>App Automation Keys</strong></summary>
-
-The following keys are available for App Automation charts and can be used for X-axis, Y-axis, or Group By:
-
-| Key | Description | Recommended Use |
-|-----|-------------|-----------------|
-| `app_name` | Application name | X-axis or Group By |
-| `app_type` | Type of application | Group By |
-| `brand` | Device brand name | X-axis or Group By |
-| `build_name` | Build name identifier | X-axis (trends) or Group By |
-| `build_status` | Status of the build | Group By |
-| `build_type` | Type of build | Group By |
-| `create_timestamp` | Test creation timestamp | X-axis (time trends) |
-| `custom_data.isFlakyTest` | Flaky test indicator from custom data | Group By |
-| `device` | Device name/model | X-axis or Group By |
-| `duration` | Test execution duration | Y-axis (with Average/Sum aggregation) |
-| `end_time` | Test end timestamp | X-axis (time trends) |
-| `failure_category` | Category of test failures | Group By |
-| `os` | Mobile OS (Android, iOS) | X-axis (comparison) or Group By |
-| `os_version` | OS version number | X-axis or Group By |
-| `product` | Product name | Group By |
-| `project_name` | Project name | X-axis or Group By |
-| `start_time` | Test start timestamp | X-axis (time trends) |
-| `status` | Test status (passed, failed, etc.) | Group By or X-axis |
-| `test_id` | Test identifier | Y-axis (with Count aggregation) |
-| `test_name` | Test case name | X-axis (for specific test analysis) |
-| `test_type` | Type of test | Group By |
-| `username` | User who executed the test | Group By |
-
-**Custom Data Keys**: Any custom data keys you've defined in your test capabilities can also be used.
-
-</details>
-
-<details>
-<summary><strong>HyperExecute Keys</strong></summary>
-
-The following keys are available for HyperExecute charts and can be used for X-axis, Y-axis, or Group By:
-
-| Key | Description | Recommended Use |
-|-----|-------------|-----------------|
-| `app_name` | Application name (for app tests) | X-axis or Group By |
-| `app_type` | Type of application | Group By |
-| `browser` | Browser name | X-axis or Group By |
-| `browser_version` | Browser version number | X-axis or Group By |
-| `build_name` | Build name identifier | X-axis (trends) or Group By |
-| `build_status` | Status of the build | Group By |
-| `buildtag_name` | Build tag name | X-axis or Group By |
-| `create_timestamp` | Test creation timestamp | X-axis (time trends) |
-| `custom_data.product` | Product identifier from custom data | Group By |
-| `device` | Device name/type | X-axis or Group By |
-| `duration` | Test execution duration | Y-axis (with Average/Sum aggregation) |
-| `end_time` | Test end timestamp | X-axis (time trends) |
-| `failure_category` | Category of test failures | Group By |
-| `job_created_at` | Job creation timestamp | X-axis (time trends) |
-| `job_labels` | Job labels | Group By |
-| `job_status` | Status of the HyperExecute job | Group By |
-| `job_test_type` | Type of test in the job | Group By |
-| `os` | Operating system | X-axis or Group By |
-| `os_version` | Operating system version | X-axis or Group By |
-| `product` | Product name | Group By |
-| `project_name` | Project name | X-axis or Group By |
-| `resolution` | Screen resolution | X-axis or Group By |
-| `stage_name` | Stage name in the job | X-axis or Group By |
-| `stage_status` | Status of the stage | Group By |
-| `stage_type` | Type of stage | Group By |
-| `start_time` | Test start timestamp | X-axis (time trends) |
-| `status` | Test status (passed, failed, etc.) | Group By or X-axis |
-| `test_id` | Test identifier | Y-axis (with Count aggregation) |
-| `test_name` | Test case name | X-axis (for specific test analysis) |
-| `test_type` | Type of test | Group By |
-| `testtag_name` | Test tag name | Group By |
-| `username` | User who executed the test | Group By |
-
-**Custom Data Keys**: Any custom data keys you've defined in your test capabilities can also be used.
-
-</details>
 
 ## Best Practices for Bar and Line Chart Widgets
 
